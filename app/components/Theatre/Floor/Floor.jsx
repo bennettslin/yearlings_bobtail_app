@@ -37,7 +37,7 @@ class Floor extends Component {
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         console.warn('Floor rendered.')
+    //         logger.warn('Floor rendered.')
     //     }
     // }
 

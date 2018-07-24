@@ -75,7 +75,7 @@ class Carousel extends Component {
             { canCarouselRender: couldRender } = prevProps
 
         if (canCarouselRender && !couldRender) {
-            console.warn('Carousel rendered.')
+            logger.warn('Carousel rendered.')
 
             clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)

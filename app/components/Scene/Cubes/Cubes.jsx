@@ -100,7 +100,7 @@ class Cubes extends Component {
          */
         if (!hasMounted && canTheatreRender && !couldTheatreRender) {
             if (this.props.isFloor && yIndex === 0) {
-                console.warn('Cubes initially rendered with default tiles.')
+                logger.warn('Cubes initially rendered with default tiles.')
             }
 
         // Otherwise, render next Cubes yIndex if...
@@ -184,7 +184,7 @@ class Cubes extends Component {
     }
 
     _setCanRenderPresences() {
-        console.warn('Cubes rendered.')
+        logger.warn('Cubes rendered.')
 
         this.props.setCanRenderPresences(true)
 

@@ -990,7 +990,7 @@ class EventHandler extends Component {
             this.myRootElement
 
         if (focusedElement) {
-            console.warn(`Focus: ${doFocusLyricElement ? 'Lyric' : 'Root'}`)
+            logger.warn(`Focus: ${doFocusLyricElement ? 'Lyric' : 'Root'}`)
             focusedElement.focus()
         }
     }

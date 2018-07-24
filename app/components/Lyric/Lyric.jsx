@@ -54,7 +54,7 @@ class Lyric extends Component {
             { canLyricRender: couldRender } = prevProps
 
         if (canLyricRender && !couldRender) {
-            console.warn('Lyric rendered.')
+            logger.warn('Lyric rendered.')
 
             clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)

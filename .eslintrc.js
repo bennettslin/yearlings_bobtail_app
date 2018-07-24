@@ -9,6 +9,9 @@ module.exports = {
         "eslint:recommended",
         "plugin:react/recommended"
     ],
+    "globals": {
+        "logger": true
+    },
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {

@@ -40,7 +40,7 @@ class Wall extends Component {
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         console.warn('Wall rendered.')
+    //         logger.warn('Wall rendered.')
     //     }
     // }
 

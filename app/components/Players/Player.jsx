@@ -159,57 +159,57 @@ class Player extends Component {
         if (showDebugStatements) {
 
             this.myPlayer.addEventListener('ended', () => {
-                console.error('ended', this.props.songIndex);
+                logger.error('ended', this.props.songIndex);
             })
             this.myPlayer.addEventListener('pause', () => {
-                console.error('pause', this.props.songIndex);
+                logger.error('pause', this.props.songIndex);
             })
             this.myPlayer.addEventListener('play', () => {
-                console.error('play', this.props.songIndex);
+                logger.error('play', this.props.songIndex);
             })
             this.myPlayer.addEventListener('playing', () => {
-                console.error('playing', this.props.songIndex);
+                logger.error('playing', this.props.songIndex);
             })
             this.myPlayer.addEventListener('timeupdate', () => {
-                console.error('timeupdate', this.props.songIndex);
+                logger.error('timeupdate', this.props.songIndex);
             })
 
             // Determine which times ranges have been buffered.
             this.myPlayer.addEventListener('progress', () => {
-                console.error('progress', this.props.songIndex);
+                logger.error('progress', this.props.songIndex);
             })
 
             // Seek operation has completed.
             this.myPlayer.addEventListener('seeked', () => {
-                console.error('seeked', this.props.songIndex);
+                logger.error('seeked', this.props.songIndex);
             })
 
             // Seek operation has begun.
             this.myPlayer.addEventListener('seeking', () => {
-                console.error('seeking', this.props.songIndex);
+                logger.error('seeking', this.props.songIndex);
             })
 
             // Data is not forthcoming.
             this.myPlayer.addEventListener('stalled', () => {
-                console.error('stalled', this.props.songIndex);
+                logger.error('stalled', this.props.songIndex);
             })
 
             // Download has completed.
             this.myPlayer.addEventListener('suspend', () => {
-                console.error('suspend', this.props.songIndex);
+                logger.error('suspend', this.props.songIndex);
             })
 
             // Enough data is available that the media can be played for now.
             this.myPlayer.addEventListener('canplay', () => {
-                console.error('canplay', this.props.songIndex);
+                logger.error('canplay', this.props.songIndex);
             })
 
             this.myPlayer.addEventListener('canplaythrough', () => {
-                console.error('canplaythrough', this.props.songIndex);
+                logger.error('canplaythrough', this.props.songIndex);
             })
 
             this.myPlayer.addEventListener('waiting', () => {
-                console.error('waiting', this.props.songIndex);
+                logger.error('waiting', this.props.songIndex);
             })
         }
     }

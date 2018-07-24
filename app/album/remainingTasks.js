@@ -1,10 +1,26 @@
 module.exports = [
 
+    {
+        taskName: `Be smart about using logger. This includes setting it up to only log in development, not production. Pass in feature flag?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     // Buttons and dots.
     {
         taskName: `Set up dots to use svgs. Include fields.`,
         workedHours: 1,
         neededHours: 4
+    },
+    {
+        taskName: `Access icons use svgs.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Flash access icon when key is pressed.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Button and dot styling, including for enabled and disabled.`,
@@ -125,7 +141,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Rather than having Enter access icon, just make access selectable things more obvious.`,
+        taskName: `Rather than having Enter access icon, just make access selectable things more obvious. Also don't need for Esc, either.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -136,11 +152,6 @@ module.exports = [
     },
     {
         taskName: `Position lyric column access icons all on right.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Flash access icon when key is pressed.`,
         workedHours: 0,
         neededHours: 1
     },

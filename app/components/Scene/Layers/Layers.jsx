@@ -45,7 +45,7 @@ class Layers extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canSceneRender && !prevProps.canSceneRender) {
-            console.warn('Layers rendered.')
+            logger.warn('Layers rendered.')
 
             this.setState({
                 hasMounted: true

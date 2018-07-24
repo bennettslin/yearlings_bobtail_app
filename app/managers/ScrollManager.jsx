@@ -46,7 +46,7 @@ class ScrollManager extends Component {
         this.props.setRef(this)
 
         // window.elements = () => {
-        //     console.error(
+        //     logger.error(
         //         'Carousel annotation elements:',
         //         this.myCarouselAnnotationElements,
         //         '\nLyric annotation elements:',
@@ -165,11 +165,11 @@ class ScrollManager extends Component {
                 scrollClass : `${scrollClass}__${index}`
             element = document.getElementsByClassName(selector)[0]
 
-            console.error(log, '\nScroll by selector:', scrollClass, index)
+            logger.error(log, '\nScroll by selector:', scrollClass, index)
         }
 
         if (element) {
-            console.info(log, '\nScroll by ref:', scrollClass, index)
+            logger.info(log, '\nScroll by ref:', scrollClass, index)
 
             const {
                     deviceIndex,
@@ -200,7 +200,7 @@ class ScrollManager extends Component {
             const isParent = element === parentElement
 
             if (isParent) {
-                console.info('Scroll parent:', element)
+                logger.info('Scroll parent:', element)
             }
 
             return isParent
@@ -208,7 +208,7 @@ class ScrollManager extends Component {
     }
 
     _scrollElementCallback = (status) => {
-        console.warn('scroll status:', status);
+        logger.warn('scroll status:', status);
     }
 
     render() {

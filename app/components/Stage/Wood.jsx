@@ -26,7 +26,7 @@ class Wood extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-            console.warn('Wood rendered.')
+            logger.warn('Wood rendered.')
         }
     }
 

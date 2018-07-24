@@ -86,7 +86,7 @@ class Scene extends Component {
         if (
             canPixelsRender && !couldPixelsRender
         ) {
-            console.warn('Scene rendered.')
+            logger.warn('Scene rendered.')
 
             clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
@@ -136,7 +136,7 @@ class Scene extends Component {
                 isShown
             } = this.state
 
-            // console.error(renderableSongIndex, renderableSceneIndex)
+            // logger.error(renderableSongIndex, renderableSceneIndex)
 
             const sceneObject = getSceneObject(
                 renderableSongIndex, renderableSceneIndex

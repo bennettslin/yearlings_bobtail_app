@@ -153,7 +153,7 @@ class VerseManager extends Component {
     } = {}) {
 
         if (calledFromTimeout) {
-            console.warn('Determining verse bars after timeout.')
+            logger.warn('Determining verse bars after timeout.')
         }
 
         const verseElement = this.props.getVerseElement(verseIndex)

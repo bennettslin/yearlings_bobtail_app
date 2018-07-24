@@ -63,7 +63,7 @@ class Main extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canMainRender && !prevProps.canMainRender) {
-            console.warn('Main rendered.')
+            logger.warn('Main rendered.')
 
             setTimeout(
                 this.props.mainDidRender, 0

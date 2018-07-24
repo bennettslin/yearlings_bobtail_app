@@ -39,7 +39,7 @@ class Ceiling extends Component {
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         console.warn('Ceiling rendered.')
+    //         logger.warn('Ceiling rendered.')
     //     }
     // }
 

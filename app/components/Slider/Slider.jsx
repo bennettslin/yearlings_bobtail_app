@@ -45,7 +45,7 @@ class Slider extends Component {
             { canSliderRender: couldRender } = prevProps
 
         if (canSliderRender && !couldRender) {
-            console.warn('Slider rendered.')
+            logger.warn('Slider rendered.')
 
             clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)

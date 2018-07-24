@@ -87,7 +87,7 @@ class Live extends Component {
         if (!isSongChangeRenderable && wasSongChangeRenderable) {
             this.unrenderedTime = Date.now()
 
-            console.warn('Live unrenderable from song change.')
+            logger.warn('Live unrenderable from song change.')
             this.props.setCanRenderMain(false)
             this.props.setCanRenderSlider(false)
             this.props.setCanRenderLyric(false)
@@ -100,7 +100,7 @@ class Live extends Component {
 
             // Don't call this upon initial render.
             if (this.props.canTheatreRender) {
-                console.warn(`Live renderable after song change, took ${
+                logger.warn(`Live renderable after song change, took ${
                     ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
                 } seconds.`)
 
@@ -112,7 +112,7 @@ class Live extends Component {
         if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
             this.unrenderedTime = Date.now()
 
-            console.warn('Live unrenderable from window resize.')
+            logger.warn('Live unrenderable from window resize.')
             this.props.setCanRenderTheatre(false)
         }
 
@@ -121,7 +121,7 @@ class Live extends Component {
          * render.
          */
         if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
-            console.warn(`Live renderable after window resize, took ${
+            logger.warn(`Live renderable after window resize, took ${
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
             } seconds.`)
 
@@ -138,7 +138,7 @@ class Live extends Component {
         ) {
             this.unrenderedTime = Date.now()
 
-            console.warn('Live unrenderable from scene change.')
+            logger.warn('Live unrenderable from scene change.')
             this.props.setCanRenderScene(false)
         }
     }

@@ -72,7 +72,7 @@ class Stanzas extends Component {
      */
 
     componentDidUpdate(prevProps) {
-        console.warn('Stanzas rendered.')
+        logger.warn('Stanzas rendered.')
 
         if (
             this.props.isTransitioningHeight &&

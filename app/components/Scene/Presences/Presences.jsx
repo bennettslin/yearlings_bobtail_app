@@ -79,7 +79,7 @@ class Presences extends Component {
     }
 
     _setCanRenderPixels() {
-        console.warn('Presences rendered.')
+        logger.warn('Presences rendered.')
         this.props.setCanRenderPixels(true)
     }
 

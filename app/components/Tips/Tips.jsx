@@ -53,7 +53,7 @@ class Tips extends Component {
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.canMainRender && !prevProps.canMainRender) {
-    //         console.warn('Tips rendered.')
+    //         logger.warn('Tips rendered.')
     //     }
     // }
 

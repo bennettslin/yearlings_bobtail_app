@@ -69,7 +69,7 @@ class Theatre extends Component {
             { canTheatreRender: couldRender } = prevProps
 
         if (canTheatreRender && !couldRender) {
-            console.warn('Theatre rendered.')
+            logger.warn('Theatre rendered.')
 
             clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)

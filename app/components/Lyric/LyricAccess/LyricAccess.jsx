@@ -47,7 +47,7 @@ class LyricAccess extends Component {
     }
 
     // componentDidUpdate() {
-    //     console.warn('LyricAccess rendered.')
+    //     logger.warn('LyricAccess rendered.')
     // }
 
     render() {

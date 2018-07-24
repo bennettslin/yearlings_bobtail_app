@@ -35,7 +35,7 @@ class Stage extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-            console.warn('Stage rendered.')
+            logger.warn('Stage rendered.')
         }
     }
 

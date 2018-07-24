@@ -53,7 +53,7 @@ export default {
     _logObject(description, object) {
         const formattedString = JSON.stringify(object, null, 3)
 
-        console.info(`${description}: ${formattedString}`)
+        logger.info(`${description}: ${formattedString}`)
         return true
     },
 

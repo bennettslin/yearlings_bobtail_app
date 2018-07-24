@@ -41,7 +41,7 @@ import {
 import { getFormattedAnnotationTitle } from '../formatHelper'
 
 export const parseAlbumData = (albumObject) => {
-    console.warn('Begin parse album data.')
+    logger.warn('Begin parse album data.')
 
     // Initialise album.
     albumObject.tempPortalLinks = {}
@@ -62,7 +62,7 @@ export const parseAlbumData = (albumObject) => {
     // After preparation.
     addDestinationPortalIndices(albumObject)
 
-    console.warn('End parse album data.')
+    logger.warn('End parse album data.')
     return albumObject
 }
 

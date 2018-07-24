@@ -3457,5 +3457,10 @@ module.exports = [
         taskName: `Set up loading icon to use svgs.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Add logger.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

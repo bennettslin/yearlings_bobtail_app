@@ -41,7 +41,7 @@ class SceneSky extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-            console.warn('Sky rendered.')
+            logger.warn('Sky rendered.')
         }
     }
 
