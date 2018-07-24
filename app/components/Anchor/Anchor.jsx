@@ -48,7 +48,7 @@ Anchor = ({
                 'Anchor',
 
                 isAccessed && !isSelected && 'Anchor__accessed',
-                isSelected ? 'Anchor__selected' : 'Anchor__selectable',
+                !isSelected && 'Anchor__selectable',
 
                 !isWikiTextAnchor && 'Anchor__noWrap',
 

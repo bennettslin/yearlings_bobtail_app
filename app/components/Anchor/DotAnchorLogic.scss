@@ -1,42 +1,15 @@
-/**
- * This is the one source of truth for how dot anchors are ordered.
- */
-
-// TODO: Move default logic here.
-
-.RM__sliderNotMoving.RsDp .CdAp {
-    background-color: $bgColour__dot__portal;
-}
-.RM__sliderNotMoving.RsDo .CdAo {
-    background-color: $bgColour__dot__observation;
-}
-.RM__sliderNotMoving.RsDb .CdAb {
-    background-color: $bgColour__dot__backstory;
-}
-.RM__sliderNotMoving.RsDr .CdAr {
-    background-color: $bgColour__dot__reference;
-}
-.RM__sliderNotMoving.RsDp .CdAp {
-    background-color: $bgColour__dot__pun;
-}
-.RM__sliderNotMoving.RsDn .CdAn {
-    background-color: $bgColour__dot__narrative;
-}
-.RM__sliderNotMoving.RsDs .CdAs {
-    background-color: $bgColour__dot__songwriting;
-}
-.RM__sliderNotMoving.RsDa .CdAa {
-    background-color: $bgColour__dot__afterword;
+.DotAnchor {
+    display: none;
 }
 
-.RM__sliderNotMoving.RsDp .CdAp,
-.RM__sliderNotMoving.RsDo .CdAo,
-.RM__sliderNotMoving.RsDb .CdAb,
-.RM__sliderNotMoving.RsDr .CdAr,
-.RM__sliderNotMoving.RsDp .CdAp,
-.RM__sliderNotMoving.RsDn .CdAn,
-.RM__sliderNotMoving.RsDs .CdAs,
-.RM__sliderNotMoving.RsDa .CdAa {
+.RsDp .CdAp,
+.RsDo .CdAo,
+.RsDb .CdAb,
+.RsDr .CdAr,
+.RsDp .CdAp,
+.RsDn .CdAn,
+.RsDs .CdAs,
+.RsDa .CdAa {
 
     display: inline-block;
 

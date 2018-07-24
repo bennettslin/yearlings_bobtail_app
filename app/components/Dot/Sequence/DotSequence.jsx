@@ -11,9 +11,9 @@ import DotSequenceDot from './DotSequenceDot'
 const dotBlockPropTypes = {
 
     // From parent.
+    dotKeys: PropTypes.object.isRequired,
     inAnnotationCard: PropTypes.bool,
-    inTextAnchor: PropTypes.bool,
-    dotKeys: PropTypes.object.isRequired
+    inTextAnchor: PropTypes.bool
 },
 
 DotSequence = ({
@@ -23,8 +23,10 @@ DotSequence = ({
     dotKeys
 
 }) => (
-    <span className={cx(
+
+    <div className={cx(
         'DotSequence',
+        !inAnnotationCard && 'gradientMask__dotSequence',
         inTextAnchor && 'DotSequence__inTextAnchor'
     )}>
         {ALL_DOT_KEYS.map(dotKey => {
@@ -33,13 +35,15 @@ DotSequence = ({
             return dotKeys[dotKey] && (
                 <DotSequenceDot
                     key={dotKey}
-                    inTextAnchor={inTextAnchor}
-                    inAnnotationCard={inAnnotationCard}
-                    dotKey={dotKey}
+                    {...{
+                        dotKey,
+                        inTextAnchor,
+                        inAnnotationCard
+                    }}
                 />
             )
         })}
-    </span>
+    </div>
 )
 
 DotSequence.propTypes = dotBlockPropTypes

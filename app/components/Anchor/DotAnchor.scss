@@ -1,9 +1,5 @@
-.DotAnchor {
-    background-color: $bgColour__dot__deselected;
-    display: none;
-}
-
 .DotAnchor__selectable {
+
     .Anchor__selectable:hover
     & {
         animation: bounceHover $animationDuration__slow;
@@ -27,6 +23,7 @@
 
 // TODO: Come up with better styling, obviously.
 .DotAnchor__accessed {
+
     .RM__accessOn
     & {
         box-shadow: $boxShadow__access;

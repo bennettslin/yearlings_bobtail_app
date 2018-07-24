@@ -25,6 +25,7 @@ DotSequenceDot = ({
 
 }) => (
     <Dot
+        showFieldOnly
         className={cx(
             'SequenceDot',
 
