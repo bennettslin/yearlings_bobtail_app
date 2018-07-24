@@ -30,8 +30,13 @@
 }
 
 .bgColour__dot__accessed {
-    fill: $bgColour__dot__accessed;
+
+    .RM__accessOn
+    & {
+        fill: $bgColour__dot__accessed;
+    }
 }
+
 .bgColour__dot__selected {
     fill: $bgColour__dot__selected;
 }
