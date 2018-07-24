@@ -20,9 +20,6 @@ import {
     AUDIO_SELECT_BUTTON_KEY
 } from '../../constants/buttons'
 
-
-import { AUDIO_OPTIONS } from '../../constants/options'
-
 import {
     getSongsAndLoguesCount,
     getSongsNotLoguesCount
@@ -155,7 +152,7 @@ class AudioButtons extends Component {
                     <Button
                         buttonName={AUDIO_OPTIONS_BUTTON_KEY}
                         className="AudioButton"
-                        buttonIdentifier={AUDIO_OPTIONS[selectedAudioOptionIndex]}
+                        buttonIdentifier={selectedAudioOptionIndex}
                         accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
                         handleButtonClick={handleAudioOptionsToggle}
                     />

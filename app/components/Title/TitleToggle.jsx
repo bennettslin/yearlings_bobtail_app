@@ -12,11 +12,9 @@ import { TITLE_TOGGLE_KEY } from '../../constants/access'
 import { TITLE_BUTTON_KEY } from '../../constants/buttons'
 
 const mapStateToProps = ({
-    isTwoRowMenu,
-    selectedTitleIndex
+    isTwoRowMenu
 }) => ({
-    isTwoRowMenu,
-    selectedTitleIndex
+    isTwoRowMenu
 })
 
 const titleToggleDefaultProps = {
@@ -26,7 +24,6 @@ const titleToggleDefaultProps = {
 titleTogglePropTypes = {
     // Through Redux.
     isTwoRowMenu: PropTypes.bool.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
     isAudioChild: PropTypes.bool.isRequired,
@@ -36,7 +33,6 @@ titleTogglePropTypes = {
 TitleToggle = ({
 
     isTwoRowMenu,
-    selectedTitleIndex,
 
     isAudioChild,
     handleTitleToggle
@@ -51,7 +47,6 @@ TitleToggle = ({
                 )}
                 isCustomSize
                 accessKey={TITLE_TOGGLE_KEY}
-                buttonIdentifier={selectedTitleIndex}
                 handleButtonClick={handleTitleToggle}
             />
         )

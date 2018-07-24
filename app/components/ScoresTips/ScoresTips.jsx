@@ -17,20 +17,20 @@ import {
     TIPS_BUTTON_KEY
 } from '../../constants/buttons'
 
-import { TIPS_OPTIONS } from '../../constants/options'
-import { getIsDesktop, getIsPhone } from '../../helpers/responsiveHelper'
+import {
+    getIsDesktop,
+    getIsPhone
+} from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceStore,
     isScoreLoaded,
     isScoresTipsInMain,
-    selectedScoreIndex,
     selectedTipsIndex
 }) => ({
     deviceIndex: deviceStore.deviceIndex,
     isScoreLoaded,
     isScoresTipsInMain,
-    selectedScoreIndex,
     selectedTipsIndex
 })
 
@@ -45,7 +45,6 @@ scoresTipsPropTypes = {
     deviceIndex: PropTypes.number.isRequired,
     isScoreLoaded: PropTypes.bool.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -61,7 +60,6 @@ ScoresTips = ({
     deviceIndex,
     isScoreLoaded,
     isScoresTipsInMain,
-    selectedScoreIndex,
     selectedTipsIndex,
 
     inMenu,
@@ -102,7 +100,6 @@ ScoresTips = ({
                     isLargeSize
                     buttonName={SCORES_BUTTON_KEY}
                     className="ScoresTipsButton"
-                    buttonIdentifier={selectedScoreIndex}
                     accessKey={SCORE_TOGGLE_KEY}
                     isDisabled={!isScoreLoaded}
                     handleButtonClick={handleScoreToggle}
@@ -113,7 +110,7 @@ ScoresTips = ({
                 isLargeSize
                 buttonName={TIPS_BUTTON_KEY}
                 className="ScoresTipsButton"
-                buttonIdentifier={TIPS_OPTIONS[selectedTipsIndex]}
+                buttonIdentifier={selectedTipsIndex}
                 accessKey={TIPS_TOGGLE_KEY}
                 handleButtonClick={handleTipsToggle}
            />

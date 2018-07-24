@@ -8,6 +8,11 @@ import {
     NAVIGATION_RIGHT_KEY
 } from '../../constants/access'
 
+import {
+    LEFT,
+    RIGHT
+} from '../../constants/lyrics'
+
 import { CAROUSEL_SELECT_BUTTON_KEY } from '../../constants/buttons'
 
 const carouselSelectPropTypes = {
@@ -25,14 +30,14 @@ const CarouselSelect = ({
         <Button
             buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
-            buttonIdentifier={'\u276e'}
+            buttonIdentifier={LEFT}
             accessKey={NAVIGATION_LEFT_KEY}
             handleButtonClick={handleAnnotationPrevious}
         />
         <Button
             buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
-            buttonIdentifier={'\u276f'}
+            buttonIdentifier={RIGHT}
             accessKey={NAVIGATION_RIGHT_KEY}
             handleButtonClick={handleAnnotationNext}
         />
