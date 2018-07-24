@@ -127,17 +127,17 @@ AnnotationCardView = ({
 }) => {
 
     const isTextCard = Boolean(text),
-        isPortalCard = cardDotKeys.portal,
+        isWormholeCard = cardDotKeys.wormhole,
 
         annotationCardChild = (
             <div className={cx(
                 'AnnotationCard',
                 !inCarousel && 'AnnotationCard__inPopup',
                 isTextCard && 'AnnotationCard__isText',
-                isPortalCard && 'AnnotationCard__portal',
+                isWormholeCard && 'AnnotationCard__portal',
                 'fontSize__verse'
             )}>
-                {!isPortalCard && (
+                {!isWormholeCard && (
                     <DotSequence
                         inAnnotationCard
                         dotKeys={cardDotKeys}
