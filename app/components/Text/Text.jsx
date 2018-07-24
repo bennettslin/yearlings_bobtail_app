@@ -25,7 +25,7 @@ Text = ({
     const { inVerseBar,
             ...other } = props,
 
-        { inPortal } = other
+        { inWormhole } = other
 
     // It's a text span.
     if (typeof textEntity === 'string') {
@@ -42,7 +42,7 @@ Text = ({
         } = textEntity
 
         /**
-         * If recursing, keep knowledge of text being in portal or verse bar,
+         * If recursing, keep knowledge of text being in wormhole or verse bar,
          * which is needed by anchor.
          */
 
@@ -67,7 +67,7 @@ Text = ({
                     anchor,
                     annotationIndex } = textEntity,
 
-                showAsPlainText = lyric || inPortal || inVerseBar,
+                showAsPlainText = lyric || inWormhole || inVerseBar,
 
                 text = lyric || anchor
 
@@ -75,22 +75,22 @@ Text = ({
                 const { isVerseBeginningSpan,
                         isVerseEndingSpan } = textEntity,
 
-                    { portalAnnotationIndex } = props,
+                    { wormholeAnnotationIndex } = props,
 
                     /**
-                     * A verse line with a portal anchor may contain other
-                     * anchors. Make sure that we know this is the portal
+                     * A verse line with a wormhole anchor may contain other
+                     * anchors. Make sure that we know this is the wormhole
                      * anchor.
                      */
-                    isPortalAnchorInPortal =
-                        inPortal && annotationIndex === portalAnnotationIndex
+                    isWormholeAnchorInWormhole =
+                        inWormhole && annotationIndex === wormholeAnnotationIndex
 
                 return (
                     <Texts {...other}
                         text={text}
                         isVerseBeginningSpan={isVerseBeginningSpan}
                         isVerseEndingSpan={isVerseEndingSpan}
-                        isPortalAnchorInPortal={isPortalAnchorInPortal}
+                        isWormholeAnchorInWormhole={isWormholeAnchorInWormhole}
                     />
                 )
 
@@ -122,7 +122,7 @@ Text = ({
         }
     }
 
-    // Portals don't have a text description, so return null.
+    // Wormholes don't have a text description, so return null.
     return null
 }
 

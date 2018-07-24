@@ -196,7 +196,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Finalise portals`,
+        taskName: `Finalise wormholes`,
         workedHours: 0,
         neededHours: 1
     },

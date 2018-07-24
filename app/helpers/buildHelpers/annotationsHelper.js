@@ -2,8 +2,8 @@
 
 import keys from 'lodash.keys'
 
-import { LYRIC, ANCHOR, WIKI, ITALIC, WIKI_INDEX, PORTAL_SEARCH_KEYS, DESTINATION_PORTAL_INDEX, SOURCE_PORTAL_INDEX, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
-import { PORTAL, REFERENCE } from '../../constants/dots'
+import { LYRIC, ANCHOR, WIKI, ITALIC, WIKI_INDEX, WORMHOLE_SEARCH_KEYS, DESTINATION_WORMHOLE_INDEX, SOURCE_WORMHOLE_INDEX, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
+import { WORMHOLE, REFERENCE } from '../../constants/dots'
 import { getAnnotationObject } from '../dataHelper'
 
 /***********
@@ -31,7 +31,7 @@ export const registerCards = ({
         _initialPrepareCard(cardObject, annotationDotKeys)
         _addAllDotKeysToAnnotation(cardObject, annotationDotKeys)
 
-        if (_addSourcePortalLink({
+        if (_addSourceWormholeLink({
 
             albumObject,
             songObject,
@@ -41,7 +41,7 @@ export const registerCards = ({
             dotKeys: annotationDotKeys
 
         })) {
-            verseObject.tempVerseHasPortal = true
+            verseObject.tempVerseHasWormhole = true
         }
     })
 }
@@ -56,7 +56,7 @@ const _initialPrepareCard = (cardObject, dotKeys) => {
         // Add wiki anchor index to each anchor with wiki.
         if (hasWiki) {
             /**
-             * Cards with only portals or references wont initially have an
+             * Cards with only wormholes or references wont initially have an
              * object of dot keys.
              */
             cardObject.dotKeys = cardObject.dotKeys || {}
@@ -96,7 +96,7 @@ const _addAllDotKeysToAnnotation = (cardObject, annotationDotKeys) => {
     }
 }
 
-const _addSourcePortalLink = ({
+const _addSourceWormholeLink = ({
 
     albumObject,
     songObject,
@@ -106,23 +106,23 @@ const _addSourcePortalLink = ({
     dotKeys
 
 }) => {
-    // Add portal link to annotation card.
-    const { portal } = cardObject
+    // Add wormhole link to annotation card.
+    const { wormhole } = cardObject
 
-    if (!portal) {
+    if (!wormhole) {
         return false
     }
 
     /**
-     * Portal is either object or string. If it's an object, then the string
-     * we want is the portalKey.
+     * Wormhole is either object or string. If it's an object, then the string
+     * we want is the wormholeKey.
      */
-    const portalKey = portal.portalKey || portal,
-        { portalPrefix } = portal,
+    const wormholeKey = wormhole.wormholeKey || wormhole,
+        { wormholePrefix } = wormhole,
         { tempSongIndex } = songObject,
 
         /**
-         * NOTE: I wrote this code with the assumption that every portal would
+         * NOTE: I wrote this code with the assumption that every wormhole would
          * be in a timed verse, and thus have a verse index. Had there been one
          * that wasn't, such as in a side stanza, this wouldn't work for it!
          */
@@ -130,28 +130,28 @@ const _addSourcePortalLink = ({
           annotationIndex,
           columnIndex } = annotationObject,
 
-        portalLink = {
+        wormholeLink = {
             songIndex: tempSongIndex,
             annotationIndex,
             cardIndex,
             columnIndex,
             verseIndex,
-            portalPrefix
+            wormholePrefix
         }
 
-    // If first portal link, initialise array.
-    if (!albumObject.tempPortalLinks[portalKey]) {
-        albumObject.tempPortalLinks[portalKey] = []
+    // If first wormhole link, initialise array.
+    if (!albumObject.tempWormholeLinks[wormholeKey]) {
+        albumObject.tempWormholeLinks[wormholeKey] = []
     }
 
-    // Add portal link to portal links array.
-    albumObject.tempPortalLinks[portalKey].push(portalLink)
+    // Add wormhole link to wormhole links array.
+    albumObject.tempWormholeLinks[wormholeKey].push(wormholeLink)
 
-    // Add portal to dot keys.
-    dotKeys[PORTAL] = true
+    // Add wormhole to dot keys.
+    dotKeys[WORMHOLE] = true
 
     // Clean up card unit.
-    delete cardObject.portal
+    delete cardObject.wormhole
 
     return true
 }
@@ -160,13 +160,13 @@ const _addSourcePortalLink = ({
  * BETWEEN *
  ***********/
 
-export const addDestinationPortalLinks = (albumObject) => {
+export const addDestinationWormholeLinks = (albumObject) => {
     /**
-     * For each annotation with a portal, add an array of links to all
-     * other portals.
+     * For each annotation with a wormhole, add an array of links to all
+     * other wormholes.
      */
-    for (const linkKey in albumObject.tempPortalLinks) {
-        const links = albumObject.tempPortalLinks[linkKey]
+    for (const linkKey in albumObject.tempWormholeLinks) {
+        const links = albumObject.tempWormholeLinks[linkKey]
 
         links.forEach((destinationLink, index) => {
             const { songIndex,
@@ -176,9 +176,9 @@ export const addDestinationPortalLinks = (albumObject) => {
             annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
             cardObject = annotationObject.cards[cardIndex]
 
-            cardObject.portalLinks = links.filter((sourceLink, thisIndex) => {
+            cardObject.wormholeLinks = links.filter((sourceLink, thisIndex) => {
 
-                // Don't add link to its own portal.
+                // Don't add link to its own wormhole.
                 return index !== thisIndex
             })
         })
@@ -194,15 +194,15 @@ export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
     const { tempSongIndex } = songObject,
 
         { description,
-          portalLinks } = cardObject
+          wormholeLinks } = cardObject
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
         _finalParseWiki(annotationObject, description)
     }
 
-    if (portalLinks) {
-        portalLinks.forEach(link => {
+    if (wormholeLinks) {
+        wormholeLinks.forEach(link => {
             const { tempAnnotationAnchorIndex } = annotationObject
 
             // Access will loop through this array.
@@ -211,20 +211,20 @@ export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
             }
             annotationObject.annotationAnchors.push(tempAnnotationAnchorIndex)
 
-            // Allow each portal to know its source portal index.
-            if (!annotationObject.tempSourcePortalIndices) {
-                annotationObject.tempSourcePortalIndices = []
+            // Allow each wormhole to know its source wormhole index.
+            if (!annotationObject.tempSourceWormholeIndices) {
+                annotationObject.tempSourceWormholeIndices = []
             }
-            annotationObject.tempSourcePortalIndices.push(tempAnnotationAnchorIndex)
+            annotationObject.tempSourceWormholeIndices.push(tempAnnotationAnchorIndex)
 
-            // Temporarily, also allow portal to know its source annotations.
-            if (!link.tempSourcePortalLinks) {
-                link.tempSourcePortalLinks = []
+            // Temporarily, also allow wormhole to know its source annotations.
+            if (!link.tempSourceWormholeLinks) {
+                link.tempSourceWormholeLinks = []
             }
-            link.tempSourcePortalLinks.push({
+            link.tempSourceWormholeLinks.push({
                 tempSourceSongIndex: tempSongIndex,
                 tempSourceAnnotationIndex: annotationObject.annotationIndex,
-                tempSourcePortalIndex: tempAnnotationAnchorIndex
+                tempSourceWormholeIndex: tempAnnotationAnchorIndex
             })
 
             annotationObject.tempAnnotationAnchorIndex++
@@ -253,7 +253,7 @@ const _finalParseWiki = (annotationObject, entity) => {
                 // Let annotation anchor know its annotation.
                 entity.wikiAnnotationIndex = annotationObject.annotationIndex
 
-                // Popup anchor index is either for portal or wiki.
+                // Popup anchor index is either for wormhole or wiki.
                 entity[WIKI_INDEX] = annotationObject.tempAnnotationAnchorIndex
                 annotationObject.tempAnnotationAnchorIndex++
 
@@ -275,65 +275,65 @@ const _finalParseWiki = (annotationObject, entity) => {
  * FIXME: This is extremely fragile, as it has to make exceptions for too many
  * special cases, like italics in sub stanzas...
  */
-export const addDestinationPortalFormats = (lyricEntity, verseHasPortal = false) => {
+export const addDestinationWormholeFormats = (lyricEntity, verseHasWormhole = false) => {
     /**
-     * Let verses with portals know their first and last objects, which are
-     * formatted differently in the portal.
+     * Let verses with wormholes know their first and last objects, which are
+     * formatted differently in the wormhole.
      */
 
     if (Array.isArray(lyricEntity)) {
         lyricEntity.forEach(childLyric => {
-            addDestinationPortalFormats(childLyric, verseHasPortal)
+            addDestinationWormholeFormats(childLyric, verseHasWormhole)
         })
 
     } else if (typeof lyricEntity === 'object') {
 
-        if (lyricEntity.tempVerseHasPortal) {
+        if (lyricEntity.tempVerseHasWormhole) {
 
-            // Keep knowing that verse has portal in subsequent recursions.
-            verseHasPortal = true
+            // Keep knowing that verse has wormhole in subsequent recursions.
+            verseHasWormhole = true
 
             // Clean up.
-            delete lyricEntity.tempVerseHasPortal
+            delete lyricEntity.tempVerseHasWormhole
         }
 
-        // Only register verses that have a portal.
-        if (verseHasPortal) {
+        // Only register verses that have a wormhole.
+        if (verseHasWormhole) {
 
-            PORTAL_SEARCH_KEYS.forEach(lyricKey => {
+            WORMHOLE_SEARCH_KEYS.forEach(lyricKey => {
 
                 if (typeof lyricEntity[lyricKey] === 'object') {
-                    _registerPortalFormats(lyricEntity[lyricKey])
+                    _registerWormholeFormats(lyricEntity[lyricKey])
                 }
 
                 if (typeof lyricEntity[lyricKey] === 'string') {
-                    lyricEntity[lyricKey] = _addPortalFormat(lyricEntity[lyricKey], IS_VERSE_BEGINNING_SPAN)
-                    lyricEntity[lyricKey] = _addPortalFormat(lyricEntity[lyricKey], IS_VERSE_ENDING_SPAN)
+                    lyricEntity[lyricKey] = _addWormholeFormat(lyricEntity[lyricKey], IS_VERSE_BEGINNING_SPAN)
+                    lyricEntity[lyricKey] = _addWormholeFormat(lyricEntity[lyricKey], IS_VERSE_ENDING_SPAN)
                 }
             })
         }
 
         if (lyricEntity.isUnitMap) {
             // This applies to "unsalvaged soul," "tarpid lies," and "trophy blondes."
-            addDestinationPortalFormats(lyricEntity.subCard, verseHasPortal)
+            addDestinationWormholeFormats(lyricEntity.subCard, verseHasWormhole)
         }
     }
 }
 
-const _registerPortalFormats = (lyricEntity) => {
+const _registerWormholeFormats = (lyricEntity) => {
     /**
      * Helper method to register first and last verse objects, after time key
      * has been found.
      */
     if (Array.isArray(lyricEntity)) {
         const endIndex = lyricEntity.length - 1
-        lyricEntity[0] = _addPortalFormat(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
-        lyricEntity[endIndex] = _addPortalFormat(lyricEntity[endIndex], IS_VERSE_ENDING_SPAN)
+        lyricEntity[0] = _addWormholeFormat(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
+        lyricEntity[endIndex] = _addWormholeFormat(lyricEntity[endIndex], IS_VERSE_ENDING_SPAN)
 
     } else if (typeof lyricEntity === 'object') {
         if (typeof lyricEntity[ANCHOR] === 'string') {
-            lyricEntity = _addPortalFormat(lyricEntity, IS_VERSE_BEGINNING_SPAN)
-            lyricEntity = _addPortalFormat(lyricEntity, IS_VERSE_ENDING_SPAN)
+            lyricEntity = _addWormholeFormat(lyricEntity, IS_VERSE_BEGINNING_SPAN)
+            lyricEntity = _addWormholeFormat(lyricEntity, IS_VERSE_ENDING_SPAN)
         }
 
         if (lyricEntity[ITALIC]) {
@@ -341,12 +341,12 @@ const _registerPortalFormats = (lyricEntity) => {
              * This applies to "unsalvaged soul," "pompous autumn," "tarpid
              * lies," and "trophy blondes."
              */
-            _registerPortalFormats(lyricEntity[ITALIC])
+            _registerWormholeFormats(lyricEntity[ITALIC])
         }
     }
 }
 
-const _addPortalFormat = (lyricEntity, verseObjectKey) => {
+const _addWormholeFormat = (lyricEntity, verseObjectKey) => {
 
     if (typeof lyricEntity === 'object') {
         lyricEntity[verseObjectKey] = true
@@ -360,11 +360,11 @@ const _addPortalFormat = (lyricEntity, verseObjectKey) => {
     }
 }
 
-export const addDestinationPortalIndices = (albumObject) => {
-    // Now that each portal knows its source index, get destination indices.
+export const addDestinationWormholeIndices = (albumObject) => {
+    // Now that each wormhole knows its source index, get destination indices.
 
-    for (const linkKey in albumObject.tempPortalLinks) {
-        const links = albumObject.tempPortalLinks[linkKey]
+    for (const linkKey in albumObject.tempWormholeLinks) {
+        const links = albumObject.tempWormholeLinks[linkKey]
 
         links.forEach((destinationLink, index) => {
 
@@ -375,16 +375,16 @@ export const addDestinationPortalIndices = (albumObject) => {
             annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
             cardObject = annotationObject.cards[cardIndex]
 
-            cardObject.portalLinks = links.filter((sourceLink, thisIndex) => {
+            cardObject.wormholeLinks = links.filter((sourceLink, thisIndex) => {
 
                 /**
-                 * Add destination portal indices. This is as complicated as it
-                 * is because of the three "shiv" portals.
+                 * Add destination wormhole indices. This is as complicated as it
+                 * is because of the three "shiv" wormholes.
                  */
-                destinationLink.tempSourcePortalLinks.forEach((tempSourceLink) => {
+                destinationLink.tempSourceWormholeLinks.forEach((tempSourceLink) => {
                     const { tempSourceSongIndex,
                             tempSourceAnnotationIndex,
-                            tempSourcePortalIndex } = tempSourceLink,
+                            tempSourceWormholeIndex } = tempSourceLink,
 
                         /**
                          * This will happen only once for each source and
@@ -395,12 +395,12 @@ export const addDestinationPortalIndices = (albumObject) => {
 
                     if (linksMatch) {
                         // Exchange knowledge of source and destination indices.
-                        sourceLink[DESTINATION_PORTAL_INDEX] = tempSourcePortalIndex
-                        sourceLink[SOURCE_PORTAL_INDEX] = annotationObject.tempSourcePortalIndices.shift()
+                        sourceLink[DESTINATION_WORMHOLE_INDEX] = tempSourceWormholeIndex
+                        sourceLink[SOURCE_WORMHOLE_INDEX] = annotationObject.tempSourceWormholeIndices.shift()
                     }
                 })
 
-                // Don't add link to its own portal.
+                // Don't add link to its own wormhole.
                 return index !== thisIndex
 
             }).map(sourceLink => {
@@ -410,16 +410,16 @@ export const addDestinationPortalIndices = (albumObject) => {
 
                 // Clean up.
                 delete newLink.cardIndex
-                delete newLink.tempSourcePortalLinks
+                delete newLink.tempSourceWormholeLinks
 
                 return newLink
             })
 
             // Clean up.
-            delete annotationObject.tempSourcePortalIndices
+            delete annotationObject.tempSourceWormholeIndices
         })
     }
 
     // Clean up.
-    delete albumObject.tempPortalLinks
+    delete albumObject.tempWormholeLinks
 }

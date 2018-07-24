@@ -807,7 +807,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `suttee_dust`
+                                wormhole: `suttee_dust`
                             }
                         ]
                     }

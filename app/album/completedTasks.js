@@ -17,7 +17,7 @@ module.exports = [
         ]
     },
     {
-        taskName: `create portals`,
+        taskName: `create wormholes`,
         workedHours: 6,
         neededHours: 6
     },
@@ -202,7 +202,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `foreign characters in portal increase line height`,
+        taskName: `foreign characters in wormhole increase line height`,
         workedHours: 1,
         neededHours: 1
     },
@@ -302,12 +302,12 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `include portal indices`,
+        taskName: `include wormhole indices`,
         workedHours: 3,
         neededHours: 3
     },
     {
-        taskName: `hide portals when portal dot turned off`,
+        taskName: `hide wormholes when wormhole dot turned off`,
         workedHours: 1,
         neededHours: 1
     },
@@ -692,7 +692,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `fix portals bug.`,
+        taskName: `fix wormholes bug.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -707,7 +707,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `figure out best way to do portals`,
+        taskName: `figure out best way to do wormholes`,
         workedHours: 8,
         neededHours: 8
     },
@@ -722,17 +722,17 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Remove portals indices code`,
+        taskName: `Remove wormholes indices code`,
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: `Show portal in annotation`,
+        taskName: `Show wormhole in annotation`,
         workedHours: 4,
         neededHours: 4
     },
     {
-        taskName: `Format portal song title and verse text`,
+        taskName: `Format wormhole song title and verse text`,
         workedHours: 6,
         neededHours: 6
     },
@@ -1008,7 +1008,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Select time for player from portal`,
+        taskName: `Select time for player from wormhole`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1348,12 +1348,12 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `scroll to annotation after portal`,
+        taskName: `scroll to annotation after wormhole`,
         workedHours: 2,
         neededHours: 2
     },
     {
-        taskName: `Scrolling after portal is buggy. Also, verse bar doesn't select when scrolling afterwards. (Schwa stickers).`,
+        taskName: `Scrolling after wormhole is buggy. Also, verse bar doesn't select when scrolling afterwards. (Schwa stickers).`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1498,7 +1498,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Needle done portal is broken.`,
+        taskName: `Needle done wormhole is broken.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1508,12 +1508,12 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Portal logic.`,
+        taskName: `Wormhole logic.`,
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: `Basic portal styling.`,
+        taskName: `Basic wormhole styling.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1633,7 +1633,7 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `Fix portal dot styling for border and access.`,
+        taskName: `Fix wormhole dot styling for border and access.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1658,7 +1658,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Fix access styling, including annotation card titles and portal button borders.`,
+        taskName: `Fix access styling, including annotation card titles and wormhole button borders.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1673,7 +1673,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Prevent access of wiki or portal anchor if respective dot is unselected. (Confirm portal already works.)`,
+        taskName: `Prevent access of wiki or wormhole anchor if respective dot is unselected. (Confirm wormhole already works.)`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1768,7 +1768,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Annotation card should not need to get portal links data`,
+        taskName: `Annotation card should not need to get wormhole links data`,
         workedHours: 2,
         neededHours: 2
     },
@@ -1918,12 +1918,12 @@ module.exports = [
         neededHours: 7
     },
     {
-        taskName: `Fix bug where some portal verses were being formatted wrong.`,
+        taskName: `Fix bug where some wormhole verses were being formatted wrong.`,
         workedHours: 4,
         neededHours: 4
     },
     {
-        taskName: `Accessed annotation is selected annotation when song selected from portal.`,
+        taskName: `Accessed annotation is selected annotation when song selected from wormhole.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1938,12 +1938,12 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Don't store verse object in portal, instead get it from data helper.`,
+        taskName: `Don't store verse object in wormhole, instead get it from data helper.`,
         workedHours: 2,
         neededHours: 2
     },
     {
-        taskName: `Don't store verse object in annotation anchors, let data helper get it from portal links instead.`,
+        taskName: `Don't store verse object in annotation anchors, let data helper get it from wormhole links instead.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1953,7 +1953,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Access portal index when going to it.`,
+        taskName: `Access wormhole index when going to it.`,
         workedHours: 4,
         neededHours: 4
     },
@@ -2658,7 +2658,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Fix lyric and carousel scrolling from portal select. (grey starling)`,
+        taskName: `Fix lyric and carousel scrolling from wormhole select. (grey starling)`,
         workedHours: 1,
         neededHours: 1
     },
@@ -3199,7 +3199,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Show up/down key in annotation when there is more than one wiki or portal.`,
+        taskName: `Show up/down key in annotation when there is more than one wiki or wormhole.`,
         workedHours: 2,
         neededHours: 2
     },
@@ -3229,7 +3229,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Scene should get scene object from song and verse. Current bug with clicking portal to lidless Vaseline. Allow values to be dispatched together.`,
+        taskName: `Scene should get scene object from song and verse. Current bug with clicking wormhole to lidless Vaseline. Allow values to be dispatched together.`,
         workedHours: 5,
         neededHours: 5
     },

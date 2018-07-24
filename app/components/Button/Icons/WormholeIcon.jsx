@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PortalIcon = () => (
+const WormholeIcon = () => (
     <rect
         {...{
             x: 25,
@@ -13,4 +13,4 @@ const PortalIcon = () => (
     />
 )
 
-export default PortalIcon
+export default WormholeIcon

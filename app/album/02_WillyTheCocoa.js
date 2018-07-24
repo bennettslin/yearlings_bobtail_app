@@ -11,7 +11,7 @@ import { VERSES,
          POSTCHORUS,
          INTRO,
          SOLO,
-         FLASHBACK_TO_PORTAL_PREFIX,
+         FLASHBACK_TO_WORMHOLE_PREFIX,
          IS_DOT_CARD } from '../constants/lyrics'
 import {
     PRETEEN_BENNETT_ROOM_KEY,
@@ -687,9 +687,9 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: {
-                                    portalKey: `learn_him_good`,
-                                    portalPrefix: FLASHBACK_TO_PORTAL_PREFIX
+                                wormhole: {
+                                    wormholeKey: `learn_him_good`,
+                                    wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX
                                 }
                             }
                         ]
@@ -769,7 +769,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `hit_the_switch`
+                                wormhole: `hit_the_switch`
                             }
                         ]
                     },
@@ -834,7 +834,7 @@ module.exports = {
                                             }
                                         },
                                         {
-                                            portal: `unsalvaged_sows`
+                                            wormhole: `unsalvaged_sows`
                                         }
                                     ],
                                 }
@@ -1132,7 +1132,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `needle_done`
+                                wormhole: `needle_done`
                             }
                         ]
                     },

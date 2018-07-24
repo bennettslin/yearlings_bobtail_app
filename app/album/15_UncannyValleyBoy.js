@@ -1128,7 +1128,7 @@ module.exports = {
                                 ]
                             },
                             {
-                                portal: `harpies`
+                                wormhole: `harpies`
                             }
                         ]
                     },
@@ -1162,7 +1162,7 @@ module.exports = {
                                             }
                                         },
                                         {
-                                            portal: `trophy_bronze`
+                                            wormhole: `trophy_bronze`
                                         }
                                     ]
                                 }
@@ -1395,7 +1395,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `finally_become_someone`
+                                wormhole: `finally_become_someone`
                             }
                         ]
                     }

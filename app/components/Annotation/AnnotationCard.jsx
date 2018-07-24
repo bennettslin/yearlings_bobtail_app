@@ -1,4 +1,4 @@
-// Component to show individual annotation note or all portals.
+// Component to show individual annotation note or all wormholes.
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -6,8 +6,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotSequence from '../Dot/Sequence/DotSequence'
 import Texts from '../Text/Texts'
-import AnnotationPortals from './AnnotationPortals'
-import { PORTAL } from '../../constants/dots'
+import AnnotationWormholes from './AnnotationWormholes'
+import { WORMHOLE } from '../../constants/dots'
 
 import { getAnnotationCardObject } from '../../helpers/dataHelper'
 import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
@@ -74,11 +74,11 @@ class AnnotationCard extends Component {
 
             { description,
               dotKeys = {},
-              portalLinks } = cardObject
+              wormholeLinks } = cardObject
 
-        // Add portal key to dot keys.
-        if (portalLinks) {
-            dotKeys[PORTAL] = true
+        // Add wormhole key to dot keys.
+        if (wormholeLinks) {
+            dotKeys[WORMHOLE] = true
         }
 
         return (
@@ -107,7 +107,7 @@ const annotationCardViewProptypes = {
     cardIndex: PropTypes.number.isRequired,
     isSelected: PropTypes.bool.isRequired,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
-    handleAnnotationPortalSelect: PropTypes.func.isRequired
+    handleAnnotationWormholeSelect: PropTypes.func.isRequired
 },
 
 AnnotationCardView = ({
@@ -117,7 +117,7 @@ AnnotationCardView = ({
     isSelected,
     annotationIndex,
     handleAnnotationWikiSelect,
-    handleAnnotationPortalSelect,
+    handleAnnotationWormholeSelect,
 
     // From controller.
     text,
@@ -134,7 +134,7 @@ AnnotationCardView = ({
                 'AnnotationCard',
                 !inCarousel && 'AnnotationCard__inPopup',
                 isTextCard && 'AnnotationCard__isText',
-                isWormholeCard && 'AnnotationCard__portal',
+                isWormholeCard && 'AnnotationCard__wormhole',
                 'fontSize__verse'
             )}>
                 {!isWormholeCard && (
@@ -156,12 +156,12 @@ AnnotationCardView = ({
                         handleAnchorClick={handleAnnotationWikiSelect}
                     />
                 ) : (
-                    <AnnotationPortals
+                    <AnnotationWormholes
                         {...{
                             isSelected,
                             cardIndex,
                             annotationIndex,
-                            handleAnnotationPortalSelect
+                            handleAnnotationWormholeSelect
                         }}
                     />
                 )}

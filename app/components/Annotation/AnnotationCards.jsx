@@ -1,4 +1,4 @@
-// Component to show all notes and portals for each annotation.
+// Component to show all notes and wormholes for each annotation.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'

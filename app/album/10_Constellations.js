@@ -760,7 +760,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `down_the_steppes`
+                                wormhole: `down_the_steppes`
                             }
                         ]
                     },
@@ -1538,7 +1538,7 @@ module.exports = {
                                         }
                                     },
                                     {
-                                        portal: `sunken_tirpitz`
+                                        wormhole: `sunken_tirpitz`
                                     }
                                 ]
                             }

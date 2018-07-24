@@ -2,7 +2,7 @@ import AfterwordIcon from './Icons/AfterwordIcon'
 import BackstoryIcon from './Icons/BackstoryIcon'
 import NarrativeIcon from './Icons/NarrativeIcon'
 import ObservationIcon from './Icons/ObservationIcon'
-import PortalIcon from './Icons/PortalIcon'
+import WormholeIcon from './Icons/WormholeIcon'
 import PunIcon from './Icons/PunIcon'
 import ReferenceIcon from './Icons/ReferenceIcon'
 import SongwritingIcon from './Icons/SongwritingIcon'
@@ -12,7 +12,7 @@ import {
     BACKSTORY,
     NARRATIVE,
     OBSERVATION,
-    PORTAL,
+    WORMHOLE,
     PUN,
     REFERENCE,
     SONGWRITING
@@ -23,7 +23,7 @@ const DOTS_MAP = {
         [BACKSTORY]: BackstoryIcon,
         [NARRATIVE]: NarrativeIcon,
         [OBSERVATION]: ObservationIcon,
-        [PORTAL]: PortalIcon,
+        [WORMHOLE]: WormholeIcon,
         [PUN]: PunIcon,
         [REFERENCE]: ReferenceIcon,
         [SONGWRITING]: SongwritingIcon

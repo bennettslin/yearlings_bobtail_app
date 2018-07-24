@@ -16,7 +16,7 @@ export const bindHandlers = (me) => {
     me.handleAnnotationPrevious = me.handleAnnotationPrevious.bind(me)
     me.handleAnnotationNext = me.handleAnnotationNext.bind(me)
     me.handleAnnotationWikiSelect = me.handleAnnotationWikiSelect.bind(me)
-    me.handleAnnotationPortalSelect = me.handleAnnotationPortalSelect.bind(me)
+    me.handleAnnotationWormholeSelect = me.handleAnnotationWormholeSelect.bind(me)
     me.handleAudioPlay = me.handleAudioPlay.bind(me)
     me.handleAudioPreviousSong = me.handleAudioPreviousSong.bind(me)
     me.handleAudioNextSong = me.handleAudioNextSong.bind(me)
@@ -83,7 +83,7 @@ export const getHandlers = (me) => {
         handleAccessToggle: me.handleAccessToggle,
         handleAdminToggle: me.handleAdminToggle,
         handleAnnotationWikiSelect: me.handleAnnotationWikiSelect,
-        handleAnnotationPortalSelect: me.handleAnnotationPortalSelect,
+        handleAnnotationWormholeSelect: me.handleAnnotationWormholeSelect,
         handleAnnotationPrevious: me.handleAnnotationPrevious,
         handleAnnotationNext: me.handleAnnotationNext,
         handleAudioPlay: me.handleAudioPlay,

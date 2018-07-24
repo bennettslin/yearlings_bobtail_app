@@ -1,5 +1,5 @@
 import {
-    PORTAL,
+    WORMHOLE,
     REFERENCE
 } from '../../constants/dots'
 
@@ -31,9 +31,9 @@ export const getAccessibleAnnotationAnchorsLength = ({
                     selectedDotKeys[REFERENCE]
 
                 ) || (
-                    // It's a portal index, and portal dot is selected.
+                    // It's a wormhole index, and wormhole dot is selected.
                     typeofAnnotationAnchor === 'number' &&
-                    selectedDotKeys[PORTAL]
+                    selectedDotKeys[WORMHOLE]
                 )
             ) ? sum + 1 : sum
         }, 0)
@@ -43,33 +43,33 @@ export const getAccessibleAnnotationAnchorsLength = ({
     }
 }
 
-export const getAnnotationCardPortalLinksArray = ({
+export const getAnnotationCardWormholeLinksArray = ({
     songIndex,
     annotationIndex,
     cardIndex
 }) => {
-    // Called by annotation portals block component.
+    // Called by annotation wormholes block component.
     const cardObject = getAnnotationCardObject({
         songIndex,
         annotationIndex,
         cardIndex
     })
 
-    return cardObject ? cardObject.portalLinks : null
+    return cardObject ? cardObject.wormholeLinks : null
 }
 
-export const getAnnotationCardPortalObject = ({
+export const getAnnotationCardWormholeObject = ({
     songIndex,
     annotationIndex,
     cardIndex,
-    portalLinkIndex
+    wormholeLinkIndex
 }) => {
-    // Called by annotation portal component.
-    const portalLinksArray = getAnnotationCardPortalLinksArray({
+    // Called by annotation wormhole component.
+    const wormholeLinksArray = getAnnotationCardWormholeLinksArray({
         songIndex,
         annotationIndex,
         cardIndex
     })
 
-    return portalLinksArray ? portalLinksArray[portalLinkIndex] : null
+    return wormholeLinksArray ? wormholeLinksArray[wormholeLinkIndex] : null
 }

@@ -317,7 +317,7 @@ module.exports = {
                     {
                         anchor: `withering`,
                         annotation: {
-                            portal: `withering`
+                            wormhole: `withering`
                         }
                     },
                     {

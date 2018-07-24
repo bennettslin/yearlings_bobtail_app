@@ -240,7 +240,7 @@ module.exports = {
                         // NOTE: There are actually two 'key turned's in this song?
                         anchor: `key turned`,
                         annotation: {
-                            portal: `key_turned`
+                            wormhole: `key_turned`
                         }
                     }
                 ],
@@ -533,7 +533,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `trophy_bronze`
+                                wormhole: `trophy_bronze`
                             }
                         ]
                     }
@@ -725,7 +725,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: 'needle_done'
+                                wormhole: 'needle_done'
                             }
                         ]
                     },
@@ -1006,7 +1006,7 @@ module.exports = {
                                 },
                             },
                             {
-                                portal: `veggie_wishbone`
+                                wormhole: `veggie_wishbone`
                             }
                         ]
                     }

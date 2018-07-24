@@ -355,7 +355,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `barnacle`
+                                wormhole: `barnacle`
                             }
                         ]
                     },
@@ -949,7 +949,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `veggie_wishbone`
+                                wormhole: `veggie_wishbone`
                             }
                         ]
                     }

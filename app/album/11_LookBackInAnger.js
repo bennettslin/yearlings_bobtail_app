@@ -10,7 +10,7 @@ import { VERSES,
          BRIDGE,
          INTRO,
          OUTRO,
-         FORESHADOW_OF_PORTAL_PREFIX,
+         FORESHADOW_OF_WORMHOLE_PREFIX,
          IS_DOT_CARD } from '../constants/lyrics'
 import {
     SHOW_STAGE_SIDE_1_KEY,
@@ -261,9 +261,9 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: {
-                                    portalKey: `shoelaces`,
-                                    portalPrefix: FORESHADOW_OF_PORTAL_PREFIX
+                                wormhole: {
+                                    wormholeKey: `shoelaces`,
+                                    wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX
                                 }
                             }
                         ]
@@ -293,7 +293,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `belle`
+                                wormhole: `belle`
                             }
                         ]
                     },

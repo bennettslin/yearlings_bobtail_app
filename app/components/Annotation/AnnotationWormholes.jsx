@@ -1,12 +1,12 @@
-// Component to show all portals for each annotation.
+// Component to show all wormholes for each annotation.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AnnotationPortal from './AnnotationPortal'
-import { SOURCE_PORTAL_INDEX } from '../../constants/lyrics'
+import AnnotationWormhole from './AnnotationWormhole'
+import { SOURCE_WORMHOLE_INDEX } from '../../constants/lyrics'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
-import { getAnnotationCardPortalLinksArray } from './annotationHelper'
+import { getAnnotationCardWormholeLinksArray } from './annotationHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
@@ -18,7 +18,7 @@ const mapStateToProps = ({
     accessedAnnotationAnchorIndex
 })
 
-class AnnotationPortals extends Component {
+class AnnotationWormholes extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -57,31 +57,31 @@ class AnnotationPortals extends Component {
                 cardIndex
             } = other,
 
-            portalLinksArray = getAnnotationCardPortalLinksArray({
+            wormholeLinksArray = getAnnotationCardWormholeLinksArray({
                 songIndex: renderableSongIndex,
                 annotationIndex,
                 cardIndex
             })
 
-        return Boolean(portalLinksArray) && (
-            portalLinksArray.map((portalObject, portalLinkIndex) => {
+        return Boolean(wormholeLinksArray) && (
+            wormholeLinksArray.map((wormholeObject, wormholeLinkIndex) => {
 
                 /**
-                 * The portalLinkIndex is solely to fetch the portal object
-                 * from the data helper when there are two portals in the same
-                 * annotation. This happens only once, with the "shiv" one.
+                 * The wormholeLinkIndex is solely to fetch the wormhole object
+                 * from the data helper when there are two wormholes in the
+                 * same annotation. This happens only once, with "shiv."
                  */
                 const {
-                        [SOURCE_PORTAL_INDEX]: sourcePortalIndex
-                    } = portalObject,
+                        [SOURCE_WORMHOLE_INDEX]: sourceWormholeIndex
+                    } = wormholeObject,
 
                     isAccessed =
-                        accessedAnnotationAnchorIndex === sourcePortalIndex
+                        accessedAnnotationAnchorIndex === sourceWormholeIndex
 
                 return (
-                    <AnnotationPortal {...other}
-                        key={portalLinkIndex}
-                        portalLinkIndex={portalLinkIndex}
+                    <AnnotationWormhole {...other}
+                        key={wormholeLinkIndex}
+                        wormholeLinkIndex={wormholeLinkIndex}
                         isAccessed={isAccessed}
                     />
                 )
@@ -90,4 +90,4 @@ class AnnotationPortals extends Component {
     }
 }
 
-export default connect(mapStateToProps)(AnnotationPortals)
+export default connect(mapStateToProps)(AnnotationWormholes)

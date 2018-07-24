@@ -224,7 +224,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `crooked_thieves`
+                                wormhole: `crooked_thieves`
                             }
                         ]
                     }
@@ -335,7 +335,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `lidless_vaseline_sits`
+                                wormhole: `lidless_vaseline_sits`
                             }
                         ]
                     },

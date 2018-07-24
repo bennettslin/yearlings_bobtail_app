@@ -1,4 +1,4 @@
-// Component to show individual portal in portals block.
+// Component to show individual wormhole in wormholes block.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -9,7 +9,7 @@ import Texts from '../Text/Texts'
 import Button from '../Button/Button'
 
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
-import { PORTAL_BUTTON_KEY } from '../../constants/buttons'
+import { WORMHOLE_BUTTON_KEY } from '../../constants/buttons'
 
 import {
     LYRIC_COLUMN_KEYS,
@@ -23,7 +23,7 @@ import {
 } from '../../helpers/dataHelper'
 
 import {
-    getAnnotationCardPortalObject
+    getAnnotationCardWormholeObject
 } from './annotationHelper'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
@@ -36,7 +36,7 @@ const mapStateToProps = ({
     renderableSongIndex: renderableStore.renderableSongIndex,
 })
 
-class AnnotationPortal extends Component {
+class AnnotationWormhole extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -46,16 +46,16 @@ class AnnotationPortal extends Component {
         // From parent.
         annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired,
-        portalLinkIndex: PropTypes.number.isRequired,
+        wormholeLinkIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        handleAnnotationPortalSelect: PropTypes.func.isRequired
+        handleAnnotationWormholeSelect: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
-        this._handlePortalClick = this._handlePortalClick.bind(this)
+        this._handleWormholeClick = this._handleWormholeClick.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -65,32 +65,32 @@ class AnnotationPortal extends Component {
                 nextProps,
                 alwaysBypassCheck: {
                     cardIndex: true,
-                    portalLinkIndex: true
+                    wormholeLinkIndex: true
                 }
             })
 
         return shouldComponentUpdate
     }
 
-    _handlePortalClick(e) {
-        const portalObject = this._getPortalObject()
+    _handleWormholeClick(e) {
+        const wormholeObject = this._getWormholeObject()
 
-        this.props.handleAnnotationPortalSelect(e, portalObject)
+        this.props.handleAnnotationWormholeSelect(e, wormholeObject)
     }
 
-    _getPortalObject() {
+    _getWormholeObject() {
         const {
             renderableSongIndex,
             annotationIndex,
             cardIndex,
-            portalLinkIndex
+            wormholeLinkIndex
         } = this.props
 
-        return getAnnotationCardPortalObject({
+        return getAnnotationCardWormholeObject({
             songIndex: renderableSongIndex,
             annotationIndex,
             cardIndex,
-            portalLinkIndex
+            wormholeLinkIndex
         })
     }
 
@@ -101,15 +101,15 @@ class AnnotationPortal extends Component {
             isSelected
         } = this.props,
 
-            portalObject = this._getPortalObject(),
+            wormholeObject = this._getWormholeObject(),
 
             { songIndex,
               annotationIndex,
               verseIndex,
               columnIndex,
 
-              // Default if no portal prefix.
-              portalPrefix = 'portal to' } = portalObject,
+              // Default if no wormhole prefix.
+              wormholePrefix = 'wormhole to' } = wormholeObject,
 
               songTitle = getSongTitle({ songIndex }),
               verseObject = getVerseObject(songIndex, verseIndex),
@@ -123,31 +123,31 @@ class AnnotationPortal extends Component {
         return (
             <div
                 className={cx(
-                    'AnnotationPortal'
+                    'AnnotationWormhole'
                 )}
             >
 
                 {/* Wrap button so it won't get squished if text wraps. */}
-                <div className="AnnotationPortal__button">
+                <div className="AnnotationWormhole__button">
                     <Button
-                        buttonName={PORTAL_BUTTON_KEY}
+                        buttonName={WORMHOLE_BUTTON_KEY}
                         showAccessIconIfAccessOn={isAccessed && isSelected}
                         accessKey={NAVIGATION_ENTER_KEY}
-                        handleButtonClick={this._handlePortalClick}
+                        handleButtonClick={this._handleWormholeClick}
                     />
                 </div>
 
-                <div className="AnnotationPortal__text">
-                    <div className="AnnotationPortal__title">
-                        {portalPrefix} <strong>{songTitle}</strong>
+                <div className="AnnotationWormhole__text">
+                    <div className="AnnotationWormhole__title">
+                        {wormholePrefix} <strong>{songTitle}</strong>
                     </div>
 
-                    <div className="AnnotationPortal__verse">
+                    <div className="AnnotationWormhole__verse">
                         <span>{'\u201c'}</span>
                         <Texts
-                            inPortal
+                            inWormhole
                             text={text}
-                            portalAnnotationIndex={annotationIndex}
+                            wormholeAnnotationIndex={annotationIndex}
                         />
                         <span>{'\u201d'}</span>
                     </div>
@@ -157,4 +157,4 @@ class AnnotationPortal extends Component {
     }
 }
 
-export default connect(mapStateToProps)(AnnotationPortal)
+export default connect(mapStateToProps)(AnnotationWormhole)

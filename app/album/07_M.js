@@ -841,7 +841,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `chimney_sweep`
+                                wormhole: `chimney_sweep`
                             }
                         ]
                     }

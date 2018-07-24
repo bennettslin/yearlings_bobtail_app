@@ -83,7 +83,7 @@ class LyricManager extends Component {
         /**
          * We shouldn't be able to select lyric column if not in a song that
          * has double columns, or if in a logue. Check for new song if called
-         * from portal.
+         * from wormhole.
          */
         if (!(getShowOneOfTwoLyricColumns(selectedSongIndex, props.deviceIndex)) || getSongIsLogue(selectedSongIndex)) {
             return false

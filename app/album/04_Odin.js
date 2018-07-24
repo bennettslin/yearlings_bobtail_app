@@ -12,7 +12,7 @@ import { VERSES,
          INTRO,
          SOLO,
          OUTRO,
-         FLASHBACK_TO_PORTAL_PREFIX,
+         FLASHBACK_TO_WORMHOLE_PREFIX,
          IS_DOT_CARD } from '../constants/lyrics'
 import {
     ODIN_SCENE_1_KEY,
@@ -712,9 +712,9 @@ module.exports = {
                     {
                         anchor: `dreams of whom`,
                         annotation: {
-                            portal: {
-                                portalKey: `dreams_of_whom`,
-                                portalPrefix: FLASHBACK_TO_PORTAL_PREFIX
+                            wormhole: {
+                                wormholeKey: `dreams_of_whom`,
+                                wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX
                             }
                         }
                     },
@@ -803,7 +803,7 @@ module.exports = {
         [
             {
                 time: 67,
-                // CONSIDER: Portal: Reference to insect in jar in Vegan Proclamation?
+                // CONSIDER: Wormhole: Reference to insect in jar in Vegan Proclamation?
                 left: `could some bottled butterfly`,
                 right: [
                     `would the`,
@@ -978,7 +978,7 @@ module.exports = {
                 right: [
                     `where its`,
                     {
-                        // CONSIDER: portal: Hope chest in M?
+                        // CONSIDER: wormhole: Hope chest in M?
                         anchor: `hopeless rests.`,
                         annotation: {
                             description: `Hope was all that remained in the box opened by Pandora. By contrast, upon having all the hard truths of the world revealed to me by Sasha, all I had left was my own hopeless state.`,
@@ -1107,7 +1107,7 @@ module.exports = {
                     {
                         anchor: `stand onshore`,
                         annotation: {
-                            portal: `stand_onshore`
+                            wormhole: `stand_onshore`
                         }
                     },
                     `keen to drift`
@@ -1122,7 +1122,7 @@ module.exports = {
                 right: [
                     {
                         anchor: `impart warmth`,
-                        // CONSIDER: Portal Foreshadow M?
+                        // CONSIDER: Wormhole Foreshadow M?
                         annotation: {
                             description: `Cellophane is thin and see-through like gauze, but has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her tenderest feelings were strictly reserved for those who could show tenderness in return.`,
                             dotKeys: {
@@ -1191,7 +1191,7 @@ module.exports = {
                     anchor: `shivering for shivs unsheathed.`,
                     annotation: [
                         {
-                            // CONSIDER: Portal Kyon for shank?
+                            // CONSIDER: Wormhole Kyon for shank?
                             description: [
                                 `A`,
                                 {
@@ -1205,7 +1205,7 @@ module.exports = {
                             }
                         },
                         {
-                            portal: `chivalry`
+                            wormhole: `chivalry`
                         }
                     ]
                 },
@@ -1230,7 +1230,7 @@ module.exports = {
                             }
                         },
                         {
-                            portal: `chivalry`
+                            wormhole: `chivalry`
                         }
                     ]
                 }
@@ -1386,7 +1386,7 @@ module.exports = {
                 left: [
                     `But for a`,
                     {
-                        // CONSIDER: Portal to Ash Wednesday?
+                        // CONSIDER: Wormhole to Ash Wednesday?
                         anchor: `foetus force-fed,`,
                         annotation: {
                             description: `Most maddening of all was that one has no say in being brought into this world, given how distressing the knowledge of one's mortality must always be.`,
@@ -1466,7 +1466,7 @@ module.exports = {
                     {
                         anchor: `grey starling's beak`,
                         annotation: {
-                            portal: `grey_starling`
+                            wormhole: `grey_starling`
                         }
                     }
                 ]
@@ -1486,7 +1486,7 @@ module.exports = {
                         }
                     }
                 ],
-                // CONSIDER: Portal: Nora Barnacle in Good Night, Sita?
+                // CONSIDER: Wormhole: Nora Barnacle in Good Night, Sita?
                 right: `can reach urchins smashed from undertows…`
             },
             {

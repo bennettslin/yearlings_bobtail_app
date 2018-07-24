@@ -8,7 +8,7 @@ import { intersects } from '../../helpers/dotHelper'
 import { getShowOneOfTwoLyricColumns } from '../../helpers/responsiveHelper'
 
 import {
-    PORTAL,
+    WORMHOLE,
     REFERENCE
 } from '../../constants/dots'
 import { COLUMN_INDEX } from '../../constants/lyrics'
@@ -299,7 +299,7 @@ export const getAnnotationAnchorIndexForDirection = ({
 
             /**
              * It's valid if it's a wiki anchor and reference dot is selected,
-             * or it's a portal index and portal dot is selected.
+             * or it's a wormhole index and wormhole dot is selected.
              */
             if (
                 (
@@ -307,7 +307,7 @@ export const getAnnotationAnchorIndexForDirection = ({
                     selectedDotKeys[REFERENCE]
                 ) || (
                     typeofAnnotationAnchor === 'number' &&
-                    selectedDotKeys[PORTAL]
+                    selectedDotKeys[WORMHOLE]
                 )
             ) {
 

@@ -16,7 +16,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         handleAnnotationPrevious,
         handleAnnotationNext,
         handleAnnotationWikiSelect,
-        handleAnnotationPortalSelect,
+        handleAnnotationWormholeSelect,
         handleAudioPlay,
         handleAudioPreviousSong,
         handleAudioNextSong,
@@ -48,7 +48,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         handleAnnotationPrevious,
         handleAnnotationNext,
         handlePopupContainerClick,
-        handleAnnotationPortalSelect,
+        handleAnnotationWormholeSelect,
         handleAnnotationWikiSelect
     },
 
@@ -133,7 +133,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleAnnotationPrevious,
             handleAnnotationNext,
             handleAnnotationWikiSelect,
-            handleAnnotationPortalSelect,
+            handleAnnotationWormholeSelect,
             handlePopupContainerClick,
             handleScrollUponCarouselRender
         },

@@ -1,8 +1,8 @@
-# Portal section notes
+# Wormhole section notes
 
 ### Annotation section
 
-* Annotation card with portal has:
+* Annotation card with wormhole has:
     * Song title
     * Song verse
     * Annotation card
@@ -17,4 +17,4 @@
 
 # Accessibility
 
-* Portal as accessed element should not change.
+* Wormhole as accessed element should not change.

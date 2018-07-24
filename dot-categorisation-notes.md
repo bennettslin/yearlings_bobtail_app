@@ -25,8 +25,8 @@
 * My opinion, as spoken by me as the narrator.
 * Explanation of analogies, comparisons, imagery, and so forth.
 
-# PORTAL
-* Dot does not know portal subcategories.
+# WORMHOLE
+* Dot does not know wormhole subcategories.
 * Foreshadow of x and flashback to y.
 * Pun.
 

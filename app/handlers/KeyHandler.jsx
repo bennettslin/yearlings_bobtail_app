@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { getSongsAndLoguesCount,
          getSongIsLogue,
          getBookColumnIndex,
-         getPortalLink,
+         getWormholeLink,
          getAnnotationObject } from '../helpers/dataHelper'
 
 import { ARROW_LEFT,
@@ -318,18 +318,18 @@ class KeyHandler extends Component {
                     if (typeof annotationAnchorEntity === 'string') {
                         eventHandlers.handleAnnotationWikiSelect(e, accessedAnnotationAnchorIndex)
 
-                    // It's a portal index.
+                    // It's a wormhole index.
                     } else {
                         const
-                            portalLink = getPortalLink(
+                            wormholeLink = getWormholeLink(
                                 annotationObject,
                                 annotationAnchorEntity
                             )
 
                         keyWasRegistered =
-                            eventHandlers.handleAnnotationPortalSelect(
+                            eventHandlers.handleAnnotationWormholeSelect(
                                 e,
-                                portalLink
+                                wormholeLink
                             )
 
                         /**

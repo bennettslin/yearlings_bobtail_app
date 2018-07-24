@@ -32,8 +32,8 @@ module.exports = {
     RIGHT_COLUMN: 'rightColumn',
 
     WIKI_INDEX: 'wikiIndex',
-    DESTINATION_PORTAL_INDEX: 'destinationPortalIndex',
-    SOURCE_PORTAL_INDEX: 'sourcePortalIndex',
+    DESTINATION_WORMHOLE_INDEX: 'destinationWormholeIndex',
+    SOURCE_WORMHOLE_INDEX: 'sourceWormholeIndex',
 
     IS_DOT_CARD: 'isDotCard',
     HAS_SIDE_CARDS: 'hasSideCards',
@@ -91,7 +91,7 @@ module.exports = {
         ANCHOR
     ],
 
-    PORTAL_SEARCH_KEYS: [
+    WORMHOLE_SEARCH_KEYS: [
         LYRIC,
         LEFT,
         RIGHT,
@@ -110,6 +110,6 @@ module.exports = {
         ANCHOR
     ],
 
-    FLASHBACK_TO_PORTAL_PREFIX: 'flashback to',
-    FORESHADOW_OF_PORTAL_PREFIX: 'foreshadow of',
+    FLASHBACK_TO_WORMHOLE_PREFIX: 'flashback to',
+    FORESHADOW_OF_WORMHOLE_PREFIX: 'foreshadow of',
 }

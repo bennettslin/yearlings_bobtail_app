@@ -41,7 +41,7 @@ class DebugManager extends Component {
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
         window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
         window.d = LogHelper.logDrawings.bind(LogHelper, this)
-        window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
+        window.p = LogHelper.logWormholeLinks.bind(LogHelper, this.props)
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.t = LogHelper.logStorage.bind(LogHelper)

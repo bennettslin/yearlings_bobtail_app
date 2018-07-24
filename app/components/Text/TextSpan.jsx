@@ -18,8 +18,8 @@ propTypes = {
     isItalic: PropTypes.bool,
     isVerseBeginningSpan: PropTypes.bool,
     isVerseEndingSpan: PropTypes.bool,
-    inPortal: PropTypes.bool,
-    isPortalAnchorInPortal: PropTypes.bool
+    inWormhole: PropTypes.bool,
+    isWormholeAnchorInWormhole: PropTypes.bool
 },
 
 TextSpan = ({
@@ -30,8 +30,8 @@ TextSpan = ({
     isItalic,
     isVerseBeginningSpan,
     isVerseEndingSpan,
-    inPortal,
-    isPortalAnchorInPortal
+    inWormhole,
+    isWormholeAnchorInWormhole
 
 }) => {
 
@@ -50,14 +50,14 @@ TextSpan = ({
         formattedText = getFormattedLyricSpanText(formattedText)
     }
 
-    // Last verse span in portal will always end in an ellipsis.
-    if (inPortal && isVerseEndingSpan) {
+    // Last verse span in wormhole will always end in an ellipsis.
+    if (inWormhole && isVerseEndingSpan) {
         formattedText = getFormattedEndingVerseSpanText(formattedText)
     }
 
     /**
      * Subsequent spans of text on a line will begin with a space, unless it
-     * begins with "'s," or it's the beginning verse span in a portal.
+     * begins with "'s," or it's the beginning verse span in a wormhole.
      */
     if (!isVerseBeginningSpan && text.indexOf('\'s') !== 0) {
         formattedText = ` ${formattedText}`
@@ -66,7 +66,7 @@ TextSpan = ({
     return (
         <Tag className={cx(
             'TextSpan',
-            isPortalAnchorInPortal && 'textSpan__portalInPortal'
+            isWormholeAnchorInWormhole && 'textSpan__wormholeInWormhole'
         )}>
             {formattedText}
         </Tag>

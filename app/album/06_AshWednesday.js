@@ -289,7 +289,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `laid_tourettes`
+                                wormhole: `laid_tourettes`
                             }
                         ]
                     },
@@ -795,7 +795,7 @@ module.exports = {
                     {
                         anchor: `spark zips through my head`,
                         annotation: {
-                            portal: `spark_zips`
+                            wormhole: `spark_zips`
                         }
                     },
                     `to be`

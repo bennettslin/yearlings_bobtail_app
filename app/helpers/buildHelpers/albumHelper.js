@@ -12,10 +12,10 @@ import {
 
 import {
     registerCards,
-    addDestinationPortalLinks,
+    addDestinationWormholeLinks,
     finalPrepareCard,
-    addDestinationPortalIndices,
-    addDestinationPortalFormats
+    addDestinationWormholeIndices,
+    addDestinationWormholeFormats
 } from './annotationsHelper'
 
 import { getSongIsLogue } from '../dataHelper'
@@ -44,7 +44,7 @@ export const parseAlbumData = (albumObject) => {
     logger.warn('Begin parse album data.')
 
     // Initialise album.
-    albumObject.tempPortalLinks = {}
+    albumObject.tempWormholeLinks = {}
 
     // Combine completed and remaining tasks.
     _mergeAlbumTasks(albumObject)
@@ -53,14 +53,14 @@ export const parseAlbumData = (albumObject) => {
     _initialPrepareAlbum(albumObject)
 
     // In-between preparation.
-    addDestinationPortalLinks(albumObject)
+    addDestinationWormholeLinks(albumObject)
     adminFinaliseDrawings(albumObject)
 
     // Finap preparation.
     _finalPrepareAlbum(albumObject)
 
     // After preparation.
-    addDestinationPortalIndices(albumObject)
+    addDestinationWormholeIndices(albumObject)
 
     logger.warn('End parse album data.')
     return albumObject
@@ -281,15 +281,15 @@ const _finalPrepareAlbum = (albumObject) => {
             finalRegisterStanzaTypes(songObject)
 
             /**
-             * Add wiki and portal indices. These can only be determined after
-             * collecting portal links from the entire album.
+             * Add wiki and wormhole indices. These can only be determined after
+             * collecting wormhole links from the entire album.
              */
             _finalPrepareLyrics(songObject)
 
             finalRegisterScenes(songObject)
 
-            // For each verse in a portal, tell portal how to format it.
-            addDestinationPortalFormats(songObject.lyricUnits)
+            // For each verse in a wormhole, tell wormhole how to format it.
+            addDestinationWormholeFormats(songObject.lyricUnits)
 
             // Clean up.
             delete songObject.tempFinalAnnotationIndex

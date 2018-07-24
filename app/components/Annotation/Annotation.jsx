@@ -1,4 +1,4 @@
-// Section to show title and all notes and portals for each annotation.
+// Section to show title and all notes and wormholes for each annotation.
 
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'

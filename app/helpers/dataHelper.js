@@ -5,7 +5,7 @@
  */
 
 import AlbumData from '../AlbumData'
-import { SOURCE_PORTAL_INDEX } from '../constants/lyrics'
+import { SOURCE_WORMHOLE_INDEX } from '../constants/lyrics'
 
 /*********
  * ALBUM *
@@ -218,22 +218,22 @@ export const getAnnotationCardObject = ({
     return annotationObject ? annotationObject.cards[cardIndex] : null
 }
 
-export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
+export const getWormholeLink = (annotationObject, annotationAnchorIndex) => {
 
     const { cards } = annotationObject
 
-    // Loop through cards until we find the portal card.
+    // Loop through cards until we find the wormhole card.
     return cards.reduce((foundCardObject, cardObject) => {
-        const { portalLinks } = cardObject
+        const { wormholeLinks } = cardObject
 
-        if (portalLinks) {
-            // Loop through portal links until we find the portal index we want.
-            foundCardObject = portalLinks.reduce((foundPortalLink, portalLink) => {
-                if (portalLink[SOURCE_PORTAL_INDEX] === annotationAnchorIndex) {
-                    foundPortalLink = portalLink
+        if (wormholeLinks) {
+            // Loop through wormhole links until we find the wormhole index we want.
+            foundCardObject = wormholeLinks.reduce((foundWormholeLink, wormholeLink) => {
+                if (wormholeLink[SOURCE_WORMHOLE_INDEX] === annotationAnchorIndex) {
+                    foundWormholeLink = wormholeLink
                 }
 
-                return foundPortalLink
+                return foundWormholeLink
             }, null)
         }
 

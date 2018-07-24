@@ -10,8 +10,8 @@ export default {
         return this._logObject('window storage', WINDOW_STORAGE)
     },
 
-    logPortalLinks({ portalLinks }) {
-        return portalLinks
+    logWormholeLinks({ wormholeLinks }) {
+        return wormholeLinks
     },
 
     logSong({ props }) {

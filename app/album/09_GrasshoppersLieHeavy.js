@@ -379,7 +379,7 @@ module.exports = {
                                     }
                                 },
                                 {
-                                    portal: `pampas`
+                                    wormhole: `pampas`
                                 }
                             ]
                         }
@@ -401,7 +401,7 @@ module.exports = {
                                 anchor: `meta-referential`,
                                 wiki: `Meta-reference`
                             },
-                            `possibilities for a story within a story, and did so by dropping lyrical references to all the other songs on the album, which I call portals.`
+                            `possibilities for a story within a story, and did so by dropping lyrical references to all the other songs on the album, which I call wormholes.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -543,7 +543,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `down_the_steppes`
+                                wormhole: `down_the_steppes`
                             }
                         ]
                     },
@@ -596,7 +596,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `laid_tourettes`
+                                wormhole: `laid_tourettes`
                             }
                         ]
                     }
@@ -622,7 +622,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `swastikas`
+                                wormhole: `swastikas`
                             }
                         ]
                     },
@@ -638,7 +638,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `safeway_paper_bag`
+                                wormhole: `safeway_paper_bag`
                             }
                         ]
                     }
@@ -664,7 +664,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `know_is_bleat`
+                                wormhole: `know_is_bleat`
                             }
                         ]
                     },
@@ -679,7 +679,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `barnacle`
+                                wormhole: `barnacle`
                             }
                         ]
                     }
@@ -792,7 +792,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `sunken_tirpitz`
+                                wormhole: `sunken_tirpitz`
                             }
                         ]
                     }
@@ -833,13 +833,13 @@ module.exports = {
                     {
                         anchor: `chimneys weep`,
                         annotation: {
-                            portal: `chimney_sweep`
+                            wormhole: `chimney_sweep`
                         }
                     },
                     {
                         anchor: `sooty dust.`,
                         annotation: {
-                            portal: `suttee_dust`
+                            wormhole: `suttee_dust`
                         }
                     }
                 ]
@@ -964,7 +964,7 @@ module.exports = {
                     {
                         anchor: `heartbeats,`,
                         annotation: {
-                            portal: `harpies`
+                            wormhole: `harpies`
                         }
                     },
                     `her steps, race to first.`
@@ -1022,7 +1022,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `key_turned`
+                                wormhole: `key_turned`
                             }
                         ]
                     },
@@ -1094,7 +1094,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `hit_the_switch`
+                                wormhole: `hit_the_switch`
                             }
                         ]
                     }
@@ -1114,7 +1114,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `lidless_vaseline_sits`
+                                wormhole: `lidless_vaseline_sits`
                             }
                         ]
                     }
@@ -1254,7 +1254,7 @@ module.exports = {
                     {
                         anchor: `ever-present scent`,
                         annotation: {
-                            portal: 'present_sent'
+                            wormhole: 'present_sent'
                         }
                     },
                     `of her trail.`
@@ -1274,7 +1274,7 @@ module.exports = {
                     {
                         anchor: `wake by a bell`,
                         annotation: {
-                            portal: `belle`
+                            wormhole: `belle`
                         }
                     },
                     {
@@ -1294,7 +1294,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `withering`
+                                wormhole: `withering`
                             }
                         ]
                     }
@@ -1382,7 +1382,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `stand_onshore`
+                                wormhole: `stand_onshore`
                             }
                         ]
                     },
@@ -1476,7 +1476,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `grey_starling`
+                                wormhole: `grey_starling`
                             }
                         ]
                     },
@@ -1582,7 +1582,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Look Back portal`,
+            taskName: `Look Back wormhole`,
             workedHours: 0,
             neededHours: 1
         },

@@ -2,7 +2,7 @@ const AFTERWORD = 'afterword',
       BACKSTORY = 'backstory',
       NARRATIVE = 'narrative',
       OBSERVATION = 'observation',
-      PORTAL = 'wormhole',
+      WORMHOLE = 'wormhole',
       PUN = 'pun',
       REFERENCE = 'reference',
       SONGWRITING = 'songwriting'
@@ -12,7 +12,7 @@ module.exports = {
     BACKSTORY,
     NARRATIVE,
     OBSERVATION,
-    PORTAL,
+    WORMHOLE,
     PUN,
     REFERENCE,
     SONGWRITING,
@@ -25,7 +25,7 @@ module.exports = {
         PUN,
         REFERENCE,
         SONGWRITING,
-        PORTAL,
+        WORMHOLE,
         AFTERWORD
     ],
 
@@ -36,7 +36,7 @@ module.exports = {
         [PUN]: 'Of both the "literary" and "bad" variety.',
         [REFERENCE]: 'wiki description',
         [SONGWRITING]: 'music description',
-        [PORTAL]: 'portal description',
+        [WORMHOLE]: 'wormhole description',
         [AFTERWORD]: 'after the album'
     },
 

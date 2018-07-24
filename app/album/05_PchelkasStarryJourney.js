@@ -446,7 +446,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `know_is_bleat`
+                                wormhole: `know_is_bleat`
                             }
                         ]
                     }

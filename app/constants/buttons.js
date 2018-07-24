@@ -15,7 +15,7 @@ const
     POPUP_CLOSE_BUTTON_KEY = 'popupClose',
     POPUP_NEXT_BUTTON_KEY = 'popupNext',
     POPUP_PREVIOUS_BUTTON_KEY = 'popupPrevious',
-    PORTAL_BUTTON_KEY = 'portal',
+    WORMHOLE_BUTTON_KEY = 'wormhole',
     SCORES_BUTTON_KEY = 'scores',
     TIPS_BUTTON_KEY = 'tips',
     TITLE_BUTTON_KEY = 'title'
@@ -37,7 +37,7 @@ module.exports = {
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
-    PORTAL_BUTTON_KEY,
+    WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY,
     TIPS_BUTTON_KEY,
     TITLE_BUTTON_KEY

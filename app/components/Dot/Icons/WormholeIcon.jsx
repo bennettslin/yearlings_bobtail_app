@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PortalIcon = () => (
+const WormholeIcon = () => (
     <circle
         {...{
             cx: 50,
@@ -12,4 +12,4 @@ const PortalIcon = () => (
     />
 )
 
-export default PortalIcon
+export default WormholeIcon

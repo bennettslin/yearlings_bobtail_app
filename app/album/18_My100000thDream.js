@@ -8,7 +8,7 @@ import { VERSES,
          INTRO,
          SOLO,
          OUTRO,
-         FORESHADOW_OF_PORTAL_PREFIX,
+         FORESHADOW_OF_WORMHOLE_PREFIX,
          IS_DOT_CARD } from '../constants/lyrics'
 import {
     EL_TORITO_KEY,
@@ -329,7 +329,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `pampas`
+                                wormhole: `pampas`
                             }
                         ]
                     },
@@ -530,9 +530,9 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: {
-                                    portalKey: `dreams_of_whom`,
-                                    portalPrefix: FORESHADOW_OF_PORTAL_PREFIX
+                                wormhole: {
+                                    wormholeKey: `dreams_of_whom`,
+                                    wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX
                                 }
                             }
                         ]

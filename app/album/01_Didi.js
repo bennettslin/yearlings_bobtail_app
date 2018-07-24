@@ -12,7 +12,7 @@ import { VERSES,
          INTRO,
          OUTRO,
          REFRAIN,
-         FLASHBACK_TO_PORTAL_PREFIX,
+         FLASHBACK_TO_WORMHOLE_PREFIX,
          IS_DOT_CARD } from '../constants/lyrics'
 import {
     CHILDHOOD_BATHROOM_KEY,
@@ -224,9 +224,9 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: {
-                                    portalKey: `shoelaces`,
-                                    portalPrefix: FLASHBACK_TO_PORTAL_PREFIX
+                                wormhole: {
+                                    wormholeKey: `shoelaces`,
+                                    wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX
                                 }
                             }
                         ]
@@ -374,8 +374,8 @@ module.exports = {
                                 ]
                             },
                             {
-                                portal: {
-                                    portalKey: `safeway_paper_bag`
+                                wormhole: {
+                                    wormholeKey: `safeway_paper_bag`
                                 }
                             }
                         ]
@@ -442,7 +442,7 @@ module.exports = {
                         anchor: `crooked thieves`,
                         annotation: {
                             description: ``,
-                            portal: `crooked_thieves`
+                            wormhole: `crooked_thieves`
                         }
                     },
                     `with your`,
@@ -494,7 +494,7 @@ module.exports = {
                     {
                         anchor: `finally become someone?`,
                         annotation: {
-                            portal: `finally_become_someone`
+                            wormhole: `finally_become_someone`
                         }
                     }
                 ]

@@ -11,7 +11,7 @@
     * Accessibility
     * Select time in lyrics
     * Visit website
-    * Portals
+    * Wormholes
         * Grasshoppers Lie Heavy
     * Hover or tap verse
     * Copy link to URL
@@ -38,7 +38,7 @@
 8. Good Night, Sita
 
 9. Grasshoppers Lie Heavy
-    * Portals
+    * Wormholes
 
 10. Constellations!
 

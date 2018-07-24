@@ -14,7 +14,7 @@ import OverviewIcon from './Icons/OverviewIcon'
 import PopupCloseIcon from './Icons/PopupCloseIcon'
 import PopupPreviousIcon from './Icons/PopupPreviousIcon'
 import PopupNextIcon from './Icons/PopupNextIcon'
-import PortalIcon from './Icons/PortalIcon'
+import WormholeIcon from './Icons/WormholeIcon'
 import ScoresIcon from './Icons/ScoresIcon'
 import TitleIcon from './Icons/TitleIcon'
 import TipsIcon from './Icons/TipsIcon'
@@ -36,7 +36,7 @@ import {
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
-    PORTAL_BUTTON_KEY,
+    WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY,
     TIPS_BUTTON_KEY,
     TITLE_BUTTON_KEY
@@ -59,7 +59,7 @@ const BUTTONS_MAP = {
         [POPUP_CLOSE_BUTTON_KEY]: PopupCloseIcon,
         [POPUP_NEXT_BUTTON_KEY]: PopupNextIcon,
         [POPUP_PREVIOUS_BUTTON_KEY]: PopupPreviousIcon,
-        [PORTAL_BUTTON_KEY]: PortalIcon,
+        [WORMHOLE_BUTTON_KEY]: WormholeIcon,
         [SCORES_BUTTON_KEY]: ScoresIcon,
         [TIPS_BUTTON_KEY]: TipsIcon,
         [TITLE_BUTTON_KEY]: TitleIcon

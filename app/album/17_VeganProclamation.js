@@ -10,7 +10,7 @@ import { VERSES,
          CHORUS,
          REFRAIN,
          SOLO,
-         FORESHADOW_OF_PORTAL_PREFIX,
+         FORESHADOW_OF_WORMHOLE_PREFIX,
          IS_DOT_CARD } from '../constants/lyrics'
 import {
     SHOW_STAGE_FRONT_FAR_KEY,
@@ -495,7 +495,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `unsalvaged_sows`
+                                wormhole: `unsalvaged_sows`
                             }
                         ]
                     }
@@ -613,7 +613,7 @@ module.exports = {
                                 ]
                             },
                             {
-                                portal: `swastikas`
+                                wormhole: `swastikas`
                             }
                         ]
                     },
@@ -794,7 +794,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `spark_zips`
+                                wormhole: `spark_zips`
                             }
                         ]
                     }
@@ -861,9 +861,9 @@ module.exports = {
                                     }
                                 },
                                 {
-                                    portal: {
-                                        portalKey: `learn_him_good`,
-                                        portalPrefix: FORESHADOW_OF_PORTAL_PREFIX
+                                    wormhole: {
+                                        wormholeKey: `learn_him_good`,
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX
                                     }
                                 }
                             ]
@@ -899,7 +899,7 @@ module.exports = {
                                 }
                             },
                             {
-                                portal: `chivalry`
+                                wormhole: `chivalry`
                             }
                         ]
                     }

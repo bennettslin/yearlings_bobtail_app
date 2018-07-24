@@ -16,7 +16,7 @@ import {
 } from './eventHelper'
 
 import { REFERENCE } from '../constants/dots'
-import { DESTINATION_PORTAL_INDEX } from '../constants/lyrics'
+import { DESTINATION_WORMHOLE_INDEX } from '../constants/lyrics'
 
 import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
@@ -202,21 +202,21 @@ class EventHandler extends Component {
         return true
     }
 
-    handleAnnotationPortalSelect(e, portalObject) {
+    handleAnnotationWormholeSelect(e, wormholeObject) {
 
         const {
             songIndex: selectedSongIndex,
             annotationIndex: selectedAnnotationIndex,
             verseIndex: selectedVerseIndex,
             columnIndex: selectedLyricColumnIndex,
-            [DESTINATION_PORTAL_INDEX]: destinationPortalIndex
-        } = portalObject
+            [DESTINATION_WORMHOLE_INDEX]: destinationWormholeIndex
+        } = wormholeObject
 
         const songSelected = this.props.selectSong({
             selectedSongIndex,
             selectedAnnotationIndex,
             selectedVerseIndex,
-            destinationPortalIndex
+            destinationWormholeIndex
         })
 
         if (songSelected) {
@@ -932,7 +932,7 @@ class EventHandler extends Component {
 
         const { selectedAnnotationIndex } = this.props
 
-        // If a portal was selected, there will be an annotation index.
+        // If a wormhole was selected, there will be an annotation index.
         if (selectedAnnotationIndex) {
 
             this.props.scrollElementIntoView({

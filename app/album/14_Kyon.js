@@ -247,7 +247,7 @@ module.exports = {
                     {
                         anchor: `present sent`,
                         annotation: {
-                            portal: `present_sent`
+                            wormhole: `present_sent`
                         }
                     },
                     `to her of a newborn…`

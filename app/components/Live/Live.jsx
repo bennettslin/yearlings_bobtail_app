@@ -269,7 +269,7 @@ Live.propTypes = {
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
-    handleAnnotationPortalSelect: PropTypes.func.isRequired,
+    handleAnnotationWormholeSelect: PropTypes.func.isRequired,
     handleAudioPlay: PropTypes.func.isRequired,
     handleAudioPreviousSong: PropTypes.func.isRequired,
     handleAudioNextSong: PropTypes.func.isRequired,

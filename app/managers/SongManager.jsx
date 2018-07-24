@@ -76,7 +76,7 @@ class SongManager extends Component {
         direction,
         selectedAnnotationIndex = 0,
         selectedVerseIndex = 0,
-        destinationPortalIndex
+        destinationWormholeIndex
     }) {
         const { props } = this
 
@@ -96,8 +96,8 @@ class SongManager extends Component {
             selectedAnnotationIndex,
             selectedSongIndex,
 
-            // If from portal, access destination portal index.
-            initialAnnotationAnchorIndex: destinationPortalIndex
+            // If from wormhole, access destination wormhole index.
+            initialAnnotationAnchorIndex: destinationWormholeIndex
         })
 
         props.selectVerse({
