@@ -30,13 +30,8 @@
 }
 
 .DotField__accessed {
-
-    .RM__accessOn
-    & {
-        fill: $bgColour__dot__accessed;
-    }
+    fill: $bgColour__dot__accessed;
 }
-
 .DotField__selected {
     fill: $bgColour__dot__selected;
 }

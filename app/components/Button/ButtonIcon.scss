@@ -1,37 +1,12 @@
-.ButtonIcon__temporaryField {
-
-    // TODO: Temporary styles, obviously.
-    cx: 50;
-    cy: 50;
-    r: 50;
-}
-
-.ButtonIcon__temporaryImage {
-
-    // TODO: Temporary styles, obviously.
-    cx: 50;
-    cy: 50;
-    r: 25;
-    fill: #ddd;
-}
-
-.ButtonIcon__temporaryText {
-    position: relative;
-}
-
-.ButtonIcon__temporaryField__disabled {
-    fill: $bgColour__audioDisabled;
-}
-
-.ButtonIcon__temporaryField__audioNext {
+.ButtonIcon__audioNext {
     fill: $bgColour__audioSelect;
 }
 
-.ButtonIcon__temporaryField__audioPrevious {
+.ButtonIcon__audioPrevious {
     fill: $bgColour__audioSelect;
 }
 
-.ButtonIcon__temporaryField__audioPlay {
+.ButtonIcon__audioPlay {
     .RM__isPlaying
     & {
         fill: $bgColour__audioPause;
@@ -43,35 +18,35 @@
     }
 }
 
-.ButtonIcon__temporaryField__audioOptions {
+.ButtonIcon__audioOptions {
     fill: $bgColour__audioNeutral;
 }
 
-.ButtonIcon__temporaryField__carouselNav {
+.ButtonIcon__carouselNav {
     fill: #aed;
 }
 
-.ButtonIcon__temporaryField__carouselSelect {
+.ButtonIcon__carouselSelect {
     fill: #db8;
 }
 
-.ButtonIcon__temporaryField__dotsSlide {
+.ButtonIcon__dotsSlide {
     fill: #d9d;
 }
 
-.ButtonIcon__temporaryField__lyricEar {
+.ButtonIcon__lyricEar {
     fill: #8db;
 }
 
-.ButtonIcon__temporaryField__lyricExpand {
+.ButtonIcon__lyricExpand {
     fill: #bd8;
 }
 
-.ButtonIcon__temporaryField__lyricScroll {
+.ButtonIcon__lyricScroll {
     fill: #d8b;
 }
 
-.ButtonIcon__temporaryField__navBook {
+.ButtonIcon__navBook {
     fill: #dd8;
 
     .Button__indexSelected
@@ -80,7 +55,7 @@
     }
 }
 
-.ButtonIcon__temporaryField__navSong {
+.ButtonIcon__navSong {
     fill: #dd8;
 
     .Button__indexSelected
@@ -89,34 +64,38 @@
     }
 }
 
-.ButtonIcon__temporaryField__overview {
+.ButtonIcon__overview {
     fill: #dbb;
 }
 
-.ButtonIcon__temporaryField__popupClose {
+.ButtonIcon__popupClose {
     fill: #dac;
 }
 
-.ButtonIcon__temporaryField__popupNext {
+.ButtonIcon__popupNext {
     fill: #cda;
 }
 
-.ButtonIcon__temporaryField__popupPrevious {
+.ButtonIcon__popupPrevious {
     fill: #adc;
 }
 
-.ButtonIcon__temporaryField__wormhole {
+.ButtonIcon__wormhole {
     fill: #bbd;
 }
 
-.ButtonIcon__temporaryField__scores {
+.ButtonIcon__scores {
     fill: #9bd;
 }
 
-.ButtonIcon__temporaryField__tips {
+.ButtonIcon__tips {
     fill: #dbb;
 }
 
-.ButtonIcon__temporaryField__title {
+.ButtonIcon__title {
     fill: #d88;
+}
+
+.ButtonIcon__disabled {
+    fill: $bgColour__audioDisabled;
 }

@@ -8,6 +8,8 @@ import cx from 'classnames'
 import TextAnchor from '../Anchor/TextAnchor'
 import Texts from './Texts'
 
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+
 import { LYRIC_ANNOTATION_SCROLL } from '../../constants/dom'
 
 const mapStateToProps = ({
@@ -15,6 +17,7 @@ const mapStateToProps = ({
     renderableStore,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
+    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex,
@@ -22,8 +25,13 @@ const mapStateToProps = ({
 }) => ({
     canLyricRender,
     renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
+
+    // This is just to know when to update.
+    renderableSongIndex: renderableStore.renderableSongIndex,
+
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
+    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex,
@@ -36,9 +44,11 @@ class TextLyricAnchor extends Component {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
+        selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
@@ -72,7 +82,10 @@ class TextLyricAnchor extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     _handleAnchorClick(e) {
@@ -116,6 +129,7 @@ class TextLyricAnchor extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canLyricRender,
+                renderableSongIndex,
                 handleAnchorClick,
                 setLyricAnnotationRef,
                 dispatch,
@@ -126,6 +140,7 @@ class TextLyricAnchor extends Component {
                 accessedAnnotationIndex,
                 accessedAnnotationAnchorIndex,
 
+                selectedAccessIndex,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 interactivatedVerseIndex,
@@ -143,6 +158,8 @@ class TextLyricAnchor extends Component {
 
         let
             isAccessed =
+
+                Boolean(selectedAccessIndex) &&
 
                 /**
                  * TODO: This conditional is repeated in Carousel,

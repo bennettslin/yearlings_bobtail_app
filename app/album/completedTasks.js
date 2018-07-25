@@ -3463,4 +3463,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Set up dots to use svgs. Include fields.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

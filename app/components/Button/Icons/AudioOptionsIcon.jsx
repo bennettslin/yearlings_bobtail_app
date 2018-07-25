@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// import cx from 'classnames'
 
 import {
     CONTINUE,
@@ -8,57 +9,72 @@ import {
     AUDIO_OPTIONS
 } from '../../../constants/options'
 
-const AUDIO_OPTIONS_MAP = {
-    [CONTINUE]: (
+const
+    CONTINUE_ICON = ({
+        className
+    }) => (
         <circle
             {...{
+                className,
                 cx: 50,
                 cy: 50,
-                r: 25,
-                fill: 'orange',
-                stroke: 'red'
+                r: 25
             }}
         />
     ),
-    [REPEAT]: (
+    REPEAT_ICON = ({
+        className
+    }) => (
         <rect
             {...{
+                className,
                 x: 25,
                 y: 25,
                 width: 50,
-                height: 50,
-                fill: 'green',
-                stroke: 'yellow'
+                height: 50
             }}
         />
     ),
-    [PAUSE_AT_END]: (
+    PAUSE_AT_END_ICON = ({
+        className
+    }) => (
         <rect
             {...{
+                className,
                 x: 25,
                 y: 25,
                 width: 50,
-                height: 50,
-                fill: 'purple',
-                stroke: 'blue'
+                height: 50
             }}
         />
-    )
-}
+    ),
+    AUDIO_OPTIONS_MAP = {
+        [CONTINUE]: CONTINUE_ICON,
+        [REPEAT]: REPEAT_ICON,
+        [PAUSE_AT_END]: PAUSE_AT_END_ICON
+    }
 
 const propTypes = {
-    buttonIdentifier: PropTypes.number.isRequired
+    buttonIdentifier: PropTypes.number.isRequired,
+    className: PropTypes.string
 }
 
 const AudioOptionsIcon = ({
 
-    buttonIdentifier: audioOptionIndex
+    buttonIdentifier: audioOptionIndex,
+    className
 
 }) => {
-    const audioOptionKey = AUDIO_OPTIONS[audioOptionIndex]
+    const
+        audioOptionKey = AUDIO_OPTIONS[audioOptionIndex],
+        IconComponent = AUDIO_OPTIONS_MAP[audioOptionKey]
 
     return (
-        AUDIO_OPTIONS_MAP[audioOptionKey]
+        <IconComponent
+            {...{
+                className
+            }}
+        />
     )
 }
 

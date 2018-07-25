@@ -23,9 +23,5 @@
 
 // TODO: Come up with better styling, obviously.
 .DotAnchor__accessed {
-
-    .RM__accessOn
-    & {
-        box-shadow: $boxShadow__access;
-    }
+    box-shadow: $boxShadow__access;
 }

@@ -1,16 +1,24 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+// import cx from 'classnames'
 
-const PopupPreviousIcon = () => (
-    <rect
+const PopupPreviousIcon = ({
+    className
+}) => (
+    <circle
         {...{
-            x: 25,
-            y: 25,
-            width: 50,
-            height: 50,
-            fill: 'green',
-            stroke: 'yellow'
+            className,
+            cx: 50,
+            cy: 50,
+            r: 25
         }}
     />
 )
+
+const propTypes = {
+    className: PropTypes.string
+}
+
+PopupPreviousIcon.propTypes = propTypes
 
 export default PopupPreviousIcon

@@ -1,45 +1,59 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// import cx from 'classnames'
 
-const CAROUSEL_NAV_MAP = {
-    [true]: (
+const
+    CAROUSEL_TOGGLE_ICON = ({
+        className
+    }) => (
         <circle
             {...{
+                className,
                 cx: 50,
                 cy: 50,
-                r: 25,
-                fill: 'orange',
-                stroke: 'red'
+                r: 25
             }}
         />
     ),
-    [false]: (
+    NAV_TOGGLE_ICON = ({
+        className
+    }) => (
         <rect
             {...{
+                className,
                 x: 25,
                 y: 25,
                 width: 50,
-                height: 50,
-                fill: 'green',
-                stroke: 'yellow'
+                height: 50
             }}
         />
-    )
-}
+    ),
+    CAROUSEL_NAV_MAP = {
+        [true]: CAROUSEL_TOGGLE_ICON,
+        [false]: NAV_TOGGLE_ICON
+    }
 
 const propTypes = {
-    buttonIdentifier: PropTypes.number.isRequired
+    buttonIdentifier: PropTypes.number.isRequired,
+    className: PropTypes.string
 }
 
 const CarouselNavIcon = ({
 
-    buttonIdentifier: carouselNavIndex
+    buttonIdentifier: carouselNavIndex,
+    className
 
 }) => {
-    const isCarousel = Boolean(carouselNavIndex)
+    const
+        isCarousel = Boolean(carouselNavIndex),
+        IconComponent = CAROUSEL_NAV_MAP[isCarousel]
 
     return (
-        CAROUSEL_NAV_MAP[isCarousel]
+        <IconComponent
+            {...{
+                className
+            }}
+        />
     )
 }
 

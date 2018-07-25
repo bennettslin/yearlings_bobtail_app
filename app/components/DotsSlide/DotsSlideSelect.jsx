@@ -167,11 +167,12 @@ DotsSlideSelectView = ({
 
                 <div className={cx(
                     'SlideSelectDescription',
-                    {
-                        'SlideSelectDescription__interactivated':
-                            isInteractivated,
-                        'SlideSelectDescription__accessed': isAccessed
-                    },
+
+                    isAccessed &&
+                        'SlideSelectDescription__accessed',
+
+                    isInteractivated &&
+                        'SlideSelectDescription__interactivated',
 
                     'absoluteFullContainer',
                     'flexCentreContainer'

@@ -35,16 +35,16 @@
     }
 }
 
+.AnchorUnderline__accessed {
+    .RM__sliderNotMoving
+    & {
+        background-color: $bgColour__accessedUnderline__dark;
+    }
+}
+
 .AnchorUnderline__selected {
     .RM__sliderNotMoving
     & {
         background-color: $bgColour__underline__selected;
-    }
-}
-
-.AnchorUnderline__accessed {
-    .RM__sliderNotMoving.RM__accessOn
-    & {
-        background-color: $bgColour__accessedUnderline__dark;
     }
 }

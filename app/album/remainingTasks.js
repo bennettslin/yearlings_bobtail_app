@@ -8,11 +8,6 @@ module.exports = [
 
     // Buttons and dots.
     {
-        taskName: `Set up dots to use svgs. Include fields.`,
-        workedHours: 1,
-        neededHours: 4
-    },
-    {
         taskName: `Access icons use svgs.`,
         workedHours: 0,
         neededHours: 3
@@ -23,7 +18,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Button and dot styling, including for enabled and disabled.`,
+        taskName: `Button and dot styling, including for enabled and disabled. Look into button hover not overflowing.`,
         workedHours: 0,
         neededHours: 2
     },

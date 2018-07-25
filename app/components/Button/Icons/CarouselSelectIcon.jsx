@@ -1,49 +1,64 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// import cx from 'classnames'
 
 import {
     LEFT,
     RIGHT
 } from '../../../constants/lyrics'
 
-const CAROUSEL_SELECT_ICON = {
-    [LEFT]: (
+const
+    LEFT_SELECT_ICON = ({
+        className
+    }) => (
         <circle
             {...{
+                className,
                 cx: 50,
                 cy: 50,
-                r: 25,
-                fill: 'orange',
-                stroke: 'red'
+                r: 25
             }}
         />
     ),
-    [RIGHT]: (
+    RIGHT_SELECT_ICON = ({
+        className
+    }) => (
         <rect
             {...{
+                className,
                 x: 25,
                 y: 25,
                 width: 50,
-                height: 50,
-                fill: 'green',
-                stroke: 'yellow'
+                height: 50
             }}
         />
-    )
-}
+    ),
+    CAROUSEL_SELECT_MAP = {
+        [LEFT]: LEFT_SELECT_ICON,
+        [RIGHT]: RIGHT_SELECT_ICON
+    }
 
 const propTypes = {
-    buttonIdentifier: PropTypes.string.isRequired
+    buttonIdentifier: PropTypes.string.isRequired,
+    className: PropTypes.string
 }
 
 const CarouselSelectIcon = ({
 
-    buttonIdentifier: navDirection
+    buttonIdentifier: navDirection,
+    className
 
-}) => (
+}) => {
+    const IconComponent = CAROUSEL_SELECT_MAP[navDirection]
 
-    CAROUSEL_SELECT_ICON[navDirection]
-)
+    return (
+        <IconComponent
+            {...{
+                className
+            }}
+        />
+    )
+}
 
 CarouselSelectIcon.propTypes = propTypes
 

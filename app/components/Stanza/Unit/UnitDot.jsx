@@ -8,12 +8,14 @@ import cx from 'classnames'
 import DotAnchor from '../../Anchor/DotAnchor'
 
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dotHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 import { LYRIC_ANNOTATION_SCROLL } from '../../../constants/dom'
 
 const mapStateToProps = ({
     canLyricRender,
     accessedAnnotationIndex,
+    selectedAccessIndex,
     renderableStore,
     selectedCarouselNavIndex,
     selectedDotsIndex,
@@ -22,6 +24,7 @@ const mapStateToProps = ({
 }) => ({
     canLyricRender,
     accessedAnnotationIndex,
+    selectedAccessIndex,
     renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
@@ -40,6 +43,7 @@ class UnitDot extends Component {
         canLyricRender: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
+        selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
@@ -59,7 +63,10 @@ class UnitDot extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     _handleDotButtonClick(e) {
@@ -87,8 +94,9 @@ class UnitDot extends Component {
         const {
                 isLastUnit,
                 dotStanzaObject,
-                accessedAnnotationIndex,
                 renderableAnnotationIndex,
+                accessedAnnotationIndex,
+                selectedAccessIndex,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 interactivatedVerseIndex,
@@ -99,6 +107,8 @@ class UnitDot extends Component {
               dotKeys } = dotStanzaObject,
 
             isAccessed =
+                Boolean(selectedAccessIndex) &&
+
                 /**
                  * TODO: This conditional is repeated in Carousel,
                  * UnitDot, and TextLyricAnchor. Consolidate?

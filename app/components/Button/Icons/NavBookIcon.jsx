@@ -1,46 +1,64 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// import cx from 'classnames'
 
-const NAV_BOOK_MAP = {
-    [true]: (
+import {
+    LEFT,
+    RIGHT
+} from '../../../constants/lyrics'
+
+const
+    LEFT_BOOK_ICON = ({
+        className
+    }) => (
         <circle
             {...{
+                className,
                 cx: 50,
                 cy: 50,
-                r: 25,
-                fill: 'orange',
-                stroke: 'red'
+                r: 25
             }}
         />
     ),
-    [false]: (
+    RIGHT_BOOK_ICON = ({
+        className
+    }) => (
         <rect
             {...{
+                className,
                 x: 25,
                 y: 25,
                 width: 50,
-                height: 50,
-                fill: 'green',
-                stroke: 'yellow'
+                height: 50
             }}
         />
-    )
-}
+    ),
+    NAV_BOOK_MAP = {
+        [LEFT]: LEFT_BOOK_ICON,
+        [RIGHT]: RIGHT_BOOK_ICON
+    }
 
 const propTypes = {
-    buttonIdentifier: PropTypes.number.isRequired
+    buttonIdentifier: PropTypes.number.isRequired,
+    className: PropTypes.string
 }
 
 const NavBookIcon = ({
 
-    buttonIdentifier: bookIndex
+    buttonIdentifier: bookIndex,
+    className
 
 }) => {
-
-    const isRight = Boolean(bookIndex)
+    const
+        bookDirection = bookIndex ? RIGHT : LEFT,
+        IconComponent = NAV_BOOK_MAP[bookDirection]
 
     return (
-        NAV_BOOK_MAP[isRight]
+        <IconComponent
+            {...{
+                className
+            }}
+        />
     )
 }
 

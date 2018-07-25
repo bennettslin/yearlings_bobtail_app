@@ -16,6 +16,7 @@ const mapStateToProps = ({
     isHiddenCarouselNav,
     renderableStore,
     accessedAnnotationIndex,
+    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex,
@@ -26,6 +27,7 @@ const mapStateToProps = ({
     renderableSongIndex: renderableStore.renderableSongIndex,
     renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
     accessedAnnotationIndex,
+    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex,
@@ -41,6 +43,7 @@ class Carousel extends Component {
         renderableSongIndex: PropTypes.number.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
+        selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
@@ -130,6 +133,7 @@ class Carousel extends Component {
                 renderableSongIndex,
                 renderableAnnotationIndex,
                 accessedAnnotationIndex,
+                selectedAccessIndex,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 interactivatedVerseIndex,
@@ -180,6 +184,8 @@ class Carousel extends Component {
                         const annotationIndex = index + 1,
 
                             isAccessed =
+                                Boolean(selectedAccessIndex) &&
+
                                 /**
                                  * TODO: This conditional is repeated in
                                  * Carousel, UnitDot, and
