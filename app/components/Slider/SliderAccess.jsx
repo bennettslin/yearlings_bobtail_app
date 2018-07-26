@@ -41,15 +41,10 @@ class SliderAccess extends Component {
             <AccessLetters
                 accessIconsName="sliderRewindForward"
                 inSlider
+                showIfAccessed={!isLogue}
                 accessKeys={[
-                    {
-                        accessKey: AUDIO_REWIND_KEY,
-                        showIfAccessed: !isLogue
-                    },
-                    {
-                        accessKey: AUDIO_FAST_FORWARD_KEY,
-                        showIfAccessed: !isLogue
-                    }
+                    AUDIO_REWIND_KEY,
+                    AUDIO_FAST_FORWARD_KEY
                 ]}
             />
         )

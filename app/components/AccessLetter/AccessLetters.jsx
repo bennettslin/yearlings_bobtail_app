@@ -12,12 +12,9 @@ const accessIconsPropTypes = {
     inAnnotation: PropTypes.bool,
     inLyric: PropTypes.bool,
     inSlider: PropTypes.bool,
+    showIfAccessed: PropTypes.bool,
     accessKeys: PropTypes.arrayOf(
-        PropTypes.shape({
-            accessKey: PropTypes.string.isRequired,
-            showIfAccessed: PropTypes.bool.isRequired,
-            beginsCluster: PropTypes.bool
-        })
+        PropTypes.string.isRequired
     ).isRequired
 },
 
@@ -27,6 +24,7 @@ AccessLetters = ({
     inAnnotation,
     inLyric,
     inSlider,
+    showIfAccessed,
     accessKeys
 
 }) => (
@@ -37,18 +35,13 @@ AccessLetters = ({
         inSlider && 'AccessLetters__inSlider',
         accessIconsName && `AccessLetters__${accessIconsName}`
     )}>
-        {accessKeys.map(accessKeyObject => {
-
-            const { accessKey,
-                    showIfAccessed,
-                    beginsCluster } = accessKeyObject
+        {accessKeys.map(accessKey => {
 
             return (
                 <AccessLetter
                     key={accessKey}
                     accessKey={accessKey}
                     showIfAccessed={showIfAccessed}
-                    beginsCluster={beginsCluster}
                 />
             )
         })}

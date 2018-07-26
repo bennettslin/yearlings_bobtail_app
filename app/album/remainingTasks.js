@@ -1,11 +1,5 @@
 module.exports = [
 
-    {
-        taskName: `Be smart about using logger. This includes setting it up to only log in development, not production. Pass in feature flag?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     // Buttons and dots.
     {
         taskName: `When key is pressed, either standalone access icon or button is shrunk, not both. Also, just get rid of the Enters and Escs now.`,
@@ -248,4 +242,10 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+
+    {
+        taskName: `Be smart about using logger. This includes setting it up to only log in development, not production. Pass in feature flag?`,
+        workedHours: 0,
+        neededHours: 2
+    }
 ]

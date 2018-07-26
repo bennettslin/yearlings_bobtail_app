@@ -149,8 +149,6 @@ class Root extends Component {
     }
 
     showKeyDownLetter(keyName = '') {
-        console.error('keyName', keyName)
-
         this.setState({
             keyName
         })

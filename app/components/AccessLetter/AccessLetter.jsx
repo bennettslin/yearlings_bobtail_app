@@ -13,7 +13,6 @@ const accessIconPropTypes = {
     inTextAnchor: PropTypes.bool,
     inButtonOrDotAnchor: PropTypes.bool,
     showIfAccessed: PropTypes.bool,
-    beginsCluster: PropTypes.bool,
     accessKey: PropTypes.string.isRequired
 },
 
@@ -22,7 +21,6 @@ AccessLetter = ({
     inTextAnchor,
     inButtonOrDotAnchor,
     showIfAccessed,
-    beginsCluster,
     accessKey
 
 }) => {
@@ -41,8 +39,6 @@ AccessLetter = ({
 
             showIfAccessed && 'AccessLetter__showIfAccessed',
 
-            // TODO: This isn't optimal. AccessLetter shouldn't care about this.
-            beginsCluster && 'AccessLetter__beginsCluster',
             'flexCentreContainer'
         )}>
             <AccessField />

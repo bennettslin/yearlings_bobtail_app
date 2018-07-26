@@ -88,30 +88,20 @@ class LyricAccess extends Component {
             <Fragment>
                 <AccessLetters
                     accessIconsName="lyricLeftRight"
+                    showIfAccessed={showLeftRight}
                     inLyric
                     accessKeys={[
-                        {
-                            accessKey: ARROW_LEFT,
-                            showIfAccessed: showLeftRight
-                        },
-                        {
-                            accessKey: ARROW_RIGHT,
-                            showIfAccessed: showLeftRight
-                        }
+                        ARROW_LEFT,
+                        ARROW_RIGHT
                     ]}
                 />
                 <AccessLetters
                     accessIconsName="lyricUpDown"
+                    showIfAccessed={showUpDown}
                     inLyric
                     accessKeys={[
-                        {
-                            accessKey: ARROW_UP,
-                            showIfAccessed: showUpDown
-                        },
-                        {
-                            accessKey: ARROW_DOWN,
-                            showIfAccessed: showUpDown
-                        }
+                        ARROW_UP,
+                        ARROW_DOWN
                     ]}
                 />
             </Fragment>
