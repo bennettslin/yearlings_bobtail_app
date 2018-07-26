@@ -98,7 +98,7 @@ class Root extends Component {
         this._resetSliderMousedUp = this._resetSliderMousedUp.bind(this)
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this.handleKeyUpPress = this.handleKeyUpPress.bind(this)
-        this.showKeyDownLetter = this.showKeyDownLetter.bind(this)
+        this.displayKeyLetter = this.displayKeyLetter.bind(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -144,11 +144,11 @@ class Root extends Component {
         this.keyHandler.handleKeyDownPress(e)
     }
 
-    handleKeyUpPress() {
-        this.showKeyDownLetter()
+    handleKeyUpPress(e) {
+        this.keyHandler.handleKeyUpPress(e)
     }
 
-    showKeyDownLetter(keyName = '') {
+    displayKeyLetter(keyName = '') {
         this.setState({
             keyName
         })
@@ -366,7 +366,7 @@ class Root extends Component {
                 <KeyHandler
                     eventHandlers={this.props.eventHandlers}
                     setRef={node => (this.keyHandler = node)}
-                    showKeyDownLetter={this.showKeyDownLetter}
+                    displayKeyLetter={this.displayKeyLetter}
                 />
 
                 <Live {...other} />

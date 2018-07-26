@@ -3478,4 +3478,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Separate key down and key up handling.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -1,10 +1,22 @@
 module.exports = [
 
+    // Bug.
+    {
+        taskName: `Wiki anchors are messed up when wrapped.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Debounce nav keys.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Buttons and dots.
     {
-        taskName: `When key is pressed, either standalone access icon or button is shrunk, not both. Also, just get rid of the Enters and Escs now.`,
+        taskName: `When key is pressed, either standalone access icon or button is shrunk, not both.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `Button and dot styling, including for enabled and disabled. Look into button hover not overflowing.`,

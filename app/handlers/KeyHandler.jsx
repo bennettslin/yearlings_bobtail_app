@@ -10,6 +10,11 @@ import { getSongsAndLoguesCount,
          getWormholeLink,
          getAnnotationObject } from '../helpers/dataHelper'
 
+import {
+    getKeyName,
+    getIsNavKey
+} from './keyHelper'
+
 import { ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,
@@ -21,14 +26,14 @@ import { ARROW_LEFT,
          ESCAPE,
          SPACE,
          TAB,
+         AUDIO_REWIND_KEY,
+         AUDIO_FAST_FORWARD_KEY,
 
          ADMIN_TOGGLE_KEY,
          AUDIO_PLAY_KEY,
          AUDIO_OPTIONS_TOGGLE_KEY,
          AUDIO_PREVIOUS_SONG_KEY,
          AUDIO_NEXT_SONG_KEY,
-         AUDIO_REWIND_KEY,
-         AUDIO_FAST_FORWARD_KEY,
          CAROUSEL_TOGGLE_KEY,
          DOTS_SECTION_EXPAND_KEY,
          LYRIC_COLUMN_TOGGLE_KEY,
@@ -58,13 +63,14 @@ class KeyHandler extends Component {
         }).isRequired,
 
         setRef: PropTypes.func.isRequired,
-        showKeyDownLetter: PropTypes.func.isRequired
+        displayKeyLetter: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
+        this.handleKeyUpPress = this.handleKeyUpPress.bind(this)
         this._routeNavigation = this._routeNavigation.bind(this)
         this._handleAnnotationNavigation = this._handleAnnotationNavigation.bind(this)
         this._handleDotsNavigation = this._handleDotsNavigation.bind(this)
@@ -85,65 +91,66 @@ class KeyHandler extends Component {
     handleKeyDownPress(e) {
         const { eventHandlers } = this.props
 
-        let keyName = e.key
+        const keyName = getKeyName(e)
 
-        // Workaround for Safari, which doesn't recognise key on event.
-        if (keyName === 'Unidentified') {
-            keyName = String.fromCharCode(e.keyCode)
-
-        // Make literal space a word instead.""
-        } else if (keyName === ' ') {
-            keyName = SPACE
-        }
-
-        // Ensure that all single character key names are lowercase.
-        if (keyName.length === 1) {
-            keyName = keyName.toLowerCase()
-        }
-
-        // Do not handle at all if any modifier keys are present.
-        if (
-            e.altKey ||
-            e.ctrlKey ||
-            e.metaKey ||
-            e.shiftKey
-        ) {
-            return
+        if (!keyName) {
+            return false
         }
 
         /**
-         * Turn on access if any key was registered. (But escape might turn it
-         * off again.)
+         * Turn on access if any key other than escape was registered.
          */
-        eventHandlers.handleAccessToggle(true)
-        this.props.showKeyDownLetter(keyName)
+        if (keyName !== ESCAPE) {
+            eventHandlers.handleAccessToggle(true)
+        }
 
-        // Do not allow the event to propagate if it's an exempt key.
+        /**
+         * Once access is turned on, ignore non-nav keys, because they are
+         * handled on key up.
+         */
+        if (!getIsNavKey(keyName)) {
+            return false
+        }
+
+        /**
+         * While these keys do not register, they do scroll the lyric.
+         */
         if (
-            keyName === TAB ||
-            keyName === CAPS_LOCK ||
             keyName === SPACE ||
             keyName === PAGE_UP ||
             keyName === PAGE_DOWN
         ) {
-
-            /**
-             * While these keys do not register, they do scroll the lyric.
-             */
-            if (
-                keyName === SPACE ||
-                keyName === PAGE_UP ||
-                keyName === PAGE_DOWN
-            ) {
-                this._determineVerseBarsWithParameters()
-            }
-
-            return
+            this._determineVerseBarsWithParameters()
         }
 
-        // Make all single characters lowercase.
-        if (keyName.length === 1) {
-            keyName = keyName.toLowerCase()
+        this._handleKeyRegister({
+            e,
+            keyName,
+            isNavKey: true
+        })
+
+        // Show key as registered in the UI.
+        this.props.displayKeyLetter(keyName)
+    }
+
+    handleKeyUpPress(e) {
+
+        const keyName = getKeyName(e)
+
+        // Do not allow the event to propagate if it's one of these.
+        if (
+            !keyName ||
+
+            keyName === TAB ||
+            keyName === CAPS_LOCK ||
+            keyName === SPACE ||
+            keyName === PAGE_UP ||
+            keyName === PAGE_DOWN ||
+
+            // All nav keys are handled on key down.
+            getIsNavKey(keyName)
+        ) {
+            return false
         }
 
         // Handle escape key.
@@ -151,46 +158,58 @@ class KeyHandler extends Component {
             this._handleEscape(e)
 
         } else {
-            const isNavKey =
-                keyName.indexOf('Arrow') > -1 ||
-                keyName === ENTER,
 
-                {
-                    annotationIndexWasAccessed,
-                    keyWasRegistered
-                } = isNavKey ?
-                    this._routeNavigation(e, keyName) :
-                    this._handleLetterKey(e, keyName)
+            this._handleKeyRegister({
+                e,
+                keyName,
+                isNavKey: false
+            })
+        }
 
-            /**
-             * If just now turning on access, also access annotation index,
-             * unless we've already done so.
-             */
-            if (
-                !this.props.selectedAnnotationIndex &&
-                !this.props.selectedAccessIndex &&
-                !annotationIndexWasAccessed
-            ) {
+        // Stop showing key as registered in the UI.
+        this.props.displayKeyLetter()
+    }
 
-                this._accessAnnotationWithoutDirection(
-                    this.props.selectedVerseIndex
-                )
-            }
+    _handleKeyRegister({
+        e,
+        keyName,
+        isNavKey
+    }) {
+        const {
+            annotationIndexWasAccessed,
+            keyWasRegistered
+        } = isNavKey ?
+            this._routeNavigation(e, keyName) :
+            this._handleLetterKey(e, keyName)
 
-            // Prevent default for registered key.
-            if (keyWasRegistered) {
-                e.preventDefault()
+        /**
+         * If just now turning on access, also access annotation index,
+         * unless we've already done so.
+         */
+        if (
+            !this.props.selectedAnnotationIndex &&
+            !this.props.selectedAccessIndex &&
+            !annotationIndexWasAccessed
+        ) {
 
-            /**
-             * At this point, up and down arrows are used to scroll lyric, so
-             * turn off autoScroll and determine verse bars.
-             */
-            } else if (
-                keyName === ARROW_DOWN ||
-                keyName === ARROW_UP
-            ) {
-                this._determineVerseBarsWithParameters(true)
-            }
+            this._accessAnnotationWithoutDirection(
+                this.props.selectedVerseIndex
+            )
+        }
+
+        // Prevent default for registered key.
+        if (keyWasRegistered) {
+            e.preventDefault()
+
+        /**
+         * At this point, up and down arrows are used to scroll lyric, so
+         * turn off autoScroll and determine verse bars.
+         */
+        } else if (
+            keyName === ARROW_DOWN ||
+            keyName === ARROW_UP
+        ) {
+            this._determineVerseBarsWithParameters(true)
         }
     }
 
@@ -240,6 +259,16 @@ class KeyHandler extends Component {
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
+
+        // These letter keys are treated as nav keys.
+        switch (keyName) {
+            case AUDIO_REWIND_KEY:
+                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(-1)
+                break
+            case AUDIO_FAST_FORWARD_KEY:
+                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
+                break
+        }
 
         if (!isLogue && !selectedScoreIndex && !selectedWikiIndex) {
 
@@ -562,12 +591,12 @@ class KeyHandler extends Component {
                 keyWasRegistered = eventHandlers.handleAudioNextSong(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
-            case AUDIO_REWIND_KEY:
-                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(-1)
-                break
-            case AUDIO_FAST_FORWARD_KEY:
-                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
-                break
+            // case AUDIO_REWIND_KEY:
+            //     keyWasRegistered = eventHandlers.handleVerseDirectionAccess(-1)
+            //     break
+            // case AUDIO_FAST_FORWARD_KEY:
+            //     keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
+            //     break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleCarouselNavToggle(e)
                 break
