@@ -10,7 +10,7 @@ const PopupNextIcon = ({
             className,
             cx: 50,
             cy: 50,
-            r: 25
+            r: 50
         }}
     />
 )

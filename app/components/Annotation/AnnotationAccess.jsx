@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import AccessIcons from '../AccessIcon/AccessIcons'
+import AccessLetters from '../AccessLetter/AccessLetters'
 
 import {
-    NAVIGATION_UP_KEY,
-    NAVIGATION_DOWN_KEY
+    ARROW_UP,
+    ARROW_DOWN
 } from '../../constants/access'
 
 class LyricAccess extends Component {
@@ -27,16 +27,16 @@ class LyricAccess extends Component {
             showUpDown = isSelected && accessibleAnnotationAnchorsLength > 1
 
         return (
-            <AccessIcons
+            <AccessLetters
                 accessIconsName="annotationUpDown"
                 inAnnotation
                 accessKeys={[
                     {
-                        accessKey: NAVIGATION_UP_KEY,
+                        accessKey: ARROW_UP,
                         showIfAccessed: showUpDown
                     },
                     {
-                        accessKey: NAVIGATION_DOWN_KEY,
+                        accessKey: ARROW_DOWN,
                         showIfAccessed: showUpDown
                     }
                 ]}

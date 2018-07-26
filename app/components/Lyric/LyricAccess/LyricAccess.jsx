@@ -5,13 +5,13 @@ import PropTypes from 'prop-types'
 import { ALL_DOT_KEYS } from '../../../constants/dots'
 import { convertTrueFalseKeysToBitNumber } from '../../../helpers/bitHelper'
 
-import AccessIcons from '../../AccessIcon/AccessIcons'
+import AccessLetters from '../../AccessLetter/AccessLetters'
 
 import {
-    NAVIGATION_LEFT_KEY,
-    NAVIGATION_RIGHT_KEY,
-    NAVIGATION_UP_KEY,
-    NAVIGATION_DOWN_KEY
+    ARROW_LEFT,
+    ARROW_RIGHT,
+    ARROW_UP,
+    ARROW_DOWN
 } from '../../../constants/access'
 
 const mapStateToProps = ({
@@ -86,30 +86,30 @@ class LyricAccess extends Component {
 
         return (
             <Fragment>
-                <AccessIcons
+                <AccessLetters
                     accessIconsName="lyricLeftRight"
                     inLyric
                     accessKeys={[
                         {
-                            accessKey: NAVIGATION_LEFT_KEY,
+                            accessKey: ARROW_LEFT,
                             showIfAccessed: showLeftRight
                         },
                         {
-                            accessKey: NAVIGATION_RIGHT_KEY,
+                            accessKey: ARROW_RIGHT,
                             showIfAccessed: showLeftRight
                         }
                     ]}
                 />
-                <AccessIcons
+                <AccessLetters
                     accessIconsName="lyricUpDown"
                     inLyric
                     accessKeys={[
                         {
-                            accessKey: NAVIGATION_UP_KEY,
+                            accessKey: ARROW_UP,
                             showIfAccessed: showUpDown
                         },
                         {
-                            accessKey: NAVIGATION_DOWN_KEY,
+                            accessKey: ARROW_DOWN,
                             showIfAccessed: showUpDown
                         }
                     ]}

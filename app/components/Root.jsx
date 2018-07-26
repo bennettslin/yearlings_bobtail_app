@@ -89,13 +89,16 @@ class Root extends Component {
         super(props)
 
         this.state = {
-            sliderMousedUp: false
+            sliderMousedUp: false,
+            keyName: ''
         }
 
         this._handleClick = this._handleClick.bind(this)
         this._handleMouseUp = this._handleMouseUp.bind(this)
         this._resetSliderMousedUp = this._resetSliderMousedUp.bind(this)
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
+        this.handleKeyUpPress = this.handleKeyUpPress.bind(this)
+        this.showKeyDownLetter = this.showKeyDownLetter.bind(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -138,7 +141,19 @@ class Root extends Component {
     }
 
     handleKeyDownPress(e) {
-        this.accessManager.handleKeyDownPress(e)
+        this.keyHandler.handleKeyDownPress(e)
+    }
+
+    handleKeyUpPress() {
+        this.showKeyDownLetter()
+    }
+
+    showKeyDownLetter(keyName = '') {
+        console.error('keyName', keyName)
+
+        this.setState({
+            keyName
+        })
     }
 
     render() {
@@ -174,6 +189,8 @@ class Root extends Component {
             isVerseBarBelow,
             isManualScroll
             } = this.props,
+
+            { keyName } = this.state,
 
             {
                 handleBodyTouchMove,
@@ -240,6 +257,8 @@ class Root extends Component {
                 ref={getRootRef}
                 className={cx(
                     'Root',
+
+                    keyName && `RM__key__${keyName}`,
 
                     `RM__${deviceClassName}`,
                     isDesktop ?
@@ -340,6 +359,7 @@ class Root extends Component {
                 onTouchEnd={this._handleMouseUp}
                 onTouchCancel={this._handleMouseUp}
                 onKeyDown={this.handleKeyDownPress}
+                onKeyUp={this.handleKeyUpPress}
                 tabIndex="-1"
             >
                 <Players {...audioPlayersProps} />
@@ -347,7 +367,8 @@ class Root extends Component {
                 {/* TODO: Only pass the events used by KeyHandler. */}
                 <KeyHandler
                     eventHandlers={this.props.eventHandlers}
-                    setRef={node => (this.accessManager = node)}
+                    setRef={node => (this.keyHandler = node)}
+                    showKeyDownLetter={this.showKeyDownLetter}
                 />
 
                 <Live {...other} />

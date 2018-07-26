@@ -1,15 +1,16 @@
 module.exports = {
-    ARROW_LEFT: 'ArrowLeft',
-    ARROW_RIGHT: 'ArrowRight',
-    ARROW_UP: 'ArrowUp',
-    ARROW_DOWN: 'ArrowDown',
     CAPS_LOCK: 'CapsLock',
     PAGE_UP: 'PageUp',
     PAGE_DOWN: 'PageDown',
     ENTER: 'Enter',
     ESCAPE: 'Escape',
-    SPACE: ' ',
+    SPACE: 'Space',
     TAB: 'Tab',
+
+    ARROW_LEFT: 'ArrowLeft',
+    ARROW_RIGHT: 'ArrowRight',
+    ARROW_UP: 'ArrowUp',
+    ARROW_DOWN: 'ArrowDown',
 
     ADMIN_TOGGLE_KEY: 'a',
     AUDIO_PLAY_KEY: 'p',
@@ -30,10 +31,11 @@ module.exports = {
     TIPS_TOGGLE_KEY: 't',
     TITLE_TOGGLE_KEY: 'i',
 
-    NAVIGATION_ENTER_KEY: '\u21b5',
-    NAVIGATION_ESCAPE_KEY: 'x',
     NAVIGATION_LEFT_KEY: '\u21e6',
     NAVIGATION_UP_KEY: '\u21e7',
     NAVIGATION_RIGHT_KEY: '\u21e8',
-    NAVIGATION_DOWN_KEY: '\u21e9'
+    NAVIGATION_DOWN_KEY: '\u21e9',
+
+    NAVIGATION_ENTER_KEY: '\u21b5',
+    NAVIGATION_ESCAPE_KEY: 'x'
 }

@@ -3468,4 +3468,14 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Access icons use svgs.`,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
+        taskName: `Flash access icon when key is pressed.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

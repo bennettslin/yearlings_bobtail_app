@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import AccessIcons from '../AccessIcon/AccessIcons'
+import AccessLetters from '../AccessLetter/AccessLetters'
 import {
     AUDIO_REWIND_KEY,
     AUDIO_FAST_FORWARD_KEY
@@ -38,7 +38,7 @@ class SliderAccess extends Component {
             isLogue = getSongIsLogue(renderableSongIndex)
 
         return (
-            <AccessIcons
+            <AccessLetters
                 accessIconsName="sliderRewindForward"
                 inSlider
                 accessKeys={[

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 import Button from '../Button/Button'
 import {
-    NAVIGATION_LEFT_KEY,
-    NAVIGATION_RIGHT_KEY
+    ARROW_LEFT,
+    ARROW_RIGHT
 } from '../../constants/access'
 
 import {
@@ -31,14 +31,14 @@ const CarouselSelect = ({
             buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
             buttonIdentifier={LEFT}
-            accessKey={NAVIGATION_LEFT_KEY}
+            accessKey={ARROW_LEFT}
             handleButtonClick={handleAnnotationPrevious}
         />
         <Button
             buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
             buttonIdentifier={RIGHT}
-            accessKey={NAVIGATION_RIGHT_KEY}
+            accessKey={ARROW_RIGHT}
             handleButtonClick={handleAnnotationNext}
         />
     </div>

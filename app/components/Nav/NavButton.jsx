@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import Button from '../Button/Button'
 import NavPanel from './NavPanel'
-import { NAVIGATION_ENTER_KEY } from '../../constants/access'
+import { ENTER } from '../../constants/access'
 import {
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY
@@ -114,7 +114,7 @@ class NavButton extends Component {
                     }}
                     isIndexSelected={isSelected}
                     showAccessIconIfAccessOn={isAccessed && isNavigable}
-                    accessKey={isToggle ? '' : NAVIGATION_ENTER_KEY}
+                    accessKey={isToggle ? '' : ENTER}
                     handleButtonClick={this._handleButtonClick}
                 >
                     <NavPanel

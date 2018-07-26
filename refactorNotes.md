@@ -16,7 +16,7 @@ Consolidate styles for child with parent selector nesting
 
 ### Remaining
 
-AccessIcons (/)
+AccessLetters (/)
 Admin
 Anchor (/)
 Annotation (/)

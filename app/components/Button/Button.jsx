@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import ButtonIcon from '../Button/ButtonIcon'
-import AccessIcon from '../AccessIcon/AccessIcon'
+import AccessLetter from '../AccessLetter/AccessLetter'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
@@ -117,7 +117,7 @@ class Button extends Component {
                     {children}
 
                     {accessKey && (
-                        <AccessIcon
+                        <AccessLetter
                             inButtonOrDotAnchor
                             showIfAccessed={showIfAccessed}
                             accessKey={accessKey}

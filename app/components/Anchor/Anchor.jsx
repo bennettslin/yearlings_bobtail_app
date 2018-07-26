@@ -4,12 +4,12 @@ import cx from 'classnames'
 
 import DotSequence from '../Dot/Sequence/DotSequence'
 import AnchorUnderline from './AnchorUnderline'
-import AccessIcon from '../AccessIcon/AccessIcon'
+import AccessLetter from '../AccessLetter/AccessLetter'
 
 import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
 
 import {
-    NAVIGATION_ENTER_KEY
+    ENTER
 } from '../../constants/access'
 
 const anchorPropTypes = {
@@ -98,11 +98,11 @@ Anchor = ({
             {children}
 
             {!omitAccessIcon && (
-                <AccessIcon
+                <AccessLetter
                     inTextAnchor={!isDotAnchor}
                     inButtonOrDotAnchor={isDotAnchor}
                     showIfAccessed={isAccessed && !isSelected}
-                    accessKey={NAVIGATION_ENTER_KEY}
+                    accessKey={ENTER}
                 />
             )}
         </a>

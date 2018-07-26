@@ -8,14 +8,9 @@ module.exports = [
 
     // Buttons and dots.
     {
-        taskName: `Access icons use svgs.`,
+        taskName: `When key is pressed, either standalone access icon or button is shrunk, not both. Also, just get rid of the Enters and Escs now.`,
         workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Flash access icon when key is pressed.`,
-        workedHours: 0,
-        neededHours: 3
+        neededHours: 2
     },
     {
         taskName: `Button and dot styling, including for enabled and disabled. Look into button hover not overflowing.`,

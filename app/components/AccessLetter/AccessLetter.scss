@@ -1,0 +1,36 @@
+.AccessLetter {
+    position: relative;
+    width: $length__iconAccess;
+    height: $length__iconAccess;
+
+    transition:
+        opacity $animationDuration__default;
+
+    opacity: 0;
+    z-index: $zIndex__negative;
+}
+
+.AccessLetter__showIfAccessed {
+    .RM__accessOn
+    & {
+        opacity: 1;
+        z-index: $zIndex__lyricChild__topMost;
+    }
+}
+
+.AccessLetter__inInteractable {
+    position: absolute;
+    bottom: 0;
+}
+
+.AccessLetter__inTextAnchor {
+    right: -$length__iconAccess - $js__margin__thin * 1.5;
+}
+
+.AccessLetter__inButtonOrDotAnchor {
+    right: 0;
+}
+
+.AccessLetter__beginsCluster:not(:first-child) {
+    margin-left: $margin__lyricColumn__accessIcons;
+}

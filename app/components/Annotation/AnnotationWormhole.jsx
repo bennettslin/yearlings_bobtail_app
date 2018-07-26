@@ -8,7 +8,7 @@ import cx from 'classnames';
 import Texts from '../Text/Texts'
 import Button from '../Button/Button'
 
-import { NAVIGATION_ENTER_KEY } from '../../constants/access'
+import { ENTER } from '../../constants/access'
 import { WORMHOLE_BUTTON_KEY } from '../../constants/buttons'
 
 import {
@@ -132,7 +132,7 @@ class AnnotationWormhole extends Component {
                     <Button
                         buttonName={WORMHOLE_BUTTON_KEY}
                         showAccessIconIfAccessOn={isAccessed && isSelected}
-                        accessKey={NAVIGATION_ENTER_KEY}
+                        accessKey={ENTER}
                         handleButtonClick={this._handleWormholeClick}
                     />
                 </div>

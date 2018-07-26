@@ -49,10 +49,16 @@ class KeyHandler extends Component {
 
     static propTypes = {
 
-        // TODO: Specify which events are used.
-        eventHandlers: PropTypes.object.isRequired,
+        eventHandlers: PropTypes.shape({
+            // TODO: Specify which events are used. This isn't complete.
+            handleAccessToggle: PropTypes.func.isRequired,
+            handleLyricWheel: PropTypes.func.isRequired,
+            handleLyricVerseSelect: PropTypes.func.isRequired,
+            handleAnnotationAccess: PropTypes.func.isRequired
+        }).isRequired,
 
-        setRef: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired,
+        showKeyDownLetter: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -79,14 +85,20 @@ class KeyHandler extends Component {
     handleKeyDownPress(e) {
         const { eventHandlers } = this.props
 
-        let {
-            key: keyName,
-            keyCode
-        } = e
+        let keyName = e.key
 
         // Workaround for Safari, which doesn't recognise key on event.
         if (keyName === 'Unidentified') {
-            keyName = String.fromCharCode(keyCode)
+            keyName = String.fromCharCode(e.keyCode)
+
+        // Make literal space a word instead.""
+        } else if (keyName === ' ') {
+            keyName = SPACE
+        }
+
+        // Ensure that all single character key names are lowercase.
+        if (keyName.length === 1) {
+            keyName = keyName.toLowerCase()
         }
 
         // Do not handle at all if any modifier keys are present.
@@ -104,6 +116,7 @@ class KeyHandler extends Component {
          * off again.)
          */
         eventHandlers.handleAccessToggle(true)
+        this.props.showKeyDownLetter(keyName)
 
         // Do not allow the event to propagate if it's an exempt key.
         if (

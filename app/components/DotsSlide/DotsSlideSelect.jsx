@@ -8,7 +8,7 @@ import Button from '../Button/Button'
 import Dot from '../Dot/Dot'
 import TextAnchor from '../Anchor/TextAnchor'
 
-import { NAVIGATION_ENTER_KEY } from '../../constants/access'
+import { ENTER } from '../../constants/access'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
 
 const mapStateToProps = ({
@@ -154,7 +154,7 @@ DotsSlideSelectView = ({
                 })}
                 isCustomSize
                 showAccessIconIfAccessOn={isAccessed}
-                accessKey={NAVIGATION_ENTER_KEY}
+                accessKey={ENTER}
                 handleButtonClick={handleDotSelectClick}
             >
                 <Dot

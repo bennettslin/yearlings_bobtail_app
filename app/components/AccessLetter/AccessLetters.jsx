@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AccessIcon from './AccessIcon';
+import AccessLetter from './AccessLetter';
 
 const accessIconsPropTypes = {
     // From parent.
@@ -21,7 +21,7 @@ const accessIconsPropTypes = {
     ).isRequired
 },
 
-AccessIcons = ({
+AccessLetters = ({
 
     accessIconsName,
     inAnnotation,
@@ -31,11 +31,11 @@ AccessIcons = ({
 
 }) => (
     <div className={cx(
-        'AccessIcons',
-        inAnnotation && 'AccessIcons__inAnnotation',
-        inLyric && 'AccessIcons__inLyric',
-        inSlider && 'AccessIcons__inSlider',
-        accessIconsName && `AccessIcons__${accessIconsName}`
+        'AccessLetters',
+        inAnnotation && 'AccessLetters__inAnnotation',
+        inLyric && 'AccessLetters__inLyric',
+        inSlider && 'AccessLetters__inSlider',
+        accessIconsName && `AccessLetters__${accessIconsName}`
     )}>
         {accessKeys.map(accessKeyObject => {
 
@@ -44,7 +44,7 @@ AccessIcons = ({
                     beginsCluster } = accessKeyObject
 
             return (
-                <AccessIcon
+                <AccessLetter
                     key={accessKey}
                     accessKey={accessKey}
                     showIfAccessed={showIfAccessed}
@@ -55,6 +55,6 @@ AccessIcons = ({
     </div>
 )
 
-AccessIcons.propTypes = accessIconsPropTypes
+AccessLetters.propTypes = accessIconsPropTypes
 
-export default AccessIcons
+export default AccessLetters

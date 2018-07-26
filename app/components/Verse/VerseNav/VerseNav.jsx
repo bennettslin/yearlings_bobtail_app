@@ -10,7 +10,7 @@ import Button from '../../Button/Button'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
-import { NAVIGATION_ENTER_KEY } from '../../../constants/access'
+import { ENTER } from '../../../constants/access'
 import { AUDIO_NEXT_BUTTON_KEY } from '../../../constants/buttons'
 
 class VerseNav extends Component {
@@ -56,13 +56,6 @@ class VerseNav extends Component {
              */
             isEnabled = isInteractivated
 
-            // TODO: Remove this once this logic is in CSS.
-            // isAfterCursor = true,
-
-            // TODO: Make this a real icon, of course.
-            // iconText = isAfterCursor ? `\u23E9` : `\u23EA`
-
-
         return (
             <div className={cx(
                 'VerseNav',
@@ -73,7 +66,7 @@ class VerseNav extends Component {
                 <Button
                     isSmallSize
                     buttonName={AUDIO_NEXT_BUTTON_KEY}
-                    accessKey={NAVIGATION_ENTER_KEY}
+                    accessKey={ENTER}
                     showAccessIconIfAccessOn={isEnabled}
                     isDisabled={!isEnabled}
                     buttonIdentifier={false}

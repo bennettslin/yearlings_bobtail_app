@@ -1,0 +1,12 @@
+@import "./AccessLetter";
+@import "./AccessField";
+@import "./AccessIcon";
+
+@import "./AccessLetterLogic";
+
+.AccessLetters {
+    position: absolute;
+    display: flex;
+
+    z-index: $zIndex__lyricChild__topMost;
+}

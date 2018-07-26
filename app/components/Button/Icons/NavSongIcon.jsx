@@ -15,9 +15,9 @@ const NavSongIcon = ({
     <text
         {...{
             className,
-            x: 50,
-            y: 50,
-            fontSize: 50
+            x: 25,
+            y: 75,
+            fontSize: 75
         }}
     >
         {songIndex}

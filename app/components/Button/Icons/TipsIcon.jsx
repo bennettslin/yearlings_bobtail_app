@@ -18,7 +18,7 @@ const
                 className,
                 cx: 50,
                 cy: 50,
-                r: 25
+                r: 50
             }}
         />
     ),
@@ -28,10 +28,10 @@ const
         <rect
             {...{
                 className,
-                x: 25,
-                y: 25,
-                width: 50,
-                height: 50
+                x: 0,
+                y: 0,
+                width: 100,
+                height: 100
             }}
         />
     ),
@@ -41,10 +41,10 @@ const
         <rect
             {...{
                 className,
-                x: 25,
-                y: 25,
-                width: 50,
-                height: 50
+                x: 0,
+                y: 0,
+                width: 100,
+                height: 100
             }}
         />
     ),

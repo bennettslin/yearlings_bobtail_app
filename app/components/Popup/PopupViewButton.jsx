@@ -4,9 +4,9 @@ import cx from 'classnames'
 import Button from '../Button/Button'
 
 import {
-    NAVIGATION_LEFT_KEY,
-    NAVIGATION_RIGHT_KEY,
-    NAVIGATION_ESCAPE_KEY
+    ARROW_LEFT,
+    ARROW_RIGHT,
+    ESCAPE
 } from '../../constants/access'
 
 import {
@@ -78,17 +78,17 @@ class PopupViewButton extends Component {
         if (isCloseButton) {
             buttonName = POPUP_CLOSE_BUTTON_KEY
             buttonIdentifier = '\u274C'
-            accessKey = NAVIGATION_ESCAPE_KEY
+            accessKey = ESCAPE
 
         } else if (isPreviousButton) {
             buttonName = POPUP_PREVIOUS_BUTTON_KEY
             buttonIdentifier = '\u276e'
-            accessKey = NAVIGATION_LEFT_KEY
+            accessKey = ARROW_LEFT
 
         } else if (isNextButton) {
             buttonName = POPUP_NEXT_BUTTON_KEY
             buttonIdentifier = '\u276f'
-            accessKey = NAVIGATION_RIGHT_KEY
+            accessKey = ARROW_RIGHT
         }
 
         return (
