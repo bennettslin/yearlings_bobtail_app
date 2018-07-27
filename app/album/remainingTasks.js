@@ -6,12 +6,6 @@ module.exports = [
         neededHours: 1
     },
 
-    {
-        taskName: `Nav panels use svgs.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Bug.
     {
         taskName: `Debounce nav keys.`,

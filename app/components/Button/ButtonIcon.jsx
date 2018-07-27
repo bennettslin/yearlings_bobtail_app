@@ -48,7 +48,7 @@ import {
     TITLE_BUTTON_KEY
 } from '../../constants/buttons'
 
-const BUTTONS_MAP = {
+const BUTTON_ICONS_MAP = {
         [AUDIO_NEXT_BUTTON_KEY]: AudioNextIcon,
         [AUDIO_OPTIONS_BUTTON_KEY]: AudioOptionsIcon,
         [AUDIO_PLAY_BUTTON_KEY]: AudioPlayIcon,
@@ -87,7 +87,7 @@ const ButtonIcon = ({
 
 }) => {
 
-    const IconComponent = BUTTONS_MAP[buttonName] || DEFAULT_COMPONENT
+    const IconComponent = BUTTON_ICONS_MAP[buttonName] || DEFAULT_COMPONENT
 
     return (
         <div

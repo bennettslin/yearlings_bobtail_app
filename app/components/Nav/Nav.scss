@@ -1,11 +1,9 @@
 @import "./constants";
-@import "./NavBook/NavBookLogue";
-@import "./NavBook/NavBookSongs";
-@import "./NavBook/NavBookToggle";
+@import "./NavBook/NavBook";
 @import "./NavColumn";
 @import "./NavButton";
-@import "./NavPanel";
 @import "./NavResponsive";
+@import "./Panel/NavPanel";
 
 .Nav {
     z-index: $zIndex__navCustomSubfield;

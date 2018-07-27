@@ -22,7 +22,7 @@ import {
     SONGWRITING
 } from '../../constants/dots'
 
-const DOTS_FIELDS_MAP = {
+const DOT_FIELDS_MAP = {
         [AFTERWORD]: AfterwordField,
         [BACKSTORY]: BackstoryField,
         [NARRATIVE]: NarrativeField,
@@ -57,7 +57,7 @@ DotField = ({
 }) => {
 
     const FieldComponent =
-        DOTS_FIELDS_MAP[dotKey] || DEFAULT_COMPONENT
+        DOT_FIELDS_MAP[dotKey] || DEFAULT_COMPONENT
 
     return (
             <FieldComponent

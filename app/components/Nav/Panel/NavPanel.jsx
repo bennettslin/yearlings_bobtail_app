@@ -4,9 +4,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from '../Svg/Svg'
+import Svg from '../../Svg/Svg'
+import NavPanelIcon from './NavPanelIcon'
 
-import { getSongTitle } from '../../helpers/dataHelper'
+import { getSongTitle } from '../../../helpers/dataHelper'
 
 const navPanelPropTypes = {
     // From parent.
@@ -46,7 +47,24 @@ NavPanel = ({
                     'NavPanelImage',
                     'absoluteFullContainer'
                 )}
-            />
+            >
+                <rect
+                    className={cx(
+                        'NavPanelField'
+                    )}
+                    {...{
+                        x: 0,
+                        y: 0,
+                        width: 100,
+                        height: 100
+                    }}
+                />
+                <NavPanelIcon
+                    {...{
+                        songIndex
+                    }}
+                />
+            </Svg>
             <div className="NavPanelTitle">
                 {panelTitle}
             </div>

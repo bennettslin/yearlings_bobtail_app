@@ -3513,4 +3513,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Nav panels use svgs.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

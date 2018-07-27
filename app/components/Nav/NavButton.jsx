@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Button from '../Button/Button'
-import NavPanel from './NavPanel'
+import NavPanel from './Panel/NavPanel'
 import { ENTER } from '../../constants/access'
 import {
     NAV_BOOK_BUTTON_KEY,

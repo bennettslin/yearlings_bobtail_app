@@ -22,7 +22,7 @@ import {
     SONGWRITING
 } from '../../constants/dots'
 
-const DOTS_ICONS_MAP = {
+const DOT_ICONS_MAP = {
         [AFTERWORD]: AfterwordIcon,
         [BACKSTORY]: BackstoryIcon,
         [NARRATIVE]: NarrativeIcon,
@@ -57,7 +57,7 @@ DotIcon = ({
 }) => {
 
     const IconComponent =
-        DOTS_ICONS_MAP[dotKey] || DEFAULT_COMPONENT
+        DOT_ICONS_MAP[dotKey] || DEFAULT_COMPONENT
 
     return (
             <IconComponent
