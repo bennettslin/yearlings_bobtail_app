@@ -4,7 +4,7 @@ module.exports = [
     {
         taskName: `Wiki anchors are messed up when wrapped.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: `Debounce nav keys.`,
@@ -19,9 +19,9 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Be smart about button custom widths.`,
+        taskName: `Rather than having Enter access icon, just make access selectable things more obvious. Also don't need for Esc, either.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
     {
         taskName: `Title toggle should not have such a variable width.`,
@@ -130,11 +130,6 @@ module.exports = [
         taskName: `Access icon blocks in popup annotation look weird.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Rather than having Enter access icon, just make access selectable things more obvious. Also don't need for Esc, either.`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Work on method to access new annotation index only if current invalid.`,

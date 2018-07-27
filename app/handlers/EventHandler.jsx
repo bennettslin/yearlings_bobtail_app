@@ -529,22 +529,25 @@ class EventHandler extends Component {
             selectedAnnotationIndex
         })
 
-        // Scroll lyric column only if selecting from carousel.
-        if (fromCarousel) {
-            this.props.scrollElementIntoView({
-                log: 'Carousel selected lyric annotation.',
-                scrollClass: LYRIC_ANNOTATION_SCROLL,
-                index: selectedAnnotationIndex
-            })
+        if (selectedAnnotationIndex) {
 
-        // Scroll carousel only if not selecting from carousel.
-        } else {
-            if (this.props.selectedCarouselNavIndex) {
+            // Scroll lyric column only if selecting from carousel.
+            if (fromCarousel) {
                 this.props.scrollElementIntoView({
-                    log: 'Lyric selected carousel annotation.',
-                    scrollClass: CAROUSEL_SCROLL,
+                    log: 'Carousel selected lyric annotation.',
+                    scrollClass: LYRIC_ANNOTATION_SCROLL,
                     index: selectedAnnotationIndex
                 })
+
+            // Scroll carousel only if not selecting from carousel.
+            } else {
+                if (this.props.selectedCarouselNavIndex) {
+                    this.props.scrollElementIntoView({
+                        log: 'Lyric selected carousel annotation.',
+                        scrollClass: CAROUSEL_SCROLL,
+                        index: selectedAnnotationIndex
+                    })
+                }
             }
         }
 

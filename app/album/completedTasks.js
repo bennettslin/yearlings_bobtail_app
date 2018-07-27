@@ -3488,4 +3488,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Fix issue with scrolling deselected carousel annotation, but it's undefined. Use access nav to repro.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
