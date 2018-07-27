@@ -1,4 +1,16 @@
+.TextAnchor__singleEntity,
+.TextAnchor__plainText {
+    position: relative;
+}
+
 .TextAnchor__linkText {
+
+    // Override defaults.
+    text-indent: 0;
+    padding: 0;
+    line-height: 125%;
+    direction: ltr;
+    visibility: hidden;
 
     .parentIsShown
     & {
@@ -7,8 +19,6 @@
 }
 
 .TextAnchor__linkText {
-    display: none;
-
     /**
      * Overly specific selectors are needed to override default link text
      * styling in cursored verse, which also has the !important flag. This is

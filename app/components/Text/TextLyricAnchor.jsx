@@ -154,7 +154,9 @@ class TextLyricAnchor extends Component {
 
             ...other } = this.props,
 
-            isSelected = annotationIndex === renderableAnnotationIndex
+            isSelected = annotationIndex === renderableAnnotationIndex,
+
+            isWikiTextAnchor = Boolean(wikiIndex)
 
         let
             isAccessed =
@@ -195,14 +197,12 @@ class TextLyricAnchor extends Component {
             }
         }
 
-        // This space will not display if it starts the verse line.
+        const words = isWikiTextAnchor ? text.split(' ') : [text]
+
         return (
             <Fragment>
-                <span
-                    className="anchorSpace"
-                >
-                    {' '}
-                </span>
+                {/* This space will not show if it starts the verse line. */}
+                {' '}
                 <span
                     key={annotationIndex}
                     ref={this.setLyricAnnotationRef}
@@ -214,16 +214,22 @@ class TextLyricAnchor extends Component {
                     )}
                 >
                     <TextAnchor
-                        text={(
-                            <Texts {...other}
-                                text={text}
-                            />
-                        )}
-                        sequenceDotKeys={dotKeys}
-                        isWikiTextAnchor={Boolean(wikiIndex)}
-                        isAccessed={isAccessed}
-                        isSelected={isSelected}
-                        handleAnchorClick={this._handleAnchorClick}
+                        {...{
+                            text: words.map((word, index) => (
+                                <Texts {...other}
+                                    key={index}
+                                    {...{
+                                        text: word,
+                                        isTextAnchor: true
+                                    }}
+                                />
+                            )),
+                            sequenceDotKeys: dotKeys,
+                            isWikiTextAnchor,
+                            isAccessed,
+                            isSelected,
+                            handleAnchorClick: this._handleAnchorClick
+                        }}
                     />
                 </span>
             </Fragment>

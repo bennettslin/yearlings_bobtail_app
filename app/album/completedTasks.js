@@ -3503,4 +3503,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Add anchor underline to each individual word in wiki anchor.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

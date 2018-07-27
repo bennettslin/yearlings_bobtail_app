@@ -68,7 +68,8 @@ Anchor = ({
                  * If sequence dot keys are provided, or if it's a wiki anchor,
                  * anchor is not always visible.
                  */
-                !sequenceDotKeys && !isWikiTextAnchor &&
+                !sequenceDotKeys &&
+                !isWikiTextAnchor &&
                     'Anchor__alwaysVisible',
 
                 className

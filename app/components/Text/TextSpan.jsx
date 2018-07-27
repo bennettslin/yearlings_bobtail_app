@@ -19,7 +19,8 @@ propTypes = {
     isVerseBeginningSpan: PropTypes.bool,
     isVerseEndingSpan: PropTypes.bool,
     inWormhole: PropTypes.bool,
-    isWormholeAnchorInWormhole: PropTypes.bool
+    isWormholeAnchorInWormhole: PropTypes.bool,
+    isTextAnchor: PropTypes.bool
 },
 
 TextSpan = ({
@@ -31,7 +32,8 @@ TextSpan = ({
     isVerseBeginningSpan,
     isVerseEndingSpan,
     inWormhole,
-    isWormholeAnchorInWormhole
+    isWormholeAnchorInWormhole,
+    isTextAnchor
 
 }) => {
 
@@ -57,9 +59,14 @@ TextSpan = ({
 
     /**
      * Subsequent spans of text on a line will begin with a space, unless it
-     * begins with "'s," or it's the beginning verse span in a wormhole.
+     * begins with "'s," or it's the beginning verse span in a wormhole, or
+     * it's a wiki text anchor.
      */
-    if (!isVerseBeginningSpan && text.indexOf('\'s') !== 0) {
+    if (
+        !isTextAnchor &&
+        !isVerseBeginningSpan &&
+        text.indexOf('\'s') !== 0
+    ) {
         formattedText = ` ${formattedText}`
     }
 
