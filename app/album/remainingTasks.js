@@ -1,5 +1,17 @@
 module.exports = [
 
+    {
+        taskName: `Fix slider stanza heights in modal.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Nav panels use svgs.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Bug.
     {
         taskName: `Debounce nav keys.`,
@@ -9,12 +21,24 @@ module.exports = [
 
     // Buttons and dots.
     {
-        taskName: `Button and dot styling, including for enabled and disabled. Look into button hover not overflowing.`,
+        taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs.`,
         workedHours: 0,
         neededHours: 2
     },
+
     {
-        taskName: `Rather than having Enter access icon, just make access selectable things more obvious. Also don't need for Esc, either.`,
+        taskName: `Strategy for showing hover and active buttons versus dots.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Look into button hover not overflowing.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Rather than having Enter access icon, just make access selectable things more obvious. Also don't need Esc access icon, either.`,
         workedHours: 0,
         neededHours: 3
     },

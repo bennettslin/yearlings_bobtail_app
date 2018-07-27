@@ -3498,4 +3498,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Fix discovered nav button issues.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
