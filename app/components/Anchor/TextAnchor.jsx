@@ -44,30 +44,30 @@ TextAnchor = ({
                 </span>
 
                 {/* Shown once some dot in dot sequence is selected. */}
-                <div className={cx(
+                <span className={cx(
                     'TextAnchor__linkText',
                     'TextAnchor__linkText__default',
 
                     isSelected &&
                         'TextAnchor__linkText__selected',
 
-                    'absoluteFullContainer'
+                    // 'absoluteFullContainer'
                 )}>
                     {text}
-                </div>
+                </span>
 
                 {/* Shown instead when access is on. */}
-                <div className={cx(
+                <span className={cx(
                     'TextAnchor__linkText',
                     'TextAnchor__linkText__accessed',
 
                     isSelected &&
                         'TextAnchor__linkText__selected',
 
-                    'absoluteFullContainer'
+                    // 'absoluteFullContainer'
                 )}>
                     {text}
-                </div>
+                </span>
             </span>
         </Anchor>
     )

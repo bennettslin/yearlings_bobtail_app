@@ -2,11 +2,6 @@ module.exports = [
 
     // Bug.
     {
-        taskName: `Wiki anchors are messed up when wrapped.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Debounce nav keys.`,
         workedHours: 0,
         neededHours: 1
@@ -24,7 +19,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Title toggle should not have such a variable width.`,
+        taskName: `Title toggle should not have a variable width.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -152,6 +147,12 @@ module.exports = [
         taskName: `Allow cutouts to persist across scenes. Make keys based on names?`,
         workedHours: 0,
         neededHours: 2
+    },
+
+    {
+        taskName: `Make presences svgs.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     /**

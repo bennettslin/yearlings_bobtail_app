@@ -6,17 +6,8 @@
     }
 }
 
-.TextAnchor__plainText {
-    position: relative;
-}
-
 .TextAnchor__linkText {
-    // Override defaults.
-    text-indent: 0;
-    padding: 0;
-    line-height: 125%;
-    direction: ltr;
-    visibility: hidden;
+    display: none;
 
     /**
      * Overly specific selectors are needed to override default link text

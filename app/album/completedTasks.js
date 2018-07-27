@@ -3493,4 +3493,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Wiki anchors are messed up when wrapped. Solution was to make hidden text display none instead.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

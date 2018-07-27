@@ -19,18 +19,18 @@
 
     // Anchors show as more than text.
     .TextAnchor__plainText {
-        visibility: hidden;
+        display: none;
     }
     .TextAnchor__linkText__default {
-        visibility: visible;
+        display: inline;
     }
 
     .TextAnchor__accessed {
         .TextAnchor__linkText__default {
-            visibility: hidden;
+            display: none;
         }
         .TextAnchor__linkText__accessed {
-            visibility: visible;
+            display: inline;
         }
     }
 }
