@@ -4,6 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Svg from '../Svg/Svg'
+
 import { getSongTitle } from '../../helpers/dataHelper'
 
 const navPanelPropTypes = {
@@ -39,11 +41,12 @@ NavPanel = ({
               'NavPanel__rightmost': isRightmost,
               'NavPanel__default': !isLeftmost && !isRightmost }
         )}>
-            <div className={cx(
-                'NavPanelImage',
-                'absoluteFullContainer'
-            )}>
-            </div>
+            <Svg
+                className={cx(
+                    'NavPanelImage',
+                    'absoluteFullContainer'
+                )}
+            />
             <div className="NavPanelTitle">
                 {panelTitle}
             </div>

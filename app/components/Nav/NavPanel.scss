@@ -13,7 +13,7 @@ $NavPanel-length: 100px;
     display: flex;
     flex-direction: column;
 
-    border: 1px solid purple;
+    // border: 1px solid purple;
 
     opacity: 0;
 
@@ -64,7 +64,7 @@ $NavPanel-length: 100px;
 }
 
 .NavPanelImage {
-    background-color: rgba(200, 200, 100, 0.5);
+    fill: rgba(200, 200, 100, 0.5);
 }
 
 .NavPanelTitle {
