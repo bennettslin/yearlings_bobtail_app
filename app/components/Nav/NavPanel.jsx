@@ -11,7 +11,6 @@ const navPanelPropTypes = {
     isAccessed: PropTypes.bool,
     isLeftmost: PropTypes.bool,
     isRightmost: PropTypes.bool,
-    bookIndex: PropTypes.number,
     songIndex: PropTypes.number
 },
 
@@ -21,17 +20,16 @@ NavPanel = ({
     isAccessed,
     isLeftmost,
     isRightmost,
-    bookIndex,
     songIndex
 
 }) => {
-    // Panel title is either song or logue title, or directive to Book.
-    const panelTitle = isNaN(bookIndex) ? getSongTitle({
+
+    const panelTitle = getSongTitle({
 
         songIndex,
         showIndex: false
 
-    }) : `show Book ${bookIndex === 0 ? 'I' : 'II'}`
+    })
 
     return (
         <div className={cx(

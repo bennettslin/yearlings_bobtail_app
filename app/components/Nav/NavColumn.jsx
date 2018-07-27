@@ -49,8 +49,11 @@ NavColumn = ({
         )}>
             {/* Nav book. */}
             <NavBookSongs
-                bookIndex={bookIndex}
-                handleButtonClick={handleNavSongSelect}
+                {...{
+                    bookIndex,
+                    isInShownColumn: isShownColumn,
+                    handleButtonClick: handleNavSongSelect
+                }}
             />
 
             {/* Logue or toggle. */}

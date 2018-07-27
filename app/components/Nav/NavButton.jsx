@@ -37,6 +37,7 @@ class NavButton extends Component {
         isToggle: PropTypes.bool,
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool.isRequired,
+        isInShownColumn: PropTypes.bool,
 
         bookIndex: PropTypes.number,
         songIndex: PropTypes.number,
@@ -79,6 +80,7 @@ class NavButton extends Component {
 
                 isAccessed,
                 isSelected,
+                isInShownColumn,
                 isToggle,
                 interactivatedVerseIndex,
                 selectedAnnotationIndex,
@@ -93,6 +95,8 @@ class NavButton extends Component {
             // Hard-coding indices because I'm lazy.
             isLeftmost = bookIndex === 0 || songIndex === 0,
             isRightmost = bookIndex === 1 || songIndex === 19,
+
+            isEnabled = isInShownColumn || isLeftmost || isRightmost,
 
             isNavigable =
                 !isToggle
@@ -112,18 +116,20 @@ class NavButton extends Component {
                             NAV_SONG_BUTTON_KEY,
                         buttonIdentifier
                     }}
+                    isDisabled={!isEnabled}
                     isIndexSelected={isSelected}
                     showAccessIconIfAccessOn={isAccessed && isNavigable}
                     accessKey={isToggle ? '' : ENTER}
                     handleButtonClick={this._handleButtonClick}
                 >
-                    <NavPanel
-                        isAccessed={isAccessed && isNavigable}
-                        isLeftmost={isLeftmost}
-                        isRightmost={isRightmost}
-                        bookIndex={bookIndex}
-                        songIndex={songIndex}
-                    />
+                    {!isBook && (
+                        <NavPanel
+                            isAccessed={isAccessed && isNavigable}
+                            isLeftmost={isLeftmost}
+                            isRightmost={isRightmost}
+                            bookIndex={bookIndex}
+                        />
+                    )}
                 </Button>
             </div>
         )

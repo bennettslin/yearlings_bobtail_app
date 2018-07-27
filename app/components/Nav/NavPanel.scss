@@ -43,7 +43,7 @@ $NavPanel-length: 100px;
     .RM__accessOff.RM__carouselNavShowable.RM__navExpanded
     // Prevent panel from showing when hovering over hidden column elements.
     .NavColumn__shown
-    .Button__nav:hover
+    .Button__navSong:hover
     & {
         opacity: 1;
         z-index: $zIndex__navCustomSubfield;
