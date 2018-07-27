@@ -4,8 +4,8 @@
     position: relative;
 
     transition:
-    background-color $animationDuration__default,
-    transform $animationDuration__instant;
+        background-color $animationDuration__default,
+        transform $animationDuration__instant;
 }
 
 .Button__popup {
@@ -58,6 +58,9 @@
         animation: bounceHover $animationDuration__default;
     }
 
+    .RM__key__Enter
+    .TransitionKey__Enter
+    &,
     .Button__enabled:active
     & {
         transform: scale(0.9);

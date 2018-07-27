@@ -48,6 +48,8 @@ Anchor = ({
                 'Anchor',
 
                 isAccessed && !isSelected && 'Anchor__accessed',
+                isAccessed && !isSelected && 'TransitionKey__Enter',
+
                 !isSelected && 'Anchor__selectable',
 
                 !isWikiTextAnchor && 'Anchor__noWrap',

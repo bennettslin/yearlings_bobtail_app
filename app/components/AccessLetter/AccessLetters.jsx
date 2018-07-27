@@ -39,6 +39,7 @@ AccessLetters = ({
 
             return (
                 <AccessLetter
+                    animateStandaloneOnKeyDown
                     key={accessKey}
                     accessKey={accessKey}
                     showIfAccessed={showIfAccessed}

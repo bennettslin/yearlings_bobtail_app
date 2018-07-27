@@ -29,6 +29,9 @@
         animation: bounceHover $animationDuration__default;
     }
 
+    .RM__key__Enter
+    .TransitionKey__Enter
+    &,
     .Anchor__selectable:active
     & {
         transform: scale(0.9);

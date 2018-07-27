@@ -3483,4 +3483,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `When key is pressed, either standalone access icon or button is shrunk, not both.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

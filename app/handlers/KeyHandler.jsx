@@ -94,9 +94,13 @@ class KeyHandler extends Component {
 
         const keyName = getKeyName(e)
 
+        // Do not allow the event to propagate if it's one of these.
         if (!keyName) {
             return false
         }
+
+        // Show key as registered in the UI.
+        this.props.displayKeyLetter(keyName)
 
         /**
          * Turn on access if any key other than escape was registered.
@@ -106,8 +110,8 @@ class KeyHandler extends Component {
         }
 
         /**
-         * Once access is turned on, ignore non-nav keys and enter key, because
-         * they are handled on key up.
+         * Once access is turned on and key letter is displayed, ignore non-nav
+         * keys and enter key, which are handled on key up.
          */
         if (!getShouldHandleOnKeyDown(keyName)) {
             return false
@@ -129,9 +133,6 @@ class KeyHandler extends Component {
             keyName,
             isKeyDown: true
         })
-
-        // Show key as registered in the UI.
-        this.props.displayKeyLetter(keyName)
     }
 
     handleKeyUpPress(e) {
@@ -141,19 +142,23 @@ class KeyHandler extends Component {
         // Do not allow the event to propagate if it's one of these.
         if (
             !keyName ||
-
             keyName === TAB ||
             keyName === CAPS_LOCK ||
             keyName === SPACE ||
             keyName === PAGE_UP ||
-            keyName === PAGE_DOWN ||
-
-            /**
-             * All nav keys, plus rewind and fast forward, are handled on key
-             * down.
-             */
-            getShouldHandleOnKeyDown(keyName)
+            keyName === PAGE_DOWN
         ) {
+            return false
+        }
+
+        // Stop showing key as registered in the UI.
+        this.props.displayKeyLetter()
+
+        /**
+         * Once key letter is removed from display, ignore all nav keys plus
+         * rewind and fast forward, which were already handled on key down.
+         */
+        if (getShouldHandleOnKeyDown(keyName)) {
             return false
         }
 
@@ -169,9 +174,6 @@ class KeyHandler extends Component {
                 isKeyDown: false
             })
         }
-
-        // Stop showing key as registered in the UI.
-        this.props.displayKeyLetter()
     }
 
     _handleKeyRegister({

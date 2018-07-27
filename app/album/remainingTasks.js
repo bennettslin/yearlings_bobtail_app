@@ -14,11 +14,6 @@ module.exports = [
 
     // Buttons and dots.
     {
-        taskName: `When key is pressed, either standalone access icon or button is shrunk, not both.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Button and dot styling, including for enabled and disabled. Look into button hover not overflowing.`,
         workedHours: 0,
         neededHours: 2

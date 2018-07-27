@@ -153,8 +153,8 @@ DotsSlideSelectView = ({
                     'isSelected': isSelected
                 })}
                 isCustomSize
-                showAccessIconIfAccessOn={isAccessed}
                 accessKey={ENTER}
+                showAccessIconIfAccessOn={isAccessed}
                 handleButtonClick={handleDotSelectClick}
             >
                 <Dot

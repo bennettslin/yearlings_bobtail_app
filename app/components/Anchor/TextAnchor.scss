@@ -17,4 +17,15 @@
     line-height: 125%;
     direction: ltr;
     visibility: hidden;
+
+    /**
+     * Overly specific selectors are needed to override default link text
+     * styling in cursored verse, which also has the !important flag. This is
+     * unfortunate, but unavoidable.
+     */
+    .RM__key__Enter
+    .TransitionKey__Enter
+    &.TextAnchor__linkText__accessed {
+        color: $colour__accessedLinkActive !important;
+    }
 }

@@ -13,6 +13,7 @@ const accessIconPropTypes = {
     inTextAnchor: PropTypes.bool,
     inButtonOrDotAnchor: PropTypes.bool,
     showIfAccessed: PropTypes.bool,
+    animateStandaloneOnKeyDown: PropTypes.bool,
     accessKey: PropTypes.string.isRequired
 },
 
@@ -21,6 +22,7 @@ AccessLetter = ({
     inTextAnchor,
     inButtonOrDotAnchor,
     showIfAccessed,
+    animateStandaloneOnKeyDown,
     accessKey
 
 }) => {
@@ -28,7 +30,9 @@ AccessLetter = ({
     return (
         <div className={cx(
             'AccessLetter',
-            `AccessLetter__${accessKey}`,
+
+            animateStandaloneOnKeyDown && `TransitionKey__${accessKey}`,
+
             inTextAnchor && 'AccessLetter__inTextAnchor',
             inButtonOrDotAnchor && 'AccessLetter__inButtonOrDotAnchor',
 

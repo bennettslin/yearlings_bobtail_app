@@ -161,18 +161,10 @@
                 }
             }
             .TextAnchor__linkText__accessed {
-                @if $light {
-                    @if $important {
-                        color: $colour__accessedLinkActive__light !important;
-                    } @else {
-                        color: $colour__accessedLinkActive__light;
-                    }
+                @if $important {
+                    color: $colour__accessedLinkActive !important;
                 } @else {
-                    @if $important {
-                        color: $colour__accessedLinkActive__dark !important;
-                    } @else {
-                        color: $colour__accessedLinkActive__dark;
-                    }
+                    color: $colour__accessedLinkActive;
                 }
             }
         }

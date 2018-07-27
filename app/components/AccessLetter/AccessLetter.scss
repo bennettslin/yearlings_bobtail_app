@@ -4,7 +4,8 @@
     height: $length__iconAccess;
 
     transition:
-        opacity $animationDuration__default;
+        opacity $animationDuration__default,
+        transform $animationDuration__instant;
 
     opacity: 0;
     z-index: $zIndex__negative;

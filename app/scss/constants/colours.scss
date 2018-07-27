@@ -25,18 +25,22 @@ $colour__link__dark: #844;
 $colour__linkHover__dark: #b77;
 $colour__linkActive__dark: #eaa;
 
-$colour__link__light: #bfd;
-$colour__linkHover__light: #7d9;
-$colour__linkActive__light: #aec;
+$colour__link__light: #fbb;
+$colour__linkHover__light: #b88;
+$colour__linkActive__light: #844;
 
 // Accessed anchor colours.
 $colour__accessedLink__dark: #486;
 $colour__accessedLinkHover__dark: #6a8;
-$colour__accessedLinkActive__dark: #aec;
 
 $colour__accessedLink__light: #bfd;
 $colour__accessedLinkHover__light: #aec;
-$colour__accessedLinkActive__light: #7d9;
+
+/**
+ * Having accessed link active colour be the same in light and dark allows us
+ * to style it upon key down without knowing its light or dark status.
+ */
+$colour__accessedLinkActive: #7d9;
 
 // Selected anchor colours.
 $colour__selected__dark: #b59905;

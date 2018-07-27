@@ -89,6 +89,8 @@ class Button extends Component {
 
                     isCustomSize && `Button__${buttonName}Size`,
 
+                    showIfAccessed && `TransitionKey__${accessKey}`,
+
                     { 'Button__indexSelected': isIndexSelected,
                       'Button__enabled': !isDisabled,
                       'Button__defaultSize': isDefaultSize,
