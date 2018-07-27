@@ -12,7 +12,8 @@ import { getSongsAndLoguesCount,
 
 import {
     getKeyName,
-    getIsNavKey
+    getIsNavKey,
+    getShouldHandleOnKeyDown
 } from './keyHelper'
 
 import { ARROW_LEFT,
@@ -105,10 +106,10 @@ class KeyHandler extends Component {
         }
 
         /**
-         * Once access is turned on, ignore non-nav keys, because they are
-         * handled on key up.
+         * Once access is turned on, ignore non-nav keys and enter key, because
+         * they are handled on key up.
          */
-        if (!getIsNavKey(keyName)) {
+        if (!getShouldHandleOnKeyDown(keyName)) {
             return false
         }
 
@@ -126,7 +127,7 @@ class KeyHandler extends Component {
         this._handleKeyRegister({
             e,
             keyName,
-            isNavKey: true
+            isKeyDown: true
         })
 
         // Show key as registered in the UI.
@@ -147,8 +148,11 @@ class KeyHandler extends Component {
             keyName === PAGE_UP ||
             keyName === PAGE_DOWN ||
 
-            // All nav keys are handled on key down.
-            getIsNavKey(keyName)
+            /**
+             * All nav keys, plus rewind and fast forward, are handled on key
+             * down.
+             */
+            getShouldHandleOnKeyDown(keyName)
         ) {
             return false
         }
@@ -162,7 +166,7 @@ class KeyHandler extends Component {
             this._handleKeyRegister({
                 e,
                 keyName,
-                isNavKey: false
+                isKeyDown: false
             })
         }
 
@@ -173,12 +177,20 @@ class KeyHandler extends Component {
     _handleKeyRegister({
         e,
         keyName,
-        isNavKey
+        isKeyDown
     }) {
+        const shouldHandleOnKeyDown = getShouldHandleOnKeyDown(keyName),
+            shouldHandle = isKeyDown === shouldHandleOnKeyDown
+
+        if (!shouldHandle) {
+            return false
+        }
+
         const {
             annotationIndexWasAccessed,
             keyWasRegistered
-        } = isNavKey ?
+
+        } = getIsNavKey(keyName) ?
             this._routeNavigation(e, keyName) :
             this._handleLetterKey(e, keyName)
 
@@ -241,6 +253,7 @@ class KeyHandler extends Component {
     }
 
     _routeNavigation(e, keyName) {
+
         const { isHeightlessLyricColumn,
                 isLyricExpanded,
                 interactivatedVerseIndex,
@@ -259,16 +272,6 @@ class KeyHandler extends Component {
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
-
-        // These letter keys are treated as nav keys.
-        switch (keyName) {
-            case AUDIO_REWIND_KEY:
-                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(-1)
-                break
-            case AUDIO_FAST_FORWARD_KEY:
-                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
-                break
-        }
 
         if (!isLogue && !selectedScoreIndex && !selectedWikiIndex) {
 
@@ -591,12 +594,12 @@ class KeyHandler extends Component {
                 keyWasRegistered = eventHandlers.handleAudioNextSong(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
-            // case AUDIO_REWIND_KEY:
-            //     keyWasRegistered = eventHandlers.handleVerseDirectionAccess(-1)
-            //     break
-            // case AUDIO_FAST_FORWARD_KEY:
-            //     keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
-            //     break
+            case AUDIO_REWIND_KEY:
+                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(-1)
+                break
+            case AUDIO_FAST_FORWARD_KEY:
+                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
+                break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleCarouselNavToggle(e)
                 break
