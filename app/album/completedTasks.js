@@ -3508,4 +3508,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Look into button hover not overflowing. Turns out there was an unnecessary overflow hidden style in the unit dot.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

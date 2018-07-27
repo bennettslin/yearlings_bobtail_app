@@ -33,11 +33,6 @@ module.exports = [
     },
 
     {
-        taskName: `Look into button hover not overflowing.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Rather than having Enter access icon, just make access selectable things more obvious. Also don't need Esc access icon, either.`,
         workedHours: 0,
         neededHours: 3
