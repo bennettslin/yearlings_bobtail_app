@@ -11,18 +11,30 @@ const NavSongIcon = ({
     buttonIdentifier: songIndex,
     className
 
-}) => (
-    <text
-        {...{
-            className,
-            x: 25,
-            y: 75,
-            fontSize: 75
-        }}
-    >
-        {songIndex}
-    </text>
-)
+}) => {
+    let characterIndex = songIndex
+
+    // Hard-coding because I don't know if this code will be kept, and I'm lazy.
+    if (songIndex === 0) {
+        characterIndex = 'p'
+
+    } else if (songIndex === 19) {
+        characterIndex = 'e'
+    }
+
+    return (
+        <text
+            {...{
+                className,
+                x: 25,
+                y: 75,
+                fontSize: 75
+            }}
+        >
+            {characterIndex}
+        </text>
+    )
+}
 
 NavSongIcon.propTypes = propTypes
 

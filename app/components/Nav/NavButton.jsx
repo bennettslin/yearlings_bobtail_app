@@ -127,7 +127,7 @@ class NavButton extends Component {
                             isAccessed={isAccessed && isNavigable}
                             isLeftmost={isLeftmost}
                             isRightmost={isRightmost}
-                            bookIndex={bookIndex}
+                            songIndex={songIndex}
                         />
                     )}
                 </Button>
