@@ -181,7 +181,10 @@ AnnotationView = ({
 
             {/* In Carousel, annotation title needs to be hideable. */}
             {inCarousel ? (
-                <div className="AnnotationHeaderAnimatable">
+                <div className={cx(
+                    'AnnotationHeaderAnimatable',
+                    'absoluteFullContainer'
+                )}>
                     {annotationHeader}
                 </div>
 

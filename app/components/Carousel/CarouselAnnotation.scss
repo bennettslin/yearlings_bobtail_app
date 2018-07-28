@@ -16,7 +16,9 @@ $paddingX__carouselAnnotation: 8px;
          * This allows the annotation title to extend beyond the annotation
          * margin. It's an unofficial figure for now.
          */
-        padding-top: 24px;
+        padding-top:
+            $height__annotationTitle
+            - $js__padding__popupContent__wide;
     }
 
     .parentIsShown

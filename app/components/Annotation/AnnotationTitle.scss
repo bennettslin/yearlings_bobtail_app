@@ -9,22 +9,27 @@
 
 .AnnotationHeaderAnimatable {
     // For access icons.
-    position: relative;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top:
+        $js__padding__popupContent__wide
+        - $height__annotationTitle;
+    height: $height__annotationTitle;
 
     /**
      * In carousel, annotation titles are given a height so that the top cards
      * are aligned.
      */
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: center;
 
-    height: 0;
     opacity: 0;
 
     .parentIsShown
     & {
         transition:
-        height $animationDuration__default,
-        opacity $animationDuration__default;
+            height $animationDuration__default,
+            opacity $animationDuration__default;
     }
 }
