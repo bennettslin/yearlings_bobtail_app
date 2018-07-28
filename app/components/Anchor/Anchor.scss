@@ -1,8 +1,7 @@
 @import "./AnchorLogic";
-@import "./DotAnchorLogic";
-@import "./DotAnchor";
-@import "./TextAnchor";
-@import "./AnchorUnderline";
+@import "./DotAnchor/DotAnchor";
+@import "./TextAnchor/TextAnchor";
+@import "./Underline/Underline";
 
 .Anchor,
 .TextAnchor,

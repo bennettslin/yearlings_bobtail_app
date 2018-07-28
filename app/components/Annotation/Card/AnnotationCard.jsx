@@ -4,14 +4,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import DotSequence from '../Dot/Sequence/DotSequence'
-import Texts from '../Text/Texts'
-import AnnotationWormholes from './AnnotationWormholes'
-import { WORMHOLE } from '../../constants/dots'
+import DotSequence from '../../Dot/Sequence/DotSequence'
+import Texts from '../../Text/Texts'
+import AnnotationWormholes from '../Wormhole/AnnotationWormholes'
+import { WORMHOLE } from '../../../constants/dots'
 
-import { getAnnotationCardObject } from '../../helpers/dataHelper'
-import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getAnnotationCardObject } from '../../../helpers/dataHelper'
+import { getPrefixedDotLetterClassNames } from '../../../helpers/dotHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,

@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Anchor from './Anchor';
-import Dot from '../Dot/Dot';
+import Anchor from '../Anchor';
+import Dot from '../../Dot/Dot';
 
-import { ALL_DOT_KEYS } from '../../constants/dots'
+import { ALL_DOT_KEYS } from '../../../constants/dots'
 
-const textAnchorPropTypes = {
+const propTypes = {
     // From parent.
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
@@ -16,7 +16,7 @@ const textAnchorPropTypes = {
     stanzaDotKeys: PropTypes.object.isRequired
 },
 
-TextAnchor = ({
+DotAnchor = ({
 
     stanzaDotKeys,
     inAnnotation,
@@ -57,6 +57,6 @@ TextAnchor = ({
     )
 }
 
-TextAnchor.propTypes = textAnchorPropTypes
+DotAnchor.propTypes = propTypes
 
-export default TextAnchor
+export default DotAnchor

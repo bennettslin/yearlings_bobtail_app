@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import AnnotationCard from './AnnotationCard'
 
-import { getArrayOfLength } from '../../helpers/generalHelper'
+import { getArrayOfLength } from '../../../helpers/generalHelper'
 
 class AnnotationCards extends Component {
 

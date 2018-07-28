@@ -1,8 +1,9 @@
 @import "./constants";
-@import "./NavBook/NavBook";
 @import "./NavColumn";
 @import "./NavButton";
 @import "./NavResponsive";
+
+@import "./Book/NavBook";
 @import "./Panel/NavPanel";
 
 .Nav {

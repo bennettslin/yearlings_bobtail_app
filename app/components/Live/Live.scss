@@ -23,7 +23,7 @@
 
     // Keeping these together for consistency.
     @include mixin__textAndLinkColours();
-    @include mixin__anchorUnderlineColours();
+    @include mixin__underlineColours();
 }
 
 .PopupOverlay {

@@ -22,7 +22,7 @@
         visibility: visible;
     }
 
-    .AnchorUnderline__bar__default {
+    .Underline__bar__default {
         visibility: visible;
     }
 
@@ -35,11 +35,11 @@
         }
     }
 
-    .AnchorUnderline__accessed {
-        .AnchorUnderline__bar__default {
+    .Underline__accessed {
+        .Underline__bar__default {
             visibility: hidden;
         }
-        .AnchorUnderline__bar__accessed {
+        .Underline__bar__accessed {
             visibility: visible;
         }
     }

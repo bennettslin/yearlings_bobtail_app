@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DotSequence from '../Dot/Sequence/DotSequence'
-import AnchorUnderline from './AnchorUnderline'
+import Underline from './Underline/Underline'
 import AccessLetter from '../AccessLetter/AccessLetter'
 
 import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
@@ -78,7 +78,7 @@ Anchor = ({
             onTouchStart={handleAnchorClick}
         >
             {!isWikiTextAnchor && (
-                <AnchorUnderline
+                <Underline
                     {...{
                         isAccessed,
                         isSelected,

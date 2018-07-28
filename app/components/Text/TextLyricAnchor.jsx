@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TextAnchor from '../Anchor/TextAnchor'
+import TextAnchor from '../Anchor/TextAnchor/TextAnchor'
 import Texts from './Texts'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'

@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Anchor from './Anchor';
-import AnchorUnderline from './AnchorUnderline'
+import Anchor from '../Anchor';
+import Underline from '../Underline/Underline'
 
 const textAnchorPropTypes = {
     // From parent.
@@ -47,7 +47,7 @@ TextAnchor = ({
                                 className="TextAnchor__singleEntity"
                             >
                                 {isWikiTextAnchor && (
-                                    <AnchorUnderline
+                                    <Underline
                                         isWikiAnchor
                                         {...{
                                             isAccessed,

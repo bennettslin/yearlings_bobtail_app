@@ -1,14 +1,4 @@
-$padding__annotationCard: 5px;
-
-$width__annotationCard: 364px;
-
-$width__annotationCard__mini:
-    $width__annotationCard
-    * $multiplier__fontSize__mini;
-
-$width__annotationCard__phone:
-    $width__annotationCard
-    * $multiplier__fontSize__phone;
+@import "./AnnotationCardLogic";
 
 .AnnotationCardAnimatable {
     max-height: 0;

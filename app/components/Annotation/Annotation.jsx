@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import AnnotationTitle from './AnnotationTitle'
-import AnnotationCards from './AnnotationCards'
+import AnnotationCards from './Card/AnnotationCards'
 import AnnotationAccess from './AnnotationAccess'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'

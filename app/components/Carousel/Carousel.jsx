@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import CarouselAnnotation from './CarouselAnnotation'
+import CarouselAnnotation from './Annotation/CarouselAnnotation'
 import CarouselSelect from './CarouselSelect'
 
 import { getAnnotationsCount } from '../../helpers/dataHelper'

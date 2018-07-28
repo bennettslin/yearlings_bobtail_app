@@ -167,9 +167,9 @@
     }
 }
 
-@mixin mixin__anchorUnderlineColours($light: false, $important: false) {
+@mixin mixin__underlineColours($light: false, $important: false) {
 
-    .AnchorUnderline__bar__default {
+    .Underline__bar__default {
         @if $light {
             @if $important {
                 background-color: $bgColour__underline__light !important;
@@ -185,7 +185,7 @@
         }
     }
 
-    .AnchorUnderline__bar__accessed {
+    .Underline__bar__accessed {
         @if $light {
             @if $important {
                 background-color: $bgColour__accessedUnderline__light !important;
@@ -201,7 +201,7 @@
         }
     }
 
-    .AnchorUnderline__bar__selected {
+    .Underline__bar__selected {
         @if $light {
             @if $important {
                 background-color: $bgColour__selectedUnderline__light !important;
@@ -220,7 +220,7 @@
     .Anchor__selectable {
 
         &:hover {
-            .AnchorUnderline__bar {
+            .Underline__bar {
                 @if $light {
                     @if $important {
                         background-color: $bgColour__underlineHover__light !important;
@@ -235,7 +235,7 @@
                     }
                 }
             }
-            .AnchorUnderline__bar__accessed {
+            .Underline__bar__accessed {
                 @if $light {
                     @if $important {
                         background-color: $bgColour__accessedUnderlineHover__light !important;
@@ -253,7 +253,7 @@
         }
 
         &:active {
-            .AnchorUnderline__bar {
+            .Underline__bar {
                 @if $light {
                     @if $important {
                         background-color: $bgColour__underlineActive__light !important;
@@ -268,7 +268,7 @@
                     }
                 }
             }
-            .AnchorUnderline__bar__accessed {
+            .Underline__bar__accessed {
                 @if $important {
                     background-color: $bgColour__accessedUnderlineActive !important;
                 } @else {

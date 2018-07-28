@@ -1,2 +1,16 @@
 // This is based on just eyeballing it. Includes padding.
 $height__annotationTitle: 40px;
+
+$paddingX__carouselAnnotation: 8px;
+
+$padding__annotationCard: 5px;
+
+$width__annotationCard: 364px;
+
+$width__annotationCard__mini:
+    $width__annotationCard
+    * $multiplier__fontSize__mini;
+
+$width__annotationCard__phone:
+    $width__annotationCard
+    * $multiplier__fontSize__phone;

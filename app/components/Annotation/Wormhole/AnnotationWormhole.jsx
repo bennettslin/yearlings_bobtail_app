@@ -5,28 +5,28 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames';
 
-import Texts from '../Text/Texts'
-import Button from '../Button/Button'
+import Texts from '../../Text/Texts'
+import Button from '../../Button/Button'
 
-import { ENTER } from '../../constants/access'
-import { WORMHOLE_BUTTON_KEY } from '../../constants/buttons'
+import { ENTER } from '../../../constants/access'
+import { WORMHOLE_BUTTON_KEY } from '../../../constants/buttons'
 
 import {
     LYRIC_COLUMN_KEYS,
     LYRIC,
     CENTRE
-} from '../../constants/lyrics'
+} from '../../../constants/lyrics'
 
 import {
     getSongTitle,
     getVerseObject
-} from '../../helpers/dataHelper'
+} from '../../../helpers/dataHelper'
 
 import {
     getAnnotationCardWormholeObject
-} from './annotationHelper'
+} from '../annotationHelper'
 
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,

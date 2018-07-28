@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotAnchor from '../Anchor/DotAnchor'
-import TextAnchor from '../Anchor/TextAnchor'
+import DotAnchor from '../Anchor/DotAnchor/DotAnchor'
+import TextAnchor from '../Anchor/TextAnchor/TextAnchor'
 
 import { IS_DOT_CARD } from '../../constants/lyrics'
 

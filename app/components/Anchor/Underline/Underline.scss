@@ -1,4 +1,4 @@
-.AnchorUnderline {
+.Underline {
     position: absolute;
     left: 0;
     right: 0;
@@ -8,17 +8,17 @@
     overflow: hidden;
 }
 
-.AnchorUnderline__isNotWiki {
+.Underline__isNotWiki {
     border-radius: $borderRadius;
 }
 
-.AnchorUnderline__isDot {
+.Underline__isDot {
     bottom: 7.5%;
     height: 25%;
 }
 
-.AnchorUnderline__isWiki {
-    $width__anchorUnderline__bleed: 0.125em;
+.Underline__isWiki {
+    $width__underline__bleed: 0.125em;
 
     .TextAnchor__singleEntity:first-child
     & {
@@ -34,16 +34,16 @@
 
     .TextAnchor__singleEntity:not(:last-child)
     & {
-        right: -$width__anchorUnderline__bleed;
+        right: -$width__underline__bleed;
     }
 
     .TextAnchor__singleEntity:not(:first-child)
     & {
-        left: -$width__anchorUnderline__bleed;
+        left: -$width__underline__bleed;
     }
 }
 
-.AnchorUnderline__bar {
+.Underline__bar {
     visibility: hidden;
 
     .parentIsShown
@@ -55,25 +55,25 @@
 
     .RM__key__Enter
     .TransitionKey__Enter
-    &.AnchorUnderline__bar__accessed {
+    &.Underline__bar__accessed {
         background-color: $colour__accessedLinkActive !important;
     }
 }
 
 .RM__sliderMoving {
 
-    .AnchorUnderline__bar {
+    .Underline__bar {
         display: none;
     }
 }
 
-.gradientMask__anchorUnderline {
-    $gradient__anchorUnderline: linear-gradient(
+.gradientMask__underline {
+    $gradient__underline: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 1.0)
     );
 
     // Not taken care of by autoprefixer, unfortunately.
-    -webkit-mask-image: $gradient__anchorUnderline;
-    mask-image: $gradient__anchorUnderline;
+    -webkit-mask-image: $gradient__underline;
+    mask-image: $gradient__underline;
 }

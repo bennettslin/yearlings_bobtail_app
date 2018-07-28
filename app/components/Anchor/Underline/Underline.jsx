@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from '../Svg/Svg'
+import Svg from '../../Svg/Svg'
 
 const propTypes = {
     // From parent.
@@ -12,7 +12,7 @@ const propTypes = {
     isWikiAnchor: PropTypes.bool
 },
 
-AnchorUnderline = ({
+Underline = ({
 
     isAccessed,
     isSelected,
@@ -22,38 +22,38 @@ AnchorUnderline = ({
 }) => (
     <div
         className={cx(
-            'AnchorUnderline',
-            'gradientMask__anchorUnderline',
+            'Underline',
+            'gradientMask__underline',
 
-            isDotAnchor && 'AnchorUnderline__isDot',
+            isDotAnchor && 'Underline__isDot',
             isWikiAnchor ?
-                'AnchorUnderline__isWiki' :
-                'AnchorUnderline__isNotWiki',
+                'Underline__isWiki' :
+                'Underline__isNotWiki',
 
-            isAccessed && !isSelected && 'AnchorUnderline__accessed',
+            isAccessed && !isSelected && 'Underline__accessed',
         )}
     >
         <Svg
             className={cx(
-                'AnchorUnderline__bar',
-                'AnchorUnderline__bar__default',
+                'Underline__bar',
+                'Underline__bar__default',
                 isSelected &&
-                    'AnchorUnderline__bar__selected',
+                    'Underline__bar__selected',
                 'absoluteFullContainer'
             )}
         />
         <Svg
             className={cx(
-                'AnchorUnderline__bar',
-                'AnchorUnderline__bar__accessed',
+                'Underline__bar',
+                'Underline__bar__accessed',
                 isSelected &&
-                    'AnchorUnderline__bar__selected',
+                    'Underline__bar__selected',
                 'absoluteFullContainer'
             )}
         />
     </div>
 )
 
-AnchorUnderline.propTypes = propTypes
+Underline.propTypes = propTypes
 
-export default AnchorUnderline
+export default Underline

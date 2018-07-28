@@ -4,12 +4,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Annotation from '../Annotation/Annotation'
-import { CAROUSEL_SCROLL } from '../../constants/dom'
-import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
-import { getAnnotationObject } from '../../helpers/dataHelper'
-import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import Annotation from '../../Annotation/Annotation'
+import { CAROUSEL_SCROLL } from '../../../constants/dom'
+import { LYRIC_COLUMN_KEYS } from '../../../constants/lyrics'
+import { getAnnotationObject } from '../../../helpers/dataHelper'
+import { getPrefixedDotLetterClassNames } from '../../../helpers/dotHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
