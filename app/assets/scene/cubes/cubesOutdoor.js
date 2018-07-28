@@ -40,19 +40,14 @@ import {
 import {
     a,
     // b,
-    // c,
+    c,
     // d,
     // e,
     f,
     g,
-    h,
-    i,
-    j,
-    k,
-    // n,
+    // k,
     // LEFT,
-    RIGHT,
-    c
+    RIGHT
 } from './cubesConstants'
 
 const
@@ -93,7 +88,7 @@ const
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
-                [h, h, h, j, j, j, j, j, j, h],
+                [g, g, g, g, g, g, g, g, g, g],
                 [1, 1, 1, 3, 3, 3, 3, 3, 3, 1],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1]
@@ -117,9 +112,9 @@ const
         // Overall height of lockers is 6.5'.
         ceiling: {
             zIndices: [
-                [k],
-                [k],
-                [k, k, j, j, j, j, j, j, j, j, k]
+                [g],
+                [g],
+                [g, g, g, g, g, g, g, g, g, g, g]
             ],
             bitmapKeys: [
                 [TEST_KEY]
@@ -141,11 +136,11 @@ const
     JUNIOR_HIGH_QUAD_CUBES = {
         ceiling: {
             zIndices: [
-                [k, k, j, j, j, j, j, j, j, j, k],
-                [k, k, j, j, j, j, j, j, j, j, k],
-                [k, k, j, j, j, j, j, j, j, j, k],
-                [k, k, j, j, j, j, j, j, j, j, k],
-                [k]
+                [g, g, g, g, g, g, g, g, g, g, g],
+                [g, g, g, g, g, g, g, g, g, g, g],
+                [g, g, g, g, g, g, g, g, g, g, g],
+                [g, g, g, g, g, g, g, g, g, g, g],
+                [g]
             ],
             bitmapKeys: [
                 [TEST_KEY]
@@ -168,9 +163,9 @@ const
         // Outdoor wall is 8'. Windowsill height is 3'.
         floor: {
             zIndices: [
-                [1, h],
-                [1, h, 1],
-                [1, h, 7, 7, 7, 7, h, 1, 1, 1, h],
+                [1, g],
+                [1, g, 1],
+                [1, g, 7, 7, 7, 7, g, 1, 1, 1, g],
                 [1]
             ],
             bitmapKeys: [
@@ -181,9 +176,9 @@ const
     BENNETT_APARTMENT_GATE_CUBES = {
         floor: {
             zIndices: [
-                [h],
-                [h, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, h],
-                [h, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, h],
+                [g],
+                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
+                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
                 [1],
                 [1],
                 [0],
@@ -212,7 +207,7 @@ const
         // Outdoor wall is 8'. Platform is 1'.
         floor: {
             zIndices: [
-                [1, 9, 3, j],
+                [1, 9, 3, g],
                 [1, 9, 3],
                 [1, 9, 9, 9, 9, 9, 9, 9, 3, 3, 3, 9],
                 [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1],
@@ -226,7 +221,7 @@ const
     BERKELEY_WALKWAY_CUBES = {
         floor: {
             zIndices: [
-                [j, j, j, 3, 9, 1],
+                [g, g, g, 3, 9, 1],
                 [3, 3, 3, 3, 9, 1],
                 [9, 9, 9, 9, 9, 1],
                 [1],
@@ -241,9 +236,9 @@ const
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
-                [h],
-                [h, h, h, 1, 1, 1, 1, 1, 1, h],
-                [h, h, h, 1, 1, 1, 1, 1, 1, h],
+                [g],
+                [g, g, g, 1, 1, 1, 1, 1, 1, g],
+                [g, g, g, 1, 1, 1, 1, 1, 1, g],
                 [1],
                 [1],
                 [0]
@@ -256,9 +251,9 @@ const
     MOVIE_THEATRE_2_CUBES = {
         floor: {
             zIndices: [
-                [h, h, h, 1, 1, 0],
-                [h, h, h, 1, 1, 0],
-                [h, h, h, 1, 1, 0],
+                [g, g, g, 1, 1, 0],
+                [g, g, g, 1, 1, 0],
+                [g, g, g, 1, 1, 0],
                 [1],
                 [1],
                 [0]
@@ -324,9 +319,9 @@ const
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
-                [1, 1, i],
-                [1, 1, i, 1],
-                [1, 1, i, 1, 1, 1, i],
+                [1, 1, g],
+                [1, 1, g, 1],
+                [1, 1, g, 1, 1, 1, g],
                 [1, 1, 1, 1, 1, 1, 7, 1],
                 [1, 1, 1, 1, 1, 1, 7, 1],
                 [1, 1, 1, 1, 1, 1, 7, 1]
@@ -341,7 +336,7 @@ const
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
-                [h, h, h, h, h, h, h, h, h, h, 1, 7],
+                [g, g, g, g, g, g, g, g, g, g, 1, 7],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7],
                 [7, 7, 7, 7, 7, 7, 1, 1, 1, 7, 7, 7],
                 [1],
@@ -356,7 +351,7 @@ const
     SITA_APARTMENT_GATE_2_CUBES = {
         floor: {
             zIndices: [
-                [h, h, h, h, h, 1, 7, 1, 1, 0],
+                [g, g, g, g, g, 1, 7, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 7, 1, 1, 0],
                 [7, 1, 1, 1, 7, 7, 7, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
@@ -460,7 +455,7 @@ const
         slantDirection: RIGHT,
         ceiling: {
             zIndices: [
-                [g, k, k, k, k, k, k, k, k, k, k, g]
+                [g, g, g, g, g, g, g, g, g, g, g, g]
             ],
             bitmapKeys: [
                 [TEST_KEY]
@@ -516,7 +511,7 @@ const
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
-                [h],
+                [g],
                 [1]
             ],
             bitmapKeys: [

@@ -6,10 +6,10 @@ const
     e = 14,
     f = 15,
     g = 16,
-    h = 17,
-    i = 18,
-    j = 19,
+
+    // For not showing any ceiling pixels.
     k = 20,
+
     LEFT = 'left',
     RIGHT = 'right'
 
@@ -21,9 +21,6 @@ export {
     e,
     f,
     g,
-    h,
-    i,
-    j,
     k,
     LEFT,
     RIGHT

@@ -40,11 +40,7 @@ import {
     // e,
     f,
     g,
-    h,
-    // i,
-    j,
     k,
-    // n,
     LEFT,
     // RIGHT
 } from './cubesConstants'
@@ -240,8 +236,8 @@ const
         // Outdoor wall is 8'. Indoor wall is 7.5'. Bed is 7.5 long, 1' tall.
         floor: {
             zIndices: [
-                [h],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, h],
+                [g],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
                 [g, g, 1, 1, 1, g, 7, 7, 7, 7, g],
                 [g, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, g],
                 [g, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, g],
@@ -397,7 +393,7 @@ const
     WALGREENS_CUBES = {
         floor: {
             zIndices: [
-                [h],
+                [g],
                 [5],
                 [0]
             ],
@@ -409,7 +405,7 @@ const
     STEAM_TUNNEL_CUBES = {
         floor: {
             zIndices: [
-                [h],
+                [g],
                 [5],
                 [0]
             ],
@@ -438,7 +434,7 @@ const
         // Indoor wall of club is 9'. Club stage is 2.5'.
         floor: {
             zIndices: [
-                [j],
+                [f],
                 [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
@@ -454,7 +450,7 @@ const
         // Indoor wall of club is 9'. Club stage is 2.5'.
         ceiling: {
             zIndices: [
-                [j]
+                [f]
             ],
             bitmapKeys: [
                 [TEST_KEY]
@@ -462,7 +458,7 @@ const
         },
         floor: {
             zIndices: [
-                [j],
+                [f],
                 [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [1]
             ],
@@ -475,7 +471,7 @@ const
     SHOW_STAGE_SIDE_1_CUBES = {
         ceiling: {
             zIndices: [
-                [j]
+                [f]
             ],
             bitmapKeys: [
                 [TEST_KEY]
@@ -483,7 +479,7 @@ const
         },
         floor: {
             zIndices: [
-                [j],
+                [f],
                 [6, 6, 6, 1],
                 [6, 6, 6, 1],
                 [6, 6, 6, 1],
@@ -498,7 +494,7 @@ const
     SHOW_STAGE_SIDE_2_CUBES = {
         ceiling: {
             zIndices: [
-                [j]
+                [f]
             ],
             bitmapKeys: [
                 [TEST_KEY]
@@ -506,11 +502,11 @@ const
         },
         floor: {
             zIndices: [
-                [j],
+                [f],
                 [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
-                [j, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+                [f, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [1]
             ],
             bitmapKeys: [
