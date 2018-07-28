@@ -1,12 +1,17 @@
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
-import { CUBE_Y_AXIS_LENGTH,
-         CUBE_X_AXIS_LENGTH } from '../../constants/stage'
+import {
+    CUBE_Y_AXIS_LENGTH,
+    CUBE_X_AXIS_LENGTH
+} from '../../constants/stage'
 
 const
     TILE = 'tile',
     SIDE = 'side',
     FRONT = 'front',
+
+    CEILING = 'ceiling',
+    FLOOR = 'floor',
 
     Y_INDICES_ARRAY = getArrayOfLength({
         length: CUBE_Y_AXIS_LENGTH
@@ -38,6 +43,8 @@ module.exports = {
     TILE,
     SIDE,
     FRONT,
+    CEILING,
+    FLOOR,
     Y_INDICES_ARRAY,
     SLANTED_LEFT_X_AXIS_INDICES,
     SLANTED_RIGHT_X_AXIS_INDICES,

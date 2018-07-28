@@ -16,13 +16,9 @@ import Layers from './Layers/Layers'
 import SceneSky from './SceneSky'
 import Wood from '../Stage/Wood'
 
-import {
-    getPropsAreShallowEqual
-} from '../../helpers/generalHelper'
-
-import {
-    getSceneObject
-} from '../../helpers/dataHelper'
+import { getSceneObject } from '../../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getZIndexClassNamesForCubesKey } from './sceneDataHelper'
 
 const mapStateToProps = ({
     canSceneRender,
@@ -148,14 +144,18 @@ class Scene extends Component {
             {
                 time: timeKey,
                 season: seasonKey
-            } = skyObject
+            } = skyObject,
+
+            cubesClassNames = getZIndexClassNamesForCubesKey(cubesKey)
 
         return (
             <div className={cx(
                 'Scene',
 
                 // More specific class, because Scene is a child of Theatre.
-                { 'sceneIsShown': canSceneRender && isShown }
+                { 'sceneIsShown': canSceneRender && isShown },
+
+                cubesClassNames
             )}>
                 <SceneSky
                     {...{

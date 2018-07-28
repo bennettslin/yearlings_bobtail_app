@@ -330,7 +330,7 @@ const _getHorizontalPlaneFractionsForSlantDirection = ({
  * EXPORTED *
  ************/
 
-export const getStageCubeCornerPercentages = ({
+export const getCubeCornerPercentages = ({
 
     xIndex,
     yIndex,

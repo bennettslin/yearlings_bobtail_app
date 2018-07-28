@@ -7,7 +7,7 @@ import cx from 'classnames'
 import Face from './Face/Face'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
-import { getStageCubeCornerPercentages } from '../sceneHelper'
+import { getCubeCornerPercentages } from '../sceneHelper'
 import { getCubesForKey } from '../sceneDataHelper'
 import { getSideDirection } from './cubeHelper'
 import {
@@ -72,7 +72,7 @@ class Cube extends Component {
                 slantDirection
             }),
 
-            cubeCorners = getStageCubeCornerPercentages({
+            cubeCorners = getCubeCornerPercentages({
                 xIndex,
                 yIndex,
                 zIndex,
