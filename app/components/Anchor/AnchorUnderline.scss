@@ -1,23 +1,25 @@
 .AnchorUnderline {
+    $width__anchorUnderline__bleed: 0.125em;
+
     position: absolute;
-    width: 100%;
+    width: calc(100% + #{$width__anchorUnderline__bleed * 2});
     height: 35%;
     bottom: 0;
-    left: 0;
+    left: -$width__anchorUnderline__bleed;
 
     opacity: 0;
-
-    .RM__sliderMoving
-    & {
-        background-color: $bgColour__underline__disabled;
-    }
 
     .parentIsShown
     & {
         transition:
-        opacity $animationDuration__default,
-        background-color $animationDuration__default,
-        transform $animationDuration__fast;
+            opacity $animationDuration__default,
+            background-color $animationDuration__default,
+            transform $animationDuration__fast;
+    }
+
+    .RM__sliderMoving
+    & {
+        background-color: $bgColour__underline__disabled;
     }
 }
 

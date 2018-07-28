@@ -47,7 +47,6 @@
         }
     }
 
-    // TODO: Play around with these values more.
     @if $light {
         @include mixin__textShadow(
             rgba(0, 0, 0, 0.1),
