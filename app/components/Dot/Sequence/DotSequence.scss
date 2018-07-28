@@ -20,7 +20,7 @@
 .gradientMask__dotSequence {
     $gradient__dotSequence: linear-gradient(
         rgba(0, 0, 0, 1.0),
-        rgba(0, 0, 0, 0)
+        rgba(0, 0, 0, 0.5)
     );
 
     // Not taken care of by autoprefixer, unfortunately.

@@ -84,16 +84,22 @@ class VerseBar extends Component {
 
     _handleVerseBarSelect() {
         const {
-            isVerseBarAbove,
-            isVerseBarBelow
-        } = this.props
+                isAbove,
+                isVerseBarAbove,
+                isVerseBarBelow
+            } = this.props,
+
+            isBelow = !isAbove
 
         /**
          * Prevent verse bar from being clicked if it's not shown, just as a
          * precaution. Shouldn't be interactive anyway, now that it has a
          * negative z-index.
          */
-        if (isVerseBarAbove || isVerseBarBelow) {
+        if (
+            (isAbove && isVerseBarAbove) ||
+            (isBelow && isVerseBarBelow)
+        ) {
             this.props.handleVerseBarSelect()
         }
     }

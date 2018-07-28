@@ -1,12 +1,40 @@
 .AnchorUnderline {
-    // $width__anchorUnderline__bleed: 0.125em;
-    $width__anchorUnderline__bleed: 0em;
-
     position: absolute;
-    left: -$width__anchorUnderline__bleed;
+    left: 0;
+    right: 0;
     bottom: 0;
-    width: calc(100% + #{$width__anchorUnderline__bleed * 2});
     height: 35%;
+    overflow: hidden;
+}
+
+.AnchorUnderline__isDot {
+    height: 25%;
+}
+
+.AnchorUnderline__isWiki {
+    $width__anchorUnderline__bleed: 0.125em;
+
+    .TextAnchor__singleEntity:first-child
+    & {
+        border-top-left-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+    }
+
+    .TextAnchor__singleEntity:last-child
+    & {
+        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+    }
+
+    .TextAnchor__singleEntity:not(:last-child)
+    & {
+        right: -$width__anchorUnderline__bleed;
+    }
+
+    .TextAnchor__singleEntity:not(:first-child)
+    & {
+        left: -$width__anchorUnderline__bleed;
+    }
 }
 
 .AnchorUnderline__bar {
@@ -31,4 +59,15 @@
     .AnchorUnderline__bar {
         display: none;
     }
+}
+
+.gradientMask__anchorUnderline {
+    $gradient__anchorUnderline: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 1.0)
+    );
+
+    // Not taken care of by autoprefixer, unfortunately.
+    -webkit-mask-image: $gradient__anchorUnderline;
+    mask-image: $gradient__anchorUnderline;
 }

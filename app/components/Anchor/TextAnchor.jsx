@@ -48,9 +48,10 @@ TextAnchor = ({
                             >
                                 {isWikiTextAnchor && (
                                     <AnchorUnderline
+                                        isWikiAnchor
                                         {...{
                                             isAccessed,
-                                            isSelected
+                                            isSelected,
                                         }}
                                     />
                                 )}

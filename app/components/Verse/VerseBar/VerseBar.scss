@@ -10,7 +10,6 @@
     .RM__verseBarShown
     & {
         z-index: $zIndex__lyricChild__topMost;
-        cursor: pointer;
     }
 }
 
@@ -49,6 +48,7 @@
         top: 0;
         transform: scale(1);
         opacity: 1;
+        cursor: pointer;
     }
 }
 
@@ -65,6 +65,7 @@
         bottom: 0;
         transform: scale(1);
         opacity: 1;
+        cursor: pointer;
     }
 }
 

@@ -8,21 +8,25 @@ const propTypes = {
     // From parent.
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool.isRequired,
-    isDotAnchor: PropTypes.bool
+    isDotAnchor: PropTypes.bool,
+    isWikiAnchor: PropTypes.bool
 },
 
 AnchorUnderline = ({
 
     isAccessed,
     isSelected,
-    isDotAnchor
+    isDotAnchor,
+    isWikiAnchor
 
 }) => (
     <div
         className={cx(
             'AnchorUnderline',
+            'gradientMask__anchorUnderline',
 
-            { 'AnchorUnderline__underDot': isDotAnchor },
+            isDotAnchor && 'AnchorUnderline__isDot',
+            isWikiAnchor && 'AnchorUnderline__isWiki',
 
             isAccessed && !isSelected && 'AnchorUnderline__accessed',
         )}
