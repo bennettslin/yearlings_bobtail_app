@@ -7,8 +7,9 @@
         animation: bounceHover $animationDuration__slow;
     }
 
-    .RM__key__Enter
-    .TransitionKey__Enter
+    // "Root accessed letter Enter, child accessed letter Enter."
+    .RaLEnter
+    .CaLEnter
     &,
     .Anchor__selectable:active
     & {

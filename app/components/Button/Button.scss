@@ -58,8 +58,9 @@
         animation: bounceHover $animationDuration__default;
     }
 
-    .RM__key__Enter
-    .TransitionKey__Enter
+    // "Root accessed letter Enter, child accessed letter Enter."
+    .RaLEnter
+    .CaLEnter
     &,
     .Button__enabled:active
     & {

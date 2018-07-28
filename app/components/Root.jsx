@@ -257,7 +257,8 @@ class Root extends Component {
                 className={cx(
                     'Root',
 
-                    keyName && `RM__key__${keyName}`,
+                    // "Root accessed letter."
+                    keyName && `RaL${keyName}`,
 
                     `RM__${deviceClassName}`,
                     isDesktop ?

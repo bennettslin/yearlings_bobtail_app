@@ -2,5 +2,37 @@
 $stanzaMax: 13;
 $verseMax: 62;
 
-// This order matters.
-$dotLettersArray: w o b r p n s a;
+// Ordering here matters!
+$dotLettersArray:
+    w
+    o
+    b
+    r
+    p
+    n
+    s
+    a;
+
+$accessLettersArray:
+    a
+    b
+    c
+    d
+    e
+    f
+    i
+    j
+    k
+    l
+    m
+    n
+    o
+    p
+    r
+    s
+    t
+    v
+    ArrowLeft
+    ArrowRight
+    ArrowUp
+    ArrowDown;

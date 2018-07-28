@@ -17,14 +17,15 @@
         transition: color $animationDuration__fast;
     }
 
-    /**
-     * Overly specific selectors are needed to override default link text
-     * styling in cursored verse, which also has the !important flag. This is
-     * unfortunate, but unavoidable.
-     */
-    .RM__key__Enter
-    .TransitionKey__Enter
+    // "Root accessed letter Enter, child accessed letter Enter."
+    .RaLEnter
+    .CaLEnter
     &.TextAnchor__linkText__accessed {
+        /**
+        * Overly specific selectors are needed to override default link text
+        * styling in cursored verse, which also has the !important flag. This
+        * is unfortunate, but unavoidable.
+        */
         color: $colour__accessedLinkActive !important;
     }
 }

@@ -48,7 +48,9 @@ Anchor = ({
                 'Anchor',
 
                 isAccessed && !isSelected && 'Anchor__accessed',
-                isAccessed && !isSelected && 'TransitionKey__Enter',
+
+                // "Child accessed letter."
+                isAccessed && !isSelected && 'CaLEnter',
 
                 !isSelected && 'Anchor__selectable',
 

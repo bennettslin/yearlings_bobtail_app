@@ -31,7 +31,8 @@ AccessLetter = ({
         <div className={cx(
             'AccessLetter',
 
-            animateStandaloneOnKeyDown && `TransitionKey__${accessKey}`,
+            // "Child accessed letter."
+            animateStandaloneOnKeyDown && `CaL${accessKey}`,
 
             inTextAnchor && 'AccessLetter__inTextAnchor',
             inButtonOrDotAnchor && 'AccessLetter__inButtonOrDotAnchor',
