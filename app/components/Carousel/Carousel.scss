@@ -17,12 +17,8 @@
     & {
         bottom: -100%;
 
-        /**
-         * FIXME: Not sure why this was needed, but there is no bottom margin
-         * when it is used.
-         */
         height: $height__chivalry;
-        padding-bottom: $margin__scrollbar - $js__margin__thick;
+        padding-bottom: $js__margin__thin;
 
         transition:
             bottom $animationDuration__default,

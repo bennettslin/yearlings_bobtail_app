@@ -25,8 +25,13 @@ export const getShowOverlay = ({
         isHeightlessLyricColumn
     })
 
-    return !!selectedTitleIndex ||
-           !!selectedScoreIndex ||
-           !!selectedWikiIndex ||
-           (!!selectedAnnotationIndex && isOverlayingAnnotation)
+    return (
+        Boolean(selectedTitleIndex) ||
+        Boolean(selectedScoreIndex) ||
+        Boolean(selectedWikiIndex) ||
+        (
+            Boolean(selectedAnnotationIndex) &&
+            isOverlayingAnnotation
+        )
+    )
 }

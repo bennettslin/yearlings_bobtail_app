@@ -11,6 +11,12 @@ $paddingX__carouselAnnotation: 8px;
     .RM__mobileNotPhone
     & {
         flex-direction: column;
+
+        /**
+         * This allows the annotation title to extend beyond the annotation
+         * margin. It's an unofficial figure for now.
+         */
+        padding-top: 24px;
     }
 
     .parentIsShown
@@ -24,7 +30,7 @@ $paddingX__carouselAnnotation: 8px;
 
     .CarouselAnnotation
     & {
-        padding: $js__margin__thick;
+        padding: $js__padding__popupContent__wide;
 
         // TODO: Change this.
         background-color: rgba(200, 255, 200, 0.5);

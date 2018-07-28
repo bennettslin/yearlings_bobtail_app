@@ -9,13 +9,14 @@
 .RsDw .CcAw,
 .RsDa .CcAa {
 
-    min-width: $width__annotationCard + $js__margin__thick * 2;
+    min-width:
+        $width__annotationCard
+        + $js__padding__popupContent__wide * 2;
 
     margin-left: $paddingX__carouselAnnotation;
-    margin-right: $paddingX__carouselAnnotation;
 
     .AnnotationHeaderAnimatable {
-        top: -$padding__annotationCard - $js__margin__thick;
+        top: -$js__padding__popupContent__wide;
         opacity: 1;
     }
 }
@@ -29,7 +30,9 @@
 .RM__mini.RsDw .CcAw,
 .RM__mini.RsDa .CcAa {
 
-    min-width: $width__annotationCard__mini;
+    min-width:
+        $width__annotationCard__mini
+        + $js__padding__popupContent__wide * 2;
 }
 
 /**

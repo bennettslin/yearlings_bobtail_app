@@ -215,7 +215,7 @@ class Root extends Component {
                 deviceIndex,
                 isLyricExpanded,
                 isHeightlessLyricColumn,
-                renderableAnnotationIndex,
+                selectedAnnotationIndex: renderableAnnotationIndex,
                 selectedScoreIndex,
                 selectedTitleIndex,
                 selectedWikiIndex
