@@ -19,3 +19,14 @@ $paddingX__carouselAnnotation: 8px;
         opacity $animationDuration__default;
     }
 }
+
+.Annotation {
+
+    .CarouselAnnotation
+    & {
+        padding: $js__margin__thick;
+
+        // TODO: Change this.
+        background-color: rgba(200, 255, 200, 0.5);
+    }
+}

@@ -11,7 +11,9 @@
 .AnnotationCard__inPopup {
     max-height: 500px; // Arbitrary large number.
 
-    margin-top: $padding__annotationCard;
+    &:not(:first-child) {
+        margin-top: $padding__annotationCard;
+    }
 
     opacity: 1;
     box-shadow: $boxShadow__annotationCard;

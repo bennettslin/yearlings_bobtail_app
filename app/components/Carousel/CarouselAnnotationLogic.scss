@@ -9,13 +9,13 @@
 .RsDw .CcAw,
 .RsDa .CcAa {
 
-    min-width: $width__annotationCard;
+    min-width: $width__annotationCard + $js__margin__thick * 2;
 
     margin-left: $paddingX__carouselAnnotation;
     margin-right: $paddingX__carouselAnnotation;
 
     .AnnotationHeaderAnimatable {
-        height: 40px;
+        top: -$padding__annotationCard - $js__margin__thick;
         opacity: 1;
     }
 }
@@ -52,7 +52,6 @@
     }
 
     .AnnotationHeaderAnimatable {
-        height: 0;
         opacity: 0;
     }
 }

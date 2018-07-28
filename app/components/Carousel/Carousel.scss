@@ -21,7 +21,8 @@
          * FIXME: Not sure why this was needed, but there is no bottom margin
          * when it is used.
          */
-        // height: $height__chivalry;
+        height: $height__chivalry;
+        padding-bottom: $margin__scrollbar - $js__margin__thick;
 
         transition:
             bottom $animationDuration__default,
@@ -60,7 +61,6 @@
 
     .RM__desktop
     & {
-        padding-bottom: $margin__scrollbar;
         padding-left: $width__overviewToggle__laptop;
     }
 

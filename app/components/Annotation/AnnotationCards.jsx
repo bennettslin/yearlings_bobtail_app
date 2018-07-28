@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import AnnotationCard from './AnnotationCard'
 
 import { getArrayOfLength } from '../../helpers/generalHelper'
@@ -23,12 +24,20 @@ class AnnotationCards extends Component {
                 length: cardsLength
             })
 
-        return cardsIndices.map(cardIndex => (
-            <AnnotationCard {...other}
-                key={cardIndex}
-                cardIndex={cardIndex}
-            />
-        ))
+        return (
+            <div
+                className={cx(
+                    'AnnotationCards'
+                )}
+            >
+                {cardsIndices.map(cardIndex => (
+                    <AnnotationCard {...other}
+                        key={cardIndex}
+                        cardIndex={cardIndex}
+                    />
+                ))}
+            </div>
+        )
     }
 }
 
