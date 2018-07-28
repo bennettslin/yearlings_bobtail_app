@@ -5,7 +5,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Fix slider stanza heights in modal.`,
+        taskName: `Fix slider stanza heights in modal. Current fix is not quite right. `,
         workedHours: 0,
         neededHours: 1
     },
@@ -19,7 +19,7 @@ module.exports = [
 
     // Buttons and dots.
     {
-        taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs.`,
+        taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs. Accessing dot.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -31,7 +31,7 @@ module.exports = [
     },
 
     {
-        taskName: `Rather than having Enter access icon, just make access selectable things more obvious. Also don't need Esc access icon, either.`,
+        taskName: `Rather than having Enter or Escape access icon, just make access selectable things more obvious. Remove Enter from Anchors, Wormholes, DotsSlideSelects, NavButtons, VerseNavs. Escape from Popup.`,
         workedHours: 0,
         neededHours: 3
     },
