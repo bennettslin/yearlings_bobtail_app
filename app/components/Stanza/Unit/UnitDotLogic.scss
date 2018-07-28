@@ -1,24 +1,19 @@
-// TODO: Move default logic here as well.
+@each $dotLetter in $dotLettersArray {
 
-.RsDn .CuDn,
-.RsDb .CuDb,
-.RsDo .CuDo,
-.RsDp .CuDp,
-.RsDr .CuDr,
-.RsDs .CuDs,
-.RsDw .CuDw,
-.RsDa .CuDa {
+    // "Root selected dot letter, child unit dot letter."
+    .RsD#{$dotLetter} .CuD#{$dotLetter} {
 
-    max-width: inherit;
-    margin-top: $margin__lyricUnit;
+        max-width: inherit;
+        margin-top: $margin__lyricUnit;
 
-    opacity: 1;
+        opacity: 1;
 
-    &:not(:first-child) {
-        margin-left: $marginX__stanzaChildColumn;
-    }
+        &:not(:first-child) {
+            margin-left: $marginX__stanzaChildColumn;
+        }
 
-    &.UnitDot__lastStanza {
-        max-height: inherit;
+        &.UnitDot__lastStanza {
+            max-height: inherit;
+        }
     }
 }

@@ -2,20 +2,18 @@
  * Styling if at least one sequence dot is selected.
  */
 
-.RsDn .ChQn,
-.RsDb .ChQb,
-.RsDo .ChQo,
-.RsDp .ChQp,
-.RsDr .ChQr,
-.RsDs .ChQs,
-.RsDw .ChQw,
-.RsDa .ChQa {
-    opacity: 1;
+@each $dotLetter in $dotLettersArray {
 
-    &.SequenceDot__annotationCard {
-        width: $length__annotationDot;
-    }
-    &.SequenceDot__textAnchor {
-        width: $length__lyricAnchorDot;
+    // "Root selected dot letter, child dot sequence letter."
+    .RsD#{$dotLetter} .ChQ#{$dotLetter} {
+
+        opacity: 1;
+
+        &.SequenceDot__annotationCard {
+            width: $length__annotationDot;
+        }
+        &.SequenceDot__textAnchor {
+            width: $length__lyricAnchorDot;
+        }
     }
 }

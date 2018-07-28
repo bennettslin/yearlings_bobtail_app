@@ -1,20 +1,16 @@
-// TODO: Move default logic here as well.
+@each $dotLetter in $dotLettersArray {
 
-.RsDn .CaCn,
-.RsDb .CaCb,
-.RsDo .CaCo,
-.RsDp .CaCp,
-.RsDr .CaCr,
-.RsDs .CaCs,
-.RsDw .CaCw,
-.RsDa .CaCa,
-.AnnotationCard__inPopup {
-    max-height: 500px; // Arbitrary large number.
+    // "Root selected dot letter, child annotation card."
+    .AnnotationCard__inPopup,
+    .RsD#{$dotLetter} .CaC#{$dotLetter} {
 
-    &:not(:first-child) {
-        margin-top: $padding__annotationCard;
+        max-height: 500px; // Arbitrary large number.
+
+        &:not(:first-child) {
+            margin-top: $padding__annotationCard;
+        }
+
+        opacity: 1;
+        box-shadow: $boxShadow__annotationCard;
     }
-
-    opacity: 1;
-    box-shadow: $boxShadow__annotationCard;
 }

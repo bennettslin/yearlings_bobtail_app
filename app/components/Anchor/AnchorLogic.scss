@@ -1,46 +1,41 @@
-// TODO: Move default logic here as well?
+@each $dotLetter in $dotLettersArray {
 
-.RsDn .ChAn,
-.RsDb .ChAb,
-.RsDo .ChAo,
-.RsDp .ChAp,
-.RsDr .ChAr,
-.RsDs .ChAs,
-.RsDw .ChAw,
-.RsDa .ChAa,
-.Anchor__alwaysVisible {
+    // "Root selected dot letter, child anchor."
+    .Anchor__alwaysVisible,
+    .RsD#{$dotLetter} .ChA#{$dotLetter} {
 
-    &.Anchor__selectable {
-        cursor: pointer;
-    }
+        &.Anchor__selectable {
+            cursor: pointer;
+        }
 
-    // Anchors show as more than text.
-    .TextAnchor__plainText {
-        visibility: hidden;
-    }
-    .TextAnchor__linkText__default {
-        visibility: visible;
-    }
-
-    .Underline__bar__default {
-        visibility: visible;
-    }
-
-    .TextAnchor__accessed {
+        // Anchors show as more than text.
+        .TextAnchor__plainText {
+            visibility: hidden;
+        }
         .TextAnchor__linkText__default {
-            visibility: hidden;
-        }
-        .TextAnchor__linkText__accessed {
             visibility: visible;
         }
-    }
 
-    .Underline__accessed {
         .Underline__bar__default {
-            visibility: hidden;
-        }
-        .Underline__bar__accessed {
             visibility: visible;
+        }
+
+        .TextAnchor__accessed {
+            .TextAnchor__linkText__default {
+                visibility: hidden;
+            }
+            .TextAnchor__linkText__accessed {
+                visibility: visible;
+            }
+        }
+
+        .Underline__accessed {
+            .Underline__bar__default {
+                visibility: hidden;
+            }
+            .Underline__bar__accessed {
+                visibility: visible;
+            }
         }
     }
 }

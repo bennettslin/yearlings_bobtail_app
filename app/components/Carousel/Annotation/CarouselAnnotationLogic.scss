@@ -1,37 +1,25 @@
-// TODO: Move default logic here as well.
+@each $dotLetter in $dotLettersArray {
 
-.RsDn .CcAn,
-.RsDb .CcAb,
-.RsDo .CcAo,
-.RsDp .CcAp,
-.RsDr .CcAr,
-.RsDs .CcAs,
-.RsDw .CcAw,
-.RsDa .CcAa {
+    // "Root selected dot letter, child carousel annotation."
+    .RsD#{$dotLetter} .CcA#{$dotLetter} {
 
-    min-width:
-        $width__annotationCard
-        + $js__padding__popupContent__wide * 2;
+        min-width:
+            $width__annotationCard
+            + $js__padding__popupContent__wide * 2;
 
-    margin-left: $paddingX__carouselAnnotation;
+        margin-left: $paddingX__carouselAnnotation;
 
-    .AnnotationHeaderAnimatable {
-        opacity: 1;
+        .AnnotationHeaderAnimatable {
+            opacity: 1;
+        }
     }
-}
 
-.RM__mini.RsDn .CcAn,
-.RM__mini.RsDb .CcAb,
-.RM__mini.RsDo .CcAo,
-.RM__mini.RsDp .CcAp,
-.RM__mini.RsDr .CcAr,
-.RM__mini.RsDs .CcAs,
-.RM__mini.RsDw .CcAw,
-.RM__mini.RsDa .CcAa {
+    .RM__mini.RsD#{$dotLetter} .CcA#{$dotLetter} {
 
-    min-width:
-        $width__annotationCard__mini
-        + $js__padding__popupContent__wide * 2;
+        min-width:
+            $width__annotationCard__mini
+            + $js__padding__popupContent__wide * 2;
+    }
 }
 
 /**

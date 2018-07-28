@@ -2,19 +2,16 @@
     display: none;
 }
 
-.RsDw .CdAw,
-.RsDo .CdAo,
-.RsDb .CdAb,
-.RsDr .CdAr,
-.RsDp .CdAp,
-.RsDn .CdAn,
-.RsDs .CdAs,
-.RsDa .CdAa {
+@each $dotLetter in $dotLettersArray {
 
-    display: inline-block;
+    // "Root selected dot letter, child dot anchor letter."
+    .RsD#{$dotLetter} .CdA#{$dotLetter} {
 
-    // All subsequent sibling dots in dot anchor should not be displayed.
-    ~ .DotAnchor {
-        display: none;
+        display: inline-block;
+
+        // All subsequent sibling dots in dot anchor should not be displayed.
+        ~ .DotAnchor {
+            display: none;
+        }
     }
 }
