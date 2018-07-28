@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -181,13 +183,13 @@ class Face extends Component {
             )}>
 
                 {/* Faces without pixels are white by default. */}
-                <Pixel
+                {/* <Pixel
                     uniqueId="undercoat"
                     customFill="rgba(255, 255, 255, 0.5)"
                     polygonPointsString={facePolygonPointsString}
-                />
+                /> */}
 
-                <Pixels
+                {/* <Pixels
                     {...{
                         isFloor,
                         xIndex,
@@ -199,7 +201,7 @@ class Face extends Component {
                         relativeZHeight,
                         facePolygonPointsString
                     }}
-                />
+                /> */}
 
                 {/* Single polygon for the overlying shade. */}
                 <polygon

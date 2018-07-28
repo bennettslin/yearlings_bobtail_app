@@ -1,5 +1,4 @@
 // Default styling. Kept in this stylesheet for consistency.
-
 .VerseColour {
     .RM__verseCanHover
     .verseColour__hoverParent:hover
@@ -17,68 +16,71 @@
     }
 }
 
-// "Root non-interactivated verse index, child verse index."
-.RnV0 .ChV0, .RnV1 .ChV1, .RnV2 .ChV2, .RnV3 .ChV3, .RnV4 .ChV4, .RnV5 .ChV5, .RnV6 .ChV6, .RnV7 .ChV7, .RnV8 .ChV8, .RnV9 .ChV9, .RnV10 .ChV10, .RnV11 .ChV11, .RnV12 .ChV12, .RnV13 .ChV13, .RnV14 .ChV14, .RnV15 .ChV15, .RnV16 .ChV16, .RnV17 .ChV17, .RnV18 .ChV18, .RnV19 .ChV19, .RnV20 .ChV20, .RnV21 .ChV21, .RnV22 .ChV22, .RnV23 .ChV23, .RnV24 .ChV24, .RnV25 .ChV25, .RnV26 .ChV26, .RnV27 .ChV27, .RnV28 .ChV28, .RnV29 .ChV29, .RnV30 .ChV30, .RnV31 .ChV31, .RnV32 .ChV32, .RnV33 .ChV33, .RnV34 .ChV34, .RnV35 .ChV35, .RnV36 .ChV36, .RnV37 .ChV37, .RnV38 .ChV38, .RnV39 .ChV39, .RnV40 .ChV40, .RnV41 .ChV41, .RnV42 .ChV42, .RnV43 .ChV43, .RnV44 .ChV44, .RnV45 .ChV45, .RnV46 .ChV46, .RnV47 .ChV47, .RnV48 .ChV48, .RnV49 .ChV49, .RnV50 .ChV50, .RnV51 .ChV51, .RnV52 .ChV52, .RnV53 .ChV53, .RnV54 .ChV54, .RnV55 .ChV55, .RnV56 .ChV56, .RnV57 .ChV57, .RnV58 .ChV58, .RnV59 .ChV59, .RnV60 .ChV60, .RnV61 .ChV61, .RnV62 .ChV62 {
-    // Styling for cursored verse.
+@for $verseIndex from 0 through $verseMax {
 
-    // "Grandchild interactable."
-    .GcN {
-        z-index: $zIndex__cursorVerse;
+    // "Root non-interactivated verse index, child verse index."
+    .RnV#{$verseIndex} .ChV#{$verseIndex} {
+        // Styling for cursored verse.
 
-        // TODO: This is some ugly nesting...
-        ~ .sibling__verseCursor
-        .Anchor {
-            // Allow anchor in cursor verse to still show.
+        // "Grandchild interactable."
+        .GcN {
             z-index: $zIndex__cursorVerse;
+
+            // TODO: This is some ugly nesting...
+            ~ .sibling__verseCursor
+            .Anchor {
+                // Allow anchor in cursor verse to still show.
+                z-index: $zIndex__cursorVerse;
+            }
+        }
+
+        // "Grandchild in slider."
+        .GcS {
+            box-shadow: $boxShadow__cursorVerse;
+
+            border-radius: $borderRadius $borderRadius 0 0;
+            top: -2px;
+            left: -0.5px;
+            height: calc(100% + 2px);
+            width: calc(100% + 1px);
         }
     }
 
-    // "Grandchild in slider."
-    .GcS {
-        box-shadow: $boxShadow__cursorVerse;
+    // "Root cursored lyric verse index, child verse index."
+    .RlV#{$verseIndex} .ChV#{$verseIndex} {
+        // Styling for cursored verse.
 
-        border-radius: $borderRadius $borderRadius 0 0;
-        top: -2px;
-        left: -0.5px;
-        height: calc(100% + 2px);
-        width: calc(100% + 1px);
-    }
-}
+        // "Grandchild in lyric."
+        .GcL {
+            box-shadow: $boxShadow__cursorVerse;
 
-// "Root cursored lyric verse index, child verse index."
-.RlV0 .ChV0, .RlV1 .ChV1, .RlV2 .ChV2, .RlV3 .ChV3, .RlV4 .ChV4, .RlV5 .ChV5, .RlV6 .ChV6, .RlV7 .ChV7, .RlV8 .ChV8, .RlV9 .ChV9, .RlV10 .ChV10, .RlV11 .ChV11, .RlV12 .ChV12, .RlV13 .ChV13, .RlV14 .ChV14, .RlV15 .ChV15, .RlV16 .ChV16, .RlV17 .ChV17, .RlV18 .ChV18, .RlV19 .ChV19, .RlV20 .ChV20, .RlV21 .ChV21, .RlV22 .ChV22, .RlV23 .ChV23, .RlV24 .ChV24, .RlV25 .ChV25, .RlV26 .ChV26, .RlV27 .ChV27, .RlV28 .ChV28, .RlV29 .ChV29, .RlV30 .ChV30, .RlV31 .ChV31, .RlV32 .ChV32, .RlV33 .ChV33, .RlV34 .ChV34, .RlV35 .ChV35, .RlV36 .ChV36, .RlV37 .ChV37, .RlV38 .ChV38, .RlV39 .ChV39, .RlV40 .ChV40, .RlV41 .ChV41, .RlV42 .ChV42, .RlV43 .ChV43, .RlV44 .ChV44, .RlV45 .ChV45, .RlV46 .ChV46, .RlV47 .ChV47, .RlV48 .ChV48, .RlV49 .ChV49, .RlV50 .ChV50, .RlV51 .ChV51, .RlV52 .ChV52, .RlV53 .ChV53, .RlV54 .ChV54, .RlV55 .ChV55, .RlV56 .ChV56, .RlV57 .ChV57, .RlV58 .ChV58, .RlV59 .ChV59, .RlV60 .ChV60, .RlV61 .ChV61, .RlV62 .ChV62 {
-    // Styling for cursored verse.
+            border-radius: $borderRadius;
+            top: -$js__margin__thin;
+            left: -$js__margin__thin;
+            height: calc(100% + #{$js__margin__thin * 2});
+            width: calc(100% + #{$js__margin__thin * 2});
+        }
 
-    // "Grandchild in lyric."
-    .GcL {
-        box-shadow: $boxShadow__cursorVerse;
-
-        border-radius: $borderRadius;
-        top: -$js__margin__thin;
-        left: -$js__margin__thin;
-        height: calc(100% + #{$js__margin__thin * 2});
-        width: calc(100% + #{$js__margin__thin * 2});
+        // "Grandchild even filter."
+        .GcE {
+            display: none;
+        }
     }
 
-    // "Grandchild even filter."
-    .GcE {
-        display: none;
-    }
-}
+    // "Root playing verse index, child verse index."
+    .RpV#{$verseIndex} .ChV#{$verseIndex} {
+        // Styling for cursored verse.
 
-// "Root playing verse index, child verse index."
-.RpV0 .ChV0, .RpV1 .ChV1, .RpV2 .ChV2, .RpV3 .ChV3, .RpV4 .ChV4, .RpV5 .ChV5, .RpV6 .ChV6, .RpV7 .ChV7, .RpV8 .ChV8, .RpV9 .ChV9, .RpV10 .ChV10, .RpV11 .ChV11, .RpV12 .ChV12, .RpV13 .ChV13, .RpV14 .ChV14, .RpV15 .ChV15, .RpV16 .ChV16, .RpV17 .ChV17, .RpV18 .ChV18, .RpV19 .ChV19, .RpV20 .ChV20, .RpV21 .ChV21, .RpV22 .ChV22, .RpV23 .ChV23, .RpV24 .ChV24, .RpV25 .ChV25, .RpV26 .ChV26, .RpV27 .ChV27, .RpV28 .ChV28, .RpV29 .ChV29, .RpV30 .ChV30, .RpV31 .ChV31, .RpV32 .ChV32, .RpV33 .ChV33, .RpV34 .ChV34, .RpV35 .ChV35, .RpV36 .ChV36, .RpV37 .ChV37, .RpV38 .ChV38, .RpV39 .ChV39, .RpV40 .ChV40, .RpV41 .ChV41, .RpV42 .ChV42, .RpV43 .ChV43, .RpV44 .ChV44, .RpV45 .ChV45, .RpV46 .ChV46, .RpV47 .ChV47, .RpV48 .ChV48, .RpV49 .ChV49, .RpV50 .ChV50, .RpV51 .ChV51, .RpV52 .ChV52, .RpV53 .ChV53, .RpV54 .ChV54, .RpV55 .ChV55, .RpV56 .ChV56, .RpV57 .ChV57, .RpV58 .ChV58, .RpV59 .ChV59, .RpV60 .ChV60, .RpV61 .ChV61, .RpV62 .ChV62 {
-    // Styling for cursored verse.
+        // "Child in lyric."
+        &.ChL {
+            @include mixin__textAndLinkColours($light: true, $important: true);
+            @include mixin__underlineColours($light: true, $important: true);
+        }
 
-    // "Child in lyric."
-    &.ChL {
-        @include mixin__textAndLinkColours($light: true, $important: true);
-        @include mixin__underlineColours($light: true, $important: true);
-    }
-
-    // "Grandchild verse colour."
-    .GcV {
-        // Use !important to override hover highlight.
-        background-color: $bgColour__audioPlay !important;
+        // "Grandchild verse colour."
+        .GcV {
+            // Use !important to override hover highlight.
+            background-color: $bgColour__audioPlay !important;
+        }
     }
 }

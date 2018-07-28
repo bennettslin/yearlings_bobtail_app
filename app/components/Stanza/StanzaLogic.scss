@@ -1,34 +1,21 @@
-// Default styling. Kept in this stylesheet for consistency.
+@for $stanzaIndex from 0 through $stanzaMax {
 
-// "Child stanza."
-.ChS {
-    // Styling for stanzas before cursored stanza.
-}
+    // "Root cursored stanza index, child stanza index."
+    .RcS#{$stanzaIndex} .ChS#{$stanzaIndex} {
+        // Styling for cursored stanza.
 
-// "Root cursored stanza index, child stanza index."
-.RcS0 .ChS0, .RcS1 .ChS1, .RcS2 .ChS2, .RcS3 .ChS3, .RcS4 .ChS4, .RcS5 .ChS5, .RcS6 .ChS6, .RcS7 .ChS7, .RcS8 .ChS8, .RcS9 .ChS9, .RcS10 .ChS10, .RcS11 .ChS11, .RcS12 .ChS12, .RcS13 .ChS13 {
-    // Styling for cursored stanza.
+        /**
+         * Make higher than all other stanzas. But slider stanzas still need to
+         * be below slider times.
+         */
+        z-index: $zIndex__menuField;
 
-    /**
-     * Make higher than all other stanzas. But slider stanzas still need to be
-     * below slider times.
-     */
-    z-index: $zIndex__menuField;
+        &.SliderStanza {
+            height: 65%;
+        }
 
-    &.SliderStanza {
-        height: 65%;
-    }
-
-    .boxShadow__unitCard {
-        box-shadow: $boxShadow__unitCard__cursored;
-    }
-
-    // .boxShadow__sliderStanza {
-    //     box-shadow: $boxShadow__sliderStanza__cursored;
-    // }
-
-    // All subsequent "child stanza" siblings.
-    ~ .ChS {
-        // Styling for stanzas after cursored stanza.
+        .boxShadow__unitCard {
+            box-shadow: $boxShadow__unitCard__cursored;
+        }
     }
 }

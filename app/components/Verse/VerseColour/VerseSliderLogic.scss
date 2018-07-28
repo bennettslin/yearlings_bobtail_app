@@ -1,14 +1,4 @@
 // Default styling. Kept in this stylesheet for consistency.
-
-// "Child in lyric."
-.ChL {
-
-    .RM__sliderMoving
-    & {
-
-    }
-}
-
 .VerseColour {
     // Styling for verse colours before cursored verse.
 
@@ -18,48 +8,41 @@
     }
 }
 
-// "Root slider verse index, child verse index."
-.RsV0 .ChV0, .RsV1 .ChV1, .RsV2 .ChV2, .RsV3 .ChV3, .RsV4 .ChV4, .RsV5 .ChV5, .RsV6 .ChV6, .RsV7 .ChV7, .RsV8 .ChV8, .RsV9 .ChV9, .RsV10 .ChV10, .RsV11 .ChV11, .RsV12 .ChV12, .RsV13 .ChV13, .RsV14 .ChV14, .RsV15 .ChV15, .RsV16 .ChV16, .RsV17 .ChV17, .RsV18 .ChV18, .RsV19 .ChV19, .RsV20 .ChV20, .RsV21 .ChV21, .RsV22 .ChV22, .RsV23 .ChV23, .RsV24 .ChV24, .RsV25 .ChV25, .RsV26 .ChV26, .RsV27 .ChV27, .RsV28 .ChV28, .RsV29 .ChV29, .RsV30 .ChV30, .RsV31 .ChV31, .RsV32 .ChV32, .RsV33 .ChV33, .RsV34 .ChV34, .RsV35 .ChV35, .RsV36 .ChV36, .RsV37 .ChV37, .RsV38 .ChV38, .RsV39 .ChV39, .RsV40 .ChV40, .RsV41 .ChV41, .RsV42 .ChV42, .RsV43 .ChV43, .RsV44 .ChV44, .RsV45 .ChV45, .RsV46 .ChV46, .RsV47 .ChV47, .RsV48 .ChV48, .RsV49 .ChV49, .RsV50 .ChV50, .RsV51 .ChV51, .RsV52 .ChV52, .RsV53 .ChV53, .RsV54 .ChV54, .RsV55 .ChV55, .RsV56 .ChV56, .RsV57 .ChV57, .RsV58 .ChV58, .RsV59 .ChV59, .RsV60 .ChV60, .RsV61 .ChV61, .RsV62 .ChV62 {
-    // Styling for cursored verse.
+@for $verseIndex from 0 through $verseMax {
 
-    // "Child in lyric."
-    &.ChL {
-        @include mixin__textAndLinkColours($important: true);
-    }
+    // "Root slider verse index, child verse index."
+    .RsV#{$verseIndex} .ChV#{$verseIndex} {
+        // Styling for cursored verse.
 
-    // "Grandchild verse colour."
-    .GcV {
-        // Use !important to override hover highlight.
-        background-color: $bgColour__audioNeutral !important;
-    }
-
-    ~ .ChV {
-        // All subsequent "child in lyric" siblings.
+        // "Child in lyric."
         &.ChL {
-
+            @include mixin__textAndLinkColours($important: true);
         }
 
-        // Grandchildren of all subsequent "child verse" siblings.
+        // "Grandchild verse colour."
         .GcV {
+            // Use !important to override hover highlight.
+            background-color: $bgColour__audioNeutral !important;
+        }
+
+        ~ .ChV {
+            // Grandchildren of all subsequent "child verse" siblings.
+            .GcV {
+                background-color: $bgColour__afterSlider;
+            }
+        }
+    }
+
+    // "Root slider verse index, parent of verse index."
+    .RsV#{$verseIndex} .PoV#{$verseIndex} {
+        /**
+        * Styling for verse colours in some parent of verse. In this case, the
+        * parent is a unit or unit card, as are its siblings.
+        */
+
+        // Grandchildren of all subsequent "parent of verse" siblings.
+        ~ .PoV .GcV {
             background-color: $bgColour__afterSlider;
         }
-    }
-}
-
-// "Root slider verse index, parent of verse index."
-.RsV0 .PoV0, .RsV1 .PoV1, .RsV2 .PoV2, .RsV3 .PoV3, .RsV4 .PoV4, .RsV5 .PoV5, .RsV6 .PoV6, .RsV7 .PoV7, .RsV8 .PoV8, .RsV9 .PoV9, .RsV10 .PoV10, .RsV11 .PoV11, .RsV12 .PoV12, .RsV13 .PoV13, .RsV14 .PoV14, .RsV15 .PoV15, .RsV16 .PoV16, .RsV17 .PoV17, .RsV18 .PoV18, .RsV19 .PoV19, .RsV20 .PoV20, .RsV21 .PoV21, .RsV22 .PoV22, .RsV23 .PoV23, .RsV24 .PoV24, .RsV25 .PoV25, .RsV26 .PoV26, .RsV27 .PoV27, .RsV28 .PoV28, .RsV29 .PoV29, .RsV30 .PoV30, .RsV31 .PoV31, .RsV32 .PoV32, .RsV33 .PoV33, .RsV34 .PoV34, .RsV35 .PoV35, .RsV36 .PoV36, .RsV37 .PoV37, .RsV38 .PoV38, .RsV39 .PoV39, .RsV40 .PoV40, .RsV41 .PoV41, .RsV42 .PoV42, .RsV43 .PoV43, .RsV44 .PoV44, .RsV45 .PoV45, .RsV46 .PoV46, .RsV47 .PoV47, .RsV48 .PoV48, .RsV49 .PoV49, .RsV50 .PoV50, .RsV51 .PoV51, .RsV52 .PoV52, .RsV53 .PoV53, .RsV54 .PoV54, .RsV55 .PoV55, .RsV56 .PoV56, .RsV57 .PoV57, .RsV58 .PoV58, .RsV59 .PoV59, .RsV60 .PoV60, .RsV61 .PoV61, .RsV62 .PoV62 {
-    /**
-     * Styling for verse colours in some parent of verse. In this case, the
-     * parent is a unit or unit card, as are its siblings.
-     */
-
-    // Lyric children of all subsequent "parent of verse" siblings.
-    ~ .PoV .ChL {
-
-    }
-
-    // Grandchildren of all subsequent "parent of verse" siblings.
-    ~ .PoV .GcV {
-        background-color: $bgColour__afterSlider;
     }
 }
