@@ -16,11 +16,15 @@ $bgColour__audioHighlight: #ffd;
  * TEXT *
  ********/
 
-// Default text colours.
+// Plain text colours.
 $colour__text__dark: #444;
 $colour__text__light: #fff;
 
-// Text anchor colours.
+// Selected anchor colours.
+$colour__selected__dark: #b80;
+$colour__selected__light: #fb0;
+
+// Default anchor colours.
 $colour__link__dark: #844;
 $colour__linkHover__dark: #b77;
 $colour__linkActive__dark: #eaa;
@@ -42,20 +46,36 @@ $colour__accessedLinkHover__light: #aec;
  */
 $colour__accessedLinkActive: #7d9;
 
-// Selected anchor colours.
-$colour__selected__dark: #b59905;
-$colour__selected__light: #b59905;
+/*************
+ * UNDERLINE *
+ *************/
 
-$bgColour__underline__selected: #eec;
+// Selected underline colours.
+$bgColour__selectedUnderline__dark: #b80;
+$bgColour__selectedUnderline__light: #fb0;
 
-$bgColour__accessedUnderline__dark: mix(
-    $colour__accessedLink__dark, white, 25%
-);
+// Default underline colours.
+$bgColour__underline__dark: #844;
+$bgColour__underlineHover__dark: #b77;
+$bgColour__underlineActive__dark: #eaa;
 
-$bgColour__underline__disabled: #aaa;
-$bgColour__underline__selectable: mix(
-    $colour__link__dark, white, 25%
-);
+$bgColour__underline__light: #fbb;
+$bgColour__underlineHover__light: #b88;
+$bgColour__underlineActive__light: #844;
+
+// Accessed underline colours.
+$bgColour__accessedUnderline__dark: #486;
+$bgColour__accessedUnderlineHover__dark: #6a8;
+
+$bgColour__accessedUnderline__light: #bfd;
+$bgColour__accessedUnderlineHover__light: #aec;
+
+/**
+ * Having accessed link active colour be the same in light and dark allows us
+ * to style it upon key down without knowing its light or dark status.
+ */
+$bgColour__accessedUnderlineActive: #7d9;
+
 
 $bgColour__beforeSelected: #fffaef;
 $bgColour__afterSelected: #faefff;

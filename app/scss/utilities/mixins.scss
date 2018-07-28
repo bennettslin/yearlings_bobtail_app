@@ -39,21 +39,18 @@
             color: $colour__text__light;
         }
 
-    } @else {
-        @if $important {
-            color: $colour__text__dark !important;
-        } @else {
-            color: $colour__text__dark;
-        }
-    }
-
-    @if $light {
         @include mixin__textShadow(
             rgba(0, 0, 0, 0.1),
             $important: $important
         );
 
     } @else {
+        @if $important {
+            color: $colour__text__dark !important;
+        } @else {
+            color: $colour__text__dark;
+        }
+
         @include mixin__textShadow(
             rgba(255, 255, 255, 0.4),
             $important: $important
@@ -164,6 +161,118 @@
                     color: $colour__accessedLinkActive !important;
                 } @else {
                     color: $colour__accessedLinkActive;
+                }
+            }
+        }
+    }
+}
+
+@mixin mixin__anchorUnderlineColours($light: false, $important: false) {
+
+    .AnchorUnderline__bar__default {
+        @if $light {
+            @if $important {
+                background-color: $bgColour__underline__light !important;
+            } @else {
+                background-color: $bgColour__underline__light;
+            }
+        } @else {
+            @if $important {
+                background-color: $bgColour__underline__dark !important;
+            } @else {
+                background-color: $bgColour__underline__dark;
+            }
+        }
+    }
+
+    .AnchorUnderline__bar__accessed {
+        @if $light {
+            @if $important {
+                background-color: $bgColour__accessedUnderline__light !important;
+            } @else {
+                background-color: $bgColour__accessedUnderline__light;
+            }
+        } @else {
+            @if $important {
+                background-color: $bgColour__accessedUnderline__dark !important;
+            } @else {
+                background-color: $bgColour__accessedUnderline__dark;
+            }
+        }
+    }
+
+    .AnchorUnderline__bar__selected {
+        @if $light {
+            @if $important {
+                background-color: $bgColour__selectedUnderline__light !important;
+            } @else {
+                background-color: $bgColour__selectedUnderline__light;
+            }
+        } @else {
+            @if $important {
+                background-color: $bgColour__selectedUnderline__dark !important;
+            } @else {
+                background-color: $bgColour__selectedUnderline__dark;
+            }
+        }
+    }
+
+    .Anchor__selectable {
+
+        &:hover {
+            .AnchorUnderline__bar {
+                @if $light {
+                    @if $important {
+                        background-color: $bgColour__underlineHover__light !important;
+                    } @else {
+                        background-color: $bgColour__underlineHover__light;
+                    }
+                } @else {
+                    @if $important {
+                        background-color: $bgColour__underlineHover__dark !important;
+                    } @else {
+                        background-color: $bgColour__underlineHover__dark;
+                    }
+                }
+            }
+            .AnchorUnderline__bar__accessed {
+                @if $light {
+                    @if $important {
+                        background-color: $bgColour__accessedUnderlineHover__light !important;
+                    } @else {
+                        background-color: $bgColour__accessedUnderlineHover__light;
+                    }
+                } @else {
+                    @if $important {
+                        background-color: $bgColour__accessedUnderlineHover__dark !important;
+                    } @else {
+                        background-color: $bgColour__accessedUnderlineHover__dark;
+                    }
+                }
+            }
+        }
+
+        &:active {
+            .AnchorUnderline__bar {
+                @if $light {
+                    @if $important {
+                        background-color: $bgColour__underlineActive__light !important;
+                    } @else {
+                        background-color: $bgColour__underlineActive__light;
+                    }
+                } @else {
+                    @if $important {
+                        background-color: $bgColour__underlineActive__dark !important;
+                    } @else {
+                        background-color: $bgColour__underlineActive__dark;
+                    }
+                }
+            }
+            .AnchorUnderline__bar__accessed {
+                @if $important {
+                    background-color: $bgColour__accessedUnderlineActive !important;
+                } @else {
+                    background-color: $bgColour__accessedUnderlineActive;
                 }
             }
         }

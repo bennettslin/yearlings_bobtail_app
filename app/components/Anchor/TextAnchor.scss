@@ -16,9 +16,7 @@
     & {
         transition: color $animationDuration__fast;
     }
-}
 
-.TextAnchor__linkText {
     /**
      * Overly specific selectors are needed to override default link text
      * styling in cursored verse, which also has the !important flag. This is
@@ -28,5 +26,19 @@
     .TransitionKey__Enter
     &.TextAnchor__linkText__accessed {
         color: $colour__accessedLinkActive !important;
+    }
+}
+
+.RM__sliderMoving {
+
+    // Specific selector to override.
+    .Anchor {
+        .TextAnchor__plainText {
+            visibility: visible;
+        }
+    }
+
+    .TextAnchor__linkText {
+        display: none;
     }
 }

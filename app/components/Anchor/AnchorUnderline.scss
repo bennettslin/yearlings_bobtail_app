@@ -1,55 +1,34 @@
 .AnchorUnderline {
-    $width__anchorUnderline__bleed: 0.125em;
+    // $width__anchorUnderline__bleed: 0.125em;
+    $width__anchorUnderline__bleed: 0em;
 
     position: absolute;
+    left: -$width__anchorUnderline__bleed;
+    bottom: 0;
     width: calc(100% + #{$width__anchorUnderline__bleed * 2});
     height: 35%;
-    bottom: 0;
-    left: -$width__anchorUnderline__bleed;
+}
 
-    opacity: 0;
+.AnchorUnderline__bar {
+    visibility: hidden;
 
     .parentIsShown
     & {
         transition:
             opacity $animationDuration__default,
-            background-color $animationDuration__default,
-            transform $animationDuration__fast;
-    }
-
-    .RM__sliderMoving
-    & {
-        background-color: $bgColour__underline__disabled;
-    }
-}
-
-.AnchorUnderline__selectable {
-    background-color: $bgColour__underline__selectable;
-
-    .Anchor__selectable:hover
-    & {
-        animation: bounceHover $animationDuration__default;
+            background-color $animationDuration__default;
     }
 
     .RM__key__Enter
     .TransitionKey__Enter
-    &,
-    .Anchor__selectable:active
-    & {
-        transform: scale(0.9);
+    &.AnchorUnderline__bar__accessed {
+        background-color: $colour__accessedLinkActive !important;
     }
 }
 
-.AnchorUnderline__accessed {
-    .RM__sliderNotMoving
-    & {
-        background-color: $bgColour__accessedUnderline__dark;
-    }
-}
+.RM__sliderMoving {
 
-.AnchorUnderline__selected {
-    .RM__sliderNotMoving
-    & {
-        background-color: $bgColour__underline__selected;
+    .AnchorUnderline__bar {
+        display: none;
     }
 }

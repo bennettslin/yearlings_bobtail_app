@@ -13,9 +13,6 @@
     &.Anchor__selectable {
         cursor: pointer;
     }
-    .AnchorUnderline {
-        opacity: 1;
-    }
 
     // Anchors show as more than text.
     .TextAnchor__plainText {
@@ -25,11 +22,24 @@
         visibility: visible;
     }
 
+    .AnchorUnderline__bar__default {
+        visibility: visible;
+    }
+
     .TextAnchor__accessed {
         .TextAnchor__linkText__default {
             visibility: hidden;
         }
         .TextAnchor__linkText__accessed {
+            visibility: visible;
+        }
+    }
+
+    .AnchorUnderline__accessed {
+        .AnchorUnderline__bar__default {
+            visibility: hidden;
+        }
+        .AnchorUnderline__bar__accessed {
             visibility: visible;
         }
     }

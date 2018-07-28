@@ -34,7 +34,6 @@ TextAnchor = ({
         <Anchor {...other}>
             <span className={cx(
                 'TextAnchor',
-                'textShadow__text',
 
                 isAccessed && !isSelected && 'TextAnchor__accessed'
             )}>
@@ -71,6 +70,7 @@ TextAnchor = ({
                                     isSelected &&
                                         'TextAnchor__linkText__selected',
 
+                                    'textShadow__text',
                                     'absoluteFullContainer'
                                 )}>
                                     {word}
@@ -84,6 +84,7 @@ TextAnchor = ({
                                     isSelected &&
                                         'TextAnchor__linkText__selected',
 
+                                    'textShadow__text',
                                     'absoluteFullContainer'
                                 )}>
                                     {word}

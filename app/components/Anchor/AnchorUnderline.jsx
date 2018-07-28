@@ -18,19 +18,34 @@ AnchorUnderline = ({
     isDotAnchor
 
 }) => (
-    <Svg
+    <div
         className={cx(
             'AnchorUnderline',
 
             { 'AnchorUnderline__underDot': isDotAnchor },
 
             isAccessed && !isSelected && 'AnchorUnderline__accessed',
-
-            isSelected ?
-                'AnchorUnderline__selected' :
-                'AnchorUnderline__selectable'
         )}
-    />
+    >
+        <Svg
+            className={cx(
+                'AnchorUnderline__bar',
+                'AnchorUnderline__bar__default',
+                isSelected &&
+                    'AnchorUnderline__bar__selected',
+                'absoluteFullContainer'
+            )}
+        />
+        <Svg
+            className={cx(
+                'AnchorUnderline__bar',
+                'AnchorUnderline__bar__accessed',
+                isSelected &&
+                    'AnchorUnderline__bar__selected',
+                'absoluteFullContainer'
+            )}
+        />
+    </div>
 )
 
 AnchorUnderline.propTypes = propTypes

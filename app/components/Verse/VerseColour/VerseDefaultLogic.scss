@@ -25,6 +25,7 @@
     // "Child in lyric."
     &.ChL {
         @include mixin__textAndLinkColours($light: true, $important: true);
+        @include mixin__anchorUnderlineColours($light: true, $important: true);
     }
 
     // "Grandchild verse colour."
