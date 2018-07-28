@@ -2,6 +2,11 @@
 
 .DotIcon {
     stroke: #ddd;
+
+    .RM__sliderMoving
+    & {
+        fill: $bgColour__dot__deselected;
+    }
 }
 
 .DotIcon__wormhole {
@@ -32,11 +37,9 @@
 .DotIcon__accessed {
     fill: $bgColour__dot__accessed;
 }
-
 .DotIcon__selected {
     fill: $bgColour__dot__selected;
 }
-
 .DotIcon__deselected {
     fill: $bgColour__dot__deselected;
 }

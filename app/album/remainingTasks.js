@@ -1,5 +1,9 @@
 module.exports = [
-
+    {
+        taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Fix slider stanza heights in modal.`,
         workedHours: 0,
@@ -54,12 +58,6 @@ module.exports = [
         taskName: `Can skip to stanza by clicking stanza tab?`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Anchor text shadow, underline, and dot sequence outline logic in CSS.`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     {

@@ -26,7 +26,9 @@ AnchorUnderline = ({
             'gradientMask__anchorUnderline',
 
             isDotAnchor && 'AnchorUnderline__isDot',
-            isWikiAnchor && 'AnchorUnderline__isWiki',
+            isWikiAnchor ?
+                'AnchorUnderline__isWiki' :
+                'AnchorUnderline__isNotWiki',
 
             isAccessed && !isSelected && 'AnchorUnderline__accessed',
         )}

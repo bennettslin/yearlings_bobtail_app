@@ -1,4 +1,13 @@
 // TODO: All of these are placeholder styles.
+
+.DotField {
+
+    .RM__sliderMoving
+    & {
+        fill: $bgColour__dot__deselected;
+    }
+}
+
 .DotField__wormhole {
     fill: $bgColour__dot__wormhole;
 }

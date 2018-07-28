@@ -3518,4 +3518,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Anchor underline logic in CSS.`,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
+        taskName: `Dot sequence logic in CSS.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

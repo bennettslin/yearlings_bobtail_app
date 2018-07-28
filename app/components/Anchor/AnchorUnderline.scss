@@ -7,6 +7,10 @@
     overflow: hidden;
 }
 
+.AnchorUnderline__isNotWiki {
+    border-radius: $borderRadius;
+}
+
 .AnchorUnderline__isDot {
     height: 25%;
 }
