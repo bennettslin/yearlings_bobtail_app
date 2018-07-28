@@ -84,7 +84,12 @@ export const getPropsAreShallowEqual = ({
     return true
 }
 
-export const getArrayOfLength = ({ length, indexBase = 0 }) => {
+export const getArrayOfLength = (
+
+    length,
+    indexBase = 0
+
+) => {
     return Array.from(
         { length },
         (nothing, i) => i + indexBase

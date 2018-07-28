@@ -13,16 +13,13 @@ const
     CEILING = 'ceiling',
     FLOOR = 'floor',
 
-    Y_INDICES_ARRAY = getArrayOfLength({
-        length: CUBE_Y_AXIS_LENGTH
-    }),
+    Y_INDICES_ARRAY = getArrayOfLength(CUBE_Y_AXIS_LENGTH),
 
-    SLANTED_RIGHT_X_AXIS_INDICES = getArrayOfLength({
-        length: CUBE_X_AXIS_LENGTH
-    }),
+    SLANTED_RIGHT_X_AXIS_INDICES =
+        getArrayOfLength(CUBE_X_AXIS_LENGTH),
 
-    SLANTED_LEFT_X_AXIS_INDICES = SLANTED_RIGHT_X_AXIS_INDICES
-        .slice().reverse(),
+    SLANTED_LEFT_X_AXIS_INDICES =
+        SLANTED_RIGHT_X_AXIS_INDICES.slice().reverse(),
 
     /**
      * Returns array of indices that start from the ends and move towards the

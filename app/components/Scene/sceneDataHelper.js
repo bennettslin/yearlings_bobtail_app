@@ -24,8 +24,8 @@ const
         CEILING,
         FLOOR
     ],
-    X_INDICES_ARRAY = getArrayOfLength({ length: CUBE_X_AXIS_LENGTH }),
-    Y_INDICES_ARRAY = getArrayOfLength({ length: CUBE_Y_AXIS_LENGTH })
+    X_INDICES_ARRAY = getArrayOfLength(CUBE_X_AXIS_LENGTH),
+    Y_INDICES_ARRAY = getArrayOfLength(CUBE_Y_AXIS_LENGTH)
 
 export const getCubesForKey = (cubesKey) => {
 

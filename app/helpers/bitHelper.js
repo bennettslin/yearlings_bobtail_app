@@ -25,10 +25,10 @@ export const convertTrueFalseKeysToBitNumber = ({
 }) => {
 
     // If no keys array is given, assume 1-based indices.
-    keysArray = keysArray || getArrayOfLength({
-        length: keys(trueFalseObject).length,
-        indexBase: 1
-    })
+    keysArray = keysArray || getArrayOfLength(
+        keys(trueFalseObject).length,
+        1
+    )
 
     /**
      * Allow storage helper to store object as a single number. Order of keys
@@ -52,10 +52,10 @@ export const convertBitNumberToTrueFalseKeys = ({
      * If no keys array is given, assume 1-based indices. In this case, keys
      * count *must* be passed.
      */
-    keysArray = keysArray || getArrayOfLength({
-        length: keysCount,
-        indexBase: 1
-    })
+    keysArray = keysArray || getArrayOfLength(
+        keysCount,
+        1
+    )
 
     let trueFalseObject = {}
 

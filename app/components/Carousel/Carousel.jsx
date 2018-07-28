@@ -162,9 +162,7 @@ class Carousel extends Component {
              * Dynamically create array of just indices. Carousel annotation
              * will fetch annotation object directly from data helper.
              */
-            annotationsIndices = getArrayOfLength({
-                length: annotationsCount
-            })
+            annotationsIndices = getArrayOfLength(annotationsCount)
 
         return (hasMounted || canCarouselRender) && (
             <div

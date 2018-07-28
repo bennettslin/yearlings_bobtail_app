@@ -20,9 +20,7 @@ class AnnotationCards extends Component {
                 ...other
             } = this.props,
 
-            cardsIndices = getArrayOfLength({
-                length: cardsLength
-            })
+            cardsIndices = getArrayOfLength(cardsLength)
 
         return (
             <div

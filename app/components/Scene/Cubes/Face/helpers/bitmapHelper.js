@@ -3,8 +3,8 @@ import { getArrayOfLength } from '../../../../../helpers/generalHelper'
 import { CUBE_Z_AXIS_LENGTH } from '../../../../../constants/stage'
 
 const MATRIX_LENGTH = 8,
-    MATRIX_INDICES_ARRAY = getArrayOfLength({ length: MATRIX_LENGTH }),
-    COORDINATES_ARRAY = getArrayOfLength({ length: MATRIX_LENGTH + 1 })
+    MATRIX_INDICES_ARRAY = getArrayOfLength(MATRIX_LENGTH),
+    COORDINATES_ARRAY = getArrayOfLength(MATRIX_LENGTH + 1)
 
 export const getBitmapMatrix = ({
 
@@ -57,7 +57,7 @@ export const getBitmapMatrix = ({
 
         coordinatesHeightArray = isTileFace ?
             COORDINATES_ARRAY :
-            getArrayOfLength({ length: Math.ceil(matrixHeightLength) + 1 }),
+            getArrayOfLength(Math.ceil(matrixHeightLength) + 1),
 
         // Establish side points.
         outermostPoints = coordinatesHeightArray.map(yIndex => {
@@ -117,7 +117,7 @@ export const getBitmapMatrix = ({
 
         bitmapHeightArray = isTileFace ?
             MATRIX_INDICES_ARRAY :
-            getArrayOfLength({ length: Math.ceil(matrixHeightLength) })
+            getArrayOfLength(Math.ceil(matrixHeightLength))
 
     return bitmapHeightArray.map(yIndex => (
         MATRIX_INDICES_ARRAY.map(xIndex => {
