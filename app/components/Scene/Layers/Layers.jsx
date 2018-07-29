@@ -9,7 +9,7 @@ import Layer from './Layer'
 
 import { DEFAULT_STAGE_KEY } from '../../../assets/scene/cubes/cubesKeys'
 
-import { Y_INDICES_ARRAY } from '../constants'
+import { CUBE_Y_INDICES } from '../../../constants/stage'
 
 const mapStateToProps = ({
     canSceneRender
@@ -79,7 +79,7 @@ class Layers extends Component {
                     'absoluteFullContainer'
                 )}
             >
-                {Y_INDICES_ARRAY.map(yIndex => {
+                {CUBE_Y_INDICES.map(yIndex => {
 
                     return (
                         <Layer {...other}

@@ -4,7 +4,6 @@ import { DEFAULT_STAGE_KEY } from '../../assets/scene/cubes/cubesKeys'
 import { getCharStringForNumber } from '../../helpers/formatHelper'
 
 import {
-    getArrayOfLength,
     getValueInAbridgedMatrix
 } from '../../helpers/generalHelper'
 
@@ -14,8 +13,8 @@ import {
 } from './constants'
 
 import {
-    CUBE_Y_AXIS_LENGTH,
-    CUBE_X_AXIS_LENGTH
+    CUBE_X_INDICES,
+    CUBE_Y_INDICES
 } from '../../constants/stage'
 
 // TODO: Make this a general constant?
@@ -23,9 +22,7 @@ const
     CUBE_LEVELS_ARRAY = [
         CEILING,
         FLOOR
-    ],
-    X_INDICES_ARRAY = getArrayOfLength(CUBE_X_AXIS_LENGTH),
-    Y_INDICES_ARRAY = getArrayOfLength(CUBE_Y_AXIS_LENGTH)
+    ]
 
 export const getCubesForKey = (cubesKey) => {
 
@@ -53,6 +50,29 @@ export const getPresencesForCubes = ({
     return scenePresences ? scenePresences[`cubes${yIndex}`] : null
 }
 
+export const getParentClassNameForSceneLogic = ({
+    level,
+    xIndex,
+    yIndex,
+    zIndex
+}) => {
+
+    /**
+     * Use 'Z' for Scene to distinguish it from 'S' for Stanza.
+     * "Scene levelIndex, xIndex, yIndex, zIndex."
+     */
+    return `Z${
+        level[0]
+    }${
+        getCharStringForNumber(xIndex)
+    }${
+        yIndex
+    }${
+        // Allow zIndex to be appended dynamically by CubeStyle.
+        !isNaN(zIndex) ? getCharStringForNumber(zIndex) : ''
+    }`
+}
+
 export const getZIndexClassNamesForCubesKey = (cubesKey) => {
     const cubes = getCubesForKey(cubesKey)
 
@@ -61,9 +81,9 @@ export const getZIndexClassNamesForCubesKey = (cubesKey) => {
 
         const { zIndices } = cubes[level]
 
-        return Y_INDICES_ARRAY.map(yIndex => {
+        return CUBE_Y_INDICES.map(yIndex => {
 
-            return X_INDICES_ARRAY.map(xIndex => {
+            return CUBE_X_INDICES.map(xIndex => {
 
                 const zIndex = getValueInAbridgedMatrix(
                     zIndices,
@@ -71,19 +91,13 @@ export const getZIndexClassNamesForCubesKey = (cubesKey) => {
                     yIndex
                 )
 
-                /**
-                 * Use 'Z' for Scene to distinguish it from 'S' for Stanza.
-                 * "Scene levelIndex, xIndex, yIndex, zIndex."
-                 */
-                return `Z${
-                    level[0]
-                }${
-                    getCharStringForNumber(xIndex)
-                }${
-                    yIndex
-                }${
-                    getCharStringForNumber(zIndex)
-                }`
+
+                return getParentClassNameForSceneLogic({
+                    level,
+                    xIndex,
+                    yIndex,
+                    zIndex
+                })
             })
         })
     })

@@ -1,5 +1,9 @@
 // Check out Peoria Symphony Orchestra.
-import { getExponentFactorialSum, getArrayOfIncreasingSums } from '../helpers/generalHelper'
+import {
+    getExponentFactorialSum,
+    getArrayOfIncreasingSums,
+    getArrayOfLength
+} from '../helpers/generalHelper'
 
 const
     getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {
@@ -50,8 +54,11 @@ const
 const base = 1.069913193933663,
 
     // Assume that floor height is this percent of stage height.
-    STAGE_Y_PERCENTAGE = 12,
+    CUBE_X_AXIS_LENGTH = 12,
     CUBE_Y_AXIS_LENGTH = 6,
+    CUBE_Z_AXIS_LENGTH = 16,
+
+    STAGE_Y_PERCENTAGE = 12,
     SLANTED_TILE_Y_UNITS_LENGTH = 14,
 
     TILE_Y_PERCENTAGES = getTileYPercentages(
@@ -59,7 +66,11 @@ const base = 1.069913193933663,
     ).reverse(),
     SLANTED_TILE_Y_PERCENTAGES = getTileYPercentages(
         base, STAGE_Y_PERCENTAGE, SLANTED_TILE_Y_UNITS_LENGTH
-    ).reverse()
+    ).reverse(),
+
+    CUBE_X_INDICES = getArrayOfLength(CUBE_X_AXIS_LENGTH),
+    CUBE_Y_INDICES = getArrayOfLength(CUBE_Y_AXIS_LENGTH),
+    CUBE_Z_INDICES = getArrayOfLength(CUBE_Z_AXIS_LENGTH)
 
 module.exports = {
 
@@ -71,9 +82,14 @@ module.exports = {
     STAGE_Y_PERCENTAGE,
     VANISHING_POINT_Y_PERCENTAGE: 50,
     TILE_Y_PERCENTAGES,
+
+    CUBE_X_AXIS_LENGTH,
     CUBE_Y_AXIS_LENGTH,
-    CUBE_X_AXIS_LENGTH: 12,
-    CUBE_Z_AXIS_LENGTH: 16,
+    CUBE_Z_AXIS_LENGTH,
+
+    CUBE_X_INDICES,
+    CUBE_Y_INDICES,
+    CUBE_Z_INDICES,
 
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH: 32,

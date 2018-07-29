@@ -5,41 +5,70 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 
 import Style from '../../Style/Style'
+import DynamicStyling from '../../Style/DynamicStyling'
 
-// import { STYLE_LOGIC_ACCESS_LETTERS } from '../../constants/access'
-// import {
-//     PARENT_ACCESS_PREFIX,
-//     CHILD_ACCESS_PREFIX
-// } from '../../constants/prefixes'
+import {
+    FACES,
+    SLANT_DIRECTIONS
+} from '../constants'
 
 import { getCubeCornerPercentages } from '../sceneHelper'
+import { getParentClassNameForSceneLogic } from '../sceneDataHelper'
+import { getChildClassNameForFaceLogic } from './Face/helpers/faceHelper'
 import { getPolygonPoints } from './Face/helpers/polygonHelper'
 
-import { CUBE_Z_AXIS_LENGTH } from '../../../constants/stage'
+import { CUBE_Z_INDICES } from '../../../constants/stage'
 
 const propTypes = {
     isFloor: PropTypes.bool,
-    slantDirection: PropTypes.string.isRequired,
     xIndex: PropTypes.number.isRequired,
     yIndex: PropTypes.number.isRequired
 },
 
-CubeStyle = () => {
+CubeStyle = ({
+
+    isFloor,
+    xIndex,
+    yIndex
+
+}) => {
 
     return null && (
         <Style
             className={cx(
                 'CubeStyle'
             )}
-            {...{
-                // indices: STYLE_LOGIC_ACCESS_LETTERS,
-                // parentPrefix: PARENT_ACCESS_PREFIX,
-                // childPrefix: CHILD_ACCESS_PREFIX,
-                style: {
-                    transform: 'scale(0.9)'
-                }
-            }}
-        />
+        >
+            {SLANT_DIRECTIONS.map(slantDirection => (
+
+                CUBE_Z_INDICES.map(level => {
+
+                    const cubeCorners = getCubeCornerPercentages({
+                        xIndex,
+                        yIndex,
+                        zIndex,
+                        isFloor,
+                        slantDirection
+                    })
+
+                    return FACES.map(zIndex => {
+
+                        const polygonPoints = getPolygonPoints({
+                            face,
+                            isFloor,
+                            sideDirection,
+                            slantDirection,
+                            cubeCorners
+                        })
+
+                        return (
+                            <DynamicStyling
+                            />
+                        )
+                    })
+                })
+            ))}
+        </Style>
     )
 }
 

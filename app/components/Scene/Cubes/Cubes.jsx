@@ -14,9 +14,11 @@ import {
 import Svg from '../../Svg/Svg'
 import Cube from './Cube'
 
-import { DEFAULT_X_AXIS_INDICES,
-         SLANTED_LEFT_X_AXIS_INDICES,
-         SLANTED_RIGHT_X_AXIS_INDICES } from '../constants'
+import {
+    DEFAULT_X_AXIS_INDICES,
+    SLANTED_LEFT_X_AXIS_INDICES,
+    SLANTED_RIGHT_X_AXIS_INDICES
+} from '../constants'
 
 import { getCubesForKey } from '../sceneDataHelper'
 
@@ -247,13 +249,13 @@ const CubesView = ({
 
 }) => {
 
-    let columnIndicesArray = DEFAULT_X_AXIS_INDICES
+    let xAxisIndices = DEFAULT_X_AXIS_INDICES
 
     if (slantDirection === 'left') {
-        columnIndicesArray = SLANTED_LEFT_X_AXIS_INDICES;
+        xAxisIndices = SLANTED_LEFT_X_AXIS_INDICES;
 
     } else if (slantDirection === 'right') {
-        columnIndicesArray = SLANTED_RIGHT_X_AXIS_INDICES
+        xAxisIndices = SLANTED_RIGHT_X_AXIS_INDICES
     }
 
     return (
@@ -265,7 +267,7 @@ const CubesView = ({
                 'absoluteFullContainer'
             )}
         >
-            {columnIndicesArray.map(xIndex => (
+            {xAxisIndices.map(xIndex => (
                 <Cube
                     key={`${xIndex}_${yIndex}`}
                     {...{

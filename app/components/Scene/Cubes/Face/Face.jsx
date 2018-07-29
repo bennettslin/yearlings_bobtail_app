@@ -14,7 +14,7 @@ import {
 } from './helpers/polygonHelper'
 
 import {
-    getClassNameForFace
+    getChildClassNameForFaceLogic
 } from './helpers/faceHelper'
 
 import {
@@ -132,7 +132,7 @@ class Face extends Component {
             }),
 
             facePathString = getPathString(polygonPoints),
-            faceClassName = getClassNameForFace({
+            faceClassName = getChildClassNameForFaceLogic({
                 face,
                 isFloor,
                 xIndex,

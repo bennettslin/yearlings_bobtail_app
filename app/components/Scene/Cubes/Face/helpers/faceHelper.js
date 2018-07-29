@@ -5,7 +5,7 @@ import {
     FLOOR
 } from '../../../constants'
 
-export const getClassNameForFace = ({
+export const getChildClassNameForFaceLogic = ({
     face,
     isFloor,
     xIndex,

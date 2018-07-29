@@ -96,7 +96,6 @@ class Cube extends Component {
                 <CubeStyle
                     {...{
                         isFloor,
-                        slantDirection,
                         xIndex,
                         yIndex
                     }}

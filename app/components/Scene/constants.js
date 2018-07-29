@@ -1,8 +1,6 @@
-import { getArrayOfLength } from '../../helpers/generalHelper'
-
 import {
-    CUBE_Y_AXIS_LENGTH,
-    CUBE_X_AXIS_LENGTH
+    CUBE_X_AXIS_LENGTH,
+    CUBE_X_INDICES
 } from '../../constants/stage'
 
 const
@@ -13,10 +11,7 @@ const
     CEILING = 'ceiling',
     FLOOR = 'floor',
 
-    Y_INDICES_ARRAY = getArrayOfLength(CUBE_Y_AXIS_LENGTH),
-
-    SLANTED_RIGHT_X_AXIS_INDICES =
-        getArrayOfLength(CUBE_X_AXIS_LENGTH),
+    SLANTED_RIGHT_X_AXIS_INDICES = CUBE_X_INDICES,
 
     SLANTED_LEFT_X_AXIS_INDICES =
         SLANTED_RIGHT_X_AXIS_INDICES.slice().reverse(),
@@ -28,7 +23,7 @@ const
      *
      * If length is 12, should return [0, 11, 1, 10, 2, 9, 3, 8, 4, 7, 5, 6].
      */
-    DEFAULT_X_AXIS_INDICES = SLANTED_RIGHT_X_AXIS_INDICES.map(columnIndex => {
+    DEFAULT_X_AXIS_INDICES = CUBE_X_INDICES.map(columnIndex => {
 
         const ceilValue = Math.ceil(columnIndex / 2)
 
@@ -37,13 +32,26 @@ const
     })
 
 module.exports = {
+    DEFAULT_X_AXIS_INDICES,
+    SLANTED_LEFT_X_AXIS_INDICES,
+    SLANTED_RIGHT_X_AXIS_INDICES,
+
+    SLANT_DIRECTIONS: [
+        '',
+        'left',
+        'right'
+    ],
+
+    CEILING,
+    FLOOR,
+
     TILE,
     SIDE,
     FRONT,
-    CEILING,
-    FLOOR,
-    Y_INDICES_ARRAY,
-    SLANTED_LEFT_X_AXIS_INDICES,
-    SLANTED_RIGHT_X_AXIS_INDICES,
-    DEFAULT_X_AXIS_INDICES
+
+    FACES: [
+        TILE,
+        SIDE,
+        FRONT
+    ]
 }
