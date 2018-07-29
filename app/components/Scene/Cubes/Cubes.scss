@@ -1,9 +1,1 @@
 @import "./Face/Face";
-
-.Cubes {
-    transition: opacity $animationDuration__slow;
-}
-
-.Cubes__currentlyRendering {
-    opacity: 0;
-}

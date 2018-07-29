@@ -7,8 +7,6 @@ import { connect } from 'react-redux'
 
 import Layer from './Layer'
 
-import { DEFAULT_STAGE_KEY } from '../../../assets/scene/cubes/cubesKeys'
-
 import { CUBE_Y_INDICES } from '../../../constants/stage'
 
 const mapStateToProps = ({
@@ -19,24 +17,9 @@ const mapStateToProps = ({
 
 class Layers extends Component {
 
-    static defaultProps = {
-        cubesKey: DEFAULT_STAGE_KEY
-    }
-
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
-
-        // From parent.
-        cubesKey: PropTypes.string.isRequired
-    }
-
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            hasMounted: false
-        }
     }
 
     shouldComponentUpdate(nextProps) {
@@ -55,23 +38,6 @@ class Layers extends Component {
 
     render() {
 
-        const {
-                // eslint-disable-next-line no-unused-vars
-                canSceneRender,
-
-                cubesKey: sceneCubesKey,
-                ...other
-            } = this.props,
-
-            {
-                hasMounted
-            } = this.state,
-
-            // Until the component is mounted, use the default stage cubesKey.
-            cubesKey = hasMounted ?
-                sceneCubesKey :
-                DEFAULT_STAGE_KEY
-
         return (
             <div
                 className={cx(
@@ -82,11 +48,10 @@ class Layers extends Component {
                 {CUBE_Y_INDICES.map(yIndex => {
 
                     return (
-                        <Layer {...other}
+                        <Layer
                             key={yIndex}
                             {...{
-                                yIndex,
-                                cubesKey
+                                yIndex
                             }}
                         />
                     )

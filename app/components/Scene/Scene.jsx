@@ -178,12 +178,7 @@ class Scene extends Component {
 
                 {/* Wood is in front of sky, but behind presences and cubes. */}
                 <Wood />
-
-                <Layers
-                    {...{
-                        cubesKey
-                    }}
-                />
+                <Layers />
             </div>
         )
     }
