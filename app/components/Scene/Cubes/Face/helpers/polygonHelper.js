@@ -2,7 +2,7 @@ import { FRONT,
          SIDE,
          TILE } from '../../../constants'
 
-export const getClosedPathString = (polygonPointsArray) => {
+export const getPathString = (polygonPointsArray) => {
     return polygonPointsArray.map(({ x, y }, index) => {
 
         // First "M"oveTo, then "L"ine.

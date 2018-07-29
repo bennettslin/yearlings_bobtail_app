@@ -4,14 +4,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getClosedPathString } from '../helpers/polygonHelper'
+import { getPathString } from '../helpers/polygonHelper'
 
 const propTypes = {
     uniqueId: PropTypes.string.isRequired,
     fill: PropTypes.string,
     customFill: PropTypes.string,
     polygonPoints: PropTypes.array,
-    polygonPointsString: PropTypes.string
+    pathString: PropTypes.string
 }
 
 const Pixel = ({
@@ -20,7 +20,7 @@ const Pixel = ({
     fill,
     customFill,
     polygonPoints,
-    polygonPointsString
+    pathString
 
 }) => Boolean(fill || customFill) && (
     <path
@@ -29,7 +29,7 @@ const Pixel = ({
             `Pixel__${uniqueId}`
         )}
         fill={fill ? `#${fill}` : customFill}
-        d={polygonPointsString || getClosedPathString(
+        d={pathString || getPathString(
             polygonPoints
         )}
     />

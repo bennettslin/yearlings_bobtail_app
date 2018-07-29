@@ -75,7 +75,7 @@ class PixelsView extends Component {
         zIndex: PropTypes.number.isRequired,
         bitmapKey: PropTypes.string.isRequired,
         polygonPoints: PropTypes.array.isRequired,
-        facePolygonPointsString: PropTypes.string.isRequired,
+        facePathString: PropTypes.string.isRequired,
         relativeZHeight: PropTypes.number,
 
         /**
@@ -106,7 +106,7 @@ class PixelsView extends Component {
             relativeZHeight,
             zIndex,
             isFloor,
-            facePolygonPointsString
+            facePathString
         } = this.props
 
         // Get base colour and pixel map.
@@ -131,7 +131,7 @@ class PixelsView extends Component {
                 <Pixel
                     uniqueId="base"
                     fill={base}
-                    polygonPointsString={facePolygonPointsString}
+                    pathString={facePathString}
                 />
 
                 {bitmapMatrix.map((matrixRow, yIndex) => {

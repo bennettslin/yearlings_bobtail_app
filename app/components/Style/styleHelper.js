@@ -1,26 +1,25 @@
 import keys from 'lodash.keys'
 
-export const getStyleString = ({
+export const getStyleStringForIndex = ({
 
-    indices,
+    index,
     parentPrefix,
     childPrefix,
     style
 
 }) => {
 
-    return indices.map(index => {
-        const
-            selector = `.${parentPrefix}${index} .${childPrefix}${index}`,
-            properties = keys(style),
-            styleStrings = properties.map(property => (
-                `    ${property}: ${style[property]};`
-            ))
+    const selector = `.${parentPrefix}${index} .${childPrefix}${index}`,
 
-        return (
-            `${selector} {\n`
-            + `${styleStrings.join('\n')}\n`
-            + '}'
-        )
-    })
+        properties = keys(style),
+
+        styleStrings = properties.map(property => (
+            `    ${property}: ${style[property]};`
+        ))
+
+    return (
+        `${selector} {\n`
+        + `${styleStrings.join('\n')}\n`
+        + '}'
+    )
 }

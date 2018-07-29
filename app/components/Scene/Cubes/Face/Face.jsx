@@ -5,13 +5,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-// import Style from '../../../Style/Style'
 import Pixels from './Pixel/Pixels'
 import Pixel from './Pixel/Pixel'
 
 import {
     getPolygonPoints,
-    getClosedPathString
+    getPathString
 } from './helpers/polygonHelper'
 
 import {
@@ -132,7 +131,13 @@ class Face extends Component {
                 cubeCorners
             }),
 
-            facePolygonPointsString = getClosedPathString(polygonPoints)
+            facePathString = getPathString(polygonPoints),
+            faceClassName = getClassNameForFace({
+                face,
+                isFloor,
+                xIndex,
+                yIndex
+            })
 
         let faceString = face,
             relativeZHeight
@@ -187,12 +192,13 @@ class Face extends Component {
                 `Face__${faceString}`
             )}>
 
+                {/* TODO: Do I really need both undercoat and shade? */}
                 {/* Faces without pixels are white by default. */}
-                {/* <Pixel
+                <Pixel
                     uniqueId="undercoat"
                     customFill="rgba(255, 255, 255, 0.5)"
-                    polygonPointsString={facePolygonPointsString}
-                /> */}
+                    pathString={facePathString}
+                />
 
                 {/* <Pixels
                     {...{
@@ -204,27 +210,19 @@ class Face extends Component {
                         bitmapKey,
                         polygonPoints,
                         relativeZHeight,
-                        facePolygonPointsString
+                        facePathString
                     }}
                 /> */}
-
-                {/* <Style /> */}
 
                 {/* Single polygon for the overlying shade. */}
                 <path
                     className={cx(
-
-                        getClassNameForFace({
-                            face,
-                            isFloor,
-                            xIndex,
-                            yIndex
-                        }),
+                        faceClassName,
 
                         'Face__shade',
                         `Face__shade__${faceString}`
                     )}
-                    d={facePolygonPointsString}
+                    d={facePathString}
                 />
             </g>
         )

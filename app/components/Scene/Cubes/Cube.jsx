@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import CubeStyle from './CubeStyle'
 import Face from './Face/Face'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
@@ -87,12 +88,20 @@ class Cube extends Component {
         return (
             <g
                 className={cx(
+                    // These classes are used to determine face shading.
                     `Cube__x${getCharStringForNumber(xIndex)}`,
-
-                    // Determines shading of floor tile.
-                    `Cube__z${getCharStringForNumber(parseInt(zIndex))}`
+                    `Cube__z${getCharStringForNumber(zIndex)}`
                 )}
             >
+                <CubeStyle
+                    {...{
+                        isFloor,
+                        slantDirection,
+                        xIndex,
+                        yIndex
+                    }}
+                />
+
                 <Face {...other}
                     {...{
                         face: TILE,
