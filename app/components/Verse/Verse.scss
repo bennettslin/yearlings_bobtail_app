@@ -30,8 +30,8 @@
         &,
         .VerseColour,
         .Verse__noIndexColour {
-            border-top-left-radius: $borderRadius;
-            border-top-right-radius: $borderRadius;
+            border-top-left-radius: $borderRadius__narrow;
+            border-top-right-radius: $borderRadius__narrow;
         }
 
         &,
@@ -46,8 +46,8 @@
         &,
         .VerseColour,
         .Verse__noIndexColour {
-            border-bottom-left-radius: $borderRadius;
-            border-bottom-right-radius: $borderRadius;
+            border-bottom-left-radius: $borderRadius__narrow;
+            border-bottom-right-radius: $borderRadius__narrow;
         }
 
         &,

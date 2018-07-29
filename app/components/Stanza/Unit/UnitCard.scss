@@ -6,7 +6,7 @@
     position: absolute;
     top: -$height__stanzaTypeTab;
     left: 0;
-    border-radius: 7.5px 7.5px 0 0;
+    border-radius: $borderRadius__wide $borderRadius__wide 0 0;
 
     padding: 0 5px;
     text-transform: uppercase;
@@ -20,7 +20,7 @@
     /**
      * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
      */
-    height: $height__stanzaTypeTab - $borderRadius * 3;
+    height: $height__stanzaTypeTab - $borderRadius__narrow * 3;
     top: -$height__stanzaTypeTab;
 }
 
@@ -53,7 +53,7 @@
     position: relative;
 
     padding: $js__margin__thin / 2;
-    border-radius: $borderRadius;
+    border-radius: $borderRadius__narrow;
 
     .Unit__column__main
     & {

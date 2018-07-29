@@ -18,11 +18,13 @@
 }
 
 .DotAnchor__inAnnotation {
+    bottom: -$length__iconSmall * 0.1;
     width: $length__iconSmall;
     height: $length__iconSmall;
 }
 
 .DotAnchor__inStanza {
+    bottom: -$length__iconSmaller * 0.1;
     width: $length__iconSmaller;
     height: $length__iconSmaller;
 }

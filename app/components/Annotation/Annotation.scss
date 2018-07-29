@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
 
+    border-radius: $borderRadius__wide;
+
     transition:
         background-color $animationDuration__default;
 }

@@ -38,7 +38,7 @@
         .GcS {
             box-shadow: $boxShadow__cursorVerse;
 
-            border-radius: $borderRadius $borderRadius 0 0;
+            border-radius: $borderRadius__narrow $borderRadius__narrow 0 0;
             top: -2px;
             left: -0.5px;
             height: calc(100% + 2px);
@@ -54,7 +54,7 @@
         .GcL {
             box-shadow: $boxShadow__cursorVerse;
 
-            border-radius: $borderRadius;
+            border-radius: $borderRadius__narrow;
             top: -$js__margin__thin;
             left: -$js__margin__thin;
             height: calc(100% + #{$js__margin__thin * 2});

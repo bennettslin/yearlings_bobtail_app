@@ -8,7 +8,7 @@ $width__sliderStanzaTab: 10px;
     height: 50%;
 
     bottom: 0;
-    border-top-right-radius: $borderRadius;
+    border-top-right-radius: $borderRadius__narrow;
 
     // Make slider stanzas all the same height when lyric is expanded.
     .RM__twoRowMenu.RM__overlayShown
@@ -29,7 +29,7 @@ $width__sliderStanzaTab: 10px;
     top: -$height__sliderStanzaTab;
     left: 0;
     width: $width__sliderStanzaTab;
-    border-radius: $borderRadius $borderRadius 0 0;
+    border-radius: $borderRadius__narrow $borderRadius__narrow 0 0;
 }
 
 .SliderStanza__tabShadow {
@@ -38,7 +38,7 @@ $width__sliderStanzaTab: 10px;
      */
     height:
         $height__sliderStanzaTab
-        - $borderRadius;
+        - $borderRadius__narrow;
 
     top: -$height__sliderStanzaTab;
 }
@@ -53,14 +53,14 @@ $width__sliderStanzaTab: 10px;
 }
 
 .SliderStanza__sheet {
-    padding: $borderRadius 0 0 $js__marginX__slider;
+    padding: $borderRadius__narrow 0 0 $js__marginX__slider;
 
     box-sizing: border-box;
     display: flex;
 
     .SliderStanza:not(:last-child)
     & {
-        border-top-right-radius: $borderRadius;
+        border-top-right-radius: $borderRadius__narrow;
         padding-right: $js__overlap__marginX__slider;
     }
 }

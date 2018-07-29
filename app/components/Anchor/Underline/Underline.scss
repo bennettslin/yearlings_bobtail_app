@@ -9,11 +9,10 @@
 }
 
 .Underline__isNotWiki {
-    border-radius: $borderRadius;
+    border-radius: $borderRadius__narrow;
 }
 
 .Underline__isDot {
-    bottom: 7.5%;
     height: 25%;
 }
 
@@ -22,14 +21,14 @@
 
     .TextAnchor__singleEntity:first-child
     & {
-        border-top-left-radius: $borderRadius;
-        border-bottom-left-radius: $borderRadius;
+        border-top-left-radius: $borderRadius__narrow;
+        border-bottom-left-radius: $borderRadius__narrow;
     }
 
     .TextAnchor__singleEntity:last-child
     & {
-        border-top-right-radius: $borderRadius;
-        border-bottom-right-radius: $borderRadius;
+        border-top-right-radius: $borderRadius__narrow;
+        border-bottom-right-radius: $borderRadius__narrow;
     }
 
     .TextAnchor__singleEntity:not(:last-child)

@@ -1,5 +1,10 @@
 .AnnotationTitle {
     text-align: center;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 
     background-color: #bdb;
 
@@ -7,6 +12,11 @@
     &.fontSize__title {
         font-size: $fontSize__title__mini;
     }
+
+    padding:
+        0px
+        $js__padding__popupContent__wide
+        $js__margin__thin;
 }
 
 .AnnotationHeaderAnimatable {

@@ -6,6 +6,6 @@
 
     .SliderStanza:not(:last-child)
     & {
-        border-top-right-radius: $borderRadius;
+        border-top-right-radius: $borderRadius__narrow;
     }
 }
