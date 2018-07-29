@@ -29,6 +29,17 @@ module.exports = {
         AFTERWORD
     ],
 
+    // STYLE_LOGIC_DOT_LETTERS: [
+    //     NARRATIVE[0],
+    //     BACKSTORY[0],
+    //     OBSERVATION[0],
+    //     PUN[0],
+    //     REFERENCE[0],
+    //     SONGWRITING[0],
+    //     WORMHOLE[0],
+    //     AFTERWORD[0]
+    // ],
+
     DOT_DESCRIPTIONS: {
         [NARRATIVE]: 'the story',
         [BACKSTORY]: 'backstory description',

@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import Style from '../../../Style/Style'
+
 import Pixels from './Pixel/Pixels'
 import Pixel from './Pixel/Pixel'
 
@@ -14,7 +16,10 @@ import {
 } from './helpers/polygonHelper'
 
 import {
-    getClassNameForFace,
+    getClassNameForFace
+} from './helpers/faceHelper'
+
+import {
     getRelativeZHeight,
     getFrontCubeZIndex,
     getSideCubeZIndex
@@ -179,16 +184,10 @@ class Face extends Component {
             <g className={cx(
                 'Face',
 
-                getClassNameForFace({
-                    face,
-                    isFloor,
-                    xIndex,
-                    yIndex
-                }),
-
                 // This is just used to make it easier to find in the DOM.
                 `Face__${faceString}`
             )}>
+                <Style />
 
                 {/* Faces without pixels are white by default. */}
                 {/* <Pixel
@@ -214,6 +213,14 @@ class Face extends Component {
                 {/* Single polygon for the overlying shade. */}
                 <polygon
                     className={cx(
+
+                        getClassNameForFace({
+                            face,
+                            isFloor,
+                            xIndex,
+                            yIndex
+                        }),
+
                         'Face__shade',
                         `Face__shade__${faceString}`
                     )}
