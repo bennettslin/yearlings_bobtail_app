@@ -2,10 +2,19 @@ import { FRONT,
          SIDE,
          TILE } from '../../../constants'
 
-export const getPolygonPointsString = (polygonPointsArray) => {
-    return polygonPointsArray.map(({ x, y }) => {
-        return `${x.toFixed(2)},${y.toFixed(2)}`
-    }).join(' ')
+export const getClosedPathString = (polygonPointsArray) => {
+    return polygonPointsArray.map(({ x, y }, index) => {
+
+        // First "M"oveTo, then "L"ine.
+        const command = index === 0 ? 'M' : 'L'
+
+        return `${command}${x.toFixed(2)},${y.toFixed(2)}`
+
+    })
+
+    // Use the closePath command. "Z" since it's the last letter, I guess.
+    .concat('Z')
+    .join(' ')
 }
 
 const _getPolygonPoint = ({ x, y }) => {

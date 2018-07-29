@@ -11,7 +11,7 @@ import Pixel from './Pixel/Pixel'
 
 import {
     getPolygonPoints,
-    getPolygonPointsString
+    getClosedPathString
 } from './helpers/polygonHelper'
 
 import {
@@ -132,7 +132,7 @@ class Face extends Component {
                 cubeCorners
             }),
 
-            facePolygonPointsString = getPolygonPointsString(polygonPoints)
+            facePolygonPointsString = getClosedPathString(polygonPoints)
 
         let faceString = face,
             relativeZHeight
@@ -211,7 +211,7 @@ class Face extends Component {
                 {/* <Style /> */}
 
                 {/* Single polygon for the overlying shade. */}
-                <polygon
+                <path
                     className={cx(
 
                         getClassNameForFace({
@@ -224,7 +224,7 @@ class Face extends Component {
                         'Face__shade',
                         `Face__shade__${faceString}`
                     )}
-                    points={facePolygonPointsString}
+                    d={facePolygonPointsString}
                 />
             </g>
         )
