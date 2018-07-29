@@ -1,17 +1,3 @@
-// Box shadow colours.
-$colour__boxShadow: rgba(75, 75, 100, 0.4);
-$colour__boxShadow__dark: rgba(25, 25, 50, 0.4);
-$colour__boxShadow__cursored: rgba(255, 225, 155, 0.4);
-$colour__boxShadow__cursoredBright: rgba(255, 225, 100, 0.8);
-
-// Audio related colours.
-$bgColour__audioPlay: #8ca;
-$bgColour__audioPause: #ac8;
-$bgColour__audioDisabled: lightGray;
-$bgColour__audioSelect: #fdb;
-$bgColour__audioNeutral: #ddf;
-$bgColour__audioHighlight: #ffd;
-
 /********
  * TEXT *
  ********/
@@ -76,14 +62,21 @@ $bgColour__accessedUnderlineHover__light: #aec;
  */
 $bgColour__accessedUnderlineActive: #7d9;
 
-
 $bgColour__beforeSelected: #fffaef;
 $bgColour__afterSelected: #faefff;
 
 // Slider verse colours.
-$bgColour__beforeSlider: #b59905;
-$bgColour__afterSlider: #0599b5;
+$bgColour__beforeSlider: #a87;
+$bgColour__afterSlider: #87a;
 $bgColour__sideSlider: #888;
+
+// Audio related colours.
+$bgColour__audioPlay: #6a8;
+$bgColour__audioPause: #8a6;
+$bgColour__audioDisabled: lightGray;
+$bgColour__audioSelect: #fdb;
+$bgColour__audioNeutral: #ddf;
+$bgColour__audioHighlight: #ffd;
 
 $colour__annotationWormhole__title: #bbb;
 
@@ -106,15 +99,19 @@ $bgColour__annotationCard: rgba(250, 250, 255, 0.9);
 $bgColour__annotationWormhole: #fff4f4;
 
 // Song stanza colours.
-$bgColour__stanzaType__title: brown;
-$bgColour__stanzaType__refrain: tomato;
-$bgColour__stanzaType__verse: orange;
-$bgColour__stanzaType__prechorus: green;
-$bgColour__stanzaType__chorus: blue;
-$bgColour__stanzaType__postchorus: violet;
-$bgColour__stanzaType__bridge: purple;
-$bgColour__stanzaType__coda: tan;
-$bgColour__stanzaType__instrumental: #f4f;
-$bgColour__stanzaType__rhyme: turquoise;
-$bgColour__stanzaType__backing: skyBlue;
-$bgColour__stanzaType__response: cadetBlue;
+$bgColour__stanzaType__title:hsl(0, 0, 40);
+
+$bgColour__stanzaType__verse:hsl(0, 40, 40);
+$bgColour__stanzaType__prechorus:hsl(120, 40, 40);
+$bgColour__stanzaType__chorus:hsl(240, 40, 40);
+$bgColour__stanzaType__postchorus:hsl(60, 40, 40);
+$bgColour__stanzaType__bridge:hsl(180, 40, 40);
+$bgColour__stanzaType__refrain:hsl(300, 40, 40);
+$bgColour__stanzaType__coda:hsl(30, 40, 40);
+$bgColour__stanzaType__instrumental:hsl(150, 40, 40);
+$bgColour__stanzaType__rhyme:hsl(270, 40, 40);
+$bgColour__stanzaType__backing:hsl(90, 40, 40);
+$bgColour__stanzaType__response:hsl(210, 40, 40);
+
+// Just to see what it is.
+$last__hue: hsl(330, 40, 40);

@@ -220,7 +220,7 @@ module.exports = [
 
     {
         taskName: `Establish stanza, dot, and selected, interactivated, accessed, disabled, and before, after, and on cursor colours.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 5
     },
 

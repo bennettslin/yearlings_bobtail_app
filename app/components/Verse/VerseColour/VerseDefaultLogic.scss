@@ -16,6 +16,8 @@
 
         // "Child in lyric."
         &.ChL {
+            z-index: $zIndex__lyricChild__topMost;
+
             @include mixin__textAndLinkColours($light: true, $important: true);
             @include mixin__underlineColours($light: true, $important: true);
         }
