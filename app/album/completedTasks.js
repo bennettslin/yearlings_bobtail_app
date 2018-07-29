@@ -3528,4 +3528,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Use sass loops in logic.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

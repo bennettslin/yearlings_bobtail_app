@@ -14,6 +14,7 @@ import {
 } from './helpers/polygonHelper'
 
 import {
+    getClassNameForFace,
     getRelativeZHeight,
     getFrontCubeZIndex,
     getSideCubeZIndex
@@ -177,6 +178,13 @@ class Face extends Component {
         return (
             <g className={cx(
                 'Face',
+
+                getClassNameForFace({
+                    face,
+                    isFloor,
+                    xIndex,
+                    yIndex
+                }),
 
                 // This is just used to make it easier to find in the DOM.
                 `Face__${faceString}`

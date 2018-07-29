@@ -1,3 +1,4 @@
+import { getCharStringForNumber } from '../../../helpers/formatHelper'
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
 
 import {
@@ -5,6 +6,11 @@ import {
     CUBE_Y_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
 } from '../../../constants/stage'
+
+import {
+    CEILING,
+    FLOOR
+} from '../constants'
 
 const midXIndex = CUBE_X_AXIS_LENGTH / 2
 
@@ -164,4 +170,23 @@ export const getSideCubeZIndex = ({
             zIndices, xIndex + (isLeft ? 1 : -1), yIndex
         )
     }
+}
+
+export const getClassNameForFace = ({
+    face,
+    isFloor,
+    xIndex,
+    yIndex
+}) => {
+
+    // "Child face levelIndex, faceIndex, xIndex, yIndex."
+    return `F${
+        isFloor ? FLOOR[0] : CEILING[0]
+    }${
+        face[0].toUpperCase()
+    }${
+        getCharStringForNumber(xIndex)
+    }${
+        yIndex
+    }`
 }

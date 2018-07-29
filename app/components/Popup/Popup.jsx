@@ -125,11 +125,13 @@ class Popup extends Component {
                 onTransitionEnd={this._handleTransitionEnd}
             >
                 <PopupView {...other}
-                    popupName={popupName}
-                    displaysInOverlay={displaysInOverlay || isFullSize}
-                    handlePreviousClick={handlePreviousClick}
-                    handleNextClick={handleNextClick}
-                    handleContainerClick={this._handlePopupContainerClick}
+                    {...{
+                        popupName,
+                        displaysInOverlay: displaysInOverlay || isFullSize,
+                        handlePreviousClick,
+                        handleNextClick,
+                        handleContainerClick: this._handlePopupContainerClick
+                    }}
                 />
             </div>
         )

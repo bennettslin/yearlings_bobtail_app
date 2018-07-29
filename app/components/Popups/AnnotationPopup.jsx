@@ -168,20 +168,22 @@ class AnnotationPopup extends Component {
              */
             return (
                 <Popup
-                    showArrows
-                    bounceAnimate
-                    hasWidePadding
-                    staticZIndex={!isOverlayingAnnotation}
-                    popupName="Annotation"
                     className={cx(
                         inMain && 'AnnotationPopup__inMain'
                     )}
-                    isVisible={isVisible}
-                    displaysInOverlay={isOverlayingAnnotation}
-                    noAbsoluteFull={inMain}
-                    handleNextClick={handleAnnotationNext}
-                    handlePreviousClick={handleAnnotationPrevious}
-                    handlePopupContainerClick={handlePopupContainerClick}
+                    showArrows
+                    bounceAnimate
+                    hasWidePadding
+                    {...{
+                        popupName: 'Annotation',
+                        isVisible,
+                        noAbsoluteFull: inMain,
+                        displaysInOverlay: isOverlayingAnnotation,
+                        staticZIndex: !isOverlayingAnnotation,
+                        handleNextClick: handleAnnotationNext,
+                        handlePreviousClick: handleAnnotationPrevious,
+                        handlePopupContainerClick
+                    }}
                 >
                     <Annotation {...other}
                         isAccessed

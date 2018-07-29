@@ -87,6 +87,8 @@ class Cube extends Component {
         return (
             <g
                 className={cx(
+                    'Cube',
+
                     `Cube__x${getCharStringForNumber(xIndex)}`,
 
                     // Determines shading of floor tile.

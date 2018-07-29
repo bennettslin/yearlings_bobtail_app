@@ -87,10 +87,12 @@ Text = ({
 
                 return (
                     <Texts {...other}
-                        text={text}
-                        isVerseBeginningSpan={isVerseBeginningSpan}
-                        isVerseEndingSpan={isVerseEndingSpan}
-                        isWormholeAnchorInWormhole={isWormholeAnchorInWormhole}
+                        {...{
+                            text,
+                            isVerseBeginningSpan,
+                            isVerseEndingSpan,
+                            isWormholeAnchorInWormhole
+                        }}
                     />
                 )
 
