@@ -196,8 +196,10 @@ class Face extends Component {
                 {/* Faces without pixels are white by default. */}
                 <Pixel
                     uniqueId="undercoat"
+                    className={cx(
+                        faceClassName
+                    )}
                     customFill="rgba(255, 255, 255, 0.5)"
-                    pathString={facePathString}
                 />
 
                 {/* <Pixels
@@ -222,7 +224,6 @@ class Face extends Component {
                         'Face__shade',
                         `Face__shade__${faceString}`
                     )}
-                    d={facePathString}
                 />
             </g>
         )

@@ -8,14 +8,21 @@ import Style from '../../Style/Style'
 import DynamicStyling from '../../Style/DynamicStyling'
 
 import {
-    FACES,
-    SLANT_DIRECTIONS
+    SLANT_DIRECTIONS,
+    FLOOR,
+    CEILING,
+    FACES
 } from '../constants'
 
 import { getCubeCornerPercentages } from '../sceneHelper'
+import {
+    getPathString,
+    getPolygonPoints
+} from './Face/helpers/polygonHelper'
+import { getSideDirection } from './cubeHelper'
+
 import { getParentClassNameForSceneLogic } from '../sceneDataHelper'
 import { getChildClassNameForFaceLogic } from './Face/helpers/faceHelper'
-import { getPolygonPoints } from './Face/helpers/polygonHelper'
 
 import { CUBE_Z_INDICES } from '../../../constants/stage'
 
@@ -33,41 +40,69 @@ CubeStyle = ({
 
 }) => {
 
-    return null && (
+    return (
         <Style
             className={cx(
                 'CubeStyle'
             )}
         >
-            {SLANT_DIRECTIONS.map(slantDirection => (
+            {SLANT_DIRECTIONS.map(slantDirection => {
 
-                CUBE_Z_INDICES.map(level => {
+                const sideDirection = getSideDirection({
+                    xIndex,
+                    slantDirection
+                })
 
-                    const cubeCorners = getCubeCornerPercentages({
-                        xIndex,
-                        yIndex,
-                        zIndex,
-                        isFloor,
-                        slantDirection
-                    })
+                return CUBE_Z_INDICES.map(zIndex => {
 
-                    return FACES.map(zIndex => {
-
-                        const polygonPoints = getPolygonPoints({
-                            face,
+                    const
+                        cubeCorners = getCubeCornerPercentages({
+                            xIndex,
+                            yIndex,
+                            zIndex,
                             isFloor,
-                            sideDirection,
-                            slantDirection,
-                            cubeCorners
+                            slantDirection
+                        }),
+                        parentPrefix = getParentClassNameForSceneLogic({
+                            level: isFloor ? FLOOR : CEILING,
+                            xIndex,
+                            yIndex,
+                            zIndex
                         })
+
+                    return FACES.map(face => {
+
+                        const
+                            polygonPoints = getPolygonPoints({
+                                face,
+                                isFloor,
+                                sideDirection,
+                                slantDirection,
+                                cubeCorners
+                            }),
+                            childPrefix = getChildClassNameForFaceLogic({
+                                face,
+                                isFloor,
+                                xIndex,
+                                yIndex
+                            }),
+                            pathString = getPathString(polygonPoints)
 
                         return (
                             <DynamicStyling
+                                key={`${slantDirection}${zIndex}${face}`}
+                                {...{
+                                    parentPrefix,
+                                    childPrefix,
+                                    style: {
+                                        d: `path("${pathString}")`
+                                    }
+                                }}
                             />
                         )
                     })
                 })
-            ))}
+            })}
         </Style>
     )
 }

@@ -1,19 +1,16 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import { getStyleStringForIndex } from './styleHelper'
+import { getDynamicStyleStringForIndex } from './styleHelper'
 
 const propTypes = {
-    className: PropTypes.any,
-    indices: PropTypes.array.isRequired,
     parentPrefix: PropTypes.string.isRequired,
     childPrefix: PropTypes.string.isRequired,
     style: PropTypes.object.isRequired
 }
 
-const StaticStyling = ({
+const DynamicStyling = ({
 
-    indices,
     parentPrefix,
     childPrefix,
     style
@@ -21,19 +18,15 @@ const StaticStyling = ({
 }) => (
     <Fragment>
 
-        {indices.map(index => (
-
-            getStyleStringForIndex({
-                index,
-                parentPrefix,
-                childPrefix,
-                style
-            })
-        ))}
+        {getDynamicStyleStringForIndex({
+            parentPrefix,
+            childPrefix,
+            style
+        })}
 
     </Fragment>
 )
 
-StaticStyling.propTypes = propTypes
+DynamicStyling.propTypes = propTypes
 
-export default StaticStyling
+export default DynamicStyling

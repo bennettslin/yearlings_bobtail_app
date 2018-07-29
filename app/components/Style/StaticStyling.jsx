@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import { getStyleStringForIndex } from './styleHelper'
+import { getStaticStyleStringForIndex } from './styleHelper'
 
 const propTypes = {
-    className: PropTypes.any,
     indices: PropTypes.array.isRequired,
     parentPrefix: PropTypes.string.isRequired,
     childPrefix: PropTypes.string.isRequired,
@@ -23,7 +22,7 @@ const StaticStyling = ({
 
         {indices.map(index => (
 
-            getStyleStringForIndex({
+            getStaticStyleStringForIndex({
                 index,
                 parentPrefix,
                 childPrefix,
