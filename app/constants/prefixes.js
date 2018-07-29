@@ -1,8 +1,8 @@
 const
-    ROOT_ACCESS_PREFIX = 'RaL',
+    PARENT_ACCESS_PREFIX = 'PaL',
     CHILD_ACCESS_PREFIX = 'CaL'
 
 module.exports = {
-    ROOT_ACCESS_PREFIX,
+    PARENT_ACCESS_PREFIX,
     CHILD_ACCESS_PREFIX
 }

@@ -5,7 +5,7 @@ import Style from '../Style/Style'
 
 import { STYLE_LOGIC_ACCESS_LETTERS } from '../../constants/access'
 import {
-    ROOT_ACCESS_PREFIX,
+    PARENT_ACCESS_PREFIX,
     CHILD_ACCESS_PREFIX
 } from '../../constants/prefixes'
 
@@ -18,7 +18,7 @@ const AccessField = () => {
             )}
             {...{
                 indices: STYLE_LOGIC_ACCESS_LETTERS,
-                rootPrefix: ROOT_ACCESS_PREFIX,
+                parentPrefix: PARENT_ACCESS_PREFIX,
                 childPrefix: CHILD_ACCESS_PREFIX,
                 style: {
                     transform: 'scale(0.9)'

@@ -33,7 +33,6 @@ AccessLetter = ({
         <div className={cx(
             'AccessLetter',
 
-            // "Child accessed letter."
             animateStandaloneOnKeyDown && `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
             inTextAnchor && 'AccessLetter__inTextAnchor',

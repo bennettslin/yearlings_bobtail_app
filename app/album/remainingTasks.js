@@ -44,7 +44,7 @@ module.exports = [
     // Weekend task.
     {
         taskName: `Cubes rendering through CSS logic!`,
-        workedHours: 0,
+        workedHours: 2,
         neededHours: 20
     },
 

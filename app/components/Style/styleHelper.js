@@ -3,7 +3,7 @@ import keys from 'lodash.keys'
 export const getStyleString = ({
 
     indices,
-    rootPrefix,
+    parentPrefix,
     childPrefix,
     style
 
@@ -11,7 +11,7 @@ export const getStyleString = ({
 
     return indices.map(index => {
         const
-            selector = `.${rootPrefix}${index} .${childPrefix}${index}`,
+            selector = `.${parentPrefix}${index} .${childPrefix}${index}`,
             properties = keys(style),
             styleStrings = properties.map(property => (
                 `    ${property}: ${style[property]};`

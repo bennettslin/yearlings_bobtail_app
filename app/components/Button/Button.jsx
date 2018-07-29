@@ -91,7 +91,6 @@ class Button extends Component {
 
                     isCustomSize && `Button__${buttonName}Size`,
 
-                    // "Child accessed letter."
                     showIfAccessed && `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
                     { 'Button__indexSelected': isIndexSelected,

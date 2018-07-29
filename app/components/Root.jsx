@@ -23,7 +23,7 @@ import {
 } from '../constants/options'
 
 import {
-    ROOT_ACCESS_PREFIX
+    PARENT_ACCESS_PREFIX
 } from '../constants/prefixes'
 
 import { DEVICE_OBJECTS } from '../constants/responsive'
@@ -265,8 +265,7 @@ class Root extends Component {
                 className={cx(
                     'Root',
 
-                    // "Root accessed letter."
-                    keyName && `${ROOT_ACCESS_PREFIX}${keyName}`,
+                    keyName && `${PARENT_ACCESS_PREFIX}${keyName}`,
 
                     `RM__${deviceClassName}`,
                     isDesktop ?

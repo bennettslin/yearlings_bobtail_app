@@ -3533,4 +3533,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Proof of concept for style tag in React.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

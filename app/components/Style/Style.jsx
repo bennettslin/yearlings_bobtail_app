@@ -7,7 +7,7 @@ import { getStyleString } from './styleHelper'
 const propTypes = {
     className: PropTypes.any,
     indices: PropTypes.array.isRequired,
-    rootPrefix: PropTypes.string.isRequired,
+    parentPrefix: PropTypes.string.isRequired,
     childPrefix: PropTypes.string.isRequired,
     style: PropTypes.object.isRequired
 }
@@ -24,14 +24,14 @@ class Style extends Component {
         const {
             className,
             indices,
-            rootPrefix,
+            parentPrefix,
             childPrefix,
             style
         } = this.props,
 
         styleString = getStyleString({
             indices,
-            rootPrefix,
+            parentPrefix,
             childPrefix,
             style
         })
