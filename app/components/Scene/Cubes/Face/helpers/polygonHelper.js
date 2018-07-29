@@ -2,8 +2,8 @@ import { FRONT,
          SIDE,
          TILE } from '../../../constants'
 
-export const getPathString = (polygonPointsArray) => {
-    return polygonPointsArray.map(({ x, y }, index) => {
+export const getPathString = (polygonPoints) => {
+    return polygonPoints.map(({ x, y }, index) => {
 
         // First "M"oveTo, then "L"ine.
         const command = index === 0 ? 'M' : 'L'

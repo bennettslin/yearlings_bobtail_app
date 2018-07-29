@@ -50,6 +50,15 @@ export const getPresencesForCubes = ({
     return scenePresences ? scenePresences[`cubes${yIndex}`] : null
 }
 
+export const getSlantDirectionForCubesKey = ({
+    cubesKey
+}) => {
+    const cubes = getCubesForKey(cubesKey)
+    console.error(cubes)
+
+    return cubes.slantDirection
+}
+
 export const getParentClassNameForSceneLogic = ({
     level,
     xIndex,
@@ -73,8 +82,7 @@ export const getParentClassNameForSceneLogic = ({
     }`
 }
 
-export const getZIndexClassNamesForCubesKey = (cubesKey) => {
-    const cubes = getCubesForKey(cubesKey)
+export const getZIndexClassNamesForCubes = (cubes) => {
 
     // Get ceiling and floor cubes.
     return CUBE_LEVELS_ARRAY.map(level => {
@@ -90,7 +98,6 @@ export const getZIndexClassNamesForCubesKey = (cubesKey) => {
                     xIndex,
                     yIndex
                 )
-
 
                 return getParentClassNameForSceneLogic({
                     level,

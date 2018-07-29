@@ -4,6 +4,9 @@ import {
 } from '../../constants/stage'
 
 const
+    LEFT = 'left',
+    RIGHT = 'right',
+
     TILE = 'tile',
     SIDE = 'side',
     FRONT = 'front',
@@ -36,10 +39,12 @@ module.exports = {
     SLANTED_LEFT_X_AXIS_INDICES,
     SLANTED_RIGHT_X_AXIS_INDICES,
 
+    LEFT,
+    RIGHT,
     SLANT_DIRECTIONS: [
         '',
-        'left',
-        'right'
+        LEFT,
+        RIGHT
     ],
 
     CEILING,
@@ -48,7 +53,6 @@ module.exports = {
     TILE,
     SIDE,
     FRONT,
-
     FACES: [
         TILE,
         SIDE,

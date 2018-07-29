@@ -18,7 +18,15 @@ import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
-import { getZIndexClassNamesForCubesKey } from './sceneDataHelper'
+import {
+    getCubesForKey,
+    getZIndexClassNamesForCubes
+} from './sceneDataHelper'
+
+import {
+    LEFT,
+    RIGHT
+} from './constants'
 
 const mapStateToProps = ({
     canSceneRender,
@@ -146,7 +154,10 @@ class Scene extends Component {
                 season: seasonKey
             } = skyObject,
 
-            cubesClassNames = getZIndexClassNamesForCubesKey(cubesKey)
+            cubes = getCubesForKey(cubesKey),
+
+            { slantDirection } = cubes,
+            cubesClassNames = getZIndexClassNamesForCubes(cubes)
 
         return (
             <div className={cx(
@@ -155,7 +166,9 @@ class Scene extends Component {
                 // More specific class, because Scene is a child of Theatre.
                 { 'sceneIsShown': canSceneRender && isShown },
 
-                cubesClassNames
+                cubesClassNames,
+                slantDirection === LEFT && 'Scene__slantedLeft',
+                slantDirection === RIGHT && 'Scene__slantedRight'
             )}>
                 <SceneSky
                     {...{
