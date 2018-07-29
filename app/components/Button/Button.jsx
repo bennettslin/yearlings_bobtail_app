@@ -9,6 +9,8 @@ import AccessLetter from '../AccessLetter/AccessLetter'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
+import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
+
 class Button extends Component {
 
     static defaultProps = {
@@ -90,7 +92,7 @@ class Button extends Component {
                     isCustomSize && `Button__${buttonName}Size`,
 
                     // "Child accessed letter."
-                    showIfAccessed && `CaL${accessKey}`,
+                    showIfAccessed && `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
                     { 'Button__indexSelected': isIndexSelected,
                       'Button__enabled': !isDisabled,

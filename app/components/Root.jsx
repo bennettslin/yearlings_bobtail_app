@@ -10,14 +10,22 @@ import cx from 'classnames'
 // import debounce from 'debounce'
 
 import KeyHandler from '../handlers/KeyHandler'
+import AccessStyle from './AccessLetter/AccessStyle'
 import Admin from './Admin/Admin'
 import Live from './Live/Live'
 import AdminToggle from './admin/AdminToggle'
 import Players from './Players/Players'
 
-import { SHOWN,
-         OVERVIEW_OPTIONS,
-         TIPS_OPTIONS } from '../constants/options'
+import {
+    SHOWN,
+    OVERVIEW_OPTIONS,
+    TIPS_OPTIONS
+} from '../constants/options'
+
+import {
+    ROOT_ACCESS_PREFIX
+} from '../constants/prefixes'
+
 import { DEVICE_OBJECTS } from '../constants/responsive'
 
 import {
@@ -258,7 +266,7 @@ class Root extends Component {
                     'Root',
 
                     // "Root accessed letter."
-                    keyName && `RaL${keyName}`,
+                    keyName && `${ROOT_ACCESS_PREFIX}${keyName}`,
 
                     `RM__${deviceClassName}`,
                     isDesktop ?
@@ -362,6 +370,8 @@ class Root extends Component {
                 onKeyUp={this.handleKeyUpPress}
                 tabIndex="-1"
             >
+                <AccessStyle />
+
                 <Players {...audioPlayersProps} />
 
                 {/* TODO: Only pass the events used by KeyHandler. */}

@@ -8,6 +8,8 @@ import cx from 'classnames'
 import AccessField from './AccessField'
 import AccessIcon from './AccessIcon'
 
+import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
+
 const accessIconPropTypes = {
     // From parent.
     inTextAnchor: PropTypes.bool,
@@ -32,7 +34,7 @@ AccessLetter = ({
             'AccessLetter',
 
             // "Child accessed letter."
-            animateStandaloneOnKeyDown && `CaL${accessKey}`,
+            animateStandaloneOnKeyDown && `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
             inTextAnchor && 'AccessLetter__inTextAnchor',
             inButtonOrDotAnchor && 'AccessLetter__inButtonOrDotAnchor',

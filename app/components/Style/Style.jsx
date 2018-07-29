@@ -1,25 +1,52 @@
-// import React from 'React'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
+import { getStyleString } from './styleHelper'
 
 const propTypes = {
-    test: PropTypes.bool
-},
+    className: PropTypes.any,
+    indices: PropTypes.array.isRequired,
+    rootPrefix: PropTypes.string.isRequired,
+    childPrefix: PropTypes.string.isRequired,
+    style: PropTypes.object.isRequired
+}
 
-Style = () => {
-    return null
-    // return (
-    //     <style
-    //         {...{
-    //             dangerouslySetInnerHTML: {
-    //                 __html: `
-    //                     .Face {
-    //                         color: green;
-    //                     }
-    //                 `
-    //             }
-    //         }}
-    //     />
-    // )
+class Style extends Component {
+
+    shouldComponentUpdate() {
+        // This behaves like a stylesheet. It should never update!
+        return false
+    }
+
+    render() {
+
+        const {
+            className,
+            indices,
+            rootPrefix,
+            childPrefix,
+            style
+        } = this.props,
+
+        styleString = getStyleString({
+            indices,
+            rootPrefix,
+            childPrefix,
+            style
+        })
+
+        return (
+            <style
+                className={cx(
+                    'Style',
+                    className
+                )}
+            >
+                {styleString}
+            </style>
+        )
+    }
 }
 
 Style.propTypes = propTypes

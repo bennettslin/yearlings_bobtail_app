@@ -3,6 +3,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import Player from './Player'
 import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers/dataHelper'
 import { convertBitNumberToTrueFalseKeys } from '../../helpers/bitHelper'
@@ -105,7 +107,10 @@ class Players extends Component {
             mp3s = getMp3s()
 
         return (
-            <div className="Players">
+            <div className={cx(
+                'Players',
+                'displayNoneContainer'
+            )}>
                 {mp3s.map((mp3, index) => {
                     const songIndex = index + 1,
                         isSelected = songIndex === selectedSongIndex,

@@ -1,9 +1,0 @@
-@each $accessLetter in $accessLettersArray {
-
-    // "Root accessed letter, child accessed letter."
-    .RaL#{$accessLetter} .CaL#{$accessLetter} {
-
-        // TODO: Also highlight colour.
-        transform: scale(0.9);
-    }
-}

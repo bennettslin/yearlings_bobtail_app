@@ -5,8 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Style from '../../../Style/Style'
-
+// import Style from '../../../Style/Style'
 import Pixels from './Pixel/Pixels'
 import Pixel from './Pixel/Pixel'
 
@@ -187,7 +186,6 @@ class Face extends Component {
                 // This is just used to make it easier to find in the DOM.
                 `Face__${faceString}`
             )}>
-                <Style />
 
                 {/* Faces without pixels are white by default. */}
                 {/* <Pixel
@@ -209,6 +207,8 @@ class Face extends Component {
                         facePolygonPointsString
                     }}
                 /> */}
+
+                {/* <Style /> */}
 
                 {/* Single polygon for the overlying shade. */}
                 <polygon
