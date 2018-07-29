@@ -18,13 +18,12 @@ const
     IS_PAUSED_ICON = ({
         className
     }) => (
-        <rect
+        <path
             {...{
                 className,
                 x: 0,
                 y: 0,
-                width: 100,
-                height: 100
+                d: 'M 0,0 L 100,0 L 100,100 0,100 Z'
             }}
         />
     ),
