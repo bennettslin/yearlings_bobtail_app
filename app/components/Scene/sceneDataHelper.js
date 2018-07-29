@@ -8,21 +8,13 @@ import {
 } from '../../helpers/generalHelper'
 
 import {
-    CEILING,
-    FLOOR
+    LEVELS
 } from './constants'
 
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES
 } from '../../constants/stage'
-
-// TODO: Make this a general constant?
-const
-    CUBE_LEVELS_ARRAY = [
-        CEILING,
-        FLOOR
-    ]
 
 export const getCubesForKey = (cubesKey) => {
 
@@ -48,15 +40,6 @@ export const getPresencesForCubes = ({
      * do this safety check.
      */
     return scenePresences ? scenePresences[`cubes${yIndex}`] : null
-}
-
-export const getSlantDirectionForCubesKey = ({
-    cubesKey
-}) => {
-    const cubes = getCubesForKey(cubesKey)
-    console.error(cubes)
-
-    return cubes.slantDirection
 }
 
 export const getParentClassNameForSceneLogic = ({
@@ -85,7 +68,7 @@ export const getParentClassNameForSceneLogic = ({
 export const getZIndexClassNamesForCubes = (cubes) => {
 
     // Get ceiling and floor cubes.
-    return CUBE_LEVELS_ARRAY.map(level => {
+    return LEVELS.map(level => {
 
         const { zIndices } = cubes[level]
 
@@ -108,4 +91,11 @@ export const getZIndexClassNamesForCubes = (cubes) => {
             })
         })
     })
+}
+
+export const getClassNameForSlantDirection = (slantDirection) => {
+
+    return slantDirection ?
+        `Scene__slantDirection__${slantDirection}` :
+        ''
 }

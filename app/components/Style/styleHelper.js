@@ -26,13 +26,18 @@ export const getStaticStyleStringForIndex = ({
 
 export const getDynamicStyleStringForIndex = ({
 
-    parentPrefix,
+    parentPrefixes = [],
     childPrefix,
     style
 
 }) => {
+    const parentPrefixSelector = parentPrefixes.map(parentPrefix => {
+        return parentPrefix ? (
+            `.${parentPrefix}`
+        ) : ''
+    }).join('')
 
-    const selector = `.${parentPrefix} .${childPrefix}`,
+    const selector = `${parentPrefixSelector} .${childPrefix}`,
 
         properties = keys(style),
 

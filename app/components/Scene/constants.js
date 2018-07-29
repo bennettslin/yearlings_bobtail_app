@@ -49,6 +49,10 @@ module.exports = {
 
     CEILING,
     FLOOR,
+    LEVELS: [
+        CEILING,
+        FLOOR
+    ],
 
     TILE,
     SIDE,

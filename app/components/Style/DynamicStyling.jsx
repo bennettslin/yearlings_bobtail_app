@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 import { getDynamicStyleStringForIndex } from './styleHelper'
 
 const propTypes = {
-    parentPrefix: PropTypes.string.isRequired,
+    parentPrefixes: PropTypes.array.isRequired,
     childPrefix: PropTypes.string.isRequired,
     style: PropTypes.object.isRequired
 }
 
 const DynamicStyling = ({
 
-    parentPrefix,
+    parentPrefixes,
     childPrefix,
     style
 
@@ -19,7 +19,7 @@ const DynamicStyling = ({
     <Fragment>
 
         {getDynamicStyleStringForIndex({
-            parentPrefix,
+            parentPrefixes,
             childPrefix,
             style
         })}

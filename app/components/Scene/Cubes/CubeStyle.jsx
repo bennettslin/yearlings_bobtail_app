@@ -21,7 +21,10 @@ import {
 } from './Face/helpers/polygonHelper'
 import { getSideDirection } from './cubeHelper'
 
-import { getParentClassNameForSceneLogic } from '../sceneDataHelper'
+import {
+    getParentClassNameForSceneLogic,
+    getClassNameForSlantDirection
+} from '../sceneDataHelper'
 import { getChildClassNameForFaceLogic } from './Face/helpers/faceHelper'
 
 import { CUBE_Z_INDICES } from '../../../constants/stage'
@@ -48,10 +51,14 @@ CubeStyle = ({
         >
             {SLANT_DIRECTIONS.map(slantDirection => {
 
-                const sideDirection = getSideDirection({
-                    xIndex,
-                    slantDirection
-                })
+                const
+                    sideDirection = getSideDirection({
+                        xIndex,
+                        slantDirection
+                    }),
+                    slantDirectionClassName = getClassNameForSlantDirection(
+                        slantDirection
+                    )
 
                 return CUBE_Z_INDICES.map(zIndex => {
 
@@ -92,7 +99,10 @@ CubeStyle = ({
                             <DynamicStyling
                                 key={`${slantDirection}${zIndex}${face}`}
                                 {...{
-                                    parentPrefix,
+                                    parentPrefixes: [
+                                        slantDirectionClassName,
+                                        parentPrefix
+                                    ],
                                     childPrefix,
                                     style: {
                                         d: `path("${pathString}")`
