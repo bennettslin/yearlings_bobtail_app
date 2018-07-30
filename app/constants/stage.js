@@ -70,7 +70,9 @@ const base = 1.069913193933663,
 
     CUBE_X_INDICES = getArrayOfLength(CUBE_X_AXIS_LENGTH),
     CUBE_Y_INDICES = getArrayOfLength(CUBE_Y_AXIS_LENGTH),
-    CUBE_Z_INDICES = getArrayOfLength(CUBE_Z_AXIS_LENGTH + 1)
+
+    // Bottom and top for each zIndex, plus above base for ceiling.
+    CUBE_Z_INDICES = getArrayOfLength(CUBE_Z_AXIS_LENGTH + 1).concat(20)
 
 module.exports = {
 
