@@ -1,13 +1,12 @@
 // Section to show title and all notes and wormholes for each annotation.
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import AnnotationTitle from './AnnotationTitle'
 import AnnotationCards from './Card/AnnotationCards'
-import AnnotationAccess from './AnnotationAccess'
+import AnnotationHeader from './Header/AnnotationHeader'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
@@ -147,50 +146,32 @@ AnnotationView = ({
     const {
             inCarousel,
             isSelected
-        } = other,
-
-        annotationHeader = (
-        <Fragment>
-            <AnnotationTitle
-                {...{
-                    isAccessed,
-                    isSelected,
-                    annotationDotKeys,
-                    annotationTitle,
-                    handleTitleClick
-                }}
-            />
-            <AnnotationAccess
-                {...{
-                    isSelected,
-                    accessibleAnnotationAnchorsLength
-                }}
-            />
-        </Fragment>
-    )
+        } = other
 
     return (
         <div
             className={cx(
                 'Annotation',
-                { 'Annotation__selectedInCarousel': isSelected && inCarousel }
+
+                'bgColour__annotation',
+
+                isSelected &&
+                    'bgColour__annotation__selected'
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
         >
-
-            {/* In Carousel, annotation title needs to be hideable. */}
-            {inCarousel ? (
-                <div className={cx(
-                    'AnnotationHeaderAnimatable',
-                    'absoluteFullContainer'
-                )}>
-                    {annotationHeader}
-                </div>
-
-            ) : (
-                annotationHeader
-            )}
+            <AnnotationHeader
+                {...{
+                    inCarousel,
+                    isAccessed,
+                    isSelected,
+                    annotationDotKeys,
+                    annotationTitle,
+                    accessibleAnnotationAnchorsLength,
+                    handleTitleClick
+                }}
+            />
 
             <AnnotationCards
                 {...other}

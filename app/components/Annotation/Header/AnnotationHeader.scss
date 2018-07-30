@@ -1,32 +1,15 @@
-.AnnotationTitle {
-    text-align: center;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
+@import "./AnnotationTitle";
 
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-
-    background-color: #bdb;
-
-    // Unlike lyric title, annotation title maxes out at mini font size.
-    &.fontSize__title {
-        font-size: $fontSize__title__mini;
-    }
-
-    padding:
-        0px
-        $js__padding__popupContent__wide
-        $js__margin__thin;
-}
-
-.AnnotationHeaderAnimatable {
+.AnnotationHeader {
     // For access icons.
     position: absolute;
     left: 0;
     width: 100%;
+
     top:
         $js__padding__popupContent__wide
         - $height__annotationTitle;
+
     height: $height__annotationTitle;
 
     /**
@@ -36,12 +19,14 @@
     display: flex;
     justify-content: center;
 
-    opacity: 0;
-
     .parentIsShown
     & {
         transition:
             height $animationDuration__default,
             opacity $animationDuration__default;
     }
+}
+
+.AnnotationHeaderAnimatable {
+    opacity: 0;
 }

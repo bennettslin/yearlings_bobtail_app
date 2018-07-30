@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotAnchor from '../Anchor/DotAnchor/DotAnchor'
-import TextAnchor from '../Anchor/TextAnchor/TextAnchor'
+import DotAnchor from '../../Anchor/DotAnchor/DotAnchor'
+import TextAnchor from '../../Anchor/TextAnchor/TextAnchor'
 
-import { IS_DOT_CARD } from '../../constants/lyrics'
+import { IS_DOT_CARD } from '../../../constants/lyrics'
 
 const annotationTitlePropTypes = {
     // From parent.
@@ -28,6 +28,12 @@ AnnotationTitle = ({
 }) => (
     <div className={cx(
         'AnnotationTitle',
+
+        'bgColour__annotation',
+
+        isSelected &&
+            'bgColour__annotation__selected',
+
         'fontSize__title',
         'flexCentreContainer'
     )}>

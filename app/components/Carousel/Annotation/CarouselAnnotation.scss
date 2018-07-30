@@ -27,14 +27,3 @@
         opacity $animationDuration__default;
     }
 }
-
-.Annotation {
-
-    .CarouselAnnotation
-    & {
-        padding: $js__padding__popupContent__wide;
-
-        // TODO: Change this.
-        background-color: #bdb;
-    }
-}

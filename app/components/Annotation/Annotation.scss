@@ -2,22 +2,27 @@
 @import "./Card/AnnotationCard";
 @import "./Wormhole/AnnotationWormhole";
 
-@import "./AnnotationTitle";
+@import "./Header/AnnotationHeader";
 
 .Annotation {
     position: relative;
-
+    
     display: flex;
     flex-direction: column;
-
+    
+    padding: $js__padding__popupContent__wide;
     border-radius: $borderRadius__wide;
-
+    
     transition:
-        background-color $animationDuration__default;
+    background-color $animationDuration__default;
 }
 
-.Annotation__selectedInCarousel {
-    background-color: rgba(250, 250, 225, 0.5);
+.bgColour__annotation {
+    background-color: #bdb;
+}
+
+.bgColour__annotation__selected {
+    background-color: #ffd;
 }
 
 // TODO:

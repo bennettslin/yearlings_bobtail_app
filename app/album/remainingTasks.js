@@ -1,4 +1,17 @@
 module.exports = [
+
+    {
+        taskName: `Selecting carousel annotation is buggy in heightless lyric.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Clicking annotation field closes popup.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     {
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa.`,
         workedHours: 0,
@@ -213,8 +226,8 @@ module.exports = [
      * Final UI.
      */
     {
-        taskName: `Finalise UI of carousel annotations. Make the navigation pictures a similar style.`,
-        workedHours: 5,
+        taskName: `Finalise UI of carousel annotations. Make the navigation panels a similar style, whatever that means?`,
+        workedHours: 6,
         neededHours: 8
     },
 
