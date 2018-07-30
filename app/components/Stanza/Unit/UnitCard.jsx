@@ -32,10 +32,33 @@ class UnitCard extends Component {
 
         stanzaArray: PropTypes.array,
         inMain: PropTypes.bool.isRequired,
-        isSubCard: PropTypes.bool.isRequired
+        isSubCard: PropTypes.bool.isRequired,
+
+        handleLyricVerseSelect: PropTypes.func.isRequired
+    }
+
+    constructor(props) {
+        super(props)
+
+        this.handleStanzaTabClick = this.handleStanzaTabClick.bind(this)
     }
 
     // No shouldComponentUpdate necessary.
+
+    handleStanzaTabClick(e) {
+        const {
+                handleLyricVerseSelect,
+                stanzaArray
+            } = this.props,
+
+            { verseIndex } = stanzaArray[0]
+
+        handleLyricVerseSelect(
+            e,
+            verseIndex,
+            true
+        )
+    }
 
     render() {
 
@@ -81,10 +104,13 @@ class UnitCard extends Component {
 
             return (
                 <UnitCardView {...other}
-                    stanzaArray={stanzaArray}
-                    isSubCard={isSubCard}
-                    stanzaTypeIndex={shownStanzaIndex}
-                    stanzaType={stanzaTypeLabel}
+                    {...{
+                        stanzaArray,
+                        isSubCard,
+                        stanzaTypeIndex: shownStanzaIndex,
+                        stanzaType: stanzaTypeLabel,
+                        handleStanzaTabClick: this.handleStanzaTabClick
+                    }}
                 />
             )
         } else {
@@ -105,7 +131,9 @@ const propTypes = {
         PropTypes.number
     ]),
     stanzaArray: PropTypes.array.isRequired,
-    stanzaType: PropTypes.string.isRequired
+    stanzaType: PropTypes.string.isRequired,
+
+    handleStanzaTabClick: PropTypes.func.isRequired
 },
 
 UnitCardView = ({
@@ -114,12 +142,15 @@ UnitCardView = ({
     stanzaArray,
     stanzaTypeIndex,
     stanzaType,
+    handleStanzaTabClick,
 
 ...other }) => {
 
     const isTabbed = Boolean(stanzaTypeIndex),
 
-        tabText = `${stanzaType}${
+        tabText = `${
+            stanzaType
+        }${
             stanzaTypeIndex > 0 ? ` ${stanzaTypeIndex}` : ''
         }`
 
@@ -138,11 +169,13 @@ UnitCardView = ({
 
             {/* This is the tab's box shadow. */}
             {isTabbed && (
-                <div className={cx(
-                    'UnitCard__tab',
-                    'UnitCard__tabShadow',
-                    'boxShadow__unitCard'
-                )}>
+                <div
+                    className={cx(
+                        'UnitCard__tab',
+                        'UnitCard__tabShadow',
+                        'boxShadow__unitCard'
+                    )}
+                >
                     {tabText}
                 </div>
             )}
@@ -180,12 +213,15 @@ UnitCardView = ({
 
             {/* This tab covers the sheet's box shadow. */}
             {isTabbed && (
-                <div className={cx(
-                    'UnitCard__tab',
-                    'UnitCard__tabTop',
-                    'bgColour__unit__pattern',
-                    `bgColour__stanzaType__${stanzaType}`
-                )}>
+                <div
+                    className={cx(
+                        'UnitCard__tab',
+                        'UnitCard__tabTop',
+                        'bgColour__unit__pattern',
+                        `bgColour__stanzaType__${stanzaType}`
+                    )}
+                    onClick={handleStanzaTabClick}
+                >
                     {tabText}
                 </div>
             )}

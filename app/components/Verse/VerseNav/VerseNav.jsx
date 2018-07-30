@@ -25,7 +25,7 @@ class VerseNav extends Component {
     constructor(props) {
         super(props)
 
-        this._handleAudioButtonClick = this._handleAudioButtonClick.bind(this)
+        this._handleButtonClick = this._handleButtonClick.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -35,7 +35,7 @@ class VerseNav extends Component {
         })
     }
 
-    _handleAudioButtonClick(e) {
+    _handleButtonClick(e) {
         const {
             verseIndex,
             handleLyricVerseSelect
@@ -70,7 +70,7 @@ class VerseNav extends Component {
                     showAccessIconIfAccessOn={isEnabled}
                     isDisabled={!isEnabled}
                     buttonIdentifier={false}
-                    handleButtonClick={this._handleAudioButtonClick}
+                    handleButtonClick={this._handleButtonClick}
                 />
             </div>
         )

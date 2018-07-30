@@ -61,18 +61,6 @@ module.exports = [
     },
 
     {
-        taskName: `Revisit Willy, Odin, and Constellations overlap cards.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Can skip to stanza by clicking stanza tab?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active? Nope...`,
         workedHours: 0,
         neededHours: 1

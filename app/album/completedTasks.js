@@ -3538,4 +3538,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Can skip to stanza by clicking stanza tab?`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

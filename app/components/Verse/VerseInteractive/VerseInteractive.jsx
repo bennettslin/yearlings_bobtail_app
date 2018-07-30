@@ -32,7 +32,6 @@ class VerseInteractive extends Component {
         inSlider: PropTypes.bool,
         inUnit: PropTypes.bool,
 
-        // For verse audio buttons.
         handleLyricVerseSelect: PropTypes.func
     }
 

@@ -27,7 +27,19 @@
 .UnitCard__tabTop {
     // Ensure that tab covers sheet.
     height: $height__stanzaTypeTab + 1px;
-    color: rgba(255, 255, 255, 0.9);
+    color: $colour__text__light;
+
+    cursor: pointer;
+
+    transition: color $animationDuration__default;
+
+    &:hover {
+        color: $colour__link__light;
+    }
+
+    &:active {
+        color: $colour__linkHover__light;
+    }
 }
 
 .boxShadow__unitCard {

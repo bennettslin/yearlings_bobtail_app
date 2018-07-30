@@ -475,13 +475,21 @@ class EventHandler extends Component {
      * LYRICS *
      **********/
 
-    handleLyricVerseSelect(e, selectedVerseIndex) {
+    handleLyricVerseSelect(
+        e,
+        selectedVerseIndex,
+        fromStanzaTab
+    ) {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
-        // The UI should prevent this, but just in case.
-        if (selectedVerseIndex !== this.props.interactivatedVerseIndex) {
+        if (
+            !fromStanzaTab &&
+
+            // The UI should prevent this, but just in case.
+            selectedVerseIndex !== this.props.interactivatedVerseIndex
+        ) {
             return false
         }
 
