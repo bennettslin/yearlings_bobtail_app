@@ -1,137 +1,137 @@
-/* eslint-disable */
-
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Pixels from './Pixel/Pixels'
+// import Pixels from './Pixel/Pixels'
 import Pixel from './Pixel/Pixel'
 
-import {
-    getPolygonPoints,
-    getPathString
-} from './helpers/polygonHelper'
+// import {
+//     getPolygonPoints,
+//     getPathString
+// } from './helpers/polygonHelper'
 
 import {
     getChildClassNameForFaceLogic
 } from './helpers/faceHelper'
 
-import {
-    getRelativeZHeight,
-    getFrontCubeZIndex,
-    getSideCubeZIndex
-} from '../cubeHelper'
+// import {
+//     getRelativeZHeight,
+//     getFrontCubeZIndex,
+//     getSideCubeZIndex
+// } from '../cubeHelper'
 
 import {
-    FRONT,
-    SIDE,
+    // FRONT,
+    // SIDE,
     TILE
 } from '../../constants'
 
-const
-    pointPropType =
-        PropTypes.shape({
-            x: PropTypes.number.isRequired,
-            y: PropTypes.number.isRequired
-        }).isRequired,
+// const
+//     pointPropType =
+//         PropTypes.shape({
+//             x: PropTypes.number.isRequired,
+//             y: PropTypes.number.isRequired
+//         }).isRequired,
 
-    edgePropType =
-        PropTypes.shape({
-            front: pointPropType,
-            back: pointPropType
-        }).isRequired,
+//     edgePropType =
+//         PropTypes.shape({
+//             front: pointPropType,
+//             back: pointPropType
+//         }).isRequired,
 
-    facePropType =
-        PropTypes.shape({
-            left: edgePropType,
-            right: edgePropType
-        }).isRequired
+//     facePropType =
+//         PropTypes.shape({
+//             left: edgePropType,
+//             right: edgePropType
+//         }).isRequired
 
-const mapStateToProps = ({
-    canSceneRender,
-    canTheatreRender
-}) => ({
-    canSceneRender,
-    canTheatreRender
-})
+// const mapStateToProps = ({
+//     canSceneRender,
+//     canTheatreRender
+// }) => ({
+//     canSceneRender,
+//     canTheatreRender
+// })
+const mapStateToProps = () => ({})
 
 class Face extends Component {
 
     static propTypes = {
         // Through Redux.
-        canSceneRender: PropTypes.bool.isRequired,
-        canTheatreRender: PropTypes.bool.isRequired,
+        // canSceneRender: PropTypes.bool.isRequired,
+        // canTheatreRender: PropTypes.bool.isRequired,
 
         // From parent.
         face: PropTypes.string.isRequired,
-        bitmapKey: PropTypes.string.isRequired,
+        // bitmapKey: PropTypes.string.isRequired,
 
         isFloor: PropTypes.bool,
-        slantDirection: PropTypes.string,
-        sideDirection: PropTypes.string,
+        // slantDirection: PropTypes.string,
+        // sideDirection: PropTypes.string,
 
-        canUpdateRenderableYIndex: PropTypes.bool,
+        // canUpdateRenderableYIndex: PropTypes.bool,
         yIndex: PropTypes.number.isRequired,
-        zIndex: PropTypes.number.isRequired,
+        // zIndex: PropTypes.number.isRequired,
 
-        cubeCorners: PropTypes.shape({
-            tile: facePropType,
-            base: facePropType
-        }).isRequired,
+        // cubeCorners: PropTypes.shape({
+        //     tile: facePropType,
+        //     base: facePropType
+        // }).isRequired,
 
         // These are only needed by front and side.
         xIndex: PropTypes.number,
-        zIndices: PropTypes.array
+        // zIndices: PropTypes.array
     }
 
-    constructor(props) {
-        super(props)
+    // constructor(props) {
+    //     super(props)
 
-        this.state = {
-            hasMounted: false
-        }
-    }
+    //     this.state = {
+    //         hasMounted: false
+    //     }
+    // }
 
-    shouldComponentUpdate(nextProps) {
-        return this.state.hasMounted ?
-            nextProps.canSceneRender :
-            nextProps.canTheatreRender
-    }
+    // shouldComponentUpdate(nextProps) {
+    //     return this.state.hasMounted ?
+    //         nextProps.canSceneRender :
+    //         nextProps.canTheatreRender
+    // }
 
-    componentDidUpdate(prevProps) {
+    // componentDidUpdate(prevProps) {
 
-        if (!this.state.hasMounted) {
-            if (this.props.canSceneRender && !prevProps.canSceneRender) {
-                // Allow to subsequently render with Scene, not Theatre.
-                this.setState({
-                    hasMounted: true
-                })
-            }
-        }
-    }
+    //     if (!this.state.hasMounted) {
+    //         if (this.props.canSceneRender && !prevProps.canSceneRender) {
+    //             // Allow to subsequently render with Scene, not Theatre.
+    //             this.setState({
+    //                 hasMounted: true
+    //             })
+    //         }
+    //     }
+    // }
 
     render() {
         const {
                 face,
                 isFloor,
-                slantDirection,
-                sideDirection,
+                // slantDirection,
+                // sideDirection,
                 xIndex,
                 yIndex,
-                zIndex,
-                cubeCorners,
-                bitmapKey
+                // zIndex,
+                // cubeCorners,
+                // bitmapKey
             } = this.props,
-            polygonPoints = getPolygonPoints({
-                face,
-                isFloor,
-                sideDirection,
-                slantDirection,
-                cubeCorners
-            }),
+            // polygonPoints = getPolygonPoints({
+            //     face,
+            //     isFloor,
+            //     sideDirection,
+            //     slantDirection,
+            //     cubeCorners
+            // }),
 
-            facePathString = getPathString(polygonPoints),
+            // facePathString = getPathString(polygonPoints),
+
             faceClassName = getChildClassNameForFaceLogic({
                 face,
                 isFloor,
@@ -139,49 +139,49 @@ class Face extends Component {
                 yIndex
             })
 
-        let faceString = face,
-            relativeZHeight
+        let faceString = face
+            // relativeZHeight
 
         if (face === TILE) {
             faceString = isFloor ? 'floorTile' : 'ceilingTile'
 
-        } else if (face === FRONT || face === SIDE) {
-            const {
-                zIndices
-            } = this.props
+        // } else if (face === FRONT || face === SIDE) {
+        //     const {
+        //         zIndices
+        //     } = this.props
 
-            if (face === FRONT) {
-                const subtractedZIndex = getFrontCubeZIndex({
-                    isFloor,
-                    zIndices,
-                    slantDirection,
-                    xIndex,
-                    yIndex
-                })
+        //     if (face === FRONT) {
+        //         const subtractedZIndex = getFrontCubeZIndex({
+        //             isFloor,
+        //             zIndices,
+        //             slantDirection,
+        //             xIndex,
+        //             yIndex
+        //         })
 
-                relativeZHeight = getRelativeZHeight({
-                    isFloor,
-                    zIndex,
-                    subtractedZIndex,
-                    doLog: isFloor && xIndex === 0 && yIndex === 1
-                })
+        //         relativeZHeight = getRelativeZHeight({
+        //             isFloor,
+        //             zIndex,
+        //             subtractedZIndex,
+        //             doLog: isFloor && xIndex === 0 && yIndex === 1
+        //         })
 
-            } else if (face === SIDE) {
-                const subtractedZIndex = getSideCubeZIndex({
-                    isFloor,
-                    zIndices,
-                    slantDirection,
-                    xIndex,
-                    yIndex
-                })
+        //     } else if (face === SIDE) {
+        //         const subtractedZIndex = getSideCubeZIndex({
+        //             isFloor,
+        //             zIndices,
+        //             slantDirection,
+        //             xIndex,
+        //             yIndex
+        //         })
 
-                relativeZHeight = getRelativeZHeight({
-                    isFloor,
-                    zIndex,
-                    subtractedZIndex,
-                    doLog: isFloor && xIndex === 0 && yIndex === 1
-                })
-            }
+        //         relativeZHeight = getRelativeZHeight({
+        //             isFloor,
+        //             zIndex,
+        //             subtractedZIndex,
+        //             doLog: isFloor && xIndex === 0 && yIndex === 1
+        //         })
+        //     }
         }
 
         return (

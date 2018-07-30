@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import Cubes from '../Cubes/Cubes'
-import Presences from '../Presences/Presences'
+// import Presences from '../Presences/Presences'
 
 class Layer extends Component {
 
@@ -13,26 +13,16 @@ class Layer extends Component {
     }
 
     render() {
-        const { yIndex } = this.props
+        const { props } = this
 
         return (
             <Fragment>
-                <Cubes
-                    {...{
-                        yIndex
-                    }}
-                />
-                <Cubes
+                <Cubes {...props} />
+                <Cubes {...props}
                     isFloor
-                    {...{
-                        yIndex
-                    }}
                 />
-                <Presences
-                    {...{
-                        yIndex
-                    }}
-                />
+
+                {/* <Presences {...props} /> */}
             </Fragment>
         )
     }

@@ -8,18 +8,9 @@ import CubeStyle from './CubeStyle'
 import Face from './Face/Face'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
-import { getCubeCornerPercentages } from '../sceneHelper'
-import { getCubesForKey } from '../sceneDataHelper'
-import { getSideDirection } from './cubeHelper'
-import {
-    getPropsAreShallowEqual,
-    getValueInAbridgedMatrix
-} from '../../../helpers/generalHelper'
 
 import {
-    FRONT,
-    SIDE,
-    TILE
+    FACES
 } from '../constants'
 
 class Cube extends Component {
@@ -29,105 +20,41 @@ class Cube extends Component {
         // From parent.
         isFloor: PropTypes.bool,
         xIndex: PropTypes.number.isRequired,
-        yIndex: PropTypes.number.isRequired,
-        cubesKey: PropTypes.string.isRequired,
-        slantDirection: PropTypes.string.isRequired
+        yIndex: PropTypes.number.isRequired
     }
 
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
+    shouldComponentUpdate() {
+        return false
     }
 
     render() {
         const {
-                cubesKey,
-                ...other
-            } = this.props,
+                props
+            } = this,
 
             {
-                isFloor,
-                xIndex,
-                yIndex,
-                slantDirection
-            } = other,
-
-            {
-                ceiling,
-                floor
-            } = getCubesForKey(cubesKey),
-
-            {
-                zIndices,
-                bitmapKeys
-            } = isFloor ? floor : ceiling,
-
-            zIndex = getValueInAbridgedMatrix(
-                zIndices, xIndex, yIndex
-            ),
-
-            sideDirection = getSideDirection({
-                xIndex,
-                slantDirection
-            }),
-
-            cubeCorners = getCubeCornerPercentages({
-                xIndex,
-                yIndex,
-                zIndex,
-                isFloor,
-                slantDirection
-            }),
-
-            bitmapKey = getValueInAbridgedMatrix(
-                bitmapKeys, xIndex, yIndex
-            )
+                xIndex
+            } = props
 
         return (
             <g
                 className={cx(
                     // These classes are used to determine face shading.
-                    `Cube__x${getCharStringForNumber(xIndex)}`,
-                    `Cube__z${getCharStringForNumber(zIndex)}`
+                    `Cube__x${getCharStringForNumber(xIndex)}`
+                    // `Cube__z${getCharStringForNumber(zIndex)}`
                 )}
             >
-                <CubeStyle
-                    {...{
-                        isFloor,
-                        xIndex,
-                        yIndex
-                    }}
+                <CubeStyle {...props}
                 />
 
-                <Face {...other}
-                    {...{
-                        face: TILE,
-                        bitmapKey,
-                        cubeCorners,
-                        zIndex
-                    }}
-                />
-                <Face {...other}
-                    {...{
-                        face: SIDE,
-                        bitmapKey,
-                        cubeCorners,
-                        sideDirection,
-                        zIndex,
-                        zIndices
-                    }}
-                />
-                <Face {...other}
-                    {...{
-                        face: FRONT,
-                        bitmapKey,
-                        cubeCorners,
-                        zIndex,
-                        zIndices
-                    }}
-                />
+                {FACES.map(face => (
+                    <Face {...props}
+                        key={face}
+                        {...{
+                            face
+                        }}
+                    />
+                ))}
             </g>
         )
     }
