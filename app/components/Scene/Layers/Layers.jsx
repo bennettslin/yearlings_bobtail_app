@@ -9,10 +9,6 @@ import { CUBE_Y_INDICES } from '../../../constants/stage'
 
 class Layers extends Component {
 
-    shouldComponentUpdate() {
-        return false
-    }
-
     render() {
 
         return (
@@ -22,17 +18,14 @@ class Layers extends Component {
                     'absoluteFullContainer'
                 )}
             >
-                {CUBE_Y_INDICES.map(yIndex => {
-
-                    return (
-                        <Layer
-                            key={yIndex}
-                            {...{
-                                yIndex
-                            }}
-                        />
-                    )
-                })}
+                {CUBE_Y_INDICES.map(yIndex => (
+                    <Layer
+                        key={yIndex}
+                        {...{
+                            yIndex
+                        }}
+                    />
+                ))}
             </div>
         )
     }

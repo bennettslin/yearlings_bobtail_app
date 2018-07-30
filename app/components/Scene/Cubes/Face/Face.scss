@@ -17,15 +17,10 @@ path {
 /**
  * In order from brightest to darkest.
  */
-
 .Face__shade__floorTile {
 
-    .Cube__z9
-    &,
-    .Cube__z8
-    & {
-        fill: rgba(25, 25, 25, 0.0);
-    }
+    // Default.
+    fill: transparent;
 
     .Cube__z7
     &,

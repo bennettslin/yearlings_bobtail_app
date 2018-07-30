@@ -35,6 +35,43 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired
 },
 
+/**
+ * In order from brightest to darkest.
+ */
+// .Face__shade__floorTile {
+
+//     // Default.
+//     fill: transparent;
+
+//     .Cube__z7
+//     &,
+//     .Cube__z6
+//     & {
+//         fill: rgba(25, 25, 25, 0.025);
+//     }
+
+//     .Cube__z5
+//     &,
+//     .Cube__z4
+//     & {
+//         fill: rgba(25, 25, 25, 0.05);
+//     }
+
+//     .Cube__z3
+//     &,
+//     .Cube__z2
+//     & {
+//         fill: rgba(25, 25, 25, 0.075);
+//     }
+
+//     .Cube__z1
+//     &,
+//     .Cube__z0
+//     & {
+//         fill: rgba(25, 25, 25, 0.1);
+//     }
+// }
+
 CubeStyle = ({
 
     isFloor,
