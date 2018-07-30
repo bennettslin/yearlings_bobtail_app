@@ -21,18 +21,15 @@ const mapStateToProps = ({
 
 class SceneSky extends Component {
 
-    static defaultProps = {
-        timeKey: TIME_ANYTIME,
-        seasonKey: SEASON_INDOOR
-    }
-
     static propTypes = {
         // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
 
         // From parent.
-        timeKey: PropTypes.string.isRequired,
-        seasonKey: PropTypes.string.isRequired
+        skyConfig: PropTypes.shape({
+            timeKey: PropTypes.string,
+            seasonKey: PropTypes.string
+        }).isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -47,9 +44,13 @@ class SceneSky extends Component {
 
     render() {
         const {
-                timeKey,
-                seasonKey
-            } = this.props
+                skyConfig
+            } = this.props,
+
+            {
+                time = TIME_ANYTIME,
+                season = SEASON_INDOOR
+            } = skyConfig
 
         return (
             <div className={cx(
@@ -59,7 +60,7 @@ class SceneSky extends Component {
                 <div
                     className={cx(
                         'Season',
-                        `Season__${seasonKey}`,
+                        `Season__${season}`,
                         'Sky__filter',
                         'absoluteFullContainer'
                     )}
@@ -67,7 +68,7 @@ class SceneSky extends Component {
                 <div
                     className={cx(
                         'TimeOfDay',
-                        `TimeOfDay__${timeKey}`,
+                        `TimeOfDay__${time}`,
                         'Sky__filter',
                         'absoluteFullContainer'
                     )}

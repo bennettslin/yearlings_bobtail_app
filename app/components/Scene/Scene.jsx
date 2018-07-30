@@ -46,18 +46,14 @@ class Scene extends Component {
             } = this.props,
 
             sceneObject = getSceneObject(
-                renderableSongIndex, renderableSceneIndex
+                renderableSongIndex,
+                renderableSceneIndex
             ),
 
             {
-                sky: skyObject,
+                sky: skyConfig,
                 cubes: cubesKey
             } = sceneObject,
-
-            {
-                time: timeKey,
-                season: seasonKey
-            } = skyObject,
 
             cubes = getCubesForKey(cubesKey),
             zIndexClassNames = getZIndexClassNamesForCubes(cubes),
@@ -77,8 +73,7 @@ class Scene extends Component {
             )}>
                 <SceneSky
                     {...{
-                        timeKey,
-                        seasonKey
+                        skyConfig
                     }}
                 />
 
