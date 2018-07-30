@@ -17,6 +17,24 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `XAxisIndices order can be determined without knowledge of slantDirection in state.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Floor tile zIndex shading in cubeStyle.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Above ceiling zIndex is missing in zIndices.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Buttons and dots.
     {
         taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs. Accessing dot.`,
@@ -44,7 +62,7 @@ module.exports = [
     // Weekend task.
     {
         taskName: `Cubes rendering through CSS logic!`,
-        workedHours: 2,
+        workedHours: 10,
         neededHours: 20
     },
 
