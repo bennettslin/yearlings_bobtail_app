@@ -180,11 +180,15 @@ export const getIsHeightlessLyricColumn = ({
 
 export const getIsOverlayingAnnotation = ({
     deviceIndex,
-    isLyricExpanded,
-    isHeightlessLyricColumn
+    isLyricExpanded
 }) => {
-    return !getIsDesktop(deviceIndex) &&
-        (isHeightlessLyricColumn || isLyricExpanded || getIsPhone(deviceIndex))
+    return (
+        // Annotation is always in overlay if lyric is expanded...
+        isLyricExpanded ||
+
+        // Or if we are in phone.
+        getIsPhone(deviceIndex)
+    )
 }
 
 const _getIsScoresTipsInMainForDeviceObject = (windowWidth, deviceObject) => {

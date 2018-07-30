@@ -3548,4 +3548,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Selecting carousel annotation is buggy in overlay. Simplified logic.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

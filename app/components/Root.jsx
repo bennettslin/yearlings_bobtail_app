@@ -222,8 +222,7 @@ class Root extends Component {
             showOverlay = getShowOverlay({
                 deviceIndex,
                 isLyricExpanded,
-                isHeightlessLyricColumn,
-                selectedAnnotationIndex: renderableAnnotationIndex,
+                renderableAnnotationIndex,
                 selectedScoreIndex,
                 selectedTitleIndex,
                 selectedWikiIndex

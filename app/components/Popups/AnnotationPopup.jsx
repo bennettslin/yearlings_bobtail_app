@@ -7,14 +7,14 @@ import cx from 'classnames'
 
 import Annotation from '../Annotation/Annotation'
 import Popup from '../Popup/Popup'
-import { getIsOverlayingAnnotation,
-         getIsPhone } from '../../helpers/responsiveHelper'
+import {
+    getIsOverlayingAnnotation
+} from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
     deviceStore,
     isLyricExpanded,
-    isHeightlessLyricColumn,
     renderableStore,
     selectedCarouselNavIndex,
     selectedScoreIndex,
@@ -24,7 +24,6 @@ const mapStateToProps = ({
     canCarouselRender,
     deviceIndex: deviceStore.deviceIndex,
     isLyricExpanded,
-    isHeightlessLyricColumn,
     renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,
@@ -39,7 +38,6 @@ class AnnotationPopup extends Component {
         canCarouselRender: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        isHeightlessLyricColumn: PropTypes.bool.isRequired,
 
         renderableAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
@@ -109,7 +107,6 @@ class AnnotationPopup extends Component {
             canCarouselRender,
             deviceIndex,
             isLyricExpanded,
-            isHeightlessLyricColumn,
             inMain,
 
             renderableAnnotationIndex,
@@ -127,11 +124,8 @@ class AnnotationPopup extends Component {
 
             isOverlayingAnnotation = getIsOverlayingAnnotation({
                 deviceIndex,
-                isLyricExpanded,
-                isHeightlessLyricColumn,
-                selectedCarouselNavIndex
-            }),
-            isPhone = getIsPhone(deviceIndex)
+                isLyricExpanded
+            })
 
         /**
          * Annotation popup is in main, unless lyric column is expanded or
@@ -152,8 +146,7 @@ class AnnotationPopup extends Component {
                      */
                     (
                         !selectedCarouselNavIndex ||
-                        isPhone ||
-                        isLyricExpanded
+                        isOverlayingAnnotation
                     ) &&
 
                     !selectedScoreIndex &&
