@@ -36,18 +36,12 @@ const mapStateToProps = ({
     canCarouselRender,
     isWindowResizeRenderable,
     isSongChangeRenderable,
-    selectedCarouselNavIndex,
-    selectedSongIndex,
-    renderableStore
 }) => ({
     canTheatreRender,
     canMainRender,
     canCarouselRender,
     isWindowResizeRenderable,
-    isSongChangeRenderable,
-    selectedCarouselNavIndex,
-    selectedSongIndex,
-    renderableSceneIndex: renderableStore.renderableSceneIndex
+    isSongChangeRenderable
 })
 
 class Live extends Component {
@@ -71,16 +65,12 @@ class Live extends Component {
     componentDidUpdate(prevProps) {
         const {
                 isSongChangeRenderable,
-                isWindowResizeRenderable,
-                selectedSongIndex,
-                renderableSceneIndex
+                isWindowResizeRenderable
             } = this.props,
 
             {
                 isSongChangeRenderable: wasSongChangeRenderable,
-                isWindowResizeRenderable: wasWindowResizeRenderable,
-                selectedSongIndex: previousSongIndex,
-                renderableSceneIndex: previousSceneIndex
+                isWindowResizeRenderable: wasWindowResizeRenderable
             } = prevProps
 
         // Is unrenderable after song change.
@@ -92,7 +82,6 @@ class Live extends Component {
             this.props.setCanRenderSlider(false)
             this.props.setCanRenderLyric(false)
             this.props.setCanRenderCarousel(false)
-            this.props.setCanRenderScene(false)
         }
 
         // Is renderable after song change timeout.
@@ -127,20 +116,10 @@ class Live extends Component {
 
             this.props.setCanRenderTheatre(true)
         }
+    }
 
-        /**
-         * Is unrenderable after scene change within the same song. In
-         * production, this will only ever happen if a verse is selected
-         */
-        if (
-            renderableSceneIndex !== previousSceneIndex &&
-            selectedSongIndex === previousSongIndex
-        ) {
-            this.unrenderedTime = Date.now()
-
-            logger.warn('Live unrenderable from scene change.')
-            this.props.setCanRenderScene(false)
-        }
+    sceneDidRender() {
+        this.props.setCanRenderTheatre()
     }
 
     theatreDidRender() {
@@ -162,25 +141,11 @@ class Live extends Component {
     }
 
     lyricDidRender() {
-        // If carousel is toggled on, then render it first.
-        if (this.props.selectedCarouselNavIndex) {
-            this.props.setCanRenderCarousel(true)
-
-        // Otherwise, skip to scene.
-        } else {
-            this.props.setCanRenderScene(true)
-        }
+        this.props.setCanRenderCarousel(true)
     }
 
     carouselDidRender() {
-        this.props.setCanRenderScene(true)
-    }
-
-    sceneDidRender() {
-        // If carousel was skipped earlier, render it now.
-        if (!this.props.canCarouselRender) {
-            this.props.setCanRenderCarousel(true)
-        }
+        logger.warn('Live rendered.')
     }
 
     render() {
@@ -243,9 +208,6 @@ Live.propTypes = {
     canCarouselRender: PropTypes.bool.isRequired,
     isWindowResizeRenderable: PropTypes.bool.isRequired,
     isSongChangeRenderable: PropTypes.bool.isRequired,
-    selectedCarouselNavIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-    renderableSceneIndex: PropTypes.number.isRequired,
 
     setCanRenderTheatre: PropTypes.func.isRequired,
     setCanRenderMain: PropTypes.func.isRequired,

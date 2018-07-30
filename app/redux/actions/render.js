@@ -9,7 +9,6 @@ import {
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
     CAN_SCENE_RENDER,
-    RENDERABLE_KEY_Y_INDEX,
     CAN_PRESENCES_RENDER,
     CAN_PIXELS_RENDER
 } from '../../constants/state'
@@ -26,6 +25,13 @@ export const setIsWindowResizeRenderable = (
 ) => ({
     type: IS_WINDOW_RESIZE_RENDERABLE,
     payload: isWindowResizeRenderable
+})
+
+export const setCanRenderScene = (
+    canRenderScene = false
+) => ({
+    type: CAN_SCENE_RENDER,
+    payload: canRenderScene
 })
 
 export const setCanRenderTheatre = (
@@ -61,20 +67,6 @@ export const setCanRenderCarousel = (
 ) => ({
     type: CAN_CAROUSEL_RENDER,
     payload: canRenderCarousel
-})
-
-export const setCanRenderScene = (
-    canRenderScene = false
-) => ({
-    type: CAN_SCENE_RENDER,
-    payload: canRenderScene
-})
-
-export const setRenderableCubesYIndex = (
-    renderableCubesYIndex = 0
-) => ({
-    type: RENDERABLE_KEY_Y_INDEX,
-    payload: renderableCubesYIndex
 })
 
 export const setCanRenderPresences = (

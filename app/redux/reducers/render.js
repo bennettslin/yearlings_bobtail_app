@@ -8,7 +8,6 @@ import {
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
     CAN_SCENE_RENDER,
-    RENDERABLE_KEY_Y_INDEX,
     CAN_PRESENCES_RENDER,
     CAN_PIXELS_RENDER
 } from '../../constants/state'
@@ -36,7 +35,17 @@ export const isSongChangeRenderableReducer = (
             return state
     }
 }
-
+export const CanSceneRenderReducer = (
+    state = false,
+    action
+) => {
+    switch (action.type) {
+        case CAN_SCENE_RENDER:
+            return action.payload
+        default:
+            return state
+    }
+}
 export const CanTheatreRenderReducer = (
     state = false,
     action
@@ -87,28 +96,6 @@ export const CanCarouselRenderReducer = (
 ) => {
     switch (action.type) {
         case CAN_CAROUSEL_RENDER:
-            return action.payload
-        default:
-            return state
-    }
-}
-export const CanSceneRenderReducer = (
-    state = false,
-    action
-) => {
-    switch (action.type) {
-        case CAN_SCENE_RENDER:
-            return action.payload
-        default:
-            return state
-    }
-}
-export const RenderableCubesYIndexReducer = (
-    state = 0,
-    action
-) => {
-    switch (action.type) {
-        case RENDERABLE_KEY_Y_INDEX:
             return action.payload
         default:
             return state

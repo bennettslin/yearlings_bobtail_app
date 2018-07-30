@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { setUpdatedTimePlayed } from '../redux/actions/audio'
-import { setCanRenderScene } from '../redux/actions/render'
 import { updateRenderableStore } from '../redux/actions/renderable'
 import {
     selectTimePlayed,
@@ -30,7 +29,6 @@ class TimeVerseManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         updateRenderableStore: PropTypes.func.isRequired,
-        setCanRenderScene: PropTypes.func.isRequired,
         setUpdatedTimePlayed: PropTypes.func.isRequired,
         selectTimePlayed: PropTypes.func.isRequired,
         selectVerseIndex: PropTypes.func.isRequired,
@@ -40,13 +38,6 @@ class TimeVerseManager extends Component {
         determineVerseBars: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
-    }
-
-    constructor(props) {
-        super(props)
-
-        this._setCanRenderScene =
-            this._setCanRenderScene.bind(this)
     }
 
     componentDidMount() {
@@ -178,8 +169,7 @@ class TimeVerseManager extends Component {
             this.props.scrollElementIntoView({
                 log: scrollLog || 'Player autoscroll.',
                 scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
-                callback: this._setCanRenderScene
+                index: selectedVerseIndex
             })
         }
 
@@ -217,12 +207,6 @@ class TimeVerseManager extends Component {
         }
     }
 
-    _setCanRenderScene() {
-        if (!this.props.canSceneRender) {
-            this.props.setCanRenderScene(true)
-        }
-    }
-
     render() {
         return null
     }
@@ -242,7 +226,6 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setCanRenderScene,
         updateRenderableStore,
         setUpdatedTimePlayed,
         selectTimePlayed,

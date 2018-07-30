@@ -37,7 +37,6 @@ module.exports = {
     CAN_LYRIC_RENDER: 'canLyricRender',
     CAN_CAROUSEL_RENDER: 'canCarouselRender',
     CAN_SCENE_RENDER: 'canSceneRender',
-    RENDERABLE_KEY_Y_INDEX: 'renderableCubesYIndex',
     CAN_PRESENCES_RENDER: 'canPresencesRender',
     CAN_PIXELS_RENDER: 'canPixelsRender',
 

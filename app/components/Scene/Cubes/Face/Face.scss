@@ -9,6 +9,11 @@
     stroke: rgba(225, 225, 175, 0.5);
 }
 
+// TODO: Stagger this.
+path {
+    transition: d 0.2s;
+}
+
 /**
  * In order from brightest to darkest.
  */

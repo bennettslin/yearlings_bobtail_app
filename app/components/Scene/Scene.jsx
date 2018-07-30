@@ -7,9 +7,7 @@ import { bindActionCreators } from 'redux'
 import cx from 'classnames'
 
 import {
-    setRenderableCubesYIndex,
-    setCanRenderPresences,
-    setCanRenderPixels
+    setCanRenderPresences
 } from '../../redux/actions/render'
 
 import Layers from './Layers/Layers'
@@ -26,11 +24,9 @@ import {
 
 const mapStateToProps = ({
     canSceneRender,
-    canPixelsRender,
     renderableStore
 }) => ({
     canSceneRender,
-    canPixelsRender,
     renderableSongIndex: renderableStore.renderableSongIndex,
     renderableSceneIndex: renderableStore.renderableSceneIndex
 })
@@ -40,12 +36,8 @@ class Scene extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
-        canPixelsRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableSceneIndex: PropTypes.number.isRequired,
-        setRenderableCubesYIndex: PropTypes.func.isRequired,
-        setCanRenderPresences: PropTypes.func.isRequired,
-        setCanRenderPixels: PropTypes.func.isRequired,
 
         // From parent.
         sceneDidRender: PropTypes.func.isRequired
@@ -75,16 +67,14 @@ class Scene extends Component {
 
     componentDidUpdate(prevProps) {
         const {
-                canSceneRender,
-                canPixelsRender
+                canSceneRender
             } = this.props,
             {
-                canSceneRender: couldSceneRender,
-                canPixelsRender: couldPixelsRender
+                canSceneRender: couldSceneRender
             } = prevProps
 
         if (
-            canPixelsRender && !couldPixelsRender
+            canSceneRender && !couldSceneRender
         ) {
             logger.warn('Scene rendered.')
 
@@ -94,11 +84,11 @@ class Scene extends Component {
             const
                 // Set timeout to prevent children transitions before render.
                 waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
+                    this._waitForShowBeforeRender, 0
                 ),
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
-                    this.props.sceneDidRender, 100
+                    this.props.sceneDidRender, 0
                 )
 
             this.setState({
@@ -106,16 +96,6 @@ class Scene extends Component {
                 didRenderTimeoutId
             })
 
-        } else if (!canSceneRender && couldSceneRender) {
-
-            // Reset cubes, presences, and pixels.
-            this.props.setRenderableCubesYIndex()
-            this.props.setCanRenderPresences(false)
-            this.props.setCanRenderPixels(false)
-
-            this.setState({
-                isShown: false
-            })
         }
     }
 
@@ -186,9 +166,7 @@ class Scene extends Component {
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setRenderableCubesYIndex,
-        setCanRenderPresences,
-        setCanRenderPixels
+        setCanRenderPresences
     }, dispatch)
 )
 
