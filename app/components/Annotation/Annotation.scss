@@ -6,13 +6,13 @@
 
 .Annotation {
     position: relative;
-    
+
     display: flex;
     flex-direction: column;
-    
+
     padding: $js__padding__popupContent__wide;
     border-radius: $borderRadius__wide;
-    
+
     transition:
     background-color $animationDuration__default;
 }

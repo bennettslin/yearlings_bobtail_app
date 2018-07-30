@@ -88,8 +88,8 @@ class Annotation extends Component {
         // If it's in popup, annotation object won't always exist.
         return Boolean(annotationObject) && (
             <AnnotationView {...other}
-                annotationObject={annotationObject}
                 {...{
+                    annotationObject,
                     annotationDotKeys: annotationObject.dotKeys,
                     annotationTitle: annotationObject.title,
                     cardsLength: annotationObject.cards.length
@@ -127,7 +127,7 @@ const propTypes = {
 
     // Absent in popup annotation.
     handleTitleClick: PropTypes.func,
-    handleContainerClick: PropTypes.func
+    handleContainerClick: PropTypes.func.isRequired
 },
 
 AnnotationView = ({

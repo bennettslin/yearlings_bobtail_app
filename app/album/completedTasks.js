@@ -3543,4 +3543,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Clicking annotation field closes popup.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -59,7 +59,7 @@ class AnnotationPopup extends Component {
 
         this.state = {
             // Ensures that annotation index persists as popup is closing.
-            popupAnnotationIndex: props.renderableAnnotationIndex
+            annotationIndex: props.renderableAnnotationIndex
         }
     }
 
@@ -84,7 +84,7 @@ class AnnotationPopup extends Component {
         ) {
             // ... then persist the popup annotation index.
             this.setState({
-                popupAnnotationIndex: renderableAnnotationIndex
+                annotationIndex: renderableAnnotationIndex
             })
         }
 
@@ -95,7 +95,7 @@ class AnnotationPopup extends Component {
         ) {
             // ... then reset the popup annotation index.
             this.setState({
-                popupAnnotationIndex: 0
+                annotationIndex: 0
             })
         }
     }
@@ -160,7 +160,7 @@ class AnnotationPopup extends Component {
                     !selectedTitleIndex &&
                     !selectedWikiIndex,
 
-                { popupAnnotationIndex } = this.state
+                { annotationIndex } = this.state
 
             /**
              * Pass annotation object from state so that it persists while popup is
@@ -188,7 +188,11 @@ class AnnotationPopup extends Component {
                     <Annotation {...other}
                         isAccessed
                         isSelected
-                        annotationIndex={popupAnnotationIndex}
+                        {...{
+                            annotationIndex,
+                            handleContainerClick: handlePopupContainerClick
+                        }}
+
                     />
                 </Popup>
             )

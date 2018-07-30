@@ -218,9 +218,9 @@ class TextLyricAnchor extends Component {
                             text: words.map((word, index) => (
                                 <Texts {...other}
                                     key={index}
+                                    isTextAnchor
                                     {...{
-                                        text: word,
-                                        isTextAnchor: true
+                                        text: word
                                     }}
                                 />
                             )),

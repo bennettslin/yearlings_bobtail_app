@@ -7,9 +7,10 @@ $zIndex__adminToggle: $zIndex__popupContainer + 1;
 
 $zIndex__navCustomSubfield: $zIndex__adminToggle + 1;
 
-$zIndex__carousel: $zIndex__navCustomSubfield + 1;
+// Both carousel and popup annotation.
+$zIndex__annotation: $zIndex__navCustomSubfield + 1;
 
-$zIndex__leftShelf: $zIndex__carousel + 1;
+$zIndex__leftShelf: $zIndex__annotation + 1;
 $zIndex__centreFieldChild: $zIndex__leftShelf + 1;
 
 // Lyrics should be higher than anything in centre field.
