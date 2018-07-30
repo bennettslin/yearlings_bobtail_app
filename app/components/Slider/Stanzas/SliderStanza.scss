@@ -65,11 +65,10 @@ $width__sliderStanzaTab: 10px;
     }
 }
 
-// TODO: Make pattern between tab and sheet seamless.
 .bgColour__sliderStanza__pattern {
     $degrees: 60deg;
     $darkShade: rgba(0, 0, 0, 0.1);
-    $height: 15px;
+    $height: $height__sliderStanzaTab;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:
@@ -91,34 +90,3 @@ $width__sliderStanzaTab: 10px;
     );
     background-size: $width $height;
 }
-
-// .SliderStanza__refrain {
-//     height: 50%;
-// }
-// .SliderStanza__verse {
-//     height: 55%;
-// }
-// .SliderStanza__prechorus {
-//     height: 58%;
-// }
-// .SliderStanza__chorus {
-//     height: 60%;
-// }
-// .SliderStanza__postchorus {
-//     height: 50%;
-// }
-// .SliderStanza__bridge {
-//     height: 52%;
-// }
-// .SliderStanza__coda {
-//     height: 45%;
-// }
-// .SliderStanza__intro {
-//     height: 48%;
-// }
-// .SliderStanza__solo {
-//     height: 65%;
-// }
-// .SliderStanza__outro {
-//     height: 40%;
-// }
