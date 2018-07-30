@@ -23,7 +23,6 @@ class TimeVerseManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        canSceneRender: PropTypes.bool.isRequired,
         isManualScroll: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -213,12 +212,10 @@ class TimeVerseManager extends Component {
 }
 
 const mapStateToProps = ({
-    canSceneRender,
     isManualScroll,
     selectedSongIndex,
     selectedVerseIndex
 }) => ({
-    canSceneRender,
     isManualScroll,
     selectedSongIndex,
     selectedVerseIndex

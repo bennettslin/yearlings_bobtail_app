@@ -7,7 +7,6 @@ import {
     CAN_SLIDER_RENDER,
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
-    CAN_SCENE_RENDER,
     CAN_PRESENCES_RENDER,
     CAN_PIXELS_RENDER
 } from '../../constants/state'
@@ -30,17 +29,6 @@ export const isSongChangeRenderableReducer = (
 ) => {
     switch (action.type) {
         case IS_SONG_CHANGE_RENDERABLE:
-            return action.payload
-        default:
-            return state
-    }
-}
-export const CanSceneRenderReducer = (
-    state = false,
-    action
-) => {
-    switch (action.type) {
-        case CAN_SCENE_RENDER:
             return action.payload
         default:
             return state

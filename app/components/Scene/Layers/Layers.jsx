@@ -1,39 +1,16 @@
 // Section to show a single slice of the scene.
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
 
 import Layer from './Layer'
 
 import { CUBE_Y_INDICES } from '../../../constants/stage'
 
-const mapStateToProps = ({
-    canSceneRender
-}) => ({
-    canSceneRender
-})
-
 class Layers extends Component {
 
-    static propTypes = {
-        // Through Redux.
-        canSceneRender: PropTypes.bool.isRequired,
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender
-    }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.canSceneRender && !prevProps.canSceneRender) {
-            logger.warn('Layers rendered.')
-
-            this.setState({
-                hasMounted: true
-            })
-        }
+    shouldComponentUpdate() {
+        return false
     }
 
     render() {
@@ -61,4 +38,4 @@ class Layers extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Layers)
+export default Layers

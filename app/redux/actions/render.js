@@ -8,7 +8,6 @@ import {
     CAN_SLIDER_RENDER,
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
-    CAN_SCENE_RENDER,
     CAN_PRESENCES_RENDER,
     CAN_PIXELS_RENDER
 } from '../../constants/state'
@@ -25,13 +24,6 @@ export const setIsWindowResizeRenderable = (
 ) => ({
     type: IS_WINDOW_RESIZE_RENDERABLE,
     payload: isWindowResizeRenderable
-})
-
-export const setCanRenderScene = (
-    canRenderScene = false
-) => ({
-    type: CAN_SCENE_RENDER,
-    payload: canRenderScene
 })
 
 export const setCanRenderTheatre = (

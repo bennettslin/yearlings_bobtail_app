@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
 
 // import Pixels from './Pixel/Pixels'
@@ -46,22 +45,9 @@ import {
 //             right: edgePropType
 //         }).isRequired
 
-// const mapStateToProps = ({
-//     canSceneRender,
-//     canTheatreRender
-// }) => ({
-//     canSceneRender,
-//     canTheatreRender
-// })
-const mapStateToProps = () => ({})
-
 class Face extends Component {
 
     static propTypes = {
-        // Through Redux.
-        // canSceneRender: PropTypes.bool.isRequired,
-        // canTheatreRender: PropTypes.bool.isRequired,
-
         // From parent.
         face: PropTypes.string.isRequired,
         // bitmapKey: PropTypes.string.isRequired,
@@ -84,31 +70,9 @@ class Face extends Component {
         // zIndices: PropTypes.array
     }
 
-    // constructor(props) {
-    //     super(props)
-
-    //     this.state = {
-    //         hasMounted: false
-    //     }
-    // }
-
-    // shouldComponentUpdate(nextProps) {
-    //     return this.state.hasMounted ?
-    //         nextProps.canSceneRender :
-    //         nextProps.canTheatreRender
-    // }
-
-    // componentDidUpdate(prevProps) {
-
-    //     if (!this.state.hasMounted) {
-    //         if (this.props.canSceneRender && !prevProps.canSceneRender) {
-    //             // Allow to subsequently render with Scene, not Theatre.
-    //             this.setState({
-    //                 hasMounted: true
-    //             })
-    //         }
-    //     }
-    // }
+    shouldComponentUpdate() {
+        return false
+    }
 
     render() {
         const {
@@ -230,4 +194,4 @@ class Face extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Face)
+export default Face

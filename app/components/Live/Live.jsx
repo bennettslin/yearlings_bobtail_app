@@ -13,8 +13,7 @@ import {
     setCanRenderMain,
     setCanRenderSlider,
     setCanRenderLyric,
-    setCanRenderCarousel,
-    setCanRenderScene
+    setCanRenderCarousel
 } from '../../redux/actions/render'
 
 import Theatre from '../Theatre/Theatre'
@@ -55,7 +54,6 @@ class Live extends Component {
         this.sliderDidRender = this.sliderDidRender.bind(this)
         this.lyricDidRender = this.lyricDidRender.bind(this)
         this.carouselDidRender = this.carouselDidRender.bind(this)
-        this.sceneDidRender = this.sceneDidRender.bind(this)
     }
 
     componentDidMount() {
@@ -118,10 +116,6 @@ class Live extends Component {
         }
     }
 
-    sceneDidRender() {
-        this.props.setCanRenderTheatre()
-    }
-
     theatreDidRender() {
         /**
          * This isn't the most elegant way to tell whether we're rendering
@@ -167,7 +161,6 @@ class Live extends Component {
 
                 <Theatre {...theatreHandlers}
                     theatreDidRender={this.theatreDidRender}
-                    sceneDidRender={this.sceneDidRender}
                 />
 
                 <Main {...mainColumnHandlers}
@@ -214,7 +207,6 @@ Live.propTypes = {
     setCanRenderSlider: PropTypes.func.isRequired,
     setCanRenderLyric: PropTypes.func.isRequired,
     setCanRenderCarousel: PropTypes.func.isRequired,
-    setCanRenderScene: PropTypes.func.isRequired,
 
     // From parent.
     setLyricRef: PropTypes.func.isRequired,
@@ -269,8 +261,7 @@ const bindDispatchToProps = (dispatch) => (
         setCanRenderMain,
         setCanRenderSlider,
         setCanRenderLyric,
-        setCanRenderCarousel,
-        setCanRenderScene
+        setCanRenderCarousel
     }, dispatch)
 )
 

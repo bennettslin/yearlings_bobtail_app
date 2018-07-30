@@ -2,16 +2,6 @@
 @import "./Cutout";
 @import "./Fixture";
 
-.Presence {
-    transition: opacity $animationDuration__default;
-    opacity: 0;
-
-    .sceneIsShown
-    & {
-        opacity: 1;
-    }
-}
-
 .Presence__temporaryText {
     font-size: 0.15em;
 }
