@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Popup zIndices are a little wonky.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa.`,
         workedHours: 0,
         neededHours: 1
@@ -16,12 +21,6 @@ module.exports = [
         taskName: `Debounce nav keys.`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `XAxisIndices order can be determined without knowledge of slantDirection in state.`,
-        workedHours: 1,
-        neededHours: 2
     },
 
     // Buttons and dots.

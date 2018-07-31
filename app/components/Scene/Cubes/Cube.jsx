@@ -28,15 +28,20 @@ const Cube = (
 ) => {
 
     const {
-            xIndex
-        } = props
+            xIndex,
+            yIndex,
+        } = props,
+
+        xCharIndex = getCharStringForNumber(xIndex)
 
     // This component never updates because its parent never updates.
     return (
         <Svg
             className={cx(
                 // This class is used to determine face shading.
-                `Cube__x${getCharStringForNumber(xIndex)}`,
+                `Cube__x${xCharIndex}`,
+
+                `Cube__x${xCharIndex}y${yIndex}`,
 
                 'absoluteFullContainer'
             )}

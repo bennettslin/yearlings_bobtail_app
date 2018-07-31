@@ -3558,4 +3558,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `XAxisIndices order can be determined without knowledge of slantDirection in state.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

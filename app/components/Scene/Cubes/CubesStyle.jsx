@@ -19,11 +19,15 @@ import {
     getClassNameForSlantDirection
 } from '../sceneDataHelper'
 
-import { CUBE_X_INDICES } from '../../../constants/stage'
+import {
+    CUBE_X_INDICES,
+    CUBE_Y_INDICES,
+    CUBE_X_AXIS_LENGTH
+} from '../../../constants/stage'
 
 const CubesStyle = () => {
 
-    let columnIndicesArray = DEFAULT_X_AXIS_Z_INDICES
+    let xAxisZIndices = DEFAULT_X_AXIS_Z_INDICES
 
     return (
         <Style
@@ -38,30 +42,45 @@ const CubesStyle = () => {
                     )
 
                 if (slantDirection === LEFT) {
-                    columnIndicesArray = SLANTED_LEFT_X_AXIS_Z_INDICES;
+                    xAxisZIndices = SLANTED_LEFT_X_AXIS_Z_INDICES;
 
                 } else if (slantDirection === RIGHT) {
-                    columnIndicesArray = SLANTED_RIGHT_X_AXIS_Z_INDICES
+                    xAxisZIndices = SLANTED_RIGHT_X_AXIS_Z_INDICES
                 }
 
-                return CUBE_X_INDICES.map(xIndex => {
+                return CUBE_Y_INDICES.map(yIndex => {
 
-                    return (
-                        <DynamicStyling
-                            key={xIndex}
-                            {...{
-                                parentPrefixes: [
-                                    slantDirectionClassName
-                                ],
-                                childPrefixes: [
-                                    `Cube__x${getCharStringForNumber(xIndex)}`
-                                ],
-                                style: {
-                                    'z-index': columnIndicesArray[xIndex]
-                                }
-                            }}
-                        />
-                    )
+                    return CUBE_X_INDICES.map(xIndex => {
+
+                        const
+                            xCharIndex = getCharStringForNumber(xIndex),
+
+                            // This is the CSS z-index value, not zIndex.
+                            zIndexValue =
+                                CUBE_X_AXIS_LENGTH * yIndex
+                                + xAxisZIndices[xIndex]
+
+                        return (
+                            <DynamicStyling
+                                key={`${xIndex}_${yIndex}`}
+                                {...{
+                                    parentPrefixes: [
+                                        slantDirectionClassName
+                                    ],
+                                    childPrefixes: [
+                                        `Cube__x${
+                                            xCharIndex
+                                        }y${
+                                            yIndex
+                                        }`
+                                    ],
+                                    style: {
+                                        'z-index': zIndexValue
+                                    }
+                                }}
+                            />
+                        )
+                    })
                 })
             })}
         </Style>
