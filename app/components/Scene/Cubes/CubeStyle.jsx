@@ -1,6 +1,4 @@
-/* eslint-disable */
-
-import React from 'react'
+import React, { Fragment } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
@@ -11,7 +9,8 @@ import {
     SLANT_DIRECTIONS,
     FLOOR,
     CEILING,
-    FACES
+    FACES,
+    TILE
 } from '../constants'
 
 import { getCubeCornerPercentages } from '../sceneHelper'
@@ -29,48 +28,28 @@ import { getChildClassNameForFaceLogic } from './Face/helpers/faceHelper'
 
 import { CUBE_Z_INDICES } from '../../../constants/stage'
 
+const
+    FLOOR_TILE_SHADE_DARKER = 'rgba(25, 25, 25, 0.1)',
+    FLOOR_TILE_SHADE_DARK = 'rgba(25, 25, 25, 0.075)',
+    FLOOR_TILE_SHADE_LIGHT = 'rgba(25, 25, 25, 0.05)',
+    FLOOR_TILE_SHADE_LIGHTER = 'rgba(25, 25, 25, 0.025)',
+
+    FLOOR_TILE_SHADE_Z_INDEX_MAP = [
+        FLOOR_TILE_SHADE_DARKER,
+        FLOOR_TILE_SHADE_DARKER,
+        FLOOR_TILE_SHADE_DARK,
+        FLOOR_TILE_SHADE_DARK,
+        FLOOR_TILE_SHADE_LIGHT,
+        FLOOR_TILE_SHADE_LIGHT,
+        FLOOR_TILE_SHADE_LIGHTER,
+        FLOOR_TILE_SHADE_LIGHTER
+    ]
+
 const propTypes = {
     isFloor: PropTypes.bool,
     xIndex: PropTypes.number.isRequired,
     yIndex: PropTypes.number.isRequired
 },
-
-/**
- * In order from brightest to darkest.
- */
-// .Face__shade__floorTile {
-
-//     // Default.
-//     fill: transparent;
-
-//     .Cube__z7
-//     &,
-//     .Cube__z6
-//     & {
-//         fill: rgba(25, 25, 25, 0.025);
-//     }
-
-//     .Cube__z5
-//     &,
-//     .Cube__z4
-//     & {
-//         fill: rgba(25, 25, 25, 0.05);
-//     }
-
-//     .Cube__z3
-//     &,
-//     .Cube__z2
-//     & {
-//         fill: rgba(25, 25, 25, 0.075);
-//     }
-
-//     .Cube__z1
-//     &,
-//     .Cube__z0
-//     & {
-//         fill: rgba(25, 25, 25, 0.1);
-//     }
-// }
 
 CubeStyle = ({
 
@@ -83,7 +62,14 @@ CubeStyle = ({
     return (
         <Style
             className={cx(
-                'CubeStyle'
+                'CubeStyle',
+                `CubeStyle__${
+                    isFloor ? FLOOR[0] : CEILING[0]
+                }${
+                    xIndex
+                }${
+                    yIndex
+                }`
             )}
         >
             {SLANT_DIRECTIONS.map(slantDirection => {
@@ -130,22 +116,63 @@ CubeStyle = ({
                                 xIndex,
                                 yIndex
                             }),
-                            pathString = getPathString(polygonPoints)
+                            pathString = getPathString(polygonPoints),
+
+                            /**
+                             * This styling needs to be set dynamically because
+                             * it's dependent on zIndex.
+                             */
+                            hasFloorTileShading =
+                                !slantDirection &&
+                                isFloor &&
+                                face === TILE &&
+
+                                /**
+                                 * Only floor tiles of this zIndex and below
+                                 * will be shaded.
+                                 */
+                                zIndex < FLOOR_TILE_SHADE_Z_INDEX_MAP.length
 
                         return (
-                            <DynamicStyling
+                            <Fragment
                                 key={`${slantDirection}${zIndex}${face}`}
-                                {...{
-                                    parentPrefixes: [
-                                        slantDirectionClassName,
-                                        parentPrefix
-                                    ],
-                                    childPrefix,
-                                    style: {
-                                        d: `path("${pathString}")`
-                                    }
-                                }}
-                            />
+                            >
+                                {/* Floor tile shading. */}
+                                {hasFloorTileShading && (
+                                    <DynamicStyling
+                                        {...{
+                                            parentPrefixes: [
+                                                parentPrefix
+                                            ],
+                                            childPrefixes: [
+                                                childPrefix,
+                                                'Face__shade__floorTile'
+                                            ],
+                                            style: {
+                                                fill:
+                                                FLOOR_TILE_SHADE_Z_INDEX_MAP[
+                                                    zIndex
+                                                ]
+                                            }
+                                        }}
+                                    />
+                                )}
+                                {/* Closed path. */}
+                                <DynamicStyling
+                                    {...{
+                                        parentPrefixes: [
+                                            slantDirectionClassName,
+                                            parentPrefix
+                                        ],
+                                        childPrefixes: [
+                                            childPrefix
+                                        ],
+                                        style: {
+                                            d: `path("${pathString}")`
+                                        }
+                                    }}
+                                />
+                            </Fragment>
                         )
                     })
                 })

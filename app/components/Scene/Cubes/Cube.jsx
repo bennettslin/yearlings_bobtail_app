@@ -33,9 +33,9 @@ const Cube = (
     return (
         <g
             className={cx(
-                // These classes are used to determine face shading.
+
+                // This class is used to determine face shading.
                 `Cube__x${getCharStringForNumber(xIndex)}`
-                // `Cube__z${getCharStringForNumber(zIndex)}`
             )}
         >
             <CubeStyle {...props}

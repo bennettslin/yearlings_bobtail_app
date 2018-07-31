@@ -24,12 +24,6 @@ module.exports = [
         neededHours: 2
     },
 
-    {
-        taskName: `Floor tile zIndex shading in cubeStyle.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     // Buttons and dots.
     {
         taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs. Accessing dot.`,

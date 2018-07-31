@@ -5,14 +5,14 @@ import { getDynamicStyleStringForIndex } from './styleHelper'
 
 const propTypes = {
     parentPrefixes: PropTypes.array.isRequired,
-    childPrefix: PropTypes.string.isRequired,
+    childPrefixes: PropTypes.array.isRequired,
     style: PropTypes.object.isRequired
 }
 
 const DynamicStyling = ({
 
     parentPrefixes,
-    childPrefix,
+    childPrefixes,
     style
 
 }) => (
@@ -20,7 +20,7 @@ const DynamicStyling = ({
 
         {getDynamicStyleStringForIndex({
             parentPrefixes,
-            childPrefix,
+            childPrefixes,
             style
         })}
 
