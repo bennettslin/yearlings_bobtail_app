@@ -43,7 +43,10 @@ export const getDynamicStyleStringForIndex = ({
             ) : ''
         }).join('')
 
-    const selector = `${parentPrefixSelector} ${childPrefixSelector}`,
+    const selector =
+        parentPrefixSelector ?
+            `${parentPrefixSelector} ${childPrefixSelector}` :
+            childPrefixSelector,
 
         properties = keys(style),
 

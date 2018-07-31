@@ -14,30 +14,31 @@ const
     CEILING = 'ceiling',
     FLOOR = 'floor',
 
-    SLANTED_RIGHT_X_AXIS_INDICES = CUBE_X_INDICES,
+    // If slanted right, each cube on left overlaps the one on its right.
+    SLANTED_RIGHT_X_AXIS_Z_INDICES = CUBE_X_INDICES,
 
-    SLANTED_LEFT_X_AXIS_INDICES =
-        SLANTED_RIGHT_X_AXIS_INDICES.slice().reverse(),
+    // If slanted left, it's the reverse.
+    SLANTED_LEFT_X_AXIS_Z_INDICES = CUBE_X_INDICES.slice().reverse(),
 
     /**
      * Returns array of indices that start from the ends and move towards the
      * centre, alternating between left and right. This allows the tiles that
-     * overlap other tiles to be ordered correctly in the DOM.
+     * overlap other tiles to have the correct stacking order.
      *
-     * If length is 12, should return [0, 11, 1, 10, 2, 9, 3, 8, 4, 7, 5, 6].
+     * If length is 12, should return [0, 2, 4, 6, 8, 10, 11, 9, 7, 5, 3, 1].
      */
-    DEFAULT_X_AXIS_INDICES = CUBE_X_INDICES.map(columnIndex => {
+    DEFAULT_X_AXIS_Z_INDICES = CUBE_X_INDICES.map(xIndex => {
 
-        const ceilValue = Math.ceil(columnIndex / 2)
-
-        return columnIndex % 2 ?
-            CUBE_X_AXIS_LENGTH - ceilValue : ceilValue
+        return xIndex < CUBE_X_AXIS_LENGTH / 2 ?
+            xIndex * 2 :
+            (CUBE_X_AXIS_LENGTH - xIndex) * 2 - 1
     })
 
 module.exports = {
-    DEFAULT_X_AXIS_INDICES,
-    SLANTED_LEFT_X_AXIS_INDICES,
-    SLANTED_RIGHT_X_AXIS_INDICES,
+
+    DEFAULT_X_AXIS_Z_INDICES,
+    SLANTED_LEFT_X_AXIS_Z_INDICES,
+    SLANTED_RIGHT_X_AXIS_Z_INDICES,
 
     LEFT,
     RIGHT,

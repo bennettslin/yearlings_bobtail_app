@@ -1,7 +1,16 @@
 $zIndex__negative: -1;
 
+/**
+ * Allow scene cubes to own the first 12 * 6, starting from 0. Unfortunately,
+ * this is necessary because the cubes cannot get their stacking order from
+ * their natural order in the DOM due to slantDirection, which switches whether
+ * a left cube overlaps a right one, and vice versa.
+ */
+
 // This should be the lowest shown element.
-$zIndex__popupContainer: 0;
+$zIndex__theatre: 72;
+
+$zIndex__popupContainer: $zIndex__theatre + 1;
 
 $zIndex__adminToggle: $zIndex__popupContainer + 1;
 

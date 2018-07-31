@@ -2,4 +2,7 @@
 
 .Floor {
     bottom: 0;
+
+    // Floor needs to be above scene.
+    z-index: $zIndex__theatre;
 }

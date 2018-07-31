@@ -4,6 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Svg from '../../Svg/Svg'
+
 import CubeFacesStyle from './CubeFacesStyle'
 import Face from './Face/Face'
 
@@ -31,15 +33,15 @@ const Cube = (
 
     // This component never updates because its parent never updates.
     return (
-        <g
+        <Svg
             className={cx(
-
                 // This class is used to determine face shading.
-                `Cube__x${getCharStringForNumber(xIndex)}`
+                `Cube__x${getCharStringForNumber(xIndex)}`,
+
+                'absoluteFullContainer'
             )}
         >
-            <CubeFacesStyle {...props}
-            />
+            <CubeFacesStyle {...props} />
 
             {FACES.map(face => (
                 <Face {...props}
@@ -49,7 +51,7 @@ const Cube = (
                     }}
                 />
             ))}
-        </g>
+        </Svg>
     )
 }
 

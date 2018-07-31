@@ -7,10 +7,12 @@ import DynamicStyling from '../../Style/DynamicStyling'
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
 
 import {
+    LEFT,
+    RIGHT,
     SLANT_DIRECTIONS,
-    DEFAULT_X_AXIS_INDICES,
-    SLANTED_LEFT_X_AXIS_INDICES,
-    SLANTED_RIGHT_X_AXIS_INDICES
+    DEFAULT_X_AXIS_Z_INDICES,
+    SLANTED_LEFT_X_AXIS_Z_INDICES,
+    SLANTED_RIGHT_X_AXIS_Z_INDICES
 } from '../constants'
 
 import {
@@ -21,7 +23,7 @@ import { CUBE_X_INDICES } from '../../../constants/stage'
 
 const CubesStyle = () => {
 
-    let columnIndicesArray = DEFAULT_X_AXIS_INDICES
+    let columnIndicesArray = DEFAULT_X_AXIS_Z_INDICES
 
     return (
         <Style
@@ -35,11 +37,11 @@ const CubesStyle = () => {
                             slantDirection
                     )
 
-                if (slantDirection === 'left') {
-                    columnIndicesArray = SLANTED_LEFT_X_AXIS_INDICES;
+                if (slantDirection === LEFT) {
+                    columnIndicesArray = SLANTED_LEFT_X_AXIS_Z_INDICES;
 
-                } else if (slantDirection === 'right') {
-                    columnIndicesArray = SLANTED_RIGHT_X_AXIS_INDICES
+                } else if (slantDirection === RIGHT) {
+                    columnIndicesArray = SLANTED_RIGHT_X_AXIS_Z_INDICES
                 }
 
                 return CUBE_X_INDICES.map(xIndex => {
