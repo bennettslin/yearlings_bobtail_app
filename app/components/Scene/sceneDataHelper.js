@@ -60,7 +60,7 @@ export const getParentClassNameForSceneLogic = ({
     }${
         yIndex
     }${
-        // Allow zIndex to be appended dynamically by CubeStyle.
+        // Allow zIndex to be appended dynamically by CubeFacesStyle.
         !isNaN(zIndex) ? getCharStringForNumber(zIndex) : ''
     }`
 }

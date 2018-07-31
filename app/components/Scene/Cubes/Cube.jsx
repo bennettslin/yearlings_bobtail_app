@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import CubeStyle from './CubeStyle'
+import CubeFacesStyle from './CubeFacesStyle'
 import Face from './Face/Face'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
@@ -38,7 +38,7 @@ const Cube = (
                 `Cube__x${getCharStringForNumber(xIndex)}`
             )}
         >
-            <CubeStyle {...props}
+            <CubeFacesStyle {...props}
             />
 
             {FACES.map(face => (

@@ -51,7 +51,7 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired
 },
 
-CubeStyle = ({
+CubeFacesStyle = ({
 
     isFloor,
     xIndex,
@@ -59,11 +59,12 @@ CubeStyle = ({
 
 }) => {
 
+    // This component never updates because its parent never updates.
     return (
         <Style
             className={cx(
-                'CubeStyle',
-                `CubeStyle__${
+                'CubeFacesStyle',
+                `CubeFacesStyle__${
                     isFloor ? FLOOR[0] : CEILING[0]
                 }${
                     xIndex
@@ -181,6 +182,6 @@ CubeStyle = ({
     )
 }
 
-CubeStyle.propTypes = propTypes
+CubeFacesStyle.propTypes = propTypes
 
-export default CubeStyle
+export default CubeFacesStyle
