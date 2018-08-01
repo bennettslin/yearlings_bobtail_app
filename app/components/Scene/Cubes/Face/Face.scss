@@ -1,5 +1,14 @@
 @import "./Pixel/Pixels";
 
+// TODO: Stagger this.
+.Face__path {
+    transition: d 0.2s;
+}
+
+.Face__undercoat {
+    fill: rgba(255, 255, 255, 0.5);
+}
+
 .Face__shade {
     // For now, we'll have a stroke on the shade face.
 
@@ -9,9 +18,8 @@
     stroke: rgba(225, 225, 175, 0.5);
 }
 
-// TODO: Stagger this.
-path {
-    transition: d 0.2s;
+.Face__shade__ceilingTile {
+    fill: rgba(25, 25, 25, 0.45);
 }
 
 .Face__shade__floorTile {
@@ -98,8 +106,4 @@ path {
     & {
         fill: rgba(25, 25, 25, 0.4);
     }
-}
-
-.Face__shade__ceilingTile {
-    fill: rgba(25, 25, 25, 0.45);
 }

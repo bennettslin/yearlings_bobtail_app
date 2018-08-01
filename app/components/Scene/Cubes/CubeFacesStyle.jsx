@@ -7,8 +7,8 @@ import DynamicStyling from '../../Style/DynamicStyling'
 
 import {
     SLANT_DIRECTIONS,
+    LEVELS,
     FLOOR,
-    CEILING,
     FACES,
     TILE
 } from '../constants'
@@ -46,14 +46,12 @@ const
     ]
 
 const propTypes = {
-    isFloor: PropTypes.bool,
     xIndex: PropTypes.number.isRequired,
     yIndex: PropTypes.number.isRequired
 },
 
 CubeFacesStyle = ({
 
-    isFloor,
     xIndex,
     yIndex
 
@@ -65,8 +63,6 @@ CubeFacesStyle = ({
             className={cx(
                 'CubeFacesStyle',
                 `CubeFacesStyle__${
-                    isFloor ? FLOOR[0] : CEILING[0]
-                }${
                     xIndex
                 }${
                     yIndex
@@ -84,97 +80,104 @@ CubeFacesStyle = ({
                         slantDirection
                     )
 
-                return CUBE_Z_INDICES.map(zIndex => {
+                return LEVELS.map(level => {
 
-                    const
-                        cubeCorners = getCubeCornerPercentages({
-                            xIndex,
-                            yIndex,
-                            zIndex,
-                            isFloor,
-                            slantDirection
-                        }),
-                        parentPrefix = getParentClassNameForSceneLogic({
-                            level: isFloor ? FLOOR : CEILING,
-                            xIndex,
-                            yIndex,
-                            zIndex
-                        })
+                    const isFloor = level === FLOOR
 
-                    return FACES.map(face => {
+                    return CUBE_Z_INDICES.map(zIndex => {
 
                         const
-                            polygonPoints = getPolygonPoints({
-                                face,
-                                isFloor,
-                                sideDirection,
-                                slantDirection,
-                                cubeCorners
-                            }),
-                            childPrefix = getChildClassNameForFaceLogic({
-                                face,
-                                isFloor,
+                            cubeCorners = getCubeCornerPercentages({
                                 xIndex,
-                                yIndex
+                                yIndex,
+                                zIndex,
+                                isFloor,
+                                slantDirection
                             }),
-                            pathString = getPathString(polygonPoints),
+                            parentPrefix = getParentClassNameForSceneLogic({
+                                level,
+                                xIndex,
+                                yIndex,
+                                zIndex
+                            })
 
-                            /**
-                             * This styling needs to be set dynamically because
-                             * it's dependent on zIndex.
-                             */
-                            hasFloorTileShading =
-                                !slantDirection &&
-                                isFloor &&
-                                face === TILE &&
+                        return FACES.map(face => {
+
+                            const
+                                polygonPoints = getPolygonPoints({
+                                    face,
+                                    isFloor,
+                                    sideDirection,
+                                    slantDirection,
+                                    cubeCorners
+                                }),
+                                childPrefix = getChildClassNameForFaceLogic({
+                                    face,
+                                    isFloor,
+                                    xIndex,
+                                    yIndex
+                                }),
+                                pathString = getPathString(polygonPoints),
 
                                 /**
-                                 * Only floor tiles of this zIndex and below
-                                 * will be shaded.
+                                 * This styling needs to be set dynamically
+                                 * because it's dependent on zIndex.
                                  */
-                                zIndex < FLOOR_TILE_SHADE_Z_INDEX_MAP.length
+                                hasFloorTileShading =
+                                    !slantDirection &&
+                                    isFloor &&
+                                    face === TILE &&
 
-                        return (
-                            <Fragment
-                                key={`${slantDirection}${zIndex}${face}`}
-                            >
-                                {/* Floor tile shading. */}
-                                {hasFloorTileShading && (
+                                    /**
+                                     * Only floor tiles of this zIndex and
+                                     * below will be shaded.
+                                     */
+                                    zIndex <
+                                        FLOOR_TILE_SHADE_Z_INDEX_MAP.length,
+
+                                fill = FLOOR_TILE_SHADE_Z_INDEX_MAP[
+                                    zIndex
+                                ]
+
+                            return (
+                                <Fragment
+                                    key={`${slantDirection}${zIndex}${face}`}
+                                >
+                                    {/* Floor tile shading. */}
+                                    {hasFloorTileShading && (
+                                        <DynamicStyling
+                                            {...{
+                                                parentPrefixes: [
+                                                    parentPrefix
+                                                ],
+                                                childPrefixes: [
+                                                    childPrefix,
+                                                    'Face__shade__floorTile'
+                                                ],
+                                                style: {
+                                                    fill
+                                                }
+                                            }}
+                                        />
+                                    )}
+                                    {/* Closed path. */}
                                     <DynamicStyling
                                         {...{
                                             parentPrefixes: [
+                                                slantDirectionClassName,
                                                 parentPrefix
                                             ],
                                             childPrefixes: [
-                                                childPrefix,
-                                                'Face__shade__floorTile'
+                                                childPrefix
                                             ],
                                             style: {
-                                                fill:
-                                                FLOOR_TILE_SHADE_Z_INDEX_MAP[
-                                                    zIndex
-                                                ]
+                                                d: `path("${pathString}")`
                                             }
                                         }}
                                     />
-                                )}
-                                {/* Closed path. */}
-                                <DynamicStyling
-                                    {...{
-                                        parentPrefixes: [
-                                            slantDirectionClassName,
-                                            parentPrefix
-                                        ],
-                                        childPrefixes: [
-                                            childPrefix
-                                        ],
-                                        style: {
-                                            d: `path("${pathString}")`
-                                        }
-                                    }}
-                                />
-                            </Fragment>
-                        )
+                                </Fragment>
+                            )
+                        })
                     })
                 })
             })}

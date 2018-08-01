@@ -18,21 +18,16 @@ import {
 const propTypes = {
 
     // From parent.
-    isFloor: PropTypes.bool,
     xIndex: PropTypes.number.isRequired,
     yIndex: PropTypes.number.isRequired
 }
 
-const Cube = (
-    props
-) => {
+const Cube = ({
+    xIndex,
+    yIndex
+}) => {
 
-    const {
-            xIndex,
-            yIndex,
-        } = props,
-
-        xCharIndex = getCharStringForNumber(xIndex)
+    const xCharIndex = getCharStringForNumber(xIndex)
 
     // This component never updates because its parent never updates.
     return (
@@ -40,19 +35,24 @@ const Cube = (
             className={cx(
                 // This class is used to determine face shading.
                 `Cube__x${xCharIndex}`,
-
                 `Cube__x${xCharIndex}y${yIndex}`,
-
                 'absoluteFullContainer'
             )}
         >
-            <CubeFacesStyle {...props} />
+            <CubeFacesStyle
+                {...{
+                    xIndex,
+                    yIndex
+                }}
+            />
 
             {FACES.map(face => (
-                <Face {...props}
+                <Face
                     key={face}
                     {...{
-                        face
+                        face,
+                        xIndex,
+                        yIndex
                     }}
                 />
             ))}

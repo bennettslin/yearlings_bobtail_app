@@ -15,8 +15,7 @@ class Cubes extends Component {
 
     static propTypes = {
         // From parent.
-        yIndex: PropTypes.number.isRequired,
-        isFloor: PropTypes.bool
+        yIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate() {
@@ -25,9 +24,8 @@ class Cubes extends Component {
 
     render() {
         const {
-                yIndex,
-                isFloor
-            } = this.props
+            yIndex
+        } = this.props
 
         return (
             <div
@@ -41,10 +39,6 @@ class Cubes extends Component {
                         yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''
                     }`,
 
-                    `Cubes__${
-                        isFloor ? 'floor' : 'ceiling'
-                    }`,
-
                     'absoluteFullContainer'
                 )}
             >
@@ -52,7 +46,6 @@ class Cubes extends Component {
                     <Cube
                         key={`${xIndex}_${yIndex}`}
                         {...{
-                            isFloor,
                             xIndex,
                             yIndex
                         }}
