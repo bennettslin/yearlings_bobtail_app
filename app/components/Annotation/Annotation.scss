@@ -12,13 +12,13 @@
 
     padding: $js__padding__popupContent__wide;
     border-radius: $borderRadius__wide;
-
-    transition:
-    background-color $animationDuration__default;
 }
 
 .bgColour__annotation {
     background-color: #bdb;
+
+    transition:
+        background-color $animationDuration__default;
 }
 
 .bgColour__annotation__selected {
