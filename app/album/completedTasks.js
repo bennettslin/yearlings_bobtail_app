@@ -3568,4 +3568,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Overview and tips initially show behind cubes. Thought this was fixed, but maybe not? Annotation popup is fine...`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

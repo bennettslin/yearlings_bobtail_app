@@ -17,7 +17,6 @@ class Popup extends Component {
         isFullSize: PropTypes.bool,
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,
-        staticZIndex: PropTypes.bool,
         displaysInOverlay: PropTypes.bool,
         handleCloseClick: PropTypes.func,
         handlePreviousClick: PropTypes.func,
@@ -84,7 +83,6 @@ class Popup extends Component {
                 noFlexCentre,
                 noAbsoluteFull,
                 displaysInOverlay,
-                staticZIndex,
                 handlePreviousClick,
                 handleNextClick,
 
@@ -103,15 +101,10 @@ class Popup extends Component {
 
                     isVisible ? 'Popup__visible' : 'Popup__invisible',
 
-                    /**
-                     * These classes are only to change z-index, so neither is
-                     * necessary if this popup has a static z-index.
-                     */
-                    !staticZIndex && (
-                        isDisplayed ?
-                            'Popup__displayedZIndex' :
-                            'Popup__undisplayedZIndex'
-                    ),
+                    isDisplayed ?
+                        'Popup__displayedZIndex' :
+                        'Popup__undisplayedZIndex',
+
                     isFullSize && 'Popup__fullSize',
 
                     // For animation styling.

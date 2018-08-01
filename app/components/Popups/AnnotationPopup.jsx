@@ -172,7 +172,6 @@ class AnnotationPopup extends Component {
                         isVisible,
                         noAbsoluteFull: inMain,
                         displaysInOverlay: isOverlayingAnnotation,
-                        staticZIndex: !isOverlayingAnnotation,
                         handleNextClick: handleAnnotationNext,
                         handlePreviousClick: handleAnnotationPrevious,
                         handlePopupContainerClick
