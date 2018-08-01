@@ -5,9 +5,7 @@ import cx from 'classnames'
 
 import Pixel from './Pixel'
 
-import { getBitmapMatrix } from '../helpers/bitmapHelper'
-import { BITMAPS } from '../../../../../assets/scene/bitmaps/bitmaps'
-import { getPropsAreShallowEqual } from '../../../../../helpers/generalHelper';
+import { getCharStringForNumber } from '../../../../../helpers/formatHelper'
 
 const mapStateToProps = ({
     canPixelsRender
@@ -19,30 +17,16 @@ class Pixels extends Component {
 
     static propTypes = {
         // Through Redux.
-        canPixelsRender: PropTypes.bool.isRequired
-    }
+        canPixelsRender: PropTypes.bool.isRequired,
 
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            hasMounted: false
-        }
+        // From parent.
+        face: PropTypes.string.isRequired,
+        xIndex: PropTypes.number.isRequired,
+        yIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
         return nextProps.canPixelsRender
-    }
-
-    componentDidUpdate(prevProps) {
-
-        if (!this.state.hasMounted) {
-            if (this.props.canPixelsRender && !prevProps.canPixelsRender) {
-                this.setState({
-                    hasMounted: true
-                })
-            }
-        }
     }
 
     render() {
@@ -52,101 +36,32 @@ class Pixels extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                ...other
+                face,
+                xIndex,
+                yIndex
             } = this.props,
 
-            { hasMounted } = this.state
-
-        return hasMounted && (
-
-            // Render as a separate React component to optimise rendering.
-            <PixelsView
-                {...other}
-            />
-        )
-    }
-}
-
-class PixelsView extends Component {
-
-    static propTypes = {
-        // From parent.
-        isFloor: PropTypes.bool,
-        zIndex: PropTypes.number.isRequired,
-        bitmapKey: PropTypes.string.isRequired,
-        polygonPoints: PropTypes.array.isRequired,
-        facePathString: PropTypes.string.isRequired,
-        relativeZHeight: PropTypes.number,
+            xCharIndex = getCharStringForNumber(xIndex)
 
         /**
-         * Passed purely for shouldComponentUpdate, so that we don't need to
-         * check polygonPoints. Along with isFloor and zIndex, any changes to
-         * these values effectively means that polygonPoints also changed.
+         * Once rendered, this component never updates because its parent never
+         * updates.
          */
-        xIndex: PropTypes.number.isRequired,
-        yIndex: PropTypes.number.isRequired,
-        slantDirection: PropTypes.string
-    }
-
-    shouldComponentUpdate(nextProps) {
-        const propsAreShallowEqual = getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
-
-        return !propsAreShallowEqual
-    }
-
-
-    render() {
-
-        const {
-            bitmapKey,
-            polygonPoints,
-            relativeZHeight,
-            zIndex,
-            isFloor,
-            facePathString
-        } = this.props
-
-        // Get base colour and pixel map.
-        const {
-            base,
-            pixels
-        } = BITMAPS[bitmapKey],
-
-            bitmapMatrix = getBitmapMatrix({
-                pixels,
-                polygonPoints,
-                relativeZHeight,
-                zIndex,
-                isFloor
-            })
-
         return (
             <g className={cx(
-                'Pixels'
+                'Pixels',
+
+                // Used just to find in the DOM.
+                `Pixels__${face}${xCharIndex}${yIndex}`
             )}>
-                {/* Single polygon for the base colour. */}
-                <Pixel
-                    uniqueId="base"
-                    fill={base}
-                    pathString={facePathString}
-                />
+                {[0, 1, 2, 3, 4, 5, 6, 7].map(pixelXIndex => {
 
-                {bitmapMatrix.map((matrixRow, yIndex) => {
+                    return [0, 1, 2, 3, 4, 5, 6, 7].map(pixelYIndex => {
 
-                    return matrixRow.map((matrixObject, xIndex) => {
-
-                        if (matrixObject === null) {
-                            // This pixel location will just show the base colour.
-                            return null
-                        }
-
-                        const uniqueId = `y${yIndex}x${xIndex}`
+                        const uniqueId = `x${pixelXIndex}y${pixelYIndex}`
 
                         return (
-                            <Pixel {...matrixObject}
+                            <Pixel
                                 key={uniqueId}
                                 uniqueId={uniqueId}
                             />

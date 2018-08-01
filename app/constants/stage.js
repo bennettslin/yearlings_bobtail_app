@@ -80,8 +80,8 @@ module.exports = {
     LS_STAGE_ASPECT_RATIO: 1.5,
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE: 1.05,
 
-    // Each stage floor increment is 0.5 feet.
     STAGE_Y_PERCENTAGE,
+
     VANISHING_POINT_Y_PERCENTAGE: 50,
     TILE_Y_PERCENTAGES,
 

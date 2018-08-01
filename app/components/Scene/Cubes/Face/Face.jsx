@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-// import Pixels from './Pixel/Pixels'
+import Pixels from './Pixel/Pixels'
 
-import {
-    getChildClassNameForFaceLogic
-} from './helpers/faceHelper'
+import { getChildClassNameForFaceLogic } from './helpers/faceHelper'
+import { getCharStringForNumber } from '../../../../helpers/formatHelper'
 
 import {
     TILE
@@ -28,7 +27,6 @@ const Face = ({
 }) => {
 
     const
-
         ceilingFaceClassName = getChildClassNameForFaceLogic({
             face,
             isFloor: false,
@@ -41,7 +39,9 @@ const Face = ({
             isFloor: true,
             xIndex,
             yIndex
-        })
+        }),
+
+        xCharIndex = getCharStringForNumber(xIndex)
 
     // This component never updates because its parent never updates.
     return (
@@ -49,35 +49,33 @@ const Face = ({
             'Face',
 
             // Used just to find in the DOM.
-            `Face__${face}`
+            `Face__${face}${xCharIndex}${yIndex}`
         )}>
 
-            {/* Faces without pixels are white by default. */}
+            {/* TODO: This is always white for now, but it should provide the base colour for each bitmap matrix. */}
             <path
                 className={cx(
-                    'Face__path',
                     ceilingFaceClassName,
+                    'Face__path',
                     'Face__undercoat'
                 )}
             />
             <path
                 className={cx(
-                    'Face__path',
                     floorFaceClassName,
+                    'Face__path',
                     'Face__undercoat'
                 )}
             />
 
             {/* Floor and ceiling share the same set of pixels. */}
-            {/* {isFloor && (
-                <Pixels
-                    {...{
-                        face,
-                        xIndex,
-                        yIndex
-                    }}
-                />
-            )} */}
+            <Pixels
+                {...{
+                    face,
+                    xIndex,
+                    yIndex
+                }}
+            />
 
             {/* Single polygon for the overlying shade. */}
             <path
