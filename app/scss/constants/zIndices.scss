@@ -1,5 +1,8 @@
 $zIndex__negative: -1;
 
+// This should be the lowest shown element.
+$zIndex__theatre: 0;
+
 /**
  * Allow scene cubes to own the first 12 * 6, starting from 0. Unfortunately,
  * this is necessary because the cubes cannot get their stacking order from
@@ -7,10 +10,10 @@ $zIndex__negative: -1;
  * a left cube overlaps a right one, and vice versa.
  */
 
-// This should be the lowest shown element.
-$zIndex__theatre: 72;
+// The theatre floor then sits above the scene cubes.
+$zIndex__theatreFloor: 72;
 
-$zIndex__popupContainer: $zIndex__theatre + 1;
+$zIndex__popupContainer: $zIndex__theatreFloor + 1;
 
 $zIndex__adminToggle: $zIndex__popupContainer + 1;
 
