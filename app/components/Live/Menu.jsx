@@ -57,7 +57,6 @@ Menu = ({
                     'Menu__responsive',
                     'width__mainColumn',
                     'absoluteFullContainer'
-                    // 'boxShadow__popupView'
                 )}
                 style={{
                     marginLeft: menuMarginInOverlay,

@@ -2,11 +2,6 @@ module.exports = [
 
     // Important features.
     {
-        taskName: `Title toggle should not have a variable width. This solution should also make animating to overlay less janky.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Have setIntervals on audio display timer rather than setting from state.`,
         workedHours: 0,
         neededHours: 2

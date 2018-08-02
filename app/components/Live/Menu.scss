@@ -1,10 +1,12 @@
 /**
  * Needed by JavaScript to calculate scores tips in main breakpoints.
  */
- $js__maxWidth__childAudio: 720px; // Arbitrary.
- $js__minWidth__childTitle: 80px; // Arbitrary.
+$js__minWidth__childAudio: 720px; // Arbitrary.
+$maxWidth__childAudio: 1000px; // Arbitrary.
 
- $maxWidth__childTitle: 200px; // Arbitrary.
+$js__width__childTitle: 120px; // Arbitrary.
+
+$width__childTitle__phone: 80px;
 
 .Menu {
     height: $js__height__menu;
@@ -60,10 +62,7 @@
 .MenuChild__title {
     position: relative;
 
-    flex-grow: 1;
-
-    min-width: $js__minWidth__childTitle;
-    max-width: $maxWidth__childTitle;
+    width: $js__width__childTitle;
 
     .RM__twoRowMenu
     & {
@@ -81,8 +80,8 @@
     // Audio should shrink at a slower rate than title.
     flex-grow: 10;
 
-    min-width: $js__maxWidth__childAudio;
-    max-width: $js__maxWidth__childAudio;
+    min-width: $js__minWidth__childAudio;
+    max-width: $maxWidth__childAudio;
 
     transition: margin $animationDuration__default;
 
@@ -185,15 +184,13 @@
 .widths__hiddenInOverlay {
 
     transition:
-        opacity $animationDuration__slow,
-        min-width $animationDuration__slow,
-        max-width $animationDuration__slow;
+        width $animationDuration__slow,
+        opacity $animationDuration__slow;
 
+    // Specific selector to override access letter opacity.
     .RM__overlayShown
     & {
         width: 0;
-        min-width: 0;
-        max-width: 0;
         opacity: 0;
     }
 }

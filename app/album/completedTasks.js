@@ -3583,4 +3583,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Title toggle should not have a variable width. This solution should also make animating to overlay less janky.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

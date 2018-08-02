@@ -7,6 +7,12 @@ $height__audioBanner__display:
     min-width: $js__minWidth__audioBanner;
     line-height: 1em;
 
+    border: 4px solid #040;
+    border-radius: $borderRadius__wide;
+
+    overflow: hidden;
+    box-sizing: border-box;
+
     background-color: #8b8;
 
     .RM__twoRowMenu
@@ -15,23 +21,14 @@ $height__audioBanner__display:
     }
 }
 
-.AudioBannerDisplay {
-    box-sizing: border-box;
-    padding: 0 5px;
-
-    height: $height__audioBanner__display;
-    justify-content: space-between;
-
-    .RM__twoRowMenu
-    & {
-        font-size: 0.85em;
-    }
-}
-
 .AudioBanner__belowMenu {
-    position: absolute;
     top: $js__height__menu;
-    height: $js__height__banner__twoRowMenu;
+    width: calc(100% - #{$js__margin__thin * 2});
+    height:
+        $js__height__banner__twoRowMenu
+        - $js__margin__thin;
+
+    margin: 0 $js__margin__thin $js__margin__thin;
 
     transition:
         height $animationDuration__default;
@@ -46,5 +43,18 @@ $height__audioBanner__display:
     .RM__song.RM__lyricExpanded
     & {
         height: $js__height__banner__twoRowMenu__truncated;
+    }
+}
+
+.AudioBannerDisplay {
+    box-sizing: border-box;
+    padding: 0 5px;
+
+    height: $height__audioBanner__display;
+    justify-content: space-between;
+
+    .RM__twoRowMenu
+    & {
+        font-size: 0.85em;
     }
 }

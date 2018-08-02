@@ -27,6 +27,10 @@
 
 .TitleToggle__inAudio {
 
-    min-width: $js__minWidth__childTitle;
-    max-width: $maxWidth__childTitle;
+    width: $js__width__childTitle;
+
+    .RM__phone
+    & {
+        width: $width__childTitle__phone;
+    }
 }

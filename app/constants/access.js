@@ -21,7 +21,7 @@ const
     OVERVIEW_TOGGLE_KEY = 'b',
     SCORE_TOGGLE_KEY = 's',
     TIPS_TOGGLE_KEY = 't',
-    TITLE_TOGGLE_KEY = 'i'
+    TITLE_TOGGLE_KEY = 'y'
 
 module.exports = {
     CAPS_LOCK: 'CapsLock',
