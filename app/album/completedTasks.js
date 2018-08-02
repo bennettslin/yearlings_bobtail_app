@@ -3573,4 +3573,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Cubes rendering through CSS logic!`,
+        workedHours: 15,
+        neededHours: 15
+    },
+    {
+        taskName: `Access navigation of nav doesn't work with heightless lyric?`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

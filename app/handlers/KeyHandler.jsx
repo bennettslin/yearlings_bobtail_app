@@ -300,8 +300,11 @@ class KeyHandler extends Component {
                 keyWasRegistered = this._handleDotsNavigation(e, keyName)
 
             // We're in nav section.
-            } else if (!selectedCarouselNavIndex &&
-                       !isHeightlessLyricColumn && !isLyricExpanded && !isVerseInteractivated) {
+            } else if (
+                !selectedCarouselNavIndex &&
+                !isLyricExpanded &&
+                !isVerseInteractivated
+            ) {
 
                 ({ annotationIndexWasAccessed,
                     keyWasRegistered } = this._handleNavNavigation(e, keyName))

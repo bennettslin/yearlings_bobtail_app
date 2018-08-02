@@ -2,22 +2,12 @@ module.exports = [
 
     // Important features.
     {
-        taskName: `Cubes rendering through CSS logic!`,
-        workedHours: 14,
-        neededHours: 20
-    },
-    {
         taskName: `Title toggle should not have a variable width. This solution should also make animating to overlay less janky.`,
         workedHours: 0,
         neededHours: 3
     },
     {
         taskName: `Have setIntervals on audio display timer rather than setting from state.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Access navigation of nav doesn't work with heightless lyric?`,
         workedHours: 0,
         neededHours: 2
     },
