@@ -9,11 +9,14 @@ import { getCharStringForNumber } from '../../../helpers/formatHelper'
 import {
     LEFT,
     RIGHT,
-    SLANT_DIRECTIONS,
+    SLANT_DIRECTIONS
+} from '../sceneConstants'
+
+import {
     DEFAULT_X_AXIS_Z_INDICES,
     SLANTED_LEFT_X_AXIS_Z_INDICES,
     SLANTED_RIGHT_X_AXIS_Z_INDICES
-} from '../sceneConstants'
+} from './cubesConstants'
 
 import {
     getClassNameForSlantDirection
