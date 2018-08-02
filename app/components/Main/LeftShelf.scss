@@ -42,6 +42,12 @@ $height___overviewToggle__phone:
     display: flex;
     flex-direction: column;
 
+    /**
+     * Allow the left shelf not to lose stacking order despite transitioning
+     * opacity. Must be high enough to override nav toggle as well.
+     */
+    z-index: $zIndex__navCustomSubfield;
+
     .RM__mobileNotPhone
     & {
         flex-direction: column-reverse;
