@@ -3,30 +3,17 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import AnnotationTitle from './AnnotationTitle'
-import AnnotationAccess from '../AnnotationAccess'
 
 const propTypes = {
     // From parent.
-    inCarousel: PropTypes.bool,
-    isAccessed: PropTypes.bool,
-    isSelected: PropTypes.bool.isRequired,
-    annotationDotKeys: PropTypes.object.isRequired,
-    annotationTitle: PropTypes.string.isRequired,
-    accessibleAnnotationAnchorsLength: PropTypes.number,
-    handleTitleClick: PropTypes.func
+    inCarousel: PropTypes.bool
 },
 
 AnnotationHeader = ({
 
     inCarousel,
-    isAccessed,
-    isSelected,
-    annotationDotKeys,
-    annotationTitle,
-    accessibleAnnotationAnchorsLength,
-    handleTitleClick
 
-}) => (
+...other }) => (
     <div className={cx(
         'AnnotationHeader',
 
@@ -35,21 +22,7 @@ AnnotationHeader = ({
 
         'absoluteFullContainer'
     )}>
-        <AnnotationTitle
-            {...{
-                isAccessed,
-                isSelected,
-                annotationDotKeys,
-                annotationTitle,
-                handleTitleClick
-            }}
-        />
-        <AnnotationAccess
-            {...{
-                isSelected,
-                accessibleAnnotationAnchorsLength
-            }}
-        />
+        <AnnotationTitle {...other} />
     </div>
 )
 

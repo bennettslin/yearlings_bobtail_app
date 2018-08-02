@@ -12,6 +12,7 @@ const accessIconsPropTypes = {
     inAnnotation: PropTypes.bool,
     inLyric: PropTypes.bool,
     inSlider: PropTypes.bool,
+    noAbsolute: PropTypes.bool,
     showIfAccessed: PropTypes.bool,
     accessKeys: PropTypes.arrayOf(
         PropTypes.string.isRequired
@@ -24,6 +25,7 @@ AccessLetters = ({
     inAnnotation,
     inLyric,
     inSlider,
+    noAbsolute,
     showIfAccessed,
     accessKeys
 
@@ -33,6 +35,7 @@ AccessLetters = ({
         inAnnotation && 'AccessLetters__inAnnotation',
         inLyric && 'AccessLetters__inLyric',
         inSlider && 'AccessLetters__inSlider',
+        !noAbsolute && 'AccessLetters__absolute',
         accessIconsName && `AccessLetters__${accessIconsName}`
     )}>
         {accessKeys.map(accessKey => {

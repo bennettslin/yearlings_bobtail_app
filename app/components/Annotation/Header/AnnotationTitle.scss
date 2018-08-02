@@ -1,7 +1,8 @@
 .AnnotationTitle {
     text-align: center;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
+
+    display: flex;
+    align-items: flex-end;
 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

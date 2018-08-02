@@ -3,8 +3,11 @@
 @import "./AccessIcon";
 
 .AccessLetters {
-    position: absolute;
     display: flex;
 
     z-index: $zIndex__lyricChild__topMost;
+}
+
+.AccessLetters__absolute {
+    position: absolute;
 }

@@ -5,6 +5,8 @@ import cx from 'classnames'
 import DotAnchor from '../../Anchor/DotAnchor/DotAnchor'
 import TextAnchor from '../../Anchor/TextAnchor/TextAnchor'
 
+import AnnotationAccess from './AnnotationAccess'
+
 import { IS_DOT_CARD } from '../../../constants/lyrics'
 
 const annotationTitlePropTypes = {
@@ -13,16 +15,17 @@ const annotationTitlePropTypes = {
     isSelected: PropTypes.bool.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
     annotationTitle: PropTypes.string.isRequired,
+    accessibleAnnotationAnchorsLength: PropTypes.number,
     handleTitleClick: PropTypes.func
 },
 
 AnnotationTitle = ({
 
-    // inCarousel,
     isSelected,
     isAccessed,
     annotationDotKeys,
     annotationTitle,
+    accessibleAnnotationAnchorsLength,
     handleTitleClick
 
 }) => (
@@ -34,8 +37,7 @@ AnnotationTitle = ({
         isSelected &&
             'bgColour__annotation__selected',
 
-        'fontSize__title',
-        'flexCentreContainer'
+        'fontSize__title'
     )}>
         {annotationTitle === IS_DOT_CARD ? (
             <DotAnchor
@@ -54,6 +56,12 @@ AnnotationTitle = ({
                 handleAnchorClick={handleTitleClick}
             />
         )}
+        <AnnotationAccess
+            {...{
+                isSelected,
+                accessibleAnnotationAnchorsLength
+            }}
+        />
     </div>
 )
 

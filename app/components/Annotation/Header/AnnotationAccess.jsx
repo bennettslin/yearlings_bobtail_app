@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import AccessLetters from '../AccessLetter/AccessLetters'
+import AccessLetters from '../../AccessLetter/AccessLetters'
 
 import {
     ARROW_UP,
     ARROW_DOWN
-} from '../../constants/access'
+} from '../../../constants/access'
 
 class LyricAccess extends Component {
 
@@ -26,10 +26,11 @@ class LyricAccess extends Component {
 
             showUpDown = isSelected && accessibleAnnotationAnchorsLength > 1
 
-        return (
+        return showUpDown && (
             <AccessLetters
                 accessIconsName="annotationUpDown"
                 inAnnotation
+                noAbsolute
                 showIfAccessed={showUpDown}
                 accessKeys={[
                     ARROW_UP,
