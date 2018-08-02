@@ -166,7 +166,6 @@ class AnnotationPopup extends Component {
                     )}
                     showArrows
                     bounceAnimate
-                    hasWidePadding
                     {...{
                         popupName: 'Annotation',
                         isVisible,

@@ -84,10 +84,12 @@ PopupView = ({
                 className={cx(
                     'PopupViewContent',
                     `${popupName}PopupViewContent`,
-                    { 'PopupViewContent__narrowPadding': hasNarrowPadding,
-                      'PopupViewContent__widePadding': hasWidePadding },
+                    {
+                        'PopupViewContent__narrowPadding': hasNarrowPadding,
+                        'PopupViewContent__widePadding': hasWidePadding
+                    },
 
-                    !isFullSize && 'PopupViewContent__scrollIfFull',
+                    !isFullSize && 'PopupViewContent__notFullSize',
 
                     'boxShadow__popupView'
                 )}

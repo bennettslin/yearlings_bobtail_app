@@ -82,10 +82,10 @@
     background-color: $bgColour__afterSelected;
 }
 
-.PopupViewContent__scrollIfFull {
+.PopupViewContent__notFullSize {
 
     // Establish max height for popups that are not full size.
-    overflow: scroll;
+    // overflow: scroll;
     max-height: calc(100vh - #{$js__height__menu} - #{$js__margin__thin} * 2);
 
     .RM__phone

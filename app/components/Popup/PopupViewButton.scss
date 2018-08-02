@@ -83,6 +83,11 @@ $offset__popupButton: 0.5;
         top: calc(50% - #{$js__length__iconLarge} * 0.5);
     }
 
+    .RM__desktop
+    &.PopupViewButton__notInFullSize {
+        top: $js__padding__popupContent__wide;
+    }
+
     .RM__tablet
     &.PopupViewButton__inFullSize,
 
@@ -114,8 +119,6 @@ $offset__popupButton: 0.5;
         left: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .RM__desktop
-    &.PopupViewButton__notInFullSize,
     .RM__phone
     &,
     .RM__mobile
@@ -151,8 +154,6 @@ $offset__popupButton: 0.5;
         right: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .RM__desktop
-    &.PopupViewButton__notInFullSize,
     .RM__phone
     &,
     .RM__mobile

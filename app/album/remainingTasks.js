@@ -7,6 +7,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Nav breakpoints might be off?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Important bugs to fix.
      */
@@ -186,7 +192,7 @@ module.exports = [
      */
     {
         taskName: `Finalise UI of carousel annotations. Make the navigation panels a similar style, whatever that means?`,
-        workedHours: 6,
+        workedHours: 7,
         neededHours: 8
     },
 
