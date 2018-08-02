@@ -2,7 +2,8 @@ import { getCharStringForNumber } from '../../../../../helpers/formatHelper'
 
 import {
     CEILING,
-    FLOOR
+    FLOOR,
+    TILE
 } from '../../../sceneConstants'
 
 export const getChildClassNameForFaceLogic = ({
@@ -21,5 +22,26 @@ export const getChildClassNameForFaceLogic = ({
         getCharStringForNumber(xIndex)
     }${
         yIndex
+    }`
+}
+
+export const getChildClassNameForPixelLogic = ({
+    face,
+    pixelXIndex,
+    pixelYIndex,
+    bitmapZIndex
+}) => {
+
+    // "Child pixel faceIndex, xIndex, yIndex, bitmapZIndex."
+    return `Px${
+        face[0].toUpperCase()
+    }${
+        pixelXIndex
+    }${
+        pixelYIndex
+    }${
+        face === TILE ?
+        '' :
+        getCharStringForNumber(bitmapZIndex * 2)
     }`
 }

@@ -3,7 +3,7 @@ module.exports = [
     // Important features.
     {
         taskName: `Cubes rendering through CSS logic!`,
-        workedHours: 10,
+        workedHours: 14,
         neededHours: 20
     },
     {

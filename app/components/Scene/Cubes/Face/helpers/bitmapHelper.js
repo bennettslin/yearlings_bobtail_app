@@ -1,6 +1,7 @@
 import { getArrayOfLength } from '../../../../../helpers/generalHelper'
 
 import { CUBE_Z_AXIS_LENGTH } from '../../cubeIndexConstants'
+import { TILE } from '../../../sceneConstants'
 
 const MATRIX_LENGTH = 8,
     MATRIX_INDICES_ARRAY = getArrayOfLength(MATRIX_LENGTH),
@@ -8,11 +9,8 @@ const MATRIX_LENGTH = 8,
 
 export const getBitmapMatrix = ({
 
-    pixels,
-    polygonPoints,
-    relativeZHeight,
-    zIndex,
-    isFloor
+    face,
+    polygonPoints
 
 }) => {
     const
@@ -29,35 +27,30 @@ export const getBitmapMatrix = ({
          * Face tiles do not pass a relative zIndex, since their height is
          * always static, not dynamic.
          */
-        isTileFace = isNaN(relativeZHeight),
-
-        // Base the side point increments on the actual height.
-        actualZHeightIndex = isFloor ?
-            zIndex : CUBE_Z_AXIS_LENGTH - zIndex,
-        actualZHeight = isTileFace ?
-            MATRIX_LENGTH : MATRIX_LENGTH * (actualZHeightIndex / 2),
-        leftmostXIncrement = (bottomLeft.x - topLeft.x) / actualZHeight,
-        leftmostYIncrement = (bottomLeft.y - topLeft.y) / actualZHeight,
-        rightmostXIncrement = (bottomRight.x - topRight.x) / actualZHeight,
-        rightmostYIncrement = (bottomRight.y - topRight.y) / actualZHeight,
+        isTileFace = face === TILE,
 
         /**
          * Determine the number of pixels that make up the height. If it's a
          * tile face, this value is constant. If it's a front or side face,
          * then this value is determined by the maximum face height.
          */
-        matrixHeightLength = isTileFace ?
+        matrixHeight = isTileFace ?
             MATRIX_LENGTH :
 
             /**
              * When relative zIndex is 2, the face is close enough to a square.
              * It's not exact, but this is fine for now.
              */
-            MATRIX_LENGTH * (relativeZHeight / 2),
+            MATRIX_LENGTH * (CUBE_Z_AXIS_LENGTH / 2),
 
         coordinatesHeightArray = isTileFace ?
             COORDINATES_ARRAY :
-            getArrayOfLength(Math.ceil(matrixHeightLength) + 1),
+            getArrayOfLength(Math.ceil(matrixHeight) + 1),
+
+        leftmostXIncrement = (bottomLeft.x - topLeft.x) / matrixHeight,
+        leftmostYIncrement = (bottomLeft.y - topLeft.y) / matrixHeight,
+        rightmostXIncrement = (bottomRight.x - topRight.x) / matrixHeight,
+        rightmostYIncrement = (bottomRight.y - topRight.y) / matrixHeight,
 
         // Establish side points.
         outermostPoints = coordinatesHeightArray.map(yIndex => {
@@ -67,19 +60,17 @@ export const getBitmapMatrix = ({
                 return {
 
                     /**
-                     * Floor cubes go from top to bottom, ceiling cubes go from
-                     * bottom to top.
+                     * Go from bottom to top.
                      */
-                    leftmost: isFloor ? bottomLeft : topLeft,
-                    rightmost: isFloor ? bottomRight : topRight
+                    leftmost: topLeft,
+                    rightmost: topRight
                 }
 
             } else {
 
-                // Again, floor and ceiling cubes go in reverse directions.
-                const startLeftPoint = isFloor ? topLeft : bottomLeft,
-                    startRightPoint = isFloor ? topRight : bottomRight,
-                    multiplier = isFloor ? yIndex : -yIndex
+                const startLeftPoint = bottomLeft,
+                    startRightPoint = bottomRight,
+                    multiplier = -yIndex
 
                 return {
                     leftmost: {
@@ -117,22 +108,10 @@ export const getBitmapMatrix = ({
 
         bitmapHeightArray = isTileFace ?
             MATRIX_INDICES_ARRAY :
-            getArrayOfLength(Math.ceil(matrixHeightLength))
+            getArrayOfLength(Math.ceil(matrixHeight))
 
     return bitmapHeightArray.map(yIndex => (
         MATRIX_INDICES_ARRAY.map(xIndex => {
-
-            // Ceilings will fill pixels from bottom up.
-            const moduloYIndex = isFloor ?
-                    yIndex % MATRIX_LENGTH :
-                    MATRIX_LENGTH - yIndex % MATRIX_LENGTH - 1,
-
-                fill = pixels[moduloYIndex][xIndex]
-
-            if (fill === null) {
-                // This pixel location will just show the base colour.
-                return null
-            }
 
             const polygonPoints = [
                 coordinatesMatrix[yIndex][xIndex],
@@ -142,7 +121,6 @@ export const getBitmapMatrix = ({
             ]
 
             return {
-                fill,
                 polygonPoints
             }
         })

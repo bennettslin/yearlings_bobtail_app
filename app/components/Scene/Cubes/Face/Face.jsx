@@ -41,7 +41,8 @@ const Face = ({
             yIndex
         }),
 
-        xCharIndex = getCharStringForNumber(xIndex)
+        xCharIndex = getCharStringForNumber(xIndex),
+        faceInitial = face[0].toUpperCase()
 
     // This component never updates because its parent never updates.
     return (
@@ -49,7 +50,7 @@ const Face = ({
             'Face',
 
             // Used just to find in the DOM.
-            `Face__${face}${xCharIndex}${yIndex}`
+            `Face__${faceInitial}${xCharIndex}${yIndex}`
         )}>
 
             {/* TODO: This is always white for now, but it should provide the base colour for each bitmap matrix. */}

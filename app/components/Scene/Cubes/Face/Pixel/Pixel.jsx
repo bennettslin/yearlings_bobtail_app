@@ -6,28 +6,21 @@ import cx from 'classnames'
 
 const propTypes = {
     className: PropTypes.any,
-    uniqueId: PropTypes.string.isRequired,
-    fill: PropTypes.string,
-    customFill: PropTypes.string,
-    polygonPoints: PropTypes.array,
-    pathString: PropTypes.string
+    identifier: PropTypes.string.isRequired
 }
 
 const Pixel = ({
     className,
-    uniqueId,
-    fill,
-    customFill,
+    identifier,
     pathString
 
-}) => Boolean(fill || customFill) && (
+}) => (
     <path
         className={cx(
             'Pixel',
-            `Pixel__${uniqueId}`,
+            identifier,
             className
         )}
-        fill={fill ? `#${fill}` : customFill}
         {...pathString && {
             d: pathString
         }}

@@ -6,6 +6,15 @@ import cx from 'classnames'
 import Pixel from './Pixel'
 
 import { getCharStringForNumber } from '../../../../../helpers/formatHelper'
+import { getChildClassNameForPixelLogic } from '../helpers/faceHelper'
+
+import {
+    BITMAP_MATRIX_INDICES
+} from '../../cubeIndexConstants'
+
+import {
+    TILE
+} from '../../../sceneConstants'
 
 const mapStateToProps = ({
     canPixelsRender
@@ -41,7 +50,20 @@ class Pixels extends Component {
                 yIndex
             } = this.props,
 
-            xCharIndex = getCharStringForNumber(xIndex)
+            isTile = face === TILE,
+
+            xCharIndex = getCharStringForNumber(xIndex),
+
+            bitmapZIndices =
+                isTile ?
+                    [0] :
+
+                    /**
+                     * I'm being lazy here. A full bitmap matrix takes up the
+                     * height of two zIndices, so coincidentally there are as
+                     * many bitmap zIndices as there are bitmap matrix indices.
+                     */
+                    BITMAP_MATRIX_INDICES
 
         /**
          * Once rendered, this component never updates because its parent never
@@ -52,22 +74,36 @@ class Pixels extends Component {
                 'Pixels',
 
                 // Used just to find in the DOM.
-                `Pixels__${face}${xCharIndex}${yIndex}`
+                `Pixels__${
+                    face[0].toUpperCase()
+                }${
+                    xCharIndex
+                }${
+                    yIndex
+                }`
             )}>
-                {[0, 1, 2, 3, 4, 5, 6, 7].map(pixelXIndex => {
+                {bitmapZIndices.map(bitmapZIndex => (
+                    BITMAP_MATRIX_INDICES.map(pixelYIndex => (
+                        BITMAP_MATRIX_INDICES.map(pixelXIndex => {
 
-                    return [0, 1, 2, 3, 4, 5, 6, 7].map(pixelYIndex => {
+                            const identifier = getChildClassNameForPixelLogic({
+                                face,
+                                pixelXIndex,
+                                pixelYIndex,
+                                bitmapZIndex
+                            })
 
-                        const uniqueId = `x${pixelXIndex}y${pixelYIndex}`
-
-                        return (
-                            <Pixel
-                                key={uniqueId}
-                                uniqueId={uniqueId}
-                            />
-                        )
-                    })
-                })}
+                            return (
+                                <Pixel
+                                    key={identifier}
+                                    {...{
+                                        identifier
+                                    }}
+                                />
+                            )
+                        })
+                    ))
+                ))}
             </g>
         )
     }
