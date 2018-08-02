@@ -1,5 +1,4 @@
 .VerseTracker {
-    background-color: rgba(200, 150, 250, 0.4);
 
     .RM__isPaused
     & {
@@ -9,21 +8,34 @@
 }
 
 .VerseTracker__inSlider {
-    width: 0;
+    width: 200%;
+    left: -100%;
 
     .RM__isPlaying
     &.VerseTracker__selected {
-        border-right: 1px solid rgba(200, 150, 250, 0.7);
-        width: 100%;
+        left: 0;
+
+        // TODO: Improve this styling.
+        background: linear-gradient(
+            90deg,
+            black,
+            transparent
+        );
     }
 }
 
 .VerseTracker__inLyric {
-    height: 0;
+    height: 200%;
+    top: -100%;
 
     .RM__isPlaying
     &.VerseTracker__selected {
-        border-bottom: 1px solid rgba(200, 150, 250, 0.7);
-        height: 100%;
+        top: 0;
+
+        // TODO: Improve this styling.
+        background: linear-gradient(
+            black,
+            transparent
+        );
     }
 }

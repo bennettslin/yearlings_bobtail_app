@@ -1,6 +1,6 @@
 // Component to show the played audio time.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -16,46 +16,56 @@ const mapStateToProps = ({
     selectedTimePlayed
 })
 
-const audioTimerPropTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedTimePlayed: PropTypes.number.isRequired,
+class AudioTimer extends Component {
 
-    // From parent.
-    isTitleTimer: PropTypes.bool
-},
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedTimePlayed: PropTypes.number.isRequired,
 
-AudioTimer = ({
+        // From parent.
+        isTitleTimer: PropTypes.bool
+    }
 
-    isTitleTimer,
-    selectedSongIndex,
-    selectedTimePlayed
+    render() {
 
-}) => {
-    const isLogue = getSongIsLogue(selectedSongIndex),
+        const {
+                isTitleTimer,
+                selectedSongIndex,
+                selectedTimePlayed
+            } = this.props,
 
-        { base,
-          jiffy } = getFormattedTime(selectedTimePlayed, true)
+            isLogue = getSongIsLogue(selectedSongIndex),
 
-    return !isLogue && (
-        <div className={cx(
-            'AudioTimer',
-            { 'AudioTimer__titleTimer': isTitleTimer,
-              'absoluteFullContainer': isTitleTimer },
-            'flexCentreContainer'
-        )}>
-            <div className="AudioTimer__child">
-                <span className="AudioTimer__base">
-                    {base}
-                </span>
-                <span className="AudioTimer__jiffy">
-                    {jiffy}
-                </span>
+            {
+                base,
+                jiffy
+            } = getFormattedTime(selectedTimePlayed, true)
+
+        return !isLogue && (
+
+            <div className={cx(
+                'AudioTimer',
+
+                {
+                    'AudioTimer__titleTimer': isTitleTimer,
+                    'absoluteFullContainer': isTitleTimer
+                },
+
+                'flexCentreContainer'
+            )}>
+                <div className="AudioTimer__child">
+
+                    <span className="AudioTimer__base">
+                        {base}
+                    </span>
+                    <span className="AudioTimer__jiffy">
+                        {jiffy}
+                    </span>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
-
-AudioTimer.propTypes = audioTimerPropTypes
 
 export default connect(mapStateToProps)(AudioTimer)
