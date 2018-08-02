@@ -1,5 +1,7 @@
-import { LS_STAGE_ASPECT_RATIO,
-         STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE } from '../constants/stage'
+import {
+    LS_STAGE_ASPECT_RATIO,
+    STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
+} from '../constants/stage'
 
 import { PHONE_CLASS,
          LS_MINI_CLASS,

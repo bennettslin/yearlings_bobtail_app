@@ -5,11 +5,8 @@ import { connect } from 'react-redux'
 
 import { selectAdminIndex } from '../redux/actions/storage'
 
-import { getCharStringForNumber } from '../helpers/formatHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import LogHelper from '../helpers/logHelper'
-
-import { CUBE_Y_AXIS_LENGTH } from '../constants/stage'
 
 class DebugManager extends Component {
 
@@ -45,13 +42,6 @@ class DebugManager extends Component {
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.t = LogHelper.logStorage.bind(LogHelper)
-
-        // Quick and easy way to get a particular cube.
-        window.getCube = (yIndex, xIndex, isFloor = true) => {
-            return document.querySelector(
-                `.Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}.Cubes__${isFloor ? 'floor' : 'ceiling'} .Cube__x${getCharStringForNumber(xIndex)}`
-            )
-        }
     }
 
     toggleAdmin(

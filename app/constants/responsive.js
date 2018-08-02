@@ -278,8 +278,6 @@ module.exports = {
 
     LS_HEIGHT_NAV,
 
-    LS_STAGE_ASPECT_RATIO: 1.2,
-
     LS_WIDTH_GOLDEN_CORD,
     LS_WIDTH_UNCANNY_VALLEY,
 
