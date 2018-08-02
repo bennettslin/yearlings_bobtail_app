@@ -8,7 +8,7 @@ import FloorSeat from './FloorSeat'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
 
-import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../../../constants/stage'
+import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../theatreConstants'
 
 const mapStateToProps = ({
     canTheatreRender,

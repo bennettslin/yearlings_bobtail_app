@@ -10,7 +10,7 @@ import CeilingRafter from './CeilingRafter'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
 
-import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../../../constants/stage'
+import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../theatreConstants'
 
 const mapStateToProps = ({
     canTheatreRender,

@@ -94,9 +94,5 @@ module.exports = {
     CUBE_Z_INDICES,
 
     SLANTED_TILE_Y_PERCENTAGES,
-    SLANTED_TILE_X_UNITS_LENGTH: 32,
-
-    BALCONY_WIDTH_TO_HEIGHT_RATIO: 0.2, // How wide is the balcony.
-    RAFTER_HEIGHT_TO_WIDTH_RATIO: 0.02, // How tall is the rafter.
-    SEAT_HEIGHT_TO_WIDTH_RATIO: 1.55 // How tall is the seat.
+    SLANTED_TILE_X_UNITS_LENGTH: 32
 }

@@ -8,7 +8,7 @@ import WallBalcony from './WallBalcony'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
 
-import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../../../constants/stage'
+import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../theatreConstants'
 
 const mapStateToProps = ({
     canTheatreRender,
