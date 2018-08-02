@@ -1,6 +1,8 @@
-import { FRONT,
-         SIDE,
-         TILE } from '../../../constants'
+import {
+    FRONT,
+    SIDE,
+    TILE
+} from '../../../sceneConstants'
 
 export const getPathString = (polygonPoints) => {
     return polygonPoints.map(({ x, y }, index) => {

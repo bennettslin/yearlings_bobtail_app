@@ -9,7 +9,7 @@ import { getCharStringForNumber } from '../../../../helpers/formatHelper'
 
 import {
     TILE
-} from '../../constants'
+} from '../../sceneConstants'
 
 const propTypes = {
     // From parent.

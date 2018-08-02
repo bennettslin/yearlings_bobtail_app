@@ -11,7 +11,7 @@ import {
     FLOOR,
     FACES,
     TILE
-} from '../constants'
+} from '../sceneConstants'
 
 import { getCubeCornerPercentages } from '../sceneHelper'
 import {

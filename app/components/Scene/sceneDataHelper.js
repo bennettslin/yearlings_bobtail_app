@@ -9,7 +9,7 @@ import {
 
 import {
     LEVELS
-} from './constants'
+} from './sceneConstants'
 
 import {
     CUBE_X_INDICES,

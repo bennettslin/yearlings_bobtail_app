@@ -3,7 +3,7 @@ import { getCharStringForNumber } from '../../../../../helpers/formatHelper'
 import {
     CEILING,
     FLOOR
-} from '../../../constants'
+} from '../../../sceneConstants'
 
 export const getChildClassNameForFaceLogic = ({
     face,

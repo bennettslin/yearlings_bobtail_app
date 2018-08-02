@@ -13,7 +13,7 @@ import {
     DEFAULT_X_AXIS_Z_INDICES,
     SLANTED_LEFT_X_AXIS_Z_INDICES,
     SLANTED_RIGHT_X_AXIS_Z_INDICES
-} from '../constants'
+} from '../sceneConstants'
 
 import {
     getClassNameForSlantDirection
