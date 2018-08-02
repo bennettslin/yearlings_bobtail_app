@@ -9,7 +9,7 @@ import Cube from './Cube'
 import {
     CUBE_X_INDICES,
     CUBE_Y_AXIS_LENGTH
-} from '../../../constants/stage'
+} from './cubeIndexConstants'
 
 class Cubes extends Component {
 

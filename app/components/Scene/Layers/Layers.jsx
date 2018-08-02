@@ -6,7 +6,7 @@ import cx from 'classnames'
 import Layer from './Layer'
 import CubesStyle from '../Cubes/CubesStyle'
 
-import { CUBE_Y_INDICES } from '../../../constants/stage'
+import { CUBE_Y_INDICES } from '../Cubes/cubeIndexConstants'
 
 class Layers extends Component {
 

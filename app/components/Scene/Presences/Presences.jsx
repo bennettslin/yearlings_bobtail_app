@@ -19,7 +19,7 @@ import Presence from './Presence'
 
 import { getPresencesForCubes } from '../sceneDataHelper'
 
-import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
+import { CUBE_Y_AXIS_LENGTH } from '../Cubes/cubeIndexConstants'
 
 const mapStateToProps = ({
     canPresencesRender,

@@ -5,6 +5,7 @@ import Style from '../../Style/Style'
 import DynamicStyling from '../../Style/DynamicStyling'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
+import { getClassNameForSlantDirection } from '../sceneDataHelper'
 
 import {
     LEFT,
@@ -13,20 +14,13 @@ import {
 } from '../sceneConstants'
 
 import {
+    CUBE_X_INDICES,
+    CUBE_Y_INDICES,
+    CUBE_X_AXIS_LENGTH,
     DEFAULT_X_AXIS_Z_INDICES,
     SLANTED_LEFT_X_AXIS_Z_INDICES,
     SLANTED_RIGHT_X_AXIS_Z_INDICES
-} from './cubesConstants'
-
-import {
-    getClassNameForSlantDirection
-} from '../sceneDataHelper'
-
-import {
-    CUBE_X_INDICES,
-    CUBE_Y_INDICES,
-    CUBE_X_AXIS_LENGTH
-} from '../../../constants/stage'
+} from './cubeIndexConstants'
 
 const CubesStyle = () => {
 

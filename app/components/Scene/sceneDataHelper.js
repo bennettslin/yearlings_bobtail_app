@@ -14,7 +14,7 @@ import {
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES
-} from '../../constants/stage'
+} from './Cubes/cubeIndexConstants'
 
 export const getCubesForKey = (cubesKey) => {
 

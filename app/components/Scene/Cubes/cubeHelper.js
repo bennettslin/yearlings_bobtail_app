@@ -4,7 +4,7 @@ import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Y_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
-} from '../../../constants/stage'
+} from './cubeIndexConstants'
 
 const midXIndex = CUBE_X_AXIS_LENGTH / 2
 

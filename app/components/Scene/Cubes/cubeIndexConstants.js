@@ -1,9 +1,16 @@
-import {
-    CUBE_X_AXIS_LENGTH,
-    CUBE_X_INDICES
-} from '../../../constants/stage'
+import { getArrayOfLength } from '../../../helpers/generalHelper'
 
 const
+    CUBE_X_AXIS_LENGTH = 12,
+    CUBE_Y_AXIS_LENGTH = 6,
+    CUBE_Z_AXIS_LENGTH = 16,
+
+    CUBE_X_INDICES = getArrayOfLength(CUBE_X_AXIS_LENGTH),
+    CUBE_Y_INDICES = getArrayOfLength(CUBE_Y_AXIS_LENGTH),
+
+    // Bottom and top for each zIndex, plus above base for ceiling.
+    CUBE_Z_INDICES = getArrayOfLength(CUBE_Z_AXIS_LENGTH + 1).concat(20),
+
     // If slanted right, each cube on left overlaps the one on its right.
     SLANTED_RIGHT_X_AXIS_Z_INDICES = CUBE_X_INDICES,
 
@@ -25,6 +32,14 @@ const
     })
 
 module.exports = {
+
+    CUBE_X_AXIS_LENGTH,
+    CUBE_Y_AXIS_LENGTH,
+    CUBE_Z_AXIS_LENGTH,
+
+    CUBE_X_INDICES,
+    CUBE_Y_INDICES,
+    CUBE_Z_INDICES,
 
     DEFAULT_X_AXIS_Z_INDICES,
     SLANTED_LEFT_X_AXIS_Z_INDICES,

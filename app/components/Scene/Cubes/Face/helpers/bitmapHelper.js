@@ -1,6 +1,6 @@
 import { getArrayOfLength } from '../../../../../helpers/generalHelper'
 
-import { CUBE_Z_AXIS_LENGTH } from '../../../../../constants/stage'
+import { CUBE_Z_AXIS_LENGTH } from '../../cubeIndexConstants'
 
 const MATRIX_LENGTH = 8,
     MATRIX_INDICES_ARRAY = getArrayOfLength(MATRIX_LENGTH),

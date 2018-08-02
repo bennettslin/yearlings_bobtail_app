@@ -5,6 +5,22 @@ import PropTypes from 'prop-types'
 import Style from '../../Style/Style'
 import DynamicStyling from '../../Style/DynamicStyling'
 
+import { getCubeCornerPercentages } from '../sceneHelper'
+
+import {
+    getPathString,
+    getPolygonPoints
+} from './Face/helpers/polygonHelper'
+
+import { getSideDirection } from './cubeHelper'
+
+import {
+    getParentClassNameForSceneLogic,
+    getClassNameForSlantDirection
+} from '../sceneDataHelper'
+
+import { getChildClassNameForFaceLogic } from './Face/helpers/faceHelper'
+
 import {
     SLANT_DIRECTIONS,
     LEVELS,
@@ -13,20 +29,7 @@ import {
     TILE
 } from '../sceneConstants'
 
-import { getCubeCornerPercentages } from '../sceneHelper'
-import {
-    getPathString,
-    getPolygonPoints
-} from './Face/helpers/polygonHelper'
-import { getSideDirection } from './cubeHelper'
-
-import {
-    getParentClassNameForSceneLogic,
-    getClassNameForSlantDirection
-} from '../sceneDataHelper'
-import { getChildClassNameForFaceLogic } from './Face/helpers/faceHelper'
-
-import { CUBE_Z_INDICES } from '../../../constants/stage'
+import { CUBE_Z_INDICES } from './cubeIndexConstants'
 
 const
     FLOOR_TILE_SHADE_DARKER = 'rgba(25, 25, 25, 0.1)',
