@@ -66,7 +66,10 @@ const base = 1.069913193933663,
     ).reverse()
 
 module.exports = {
+
+    // This really can't be any other value.
     VANISHING_POINT_Y_PERCENTAGE: 50,
+
     TILE_Y_PERCENTAGES,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH: 32

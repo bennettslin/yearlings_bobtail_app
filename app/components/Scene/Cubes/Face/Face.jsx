@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Pixels from './Pixel/Pixels'
+// import Pixels from './Pixel/Pixels'
 
 import { getChildClassNameForFaceLogic } from './helpers/faceHelper'
 import { getCharStringForNumber } from '../../../../helpers/formatHelper'
@@ -70,13 +70,13 @@ const Face = ({
             />
 
             {/* Floor and ceiling share the same set of pixels. */}
-            <Pixels
+            {/* <Pixels
                 {...{
                     face,
                     xIndex,
                     yIndex
                 }}
-            />
+            /> */}
 
             {/* Single polygon for the overlying shade. */}
             <path
