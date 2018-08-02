@@ -1,19 +1,19 @@
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
-} from './Cubes/cubeIndexConstants'
+} from './cubeIndexConstants'
 
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH
-} from './Cubes/cubeRenderConstants'
+} from './cubeRenderConstants'
 
 import {
     roundPercentage,
     getValueInAbridgedMatrix
-} from '../../helpers/generalHelper'
+} from '../../../helpers/generalHelper'
 
 /***************
  * COORDINATES *

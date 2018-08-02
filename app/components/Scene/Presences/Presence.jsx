@@ -11,7 +11,7 @@ import Actor from './Actor'
 import Cutout from './Cutout'
 import Fixture from './Fixture'
 
-import { getTileCentreForPresence } from '../sceneHelper'
+import { getTileCentreForPresence } from '../Cubes/cubeRenderHelper'
 
 import { getCubesForKey } from '../sceneDataHelper'
 

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import Style from '../../Style/Style'
 import DynamicStyling from '../../Style/DynamicStyling'
 
-import { getCubeCornerPercentages } from '../sceneHelper'
+import { getCubeCornerPercentages } from './cubeRenderHelper'
 
 import {
     getPathString,

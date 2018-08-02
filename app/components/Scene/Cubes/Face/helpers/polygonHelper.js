@@ -29,7 +29,7 @@ const _getPolygonPoint = ({ x, y }) => {
     }
 }
 
-export const getPolygonPointsForFrontFace = ({
+const _getPolygonPointsForFrontFace = ({
 
     cubeCorners,
     isFloor
@@ -46,7 +46,7 @@ export const getPolygonPointsForFrontFace = ({
     ))
 }
 
-export const getPolygonPointsForTileFace = ({
+const _getPolygonPointsForTileFace = ({
 
     cubeCorners,
     isFloor
@@ -64,7 +64,7 @@ export const getPolygonPointsForTileFace = ({
     ))
 }
 
-export const getPolygonPointsForSideFace = ({
+const _getPolygonPointsForSideFace = ({
 
     sideDirection,
     slantDirection,
@@ -113,19 +113,19 @@ export const getPolygonPoints = ({
 }) => {
 
     if (face === TILE) {
-        return getPolygonPointsForTileFace({
+        return _getPolygonPointsForTileFace({
             isFloor,
             cubeCorners
         })
 
     } else if (face === FRONT) {
-        return getPolygonPointsForFrontFace({
+        return _getPolygonPointsForFrontFace({
             isFloor,
             cubeCorners
         })
 
     } else if (face === SIDE) {
-        return getPolygonPointsForSideFace({
+        return _getPolygonPointsForSideFace({
             isFloor,
             sideDirection,
             slantDirection,
