@@ -89,6 +89,12 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Position lyric column access icons all on right.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
         // Low priority bugs.
     // {
     //     taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,

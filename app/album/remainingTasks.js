@@ -157,11 +157,6 @@ module.exports = [
         workedHours: 3,
         neededHours: 4
     },
-    {
-        taskName: `Position lyric column access icons all on right.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Buttons and dots UI.
     {
