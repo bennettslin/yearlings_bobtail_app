@@ -7,9 +7,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Actor from './Actor'
-import Cutout from './Cutout'
-import Fixture from './Fixture'
+import Actor from './Actor/Actor'
+import Cutout from './Cutout/Cutout'
+import Fixture from './Fixture/Fixture'
 
 import { getTileCentreForPresence } from '../Cubes/cubeRenderHelper'
 
