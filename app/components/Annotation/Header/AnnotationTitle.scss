@@ -15,7 +15,8 @@
     }
 
     padding:
-        0px
-        $js__padding__popupContent__wide
-        $js__margin__thin;
+        0
+        $js__padding__popupContent__wide;
+
+    margin-bottom: $js__margin__thin;
 }

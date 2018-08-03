@@ -153,11 +153,6 @@ module.exports = [
      * Access icons UI.
      */
     {
-        taskName: `Access icon blocks in popup annotation look weird.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Work on method to access new annotation index only if current invalid.`,
         workedHours: 3,
         neededHours: 4

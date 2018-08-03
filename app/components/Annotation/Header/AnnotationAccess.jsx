@@ -30,7 +30,6 @@ class LyricAccess extends Component {
             <AccessLetters
                 accessIconsName="annotationUpDown"
                 inAnnotation
-                noAbsolute
                 showIfAccessed={showUpDown}
                 accessKeys={[
                     ARROW_UP,
