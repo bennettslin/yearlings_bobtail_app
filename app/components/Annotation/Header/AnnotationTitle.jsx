@@ -11,6 +11,7 @@ import { IS_DOT_CARD } from '../../../constants/lyrics'
 
 const annotationTitlePropTypes = {
     // From parent.
+    isShadow: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
@@ -20,6 +21,9 @@ const annotationTitlePropTypes = {
 },
 
 AnnotationTitle = ({
+
+    // TODO: Make sure this is necessary.
+    isShadow,
 
     isSelected,
     isAccessed,
@@ -32,14 +36,20 @@ AnnotationTitle = ({
     <div className={cx(
         'AnnotationTitle',
 
-        'bgColour__annotation',
+        isShadow && 'AnnotationTitle__shadow',
 
-        isSelected &&
-            'bgColour__annotation__selected',
+        {
+            ...!isShadow && {
+                // This includes transition animation, so it's always applied.
+                'bgColour__annotation': true,
+                'bgColour__annotation__selected': isSelected,
+            },
 
-        isSelected ?
-            'boxShadow__annotation__selected' :
-            'boxShadow__annotation',
+            ...isShadow && {
+                'boxShadow__annotation': !isSelected,
+                'boxShadow__annotation__selected': isSelected
+            }
+        },
 
         'fontSize__title'
     )}>
