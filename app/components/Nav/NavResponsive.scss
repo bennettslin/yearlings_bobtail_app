@@ -84,6 +84,7 @@
 
             .NavButton {
                 width: $monitor-shrink-icon;
+                height: $monitor-shrink-icon;
             }
             .Button__nav {
                 width: $monitor-shrink-icon;
@@ -156,6 +157,7 @@
             .NavColumn__hidden .NavBookToggle {
                 .NavButton {
                     width: $laptop-shrink-icon;
+                    height: $laptop-shrink-icon;
                 }
             }
 
@@ -253,6 +255,7 @@
 
             .NavButton {
                 width: $tablet-shrink-icon;
+                height: $tablet-shrink-icon;
             }
 
             .Button__nav {
@@ -331,6 +334,7 @@
             .NavColumn__hidden .NavBookToggle {
                 .NavButton {
                     width: $mini-shrink-icon;
+                    height: $mini-shrink-icon;
                 }
             }
 
