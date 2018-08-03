@@ -156,7 +156,11 @@ AnnotationView = ({
                 'bgColour__annotation',
 
                 isSelected &&
-                    'bgColour__annotation__selected'
+                    'bgColour__annotation__selected',
+
+                isSelected ?
+                    'boxShadow__annotation__selected' :
+                    'boxShadow__annotation'
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}

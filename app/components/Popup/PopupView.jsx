@@ -91,7 +91,9 @@ PopupView = ({
 
                     !isFullSize && 'PopupViewContent__notFullSize',
 
-                    'boxShadow__popupView'
+                    // In other words, not annotation.
+                    (hasNarrowPadding || hasWidePadding) &&
+                        'boxShadow__popupView'
                 )}
                 onClick={handleContainerClick}
                 onTouchStart={handleContainerClick}

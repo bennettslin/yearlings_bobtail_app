@@ -13,6 +13,14 @@
     border-radius: $borderRadius__wide;
 }
 
+.boxShadow__annotation {
+    box-shadow: $boxShadow__annotation;
+}
+
+.boxShadow__annotation__selected {
+    box-shadow: $boxShadow__annotation__selected;
+}
+
 .bgColour__annotation {
     background-color: #bdb;
 

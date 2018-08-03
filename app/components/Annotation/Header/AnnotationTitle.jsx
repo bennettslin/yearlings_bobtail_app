@@ -37,6 +37,10 @@ AnnotationTitle = ({
         isSelected &&
             'bgColour__annotation__selected',
 
+        isSelected ?
+            'boxShadow__annotation__selected' :
+            'boxShadow__annotation',
+
         'fontSize__title'
     )}>
         {annotationTitle === IS_DOT_CARD ? (

@@ -1,16 +1,37 @@
 module.exports = [
 
+    /**
+     * Presence work.
+     */
+
+    {
+        taskName: `Make presence widths and heights based on x and z lengths.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Allow cutouts to persist across scenes. Make keys based on names?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Make presences svgs.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Establish tab and sheet convention for cards to make box shadow styling easier.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+
     // Important features.
     {
         taskName: `Have setIntervals on audio display timer rather than setting from state.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Nav breakpoints might be off?`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     /**
@@ -64,26 +85,6 @@ module.exports = [
         taskName: `Debounce nav keys.`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    /**
-     * Presence work.
-     */
-
-    {
-        taskName: `Make presence widths and heights based on x and z lengths.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Allow cutouts to persist across scenes. Make keys based on names?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Make presences svgs.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     /**

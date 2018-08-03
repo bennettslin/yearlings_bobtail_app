@@ -7,7 +7,8 @@
             $width__annotationCard
             + $js__padding__popupContent__wide * 2;
 
-        margin-left: $paddingX__carouselAnnotation;
+            padding-left: $js__margin__thin * 2;
+            padding-right: $js__margin__thin * 2;
 
         .AnnotationHeaderAnimatable {
             opacity: 1;
@@ -34,7 +35,8 @@
     min-width: 0;
     opacity: 0;
 
-    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
 
     .AnnotationCardAnimatable {
         max-height: 0;

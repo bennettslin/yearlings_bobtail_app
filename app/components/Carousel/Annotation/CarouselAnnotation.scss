@@ -23,7 +23,8 @@
 
     .parentIsShown
     & {
-        transition: min-width $animationDuration__default,
-        opacity $animationDuration__default;
+        transition:
+            min-width $animationDuration__default,
+            opacity $animationDuration__default;
     }
 }
