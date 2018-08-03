@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 const propTypes = {
     buttonIdentifier: PropTypes.number.isRequired,
@@ -23,16 +24,32 @@ const NavSongIcon = ({
     }
 
     return (
-        <text
-            {...{
-                className,
-                x: 25,
-                y: 75,
-                fontSize: 75
-            }}
-        >
-            {characterIndex}
-        </text>
+        <Fragment>
+            <circle
+                className={cx(
+                    'NavSongIcon__field',
+                    className
+                )}
+                {...{
+                    cx: 50,
+                    cy: 50,
+                    r: 50
+                }}
+            />
+            <text
+                className={cx(
+                    'NavSongIcon__char',
+                    className
+                )}
+                {...{
+                    x: 25,
+                    y: 75,
+                    fontSize: 64
+                }}
+            >
+                {characterIndex}
+            </text>
+        </Fragment>
     )
 }
 

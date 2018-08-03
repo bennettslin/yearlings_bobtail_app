@@ -58,10 +58,19 @@
 }
 
 .ButtonIcon__navSong {
-    fill: #dd8;
+    &.NavSongIcon__field {
+        fill: #884;
+    }
+    &.NavSongIcon__char {
+        fill: #dd8;
+    }
 
     .Button__indexSelected
-    & {
+    &.NavSongIcon__field {
+        fill: #862;
+    }
+    .Button__indexSelected
+    &.NavSongIcon__char {
         fill: orange;
     }
 }
