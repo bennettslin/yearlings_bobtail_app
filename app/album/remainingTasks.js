@@ -20,13 +20,6 @@ module.exports = [
         neededHours: 3
     },
 
-    {
-        taskName: `Establish tab and sheet convention for cards to make box shadow styling easier.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-
     // Important features.
     {
         taskName: `Have setIntervals on audio display timer rather than setting from state.`,
@@ -182,7 +175,7 @@ module.exports = [
      * Final UI.
      */
     {
-        taskName: `Finalise UI of carousel annotations. Make the navigation panels a similar style, whatever that means?`,
+        taskName: `Finalise UI of carousel annotations. Make the navigation panels a similar style, whatever that means? Annotation tabs have box shadows?`,
         workedHours: 9,
         neededHours: 10
     },
