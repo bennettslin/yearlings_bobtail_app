@@ -183,8 +183,8 @@ module.exports = [
      */
     {
         taskName: `Finalise UI of carousel annotations. Make the navigation panels a similar style, whatever that means?`,
-        workedHours: 7,
-        neededHours: 8
+        workedHours: 9,
+        neededHours: 10
     },
 
     {
