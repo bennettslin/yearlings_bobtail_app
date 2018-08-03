@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import Svg from '../../Svg/Svg'
 
-import CubeFacesStyle from './CubeFacesStyle'
+import CubeFacesStyle from './Face/FacesStyle'
 import Face from './Face/Face'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'

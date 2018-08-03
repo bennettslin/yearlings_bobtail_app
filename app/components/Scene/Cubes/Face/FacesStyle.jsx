@@ -2,24 +2,24 @@ import React, { Fragment } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Style from '../../Style/Style'
-import DynamicStyling from '../../Style/DynamicStyling'
+import Style from '../../../Style/Style'
+import DynamicStyling from '../../../Style/DynamicStyling'
 
-import { getCubeCornerPercentages } from './cubeRenderHelper'
+import { getCubeCornerPercentages } from '../cubeRenderHelper'
 
 import {
     getPathString,
     getPolygonPoints
-} from './Face/helpers/polygonHelper'
+} from './helpers/polygonHelper'
 
-import { getSideDirection } from './cubeHelper'
+import { getSideDirection } from '../cubeIndexHelper'
 
 import {
     getParentClassNameForSceneLogic,
     getClassNameForSlantDirection
-} from '../sceneDataHelper'
+} from '../../sceneDataHelper'
 
-import { getChildClassNameForFaceLogic } from './Face/helpers/faceHelper'
+import { getChildClassNameForFaceLogic } from './helpers/faceHelper'
 
 import {
     SLANT_DIRECTIONS,
@@ -27,9 +27,9 @@ import {
     FLOOR,
     FACES,
     TILE
-} from '../sceneConstants'
+} from '../../sceneConstants'
 
-import { CUBE_Z_INDICES } from './cubeIndexConstants'
+import { CUBE_Z_INDICES } from '../cubeIndexConstants'
 
 const
     FLOOR_TILE_SHADE_DARKER = 'rgba(25, 25, 25, 0.1)',
@@ -53,7 +53,7 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired
 },
 
-CubeFacesStyle = ({
+FacesStyle = ({
 
     xIndex,
     yIndex
@@ -64,7 +64,7 @@ CubeFacesStyle = ({
     return (
         <Style
             className={cx(
-                'CubeFacesStyle',
+                'FacesStyle',
                 `CubeFacesStyle__${
                     xIndex
                 }${
@@ -188,6 +188,6 @@ CubeFacesStyle = ({
     )
 }
 
-CubeFacesStyle.propTypes = propTypes
+FacesStyle.propTypes = propTypes
 
-export default CubeFacesStyle
+export default FacesStyle
