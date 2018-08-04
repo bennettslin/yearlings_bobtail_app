@@ -13,8 +13,13 @@ import { getSceneObject } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 import {
+    Z_INDICES_MATRIX_NAME,
+    HSLA_MATRIX_NAME
+} from './sceneConstants'
+
+import {
     getCubesForKey,
-    getZIndexClassNamesForCubes,
+    getParentClassNamesForCubes,
     getClassNameForSlantDirection
 } from './sceneHelper'
 
@@ -58,8 +63,14 @@ class Scene extends Component {
 
             cubes = getCubesForKey(cubesKey),
 
-            zIndexClassNames = getZIndexClassNamesForCubes(cubes),
-            hslaClassNames = getZIndexClassNamesForCubes(cubes),
+            zIndexClassNames = getParentClassNamesForCubes(
+                cubes,
+                Z_INDICES_MATRIX_NAME
+            ),
+            hslaClassNames = getParentClassNamesForCubes(
+                cubes,
+                HSLA_MATRIX_NAME
+            ),
 
             { slantDirection } = cubes,
 

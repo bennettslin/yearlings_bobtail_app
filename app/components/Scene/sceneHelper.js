@@ -8,7 +8,8 @@ import {
 } from '../../helpers/generalHelper'
 
 import {
-    LEVELS
+    LEVELS,
+    Z_INDICES_MATRIX_NAME
 } from './sceneConstants'
 
 import {
@@ -18,60 +19,82 @@ import {
 
 export const getCubesForKey = (cubesKey) => {
 
+    const defaultStageCubes = CUBES[DEFAULT_STAGE_KEY],
+        keyCubes = CUBES[cubesKey]
+
     return {
-        // If ceiling or floor is absent, use the default values.
-        ...CUBES[DEFAULT_STAGE_KEY],
-        ...CUBES[cubesKey]
+        ceiling: {
+            ...defaultStageCubes.ceiling,
+            ...keyCubes.ceiling
+        },
+        floor: {
+            ...defaultStageCubes.floor,
+            ...keyCubes.floor
+        },
+        presences: {
+            ...defaultStageCubes.presences,
+            ...keyCubes.presences
+        }
     }
 }
 
 export const getParentClassNameForSceneLogic = ({
-
+    matrixName,
     level,
     xIndex,
     yIndex,
-    zIndex
-
+    value
 }) => {
 
+    let formattedValue = value
+
+    if (matrixName === Z_INDICES_MATRIX_NAME) {
+        // Allow zIndex to be appended dynamically by FacesStyle.
+        formattedValue = !isNaN(value) ? getCharStringForNumber(value) : ''
+    }
+
     /**
-     * Use 'Z' for Scene to distinguish it from 'S' for Stanza.
-     * "Scene levelIndex, xIndex, yIndex, zIndex."
+     * "Scene matrixInitial, levelIndex, xIndex, yIndex, zIndex."
      */
-    return `Z${
+    return `${
+        matrixName[0].toUpperCase()
+    }${
         level[0]
     }${
         getCharStringForNumber(xIndex)
     }${
         yIndex
     }${
-        // Allow zIndex to be appended dynamically by CubeFacesStyle.
-        !isNaN(zIndex) ? getCharStringForNumber(zIndex) : ''
+        formattedValue
     }`
 }
 
-export const getZIndexClassNamesForCubes = (cubes) => {
+export const getParentClassNamesForCubes = (
+    cubes,
+    matrixName
+) => {
 
     // Get ceiling and floor cubes.
     return LEVELS.map(level => {
 
-        const { zIndices } = cubes[level]
+        const { [matrixName]: matrix } = cubes[level]
 
         return CUBE_Y_INDICES.map(yIndex => {
 
             return CUBE_X_INDICES.map(xIndex => {
 
-                const zIndex = getValueInAbridgedMatrix(
-                    zIndices,
+                const value = getValueInAbridgedMatrix(
+                    matrix,
                     xIndex,
                     yIndex
                 )
 
                 return getParentClassNameForSceneLogic({
+                    matrixName,
                     level,
                     xIndex,
                     yIndex,
-                    zIndex
+                    value
                 })
             })
         })

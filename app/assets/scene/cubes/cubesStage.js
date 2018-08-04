@@ -4,8 +4,8 @@ import {
 } from './cubesKeys'
 
 import {
-    _TEST
-} from './cubesColours'
+    _TEST_KEY
+} from '../../../constants/hslaKeys'
 
 import {
     k
@@ -17,16 +17,16 @@ const
             zIndices: [
                 [k]
             ],
-            colours: [
-                _TEST
+            hslaColours: [
+                [_TEST_KEY]
             ]
         },
         floor: {
             zIndices: [
                 [0]
             ],
-            colours: [
-                _TEST
+            hslaColours: [
+                [_TEST_KEY]
             ]
         },
         presences: {}

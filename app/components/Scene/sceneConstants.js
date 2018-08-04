@@ -7,7 +7,10 @@ const
     FRONT = 'front',
 
     CEILING = 'ceiling',
-    FLOOR = 'floor'
+    FLOOR = 'floor',
+
+    Z_INDICES_MATRIX_NAME = 'zIndices',
+    HSLA_MATRIX_NAME = 'hslaColours'
 
 module.exports = {
 
@@ -33,5 +36,8 @@ module.exports = {
         TILE,
         SIDE,
         FRONT
-    ]
+    ],
+
+    Z_INDICES_MATRIX_NAME,
+    HSLA_MATRIX_NAME
 }

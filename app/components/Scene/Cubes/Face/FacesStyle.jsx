@@ -99,10 +99,11 @@ FacesStyle = ({
                                 slantDirection
                             }),
                             parentPrefix = getParentClassNameForSceneLogic({
+                                matrixName: 'zIndices',
                                 level,
                                 xIndex,
                                 yIndex,
-                                zIndex
+                                value: zIndex
                             })
 
                         return FACES.map(face => {
