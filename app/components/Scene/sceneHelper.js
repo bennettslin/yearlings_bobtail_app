@@ -69,7 +69,7 @@ export const getParentClassNameForSceneLogic = ({
     }`
 }
 
-export const getParentClassNamesForCubes = (
+export const getParentClassNamesForSceneLogic = (
     cubes,
     matrixName
 ) => {

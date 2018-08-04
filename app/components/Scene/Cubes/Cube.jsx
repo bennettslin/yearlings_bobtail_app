@@ -1,10 +1,12 @@
-// A single cube, whether ceiling or floor.
+// A single pair of ceiling and floor cubes.
 
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Svg from '../../Svg/Svg'
+
+import CubeFillStyle from './CubeFillStyle'
 
 import FacesShadeFillStyle from './Face/FacesShadeFillStyle'
 import FacesZIndexStyle from './Face/FacesZIndexStyle'
@@ -40,6 +42,13 @@ const Cube = ({
                 'absoluteFullContainer'
             )}
         >
+            <CubeFillStyle
+                {...{
+                    xIndex,
+                    yIndex
+                }}
+            />
+
             <FacesZIndexStyle
                 {...{
                     xIndex,

@@ -4,9 +4,9 @@ module.exports = [
      * Presence work.
      */
     {
-        taskName: `Make system for undercoat colour rendering.`,
+        taskName: `Have system for presence rendering.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
 
     // Important features.

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
@@ -108,25 +108,21 @@ FacesZIndexStyle = ({
                                 pathString = getPathString(polygonPoints)
 
                             return (
-                                <Fragment
+                                <DynamicStyling
                                     key={`${slantDirection}${zIndex}${face}`}
-                                >
-                                    {/* Closed path. */}
-                                    <DynamicStyling
-                                        {...{
-                                            parentPrefixes: [
-                                                slantDirectionClassName,
-                                                parentPrefix
-                                            ],
-                                            childPrefixes: [
-                                                childPrefix
-                                            ],
-                                            style: {
-                                                d: `path("${pathString}")`
-                                            }
-                                        }}
-                                    />
-                                </Fragment>
+                                    {...{
+                                        parentPrefixes: [
+                                            slantDirectionClassName,
+                                            parentPrefix
+                                        ],
+                                        childPrefixes: [
+                                            childPrefix
+                                        ],
+                                        style: {
+                                            d: `path("${pathString}")`
+                                        }
+                                    }}
+                                />
                             )
                         })
                     })

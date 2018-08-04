@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { getChildClassNameForFaceLogic } from './helpers/faceHelper'
+import { getChildClassNameForCubeLogic } from '../cubeHelper'
 import { getCharStringForNumber } from '../../../../helpers/formatHelper'
 
 import {
@@ -41,6 +42,18 @@ const Face = ({
             yIndex
         }),
 
+        ceilingCubeClassName = getChildClassNameForCubeLogic({
+            level: CEILING,
+            xIndex,
+            yIndex
+        }),
+
+        floorCubeClassName = getChildClassNameForCubeLogic({
+            level: FLOOR,
+            xIndex,
+            yIndex
+        }),
+
         xCharIndex = getCharStringForNumber(xIndex),
         faceInitial = face[0].toUpperCase()
 
@@ -56,19 +69,19 @@ const Face = ({
             <path
                 className={cx(
                     ceilingFaceClassName,
-                    'Face__path',
-                    'Face__undercoat'
+                    ceilingCubeClassName,
+                    'Face__path'
                 )}
             />
             <path
                 className={cx(
                     floorFaceClassName,
-                    'Face__path',
-                    'Face__undercoat'
+                    floorCubeClassName,
+                    'Face__path'
                 )}
             />
 
-            {/* Single polygon for the overlying shade. */}
+            {/* Single path for the overlying shade. */}
             <path
                 className={cx(
                     ceilingFaceClassName,

@@ -21,7 +21,9 @@ class Layers extends Component {
                 )}
             >
                 <CubesZIndexStyle />
+
                 <PresencesZIndexStyle />
+
                 {CUBE_Y_INDICES.map(yIndex => (
                     <Layer
                         key={yIndex}

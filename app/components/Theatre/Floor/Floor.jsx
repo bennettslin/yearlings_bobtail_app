@@ -57,7 +57,7 @@ class Floor extends Component {
                 height: `${floorHeight}px`
             },
 
-            firstRowSeatWidth = stageWidth / 12, // Arbitrary value.
+            firstRowSeatWidth = stageWidth / 9, // Arbitrary value.
             firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
             seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({

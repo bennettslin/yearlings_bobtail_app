@@ -4,10 +4,10 @@ import {
 
 const
     _TEST = {
-        h: 120,
-        s: 50,
-        l: 50,
-        a: 1
+        h: 0,
+        s: 0,
+        l: 90,
+        a: 0.8
     },
 
     HSLA_MAP = {

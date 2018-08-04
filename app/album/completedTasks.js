@@ -3618,4 +3618,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Make system for undercoat colour rendering.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

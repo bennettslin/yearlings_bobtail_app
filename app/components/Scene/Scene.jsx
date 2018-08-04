@@ -19,7 +19,7 @@ import {
 
 import {
     getCubesForKey,
-    getParentClassNamesForCubes,
+    getParentClassNamesForSceneLogic,
     getClassNameForSlantDirection
 } from './sceneHelper'
 
@@ -63,11 +63,11 @@ class Scene extends Component {
 
             cubes = getCubesForKey(cubesKey),
 
-            zIndexClassNames = getParentClassNamesForCubes(
+            zIndexClassNames = getParentClassNamesForSceneLogic(
                 cubes,
                 Z_INDICES_MATRIX_NAME
             ),
-            hslaClassNames = getParentClassNamesForCubes(
+            hslaClassNames = getParentClassNamesForSceneLogic(
                 cubes,
                 HSLA_MATRIX_NAME
             ),
