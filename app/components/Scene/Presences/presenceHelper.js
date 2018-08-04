@@ -46,13 +46,21 @@ export const getPresencesForCubes = ({
 
 export const getTileCentreForPresence = ({
 
+    cubesKey,
     xFloat,
     yIndex,
-    zOffset = 0,
-    zIndices,
-    slantDirection
+    zOffset = 0
 
 }) => {
+
+    const {
+
+        /**
+         * Presence needs to know the floor zIndex for positioning.
+         */
+        floor: { zIndices },
+        slantDirection = ''
+    } = getCubesForKey(cubesKey)
 
     let xIndex,
         xOffset

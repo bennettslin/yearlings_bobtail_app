@@ -18,8 +18,6 @@ import {
     getCubeWidthAndHeightPercentages
 } from './presenceHelper'
 
-import { getCubesForKey } from '../sceneHelper'
-
 const PRESENCE_TYPE_COMPONENTS = {
     actors: Actor,
     cutouts: Cutout,
@@ -70,22 +68,13 @@ class Presence extends Component {
             } = this.props,
 
             {
-                /**
-                 * Presence needs to know the floor zIndex for positioning.
-                 */
-                floor: { zIndices },
-                slantDirection = ''
-            } = getCubesForKey(cubesKey),
-
-            {
                 xPercentage,
                 yPercentage
             } = getTileCentreForPresence({
+                cubesKey,
                 xFloat,
                 yIndex,
-                zOffset,
-                zIndices,
-                slantDirection
+                zOffset
             }),
 
             {

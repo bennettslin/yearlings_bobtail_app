@@ -26,7 +26,8 @@ import {
     SLANT_DIRECTIONS,
     LEVELS,
     FLOOR,
-    FACES
+    FACES,
+    Z_INDICES_MATRIX_NAME
 } from '../../sceneConstants'
 
 import { CUBE_Z_INDICES } from '../cubeIndexConstants'
@@ -81,7 +82,7 @@ FacesZIndexStyle = ({
                                 slantDirection
                             }),
                             parentPrefix = getParentClassNameForSceneLogic({
-                                matrixName: 'zIndices',
+                                matrixName: Z_INDICES_MATRIX_NAME,
                                 level,
                                 xIndex,
                                 yIndex,
