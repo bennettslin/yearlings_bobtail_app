@@ -24,54 +24,58 @@ const propTypes = {
     // From parent.
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
+    cubesKey: PropTypes.string.isRequired,
+
+    // Where to centre on the xIndex axis. Can be a float.
     xFloat: PropTypes.number.isRequired,
+
+    // Where to position on the yIndex axis.
     yIndex: PropTypes.number.isRequired,
+
+    // Where to position above the given zIndex. Default is the zIndex.
     zOffset: PropTypes.number,
+
+    // How many cube lengths wide. Assume cube is one foot wide.
     width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-    cubesKey: PropTypes.string.isRequired
+
+    // How many cube lengths high.
+    height: PropTypes.number.isRequired
 }
 
 const Presence = ({
 
     name,
     type,
+    cubesKey,
+
     xFloat,
     yIndex,
     zOffset,
     width,
-    height,
-    cubesKey
+    height
 
 }) => {
 
     const {
-            floor,
-            slantDirection = ''
-        } = getCubesForKey(cubesKey),
-
-        {
             /**
              * Presence needs to know the floor zIndex for positioning.
              */
-            zIndices
-        } = floor,
+            floor: { zIndices },
+            slantDirection = ''
 
-        tileCentre = getTileCentreForPresence({
-            xFloat,
-
-            // Pass yFloat from presence. If there isn't one, use yIndex.
-            yIndex,
-            zOffset,
-
-            zIndices,
-            slantDirection
-        }),
+        } = getCubesForKey(cubesKey),
 
         {
             xPercentage,
             yPercentage
-        } = tileCentre,
+
+        } = getTileCentreForPresence({
+            xFloat,
+            yIndex,
+            zOffset,
+            zIndices,
+            slantDirection
+        }),
 
         x = xPercentage - width / 2,
         y = yPercentage - height,

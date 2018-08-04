@@ -143,22 +143,22 @@ const
                         {
                             name: 'sample fixture 4',
                             xFloat: 5,
-                            width: 10,
-                            height: 20
+                            width: 1,
+                            height: 2
                         },
                         {
                             name: 'sample fixture 4',
                             xFloat: 7.5,
                             zOffset: 0.5,
-                            width: 20,
-                            height: 10
+                            width: 2,
+                            height: 1
                         },
                         {
                             name: 'sample fixture 4',
                             xFloat: 11,
                             zOffset: 0.5,
-                            width: 10,
-                            height: 10
+                            width: 1,
+                            height: 1
                         },
                     ]
                 }

@@ -51,8 +51,8 @@ const
                     cutouts: {
                         name: 'northHollywoodBackddrop',
                         xFloat: 5.5,
-                        width: 100,
-                        height: 20
+                        width: 12,
+                        height: 2
                     }
                 },
                 cubes1: {
@@ -60,14 +60,14 @@ const
                         {
                             name: 'northHollywoodHouse1',
                             xFloat: 2,
-                            width: 20,
-                            height: 30
+                            width: 3,
+                            height: 3
                         },
                         {
                             name: 'northHollywoodHouse2',
                             xFloat: 9,
-                            width: 20,
-                            height: 30
+                            width: 2,
+                            height: 3
                         }
                     ]
                 }
@@ -77,8 +77,8 @@ const
                     cutouts: {
                         name: 'northHollywoodBackddrop',
                         xFloat: 5.5,
-                        width: 100,
-                        height: 20
+                        width: 12,
+                        height: 2
                     }
                 },
                 cubes1: {
@@ -86,14 +86,14 @@ const
                         {
                             name: 'northHollywoodHouse1',
                             xFloat: 2,
-                            width: 20,
-                            height: 30
+                            width: 3,
+                            height: 3
                         },
                         {
                             name: 'northHollywoodHouse2',
                             xFloat: 9,
-                            width: 20,
-                            height: 30
+                            width: 2,
+                            height: 3
                         }
                     ]
                 },
@@ -101,8 +101,8 @@ const
                     actors: {
                         name: 'esther',
                         xFloat: 3,
-                        width: 10,
-                        height: 30
+                        width: 1,
+                        height: 3
                     }
                 },
                 cubes5: {
@@ -110,14 +110,14 @@ const
                         {
                             name: 'anita',
                             xFloat: 4,
-                            width: 10,
-                            height: 30
+                            width: 1,
+                            height: 3
                         },
                         {
                             name: 'youngBennett',
                             xFloat: 8,
-                            width: 10,
-                            height: 30
+                            width: 1,
+                            height: 3
                         }
                     ]
                 }

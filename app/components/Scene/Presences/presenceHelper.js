@@ -43,7 +43,10 @@ export const getTileCentreForPresence = ({
             slantDirection
         }),
 
-        { left, right } = tilePercentages,
+        {
+            left,
+            right
+        } = tilePercentages,
 
         // Get centre percentage by finding midpoint of one of the diagonals.
         centreXPercentage = left.back.x + (right.front.x - left.back.x) / 2,

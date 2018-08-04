@@ -26,19 +26,23 @@ const Cutout = ({
                 className={cx(
                     'Cutout'
                 )}
-                x={x}
-                y={y}
-                width={width}
-                height={height}
+                {...{
+                    x,
+                    y,
+                    width,
+                    height
+                }}
             />
             <text
                 className={cx(
                     'Presence__temporaryText'
                 )}
-                x={x}
-                y={y}
-                width={width}
-                height={height}
+                {...{
+                    x,
+                    y,
+                    width,
+                    height
+                }}
             >
                 {name}
             </text>
