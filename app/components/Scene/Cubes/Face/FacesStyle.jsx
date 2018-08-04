@@ -12,14 +12,15 @@ import {
     getPolygonPoints
 } from './helpers/polygonHelper'
 
-import { getSideDirection } from '../cubeIndexHelper'
-
 import {
     getParentClassNameForSceneLogic,
     getClassNameForSlantDirection
 } from '../../sceneDataHelper'
 
-import { getChildClassNameForFaceLogic } from './helpers/faceHelper'
+import {
+    getChildClassNameForFaceLogic,
+    getSideDirection
+} from './helpers/faceHelper'
 
 import {
     SLANT_DIRECTIONS,

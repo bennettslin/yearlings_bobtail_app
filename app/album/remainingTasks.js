@@ -16,6 +16,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Cursor is prevented from updating when fast forwarding to a new scene.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     /**
      * Important bugs to fix.
      */

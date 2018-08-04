@@ -1,9 +1,14 @@
 import { getCharStringForNumber } from '../../../../../helpers/formatHelper'
 
 import {
+    CUBE_X_AXIS_LENGTH
+} from '../../cubeIndexConstants'
+
+import {
+    LEFT,
+    RIGHT,
     CEILING,
-    FLOOR,
-    TILE
+    FLOOR
 } from '../../../sceneConstants'
 
 export const getChildClassNameForFaceLogic = ({
@@ -25,23 +30,19 @@ export const getChildClassNameForFaceLogic = ({
     }`
 }
 
-export const getChildClassNameForPixelLogic = ({
-    face,
-    pixelXIndex,
-    pixelYIndex,
-    bitmapZIndex
+const midXIndex = CUBE_X_AXIS_LENGTH / 2
+
+export const getSideDirection = ({
+    xIndex,
+    slantDirection
 }) => {
 
-    // "Child pixel faceIndex, xIndex, yIndex, bitmapZIndex."
-    return `Px${
-        face[0].toUpperCase()
-    }${
-        pixelXIndex
-    }${
-        pixelYIndex
-    }${
-        face === TILE ?
-        '' :
-        getCharStringForNumber(bitmapZIndex * 2)
-    }`
+    // If slanted, then not applicable.
+    if (slantDirection) {
+        return ''
+
+    } else {
+        return xIndex < midXIndex ?
+            LEFT : RIGHT
+    }
 }

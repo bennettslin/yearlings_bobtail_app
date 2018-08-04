@@ -2,6 +2,5 @@ Scene review
 
 * Confirm season and time of day.
 * Establish ceiling and floor zIndices.
-* Create all placeholder bitmaps.
-    * Log work to establish bitmaps.
+* Log work to establish cube colours.
 * Create all placeholder presences.

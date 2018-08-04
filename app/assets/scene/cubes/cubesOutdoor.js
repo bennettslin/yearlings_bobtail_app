@@ -34,10 +34,6 @@ import {
 } from './cubesKeys'
 
 import {
-    TEST_KEY
-} from '../bitmaps/bitmapsKeys'
-
-import {
     a,
     // b,
     c,
@@ -62,9 +58,6 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -78,9 +71,6 @@ const
                 [4],
                 [0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, g]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -92,9 +82,6 @@ const
                 [1, 1, 1, 3, 3, 3, 3, 3, 3, 1],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -102,9 +89,6 @@ const
         floor: {
             zIndices: [
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -115,9 +99,6 @@ const
                 [g],
                 [g],
                 [g, g, g, g, g, g, g, g, g, g, g]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         },
         floor: {
@@ -127,9 +108,6 @@ const
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
                 [1, 1, 2, f, f, f, f, 2, 2, 2, 1],
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -141,9 +119,6 @@ const
                 [g, g, g, g, g, g, g, g, g, g, g],
                 [g, g, g, g, g, g, g, g, g, g, g],
                 [g]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         },
         floor: {
@@ -153,9 +128,6 @@ const
                 [1, 1, 2, 2, 2, f, f, f, f, 2, 1],
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -167,9 +139,6 @@ const
                 [1, g, 1],
                 [1, g, 7, 7, 7, 7, g, 1, 1, 1, g],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -182,9 +151,6 @@ const
                 [1],
                 [1],
                 [0],
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -197,9 +163,6 @@ const
                 [0],
                 [1],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -212,9 +175,6 @@ const
                 [1, 9, 9, 9, 9, 9, 9, 9, 3, 3, 3, 9],
                 [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -226,9 +186,6 @@ const
                 [9, 9, 9, 9, 9, 1],
                 [1],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -242,9 +199,6 @@ const
                 [1],
                 [1],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -257,9 +211,6 @@ const
                 [1],
                 [1],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -271,9 +222,6 @@ const
                 [0, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0],
                 [0, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -281,9 +229,6 @@ const
         floor: {
             zIndices: [
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -293,9 +238,6 @@ const
         floor: {
             zIndices: [
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -308,9 +250,6 @@ const
                 [0, 2, 2, 4, 4, 2, 4, 4, 2, 6, 6, 0],
                 [0, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 0],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -325,9 +264,6 @@ const
                 [1, 1, 1, 1, 1, 1, 7, 1],
                 [1, 1, 1, 1, 1, 1, 7, 1],
                 [1, 1, 1, 1, 1, 1, 7, 1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -342,9 +278,6 @@ const
                 [1],
                 [1],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -357,9 +290,6 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -374,9 +304,6 @@ const
                 [0],
                 [1],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -389,9 +316,6 @@ const
                 [0],
                 [0],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -401,9 +325,6 @@ const
                 [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
                 [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -411,9 +332,6 @@ const
         floor: {
             zIndices: [
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -421,9 +339,6 @@ const
         floor: {
             zIndices: [
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -445,9 +360,6 @@ const
         floor: {
             zIndices: [
                 [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -456,9 +368,6 @@ const
         ceiling: {
             zIndices: [
                 [g, g, g, g, g, g, g, g, g, g, g, g]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         },
         floor: {
@@ -469,9 +378,6 @@ const
                 [4, 4, 8, 6, 6, 8, 6, 6, 4, 4, 0],
                 [4, 4, 4, 6, 8, 6, 6, 4, 4, 4, 0],
                 [4, 4, 4, 4, 4, 6, 6, 4, 4, 4, 0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -485,9 +391,6 @@ const
                 [0, g, 7, 7, 7, 7, 7, 1, 0],
                 [g, 1, 1, 7, 7, 7, 1, 0],
                 [g, 1, 1, 1, 1, 7, 1, 0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -501,9 +404,6 @@ const
                 [0, g, 7, 7, 7, 7, 7, 1, 0, 1],
                 [g, 1, 1, 7, 7, 7, 1, 0, 0, 1, 0],
                 [g, 1, 1, 1, 1, 7, 1, 0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -513,9 +413,6 @@ const
             zIndices: [
                 [g],
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },

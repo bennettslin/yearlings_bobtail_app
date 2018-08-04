@@ -3,11 +3,6 @@ import {
 } from './cubesKeys'
 
 import {
-    NORTH_HOLLYWOOD_LAWN_KEY,
-    SIDEWALK_KEY
-} from '../bitmaps/bitmapsKeys'
-
-import {
     // a,
     // b,
     // c,
@@ -35,14 +30,6 @@ const
                 [1],
                 [1],
                 [1]
-            ],
-            bitmapKeys: [
-                [NORTH_HOLLYWOOD_LAWN_KEY],
-                [NORTH_HOLLYWOOD_LAWN_KEY],
-                [NORTH_HOLLYWOOD_LAWN_KEY],
-                [NORTH_HOLLYWOOD_LAWN_KEY],
-                [SIDEWALK_KEY],
-                [SIDEWALK_KEY]
             ]
         },
         presences: {

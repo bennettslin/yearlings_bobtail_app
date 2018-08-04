@@ -4,36 +4,19 @@ import {
 } from './cubesKeys'
 
 import {
-    NULL_KEY,
-    LOGUE_FLOOR_KEY,
-    LOGUE_PLATFORM_KEY
-} from '../bitmaps/bitmapsKeys'
-
-import {
     k
 } from './cubesConstants'
 
 const
-
-    _NL = NULL_KEY,
-    _FL = LOGUE_FLOOR_KEY,
-    _PL = LOGUE_PLATFORM_KEY,
-
     DEFAULT_STAGE_CUBES = {
         ceiling: {
             zIndices: [
                 [k]
-            ],
-            bitmapKeys: [
-                [_NL]
             ]
         },
         floor: {
             zIndices: [
                 [0]
-            ],
-            bitmapKeys: [
-                [_FL]
             ]
         },
         presences: {}
@@ -48,14 +31,6 @@ const
                 [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
-            ],
-            bitmapKeys: [
-                [_FL],
-                [_FL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _FL],
-                [_FL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _FL],
-                [_FL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _FL],
-                [_FL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _FL],
-                [_FL]
             ]
         },
         presences: {

@@ -23,10 +23,6 @@ import {
 } from './cubesKeys'
 
 import {
-    TEST_KEY
-} from '../bitmaps/bitmapsKeys'
-
-import {
     // a,
     b,
     // c,
@@ -46,9 +42,6 @@ const
         floor: {
             zIndices: [
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -64,9 +57,6 @@ const
                 [0, g, 6, 6, 3, 6, 6, 3, g, g, 9, 0],
                 [0, g, 3, 3, 3, 3, 3, 3, g, g, 9, 0],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -74,9 +64,6 @@ const
         floor: {
             zIndices: [
                 [1]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -90,9 +77,6 @@ const
                 [g, g, g, g, g, g, 5, 5, 5, g],
                 [5],
                 [5]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -105,9 +89,6 @@ const
                 [g, 5, 5, 4, 3, 2, 1, 0],
                 [g, 5, 5, 4, 3, 2, 1, 0],
                 [g, 5, 5]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -121,9 +102,6 @@ const
                 [1, 1, d, 1, 1, 1, 0],
                 [1, 1, d, 1, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -133,9 +111,6 @@ const
         floor: {
             zIndices: [
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -145,9 +120,6 @@ const
         floor: {
             zIndices: [
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -162,9 +134,6 @@ const
                 [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -174,9 +143,6 @@ const
         floor: {
             zIndices: [
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -186,9 +152,6 @@ const
         floor: {
             zIndices: [
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -200,9 +163,6 @@ const
                 [0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0],
                 [0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -215,9 +175,6 @@ const
                 [g, 9, 5, 5, 3, 2, 4, 4, 4, 4, 4, 2],
                 [g, 3, 3, 3, 3, 2, 4, 4, 4, 4, 4, 2],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -230,9 +187,6 @@ const
                 [g, 8, 4, 4, 2, 2, 5, 5, 5, 5, 5, 0],
                 [g, 8, 4, 4, 2, 2, 5, 5, 5, 5, 5, 0],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -246,9 +200,6 @@ const
                 [1],
                 [1],
                 [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -259,9 +210,6 @@ const
         floor: {
             zIndices: [
                 [4]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -272,9 +220,6 @@ const
         floor: {
             zIndices: [
                 [4]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -301,9 +246,6 @@ const
                 [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
                 [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
                 [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },
@@ -330,9 +272,6 @@ const
                 [0, g, 7, 7, 7, 7, 7, 1, 0, 4, 4, 4],
                 [g, 1, 1, 7, 7, 7, 1, 0, 0, 4, 0, 0],
                 [g, 1, 1, 1, 1, 7, 1, 0, 0, 0, 0, 0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
             ]
         }
     },

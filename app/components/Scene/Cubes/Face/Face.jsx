@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-// import Pixels from './Pixel/Pixels'
-
 import { getChildClassNameForFaceLogic } from './helpers/faceHelper'
 import { getCharStringForNumber } from '../../../../helpers/formatHelper'
 
@@ -53,7 +51,6 @@ const Face = ({
             `Face__${faceInitial}${xCharIndex}${yIndex}`
         )}>
 
-            {/* TODO: This is always white for now, but it should provide the base colour for each bitmap matrix. */}
             <path
                 className={cx(
                     ceilingFaceClassName,
@@ -68,15 +65,6 @@ const Face = ({
                     'Face__undercoat'
                 )}
             />
-
-            {/* Floor and ceiling share the same set of pixels. */}
-            {/* <Pixels
-                {...{
-                    face,
-                    xIndex,
-                    yIndex
-                }}
-            /> */}
 
             {/* Single polygon for the overlying shade. */}
             <path

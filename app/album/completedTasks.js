@@ -3613,4 +3613,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Get rid of bitmap work.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
