@@ -9,12 +9,12 @@ import {
     CUBE_Y_INDICES
 } from '../Cubes/cubeIndexConstants'
 
-const PresencesStyle = () => {
+const PresencesZIndexStyle = () => {
 
     return (
         <Style
             className={cx(
-                'PresencesStyle'
+                'PresencesZIndexStyle'
             )}
         >
             {CUBE_Y_INDICES.map(yIndex => {
@@ -42,4 +42,4 @@ const PresencesStyle = () => {
     )
 }
 
-export default PresencesStyle
+export default PresencesZIndexStyle
