@@ -3603,4 +3603,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Make presence widths and heights based on x and z lengths.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

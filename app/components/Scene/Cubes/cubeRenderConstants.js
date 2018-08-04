@@ -7,7 +7,7 @@ import {
 import { CUBE_Y_AXIS_LENGTH } from './cubeIndexConstants'
 
 const
-    getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {
+    _getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {
         const
             /**
              * yPercentageUnit =
@@ -58,10 +58,10 @@ const base = 1.069913193933663,
     STAGE_Y_PERCENTAGE = 12,
     SLANTED_TILE_Y_UNITS_LENGTH = 14,
 
-    TILE_Y_PERCENTAGES = getTileYPercentages(
+    TILE_Y_PERCENTAGES = _getTileYPercentages(
         base, STAGE_Y_PERCENTAGE, CUBE_Y_AXIS_LENGTH
     ).reverse(),
-    SLANTED_TILE_Y_PERCENTAGES = getTileYPercentages(
+    SLANTED_TILE_Y_PERCENTAGES = _getTileYPercentages(
         base, STAGE_Y_PERCENTAGE, SLANTED_TILE_Y_UNITS_LENGTH
     ).reverse()
 

@@ -11,7 +11,10 @@ import Actor from './Actor/Actor'
 import Cutout from './Cutout/Cutout'
 import Fixture from './Fixture/Fixture'
 
-import { getTileCentreForPresence } from './presenceHelper'
+import {
+    getTileCentreForPresence,
+    getCubeWidthAndHeightPercentages
+} from './presenceHelper'
 import { getCubesForKey } from '../sceneDataHelper'
 
 const PRESENCE_TYPE_COMPONENTS = {
@@ -36,10 +39,10 @@ const propTypes = {
     zOffset: PropTypes.number,
 
     // How many cube lengths wide. Assume cube is one foot wide.
-    width: PropTypes.number.isRequired,
+    xWidth: PropTypes.number.isRequired,
 
     // How many cube lengths high.
-    height: PropTypes.number.isRequired
+    zHeight: PropTypes.number.isRequired
 }
 
 const Presence = ({
@@ -51,8 +54,8 @@ const Presence = ({
     xFloat,
     yIndex,
     zOffset,
-    width,
-    height
+    xWidth,
+    zHeight
 
 }) => {
 
@@ -62,13 +65,11 @@ const Presence = ({
              */
             floor: { zIndices },
             slantDirection = ''
-
         } = getCubesForKey(cubesKey),
 
         {
             xPercentage,
             yPercentage
-
         } = getTileCentreForPresence({
             xFloat,
             yIndex,
@@ -76,6 +77,16 @@ const Presence = ({
             zIndices,
             slantDirection
         }),
+
+        {
+            width: cubeWidthPercentage,
+            height: cubeHeightPercentage,
+        } = getCubeWidthAndHeightPercentages(
+            yIndex
+        ),
+
+        width = cubeWidthPercentage * xWidth,
+        height = cubeHeightPercentage * zHeight,
 
         x = xPercentage - width / 2,
         y = yPercentage - height,

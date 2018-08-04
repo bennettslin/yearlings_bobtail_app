@@ -64,8 +64,8 @@ const
                     actors: {
                         name: 'oldBennett',
                         xFloat: 5.5,
-                        width: 1,
-                        height: 5
+                        xWidth: 1,
+                        zHeight: 5
                     }
                 }
             }

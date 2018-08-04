@@ -3,12 +3,6 @@ module.exports = [
     /**
      * Presence work.
      */
-
-    {
-        taskName: `Make presence widths and heights based on x and z lengths.`,
-        workedHours: 0,
-        neededHours: 3
-    },
     {
         taskName: `Allow cutouts to persist across scenes. Make keys based on names?`,
         workedHours: 0,
