@@ -18,7 +18,7 @@ import {
     getCubeWidthAndHeightPercentages
 } from './presenceHelper'
 
-import { getCubesForKey } from '../sceneDataHelper'
+import { getCubesForKey } from '../sceneHelper'
 
 const PRESENCE_TYPE_COMPONENTS = {
     actors: Actor,

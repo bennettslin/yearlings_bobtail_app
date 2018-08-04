@@ -13,7 +13,7 @@ import Svg from '../../Svg/Svg'
 import Presence from './Presence'
 
 import { getSceneObject } from '../../../helpers/dataHelper'
-import { getPresencesForCubes } from '../sceneDataHelper'
+import { getPresencesForCubes } from './presenceHelper'
 
 const mapStateToProps = ({
     canPresencesRender,

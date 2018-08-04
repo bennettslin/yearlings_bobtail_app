@@ -5,7 +5,7 @@ import Style from '../../Style/Style'
 import DynamicStyling from '../../Style/DynamicStyling'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
-import { getClassNameForSlantDirection } from '../sceneDataHelper'
+import { getClassNameForSlantDirection } from '../sceneHelper'
 
 import {
     LEFT,

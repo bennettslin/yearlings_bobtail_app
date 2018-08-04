@@ -16,7 +16,7 @@ import {
     getCubesForKey,
     getZIndexClassNamesForCubes,
     getClassNameForSlantDirection
-} from './sceneDataHelper'
+} from './sceneHelper'
 
 const mapStateToProps = ({
     renderableStore
