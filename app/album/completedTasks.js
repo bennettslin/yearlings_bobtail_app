@@ -3598,4 +3598,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `System for presence rendering.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

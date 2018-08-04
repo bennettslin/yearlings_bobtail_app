@@ -5,6 +5,7 @@ import cx from 'classnames'
 
 import Layer from './Layer'
 import CubesStyle from '../Cubes/CubesStyle'
+import PresencesStyle from '../Presences/PresencesStyle'
 
 import { CUBE_Y_INDICES } from '../Cubes/cubeIndexConstants'
 
@@ -20,6 +21,7 @@ class Layers extends Component {
                 )}
             >
                 <CubesStyle />
+                <PresencesStyle />
                 {CUBE_Y_INDICES.map(yIndex => (
                     <Layer
                         key={yIndex}

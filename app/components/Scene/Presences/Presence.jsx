@@ -11,8 +11,7 @@ import Actor from './Actor/Actor'
 import Cutout from './Cutout/Cutout'
 import Fixture from './Fixture/Fixture'
 
-import { getTileCentreForPresence } from '../Cubes/cubeRenderHelper'
-
+import { getTileCentreForPresence } from './presenceHelper'
 import { getCubesForKey } from '../sceneDataHelper'
 
 const PRESENCE_TYPE_COMPONENTS = {

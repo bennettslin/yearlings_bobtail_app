@@ -6,20 +6,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import cx from 'classnames'
 import keys from 'lodash.keys'
-
-import {
-    setCanRenderPixels
-} from '../../../redux/actions/render'
 
 import Svg from '../../Svg/Svg'
 import Presence from './Presence'
 
+import { getSceneObject } from '../../../helpers/dataHelper'
 import { getPresencesForCubes } from '../sceneDataHelper'
-
-import { CUBE_Y_AXIS_LENGTH } from '../Cubes/cubeIndexConstants'
 
 const mapStateToProps = ({
     canPresencesRender,
@@ -39,67 +33,27 @@ class Presences extends Component {
         renderableSceneIndex: PropTypes.number.isRequired,
 
         // From parent.
-        yIndex: PropTypes.number.isRequired,
-        cubesKey: PropTypes.string.isRequired
-    }
-
-    constructor(props) {
-        super(props)
-
-        this._setCanRenderPixels = this._setCanRenderPixels.bind(this)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        /**
-         * Not anticipating presences to affect performance. So all yIndices
-         * will render simultaneously, at least for now.
-         */
-        return nextProps.canPresencesRender
-    }
-
-    componentDidUpdate(prevProps) {
-        const {
-                canPresencesRender,
-                yIndex
-            } = this.props,
-            {
-                canPresencesRender: couldPresencesRender
-            } = prevProps
-
-        if (canPresencesRender && !couldPresencesRender) {
-
-            // Only one component will make this call.
-            if (yIndex === CUBE_Y_AXIS_LENGTH - 1) {
-                setTimeout(
-                    this._setCanRenderPixels,
-                    0
-                )
-            }
-        }
-    }
-
-    _setCanRenderPixels() {
-        logger.warn('Presences rendered.')
-        this.props.setCanRenderPixels(true)
+        yIndex: PropTypes.number.isRequired
     }
 
     render() {
         const {
                 /* eslint-disable no-unused-vars */
                 canPresencesRender,
-                setCanRenderPixels,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
                 yIndex,
                 renderableSongIndex,
-                renderableSceneIndex,
-                ...other
+                renderableSceneIndex
             } = this.props,
 
-            {
-                cubesKey
-            } = other,
+            sceneObject = getSceneObject(
+                renderableSongIndex,
+                renderableSceneIndex
+            ),
+
+            { cubes: cubesKey } = sceneObject,
 
             presences = getPresencesForCubes({
                 cubesKey,
@@ -131,15 +85,17 @@ class Presences extends Component {
                                 presenceEntity :
                                 [presenceEntity]
 
-                                return presenceArray.map((presence, index) => (
-                                <Presence
-                                    key={index}
-                                    type={presenceType}
-                                    {...presence}
-                                    {...other}
-                                    yIndex={yIndex}
-                                />
-                            ))
+                        return presenceArray.map((presence, index) => (
+                            <Presence
+                                key={index}
+                                {...presence}
+                                {...{
+                                    type: presenceType,
+                                    cubesKey,
+                                    yIndex
+                                }}
+                            />
+                        ))
                     })}
                 </Svg>
             )
@@ -149,10 +105,4 @@ class Presences extends Component {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        setCanRenderPixels
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Presences)
+export default connect(mapStateToProps)(Presences)
