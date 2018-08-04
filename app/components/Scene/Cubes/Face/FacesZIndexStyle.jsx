@@ -10,7 +10,7 @@ import { getCubeCornerPercentages } from '../cubeRenderHelper'
 import {
     getPathString,
     getPolygonPoints
-} from './helpers/polygonHelper'
+} from './helpers/pathHelper'
 
 import {
     getParentClassNameForSceneLogic,
