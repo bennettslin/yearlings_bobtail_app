@@ -44,7 +44,7 @@ export const getPresencesForCubes = ({
         null
 }
 
-export const getTileCentreForPresence = ({
+const _getTileCentreForPresence = ({
 
     cubesKey,
     xFloat,
@@ -105,7 +105,7 @@ export const getTileCentreForPresence = ({
     }
 }
 
-export const getCubeWidthAndHeightPercentages = (yIndex) => {
+const _getCubeWidthAndHeightPercentages = (yIndex) => {
 
     const
         tileYPercentage = (
@@ -130,5 +130,48 @@ export const getCubeWidthAndHeightPercentages = (yIndex) => {
     return {
         width: cubeXPercentage,
         height: cubeYPercentage
+    }
+}
+
+export const getPresenceXYWidthAndHeight = ({
+    cubesKey,
+    xFloat,
+    yIndex,
+    zOffset,
+    xWidth,
+    zHeight
+}) => {
+
+    const
+        {
+            xPercentage,
+            yPercentage
+
+        } = _getTileCentreForPresence({
+            cubesKey,
+            xFloat,
+            yIndex,
+            zOffset
+        }),
+
+        {
+            width: cubeWidthPercentage,
+            height: cubeHeightPercentage,
+
+        } = _getCubeWidthAndHeightPercentages(
+            yIndex
+        ),
+
+        width = cubeWidthPercentage * xWidth,
+        height = cubeHeightPercentage * zHeight,
+
+        x = xPercentage - width / 2,
+        y = yPercentage - height
+
+    return {
+        x,
+        y,
+        width,
+        height
     }
 }

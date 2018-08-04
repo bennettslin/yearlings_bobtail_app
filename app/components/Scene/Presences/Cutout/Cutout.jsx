@@ -7,7 +7,8 @@ const propTypes = {
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
+    height: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired
 }
 
 const Cutout = ({

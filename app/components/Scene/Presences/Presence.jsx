@@ -14,8 +14,7 @@ import Fixture from './Fixture/Fixture'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 import {
-    getTileCentreForPresence,
-    getCubeWidthAndHeightPercentages
+    getPresenceXYWidthAndHeight
 } from './presenceHelper'
 
 const PRESENCE_TYPE_COMPONENTS = {
@@ -67,28 +66,14 @@ class Presence extends Component {
                 zHeight
             } = this.props,
 
-            {
-                xPercentage,
-                yPercentage
-            } = getTileCentreForPresence({
+            presenceXYWidthAndHeight = getPresenceXYWidthAndHeight({
                 cubesKey,
                 xFloat,
                 yIndex,
-                zOffset
+                zOffset,
+                xWidth,
+                zHeight
             }),
-
-            {
-                width: cubeWidthPercentage,
-                height: cubeHeightPercentage,
-            } = getCubeWidthAndHeightPercentages(
-                yIndex
-            ),
-
-            width = cubeWidthPercentage * xWidth,
-            height = cubeHeightPercentage * zHeight,
-
-            x = xPercentage - width / 2,
-            y = yPercentage - height,
 
             PresenceComponent = PRESENCE_TYPE_COMPONENTS[type]
 
@@ -102,11 +87,8 @@ class Presence extends Component {
                 )}
             >
                 <PresenceComponent
+                    {...presenceXYWidthAndHeight}
                     {...{
-                        x,
-                        y,
-                        width,
-                        height,
                         name
                     }}
                 />
