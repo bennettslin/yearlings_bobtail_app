@@ -59,6 +59,7 @@ class Scene extends Component {
             cubes = getCubesForKey(cubesKey),
 
             zIndexClassNames = getZIndexClassNamesForCubes(cubes),
+            hslaClassNames = getZIndexClassNamesForCubes(cubes),
 
             { slantDirection } = cubes,
 
@@ -71,6 +72,7 @@ class Scene extends Component {
                 'Scene',
 
                 zIndexClassNames,
+                hslaClassNames,
                 slantDirectionClassName
             )}>
                 <SceneSky

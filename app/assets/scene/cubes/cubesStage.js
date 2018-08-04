@@ -4,6 +4,10 @@ import {
 } from './cubesKeys'
 
 import {
+    _TEST
+} from './cubesColours'
+
+import {
     k
 } from './cubesConstants'
 
@@ -14,7 +18,7 @@ const
                 [k]
             ],
             colours: [
-
+                _TEST
             ]
         },
         floor: {
@@ -22,7 +26,7 @@ const
                 [0]
             ],
             colours: [
-
+                _TEST
             ]
         },
         presences: {}
