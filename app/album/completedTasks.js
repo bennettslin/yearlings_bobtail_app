@@ -3608,4 +3608,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Allow cutouts to persist across scenes. Make keys based on names?`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -3,7 +3,7 @@
  * stage for any given scene. I really couldn't think of a better word...
  */
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -11,10 +11,13 @@ import Actor from './Actor/Actor'
 import Cutout from './Cutout/Cutout'
 import Fixture from './Fixture/Fixture'
 
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+
 import {
     getTileCentreForPresence,
     getCubeWidthAndHeightPercentages
 } from './presenceHelper'
+
 import { getCubesForKey } from '../sceneDataHelper'
 
 const PRESENCE_TYPE_COMPONENTS = {
@@ -29,11 +32,11 @@ const propTypes = {
     type: PropTypes.string.isRequired,
     cubesKey: PropTypes.string.isRequired,
 
+    // Where to position on the yIndex axis. Passed by layer.
+    yIndex: PropTypes.number.isRequired,
+
     // Where to centre on the xIndex axis. Can be a float.
     xFloat: PropTypes.number.isRequired,
-
-    // Where to position on the yIndex axis.
-    yIndex: PropTypes.number.isRequired,
 
     // Where to position above the given zIndex. Default is the zIndex.
     zOffset: PropTypes.number,
@@ -45,74 +48,82 @@ const propTypes = {
     zHeight: PropTypes.number.isRequired
 }
 
-const Presence = ({
+class Presence extends Component {
 
-    name,
-    type,
-    cubesKey,
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-    xFloat,
-    yIndex,
-    zOffset,
-    xWidth,
-    zHeight
+    render() {
+        const {
+                name,
+                type,
+                cubesKey,
+                yIndex,
+                xFloat,
+                zOffset,
+                xWidth,
+                zHeight
+            } = this.props,
 
-}) => {
+            {
+                /**
+                 * Presence needs to know the floor zIndex for positioning.
+                 */
+                floor: { zIndices },
+                slantDirection = ''
+            } = getCubesForKey(cubesKey),
 
-    const {
-            /**
-             * Presence needs to know the floor zIndex for positioning.
-             */
-            floor: { zIndices },
-            slantDirection = ''
-        } = getCubesForKey(cubesKey),
+            {
+                xPercentage,
+                yPercentage
+            } = getTileCentreForPresence({
+                xFloat,
+                yIndex,
+                zOffset,
+                zIndices,
+                slantDirection
+            }),
 
-        {
-            xPercentage,
-            yPercentage
-        } = getTileCentreForPresence({
-            xFloat,
-            yIndex,
-            zOffset,
-            zIndices,
-            slantDirection
-        }),
+            {
+                width: cubeWidthPercentage,
+                height: cubeHeightPercentage,
+            } = getCubeWidthAndHeightPercentages(
+                yIndex
+            ),
 
-        {
-            width: cubeWidthPercentage,
-            height: cubeHeightPercentage,
-        } = getCubeWidthAndHeightPercentages(
-            yIndex
-        ),
+            width = cubeWidthPercentage * xWidth,
+            height = cubeHeightPercentage * zHeight,
 
-        width = cubeWidthPercentage * xWidth,
-        height = cubeHeightPercentage * zHeight,
+            x = xPercentage - width / 2,
+            y = yPercentage - height,
 
-        x = xPercentage - width / 2,
-        y = yPercentage - height,
+            PresenceComponent = PRESENCE_TYPE_COMPONENTS[type]
 
-        PresenceComponent = PRESENCE_TYPE_COMPONENTS[type]
-
-    return (
-        <g
-            className={cx(
-                'Presence',
-                `Presence__${type}`,
-                `Presence__y${yIndex}`,
-                name
-            )}
-        >
-            <PresenceComponent
-                {...{
-                    x,
-                    y,
-                    width,
-                    height,
+        return (
+            <g
+                className={cx(
+                    'Presence',
+                    `Presence__${type}`,
+                    `Presence__y${yIndex}`,
                     name
-                }}
-            />
-        </g>
-    )
+                )}
+            >
+                <PresenceComponent
+                    {...{
+                        x,
+                        y,
+                        width,
+                        height,
+                        name
+                    }}
+                />
+            </g>
+        )
+    }
 }
 
 Presence.propTypes = propTypes;

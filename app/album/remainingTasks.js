@@ -4,11 +4,6 @@ module.exports = [
      * Presence work.
      */
     {
-        taskName: `Allow cutouts to persist across scenes. Make keys based on names?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Make system for undercoat colour rendering.`,
         workedHours: 0,
         neededHours: 2

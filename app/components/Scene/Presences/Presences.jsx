@@ -85,17 +85,22 @@ class Presences extends Component {
                                 presenceEntity :
                                 [presenceEntity]
 
-                        return presenceArray.map((presence, index) => (
-                            <Presence
-                                key={index}
-                                {...presence}
-                                {...{
-                                    type: presenceType,
-                                    cubesKey,
-                                    yIndex
-                                }}
-                            />
-                        ))
+                        return presenceArray.map(presence => {
+
+                            const { name } = presence
+
+                            return (
+                                <Presence
+                                    key={name}
+                                    {...presence}
+                                    {...{
+                                        type: presenceType,
+                                        cubesKey,
+                                        yIndex
+                                    }}
+                                />
+                            )
+                        })
                     })}
                 </Svg>
             )
