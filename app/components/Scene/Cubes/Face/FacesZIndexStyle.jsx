@@ -26,35 +26,17 @@ import {
     SLANT_DIRECTIONS,
     LEVELS,
     FLOOR,
-    FACES,
-    TILE
+    FACES
 } from '../../sceneConstants'
 
 import { CUBE_Z_INDICES } from '../cubeIndexConstants'
-
-const
-    FLOOR_TILE_SHADE_DARKER = 'rgba(25, 25, 25, 0.1)',
-    FLOOR_TILE_SHADE_DARK = 'rgba(25, 25, 25, 0.075)',
-    FLOOR_TILE_SHADE_LIGHT = 'rgba(25, 25, 25, 0.05)',
-    FLOOR_TILE_SHADE_LIGHTER = 'rgba(25, 25, 25, 0.025)',
-
-    FLOOR_TILE_SHADE_Z_INDEX_MAP = [
-        FLOOR_TILE_SHADE_DARKER,
-        FLOOR_TILE_SHADE_DARKER,
-        FLOOR_TILE_SHADE_DARK,
-        FLOOR_TILE_SHADE_DARK,
-        FLOOR_TILE_SHADE_LIGHT,
-        FLOOR_TILE_SHADE_LIGHT,
-        FLOOR_TILE_SHADE_LIGHTER,
-        FLOOR_TILE_SHADE_LIGHTER
-    ]
 
 const propTypes = {
     xIndex: PropTypes.number.isRequired,
     yIndex: PropTypes.number.isRequired
 },
 
-FacesStyle = ({
+FacesZIndexStyle = ({
 
     xIndex,
     yIndex
@@ -65,8 +47,8 @@ FacesStyle = ({
     return (
         <Style
             className={cx(
-                'FacesStyle',
-                `FacesStyle__${
+                'FacesZIndexStyle',
+                `FacesZIndexStyle__${
                     xIndex
                 }${
                     yIndex
@@ -118,53 +100,16 @@ FacesStyle = ({
                                 }),
                                 childPrefix = getChildClassNameForFaceLogic({
                                     face,
-                                    isFloor,
+                                    level,
                                     xIndex,
                                     yIndex
                                 }),
-                                pathString = getPathString(polygonPoints),
-
-                                /**
-                                 * This styling needs to be set dynamically
-                                 * because it's dependent on zIndex.
-                                 */
-                                hasFloorTileShading =
-                                    !slantDirection &&
-                                    isFloor &&
-                                    face === TILE &&
-
-                                    /**
-                                     * Only floor tiles of this zIndex and
-                                     * below will be shaded.
-                                     */
-                                    zIndex <
-                                        FLOOR_TILE_SHADE_Z_INDEX_MAP.length,
-
-                                fill = FLOOR_TILE_SHADE_Z_INDEX_MAP[
-                                    zIndex
-                                ]
+                                pathString = getPathString(polygonPoints)
 
                             return (
                                 <Fragment
                                     key={`${slantDirection}${zIndex}${face}`}
                                 >
-                                    {/* Floor tile shading. */}
-                                    {hasFloorTileShading && (
-                                        <DynamicStyling
-                                            {...{
-                                                parentPrefixes: [
-                                                    parentPrefix
-                                                ],
-                                                childPrefixes: [
-                                                    childPrefix,
-                                                    'Face__shade__floorTile'
-                                                ],
-                                                style: {
-                                                    fill
-                                                }
-                                            }}
-                                        />
-                                    )}
                                     {/* Closed path. */}
                                     <DynamicStyling
                                         {...{
@@ -190,6 +135,6 @@ FacesStyle = ({
     )
 }
 
-FacesStyle.propTypes = propTypes
+FacesZIndexStyle.propTypes = propTypes
 
-export default FacesStyle
+export default FacesZIndexStyle

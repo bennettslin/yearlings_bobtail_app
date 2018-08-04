@@ -6,6 +6,8 @@ import { getChildClassNameForFaceLogic } from './helpers/faceHelper'
 import { getCharStringForNumber } from '../../../../helpers/formatHelper'
 
 import {
+    FLOOR,
+    CEILING,
     TILE
 } from '../../sceneConstants'
 
@@ -27,14 +29,14 @@ const Face = ({
     const
         ceilingFaceClassName = getChildClassNameForFaceLogic({
             face,
-            isFloor: false,
+            level: CEILING,
             xIndex,
             yIndex
         }),
 
         floorFaceClassName = getChildClassNameForFaceLogic({
             face,
-            isFloor: true,
+            level: FLOOR,
             xIndex,
             yIndex
         }),

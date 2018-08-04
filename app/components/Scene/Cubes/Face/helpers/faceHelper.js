@@ -6,29 +6,8 @@ import {
 
 import {
     LEFT,
-    RIGHT,
-    CEILING,
-    FLOOR
+    RIGHT
 } from '../../../sceneConstants'
-
-export const getChildClassNameForFaceLogic = ({
-    face,
-    isFloor,
-    xIndex,
-    yIndex
-}) => {
-
-    // "Child face levelIndex, faceIndex, xIndex, yIndex."
-    return `F${
-        isFloor ? FLOOR[0] : CEILING[0]
-    }${
-        face[0].toUpperCase()
-    }${
-        getCharStringForNumber(xIndex)
-    }${
-        yIndex
-    }`
-}
 
 const midXIndex = CUBE_X_AXIS_LENGTH / 2
 
@@ -45,4 +24,23 @@ export const getSideDirection = ({
         return xIndex < midXIndex ?
             LEFT : RIGHT
     }
+}
+
+export const getChildClassNameForFaceLogic = ({
+    level,
+    face,
+    xIndex,
+    yIndex
+}) => {
+
+    // "Child face levelIndex, faceIndex, xIndex, yIndex."
+    return `F${
+        level[0]
+    }${
+        face[0].toUpperCase()
+    }${
+        getCharStringForNumber(xIndex)
+    }${
+        yIndex
+    }`
 }
