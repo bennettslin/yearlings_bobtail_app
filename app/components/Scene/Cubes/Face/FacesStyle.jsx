@@ -66,7 +66,7 @@ FacesStyle = ({
         <Style
             className={cx(
                 'FacesStyle',
-                `CubeFacesStyle__${
+                `FacesStyle__${
                     xIndex
                 }${
                     yIndex

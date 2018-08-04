@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import cx from 'classnames'
 
 import Layer from './Layer'
-import CubesStyle from '../Cubes/CubesStyle'
+import CubesZIndexStyle from '../Cubes/CubesZIndexStyle'
 import PresencesStyle from '../Presences/PresencesStyle'
 
 import { CUBE_Y_INDICES } from '../Cubes/cubeIndexConstants'
@@ -20,7 +20,7 @@ class Layers extends Component {
                     'absoluteFullContainer'
                 )}
             >
-                <CubesStyle />
+                <CubesZIndexStyle />
                 <PresencesStyle />
                 {CUBE_Y_INDICES.map(yIndex => (
                     <Layer

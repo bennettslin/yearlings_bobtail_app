@@ -22,14 +22,14 @@ import {
     SLANTED_RIGHT_X_AXIS_Z_INDICES
 } from './cubeIndexConstants'
 
-const CubesStyle = () => {
+const CubesZIndexStyle = () => {
 
     let xAxisZIndices = DEFAULT_X_AXIS_Z_INDICES
 
     return (
         <Style
             className={cx(
-                'CubesStyle'
+                'CubesZIndexStyle'
             )}
         >
             {SLANT_DIRECTIONS.map(slantDirection => {
@@ -84,4 +84,4 @@ const CubesStyle = () => {
     )
 }
 
-export default CubesStyle
+export default CubesZIndexStyle
