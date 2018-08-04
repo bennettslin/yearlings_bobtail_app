@@ -11,6 +11,7 @@ import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+
 import {
     getCubesForKey,
     getZIndexClassNamesForCubes,
@@ -56,6 +57,7 @@ class Scene extends Component {
             } = sceneObject,
 
             cubes = getCubesForKey(cubesKey),
+
             zIndexClassNames = getZIndexClassNamesForCubes(cubes),
 
             { slantDirection } = cubes,

@@ -12,11 +12,17 @@ const
         ceiling: {
             zIndices: [
                 [k]
+            ],
+            colours: [
+
             ]
         },
         floor: {
             zIndices: [
                 [0]
+            ],
+            colours: [
+
             ]
         },
         presences: {}
