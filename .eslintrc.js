@@ -10,7 +10,8 @@ module.exports = {
         "plugin:react/recommended"
     ],
     "globals": {
-        "logger": true
+        "logger": true,
+        "process": true
     },
     "parser": "babel-eslint",
     "parserOptions": {
