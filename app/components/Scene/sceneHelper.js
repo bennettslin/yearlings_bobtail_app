@@ -30,7 +30,8 @@ export const getCubesForKey = (cubesKey) => {
         floor: {
             ...defaultStageCubes.floor,
             ...keyCubes.floor
-        }
+        },
+        slantDirection: keyCubes.slantDirection || ''
     }
 }
 
