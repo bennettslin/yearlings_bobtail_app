@@ -18,9 +18,9 @@ import {
     ALLEY_KEY,
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import { TIME_ANYTIME,
-         SEASON_WINTER } from '../assets/scene/sky'
+         SEASON_WINTER } from '../constants/sky'
 module.exports = {
     scenes: [
         {

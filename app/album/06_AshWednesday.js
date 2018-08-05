@@ -15,9 +15,9 @@ import {
     CATHOLIC_CHURCH_KEY,
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import { TIME_ANYTIME,
-         SEASON_SPRING } from '../assets/scene/sky'
+         SEASON_SPRING } from '../constants/sky'
 module.exports = {
     scenes: [
         {

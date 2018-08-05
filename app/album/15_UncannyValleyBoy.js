@@ -20,9 +20,9 @@ import {
     SNOW_GLOBES_1_KEY,
     SNOW_GLOBES_2_KEY,
     SNOW_GLOBES_3_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import { TIME_ANYTIME,
-         SEASON_AUTUMN } from '../assets/scene/sky'
+         SEASON_AUTUMN } from '../constants/sky'
 module.exports = {
     scenes: [
         {

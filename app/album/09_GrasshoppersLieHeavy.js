@@ -20,10 +20,10 @@ import {
     SITA_APARTMENT_GATE_1_KEY,
     SITA_APARTMENT_GATE_2_KEY,
     BENNETT_APARTMENT_GATE_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import { TIME_ANYTIME,
          SEASON_AUTUMN,
-         SEASON_WINTER } from '../assets/scene/sky'
+         SEASON_WINTER } from '../constants/sky'
 module.exports = {
     /**
      * All of these scenes repeat twice.

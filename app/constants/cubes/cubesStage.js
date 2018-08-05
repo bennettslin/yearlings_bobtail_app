@@ -1,11 +1,11 @@
 import {
     DEFAULT_STAGE_KEY,
     LOGUE_KEY
-} from './cubesKeys'
+} from '../cubesKeys'
 
 import {
     _TEST_KEY
-} from '../../../constants/hslaKeys'
+} from '../hslaKeys'
 
 import {
     k

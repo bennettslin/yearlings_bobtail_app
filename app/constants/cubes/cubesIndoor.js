@@ -26,7 +26,7 @@ import {
     SHOW_STAGE_SIDE_2_KEY,
     SITA_APARTMENT_COUCH_KEY,
     SITA_APARTMENT_COUCH_THOUGHT_KEY
-} from './cubesKeys'
+} from '../cubesKeys'
 
 import {
     a,

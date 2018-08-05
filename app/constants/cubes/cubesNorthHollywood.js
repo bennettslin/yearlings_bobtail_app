@@ -1,6 +1,6 @@
 import {
     NORTH_HOLLYWOOD_HOUSES_KEY
-} from './cubesKeys'
+} from '../cubesKeys'
 
 import {
     // a,

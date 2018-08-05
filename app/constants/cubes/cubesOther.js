@@ -20,7 +20,7 @@ import {
     OUTDOOR_WEDDING_KEY,
     DREAM_CLIFF_KEY,
     DREAM_DEATHBED_KEY
-} from './cubesKeys'
+} from '../cubesKeys'
 
 import {
     // a,

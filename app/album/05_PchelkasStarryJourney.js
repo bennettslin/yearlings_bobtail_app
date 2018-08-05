@@ -21,9 +21,9 @@ import {
     JUNIOR_HIGH_HALLWAY_KEY,
     JUNIOR_HIGH_LOCKERS_KEY,
     JUNIOR_HIGH_QUAD_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import { TIME_ANYTIME,
-         SEASON_WINTER } from '../assets/scene/sky'
+         SEASON_WINTER } from '../constants/sky'
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
  * song list order on the album.

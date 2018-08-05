@@ -31,7 +31,7 @@ import {
     CREMATED_DEATHBED_KEY,
     CREMATED_DEATHBED_TENNIS_KEY,
     ALLEY_KEY
-} from './cubesKeys'
+} from '../cubesKeys'
 
 import {
     a,

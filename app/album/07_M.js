@@ -15,9 +15,9 @@ import {
     REHEARSAL_SPACE_KEY,
     MOVIE_THEATRE_1_KEY,
     MOVIE_THEATRE_2_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import { TIME_ANYTIME,
-         SEASON_SUMMER } from '../assets/scene/sky'
+         SEASON_SUMMER } from '../constants/sky'
 module.exports = {
     scenes: [
         {

@@ -23,10 +23,10 @@ import {
     ODIN_SCENE_6_KEY,
     ODIN_SCENE_7_KEY,
     ODIN_SCENE_8_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 
 import { TIME_ANYTIME,
-         SEASON_AUTUMN } from '../assets/scene/sky'
+         SEASON_AUTUMN } from '../constants/sky'
 module.exports = {
     scenes: [
         {

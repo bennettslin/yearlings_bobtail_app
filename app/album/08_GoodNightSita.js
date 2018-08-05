@@ -14,9 +14,9 @@ import {
     SITA_APARTMENT_GATE_1_KEY,
     SITA_APARTMENT_GATE_2_KEY,
     GO_KART_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import { TIME_ANYTIME,
-         SEASON_AUTUMN } from '../assets/scene/sky'
+         SEASON_AUTUMN } from '../constants/sky'
 module.exports = {
     scenes: [
         {

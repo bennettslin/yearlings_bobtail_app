@@ -19,9 +19,9 @@ import {
     PORCH_KEY,
     NORTH_HOLLYWOOD_HOUSES_KEY,
     CHANGELING_CAVE_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import { TIME_ANYTIME,
-         SEASON_SUMMER } from '../assets/scene/sky'
+         SEASON_SUMMER } from '../constants/sky'
 
 module.exports = {
     scenes: [

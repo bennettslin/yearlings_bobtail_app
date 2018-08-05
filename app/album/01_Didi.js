@@ -18,7 +18,7 @@ import {
     CHILDHOOD_BATHROOM_KEY,
     NORTH_HOLLYWOOD_HOUSES_KEY,
     PLAYGROUND_KEY
-} from '../assets/scene/cubes/cubesKeys'
+} from '../constants/cubesKeys'
 import {
     TIME_DAWN,
     TIME_MORNING,
@@ -26,7 +26,7 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     SEASON_SPRING
-} from '../assets/scene/sky'
+} from '../constants/sky'
 
 module.exports = {
     scenes: [

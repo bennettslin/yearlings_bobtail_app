@@ -1,5 +1,5 @@
-import { CUBES } from '../../assets/scene/cubes/cubes'
-import { DEFAULT_STAGE_KEY } from '../../assets/scene/cubes/cubesKeys'
+import { CUBES } from '../../constants/cubes'
+import { DEFAULT_STAGE_KEY } from '../../constants/cubesKeys'
 
 import { getCharStringForNumber } from '../../helpers/formatHelper'
 

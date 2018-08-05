@@ -11,9 +11,9 @@ import { VERSES,
          REFRAIN,
          OUTRO,
          IS_DOT_CARD } from '../constants/lyrics'
-import { SITA_APARTMENT_COUCH_KEY } from '../assets/scene/cubes/cubesKeys'
+import { SITA_APARTMENT_COUCH_KEY } from '../constants/cubesKeys'
 import { TIME_ANYTIME,
-         SEASON_AUTUMN } from '../assets/scene/sky'
+         SEASON_AUTUMN } from '../constants/sky'
 module.exports = {
     scenes: [
         {
