@@ -67,8 +67,10 @@ export const parseAlbumData = (albumObject) => {
 }
 
 const _mergeAlbumTasks = (albumObject) => {
-    const { remainingTasks,
-            completedTasks } = albumObject
+    const {
+        remainingTasks,
+        completedTasks
+    } = albumObject
 
     albumObject.tasks = remainingTasks.concat(completedTasks)
 
@@ -197,7 +199,7 @@ const _initialRegisterAnnotation = ({
 }) => {
     // If just a single card, make it an array of one.
     const cards = Array.isArray(lyricObject.annotation) ?
-            lyricObject.annotation : [lyricObject.annotation],
+        lyricObject.annotation : [lyricObject.annotation],
 
         annotationIndex = songObject.annotations.length + 1,
 
@@ -217,7 +219,7 @@ const _initialRegisterAnnotation = ({
     if (inVerseWithTimeIndex > -1) {
         annotationObject.verseIndex = inVerseWithTimeIndex
 
-    // Otherwise, tell it the most recent verse index. For title, this is 0.
+        // Otherwise, tell it the most recent verse index. For title, this is 0.
     } else {
         annotationObject.mostRecentVerseIndex = songObject.tempVerseIndexCounter
     }
