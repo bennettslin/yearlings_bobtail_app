@@ -33,13 +33,15 @@ const propTypes = {
     presenceKey: PropTypes.string.isRequired,
     presence: PropTypes.shape({
         instance: PropTypes.string.isRequired,
-        xFloat: PropTypes.number.isRequired,
-        zOffset: PropTypes.number.isRequired,
-        xWidth: PropTypes.number.isRequired,
-        zHeight: PropTypes.number.isRequired
+        arrangement: PropTypes.shape({
+            yIndex: PropTypes.number.isRequired,
+            xFloat: PropTypes.number.isRequired,
+            zOffset: PropTypes.number.isRequired,
+            xWidth: PropTypes.number.isRequired,
+            zHeight: PropTypes.number.isRequired
+        }).isRequired
     }).isRequired,
     cubesKey: PropTypes.string.isRequired,
-    yIndex: PropTypes.number.isRequired
 }
 
 class Presence extends Component {
@@ -61,13 +63,15 @@ class Presence extends Component {
                 presenceKey,
                 presence: {
                     instance: instanceKey,
-                    xFloat,
-                    zOffset,
-                    xWidth,
-                    zHeight
+                    arrangement: {
+                        yIndex,
+                        xFloat,
+                        zOffset,
+                        xWidth,
+                        zHeight
+                    }
                 },
-                cubesKey,
-                yIndex
+                cubesKey
             } = this.props,
 
             PresenceComponent = PRESENCE_TYPE_COMPONENTS[type],

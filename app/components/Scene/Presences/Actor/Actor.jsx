@@ -23,10 +23,10 @@ const propTypes = {
     // From parent.
     presenceKey: PropTypes.string.isRequired,
     instanceKey: PropTypes.string.isRequired,
-    x: PropTypes.number.isRequired,
-    y: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
+    x: PropTypes.string.isRequired,
+    y: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired
 }
 
 const Actor = ({

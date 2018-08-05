@@ -78,7 +78,7 @@ class Presences extends Component {
                             const presence = presenceTypeObject[presenceKey]
 
                             // TODO: Have build arrange by yIndex.
-                            return presence.yIndex === yIndex && (
+                            return presence.arrangement.yIndex === yIndex && (
                                 <Presence
                                     key={presenceKey}
                                     {...{

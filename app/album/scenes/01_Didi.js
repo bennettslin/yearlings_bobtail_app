@@ -39,33 +39,39 @@ module.exports = [
                     workedHours: 3,
                     description: 'side, rushing, exasperated',
                     instance: 'test',
-                    yIndex: 5,
-                    xFloat: 4,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 5,
+                        xFloat: 4,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking at Anita',
                     instance: 'test',
-                    yIndex: 4,
-                    xFloat: 3,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 4,
+                        xFloat: 3,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, running, panicked',
                     instance: 'test',
-                    yIndex: 5,
-                    xFloat: 8,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 5,
+                        xFloat: 8,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 }
             }
         },
@@ -85,33 +91,39 @@ module.exports = [
                     workedHours: 3,
                     description: 'front, playing ball, offended',
                     instance: 'test',
-                    yIndex: 5,
-                    xFloat: 5,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 5,
+                        xFloat: 5,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, flustered',
                     instance: 'test',
-                    yIndex: 5,
-                    xFloat: 5,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 5,
+                        xFloat: 5,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, skipping, pointing back and laughing',
                     instance: 'test',
-                    yIndex: 5,
-                    xFloat: 5,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 5,
+                        xFloat: 5,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 }
             }
         },
@@ -131,11 +143,13 @@ module.exports = [
                     workedHours: 3,
                     description: 'side, in bathtub, downcast',
                     instance: 'test',
-                    yIndex: 5,
-                    xFloat: 5,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 5,
+                        xFloat: 5,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 }
             }
         },
@@ -155,22 +169,26 @@ module.exports = [
                     workedHours: 3,
                     description: 'back, squatting, smiling',
                     instance: 'test',
-                    yIndex: 5,
-                    xFloat: 5,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 5,
+                        xFloat: 5,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, facing front, singing, smiling',
                     instance: 'test',
-                    yIndex: 5,
-                    xFloat: 5,
-                    zOffset: 0,
-                    xWidth: 1,
-                    zHeight: 3
+                    arrangement: {
+                        yIndex: 5,
+                        xFloat: 5,
+                        zOffset: 0,
+                        xWidth: 1,
+                        zHeight: 3
+                    }
                 }
             }
         },
