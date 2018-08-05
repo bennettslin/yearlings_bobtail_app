@@ -3638,4 +3638,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Only log warns and lower in development mode.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

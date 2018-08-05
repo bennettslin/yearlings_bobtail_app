@@ -152,6 +152,7 @@ export const getPresenceXYWidthAndHeight = ({
 
     // How many cube lengths high.
     zHeight
+
 }) => {
 
     const
@@ -181,9 +182,9 @@ export const getPresenceXYWidthAndHeight = ({
         y = yPercentage - height
 
     return {
-        x,
-        y,
-        width,
-        height
+        x: x.toFixed(2),
+        y: y.toFixed(2),
+        width: width.toFixed(2),
+        height: height.toFixed(2)
     }
 }

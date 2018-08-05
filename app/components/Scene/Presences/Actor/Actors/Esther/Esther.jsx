@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -14,11 +14,15 @@ const Esther = ({
 ...other }) => {
 
     return (
-        <Fragment>
+        <g
+            className={cx(
+                'Actor',
+                'Esther'
+            )}
+        >
             <rect
                 className={cx(
-                    'Actor',
-                    'Esther'
+                    'Actor__temporaryRect'
                 )}
                 {...other}
             />
@@ -30,7 +34,7 @@ const Esther = ({
             >
                 {`Esther${instanceKey}`}
             </text>
-        </Fragment>
+        </g>
     )
 }
 

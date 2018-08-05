@@ -34,6 +34,8 @@ const Cube = ({
 
     // This component never updates because its parent never updates.
     return (
+
+        // Individual cubes need to be svgs in order to have a stacking order.
         <Svg
             className={cx(
                 // This class is used to determine face shading.

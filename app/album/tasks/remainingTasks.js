@@ -212,11 +212,5 @@ module.exports = [
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: `Be smart about using logger.`,
-        workedHours: 1,
-        neededHours: 2
     }
 ]
