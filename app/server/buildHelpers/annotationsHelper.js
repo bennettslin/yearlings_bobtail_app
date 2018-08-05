@@ -2,9 +2,25 @@
 
 import keys from 'lodash.keys'
 
-import { LYRIC, ANCHOR, WIKI, ITALIC, WIKI_INDEX, WORMHOLE_SEARCH_KEYS, DESTINATION_WORMHOLE_INDEX, SOURCE_WORMHOLE_INDEX, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
-import { WORMHOLE, REFERENCE } from '../../constants/dots'
-import { getAnnotationObject } from '../dataHelper'
+import { getAnnotationObject } from '../../helpers/dataHelper'
+
+import {
+    WORMHOLE,
+    REFERENCE
+} from '../../constants/dots'
+
+import {
+    LYRIC,
+    ANCHOR,
+    WIKI,
+    ITALIC,
+    WIKI_INDEX,
+    WORMHOLE_SEARCH_KEYS,
+    DESTINATION_WORMHOLE_INDEX,
+    SOURCE_WORMHOLE_INDEX,
+    IS_VERSE_BEGINNING_SPAN,
+    IS_VERSE_ENDING_SPAN
+} from '../../constants/lyrics'
 
 /***********
  * INITIAL *
@@ -127,8 +143,8 @@ const _addSourceWormholeLink = ({
          * that wasn't, such as in a side stanza, this wouldn't work for it!
          */
         { verseIndex,
-          annotationIndex,
-          columnIndex } = annotationObject,
+            annotationIndex,
+            columnIndex } = annotationObject,
 
         wormholeLink = {
             songIndex: tempSongIndex,
@@ -170,11 +186,11 @@ export const addDestinationWormholeLinks = (albumObject) => {
 
         links.forEach((destinationLink, index) => {
             const { songIndex,
-                    annotationIndex,
-                    cardIndex } = destinationLink,
+                annotationIndex,
+                cardIndex } = destinationLink,
 
-            annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
-            cardObject = annotationObject.cards[cardIndex]
+                annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
+                cardObject = annotationObject.cards[cardIndex]
 
             cardObject.wormholeLinks = links.filter((sourceLink, thisIndex) => {
 
@@ -194,7 +210,7 @@ export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
     const { tempSongIndex } = songObject,
 
         { description,
-          wormholeLinks } = cardObject
+            wormholeLinks } = cardObject
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
@@ -369,11 +385,11 @@ export const addDestinationWormholeIndices = (albumObject) => {
         links.forEach((destinationLink, index) => {
 
             const { songIndex,
-                    annotationIndex,
-                    cardIndex } = destinationLink,
+                annotationIndex,
+                cardIndex } = destinationLink,
 
-            annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
-            cardObject = annotationObject.cards[cardIndex]
+                annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
+                cardObject = annotationObject.cards[cardIndex]
 
             cardObject.wormholeLinks = links.filter((sourceLink, thisIndex) => {
 
@@ -383,15 +399,15 @@ export const addDestinationWormholeIndices = (albumObject) => {
                  */
                 destinationLink.tempSourceWormholeLinks.forEach((tempSourceLink) => {
                     const { tempSourceSongIndex,
-                            tempSourceAnnotationIndex,
-                            tempSourceWormholeIndex } = tempSourceLink,
+                        tempSourceAnnotationIndex,
+                        tempSourceWormholeIndex } = tempSourceLink,
 
                         /**
                          * This will happen only once for each source and
                          * destination pair.
                          */
                         linksMatch = sourceLink.songIndex === tempSourceSongIndex &&
-                                     sourceLink.annotationIndex === tempSourceAnnotationIndex
+                            sourceLink.annotationIndex === tempSourceAnnotationIndex
 
                     if (linksMatch) {
                         // Exchange knowledge of source and destination indices.

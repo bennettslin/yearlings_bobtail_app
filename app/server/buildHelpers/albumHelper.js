@@ -1,24 +1,12 @@
 // Parse album data for build.
 
 import {
-    LEFT,
-    RIGHT,
-    ANCHOR,
-    COLUMN_INDEX,
-    LEFT_COLUMN,
-    RIGHT_COLUMN,
-    PROPER_NOUN
-} from '../../constants/lyrics'
-
-import {
     registerCards,
     addDestinationWormholeLinks,
     finalPrepareCard,
     addDestinationWormholeIndices,
     addDestinationWormholeFormats
 } from './annotationsHelper'
-
-import { getSongIsLogue } from '../dataHelper'
 
 import {
     adminGatherDrawings,
@@ -38,7 +26,19 @@ import {
     finalRegisterStanzaTypes
 } from './lyricsHelper'
 
-import { getFormattedAnnotationTitle } from '../formatHelper'
+import { getSongIsLogue } from '../../helpers/dataHelper'
+
+import { getFormattedAnnotationTitle } from '../../helpers/formatHelper'
+
+import {
+    LEFT,
+    RIGHT,
+    ANCHOR,
+    COLUMN_INDEX,
+    LEFT_COLUMN,
+    RIGHT_COLUMN,
+    PROPER_NOUN
+} from '../../constants/lyrics'
 
 export const parseAlbumData = (albumObject) => {
     logger.warn('Begin parse album data.')

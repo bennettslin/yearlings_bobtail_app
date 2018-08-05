@@ -4,7 +4,7 @@
  * created.
  */
 
-import AlbumData from '../AlbumData'
+import AlbumData from '../server/AlbumData'
 import { SOURCE_WORMHOLE_INDEX } from '../constants/lyrics'
 
 /*********

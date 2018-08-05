@@ -5,7 +5,7 @@ import {
     convertBitNumberToTrueFalseKeys,
     setNewValueInBitNumber
 } from '../helpers/bitHelper'
-import AlbumData from '../AlbumData'
+import AlbumData from '../server/AlbumData'
 
 import {
     ALL_DOT_KEYS
