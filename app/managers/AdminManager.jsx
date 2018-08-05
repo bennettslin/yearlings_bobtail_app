@@ -6,15 +6,12 @@ import { connect } from 'react-redux'
 import { selectAdminIndex } from '../redux/actions/storage'
 
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import LogHelper from '../helpers/logHelper'
 
-class DebugManager extends Component {
+class AdminManager extends Component {
 
     static propTypes = {
         // Through Redux.
         selectedAdminIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-
         selectAdminIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -23,8 +20,6 @@ class DebugManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-
-        this._assignDebugLogFunctions()
     }
 
     shouldComponentUpdate(nextProps) {
@@ -32,16 +27,6 @@ class DebugManager extends Component {
             props: this.props,
             nextProps
         })
-    }
-
-    _assignDebugLogFunctions() {
-        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
-        window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
-        window.d = LogHelper.logDrawings.bind(LogHelper, this)
-        window.p = LogHelper.logWormholeLinks.bind(LogHelper, this.props)
-        window.s = LogHelper.logSong.bind(LogHelper, this)
-        window.v = LogHelper.logVerse.bind(LogHelper, this)
-        window.t = LogHelper.logStorage.bind(LogHelper)
     }
 
     toggleAdmin(
@@ -59,11 +44,9 @@ class DebugManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedAdminIndex,
-    selectedSongIndex
+    selectedAdminIndex
 }) => ({
-    selectedAdminIndex,
-    selectedSongIndex
+    selectedAdminIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
@@ -72,4 +55,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DebugManager)
+export default connect(mapStateToProps, bindDispatchToProps)(AdminManager)

@@ -12,8 +12,9 @@ import AccessManager from './AccessManager'
 import AnnotationManager from './AnnotationManager/AnnotationManager'
 import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
-import DebugManager from './DebugManager'
+import AdminManager from './AdminManager'
 import DotsManager from './DotsManager'
+import LogManager from './LogManager'
 import LyricManager from './LyricManager'
 import NavManager from './NavManager'
 import OverviewManager from './OverviewManager'
@@ -117,7 +118,7 @@ class StateManager extends Component {
      *********/
 
     toggleAdmin(payload) {
-        return this.debugManager.toggleAdmin(payload)
+        return this.adminManager.toggleAdmin(payload)
     }
 
     /********
@@ -421,12 +422,15 @@ class StateManager extends Component {
                     accessNavSong={this.accessNavSong}
                     selectBookColumn={this.selectBookColumn}
                 />
-                <DebugManager
-                    setRef={node => (this.debugManager = node)}
+                <AdminManager
+                    setRef={node => (this.adminManager = node)}
                 />
                 <DotsManager
                     setRef={node => (this.dotsManager = node)}
                     accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
+                />
+                <LogManager
+                    setRef={node => (this.logManager = node)}
                 />
                 <LyricManager
                     setRef={node => (this.lyricManager = node)}
