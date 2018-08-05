@@ -22,6 +22,13 @@ const rawAlbum = {
                 HYPHENATED_SONG_PATHS[index]
             }.pdf`)
         )),
+        scenes: getArrayOfLength(20).map(index => (
+            require(`../album/scenes/${
+                getTwoDigitStringForNumber(index)
+            }_${
+                HYPHENATED_SONG_PATHS[index]
+            }`)
+        )),
         songs: getArrayOfLength(20).map(index => (
             require(`../album/songs/${
                 getTwoDigitStringForNumber(index)

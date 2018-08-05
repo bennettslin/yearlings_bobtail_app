@@ -380,9 +380,12 @@ export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
     return songVerseConfigs[verseIndex].sceneIndex
 }
 
-export const getSceneObject = (songIndex, sceneIndex = 0) => {
-    const song = getSongObject(songIndex),
-        { scenes: sceneObject } = song
+export const getSceneObject = (
+    songIndex,
+    sceneIndex = 0,
+    scenes = album.scenes
+) => {
+    const sceneObject = scenes[songIndex]
 
     return sceneObject[sceneIndex] || null
 }
