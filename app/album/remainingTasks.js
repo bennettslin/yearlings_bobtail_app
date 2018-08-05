@@ -4,9 +4,9 @@ module.exports = [
      * Presence work.
      */
     {
-        taskName: `Have system for presence rendering.`,
+        taskName: `Continue system for presence rendering. Have build order presences by yIndex. Have actor component know which instance to render based on instance key. Have system to keep track of instance keys. And get a start on cutouts and fixtures.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 10
     },
 
     // Important features.

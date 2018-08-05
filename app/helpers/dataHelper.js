@@ -382,7 +382,7 @@ export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
 
 export const getSceneObject = (songIndex, sceneIndex = 0) => {
     const song = getSongObject(songIndex),
-        sceneObject = song.scenes
+        { scenes: sceneObject } = song
 
     return sceneObject[sceneIndex] || null
 }

@@ -10,7 +10,11 @@ const
     FLOOR = 'floor',
 
     Z_INDICES_MATRIX_NAME = 'zIndices',
-    HSLA_MATRIX_NAME = 'hslaColours'
+    HSLA_MATRIX_NAME = 'hslaColours',
+
+    ACTORS = 'actors',
+    CUTOUTS = 'cutouts',
+    FIXTURES = 'fixtures'
 
 module.exports = {
 
@@ -36,6 +40,16 @@ module.exports = {
         TILE,
         SIDE,
         FRONT
+    ],
+
+    ACTORS,
+    CUTOUTS,
+    FIXTURES,
+
+    PRESENCE_TYPES: [
+        ACTORS,
+        CUTOUTS,
+        FIXTURES
     ],
 
     Z_INDICES_MATRIX_NAME,

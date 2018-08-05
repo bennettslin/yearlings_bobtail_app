@@ -30,10 +30,6 @@ export const getCubesForKey = (cubesKey) => {
         floor: {
             ...defaultStageCubes.floor,
             ...keyCubes.floor
-        },
-        presences: {
-            ...defaultStageCubes.presences,
-            ...keyCubes.presences
         }
     }
 }
@@ -54,7 +50,7 @@ export const getParentClassNameForSceneLogic = ({
     }
 
     /**
-     * "Scene matrixInitial, levelIndex, xIndex, yIndex, zIndex."
+     * "MatrixInitial, levelIndex, xIndex, yIndex, value."
      */
     return `${
         matrixName[0].toUpperCase()

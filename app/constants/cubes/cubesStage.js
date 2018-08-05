@@ -28,8 +28,7 @@ const
             hslaColours: [
                 [_TEST_KEY]
             ]
-        },
-        presences: {}
+        }
     },
 
     LOGUE_CUBES = {
@@ -42,18 +41,6 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
             ]
-        },
-        presences: {
-            song0_scene0: {
-                cubes3: {
-                    actors: {
-                        name: 'oldBennett',
-                        xFloat: 5.5,
-                        xWidth: 1,
-                        zHeight: 5
-                    }
-                }
-            }
         }
     },
 

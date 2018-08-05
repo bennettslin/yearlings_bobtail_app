@@ -3623,4 +3623,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Begin work to render presence components.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 ]

@@ -112,35 +112,6 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
-        },
-        presences: {
-            song5_scene0: {
-
-                cubes5: {
-                    fixtures: [
-                        {
-                            name: 'sample fixture 4',
-                            xFloat: 5,
-                            xWidth: 1,
-                            zHeight: 2
-                        },
-                        {
-                            name: 'sample fixture 4',
-                            xFloat: 7.5,
-                            zOffset: 0.5,
-                            xWidth: 2,
-                            zHeight: 1
-                        },
-                        {
-                            name: 'sample fixture 4',
-                            xFloat: 11,
-                            zOffset: 0.5,
-                            xWidth: 1,
-                            zHeight: 1
-                        },
-                    ]
-                }
-            }
         }
     },
     PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES = {

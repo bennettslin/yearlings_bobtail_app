@@ -13,7 +13,8 @@ import Svg from '../../Svg/Svg'
 import Presence from './Presence'
 
 import { getSceneObject } from '../../../helpers/dataHelper'
-import { getPresencesForCubes } from './presenceHelper'
+
+import { PRESENCE_TYPES } from '../sceneConstants'
 
 const mapStateToProps = ({
     canPresencesRender,
@@ -53,60 +54,47 @@ class Presences extends Component {
                 renderableSceneIndex
             ),
 
-            { cubes: cubesKey } = sceneObject,
+            {
+                cubes: cubesKey,
+                presences
+            } = sceneObject
 
-            presences = getPresencesForCubes({
-                cubesKey,
-                songIndex: renderableSongIndex,
-                sceneIndex: renderableSceneIndex,
-                yIndex
-            })
+        return presences ? (
+            <Svg
+                className={cx(
+                    `Presences__y${yIndex}`,
+                    'absoluteFullContainer'
+                )}
+            >
+                {/* As of now, keys are actors, cutouts, fixtures. */}
+                {PRESENCE_TYPES.map(presenceType => {
 
-        if (presences) {
-            // As of now, keys are actors, cutouts, fixtures.
-            const presenceTypes = keys(presences)
+                    const presenceTypeObject = presences[presenceType]
 
-            return (
-                <Svg
-                    className={cx(
-                        `Presences__y${yIndex}`,
-                        'absoluteFullContainer'
-                    )}
-                >
-                    {presenceTypes.map(presenceType => {
-                        const presenceEntity = presences[presenceType],
+                    return presenceTypeObject && (
 
-                            /**
-                             * This is either an array of presences, or a single
-                             * presence. If it's a single presence, make it an
-                             * array of one.
-                             */
-                            presenceArray = Array.isArray(presenceEntity) ?
-                                presenceEntity :
-                                [presenceEntity]
+                        keys(presenceTypeObject).map(presenceKey => {
 
-                        return presenceArray.map(presence => {
+                            const presence = presenceTypeObject[presenceKey]
 
-                            const { name } = presence
-
-                            return (
+                            // TODO: Have build arrange by yIndex.
+                            return presence.yIndex === yIndex && (
                                 <Presence
-                                    key={name}
-                                    {...presence}
+                                    key={presenceKey}
                                     {...{
                                         type: presenceType,
+                                        presenceKey,
+                                        presence,
                                         cubesKey,
                                         yIndex
                                     }}
                                 />
                             )
                         })
-                    })}
-                </Svg>
-            )
-        } else {
-            return null
-        }
+                    )
+                })}
+            </Svg>
+        ) : null
     }
 }
 

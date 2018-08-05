@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
+// import cx from 'classnames'
 
 import Actor from './Actor/Actor'
 import Cutout from './Cutout/Cutout'
@@ -13,36 +13,33 @@ import Fixture from './Fixture/Fixture'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
+import { getPresenceXYWidthAndHeight } from './presenceHelper'
+
 import {
-    getPresenceXYWidthAndHeight
-} from './presenceHelper'
+    ACTORS,
+    CUTOUTS,
+    FIXTURES
+} from '../sceneConstants'
 
 const PRESENCE_TYPE_COMPONENTS = {
-    actors: Actor,
-    cutouts: Cutout,
-    fixtures: Fixture
+    [ACTORS]: Actor,
+    [CUTOUTS]: Cutout,
+    [FIXTURES]: Fixture
 }
 
 const propTypes = {
     // From parent.
-    name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
+    presenceKey: PropTypes.string.isRequired,
+    presence: PropTypes.shape({
+        instance: PropTypes.string.isRequired,
+        xFloat: PropTypes.number.isRequired,
+        zOffset: PropTypes.number.isRequired,
+        xWidth: PropTypes.number.isRequired,
+        zHeight: PropTypes.number.isRequired
+    }).isRequired,
     cubesKey: PropTypes.string.isRequired,
-
-    // Where to position on the yIndex axis. Passed by layer.
-    yIndex: PropTypes.number.isRequired,
-
-    // Where to centre on the xIndex axis. Can be a float.
-    xFloat: PropTypes.number.isRequired,
-
-    // Where to position above the given zIndex. Default is the zIndex.
-    zOffset: PropTypes.number,
-
-    // How many cube lengths wide. Assume cube is one foot wide.
-    xWidth: PropTypes.number.isRequired,
-
-    // How many cube lengths high.
-    zHeight: PropTypes.number.isRequired
+    yIndex: PropTypes.number.isRequired
 }
 
 class Presence extends Component {
@@ -51,48 +48,47 @@ class Presence extends Component {
         return !getPropsAreShallowEqual({
             props: this.props,
             nextProps
+
+        }) || !getPropsAreShallowEqual({
+            props: this.props.presence,
+            nextProps: nextProps.presence
         })
     }
 
     render() {
         const {
-                name,
                 type,
+                presenceKey,
+                presence: {
+                    instance: instanceKey,
+                    xFloat,
+                    zOffset,
+                    xWidth,
+                    zHeight
+                },
                 cubesKey,
-                yIndex,
-                xFloat,
-                zOffset,
-                xWidth,
-                zHeight
+                yIndex
             } = this.props,
 
-            presenceXYWidthAndHeight = getPresenceXYWidthAndHeight({
-                cubesKey,
+            PresenceComponent = PRESENCE_TYPE_COMPONENTS[type],
+
+            xYWidthAndHeight = getPresenceXYWidthAndHeight({
                 xFloat,
-                yIndex,
                 zOffset,
                 xWidth,
-                zHeight
-            }),
-
-            PresenceComponent = PRESENCE_TYPE_COMPONENTS[type]
+                zHeight,
+                cubesKey,
+                yIndex
+            })
 
         return (
-            <g
-                className={cx(
-                    'Presence',
-                    `Presence__${type}`,
-                    `Presence__y${yIndex}`,
-                    name
-                )}
-            >
-                <PresenceComponent
-                    {...presenceXYWidthAndHeight}
-                    {...{
-                        name
-                    }}
-                />
-            </g>
+            <PresenceComponent
+                {...{
+                    presenceKey,
+                    instanceKey,
+                }}
+                {...xYWidthAndHeight}
+            />
         )
     }
 }

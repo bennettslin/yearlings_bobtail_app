@@ -18,7 +18,6 @@ class Layer extends Component {
         return (
             <Fragment>
                 <Cubes {...props} />
-
                 <Presences {...props} />
             </Fragment>
         )

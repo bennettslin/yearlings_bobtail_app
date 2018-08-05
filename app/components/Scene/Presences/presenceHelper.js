@@ -134,11 +134,23 @@ const _getCubeWidthAndHeightPercentages = (yIndex) => {
 }
 
 export const getPresenceXYWidthAndHeight = ({
+
+    // Needed to determine cube's zIndex.
     cubesKey,
+
+    // Where to centre on the xIndex axis. Can be a float.
     xFloat,
+
+    // Where to position on the yIndex axis.
     yIndex,
+
+    // Where to position above the given zIndex. Default is the zIndex.
     zOffset,
+
+    // How many cube lengths wide. Assume cube is one foot wide.
     xWidth,
+
+    // How many cube lengths high.
     zHeight
 }) => {
 
