@@ -3625,7 +3625,7 @@ module.exports = [
     },
     {
         taskName: `Begin work to render presence components.`,
-        workedHours: 0,
+        workedHours: 5,
         neededHours: 5
     },
     {
@@ -3642,5 +3642,10 @@ module.exports = [
         taskName: `Only log warns and lower in development mode.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Group presences by yIndices in album data.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

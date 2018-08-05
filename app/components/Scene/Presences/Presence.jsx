@@ -29,19 +29,17 @@ const PRESENCE_TYPE_COMPONENTS = {
 
 const propTypes = {
     // From parent.
-    type: PropTypes.string.isRequired,
-    presenceKey: PropTypes.string.isRequired,
-    presence: PropTypes.shape({
-        instance: PropTypes.string.isRequired,
-        arrangement: PropTypes.shape({
-            yIndex: PropTypes.number.isRequired,
-            xFloat: PropTypes.number.isRequired,
-            zOffset: PropTypes.number.isRequired,
-            xWidth: PropTypes.number.isRequired,
-            zHeight: PropTypes.number.isRequired
-        }).isRequired
+    presenceType: PropTypes.string.isRequired,
+    nameKey: PropTypes.string.isRequired,
+    instanceKey: PropTypes.string.isRequired,
+    arrangement: PropTypes.shape({
+        xFloat: PropTypes.number.isRequired,
+        zOffset: PropTypes.number.isRequired,
+        xWidth: PropTypes.number.isRequired,
+        zHeight: PropTypes.number.isRequired
     }).isRequired,
     cubesKey: PropTypes.string.isRequired,
+    yIndex: PropTypes.number.isRequired
 }
 
 class Presence extends Component {
@@ -50,7 +48,6 @@ class Presence extends Component {
         return !getPropsAreShallowEqual({
             props: this.props,
             nextProps
-
         }) || !getPropsAreShallowEqual({
             props: this.props.presence,
             nextProps: nextProps.presence
@@ -59,22 +56,20 @@ class Presence extends Component {
 
     render() {
         const {
-                type,
-                presenceKey,
-                presence: {
-                    instance: instanceKey,
-                    arrangement: {
-                        yIndex,
-                        xFloat,
-                        zOffset,
-                        xWidth,
-                        zHeight
-                    }
+                presenceType,
+                nameKey,
+                instanceKey,
+                arrangement: {
+                    xFloat,
+                    zOffset,
+                    xWidth,
+                    zHeight
                 },
-                cubesKey
+                cubesKey,
+                yIndex
             } = this.props,
 
-            PresenceComponent = PRESENCE_TYPE_COMPONENTS[type],
+            PresenceComponent = PRESENCE_TYPE_COMPONENTS[presenceType],
 
             xYWidthAndHeight = getPresenceXYWidthAndHeight({
                 xFloat,
@@ -88,8 +83,8 @@ class Presence extends Component {
         return (
             <PresenceComponent
                 {...{
-                    presenceKey,
-                    instanceKey,
+                    nameKey,
+                    instanceKey
                 }}
                 {...xYWidthAndHeight}
             />

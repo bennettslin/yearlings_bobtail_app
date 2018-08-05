@@ -46,11 +46,11 @@ module.exports = {
     CUTOUTS,
     FIXTURES,
 
-    PRESENCE_TYPES: [
-        ACTORS,
-        CUTOUTS,
-        FIXTURES
-    ],
+    // PRESENCE_TYPES: [
+    //     ACTORS,
+    //     CUTOUTS,
+    //     FIXTURES
+    // ],
 
     Z_INDICES_MATRIX_NAME,
     HSLA_MATRIX_NAME

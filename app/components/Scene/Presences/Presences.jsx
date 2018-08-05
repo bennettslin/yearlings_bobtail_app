@@ -7,14 +7,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import keys from 'lodash.keys'
 
 import Svg from '../../Svg/Svg'
 import Presence from './Presence'
 
 import { getSceneObject } from '../../../helpers/dataHelper'
-
-import { PRESENCE_TYPES } from '../sceneConstants'
 
 const mapStateToProps = ({
     canPresencesRender,
@@ -56,8 +53,10 @@ class Presences extends Component {
 
             {
                 cubes: cubesKey,
-                presences
-            } = sceneObject
+                presenceYIndices
+            } = sceneObject,
+
+            presences = presenceYIndices[yIndex]
 
         return presences ? (
             <Svg
@@ -66,33 +65,19 @@ class Presences extends Component {
                     'absoluteFullContainer'
                 )}
             >
-                {/* As of now, keys are actors, cutouts, fixtures. */}
-                {PRESENCE_TYPES.map(presenceType => {
-
-                    const presenceTypeObject = presences[presenceType]
-
-                    return presenceTypeObject && (
-
-                        keys(presenceTypeObject).map(presenceKey => {
-
-                            const presence = presenceTypeObject[presenceKey]
-
-                            // TODO: Have build arrange by yIndex.
-                            return presence.arrangement.yIndex === yIndex && (
-                                <Presence
-                                    key={presenceKey}
-                                    {...{
-                                        type: presenceType,
-                                        presenceKey,
-                                        presence,
-                                        cubesKey,
-                                        yIndex
-                                    }}
-                                />
-                            )
-                        })
-                    )
-                })}
+                {presences.map(presence => (
+                    <Presence
+                        key={presence.name}
+                        {...{
+                            presenceType: presence.type,
+                            nameKey: presence.name,
+                            instanceKey: presence.instance,
+                            arrangement: presence.arrangement,
+                            cubesKey,
+                            yIndex
+                        }}
+                    />
+                ))}
             </Svg>
         ) : null
     }

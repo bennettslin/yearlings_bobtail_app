@@ -295,3 +295,57 @@ export const finalRegisterScenes = (songObject) => {
         }
     })
 }
+
+export const finalRegisterPresenceYIndices = (
+    album,
+    songIndex
+) => {
+    const scenes = album.scenes[songIndex]
+
+    scenes.forEach(scene => {
+
+        const {
+            presences
+        } = scene
+
+        // Create the presenceYIndices object for each scene.
+        scene.presenceYIndices = {}
+
+        // Iterate through actors, cutouts, fixtures.
+        keys(presences).forEach(presenceType => {
+
+            // Iterate through presences.
+            keys(presences[presenceType]).forEach(presenceName => {
+
+                const presence = presences[presenceType][presenceName]
+
+                /**
+                 * Determine the yIndex of each presence.
+                 */
+                const { yIndex } = presence.arrangement
+
+                /**
+                 * If this is the first presence for that yIndex, initialise
+                 * the yIndex array.
+                 */
+                if (!scene.presenceYIndices[yIndex]) {
+                    scene.presenceYIndices[yIndex] = []
+                }
+
+                /**
+                 * Add presence to the scene's presenceYIndices object under
+                 * that yIndex.
+                 */
+                scene.presenceYIndices[yIndex].push({
+                    type: presenceType,
+                    name: presenceName,
+                    instance: presence.instance,
+                    arrangement: presence.arrangement
+                })
+            })
+        })
+
+        // Scene no longer needs the presences object.
+        delete scene.presences
+    })
+}

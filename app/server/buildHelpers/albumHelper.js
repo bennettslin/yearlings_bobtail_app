@@ -13,7 +13,8 @@ import {
     gatherDrawings,
     adminFinaliseDrawings,
     adminRegisterDrawingTasks,
-    finalRegisterScenes
+    finalRegisterScenes,
+    finalRegisterPresenceYIndices
 } from './drawingsHelper'
 
 import {
@@ -289,6 +290,8 @@ const _finalPrepareAlbum = (albumObject) => {
             _finalPrepareLyrics(songObject)
 
             finalRegisterScenes(songObject)
+
+            finalRegisterPresenceYIndices(albumObject, songIndex)
 
             // For each verse in a wormhole, tell wormhole how to format it.
             addDestinationWormholeFormats(songObject.lyricUnits)

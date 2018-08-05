@@ -21,7 +21,7 @@ DEFAULT_COMPONENT = () => (null)
 
 const propTypes = {
     // From parent.
-    presenceKey: PropTypes.string.isRequired,
+    nameKey: PropTypes.string.isRequired,
     instanceKey: PropTypes.string.isRequired,
     x: PropTypes.string.isRequired,
     y: PropTypes.string.isRequired,
@@ -31,13 +31,13 @@ const propTypes = {
 
 const Actor = ({
 
-    presenceKey,
+    nameKey,
     instanceKey,
 
 ...other }) => {
 
     const ActorComponent =
-        ACTORS_MAP[presenceKey] || DEFAULT_COMPONENT
+        ACTORS_MAP[nameKey] || DEFAULT_COMPONENT
 
     return (
         <ActorComponent
