@@ -1,8 +1,11 @@
 import { LOGUE_KEY } from '../constants/cubesKeys'
+
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
 } from '../constants/sky'
+
+import { OLD_BENNETT } from '../constants/actorKeys'
 
 module.exports = {
     logue: true,
@@ -12,7 +15,7 @@ module.exports = {
             unitIndex: 1,
             description: `Old Bennett is standing onstage, addressing the audience.`,
             actors: {
-                oldBennett: {
+                [OLD_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'standing, facing forward, welcoming'

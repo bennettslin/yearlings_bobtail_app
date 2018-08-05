@@ -16,15 +16,20 @@ import {
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_SPRING } from '../constants/sky'
+import {
+    TIME_ANYTIME,
+    SEASON_SPRING
+} from '../constants/sky'
+
+import { BENNETT } from '../constants/actorKeys'
+
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Bennett is standing outside his doorway at night, drenched in rain. Catherine is getting into a taxicab.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'standing forward, disappointed, defeated'
@@ -45,7 +50,7 @@ module.exports = {
             unitIndex: 3,
             description: `In Bennett's thoughts, he and Catherine are together on the couch. She is putting down the book she is reading, while he is playing the guitar, a pencil and notepad in hand, implying that he is writing a song, looking at her inquisitively.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting slouched, showing lyrics to Catherine'
@@ -66,7 +71,7 @@ module.exports = {
             unitIndex: 5,
             description: `Bennett is standing in the rain at night, staring at a Catholic church across the street.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'standing, back forward, hands in pocket'
@@ -82,7 +87,7 @@ module.exports = {
             unitIndex: 7,
             description: `Bennett is staring at an outdoor ashtray. Someone with a cross on their forehead is walking behind him in the other direction, while someone who has just put out a cigarette in the ashtray is walking in front of him, exhaling the smoke. Bennett looks back at the person behind him.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, noticing Catholic'
@@ -112,7 +117,7 @@ module.exports = {
             unitIndex: 8,
             description: `Bennett now has an ashed cross on his forehead, eyes closed and head held high, looking both pious and pompous. Catherine walks towards him from the other side of the stage.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, looking pious'

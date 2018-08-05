@@ -16,15 +16,21 @@ import {
     MOVIE_THEATRE_1_KEY,
     MOVIE_THEATRE_2_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_SUMMER } from '../constants/sky'
+
+import {
+    TIME_ANYTIME,
+    SEASON_SUMMER
+} from '../constants/sky'
+
+import { BENNETT } from '../constants/actorKeys'
+
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Bennett's room`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'looking at Leonard Cohen poster'
@@ -40,7 +46,7 @@ module.exports = {
             unitIndex: 2,
             description: `Bennett is in his room, trying to figure out a Rubik's Cube.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting on couch, figuring out Rubiks Cube'
@@ -56,13 +62,13 @@ module.exports = {
             unitIndex: 4,
             description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a keyboard and writing stuff down on a notepad, another is reading a book.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting on couch, reading a book'
                 },
                 stephanie: {
-                    bennett: {
+                    [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'sitting on floor, back turned, playing keyboard'
@@ -79,7 +85,7 @@ module.exports = {
             unitIndex: 5,
             description: `It's after a show, and the Yearlings are breaking down their set. Jacob is flirting with Mara. Bennett is selling a CD to a hipster, but is distracted by the sight of Mara.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'chatting with hipster, paying attention to Mara'
@@ -117,7 +123,7 @@ module.exports = {
             unitIndex: 7,
             description: `The Yearlings are taking a break from band practise, eating burgers around a table. Mara is with them, cuddling with Jacob. Bennett is visibly agitated.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, silently eating burger, uncomfortable'
@@ -148,7 +154,7 @@ module.exports = {
             unitIndex: 9,
             description: `Bennett is walking along outside. He sees Mara's face everywhere he looks: in clouds, on the sides of buildings, and so forth.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, sulking with head down'
@@ -171,7 +177,7 @@ module.exports = {
             unitIndex: 11,
             description: 'Bennett is looking at the woman holding a baby who just passed by.',
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking back at baby'
@@ -201,7 +207,7 @@ module.exports = {
             unitIndex: 14,
             description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself recording all the instruments in a band. Finally, he imagines Mara finding his album in a record store.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, inspired by sudden thought'

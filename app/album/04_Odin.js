@@ -25,15 +25,20 @@ import {
     ODIN_SCENE_8_KEY
 } from '../constants/cubesKeys'
 
-import { TIME_ANYTIME,
-         SEASON_AUTUMN } from '../constants/sky'
+import {
+    TIME_ANYTIME,
+    SEASON_AUTUMN
+} from '../constants/sky'
+
+import { PRETEEN_BENNETT } from '../constants/actorKeys'
+
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Bennett is lying on a mat on the floor. In the distance, he sees himself creeping out of the house in pitch darkness. Papers are strewn where he walked.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, lying on floor, propped up'
@@ -49,7 +54,7 @@ module.exports = {
             unitIndex: 4,
             description: 'From top of stairs, Bennett sees himself opening the gate and peering out.',
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking down stairs'
@@ -65,7 +70,7 @@ module.exports = {
             unitIndex: 6,
             description: `Bennett is stepping through the front gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, peeking out from gate'
@@ -81,7 +86,7 @@ module.exports = {
             unitIndex: 9,
             description: ``,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'getting off rickshaw bike'
@@ -97,7 +102,7 @@ module.exports = {
             unitIndex: 11,
             description: `Bennett is standing on the shore. He sees himself in the water, on a buoy. Footprints lead into the water.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side back, looking out to ocean'
@@ -113,7 +118,7 @@ module.exports = {
             unitIndex: 14,
             description: `Sea serpents are surrounding Bennett in the ocean.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'peering down from buoy'
@@ -129,7 +134,7 @@ module.exports = {
             unitIndex: 18,
             description: `Sasha is a mermaid, rescuing Bennett. She points down to Bennett on the ocean floor.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'hugging self'
@@ -150,7 +155,7 @@ module.exports = {
             unitIndex: 20,
             description: `Bennett sits on the shore gazing at the ocean. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, crouched in sand, looking back'

@@ -15,21 +15,32 @@ import { VERSES,
          RESPONSE,
          BACKING,
          IS_DOT_CARD } from '../constants/lyrics'
+
 import {
     BENNETT_BASEMENT_KEY,
     SNOW_GLOBES_1_KEY,
     SNOW_GLOBES_2_KEY,
     SNOW_GLOBES_3_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_AUTUMN } from '../constants/sky'
+
+import {
+    PRETEEN_BENNETT,
+    BENNETT,
+    ESTHER
+} from '../constants/actorKeys'
+
+import {
+    TIME_ANYTIME,
+    SEASON_AUTUMN
+} from '../constants/sky'
+
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Bennett is sleeping in bed with Miriam.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying sitting up, arm around Miriam, scared, guilty'
@@ -60,7 +71,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, accusatory'
                 },
-                esther: {
+                [ESTHER]: {
                     youngSita: {
                         todo: true,
                         workedHours: 3,
@@ -78,7 +89,7 @@ module.exports = {
             unitIndex: 4,
             description: `Bennett's father takes him to visit his childhood past. They watch as young Bennett, having just been bullied, lashes out in anger, to no one in particular. Sasha is with him, and is understanding but clearly keeping her distance. Bennett winces.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, wincing'
@@ -88,7 +99,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, gesturing to scene below'
                 },
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, hurt, lashing out in anger'
@@ -109,7 +120,7 @@ module.exports = {
             unitIndex: 8,
             description: `Bennett's mother is back. They next take him to visit the present. Sita is at home crying, as in the first scene of Kyon, while Bennett is playing guitar next to Miriam on her bed.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, dismissive, not feeling bad'
@@ -130,7 +141,7 @@ module.exports = {
                     description: 'side, jumping on Bennett, grabbing his banjo'
                 },
                 stephanie: {
-                    bennett: {
+                    [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'making out with Miriam'
@@ -147,13 +158,13 @@ module.exports = {
             unitIndex: 11,
             description: `Finally, they take him to visit the future. Unknowingly, they cross paths with Sita who is laughing with her friend in a park. Meanwhile, Bennett is at home alone, recording and depressed.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'concerned'
                 },
                 stephanie: {
-                    bennett: {
+                    [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, squatting, recording, dejected'
@@ -192,7 +203,7 @@ module.exports = {
             unitIndex: 14,
             description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is casting an imaginary spell to release him from their grasp. His father flinches, while his mother shields Sita from the view.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, seeking protection'
@@ -212,7 +223,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, knocked over'
                 },
-                esther: {
+                [ESTHER]: {
                     youngSita: {
                         todo: true,
                         workedHours: 3,

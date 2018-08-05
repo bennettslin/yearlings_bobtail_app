@@ -21,9 +21,15 @@ import {
     SITA_APARTMENT_GATE_2_KEY,
     BENNETT_APARTMENT_GATE_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_AUTUMN,
-         SEASON_WINTER } from '../constants/sky'
+
+import {
+    TIME_ANYTIME,
+    SEASON_AUTUMN,
+    SEASON_WINTER
+} from '../constants/sky'
+
+import { BENNETT } from '../constants/actorKeys'
+
 module.exports = {
     /**
      * All of these scenes repeat twice.
@@ -33,7 +39,7 @@ module.exports = {
             unitIndex: 1,
             description: `Bennett is in a cafeteria dishroom, reading a novel while dishes gradually pile up. He eyes a lancing device on a tray.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back, reading book, pulling tray from belt.'
@@ -49,7 +55,7 @@ module.exports = {
             unitIndex: 4,
             description: `Same scene. Sita is asking for the lancing device. Bennett hands it to her, but simultaneously is asking her out on a date.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, handing lancet pen, exuberant'
@@ -90,7 +96,7 @@ module.exports = {
             unitIndex: 8,
             description: `Bennett is walking home from work, looking dejected. In his thought bubble, he is remembering the night that he walked home from the date with Sita. A jogger passes by.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, mopey'
@@ -113,7 +119,7 @@ module.exports = {
             unitIndex: 10,
             description: `Same scene. As he begins to enter the front gate, he notices that Sita is standing several feet behind him.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back, punching code, surprised'
@@ -136,7 +142,7 @@ module.exports = {
             unitIndex: 11,
             description: `Bennett's apartment is dark inside. Through a window, we see him opening the gate for Sita to pass through. She takes his arm.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, opening gate, silent, attentive'
@@ -159,7 +165,7 @@ module.exports = {
             unitIndex: 12,
             description: `Same scene. Bennett and Sita have now entered the apartment. Bennett has turned on a light switch. On his bed is a jar of Vaseline, along with sketches to which he has clearly been masturbating.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, turning on light, smiling'
@@ -182,7 +188,7 @@ module.exports = {
             unitIndex: 13,
             description: `In an emergency room, Bennett is sitting in an armchair with his arm around Sita's purse. In his thought bubbles, he imagines the scenes of his burgeoning friendship with Sita.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eyes closed, falling asleep'
@@ -198,7 +204,7 @@ module.exports = {
             unitIndex: 15,
             description: `Same scene. Sita has come to get her purse, and is waking Bennett up.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, abruptly woken'
@@ -221,7 +227,7 @@ module.exports = {
             unitIndex: 16,
             description: `Bennett and Sita are both naked in bed. Sita is lying down, while Bennett hovers over her, a look of uncertainty on his face.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, standing beside bed, unsure'
@@ -258,7 +264,7 @@ module.exports = {
             unitIndex: 17,
             description: `Same scene. `,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, about to stick it in'
@@ -295,7 +301,7 @@ module.exports = {
             unitIndex: 19,
             description: `Same scene. Bennett and Sita are together in bed, having just had sex, a look that is a mixture of serenity and uncertainty on both their faces.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying down, warm, content, slightly worried'

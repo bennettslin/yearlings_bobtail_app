@@ -15,15 +15,21 @@ import {
     SITA_APARTMENT_GATE_2_KEY,
     GO_KART_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_AUTUMN } from '../constants/sky'
+
+import {
+    TIME_ANYTIME,
+    SEASON_AUTUMN
+} from '../constants/sky'
+
+import { BENNETT } from '../constants/actorKeys'
+
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Bennett and Sita are standing outside her gate at night. In a thought bubble, he is reaching out to Sita, who is reaching back.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, awkward, wanting to make a move'
@@ -46,7 +52,7 @@ module.exports = {
             unitIndex: 5,
             description: `In a thought bubble, Bennett and Sita are at a museum, looking at the skeleton of an early human. Bennett is standing behind the display case, leaning in towards Sita.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, leaning towards Sita'
@@ -69,7 +75,7 @@ module.exports = {
             unitIndex: 8,
             description: `In a thought bubble, Bennett and Sita are backstage after a play. While Sita and her friend are chatting away, Bennett looks away and is visibly uncomfortable.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, jealous'
@@ -104,7 +110,7 @@ module.exports = {
             unitIndex: 11,
             description: `In a thought bubble, Bennett and Sita are at a motorsports course, riding in separate go-karts.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, in go-kart, leaning forward'
@@ -127,7 +133,7 @@ module.exports = {
             unitIndex: 14,
             description: `Having bid each other good night, Bennett is walking away, looking dejected. Sita is closing the gate from the inside, looking towards him with concern. In his thought bubble, she is inviting him in.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking away dejected, slumped over'

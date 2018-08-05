@@ -19,6 +19,7 @@ import {
     NORTH_HOLLYWOOD_HOUSES_KEY,
     PLAYGROUND_KEY
 } from '../constants/cubesKeys'
+
 import {
     TIME_DAWN,
     TIME_MORNING,
@@ -27,6 +28,12 @@ import {
     TIME_EVENING,
     SEASON_SPRING
 } from '../constants/sky'
+
+import {
+    YOUNG_BENNETT,
+    ANITA,
+    ESTHER
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -46,17 +53,17 @@ module.exports = {
 
             ],
             actors: {
-                anita: {
+                [ANITA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, rushing, exasperated'
                 },
-                esther: {
+                [ESTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking at Anita'
                 },
-                youngBennett: {
+                [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, running, panicked'
@@ -75,17 +82,17 @@ module.exports = {
 
             ],
             actors: {
-                anita: {
+                [ANITA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, playing ball, offended'
                 },
-                youngBennett: {
+                [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, flustered'
                 },
-                esther: {
+                [ESTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, skipping, pointing back and laughing'
@@ -104,7 +111,7 @@ module.exports = {
 
             ],
             actors: {
-                youngBennett: {
+                [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, in bathtub, downcast'
@@ -123,12 +130,12 @@ module.exports = {
 
             ],
             actors: {
-                anita: {
+                [ANITA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back, squatting, smiling'
                 },
-                youngBennett: {
+                [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, facing front, singing, smiling'

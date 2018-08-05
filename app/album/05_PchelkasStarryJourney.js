@@ -22,8 +22,13 @@ import {
     JUNIOR_HIGH_LOCKERS_KEY,
     JUNIOR_HIGH_QUAD_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_WINTER } from '../constants/sky'
+import {
+    TIME_ANYTIME,
+    SEASON_WINTER
+} from '../constants/sky'
+
+import { PRETEEN_BENNETT } from '../constants/actorKeys'
+
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
  * song list order on the album.
@@ -43,7 +48,7 @@ module.exports = {
             unitIndex: 2,
             description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but happily playing. Bennett looks guilty. There is a drawing of the two as dogs.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying on stomach, drawing, guilty'
@@ -64,7 +69,7 @@ module.exports = {
             unitIndex: 6,
             description: `Bennett is at home in bed, pretending to be sick. He is stuffing money from red pouches into a postage envelope. In the window, the schoolbus is driving off, leaving him behind. The bullies are visible through the schoolbus windows, laughing at him.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, sitting up in bed, feigning sick'
@@ -80,7 +85,7 @@ module.exports = {
             unitIndex: 9,
             description: `Bennett is in bed sleeping. In his dream bubble, he imagines two dogs pulling a rocket.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'in bed, asleep, turned away'
@@ -96,7 +101,7 @@ module.exports = {
             unitIndex: 10,
             description: `Bennett is at his desk, reading a letter and crying. In his thought bubble, he is standing alone on Earth, looking up into space.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, sitting, shaken, scared'
@@ -112,7 +117,7 @@ module.exports = {
             unitIndex: 13,
             description: `Bennett is sitting by himself, away from the lunch crowd. The two bullies have been throwing food at him, trying to rile him up, but to no avail. One looks angry, the other is suggesting that they should leave.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, stoic'
@@ -138,7 +143,7 @@ module.exports = {
             unitIndex: 17,
             description: `Bennett is in his secluded spot, watching the bullies flirt with a girl.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, wistful'
@@ -171,7 +176,7 @@ module.exports = {
             unitIndex: 18,
             description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal..`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, sitting, sheepish'

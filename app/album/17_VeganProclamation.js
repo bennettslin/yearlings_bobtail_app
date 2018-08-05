@@ -19,15 +19,21 @@ import {
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_WINTER } from '../constants/sky'
+
+import {
+    TIME_ANYTIME,
+    SEASON_WINTER
+} from '../constants/sky'
+
+import { BENNETT } from '../constants/actorKeys'
+
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, slumped over, despondent'
@@ -55,7 +61,7 @@ module.exports = {
             unitIndex: 4,
             description: `Bennett is by himself with Odin at a show, looking agitated and bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back, looking to side, annoyed'
@@ -86,7 +92,7 @@ module.exports = {
             unitIndex: 7,
             description: 'Bennett is walking through an alley.',
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'walking through alley'
@@ -102,7 +108,7 @@ module.exports = {
             unitIndex: 10,
             description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed snuggling with her friend.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, on phone, hunched over, sobbing'
@@ -144,7 +150,7 @@ module.exports = {
             unitIndex: 12,
             description: `Bennett is with Odin, and happens upon a Peta demonstration. One of the demonstrators is petting Odin.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, desperately hopeful'

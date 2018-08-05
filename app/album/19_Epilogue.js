@@ -1,6 +1,17 @@
 import { LOGUE_KEY } from '../constants/cubesKeys'
 import { TIME_ANYTIME,
          SEASON_INDOOR } from '../constants/sky'
+
+import {
+    YOUNG_BENNETT,
+    PRETEEN_BENNETT,
+    BENNETT,
+    OLD_BENNETT,
+    ANITA,
+    ESTHER,
+    WILLY
+} from '../constants/actorKeys'
+
 module.exports = {
     logue: true,
     title: 'epilogue',
@@ -9,31 +20,31 @@ module.exports = {
             verseIndex: 0,
             description: 'Everyone is standing at the end of the play. We are all really just actors.',
             actors: {
-                oldBennett: {
+                [OLD_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
-                anita: {
+                [ANITA]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `3'9"`,
                     description: 'standing'
                 },
-                youngBennett: {
+                [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `3'6"`,
                     description: 'standing'
                 },
-                esther: {
+                [ESTHER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `3'10"`,
                     description: 'standing'
                 },
-                willy: {
+                [WILLY]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'3"`,
@@ -51,7 +62,7 @@ module.exports = {
                     realHeight: `3'5"`,
                     description: 'standing'
                 },
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'2"`,
@@ -99,7 +110,7 @@ module.exports = {
                     realHeight: `5'8"`,
                     description: 'standing'
                 },
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,

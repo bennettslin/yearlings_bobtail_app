@@ -20,8 +20,15 @@ import {
     NORTH_HOLLYWOOD_HOUSES_KEY,
     CHANGELING_CAVE_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_SUMMER } from '../constants/sky'
+import {
+    TIME_ANYTIME,
+    SEASON_SUMMER
+} from '../constants/sky'
+
+import {
+    PRETEEN_BENNETT,
+    WILLY
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -38,7 +45,7 @@ module.exports = {
             unitIndex: 2,
             description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
             actors: {
-                willy: {
+                [WILLY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, holding up a bottle, squinting'
@@ -54,7 +61,7 @@ module.exports = {
             unitIndex: 5,
             description: `Outside next to the porch, Bennett's mother had been cutting Christopher's hair a moment ago. Christopher has just leapt out of his chair in panic. The cloth that had been draped around him has been tossed in the air. Looking exasperated, Bennett tries to catch him. Having just arrived, Willy is ducked behind the porch, a kind chuckle on his face.`,
             actors: {
-                willy: {
+                [WILLY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, ducking behind post, chuckling'
@@ -69,7 +76,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'off balance, having a tantrum'
                 },
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'stepping off porch, cautious, trying to calm Christopher'
@@ -95,7 +102,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'lying on side, in pain, clenching stomach'
                 },
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, aggressive stance, angry'
@@ -111,7 +118,7 @@ module.exports = {
             unitIndex: 9,
             description: `Willy is in a fight with two gangbangers. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
             actors: {
-                willy: {
+                [WILLY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, defending himself, fearful'
@@ -146,7 +153,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'getting up to close curtain, trying to be reassuring'
                 },
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying in bed, worried, scared'
@@ -162,7 +169,7 @@ module.exports = {
             unitIndex: 14,
             description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`,
             actors: {
-                willy: {
+                [WILLY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, merrily greeting trolls'
@@ -172,7 +179,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, looking up at Bennett, reassuring'
                 },
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, wide-eyed, needing reassurance'

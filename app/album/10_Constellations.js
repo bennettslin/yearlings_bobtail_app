@@ -23,8 +23,13 @@ import {
     CEMETERY_KEY,
     STATION_WAGON_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_SPRING } from '../constants/sky'
+
+import {
+    TIME_ANYTIME,
+    SEASON_SPRING
+} from '../constants/sky'
+
+import { BENNETT } from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -32,7 +37,7 @@ module.exports = {
             unitIndex: 1,
             description: `Abbey Road`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking'
@@ -63,7 +68,7 @@ module.exports = {
             unitIndex: 3,
             description: `The gang is at Walgreens, picking out cough syrup.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, holding body and gesturing its smallness'
@@ -94,7 +99,7 @@ module.exports = {
             unitIndex: 6,
             description: `The gang is wandering through the steam tunnels. Bennett is blathering, Howie is half paying attention. Tomer and Ana are play fighting.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, blathering'
@@ -125,7 +130,7 @@ module.exports = {
             unitIndex: 9,
             description: `The gang is at the cemetery, standing over Adam's grave. Tomer is kneeling and pouring a bottle of water over the gravestone. Bennett is looking up. Howie and Ana are tentatively cuddling.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, looking upwards, inspired'
@@ -156,7 +161,7 @@ module.exports = {
             unitIndex: 11,
             description: `The gang is driving in a car. Bennett is sitting in the back with his eyes closed. He pictures himself and Sita as a mastodon and a sabre-tooth tiger, and his brother and sister as Loki and Freyja.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, sleeping in car'
@@ -187,7 +192,7 @@ module.exports = {
             unitIndex: 15,
             description: `Bennett is in the attic, huddled under a blanket on a couch, lit up by an old television facing away from the audience. Howie is downstairs, in anguish, clutching at his head.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying on couch, watching TV, alert'

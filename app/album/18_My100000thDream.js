@@ -17,15 +17,21 @@ import {
     DREAM_CLIFF_KEY,
     DREAM_DEATHBED_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_SPRING } from '../constants/sky'
+
+import {
+    TIME_ANYTIME,
+    SEASON_SPRING
+} from '../constants/sky'
+
+import { BENNETT } from '../constants/actorKeys'
+
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Bennett runs into Sita, who happens to be walking out of an El Torito restaurant, having finished her shift.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, pleasantly confused'
@@ -48,7 +54,7 @@ module.exports = {
             unitIndex: 3,
             description: `Bennett and Sita are dancing on the pampas with some gopis.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting cross-legged, playing recorder, content'
@@ -92,7 +98,7 @@ module.exports = {
             unitIndex: 5,
             description: `In the background is an Indian wedding. Bennett is confused, because the bride appears to be Sita. But his Sita keeps dragging him forward, insistently.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back angle, confusedly being rushed'
@@ -115,7 +121,7 @@ module.exports = {
             unitIndex: 7,
             description: `Sita and Bennett are at the edge of a cliff. Bennett is frightened. Sita is gesturing towards the edge.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, reacting to threat'
@@ -138,7 +144,7 @@ module.exports = {
             unitIndex: 9,
             description: `The whole thing turns out to have been a dream. Bennett is in bed, old and dying. A doctor is pulling the sheet over him. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'calm, accepting of impending doom'

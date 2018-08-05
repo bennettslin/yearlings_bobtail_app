@@ -19,15 +19,27 @@ import {
     OAKLAND_STREET_FRONT_2_KEY,
     OAKLAND_STREET_FRONT_3_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_AUTUMN } from '../constants/sky'
+
+import {
+    TIME_ANYTIME,
+    SEASON_AUTUMN
+} from '../constants/sky'
+
+import {
+    YOUNG_BENNETT,
+    BENNETT,
+    ANITA,
+    ESTHER,
+    WILLY
+} from '../constants/actorKeys'
+
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: 'Bennett is walking down street.',
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, cradling bracelet, blank'
@@ -43,7 +55,7 @@ module.exports = {
             unitIndex: 3,
             description: `Bennett and Sita are at her apartment, breaking up. Sita is a wreck, turning away from Bennett as she returns the gold bracelet to him. He is trying to console her, but in a mechanical way.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, disingenuously consoling'
@@ -66,13 +78,13 @@ module.exports = {
             unitIndex: 4,
             description: `Bennett and Garry are walking along down the street. (Garry is the one wearing the jacket.) Garry is shaking his fist at the twin streetlights. Bennett turns around to face the audience, a look of uncertainty on his face. He is caressing the gold bracelet in his hand.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back, cradling bracelet, blank'
                 },
                 stephanie: {
-                    bennett: {
+                    [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, shaking fist at sky'
@@ -89,13 +101,13 @@ module.exports = {
             unitIndex: 7,
             description: `Bennett and Garry are yucking it up, in a panicked and delirious kind of way. Bennett is yodelling, Garry is playing the banjo, saluting a female cop on a horse. The cop waves back.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, playful, waving'
                 },
                 stephanie: {
-                    bennett: {
+                    [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, playful'
@@ -119,40 +131,40 @@ module.exports = {
             unitIndex: 10,
             description: `Garry is now facing the audience, his hand over his face, crying, and holding the gold bracelet over a group of kids crossing the street with a crossing guard. Bennett is trying to console him, as he faces forward.`,
             actors: {
-                bennett: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back, consoling'
                 },
                 stephanie: {
-                    bennett: {
+                    [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, head in hands, holding bracelet'
                     }
                 },
-                esther: {
+                [ESTHER]: {
                     youngGirl: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking'
                     }
                 },
-                anita: {
+                [ANITA]: {
                     youngGirl: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking'
                     },
                 },
-                youngBennett: {
+                [YOUNG_BENNETT]: {
                     youngBoy: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, turned, looking at Bennetts'
                     },
                 },
-                willy: {
+                [WILLY]: {
                     crossingGuard: {
                         todo: true,
                         workedHours: 3,

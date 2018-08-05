@@ -15,8 +15,13 @@ import {
     SCHOOLBUS_KEY,
     TETHERBALL_SCENE_KEY
 } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_SUMMER } from '../constants/sky'
+import {
+    TIME_ANYTIME,
+    SEASON_SUMMER
+} from '../constants/sky'
+
+import { PRETEEN_BENNETT } from '../constants/actorKeys'
+
 module.exports = {
     scenes: [
         {
@@ -43,7 +48,7 @@ module.exports = {
             unitIndex: 6,
             description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side seated, pretending to read, panicked'
@@ -71,7 +76,7 @@ module.exports = {
             unitIndex: 9,
             description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
             actors: {
-                preteenBennett: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'tied up, greeting Sasha with nervous laughter'
