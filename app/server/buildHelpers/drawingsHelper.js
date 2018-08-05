@@ -7,12 +7,11 @@ import keys from 'lodash.keys'
  */
 
 export const gatherDrawings = (
-
     album,
-    songObject
-
+    songObject,
+    songIndex
 ) => {
-    const { scenes } = songObject
+    const scenes = album.scenes[songIndex]
 
     songObject.tempSceneRawIndices = []
 
@@ -32,10 +31,11 @@ export const gatherDrawings = (
     })
 }
 
-export const adminGatherDrawings = (album, songObject, songIndex) => {
+export const adminGatherDrawings = (album, songIndex) => {
 
-    const drawingTypes = ['actors'],
-        { scenes } = songObject
+    const
+        drawingTypes = ['actors'],
+        scenes = album.scenes[songIndex]
 
     album._drawings = album._drawings || {}
 

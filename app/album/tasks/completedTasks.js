@@ -3628,4 +3628,9 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
+    {
+        taskName: `Separate scenes from songs in album data.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

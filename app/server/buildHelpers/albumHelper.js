@@ -87,7 +87,7 @@ const _initialPrepareAlbum = (albumObject) => {
     albumObject.songs.forEach((songObject, songIndex) => {
 
         // This also collects the unit index for each scene.
-        adminGatherDrawings(albumObject, songObject, songIndex)
+        adminGatherDrawings(albumObject, songIndex)
         gatherDrawings(albumObject, songObject, songIndex)
 
         if (!getSongIsLogue(songIndex, albumObject.songs)) {
