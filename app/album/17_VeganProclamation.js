@@ -1,17 +1,23 @@
-import { AFTERWORD,
-         BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         REFRAIN,
-         SOLO,
-         FORESHADOW_OF_WORMHOLE_PREFIX,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    AFTERWORD,
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    REFRAIN,
+    SOLO,
+    FORESHADOW_OF_WORMHOLE_PREFIX,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     SHOW_STAGE_FRONT_FAR_KEY,
     SITA_APARTMENT_BED_KEY,

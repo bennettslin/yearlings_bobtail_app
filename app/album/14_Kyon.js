@@ -1,17 +1,24 @@
-import { BACKSTORY,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-         CODA,
-         REFRAIN,
-         OUTRO,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    BRIDGE,
+    CODA,
+    REFRAIN,
+    OUTRO,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import { SITA_APARTMENT_COUCH_KEY } from '../constants/cubesKeys'
+
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN

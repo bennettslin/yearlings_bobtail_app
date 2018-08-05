@@ -1,13 +1,19 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         CHORUS,
-         POSTCHORUS,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    CHORUS,
+    POSTCHORUS,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     MUSEUM_KEY,
     BACKSTAGE_KEY,

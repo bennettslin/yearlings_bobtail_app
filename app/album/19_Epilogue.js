@@ -1,6 +1,9 @@
 import { LOGUE_KEY } from '../constants/cubesKeys'
-import { TIME_ANYTIME,
-         SEASON_INDOOR } from '../constants/sky'
+
+import {
+    TIME_ANYTIME,
+    SEASON_INDOOR
+} from '../constants/sky'
 
 import {
     YOUNG_BENNETT,

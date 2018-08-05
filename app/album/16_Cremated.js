@@ -1,14 +1,20 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         BRIDGE,
-         INTRO,
-         REFRAIN,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    BRIDGE,
+    INTRO,
+    REFRAIN,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     CREMATED_CLIFF_KEY,
     CREMATED_CLIFF_CONVERTIBLE_KEY,

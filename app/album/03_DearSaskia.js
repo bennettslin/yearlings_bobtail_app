@@ -1,20 +1,27 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         AFTERWORD,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         REFRAIN,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    AFTERWORD,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    REFRAIN,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     TAIWAN_PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_SCENE_KEY
 } from '../constants/cubesKeys'
+
 import {
     TIME_ANYTIME,
     SEASON_SUMMER

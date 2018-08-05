@@ -1,17 +1,23 @@
-import { AFTERWORD,
-         BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         CHORUS,
-         BRIDGE,
-         BACKING,
-         INTRO,
-         OUTRO,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    AFTERWORD,
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    CHORUS,
+    BRIDGE,
+    BACKING,
+    INTRO,
+    OUTRO,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     SITA_APARTMENT_COUCH_THOUGHT_KEY,
     OAKLAND_STREET_SIDE_KEY,
@@ -339,16 +345,16 @@ module.exports = {
                 time: 47,
                 centre: [
                     `I'm sorry, but I`,
-                        {
-                            anchor: `went through your mail`,
-                            annotation: {
-                                description: `Confused about why I had grown unusually distant, Sita finally caved in that day and snooped around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would soon be single again.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true
-                                }
+                    {
+                        anchor: `went through your mail`,
+                        annotation: {
+                            description: `Confused about why I had grown unusually distant, Sita finally caved in that day and snooped around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would soon be single again.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
                             }
-                        },
-                        `today…"`
+                        }
+                    },
+                    `today…"`
                 ]
             },
             {
@@ -774,8 +780,8 @@ module.exports = {
                                 }
                             }
                         }
-                   }
-               ],
+                    }
+                ],
                 stanzaType: BRIDGE,
                 sideCardType: BACKING,
                 subsequent: true
@@ -1039,19 +1045,19 @@ module.exports = {
             {
                 time: 164,
                 left: [
-                        `with`,
-                        {
-                            anchor: `Garry's sole witness`,
-                            properNoun: true,
-                            annotation: {
-                                description: `All my promises to Sita have proven to be lies, but of course I didn't intend them to be. Circumstances just forced my hand. Still, while I strongly wish to argue my case, I realise that the breakup would be done with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
+                    `with`,
+                    {
+                        anchor: `Garry's sole witness`,
+                        properNoun: true,
+                        annotation: {
+                            description: `All my promises to Sita have proven to be lies, but of course I didn't intend them to be. Circumstances just forced my hand. Still, while I strongly wish to argue my case, I realise that the breakup would be done with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
                             }
-                        },
-                        `relieved?`
+                        }
+                    },
+                    `relieved?`
                 ],
                 right: `when buried whole with the deceased.`
             },

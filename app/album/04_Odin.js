@@ -1,19 +1,25 @@
-import { AFTERWORD,
-         BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-         INTRO,
-         SOLO,
-         OUTRO,
-         FLASHBACK_TO_WORMHOLE_PREFIX,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    AFTERWORD,
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    BRIDGE,
+    INTRO,
+    SOLO,
+    OUTRO,
+    FLASHBACK_TO_WORMHOLE_PREFIX,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     ODIN_SCENE_1_KEY,
     ODIN_SCENE_2_KEY,
@@ -836,21 +842,21 @@ module.exports = {
             {
                 time: 70,
                 left: {
-                        anchor: `dream your whims instead?`,
-                        annotation: {
-                            description: [
-                                `Uncertain of whether I am asleep or awake, I recall the ancient Chinese philosopher`,
-                                {
-                                    anchor: `Zhuangzi,`,
-                                    wiki: `Zhuang_Zhou`
-                                },
-                                `who famously mused that he could not be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
+                    anchor: `dream your whims instead?`,
+                    annotation: {
+                        description: [
+                            `Uncertain of whether I am asleep or awake, I recall the ancient Chinese philosopher`,
+                            {
+                                anchor: `Zhuangzi,`,
+                                wiki: `Zhuang_Zhou`
+                            },
+                            `who famously mused that he could not be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`
+                        ],
+                        dotKeys: {
+                            [NARRATIVE]: true
                         }
-                    },
+                    }
+                },
                 right: [
                     `be`,
                     {

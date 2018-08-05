@@ -1,17 +1,23 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { REFRAIN,
-         VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-         CODA,
-         OUTRO,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    REFRAIN,
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    BRIDGE,
+    CODA,
+    OUTRO,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     DISHROOM_KEY,
     BENNETT_APARTMENT_BED_KEY,
@@ -789,12 +795,12 @@ module.exports = {
                         annotation: [
                             {
                                 description: [
-                                        `The Bismarck and the Tirpitz were`,
-                                        {
-                                            anchor: `sister battleships`,
-                                            wiki: `Bismarck-class_battleship`
-                                        },
-                                        `of the German navy in World War II. The Axis, after all, were history's heroes in`,
+                                    `The Bismarck and the Tirpitz were`,
+                                    {
+                                        anchor: `sister battleships`,
+                                        wiki: `Bismarck-class_battleship`
+                                    },
+                                    `of the German navy in World War II. The Axis, after all, were history's heroes in`,
                                     {
                                         italic: `The Man in the High Castle.`
                                     }

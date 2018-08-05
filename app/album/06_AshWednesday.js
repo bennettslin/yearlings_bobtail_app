@@ -1,14 +1,20 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    BRIDGE,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     BENNETT_APARTMENT_COUCH_THOUGHT_KEY,
     BENNETT_APARTMENT_COURTYARD_KEY,
@@ -16,6 +22,7 @@ import {
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
 } from '../constants/cubesKeys'
+
 import {
     TIME_ANYTIME,
     SEASON_SPRING

@@ -1,18 +1,24 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         RHYME,
-         POSTCHORUS,
-         INTRO,
-         SOLO,
-         FLASHBACK_TO_WORMHOLE_PREFIX,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    RHYME,
+    POSTCHORUS,
+    INTRO,
+    SOLO,
+    FLASHBACK_TO_WORMHOLE_PREFIX,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     PRETEEN_BENNETT_ROOM_KEY,
     FREEWAY_KEY,
@@ -20,6 +26,7 @@ import {
     NORTH_HOLLYWOOD_HOUSES_KEY,
     CHANGELING_CAVE_KEY
 } from '../constants/cubesKeys'
+
 import {
     TIME_ANYTIME,
     SEASON_SUMMER

@@ -1,18 +1,24 @@
-import { AFTERWORD,
-         BACKSTORY,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         POSTCHORUS,
-         BRIDGE,
-         RESPONSE,
-         INTRO,
-         REFRAIN,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    AFTERWORD,
+    BACKSTORY,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    POSTCHORUS,
+    BRIDGE,
+    RESPONSE,
+    INTRO,
+    REFRAIN,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     PRETEEN_BENNETT_ROOM_KEY,
     PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
@@ -22,6 +28,7 @@ import {
     JUNIOR_HIGH_LOCKERS_KEY,
     JUNIOR_HIGH_QUAD_KEY
 } from '../constants/cubesKeys'
+
 import {
     TIME_ANYTIME,
     SEASON_WINTER

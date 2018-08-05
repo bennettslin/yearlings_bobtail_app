@@ -2,19 +2,25 @@
  * TODO: References, decide on where to put quotations marks. Balance between
  * not being clear and being too obvious.
  */
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-         RESPONSE,
-         REFRAIN,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    BRIDGE,
+    RESPONSE,
+    REFRAIN,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,

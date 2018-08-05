@@ -1,19 +1,25 @@
-import { AFTERWORD,
-         BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-         RESPONSE,
-         INTRO,
-         OUTRO,
-         REFRAIN,
-         FLASHBACK_TO_WORMHOLE_PREFIX,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    AFTERWORD,
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    BRIDGE,
+    RESPONSE,
+    INTRO,
+    OUTRO,
+    REFRAIN,
+    FLASHBACK_TO_WORMHOLE_PREFIX,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     CHILDHOOD_BATHROOM_KEY,
     NORTH_HOLLYWOOD_HOUSES_KEY,

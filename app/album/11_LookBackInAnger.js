@@ -1,17 +1,23 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-         INTRO,
-         OUTRO,
-         FORESHADOW_OF_WORMHOLE_PREFIX,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    BRIDGE,
+    INTRO,
+    OUTRO,
+    FORESHADOW_OF_WORMHOLE_PREFIX,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     SHOW_STAGE_SIDE_1_KEY,
     SHOW_STAGE_SIDE_2_KEY,

@@ -1,14 +1,20 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         CHORUS,
-         INTRO,
-         RESPONSE,
-         OUTRO,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    CHORUS,
+    INTRO,
+    RESPONSE,
+    OUTRO,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     BENNETT_APARTMENT_COUCH_KEY,
     SHOW_STAGE_FRONT_KEY,

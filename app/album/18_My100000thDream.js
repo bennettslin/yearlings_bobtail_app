@@ -1,15 +1,21 @@
-import { AFTERWORD,
-         BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         CHORUS,
-         INTRO,
-         SOLO,
-         OUTRO,
-         FORESHADOW_OF_WORMHOLE_PREFIX,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    AFTERWORD,
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    CHORUS,
+    INTRO,
+    SOLO,
+    OUTRO,
+    FORESHADOW_OF_WORMHOLE_PREFIX,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     EL_TORITO_KEY,
     PAMPAS_KEY,

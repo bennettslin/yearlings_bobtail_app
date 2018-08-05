@@ -1,23 +1,30 @@
-import { AFTERWORD,
-         BACKSTORY,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { REFRAIN,
-         VERSES,
-         CHORUS,
-         BRIDGE,
-         INTRO,
-         SOLO,
-         OUTRO,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    AFTERWORD,
+    BACKSTORY,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    REFRAIN,
+    VERSES,
+    CHORUS,
+    BRIDGE,
+    INTRO,
+    SOLO,
+    OUTRO,
+    IS_DOT_CARD
+} from '../constants/lyrics'
+
 import {
     SITA_APARTMENT_COUCH_KEY,
     BENNETT_BASEMENT_KEY,
     SHOW_STAGE_FRONT_KEY,
     VOLKSWAGEN_KEY
 } from '../constants/cubesKeys'
+
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN

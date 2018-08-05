@@ -1,20 +1,25 @@
-import { BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         REFERENCE,
-         SONGWRITING } from '../constants/dots'
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-         CODA,
-         INTRO,
-         OUTRO,
-         RHYME,
-         RESPONSE,
-         BACKING,
-         IS_DOT_CARD } from '../constants/lyrics'
+import {
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../constants/dots'
+
+import {
+    VERSES,
+    PRECHORUS,
+    CHORUS,
+    BRIDGE,
+    CODA,
+    INTRO,
+    OUTRO,
+    RHYME,
+    RESPONSE,
+    BACKING,
+    IS_DOT_CARD
+} from '../constants/lyrics'
 
 import {
     BENNETT_BASEMENT_KEY,
