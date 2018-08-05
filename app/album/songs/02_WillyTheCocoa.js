@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -17,7 +17,7 @@ import {
     SOLO,
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     PRETEEN_BENNETT_ROOM_KEY,
@@ -25,12 +25,12 @@ import {
     PORCH_KEY,
     NORTH_HOLLYWOOD_HOUSES_KEY,
     CHANGELING_CAVE_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     PRETEEN_BENNETT,
@@ -40,7 +40,7 @@ import {
     CHRISTOPHER,
     HOWIE,
     TOMER
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

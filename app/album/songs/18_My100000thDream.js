@@ -4,7 +4,7 @@ import {
     NARRATIVE,
     OBSERVATION,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -14,7 +14,7 @@ import {
     OUTRO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     EL_TORITO_KEY,
@@ -22,12 +22,12 @@ import {
     OUTDOOR_WEDDING_KEY,
     DREAM_CLIFF_KEY,
     DREAM_DEATHBED_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     BENNETT,
@@ -36,7 +36,7 @@ import {
     LIZ,
     MIRIAM,
     AMY
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

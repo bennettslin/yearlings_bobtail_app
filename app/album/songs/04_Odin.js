@@ -6,7 +6,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -18,7 +18,7 @@ import {
     OUTRO,
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     ODIN_SCENE_1_KEY,
@@ -29,17 +29,17 @@ import {
     ODIN_SCENE_6_KEY,
     ODIN_SCENE_7_KEY,
     ODIN_SCENE_8_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     PRETEEN_BENNETT,
     SASHA
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

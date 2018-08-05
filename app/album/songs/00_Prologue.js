@@ -1,11 +1,11 @@
-import { LOGUE_KEY } from '../constants/cubesKeys'
+import { LOGUE_KEY } from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
-} from '../constants/sky'
+} from '../../constants/sky'
 
-import { OLD_BENNETT } from '../constants/actorKeys'
+import { OLD_BENNETT } from '../../constants/actorKeys'
 
 module.exports = {
     logue: true,

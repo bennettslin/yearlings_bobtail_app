@@ -9,7 +9,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -19,7 +19,7 @@ import {
     RESPONSE,
     REFRAIN,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     WALGREENS_KEY,
@@ -28,19 +28,19 @@ import {
     UCLA_CAMPUS_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     BENNETT,
     ANA,
     HOWIE,
     TOMER
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

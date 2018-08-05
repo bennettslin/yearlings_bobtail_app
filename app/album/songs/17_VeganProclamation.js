@@ -6,7 +6,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -16,7 +16,7 @@ import {
     SOLO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     SHOW_STAGE_FRONT_FAR_KEY,
@@ -24,12 +24,12 @@ import {
     ALLEY_KEY,
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_WINTER
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     BENNETT,
@@ -43,7 +43,7 @@ import {
     WADE,
     LIZ_REFLECTION,
     KHARI_REFLECTION
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

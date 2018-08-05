@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     REFRAIN,
@@ -16,7 +16,7 @@ import {
     CODA,
     OUTRO,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     DISHROOM_KEY,
@@ -26,13 +26,13 @@ import {
     SITA_APARTMENT_GATE_1_KEY,
     SITA_APARTMENT_GATE_2_KEY,
     BENNETT_APARTMENT_GATE_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_WINTER
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     BENNETT,
@@ -40,7 +40,7 @@ import {
     NESTOR,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     /**

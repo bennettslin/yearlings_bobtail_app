@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -16,19 +16,19 @@ import {
     OUTRO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     SHOW_STAGE_SIDE_1_KEY,
     SHOW_STAGE_SIDE_2_KEY,
     SITA_APARTMENT_BED_KEY,
     SHOW_UNLOADING_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     BENNETT,
@@ -42,7 +42,7 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

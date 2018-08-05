@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -17,7 +17,7 @@ import {
     INTRO,
     REFRAIN,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     PRETEEN_BENNETT_ROOM_KEY,
@@ -27,12 +27,12 @@ import {
     JUNIOR_HIGH_HALLWAY_KEY,
     JUNIOR_HIGH_LOCKERS_KEY,
     JUNIOR_HIGH_QUAD_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_WINTER
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     PRETEEN_BENNETT,
@@ -42,7 +42,7 @@ import {
     BRAD,
     ANDREW,
     TRISTAN
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the

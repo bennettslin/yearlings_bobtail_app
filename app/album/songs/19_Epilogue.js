@@ -1,9 +1,9 @@
-import { LOGUE_KEY } from '../constants/cubesKeys'
+import { LOGUE_KEY } from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     YOUNG_BENNETT,
@@ -33,7 +33,7 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     logue: true,

@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -13,7 +13,7 @@ import {
     CHORUS,
     BRIDGE,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     BENNETT_APARTMENT_COUCH_THOUGHT_KEY,
@@ -21,19 +21,19 @@ import {
     CATHOLIC_CHURCH_KEY,
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     BENNETT,
     CATHERINE,
     AMY,
     WADE
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

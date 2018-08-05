@@ -6,7 +6,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -16,7 +16,7 @@ import {
     INTRO,
     OUTRO,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     SITA_APARTMENT_COUCH_THOUGHT_KEY,
@@ -24,12 +24,12 @@ import {
     OAKLAND_STREET_FRONT_1_KEY,
     OAKLAND_STREET_FRONT_2_KEY,
     OAKLAND_STREET_FRONT_3_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     YOUNG_BENNETT,
@@ -40,7 +40,7 @@ import {
     LIZ,
     AMY,
     STEPHANIE
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

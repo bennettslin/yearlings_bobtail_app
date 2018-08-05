@@ -76,7 +76,7 @@ module.exports = {
         }.pdf`)
     )),
     songs: getArrayOfLength(20).map(index => (
-        require(`./${
+        require(`./songs/${
             getTwoDigitStringForNumber(index)
         }_${
             HYPHENATED_SONG_PATHS[index]

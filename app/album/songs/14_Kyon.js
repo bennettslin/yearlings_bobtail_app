@@ -4,7 +4,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -15,19 +15,19 @@ import {
     REFRAIN,
     OUTRO,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
-import { SITA_APARTMENT_COUCH_KEY } from '../constants/cubesKeys'
+import { SITA_APARTMENT_COUCH_KEY } from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     LIZ,
     KHARI
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

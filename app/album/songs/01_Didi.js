@@ -5,7 +5,7 @@ import {
     OBSERVATION,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -18,13 +18,13 @@ import {
     REFRAIN,
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     CHILDHOOD_BATHROOM_KEY,
     NORTH_HOLLYWOOD_HOUSES_KEY,
     PLAYGROUND_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_DAWN,
@@ -33,13 +33,13 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     SEASON_SPRING
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [

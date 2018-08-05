@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -13,24 +13,24 @@ import {
     INTRO,
     REFRAIN,
     IS_DOT_CARD
-} from '../constants/lyrics'
+} from '../../constants/lyrics'
 
 import {
     CREMATED_CLIFF_KEY,
     CREMATED_CLIFF_CONVERTIBLE_KEY,
     CREMATED_DEATHBED_KEY,
     CREMATED_DEATHBED_TENNIS_KEY
-} from '../constants/cubesKeys'
+} from '../../constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../constants/sky'
+} from '../../constants/sky'
 
 import {
     BENNETT,
     MIRIAM
-} from '../constants/actorKeys'
+} from '../../constants/actorKeys'
 
 module.exports = {
     scenes: [
