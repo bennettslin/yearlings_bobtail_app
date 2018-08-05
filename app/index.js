@@ -8,6 +8,10 @@ import { createStore } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 
 import { Provider } from 'react-redux'
+
+// eslint-disable-next-line
+import logger from './server/logger'
+
 import reducers from './redux/reducers'
 
 import './scss/app.scss'
@@ -20,13 +24,8 @@ if (process.env.NODE_ENV !== 'production' && turnOnWDYULogging) {
     whyDidYouUpdate(React)
 }
 
-// From Udemy tutorial. This will allow for asynchronous Redux actions.
-// const createStoreWithMiddleware = applyMiddleware()(createStore)
-
 const store = createStore(
     reducers,
-
-    // Not sure why this isn't working...
     devToolsEnhancer()
 )
 

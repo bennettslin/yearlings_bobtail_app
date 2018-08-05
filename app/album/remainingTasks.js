@@ -215,8 +215,8 @@ module.exports = [
     },
 
     {
-        taskName: `Be smart about using logger. This includes setting it up to only log in development, not production. Pass in feature flag?`,
-        workedHours: 0,
+        taskName: `Be smart about using logger.`,
+        workedHours: 1,
         neededHours: 2
     }
 ]
