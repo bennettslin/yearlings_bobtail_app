@@ -5,7 +5,7 @@ import {
     convertBitNumberToTrueFalseKeys,
     setNewValueInBitNumber
 } from '../helpers/bitHelper'
-import AlbumData from '../server/AlbumData'
+import album from '../server/album'
 
 import {
     ALL_DOT_KEYS
@@ -41,7 +41,7 @@ import {
 
 const _getValidatedStoredSong = () => {
     const selectedSongIndex = _validateValueForKey(SELECTED_SONG_INDEX)
-    return AlbumData.songs[selectedSongIndex]
+    return album.songs[selectedSongIndex]
 }
 
 const _validateValueForKey = (key) => {
@@ -59,7 +59,7 @@ const _validateValueForKey = (key) => {
 
         // These are dependent on the album object.
         case SELECTED_SONG_INDEX:
-            isValid = isNumber && parsedValue < AlbumData.songs.length
+            isValid = isNumber && parsedValue < album.songs.length
             break
         case SELECTED_ANNOTATION_INDEX:
             {

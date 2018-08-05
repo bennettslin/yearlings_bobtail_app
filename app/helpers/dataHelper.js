@@ -1,10 +1,10 @@
 /**
  * Fetch album data. Should know nothing else. Only the album helper will pass
- * a songs argument, since it is executing before the AlbumData object has been
+ * a songs argument, since it is executing before the album object has been
  * created.
  */
 
-import AlbumData from '../server/AlbumData'
+import album from '../server/album'
 import { SOURCE_WORMHOLE_INDEX } from '../constants/lyrics'
 
 /*********
@@ -12,17 +12,17 @@ import { SOURCE_WORMHOLE_INDEX } from '../constants/lyrics'
  *********/
 
 export const getMp3s = () => {
-    const { mp3s } = AlbumData
+    const { mp3s } = album
     return mp3s
 }
 
 export const getStartingIndexForBook = (bookIndex) => {
-    const { bookStartingIndices } = AlbumData
+    const { bookStartingIndices } = album
     return bookStartingIndices[bookIndex]
 }
 
 export const getBookColumnIndex = (songIndex) => {
-    const { bookStartingIndices } = AlbumData
+    const { bookStartingIndices } = album
 
     // Assumes two book starting indices.
     return songIndex < bookStartingIndices[1] ? 0 : 1
@@ -32,25 +32,25 @@ export const getBookColumnIndex = (songIndex) => {
  * SONGS *
  *********/
 
-export const getSongsAndLoguesCount = (songs = AlbumData.songs) => {
+export const getSongsAndLoguesCount = (songs = album.songs) => {
     return songs.length
 }
 
-export const getSongsNotLoguesCount = (songs = AlbumData.songs) => {
+export const getSongsNotLoguesCount = (songs = album.songs) => {
     return songs.length - 2
 }
 
-export const getSongObject = (songIndex, songs = AlbumData.songs) => {
+export const getSongObject = (songIndex, songs = album.songs) => {
     return songs[songIndex] || null
 }
 
-export const getSongIsLogue = (songIndex, songs = AlbumData.songs) => {
+export const getSongIsLogue = (songIndex, songs = album.songs) => {
     return songIndex === 0 || songIndex === songs.length - 1
 }
 
 export const getSongTitle = ({
     songIndex,
-    songs = AlbumData.songs,
+    songs = album.songs,
     showIndex = true
 }) => {
     const song = getSongObject(songIndex, songs)
@@ -65,7 +65,7 @@ export const getSongTitle = ({
 }
 
 export const getSongScore = (songIndex) => {
-    const { scores } = AlbumData
+    const { scores } = album
     return scores[songIndex - 1]
 }
 
@@ -141,7 +141,7 @@ export const getSongTip = (songIndex) => {
     }
 
     const isLogue = getSongIsLogue(songIndex),
-        { tips } = AlbumData
+        { tips } = album
 
     if (!isLogue) {
         return tips[songIndex].description
@@ -169,7 +169,7 @@ export const getLyricUnitArray = (songIndex, unitIndex) => {
     return songs.lyricUnits ? songs.lyricUnits[unitIndex] : []
 }
 
-export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) => {
+export const getVerseObject = (songIndex, verseIndex, songs = album.songs) => {
 
     if (songIndex < 0) {
         return null
@@ -391,8 +391,8 @@ export const getSceneObject = (songIndex, sceneIndex = 0) => {
  * ADMIN *
  *********/
 
-export const getAllTaskObjects = (songs = AlbumData.songs) => {
-    const { tasks } = AlbumData,
+export const getAllTaskObjects = (songs = album.songs) => {
+    const { tasks } = album,
         allTaskObjects = songs.map(song => song.tasks)
 
     allTaskObjects.push(tasks)
@@ -406,7 +406,7 @@ export const getSongTasks = (songIndex) => {
 }
 
 export const getDrawings = () => {
-    const { drawings } = AlbumData
+    const { drawings } = album
     return drawings
 }
 
