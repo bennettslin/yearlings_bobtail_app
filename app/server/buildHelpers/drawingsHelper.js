@@ -294,7 +294,4 @@ export const finalRegisterScenes = (songObject) => {
             currentVerseIndex++
         }
     })
-
-    // Not needed after song scenes are registered.
-    delete songObject.tempSceneRawIndices
 }

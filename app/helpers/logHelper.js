@@ -1,5 +1,10 @@
 // For dev purposes. Log object info.
-import { getSongObject, getAnnotationObject, getVerseObject } from './dataHelper'
+import {
+    getSongObject,
+    getAnnotationObject,
+    getVerseObject
+} from './dataHelper'
+
 import { LYRIC_TEXT_KEYS } from '../constants/lyrics'
 import { WINDOW_STORAGE } from '../constants/state'
 

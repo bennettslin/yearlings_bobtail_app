@@ -1,6 +1,9 @@
 module.exports = {
     WINDOW_STORAGE: window.localStorage,
 
+    // Album. Purely for debug purposes.
+    ALBUM: 'album',
+
     // Access.
     ACCESSED_ANNOTATION_INDEX: 'accessedAnnotationIndex',
     ACCESSED_ANNOTATION_ANCHOR_INDEX: 'accessedAnnotationAnchorIndex',

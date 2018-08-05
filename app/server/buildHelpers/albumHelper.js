@@ -299,6 +299,9 @@ const _finalPrepareAlbum = (albumObject) => {
         }
 
         adminRegisterDrawingTasks(songObject)
+
+        // Not needed after song scenes are registered.
+        delete songObject.tempSceneRawIndices
     })
 }
 

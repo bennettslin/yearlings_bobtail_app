@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { AlbumReducer } from './album'
 import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceStoreReducer } from './device'
@@ -16,7 +17,13 @@ import {
     SLIDER_STORE
 } from '../../constants/state'
 
+const isDevelopment = process.env.NODE_ENV === 'development'
+
 const rootReducer = combineReducers({
+
+    ...isDevelopment && {
+        album: AlbumReducer
+    },
 
     accessedAnnotationIndex: AccessedAnnotationIndexReducer,
     accessedAnnotationAnchorIndex: AccessedAnnotationAnchorIndexReducer,

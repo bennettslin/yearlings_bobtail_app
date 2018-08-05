@@ -5,6 +5,7 @@ import {
     convertBitNumberToTrueFalseKeys,
     setNewValueInBitNumber
 } from '../helpers/bitHelper'
+
 import album from '../server/album'
 
 import {
