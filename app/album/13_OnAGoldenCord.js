@@ -30,7 +30,10 @@ import {
     BENNETT,
     ANITA,
     ESTHER,
-    WILLY
+    WILLY,
+    LIZ,
+    AMY,
+    STEPHANIE
 } from '../constants/actorKeys'
 
 module.exports = {
@@ -60,7 +63,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, disingenuously consoling'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -83,7 +86,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'back, cradling bracelet, blank'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
@@ -106,14 +109,14 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, playful, waving'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, playful'
                     }
                 },
-                amy: {
+                [AMY]: {
                     officer: {
                         todo: true,
                         workedHours: 3,
@@ -136,7 +139,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'back, consoling'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,

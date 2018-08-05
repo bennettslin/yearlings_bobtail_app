@@ -24,15 +24,22 @@ import {
 } from '../constants/cubesKeys'
 
 import {
-    PRETEEN_BENNETT,
-    BENNETT,
-    ESTHER
-} from '../constants/actorKeys'
-
-import {
     TIME_ANYTIME,
     SEASON_AUTUMN
 } from '../constants/sky'
+
+import {
+    PRETEEN_BENNETT,
+    BENNETT,
+    ESTHER,
+    MOTHER,
+    FATHER,
+    SASHA,
+    LIZ,
+    KHARI,
+    MIRIAM,
+    STEPHANIE
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -45,7 +52,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'lying sitting up, arm around Miriam, scared, guilty'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, asleep'
@@ -61,12 +68,12 @@ module.exports = {
             unitIndex: 2,
             description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Chinese garb. His father is stern and disapproving, while his mother consoles a weeping Sita.`,
             actors: {
-                mother: {
+                [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, consoling Sita'
                 },
-                father: {
+                [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, accusatory'
@@ -94,7 +101,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'front angle, wincing'
                 },
-                father: {
+                [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, gesturing to scene below'
@@ -104,7 +111,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'sitting, hurt, lashing out in anger'
                 },
-                sasha: {
+                [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, consoling, cautious'
@@ -125,22 +132,22 @@ module.exports = {
                     workedHours: 3,
                     description: 'front, dismissive, not feeling bad'
                 },
-                mother: {
+                [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, gesturing with empathy'
                 },
-                father: {
+                [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, gesturing with blame'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, jumping on Bennett, grabbing his banjo'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
@@ -163,31 +170,31 @@ module.exports = {
                     workedHours: 3,
                     description: 'concerned'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, squatting, recording, dejected'
                     }
                 },
-                mother: {
+                [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, wanting to console Bennett'
                 },
-                father: {
+                [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, arms crossed, righteous'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, amused by conversation'
                     }
                 },
-                khari: {
+                [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, cheerful, making a point'
@@ -208,17 +215,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, seeking protection'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side sitting, vindictive, magical gesture'
                 },
-                mother: {
+                [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, protecting Sita'
                 },
-                father: {
+                [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, knocked over'

@@ -21,7 +21,12 @@ import {
     SEASON_SPRING
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    CATHERINE,
+    AMY,
+    WADE
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -34,7 +39,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'standing forward, disappointed, defeated'
                 },
-                catherine: {
+                [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'walking away, in a bad mood'
@@ -55,7 +60,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'sitting slouched, showing lyrics to Catherine'
                 },
-                catherine: {
+                [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting upright, droll smile'
@@ -92,14 +97,14 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, noticing Catholic'
                 },
-                wade: {
+                [WADE]: {
                     catholic: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, walking, looking pious'
                     }
                 },
-                amy: {
+                [AMY]: {
                     smoker: {
                         todo: true,
                         workedHours: 3,
@@ -122,7 +127,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, walking, looking pious'
                 },
-                catherine: {
+                [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'walking forward, confused and curious at Bennett'

@@ -27,7 +27,15 @@ import {
     SEASON_WINTER
 } from '../constants/sky'
 
-import { PRETEEN_BENNETT } from '../constants/actorKeys'
+import {
+    PRETEEN_BENNETT,
+    MOTHER,
+    CHRISTOPHER,
+    SASHA,
+    BRAD,
+    ANDREW,
+    TRISTAN
+} from '../constants/actorKeys'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -53,7 +61,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'lying on stomach, drawing, guilty'
                 },
-                christopher: {
+                [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'w-sitting, blissful'
@@ -122,12 +130,12 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, stoic'
                 },
-                brad: {
+                [BRAD]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, gesturing at friend to leave'
                 },
-                andrew: {
+                [ANDREW]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, throwing rocks, angry'
@@ -148,17 +156,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, wistful'
                 },
-                brad: {
+                [BRAD]: {
                     todo: true,
                     workedHours: 3,
                     description: 'eating chips'
                 },
-                andrew: {
+                [ANDREW]: {
                     todo: true,
                     workedHours: 3,
                     description: 'playing guitar like an amateur'
                 },
-                sasha: {
+                [SASHA]: {
                     popularGirl: {
                         todo: true,
                         workedHours: 3,
@@ -181,17 +189,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'front, sitting, sheepish'
                 },
-                christopher: {
+                [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, sitting, staring'
                 },
-                mother: {
+                [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, angry, accusatory'
                 },
-                tristan: {
+                [TRISTAN]: {
                     principal: {
                         todo: true,
                         workedHours: 3,

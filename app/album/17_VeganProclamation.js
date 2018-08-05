@@ -25,7 +25,19 @@ import {
     SEASON_WINTER
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    LIZ,
+    KHARI,
+    MIRIAM,
+    TRISTAN,
+    NESTOR,
+    AMY,
+    STEPHANIE,
+    WADE,
+    LIZ_REFLECTION,
+    KHARI_REFLECTION
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -38,14 +50,14 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, slumped over, despondent'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, looking back, concerned'
                     }
                 },
-                khari: {
+                [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, protective, judgmental'
@@ -66,17 +78,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'back, looking to side, annoyed'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, flirting'
                 },
-                tristan: {
+                [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, introducing miriam'
                 },
-                nestor: {
+                [NESTOR]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, eager'
@@ -113,26 +125,26 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, on phone, hunched over, sobbing'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'Lying in bed, on phone with Bennett'
                     }
                 },
-                lizReflection: {
+                [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection'
                     }
                 },
-                khari: {
+                [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying in bed, caressing Sita'
                 },
-                khariReflection: {
+                [KHARI_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
@@ -155,21 +167,21 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, desperately hopeful'
                 },
-                amy: {
+                [AMY]: {
                     demonstrator: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, passing out flyers'
                     }
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     demonstrator: {
                         todo: true,
                         workedHours: 3,
                         description: 'standing, demonstrating'
                     }
                 },
-                wade: {
+                [WADE]: {
                     demonstrator: {
                         todo: true,
                         workedHours: 3,

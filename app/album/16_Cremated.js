@@ -21,7 +21,10 @@ import {
     SEASON_AUTUMN
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    MIRIAM
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -34,7 +37,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'sitting in car, taking off pants'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'sitting in car, putting on perfume'
@@ -55,7 +58,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'front angle, impotent, apologetic'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'back angle, eyes closed, trying to get off'
@@ -76,7 +79,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'front angle, trying to get off'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'back angle, giving blowjob'
@@ -108,7 +111,7 @@ module.exports = {
             unitIndex: 8,
             description: `In the same scene, Miriam now appears in Bennett's thought bubble. She is playing tennis.`,
             actors: {
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'serving in tennis'
@@ -129,7 +132,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'pensive, laying condom on ground'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, looking back, reversing car'

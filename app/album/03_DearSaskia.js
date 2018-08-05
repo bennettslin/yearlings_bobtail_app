@@ -20,7 +20,12 @@ import {
     SEASON_SUMMER
 } from '../constants/sky'
 
-import { PRETEEN_BENNETT } from '../constants/actorKeys'
+import {
+    PRETEEN_BENNETT,
+    SASHA,
+    BRAD,
+    ANDREW
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -53,12 +58,12 @@ module.exports = {
                     workedHours: 3,
                     description: 'side seated, pretending to read, panicked'
                 },
-                sasha: {
+                [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side seated, laughing, braids trailing'
                 },
-                brad: {
+                [BRAD]: {
                     jewishBoy: {
                         todo: true,
                         workedHours: 3,
@@ -81,17 +86,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'tied up, greeting Sasha with nervous laughter'
                 },
-                sasha: {
+                [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'indignant, yelling at bullies'
                 },
-                andrew: {
+                [ANDREW]: {
                     todo: true,
                     workedHours: 3,
                     description: 'laughing, feigning fear of Sasha'
                 },
-                brad: {
+                [BRAD]: {
                     todo: true,
                     workedHours: 3,
                     description: 'laughing, tying up Bennett'

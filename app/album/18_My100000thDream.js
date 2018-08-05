@@ -23,7 +23,14 @@ import {
     SEASON_SPRING
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    CATHERINE,
+    MARA,
+    LIZ,
+    MIRIAM,
+    AMY
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -36,7 +43,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, walking, pleasantly confused'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -59,28 +66,28 @@ module.exports = {
                     workedHours: 3,
                     description: 'sitting cross-legged, playing recorder, content'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'resting on Bennett, content'
                     }
                 },
-                catherine: {
+                [CATHERINE]: {
                     gopi: {
                         todo: true,
                         workedHours: 3,
                         description: 'dancing'
                     }
                 },
-                mara: {
+                [MARA]: {
                     gopi: {
                         todo: true,
                         workedHours: 3,
                         description: 'dancing'
                     }
                 },
-                miriam: {
+                [MIRIAM]: {
                     gopi: {
                         todo: true,
                         workedHours: 2.5,
@@ -103,7 +110,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'back angle, confusedly being rushed'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -126,7 +133,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'front angle, reacting to threat'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -149,14 +156,14 @@ module.exports = {
                     workedHours: 3,
                     description: 'calm, accepting of impending doom'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'comforting'
                     }
                 },
-                amy: {
+                [AMY]: {
                     doctor: {
                         todo: true,
                         workedHours: 3,

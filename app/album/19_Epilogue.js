@@ -9,7 +9,27 @@ import {
     OLD_BENNETT,
     ANITA,
     ESTHER,
-    WILLY
+    WILLY,
+    MOTHER,
+    FATHER,
+    CHRISTOPHER,
+    SASHA,
+    BRAD,
+    ANDREW,
+    CATHERINE,
+    MARA,
+    JACOB,
+    ANA,
+    HOWIE,
+    TOMER,
+    LIZ,
+    KHARI,
+    MIRIAM,
+    TRISTAN,
+    NESTOR,
+    AMY,
+    STEPHANIE,
+    WADE
 } from '../constants/actorKeys'
 
 module.exports = {
@@ -50,13 +70,13 @@ module.exports = {
                     realHeight: `5'3"`,
                     description: 'standing'
                 },
-                mother: {
+                [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'0"`,
                     description: 'standing'
                 },
-                christopher: {
+                [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `3'5"`,
@@ -68,43 +88,43 @@ module.exports = {
                     realHeight: `4'2"`,
                     description: 'standing'
                 },
-                father: {
+                [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
-                howie: {
+                [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `6'0"`,
                     description: 'standing'
                 },
-                tomer: {
+                [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'6"`,
                     description: 'standing'
                 },
-                sasha: {
+                [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'1"`,
                     description: 'standing'
                 },
-                brad: {
+                [BRAD]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'6"`,
                     description: 'standing'
                 },
-                andrew: {
+                [ANDREW]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'7"`,
                     description: 'standing'
                 },
-                tristan: {
+                [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'8"`,
@@ -128,25 +148,25 @@ module.exports = {
                         }
                     ]
                 },
-                catherine: {
+                [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'11"`,
                     description: 'standing'
                 },
-                wade: {
+                [WADE]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'10"`,
                     description: 'standing'
                 },
-                amy: {
+                [AMY]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'6"`,
                     description: 'standing'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,
@@ -160,43 +180,43 @@ module.exports = {
                         }
                     ]
                 },
-                jacob: {
+                [JACOB]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'11"`,
                     description: 'standing'
                 },
-                mara: {
+                [MARA]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'0"`,
                     description: 'standing'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'8"`,
                     description: 'standing'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     realHeight: `5'1"`,
                     description: 'standing'
                 },
-                liz: {
+                [LIZ]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'9"`,
                     description: 'standing'
                 },
-                khari: {
+                [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'9"`,
                     description: 'standing'
                 },
-                nestor: {
+                [NESTOR]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'7"`,

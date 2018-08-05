@@ -23,7 +23,14 @@ import {
     SEASON_AUTUMN
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    ANA,
+    LIZ,
+    MIRIAM,
+    TRISTAN,
+    NESTOR
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -36,7 +43,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'front, putting on jacket, cold, distant'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -59,17 +66,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'front, tripping as meats fall out of pockets'
                 },
-                tristan: {
+                [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, eagerly aggressive, about to punch car'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, holding paper bottle, laughing'
                 },
-                nestor: {
+                [NESTOR]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, clutching at fist, laughing through pain'
@@ -90,7 +97,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'on couch, ignoring Sita, drunk'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -113,17 +120,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, sweaty, giddy'
                 },
-                miriam: {
+                [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, greeting Bennett'
                 },
-                tristan: {
+                [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, playfully giving Miriam a noogie'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, removing bass, rolling eyes'
@@ -144,7 +151,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'standing, cold, looking away'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,

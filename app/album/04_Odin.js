@@ -30,7 +30,10 @@ import {
     SEASON_AUTUMN
 } from '../constants/sky'
 
-import { PRETEEN_BENNETT } from '../constants/actorKeys'
+import {
+    PRETEEN_BENNETT,
+    SASHA
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -139,7 +142,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'hugging self'
                 },
-                sasha: {
+                [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'mermaid'

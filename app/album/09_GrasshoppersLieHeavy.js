@@ -28,7 +28,13 @@ import {
     SEASON_WINTER
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    LIZ,
+    NESTOR,
+    BENNETT_REFLECTION,
+    LIZ_REFLECTION
+} from '../constants/actorKeys'
 
 module.exports = {
     /**
@@ -60,7 +66,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, handing lancet pen, exuberant'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -101,7 +107,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, walking, mopey'
                 },
-                nestor: {
+                [NESTOR]: {
                     jogger: {
                         todo: true,
                         workedHours: 3,
@@ -124,7 +130,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'back, punching code, surprised'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -147,7 +153,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'front, opening gate, silent, attentive'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -170,7 +176,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'front, turning on light, smiling'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -209,7 +215,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'sitting, abruptly woken'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -232,21 +238,21 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, standing beside bed, unsure'
                 },
-                bennettReflection: {
+                [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection'
                     }
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'front, sitting on bed, irreverently reassuring'
                     }
                 },
-                lizReflection: {
+                [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
@@ -269,21 +275,21 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, about to stick it in'
                 },
-                bennettReflection: {
+                [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection'
                     }
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, spread open'
                     }
                 },
-                lizReflection: {
+                [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
@@ -306,21 +312,21 @@ module.exports = {
                     workedHours: 3,
                     description: 'lying down, warm, content, slightly worried'
                 },
-                bennettReflection: {
+                [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection'
                     }
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'lying down, warm, content, slightly worried'
                     }
                 },
-                lizReflection: {
+                [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,

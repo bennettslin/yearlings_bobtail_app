@@ -29,7 +29,12 @@ import {
     SEASON_SPRING
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    ANA,
+    HOWIE,
+    TOMER
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -42,17 +47,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, walking'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking'
                 },
-                howie: {
+                [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking'
                 },
-                tomer: {
+                [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking'
@@ -73,17 +78,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, holding body and gesturing its smallness'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, reading bottle intently'
                 },
-                howie: {
+                [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, holding large bottle'
                 },
-                tomer: {
+                [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, feigning superiority'
@@ -104,17 +109,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, blathering'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, play fighting'
                 },
-                howie: {
+                [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, bored by conversation'
                 },
-                tomer: {
+                [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, play fighting'
@@ -135,17 +140,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'front, looking upwards, inspired'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, shivering, feeling comforted'
                 },
-                howie: {
+                [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, arm around Ana'
                 },
-                tomer: {
+                [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, squatting, pouring water on grave'
@@ -166,17 +171,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, sleeping in car'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, sleeping in car'
                 },
-                howie: {
+                [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'driving car, alert, wigging out'
                 },
-                tomer: {
+                [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back angle, sleeping in car'
@@ -197,7 +202,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'lying on couch, watching TV, alert'
                 },
-                howie: {
+                [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'downstairs, in agony'

@@ -24,7 +24,19 @@ import {
     SEASON_SUMMER
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    MARA,
+    JACOB,
+    ANA,
+    TOMER,
+    LIZ,
+    AMY,
+    STEPHANIE,
+    WADE,
+    BENNETT_REFLECTION,
+    LIZ_REFLECTION
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -37,29 +49,29 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, playing guitar, singing'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, playing bass, looking cool'
                 },
-                tomer: {
+                [TOMER]: {
                     shane: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, holding beer, turning to make room'
                     }
                 },
-                wade: {
+                [WADE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, drinking beer'
                 },
-                amy: {
+                [AMY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, squeezing through, apologetic'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, squeezing through, awkward'
@@ -80,17 +92,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, charmed'
                 },
-                amy: {
+                [AMY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, same Mara pose'
                 },
-                jacob: {
+                [JACOB]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, carrying drums, smiling at Mara'
                 },
-                mara: {
+                [MARA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, carrying cymbal, talking'
@@ -111,27 +123,27 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, carrying gear, looking back, hesitant'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, leaning against wall, waiting for Jacob'
                 },
-                mara: {
+                [MARA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking at watch'
                 },
-                amy: {
+                [AMY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking back, uncertain'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, talking to Wade'
                 },
-                wade: {
+                [WADE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, talking to Stephanie'
@@ -152,21 +164,21 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, sitting on edge of bed, discontented'
                 },
-                bennettReflection: {
+                [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection'
                     }
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'lying, reaching forward to touch Bennett'
                     }
                 },
-                lizReflection: {
+                [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,

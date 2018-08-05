@@ -21,7 +21,12 @@ import {
     SEASON_AUTUMN
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    LIZ,
+    KHARI,
+    STEPHANIE
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -34,7 +39,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, awkward, wanting to make a move'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -57,7 +62,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'front, leaning towards Sita'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -80,19 +85,19 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, jealous'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, warm, guard down'
                     }
                 },
-                khari: {
+                [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, friendly'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     actor: {
                         todo: true,
                         workedHours: 3,
@@ -115,7 +120,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, in go-kart, leaning forward'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
@@ -138,7 +143,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, walking away dejected, slumped over'
                 },
-                liz: {
+                [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,

@@ -27,7 +27,12 @@ import {
 
 import {
     PRETEEN_BENNETT,
-    WILLY
+    WILLY,
+    MOTHER,
+    FATHER,
+    CHRISTOPHER,
+    HOWIE,
+    TOMER
 } from '../constants/actorKeys'
 
 module.exports = {
@@ -66,12 +71,12 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, ducking behind post, chuckling'
                 },
-                mother: {
+                [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'squatting, righting chair, exasperated, concerned'
                 },
-                christopher: {
+                [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'off balance, having a tantrum'
@@ -92,12 +97,12 @@ module.exports = {
             unitIndex: 7,
             description: `Inside the house, holding his X-ray specs, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Tattered comics and cut-out letters are on the ground. Bennett's father is rushing in, angry and determined to stop the fight.`,
             actors: {
-                father: {
+                [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, running, angry'
                 },
-                christopher: {
+                [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying on side, in pain, clenching stomach'
@@ -123,14 +128,14 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, defending himself, fearful'
                 },
-                howie: {
+                [HOWIE]: {
                     gangbanger: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, pointing at shoe, pushing Willy'
                     }
                 },
-                tomer: {
+                [TOMER]: {
                     gangbanger: {
                         todo: true,
                         workedHours: 3,
@@ -148,7 +153,7 @@ module.exports = {
             unitIndex: 12,
             description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort. Outside, the window shows a scene with police hovering over a dead body. Mother is getting up to close the window.`,
             actors: {
-                mother: {
+                [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'getting up to close curtain, trying to be reassuring'
@@ -174,7 +179,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side angle, merrily greeting trolls'
                 },
-                christopher: {
+                [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking up at Bennett, reassuring'

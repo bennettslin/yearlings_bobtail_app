@@ -22,7 +22,16 @@ import {
     SEASON_SUMMER
 } from '../constants/sky'
 
-import { BENNETT } from '../constants/actorKeys'
+import {
+    BENNETT,
+    MARA,
+    JACOB,
+    ANA,
+    HOWIE,
+    TOMER,
+    MIRIAM,
+    STEPHANIE
+} from '../constants/actorKeys'
 
 module.exports = {
     scenes: [
@@ -67,7 +76,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'sitting on couch, reading a book'
                 },
-                stephanie: {
+                [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
@@ -90,22 +99,22 @@ module.exports = {
                     workedHours: 3,
                     description: 'chatting with hipster, paying attention to Mara'
                 },
-                jacob: {
+                [JACOB]: {
                     todo: true,
                     workedHours: 3,
                     description: 'wiping sweat, chatting with Mara, laughing'
                 },
-                mara: {
+                [MARA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'flirting with Jacob'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'squatting, back turned, putting bass back in case'
                 },
-                tomer: {
+                [TOMER]: {
                     shane: {
                         todo: true,
                         workedHours: 3,
@@ -128,17 +137,17 @@ module.exports = {
                     workedHours: 3,
                     description: 'sitting, silently eating burger, uncomfortable'
                 },
-                jacob: {
+                [JACOB]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eating burger, holding Mara\'s hand'
                 },
-                mara: {
+                [MARA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, chatting'
                 },
-                ana: {
+                [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eating fries, laughing'
@@ -159,7 +168,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, walking, sulking with head down'
                 },
-                miriam: {
+                [MIRIAM]: {
                     maskedWoman: {
                         todo: true,
                         workedHours: 3,
@@ -182,14 +191,14 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, looking back at baby'
                 },
-                miriam: {
+                [MIRIAM]: {
                     maskedWoman: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking away'
                     },
                 },
-                howie: {
+                [HOWIE]: {
                     maskedUsher: {
                         todo: true,
                         workedHours: 3,
@@ -212,7 +221,7 @@ module.exports = {
                     workedHours: 3,
                     description: 'side, inspired by sudden thought'
                 },
-                howie: {
+                [HOWIE]: {
                     maskedUsher: {
                         todo: true,
                         workedHours: 3,
