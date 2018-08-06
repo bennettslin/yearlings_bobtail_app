@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
 
-import Shared from './shared'
+import Shared from './Sharedx'
 
 import AdminNavSection from './AdminNav/AdminNav'
 import { getAllTaskObjects } from 'helpers/dataHelper'
