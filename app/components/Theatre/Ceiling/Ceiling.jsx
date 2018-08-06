@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Svg from '../../Svg/Svg'
+import Svg from 'components/Svg/Svg'
 import CeilingRafter from './CeilingRafter'
 
 import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'

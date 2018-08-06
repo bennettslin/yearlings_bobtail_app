@@ -1,6 +1,6 @@
 // Reducers for album state.
 
-import album from '../../server/album'
+import album from 'server/album'
 
 import {
     ALBUM

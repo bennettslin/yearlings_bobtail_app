@@ -52,9 +52,12 @@ const webpack = require('webpack'),
                 // import from files without specifying extensions.
                 extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf'],
                 alias: {
-                    app: path.resolve(__dirname, './app'),
+                    album: path.resolve(__dirname, './app/album'),
+                    assets: path.resolve(__dirname, './app/assets'),
+                    components: path.resolve(__dirname, './app/components'),
                     constants: path.resolve(__dirname, './app/constants'),
-                    helpers: path.resolve(__dirname, './app/helpers')
+                    helpers: path.resolve(__dirname, './app/helpers'),
+                    server: path.resolve(__dirname, './app/server'),
                 }
             }
         },

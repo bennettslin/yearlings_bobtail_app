@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DotAnchor from '../../Anchor/DotAnchor/DotAnchor'
+import DotAnchor from 'components/Anchor/DotAnchor/DotAnchor'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

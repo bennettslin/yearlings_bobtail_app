@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames';
 
-import Texts from '../../Text/Texts'
-import Button from '../../Button/Button'
+import Texts from 'components/Text/Texts'
+import Button from 'components/Button/Button'
 
 import { ENTER } from 'constants/access'
 import { WORMHOLE_BUTTON_KEY } from 'constants/buttons'

@@ -10,7 +10,7 @@ import {
     FLOOR,
     CEILING,
     TILE
-} from '../../sceneConstants'
+} from 'components/Scene/sceneConstants'
 
 const propTypes = {
     // From parent.

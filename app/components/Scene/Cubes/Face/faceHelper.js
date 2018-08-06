@@ -7,7 +7,7 @@ import {
 import {
     LEFT,
     RIGHT
-} from '../../sceneConstants'
+} from 'components/Scene/sceneConstants'
 
 const midXIndex = CUBE_X_AXIS_LENGTH / 2
 

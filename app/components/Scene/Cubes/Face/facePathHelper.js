@@ -2,7 +2,7 @@ import {
     FRONT,
     SIDE,
     TILE
-} from '../../sceneConstants'
+} from 'components/Scene/sceneConstants'
 
 export const getPathString = (polygonPoints) => {
     return polygonPoints.map(({ x, y }, index) => {

@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Button from '../../Button/Button'
+import Button from 'components/Button/Button'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

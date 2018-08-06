@@ -2,12 +2,12 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Style from '../../../Style/Style'
-import DynamicStyling from '../../../Style/DynamicStyling'
+import Style from 'components/Style/Style'
+import DynamicStyling from 'components/Style/DynamicStyling'
 
 import {
     getParentClassNameForSceneLogic
-} from '../../sceneHelper'
+} from 'components/Scene/sceneHelper'
 
 import {
     getChildClassNameForFaceLogic
@@ -17,7 +17,7 @@ import {
     FLOOR,
     TILE,
     Z_INDICES_MATRIX_NAME
-} from '../../sceneConstants'
+} from 'components/Scene/sceneConstants'
 
 import { CUBE_Z_INDICES } from '../cubeIndexConstants'
 

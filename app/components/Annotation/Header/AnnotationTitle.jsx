@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotAnchor from '../../Anchor/DotAnchor/DotAnchor'
-import TextAnchor from '../../Anchor/TextAnchor/TextAnchor'
+import DotAnchor from 'components/Anchor/DotAnchor/DotAnchor'
+import TextAnchor from 'components/Anchor/TextAnchor/TextAnchor'
 
 import AnnotationAccess from './AnnotationAccess'
 

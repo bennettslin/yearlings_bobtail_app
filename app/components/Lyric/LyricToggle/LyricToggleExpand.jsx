@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../../Button/Button'
+import Button from 'components/Button/Button'
 import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
 import { getIsLyricExpandable } from 'helpers/responsiveHelper'

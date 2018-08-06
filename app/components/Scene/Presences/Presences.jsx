@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Svg from '../../Svg/Svg'
+import Svg from 'components/Svg/Svg'
 import Presence from './Presence'
 
 import { getSceneObject } from 'helpers/dataHelper'

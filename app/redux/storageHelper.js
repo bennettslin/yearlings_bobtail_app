@@ -6,7 +6,7 @@ import {
     setNewValueInBitNumber
 } from 'helpers/bitHelper'
 
-import album from '../server/album'
+import album from 'server/album'
 
 import {
     ALL_DOT_KEYS
