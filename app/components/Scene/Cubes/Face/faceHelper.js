@@ -1,13 +1,13 @@
-import { getCharStringForNumber } from '../../../../../helpers/formatHelper'
+import { getCharStringForNumber } from '../../../../helpers/formatHelper'
 
 import {
     CUBE_X_AXIS_LENGTH
-} from '../../cubeIndexConstants'
+} from '../cubeIndexConstants'
 
 import {
     LEFT,
     RIGHT
-} from '../../../sceneConstants'
+} from '../../sceneConstants'
 
 const midXIndex = CUBE_X_AXIS_LENGTH / 2
 

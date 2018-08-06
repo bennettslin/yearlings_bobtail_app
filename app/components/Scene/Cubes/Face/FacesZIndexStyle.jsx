@@ -10,7 +10,7 @@ import { getCubeCornerPercentages } from '../cubeRenderHelper'
 import {
     getPathString,
     getPolygonPoints
-} from './helpers/pathHelper'
+} from './facePathHelper'
 
 import {
     getParentClassNameForSceneLogic,
@@ -20,7 +20,7 @@ import {
 import {
     getChildClassNameForFaceLogic,
     getSideDirection
-} from './helpers/faceHelper'
+} from './faceHelper'
 
 import {
     SLANT_DIRECTIONS,

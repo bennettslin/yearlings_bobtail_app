@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getChildClassNameForFaceLogic } from './helpers/faceHelper'
+import { getChildClassNameForFaceLogic } from './faceHelper'
 import { getChildClassNameForCubeLogic } from '../cubeHelper'
 import { getCharStringForNumber } from '../../../../helpers/formatHelper'
 

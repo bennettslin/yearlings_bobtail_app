@@ -11,7 +11,7 @@ import {
 
 import {
     getChildClassNameForFaceLogic
-} from './helpers/faceHelper'
+} from './faceHelper'
 
 import {
     FLOOR,
