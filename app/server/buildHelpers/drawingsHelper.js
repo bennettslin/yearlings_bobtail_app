@@ -9,7 +9,7 @@ import keys from 'lodash.keys'
 export const adminGatherDrawings = (album, songIndex) => {
 
     const
-        drawingTypes = ['actors'],
+        drawingTypes = ['actors', 'cutouts', 'fixtures'],
         scenes = album.scenes[songIndex]
 
     album._drawings = album._drawings || {}
@@ -18,7 +18,7 @@ export const adminGatherDrawings = (album, songIndex) => {
 
         drawingTypes.forEach(drawingType => {
 
-            // Initialise object for actors, backdrops, stageProps.
+            // Initialise object for actors, cutouts, fixtures.
             if (!album._drawings[drawingType]) {
                 album._drawings[drawingType] = {}
             }
@@ -30,7 +30,7 @@ export const adminGatherDrawings = (album, songIndex) => {
                     sceneIndex: sceneIndex + 1
                 }
 
-                // Initialise array for each actor, backdrop, stageProp.
+                // Initialise array for each actor, cutout, fixture.
                 if (!album._drawings[drawingType][key]) {
                     album._drawings[drawingType][key] = []
                 }

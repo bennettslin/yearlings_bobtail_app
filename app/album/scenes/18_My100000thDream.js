@@ -24,17 +24,19 @@ module.exports = [
     {
         unitIndex: 1,
         description: `Bennett runs into Sita, who happens to be walking out of an El Torito restaurant, having finished her shift.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'side, walking, pleasantly confused'
-            },
-            [LIZ]: {
-                sita: {
+        presences: {
+            actors: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, opening a door, pleasantly surprised'
+                    description: 'side, walking, pleasantly confused'
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'side angle, opening a door, pleasantly surprised'
+                    }
                 }
             }
         },
@@ -47,38 +49,40 @@ module.exports = [
     {
         unitIndex: 3,
         description: `Bennett and Sita are dancing on the pampas with some gopis.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'sitting cross-legged, playing recorder, content'
-            },
-            [LIZ]: {
-                sita: {
+        presences: {
+            actors: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'resting on Bennett, content'
-                }
-            },
-            [CATHERINE]: {
-                gopi: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'dancing'
-                }
-            },
-            [MARA]: {
-                gopi: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'dancing'
-                }
-            },
-            [MIRIAM]: {
-                gopi: {
-                    todo: true,
-                    workedHours: 2.5,
-                    description: 'dancing'
+                    description: 'sitting cross-legged, playing recorder, content'
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'resting on Bennett, content'
+                    }
+                },
+                [CATHERINE]: {
+                    gopi: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'dancing'
+                    }
+                },
+                [MARA]: {
+                    gopi: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'dancing'
+                    }
+                },
+                [MIRIAM]: {
+                    gopi: {
+                        todo: true,
+                        workedHours: 2.5,
+                        description: 'dancing'
+                    }
                 }
             }
         },
@@ -91,17 +95,19 @@ module.exports = [
     {
         unitIndex: 5,
         description: `In the background is an Indian wedding. Bennett is confused, because the bride appears to be Sita. But his Sita keeps dragging him forward, insistently.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'back angle, confusedly being rushed'
-            },
-            [LIZ]: {
-                sita: {
+        presences: {
+            actors: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, urging'
+                    description: 'back angle, confusedly being rushed'
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'front, urging'
+                    }
                 }
             }
         },
@@ -114,17 +120,19 @@ module.exports = [
     {
         unitIndex: 7,
         description: `Sita and Bennett are at the edge of a cliff. Bennett is frightened. Sita is gesturing towards the edge.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'front angle, reacting to threat'
-            },
-            [LIZ]: {
-                sita: {
+        presences: {
+            actors: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front angle, gesturing to grave'
+                    description: 'front angle, reacting to threat'
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'front angle, gesturing to grave'
+                    }
                 }
             }
         },
@@ -137,24 +145,26 @@ module.exports = [
     {
         unitIndex: 9,
         description: `The whole thing turns out to have been a dream. Bennett is in bed, old and dying. A doctor is pulling the sheet over him. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'calm, accepting of impending doom'
-            },
-            [LIZ]: {
-                sita: {
+        presences: {
+            actors: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'comforting'
-                }
-            },
-            [AMY]: {
-                doctor: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'pulling sheet over Bennett'
+                    description: 'calm, accepting of impending doom'
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'comforting'
+                    }
+                },
+                [AMY]: {
+                    doctor: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'pulling sheet over Bennett'
+                    }
                 }
             }
         },

@@ -29,23 +29,25 @@ module.exports = [
     {
         unitIndex: 1,
         description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'side, slumped over, despondent'
-            },
-            [LIZ]: {
-                sita: {
+        presences: {
+            actors: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, looking back, concerned'
+                    description: 'side, slumped over, despondent'
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'side angle, looking back, concerned'
+                    }
+                },
+                [KHARI]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'side, protective, judgmental'
                 }
-            },
-            [KHARI]: {
-                todo: true,
-                workedHours: 3,
-                description: 'side, protective, judgmental'
             }
         },
         cubes: BERKELEY_WALKWAY_KEY,
@@ -57,26 +59,28 @@ module.exports = [
     {
         unitIndex: 4,
         description: `Bennett is by himself with Odin at a show, looking agitated and bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'back, looking to side, annoyed'
-            },
-            [MIRIAM]: {
-                todo: true,
-                workedHours: 2.5,
-                description: 'side, flirting'
-            },
-            [TRISTAN]: {
-                todo: true,
-                workedHours: 3,
-                description: 'front, introducing miriam'
-            },
-            [NESTOR]: {
-                todo: true,
-                workedHours: 3,
-                description: 'side, eager'
+        presences: {
+            actors: {
+                [BENNETT]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'back, looking to side, annoyed'
+                },
+                [MIRIAM]: {
+                    todo: true,
+                    workedHours: 2.5,
+                    description: 'side, flirting'
+                },
+                [TRISTAN]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'front, introducing miriam'
+                },
+                [NESTOR]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'side, eager'
+                }
             }
         },
         cubes: SHOW_STAGE_FRONT_FAR_KEY,
@@ -88,11 +92,13 @@ module.exports = [
     {
         unitIndex: 7,
         description: 'Bennett is walking through an alley.',
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'walking through alley'
+        presences: {
+            actors: {
+                [BENNETT]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'walking through alley'
+                }
             }
         },
         cubes: ALLEY_KEY,
@@ -104,38 +110,40 @@ module.exports = [
     {
         unitIndex: 10,
         description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed snuggling with her friend.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'side, on phone, hunched over, sobbing'
-            },
-            [LIZ]: {
-                sita: {
+        presences: {
+            actors: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'Lying in bed, on phone with Bennett'
-                }
-            },
-            [LIZ_REFLECTION]: {
-                reflection: {
+                    description: 'side, on phone, hunched over, sobbing'
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'Lying in bed, on phone with Bennett'
+                    }
+                },
+                [LIZ_REFLECTION]: {
+                    reflection: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'reflection'
+                    }
+                },
+                [KHARI]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'reflection'
-                }
-            },
-            [KHARI]: {
-                todo: true,
-                workedHours: 3,
-                description: 'lying in bed, caressing Sita'
-            },
-            [KHARI_REFLECTION]: {
-                reflection: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'reflection'
-                }
-            },
+                    description: 'lying in bed, caressing Sita'
+                },
+                [KHARI_REFLECTION]: {
+                    reflection: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'reflection'
+                    }
+                },
+            }
         },
         cubes: SITA_APARTMENT_BED_KEY,
         sky: {
@@ -146,31 +154,33 @@ module.exports = [
     {
         unitIndex: 12,
         description: `Bennett is with Odin, and happens upon a Peta demonstration. One of the demonstrators is petting Odin.`,
-        actors: {
-            [BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'side, desperately hopeful'
-            },
-            [AMY]: {
-                demonstrator: {
+        presences: {
+            actors: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back, passing out flyers'
-                }
-            },
-            [STEPHANIE]: {
-                demonstrator: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'standing, demonstrating'
-                }
-            },
-            [WADE]: {
-                demonstrator: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'standing, demonstrating'
+                    description: 'side, desperately hopeful'
+                },
+                [AMY]: {
+                    demonstrator: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'back, passing out flyers'
+                    }
+                },
+                [STEPHANIE]: {
+                    demonstrator: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'standing, demonstrating'
+                    }
+                },
+                [WADE]: {
+                    demonstrator: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'standing, demonstrating'
+                    }
                 }
             }
         },

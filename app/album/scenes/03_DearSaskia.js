@@ -40,22 +40,24 @@ module.exports = [
     {
         unitIndex: 6,
         description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
-        actors: {
-            [PRETEEN_BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'side seated, pretending to read, panicked'
-            },
-            [SASHA]: {
-                todo: true,
-                workedHours: 3,
-                description: 'side seated, laughing, braids trailing'
-            },
-            [BRAD]: {
-                jewishBoy: {
+        presences: {
+            actors: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side seated, turned away, pointing to window'
+                    description: 'side seated, pretending to read, panicked'
+                },
+                [SASHA]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'side seated, laughing, braids trailing'
+                },
+                [BRAD]: {
+                    jewishBoy: {
+                        todo: true,
+                        workedHours: 3,
+                        description: 'side seated, turned away, pointing to window'
+                    }
                 }
             }
         },
@@ -68,26 +70,28 @@ module.exports = [
     {
         unitIndex: 9,
         description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
-        actors: {
-            [PRETEEN_BENNETT]: {
-                todo: true,
-                workedHours: 3,
-                description: 'tied up, greeting Sasha with nervous laughter'
-            },
-            [SASHA]: {
-                todo: true,
-                workedHours: 3,
-                description: 'indignant, yelling at bullies'
-            },
-            [ANDREW]: {
-                todo: true,
-                workedHours: 3,
-                description: 'laughing, feigning fear of Sasha'
-            },
-            [BRAD]: {
-                todo: true,
-                workedHours: 3,
-                description: 'laughing, tying up Bennett'
+        presences: {
+            actors: {
+                [PRETEEN_BENNETT]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'tied up, greeting Sasha with nervous laughter'
+                },
+                [SASHA]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'indignant, yelling at bullies'
+                },
+                [ANDREW]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'laughing, feigning fear of Sasha'
+                },
+                [BRAD]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'laughing, tying up Bennett'
+                }
             }
         },
         cubes: TETHERBALL_SCENE_KEY,
