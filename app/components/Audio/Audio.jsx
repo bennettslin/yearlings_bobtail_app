@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import AudioBanner from './AudioBanner'
 import AudioButtons from './AudioButtons'
-import TitleToggle from '../Title/TitleToggle'
+import TitleToggle from 'components/Title/TitleToggle'
 
 const mapStateToProps = ({
     isTwoRowMenu

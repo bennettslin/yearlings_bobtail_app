@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import { connect } from 'react-redux'
 
-import Stage from '../Stage/Stage'
+import Stage from 'components/Stage/Stage'
 
 import Wall from './Wall/Wall'
 import Ceiling from './Ceiling/Ceiling'

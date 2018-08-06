@@ -167,7 +167,7 @@ module.exports = [
     },
     {
         unitIndex: 18,
-        description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal..`,
+        description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal.`,
         actors: {
             [PRETEEN_BENNETT]: {
                 todo: true,

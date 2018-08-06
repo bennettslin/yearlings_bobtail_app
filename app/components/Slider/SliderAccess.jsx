@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import AccessLetters from '../AccessLetter/AccessLetters'
+import AccessLetters from 'components/AccessLetter/AccessLetters'
 import {
     AUDIO_REWIND_KEY,
     AUDIO_FAST_FORWARD_KEY

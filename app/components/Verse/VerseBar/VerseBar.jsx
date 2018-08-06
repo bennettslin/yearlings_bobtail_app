@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import VerseHoc from '../Hoc/VerseHoc'
-import Verse from '../Verse'
+import Verse from 'components/Verse/Verse'
 
 import { getVerseObject } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import DotSequence from 'components/Dot/Sequence/DotSequence'
 import Underline from './Underline/Underline'
-import AccessLetter from '../AccessLetter/AccessLetter'
+import AccessLetter from 'components/AccessLetter/AccessLetter'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 

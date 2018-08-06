@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 // import debounce from 'debounce'
 
-import KeyHandler from '../handlers/KeyHandler'
+import KeyHandler from 'handlers/KeyHandler'
 import AccessStyle from './AccessLetter/AccessStyle'
 import Admin from './Admin/Admin'
 import Live from './Live/Live'

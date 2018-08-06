@@ -3,8 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import TitleSection from '../Title/Title'
-import Popup from '../Popup/Popup'
+import TitleSection from 'components/Title/Title'
+import Popup from 'components/Popup/Popup'
 
 const mapStateToProps = ({
     selectedTitleIndex

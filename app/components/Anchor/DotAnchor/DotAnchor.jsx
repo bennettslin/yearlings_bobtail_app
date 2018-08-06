@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Anchor from '../Anchor';
+import Anchor from 'components/Anchor/Anchor';
 import Dot from 'components/Dot/Dot';
 
 import { ALL_DOT_KEYS } from 'constants/dots'

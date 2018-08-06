@@ -3648,4 +3648,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Change to absolute paths.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

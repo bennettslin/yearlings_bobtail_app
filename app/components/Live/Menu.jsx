@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TitleToggle from '../Title/TitleToggle'
+import TitleToggle from 'components/Title/TitleToggle'
 import Audio from 'components/Audio/Audio'
 import ScoresTips from 'components/ScoresTips/ScoresTips'
 

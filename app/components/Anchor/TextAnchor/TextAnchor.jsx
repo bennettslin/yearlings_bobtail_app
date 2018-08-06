@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Anchor from '../Anchor';
+import Anchor from 'components/Anchor/Anchor';
 import Underline from '../Underline/Underline'
 
 const textAnchorPropTypes = {

@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 import { setAppMounted } from 'flux/actions/session'
 
-import EventHandler from '../handlers/EventHandler'
+import EventHandler from 'handlers/EventHandler'
 import AccessManager from './AccessManager'
 import AnnotationManager from './AnnotationManager/AnnotationManager'
 import AudioManager from './AudioManager'

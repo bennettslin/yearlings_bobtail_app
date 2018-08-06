@@ -3,8 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Score from '../Score/Score'
-import Popup from '../Popup/Popup'
+import Score from 'components/Score/Score'
+import Popup from 'components/Popup/Popup'
 
 const mapStateToProps = ({
     selectedSongIndex,

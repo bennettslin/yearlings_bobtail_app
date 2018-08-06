@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import ButtonIcon from 'components/Button/ButtonIcon'
-import AccessLetter from '../AccessLetter/AccessLetter'
+import AccessLetter from 'components/AccessLetter/AccessLetter'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

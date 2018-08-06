@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import Texts from '../Text/Texts'
+import Texts from 'components/Text/Texts'
 import { TITLE } from 'constants/lyrics'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

@@ -9,8 +9,8 @@ import LyricAccess from './LyricAccess/LyricAccess'
 import LyricToggleEar from './LyricToggle/LyricToggleEar'
 import LyricToggleExpand from './LyricToggle/LyricToggleExpand'
 import LyricToggleScroll from './LyricToggle/LyricToggleScroll'
-import Stanzas from '../Stanza/Stanzas'
-import VerseBar from '../Verse/VerseBar/VerseBar'
+import Stanzas from 'components/Stanza/Stanzas'
+import VerseBar from 'components/Verse/VerseBar/VerseBar'
 
 const mapStateToProps = ({
     canLyricRender
