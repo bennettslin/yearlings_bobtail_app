@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DrawingsSection from './drawings-section'
+import DrawingSection from './DrawingSection'
 
 import { getDrawings } from 'helpers/dataHelper'
 
@@ -11,8 +11,7 @@ const Drawing = () => {
     return (
         <div className="Admin__column">
             <div className="Admin__field drawing">
-                <DrawingsSection {...drawings}
-                />
+                <DrawingSection {...drawings} />
             </div>
         </div>
     )
