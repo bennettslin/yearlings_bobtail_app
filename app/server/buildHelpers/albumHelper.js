@@ -291,8 +291,6 @@ const _finalPrepareAlbum = (albumObject) => {
 
             finalRegisterScenes(songObject)
 
-            finalRegisterPresenceYIndices(albumObject, songIndex)
-
             // For each verse in a wormhole, tell wormhole how to format it.
             addDestinationWormholeFormats(songObject.lyricUnits)
 
@@ -300,6 +298,8 @@ const _finalPrepareAlbum = (albumObject) => {
             delete songObject.tempFinalAnnotationIndex
             delete songObject.tempSongIndex
         }
+
+        finalRegisterPresenceYIndices(albumObject, songIndex)
 
         adminRegisterDrawingTasks(songObject)
 

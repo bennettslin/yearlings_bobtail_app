@@ -6,7 +6,7 @@ module.exports = [
     {
         taskName: `Have actor component know which instance to render based on instance key. Have system to keep track of instance keys. And get a start on cutouts and fixtures.`,
         workedHours: 0,
-        neededHours: 10
+        neededHours: 5
     },
 
     // Important features.
