@@ -19,6 +19,18 @@ import {
     ESTHER
 } from '../../constants/actorKeys'
 
+import {
+    PANICKED
+} from '../../constants/actors/youngBennett'
+
+import {
+    EXASPERATED
+} from '../../constants/actors/anita'
+
+import {
+    CURIOUS
+} from '../../constants/actors/esther'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -38,7 +50,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, rushing, exasperated',
-                    instance: 'test',
+                    instance: EXASPERATED,
                     arrangement: {
                         yIndex: 5,
                         xFloat: 4,
@@ -51,7 +63,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking at Anita',
-                    instance: 'test',
+                    instance: CURIOUS,
                     arrangement: {
                         yIndex: 4,
                         xFloat: 3,
@@ -64,7 +76,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, running, panicked',
-                    instance: 'test',
+                    instance: PANICKED,
                     arrangement: {
                         yIndex: 5,
                         xFloat: 8,

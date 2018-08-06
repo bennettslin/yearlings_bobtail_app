@@ -6,5 +6,6 @@ const
 module.exports = {
     CAROUSEL_SCROLL,
     LYRIC_ANNOTATION_SCROLL,
-    VERSE_SCROLL
+    VERSE_SCROLL,
+    DEFAULT_COMPONENT: () => (null)
 }

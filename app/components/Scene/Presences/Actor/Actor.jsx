@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import cx from 'classnames'
 
 import YoungBennett from './Actors/YoungBennett/YoungBennett'
 import Anita from './Actors/Anita/Anita'
@@ -40,8 +40,10 @@ const Actor = ({
         ACTORS_MAP[nameKey] || DEFAULT_COMPONENT
 
     return (
-        <ActorComponent
-            {...other}
+        <ActorComponent {...other}
+            className={cx(
+                // 'Actor'
+            )}
             {...{
                 instanceKey
             }}

@@ -31,7 +31,10 @@ const propTypes = {
     // From parent.
     presenceType: PropTypes.string.isRequired,
     nameKey: PropTypes.string.isRequired,
-    instanceKey: PropTypes.string.isRequired,
+
+    // Actors always have instanceKeys, other presences largely don't.
+    instanceKey: PropTypes.string,
+
     arrangement: PropTypes.shape({
         xFloat: PropTypes.number.isRequired,
         zOffset: PropTypes.number.isRequired,
