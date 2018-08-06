@@ -1,3 +1,5 @@
+// Keep actor instances in separate folder, under each actor.
+
 const
     YOUNG_BENNETT = 'youngBennett',
     PRETEEN_BENNETT = 'preteenBennett',

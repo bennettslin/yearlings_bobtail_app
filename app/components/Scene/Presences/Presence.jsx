@@ -37,7 +37,7 @@ const propTypes = {
 
     arrangement: PropTypes.shape({
         xFloat: PropTypes.number.isRequired,
-        zOffset: PropTypes.number.isRequired,
+        zOffset: PropTypes.number,
         xWidth: PropTypes.number.isRequired,
         zHeight: PropTypes.number.isRequired
     }).isRequired,

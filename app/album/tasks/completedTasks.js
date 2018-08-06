@@ -3653,4 +3653,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `System of instance keys for actors.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

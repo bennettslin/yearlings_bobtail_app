@@ -20,6 +20,16 @@ import {
 } from 'constants/actorKeys'
 
 import {
+    NORTH_HOLLYWOOD_NEIGHBOURHOOD,
+    NORTH_HOLLYWOOD_HOUSE_LEFT,
+    NORTH_HOLLYWOOD_HOUSE_RIGHT
+} from 'constants/cutoutKeys'
+
+import {
+    FIRE_HYDRANT
+} from 'constants/fixtureKeys'
+
+import {
     PANICKED
 } from 'constants/actors/youngBennett'
 
@@ -51,10 +61,9 @@ module.exports = [
                     workedHours: 3,
                     description: 'side, rushing, exasperated',
                     instance: EXASPERATED,
+                    yIndex: 5,
                     arrangement: {
-                        yIndex: 5,
                         xFloat: 4,
-                        zOffset: 0,
                         xWidth: 1,
                         zHeight: 3
                     }
@@ -64,10 +73,9 @@ module.exports = [
                     workedHours: 3,
                     description: 'side, looking at Anita',
                     instance: CURIOUS,
+                    yIndex: 4,
                     arrangement: {
-                        yIndex: 4,
                         xFloat: 3,
-                        zOffset: 0,
                         xWidth: 1,
                         zHeight: 3
                     }
@@ -77,12 +85,47 @@ module.exports = [
                     workedHours: 3,
                     description: 'side, running, panicked',
                     instance: PANICKED,
+                    yIndex: 5,
                     arrangement: {
-                        yIndex: 5,
                         xFloat: 8,
-                        zOffset: 0,
                         xWidth: 1,
                         zHeight: 3
+                    }
+                }
+            },
+            cutouts: {
+                [NORTH_HOLLYWOOD_NEIGHBOURHOOD]: {
+                    yIndex: 0,
+                    arrangement: {
+                        xFloat: 5.5,
+                        xWidth: 12,
+                        zHeight: 3
+                    }
+                },
+                [NORTH_HOLLYWOOD_HOUSE_LEFT]: {
+                    yIndex: 1,
+                    arrangement: {
+                        xFloat: 3,
+                        xWidth: 3,
+                        zHeight: 3
+                    }
+                },
+                [NORTH_HOLLYWOOD_HOUSE_RIGHT]: {
+                    yIndex: 1,
+                    arrangement: {
+                        xFloat: 9,
+                        xWidth: 3,
+                        zHeight: 3
+                    }
+                },
+            },
+            fixtures: {
+                [FIRE_HYDRANT]: {
+                    yIndex: 5,
+                    arrangement: {
+                        xFloat: 2,
+                        xWidth: 1,
+                        zHeight: 2
                     }
                 }
             }
@@ -101,41 +144,17 @@ module.exports = [
                 [ANITA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, playing ball, offended',
-                    instance: 'test',
-                    arrangement: {
-                        yIndex: 5,
-                        xFloat: 5,
-                        zOffset: 0,
-                        xWidth: 1,
-                        zHeight: 3
-                    }
+                    description: 'front, playing ball, offended'
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting, flustered',
-                    instance: 'test',
-                    arrangement: {
-                        yIndex: 5,
-                        xFloat: 5,
-                        zOffset: 0,
-                        xWidth: 1,
-                        zHeight: 3
-                    }
+                    description: 'sitting, flustered'
                 },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, skipping, pointing back and laughing',
-                    instance: 'test',
-                    arrangement: {
-                        yIndex: 5,
-                        xFloat: 5,
-                        zOffset: 0,
-                        xWidth: 1,
-                        zHeight: 3
-                    }
+                    description: 'side, skipping, pointing back and laughing'
                 }
             }
         },
@@ -153,15 +172,7 @@ module.exports = [
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, in bathtub, downcast',
-                    instance: 'test',
-                    arrangement: {
-                        yIndex: 5,
-                        xFloat: 5,
-                        zOffset: 0,
-                        xWidth: 1,
-                        zHeight: 3
-                    }
+                    description: 'side, in bathtub, downcast'
                 }
             }
         },
@@ -179,28 +190,12 @@ module.exports = [
                 [ANITA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back, squatting, smiling',
-                    instance: 'test',
-                    arrangement: {
-                        yIndex: 5,
-                        xFloat: 5,
-                        zOffset: 0,
-                        xWidth: 1,
-                        zHeight: 3
-                    }
+                    description: 'back, squatting, smiling'
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, facing front, singing, smiling',
-                    instance: 'test',
-                    arrangement: {
-                        yIndex: 5,
-                        xFloat: 5,
-                        zOffset: 0,
-                        xWidth: 1,
-                        zHeight: 3
-                    }
+                    description: 'side, facing front, singing, smiling'
                 }
             }
         },

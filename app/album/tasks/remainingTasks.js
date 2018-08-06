@@ -4,9 +4,15 @@ module.exports = [
      * Presence work.
      */
     {
-        taskName: `Have actor component know which instance to render based on instance key. Have system to keep track of instance keys. And get a start on cutouts and fixtures.`,
+        taskName: `Begin system for cutouts and fixtures.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 3
+    },
+
+    {
+        taskName: `System to calculate drawing tasks for cutouts and fixtures.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     // Important features.

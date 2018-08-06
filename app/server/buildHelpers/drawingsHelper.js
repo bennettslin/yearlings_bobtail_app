@@ -322,26 +322,32 @@ export const finalRegisterPresenceYIndices = (
                 /**
                  * Determine the yIndex of each presence.
                  */
-                const { yIndex } = presence.arrangement
+                const { yIndex } = presence
 
                 /**
-                 * If this is the first presence for that yIndex, initialise
-                 * the yIndex array.
+                 * TODO: Eventually, all presences should have a yIndex. For
+                 * now, we will check if they don't.
                  */
-                if (!scene.presenceYIndices[yIndex]) {
-                    scene.presenceYIndices[yIndex] = []
+                if (!isNaN(yIndex)) {
+                    /**
+                     * If this is the first presence for that yIndex,
+                     * initialise the yIndex array.
+                     */
+                    if (!scene.presenceYIndices[yIndex]) {
+                        scene.presenceYIndices[yIndex] = []
+                    }
+
+                    /**
+                     * Add presence to the scene's presenceYIndices object
+                     * under that yIndex.
+                     */
+                    scene.presenceYIndices[yIndex].push({
+                        type: presenceType,
+                        name: presenceName,
+                        instance: presence.instance,
+                        arrangement: presence.arrangement
+                    })
                 }
-
-                /**
-                 * Add presence to the scene's presenceYIndices object under
-                 * that yIndex.
-                 */
-                scene.presenceYIndices[yIndex].push({
-                    type: presenceType,
-                    name: presenceName,
-                    instance: presence.instance,
-                    arrangement: presence.arrangement
-                })
             })
         })
 
