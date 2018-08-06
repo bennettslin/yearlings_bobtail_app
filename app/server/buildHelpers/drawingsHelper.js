@@ -16,51 +16,63 @@ export const adminGatherDrawings = (album, songIndex) => {
 
     scenes.forEach((scene, sceneIndex) => {
 
-        drawingTypes.forEach(drawingType => {
+        if (scene.presences) {
 
-            // Initialise object for actors, cutouts, fixtures.
-            if (!album._drawings[drawingType]) {
-                album._drawings[drawingType] = {}
-            }
+            drawingTypes.forEach(drawingType => {
 
-            for (const key in scene[drawingType]) {
-
-                const keyObject = {
-                    songIndex,
-                    sceneIndex: sceneIndex + 1
+                // Initialise object for actors, cutouts, fixtures.
+                if (!album._drawings[drawingType]) {
+                    album._drawings[drawingType] = {}
                 }
 
-                // Initialise array for each actor, cutout, fixture.
-                if (!album._drawings[drawingType][key]) {
-                    album._drawings[drawingType][key] = []
-                }
+                const typePresences = scene.presences[drawingType]
 
-                if (drawingType === 'actors') {
+                for (const name in typePresences) {
 
-                    /**
-                     * If actor and character are the same, the entry will be a
-                     * string. If not, the entry will be an object.
-                     */
-                    const characterEntity = scene[drawingType][key],
-                        entityIsObject = typeof characterEntity === 'object' && !characterEntity.description,
-                        character = entityIsObject ? keys(characterEntity)[0] : key,
-                        descriptionEntity = entityIsObject ? characterEntity[character] : characterEntity
-
-                    // This is for props logged in epilogue.
-                    if (characterEntity.subtasks) {
-                        keyObject.subtasks = characterEntity.subtasks
+                    const presenceObject = {
+                        songIndex,
+                        sceneIndex
                     }
 
-                    keyObject.character = character
-                    keyObject.descriptionEntity = descriptionEntity
+                    // Initialise array for each actor, cutout, fixture.
+                    if (!album._drawings[drawingType][name]) {
+                        album._drawings[drawingType][name] = []
+                    }
 
-                } else {
-                    keyObject.descriptionEntity = scene[drawingType][key]
+                    if (drawingType === 'actors') {
+
+                        /**
+                         * The nesting is different if the actor is playing
+                         * an alternate character in this scene, rather than
+                         * themselves.
+                         */
+                        const
+                            characterEntity = typePresences[name],
+
+                            isAlternate =
+                                keys(characterEntity).length === 1,
+
+                            characterName =
+                                isAlternate ?
+                                    keys(characterEntity)[0] :
+                                    name,
+
+                            descriptionEntity =
+                                isAlternate ?
+                                    characterEntity[characterName] :
+                                    characterEntity
+
+                        presenceObject.character = characterName
+                        presenceObject.descriptionEntity = descriptionEntity
+
+                    } else {
+                        presenceObject.descriptionEntity = typePresences[name]
+                    }
+
+                    album._drawings[drawingType][name].push(presenceObject)
                 }
-
-                album._drawings[drawingType][key].push(keyObject)
-            }
-        })
+            })
+        }
     })
 }
 

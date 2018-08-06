@@ -18,5 +18,28 @@ module.exports = {
             workedHours: 2,
             neededHours: 2
         },
+        {
+            taskName: `drawing tasks`,
+            workedHours: 0,
+            neededHours: 0,
+            subtasks: [
+                {
+                    taskName: `food tray`,
+                    workedHours: 0,
+                    neededHours: 1
+                },
+                {
+                    taskName: `lancet pen`,
+                    workedHours: 0,
+                    neededHours: 1
+                },
+                {
+                    // INSTRUMENT
+                    taskName: `recording microphone`,
+                    workedHours: 0,
+                    neededHours: 1
+                }
+            ]
+        }
     ]
 }

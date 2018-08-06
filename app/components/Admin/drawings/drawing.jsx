@@ -1,5 +1,5 @@
 import React from 'react'
-import DrawingsSection from './drawings/drawings-section'
+import DrawingsSection from './drawings-section'
 
 /*************
  * CONTAINER *

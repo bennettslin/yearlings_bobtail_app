@@ -135,19 +135,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `food tray`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `lancet pen`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 [CATHERINE]: {
                     todo: true,
@@ -171,15 +159,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            // INSTRUMENT
-                            taskName: `recording microphone`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 [JACOB]: {
                     todo: true,
