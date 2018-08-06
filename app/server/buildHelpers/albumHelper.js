@@ -58,6 +58,7 @@ export const parseAlbumData = (albumObject) => {
 
     // In-between preparation.
     addDestinationWormholeLinks(albumObject)
+
     adminFinaliseDrawings(albumObject)
 
     // Finap preparation.

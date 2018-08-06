@@ -48,8 +48,13 @@ class LogManager extends Component {
     }
 
     logDrawings() {
-        const drawings = getDrawings()
-        return this._logObject('admin drawings', drawings)
+        const copiedDrawings = {
+            ...getDrawings()
+        }
+
+        copiedDrawings.actors = `actors: ${copiedDrawings.actors.length}`
+
+        return this._logObject('admin drawings', copiedDrawings)
     }
 
     logScene() {

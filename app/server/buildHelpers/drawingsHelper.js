@@ -3,7 +3,8 @@
 import keys from 'lodash.keys'
 
 /**
- * FIXME: These are a mess.
+ * FIXME: These are a mess, but this is only for admin. Will be deleted at some
+ * point.
  */
 
 export const adminGatherDrawings = (album, songIndex) => {
@@ -77,6 +78,13 @@ export const adminGatherDrawings = (album, songIndex) => {
 }
 
 export const adminFinaliseDrawings = (album) => {
+    _adminFinaliseActors(album)
+
+    album.drawings = album._drawings
+    delete album._drawings
+}
+
+export const _adminFinaliseActors = (album) => {
 
     // Turn actors object into array for easier frontend parsing.
     const { _drawings } = album,
@@ -176,12 +184,7 @@ export const adminFinaliseDrawings = (album) => {
     _drawings.actors = actors
     _drawings.actorsTodoCount = actorsTodoCount
     _drawings.actorsTotalCount = actorsTotalCount
-
-    album.drawings = _drawings
-
-    delete album._drawings
 }
-
 
 export const adminRegisterDrawingTasks = (song) => {
 
