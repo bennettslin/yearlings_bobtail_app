@@ -24,12 +24,26 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting in car, taking off pants'
+                    description: 'sitting in car, taking off pants',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
-                    description: 'sitting in car, putting on perfume'
+                    description: 'sitting in car, putting on perfume',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -47,12 +61,26 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front angle, impotent, apologetic'
+                    description: 'front angle, impotent, apologetic',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
-                    description: 'back angle, eyes closed, trying to get off'
+                    description: 'back angle, eyes closed, trying to get off',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -70,12 +98,26 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front angle, trying to get off'
+                    description: 'front angle, trying to get off',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
-                    description: 'back angle, giving blowjob'
+                    description: 'back angle, giving blowjob',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -93,7 +135,14 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front angle, dying, infirm'
+                    description: 'front angle, dying, infirm',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -111,7 +160,14 @@ module.exports = [
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
-                    description: 'serving in tennis'
+                    description: 'serving in tennis',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -129,12 +185,26 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'pensive, laying condom on ground'
+                    description: 'pensive, laying condom on ground',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
-                    description: 'side, looking back, reversing car'
+                    description: 'side, looking back, reversing car',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },

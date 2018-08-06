@@ -34,19 +34,40 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, slumped over, despondent'
+                    description: 'side, slumped over, despondent',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side angle, looking back, concerned'
+                        description: 'side angle, looking back, concerned',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, protective, judgmental'
+                    description: 'side, protective, judgmental',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -64,22 +85,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back, looking to side, annoyed'
+                    description: 'back, looking to side, annoyed',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
-                    description: 'side, flirting'
+                    description: 'side, flirting',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, introducing miriam'
+                    description: 'front, introducing miriam',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [NESTOR]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, eager'
+                    description: 'side, eager',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -91,13 +140,20 @@ module.exports = [
     },
     {
         unitIndex: 7,
-        description: 'Bennett is walking through an alley.',
+        description: `Bennett is walking through an alley.`,
         presences: {
             actors: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'walking through alley'
+                    description: 'walking through alley',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -115,32 +171,67 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, on phone, hunched over, sobbing'
+                    description: 'side, on phone, hunched over, sobbing',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'Lying in bed, on phone with Bennett'
+                        description: 'Lying in bed, on phone with Bennett',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection'
+                        description: 'reflection',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'lying in bed, caressing Sita'
+                    description: 'lying in bed, caressing Sita',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [KHARI_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection'
+                        description: 'reflection',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
             }
@@ -159,27 +250,55 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, desperately hopeful'
+                    description: 'side, desperately hopeful',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [AMY]: {
                     demonstrator: {
                         todo: true,
                         workedHours: 3,
-                        description: 'back, passing out flyers'
+                        description: 'back, passing out flyers',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [STEPHANIE]: {
                     demonstrator: {
                         todo: true,
                         workedHours: 3,
-                        description: 'standing, demonstrating'
+                        description: 'standing, demonstrating',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [WADE]: {
                     demonstrator: {
                         todo: true,
                         workedHours: 3,
-                        description: 'standing, demonstrating'
+                        description: 'standing, demonstrating',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }

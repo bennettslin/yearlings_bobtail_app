@@ -39,7 +39,14 @@ module.exports = [
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, holding up a bottle, squinting'
+                    description: 'side angle, holding up a bottle, squinting',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -57,22 +64,50 @@ module.exports = [
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, ducking behind post, chuckling'
+                    description: 'side, ducking behind post, chuckling',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'squatting, righting chair, exasperated, concerned'
+                    description: 'squatting, righting chair, exasperated, concerned',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'off balance, having a tantrum'
+                    description: 'off balance, having a tantrum',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'stepping off porch, cautious, trying to calm Christopher'
+                    description: 'stepping off porch, cautious, trying to calm Christopher',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -90,17 +125,38 @@ module.exports = [
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, running, angry'
+                    description: 'side, running, angry',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'lying on side, in pain, clenching stomach'
+                    description: 'lying on side, in pain, clenching stomach',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, aggressive stance, angry'
+                    description: 'side angle, aggressive stance, angry',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -118,20 +174,41 @@ module.exports = [
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, defending himself, fearful'
+                    description: 'side angle, defending himself, fearful',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [HOWIE]: {
                     gangbanger: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side angle, pointing at shoe, pushing Willy'
+                        description: 'side angle, pointing at shoe, pushing Willy',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [TOMER]: {
                     gangbanger: {
                         todo: true,
                         workedHours: 3,
-                        description: 'pulling bottle from cart, about to strike, threatening'
+                        description: 'pulling bottle from cart, about to strike, threatening',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -150,12 +227,26 @@ module.exports = [
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'getting up to close curtain, trying to be reassuring'
+                    description: 'getting up to close curtain, trying to be reassuring',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'lying in bed, worried, scared'
+                    description: 'lying in bed, worried, scared',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -173,17 +264,38 @@ module.exports = [
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, merrily greeting trolls'
+                    description: 'side angle, merrily greeting trolls',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, looking up at Bennett, reassuring'
+                    description: 'side angle, looking up at Bennett, reassuring',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, wide-eyed, needing reassurance'
+                    description: 'side angle, wide-eyed, needing reassurance',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },

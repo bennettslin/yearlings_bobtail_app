@@ -16,7 +16,14 @@ module.exports = [
                 [OLD_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'standing, facing forward, welcoming'
+                    description: 'standing, facing forward, welcoming',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             },
         },

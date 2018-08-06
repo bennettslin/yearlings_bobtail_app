@@ -27,13 +27,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, awkward, wanting to make a move'
+                    description: 'side, awkward, wanting to make a move',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, friendly, guarded'
+                        description: 'side, friendly, guarded',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -52,13 +66,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, leaning towards Sita'
+                    description: 'front, leaning towards Sita',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, hands behind back, guarded'
+                        description: 'side, hands behind back, guarded',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -77,25 +105,53 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, jealous'
+                    description: 'side angle, jealous',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, warm, guard down'
+                        description: 'side, warm, guard down',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, friendly'
+                    description: 'side angle, friendly',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [STEPHANIE]: {
                     actor: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, rushing'
+                        description: 'side, rushing',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -114,13 +170,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, in go-kart, leaning forward'
+                    description: 'side, in go-kart, leaning forward',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, in go-kart, relaxed'
+                        description: 'side, in go-kart, relaxed',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -139,13 +209,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, walking away dejected, slumped over'
+                    description: 'side, walking away dejected, slumped over',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'front, closing gate, looking concerned'
+                        description: 'front, closing gate, looking concerned',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }

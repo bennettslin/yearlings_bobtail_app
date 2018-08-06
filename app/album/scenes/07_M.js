@@ -31,7 +31,14 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'looking at Leonard Cohen poster'
+                    description: 'looking at Leonard Cohen poster',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -49,7 +56,14 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting on couch, figuring out Rubiks Cube'
+                    description: 'sitting on couch, figuring out Rubiks Cube',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -67,13 +81,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting on couch, reading a book'
+                    description: 'sitting on couch, reading a book',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
-                        description: 'sitting on floor, back turned, playing keyboard'
+                        description: 'sitting on floor, back turned, playing keyboard',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -92,28 +120,63 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'chatting with hipster, paying attention to Mara'
+                    description: 'chatting with hipster, paying attention to Mara',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [JACOB]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'wiping sweat, chatting with Mara, laughing'
+                    description: 'wiping sweat, chatting with Mara, laughing',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MARA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'flirting with Jacob'
+                    description: 'flirting with Jacob',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'squatting, back turned, putting bass back in case'
+                    description: 'squatting, back turned, putting bass back in case',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TOMER]: {
                     shane: {
                         todo: true,
                         workedHours: 3,
-                        description: 'chatting with Bennett, gushing about music'
+                        description: 'chatting with Bennett, gushing about music',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -132,22 +195,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting, silently eating burger, uncomfortable'
+                    description: 'sitting, silently eating burger, uncomfortable',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [JACOB]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting, eating burger, holding Mara\'s hand'
+                    description: 'sitting, eating burger, holding Mara\'s hand',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MARA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting, chatting'
+                    description: 'sitting, chatting',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting, eating fries, laughing'
+                    description: 'sitting, eating fries, laughing',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -165,13 +256,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, walking, sulking with head down'
+                    description: 'side, walking, sulking with head down',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MIRIAM]: {
                     maskedWoman: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, holding baby, looking back at Bennett'
+                        description: 'side, holding baby, looking back at Bennett',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     },
                 }
             }
@@ -184,26 +289,47 @@ module.exports = [
     },
     {
         unitIndex: 11,
-        description: 'Bennett is looking at the woman holding a baby who just passed by.',
+        description: `Bennett is looking at the woman holding a baby who just passed by.`,
         presences: {
             actors: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, looking back at baby'
+                    description: 'side, looking back at baby',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MIRIAM]: {
                     maskedWoman: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, walking away'
+                        description: 'side, walking away',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     },
                 },
                 [HOWIE]: {
                     maskedUsher: {
                         todo: true,
                         workedHours: 3,
-                        description: 'checking watch'
+                        description: 'checking watch',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -222,13 +348,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, inspired by sudden thought'
+                    description: 'side, inspired by sudden thought',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [HOWIE]: {
                     maskedUsher: {
                         todo: true,
                         workedHours: 3,
-                        description: 'looking at Bennett'
+                        description: 'looking at Bennett',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }

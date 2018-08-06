@@ -28,13 +28,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, putting on jacket, cold, distant'
+                    description: 'front, putting on jacket, cold, distant',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, shivering, pleading'
+                        description: 'side, shivering, pleading',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -53,22 +67,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, tripping as meats fall out of pockets'
+                    description: 'front, tripping as meats fall out of pockets',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, eagerly aggressive, about to punch car'
+                    description: 'side angle, eagerly aggressive, about to punch car',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, holding paper bottle, laughing'
+                    description: 'side, holding paper bottle, laughing',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [NESTOR]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, clutching at fist, laughing through pain'
+                    description: 'front, clutching at fist, laughing through pain',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -86,13 +128,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'on couch, ignoring Sita, drunk'
+                    description: 'on couch, ignoring Sita, drunk',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, naked, making Bennett touch her breast'
+                        description: 'side, naked, making Bennett touch her breast',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -111,22 +167,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, sweaty, giddy'
+                    description: 'side angle, sweaty, giddy',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
-                    description: 'side, greeting Bennett'
+                    description: 'side, greeting Bennett',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, playfully giving Miriam a noogie'
+                    description: 'front, playfully giving Miriam a noogie',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, removing bass, rolling eyes'
+                    description: 'front, removing bass, rolling eyes',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -144,13 +228,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'standing, cold, looking away'
+                    description: 'standing, cold, looking away',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'crumbled on floor, begging, sobbing'
+                        description: 'crumbled on floor, begging, sobbing',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }

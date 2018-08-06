@@ -45,12 +45,26 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'lying on stomach, drawing, guilty'
+                    description: 'lying on stomach, drawing, guilty',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'w-sitting, blissful'
+                    description: 'w-sitting, blissful',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -68,7 +82,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, sitting up in bed, feigning sick'
+                    description: 'side, sitting up in bed, feigning sick',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -86,7 +107,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'in bed, asleep, turned away'
+                    description: 'in bed, asleep, turned away',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -104,7 +132,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, sitting, shaken, scared'
+                    description: 'side, sitting, shaken, scared',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -122,17 +157,38 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, stoic'
+                    description: 'side, stoic',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [BRAD]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front angle, gesturing at friend to leave'
+                    description: 'front angle, gesturing at friend to leave',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANDREW]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, throwing rocks, angry'
+                    description: 'side angle, throwing rocks, angry',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -150,23 +206,51 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, wistful'
+                    description: 'side, wistful',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [BRAD]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'eating chips'
+                    description: 'eating chips',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANDREW]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'playing guitar like an amateur'
+                    description: 'playing guitar like an amateur',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [SASHA]: {
                     popularGirl: {
                         todo: true,
                         workedHours: 3,
-                        description: 'back'
+                        description: 'back',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -185,23 +269,51 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, sitting, sheepish'
+                    description: 'front, sitting, sheepish',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, sitting, staring'
+                    description: 'front, sitting, staring',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, angry, accusatory'
+                    description: 'side, angry, accusatory',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TRISTAN]: {
                     principal: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, confused, defensive, apologetic'
+                        description: 'side, confused, defensive, apologetic',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }

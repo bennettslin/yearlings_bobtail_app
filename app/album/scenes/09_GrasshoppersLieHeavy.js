@@ -34,7 +34,14 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back, reading book, pulling tray from belt.'
+                    description: 'back, reading book, pulling tray from belt.',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -52,13 +59,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, handing lancet pen, exuberant'
+                    description: 'side, handing lancet pen, exuberant',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, taken aback, politely friendly'
+                        description: 'side, taken aback, politely friendly',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -71,7 +92,7 @@ module.exports = [
     },
     {
         unitIndex: 6,
-        description: 'Grasshoppers scene 1',
+        description: `Grasshoppers scene 1`,
         cubes: SITA_APARTMENT_GATE_1_KEY,
         sky: {
             time: TIME_ANYTIME,
@@ -80,7 +101,7 @@ module.exports = [
     },
     {
         unitIndex: 7,
-        description: 'Grasshoppers scene 5',
+        description: `Grasshoppers scene 5`,
         cubes: SITA_APARTMENT_GATE_2_KEY,
         sky: {
             time: TIME_ANYTIME,
@@ -95,13 +116,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, walking, mopey'
+                    description: 'side, walking, mopey',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [NESTOR]: {
                     jogger: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, jogging, spry'
+                        description: 'side, jogging, spry',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -120,13 +155,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back, punching code, surprised'
+                    description: 'back, punching code, surprised',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, hesitantly greeting'
+                        description: 'side, hesitantly greeting',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -145,13 +194,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, opening gate, silent, attentive'
+                    description: 'front, opening gate, silent, attentive',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'front, chatting, more comfortable'
+                        description: 'front, chatting, more comfortable',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -170,13 +233,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, turning on light, smiling'
+                    description: 'front, turning on light, smiling',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, surprised, embarrassed smile'
+                        description: 'side, surprised, embarrassed smile',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -195,7 +272,14 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting, eyes closed, falling asleep'
+                    description: 'sitting, eyes closed, falling asleep',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -213,13 +297,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting, abruptly woken'
+                    description: 'sitting, abruptly woken',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, reaching for purse, cheeky'
+                        description: 'side, reaching for purse, cheeky',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -238,27 +336,55 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, standing beside bed, unsure'
+                    description: 'side, standing beside bed, unsure',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection'
+                        description: 'reflection',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'front, sitting on bed, irreverently reassuring'
+                        description: 'front, sitting on bed, irreverently reassuring',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection'
+                        description: 'reflection',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
             }
@@ -277,27 +403,55 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, about to stick it in'
+                    description: 'side, about to stick it in',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection'
+                        description: 'reflection',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, spread open'
+                        description: 'side, spread open',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection'
+                        description: 'reflection',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
             }
@@ -316,27 +470,55 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'lying down, warm, content, slightly worried'
+                    description: 'lying down, warm, content, slightly worried',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection'
+                        description: 'reflection',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'lying down, warm, content, slightly worried'
+                        description: 'lying down, warm, content, slightly worried',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection'
+                        description: 'reflection',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }

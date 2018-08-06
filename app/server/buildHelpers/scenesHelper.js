@@ -138,9 +138,10 @@ export const finalRegisterPresenceYIndices = (
 
                 /**
                  * TODO: Eventually, all presences should have a yIndex. For
-                 * now, we will check if they don't.
+                 * now, we will check if they don't. Placeholders have negative
+                 * yIndex.
                  */
-                if (!isNaN(yIndex)) {
+                if (!isNaN(yIndex) && yIndex > -1) {
                     /**
                      * If this is the first presence for that yIndex,
                      * initialise the yIndex array.

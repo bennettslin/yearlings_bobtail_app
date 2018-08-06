@@ -27,12 +27,26 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'standing forward, disappointed, defeated'
+                    description: 'standing forward, disappointed, defeated',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'walking away, in a bad mood'
+                    description: 'walking away, in a bad mood',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -50,12 +64,26 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting slouched, showing lyrics to Catherine'
+                    description: 'sitting slouched, showing lyrics to Catherine',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting upright, droll smile'
+                    description: 'sitting upright, droll smile',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -73,7 +101,14 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'standing, back forward, hands in pocket'
+                    description: 'standing, back forward, hands in pocket',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -91,20 +126,41 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, noticing Catholic'
+                    description: 'side angle, noticing Catholic',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [WADE]: {
                     catholic: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side angle, walking, looking pious'
+                        description: 'side angle, walking, looking pious',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [AMY]: {
                     smoker: {
                         todo: true,
                         workedHours: 3,
-                        description: 'walking up stairs, back forward, exhaling smoke'
+                        description: 'walking up stairs, back forward, exhaling smoke',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -123,12 +179,26 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, walking, looking pious'
+                    description: 'side, walking, looking pious',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'walking forward, confused and curious at Bennett'
+                    description: 'walking forward, confused and curious at Bennett',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },

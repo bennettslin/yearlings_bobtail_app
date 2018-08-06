@@ -32,22 +32,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, walking'
+                    description: 'side, walking',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, walking'
+                    description: 'side, walking',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, walking'
+                    description: 'side, walking',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, walking'
+                    description: 'side, walking',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -65,22 +93,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, holding body and gesturing its smallness'
+                    description: 'side, holding body and gesturing its smallness',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, reading bottle intently'
+                    description: 'side angle, reading bottle intently',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, holding large bottle'
+                    description: 'side angle, holding large bottle',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, feigning superiority'
+                    description: 'side angle, feigning superiority',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -98,22 +154,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, blathering'
+                    description: 'side, blathering',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, play fighting'
+                    description: 'side angle, play fighting',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, bored by conversation'
+                    description: 'side angle, bored by conversation',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, play fighting'
+                    description: 'side angle, play fighting',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -131,22 +215,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, looking upwards, inspired'
+                    description: 'front, looking upwards, inspired',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, shivering, feeling comforted'
+                    description: 'side angle, shivering, feeling comforted',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, arm around Ana'
+                    description: 'side angle, arm around Ana',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, squatting, pouring water on grave'
+                    description: 'side angle, squatting, pouring water on grave',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -164,22 +276,50 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, sleeping in car'
+                    description: 'side angle, sleeping in car',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, sleeping in car'
+                    description: 'side, sleeping in car',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'driving car, alert, wigging out'
+                    description: 'driving car, alert, wigging out',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back angle, sleeping in car'
+                    description: 'back angle, sleeping in car',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -197,12 +337,26 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'lying on couch, watching TV, alert'
+                    description: 'lying on couch, watching TV, alert',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'downstairs, in agony'
+                    description: 'downstairs, in agony',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },

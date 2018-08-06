@@ -28,7 +28,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, lying on floor, propped up'
+                    description: 'side, lying on floor, propped up',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -40,13 +47,20 @@ module.exports = [
     },
     {
         unitIndex: 4,
-        description: 'From top of stairs, Bennett sees himself opening the gate and peering out.',
+        description: `From top of stairs, Bennett sees himself opening the gate and peering out.`,
         presences: {
             actors: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, looking down stairs'
+                    description: 'side angle, looking down stairs',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -64,7 +78,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, peeking out from gate'
+                    description: 'side angle, peeking out from gate',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -82,7 +103,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'getting off rickshaw bike'
+                    description: 'getting off rickshaw bike',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -100,7 +128,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side back, looking out to ocean'
+                    description: 'side back, looking out to ocean',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -118,7 +153,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'peering down from buoy'
+                    description: 'peering down from buoy',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -136,12 +178,26 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'hugging self'
+                    description: 'hugging self',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [SASHA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'mermaid'
+                    description: 'mermaid',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -159,7 +215,14 @@ module.exports = [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, crouched in sand, looking back'
+                    description: 'side angle, crouched in sand, looking back',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },

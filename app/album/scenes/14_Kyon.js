@@ -20,7 +20,14 @@ module.exports = [
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, seated, petting cat, sad'
+                        description: 'side, seated, petting cat, sad',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -40,7 +47,14 @@ module.exports = [
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, seated, petting cat, sad'
+                        description: 'side, seated, petting cat, sad',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -60,7 +74,14 @@ module.exports = [
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, seated, pensive'
+                        description: 'side, seated, pensive',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -80,13 +101,27 @@ module.exports = [
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side angle, glumly welcoming'
+                        description: 'side angle, glumly welcoming',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, cheery in a low-key way'
+                    description: 'side, cheery in a low-key way',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -105,13 +140,27 @@ module.exports = [
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, seated, defensive'
+                        description: 'side, seated, defensive',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, seated, eating, judgmental'
+                    description: 'side, seated, eating, judgmental',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -130,13 +179,27 @@ module.exports = [
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, seated, exhausted'
+                        description: 'side, seated, exhausted',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back angle, concerned'
+                    description: 'back angle, concerned',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -155,7 +218,14 @@ module.exports = [
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, seated, asleep'
+                        description: 'side, seated, asleep',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }

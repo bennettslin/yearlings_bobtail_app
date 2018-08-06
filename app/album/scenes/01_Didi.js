@@ -144,17 +144,38 @@ module.exports = [
                 [ANITA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'front, playing ball, offended'
+                    description: 'front, playing ball, offended',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'sitting, flustered'
+                    description: 'sitting, flustered',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, skipping, pointing back and laughing'
+                    description: 'side, skipping, pointing back and laughing',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -172,7 +193,14 @@ module.exports = [
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, in bathtub, downcast'
+                    description: 'side, in bathtub, downcast',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -190,12 +218,26 @@ module.exports = [
                 [ANITA]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back, squatting, smiling'
+                    description: 'back, squatting, smiling',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side, facing front, singing, smiling'
+                    description: 'side, facing front, singing, smiling',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },

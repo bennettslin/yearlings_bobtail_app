@@ -25,13 +25,20 @@ import {
 module.exports = [
     {
         unitIndex: 1,
-        description: 'Bennett is walking down street.',
+        description: `Bennett is walking down street.`,
         presences: {
             actors: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, cradling bracelet, blank'
+                    description: 'side angle, cradling bracelet, blank',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 }
             }
         },
@@ -49,13 +56,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, disingenuously consoling'
+                    description: 'side angle, disingenuously consoling',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side angle, returning bracelet, fighting tears'
+                        description: 'side angle, returning bracelet, fighting tears',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -74,13 +95,27 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back, cradling bracelet, blank'
+                    description: 'back, cradling bracelet, blank',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
-                        description: 'back, shaking fist at sky'
+                        description: 'back, shaking fist at sky',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
             }
@@ -99,20 +134,41 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'side angle, playful, waving'
+                    description: 'side angle, playful, waving',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
-                        description: 'back, playful'
+                        description: 'back, playful',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [AMY]: {
                     officer: {
                         todo: true,
                         workedHours: 3,
-                        description: 'back, facing back, waving'
+                        description: 'back, facing back, waving',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
@@ -131,41 +187,83 @@ module.exports = [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'back, consoling'
+                    description: 'back, consoling',
+                    instance: null,
+                    yIndex: -1,
+                    arrangement: {
+                        xFloat: 0,
+                        xWidth: 0,
+                        zHeight: 0
+                    }
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
-                        description: 'back, head in hands, holding bracelet'
+                        description: 'back, head in hands, holding bracelet',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [ESTHER]: {
                     youngGirl: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, walking'
+                        description: 'side, walking',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 },
                 [ANITA]: {
                     youngGirl: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, walking'
+                        description: 'side, walking',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     },
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, turned, looking at Bennetts'
+                        description: 'side, turned, looking at Bennetts',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     },
                 },
                 [WILLY]: {
                     crossingGuard: {
                         todo: true,
                         workedHours: 3,
-                        description: 'front, holding up stop sign'
+                        description: 'front, holding up stop sign',
+                        instance: null,
+                        yIndex: -1,
+                        arrangement: {
+                            xFloat: 0,
+                            xWidth: 0,
+                            zHeight: 0
+                        }
                     }
                 }
             }
