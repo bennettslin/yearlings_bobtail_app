@@ -8,7 +8,8 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getSongObject,
-    getSceneObject
+    getSceneObject,
+    getDrawings
 } from 'helpers/dataHelper'
 
 import { WINDOW_STORAGE } from 'constants/state'
@@ -40,9 +41,15 @@ class LogManager extends Component {
     }
 
     _assignDebugLogFunctions() {
+        global.d = this.logDrawings.bind(this)
         global.z = this.logScene.bind(this)
         global.s = this.logSong.bind(this)
         global.t = this.logStorage.bind(this)
+    }
+
+    logDrawings() {
+        const drawings = getDrawings()
+        return this._logObject('admin drawings', drawings)
     }
 
     logScene() {

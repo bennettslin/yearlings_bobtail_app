@@ -1,26 +1,7 @@
 import React from 'react'
 import keys from 'lodash.keys'
 
-import { getDrawings } from 'helpers/dataHelper'
-
-/*************
- * sCONTAINER *
- *************/
-
-const DrawingsSection = () => {
-
-    const drawings = getDrawings()
-
-    return (
-        <DrawingsSectionView {...drawings} />
-    )
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const DrawingsSectionView = ({
+const DrawingsSection = ({
 
     // From controller.
     actors,
