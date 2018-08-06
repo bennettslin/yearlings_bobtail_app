@@ -21,6 +21,7 @@ DEFAULT_COMPONENT = () => (null)
 
 const propTypes = {
     // From parent.
+    className: PropTypes.any,
     nameKey: PropTypes.string.isRequired,
     instanceKey: PropTypes.string.isRequired,
     x: PropTypes.string.isRequired,
@@ -31,6 +32,7 @@ const propTypes = {
 
 const Actor = ({
 
+    className,
     nameKey,
     instanceKey,
 
@@ -42,7 +44,8 @@ const Actor = ({
     return (
         <ActorComponent {...other}
             className={cx(
-                // 'Actor'
+                'Actor',
+                className
             )}
             {...{
                 instanceKey

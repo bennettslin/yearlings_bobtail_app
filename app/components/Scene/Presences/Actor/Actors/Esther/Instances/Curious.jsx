@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Svg from 'components/Svg/Svg'
+
 const propTypes = {
     // From parent.
     className: PropTypes.any
@@ -14,7 +16,7 @@ const Curious = ({
 ...other }) => {
 
     return (
-        <g
+        <Svg
             className={cx(
                 className,
                 'Curious'
@@ -33,11 +35,10 @@ const Curious = ({
                 {...other}
             >
                 {cx(
-                    className,
                     'Curious'
                 )}
             </text>
-        </g>
+        </Svg>
     )
 }
 

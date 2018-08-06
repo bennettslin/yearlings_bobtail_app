@@ -1,5 +1,11 @@
 module.exports = [
 
+    {
+        taskName: `System to animate presences and cubes between scenes.`,
+        workedHours: 0,
+        neededHours: 10
+    },
+
     // Important features.
     {
         taskName: `Have setIntervals on audio display timer rather than setting from state.`,

@@ -8,7 +8,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Svg from 'components/Svg/Svg'
 import Presence from './Presence'
 
 import { getSceneObject } from 'helpers/dataHelper'
@@ -59,7 +58,7 @@ class Presences extends Component {
             presences = presenceYIndices[yIndex]
 
         return presences ? (
-            <Svg
+            <div
                 className={cx(
                     `Presences__y${yIndex}`,
                     'absoluteFullContainer'
@@ -78,7 +77,7 @@ class Presences extends Component {
                         }}
                     />
                 ))}
-            </Svg>
+            </div>
         ) : null
     }
 }

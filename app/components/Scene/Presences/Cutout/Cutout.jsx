@@ -21,6 +21,7 @@ DEFAULT_COMPONENT = () => (null)
 
 const propTypes = {
     // From parent.
+    className: PropTypes.any,
     nameKey: PropTypes.string.isRequired,
     x: PropTypes.string.isRequired,
     y: PropTypes.string.isRequired,
@@ -30,6 +31,7 @@ const propTypes = {
 
 const Cutout = ({
 
+    className,
     nameKey,
 
 ...other }) => {
@@ -40,7 +42,8 @@ const Cutout = ({
     return (
         <CutoutComponent {...other}
             className={cx(
-                // 'Cutout'
+                'Cutout',
+                className
             )}
         />
     )

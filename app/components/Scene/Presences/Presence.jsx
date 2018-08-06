@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import cx from 'classnames'
 
 import Actor from './Actor/Actor'
 import Cutout from './Cutout/Cutout'
@@ -85,6 +85,9 @@ class Presence extends Component {
 
         return (
             <PresenceComponent
+                className={cx(
+                    'absoluteFullContainer'
+                )}
                 {...{
                     nameKey
                 }}

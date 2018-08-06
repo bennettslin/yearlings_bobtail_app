@@ -15,6 +15,7 @@ DEFAULT_COMPONENT = () => (null)
 
 const propTypes = {
     // From parent.
+    className: PropTypes.any,
     nameKey: PropTypes.string.isRequired,
     x: PropTypes.string.isRequired,
     y: PropTypes.string.isRequired,
@@ -24,6 +25,7 @@ const propTypes = {
 
 const Fixture = ({
 
+    className,
     nameKey,
 
 ...other }) => {
@@ -34,7 +36,8 @@ const Fixture = ({
     return (
         <FixtureComponent {...other}
             className={cx(
-                // 'Fixture'
+                'Fixture',
+                className
             )}
         />
     )
