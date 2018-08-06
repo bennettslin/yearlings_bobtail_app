@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../Button/Button'
+import Button from 'components/Button/Button'
 
 import {
     AUDIO_PLAY_KEY,

@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Texts from '../Text/Texts'
-import OverviewToggle from '../Main/OverviewToggle'
+import OverviewToggle from 'components/Main/OverviewToggle'
 
 import { getSongOverview, getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

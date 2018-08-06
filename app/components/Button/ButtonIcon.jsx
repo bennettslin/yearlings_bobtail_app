@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from '../Svg/Svg'
+import Svg from 'components/Svg/Svg'
 
 import AudioNextIcon from './Icons/AudioNextIcon'
 import AudioOptionsIcon from './Icons/AudioOptionsIcon'

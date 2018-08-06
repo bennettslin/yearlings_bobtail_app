@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import TipsToggle from './TipsToggle'
 import Texts from '../Text/Texts'
-// import Svg from '../Svg/Svg';
+// import Svg from 'components/Svg/Svg';
 
 import { getSongTip } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

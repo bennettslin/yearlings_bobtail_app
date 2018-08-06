@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotSequence from '../Dot/Sequence/DotSequence'
+import DotSequence from 'components/Dot/Sequence/DotSequence'
 import Underline from './Underline/Underline'
 import AccessLetter from '../AccessLetter/AccessLetter'
 

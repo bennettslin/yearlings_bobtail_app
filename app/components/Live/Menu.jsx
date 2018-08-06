@@ -9,8 +9,8 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import TitleToggle from '../Title/TitleToggle'
-import Audio from '../Audio/Audio'
-import ScoresTips from '../ScoresTips/ScoresTips'
+import Audio from 'components/Audio/Audio'
+import ScoresTips from 'components/ScoresTips/ScoresTips'
 
 import { getMenuMarginInOverlay } from 'helpers/responsiveHelper'
 

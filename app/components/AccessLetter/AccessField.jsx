@@ -3,7 +3,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Svg from '../Svg/Svg'
+import Svg from 'components/Svg/Svg'
 
 const AccessField = () => {
 

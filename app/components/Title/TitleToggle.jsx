@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import AudioTimer from '../Audio/AudioTimer'
-import Button from '../Button/Button'
+import AudioTimer from 'components/Audio/AudioTimer'
+import Button from 'components/Button/Button'
 
 import { TITLE_TOGGLE_KEY } from 'constants/access'
 import { TITLE_BUTTON_KEY } from 'constants/buttons'
