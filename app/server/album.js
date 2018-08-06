@@ -1,8 +1,8 @@
 import { parseAlbumData } from './buildHelpers/albumHelper'
 
 import { HYPHENATED_SONG_PATHS } from 'constants/paths'
-import { getTwoDigitStringForNumber } from '../helpers/formatHelper'
-import { getArrayOfLength } from '../helpers/generalHelper'
+import { getTwoDigitStringForNumber } from 'helpers/formatHelper'
+import { getArrayOfLength } from 'helpers/generalHelper'
 
 const rawAlbum = {
         title: `Yearling's Bobtail`,

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import NavButtonIndexed from '../NavButtonIndexed'
-import { getSongsAndLoguesCount } from '../../../helpers/dataHelper'
+import { getSongsAndLoguesCount } from 'helpers/dataHelper'
 
 const navBookLoguePropTypes = {
     // From parent.

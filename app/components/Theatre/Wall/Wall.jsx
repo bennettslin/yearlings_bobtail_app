@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import Svg from '../../Svg/Svg'
 import WallBalcony from './WallBalcony'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
+import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'
 
 import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../theatreConstants'
 

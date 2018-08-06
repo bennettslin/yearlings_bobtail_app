@@ -8,7 +8,7 @@ import { getSongsAndLoguesCount,
          getSongIsLogue,
          getBookColumnIndex,
          getWormholeLink,
-         getAnnotationObject } from '../helpers/dataHelper'
+         getAnnotationObject } from 'helpers/dataHelper'
 
 import {
     getKeyName,

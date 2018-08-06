@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { updateSliderStore } from '../../redux/actions/slider'
 
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     getSliderRatioForClientX,
     getVerseIndexforRatio

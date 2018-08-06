@@ -9,8 +9,8 @@ import Layers from './Layers/Layers'
 import SceneSky from './SceneSky'
 import Wood from '../Stage/Wood'
 
-import { getSceneObject } from '../../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getSceneObject } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     Z_INDICES_MATRIX_NAME,

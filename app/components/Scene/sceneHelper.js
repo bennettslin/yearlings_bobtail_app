@@ -1,11 +1,11 @@
 import { CUBES } from 'constants/cubes'
 import { DEFAULT_STAGE_KEY } from 'constants/cubesKeys'
 
-import { getCharStringForNumber } from '../../helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/formatHelper'
 
 import {
     getValueInAbridgedMatrix
-} from '../../helpers/generalHelper'
+} from 'helpers/generalHelper'
 
 import {
     LEVELS,

@@ -1,4 +1,4 @@
-import { getArrayOfLength } from '../../../helpers/generalHelper'
+import { getArrayOfLength } from 'helpers/generalHelper'
 
 const
     CUBE_X_AXIS_LENGTH = 12,

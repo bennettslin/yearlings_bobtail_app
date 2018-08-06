@@ -12,7 +12,7 @@ import {
     NAV_SONG_BUTTON_KEY
 } from 'constants/buttons'
 
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     interactivatedVerseIndex,

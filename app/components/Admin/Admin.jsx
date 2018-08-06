@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Shared from './shared'
 
 import AdminNavSection from './AdminNav/AdminNav'
-import { getAllTaskObjects } from '../../helpers/dataHelper'
+import { getAllTaskObjects } from 'helpers/dataHelper'
 
 /*************
  * CONTAINER *

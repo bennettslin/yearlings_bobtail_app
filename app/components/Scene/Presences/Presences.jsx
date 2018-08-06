@@ -11,7 +11,7 @@ import cx from 'classnames'
 import Svg from '../../Svg/Svg'
 import Presence from './Presence'
 
-import { getSceneObject } from '../../../helpers/dataHelper'
+import { getSceneObject } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     canPresencesRender,

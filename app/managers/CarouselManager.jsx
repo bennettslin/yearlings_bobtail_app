@@ -6,9 +6,9 @@ import { connect } from 'react-redux'
 import { setCarouselAnnotationIndex } from '../redux/actions/session'
 import { selectCarouselNavIndex } from '../redux/actions/storage'
 
-import { getSongIsLogue } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getIsPhone } from '../helpers/responsiveHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getIsPhone } from 'helpers/responsiveHelper'
 
 class CarouselManager extends Component {
 

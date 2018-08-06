@@ -15,10 +15,10 @@ import Unit from './Unit/Unit'
 import {
     getSongStanzaConfigs,
     getLastUnitDotCardIndex
-} from '../../helpers/dataHelper'
+} from 'helpers/dataHelper'
 import {
     getPropsAreShallowEqual
-} from '../../helpers/generalHelper'
+} from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,

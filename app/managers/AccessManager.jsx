@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { selectAccessIndex } from '../redux/actions/storage'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class AccessManager extends Component {
 

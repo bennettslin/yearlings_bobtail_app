@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import NavButton from '../NavButton'
-import { getBookColumnIndex } from '../../../helpers/dataHelper'
+import { getBookColumnIndex } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedSongIndex

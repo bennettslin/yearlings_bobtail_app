@@ -1,4 +1,4 @@
-import { getLyricSectionRect } from '../../helpers/responsiveHelper'
+import { getLyricSectionRect } from 'helpers/responsiveHelper'
 
 export const getVerseBarStatus = ({
     deviceIndex,

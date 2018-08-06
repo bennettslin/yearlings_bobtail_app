@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getSongIsLogue } from '../../helpers/dataHelper'
-import { getFormattedTime } from '../../helpers/formatHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
+import { getFormattedTime } from 'helpers/formatHelper'
 
 const mapStateToProps = ({
     selectedSongIndex,

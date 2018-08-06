@@ -31,14 +31,14 @@ import { DEVICE_OBJECTS } from 'constants/responsive'
 import {
     getSongIsLogue,
     getStanzaIndexForVerseIndex
-} from '../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
-import { getPrefixedDotLetterClassNames } from '../helpers/dotHelper'
+import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 
 import {
     getIsDesktop,
     getIsTabletOrMini
-} from '../helpers/responsiveHelper'
+} from 'helpers/responsiveHelper'
 
 import {
     getShowOverlay,

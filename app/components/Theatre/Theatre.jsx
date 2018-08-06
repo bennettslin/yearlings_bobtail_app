@@ -12,7 +12,7 @@ import Wall from './Wall/Wall'
 import Ceiling from './Ceiling/Ceiling'
 import Floor from './Floor/Floor'
 
-import { getCentreFieldHeight } from '../../helpers/stageHelper'
+import { getCentreFieldHeight } from 'helpers/stageHelper'
 
 import { getCeilingHeight,
          getFloorHeight } from './theatreHelper'

@@ -6,9 +6,9 @@ import { connect } from 'react-redux'
 
 import Root from '../components/Root'
 
-import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
-import { intersects } from '../helpers/dotHelper'
-import { getClientX } from '../helpers/domHelper'
+import { getSongIsLogue, getAnnotationObject } from 'helpers/dataHelper'
+import { intersects } from 'helpers/dotHelper'
+import { getClientX } from 'helpers/domHelper'
 
 import {
     bindHandlers,

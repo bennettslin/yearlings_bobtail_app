@@ -31,7 +31,7 @@ import VerseManager from './VerseManager/VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class StateManager extends Component {
 

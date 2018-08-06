@@ -4,12 +4,12 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getSongObject,
     getSceneObject
-} from '../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
 import { WINDOW_STORAGE } from 'constants/state'
 

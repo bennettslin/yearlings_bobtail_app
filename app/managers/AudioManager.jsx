@@ -9,12 +9,12 @@ import {
 } from '../redux/actions/audio'
 import { selectAudioOptionIndex } from '../redux/actions/storage'
 
-import { getValueInBitNumber } from '../helpers/bitHelper'
+import { getValueInBitNumber } from 'helpers/bitHelper'
 import {
     getSongIsLogue,
     getSongsNotLoguesCount
-} from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+} from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { AUDIO_OPTIONS } from 'constants/options'
 

@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { selectAdminIndex } from '../redux/actions/storage'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class AdminManager extends Component {
 

@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import { accessNavSongIndex } from '../redux/actions/access'
 
 import { setShownBookColumnIndex } from '../redux/actions/session'
-import { getBookColumnIndex } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getBookColumnIndex } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class NavManager extends Component {
 

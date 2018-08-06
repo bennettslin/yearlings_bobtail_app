@@ -19,7 +19,7 @@ import {
     setShowSingleBookColumn
 } from '../redux/actions/responsive'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     resizeWindow,
@@ -33,8 +33,8 @@ import {
     getShowShrunkNavIcon,
     getIsScoresTipsInMain,
     getIsTwoRowMenu
-} from '../helpers/responsiveHelper'
-import { getStageCoordinates } from '../helpers/stageHelper'
+} from 'helpers/responsiveHelper'
+import { getStageCoordinates } from 'helpers/stageHelper'
 
 class WindowManager extends Component {
 

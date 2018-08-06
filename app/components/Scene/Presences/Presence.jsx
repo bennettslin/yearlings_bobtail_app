@@ -11,7 +11,7 @@ import Actor from './Actor/Actor'
 import Cutout from './Cutout/Cutout'
 import Fixture from './Fixture/Fixture'
 
-import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { getPresenceXYWidthAndHeight } from './presenceHelper'
 

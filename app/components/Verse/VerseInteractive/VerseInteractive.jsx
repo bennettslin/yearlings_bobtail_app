@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import VerseNav from '../VerseNav/VerseNav'
 import VerseColour from '../VerseColour/VerseColour'
 
-import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,

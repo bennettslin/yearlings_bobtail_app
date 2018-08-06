@@ -20,7 +20,7 @@ import {
 import {
     getIsDesktop,
     getIsPhone
-} from '../../helpers/responsiveHelper'
+} from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceStore,

@@ -19,8 +19,8 @@ import OverviewPopup from '../Popups/OverviewPopup'
 import TipsPopup from '../Popups/TipsPopup'
 import ScoresTips from '../ScoresTips/ScoresTips'
 
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
-import { getIsPhone } from '../../helpers/responsiveHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getIsPhone } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceStore,

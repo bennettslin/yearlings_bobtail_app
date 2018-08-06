@@ -2,7 +2,7 @@
 import {
     getExponentFactorialSum,
     getArrayOfIncreasingSums
-} from '../../../helpers/generalHelper'
+} from 'helpers/generalHelper'
 
 import { CUBE_Y_AXIS_LENGTH } from './cubeIndexConstants'
 

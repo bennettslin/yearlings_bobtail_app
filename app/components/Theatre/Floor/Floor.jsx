@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import Svg from '../../Svg/Svg'
 import FloorSeat from './FloorSeat'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
+import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'
 
 import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../theatreConstants'
 

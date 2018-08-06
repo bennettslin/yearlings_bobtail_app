@@ -11,9 +11,9 @@ import {
     selectTimePlayed
 } from '../redux/actions/storage'
 
-import { getTimeForVerseIndex } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routingHelper'
+import { getTimeForVerseIndex } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getValidRoutingIndicesObject, getPathForIndices } from 'helpers/routingHelper'
 
 class RoutingManager extends Component {
 

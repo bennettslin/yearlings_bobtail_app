@@ -1,4 +1,4 @@
-import { getLyricColumnHeight } from '../../helpers/stageHelper'
+import { getLyricColumnHeight } from 'helpers/stageHelper'
 
 export const getCeilingHeight = ({
     deviceIndex,

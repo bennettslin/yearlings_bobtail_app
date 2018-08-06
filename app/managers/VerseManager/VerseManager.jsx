@@ -9,8 +9,8 @@ import {
     setIsVerseBarBelow
 } from '../../redux/actions/session'
 
-import { getSongVersesCount } from '../../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getSongVersesCount } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getVerseBarStatus } from './verseManagerHelper'
 
 class VerseManager extends Component {

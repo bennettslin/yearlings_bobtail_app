@@ -11,9 +11,9 @@ import {
 
 import { updateRenderableStore } from '../redux/actions/renderable'
 
-import { getSceneIndexForVerseIndex } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
+import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getShowOneOfTwoLyricColumns } from 'helpers/responsiveHelper'
 
 class RenderManager extends Component {
 

@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import SliderVerses from '../Verses/SliderVerses'
 
-import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { LS_OVERLAP_MARGIN_X_SLIDER } from 'constants/responsive'
 

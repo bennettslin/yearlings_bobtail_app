@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Style from '../../Style/Style'
 import DynamicStyling from '../../Style/DynamicStyling'
 
-import { getCharStringForNumber } from '../../../helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/formatHelper'
 import { getClassNameForSlantDirection } from '../sceneHelper'
 
 import {

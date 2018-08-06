@@ -12,8 +12,8 @@ import cx from 'classnames'
 import UnitCard from './UnitCard'
 import UnitDot from './UnitDot'
 import { TITLE } from 'constants/lyrics'
-import { getLyricUnitArray } from '../../../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getLyricUnitArray } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
 
 const mapStateToProps = ({

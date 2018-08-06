@@ -6,7 +6,7 @@ import DotSequence from '../Dot/Sequence/DotSequence'
 import Underline from './Underline/Underline'
 import AccessLetter from '../AccessLetter/AccessLetter'
 
-import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
+import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 
 import {
     ENTER

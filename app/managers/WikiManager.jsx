@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { selectWikiIndex } from '../redux/actions/storage'
 import { setCarouselAnnotationIndex } from '../redux/actions/session'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class WikiManager extends Component {
 

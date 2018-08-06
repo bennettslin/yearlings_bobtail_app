@@ -7,8 +7,8 @@ import cx from 'classnames'
 
 import SliderTime from './SliderTime'
 
-import { getSongTotalTime } from '../../../helpers/dataHelper'
-import { getFormattedTime } from '../../../helpers/formatHelper'
+import { getSongTotalTime } from 'helpers/dataHelper'
+import { getFormattedTime } from 'helpers/formatHelper'
 
 const mapStateToProps = ({
     canSliderRender,

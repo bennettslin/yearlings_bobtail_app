@@ -7,7 +7,7 @@ import cx from 'classnames'
 import ButtonIcon from '../Button/ButtonIcon'
 import AccessLetter from '../AccessLetter/AccessLetter'
 
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 

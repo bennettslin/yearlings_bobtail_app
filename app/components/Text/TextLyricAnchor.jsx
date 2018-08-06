@@ -8,7 +8,7 @@ import cx from 'classnames'
 import TextAnchor from '../Anchor/TextAnchor/TextAnchor'
 import Texts from './Texts'
 
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 

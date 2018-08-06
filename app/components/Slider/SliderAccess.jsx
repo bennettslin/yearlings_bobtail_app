@@ -8,7 +8,7 @@ import {
     AUDIO_FAST_FORWARD_KEY
 } from 'constants/access'
 
-import { getSongIsLogue } from '../../helpers/dataHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     canSliderRender,

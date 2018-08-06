@@ -1,4 +1,4 @@
-import { getCharStringForNumber } from '../../../../helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/formatHelper'
 
 import {
     CUBE_X_AXIS_LENGTH

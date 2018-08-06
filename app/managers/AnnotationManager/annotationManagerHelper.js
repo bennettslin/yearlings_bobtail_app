@@ -3,9 +3,9 @@ import {
     getVerseObject,
     getAnnotationDotKeys,
     getAnnotationsCount
-} from '../../helpers/dataHelper'
-import { intersects } from '../../helpers/dotHelper'
-import { getShowOneOfTwoLyricColumns } from '../../helpers/responsiveHelper'
+} from 'helpers/dataHelper'
+import { intersects } from 'helpers/dotHelper'
+import { getShowOneOfTwoLyricColumns } from 'helpers/responsiveHelper'
 
 import {
     WORMHOLE,

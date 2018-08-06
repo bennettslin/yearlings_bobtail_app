@@ -8,8 +8,8 @@ import cx from 'classnames'
 import CarouselAnnotation from './Annotation/CarouselAnnotation'
 import CarouselSelect from './CarouselSelect'
 
-import { getAnnotationsCount } from '../../helpers/dataHelper'
-import { getArrayOfLength } from '../../helpers/generalHelper'
+import { getAnnotationsCount } from 'helpers/dataHelper'
+import { getArrayOfLength } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,

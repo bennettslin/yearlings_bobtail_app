@@ -16,8 +16,8 @@ import {
     getTimeForVerseIndex,
     getVerseIndexForTime,
     getSceneIndexForVerseIndex
-} from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+} from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class TimeVerseManager extends Component {
 

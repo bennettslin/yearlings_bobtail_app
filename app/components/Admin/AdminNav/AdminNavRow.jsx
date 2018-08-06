@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ProgressBar from '../progress/ProgressBar'
-import ProgressHelper from '../../../helpers/progressHelper'
-import { getSongTitle, getSongTasks } from '../../../helpers/dataHelper'
+import ProgressHelper from 'helpers/progressHelper'
+import { getSongTitle, getSongTasks } from 'helpers/dataHelper'
 
 /*************
  * CONTAINER *

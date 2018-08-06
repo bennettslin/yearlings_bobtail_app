@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import VerseLines from './VerseLines'
 
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { VERSE_SCROLL } from 'constants/dom'
 

@@ -6,7 +6,7 @@ import {
 import {
     getAnnotationObject,
     getAnnotationCardObject
-} from '../../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
 export const getAccessibleAnnotationAnchorsLength = ({
     selectedSongIndex,

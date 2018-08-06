@@ -11,7 +11,7 @@ import StanzaHoc from '../../Stanza/Hoc/StanzaHoc'
 import {
     getSongTotalTime,
     getSongStanzaConfigs
-} from '../../../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     canSliderRender,

@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { getChildClassNameForFaceLogic } from './faceHelper'
 import { getChildClassNameForCubeLogic } from '../cubeHelper'
-import { getCharStringForNumber } from '../../../../helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/formatHelper'
 
 import {
     FLOOR,

@@ -8,7 +8,7 @@ import cx from 'classnames'
 
 import Button from '../../Button/Button'
 
-import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { ENTER } from 'constants/access'
 import { AUDIO_NEXT_BUTTON_KEY } from 'constants/buttons'

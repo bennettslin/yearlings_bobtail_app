@@ -5,9 +5,9 @@ import { connect } from 'react-redux'
 
 import { selectTipsIndex } from '../redux/actions/storage'
 
-import { getSongIsLogue } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getShouldSkipHiddenStatus } from '../helpers/logicHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 
 import { SHOWN,
          HIDDEN,

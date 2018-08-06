@@ -11,7 +11,7 @@ import {
 import { updateRenderableStore } from '../../redux/actions/renderable'
 import { selectAnnotationIndex } from '../../redux/actions/storage'
 
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getAnnotationIndexForVerseIndex,

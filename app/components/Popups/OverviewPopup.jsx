@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import Overview from '../Overview/Overview'
 import Popup from '../Popup/Popup'
-import { getSongIsLogue } from '../../helpers/dataHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     canMainRender,

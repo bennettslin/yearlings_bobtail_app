@@ -11,8 +11,8 @@ import { CONTINUE,
 
 import {
     getSongsAndLoguesCount
-} from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+} from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class SongManager extends Component {
 

@@ -7,8 +7,8 @@ import cx from 'classnames'
 
 import DotAnchor from '../../Anchor/DotAnchor/DotAnchor'
 
-import { getPrefixedDotLetterClassNames } from '../../../helpers/dotHelper'
-import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 

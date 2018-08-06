@@ -1,4 +1,4 @@
-import { getCharStringForNumber } from '../../../helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/formatHelper'
 
 export const getChildClassNameForCubeLogic = ({
     level,

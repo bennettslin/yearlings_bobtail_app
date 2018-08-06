@@ -1,4 +1,4 @@
-import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
+import { getValueInAbridgedMatrix } from 'helpers/generalHelper'
 
 import { getCubesForKey } from '../sceneHelper'
 

@@ -2,9 +2,9 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { getVerseIndexForNextScene } from '../helpers/dataHelper'
+import { getVerseIndexForNextScene } from 'helpers/dataHelper'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class SceneManager extends Component {
 

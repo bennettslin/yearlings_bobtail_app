@@ -10,8 +10,8 @@ import {
     selectDotsIndex
 } from '../redux/actions/storage'
 
-import { getSongIsLogue } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 

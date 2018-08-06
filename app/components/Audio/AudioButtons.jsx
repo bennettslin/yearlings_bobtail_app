@@ -24,10 +24,10 @@ import {
 import {
     getSongsAndLoguesCount,
     getSongsNotLoguesCount
-} from '../../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
-import { getValueInBitNumber } from '../../helpers/bitHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getValueInBitNumber } from 'helpers/bitHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     isPlaying,

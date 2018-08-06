@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getVerseDurationForVerseIndex } from '../../../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getVerseDurationForVerseIndex } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,

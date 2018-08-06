@@ -1,4 +1,4 @@
-import { getAnnotationObject } from '../../helpers/dataHelper'
+import { getAnnotationObject } from 'helpers/dataHelper'
 
 export const getWikiUrl = ({
 

@@ -20,13 +20,13 @@ import {
 import {
     getSongTitle,
     getVerseObject
-} from '../../../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
 import {
     getAnnotationCardWormholeObject
 } from '../annotationHelper'
 
-import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,

@@ -9,8 +9,8 @@ import TipsToggle from './TipsToggle'
 import Texts from '../Text/Texts'
 // import Svg from '../Svg/Svg';
 
-import { getSongTip } from '../../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getSongTip } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { SHOWN, TIPS_OPTIONS } from 'constants/options'
 
 const mapStateToProps = ({

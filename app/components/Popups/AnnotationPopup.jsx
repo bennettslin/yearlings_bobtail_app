@@ -9,7 +9,7 @@ import Annotation from '../Annotation/Annotation'
 import Popup from '../Popup/Popup'
 import {
     getIsOverlayingAnnotation
-} from '../../helpers/responsiveHelper'
+} from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     canCarouselRender,

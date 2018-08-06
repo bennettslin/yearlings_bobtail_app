@@ -9,13 +9,13 @@ import {
 } from '../redux/actions/session'
 import { selectLyricColumnIndex } from '../redux/actions/storage'
 
-import { getSongIsLogue } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getShowOneOfTwoLyricColumns,
     getIsLyricExpandable
-} from '../helpers/responsiveHelper'
+} from 'helpers/responsiveHelper'
 
 class LyricManager extends Component {
 

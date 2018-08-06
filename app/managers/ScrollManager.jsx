@@ -5,14 +5,14 @@ import scrollIntoView from 'scroll-into-view'
 
 import {
     getSongIsLogue
-} from '../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getLyricTopAlign,
     getCarouselLeftAlign
-} from '../helpers/responsiveHelper'
+} from 'helpers/responsiveHelper'
 
 import {
     CAROUSEL_SCROLL,

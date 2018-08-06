@@ -6,8 +6,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Player from './Player'
-import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers/dataHelper'
-import { convertBitNumberToTrueFalseKeys } from '../../helpers/bitHelper'
+import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from 'helpers/dataHelper'
+import { convertBitNumberToTrueFalseKeys } from 'helpers/bitHelper'
 import { getNextPlayerToRender } from './playersHelper'
 
 const mapStateToProps = ({

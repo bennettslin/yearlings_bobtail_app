@@ -1,7 +1,7 @@
 import React from 'react'
 import keys from 'lodash.keys'
 
-import { getDrawings } from '../../../helpers/dataHelper'
+import { getDrawings } from 'helpers/dataHelper'
 
 /*************
  * sCONTAINER *

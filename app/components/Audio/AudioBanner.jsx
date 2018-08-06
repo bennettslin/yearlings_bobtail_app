@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import Slider from '../Slider/Slider'
 import AudioTimer from './AudioTimer'
-import { getSongTitle } from '../../helpers/dataHelper'
+import { getSongTitle } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     isTwoRowMenu,

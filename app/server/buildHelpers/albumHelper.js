@@ -27,9 +27,9 @@ import {
     finalRegisterStanzaTypes
 } from './lyricsHelper'
 
-import { getSongIsLogue } from '../../helpers/dataHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
 
-import { getFormattedAnnotationTitle } from '../../helpers/formatHelper'
+import { getFormattedAnnotationTitle } from 'helpers/formatHelper'
 
 import {
     LEFT,

@@ -7,7 +7,7 @@ import cx from 'classnames'
 import Svg from '../../Svg/Svg'
 import NavPanelIcon from './NavPanelIcon'
 
-import { getSongTitle } from '../../../helpers/dataHelper'
+import { getSongTitle } from 'helpers/dataHelper'
 
 const navPanelPropTypes = {
     // From parent.

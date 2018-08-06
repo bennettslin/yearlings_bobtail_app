@@ -6,9 +6,9 @@ import { connect } from 'react-redux'
 import { setIsScoreLoaded } from '../redux/actions/player'
 import { selectScoreIndex } from '../redux/actions/storage'
 
-import { getSongIsLogue } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getIsScoreExpandable } from '../helpers/responsiveHelper'
+import { getSongIsLogue } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getIsScoreExpandable } from 'helpers/responsiveHelper'
 
 class ScoreManager extends Component {
 

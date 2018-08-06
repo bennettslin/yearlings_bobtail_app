@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import Spinner from '../Spinner/Spinner'
 import { getWikiUrl } from './wikiHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 // TODO: Show that active wiki anchor is disabled.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/

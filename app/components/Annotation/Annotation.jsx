@@ -8,8 +8,8 @@ import cx from 'classnames'
 import AnnotationCards from './Card/AnnotationCards'
 import AnnotationHeader from './Header/AnnotationHeader'
 
-import { getAnnotationObject } from '../../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getAnnotationObject } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getAccessibleAnnotationAnchorsLength } from './annotationHelper'
 
 const mapStateToProps = ({

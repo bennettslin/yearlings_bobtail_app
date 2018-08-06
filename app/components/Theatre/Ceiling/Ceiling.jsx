@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import Svg from '../../Svg/Svg'
 import CeilingRafter from './CeilingRafter'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
+import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'
 
 import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../theatreConstants'
 

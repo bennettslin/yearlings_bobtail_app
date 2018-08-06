@@ -13,7 +13,7 @@ import {
 
 import {
     getBookColumnIndex
-} from '../../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
 import StorageHelper from '../storageHelper'
 

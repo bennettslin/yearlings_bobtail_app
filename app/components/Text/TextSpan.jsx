@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from '../../helpers/formatHelper'
+import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from 'helpers/formatHelper'
 
 const defaultProps = {
     isVerseLyric: false

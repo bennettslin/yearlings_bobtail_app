@@ -2,7 +2,7 @@ import StorageHelper from './storageHelper'
 
 import {
     getSceneIndexForVerseIndex
-} from '../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
 import {
 

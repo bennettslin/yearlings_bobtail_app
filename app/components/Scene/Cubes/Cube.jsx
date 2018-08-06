@@ -12,7 +12,7 @@ import FacesShadeFillStyle from './Face/FacesShadeFillStyle'
 import FacesZIndexStyle from './Face/FacesZIndexStyle'
 import Face from './Face/Face'
 
-import { getCharStringForNumber } from '../../../helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/formatHelper'
 
 import {
     FACES

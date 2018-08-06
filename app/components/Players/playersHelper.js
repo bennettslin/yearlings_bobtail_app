@@ -1,7 +1,7 @@
 import {
     getSongIsLogue,
     getSongsNotLoguesCount
-} from '../../helpers/dataHelper'
+} from 'helpers/dataHelper'
 
 export const getNextPlayerToRender = (
     selectedSongIndex,
