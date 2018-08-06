@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Button from '../../Button/Button'
-import { LYRIC_SECTION_EXPAND_KEY } from '../../../constants/access'
-import { LYRIC_EXPAND_BUTTON_KEY } from '../../../constants/buttons'
+import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
+import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
 import { getIsLyricExpandable } from '../../../helpers/responsiveHelper'
 
 const mapStateToProps = ({

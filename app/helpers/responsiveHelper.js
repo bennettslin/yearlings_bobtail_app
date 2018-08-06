@@ -1,4 +1,4 @@
-import { HAS_SIDE_CARDS, IS_DOUBLESPEAKER } from '../constants/lyrics'
+import { HAS_SIDE_CARDS, IS_DOUBLESPEAKER } from 'constants/lyrics'
 import { PHONE_CLASS,
          LS_MINI_CLASS,
          TABLET_CLASS,
@@ -23,7 +23,7 @@ import { PHONE_CLASS,
          TWO_ROW_MENU_BREAKPOINT_MINI,
 
          HIDDEN_NAV_MIN,
-         WIKI_SIDE_PADDING_TOTAL } from '../constants/responsive'
+         WIKI_SIDE_PADDING_TOTAL } from 'constants/responsive'
 
 import { getSongObject } from './dataHelper'
 

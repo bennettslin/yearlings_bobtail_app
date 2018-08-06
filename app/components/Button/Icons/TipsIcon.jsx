@@ -7,7 +7,7 @@ import {
     HIDDEN,
     DISABLED,
     TIPS_OPTIONS
-} from '../../../constants/options'
+} from 'constants/options'
 
 const
     SHOWN_ICON = ({

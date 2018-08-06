@@ -15,7 +15,7 @@ import {
     DEVICE_STORE,
     RENDERABLE_STORE,
     SLIDER_STORE
-} from '../../constants/state'
+} from 'constants/state'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 

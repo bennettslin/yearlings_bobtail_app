@@ -4,19 +4,19 @@ import {
     SITA_APARTMENT_GATE_1_KEY,
     SITA_APARTMENT_GATE_2_KEY,
     GO_KART_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     BENNETT,
     LIZ,
     KHARI,
     STEPHANIE
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

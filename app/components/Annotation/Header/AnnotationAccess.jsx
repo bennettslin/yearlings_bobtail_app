@@ -6,7 +6,7 @@ import AccessLetters from '../../AccessLetter/AccessLetters'
 import {
     ARROW_UP,
     ARROW_DOWN
-} from '../../../constants/access'
+} from 'constants/access'
 
 class LyricAccess extends Component {
 

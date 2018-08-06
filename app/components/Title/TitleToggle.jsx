@@ -8,8 +8,8 @@ import cx from 'classnames'
 import AudioTimer from '../Audio/AudioTimer'
 import Button from '../Button/Button'
 
-import { TITLE_TOGGLE_KEY } from '../../constants/access'
-import { TITLE_BUTTON_KEY } from '../../constants/buttons'
+import { TITLE_TOGGLE_KEY } from 'constants/access'
+import { TITLE_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
     isTwoRowMenu

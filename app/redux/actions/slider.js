@@ -2,7 +2,7 @@
 
 import { is } from './actionsHelper'
 
-import { SLIDER_STORE } from '../../constants/state'
+import { SLIDER_STORE } from 'constants/state'
 import { SLIDER_DEFAULTS } from '../defaultConstants'
 
 export const updateSliderStore = ({

@@ -9,7 +9,7 @@ import AccessLetter from '../AccessLetter/AccessLetter'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
-import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
+import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 
 class Button extends Component {
 

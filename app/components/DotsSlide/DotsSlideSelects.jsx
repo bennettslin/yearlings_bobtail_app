@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import DotsSlideSelect from './DotsSlideSelect'
-import { ALL_DOT_KEYS } from '../../constants/dots'
+import { ALL_DOT_KEYS } from 'constants/dots'
 
 const mapStateToProps = ({
     accessedDotIndex,

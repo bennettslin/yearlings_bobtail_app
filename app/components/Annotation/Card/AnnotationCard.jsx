@@ -7,7 +7,7 @@ import cx from 'classnames'
 import DotSequence from '../../Dot/Sequence/DotSequence'
 import Texts from '../../Text/Texts'
 import AnnotationWormholes from '../Wormhole/AnnotationWormholes'
-import { WORMHOLE } from '../../../constants/dots'
+import { WORMHOLE } from 'constants/dots'
 
 import { getAnnotationCardObject } from '../../../helpers/dataHelper'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dotHelper'

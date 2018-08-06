@@ -5,7 +5,7 @@ import {
     ACCESSED_DOT_INDEX,
     ACCESSED_NAV_SONG_INDEX,
     SELECTED_SONG_INDEX
-} from '../../constants/state'
+} from 'constants/state'
 
 import StorageHelper from '../storageHelper'
 

@@ -3,17 +3,17 @@ import {
     CREMATED_CLIFF_CONVERTIBLE_KEY,
     CREMATED_DEATHBED_KEY,
     CREMATED_DEATHBED_TENNIS_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     BENNETT,
     MIRIAM
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

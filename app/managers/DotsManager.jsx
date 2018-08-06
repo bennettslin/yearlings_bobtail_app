@@ -13,7 +13,7 @@ import {
 import { getSongIsLogue } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
-import { ALL_DOT_KEYS } from '../constants/dots'
+import { ALL_DOT_KEYS } from 'constants/dots'
 
 class DotsManager extends Component {
 

@@ -1,7 +1,7 @@
 import {
     LS_STAGE_ASPECT_RATIO,
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
-} from '../constants/stage'
+} from 'constants/stage'
 
 import { PHONE_CLASS,
          LS_MINI_CLASS,
@@ -24,7 +24,7 @@ import { PHONE_CLASS,
          LS_TOP_OFFSET_TWO_ROW_MENU,
          LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
 
-         LS_HEIGHT_NAV } from '../constants/responsive'
+         LS_HEIGHT_NAV } from 'constants/responsive'
 
 import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenCarouselNav, getIsTwoRowMenu } from './responsiveHelper'
 

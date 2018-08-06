@@ -12,7 +12,7 @@ import { getShouldSkipHiddenStatus } from '../helpers/logicHelper'
 import { SHOWN,
          HIDDEN,
          DISABLED,
-         TIPS_OPTIONS } from '../constants/options'
+         TIPS_OPTIONS } from 'constants/options'
 
 class TipsManager extends Component {
 

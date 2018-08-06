@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import {
     LEFT,
     RIGHT
-} from '../../../constants/lyrics'
+} from 'constants/lyrics'
 
 const
     LEFT_EAR_ICON = ({

@@ -3,7 +3,7 @@ import {
     ENTER,
     AUDIO_REWIND_KEY,
     AUDIO_FAST_FORWARD_KEY
-} from '../constants/access'
+} from 'constants/access'
 
 export const getKeyName = (e) => {
     // Do not handle at all if any modifier keys are present.

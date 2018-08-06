@@ -8,8 +8,8 @@ import Button from '../Button/Button'
 import Dot from '../Dot/Dot'
 import TextAnchor from '../Anchor/TextAnchor/TextAnchor'
 
-import { ENTER } from '../../constants/access'
-import { DOT_DESCRIPTIONS } from '../../constants/dots'
+import { ENTER } from 'constants/access'
+import { DOT_DESCRIPTIONS } from 'constants/dots'
 
 const mapStateToProps = ({
     selectedDotsIndex

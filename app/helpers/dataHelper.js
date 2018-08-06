@@ -5,7 +5,7 @@
  */
 
 import album from '../server/album'
-import { SOURCE_WORMHOLE_INDEX } from '../constants/lyrics'
+import { SOURCE_WORMHOLE_INDEX } from 'constants/lyrics'
 
 /*********
  * ALBUM *

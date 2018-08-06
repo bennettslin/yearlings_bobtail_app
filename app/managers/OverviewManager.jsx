@@ -12,7 +12,7 @@ import { getShouldSkipHiddenStatus } from '../helpers/logicHelper'
 import { SHOWN,
          HIDDEN,
          DISABLED,
-         OVERVIEW_OPTIONS } from '../constants/options'
+         OVERVIEW_OPTIONS } from 'constants/options'
 
 class OverviewManager extends Component {
 

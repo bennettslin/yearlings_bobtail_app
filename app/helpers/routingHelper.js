@@ -6,7 +6,7 @@ import {
     getAnnotationObject
 } from './dataHelper'
 
-import { HYPHENATED_SONG_PATHS } from '../constants/paths'
+import { HYPHENATED_SONG_PATHS } from 'constants/paths'
 
 const _getIndexForPrefix = (string, prefix = '') => {
     // For example, if prefix is 'a' and string is 'a5', scrubbedString is '5.'

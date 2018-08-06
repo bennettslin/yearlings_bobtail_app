@@ -10,7 +10,7 @@ import {
     selectVerseIndex
 } from '../redux/actions/storage'
 
-import { VERSE_SCROLL } from '../constants/dom'
+import { VERSE_SCROLL } from 'constants/dom'
 
 import {
     getTimeForVerseIndex,

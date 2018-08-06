@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './AnnotationWormhole'
-import { SOURCE_WORMHOLE_INDEX } from '../../../constants/lyrics'
+import { SOURCE_WORMHOLE_INDEX } from 'constants/lyrics'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 import { getAnnotationCardWormholeLinksArray } from '../annotationHelper'
 

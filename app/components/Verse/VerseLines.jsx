@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import VerseLine from './VerseLine'
-import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from '../../constants/lyrics'
+import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from 'constants/lyrics'
 
 const verseLinesPropTypes = {
     // From parent.

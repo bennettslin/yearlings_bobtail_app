@@ -4,12 +4,12 @@ import {
     PORCH_KEY,
     NORTH_HOLLYWOOD_HOUSES_KEY,
     CHANGELING_CAVE_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     PRETEEN_BENNETT,
@@ -19,7 +19,7 @@ import {
     CHRISTOPHER,
     HOWIE,
     TOMER
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

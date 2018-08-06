@@ -10,7 +10,7 @@ import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
 
 import {
     ENTER
-} from '../../constants/access'
+} from 'constants/access'
 
 const anchorPropTypes = {
     // From parent.

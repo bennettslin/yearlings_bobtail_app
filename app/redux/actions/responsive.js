@@ -6,7 +6,7 @@ import { IS_HEIGHTLESS_LYRIC_COLUMN,
          IS_TWO_ROW_MENU,
          SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
          SHOW_SHRUNK_NAV_ICON,
-         SHOW_SINGLE_BOOK_COLUMN } from '../../constants/state'
+         SHOW_SINGLE_BOOK_COLUMN } from 'constants/state'
 
 export const setIsHeightlessLyricColumn = (isHeightlessLyricColumn = false) => (
     { type: IS_HEIGHTLESS_LYRIC_COLUMN,

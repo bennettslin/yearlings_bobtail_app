@@ -3,12 +3,12 @@ import {
     SNOW_GLOBES_1_KEY,
     SNOW_GLOBES_2_KEY,
     SNOW_GLOBES_3_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     PRETEEN_BENNETT,
@@ -21,7 +21,7 @@ import {
     KHARI,
     MIRIAM,
     STEPHANIE
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

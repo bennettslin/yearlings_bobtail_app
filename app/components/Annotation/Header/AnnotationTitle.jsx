@@ -7,7 +7,7 @@ import TextAnchor from '../../Anchor/TextAnchor/TextAnchor'
 
 import AnnotationAccess from './AnnotationAccess'
 
-import { IS_DOT_CARD } from '../../../constants/lyrics'
+import { IS_DOT_CARD } from 'constants/lyrics'
 
 const annotationTitlePropTypes = {
     // From parent.

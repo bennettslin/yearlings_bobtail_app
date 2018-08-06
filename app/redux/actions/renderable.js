@@ -2,7 +2,7 @@
 
 import { is } from './actionsHelper'
 
-import { RENDERABLE_STORE } from '../../constants/state'
+import { RENDERABLE_STORE } from 'constants/state'
 import { RENDERABLE_DEFAULTS } from '../defaultConstants'
 
 export const updateRenderableStore = ({

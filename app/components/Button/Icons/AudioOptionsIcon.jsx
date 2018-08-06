@@ -7,7 +7,7 @@ import {
     REPEAT,
     PAUSE_AT_END,
     AUDIO_OPTIONS
-} from '../../../constants/options'
+} from 'constants/options'
 
 const
     CONTINUE_ICON = ({

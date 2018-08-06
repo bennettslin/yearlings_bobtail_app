@@ -18,7 +18,7 @@ import {
     CAROUSEL_SCROLL,
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
-} from '../constants/dom'
+} from 'constants/dom'
 
 class ScrollManager extends Component {
 

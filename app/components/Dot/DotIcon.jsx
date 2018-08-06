@@ -20,7 +20,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../../constants/dots'
+} from 'constants/dots'
 
 const DOT_ICONS_MAP = {
         [AFTERWORD]: AfterwordIcon,

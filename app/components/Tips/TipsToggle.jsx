@@ -4,8 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../Button/Button'
-import { TIPS_TOGGLE_KEY } from '../../constants/access'
-import { TIPS_BUTTON_KEY } from '../../constants/buttons'
+import { TIPS_TOGGLE_KEY } from 'constants/access'
+import { TIPS_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
     selectedTipsIndex

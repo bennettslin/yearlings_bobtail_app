@@ -4,11 +4,11 @@ import cx from 'classnames'
 
 import Curious from './Instances/Curious'
 
-import { DEFAULT_COMPONENT } from '../../../../../../constants/dom'
+import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     CURIOUS
-} from '../../../../../../constants/actors/esther'
+} from 'constants/actors/esther'
 
 const INSTANCES_MAP = {
     [CURIOUS]: Curious

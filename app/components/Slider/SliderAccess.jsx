@@ -6,7 +6,7 @@ import AccessLetters from '../AccessLetter/AccessLetters'
 import {
     AUDIO_REWIND_KEY,
     AUDIO_FAST_FORWARD_KEY
-} from '../../constants/access'
+} from 'constants/access'
 
 import { getSongIsLogue } from '../../helpers/dataHelper'
 

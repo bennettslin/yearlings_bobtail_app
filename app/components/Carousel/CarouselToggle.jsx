@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Button from '../Button/Button'
-import { CAROUSEL_TOGGLE_KEY } from '../../constants/access'
-import { CAROUSEL_NAV_BUTTON_KEY } from '../../constants/buttons'
+import { CAROUSEL_TOGGLE_KEY } from 'constants/access'
+import { CAROUSEL_NAV_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
     isHiddenCarouselNav,

@@ -4,12 +4,12 @@ import {
     ALLEY_KEY,
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_WINTER
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     BENNETT,
@@ -23,7 +23,7 @@ import {
     WADE,
     LIZ_REFLECTION,
     KHARI_REFLECTION
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

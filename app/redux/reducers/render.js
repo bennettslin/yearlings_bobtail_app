@@ -9,7 +9,7 @@ import {
     CAN_CAROUSEL_RENDER,
     CAN_PRESENCES_RENDER,
     CAN_PIXELS_RENDER
-} from '../../constants/state'
+} from 'constants/state'
 
 export const isWindowResizeRenderableReducer = (
     state = false,

@@ -20,13 +20,13 @@ import {
     SHOWN,
     OVERVIEW_OPTIONS,
     TIPS_OPTIONS
-} from '../constants/options'
+} from 'constants/options'
 
 import {
     PARENT_ACCESS_PREFIX
-} from '../constants/prefixes'
+} from 'constants/prefixes'
 
-import { DEVICE_OBJECTS } from '../constants/responsive'
+import { DEVICE_OBJECTS } from 'constants/responsive'
 
 import {
     getSongIsLogue,

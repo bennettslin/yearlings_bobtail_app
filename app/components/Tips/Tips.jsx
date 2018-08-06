@@ -11,7 +11,7 @@ import Texts from '../Text/Texts'
 
 import { getSongTip } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
-import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
+import { SHOWN, TIPS_OPTIONS } from 'constants/options'
 
 const mapStateToProps = ({
     canMainRender,

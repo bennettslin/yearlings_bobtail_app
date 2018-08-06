@@ -15,11 +15,11 @@ import {
 
 import {
     HSLA_MAP
-} from '../../../constants/hsla'
+} from 'constants/hsla'
 
 import {
     HSLA_KEYS
-} from '../../../constants/hslaKeys'
+} from 'constants/hslaKeys'
 
 import {
     LEVELS,

@@ -1,4 +1,4 @@
-import { LYRIC_COLUMN_KEYS } from '../constants/lyrics'
+import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
 import { getIsOverlayingAnnotation } from '../helpers/responsiveHelper'
 
 export const getSingleShownLyricColumnKey = ({

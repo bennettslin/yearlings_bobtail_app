@@ -1,6 +1,6 @@
 // Reducers for audio state.
 import { IS_PLAYING,
-         UPDATED_TIME_PLAYED } from '../../constants/state'
+         UPDATED_TIME_PLAYED } from 'constants/state'
 
 export const IsPlayingReducer = (state = false, action) => {
     switch (action.type) {

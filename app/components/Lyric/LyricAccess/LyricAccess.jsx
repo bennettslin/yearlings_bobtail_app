@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import { ALL_DOT_KEYS } from '../../../constants/dots'
+import { ALL_DOT_KEYS } from 'constants/dots'
 import { convertTrueFalseKeysToBitNumber } from '../../../helpers/bitHelper'
 
 import AccessLetters from '../../AccessLetter/AccessLetters'
@@ -12,7 +12,7 @@ import {
     ARROW_RIGHT,
     ARROW_UP,
     ARROW_DOWN
-} from '../../../constants/access'
+} from 'constants/access'
 
 const mapStateToProps = ({
     isLyricExpanded,

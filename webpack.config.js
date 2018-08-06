@@ -50,7 +50,12 @@ const webpack = require('webpack'),
 
             resolve: {
                 // import from files without specifying extensions.
-                extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf']
+                extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf'],
+                alias: {
+                    app: path.resolve(__dirname, './app'),
+                    constants: path.resolve(__dirname, './app/constants'),
+                    helpers: path.resolve(__dirname, './app/helpers')
+                }
             }
         },
         parts.loadJavaScript({

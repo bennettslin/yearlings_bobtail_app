@@ -15,7 +15,7 @@ import { getIsToggleInOverview } from '../../helpers/responsiveHelper'
 import {
     SHOWN,
     OVERVIEW_OPTIONS
-} from '../../constants/options'
+} from 'constants/options'
 
 const mapStateToProps = ({
     canMainRender,

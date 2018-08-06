@@ -45,11 +45,11 @@ import { ARROW_LEFT,
          SCENE_REWIND_KEY,
          SCENE_FORWARD_KEY,
          TIPS_TOGGLE_KEY,
-         TITLE_TOGGLE_KEY } from '../constants/access'
-import { ALL_DOT_KEYS } from '../constants/dots'
+         TITLE_TOGGLE_KEY } from 'constants/access'
+import { ALL_DOT_KEYS } from 'constants/dots'
 import { SHOWN,
          OVERVIEW_OPTIONS,
-         TIPS_OPTIONS } from '../constants/options'
+         TIPS_OPTIONS } from 'constants/options'
 
 class KeyHandler extends Component {
 

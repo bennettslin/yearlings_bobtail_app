@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../../constants/dots'
+} from 'constants/dots'
 
 import {
     VERSES,
@@ -17,7 +17,7 @@ import {
     INTRO,
     REFRAIN,
     IS_DOT_CARD
-} from '../../constants/lyrics'
+} from 'constants/lyrics'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the

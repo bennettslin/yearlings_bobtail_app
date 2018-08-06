@@ -11,7 +11,7 @@ import {
     getSceneObject
 } from '../helpers/dataHelper'
 
-import { WINDOW_STORAGE } from '../constants/state'
+import { WINDOW_STORAGE } from 'constants/state'
 
 class LogManager extends Component {
 

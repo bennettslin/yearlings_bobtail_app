@@ -4,12 +4,12 @@ import {
     OAKLAND_STREET_FRONT_1_KEY,
     OAKLAND_STREET_FRONT_2_KEY,
     OAKLAND_STREET_FRONT_3_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     YOUNG_BENNETT,
@@ -20,7 +20,7 @@ import {
     LIZ,
     AMY,
     STEPHANIE
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

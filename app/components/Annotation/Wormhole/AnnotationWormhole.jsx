@@ -8,14 +8,14 @@ import cx from 'classnames';
 import Texts from '../../Text/Texts'
 import Button from '../../Button/Button'
 
-import { ENTER } from '../../../constants/access'
-import { WORMHOLE_BUTTON_KEY } from '../../../constants/buttons'
+import { ENTER } from 'constants/access'
+import { WORMHOLE_BUTTON_KEY } from 'constants/buttons'
 
 import {
     LYRIC_COLUMN_KEYS,
     LYRIC,
     CENTRE
-} from '../../../constants/lyrics'
+} from 'constants/lyrics'
 
 import {
     getSongTitle,

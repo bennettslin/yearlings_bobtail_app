@@ -2,19 +2,19 @@ import {
     TAIWAN_PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_SCENE_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     PRETEEN_BENNETT,
     SASHA,
     BRAD,
     ANDREW
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

@@ -39,7 +39,7 @@ import {
     LEFT_COLUMN,
     RIGHT_COLUMN,
     PROPER_NOUN
-} from '../../constants/lyrics'
+} from 'constants/lyrics'
 
 export const parseAlbumData = (albumObject) => {
     logger.warn('Begin parse album data.')

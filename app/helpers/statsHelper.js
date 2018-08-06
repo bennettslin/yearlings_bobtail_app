@@ -2,7 +2,7 @@
 
 import keys from 'lodash.keys'
 
-import { STAT_TEXT_KEYS } from '../constants/lyrics'
+import { STAT_TEXT_KEYS } from 'constants/lyrics'
 
 export default {
 

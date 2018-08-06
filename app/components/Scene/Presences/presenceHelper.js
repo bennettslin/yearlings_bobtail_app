@@ -18,7 +18,7 @@ import {
 
 import {
     LS_STAGE_ASPECT_RATIO
-} from '../../../constants/stage'
+} from 'constants/stage'
 
 export const getPresencesForCubes = ({
 

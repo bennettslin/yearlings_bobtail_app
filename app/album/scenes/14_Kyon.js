@@ -1,14 +1,14 @@
-import { SITA_APARTMENT_COUCH_KEY } from '../../constants/cubesKeys'
+import { SITA_APARTMENT_COUCH_KEY } from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     LIZ,
     KHARI
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

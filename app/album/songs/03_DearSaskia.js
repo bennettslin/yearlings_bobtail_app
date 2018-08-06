@@ -6,7 +6,7 @@ import {
     REFERENCE,
     AFTERWORD,
     SONGWRITING
-} from '../../constants/dots'
+} from 'constants/dots'
 
 import {
     VERSES,
@@ -14,7 +14,7 @@ import {
     CHORUS,
     REFRAIN,
     IS_DOT_CARD
-} from '../../constants/lyrics'
+} from 'constants/lyrics'
 
 module.exports = {
     totalTime: 171,

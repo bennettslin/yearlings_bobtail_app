@@ -4,19 +4,19 @@ import {
     CATHOLIC_CHURCH_KEY,
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     BENNETT,
     CATHERINE,
     AMY,
     WADE
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

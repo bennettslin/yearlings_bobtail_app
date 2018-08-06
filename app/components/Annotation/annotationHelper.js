@@ -1,7 +1,7 @@
 import {
     WORMHOLE,
     REFERENCE
-} from '../../constants/dots'
+} from 'constants/dots'
 
 import {
     getAnnotationObject,

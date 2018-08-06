@@ -4,11 +4,11 @@ import cx from 'classnames'
 
 import Panicked from './Instances/Panicked'
 
-import { DEFAULT_COMPONENT } from '../../../../../../constants/dom'
+import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     PANICKED
-} from '../../../../../../constants/actors/youngBennett'
+} from 'constants/actors/youngBennett'
 
 const INSTANCES_MAP = {
     [PANICKED]: Panicked

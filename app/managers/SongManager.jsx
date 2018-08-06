@@ -7,7 +7,7 @@ import { selectSongIndex } from '../redux/actions/storage'
 
 import { CONTINUE,
          PAUSE_AT_END,
-         AUDIO_OPTIONS } from '../constants/options'
+         AUDIO_OPTIONS } from 'constants/options'
 
 import {
     getSongsAndLoguesCount

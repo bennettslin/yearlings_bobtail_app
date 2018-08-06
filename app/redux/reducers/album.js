@@ -4,7 +4,7 @@ import album from '../../server/album'
 
 import {
     ALBUM
-} from '../../constants/state'
+} from 'constants/state'
 
 export const AlbumReducer = (state = album, action) => {
     switch (action.type) {

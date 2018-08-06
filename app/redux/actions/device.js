@@ -2,7 +2,7 @@
 
 import { is } from './actionsHelper'
 
-import { DEVICE_STORE } from '../../constants/state'
+import { DEVICE_STORE } from 'constants/state'
 import { DEVICE_DEFAULTS } from '../defaultConstants'
 
 export const updateDeviceStore = ({

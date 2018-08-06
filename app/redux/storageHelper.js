@@ -10,16 +10,16 @@ import album from '../server/album'
 
 import {
     ALL_DOT_KEYS
-} from '../constants/dots'
+} from 'constants/dots'
 import {
     LYRIC_COLUMN_KEYS
-} from '../constants/lyrics'
+} from 'constants/lyrics'
 import {
     AUDIO_OPTIONS,
     OVERVIEW_OPTIONS,
     TIPS_OPTIONS,
     DISABLED
-} from '../constants/options'
+} from 'constants/options'
 import {
     SELECTED_ACCESS_INDEX,
     SELECTED_ADMIN_INDEX,
@@ -38,7 +38,7 @@ import {
     SELECTED_VERSE_INDEX,
     SELECTED_WIKI_INDEX,
     WINDOW_STORAGE
-} from '../constants/state'
+} from 'constants/state'
 
 const _getValidatedStoredSong = () => {
     const selectedSongIndex = _validateValueForKey(SELECTED_SONG_INDEX)

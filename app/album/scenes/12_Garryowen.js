@@ -3,12 +3,12 @@ import {
     BENNETT_BASEMENT_KEY,
     SHOW_STAGE_FRONT_KEY,
     VOLKSWAGEN_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     BENNETT,
@@ -17,7 +17,7 @@ import {
     MIRIAM,
     TRISTAN,
     NESTOR
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

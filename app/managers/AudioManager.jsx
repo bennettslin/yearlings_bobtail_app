@@ -16,7 +16,7 @@ import {
 } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
-import { AUDIO_OPTIONS } from '../constants/options'
+import { AUDIO_OPTIONS } from 'constants/options'
 
 class AudioManager extends Component {
 

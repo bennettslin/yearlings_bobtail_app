@@ -6,14 +6,14 @@ import Button from '../Button/Button'
 import {
     ARROW_LEFT,
     ARROW_RIGHT
-} from '../../constants/access'
+} from 'constants/access'
 
 import {
     LEFT,
     RIGHT
-} from '../../constants/lyrics'
+} from 'constants/lyrics'
 
-import { CAROUSEL_SELECT_BUTTON_KEY } from '../../constants/buttons'
+import { CAROUSEL_SELECT_BUTTON_KEY } from 'constants/buttons'
 
 const carouselSelectPropTypes = {
     handleAnnotationPrevious: PropTypes.func.isRequired,

@@ -1,6 +1,6 @@
 // Actions for audio state.
 import { IS_PLAYING,
-         UPDATED_TIME_PLAYED } from '../../constants/state'
+         UPDATED_TIME_PLAYED } from 'constants/state'
 
 export const setIsPlaying = (isPlaying = false) => (
     { type: IS_PLAYING,

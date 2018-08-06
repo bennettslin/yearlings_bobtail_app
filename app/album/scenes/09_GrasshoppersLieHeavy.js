@@ -6,13 +6,13 @@ import {
     SITA_APARTMENT_GATE_1_KEY,
     SITA_APARTMENT_GATE_2_KEY,
     BENNETT_APARTMENT_GATE_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_WINTER
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     BENNETT,
@@ -20,7 +20,7 @@ import {
     NESTOR,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 /**
  * All of these scenes repeat twice.

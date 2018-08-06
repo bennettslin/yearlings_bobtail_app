@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../../constants/dots'
+} from 'constants/dots'
 
 import {
     VERSES,
@@ -17,7 +17,7 @@ import {
     SOLO,
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_DOT_CARD
-} from '../../constants/lyrics'
+} from 'constants/lyrics'
 
 module.exports = {
     totalTime: 207,

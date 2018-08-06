@@ -10,7 +10,7 @@ import Texts from './Texts'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
-import { LYRIC_ANNOTATION_SCROLL } from '../../constants/dom'
+import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
     canLyricRender,

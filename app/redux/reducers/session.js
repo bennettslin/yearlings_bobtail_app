@@ -9,7 +9,7 @@ import {
     IS_MANUAL_SCROLL,
     SHOWN_BOOK_COLUMN_INDEX,
     SELECTED_SONG_INDEX
-} from '../../constants/state'
+} from 'constants/state'
 
 import {
     getBookColumnIndex

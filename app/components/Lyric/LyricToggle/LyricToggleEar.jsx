@@ -6,9 +6,9 @@ import cx from 'classnames'
 
 import { connect } from 'react-redux'
 import Button from '../../Button/Button'
-import { LYRIC_COLUMN_TOGGLE_KEY } from '../../../constants/access'
-import { LYRIC_EAR_BUTTON_KEY } from '../../../constants/buttons'
-import { LYRIC_COLUMN_KEYS } from '../../../constants/lyrics'
+import { LYRIC_COLUMN_TOGGLE_KEY } from 'constants/access'
+import { LYRIC_EAR_BUTTON_KEY } from 'constants/buttons'
+import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
 
 const mapStateToProps = ({
     showOneOfTwoLyricColumns,

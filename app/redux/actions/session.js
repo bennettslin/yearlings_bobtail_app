@@ -6,7 +6,7 @@ import { APP_MOUNTED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
          IS_MANUAL_SCROLL,
-         SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
+         SHOWN_BOOK_COLUMN_INDEX } from 'constants/state'
 
 export const setAppMounted = (appMounted = false) => (
     { type: APP_MOUNTED,

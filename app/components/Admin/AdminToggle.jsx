@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { DEVICE_OBJECTS } from '../../constants/responsive'
+import { DEVICE_OBJECTS } from 'constants/responsive'
 
 const AdminToggle = ({
     // From props.

@@ -4,12 +4,12 @@ import {
     REHEARSAL_SPACE_KEY,
     MOVIE_THEATRE_1_KEY,
     MOVIE_THEATRE_2_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     BENNETT,
@@ -20,7 +20,7 @@ import {
     TOMER,
     MIRIAM,
     STEPHANIE
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

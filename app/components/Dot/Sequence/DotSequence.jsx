@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { ALL_DOT_KEYS } from '../../../constants/dots'
+import { ALL_DOT_KEYS } from 'constants/dots'
 
 import DotSequenceDot from './DotSequenceDot'
 

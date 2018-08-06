@@ -10,12 +10,12 @@ import Button from '../Button/Button'
 import {
     SCORE_TOGGLE_KEY,
     TIPS_TOGGLE_KEY
-} from '../../constants/access'
+} from 'constants/access'
 
 import {
     SCORES_BUTTON_KEY,
     TIPS_BUTTON_KEY
-} from '../../constants/buttons'
+} from 'constants/buttons'
 
 import {
     getIsDesktop,

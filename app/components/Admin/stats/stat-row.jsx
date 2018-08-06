@@ -1,6 +1,6 @@
 import React from 'react'
 import StatsHelper from '../../../helpers/statsHelper'
-import { LYRIC_TEXT_KEYS } from '../../../constants/lyrics'
+import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
 
 /*************
  * CONTAINER *

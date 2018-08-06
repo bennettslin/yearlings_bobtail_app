@@ -9,7 +9,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../../constants/dots'
+} from 'constants/dots'
 
 import {
     VERSES,
@@ -19,7 +19,7 @@ import {
     RESPONSE,
     REFRAIN,
     IS_DOT_CARD
-} from '../../constants/lyrics'
+} from 'constants/lyrics'
 
 module.exports = {
     totalTime: 180,

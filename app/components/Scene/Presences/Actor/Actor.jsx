@@ -10,7 +10,7 @@ import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from '../../../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 const ACTORS_MAP = {
     [YOUNG_BENNETT]: YoungBennett,

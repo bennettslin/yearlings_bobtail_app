@@ -6,11 +6,11 @@ import cx from 'classnames'
 
 import Button from '../Button/Button'
 import NavPanel from './Panel/NavPanel'
-import { ENTER } from '../../constants/access'
+import { ENTER } from 'constants/access'
 import {
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY
-} from '../../constants/buttons'
+} from 'constants/buttons'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 

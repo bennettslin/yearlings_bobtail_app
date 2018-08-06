@@ -3,12 +3,12 @@ import {
     SHOW_STAGE_SIDE_2_KEY,
     SITA_APARTMENT_BED_KEY,
     SHOW_UNLOADING_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     BENNETT,
@@ -22,7 +22,7 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {

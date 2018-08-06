@@ -1,5 +1,5 @@
 import findIndex from 'lodash.findindex'
-import { LS_MARGIN_X_SLIDER } from '../../constants/responsive'
+import { LS_MARGIN_X_SLIDER } from 'constants/responsive'
 
 import {
     getSongTotalTime,

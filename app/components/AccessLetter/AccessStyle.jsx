@@ -4,11 +4,11 @@ import cx from 'classnames'
 import Style from '../Style/Style'
 import StaticStyling from '../Style/StaticStyling'
 
-import { STYLE_LOGIC_ACCESS_LETTERS } from '../../constants/access'
+import { STYLE_LOGIC_ACCESS_LETTERS } from 'constants/access'
 import {
     PARENT_ACCESS_PREFIX,
     CHILD_ACCESS_PREFIX
-} from '../../constants/prefixes'
+} from 'constants/prefixes'
 
 const AccessStyle = () => {
 

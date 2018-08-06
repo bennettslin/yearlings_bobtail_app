@@ -27,7 +27,7 @@ import {
     SLIDER_WIDTH,
     SLIDER_VERSE_INDEX
 
-} from '../constants/state'
+} from 'constants/state'
 
 const { getFromStorage } = StorageHelper,
     storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),

@@ -5,7 +5,7 @@ import cx from 'classnames'
 import Anchor from '../Anchor';
 import Dot from '../../Dot/Dot';
 
-import { ALL_DOT_KEYS } from '../../../constants/dots'
+import { ALL_DOT_KEYS } from 'constants/dots'
 
 const propTypes = {
     // From parent.

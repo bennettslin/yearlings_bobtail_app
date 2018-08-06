@@ -46,7 +46,7 @@ import {
     SCORES_BUTTON_KEY,
     TIPS_BUTTON_KEY,
     TITLE_BUTTON_KEY
-} from '../../constants/buttons'
+} from 'constants/buttons'
 
 const BUTTON_ICONS_MAP = {
         [AUDIO_NEXT_BUTTON_KEY]: AudioNextIcon,

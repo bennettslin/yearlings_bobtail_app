@@ -7,13 +7,13 @@ import {
     ARROW_LEFT,
     ARROW_RIGHT,
     ESCAPE
-} from '../../constants/access'
+} from 'constants/access'
 
 import {
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY
-} from '../../constants/buttons'
+} from 'constants/buttons'
 
 class PopupViewButton extends Component {
 

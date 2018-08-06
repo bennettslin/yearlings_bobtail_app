@@ -15,17 +15,17 @@ import {
     getHandlers
 } from './eventHelper'
 
-import { REFERENCE } from '../constants/dots'
-import { DESTINATION_WORMHOLE_INDEX } from '../constants/lyrics'
+import { REFERENCE } from 'constants/dots'
+import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
 
 import { DISABLED,
-         OVERVIEW_OPTIONS } from '../constants/options'
+         OVERVIEW_OPTIONS } from 'constants/options'
 
 import {
     CAROUSEL_SCROLL,
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
-} from '../constants/dom'
+} from 'constants/dom'
 
 class EventHandler extends Component {
 

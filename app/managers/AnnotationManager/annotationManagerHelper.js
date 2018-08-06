@@ -10,8 +10,8 @@ import { getShowOneOfTwoLyricColumns } from '../../helpers/responsiveHelper'
 import {
     WORMHOLE,
     REFERENCE
-} from '../../constants/dots'
-import { COLUMN_INDEX } from '../../constants/lyrics'
+} from 'constants/dots'
+import { COLUMN_INDEX } from 'constants/lyrics'
 
 export const shouldShowAnnotationForColumn = ({
 

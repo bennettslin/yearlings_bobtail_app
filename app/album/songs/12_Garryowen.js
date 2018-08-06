@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from '../../constants/dots'
+} from 'constants/dots'
 
 import {
     REFRAIN,
@@ -16,7 +16,7 @@ import {
     SOLO,
     OUTRO,
     IS_DOT_CARD
-} from '../../constants/lyrics'
+} from 'constants/lyrics'
 
 module.exports = {
     totalTime: 187,

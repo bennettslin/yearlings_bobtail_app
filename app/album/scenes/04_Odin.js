@@ -7,17 +7,17 @@ import {
     ODIN_SCENE_6_KEY,
     ODIN_SCENE_7_KEY,
     ODIN_SCENE_8_KEY
-} from '../../constants/cubesKeys'
+} from 'constants/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../constants/sky'
+} from 'constants/sky'
 
 import {
     PRETEEN_BENNETT,
     SASHA
-} from '../../constants/actorKeys'
+} from 'constants/actorKeys'
 
 module.exports = [
     {
