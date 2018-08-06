@@ -10,11 +10,8 @@ import {
 
 import {
     adminGatherDrawings,
-    gatherDrawings,
     adminFinaliseDrawings,
-    adminRegisterDrawingTasks,
-    finalRegisterScenes,
-    finalRegisterPresenceYIndices
+    adminRegisterDrawingTasks
 } from './drawingsHelper'
 
 import {
@@ -26,6 +23,12 @@ import {
     registerAdminDotStanzas,
     finalRegisterStanzaTypes
 } from './lyricsHelper'
+
+import {
+    initialRegisterScenes,
+    finalRegisterScenes,
+    finalRegisterPresenceYIndices
+} from './scenesHelper'
 
 import { getSongIsLogue } from 'helpers/dataHelper'
 
@@ -87,9 +90,10 @@ const _initialPrepareAlbum = (albumObject) => {
 
     albumObject.songs.forEach((songObject, songIndex) => {
 
-        // This also collects the unit index for each scene.
         adminGatherDrawings(albumObject, songIndex)
-        gatherDrawings(albumObject, songObject, songIndex)
+
+        // This collects the unit index for each scene.
+        initialRegisterScenes(albumObject, songObject, songIndex)
 
         if (!getSongIsLogue(songIndex, albumObject.songs)) {
 
