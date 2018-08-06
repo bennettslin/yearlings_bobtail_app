@@ -1,53 +1,42 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import FireHydrant from './Fixtures/FireHydrant'
+
+import {
+    FIRE_HYDRANT
+} from 'constants/fixtureKeys'
+
+const FIXTURES_MAP = {
+    [FIRE_HYDRANT]: FireHydrant
+},
+DEFAULT_COMPONENT = () => (null)
+
 const propTypes = {
     // From parent.
-    x: PropTypes.number.isRequired,
-    y: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
+    nameKey: PropTypes.string.isRequired,
+    x: PropTypes.string.isRequired,
+    y: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired
 }
 
 const Fixture = ({
 
-    x,
-    y,
-    width,
-    height,
-    name
+    nameKey,
 
-}) => {
+...other }) => {
+
+    const FixtureComponent =
+        FIXTURES_MAP[nameKey] || DEFAULT_COMPONENT
 
     return (
-        <Fragment>
-            <rect
-                className={cx(
-                    'Fixture'
-                )}
-                {...{
-                    x,
-                    y,
-                    width,
-                    height
-                }}
-            />
-            <text
-                className={cx(
-                    'Presence__temporaryText'
-                )}
-                {...{
-                    x,
-                    y,
-                    width,
-                    height
-                }}
-            >
-                {name}
-            </text>
-        </Fragment>
+        <FixtureComponent {...other}
+            className={cx(
+                // 'Fixture'
+            )}
+        />
     )
 }
 

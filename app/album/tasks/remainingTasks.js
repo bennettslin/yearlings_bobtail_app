@@ -1,20 +1,5 @@
 module.exports = [
 
-    /**
-     * Presence work.
-     */
-    {
-        taskName: `Begin system for cutouts and fixtures.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `System to calculate drawing tasks for cutouts and fixtures.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     // Important features.
     {
         taskName: `Have setIntervals on audio display timer rather than setting from state.`,

@@ -86,7 +86,9 @@ class Presence extends Component {
         return (
             <PresenceComponent
                 {...{
-                    nameKey,
+                    nameKey
+                }}
+                {...instanceKey && {
                     instanceKey
                 }}
                 {...xYWidthAndHeight}

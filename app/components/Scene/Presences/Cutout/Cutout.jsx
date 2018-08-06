@@ -1,53 +1,48 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import NorthHollywoodNeighbourhood from './Cutouts/NorthHollywoodNeighbourhood'
+import NorthHollywoodHouseLeft from './Cutouts/NorthHollywoodHouseLeft'
+import NorthHollywoodHouseRight from './Cutouts/NorthHollywoodHouseRight'
+
+import {
+    NORTH_HOLLYWOOD_NEIGHBOURHOOD,
+    NORTH_HOLLYWOOD_HOUSE_LEFT,
+    NORTH_HOLLYWOOD_HOUSE_RIGHT
+} from 'constants/cutoutKeys'
+
+const CUTOUTS_MAP = {
+    [NORTH_HOLLYWOOD_NEIGHBOURHOOD]: NorthHollywoodNeighbourhood,
+    [NORTH_HOLLYWOOD_HOUSE_LEFT]: NorthHollywoodHouseLeft,
+    [NORTH_HOLLYWOOD_HOUSE_RIGHT]: NorthHollywoodHouseRight
+},
+DEFAULT_COMPONENT = () => (null)
+
 const propTypes = {
     // From parent.
-    x: PropTypes.number.isRequired,
-    y: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired
+    nameKey: PropTypes.string.isRequired,
+    x: PropTypes.string.isRequired,
+    y: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired
 }
 
 const Cutout = ({
 
-    x,
-    y,
-    width,
-    height,
-    name
+    nameKey,
 
-}) => {
+...other }) => {
+
+    const CutoutComponent =
+        CUTOUTS_MAP[nameKey] || DEFAULT_COMPONENT
 
     return (
-        <Fragment>
-            <rect
-                className={cx(
-                    'Cutout'
-                )}
-                {...{
-                    x,
-                    y,
-                    width,
-                    height
-                }}
-            />
-            <text
-                className={cx(
-                    'Presence__temporaryText'
-                )}
-                {...{
-                    x,
-                    y,
-                    width,
-                    height
-                }}
-            >
-                {name}
-            </text>
-        </Fragment>
+        <CutoutComponent {...other}
+            className={cx(
+                // 'Cutout'
+            )}
+        />
     )
 }
 
