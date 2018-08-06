@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import { getVerseDurationForVerseIndex } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+// import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
@@ -35,37 +35,24 @@ class VerseTracker extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const {
-                isPlaying
-            } = this.props,
-            {
-                isPlaying: willBePlaying
-            } = nextProps
-
-        if (
-            // No point in updating if it remains paused.
-            !isPlaying &&
-            !willBePlaying
-        ) {
-            return false
-        }
-
         const
             isSelected = this.getIsSelectedVerse(this.props),
             willBeSelected = this.getIsSelectedVerse(nextProps)
 
-        if (
-            // No point in updating if it's not the cursored verse.
-            !isSelected &&
-            !willBeSelected
-        ) {
-            return false
-        }
+        // If it can render, update if...
+        return nextProps.canLyricRender && (
 
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
+            // ... song changed...
+            this.props.renderableSongIndex !== nextProps.renderableSongIndex ||
+
+            // ... or verse was selected or unselected...
+            isSelected !== willBeSelected ||
+
+            (
+                // ... or it's selected, and it toggled between play and pause.
+                isSelected && this.props.isPlaying !== nextProps.isPlaying
+            )
+        )
     }
 
     getIsSelectedVerse(props) {
