@@ -56,6 +56,7 @@ const webpack = require('webpack'),
                     assets: path.resolve(__dirname, './app/assets'),
                     components: path.resolve(__dirname, './app/components'),
                     constants: path.resolve(__dirname, './app/constants'),
+                    flux: path.resolve(__dirname, './app/redux'),
                     helpers: path.resolve(__dirname, './app/helpers'),
                     server: path.resolve(__dirname, './app/server'),
                 }

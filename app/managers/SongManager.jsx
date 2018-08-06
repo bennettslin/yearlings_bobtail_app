@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectSongIndex } from '../redux/actions/storage'
+import { selectSongIndex } from 'flux/actions/storage'
 
 import { CONTINUE,
          PAUSE_AT_END,

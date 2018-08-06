@@ -9,7 +9,7 @@ import {
     selectVerseIndex,
     selectWikiIndex,
     selectTimePlayed
-} from '../redux/actions/storage'
+} from 'flux/actions/storage'
 
 import { getTimeForVerseIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

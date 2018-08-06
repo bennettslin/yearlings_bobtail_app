@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import {
     setIsLyricExpanded,
     setIsManualScroll
-} from '../redux/actions/session'
-import { selectLyricColumnIndex } from '../redux/actions/storage'
+} from 'flux/actions/session'
+import { selectLyricColumnIndex } from 'flux/actions/storage'
 
 import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

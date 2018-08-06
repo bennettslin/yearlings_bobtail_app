@@ -7,7 +7,7 @@ import {
     setInteractivatedVerseIndex,
     setIsVerseBarAbove,
     setIsVerseBarBelow
-} from '../../redux/actions/session'
+} from 'flux/actions/session'
 
 import { getSongVersesCount } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

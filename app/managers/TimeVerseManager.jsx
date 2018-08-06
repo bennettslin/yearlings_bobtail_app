@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setUpdatedTimePlayed } from '../redux/actions/audio'
-import { updateRenderableStore } from '../redux/actions/renderable'
+import { setUpdatedTimePlayed } from 'flux/actions/audio'
+import { updateRenderableStore } from 'flux/actions/renderable'
 import {
     selectTimePlayed,
     selectVerseIndex
-} from '../redux/actions/storage'
+} from 'flux/actions/storage'
 
 import { VERSE_SCROLL } from 'constants/dom'
 

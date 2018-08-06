@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 
-import { setCanPlayThroughs } from '../../redux/actions/player'
+import { setCanPlayThroughs } from 'flux/actions/player'
 import { getSongsNotLoguesCount } from 'helpers/dataHelper'
 import { setNewValueInBitNumber } from 'helpers/bitHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

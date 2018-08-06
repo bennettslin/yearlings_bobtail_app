@@ -4,9 +4,9 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import debounce from 'debounce'
 
-import { setIsWindowResizeRenderable } from '../redux/actions/render'
+import { setIsWindowResizeRenderable } from 'flux/actions/render'
 
-import { updateDeviceStore } from '../redux/actions/device'
+import { updateDeviceStore } from 'flux/actions/device'
 
 import {
     setIsHeightlessLyricColumn,
@@ -17,7 +17,7 @@ import {
     setShowOneOfTwoLyricColumns,
     setShowShrunkNavIcon,
     setShowSingleBookColumn
-} from '../redux/actions/responsive'
+} from 'flux/actions/responsive'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

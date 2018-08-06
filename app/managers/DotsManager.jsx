@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { accessDotIndex } from '../redux/actions/access'
+import { accessDotIndex } from 'flux/actions/access'
 
 import {
     selectDotKey,
     selectDotsIndex
-} from '../redux/actions/storage'
+} from 'flux/actions/storage'
 
 import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

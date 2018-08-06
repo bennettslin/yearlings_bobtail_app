@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setIsScoreLoaded } from '../redux/actions/player'
-import { selectScoreIndex } from '../redux/actions/storage'
+import { setIsScoreLoaded } from 'flux/actions/player'
+import { selectScoreIndex } from 'flux/actions/storage'
 
 import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

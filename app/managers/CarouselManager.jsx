@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setCarouselAnnotationIndex } from '../redux/actions/session'
-import { selectCarouselNavIndex } from '../redux/actions/storage'
+import { setCarouselAnnotationIndex } from 'flux/actions/session'
+import { selectCarouselNavIndex } from 'flux/actions/storage'
 
 import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
+import { setShowOneOfTwoLyricColumns } from 'flux/actions/responsive'
 
 import {
     setIsSongChangeRenderable
-} from '../redux/actions/render'
+} from 'flux/actions/render'
 
-import { updateRenderableStore } from '../redux/actions/renderable'
+import { updateRenderableStore } from 'flux/actions/renderable'
 
 import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

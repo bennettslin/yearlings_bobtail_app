@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import {
     setIsPlaying,
     setUpdatedTimePlayed
-} from '../redux/actions/audio'
-import { selectAudioOptionIndex } from '../redux/actions/storage'
+} from 'flux/actions/audio'
+import { selectAudioOptionIndex } from 'flux/actions/storage'
 
 import { getValueInBitNumber } from 'helpers/bitHelper'
 import {

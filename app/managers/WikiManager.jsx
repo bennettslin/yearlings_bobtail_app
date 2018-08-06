@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectWikiIndex } from '../redux/actions/storage'
-import { setCarouselAnnotationIndex } from '../redux/actions/session'
+import { selectWikiIndex } from 'flux/actions/storage'
+import { setCarouselAnnotationIndex } from 'flux/actions/session'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

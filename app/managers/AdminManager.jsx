@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectAdminIndex } from '../redux/actions/storage'
+import { selectAdminIndex } from 'flux/actions/storage'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

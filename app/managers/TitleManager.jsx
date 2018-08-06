@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectTitleIndex } from '../redux/actions/storage'
+import { selectTitleIndex } from 'flux/actions/storage'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

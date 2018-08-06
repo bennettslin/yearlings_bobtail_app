@@ -6,10 +6,10 @@ import { connect } from 'react-redux'
 import {
     accessAnnotationIndex,
     accessAnnotationAnchorIndex
-} from '../../redux/actions/access'
+} from 'flux/actions/access'
 
-import { updateRenderableStore } from '../../redux/actions/renderable'
-import { selectAnnotationIndex } from '../../redux/actions/storage'
+import { updateRenderableStore } from 'flux/actions/renderable'
+import { selectAnnotationIndex } from 'flux/actions/storage'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

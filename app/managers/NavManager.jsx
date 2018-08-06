@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { accessNavSongIndex } from '../redux/actions/access'
+import { accessNavSongIndex } from 'flux/actions/access'
 
-import { setShownBookColumnIndex } from '../redux/actions/session'
+import { setShownBookColumnIndex } from 'flux/actions/session'
 import { getBookColumnIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

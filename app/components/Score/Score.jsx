@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { setIsScoreLoaded } from '../../redux/actions/player'
+import { setIsScoreLoaded } from 'flux/actions/player'
 import { getSongScore } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
