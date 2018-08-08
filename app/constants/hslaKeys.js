@@ -1,14 +1,20 @@
 const
 
 // Other.
-_TEST_KEY = 'test',
+_SP = 'stagePlatform',
+_ST = 'stage',
+_TS = 'test',
 
 HSLA_KEYS = [
-    _TEST_KEY
+    _SP,
+    _ST,
+    _TS
 ]
 
 export {
-    _TEST_KEY,
+    _SP,
+    _ST,
+    _TS,
 
     HSLA_KEYS
 }

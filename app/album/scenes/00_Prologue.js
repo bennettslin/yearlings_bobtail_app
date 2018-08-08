@@ -7,6 +7,8 @@ import {
 
 import { OLD_BENNETT } from 'constants/actorKeys'
 
+import { PROLOGUE } from 'constants/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -17,12 +19,12 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'standing, facing forward, welcoming',
-                    instance: null,
-                    yIndex: -1,
+                    instance: PROLOGUE,
+                    yIndex: 3,
                     arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xFloat: 5.5,
+                        xWidth: 1,
+                        zHeight: 5
                     }
                 }
             },

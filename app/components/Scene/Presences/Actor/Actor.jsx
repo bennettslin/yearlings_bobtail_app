@@ -3,17 +3,20 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import YoungBennett from './Actors/YoungBennett/YoungBennett'
+import OldBennett from './Actors/OldBennett/OldBennett'
 import Anita from './Actors/Anita/Anita'
 import Esther from './Actors/Esther/Esther'
 
 import {
     YOUNG_BENNETT,
+    OLD_BENNETT,
     ANITA,
     ESTHER
 } from 'constants/actorKeys'
 
 const ACTORS_MAP = {
     [YOUNG_BENNETT]: YoungBennett,
+    [OLD_BENNETT]: OldBennett,
     [ANITA]: Anita,
     [ESTHER]: Esther
 },

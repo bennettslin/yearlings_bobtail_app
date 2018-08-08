@@ -20,16 +20,6 @@ import {
 } from 'constants/actorKeys'
 
 import {
-    NORTH_HOLLYWOOD_NEIGHBOURHOOD,
-    NORTH_HOLLYWOOD_HOUSE_LEFT,
-    NORTH_HOLLYWOOD_HOUSE_RIGHT
-} from 'constants/cutoutKeys'
-
-import {
-    FIRE_HYDRANT
-} from 'constants/fixtureKeys'
-
-import {
     PANICKED
 } from 'constants/actors/youngBennett'
 
@@ -40,6 +30,16 @@ import {
 import {
     CURIOUS
 } from 'constants/actors/esther'
+
+import {
+    NORTH_HOLLYWOOD_NEIGHBOURHOOD,
+    NORTH_HOLLYWOOD_HOUSE_LEFT,
+    NORTH_HOLLYWOOD_HOUSE_RIGHT
+} from 'constants/cutoutKeys'
+
+import {
+    FIRE_HYDRANT
+} from 'constants/fixtureKeys'
 
 module.exports = [
     {

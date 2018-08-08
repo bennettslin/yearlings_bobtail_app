@@ -4,7 +4,9 @@ import {
 } from '../cubesKeys'
 
 import {
-    _TEST_KEY
+    _TS,
+    _SP,
+    _ST
 } from '../hslaKeys'
 
 import {
@@ -12,13 +14,14 @@ import {
 } from './cubesConstants'
 
 const
+
     DEFAULT_STAGE_CUBES = {
         ceiling: {
             zIndices: [
                 [k]
             ],
             hslaColours: [
-                [_TEST_KEY]
+                [_TS]
             ]
         },
         floor: {
@@ -26,7 +29,7 @@ const
                 [0]
             ],
             hslaColours: [
-                [_TEST_KEY]
+                [_TS]
             ]
         }
     },
@@ -35,19 +38,25 @@ const
         floor: {
             zIndices: [
                 [0],
-                [0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0],
                 [0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0],
                 [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
+            ],
+            hslaColours: [
+                [_ST],
+                [_ST, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _ST],
+                [_ST, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _ST],
+                [_ST, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _ST],
+                [_ST],
             ]
         }
     },
 
-    CUBES_STAGE = {
-        [DEFAULT_STAGE_KEY]: DEFAULT_STAGE_CUBES,
-        [LOGUE_KEY]: LOGUE_CUBES
-    }
+CUBES_STAGE = {
+    [DEFAULT_STAGE_KEY]: DEFAULT_STAGE_CUBES,
+    [LOGUE_KEY]: LOGUE_CUBES
+}
 
 export {
     CUBES_STAGE

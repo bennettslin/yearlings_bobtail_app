@@ -3673,4 +3673,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `General prologue scene.`,
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
 ]

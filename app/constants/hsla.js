@@ -1,9 +1,23 @@
 import {
-    _TEST_KEY
+    _SP,
+    _ST,
+    _TS
 } from './hslaKeys'
 
 const
-    _TEST = {
+    SPL = {
+        h: 3,
+        s: 13,
+        l: 34,
+        a: 0.8
+    },
+    STG = {
+        h: 29,
+        s: 65,
+        l: 20,
+        a: 0.8
+    },
+    TST = {
         h: 0,
         s: 0,
         l: 90,
@@ -11,7 +25,9 @@ const
     },
 
     HSLA_MAP = {
-        [_TEST_KEY]: _TEST
+        [_SP]: SPL,
+        [_ST]: STG,
+        [_TS]: TST,
     }
 
 export {
