@@ -17,11 +17,6 @@ module.exports = [
      * Important bugs to fix.
      */
     {
-        taskName: `Fix slider stanza heights in modal. Current fix is not quite right. `,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active? Nope...`,
         workedHours: 0,
         neededHours: 1

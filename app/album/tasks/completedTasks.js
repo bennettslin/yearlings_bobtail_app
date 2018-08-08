@@ -3668,4 +3668,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Fix slider stanza heights in modal. Current fix is not quite right. `,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -15,6 +15,13 @@ $margin__sliderTime: 5px;
     & {
         opacity: 1;
     }
+
+    .RM__twoRowMenu.RM__overlayShown
+    &,
+    .RM__twoRowMenu.RM__lyricExpanded
+    & {
+        bottom: 50%;
+    }
 }
 
 .SliderTime__spent {
