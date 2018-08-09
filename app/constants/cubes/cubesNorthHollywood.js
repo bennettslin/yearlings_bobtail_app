@@ -3,21 +3,9 @@ import {
 } from '../cubesKeys'
 
 import {
-    // a,
-    // b,
-    // c,
-    // d,
-    // e,
-    // f,
-    // g,
-    // h,
-    // i,
-    // j,
-    // k,
-    // n,
-    // LEFT,
-    // RIGHT
-} from './cubesConstants'
+    _LW,
+    _PV
+} from '../hslaKeys'
 
 const
 
@@ -30,6 +18,14 @@ const
                 [1],
                 [1],
                 [1]
+            ],
+            hslaColours: [
+                [_LW],
+                [_LW],
+                [_LW],
+                [_LW],
+                [_PV],
+                [_PV]
             ]
         }
     },

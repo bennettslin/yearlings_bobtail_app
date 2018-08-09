@@ -3678,4 +3678,9 @@ module.exports = [
         workedHours: 0.5,
         neededHours: 0.5
     },
+    {
+        taskName: `General North Hollywood neighbourhood scene.`,
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
 ]

@@ -41,10 +41,51 @@ import {
     FIRE_HYDRANT
 } from 'constants/fixtureKeys'
 
+const CUTOUTS_0_AND_1 = {
+    [NORTH_HOLLYWOOD_NEIGHBOURHOOD]: {
+        yIndex: 0,
+        arrangement: {
+            xFloat: 5.5,
+            xWidth: 12,
+            zHeight: 4
+        }
+    },
+    [NORTH_HOLLYWOOD_HOUSE_LEFT]: {
+        yIndex: 1,
+        arrangement: {
+            xFloat: 2,
+            xWidth: 5,
+            zHeight: 3
+        }
+    },
+    [NORTH_HOLLYWOOD_HOUSE_RIGHT]: {
+        yIndex: 1,
+        arrangement: {
+            xFloat: 9,
+            xWidth: 5,
+            zHeight: 3
+        }
+    },
+},
+FIXTURES_0_AND_1 = {
+    [FIRE_HYDRANT]: {
+        yIndex: 5,
+        arrangement: {
+            xFloat: 1,
+            xWidth: 1,
+            zHeight: 2
+        }
+    }
+}
+
 module.exports = [
     {
         unitIndex: 1,
         description: `North Hollywood houses.`,
+        presences: {
+            cutouts: CUTOUTS_0_AND_1,
+            fixtures: FIXTURES_0_AND_1
+        },
         cubes: NORTH_HOLLYWOOD_HOUSES_KEY,
         sky: {
             time: TIME_DAWN,
@@ -63,9 +104,9 @@ module.exports = [
                     instance: EXASPERATED,
                     yIndex: 5,
                     arrangement: {
-                        xFloat: 4,
+                        xFloat: 5,
                         xWidth: 1,
-                        zHeight: 3
+                        zHeight: 3.75
                     }
                 },
                 [ESTHER]: {
@@ -75,9 +116,9 @@ module.exports = [
                     instance: CURIOUS,
                     yIndex: 4,
                     arrangement: {
-                        xFloat: 3,
+                        xFloat: 3.5,
                         xWidth: 1,
-                        zHeight: 3
+                        zHeight: 3.83
                     }
                 },
                 [YOUNG_BENNETT]: {
@@ -87,48 +128,14 @@ module.exports = [
                     instance: PANICKED,
                     yIndex: 5,
                     arrangement: {
-                        xFloat: 8,
-                        xWidth: 1,
-                        zHeight: 3
-                    }
-                }
-            },
-            cutouts: {
-                [NORTH_HOLLYWOOD_NEIGHBOURHOOD]: {
-                    yIndex: 0,
-                    arrangement: {
-                        xFloat: 5.5,
-                        xWidth: 12,
-                        zHeight: 3
-                    }
-                },
-                [NORTH_HOLLYWOOD_HOUSE_LEFT]: {
-                    yIndex: 1,
-                    arrangement: {
-                        xFloat: 3,
-                        xWidth: 3,
-                        zHeight: 3
-                    }
-                },
-                [NORTH_HOLLYWOOD_HOUSE_RIGHT]: {
-                    yIndex: 1,
-                    arrangement: {
                         xFloat: 9,
-                        xWidth: 3,
-                        zHeight: 3
-                    }
-                },
-            },
-            fixtures: {
-                [FIRE_HYDRANT]: {
-                    yIndex: 5,
-                    arrangement: {
-                        xFloat: 2,
                         xWidth: 1,
-                        zHeight: 2
+                        zHeight: 3.5
                     }
                 }
-            }
+            },
+            cutouts: CUTOUTS_0_AND_1,
+            fixtures: FIXTURES_0_AND_1
         },
         cubes: NORTH_HOLLYWOOD_HOUSES_KEY,
         sky: {
