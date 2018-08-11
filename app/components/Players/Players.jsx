@@ -9,13 +9,15 @@ import Player from './Player'
 
 import {
     getMp3s,
-    getSongTotalTime,
-    getSongsNotLoguesCount
+    getSongTotalTime
 } from 'helpers/dataHelper'
 
-import { convertBitNumberToTrueFalseKeys } from 'helpers/bitHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-import { getNextPlayerToRender } from './playersHelper'
+// import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+
+import {
+    getCanPlayThroughsObject,
+    getNextPlayerSongIndexToRender
+} from './playersHelper'
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex },
@@ -42,24 +44,24 @@ class Players extends Component {
              * Redux. We will store it so that we don't have to convert it
              * every single time.
              */
-            canPlayThroughsObject: this._getCanPlayThroughsObject(
+            canPlayThroughsObject: getCanPlayThroughsObject(
                 props.canPlayThroughs
             ),
 
             // At any given time, only one player is being newly rendered.
-            nextPlayerToRender: null
+            nextPlayerToRender: -1
         }
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.state,
-            nextProps: nextState
-        })
-    }
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return !getPropsAreShallowEqual({
+    //         props: this.props,
+    //         nextProps
+    //     }) || !getPropsAreShallowEqual({
+    //         props: this.state,
+    //         nextProps: nextState
+    //     })
+    // }
 
     componentDidMount() {
         this._updateCanPlayThroughsObject(this.props)
@@ -76,21 +78,14 @@ class Players extends Component {
         }
     }
 
-    _getCanPlayThroughsObject(canPlayThroughs) {
-        return convertBitNumberToTrueFalseKeys({
-            keysCount: getSongsNotLoguesCount(),
-            bitNumber: canPlayThroughs
-        })
-    }
-
     _updateCanPlayThroughsObject(props) {
-        const canPlayThroughsObject = this._getCanPlayThroughsObject(
+        const canPlayThroughsObject = getCanPlayThroughsObject(
             props.canPlayThroughs
         )
 
         this.setState({
             canPlayThroughsObject,
-            nextPlayerToRender: getNextPlayerToRender(
+            nextPlayerToRender: getNextPlayerSongIndexToRender(
                     props.selectedSongIndex,
                     canPlayThroughsObject
                 )
@@ -99,14 +94,18 @@ class Players extends Component {
 
     _playerShouldRender(playerSongIndex) {
 
-        const { canPlayThroughsObject,
-              nextPlayerToRender } = this.state
+        const {
+            canPlayThroughsObject,
+            nextPlayerToRender
+        } = this.state
 
-        // Render player if it has already passed canPlayThrough...
-        return canPlayThroughsObject[playerSongIndex] ||
+        return (
+            // Render player if it has already passed canPlayThrough...
+            canPlayThroughsObject[playerSongIndex] ||
 
             // Or if it is next in the queue to be rendered.
             playerSongIndex === nextPlayerToRender
+        )
     }
 
     render() {

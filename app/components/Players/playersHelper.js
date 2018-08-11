@@ -3,7 +3,9 @@ import {
     getSongsNotLoguesCount
 } from 'helpers/dataHelper'
 
-export const getNextPlayerToRender = (
+import { convertBitNumberToTrueFalseKeys } from 'helpers/bitHelper'
+
+export const getNextPlayerSongIndexToRender = (
     selectedSongIndex,
     canPlayThroughsObject
 ) => {
@@ -20,7 +22,7 @@ export const getNextPlayerToRender = (
      * If logue, set to first song. Song indices are 1-based.
      */
     let currentSongIndex = isLogue ? 1 : selectedSongIndex,
-        nextPlayerToRender,
+        nextPlayerSongIndex,
         counter = 0
 
     do {
@@ -33,17 +35,25 @@ export const getNextPlayerToRender = (
          * that is either the selected song or coming after it.
          */
         } else {
-            nextPlayerToRender = currentSongIndex
+            nextPlayerSongIndex = currentSongIndex
         }
 
         counter++
 
-    } while (!nextPlayerToRender && counter < songsCount)
+    } while (!nextPlayerSongIndex && counter < songsCount)
 
     /**
      * Return next song in the queue, or else -1 if all are now rendered.
      */
-    nextPlayerToRender = nextPlayerToRender || -1
+    nextPlayerSongIndex = nextPlayerSongIndex || -1
 
-    return nextPlayerToRender
+    return nextPlayerSongIndex
+}
+
+export const getCanPlayThroughsObject = (canPlayThroughs) => {
+
+    return convertBitNumberToTrueFalseKeys({
+        keysCount: getSongsNotLoguesCount(),
+        bitNumber: canPlayThroughs
+    })
 }
