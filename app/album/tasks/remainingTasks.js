@@ -13,6 +13,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Bug where selecting interactivated verse does not change verse when song is playing. Don't `,
+        workedHours: 0,
+        neededHours: 5
+    },
+
     /**
      * Important bugs to fix.
      */
@@ -25,11 +31,6 @@ module.exports = [
         taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Bug where selecting interactivated verse does not change verse when song is playing.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa. This might involve generally rethinking how to do determine verse bars after a scroll.`,

@@ -17,7 +17,18 @@ import {
     getVerseIndexForTime,
     getSceneIndexForVerseIndex
 } from 'helpers/dataHelper'
+
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+
+const mapStateToProps = ({
+    isManualScroll,
+    selectedSongIndex,
+    selectedVerseIndex
+}) => ({
+    isManualScroll,
+    selectedSongIndex,
+    selectedVerseIndex
+})
 
 class TimeVerseManager extends Component {
 
@@ -210,16 +221,6 @@ class TimeVerseManager extends Component {
         return null
     }
 }
-
-const mapStateToProps = ({
-    isManualScroll,
-    selectedSongIndex,
-    selectedVerseIndex
-}) => ({
-    isManualScroll,
-    selectedSongIndex,
-    selectedVerseIndex
-})
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
