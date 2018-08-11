@@ -253,7 +253,7 @@ class AnnotationManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceStore,
+    deviceStore: { deviceIndex },
     selectedStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -263,7 +263,7 @@ const mapStateToProps = ({
     selectedDotKeys,
     selectedLyricColumnIndex,
 }) => ({
-    deviceIndex: deviceStore.deviceIndex,
+    deviceIndex,
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,

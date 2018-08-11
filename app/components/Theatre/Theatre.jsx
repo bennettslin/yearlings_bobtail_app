@@ -20,14 +20,19 @@ import { getCeilingHeight,
 const mapStateToProps = ({
     canTheatreRender,
     isHeightlessLyricColumn,
-    deviceStore
+    deviceStore: {
+        deviceIndex,
+        windowHeight,
+        windowWidth,
+        stageCoordinates
+    }
 }) => ({
     canTheatreRender,
     isHeightlessLyricColumn,
-    deviceIndex: deviceStore.deviceIndex,
-    windowHeight: deviceStore.windowHeight,
-    windowWidth: deviceStore.windowWidth,
-    stageCoordinates: deviceStore.stageCoordinates,
+    deviceIndex,
+    windowHeight,
+    windowWidth,
+    stageCoordinates
 })
 
 class Theatre extends Component {

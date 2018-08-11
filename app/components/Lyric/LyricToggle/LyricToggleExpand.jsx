@@ -11,11 +11,11 @@ import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
 import { getIsLyricExpandable } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceStore,
+    deviceStore: { deviceIndex },
     isHeightlessLyricColumn,
     isLyricExpanded
 }) => ({
-    deviceIndex: deviceStore.deviceIndex,
+    deviceIndex,
     isHeightlessLyricColumn,
     isLyricExpanded
 })

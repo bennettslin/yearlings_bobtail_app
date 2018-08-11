@@ -12,10 +12,10 @@ import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../theatreConstants'
 
 const mapStateToProps = ({
     canTheatreRender,
-    deviceStore
+    deviceStore: { windowHeight }
 }) => ({
     canTheatreRender,
-    windowHeight: deviceStore.windowHeight
+    windowHeight
 })
 
 class Wall extends Component {

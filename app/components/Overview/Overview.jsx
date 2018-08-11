@@ -20,13 +20,13 @@ import {
 const mapStateToProps = ({
     canMainRender,
     selectedOverviewIndex,
-    deviceStore,
-    renderableStore
+    deviceStore: { deviceIndex },
+    renderableStore: { renderableSongIndex }
 }) => ({
     canMainRender,
     selectedOverviewIndex,
-    deviceIndex: deviceStore.deviceIndex,
-    renderableSongIndex: renderableStore.renderableSongIndex
+    deviceIndex,
+    renderableSongIndex
 })
 
 class Overview extends Component {

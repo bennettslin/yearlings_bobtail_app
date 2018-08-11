@@ -23,12 +23,12 @@ import {
 } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceStore,
+    deviceStore: { deviceIndex },
     isScoreLoaded,
     isScoresTipsInMain,
     selectedTipsIndex
 }) => ({
-    deviceIndex: deviceStore.deviceIndex,
+    deviceIndex,
     isScoreLoaded,
     isScoresTipsInMain,
     selectedTipsIndex

@@ -13,18 +13,18 @@ import {
 
 const mapStateToProps = ({
     canCarouselRender,
-    deviceStore,
+    deviceStore: { deviceIndex },
     isLyricExpanded,
-    renderableStore,
+    renderableStore: { renderableAnnotationIndex },
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
 }) => ({
     canCarouselRender,
-    deviceIndex: deviceStore.deviceIndex,
+    deviceIndex,
     isLyricExpanded,
-    renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
+    renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
