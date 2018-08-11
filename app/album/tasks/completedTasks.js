@@ -3683,4 +3683,9 @@ module.exports = [
         workedHours: 0.5,
         neededHours: 0.5
     },
+    {
+        taskName: `Selected song, annotation, and verse are updated together.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

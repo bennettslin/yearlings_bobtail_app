@@ -1,8 +1,8 @@
 ### Player refactor.
 
-* Selected song and verse share single action and reducer. Time will eventually *not* be stored in state.
+* Selected song and verse share single action and reducer. (/)
 
-* Create new TimeManager.
+* Create new TimeManager. (/)
 
 * Time manager sets or resets interval when:
     * Playing is toggled on.
@@ -44,6 +44,8 @@
 
 * Helper to get start time from verse uses verse config.
 * Confirm there is no need for a helper to get verse from time.
+
+* Time is no longer stored in state.
 
 * Decide whether TimeVerseManager can be split between TimeManager and VerseManager, and removed.
 

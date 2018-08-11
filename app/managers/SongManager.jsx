@@ -97,12 +97,14 @@ class SongManager extends Component {
             selectedSongIndex,
 
             // If from wormhole, access destination wormhole index.
-            initialAnnotationAnchorIndex: destinationWormholeIndex
+            initialAnnotationAnchorIndex: destinationWormholeIndex,
+            bypassUpdateSelected: true
         })
 
         props.selectVerse({
             selectedVerseIndex,
-            selectedSongIndex
+            selectedSongIndex,
+            bypassUpdateSelected: true
         })
 
         props.updateSelectedStore({

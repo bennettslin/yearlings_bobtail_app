@@ -90,7 +90,8 @@ class AnnotationManager extends Component {
         selectedAnnotationIndex = 0,
         selectedSongIndex = this.props.selectedSongIndex,
         initialAnnotationAnchorIndex = 1,
-        direction
+        direction,
+        bypassUpdateSelected
     } = {}) {
         const { props } = this
 
@@ -123,9 +124,11 @@ class AnnotationManager extends Component {
             )
         }
 
-        props.updateSelectedStore({
-            selectedAnnotationIndex
-        })
+        if (!bypassUpdateSelected) {
+            props.updateSelectedStore({
+                selectedAnnotationIndex
+            })
+        }
 
         /**
          * If selecting or changing annotation in same song, change index to

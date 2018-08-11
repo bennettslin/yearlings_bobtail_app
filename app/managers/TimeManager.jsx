@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateSelectedStore } from 'flux/actions/storage'
-
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class TimeManager extends Component {

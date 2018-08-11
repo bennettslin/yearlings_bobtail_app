@@ -96,7 +96,8 @@ class TimeVerseManager extends Component {
         selectedSongIndex = this.props.selectedSongIndex,
         selectedVerseIndex = 0,
 
-        scrollLog
+        scrollLog,
+        bypassUpdateSelected
     }) {
         const
             selectedTimePlayed =
@@ -117,7 +118,8 @@ class TimeVerseManager extends Component {
             selectedSongIndex,
             selectedVerseIndex,
             renderVerseImmediately,
-            scrollLog
+            scrollLog,
+            bypassUpdateSelected
         })
     }
 
@@ -127,6 +129,7 @@ class TimeVerseManager extends Component {
         selectedVerseIndex,
         renderVerseImmediately,
         scrollLog,
+        bypassUpdateSelected,
         isPlayerAdvancing
     }) {
 
@@ -137,9 +140,11 @@ class TimeVerseManager extends Component {
          * by either one.
          */
 
-        props.updateSelectedStore({
-            selectedVerseIndex
-        })
+        if (!bypassUpdateSelected) {
+            props.updateSelectedStore({
+                selectedVerseIndex
+            })
+        }
 
         props.selectTimePlayed(selectedTimePlayed)
 
