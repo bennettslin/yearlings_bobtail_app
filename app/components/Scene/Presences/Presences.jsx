@@ -14,11 +14,14 @@ import { getSceneObject } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     canPresencesRender,
-    renderableStore
+    renderableStore: {
+        renderableSongIndex,
+        renderableSceneIndex
+    }
 }) => ({
     canPresencesRender,
-    renderableSongIndex: renderableStore.renderableSongIndex,
-    renderableSceneIndex: renderableStore.renderableSceneIndex
+    renderableSongIndex,
+    renderableSceneIndex
 })
 
 class Presences extends Component {

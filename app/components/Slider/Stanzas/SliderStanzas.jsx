@@ -15,10 +15,10 @@ import {
 
 const mapStateToProps = ({
     canSliderRender,
-    renderableStore
+    renderableStore: { renderableSongIndex }
 }) => ({
     canSliderRender,
-    renderableSongIndex: renderableStore.renderableSongIndex
+    renderableSongIndex
 })
 
 class SliderStanzas extends Component {

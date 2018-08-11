@@ -10,9 +10,9 @@ import { setIsScoreLoaded } from 'flux/actions/player'
 import { getSongScore } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
-    renderableStore
+    renderableStore: { renderableSongIndex }
 }) => ({
-    renderableSongIndex: renderableStore.renderableSongIndex
+    renderableSongIndex
 })
 
 class Score extends Component {

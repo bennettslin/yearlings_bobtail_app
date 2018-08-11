@@ -1037,7 +1037,10 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     isHeightlessLyricColumn,
     isLyricExpanded,
-    sliderStore
+    sliderStore: {
+        isSliderMoving,
+        isSliderTouched
+    }
 }) => ({
     selectedAdminIndex,
     selectedAnnotationIndex,
@@ -1053,8 +1056,8 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     isHeightlessLyricColumn,
     isLyricExpanded,
-    isSliderMoving: sliderStore.isSliderMoving,
-    isSliderTouched: sliderStore.isSliderTouched,
+    isSliderMoving,
+    isSliderTouched
 })
 
 export default connect(mapStateToProps)(EventHandler)

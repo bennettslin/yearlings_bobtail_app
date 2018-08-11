@@ -15,12 +15,12 @@ import { SHOWN, TIPS_OPTIONS } from 'constants/options'
 
 const mapStateToProps = ({
     canMainRender,
-    renderableStore,
+    renderableStore: { renderableSongIndex },
     selectedTipsIndex,
     isScoresTipsInMain
 }) => ({
     canMainRender,
-    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableSongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
 })

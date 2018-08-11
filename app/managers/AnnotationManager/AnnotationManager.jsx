@@ -261,7 +261,7 @@ const mapStateToProps = ({
     },
     accessedAnnotationAnchorIndex,
     selectedDotKeys,
-    selectedLyricColumnIndex,
+    selectedLyricColumnIndex
 }) => ({
     deviceIndex,
     selectedSongIndex,

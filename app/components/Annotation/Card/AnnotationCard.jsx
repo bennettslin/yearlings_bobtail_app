@@ -15,10 +15,10 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderableStore
+    renderableStore: { renderableSongIndex }
 }) => ({
     canCarouselRender,
-    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableSongIndex
 })
 
 /*************

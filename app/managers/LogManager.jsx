@@ -103,12 +103,17 @@ class LogManager extends Component {
 }
 
 const mapStateToProps = ({
-    renderableStore
+    renderableStore: {
+        renderableSongIndex,
+        renderableVerseIndex,
+        renderableAnnotationIndex,
+        renderableSceneIndex
+    }
 }) => ({
-    renderableSongIndex: renderableStore.renderableSongIndex,
-    renderableVerseIndex: renderableStore.renderableVerseIndex,
-    renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
-    renderableSceneIndex: renderableStore.renderableSceneIndex
+    renderableSongIndex,
+    renderableVerseIndex,
+    renderableAnnotationIndex,
+    renderableSceneIndex
 })
 
 export default connect(mapStateToProps)(LogManager)

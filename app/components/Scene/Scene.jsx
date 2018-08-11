@@ -24,10 +24,13 @@ import {
 } from './sceneHelper'
 
 const mapStateToProps = ({
-    renderableStore
+    renderableStore: {
+        renderableSongIndex,
+        renderableSceneIndex
+    }
 }) => ({
-    renderableSongIndex: renderableStore.renderableSongIndex,
-    renderableSceneIndex: renderableStore.renderableSceneIndex
+    renderableSongIndex,
+    renderableSceneIndex
 })
 
 class Scene extends Component {

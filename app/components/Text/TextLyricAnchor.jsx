@@ -14,7 +14,10 @@ import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableStore,
+    renderableStore: {
+        renderableSongIndex,
+        renderableAnnotationIndex
+    },
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
     selectedAccessIndex,
@@ -24,10 +27,10 @@ const mapStateToProps = ({
     isLyricExpanded
 }) => ({
     canLyricRender,
-    renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
+    renderableAnnotationIndex,
 
     // This is just to know when to update.
-    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableSongIndex,
 
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,

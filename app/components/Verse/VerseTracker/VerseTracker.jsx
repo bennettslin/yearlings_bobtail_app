@@ -11,12 +11,15 @@ import { getVerseDurationForVerseIndex } from 'helpers/dataHelper'
 const mapStateToProps = ({
     canLyricRender,
     isPlaying,
-    renderableStore
+    renderableStore: {
+        renderableSongIndex,
+        renderableVerseIndex
+    }
 }) => ({
     canLyricRender,
     isPlaying,
-    renderableSongIndex: renderableStore.renderableSongIndex,
-    renderableVerseIndex: renderableStore.renderableVerseIndex
+    renderableSongIndex,
+    renderableVerseIndex
 })
 
 class VerseTracker extends Component {

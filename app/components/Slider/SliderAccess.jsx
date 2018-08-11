@@ -12,10 +12,10 @@ import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     canSliderRender,
-    renderableStore
+    renderableStore: { renderableSongIndex }
 }) => ({
     canSliderRender,
-    renderableSongIndex: renderableStore.renderableSongIndex
+    renderableSongIndex
 })
 
 class SliderAccess extends Component {

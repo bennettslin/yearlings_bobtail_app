@@ -22,10 +22,10 @@ import {
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableStore
+    renderableStore: { renderableSongIndex }
 }) => ({
     canLyricRender,
-    renderableSongIndex: renderableStore.renderableSongIndex
+    renderableSongIndex
 })
 
 /*************
