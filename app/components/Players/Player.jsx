@@ -22,10 +22,16 @@ const LISTEN_INTERVAL = 100
 const mapStateToProps = ({
     isPlaying,
     updatedTimePlayed,
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex
+    },
     canPlayThroughs
 }) => ({
     isPlaying,
     updatedTimePlayed,
+    selectedSongIndex,
+    selectedVerseIndex,
     canPlayThroughs
 })
 
@@ -35,6 +41,8 @@ class Player extends Component {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         updatedTimePlayed: PropTypes.number,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         setCanPlayThroughs: PropTypes.func.isRequired,
 
@@ -102,29 +110,40 @@ class Player extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        const { props } = this,
-            selectedChanged = props.isSelected !== prevProps.isSelected,
-            isPlayingChanged = props.isPlaying !== prevProps.isPlaying
+        const {
+                isSelected,
+                isPlaying
+            } = this.props,
+            {
+                isSelected: wasSelected,
+                isPlaying: wasPlaying
+            } = prevProps,
+            selectedChanged = isSelected !== wasSelected,
+            isPlayingChanged = isPlaying !== wasPlaying
+
+        // TODO: Have conditionals here.
 
         // Update playing status.
         if (selectedChanged || isPlayingChanged) {
-            this._updateAudioElementIsPlaying(props)
+            this._updateAudioElementIsPlaying()
         }
 
         // Reset audio element if no longer selected.
-        if (!props.isSelected && prevProps.isSelected) {
+        if (!isSelected && wasSelected) {
             this.myPlayer.currentTime = 0
         }
 
         // Handle user selected time.
-        if (props.updatedTimePlayed !== null) {
-            this._updateAudioElementTime(props)
+        if (this.props.updatedTimePlayed !== null) {
+            this._updateAudioElementTime()
         }
     }
 
     _handleCanPlayThrough() {
-        const { canPlayThroughs,
-                songIndex } = this.props,
+        const {
+            canPlayThroughs,
+            songIndex
+        } = this.props,
 
             // Convert to bit number before setting in Redux.
             newBitNumber = setNewValueInBitNumber({
@@ -135,6 +154,17 @@ class Player extends Component {
             })
 
         this.props.setCanPlayThroughs(newBitNumber)
+    }
+
+    _handleEnded() {
+        const { intervalId } = this.state
+
+        // Ensure that this does not get called twice in same song.
+        if (intervalId) {
+            this.props.handlePlayerNextSong()
+
+            this._clearInterval()
+        }
     }
 
     _listenForDebugStatements(onlyIfSelected) {
@@ -200,9 +230,9 @@ class Player extends Component {
         }
     }
 
-    _updateAudioElementIsPlaying(props = this.props) {
+    _updateAudioElementIsPlaying() {
         const { isSelected,
-                isPlaying } = props,
+                isPlaying } = this.props,
             { myPlayer } = this
 
         // Play only if selected and is playing.
@@ -234,21 +264,10 @@ class Player extends Component {
         })
     }
 
-    _handleEnded() {
-        const { intervalId } = this.state
-
-        // Ensure that this does not get called twice in same song.
-        if (intervalId) {
-            this.props.handlePlayerNextSong()
-
-            this._clearInterval()
-        }
-    }
-
-    _updateAudioElementTime(props = this.props) {
+    _updateAudioElementTime() {
         // Let app update the audio element's current time.
-        if (props.isSelected) {
-            this.myPlayer.currentTime = props.updatedTimePlayed
+        if (this.props.isSelected) {
+            this.myPlayer.currentTime = this.props.updatedTimePlayed
             this.props.handlePlayerTimeReset()
         }
     }
