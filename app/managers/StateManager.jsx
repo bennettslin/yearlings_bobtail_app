@@ -24,6 +24,7 @@ import SceneManager from './SceneManager'
 import ScrollManager from './ScrollManager'
 import SliderVerseManager from './SliderVerseManager/SliderVerseManager'
 import SongManager from './SongManager'
+import TimeManager from './TimeManager'
 import TimeVerseManager from './TimeVerseManager'
 import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
@@ -470,6 +471,9 @@ class StateManager extends Component {
                     selectAnnotation={this.selectAnnotation}
                     selectVerse={this.selectVerse}
                     updatePath={updatePath}
+                />
+                <TimeManager
+                    setRef={node => (this.timeManager = node)}
                 />
                 <TimeVerseManager
                     setRef={node => (this.timeVerseManager = node)}

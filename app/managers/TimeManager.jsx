@@ -3,16 +3,17 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectAccessIndex } from 'flux/actions/storage'
+import { selectVerseIndex } from 'flux/actions/storage'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-class AccessManager extends Component {
+class TimeManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedAccessIndex: PropTypes.number.isRequired,
-        selectAccessIndex: PropTypes.func.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+        selectVerseIndex: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -29,33 +30,23 @@ class AccessManager extends Component {
         })
     }
 
-    toggleAccess(
-        selectedAccessValue = (this.props.selectedAccessIndex + 1) % 2
-    ) {
-        // If no argument passed, then just toggle between on and off.
-
-        if (typeof selectedAccessValue === 'boolean') {
-            selectedAccessValue = selectedAccessValue ? 1 : 0
-        }
-
-        this.props.selectAccessIndex(selectedAccessValue)
-    }
-
     render() {
         return null
     }
 }
 
 const mapStateToProps = ({
-    selectedAccessIndex
+    selectedSongIndex,
+    selectedVerseIndex
 }) => ({
-    selectedAccessIndex
+    selectedSongIndex,
+    selectedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex
+        selectVerseIndex
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(AccessManager)
+export default connect(mapStateToProps, bindDispatchToProps)(TimeManager)

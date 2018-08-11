@@ -6,18 +6,24 @@ module.exports = [
         neededHours: 10
     },
 
-    // Important features.
     {
-        taskName: `Have setIntervals on audio display timer rather than setting from state.`,
+        taskName: `Massive player refactor.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 10
     },
 
-    {
-        taskName: `Bug where selecting interactivated verse does not change verse when song is playing. Don't `,
-        workedHours: 0,
-        neededHours: 5
-    },
+    // Important features.
+    // {
+    //     taskName: `Have setIntervals on audio display timer rather than setting from state.`,
+    //     workedHours: 0,
+    //     neededHours: 2
+    // },
+
+    // {
+    //     taskName: `Bug where selecting interactivated verse does not change verse when song is playing.`,
+    //     workedHours: 0,
+    //     neededHours: 1
+    // },
 
     /**
      * Important bugs to fix.
@@ -34,30 +40,6 @@ module.exports = [
     },
     {
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa. This might involve generally rethinking how to do determine verse bars after a scroll.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    /**
-     * Not so important work.
-     */
-    {
-        taskName: `Use Web Worker for parsing album. Mostly a proof of concept.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Improve method to get verse index for slider ratio. Begin by assuming closeness to slider verse index.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Slider verse even filter shows when verse bar is shown. Use this opportunity to make it a JavaScript logic in CSS?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Debounce nav keys.`,
         workedHours: 0,
         neededHours: 1
     },

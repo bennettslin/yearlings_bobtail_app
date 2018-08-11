@@ -1,6 +1,6 @@
 ### Player refactor.
 
-* Selected song and verse share single action and reducer.
+* Selected song and verse share single action and reducer. Time will eventually *not* be stored in state.
 
 * Create new TimeManager.
 
@@ -11,6 +11,9 @@
 
 * Time manager clears interval when:
     * Playing is toggled off.
+
+* When time manager advances time:
+    * Automatically select new verse.
 
 * Displayed audio timer sets or resets interval when:
     * Playing is toggled on.
@@ -45,6 +48,3 @@
 * Decide whether TimeVerseManager can be split between TimeManager and VerseManager, and removed.
 
 * Remove time from store, and components that use it.
-
-# TODO
-* When verse is advanced.

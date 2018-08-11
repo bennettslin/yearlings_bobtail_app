@@ -95,6 +95,27 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Use Web Worker for parsing album. Mostly a proof of concept.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Improve method to get verse index for slider ratio. Begin by assuming closeness to slider verse index.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Slider verse even filter shows when verse bar is shown. Use this opportunity to make it a JavaScript logic in CSS?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Debounce nav keys.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
         // Low priority bugs.
     // {
     //     taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,
