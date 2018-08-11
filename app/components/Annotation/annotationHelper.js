@@ -9,14 +9,14 @@ import {
 } from 'helpers/dataHelper'
 
 export const getAccessibleAnnotationAnchorsLength = ({
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    selectedDotKeys
+    songIndex,
+    annotationIndex,
+    dotKeys
 }) => {
 
     const annotation = getAnnotationObject(
-            selectedSongIndex,
-            selectedAnnotationIndex
+            songIndex,
+            annotationIndex
         ),
         { annotationAnchors } = annotation
 
@@ -28,12 +28,12 @@ export const getAccessibleAnnotationAnchorsLength = ({
                 (
                     // It's a wiki anchor, and reference dot is selected.
                     typeofAnnotationAnchor === 'string' &&
-                    selectedDotKeys[REFERENCE]
+                    dotKeys[REFERENCE]
 
                 ) || (
                     // It's a wormhole index, and wormhole dot is selected.
                     typeofAnnotationAnchor === 'number' &&
-                    selectedDotKeys[WORMHOLE]
+                    dotKeys[WORMHOLE]
                 )
             ) ? sum + 1 : sum
         }, 0)

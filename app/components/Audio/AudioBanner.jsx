@@ -1,5 +1,5 @@
 // Component to show played song title, time played, and slider interface.
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -7,6 +7,8 @@ import cx from 'classnames'
 import Slider from 'components/Slider/Slider'
 import AudioTimer from './AudioTimer'
 import { getSongTitle } from 'helpers/dataHelper'
+
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     isTwoRowMenu,
@@ -16,49 +18,61 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const audioBannerPropTypes = {
-    // Through Redux.
-    isTwoRowMenu: PropTypes.bool.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired
-},
+class AudioBanner extends Component {
 
-AudioBanner = ({
+    static propTypes = {
+        // Through Redux.
+        isTwoRowMenu: PropTypes.bool.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired
+    }
 
-    /* eslint-disable no-unused-vars */
-    dispatch,
-    /* eslint-enable no-unused-vars */
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-    isTwoRowMenu,
-    selectedSongIndex,
+    render() {
+        const {
 
-...other }) => {
+                /* eslint-disable no-unused-vars */
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-    const songTitle = getSongTitle({
-        songIndex: selectedSongIndex
-    })
+                isTwoRowMenu,
+                selectedSongIndex,
 
-    return (
-        <div className={cx(
-            'AudioBanner',
-            'absoluteFullContainer',
-            isTwoRowMenu ? 'AudioBanner__belowMenu' : 'Audio__child'
-        )}>
+            ...other } = this.props,
 
+            songTitle = getSongTitle({
+                songIndex: selectedSongIndex
+            })
+
+        return (
             <div className={cx(
-                'AudioBannerDisplay',
+                'AudioBanner',
                 'absoluteFullContainer',
-                'flexAlignContainer'
+
+                isTwoRowMenu ?
+                    'AudioBanner__belowMenu' :
+                    'Audio__child'
             )}>
-                {songTitle}
-                <AudioTimer />
+
+                <div className={cx(
+                    'AudioBannerDisplay',
+                    'absoluteFullContainer',
+                    'flexAlignContainer'
+                )}>
+                    {songTitle}
+                    <AudioTimer />
+                </div>
+
+                <Slider {...other} />
+
             </div>
-
-            <Slider {...other} />
-
-        </div>
-    )
+        )
+    }
 }
-
-AudioBanner.propTypes = audioBannerPropTypes
 
 export default connect(mapStateToProps)(AudioBanner)

@@ -1,9 +1,11 @@
 // Container to show logue or song button in nav section.
 
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './NavButton'
+
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedAccessIndex,
@@ -17,47 +19,57 @@ const mapStateToProps = ({
     accessedNavSongIndex,
 })
 
-const navButtonIndexedPropTypes = {
-    // Through Redux.
-    accessedNavSongIndex: PropTypes.number.isRequired,
-    selectedAccessIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedDotsIndex: PropTypes.number.isRequired,
+class NavButtonIndexed extends Component {
 
-    // From parent.
-    songIndex: PropTypes.number.isRequired
-},
+    static propTypes = {
+        // Through Redux.
+        accessedNavSongIndex: PropTypes.number.isRequired,
+        selectedAccessIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedDotsIndex: PropTypes.number.isRequired,
 
-NavButtonIndexed = ({
-    /* eslint-disable no-unused-vars */
-    dispatch,
-    /* eslint-enable no-unused-vars */
+        // From parent.
+        songIndex: PropTypes.number.isRequired
+    }
 
-    songIndex,
-    selectedAccessIndex,
-    selectedSongIndex,
-    selectedDotsIndex,
-    accessedNavSongIndex,
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-...other }) => {
+    render() {
 
-    const isSelected = selectedSongIndex === songIndex,
+        const {
+                /* eslint-disable no-unused-vars */
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-        // Don't show access icon if dots slide is open.
-        isAccessed =
-            Boolean(selectedAccessIndex) &&
-            !selectedDotsIndex &&
-            accessedNavSongIndex === songIndex
+                songIndex,
+                selectedAccessIndex,
+                selectedSongIndex,
+                selectedDotsIndex,
+                accessedNavSongIndex,
 
-    return (
-        <NavButton {...other}
-            songIndex={songIndex}
-            isSelected={isSelected}
-            isAccessed={isAccessed}
-        />
-    )
+            ...other } = this.props,
+
+            isSelected = selectedSongIndex === songIndex,
+
+            // Don't show access icon if dots slide is open.
+            isAccessed =
+                Boolean(selectedAccessIndex) &&
+                !selectedDotsIndex &&
+                accessedNavSongIndex === songIndex
+
+        return (
+            <NavButton {...other}
+                songIndex={songIndex}
+                isSelected={isSelected}
+                isAccessed={isAccessed}
+            />
+        )
+    }
 }
-
-NavButtonIndexed.propTypes = navButtonIndexedPropTypes
 
 export default connect(mapStateToProps)(NavButtonIndexed)

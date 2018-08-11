@@ -58,7 +58,7 @@ class Player extends Component {
         this.state = {
 
             // Unique identifier for clearing setInterval.
-            intervalId: null
+            intervalId: ''
         }
     }
 
@@ -135,20 +135,6 @@ class Player extends Component {
             })
 
         this.props.setCanPlayThroughs(newBitNumber)
-    }
-
-    _handleEnded() {
-        const { intervalId } = this.state
-
-        // Ensure that this does not get called twice in same song.
-        if (intervalId) {
-            this.props.handlePlayerNextSong()
-
-            clearInterval(intervalId)
-            this.setState({
-                intervalId: null
-            })
-        }
     }
 
     _listenForDebugStatements(onlyIfSelected) {
@@ -237,10 +223,25 @@ class Player extends Component {
             myPlayer.pause()
 
             // Stop listening.
-            clearInterval(this.state.intervalId)
-            this.setState({
-                intervalId: null
-            })
+            this._clearInterval()
+        }
+    }
+
+    _clearInterval() {
+        clearInterval(this.state.intervalId)
+        this.setState({
+            intervalId: ''
+        })
+    }
+
+    _handleEnded() {
+        const { intervalId } = this.state
+
+        // Ensure that this does not get called twice in same song.
+        if (intervalId) {
+            this.props.handlePlayerNextSong()
+
+            this._clearInterval()
         }
     }
 

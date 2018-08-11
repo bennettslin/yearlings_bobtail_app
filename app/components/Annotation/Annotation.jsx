@@ -101,9 +101,9 @@ class Annotation extends Component {
                      */
                     accessibleAnnotationAnchorsLength:
                         getAccessibleAnnotationAnchorsLength({
-                            selectedSongIndex: renderableSongIndex,
-                            selectedAnnotationIndex: annotationIndex,
-                            selectedDotKeys
+                            songIndex: renderableSongIndex,
+                            annotationIndex,
+                            dotKeys: selectedDotKeys
                         })
                 }}
             />

@@ -6,8 +6,15 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Player from './Player'
-import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from 'helpers/dataHelper'
+
+import {
+    getMp3s,
+    getSongTotalTime,
+    getSongsNotLoguesCount
+} from 'helpers/dataHelper'
+
 import { convertBitNumberToTrueFalseKeys } from 'helpers/bitHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getNextPlayerToRender } from './playersHelper'
 
 const mapStateToProps = ({
@@ -42,6 +49,16 @@ class Players extends Component {
             // At any given time, only one player is being newly rendered.
             nextPlayerToRender: null
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextProps: nextState
+        })
     }
 
     componentDidMount() {

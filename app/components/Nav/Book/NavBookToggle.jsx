@@ -1,12 +1,13 @@
 // Button in nav section to select book.
 
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import NavButton from '../NavButton'
 import { getBookColumnIndex } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex }
@@ -14,41 +15,51 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const navBookTogglePropTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
+class NavBookToggle extends Component {
 
-    // From parent.
-    bookIndex: PropTypes.number.isRequired
-},
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
 
-NavBookToggle = ({
-    /* eslint-disable no-unused-vars */
-    dispatch,
-    /* eslint-enable no-unused-vars */
+        // From parent.
+        bookIndex: PropTypes.number.isRequired
+    }
 
-    selectedSongIndex,
-    bookIndex,
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-...other }) => {
+    render() {
 
-    const hasSelectedSong =
-        bookIndex === getBookColumnIndex(selectedSongIndex)
+        const {
+                /* eslint-disable no-unused-vars */
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-    return (
-        <div className={cx(
-            'NavBookToggle',
-            'NavBook'
-        )}>
-            <NavButton {...other}
-                isToggle
-                isSelected={hasSelectedSong}
-                bookIndex={bookIndex}
-            />
-        </div>
-    )
+                selectedSongIndex,
+                bookIndex,
+
+            ...other } = this.props,
+
+            hasSelectedSong =
+                bookIndex === getBookColumnIndex(selectedSongIndex)
+
+        return (
+            <div className={cx(
+                'NavBookToggle',
+                'NavBook'
+            )}>
+                <NavButton {...other}
+                    isToggle
+                    isSelected={hasSelectedSong}
+                    bookIndex={bookIndex}
+                />
+            </div>
+        )
+    }
 }
-
-NavBookToggle.propTypes = navBookTogglePropTypes
 
 export default connect(mapStateToProps)(NavBookToggle)

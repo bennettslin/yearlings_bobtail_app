@@ -5,10 +5,17 @@
         // Override transition in inline style.
         transition: none !important;
     }
+
+    .RM__isPlaying
+    &.VerseTracker__selected {
+
+        // TODO: Improve this styling.
+        background-color: aquamarine;
+    }
 }
 
 .VerseTracker__inSlider {
-    width: 200%;
+    // width: 200%;
     left: -100%;
 
     .RM__isPlaying
@@ -16,16 +23,16 @@
         left: 0;
 
         // TODO: Improve this styling.
-        background: linear-gradient(
-            90deg,
-            black,
-            transparent
-        );
+        // background: linear-gradient(
+        //     90deg,
+        //     black,
+        //     transparent
+        // );
     }
 }
 
 .VerseTracker__inLyric {
-    height: 200%;
+    // height: 200%;
     top: -100%;
 
     .RM__isPlaying
@@ -33,9 +40,9 @@
         top: 0;
 
         // TODO: Improve this styling.
-        background: linear-gradient(
-            black,
-            transparent
-        );
+        // background: linear-gradient(
+        //     black,
+        //     transparent
+        // );
     }
 }

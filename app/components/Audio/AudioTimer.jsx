@@ -7,6 +7,7 @@ import cx from 'classnames'
 
 import { getSongIsLogue } from 'helpers/dataHelper'
 import { getFormattedTime } from 'helpers/formatHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex },
@@ -25,6 +26,13 @@ class AudioTimer extends Component {
 
         // From parent.
         isTitleTimer: PropTypes.bool
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {

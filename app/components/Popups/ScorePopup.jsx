@@ -1,10 +1,12 @@
 // Popup container for score section.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Score from 'components/Score/Score'
 import Popup from 'components/Popup/Popup'
+
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex },
@@ -14,41 +16,50 @@ const mapStateToProps = ({
     selectedScoreIndex
 })
 
-const scorePopupPropTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
+class ScorePopup extends Component {
 
-    // From props.
-    handleScoreToggle: PropTypes.func.isRequired
-},
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedScoreIndex: PropTypes.number.isRequired,
 
-ScorePopup = ({
-    /* eslint-disable no-unused-vars */
-    selectedSongIndex,
-    dispatch,
-    /* eslint-enable no-unused-vars */
+        // From props.
+        handleScoreToggle: PropTypes.func.isRequired
+    }
 
-    selectedScoreIndex,
-    handleScoreToggle,
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-...other }) => {
+    render() {
+        const {
+                /* eslint-disable no-unused-vars */
+                selectedSongIndex,
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-    const isVisible = Boolean(selectedScoreIndex)
+                selectedScoreIndex,
+                handleScoreToggle,
 
-    return (
-        <Popup
-            isFullSize
-            displaysInOverlay
-            popupName="Score"
-            isVisible={isVisible}
-            handleCloseClick={handleScoreToggle}
-        >
-            <Score {...other} />
-        </Popup>
-    )
+            ...other } = this.props,
+
+            isVisible = Boolean(selectedScoreIndex)
+
+        return (
+            <Popup
+                isFullSize
+                displaysInOverlay
+                popupName="Score"
+                isVisible={isVisible}
+                handleCloseClick={handleScoreToggle}
+            >
+                <Score {...other} />
+            </Popup>
+        )
+    }
 }
-
-ScorePopup.propTypes = scorePopupPropTypes
 
 export default connect(mapStateToProps)(ScorePopup)
