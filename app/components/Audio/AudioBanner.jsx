@@ -10,7 +10,7 @@ import { getSongTitle } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     isTwoRowMenu,
-    selectedSongIndex
+    selectedStore: { selectedSongIndex }
 }) => ({
     isTwoRowMenu,
     selectedSongIndex

@@ -7,7 +7,7 @@ import NavButton from './NavButton'
 
 const mapStateToProps = ({
     selectedAccessIndex,
-    selectedSongIndex,
+    selectedStore: { selectedSongIndex },
     selectedDotsIndex,
     accessedNavSongIndex,
 }) => ({

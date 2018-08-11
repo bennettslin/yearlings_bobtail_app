@@ -129,13 +129,15 @@ class RenderManager extends Component {
 
 const mapStateToProps = ({
     appMounted,
-    deviceStore,
-    selectedAnnotationIndex,
-    selectedSongIndex,
-    selectedVerseIndex
+    deviceStore: { deviceIndex },
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    }
 }) => ({
     appMounted,
-    deviceIndex: deviceStore.deviceIndex,
+    deviceIndex,
     selectedAnnotationIndex,
     selectedSongIndex,
     selectedVerseIndex

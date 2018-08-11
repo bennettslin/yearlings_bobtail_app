@@ -1,8 +1,32 @@
 // Actions for state persisted in user's local storage.
-import { SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_ANNOTATION_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_SONG_INDEX, SELECTED_TIME_PLAYED, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_VERSE_INDEX, SELECTED_WIKI_INDEX } from 'constants/state'
-
+import { is } from './actionsHelper'
 import StorageHelper from '../storageHelper'
-const { setInStorage, setDotInStorage } = StorageHelper
+
+const {
+    setInStorage,
+    setDotInStorage
+} = StorageHelper
+
+import { SELECTED_STORE, SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_TIME_PLAYED, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX } from 'constants/state'
+
+import { SELECTED_DEFAULTS } from '../defaultConstants'
+
+export const updateSelectedStore = ({
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    selectedVerseIndex
+
+} = SELECTED_DEFAULTS) => {
+
+    return {
+        type: SELECTED_STORE,
+        payload: {
+            ...is(selectedSongIndex) && { selectedSongIndex },
+            ...is(selectedAnnotationIndex) && { selectedAnnotationIndex },
+            ...is(selectedVerseIndex) && { selectedVerseIndex }
+        }
+    }
+}
 
 export const selectAccessIndex = (selectedAccessIndex = 0) => {
     setInStorage(SELECTED_ACCESS_INDEX, selectedAccessIndex)
@@ -14,12 +38,6 @@ export const selectAdminIndex = (selectedAdminIndex = 0) => {
     setInStorage(SELECTED_ADMIN_INDEX, selectedAdminIndex)
     return { type: SELECTED_ADMIN_INDEX,
              payload: selectedAdminIndex }
-}
-
-export const selectAnnotationIndex = (selectedAnnotationIndex = 0) => {
-    setInStorage(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex)
-    return { type: SELECTED_ANNOTATION_INDEX,
-             payload: selectedAnnotationIndex }
 }
 
 export const selectAudioOptionIndex = (selectedAudioOptionIndex = 0) => {
@@ -66,12 +84,6 @@ export const selectScoreIndex = (selectedScoreIndex = 0) => {
              payload: selectedScoreIndex }
 }
 
-export const selectSongIndex = (selectedSongIndex = 0) => {
-    setInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
-    return { type: SELECTED_SONG_INDEX,
-             payload: selectedSongIndex }
-}
-
 // Keep in Redux for now, but perhaps scrap later.
 export const selectTimePlayed = (selectedTimePlayed = 0) => {
     setInStorage(SELECTED_TIME_PLAYED, selectedTimePlayed)
@@ -89,12 +101,6 @@ export const selectTitleIndex = (selectedTitleIndex = 0) => {
     setInStorage(SELECTED_TITLE_INDEX, selectedTitleIndex)
     return { type: SELECTED_TITLE_INDEX,
              payload: selectedTitleIndex }
-}
-
-export const selectVerseIndex = (selectedVerseIndex = 0) => {
-    setInStorage(SELECTED_VERSE_INDEX, selectedVerseIndex)
-    return { type: SELECTED_VERSE_INDEX,
-             payload: selectedVerseIndex }
 }
 
 export const selectWikiIndex = (selectedWikiIndex = 0) => {

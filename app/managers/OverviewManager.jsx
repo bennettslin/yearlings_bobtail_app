@@ -134,12 +134,14 @@ class OverviewManager extends Component {
 
 const mapStateToProps = ({
     isLyricExpanded,
-    selectedAnnotationIndex,
+    selectedStore: {
+        selectedSongIndex,
+        selectedAnnotationIndex
+    },
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedOverviewIndex,
     selectedScoreIndex,
-    selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
     selectedWikiIndex

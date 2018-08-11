@@ -7,7 +7,7 @@ import Score from 'components/Score/Score'
 import Popup from 'components/Popup/Popup'
 
 const mapStateToProps = ({
-    selectedSongIndex,
+    selectedStore: { selectedSongIndex },
     selectedScoreIndex
 }) => ({
     selectedSongIndex,

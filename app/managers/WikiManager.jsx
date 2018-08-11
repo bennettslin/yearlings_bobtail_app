@@ -51,7 +51,7 @@ class WikiManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedSongIndex
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })

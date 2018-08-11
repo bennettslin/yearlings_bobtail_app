@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectSongIndex } from 'flux/actions/storage'
+import { updateSelectedStore } from 'flux/actions/storage'
 
 import { CONTINUE,
          PAUSE_AT_END,
@@ -20,7 +20,7 @@ class SongManager extends Component {
         // Through Redux.
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectSongIndex: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -105,7 +105,11 @@ class SongManager extends Component {
             selectedSongIndex
         })
 
-        props.selectSongIndex(selectedSongIndex)
+        props.updateSelectedStore({
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        })
 
         /**
          * This is the only place where router path will change based on a new
@@ -129,7 +133,7 @@ class SongManager extends Component {
 
 const mapStateToProps = ({
     selectedAudioOptionIndex,
-    selectedSongIndex
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedAudioOptionIndex,
     selectedSongIndex
@@ -137,7 +141,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectSongIndex
+        updateSelectedStore
     }, dispatch)
 )
 

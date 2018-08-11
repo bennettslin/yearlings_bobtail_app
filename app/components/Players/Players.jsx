@@ -11,7 +11,7 @@ import { convertBitNumberToTrueFalseKeys } from 'helpers/bitHelper'
 import { getNextPlayerToRender } from './playersHelper'
 
 const mapStateToProps = ({
-    selectedSongIndex,
+    selectedStore: { selectedSongIndex },
     canPlayThroughs
 }) => ({
     selectedSongIndex,

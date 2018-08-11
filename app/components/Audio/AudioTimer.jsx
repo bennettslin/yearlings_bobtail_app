@@ -9,7 +9,7 @@ import { getSongIsLogue } from 'helpers/dataHelper'
 import { getFormattedTime } from 'helpers/formatHelper'
 
 const mapStateToProps = ({
-    selectedSongIndex,
+    selectedStore: { selectedSongIndex },
     selectedTimePlayed
 }) => ({
     selectedSongIndex,

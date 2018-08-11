@@ -1,5 +1,5 @@
 // Reducers for state persisted in user's local storage.
-import { SELECTED_STORE, SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_ANNOTATION_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_SONG_INDEX, SELECTED_TIME_PLAYED, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_VERSE_INDEX, SELECTED_WIKI_INDEX } from 'constants/state'
+import { SELECTED_STORE, SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_TIME_PLAYED, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX } from 'constants/state'
 import StorageHelper from '../storageHelper'
 
 import { SELECTED_DEFAULTS } from '../defaultConstants'
@@ -7,7 +7,6 @@ import { SELECTED_DEFAULTS } from '../defaultConstants'
 const { getFromStorage } = StorageHelper,
     storedAccessIndex = getFromStorage(SELECTED_ACCESS_INDEX),
     storedAdminIndex = getFromStorage(SELECTED_ADMIN_INDEX),
-    storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
     storedAudioOptionIndex = getFromStorage(SELECTED_AUDIO_OPTION_INDEX),
     storedCarouselNavIndex = getFromStorage(SELECTED_CAROUSEL_NAV_INDEX),
     storedDotKeys = getFromStorage(SELECTED_DOT_KEYS),
@@ -15,11 +14,9 @@ const { getFromStorage } = StorageHelper,
     storedLyricColumnIndex = getFromStorage(SELECTED_LYRIC_COLUMN_INDEX),
     storedOverviewIndex = getFromStorage(SELECTED_OVERVIEW_INDEX),
     storedScoreIndex = getFromStorage(SELECTED_SCORE_INDEX),
-    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
     storedTime = getFromStorage(SELECTED_TIME_PLAYED),
     storedTipsIndex = getFromStorage(SELECTED_TIPS_INDEX),
     storedTitleIndex = getFromStorage(SELECTED_TITLE_INDEX),
-    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
     storedWikiIndex = getFromStorage(SELECTED_WIKI_INDEX)
 
 export const SelectedStoreReducer = (
@@ -49,15 +46,6 @@ export const AccessIndexReducer = (state = storedAccessIndex, action) => {
 export const AdminIndexReducer = (state = storedAdminIndex, action) => {
     switch (action.type) {
         case SELECTED_ADMIN_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const AnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
-    switch (action.type) {
-        case SELECTED_ANNOTATION_INDEX:
             return action.payload
         default:
             return state
@@ -133,15 +121,6 @@ export const ScoreIndexReducer = (state = storedScoreIndex, action) => {
     }
 }
 
-export const SongIndexReducer = (state = storedSongIndex, action) => {
-    switch (action.type) {
-        case SELECTED_SONG_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
 // Keep in Redux for now, but perhaps scrap later.
 export const TimeReducer = (state = storedTime, action) => {
     switch (action.type) {
@@ -164,15 +143,6 @@ export const TipsIndexReducer = (state = storedTipsIndex, action) => {
 export const TitleIndexReducer = (state = storedTitleIndex, action) => {
     switch (action.type) {
         case SELECTED_TITLE_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const VerseIndexReducer = (state = storedVerseIndex, action) => {
-    switch (action.type) {
-        case SELECTED_VERSE_INDEX:
             return action.payload
         default:
             return state

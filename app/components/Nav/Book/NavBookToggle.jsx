@@ -9,7 +9,7 @@ import NavButton from '../NavButton'
 import { getBookColumnIndex } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
-    selectedSongIndex
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })

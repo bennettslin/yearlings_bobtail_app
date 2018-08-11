@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectVerseIndex } from 'flux/actions/storage'
+import { updateSelectedStore } from 'flux/actions/storage'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -13,7 +13,7 @@ class TimeManager extends Component {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        selectVerseIndex: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -36,8 +36,10 @@ class TimeManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedSongIndex,
-    selectedVerseIndex
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex
+    }
 }) => ({
     selectedSongIndex,
     selectedVerseIndex
@@ -45,7 +47,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectVerseIndex
+        updateSelectedStore
     }, dispatch)
 )
 

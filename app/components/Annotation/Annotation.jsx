@@ -14,11 +14,11 @@ import { getAccessibleAnnotationAnchorsLength } from './annotationHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderableStore,
+    renderableStore: { renderableSongIndex },
     selectedDotKeys
 }) => ({
     canCarouselRender,
-    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableSongIndex,
     selectedDotKeys
 })
 

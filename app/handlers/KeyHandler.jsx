@@ -693,7 +693,47 @@ class KeyHandler extends Component {
 }
 
 export default connect(({
-    isHeightlessLyricColumn, isLyricExpanded, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    isHeightlessLyricColumn,
+    isLyricExpanded,
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    },
+    selectedAccessIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    selectedDotKeys,
+    selectedOverviewIndex,
+    selectedTipsIndex,
+    selectedScoreIndex,
+    selectedWikiIndex,
+    accessedAnnotationIndex,
+    accessedAnnotationAnchorIndex,
+    accessedDotIndex,
+    accessedNavSongIndex,
+    interactivatedVerseIndex,
+    shownBookColumnIndex,
+    deviceIndex
 }) => ({
-    isHeightlessLyricColumn, isLyricExpanded, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    isHeightlessLyricColumn,
+    isLyricExpanded,
+    selectedAccessIndex,
+    selectedAnnotationIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    selectedDotKeys,
+    selectedOverviewIndex,
+    selectedTipsIndex,
+    selectedScoreIndex,
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedWikiIndex,
+    accessedAnnotationIndex,
+    accessedAnnotationAnchorIndex,
+    accessedDotIndex,
+    accessedNavSongIndex,
+    interactivatedVerseIndex,
+    shownBookColumnIndex,
+    deviceIndex
 }))(KeyHandler)

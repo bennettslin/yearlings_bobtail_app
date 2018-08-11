@@ -33,7 +33,7 @@ const mapStateToProps = ({
     isPlaying,
     canPlayThroughs,
     selectedAudioOptionIndex,
-    selectedSongIndex
+    selectedStore: { selectedSongIndex }
 }) => ({
     isPlaying,
     canPlayThroughs,

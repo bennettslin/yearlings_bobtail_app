@@ -7,7 +7,7 @@ import { setUpdatedTimePlayed } from 'flux/actions/audio'
 import { updateRenderableStore } from 'flux/actions/renderable'
 import {
     selectTimePlayed,
-    selectVerseIndex
+    updateSelectedStore
 } from 'flux/actions/storage'
 
 import { VERSE_SCROLL } from 'constants/dom'
@@ -20,16 +20,6 @@ import {
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-const mapStateToProps = ({
-    isManualScroll,
-    selectedSongIndex,
-    selectedVerseIndex
-}) => ({
-    isManualScroll,
-    selectedSongIndex,
-    selectedVerseIndex
-})
-
 class TimeVerseManager extends Component {
 
     static propTypes = {
@@ -39,9 +29,9 @@ class TimeVerseManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         updateRenderableStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
         setUpdatedTimePlayed: PropTypes.func.isRequired,
         selectTimePlayed: PropTypes.func.isRequired,
-        selectVerseIndex: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -147,7 +137,10 @@ class TimeVerseManager extends Component {
          * by either one.
          */
 
-        props.selectVerseIndex(selectedVerseIndex)
+        props.updateSelectedStore({
+            selectedVerseIndex
+        })
+
         props.selectTimePlayed(selectedTimePlayed)
 
         /**
@@ -222,12 +215,24 @@ class TimeVerseManager extends Component {
     }
 }
 
+const mapStateToProps = ({
+    isManualScroll,
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex
+    }
+}) => ({
+    isManualScroll,
+    selectedSongIndex,
+    selectedVerseIndex
+})
+
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateRenderableStore,
+        updateSelectedStore,
         setUpdatedTimePlayed,
-        selectTimePlayed,
-        selectVerseIndex
+        selectTimePlayed
     }, dispatch)
 )
 

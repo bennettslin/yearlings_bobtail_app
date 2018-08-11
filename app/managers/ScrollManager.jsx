@@ -219,13 +219,16 @@ class ScrollManager extends Component {
 const mapStateToProps = ({
     isLyricExpanded,
     isHiddenCarouselNav,
-    deviceStore,
-    selectedSongIndex
+    deviceStore: {
+        deviceIndex,
+        windowWidth
+    },
+    selectedStore: { selectedSongIndex }
 }) => ({
     isLyricExpanded,
     isHiddenCarouselNav,
-    deviceIndex: deviceStore.deviceIndex,
-    windowWidth: deviceStore.windowWidth,
+    deviceIndex,
+    windowWidth,
     selectedSongIndex
 })
 

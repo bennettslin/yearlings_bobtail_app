@@ -98,7 +98,7 @@ AdminNavSectionView.propTypes = {
 }
 
 export default connect(({
-    selectedSongIndex
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 }))(AdminNavSection)

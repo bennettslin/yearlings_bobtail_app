@@ -195,8 +195,10 @@ const mapStateToProps = ({
     isLyricExpanded,
     isHeightlessLyricColumn,
     interactivatedVerseIndex,
-    selectedSongIndex,
-    selectedVerseIndex,
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex
+    },
     sliderStore
 }) => ({
     deviceIndex: deviceStore.deviceIndex,

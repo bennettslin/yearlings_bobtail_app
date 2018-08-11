@@ -127,8 +127,8 @@ class AudioManager extends Component {
 const mapStateToProps = ({
     isPlaying,
     canPlayThroughs,
+    selectedStore: { selectedSongIndex },
     selectedAudioOptionIndex,
-    selectedSongIndex,
     selectedTimePlayed
 }) => ({
     isPlaying,

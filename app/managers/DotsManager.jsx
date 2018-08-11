@@ -94,7 +94,7 @@ class DotsManager extends Component {
 const mapStateToProps = ({
     selectedDotsIndex,
     selectedDotKeys,
-    selectedSongIndex
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedDotsIndex,
     selectedDotKeys,

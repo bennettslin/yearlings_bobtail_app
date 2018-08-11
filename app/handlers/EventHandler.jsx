@@ -1021,15 +1021,17 @@ class EventHandler extends Component {
 }
 
 const mapStateToProps = ({
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    },
     selectedAdminIndex,
-    selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
     selectedScoreIndex,
-    selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
-    selectedVerseIndex,
     selectedWikiIndex,
     interactivatedVerseIndex,
     accessedAnnotationIndex,

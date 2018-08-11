@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import StateManager from './StateManager'
 
 import {
-    selectSongIndex,
-    selectAnnotationIndex,
-    selectVerseIndex,
     selectWikiIndex,
-    selectTimePlayed
+    selectTimePlayed,
+    updateSelectedStore
 } from 'flux/actions/storage'
 
 import { getTimeForVerseIndex } from 'helpers/dataHelper'
@@ -16,6 +15,17 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getValidRoutingIndicesObject, getPathForIndices } from 'helpers/routingHelper'
 
 class RoutingManager extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+
+        updateSelectedStore: PropTypes.func.isRequired,
+        selectWikiIndex: PropTypes.func.isRequired,
+        selectTimePlayed: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -46,14 +56,13 @@ class RoutingManager extends Component {
             selectedVerseIndex = routingVerseIndex
             selectedAnnotationIndex = routingAnnotationIndex
 
-            props.selectSongIndex(routingSongIndex)
+            props.updateSelectedStore({
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            })
 
-            // Store verse index and time played.
-            props.selectVerseIndex(routingVerseIndex)
             props.selectTimePlayed(routingTimePlayed)
-
-            // Store annotation index.
-            props.selectAnnotationIndex(routingAnnotationIndex)
 
             // Reset wiki.
             props.selectWikiIndex(0)
@@ -117,7 +126,7 @@ class RoutingManager extends Component {
 
     render() {
         return (
-            <StateManager {...this.props}
+            <StateManager
                 updatePath={this.updatePath}
             />
         )
@@ -125,9 +134,11 @@ class RoutingManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedAnnotationIndex
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    }
 }) => ({
     selectedSongIndex,
     selectedVerseIndex,
@@ -137,9 +148,7 @@ const mapStateToProps = ({
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAnnotationIndex,
-        selectSongIndex,
-        selectVerseIndex,
+        updateSelectedStore,
         selectWikiIndex,
         selectTimePlayed
     }, dispatch)

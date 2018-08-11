@@ -121,14 +121,20 @@ class SliderVerseManager extends Component {
 }
 
 const mapStateToProps = ({
-    sliderStore,
-    selectedSongIndex
+    sliderStore: {
+        isSliderTouched,
+        isSliderMoving,
+        sliderLeft,
+        sliderWidth,
+        sliderVerseIndex
+    },
+    selectedStore: { selectedSongIndex }
 }) => ({
-    isSliderTouched: sliderStore.isSliderTouched,
-    isSliderMoving: sliderStore.isSliderMoving,
-    sliderLeft: sliderStore.sliderLeft,
-    sliderWidth: sliderStore.sliderWidth,
-    sliderVerseIndex: sliderStore.sliderVerseIndex,
+    isSliderTouched,
+    isSliderMoving,
+    sliderLeft,
+    sliderWidth,
+    sliderVerseIndex,
     selectedSongIndex
 })
 

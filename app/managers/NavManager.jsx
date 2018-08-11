@@ -87,7 +87,7 @@ const mapStateToProps = ({
     showSingleBookColumn,
     shownBookColumnIndex,
     selectedCarouselNavIndex,
-    selectedSongIndex
+    selectedStore: { selectedSongIndex }
 }) => ({
     showSingleBookColumn,
     shownBookColumnIndex,

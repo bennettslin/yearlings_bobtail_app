@@ -133,12 +133,14 @@ class TipsManager extends Component {
 
 const mapStateToProps = ({
     isLyricExpanded,
-    selectedAnnotationIndex,
+    selectedStore: {
+        selectedSongIndex,
+        selectedAnnotationIndex
+    },
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedOverviewIndex,
     selectedScoreIndex,
-    selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
     selectedWikiIndex

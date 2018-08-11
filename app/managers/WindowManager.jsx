@@ -220,7 +220,7 @@ class WindowManager extends Component {
 
 const mapStateToProps = ({
     appMounted,
-    selectedSongIndex,
+    selectedStore: { selectedSongIndex },
     showOneOfTwoLyricColumns
 }) => ({
     appMounted,

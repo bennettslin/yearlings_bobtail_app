@@ -9,7 +9,7 @@ import {
 } from 'flux/actions/access'
 
 import { updateRenderableStore } from 'flux/actions/renderable'
-import { selectAnnotationIndex } from 'flux/actions/storage'
+import { updateSelectedStore } from 'flux/actions/storage'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -35,8 +35,8 @@ class AnnotationManager extends Component {
 
         accessAnnotationIndex: PropTypes.func.isRequired,
         accessAnnotationAnchorIndex: PropTypes.func.isRequired,
-        selectAnnotationIndex: PropTypes.func.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -123,7 +123,9 @@ class AnnotationManager extends Component {
             )
         }
 
-        props.selectAnnotationIndex(selectedAnnotationIndex)
+        props.updateSelectedStore({
+            selectedAnnotationIndex
+        })
 
         /**
          * If selecting or changing annotation in same song, change index to
@@ -252,13 +254,14 @@ class AnnotationManager extends Component {
 
 const mapStateToProps = ({
     deviceStore,
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    selectedVerseIndex,
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    },
     accessedAnnotationAnchorIndex,
     selectedDotKeys,
     selectedLyricColumnIndex,
-
 }) => ({
     deviceIndex: deviceStore.deviceIndex,
     selectedSongIndex,
@@ -266,16 +269,15 @@ const mapStateToProps = ({
     selectedVerseIndex,
     accessedAnnotationAnchorIndex,
     selectedDotKeys,
-    selectedLyricColumnIndex,
-
+    selectedLyricColumnIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         accessAnnotationIndex,
         accessAnnotationAnchorIndex,
-        selectAnnotationIndex,
-        updateRenderableStore
+        updateRenderableStore,
+        updateSelectedStore
     }, dispatch)
 )
 
