@@ -12,7 +12,7 @@ import {
     getSongTotalTime
 } from 'helpers/dataHelper'
 
-// import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getCanPlayThroughsObject,
@@ -53,18 +53,18 @@ class Players extends Component {
         }
     }
 
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     return !getPropsAreShallowEqual({
-    //         props: this.props,
-    //         nextProps
-    //     }) || !getPropsAreShallowEqual({
-    //         props: this.state,
-    //         nextProps: nextState
-    //     })
-    // }
-
     componentDidMount() {
-        this._updateCanPlayThroughsObject(this.props)
+        this._updateCanPlayThroughsObject()
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextProps: nextState
+        })
     }
 
     componentDidUpdate(prevProps) {
@@ -74,19 +74,24 @@ class Players extends Component {
          * calculate which player is next in line to be newly rendered.
          */
         if (this.props.canPlayThroughs !== prevProps.canPlayThroughs) {
-            this._updateCanPlayThroughsObject(this.props)
+            this._updateCanPlayThroughsObject()
         }
     }
 
-    _updateCanPlayThroughsObject(props) {
-        const canPlayThroughsObject = getCanPlayThroughsObject(
-            props.canPlayThroughs
-        )
+    _updateCanPlayThroughsObject() {
+        const {
+                canPlayThroughs,
+                selectedSongIndex
+            } = this.props,
+
+            canPlayThroughsObject = getCanPlayThroughsObject(
+                canPlayThroughs
+            )
 
         this.setState({
             canPlayThroughsObject,
             nextPlayerToRender: getNextPlayerSongIndexToRender(
-                    props.selectedSongIndex,
+                    selectedSongIndex,
                     canPlayThroughsObject
                 )
         })
