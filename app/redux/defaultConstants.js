@@ -51,6 +51,12 @@ export const RENDERABLE_DEFAULTS = {
     )
 }
 
+export const SELECTED_DEFAULTS = {
+    [SELECTED_SONG_INDEX]: storedSongIndex,
+    [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
+    [SELECTED_VERSE_INDEX]: storedVerseIndex
+}
+
 export const SLIDER_DEFAULTS = {
     [IS_SLIDER_MOVING]: false,
     [IS_SLIDER_TOUCHED]: false,
