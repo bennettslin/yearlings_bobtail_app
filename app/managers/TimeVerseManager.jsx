@@ -13,9 +13,9 @@ import {
 import { VERSE_SCROLL } from 'constants/dom'
 
 import {
-    getTimeForVerseIndex,
     getVerseIndexForTime,
-    getSceneIndexForVerseIndex
+    getSceneIndexForVerseIndex,
+    getTimeForVerseIndex
 } from 'helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -37,6 +37,7 @@ class TimeVerseManager extends Component {
         setRef: PropTypes.func.isRequired,
         determineVerseBars: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
+        updateSelectedPlayer: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
 
@@ -181,14 +182,6 @@ class TimeVerseManager extends Component {
             })
         }
 
-        /**
-         * If time was not changed by the audio element advancing, tell player
-         * to update audio element's time.
-         */
-        if (!isPlayerAdvancing) {
-            props.setUpdatedTimePlayed(selectedTimePlayed)
-        }
-
         // Render verse and scene immediately.
         if (renderVerseImmediately) {
             const { selectedSongIndex } = props
@@ -203,15 +196,26 @@ class TimeVerseManager extends Component {
             })
         }
 
-        /**
-         * This is the only place where router path will change based on a new
-         * verse index for the same song.
-         */
         if (selectedSongIndex === this.props.selectedSongIndex) {
+            /**
+             * This is the only place where router path will change based on a
+             * new verse index for the same song.
+             */
             props.updatePath({
                 selectedSongIndex,
                 selectedVerseIndex
             })
+
+            /**
+             * This is the only place where selected player will be updated
+             * based on a new verse index for the same song.
+             */
+            if (!isPlayerAdvancing) {
+                props.updateSelectedPlayer({
+                    selectedSongIndex,
+                    selectedVerseIndex
+                })
+            }
         }
     }
 

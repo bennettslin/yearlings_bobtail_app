@@ -15,7 +15,8 @@ import { setNewValueInBitNumber } from 'helpers/bitHelper'
 import {
     getMp3s,
     getSongTotalTime,
-    getSongsNotLoguesCount
+    getSongsNotLoguesCount,
+    getTimeForVerseIndex
 } from 'helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -23,22 +24,33 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     getCanPlayThroughsObject,
     getNextPlayerSongIndexToRender
-} from './playersHelper'
+} from './playerManagerHelper'
 
 const mapStateToProps = ({
-    selectedStore: { selectedSongIndex },
+    isPlaying,
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex
+    },
     canPlayThroughs
 }) => ({
+    isPlaying,
     selectedSongIndex,
+    selectedVerseIndex,
     canPlayThroughs
 })
 
-class Players extends Component {
+class PlayerManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        isPlaying: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        canPlayThroughs: PropTypes.number.isRequired
+        selectedVerseIndex: PropTypes.number.isRequired,
+        canPlayThroughs: PropTypes.number.isRequired,
+
+        // From parent.
+        setRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -58,10 +70,14 @@ class Players extends Component {
             nextPlayerToRender: -1
         }
 
+        // Initialise player refs.
+        this.myPlayers = {}
+        this.setPlayerRef = this.setPlayerRef.bind(this)
         this.setPlayerCanPlayThrough = this.setPlayerCanPlayThrough.bind(this)
     }
 
     componentDidMount() {
+        this.props.setRef(this)
         this._updateCanPlayThroughsObject()
     }
 
@@ -83,6 +99,64 @@ class Players extends Component {
          */
         if (this.props.canPlayThroughs !== prevProps.canPlayThroughs) {
             this._updateCanPlayThroughsObject()
+        }
+
+        /**
+         * Handle when playing is toggled on or off.
+         */
+        const {
+                isPlaying,
+                selectedSongIndex
+            } = this.props,
+            {
+                isPlaying: wasPlaying
+            } = prevProps
+
+        // Handle pause.
+        if (!isPlaying && wasPlaying) {
+            this.myPlayers[selectedSongIndex].handleEndPlaying(
+                this.getCurrentTimeForSongIndex(selectedSongIndex)
+            )
+
+        // Handle playing toggled on.
+        } else if (isPlaying && !wasPlaying) {
+            this.myPlayers[selectedSongIndex].handleBeginPlaying()
+        }
+    }
+
+    updateSelectedPlayer({
+        selectedSongIndex: nextSongIndex,
+        selectedVerseIndex: nextVerseIndex
+    }) {
+        /**
+         * If user manually changes song or verse, update the player's current
+         * time. This allows the player not to have to watch for these changes
+         * itself, which is needed because it can't tell the difference between
+         * manual and automatic verse changes.
+         */
+        const {
+                selectedSongIndex,
+                isPlaying
+            } = this.props,
+
+            nextCurrentTime = getTimeForVerseIndex(
+                nextSongIndex,
+                nextVerseIndex
+            )
+
+        // Update selected player's current time.
+        this.myPlayers[nextSongIndex]
+            .setCurrentTime(nextCurrentTime)
+
+        // If song was changed, also reset the previous player's current time.
+        if (selectedSongIndex !== nextSongIndex) {
+            this.myPlayers[selectedSongIndex].setCurrentTime()
+
+            // If playing, toggle play and pause for respective players.
+            if (isPlaying) {
+                this.myPlayers[nextSongIndex].handleBeginPlaying()
+                this.myPlayers[selectedSongIndex].handleEndPlaying()
+            }
         }
     }
 
@@ -137,12 +211,38 @@ class Players extends Component {
         this.props.setCanPlayThroughs(newBitNumber)
     }
 
+    setPlayerRef(node, songIndex) {
+        this.myPlayers[songIndex] = node
+
+        this.myPlayers[songIndex].setCurrentTime(
+            this.getCurrentTimeForSongIndex(songIndex)
+        )
+    }
+
+    getCurrentTimeForSongIndex(songIndex) {
+        const {
+            selectedSongIndex,
+            selectedVerseIndex
+        } = this.props
+
+        return songIndex === selectedSongIndex ?
+
+            // If player is selected, get current time from selected verse.
+            getTimeForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+
+            // Otherwise, set it to zero.
+            ) : 0
+    }
+
     render() {
 
         const {
                 /* eslint-disable no-unused-vars */
                 canPlayThroughs,
                 selectedSongIndex,
+                setCanPlayThroughs,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -168,6 +268,7 @@ class Players extends Component {
                                 mp3,
                                 songIndex,
                                 totalTime,
+                                setPlayerRef: this.setPlayerRef,
                                 setPlayerCanPlayThrough:
                                     this.setPlayerCanPlayThrough
                             }}
@@ -186,4 +287,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(Players)
+export default connect(mapStateToProps, bindDispatchToProps)(PlayerManager)

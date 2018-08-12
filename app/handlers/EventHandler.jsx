@@ -314,21 +314,6 @@ class EventHandler extends Component {
         return optionSelected
     }
 
-    /****************
-     * AUDIO PLAYER *
-     ****************/
-
-    handlePlayerTimeChange(time) {
-        this.props.selectTime({
-            selectedTimePlayed: time,
-            isPlayerAdvancing: true
-        })
-    }
-
-    handlePlayerNextSong(e) {
-        this.props.advanceToNextSong(e)
-    }
-
     /************
      * CAROUSEL *
      ************/

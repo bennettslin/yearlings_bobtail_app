@@ -23,9 +23,6 @@ export const bindHandlers = (me) => {
     me.handleAudioOptionsToggle = me.handleAudioOptionsToggle.bind(me)
     me.handleSliderTouchBegin = me.handleSliderTouchBegin.bind(me)
 
-    me.handlePlayerTimeChange = me.handlePlayerTimeChange.bind(me)
-    me.handlePlayerNextSong = me.handlePlayerNextSong.bind(me)
-
     me.handleDotSelect = me.handleDotSelect.bind(me)
     me.handleDotsSectionToggle = me.handleDotsSectionToggle.bind(me)
     me.handleLyricSectionExpand = me.handleLyricSectionExpand.bind(me)
@@ -90,8 +87,6 @@ export const getHandlers = (me) => {
         handleAudioNextSong: me.handleAudioNextSong,
         handleAudioOptionsToggle: me.handleAudioOptionsToggle,
         handleSliderTouchBegin: me.handleSliderTouchBegin,
-        handlePlayerTimeChange: me.handlePlayerTimeChange,
-        handlePlayerNextSong: me.handlePlayerNextSong,
         handleDotSelect: me.handleDotSelect,
         handleDotsSectionToggle: me.handleDotsSectionToggle,
         handleLyricSectionExpand: me.handleLyricSectionExpand,

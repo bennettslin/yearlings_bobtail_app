@@ -12,6 +12,7 @@ import { CONTINUE,
 import {
     getSongsAndLoguesCount
 } from 'helpers/dataHelper'
+
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class SongManager extends Component {
@@ -27,6 +28,7 @@ class SongManager extends Component {
         togglePlay: PropTypes.func.isRequired,
         selectAnnotation: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
+        updateSelectedPlayer: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
 
@@ -73,9 +75,9 @@ class SongManager extends Component {
 
     selectSong({
         selectedSongIndex = 0,
-        direction,
-        selectedAnnotationIndex = 0,
         selectedVerseIndex = 0,
+        selectedAnnotationIndex = 0,
+        direction,
         destinationWormholeIndex
     }) {
         const { props } = this
@@ -113,15 +115,24 @@ class SongManager extends Component {
             selectedAnnotationIndex
         })
 
-        /**
-         * This is the only place where router path will change based on a new
-         * song.
-         */
         if (selectedSongIndex !== this.props.selectedSongIndex) {
+            /**
+             * This is the only place where router path will change based on a
+             * new song.
+             */
             props.updatePath({
                 selectedSongIndex,
                 selectedVerseIndex,
                 selectedAnnotationIndex
+            })
+
+            /**
+             * This is the only place where selected player will be updated
+             * based on a new song.
+             */
+            props.updateSelectedPlayer({
+                selectedSongIndex,
+                selectedVerseIndex
             })
         }
 

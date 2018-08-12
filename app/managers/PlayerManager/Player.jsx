@@ -1,12 +1,8 @@
 // Hidden component to wrap an audio DOM element.
 
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
-
-import { getTimeForVerseIndex } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 
@@ -16,36 +12,17 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const LISTEN_INTERVAL = 100
 
-const mapStateToProps = ({
-    isPlaying,
-    updatedTimePlayed,
-    selectedStore: {
-        selectedSongIndex,
-        selectedVerseIndex
-    }
-}) => ({
-    isPlaying,
-    updatedTimePlayed,
-    selectedSongIndex,
-    selectedVerseIndex
-})
-
 class Player extends Component {
 
     static propTypes = {
-        // Through Redux.
-        isPlaying: PropTypes.bool.isRequired,
-        // updatedTimePlayed: PropTypes.number,
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
-
         // From parent.
         mp3: PropTypes.string.isRequired,
         songIndex: PropTypes.number.isRequired,
         totalTime: PropTypes.number.isRequired,
-        handlePlayerTimeChange: PropTypes.func.isRequired,
-        handlePlayerNextSong: PropTypes.func.isRequired,
-        setPlayerCanPlayThrough: PropTypes.func.isRequired
+        selectTime: PropTypes.func.isRequired,
+        advanceToNextSong: PropTypes.func.isRequired,
+        setPlayerCanPlayThrough: PropTypes.func.isRequired,
+        setPlayerRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -61,32 +38,13 @@ class Player extends Component {
         }
     }
 
-    shouldComponentUpdate(nextProps) {
-        const {
-                selectedSongIndex: nextSongIndex
-            } = nextProps
-
-        // No point in updating if it remains unselected.
-        if (
-            !this._getIsSelected() &&
-            !this._getIsSelected(nextSongIndex)
-        ) {
-            return false
-        }
-
-        const shouldComponentUpdate = !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
-
-        return shouldComponentUpdate
+    shouldComponentUpdate() {
+        return false
     }
 
     componentDidMount() {
         this.myPlayer = this.myReactPlayer.audioEl
-
-        // Set initial time.
-        this._setCurrentTime()
+        this.props.setPlayerRef(this, this.props.songIndex)
 
         // Tell app that player can now be played without interruption.
         this.myPlayer.addEventListener(
@@ -105,44 +63,6 @@ class Player extends Component {
         )
     }
 
-    componentDidUpdate(prevProps) {
-        const {
-                isPlaying,
-                selectedVerseIndex
-            } = this.props,
-            {
-                selectedSongIndex: prevSongIndex,
-                selectedVerseIndex: prevVerseIndex,
-                isPlaying: wasPlaying
-            } = prevProps,
-
-            isSelected = this._getIsSelected(),
-            wasSelected = this._getIsSelected(prevSongIndex)
-
-        // Handle pause or no longer selected.
-        if (
-            !isSelected && wasSelected ||
-            !isPlaying && wasPlaying
-        ) {
-            this._handleEndPlaying(isSelected)
-        }
-
-        // Handle playing if selected.
-        if (
-            isSelected &&
-            isPlaying && !wasPlaying
-        ) {
-            this._handleBeginPlaying()
-        }
-
-        if (
-            isSelected &&
-            selectedVerseIndex !== prevVerseIndex
-        ) {
-            this._setCurrentTime()
-        }
-    }
-
     _clearInterval() {
         clearInterval(this.state.intervalId)
         this.setState({
@@ -150,65 +70,11 @@ class Player extends Component {
         })
     }
 
-    _getIsSelected(selectedSongIndex = this.props.selectedSongIndex) {
-        const { songIndex } = this.props
-        return songIndex === selectedSongIndex
+    setCurrentTime(currentTime = 0) {
+        this.myPlayer.currentTime = currentTime
     }
 
-    _setCurrentTime(
-        isSelected = this._getIsSelected()
-    ) {
-
-        // If selected, set time to selected verse.
-        if (isSelected) {
-
-            const {
-                    selectedSongIndex,
-                    selectedVerseIndex
-                } = this.props,
-                currentTime = getTimeForVerseIndex(
-                    selectedSongIndex,
-                    selectedVerseIndex
-                )
-
-            this.myPlayer.currentTime = currentTime
-
-            this.props.handlePlayerTimeChange(currentTime)
-
-        // Otherwise, set time to start of song.
-        } else {
-            this.myPlayer.currentTime = 0
-        }
-    }
-
-    _handleSuspendEvent() {
-        const {
-            songIndex
-        } = this.props
-
-        this.props.setPlayerCanPlayThrough(songIndex)
-    }
-
-    _handleEndedEvent() {
-        const { intervalId } = this.state
-
-        // Ensure that this does not get called twice in same song.
-        if (intervalId) {
-            this.props.handlePlayerNextSong()
-
-            this._clearInterval()
-        }
-    }
-
-    _handleEndPlaying(isSelected) {
-        this.myPlayer.pause()
-        this._clearInterval()
-
-        // If still selected, reset time to selected verse.
-        this._setCurrentTime(isSelected)
-    }
-
-    _handleBeginPlaying() {
+    handleBeginPlaying() {
         this.myPlayer.play()
 
         // Begin listening.
@@ -223,17 +89,51 @@ class Player extends Component {
         })
     }
 
+    handleEndPlaying(currentTime) {
+        this.myPlayer.pause()
+        this._clearInterval()
+
+        // If still selected, reset time to selected verse.
+        this.setCurrentTime(currentTime)
+    }
+
     _tellAppCurrentTime() {
         const { currentTime } = this.myPlayer,
             { totalTime } = this.props
 
-        // If the song has ended, tell app to handle next song selection.
-        if (currentTime > totalTime) {
-            this._handleEndedEvent()
+        // If there's time remaining, tell app the current time.
+        if (currentTime < totalTime) {
 
-        // Otherwise, just tell app the audio element's current time.
+            this.props.selectTime({
+                selectedTimePlayed: currentTime,
+                isPlayerAdvancing: true
+            })
+
+            // Otherwise, tell app to select next song.
         } else {
-            this.props.handlePlayerTimeChange(currentTime)
+            this._handleEndedEvent()
+        }
+    }
+
+    _handleSuspendEvent() {
+        const {
+            songIndex
+        } = this.props
+
+        this.props.setPlayerCanPlayThrough(songIndex)
+    }
+
+    _handleEndedEvent() {
+        const { intervalId } = this.state
+
+        /**
+         * Ensure that this only gets called once, either by the current time
+         * exceeding the total time, or by the audio element firing an event.
+         */
+        if (intervalId) {
+            this.props.advanceToNextSong()
+
+            this._clearInterval()
         }
     }
 
@@ -310,4 +210,4 @@ class Player extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Player)
+export default Player

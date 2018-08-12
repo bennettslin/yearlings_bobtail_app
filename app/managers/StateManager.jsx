@@ -18,13 +18,13 @@ import LogManager from './LogManager'
 import LyricManager from './LyricManager'
 import NavManager from './NavManager'
 import OverviewManager from './OverviewManager'
+import PlayerManager from './PlayerManager/PlayerManager'
 import RenderManager from './RenderManager'
 import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
 import ScrollManager from './ScrollManager'
 import SliderVerseManager from './SliderVerseManager/SliderVerseManager'
 import SongManager from './SongManager'
-// import TimeManager from './TimeManager'
 import TimeVerseManager from './TimeVerseManager'
 import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
@@ -168,6 +168,14 @@ class StateManager extends Component {
 
     selectOverview(payload) {
         return this.overviewManager.selectOverview(payload)
+    }
+
+    /***********
+     * PLAYERS *
+     ***********/
+
+    updateSelectedPlayer(payload) {
+        return this.playerManager.updateSelectedPlayer(payload)
     }
 
     /*********
@@ -342,6 +350,7 @@ class StateManager extends Component {
         this.determineVerseBars = this.determineVerseBars.bind(this)
         this.resetVerseBars = this.resetVerseBars.bind(this)
         this.selectManualScroll = this.selectManualScroll.bind(this)
+        this.updateSelectedPlayer = this.updateSelectedPlayer.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
         this.touchBodyEnd = this.touchBodyEnd.bind(this)
@@ -388,7 +397,6 @@ class StateManager extends Component {
                     selectScore={this.selectScore}
                     selectScene={this.selectScene}
                     selectSong={this.selectSong}
-                    selectTime={this.selectTime}
                     selectTitle={this.selectTitle}
                     selectTips={this.selectTips}
                     selectVerse={this.selectVerse}
@@ -398,7 +406,6 @@ class StateManager extends Component {
                     toggleAccess={this.toggleAccess}
                     toggleAdmin={this.toggleAdmin}
                     togglePlay={this.togglePlay}
-                    advanceToNextSong={this.advanceToNextSong}
                 />
                 <AccessManager
                     setRef={node => (this.accessManager = node)}
@@ -440,6 +447,11 @@ class StateManager extends Component {
                     selectDotsExpand={this.selectDotsExpand}
                     selectLyricExpand={this.selectLyricExpand}
                 />
+                <PlayerManager
+                    setRef={node => (this.playerManager = node)}
+                    selectTime={this.selectTime}
+                    advanceToNextSong={this.advanceToNextSong}
+                />
                 <RenderManager
                     setRef={node => (this.renderManager = node)}
                 />
@@ -464,13 +476,14 @@ class StateManager extends Component {
                     togglePlay={this.togglePlay}
                     selectAnnotation={this.selectAnnotation}
                     selectVerse={this.selectVerse}
+                    updateSelectedPlayer={this.updateSelectedPlayer}
                     updatePath={updatePath}
                 />
-                {/* <TimeManager /> */}
                 <TimeVerseManager
                     setRef={node => (this.timeVerseManager = node)}
                     determineVerseBars={this.determineVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
+                    updateSelectedPlayer={this.updateSelectedPlayer}
                     updatePath={updatePath}
                 />
                 <TipsManager
