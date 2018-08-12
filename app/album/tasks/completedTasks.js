@@ -3688,4 +3688,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Massive player refactor.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

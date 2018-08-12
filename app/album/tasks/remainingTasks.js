@@ -6,25 +6,6 @@ module.exports = [
         neededHours: 10
     },
 
-    {
-        taskName: `Massive player refactor.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    // Important features.
-    // {
-    //     taskName: `Have setIntervals on audio display timer rather than setting from state.`,
-    //     workedHours: 0,
-    //     neededHours: 2
-    // },
-
-    // {
-    //     taskName: `Bug where selecting interactivated verse does not change verse when song is playing.`,
-    //     workedHours: 0,
-    //     neededHours: 1
-    // },
-
     /**
      * Important bugs to fix.
      */
@@ -40,6 +21,24 @@ module.exports = [
     },
     {
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa. This might involve generally rethinking how to do determine verse bars after a scroll.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Clicking outside of logue overview prevents accessing song through j or k.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Verse tracker is buggy when selecting new song.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Advancing to next song when playing doesn't stay playing`,
         workedHours: 0,
         neededHours: 1
     },
