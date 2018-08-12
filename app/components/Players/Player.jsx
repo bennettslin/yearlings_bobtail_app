@@ -107,10 +107,12 @@ class Player extends Component {
 
     componentDidUpdate(prevProps) {
         const {
-                isPlaying
+                isPlaying,
+                selectedVerseIndex
             } = this.props,
             {
                 selectedSongIndex: prevSongIndex,
+                selectedVerseIndex: prevVerseIndex,
                 isPlaying: wasPlaying
             } = prevProps,
 
@@ -131,6 +133,13 @@ class Player extends Component {
             isPlaying && !wasPlaying
         ) {
             this._handleBeginPlaying()
+        }
+
+        if (
+            isSelected &&
+            selectedVerseIndex !== prevVerseIndex
+        ) {
+            this._setCurrentTime()
         }
     }
 
