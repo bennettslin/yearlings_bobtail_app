@@ -43,6 +43,18 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Remove binding in render for refs.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Look into using SmartComponent.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Mobile bugs. (Might be able to quickly get through now that deployment
      * is worked out.)

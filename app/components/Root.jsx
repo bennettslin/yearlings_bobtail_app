@@ -14,7 +14,6 @@ import AccessStyle from './AccessLetter/AccessStyle'
 import Admin from './Admin/Admin'
 import Live from './Live/Live'
 import AdminToggle from './admin/AdminToggle'
-// import Players from './Players/Players'
 
 import {
     SHOWN,
@@ -87,8 +86,6 @@ class Root extends Component {
             handleBodyClick: PropTypes.func.isRequired,
             handleBodyTouchMove: PropTypes.func.isRequired,
             handleBodyTouchEnd: PropTypes.func.isRequired,
-            // handlePlayerTimeChange: PropTypes.func.isRequired,
-            // handlePlayerNextSong: PropTypes.func.isRequired,
             getRootRef: PropTypes.func.isRequired
         })
     }
@@ -200,8 +197,6 @@ class Root extends Component {
 
             {
                 handleBodyTouchMove,
-                // handlePlayerTimeChange,
-                // handlePlayerNextSong,
                 getRootRef,
                 ...other
             } = this.props.eventHandlers,
@@ -225,11 +220,6 @@ class Root extends Component {
                 selectedTitleIndex,
                 selectedWikiIndex
             }),
-
-            // audioPlayersProps = {
-            //     handlePlayerTimeChange,
-            //     handlePlayerNextSong
-            // },
 
             overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
             tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
@@ -366,8 +356,6 @@ class Root extends Component {
                 tabIndex="-1"
             >
                 <AccessStyle />
-
-                {/* <Players {...audioPlayersProps} /> */}
 
                 {/* TODO: Only pass the events used by KeyHandler. */}
                 <KeyHandler
