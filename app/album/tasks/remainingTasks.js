@@ -32,7 +32,7 @@ module.exports = [
     },
 
     {
-        taskName: `Verse tracker is buggy when selecting new song.`,
+        taskName: `Verse tracker is buggy when selecting new song. Likely because it isn't updating properly.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -51,6 +51,12 @@ module.exports = [
 
     {
         taskName: `Look into using SmartComponent.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Handle weirdness of title overlay in logue.`,
         workedHours: 0,
         neededHours: 1
     },

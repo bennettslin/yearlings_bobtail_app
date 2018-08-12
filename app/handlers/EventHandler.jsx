@@ -978,8 +978,10 @@ class EventHandler extends Component {
 
     focusElementForAccess() {
 
-        const { isHeightlessLyricColumn,
-                isLyricExpanded } = this.props,
+        const {
+            isHeightlessLyricColumn,
+            isLyricExpanded
+        } = this.props,
 
             doFocusLyricElement =
                 this.myLyricElement &&
