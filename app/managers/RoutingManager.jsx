@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import StateManager from './StateManager'
 
 import {
     selectWikiIndex,
@@ -27,7 +26,10 @@ class RoutingManager extends Component {
 
         updateSelectedStore: PropTypes.func.isRequired,
         selectWikiIndex: PropTypes.func.isRequired,
-        selectTimePlayed: PropTypes.func.isRequired
+        selectTimePlayed: PropTypes.func.isRequired,
+
+        match: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired
     }
 
     constructor(props) {
@@ -133,9 +135,7 @@ class RoutingManager extends Component {
     }
 
     render() {
-        return (
-            <StateManager />
-        )
+        return null
     }
 }
 

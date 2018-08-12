@@ -51,6 +51,12 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Popup annotation doesn't fade out slowly when switching to carousel?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Mobile bugs. (Might be able to quickly get through now that deployment
      * is worked out.)

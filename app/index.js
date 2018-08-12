@@ -15,7 +15,7 @@ import logger from './server/logger'
 import reducers from './redux/reducers'
 
 import './scss/app.scss'
-import RoutingManager from './managers/RoutingManager'
+import StateManager from './managers/StateManager'
 
 // Why did you update?
 const turnOnWDYULogging = false
@@ -33,8 +33,16 @@ ReactDOM.render(
     <Provider store={store}>
         <Router>
             <Switch>
-                <Route exact path="/" component={RoutingManager} />
-                <Route exact path="/:routingParamString/" component={RoutingManager} />
+                <Route
+                    exact
+                    path="/"
+                    component={StateManager}
+                />
+                <Route
+                    exact
+                    path="/:routingParamString/"
+                    component={StateManager}
+                />
             </Switch>
         </Router>
     </Provider>,

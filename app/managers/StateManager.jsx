@@ -1,7 +1,7 @@
 // State manager.
 
 import React, { Component, Fragment } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
@@ -20,6 +20,7 @@ import NavManager from './NavManager'
 import OverviewManager from './OverviewManager'
 import PlayerManager from './PlayerManager/PlayerManager'
 import RenderManager from './RenderManager'
+import RoutingManager from './RoutingManager'
 import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
 import ScrollManager from './ScrollManager'
@@ -36,7 +37,10 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class StateManager extends Component {
 
-    static propTypes = {}
+    static propTypes = {
+        match: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -455,6 +459,12 @@ class StateManager extends Component {
     }
 
     render() {
+
+        const {
+            match,
+            history
+        } = this.props
+
         return (
             <Fragment>
                 <EventHandler
@@ -544,6 +554,12 @@ class StateManager extends Component {
                 <RenderManager
                     setRef={this._setRenderManagerRef}
                 />
+                <RoutingManager
+                    {...{
+                        match,
+                        history
+                    }}
+                />
                 <SceneManager
                     setRef={this._setSceneManagerRef}
                     selectVerse={this.selectVerse}
@@ -598,8 +614,6 @@ class StateManager extends Component {
     }
 }
 
-const mapStateToProps = () => ({})
-
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
@@ -607,4 +621,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(StateManager)
+export default connect(null, bindDispatchToProps)(StateManager)
