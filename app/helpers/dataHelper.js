@@ -106,28 +106,43 @@ export const getTimeForVerseIndex = (songIndex, verseIndex) => {
     return songVerseConfigs[verseIndex].verseStartTime
 }
 
-export const getVerseIndexForTime = (songIndex, time) => {
+export const getNextVerseIndexIfNeededForCurrentTime = (
+    songIndex,
+    verseIndex,
+    currentTime
+) => {
+    /**
+     * If the current time is in the next verse, return its index. Otherwise,
+     * return null.
+     */
 
-    const songVerseConfigs = getSongVerseConfigs(songIndex),
-        totalTime = getSongTotalTime(songIndex)
+    const songTotalTime = getSongTotalTime(songIndex)
 
-    if (time >= 0 && time <= totalTime) {
-        let selectedVerseIndex = 0
-
-        // Select corresponding verse.
-        while (
-            selectedVerseIndex < songVerseConfigs.length - 1 &&
-            time >= songVerseConfigs[selectedVerseIndex + 1].verseStartTime
-        ) {
-
-            selectedVerseIndex++
-        }
-
-        return selectedVerseIndex
-
-    } else {
+    if (currentTime < 0 || currentTime >= songTotalTime) {
         return null
     }
+
+    const
+        songVerseConfigs = getSongVerseConfigs(songIndex),
+        songVersesCount = getSongVersesCount(songIndex),
+        isLastVerse = verseIndex === songVersesCount - 1,
+
+        // Verse end time is either start of next verse, or song total time.
+        verseEndTime =
+            !isLastVerse ?
+                songVerseConfigs[verseIndex + 1].verseStartTime :
+                songTotalTime
+
+    return currentTime >= verseEndTime && !isLastVerse ?
+
+        /**
+         * If current time is past the verse's end time, and it's not the last
+         * verse, return the next verse.
+         */
+        verseIndex + 1 :
+
+        // Otherwise, return null.
+        null
 }
 
 /********

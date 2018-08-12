@@ -23,7 +23,6 @@ class AudioManager extends Component {
         canPlayThroughs: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedTimePlayed: PropTypes.number.isRequired,
 
         setIsPlaying: PropTypes.func.isRequired,
         selectAudioOptionIndex: PropTypes.func.isRequired,
@@ -112,15 +111,13 @@ class AudioManager extends Component {
 const mapStateToProps = ({
     isPlaying,
     canPlayThroughs,
-    selectedStore: { selectedSongIndex },
     selectedAudioOptionIndex,
-    selectedTimePlayed
+    selectedStore: { selectedSongIndex }
 }) => ({
     isPlaying,
     canPlayThroughs,
     selectedAudioOptionIndex,
-    selectedSongIndex,
-    selectedTimePlayed
+    selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

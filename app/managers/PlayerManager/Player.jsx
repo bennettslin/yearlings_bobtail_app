@@ -10,7 +10,7 @@ import ReactAudioPlayer from 'react-audio-player'
 
 // https://www.npmjs.com/package/react-audio-player
 
-const LISTEN_INTERVAL = 100
+const LISTEN_INTERVAL = 150
 
 class Player extends Component {
 
@@ -110,10 +110,7 @@ class Player extends Component {
         // If there's time remaining, tell app the current time.
         if (currentTime < totalTime) {
 
-            this.props.selectTime({
-                selectedTimePlayed: currentTime,
-                isPlayerAdvancing: true
-            })
+            this.props.selectTime(currentTime)
 
             // Otherwise, tell app to select next song.
         } else {

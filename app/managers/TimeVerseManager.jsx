@@ -12,7 +12,7 @@ import {
 import { VERSE_SCROLL } from 'constants/dom'
 
 import {
-    getVerseIndexForTime,
+    getNextVerseIndexIfNeededForCurrentTime,
     getSceneIndexForVerseIndex,
     getTimeForVerseIndex
 } from 'helpers/dataHelper'
@@ -59,34 +59,44 @@ class TimeVerseManager extends Component {
         })
     }
 
-    selectTime({
-        selectedTimePlayed = 0,
-        isPlayerAdvancing
-    }) {
-        const selectedVerseIndex = getVerseIndexForTime(
-            this.props.selectedSongIndex, selectedTimePlayed
-        )
+    selectTime(currentTime) {
+        // This is only ever called by the player.
 
-        if (selectedVerseIndex !== null) {
+        const {
+                selectedSongIndex,
+                selectedVerseIndex
+            } = this.props,
 
+            nextVerseIndex = getNextVerseIndexIfNeededForCurrentTime(
+                selectedSongIndex,
+                selectedVerseIndex,
+                currentTime
+            )
+
+        /**
+         * If value returned by helper method is null, this means we're still
+         * in the same verse, or the song has ended.
+         */
+        if (nextVerseIndex === null) {
+            this.props.selectTimePlayed(currentTime)
+
+        // Otherwise, select the next verse.
+        } else {
             /**
-             * If manual scroll is off, selected verse may go from above window
-             * view, to in it, to below it. So determine verse bars.
+             * If manual scroll is off, selected verse may go from above
+             * window view, to in it, to below it. So, determine verse bars.
              */
-            if (
-                this.props.isManualScroll &&
-                selectedVerseIndex !== this.props.selectedVerseIndex
-            ) {
+            if (this.props.isManualScroll) {
                 this.props.determineVerseBars()
             }
 
             this._selectTimeAndVerse({
-                selectedTimePlayed,
-                selectedVerseIndex,
+                selectedTimePlayed: currentTime,
+                selectedVerseIndex: nextVerseIndex,
 
                 // When time is being selected, always render verse immediately.
                 renderVerseImmediately: true,
-                isPlayerAdvancing
+                isPlayerAdvancing: true
             })
         }
     }

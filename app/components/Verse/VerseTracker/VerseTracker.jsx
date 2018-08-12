@@ -9,14 +9,14 @@ import { getVerseDurationForVerseIndex } from 'helpers/dataHelper'
 // import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canLyricRender,
+    // canLyricRender,
     isPlaying,
     renderableStore: {
         renderableSongIndex,
         renderableVerseIndex
     }
 }) => ({
-    canLyricRender,
+    // canLyricRender,
     isPlaying,
     renderableSongIndex,
     renderableVerseIndex
@@ -26,7 +26,7 @@ class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
+        // canLyricRender: PropTypes.bool.isRequired,
         isPlaying: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableVerseIndex: PropTypes.number.isRequired,
@@ -43,7 +43,7 @@ class VerseTracker extends Component {
             willBeSelected = this.getIsSelectedVerse(nextProps)
 
         // If it can render, update if...
-        return nextProps.canLyricRender && (
+        return (
 
             // ... song changed...
             this.props.renderableSongIndex !== nextProps.renderableSongIndex ||
