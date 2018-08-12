@@ -1,4 +1,4 @@
-// Hidden section for audio players.
+// Manager for audio players.
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -39,6 +39,15 @@ const mapStateToProps = ({
     selectedVerseIndex,
     canPlayThroughs
 })
+
+// Kind of silly, but easiest approach for now.
+const LOGUE_DUMMY_PLAYER = {
+    /* eslint-disable no-empty-function */
+    handleBeginPlaying: () => {},
+    handleEndPlaying: () => {},
+    setCurrentTime: () => {}
+    /* eslint-enable no-empty-function */
+}
 
 class PlayerManager extends Component {
 
@@ -114,13 +123,13 @@ class PlayerManager extends Component {
 
         // Handle pause.
         if (!isPlaying && wasPlaying) {
-            this.myPlayers[selectedSongIndex].handleEndPlaying(
+            this.getPlayerRef(selectedSongIndex).handleEndPlaying(
                 this.getCurrentTimeForSongIndex(selectedSongIndex)
             )
 
         // Handle playing toggled on.
         } else if (isPlaying && !wasPlaying) {
-            this.myPlayers[selectedSongIndex].handleBeginPlaying()
+            this.getPlayerRef(selectedSongIndex).handleBeginPlaying()
         }
     }
 
@@ -145,17 +154,17 @@ class PlayerManager extends Component {
             )
 
         // Update selected player's current time.
-        this.myPlayers[nextSongIndex]
+        this.getPlayerRef(nextSongIndex)
             .setCurrentTime(nextCurrentTime)
 
         // If song was changed, also reset the previous player's current time.
         if (selectedSongIndex !== nextSongIndex) {
-            this.myPlayers[selectedSongIndex].setCurrentTime()
+            this.getPlayerRef(selectedSongIndex).setCurrentTime()
 
             // If playing, toggle play and pause for respective players.
             if (isPlaying) {
-                this.myPlayers[nextSongIndex].handleBeginPlaying()
-                this.myPlayers[selectedSongIndex].handleEndPlaying()
+                this.getPlayerRef(nextSongIndex).handleBeginPlaying()
+                this.getPlayerRef(selectedSongIndex).handleEndPlaying()
             }
         }
     }
@@ -209,6 +218,10 @@ class PlayerManager extends Component {
             })
 
         this.props.setCanPlayThroughs(newBitNumber)
+    }
+
+    getPlayerRef(songIndex) {
+        return this.myPlayers[songIndex] || LOGUE_DUMMY_PLAYER
     }
 
     setPlayerRef(node, songIndex) {

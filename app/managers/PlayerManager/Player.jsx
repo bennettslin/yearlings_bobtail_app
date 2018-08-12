@@ -71,10 +71,14 @@ class Player extends Component {
     }
 
     setCurrentTime(currentTime = 0) {
+        // Can be called by player manager.
+
         this.myPlayer.currentTime = currentTime
     }
 
     handleBeginPlaying() {
+        // Only called by player manager.
+
         this.myPlayer.play()
 
         // Begin listening.
@@ -90,6 +94,8 @@ class Player extends Component {
     }
 
     handleEndPlaying(currentTime) {
+        // Only called by player manager.
+
         this.myPlayer.pause()
         this._clearInterval()
 
