@@ -98,10 +98,6 @@ class StateManager extends Component {
         return this.audioManager.togglePlay(payload)
     }
 
-    resetUpdatedTimePlayed() {
-        return this.audioManager.resetUpdatedTimePlayed()
-    }
-
     selectAudioOption(payload) {
         return this.audioManager.selectAudioOption(payload)
     }
@@ -328,7 +324,6 @@ class StateManager extends Component {
         this.deselectAnnotation = this.deselectAnnotation.bind(this)
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
-        this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
         this.resetTimeOfSelectedVerse = this.resetTimeOfSelectedVerse.bind(this)
         this.toggleDot = this.toggleDot.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
@@ -404,7 +399,6 @@ class StateManager extends Component {
                     toggleAdmin={this.toggleAdmin}
                     togglePlay={this.togglePlay}
                     advanceToNextSong={this.advanceToNextSong}
-                    resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
                 />
                 <AccessManager
                     setRef={node => (this.accessManager = node)}

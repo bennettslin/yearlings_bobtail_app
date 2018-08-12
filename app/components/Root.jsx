@@ -89,7 +89,6 @@ class Root extends Component {
             handleBodyTouchEnd: PropTypes.func.isRequired,
             handlePlayerTimeChange: PropTypes.func.isRequired,
             handlePlayerNextSong: PropTypes.func.isRequired,
-            handlePlayerTimeReset: PropTypes.func.isRequired,
             getRootRef: PropTypes.func.isRequired
         })
     }
@@ -203,7 +202,6 @@ class Root extends Component {
                 handleBodyTouchMove,
                 handlePlayerTimeChange,
                 handlePlayerNextSong,
-                handlePlayerTimeReset,
                 getRootRef,
                 ...other
             } = this.props.eventHandlers,
@@ -230,8 +228,7 @@ class Root extends Component {
 
             audioPlayersProps = {
                 handlePlayerTimeChange,
-                handlePlayerNextSong,
-                handlePlayerTimeReset
+                handlePlayerNextSong
             },
 
             overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,

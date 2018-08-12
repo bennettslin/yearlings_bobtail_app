@@ -2,14 +2,20 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import { setCanPlayThroughs } from 'flux/actions/player'
+
 import Player from './Player'
+
+import { setNewValueInBitNumber } from 'helpers/bitHelper'
 
 import {
     getMp3s,
-    getSongTotalTime
+    getSongTotalTime,
+    getSongsNotLoguesCount
 } from 'helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -51,6 +57,8 @@ class Players extends Component {
             // At any given time, only one player is being newly rendered.
             nextPlayerToRender: -1
         }
+
+        this.setPlayerCanPlayThrough = this.setPlayerCanPlayThrough.bind(this)
     }
 
     componentDidMount() {
@@ -113,15 +121,31 @@ class Players extends Component {
         )
     }
 
+    setPlayerCanPlayThrough(playerSongIndex) {
+        const {
+                canPlayThroughs
+            } = this.props,
+
+            // Convert to bit number before setting in Redux.
+            newBitNumber = setNewValueInBitNumber({
+                keysCount: getSongsNotLoguesCount(),
+                bitNumber: canPlayThroughs,
+                key: playerSongIndex,
+                value: true
+            })
+
+        this.props.setCanPlayThroughs(newBitNumber)
+    }
+
     render() {
 
         const {
                 /* eslint-disable no-unused-vars */
                 canPlayThroughs,
+                selectedSongIndex,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                selectedSongIndex,
                 ...other
             } = this.props,
 
@@ -133,17 +157,20 @@ class Players extends Component {
                 'displayNoneContainer'
             )}>
                 {mp3s.map((mp3, index) => {
-                    const songIndex = index + 1,
-                        isSelected = songIndex === selectedSongIndex,
+                    const
+                        songIndex = index + 1,
                         totalTime = getSongTotalTime(songIndex)
 
                     return this._playerShouldRender(songIndex) && (
                         <Player {...other}
                             key={index}
-                            songIndex={songIndex}
-                            mp3={mp3}
-                            isSelected={isSelected}
-                            totalTime={totalTime}
+                            {...{
+                                mp3,
+                                songIndex,
+                                totalTime,
+                                setPlayerCanPlayThrough:
+                                    this.setPlayerCanPlayThrough
+                            }}
                         />
                     )
                 })}
@@ -152,4 +179,11 @@ class Players extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Players)
+// Bind Redux action creators to component props.
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        setCanPlayThroughs
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Players)

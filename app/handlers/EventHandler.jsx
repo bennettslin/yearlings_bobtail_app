@@ -329,10 +329,6 @@ class EventHandler extends Component {
         this.props.advanceToNextSong(e)
     }
 
-    handlePlayerTimeReset(e) {
-        this.props.resetUpdatedTimePlayed(e)
-    }
-
     /************
      * CAROUSEL *
      ************/

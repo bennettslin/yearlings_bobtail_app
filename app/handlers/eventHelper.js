@@ -25,7 +25,6 @@ export const bindHandlers = (me) => {
 
     me.handlePlayerTimeChange = me.handlePlayerTimeChange.bind(me)
     me.handlePlayerNextSong = me.handlePlayerNextSong.bind(me)
-    me.handlePlayerTimeReset = me.handlePlayerTimeReset.bind(me)
 
     me.handleDotSelect = me.handleDotSelect.bind(me)
     me.handleDotsSectionToggle = me.handleDotsSectionToggle.bind(me)
@@ -93,7 +92,6 @@ export const getHandlers = (me) => {
         handleSliderTouchBegin: me.handleSliderTouchBegin,
         handlePlayerTimeChange: me.handlePlayerTimeChange,
         handlePlayerNextSong: me.handlePlayerNextSong,
-        handlePlayerTimeReset: me.handlePlayerTimeReset,
         handleDotSelect: me.handleDotSelect,
         handleDotsSectionToggle: me.handleDotsSectionToggle,
         handleLyricSectionExpand: me.handleLyricSectionExpand,

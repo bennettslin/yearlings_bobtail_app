@@ -1,14 +1,11 @@
 // Hidden component to wrap an audio DOM element.
 
 import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 
-import { setCanPlayThroughs } from 'flux/actions/player'
-import { getSongsNotLoguesCount } from 'helpers/dataHelper'
-import { setNewValueInBitNumber } from 'helpers/bitHelper'
+import { getTimeForVerseIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
@@ -25,14 +22,12 @@ const mapStateToProps = ({
     selectedStore: {
         selectedSongIndex,
         selectedVerseIndex
-    },
-    canPlayThroughs
+    }
 }) => ({
     isPlaying,
     updatedTimePlayed,
     selectedSongIndex,
-    selectedVerseIndex,
-    canPlayThroughs
+    selectedVerseIndex
 })
 
 class Player extends Component {
@@ -40,46 +35,49 @@ class Player extends Component {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
-        updatedTimePlayed: PropTypes.number,
+        // updatedTimePlayed: PropTypes.number,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        canPlayThroughs: PropTypes.number.isRequired,
-        setCanPlayThroughs: PropTypes.func.isRequired,
 
         // From parent.
         mp3: PropTypes.string.isRequired,
         songIndex: PropTypes.number.isRequired,
         totalTime: PropTypes.number.isRequired,
-        isSelected: PropTypes.bool.isRequired,
         handlePlayerTimeChange: PropTypes.func.isRequired,
-        handlePlayerTimeReset: PropTypes.func.isRequired,
-        handlePlayerNextSong: PropTypes.func.isRequired
+        handlePlayerNextSong: PropTypes.func.isRequired,
+        setPlayerCanPlayThrough: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
-        this._handleCanPlayThrough = this._handleCanPlayThrough.bind(this)
-        this._handleEnded = this._handleEnded.bind(this)
-        this._tellAppCurrentTimeOfAudioElement = this._tellAppCurrentTimeOfAudioElement.bind(this)
+        this._handleSuspendEvent = this._handleSuspendEvent.bind(this)
+        this._handleEndedEvent = this._handleEndedEvent.bind(this)
+        this._tellAppCurrentTime = this._tellAppCurrentTime.bind(this)
 
         this.state = {
-
             // Unique identifier for clearing setInterval.
             intervalId: ''
         }
     }
 
     shouldComponentUpdate(nextProps) {
+        const {
+                selectedSongIndex: nextSongIndex
+            } = nextProps
+
+        // No point in updating if it remains unselected.
+        if (
+            !this._getIsSelected() &&
+            !this._getIsSelected(nextSongIndex)
+        ) {
+            return false
+        }
+
         const shouldComponentUpdate = !getPropsAreShallowEqual({
-                props: this.props,
-                nextProps,
-                checkIsShallowEqual: {
-                    isPlaying: true,
-                    updatedTimePlayed: true
-                },
-                onlyOnCondition: nextProps.isSelected
-            })
+            props: this.props,
+            nextProps
+        })
 
         return shouldComponentUpdate
     }
@@ -87,76 +85,102 @@ class Player extends Component {
     componentDidMount() {
         this.myPlayer = this.myReactPlayer.audioEl
 
-        // this._listenForDebugStatements(true)
-
-        // Tell audio element its initial state.
-        this._updateAudioElementTime()
-        this._updateAudioElementIsPlaying()
-
-        // Add event listeners.
+        // Set initial time.
+        this._setCurrentTime()
 
         // Tell app that player can now be played without interruption.
         this.myPlayer.addEventListener(
 
-            // iOS doesn't fire canplaythrough.
+            /**
+             * This is effectively the same as canplaythrough. iOS doesn't fire
+             * canplaythrough.
+             */
             'suspend',
-            this._handleCanPlayThrough
+            this._handleSuspendEvent
         )
 
         this.myPlayer.addEventListener(
             'ended',
-            this._handleEnded
+            this._handleEndedEvent
         )
     }
 
     componentDidUpdate(prevProps) {
         const {
-                isSelected,
                 isPlaying
             } = this.props,
             {
-                isSelected: wasSelected,
+                selectedSongIndex: prevSongIndex,
                 isPlaying: wasPlaying
             } = prevProps,
-            selectedChanged = isSelected !== wasSelected,
-            isPlayingChanged = isPlaying !== wasPlaying
 
-        // TODO: Have conditionals here.
+            isSelected = this._getIsSelected(),
+            wasSelected = this._getIsSelected(prevSongIndex)
 
-        // Update playing status.
-        if (selectedChanged || isPlayingChanged) {
-            this._updateAudioElementIsPlaying()
+        // Handle pause or no longer selected.
+        if (
+            !isSelected && wasSelected ||
+            !isPlaying && wasPlaying
+        ) {
+            this._handleEndPlaying(isSelected)
         }
 
-        // Reset audio element if no longer selected.
-        if (!isSelected && wasSelected) {
+        // Handle playing if selected.
+        if (
+            isSelected &&
+            isPlaying && !wasPlaying
+        ) {
+            this._handleBeginPlaying()
+        }
+    }
+
+    _clearInterval() {
+        clearInterval(this.state.intervalId)
+        this.setState({
+            intervalId: ''
+        })
+    }
+
+    _getIsSelected(selectedSongIndex = this.props.selectedSongIndex) {
+        const { songIndex } = this.props
+        return songIndex === selectedSongIndex
+    }
+
+    _setCurrentTime(
+        isSelected = this._getIsSelected()
+    ) {
+
+        // If selected, set time to selected verse.
+        if (isSelected) {
+
+            const {
+                    selectedSongIndex,
+                    selectedVerseIndex
+                } = this.props,
+                currentTime = getTimeForVerseIndex(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                )
+
+            this.myPlayer.currentTime = currentTime
+
+            this.props.handlePlayerTimeChange(currentTime)
+
+        // Otherwise, set time to start of song.
+        } else {
             this.myPlayer.currentTime = 0
         }
-
-        // Handle user selected time.
-        if (this.props.updatedTimePlayed !== null) {
-            this._updateAudioElementTime()
-        }
     }
 
-    _handleCanPlayThrough() {
+    _handleSuspendEvent() {
         const {
-            canPlayThroughs,
             songIndex
-        } = this.props,
+        } = this.props
 
-            // Convert to bit number before setting in Redux.
-            newBitNumber = setNewValueInBitNumber({
-                keysCount: getSongsNotLoguesCount(),
-                bitNumber: canPlayThroughs,
-                key: songIndex,
-                value: true
-            })
-
-        this.props.setCanPlayThroughs(newBitNumber)
+        this.props.setPlayerCanPlayThrough(songIndex)
     }
 
-    _handleEnded() {
+    _handleEndedEvent() {
         const { intervalId } = this.state
 
         // Ensure that this does not get called twice in same song.
@@ -164,6 +188,43 @@ class Player extends Component {
             this.props.handlePlayerNextSong()
 
             this._clearInterval()
+        }
+    }
+
+    _handleEndPlaying(isSelected) {
+        this.myPlayer.pause()
+        this._clearInterval()
+
+        // If still selected, reset time to selected verse.
+        this._setCurrentTime(isSelected)
+    }
+
+    _handleBeginPlaying() {
+        this.myPlayer.play()
+
+        // Begin listening.
+        const
+            intervalId = setInterval(
+                this._tellAppCurrentTime,
+                LISTEN_INTERVAL
+            )
+
+        this.setState({
+            intervalId
+        })
+    }
+
+    _tellAppCurrentTime() {
+        const { currentTime } = this.myPlayer,
+            { totalTime } = this.props
+
+        // If the song has ended, tell app to handle next song selection.
+        if (currentTime > totalTime) {
+            this._handleEndedEvent()
+
+        // Otherwise, just tell app the audio element's current time.
+        } else {
+            this.props.handlePlayerTimeChange(currentTime)
         }
     }
 
@@ -230,62 +291,6 @@ class Player extends Component {
         }
     }
 
-    _updateAudioElementIsPlaying() {
-        const { isSelected,
-                isPlaying } = this.props,
-            { myPlayer } = this
-
-        // Play only if selected and is playing.
-        if (isSelected && isPlaying && myPlayer.paused) {
-            myPlayer.play()
-
-            // Begin listening.
-            const intervalId = setInterval(
-                    this._tellAppCurrentTimeOfAudioElement,
-                    LISTEN_INTERVAL
-                )
-            this.setState({
-                intervalId
-            })
-
-        // Otherwise pause.
-        } else if (!myPlayer.paused) {
-            myPlayer.pause()
-
-            // Stop listening.
-            this._clearInterval()
-        }
-    }
-
-    _clearInterval() {
-        clearInterval(this.state.intervalId)
-        this.setState({
-            intervalId: ''
-        })
-    }
-
-    _updateAudioElementTime() {
-        // Let app update the audio element's current time.
-        if (this.props.isSelected) {
-            this.myPlayer.currentTime = this.props.updatedTimePlayed
-            this.props.handlePlayerTimeReset()
-        }
-    }
-
-    _tellAppCurrentTimeOfAudioElement() {
-        const { currentTime } = this.myPlayer,
-            { totalTime } = this.props
-
-        // If the song has ended, tell app to handle next song selection.
-        if (currentTime > totalTime) {
-            this._handleEnded()
-
-        // Otherwise, just tell app the audio element's current time.
-        } else {
-            this.props.handlePlayerTimeChange(currentTime)
-        }
-    }
-
     render() {
         return (
             <ReactAudioPlayer
@@ -296,11 +301,4 @@ class Player extends Component {
     }
 }
 
-// Bind Redux action creators to component props.
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        setCanPlayThroughs
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Player)
+export default connect(mapStateToProps)(Player)

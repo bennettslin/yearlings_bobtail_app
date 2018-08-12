@@ -105,10 +105,6 @@ class AudioManager extends Component {
         return true
     }
 
-    resetUpdatedTimePlayed() {
-        this.props.setUpdatedTimePlayed(null)
-    }
-
     selectAudioOption(
         selectedAudioOptionIndex =
             (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length
