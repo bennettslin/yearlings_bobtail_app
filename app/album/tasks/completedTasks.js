@@ -3698,4 +3698,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Clicking outside of logue overview prevents accessing song through j or k.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

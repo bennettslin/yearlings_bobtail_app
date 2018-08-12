@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Clicking outside of logue overview prevents accessing song through j or k.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Verse tracker is buggy when selecting new song. Likely because it isn't updating properly.`,
         workedHours: 0,
         neededHours: 2

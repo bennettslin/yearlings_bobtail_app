@@ -6,6 +6,9 @@
     align-items: center;
     box-sizing: border-box;
 
+    // This just needs to be higher than the popup container.
+    z-index: $zIndex__navCustomSubfield;
+
     .RM__mobile
     & {
         padding: $js__margin__thick;
