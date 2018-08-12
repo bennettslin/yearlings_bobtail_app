@@ -1007,6 +1007,18 @@ class EventHandler extends Component {
         this.focusElementForAccess()
     }
 
+    setRootRef(node) {
+        this.myRootElement = node
+    }
+
+    setScoreRef(node) {
+        this.myScoreElement = node
+    }
+
+    setWikiRef(node) {
+        this.myWikiElement = node
+    }
+
     render() {
         return (
             <Root eventHandlers={getHandlers(this)} />

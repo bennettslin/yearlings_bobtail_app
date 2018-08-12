@@ -86,7 +86,7 @@ class Root extends Component {
             handleBodyClick: PropTypes.func.isRequired,
             handleBodyTouchMove: PropTypes.func.isRequired,
             handleBodyTouchEnd: PropTypes.func.isRequired,
-            getRootRef: PropTypes.func.isRequired
+            setRootRef: PropTypes.func.isRequired
         })
     }
 
@@ -104,6 +104,7 @@ class Root extends Component {
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this.handleKeyUpPress = this.handleKeyUpPress.bind(this)
         this.displayKeyLetter = this.displayKeyLetter.bind(this)
+        this._setKeyHandlerRef = this._setKeyHandlerRef.bind(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -159,6 +160,10 @@ class Root extends Component {
         })
     }
 
+    _setKeyHandlerRef(node) {
+        this.keyHandler = node
+    }
+
     render() {
         const {
             appMounted,
@@ -197,7 +202,7 @@ class Root extends Component {
 
             {
                 handleBodyTouchMove,
-                getRootRef,
+                setRootRef,
                 ...other
             } = this.props.eventHandlers,
 
@@ -247,7 +252,7 @@ class Root extends Component {
 
         return appMounted && (
             <div
-                ref={getRootRef}
+                ref={setRootRef}
                 className={cx(
                     'Root',
 
@@ -360,7 +365,7 @@ class Root extends Component {
                 {/* TODO: Only pass the events used by KeyHandler. */}
                 <KeyHandler
                     eventHandlers={this.props.eventHandlers}
-                    setRef={node => (this.keyHandler = node)}
+                    setRef={this._setKeyHandlerRef}
                     displayKeyLetter={this.displayKeyLetter}
                 />
 
@@ -368,7 +373,7 @@ class Root extends Component {
 
                 <AdminToggle />
 
-                { selectedAdminIndex && (
+                {Boolean(selectedAdminIndex) && (
                     <Admin {...other} />
                 )}
 

@@ -1,6 +1,30 @@
 module.exports = [
 
     {
+        taskName: `Clicking outside of logue overview prevents accessing song through j or k.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Verse tracker is buggy when selecting new song. Likely because it isn't updating properly.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Advancing to next song when playing doesn't stay playing`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `System to animate presences and cubes between scenes.`,
         workedHours: 0,
         neededHours: 10
@@ -14,37 +38,9 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown.`,
-        workedHours: 0,
-        neededHours: 2
-    },
+
     {
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa. This might involve generally rethinking how to do determine verse bars after a scroll.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Clicking outside of logue overview prevents accessing song through j or k.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Verse tracker is buggy when selecting new song. Likely because it isn't updating properly.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Advancing to next song when playing doesn't stay playing`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Remove binding in render for refs.`,
         workedHours: 0,
         neededHours: 1
     },

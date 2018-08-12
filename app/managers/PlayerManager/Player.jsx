@@ -28,14 +28,15 @@ class Player extends Component {
     constructor(props) {
         super(props)
 
-        this._handleSuspendEvent = this._handleSuspendEvent.bind(this)
-        this._handleEndedEvent = this._handleEndedEvent.bind(this)
-        this._tellAppCurrentTime = this._tellAppCurrentTime.bind(this)
-
         this.state = {
             // Unique identifier for clearing setInterval.
             intervalId: ''
         }
+
+        this._handleSuspendEvent = this._handleSuspendEvent.bind(this)
+        this._handleEndedEvent = this._handleEndedEvent.bind(this)
+        this._tellAppCurrentTime = this._tellAppCurrentTime.bind(this)
+        this._setAudioPlayerRef = this._setAudioPlayerRef.bind(this)
     }
 
     shouldComponentUpdate() {
@@ -43,11 +44,10 @@ class Player extends Component {
     }
 
     componentDidMount() {
-        this.myPlayer = this.myReactPlayer.audioEl
         this.props.setPlayerRef(this, this.props.songIndex)
 
         // Tell app that player can now be played without interruption.
-        this.myPlayer.addEventListener(
+        this.audioPlayer.addEventListener(
 
             /**
              * This is effectively the same as canplaythrough. iOS doesn't fire
@@ -57,7 +57,7 @@ class Player extends Component {
             this._handleSuspendEvent
         )
 
-        this.myPlayer.addEventListener(
+        this.audioPlayer.addEventListener(
             'ended',
             this._handleEndedEvent
         )
@@ -73,13 +73,13 @@ class Player extends Component {
     setCurrentTime(currentTime = 0) {
         // Can be called by player manager.
 
-        this.myPlayer.currentTime = currentTime
+        this.audioPlayer.currentTime = currentTime
     }
 
     handleBeginPlaying() {
         // Only called by player manager.
 
-        this.myPlayer.play()
+        this.audioPlayer.play()
 
         // Begin listening.
         const
@@ -96,7 +96,7 @@ class Player extends Component {
     handleEndPlaying(currentTime) {
         // Only called by player manager.
 
-        this.myPlayer.pause()
+        this.audioPlayer.pause()
         this._clearInterval()
 
         // If still selected, reset time to selected verse.
@@ -104,7 +104,7 @@ class Player extends Component {
     }
 
     _tellAppCurrentTime() {
-        const { currentTime } = this.myPlayer,
+        const { currentTime } = this.audioPlayer,
             { totalTime } = this.props
 
         // If there's time remaining, tell app the current time.
@@ -150,66 +150,70 @@ class Player extends Component {
 
         if (showDebugStatements) {
 
-            this.myPlayer.addEventListener('ended', () => {
+            this.audioPlayer.addEventListener('ended', () => {
                 logger.error('ended', this.props.songIndex);
             })
-            this.myPlayer.addEventListener('pause', () => {
+            this.audioPlayer.addEventListener('pause', () => {
                 logger.error('pause', this.props.songIndex);
             })
-            this.myPlayer.addEventListener('play', () => {
+            this.audioPlayer.addEventListener('play', () => {
                 logger.error('play', this.props.songIndex);
             })
-            this.myPlayer.addEventListener('playing', () => {
+            this.audioPlayer.addEventListener('playing', () => {
                 logger.error('playing', this.props.songIndex);
             })
-            this.myPlayer.addEventListener('timeupdate', () => {
+            this.audioPlayer.addEventListener('timeupdate', () => {
                 logger.error('timeupdate', this.props.songIndex);
             })
 
             // Determine which times ranges have been buffered.
-            this.myPlayer.addEventListener('progress', () => {
+            this.audioPlayer.addEventListener('progress', () => {
                 logger.error('progress', this.props.songIndex);
             })
 
             // Seek operation has completed.
-            this.myPlayer.addEventListener('seeked', () => {
+            this.audioPlayer.addEventListener('seeked', () => {
                 logger.error('seeked', this.props.songIndex);
             })
 
             // Seek operation has begun.
-            this.myPlayer.addEventListener('seeking', () => {
+            this.audioPlayer.addEventListener('seeking', () => {
                 logger.error('seeking', this.props.songIndex);
             })
 
             // Data is not forthcoming.
-            this.myPlayer.addEventListener('stalled', () => {
+            this.audioPlayer.addEventListener('stalled', () => {
                 logger.error('stalled', this.props.songIndex);
             })
 
             // Download has completed.
-            this.myPlayer.addEventListener('suspend', () => {
+            this.audioPlayer.addEventListener('suspend', () => {
                 logger.error('suspend', this.props.songIndex);
             })
 
             // Enough data is available that the media can be played for now.
-            this.myPlayer.addEventListener('canplay', () => {
+            this.audioPlayer.addEventListener('canplay', () => {
                 logger.error('canplay', this.props.songIndex);
             })
 
-            this.myPlayer.addEventListener('canplaythrough', () => {
+            this.audioPlayer.addEventListener('canplaythrough', () => {
                 logger.error('canplaythrough', this.props.songIndex);
             })
 
-            this.myPlayer.addEventListener('waiting', () => {
+            this.audioPlayer.addEventListener('waiting', () => {
                 logger.error('waiting', this.props.songIndex);
             })
         }
     }
 
+    _setAudioPlayerRef(node) {
+        this.audioPlayer = node.audioEl
+    }
+
     render() {
         return (
             <ReactAudioPlayer
-                ref={(node) => (this.myReactPlayer = node)}
+                ref={this._setAudioPlayerRef}
                 src={this.props.mp3}
             />
         )

@@ -210,8 +210,8 @@ Live.propTypes = {
 
     // From parent.
     setLyricRef: PropTypes.func.isRequired,
-    getScoreRef: PropTypes.func.isRequired,
-    getWikiRef: PropTypes.func.isRequired,
+    setScoreRef: PropTypes.func.isRequired,
+    setWikiRef: PropTypes.func.isRequired,
     setCarouselAnnotationRef: PropTypes.func.isRequired,
     setLyricAnnotationRef: PropTypes.func.isRequired,
     setVerseRef: PropTypes.func.isRequired,

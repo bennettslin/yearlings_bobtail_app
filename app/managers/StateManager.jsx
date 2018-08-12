@@ -314,6 +314,77 @@ class StateManager extends Component {
         return this.wikiManager.selectWiki(payload)
     }
 
+    /********
+     * REFS *
+     ********/
+
+    _setAccessManagerRef(node) {
+        this.accessManager = node
+    }
+    _setAnnotationManagerRef(node) {
+        this.annotationManager = node
+    }
+    _setAudioManagerRef(node) {
+        this.audioManager = node
+    }
+    _setCarouselManagerRef(node) {
+        this.carouselManager = node
+    }
+    _setAdminManagerRef(node) {
+        this.adminManager = node
+    }
+    _setDotsManagerRef(node) {
+        this.dotsManager = node
+    }
+    _setLogManagerRef(node) {
+        this.logManager = node
+    }
+    _setLyricManagerRef(node) {
+        this.lyricManager = node
+    }
+    _setNavManagerRef(node) {
+        this.navManager = node
+    }
+    _setOverviewManagerRef(node) {
+        this.overviewManager = node
+    }
+    _setPlayerManagerRef(node) {
+        this.playerManager = node
+    }
+    _setRenderManagerRef(node) {
+        this.renderManager = node
+    }
+    _setScoreManagerRef(node) {
+        this.scoreManager = node
+    }
+    _setSceneManagerRef(node) {
+        this.sceneManager = node
+    }
+    _setScrollManagerRef(node) {
+        this.scrollManager = node
+    }
+    _setSliderVerseManagerRef(node) {
+        this.sliderVerseManager = node
+    }
+    _setSongManagerRef(node) {
+        this.songManager = node
+    }
+    _setTimeVerseManagerRef(node) {
+        this.timeVerseManager = node
+    }
+    _setTipsManagerRef(node) {
+        this.tipsManager = node
+    }
+    _setTitleManagerRef(node) {
+        this.titleManager = node
+    }
+    _setVerseManagerRef(node) {
+        this.verseManager = node
+    }
+    _setWikiManagerRef(node) {
+        this.wikiManager = node
+    }
+
     _bindEventHandlers() {
         this.accessAnnotation = this.accessAnnotation.bind(this)
         this.accessAnnotationAnchor = this.accessAnnotationAnchor.bind(this)
@@ -360,6 +431,29 @@ class StateManager extends Component {
         this.setLyricVerseParentRef = this.setLyricVerseParentRef.bind(this)
         this.setCarouselParentRef = this.setCarouselParentRef.bind(this)
         this.scrollElementIntoView = this.scrollElementIntoView.bind(this)
+
+        this._setAccessManagerRef = this._setAccessManagerRef.bind(this)
+        this._setAnnotationManagerRef = this._setAnnotationManagerRef.bind(this)
+        this._setAudioManagerRef = this._setAudioManagerRef.bind(this)
+        this._setCarouselManagerRef = this._setCarouselManagerRef.bind(this)
+        this._setAdminManagerRef = this._setAdminManagerRef.bind(this)
+        this._setDotsManagerRef = this._setDotsManagerRef.bind(this)
+        this._setLogManagerRef = this._setLogManagerRef.bind(this)
+        this._setLyricManagerRef = this._setLyricManagerRef.bind(this)
+        this._setNavManagerRef = this._setNavManagerRef.bind(this)
+        this._setOverviewManagerRef = this._setOverviewManagerRef.bind(this)
+        this._setPlayerManagerRef = this._setPlayerManagerRef.bind(this)
+        this._setRenderManagerRef = this._setRenderManagerRef.bind(this)
+        this._setScoreManagerRef = this._setScoreManagerRef.bind(this)
+        this._setSceneManagerRef = this._setSceneManagerRef.bind(this)
+        this._setScrollManagerRef = this._setScrollManagerRef.bind(this)
+        this._setSliderVerseManagerRef = this._setSliderVerseManagerRef.bind(this)
+        this._setSongManagerRef = this._setSongManagerRef.bind(this)
+        this._setTimeVerseManagerRef = this._setTimeVerseManagerRef.bind(this)
+        this._setTipsManagerRef = this._setTipsManagerRef.bind(this)
+        this._setTitleManagerRef = this._setTitleManagerRef.bind(this)
+        this._setVerseManagerRef = this._setVerseManagerRef.bind(this)
+        this._setWikiManagerRef = this._setWikiManagerRef.bind(this)
     }
 
     render() {
@@ -408,71 +502,71 @@ class StateManager extends Component {
                     togglePlay={this.togglePlay}
                 />
                 <AccessManager
-                    setRef={node => (this.accessManager = node)}
+                    setRef={this._setAccessManagerRef}
                 />
                 <AnnotationManager
-                    setRef={node => (this.annotationManager = node)}
+                    setRef={this._setAnnotationManagerRef}
                     updatePath={updatePath}
                 />
                 <AudioManager
-                    setRef={node => (this.audioManager = node)}
+                    setRef={this._setAudioManagerRef}
                     selectSong={this.selectSong}
                     resetTimeOfSelectedVerse={this.resetTimeOfSelectedVerse}
                 />
                 <CarouselManager
-                    setRef={node => (this.carouselManager = node)}
+                    setRef={this._setCarouselManagerRef}
                     accessNavSong={this.accessNavSong}
                     selectBookColumn={this.selectBookColumn}
                 />
                 <AdminManager
-                    setRef={node => (this.adminManager = node)}
+                    setRef={this._setAdminManagerRef}
                 />
                 <DotsManager
-                    setRef={node => (this.dotsManager = node)}
+                    setRef={this._setDotsManagerRef}
                     accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
                 />
                 <LogManager
-                    setRef={node => (this.logManager = node)}
+                    setRef={this._setLogManagerRef}
                 />
                 <LyricManager
-                    setRef={node => (this.lyricManager = node)}
+                    setRef={this._setLyricManagerRef}
                     deselectAnnotation={this.deselectAnnotation}
                     accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
                 />
                 <NavManager
-                    setRef={node => (this.navManager = node)}
+                    setRef={this._setNavManagerRef}
                 />
                 <OverviewManager
-                    setRef={node => (this.overviewManager = node)}
+                    setRef={this._setOverviewManagerRef}
                     selectDotsExpand={this.selectDotsExpand}
                     selectLyricExpand={this.selectLyricExpand}
                 />
                 <PlayerManager
-                    setRef={node => (this.playerManager = node)}
+                    setRef={this._setPlayerManagerRef}
                     selectTime={this.selectTime}
                     advanceToNextSong={this.advanceToNextSong}
                 />
                 <RenderManager
-                    setRef={node => (this.renderManager = node)}
+                    setRef={this._setRenderManagerRef}
                 />
                 <SceneManager
-                    setRef={node => (this.sceneManager = node)}
+                    setRef={this._setSceneManagerRef}
                     selectVerse={this.selectVerse}
                     resetVerseBars={this.resetVerseBars}
                 />
                 <ScoreManager
-                    setRef={node => (this.scoreManager = node)}
+                    setRef={this._setScoreManagerRef}
                 />
                 <ScrollManager
-                    setRef={node => (this.scrollManager = node)}
+                    setRef={this._setScrollManagerRef}
                 />
                 <SliderVerseManager
-                    setRef={node => (this.sliderVerseManager = node)}
+                    setRef={this._setSliderVerseManagerRef}
                     selectVerse={this.selectVerse}
                     resetVerseBars={this.resetVerseBars}
                 />
                 <SongManager
-                    setRef={node => (this.songManager = node)}
+                    setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
                     selectAnnotation={this.selectAnnotation}
                     selectVerse={this.selectVerse}
@@ -480,26 +574,26 @@ class StateManager extends Component {
                     updatePath={updatePath}
                 />
                 <TimeVerseManager
-                    setRef={node => (this.timeVerseManager = node)}
+                    setRef={this._setTimeVerseManagerRef}
                     determineVerseBars={this.determineVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
                     updateSelectedPlayer={this.updateSelectedPlayer}
                     updatePath={updatePath}
                 />
                 <TipsManager
-                    setRef={node => (this.tipsManager = node)}
+                    setRef={this._setTipsManagerRef}
                     selectDotsExpand={this.selectDotsExpand}
                     selectLyricExpand={this.selectLyricExpand}
                 />
                 <TitleManager
-                    setRef={node => (this.titleManager = node)}
+                    setRef={this._setTitleManagerRef}
                 />
                 <VerseManager
-                    setRef={node => (this.verseManager = node)}
+                    setRef={this._setVerseManagerRef}
                     getVerseElement={this.getVerseElement}
                 />
                 <WikiManager
-                    setRef={node => (this.wikiManager = node)}
+                    setRef={this._setWikiManagerRef}
                 />
                 <WindowManager
                     deselectAnnotation={this.deselectAnnotation}

@@ -80,7 +80,7 @@ class PlayerManager extends Component {
         }
 
         // Initialise player refs.
-        this.myPlayers = {}
+        this.players = {}
         this.setPlayerRef = this.setPlayerRef.bind(this)
         this.setPlayerCanPlayThrough = this.setPlayerCanPlayThrough.bind(this)
     }
@@ -221,13 +221,13 @@ class PlayerManager extends Component {
     }
 
     getPlayerRef(songIndex) {
-        return this.myPlayers[songIndex] || LOGUE_DUMMY_PLAYER
+        return this.players[songIndex] || LOGUE_DUMMY_PLAYER
     }
 
     setPlayerRef(node, songIndex) {
-        this.myPlayers[songIndex] = node
+        this.players[songIndex] = node
 
-        this.myPlayers[songIndex].setCurrentTime(
+        this.players[songIndex].setCurrentTime(
             this.getCurrentTimeForSongIndex(songIndex)
         )
     }

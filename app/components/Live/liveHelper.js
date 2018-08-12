@@ -1,8 +1,8 @@
 export const getOrganisedHandlersFromProps = (props) => {
     const {
         setLyricRef,
-        getScoreRef,
-        getWikiRef,
+        setScoreRef,
+        setWikiRef,
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,
@@ -98,7 +98,7 @@ export const getOrganisedHandlersFromProps = (props) => {
     },
 
     scorePopupHandlers = {
-        getScoreRef,
+        setScoreRef,
         handleScoreToggle
     },
 
@@ -113,7 +113,7 @@ export const getOrganisedHandlersFromProps = (props) => {
     },
 
     wikiPopupHandlers = {
-        getWikiRef,
+        setWikiRef,
         handleWikiToggle
     },
 

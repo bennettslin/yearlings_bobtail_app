@@ -47,23 +47,20 @@ export const bindHandlers = (me) => {
     me.handleScrollUponCarouselRender =
         me.handleScrollUponCarouselRender.bind(me)
     me.stopPropagation = me.stopPropagation.bind(me)
-
     me.setLyricRef = me.setLyricRef.bind(me)
+    me.setRootRef = me.setRootRef.bind(me)
+    me.setScoreRef = me.setScoreRef.bind(me)
+    me.setWikiRef = me.setWikiRef.bind(me)
 }
 
 export const getHandlers = (me) => {
-    const
-        getRootRef = node => me.myRootElement = node,
-        getScoreRef = node => me.myScoreElement = node,
-        getWikiRef = node => me.myWikiElement = node,
-
-        {
-            setCarouselAnnotationRef,
-            setLyricAnnotationRef,
-            setVerseRef,
-            setLyricVerseParentRef,
-            setCarouselParentRef
-        } = me.props
+    const {
+        setCarouselAnnotationRef,
+        setLyricAnnotationRef,
+        setVerseRef,
+        setLyricVerseParentRef,
+        setCarouselParentRef
+    } = me.props
 
     return {
         focusElementForAccess: me.focusElementForAccess,
@@ -112,10 +109,9 @@ export const getHandlers = (me) => {
         stopPropagation: me.stopPropagation,
 
         setLyricRef: me.setLyricRef,
-
-        getRootRef,
-        getScoreRef,
-        getWikiRef,
+        setRootRef: me.setRootRef,
+        setScoreRef: me.setScoreRef,
+        setWikiRef: me.setWikiRef,
 
         setCarouselAnnotationRef,
         setLyricAnnotationRef,

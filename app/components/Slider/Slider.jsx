@@ -38,6 +38,7 @@ class Slider extends Component {
 
         this._handleTouchDown = this._handleTouchDown.bind(this)
         this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
+        this._setSliderRef = this._setSliderRef.bind(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -80,7 +81,11 @@ class Slider extends Component {
     }
 
     _handleTouchDown(e) {
-        this.props.handleSliderTouchBegin(e, this.mySlider)
+        this.props.handleSliderTouchBegin(e, this.slider)
+    }
+
+    _setSliderRef(node) {
+        this.slider = node
     }
 
     render() {
@@ -89,7 +94,7 @@ class Slider extends Component {
 
         return (
             <div
-                ref={(node) => (this.mySlider = node)}
+                ref={this._setSliderRef}
                 className={cx(
                     'Slider',
                     {

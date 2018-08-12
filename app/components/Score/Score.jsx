@@ -22,17 +22,22 @@ class Score extends Component {
         renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        getScoreRef: PropTypes.func.isRequired
+        setScoreRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
         this.onIframeLoad = this.onIframeLoad.bind(this)
+        this._setIframeRef = this._setIframeRef.bind(this)
     }
 
     onIframeLoad() {
         this.props.setIsScoreLoaded(true)
+    }
+
+    _setIframeRef(node) {
+        this.iframe = node
     }
 
     render() {
@@ -41,7 +46,7 @@ class Score extends Component {
 
         return (
             <div
-                ref={this.props.getScoreRef}
+                ref={this.props.setScoreRef}
                 className={cx(
                     'Score',
                     'iframeContainer'
@@ -49,7 +54,7 @@ class Score extends Component {
                 tabIndex="1"
             >
                 <iframe
-                    ref={(node) => (this.myIframe = node)}
+                    ref={this._setIframeRef}
                     className="iframeContainer__iframe"
                     src={score}
                     onLoad={this.onIframeLoad}
