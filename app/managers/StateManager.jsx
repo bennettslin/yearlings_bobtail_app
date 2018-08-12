@@ -1,7 +1,7 @@
 // State manager.
 
 import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
@@ -36,9 +36,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class StateManager extends Component {
 
-    static propTypes = {
-        updatePath: PropTypes.func.isRequired
-    }
+    static propTypes = {}
 
     constructor(props) {
         super(props)
@@ -457,8 +455,6 @@ class StateManager extends Component {
     }
 
     render() {
-        const { updatePath } = this.props
-
         return (
             <Fragment>
                 <EventHandler
@@ -506,7 +502,6 @@ class StateManager extends Component {
                 />
                 <AnnotationManager
                     setRef={this._setAnnotationManagerRef}
-                    updatePath={updatePath}
                 />
                 <AudioManager
                     setRef={this._setAudioManagerRef}
@@ -571,14 +566,12 @@ class StateManager extends Component {
                     selectAnnotation={this.selectAnnotation}
                     selectVerse={this.selectVerse}
                     updateSelectedPlayer={this.updateSelectedPlayer}
-                    updatePath={updatePath}
                 />
                 <TimeVerseManager
                     setRef={this._setTimeVerseManagerRef}
                     determineVerseBars={this.determineVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
                     updateSelectedPlayer={this.updateSelectedPlayer}
-                    updatePath={updatePath}
                 />
                 <TipsManager
                     setRef={this._setTipsManagerRef}

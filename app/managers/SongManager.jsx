@@ -28,8 +28,7 @@ class SongManager extends Component {
         togglePlay: PropTypes.func.isRequired,
         selectAnnotation: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
-        updateSelectedPlayer: PropTypes.func.isRequired,
-        updatePath: PropTypes.func.isRequired
+        updateSelectedPlayer: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -116,16 +115,6 @@ class SongManager extends Component {
         })
 
         if (selectedSongIndex !== this.props.selectedSongIndex) {
-            /**
-             * This is the only place where router path will change based on a
-             * new song.
-             */
-            props.updatePath({
-                selectedSongIndex,
-                selectedVerseIndex,
-                selectedAnnotationIndex
-            })
-
             /**
              * This is the only place where selected player will be updated
              * based on a new song.

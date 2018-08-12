@@ -35,8 +35,7 @@ class TimeVerseManager extends Component {
         setRef: PropTypes.func.isRequired,
         determineVerseBars: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
-        updateSelectedPlayer: PropTypes.func.isRequired,
-        updatePath: PropTypes.func.isRequired
+        updateSelectedPlayer: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -93,9 +92,6 @@ class TimeVerseManager extends Component {
             this._selectTimeAndVerse({
                 selectedTimePlayed: currentTime,
                 selectedVerseIndex: nextVerseIndex,
-
-                // When time is being selected, always render verse immediately.
-                renderVerseImmediately: true,
                 isPlayerAdvancing: true
             })
         }
@@ -113,20 +109,12 @@ class TimeVerseManager extends Component {
                 getTimeForVerseIndex(
                     selectedSongIndex,
                     selectedVerseIndex
-                ),
-
-            /**
-             * If selecting or changing verse in same song, change index to be
-             * rendered right away.
-             */
-            renderVerseImmediately =
-                selectedSongIndex === this.props.selectedSongIndex
+                )
 
         this._selectTimeAndVerse({
             selectedTimePlayed,
             selectedSongIndex,
             selectedVerseIndex,
-            renderVerseImmediately,
             scrollLog,
             bypassUpdateSelected
         })
@@ -136,13 +124,10 @@ class TimeVerseManager extends Component {
         selectedTimePlayed,
         selectedSongIndex = this.props.selectedSongIndex,
         selectedVerseIndex,
-        renderVerseImmediately,
         scrollLog,
         bypassUpdateSelected,
         isPlayerAdvancing
     }) {
-
-        const { props } = this
 
         /**
          * Since time and verse are in sync, this helper method can be called
@@ -150,26 +135,12 @@ class TimeVerseManager extends Component {
          */
 
         if (!bypassUpdateSelected) {
-            props.updateSelectedStore({
+            this.props.updateSelectedStore({
                 selectedVerseIndex
             })
         }
 
-        props.selectTimePlayed(selectedTimePlayed)
-
-        /**
-         * If selecting or changing verse in same song, change index to be
-         * rendered right away.
-         */
-        if (selectedSongIndex === props.selectedSongIndex) {
-            this.props.updateRenderableStore({
-                renderableVerseIndex: selectedVerseIndex,
-                renderableSceneIndex: getSceneIndexForVerseIndex(
-                    selectedSongIndex,
-                    selectedVerseIndex
-                )
-            })
-        }
+        this.props.selectTimePlayed(selectedTimePlayed)
 
         /**
          * If called by player, and autoScroll is on, then scroll to selected
@@ -180,7 +151,7 @@ class TimeVerseManager extends Component {
             scrollLog ||
             (
                 !this.props.isManualScroll &&
-                selectedVerseIndex !== props.selectedVerseIndex
+                selectedVerseIndex !== this.props.selectedVerseIndex
             )
         ) {
             this.props.scrollElementIntoView({
@@ -190,28 +161,17 @@ class TimeVerseManager extends Component {
             })
         }
 
-        // Render verse and scene immediately.
-        if (renderVerseImmediately) {
-            const { selectedSongIndex } = props
-
+        if (selectedSongIndex === this.props.selectedSongIndex) {
+            /**
+             * If selecting or changing verse in same song, change index to be
+             * rendered right away.
+             */
             this.props.updateRenderableStore({
-                renderableSongIndex: selectedSongIndex,
                 renderableVerseIndex: selectedVerseIndex,
                 renderableSceneIndex: getSceneIndexForVerseIndex(
                     selectedSongIndex,
                     selectedVerseIndex
                 )
-            })
-        }
-
-        if (selectedSongIndex === this.props.selectedSongIndex) {
-            /**
-             * This is the only place where router path will change based on a
-             * new verse index for the same song.
-             */
-            props.updatePath({
-                selectedSongIndex,
-                selectedVerseIndex
             })
 
             /**
@@ -219,7 +179,7 @@ class TimeVerseManager extends Component {
              * based on a new verse index for the same song.
              */
             if (!isPlayerAdvancing) {
-                props.updateSelectedPlayer({
+                this.props.updateSelectedPlayer({
                     selectedSongIndex,
                     selectedVerseIndex
                 })

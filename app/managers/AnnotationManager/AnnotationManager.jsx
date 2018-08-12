@@ -39,8 +39,7 @@ class AnnotationManager extends Component {
         updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired,
-        updatePath: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -137,17 +136,6 @@ class AnnotationManager extends Component {
         if (selectedSongIndex === props.selectedSongIndex) {
             props.updateRenderableStore({
                 renderableAnnotationIndex: selectedAnnotationIndex
-            })
-        }
-
-        /**
-         * This is the only place where router path will change based on a new
-         * annotation index for the same song.
-         */
-        if (selectedSongIndex === this.props.selectedSongIndex) {
-            props.updatePath({
-                selectedSongIndex,
-                selectedAnnotationIndex
             })
         }
 

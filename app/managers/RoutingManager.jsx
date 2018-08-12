@@ -76,8 +76,6 @@ class RoutingManager extends Component {
             selectedVerseIndex,
             selectedAnnotationIndex
         }
-
-        this.updatePath = this.updatePath.bind(this)
     }
 
     componentDidMount() {
@@ -99,25 +97,23 @@ class RoutingManager extends Component {
         })
     }
 
-    replacePath(pathSongIndex, pathVerseIndex, pathAnnotationIndex) {
+    componentDidUpdate(prevProps) {
+        const {
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            } = this.props,
+            {
+                selectedSongIndex: prevSongIndex,
+                selectedVerseIndex: prevVerseIndex,
+                selectedAnnotationIndex: prevAnnotationIndex
+            } = prevProps
 
-        const pathName = getPathForIndices(
-            pathSongIndex, pathVerseIndex, pathAnnotationIndex
-        )
-
-        this.props.history.replace(pathName);
-    }
-
-    updatePath({
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedVerseIndex = this.props.selectedVerseIndex,
-        selectedAnnotationIndex = this.props.selectedAnnotationIndex
-    }) {
         // Only update path if it has changed.
         if (
-            this.props.selectedSongIndex !== selectedSongIndex ||
-            this.props.selectedVerseIndex !== selectedVerseIndex ||
-            this.props.selectedAnnotationIndex !== selectedAnnotationIndex
+            prevSongIndex !== selectedSongIndex ||
+            prevVerseIndex !== selectedVerseIndex ||
+            prevAnnotationIndex !== selectedAnnotationIndex
         ) {
             this.replacePath(
                 selectedSongIndex,
@@ -127,11 +123,18 @@ class RoutingManager extends Component {
         }
     }
 
+    replacePath(pathSongIndex, pathVerseIndex, pathAnnotationIndex) {
+
+        const pathName = getPathForIndices(
+            pathSongIndex, pathVerseIndex, pathAnnotationIndex
+        )
+
+        this.props.history.replace(pathName);
+    }
+
     render() {
         return (
-            <StateManager
-                updatePath={this.updatePath}
-            />
+            <StateManager />
         )
     }
 }
