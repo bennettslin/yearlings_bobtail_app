@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setUpdatedTimePlayed } from 'flux/actions/audio'
 import { updateRenderableStore } from 'flux/actions/renderable'
 import {
     selectTimePlayed,
@@ -30,7 +29,6 @@ class TimeVerseManager extends Component {
 
         updateRenderableStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
-        setUpdatedTimePlayed: PropTypes.func.isRequired,
         selectTimePlayed: PropTypes.func.isRequired,
 
         // From parent.
@@ -240,7 +238,6 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateRenderableStore,
         updateSelectedStore,
-        setUpdatedTimePlayed,
         selectTimePlayed
     }, dispatch)
 )

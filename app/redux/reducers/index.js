@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { AlbumReducer } from './album'
 import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
-import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
+import { IsPlayingReducer } from './audio'
 import { DeviceStoreReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanPresencesRenderReducer, CanPixelsRenderReducer } from './render'
@@ -32,7 +32,6 @@ const rootReducer = combineReducers({
     accessedNavSongIndex: AccessedNavSongIndexReducer,
 
     isPlaying: IsPlayingReducer,
-    updatedTimePlayed: UpdatedTimePlayedReducer,
 
     [DEVICE_STORE]: DeviceStoreReducer,
 

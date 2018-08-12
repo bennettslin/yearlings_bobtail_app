@@ -12,7 +12,6 @@ module.exports = {
 
     // Audio.
     IS_PLAYING: 'isPlaying',
-    UPDATED_TIME_PLAYED: 'updatedTimePlayed',
 
     // Device.
     DEVICE_STORE: 'deviceStore',
