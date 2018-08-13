@@ -1,24 +1,21 @@
 // Component to show audio progress in verse.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getVerseDurationForVerseIndex } from 'helpers/dataHelper'
-// import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import VerseTrackerStyle from './VerseTrackerStyle'
+
+import { getSelectedChildSelector } from './verseTrackerHelper'
 
 const mapStateToProps = ({
-    // canLyricRender,
     isPlaying,
     renderableStore: {
-        renderableSongIndex,
         renderableVerseIndex
     }
 }) => ({
-    // canLyricRender,
     isPlaying,
-    renderableSongIndex,
     renderableVerseIndex
 })
 
@@ -26,14 +23,13 @@ class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
-        // canLyricRender: PropTypes.bool.isRequired,
         isPlaying: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
         renderableVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
-        inLyric: PropTypes.bool,
+        inUnit: PropTypes.bool,
+        inVerseBar: PropTypes.bool,
         inSlider: PropTypes.bool
     }
 
@@ -44,11 +40,7 @@ class VerseTracker extends Component {
 
         // If it can render, update if...
         return (
-
-            // ... song changed...
-            this.props.renderableSongIndex !== nextProps.renderableSongIndex ||
-
-            // ... or verse was selected or unselected...
+            // ... verse was selected or unselected...
             isSelected !== willBeSelected ||
 
             (
@@ -72,47 +64,51 @@ class VerseTracker extends Component {
 
     render() {
         const {
-                renderableSongIndex,
                 verseIndex,
-                inLyric,
+                inUnit,
+                inVerseBar,
                 inSlider
             } = this.props,
 
-            verseDuration = getVerseDurationForVerseIndex(
-                renderableSongIndex,
-                verseIndex
-            ),
+            inLyric = inUnit || inVerseBar,
 
-            transitionedStyle =
-                inSlider ?
-                    'left' :
-                    'top',
+            isSelected = this.getIsSelectedVerse(this.props),
 
-            isSelected = this.getIsSelectedVerse(this.props)
+            selectedChildSelector = getSelectedChildSelector({
+                verseIndex,
+                inUnit,
+                inVerseBar,
+                inSlider
+            })
 
         return (
-            <div
-                className={cx(
-                    'VerseTracker',
-                    isSelected && `VerseTracker__selected`,
+            <Fragment>
+                <VerseTrackerStyle
+                    {...{
+                        verseIndex,
+                        inUnit,
+                        inVerseBar,
+                        inSlider
+                    }}
+                />
+                <div
+                    className={cx(
+                        'VerseTracker',
 
-                    inSlider &&
-                        'VerseTracker__inSlider',
+                        isSelected && selectedChildSelector,
 
-                    inLyric &&
-                        'VerseTracker__inLyric',
+                        isSelected && `VerseTracker__selected`,
 
-                    'absoluteFullContainer'
-                )}
-                {
-                    ...isSelected && {
-                        style: {
-                            transition:
-                                `${transitionedStyle} ${verseDuration}s linear`
-                        }
-                    }
-                }
-            />
+                        inSlider &&
+                            'VerseTracker__inSlider',
+
+                        inLyric &&
+                            'VerseTracker__inLyric',
+
+                        'absoluteFullContainer'
+                    )}
+                />
+            </Fragment>
         )
     }
 }

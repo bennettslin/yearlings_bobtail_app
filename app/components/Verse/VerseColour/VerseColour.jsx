@@ -54,7 +54,8 @@ VerseColour = ({
             <VerseTracker
                 {...{
                     verseIndex,
-                    inLyric,
+                    inVerseBar,
+                    inUnit,
                     inSlider
                 }}
 

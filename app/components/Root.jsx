@@ -51,6 +51,8 @@ class Root extends Component {
         appMounted: PropTypes.bool.isRequired,
         selectedAdminIndex: PropTypes.number.isRequired,
 
+        canMainRender: PropTypes.bool.isRequired,
+
         deviceIndex: PropTypes.number.isRequired,
         isPlaying: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
@@ -167,6 +169,7 @@ class Root extends Component {
     render() {
         const {
             appMounted,
+            canMainRender,
             selectedAdminIndex,
             deviceIndex,
             selectedAccessIndex,
@@ -257,6 +260,13 @@ class Root extends Component {
                     'Root',
 
                     keyName && `${PARENT_ACCESS_PREFIX}${keyName}`,
+
+                    /**
+                     * When transitioning between songs, explicitly reset all
+                     * verse trackers. This is kind of a hacky approach. (It's
+                     * currently not used.)
+                     */
+                    canMainRender && 'RM__canMainRender',
 
                     `RM__${deviceClassName}`,
                     isDesktop ?
@@ -384,6 +394,7 @@ class Root extends Component {
 
 const mapStateToProps = ({
     appMounted,
+    canMainRender,
     selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,
@@ -419,6 +430,7 @@ const mapStateToProps = ({
     isManualScroll
 }) => ({
     appMounted,
+    canMainRender,
     selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,

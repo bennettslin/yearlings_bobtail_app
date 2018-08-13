@@ -1,12 +1,12 @@
 .VerseTracker {
 
-    .RM__isPaused
-    & {
-        // Override transition in inline style.
-        transition: none !important;
-    }
+    // .RM__isPaused
+    // & {
+    //     // Override transition in inline style.
+    //     transition: none !important;
+    // }
 
-    .RM__isPlaying
+    .RM__canMainRender.RM__isPlaying
     &.VerseTracker__selected {
 
         // TODO: Improve this styling.
@@ -15,34 +15,52 @@
 }
 
 .VerseTracker__inSlider {
-    // width: 200%;
     left: -100%;
 
-    .RM__isPlaying
+    .RM__canMainRender.RM__isPlaying
     &.VerseTracker__selected {
         left: 0;
-
-        // TODO: Improve this styling.
-        // background: linear-gradient(
-        //     90deg,
-        //     black,
-        //     transparent
-        // );
     }
 }
 
 .VerseTracker__inLyric {
-    // height: 200%;
     top: -100%;
 
-    .RM__isPlaying
+    .RM__canMainRender.RM__isPlaying
     &.VerseTracker__selected {
         top: 0;
-
-        // TODO: Improve this styling.
-        // background: linear-gradient(
-        //     black,
-        //     transparent
-        // );
     }
 }
+
+// .VerseTracker__inSlider {
+//     width: 200%;
+//     left: -100%;
+
+//     .RM__isPlaying
+//     &.VerseTracker__selected {
+//         left: 0;
+
+//         // TODO: Improve this styling.
+//         background: linear-gradient(
+//             90deg,
+//             black,
+//             transparent
+//         );
+//     }
+// }
+
+// .VerseTracker__inLyric {
+//     height: 200%;
+//     top: -100%;
+
+//     .RM__isPlaying
+//     &.VerseTracker__selected {
+//         top: 0;
+
+//         // TODO: Improve this styling.
+//         background: linear-gradient(
+//             black,
+//             transparent
+//         );
+//     }
+// }
