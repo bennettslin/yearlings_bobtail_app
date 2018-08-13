@@ -1,25 +1,25 @@
-export const getSelectedChildSelector = ({
-    verseIndex,
-    inUnit,
-    inVerseBar,
-    inSlider
-}) => {
+// export const getSelectedChildSelector = ({
+//     verseIndex,
+//     inUnit,
+//     inVerseBar,
+//     inSlider
+// }) => {
 
-    let locationString
+//     let locationString
 
-    if (inUnit) {
-        locationString = 'unit'
+//     if (inUnit) {
+//         locationString = 'unit'
 
-    } else if (inVerseBar) {
-        locationString = 'verseBar'
+//     } else if (inVerseBar) {
+//         locationString = 'verseBar'
 
-    } else if (inSlider) {
-        locationString = 'slider'
-    }
+//     } else if (inSlider) {
+//         locationString = 'slider'
+//     }
 
-    return `VerseTracker__selected__${
-        verseIndex
-    }__${
-        locationString
-    }`
-}
+//     return `VerseTracker__selected__${
+//         verseIndex
+//     }__${
+//         locationString
+//     }`
+// }

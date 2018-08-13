@@ -51,7 +51,7 @@ class Root extends Component {
         appMounted: PropTypes.bool.isRequired,
         selectedAdminIndex: PropTypes.number.isRequired,
 
-        canMainRender: PropTypes.bool.isRequired,
+        canCarouselRender: PropTypes.bool.isRequired,
 
         deviceIndex: PropTypes.number.isRequired,
         isPlaying: PropTypes.bool.isRequired,
@@ -169,7 +169,7 @@ class Root extends Component {
     render() {
         const {
             appMounted,
-            canMainRender,
+            canCarouselRender,
             selectedAdminIndex,
             deviceIndex,
             selectedAccessIndex,
@@ -263,10 +263,13 @@ class Root extends Component {
 
                     /**
                      * When transitioning between songs, explicitly reset all
-                     * verse trackers. This is kind of a hacky approach. (It's
-                     * currently not used.)
+                     * verse trackers. This current approach is brittle, since
+                     * it depends on checking that the carousel can render,
+                     * which is after when the slider and lyric can render,
+                     * which is where the verse trackers are.
                      */
-                    canMainRender && 'RM__canMainRender',
+                    canCarouselRender &&
+                        'RM__canTrackVerse',
 
                     `RM__${deviceClassName}`,
                     isDesktop ?
@@ -394,7 +397,7 @@ class Root extends Component {
 
 const mapStateToProps = ({
     appMounted,
-    canMainRender,
+    canCarouselRender,
     selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,
@@ -430,7 +433,7 @@ const mapStateToProps = ({
     isManualScroll
 }) => ({
     appMounted,
-    canMainRender,
+    canCarouselRender,
     selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,

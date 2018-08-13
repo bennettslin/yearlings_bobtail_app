@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Verse tracker is buggy when selecting new song. Likely because it isn't updating properly.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown.`,
         workedHours: 0,
         neededHours: 2

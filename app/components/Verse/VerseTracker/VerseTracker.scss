@@ -1,12 +1,6 @@
 .VerseTracker {
 
-    // .RM__isPaused
-    // & {
-    //     // Override transition in inline style.
-    //     transition: none !important;
-    // }
-
-    .RM__canMainRender.RM__isPlaying
+    .RM__canTrackVerse.RM__isPlaying
     &.VerseTracker__selected {
 
         // TODO: Improve this styling.
@@ -17,7 +11,7 @@
 .VerseTracker__inSlider {
     left: -100%;
 
-    .RM__canMainRender.RM__isPlaying
+    .RM__canTrackVerse.RM__isPlaying
     &.VerseTracker__selected {
         left: 0;
     }
@@ -26,7 +20,7 @@
 .VerseTracker__inLyric {
     top: -100%;
 
-    .RM__canMainRender.RM__isPlaying
+    .RM__canTrackVerse.RM__isPlaying
     &.VerseTracker__selected {
         top: 0;
     }

@@ -1,21 +1,21 @@
 // Component to show audio progress in verse.
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import VerseTrackerStyle from './VerseTrackerStyle'
-
-import { getSelectedChildSelector } from './verseTrackerHelper'
+import { getVerseDurationForVerseIndex } from 'helpers/dataHelper'
+// import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+// import { getSelectedChildSelector } from './verseTrackerHelper'
 
 const mapStateToProps = ({
-    isPlaying,
     renderableStore: {
+        renderableSongIndex,
         renderableVerseIndex
     }
 }) => ({
-    isPlaying,
+    renderableSongIndex,
     renderableVerseIndex
 })
 
@@ -23,7 +23,7 @@ class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
-        isPlaying: PropTypes.bool.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
         renderableVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -40,7 +40,11 @@ class VerseTracker extends Component {
 
         // If it can render, update if...
         return (
-            // ... verse was selected or unselected...
+
+            // ... song changed...
+            this.props.renderableSongIndex !== nextProps.renderableSongIndex ||
+
+            // ... or verse was selected or unselected...
             isSelected !== willBeSelected ||
 
             (
@@ -64,6 +68,8 @@ class VerseTracker extends Component {
 
     render() {
         const {
+                renderableSongIndex,
+
                 verseIndex,
                 inUnit,
                 inVerseBar,
@@ -74,41 +80,35 @@ class VerseTracker extends Component {
 
             isSelected = this.getIsSelectedVerse(this.props),
 
-            selectedChildSelector = getSelectedChildSelector({
-                verseIndex,
-                inUnit,
-                inVerseBar,
-                inSlider
-            })
+            verseDuration = getVerseDurationForVerseIndex(
+                renderableSongIndex,
+                verseIndex
+            ),
+
+            transitionStyle =
+                inSlider ?
+                    'left' :
+                    'top'
 
         return (
-            <Fragment>
-                <VerseTrackerStyle
-                    {...{
-                        verseIndex,
-                        inUnit,
-                        inVerseBar,
-                        inSlider
-                    }}
-                />
-                <div
-                    className={cx(
-                        'VerseTracker',
+            <div
+                className={cx(
+                    'VerseTracker',
 
-                        isSelected && selectedChildSelector,
+                    isSelected && `VerseTracker__selected`,
 
-                        isSelected && `VerseTracker__selected`,
+                    inSlider &&
+                        'VerseTracker__inSlider',
 
-                        inSlider &&
-                            'VerseTracker__inSlider',
+                    inLyric &&
+                        'VerseTracker__inLyric',
 
-                        inLyric &&
-                            'VerseTracker__inLyric',
-
-                        'absoluteFullContainer'
-                    )}
-                />
-            </Fragment>
+                    'absoluteFullContainer'
+                )}
+                style={{
+                    transition: `${transitionStyle} ${verseDuration}s linear`
+                }}
+            />
         )
     }
 }
