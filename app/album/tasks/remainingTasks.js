@@ -46,7 +46,7 @@ module.exports = [
     },
 
     {
-        taskName: `Handle weirdness of title overlay in logue.`,
+        taskName: `Overview logue in two row menu desktop is too low.`,
         workedHours: 0,
         neededHours: 1
     },

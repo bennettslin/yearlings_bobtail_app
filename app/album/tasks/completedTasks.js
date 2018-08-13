@@ -3707,5 +3707,10 @@ module.exports = [
         taskName: `Verse tracker is buggy when selecting new song. Fix is in, but not perfect. The tracking only starts when the component is allowed to render. But by then, the track has already been playing for some time.`,
         workedHours: 4,
         neededHours: 4
-    }
+    },
+    {
+        taskName: `Handle weirdness of title overlay in logue.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
