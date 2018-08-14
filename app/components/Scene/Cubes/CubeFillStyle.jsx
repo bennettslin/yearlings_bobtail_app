@@ -72,8 +72,7 @@ CubeFillStyle = ({
                     {
                         h,
                         s,
-                        l,
-                        a
+                        l
                     } = HSLA_MAP[hslaKey]
 
                     return (
@@ -87,7 +86,7 @@ CubeFillStyle = ({
                                     childPrefix
                                 ],
                                 style: {
-                                    fill: `hsla(${h}, ${s}%, ${l}%, ${a})`
+                                    fill: `hsla(${h}, ${s}%, ${l}%, 0.8)`
                                 }
                             }}
                         />
