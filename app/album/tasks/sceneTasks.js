@@ -16,8 +16,8 @@ module.exports = [
     },
     {
         taskName: `Elementary school playground.`,
-        workedHours: 0.5,
-        neededHours: 0.5
+        workedHours: 1,
+        neededHours: 1
     },
 
     /**

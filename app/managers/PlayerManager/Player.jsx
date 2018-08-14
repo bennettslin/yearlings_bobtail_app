@@ -65,6 +65,7 @@ class Player extends Component {
 
     _clearInterval() {
         clearInterval(this.state.intervalId)
+
         this.setState({
             intervalId: ''
         })
@@ -79,11 +80,37 @@ class Player extends Component {
     handleBeginPlaying() {
         // Only called by player manager.
 
-        this.audioPlayer.play()
+        const { songIndex } = this.props,
+            playPromise = this.audioPlayer.play()
 
-        // Begin listening.
-        const
-            intervalId = setInterval(
+        /**
+         * Browser supports the return of a promise:
+         https://developers.google.com/web/updates/2016/03/play-returns-promise
+         */
+        if (typeof playPromise !== 'undefined') {
+            logger.info('Browser returns promise upon play.')
+
+            playPromise.then(() => {
+                logger.info(`Promise for ${songIndex} successfully returned.`)
+
+                // Automatic playback started!
+                this._handlePlaySuccess()
+
+              }).catch(error => {
+                // Automatic playback failed.
+                logger.error(`Promise for ${songIndex} failed: ${error}`)
+            });
+
+        } else {
+            logger.info('Browser does not return promise upon play.')
+
+            // Begin listening.
+            this._handlePlaySuccess()
+        }
+    }
+
+    _handlePlaySuccess() {
+        const intervalId = setInterval(
                 this._tellAppCurrentTime,
                 LISTEN_INTERVAL
             )
@@ -96,20 +123,31 @@ class Player extends Component {
     handleEndPlaying(currentTime) {
         // Only called by player manager.
 
-        this.audioPlayer.pause()
         this._clearInterval()
+        this.audioPlayer.pause()
 
         // If still selected, reset time to selected verse.
         this.setCurrentTime(currentTime)
     }
 
     _tellAppCurrentTime() {
-        const { currentTime } = this.audioPlayer,
+        const {
+                currentTime,
+                paused
+            } = this.audioPlayer,
+
             { totalTime } = this.props
+
+        /**
+         * TODO: This is a really fragile way to ensure that the interval is
+         * cleared when the player is no longer playing.
+         */
+        if (paused) {
+            this._clearInterval()
+        }
 
         // If there's time remaining, tell app the current time.
         if (currentTime < totalTime) {
-
             this.props.selectTime(currentTime)
 
             // Otherwise, tell app to select next song.
@@ -127,6 +165,8 @@ class Player extends Component {
     }
 
     _handleEndedEvent() {
+        logger.error(`Player for ${this.props.songIndex} ended.`)
+
         const { intervalId } = this.state
 
         /**

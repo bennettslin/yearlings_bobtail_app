@@ -154,17 +154,15 @@ class PlayerManager extends Component {
             )
 
         // Update selected player's current time.
-        this.getPlayerRef(nextSongIndex)
-            .setCurrentTime(nextCurrentTime)
+        this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
 
-        // If song was changed, also reset the previous player's current time.
+        // If song was changed, pause and reset current player.
         if (selectedSongIndex !== nextSongIndex) {
-            this.getPlayerRef(selectedSongIndex).setCurrentTime()
+            this.getPlayerRef(selectedSongIndex).handleEndPlaying()
 
             // If playing, toggle play and pause for respective players.
             if (isPlaying) {
                 this.getPlayerRef(nextSongIndex).handleBeginPlaying()
-                this.getPlayerRef(selectedSongIndex).handleEndPlaying()
             }
         }
     }

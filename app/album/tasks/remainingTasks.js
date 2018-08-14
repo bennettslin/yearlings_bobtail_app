@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Fix player bugginess.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
         taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown.`,
         workedHours: 0,
         neededHours: 2
@@ -16,12 +22,6 @@ module.exports = [
         taskName: `System to animate presences and cubes between scenes.`,
         workedHours: 0,
         neededHours: 10
-    },
-
-    {
-        taskName: `Deal with uncaught in promise error: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     /**

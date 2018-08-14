@@ -3723,4 +3723,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Deal with uncaught in promise error: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
