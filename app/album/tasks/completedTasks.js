@@ -3713,4 +3713,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Overview logue in two row menu desktop is too low.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

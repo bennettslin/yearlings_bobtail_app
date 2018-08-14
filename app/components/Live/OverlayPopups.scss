@@ -26,11 +26,14 @@
     }
 }
 
-.topHeight__overlayPopups {
+// Always apply this styling for OverlayPopups.
+.RM__twoRowMenu
+.topHeight__overlayPopups,
 
-    .RM__twoRowMenu
-    & {
-        top: $js__topOffsetTruncated__twoRowMenu;
-        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
-    }
+// Only apply this styling for OverviewLogue in mobile.
+.RM__twoRowMenu.RM__mobile
+.topHeight__overlayPopups__mobile {
+
+    top: $js__topOffsetTruncated__twoRowMenu;
+    height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
 }

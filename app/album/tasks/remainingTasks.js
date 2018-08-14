@@ -46,12 +46,6 @@ module.exports = [
     },
 
     {
-        taskName: `Overview logue in two row menu desktop is too low.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Popup annotation doesn't fade out slowly when switching to carousel?`,
         workedHours: 0,
         neededHours: 1

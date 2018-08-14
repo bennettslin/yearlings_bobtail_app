@@ -19,7 +19,6 @@ OverviewLogue = ({
     <div className={cx(
         'OverviewLogue',
         'position__lyricColumn__desktop',
-        'topHeight__overlayPopups',
         'topHeight__overlayPopups__mobile'
     )}>
         <OverviewPopup {...overviewPopupHandlers} />
