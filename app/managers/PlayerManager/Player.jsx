@@ -25,13 +25,13 @@ class Player extends Component {
         setPlayerRef: PropTypes.func.isRequired
     }
 
+    state = {
+        // Unique identifier for clearing setInterval.
+        intervalId: ''
+    }
+
     constructor(props) {
         super(props)
-
-        this.state = {
-            // Unique identifier for clearing setInterval.
-            intervalId: ''
-        }
 
         this._handleSuspendEvent = this._handleSuspendEvent.bind(this)
         this._handleEndedEvent = this._handleEndedEvent.bind(this)

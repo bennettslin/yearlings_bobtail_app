@@ -61,15 +61,15 @@ class Carousel extends Component {
         setCarouselParentRef: PropTypes.func.isRequired
     }
 
+    state = {
+        hasMounted: false,
+        isShown: false,
+        waitForShowTimeoutId: '',
+        didRenderTimeoutId: ''
+    }
+
     constructor(props) {
         super(props)
-
-        this.state = {
-            hasMounted: false,
-            isShown: false,
-            waitForShowTimeoutId: '',
-            didRenderTimeoutId: ''
-        }
 
         this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
     }

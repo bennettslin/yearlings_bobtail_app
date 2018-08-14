@@ -33,16 +33,16 @@ class Lyric extends Component {
         lyricDidRender: PropTypes.func.isRequired
     }
 
+    state = {
+        hasMounted: false,
+        isShown: false,
+        isTransitioningHeight: false,
+        waitForShowTimeoutId: '',
+        didRenderTimeoutId: ''
+    }
+
     constructor(props) {
         super(props)
-
-        this.state = {
-            hasMounted: false,
-            isShown: false,
-            isTransitioningHeight: false,
-            waitForShowTimeoutId: '',
-            didRenderTimeoutId: ''
-        }
 
         this._handleTransition = this._handleTransition.bind(this)
         this.completeHeightTransition = this.completeHeightTransition.bind(this)

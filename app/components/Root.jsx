@@ -92,13 +92,13 @@ class Root extends Component {
         })
     }
 
+    state = {
+        sliderMousedUp: false,
+        keyName: ''
+    }
+
     constructor(props) {
         super(props)
-
-        this.state = {
-            sliderMousedUp: false,
-            keyName: ''
-        }
 
         this._handleClick = this._handleClick.bind(this)
         this._handleMouseUp = this._handleMouseUp.bind(this)

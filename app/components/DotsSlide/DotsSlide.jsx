@@ -23,15 +23,15 @@ class DotsSlide extends Component {
         handlePopupContainerClick: PropTypes.func.isRequired
     }
 
+    state = {
+        hasInteractivatedDotText: 0
+    }
+
     constructor(props) {
         super(props)
 
         this._onContainerClick = this._onContainerClick.bind(this)
         this._setHasInteractivatedDotText = this._setHasInteractivatedDotText.bind(this)
-
-        this.state = {
-            hasInteractivatedDotText: 0
-        }
     }
 
     shouldComponentUpdate(nextProps, nextState) {

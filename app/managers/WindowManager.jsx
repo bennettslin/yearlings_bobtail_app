@@ -59,12 +59,12 @@ class WindowManager extends Component {
         selectScore: PropTypes.func.isRequired
     }
 
+    state = {
+        windowResizeTimeoutId: ''
+    }
+
     constructor(props) {
         super(props)
-
-        this.state = {
-            windowResizeTimeoutId: ''
-        }
 
         this._windowResize = this._windowResize.bind(this)
 

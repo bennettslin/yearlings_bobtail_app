@@ -27,14 +27,14 @@ class Slider extends Component {
         sliderDidRender: PropTypes.func.isRequired
     }
 
+    state = {
+        isShown: false,
+        waitForShowTimeoutId: '',
+        didRenderTimeoutId: ''
+    }
+
     constructor(props) {
         super(props)
-
-        this.state = {
-            isShown: false,
-            waitForShowTimeoutId: '',
-            didRenderTimeoutId: ''
-        }
 
         this._handleTouchDown = this._handleTouchDown.bind(this)
         this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)

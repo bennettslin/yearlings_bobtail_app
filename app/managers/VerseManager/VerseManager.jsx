@@ -35,12 +35,8 @@ class VerseManager extends Component {
         getVerseElement: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            verseBarsTimeoutId: ''
-        }
+    state = {
+        verseBarsTimeoutId: ''
     }
 
     componentDidMount() {

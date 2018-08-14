@@ -55,14 +55,14 @@ class Theatre extends Component {
         theatreDidRender: PropTypes.func.isRequired
     }
 
+    state = {
+        isShown: false,
+        waitForShowTimeoutId: '',
+        didRenderTimeoutId: ''
+    }
+
     constructor(props) {
         super(props)
-
-        this.state = {
-            isShown: false,
-            waitForShowTimeoutId: '',
-            didRenderTimeoutId: ''
-        }
 
         this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
     }

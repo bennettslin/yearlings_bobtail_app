@@ -35,15 +35,15 @@ class DotsSlideSelect extends Component {
         handleDotSelect: PropTypes.func.isRequired
     }
 
+    state = {
+        isInteractivated: false
+    }
+
     constructor(props) {
         super(props)
 
         this._handleDotToggleClick = this._handleDotToggleClick.bind(this)
         this._handleTextContainerClick = this._handleTextContainerClick.bind(this)
-
-        this.state = {
-            isInteractivated: false
-        }
     }
 
     /**

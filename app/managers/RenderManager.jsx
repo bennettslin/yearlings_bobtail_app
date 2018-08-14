@@ -33,12 +33,12 @@ class RenderManager extends Component {
         setRef: PropTypes.func.isRequired
     }
 
+    state = {
+        songChangeTimeoutId: ''
+    }
+
     constructor(props) {
         super(props)
-
-        this.state = {
-            songChangeTimeoutId: ''
-        }
 
         this._prepareForSongChangeRender =
             this._prepareForSongChangeRender.bind(this)

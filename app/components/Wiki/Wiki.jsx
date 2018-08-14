@@ -43,13 +43,13 @@ class WikiSection extends Component {
         setWikiRef: PropTypes.func.isRequired
     }
 
+    state = {
+        iframeLoading: true
+    }
+
     constructor(props) {
         super(props)
         this.onIframeLoad = this.onIframeLoad.bind(this)
-
-        this.state = {
-            iframeLoading: true
-        }
     }
 
     shouldComponentUpdate(nextProps, nextState) {
