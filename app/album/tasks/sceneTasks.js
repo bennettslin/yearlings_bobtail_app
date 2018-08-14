@@ -10,7 +10,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY`,
+        taskName: `NOHO_NEIGHBOURHOOD_KEY`,
         workedHours: 0.5,
         neededHours: 0.5
     },

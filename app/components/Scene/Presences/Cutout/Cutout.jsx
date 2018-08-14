@@ -2,26 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NorthHollywoodNeighbourhood from './Cutouts/NorthHollywood/NorthHollywoodNeighbourhood'
-import NorthHollywoodHouseLeft from './Cutouts/NorthHollywood/NorthHollywoodHouseLeft'
-import NorthHollywoodHouseRight from './Cutouts/NorthHollywood/NorthHollywoodHouseRight'
-import ElementarySchoolNeighbourhood from './Cutouts/NorthHollywood/ElementarySchoolNeighbourhood'
-import ElementarySchoolClassroom from './Cutouts/NorthHollywood/ElementarySchoolClassroom'
-
-import {
-    NORTH_HOLLYWOOD_NEIGHBOURHOOD,
-    NORTH_HOLLYWOOD_HOUSE_LEFT,
-    NORTH_HOLLYWOOD_HOUSE_RIGHT,
-    ELEMENTARY_SCHOOL_NEIGHBOURHOOD,
-    ELEMENTARY_SCHOOL_CLASSROOM
-} from 'constants/cutoutKeys'
+import { CUTOUTS_NOHO } from './Cutouts/Noho/noho'
 
 const CUTOUTS_MAP = {
-    [NORTH_HOLLYWOOD_NEIGHBOURHOOD]: NorthHollywoodNeighbourhood,
-    [NORTH_HOLLYWOOD_HOUSE_LEFT]: NorthHollywoodHouseLeft,
-    [NORTH_HOLLYWOOD_HOUSE_RIGHT]: NorthHollywoodHouseRight,
-    [ELEMENTARY_SCHOOL_NEIGHBOURHOOD]: ElementarySchoolNeighbourhood,
-    [ELEMENTARY_SCHOOL_CLASSROOM]: ElementarySchoolClassroom
+    ...CUTOUTS_NOHO
 },
 DEFAULT_COMPONENT = () => (null)
 

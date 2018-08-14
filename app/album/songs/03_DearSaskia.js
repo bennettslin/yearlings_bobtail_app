@@ -351,7 +351,7 @@ module.exports = {
                                     anchor: `North Hollywood.`,
                                     wiki: `North_Hollywood,_Los_Angeles`
                                 },
-                                `Halfway through elementary school, however, my mother pulled off a scam that allowed my sister and I to bus into`,
+                                `Halfway through elementary school, however, my mother devised a ruse that allowed my sister and I to bus into`,
                                 {
                                     anchor: `Sherman Oaks,`,
                                     wiki: `Sherman_Oaks,_Los_Angeles`

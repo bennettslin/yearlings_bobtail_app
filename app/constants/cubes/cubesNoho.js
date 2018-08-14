@@ -1,5 +1,5 @@
 import {
-    NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY,
+    NOHO_NEIGHBOURHOOD_KEY,
     ELEMENTARY_SCHOOL_KEY,
 } from '../cubesKeys'
 
@@ -10,7 +10,7 @@ import {
 
 const
 
-    NORTH_HOLLYWOOD_HOUSES_CUBES = {
+    NOHO_HOUSES_CUBES = {
         floor: {
             zIndices: [
                 [1],
@@ -45,11 +45,11 @@ const
         }
     },
 
-    CUBES_NORTH_HOLLYWOOD = {
-        [NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY]: NORTH_HOLLYWOOD_HOUSES_CUBES,
+    CUBES_NOHO = {
+        [NOHO_NEIGHBOURHOOD_KEY]: NOHO_HOUSES_CUBES,
         [ELEMENTARY_SCHOOL_KEY]: ELEMENTARY_SCHOOL_CUBES
     }
 
 export {
-    CUBES_NORTH_HOLLYWOOD
+    CUBES_NOHO
 }

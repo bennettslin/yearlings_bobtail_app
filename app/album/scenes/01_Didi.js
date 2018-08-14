@@ -1,6 +1,6 @@
 import {
     CHILDHOOD_BATHROOM_KEY,
-    NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY,
+    NOHO_NEIGHBOURHOOD_KEY,
     ELEMENTARY_SCHOOL_KEY
 } from 'constants/cubesKeys'
 
@@ -35,11 +35,11 @@ import {
 } from 'constants/actors/esther'
 
 import {
-    NORTH_HOLLYWOOD_NEIGHBOURHOOD,
-    NORTH_HOLLYWOOD_HOUSE_LEFT,
-    NORTH_HOLLYWOOD_HOUSE_RIGHT,
-    ELEMENTARY_SCHOOL_NEIGHBOURHOOD,
-    ELEMENTARY_SCHOOL_CLASSROOM
+    NOHO_NEIGHBOURHOOD,
+    NOHO_HOUSE_LEFT,
+    NOHO_HOUSE_RIGHT,
+    NOHO_SCHOOL_NEIGHBOURHOOD,
+    NOHO_SCHOOLHOUSE
 } from 'constants/cutoutKeys'
 
 import {
@@ -50,7 +50,7 @@ import {
 
 const
 CUTOUTS_0_AND_1 = {
-    [NORTH_HOLLYWOOD_NEIGHBOURHOOD]: {
+    [NOHO_NEIGHBOURHOOD]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,
@@ -58,7 +58,7 @@ CUTOUTS_0_AND_1 = {
             zHeight: 4
         }
     },
-    [NORTH_HOLLYWOOD_HOUSE_LEFT]: {
+    [NOHO_HOUSE_LEFT]: {
         yIndex: 1,
         arrangement: {
             xFloat: 2,
@@ -66,7 +66,7 @@ CUTOUTS_0_AND_1 = {
             zHeight: 3
         }
     },
-    [NORTH_HOLLYWOOD_HOUSE_RIGHT]: {
+    [NOHO_HOUSE_RIGHT]: {
         yIndex: 1,
         arrangement: {
             xFloat: 9,
@@ -94,7 +94,7 @@ module.exports = [
             cutouts: CUTOUTS_0_AND_1,
             fixtures: FIXTURES_0_AND_1
         },
-        cubes: NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY,
+        cubes: NOHO_NEIGHBOURHOOD_KEY,
         sky: {
             time: TIME_DAWN,
             season: SEASON_SPRING
@@ -145,7 +145,7 @@ module.exports = [
             cutouts: CUTOUTS_0_AND_1,
             fixtures: FIXTURES_0_AND_1
         },
-        cubes: NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY,
+        cubes: NOHO_NEIGHBOURHOOD_KEY,
         sky: {
             time: TIME_MORNING,
             season: SEASON_SPRING
@@ -195,7 +195,7 @@ module.exports = [
                 }
             },
             cutouts: {
-                [ELEMENTARY_SCHOOL_NEIGHBOURHOOD]: {
+                [NOHO_SCHOOL_NEIGHBOURHOOD]: {
                     yIndex: 0,
                     arrangement: {
                         xFloat: 5.5,
@@ -203,7 +203,7 @@ module.exports = [
                         zHeight: 4
                     }
                 },
-                [ELEMENTARY_SCHOOL_CLASSROOM]: {
+                [NOHO_SCHOOLHOUSE]: {
                     yIndex: 1,
                     arrangement: {
                         xFloat: 2,
