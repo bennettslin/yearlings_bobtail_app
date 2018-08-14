@@ -1,5 +1,6 @@
 import {
-    NORTH_HOLLYWOOD_HOUSES_KEY
+    NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY,
+    ELEMENTARY_SCHOOL_KEY,
 } from '../cubesKeys'
 
 import {
@@ -9,7 +10,7 @@ import {
 
 const
 
-    CHILDHOOD_NEIGHBOURHOOD_CUBES = {
+    NORTH_HOLLYWOOD_HOUSES_CUBES = {
         floor: {
             zIndices: [
                 [1],
@@ -30,8 +31,23 @@ const
         }
     },
 
+    ELEMENTARY_SCHOOL_CUBES = {
+        // Raised nurse's office bench is 1.5'.
+        floor: {
+            zIndices: [
+                [1],
+                [1],
+                [1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
+                [1]
+            ]
+        }
+    },
+
     CUBES_NORTH_HOLLYWOOD = {
-        [NORTH_HOLLYWOOD_HOUSES_KEY]: CHILDHOOD_NEIGHBOURHOOD_CUBES
+        [NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY]: NORTH_HOLLYWOOD_HOUSES_CUBES,
+        [ELEMENTARY_SCHOOL_KEY]: ELEMENTARY_SCHOOL_CUBES
     }
 
 export {

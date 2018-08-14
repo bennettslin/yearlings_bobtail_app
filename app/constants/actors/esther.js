@@ -1,6 +1,8 @@
 const
-    CURIOUS = 'curious'
+    CURIOUS = 'curious',
+    SNICKERING = 'snickering'
 
 export {
-    CURIOUS
+    CURIOUS,
+    SNICKERING
 }

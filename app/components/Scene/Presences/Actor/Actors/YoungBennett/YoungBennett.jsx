@@ -3,15 +3,18 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Panicked from './Instances/Panicked'
+import Flustered from './Instances/Flustered'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
-    PANICKED
+    PANICKED,
+    FLUSTERED
 } from 'constants/actors/youngBennett'
 
 const INSTANCES_MAP = {
-    [PANICKED]: Panicked
+    [PANICKED]: Panicked,
+    [FLUSTERED]: Flustered
 }
 
 const propTypes = {

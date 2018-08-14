@@ -10,7 +10,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `NORTH_HOLLYWOOD_HOUSES_KEY`,
+        taskName: `NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY`,
         workedHours: 0.5,
         neededHours: 0.5
     },
@@ -240,7 +240,7 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `PLAYGROUND_KEY`,
+        taskName: `ELEMENTARY_SCHOOL_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },

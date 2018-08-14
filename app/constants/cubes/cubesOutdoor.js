@@ -1,7 +1,6 @@
 // Separating outdoor cubes purely for purpose of keeping file smaller.
 
 import {
-    PLAYGROUND_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
     CHANGELING_CAVE_KEY,
@@ -48,19 +47,6 @@ import {
 
 const
 
-    PLAYGROUND_CUBES = {
-        // Raised nurse's office bench is 1.5'.
-        floor: {
-            zIndices: [
-                [1],
-                [1],
-                [1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
-                [1]
-            ]
-        }
-    },
     FREEWAY_CUBES = {
         // Solid overpass wall is 1.5'. Fence will extend higher.
         floor: {
@@ -418,7 +404,6 @@ const
     },
 
     CUBES_OUTDOOR = {
-        [PLAYGROUND_KEY]: PLAYGROUND_CUBES,
         [FREEWAY_KEY]: FREEWAY_CUBES,
         [PORCH_KEY]: PORCH_CUBES,
         [CHANGELING_CAVE_KEY]: CHANGELING_CAVE_CUBES,

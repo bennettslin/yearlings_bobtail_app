@@ -1,7 +1,7 @@
 import {
     CHILDHOOD_BATHROOM_KEY,
-    NORTH_HOLLYWOOD_HOUSES_KEY,
-    PLAYGROUND_KEY
+    NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY,
+    ELEMENTARY_SCHOOL_KEY
 } from 'constants/cubesKeys'
 
 import {
@@ -20,28 +20,36 @@ import {
 } from 'constants/actorKeys'
 
 import {
-    PANICKED
+    PANICKED,
+    FLUSTERED
 } from 'constants/actors/youngBennett'
 
 import {
-    EXASPERATED
+    EXASPERATED,
+    CONCERNED
 } from 'constants/actors/anita'
 
 import {
-    CURIOUS
+    CURIOUS,
+    SNICKERING
 } from 'constants/actors/esther'
 
 import {
     NORTH_HOLLYWOOD_NEIGHBOURHOOD,
     NORTH_HOLLYWOOD_HOUSE_LEFT,
-    NORTH_HOLLYWOOD_HOUSE_RIGHT
+    NORTH_HOLLYWOOD_HOUSE_RIGHT,
+    ELEMENTARY_SCHOOL_NEIGHBOURHOOD,
+    ELEMENTARY_SCHOOL_CLASSROOM
 } from 'constants/cutoutKeys'
 
 import {
-    FIRE_HYDRANT
+    FIRE_HYDRANT,
+    PLAYGROUND_BALL,
+    PLAYGROUND_SLIDE
 } from 'constants/fixtureKeys'
 
-const CUTOUTS_0_AND_1 = {
+const
+CUTOUTS_0_AND_1 = {
     [NORTH_HOLLYWOOD_NEIGHBOURHOOD]: {
         yIndex: 0,
         arrangement: {
@@ -86,7 +94,7 @@ module.exports = [
             cutouts: CUTOUTS_0_AND_1,
             fixtures: FIXTURES_0_AND_1
         },
-        cubes: NORTH_HOLLYWOOD_HOUSES_KEY,
+        cubes: NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY,
         sky: {
             time: TIME_DAWN,
             season: SEASON_SPRING
@@ -97,18 +105,6 @@ module.exports = [
         description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
         presences: {
             actors: {
-                [ANITA]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'side, rushing, exasperated',
-                    instance: EXASPERATED,
-                    yIndex: 5,
-                    arrangement: {
-                        xFloat: 5,
-                        xWidth: 1,
-                        zHeight: 3.75
-                    }
-                },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
@@ -119,6 +115,18 @@ module.exports = [
                         xFloat: 3.5,
                         xWidth: 1,
                         zHeight: 3.83
+                    }
+                },
+                [ANITA]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'side, rushing, exasperated',
+                    instance: EXASPERATED,
+                    yIndex: 5,
+                    arrangement: {
+                        xFloat: 5,
+                        xWidth: 1,
+                        zHeight: 3.75
                     }
                 },
                 [YOUNG_BENNETT]: {
@@ -137,7 +145,7 @@ module.exports = [
             cutouts: CUTOUTS_0_AND_1,
             fixtures: FIXTURES_0_AND_1
         },
-        cubes: NORTH_HOLLYWOOD_HOUSES_KEY,
+        cubes: NORTH_HOLLYWOOD_NEIGHBOURHOOD_KEY,
         sky: {
             time: TIME_MORNING,
             season: SEASON_SPRING
@@ -152,41 +160,79 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, playing ball, offended',
-                    instance: null,
-                    yIndex: -1,
+                    instance: CONCERNED,
+                    yIndex: 3,
                     arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
-                },
-                [YOUNG_BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'sitting, flustered',
-                    instance: null,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xFloat: 2,
+                        xWidth: 1,
+                        zHeight: 3.75
                     }
                 },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, skipping, pointing back and laughing',
-                    instance: null,
-                    yIndex: -1,
+                    instance: SNICKERING,
+                    yIndex: 4,
                     arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xFloat: 4,
+                        xWidth: 1,
+                        zHeight: 3.83
+                    }
+                },
+                [YOUNG_BENNETT]: {
+                    todo: true,
+                    workedHours: 3,
+                    description: 'sitting, flustered',
+                    instance: FLUSTERED,
+                    yIndex: 4,
+                    arrangement: {
+                        xFloat: 8.5,
+                        xWidth: 1.5,
+                        zHeight: 2.5,
+                        zOffset: -2
+                    }
+                }
+            },
+            cutouts: {
+                [ELEMENTARY_SCHOOL_NEIGHBOURHOOD]: {
+                    yIndex: 0,
+                    arrangement: {
+                        xFloat: 5.5,
+                        xWidth: 12,
+                        zHeight: 4
+                    }
+                },
+                [ELEMENTARY_SCHOOL_CLASSROOM]: {
+                    yIndex: 1,
+                    arrangement: {
+                        xFloat: 2,
+                        xWidth: 5,
+                        zHeight: 3
+                    }
+                }
+            },
+            fixtures: {
+                [PLAYGROUND_BALL]: {
+                    yIndex: 4,
+                    arrangement: {
+                        xFloat: 2,
+                        xWidth: 1,
+                        zHeight: 1,
+                        zOffset: 2
+                    }
+                },
+                [PLAYGROUND_SLIDE]: {
+                    yIndex: 1,
+                    arrangement: {
+                        xFloat: 4,
+                        xWidth: 2,
+                        zHeight: 3
                     }
                 }
             }
         },
-        cubes: PLAYGROUND_KEY,
+        cubes: ELEMENTARY_SCHOOL_KEY,
         sky: {
             time: TIME_NOON,
             season: SEASON_SPRING

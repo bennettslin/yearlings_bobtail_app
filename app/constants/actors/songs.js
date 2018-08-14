@@ -1,4 +1,4 @@
-// Use these constants for single instances in a song.
+// Use these song name constants for single instances in a song.
 
 const
     PROLOGUE = 'prologue'

@@ -3,15 +3,18 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Curious from './Instances/Curious'
+import Snickering from './Instances/Snickering'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
-    CURIOUS
+    CURIOUS,
+    SNICKERING
 } from 'constants/actors/esther'
 
 const INSTANCES_MAP = {
-    [CURIOUS]: Curious
+    [CURIOUS]: Curious,
+    [SNICKERING]: Snickering
 }
 
 const propTypes = {

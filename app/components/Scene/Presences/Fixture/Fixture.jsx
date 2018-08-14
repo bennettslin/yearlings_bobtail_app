@@ -2,14 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import FireHydrant from './Fixtures/FireHydrant'
+import FireHydrant from './Fixtures/NorthHollywood/FireHydrant'
+import PlaygroundBall from './Fixtures/NorthHollywood/PlaygroundBall'
+import PlaygroundSlide from './Fixtures/NorthHollywood/PlaygroundSlide'
 
 import {
-    FIRE_HYDRANT
+    FIRE_HYDRANT,
+    PLAYGROUND_BALL,
+    PLAYGROUND_SLIDE
 } from 'constants/fixtureKeys'
 
 const FIXTURES_MAP = {
-    [FIRE_HYDRANT]: FireHydrant
+    [FIRE_HYDRANT]: FireHydrant,
+    [PLAYGROUND_BALL]: PlaygroundBall,
+    [PLAYGROUND_SLIDE]: PlaygroundSlide
 },
 DEFAULT_COMPONENT = () => (null)
 

@@ -1,6 +1,8 @@
 const
-    EXASPERATED = 'exasperated'
+    EXASPERATED = 'exasperated',
+    CONCERNED = 'concerned'
 
 export {
-    EXASPERATED
+    EXASPERATED,
+    CONCERNED
 }
