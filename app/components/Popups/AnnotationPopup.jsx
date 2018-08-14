@@ -91,9 +91,14 @@ class AnnotationPopup extends Component {
             selectedCarouselNavIndex &&
             !prevProps.selectedCarouselNavIndex
         ) {
-            // ... then reset the popup annotation index.
+            /**
+             * ... then still persist the popup annotation index. Originally,
+             * it was reset. But this messed up the transition. Maybe revisit
+             * this at some point, as these conditionals might not be needed at
+             * all.
+             */
             this.setState({
-                annotationIndex: 0
+                annotationIndex: renderableAnnotationIndex
             })
         }
     }
