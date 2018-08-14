@@ -39,7 +39,8 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOL_NEIGHBOURHOOD,
-    NOHO_SCHOOLHOUSE
+    NOHO_SCHOOLHOUSE,
+    NURSE_OFFICE_BUBBLE
 } from 'constants/cutoutKeys'
 
 import {
@@ -209,6 +210,14 @@ module.exports = [
                         xFloat: 2,
                         xWidth: 5,
                         zHeight: 3
+                    }
+                },
+                [NURSE_OFFICE_BUBBLE]: {
+                    yIndex: 2,
+                    arrangement: {
+                        xFloat: 8,
+                        xWidth: 5,
+                        zHeight: 4
                     }
                 }
             },

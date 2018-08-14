@@ -5,12 +5,17 @@ module.exports = [
      */
 
     {
-        taskName: `LOGUE_KEY`,
+        taskName: `Prologue.`,
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: `NOHO_NEIGHBOURHOOD_KEY`,
+        taskName: `North Hollywood neighbourhood.`,
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: `Elementary school playground.`,
         workedHours: 0.5,
         neededHours: 0.5
     },

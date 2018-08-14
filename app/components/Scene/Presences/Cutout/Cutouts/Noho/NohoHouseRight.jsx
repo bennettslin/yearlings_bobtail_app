@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const NorthHollywoodHouseRight = ({
+const NohoHouseRight = ({
 
     className,
 
@@ -18,7 +18,7 @@ const NorthHollywoodHouseRight = ({
     return (
         <Svg
             className={cx(
-                'NorthHollywoodHouseRight',
+                'NohoHouseRight',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const NorthHollywoodHouseRight = ({
                 {...other}
             >
                 {cx(
-                    'NorthHollywoodHouseRight'
+                    'NohoHouseRight'
                 )}
             </text>
         </Svg>
     )
 }
 
-NorthHollywoodHouseRight.propTypes = propTypes;
+NohoHouseRight.propTypes = propTypes;
 
-export default NorthHollywoodHouseRight
+export default NohoHouseRight

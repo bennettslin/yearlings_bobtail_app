@@ -5,7 +5,10 @@ import {
 
 import {
     _LW,
-    _PV
+    _PV,
+    _BL,
+    _SF,
+    _SB
 } from '../hslaKeys'
 
 const
@@ -41,6 +44,14 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
                 [1]
+            ],
+            hslaColours: [
+                [_BL],
+                [_BL],
+                [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SF, _BL],
+                [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SB, _BL],
+                [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SB, _BL],
+                [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SF, _BL],
             ]
         }
     },

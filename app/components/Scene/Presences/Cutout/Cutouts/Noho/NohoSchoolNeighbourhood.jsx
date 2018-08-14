@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const ElementarySchoolNeighbourhood = ({
+const NohoSchoolNeighbourhood = ({
 
     className,
 
@@ -18,7 +18,7 @@ const ElementarySchoolNeighbourhood = ({
     return (
         <Svg
             className={cx(
-                'ElementarySchoolNeighbourhood',
+                'NohoSchoolNeighbourhood',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const ElementarySchoolNeighbourhood = ({
                 {...other}
             >
                 {cx(
-                    'ElementarySchoolNeighbourhood'
+                    'NohoSchoolNeighbourhood'
                 )}
             </text>
         </Svg>
     )
 }
 
-ElementarySchoolNeighbourhood.propTypes = propTypes;
+NohoSchoolNeighbourhood.propTypes = propTypes;
 
-export default ElementarySchoolNeighbourhood
+export default NohoSchoolNeighbourhood
