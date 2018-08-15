@@ -120,7 +120,7 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `CHILDHOOD_BATHROOM_KEY`,
+        taskName: `NOHO_BATHROOM_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -245,7 +245,7 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `ELEMENTARY_SCHOOL_KEY`,
+        taskName: `NOHO_SCHOOL_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },

@@ -1,7 +1,6 @@
 // Separating indoor cubes purely for purpose of keeping file smaller.
 
 import {
-    CHILDHOOD_BATHROOM_KEY,
     PRETEEN_BENNETT_ROOM_KEY,
     PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
     PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY,
@@ -43,23 +42,6 @@ import {
 
 const
 
-    CHILDHOOD_BATHROOM_CUBES = {
-        // Indoor wall is 7.5'. Raised bathtub.
-        ceiling: {
-            zIndices: [
-                [k, g, g, g, g, g, g, g, g, g, g, k]
-            ]
-        },
-        floor: {
-            zIndices: [
-                [0, g, g, g, g, g, g, g, g, g, g, 0],
-                [0, g, 1, 1, 1, 1, 1, 1, 1, 1, g, 0],
-                [0, g, 1, 2, 2, 2, 2, 1, 1, 1, g, 0],
-                [0, g, 1, 2, 2, 2, 2, 1, 1, 1, g, 0],
-                [0, g, 1, 1, 1, 1, 1, 1, 1, 1, g, 0]
-            ]
-        }
-    },
     PRETEEN_BENNETT_ROOM_CEILING = [
         [k, k, k, k, k, g, k, g, g, g, k],
         [k, k, k, g, g, g, g, g, g, g, k],
@@ -421,7 +403,6 @@ const
     },
 
     CUBES_INDOOR = {
-        [CHILDHOOD_BATHROOM_KEY]: CHILDHOOD_BATHROOM_CUBES,
         [PRETEEN_BENNETT_ROOM_KEY]: PRETEEN_BENNETT_ROOM_CUBES,
         [PRETEEN_BENNETT_ROOM_OPEN_BED_KEY]: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
         [PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY]: [PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES],

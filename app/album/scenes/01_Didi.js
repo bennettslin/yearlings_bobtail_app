@@ -1,7 +1,7 @@
 import {
-    CHILDHOOD_BATHROOM_KEY,
+    NOHO_BATHROOM_KEY,
     NOHO_NEIGHBOURHOOD_KEY,
-    ELEMENTARY_SCHOOL_KEY
+    NOHO_SCHOOL_KEY
 } from 'constants/cubesKeys'
 
 import {
@@ -241,7 +241,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ELEMENTARY_SCHOOL_KEY,
+        cubes: NOHO_SCHOOL_KEY,
         sky: {
             time: TIME_NOON,
             season: SEASON_SPRING
@@ -266,7 +266,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CHILDHOOD_BATHROOM_KEY,
+        cubes: NOHO_BATHROOM_KEY,
         sky: {
             time: TIME_AFTERNOON,
             season: SEASON_SPRING
@@ -303,7 +303,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CHILDHOOD_BATHROOM_KEY,
+        cubes: NOHO_BATHROOM_KEY,
         sky: {
             time: TIME_EVENING,
             season: SEASON_SPRING

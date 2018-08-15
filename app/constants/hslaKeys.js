@@ -1,35 +1,50 @@
 const
 
 // Other.
+_TS = 'test',
 _SP = 'stagePlatform',
 _ST = 'stage',
-_TS = 'test',
+
 _LW = 'lawn',
 _PV = 'pavement',
+
 _BL = 'blacktop',
+
 _SF = 'schoolhouseFloor',
 _SB = 'schoolhouseBench',
 
-HSLA_KEYS = [
-    _SP,
-    _ST,
-    _TS,
-    _LW,
-    _PV,
-    _BL,
-    _SF,
-    _SB
-]
+_BC = 'bathroomCeiling',
+_BF = 'bathroomFloor',
+_BW = 'bathroomWall',
 
-export {
+HSLA_KEYS = [
+    _TS,
     _SP,
     _ST,
-    _TS,
     _LW,
     _PV,
     _BL,
     _SF,
     _SB,
+    _BC,
+    _BF,
+    _BW,
 
-    HSLA_KEYS
+]
+
+export {
+    HSLA_KEYS,
+
+    _TS,
+    _SP,
+    _ST,
+    _LW,
+    _PV,
+    _BL,
+    _SF,
+    _SB,
+    _BC,
+    _BF,
+    _BW,
+
 }

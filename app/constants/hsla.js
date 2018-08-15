@@ -6,7 +6,10 @@ import {
     _PV,
     _BL,
     _SF,
-    _SB
+    _SB,
+    _BC,
+    _BF,
+    _BW
 } from './hslaKeys'
 
 const
@@ -50,6 +53,21 @@ const
         s: 50,
         l: 75
     },
+    BATHROOM_CEILING = {
+        h: 60,
+        s: 50,
+        l: 75
+    },
+    BATHROOM_FLOOR = {
+        h: 180,
+        s: 50,
+        l: 75
+    },
+    BATHROOM_WALL = {
+        h: 300,
+        s: 50,
+        l: 75
+    },
 
     HSLA_MAP = {
         [_SP]: STAGE_PLATFORM,
@@ -60,6 +78,9 @@ const
         [_BL]: BLACKTOP,
         [_SF]: SCHOOLHOUSE_FLOOR,
         [_SB]: SCHOOLHOUSE_BENCH,
+        [_BC]: BATHROOM_CEILING,
+        [_BF]: BATHROOM_FLOOR,
+        [_BW]: BATHROOM_WALL
     }
 
 export {
