@@ -80,9 +80,13 @@ module.exports = {
 
     // Storage.
     SELECTED_STORE: 'selectedStore',
+    SELECTED_SONG_INDEX: 'selectedSongIndex',
+    SELECTED_VERSE_INDEX: 'selectedVerseIndex',
+    SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
+    SELECTED_TIME: 'selectedTime',
+
     SELECTED_ACCESS_INDEX: 'selectedAccessIndex',
     SELECTED_ADMIN_INDEX: 'selectedAdminIndex',
-    SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
     SELECTED_CAROUSEL_NAV_INDEX: 'selectedCarouselNavIndex',
     SELECTED_DOT_KEYS: 'selectedDotKeys',
@@ -90,10 +94,7 @@ module.exports = {
     SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_SCORE_INDEX: 'selectedScoreIndex',
-    SELECTED_SONG_INDEX: 'selectedSongIndex',
-    SELECTED_TIME_PLAYED: 'selectedTimePlayed',
     SELECTED_TIPS_INDEX: 'selectedTipsIndex',
     SELECTED_TITLE_INDEX: 'selectedTitleIndex',
-    SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_WIKI_INDEX: 'selectedWikiIndex'
 }

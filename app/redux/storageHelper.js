@@ -32,7 +32,6 @@ import {
     SELECTED_OVERVIEW_INDEX,
     SELECTED_SCORE_INDEX,
     SELECTED_SONG_INDEX,
-    SELECTED_TIME_PLAYED,
     SELECTED_TIPS_INDEX,
     SELECTED_TITLE_INDEX,
     SELECTED_VERSE_INDEX,
@@ -46,12 +45,8 @@ const _getValidatedStoredSong = () => {
 }
 
 const _validateValueForKey = (key) => {
-    const rawValue = WINDOW_STORAGE[key],
-
-        // All values should be integers, except selected time played.
-        parsedValue = key === SELECTED_TIME_PLAYED ?
-        parseFloat(rawValue) : parseInt(rawValue),
-
+    const
+        parsedValue = parseInt(WINDOW_STORAGE[key]),
         isNumber = !isNaN(parsedValue)
 
     let isValid
@@ -100,16 +95,6 @@ const _validateValueForKey = (key) => {
                 }
                 break
             }
-        case SELECTED_TIME_PLAYED:
-            {
-                const totalTime = _getValidatedStoredSong().totalTime
-
-                // Logues do not have total songVerseConfigs.
-                isValid = isNumber && totalTime ?
-                parsedValue <= totalTime : parsedValue === 0
-                break
-            }
-
             // These must be less than the length of options.
         case SELECTED_AUDIO_OPTION_INDEX:
             isValid = isNumber && parsedValue < AUDIO_OPTIONS.length
@@ -213,7 +198,7 @@ const setDotInStorage = (dotKey, isActive) => {
     setInStorage(SELECTED_DOT_KEYS, newBitNumber)
 }
 
-export default {
+export {
     getFromStorage,
     setInStorage,
     setDotInStorage

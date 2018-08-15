@@ -7,10 +7,9 @@ import {
     SELECTED_SONG_INDEX
 } from 'constants/state'
 
-import StorageHelper from '../storageHelper'
+import { getFromStorage } from '../storageHelper'
 
-const { getFromStorage } = StorageHelper,
-    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX)
+const storedSongIndex = getFromStorage(SELECTED_SONG_INDEX)
 
 export const AccessedAnnotationIndexReducer = (state = 0, action) => {
     switch (action.type) {

@@ -4,12 +4,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 
-// https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
-
-// https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events
-
-// https://www.npmjs.com/package/react-audio-player
-
 const LISTEN_INTERVAL = 150
 
 class Player extends Component {
@@ -19,8 +13,8 @@ class Player extends Component {
         mp3: PropTypes.string.isRequired,
         songIndex: PropTypes.number.isRequired,
         totalTime: PropTypes.number.isRequired,
-        selectTime: PropTypes.func.isRequired,
-        advanceToNextSong: PropTypes.func.isRequired,
+        updateCurrentTime: PropTypes.func.isRequired,
+        updatePlayerEnded: PropTypes.func.isRequired,
         setPlayerCanPlayThrough: PropTypes.func.isRequired,
         setPlayerRef: PropTypes.func.isRequired
     }
@@ -28,10 +22,6 @@ class Player extends Component {
     state = {
         // Unique identifier for clearing setInterval.
         intervalId: ''
-    }
-
-    shouldComponentUpdate() {
-        return false
     }
 
     componentDidMount() {
@@ -135,11 +125,10 @@ class Player extends Component {
          */
         if (paused) {
             this._clearInterval()
-        }
 
         // If there's time remaining, tell app the current time.
-        if (currentTime < totalTime) {
-            this.props.selectTime(currentTime)
+        } else if (currentTime < totalTime) {
+            this.props.updateCurrentTime(currentTime)
 
             // Otherwise, tell app to select next song.
         } else {
@@ -165,7 +154,7 @@ class Player extends Component {
          * exceeding the total time, or by the audio element firing an event.
          */
         if (intervalId) {
-            this.props.advanceToNextSong()
+            this.props.updatePlayerEnded()
 
             this._clearInterval()
         }

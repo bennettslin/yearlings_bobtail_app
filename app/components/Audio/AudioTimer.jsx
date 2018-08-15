@@ -10,11 +10,13 @@ import { getFormattedTime } from 'helpers/formatHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    selectedStore: { selectedSongIndex },
-    selectedTimePlayed
+    selectedStore: {
+        selectedSongIndex,
+        selectedTime
+    },
 }) => ({
     selectedSongIndex,
-    selectedTimePlayed
+    selectedTime
 })
 
 class AudioTimer extends Component {
@@ -22,7 +24,7 @@ class AudioTimer extends Component {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedTimePlayed: PropTypes.number.isRequired,
+        selectedTime: PropTypes.number.isRequired,
 
         // From parent.
         isTitleTimer: PropTypes.bool
@@ -40,7 +42,7 @@ class AudioTimer extends Component {
         const {
                 isTitleTimer,
                 selectedSongIndex,
-                selectedTimePlayed
+                selectedTime
             } = this.props,
 
             isLogue = getSongIsLogue(selectedSongIndex),
@@ -48,7 +50,7 @@ class AudioTimer extends Component {
             {
                 base,
                 jiffy
-            } = getFormattedTime(selectedTimePlayed, true)
+            } = getFormattedTime(selectedTime, true)
 
         return !isLogue && (
 

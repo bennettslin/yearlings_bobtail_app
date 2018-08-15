@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 
 import {
     selectWikiIndex,
-    selectTimePlayed,
     updateSelectedStore
 } from 'flux/actions/storage'
 
@@ -26,7 +25,6 @@ class RoutingManager extends Component {
 
         updateSelectedStore: PropTypes.func.isRequired,
         selectWikiIndex: PropTypes.func.isRequired,
-        selectTimePlayed: PropTypes.func.isRequired,
 
         match: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
@@ -52,22 +50,20 @@ class RoutingManager extends Component {
         // If route gives us its own song index, set in store.
         if (!isNaN(routingSongIndex)) {
 
-            const routingTimePlayed = getTimeForVerseIndex(
-                routingSongIndex,
-                routingVerseIndex
-            )
-
-            selectedSongIndex = routingSongIndex
-            selectedVerseIndex = routingVerseIndex
-            selectedAnnotationIndex = routingAnnotationIndex
+            const
+                selectedSongIndex = routingSongIndex
+                selectedVerseIndex = routingVerseIndex
+                selectedAnnotationIndex = routingAnnotationIndex
 
             props.updateSelectedStore({
                 selectedSongIndex,
                 selectedVerseIndex,
-                selectedAnnotationIndex
+                selectedAnnotationIndex,
+                selectedTime: getTimeForVerseIndex(
+                    routingSongIndex,
+                    routingVerseIndex
+                )
             })
-
-            props.selectTimePlayed(routingTimePlayed)
 
             // Reset wiki.
             props.selectWikiIndex(0)
@@ -155,8 +151,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateSelectedStore,
-        selectWikiIndex,
-        selectTimePlayed
+        selectWikiIndex
     }, dispatch)
 )
 

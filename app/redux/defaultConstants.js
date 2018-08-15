@@ -1,7 +1,8 @@
-import StorageHelper from './storageHelper'
+import { getFromStorage } from './storageHelper'
 
 import {
-    getSceneIndexForVerseIndex
+    getSceneIndexForVerseIndex,
+    getTimeForVerseIndex
 } from 'helpers/dataHelper'
 
 import {
@@ -19,6 +20,7 @@ import {
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
+    SELECTED_TIME,
 
     IS_SLIDER_MOVING,
     IS_SLIDER_TOUCHED,
@@ -29,17 +31,14 @@ import {
 
 } from 'constants/state'
 
-const { getFromStorage } = StorageHelper,
+const
     storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
     storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
-    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX)
-
-export const DEVICE_DEFAULTS = {
-    [DEVICE_INDEX]: 0,
-    [WINDOW_HEIGHT]: 0,
-    [WINDOW_WIDTH]: 0,
-    [STAGE_COORDINATES]: STAGE_COORDINATES_DEFAULT
-}
+    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
+    selectedTime = getTimeForVerseIndex(
+        storedSongIndex,
+        storedVerseIndex
+    )
 
 export const RENDERABLE_DEFAULTS = {
     [RENDERABLE_SONG_INDEX]: storedSongIndex,
@@ -54,7 +53,8 @@ export const RENDERABLE_DEFAULTS = {
 export const SELECTED_DEFAULTS = {
     [SELECTED_SONG_INDEX]: storedSongIndex,
     [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
-    [SELECTED_VERSE_INDEX]: storedVerseIndex
+    [SELECTED_VERSE_INDEX]: storedVerseIndex,
+    [SELECTED_TIME]: selectedTime
 }
 
 export const SLIDER_DEFAULTS = {
@@ -64,4 +64,11 @@ export const SLIDER_DEFAULTS = {
     [SLIDER_RATIO]: 0,
     [SLIDER_WIDTH]: 0,
     [SLIDER_VERSE_INDEX]: -1
+}
+
+export const DEVICE_DEFAULTS = {
+    [DEVICE_INDEX]: 0,
+    [WINDOW_HEIGHT]: 0,
+    [WINDOW_WIDTH]: 0,
+    [STAGE_COORDINATES]: STAGE_COORDINATES_DEFAULT
 }

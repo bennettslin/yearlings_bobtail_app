@@ -59,6 +59,8 @@ class PlayerManager extends Component {
         canPlayThroughs: PropTypes.number.isRequired,
 
         // From parent.
+        selectTime: PropTypes.func.isRequired,
+        advanceToNextSong: PropTypes.func.isRequired,
         setRef: PropTypes.func.isRequired
     }
 
@@ -241,6 +243,14 @@ class PlayerManager extends Component {
             ) : 0
     }
 
+    selectTime = (currentTime) => {
+        this.props.selectTime(currentTime)
+    }
+
+    advanceToNextSong = () => {
+        this.props.advanceToNextSong()
+    }
+
     render() {
 
         const {
@@ -250,8 +260,6 @@ class PlayerManager extends Component {
                 setCanPlayThroughs,
                 dispatch,
                 /* eslint-enable no-unused-vars */
-
-                ...other
             } = this.props,
 
             mp3s = getMp3s()
@@ -267,12 +275,14 @@ class PlayerManager extends Component {
                         totalTime = getSongTotalTime(songIndex)
 
                     return this._playerShouldRender(songIndex) && (
-                        <Player {...other}
+                        <Player
                             key={index}
                             {...{
                                 mp3,
                                 songIndex,
                                 totalTime,
+                                updateCurrentTime: this.selectTime,
+                                updatePlayerEnded: this.advanceToNextSong,
                                 setPlayerRef: this.setPlayerRef,
                                 setPlayerCanPlayThrough:
                                     this.setPlayerCanPlayThrough

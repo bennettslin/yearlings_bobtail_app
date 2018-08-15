@@ -10,7 +10,8 @@ import { CONTINUE,
          AUDIO_OPTIONS } from 'constants/options'
 
 import {
-    getSongsAndLoguesCount
+    getSongsAndLoguesCount,
+    getTimeForVerseIndex
 } from 'helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -94,8 +95,8 @@ class SongManager extends Component {
         }
 
         props.selectAnnotation({
-            selectedAnnotationIndex,
             selectedSongIndex,
+            selectedAnnotationIndex,
 
             // If from wormhole, access destination wormhole index.
             initialAnnotationAnchorIndex: destinationWormholeIndex,
@@ -103,15 +104,19 @@ class SongManager extends Component {
         })
 
         props.selectVerse({
-            selectedVerseIndex,
             selectedSongIndex,
+            selectedVerseIndex,
             bypassUpdateSelected: true
         })
 
         props.updateSelectedStore({
             selectedSongIndex,
             selectedVerseIndex,
-            selectedAnnotationIndex
+            selectedAnnotationIndex,
+            selectedTime: getTimeForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
         })
 
         if (selectedSongIndex !== this.props.selectedSongIndex) {

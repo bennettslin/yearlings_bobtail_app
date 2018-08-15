@@ -4,10 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateRenderableStore } from 'flux/actions/renderable'
-import {
-    selectTimePlayed,
-    updateSelectedStore
-} from 'flux/actions/storage'
+import { updateSelectedStore } from 'flux/actions/storage'
 
 import { VERSE_SCROLL } from 'constants/dom'
 
@@ -29,7 +26,6 @@ class TimeVerseManager extends Component {
 
         updateRenderableStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
-        selectTimePlayed: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -77,7 +73,9 @@ class TimeVerseManager extends Component {
          * in the same verse, or the song has ended.
          */
         if (nextVerseIndex === null) {
-            this.props.selectTimePlayed(currentTime)
+            this.props.updateSelectedStore({
+                selectedTime: currentTime
+            })
 
         // Otherwise, select the next verse.
         } else {
@@ -90,7 +88,7 @@ class TimeVerseManager extends Component {
             }
 
             this._selectTimeAndVerse({
-                selectedTimePlayed: currentTime,
+                selectedTime: currentTime,
                 selectedVerseIndex: nextVerseIndex,
                 isPlayerAdvancing: true
             })
@@ -105,14 +103,14 @@ class TimeVerseManager extends Component {
         bypassUpdateSelected
     }) {
         const
-            selectedTimePlayed =
+            selectedTime =
                 getTimeForVerseIndex(
                     selectedSongIndex,
                     selectedVerseIndex
                 )
 
         this._selectTimeAndVerse({
-            selectedTimePlayed,
+            selectedTime,
             selectedSongIndex,
             selectedVerseIndex,
             scrollLog,
@@ -121,7 +119,7 @@ class TimeVerseManager extends Component {
     }
 
     _selectTimeAndVerse({
-        selectedTimePlayed,
+        selectedTime,
         selectedSongIndex = this.props.selectedSongIndex,
         selectedVerseIndex,
         scrollLog,
@@ -136,11 +134,10 @@ class TimeVerseManager extends Component {
 
         if (!bypassUpdateSelected) {
             this.props.updateSelectedStore({
-                selectedVerseIndex
+                selectedVerseIndex,
+                selectedTime
             })
         }
-
-        this.props.selectTimePlayed(selectedTimePlayed)
 
         /**
          * If called by player, and autoScroll is on, then scroll to selected
@@ -207,8 +204,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateRenderableStore,
-        updateSelectedStore,
-        selectTimePlayed
+        updateSelectedStore
     }, dispatch)
 )
 

@@ -12,9 +12,11 @@ import { getFormattedTime } from 'helpers/formatHelper'
 
 const mapStateToProps = ({
     canSliderRender,
-    selectedTimePlayed,
     renderableStore: {
         renderableSongIndex
+    },
+    selectedStore: {
+        selectedTime
     },
     sliderStore: {
         isSliderTouched,
@@ -22,8 +24,8 @@ const mapStateToProps = ({
     }
 }) => ({
     canSliderRender,
-    selectedTimePlayed,
     renderableSongIndex,
+    selectedTime,
     isSliderTouched,
     sliderRatio
 })
@@ -34,7 +36,7 @@ class SliderTimes extends Component {
         // Through Redux.
         canSliderRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
-        selectedTimePlayed: PropTypes.number.isRequired,
+        selectedTime: PropTypes.number.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         sliderRatio: PropTypes.number.isRequired
     }
@@ -47,7 +49,7 @@ class SliderTimes extends Component {
 
         const {
                 renderableSongIndex,
-                selectedTimePlayed,
+                selectedTime,
                 isSliderTouched,
                 sliderRatio
             } = this.props,
@@ -55,7 +57,7 @@ class SliderTimes extends Component {
             totalTime = getSongTotalTime(renderableSongIndex),
 
             workingRatio = isSliderTouched ?
-                sliderRatio : (selectedTimePlayed / totalTime),
+                sliderRatio : (selectedTime / totalTime),
 
             spentTime =
                 getFormattedTime(workingRatio * totalTime),

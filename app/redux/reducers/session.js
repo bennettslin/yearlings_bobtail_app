@@ -15,10 +15,9 @@ import {
     getBookColumnIndex
 } from 'helpers/dataHelper'
 
-import StorageHelper from '../storageHelper'
+import { getFromStorage } from '../storageHelper'
 
-const { getFromStorage } = StorageHelper,
-    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX)
+const storedSongIndex = getFromStorage(SELECTED_SONG_INDEX)
 
 export const AppMountedReducer = (state = false, action) => {
     switch (action.type) {
