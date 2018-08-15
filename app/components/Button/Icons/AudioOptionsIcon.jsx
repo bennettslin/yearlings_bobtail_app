@@ -22,19 +22,6 @@ const
             }}
         />
     ),
-    REPEAT_ICON = ({
-        className
-    }) => (
-        <rect
-            {...{
-                className,
-                x: 0,
-                y: 0,
-                width: 100,
-                height: 100
-            }}
-        />
-    ),
     PAUSE_AT_END_ICON = ({
         className
     }) => (
@@ -48,10 +35,22 @@ const
             }}
         />
     ),
+    REPEAT_ICON = ({
+        className
+    }) => (
+        <path
+            {...{
+                className,
+                x: 0,
+                y: 0,
+                d: 'M 50,0 L 100,50 L 50,100 L0,50 Z'
+            }}
+        />
+    ),
     AUDIO_OPTIONS_MAP = {
         [CONTINUE]: CONTINUE_ICON,
-        [REPEAT]: REPEAT_ICON,
-        [PAUSE_AT_END]: PAUSE_AT_END_ICON
+        [PAUSE_AT_END]: PAUSE_AT_END_ICON,
+        [REPEAT]: REPEAT_ICON
     }
 
 const propTypes = {

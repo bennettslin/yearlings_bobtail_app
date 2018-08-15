@@ -48,14 +48,16 @@ class SongManager extends Component {
          * When selecting next song through audio player, reset annotation and
          * verse, and scroll element into view, but do not access nav section.
          */
-        const { selectedSongIndex,
-                selectedAudioOptionIndex } = this.props,
+        const {
+            selectedSongIndex,
+            selectedAudioOptionIndex
+            } = this.props,
 
             selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]
 
         // If option is to pause at end, stop play.
         if (selectedAudioOption === PAUSE_AT_END) {
-            this.togglePlay()
+            this.props.togglePlay()
 
         } else {
 
@@ -67,8 +69,7 @@ class SongManager extends Component {
                 + (selectedAudioOption === CONTINUE)
 
             this.selectSong({
-                selectedSongIndex: nextSongIndex,
-                selectedVerseIndex: 0
+                selectedSongIndex: nextSongIndex
             })
         }
     }
