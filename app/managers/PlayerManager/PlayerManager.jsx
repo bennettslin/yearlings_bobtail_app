@@ -120,6 +120,8 @@ class PlayerManager extends Component {
         // Handle pause.
         if (!isPlaying && wasPlaying) {
             this.getPlayerRef(selectedSongIndex).handleEndPlaying(
+
+                // Player manager keeps track of default times of players.
                 this.getCurrentTimeForSongIndex(selectedSongIndex)
             )
 
@@ -152,14 +154,14 @@ class PlayerManager extends Component {
         // Update selected player's current time.
         this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
 
-        // If song was changed, pause and reset current player.
-        if (selectedSongIndex !== nextSongIndex) {
-            this.getPlayerRef(selectedSongIndex).handleEndPlaying()
-
-            // If playing, toggle play and pause for respective players.
-            if (isPlaying) {
-                this.getPlayerRef(nextSongIndex).handleBeginPlaying()
-            }
+        if (
+            selectedSongIndex !== nextSongIndex &&
+            isPlaying
+        ) {
+            /**
+             * If already playing, begin playing newly selected player.
+             */
+            this.getPlayerRef(nextSongIndex).handleBeginPlaying()
         }
     }
 
@@ -281,6 +283,7 @@ class PlayerManager extends Component {
                                 mp3,
                                 songIndex,
                                 totalTime,
+                                isSelected: songIndex === selectedSongIndex,
                                 updateCurrentTime: this.selectTime,
                                 updatePlayerEnded: this.advanceToNextSong,
                                 setPlayerRef: this.setPlayerRef,

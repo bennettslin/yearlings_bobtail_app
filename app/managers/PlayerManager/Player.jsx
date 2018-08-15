@@ -12,6 +12,7 @@ class Player extends Component {
         // From parent.
         mp3: PropTypes.string.isRequired,
         songIndex: PropTypes.number.isRequired,
+        isSelected: PropTypes.bool.isRequired,
         totalTime: PropTypes.number.isRequired,
         updateCurrentTime: PropTypes.func.isRequired,
         updatePlayerEnded: PropTypes.func.isRequired,
@@ -25,6 +26,7 @@ class Player extends Component {
     }
 
     componentDidMount() {
+
         this.props.setPlayerRef(this, this.props.songIndex)
 
         // Tell app that player can now be played without interruption.
@@ -44,23 +46,25 @@ class Player extends Component {
         )
     }
 
-    _clearInterval() {
-        clearInterval(this.state.intervalId)
+    shouldComponentUpdate(nextProps) {
+        // Player only ever updates when it changes selected status.
+        return nextProps.isSelected !== this.props.isSelected
+    }
 
-        this.setState({
-            intervalId: ''
-        })
+    componentDidUpdate() {
+        // Tell recently unselected player to stop playing.
+        if (!this.props.isSelected) {
+            this.handleEndPlaying()
+        }
     }
 
     setCurrentTime(currentTime = 0) {
         // Can be called by player manager.
-
         this.audioPlayer.currentTime = currentTime
     }
 
     handleBeginPlaying() {
         // Only called by player manager.
-
         const { songIndex } = this.props,
             playPromise = this.audioPlayer.play()
 
@@ -72,42 +76,35 @@ class Player extends Component {
             logger.info('Browser returns promise upon play.')
 
             playPromise.then(() => {
-                logger.info(`Promise for ${songIndex} successfully returned.`)
-
-                // Automatic playback started!
-                this._handlePlaySuccess()
+                logger.info(`Promise for ${songIndex} succeeded.`)
 
               }).catch(error => {
                 // Automatic playback failed.
                 logger.error(`Promise for ${songIndex} failed: ${error}`)
+
+                return false
             });
 
         } else {
             logger.info('Browser does not return promise upon play.')
-
-            // Begin listening.
-            this._handlePlaySuccess()
         }
-    }
 
-    _handlePlaySuccess() {
-        const intervalId = setInterval(
-                this._tellAppCurrentTime,
-                LISTEN_INTERVAL
-            )
+        /**
+         * If player was not caught by catch statement, then it is playing.
+         */
+        this._setIntervalForTimeUpdate()
 
-        this.setState({
-            intervalId
-        })
+        return true
     }
 
     handleEndPlaying(currentTime) {
         // Only called by player manager.
-
-        this._clearInterval()
         this.audioPlayer.pause()
 
-        // If still selected, reset time to selected verse.
+        /**
+         * If still selected, reset time to selected verse. Otherwise, reset
+         * time to start of song.
+         */
         this.setCurrentTime(currentTime)
     }
 
@@ -119,11 +116,10 @@ class Player extends Component {
 
             { totalTime } = this.props
 
-        /**
-         * TODO: This is a really fragile way to ensure that the interval is
-         * cleared when the player is no longer playing.
-         */
+        console.error(this.props.songIndex, 'is telling app current time!')
+
         if (paused) {
+            // Once the player is paused, prevent further time updates.
             this._clearInterval()
 
         // If there's time remaining, tell app the current time.
@@ -158,6 +154,25 @@ class Player extends Component {
 
             this._clearInterval()
         }
+    }
+
+    _setIntervalForTimeUpdate() {
+        const intervalId = setInterval(
+                this._tellAppCurrentTime,
+                LISTEN_INTERVAL
+            )
+
+        this.setState({
+            intervalId
+        })
+    }
+
+    _clearInterval() {
+        clearInterval(this.state.intervalId)
+
+        this.setState({
+            intervalId: ''
+        })
     }
 
     _listenForDebugStatements(onlyIfSelected) {
