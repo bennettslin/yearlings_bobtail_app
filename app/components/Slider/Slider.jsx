@@ -33,14 +33,6 @@ class Slider extends Component {
         didRenderTimeoutId: ''
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleTouchDown = this._handleTouchDown.bind(this)
-        this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
-        this._setSliderRef = this._setSliderRef.bind(this)
-    }
-
     componentDidUpdate(prevProps) {
         const { canSliderRender } = this.props,
             { canSliderRender: couldRender } = prevProps
@@ -74,17 +66,17 @@ class Slider extends Component {
         }
     }
 
-    _waitForShowBeforeRender() {
+    _waitForShowBeforeRender = () => {
         this.setState({
             isShown: true
         })
     }
 
-    _handleTouchDown(e) {
+    _handleTouchDown = (e) => {
         this.props.handleSliderTouchBegin(e, this.slider)
     }
 
-    _setSliderRef(node) {
+    _setSliderRef = (node) => {
         this.slider = node
     }
 

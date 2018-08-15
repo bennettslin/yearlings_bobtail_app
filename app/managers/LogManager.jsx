@@ -41,13 +41,13 @@ class LogManager extends Component {
     }
 
     _assignDebugLogFunctions() {
-        global.d = this.logDrawings.bind(this)
-        global.z = this.logScene.bind(this)
-        global.s = this.logSong.bind(this)
-        global.t = this.logStorage.bind(this)
+        global.d = this.logDrawings
+        global.z = this.logScene
+        global.s = this.logSong
+        global.t = this.logStorage
     }
 
-    logDrawings() {
+    logDrawings = () => {
         const copiedDrawings = {
             ...getDrawings()
         }
@@ -57,7 +57,7 @@ class LogManager extends Component {
         return this._logObject('admin drawings', copiedDrawings)
     }
 
-    logScene() {
+    logScene = () => {
         const {
                 renderableSongIndex,
                 renderableSceneIndex,
@@ -70,7 +70,7 @@ class LogManager extends Component {
         return this._logObject('renderable scene', renderableScene)
     }
 
-    logSong() {
+    logSong = () => {
         const
             { renderableSongIndex } = this.props,
             copiedSong = {
@@ -87,7 +87,7 @@ class LogManager extends Component {
         return this._logObject('renderable song', copiedSong)
     }
 
-    logStorage() {
+    logStorage = () => {
         // Global helper's storage object is the default.
         return this._logObject('window storage', WINDOW_STORAGE)
     }

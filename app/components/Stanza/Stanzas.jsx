@@ -47,17 +47,10 @@ class Stanzas extends Component {
         setLyricVerseParentRef: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleWheel = this._handleWheel.bind(this)
-        this.setLyricRef = this.setLyricRef.bind(this)
-
-        // Handle only once every 10ms at most.
-        // this._handleDebouncedWheel = debounce(
-        //     this._handleDebouncedWheel, 10
-        // )
-    }
+    // Handle only once every 10ms at most.
+    // _handleDebouncedWheel = debounce(
+    //     this._handleDebouncedWheel, 10
+    // )
 
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
@@ -88,7 +81,7 @@ class Stanzas extends Component {
         }
     }
 
-    _handleWheel(e) {
+    _handleWheel = (e) => {
         this._handleDebouncedWheel(e)
     }
 
@@ -97,7 +90,7 @@ class Stanzas extends Component {
         this.props.handleLyricWheel(e)
     }
 
-    setLyricRef(node) {
+    setLyricRef = (node) => {
         // For keyboard events.
         this.props.setLyricRef(node)
 

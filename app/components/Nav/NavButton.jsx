@@ -44,12 +44,6 @@ class NavButton extends Component {
         handleButtonClick: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleButtonClick = this._handleButtonClick.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         return !getPropsAreShallowEqual({
             props: this.props,
@@ -57,7 +51,7 @@ class NavButton extends Component {
         })
     }
 
-    _handleButtonClick(e) {
+    _handleButtonClick = (e) => {
         const { handleButtonClick,
                 songIndex } = this.props
 

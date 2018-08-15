@@ -62,28 +62,22 @@ class PlayerManager extends Component {
         setRef: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
+    state = {
+        /**
+         * This object is converted from the bit number fetched through
+         * Redux. We will store it so that we don't have to convert it
+         * every single time.
+         */
+        canPlayThroughsObject: getCanPlayThroughsObject(
+            this.props.canPlayThroughs
+        ),
 
-        this.state = {
-            /**
-             * This object is converted from the bit number fetched through
-             * Redux. We will store it so that we don't have to convert it
-             * every single time.
-             */
-            canPlayThroughsObject: getCanPlayThroughsObject(
-                props.canPlayThroughs
-            ),
-
-            // At any given time, only one player is being newly rendered.
-            nextPlayerToRender: -1
-        }
-
-        // Initialise player refs.
-        this.players = {}
-        this.setPlayerRef = this.setPlayerRef.bind(this)
-        this.setPlayerCanPlayThrough = this.setPlayerCanPlayThrough.bind(this)
+        // At any given time, only one player is being newly rendered.
+        nextPlayerToRender: -1
     }
+
+    // Initialise player refs.
+    players = {}
 
     componentDidMount() {
         this.props.setRef(this)
@@ -202,7 +196,7 @@ class PlayerManager extends Component {
         )
     }
 
-    setPlayerCanPlayThrough(playerSongIndex) {
+    setPlayerCanPlayThrough = (playerSongIndex) => {
         const {
                 canPlayThroughs
             } = this.props,
@@ -222,7 +216,7 @@ class PlayerManager extends Component {
         return this.players[songIndex] || LOGUE_DUMMY_PLAYER
     }
 
-    setPlayerRef(node, songIndex) {
+    setPlayerRef = (node, songIndex) => {
         this.players[songIndex] = node
 
         this.players[songIndex].setCurrentTime(

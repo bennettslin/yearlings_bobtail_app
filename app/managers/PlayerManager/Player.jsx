@@ -30,15 +30,6 @@ class Player extends Component {
         intervalId: ''
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleSuspendEvent = this._handleSuspendEvent.bind(this)
-        this._handleEndedEvent = this._handleEndedEvent.bind(this)
-        this._tellAppCurrentTime = this._tellAppCurrentTime.bind(this)
-        this._setAudioPlayerRef = this._setAudioPlayerRef.bind(this)
-    }
-
     shouldComponentUpdate() {
         return false
     }
@@ -130,7 +121,7 @@ class Player extends Component {
         this.setCurrentTime(currentTime)
     }
 
-    _tellAppCurrentTime() {
+    _tellAppCurrentTime = () => {
         const {
                 currentTime,
                 paused
@@ -156,7 +147,7 @@ class Player extends Component {
         }
     }
 
-    _handleSuspendEvent() {
+    _handleSuspendEvent = () => {
         const {
             songIndex
         } = this.props
@@ -164,7 +155,7 @@ class Player extends Component {
         this.props.setPlayerCanPlayThrough(songIndex)
     }
 
-    _handleEndedEvent() {
+    _handleEndedEvent = () => {
         logger.error(`Player for ${this.props.songIndex} ended.`)
 
         const { intervalId } = this.state
@@ -243,7 +234,7 @@ class Player extends Component {
         }
     }
 
-    _setAudioPlayerRef(node) {
+    _setAudioPlayerRef = (node) => {
         this.audioPlayer = node.audioEl
     }
 

@@ -38,14 +38,6 @@ class CarouselAnnotation extends Component {
         setCarouselAnnotationRef: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleAnnotationContainerClick = this._handleAnnotationContainerClick.bind(this)
-        this._handleAnnotationTitleClick = this._handleAnnotationTitleClick.bind(this)
-        this.setCarouselAnnotationRef = this.setCarouselAnnotationRef.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         return nextProps.canCarouselRender && !getPropsAreShallowEqual({
             props: this.props,
@@ -56,7 +48,7 @@ class CarouselAnnotation extends Component {
         })
     }
 
-    _handleAnnotationTitleClick(e) {
+    _handleAnnotationTitleClick = (e) => {
         if (!this.props.isSelected) {
             const { annotationIndex,
                     handleLyricAnnotationSelect } = this.props
@@ -65,7 +57,7 @@ class CarouselAnnotation extends Component {
         }
     }
 
-    _handleAnnotationContainerClick(e) {
+    _handleAnnotationContainerClick = (e) => {
         /**
          * Ensure that clicking on a selected carousel annotation will not
          * deselect it.
@@ -75,7 +67,7 @@ class CarouselAnnotation extends Component {
         }
     }
 
-    setCarouselAnnotationRef(node) {
+    setCarouselAnnotationRef = (node) => {
         this.props.setCarouselAnnotationRef({
             node,
             index: this.props.annotationIndex

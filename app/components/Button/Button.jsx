@@ -33,12 +33,6 @@ class Button extends Component {
         children: PropTypes.any
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleClick = this._handleClick.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         return !getPropsAreShallowEqual({
             props: this.props,
@@ -53,7 +47,7 @@ class Button extends Component {
         })
     }
 
-    _handleClick(e) {
+    _handleClick = (e) => {
         const { isDisabled } = this.props
 
         if (!isDisabled) {

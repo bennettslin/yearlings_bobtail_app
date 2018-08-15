@@ -38,12 +38,6 @@ class Tips extends Component {
         handleTipsToggle: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleTipsToggle = this._handleTipsToggle.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         return nextProps.canMainRender && !getPropsAreShallowEqual({
             props: this.props,
@@ -51,13 +45,7 @@ class Tips extends Component {
         })
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.canMainRender && !prevProps.canMainRender) {
-    //         logger.warn('Tips rendered.')
-    //     }
-    // }
-
-    _handleTipsToggle(e) {
+    _handleTipsToggle = (e) => {
         // Prevent toggle from firing when not shown.
         const { selectedTipsIndex,
                 handleTipsToggle } = this.props

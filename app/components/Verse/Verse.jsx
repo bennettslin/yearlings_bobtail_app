@@ -46,13 +46,6 @@ class Verse extends Component {
         setVerseRef: PropTypes.func
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleInteractivatableClick = this._handleInteractivatableClick.bind(this)
-        this.setVerseRef = this.setVerseRef.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         const shouldComponentUpdate = nextProps.canLyricRender &&
             !getPropsAreShallowEqual({
@@ -68,7 +61,7 @@ class Verse extends Component {
         return shouldComponentUpdate
     }
 
-    _handleInteractivatableClick(e) {
+    _handleInteractivatableClick = (e) => {
         // Allow clicks on interactable verses.
         const {
             verseIndex,
@@ -89,7 +82,7 @@ class Verse extends Component {
         return !isNaN(verseIndex) && !inVerseBar
     }
 
-    setVerseRef(node) {
+    setVerseRef = (node) => {
         if (this.getIsInteractable()) {
             this.props.setVerseRef({
                 node,

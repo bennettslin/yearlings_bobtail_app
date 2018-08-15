@@ -24,16 +24,8 @@ class Popup extends Component {
         handlePopupContainerClick: PropTypes.func
     }
 
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            isDisplayed: this.props.isVisible
-        }
-
-        this._handlePopupContainerClick =
-            this._handlePopupContainerClick.bind(this)
-        this._handleTransitionEnd = this._handleTransitionEnd.bind(this)
+    state = {
+        isDisplayed: this.props.isVisible
     }
 
     componentDidUpdate(prevProps) {
@@ -52,7 +44,7 @@ class Popup extends Component {
         }
     }
 
-    _handleTransitionEnd(e) {
+    _handleTransitionEnd = (e) => {
         // FIXME: This is a brittle way to handle it.
         if (e.propertyName === 'opacity') {
 
@@ -65,7 +57,7 @@ class Popup extends Component {
         }
     }
 
-    _handlePopupContainerClick(e) {
+    _handlePopupContainerClick = (e) => {
         if (this.state.isDisplayed) {
             this.props.handlePopupContainerClick(e)
         }

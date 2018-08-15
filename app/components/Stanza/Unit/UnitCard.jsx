@@ -37,15 +37,9 @@ class UnitCard extends Component {
         handleLyricVerseSelect: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this.handleStanzaTabClick = this.handleStanzaTabClick.bind(this)
-    }
-
     // No shouldComponentUpdate necessary.
 
-    handleStanzaTabClick(e) {
+    handleStanzaTabClick = (e) => {
         const {
                 handleLyricVerseSelect,
                 stanzaArray

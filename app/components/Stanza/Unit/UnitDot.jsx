@@ -55,13 +55,6 @@ class UnitDot extends Component {
         setLyricAnnotationRef: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleDotButtonClick = this._handleDotButtonClick.bind(this)
-        this.setLyricAnnotationRef = this.setLyricAnnotationRef.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
@@ -69,7 +62,7 @@ class UnitDot extends Component {
         })
     }
 
-    _handleDotButtonClick(e) {
+    _handleDotButtonClick = (e) => {
         const { dotStanzaObject,
                 renderableAnnotationIndex } = this.props,
             { annotationIndex } = dotStanzaObject,
@@ -81,7 +74,7 @@ class UnitDot extends Component {
         }
     }
 
-    setLyricAnnotationRef(node) {
+    setLyricAnnotationRef = (node) => {
         this.props.setLyricAnnotationRef({
             node,
             index: this.props.dotStanzaObject.annotationIndex

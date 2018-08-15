@@ -27,13 +27,6 @@ class DotsSlide extends Component {
         hasInteractivatedDotText: 0
     }
 
-    constructor(props) {
-        super(props)
-
-        this._onContainerClick = this._onContainerClick.bind(this)
-        this._setHasInteractivatedDotText = this._setHasInteractivatedDotText.bind(this)
-    }
-
     shouldComponentUpdate(nextProps, nextState) {
         return !getPropsAreShallowEqual({
             props: this.props,
@@ -47,7 +40,7 @@ class DotsSlide extends Component {
         })
     }
 
-    _onContainerClick(e) {
+    _onContainerClick = (e) => {
         this.props.handlePopupContainerClick(e)
 
         this.setState({
@@ -55,7 +48,7 @@ class DotsSlide extends Component {
         })
     }
 
-    _setHasInteractivatedDotText(isInteractivated) {
+    _setHasInteractivatedDotText = (isInteractivated) => {
         const hasInteractivatedDotText = this.state.hasInteractivatedDotText + (isInteractivated ? 1 : -1)
 
         this.setState({

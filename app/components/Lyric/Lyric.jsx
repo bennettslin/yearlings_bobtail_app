@@ -41,14 +41,6 @@ class Lyric extends Component {
         didRenderTimeoutId: ''
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleTransition = this._handleTransition.bind(this)
-        this.completeHeightTransition = this.completeHeightTransition.bind(this)
-        this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
-    }
-
     componentDidUpdate(prevProps) {
         const { canLyricRender } = this.props,
             { canLyricRender: couldRender } = prevProps
@@ -89,13 +81,13 @@ class Lyric extends Component {
         }
     }
 
-    _waitForShowBeforeRender() {
+    _waitForShowBeforeRender = () => {
         this.setState({
             isShown: true
         })
     }
 
-    _handleTransition(e) {
+    _handleTransition = (e) => {
         if (e.propertyName === 'height') {
             this.setState({
                 isTransitioningHeight: true
@@ -103,7 +95,7 @@ class Lyric extends Component {
         }
     }
 
-    completeHeightTransition() {
+    completeHeightTransition = () => {
         this.setState({
             isTransitioningHeight: false
         })

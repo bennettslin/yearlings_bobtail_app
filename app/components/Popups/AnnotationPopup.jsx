@@ -52,13 +52,9 @@ class AnnotationPopup extends Component {
         handlePopupContainerClick: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            // Ensures that annotation index persists as popup is closing.
-            annotationIndex: props.renderableAnnotationIndex
-        }
+    state = {
+        // Ensures that annotation index persists as popup is closing.
+        annotationIndex: this.props.renderableAnnotationIndex
     }
 
     componentDidUpdate(prevProps) {

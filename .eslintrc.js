@@ -145,7 +145,9 @@ module.exports = {
         "no-implicit-globals": "error",
         "no-implied-eval": "error",
         "no-inline-comments": "off",
-        "no-invalid-this": "error",
+
+        // Disabling to allow class properties.
+        "no-invalid-this": "off",
         "no-iterator": "error",
         "no-label-var": "error",
         "no-labels": "error",

@@ -77,13 +77,6 @@ class TextLyricAnchor extends Component {
         setLyricAnnotationRef: PropTypes.func
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleAnchorClick = this._handleAnchorClick.bind(this)
-        this.setLyricAnnotationRef = this.setLyricAnnotationRef.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
@@ -91,7 +84,7 @@ class TextLyricAnchor extends Component {
         })
     }
 
-    _handleAnchorClick(e) {
+    _handleAnchorClick = (e) => {
 
         const {
                 renderableAnnotationIndex,
@@ -116,7 +109,7 @@ class TextLyricAnchor extends Component {
         }
     }
 
-    setLyricAnnotationRef(node) {
+    setLyricAnnotationRef = (node) => {
 
         // This method is only passed down by stanza, not carousel annotation.
         if (this.props.setLyricAnnotationRef) {

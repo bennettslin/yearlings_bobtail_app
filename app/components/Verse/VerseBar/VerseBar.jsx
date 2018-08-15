@@ -50,12 +50,6 @@ class VerseBar extends Component {
         handleVerseBarWheel: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleVerseBarSelect = this._handleVerseBarSelect.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         const {
                 isVerseBarAbove,
@@ -85,7 +79,7 @@ class VerseBar extends Component {
         })
     }
 
-    _handleVerseBarSelect() {
+    _handleVerseBarSelect = () => {
         const {
                 isAbove,
                 isVerseBarAbove,

@@ -27,17 +27,11 @@ class PopupViewButton extends Component {
         handlePopupButtonClick: PropTypes.func
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleClick = this._handleClick.bind(this)
-    }
-
     shouldComponentUpdate() {
         return false
     }
 
-    _handleClick(e) {
+    _handleClick = (e) => {
 
         const { isPreviousButton,
                 isNextButton } = this.props

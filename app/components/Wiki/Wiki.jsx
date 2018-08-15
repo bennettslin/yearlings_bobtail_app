@@ -47,11 +47,6 @@ class WikiSection extends Component {
         iframeLoading: true
     }
 
-    constructor(props) {
-        super(props)
-        this.onIframeLoad = this.onIframeLoad.bind(this)
-    }
-
     shouldComponentUpdate(nextProps, nextState) {
         return !getPropsAreShallowEqual({
             props: this.props,
@@ -78,7 +73,7 @@ class WikiSection extends Component {
         }
     }
 
-    onIframeLoad() {
+    onIframeLoad = () => {
         this.setState({
             iframeLoading: false
         })

@@ -39,13 +39,6 @@ class DotsSlideSelect extends Component {
         isInteractivated: false
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleDotToggleClick = this._handleDotToggleClick.bind(this)
-        this._handleTextContainerClick = this._handleTextContainerClick.bind(this)
-    }
-
     /**
      * Not necessary to check shouldComponentUpdate, since the changed props
      * upon which to update are a subset of those in dots section.
@@ -67,11 +60,11 @@ class DotsSlideSelect extends Component {
         }
     }
 
-    _handleDotToggleClick(e) {
+    _handleDotToggleClick = (e) => {
         this.props.handleDotSelect(e, this.props.dotIndex)
     }
 
-    _handleTextContainerClick(e) {
+    _handleTextContainerClick = (e) => {
         const isInteractivated = !this.state.isInteractivated
 
         e.stopPropagation()

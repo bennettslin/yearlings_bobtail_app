@@ -45,17 +45,6 @@ const mapStateToProps = ({
 
 class Live extends Component {
 
-    // Prop types are on the bottom because the list is too long.
-    constructor(props) {
-        super(props)
-
-        this.theatreDidRender = this.theatreDidRender.bind(this)
-        this.mainDidRender = this.mainDidRender.bind(this)
-        this.sliderDidRender = this.sliderDidRender.bind(this)
-        this.lyricDidRender = this.lyricDidRender.bind(this)
-        this.carouselDidRender = this.carouselDidRender.bind(this)
-    }
-
     componentDidMount() {
         this.unrenderedTime = Date.now()
     }
@@ -116,7 +105,7 @@ class Live extends Component {
         }
     }
 
-    theatreDidRender() {
+    theatreDidRender = () => {
         /**
          * This isn't the most elegant way to tell whether we're rendering
          * after song change or after window resize. But it will do for now.
@@ -126,19 +115,19 @@ class Live extends Component {
         }
     }
 
-    mainDidRender() {
+    mainDidRender = () => {
         this.props.setCanRenderSlider(true)
     }
 
-    sliderDidRender() {
+    sliderDidRender = () => {
         this.props.setCanRenderLyric(true)
     }
 
-    lyricDidRender() {
+    lyricDidRender = () => {
         this.props.setCanRenderCarousel(true)
     }
 
-    carouselDidRender() {
+    carouselDidRender = () => {
         logger.warn('Live rendered.')
     }
 

@@ -1,58 +1,3 @@
-export const bindHandlers = (me) => {
-    me.focusElementForAccess = me.focusElementForAccess.bind(me)
-
-    me.handleAnnotationAccess = me.handleAnnotationAccess.bind(me)
-    me.handleDotAccess = me.handleDotAccess.bind(me)
-    me.handleAnnotationAnchorAccess = me.handleAnnotationAnchorAccess.bind(me)
-    me.handleSongAccess = me.handleSongAccess.bind(me)
-    me.handleVerseDirectionAccess = me.handleVerseDirectionAccess.bind(me)
-
-    me.handleBodyClick = me.handleBodyClick.bind(me)
-    me.handleBodyTouchMove = me.handleBodyTouchMove.bind(me)
-    me.handleBodyTouchEnd = me.handleBodyTouchEnd.bind(me)
-    me.handlePopupContainerClick = me.handlePopupContainerClick.bind(me)
-    me.handleAccessToggle = me.handleAccessToggle.bind(me)
-    me.handleAdminToggle = me.handleAdminToggle.bind(me)
-    me.handleAnnotationPrevious = me.handleAnnotationPrevious.bind(me)
-    me.handleAnnotationNext = me.handleAnnotationNext.bind(me)
-    me.handleAnnotationWikiSelect = me.handleAnnotationWikiSelect.bind(me)
-    me.handleAnnotationWormholeSelect = me.handleAnnotationWormholeSelect.bind(me)
-    me.handleAudioPlay = me.handleAudioPlay.bind(me)
-    me.handleAudioPreviousSong = me.handleAudioPreviousSong.bind(me)
-    me.handleAudioNextSong = me.handleAudioNextSong.bind(me)
-    me.handleAudioOptionsToggle = me.handleAudioOptionsToggle.bind(me)
-    me.handleSliderTouchBegin = me.handleSliderTouchBegin.bind(me)
-
-    me.handleDotSelect = me.handleDotSelect.bind(me)
-    me.handleDotsSectionToggle = me.handleDotsSectionToggle.bind(me)
-    me.handleLyricSectionExpand = me.handleLyricSectionExpand.bind(me)
-    me.handleLyricAutoScroll = me.handleLyricAutoScroll.bind(me)
-    me.handleLyricColumnSelect = me.handleLyricColumnSelect.bind(me)
-    me.handleLyricAnnotationSelect = me.handleLyricAnnotationSelect.bind(me)
-    me.handleLyricVerseSelect = me.handleLyricVerseSelect.bind(me)
-    me.handleLyricWheel = me.handleLyricWheel.bind(me)
-    me.handleNavSongSelect = me.handleNavSongSelect.bind(me)
-    me.handleNavBookSelect = me.handleNavBookSelect.bind(me)
-    me.handleOverviewToggle = me.handleOverviewToggle.bind(me)
-    me.handleCarouselNavToggle = me.handleCarouselNavToggle.bind(me)
-    me.handleSceneDirection = me.handleSceneDirection.bind(me)
-    me.handleScoreToggle = me.handleScoreToggle.bind(me)
-    me.handleTipsToggle = me.handleTipsToggle.bind(me)
-    me.handleTitleToggle = me.handleTitleToggle.bind(me)
-    me.handleVerseBarSelect = me.handleVerseBarSelect.bind(me)
-    me.handleVerseBarWheel = me.handleVerseBarWheel.bind(me)
-    me.handleVerseInteractivate = me.handleVerseInteractivate.bind(me)
-    me.handleWikiToggle = me.handleWikiToggle.bind(me)
-    me.handleScrollUponLyricRender = me.handleScrollUponLyricRender.bind(me)
-    me.handleScrollUponCarouselRender =
-        me.handleScrollUponCarouselRender.bind(me)
-    me.stopPropagation = me.stopPropagation.bind(me)
-    me.setLyricRef = me.setLyricRef.bind(me)
-    me.setRootRef = me.setRootRef.bind(me)
-    me.setScoreRef = me.setScoreRef.bind(me)
-    me.setWikiRef = me.setWikiRef.bind(me)
-}
-
 export const getHandlers = (me) => {
     const {
         setCarouselAnnotationRef,
@@ -107,12 +52,10 @@ export const getHandlers = (me) => {
         handleScrollUponLyricRender: me.handleScrollUponLyricRender,
         handleScrollUponCarouselRender: me.handleScrollUponCarouselRender,
         stopPropagation: me.stopPropagation,
-
         setLyricRef: me.setLyricRef,
         setRootRef: me.setRootRef,
         setScoreRef: me.setScoreRef,
         setWikiRef: me.setWikiRef,
-
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,

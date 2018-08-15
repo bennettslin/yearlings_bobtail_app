@@ -12,7 +12,6 @@ import { getClientX } from 'helpers/domHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
-    bindHandlers,
     getHandlers
 } from './eventHelper'
 
@@ -53,11 +52,6 @@ class EventHandler extends Component {
         scrollElementIntoView: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-        bindHandlers(this)
-    }
-
     componentDidMount() {
         // Focus lyric section when app is mounted.
         this.focusElementForAccess()
@@ -90,14 +84,14 @@ class EventHandler extends Component {
      * ACCESS *
      **********/
 
-    handleAccessToggle(selectedAccessIndex) {
+    handleAccessToggle = (selectedAccessIndex) => {
         this.props.toggleAccess(selectedAccessIndex)
     }
 
-    handleAnnotationAccess({
+    handleAnnotationAccess = ({
         doScroll,
         ...other
-    }) {
+    }) => {
         const accessedAnnotationIndex = this.props.accessAnnotation(
             other
         )
@@ -119,11 +113,11 @@ class EventHandler extends Component {
         }
     }
 
-    handleAnnotationAnchorAccess(payload) {
+    handleAnnotationAnchorAccess = (payload) => {
         this.props.accessAnnotationAnchor(payload)
     }
 
-    handleDotAccess(accessedDotIndex) {
+    handleDotAccess = (accessedDotIndex) => {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
@@ -132,11 +126,11 @@ class EventHandler extends Component {
         return true
     }
 
-    handleSongAccess(accessedNavSongIndex) {
+    handleSongAccess = (accessedNavSongIndex) => {
         this.props.accessNavSong(accessedNavSongIndex)
     }
 
-    handleVerseDirectionAccess(direction) {
+    handleVerseDirectionAccess = (direction) => {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
@@ -187,7 +181,7 @@ class EventHandler extends Component {
      * ADMIN *
      *********/
 
-    handleAdminToggle(e) {
+    handleAdminToggle = (e) => {
         this.stopPropagation(e)
         this.props.toggleAdmin()
         return true
@@ -197,7 +191,11 @@ class EventHandler extends Component {
      * ANNOTATION *
      **************/
 
-    handleAnnotationWikiSelect(e, selectedWikiIndex, carouselAnnotationIndex) {
+    handleAnnotationWikiSelect = (
+        e,
+        selectedWikiIndex,
+        carouselAnnotationIndex
+    ) => {
         const isWikiEnabled = this.props.selectedDotKeys[REFERENCE]
 
         // Don't register click if reference dot is deselected.
@@ -213,7 +211,7 @@ class EventHandler extends Component {
         return true
     }
 
-    handleAnnotationWormholeSelect(e, wormholeObject) {
+    handleAnnotationWormholeSelect = (e, wormholeObject) => {
 
         const {
             songIndex: selectedSongIndex,
@@ -245,11 +243,11 @@ class EventHandler extends Component {
         return songSelected
     }
 
-    handleAnnotationPrevious(e) {
+    handleAnnotationPrevious = (e) => {
         this._handleAccessedAnnotationSelect(e, -1)
     }
 
-    handleAnnotationNext(e) {
+    handleAnnotationNext = (e) => {
         this._handleAccessedAnnotationSelect(e, 1)
     }
 
@@ -276,7 +274,7 @@ class EventHandler extends Component {
      * AUDIO *
      *********/
 
-    handleAudioPlay(e) {
+    handleAudioPlay = (e) => {
         const playToggled = this.props.togglePlay()
         if (playToggled) {
             this.stopPropagation(e)
@@ -284,7 +282,7 @@ class EventHandler extends Component {
         return playToggled
     }
 
-    handleAudioPreviousSong(e) {
+    handleAudioPreviousSong = (e) => {
         const songSelected = this.props.selectSong({
             direction: -1
         })
@@ -295,7 +293,7 @@ class EventHandler extends Component {
         return songSelected
     }
 
-    handleAudioNextSong(e) {
+    handleAudioNextSong = (e) => {
         const songSelected = this.props.selectSong({
             direction: 1
         })
@@ -306,7 +304,7 @@ class EventHandler extends Component {
         return songSelected
     }
 
-    handleAudioOptionsToggle(e) {
+    handleAudioOptionsToggle = (e) => {
         const optionSelected = this.props.selectAudioOption()
         if (optionSelected) {
             this.stopPropagation(e)
@@ -318,7 +316,7 @@ class EventHandler extends Component {
      * CAROUSEL *
      ************/
 
-    handleCarouselNavToggle(e, selectedCarouselNavIndex) {
+    handleCarouselNavToggle = (e, selectedCarouselNavIndex) => {
         this.stopPropagation(e)
 
         const presentCarouselIndex = this.props.selectedCarouselNavIndex,
@@ -351,7 +349,7 @@ class EventHandler extends Component {
      * DOT *
      *******/
 
-    handleDotSelect(e, dotIndex) {
+    handleDotSelect = (e, dotIndex) => {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
@@ -365,7 +363,7 @@ class EventHandler extends Component {
      * DOTS *
      ********/
 
-    handleDotsSectionToggle(e) {
+    handleDotsSectionToggle = (e) => {
         const dotsToggled = this.props.selectDotsExpand()
         if (dotsToggled) {
             this.stopPropagation(e)
@@ -381,7 +379,7 @@ class EventHandler extends Component {
      * LYRIC *
      *********/
 
-    handleLyricSectionExpand(e) {
+    handleLyricSectionExpand = (e) => {
         const lyricsToggled = this.props.selectLyricExpand()
         if (lyricsToggled) {
             this.stopPropagation(e)
@@ -394,13 +392,13 @@ class EventHandler extends Component {
         return lyricsToggled
     }
 
-    handleLyricWheel(
+    handleLyricWheel = (
         e,
         {
             timeoutDuration,
             setToManualScroll = false
         } = {}
-    ) {
+    ) => {
         let hasRoomToScroll = false
 
         if (setToManualScroll) {
@@ -446,7 +444,7 @@ class EventHandler extends Component {
         }
     }
 
-    handleLyricAutoScroll() {
+    handleLyricAutoScroll = () => {
 
         // Change back to autoScroll.
         this.props.selectManualScroll(false)
@@ -455,7 +453,7 @@ class EventHandler extends Component {
         this.handleVerseBarSelect()
     }
 
-    handleLyricColumnSelect(e) {
+    handleLyricColumnSelect = (e) => {
         const columnSelected = this.props.selectLyricColumn()
         if (columnSelected) {
             this.stopPropagation(e)
@@ -467,11 +465,11 @@ class EventHandler extends Component {
      * LYRICS *
      **********/
 
-    handleLyricVerseSelect(
+    handleLyricVerseSelect = (
         e,
         selectedVerseIndex,
         fromStanzaTab
-    ) {
+    ) => {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
@@ -500,7 +498,11 @@ class EventHandler extends Component {
         return true
     }
 
-    handleLyricAnnotationSelect(e, selectedAnnotationIndex, fromCarousel) {
+    handleLyricAnnotationSelect = (
+        e,
+        selectedAnnotationIndex,
+        fromCarousel
+    ) => {
         /**
          * FIXME: This check is only necessary when clicking an annotation, to
          * ensure that it is not shown as text. Maybe bypass if done through
@@ -558,14 +560,14 @@ class EventHandler extends Component {
      * NAV *
      *******/
 
-    handleNavSongSelect(e, selectedSongIndex) {
+    handleNavSongSelect = (e, selectedSongIndex) => {
         this.stopPropagation(e)
         return this.props.selectSong({
             selectedSongIndex
         })
     }
 
-    handleNavBookSelect(e) {
+    handleNavBookSelect = (e) => {
         this.stopPropagation(e)
         this.props.selectBookColumn()
     }
@@ -574,7 +576,7 @@ class EventHandler extends Component {
      * OVERVIEW *
      ************/
 
-    handleOverviewToggle(e, justHideIfShown) {
+    handleOverviewToggle = (e, justHideIfShown) => {
         /**
          * If from click, alternate between shown and disabled. If from keydown,
          * cycle through all three options.
@@ -599,7 +601,7 @@ class EventHandler extends Component {
      * POPUP *
      *********/
 
-    handlePopupContainerClick(e, closeLeftShelf) {
+    handlePopupContainerClick = (e, closeLeftShelf) => {
         this.stopPropagation(e)
 
         // Carousel annotation was clicked.
@@ -618,7 +620,7 @@ class EventHandler extends Component {
      * SCENE *
      *********/
 
-    handleSceneDirection(e, direction) {
+    handleSceneDirection = (e, direction) => {
         this.stopPropagation(e)
         this.props.selectScene(direction)
         return true
@@ -628,7 +630,7 @@ class EventHandler extends Component {
      * SCORE *
      *********/
 
-    handleScoreToggle(e) {
+    handleScoreToggle = (e) => {
         const scoreToggled = this.props.selectScore()
         if (scoreToggled) {
             this.stopPropagation(e)
@@ -647,7 +649,7 @@ class EventHandler extends Component {
      * TIPS *
      ********/
 
-    handleTipsToggle(e, justHideIfShown) {
+    handleTipsToggle = (e, justHideIfShown) => {
         // Duplicated from handleOverviewToggle.
 
         /**
@@ -675,7 +677,7 @@ class EventHandler extends Component {
      * TITLE *
      *********/
 
-    handleTitleToggle(e) {
+    handleTitleToggle = (e) => {
         const titleToggled = this.props.selectTitle()
         if (titleToggled) {
             this.stopPropagation(e)
@@ -694,7 +696,7 @@ class EventHandler extends Component {
      * TOUCH *
      *********/
 
-    handleSliderTouchBegin(e, sliderElement) {
+    handleSliderTouchBegin = (e, sliderElement) => {
 
         // Can't be handled in logue.
         if (getSongIsLogue(this.props.selectedSongIndex)) {
@@ -712,7 +714,7 @@ class EventHandler extends Component {
         this.props.interactivateVerse()
     }
 
-    handleBodyTouchMove(e) {
+    handleBodyTouchMove = (e) => {
         const clientX = getClientX(e)
 
         if (!isNaN(clientX)) {
@@ -721,7 +723,7 @@ class EventHandler extends Component {
         }
     }
 
-    handleBodyTouchEnd(e) {
+    handleBodyTouchEnd = (e) => {
         e.preventDefault()
         this.stopPropagation(e)
         this.props.touchBodyEnd()
@@ -733,7 +735,7 @@ class EventHandler extends Component {
         this.focusElementForAccess()
     }
 
-    handleBodyClick(e) {
+    handleBodyClick = (e) => {
         this.stopPropagation(e)
 
         // If overview is open when tips is open, leave overview open.
@@ -754,7 +756,7 @@ class EventHandler extends Component {
      *********/
 
     // This is also triggered by toggling on auto scroll.
-    handleVerseBarSelect() {
+    handleVerseBarSelect = () => {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props
         this.props.scrollElementIntoView({
@@ -766,14 +768,14 @@ class EventHandler extends Component {
         this.props.resetVerseBars()
     }
 
-    handleVerseBarWheel(e) {
+    handleVerseBarWheel = (e) => {
         const { deltaY } = e.nativeEvent
         this.myLyricElement.scrollTop += deltaY
 
         this.props.determineVerseBars()
     }
 
-    handleVerseInteractivate(e, verseIndex) {
+    handleVerseInteractivate = (e, verseIndex) => {
         const {
             selectedVerseIndex
         } = this.props
@@ -799,7 +801,7 @@ class EventHandler extends Component {
      * WIKI *
      ********/
 
-    handleWikiToggle(e, selectedWikiIndex) {
+    handleWikiToggle = (e, selectedWikiIndex) => {
         this.stopPropagation(e)
         // If wiki is off and we're toggling it on, then close other popups.
         if (!this.props.selectedWikiIndex) {
@@ -814,7 +816,7 @@ class EventHandler extends Component {
      * HELPERS *
      ***********/
 
-    _closeSections({
+    _closeSections ({
 
         exemptAnnotation,
         forceCarousel,
@@ -894,7 +896,7 @@ class EventHandler extends Component {
         }
     }
 
-    stopPropagation(e) {
+    stopPropagation = (e) => {
         if (e && e.stopPropagation) {
             e.stopPropagation()
 
@@ -907,7 +909,7 @@ class EventHandler extends Component {
         }
     }
 
-    handleScrollUponCarouselRender() {
+    handleScrollUponCarouselRender = () => {
 
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return
@@ -927,7 +929,7 @@ class EventHandler extends Component {
         }
     }
 
-    handleScrollUponLyricRender() {
+    handleScrollUponLyricRender = () => {
 
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return
@@ -960,7 +962,7 @@ class EventHandler extends Component {
         }
     }
 
-    _closeDotsIfOverviewWillShow() {
+    _closeDotsIfOverviewWillShow () {
         /**
          * Helper method to close the dots section when selecting new song and
          * overview is not disabled.
@@ -976,7 +978,7 @@ class EventHandler extends Component {
         }
     }
 
-    focusElementForAccess() {
+    focusElementForAccess = () => {
 
         const {
             isHeightlessLyricColumn,
@@ -1000,22 +1002,22 @@ class EventHandler extends Component {
         }
     }
 
-    setLyricRef(node) {
+    setLyricRef = (node) => {
         this.myLyricElement = node
 
         // Add or remove focus.
         this.focusElementForAccess()
     }
 
-    setRootRef(node) {
+    setRootRef = (node) => {
         this.myRootElement = node
     }
 
-    setScoreRef(node) {
+    setScoreRef = (node) => {
         this.myScoreElement = node
     }
 
-    setWikiRef(node) {
+    setWikiRef = (node) => {
         this.myWikiElement = node
     }
 

@@ -61,12 +61,6 @@ class Theatre extends Component {
         didRenderTimeoutId: ''
     }
 
-    constructor(props) {
-        super(props)
-
-        this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
-    }
-
     // No shouldComponentUpdate necessary.
 
     componentDidUpdate(prevProps) {
@@ -102,7 +96,7 @@ class Theatre extends Component {
         }
     }
 
-    _waitForShowBeforeRender() {
+    _waitForShowBeforeRender = () => {
         this.setState({
             isShown: true
         })

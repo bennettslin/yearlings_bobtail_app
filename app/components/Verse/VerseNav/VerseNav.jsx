@@ -22,12 +22,6 @@ class VerseNav extends Component {
         handleLyricVerseSelect: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleButtonClick = this._handleButtonClick.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         return !getPropsAreShallowEqual({
             props: this.props,
@@ -35,7 +29,7 @@ class VerseNav extends Component {
         })
     }
 
-    _handleButtonClick(e) {
+    _handleButtonClick = (e) => {
         const {
             verseIndex,
             handleLyricVerseSelect

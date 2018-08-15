@@ -63,15 +63,6 @@ class WindowManager extends Component {
         windowResizeTimeoutId: ''
     }
 
-    constructor(props) {
-        super(props)
-
-        this._windowResize = this._windowResize.bind(this)
-
-        this._prepareForWindowResizeRender =
-            this._prepareForWindowResizeRender.bind(this)
-    }
-
     componentDidMount() {
 
         // Then watch for any subsequent window resize.
@@ -98,7 +89,7 @@ class WindowManager extends Component {
         window.onresize = null
     }
 
-    _windowResize(e) {
+    _windowResize = (e) => {
         const { selectedSongIndex } = this.props,
             { deviceIndex,
               windowHeight,
@@ -190,7 +181,7 @@ class WindowManager extends Component {
         return deviceIndex
     }
 
-    _prepareForWindowResizeRender() {
+    _prepareForWindowResizeRender = () => {
         this.props.setIsWindowResizeRenderable(true)
     }
 

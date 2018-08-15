@@ -97,18 +97,6 @@ class Root extends Component {
         keyName: ''
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleClick = this._handleClick.bind(this)
-        this._handleMouseUp = this._handleMouseUp.bind(this)
-        this._resetSliderMousedUp = this._resetSliderMousedUp.bind(this)
-        this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
-        this.handleKeyUpPress = this.handleKeyUpPress.bind(this)
-        this.displayKeyLetter = this.displayKeyLetter.bind(this)
-        this._setKeyHandlerRef = this._setKeyHandlerRef.bind(this)
-    }
-
     componentDidUpdate(prevProps) {
         // If slider touch ended, then tell dom manager.
         if (!this.props.isSliderTouched && prevProps.isSliderTouched) {
@@ -118,13 +106,13 @@ class Root extends Component {
         }
     }
 
-    _resetSliderMousedUp() {
+    _resetSliderMousedUp = () => {
         this.setState({
             sliderMousedUp: false
         })
     }
 
-    _handleMouseUp(e) {
+    _handleMouseUp = (e) => {
         const { handleBodyTouchEnd } = this.props.eventHandlers
         handleBodyTouchEnd(e)
 
@@ -136,7 +124,7 @@ class Root extends Component {
         }
     }
 
-    _handleClick(e) {
+    _handleClick = (e) => {
         const { handleBodyClick } = this.props.eventHandlers
 
         /**
@@ -148,21 +136,21 @@ class Root extends Component {
         }
     }
 
-    handleKeyDownPress(e) {
+    handleKeyDownPress = (e) => {
         this.keyHandler.handleKeyDownPress(e)
     }
 
-    handleKeyUpPress(e) {
+    handleKeyUpPress = (e) => {
         this.keyHandler.handleKeyUpPress(e)
     }
 
-    displayKeyLetter(keyName = '') {
+    displayKeyLetter = (keyName = '') => {
         this.setState({
             keyName
         })
     }
 
-    _setKeyHandlerRef(node) {
+    _setKeyHandlerRef = (node) => {
         this.keyHandler = node
     }
 

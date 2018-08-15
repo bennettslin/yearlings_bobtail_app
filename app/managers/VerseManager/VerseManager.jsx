@@ -41,9 +41,6 @@ class VerseManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-
-        this._determineVerseBars =
-            this._determineVerseBars.bind(this)
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -143,10 +140,10 @@ class VerseManager extends Component {
         })
     }
 
-    _determineVerseBars({
+    _determineVerseBars = ({
         calledFromTimeout = true,
         verseIndex = this.props.selectedVerseIndex
-    } = {}) {
+    } = {}) => {
 
         if (calledFromTimeout) {
             logger.warn('Determining verse bars after timeout.')

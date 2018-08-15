@@ -25,18 +25,11 @@ class Score extends Component {
         setScoreRef: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this.onIframeLoad = this.onIframeLoad.bind(this)
-        this._setIframeRef = this._setIframeRef.bind(this)
-    }
-
-    onIframeLoad() {
+    onIframeLoad = () => {
         this.props.setIsScoreLoaded(true)
     }
 
-    _setIframeRef(node) {
+    _setIframeRef = (node) => {
         this.iframe = node
     }
 

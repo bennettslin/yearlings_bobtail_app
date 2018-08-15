@@ -67,20 +67,6 @@ class KeyHandler extends Component {
         displayKeyLetter: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
-        this.handleKeyUpPress = this.handleKeyUpPress.bind(this)
-        this._routeNavigation = this._routeNavigation.bind(this)
-        this._handleAnnotationNavigation = this._handleAnnotationNavigation.bind(this)
-        this._handleDotsNavigation = this._handleDotsNavigation.bind(this)
-        this._handleNavNavigation = this._handleNavNavigation.bind(this)
-        this._handleLyricNavigation = this._handleLyricNavigation.bind(this)
-        this._handleLetterKey = this._handleLetterKey.bind(this)
-        this._handleEscape = this._handleEscape.bind(this)
-    }
-
     componentDidMount() {
         this.props.setRef(this)
     }
@@ -89,7 +75,7 @@ class KeyHandler extends Component {
         return false
     }
 
-    handleKeyDownPress(e) {
+    handleKeyDownPress = (e) => {
         const { eventHandlers } = this.props
 
         const keyName = getKeyName(e)
@@ -135,7 +121,7 @@ class KeyHandler extends Component {
         })
     }
 
-    handleKeyUpPress(e) {
+    handleKeyUpPress = (e) => {
 
         const keyName = getKeyName(e)
 
@@ -254,7 +240,7 @@ class KeyHandler extends Component {
         })
     }
 
-    _routeNavigation(e, keyName) {
+    _routeNavigation = (e, keyName) => {
 
         const { isHeightlessLyricColumn,
                 isLyricExpanded,
@@ -322,7 +308,7 @@ class KeyHandler extends Component {
                  keyWasRegistered }
     }
 
-    _handleAnnotationNavigation(e, keyName) {
+    _handleAnnotationNavigation = (e, keyName) => {
         const { props } = this,
             { eventHandlers } = props
 
@@ -409,7 +395,7 @@ class KeyHandler extends Component {
     }
 
 
-    _handleDotsNavigation(e, keyName) {
+    _handleDotsNavigation = (e, keyName) => {
         const { selectedAccessIndex,
                 eventHandlers } = this.props
 
@@ -454,7 +440,7 @@ class KeyHandler extends Component {
         return false
     }
 
-    _handleNavNavigation(e, keyName) {
+    _handleNavNavigation = (e, keyName) => {
         const { selectedAccessIndex,
                 interactivatedVerseIndex,
                 eventHandlers } = this.props
@@ -509,7 +495,7 @@ class KeyHandler extends Component {
                  keyWasRegistered }
     }
 
-    _handleLyricNavigation(e, keyName) {
+    _handleLyricNavigation = (e, keyName) => {
         const { props } = this,
             {
                 interactivatedVerseIndex,
@@ -575,7 +561,7 @@ class KeyHandler extends Component {
         return true
     }
 
-    _handleLetterKey(e, keyName) {
+    _handleLetterKey = (e, keyName) => {
         const { eventHandlers } = this.props
 
         let annotationIndexWasAccessed = false,
@@ -650,7 +636,7 @@ class KeyHandler extends Component {
         }
     }
 
-    _handleEscape(e) {
+    _handleEscape = (e) => {
         const { props } = this,
             { eventHandlers } = props
 

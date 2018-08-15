@@ -52,12 +52,6 @@ class AnnotationWormhole extends Component {
         handleAnnotationWormholeSelect: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleWormholeClick = this._handleWormholeClick.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         const shouldComponentUpdate =
             nextProps.canCarouselRender && !getPropsAreShallowEqual({
@@ -72,7 +66,7 @@ class AnnotationWormhole extends Component {
         return shouldComponentUpdate
     }
 
-    _handleWormholeClick(e) {
+    _handleWormholeClick = (e) => {
         const wormholeObject = this._getWormholeObject()
 
         this.props.handleAnnotationWormholeSelect(e, wormholeObject)

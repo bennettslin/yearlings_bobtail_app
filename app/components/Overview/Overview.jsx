@@ -42,12 +42,6 @@ class Overview extends Component {
         handleOverviewToggle: PropTypes.func.isRequired
     }
 
-    constructor(props) {
-        super(props)
-
-        this._handleOverviewToggle = this._handleOverviewToggle.bind(this)
-    }
-
     shouldComponentUpdate(nextProps) {
         return nextProps.canMainRender && !getPropsAreShallowEqual({
             props: this.props,
@@ -55,13 +49,7 @@ class Overview extends Component {
         })
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.canMainRender && !prevProps.canMainRender) {
-    //         logger.warn('Overview rendered.')
-    //     }
-    // }
-
-    _handleOverviewToggle(e) {
+    _handleOverviewToggle = (e) => {
         // Prevent toggle from firing when not shown.
         const { selectedOverviewIndex,
                 handleOverviewToggle } = this.props

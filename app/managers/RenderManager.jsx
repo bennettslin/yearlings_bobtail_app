@@ -37,13 +37,6 @@ class RenderManager extends Component {
         songChangeTimeoutId: ''
     }
 
-    constructor(props) {
-        super(props)
-
-        this._prepareForSongChangeRender =
-            this._prepareForSongChangeRender.bind(this)
-    }
-
     componentDidMount() {
         this.props.setRef(this)
     }
@@ -69,7 +62,7 @@ class RenderManager extends Component {
         }
     }
 
-    _prepareForSongChangeRender(props = this.props) {
+    _prepareForSongChangeRender = (props = this.props) => {
 
         const {
             selectedSongIndex = this.props.selectedSongIndex,
