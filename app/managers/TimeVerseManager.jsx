@@ -21,6 +21,7 @@ class TimeVerseManager extends Component {
     static propTypes = {
         // Through Redux.
         isManualScroll: PropTypes.bool.isRequired,
+        isPlaying: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
 
@@ -45,22 +46,33 @@ class TimeVerseManager extends Component {
         })
     }
 
-    resetTimeOfSelectedVerse() {
-        // Called by audio manager when audio is paused.
-        const { selectedVerseIndex } = this.props
+    componentDidUpdate(prevProps) {
 
-        this.selectVerse({
-            selectedVerseIndex
-        })
+        // If just now paused, reset time to start of selected verse.
+        if (!this.props.isPlaying && prevProps.isPlaying) {
+            const {
+                    selectedSongIndex,
+                    selectedVerseIndex
+                } = this.props,
+
+                selectedTime = getTimeForVerseIndex(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                )
+
+            this.props.updateSelectedStore({
+                selectedTime
+            })
+        }
     }
 
     selectTime(currentTime) {
         // This is only ever called by the player.
 
         const {
-                selectedSongIndex,
-                selectedVerseIndex
-            } = this.props,
+            selectedSongIndex,
+            selectedVerseIndex
+        } = this.props,
 
             nextVerseIndex = getNextVerseIndexIfNeededForCurrentTime(
                 selectedSongIndex,
@@ -77,7 +89,7 @@ class TimeVerseManager extends Component {
                 selectedTime: currentTime
             })
 
-        // Otherwise, select the next verse.
+            // Otherwise, select the next verse.
         } else {
             /**
              * If manual scroll is off, selected verse may go from above
@@ -191,12 +203,14 @@ class TimeVerseManager extends Component {
 
 const mapStateToProps = ({
     isManualScroll,
+    isPlaying,
     selectedStore: {
         selectedSongIndex,
         selectedVerseIndex
     }
 }) => ({
     isManualScroll,
+    isPlaying,
     selectedSongIndex,
     selectedVerseIndex
 })

@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import { setIsPlaying } from 'flux/actions/audio'
 import { setCanPlayThroughs } from 'flux/actions/player'
 
 import Player from './Player'
@@ -57,6 +58,8 @@ class PlayerManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
+        setCanPlayThroughs: PropTypes.func.isRequired,
+        setIsPlaying: PropTypes.func.isRequired,
 
         // From parent.
         selectTime: PropTypes.func.isRequired,
@@ -75,7 +78,10 @@ class PlayerManager extends Component {
         ),
 
         // At any given time, only one player is being newly rendered.
-        nextPlayerToRender: -1
+        nextPlayerToRender: -1,
+
+        // Unique identifier for clearing setInterval.
+        // nextSelectedIntervalId: ''
     }
 
     // Initialise player refs.
@@ -105,30 +111,52 @@ class PlayerManager extends Component {
         if (this.props.canPlayThroughs !== prevProps.canPlayThroughs) {
             this._updateCanPlayThroughsObject()
         }
+    }
 
+    toggleSelectedPlayer(isPlaying) {
         /**
-         * Handle when playing is toggled on or off.
+         * If play is being toggled on, ensure that selected player was able
+         * to successfully play before storing play status in state.
          */
         const {
-                isPlaying,
-                selectedSongIndex
-            } = this.props,
-            {
-                isPlaying: wasPlaying
-            } = prevProps
+            isPlaying: wasPlaying,
+            selectedSongIndex
+        } = this.props,
 
-        // Handle pause.
+            playerRef = this.getPlayerRef(selectedSongIndex)
+
+        // Pausing.
         if (!isPlaying && wasPlaying) {
-            this.getPlayerRef(selectedSongIndex).handleEndPlaying(
+
+            // Play is being toggled off, so set in store right away.
+            this.props.setIsPlaying(false)
+
+            return playerRef.handleEndPlaying(
 
                 // Player manager keeps track of default times of players.
-                this.getCurrentTimeForSongIndex(selectedSongIndex)
+                this.getCurrentTimeForSongIndex()
             )
 
-        // Handle playing toggled on.
+        // Playing.
         } else if (isPlaying && !wasPlaying) {
-            this.getPlayerRef(selectedSongIndex).handleBeginPlaying()
+            return playerRef.handleBeginPlaying(
+
+                /**
+                 * Play is being toggled on, so don't set in store right away.
+                 * Pass callback and wait for successful return.
+                 */
+                this.handlePlaySelectedPlayer
+            )
         }
+    }
+
+    handlePlaySelectedPlayer = (success) => {
+        /**
+         * If currently selected player is being toggled on, set in store that
+         * it was able to play. If selected song was changed, set in store
+         * whether newly selected player was able to play.
+         */
+        this.props.setIsPlaying(success)
     }
 
     updateSelectedPlayer({
@@ -141,6 +169,18 @@ class PlayerManager extends Component {
          * itself, which is needed because it can't tell the difference between
          * manual and automatic verse changes.
          */
+
+        // clearInterval(this.state.nextSelectedIntervalId)
+
+        // const nextSelectedIntervalId = setInterval(
+        //     this._startNextPlayer,
+        //     200
+        // )
+
+        // this.setState({
+        //     nextSelectedIntervalId
+        // })
+
         const {
                 selectedSongIndex,
                 isPlaying
@@ -161,9 +201,15 @@ class PlayerManager extends Component {
             /**
              * If already playing, begin playing newly selected player.
              */
-            this.getPlayerRef(nextSongIndex).handleBeginPlaying()
+            this.getPlayerRef(nextSongIndex).handleBeginPlaying(
+                this.handlePlaySelectedPlayer
+            )
         }
     }
+
+    // _startNextPlayer = () => {
+
+    // }
 
     _updateCanPlayThroughsObject() {
         const {
@@ -228,7 +274,7 @@ class PlayerManager extends Component {
         )
     }
 
-    getCurrentTimeForSongIndex(songIndex) {
+    getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
         const {
             selectedSongIndex,
             selectedVerseIndex
@@ -301,7 +347,8 @@ class PlayerManager extends Component {
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setCanPlayThroughs
+        setCanPlayThroughs,
+        setIsPlaying
     }, dispatch)
 )
 

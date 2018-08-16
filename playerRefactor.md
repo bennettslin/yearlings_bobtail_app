@@ -3,5 +3,11 @@
 * Don't store time. Just get it from verse. (/)
 * Selected time is part of selected store. (/)
 
+* Player start function needs to return true before isPlaying can be set in store. (/)
+
+* Is there still bugginess when switching songs fast while playing? Yes.
+* Selecting song when toggling play on from logue still works?
+
 * Timeout between song selection and player start.
-* Player start function needs to return true before isPlaying can be toggled to true.
+* Fix verse tracker width not resetting, both in currently selected song and when switching songs.
+* Audio options work at all?

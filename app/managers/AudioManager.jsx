@@ -30,7 +30,7 @@ class AudioManager extends Component {
         // From parent.
         setRef: PropTypes.func.isRequired,
         selectSong: PropTypes.func.isRequired,
-        resetTimeOfSelectedVerse: PropTypes.func.isRequired
+        toggleSelectedPlayer: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -47,8 +47,9 @@ class AudioManager extends Component {
     componentDidUpdate(prevProps) {
         const { selectedSongIndex } = this.props
 
-        // If selecting a logue, pause play.
+        // If selecting a logue, turn off play.
         if (selectedSongIndex !== prevProps.selectedSongIndex) {
+
             if (getSongIsLogue(selectedSongIndex)) {
                 this.props.setIsPlaying(false)
             }
@@ -84,12 +85,9 @@ class AudioManager extends Component {
             })
         }
 
-        // Reset time to start of verse if toggling off.
-        if (!isPlaying) {
-            this.props.resetTimeOfSelectedVerse()
-        }
+        // Player manager will decide whether to set isPlaying in store.
+        this.props.toggleSelectedPlayer(isPlaying)
 
-        this.props.setIsPlaying(isPlaying)
         return true
     }
 

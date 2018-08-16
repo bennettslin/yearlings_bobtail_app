@@ -26,7 +26,6 @@ class Player extends Component {
     }
 
     componentDidMount() {
-
         this.props.setPlayerRef(this, this.props.songIndex)
 
         // Tell app that player can now be played without interruption.
@@ -63,7 +62,7 @@ class Player extends Component {
         this.audioPlayer.currentTime = currentTime
     }
 
-    handleBeginPlaying() {
+    handleBeginPlaying(handlePlaySelectedPlayer) {
         // Only called by player manager.
         const { songIndex } = this.props,
             playPromise = this.audioPlayer.play()
@@ -78,23 +77,21 @@ class Player extends Component {
             playPromise.then(() => {
                 logger.info(`Promise for ${songIndex} succeeded.`)
 
-              }).catch(error => {
-                // Automatic playback failed.
-                logger.error(`Promise for ${songIndex} failed: ${error}`)
+                this._setIntervalForTimeUpdate()
+                handlePlaySelectedPlayer(true)
 
-                return false
+              }).catch(error => {
+                // Player failed!
+                logger.error(`Promise for ${songIndex} failed: ${error}`)
+                handlePlaySelectedPlayer(false)
             });
 
         } else {
             logger.info('Browser does not return promise upon play.')
+
+            this._setIntervalForTimeUpdate()
+            handlePlaySelectedPlayer(true)
         }
-
-        /**
-         * If player was not caught by catch statement, then it is playing.
-         */
-        this._setIntervalForTimeUpdate()
-
-        return true
     }
 
     handleEndPlaying(currentTime) {

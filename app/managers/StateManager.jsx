@@ -170,6 +170,10 @@ class StateManager extends Component {
      * PLAYERS *
      ***********/
 
+    toggleSelectedPlayer = (payload) => {
+        return this.playerManager.toggleSelectedPlayer(payload)
+    }
+
     updateSelectedPlayer = (payload) => {
         return this.playerManager.updateSelectedPlayer(payload)
     }
@@ -260,10 +264,6 @@ class StateManager extends Component {
 
     selectVerse = (payload) => {
         return this.timeVerseManager.selectVerse(payload)
-    }
-
-    resetTimeOfSelectedVerse = (payload) => {
-        return this.timeVerseManager.resetTimeOfSelectedVerse(payload)
     }
 
     /********
@@ -439,7 +439,7 @@ class StateManager extends Component {
                 <AudioManager
                     setRef={this._setAudioManagerRef}
                     selectSong={this.selectSong}
-                    resetTimeOfSelectedVerse={this.resetTimeOfSelectedVerse}
+                    toggleSelectedPlayer={this.toggleSelectedPlayer}
                 />
                 <CarouselManager
                     setRef={this._setCarouselManagerRef}
