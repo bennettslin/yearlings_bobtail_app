@@ -9,10 +9,13 @@ import { updateSelectedStore } from 'flux/actions/storage'
 import { VERSE_SCROLL } from 'constants/dom'
 
 import {
-    getNextVerseIndexIfNeededForCurrentTime,
     getSceneIndexForVerseIndex,
     getTimeForVerseIndex
 } from 'helpers/dataHelper'
+
+import {
+    getNextVerseIndexIfNeededForCurrentTime
+} from './timeVerseManagerHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -81,15 +84,15 @@ class TimeVerseManager extends Component {
             )
 
         /**
-         * If value returned by helper method is null, this means we're still
-         * in the same verse, or the song has ended.
+         * If we're still in the same verse, or the song has ended, just update
+         * the current time.
          */
         if (nextVerseIndex === null) {
             this.props.updateSelectedStore({
                 selectedTime: currentTime
             })
 
-            // Otherwise, select the next verse.
+        // Otherwise, select the next verse.
         } else {
             /**
              * If manual scroll is off, selected verse may go from above

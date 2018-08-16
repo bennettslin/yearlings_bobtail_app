@@ -106,43 +106,45 @@ export const getTimeForVerseIndex = (songIndex, verseIndex) => {
     return songVerseConfigs[verseIndex].verseStartTime
 }
 
-export const getNextVerseIndexIfNeededForCurrentTime = (
+export const getTimeRelativeToVerseIndex = (
     songIndex,
     verseIndex,
-    currentTime
+    time
 ) => {
     /**
-     * If the current time is in the next verse, return its index. Otherwise,
-     * return null.
+     * Note that when time is valid, this method returns -1 if time is before
+     * verse, 0 if time is in it, and 1 if time is after verse. If time is
+     * invalid, it returns false.
      */
 
     const songTotalTime = getSongTotalTime(songIndex)
 
-    if (currentTime < 0 || currentTime >= songTotalTime) {
-        return null
+    if (time < 0 || time >= songTotalTime) {
+        return false
     }
 
-    const
-        songVerseConfigs = getSongVerseConfigs(songIndex),
+    const songVerseConfigs = getSongVerseConfigs(songIndex),
         songVersesCount = getSongVersesCount(songIndex),
-        isLastVerse = verseIndex === songVersesCount - 1,
 
-        // Verse end time is either start of next verse, or song total time.
-        verseEndTime =
-            !isLastVerse ?
-                songVerseConfigs[verseIndex + 1].verseStartTime :
-                songTotalTime
-
-    return currentTime >= verseEndTime && !isLastVerse ?
+        // Verse config already knows its own start time.
+        { verseStartTime } = songVerseConfigs[verseIndex],
 
         /**
-         * If current time is past the verse's end time, and it's not the last
-         * verse, return the next verse.
+         * If it's the last verse, the end time is the song's total time.
+         * Otherwise, it's the start time of the next verse.
          */
-        verseIndex + 1 :
+        verseEndTime =
+            verseIndex === songVersesCount - 1 ?
+                songTotalTime :
+                songVerseConfigs[verseIndex + 1].verseStartTime
 
-        // Otherwise, return null.
-        null
+    if (time < verseStartTime) {
+        return -1
+    } else if (time >= verseEndTime) {
+        return 1
+    } else {
+        return 0
+    }
 }
 
 /********
