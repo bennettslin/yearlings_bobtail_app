@@ -106,7 +106,22 @@ export const getTimeForVerseIndex = (songIndex, verseIndex) => {
     return songVerseConfigs[verseIndex].verseStartTime
 }
 
-export const getTimeRelativeToVerseIndex = (
+export const getNextVerseIndex = (
+    songIndex,
+    verseIndex
+) => {
+    const songVersesCount = getSongVersesCount(songIndex)
+
+    /**
+     * If it's not the last verse, return the next verse. Otherwise, return
+     * null.
+     */
+    return verseIndex < songVersesCount - 1 ?
+        verseIndex + 1 :
+        null
+}
+
+export const getIsTimeInVerseIndex = (
     songIndex,
     verseIndex,
     time
@@ -114,17 +129,10 @@ export const getTimeRelativeToVerseIndex = (
     /**
      * Note that when time is valid, this method returns -1 if time is before
      * verse, 0 if time is in it, and 1 if time is after verse. If time is
-     * invalid, it returns false.
+     * invalid, it just returns false.
      */
 
-    const songTotalTime = getSongTotalTime(songIndex)
-
-    if (time < 0 || time >= songTotalTime) {
-        return false
-    }
-
     const songVerseConfigs = getSongVerseConfigs(songIndex),
-        songVersesCount = getSongVersesCount(songIndex),
 
         // Verse config already knows its own start time.
         { verseStartTime } = songVerseConfigs[verseIndex],
@@ -134,17 +142,11 @@ export const getTimeRelativeToVerseIndex = (
          * Otherwise, it's the start time of the next verse.
          */
         verseEndTime =
-            verseIndex === songVersesCount - 1 ?
-                songTotalTime :
-                songVerseConfigs[verseIndex + 1].verseStartTime
+            verseIndex < getSongVersesCount(songIndex) - 1 ?
+                songVerseConfigs[verseIndex + 1].verseStartTime :
+                getSongTotalTime(songIndex)
 
-    if (time < verseStartTime) {
-        return -1
-    } else if (time >= verseEndTime) {
-        return 1
-    } else {
-        return 0
-    }
+    return time >= verseStartTime && time < verseEndTime
 }
 
 /********

@@ -6,6 +6,9 @@
 * Selecting song when toggling play on from logue still works? (/)
 * Separate method to determine time relative to verse. (/)
 
+* Have player manager determine that current time has selected next verse. (/)
+* Have player manager determine that current time returned from player interval is invalid. Current time can only be in selected verse or next verse.
+
 * Ensure that updated time is compatible with verse.
 
 * Is there still bugginess when switching songs fast while playing? Yes.

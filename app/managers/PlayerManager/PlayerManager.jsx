@@ -17,7 +17,9 @@ import {
     getMp3s,
     getSongTotalTime,
     getSongsNotLoguesCount,
-    getTimeForVerseIndex
+    getTimeForVerseIndex,
+    getIsTimeInVerseIndex,
+    getNextVerseIndex
 } from 'helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -62,7 +64,7 @@ class PlayerManager extends Component {
         setIsPlaying: PropTypes.func.isRequired,
 
         // From parent.
-        selectTime: PropTypes.func.isRequired,
+        updateTime: PropTypes.func.isRequired,
         advanceToNextSong: PropTypes.func.isRequired,
         setRef: PropTypes.func.isRequired
     }
@@ -111,6 +113,57 @@ class PlayerManager extends Component {
         if (this.props.canPlayThroughs !== prevProps.canPlayThroughs) {
             this._updateCanPlayThroughsObject()
         }
+    }
+
+    _updateCanPlayThroughsObject() {
+        const {
+                canPlayThroughs,
+                selectedSongIndex
+            } = this.props,
+
+            canPlayThroughsObject = getCanPlayThroughsObject(
+                canPlayThroughs
+            )
+
+        this.setState({
+            canPlayThroughsObject,
+            nextPlayerToRender: getNextPlayerSongIndexToRender(
+                    selectedSongIndex,
+                    canPlayThroughsObject
+                )
+        })
+    }
+
+    _playerShouldRender(playerSongIndex) {
+
+        const {
+            canPlayThroughsObject,
+            nextPlayerToRender
+        } = this.state
+
+        return (
+            // Render player if it has already passed canPlayThrough...
+            canPlayThroughsObject[playerSongIndex] ||
+
+            // Or if it is next in the queue to be rendered.
+            playerSongIndex === nextPlayerToRender
+        )
+    }
+
+    setPlayerCanPlayThrough = (playerSongIndex) => {
+        const {
+                canPlayThroughs
+            } = this.props,
+
+            // Convert to bit number before setting in Redux.
+            newBitNumber = setNewValueInBitNumber({
+                keysCount: getSongsNotLoguesCount(),
+                bitNumber: canPlayThroughs,
+                key: playerSongIndex,
+                value: true
+            })
+
+        this.props.setCanPlayThroughs(newBitNumber)
     }
 
     toggleSelectedPlayer({
@@ -213,69 +266,6 @@ class PlayerManager extends Component {
 
     // }
 
-    _updateCanPlayThroughsObject() {
-        const {
-                canPlayThroughs,
-                selectedSongIndex
-            } = this.props,
-
-            canPlayThroughsObject = getCanPlayThroughsObject(
-                canPlayThroughs
-            )
-
-        this.setState({
-            canPlayThroughsObject,
-            nextPlayerToRender: getNextPlayerSongIndexToRender(
-                    selectedSongIndex,
-                    canPlayThroughsObject
-                )
-        })
-    }
-
-    _playerShouldRender(playerSongIndex) {
-
-        const {
-            canPlayThroughsObject,
-            nextPlayerToRender
-        } = this.state
-
-        return (
-            // Render player if it has already passed canPlayThrough...
-            canPlayThroughsObject[playerSongIndex] ||
-
-            // Or if it is next in the queue to be rendered.
-            playerSongIndex === nextPlayerToRender
-        )
-    }
-
-    setPlayerCanPlayThrough = (playerSongIndex) => {
-        const {
-                canPlayThroughs
-            } = this.props,
-
-            // Convert to bit number before setting in Redux.
-            newBitNumber = setNewValueInBitNumber({
-                keysCount: getSongsNotLoguesCount(),
-                bitNumber: canPlayThroughs,
-                key: playerSongIndex,
-                value: true
-            })
-
-        this.props.setCanPlayThroughs(newBitNumber)
-    }
-
-    getPlayerRef(songIndex) {
-        return this.players[songIndex] || LOGUE_DUMMY_PLAYER
-    }
-
-    setPlayerRef = (node, songIndex) => {
-        this.players[songIndex] = node
-
-        this.players[songIndex].setCurrentTime(
-            this.getCurrentTimeForSongIndex(songIndex)
-        )
-    }
-
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
         const {
             selectedSongIndex,
@@ -293,12 +283,52 @@ class PlayerManager extends Component {
             ) : 0
     }
 
-    selectTime = (currentTime) => {
-        this.props.selectTime(currentTime)
+    updateTimeFromPlayer = (currentTime) => {
+        const {
+                selectedSongIndex,
+                selectedVerseIndex
+            } = this.props,
+
+            nextVerseIndex = getNextVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            ),
+
+            /**
+             * Check if there is a next verse, and if current time is in it.
+             */
+            isTimeInNextVerse = nextVerseIndex && getIsTimeInVerseIndex(
+                selectedSongIndex,
+                nextVerseIndex,
+                currentTime
+            )
+
+        console.error('update time from player', isTimeInNextVerse)
+
+        // TODO: Also check that it's in the current verse!
+
+        this.props.updateTime({
+            currentTime,
+            ...isTimeInNextVerse && {
+                nextVerseIndex
+            }
+        })
     }
 
     advanceToNextSong = () => {
         this.props.advanceToNextSong()
+    }
+
+    getPlayerRef(songIndex) {
+        return this.players[songIndex] || LOGUE_DUMMY_PLAYER
+    }
+
+    setPlayerRef = (node, songIndex) => {
+        this.players[songIndex] = node
+
+        this.players[songIndex].setCurrentTime(
+            this.getCurrentTimeForSongIndex(songIndex)
+        )
     }
 
     render() {
@@ -332,7 +362,7 @@ class PlayerManager extends Component {
                                 songIndex,
                                 totalTime,
                                 isSelected: songIndex === selectedSongIndex,
-                                updateCurrentTime: this.selectTime,
+                                updateCurrentTime: this.updateTimeFromPlayer,
                                 updatePlayerEnded: this.advanceToNextSong,
                                 setPlayerRef: this.setPlayerRef,
                                 setPlayerCanPlayThrough:

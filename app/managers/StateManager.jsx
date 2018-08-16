@@ -258,8 +258,8 @@ class StateManager extends Component {
      * TIME/VERSE *
      **************/
 
-    selectTime = (payload) => {
-        return this.timeVerseManager.selectTime(payload)
+    updateTime = (payload) => {
+        return this.timeVerseManager.updateTime(payload)
     }
 
     selectVerse = (payload) => {
@@ -471,7 +471,7 @@ class StateManager extends Component {
                 />
                 <PlayerManager
                     setRef={this._setPlayerManagerRef}
-                    selectTime={this.selectTime}
+                    updateTime={this.updateTime}
                     advanceToNextSong={this.advanceToNextSong}
                 />
                 <RenderManager

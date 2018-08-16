@@ -13,10 +13,6 @@ import {
     getTimeForVerseIndex
 } from 'helpers/dataHelper'
 
-import {
-    getNextVerseIndexIfNeededForCurrentTime
-} from './timeVerseManagerHelper'
-
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class TimeVerseManager extends Component {
@@ -69,25 +65,17 @@ class TimeVerseManager extends Component {
         }
     }
 
-    selectTime(currentTime) {
+    updateTime({
+        currentTime,
+        nextVerseIndex
+    }) {
         // This is only ever called by the player.
-
-        const {
-            selectedSongIndex,
-            selectedVerseIndex
-        } = this.props,
-
-            nextVerseIndex = getNextVerseIndexIfNeededForCurrentTime(
-                selectedSongIndex,
-                selectedVerseIndex,
-                currentTime
-            )
 
         /**
          * If we're still in the same verse, or the song has ended, just update
          * the current time.
          */
-        if (nextVerseIndex === null) {
+        if (!nextVerseIndex) {
             this.props.updateSelectedStore({
                 selectedTime: currentTime
             })
