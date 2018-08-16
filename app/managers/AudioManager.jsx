@@ -78,15 +78,24 @@ class AudioManager extends Component {
             return false
         }
 
+        const isPlayingFromLogue = isLogue && isPlaying
+
         // Select first song if play button in logue is toggled on.
-        if (isLogue && isPlaying) {
+        if (isPlayingFromLogue) {
             this.props.selectSong({
                 selectedSongIndex: 1
             })
         }
 
         // Player manager will decide whether to set isPlaying in store.
-        this.props.toggleSelectedPlayer(isPlaying)
+        this.props.toggleSelectedPlayer({
+            isPlaying,
+
+            // Tell player to play the first song if from logue.
+            ...isPlayingFromLogue && {
+                selectedSongIndex: 1
+            }
+        })
 
         return true
     }

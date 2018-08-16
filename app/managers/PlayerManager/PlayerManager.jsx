@@ -113,15 +113,17 @@ class PlayerManager extends Component {
         }
     }
 
-    toggleSelectedPlayer(isPlaying) {
+    toggleSelectedPlayer({
+        isPlaying,
+        selectedSongIndex = this.props.selectedSongIndex
+    }) {
         /**
          * If play is being toggled on, ensure that selected player was able
          * to successfully play before storing play status in state.
          */
         const {
-            isPlaying: wasPlaying,
-            selectedSongIndex
-        } = this.props,
+                isPlaying: wasPlaying
+            } = this.props,
 
             playerRef = this.getPlayerRef(selectedSongIndex)
 
