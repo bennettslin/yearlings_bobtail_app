@@ -7,9 +7,10 @@
 * Separate method to determine time relative to verse. (/)
 
 * Have player manager determine that current time has selected next verse. (/)
-* Have player manager determine that current time returned from player interval is invalid. Current time can only be in selected verse or next verse.
+* Ensure that updated time is compatible with verse. Time can only be in selected verse or next verse. (/)
 
-* Ensure that updated time is compatible with verse.
+* Have player manager determine that current time has selected new song. Must check that player successfully played before passing to store. Strip out logic where player was doing that.
+* Have player manager determine that current time returned from player interval is completely invalid. Handle by clearing player.
 
 * Is there still bugginess when switching songs fast while playing? Yes.
 

@@ -15,10 +15,9 @@ import { setNewValueInBitNumber } from 'helpers/bitHelper'
 
 import {
     getMp3s,
-    getSongTotalTime,
     getSongsNotLoguesCount,
     getTimeForVerseIndex,
-    getIsTimeInVerseIndex,
+    getTimeRelativeToVerseIndex,
     getNextVerseIndex
 } from 'helpers/dataHelper'
 
@@ -135,7 +134,6 @@ class PlayerManager extends Component {
     }
 
     _playerShouldRender(playerSongIndex) {
-
         const {
             canPlayThroughsObject,
             nextPlayerToRender
@@ -246,6 +244,8 @@ class PlayerManager extends Component {
                 nextVerseIndex
             )
 
+        console.error(selectedSongIndex, isPlaying, nextCurrentTime)
+
         // Update selected player's current time.
         this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
 
@@ -283,39 +283,74 @@ class PlayerManager extends Component {
             ) : 0
     }
 
-    updateTimeFromPlayer = (currentTime) => {
+    updatePlayerTime = (currentTime) => {
         const {
                 selectedSongIndex,
                 selectedVerseIndex
             } = this.props,
 
+            timeRelativeToSelectedVerse = getTimeRelativeToVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex,
+                currentTime
+            ),
+
+            isTimeInSelectedVerse = timeRelativeToSelectedVerse === 0
+
+        let nextVerseIndex,
+            isTimeInNextVerse = false
+
+        /**
+         * This value will be 1 if time is after selected verse. In which case,
+         * we will check if it's in the next verse.
+         */
+        if (timeRelativeToSelectedVerse === 1) {
+
             nextVerseIndex = getNextVerseIndex(
                 selectedSongIndex,
                 selectedVerseIndex
-            ),
+            )
 
-            /**
-             * Check if there is a next verse, and if current time is in it.
-             */
-            isTimeInNextVerse = nextVerseIndex && getIsTimeInVerseIndex(
+            isTimeInNextVerse = nextVerseIndex && getTimeRelativeToVerseIndex(
                 selectedSongIndex,
                 nextVerseIndex,
                 currentTime
-            )
+            ) === 0
+        }
 
-        console.error('update time from player', isTimeInNextVerse)
+        /**
+         * If current time is in selected or next verse, update selected time.
+         * Also select next verse if needed.
+         */
+        if (isTimeInSelectedVerse || isTimeInNextVerse) {
+            this.props.updateTime({
+                currentTime,
+                ...isTimeInNextVerse && {
+                    nextVerseIndex
+                }
+            })
 
-        // TODO: Also check that it's in the current verse!
+        /**
+         * If time is after current verse but there is no next verse, then we
+         * have reached the end of the song.
+         */
+        } else if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
+            console.error('reached end of song!')
+            // TODO: Handle new song. Make sure this is correct.
+            this.updatePlayerEnded()
 
-        this.props.updateTime({
-            currentTime,
-            ...isTimeInNextVerse && {
-                nextVerseIndex
-            }
-        })
+        /**
+         * Something weird has happened, so we'll reset the player.
+         */
+        } else {
+            // TODO: Handle bug.
+        }
     }
 
-    advanceToNextSong = () => {
+    updatePlayerEnded = (songIndex) => {
+        console.error('updatePlayerEnded', songIndex)
+        // TODO: Ensure that this doesn't get called twice for the same player!
+
         this.props.advanceToNextSong()
     }
 
@@ -336,10 +371,11 @@ class PlayerManager extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canPlayThroughs,
-                selectedSongIndex,
                 setCanPlayThroughs,
                 dispatch,
                 /* eslint-enable no-unused-vars */
+
+                selectedSongIndex
             } = this.props,
 
             mp3s = getMp3s()
@@ -350,9 +386,7 @@ class PlayerManager extends Component {
                 'displayNoneContainer'
             )}>
                 {mp3s.map((mp3, index) => {
-                    const
-                        songIndex = index + 1,
-                        totalTime = getSongTotalTime(songIndex)
+                    const songIndex = index + 1
 
                     return this._playerShouldRender(songIndex) && (
                         <Player
@@ -360,10 +394,9 @@ class PlayerManager extends Component {
                             {...{
                                 mp3,
                                 songIndex,
-                                totalTime,
                                 isSelected: songIndex === selectedSongIndex,
-                                updateCurrentTime: this.updateTimeFromPlayer,
-                                updatePlayerEnded: this.advanceToNextSong,
+                                updateCurrentTime: this.updatePlayerTime,
+                                updateEnded: this.updatePlayerEnded,
                                 setPlayerRef: this.setPlayerRef,
                                 setPlayerCanPlayThrough:
                                     this.setPlayerCanPlayThrough

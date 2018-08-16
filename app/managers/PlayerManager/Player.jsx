@@ -13,9 +13,8 @@ class Player extends Component {
         mp3: PropTypes.string.isRequired,
         songIndex: PropTypes.number.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        totalTime: PropTypes.number.isRequired,
         updateCurrentTime: PropTypes.func.isRequired,
-        updatePlayerEnded: PropTypes.func.isRequired,
+        updateEnded: PropTypes.func.isRequired,
         setPlayerCanPlayThrough: PropTypes.func.isRequired,
         setPlayerRef: PropTypes.func.isRequired
     }
@@ -55,6 +54,10 @@ class Player extends Component {
         if (!this.props.isSelected) {
             this.handleEndPlaying()
         }
+    }
+
+    _handleSuspendEvent = () => {
+        this.props.setPlayerCanPlayThrough(this.props.songIndex)
     }
 
     setCurrentTime(currentTime = 0) {
@@ -109,9 +112,7 @@ class Player extends Component {
         const {
                 currentTime,
                 paused
-            } = this.audioPlayer,
-
-            { totalTime } = this.props
+            } = this.audioPlayer
 
         console.error(this.props.songIndex, 'is telling app current time!')
 
@@ -119,38 +120,16 @@ class Player extends Component {
             // Once the player is paused, prevent further time updates.
             this._clearInterval()
 
-        // If there's time remaining, tell app the current time.
-        } else if (currentTime < totalTime) {
-            this.props.updateCurrentTime(currentTime)
-
-            // Otherwise, tell app to select next song.
         } else {
-            this._handleEndedEvent()
+            this.props.updateCurrentTime(currentTime)
         }
-    }
-
-    _handleSuspendEvent = () => {
-        const {
-            songIndex
-        } = this.props
-
-        this.props.setPlayerCanPlayThrough(songIndex)
     }
 
     _handleEndedEvent = () => {
         logger.error(`Player for ${this.props.songIndex} ended.`)
 
-        const { intervalId } = this.state
-
-        /**
-         * Ensure that this only gets called once, either by the current time
-         * exceeding the total time, or by the audio element firing an event.
-         */
-        if (intervalId) {
-            this.props.updatePlayerEnded()
-
-            this._clearInterval()
-        }
+        this._clearInterval()
+        this.props.updateEnded(this.props.songIndex)
     }
 
     _setIntervalForTimeUpdate() {

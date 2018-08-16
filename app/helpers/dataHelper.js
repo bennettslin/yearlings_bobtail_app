@@ -121,15 +121,14 @@ export const getNextVerseIndex = (
         null
 }
 
-export const getIsTimeInVerseIndex = (
+export const getTimeRelativeToVerseIndex = (
     songIndex,
     verseIndex,
     time
 ) => {
     /**
      * Note that when time is valid, this method returns -1 if time is before
-     * verse, 0 if time is in it, and 1 if time is after verse. If time is
-     * invalid, it just returns false.
+     * verse, 1 if time is after it, and 0 if time is in it.
      */
 
     const songVerseConfigs = getSongVerseConfigs(songIndex),
@@ -146,7 +145,15 @@ export const getIsTimeInVerseIndex = (
                 songVerseConfigs[verseIndex + 1].verseStartTime :
                 getSongTotalTime(songIndex)
 
-    return time >= verseStartTime && time < verseEndTime
+    if (time < verseStartTime) {
+        return -1
+
+    } else if (time >= verseEndTime) {
+        return 1
+
+    } else {
+        return 0
+    }
 }
 
 /********
