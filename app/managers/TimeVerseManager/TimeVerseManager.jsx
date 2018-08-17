@@ -83,7 +83,7 @@ class TimeVerseManager extends Component {
         // Otherwise, select the next verse.
         } else {
             /**
-             * If manual scroll is off, selected verse may go from above
+             * If manual scroll is on, selected verse may go from above
              * window view, to in it, to below it. So, determine verse bars.
              */
             if (this.props.isManualScroll) {
@@ -151,7 +151,7 @@ class TimeVerseManager extends Component {
             scrollLog ||
             (
                 !this.props.isManualScroll &&
-                selectedVerseIndex !== this.props.selectedVerseIndex
+                isPlayerAdvancing
             )
         ) {
             this.props.scrollElementIntoView({

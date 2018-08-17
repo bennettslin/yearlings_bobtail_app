@@ -1,19 +1,12 @@
 module.exports = [
-
-    {
-        taskName: `Updating verse from player doesn't always determine verse bars.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     {
         taskName: `Fix player bugginess.`,
-        workedHours: 12,
-        neededHours: 12
+        workedHours: 14,
+        neededHours: 14
     },
 
     {
-        taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown.`,
+        taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown. Odd and even?`,
         workedHours: 0,
         neededHours: 2
     },
@@ -35,6 +28,12 @@ module.exports = [
      */
     {
         taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active? Nope...`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Sometimes nav buttons get in state where they only select one song at a time?!`,
         workedHours: 0,
         neededHours: 1
     },

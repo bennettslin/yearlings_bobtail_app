@@ -3738,4 +3738,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Updating verse from player doesn't always determine verse bars.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
