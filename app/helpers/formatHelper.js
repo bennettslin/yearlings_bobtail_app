@@ -14,7 +14,7 @@ export const getFormattedTime = (time, withJiffy) => {
 
     // If including jiffy, return an object.
     if (withJiffy) {
-        const jiffy = Math.floor((time * 10) % 6)
+        const jiffy = Math.floor((time * 10) % 10)
 
         return {
             base: baseTime,

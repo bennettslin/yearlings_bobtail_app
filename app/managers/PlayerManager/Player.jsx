@@ -99,16 +99,24 @@ class Player extends Component {
     }
 
     handleEndPlaying(currentTime) {
-        logger.info(`Player ${this.props.songIndex} ended playing.`)
-
-        // Only called by player manager.
-        this.audioPlayer.pause()
+        // Can be called by player manager.
 
         /**
-         * If still selected, reset time to selected verse. Otherwise, reset
-         * time to start of song.
+         * This gets called when the player is unselected, even if it was never
+         * selected to begin with because the timeout was cleared too soon. So
+         * make sure the player is actually playing before pausing it.
          */
-        this.setCurrentTime(currentTime)
+        if (!this.audioPlayer.paused) {
+            logger.info(`Player ${this.props.songIndex} ended playing.`)
+
+            this.audioPlayer.pause()
+
+            /**
+             * If still selected, reset time to selected verse. Otherwise, reset
+             * time to start of song.
+             */
+            this.setCurrentTime(currentTime)
+        }
     }
 
     _tellAppCurrentTime = () => {
@@ -116,8 +124,6 @@ class Player extends Component {
                 currentTime,
                 paused
             } = this.audioPlayer
-
-        console.error(this.props.songIndex, 'is telling app current time:', currentTime)
 
         if (paused) {
             // Once the player is paused, prevent further time updates.
@@ -136,6 +142,8 @@ class Player extends Component {
     }
 
     _setIntervalForTimeUpdate() {
+        this._clearInterval()
+
         const intervalId = setInterval(
                 this._tellAppCurrentTime,
                 LISTEN_INTERVAL

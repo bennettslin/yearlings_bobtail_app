@@ -82,7 +82,7 @@ class PlayerManager extends Component {
         nextPlayerToRender: -1,
 
         // Unique identifier for clearing setInterval.
-        // nextSelectedIntervalId: ''
+        nextSelectedTimeoutId: ''
     }
 
     // Initialise player refs.
@@ -217,27 +217,33 @@ class PlayerManager extends Component {
         selectedVerseIndex: nextVerseIndex
     }) {
         /**
-         * If user manually changes song or verse, update the player's current
-         * time. This allows the player not to have to watch for these changes
-         * itself, which is needed because it can't tell the difference between
-         * manual and automatic verse changes.
+         * If user manually changes song or verse, player manager will update
+         * the player. This allows the player not to have to watch for these
+         * changes itself, which is needed because it can't tell the difference
+         * between manual and automatic verse changes.
          */
 
-        // clearInterval(this.state.nextSelectedIntervalId)
+        clearTimeout(this.state.nextSelectedTimeoutId)
 
-        // const nextSelectedIntervalId = setInterval(
-        //     this._startNextPlayer,
-        //     200
-        // )
+        const nextSelectedTimeoutId = setTimeout(
+            this._handleSelectPlayer,
+            200
+        )
 
-        // this.setState({
-        //     nextSelectedIntervalId
-        // })
+        this.setState({
+            nextSelectedTimeoutId,
 
+            // Store next song and verse in component state for callback.
+            nextSongIndex,
+            nextVerseIndex
+        })
+    }
+
+    _handleSelectPlayer = () => {
         const {
-                selectedSongIndex,
-                isPlaying
-            } = this.props,
+                nextSongIndex,
+                nextVerseIndex
+            } = this.state,
 
             nextCurrentTime = getTimeForVerseIndex(
                 nextSongIndex,
@@ -247,10 +253,7 @@ class PlayerManager extends Component {
         // Update selected player's current time.
         this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
 
-        if (
-            selectedSongIndex !== nextSongIndex &&
-            isPlaying
-        ) {
+        if (this.props.isPlaying) {
             /**
              * If already playing, begin playing newly selected player.
              */
@@ -259,10 +262,6 @@ class PlayerManager extends Component {
             )
         }
     }
-
-    // _startNextPlayer = () => {
-
-    // }
 
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
         const {
