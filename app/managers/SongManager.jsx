@@ -43,7 +43,7 @@ class SongManager extends Component {
         })
     }
 
-    advanceToNextSong() {
+    handleSongEnd() {
         /**
          * When selecting next song through audio player, reset annotation and
          * verse, and scroll element into view, but do not access nav section.
@@ -95,6 +95,21 @@ class SongManager extends Component {
             }
         }
 
+        /**
+         * This check needs to be made first, before selected song is updated
+         * in Redux.
+         */
+        if (selectedSongIndex !== this.props.selectedSongIndex) {
+            /**
+             * This is the only place where selected player will be updated
+             * based on a new song.
+             */
+            props.updateSelectedPlayer({
+                selectedSongIndex,
+                selectedVerseIndex
+            })
+        }
+
         props.selectAnnotation({
             selectedSongIndex,
             selectedAnnotationIndex,
@@ -119,17 +134,6 @@ class SongManager extends Component {
                 selectedVerseIndex
             )
         })
-
-        if (selectedSongIndex !== this.props.selectedSongIndex) {
-            /**
-             * This is the only place where selected player will be updated
-             * based on a new song.
-             */
-            props.updateSelectedPlayer({
-                selectedSongIndex,
-                selectedVerseIndex
-            })
-        }
 
         return true
     }

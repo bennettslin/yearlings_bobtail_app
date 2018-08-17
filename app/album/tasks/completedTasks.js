@@ -3728,4 +3728,14 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Overview logue covers nav buttons in mobile.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Routing when hitting path different from stored values doesn't work?`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

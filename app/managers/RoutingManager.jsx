@@ -50,10 +50,9 @@ class RoutingManager extends Component {
         // If route gives us its own song index, set in store.
         if (!isNaN(routingSongIndex)) {
 
-            const
-                selectedSongIndex = routingSongIndex
-                selectedVerseIndex = routingVerseIndex
-                selectedAnnotationIndex = routingAnnotationIndex
+            selectedSongIndex = routingSongIndex
+            selectedVerseIndex = routingVerseIndex
+            selectedAnnotationIndex = routingAnnotationIndex
 
             props.updateSelectedStore({
                 selectedSongIndex,

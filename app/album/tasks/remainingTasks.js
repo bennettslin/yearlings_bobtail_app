@@ -1,9 +1,15 @@
 module.exports = [
 
     {
+        taskName: `Updating verse from player doesn't always determine verse bars.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Fix player bugginess.`,
-        workedHours: 6,
-        neededHours: 10
+        workedHours: 12,
+        neededHours: 12
     },
 
     {

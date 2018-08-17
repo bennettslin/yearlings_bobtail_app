@@ -9,12 +9,12 @@
 * Have player manager determine that current time has selected next verse. (/)
 * Ensure that updated time is compatible with verse. Time can only be in selected verse or next verse. (/)
 
-* Have player manager determine that current time has selected new song. Must check that player successfully played before passing to store. Strip out logic where player was doing that.
-* Have player manager determine that current time returned from player interval is completely invalid. Handle by clearing player.
+* Only player manager or player will end player, not both. This ensures that logic to select new song will only get called once. (/)
 
-* Is there still bugginess when switching songs fast while playing? Yes.
+* Have player manager determine that current time returned from player interval is completely invalid. Handle by clearing player. (/)
 
-* Timeout between song selection and player start.
+* Timeout between song selection and player start. Ensure there is no bugginess when switching songs fast while playing.
+
 * Fix verse tracker width not resetting, both in currently selected song and when switching songs.
 * Audio options work at all?
 

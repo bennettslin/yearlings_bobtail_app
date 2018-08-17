@@ -52,6 +52,7 @@ class Player extends Component {
     componentDidUpdate() {
         // Tell recently unselected player to stop playing.
         if (!this.props.isSelected) {
+            logger.info(`Player ${this.props.songIndex} was unselected.`)
             this.handleEndPlaying()
         }
     }
@@ -98,6 +99,8 @@ class Player extends Component {
     }
 
     handleEndPlaying(currentTime) {
+        logger.info(`Player ${this.props.songIndex} ended playing.`)
+
         // Only called by player manager.
         this.audioPlayer.pause()
 
@@ -114,7 +117,7 @@ class Player extends Component {
                 paused
             } = this.audioPlayer
 
-        console.error(this.props.songIndex, 'is telling app current time!')
+        console.error(this.props.songIndex, 'is telling app current time:', currentTime)
 
         if (paused) {
             // Once the player is paused, prevent further time updates.
@@ -126,10 +129,10 @@ class Player extends Component {
     }
 
     _handleEndedEvent = () => {
-        logger.error(`Player for ${this.props.songIndex} ended.`)
+        logger.info(`Player for ${this.props.songIndex} ended itself.`)
 
         this._clearInterval()
-        this.props.updateEnded(this.props.songIndex)
+        this.props.updateEnded()
     }
 
     _setIntervalForTimeUpdate() {
@@ -157,7 +160,6 @@ class Player extends Component {
             this.props.isSelected || !onlyIfSelected
 
         if (showDebugStatements) {
-
             this.audioPlayer.addEventListener('ended', () => {
                 logger.error('ended', this.props.songIndex);
             })
@@ -173,41 +175,33 @@ class Player extends Component {
             this.audioPlayer.addEventListener('timeupdate', () => {
                 logger.error('timeupdate', this.props.songIndex);
             })
-
             // Determine which times ranges have been buffered.
             this.audioPlayer.addEventListener('progress', () => {
                 logger.error('progress', this.props.songIndex);
             })
-
             // Seek operation has completed.
             this.audioPlayer.addEventListener('seeked', () => {
                 logger.error('seeked', this.props.songIndex);
             })
-
             // Seek operation has begun.
             this.audioPlayer.addEventListener('seeking', () => {
                 logger.error('seeking', this.props.songIndex);
             })
-
             // Data is not forthcoming.
             this.audioPlayer.addEventListener('stalled', () => {
                 logger.error('stalled', this.props.songIndex);
             })
-
             // Download has completed.
             this.audioPlayer.addEventListener('suspend', () => {
                 logger.error('suspend', this.props.songIndex);
             })
-
             // Enough data is available that the media can be played for now.
             this.audioPlayer.addEventListener('canplay', () => {
                 logger.error('canplay', this.props.songIndex);
             })
-
             this.audioPlayer.addEventListener('canplaythrough', () => {
                 logger.error('canplaythrough', this.props.songIndex);
             })
-
             this.audioPlayer.addEventListener('waiting', () => {
                 logger.error('waiting', this.props.songIndex);
             })

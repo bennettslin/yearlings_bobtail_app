@@ -246,8 +246,8 @@ class StateManager extends Component {
      * SONG *
      ********/
 
-    advanceToNextSong = () => {
-        return this.songManager.advanceToNextSong()
+    handleSongEnd = () => {
+        return this.songManager.handleSongEnd()
     }
 
     selectSong = (payload) => {
@@ -472,7 +472,7 @@ class StateManager extends Component {
                 <PlayerManager
                     setRef={this._setPlayerManagerRef}
                     updateTime={this.updateTime}
-                    advanceToNextSong={this.advanceToNextSong}
+                    handleSongEnd={this.handleSongEnd}
                 />
                 <RenderManager
                     setRef={this._setRenderManagerRef}

@@ -64,7 +64,7 @@ class PlayerManager extends Component {
 
         // From parent.
         updateTime: PropTypes.func.isRequired,
-        advanceToNextSong: PropTypes.func.isRequired,
+        handleSongEnd: PropTypes.func.isRequired,
         setRef: PropTypes.func.isRequired
     }
 
@@ -244,8 +244,6 @@ class PlayerManager extends Component {
                 nextVerseIndex
             )
 
-        console.error(selectedSongIndex, isPlaying, nextCurrentTime)
-
         // Update selected player's current time.
         this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
 
@@ -335,23 +333,26 @@ class PlayerManager extends Component {
          * have reached the end of the song.
          */
         } else if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
-            console.error('reached end of song!')
-            // TODO: Handle new song. Make sure this is correct.
+            logger.info('Updated time will end player.')
+
+            /**
+             * Call this even though it will be called again later, to ensure
+             * that the player will not end itself in the interim.
+             */
+            this.getPlayerRef(selectedSongIndex).handleEndPlaying()
             this.updatePlayerEnded()
 
         /**
          * Something weird has happened, so we'll reset the player.
          */
         } else {
-            // TODO: Handle bug.
+            logger.error('Time and verse are hopelessly out of sync!')
+            this.getPlayerRef(selectedSongIndex).handleEndPlaying()
         }
     }
 
-    updatePlayerEnded = (songIndex) => {
-        console.error('updatePlayerEnded', songIndex)
-        // TODO: Ensure that this doesn't get called twice for the same player!
-
-        this.props.advanceToNextSong()
+    updatePlayerEnded = () => {
+        this.props.handleSongEnd()
     }
 
     getPlayerRef(songIndex) {
