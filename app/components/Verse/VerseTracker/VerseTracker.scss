@@ -1,5 +1,16 @@
 .VerseTracker {
 
+    .RM__isPaused
+    &,
+    .RM__cannotTrackVerse
+    & {
+        /**
+         * Ensure that verse tracker always resets between toggling play and
+         * selecting songs.
+         */
+        transition: none !important;
+    }
+
     .RM__canTrackVerse.RM__isPlaying
     &.VerseTracker__selected {
 

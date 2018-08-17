@@ -13,9 +13,10 @@
 
 * Have player manager determine that current time returned from player interval is completely invalid. Handle by clearing player. (/)
 
+* Fix verse tracker width not resetting, both in currently selected song and when switching songs. (/) (Still doesn't work in verse bar, though.)
+
 * Timeout between song selection and player start. Ensure there is no bugginess when switching songs fast while playing.
 
-* Fix verse tracker width not resetting, both in currently selected song and when switching songs.
 * Audio options work at all?
 
 * Player failure modal.

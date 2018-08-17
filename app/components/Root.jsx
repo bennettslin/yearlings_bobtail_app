@@ -256,8 +256,8 @@ class Root extends Component {
                      * which is after when the slider and lyric can render,
                      * which is where the verse trackers are.
                      */
-                    canCarouselRender &&
-                        'RM__canTrackVerse',
+                    canCarouselRender ?
+                        'RM__canTrackVerse' : 'RM__cannotTrackVerse',
 
                     `RM__${deviceClassName}`,
                     isDesktop ?
