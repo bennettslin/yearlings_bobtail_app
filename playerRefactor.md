@@ -17,6 +17,10 @@
 
 * Timeout between song selection and player start. Ensure there is no bugginess when switching songs fast while playing. (/)
 
+* Bug: Selecting new verse makes time and verse index out of sync.
+
+* Should not be able to reselect verse in slider.
+
 * Audio options work at all?
 
 * Player failure modal?

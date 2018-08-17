@@ -1,20 +1,14 @@
 module.exports = [
     {
         taskName: `Fix player bugginess.`,
-        workedHours: 14,
-        neededHours: 14
+        workedHours: 16,
+        neededHours: 20
     },
 
     {
         taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown. Odd and even?`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Advancing to next song when playing doesn't stay playing`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     {

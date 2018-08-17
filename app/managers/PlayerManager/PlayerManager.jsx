@@ -345,7 +345,7 @@ class PlayerManager extends Component {
          * Something weird has happened, so we'll reset the player.
          */
         } else {
-            logger.error('Time and verse are hopelessly out of sync!')
+            logger.error(`Time ${currentTime} and verse index ${selectedVerseIndex} are not in sync.`)
             this.getPlayerRef(selectedSongIndex).handleEndPlaying()
         }
     }
