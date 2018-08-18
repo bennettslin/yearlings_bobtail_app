@@ -20,7 +20,7 @@ const audioPropTypes = {
     isTwoRowMenu: PropTypes.bool.isRequired,
 
     // From parent.
-    sliderDidRender: PropTypes.func.isRequired,
+    verseDidRender: PropTypes.func.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
     audioButtonsHandlers: PropTypes.object.isRequired,
     titleToggleHandlers: PropTypes.object.isRequired
@@ -34,7 +34,7 @@ Audio = ({
 
     isTwoRowMenu,
 
-    sliderDidRender,
+    verseDidRender,
     audioBannerHandlers,
     audioButtonsHandlers,
     titleToggleHandlers
@@ -55,7 +55,7 @@ Audio = ({
             )}
 
             <AudioBanner {...audioBannerHandlers}
-                sliderDidRender={sliderDidRender}
+                verseDidRender={verseDidRender}
             />
             <AudioButtons {...audioButtonsHandlers} />
         </div>

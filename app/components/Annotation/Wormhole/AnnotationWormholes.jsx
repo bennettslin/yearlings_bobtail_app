@@ -9,7 +9,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getAnnotationCardWormholeLinksArray } from '../annotationHelper'
 
 const mapStateToProps = ({
-    canCarouselRender,
+    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
     selectedAccessIndex,
     accessedAnnotationAnchorIndex

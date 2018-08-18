@@ -24,7 +24,7 @@ class Slider extends Component {
 
         // From parent.
         handleSliderTouchBegin: PropTypes.func.isRequired,
-        sliderDidRender: PropTypes.func.isRequired
+        verseDidRender: PropTypes.func.isRequired
     }
 
     state = {
@@ -50,7 +50,7 @@ class Slider extends Component {
                 ),
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
-                    this.props.sliderDidRender, 100
+                    this.props.verseDidRender, 100
                 )
 
             this.setState({

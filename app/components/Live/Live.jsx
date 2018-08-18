@@ -25,8 +25,8 @@ import {
 
 const mapStateToProps = ({
     renderStore: {
+        canVerseRender,
         canTheatreRender,
-        canMainRender,
         canCarouselRender
     },
     renderableStore: {
@@ -34,8 +34,8 @@ const mapStateToProps = ({
         isSongChangeRenderable
     }
 }) => ({
+    canVerseRender,
     canTheatreRender,
-    canMainRender,
     canCarouselRender,
     isWindowResizeRenderable,
     isSongChangeRenderable
@@ -64,15 +64,14 @@ class Live extends Component {
 
             logger.warn('Live unrenderable from song change.')
             this.props.updateRenderStore({
-                canMainRender: false,
                 canVerseRender: false,
+                canMainRender: false,
                 canLyricRender: false,
                 canCarouselRender: false
             })
-        }
 
         // Is renderable after song change timeout.
-        if (isSongChangeRenderable && !wasSongChangeRenderable) {
+        } else if (isSongChangeRenderable && !wasSongChangeRenderable) {
 
             // Don't call this upon initial render.
             if (this.props.canTheatreRender) {
@@ -81,7 +80,7 @@ class Live extends Component {
                 } seconds.`)
 
                 this.props.updateRenderStore({
-                    canMainRender: true
+                    canVerseRender: true
                 })
             }
         }
@@ -94,13 +93,12 @@ class Live extends Component {
             this.props.updateRenderStore({
                 canTheatreRender: false
             })
-        }
 
         /**
          * Is renderable after window resize timeout. Also called upon initial
          * render.
          */
-        if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
+        } else if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
             logger.warn(`Live renderable after window resize, took ${
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
             } seconds.`)
@@ -116,20 +114,20 @@ class Live extends Component {
          * This isn't the most elegant way to tell whether we're rendering
          * after song change or after window resize. But it will do for now.
          */
-        if (!this.props.canMainRender) {
+        if (!this.props.canVerseRender) {
             this.props.updateRenderStore({
-                canMainRender: true
+                canVerseRender: true
             })
         }
     }
 
-    mainDidRender = () => {
+    verseDidRender = () => {
         this.props.updateRenderStore({
-            canVerseRender: true
+            canMainRender: true
         })
     }
 
-    sliderDidRender = () => {
+    mainDidRender = () => {
         this.props.updateRenderStore({
             canLyricRender: true
         })
@@ -187,7 +185,7 @@ class Live extends Component {
                 />
 
                 <Menu {...menuFieldHandlers}
-                    sliderDidRender={this.sliderDidRender}
+                    verseDidRender={this.verseDidRender}
                 />
 
                 {/* Prevent popup interaction when slider is touched. */}
@@ -199,11 +197,11 @@ class Live extends Component {
 
 Live.propTypes = {
     // Through Redux.
-    canMainRender: PropTypes.bool.isRequired,
+    canVerseRender: PropTypes.bool.isRequired,
     canTheatreRender: PropTypes.bool.isRequired,
     canCarouselRender: PropTypes.bool.isRequired,
-    isWindowResizeRenderable: PropTypes.bool.isRequired,
     isSongChangeRenderable: PropTypes.bool.isRequired,
+    isWindowResizeRenderable: PropTypes.bool.isRequired,
     updateRenderStore: PropTypes.func.isRequired,
 
     // From parent.

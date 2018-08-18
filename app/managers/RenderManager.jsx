@@ -67,7 +67,7 @@ class RenderManager extends Component {
         } = props
 
         this.props.updateRenderableStore({
-            setIsSongChangeRenderable: true
+            isSongChangeRenderable: true
         })
 
         this.props.updateRenderedStore({
@@ -95,7 +95,7 @@ class RenderManager extends Component {
     _prepareForSongChangeUnrender() {
 
         this.props.updateRenderableStore({
-            setIsSongChangeRenderable: false
+            isSongChangeRenderable: false
         })
 
         // Clear previous timeout.

@@ -29,7 +29,7 @@ const menuPropTypes = {
     audioHandlers: PropTypes.object.isRequired,
     scoresTipsHandlers: PropTypes.object.isRequired,
 
-    sliderDidRender: PropTypes.func.isRequired
+    verseDidRender: PropTypes.func.isRequired
 },
 
 Menu = ({
@@ -37,7 +37,7 @@ Menu = ({
     titleToggleHandlers,
     audioHandlers,
     scoresTipsHandlers,
-    sliderDidRender
+    verseDidRender
 }) => {
     /**
      * This is necessary because transform animation in Safari is janky.
@@ -81,7 +81,7 @@ Menu = ({
                     'MenuChild'
                 )}>
                     <Audio {...audioHandlers}
-                        sliderDidRender={sliderDidRender}
+                        verseDidRender={verseDidRender}
                     />
                 </div>
 
