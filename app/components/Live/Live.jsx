@@ -33,8 +33,10 @@ const mapStateToProps = ({
     canTheatreRender,
     canMainRender,
     canCarouselRender,
-    isWindowResizeRenderable,
-    isSongChangeRenderable,
+    renderableStore: {
+        isWindowResizeRenderable,
+        isSongChangeRenderable
+    }
 }) => ({
     canTheatreRender,
     canMainRender,

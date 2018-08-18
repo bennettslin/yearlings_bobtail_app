@@ -4,8 +4,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import debounce from 'debounce'
 
-import { setIsWindowResizeRenderable } from 'flux/actions/renderable'
 import { updateDeviceStore } from 'flux/actions/device'
+import { updateRenderableStore } from 'flux/actions/renderable'
 import { updateResponsiveStore } from 'flux/actions/responsive'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -33,6 +33,7 @@ class WindowManager extends Component {
         showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
         updateDeviceStore: PropTypes.func.isRequired,
+        updateRenderableStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -166,11 +167,15 @@ class WindowManager extends Component {
     }
 
     _prepareForWindowResizeRender = () => {
-        this.props.setIsWindowResizeRenderable(true)
+        this.props.updateRenderableStore({
+            isWindowResizeRenderable: true
+        })
     }
 
     _prepareForWindowResizeUnrender() {
-        this.props.setIsWindowResizeRenderable(false)
+        this.props.updateRenderableStore({
+            isWindowResizeRenderable: false
+        })
 
         // Clear previous timeout.
         clearTimeout(this.state.windowResizeTimeoutId)
@@ -207,7 +212,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateDeviceStore,
         updateResponsiveStore,
-        setIsWindowResizeRenderable
+        updateRenderableStore
     }, dispatch)
 )
 

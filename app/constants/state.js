@@ -30,11 +30,14 @@ module.exports = {
     CAN_PLAY_THROUGHS: 'canPlayThroughs',
     IS_SCORE_LOADED: 'scoreLoaded',
 
-    // Render.
+    // Renderable.
+    RENDERABLE_STORE: 'renderableStore',
     IS_WINDOW_RESIZE_RENDERABLE: 'isWindowResizeRenderable',
     IS_SONG_CHANGE_RENDERABLE: 'isSongChangeRenderable',
     IS_SCENE_CHANGE_RENDERABLE: 'isSceneChangeRenderable',
 
+    // Render.
+    RENDER_STORE: 'renderStore',
     CAN_THEATRE_RENDER: 'canTheatreRender',
     CAN_VERSE_RENDER: 'canVerseRender',
     CAN_MAIN_RENDER: 'canMainRender',
@@ -42,7 +45,7 @@ module.exports = {
     CAN_CAROUSEL_RENDER: 'canCarouselRender',
     CAN_SCENE_RENDER: 'canSceneRender',
 
-    // Renderable.
+    // Rendered.
     RENDERED_STORE: 'renderedStore',
     RENDERED_SONG_INDEX: 'renderedSongIndex',
     RENDERED_ANNOTATION_INDEX: 'renderedAnnotationIndex',

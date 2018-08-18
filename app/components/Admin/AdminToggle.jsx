@@ -24,7 +24,7 @@ const AdminToggle = ({
 )
 
 export default connect(({
-    isWindowResizeRenderable,
+    renderableStore: { isWindowResizeRenderable },
     deviceStore: {
         deviceIndex,
         windowWidth,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setIsSongChangeRenderable } from 'flux/actions/renderable'
+import { updateRenderableStore } from 'flux/actions/renderable'
 import { updateRenderedStore } from 'flux/actions/rendered'
 import { updateResponsiveStore } from 'flux/actions/responsive'
 
@@ -21,7 +21,7 @@ class RenderManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
 
-        setIsSongChangeRenderable: PropTypes.func.isRequired,
+        updateRenderableStore: PropTypes.func.isRequired,
         updateRenderedStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired,
 
@@ -66,7 +66,9 @@ class RenderManager extends Component {
             selectedVerseIndex = this.props.selectedVerseIndex
         } = props
 
-        this.props.setIsSongChangeRenderable(true)
+        this.props.updateRenderableStore({
+            setIsSongChangeRenderable: true
+        })
 
         this.props.updateRenderedStore({
             renderedSongIndex: selectedSongIndex,
@@ -92,7 +94,9 @@ class RenderManager extends Component {
 
     _prepareForSongChangeUnrender() {
 
-        this.props.setIsSongChangeRenderable(false)
+        this.props.updateRenderableStore({
+            setIsSongChangeRenderable: false
+        })
 
         // Clear previous timeout.
         clearTimeout(this.state.songChangeTimeoutId)
@@ -134,7 +138,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setIsSongChangeRenderable,
+        updateRenderableStore,
         updateRenderedStore,
         updateResponsiveStore
     }, dispatch)
