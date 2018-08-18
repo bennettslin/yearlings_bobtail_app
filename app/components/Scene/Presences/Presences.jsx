@@ -13,7 +13,7 @@ import Presence from './Presence'
 import { getSceneObject } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
-    canSceneRender,
+    renderStore: { canSceneRender },
     renderedStore: {
         renderedSongIndex,
         renderedSceneIndex

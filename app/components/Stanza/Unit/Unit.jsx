@@ -17,7 +17,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
 
 const mapStateToProps = ({
-    canLyricRender,
+    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,

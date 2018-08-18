@@ -11,7 +11,7 @@ import { getSongTotalTime } from 'helpers/dataHelper'
 import { getFormattedTime } from 'helpers/formatHelper'
 
 const mapStateToProps = ({
-    canVerseRender,
+    renderStore: { canVerseRender },
     renderedStore: {
         renderedSongIndex
     },

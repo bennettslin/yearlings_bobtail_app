@@ -13,7 +13,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getAccessibleAnnotationAnchorsLength } from './annotationHelper'
 
 const mapStateToProps = ({
-    canCarouselRender,
+    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
     selectedDotKeys
 }) => ({

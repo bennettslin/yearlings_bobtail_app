@@ -8,7 +8,7 @@ import cx from 'classnames'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canVerseRender
+    renderStore: { canVerseRender }
 }) => ({
     canVerseRender
 })

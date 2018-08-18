@@ -13,7 +13,7 @@ import Stanzas from 'components/Stanza/Stanzas'
 import VerseBar from 'components/Verse/VerseBar/VerseBar'
 
 const mapStateToProps = ({
-    canLyricRender
+    renderStore: { canLyricRender }
 }) => ({
     canLyricRender
 })

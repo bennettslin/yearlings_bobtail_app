@@ -11,11 +11,11 @@ import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'
 import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../theatreConstants'
 
 const mapStateToProps = ({
-    canTheatreRender,
-    deviceStore: { windowHeight }
+    deviceStore: { windowHeight },
+    renderStore: { canTheatreRender }
 }) => ({
-    canTheatreRender,
-    windowHeight
+    windowHeight,
+    canTheatreRender
 })
 
 class Wall extends Component {

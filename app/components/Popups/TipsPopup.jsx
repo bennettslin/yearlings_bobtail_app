@@ -8,7 +8,7 @@ import Popup from 'components/Popup/Popup'
 import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
-    canMainRender,
+    renderStore: { canMainRender },
     renderedStore: { renderedSongIndex },
     selectedTipsIndex
 }) => ({

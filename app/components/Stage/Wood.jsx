@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 const mapStateToProps = ({
-    canTheatreRender
+    renderStore: { canTheatreRender }
 }) => ({
     canTheatreRender
 })

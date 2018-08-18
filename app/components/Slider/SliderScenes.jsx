@@ -11,7 +11,7 @@ import {
 } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
-    canVerseRender,
+    renderStore: { canVerseRender },
     renderedStore: { renderedSongIndex }
 }) => ({
     canVerseRender,

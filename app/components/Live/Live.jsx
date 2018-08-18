@@ -8,13 +8,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import {
-    setCanRenderTheatre,
-    setCanRenderMain,
-    setCanRenderVerse,
-    setCanRenderLyric,
-    setCanRenderCarousel
-} from '../../redux/actions/render'
+import { updateRenderStore } from 'flux/actions/render'
 
 import Theatre from '../Theatre/Theatre'
 
@@ -30,9 +24,11 @@ import {
 } from './liveHelper'
 
 const mapStateToProps = ({
-    canTheatreRender,
-    canMainRender,
-    canCarouselRender,
+    renderStore: {
+        canTheatreRender,
+        canMainRender,
+        canCarouselRender
+    },
     renderableStore: {
         isWindowResizeRenderable,
         isSongChangeRenderable
@@ -67,10 +63,12 @@ class Live extends Component {
             this.unrenderedTime = Date.now()
 
             logger.warn('Live unrenderable from song change.')
-            this.props.setCanRenderMain(false)
-            this.props.setCanRenderVerse(false)
-            this.props.setCanRenderLyric(false)
-            this.props.setCanRenderCarousel(false)
+            this.props.updateRenderStore({
+                canMainRender: false,
+                canVerseRender: false,
+                canLyricRender: false,
+                canCarouselRender: false
+            })
         }
 
         // Is renderable after song change timeout.
@@ -82,7 +80,9 @@ class Live extends Component {
                     ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
                 } seconds.`)
 
-                this.props.setCanRenderMain(true)
+                this.props.updateRenderStore({
+                    canMainRender: true
+                })
             }
         }
 
@@ -91,7 +91,9 @@ class Live extends Component {
             this.unrenderedTime = Date.now()
 
             logger.warn('Live unrenderable from window resize.')
-            this.props.setCanRenderTheatre(false)
+            this.props.updateRenderStore({
+                canTheatreRender: false
+            })
         }
 
         /**
@@ -103,7 +105,9 @@ class Live extends Component {
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
             } seconds.`)
 
-            this.props.setCanRenderTheatre(true)
+            this.props.updateRenderStore({
+                canTheatreRender: true
+            })
         }
     }
 
@@ -113,20 +117,28 @@ class Live extends Component {
          * after song change or after window resize. But it will do for now.
          */
         if (!this.props.canMainRender) {
-            this.props.setCanRenderMain(true)
+            this.props.updateRenderStore({
+                canMainRender: true
+            })
         }
     }
 
     mainDidRender = () => {
-        this.props.setCanRenderVerse(true)
+        this.props.updateRenderStore({
+            canVerseRender: true
+        })
     }
 
     sliderDidRender = () => {
-        this.props.setCanRenderLyric(true)
+        this.props.updateRenderStore({
+            canLyricRender: true
+        })
     }
 
     lyricDidRender = () => {
-        this.props.setCanRenderCarousel(true)
+        this.props.updateRenderStore({
+            canCarouselRender: true
+        })
     }
 
     carouselDidRender = () => {
@@ -192,12 +204,7 @@ Live.propTypes = {
     canCarouselRender: PropTypes.bool.isRequired,
     isWindowResizeRenderable: PropTypes.bool.isRequired,
     isSongChangeRenderable: PropTypes.bool.isRequired,
-
-    setCanRenderTheatre: PropTypes.func.isRequired,
-    setCanRenderMain: PropTypes.func.isRequired,
-    setCanRenderVerse: PropTypes.func.isRequired,
-    setCanRenderLyric: PropTypes.func.isRequired,
-    setCanRenderCarousel: PropTypes.func.isRequired,
+    updateRenderStore: PropTypes.func.isRequired,
 
     // From parent.
     setLyricRef: PropTypes.func.isRequired,
@@ -248,11 +255,7 @@ Live.propTypes = {
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setCanRenderTheatre,
-        setCanRenderMain,
-        setCanRenderVerse,
-        setCanRenderLyric,
-        setCanRenderCarousel
+        updateRenderStore
     }, dispatch)
 )
 

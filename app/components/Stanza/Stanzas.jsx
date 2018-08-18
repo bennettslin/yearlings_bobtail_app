@@ -21,7 +21,7 @@ import {
 } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canLyricRender,
+    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,

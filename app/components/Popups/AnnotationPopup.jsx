@@ -12,18 +12,18 @@ import {
 } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    canCarouselRender,
-    deviceStore: { deviceIndex },
     isLyricExpanded,
+    renderStore: { canCarouselRender },
+    deviceStore: { deviceIndex },
     renderedStore: { renderedAnnotationIndex },
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
 }) => ({
-    canCarouselRender,
     deviceIndex,
     isLyricExpanded,
+    canCarouselRender,
     renderedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,

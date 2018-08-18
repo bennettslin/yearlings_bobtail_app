@@ -18,14 +18,14 @@ import {
 } from 'constants/options'
 
 const mapStateToProps = ({
-    canMainRender,
     selectedOverviewIndex,
     deviceStore: { deviceIndex },
+    renderStore: { canMainRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canMainRender,
     selectedOverviewIndex,
     deviceIndex,
+    canMainRender,
     renderedSongIndex
 })
 

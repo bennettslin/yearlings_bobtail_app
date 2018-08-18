@@ -11,7 +11,7 @@ import SliderTimes from './Times/SliderTimes'
 import SliderAccess from './SliderAccess'
 
 const mapStateToProps = ({
-    canVerseRender
+    renderStore: { canVerseRender }
 }) => ({
     canVerseRender
 })

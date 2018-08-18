@@ -14,7 +14,7 @@ import {
 } from 'constants/sky'
 
 const mapStateToProps = ({
-    canTheatreRender
+    renderStore: { canTheatreRender }
 }) => ({
     canTheatreRender
 })

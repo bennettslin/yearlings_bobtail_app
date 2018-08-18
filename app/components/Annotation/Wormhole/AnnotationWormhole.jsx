@@ -29,7 +29,7 @@ import {
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canCarouselRender,
+    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex }
 }) => ({
     canCarouselRender,

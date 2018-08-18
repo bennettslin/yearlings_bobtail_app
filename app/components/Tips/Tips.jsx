@@ -14,7 +14,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { SHOWN, TIPS_OPTIONS } from 'constants/options'
 
 const mapStateToProps = ({
-    canMainRender,
+    renderStore: { canMainRender },
     renderedStore: { renderedSongIndex },
     responsiveStore: { isScoresTipsInMain },
     selectedTipsIndex,

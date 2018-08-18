@@ -12,7 +12,7 @@ import { getVerseObject } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canLyricRender,
+    renderStore: { canLyricRender },
     renderedStore: {
         renderedSongIndex,
         renderedVerseIndex

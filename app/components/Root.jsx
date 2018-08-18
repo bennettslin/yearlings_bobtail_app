@@ -385,7 +385,6 @@ class Root extends Component {
 
 const mapStateToProps = ({
     appMounted,
-    canCarouselRender,
     selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,
@@ -401,6 +400,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     isPlaying,
     deviceStore: { deviceIndex },
+    renderStore: { canCarouselRender },
     renderedStore: {
         renderedSongIndex,
         renderedVerseIndex,
@@ -423,7 +423,6 @@ const mapStateToProps = ({
     isManualScroll
 }) => ({
     appMounted,
-    canCarouselRender,
     selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,
@@ -440,6 +439,7 @@ const mapStateToProps = ({
     showOneOfTwoLyricColumns,
     isPlaying,
     deviceIndex,
+    canCarouselRender,
     renderedSongIndex,
     renderedVerseIndex,
     renderedAnnotationIndex,

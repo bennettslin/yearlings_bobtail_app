@@ -13,7 +13,7 @@ import VerseColour from '../VerseColour/VerseColour'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canLyricRender,
+    renderStore: { canLyricRender },
     interactivatedVerseIndex
 }) => ({
     canLyricRender,

@@ -12,7 +12,7 @@ import { getAnnotationsCount } from 'helpers/dataHelper'
 import { getArrayOfLength } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canCarouselRender,
+    renderStore: { canCarouselRender },
     renderedStore: {
         renderedSongIndex,
         renderedAnnotationIndex

@@ -18,7 +18,7 @@ import { getCeilingHeight,
          getFloorHeight } from './theatreHelper'
 
 const mapStateToProps = ({
-    canTheatreRender,
+    renderStore: { canTheatreRender },
     responsiveStore: { isHeightlessLyricColumn },
     deviceStore: {
         deviceIndex,

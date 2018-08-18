@@ -24,7 +24,7 @@ import { getIsPhone } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
-    canMainRender
+    renderStore: { canMainRender }
 }) => ({
     deviceIndex,
     canMainRender

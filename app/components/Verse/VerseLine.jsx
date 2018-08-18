@@ -9,7 +9,7 @@ import { TITLE } from 'constants/lyrics'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canLyricRender,
+    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,

@@ -11,7 +11,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { VERSE_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
-    canLyricRender,
+    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,
