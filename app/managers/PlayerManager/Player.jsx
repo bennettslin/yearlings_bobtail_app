@@ -24,6 +24,10 @@ class Player extends Component {
         intervalId: ''
     }
 
+    sessionState = {
+        currentSessionId: -1
+    }
+
     componentDidMount() {
         this.props.setPlayerRef(this, this.props.songIndex)
 
@@ -66,7 +70,10 @@ class Player extends Component {
         this.audioPlayer.currentTime = currentTime
     }
 
-    handleBeginPlaying(handlePlaySelectedPlayer) {
+    handleBeginPlaying(
+        currentSessionId,
+        handlePlaySelectedPlayer
+    ) {
         // Only called by player manager.
         const { songIndex } = this.props,
             playPromise = this.audioPlayer.play()
@@ -76,24 +83,21 @@ class Player extends Component {
          https://developers.google.com/web/updates/2016/03/play-returns-promise
          */
         if (typeof playPromise !== 'undefined') {
-            logger.info('Browser returns promise upon play.')
 
             playPromise.then(() => {
-                logger.info(`Promise for ${songIndex} succeeded.`)
+                logger.info(`Promise to play ${songIndex} succeeded.`)
 
-                this._setIntervalForTimeUpdate()
+                this._setIntervalForTimeUpdate(currentSessionId)
                 handlePlaySelectedPlayer(true)
 
               }).catch(error => {
                 // Player failed!
-                logger.error(`Promise for ${songIndex} failed: ${error}`)
+                logger.error(`Promise to play ${songIndex} failed: ${error}`)
                 handlePlaySelectedPlayer(false)
             });
 
         } else {
-            logger.info('Browser does not return promise upon play.')
-
-            this._setIntervalForTimeUpdate()
+            this._setIntervalForTimeUpdate(currentSessionId)
             handlePlaySelectedPlayer(true)
         }
     }
@@ -119,18 +123,43 @@ class Player extends Component {
         }
     }
 
-    _tellAppCurrentTime = () => {
+    _setIntervalForTimeUpdate(currentSessionId) {
+
+        // This is the only place that current session id is set.
+        this.sessionState.currentSessionId = currentSessionId
+
+        this._clearInterval()
+
+        const intervalId = setInterval(
+                // This interval will only ever pass this session id.
+                this._tellAppCurrentTime.bind(this, currentSessionId),
+                LISTEN_INTERVAL
+            )
+
+        this.setState({
+            intervalId
+        })
+    }
+
+    _tellAppCurrentTime = (currentSessionId) => {
         const {
-                currentTime,
-                paused
-            } = this.audioPlayer
+            currentTime,
+            paused
+        } = this.audioPlayer
 
         if (paused) {
             // Once the player is paused, prevent further time updates.
             this._clearInterval()
 
         } else {
-            this.props.updateCurrentTime(currentTime)
+            /**
+             * This is the only place that current session id is returned to
+             * player manager for a currently playing player.
+             */
+            this.props.updateCurrentTime(
+                currentSessionId,
+                currentTime
+            )
         }
     }
 
@@ -138,20 +167,8 @@ class Player extends Component {
         logger.info(`Player for ${this.props.songIndex} ended itself.`)
 
         this._clearInterval()
-        this.props.updateEnded()
-    }
 
-    _setIntervalForTimeUpdate() {
-        this._clearInterval()
-
-        const intervalId = setInterval(
-                this._tellAppCurrentTime,
-                LISTEN_INTERVAL
-            )
-
-        this.setState({
-            intervalId
-        })
+        this.props.updateEnded(this.sessionState.currentSessionId)
     }
 
     _clearInterval() {

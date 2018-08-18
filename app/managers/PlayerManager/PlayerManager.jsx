@@ -79,10 +79,26 @@ class PlayerManager extends Component {
         ),
 
         // At any given time, only one player is being newly rendered.
-        nextPlayerToRender: -1,
+        nextPlayerToRender: -1
+    }
+
+    playerState = {
+        /**
+         * We will use this object to pass values when selecting the player
+         * in the timeout callback, because we don't want to deal with the
+         * uncertainty of when setState gets executed.
+         */
 
         // Unique identifier for clearing setInterval.
         nextSelectedTimeoutId: ''
+    }
+
+    sessionState = {
+        /**
+         * This lets us reject a call to update time that is no longer
+         * applicable upon manual selection of a new song or verse.
+         */
+        currentSessionId: 0
     }
 
     // Initialise player refs.
@@ -174,9 +190,7 @@ class PlayerManager extends Component {
          */
         const {
                 isPlaying: wasPlaying
-            } = this.props,
-
-            playerRef = this.getPlayerRef(selectedSongIndex)
+            } = this.props
 
         // Pausing.
         if (!isPlaying && wasPlaying) {
@@ -184,7 +198,7 @@ class PlayerManager extends Component {
             // Play is being toggled off, so set in store right away.
             this.props.setIsPlaying(false)
 
-            return playerRef.handleEndPlaying(
+            return this.getPlayerRef(selectedSongIndex).handleEndPlaying(
 
                 // Player manager keeps track of default times of players.
                 this.getCurrentTimeForSongIndex()
@@ -192,24 +206,8 @@ class PlayerManager extends Component {
 
         // Playing.
         } else if (isPlaying && !wasPlaying) {
-            return playerRef.handleBeginPlaying(
-
-                /**
-                 * Play is being toggled on, so don't set in store right away.
-                 * Pass callback and wait for successful return.
-                 */
-                this.handlePlaySelectedPlayer
-            )
+            return this.askPlayerToBeginPlaying(selectedSongIndex)
         }
-    }
-
-    handlePlaySelectedPlayer = (success) => {
-        /**
-         * If currently selected player is being toggled on, set in store that
-         * it was able to play. If selected song was changed, set in store
-         * whether newly selected player was able to play.
-         */
-        this.props.setIsPlaying(success)
     }
 
     updateSelectedPlayer({
@@ -223,27 +221,30 @@ class PlayerManager extends Component {
          * between manual and automatic verse changes.
          */
 
-        clearTimeout(this.state.nextSelectedTimeoutId)
+        // Increment session id right away.
+        this.sessionState.currentSessionId++
+
+        clearTimeout(this.playerState.nextSelectedTimeoutId)
 
         const nextSelectedTimeoutId = setTimeout(
             this._handleSelectPlayer,
             200
         )
 
-        this.setState({
+        this.playerState = {
             nextSelectedTimeoutId,
 
             // Store next song and verse in component state for callback.
             nextSongIndex,
             nextVerseIndex
-        })
+        }
     }
 
     _handleSelectPlayer = () => {
         const {
                 nextSongIndex,
                 nextVerseIndex
-            } = this.state,
+            } = this.playerState,
 
             nextCurrentTime = getTimeForVerseIndex(
                 nextSongIndex,
@@ -257,10 +258,31 @@ class PlayerManager extends Component {
             /**
              * If already playing, begin playing newly selected player.
              */
-            this.getPlayerRef(nextSongIndex).handleBeginPlaying(
-                this.handlePlaySelectedPlayer
-            )
+            this.askPlayerToBeginPlaying(nextSongIndex)
         }
+    }
+
+    askPlayerToBeginPlaying(playerSongIndex) {
+        const playerRef = this.getPlayerRef(playerSongIndex)
+
+        return playerRef.handleBeginPlaying(
+            this.sessionState.currentSessionId,
+
+            /**
+             * Play is being toggled on, so don't set in store right away.
+             * Pass callback and wait for successful return.
+             */
+            this.handlePlaySelectedPlayer
+        )
+    }
+
+    handlePlaySelectedPlayer = (success) => {
+        /**
+         * If currently selected player is being toggled on, set in store that
+         * it was able to play. If selected song was changed, set in store
+         * whether newly selected player was able to play.
+         */
+        this.props.setIsPlaying(success)
     }
 
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
@@ -280,7 +302,19 @@ class PlayerManager extends Component {
             ) : 0
     }
 
-    updatePlayerTime = (currentTime) => {
+    updatePlayerTime = (
+        currentSessionId,
+        currentTime
+    ) => {
+
+        /**
+         * Ignore calls from previous sessions that haven't yet cleared out
+         * their intervals.
+         */
+        if (currentSessionId !== this.sessionState.currentSessionId) {
+            return
+        }
+
         const {
                 selectedSongIndex,
                 selectedVerseIndex
@@ -327,30 +361,43 @@ class PlayerManager extends Component {
                 }
             })
 
-        /**
-         * If time is after current verse but there is no next verse, then we
-         * have reached the end of the song.
-         */
-        } else if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
-            logger.info('Updated time will end player.')
+        } else {
+            /**
+             * If time is after current verse but there is no next verse, then
+             * we have reached the end of the song.
+             */
+            if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
+                logger.info('Updated time will end player.')
+                this.updatePlayerEnded()
 
             /**
-             * Call this even though it will be called again later, to ensure
-             * that the player will not end itself in the interim.
+             * Something weird has happened, so we'll reset the player. This
+             * should never get called, so fix the code if it does!
              */
-            this.getPlayerRef(selectedSongIndex).handleEndPlaying()
-            this.updatePlayerEnded()
+            } else {
+                logger.error(`Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`)
+            }
 
-        /**
-         * Something weird has happened, so we'll reset the player.
-         */
-        } else {
-            logger.error(`Time ${currentTime} and verse index ${selectedVerseIndex} are not in sync.`)
+            /**
+             * Tell the player to end either way. If it ended because the song
+             * ended, we will still call this even though it will be called
+             * again later, to ensure that the player will not end itself in
+             * the interim.
+             */
             this.getPlayerRef(selectedSongIndex).handleEndPlaying()
         }
     }
 
-    updatePlayerEnded = () => {
+    updatePlayerEnded = (currentSessionId) => {
+
+        /**
+         * Ignore calls from previous sessions that haven't yet cleared out
+         * their intervals.
+         */
+        if (currentSessionId !== this.sessionState.currentSessionId) {
+            return
+        }
+
         this.props.handleSongEnd()
     }
 

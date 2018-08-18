@@ -17,7 +17,7 @@
 
 * Timeout between song selection and player start. Ensure there is no bugginess when switching songs fast while playing. (/)
 
-* Bug: Selecting new verse makes time and verse index out of sync.
+* Bug: Selecting new verse makes time and verse index out of sync. Have player manager maintain session id to prevent player from updating time after user manual selection. (/)
 
 * Should not be able to reselect verse in slider.
 
