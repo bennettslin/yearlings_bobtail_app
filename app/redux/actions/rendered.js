@@ -1,4 +1,4 @@
-// Actions for renderable state.
+// Actions for rendered state.
 import { is } from './actionsHelper'
 
 import { RENDERED_STORE } from 'constants/state'

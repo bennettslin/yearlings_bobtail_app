@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setIsSongChangeRenderable } from 'flux/actions/render'
+import { setIsSongChangeRenderable } from 'flux/actions/renderable'
 import { updateRenderedStore } from 'flux/actions/rendered'
 import { updateResponsiveStore } from 'flux/actions/responsive'
 

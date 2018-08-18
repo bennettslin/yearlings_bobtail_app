@@ -1,4 +1,4 @@
-// Reducers for renderable state.
+// Reducers for rendered state.
 import { RENDERED_STORE } from 'constants/state'
 import { RENDERED_DEFAULTS } from '../defaultConstants'
 

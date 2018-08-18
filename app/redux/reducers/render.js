@@ -1,8 +1,5 @@
-// Reducers for state of this user session.
+// Reducers for can render state.
 import {
-    IS_SCENE_CHANGE_RENDERABLE,
-    IS_SONG_CHANGE_RENDERABLE,
-    IS_WINDOW_RESIZE_RENDERABLE,
     CAN_THEATRE_RENDER,
     CAN_MAIN_RENDER,
     CAN_VERSE_RENDER,
@@ -11,39 +8,6 @@ import {
     CAN_SCENE_RENDER
 } from 'constants/state'
 
-export const IsSceneChangeRenderableReducer = (
-    state = false,
-    action
-) => {
-    switch (action.type) {
-        case IS_SCENE_CHANGE_RENDERABLE:
-            return action.payload
-        default:
-            return state
-    }
-}
-export const IsSongChangeRenderableReducer = (
-    state = false,
-    action
-) => {
-    switch (action.type) {
-        case IS_SONG_CHANGE_RENDERABLE:
-            return action.payload
-        default:
-            return state
-    }
-}
-export const IsWindowResizeRenderableReducer = (
-    state = false,
-    action
-) => {
-    switch (action.type) {
-        case IS_WINDOW_RESIZE_RENDERABLE:
-            return action.payload
-        default:
-            return state
-    }
-}
 export const CanTheatreRenderReducer = (
     state = false,
     action

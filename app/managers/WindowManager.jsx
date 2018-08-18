@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import debounce from 'debounce'
 
-import { setIsWindowResizeRenderable } from 'flux/actions/render'
+import { setIsWindowResizeRenderable } from 'flux/actions/renderable'
 import { updateDeviceStore } from 'flux/actions/device'
 import { updateResponsiveStore } from 'flux/actions/responsive'
 

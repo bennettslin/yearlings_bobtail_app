@@ -1,22 +1,27 @@
 // Actions for renderable state.
-import { is } from './actionsHelper'
+import {
+    IS_SCENE_CHANGE_RENDERABLE,
+    IS_SONG_CHANGE_RENDERABLE,
+    IS_WINDOW_RESIZE_RENDERABLE
+} from 'constants/state'
 
-import { RENDERED_STORE } from 'constants/state'
-import { RENDERED_DEFAULTS } from '../defaultConstants'
+export const setIsSceneChangeRenderable = (
+    isSceneChangeRenderable = false
+) => ({
+    type: IS_SCENE_CHANGE_RENDERABLE,
+    payload: isSceneChangeRenderable
+})
 
-export const updateRenderedStore = ({
-    renderableSongIndex,
-    renderableAnnotationIndex,
-    renderableVerseIndex,
-    renderableSceneIndex
+export const setIsSongChangeRenderable = (
+    isSongChangeRenderable = false
+) => ({
+    type: IS_SONG_CHANGE_RENDERABLE,
+    payload: isSongChangeRenderable
+})
 
-} = RENDERED_DEFAULTS) => ({
-
-    type: RENDERED_STORE,
-    payload: {
-        ...is(renderableSongIndex) && { renderableSongIndex },
-        ...is(renderableAnnotationIndex) && { renderableAnnotationIndex },
-        ...is(renderableVerseIndex) && { renderableVerseIndex },
-        ...is(renderableSceneIndex) && { renderableSceneIndex }
-    }
+export const setIsWindowResizeRenderable = (
+    isWindowResizeRenderable = false
+) => ({
+    type: IS_WINDOW_RESIZE_RENDERABLE,
+    payload: isWindowResizeRenderable
 })
