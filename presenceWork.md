@@ -7,4 +7,23 @@
 * Make renderable store. (/)
 * Make render store. (/)
 
-* Change order. (TODO: Elaborate on this.)
+# Order upon load
+* theatre
+* verse
+* scene
+* main
+* lyric
+* carousel
+
+# Order upon window resize
+* theatre (only thing that changes)
+
+# Order upon song change
+* verse (instant)
+* scene
+* main
+* lyric
+* carousel
+
+# Order upon scene change within song
+* scene (only thing that changes)

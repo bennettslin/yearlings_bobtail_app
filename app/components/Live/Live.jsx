@@ -111,8 +111,13 @@ class Live extends Component {
 
     theatreDidRender = () => {
         /**
-         * This isn't the most elegant way to tell whether we're rendering
-         * after song change or after window resize. But it will do for now.
+         * TODO: This isn't the most elegant way to handle this...
+         */
+
+        /**
+         * If theatre is rendering for the first time upon load, verse will not
+         * be rendered. If it is being rendered again after window resize,
+         * verse will be rendered.
          */
         if (!this.props.canVerseRender) {
             this.props.updateRenderStore({
