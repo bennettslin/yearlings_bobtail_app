@@ -33,6 +33,8 @@ module.exports = {
     // Render.
     IS_WINDOW_RESIZE_RENDERABLE: 'isWindowResizeRenderable',
     IS_SONG_CHANGE_RENDERABLE: 'isSongChangeRenderable',
+    IS_SCENE_CHANGE_RENDERABLE: 'isSceneChangeRenderable',
+
     CAN_THEATRE_RENDER: 'canTheatreRender',
     CAN_VERSE_RENDER: 'canVerseRender',
     CAN_MAIN_RENDER: 'canMainRender',

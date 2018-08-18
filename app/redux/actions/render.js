@@ -1,5 +1,6 @@
 // Actions for state of this user session.
 import {
+    IS_SCENE_CHANGE_RENDERABLE,
     IS_SONG_CHANGE_RENDERABLE,
     IS_WINDOW_RESIZE_RENDERABLE,
     CAN_THEATRE_RENDER,
@@ -9,6 +10,13 @@ import {
     CAN_CAROUSEL_RENDER,
     CAN_SCENE_RENDER
 } from 'constants/state'
+
+export const setIsSceneChangeRenderable = (
+    isSceneChangeRenderable = false
+) => ({
+    type: IS_SCENE_CHANGE_RENDERABLE,
+    payload: isSceneChangeRenderable
+})
 
 export const setIsSongChangeRenderable = (
     isSongChangeRenderable = false
