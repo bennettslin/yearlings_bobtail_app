@@ -7,7 +7,7 @@ import {
     CAN_VERSE_RENDER,
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
-    CAN_PRESENCES_RENDER
+    CAN_SCENE_RENDER
 } from 'constants/state'
 
 export const isWindowResizeRenderableReducer = (
@@ -88,12 +88,12 @@ export const CanCarouselRenderReducer = (
             return state
     }
 }
-export const CanPresencesRenderReducer = (
+export const CanSceneRenderReducer = (
     state = false,
     action
 ) => {
     switch (action.type) {
-        case CAN_PRESENCES_RENDER:
+        case CAN_SCENE_RENDER:
             return action.payload
         default:
             return state
