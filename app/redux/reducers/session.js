@@ -1,6 +1,5 @@
 // Reducers for state of this user session.
 import {
-    APP_MOUNTED,
     CAROUSEL_ANNOTATION_INDEX,
     INTERACTIVATED_VERSE_INDEX,
     IS_LYRIC_EXPANDED,
@@ -18,15 +17,6 @@ import {
 import { getFromStorage } from '../storageHelper'
 
 const storedSongIndex = getFromStorage(SELECTED_SONG_INDEX)
-
-export const AppMountedReducer = (state = false, action) => {
-    switch (action.type) {
-        case APP_MOUNTED:
-            return action.payload
-        default:
-            return state
-    }
-}
 
 export const CarouselAnnotationIndexReducer = (state = 0, action) => {
     switch (action.type) {

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setAppMounted } from 'flux/actions/session'
+import { setAppMounted } from 'flux/actions/load'
 
 import EventHandler from 'handlers/EventHandler'
 import AccessManager from './AccessManager'

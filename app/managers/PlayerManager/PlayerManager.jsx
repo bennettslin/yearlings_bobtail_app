@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { setIsPlaying } from 'flux/actions/audio'
-import { setCanPlayThroughs } from 'flux/actions/player'
+import { setCanPlayThroughs } from 'flux/actions/load'
 
 import Player from './Player'
 

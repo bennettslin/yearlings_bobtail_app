@@ -3,11 +3,11 @@ import { combineReducers } from 'redux'
 import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
 import { IsPlayingReducer } from './audio'
 import { DeviceStoreReducer } from './device'
-import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
+import { AppMountedReducer, CanPlayThroughsReducer, IsScoreLoadedReducer } from './load'
 import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanPresencesRenderReducer } from './render'
 import { RenderableStoreReducer } from './renderable'
 import { ResponsiveStoreReducer } from './responsive'
-import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
+import { CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
 import { SliderStoreReducer } from './slider'
 import { SelectedStoreReducer, AccessIndexReducer, AdminIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, TipsIndexReducer, TitleIndexReducer, WikiIndexReducer } from './storage'
 
@@ -36,12 +36,11 @@ const rootReducer = combineReducers({
 
     [DEVICE_STORE]: DeviceStoreReducer,
 
+    appMounted: AppMountedReducer,
     canPlayThroughs: CanPlayThroughsReducer,
     isScoreLoaded: IsScoreLoadedReducer,
 
     [RESPONSIVE_STORE]: ResponsiveStoreReducer,
-
-    appMounted: AppMountedReducer,
 
     isWindowResizeRenderable: isWindowResizeRenderableReducer,
     isSongChangeRenderable: isSongChangeRenderableReducer,

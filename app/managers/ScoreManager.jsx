@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setIsScoreLoaded } from 'flux/actions/player'
+import { setIsScoreLoaded } from 'flux/actions/load'
 import { selectScoreIndex } from 'flux/actions/storage'
 
 import { getSongIsLogue } from 'helpers/dataHelper'
