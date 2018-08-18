@@ -22,10 +22,10 @@ import {
 
 const mapStateToProps = ({
     canLyricRender,
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,
-    renderableSongIndex
+    renderedSongIndex
 })
 
 /*************
@@ -37,7 +37,7 @@ class Stanzas extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
@@ -110,16 +110,16 @@ class Stanzas extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                renderableSongIndex,
+                renderedSongIndex,
                 ...other
             } = this.props,
 
             songStanzaConfigs = getSongStanzaConfigs(
-                renderableSongIndex
+                renderedSongIndex
             ),
 
             lastUnitDotCardIndex = getLastUnitDotCardIndex(
-                renderableSongIndex
+                renderedSongIndex
             )
 
         return (

@@ -30,10 +30,10 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canCarouselRender,
-    renderableSongIndex
+    renderedSongIndex
 })
 
 class AnnotationWormhole extends Component {
@@ -41,7 +41,7 @@ class AnnotationWormhole extends Component {
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         annotationIndex: PropTypes.number.isRequired,
@@ -74,14 +74,14 @@ class AnnotationWormhole extends Component {
 
     _getWormholeObject() {
         const {
-            renderableSongIndex,
+            renderedSongIndex,
             annotationIndex,
             cardIndex,
             wormholeLinkIndex
         } = this.props
 
         return getAnnotationCardWormholeObject({
-            songIndex: renderableSongIndex,
+            songIndex: renderedSongIndex,
             annotationIndex,
             cardIndex,
             wormholeLinkIndex

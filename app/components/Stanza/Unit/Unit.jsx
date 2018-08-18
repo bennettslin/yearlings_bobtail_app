@@ -18,10 +18,10 @@ import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,
-    renderableSongIndex
+    renderedSongIndex
 })
 
 /*************
@@ -33,7 +33,7 @@ class Unit extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         unitIndex: PropTypes.number.isRequired
@@ -61,9 +61,9 @@ class Unit extends Component {
             } = this.props,
 
             // Pass to lyric stanza view so it knows to update.
-            { renderableSongIndex } = other,
+            { renderedSongIndex } = other,
 
-            unitArray = getLyricUnitArray(renderableSongIndex, unitIndex),
+            unitArray = getLyricUnitArray(renderedSongIndex, unitIndex),
 
             unitMapObject = unitArray[unitArray.length - 1],
 
@@ -134,7 +134,7 @@ class UnitView extends Component {
         // From parent.
 
         // This is passed just for knowing when to update.
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         stanzaIndex: PropTypes.number,
         unitIndex: PropTypes.number.isRequired,
@@ -171,7 +171,7 @@ class UnitView extends Component {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                renderableSongIndex,
+                renderedSongIndex,
                 /* eslint-enable no-unused-vars */
 
                 // From props.

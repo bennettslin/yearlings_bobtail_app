@@ -135,7 +135,7 @@ class AnnotationManager extends Component {
          */
         if (selectedSongIndex === props.selectedSongIndex) {
             props.updateRenderedStore({
-                renderableAnnotationIndex: selectedAnnotationIndex
+                renderedAnnotationIndex: selectedAnnotationIndex
             })
         }
 

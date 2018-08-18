@@ -10,10 +10,10 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,
-    renderableSongIndex
+    renderedSongIndex
 })
 
 class VerseLine extends Component {
@@ -26,7 +26,7 @@ class VerseLine extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         text: PropTypes.oneOfType([
@@ -71,7 +71,7 @@ class VerseLine extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canLyricRender,
-                renderableSongIndex,
+                renderedSongIndex,
                 verseIndex,
                 dispatch,
                 /* eslint-enable no-unused-vars */

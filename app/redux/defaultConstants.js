@@ -22,10 +22,10 @@ import {
     SHOW_SHRUNK_NAV_ICON,
     SHOW_SINGLE_BOOK_COLUMN,
 
-    RENDERABLE_SONG_INDEX,
-    RENDERABLE_ANNOTATION_INDEX,
-    RENDERABLE_VERSE_INDEX,
-    RENDERABLE_SCENE_INDEX,
+    RENDERED_SONG_INDEX,
+    RENDERED_ANNOTATION_INDEX,
+    RENDERED_VERSE_INDEX,
+    RENDERED_SCENE_INDEX,
 
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
@@ -69,10 +69,10 @@ export const RESPONSIVE_DEFAULTS = {
 }
 
 export const RENDERED_DEFAULTS = {
-    [RENDERABLE_SONG_INDEX]: storedSongIndex,
-    [RENDERABLE_ANNOTATION_INDEX]: storedAnnotationIndex,
-    [RENDERABLE_VERSE_INDEX]: storedVerseIndex,
-    [RENDERABLE_SCENE_INDEX]: getSceneIndexForVerseIndex(
+    [RENDERED_SONG_INDEX]: storedSongIndex,
+    [RENDERED_ANNOTATION_INDEX]: storedAnnotationIndex,
+    [RENDERED_VERSE_INDEX]: storedVerseIndex,
+    [RENDERED_SCENE_INDEX]: getSceneIndexForVerseIndex(
         storedSongIndex,
         storedVerseIndex
     )

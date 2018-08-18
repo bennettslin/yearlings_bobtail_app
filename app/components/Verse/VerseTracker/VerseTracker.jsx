@@ -11,20 +11,20 @@ import { getVerseDurationForVerseIndex } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     renderedStore: {
-        renderableSongIndex,
-        renderableVerseIndex
+        renderedSongIndex,
+        renderedVerseIndex
     }
 }) => ({
-    renderableSongIndex,
-    renderableVerseIndex
+    renderedSongIndex,
+    renderedVerseIndex
 })
 
 class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderableSongIndex: PropTypes.number.isRequired,
-        renderableVerseIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        renderedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
@@ -42,7 +42,7 @@ class VerseTracker extends Component {
         return (
 
             // ... song changed...
-            this.props.renderableSongIndex !== nextProps.renderableSongIndex ||
+            this.props.renderedSongIndex !== nextProps.renderedSongIndex ||
 
             // ... or verse was selected or unselected...
             isSelected !== willBeSelected ||
@@ -57,18 +57,18 @@ class VerseTracker extends Component {
     getIsSelectedVerse(props) {
         const {
                 verseIndex,
-                renderableVerseIndex
+                renderedVerseIndex
             } = props,
 
             isSelected =
-                verseIndex === renderableVerseIndex
+                verseIndex === renderedVerseIndex
 
         return isSelected
     }
 
     render() {
         const {
-                renderableSongIndex,
+                renderedSongIndex,
 
                 verseIndex,
                 inUnit,
@@ -81,7 +81,7 @@ class VerseTracker extends Component {
             isSelected = this.getIsSelectedVerse(this.props),
 
             verseDuration = getVerseDurationForVerseIndex(
-                renderableSongIndex,
+                renderedSongIndex,
                 verseIndex
             ),
 

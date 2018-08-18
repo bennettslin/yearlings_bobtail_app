@@ -18,10 +18,10 @@ class LogManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderableSongIndex: PropTypes.number.isRequired,
-        renderableVerseIndex: PropTypes.number.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
-        renderableSceneIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        renderedVerseIndex: PropTypes.number.isRequired,
+        renderedAnnotationIndex: PropTypes.number.isRequired,
+        renderedSceneIndex: PropTypes.number.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -59,12 +59,12 @@ class LogManager extends Component {
 
     logScene = () => {
         const {
-                renderableSongIndex,
-                renderableSceneIndex,
+                renderedSongIndex,
+                renderedSceneIndex,
             } = this.props,
             renderableScene = getSceneObject(
-                renderableSongIndex,
-                renderableSceneIndex
+                renderedSongIndex,
+                renderedSceneIndex
             )
 
         return this._logObject('renderable scene', renderableScene)
@@ -72,9 +72,9 @@ class LogManager extends Component {
 
     logSong = () => {
         const
-            { renderableSongIndex } = this.props,
+            { renderedSongIndex } = this.props,
             copiedSong = {
-                ...getSongObject(renderableSongIndex)
+                ...getSongObject(renderedSongIndex)
             }
 
         copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
@@ -104,16 +104,16 @@ class LogManager extends Component {
 
 const mapStateToProps = ({
     renderedStore: {
-        renderableSongIndex,
-        renderableVerseIndex,
-        renderableAnnotationIndex,
-        renderableSceneIndex
+        renderedSongIndex,
+        renderedVerseIndex,
+        renderedAnnotationIndex,
+        renderedSceneIndex
     }
 }) => ({
-    renderableSongIndex,
-    renderableVerseIndex,
-    renderableAnnotationIndex,
-    renderableSceneIndex
+    renderedSongIndex,
+    renderedVerseIndex,
+    renderedAnnotationIndex,
+    renderedSceneIndex
 })
 
 export default connect(mapStateToProps)(LogManager)

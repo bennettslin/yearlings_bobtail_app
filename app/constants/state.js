@@ -44,10 +44,10 @@ module.exports = {
 
     // Renderable.
     RENDERED_STORE: 'renderedStore',
-    RENDERABLE_SONG_INDEX: 'renderableSongIndex',
-    RENDERABLE_ANNOTATION_INDEX: 'renderableAnnotationIndex',
-    RENDERABLE_VERSE_INDEX: 'renderableVerseIndex',
-    RENDERABLE_SCENE_INDEX: 'renderableSceneIndex',
+    RENDERED_SONG_INDEX: 'renderedSongIndex',
+    RENDERED_ANNOTATION_INDEX: 'renderedAnnotationIndex',
+    RENDERED_VERSE_INDEX: 'renderedVerseIndex',
+    RENDERED_SCENE_INDEX: 'renderedSceneIndex',
 
     // Responsive.
     RESPONSIVE_STORE: 'responsiveStore',

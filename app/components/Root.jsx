@@ -58,9 +58,9 @@ class Root extends Component {
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
-        renderableVerseIndex: PropTypes.number.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        renderedVerseIndex: PropTypes.number.isRequired,
+        renderedAnnotationIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
@@ -161,7 +161,7 @@ class Root extends Component {
             selectedAdminIndex,
             deviceIndex,
             selectedAccessIndex,
-            renderableAnnotationIndex,
+            renderedAnnotationIndex,
             selectedCarouselNavIndex,
             selectedDotKeys,
             selectedDotsIndex,
@@ -175,8 +175,8 @@ class Root extends Component {
             isSliderTouched,
             isSliderMoving,
             isLyricExpanded,
-            renderableSongIndex,
-            renderableVerseIndex,
+            renderedSongIndex,
+            renderedVerseIndex,
             sliderVerseIndex,
             interactivatedVerseIndex,
             showOneOfTwoLyricColumns,
@@ -201,7 +201,7 @@ class Root extends Component {
             isDesktop = getIsDesktop(deviceIndex),
             isTabletOrMini = getIsTabletOrMini(deviceIndex),
 
-            isLogue = getSongIsLogue(renderableSongIndex),
+            isLogue = getSongIsLogue(renderedSongIndex),
 
             singleShownLyricColumnKey = getSingleShownLyricColumnKey({
                 showOneOfTwoLyricColumns,
@@ -211,7 +211,7 @@ class Root extends Component {
             showOverlay = getShowOverlay({
                 deviceIndex,
                 isLyricExpanded,
-                renderableAnnotationIndex,
+                renderedAnnotationIndex,
                 selectedScoreIndex,
                 selectedTitleIndex,
                 selectedWikiIndex
@@ -235,10 +235,10 @@ class Root extends Component {
              */
             cursorVerseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex :
-                renderableVerseIndex,
+                renderedVerseIndex,
 
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
-                renderableSongIndex, cursorVerseIndex
+                renderedSongIndex, cursorVerseIndex
             )
 
         return appMounted && (
@@ -270,7 +270,7 @@ class Root extends Component {
                     isLogue ? 'RM__logue' : 'RM__song',
                     isPlaying ? 'RM__isPlaying' : 'RM__isPaused',
 
-                    renderableAnnotationIndex ?
+                    renderedAnnotationIndex ?
                         'RM__annotationShown' : 'RM__annotationHidden',
                     { 'RM__carouselExpanded': selectedCarouselNavIndex },
                     selectedDotsIndex ? 'RM__dotsShown' : 'RM__dotsHidden',
@@ -335,11 +335,11 @@ class Root extends Component {
                         // "Root slider verse index."
                         `RsV${sliderVerseIndex}` :
                         // "Root default verse index."
-                        `RdV${renderableVerseIndex}`,
+                        `RdV${renderedVerseIndex}`,
 
                     isPlaying &&
                         // "Root playing verse index."
-                        `RpV${renderableVerseIndex}`,
+                        `RpV${renderedVerseIndex}`,
 
                     interactivatedVerseIndex < 0 &&
                         // "Root non-interactivated verse index."
@@ -402,9 +402,9 @@ const mapStateToProps = ({
     isPlaying,
     deviceStore: { deviceIndex },
     renderedStore: {
-        renderableSongIndex,
-        renderableVerseIndex,
-        renderableAnnotationIndex,
+        renderedSongIndex,
+        renderedVerseIndex,
+        renderedAnnotationIndex,
     },
     sliderStore: {
         isSliderTouched,
@@ -440,9 +440,9 @@ const mapStateToProps = ({
     showOneOfTwoLyricColumns,
     isPlaying,
     deviceIndex,
-    renderableSongIndex,
-    renderableVerseIndex,
-    renderableAnnotationIndex,
+    renderedSongIndex,
+    renderedVerseIndex,
+    renderedAnnotationIndex,
     isSliderTouched,
     isSliderMoving,
     sliderVerseIndex,

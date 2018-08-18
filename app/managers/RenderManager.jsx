@@ -69,10 +69,10 @@ class RenderManager extends Component {
         this.props.setIsSongChangeRenderable(true)
 
         this.props.updateRenderedStore({
-            renderableSongIndex: selectedSongIndex,
-            renderableAnnotationIndex: selectedAnnotationIndex,
-            renderableVerseIndex: selectedVerseIndex,
-            renderableSceneIndex: getSceneIndexForVerseIndex(
+            renderedSongIndex: selectedSongIndex,
+            renderedAnnotationIndex: selectedAnnotationIndex,
+            renderedVerseIndex: selectedVerseIndex,
+            renderedSceneIndex: getSceneIndexForVerseIndex(
                 selectedSongIndex,
                 selectedVerseIndex
             )

@@ -167,8 +167,8 @@ class TimeVerseManager extends Component {
              * rendered right away.
              */
             this.props.updateRenderedStore({
-                renderableVerseIndex: selectedVerseIndex,
-                renderableSceneIndex: getSceneIndexForVerseIndex(
+                renderedVerseIndex: selectedVerseIndex,
+                renderedSceneIndex: getSceneIndexForVerseIndex(
                     selectedSongIndex,
                     selectedVerseIndex
                 )

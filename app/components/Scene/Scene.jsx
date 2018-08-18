@@ -25,20 +25,20 @@ import {
 
 const mapStateToProps = ({
     renderedStore: {
-        renderableSongIndex,
-        renderableSceneIndex
+        renderedSongIndex,
+        renderedSceneIndex
     }
 }) => ({
-    renderableSongIndex,
-    renderableSceneIndex
+    renderedSongIndex,
+    renderedSceneIndex
 })
 
 class Scene extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderableSongIndex: PropTypes.number.isRequired,
-        renderableSceneIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        renderedSceneIndex: PropTypes.number.isRequired,
     }
 
     shouldComponentUpdate(nextProps) {
@@ -50,13 +50,13 @@ class Scene extends Component {
 
     render() {
         const {
-                renderableSongIndex,
-                renderableSceneIndex,
+                renderedSongIndex,
+                renderedSceneIndex,
             } = this.props,
 
             sceneObject = getSceneObject(
-                renderableSongIndex,
-                renderableSceneIndex
+                renderedSongIndex,
+                renderedSceneIndex
             ),
 
             {

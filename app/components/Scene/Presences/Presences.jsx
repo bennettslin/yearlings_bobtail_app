@@ -15,13 +15,13 @@ import { getSceneObject } from 'helpers/dataHelper'
 const mapStateToProps = ({
     canSceneRender,
     renderedStore: {
-        renderableSongIndex,
-        renderableSceneIndex
+        renderedSongIndex,
+        renderedSceneIndex
     }
 }) => ({
     canSceneRender,
-    renderableSongIndex,
-    renderableSceneIndex
+    renderedSongIndex,
+    renderedSceneIndex
 })
 
 class Presences extends Component {
@@ -29,8 +29,8 @@ class Presences extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
-        renderableSceneIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        renderedSceneIndex: PropTypes.number.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired
@@ -44,13 +44,13 @@ class Presences extends Component {
                 /* eslint-enable no-unused-vars */
 
                 yIndex,
-                renderableSongIndex,
-                renderableSceneIndex
+                renderedSongIndex,
+                renderedSceneIndex
             } = this.props,
 
             sceneObject = getSceneObject(
-                renderableSongIndex,
-                renderableSceneIndex
+                renderedSongIndex,
+                renderedSceneIndex
             ),
 
             {

@@ -5,18 +5,18 @@ import { RENDERED_STORE } from 'constants/state'
 import { RENDERED_DEFAULTS } from '../defaultConstants'
 
 export const updateRenderedStore = ({
-    renderableSongIndex,
-    renderableAnnotationIndex,
-    renderableVerseIndex,
-    renderableSceneIndex
+    renderedSongIndex,
+    renderedAnnotationIndex,
+    renderedVerseIndex,
+    renderedSceneIndex
 
 } = RENDERED_DEFAULTS) => ({
 
     type: RENDERED_STORE,
     payload: {
-        ...is(renderableSongIndex) && { renderableSongIndex },
-        ...is(renderableAnnotationIndex) && { renderableAnnotationIndex },
-        ...is(renderableVerseIndex) && { renderableVerseIndex },
-        ...is(renderableSceneIndex) && { renderableSceneIndex }
+        ...is(renderedSongIndex) && { renderedSongIndex },
+        ...is(renderedAnnotationIndex) && { renderedAnnotationIndex },
+        ...is(renderedVerseIndex) && { renderedVerseIndex },
+        ...is(renderedSceneIndex) && { renderedSceneIndex }
     }
 })

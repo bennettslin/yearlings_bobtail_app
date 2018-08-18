@@ -13,7 +13,7 @@ export const getSingleShownLyricColumnKey = ({
 export const getShowOverlay = ({
     deviceIndex,
     isLyricExpanded,
-    renderableAnnotationIndex,
+    renderedAnnotationIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
@@ -29,7 +29,7 @@ export const getShowOverlay = ({
         Boolean(selectedScoreIndex) ||
         Boolean(selectedWikiIndex) ||
         (
-            Boolean(renderableAnnotationIndex) &&
+            Boolean(renderedAnnotationIndex) &&
             isOverlayingAnnotation
         )
     )

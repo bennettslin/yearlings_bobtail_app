@@ -21,12 +21,12 @@ const mapStateToProps = ({
     canMainRender,
     selectedOverviewIndex,
     deviceStore: { deviceIndex },
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canMainRender,
     selectedOverviewIndex,
     deviceIndex,
-    renderableSongIndex
+    renderedSongIndex
 })
 
 class Overview extends Component {
@@ -36,7 +36,7 @@ class Overview extends Component {
         canMainRender: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         handleOverviewToggle: PropTypes.func.isRequired
@@ -62,10 +62,10 @@ class Overview extends Component {
     render() {
         const { deviceIndex,
                 selectedOverviewIndex,
-                renderableSongIndex } = this.props,
+                renderedSongIndex } = this.props,
 
-            overviewText = getSongOverview(renderableSongIndex),
-            isLogue = getSongIsLogue(renderableSongIndex),
+            overviewText = getSongOverview(renderedSongIndex),
+            isLogue = getSongIsLogue(renderedSongIndex),
 
             // TODO: Revisit whether to show toggle in logue when it is heightless lyric.
             /**

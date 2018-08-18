@@ -13,10 +13,10 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canCarouselRender,
-    renderableSongIndex
+    renderedSongIndex
 })
 
 /*************
@@ -28,7 +28,7 @@ class CarouselAnnotation extends Component {
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         annotationIndex: PropTypes.number.isRequired,
@@ -85,7 +85,7 @@ class CarouselAnnotation extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                renderableSongIndex,
+                renderedSongIndex,
                 ...other
 
             } = this.props,
@@ -93,7 +93,7 @@ class CarouselAnnotation extends Component {
             { annotationIndex } = other,
 
             annotationObject = getAnnotationObject(
-                renderableSongIndex,
+                renderedSongIndex,
                 annotationIndex
             ),
 

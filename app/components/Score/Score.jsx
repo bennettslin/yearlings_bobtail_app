@@ -10,16 +10,16 @@ import { setIsScoreLoaded } from 'flux/actions/load'
 import { getSongScore } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
-    renderableSongIndex
+    renderedSongIndex
 })
 
 class Score extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         setScoreRef: PropTypes.func.isRequired
@@ -34,8 +34,8 @@ class Score extends Component {
     }
 
     render() {
-        const { renderableSongIndex } = this.props,
-            score = getSongScore(renderableSongIndex)
+        const { renderedSongIndex } = this.props,
+            score = getSongScore(renderedSongIndex)
 
         return (
             <div

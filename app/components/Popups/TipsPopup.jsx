@@ -9,18 +9,18 @@ import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     canMainRender,
-    renderedStore: { renderableSongIndex },
+    renderedStore: { renderedSongIndex },
     selectedTipsIndex
 }) => ({
     canMainRender,
-    renderableSongIndex,
+    renderedSongIndex,
     selectedTipsIndex
 })
 
 const tipsPopupPropTypes = {
     // Through Redux.
     canMainRender: PropTypes.bool.isRequired,
-    renderableSongIndex: PropTypes.number.isRequired,
+    renderedSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -33,13 +33,13 @@ TipsPopup = ({
     /* eslint-enable no-unused-vars */
 
     canMainRender,
-    renderableSongIndex,
+    renderedSongIndex,
     selectedTipsIndex,
     handlePopupContainerClick,
 
 ...other }) => {
 
-    const isLogue = getSongIsLogue(renderableSongIndex),
+    const isLogue = getSongIsLogue(renderedSongIndex),
 
         isVisible = canMainRender && !isLogue && !selectedTipsIndex
 

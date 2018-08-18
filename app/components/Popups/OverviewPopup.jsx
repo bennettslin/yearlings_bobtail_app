@@ -12,12 +12,12 @@ import { getSongIsLogue } from 'helpers/dataHelper'
 const mapStateToProps = ({
     canMainRender,
     selectedOverviewIndex,
-    renderedStore: { renderableSongIndex },
+    renderedStore: { renderedSongIndex },
     selectedTipsIndex
 }) => ({
     canMainRender,
     selectedOverviewIndex,
-    renderableSongIndex,
+    renderedSongIndex,
     selectedTipsIndex
 })
 
@@ -25,7 +25,7 @@ const overviewPopupPropTypes = {
     // Through Redux.
     canMainRender: PropTypes.bool.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
-    renderableSongIndex: PropTypes.number.isRequired,
+    renderedSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -43,13 +43,13 @@ OverviewPopup = ({
     isPhone,
     canMainRender,
     selectedOverviewIndex,
-    renderableSongIndex,
+    renderedSongIndex,
     selectedTipsIndex,
     handlePopupContainerClick,
 
 ...other }) => {
 
-    const isLogue = getSongIsLogue(renderableSongIndex),
+    const isLogue = getSongIsLogue(renderedSongIndex),
 
         // Only position absolute when in main and is phone.
         noAbsoluteFull = isLogue || !isPhone

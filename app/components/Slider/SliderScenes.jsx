@@ -12,10 +12,10 @@ import {
 
 const mapStateToProps = ({
     canVerseRender,
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canVerseRender,
-    renderableSongIndex
+    renderedSongIndex
 })
 
 class SliderScenes extends Component {
@@ -23,7 +23,7 @@ class SliderScenes extends Component {
     static propTypes = {
         // Through Redux.
         canVerseRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired
+        renderedSongIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -31,9 +31,9 @@ class SliderScenes extends Component {
     }
 
     render() {
-        const { renderableSongIndex } = this.props,
-            totalTime = getSongTotalTime(renderableSongIndex),
-            songSceneConfigs = getSongSceneConfigs(renderableSongIndex)
+        const { renderedSongIndex } = this.props,
+            totalTime = getSongTotalTime(renderedSongIndex),
+            songSceneConfigs = getSongSceneConfigs(renderedSongIndex)
 
         return (
             <div className="SliderScenes">

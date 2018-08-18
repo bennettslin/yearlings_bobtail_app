@@ -14,8 +14,8 @@ import { getArrayOfLength } from 'helpers/generalHelper'
 const mapStateToProps = ({
     canCarouselRender,
     renderedStore: {
-        renderableSongIndex,
-        renderableAnnotationIndex
+        renderedSongIndex,
+        renderedAnnotationIndex
     },
     responsiveStore: { isHiddenCarouselNav },
     accessedAnnotationIndex,
@@ -26,8 +26,8 @@ const mapStateToProps = ({
     isLyricExpanded
 }) => ({
     canCarouselRender,
-    renderableSongIndex,
-    renderableAnnotationIndex,
+    renderedSongIndex,
+    renderedAnnotationIndex,
     isHiddenCarouselNav,
     accessedAnnotationIndex,
     selectedAccessIndex,
@@ -43,8 +43,8 @@ class Carousel extends Component {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        renderedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
@@ -127,8 +127,8 @@ class Carousel extends Component {
                 /* eslint-enable no-unused-vars */
 
                 isHiddenCarouselNav,
-                renderableSongIndex,
-                renderableAnnotationIndex,
+                renderedSongIndex,
+                renderedAnnotationIndex,
                 accessedAnnotationIndex,
                 selectedAccessIndex,
                 selectedCarouselNavIndex,
@@ -153,7 +153,7 @@ class Carousel extends Component {
             return null
         }
 
-        const annotationsCount = getAnnotationsCount(renderableSongIndex),
+        const annotationsCount = getAnnotationsCount(renderedSongIndex),
 
             /**
              * Dynamically create array of just indices. Carousel annotation
@@ -195,7 +195,7 @@ class Carousel extends Component {
                                 annotationIndex === accessedAnnotationIndex,
 
                             isSelected =
-                                annotationIndex === renderableAnnotationIndex
+                                annotationIndex === renderedAnnotationIndex
 
                         return (
                             <CarouselAnnotation {...other}

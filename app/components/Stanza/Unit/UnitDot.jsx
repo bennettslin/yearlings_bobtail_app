@@ -16,7 +16,7 @@ const mapStateToProps = ({
     canLyricRender,
     accessedAnnotationIndex,
     selectedAccessIndex,
-    renderedStore: { renderableAnnotationIndex },
+    renderedStore: { renderedAnnotationIndex },
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex,
@@ -25,7 +25,7 @@ const mapStateToProps = ({
     canLyricRender,
     accessedAnnotationIndex,
     selectedAccessIndex,
-    renderableAnnotationIndex,
+    renderedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex,
@@ -42,7 +42,7 @@ class UnitDot extends Component {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
+        renderedAnnotationIndex: PropTypes.number.isRequired,
         selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
@@ -64,10 +64,10 @@ class UnitDot extends Component {
 
     _handleDotButtonClick = (e) => {
         const { dotStanzaObject,
-                renderableAnnotationIndex } = this.props,
+                renderedAnnotationIndex } = this.props,
             { annotationIndex } = dotStanzaObject,
 
-            isSelected = annotationIndex === renderableAnnotationIndex
+            isSelected = annotationIndex === renderedAnnotationIndex
 
         if (!isSelected) {
             this.props.handleLyricAnnotationSelect(e, annotationIndex)
@@ -87,7 +87,7 @@ class UnitDot extends Component {
         const {
                 isLastUnit,
                 dotStanzaObject,
-                renderableAnnotationIndex,
+                renderedAnnotationIndex,
                 accessedAnnotationIndex,
                 selectedAccessIndex,
                 selectedCarouselNavIndex,
@@ -115,7 +115,7 @@ class UnitDot extends Component {
                 annotationIndex === accessedAnnotationIndex,
 
             isSelected =
-                annotationIndex === renderableAnnotationIndex
+                annotationIndex === renderedAnnotationIndex
 
         return (
             <UnitDotView

@@ -14,16 +14,16 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 const mapStateToProps = ({
     canLyricRender,
     renderedStore: {
-        renderableSongIndex,
-        renderableVerseIndex
+        renderedSongIndex,
+        renderedVerseIndex
     },
     sliderStore: { sliderVerseIndex },
     isVerseBarAbove,
     isVerseBarBelow
 }) => ({
     canLyricRender,
-    renderableSongIndex,
-    renderableVerseIndex,
+    renderedSongIndex,
+    renderedVerseIndex,
     sliderVerseIndex,
     isVerseBarAbove,
     isVerseBarBelow
@@ -38,8 +38,8 @@ class VerseBar extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
-        renderableVerseIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        renderedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
@@ -113,8 +113,8 @@ class VerseBar extends Component {
 
             isAbove,
 
-            renderableSongIndex,
-            renderableVerseIndex,
+            renderedSongIndex,
+            renderedVerseIndex,
             sliderVerseIndex,
 
             handleVerseBarWheel,
@@ -123,9 +123,9 @@ class VerseBar extends Component {
 
             verseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex :
-                renderableVerseIndex,
+                renderedVerseIndex,
 
-            verseObject = getVerseObject(renderableSongIndex, verseIndex)
+            verseObject = getVerseObject(renderedSongIndex, verseIndex)
 
         // Logue will not have verse object.
         return Boolean(verseObject) && (

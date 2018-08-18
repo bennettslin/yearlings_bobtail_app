@@ -12,10 +12,10 @@ import { VERSE_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderedStore: { renderableSongIndex }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,
-    renderableSongIndex
+    renderedSongIndex
 })
 
 /*************
@@ -32,7 +32,7 @@ class Verse extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseObject: PropTypes.object.isRequired,
@@ -94,7 +94,7 @@ class Verse extends Component {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                renderableSongIndex,
+                renderedSongIndex,
                 canLyricRender,
                 handleVerseInteractivate,
                 setVerseRef,

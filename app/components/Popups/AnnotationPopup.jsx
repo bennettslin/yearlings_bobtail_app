@@ -15,7 +15,7 @@ const mapStateToProps = ({
     canCarouselRender,
     deviceStore: { deviceIndex },
     isLyricExpanded,
-    renderedStore: { renderableAnnotationIndex },
+    renderedStore: { renderedAnnotationIndex },
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
@@ -24,7 +24,7 @@ const mapStateToProps = ({
     canCarouselRender,
     deviceIndex,
     isLyricExpanded,
-    renderableAnnotationIndex,
+    renderedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
@@ -39,7 +39,7 @@ class AnnotationPopup extends Component {
         deviceIndex: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
 
-        renderableAnnotationIndex: PropTypes.number.isRequired,
+        renderedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedScoreIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
@@ -54,22 +54,22 @@ class AnnotationPopup extends Component {
 
     state = {
         // Ensures that annotation index persists as popup is closing.
-        annotationIndex: this.props.renderableAnnotationIndex
+        annotationIndex: this.props.renderedAnnotationIndex
     }
 
     componentDidUpdate(prevProps) {
         const {
-            renderableAnnotationIndex,
+            renderedAnnotationIndex,
             selectedCarouselNavIndex
         } = this.props
 
         if (
             // If there is a selected annotation...
-            renderableAnnotationIndex &&
+            renderedAnnotationIndex &&
             (
                 // ... and annotation index has changed...
-                renderableAnnotationIndex !==
-                prevProps.renderableAnnotationIndex
+                renderedAnnotationIndex !==
+                prevProps.renderedAnnotationIndex
             ) || (
                 // ... or toggling from carousel to popup...
                 !selectedCarouselNavIndex &&
@@ -78,7 +78,7 @@ class AnnotationPopup extends Component {
         ) {
             // ... then persist the popup annotation index.
             this.setState({
-                annotationIndex: renderableAnnotationIndex
+                annotationIndex: renderedAnnotationIndex
             })
         }
 
@@ -94,7 +94,7 @@ class AnnotationPopup extends Component {
              * all.
              */
             this.setState({
-                annotationIndex: renderableAnnotationIndex
+                annotationIndex: renderedAnnotationIndex
             })
         }
     }
@@ -110,7 +110,7 @@ class AnnotationPopup extends Component {
             isLyricExpanded,
             inMain,
 
-            renderableAnnotationIndex,
+            renderedAnnotationIndex,
             selectedCarouselNavIndex,
             selectedScoreIndex,
             selectedTitleIndex,
@@ -139,7 +139,7 @@ class AnnotationPopup extends Component {
         } else {
             const isVisible =
                     canCarouselRender &&
-                    Boolean(renderableAnnotationIndex) &&
+                    Boolean(renderedAnnotationIndex) &&
 
                     /**
                      * If an annotation is selected, always show in popup if

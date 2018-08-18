@@ -15,8 +15,8 @@ import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 const mapStateToProps = ({
     canLyricRender,
     renderedStore: {
-        renderableSongIndex,
-        renderableAnnotationIndex
+        renderedSongIndex,
+        renderedAnnotationIndex
     },
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
@@ -27,10 +27,10 @@ const mapStateToProps = ({
     isLyricExpanded
 }) => ({
     canLyricRender,
-    renderableAnnotationIndex,
+    renderedAnnotationIndex,
 
     // This is just to know when to update.
-    renderableSongIndex,
+    renderedSongIndex,
 
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
@@ -46,8 +46,8 @@ class TextLyricAnchor extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedAnnotationIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
@@ -87,13 +87,13 @@ class TextLyricAnchor extends Component {
     _handleAnchorClick = (e) => {
 
         const {
-                renderableAnnotationIndex,
+                renderedAnnotationIndex,
                 annotationIndex,
                 wikiIndex,
                 wikiAnnotationIndex
             } = this.props,
 
-            isSelected = annotationIndex === renderableAnnotationIndex,
+            isSelected = annotationIndex === renderedAnnotationIndex,
 
             /**
              * If it's an annotation, then the argument passed to the
@@ -125,14 +125,14 @@ class TextLyricAnchor extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canLyricRender,
-                renderableSongIndex,
+                renderedSongIndex,
                 handleAnchorClick,
                 setLyricAnnotationRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
                 annotationIndex,
-                renderableAnnotationIndex,
+                renderedAnnotationIndex,
                 accessedAnnotationIndex,
                 accessedAnnotationAnchorIndex,
 
@@ -150,7 +150,7 @@ class TextLyricAnchor extends Component {
 
             ...other } = this.props,
 
-            isSelected = annotationIndex === renderableAnnotationIndex,
+            isSelected = annotationIndex === renderedAnnotationIndex,
 
             isWikiTextAnchor = Boolean(wikiIndex)
 
@@ -180,10 +180,10 @@ class TextLyricAnchor extends Component {
          * out for good.
          */
         if (isAccessed) {
-            if (renderableAnnotationIndex) {
+            if (renderedAnnotationIndex) {
                 isAccessed =
                     // Check that we're in the annotation that's selected.
-                    renderableAnnotationIndex === wikiAnnotationIndex &&
+                    renderedAnnotationIndex === wikiAnnotationIndex &&
 
                     accessedAnnotationAnchorIndex === wikiIndex
 

@@ -17,14 +17,14 @@ import {
 const mapStateToProps = ({
     isLyricExpanded,
     canLyricRender,
-    renderedStore: { renderableAnnotationIndex },
+    renderedStore: { renderedAnnotationIndex },
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys
 }) => ({
     isLyricExpanded,
     canLyricRender,
-    renderableAnnotationIndex,
+    renderedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys
@@ -36,7 +36,7 @@ class LyricAccess extends Component {
 
         // From Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
+        renderedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired
@@ -54,7 +54,7 @@ class LyricAccess extends Component {
 
         const {
                 isLyricExpanded,
-                renderableAnnotationIndex,
+                renderedAnnotationIndex,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 selectedDotKeys
@@ -67,7 +67,7 @@ class LyricAccess extends Component {
 
             showLeftRight = Boolean(
                 // Must have at least one selected dot, and no selected annotation.
-                hasSelectedDots && !renderableAnnotationIndex && (
+                hasSelectedDots && !renderedAnnotationIndex && (
                     (
                         // Must show carousel and not have dots section open...
                         selectedCarouselNavIndex &&
@@ -81,7 +81,7 @@ class LyricAccess extends Component {
 
             showUpDown = Boolean(
                 !selectedDotsIndex &&
-                !renderableAnnotationIndex
+                !renderedAnnotationIndex
             )
 
         return (

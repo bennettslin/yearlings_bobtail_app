@@ -14,11 +14,11 @@ import { getAccessibleAnnotationAnchorsLength } from './annotationHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderedStore: { renderableSongIndex },
+    renderedStore: { renderedSongIndex },
     selectedDotKeys
 }) => ({
     canCarouselRender,
-    renderableSongIndex,
+    renderedSongIndex,
     selectedDotKeys
 })
 
@@ -31,7 +31,7 @@ class Annotation extends Component {
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
@@ -66,7 +66,7 @@ class Annotation extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                renderableSongIndex,
+                renderedSongIndex,
                 selectedDotKeys,
                 ...other
             } = this.props,
@@ -81,7 +81,7 @@ class Annotation extends Component {
              * helper.
              */
             annotationObject = getAnnotationObject(
-                renderableSongIndex,
+                renderedSongIndex,
                 annotationIndex
             )
 
@@ -101,7 +101,7 @@ class Annotation extends Component {
                      */
                     accessibleAnnotationAnchorsLength:
                         getAccessibleAnnotationAnchorsLength({
-                            songIndex: renderableSongIndex,
+                            songIndex: renderedSongIndex,
                             annotationIndex,
                             dotKeys: selectedDotKeys
                         })
