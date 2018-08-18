@@ -4,7 +4,7 @@ import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, A
 import { IsPlayingReducer } from './audio'
 import { DeviceStoreReducer } from './device'
 import { AppMountedReducer, CanPlayThroughsReducer, IsScoreLoadedReducer } from './load'
-import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanPresencesRenderReducer } from './render'
+import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanVerseRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanPresencesRenderReducer } from './render'
 import { RenderableStoreReducer } from './renderable'
 import { ResponsiveStoreReducer } from './responsive'
 import { CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
@@ -46,8 +46,8 @@ const rootReducer = combineReducers({
     isSongChangeRenderable: isSongChangeRenderableReducer,
 
     canTheatreRender: CanTheatreRenderReducer,
+    canVerseRender: CanVerseRenderReducer,
     canMainRender: CanMainRenderReducer,
-    canSliderRender: CanSliderRenderReducer,
     canLyricRender: CanLyricRenderReducer,
     canCarouselRender: CanCarouselRenderReducer,
     canPresencesRender: CanPresencesRenderReducer,

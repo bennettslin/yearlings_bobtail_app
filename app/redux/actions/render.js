@@ -1,11 +1,10 @@
 // Actions for state of this user session.
-
 import {
     IS_SONG_CHANGE_RENDERABLE,
     IS_WINDOW_RESIZE_RENDERABLE,
     CAN_THEATRE_RENDER,
+    CAN_VERSE_RENDER,
     CAN_MAIN_RENDER,
-    CAN_SLIDER_RENDER,
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
     CAN_PRESENCES_RENDER
@@ -32,18 +31,18 @@ export const setCanRenderTheatre = (
     payload: canRenderTheatre
 })
 
+export const setCanRenderVerse = (
+    canRenderVerse = false
+) => ({
+    type: CAN_VERSE_RENDER,
+    payload: canRenderVerse
+})
+
 export const setCanRenderMain = (
     canRenderMain = false
 ) => ({
     type: CAN_MAIN_RENDER,
     payload: canRenderMain
-})
-
-export const setCanRenderSlider = (
-    canRenderSlider = false
-) => ({
-    type: CAN_SLIDER_RENDER,
-    payload: canRenderSlider
 })
 
 export const setCanRenderLyric = (

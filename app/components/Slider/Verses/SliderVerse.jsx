@@ -8,16 +8,16 @@ import cx from 'classnames'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    canSliderRender
+    canVerseRender
 }) => ({
-    canSliderRender
+    canVerseRender
 })
 
 class SliderVerse extends Component {
 
     static propTypes = {
         // Through Redux.
-        canSliderRender: PropTypes.bool.isRequired,
+        canVerseRender: PropTypes.bool.isRequired,
 
         // From parent.
         logicSelectors: PropTypes.string.isRequired,
@@ -29,7 +29,7 @@ class SliderVerse extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canSliderRender && !getPropsAreShallowEqual({
+        return nextProps.canVerseRender && !getPropsAreShallowEqual({
             props: this.props,
             nextProps
         })

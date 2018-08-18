@@ -11,16 +11,16 @@ import SliderTimes from './Times/SliderTimes'
 import SliderAccess from './SliderAccess'
 
 const mapStateToProps = ({
-    canSliderRender
+    canVerseRender
 }) => ({
-    canSliderRender
+    canVerseRender
 })
 
 class Slider extends Component {
 
     static propTypes = {
         // Through Redux.
-        canSliderRender: PropTypes.bool.isRequired,
+        canVerseRender: PropTypes.bool.isRequired,
 
         // From parent.
         handleSliderTouchBegin: PropTypes.func.isRequired,
@@ -34,10 +34,10 @@ class Slider extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        const { canSliderRender } = this.props,
-            { canSliderRender: couldRender } = prevProps
+        const { canVerseRender } = this.props,
+            { canVerseRender: couldRender } = prevProps
 
-        if (canSliderRender && !couldRender) {
+        if (canVerseRender && !couldRender) {
             logger.warn('Slider rendered.')
 
             clearTimeout(this.state.waitForShowTimeoutId)
@@ -58,7 +58,7 @@ class Slider extends Component {
                 didRenderTimeoutId
             })
 
-        } else if (couldRender && !canSliderRender) {
+        } else if (couldRender && !canVerseRender) {
 
             this.setState({
                 isShown: false
@@ -81,7 +81,7 @@ class Slider extends Component {
     }
 
     render() {
-        const { canSliderRender } = this.props,
+        const { canVerseRender } = this.props,
             { isShown } = this.state
 
         return (
@@ -90,7 +90,7 @@ class Slider extends Component {
                 className={cx(
                     'Slider',
                     {
-                        'parentIsShown': canSliderRender && isShown
+                        'parentIsShown': canVerseRender && isShown
                     }
                 )}
                 onMouseDown={this._handleTouchDown}

@@ -11,7 +11,7 @@ import { getSongTotalTime } from 'helpers/dataHelper'
 import { getFormattedTime } from 'helpers/formatHelper'
 
 const mapStateToProps = ({
-    canSliderRender,
+    canVerseRender,
     renderableStore: {
         renderableSongIndex
     },
@@ -23,7 +23,7 @@ const mapStateToProps = ({
         sliderRatio
     }
 }) => ({
-    canSliderRender,
+    canVerseRender,
     renderableSongIndex,
     selectedTime,
     isSliderTouched,
@@ -34,7 +34,7 @@ class SliderTimes extends Component {
 
     static propTypes = {
         // Through Redux.
-        canSliderRender: PropTypes.bool.isRequired,
+        canVerseRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
@@ -42,7 +42,7 @@ class SliderTimes extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canSliderRender
+        return nextProps.canVerseRender
     }
 
     render() {

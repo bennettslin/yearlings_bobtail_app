@@ -11,7 +11,7 @@ import { connect } from 'react-redux'
 import {
     setCanRenderTheatre,
     setCanRenderMain,
-    setCanRenderSlider,
+    setCanRenderVerse,
     setCanRenderLyric,
     setCanRenderCarousel
 } from '../../redux/actions/render'
@@ -66,7 +66,7 @@ class Live extends Component {
 
             logger.warn('Live unrenderable from song change.')
             this.props.setCanRenderMain(false)
-            this.props.setCanRenderSlider(false)
+            this.props.setCanRenderVerse(false)
             this.props.setCanRenderLyric(false)
             this.props.setCanRenderCarousel(false)
         }
@@ -116,7 +116,7 @@ class Live extends Component {
     }
 
     mainDidRender = () => {
-        this.props.setCanRenderSlider(true)
+        this.props.setCanRenderVerse(true)
     }
 
     sliderDidRender = () => {
@@ -193,7 +193,7 @@ Live.propTypes = {
 
     setCanRenderTheatre: PropTypes.func.isRequired,
     setCanRenderMain: PropTypes.func.isRequired,
-    setCanRenderSlider: PropTypes.func.isRequired,
+    setCanRenderVerse: PropTypes.func.isRequired,
     setCanRenderLyric: PropTypes.func.isRequired,
     setCanRenderCarousel: PropTypes.func.isRequired,
 
@@ -248,7 +248,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setCanRenderTheatre,
         setCanRenderMain,
-        setCanRenderSlider,
+        setCanRenderVerse,
         setCanRenderLyric,
         setCanRenderCarousel
     }, dispatch)

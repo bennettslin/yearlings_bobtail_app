@@ -11,10 +11,10 @@ import {
 import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
-    canSliderRender,
+    canVerseRender,
     renderableStore: { renderableSongIndex }
 }) => ({
-    canSliderRender,
+    canVerseRender,
     renderableSongIndex
 })
 
@@ -22,12 +22,12 @@ class SliderAccess extends Component {
 
     static propTypes = {
         // From Redux.
-        canSliderRender: PropTypes.bool.isRequired,
+        canVerseRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canSliderRender
+        return nextProps.canVerseRender
     }
 
     render() {

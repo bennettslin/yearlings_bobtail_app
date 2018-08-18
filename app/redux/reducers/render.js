@@ -4,7 +4,7 @@ import {
     IS_WINDOW_RESIZE_RENDERABLE,
     CAN_THEATRE_RENDER,
     CAN_MAIN_RENDER,
-    CAN_SLIDER_RENDER,
+    CAN_VERSE_RENDER,
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
     CAN_PRESENCES_RENDER
@@ -44,23 +44,23 @@ export const CanTheatreRenderReducer = (
             return state
     }
 }
+export const CanVerseRenderReducer = (
+    state = false,
+    action
+) => {
+    switch (action.type) {
+        case CAN_VERSE_RENDER:
+            return action.payload
+        default:
+            return state
+    }
+}
 export const CanMainRenderReducer = (
     state = false,
     action
 ) => {
     switch (action.type) {
         case CAN_MAIN_RENDER:
-            return action.payload
-        default:
-            return state
-    }
-}
-export const CanSliderRenderReducer = (
-    state = false,
-    action
-) => {
-    switch (action.type) {
-        case CAN_SLIDER_RENDER:
             return action.payload
         default:
             return state
