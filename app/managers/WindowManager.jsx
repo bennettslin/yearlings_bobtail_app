@@ -5,19 +5,8 @@ import { connect } from 'react-redux'
 import debounce from 'debounce'
 
 import { setIsWindowResizeRenderable } from 'flux/actions/render'
-
 import { updateDeviceStore } from 'flux/actions/device'
-
-import {
-    setIsHeightlessLyricColumn,
-    setIsHiddenCarouselNav,
-    setIsMobileWiki,
-    setIsScoresTipsInMain,
-    setIsTwoRowMenu,
-    setShowOneOfTwoLyricColumns,
-    setShowShrunkNavIcon,
-    setShowSingleBookColumn
-} from 'flux/actions/responsive'
+import { updateResponsiveStore } from 'flux/actions/responsive'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -44,14 +33,7 @@ class WindowManager extends Component {
         showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
         updateDeviceStore: PropTypes.func.isRequired,
-        setIsTwoRowMenu: PropTypes.func.isRequired,
-        setIsScoresTipsInMain: PropTypes.func.isRequired,
-        setIsHeightlessLyricColumn: PropTypes.func.isRequired,
-        setShowOneOfTwoLyricColumns: PropTypes.func.isRequired,
-        setIsHiddenCarouselNav: PropTypes.func.isRequired,
-        setShowSingleBookColumn: PropTypes.func.isRequired,
-        setShowShrunkNavIcon: PropTypes.func.isRequired,
-        setIsMobileWiki: PropTypes.func.isRequired,
+        updateResponsiveStore: PropTypes.func.isRequired,
 
         // From parent.
         deselectAnnotation: PropTypes.func.isRequired,
@@ -96,6 +78,7 @@ class WindowManager extends Component {
               windowWidth } = resizeWindow(e ? e.target : undefined),
 
             isLyricExpandable = getIsLyricExpandable(deviceIndex),
+
             isHeightlessLyricColumn = getIsHeightlessLyricColumn({
                 deviceIndex,
                 windowHeight,
@@ -136,34 +119,35 @@ class WindowManager extends Component {
             })
         })
 
-        this.props.setIsHeightlessLyricColumn(isHeightlessLyricColumn)
-        this.props.setShowOneOfTwoLyricColumns(showOneOfTwoLyricColumns)
-
-        this.props.setIsHiddenCarouselNav(getIsHiddenCarouselNav({
-            deviceIndex,
-            windowHeight,
-            windowWidth
-        }))
-        this.props.setIsMobileWiki(getIsMobileWiki({
-            deviceIndex,
-            windowWidth
-        }))
-        this.props.setIsScoresTipsInMain(getIsScoresTipsInMain({
-            deviceIndex,
-            windowWidth
-        }))
-        this.props.setIsTwoRowMenu(getIsTwoRowMenu({
-            deviceIndex,
-            windowWidth
-        }))
-        this.props.setShowSingleBookColumn(getShowSingleBookColumn({
-            deviceIndex,
-            windowWidth
-        }))
-        this.props.setShowShrunkNavIcon(getShowShrunkNavIcon({
-            deviceIndex,
-            windowWidth
-        }))
+        this.props.updateResponsiveStore({
+            isHeightlessLyricColumn,
+            showOneOfTwoLyricColumns,
+            isHiddenCarouselNav: getIsHiddenCarouselNav({
+                deviceIndex,
+                windowHeight,
+                windowWidth
+            }),
+            isMobileWiki: getIsMobileWiki({
+                deviceIndex,
+                windowWidth
+            }),
+            isScoresTipsInMain: getIsScoresTipsInMain({
+                deviceIndex,
+                windowWidth
+            }),
+            isTwoRowMenu: getIsTwoRowMenu({
+                deviceIndex,
+                windowWidth
+            }),
+            showShrunkNavIcon: getShowShrunkNavIcon({
+                deviceIndex,
+                windowWidth
+            }),
+            showSingleBookColumn: getShowSingleBookColumn({
+                deviceIndex,
+                windowWidth
+            })
+        })
 
         /**
          * Force collapse of lyric in state if not expandable, or if heightless
@@ -212,7 +196,7 @@ class WindowManager extends Component {
 const mapStateToProps = ({
     appMounted,
     selectedStore: { selectedSongIndex },
-    showOneOfTwoLyricColumns
+    responsiveStore: { showOneOfTwoLyricColumns }
 }) => ({
     appMounted,
     selectedSongIndex,
@@ -222,15 +206,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateDeviceStore,
-        setIsWindowResizeRenderable,
-        setIsTwoRowMenu,
-        setIsScoresTipsInMain,
-        setIsHeightlessLyricColumn,
-        setShowOneOfTwoLyricColumns,
-        setIsHiddenCarouselNav,
-        setShowSingleBookColumn,
-        setShowShrunkNavIcon,
-        setIsMobileWiki
+        updateResponsiveStore,
+        setIsWindowResizeRenderable
     }, dispatch)
 )
 

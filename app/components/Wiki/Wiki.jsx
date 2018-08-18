@@ -14,19 +14,19 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 // TODO: If loading time is too long, show page with a "There was a problem connecting to Wikipedia. Try again?"
 
 const mapStateToProps = ({
+    responsiveStore: { isMobileWiki },
     selectedStore: {
         selectedAnnotationIndex,
         selectedSongIndex
     },
     selectedWikiIndex,
     carouselAnnotationIndex,
-    isMobileWiki
 }) => ({
+    isMobileWiki,
     selectedSongIndex,
     selectedWikiIndex,
     selectedAnnotationIndex,
-    carouselAnnotationIndex,
-    isMobileWiki
+    carouselAnnotationIndex
 })
 
 class WikiSection extends Component {

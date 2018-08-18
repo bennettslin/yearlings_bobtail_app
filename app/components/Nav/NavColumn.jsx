@@ -9,7 +9,7 @@ import NavBookToggle from './Book/NavBookToggle'
 import NavBookLogue from './Book/NavBookLogue'
 
 const mapStateToProps = ({
-    showSingleBookColumn,
+    responsiveStore: { showSingleBookColumn },
     shownBookColumnIndex
 }) => ({
     showSingleBookColumn,

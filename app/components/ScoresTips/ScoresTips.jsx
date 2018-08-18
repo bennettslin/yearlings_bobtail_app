@@ -24,13 +24,13 @@ import {
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
+    responsiveStore: { isScoresTipsInMain },
     isScoreLoaded,
-    isScoresTipsInMain,
     selectedTipsIndex
 }) => ({
     deviceIndex,
-    isScoreLoaded,
     isScoresTipsInMain,
+    isScoreLoaded,
     selectedTipsIndex
 })
 

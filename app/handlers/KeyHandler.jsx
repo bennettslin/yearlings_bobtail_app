@@ -679,7 +679,7 @@ class KeyHandler extends Component {
 }
 
 export default connect(({
-    isHeightlessLyricColumn,
+    responsiveStore: { isHeightlessLyricColumn },
     isLyricExpanded,
     selectedStore: {
         selectedSongIndex,

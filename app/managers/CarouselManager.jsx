@@ -91,14 +91,14 @@ class CarouselManager extends Component {
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
-    isHiddenCarouselNav,
+    responsiveStore: { isHiddenCarouselNav },
+    selectedStore: { selectedSongIndex },
     selectedCarouselNavIndex,
-    selectedStore: { selectedSongIndex }
 }) => ({
     deviceIndex,
     isHiddenCarouselNav,
-    selectedCarouselNavIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    selectedCarouselNavIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

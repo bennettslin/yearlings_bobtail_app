@@ -7,8 +7,10 @@ import { connect } from 'react-redux'
 import NavColumn from './NavColumn'
 
 const mapStateToProps = ({
-    isHiddenCarouselNav,
-    showSingleBookColumn
+    responsiveStore: {
+        isHiddenCarouselNav,
+        showSingleBookColumn
+    },
 }) => ({
     isHiddenCarouselNav,
     showSingleBookColumn

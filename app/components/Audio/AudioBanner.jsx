@@ -11,7 +11,7 @@ import { getSongTitle } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    isTwoRowMenu,
+    responsiveStore: { isTwoRowMenu },
     selectedStore: { selectedSongIndex }
 }) => ({
     isTwoRowMenu,

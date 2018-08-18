@@ -19,7 +19,7 @@ import { getCeilingHeight,
 
 const mapStateToProps = ({
     canTheatreRender,
-    isHeightlessLyricColumn,
+    responsiveStore: { isHeightlessLyricColumn },
     deviceStore: {
         deviceIndex,
         windowHeight,

@@ -1029,6 +1029,7 @@ class EventHandler extends Component {
 }
 
 const mapStateToProps = ({
+    responsiveStore: { isHeightlessLyricColumn },
     selectedStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -1043,13 +1044,13 @@ const mapStateToProps = ({
     selectedWikiIndex,
     interactivatedVerseIndex,
     accessedAnnotationIndex,
-    isHeightlessLyricColumn,
     isLyricExpanded,
     sliderStore: {
         isSliderMoving,
         isSliderTouched
     }
 }) => ({
+    isHeightlessLyricColumn,
     selectedAdminIndex,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
@@ -1062,7 +1063,6 @@ const mapStateToProps = ({
     selectedWikiIndex,
     interactivatedVerseIndex,
     accessedAnnotationIndex,
-    isHeightlessLyricColumn,
     isLyricExpanded,
     isSliderMoving,
     isSliderTouched

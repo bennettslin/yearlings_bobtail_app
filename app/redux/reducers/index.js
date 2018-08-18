@@ -6,7 +6,7 @@ import { DeviceStoreReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanPresencesRenderReducer } from './render'
 import { RenderableStoreReducer } from './renderable'
-import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
+import { ResponsiveStoreReducer } from './responsive'
 import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
 import { SliderStoreReducer } from './slider'
 import { SelectedStoreReducer, AccessIndexReducer, AdminIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, TipsIndexReducer, TitleIndexReducer, WikiIndexReducer } from './storage'
@@ -14,6 +14,7 @@ import { SelectedStoreReducer, AccessIndexReducer, AdminIndexReducer, AudioOptio
 import {
     DEVICE_STORE,
     RENDERABLE_STORE,
+    RESPONSIVE_STORE,
     SELECTED_STORE,
     SLIDER_STORE
 } from 'constants/state'
@@ -38,14 +39,7 @@ const rootReducer = combineReducers({
     canPlayThroughs: CanPlayThroughsReducer,
     isScoreLoaded: IsScoreLoadedReducer,
 
-    isHeightlessLyricColumn: IsHeightlessLyricColumnReducer,
-    isHiddenCarouselNav: IsHiddenCarouselNavReducer,
-    isMobileWiki: IsMobileWikiReducer,
-    isScoresTipsInMain: IsScoresTipsInMainReducer,
-    isTwoRowMenu: isTwoRowMenuReducer,
-    showOneOfTwoLyricColumns: ShowOneOfTwoLyricColumnsReducer,
-    showShrunkNavIcon: ShowShrunkNavIconReducer,
-    showSingleBookColumn: ShowSingleBookColumnReducer,
+    [RESPONSIVE_STORE]: ResponsiveStoreReducer,
 
     appMounted: AppMountedReducer,
 

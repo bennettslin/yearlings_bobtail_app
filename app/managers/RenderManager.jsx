@@ -3,13 +3,9 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setShowOneOfTwoLyricColumns } from 'flux/actions/responsive'
-
-import {
-    setIsSongChangeRenderable
-} from 'flux/actions/render'
-
+import { setIsSongChangeRenderable } from 'flux/actions/render'
 import { updateRenderableStore } from 'flux/actions/renderable'
+import { updateResponsiveStore } from 'flux/actions/responsive'
 
 import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -26,8 +22,8 @@ class RenderManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         setIsSongChangeRenderable: PropTypes.func.isRequired,
-        setShowOneOfTwoLyricColumns: PropTypes.func.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
+        updateResponsiveStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -86,12 +82,12 @@ class RenderManager extends Component {
          * Determine doublespeaker columns only when lyrics are ready to
          * render.
          */
-        this.props.setShowOneOfTwoLyricColumns(
-            getShowOneOfTwoLyricColumns(
+        this.props.updateResponsiveStore({
+            showOneOfTwoLyricColumns: getShowOneOfTwoLyricColumns(
                 selectedSongIndex,
                 this.props.deviceIndex
             )
-        )
+        })
     }
 
     _prepareForSongChangeUnrender() {
@@ -139,8 +135,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setIsSongChangeRenderable,
-        setShowOneOfTwoLyricColumns,
-        updateRenderableStore
+        updateRenderableStore,
+        updateResponsiveStore
     }, dispatch)
 )
 

@@ -13,17 +13,15 @@ export const updateSliderStore = ({
     sliderWidth,
     sliderVerseIndex
 
-} = SLIDER_DEFAULTS) => {
+} = SLIDER_DEFAULTS) => ({
 
-    return {
-        type: SLIDER_STORE,
-        payload: {
-            ...is(isSliderMoving) && { isSliderMoving },
-            ...is(isSliderTouched) && { isSliderTouched },
-            ...is(sliderLeft) && { sliderLeft },
-            ...is(sliderRatio) && { sliderRatio },
-            ...is(sliderWidth) && { sliderWidth },
-            ...is(sliderVerseIndex) && { sliderVerseIndex }
-        }
+    type: SLIDER_STORE,
+    payload: {
+        ...is(isSliderMoving) && { isSliderMoving },
+        ...is(isSliderTouched) && { isSliderTouched },
+        ...is(sliderLeft) && { sliderLeft },
+        ...is(sliderRatio) && { sliderRatio },
+        ...is(sliderWidth) && { sliderWidth },
+        ...is(sliderVerseIndex) && { sliderVerseIndex }
     }
-}
+})

@@ -11,7 +11,7 @@ import { LYRIC_EAR_BUTTON_KEY } from 'constants/buttons'
 import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
 
 const mapStateToProps = ({
-    showOneOfTwoLyricColumns,
+    responsiveStore: { showOneOfTwoLyricColumns },
     selectedLyricColumnIndex
 }) => ({
     showOneOfTwoLyricColumns,

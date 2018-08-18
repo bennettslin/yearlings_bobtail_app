@@ -12,7 +12,7 @@ import { getIsLyricExpandable } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
-    isHeightlessLyricColumn,
+    responsiveStore: { isHeightlessLyricColumn },
     isLyricExpanded
 }) => ({
     deviceIndex,

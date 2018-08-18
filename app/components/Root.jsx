@@ -399,7 +399,6 @@ const mapStateToProps = ({
     selectedTitleIndex,
     selectedWikiIndex,
     isLyricExpanded,
-    showOneOfTwoLyricColumns,
     isPlaying,
     deviceStore: { deviceIndex },
     renderableStore: {
@@ -412,10 +411,13 @@ const mapStateToProps = ({
         isSliderMoving,
         sliderVerseIndex
     },
-    isHeightlessLyricColumn,
-    showShrunkNavIcon,
-    isScoresTipsInMain,
-    isTwoRowMenu,
+    responsiveStore: {
+        isHeightlessLyricColumn,
+        showOneOfTwoLyricColumns,
+        isScoresTipsInMain,
+        isTwoRowMenu,
+        showShrunkNavIcon
+    },
     isVerseBarAbove,
     isVerseBarBelow,
     isManualScroll

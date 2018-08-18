@@ -84,15 +84,15 @@ class NavManager extends Component {
 }
 
 const mapStateToProps = ({
-    showSingleBookColumn,
+    responsiveStore: { showSingleBookColumn },
+    selectedStore: { selectedSongIndex },
     shownBookColumnIndex,
-    selectedCarouselNavIndex,
-    selectedStore: { selectedSongIndex }
+    selectedCarouselNavIndex
 }) => ({
     showSingleBookColumn,
+    selectedSongIndex,
     shownBookColumnIndex,
-    selectedCarouselNavIndex,
-    selectedSongIndex
+    selectedCarouselNavIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

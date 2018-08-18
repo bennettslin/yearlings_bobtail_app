@@ -48,6 +48,7 @@ module.exports = {
     RENDERABLE_SCENE_INDEX: 'renderableSceneIndex',
 
     // Responsive.
+    RESPONSIVE_STORE: 'responsiveStore',
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',
     IS_HIDDEN_NAV: 'isHiddenCarouselNav',
     IS_MOBILE_WIKI: 'isMobileWiki',
@@ -59,6 +60,7 @@ module.exports = {
 
     // Session.
     APP_MOUNTED: 'appMounted',
+
     // For selecting a wiki anchor from an unselected carousel annotation.
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',

@@ -10,7 +10,7 @@ import AudioButtons from './AudioButtons'
 import TitleToggle from 'components/Title/TitleToggle'
 
 const mapStateToProps = ({
-    isTwoRowMenu
+    responsiveStore: { isTwoRowMenu }
 }) => ({
     isTwoRowMenu
 })

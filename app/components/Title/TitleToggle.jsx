@@ -12,7 +12,7 @@ import { TITLE_TOGGLE_KEY } from 'constants/access'
 import { TITLE_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    isTwoRowMenu
+    responsiveStore: { isTwoRowMenu }
 }) => ({
     isTwoRowMenu
 })

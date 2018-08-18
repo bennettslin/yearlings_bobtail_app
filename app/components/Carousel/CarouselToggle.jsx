@@ -10,7 +10,7 @@ import { CAROUSEL_TOGGLE_KEY } from 'constants/access'
 import { CAROUSEL_NAV_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    isHiddenCarouselNav,
+    responsiveStore: { isHiddenCarouselNav },
     selectedCarouselNavIndex
 }) => ({
     isHiddenCarouselNav,

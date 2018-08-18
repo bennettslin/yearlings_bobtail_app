@@ -3748,4 +3748,9 @@ module.exports = [
         workedHours: 20,
         neededHours: 20
     },
+    {
+        taskName: `Consolidate responsive store.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

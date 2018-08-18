@@ -16,13 +16,13 @@ import { SHOWN, TIPS_OPTIONS } from 'constants/options'
 const mapStateToProps = ({
     canMainRender,
     renderableStore: { renderableSongIndex },
+    responsiveStore: { isScoresTipsInMain },
     selectedTipsIndex,
-    isScoresTipsInMain
 }) => ({
     canMainRender,
     renderableSongIndex,
-    selectedTipsIndex,
-    isScoresTipsInMain
+    isScoresTipsInMain,
+    selectedTipsIndex
 })
 
 class Tips extends Component {
@@ -31,8 +31,8 @@ class Tips extends Component {
         // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
 
         // From parent.
         handleTipsToggle: PropTypes.func.isRequired

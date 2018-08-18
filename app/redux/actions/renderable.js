@@ -11,15 +11,13 @@ export const updateRenderableStore = ({
     renderableVerseIndex,
     renderableSceneIndex
 
-} = RENDERABLE_DEFAULTS) => {
+} = RENDERABLE_DEFAULTS) => ({
 
-    return {
-        type: RENDERABLE_STORE,
-        payload: {
-            ...is(renderableSongIndex) && { renderableSongIndex },
-            ...is(renderableAnnotationIndex) && { renderableAnnotationIndex },
-            ...is(renderableVerseIndex) && { renderableVerseIndex },
-            ...is(renderableSceneIndex) && { renderableSceneIndex }
-        }
+    type: RENDERABLE_STORE,
+    payload: {
+        ...is(renderableSongIndex) && { renderableSongIndex },
+        ...is(renderableAnnotationIndex) && { renderableAnnotationIndex },
+        ...is(renderableVerseIndex) && { renderableVerseIndex },
+        ...is(renderableSceneIndex) && { renderableSceneIndex }
     }
-}
+})
