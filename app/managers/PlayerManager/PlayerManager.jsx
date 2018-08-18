@@ -368,7 +368,7 @@ class PlayerManager extends Component {
              */
             if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
                 logger.info('Updated time will end player.')
-                this.updatePlayerEnded()
+                this.updatePlayerEnded(currentSessionId)
 
             /**
              * Something weird has happened, so we'll reset the player. This

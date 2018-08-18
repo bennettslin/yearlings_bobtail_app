@@ -1,7 +1,7 @@
 module.exports = [
     {
         taskName: `Fix player bugginess.`,
-        workedHours: 18,
+        workedHours: 19,
         neededHours: 20
     },
 

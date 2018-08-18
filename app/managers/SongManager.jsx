@@ -59,6 +59,12 @@ class SongManager extends Component {
         if (selectedAudioOption === PAUSE_AT_END) {
             this.props.togglePlay()
 
+            // Just select first verse of current song.
+            this.selectSong({
+                selectedSongIndex,
+                selectedVerseIndex: 0
+            })
+
         } else {
 
             /**

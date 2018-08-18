@@ -19,8 +19,9 @@
 
 * Bug: Selecting new verse makes time and verse index out of sync. Have player manager maintain session id to prevent player from updating time after user manual selection. (/)
 
+* Audio options work. (/)
+
 * Should not be able to reselect verse in slider.
 
-* Audio options work at all?
 
 * Player failure modal?

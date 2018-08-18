@@ -303,7 +303,7 @@ class Root extends Component {
                         'RM__verseBarBelow': isVerseBarBelow,
                         'RM__manualScroll': isManualScroll,
                         'RM__bothLyricColumnsShown': !singleShownLyricColumnKey,
-                        'RM__sliderTouched': isSliderTouched,
+                        'RM__sliderTouched': isSliderTouched
                     },
 
                     getPrefixedDotLetterClassNames(
