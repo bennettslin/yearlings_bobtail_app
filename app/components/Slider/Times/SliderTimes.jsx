@@ -12,7 +12,7 @@ import { getFormattedTime } from 'helpers/formatHelper'
 
 const mapStateToProps = ({
     canVerseRender,
-    renderableStore: {
+    renderedStore: {
         renderableSongIndex
     },
     songStore: {

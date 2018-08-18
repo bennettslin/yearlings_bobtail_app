@@ -103,7 +103,7 @@ class LogManager extends Component {
 }
 
 const mapStateToProps = ({
-    renderableStore: {
+    renderedStore: {
         renderableSongIndex,
         renderableVerseIndex,
         renderableAnnotationIndex,

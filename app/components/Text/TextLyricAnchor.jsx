@@ -14,7 +14,7 @@ import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableStore: {
+    renderedStore: {
         renderableSongIndex,
         renderableAnnotationIndex
     },

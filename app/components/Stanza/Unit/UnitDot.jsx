@@ -16,7 +16,7 @@ const mapStateToProps = ({
     canLyricRender,
     accessedAnnotationIndex,
     selectedAccessIndex,
-    renderableStore: { renderableAnnotationIndex },
+    renderedStore: { renderableAnnotationIndex },
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex,

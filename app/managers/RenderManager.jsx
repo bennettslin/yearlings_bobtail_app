@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { setIsSongChangeRenderable } from 'flux/actions/render'
-import { updateRenderableStore } from 'flux/actions/renderable'
+import { updateRenderedStore } from 'flux/actions/rendered'
 import { updateResponsiveStore } from 'flux/actions/responsive'
 
 import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
@@ -22,7 +22,7 @@ class RenderManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         setIsSongChangeRenderable: PropTypes.func.isRequired,
-        updateRenderableStore: PropTypes.func.isRequired,
+        updateRenderedStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -68,7 +68,7 @@ class RenderManager extends Component {
 
         this.props.setIsSongChangeRenderable(true)
 
-        this.props.updateRenderableStore({
+        this.props.updateRenderedStore({
             renderableSongIndex: selectedSongIndex,
             renderableAnnotationIndex: selectedAnnotationIndex,
             renderableVerseIndex: selectedVerseIndex,
@@ -135,7 +135,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setIsSongChangeRenderable,
-        updateRenderableStore,
+        updateRenderedStore,
         updateResponsiveStore
     }, dispatch)
 )

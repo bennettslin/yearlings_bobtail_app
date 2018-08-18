@@ -10,7 +10,7 @@ import { getAnnotationCardWormholeLinksArray } from '../annotationHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderableStore: { renderableSongIndex },
+    renderedStore: { renderableSongIndex },
     selectedAccessIndex,
     accessedAnnotationAnchorIndex
 }) => ({

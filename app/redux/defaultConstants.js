@@ -68,7 +68,7 @@ export const RESPONSIVE_DEFAULTS = {
     [SHOW_SINGLE_BOOK_COLUMN]: false
 }
 
-export const RENDERABLE_DEFAULTS = {
+export const RENDERED_DEFAULTS = {
     [RENDERABLE_SONG_INDEX]: storedSongIndex,
     [RENDERABLE_ANNOTATION_INDEX]: storedAnnotationIndex,
     [RENDERABLE_VERSE_INDEX]: storedVerseIndex,

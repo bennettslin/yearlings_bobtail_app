@@ -15,7 +15,7 @@ const mapStateToProps = ({
     canCarouselRender,
     deviceStore: { deviceIndex },
     isLyricExpanded,
-    renderableStore: { renderableAnnotationIndex },
+    renderedStore: { renderableAnnotationIndex },
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,

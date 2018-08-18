@@ -12,7 +12,7 @@ import {
 
 const mapStateToProps = ({
     canVerseRender,
-    renderableStore: { renderableSongIndex }
+    renderedStore: { renderableSongIndex }
 }) => ({
     canVerseRender,
     renderableSongIndex

@@ -10,7 +10,7 @@ import { getVerseDurationForVerseIndex } from 'helpers/dataHelper'
 // import { getSelectedChildSelector } from './verseTrackerHelper'
 
 const mapStateToProps = ({
-    renderableStore: {
+    renderedStore: {
         renderableSongIndex,
         renderableVerseIndex
     }

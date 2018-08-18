@@ -12,7 +12,7 @@ import { getSongIsLogue } from 'helpers/dataHelper'
 const mapStateToProps = ({
     canMainRender,
     selectedOverviewIndex,
-    renderableStore: { renderableSongIndex },
+    renderedStore: { renderableSongIndex },
     selectedTipsIndex
 }) => ({
     canMainRender,

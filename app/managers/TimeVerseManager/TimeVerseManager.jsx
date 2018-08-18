@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateRenderableStore } from 'flux/actions/renderable'
+import { updateRenderedStore } from 'flux/actions/rendered'
 import { updateSongStore } from 'flux/actions/song'
 
 import { VERSE_SCROLL } from 'constants/dom'
@@ -24,7 +24,7 @@ class TimeVerseManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
 
-        updateRenderableStore: PropTypes.func.isRequired,
+        updateRenderedStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -166,7 +166,7 @@ class TimeVerseManager extends Component {
              * If selecting or changing verse in same song, change index to be
              * rendered right away.
              */
-            this.props.updateRenderableStore({
+            this.props.updateRenderedStore({
                 renderableVerseIndex: selectedVerseIndex,
                 renderableSceneIndex: getSceneIndexForVerseIndex(
                     selectedSongIndex,
@@ -208,7 +208,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateRenderableStore,
+        updateRenderedStore,
         updateSongStore
     }, dispatch)
 )

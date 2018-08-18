@@ -14,7 +14,7 @@ import { getSceneObject } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     canSceneRender,
-    renderableStore: {
+    renderedStore: {
         renderableSongIndex,
         renderableSceneIndex
     }

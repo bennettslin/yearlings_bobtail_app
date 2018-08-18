@@ -17,7 +17,7 @@ import {
 const mapStateToProps = ({
     isLyricExpanded,
     canLyricRender,
-    renderableStore: { renderableAnnotationIndex },
+    renderedStore: { renderableAnnotationIndex },
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys

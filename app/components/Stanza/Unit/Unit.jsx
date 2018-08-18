@@ -18,7 +18,7 @@ import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableStore: { renderableSongIndex }
+    renderedStore: { renderableSongIndex }
 }) => ({
     canLyricRender,
     renderableSongIndex

@@ -21,7 +21,7 @@ const mapStateToProps = ({
     canMainRender,
     selectedOverviewIndex,
     deviceStore: { deviceIndex },
-    renderableStore: { renderableSongIndex }
+    renderedStore: { renderableSongIndex }
 }) => ({
     canMainRender,
     selectedOverviewIndex,

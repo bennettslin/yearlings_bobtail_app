@@ -12,7 +12,7 @@ import { VERSE_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableStore: { renderableSongIndex }
+    renderedStore: { renderableSongIndex }
 }) => ({
     canLyricRender,
     renderableSongIndex

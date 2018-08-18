@@ -13,7 +13,7 @@ import { getArrayOfLength } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderableStore: {
+    renderedStore: {
         renderableSongIndex,
         renderableAnnotationIndex
     },

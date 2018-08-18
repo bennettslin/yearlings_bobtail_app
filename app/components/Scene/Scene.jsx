@@ -24,7 +24,7 @@ import {
 } from './sceneHelper'
 
 const mapStateToProps = ({
-    renderableStore: {
+    renderedStore: {
         renderableSongIndex,
         renderableSceneIndex
     }

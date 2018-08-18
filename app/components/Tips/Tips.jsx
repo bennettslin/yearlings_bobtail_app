@@ -15,7 +15,7 @@ import { SHOWN, TIPS_OPTIONS } from 'constants/options'
 
 const mapStateToProps = ({
     canMainRender,
-    renderableStore: { renderableSongIndex },
+    renderedStore: { renderableSongIndex },
     responsiveStore: { isScoresTipsInMain },
     selectedTipsIndex,
 }) => ({

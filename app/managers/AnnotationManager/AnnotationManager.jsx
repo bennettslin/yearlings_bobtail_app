@@ -8,7 +8,7 @@ import {
     accessAnnotationAnchorIndex
 } from 'flux/actions/access'
 
-import { updateRenderableStore } from 'flux/actions/renderable'
+import { updateRenderedStore } from 'flux/actions/rendered'
 import { updateSongStore } from 'flux/actions/song'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -35,7 +35,7 @@ class AnnotationManager extends Component {
 
         accessAnnotationIndex: PropTypes.func.isRequired,
         accessAnnotationAnchorIndex: PropTypes.func.isRequired,
-        updateRenderableStore: PropTypes.func.isRequired,
+        updateRenderedStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -134,7 +134,7 @@ class AnnotationManager extends Component {
          * be rendered right away.
          */
         if (selectedSongIndex === props.selectedSongIndex) {
-            props.updateRenderableStore({
+            props.updateRenderedStore({
                 renderableAnnotationIndex: selectedAnnotationIndex
             })
         }
@@ -267,7 +267,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         accessAnnotationIndex,
         accessAnnotationAnchorIndex,
-        updateRenderableStore,
+        updateRenderedStore,
         updateSongStore
     }, dispatch)
 )

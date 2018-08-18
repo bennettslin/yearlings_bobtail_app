@@ -401,7 +401,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     isPlaying,
     deviceStore: { deviceIndex },
-    renderableStore: {
+    renderedStore: {
         renderableSongIndex,
         renderableVerseIndex,
         renderableAnnotationIndex,

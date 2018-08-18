@@ -43,7 +43,7 @@ module.exports = {
     CAN_SCENE_RENDER: 'canSceneRender',
 
     // Renderable.
-    RENDERABLE_STORE: 'renderableStore',
+    RENDERED_STORE: 'renderedStore',
     RENDERABLE_SONG_INDEX: 'renderableSongIndex',
     RENDERABLE_ANNOTATION_INDEX: 'renderableAnnotationIndex',
     RENDERABLE_VERSE_INDEX: 'renderableVerseIndex',
