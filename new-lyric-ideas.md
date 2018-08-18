@@ -1,1 +1,0 @@
-And if they try to kill us, let's just forget to die.
