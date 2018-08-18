@@ -21,7 +21,4 @@
 
 * Audio options work. (/)
 
-* Should not be able to reselect verse in slider.
-
-
-* Player failure modal?
+* Should not be able to reselect verse in slider. (/)

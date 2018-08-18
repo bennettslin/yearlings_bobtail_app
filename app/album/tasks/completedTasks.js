@@ -3743,4 +3743,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Fix player bugginess.`,
+        workedHours: 20,
+        neededHours: 20
+    },
 ]

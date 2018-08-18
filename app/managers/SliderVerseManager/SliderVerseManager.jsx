@@ -43,9 +43,12 @@ class SliderVerseManager extends Component {
 
     touchSliderBegin({ clientRect, clientX }) {
 
-        const sliderLeft = clientRect.left,
+        const
+            sliderLeft = clientRect.left,
             sliderWidth = clientRect.width,
-            sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
+            sliderRatio = getSliderRatioForClientX(
+                clientX, sliderLeft, sliderWidth
+            ),
 
             sliderVerseIndex = getVerseIndexforRatio(
                 this.props.selectedSongIndex,
@@ -53,33 +56,41 @@ class SliderVerseManager extends Component {
                 sliderWidth
             )
 
-        this.props.updateSliderStore({
-            isSliderTouched: true,
-            sliderLeft,
-            sliderRatio,
-            sliderWidth,
-            sliderVerseIndex
-        })
+        // Don't allow selected verse to be selected again.
+        if (sliderVerseIndex !== this.props.selectedVerseIndex) {
 
-        /**
-         * If the move doesn't happen for a while, we recognise that it is
-         * moving anyway for styling purposes.
-         */
-        setTimeout(() => {
-            if (this.props.isSliderTouched && !this.props.isSliderMoving) {
-                this.props.updateSliderStore({
-                    isSliderMoving: true
-                })
-            }
-        }, 125)
+            this.props.updateSliderStore({
+                isSliderTouched: true,
+                sliderLeft,
+                sliderRatio,
+                sliderWidth,
+                sliderVerseIndex
+            })
+
+            /**
+             * If the move doesn't happen for a while, we recognise that it is
+             * moving anyway for styling purposes.
+             */
+            setTimeout(() => {
+                if (this.props.isSliderTouched && !this.props.isSliderMoving) {
+                    this.props.updateSliderStore({
+                        isSliderMoving: true
+                    })
+                }
+            }, 125)
+        }
     }
 
     touchBodyMove(clientX) {
 
         if (this.props.isSliderTouched) {
-            const { sliderLeft,
-                    sliderWidth } = this.props,
-                sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
+            const {
+                    sliderLeft,
+                    sliderWidth
+                } = this.props,
+                sliderRatio = getSliderRatioForClientX(
+                    clientX, sliderLeft, sliderWidth
+                ),
 
                 sliderVerseIndex = getVerseIndexforRatio(
                     this.props.selectedSongIndex,
@@ -101,14 +112,22 @@ class SliderVerseManager extends Component {
 
         if (this.props.isSliderTouched) {
 
-            // Selected verse is wherever touch ended on slider.
-            this.props.selectVerse({
-                selectedVerseIndex: this.props.sliderVerseIndex,
-                scrollLog: 'Slider touch body end.'
-            })
+            const {
+                selectedVerseIndex,
+                sliderVerseIndex
+            } = this.props
 
-            // Verse bars always get reset.
-            this.props.resetVerseBars()
+            if (sliderVerseIndex !== selectedVerseIndex) {
+
+                // Selected verse is wherever touch ended on slider.
+                this.props.selectVerse({
+                    selectedVerseIndex: this.props.sliderVerseIndex,
+                    scrollLog: 'Slider touch body end.'
+                })
+
+                // Verse bars always get reset.
+                this.props.resetVerseBars()
+            }
 
             // Reset slider state.
             this.props.updateSliderStore()
@@ -128,14 +147,18 @@ const mapStateToProps = ({
         sliderWidth,
         sliderVerseIndex
     },
-    selectedStore: { selectedSongIndex }
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex
+    }
 }) => ({
     isSliderTouched,
     isSliderMoving,
     sliderLeft,
     sliderWidth,
     sliderVerseIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    selectedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
