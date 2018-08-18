@@ -24,9 +24,8 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-
     {
-        taskName: `Sometimes nav buttons get in state where they only select one song at a time?!`,
+        taskName: `Sometimes audio nav buttons get in state where they only select one song at a time?!`,
         workedHours: 0,
         neededHours: 1
     },

@@ -8,8 +8,7 @@ import {
     CAN_SLIDER_RENDER,
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
-    CAN_PRESENCES_RENDER,
-    CAN_PIXELS_RENDER
+    CAN_PRESENCES_RENDER
 } from 'constants/state'
 
 export const setIsSongChangeRenderable = (
@@ -67,11 +66,3 @@ export const setCanRenderPresences = (
     type: CAN_PRESENCES_RENDER,
     payload: canRenderScene
 })
-
-export const setCanRenderPixels = (
-    canRenderScene = false
-) => ({
-    type: CAN_PIXELS_RENDER,
-    payload: canRenderScene
-})
-

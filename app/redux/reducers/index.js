@@ -4,7 +4,7 @@ import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, A
 import { IsPlayingReducer } from './audio'
 import { DeviceStoreReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
-import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanPresencesRenderReducer, CanPixelsRenderReducer } from './render'
+import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanPresencesRenderReducer } from './render'
 import { RenderableStoreReducer } from './renderable'
 import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
@@ -48,15 +48,16 @@ const rootReducer = combineReducers({
     showSingleBookColumn: ShowSingleBookColumnReducer,
 
     appMounted: AppMountedReducer,
+
     isWindowResizeRenderable: isWindowResizeRenderableReducer,
     isSongChangeRenderable: isSongChangeRenderableReducer,
+
     canTheatreRender: CanTheatreRenderReducer,
     canMainRender: CanMainRenderReducer,
     canSliderRender: CanSliderRenderReducer,
     canLyricRender: CanLyricRenderReducer,
     canCarouselRender: CanCarouselRenderReducer,
     canPresencesRender: CanPresencesRenderReducer,
-    canPixelsRender: CanPixelsRenderReducer,
 
     [RENDERABLE_STORE]: RenderableStoreReducer,
 
@@ -69,7 +70,6 @@ const rootReducer = combineReducers({
     shownBookColumnIndex: ShownBookColumnIndexReducer,
 
     [SLIDER_STORE]: SliderStoreReducer,
-
     [SELECTED_STORE]: SelectedStoreReducer,
 
     selectedAccessIndex: AccessIndexReducer,
