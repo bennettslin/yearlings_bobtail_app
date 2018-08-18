@@ -1,5 +1,4 @@
 // Actions for renderable state.
-
 import { is } from './actionsHelper'
 
 import { RENDERABLE_STORE } from 'constants/state'

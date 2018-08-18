@@ -10,7 +10,7 @@ import { getBookColumnIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    selectedStore: { selectedSongIndex }
+    songStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })

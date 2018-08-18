@@ -12,7 +12,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     responsiveStore: { isTwoRowMenu },
-    selectedStore: { selectedSongIndex }
+    songStore: { selectedSongIndex }
 }) => ({
     isTwoRowMenu,
     selectedSongIndex

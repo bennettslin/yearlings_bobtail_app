@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateSelectedStore } from 'flux/actions/storage'
+import { updateSongStore } from 'flux/actions/song'
 
 import { CONTINUE,
          PAUSE_AT_END,
@@ -22,7 +22,7 @@ class SongManager extends Component {
         // Through Redux.
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        updateSelectedStore: PropTypes.func.isRequired,
+        updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -131,7 +131,7 @@ class SongManager extends Component {
             bypassUpdateSelected: true
         })
 
-        props.updateSelectedStore({
+        props.updateSongStore({
             selectedSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
@@ -151,7 +151,7 @@ class SongManager extends Component {
 
 const mapStateToProps = ({
     selectedAudioOptionIndex,
-    selectedStore: { selectedSongIndex }
+    songStore: { selectedSongIndex }
 }) => ({
     selectedAudioOptionIndex,
     selectedSongIndex
@@ -159,7 +159,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSelectedStore
+        updateSongStore
     }, dispatch)
 )
 

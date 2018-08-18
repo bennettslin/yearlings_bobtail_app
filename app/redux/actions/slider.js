@@ -1,5 +1,4 @@
 // Actions for slider state.
-
 import { is } from './actionsHelper'
 
 import { SLIDER_STORE } from 'constants/state'

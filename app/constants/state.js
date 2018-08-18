@@ -80,7 +80,7 @@ module.exports = {
     SLIDER_VERSE_INDEX: 'sliderVerseIndex',
 
     // Storage.
-    SELECTED_STORE: 'selectedStore',
+    SONG_STORE: 'songStore',
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',

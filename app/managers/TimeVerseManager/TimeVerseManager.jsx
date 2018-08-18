@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateRenderableStore } from 'flux/actions/renderable'
-import { updateSelectedStore } from 'flux/actions/storage'
+import { updateSongStore } from 'flux/actions/song'
 
 import { VERSE_SCROLL } from 'constants/dom'
 
@@ -25,7 +25,7 @@ class TimeVerseManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         updateRenderableStore: PropTypes.func.isRequired,
-        updateSelectedStore: PropTypes.func.isRequired,
+        updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -59,7 +59,7 @@ class TimeVerseManager extends Component {
                     selectedVerseIndex
                 )
 
-            this.props.updateSelectedStore({
+            this.props.updateSongStore({
                 selectedTime
             })
         }
@@ -76,7 +76,7 @@ class TimeVerseManager extends Component {
          * the current time.
          */
         if (!nextVerseIndex) {
-            this.props.updateSelectedStore({
+            this.props.updateSongStore({
                 selectedTime: currentTime
             })
 
@@ -136,7 +136,7 @@ class TimeVerseManager extends Component {
          */
 
         if (!bypassUpdateSelected) {
-            this.props.updateSelectedStore({
+            this.props.updateSongStore({
                 selectedVerseIndex,
                 selectedTime
             })
@@ -195,7 +195,7 @@ class TimeVerseManager extends Component {
 const mapStateToProps = ({
     isManualScroll,
     isPlaying,
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedVerseIndex
     }
@@ -209,7 +209,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateRenderableStore,
-        updateSelectedStore
+        updateSongStore
     }, dispatch)
 )
 

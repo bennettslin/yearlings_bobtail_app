@@ -1030,7 +1030,7 @@ class EventHandler extends Component {
 
 const mapStateToProps = ({
     responsiveStore: { isHeightlessLyricColumn },
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex

@@ -9,7 +9,7 @@ import {
 } from 'flux/actions/access'
 
 import { updateRenderableStore } from 'flux/actions/renderable'
-import { updateSelectedStore } from 'flux/actions/storage'
+import { updateSongStore } from 'flux/actions/song'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -36,7 +36,7 @@ class AnnotationManager extends Component {
         accessAnnotationIndex: PropTypes.func.isRequired,
         accessAnnotationAnchorIndex: PropTypes.func.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
-        updateSelectedStore: PropTypes.func.isRequired,
+        updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -124,7 +124,7 @@ class AnnotationManager extends Component {
         }
 
         if (!bypassUpdateSelected) {
-            props.updateSelectedStore({
+            props.updateSongStore({
                 selectedAnnotationIndex
             })
         }
@@ -245,7 +245,7 @@ class AnnotationManager extends Component {
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex
@@ -268,7 +268,7 @@ const bindDispatchToProps = (dispatch) => (
         accessAnnotationIndex,
         accessAnnotationAnchorIndex,
         updateRenderableStore,
-        updateSelectedStore
+        updateSongStore
     }, dispatch)
 )
 

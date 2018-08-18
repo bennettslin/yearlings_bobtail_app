@@ -78,7 +78,7 @@ export const RENDERABLE_DEFAULTS = {
     )
 }
 
-export const SELECTED_DEFAULTS = {
+export const SONG_DEFAULTS = {
     [SELECTED_SONG_INDEX]: storedSongIndex,
     [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
     [SELECTED_VERSE_INDEX]: storedVerseIndex,

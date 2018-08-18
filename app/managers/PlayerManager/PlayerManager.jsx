@@ -30,7 +30,7 @@ import {
 
 const mapStateToProps = ({
     isPlaying,
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedVerseIndex
     },

@@ -92,7 +92,7 @@ class CarouselManager extends Component {
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: { isHiddenCarouselNav },
-    selectedStore: { selectedSongIndex },
+    songStore: { selectedSongIndex },
     selectedCarouselNavIndex,
 }) => ({
     deviceIndex,

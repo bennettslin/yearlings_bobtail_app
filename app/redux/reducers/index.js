@@ -9,13 +9,14 @@ import { RenderableStoreReducer } from './renderable'
 import { ResponsiveStoreReducer } from './responsive'
 import { CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
 import { SliderStoreReducer } from './slider'
-import { SelectedStoreReducer, AccessIndexReducer, AdminIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, TipsIndexReducer, TitleIndexReducer, WikiIndexReducer } from './storage'
+import { SongStoreReducer } from './song'
+import { AccessIndexReducer, AdminIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, TipsIndexReducer, TitleIndexReducer, WikiIndexReducer } from './storage'
 
 import {
     DEVICE_STORE,
     RENDERABLE_STORE,
     RESPONSIVE_STORE,
-    SELECTED_STORE,
+    SONG_STORE,
     SLIDER_STORE
 } from 'constants/state'
 
@@ -63,7 +64,7 @@ const rootReducer = combineReducers({
     shownBookColumnIndex: ShownBookColumnIndexReducer,
 
     [SLIDER_STORE]: SliderStoreReducer,
-    [SELECTED_STORE]: SelectedStoreReducer,
+    [SONG_STORE]: SongStoreReducer,
 
     selectedAccessIndex: AccessIndexReducer,
     selectedAdminIndex: AdminIndexReducer,

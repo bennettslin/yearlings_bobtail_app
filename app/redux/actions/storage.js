@@ -1,32 +1,10 @@
 // Actions for state persisted in user's local storage.
-import { is } from './actionsHelper'
 import {
     setInStorage,
     setDotInStorage
 } from '../storageHelper'
 
-import { SELECTED_STORE, SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX } from 'constants/state'
-
-import { SELECTED_DEFAULTS } from '../defaultConstants'
-
-export const updateSelectedStore = ({
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    selectedVerseIndex,
-    selectedTime
-
-} = SELECTED_DEFAULTS) => {
-
-    return {
-        type: SELECTED_STORE,
-        payload: {
-            ...is(selectedSongIndex) && { selectedSongIndex },
-            ...is(selectedAnnotationIndex) && { selectedAnnotationIndex },
-            ...is(selectedVerseIndex) && { selectedVerseIndex },
-            ...is(selectedTime) && { selectedTime }
-        }
-    }
-}
+import { SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX } from 'constants/state'
 
 export const selectAccessIndex = (selectedAccessIndex = 0) => {
     setInStorage(SELECTED_ACCESS_INDEX, selectedAccessIndex)

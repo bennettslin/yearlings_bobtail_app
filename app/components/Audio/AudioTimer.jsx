@@ -10,7 +10,7 @@ import { getFormattedTime } from 'helpers/formatHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedTime
     },

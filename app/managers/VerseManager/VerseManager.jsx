@@ -192,7 +192,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     interactivatedVerseIndex,
     responsiveStore: { isHeightlessLyricColumn },
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedVerseIndex
     },

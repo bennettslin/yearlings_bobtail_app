@@ -16,7 +16,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     interactivatedVerseIndex,
-    selectedStore: { selectedAnnotationIndex }
+    songStore: { selectedAnnotationIndex }
 }) => ({
     interactivatedVerseIndex,
     selectedAnnotationIndex

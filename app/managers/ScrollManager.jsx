@@ -223,7 +223,7 @@ const mapStateToProps = ({
         windowWidth
     },
     responsiveStore: { isHiddenCarouselNav },
-    selectedStore: { selectedSongIndex }
+    songStore: { selectedSongIndex }
 }) => ({
     isLyricExpanded,
     deviceIndex,

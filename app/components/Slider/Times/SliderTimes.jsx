@@ -15,7 +15,7 @@ const mapStateToProps = ({
     renderableStore: {
         renderableSongIndex
     },
-    selectedStore: {
+    songStore: {
         selectedTime
     },
     sliderStore: {

@@ -15,7 +15,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     responsiveStore: { isMobileWiki },
-    selectedStore: {
+    songStore: {
         selectedAnnotationIndex,
         selectedSongIndex
     },

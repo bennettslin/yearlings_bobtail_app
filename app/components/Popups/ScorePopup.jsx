@@ -9,7 +9,7 @@ import Popup from 'components/Popup/Popup'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    selectedStore: { selectedSongIndex },
+    songStore: { selectedSongIndex },
     selectedScoreIndex
 }) => ({
     selectedSongIndex,

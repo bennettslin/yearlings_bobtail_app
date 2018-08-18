@@ -61,7 +61,7 @@ class SceneManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedVerseIndex
     },

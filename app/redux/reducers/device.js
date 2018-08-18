@@ -1,5 +1,4 @@
 // Reducers for window size.
-
 import { DEVICE_STORE } from 'constants/state'
 import { DEVICE_DEFAULTS } from '../defaultConstants'
 

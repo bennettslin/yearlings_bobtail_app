@@ -9,7 +9,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedAccessIndex,
-    selectedStore: { selectedSongIndex },
+    songStore: { selectedSongIndex },
     selectedDotsIndex,
     accessedNavSongIndex,
 }) => ({

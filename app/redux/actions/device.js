@@ -1,5 +1,4 @@
 // Actions for window size.
-
 import { is } from './actionsHelper'
 
 import { DEVICE_STORE } from 'constants/state'

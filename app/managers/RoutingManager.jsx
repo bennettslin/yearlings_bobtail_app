@@ -3,10 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import {
-    selectWikiIndex,
-    updateSelectedStore
-} from 'flux/actions/storage'
+import { updateSongStore } from 'flux/actions/song'
+import { selectWikiIndex } from 'flux/actions/storage'
 
 import { getTimeForVerseIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -23,7 +21,7 @@ class RoutingManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
-        updateSelectedStore: PropTypes.func.isRequired,
+        updateSongStore: PropTypes.func.isRequired,
         selectWikiIndex: PropTypes.func.isRequired,
 
         match: PropTypes.object.isRequired,
@@ -54,7 +52,7 @@ class RoutingManager extends Component {
             selectedVerseIndex = routingVerseIndex
             selectedAnnotationIndex = routingAnnotationIndex
 
-            props.updateSelectedStore({
+            props.updateSongStore({
                 selectedSongIndex,
                 selectedVerseIndex,
                 selectedAnnotationIndex,
@@ -135,7 +133,7 @@ class RoutingManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex
@@ -149,7 +147,7 @@ const mapStateToProps = ({
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSelectedStore,
+        updateSongStore,
         selectWikiIndex
     }, dispatch)
 )

@@ -147,7 +147,7 @@ const mapStateToProps = ({
         sliderWidth,
         sliderVerseIndex
     },
-    selectedStore: {
+    songStore: {
         selectedSongIndex,
         selectedVerseIndex
     }

@@ -85,7 +85,7 @@ class NavManager extends Component {
 
 const mapStateToProps = ({
     responsiveStore: { showSingleBookColumn },
-    selectedStore: { selectedSongIndex },
+    songStore: { selectedSongIndex },
     shownBookColumnIndex,
     selectedCarouselNavIndex
 }) => ({

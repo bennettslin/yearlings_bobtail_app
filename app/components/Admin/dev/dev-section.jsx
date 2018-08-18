@@ -29,7 +29,7 @@ const DevSectionView = ({
 )
 
 export default connect(({
-    selectedStore: { selectedVerseIndex }
+    songStore: { selectedVerseIndex }
 }) => ({
     selectedVerseIndex
 }))(DevSection)
