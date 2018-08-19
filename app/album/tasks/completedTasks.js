@@ -3773,4 +3773,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `System to animate presences and cubes between scenes. Not great, but good enough for now.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]

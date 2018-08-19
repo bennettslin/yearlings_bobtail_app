@@ -16,12 +16,6 @@ module.exports = [
         neededHours: 3
     },
 
-    {
-        taskName: `System to animate presences and cubes between scenes.`,
-        workedHours: 0,
-        neededHours: 10
-    },
-
     /**
      * Important bugs to fix.
      */

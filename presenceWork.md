@@ -13,14 +13,17 @@
 * Fixtures slide in from left or right, depending on xIndex. (/)
 * Presences are behind theatre. (/)
 
-# Presence transition order
+* Cutouts and fixtures that persist across scenes should not transition. (Hold off for now.)
+
+* Handle transition order:
+
+# Ideal presence transition order
 * Actors fade out
 * Cutouts and fixtures slide away
 * Cubes shift
 * Cutouts and fixtures slide in
 * Actors fade in
 
-* Cutouts and fixtures that persist across scenes should not transition.
 
 # Order upon load
 * theatre

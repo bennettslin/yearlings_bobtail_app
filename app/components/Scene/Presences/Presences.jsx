@@ -37,6 +37,7 @@ class Presences extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
+        // Ensure that presences are not unmounted while scene cannot render.
         return nextProps.canSceneRender
     }
 
