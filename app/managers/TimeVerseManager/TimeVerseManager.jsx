@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateRenderableStore } from 'flux/actions/renderable'
 import { updateRenderedStore } from 'flux/actions/rendered'
 import { updateSongStore } from 'flux/actions/song'
 
@@ -24,19 +23,15 @@ class TimeVerseManager extends Component {
         isPlaying: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-
         updateRenderedStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
+        updateSceneIfChanged: PropTypes.func.isRequired,
         determineVerseBars: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updateSelectedPlayer: PropTypes.func.isRequired
-    }
-
-    state = {
-        sceneChangeTimeoutId: ''
     }
 
     componentDidMount() {
@@ -52,22 +47,27 @@ class TimeVerseManager extends Component {
 
     componentDidUpdate(prevProps) {
 
-        // If just now paused, reset time to start of selected verse.
         if (!this.props.isPlaying && prevProps.isPlaying) {
-            const {
-                    selectedSongIndex,
-                    selectedVerseIndex
-                } = this.props,
 
-                selectedTime = getTimeForVerseIndex(
-                    selectedSongIndex,
-                    selectedVerseIndex
-                )
-
-            this.props.updateSongStore({
-                selectedTime
-            })
+            // If just now paused, reset time to start of selected verse.
+            this._resetTimeUponPause()
         }
+    }
+
+    _resetTimeUponPause() {
+        const {
+                selectedSongIndex,
+                selectedVerseIndex
+            } = this.props,
+
+            selectedTime = getTimeForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
+
+        this.props.updateSongStore({
+            selectedTime
+        })
     }
 
     updateTime({
@@ -173,10 +173,8 @@ class TimeVerseManager extends Component {
                 selectedVerseIndex
             )
 
-            // If scene has changed, unrender and set timeout.
-            if (renderedSceneIndex !== this.props.renderedSceneIndex) {
-                this._prepareForSceneChangeUnrender()
-            }
+            // Have scene manager check if scene changed, and handle if so.
+            this.props.updateSceneIfChanged(renderedSceneIndex)
 
             /**
              * If selecting or changing verse in same song, change index to be
@@ -200,32 +198,6 @@ class TimeVerseManager extends Component {
         }
     }
 
-    _prepareForSceneChangeRender = () => {
-
-        this.props.updateRenderableStore({
-            isSceneChangeRenderable: true
-        })
-    }
-
-    _prepareForSceneChangeUnrender() {
-
-        // This only gets toggled for a scene change within the same song.
-        this.props.updateRenderableStore({
-            isSceneChangeRenderable: false
-        })
-
-        // Clear previous timeout.
-        clearTimeout(this.state.sceneChangeTimeoutId)
-
-        const sceneChangeTimeoutId = setTimeout(
-            this._prepareForSceneChangeRender, 200
-        )
-
-        this.setState({
-            sceneChangeTimeoutId
-        })
-    }
-
     render() {
         return null
     }
@@ -234,9 +206,6 @@ class TimeVerseManager extends Component {
 const mapStateToProps = ({
     isManualScroll,
     isPlaying,
-    renderedStore: {
-        renderedSceneIndex
-    },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
@@ -244,14 +213,12 @@ const mapStateToProps = ({
 }) => ({
     isManualScroll,
     isPlaying,
-    renderedSceneIndex,
     selectedSongIndex,
     selectedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateRenderableStore,
         updateRenderedStore,
         updateSongStore
     }, dispatch)

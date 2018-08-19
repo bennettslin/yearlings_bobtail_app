@@ -166,12 +166,6 @@ class WindowManager extends Component {
         return deviceIndex
     }
 
-    _prepareForWindowResizeRender = () => {
-        this.props.updateRenderableStore({
-            isWindowResizeRenderable: true
-        })
-    }
-
     _prepareForWindowResizeUnrender() {
         this.props.updateRenderableStore({
             isWindowResizeRenderable: false
@@ -190,6 +184,12 @@ class WindowManager extends Component {
 
         this.setState({
             windowResizeTimeoutId
+        })
+    }
+
+    _prepareForWindowResizeRender = () => {
+        this.props.updateRenderableStore({
+            isWindowResizeRenderable: true
         })
     }
 

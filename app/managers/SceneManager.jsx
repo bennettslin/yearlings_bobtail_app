@@ -1,22 +1,30 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { getVerseIndexForNextScene } from 'helpers/dataHelper'
+import { updateRenderableStore } from 'flux/actions/renderable'
 
+import { getVerseIndexForNextScene } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class SceneManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        renderedSceneIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        updateRenderableStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired
+    }
+
+    state = {
+        sceneChangeTimeoutId: ''
     }
 
     componentDidMount() {
@@ -55,19 +63,62 @@ class SceneManager extends Component {
         }
     }
 
+    updateSceneIfChanged(sceneIndex) {
+
+        if (sceneIndex !== this.props.renderedSceneIndex) {
+            this._prepareForSceneChangeUnrender()
+        }
+    }
+
+    _prepareForSceneChangeUnrender() {
+
+        // This only gets toggled for a scene change within the same song.
+        this.props.updateRenderableStore({
+            isSceneChangeRenderable: false
+        })
+
+        // Clear previous timeout.
+        clearTimeout(this.state.sceneChangeTimeoutId)
+
+        const sceneChangeTimeoutId = setTimeout(
+            this._prepareForSceneChangeRender, 200
+        )
+
+        this.setState({
+            sceneChangeTimeoutId
+        })
+    }
+
+    _prepareForSceneChangeRender = () => {
+
+        this.props.updateRenderableStore({
+            isSceneChangeRenderable: true
+        })
+    }
+
     render() {
         return null
     }
 }
 
 const mapStateToProps = ({
+    renderedStore: {
+        renderedSceneIndex
+    },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
     },
 }) => ({
+    renderedSceneIndex,
     selectedSongIndex,
     selectedVerseIndex
 })
 
-export default connect(mapStateToProps)(SceneManager)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateRenderableStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(SceneManager)

@@ -186,6 +186,10 @@ class StateManager extends Component {
         return this.sceneManager.selectScene(payload)
     }
 
+    updateSceneIfChanged = (payload) => {
+        return this.sceneManager.updateSceneIfChanged(payload)
+    }
+
     /*********
      * SCORE *
      *********/
@@ -508,6 +512,7 @@ class StateManager extends Component {
                 />
                 <TimeVerseManager
                     setRef={this._setTimeVerseManagerRef}
+                    updateSceneIfChanged={this.updateSceneIfChanged}
                     determineVerseBars={this.determineVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
                     updateSelectedPlayer={this.updateSelectedPlayer}

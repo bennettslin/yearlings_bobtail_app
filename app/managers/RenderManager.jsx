@@ -49,6 +49,7 @@ class RenderManager extends Component {
 
     componentDidUpdate(prevProps) {
 
+        // Initialise the rendered song once app has been mounted.
         if (this.props.appMounted && !prevProps.appMounted) {
             this._prepareForSongChangeRender()
         }
@@ -56,6 +57,29 @@ class RenderManager extends Component {
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
             this._prepareForSongChangeUnrender()
         }
+    }
+
+    _prepareForSongChangeUnrender() {
+
+        this.props.updateRenderableStore({
+            isSongChangeRenderable: false
+        })
+
+        // Clear previous timeout.
+        clearTimeout(this.state.songChangeTimeoutId)
+
+        /**
+         * Render is synchronous, so wait a bit after selecting new song before
+         * rendering the most performance intensive components. This allows
+         * songs between selections to skip rendering.
+         */
+        const songChangeTimeoutId = setTimeout(
+            this._prepareForSongChangeRender, 200
+        )
+
+        this.setState({
+            songChangeTimeoutId
+        })
     }
 
     _prepareForSongChangeRender = (props = this.props) => {
@@ -89,29 +113,6 @@ class RenderManager extends Component {
                 selectedSongIndex,
                 this.props.deviceIndex
             )
-        })
-    }
-
-    _prepareForSongChangeUnrender() {
-
-        this.props.updateRenderableStore({
-            isSongChangeRenderable: false
-        })
-
-        // Clear previous timeout.
-        clearTimeout(this.state.songChangeTimeoutId)
-
-        /**
-         * Render is synchronous, so wait a bit after selecting new song before
-         * rendering the most performance intensive components. This allows
-         * songs between selections to skip rendering.
-         */
-        const songChangeTimeoutId = setTimeout(
-            this._prepareForSongChangeRender, 200
-        )
-
-        this.setState({
-            songChangeTimeoutId
         })
     }
 
