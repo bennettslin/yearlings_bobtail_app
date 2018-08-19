@@ -55,14 +55,9 @@ class Scene extends Component {
         didRenderTimeoutId: ''
     }
 
-    // shouldComponentUpdate(nextProps) {
-    //     return !getPropsAreShallowEqual({
-    //         props: this.props,
-    //         nextProps
-    //     })
-    // }
-
-    // No shouldComponentUpdate necessary, I think.
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSceneRender
+    }
 
     componentDidUpdate(prevProps) {
         const { canSceneRender } = this.props,
