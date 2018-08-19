@@ -176,7 +176,7 @@ module.exports = [
                     instance: SNICKERING,
                     yIndex: 4,
                     arrangement: {
-                        xFloat: 4,
+                        xFloat: 5.5,
                         xWidth: 1,
                         zHeight: 3.83
                     }
@@ -217,7 +217,7 @@ module.exports = [
                     arrangement: {
                         xFloat: 8,
                         xWidth: 5,
-                        zHeight: 4
+                        zHeight: 5
                     }
                 }
             },

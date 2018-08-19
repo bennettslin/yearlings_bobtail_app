@@ -13,13 +13,20 @@ import Fixture from './Fixture/Fixture'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-import { getPresenceXYWidthAndHeight } from './presenceHelper'
+import {
+    getNearestXIndex,
+    getPresenceXYWidthAndHeight
+} from './presenceHelper'
 
 import {
     ACTORS,
     CUTOUTS,
     FIXTURES
 } from '../sceneConstants'
+
+import {
+    CUBE_X_AXIS_LENGTH
+} from '../Cubes/cubeIndexConstants'
 
 const PRESENCE_TYPE_COMPONENTS = {
     [ACTORS]: Actor,
@@ -34,15 +41,15 @@ const propTypes = {
 
     // Actors always have instanceKeys, other presences largely don't.
     instanceKey: PropTypes.string,
+    cubesKey: PropTypes.string.isRequired,
+    yIndex: PropTypes.number.isRequired,
 
     arrangement: PropTypes.shape({
         xFloat: PropTypes.number.isRequired,
         zOffset: PropTypes.number,
         xWidth: PropTypes.number.isRequired,
         zHeight: PropTypes.number.isRequired
-    }).isRequired,
-    cubesKey: PropTypes.string.isRequired,
-    yIndex: PropTypes.number.isRequired
+    }).isRequired
 }
 
 class Presence extends Component {
@@ -62,30 +69,41 @@ class Presence extends Component {
                 presenceType,
                 nameKey,
                 instanceKey,
+                cubesKey,
+                yIndex,
                 arrangement: {
                     xFloat,
                     zOffset,
                     xWidth,
                     zHeight
-                },
-                cubesKey,
-                yIndex
+                }
             } = this.props,
 
             PresenceComponent = PRESENCE_TYPE_COMPONENTS[presenceType],
 
             xYWidthAndHeight = getPresenceXYWidthAndHeight({
+                cubesKey,
+                yIndex,
                 xFloat,
                 zOffset,
                 xWidth,
-                zHeight,
-                cubesKey,
-                yIndex
-            })
+                zHeight
+            }),
+
+            nearestXIndex = getNearestXIndex(xFloat)
 
         return (
             <PresenceComponent
                 className={cx(
+                    presenceType === CUTOUTS &&
+                        `Cutout__y${yIndex}`,
+
+                    presenceType === FIXTURES && (
+                        nearestXIndex < (CUBE_X_AXIS_LENGTH / 2) ?
+                            `Fixture__left` :
+                            `Fixture__right`
+                    ),
+
                     'absoluteFullContainer'
                 )}
                 {...{

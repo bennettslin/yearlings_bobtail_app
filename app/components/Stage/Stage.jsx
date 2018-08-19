@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Scene from 'components/Scene/Scene'
-import Proscenium from './Proscenium/Proscenium';
+// import Scene from 'components/Scene/Scene'
+// import Proscenium from './Proscenium/Proscenium';
 
 const mapStateToProps = ({
     deviceStore: { stageCoordinates },
@@ -26,18 +26,19 @@ class Stage extends Component {
             left: PropTypes.number.isRequired,
             width: PropTypes.number.isRequired,
             height: PropTypes.number.isRequired
-        }).isRequired
+        }).isRequired,
+        children: PropTypes.any.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
         return nextProps.canTheatreRender
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-            logger.warn('Stage rendered.')
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+    //         logger.warn('Stage rendered.')
+    //     }
+    // }
 
     render() {
 
@@ -48,7 +49,7 @@ class Stage extends Component {
             /* eslint-enable no-unused-vars */
 
             stageCoordinates,
-            ...other
+            children
         } = this.props,
 
         {
@@ -81,8 +82,7 @@ class Stage extends Component {
                         height: `${stageHeight}px`
                     }}
                 >
-                    <Scene {...other} />
-                    <Proscenium />
+                    {children}
                 </div>
             </div>
         )

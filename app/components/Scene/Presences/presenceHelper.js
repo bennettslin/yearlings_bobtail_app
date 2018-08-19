@@ -44,26 +44,8 @@ export const getPresencesForCubes = ({
         null
 }
 
-const _getTileCentreForPresence = ({
-
-    cubesKey,
-    xFloat,
-    yIndex,
-    zOffset = 0
-
-}) => {
-
-    const {
-
-        /**
-         * Presence needs to know the floor zIndex for positioning.
-         */
-        floor: { zIndices },
-        slantDirection = ''
-    } = getCubesForKey(cubesKey)
-
-    let xIndex,
-        xOffset
+export const getNearestXIndex = (xFloat) => {
+    let xIndex
 
     /**
      * Get the index and offset from the float.
@@ -77,9 +59,32 @@ const _getTileCentreForPresence = ({
     } else {
         xIndex = Math.round(xFloat)
     }
-    xOffset = xFloat - xIndex
 
-    const zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
+    return xIndex
+}
+
+const _getTileCentreForPresence = ({
+
+    cubesKey,
+    xFloat,
+    yIndex,
+    zOffset = 0
+
+}) => {
+
+    const {
+            /**
+             * Presence needs to know the floor zIndex for positioning.
+             */
+            floor: { zIndices },
+            slantDirection = ''
+        } = getCubesForKey(cubesKey),
+
+        xIndex = getNearestXIndex(xFloat),
+
+        xOffset = xFloat - xIndex,
+
+        zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
 
         tilePercentages = getHorizontalPlaneFractionsForSlantDirection({
             xIndex,

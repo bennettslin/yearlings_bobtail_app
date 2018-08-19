@@ -7,10 +7,13 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import Stage from 'components/Stage/Stage'
+import Proscenium from 'components/Stage/Proscenium/Proscenium';
 
 import Wall from './Wall/Wall'
 import Ceiling from './Ceiling/Ceiling'
 import Floor from './Floor/Floor'
+
+import Scene from 'components/Scene/Scene'
 
 import { getCentreFieldHeight } from 'helpers/stageHelper'
 
@@ -181,6 +184,12 @@ class Theatre extends Component {
                 'absoluteFullContainer',
                 { 'parent__shown': canTheatreRender && isShown }
             )}>
+
+                {/* Scene is behind theatre due to presence transitions. */}
+                <Stage>
+                    <Scene {...other} />
+                </Stage>
+
                 <Ceiling
                     {...{ ceilingFieldCoordinates }}
                 />
@@ -192,7 +201,9 @@ class Theatre extends Component {
                     {...{ wallFieldCoordinates }}
                 />
 
-                <Stage {...other} />
+                <Stage>
+                    <Proscenium />
+                </Stage>
 
                 <Floor
                     {...{ floorFieldCoordinates }}

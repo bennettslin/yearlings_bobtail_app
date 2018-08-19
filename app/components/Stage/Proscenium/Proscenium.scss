@@ -15,6 +15,8 @@ $offset__proscenium__vertical:
 .Proscenium__child {
     position: absolute;
     top: $offset__proscenium__horizontal;
+
+    z-index: $zIndex__theatreFloor;
 }
 
 .Proscenium__horizontal {

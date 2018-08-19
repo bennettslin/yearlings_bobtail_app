@@ -5,12 +5,23 @@
     stroke: #444;
 }
 
-.Fixture {
+.Fixture__left {
     transition: left $animationDuration__default;
     left: -100%;
 
     .Scene__shown
     & {
         left: 0;
+    }
+}
+
+.Fixture__right {
+    transition: right $animationDuration__default;
+    left: auto;
+    right: -100%;
+
+    .Scene__shown
+    & {
+        right: 0;
     }
 }

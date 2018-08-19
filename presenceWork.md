@@ -9,7 +9,9 @@
 
 * Have class for scene transitions. (/)
 
-* Presences transition based on scene transition class.
+* Presences transition based on scene class. (/)
+* Fixtures slide in from left or right, depending on xIndex. (/)
+* Presences are behind theatre. (/)
 
 # Presence transition order
 * Actors fade out
@@ -18,8 +20,6 @@
 * Cutouts and fixtures slide in
 * Actors fade in
 
-* Fixtures slide in from left or right, depending on xIndex.
-* Presences are behind theatre.
 * Cutouts and fixtures that persist across scenes should not transition.
 
 # Order upon load

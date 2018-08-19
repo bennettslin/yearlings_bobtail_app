@@ -4,3 +4,13 @@
     stroke-width: 1px;
     stroke: #444;
 }
+
+.Actor {
+    transition: opacity $animationDuration__default;
+    opacity: 0;
+
+    .Scene__shown
+    & {
+        opacity: 1;
+    }
+}
