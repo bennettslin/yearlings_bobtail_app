@@ -3758,4 +3758,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Prepare for presence transitions with scene rendering logic.`,
+        workedHours: 6,
+        neededHours: 6
+    },
 ]

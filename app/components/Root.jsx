@@ -94,17 +94,51 @@ class Root extends Component {
 
     state = {
         sliderMousedUp: false,
+        // isVerseTrackerReset: false,
         keyName: ''
     }
 
     componentDidUpdate(prevProps) {
-        // If slider touch ended, then tell dom manager.
-        if (!this.props.isSliderTouched && prevProps.isSliderTouched) {
+        const {
+                isSliderTouched,
+                // renderedSongIndex,
+                // renderedVerseIndex
+            } = this.props,
+            {
+                isSliderTouched: wasSliderTouched,
+                // renderedSongIndex: prevSongIndex,
+                // renderedVerseIndex: prevVerseIndex
+            } = prevProps
 
+        // If verse changed, reset the verse tracker in the verse bar.
+        // if (
+        //     renderedSongIndex !== prevSongIndex ||
+        //     renderedVerseIndex !== prevVerseIndex
+        // ) {
+        //     setTimeout(this._resetVerseTracker, 0)
+        // }
+
+        // // Immediately clear the verse tracker reset.
+        // if (this.state.isVerseTrackerReset) {
+        //     this.setState({
+        //         isVerseTrackerReset: false
+        //     })
+        // }
+
+        // This prevents a click event from registering after mouseUp.
+        if (
+            !isSliderTouched && wasSliderTouched
+        ) {
             // Let click handler get called first, then reset state.
             setTimeout(this._resetSliderMousedUp, 0)
         }
     }
+
+    // _resetVerseTracker = () => {
+    //     this.setState({
+    //         isVerseTrackerReset: true
+    //     })
+    // }
 
     _resetSliderMousedUp = () => {
         this.setState({
@@ -189,7 +223,10 @@ class Root extends Component {
             isManualScroll
             } = this.props,
 
-            { keyName } = this.state,
+            {
+                keyName,
+                // isVerseTrackerReset
+            } = this.state,
 
             {
                 handleBodyTouchMove,
@@ -237,6 +274,8 @@ class Root extends Component {
                 sliderVerseIndex :
                 renderedVerseIndex,
 
+            isOddVerseIndex = cursorVerseIndex % 2,
+
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
                 renderedSongIndex, cursorVerseIndex
             )
@@ -258,6 +297,13 @@ class Root extends Component {
                      */
                     canCarouselRender ?
                         'RM__canTrackVerse' : 'RM__cannotTrackVerse',
+
+                    !areVerseBarsHidden && isOddVerseIndex ?
+                        'RM__verseBar__odd' :
+                        'RM__verseBar__even',
+
+                    // isVerseTrackerReset &&
+                    //     'RM__verseTrackerReset',
 
                     `RM__${deviceClassName}`,
                     isDesktop ?

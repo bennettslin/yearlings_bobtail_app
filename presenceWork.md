@@ -7,7 +7,7 @@
 * Make renderable store. (/)
 * Make render store. (/)
 
-* Have class for scene transitions.
+* Have class for scene transitions. (/)
 
 # Order upon load
 * theatre

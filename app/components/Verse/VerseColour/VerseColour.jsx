@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -25,7 +25,8 @@ VerseColour = ({
 
 }) => {
 
-    const inLyric = inUnit || inVerseBar
+    const inLyric = inUnit || inVerseBar,
+        isOdd = Boolean(verseIndex % 2)
 
     return (
         <div
@@ -51,24 +52,40 @@ VerseColour = ({
                 'absoluteFullContainer'
             )}
         >
-            <VerseTracker
-                {...{
-                    verseIndex,
-                    inVerseBar,
-                    inUnit,
-                    inSlider
-                }}
+            {!inVerseBar && (
+                <VerseTracker
+                    {...{
+                        verseIndex,
+                        inVerseBar,
+                        inUnit,
+                        inSlider
+                    }}
+                />
+            )}
 
-                /**
-                 * Give each verse in the verse bar a unique key to render a
-                 * new verse each time. This ensures that the cursor will not
-                 * animate from the far right for the previous verse to the
-                 * far left for the next verse.
-                 */
-                {...inVerseBar && {
-                    key: verseIndex
-                }}
-            />
+            {/* Allow verse bar to alternate between odd and even. */}
+            {inVerseBar && (
+                <Fragment>
+                    <VerseTracker
+                        {...{
+                            verseIndex,
+                            inVerseBar,
+                            inUnit,
+                            inSlider,
+                            isHidden: isOdd
+                        }}
+                    />
+                    <VerseTracker
+                        {...{
+                            verseIndex,
+                            inVerseBar,
+                            inUnit,
+                            inSlider,
+                            isHidden: !isOdd
+                        }}
+                    />
+                </Fragment>
+            )}
 
             {/* Even filters are just a little shadier. */}
             {!inVerseBar && !(verseIndex % 2) && (
