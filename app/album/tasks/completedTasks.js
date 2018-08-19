@@ -3768,4 +3768,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `"Should I should you refuse" has extra right padding because of text indent, only apply this style when not in verse bar.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -1,7 +1,11 @@
 .VerseLine__lyric,
 .VerseLine__left {
-    text-indent:-$width__hangingIndent;
-    padding-left: $width__hangingIndent;
+
+    .Verse__inLyric
+    & {
+        text-indent:-$width__hangingIndent;
+        padding-left: $width__hangingIndent;
+    }
 }
 
 .VerseLine__centre {
@@ -18,9 +22,12 @@
      * last letter is a stupid hack to prevent rtl from switching the
      * order of the last letter.
      */
-    text-indent:-$width__hangingIndent;
-    padding-right: $width__hangingIndent;
-    direction: rtl;
+    .Verse__inLyric
+    & {
+        text-indent:-$width__hangingIndent;
+        padding-right: $width__hangingIndent;
+        direction: rtl;
+    }
 
     /**
      * Not exactly sure why, but a hidden first letter is also needed to keep
