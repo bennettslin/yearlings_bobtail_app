@@ -4,3 +4,13 @@
     stroke-width: 1px;
     stroke: #444;
 }
+
+.Cutout {
+    transition: top $animationDuration__default;
+    top: -100%;
+
+    .Scene__shown
+    & {
+        top: 0;
+    }
+}

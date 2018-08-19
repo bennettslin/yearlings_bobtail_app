@@ -4,3 +4,13 @@
     stroke-width: 1px;
     stroke: #444;
 }
+
+.Fixture {
+    transition: left $animationDuration__default;
+    left: -100%;
+
+    .Scene__shown
+    & {
+        left: 0;
+    }
+}

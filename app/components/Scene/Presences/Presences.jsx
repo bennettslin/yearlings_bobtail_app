@@ -64,6 +64,10 @@ class Presences extends Component {
 
             presences = presenceYIndices[yIndex]
 
+        if (yIndex === 0) {
+            console.error('presences', presences)
+        }
+
         return presences ? (
             <div
                 className={cx(

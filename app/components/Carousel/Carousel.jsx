@@ -64,8 +64,8 @@ class Carousel extends Component {
     state = {
         hasMounted: false,
         isShown: false,
-        waitForShowTimeoutId: '',
-        didRenderTimeoutId: ''
+        didRenderTimeoutId: '',
+        waitForShowTimeoutId: ''
     }
 
     // No shouldComponentUpdate necessary.
@@ -77,17 +77,17 @@ class Carousel extends Component {
         if (canCarouselRender && !couldRender) {
             logger.warn('Carousel rendered.')
 
-            clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
+            clearTimeout(this.state.waitForShowTimeoutId)
 
             const
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                ),
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
                     this.props.carouselDidRender, 100
+                ),
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
                 ),
 
                 {
@@ -95,8 +95,8 @@ class Carousel extends Component {
                 } = this.state
 
             this.setState({
-                waitForShowTimeoutId,
                 didRenderTimeoutId,
+                waitForShowTimeoutId,
 
                 // Register that component has mounted.
                 ...!hasMounted && { hasMounted: true }

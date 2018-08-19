@@ -57,8 +57,8 @@ class Theatre extends Component {
 
     state = {
         isShown: false,
-        waitForShowTimeoutId: '',
-        didRenderTimeoutId: ''
+        didRenderTimeoutId: '',
+        waitForShowTimeoutId: ''
     }
 
     // No shouldComponentUpdate necessary.
@@ -70,22 +70,22 @@ class Theatre extends Component {
         if (canTheatreRender && !couldRender) {
             logger.warn('Theatre rendered.')
 
-            clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
+            clearTimeout(this.state.waitForShowTimeoutId)
 
             const
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                ),
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
                     this.props.theatreDidRender, 100
+                ),
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
                 )
 
             this.setState({
-                waitForShowTimeoutId,
-                didRenderTimeoutId
+                didRenderTimeoutId,
+                waitForShowTimeoutId
             })
 
         } else if (couldRender && !canTheatreRender) {

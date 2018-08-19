@@ -29,8 +29,8 @@ class Slider extends Component {
 
     state = {
         isShown: false,
-        waitForShowTimeoutId: '',
-        didRenderTimeoutId: ''
+        didRenderTimeoutId: '',
+        waitForShowTimeoutId: ''
     }
 
     componentDidUpdate(prevProps) {
@@ -40,22 +40,22 @@ class Slider extends Component {
         if (canVerseRender && !couldRender) {
             logger.warn('Slider rendered.')
 
-            clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
+            clearTimeout(this.state.waitForShowTimeoutId)
 
             const
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                ),
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
                     this.props.verseDidRender, 100
+                ),
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
                 )
 
             this.setState({
-                waitForShowTimeoutId,
-                didRenderTimeoutId
+                didRenderTimeoutId,
+                waitForShowTimeoutId
             })
 
         } else if (couldRender && !canVerseRender) {

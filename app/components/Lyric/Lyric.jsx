@@ -37,8 +37,8 @@ class Lyric extends Component {
         hasMounted: false,
         isShown: false,
         isTransitioningHeight: false,
-        waitForShowTimeoutId: '',
-        didRenderTimeoutId: ''
+        didRenderTimeoutId: '',
+        waitForShowTimeoutId: ''
     }
 
     componentDidUpdate(prevProps) {
@@ -48,24 +48,24 @@ class Lyric extends Component {
         if (canLyricRender && !couldRender) {
             logger.warn('Lyric rendered.')
 
-            clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
+            clearTimeout(this.state.waitForShowTimeoutId)
 
             const
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                ),
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
                     this.props.lyricDidRender, 100
+                ),
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
                 ),
 
                 { hasMounted } = this.state
 
             this.setState({
-                waitForShowTimeoutId,
                 didRenderTimeoutId,
+                waitForShowTimeoutId,
 
                 // Register that component has mounted.
                 ...!hasMounted && { hasMounted: true }

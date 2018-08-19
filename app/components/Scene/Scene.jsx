@@ -51,13 +51,13 @@ class Scene extends Component {
 
     state = {
         isShown: false,
-        waitForShowTimeoutId: '',
-        didRenderTimeoutId: ''
+        didRenderTimeoutId: '',
+        waitForShowTimeoutId: ''
     }
 
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender
-    }
+    // shouldComponentUpdate(nextProps) {
+    //     return nextProps.canSceneRender
+    // }
 
     componentDidUpdate(prevProps) {
         const { canSceneRender } = this.props,
@@ -66,22 +66,22 @@ class Scene extends Component {
         if (canSceneRender && !couldRender) {
             logger.warn('Scene rendered.')
 
-            clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
+            clearTimeout(this.state.waitForShowTimeoutId)
 
             const
+                // Wait for parent transition before continuing render sequence.
+                didRenderTimeoutId = setTimeout(
+                    this.props.sceneDidRender, 200
+                ),
                 // Set timeout to prevent children transitions before render.
                 waitForShowTimeoutId = setTimeout(
                     this._waitForShowBeforeRender, 50
-                ),
-                // Wait for parent transition before continuing render sequence.
-                didRenderTimeoutId = setTimeout(
-                    this.props.sceneDidRender, 100
                 )
 
             this.setState({
-                waitForShowTimeoutId,
-                didRenderTimeoutId
+                didRenderTimeoutId,
+                waitForShowTimeoutId
             })
 
         } else if (couldRender && !canSceneRender) {
@@ -137,7 +137,7 @@ class Scene extends Component {
         return (
             <div className={cx(
                 'Scene',
-                { 'parent__shown': canSceneRender && isShown },
+                { 'Scene__shown': canSceneRender && isShown },
 
                 zIndexClassNames,
                 hslaClassNames,

@@ -1,7 +1,4 @@
 @import "./Actor/Actor";
 @import "./Cutout/Cutout";
 @import "./Fixture/Fixture";
-
-.Presence__temporaryText {
-    font-size: 0.15em;
-}
+@import "./Presence";
