@@ -179,7 +179,7 @@ class Theatre extends Component {
             <div className={cx(
                 'Theatre',
                 'absoluteFullContainer',
-                { 'parentIsShown': canTheatreRender && isShown }
+                { 'parent__shown': canTheatreRender && isShown }
             )}>
                 <Ceiling
                     {...{ ceilingFieldCoordinates }}

@@ -5,7 +5,7 @@
     opacity: 0;
     overflow: hidden;
 
-    .parentIsShown
+    .parent__shown
     & {
         transition:
             max-height $animationDuration__default,

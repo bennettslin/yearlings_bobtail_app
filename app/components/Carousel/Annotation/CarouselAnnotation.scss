@@ -21,7 +21,7 @@
             - $js__padding__popupContent__wide;
     }
 
-    .parentIsShown
+    .parent__shown
     & {
         transition:
             min-width $animationDuration__default,

@@ -12,14 +12,14 @@
 
     opacity: 0;
 
-    .parentIsShown
+    .parent__shown
     & {
         transition:
-        opacity $animationDuration__default,
-        max-width $animationDuration__default,
-        max-height $animationDuration__default,
-        margin-top $animationDuration__default,
-        margin-left $animationDuration__default;
+            opacity $animationDuration__default,
+            max-width $animationDuration__default,
+            max-height $animationDuration__default,
+            margin-top $animationDuration__default,
+            margin-left $animationDuration__default;
     }
 }
 

@@ -90,7 +90,7 @@ class Slider extends Component {
                 className={cx(
                     'Slider',
                     {
-                        'parentIsShown': canVerseRender && isShown
+                        'parent__shown': canVerseRender && isShown
                     }
                 )}
                 onMouseDown={this._handleTouchDown}

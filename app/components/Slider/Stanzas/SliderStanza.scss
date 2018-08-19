@@ -12,7 +12,7 @@ $width__sliderStanzaTab: 10px;
     bottom: 0;
     border-top-right-radius: $borderRadius__narrow;
 
-    .parentIsShown
+    .parent__shown
     & {
         transition: height $animationDuration__default;
     }

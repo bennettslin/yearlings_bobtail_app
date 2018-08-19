@@ -142,7 +142,7 @@ class Scene extends Component {
         return (
             <div className={cx(
                 'Scene',
-                { 'parentIsShown': canSceneRender && isShown },
+                { 'parent__shown': canSceneRender && isShown },
 
                 zIndexClassNames,
                 hslaClassNames,

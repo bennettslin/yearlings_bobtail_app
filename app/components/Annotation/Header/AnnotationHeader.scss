@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
 
-    .parentIsShown
+    .parent__shown
     & {
         transition:
             height $animationDuration__default,

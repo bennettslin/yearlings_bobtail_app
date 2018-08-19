@@ -12,7 +12,7 @@
     direction: ltr;
     visibility: hidden;
 
-    .parentIsShown
+    .parent__shown
     & {
         transition: color $animationDuration__fast;
     }

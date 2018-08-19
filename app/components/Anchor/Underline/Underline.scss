@@ -45,7 +45,7 @@
 .Underline__bar {
     visibility: hidden;
 
-    .parentIsShown
+    .parent__shown
     & {
         transition:
             opacity $animationDuration__default,

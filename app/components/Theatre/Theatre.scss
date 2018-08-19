@@ -9,7 +9,7 @@
     // This prevents heightless lyric column from pushing theatre offscreen.
     overflow: hidden;
 
-    &.parentIsShown {
+    &.parent__shown {
         opacity: 1;
     }
 }

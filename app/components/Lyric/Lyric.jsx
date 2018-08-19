@@ -120,11 +120,11 @@ class Lyric extends Component {
                 isShown
             } = this.state,
 
-            parentIsShown = canLyricRender && isShown
+            parent__shown = canLyricRender && isShown
 
         return (hasMounted || canLyricRender) && (
             <LyricColumnView {...other}
-                parentIsShown={parentIsShown}
+                parent__shown={parent__shown}
                 handleTransition={this._handleTransition}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 completeHeightTransition={this.completeHeightTransition}
@@ -139,7 +139,7 @@ class Lyric extends Component {
 
 const lyricColumnViewPropTypes = {
     // From parent.
-    parentIsShown: PropTypes.bool.isRequired,
+    parent__shown: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
 
     handleLyricColumnSelect: PropTypes.func.isRequired,
@@ -159,7 +159,7 @@ LyricColumnView = ({
     handleVerseBarWheel,
 
     // From controller.
-    parentIsShown,
+    parent__shown,
     handleTransition,
 
 ...other }) => {
@@ -177,7 +177,7 @@ LyricColumnView = ({
                 'position__lyricColumn__mobile',
                 'gradientMask__lyricColumn__desktop',
 
-                { 'parentIsShown': parentIsShown }
+                { 'parent__shown': parent__shown }
             )}
             onTransitionEnd={handleTransition}
         >

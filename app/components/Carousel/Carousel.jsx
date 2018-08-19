@@ -166,7 +166,7 @@ class Carousel extends Component {
                 className={cx(
                     'Carousel',
                     'gradientMask__carousel__desktop',
-                    { 'parentIsShown': canCarouselRender && isShown }
+                    { 'parent__shown': canCarouselRender && isShown }
                 )}
             >
                 <div
