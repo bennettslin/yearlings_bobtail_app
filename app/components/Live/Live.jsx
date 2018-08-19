@@ -26,19 +26,23 @@ import {
 const mapStateToProps = ({
     renderStore: {
         canVerseRender,
+        canMainRender,
         canTheatreRender,
         canCarouselRender
     },
     renderableStore: {
-        isWindowResizeRenderable,
-        isSongChangeRenderable
+        isSceneChangeRenderable,
+        isSongChangeRenderable,
+        isWindowResizeRenderable
     }
 }) => ({
     canVerseRender,
+    canMainRender,
     canTheatreRender,
     canCarouselRender,
-    isWindowResizeRenderable,
-    isSongChangeRenderable
+    isSceneChangeRenderable,
+    isSongChangeRenderable,
+    isWindowResizeRenderable
 })
 
 class Live extends Component {
@@ -49,41 +53,16 @@ class Live extends Component {
 
     componentDidUpdate(prevProps) {
         const {
+                isSceneChangeRenderable,
                 isSongChangeRenderable,
                 isWindowResizeRenderable
             } = this.props,
 
             {
+                isSceneChangeRenderable: wasSceneChangeRenderable,
                 isSongChangeRenderable: wasSongChangeRenderable,
                 isWindowResizeRenderable: wasWindowResizeRenderable
             } = prevProps
-
-        // Is unrenderable after song change.
-        if (!isSongChangeRenderable && wasSongChangeRenderable) {
-            this.unrenderedTime = Date.now()
-
-            logger.warn('Live unrenderable from song change.')
-            this.props.updateRenderStore({
-                canVerseRender: false,
-                canMainRender: false,
-                canLyricRender: false,
-                canCarouselRender: false
-            })
-
-        // Is renderable after song change timeout.
-        } else if (isSongChangeRenderable && !wasSongChangeRenderable) {
-
-            // Don't call this upon initial render.
-            if (this.props.canTheatreRender) {
-                logger.warn(`Live renderable after song change, took ${
-                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-                } seconds.`)
-
-                this.props.updateRenderStore({
-                    canVerseRender: true
-                })
-            }
-        }
 
         // Is unrenderable after window resize.
         if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
@@ -107,17 +86,65 @@ class Live extends Component {
                 canTheatreRender: true
             })
         }
+
+        // Is unrenderable after song change.
+        if (!isSongChangeRenderable && wasSongChangeRenderable) {
+            this.unrenderedTime = Date.now()
+
+            logger.warn('Live unrenderable from song change.')
+            this.props.updateRenderStore({
+                canVerseRender: false,
+                canSceneRender: false,
+                canMainRender: false,
+                canLyricRender: false,
+                canCarouselRender: false
+            })
+
+        // Is renderable after song change timeout.
+        } else if (isSongChangeRenderable && !wasSongChangeRenderable) {
+
+            // Don't call this upon initial render.
+            if (this.props.canTheatreRender) {
+                logger.warn(`Live renderable after song change, took ${
+                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+                } seconds.`)
+
+                this.props.updateRenderStore({
+                    canVerseRender: true
+                })
+            }
+        }
+
+        // Is unrenderable after scene change within same song.
+        if (!isSceneChangeRenderable && wasSceneChangeRenderable) {
+            this.unrenderedTime = Date.now()
+
+            logger.warn('Live unrenderable from scene change.')
+            this.props.updateRenderStore({
+                canSceneRender: false
+            })
+
+        // Is renderable after scene change timeout.
+        } else if (isSceneChangeRenderable && !wasSceneChangeRenderable) {
+
+            // Don't call this upon initial render.
+            if (this.props.canTheatreRender) {
+                logger.warn(`Live renderable after scene change, took ${
+                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+                } seconds.`)
+
+                this.props.updateRenderStore({
+                    canSceneRender: true
+                })
+            }
+        }
     }
 
     theatreDidRender = () => {
         /**
-         * TODO: This isn't the most elegant way to handle this...
-         */
-
-        /**
          * If theatre is rendering for the first time upon load, verse will not
          * be rendered. If it is being rendered again after window resize,
-         * verse will be rendered.
+         * verse will be rendered. Not the most elegant way to handle this...
          */
         if (!this.props.canVerseRender) {
             this.props.updateRenderStore({
@@ -128,8 +155,21 @@ class Live extends Component {
 
     verseDidRender = () => {
         this.props.updateRenderStore({
-            canMainRender: true
+            canSceneRender: true
         })
+    }
+
+    sceneDidRender = () => {
+        /**
+         * If scene is rendering for the first time upon load, main will not
+         * be rendered. If it is being rendered again after scene change, main
+         * will be rendered. Again, not the most elegant way to handle this...
+         */
+        if (!this.props.canMainRender) {
+            this.props.updateRenderStore({
+                canMainRender: true
+            })
+        }
     }
 
     mainDidRender = () => {
@@ -166,6 +206,7 @@ class Live extends Component {
                 <div className="PopupOverlay" />
 
                 <Theatre {...theatreHandlers}
+                    sceneDidRender={this.sceneDidRender}
                     theatreDidRender={this.theatreDidRender}
                 />
 
@@ -203,9 +244,11 @@ class Live extends Component {
 Live.propTypes = {
     // Through Redux.
     canVerseRender: PropTypes.bool.isRequired,
+    canMainRender: PropTypes.bool.isRequired,
     canTheatreRender: PropTypes.bool.isRequired,
     canCarouselRender: PropTypes.bool.isRequired,
     isSongChangeRenderable: PropTypes.bool.isRequired,
+    isSceneChangeRenderable: PropTypes.bool.isRequired,
     isWindowResizeRenderable: PropTypes.bool.isRequired,
     updateRenderStore: PropTypes.func.isRequired,
 

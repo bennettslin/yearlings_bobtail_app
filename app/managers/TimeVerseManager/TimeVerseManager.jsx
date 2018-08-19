@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
+import { updateRenderableStore } from 'flux/actions/renderable'
 import { updateRenderedStore } from 'flux/actions/rendered'
 import { updateSongStore } from 'flux/actions/song'
 
@@ -32,6 +33,10 @@ class TimeVerseManager extends Component {
         determineVerseBars: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updateSelectedPlayer: PropTypes.func.isRequired
+    }
+
+    state = {
+        sceneChangeTimeoutId: ''
     }
 
     componentDidMount() {
@@ -162,16 +167,24 @@ class TimeVerseManager extends Component {
         }
 
         if (selectedSongIndex === this.props.selectedSongIndex) {
+
+            const renderedSceneIndex = getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
+
+            // If scene has changed, unrender and set timeout.
+            if (renderedSceneIndex !== this.props.renderedSceneIndex) {
+                this._prepareForSceneChangeUnrender()
+            }
+
             /**
              * If selecting or changing verse in same song, change index to be
              * rendered right away.
              */
             this.props.updateRenderedStore({
                 renderedVerseIndex: selectedVerseIndex,
-                renderedSceneIndex: getSceneIndexForVerseIndex(
-                    selectedSongIndex,
-                    selectedVerseIndex
-                )
+                renderedSceneIndex
             })
 
             /**
@@ -187,6 +200,32 @@ class TimeVerseManager extends Component {
         }
     }
 
+    _prepareForSceneChangeRender = () => {
+
+        this.props.updateRenderableStore({
+            isSceneChangeRenderable: true
+        })
+    }
+
+    _prepareForSceneChangeUnrender() {
+
+        // This only gets toggled for a scene change within the same song.
+        this.props.updateRenderableStore({
+            isSceneChangeRenderable: false
+        })
+
+        // Clear previous timeout.
+        clearTimeout(this.state.sceneChangeTimeoutId)
+
+        const sceneChangeTimeoutId = setTimeout(
+            this._prepareForSceneChangeRender, 200
+        )
+
+        this.setState({
+            sceneChangeTimeoutId
+        })
+    }
+
     render() {
         return null
     }
@@ -195,6 +234,9 @@ class TimeVerseManager extends Component {
 const mapStateToProps = ({
     isManualScroll,
     isPlaying,
+    renderedStore: {
+        renderedSceneIndex
+    },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
@@ -202,12 +244,14 @@ const mapStateToProps = ({
 }) => ({
     isManualScroll,
     isPlaying,
+    renderedSceneIndex,
     selectedSongIndex,
     selectedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateRenderableStore,
         updateRenderedStore,
         updateSongStore
     }, dispatch)

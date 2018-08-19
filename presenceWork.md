@@ -7,6 +7,8 @@
 * Make renderable store. (/)
 * Make render store. (/)
 
+* Have class for scene transitions.
+
 # Order upon load
 * theatre
 * verse
@@ -19,7 +21,7 @@
 * theatre (only thing that changes)
 
 # Order upon song change
-* verse (instant)
+* verse
 * scene
 * main
 * lyric

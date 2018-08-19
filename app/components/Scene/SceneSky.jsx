@@ -14,16 +14,16 @@ import {
 } from 'constants/sky'
 
 const mapStateToProps = ({
-    renderStore: { canTheatreRender }
+    renderStore: { canSceneRender }
 }) => ({
-    canTheatreRender
+    canSceneRender
 })
 
 class SceneSky extends Component {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
+        canSceneRender: PropTypes.bool.isRequired,
 
         // From parent.
         skyConfig: PropTypes.shape({
@@ -33,11 +33,11 @@ class SceneSky extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canTheatreRender
+        return nextProps.canSceneRender
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+        if (this.props.canSceneRender && !prevProps.canSceneRender) {
             logger.warn('Sky rendered.')
         }
     }

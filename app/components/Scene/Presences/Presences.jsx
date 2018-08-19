@@ -36,6 +36,10 @@ class Presences extends Component {
         yIndex: PropTypes.number.isRequired
     }
 
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSceneRender
+    }
+
     render() {
         const {
                 /* eslint-disable no-unused-vars */
