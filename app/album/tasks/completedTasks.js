@@ -3763,4 +3763,9 @@ module.exports = [
         workedHours: 6,
         neededHours: 6
     },
+    {
+        taskName: `Flash of presences when loading. Turns out the cause is because song index was no longer being stored!`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
