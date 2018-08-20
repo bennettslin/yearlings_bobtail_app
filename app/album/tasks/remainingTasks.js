@@ -4,11 +4,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown. Odd and even?`,
-        workedHours: 3,
-        neededHours: 5
-    },
 
     /**
      * Important bugs to fix.

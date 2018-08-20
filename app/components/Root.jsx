@@ -100,30 +100,11 @@ class Root extends Component {
 
     componentDidUpdate(prevProps) {
         const {
-                isSliderTouched,
-                // renderedSongIndex,
-                // renderedVerseIndex
+                isSliderTouched
             } = this.props,
             {
-                isSliderTouched: wasSliderTouched,
-                // renderedSongIndex: prevSongIndex,
-                // renderedVerseIndex: prevVerseIndex
+                isSliderTouched: wasSliderTouched
             } = prevProps
-
-        // If verse changed, reset the verse tracker in the verse bar.
-        // if (
-        //     renderedSongIndex !== prevSongIndex ||
-        //     renderedVerseIndex !== prevVerseIndex
-        // ) {
-        //     setTimeout(this._resetVerseTracker, 0)
-        // }
-
-        // // Immediately clear the verse tracker reset.
-        // if (this.state.isVerseTrackerReset) {
-        //     this.setState({
-        //         isVerseTrackerReset: false
-        //     })
-        // }
 
         // This prevents a click event from registering after mouseUp.
         if (
@@ -133,12 +114,6 @@ class Root extends Component {
             setTimeout(this._resetSliderMousedUp, 0)
         }
     }
-
-    // _resetVerseTracker = () => {
-    //     this.setState({
-    //         isVerseTrackerReset: true
-    //     })
-    // }
 
     _resetSliderMousedUp = () => {
         this.setState({
@@ -224,8 +199,7 @@ class Root extends Component {
             } = this.props,
 
             {
-                keyName,
-                // isVerseTrackerReset
+                keyName
             } = this.state,
 
             {
@@ -274,8 +248,6 @@ class Root extends Component {
                 sliderVerseIndex :
                 renderedVerseIndex,
 
-            isOddVerseIndex = cursorVerseIndex % 2,
-
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
                 renderedSongIndex, cursorVerseIndex
             )
@@ -297,13 +269,6 @@ class Root extends Component {
                      */
                     canCarouselRender ?
                         'RM__canTrackVerse' : 'RM__cannotTrackVerse',
-
-                    !areVerseBarsHidden && isOddVerseIndex ?
-                        'RM__verseBar__odd' :
-                        'RM__verseBar__even',
-
-                    // isVerseTrackerReset &&
-                    //     'RM__verseTrackerReset',
 
                     `RM__${deviceClassName}`,
                     isDesktop ?

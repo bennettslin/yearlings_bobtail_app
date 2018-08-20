@@ -31,7 +31,7 @@ class VerseTracker extends Component {
         inUnit: PropTypes.bool,
         inVerseBar: PropTypes.bool,
         inSlider: PropTypes.bool,
-        isHidden: PropTypes.bool
+        isHiddenInVerseBar: PropTypes.bool
     }
 
     shouldComponentUpdate(nextProps) {
@@ -43,7 +43,7 @@ class VerseTracker extends Component {
         return (
 
             // Verse bar alternates between showing odd and even verse.
-            this.props.isHidden !== nextProps.isHidden ||
+            this.props.isHiddenInVerseBar !== nextProps.isHiddenInVerseBar ||
 
             // ... song changed...
             this.props.renderedSongIndex !== nextProps.renderedSongIndex ||
@@ -61,11 +61,13 @@ class VerseTracker extends Component {
     getIsSelectedVerse(props) {
         const {
                 verseIndex,
-                renderedVerseIndex
+                renderedVerseIndex,
+                isHiddenInVerseBar
             } = props,
 
             isSelected =
-                verseIndex === renderedVerseIndex
+                verseIndex === renderedVerseIndex &&
+                !isHiddenInVerseBar
 
         return isSelected
     }
@@ -78,7 +80,6 @@ class VerseTracker extends Component {
                 inUnit,
                 inVerseBar,
                 inSlider,
-                isHidden
             } = this.props,
 
             inLyric = inUnit || inVerseBar,
@@ -109,8 +110,6 @@ class VerseTracker extends Component {
 
                     inLyric &&
                         'VerseTracker__inLyric',
-
-                    isHidden && 'VerseTracker__hidden',
 
                     'absoluteFullContainer'
                 )}

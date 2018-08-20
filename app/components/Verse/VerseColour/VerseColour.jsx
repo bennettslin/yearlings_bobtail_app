@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -52,39 +52,29 @@ VerseColour = ({
                 'absoluteFullContainer'
             )}
         >
-            {!inVerseBar && (
+            <VerseTracker
+                {...{
+                    verseIndex,
+                    inVerseBar,
+                    inUnit,
+                    inSlider,
+                    ...inVerseBar && {
+                        isHiddenInVerseBar: isOdd
+                    }
+                }}
+            />
+
+            {/* Allow verse bar to alternate between odd and even. */}
+            {inVerseBar && (
                 <VerseTracker
                     {...{
                         verseIndex,
                         inVerseBar,
                         inUnit,
-                        inSlider
+                        inSlider,
+                        isHiddenInVerseBar: !isOdd
                     }}
                 />
-            )}
-
-            {/* Allow verse bar to alternate between odd and even. */}
-            {inVerseBar && (
-                <Fragment>
-                    <VerseTracker
-                        {...{
-                            verseIndex,
-                            inVerseBar,
-                            inUnit,
-                            inSlider,
-                            isHidden: isOdd
-                        }}
-                    />
-                    <VerseTracker
-                        {...{
-                            verseIndex,
-                            inVerseBar,
-                            inUnit,
-                            inSlider,
-                            isHidden: !isOdd
-                        }}
-                    />
-                </Fragment>
             )}
 
             {/* Even filters are just a little shadier. */}

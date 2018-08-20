@@ -4,8 +4,8 @@
     &,
     .RM__cannotTrackVerse
     &,
-    &.VerseTracker__unselected,
-    &.VerseTracker__hidden {
+    &.VerseTracker__unselected {
+
         /**
          * Ensure that verse tracker always resets between toggling play and
          * selecting songs.
@@ -37,10 +37,6 @@
     &.VerseTracker__selected {
         top: 0;
     }
-}
-
-.VerseTracker__hidden {
-    display: none;
 }
 
 // .VerseTracker__inSlider {
