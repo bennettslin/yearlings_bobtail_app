@@ -3788,4 +3788,9 @@ module.exports = [
         workedHours: 4,
         neededHours: 4
     },
+    {
+        taskName: `Work on method to access new annotation index only if current invalid. I no longer have the context for what I'm saying here...`,
+        workedHours: 3,
+        neededHours: 4
+    },
 ]

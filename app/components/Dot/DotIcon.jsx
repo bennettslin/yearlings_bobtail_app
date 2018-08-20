@@ -68,7 +68,9 @@ DotIcon = ({
                     // These will override the default colour.
                     isAccessed && `DotIcon__accessed`,
                     isSelected && `DotIcon__selected`,
-                    isDeselected && `DotIcon__deselected`
+
+                    // Only used by DotsSlideSelect.
+                    isDeselected && `DotIcon__dotsSlide__deselected`
                 )}
             />
     )

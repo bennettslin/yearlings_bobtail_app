@@ -68,7 +68,9 @@ DotField = ({
                     // These will override the default colour.
                     isAccessed && `DotField__accessed`,
                     isSelected && `DotField__selected`,
-                    isDeselected && `DotField__deselected`
+
+                    // Only used by DotsSlideSelect.
+                    isDeselected && `DotField__dotsSlide__deselected`
                 )}
             />
     )

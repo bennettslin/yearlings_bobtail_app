@@ -82,7 +82,13 @@ class Stanzas extends Component {
     }
 
     _handleWheel = (e) => {
+        // console.error('on wheel', e)
         this._handleDebouncedWheel(e)
+    }
+
+    _handleScroll = () => {
+        // console.error('on scroll', this.lyricRef.scrollTop, e)
+        // this._handleDebouncedWheel(e)
     }
 
     // NOTE: No longer using debounce. We'll keep as it is for now, though.
@@ -91,6 +97,9 @@ class Stanzas extends Component {
     }
 
     setLyricRef = (node) => {
+        // For internal reference.
+        // this.lyricRef = node
+
         // For keyboard events.
         this.props.setLyricRef(node)
 
@@ -126,10 +135,11 @@ class Stanzas extends Component {
             <StanzasView {...other}
                 {...{
                     songStanzaConfigs,
-                    lastUnitDotCardIndex
+                    lastUnitDotCardIndex,
+                    handleWheel: this._handleWheel,
+                    handleScroll: this._handleScroll,
+                    setRef: this.setLyricRef
                 }}
-                handleWheel={this._handleWheel}
-                setRef={this.setLyricRef}
             />
         )
     }
@@ -145,7 +155,8 @@ const propTypes = {
     lastUnitDotCardIndex: PropTypes.number.isRequired,
 
     setRef: PropTypes.func.isRequired,
-    handleWheel: PropTypes.func.isRequired
+    handleWheel: PropTypes.func.isRequired,
+    handleScroll: PropTypes.func.isRequired
 },
 
 StanzasView = ({
@@ -155,6 +166,7 @@ StanzasView = ({
 
     setRef,
     handleWheel,
+    handleScroll,
 
 ...other }) => {
 
@@ -170,6 +182,7 @@ StanzasView = ({
             )}
             tabIndex="-1"
             onWheel={handleWheel}
+            onScroll={handleScroll}
         >
             <div className={cx(
                 'Stanzas'

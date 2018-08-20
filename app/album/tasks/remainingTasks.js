@@ -1,34 +1,26 @@
 module.exports = [
+
+    /**
+     * Player stuff.
+     */
     {
         taskName: `Audit of player refactor work.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     /**
      * Important bugs to fix.
      */
     {
-        taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active? Nope...`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Sometimes audio nav buttons get in state where they only select one song at a time?!`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa. This might involve generally rethinking how to do determine verse bars after a scroll.`,
         workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Look into using SmartComponent.`,
-        workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
 
     /**
@@ -52,6 +44,37 @@ module.exports = [
     },
 
     /**
+     * Access icons UI.
+     */
+
+    // Buttons and dots UI.
+    {
+        taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Strategy for changing UI of dots when accessed.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Strategy for showing hover and active buttons versus dots.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Rather than having Enter or Escape access icon, just make access selectable things more obvious. Remove Enter from Anchors, Wormholes, DotsSlideSelects, NavButtons, VerseNavs. Escape from Popup.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Make nav books svgs.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    /**
      * Remaining scene work.
      */
 
@@ -59,15 +82,6 @@ module.exports = [
         taskName: `Rethink tasks for panels, doors, and windows.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    /**
-     * Player stuff.
-     */
-    {
-        taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     /**
@@ -92,34 +106,6 @@ module.exports = [
         taskName: `Tips content`,
         workedHours: 0,
         neededHours: 5
-    },
-
-    /**
-     * Access icons UI.
-     */
-    {
-        taskName: `Work on method to access new annotation index only if current invalid.`,
-        workedHours: 3,
-        neededHours: 4
-    },
-
-    // Buttons and dots UI.
-    {
-        taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs. Accessing dot.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Strategy for showing hover and active buttons versus dots.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Rather than having Enter or Escape access icon, just make access selectable things more obvious. Remove Enter from Anchors, Wormholes, DotsSlideSelects, NavButtons, VerseNavs. Escape from Popup.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     /**
