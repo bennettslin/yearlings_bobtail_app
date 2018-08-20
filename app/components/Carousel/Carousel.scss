@@ -119,10 +119,10 @@
     $gradient__carousel__monitor:
         linear-gradient(
             to left,
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.2) $js__width__goldenCord * 0.3,
-            rgba(0, 0, 0, 0.2) $js__width__goldenCord * 0.7,
-            rgba(0, 0, 0, 0.6) $js__width__goldenCord,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0) $js__width__goldenCord * 0.3,
+            rgba(0, 0, 0, 0) $js__width__goldenCord * 0.7,
+            rgba(0, 0, 0, 0.5) $js__width__goldenCord,
             black $js__width__goldenCord * 1.1,
             black
         );
@@ -137,10 +137,10 @@
     $gradient__carousel__laptop:
         linear-gradient(
             to left,
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.2) $js__width__uncannyValley * 0.3,
-            rgba(0, 0, 0, 0.2) $js__width__uncannyValley * 0.7,
-            rgba(0, 0, 0, 0.6) $js__width__uncannyValley,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0) $js__width__uncannyValley * 0.3,
+            rgba(0, 0, 0, 0) $js__width__uncannyValley * 0.7,
+            rgba(0, 0, 0, 0.5) $js__width__uncannyValley,
             black $js__width__uncannyValley * 1.1,
             black
         );

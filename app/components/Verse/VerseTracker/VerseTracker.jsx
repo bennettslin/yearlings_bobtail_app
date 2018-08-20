@@ -100,7 +100,9 @@ class VerseTracker extends Component {
                 className={cx(
                     'VerseTracker',
 
-                    isSelected && `VerseTracker__selected`,
+                    isSelected ?
+                        'VerseTracker__selected' :
+                        'VerseTracker__unselected',
 
                     inSlider &&
                         'VerseTracker__inSlider',

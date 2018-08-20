@@ -3778,4 +3778,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Verse tracking does not actually reset transitions. Reset them by overriding transition once unselected.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -4,6 +4,7 @@
     &,
     .RM__cannotTrackVerse
     &,
+    &.VerseTracker__unselected,
     &.VerseTracker__hidden {
         /**
          * Ensure that verse tracker always resets between toggling play and

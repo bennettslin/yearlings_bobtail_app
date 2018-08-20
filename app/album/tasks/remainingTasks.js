@@ -10,12 +10,6 @@ module.exports = [
         neededHours: 5
     },
 
-    {
-        taskName: `Verse tracking does not actually reset transitions. Look into resetting them by having a temporary class on root when verse or song changes?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     /**
      * Important bugs to fix.
      */
