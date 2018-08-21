@@ -1,4 +1,4 @@
-import { CUBES } from 'scene/cubes'
+import { CUBES } from 'scene/cubes/cubes'
 import { DEFAULT_STAGE_KEY } from 'scene/cubesKeys'
 
 import { getCharStringForNumber } from 'helpers/formatHelper'
