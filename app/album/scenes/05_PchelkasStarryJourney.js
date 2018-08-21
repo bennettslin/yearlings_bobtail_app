@@ -6,7 +6,7 @@ import {
     JUNIOR_HIGH_HALLWAY_KEY,
     JUNIOR_HIGH_LOCKERS_KEY,
     JUNIOR_HIGH_QUAD_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -21,7 +21,7 @@ import {
     BRAD,
     ANDREW,
     TRISTAN
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the

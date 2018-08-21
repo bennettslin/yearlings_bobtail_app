@@ -1,4 +1,4 @@
-import { LOGUE_KEY } from 'constants/cubesKeys'
+import { LOGUE_KEY } from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -33,7 +33,7 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

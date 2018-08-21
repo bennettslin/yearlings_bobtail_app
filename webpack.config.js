@@ -60,6 +60,7 @@ const webpack = require('webpack'),
                     handlers: path.resolve(__dirname, './app/handlers'),
                     helpers: path.resolve(__dirname, './app/helpers'),
                     modules: path.resolve(__dirname, './app/modules'),
+                    scene: path.resolve(__dirname, './app/scene'),
                     server: path.resolve(__dirname, './app/server'),
                 }
             }

@@ -3,7 +3,7 @@ import {
     BENNETT_BASEMENT_KEY,
     SHOW_STAGE_FRONT_KEY,
     VOLKSWAGEN_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -17,7 +17,7 @@ import {
     MIRIAM,
     TRISTAN,
     NESTOR
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

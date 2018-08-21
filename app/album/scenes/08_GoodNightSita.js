@@ -4,7 +4,7 @@ import {
     SITA_APARTMENT_GATE_1_KEY,
     SITA_APARTMENT_GATE_2_KEY,
     GO_KART_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -16,7 +16,7 @@ import {
     LIZ,
     KHARI,
     STEPHANIE
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

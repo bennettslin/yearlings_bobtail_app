@@ -3,7 +3,7 @@ import {
     SHOW_STAGE_SIDE_2_KEY,
     SITA_APARTMENT_BED_KEY,
     SHOW_UNLOADING_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -22,7 +22,7 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

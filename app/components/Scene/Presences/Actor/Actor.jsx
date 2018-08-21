@@ -12,7 +12,7 @@ import {
     OLD_BENNETT,
     ANITA,
     ESTHER
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 const ACTORS_MAP = {
     [YOUNG_BENNETT]: YoungBennett,

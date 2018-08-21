@@ -3,7 +3,7 @@ import {
     CREMATED_CLIFF_CONVERTIBLE_KEY,
     CREMATED_DEATHBED_KEY,
     CREMATED_DEATHBED_TENNIS_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -13,7 +13,7 @@ import {
 import {
     BENNETT,
     MIRIAM
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

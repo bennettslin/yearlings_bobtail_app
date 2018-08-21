@@ -4,7 +4,7 @@ import {
     PORCH_KEY,
     NOHO_NEIGHBOURHOOD_KEY,
     CHANGELING_CAVE_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -19,7 +19,7 @@ import {
     CHRISTOPHER,
     HOWIE,
     TOMER
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

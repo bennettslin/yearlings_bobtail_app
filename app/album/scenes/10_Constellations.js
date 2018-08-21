@@ -9,7 +9,7 @@ import {
     UCLA_CAMPUS_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -21,7 +21,7 @@ import {
     ANA,
     HOWIE,
     TOMER
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

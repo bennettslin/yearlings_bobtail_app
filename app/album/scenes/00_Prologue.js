@@ -1,11 +1,11 @@
-import { LOGUE_KEY } from 'constants/cubesKeys'
+import { LOGUE_KEY } from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
 } from 'constants/sky'
 
-import { OLD_BENNETT } from 'constants/actorKeys'
+import { OLD_BENNETT } from 'scene/actorKeys'
 
 import { PROLOGUE } from 'constants/actors/songs'
 

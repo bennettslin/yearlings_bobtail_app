@@ -6,7 +6,7 @@ import {
     FIRE_HYDRANT,
     PLAYGROUND_BALL,
     PLAYGROUND_SLIDE
-} from 'constants/fixtureKeys'
+} from 'scene/fixtureKeys'
 
 const FIXTURES_NOHO = {
     [FIRE_HYDRANT]: FireHydrant,

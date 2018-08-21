@@ -15,11 +15,11 @@ import {
 
 import {
     HSLA_MAP
-} from 'constants/hsla'
+} from 'scene/hsla'
 
 import {
     HSLA_KEYS
-} from 'constants/hslaKeys'
+} from 'scene/hslaKeys'
 
 import {
     LEVELS,

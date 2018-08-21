@@ -4,7 +4,7 @@ import {
     OAKLAND_STREET_FRONT_1_KEY,
     OAKLAND_STREET_FRONT_2_KEY,
     OAKLAND_STREET_FRONT_3_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -20,7 +20,7 @@ import {
     LIZ,
     AMY,
     STEPHANIE
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

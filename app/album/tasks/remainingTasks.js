@@ -1,6 +1,15 @@
 module.exports = [
 
     /**
+     * Final scene stuff.
+     */
+    {
+        taskName: `Allow cutouts and fixtures to persist across scenes.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    /**
      * Player stuff.
      */
     {

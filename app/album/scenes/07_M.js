@@ -4,7 +4,7 @@ import {
     REHEARSAL_SPACE_KEY,
     MOVIE_THEATRE_1_KEY,
     MOVIE_THEATRE_2_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -20,7 +20,7 @@ import {
     TOMER,
     MIRIAM,
     STEPHANIE
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

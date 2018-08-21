@@ -2,7 +2,7 @@ import {
     NOHO_BATHROOM_KEY,
     NOHO_NEIGHBOURHOOD_KEY,
     NOHO_SCHOOL_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_DAWN,
@@ -17,7 +17,7 @@ import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 import {
     PANICKED,
@@ -41,13 +41,13 @@ import {
     NOHO_SCHOOL_NEIGHBOURHOOD,
     NOHO_SCHOOLHOUSE,
     NURSE_OFFICE_BUBBLE
-} from 'constants/cutoutKeys'
+} from 'scene/cutoutKeys'
 
 import {
     FIRE_HYDRANT,
     PLAYGROUND_BALL,
     PLAYGROUND_SLIDE
-} from 'constants/fixtureKeys'
+} from 'scene/fixtureKeys'
 
 const
 CUTOUTS_0_AND_1 = {

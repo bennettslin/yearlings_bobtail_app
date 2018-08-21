@@ -2,7 +2,7 @@ import {
     TAIWAN_PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_SCENE_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -14,7 +14,7 @@ import {
     SASHA,
     BRAD,
     ANDREW
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

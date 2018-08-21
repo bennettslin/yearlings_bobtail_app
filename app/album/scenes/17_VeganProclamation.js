@@ -4,7 +4,7 @@ import {
     ALLEY_KEY,
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -23,7 +23,7 @@ import {
     WADE,
     LIZ_REFLECTION,
     KHARI_REFLECTION
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

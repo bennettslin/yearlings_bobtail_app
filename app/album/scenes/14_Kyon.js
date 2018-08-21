@@ -1,4 +1,4 @@
-import { SITA_APARTMENT_COUCH_KEY } from 'constants/cubesKeys'
+import { SITA_APARTMENT_COUCH_KEY } from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -8,7 +8,7 @@ import {
 import {
     LIZ,
     KHARI
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 module.exports = [
     {

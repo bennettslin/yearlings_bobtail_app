@@ -6,7 +6,7 @@ import {
     SITA_APARTMENT_GATE_1_KEY,
     SITA_APARTMENT_GATE_2_KEY,
     BENNETT_APARTMENT_GATE_KEY
-} from 'constants/cubesKeys'
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -20,7 +20,7 @@ import {
     NESTOR,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from 'constants/actorKeys'
+} from 'scene/actorKeys'
 
 /**
  * All of these scenes repeat twice.

@@ -12,7 +12,7 @@ import {
     NOHO_SCHOOL_NEIGHBOURHOOD,
     NOHO_SCHOOLHOUSE,
     NURSE_OFFICE_BUBBLE
-} from 'constants/cutoutKeys'
+} from 'scene/cutoutKeys'
 
 const CUTOUTS_NOHO = {
     [NOHO_NEIGHBOURHOOD]: NohoNeighbourhood,
