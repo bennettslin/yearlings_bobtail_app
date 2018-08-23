@@ -21,12 +21,15 @@ import {
 
 import {
     PANICKED,
-    FLUSTERED
+    FLUSTERED,
+    BATHING,
+    SINGING
 } from 'scene/actors/youngBennett'
 
 import {
     EXASPERATED,
-    CONCERNED
+    CONCERNED,
+    CHEERING
 } from 'scene/actors/anita'
 
 import {
@@ -256,12 +259,12 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, in bathtub, downcast',
-                    instance: null,
-                    yIndex: -1,
+                    instance: BATHING,
+                    yIndex: 3,
                     arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xFloat: 5.5,
+                        xWidth: 1.5,
+                        zHeight: 2.5
                     }
                 }
             }
@@ -281,24 +284,24 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, squatting, smiling',
-                    instance: null,
-                    yIndex: -1,
+                    instance: CHEERING,
+                    yIndex: 4,
                     arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xFloat: 4.5,
+                        xWidth: 1.5,
+                        zHeight: 2.75
                     }
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, facing front, singing, smiling',
-                    instance: null,
-                    yIndex: -1,
+                    instance: SINGING,
+                    yIndex: 3,
                     arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xFloat: 6,
+                        xWidth: 1,
+                        zHeight: 3
                     }
                 }
             }

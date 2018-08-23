@@ -1,13 +1,23 @@
-### Actor
+# Steps
+* Go to the song.
+
+### Actors
 * Add name constants.
+* Clone component to presence instances. Replace with correct name.
+* Hook up and add to map in root component.
+* Add to song scenes. Add coordinates.
+* Delete from this list.
+
+### Cutouts
+* 
+
+### Fixtures
 
 * Move fixture cutouts. Cutouts are flat, fixtures are solid.
 
 # Didi
 
 ## Scene 3
-### Actor
-* youngBennett: bathing
 
 ### Cutout
 * bathtub
@@ -19,10 +29,6 @@
 * noHoBathroom: make window
 
 ## Scene 4
-
-### Actor
-* anita: cheering
-* youngBennett: singing
 
 ### Cutout
 * nohoNeighbourhood
@@ -65,7 +71,7 @@
 * christopher: tantrum
 
 ### Cutout
-* Plants
+* nohoHousePlants
 
 ### Cubes
 * nohoHouse

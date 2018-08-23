@@ -4,17 +4,20 @@ import cx from 'classnames'
 
 import Exasperated from './Instances/Exasperated'
 import Concerned from './Instances/Concerned'
+import Cheering from './Instances/Cheering'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     EXASPERATED,
-    CONCERNED
+    CONCERNED,
+    CHEERING
 } from 'scene/actors/anita'
 
 const INSTANCES_MAP = {
     [EXASPERATED]: Exasperated,
-    [CONCERNED]: Concerned
+    [CONCERNED]: Concerned,
+    [CHEERING]: Cheering,
 }
 
 const propTypes = {
