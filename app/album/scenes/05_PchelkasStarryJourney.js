@@ -11,7 +11,7 @@ import {
 import {
     TIME_ANYTIME,
     SEASON_WINTER
-} from 'constants/sky'
+} from 'scene/sky'
 
 import {
     PRETEEN_BENNETT,

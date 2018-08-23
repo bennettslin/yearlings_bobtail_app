@@ -12,7 +12,7 @@ import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_WINTER
-} from 'constants/sky'
+} from 'scene/sky'
 
 import {
     BENNETT,

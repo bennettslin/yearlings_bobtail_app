@@ -11,7 +11,7 @@ import cx from 'classnames'
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
-} from 'constants/sky'
+} from 'scene/sky'
 
 const mapStateToProps = ({
     renderStore: { canSceneRender }

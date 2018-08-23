@@ -9,7 +9,7 @@ import {
 import {
     TIME_ANYTIME,
     SEASON_SPRING
-} from 'constants/sky'
+} from 'scene/sky'
 
 import {
     BENNETT,

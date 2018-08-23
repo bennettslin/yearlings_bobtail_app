@@ -3,7 +3,7 @@ import { SITA_APARTMENT_COUCH_KEY } from 'scene/cubesKeys'
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from 'constants/sky'
+} from 'scene/sky'
 
 import {
     LIZ,

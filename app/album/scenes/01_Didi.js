@@ -11,7 +11,7 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     SEASON_SPRING
-} from 'constants/sky'
+} from 'scene/sky'
 
 import {
     YOUNG_BENNETT,
