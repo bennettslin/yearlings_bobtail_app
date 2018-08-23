@@ -22,11 +22,11 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES
-} from '../sceneConstants'
+} from 'components/Scene/sceneConstants'
 
 import {
     CUBE_X_AXIS_LENGTH
-} from '../Cubes/cubeIndexConstants'
+} from 'components/Scene/Cubes/cubeIndexConstants'
 
 const PRESENCE_TYPE_COMPONENTS = {
     [ACTORS]: Actor,

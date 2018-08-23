@@ -1,20 +1,20 @@
 import { getValueInAbridgedMatrix } from 'helpers/generalHelper'
 
-import { getCubesForKey } from '../sceneHelper'
+import { getCubesForKey } from 'components/Scene/sceneHelper'
 
 import {
     getHorizontalPlaneFractionsForSlantDirection
-} from '../Cubes/cubeRenderHelper'
+} from 'components/Scene/Cubes/cubeRenderHelper'
 
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
-} from '../Cubes/cubeIndexConstants'
+} from 'components/Scene/Cubes/cubeIndexConstants'
 
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES
-} from '../Cubes/cubeRenderConstants'
+} from 'components/Scene/Cubes/cubeRenderConstants'
 
 import {
     LS_STAGE_ASPECT_RATIO

@@ -7,7 +7,7 @@ import DynamicStyling from 'components/Style/DynamicStyling'
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Y_INDICES
-} from '../Cubes/cubeIndexConstants'
+} from 'components/Scene/Cubes/cubeIndexConstants'
 
 const PresencesZIndexStyle = () => {
 
