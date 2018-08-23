@@ -3,38 +3,24 @@
 
 ### Actors
 * Add name constants.
-* Clone component to presence instances. Replace with correct name.
+* Create new directory for each actor.
+* Clone component in presence instances. Replace with correct name.
 * Hook up and add to map in root component.
 * Add to song scenes. Add coordinates.
 * Delete from this list.
 
 ### Cutouts and Fixtures
 * Add name constants.
-* Create new directory for each
-
-### Fixtures
-*
+* Create new directory for each general scene.
+* Clone component in presences. Replace with correct name.
+* Hook up and add to map in root component.
+* Add to song scenes. Add coordinates.
+* Delete from this list.
 
 # Didi
 
-## Scene 3
-
-### Cutout
-* bathtub
-* mirroredSink
-* towelRack
-* nohoNeighbourhood
-
 ### Cubes
-* noHoBathroom: make window
-
-## Scene 4
-
-### Cutout
-* nohoNeighbourhood
-
-### Fixture
-* recordPlayer
+* noHoBathroom
 
 ### Cubes
 * nohoBathroomStage: make like a stage

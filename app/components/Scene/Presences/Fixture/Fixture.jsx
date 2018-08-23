@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { FIXTURES_NOHO_SCHOOL } from './Fixtures/NohoSchool/nohoSchool'
+import { FIXTURES_NOHO_BATHROOM } from './Fixtures/NohoBathroom/nohoBathroom'
 
 const FIXTURES_MAP = {
-    ...FIXTURES_NOHO_SCHOOL
+    ...FIXTURES_NOHO_SCHOOL,
+    ...FIXTURES_NOHO_BATHROOM,
 },
 DEFAULT_COMPONENT = () => (null)
 
