@@ -6,7 +6,13 @@ module.exports = [
     {
         taskName: `Allow cutouts and fixtures to persist across scenes.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 8
+    },
+
+    {
+        taskName: `Presence transition order.`,
+        workedHours: 0,
+        neededHours: 8
     },
 
     /**

@@ -13,7 +13,7 @@
 * Fixtures slide in from left or right, depending on xIndex. (/)
 * Presences are behind theatre. (/)
 
-* Cutouts and fixtures that persist across scenes should not transition. (Hold off for now.)
+* Cutouts and fixtures that persist across scenes should not transition.
 
 * Handle transition order:
 
