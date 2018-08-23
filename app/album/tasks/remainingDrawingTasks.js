@@ -1,6 +1,20 @@
 module.exports = [
 
     /**
+     * Todo next!
+     */
+    {
+        taskName: `Valley overlooking freeway (Willy)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Evian bottles pack in car (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    /**
      * Large painted panels (Do first)
      */
     {
@@ -202,11 +216,6 @@ module.exports = [
      * Transparent structures
      */
     {
-        taskName: `Freeway overpass fence (Willy)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
         taskName: `Stairwell railing (Odin)`,
         workedHours: 0,
         neededHours: 4
@@ -235,11 +244,6 @@ module.exports = [
     /**
      * Large sceneries (Mimic painting)
      */
-    {
-        taskName: `Valley overlooking freeway (Willy)`,
-        workedHours: 0,
-        neededHours: 5
-    },
     {
         taskName: `Family house in distance (Willy)`,
         workedHours: 0,

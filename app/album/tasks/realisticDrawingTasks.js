@@ -52,11 +52,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Evian bottles pack in car (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Record player (Cremated, Dream)`,
         workedHours: 0,
         neededHours: 3

@@ -17,14 +17,6 @@
 * Add to song scenes. Add coordinates.
 * Delete from this list.
 
-# Didi
-
-### Cubes
-* noHoBathroom
-
-### Cubes
-* nohoBathroomStage: make like a stage
-
 # Willy the Cocoa
 
 ## Scene 0
@@ -132,8 +124,6 @@
 # Odin
 
 # Pchelka's Starry Journey
-
-
 
 # Ash Wednesday
 

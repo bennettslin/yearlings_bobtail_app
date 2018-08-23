@@ -10,7 +10,7 @@ module.exports = [
     },
 
     {
-        taskName: `Presence transition order.`,
+        taskName: `Presence transition order. Probably needs React CSS transition group.`,
         workedHours: 0,
         neededHours: 8
     },
