@@ -8,12 +8,12 @@
 * Add to song scenes. Add coordinates.
 * Delete from this list.
 
-### Cutouts
-* 
+### Cutouts and Fixtures
+* Add name constants.
+* Create new directory for each
 
 ### Fixtures
-
-* Move fixture cutouts. Cutouts are flat, fixtures are solid.
+*
 
 # Didi
 

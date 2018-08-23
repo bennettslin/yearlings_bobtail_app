@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { FIXTURES_NOHO } from './Fixtures/Noho/noho'
+import { FIXTURES_NOHO_SCHOOL } from './Fixtures/NohoSchool/nohoSchool'
 
 const FIXTURES_MAP = {
-    ...FIXTURES_NOHO
+    ...FIXTURES_NOHO_SCHOOL
 },
 DEFAULT_COMPONENT = () => (null)
 

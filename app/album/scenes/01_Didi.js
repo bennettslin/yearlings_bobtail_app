@@ -40,16 +40,16 @@ import {
 import {
     NOHO_NEIGHBOURHOOD,
     NOHO_HOUSE_LEFT,
+    FIRE_HYDRANT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOL_NEIGHBOURHOOD,
     NOHO_SCHOOLHOUSE,
+    PLAYGROUND_SLIDE,
     NURSE_OFFICE_BUBBLE
 } from 'scene/cutoutKeys'
 
 import {
-    FIRE_HYDRANT,
     PLAYGROUND_BALL,
-    PLAYGROUND_SLIDE
 } from 'scene/fixtureKeys'
 
 const
@@ -78,8 +78,6 @@ CUTOUTS_0_AND_1 = {
             zHeight: 3
         }
     },
-},
-FIXTURES_0_AND_1 = {
     [FIRE_HYDRANT]: {
         yIndex: 5,
         arrangement: {
@@ -95,8 +93,7 @@ module.exports = [
         unitIndex: 1,
         description: `North Hollywood houses.`,
         presences: {
-            cutouts: CUTOUTS_0_AND_1,
-            fixtures: FIXTURES_0_AND_1
+            cutouts: CUTOUTS_0_AND_1
         },
         cubes: NOHO_NEIGHBOURHOOD_KEY,
         sky: {
@@ -146,8 +143,7 @@ module.exports = [
                     }
                 }
             },
-            cutouts: CUTOUTS_0_AND_1,
-            fixtures: FIXTURES_0_AND_1
+            cutouts: CUTOUTS_0_AND_1
         },
         cubes: NOHO_NEIGHBOURHOOD_KEY,
         sky: {
@@ -215,6 +211,14 @@ module.exports = [
                         zHeight: 3
                     }
                 },
+                [PLAYGROUND_SLIDE]: {
+                    yIndex: 1,
+                    arrangement: {
+                        xFloat: 4,
+                        xWidth: 2,
+                        zHeight: 3
+                    }
+                },
                 [NURSE_OFFICE_BUBBLE]: {
                     yIndex: 2,
                     arrangement: {
@@ -232,14 +236,6 @@ module.exports = [
                         xWidth: 1,
                         zHeight: 1,
                         zOffset: 2
-                    }
-                },
-                [PLAYGROUND_SLIDE]: {
-                    yIndex: 1,
-                    arrangement: {
-                        xFloat: 4,
-                        xWidth: 2,
-                        zHeight: 3
                     }
                 }
             }

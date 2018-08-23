@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const PlaygroundSlide = ({
+const FireHydrant = ({
 
     className,
 
@@ -18,13 +18,13 @@ const PlaygroundSlide = ({
     return (
         <Svg
             className={cx(
-                'PlaygroundSlide',
+                'FireHydrant',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Fixture__temporaryRect'
+                    'Cutout__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const PlaygroundSlide = ({
                 {...other}
             >
                 {cx(
-                    'PlaygroundSlide'
+                    'FireHydrant'
                 )}
             </text>
         </Svg>
     )
 }
 
-PlaygroundSlide.propTypes = propTypes;
+FireHydrant.propTypes = propTypes;
 
-export default PlaygroundSlide
+export default FireHydrant

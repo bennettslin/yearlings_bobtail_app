@@ -2,10 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { CUTOUTS_NOHO } from './Cutouts/Noho/noho'
+import { CUTOUTS_NOHO_HOUSES } from './Cutouts/NohoHouses/nohoHouses'
+import { CUTOUTS_NOHO_SCHOOL } from './Cutouts/NohoSchool/nohoSchool'
 
 const CUTOUTS_MAP = {
-    ...CUTOUTS_NOHO
+    ...CUTOUTS_NOHO_HOUSES,
+    ...CUTOUTS_NOHO_SCHOOL
 },
 DEFAULT_COMPONENT = () => (null)
 
