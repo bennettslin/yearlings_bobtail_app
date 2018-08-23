@@ -22,17 +22,17 @@ import {
 import {
     PANICKED,
     FLUSTERED
-} from 'constants/actors/youngBennett'
+} from 'scene/actors/youngBennett'
 
 import {
     EXASPERATED,
     CONCERNED
-} from 'constants/actors/anita'
+} from 'scene/actors/anita'
 
 import {
     CURIOUS,
     SNICKERING
-} from 'constants/actors/esther'
+} from 'scene/actors/esther'
 
 import {
     NOHO_NEIGHBOURHOOD,

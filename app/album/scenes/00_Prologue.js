@@ -7,7 +7,7 @@ import {
 
 import { OLD_BENNETT } from 'scene/actorKeys'
 
-import { PROLOGUE } from 'constants/actors/songs'
+import { PROLOGUE } from 'scene/actors/songs'
 
 module.exports = [
     {

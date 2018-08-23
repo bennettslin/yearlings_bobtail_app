@@ -168,11 +168,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Pharmacy aisle (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Howie's kitchen (Constellations)`,
         workedHours: 0,
         neededHours: 3

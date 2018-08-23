@@ -1,8 +1,12 @@
 const
     PANICKED = 'panicked',
-    FLUSTERED = 'flustered'
+    FLUSTERED = 'flustered',
+    BATHING = 'bathing',
+    SINGING = 'singing'
 
 export {
     PANICKED,
-    FLUSTERED
+    FLUSTERED,
+    BATHING,
+    SINGING
 }

@@ -10,7 +10,7 @@ import { DEFAULT_COMPONENT } from 'constants/dom'
 import {
     EXASPERATED,
     CONCERNED
-} from 'constants/actors/anita'
+} from 'scene/actors/anita'
 
 const INSTANCES_MAP = {
     [EXASPERATED]: Exasperated,

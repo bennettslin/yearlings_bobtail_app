@@ -1,3 +1,6 @@
+### Actor
+* Add name constants.
+
 * Move fixture cutouts. Cutouts are flat, fixtures are solid.
 
 # Didi

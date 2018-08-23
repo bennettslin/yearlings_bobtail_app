@@ -24,6 +24,12 @@ module.exports = [
         neededHours: 5
     },
 
+    {
+        taskName: `Pharmacy aisle (Constellations)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+
     /**
      * Untouched fixtures, painted foam panels.
      */

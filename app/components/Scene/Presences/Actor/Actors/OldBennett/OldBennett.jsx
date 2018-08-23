@@ -8,7 +8,7 @@ import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     PROLOGUE
-} from 'constants/actors/songs'
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
     [PROLOGUE]: Prologue
