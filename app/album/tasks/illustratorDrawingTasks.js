@@ -4,17 +4,22 @@ module.exports = [
      * Large painted panels
      */
     {
-        taskName: `Bathroom with sink, mirror, towel rack (Didi)`,
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
         taskName: `North Hollywood houses (Didi, Willy)`,
         workedHours: 3,
         neededHours: 4
     },
     {
         taskName: `Playground (Didi)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: `Bathroom with sink, mirror, towel rack (Didi)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Valley overlooking freeway (Willy)`,
         workedHours: 2,
         neededHours: 3
     },

@@ -51,6 +51,9 @@
 ### Cutout
 * nohoHousePlants
 
+### Fixtures
+* highChair
+
 ### Cubes
 * nohoHouse
 

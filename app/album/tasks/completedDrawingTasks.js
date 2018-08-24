@@ -675,6 +675,11 @@ module.exports = [
                 neededHours: 3
             },
             {
+                taskName: `Evian bottles pack in car (Constellations)`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
                 taskName: `3 * Guitar case (M, Look Back)`,
                 workedHours: 3,
                 neededHours: 3

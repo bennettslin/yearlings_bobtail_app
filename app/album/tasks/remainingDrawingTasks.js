@@ -4,24 +4,19 @@ module.exports = [
      * Todo next!
      */
     {
-        taskName: `Valley overlooking freeway (Willy)`,
+        taskName: `Family house facade (Willy)`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 4
     },
     {
-        taskName: `Evian bottles pack in car (Constellations)`,
+        taskName: `Family house in distance (Willy)`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
 
     /**
      * Large painted panels (Do first)
      */
-    {
-        taskName: `Family house facade (Willy)`,
-        workedHours: 0,
-        neededHours: 4
-    },
     {
         taskName: `Bennett's room (Willy, Pchelka)`,
         workedHours: 0,
@@ -244,11 +239,6 @@ module.exports = [
     /**
      * Large sceneries (Mimic painting)
      */
-    {
-        taskName: `Family house in distance (Willy)`,
-        workedHours: 0,
-        neededHours: 5
-    },
     {
         taskName: `Taiwan kitchen (Odin)`,
         workedHours: 0,

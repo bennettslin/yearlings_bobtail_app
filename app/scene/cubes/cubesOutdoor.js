@@ -35,12 +35,12 @@ import {
 import {
     a,
     // b,
-    c,
+    // c,
     // d,
-    // e,
+    e,
     f,
     g,
-    // k,
+    k,
     // LEFT,
     RIGHT
 } from './cubesConstants'
@@ -48,25 +48,32 @@ import {
 const
 
     FREEWAY_CUBES = {
-        // Solid overpass wall is 1.5'. Fence will extend higher.
         floor: {
             zIndices: [
-                [c, g],
-                [8],
-                [4],
-                [4],
                 [0],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, g]
+                [0],
+                [4],
+                [2],
+                [4],
+                [0]
             ]
         }
     },
     PORCH_CUBES = {
-        // Outdoor wall is 8'.
+        ceiling: {
+            zIndices: [
+                [f, f, f, f, f, e, e, f],
+                [f],
+                [k, f, f, f, f, f, f, f, f, f, f, k]
+            ]
+        },
         floor: {
             zIndices: [
-                [g, g, g, g, g, g, g, g, g, g],
-                [1, 1, 1, 3, 3, 3, 3, 3, 3, 1],
-                [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
+                [f, f, f, f, f, 3, 3, f, f, f],
+                [1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 1, f, 2, 2, 2, 2, 2, 2, f, 1],
                 [1]
             ]
         }
