@@ -4,13 +4,13 @@ module.exports = [
      * Final scene stuff.
      */
     {
-        taskName: `Allow cutouts and fixtures to persist across scenes.`,
+        taskName: `Allow cutouts and fixtures to persist across scenes. Probably needs React CSS transition group.`,
         workedHours: 0,
         neededHours: 8
     },
 
     {
-        taskName: `Presence transition order. Probably needs React CSS transition group.`,
+        taskName: `Presence transition order.`,
         workedHours: 0,
         neededHours: 8
     },
@@ -42,6 +42,11 @@ module.exports = [
      * Mobile bugs. (Might be able to quickly get through now that deployment
      * is worked out.)
      */
+    {
+        taskName: `Audit of mobile bugs.`,
+        workedHours: 0,
+        neededHours: 8
+    },
     {
         taskName: `Bug where audio banner in actual mobile phone has weird position. (Is this still a bug?)`,
         workedHours: 0,

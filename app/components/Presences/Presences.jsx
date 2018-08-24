@@ -4,6 +4,8 @@
  */
 
 import React, { Component } from 'react'
+// eslint-disable-next-line
+import { CSSTransitionGroup } from 'react-transition-group'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
