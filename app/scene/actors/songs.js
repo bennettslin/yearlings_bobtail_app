@@ -1,8 +1,10 @@
 // Use these song name constants for single instances in a song.
 
 const
-    PROLOGUE = 'prologue'
+    PROLOGUE = 'prologue',
+    EPILOGUE = 'epilogue'
 
 export {
-    PROLOGUE
+    PROLOGUE,
+    EPILOGUE
 }

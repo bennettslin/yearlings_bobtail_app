@@ -3,7 +3,7 @@
 
 ### Actors
 * Add name constants.
-* Create new directory for each actor.
+* Clone new directory for each actor.
 * Clone component in presence instances. Replace with correct name.
 * Hook up and add to map in root component.
 * Add to song scenes. Add coordinates.
@@ -88,7 +88,7 @@
 
 ### Actor
 * preteenBennett: fearful
-* mother: consoling
+* mother: comforting
 
 ### Cutout
 * nohoNeighbourhoodSiren
@@ -99,8 +99,8 @@
 ## Scene 6
 
 ### Actor
-* preteenBennett:
-* christopher:
+* preteenBennett: enchanted
+* christopher: reassuring
 * willy: greeting
 
 ### Cutout
