@@ -10,13 +10,10 @@ import Gopi from './Instances/Gopi'
 import Epilogue from './Instances/Epilogue'
 
 import {
-    WAITING,
-} from 'scene/actors/mara'
-
-import {
     FLIRTING,
     EATING,
     CARRYING,
+    WAITING,
     GOPI,
     EPILOGUE
 } from 'scene/actors/songs'

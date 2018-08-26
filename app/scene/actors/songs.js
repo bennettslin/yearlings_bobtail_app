@@ -20,9 +20,11 @@ const
     ATTIC = 'attic',
 
     // Look Back.
+    PERFORMING = 'performing',
     SQUEEZING = 'squeezing',
     CARRYING = 'carrying',
     MINGLING = 'mingling',
+    WAITING = 'waiting',
 
     // Garryowen.
     NOOGIE = 'noogie',
@@ -59,9 +61,11 @@ export {
     CEMETERY,
     STATION_WAGON,
     ATTIC,
+    PERFORMING,
     SQUEEZING,
     CARRYING,
     MINGLING,
+    WAITING,
     NOOGIE,
     YOUNG_CHILD,
     PAST,

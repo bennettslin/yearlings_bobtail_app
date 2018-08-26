@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Waiting = ({
+const Chuckling = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Waiting = ({
         <Svg
             className={cx(
                 className,
-                'Waiting'
+                'Chuckling'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Waiting = ({
                 {...other}
             >
                 {cx(
-                    'Waiting'
+                    'Chuckling'
                 )}
             </text>
         </Svg>
     )
 }
 
-Waiting.propTypes = propTypes;
+Chuckling.propTypes = propTypes;
 
-export default Waiting
+export default Chuckling

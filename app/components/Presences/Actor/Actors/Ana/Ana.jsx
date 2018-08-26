@@ -2,19 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import Squatting from './Instances/Squatting'
 import Eating from './Instances/Eating'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
 import Cemetery from './Instances/Cemetery'
 import StationWagon from './Instances/StationWagon'
+import Performing from './Instances/Performing'
+import Waiting from './Instances/Waiting'
+import Chuckling from './Instances/Chuckling'
+import Smirking from './Instances/Smirking'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
+    SQUATTING,
+    CHUCKLING,
+    SMIRKING
 } from 'scene/actors/ana'
 
 import {
@@ -24,17 +28,23 @@ import {
     STEAM_TUNNEL,
     CEMETERY,
     STATION_WAGON,
+    PERFORMING,
+    WAITING,
     EPILOGUE
 } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [SQUATTING]: Squatting,
     [EATING]: Eating,
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
     [STEAM_TUNNEL]: SteamTunnel,
     [CEMETERY]: Cemetery,
     [STATION_WAGON]: StationWagon,
+    [PERFORMING]: Performing,
+    [WAITING]: Waiting,
+    [CHUCKLING]: Chuckling,
+    [SMIRKING]: Smirking,
     [EPILOGUE]: Epilogue
 }
 
@@ -52,7 +62,7 @@ const Ana = ({
 ...other }) => {
 
     const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+        INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}
