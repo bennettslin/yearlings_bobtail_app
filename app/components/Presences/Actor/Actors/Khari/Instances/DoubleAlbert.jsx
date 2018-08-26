@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Roaring = ({
+const DoubleAlbert = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Roaring = ({
         <Svg
             className={cx(
                 className,
-                'Roaring'
+                'DoubleAlbert'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Roaring = ({
                 {...other}
             >
                 {cx(
-                    'Roaring'
+                    'DoubleAlbert'
                 )}
             </text>
         </Svg>
     )
 }
 
-Roaring.propTypes = propTypes;
+DoubleAlbert.propTypes = propTypes;
 
-export default Roaring
+export default DoubleAlbert

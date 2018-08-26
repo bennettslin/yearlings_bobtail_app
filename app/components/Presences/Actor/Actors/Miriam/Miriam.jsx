@@ -2,18 +2,26 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
 import Noogie from './Instances/Noogie'
+import Asleep from './Instances/Asleep'
+import Mischievous from './Instances/Mischievous'
+import Fending from './Instances/Fending'
+import Perfuming from './Instances/Perfuming'
 import Cowgirl from './Instances/Cowgirl'
 import Blowjob from './Instances/Blowjob'
+import Tennis from './Instances/Tennis'
+import Reversing from './Instances/Reversing'
 import Greeting from './Instances/Greeting'
 import Gopi from './Instances/Gopi'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
+    ASLEEP,
+    MISCHIEVOUS,
+    FENDING,
+    PERFUMING,
+    TENNIS,
+    REVERSING
 } from 'scene/actors/miriam'
 
 import {
@@ -26,10 +34,15 @@ import {
 } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
     [NOOGIE]: Noogie,
+    [ASLEEP]: Asleep,
+    [MISCHIEVOUS]: Mischievous,
+    [FENDING]: Fending,
+    [PERFUMING]: Perfuming,
     [COWGIRL]: Cowgirl,
     [BLOWJOB]: Blowjob,
+    [TENNIS]: Tennis,
+    [REVERSING]: Reversing,
     [GREETING]: Greeting,
     [GOPI]: Gopi,
     [EPILOGUE]: Epilogue
@@ -48,8 +61,7 @@ const Miriam = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

@@ -2,19 +2,38 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import DoubleAlbert from './Instances/DoubleAlbert'
+import Arrived from './Instances/Arrived'
+import Judgmental from './Instances/Judgmental'
+import Concerned from './Instances/Concerned'
+import Joking from './Instances/Joking'
+import Protective from './Instances/Protective'
+import Caressing from './Instances/Caressing'
+import CaressingReflection from './Instances/CaressingReflection'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
+    DOUBLE_ALBERT,
+    ARRIVED,
+    JUDGMENTAL,
+    CONCERNED,
+    JOKING,
+    PROTECTIVE,
+    CARESSING,
+    CARESSING_REFLECTION
 } from 'scene/actors/khari'
 
 import { EPILOGUE } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [DOUBLE_ALBERT]: DoubleAlbert,
+    [ARRIVED]: Arrived,
+    [JUDGMENTAL]: Judgmental,
+    [CONCERNED]: Concerned,
+    [JOKING]: Joking,
+    [PROTECTIVE]: Protective,
+    [CARESSING]: Caressing,
+    [CARESSING_REFLECTION]: CaressingReflection,
     [EPILOGUE]: Epilogue
 }
 
@@ -31,8 +50,7 @@ const Khari = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}
