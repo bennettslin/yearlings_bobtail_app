@@ -11,6 +11,14 @@ const
     FLIRTING = 'flirting',
     EATING = 'eating',
 
+    // Constellations.
+    ABBEY_ROAD = 'abbeyRoad',
+    WALGREENS = 'walgreens',
+    STEAM_TUNNEL = 'steamTunnel',
+    CEMETERY = 'cemetery',
+    STATION_WAGON = 'stationWagon',
+    ATTIC = 'attic',
+
     // Look Back.
     SQUEEZING = 'squeezing',
     CARRYING = 'carrying',
@@ -27,6 +35,10 @@ const
     PRESENT = 'present',
     FUTURE = 'future',
 
+    // Cremated.
+    COWGIRL = 'cowgirl',
+    BLOWJOB = 'blowjob',
+
     // Vegan.
     PROTESTER = 'protester',
 
@@ -41,6 +53,12 @@ export {
     GREETING,
     FLIRTING,
     EATING,
+    ABBEY_ROAD,
+    WALGREENS,
+    STEAM_TUNNEL,
+    CEMETERY,
+    STATION_WAGON,
+    ATTIC,
     SQUEEZING,
     CARRYING,
     MINGLING,
@@ -49,6 +67,8 @@ export {
     PAST,
     PRESENT,
     FUTURE,
+    COWGIRL,
+    BLOWJOB,
     PROTESTER,
     GOPI,
     EPILOGUE

@@ -4,6 +4,8 @@ import cx from 'classnames'
 
 import Roaring from './Instances/Roaring'
 import Noogie from './Instances/Noogie'
+import Cowgirl from './Instances/Cowgirl'
+import Blowjob from './Instances/Blowjob'
 import Greeting from './Instances/Greeting'
 import Gopi from './Instances/Gopi'
 import Epilogue from './Instances/Epilogue'
@@ -16,6 +18,8 @@ import {
 
 import {
     NOOGIE,
+    COWGIRL,
+    BLOWJOB,
     GREETING,
     GOPI,
     EPILOGUE
@@ -24,6 +28,8 @@ import {
 const INSTANCES_MAP = {
     [ROARING]: Roaring,
     [NOOGIE]: Noogie,
+    [COWGIRL]: Cowgirl,
+    [BLOWJOB]: Blowjob,
     [GREETING]: Greeting,
     [GOPI]: Gopi,
     [EPILOGUE]: Epilogue

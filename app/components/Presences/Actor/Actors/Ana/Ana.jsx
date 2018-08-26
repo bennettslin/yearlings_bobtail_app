@@ -4,6 +4,11 @@ import cx from 'classnames'
 
 import Roaring from './Instances/Roaring'
 import Eating from './Instances/Eating'
+import AbbeyRoad from './Instances/AbbeyRoad'
+import Walgreens from './Instances/Walgreens'
+import SteamTunnel from './Instances/SteamTunnel'
+import Cemetery from './Instances/Cemetery'
+import StationWagon from './Instances/StationWagon'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
@@ -14,12 +19,22 @@ import {
 
 import {
     EATING,
+    ABBEY_ROAD,
+    WALGREENS,
+    STEAM_TUNNEL,
+    CEMETERY,
+    STATION_WAGON,
     EPILOGUE
 } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
     [ROARING]: Roaring,
     [EATING]: Eating,
+    [ABBEY_ROAD]: AbbeyRoad,
+    [WALGREENS]: Walgreens,
+    [STEAM_TUNNEL]: SteamTunnel,
+    [CEMETERY]: Cemetery,
+    [STATION_WAGON]: StationWagon,
     [EPILOGUE]: Epilogue
 }
 
