@@ -52,7 +52,7 @@ import {
 
 import {
     GANGBANGER
-} from 'scene/actors/howie'
+} from 'scene/actors/songs'
 
 module.exports = [
     {

@@ -1,6 +1,6 @@
-const
-    GANGBANGER = 'gangbanger'
+// const
+//     GANGBANGER = 'gangbanger'
 
-export {
-    GANGBANGER
-}
+// export {
+//     GANGBANGER
+// }

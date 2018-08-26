@@ -8,7 +8,7 @@ import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     GANGBANGER,
-} from 'scene/actors/tomer'
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
     [GANGBANGER]: Gangbanger,
