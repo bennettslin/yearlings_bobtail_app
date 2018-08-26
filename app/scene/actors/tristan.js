@@ -1,6 +1,10 @@
 const
-    ROARING = 'roaring'
+    PRINCIPAL = 'principal',
+    PUNCHING = 'punching',
+    INTRODUCING = 'introducing'
 
 export {
-    ROARING
+    PRINCIPAL,
+    PUNCHING,
+    INTRODUCING
 }

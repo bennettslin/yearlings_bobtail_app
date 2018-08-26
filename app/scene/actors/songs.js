@@ -5,6 +5,7 @@ const
 
     // Willy.
     GANGBANGER = 'gangbanger',
+    GREETING = 'greeting',
 
     // Ash Wednesday.
     FLIRTING = 'flirting',
@@ -14,6 +15,9 @@ const
     SQUEEZING = 'squeezing',
     CARRYING = 'carrying',
     MINGLING = 'mingling',
+
+    // Garryowen.
+    NOOGIE = 'noogie',
 
     // Golden Cord.
     YOUNG_CHILD = 'youngChild',
@@ -34,11 +38,13 @@ const
 export {
     PROLOGUE,
     GANGBANGER,
+    GREETING,
     FLIRTING,
     EATING,
     SQUEEZING,
     CARRYING,
     MINGLING,
+    NOOGIE,
     YOUNG_CHILD,
     PAST,
     PRESENT,

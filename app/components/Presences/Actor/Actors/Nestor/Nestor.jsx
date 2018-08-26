@@ -2,19 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import Jogger from './Instances/Jogger'
+import Injured from './Instances/Injured'
+import Greeting from './Instances/Greeting'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
+    JOGGER,
+    INJURED
 } from 'scene/actors/nestor'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import {
+    GREETING,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [JOGGER]: Jogger,
+    [INJURED]: Injured,
+    [GREETING]: Greeting,
     [EPILOGUE]: Epilogue
 }
 
@@ -31,8 +37,7 @@ const Nestor = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

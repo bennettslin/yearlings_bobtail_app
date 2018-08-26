@@ -1,6 +1,14 @@
 const
-    ROARING = 'roaring'
+    CHARMED = 'roaring',
+    INDIGNANT = 'indignant',
+    MERMAID = 'mermaid',
+    POPULAR_GIRL = 'popularGirl',
+    COMFORTING = 'comforting'
 
 export {
-    ROARING
+    CHARMED,
+    INDIGNANT,
+    MERMAID,
+    POPULAR_GIRL,
+    COMFORTING
 }

@@ -13,11 +13,13 @@ import {
     COLLECTING,
     DUCKING,
     FIGHTING,
-    GREETING,
     CROSSING_GUARD
 } from 'scene/actors/willy'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import {
+    GREETING,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
     [COLLECTING]: Collecting,

@@ -5,6 +5,7 @@ import cx from 'classnames'
 import Roaring from './Instances/Roaring'
 import Eating from './Instances/Eating'
 import Flirting from './Instances/Flirting'
+import Greeting from './Instances/Greeting'
 import Past from './Instances/Past'
 import Present from './Instances/Present'
 import Future from './Instances/Future'
@@ -19,6 +20,7 @@ import {
 import {
     EATING,
     FLIRTING,
+    GREETING,
     PAST,
     PRESENT,
     FUTURE,
@@ -29,6 +31,7 @@ const INSTANCES_MAP = {
     [ROARING]: Roaring,
     [EATING]: Eating,
     [FLIRTING]: Flirting,
+    [GREETING]: Greeting,
     [PAST]: Past,
     [PRESENT]: Present,
     [FUTURE]: Future,

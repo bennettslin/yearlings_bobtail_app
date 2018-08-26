@@ -2,19 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import Charmed from './Instances/Charmed'
+import Indignant from './Instances/Indignant'
+import Mermaid from './Instances/Mermaid'
+import PopularGirl from './Instances/PopularGirl'
+import Comforting from './Instances/Comforting'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
+    CHARMED,
+    INDIGNANT,
+    MERMAID,
+    POPULAR_GIRL,
+    COMFORTING
 } from 'scene/actors/sasha'
 
 import { EPILOGUE } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [CHARMED]: Charmed,
+    [INDIGNANT]: Indignant,
+    [MERMAID]: Mermaid,
+    [POPULAR_GIRL]: PopularGirl,
+    [COMFORTING]: Comforting,
     [EPILOGUE]: Epilogue
 }
 
@@ -31,8 +41,7 @@ const Sasha = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

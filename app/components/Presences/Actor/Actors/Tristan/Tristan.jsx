@@ -2,19 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import Principal from './Instances/Principal'
+import Punching from './Instances/Punching'
+import Noogie from './Instances/Noogie'
+import Introducing from './Instances/Introducing'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
+    PRINCIPAL,
+    PUNCHING,
+    INTRODUCING
 } from 'scene/actors/tristan'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import {
+    NOOGIE,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [PRINCIPAL]: Principal,
+    [PUNCHING]: Punching,
+    [NOOGIE]: Noogie,
+    [INTRODUCING]: Introducing,
     [EPILOGUE]: Epilogue
 }
 
@@ -31,8 +40,7 @@ const Tristan = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

@@ -1,6 +1,8 @@
 const
-    ROARING = 'roaring'
+    JOGGER = 'jogger',
+    INJURED = 'injured'
 
 export {
-    ROARING
+    JOGGER,
+    INJURED
 }
