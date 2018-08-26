@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Blissful = ({
+const Noodling = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Blissful = ({
         <Svg
             className={cx(
                 className,
-                'Blissful'
+                'Noodling'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Blissful = ({
                 {...other}
             >
                 {cx(
-                    'Blissful'
+                    'Noodling'
                 )}
             </text>
         </Svg>
     )
 }
 
-Blissful.propTypes = propTypes;
+Noodling.propTypes = propTypes;
 
-export default Blissful
+export default Noodling

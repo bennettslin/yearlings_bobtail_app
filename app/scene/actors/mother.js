@@ -1,8 +1,14 @@
 const
     STOOPING = 'stooping',
-    COMFORTING = 'comforting'
+    COMFORTING = 'comforting',
+    ARGUING = 'arguing',
+    CONSOLING = 'consoling',
+    SHIELDING = 'shielding'
 
 export {
     STOOPING,
-    COMFORTING
+    COMFORTING,
+    ARGUING,
+    CONSOLING,
+    SHIELDING
 }

@@ -1,6 +1,12 @@
 const
-    ROARING = 'roaring'
+    JEWISH_BOY = 'jewishBoy',
+    TYING = 'roaring',
+    GESTURING = 'gesturing',
+    SNACKING = 'snacking'
 
 export {
-    ROARING
+    JEWISH_BOY,
+    TYING,
+    GESTURING,
+    SNACKING
 }

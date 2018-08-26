@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Reassuring = ({
+const Staring = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Reassuring = ({
         <Svg
             className={cx(
                 className,
-                'Reassuring'
+                'Staring'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Reassuring = ({
                 {...other}
             >
                 {cx(
-                    'Reassuring'
+                    'Staring'
                 )}
             </text>
         </Svg>
     )
 }
 
-Reassuring.propTypes = propTypes;
+Staring.propTypes = propTypes;
 
-export default Reassuring
+export default Staring

@@ -4,20 +4,37 @@ import cx from 'classnames'
 
 import Stooping from './Instances/Stooping'
 import Comforting from './Instances/Comforting'
+import Arguing from './Instances/Arguing'
+import Consoling from './Instances/Consoling'
+import Present from './Instances/Present'
+import Future from './Instances/Future'
+import Shielding from './Instances/Shielding'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     STOOPING,
-    COMFORTING
+    COMFORTING,
+    ARGUING,
+    CONSOLING,
+    SHIELDING
 } from 'scene/actors/mother'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import {
+    PRESENT,
+    FUTURE,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
     [STOOPING]: Stooping,
     [COMFORTING]: Comforting,
+    [ARGUING]: Arguing,
+    [CONSOLING]: Consoling,
+    [PRESENT]: Present,
+    [FUTURE]: Future,
+    [SHIELDING]: Shielding,
     [EPILOGUE]: Epilogue
 }
 

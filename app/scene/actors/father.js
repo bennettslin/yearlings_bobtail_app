@@ -1,6 +1,10 @@
 const
-    ROARING = 'roaring'
+    ROARING = 'roaring',
+    ACCUSATORY = 'accusatory',
+    REELING = 'reeling'
 
 export {
-    ROARING
+    ROARING,
+    ACCUSATORY,
+    REELING
 }

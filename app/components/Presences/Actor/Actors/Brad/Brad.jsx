@@ -2,19 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import JewishBoy from './Instances/JewishBoy'
+import Tying from './Instances/Tying'
+import Gesturing from './Instances/Gesturing'
+import Snacking from './Instances/Snacking'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
-    ROARING,
+    JEWISH_BOY,
+    TYING,
+    GESTURING,
+    SNACKING
 } from 'scene/actors/brad'
 
 import { EPILOGUE } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [JEWISH_BOY]: JewishBoy,
+    [TYING]: Tying,
+    [GESTURING]: Gesturing,
+    [SNACKING]: Snacking,
     [EPILOGUE]: Epilogue
 }
 

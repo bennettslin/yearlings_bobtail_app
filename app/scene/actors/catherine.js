@@ -1,6 +1,10 @@
 const
-    ROARING = 'roaring'
+    WEEPING = 'weeping',
+    TEASING = 'teasing',
+    PUZZLED = 'puzzled'
 
 export {
-    ROARING
+    WEEPING,
+    TEASING,
+    PUZZLED
 }
