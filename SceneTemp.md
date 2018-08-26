@@ -2,7 +2,7 @@
 * Go to the song.
 
 ### Actors
-* Add name constants.
+* Add name and instance constants.
 * Clone new directory for each actor.
 * Clone component in presence instances. Replace with correct name.
 * Hook up and add to map in root component.
