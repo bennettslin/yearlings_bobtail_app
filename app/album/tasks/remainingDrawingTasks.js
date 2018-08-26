@@ -4,14 +4,9 @@ module.exports = [
      * Todo next!
      */
     {
-        taskName: `Family house facade (Willy)`,
+        taskName: `Cave wall (Willy)`,
         workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Family house in distance (Willy)`,
-        workedHours: 0,
-        neededHours: 5
+        neededHours: 3
     },
 
     /**
@@ -19,11 +14,6 @@ module.exports = [
      */
     {
         taskName: `Bennett's room (Willy, Pchelka)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Cave wall (Willy)`,
         workedHours: 0,
         neededHours: 3
     },

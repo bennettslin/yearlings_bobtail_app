@@ -9,6 +9,11 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: `Family house in distance and plants (Willy)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Playground (Didi)`,
         workedHours: 2,
         neededHours: 3

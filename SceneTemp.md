@@ -44,7 +44,7 @@
 
 ### Actor
 * willy: ducking
-* mother: exasperated
+* mother: stooping
 * preteenBennett: cautious
 * christopher: tantrum
 
@@ -104,8 +104,9 @@
 * willy: greeting
 
 ### Cutout
-* nohoHouseFar
-* caveWalls
+* nohoNeighbourhood
+* familyHouse
+* caveWall
 * trollShadows
 * campfire
 
