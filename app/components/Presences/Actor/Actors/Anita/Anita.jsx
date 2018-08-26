@@ -5,6 +5,8 @@ import cx from 'classnames'
 import Exasperated from './Instances/Exasperated'
 import Concerned from './Instances/Concerned'
 import Cheering from './Instances/Cheering'
+import YoungChild from './Instances/YoungChild'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
@@ -14,10 +16,17 @@ import {
     CHEERING
 } from 'scene/actors/anita'
 
+import {
+    YOUNG_CHILD,
+    EPILOGUE
+} from 'scene/actors/songs'
+
 const INSTANCES_MAP = {
     [EXASPERATED]: Exasperated,
     [CONCERNED]: Concerned,
     [CHEERING]: Cheering,
+    [YOUNG_CHILD]: YoungChild,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {

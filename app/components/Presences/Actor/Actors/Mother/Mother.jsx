@@ -4,6 +4,7 @@ import cx from 'classnames'
 
 import Stooping from './Instances/Stooping'
 import Comforting from './Instances/Comforting'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
@@ -12,9 +13,12 @@ import {
     COMFORTING
 } from 'scene/actors/mother'
 
+import { EPILOGUE } from 'scene/actors/songs'
+
 const INSTANCES_MAP = {
     [STOOPING]: Stooping,
-    [COMFORTING]: Comforting
+    [COMFORTING]: Comforting,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {

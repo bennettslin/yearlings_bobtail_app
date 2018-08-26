@@ -2,16 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
-import {
-    ROARING,
-} from 'scene/actors/father'
+import { EPILOGUE } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {
@@ -20,7 +18,7 @@ const propTypes = {
     instanceKey: PropTypes.string.isRequired
 }
 
-const Father = ({
+const Amy = ({
 
     className,
     instanceKey,
@@ -33,13 +31,13 @@ const Father = ({
     return (
         <InstanceComponent {...other}
             className={cx(
-                'Father',
+                'Amy',
                 className
             )}
         />
     )
 }
 
-Father.propTypes = propTypes;
+Amy.propTypes = propTypes;
 
-export default Father
+export default Amy

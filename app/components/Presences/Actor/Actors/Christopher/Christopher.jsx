@@ -5,19 +5,29 @@ import cx from 'classnames'
 import Tantrum from './Instances/Tantrum'
 import Sobbing from './Instances/Sobbing'
 import Reassuring from './Instances/Reassuring'
+import Blissful from './Instances/Blissful'
+import Staring from './Instances/Staring'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     TANTRUM,
     SOBBING,
-    REASSURING
+    REASSURING,
+    BLISSFUL,
+    STARING
 } from 'scene/actors/christopher'
+
+import { EPILOGUE } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
     [TANTRUM]: Tantrum,
     [SOBBING]: Sobbing,
     [REASSURING]: Reassuring,
+    [BLISSFUL]: Blissful,
+    [STARING]: Staring,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {

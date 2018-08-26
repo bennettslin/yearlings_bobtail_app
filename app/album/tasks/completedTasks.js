@@ -3802,5 +3802,5 @@ module.exports = [
         taskName: `General North Hollywood bathroom scene.`,
         workedHours: 2,
         neededHours: 2
-    },
+    }
 ]

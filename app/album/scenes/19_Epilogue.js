@@ -35,6 +35,10 @@ import {
     WADE
 } from 'scene/actorKeys'
 
+import {
+    EPILOGUE
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         verseIndex: 0,
@@ -46,7 +50,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -59,7 +63,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `3'9"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -72,7 +76,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `3'6"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -85,7 +89,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `3'10"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -98,7 +102,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'3"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -111,7 +115,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'0"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -124,7 +128,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `3'5"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -137,7 +141,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `4'2"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -150,7 +154,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -163,7 +167,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `6'0"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -176,7 +180,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'6"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -189,7 +193,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `4'1"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -202,7 +206,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `4'6"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -215,7 +219,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `4'7"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -228,7 +232,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'8"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -241,7 +245,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -254,7 +258,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `4'11"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -267,7 +271,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'10"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -280,7 +284,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'6"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -293,7 +297,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -306,7 +310,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'11"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -319,7 +323,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'0"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -332,7 +336,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'8"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -345,7 +349,7 @@ module.exports = [
                     workedHours: 2.5,
                     realHeight: `5'1"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -358,7 +362,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `4'9"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -371,7 +375,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'9"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -384,7 +388,7 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'7"`,
                     description: 'standing',
-                    instance: null,
+                    instance: EPILOGUE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

@@ -3,15 +3,18 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Prologue from './Instances/Prologue'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
-    PROLOGUE
+    PROLOGUE,
+    EPILOGUE
 } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [PROLOGUE]: Prologue
+    [PROLOGUE]: Prologue,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {

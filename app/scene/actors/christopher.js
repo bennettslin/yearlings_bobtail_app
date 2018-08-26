@@ -1,10 +1,14 @@
 const
     TANTRUM = 'tantrum',
     SOBBING = 'sobbing',
-    REASSURING = 'reassuring'
+    REASSURING = 'reassuring',
+    BLISSFUL = 'blissful',
+    STARING = 'staring'
 
 export {
     TANTRUM,
     SOBBING,
-    REASSURING
+    REASSURING,
+    BLISSFUL,
+    STARING
 }

@@ -4,17 +4,32 @@ import cx from 'classnames'
 
 import Curious from './Instances/Curious'
 import Snickering from './Instances/Snickering'
+import YoungChild from './Instances/YoungChild'
+import SitaHurt from './Instances/SitaHurt'
+import SitaSobbing from './Instances/SitaSobbing'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     CURIOUS,
-    SNICKERING
+    SNICKERING,
+    SITA_HURT,
+    SITA_SOBBING
 } from 'scene/actors/esther'
+
+import {
+    YOUNG_CHILD,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
     [CURIOUS]: Curious,
-    [SNICKERING]: Snickering
+    [SNICKERING]: Snickering,
+    [YOUNG_CHILD]: YoungChild,
+    [SITA_HURT]: SitaHurt,
+    [SITA_SOBBING]: SitaSobbing,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {

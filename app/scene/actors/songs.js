@@ -3,10 +3,12 @@
 const
     PROLOGUE = 'prologue',
     GANGBANGER = 'gangbanger',
+    YOUNG_CHILD = 'youngChild',
     EPILOGUE = 'epilogue'
 
 export {
     PROLOGUE,
     GANGBANGER,
+    YOUNG_CHILD,
     EPILOGUE
 }

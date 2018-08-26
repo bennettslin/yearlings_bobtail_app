@@ -2,11 +2,13 @@ const
     COLLECTING = 'collecting',
     DUCKING = 'ducking',
     FIGHTING = 'fighting',
-    GREETING = 'greeting'
+    GREETING = 'greeting',
+    CROSSING_GUARD = 'crossingGuard'
 
 export {
     COLLECTING,
     DUCKING,
     FIGHTING,
-    GREETING
+    GREETING,
+    CROSSING_GUARD
 }

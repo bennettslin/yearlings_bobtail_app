@@ -22,6 +22,10 @@ import {
     STEPHANIE
 } from 'scene/actorKeys'
 
+import {
+    YOUNG_CHILD
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -215,7 +219,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking',
-                        instance: null,
+                        instance: YOUNG_CHILD,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -229,7 +233,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking',
-                        instance: null,
+                        instance: YOUNG_CHILD,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -243,7 +247,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, turned, looking at Bennetts',
-                        instance: null,
+                        instance: YOUNG_CHILD,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

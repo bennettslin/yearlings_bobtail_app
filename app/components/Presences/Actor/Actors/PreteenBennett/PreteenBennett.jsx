@@ -6,6 +6,7 @@ import Cautious from './Instances/Cautious'
 import Enraged from './Instances/Enraged'
 import Fearful from './Instances/Fearful'
 import Enchanted from './Instances/Enchanted'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
@@ -16,11 +17,14 @@ import {
     ENCHANTED
 } from 'scene/actors/preteenBennett'
 
+import { EPILOGUE } from 'scene/actors/songs'
+
 const INSTANCES_MAP = {
     [CAUTIOUS]: Cautious,
     [ENRAGED]: Enraged,
     [FEARFUL]: Fearful,
     [ENCHANTED]: Enchanted,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {

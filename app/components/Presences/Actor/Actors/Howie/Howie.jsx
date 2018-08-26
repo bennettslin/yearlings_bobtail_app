@@ -3,15 +3,18 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Gangbanger from './Instances/Gangbanger'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     GANGBANGER,
+    EPILOGUE
 } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
     [GANGBANGER]: Gangbanger,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {

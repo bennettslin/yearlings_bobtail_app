@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Roaring from './Instances/Roaring'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
@@ -10,8 +11,11 @@ import {
     ROARING,
 } from 'scene/actors/father'
 
+import { EPILOGUE } from 'scene/actors/songs'
+
 const INSTANCES_MAP = {
     [ROARING]: Roaring,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {

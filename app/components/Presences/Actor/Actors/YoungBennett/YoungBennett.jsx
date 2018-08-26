@@ -6,6 +6,8 @@ import Panicked from './Instances/Panicked'
 import Flustered from './Instances/Flustered'
 import Bathing from './Instances/Bathing'
 import Singing from './Instances/Singing'
+import YoungChild from './Instances/YoungChild'
+import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
@@ -16,11 +18,18 @@ import {
     SINGING,
 } from 'scene/actors/youngBennett'
 
+import {
+    YOUNG_CHILD,
+    EPILOGUE
+} from 'scene/actors/songs'
+
 const INSTANCES_MAP = {
     [PANICKED]: Panicked,
     [FLUSTERED]: Flustered,
     [BATHING]: Bathing,
     [SINGING]: Singing,
+    [YOUNG_CHILD]: YoungChild,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {
