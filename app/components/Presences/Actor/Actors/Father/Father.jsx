@@ -10,8 +10,6 @@ import Future from './Instances/Future'
 import Reeling from './Instances/Reeling'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     ROARING,
     ACCUSATORY,
@@ -48,8 +46,7 @@ const Father = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

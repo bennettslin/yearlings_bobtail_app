@@ -7,8 +7,6 @@ import Throwing from './Instances/Throwing'
 import Noodling from './Instances/Noodling'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     FEIGNING,
     THROWING,
@@ -37,8 +35,7 @@ const Andrew = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

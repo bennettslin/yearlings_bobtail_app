@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Roaring from './Instances/Roaring'
+import Squeezing from './Instances/Squeezing'
+import Mingling from './Instances/Mingling'
+import Protester from './Instances/Protester'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
@@ -11,10 +14,18 @@ import {
     ROARING,
 } from 'scene/actors/stephanie'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import {
+    SQUEEZING,
+    MINGLING,
+    PROTESTER,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
+    [SQUEEZING]: Squeezing,
+    [MINGLING]: Mingling,
     [ROARING]: Roaring,
+    [PROTESTER]: Protester,
     [EPILOGUE]: Epilogue
 }
 

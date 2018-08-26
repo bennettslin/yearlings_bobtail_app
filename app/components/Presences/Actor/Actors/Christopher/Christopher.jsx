@@ -9,8 +9,6 @@ import Blissful from './Instances/Blissful'
 import Staring from './Instances/Staring'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     TANTRUM,
     SOBBING,
@@ -43,8 +41,7 @@ const Christopher = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

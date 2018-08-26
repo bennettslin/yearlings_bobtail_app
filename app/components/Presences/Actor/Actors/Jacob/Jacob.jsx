@@ -2,19 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import Carrying from './Instances/Carrying'
+import Flirting from './Instances/Flirting'
+import Eating from './Instances/Eating'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
-} from 'scene/actors/jacob'
-
-import { EPILOGUE } from 'scene/actors/songs'
+    FLIRTING,
+    EATING,
+    CARRYING,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [CARRYING]: Carrying,
+    [FLIRTING]: Flirting,
+    [EATING]: Eating,
     [EPILOGUE]: Epilogue
 }
 
@@ -31,8 +34,7 @@ const Jacob = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

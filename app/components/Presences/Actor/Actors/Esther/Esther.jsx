@@ -9,8 +9,6 @@ import SitaHurt from './Instances/SitaHurt'
 import SitaSobbing from './Instances/SitaSobbing'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     CURIOUS,
     SNICKERING,
@@ -45,8 +43,7 @@ const Esther = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

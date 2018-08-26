@@ -8,8 +8,6 @@ import Puzzled from './Instances/Puzzled'
 import Gopi from './Instances/Gopi'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     WEEPING,
     TEASING,
@@ -42,8 +40,7 @@ const Catherine = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

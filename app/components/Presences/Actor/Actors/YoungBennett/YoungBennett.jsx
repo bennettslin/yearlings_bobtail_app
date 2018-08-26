@@ -9,8 +9,6 @@ import Singing from './Instances/Singing'
 import YoungChild from './Instances/YoungChild'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     PANICKED,
     FLUSTERED,
@@ -45,8 +43,7 @@ const YoungBennett = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

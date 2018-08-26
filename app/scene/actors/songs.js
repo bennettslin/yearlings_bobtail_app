@@ -6,6 +6,15 @@ const
     // Willy.
     GANGBANGER = 'gangbanger',
 
+    // Ash Wednesday.
+    FLIRTING = 'flirting',
+    EATING = 'eating',
+
+    // Look Back.
+    SQUEEZING = 'squeezing',
+    CARRYING = 'carrying',
+    MINGLING = 'mingling',
+
     // Golden Cord.
     YOUNG_CHILD = 'youngChild',
 
@@ -13,6 +22,9 @@ const
     PAST = 'past',
     PRESENT = 'present',
     FUTURE = 'future',
+
+    // Vegan.
+    PROTESTER = 'protester',
 
     // 100,000th Dream.
     GOPI = 'gopi',
@@ -22,10 +34,16 @@ const
 export {
     PROLOGUE,
     GANGBANGER,
+    FLIRTING,
+    EATING,
+    SQUEEZING,
+    CARRYING,
+    MINGLING,
     YOUNG_CHILD,
     PAST,
     PRESENT,
     FUTURE,
+    PROTESTER,
     GOPI,
     EPILOGUE
 }

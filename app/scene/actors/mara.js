@@ -1,6 +1,6 @@
 const
-    ROARING = 'roaring'
+    WAITING = 'waiting'
 
 export {
-    ROARING
+    WAITING
 }

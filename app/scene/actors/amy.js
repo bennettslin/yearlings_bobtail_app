@@ -1,6 +1,10 @@
 const
-    ROARING = 'roaring'
+    SMOKER = 'smoker',
+    OFFICER = 'officer',
+    DOCTOR = 'doctor'
 
 export {
-    ROARING
+    SMOKER,
+    OFFICER,
+    DOCTOR
 }

@@ -9,8 +9,6 @@ import Greeting from './Instances/Greeting'
 import CrossingGuard from './Instances/CrossingGuard'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     COLLECTING,
     DUCKING,
@@ -43,8 +41,7 @@ const Willy = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

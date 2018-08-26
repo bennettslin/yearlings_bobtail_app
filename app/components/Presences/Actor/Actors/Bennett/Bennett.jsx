@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Roaring from './Instances/Roaring'
+import Eating from './Instances/Eating'
+import Flirting from './Instances/Flirting'
 import Past from './Instances/Past'
 import Present from './Instances/Present'
 import Future from './Instances/Future'
@@ -15,6 +17,8 @@ import {
 } from 'scene/actors/bennett'
 
 import {
+    EATING,
+    FLIRTING,
     PAST,
     PRESENT,
     FUTURE,
@@ -23,6 +27,8 @@ import {
 
 const INSTANCES_MAP = {
     [ROARING]: Roaring,
+    [EATING]: Eating,
+    [FLIRTING]: Flirting,
     [PAST]: Past,
     [PRESENT]: Present,
     [FUTURE]: Future,

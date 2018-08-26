@@ -2,13 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Squeezing from './Instances/Squeezing'
+import Flirting from './Instances/Flirting'
+import Mingling from './Instances/Mingling'
+import Protester from './Instances/Protester'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import {
+    SQUEEZING,
+    FLIRTING,
+    MINGLING,
+    PROTESTER,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
+    [SQUEEZING]: Squeezing,
+    [FLIRTING]: Flirting,
+    [MINGLING]: Mingling,
+    [PROTESTER]: Protester,
     [EPILOGUE]: Epilogue
 }
 

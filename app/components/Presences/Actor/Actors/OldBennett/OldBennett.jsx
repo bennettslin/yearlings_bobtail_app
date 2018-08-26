@@ -5,8 +5,6 @@ import cx from 'classnames'
 import Prologue from './Instances/Prologue'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     PROLOGUE,
     EPILOGUE
@@ -30,8 +28,7 @@ const OldBennett = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

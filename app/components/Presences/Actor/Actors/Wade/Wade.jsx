@@ -2,19 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import CatholicGuy from './Instances/CatholicGuy'
+import Watching from './Instances/Watching'
+import Mingling from './Instances/Mingling'
+import Protester from './Instances/Protester'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
+    CATHOLIC_GUY,
+    WATCHING
 } from 'scene/actors/wade'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import {
+    MINGLING,
+    PROTESTER,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [CATHOLIC_GUY]: CatholicGuy,
+    [WATCHING]: Watching,
+    [MINGLING]: Mingling,
+    [PROTESTER]: Protester,
     [EPILOGUE]: Epilogue
 }
 
@@ -31,8 +40,7 @@ const Wade = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

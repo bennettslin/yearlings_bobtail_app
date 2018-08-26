@@ -11,8 +11,6 @@ import Future from './Instances/Future'
 import Shielding from './Instances/Shielding'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     STOOPING,
     COMFORTING,
@@ -51,8 +49,7 @@ const Mother = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

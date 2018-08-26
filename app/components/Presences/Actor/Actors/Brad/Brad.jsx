@@ -8,8 +8,6 @@ import Gesturing from './Instances/Gesturing'
 import Snacking from './Instances/Snacking'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     JEWISH_BOY,
     TYING,
@@ -40,8 +38,7 @@ const Brad = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}
