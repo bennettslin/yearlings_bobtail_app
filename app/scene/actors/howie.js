@@ -1,6 +1,8 @@
-// const
-//     GANGBANGER = 'gangbanger'
+const
+    USHER_WAITING = 'usher',
+    USHER_LOOKING = 'usher'
 
-// export {
-//     GANGBANGER
-// }
+export {
+    USHER_WAITING,
+    USHER_LOOKING
+}

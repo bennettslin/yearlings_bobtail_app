@@ -1,6 +1,8 @@
-// const
-//     GANGBANGER = 'gangbanger'
+const
+    SHANE_BUYING = 'shaneBuying',
+    SHANE_SPILLING = 'shaneSpilling'
 
-// export {
-//     GANGBANGER
-// }
+export {
+    SHANE_BUYING,
+    SHANE_SPILLING
+}

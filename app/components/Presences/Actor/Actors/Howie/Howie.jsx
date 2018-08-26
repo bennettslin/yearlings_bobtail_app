@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Gangbanger from './Instances/Gangbanger'
+import UsherWaiting from './Instances/UsherWaiting'
+import UsherLooking from './Instances/UsherLooking'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
@@ -11,7 +13,10 @@ import StationWagon from './Instances/StationWagon'
 import Attic from './Instances/Attic'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
+import {
+    USHER_WAITING,
+    USHER_LOOKING
+} from 'scene/actors/howie'
 
 import {
     GANGBANGER,
@@ -26,6 +31,8 @@ import {
 
 const INSTANCES_MAP = {
     [GANGBANGER]: Gangbanger,
+    [USHER_WAITING]: UsherWaiting,
+    [USHER_LOOKING]: UsherLooking,
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
     [STEAM_TUNNEL]: SteamTunnel,
@@ -48,8 +55,7 @@ const Howie = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}
