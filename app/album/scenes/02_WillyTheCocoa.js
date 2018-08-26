@@ -21,6 +21,39 @@ import {
     TOMER
 } from 'scene/actorKeys'
 
+import {
+    CAUTIOUS,
+    ENRAGED,
+    FEARFUL,
+    ENCHANTED
+} from 'scene/actors/preteenBennett'
+
+import {
+    COLLECTING,
+    DUCKING,
+    FIGHTING,
+    GREETING
+} from 'scene/actors/willy'
+
+import {
+    STOOPING,
+    COMFORTING
+} from 'scene/actors/mother'
+
+import {
+    ROARING,
+} from 'scene/actors/father'
+
+import {
+    TANTRUM,
+    SOBBING,
+    REASSURING
+} from 'scene/actors/christopher'
+
+import {
+    GANGBANGER
+} from 'scene/actors/howie'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -40,12 +73,12 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, holding up a bottle, squinting',
-                    instance: null,
-                    yIndex: -1,
+                    instance: COLLECTING,
+                    yIndex: 3,
                     arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xFloat: 5,
+                        xWidth: 1,
+                        zHeight: 5.25
                     }
                 }
             }
@@ -65,23 +98,23 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, ducking behind post, chuckling',
-                    instance: null,
-                    yIndex: -1,
+                    instance: DUCKING,
+                    yIndex: 4,
                     arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xFloat: 1,
+                        xWidth: 1,
+                        zHeight: 5.25
                     }
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'squatting, righting chair, exasperated, concerned',
-                    instance: null,
+                    instance: STOOPING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 },
@@ -89,11 +122,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'off balance, having a tantrum',
-                    instance: null,
+                    instance: TANTRUM,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 },
@@ -101,11 +134,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'stepping off porch, cautious, trying to calm Christopher',
-                    instance: null,
+                    instance: CAUTIOUS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 }
@@ -126,11 +159,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, running, angry',
-                    instance: null,
+                    instance: ROARING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 },
@@ -138,11 +171,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying on side, in pain, clenching stomach',
-                    instance: null,
+                    instance: SOBBING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 },
@@ -150,11 +183,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, aggressive stance, angry',
-                    instance: null,
+                    instance: ENRAGED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 }
@@ -175,12 +208,12 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, defending himself, fearful',
-                    instance: null,
+                    instance: FIGHTING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xWidth: 1,
+                        zHeight: 5.25
                     }
                 },
                 [HOWIE]: {
@@ -188,11 +221,11 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, pointing at shoe, pushing Willy',
-                        instance: null,
+                        instance: GANGBANGER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
-                            xWidth: 0,
+                            xWidth: 1,
                             zHeight: 0
                         }
                     }
@@ -202,11 +235,11 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'pulling bottle from cart, about to strike, threatening',
-                        instance: null,
+                        instance: GANGBANGER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
-                            xWidth: 0,
+                            xWidth: 1,
                             zHeight: 0
                         }
                     }
@@ -228,11 +261,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'getting up to close curtain, trying to be reassuring',
-                    instance: null,
+                    instance: COMFORTING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 },
@@ -240,11 +273,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying in bed, worried, scared',
-                    instance: null,
+                    instance: FEARFUL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 }
@@ -265,23 +298,23 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, merrily greeting trolls',
-                    instance: null,
+                    instance: GREETING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
+                        xWidth: 1,
+                        zHeight: 5.25
                     }
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking up at Bennett, reassuring',
-                    instance: null,
+                    instance: REASSURING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 },
@@ -289,11 +322,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, wide-eyed, needing reassurance',
-                    instance: null,
+                    instance: ENCHANTED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
-                        xWidth: 0,
+                        xWidth: 1,
                         zHeight: 0
                     }
                 }

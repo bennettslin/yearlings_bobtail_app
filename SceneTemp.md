@@ -6,7 +6,7 @@
 * Clone new directory for each actor.
 * Clone component in presence instances. Replace with correct name.
 * Hook up and add to map in root component.
-* Add to song scenes. Add coordinates.
+* Add to song scenes.
 * Delete from this list.
 
 ### Cutouts and Fixtures
@@ -14,8 +14,11 @@
 * Create new directory for each general scene.
 * Clone component in presences. Replace with correct name.
 * Hook up and add to map in root component.
-* Add to song scenes. Add coordinates.
+* Add to song scenes.
 * Delete from this list.
+
+### Cubes
+* Figure out basic zIndices.
 
 # Willy the Cocoa
 
