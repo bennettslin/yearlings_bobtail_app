@@ -4,11 +4,6 @@ module.exports = [
      * Window scenes.
      */
     {
-        taskName: `Police investigation (Willy)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Bus driving by (Pchelka)`,
         workedHours: 0,
         neededHours: 3

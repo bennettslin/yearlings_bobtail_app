@@ -4,9 +4,24 @@ module.exports = [
      * Todo next!
      */
     {
-        taskName: `Cave wall (Willy)`,
+        taskName: `Police investigation (Willy)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Bus backdrop thought bubble (Saskia)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Go-kart racetracks (Good Night)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `LA streets (Constellations)`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     /**
@@ -121,11 +136,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Bus backdrop thought bubble (Saskia)`,
-        workedHours: 0,
-        neededHours: 2
-    },
+
     {
         taskName: `Playground thought bubble (Saskia)`,
         workedHours: 0,
@@ -153,11 +164,6 @@ module.exports = [
     },
     {
         taskName: `Museum (Good Night)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Go-kart racetracks (Good Night)`,
         workedHours: 0,
         neededHours: 2
     },
@@ -296,11 +302,6 @@ module.exports = [
     },
     {
         taskName: `Cemetery (Constellations)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `LA streets (Constellations)`,
         workedHours: 0,
         neededHours: 5
     },

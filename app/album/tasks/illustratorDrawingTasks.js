@@ -64,6 +64,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Cave wall, shadows, and stalactites (Willy)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Campfire (Willy)`,
         workedHours: 1,
         neededHours: 2

@@ -110,6 +110,7 @@
 * nohoNeighbourhood
 * familyHouse
 * caveWall
+* stalactiteShadows
 * trollShadows
 * campfire
 
