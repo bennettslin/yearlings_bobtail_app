@@ -4,6 +4,11 @@ module.exports = [
      * Window scenes.
      */
     {
+        taskName: `Police investigation (Willy)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Bus driving by (Pchelka)`,
         workedHours: 0,
         neededHours: 3
@@ -27,6 +32,25 @@ module.exports = [
         taskName: `Sita's gate from living room (Garryowen, Kyon, Uncanny)`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    /**
+     * Rushing past effect, might be difficult.
+     */
+    {
+        taskName: `Bus backdrop thought bubble (Saskia)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Go-kart racetracks (Good Night)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `LA streets (Constellations)`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     /**

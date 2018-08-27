@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Feigning = ({
+const FeigningFear = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Feigning = ({
         <Svg
             className={cx(
                 className,
-                'Feigning'
+                'FeigningFear'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Feigning = ({
                 {...other}
             >
                 {cx(
-                    'Feigning'
+                    'FeigningFear'
                 )}
             </text>
         </Svg>
     )
 }
 
-Feigning.propTypes = propTypes;
+FeigningFear.propTypes = propTypes;
 
-export default Feigning
+export default FeigningFear

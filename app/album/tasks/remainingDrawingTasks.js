@@ -4,24 +4,24 @@ module.exports = [
      * Todo next!
      */
     {
-        taskName: `Police investigation (Willy)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bus backdrop thought bubble (Saskia)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Go-kart racetracks (Good Night)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `LA streets (Constellations)`,
+        taskName: `UCLA (Constellations)`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `UC Berkeley (Ash)`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Museum (Good Night)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Dishroom sink and other stuff (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     /**
@@ -39,11 +39,6 @@ module.exports = [
     },
     {
         taskName: `Bennett's apartment exterior with garbage (Ash)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Campus building facade panorama (Ash)`,
         workedHours: 0,
         neededHours: 4
     },
@@ -161,16 +156,6 @@ module.exports = [
         taskName: `Sita's gate (Good Night)`,
         workedHours: 0,
         neededHours: 4
-    },
-    {
-        taskName: `Museum (Good Night)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Dishroom sink and other stuff (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Howie's kitchen (Constellations)`,
@@ -292,11 +277,6 @@ module.exports = [
     },
     {
         taskName: `Movie theatre surrounding street panorama (M)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `UCLA (Constellations)`,
         workedHours: 0,
         neededHours: 5
     },
