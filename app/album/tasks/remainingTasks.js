@@ -2,8 +2,8 @@ module.exports = [
 
     {
         taskName: `Create all actor instance components.`,
-        workedHours: 4,
-        neededHours: 8
+        workedHours: 10,
+        neededHours: 14
     },
 
     /**

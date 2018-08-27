@@ -2,16 +2,26 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import BennettKeyboard from './Instances/BennettKeyboard'
+import Flapper from './Instances/Flapper'
 import Squeezing from './Instances/Squeezing'
 import Mingling from './Instances/Mingling'
+import BennettDefiant from './Instances/BennettDefiant'
+import BennettHorsing from './Instances/BennettHorsing'
+import BennettSorrowful from './Instances/BennettSorrowful'
+import BennettBanjo from './Instances/BennettBanjo'
+import BennettRecording from './Instances/BennettRecording'
 import Protester from './Instances/Protester'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
-    ROARING,
+    BENNETT_KEYBOARD,
+    FLAPPER,
+    BENNETT_DEFIANT,
+    BENNETT_HORSING,
+    BENNETT_SORROWFUL,
+    BENNETT_BANJO,
+    BENNETT_RECORDING
 } from 'scene/actors/stephanie'
 
 import {
@@ -22,9 +32,15 @@ import {
 } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
+    [BENNETT_KEYBOARD]: BennettKeyboard,
+    [FLAPPER]: Flapper,
     [SQUEEZING]: Squeezing,
     [MINGLING]: Mingling,
-    [ROARING]: Roaring,
+    [BENNETT_DEFIANT]: BennettDefiant,
+    [BENNETT_HORSING]: BennettHorsing,
+    [BENNETT_SORROWFUL]: BennettSorrowful,
+    [BENNETT_BANJO]: BennettBanjo,
+    [BENNETT_RECORDING]: BennettRecording,
     [PROTESTER]: Protester,
     [EPILOGUE]: Epilogue
 }
@@ -42,8 +58,7 @@ const Stephanie = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}
