@@ -29,11 +29,15 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `St Joseph the Worker church and surroundings (Ash)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `Bay Area streets (Garryowen, Golden Cord)`,
         workedHours: 4,
         neededHours: 5
     },
-
     {
         taskName: `Pharmacy aisle (Constellations)`,
         workedHours: 2,
