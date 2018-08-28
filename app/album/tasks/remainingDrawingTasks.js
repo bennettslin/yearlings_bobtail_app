@@ -4,11 +4,6 @@ module.exports = [
      * Todo next!
      */
     {
-        taskName: `UCLA (Constellations)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `UC Berkeley (Ash)`,
         workedHours: 0,
         neededHours: 4

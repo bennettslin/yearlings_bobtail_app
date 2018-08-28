@@ -1,10 +1,10 @@
 const
     WEEPING = 'weeping',
-    TEASING = 'teasing',
+    QUIPPING = 'quipping',
     PUZZLED = 'puzzled'
 
 export {
     WEEPING,
-    TEASING,
+    QUIPPING,
     PUZZLED
 }

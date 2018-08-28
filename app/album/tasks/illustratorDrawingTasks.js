@@ -34,6 +34,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Royce Hall (Constellations)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `Bay Area streets (Garryowen, Golden Cord)`,
         workedHours: 4,
         neededHours: 5

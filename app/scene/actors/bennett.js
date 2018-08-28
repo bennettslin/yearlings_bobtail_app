@@ -1,6 +1,6 @@
 const
-    ROARING = 'roaring'
+    CATHERINE_BREAKUP = 'catherineBreakup'
 
 export {
-    ROARING
+    DEFEATED
 }

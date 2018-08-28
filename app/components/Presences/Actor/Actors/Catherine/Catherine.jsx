@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Weeping from './Instances/Weeping'
-import Teasing from './Instances/Teasing'
+import Quipping from './Instances/Quipping'
 import Puzzled from './Instances/Puzzled'
 import Gopi from './Instances/Gopi'
 import Epilogue from './Instances/Epilogue'
 
 import {
     WEEPING,
-    TEASING,
+    QUIPPING,
     PUZZLED
 } from 'scene/actors/catherine'
 
@@ -21,7 +21,7 @@ import {
 
 const INSTANCES_MAP = {
     [WEEPING]: Weeping,
-    [TEASING]: Teasing,
+    [QUIPPING]: Quipping,
     [PUZZLED]: Puzzled,
     [GOPI]: Gopi,
     [EPILOGUE]: Epilogue
