@@ -2,7 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Roaring from './Instances/Roaring'
+import BreakupDejected from './Instances/BreakupDejected'
+import SolicitingOpinion from './Instances/SolicitingOpinion'
+import CatholicPensive from './Instances/CatholicPensive'
+import CatholicIdea from './Instances/CatholicIdea'
+import Pious from './Instances/Pious'
+import Pondering from './Instances/Pondering'
+import Reading from './Instances/Reading'
+import RubiksCube from './Instances/RubiksCube'
+import Distracted from './Instances/Distracted'
+import HopelesslyCrushed from './Instances/HopelesslyCrushed'
+import WonderingBaby from './Instances/WonderingBaby'
+import MerrilyDeranged from './Instances/MerrilyDeranged'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
@@ -22,7 +33,18 @@ import Epilogue from './Instances/Epilogue'
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
-    ROARING,
+    BREAKUP_DEJECTED,
+    SOLICITING_OPINION,
+    CATHOLIC_PENSIVE,
+    CATHOLIC_IDEA,
+    PIOUS,
+    PONDERING,
+    READING,
+    RUBIKS_CUBE,
+    DISTRACTED,
+    HOPELESSLY_CRUSHED,
+    WONDERING_BABY,
+    MERRILY_DERANGED,
 } from 'scene/actors/bennett'
 
 import {
@@ -44,7 +66,18 @@ import {
 } from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
-    [ROARING]: Roaring,
+    [BREAKUP_DEJECTED]: BreakupDejected,
+    [SOLICITING_OPINION]: SolicitingOpinion,
+    [CATHOLIC_PENSIVE]: CatholicPensive,
+    [CATHOLIC_IDEA]: CatholicIdea,
+    [PIOUS]: Pious,
+    [PONDERING]: Pondering,
+    [READING]: Reading,
+    [RUBIKS_CUBE]: RubiksCube,
+    [DISTRACTED]: Distracted,
+    [HOPELESSLY_CRUSHED]: HopelesslyCrushed,
+    [WONDERING_BABY]: WonderingBaby,
+    [MERRILY_DERANGED]: MerrilyDeranged,
     [EATING]: Eating,
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
