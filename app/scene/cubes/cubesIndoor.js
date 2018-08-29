@@ -29,7 +29,7 @@ import {
 
 import {
     a,
-    // b,
+    b,
     c,
     // d,
     // e,
@@ -243,13 +243,18 @@ const
         }
     },
     DISHROOM_CUBES = {
-        // Indoor wall is 7.5'. Sink is 3'. Conveyor is 5.5'.
+        ceiling: {
+            zIndices: [
+                [g, g, f, f, f, f, f, g],
+                [g]
+            ]
+        },
         floor: {
             zIndices: [
-                [g, g, g, g, g, g, g, g, g, g, 6],
-                [1, 1, c, c, c, c, c, c, 1, g, 5],
-                [1, 1, 7, 7, 7, 7, 7, 7, 1, g, 4],
-                [1, 1, 7, 7, 7, 7, 7, 7, 1, g, 3],
+                [g, g, b, b, b, b, b, g, g, g, 6],
+                [1, 1, 7, 7, 7, 7, 7, 1, 1, g, 5],
+                [1, 1, 7, 7, 7, 7, 7, 1, 1, g, 4],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, g, 3],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, g, 2],
                 [1]
             ]

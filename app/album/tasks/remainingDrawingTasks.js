@@ -4,19 +4,19 @@ module.exports = [
      * Todo next!
      */
     {
-        taskName: `UC Berkeley (Ash)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
         taskName: `Museum (Good Night)`,
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: `Dishroom sink and other stuff (Grasshoppers)`,
+        taskName: `Theatre backstage with ladder and wardrobe (Good Night)`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 4
+    },
+    {
+        taskName: `UC Berkeley (Ash)`,
+        workedHours: 0,
+        neededHours: 4
     },
 
     /**
@@ -34,11 +34,6 @@ module.exports = [
     },
     {
         taskName: `Bennett's apartment exterior with garbage (Ash)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Dishroom (Grasshoppers)`,
         workedHours: 0,
         neededHours: 4
     },
@@ -61,11 +56,6 @@ module.exports = [
         taskName: `Sita's apartment exterior panorama (Good Night)`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Theatre backstage with ladder and wardrobe (Good Night)`,
-        workedHours: 0,
-        neededHours: 4
     },
     {
         taskName: `Bennett's apartment exterior (Grasshoppers)`,

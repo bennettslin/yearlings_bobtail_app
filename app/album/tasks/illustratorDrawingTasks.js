@@ -138,6 +138,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Dishroom sink and other stuff (Grasshoppers)`,
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
         taskName: `Howie's station wagon exterior (Constellations)`,
         workedHours: 2,
         neededHours: 3
