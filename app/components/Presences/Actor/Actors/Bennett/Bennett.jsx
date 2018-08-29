@@ -14,13 +14,18 @@ import Distracted from './Instances/Distracted'
 import HopelesslyCrushed from './Instances/HopelesslyCrushed'
 import WonderingBaby from './Instances/WonderingBaby'
 import MerrilyDeranged from './Instances/MerrilyDeranged'
+import Eating from './Instances/Eating'
+import DateEnding from './Instances/DateEnding'
+import Museum from './Instances/Museum'
+import Backstage from './Instances/Backstage'
+import GoKarts from './Instances/GoKarts'
+import DateEnded from './Instances/DateEnded'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
 import Cemetery from './Instances/Cemetery'
 import StationWagon from './Instances/StationWagon'
 import Attic from './Instances/Attic'
-import Eating from './Instances/Eating'
 import Flirting from './Instances/Flirting'
 import Greeting from './Instances/Greeting'
 import Cowgirl from './Instances/Cowgirl'
@@ -49,6 +54,11 @@ import {
 
 import {
     EATING,
+    DATE_ENDING,
+    MUSEUM,
+    BACKSTAGE,
+    GO_KARTS,
+    DATE_ENDED,
     ABBEY_ROAD,
     WALGREENS,
     STEAM_TUNNEL,
@@ -79,6 +89,11 @@ const INSTANCES_MAP = {
     [WONDERING_BABY]: WonderingBaby,
     [MERRILY_DERANGED]: MerrilyDeranged,
     [EATING]: Eating,
+    [DATE_ENDING]: DateEnding,
+    [MUSEUM]: Museum,
+    [BACKSTAGE]: Backstage,
+    [GO_KARTS]: GoKarts,
+    [DATE_ENDED]: DateEnded,
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
     [STEAM_TUNNEL]: SteamTunnel,

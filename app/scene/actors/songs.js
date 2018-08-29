@@ -11,6 +11,13 @@ const
     FLIRTING = 'flirting',
     EATING = 'eating',
 
+    // Good Night.
+    DATE_ENDING = 'dateEnding',
+    MUSEUM = 'museum',
+    BACKSTAGE = 'backstage',
+    GO_KARTS = 'goKarts',
+    DATE_ENDED = 'dateEnded',
+
     // Constellations.
     ABBEY_ROAD = 'abbeyRoad',
     WALGREENS = 'walgreens',
@@ -55,6 +62,11 @@ export {
     GREETING,
     FLIRTING,
     EATING,
+    DATE_ENDING,
+    MUSEUM,
+    BACKSTAGE,
+    GO_KARTS,
+    DATE_ENDED,
     ABBEY_ROAD,
     WALGREENS,
     STEAM_TUNNEL,

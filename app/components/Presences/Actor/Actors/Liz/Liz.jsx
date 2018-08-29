@@ -2,13 +2,30 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import DateEnding from './Instances/DateEnding'
+import Museum from './Instances/Museum'
+import Backstage from './Instances/Backstage'
+import GoKarts from './Instances/GoKarts'
+import DateEnded from './Instances/DateEnded'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import {
+    DATE_ENDING,
+    MUSEUM,
+    BACKSTAGE,
+    GO_KARTS,
+    DATE_ENDED,
+    EPILOGUE
+} from 'scene/actors/songs'
 
 const INSTANCES_MAP = {
+    [DATE_ENDING]: DateEnding,
+    [MUSEUM]: Museum,
+    [BACKSTAGE]: Backstage,
+    [GO_KARTS]: GoKarts,
+    [DATE_ENDED]: DateEnded,
     [EPILOGUE]: Epilogue
 }
 
