@@ -13,11 +13,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 4
     },
-    {
-        taskName: `UC Berkeley (Ash)`,
-        workedHours: 0,
-        neededHours: 4
-    },
 
     /**
      * Large painted panels (Do first)
@@ -247,11 +242,6 @@ module.exports = [
     },
     {
         taskName: `Middle school quad (Pchelka)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Campus quad panorama (Ash)`,
         workedHours: 0,
         neededHours: 5
     },

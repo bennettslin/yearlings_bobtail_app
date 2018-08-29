@@ -128,6 +128,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Sather Tower and plants (Ash)`,
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
         taskName: `2 * Stage monitors (M, Look Back, Garryowen)`,
         workedHours: 1,
         neededHours: 2
