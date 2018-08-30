@@ -8,6 +8,16 @@ module.exports = [
         workedHours: 0,
         neededHours: 4
     },
+    {
+        taskName: `Steam tunnel (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Howie's attic (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     /**
      * Large painted panels (Do first)
@@ -64,16 +74,6 @@ module.exports = [
     },
     {
         taskName: `Sita's bedroom and ceiling mirror (Grasshoppers, Look Back, Vegan)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Steam tunnel (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Howie's attic (Constellations)`,
         workedHours: 0,
         neededHours: 3
     },
