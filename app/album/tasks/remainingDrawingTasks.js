@@ -13,11 +13,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Howie's attic (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     /**
      * Large painted panels (Do first)
@@ -131,11 +126,6 @@ module.exports = [
         taskName: `Sita's gate (Good Night)`,
         workedHours: 0,
         neededHours: 4
-    },
-    {
-        taskName: `Howie's kitchen (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `2 * Sita's living room (Golden Cord, Uncanny)`,

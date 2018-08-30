@@ -163,6 +163,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Attic box, chest, refrigerator (Constellations)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `Crowd shadows (Look Back, Vegan)`,
         workedHours: 0,
         neededHours: 1
