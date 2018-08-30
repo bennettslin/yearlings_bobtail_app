@@ -40,8 +40,15 @@ import SteamTunnel from './Instances/SteamTunnel'
 import Cemetery from './Instances/Cemetery'
 import StationWagon from './Instances/StationWagon'
 import Attic from './Instances/Attic'
+import Performing from './Instances/Performing'
 import Flirting from './Instances/Flirting'
+import SidelongHesitance from './Instances/SidelongHesitance'
+import RemovingShoes from './Instances/RemovingShoes'
+import BrushingOff from './Instances/BrushingOff'
+import DroppingMeats from './Instances/DroppingMeats'
+import DrunkCelibate from './Instances/DrunkCelibate'
 import Greeting from './Instances/Greeting'
+import LeavingCrumbled from './Instances/LeavingCrumbled'
 import Cowgirl from './Instances/Cowgirl'
 import Blowjob from './Instances/Blowjob'
 import Past from './Instances/Past'
@@ -67,6 +74,11 @@ import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_THOUGHTS,
+    SIDELONG_HESITANCE,
+    REMOVING_SHOES,
+    BRUSHING_OFF,
+    DROPPING_MEATS,
+    DRUNK_CELIBATE
 } from 'scene/actors/bennett'
 
 import {
@@ -93,8 +105,10 @@ import {
     CEMETERY,
     STATION_WAGON,
     ATTIC,
+    PERFORMING,
     FLIRTING,
     GREETING,
+    LEAVING_CRUMBLED,
     COWGIRL,
     BLOWJOB,
     PAST,
@@ -142,8 +156,15 @@ const INSTANCES_MAP = {
     [CEMETERY]: Cemetery,
     [STATION_WAGON]: StationWagon,
     [ATTIC]: Attic,
+    [PERFORMING]: Performing,
     [FLIRTING]: Flirting,
+    [SIDELONG_HESITANCE]: SidelongHesitance,
+    [REMOVING_SHOES]: RemovingShoes,
+    [BRUSHING_OFF]: BrushingOff,
+    [DROPPING_MEATS]: DroppingMeats,
+    [DRUNK_CELIBATE]: DrunkCelibate,
     [GREETING]: Greeting,
+    [LEAVING_CRUMBLED]: LeavingCrumbled,
     [COWGIRL]: Cowgirl,
     [BLOWJOB]: Blowjob,
     [PAST]: Past,

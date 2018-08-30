@@ -18,9 +18,19 @@ import Afterglow from './Instances/Afterglow'
 import HardOnReflection from './Instances/HardOnReflection'
 import MissionaryReflection from './Instances/MissionaryReflection'
 import AfterglowReflection from './Instances/AfterglowReflection'
+import AsleepReaching from './Instances/AsleepReaching';
+import BrushedOff from './Instances/BrushedOff'
+import FreezingNaked from './Instances/FreezingNaked'
+import LeavingCrumbled from './Instances/LeavingCrumbled'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
+
+import {
+    ASLEEP_REACHING,
+    BRUSHED_OFF,
+    FREEZING_NAKED,
+} from 'scene/actors/liz'
 
 import {
     DATE_ENDING,
@@ -39,6 +49,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION,
+    LEAVING_CRUMBLED,
     EPILOGUE
 } from 'scene/actors/songs'
 
@@ -59,6 +70,10 @@ const INSTANCES_MAP = {
     [HARD_ON_REFLECTION]: HardOnReflection,
     [MISSIONARY_REFLECTION]: MissionaryReflection,
     [AFTERGLOW_REFLECTION]: AfterglowReflection,
+    [ASLEEP_REACHING]: AsleepReaching,
+    [BRUSHED_OFF]: BrushedOff,
+    [FREEZING_NAKED]: FreezingNaked,
+    [LEAVING_CRUMBLED]: LeavingCrumbled,
     [EPILOGUE]: Epilogue
 }
 

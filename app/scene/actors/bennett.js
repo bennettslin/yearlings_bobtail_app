@@ -13,7 +13,12 @@ const
     MERRILY_DERANGED = 'merrilyDeranged',
     DISHROOM_READING = 'dishroomReading',
     MOP_SOPPED = 'mopSopped',
-    WAITING_ROOM_THOUGHTS = 'waitingRoomThoughts'
+    WAITING_ROOM_THOUGHTS = 'waitingRoomThoughts',
+    SIDELONG_HESITANCE = 'sidelongHesitance',
+    REMOVING_SHOES = 'removingShoes',
+    BRUSHING_OFF = 'brushingOff',
+    DROPPING_MEATS = 'droppingMeats',
+    DRUNK_CELIBATE = 'drunkCelibate'
 
 export {
     BREAKUP_DEJECTED,
@@ -31,4 +36,9 @@ export {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_THOUGHTS,
+    SIDELONG_HESITANCE,
+    REMOVING_SHOES,
+    BRUSHING_OFF,
+    DROPPING_MEATS,
+    DRUNK_CELIBATE
 }

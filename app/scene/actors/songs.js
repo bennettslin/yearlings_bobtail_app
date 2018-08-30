@@ -48,6 +48,7 @@ const
 
     // Garryowen.
     NOOGIE = 'noogie',
+    LEAVING_CRUMBLED = 'leavingCrumbled',
 
     // Golden Cord.
     YOUNG_CHILD = 'youngChild',
@@ -103,6 +104,7 @@ export {
     MINGLING,
     WAITING,
     NOOGIE,
+    LEAVING_CRUMBLED,
     YOUNG_CHILD,
     PAST,
     PRESENT,

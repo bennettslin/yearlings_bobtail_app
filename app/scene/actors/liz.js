@@ -1,6 +1,10 @@
 const
-    ROARING = 'roaring'
+    ASLEEP_REACHING = 'asleepReaching',
+    BRUSHED_OFF = 'brushedOff',
+    FREEZING_NAKED = 'freezingNaked'
 
 export {
-    ROARING
+    ASLEEP_REACHING,
+    BRUSHED_OFF,
+    FREEZING_NAKED,
 }
