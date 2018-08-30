@@ -8,7 +8,7 @@ import CatholicPensive from './Instances/CatholicPensive'
 import CatholicIdea from './Instances/CatholicIdea'
 import Pious from './Instances/Pious'
 import Pondering from './Instances/Pondering'
-import Reading from './Instances/Reading'
+import CouchReading from './Instances/CouchReading'
 import RubiksCube from './Instances/RubiksCube'
 import Distracted from './Instances/Distracted'
 import HopelesslyCrushed from './Instances/HopelesslyCrushed'
@@ -20,6 +20,20 @@ import Museum from './Instances/Museum'
 import Backstage from './Instances/Backstage'
 import GoKarts from './Instances/GoKarts'
 import DateEnded from './Instances/DateEnded'
+import DishroomReading from './Instances/DishroomReading'
+import DishroomLancet from './Instances/DishroomLancet'
+import MopSopped from './Instances/MopSopped'
+import GateCode from './Instances/GateCode'
+import GingerbreadPrison from './Instances/GingerbreadPrison'
+import RumpledLinens from './Instances/RumpledLinens'
+import WaitingRoomThoughts from './Instances/WaitingRoomThoughts'
+import CheekUnveiled from './Instances/CheekUnveiled'
+import HardOn from './Instances/HardOn'
+import Missionary from './Instances/Missionary'
+import Afterglow from './Instances/Afterglow'
+import HardOnReflection from './Instances/HardOnReflection'
+import MissionaryReflection from './Instances/MissionaryReflection'
+import AfterglowReflection from './Instances/AfterglowReflection'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
@@ -44,12 +58,15 @@ import {
     CATHOLIC_IDEA,
     PIOUS,
     PONDERING,
-    READING,
+    COUCH_READING,
     RUBIKS_CUBE,
     DISTRACTED,
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED,
+    DISHROOM_READING,
+    MOP_SOPPED,
+    WAITING_ROOM_THOUGHTS,
 } from 'scene/actors/bennett'
 
 import {
@@ -59,6 +76,17 @@ import {
     BACKSTAGE,
     GO_KARTS,
     DATE_ENDED,
+    DISHROOM_LANCET,
+    GATE_CODE,
+    GINGERBREAD_PRISON,
+    RUMPLED_LINENS,
+    CHEEK_UNVEILED,
+    HARD_ON,
+    MISSIONARY,
+    AFTERGLOW,
+    HARD_ON_REFLECTION,
+    MISSIONARY_REFLECTION,
+    AFTERGLOW_REFLECTION,
     ABBEY_ROAD,
     WALGREENS,
     STEAM_TUNNEL,
@@ -82,7 +110,7 @@ const INSTANCES_MAP = {
     [CATHOLIC_IDEA]: CatholicIdea,
     [PIOUS]: Pious,
     [PONDERING]: Pondering,
-    [READING]: Reading,
+    [COUCH_READING]: CouchReading,
     [RUBIKS_CUBE]: RubiksCube,
     [DISTRACTED]: Distracted,
     [HOPELESSLY_CRUSHED]: HopelesslyCrushed,
@@ -94,6 +122,20 @@ const INSTANCES_MAP = {
     [BACKSTAGE]: Backstage,
     [GO_KARTS]: GoKarts,
     [DATE_ENDED]: DateEnded,
+    [DISHROOM_READING]: DishroomReading,
+    [DISHROOM_LANCET]: DishroomLancet,
+    [MOP_SOPPED]: MopSopped,
+    [GATE_CODE]: GateCode,
+    [GINGERBREAD_PRISON]: GingerbreadPrison,
+    [RUMPLED_LINENS]: RumpledLinens,
+    [WAITING_ROOM_THOUGHTS]: WaitingRoomThoughts,
+    [CHEEK_UNVEILED]: CheekUnveiled,
+    [HARD_ON]: HardOn,
+    [MISSIONARY]: Missionary,
+    [AFTERGLOW]: Afterglow,
+    [HARD_ON_REFLECTION]: HardOnReflection,
+    [MISSIONARY_REFLECTION]: MissionaryReflection,
+    [AFTERGLOW_REFLECTION]: AfterglowReflection,
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
     [STEAM_TUNNEL]: SteamTunnel,

@@ -7,6 +7,17 @@ import Museum from './Instances/Museum'
 import Backstage from './Instances/Backstage'
 import GoKarts from './Instances/GoKarts'
 import DateEnded from './Instances/DateEnded'
+import DishroomLancet from './Instances/DishroomLancet'
+import GateCode from './Instances/GateCode'
+import GingerbreadPrison from './Instances/GingerbreadPrison'
+import RumpledLinens from './Instances/RumpledLinens'
+import CheekUnveiled from './Instances/CheekUnveiled'
+import HardOn from './Instances/HardOn'
+import Missionary from './Instances/Missionary'
+import Afterglow from './Instances/Afterglow'
+import HardOnReflection from './Instances/HardOnReflection'
+import MissionaryReflection from './Instances/MissionaryReflection'
+import AfterglowReflection from './Instances/AfterglowReflection'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
@@ -17,6 +28,17 @@ import {
     BACKSTAGE,
     GO_KARTS,
     DATE_ENDED,
+    DISHROOM_LANCET,
+    GATE_CODE,
+    GINGERBREAD_PRISON,
+    RUMPLED_LINENS,
+    CHEEK_UNVEILED,
+    HARD_ON,
+    MISSIONARY,
+    AFTERGLOW,
+    HARD_ON_REFLECTION,
+    MISSIONARY_REFLECTION,
+    AFTERGLOW_REFLECTION,
     EPILOGUE
 } from 'scene/actors/songs'
 
@@ -26,6 +48,17 @@ const INSTANCES_MAP = {
     [BACKSTAGE]: Backstage,
     [GO_KARTS]: GoKarts,
     [DATE_ENDED]: DateEnded,
+    [DISHROOM_LANCET]: DishroomLancet,
+    [GATE_CODE]: GateCode,
+    [GINGERBREAD_PRISON]: GingerbreadPrison,
+    [RUMPLED_LINENS]: RumpledLinens,
+    [CHEEK_UNVEILED]: CheekUnveiled,
+    [HARD_ON]: HardOn,
+    [MISSIONARY]: Missionary,
+    [AFTERGLOW]: Afterglow,
+    [HARD_ON_REFLECTION]: HardOnReflection,
+    [MISSIONARY_REFLECTION]: MissionaryReflection,
+    [AFTERGLOW_REFLECTION]: AfterglowReflection,
     [EPILOGUE]: Epilogue
 }
 

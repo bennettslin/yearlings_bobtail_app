@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Reading = ({
+const Afterglow = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Reading = ({
         <Svg
             className={cx(
                 className,
-                'Reading'
+                'Afterglow'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Reading = ({
                 {...other}
             >
                 {cx(
-                    'Reading'
+                    'Afterglow'
                 )}
             </text>
         </Svg>
     )
 }
 
-Reading.propTypes = propTypes;
+Afterglow.propTypes = propTypes;
 
-export default Reading
+export default Afterglow

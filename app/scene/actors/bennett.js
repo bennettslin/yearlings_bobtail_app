@@ -5,12 +5,15 @@ const
     CATHOLIC_IDEA = 'catholicIdea',
     PIOUS = 'pious',
     PONDERING = 'pondering',
-    READING = 'reading',
+    COUCH_READING = 'couchReading',
     RUBIKS_CUBE = 'rubiksCube',
     DISTRACTED = 'distracted',
     HOPELESSLY_CRUSHED = 'hopelesslyCrushed',
     WONDERING_BABY = 'wonderingBaby',
-    MERRILY_DERANGED = 'merrilyDeranged'
+    MERRILY_DERANGED = 'merrilyDeranged',
+    DISHROOM_READING = 'dishroomReading',
+    MOP_SOPPED = 'mopSopped',
+    WAITING_ROOM_THOUGHTS = 'waitingRoomThoughts'
 
 export {
     BREAKUP_DEJECTED,
@@ -19,10 +22,13 @@ export {
     CATHOLIC_IDEA,
     PIOUS,
     PONDERING,
-    READING,
+    COUCH_READING,
     RUBIKS_CUBE,
     DISTRACTED,
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
-    MERRILY_DERANGED
+    MERRILY_DERANGED,
+    DISHROOM_READING,
+    MOP_SOPPED,
+    WAITING_ROOM_THOUGHTS,
 }
