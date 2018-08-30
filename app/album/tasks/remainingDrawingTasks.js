@@ -4,11 +4,6 @@ module.exports = [
      * Todo next!
      */
     {
-        taskName: `Museum (Good Night)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Theatre backstage with ladder and wardrobe (Good Night)`,
         workedHours: 0,
         neededHours: 4
