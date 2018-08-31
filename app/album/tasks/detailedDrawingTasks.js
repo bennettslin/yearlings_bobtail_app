@@ -19,11 +19,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Basement practise space outside view (M)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Bennett's apartment view (Grasshoppers)`,
         workedHours: 0,
         neededHours: 3

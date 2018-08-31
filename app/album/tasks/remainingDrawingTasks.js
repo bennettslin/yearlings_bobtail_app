@@ -9,9 +9,14 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `Steam tunnel (Constellations)`,
+        taskName: `Alley scene (Vegan)`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
+    },
+    {
+        taskName: `Middle school quad (Pchelka)`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     /**
@@ -226,11 +231,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Middle school quad (Pchelka)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Movie theatre surrounding street panorama (M)`,
         workedHours: 0,
         neededHours: 5
@@ -272,11 +272,6 @@ module.exports = [
     },
     {
         taskName: `El Cerrito backdrop (Cremated)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Alley scene (Vegan)`,
         workedHours: 0,
         neededHours: 5
     },
