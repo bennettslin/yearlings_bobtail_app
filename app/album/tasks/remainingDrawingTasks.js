@@ -9,14 +9,29 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `Alley scene (Vegan)`,
+        taskName: `Middle school quad (Pchelka)`,
         workedHours: 0,
         neededHours: 5
     },
     {
-        taskName: `Middle school quad (Pchelka)`,
+        taskName: `Bay Area commercial area (Golden Cord)`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Bay Area park area (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Bay Area residential area (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Waiting room (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     /**
@@ -64,11 +79,6 @@ module.exports = [
     },
     {
         taskName: `Bennett's bedroom (Grasshoppers, Uncanny)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Waiting room (Grasshoppers)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -241,21 +251,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Bay Area commercial area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area park area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area residential area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Past roads (Uncanny)`,
         workedHours: 0,
         neededHours: 5
@@ -272,6 +267,11 @@ module.exports = [
     },
     {
         taskName: `El Cerrito backdrop (Cremated)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Alley scene, requires door thought (Vegan)`,
         workedHours: 0,
         neededHours: 5
     },
