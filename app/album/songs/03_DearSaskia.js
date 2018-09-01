@@ -725,7 +725,7 @@ module.exports = {
         {
             taskName: `review synopses and rough illustrations`,
             workedHours: 3,
-            neededHours: 3,
+            neededHours: 3
         }
     ]
 }

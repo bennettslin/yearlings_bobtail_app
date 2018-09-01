@@ -643,7 +643,7 @@ module.exports = [
                 taskName: `Final ears on standard perspective heads.`,
                 workedHours: 6,
                 neededHours: 6
-            },
+            }
         ]
     },
     {

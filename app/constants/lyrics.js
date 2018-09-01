@@ -111,5 +111,5 @@ module.exports = {
     ],
 
     FLASHBACK_TO_WORMHOLE_PREFIX: 'flashback to',
-    FORESHADOW_OF_WORMHOLE_PREFIX: 'foreshadow of',
+    FORESHADOW_OF_WORMHOLE_PREFIX: 'foreshadow of'
 }

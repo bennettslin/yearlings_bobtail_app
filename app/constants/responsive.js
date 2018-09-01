@@ -255,7 +255,7 @@ module.exports = {
         MINI_OBJECT,
         TABLET_OBJECT,
         LAPTOP_OBJECT,
-        MONITOR_OBJECT,
+        MONITOR_OBJECT
     ],
 
     LS_HEIGHT_LYRIC_COLLAPSED,

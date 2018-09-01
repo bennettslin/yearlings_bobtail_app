@@ -28,7 +28,7 @@ HSLA_KEYS = [
     _SB,
     _BC,
     _BF,
-    _BW,
+    _BW
 
 ]
 
@@ -45,6 +45,6 @@ export {
     _SB,
     _BC,
     _BF,
-    _BW,
+    _BW
 
 }

@@ -24,6 +24,12 @@ import {
     LIZ_REFLECTION
 } from 'scene/actorKeys'
 
+import {
+    SQUEEZING,
+    FLIRTING,
+    MINGLING
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -84,7 +90,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, squeezing through, apologetic',
-                    instance: null,
+                    instance: SQUEEZING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -96,7 +102,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, squeezing through, awkward',
-                    instance: null,
+                    instance: SQUEEZING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -121,7 +127,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, charmed',
-                    instance: null,
+                    instance: FLIRTING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -133,7 +139,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, same Mara pose',
-                    instance: null,
+                    instance: FLIRTING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -218,7 +224,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking back, uncertain',
-                    instance: null,
+                    instance: MINGLING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -230,7 +236,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, talking to Wade',
-                    instance: null,
+                    instance: MINGLING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -242,7 +248,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, talking to Stephanie',
-                    instance: null,
+                    instance: MINGLING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

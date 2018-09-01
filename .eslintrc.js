@@ -50,7 +50,7 @@ module.exports = {
         "camelcase": "off",
         "capitalized-comments": "off",
         "class-methods-use-this": "off",
-        "comma-dangle": "off",
+        "comma-dangle": "error",
         "comma-spacing": [
             "error",
             {

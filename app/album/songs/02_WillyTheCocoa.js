@@ -91,7 +91,7 @@ module.exports = {
                             }
                         }
                     },
-                    `in tarred pavement mirage.`,
+                    `in tarred pavement mirage.`
                 ]
             },
             {
@@ -212,7 +212,7 @@ module.exports = {
                             ]
                         }
                     }
-                ],
+                ]
             }
         ],
         [
@@ -237,7 +237,7 @@ module.exports = {
                 isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
-            },
+            }
         ],
         [
             {
@@ -322,7 +322,7 @@ module.exports = {
                                     [PUN]: true
                                 }
                             }
-                        ],
+                        ]
                     },
                     `parts his forehead,`
                 ]
@@ -671,12 +671,12 @@ module.exports = {
                                         {
                                             wormhole: `unsalvaged_sows`
                                         }
-                                    ],
+                                    ]
                                 }
                             ]
                         }
                     }
-                ],
+                ]
             }
         ],
         [
@@ -924,7 +924,7 @@ module.exports = {
                                 dotKeys: {
                                     [PUN]: true
                                 }
-                            },
+                            }
                         ]
                     }
                 ]
@@ -1082,7 +1082,7 @@ module.exports = {
         {
             taskName: `review synopses and rough illustrations`,
             workedHours: 3,
-            neededHours: 3,
+            neededHours: 3
         },
         {
             taskName: `tenses and categorisation`,

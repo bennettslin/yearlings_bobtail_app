@@ -277,7 +277,7 @@ module.exports = [
                             xWidth: 0,
                             zHeight: 0
                         }
-                    },
+                    }
                 }
             }
         },
@@ -316,7 +316,7 @@ module.exports = [
                             xWidth: 0,
                             zHeight: 0
                         }
-                    },
+                    }
                 },
                 [HOWIE]: {
                     maskedUsher: {

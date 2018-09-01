@@ -49,6 +49,6 @@ module.exports = {
         [SONGWRITING]: 'music description',
         [WORMHOLE]: 'wormhole description',
         [AFTERWORD]: 'after the album'
-    },
+    }
 
 }

@@ -18,6 +18,10 @@ import {
     WADE
 } from 'scene/actorKeys'
 
+import {
+    SMOKER
+} from 'scene/actors/amy'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -154,7 +158,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'walking up stairs, back forward, exhaling smoke',
-                        instance: null,
+                        instance: SMOKER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

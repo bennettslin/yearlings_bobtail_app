@@ -25,6 +25,10 @@ import {
     KHARI_REFLECTION
 } from 'scene/actorKeys'
 
+import {
+    PROTESTER
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -233,7 +237,7 @@ module.exports = [
                             zHeight: 0
                         }
                     }
-                },
+                }
             }
         },
         cubes: SITA_APARTMENT_BED_KEY,
@@ -264,7 +268,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back, passing out flyers',
-                        instance: null,
+                        instance: PROTESTER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -278,7 +282,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'standing, demonstrating',
-                        instance: null,
+                        instance: PROTESTER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -292,7 +296,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'standing, demonstrating',
-                        instance: null,
+                        instance: PROTESTER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

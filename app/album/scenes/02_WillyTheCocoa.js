@@ -41,7 +41,7 @@ import {
 } from 'scene/actors/mother'
 
 import {
-    ROARING,
+    ROARING
 } from 'scene/actors/father'
 
 import {

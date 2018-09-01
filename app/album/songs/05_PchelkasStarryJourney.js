@@ -507,7 +507,7 @@ module.exports = {
                                     {
                                         emphasis: `my`
                                     },
-                                    `little brother.`,
+                                    `little brother.`
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true

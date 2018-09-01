@@ -676,7 +676,7 @@ module.exports = {
                                         anchor: `Mughals,`,
                                         wiki: `Mughal_Empire`
                                     },
-                                    `Muslim descendants of Tamerlane, surely regaled themselves with tales of "how he" led the feat that precipitated their conquest of South Asia and its Hindu populations.`,
+                                    `Muslim descendants of Tamerlane, surely regaled themselves with tales of "how he" led the feat that precipitated their conquest of South Asia and its Hindu populations.`
                                 ],
                                 dotKeys: {
                                     [PUN]: true
@@ -1491,7 +1491,7 @@ module.exports = {
                             }
                         }
                     },
-                    `collide…`,
+                    `collide…`
                 ]
             },
             {
@@ -1549,7 +1549,7 @@ module.exports = {
                                         anchor: `mummer`,
                                         wiki: `Mummers_play`
                                     },
-                                    `is a masked mime.`,
+                                    `is a masked mime.`
                                 ]
                             },
                             {
@@ -1877,7 +1877,7 @@ module.exports = {
         {
             taskName: `review synopses and rough illustrations`,
             workedHours: 3,
-            neededHours: 3,
+            neededHours: 3
         }
     ]
 }

@@ -386,7 +386,7 @@ module.exports = [
                             zHeight: 0
                         }
                     }
-                },
+                }
             }
         },
         cubes: SITA_APARTMENT_BED_KEY,
@@ -453,7 +453,7 @@ module.exports = [
                             zHeight: 0
                         }
                     }
-                },
+                }
             }
         },
         cubes: SITA_APARTMENT_BED_KEY,

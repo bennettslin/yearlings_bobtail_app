@@ -737,7 +737,7 @@ module.exports = {
                 },
                 stanzaType: OUTRO
             }
-        ],
+        ]
     ],
     tasks: [
         {

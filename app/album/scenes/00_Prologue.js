@@ -27,7 +27,7 @@ module.exports = [
                         zHeight: 5
                     }
                 }
-            },
+            }
         },
         cubes: LOGUE_KEY,
         sky: {

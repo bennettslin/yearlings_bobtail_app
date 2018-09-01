@@ -115,7 +115,7 @@ import {
     SHOW_ANNOYED,
     ALLEY,
     BROKEN_HEARTED,
-    DEMONSTRATION,
+    DEMONSTRATION
 } from 'scene/actors/bennett'
 
 import {

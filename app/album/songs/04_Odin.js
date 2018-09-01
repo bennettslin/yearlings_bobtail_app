@@ -79,7 +79,7 @@ module.exports = {
                             }
                         ]
                     },
-                    `once more`,
+                    `once more`
                 ]
             },
             {
@@ -92,7 +92,7 @@ module.exports = {
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
-                        },
+                        }
                     },
                     `emerged.`
                 ],
@@ -562,7 +562,7 @@ module.exports = {
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
-                        },
+                        }
                     }
                 ],
                 right: [
@@ -1175,13 +1175,13 @@ module.exports = {
                             }
                         }
                     },
-                    `has come?`,
+                    `has come?`
                 ]
             },
             {
                 isUnitMap: true,
                 stanzaType: BRIDGE
-            },
+            }
         ],
         [
             {
@@ -1212,7 +1212,7 @@ module.exports = {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
-                        },
+                        }
                     },
                     `and just play dumb?`
                 ]
@@ -1550,7 +1550,7 @@ module.exports = {
         {
             taskName: `review synopses and rough illustrations`,
             workedHours: 3,
-            neededHours: 3,
+            neededHours: 3
         }
     ]
 }

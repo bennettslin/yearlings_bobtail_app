@@ -93,7 +93,7 @@ const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: { isHiddenCarouselNav },
     songStore: { selectedSongIndex },
-    selectedCarouselNavIndex,
+    selectedCarouselNavIndex
 }) => ({
     deviceIndex,
     isHiddenCarouselNav,

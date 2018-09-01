@@ -107,7 +107,7 @@ module.exports = {
                             }
                         }
                     },
-                    `for what its promise meant.`,
+                    `for what its promise meant.`
                 ]
             },
             {

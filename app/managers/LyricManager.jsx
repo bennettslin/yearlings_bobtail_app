@@ -132,7 +132,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
-    selectedSongIndex,
+    selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

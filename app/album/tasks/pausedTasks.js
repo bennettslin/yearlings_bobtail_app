@@ -183,5 +183,5 @@ module.exports = [
         taskName: `Look into using SmartComponent.`,
         workedHours: 0,
         neededHours: 1
-    },
+    }
 ]

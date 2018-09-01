@@ -108,7 +108,7 @@ const mapStateToProps = ({
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
-    },
+    }
 }) => ({
     renderedSceneIndex,
     selectedSongIndex,

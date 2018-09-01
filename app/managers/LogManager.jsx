@@ -60,7 +60,7 @@ class LogManager extends Component {
     logScene = () => {
         const {
                 renderedSongIndex,
-                renderedSceneIndex,
+                renderedSceneIndex
             } = this.props,
             renderableScene = getSceneObject(
                 renderedSongIndex,

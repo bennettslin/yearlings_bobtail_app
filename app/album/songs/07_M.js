@@ -160,7 +160,7 @@ module.exports = {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
                             }
-                        },
+                        }
                     }
                 ]
             },
@@ -900,7 +900,7 @@ module.exports = {
         {
             taskName: `work out narrative order`,
             workedHours: 2,
-            neededHours: 2,
+            neededHours: 2
         },
         {
             taskName: `annotations`,

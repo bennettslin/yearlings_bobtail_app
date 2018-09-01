@@ -345,7 +345,7 @@ module.exports = {
                             description: [
                                 `Of course, he actually sways because Miriam, who happens to be`,
                                 {
-                                    emphasis: `my`,
+                                    emphasis: `my`
                                 },
                                 `all-American god, is humming along and tapping the underside of the dashboard with her feet.`
                             ],
@@ -874,7 +874,7 @@ module.exports = {
                                 description: `Zoned out in my flaccid state, I'm about to be blindsided by Miriam's true intention for today's outing.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
-                                },
+                                }
                             },
                             {
                                 wormhole: `veggie_wishbone`

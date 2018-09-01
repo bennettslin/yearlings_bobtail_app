@@ -59,7 +59,7 @@ const
                 [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SF, _BL],
                 [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SB, _BL],
                 [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SB, _BL],
-                [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SF, _BL],
+                [_BL, _BL, _BL, _BL, _BL, _BL, _BL, _SF, _SF, _SF, _BL]
             ]
         }
     },
@@ -108,7 +108,7 @@ const
         [NOHO_NEIGHBOURHOOD_KEY]: NOHO_HOUSES,
         [NOHO_SCHOOL_KEY]: NOHO_SCHOOL,
         [NOHO_BATHROOM_KEY]: NOHO_BATHROOM,
-        [NOHO_BATHROOM_OPEN_KEY]: NOHO_BATHROOM_OPEN,
+        [NOHO_BATHROOM_OPEN_KEY]: NOHO_BATHROOM_OPEN
     }
 
 export {

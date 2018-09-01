@@ -48,7 +48,7 @@ const
                 [_ST, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _ST],
                 [_ST, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _ST],
                 [_ST, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _SP, _ST],
-                [_ST],
+                [_ST]
             ]
         }
     },

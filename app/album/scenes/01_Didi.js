@@ -110,7 +110,7 @@ CUTOUTS_NOHO_BATHROOM = {
             xWidth: 5,
             zHeight: 1.5
         }
-    },
+    }
 }
 
 module.exports = [

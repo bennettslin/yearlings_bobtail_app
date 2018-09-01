@@ -23,6 +23,10 @@ import {
 } from 'scene/actorKeys'
 
 import {
+    OFFICER
+} from 'scene/actors/amy'
+
+import {
     YOUNG_CHILD
 } from 'scene/actors/songs'
 
@@ -121,7 +125,7 @@ module.exports = [
                             zHeight: 0
                         }
                     }
-                },
+                }
             }
         },
         cubes: OAKLAND_STREET_FRONT_1_KEY,
@@ -166,7 +170,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back, facing back, waving',
-                        instance: null,
+                        instance: OFFICER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -240,7 +244,7 @@ module.exports = [
                             xWidth: 0,
                             zHeight: 0
                         }
-                    },
+                    }
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
@@ -254,7 +258,7 @@ module.exports = [
                             xWidth: 0,
                             zHeight: 0
                         }
-                    },
+                    }
                 },
                 [WILLY]: {
                     crossingGuard: {

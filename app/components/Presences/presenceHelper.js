@@ -174,7 +174,7 @@ export const getPresenceXYWidthAndHeight = ({
 
         {
             width: cubeWidthPercentage,
-            height: cubeHeightPercentage,
+            height: cubeHeightPercentage
 
         } = _getCubeWidthAndHeightPercentages(
             yIndex

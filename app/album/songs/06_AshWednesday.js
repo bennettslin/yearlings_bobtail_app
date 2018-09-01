@@ -49,7 +49,7 @@ module.exports = {
                             ],
                             dotKeys: {
                                 [PUN]: true
-                            },
+                            }
                         }
                     },
                     `our`,
@@ -179,7 +179,7 @@ module.exports = {
                             }
                         ]
                     },
-                    `next regrets,`,
+                    `next regrets,`
                 ]
             },
             {
@@ -309,7 +309,7 @@ module.exports = {
                                 [NARRATIVE]: true,
                                 [PUN]: true
                             }
-                        },
+                        }
                     },
                     {
                         anchor: `putting down her Joyce,`,
@@ -636,7 +636,7 @@ module.exports = {
                                     }
                                 }
                             }
-                        ],
+                        ]
                     }
                 ]
             },
@@ -831,7 +831,7 @@ module.exports = {
         {
             taskName: `review synopses and rough illustrations`,
             workedHours: 3,
-            neededHours: 3,
+            neededHours: 3
         }
     ]
 }

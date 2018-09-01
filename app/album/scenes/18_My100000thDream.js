@@ -20,6 +20,10 @@ import {
     AMY
 } from 'scene/actorKeys'
 
+import {
+    DOCTOR
+} from 'scene/actors/amy'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -255,7 +259,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'pulling sheet over Bennett',
-                        instance: null,
+                        instance: DOCTOR,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

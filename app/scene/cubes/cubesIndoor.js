@@ -36,7 +36,7 @@ import {
     f,
     g,
     k,
-    LEFT,
+    LEFT
     // RIGHT
 } from './cubesConstants'
 
