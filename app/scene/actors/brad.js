@@ -1,6 +1,6 @@
 const
     JEWISH_BOY = 'jewishBoy',
-    TYING = 'roaring',
+    TYING = 'tying',
     GESTURING = 'gesturing',
     SNACKING = 'snacking'
 

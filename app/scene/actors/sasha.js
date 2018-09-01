@@ -1,5 +1,5 @@
 const
-    CHARMED = 'roaring',
+    CHARMED = 'charmed',
     INDIGNANT = 'indignant',
     MERMAID = 'mermaid',
     POPULAR_GIRL = 'popularGirl',

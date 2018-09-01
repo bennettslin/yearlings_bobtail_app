@@ -22,6 +22,12 @@ import AsleepReaching from './Instances/AsleepReaching';
 import BrushedOff from './Instances/BrushedOff'
 import FreezingNaked from './Instances/FreezingNaked'
 import LeavingCrumbled from './Instances/LeavingCrumbled'
+import PettingStanding from './Instances/PettingStanding'
+import SiftingTchotchkes from './Instances/SiftingTchotchkes'
+import OpeningDoor from './Instances/OpeningDoor'
+import Defending from './Instances/Defending'
+import NotHungry from './Instances/NotHungry'
+import AsleepCouch from './Instances/AsleepCouch'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
@@ -30,6 +36,12 @@ import {
     ASLEEP_REACHING,
     BRUSHED_OFF,
     FREEZING_NAKED,
+    PETTING_STANDING,
+    SIFTING_TCHOTCHKES,
+    OPENING_DOOR,
+    DEFENDING,
+    NOT_HUNGRY,
+    ASLEEP_COUCH,
 } from 'scene/actors/liz'
 
 import {
@@ -74,6 +86,12 @@ const INSTANCES_MAP = {
     [BRUSHED_OFF]: BrushedOff,
     [FREEZING_NAKED]: FreezingNaked,
     [LEAVING_CRUMBLED]: LeavingCrumbled,
+    [PETTING_STANDING]: PettingStanding,
+    [SIFTING_TCHOTCHKES]: SiftingTchotchkes,
+    [OPENING_DOOR]: OpeningDoor,
+    [DEFENDING]: Defending,
+    [NOT_HUNGRY]: NotHungry,
+    [ASLEEP_COUCH]: AsleepCouch,
     [EPILOGUE]: Epilogue
 }
 
