@@ -1,5 +1,5 @@
 import {
-    NOHO_NEIGHBOURHOOD_KEY,
+    NOHO_HOUSES_BACKDROP_KEY,
     NOHO_SCHOOL_KEY,
     NOHO_BATHROOM_KEY,
     NOHO_BATHROOM_OPEN_KEY
@@ -50,11 +50,11 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
-    NOHO_NEIGHBOURHOOD,
+    NOHO_HOUSES_BACKDROP,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
 
-    NOHO_SCHOOL_NEIGHBOURHOOD,
+    NOHO_SCHOOL_BACKDROP,
     NOHO_SCHOOLHOUSE
 } from 'scene/flatKeys'
 
@@ -76,7 +76,7 @@ PRESENCES_NOHO_HOUSES = {
         }
     },
     flats: {
-        [NOHO_NEIGHBOURHOOD]: {
+        [NOHO_HOUSES_BACKDROP]: {
             yIndex: 0,
             arrangement: {
                 xFloat: 5.5,
@@ -128,7 +128,7 @@ module.exports = [
         presences: {
             ...PRESENCES_NOHO_HOUSES
         },
-        cubes: NOHO_NEIGHBOURHOOD_KEY,
+        cubes: NOHO_HOUSES_BACKDROP_KEY,
         sky: {
             time: TIME_DAWN,
             season: SEASON_SPRING
@@ -178,7 +178,7 @@ module.exports = [
             },
             ...PRESENCES_NOHO_HOUSES
         },
-        cubes: NOHO_NEIGHBOURHOOD_KEY,
+        cubes: NOHO_HOUSES_BACKDROP_KEY,
         sky: {
             time: TIME_MORNING,
             season: SEASON_SPRING
@@ -257,7 +257,7 @@ module.exports = [
                 }
             },
             flats: {
-                [NOHO_SCHOOL_NEIGHBOURHOOD]: {
+                [NOHO_SCHOOL_BACKDROP]: {
                     yIndex: 0,
                     arrangement: {
                         xFloat: 5.5,
@@ -362,7 +362,7 @@ module.exports = [
                 }
             },
             flats: {
-                [NOHO_NEIGHBOURHOOD]: {
+                [NOHO_HOUSES_BACKDROP]: {
                     yIndex: 0,
                     arrangement: {
                         xFloat: 5.5,

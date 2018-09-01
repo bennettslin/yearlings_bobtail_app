@@ -5,7 +5,7 @@ DEFAULT_STAGE_KEY = 'defaultStage',
 LOGUE_KEY = 'logue',
 
 // Noho.
-NOHO_NEIGHBOURHOOD_KEY = 'NohoNeighbourhood',
+NOHO_HOUSES_BACKDROP_KEY = 'NohoHousesBackdrop',
 NOHO_SCHOOL_KEY = 'NohoSchool',
 NOHO_BATHROOM_KEY = 'NohoBathroom',
 NOHO_BATHROOM_OPEN_KEY = 'NohoBathroomOpen',
@@ -90,7 +90,7 @@ ALLEY_KEY = 'ALLEY'
 export {
     DEFAULT_STAGE_KEY,
     LOGUE_KEY,
-    NOHO_NEIGHBOURHOOD_KEY,
+    NOHO_HOUSES_BACKDROP_KEY,
     NOHO_SCHOOL_KEY,
     NOHO_BATHROOM_KEY,
     NOHO_BATHROOM_OPEN_KEY,

@@ -2,7 +2,7 @@ import {
     PRETEEN_BENNETT_ROOM_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
-    NOHO_NEIGHBOURHOOD_KEY,
+    NOHO_HOUSES_BACKDROP_KEY,
     CHANGELING_CAVE_KEY
 } from 'scene/cubesKeys'
 
@@ -246,7 +246,7 @@ module.exports = [
                 }
             }
         },
-        cubes: NOHO_NEIGHBOURHOOD_KEY,
+        cubes: NOHO_HOUSES_BACKDROP_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER

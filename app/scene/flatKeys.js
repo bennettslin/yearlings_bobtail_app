@@ -1,17 +1,17 @@
 // Keep cutout instances in this file.
 
 const
-    NOHO_NEIGHBOURHOOD = 'nohoNeighbourhood',
+    NOHO_HOUSES_BACKDROP = 'nohoHousesBackdrop',
     NOHO_HOUSE_LEFT = 'nohoHouseLeft',
     NOHO_HOUSE_RIGHT = 'nohoHouseRight',
 
-    NOHO_SCHOOL_NEIGHBOURHOOD = 'nohoSchoolNeighbourhood',
+    NOHO_SCHOOL_BACKDROP = 'nohoSchoolBackdrop',
     NOHO_SCHOOLHOUSE = 'nohoSchoolhouse'
 
 export {
-    NOHO_NEIGHBOURHOOD,
+    NOHO_HOUSES_BACKDROP,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-    NOHO_SCHOOL_NEIGHBOURHOOD,
+    NOHO_SCHOOL_BACKDROP,
     NOHO_SCHOOLHOUSE
 }
