@@ -35,6 +35,11 @@ import Laughing from './Instances/Laughing'
 import SelflessConcern from './Instances/SelflessConcern'
 import Caressed from './Instances/Caressed'
 import CaressedReflection from './Instances/CaressedReflection'
+import ElTorito from './Instances/ElTorito'
+import Pampas from './Instances/Pampas'
+import GettingDark from './Instances/GettingDark'
+import Cliff from './Instances/Cliff'
+import FinalDream from './Instances/FinalDream'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
@@ -55,7 +60,7 @@ import {
     LAUGHING,
     SELFLESS_CONCERN,
     CARESSED,
-    CARESSED_REFLECTION,
+    CARESSED_REFLECTION
 } from 'scene/actors/liz'
 
 import {
@@ -76,6 +81,11 @@ import {
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION,
     LEAVING_CRUMBLED,
+    EL_TORITO,
+    PAMPAS,
+    GETTING_DARK,
+    CLIFF,
+    FINAL_DREAM,
     EPILOGUE
 } from 'scene/actors/songs'
 
@@ -113,6 +123,11 @@ const INSTANCES_MAP = {
     [SELFLESS_CONCERN]: SelflessConcern,
     [CARESSED]: Caressed,
     [CARESSED_REFLECTION]: CaressedReflection,
+    [EL_TORITO]: ElTorito,
+    [PAMPAS]: Pampas,
+    [GETTING_DARK]: GettingDark,
+    [CLIFF]: Cliff,
+    [FINAL_DREAM]: FinalDream,
     [EPILOGUE]: Epilogue
 }
 

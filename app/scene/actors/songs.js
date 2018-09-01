@@ -66,7 +66,12 @@ const
     PROTESTER = 'protester',
 
     // 100,000th Dream.
+    EL_TORITO = 'elTorito',
+    PAMPAS = 'pampas',
     GOPI = 'gopi',
+    GETTING_DARK = 'gettingDark',
+    CLIFF = 'cliff',
+    FINAL_DREAM = 'finalDream',
 
     EPILOGUE = 'epilogue'
 
@@ -112,6 +117,11 @@ export {
     COWGIRL,
     BLOWJOB,
     PROTESTER,
+    EL_TORITO,
+    PAMPAS,
     GOPI,
+    GETTING_DARK,
+    CLIFF,
+    FINAL_DREAM,
     EPILOGUE
 }

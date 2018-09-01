@@ -29,7 +29,12 @@ const
     SEEKING_PROTECTION = 'seekingProtection',
     REMOVING_PANTS = 'removingPants',
     INFIRM = 'infirm',
-    DISPOSING_CONDOM = 'disposingCondom'
+    DISPOSING_CONDOM = 'disposingCondom',
+    CAMPUS_ASHAMED = 'campusAshamed',
+    SHOW_ANNOYED = 'showAnnoyed',
+    ALLEY = 'alley',
+    BROKEN_HEARTED = 'brokenHearted',
+    DEMONSTRATION = 'demonstration'
 
 export {
     BREAKUP_DEJECTED,
@@ -62,5 +67,10 @@ export {
     SEEKING_PROTECTION,
     REMOVING_PANTS,
     INFIRM,
-    DISPOSING_CONDOM
+    DISPOSING_CONDOM,
+    CAMPUS_ASHAMED,
+    SHOW_ANNOYED,
+    ALLEY,
+    BROKEN_HEARTED,
+    DEMONSTRATION,
 }

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Noogie from './Instances/Noogie'
+import InfantCurious from './Instances/InfantCurious'
+import InfantNursing from './Instances/InfantNursing'
 import Asleep from './Instances/Asleep'
 import Mischievous from './Instances/Mischievous'
 import Fending from './Instances/Fending'
@@ -16,6 +18,8 @@ import Gopi from './Instances/Gopi'
 import Epilogue from './Instances/Epilogue'
 
 import {
+    INFANT_CURIOUS,
+    INFANT_NURSING,
     ASLEEP,
     MISCHIEVOUS,
     FENDING,
@@ -35,6 +39,8 @@ import {
 
 const INSTANCES_MAP = {
     [NOOGIE]: Noogie,
+    [INFANT_CURIOUS]: InfantCurious,
+    [INFANT_NURSING]: InfantNursing,
     [ASLEEP]: Asleep,
     [MISCHIEVOUS]: Mischievous,
     [FENDING]: Fending,

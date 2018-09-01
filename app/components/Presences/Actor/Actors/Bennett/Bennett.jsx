@@ -65,6 +65,16 @@ import Cowgirl from './Instances/Cowgirl'
 import Blowjob from './Instances/Blowjob'
 import Infirm from './Instances/Infirm'
 import DisposingCondom from './Instances/DisposingCondom'
+import CampusAshamed from './Instances/CampusAshamed'
+import ShowAnnoyed from './Instances/ShowAnnoyed'
+import Alley from './Instances/Alley'
+import BrokenHearted from './Instances/BrokenHearted'
+import Demonstration from './Instances/Demonstration'
+import ElTorito from './Instances/ElTorito'
+import Pampas from './Instances/Pampas'
+import GettingDark from './Instances/GettingDark'
+import Cliff from './Instances/Cliff'
+import FinalDream from './Instances/FinalDream'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
@@ -101,6 +111,11 @@ import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM,
+    CAMPUS_ASHAMED,
+    SHOW_ANNOYED,
+    ALLEY,
+    BROKEN_HEARTED,
+    DEMONSTRATION,
 } from 'scene/actors/bennett'
 
 import {
@@ -136,6 +151,11 @@ import {
     PAST,
     PRESENT,
     FUTURE,
+    EL_TORITO,
+    PAMPAS,
+    GETTING_DARK,
+    CLIFF,
+    FINAL_DREAM,
     EPILOGUE
 } from 'scene/actors/songs'
 
@@ -203,6 +223,16 @@ const INSTANCES_MAP = {
     [BLOWJOB]: Blowjob,
     [INFIRM]: Infirm,
     [DISPOSING_CONDOM]: DisposingCondom,
+    [CAMPUS_ASHAMED]: CampusAshamed,
+    [SHOW_ANNOYED]: ShowAnnoyed,
+    [ALLEY]: Alley,
+    [BROKEN_HEARTED]: BrokenHearted,
+    [DEMONSTRATION]: Demonstration,
+    [EL_TORITO]: ElTorito,
+    [PAMPAS]: Pampas,
+    [GETTING_DARK]: GettingDark,
+    [CLIFF]: Cliff,
+    [FINAL_DREAM]: FinalDream,
     [EPILOGUE]: Epilogue
 }
 
