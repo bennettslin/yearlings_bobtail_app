@@ -1,0 +1,16 @@
+.Cutout__temporaryRect {
+    fill: rgba(200, 250, 200, 0.75);
+    vector-effect: non-scaling-stroke;
+    stroke-width: 1px;
+    stroke: #444;
+}
+
+.Cutout {
+    transition: top $animationDuration__default;
+    top: -100%;
+
+    .Scene__shown
+    & {
+        top: 0;
+    }
+}

@@ -14,7 +14,8 @@ const
 
     ACTORS = 'actors',
     CUTOUTS = 'cutouts',
-    FIXTURES = 'fixtures'
+    FIXTURES = 'fixtures',
+    FLATS = 'flats'
 
 module.exports = {
 
@@ -45,12 +46,13 @@ module.exports = {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-
-    // PRESENCE_TYPES: [
-    //     ACTORS,
-    //     CUTOUTS,
-    //     FIXTURES
-    // ],
+    FLATS,
+    PRESENCE_TYPES: [
+        ACTORS,
+        CUTOUTS,
+        FIXTURES,
+        FLATS
+    ],
 
     Z_INDICES_MATRIX_NAME,
     HSLA_MATRIX_NAME

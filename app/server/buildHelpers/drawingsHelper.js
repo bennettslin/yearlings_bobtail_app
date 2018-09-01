@@ -2,6 +2,8 @@
 
 import keys from 'lodash.keys'
 
+import { PRESENCE_TYPES } from 'constants/scene'
+
 /**
  * FIXME: These are a mess, but this is only for admin. Will be deleted at some
  * point.
@@ -10,7 +12,7 @@ import keys from 'lodash.keys'
 export const adminGatherDrawings = (album, songIndex) => {
 
     const
-        drawingTypes = ['actors', 'cutouts', 'fixtures'],
+        drawingTypes = PRESENCE_TYPES,
         scenes = album.scenes[songIndex]
 
     album._drawings = album._drawings || {}

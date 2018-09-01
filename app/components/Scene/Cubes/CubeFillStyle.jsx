@@ -24,7 +24,7 @@ import {
 import {
     LEVELS,
     HSLA_MATRIX_NAME
-} from '../sceneConstants'
+} from 'constants/scene'
 
 const propTypes = {
     xIndex: PropTypes.number.isRequired,

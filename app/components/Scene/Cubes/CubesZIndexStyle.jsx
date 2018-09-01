@@ -11,7 +11,7 @@ import {
     LEFT,
     RIGHT,
     SLANT_DIRECTIONS
-} from '../sceneConstants'
+} from 'constants/scene'
 
 import {
     CUBE_X_INDICES,

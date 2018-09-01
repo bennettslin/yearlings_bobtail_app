@@ -22,7 +22,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES
-} from 'components/Scene/sceneConstants'
+} from 'constants/scene'
 
 import {
     CUBE_X_AXIS_LENGTH

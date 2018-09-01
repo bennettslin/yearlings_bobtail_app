@@ -17,7 +17,7 @@ import {
     FLOOR,
     TILE,
     Z_INDICES_MATRIX_NAME
-} from 'components/Scene/sceneConstants'
+} from 'constants/scene'
 
 import { CUBE_Z_INDICES } from '../cubeIndexConstants'
 

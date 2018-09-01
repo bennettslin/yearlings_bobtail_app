@@ -3802,5 +3802,10 @@ module.exports = [
         taskName: `General North Hollywood bathroom scene.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Create all actor instance components.`,
+        workedHours: 15,
+        neededHours: 15
     }
 ]

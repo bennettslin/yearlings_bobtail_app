@@ -15,7 +15,7 @@ import { getSceneObject } from 'helpers/dataHelper'
 import {
     Z_INDICES_MATRIX_NAME,
     HSLA_MATRIX_NAME
-} from './sceneConstants'
+} from 'constants/scene'
 
 import {
     getCubesForKey,

@@ -16,7 +16,7 @@ import { getCharStringForNumber } from 'helpers/formatHelper'
 
 import {
     FACES
-} from '../sceneConstants'
+} from 'constants/scene'
 
 const propTypes = {
 
