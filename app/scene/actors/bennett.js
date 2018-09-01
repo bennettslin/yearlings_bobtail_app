@@ -23,7 +23,12 @@ const
     AWKWARD_CONSOLATION = 'awkwardConsolation',
     CORD_REAR = 'cordRear',
     HORSING = 'horsing',
-    DRYING_TEARS = 'dryingTears'
+    DRYING_TEARS = 'dryingTears',
+    WAKENED_FEARFUL = 'wakenedFearful',
+    SEEKING_PROTECTION = 'seekingProtection',
+    REMOVING_PANTS = 'removingPants',
+    INFIRM = 'infirm',
+    DISPOSING_CONDOM = 'disposingCondom'
 
 export {
     BREAKUP_DEJECTED,
@@ -51,4 +56,9 @@ export {
     CORD_REAR,
     HORSING,
     DRYING_TEARS,
+    WAKENED_FEARFUL,
+    SEEKING_PROTECTION,
+    REMOVING_PANTS,
+    INFIRM,
+    DISPOSING_CONDOM
 }

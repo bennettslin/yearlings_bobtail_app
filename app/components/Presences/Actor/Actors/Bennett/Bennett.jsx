@@ -54,11 +54,16 @@ import AwkwardConsolation from './Instances/AwkwardConsolation'
 import CordRear from './Instances/CordRear'
 import Horsing from './Instances/Horsing'
 import DryingTears from './Instances/DryingTears'
-import Cowgirl from './Instances/Cowgirl'
-import Blowjob from './Instances/Blowjob'
+import WakenedFearful from './Instances/WakenedFearful'
 import Past from './Instances/Past'
 import Present from './Instances/Present'
 import Future from './Instances/Future'
+import SeekingProtection from './Instances/SeekingProtection'
+import RemovingPants from './Instances/RemovingPants'
+import Cowgirl from './Instances/Cowgirl'
+import Blowjob from './Instances/Blowjob'
+import Infirm from './Instances/Infirm'
+import DisposingCondom from './Instances/DisposingCondom'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
@@ -89,6 +94,11 @@ import {
     CORD_REAR,
     HORSING,
     DRYING_TEARS,
+    WAKENED_FEARFUL,
+    SEEKING_PROTECTION,
+    REMOVING_PANTS,
+    INFIRM,
+    DISPOSING_CONDOM,
 } from 'scene/actors/bennett'
 
 import {
@@ -180,11 +190,16 @@ const INSTANCES_MAP = {
     [CORD_REAR]: CordRear,
     [HORSING]: Horsing,
     [DRYING_TEARS]: DryingTears,
-    [COWGIRL]: Cowgirl,
-    [BLOWJOB]: Blowjob,
+    [WAKENED_FEARFUL]: WakenedFearful,
     [PAST]: Past,
     [PRESENT]: Present,
     [FUTURE]: Future,
+    [SEEKING_PROTECTION]: SeekingProtection,
+    [REMOVING_PANTS]: RemovingPants,
+    [COWGIRL]: Cowgirl,
+    [BLOWJOB]: Blowjob,
+    [INFIRM]: Infirm,
+    [DISPOSING_CONDOM]: DisposingCondom,
     [EPILOGUE]: Epilogue
 }
 
