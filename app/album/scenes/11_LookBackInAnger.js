@@ -31,9 +31,19 @@ import {
 } from 'scene/actors/bennett'
 
 import {
+    ASLEEP_REACHING,
+    REACHING_REFLECTION
+} from 'scene/actors/liz'
+
+import { SHANE_SPILLING } from 'scene/actors/tomer'
+
+import { WATCHING } from 'scene/actors/wade'
+
+import {
     PERFORMING,
     SQUEEZING,
     FLIRTING,
+    CARRYING,
     MINGLING,
     WAITING,
 } from 'scene/actors/songs'
@@ -73,7 +83,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, holding beer, turning to make room',
-                        instance: null,
+                        instance: SHANE_SPILLING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -86,7 +96,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, drinking beer',
-                    instance: null,
+                    instance: WATCHING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -159,7 +169,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, carrying drums, smiling at Mara',
-                    instance: null,
+                    instance: CARRYING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -171,7 +181,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, carrying cymbal, talking',
-                    instance: null,
+                    instance: CARRYING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -308,7 +318,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'lying, reaching forward to touch Bennett',
-                        instance: null,
+                        instance: ASLEEP_REACHING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -322,7 +332,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: REACHING_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

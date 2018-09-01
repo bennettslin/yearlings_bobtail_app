@@ -22,9 +22,7 @@ import {
     STEPHANIE
 } from 'scene/actorKeys'
 
-import {
-    OFFICER
-} from 'scene/actors/amy'
+import { OFFICER } from 'scene/actors/amy'
 
 import {
     CORD_SIDE,
@@ -34,9 +32,17 @@ import {
     DRYING_TEARS
 } from 'scene/actors/bennett'
 
+import { RETURNING_CORD } from 'scene/actors/liz'
+
 import {
-    YOUNG_CHILD
-} from 'scene/actors/songs'
+    BENNETT_DEFIANT,
+    BENNETT_HORSING,
+    BENNETT_SORROWFUL
+} from 'scene/actors/stephanie'
+
+import { CROSSING_GUARD } from 'scene/actors/willy'
+
+import { YOUNG_CHILD } from 'scene/actors/songs'
 
 module.exports = [
     {
@@ -86,7 +92,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, returning bracelet, fighting tears',
-                        instance: null,
+                        instance: RETURNING_CORD,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -125,7 +131,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back, shaking fist at sky',
-                        instance: null,
+                        instance: BENNETT_DEFIANT,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -164,7 +170,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back, playful',
-                        instance: null,
+                        instance: BENNETT_HORSING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -217,7 +223,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back, head in hands, holding bracelet',
-                        instance: null,
+                        instance: BENNETT_SORROWFUL,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -273,7 +279,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'front, holding up stop sign',
-                        instance: null,
+                        instance: CROSSING_GUARD,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

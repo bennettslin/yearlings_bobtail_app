@@ -18,6 +18,21 @@ import {
 
 import { FEIGNING_FEAR } from 'scene/actors/andrew'
 
+import {
+    JEWISH_BOY,
+    TYING
+} from 'scene/actors/brad'
+
+import {
+    PANICKED,
+    TETHERED
+} from 'scene/actors/preteenBennett'
+
+import {
+    CHARMED,
+    INDIGNANT
+} from 'scene/actors/sasha'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -48,7 +63,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side seated, pretending to read, panicked',
-                    instance: null,
+                    instance: PANICKED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -60,7 +75,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side seated, laughing, braids trailing',
-                    instance: null,
+                    instance: CHARMED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -73,7 +88,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side seated, turned away, pointing to window',
-                        instance: null,
+                        instance: JEWISH_BOY,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -99,7 +114,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'tied up, greeting Sasha with nervous laughter',
-                    instance: null,
+                    instance: TETHERED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -111,7 +126,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'indignant, yelling at bullies',
-                    instance: null,
+                    instance: INDIGNANT,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -135,7 +150,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'laughing, tying up Bennett',
-                    instance: null,
+                    instance: TYING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

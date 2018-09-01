@@ -34,6 +34,21 @@ import {
 } from 'scene/actors/bennett'
 
 import {
+    PROTECTIVE,
+    CARESSING,
+    CARESSING_REFLECTION
+} from 'scene/actors/khari'
+
+import {
+    SELFLESS_CONCERN,
+    CARESSED,
+    CARESSED_REFLECTION
+} from 'scene/actors/liz'
+
+import { INTRODUCING } from 'scene/actors/tristan'
+
+import {
+    GREETING,
     PROTESTER
 } from 'scene/actors/songs'
 
@@ -60,7 +75,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, looking back, concerned',
-                        instance: null,
+                        instance: SELFLESS_CONCERN,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -73,7 +88,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, protective, judgmental',
-                    instance: null,
+                    instance: PROTECTIVE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -110,7 +125,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, flirting',
-                    instance: null,
+                    instance: GREETING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -122,7 +137,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, introducing miriam',
-                    instance: null,
+                    instance: INTRODUCING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -134,7 +149,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, eager',
-                    instance: null,
+                    instance: GREETING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -197,7 +212,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'Lying in bed, on phone with Bennett',
-                        instance: null,
+                        instance: CARESSED,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -211,7 +226,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: CARESSED_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -224,7 +239,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying in bed, caressing Sita',
-                    instance: null,
+                    instance: CARESSING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -237,7 +252,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: CARESSING_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

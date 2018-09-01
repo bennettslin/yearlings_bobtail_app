@@ -29,6 +29,40 @@ import {
 } from 'scene/actors/bennett'
 
 import {
+    SITA_HURT,
+    SITA_SOBBING
+} from 'scene/actors/esther'
+
+import {
+    ACCUSATORY,
+    REELING
+} from 'scene/actors/father'
+
+import { JOKING } from 'scene/actors/khari'
+
+import { LAUGHING } from 'scene/actors/liz'
+
+import {
+    ASLEEP,
+    MISCHIEVOUS,
+    FENDING
+} from 'scene/actors/miriam'
+
+import {
+    CONSOLING,
+    SHIELDING
+} from 'scene/actors/mother'
+
+import { HUMILIATED } from 'scene/actors/preteenBennett'
+
+import { COMFORTING } from 'scene/actors/sasha'
+
+import {
+    BENNETT_BANJO,
+    BENNETT_RECORDING
+} from 'scene/actors/stephanie'
+
+import {
     PAST,
     PRESENT,
     FUTURE
@@ -56,7 +90,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, asleep',
-                    instance: null,
+                    instance: ASLEEP,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -81,7 +115,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, consoling Sita',
-                    instance: null,
+                    instance: CONSOLING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -93,7 +127,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, accusatory',
-                    instance: null,
+                    instance: ACCUSATORY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -106,7 +140,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, sobbing',
-                        instance: null,
+                        instance: SITA_HURT,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -156,7 +190,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, hurt, lashing out in anger',
-                    instance: PAST,
+                    instance: HUMILIATED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -168,7 +202,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, consoling, cautious',
-                    instance: PAST,
+                    instance: COMFORTING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -229,7 +263,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, jumping on Bennett, grabbing his banjo',
-                    instance: PRESENT,
+                    instance: MISCHIEVOUS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -242,7 +276,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'making out with Miriam',
-                        instance: PRESENT,
+                        instance: BENNETT_BANJO,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -281,7 +315,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back, squatting, recording, dejected',
-                        instance: FUTURE,
+                        instance: BENNETT_RECORDING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -319,7 +353,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, amused by conversation',
-                        instance: FUTURE,
+                        instance: LAUGHING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -332,7 +366,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, cheerful, making a point',
-                    instance: FUTURE,
+                    instance: JOKING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -369,7 +403,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'side sitting, vindictive, magical gesture',
-                    instance: null,
+                    instance: FENDING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -381,7 +415,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, protecting Sita',
-                    instance: null,
+                    instance: SHIELDING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -393,7 +427,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, knocked over',
-                    instance: null,
+                    instance: REELING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -406,7 +440,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, sobbing uncontrollably',
-                        instance: null,
+                        instance: SITA_SOBBING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

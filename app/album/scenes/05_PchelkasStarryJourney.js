@@ -28,6 +28,32 @@ import {
     NOODLING
 } from 'scene/actors/andrew'
 
+import {
+    GESTURING,
+    SNACKING
+} from 'scene/actors/brad'
+
+import {
+    BLISSFUL,
+    STARING
+} from 'scene/actors/christopher'
+
+import { ARGUING } from 'scene/actors/mother'
+
+import {
+    GUILT_RIDDEN,
+    FEIGNING_SICK,
+    ASLEEP,
+    SHAKEN,
+    STOIC,
+    WISTFUL,
+    SHEEPISH
+} from 'scene/actors/preteenBennett'
+
+import { POPULAR_GIRL } from 'scene/actors/sasha'
+
+import { PRINCIPAL } from 'scene/actors/tristan'
+
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
  * song list order on the album.
@@ -51,7 +77,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying on stomach, drawing, guilty',
-                    instance: null,
+                    instance: GUILT_RIDDEN,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -63,7 +89,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'w-sitting, blissful',
-                    instance: null,
+                    instance: BLISSFUL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -88,7 +114,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, sitting up in bed, feigning sick',
-                    instance: null,
+                    instance: FEIGNING_SICK,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -113,7 +139,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'in bed, asleep, turned away',
-                    instance: null,
+                    instance: ASLEEP,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -138,7 +164,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, sitting, shaken, scared',
-                    instance: null,
+                    instance: SHAKEN,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -163,7 +189,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, stoic',
-                    instance: null,
+                    instance: STOIC,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -175,7 +201,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, gesturing at friend to leave',
-                    instance: null,
+                    instance: GESTURING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -212,7 +238,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, wistful',
-                    instance: null,
+                    instance: WISTFUL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -224,7 +250,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'eating chips',
-                    instance: null,
+                    instance: SNACKING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -249,7 +275,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back',
-                        instance: null,
+                        instance: POPULAR_GIRL,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -275,7 +301,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, sitting, sheepish',
-                    instance: null,
+                    instance: SHEEPISH,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -287,7 +313,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, sitting, staring',
-                    instance: null,
+                    instance: STARING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -299,7 +325,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, angry, accusatory',
-                    instance: null,
+                    instance: ARGUING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -312,7 +338,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, confused, defensive, apologetic',
-                        instance: null,
+                        instance: PRINCIPAL,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

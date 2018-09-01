@@ -10,6 +10,22 @@ import {
     KHARI
 } from 'scene/actorKeys'
 
+import {
+    ARRIVED,
+    JUDGMENTAL,
+    CONCERNED
+} from 'scene/actors/khari'
+
+import {
+    PETTING_SEATED,
+    PETTING_STANDING,
+    SIFTING_TCHOTCHKES,
+    OPENING_DOOR,
+    DEFENDING,
+    NOT_HUNGRY,
+    ASLEEP_COUCH
+} from 'scene/actors/liz'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -21,7 +37,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, petting cat, sad',
-                        instance: null,
+                        instance: PETTING_SEATED,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -48,7 +64,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, petting cat, sad',
-                        instance: null,
+                        instance: PETTING_STANDING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -75,7 +91,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, pensive',
-                        instance: null,
+                        instance: SIFTING_TCHOTCHKES,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -102,7 +118,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, glumly welcoming',
-                        instance: null,
+                        instance: OPENING_DOOR,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -115,7 +131,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, cheery in a low-key way',
-                    instance: null,
+                    instance: ARRIVED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -141,7 +157,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, defensive',
-                        instance: null,
+                        instance: DEFENDING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -154,7 +170,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, seated, eating, judgmental',
-                    instance: null,
+                    instance: JUDGMENTAL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -180,7 +196,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, exhausted',
-                        instance: null,
+                        instance: NOT_HUNGRY,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -193,7 +209,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back angle, concerned',
-                    instance: null,
+                    instance: CONCERNED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -219,7 +235,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, asleep',
-                        instance: null,
+                        instance: ASLEEP_COUCH,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

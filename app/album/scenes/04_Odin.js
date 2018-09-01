@@ -19,6 +19,19 @@ import {
     SASHA
 } from 'scene/actorKeys'
 
+import {
+    MAT,
+    STAIRS,
+    GATE,
+    RICKSHAW,
+    SHORE,
+    BUOY,
+    SINKING,
+    OCEAN_FLOOR
+} from 'scene/actors/preteenBennett'
+
+import { MERMAID } from 'scene/actors/sasha'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -29,7 +42,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, lying on floor, propped up',
-                    instance: null,
+                    instance: MAT,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -54,7 +67,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking down stairs',
-                    instance: null,
+                    instance: STAIRS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -79,7 +92,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, peeking out from gate',
-                    instance: null,
+                    instance: GATE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -104,7 +117,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'getting off rickshaw bike',
-                    instance: null,
+                    instance: RICKSHAW,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -129,7 +142,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side back, looking out to ocean',
-                    instance: null,
+                    instance: SHORE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -154,7 +167,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'peering down from buoy',
-                    instance: null,
+                    instance: BUOY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -179,7 +192,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'hugging self',
-                    instance: null,
+                    instance: SINKING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -191,7 +204,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'mermaid',
-                    instance: null,
+                    instance: MERMAID,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -216,7 +229,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, crouched in sand, looking back',
-                    instance: null,
+                    instance: OCEAN_FLOOR,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

@@ -22,6 +22,12 @@ import {
 } from 'scene/actors/bennett'
 
 import {
+    PERFUMING,
+    TENNIS,
+    REVERSING
+} from 'scene/actors/miriam'
+
+import {
     COWGIRL,
     BLOWJOB
 } from 'scene/actors/songs'
@@ -48,7 +54,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'sitting in car, putting on perfume',
-                    instance: null,
+                    instance: PERFUMING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -172,7 +178,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'serving in tennis',
-                    instance: null,
+                    instance: TENNIS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -209,7 +215,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, looking back, reversing car',
-                    instance: null,
+                    instance: REVERSING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

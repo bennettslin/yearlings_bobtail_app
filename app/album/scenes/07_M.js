@@ -37,6 +37,21 @@ import {
 } from 'scene/actors/bennett'
 
 import {
+    USHER_WAITING,
+    USHER_LOOKING
+} from 'scene/actors/howie'
+
+import {
+    INFANT_CURIOUS,
+    INFANT_NURSING
+} from 'scene/actors/miriam'
+
+import { BENNETT_KEYBOARD } from 'scene/actors/stephanie'
+
+import { SHANE_BUYING } from 'scene/actors/tomer'
+
+import {
+    FLIRTING,
     EATING
 } from 'scene/actors/songs'
 
@@ -113,7 +128,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'sitting on floor, back turned, playing keyboard',
-                        instance: null,
+                        instance: BENNETT_KEYBOARD,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -151,7 +166,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'wiping sweat, chatting with Mara, laughing',
-                    instance: null,
+                    instance: FLIRTING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -163,7 +178,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'flirting with Jacob',
-                    instance: null,
+                    instance: FLIRTING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -188,7 +203,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'chatting with Bennett, gushing about music',
-                        instance: null,
+                        instance: SHANE_BUYING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -288,7 +303,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, holding baby, looking back at Bennett',
-                        instance: null,
+                        instance: INFANT_CURIOUS,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -327,7 +342,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking away',
-                        instance: null,
+                        instance: INFANT_NURSING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -341,7 +356,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'checking watch',
-                        instance: null,
+                        instance: USHER_WAITING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -380,7 +395,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'looking at Bennett',
-                        instance: null,
+                        instance: USHER_LOOKING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

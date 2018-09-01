@@ -18,6 +18,10 @@ import {
     STEPHANIE
 } from 'scene/actorKeys'
 
+import { DOUBLE_ALBERT } from 'scene/actors/khari'
+
+import { FLAPPER } from 'scene/actors/stephanie'
+
 import {
     DATE_ENDING,
     MUSEUM,
@@ -140,7 +144,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, friendly',
-                    instance: null,
+                    instance: DOUBLE_ALBERT,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -153,7 +157,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, rushing',
-                        instance: null,
+                        instance: FLAPPER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

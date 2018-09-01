@@ -31,8 +31,18 @@ import {
 } from 'scene/actors/bennett'
 
 import {
+    BRUSHED_OFF,
+    FREEZING_NAKED
+} from 'scene/actors/liz'
+
+import { INJURED } from 'scene/actors/nestor'
+
+import { PUNCHING } from 'scene/actors/tristan'
+
+import {
     GREETING,
-    LEAVING_CRUMBLED
+    LEAVING_CRUMBLED,
+    NOOGIE
 } from 'scene/actors/songs'
 
 module.exports = [
@@ -58,7 +68,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, shivering, pleading',
-                        instance: null,
+                        instance: BRUSHED_OFF,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -96,7 +106,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, eagerly aggressive, about to punch car',
-                    instance: null,
+                    instance: PUNCHING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -120,7 +130,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, clutching at fist, laughing through pain',
-                    instance: null,
+                    instance: INJURED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -158,7 +168,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, naked, making Bennett touch her breast',
-                        instance: null,
+                        instance: FREEZING_NAKED,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -196,7 +206,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, greeting Bennett',
-                    instance: GREETING,
+                    instance: NOOGIE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -208,7 +218,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, playfully giving Miriam a noogie',
-                    instance: null,
+                    instance: NOOGIE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

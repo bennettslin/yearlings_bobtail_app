@@ -29,6 +29,10 @@ import {
 } from 'scene/actors/bennett'
 
 import {
+    JOGGER
+} from 'scene/actors/nestor'
+
+import {
     DISHROOM_LANCET,
     GATE_CODE,
     GINGERBREAD_PRISON,
@@ -150,7 +154,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, jogging, spry',
-                        instance: null,
+                        instance: JOGGER,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

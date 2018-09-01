@@ -30,6 +30,14 @@ import {
     PIOUS,
 } from 'scene/actors/bennett'
 
+import {
+    WEEPING,
+    QUIPPING,
+    PUZZLED
+} from 'scene/actors/catherine'
+
+import { CATHOLIC_GUY } from 'scene/actors/wade'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -52,7 +60,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'walking away, in a bad mood',
-                    instance: null,
+                    instance: WEEPING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -89,7 +97,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting upright, droll smile',
-                    instance: null,
+                    instance: QUIPPING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -152,7 +160,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, walking, looking pious',
-                        instance: null,
+                        instance: CATHOLIC_GUY,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -204,7 +212,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'walking forward, confused and curious at Bennett',
-                    instance: null,
+                    instance: PUZZLED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
