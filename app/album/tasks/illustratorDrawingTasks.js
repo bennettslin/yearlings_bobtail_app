@@ -113,6 +113,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Sepulveda school buildings (Pchelka)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `Streetlamp, twin streetlamp (Ash, Golden Cord)`,
         workedHours: 1,
         neededHours: 2
@@ -148,9 +153,19 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Theatre backstage with ladder and wardrobe (Good Night)`,
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
         taskName: `Dishroom sink and other stuff (Grasshoppers)`,
         workedHours: 2,
         neededHours: 4
+    },
+    {
+        taskName: `Waiting room (Grasshoppers)`,
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Steam tunnel (Constellations)`,

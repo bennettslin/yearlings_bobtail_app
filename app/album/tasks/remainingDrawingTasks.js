@@ -4,34 +4,9 @@ module.exports = [
      * Todo next!
      */
     {
-        taskName: `Theatre backstage with ladder and wardrobe (Good Night)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Middle school quad (Pchelka)`,
+        taskName: `Cemetery (Constellations)`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Bay Area commercial area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area park area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area residential area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Waiting room (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     /**
@@ -101,6 +76,21 @@ module.exports = [
         taskName: `Sita's living room (Garryowen, Kyon)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Bay Area commercial area (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Bay Area park area (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Bay Area residential area (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
     },
     {
         taskName: `El Torito facade (Dream)`,
@@ -242,11 +232,6 @@ module.exports = [
     },
     {
         taskName: `Movie theatre surrounding street panorama (M)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Cemetery (Constellations)`,
         workedHours: 0,
         neededHours: 5
     },

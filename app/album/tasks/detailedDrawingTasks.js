@@ -153,7 +153,12 @@ module.exports = [
     {
         taskName: `Locker stickers`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
+    },
+    {
+        taskName: `Van Nuys logo (Pchelka)`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Nirvana poster (Ash)`,
@@ -184,6 +189,11 @@ module.exports = [
         taskName: `Bennett's nude drawings (Grasshoppers)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Waiting room painting (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: `Elliott Smith poster (Garryowen)`,
