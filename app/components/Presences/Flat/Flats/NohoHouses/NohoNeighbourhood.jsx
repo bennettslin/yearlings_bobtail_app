@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const NohoSchoolNeighbourhood = ({
+const NohoNeighbourhood = ({
 
     className,
 
@@ -18,13 +18,13 @@ const NohoSchoolNeighbourhood = ({
     return (
         <Svg
             className={cx(
-                'NohoSchoolNeighbourhood',
+                'NohoNeighbourhood',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const NohoSchoolNeighbourhood = ({
                 {...other}
             >
                 {cx(
-                    'NohoSchoolNeighbourhood'
+                    'NohoNeighbourhood'
                 )}
             </text>
         </Svg>
     )
 }
 
-NohoSchoolNeighbourhood.propTypes = propTypes;
+NohoNeighbourhood.propTypes = propTypes;
 
-export default NohoSchoolNeighbourhood
+export default NohoNeighbourhood

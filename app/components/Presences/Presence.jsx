@@ -10,6 +10,7 @@ import cx from 'classnames'
 import Actor from './Actor/Actor'
 import Cutout from './Cutout/Cutout'
 import Fixture from './Fixture/Fixture'
+import Flat from './Flat/Flat'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -21,7 +22,8 @@ import {
 import {
     ACTORS,
     CUTOUTS,
-    FIXTURES
+    FIXTURES,
+    FLATS
 } from 'constants/scene'
 
 import {
@@ -31,7 +33,8 @@ import {
 const PRESENCE_TYPE_COMPONENTS = {
     [ACTORS]: Actor,
     [CUTOUTS]: Cutout,
-    [FIXTURES]: Fixture
+    [FIXTURES]: Fixture,
+    [FLATS]: Flat
 }
 
 const propTypes = {

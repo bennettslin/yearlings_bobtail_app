@@ -2,14 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { CUTOUTS_NOHO_HOUSES } from './Cutouts/NohoHouses/nohoHouses'
-import { CUTOUTS_NOHO_SCHOOL } from './Cutouts/NohoSchool/nohoSchool'
-import { CUTOUTS_NOHO_BATHROOM } from './Cutouts/NohoBathroom/nohoBathroom'
+import { FLATS_NOHO_HOUSES } from './Flats/NohoHouses/nohoHouses'
+import { FLATS_NOHO_SCHOOL } from './Flats/NohoSchool/nohoSchool'
 
-const CUTOUTS_MAP = {
-    ...CUTOUTS_NOHO_HOUSES,
-    ...CUTOUTS_NOHO_SCHOOL,
-    ...CUTOUTS_NOHO_BATHROOM
+const FLATS_MAP = {
+    ...FLATS_NOHO_HOUSES,
+    ...FLATS_NOHO_SCHOOL
 },
 DEFAULT_COMPONENT = () => (null)
 
@@ -23,26 +21,26 @@ const propTypes = {
     height: PropTypes.string.isRequired
 }
 
-const Cutout = ({
+const Flat = ({
 
     className,
     nameKey,
 
 ...other }) => {
 
-    const CutoutComponent =
-        CUTOUTS_MAP[nameKey] || DEFAULT_COMPONENT
+    const FlatComponent =
+        FLATS_MAP[nameKey] || DEFAULT_COMPONENT
 
     return (
-        <CutoutComponent {...other}
+        <FlatComponent {...other}
             className={cx(
-                'Cutout',
+                'Flat',
                 className
             )}
         />
     )
 }
 
-Cutout.propTypes = propTypes;
+Flat.propTypes = propTypes;
 
-export default Cutout
+export default Flat

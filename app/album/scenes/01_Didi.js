@@ -39,13 +39,8 @@ import {
 } from 'scene/actors/esther'
 
 import {
-    NOHO_NEIGHBOURHOOD,
-    NOHO_HOUSE_LEFT,
     FIRE_HYDRANT,
-    NOHO_HOUSE_RIGHT,
 
-    NOHO_SCHOOL_NEIGHBOURHOOD,
-    NOHO_SCHOOLHOUSE,
     PLAYGROUND_SLIDE,
     NURSE_OFFICE_BUBBLE,
 
@@ -55,42 +50,55 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
+    NOHO_NEIGHBOURHOOD,
+    NOHO_HOUSE_LEFT,
+    NOHO_HOUSE_RIGHT,
+
+    NOHO_SCHOOL_NEIGHBOURHOOD,
+    NOHO_SCHOOLHOUSE
+} from 'scene/flatKeys'
+
+import {
     PLAYGROUND_BALL,
     RECORD_PLAYER_STOOL
 } from 'scene/fixtureKeys'
 
 const
-CUTOUTS_NOHO_HOUSES = {
-    [NOHO_NEIGHBOURHOOD]: {
-        yIndex: 0,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 12,
-            zHeight: 4
+PRESENCES_NOHO_HOUSES = {
+    cutouts: {
+        [FIRE_HYDRANT]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 1,
+                xWidth: 1,
+                zHeight: 2
+            }
         }
     },
-    [NOHO_HOUSE_LEFT]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 2,
-            xWidth: 5,
-            zHeight: 3
-        }
-    },
-    [NOHO_HOUSE_RIGHT]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 9,
-            xWidth: 5,
-            zHeight: 3
-        }
-    },
-    [FIRE_HYDRANT]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 1,
-            xWidth: 1,
-            zHeight: 2
+    flats: {
+        [NOHO_NEIGHBOURHOOD]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 4
+            }
+        },
+        [NOHO_HOUSE_LEFT]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 5,
+                zHeight: 3
+            }
+        },
+        [NOHO_HOUSE_RIGHT]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 9,
+                xWidth: 5,
+                zHeight: 3
+            }
         }
     }
 },
@@ -118,7 +126,7 @@ module.exports = [
         unitIndex: 1,
         description: `North Hollywood houses.`,
         presences: {
-            cutouts: CUTOUTS_NOHO_HOUSES
+            ...PRESENCES_NOHO_HOUSES
         },
         cubes: NOHO_NEIGHBOURHOOD_KEY,
         sky: {
@@ -168,7 +176,7 @@ module.exports = [
                     }
                 }
             },
-            cutouts: CUTOUTS_NOHO_HOUSES
+            ...PRESENCES_NOHO_HOUSES
         },
         cubes: NOHO_NEIGHBOURHOOD_KEY,
         sky: {
@@ -220,22 +228,6 @@ module.exports = [
                 }
             },
             cutouts: {
-                [NOHO_SCHOOL_NEIGHBOURHOOD]: {
-                    yIndex: 0,
-                    arrangement: {
-                        xFloat: 5.5,
-                        xWidth: 12,
-                        zHeight: 4
-                    }
-                },
-                [NOHO_SCHOOLHOUSE]: {
-                    yIndex: 1,
-                    arrangement: {
-                        xFloat: 2,
-                        xWidth: 5,
-                        zHeight: 3
-                    }
-                },
                 [PLAYGROUND_SLIDE]: {
                     yIndex: 1,
                     arrangement: {
@@ -261,6 +253,24 @@ module.exports = [
                         xWidth: 1,
                         zHeight: 1,
                         zOffset: 2
+                    }
+                }
+            },
+            flats: {
+                [NOHO_SCHOOL_NEIGHBOURHOOD]: {
+                    yIndex: 0,
+                    arrangement: {
+                        xFloat: 5.5,
+                        xWidth: 12,
+                        zHeight: 4
+                    }
+                },
+                [NOHO_SCHOOLHOUSE]: {
+                    yIndex: 1,
+                    arrangement: {
+                        xFloat: 2,
+                        xWidth: 5,
+                        zHeight: 3
                     }
                 }
             }
@@ -339,15 +349,7 @@ module.exports = [
                 }
             },
             cutouts: {
-                ...CUTOUTS_NOHO_BATHROOM,
-                [NOHO_NEIGHBOURHOOD]: {
-                    yIndex: 0,
-                    arrangement: {
-                        xFloat: 5.5,
-                        xWidth: 12,
-                        zHeight: 4
-                    }
-                }
+                ...CUTOUTS_NOHO_BATHROOM
             },
             fixtures: {
                 [RECORD_PLAYER_STOOL]: {
@@ -356,6 +358,16 @@ module.exports = [
                         xFloat: 6.5,
                         xWidth: 1,
                         zHeight: 1
+                    }
+                }
+            },
+            flats: {
+                [NOHO_NEIGHBOURHOOD]: {
+                    yIndex: 0,
+                    arrangement: {
+                        xFloat: 5.5,
+                        xWidth: 12,
+                        zHeight: 4
                     }
                 }
             }
