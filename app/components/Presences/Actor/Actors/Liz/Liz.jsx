@@ -19,6 +19,7 @@ import HardOnReflection from './Instances/HardOnReflection'
 import MissionaryReflection from './Instances/MissionaryReflection'
 import AfterglowReflection from './Instances/AfterglowReflection'
 import AsleepReaching from './Instances/AsleepReaching';
+import ReachingReflection from './Instances/ReachingReflection';
 import BrushedOff from './Instances/BrushedOff'
 import FreezingNaked from './Instances/FreezingNaked'
 import ReturningCord from './Instances/ReturningCord'
@@ -30,12 +31,17 @@ import Defending from './Instances/Defending'
 import NotHungry from './Instances/NotHungry'
 import AsleepCouch from './Instances/AsleepCouch'
 import PettingSeated from './Instances/PettingSeated'
+import Laughing from './Instances/Laughing'
+import SelflessConcern from './Instances/SelflessConcern'
+import Caressed from './Instances/Caressed'
+import CaressedReflection from './Instances/CaressedReflection'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
 
 import {
     ASLEEP_REACHING,
+    REACHING_REFLECTION,
     BRUSHED_OFF,
     FREEZING_NAKED,
     RETURNING_CORD,
@@ -45,7 +51,11 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH,
-    PETTING_SEATED
+    PETTING_SEATED,
+    LAUGHING,
+    SELFLESS_CONCERN,
+    CARESSED,
+    CARESSED_REFLECTION,
 } from 'scene/actors/liz'
 
 import {
@@ -87,6 +97,7 @@ const INSTANCES_MAP = {
     [MISSIONARY_REFLECTION]: MissionaryReflection,
     [AFTERGLOW_REFLECTION]: AfterglowReflection,
     [ASLEEP_REACHING]: AsleepReaching,
+    [REACHING_REFLECTION]: ReachingReflection,
     [BRUSHED_OFF]: BrushedOff,
     [FREEZING_NAKED]: FreezingNaked,
     [RETURNING_CORD]: ReturningCord,
@@ -98,6 +109,10 @@ const INSTANCES_MAP = {
     [NOT_HUNGRY]: NotHungry,
     [ASLEEP_COUCH]: AsleepCouch,
     [PETTING_SEATED]: PettingSeated,
+    [LAUGHING]: Laughing,
+    [SELFLESS_CONCERN]: SelflessConcern,
+    [CARESSED]: Caressed,
+    [CARESSED_REFLECTION]: CaressedReflection,
     [EPILOGUE]: Epilogue
 }
 

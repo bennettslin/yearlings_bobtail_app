@@ -1,5 +1,6 @@
 const
     ASLEEP_REACHING = 'asleepReaching',
+    REACHING_REFLECTION = 'reachingReflection',
     BRUSHED_OFF = 'brushedOff',
     FREEZING_NAKED = 'freezingNaked',
     RETURNING_CORD = 'returningCord',
@@ -9,10 +10,15 @@ const
     DEFENDING = 'defending',
     NOT_HUNGRY = 'notHungry',
     ASLEEP_COUCH = 'asleepCouch',
-    PETTING_SEATED = 'pettingSeated'
+    PETTING_SEATED = 'pettingSeated',
+    LAUGHING = 'laughing',
+    SELFLESS_CONCERN = 'selflessConcern',
+    CARESSED = 'beingCaressed',
+    CARESSED_REFLECTION = 'caressedReflection'
 
 export {
     ASLEEP_REACHING,
+    REACHING_REFLECTION,
     BRUSHED_OFF,
     FREEZING_NAKED,
     RETURNING_CORD,
@@ -22,5 +28,9 @@ export {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH,
-    PETTING_SEATED
+    PETTING_SEATED,
+    LAUGHING,
+    SELFLESS_CONCERN,
+    CARESSED,
+    CARESSED_REFLECTION,
 }

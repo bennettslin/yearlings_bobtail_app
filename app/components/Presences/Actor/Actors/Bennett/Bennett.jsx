@@ -44,6 +44,7 @@ import Performing from './Instances/Performing'
 import Flirting from './Instances/Flirting'
 import SidelongHesitance from './Instances/SidelongHesitance'
 import RemovingShoes from './Instances/RemovingShoes'
+import ShoesReflection from './Instances/ShoesReflection'
 import BrushingOff from './Instances/BrushingOff'
 import DroppingMeats from './Instances/DroppingMeats'
 import DrunkCelibate from './Instances/DrunkCelibate'
@@ -86,6 +87,7 @@ import {
     WAITING_ROOM_THOUGHTS,
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
+    SHOES_REFLECTION,
     BRUSHING_OFF,
     DROPPING_MEATS,
     DRUNK_CELIBATE,
@@ -180,6 +182,7 @@ const INSTANCES_MAP = {
     [FLIRTING]: Flirting,
     [SIDELONG_HESITANCE]: SidelongHesitance,
     [REMOVING_SHOES]: RemovingShoes,
+    [SHOES_REFLECTION]: ShoesReflection,
     [BRUSHING_OFF]: BrushingOff,
     [DROPPING_MEATS]: DroppingMeats,
     [DRUNK_CELIBATE]: DrunkCelibate,
