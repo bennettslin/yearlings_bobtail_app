@@ -23,6 +23,11 @@ import {
     TRISTAN
 } from 'scene/actorKeys'
 
+import {
+    THROWING,
+    NOODLING
+} from 'scene/actors/andrew'
+
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
  * song list order on the album.
@@ -182,7 +187,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, throwing rocks, angry',
-                    instance: null,
+                    instance: THROWING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -231,7 +236,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'playing guitar like an amateur',
-                    instance: null,
+                    instance: NOODLING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

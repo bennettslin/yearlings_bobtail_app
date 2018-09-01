@@ -18,6 +18,14 @@ import {
     STEPHANIE
 } from 'scene/actorKeys'
 
+import {
+    DATE_ENDING,
+    MUSEUM,
+    BACKSTAGE,
+    GO_KARTS,
+    DATE_ENDED
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -28,7 +36,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, awkward, wanting to make a move',
-                    instance: null,
+                    instance: DATE_ENDING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -41,7 +49,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, friendly, guarded',
-                        instance: null,
+                        instance: DATE_ENDING,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -67,7 +75,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, leaning towards Sita',
-                    instance: null,
+                    instance: MUSEUM,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -80,7 +88,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, hands behind back, guarded',
-                        instance: null,
+                        instance: MUSEUM,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -106,7 +114,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, jealous',
-                    instance: null,
+                    instance: BACKSTAGE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -119,7 +127,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, warm, guard down',
-                        instance: null,
+                        instance: BACKSTAGE,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -171,7 +179,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, in go-kart, leaning forward',
-                    instance: null,
+                    instance: GO_KARTS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -184,7 +192,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, in go-kart, relaxed',
-                        instance: null,
+                        instance: GO_KARTS,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -210,7 +218,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking away dejected, slumped over',
-                    instance: null,
+                    instance: DATE_ENDED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -223,7 +231,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'front, closing gate, looking concerned',
-                        instance: null,
+                        instance: DATE_ENDED,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

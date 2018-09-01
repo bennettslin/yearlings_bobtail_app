@@ -22,6 +22,14 @@ import {
     SMOKER
 } from 'scene/actors/amy'
 
+import {
+    BREAKUP_DEJECTED,
+    SOLICITING_OPINION,
+    CATHOLIC_PENSIVE,
+    CATHOLIC_IDEA,
+    PIOUS,
+} from 'scene/actors/bennett'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -32,7 +40,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'standing forward, disappointed, defeated',
-                    instance: null,
+                    instance: BREAKUP_DEJECTED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -69,7 +77,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting slouched, showing lyrics to Catherine',
-                    instance: null,
+                    instance: SOLICITING_OPINION,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -106,7 +114,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'standing, back forward, hands in pocket',
-                    instance: null,
+                    instance: CATHOLIC_PENSIVE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -131,7 +139,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, noticing Catholic',
-                    instance: null,
+                    instance: CATHOLIC_IDEA,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -184,7 +192,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, looking pious',
-                    instance: null,
+                    instance: PIOUS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

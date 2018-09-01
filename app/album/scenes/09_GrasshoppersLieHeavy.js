@@ -22,6 +22,26 @@ import {
     LIZ_REFLECTION
 } from 'scene/actorKeys'
 
+import {
+    DISHROOM_READING,
+    MOP_SOPPED,
+    WAITING_ROOM_THOUGHTS
+} from 'scene/actors/bennett'
+
+import {
+    DISHROOM_LANCET,
+    GATE_CODE,
+    GINGERBREAD_PRISON,
+    RUMPLED_LINENS,
+    CHEEK_UNVEILED,
+    HARD_ON,
+    MISSIONARY,
+    AFTERGLOW,
+    HARD_ON_REFLECTION,
+    MISSIONARY_REFLECTION,
+    AFTERGLOW_REFLECTION
+} from 'scene/actors/songs'
+
 /**
  * All of these scenes repeat twice.
  */
@@ -35,7 +55,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, reading book, pulling tray from belt.',
-                    instance: null,
+                    instance: DISHROOM_READING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -60,7 +80,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, handing lancet pen, exuberant',
-                    instance: null,
+                    instance: DISHROOM_LANCET,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -73,7 +93,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, taken aback, politely friendly',
-                        instance: null,
+                        instance: DISHROOM_LANCET,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -117,7 +137,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, mopey',
-                    instance: null,
+                    instance: MOP_SOPPED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -156,7 +176,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, punching code, surprised',
-                    instance: null,
+                    instance: GATE_CODE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -169,7 +189,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, hesitantly greeting',
-                        instance: null,
+                        instance: GATE_CODE,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -195,7 +215,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, opening gate, silent, attentive',
-                    instance: null,
+                    instance: GINGERBREAD_PRISON,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -208,7 +228,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'front, chatting, more comfortable',
-                        instance: null,
+                        instance: GINGERBREAD_PRISON,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -234,7 +254,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, turning on light, smiling',
-                    instance: null,
+                    instance: RUMPLED_LINENS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -247,7 +267,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, surprised, embarrassed smile',
-                        instance: null,
+                        instance: RUMPLED_LINENS,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -273,7 +293,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eyes closed, falling asleep',
-                    instance: null,
+                    instance: WAITING_ROOM_THOUGHTS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -298,7 +318,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, abruptly woken',
-                    instance: null,
+                    instance: CHEEK_UNVEILED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -311,7 +331,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, reaching for purse, cheeky',
-                        instance: null,
+                        instance: CHEEK_UNVEILED,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -337,7 +357,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, standing beside bed, unsure',
-                    instance: null,
+                    instance: HARD_ON,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -350,7 +370,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: HARD_ON_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -364,7 +384,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'front, sitting on bed, irreverently reassuring',
-                        instance: null,
+                        instance: HARD_ON,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -378,7 +398,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: HARD_ON_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -404,7 +424,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, about to stick it in',
-                    instance: null,
+                    instance: MISSIONARY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -417,7 +437,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: MISSIONARY_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -431,7 +451,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, spread open',
-                        instance: null,
+                        instance: MISSIONARY,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -445,7 +465,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: MISSIONARY_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -471,7 +491,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying down, warm, content, slightly worried',
-                    instance: null,
+                    instance: AFTERGLOW,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -484,7 +504,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: AFTERGLOW_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -498,7 +518,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'lying down, warm, content, slightly worried',
-                        instance: null,
+                        instance: AFTERGLOW,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -512,7 +532,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: AFTERGLOW_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

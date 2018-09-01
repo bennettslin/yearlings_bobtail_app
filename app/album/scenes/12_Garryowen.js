@@ -19,6 +19,22 @@ import {
     NESTOR
 } from 'scene/actorKeys'
 
+import {
+    CHUCKLING,
+    SMIRKING
+} from 'scene/actors/ana'
+
+import {
+    BRUSHING_OFF,
+    DROPPING_MEATS,
+    DRUNK_CELIBATE
+} from 'scene/actors/bennett'
+
+import {
+    GREETING,
+    LEAVING_CRUMBLED
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -29,7 +45,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, putting on jacket, cold, distant',
-                    instance: null,
+                    instance: BRUSHING_OFF,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -68,7 +84,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, tripping as meats fall out of pockets',
-                    instance: null,
+                    instance: DROPPING_MEATS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -92,7 +108,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, holding paper bottle, laughing',
-                    instance: null,
+                    instance: CHUCKLING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -129,7 +145,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'on couch, ignoring Sita, drunk',
-                    instance: null,
+                    instance: DRUNK_CELIBATE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -168,7 +184,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, sweaty, giddy',
-                    instance: null,
+                    instance: GREETING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -180,7 +196,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, greeting Bennett',
-                    instance: null,
+                    instance: GREETING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -204,7 +220,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, removing bass, rolling eyes',
-                    instance: null,
+                    instance: SMIRKING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -229,7 +245,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'standing, cold, looking away',
-                    instance: null,
+                    instance: LEAVING_CRUMBLED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -242,7 +258,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'crumbled on floor, begging, sobbing',
-                        instance: null,
+                        instance: LEAVING_CRUMBLED,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

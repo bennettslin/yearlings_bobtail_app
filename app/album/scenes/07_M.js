@@ -22,6 +22,24 @@ import {
     STEPHANIE
 } from 'scene/actorKeys'
 
+import {
+    SQUATTING
+} from 'scene/actors/ana'
+
+import {
+    PONDERING,
+    COUCH_READING,
+    RUBIKS_CUBE,
+    DISTRACTED,
+    HOPELESSLY_CRUSHED,
+    WONDERING_BABY,
+    MERRILY_DERANGED
+} from 'scene/actors/bennett'
+
+import {
+    EATING
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -32,7 +50,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'looking at Leonard Cohen poster',
-                    instance: null,
+                    instance: PONDERING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -57,7 +75,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting on couch, figuring out Rubiks Cube',
-                    instance: null,
+                    instance: RUBIKS_CUBE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -82,7 +100,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting on couch, reading a book',
-                    instance: null,
+                    instance: COUCH_READING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -121,7 +139,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'chatting with hipster, paying attention to Mara',
-                    instance: null,
+                    instance: DISTRACTED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -157,7 +175,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'squatting, back turned, putting bass back in case',
-                    instance: null,
+                    instance: SQUATTING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -196,7 +214,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, silently eating burger, uncomfortable',
-                    instance: null,
+                    instance: EATING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -208,7 +226,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eating burger, holding Mara\'s hand',
-                    instance: null,
+                    instance: EATING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -220,7 +238,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, chatting',
-                    instance: null,
+                    instance: EATING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -232,7 +250,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eating fries, laughing',
-                    instance: null,
+                    instance: EATING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -257,7 +275,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, sulking with head down',
-                    instance: null,
+                    instance: HOPELESSLY_CRUSHED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -296,7 +314,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking back at baby',
-                    instance: null,
+                    instance: WONDERING_BABY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -349,7 +367,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, inspired by sudden thought',
-                    instance: null,
+                    instance: MERRILY_DERANGED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

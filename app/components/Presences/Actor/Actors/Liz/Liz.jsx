@@ -42,8 +42,6 @@ import Cliff from './Instances/Cliff'
 import FinalDream from './Instances/FinalDream'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION,
@@ -144,8 +142,7 @@ const Liz = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

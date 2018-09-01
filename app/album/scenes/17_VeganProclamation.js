@@ -26,6 +26,14 @@ import {
 } from 'scene/actorKeys'
 
 import {
+    CAMPUS_ASHAMED,
+    SHOW_ANNOYED,
+    ALLEY,
+    BROKEN_HEARTED,
+    DEMONSTRATION
+} from 'scene/actors/bennett'
+
+import {
     PROTESTER
 } from 'scene/actors/songs'
 
@@ -39,7 +47,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, slumped over, despondent',
-                    instance: null,
+                    instance: CAMPUS_ASHAMED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -90,7 +98,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, looking to side, annoyed',
-                    instance: null,
+                    instance: SHOW_ANNOYED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -151,7 +159,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'walking through alley',
-                    instance: null,
+                    instance: ALLEY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -176,7 +184,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, on phone, hunched over, sobbing',
-                    instance: null,
+                    instance: BROKEN_HEARTED,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -255,7 +263,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, desperately hopeful',
-                    instance: null,
+                    instance: DEMONSTRATION,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

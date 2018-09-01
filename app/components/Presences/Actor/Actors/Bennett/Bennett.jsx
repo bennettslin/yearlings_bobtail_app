@@ -77,8 +77,6 @@ import Cliff from './Instances/Cliff'
 import FinalDream from './Instances/FinalDream'
 import Epilogue from './Instances/Epilogue'
 
-import { DEFAULT_COMPONENT } from 'constants/dom'
-
 import {
     BREAKUP_DEJECTED,
     SOLICITING_OPINION,
@@ -146,11 +144,11 @@ import {
     FLIRTING,
     GREETING,
     LEAVING_CRUMBLED,
-    COWGIRL,
-    BLOWJOB,
     PAST,
     PRESENT,
     FUTURE,
+    COWGIRL,
+    BLOWJOB,
     EL_TORITO,
     PAMPAS,
     GETTING_DARK,
@@ -249,8 +247,7 @@ const Bennett = ({
 
 ...other }) => {
 
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey] || DEFAULT_COMPONENT
+    const InstanceComponent = INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}

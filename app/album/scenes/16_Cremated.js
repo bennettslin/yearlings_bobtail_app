@@ -15,6 +15,17 @@ import {
     MIRIAM
 } from 'scene/actorKeys'
 
+import {
+    REMOVING_PANTS,
+    INFIRM,
+    DISPOSING_CONDOM
+} from 'scene/actors/bennett'
+
+import {
+    COWGIRL,
+    BLOWJOB
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -25,7 +36,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting in car, taking off pants',
-                    instance: null,
+                    instance: REMOVING_PANTS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -62,7 +73,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, impotent, apologetic',
-                    instance: null,
+                    instance: COWGIRL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -74,7 +85,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'back angle, eyes closed, trying to get off',
-                    instance: null,
+                    instance: COWGIRL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -99,7 +110,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, trying to get off',
-                    instance: null,
+                    instance: BLOWJOB,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -111,7 +122,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'back angle, giving blowjob',
-                    instance: null,
+                    instance: BLOWJOB,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -136,7 +147,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, dying, infirm',
-                    instance: null,
+                    instance: INFIRM,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -186,7 +197,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'pensive, laying condom on ground',
-                    instance: null,
+                    instance: DISPOSING_CONDOM,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

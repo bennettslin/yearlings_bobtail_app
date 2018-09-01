@@ -27,6 +27,14 @@ import {
 } from 'scene/actors/amy'
 
 import {
+    CORD_SIDE,
+    AWKWARD_CONSOLATION,
+    CORD_REAR,
+    HORSING,
+    DRYING_TEARS
+} from 'scene/actors/bennett'
+
+import {
     YOUNG_CHILD
 } from 'scene/actors/songs'
 
@@ -40,7 +48,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, cradling bracelet, blank',
-                    instance: null,
+                    instance: CORD_SIDE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -65,7 +73,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, disingenuously consoling',
-                    instance: null,
+                    instance: AWKWARD_CONSOLATION,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -104,7 +112,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, cradling bracelet, blank',
-                    instance: null,
+                    instance: CORD_REAR,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -143,7 +151,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, playful, waving',
-                    instance: null,
+                    instance: HORSING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -196,7 +204,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, consoling',
-                    instance: null,
+                    instance: DRYING_TEARS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

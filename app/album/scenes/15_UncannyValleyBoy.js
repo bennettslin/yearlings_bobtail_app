@@ -23,6 +23,17 @@ import {
     STEPHANIE
 } from 'scene/actorKeys'
 
+import {
+    WAKENED_FEARFUL,
+    SEEKING_PROTECTION
+} from 'scene/actors/bennett'
+
+import {
+    PAST,
+    PRESENT,
+    FUTURE
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -33,7 +44,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying sitting up, arm around Miriam, scared, guilty',
-                    instance: null,
+                    instance: WAKENED_FEARFUL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -121,7 +132,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, wincing',
-                    instance: null,
+                    instance: PAST,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -133,7 +144,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, gesturing to scene below',
-                    instance: null,
+                    instance: PAST,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -145,7 +156,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, hurt, lashing out in anger',
-                    instance: null,
+                    instance: PAST,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -157,7 +168,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, consoling, cautious',
-                    instance: null,
+                    instance: PAST,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -182,7 +193,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, dismissive, not feeling bad',
-                    instance: null,
+                    instance: PRESENT,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -194,7 +205,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, gesturing with empathy',
-                    instance: null,
+                    instance: PRESENT,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -206,7 +217,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, gesturing with blame',
-                    instance: null,
+                    instance: PRESENT,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -218,7 +229,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, jumping on Bennett, grabbing his banjo',
-                    instance: null,
+                    instance: PRESENT,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -231,7 +242,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'making out with Miriam',
-                        instance: null,
+                        instance: PRESENT,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -257,7 +268,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'concerned',
-                    instance: null,
+                    instance: FUTURE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -270,7 +281,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back, squatting, recording, dejected',
-                        instance: null,
+                        instance: FUTURE,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -283,7 +294,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, wanting to console Bennett',
-                    instance: null,
+                    instance: FUTURE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -295,7 +306,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, arms crossed, righteous',
-                    instance: null,
+                    instance: FUTURE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -308,7 +319,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, amused by conversation',
-                        instance: null,
+                        instance: FUTURE,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -321,7 +332,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, cheerful, making a point',
-                    instance: null,
+                    instance: FUTURE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -346,7 +357,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, seeking protection',
-                    instance: null,
+                    instance: SEEKING_PROTECTION,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

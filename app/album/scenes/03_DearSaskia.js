@@ -16,6 +16,8 @@ import {
     ANDREW
 } from 'scene/actorKeys'
 
+import { FEIGNING_FEAR } from 'scene/actors/andrew'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -121,7 +123,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'laughing, feigning fear of Sasha',
-                    instance: null,
+                    instance: FEIGNING_FEAR,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,

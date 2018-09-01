@@ -24,6 +24,15 @@ import {
     DOCTOR
 } from 'scene/actors/amy'
 
+import {
+    EL_TORITO,
+    PAMPAS,
+    GOPI,
+    GETTING_DARK,
+    CLIFF,
+    FINAL_DREAM
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -34,7 +43,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, pleasantly confused',
-                    instance: null,
+                    instance: EL_TORITO,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -47,7 +56,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, opening a door, pleasantly surprised',
-                        instance: null,
+                        instance: EL_TORITO,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -73,7 +82,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting cross-legged, playing recorder, content',
-                    instance: null,
+                    instance: PAMPAS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -86,7 +95,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'resting on Bennett, content',
-                        instance: null,
+                        instance: PAMPAS,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -100,7 +109,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'dancing',
-                        instance: null,
+                        instance: GOPI,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -114,7 +123,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'dancing',
-                        instance: null,
+                        instance: GOPI,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -128,7 +137,7 @@ module.exports = [
                         todo: true,
                         workedHours: 2.5,
                         description: 'dancing',
-                        instance: null,
+                        instance: GOPI,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -154,7 +163,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back angle, confusedly being rushed',
-                    instance: null,
+                    instance: GETTING_DARK,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -167,7 +176,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'front, urging',
-                        instance: null,
+                        instance: GETTING_DARK,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -193,7 +202,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, reacting to threat',
-                    instance: null,
+                    instance: CLIFF,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -206,7 +215,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'front angle, gesturing to grave',
-                        instance: null,
+                        instance: CLIFF,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,
@@ -232,7 +241,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'calm, accepting of impending doom',
-                    instance: null,
+                    instance: FINAL_DREAM,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -245,7 +254,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'comforting',
-                        instance: null,
+                        instance: FINAL_DREAM,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

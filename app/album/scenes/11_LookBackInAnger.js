@@ -25,9 +25,17 @@ import {
 } from 'scene/actorKeys'
 
 import {
+    SIDELONG_HESITANCE,
+    REMOVING_SHOES,
+    SHOES_REFLECTION
+} from 'scene/actors/bennett'
+
+import {
+    PERFORMING,
     SQUEEZING,
     FLIRTING,
-    MINGLING
+    MINGLING,
+    WAITING,
 } from 'scene/actors/songs'
 
 module.exports = [
@@ -40,7 +48,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, playing guitar, singing',
-                    instance: null,
+                    instance: PERFORMING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -52,7 +60,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, playing bass, looking cool',
-                    instance: null,
+                    instance: PERFORMING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -188,7 +196,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, carrying gear, looking back, hesitant',
-                    instance: null,
+                    instance: SIDELONG_HESITANCE,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -200,7 +208,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, leaning against wall, waiting for Jacob',
-                    instance: null,
+                    instance: WAITING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -212,7 +220,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking at watch',
-                    instance: null,
+                    instance: WAITING,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -273,7 +281,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, sitting on edge of bed, discontented',
-                    instance: null,
+                    instance: REMOVING_SHOES,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -286,7 +294,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: null,
+                        instance: SHOES_REFLECTION,
                         yIndex: -1,
                         arrangement: {
                             xFloat: 0,

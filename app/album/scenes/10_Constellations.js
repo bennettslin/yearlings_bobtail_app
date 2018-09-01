@@ -23,6 +23,15 @@ import {
     TOMER
 } from 'scene/actorKeys'
 
+import {
+    ABBEY_ROAD,
+    WALGREENS,
+    STEAM_TUNNEL,
+    CEMETERY,
+    STATION_WAGON,
+    ATTIC
+} from 'scene/actors/songs'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -33,7 +42,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking',
-                    instance: null,
+                    instance: ABBEY_ROAD,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -45,7 +54,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking',
-                    instance: null,
+                    instance: ABBEY_ROAD,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -57,7 +66,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking',
-                    instance: null,
+                    instance: ABBEY_ROAD,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -69,7 +78,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking',
-                    instance: null,
+                    instance: ABBEY_ROAD,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -94,7 +103,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, holding body and gesturing its smallness',
-                    instance: null,
+                    instance: WALGREENS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -106,7 +115,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, reading bottle intently',
-                    instance: null,
+                    instance: WALGREENS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -118,7 +127,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, holding large bottle',
-                    instance: null,
+                    instance: WALGREENS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -130,7 +139,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, feigning superiority',
-                    instance: null,
+                    instance: WALGREENS,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -155,7 +164,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, blathering',
-                    instance: null,
+                    instance: STEAM_TUNNEL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -167,7 +176,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, play fighting',
-                    instance: null,
+                    instance: STEAM_TUNNEL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -179,7 +188,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, bored by conversation',
-                    instance: null,
+                    instance: STEAM_TUNNEL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -191,7 +200,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, play fighting',
-                    instance: null,
+                    instance: STEAM_TUNNEL,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -216,7 +225,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, looking upwards, inspired',
-                    instance: null,
+                    instance: CEMETERY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -228,7 +237,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, shivering, feeling comforted',
-                    instance: null,
+                    instance: CEMETERY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -240,7 +249,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, arm around Ana',
-                    instance: null,
+                    instance: CEMETERY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -252,7 +261,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, squatting, pouring water on grave',
-                    instance: null,
+                    instance: CEMETERY,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -277,7 +286,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, sleeping in car',
-                    instance: null,
+                    instance: STATION_WAGON,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -289,7 +298,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, sleeping in car',
-                    instance: null,
+                    instance: STATION_WAGON,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -301,7 +310,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'driving car, alert, wigging out',
-                    instance: null,
+                    instance: STATION_WAGON,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -313,7 +322,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back angle, sleeping in car',
-                    instance: null,
+                    instance: STATION_WAGON,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -338,7 +347,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying on couch, watching TV, alert',
-                    instance: null,
+                    instance: ATTIC,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
@@ -350,7 +359,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'downstairs, in agony',
-                    instance: null,
+                    instance: ATTIC,
                     yIndex: -1,
                     arrangement: {
                         xFloat: 0,
