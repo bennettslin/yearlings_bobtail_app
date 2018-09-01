@@ -54,13 +54,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, cradling bracelet, blank',
-                    instance: CORD_SIDE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CORD_SIDE
                 }
             }
         },
@@ -79,26 +73,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, disingenuously consoling',
-                    instance: AWKWARD_CONSOLATION,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: AWKWARD_CONSOLATION
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, returning bracelet, fighting tears',
-                        instance: RETURNING_CORD,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: RETURNING_CORD
                     }
                 }
             }
@@ -118,26 +100,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, cradling bracelet, blank',
-                    instance: CORD_REAR,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CORD_REAR
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, shaking fist at sky',
-                        instance: BENNETT_DEFIANT,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: BENNETT_DEFIANT
                     }
                 }
             }
@@ -157,26 +127,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, playful, waving',
-                    instance: HORSING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: HORSING
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, playful',
-                        instance: BENNETT_HORSING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: BENNETT_HORSING
                     }
                 },
                 [AMY]: {
@@ -184,13 +142,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'back, facing back, waving',
-                        instance: OFFICER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: OFFICER
                     }
                 }
             }
@@ -210,26 +162,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, consoling',
-                    instance: DRYING_TEARS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DRYING_TEARS
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, head in hands, holding bracelet',
-                        instance: BENNETT_SORROWFUL,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: BENNETT_SORROWFUL
                     }
                 },
                 [ESTHER]: {
@@ -237,13 +177,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking',
-                        instance: YOUNG_CHILD,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: YOUNG_CHILD
                     }
                 },
                 [ANITA]: {
@@ -251,13 +185,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking',
-                        instance: YOUNG_CHILD,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: YOUNG_CHILD
                     }
                 },
                 [YOUNG_BENNETT]: {
@@ -265,13 +193,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, turned, looking at Bennetts',
-                        instance: YOUNG_CHILD,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: YOUNG_CHILD
                     }
                 },
                 [WILLY]: {
@@ -279,13 +201,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'front, holding up stop sign',
-                        instance: CROSSING_GUARD,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: CROSSING_GUARD
                     }
                 }
             }

@@ -1,5 +1,5 @@
 import {
-    NOHO_HOUSES_BACKDROP_KEY,
+    NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
     NOHO_BATHROOM_KEY,
     NOHO_BATHROOM_OPEN_KEY
@@ -128,7 +128,7 @@ module.exports = [
         presences: {
             ...PRESENCES_NOHO_HOUSES
         },
-        cubes: NOHO_HOUSES_BACKDROP_KEY,
+        cubes: NOHO_HOUSES_KEY,
         sky: {
             time: TIME_DAWN,
             season: SEASON_SPRING
@@ -178,7 +178,7 @@ module.exports = [
             },
             ...PRESENCES_NOHO_HOUSES
         },
-        cubes: NOHO_HOUSES_BACKDROP_KEY,
+        cubes: NOHO_HOUSES_KEY,
         sky: {
             time: TIME_MORNING,
             season: SEASON_SPRING

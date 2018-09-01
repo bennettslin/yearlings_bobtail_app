@@ -37,13 +37,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, petting cat, sad',
-                        instance: PETTING_SEATED,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: PETTING_SEATED
                     }
                 }
             }
@@ -64,13 +58,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, petting cat, sad',
-                        instance: PETTING_STANDING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: PETTING_STANDING
                     }
                 }
             }
@@ -91,13 +79,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, pensive',
-                        instance: SIFTING_TCHOTCHKES,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: SIFTING_TCHOTCHKES
                     }
                 }
             }
@@ -118,26 +100,14 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, glumly welcoming',
-                        instance: OPENING_DOOR,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: OPENING_DOOR
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, cheery in a low-key way',
-                    instance: ARRIVED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ARRIVED
                 }
             }
         },
@@ -157,26 +127,14 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, defensive',
-                        instance: DEFENDING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: DEFENDING
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, seated, eating, judgmental',
-                    instance: JUDGMENTAL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: JUDGMENTAL
                 }
             }
         },
@@ -196,26 +154,14 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, exhausted',
-                        instance: NOT_HUNGRY,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: NOT_HUNGRY
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back angle, concerned',
-                    instance: CONCERNED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CONCERNED
                 }
             }
         },
@@ -235,13 +181,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, seated, asleep',
-                        instance: ASLEEP_COUCH,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: ASLEEP_COUCH
                     }
                 }
             }

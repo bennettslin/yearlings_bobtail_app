@@ -77,25 +77,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying on stomach, drawing, guilty',
-                    instance: GUILT_RIDDEN,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GUILT_RIDDEN
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'w-sitting, blissful',
-                    instance: BLISSFUL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: BLISSFUL
                 }
             }
         },
@@ -114,13 +102,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, sitting up in bed, feigning sick',
-                    instance: FEIGNING_SICK,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FEIGNING_SICK
                 }
             }
         },
@@ -139,13 +121,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'in bed, asleep, turned away',
-                    instance: ASLEEP,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ASLEEP
                 }
             }
         },
@@ -164,13 +140,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, sitting, shaken, scared',
-                    instance: SHAKEN,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SHAKEN
                 }
             }
         },
@@ -189,37 +159,19 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, stoic',
-                    instance: STOIC,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STOIC
                 },
                 [BRAD]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, gesturing at friend to leave',
-                    instance: GESTURING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GESTURING
                 },
                 [ANDREW]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, throwing rocks, angry',
-                    instance: THROWING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: THROWING
                 }
             }
         },
@@ -238,50 +190,26 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, wistful',
-                    instance: WISTFUL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WISTFUL
                 },
                 [BRAD]: {
                     todo: true,
                     workedHours: 3,
                     description: 'eating chips',
-                    instance: SNACKING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SNACKING
                 },
                 [ANDREW]: {
                     todo: true,
                     workedHours: 3,
                     description: 'playing guitar like an amateur',
-                    instance: NOODLING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: NOODLING
                 },
                 [SASHA]: {
                     popularGirl: {
                         todo: true,
                         workedHours: 3,
                         description: 'back',
-                        instance: POPULAR_GIRL,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: POPULAR_GIRL
                     }
                 }
             }
@@ -301,50 +229,26 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, sitting, sheepish',
-                    instance: SHEEPISH,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, sitting, staring',
-                    instance: STARING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STARING
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, angry, accusatory',
-                    instance: ARGUING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ARGUING
                 },
                 [TRISTAN]: {
                     principal: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, confused, defensive, apologetic',
-                        instance: PRINCIPAL,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: PRINCIPAL
                     }
                 }
             }

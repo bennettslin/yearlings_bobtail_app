@@ -48,25 +48,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'standing forward, disappointed, defeated',
-                    instance: BREAKUP_DEJECTED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'walking away, in a bad mood',
-                    instance: WEEPING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WEEPING
                 }
             }
         },
@@ -85,25 +73,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting slouched, showing lyrics to Catherine',
-                    instance: SOLICITING_OPINION,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting upright, droll smile',
-                    instance: QUIPPING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: QUIPPING
                 }
             }
         },
@@ -122,13 +98,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'standing, back forward, hands in pocket',
-                    instance: CATHOLIC_PENSIVE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CATHOLIC_PENSIVE
                 }
             }
         },
@@ -147,26 +117,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, noticing Catholic',
-                    instance: CATHOLIC_IDEA,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CATHOLIC_IDEA
                 },
                 [WADE]: {
                     catholic: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, walking, looking pious',
-                        instance: CATHOLIC_GUY,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: CATHOLIC_GUY
                     }
                 },
                 [AMY]: {
@@ -174,13 +132,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'walking up stairs, back forward, exhaling smoke',
-                        instance: SMOKER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: SMOKER
                     }
                 }
             }
@@ -200,25 +152,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, looking pious',
-                    instance: PIOUS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PIOUS
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'walking forward, confused and curious at Bennett',
-                    instance: PUZZLED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PUZZLED
                 }
             }
         },

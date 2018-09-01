@@ -42,13 +42,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, lying on floor, propped up',
-                    instance: MAT,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MAT
                 }
             }
         },
@@ -67,13 +61,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking down stairs',
-                    instance: STAIRS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STAIRS
                 }
             }
         },
@@ -92,13 +80,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, peeking out from gate',
-                    instance: GATE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GATE
                 }
             }
         },
@@ -117,13 +99,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'getting off rickshaw bike',
-                    instance: RICKSHAW,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: RICKSHAW
                 }
             }
         },
@@ -142,13 +118,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side back, looking out to ocean',
-                    instance: SHORE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SHORE
                 }
             }
         },
@@ -167,13 +137,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'peering down from buoy',
-                    instance: BUOY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: BUOY
                 }
             }
         },
@@ -192,25 +156,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'hugging self',
-                    instance: SINKING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SINKING
                 },
                 [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'mermaid',
-                    instance: MERMAID,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MERMAID
                 }
             }
         },
@@ -229,13 +181,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, crouched in sand, looking back',
-                    instance: OCEAN_FLOOR,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: OCEAN_FLOOR
                 }
             }
         },

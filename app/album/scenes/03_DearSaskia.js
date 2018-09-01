@@ -63,38 +63,20 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side seated, pretending to read, panicked',
-                    instance: PANICKED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PANICKED
                 },
                 [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side seated, laughing, braids trailing',
-                    instance: CHARMED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CHARMED
                 },
                 [BRAD]: {
                     jewishBoy: {
                         todo: true,
                         workedHours: 3,
                         description: 'side seated, turned away, pointing to window',
-                        instance: JEWISH_BOY,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: JEWISH_BOY
                     }
                 }
             }
@@ -114,49 +96,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'tied up, greeting Sasha with nervous laughter',
-                    instance: TETHERED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: TETHERED
                 },
                 [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'indignant, yelling at bullies',
-                    instance: INDIGNANT,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: INDIGNANT
                 },
                 [ANDREW]: {
                     todo: true,
                     workedHours: 3,
                     description: 'laughing, feigning fear of Sasha',
-                    instance: FEIGNING_FEAR,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FEIGNING_FEAR
                 },
                 [BRAD]: {
                     todo: true,
                     workedHours: 3,
                     description: 'laughing, tying up Bennett',
-                    instance: TYING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: TYING
                 }
             }
         },

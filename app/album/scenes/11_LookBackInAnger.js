@@ -58,75 +58,39 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, playing guitar, singing',
-                    instance: PERFORMING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PERFORMING
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, playing bass, looking cool',
-                    instance: PERFORMING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PERFORMING
                 },
                 [TOMER]: {
                     shane: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, holding beer, turning to make room',
-                        instance: SHANE_SPILLING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: SHANE_SPILLING
                     }
                 },
                 [WADE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, drinking beer',
-                    instance: WATCHING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WATCHING
                 },
                 [AMY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, squeezing through, apologetic',
-                    instance: SQUEEZING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SQUEEZING
                 },
                 [STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, squeezing through, awkward',
-                    instance: SQUEEZING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SQUEEZING
                 }
             }
         },
@@ -145,49 +109,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, charmed',
-                    instance: FLIRTING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FLIRTING
                 },
                 [AMY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, same Mara pose',
-                    instance: FLIRTING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FLIRTING
                 },
                 [JACOB]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, carrying drums, smiling at Mara',
-                    instance: CARRYING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CARRYING
                 },
                 [MARA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, carrying cymbal, talking',
-                    instance: CARRYING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CARRYING
                 }
             }
         },
@@ -206,73 +146,37 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, carrying gear, looking back, hesitant',
-                    instance: SIDELONG_HESITANCE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, leaning against wall, waiting for Jacob',
-                    instance: WAITING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WAITING
                 },
                 [MARA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking at watch',
-                    instance: WAITING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WAITING
                 },
                 [AMY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking back, uncertain',
-                    instance: MINGLING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MINGLING
                 },
                 [STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, talking to Wade',
-                    instance: MINGLING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MINGLING
                 },
                 [WADE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, talking to Stephanie',
-                    instance: MINGLING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MINGLING
                 }
             }
         },
@@ -291,26 +195,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, sitting on edge of bed, discontented',
-                    instance: REMOVING_SHOES,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: REMOVING_SHOES
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: SHOES_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: SHOES_REFLECTION
                     }
                 },
                 [LIZ]: {
@@ -318,13 +210,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'lying, reaching forward to touch Bennett',
-                        instance: ASLEEP_REACHING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: ASLEEP_REACHING
                     }
                 },
                 [LIZ_REFLECTION]: {
@@ -332,13 +218,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: REACHING_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: REACHING_REFLECTION
                     }
                 }
             }

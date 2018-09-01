@@ -2,7 +2,7 @@ import {
     PRETEEN_BENNETT_ROOM_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
-    NOHO_HOUSES_BACKDROP_KEY,
+    NOHO_HOUSES_KEY,
     CHANGELING_CAVE_KEY
 } from 'scene/cubesKeys'
 
@@ -73,13 +73,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, holding up a bottle, squinting',
-                    instance: COLLECTING,
-                    yIndex: 3,
-                    arrangement: {
-                        xFloat: 5,
-                        xWidth: 1,
-                        zHeight: 5.25
-                    }
+                    instance: COLLECTING
                 }
             }
         },
@@ -98,49 +92,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, ducking behind post, chuckling',
-                    instance: DUCKING,
-                    yIndex: 4,
-                    arrangement: {
-                        xFloat: 1,
-                        xWidth: 1,
-                        zHeight: 5.25
-                    }
+                    instance: DUCKING
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'squatting, righting chair, exasperated, concerned',
-                    instance: STOOPING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: STOOPING
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'off balance, having a tantrum',
-                    instance: TANTRUM,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'stepping off porch, cautious, trying to calm Christopher',
-                    instance: CAUTIOUS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: CAUTIOUS
                 }
             }
         },
@@ -159,37 +129,19 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, running, angry',
-                    instance: ROARING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: ROARING
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying on side, in pain, clenching stomach',
-                    instance: SOBBING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, aggressive stance, angry',
-                    instance: ENRAGED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: ENRAGED
                 }
             }
         },
@@ -208,26 +160,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, defending himself, fearful',
-                    instance: FIGHTING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 5.25
-                    }
+                    instance: FIGHTING
                 },
                 [HOWIE]: {
                     gangbanger: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, pointing at shoe, pushing Willy',
-                        instance: GANGBANGER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 1,
-                            zHeight: 0
-                        }
+                        instance: GANGBANGER
                     }
                 },
                 [TOMER]: {
@@ -235,18 +175,12 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'pulling bottle from cart, about to strike, threatening',
-                        instance: GANGBANGER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 1,
-                            zHeight: 0
-                        }
+                        instance: GANGBANGER
                     }
                 }
             }
         },
-        cubes: NOHO_HOUSES_BACKDROP_KEY,
+        cubes: NOHO_HOUSES_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -261,25 +195,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'getting up to close curtain, trying to be reassuring',
-                    instance: COMFORTING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying in bed, worried, scared',
-                    instance: FEARFUL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: FEARFUL
                 }
             }
         },
@@ -298,37 +220,19 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, merrily greeting trolls',
-                    instance: GREETING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 5.25
-                    }
+                    instance: GREETING
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking up at Bennett, reassuring',
-                    instance: REASSURING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: REASSURING
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, wide-eyed, needing reassurance',
-                    instance: ENCHANTED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 1,
-                        zHeight: 0
-                    }
+                    instance: ENCHANTED
                 }
             }
         },

@@ -42,25 +42,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting in car, taking off pants',
-                    instance: REMOVING_PANTS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: REMOVING_PANTS
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'sitting in car, putting on perfume',
-                    instance: PERFUMING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PERFUMING
                 }
             }
         },
@@ -79,25 +67,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, impotent, apologetic',
-                    instance: COWGIRL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: COWGIRL
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'back angle, eyes closed, trying to get off',
-                    instance: COWGIRL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: COWGIRL
                 }
             }
         },
@@ -116,25 +92,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, trying to get off',
-                    instance: BLOWJOB,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: BLOWJOB
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'back angle, giving blowjob',
-                    instance: BLOWJOB,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: BLOWJOB
                 }
             }
         },
@@ -153,13 +117,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, dying, infirm',
-                    instance: INFIRM,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: INFIRM
                 }
             }
         },
@@ -178,13 +136,7 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     description: 'serving in tennis',
-                    instance: TENNIS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: TENNIS
                 }
             }
         },
@@ -203,25 +155,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'pensive, laying condom on ground',
-                    instance: DISPOSING_CONDOM,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DISPOSING_CONDOM
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, looking back, reversing car',
-                    instance: REVERSING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: REVERSING
                 }
             }
         },

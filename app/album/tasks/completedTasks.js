@@ -3807,5 +3807,10 @@ module.exports = [
         taskName: `Create all actor instance components.`,
         workedHours: 15,
         neededHours: 15
-    }
+    },
+    {
+        taskName: `Add flats, and distinguish from cutouts.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -65,13 +65,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'looking at Leonard Cohen poster',
-                    instance: PONDERING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PONDERING
                 }
             }
         },
@@ -90,13 +84,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting on couch, figuring out Rubiks Cube',
-                    instance: RUBIKS_CUBE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: RUBIKS_CUBE
                 }
             }
         },
@@ -115,26 +103,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting on couch, reading a book',
-                    instance: COUCH_READING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: COUCH_READING
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'sitting on floor, back turned, playing keyboard',
-                        instance: BENNETT_KEYBOARD,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: BENNETT_KEYBOARD
                     }
                 }
             }
@@ -154,62 +130,32 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'chatting with hipster, paying attention to Mara',
-                    instance: DISTRACTED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DISTRACTED
                 },
                 [JACOB]: {
                     todo: true,
                     workedHours: 3,
                     description: 'wiping sweat, chatting with Mara, laughing',
-                    instance: FLIRTING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FLIRTING
                 },
                 [MARA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'flirting with Jacob',
-                    instance: FLIRTING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FLIRTING
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'squatting, back turned, putting bass back in case',
-                    instance: SQUATTING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SQUATTING
                 },
                 [TOMER]: {
                     shane: {
                         todo: true,
                         workedHours: 3,
                         description: 'chatting with Bennett, gushing about music',
-                        instance: SHANE_BUYING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: SHANE_BUYING
                     }
                 }
             }
@@ -229,49 +175,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, silently eating burger, uncomfortable',
-                    instance: EATING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EATING
                 },
                 [JACOB]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eating burger, holding Mara\'s hand',
-                    instance: EATING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EATING
                 },
                 [MARA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, chatting',
-                    instance: EATING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EATING
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eating fries, laughing',
-                    instance: EATING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EATING
                 }
             }
         },
@@ -290,26 +212,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, sulking with head down',
-                    instance: HOPELESSLY_CRUSHED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: HOPELESSLY_CRUSHED
                 },
                 [MIRIAM]: {
                     maskedWoman: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, holding baby, looking back at Bennett',
-                        instance: INFANT_CURIOUS,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: INFANT_CURIOUS
                     }
                 }
             }
@@ -329,26 +239,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking back at baby',
-                    instance: WONDERING_BABY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WONDERING_BABY
                 },
                 [MIRIAM]: {
                     maskedWoman: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, walking away',
-                        instance: INFANT_NURSING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: INFANT_NURSING
                     }
                 },
                 [HOWIE]: {
@@ -356,13 +254,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'checking watch',
-                        instance: USHER_WAITING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: USHER_WAITING
                     }
                 }
             }
@@ -382,26 +274,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, inspired by sudden thought',
-                    instance: MERRILY_DERANGED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MERRILY_DERANGED
                 },
                 [HOWIE]: {
                     maskedUsher: {
                         todo: true,
                         workedHours: 3,
                         description: 'looking at Bennett',
-                        instance: USHER_LOOKING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: USHER_LOOKING
                     }
                 }
             }

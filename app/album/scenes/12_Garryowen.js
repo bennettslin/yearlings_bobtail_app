@@ -55,26 +55,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, putting on jacket, cold, distant',
-                    instance: BRUSHING_OFF,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: BRUSHING_OFF
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, shivering, pleading',
-                        instance: BRUSHED_OFF,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: BRUSHED_OFF
                     }
                 }
             }
@@ -94,49 +82,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, tripping as meats fall out of pockets',
-                    instance: DROPPING_MEATS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, eagerly aggressive, about to punch car',
-                    instance: PUNCHING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PUNCHING
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, holding paper bottle, laughing',
-                    instance: CHUCKLING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CHUCKLING
                 },
                 [NESTOR]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, clutching at fist, laughing through pain',
-                    instance: INJURED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: INJURED
                 }
             }
         },
@@ -155,26 +119,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'on couch, ignoring Sita, drunk',
-                    instance: DRUNK_CELIBATE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DRUNK_CELIBATE
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, naked, making Bennett touch her breast',
-                        instance: FREEZING_NAKED,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: FREEZING_NAKED
                     }
                 }
             }
@@ -194,49 +146,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, sweaty, giddy',
-                    instance: GREETING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GREETING
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, greeting Bennett',
-                    instance: NOOGIE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: NOOGIE
                 },
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, playfully giving Miriam a noogie',
-                    instance: NOOGIE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: NOOGIE
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, removing bass, rolling eyes',
-                    instance: SMIRKING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SMIRKING
                 }
             }
         },
@@ -255,26 +183,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'standing, cold, looking away',
-                    instance: LEAVING_CRUMBLED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: LEAVING_CRUMBLED
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'crumbled on floor, begging, sobbing',
-                        instance: LEAVING_CRUMBLED,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: LEAVING_CRUMBLED
                     }
                 }
             }

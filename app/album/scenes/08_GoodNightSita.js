@@ -40,26 +40,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, awkward, wanting to make a move',
-                    instance: DATE_ENDING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DATE_ENDING
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, friendly, guarded',
-                        instance: DATE_ENDING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: DATE_ENDING
                     }
                 }
             }
@@ -79,26 +67,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, leaning towards Sita',
-                    instance: MUSEUM,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MUSEUM
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, hands behind back, guarded',
-                        instance: MUSEUM,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: MUSEUM
                     }
                 }
             }
@@ -118,52 +94,28 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, jealous',
-                    instance: BACKSTAGE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: BACKSTAGE
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, warm, guard down',
-                        instance: BACKSTAGE,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: BACKSTAGE
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, friendly',
-                    instance: DOUBLE_ALBERT,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DOUBLE_ALBERT
                 },
                 [STEPHANIE]: {
                     actor: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, rushing',
-                        instance: FLAPPER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: FLAPPER
                     }
                 }
             }
@@ -183,26 +135,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, in go-kart, leaning forward',
-                    instance: GO_KARTS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GO_KARTS
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, in go-kart, relaxed',
-                        instance: GO_KARTS,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: GO_KARTS
                     }
                 }
             }
@@ -222,26 +162,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking away dejected, slumped over',
-                    instance: DATE_ENDED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DATE_ENDED
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'front, closing gate, looking concerned',
-                        instance: DATE_ENDED,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: DATE_ENDED
                     }
                 }
             }

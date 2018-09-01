@@ -59,13 +59,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, reading book, pulling tray from belt.',
-                    instance: DISHROOM_READING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DISHROOM_READING
                 }
             }
         },
@@ -84,26 +78,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, handing lancet pen, exuberant',
-                    instance: DISHROOM_LANCET,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DISHROOM_LANCET
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, taken aback, politely friendly',
-                        instance: DISHROOM_LANCET,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: DISHROOM_LANCET
                     }
                 }
             }
@@ -141,26 +123,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, mopey',
-                    instance: MOP_SOPPED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MOP_SOPPED
                 },
                 [NESTOR]: {
                     jogger: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, jogging, spry',
-                        instance: JOGGER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: JOGGER
                     }
                 }
             }
@@ -180,26 +150,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, punching code, surprised',
-                    instance: GATE_CODE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GATE_CODE
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, hesitantly greeting',
-                        instance: GATE_CODE,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: GATE_CODE
                     }
                 }
             }
@@ -219,26 +177,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, opening gate, silent, attentive',
-                    instance: GINGERBREAD_PRISON,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GINGERBREAD_PRISON
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'front, chatting, more comfortable',
-                        instance: GINGERBREAD_PRISON,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: GINGERBREAD_PRISON
                     }
                 }
             }
@@ -258,26 +204,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, turning on light, smiling',
-                    instance: RUMPLED_LINENS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: RUMPLED_LINENS
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, surprised, embarrassed smile',
-                        instance: RUMPLED_LINENS,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: RUMPLED_LINENS
                     }
                 }
             }
@@ -297,13 +231,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eyes closed, falling asleep',
-                    instance: WAITING_ROOM_THOUGHTS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WAITING_ROOM_THOUGHTS
                 }
             }
         },
@@ -322,26 +250,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, abruptly woken',
-                    instance: CHEEK_UNVEILED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CHEEK_UNVEILED
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, reaching for purse, cheeky',
-                        instance: CHEEK_UNVEILED,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: CHEEK_UNVEILED
                     }
                 }
             }
@@ -361,26 +277,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, standing beside bed, unsure',
-                    instance: HARD_ON,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: HARD_ON
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: HARD_ON_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: HARD_ON_REFLECTION
                     }
                 },
                 [LIZ]: {
@@ -388,13 +292,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'front, sitting on bed, irreverently reassuring',
-                        instance: HARD_ON,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: HARD_ON
                     }
                 },
                 [LIZ_REFLECTION]: {
@@ -402,13 +300,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: HARD_ON_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: HARD_ON_REFLECTION
                     }
                 }
             }
@@ -428,26 +320,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, about to stick it in',
-                    instance: MISSIONARY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MISSIONARY
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: MISSIONARY_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: MISSIONARY_REFLECTION
                     }
                 },
                 [LIZ]: {
@@ -455,13 +335,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'side, spread open',
-                        instance: MISSIONARY,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: MISSIONARY
                     }
                 },
                 [LIZ_REFLECTION]: {
@@ -469,13 +343,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: MISSIONARY_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: MISSIONARY_REFLECTION
                     }
                 }
             }
@@ -495,26 +363,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying down, warm, content, slightly worried',
-                    instance: AFTERGLOW,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: AFTERGLOW
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: AFTERGLOW_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: AFTERGLOW_REFLECTION
                     }
                 },
                 [LIZ]: {
@@ -522,13 +378,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'lying down, warm, content, slightly worried',
-                        instance: AFTERGLOW,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: AFTERGLOW
                     }
                 },
                 [LIZ_REFLECTION]: {
@@ -536,13 +386,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: AFTERGLOW_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: AFTERGLOW_REFLECTION
                     }
                 }
             }

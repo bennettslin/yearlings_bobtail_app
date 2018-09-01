@@ -1,7 +1,7 @@
 module.exports = [
 
     {
-        taskName: `Add flats, and distinguish from cutouts.`,
+        taskName: `yIndex and arrangement live in their own configs.`,
         workedHours: 0,
         neededHours: 2
     },

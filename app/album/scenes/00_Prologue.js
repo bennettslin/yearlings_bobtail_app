@@ -19,13 +19,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'standing, facing forward, welcoming',
-                    instance: PROLOGUE,
-                    yIndex: 3,
-                    arrangement: {
-                        xFloat: 5.5,
-                        xWidth: 1,
-                        zHeight: 5
-                    }
+                    instance: PROLOGUE
                 }
             }
         },

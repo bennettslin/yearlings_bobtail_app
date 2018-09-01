@@ -48,351 +48,189 @@ module.exports = [
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [ANITA]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `3'9"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `3'6"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `3'10"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'3"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'0"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `3'5"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'2"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `6'0"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'6"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'1"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [BRAD]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'6"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [ANDREW]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'7"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'8"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'11"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [WADE]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'10"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [AMY]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'6"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [JACOB]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'11"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [MARA]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'0"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'8"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     realHeight: `5'1"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [LIZ]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `4'9"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'9"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 },
                 [NESTOR]: {
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'7"`,
                     description: 'standing',
-                    instance: EPILOGUE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EPILOGUE
                 }
             }
         },

@@ -62,39 +62,21 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, slumped over, despondent',
-                    instance: CAMPUS_ASHAMED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CAMPUS_ASHAMED
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, looking back, concerned',
-                        instance: SELFLESS_CONCERN,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: SELFLESS_CONCERN
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, protective, judgmental',
-                    instance: PROTECTIVE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PROTECTIVE
                 }
             }
         },
@@ -113,49 +95,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, looking to side, annoyed',
-                    instance: SHOW_ANNOYED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, flirting',
-                    instance: GREETING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GREETING
                 },
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front, introducing miriam',
-                    instance: INTRODUCING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: INTRODUCING
                 },
                 [NESTOR]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, eager',
-                    instance: GREETING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GREETING
                 }
             }
         },
@@ -174,13 +132,7 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'walking through alley',
-                    instance: ALLEY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ALLEY
                 }
             }
         },
@@ -199,26 +151,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, on phone, hunched over, sobbing',
-                    instance: BROKEN_HEARTED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: BROKEN_HEARTED
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'Lying in bed, on phone with Bennett',
-                        instance: CARESSED,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: CARESSED
                     }
                 },
                 [LIZ_REFLECTION]: {
@@ -226,39 +166,21 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: CARESSED_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: CARESSED_REFLECTION
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'lying in bed, caressing Sita',
-                    instance: CARESSING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CARESSING
                 },
                 [KHARI_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
                         description: 'reflection',
-                        instance: CARESSING_REFLECTION,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: CARESSING_REFLECTION
                     }
                 }
             }
@@ -278,26 +200,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, desperately hopeful',
-                    instance: DEMONSTRATION,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: DEMONSTRATION
                 },
                 [AMY]: {
                     demonstrator: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, passing out flyers',
-                        instance: PROTESTER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: PROTESTER
                     }
                 },
                 [STEPHANIE]: {
@@ -305,13 +215,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'standing, demonstrating',
-                        instance: PROTESTER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: PROTESTER
                     }
                 },
                 [WADE]: {
@@ -319,13 +223,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'standing, demonstrating',
-                        instance: PROTESTER,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: PROTESTER
                     }
                 }
             }

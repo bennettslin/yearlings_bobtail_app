@@ -78,25 +78,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying sitting up, arm around Miriam, scared, guilty',
-                    instance: WAKENED_FEARFUL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WAKENED_FEARFUL
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, asleep',
-                    instance: ASLEEP,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ASLEEP
                 }
             }
         },
@@ -115,38 +103,20 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, consoling Sita',
-                    instance: CONSOLING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CONSOLING
                 },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, accusatory',
-                    instance: ACCUSATORY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ACCUSATORY
                 },
                 [ESTHER]: {
                     youngSita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, sobbing',
-                        instance: SITA_HURT,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: SITA_HURT
                     }
                 }
             }
@@ -166,49 +136,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, wincing',
-                    instance: PAST,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PAST
                 },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, gesturing to scene below',
-                    instance: PAST,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PAST
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, hurt, lashing out in anger',
-                    instance: HUMILIATED,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: HUMILIATED
                 },
                 [SASHA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, consoling, cautious',
-                    instance: COMFORTING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: COMFORTING
                 }
             }
         },
@@ -227,62 +173,32 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, dismissive, not feeling bad',
-                    instance: PRESENT,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PRESENT
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, gesturing with empathy',
-                    instance: PRESENT,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PRESENT
                 },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, gesturing with blame',
-                    instance: PRESENT,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PRESENT
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, jumping on Bennett, grabbing his banjo',
-                    instance: MISCHIEVOUS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: MISCHIEVOUS
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'making out with Miriam',
-                        instance: BENNETT_BANJO,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: BENNETT_BANJO
                     }
                 }
             }
@@ -302,77 +218,41 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'concerned',
-                    instance: FUTURE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FUTURE
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
                         workedHours: 3,
                         description: 'back, squatting, recording, dejected',
-                        instance: BENNETT_RECORDING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: BENNETT_RECORDING
                     }
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, wanting to console Bennett',
-                    instance: FUTURE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FUTURE
                 },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, arms crossed, righteous',
-                    instance: FUTURE,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FUTURE
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side, amused by conversation',
-                        instance: LAUGHING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: LAUGHING
                     }
                 },
                 [KHARI]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, cheerful, making a point',
-                    instance: JOKING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: JOKING
                 }
             }
         },
@@ -391,62 +271,32 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, seeking protection',
-                    instance: SEEKING_PROTECTION,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SEEKING_PROTECTION
                 },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side sitting, vindictive, magical gesture',
-                    instance: FENDING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FENDING
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, protecting Sita',
-                    instance: SHIELDING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: SHIELDING
                 },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, knocked over',
-                    instance: REELING,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: REELING
                 },
                 [ESTHER]: {
                     youngSita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, sobbing uncontrollably',
-                        instance: SITA_SOBBING,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: SITA_SOBBING
                     }
                 }
             }

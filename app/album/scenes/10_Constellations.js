@@ -42,49 +42,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking',
-                    instance: ABBEY_ROAD,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ABBEY_ROAD
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking',
-                    instance: ABBEY_ROAD,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking',
-                    instance: ABBEY_ROAD,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ABBEY_ROAD
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking',
-                    instance: ABBEY_ROAD,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ABBEY_ROAD
                 }
             }
         },
@@ -103,49 +79,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, holding body and gesturing its smallness',
-                    instance: WALGREENS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WALGREENS
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, reading bottle intently',
-                    instance: WALGREENS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WALGREENS
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, holding large bottle',
-                    instance: WALGREENS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WALGREENS
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, feigning superiority',
-                    instance: WALGREENS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: WALGREENS
                 }
             }
         },
@@ -164,49 +116,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, blathering',
-                    instance: STEAM_TUNNEL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STEAM_TUNNEL
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, play fighting',
-                    instance: STEAM_TUNNEL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, bored by conversation',
-                    instance: STEAM_TUNNEL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, play fighting',
-                    instance: STEAM_TUNNEL,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STEAM_TUNNEL
                 }
             }
         },
@@ -225,49 +153,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, looking upwards, inspired',
-                    instance: CEMETERY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CEMETERY
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, shivering, feeling comforted',
-                    instance: CEMETERY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CEMETERY
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, arm around Ana',
-                    instance: CEMETERY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CEMETERY
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, squatting, pouring water on grave',
-                    instance: CEMETERY,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CEMETERY
                 }
             }
         },
@@ -286,49 +190,25 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, sleeping in car',
-                    instance: STATION_WAGON,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STATION_WAGON
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, sleeping in car',
-                    instance: STATION_WAGON,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STATION_WAGON
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'driving car, alert, wigging out',
-                    instance: STATION_WAGON,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STATION_WAGON
                 },
                 [TOMER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back angle, sleeping in car',
-                    instance: STATION_WAGON,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: STATION_WAGON
                 }
             }
         },
@@ -347,25 +227,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'lying on couch, watching TV, alert',
-                    instance: ATTIC,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ATTIC
                 },
                 [HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'downstairs, in agony',
-                    instance: ATTIC,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: ATTIC
                 }
             }
         },

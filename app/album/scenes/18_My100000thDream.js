@@ -43,26 +43,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, walking, pleasantly confused',
-                    instance: EL_TORITO,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: EL_TORITO
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'side angle, opening a door, pleasantly surprised',
-                        instance: EL_TORITO,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: EL_TORITO
                     }
                 }
             }
@@ -82,26 +70,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting cross-legged, playing recorder, content',
-                    instance: PAMPAS,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: PAMPAS
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'resting on Bennett, content',
-                        instance: PAMPAS,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: PAMPAS
                     }
                 },
                 [CATHERINE]: {
@@ -109,13 +85,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'dancing',
-                        instance: GOPI,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: GOPI
                     }
                 },
                 [MARA]: {
@@ -123,13 +93,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'dancing',
-                        instance: GOPI,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: GOPI
                     }
                 },
                 [MIRIAM]: {
@@ -137,13 +101,7 @@ module.exports = [
                         todo: true,
                         workedHours: 2.5,
                         description: 'dancing',
-                        instance: GOPI,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: GOPI
                     }
                 }
             }
@@ -163,26 +121,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back angle, confusedly being rushed',
-                    instance: GETTING_DARK,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: GETTING_DARK
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'front, urging',
-                        instance: GETTING_DARK,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: GETTING_DARK
                     }
                 }
             }
@@ -202,26 +148,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, reacting to threat',
-                    instance: CLIFF,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: CLIFF
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'front angle, gesturing to grave',
-                        instance: CLIFF,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: CLIFF
                     }
                 }
             }
@@ -241,26 +175,14 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'calm, accepting of impending doom',
-                    instance: FINAL_DREAM,
-                    yIndex: -1,
-                    arrangement: {
-                        xFloat: 0,
-                        xWidth: 0,
-                        zHeight: 0
-                    }
+                    instance: FINAL_DREAM
                 },
                 [LIZ]: {
                     sita: {
                         todo: true,
                         workedHours: 3,
                         description: 'comforting',
-                        instance: FINAL_DREAM,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: FINAL_DREAM
                     }
                 },
                 [AMY]: {
@@ -268,13 +190,7 @@ module.exports = [
                         todo: true,
                         workedHours: 3,
                         description: 'pulling sheet over Bennett',
-                        instance: DOCTOR,
-                        yIndex: -1,
-                        arrangement: {
-                            xFloat: 0,
-                            xWidth: 0,
-                            zHeight: 0
-                        }
+                        instance: DOCTOR
                     }
                 }
             }
