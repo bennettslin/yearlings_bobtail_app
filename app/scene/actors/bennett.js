@@ -18,7 +18,12 @@ const
     REMOVING_SHOES = 'removingShoes',
     BRUSHING_OFF = 'brushingOff',
     DROPPING_MEATS = 'droppingMeats',
-    DRUNK_CELIBATE = 'drunkCelibate'
+    DRUNK_CELIBATE = 'drunkCelibate',
+    CORD_SIDE = 'cordSide',
+    AWKWARD_CONSOLATION = 'awkwardConsolation',
+    CORD_REAR = 'cordRear',
+    HORSING = 'horsing',
+    DRYING_TEARS = 'dryingTears'
 
 export {
     BREAKUP_DEJECTED,
@@ -40,5 +45,10 @@ export {
     REMOVING_SHOES,
     BRUSHING_OFF,
     DROPPING_MEATS,
-    DRUNK_CELIBATE
+    DRUNK_CELIBATE,
+    CORD_SIDE,
+    AWKWARD_CONSOLATION,
+    CORD_REAR,
+    HORSING,
+    DRYING_TEARS,
 }

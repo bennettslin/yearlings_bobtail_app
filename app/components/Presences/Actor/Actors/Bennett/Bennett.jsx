@@ -49,6 +49,11 @@ import DroppingMeats from './Instances/DroppingMeats'
 import DrunkCelibate from './Instances/DrunkCelibate'
 import Greeting from './Instances/Greeting'
 import LeavingCrumbled from './Instances/LeavingCrumbled'
+import CordSide from './Instances/CordSide'
+import AwkwardConsolation from './Instances/AwkwardConsolation'
+import CordRear from './Instances/CordRear'
+import Horsing from './Instances/Horsing'
+import DryingTears from './Instances/DryingTears'
 import Cowgirl from './Instances/Cowgirl'
 import Blowjob from './Instances/Blowjob'
 import Past from './Instances/Past'
@@ -78,7 +83,12 @@ import {
     REMOVING_SHOES,
     BRUSHING_OFF,
     DROPPING_MEATS,
-    DRUNK_CELIBATE
+    DRUNK_CELIBATE,
+    CORD_SIDE,
+    AWKWARD_CONSOLATION,
+    CORD_REAR,
+    HORSING,
+    DRYING_TEARS,
 } from 'scene/actors/bennett'
 
 import {
@@ -165,6 +175,11 @@ const INSTANCES_MAP = {
     [DRUNK_CELIBATE]: DrunkCelibate,
     [GREETING]: Greeting,
     [LEAVING_CRUMBLED]: LeavingCrumbled,
+    [CORD_SIDE]: CordSide,
+    [AWKWARD_CONSOLATION]: AwkwardConsolation,
+    [CORD_REAR]: CordRear,
+    [HORSING]: Horsing,
+    [DRYING_TEARS]: DryingTears,
     [COWGIRL]: Cowgirl,
     [BLOWJOB]: Blowjob,
     [PAST]: Past,

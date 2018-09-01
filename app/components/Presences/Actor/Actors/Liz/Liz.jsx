@@ -21,6 +21,7 @@ import AfterglowReflection from './Instances/AfterglowReflection'
 import AsleepReaching from './Instances/AsleepReaching';
 import BrushedOff from './Instances/BrushedOff'
 import FreezingNaked from './Instances/FreezingNaked'
+import ReturningCord from './Instances/ReturningCord'
 import LeavingCrumbled from './Instances/LeavingCrumbled'
 import PettingStanding from './Instances/PettingStanding'
 import SiftingTchotchkes from './Instances/SiftingTchotchkes'
@@ -28,6 +29,7 @@ import OpeningDoor from './Instances/OpeningDoor'
 import Defending from './Instances/Defending'
 import NotHungry from './Instances/NotHungry'
 import AsleepCouch from './Instances/AsleepCouch'
+import PettingSeated from './Instances/PettingSeated'
 import Epilogue from './Instances/Epilogue'
 
 import { DEFAULT_COMPONENT } from 'constants/dom'
@@ -36,12 +38,14 @@ import {
     ASLEEP_REACHING,
     BRUSHED_OFF,
     FREEZING_NAKED,
+    RETURNING_CORD,
     PETTING_STANDING,
     SIFTING_TCHOTCHKES,
     OPENING_DOOR,
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH,
+    PETTING_SEATED
 } from 'scene/actors/liz'
 
 import {
@@ -85,6 +89,7 @@ const INSTANCES_MAP = {
     [ASLEEP_REACHING]: AsleepReaching,
     [BRUSHED_OFF]: BrushedOff,
     [FREEZING_NAKED]: FreezingNaked,
+    [RETURNING_CORD]: ReturningCord,
     [LEAVING_CRUMBLED]: LeavingCrumbled,
     [PETTING_STANDING]: PettingStanding,
     [SIFTING_TCHOTCHKES]: SiftingTchotchkes,
@@ -92,6 +97,7 @@ const INSTANCES_MAP = {
     [DEFENDING]: Defending,
     [NOT_HUNGRY]: NotHungry,
     [ASLEEP_COUCH]: AsleepCouch,
+    [PETTING_SEATED]: PettingSeated,
     [EPILOGUE]: Epilogue
 }
 
