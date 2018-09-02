@@ -1,4 +1,4 @@
-// Keep cutout instances in this file.
+// Keep flat instances in this file.
 
 const
     NOHO_HOUSES_BACKDROP = 'nohoHousesBackdrop',

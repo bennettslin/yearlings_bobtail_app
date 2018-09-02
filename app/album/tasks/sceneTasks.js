@@ -120,7 +120,7 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `NOHO_BATHROOM_KEY`,
+        taskName: `FAMILY_BATHROOM_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },

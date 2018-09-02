@@ -8,12 +8,12 @@ import {
     TOWEL_RACK
 } from 'scene/cutoutKeys'
 
-const CUTOUTS_NOHO_BATHROOM = {
+const CUTOUTS_FAMILY_BATHROOM = {
     [BATHTUB]: Bathtub,
     [MIRRORED_SINK]: MirroredSink,
     [TOWEL_RACK]: TowelRack
 }
 
 export {
-    CUTOUTS_NOHO_BATHROOM
+    CUTOUTS_FAMILY_BATHROOM
 }

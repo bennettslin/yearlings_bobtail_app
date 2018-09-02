@@ -3818,4 +3818,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Create furniture components.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -1,8 +1,8 @@
 import {
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
-    NOHO_BATHROOM_KEY,
-    NOHO_BATHROOM_OPEN_KEY
+    FAMILY_BATHROOM_KEY,
+    FAMILY_BATHROOM_OPEN_KEY
 } from '../cubesKeys'
 
 import {
@@ -64,7 +64,7 @@ const
         }
     },
 
-    NOHO_BATHROOM = {
+    FAMILY_BATHROOM = {
         // Indoor wall is 7.5'. Raised bathtub.
         ceiling: {
             zIndices: [
@@ -89,7 +89,7 @@ const
         }
     },
 
-    NOHO_BATHROOM_OPEN = {
+    FAMILY_BATHROOM_OPEN = {
         floor: {
             zIndices: [
                 [1],
@@ -107,8 +107,8 @@ const
     CUBES_NOHO = {
         [NOHO_HOUSES_KEY]: NOHO_HOUSES,
         [NOHO_SCHOOL_KEY]: NOHO_SCHOOL,
-        [NOHO_BATHROOM_KEY]: NOHO_BATHROOM,
-        [NOHO_BATHROOM_OPEN_KEY]: NOHO_BATHROOM_OPEN
+        [FAMILY_BATHROOM_KEY]: FAMILY_BATHROOM,
+        [FAMILY_BATHROOM_OPEN_KEY]: FAMILY_BATHROOM_OPEN
     }
 
 export {

@@ -4,12 +4,12 @@ import cx from 'classnames'
 
 import { CUTOUTS_NOHO_HOUSES } from './Cutouts/NohoHouses/nohoHouses'
 import { CUTOUTS_NOHO_SCHOOL } from './Cutouts/NohoSchool/nohoSchool'
-import { CUTOUTS_NOHO_BATHROOM } from './Cutouts/NohoBathroom/nohoBathroom'
+import { CUTOUTS_FAMILY_BATHROOM } from './Cutouts/FamilyBathroom/familyBathroom'
 
 const CUTOUTS_MAP = {
     ...CUTOUTS_NOHO_HOUSES,
     ...CUTOUTS_NOHO_SCHOOL,
-    ...CUTOUTS_NOHO_BATHROOM
+    ...CUTOUTS_FAMILY_BATHROOM
 },
 DEFAULT_COMPONENT = () => (null)
 

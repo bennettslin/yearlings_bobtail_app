@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Create furniture components.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Create instance components of all cutouts, fixtures, and flats.`,
         workedHours: 0,
         neededHours: 10

@@ -8,6 +8,26 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
+    {
+        taskName: `Movie theatre surrounding street panorama (M)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Past roads (Uncanny)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Present roads (Uncanny)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Future roads (Uncanny)`,
+        workedHours: 0,
+        neededHours: 5
+    },
 
     /**
      * Large painted panels (Do first)
@@ -227,26 +247,6 @@ module.exports = [
     },
     {
         taskName: `Ocean floor (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Movie theatre surrounding street panorama (M)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Past roads (Uncanny)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Present roads (Uncanny)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Future roads (Uncanny)`,
         workedHours: 0,
         neededHours: 5
     },

@@ -2,12 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { FIXTURES_NOHO_SCHOOL } from './Fixtures/NohoSchool/nohoSchool'
-import { FIXTURES_FAMILY_BATHROOM } from './Fixtures/FamilyBathroom/familyBathroom'
-
-const FIXTURES_MAP = {
-    ...FIXTURES_NOHO_SCHOOL,
-    ...FIXTURES_FAMILY_BATHROOM,
+const FURNITURES_MAP = {
 },
 DEFAULT_COMPONENT = () => (null)
 
@@ -21,26 +16,26 @@ const propTypes = {
     height: PropTypes.string.isRequired
 }
 
-const Fixture = ({
+const Furniture = ({
 
     className,
     nameKey,
 
 ...other }) => {
 
-    const FixtureComponent =
-        FIXTURES_MAP[nameKey] || DEFAULT_COMPONENT
+    const FurnitureComponent =
+        FURNITURES_MAP[nameKey] || DEFAULT_COMPONENT
 
     return (
-        <FixtureComponent {...other}
+        <FurnitureComponent {...other}
             className={cx(
-                'Fixture',
+                'Furniture',
                 className
             )}
         />
     )
 }
 
-Fixture.propTypes = propTypes;
+Furniture.propTypes = propTypes;
 
-export default Fixture
+export default Furniture

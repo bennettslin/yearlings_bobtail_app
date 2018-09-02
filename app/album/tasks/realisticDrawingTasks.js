@@ -29,7 +29,7 @@ module.exports = [
     },
 
     /**
-     * Real props.
+     * Fixtures.
      */
     {
         taskName: `Bennett's record player and milk crates with records (Ash, M, Garryowen)`,
@@ -53,6 +53,11 @@ module.exports = [
     },
     {
         taskName: `Record player (Cremated, Dream)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Bennett's bedside stand and lamp (Grasshoppers, Uncanny)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -87,11 +92,6 @@ module.exports = [
     },
     {
         taskName: `Bennett's bed mattress (Grasshoppers, Uncanny)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bennett's bedside stand and lamp (Grasshoppers, Uncanny)`,
         workedHours: 0,
         neededHours: 3
     },
