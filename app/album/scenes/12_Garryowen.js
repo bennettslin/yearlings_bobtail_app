@@ -22,28 +22,28 @@ import {
 import {
     CHUCKLING,
     SMIRKING
-} from 'scene/actors/ana'
+} from 'scene/instanceKeys/ana'
 
 import {
     BRUSHING_OFF,
     DROPPING_MEATS,
     DRUNK_CELIBATE
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
 import {
     BRUSHED_OFF,
     FREEZING_NAKED
-} from 'scene/actors/liz'
+} from 'scene/instanceKeys/liz'
 
-import { INJURED } from 'scene/actors/nestor'
+import { INJURED } from 'scene/instanceKeys/nestor'
 
-import { PUNCHING } from 'scene/actors/tristan'
+import { PUNCHING } from 'scene/instanceKeys/tristan'
 
 import {
     GREETING,
     LEAVING_CRUMBLED,
     NOOGIE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

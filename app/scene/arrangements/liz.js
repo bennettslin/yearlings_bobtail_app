@@ -15,7 +15,7 @@ import {
     SELFLESS_CONCERN,
     CARESSED,
     CARESSED_REFLECTION
-} from 'scene/actors/liz'
+} from 'scene/instanceKeys/liz'
 
 import {
     DATE_ENDING,
@@ -41,7 +41,7 @@ import {
     CLIFF,
     FINAL_DREAM,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_LIZ = {
     [DATE_ENDING]: {

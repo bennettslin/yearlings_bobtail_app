@@ -4,9 +4,9 @@ import {
     MERMAID,
     POPULAR_GIRL,
     COMFORTING
-} from 'scene/actors/sasha'
+} from 'scene/instanceKeys/sasha'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [CHARMED]: {

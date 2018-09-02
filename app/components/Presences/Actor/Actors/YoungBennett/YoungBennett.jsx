@@ -14,12 +14,12 @@ import {
     FLUSTERED,
     BATHING,
     SINGING,
-} from 'scene/actors/youngBennett'
+} from 'scene/instanceKeys/youngBennett'
 
 import {
     YOUNG_CHILD,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [PANICKED]: Panicked,

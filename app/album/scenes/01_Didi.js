@@ -25,18 +25,18 @@ import {
     FLUSTERED,
     BATHING,
     SINGING
-} from 'scene/actors/youngBennett'
+} from 'scene/instanceKeys/youngBennett'
 
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from 'scene/actors/anita'
+} from 'scene/instanceKeys/anita'
 
 import {
     CURIOUS,
     SNICKERING
-} from 'scene/actors/esther'
+} from 'scene/instanceKeys/esther'
 
 import {
     FIRE_HYDRANT,

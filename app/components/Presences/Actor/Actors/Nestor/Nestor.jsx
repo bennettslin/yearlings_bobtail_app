@@ -10,12 +10,12 @@ import Epilogue from './Instances/Epilogue'
 import {
     JOGGER,
     INJURED
-} from 'scene/actors/nestor'
+} from 'scene/instanceKeys/nestor'
 
 import {
     GREETING,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [JOGGER]: Jogger,

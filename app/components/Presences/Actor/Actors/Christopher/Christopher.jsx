@@ -15,9 +15,9 @@ import {
     REASSURING,
     BLISSFUL,
     STARING
-} from 'scene/actors/christopher'
+} from 'scene/instanceKeys/christopher'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [TANTRUM]: Tantrum,

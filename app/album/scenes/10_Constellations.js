@@ -30,7 +30,7 @@ import {
     CEMETERY,
     STATION_WAGON,
     ATTIC
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

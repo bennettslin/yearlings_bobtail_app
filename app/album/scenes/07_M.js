@@ -24,7 +24,7 @@ import {
 
 import {
     SQUATTING
-} from 'scene/actors/ana'
+} from 'scene/instanceKeys/ana'
 
 import {
     PONDERING,
@@ -34,26 +34,26 @@ import {
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from 'scene/actors/howie'
+} from 'scene/instanceKeys/howie'
 
 import {
     INFANT_CURIOUS,
     INFANT_NURSING
-} from 'scene/actors/miriam'
+} from 'scene/instanceKeys/miriam'
 
-import { BENNETT_KEYBOARD } from 'scene/actors/stephanie'
+import { BENNETT_KEYBOARD } from 'scene/instanceKeys/stephanie'
 
-import { SHANE_BUYING } from 'scene/actors/tomer'
+import { SHANE_BUYING } from 'scene/instanceKeys/tomer'
 
 import {
     FLIRTING,
     EATING
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

@@ -8,7 +8,7 @@ import Epilogue from './Instances/Epilogue'
 import {
     PROLOGUE,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [PROLOGUE]: Prologue,

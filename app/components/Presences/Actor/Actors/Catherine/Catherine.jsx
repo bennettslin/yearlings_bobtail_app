@@ -12,12 +12,12 @@ import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from 'scene/actors/catherine'
+} from 'scene/instanceKeys/catherine'
 
 import {
     GOPI,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [WEEPING]: Weeping,

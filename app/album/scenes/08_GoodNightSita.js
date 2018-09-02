@@ -18,9 +18,9 @@ import {
     STEPHANIE
 } from 'scene/actorKeys'
 
-import { DOUBLE_ALBERT } from 'scene/actors/khari'
+import { DOUBLE_ALBERT } from 'scene/instanceKeys/khari'
 
-import { FLAPPER } from 'scene/actors/stephanie'
+import { FLAPPER } from 'scene/instanceKeys/stephanie'
 
 import {
     DATE_ENDING,
@@ -28,7 +28,7 @@ import {
     BACKSTAGE,
     GO_KARTS,
     DATE_ENDED
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

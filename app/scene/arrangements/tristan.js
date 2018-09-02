@@ -2,12 +2,12 @@ import {
     PRINCIPAL,
     PUNCHING,
     INTRODUCING
-} from 'scene/actors/tristan'
+} from 'scene/instanceKeys/tristan'
 
 import {
     NOOGIE,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [PRINCIPAL]: {

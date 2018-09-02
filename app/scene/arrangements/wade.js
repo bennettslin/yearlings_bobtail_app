@@ -1,13 +1,13 @@
 import {
     CATHOLIC_GUY,
     WATCHING
-} from 'scene/actors/wade'
+} from 'scene/instanceKeys/wade'
 
 import {
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [CATHOLIC_GUY]: {

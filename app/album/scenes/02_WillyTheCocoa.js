@@ -26,33 +26,33 @@ import {
     ENRAGED,
     FEARFUL,
     ENCHANTED
-} from 'scene/actors/preteenBennett'
+} from 'scene/instanceKeys/preteenBennett'
 
 import {
     COLLECTING,
     DUCKING,
     FIGHTING
-} from 'scene/actors/willy'
+} from 'scene/instanceKeys/willy'
 
 import {
     STOOPING,
     COMFORTING
-} from 'scene/actors/mother'
+} from 'scene/instanceKeys/mother'
 
 import {
     ROARING
-} from 'scene/actors/father'
+} from 'scene/instanceKeys/father'
 
 import {
     TANTRUM,
     SOBBING,
     REASSURING
-} from 'scene/actors/christopher'
+} from 'scene/instanceKeys/christopher'
 
 import {
     GANGBANGER,
     GREETING
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

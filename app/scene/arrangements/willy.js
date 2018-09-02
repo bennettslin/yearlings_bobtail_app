@@ -3,12 +3,12 @@ import {
     DUCKING,
     FIGHTING,
     CROSSING_GUARD
-} from 'scene/actors/willy'
+} from 'scene/instanceKeys/willy'
 
 import {
     GREETING,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [COLLECTING]: {

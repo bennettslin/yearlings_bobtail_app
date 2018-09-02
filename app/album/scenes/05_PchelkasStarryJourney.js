@@ -26,19 +26,19 @@ import {
 import {
     THROWING,
     NOODLING
-} from 'scene/actors/andrew'
+} from 'scene/instanceKeys/andrew'
 
 import {
     GESTURING,
     SNACKING
-} from 'scene/actors/brad'
+} from 'scene/instanceKeys/brad'
 
 import {
     BLISSFUL,
     STARING
-} from 'scene/actors/christopher'
+} from 'scene/instanceKeys/christopher'
 
-import { ARGUING } from 'scene/actors/mother'
+import { ARGUING } from 'scene/instanceKeys/mother'
 
 import {
     GUILT_RIDDEN,
@@ -48,11 +48,11 @@ import {
     STOIC,
     WISTFUL,
     SHEEPISH
-} from 'scene/actors/preteenBennett'
+} from 'scene/instanceKeys/preteenBennett'
 
-import { POPULAR_GIRL } from 'scene/actors/sasha'
+import { POPULAR_GIRL } from 'scene/instanceKeys/sasha'
 
-import { PRINCIPAL } from 'scene/actors/tristan'
+import { PRINCIPAL } from 'scene/instanceKeys/tristan'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the

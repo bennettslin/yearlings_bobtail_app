@@ -16,22 +16,22 @@ import {
     ANDREW
 } from 'scene/actorKeys'
 
-import { FEIGNING_FEAR } from 'scene/actors/andrew'
+import { FEIGNING_FEAR } from 'scene/instanceKeys/andrew'
 
 import {
     JEWISH_BOY,
     TYING
-} from 'scene/actors/brad'
+} from 'scene/instanceKeys/brad'
 
 import {
     PANICKED,
     TETHERED
-} from 'scene/actors/preteenBennett'
+} from 'scene/instanceKeys/preteenBennett'
 
 import {
     CHARMED,
     INDIGNANT
-} from 'scene/actors/sasha'
+} from 'scene/instanceKeys/sasha'
 
 module.exports = [
     {

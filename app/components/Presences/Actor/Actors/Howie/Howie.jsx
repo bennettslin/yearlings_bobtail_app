@@ -16,7 +16,7 @@ import Epilogue from './Instances/Epilogue'
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from 'scene/actors/howie'
+} from 'scene/instanceKeys/howie'
 
 import {
     GANGBANGER,
@@ -27,7 +27,7 @@ import {
     STATION_WAGON,
     ATTIC,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [GANGBANGER]: Gangbanger,

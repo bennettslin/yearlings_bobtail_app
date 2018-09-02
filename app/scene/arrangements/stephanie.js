@@ -6,14 +6,14 @@ import {
     BENNETT_SORROWFUL,
     BENNETT_BANJO,
     BENNETT_RECORDING
-} from 'scene/actors/stephanie'
+} from 'scene/instanceKeys/stephanie'
 
 import {
     SQUEEZING,
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_KEYBOARD]: {

@@ -28,9 +28,9 @@ import {
     BUOY,
     SINKING,
     OCEAN_FLOOR
-} from 'scene/actors/preteenBennett'
+} from 'scene/instanceKeys/preteenBennett'
 
-import { MERMAID } from 'scene/actors/sasha'
+import { MERMAID } from 'scene/instanceKeys/sasha'
 
 module.exports = [
     {

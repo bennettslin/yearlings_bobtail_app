@@ -17,13 +17,13 @@ import {
     ARGUING,
     CONSOLING,
     SHIELDING
-} from 'scene/actors/mother'
+} from 'scene/instanceKeys/mother'
 
 import {
     PRESENT,
     FUTURE,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [STOOPING]: Stooping,

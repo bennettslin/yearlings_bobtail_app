@@ -26,47 +26,47 @@ import {
 import {
     WAKENED_FEARFUL,
     SEEKING_PROTECTION
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
 import {
     SITA_HURT,
     SITA_SOBBING
-} from 'scene/actors/esther'
+} from 'scene/instanceKeys/esther'
 
 import {
     ACCUSATORY,
     REELING
-} from 'scene/actors/father'
+} from 'scene/instanceKeys/father'
 
-import { JOKING } from 'scene/actors/khari'
+import { JOKING } from 'scene/instanceKeys/khari'
 
-import { LAUGHING } from 'scene/actors/liz'
+import { LAUGHING } from 'scene/instanceKeys/liz'
 
 import {
     ASLEEP,
     MISCHIEVOUS,
     FENDING
-} from 'scene/actors/miriam'
+} from 'scene/instanceKeys/miriam'
 
 import {
     CONSOLING,
     SHIELDING
-} from 'scene/actors/mother'
+} from 'scene/instanceKeys/mother'
 
-import { HUMILIATED } from 'scene/actors/preteenBennett'
+import { HUMILIATED } from 'scene/instanceKeys/preteenBennett'
 
-import { COMFORTING } from 'scene/actors/sasha'
+import { COMFORTING } from 'scene/instanceKeys/sasha'
 
 import {
     BENNETT_BANJO,
     BENNETT_RECORDING
-} from 'scene/actors/stephanie'
+} from 'scene/instanceKeys/stephanie'
 
 import {
     PAST,
     PRESENT,
     FUTURE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

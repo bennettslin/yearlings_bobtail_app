@@ -26,11 +26,11 @@ import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_THOUGHTS
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
 import {
     JOGGER
-} from 'scene/actors/nestor'
+} from 'scene/instanceKeys/nestor'
 
 import {
     DISHROOM_LANCET,
@@ -44,7 +44,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 /**
  * All of these scenes repeat twice.

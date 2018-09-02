@@ -2,12 +2,12 @@ import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from 'scene/actors/anita'
+} from 'scene/instanceKeys/anita'
 
 import {
     YOUNG_CHILD,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [EXASPERATED]: {

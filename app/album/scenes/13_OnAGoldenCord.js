@@ -22,7 +22,7 @@ import {
     STEPHANIE
 } from 'scene/actorKeys'
 
-import { OFFICER } from 'scene/actors/amy'
+import { OFFICER } from 'scene/instanceKeys/amy'
 
 import {
     CORD_SIDE,
@@ -30,19 +30,19 @@ import {
     CORD_REAR,
     HORSING,
     DRYING_TEARS
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
-import { RETURNING_CORD } from 'scene/actors/liz'
+import { RETURNING_CORD } from 'scene/instanceKeys/liz'
 
 import {
     BENNETT_DEFIANT,
     BENNETT_HORSING,
     BENNETT_SORROWFUL
-} from 'scene/actors/stephanie'
+} from 'scene/instanceKeys/stephanie'
 
-import { CROSSING_GUARD } from 'scene/actors/willy'
+import { CROSSING_GUARD } from 'scene/instanceKeys/willy'
 
-import { YOUNG_CHILD } from 'scene/actors/songs'
+import { YOUNG_CHILD } from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

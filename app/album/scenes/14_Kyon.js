@@ -14,7 +14,7 @@ import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
-} from 'scene/actors/khari'
+} from 'scene/instanceKeys/khari'
 
 import {
     PETTING_SEATED,
@@ -24,7 +24,7 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from 'scene/actors/liz'
+} from 'scene/instanceKeys/liz'
 
 module.exports = [
     {

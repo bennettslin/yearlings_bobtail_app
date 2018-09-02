@@ -20,7 +20,7 @@ import {
 
 import {
     SMOKER
-} from 'scene/actors/amy'
+} from 'scene/instanceKeys/amy'
 
 import {
     BREAKUP_DEJECTED,
@@ -28,15 +28,15 @@ import {
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
     PIOUS,
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
 import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from 'scene/actors/catherine'
+} from 'scene/instanceKeys/catherine'
 
-import { CATHOLIC_GUY } from 'scene/actors/wade'
+import { CATHOLIC_GUY } from 'scene/instanceKeys/wade'
 
 module.exports = [
     {

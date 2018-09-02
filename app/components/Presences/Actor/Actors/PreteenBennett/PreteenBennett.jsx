@@ -49,9 +49,9 @@ import {
     WISTFUL,
     SHEEPISH,
     HUMILIATED
-} from 'scene/actors/preteenBennett'
+} from 'scene/instanceKeys/preteenBennett'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [CAUTIOUS]: Cautious,

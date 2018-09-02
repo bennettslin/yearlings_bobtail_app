@@ -2,7 +2,7 @@ import {
     SMOKER,
     OFFICER,
     DOCTOR
-} from 'scene/actors/amy'
+} from 'scene/instanceKeys/amy'
 
 import {
     SQUEEZING,
@@ -10,7 +10,7 @@ import {
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [SMOKER]: {

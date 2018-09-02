@@ -19,18 +19,18 @@ import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
 import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from 'scene/actors/miriam'
+} from 'scene/instanceKeys/miriam'
 
 import {
     COWGIRL,
     BLOWJOB
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

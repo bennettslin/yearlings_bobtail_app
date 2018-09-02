@@ -13,9 +13,9 @@ import {
     TYING,
     GESTURING,
     SNACKING
-} from 'scene/actors/brad'
+} from 'scene/instanceKeys/brad'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [JEWISH_BOY]: JewishBoy,

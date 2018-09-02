@@ -1,7 +1,7 @@
 import {
     PROLOGUE,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [PROLOGUE]: {

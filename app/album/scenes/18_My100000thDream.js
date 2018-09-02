@@ -22,7 +22,7 @@ import {
 
 import {
     DOCTOR
-} from 'scene/actors/amy'
+} from 'scene/instanceKeys/amy'
 
 import {
     EL_TORITO,
@@ -31,7 +31,7 @@ import {
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

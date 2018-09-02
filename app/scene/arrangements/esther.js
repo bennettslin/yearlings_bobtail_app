@@ -3,12 +3,12 @@ import {
     SNICKERING,
     SITA_HURT,
     SITA_SOBBING
-} from 'scene/actors/esther'
+} from 'scene/instanceKeys/esther'
 
 import {
     YOUNG_CHILD,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [CURIOUS]: {

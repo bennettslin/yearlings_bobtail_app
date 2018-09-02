@@ -35,7 +35,7 @@ import {
     WADE
 } from 'scene/actorKeys'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

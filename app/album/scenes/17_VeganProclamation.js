@@ -31,26 +31,26 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
 import {
     PROTECTIVE,
     CARESSING,
     CARESSING_REFLECTION
-} from 'scene/actors/khari'
+} from 'scene/instanceKeys/khari'
 
 import {
     SELFLESS_CONCERN,
     CARESSED,
     CARESSED_REFLECTION
-} from 'scene/actors/liz'
+} from 'scene/instanceKeys/liz'
 
-import { INTRODUCING } from 'scene/actors/tristan'
+import { INTRODUCING } from 'scene/instanceKeys/tristan'
 
 import {
     GREETING,
     PROTESTER
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

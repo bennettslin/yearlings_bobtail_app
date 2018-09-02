@@ -7,7 +7,7 @@ import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from 'scene/actors/miriam'
+} from 'scene/instanceKeys/miriam'
 
 import {
     NOOGIE,
@@ -16,7 +16,7 @@ import {
     GREETING,
     GOPI,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [NOOGIE]: {

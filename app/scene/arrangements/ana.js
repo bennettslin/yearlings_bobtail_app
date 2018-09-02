@@ -2,7 +2,7 @@ import {
     SQUATTING,
     CHUCKLING,
     SMIRKING
-} from 'scene/actors/ana'
+} from 'scene/instanceKeys/ana'
 
 import {
     EATING,
@@ -14,7 +14,7 @@ import {
     PERFORMING,
     WAITING,
     EPILOGUE
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [SQUATTING]: {

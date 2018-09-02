@@ -11,9 +11,9 @@ import {
     FEIGNING_FEAR,
     THROWING,
     NOODLING
-} from 'scene/actors/andrew'
+} from 'scene/instanceKeys/andrew'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [FEIGNING_FEAR]: FeigningFear,

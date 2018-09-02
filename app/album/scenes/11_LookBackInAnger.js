@@ -28,16 +28,16 @@ import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from 'scene/actors/bennett'
+} from 'scene/instanceKeys/bennett'
 
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from 'scene/actors/liz'
+} from 'scene/instanceKeys/liz'
 
-import { SHANE_SPILLING } from 'scene/actors/tomer'
+import { SHANE_SPILLING } from 'scene/instanceKeys/tomer'
 
-import { WATCHING } from 'scene/actors/wade'
+import { WATCHING } from 'scene/instanceKeys/wade'
 
 import {
     PERFORMING,
@@ -46,7 +46,7 @@ import {
     CARRYING,
     MINGLING,
     WAITING,
-} from 'scene/actors/songs'
+} from 'scene/instanceKeys/songs'
 
 module.exports = [
     {

@@ -21,9 +21,9 @@ import {
     PROTECTIVE,
     CARESSING,
     CARESSING_REFLECTION
-} from 'scene/actors/khari'
+} from 'scene/instanceKeys/khari'
 
-import { EPILOGUE } from 'scene/actors/songs'
+import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [DOUBLE_ALBERT]: DoubleAlbert,
