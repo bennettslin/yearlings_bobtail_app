@@ -1,10 +1,4 @@
 import {
-    CUTOUTS,
-    FIXTURES,
-    FLATS
-} from 'constants/scene'
-
-import {
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
@@ -37,48 +31,44 @@ import {
     KHARI_REFLECTION
 } from 'scene/actorKeys'
 
-import ARRANGEMENTS_YOUNG_BENNETT from './youngBennett'
-import ARRANGEMENTS_PRETEEN_BENNETT from './preteenBennett'
+import ARRANGEMENTS_YOUNG_BENNETT from './actors/youngBennett'
+import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 import {
     ARRANGEMENTS_BENNETT,
     ARRANGEMENTS_BENNETT_REFLECTION
-} from './bennett'
-import ARRANGEMENTS_OLD_BENNETT from './oldBennett'
-import ARRANGEMENTS_ANITA from './anita'
-import ARRANGEMENTS_ESTHER from './esther'
-import ARRANGEMENTS_WILLY from './willy'
-import ARRANGEMENTS_MOTHER from './mother'
-import ARRANGEMENTS_FATHER from './father'
-import ARRANGEMENTS_CHRISTOPHER from './christopher'
-import ARRANGEMENTS_SASHA from './sasha'
-import ARRANGEMENTS_BRAD from './brad'
-import ARRANGEMENTS_ANDREW from './andrew'
-import ARRANGEMENTS_CATHERINE from './catherine'
-import ARRANGEMENTS_MARA from './mara'
-import ARRANGEMENTS_JACOB from './jacob'
-import ARRANGEMENTS_ANA from './ana'
-import ARRANGEMENTS_HOWIE from './howie'
-import ARRANGEMENTS_TOMER from './tomer'
+} from './actors/bennett'
+import ARRANGEMENTS_OLD_BENNETT from './actors/oldBennett'
+import ARRANGEMENTS_ANITA from './actors/anita'
+import ARRANGEMENTS_ESTHER from './actors/esther'
+import ARRANGEMENTS_WILLY from './actors/willy'
+import ARRANGEMENTS_MOTHER from './actors/mother'
+import ARRANGEMENTS_FATHER from './actors/father'
+import ARRANGEMENTS_CHRISTOPHER from './actors/christopher'
+import ARRANGEMENTS_SASHA from './actors/sasha'
+import ARRANGEMENTS_BRAD from './actors/brad'
+import ARRANGEMENTS_ANDREW from './actors/andrew'
+import ARRANGEMENTS_CATHERINE from './actors/catherine'
+import ARRANGEMENTS_MARA from './actors/mara'
+import ARRANGEMENTS_JACOB from './actors/jacob'
+import ARRANGEMENTS_ANA from './actors/ana'
+import ARRANGEMENTS_HOWIE from './actors/howie'
+import ARRANGEMENTS_TOMER from './actors/tomer'
 import {
     ARRANGEMENTS_LIZ,
     ARRANGEMENTS_LIZ_REFLECTION
-} from './liz'
+} from './actors/liz'
 import {
     ARRANGEMENTS_KHARI,
     ARRANGEMENTS_KHARI_REFLECTION
-} from './khari'
-import ARRANGEMENTS_MIRIAM from './miriam'
-import ARRANGEMENTS_TRISTAN from './tristan'
-import ARRANGEMENTS_NESTOR from './nestor'
-import ARRANGEMENTS_AMY from './amy'
-import ARRANGEMENTS_STEPHANIE from './stephanie'
-import ARRANGEMENTS_WADE from './wade'
+} from './actors/khari'
+import ARRANGEMENTS_MIRIAM from './actors/miriam'
+import ARRANGEMENTS_TRISTAN from './actors/tristan'
+import ARRANGEMENTS_NESTOR from './actors/nestor'
+import ARRANGEMENTS_AMY from './actors/amy'
+import ARRANGEMENTS_STEPHANIE from './actors/stephanie'
+import ARRANGEMENTS_WADE from './actors/wade'
 
-import ARRANGEMENTS_CUTOUTS from './cutouts'
-import ARRANGEMENTS_FIXTURES from './fixtures'
-import ARRANGEMENTS_FLATS from './flats'
-
-const ALL_ARRANGEMENTS = {
+const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: ARRANGEMENTS_YOUNG_BENNETT,
     [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
     [BENNETT]: ARRANGEMENTS_BENNETT,
@@ -108,11 +98,7 @@ const ALL_ARRANGEMENTS = {
     [WADE]: ARRANGEMENTS_WADE,
     [BENNETT_REFLECTION]: ARRANGEMENTS_BENNETT_REFLECTION,
     [LIZ_REFLECTION]: ARRANGEMENTS_LIZ_REFLECTION,
-    [KHARI_REFLECTION]: ARRANGEMENTS_KHARI_REFLECTION,
-
-    [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
-    [FIXTURES]: ARRANGEMENTS_FIXTURES,
-    [FLATS]: ARRANGEMENTS_FLATS
+    [KHARI_REFLECTION]: ARRANGEMENTS_KHARI_REFLECTION
 }
 
-export default ALL_ARRANGEMENTS
+export default ARRANGEMENTS_ACTORS

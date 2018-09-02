@@ -2,7 +2,8 @@
 
 import keys from 'lodash.keys'
 
-import ALL_ARRANGEMENTS from 'scene/arrangements/arrangements'
+import ARRANGEMENTS_ACTORS from 'scene/arrangements/arrangementsActors'
+import ARRANGEMENTS_THINGS from 'scene/arrangements/arrangementsThings'
 
 import { ACTORS } from 'constants/scene'
 
@@ -153,12 +154,12 @@ export const finalRegisterPresenceYIndices = (
                     }
 
                     arrangementObject =
-                        ALL_ARRANGEMENTS[presenceName][instance]
+                        ARRANGEMENTS_ACTORS[presenceName][instance]
 
                 // Cutout, fixture, flat.
                 } else {
                     arrangementObject =
-                        ALL_ARRANGEMENTS[presenceType][presenceName]
+                        ARRANGEMENTS_THINGS[presenceType][presenceName]
                 }
 
                 const {
