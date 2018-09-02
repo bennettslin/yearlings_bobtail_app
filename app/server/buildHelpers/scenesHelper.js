@@ -2,6 +2,10 @@
 
 import keys from 'lodash.keys'
 
+import ALL_ARRANGEMENTS from 'scene/arrangements/arrangements'
+
+import { ACTORS } from 'constants/scene'
+
 /**
  * FIXME: These are a mess.
  */
@@ -131,10 +135,39 @@ export const finalRegisterPresenceYIndices = (
 
                 const presence = presences[presenceType][presenceName]
 
-                /**
-                 * Determine the yIndex of each presence.
-                 */
-                const { yIndex } = presence
+                let arrangementObject,
+                    { instance } = presence
+
+                // Actor.
+                if (presenceType === ACTORS) {
+
+                    /**
+                     * If this is an alternate character, the instance is
+                     * nested within the character object.
+                     */
+                    if (!instance) {
+                        const characterName = keys(presence)[0],
+                            characterPresence = presence[characterName]
+
+                        instance = characterPresence.instance
+                    }
+
+                    arrangementObject =
+                        ALL_ARRANGEMENTS[presenceName][instance]
+
+                // Cutout, fixture, flat.
+                } else {
+                    arrangementObject =
+                        ALL_ARRANGEMENTS[presenceType][presenceName]
+                }
+
+                const {
+                    /**
+                     * Determine the yIndex of each presence.
+                     */
+                    yIndex,
+                    arrangement
+                } = arrangementObject
 
                 /**
                  * TODO: Eventually, all presences should have a yIndex. For
@@ -157,8 +190,8 @@ export const finalRegisterPresenceYIndices = (
                     scene.presenceYIndices[yIndex].push({
                         type: presenceType,
                         name: presenceName,
-                        instance: presence.instance,
-                        arrangement: presence.arrangement
+                        instance,
+                        arrangement
                     })
                 }
             })

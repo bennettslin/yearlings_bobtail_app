@@ -1,11 +1,5 @@
 module.exports = [
 
-    {
-        taskName: `yIndex and arrangement live in their own configs.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     /**
      * Final scene stuff.
      */

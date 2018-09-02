@@ -31,8 +31,7 @@ import {
 import {
     COLLECTING,
     DUCKING,
-    FIGHTING,
-    GREETING
+    FIGHTING
 } from 'scene/actors/willy'
 
 import {
@@ -51,7 +50,8 @@ import {
 } from 'scene/actors/christopher'
 
 import {
-    GANGBANGER
+    GANGBANGER,
+    GREETING
 } from 'scene/actors/songs'
 
 module.exports = [

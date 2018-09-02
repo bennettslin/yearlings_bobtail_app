@@ -3813,4 +3813,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `yIndex and arrangement live in their own configs.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

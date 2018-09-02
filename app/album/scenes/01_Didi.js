@@ -40,10 +40,8 @@ import {
 
 import {
     FIRE_HYDRANT,
-
     PLAYGROUND_SLIDE,
     NURSE_OFFICE_BUBBLE,
-
     BATHTUB,
     MIRRORED_SINK,
     TOWEL_RACK
@@ -53,7 +51,6 @@ import {
     NOHO_HOUSES_BACKDROP,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-
     NOHO_SCHOOL_BACKDROP,
     NOHO_SCHOOLHOUSE
 } from 'scene/flatKeys'
@@ -63,70 +60,19 @@ import {
     RECORD_PLAYER_STOOL
 } from 'scene/fixtureKeys'
 
-const
-PRESENCES_NOHO_HOUSES = {
-    cutouts: {
-        [FIRE_HYDRANT]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 1,
-                xWidth: 1,
-                zHeight: 2
-            }
-        }
-    },
-    flats: {
-        [NOHO_HOUSES_BACKDROP]: {
-            yIndex: 0,
-            arrangement: {
-                xFloat: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
-        },
-        [NOHO_HOUSE_LEFT]: {
-            yIndex: 1,
-            arrangement: {
-                xFloat: 2,
-                xWidth: 5,
-                zHeight: 3
-            }
-        },
-        [NOHO_HOUSE_RIGHT]: {
-            yIndex: 1,
-            arrangement: {
-                xFloat: 9,
-                xWidth: 5,
-                zHeight: 3
-            }
-        }
-    }
-},
-CUTOUTS_NOHO_BATHROOM = {
-    [MIRRORED_SINK]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 8,
-            xWidth: 2,
-            zHeight: 3
-        }
-    },
-    [BATHTUB]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
-        }
-    }
-}
-
 module.exports = [
     {
         unitIndex: 1,
         description: `North Hollywood houses.`,
         presences: {
-            ...PRESENCES_NOHO_HOUSES
+            cutouts: {
+                [FIRE_HYDRANT]: true
+            },
+            flats: {
+                [NOHO_HOUSES_BACKDROP]: true,
+                [NOHO_HOUSE_LEFT]: true,
+                [NOHO_HOUSE_RIGHT]: true
+            }
         },
         cubes: NOHO_HOUSES_KEY,
         sky: {
@@ -143,40 +89,29 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, looking at Anita',
-                    instance: CURIOUS,
-                    yIndex: 4,
-                    arrangement: {
-                        xFloat: 3.5,
-                        xWidth: 1,
-                        zHeight: 3.83
-                    }
+                    instance: CURIOUS
                 },
                 [ANITA]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, rushing, exasperated',
-                    instance: EXASPERATED,
-                    yIndex: 5,
-                    arrangement: {
-                        xFloat: 5,
-                        xWidth: 1,
-                        zHeight: 3.75
-                    }
+                    instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, running, panicked',
-                    instance: PANICKED,
-                    yIndex: 5,
-                    arrangement: {
-                        xFloat: 9,
-                        xWidth: 1,
-                        zHeight: 3.5
-                    }
+                    instance: PANICKED
                 }
             },
-            ...PRESENCES_NOHO_HOUSES
+            cutouts: {
+                [FIRE_HYDRANT]: true
+            },
+            flats: {
+                [NOHO_HOUSES_BACKDROP]: true,
+                [NOHO_HOUSE_LEFT]: true,
+                [NOHO_HOUSE_RIGHT]: true
+            }
         },
         cubes: NOHO_HOUSES_KEY,
         sky: {
@@ -193,86 +128,31 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'front, playing ball, offended',
-                    instance: CONCERNED,
-                    yIndex: 3,
-                    arrangement: {
-                        xFloat: 2,
-                        xWidth: 1,
-                        zHeight: 3.75
-                    }
+                    instance: CONCERNED
                 },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, skipping, pointing back and laughing',
-                    instance: SNICKERING,
-                    yIndex: 4,
-                    arrangement: {
-                        xFloat: 5.5,
-                        xWidth: 1,
-                        zHeight: 3.83
-                    }
+                    instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, flustered',
-                    instance: FLUSTERED,
-                    yIndex: 4,
-                    arrangement: {
-                        xFloat: 8.5,
-                        xWidth: 1.5,
-                        zHeight: 2.5,
-                        zOffset: -2
-                    }
+                    instance: FLUSTERED
                 }
             },
             cutouts: {
-                [PLAYGROUND_SLIDE]: {
-                    yIndex: 1,
-                    arrangement: {
-                        xFloat: 4,
-                        xWidth: 2,
-                        zHeight: 3
-                    }
-                },
-                [NURSE_OFFICE_BUBBLE]: {
-                    yIndex: 2,
-                    arrangement: {
-                        xFloat: 8,
-                        xWidth: 5,
-                        zHeight: 5
-                    }
-                }
+                [PLAYGROUND_SLIDE]: true,
+                [NURSE_OFFICE_BUBBLE]: true
             },
             fixtures: {
-                [PLAYGROUND_BALL]: {
-                    yIndex: 4,
-                    arrangement: {
-                        xFloat: 2,
-                        xWidth: 1,
-                        zHeight: 1,
-                        zOffset: 2
-                    }
-                }
+                [PLAYGROUND_BALL]: true
             },
             flats: {
-                [NOHO_SCHOOL_BACKDROP]: {
-                    yIndex: 0,
-                    arrangement: {
-                        xFloat: 5.5,
-                        xWidth: 12,
-                        zHeight: 4
-                    }
-                },
-                [NOHO_SCHOOLHOUSE]: {
-                    yIndex: 1,
-                    arrangement: {
-                        xFloat: 2,
-                        xWidth: 5,
-                        zHeight: 3
-                    }
-                }
+                [NOHO_SCHOOL_BACKDROP]: true,
+                [NOHO_SCHOOLHOUSE]: true
             }
         },
         cubes: NOHO_SCHOOL_KEY,
@@ -290,26 +170,13 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'side, in bathtub, downcast',
-                    instance: BATHING,
-                    yIndex: 3,
-                    arrangement: {
-                        xFloat: 5.5,
-                        xWidth: 1.5,
-                        zHeight: 2.5
-                    }
+                    instance: BATHING
                 }
             },
             cutouts: {
-                ...CUTOUTS_NOHO_BATHROOM,
-                [TOWEL_RACK]: {
-                    yIndex: 1,
-                    arrangement: {
-                        xFloat: 4,
-                        xWidth: 2,
-                        zHeight: 2,
-                        zOffset: 3
-                    }
-                }
+                [MIRRORED_SINK]: true,
+                [BATHTUB]: true,
+                [TOWEL_RACK]: true
             }
         },
         cubes: NOHO_BATHROOM_KEY,
@@ -327,49 +194,24 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'back, squatting, smiling',
-                    instance: CHEERING,
-                    yIndex: 5,
-                    arrangement: {
-                        xFloat: 4.5,
-                        xWidth: 1.5,
-                        zHeight: 2.75
-                    }
+                    instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, facing front, singing, smiling',
-                    instance: SINGING,
-                    yIndex: 3,
-                    arrangement: {
-                        xFloat: 6,
-                        xWidth: 1,
-                        zHeight: 3
-                    }
+                    instance: SINGING
                 }
             },
             cutouts: {
-                ...CUTOUTS_NOHO_BATHROOM
+                [MIRRORED_SINK]: true,
+                [BATHTUB]: true
             },
             fixtures: {
-                [RECORD_PLAYER_STOOL]: {
-                    yIndex: 5,
-                    arrangement: {
-                        xFloat: 6.5,
-                        xWidth: 1,
-                        zHeight: 1
-                    }
-                }
+                [RECORD_PLAYER_STOOL]: true
             },
             flats: {
-                [NOHO_HOUSES_BACKDROP]: {
-                    yIndex: 0,
-                    arrangement: {
-                        xFloat: 5.5,
-                        xWidth: 12,
-                        zHeight: 4
-                    }
-                }
+                [NOHO_HOUSES_BACKDROP]: true
             }
         },
         cubes: NOHO_BATHROOM_OPEN_KEY,
