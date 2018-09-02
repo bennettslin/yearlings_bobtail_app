@@ -1,7 +1,6 @@
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
-    NURSE_OFFICE_BUBBLE,
     BATHTUB,
     MIRRORED_SINK,
     TOWEL_RACK
@@ -22,14 +21,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 4,
             xWidth: 2,
             zHeight: 3
-        }
-    },
-    [NURSE_OFFICE_BUBBLE]: {
-        yIndex: 2,
-        arrangement: {
-            xFloat: 8,
-            xWidth: 5,
-            zHeight: 5
         }
     },
     [BATHTUB]: {

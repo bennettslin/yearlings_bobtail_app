@@ -1,14 +1,11 @@
 import PlaygroundSlide from './PlaygroundSlide'
-import NurseOfficeBubble from './NurseOfficeBubble'
 
 import {
-    PLAYGROUND_SLIDE,
-    NURSE_OFFICE_BUBBLE
+    PLAYGROUND_SLIDE
 } from 'scene/cutoutKeys'
 
 const CUTOUTS_NOHO_SCHOOL = {
-    [PLAYGROUND_SLIDE]: PlaygroundSlide,
-    [NURSE_OFFICE_BUBBLE]: NurseOfficeBubble
+    [PLAYGROUND_SLIDE]: PlaygroundSlide
 }
 
 export {

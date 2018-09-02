@@ -41,7 +41,6 @@ import {
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
-    NURSE_OFFICE_BUBBLE,
     BATHTUB,
     MIRRORED_SINK,
     TOWEL_RACK
@@ -52,7 +51,8 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOL_BACKDROP,
-    NOHO_SCHOOLHOUSE
+    NOHO_SCHOOLHOUSE,
+    NURSE_OFFICE_BUBBLE
 } from 'scene/flatKeys'
 
 import {
@@ -144,15 +144,15 @@ module.exports = [
                 }
             },
             cutouts: {
-                [PLAYGROUND_SLIDE]: true,
-                [NURSE_OFFICE_BUBBLE]: true
+                [PLAYGROUND_SLIDE]: true
             },
             fixtures: {
                 [PLAYGROUND_BALL]: true
             },
             flats: {
                 [NOHO_SCHOOL_BACKDROP]: true,
-                [NOHO_SCHOOLHOUSE]: true
+                [NOHO_SCHOOLHOUSE]: true,
+                [NURSE_OFFICE_BUBBLE]: true
             }
         },
         cubes: NOHO_SCHOOL_KEY,
