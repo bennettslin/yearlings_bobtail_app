@@ -2,12 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { FIXTURES_NOHO_SCHOOL } from './Fixtures/NohoSchool/nohoSchool'
-import { FIXTURES_FAMILY_BATHROOM } from './Fixtures/FamilyBathroom/familyBathroom'
+import PlaygroundBall from './Fixtures/NohoSchool/PlaygroundBall'
+import RecordPlayerStool from './Fixtures/FamilyBathroom/RecordPlayerStool'
+
+import {
+    PLAYGROUND_BALL,
+    RECORD_PLAYER_STOOL
+} from 'scene/fixtureKeys'
+
 
 const FIXTURES_MAP = {
-    ...FIXTURES_NOHO_SCHOOL,
-    ...FIXTURES_FAMILY_BATHROOM,
+    [PLAYGROUND_BALL]: PlaygroundBall,
+    [RECORD_PLAYER_STOOL]: RecordPlayerStool
 },
 DEFAULT_COMPONENT = () => (null)
 

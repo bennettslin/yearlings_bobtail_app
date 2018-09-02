@@ -2,12 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { FLATS_NOHO_HOUSES } from './Flats/NohoHouses/nohoHouses'
-import { FLATS_NOHO_SCHOOL } from './Flats/NohoSchool/nohoSchool'
+import NohoHousesBackdrop from './Flats/NohoHouses/NohoHousesBackdrop'
+import NohoHouseLeft from './Flats/NohoHouses/NohoHouseLeft'
+import NohoHouseRight from './Flats/NohoHouses/NohoHouseRight'
+import NohoSchoolBackdrop from './Flats/NohoSchool/NohoSchoolBackdrop'
+import NohoSchoolhouse from './Flats/NohoSchool/NohoSchoolhouse'
+import NurseOfficeBubble from './Flats/NohoSchool/NurseOfficeBubble'
+
+import {
+    NOHO_HOUSES_BACKDROP,
+    NOHO_HOUSE_LEFT,
+    NOHO_HOUSE_RIGHT,
+    NOHO_SCHOOL_BACKDROP,
+    NOHO_SCHOOLHOUSE,
+    NURSE_OFFICE_BUBBLE
+} from 'scene/flatKeys'
 
 const FLATS_MAP = {
-    ...FLATS_NOHO_HOUSES,
-    ...FLATS_NOHO_SCHOOL
+    [NOHO_HOUSES_BACKDROP]: NohoHousesBackdrop,
+    [NOHO_HOUSE_LEFT]: NohoHouseLeft,
+    [NOHO_HOUSE_RIGHT]: NohoHouseRight,
+    [NOHO_SCHOOL_BACKDROP]: NohoSchoolBackdrop,
+    [NOHO_SCHOOLHOUSE]: NohoSchoolhouse,
+    [NURSE_OFFICE_BUBBLE]: NurseOfficeBubble
 },
 DEFAULT_COMPONENT = () => (null)
 

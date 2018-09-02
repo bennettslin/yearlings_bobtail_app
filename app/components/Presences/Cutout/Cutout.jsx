@@ -2,14 +2,26 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { CUTOUTS_NOHO_HOUSES } from './Cutouts/NohoHouses/nohoHouses'
-import { CUTOUTS_NOHO_SCHOOL } from './Cutouts/NohoSchool/nohoSchool'
-import { CUTOUTS_FAMILY_BATHROOM } from './Cutouts/FamilyBathroom/familyBathroom'
+import FireHydrant from './Cutouts/NohoHouses/FireHydrant'
+import PlaygroundSlide from './Cutouts/NohoSchool/PlaygroundSlide'
+import Bathtub from './Cutouts/FamilyBathroom/Bathtub'
+import MirroredSink from './Cutouts/FamilyBathroom/MirroredSink'
+import TowelRack from './Cutouts/FamilyBathroom/TowelRack'
+
+import {
+    FIRE_HYDRANT,
+    PLAYGROUND_SLIDE,
+    BATHTUB,
+    MIRRORED_SINK,
+    TOWEL_RACK
+} from 'scene/cutoutKeys'
 
 const CUTOUTS_MAP = {
-    ...CUTOUTS_NOHO_HOUSES,
-    ...CUTOUTS_NOHO_SCHOOL,
-    ...CUTOUTS_FAMILY_BATHROOM
+    [FIRE_HYDRANT]: FireHydrant,
+    [PLAYGROUND_SLIDE]: PlaygroundSlide,
+    [BATHTUB]: Bathtub,
+    [MIRRORED_SINK]: MirroredSink,
+    [TOWEL_RACK]: TowelRack
 },
 DEFAULT_COMPONENT = () => (null)
 
