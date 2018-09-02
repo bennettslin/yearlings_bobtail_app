@@ -1,9 +1,9 @@
 import {
     MUSEUM_KEY,
     BACKSTAGE_KEY,
-    SITA_APARTMENT_GATE_1_KEY,
-    SITA_APARTMENT_GATE_2_KEY,
-    GO_KART_KEY
+    LIZ_GATE_KEY,
+    LIZ_GATE_STREET_KEY,
+    GO_KARTS_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -52,7 +52,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_GATE_1_KEY,
+        cubes: LIZ_GATE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -147,7 +147,7 @@ module.exports = [
                 }
             }
         },
-        cubes: GO_KART_KEY,
+        cubes: GO_KARTS_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -174,7 +174,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_GATE_2_KEY,
+        cubes: LIZ_GATE_STREET_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

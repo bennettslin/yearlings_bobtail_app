@@ -2,8 +2,8 @@ import {
     EL_TORITO_KEY,
     PAMPAS_KEY,
     OUTDOOR_WEDDING_KEY,
-    DREAM_CLIFF_KEY,
-    DREAM_DEATHBED_KEY
+    CLIFF_KEY,
+    CLIFF_DEATHBED_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -160,7 +160,7 @@ module.exports = [
                 }
             }
         },
-        cubes: DREAM_CLIFF_KEY,
+        cubes: CLIFF_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING
@@ -195,7 +195,7 @@ module.exports = [
                 }
             }
         },
-        cubes: DREAM_DEATHBED_KEY,
+        cubes: CLIFF_DEATHBED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING

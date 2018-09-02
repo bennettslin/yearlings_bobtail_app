@@ -1,25 +1,25 @@
 // Separating other cubes purely for purpose of keeping file smaller.
 
 import {
-    TAIWAN_PUPPET_SHOW_KEY,
+    PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
-    TETHERBALL_SCENE_KEY,
-    ODIN_SCENE_1_KEY,
-    ODIN_SCENE_2_KEY,
-    ODIN_SCENE_3_KEY,
-    ODIN_SCENE_4_KEY,
-    ODIN_SCENE_5_KEY,
-    ODIN_SCENE_6_KEY,
-    ODIN_SCENE_7_KEY,
-    ODIN_SCENE_8_KEY,
-    SNOW_GLOBES_1_KEY,
-    SNOW_GLOBES_2_KEY,
-    SNOW_GLOBES_3_KEY,
+    TETHERBALL_COURT_KEY,
+    TAIWAN_ROOM_KEY,
+    TAIWAN_STAIRS_KEY,
+    TAIWAN_GATE_KEY,
+    RICKSHAW_KEY,
+    SHORE_KEY,
+    BUOY_KEY,
+    OCEAN_DEPTHS_KEY,
+    OCEAN_FLOOR_KEY,
+    SNOWGLOBES_PAST_KEY,
+    SNOWGLOBES_PRESENT_KEY,
+    SNOWGLOBES_FUTURE_KEY,
     EL_TORITO_KEY,
     PAMPAS_KEY,
     OUTDOOR_WEDDING_KEY,
-    DREAM_CLIFF_KEY,
-    DREAM_DEATHBED_KEY
+    CLIFF_KEY,
+    CLIFF_DEATHBED_KEY
 } from '../cubesKeys'
 
 import {
@@ -37,7 +37,7 @@ import {
 
 const
 
-    TAIWAN_PUPPET_SHOW_CUBES = {
+    PUPPET_SHOW_CUBES = {
         // Just panels.
         floor: {
             zIndices: [
@@ -60,14 +60,14 @@ const
             ]
         }
     },
-    TETHERBALL_SCENE_CUBES = {
+    TETHERBALL_COURT_CUBES = {
         floor: {
             zIndices: [
                 [1]
             ]
         }
     },
-    ODIN_SCENE_1_CUBES = {
+    TAIWAN_ROOM_CUBES = {
         // Indoor wall is 7.5'. Floor of 2' to imply second story.
         floor: {
             zIndices: [
@@ -80,7 +80,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_2_CUBES = {
+    TAIWAN_STAIRS_CUBES = {
         // Windowsill height of 3'.
         floor: {
             zIndices: [
@@ -92,7 +92,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_3_CUBES = {
+    TAIWAN_GATE_CUBES = {
         // House wall is 6'.
         floor: {
             zIndices: [
@@ -105,7 +105,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_4_CUBES = {
+    RICKSHAW_CUBES = {
         // TODO: Make more natural.
         // Sand.
         floor: {
@@ -114,7 +114,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_5_CUBES = {
+    SHORE_CUBES = {
         // TODO: Make more natural.
         // Sand.
         floor: {
@@ -123,7 +123,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_6_CUBES = {
+    BUOY_CUBES = {
         // TODO: Make more natural.
         // Ocean wave.
         floor: {
@@ -137,7 +137,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_7_CUBES = {
+    OCEAN_DEPTHS_CUBES = {
         // TODO: Make more natural.
         // Ocean floor.
         floor: {
@@ -146,7 +146,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_8_CUBES = {
+    OCEAN_FLOOR_CUBES = {
         // TODO: Make more natural.
         // Ocean floor.
         floor: {
@@ -155,7 +155,7 @@ const
             ]
         }
     },
-    SNOW_GLOBES_1_CUBES = {
+    SNOWGLOBES_PAST_CUBES = {
         floor: {
             zIndices: [
                 [g],
@@ -166,7 +166,7 @@ const
             ]
         }
     },
-    SNOW_GLOBES_2_CUBES = {
+    SNOWGLOBES_PRESENT_CUBES = {
         floor: {
             zIndices: [
                 [g],
@@ -178,7 +178,7 @@ const
             ]
         }
     },
-    SNOW_GLOBES_3_CUBES = {
+    SNOWGLOBES_FUTURE_CUBES = {
         floor: {
             zIndices: [
                 [g],
@@ -223,7 +223,7 @@ const
             ]
         }
     },
-    DREAM_CLIFF_CUBES = {
+    CLIFF_CUBES = {
         slantDirection: RIGHT,
         /**
          * -----------.--
@@ -249,7 +249,7 @@ const
             ]
         }
     },
-    DREAM_DEATHBED_CUBES = {
+    CLIFF_DEATHBED_CUBES = {
         slantDirection: RIGHT,
         /**
          * -----------.--
@@ -277,25 +277,25 @@ const
     },
 
     CUBES_OTHER = {
-        [TAIWAN_PUPPET_SHOW_KEY]: TAIWAN_PUPPET_SHOW_CUBES,
+        [PUPPET_SHOW_KEY]: PUPPET_SHOW_CUBES,
         [SCHOOLBUS_KEY]: SCHOOLBUS_CUBES,
-        [TETHERBALL_SCENE_KEY]: TETHERBALL_SCENE_CUBES,
-        [ODIN_SCENE_1_KEY]: ODIN_SCENE_1_CUBES,
-        [ODIN_SCENE_2_KEY]: ODIN_SCENE_2_CUBES,
-        [ODIN_SCENE_3_KEY]: ODIN_SCENE_3_CUBES,
-        [ODIN_SCENE_4_KEY]: ODIN_SCENE_4_CUBES,
-        [ODIN_SCENE_5_KEY]: ODIN_SCENE_5_CUBES,
-        [ODIN_SCENE_6_KEY]: ODIN_SCENE_6_CUBES,
-        [ODIN_SCENE_7_KEY]: ODIN_SCENE_7_CUBES,
-        [ODIN_SCENE_8_KEY]: ODIN_SCENE_8_CUBES,
-        [SNOW_GLOBES_1_KEY]: SNOW_GLOBES_1_CUBES,
-        [SNOW_GLOBES_2_KEY]: SNOW_GLOBES_2_CUBES,
-        [SNOW_GLOBES_3_KEY]: SNOW_GLOBES_3_CUBES,
+        [TETHERBALL_COURT_KEY]: TETHERBALL_COURT_CUBES,
+        [TAIWAN_ROOM_KEY]: TAIWAN_ROOM_CUBES,
+        [TAIWAN_STAIRS_KEY]: TAIWAN_STAIRS_CUBES,
+        [TAIWAN_GATE_KEY]: TAIWAN_GATE_CUBES,
+        [RICKSHAW_KEY]: RICKSHAW_CUBES,
+        [SHORE_KEY]: SHORE_CUBES,
+        [BUOY_KEY]: BUOY_CUBES,
+        [OCEAN_DEPTHS_KEY]: OCEAN_DEPTHS_CUBES,
+        [OCEAN_FLOOR_KEY]: OCEAN_FLOOR_CUBES,
+        [SNOWGLOBES_PAST_KEY]: SNOWGLOBES_PAST_CUBES,
+        [SNOWGLOBES_PRESENT_KEY]: SNOWGLOBES_PRESENT_CUBES,
+        [SNOWGLOBES_FUTURE_KEY]: SNOWGLOBES_FUTURE_CUBES,
         [EL_TORITO_KEY]: EL_TORITO_CUBES,
         [PAMPAS_KEY]: PAMPAS_CUBES,
         [OUTDOOR_WEDDING_KEY]: OUTDOOR_WEDDING_CUBES,
-        [DREAM_CLIFF_KEY]: DREAM_CLIFF_CUBES,
-        [DREAM_DEATHBED_KEY]: DREAM_DEATHBED_CUBES
+        [CLIFF_KEY]: CLIFF_CUBES,
+        [CLIFF_DEATHBED_KEY]: CLIFF_DEATHBED_CUBES
     }
 
 export {

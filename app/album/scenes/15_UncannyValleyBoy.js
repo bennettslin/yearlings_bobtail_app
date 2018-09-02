@@ -1,8 +1,8 @@
 import {
-    BENNETT_BASEMENT_KEY,
-    SNOW_GLOBES_1_KEY,
-    SNOW_GLOBES_2_KEY,
-    SNOW_GLOBES_3_KEY
+    BASEMENT_BED_KEY,
+    SNOWGLOBES_PAST_KEY,
+    SNOWGLOBES_PRESENT_KEY,
+    SNOWGLOBES_FUTURE_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -88,7 +88,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_BASEMENT_KEY,
+        cubes: BASEMENT_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -121,7 +121,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_BASEMENT_KEY,
+        cubes: BASEMENT_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -158,7 +158,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SNOW_GLOBES_1_KEY,
+        cubes: SNOWGLOBES_PAST_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -203,7 +203,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SNOW_GLOBES_2_KEY,
+        cubes: SNOWGLOBES_PRESENT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -256,7 +256,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SNOW_GLOBES_3_KEY,
+        cubes: SNOWGLOBES_FUTURE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -301,7 +301,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_BASEMENT_KEY,
+        cubes: BASEMENT_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

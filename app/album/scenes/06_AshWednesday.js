@@ -1,9 +1,9 @@
 import {
-    BENNETT_APARTMENT_COUCH_THOUGHT_KEY,
-    BENNETT_APARTMENT_COURTYARD_KEY,
+    BENNETT_COUCH_THOUGHT_KEY,
+    BENNETT_COURTYARD_KEY,
     CATHOLIC_CHURCH_KEY,
-    SPROUL_PLAZA_KEY,
-    BERKELEY_WALKWAY_KEY
+    BANCROFT_LIBRARY_KEY,
+    CAMPANILE_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -58,7 +58,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_APARTMENT_COURTYARD_KEY,
+        cubes: BENNETT_COURTYARD_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING
@@ -83,7 +83,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_APARTMENT_COUCH_THOUGHT_KEY,
+        cubes: BENNETT_COUCH_THOUGHT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING
@@ -137,7 +137,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SPROUL_PLAZA_KEY,
+        cubes: BANCROFT_LIBRARY_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING
@@ -162,7 +162,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BERKELEY_WALKWAY_KEY,
+        cubes: CAMPANILE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING

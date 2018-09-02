@@ -1,4 +1,4 @@
-import { SITA_APARTMENT_COUCH_KEY } from 'scene/cubesKeys'
+import { LIZ_COUCH_KEY } from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -42,7 +42,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -63,7 +63,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -84,7 +84,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -111,7 +111,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -138,7 +138,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -165,7 +165,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -186,7 +186,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -195,7 +195,7 @@ module.exports = [
     {
         unitIndex: 12,
         description: `Same scene. Peacocks.`,
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

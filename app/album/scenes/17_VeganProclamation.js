@@ -1,9 +1,9 @@
 import {
-    SHOW_STAGE_FRONT_FAR_KEY,
-    SITA_APARTMENT_BED_KEY,
+    CLUB_FRONT_FAR_KEY,
+    LIZ_BED_KEY,
     ALLEY_KEY,
-    SPROUL_PLAZA_KEY,
-    BERKELEY_WALKWAY_KEY
+    BANCROFT_LIBRARY_KEY,
+    CAMPANILE_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -80,7 +80,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BERKELEY_WALKWAY_KEY,
+        cubes: CAMPANILE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -117,7 +117,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SHOW_STAGE_FRONT_FAR_KEY,
+        cubes: CLUB_FRONT_FAR_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -185,7 +185,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_BED_KEY,
+        cubes: LIZ_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -228,7 +228,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SPROUL_PLAZA_KEY,
+        cubes: BANCROFT_LIBRARY_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER

@@ -1,8 +1,8 @@
 import {
-    SHOW_STAGE_SIDE_1_KEY,
-    SHOW_STAGE_SIDE_2_KEY,
-    SITA_APARTMENT_BED_KEY,
-    SHOW_UNLOADING_KEY
+    CLUB_SIDE_CROWD_KEY,
+    CLUB_SIDE_STAGE_KEY,
+    LIZ_BED_KEY,
+    CLUB_LOADING
 } from 'scene/cubesKeys'
 
 import {
@@ -94,7 +94,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SHOW_STAGE_SIDE_1_KEY,
+        cubes: CLUB_SIDE_CROWD_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -131,7 +131,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SHOW_STAGE_SIDE_2_KEY,
+        cubes: CLUB_SIDE_STAGE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -180,7 +180,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SHOW_UNLOADING_KEY,
+        cubes: CLUB_LOADING,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -223,7 +223,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_BED_KEY,
+        cubes: LIZ_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER

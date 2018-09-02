@@ -5,8 +5,8 @@
 import {
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,
-    HOWIE_ATTIC_KEY,
-    UCLA_CAMPUS_KEY,
+    ATTIC_KEY,
+    ROYCE_HALL_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
 } from 'scene/cubesKeys'
@@ -64,7 +64,7 @@ module.exports = [
                 }
             }
         },
-        cubes: UCLA_CAMPUS_KEY,
+        cubes: ROYCE_HALL_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING
@@ -237,7 +237,7 @@ module.exports = [
                 }
             }
         },
-        cubes: HOWIE_ATTIC_KEY,
+        cubes: ATTIC_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING

@@ -1,8 +1,8 @@
 import {
-    CREMATED_CLIFF_KEY,
-    CREMATED_CLIFF_CONVERTIBLE_KEY,
-    CREMATED_DEATHBED_KEY,
-    CREMATED_DEATHBED_TENNIS_KEY
+    EL_CERRITO_KEY,
+    EL_CERRITO_CAR_KEY,
+    EL_CERRITO_DEATHBED_KEY,
+    EL_CERRITO_TENNIS_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -52,7 +52,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
+        cubes: EL_CERRITO_CAR_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -77,7 +77,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
+        cubes: EL_CERRITO_CAR_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -102,7 +102,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
+        cubes: EL_CERRITO_CAR_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -121,7 +121,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CREMATED_DEATHBED_KEY,
+        cubes: EL_CERRITO_DEATHBED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -140,7 +140,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CREMATED_DEATHBED_TENNIS_KEY,
+        cubes: EL_CERRITO_TENNIS_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -165,7 +165,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
+        cubes: EL_CERRITO_CAR_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -174,7 +174,7 @@ module.exports = [
     {
         unitIndex: 11,
         description: `The car is in the background.`,
-        cubes: CREMATED_CLIFF_KEY,
+        cubes: EL_CERRITO_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

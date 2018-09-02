@@ -1,9 +1,9 @@
 import {
-    BENNETT_APARTMENT_COUCH_KEY,
-    SHOW_STAGE_FRONT_KEY,
-    REHEARSAL_SPACE_KEY,
-    MOVIE_THEATRE_1_KEY,
-    MOVIE_THEATRE_2_KEY
+    BENNETT_COUCH_KEY,
+    CLUB_FRONT_KEY,
+    BASEMENT_KEY,
+    CINEMA_KEY,
+    CINEMA_STREET_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -69,7 +69,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_APARTMENT_COUCH_KEY,
+        cubes: BENNETT_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -88,7 +88,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_APARTMENT_COUCH_KEY,
+        cubes: BENNETT_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -115,7 +115,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_APARTMENT_COUCH_KEY,
+        cubes: BENNETT_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -160,7 +160,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SHOW_STAGE_FRONT_KEY,
+        cubes: CLUB_FRONT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -197,7 +197,7 @@ module.exports = [
                 }
             }
         },
-        cubes: REHEARSAL_SPACE_KEY,
+        cubes: BASEMENT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -224,7 +224,7 @@ module.exports = [
                 }
             }
         },
-        cubes: MOVIE_THEATRE_1_KEY,
+        cubes: CINEMA_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -259,7 +259,7 @@ module.exports = [
                 }
             }
         },
-        cubes: MOVIE_THEATRE_1_KEY,
+        cubes: CINEMA_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -286,7 +286,7 @@ module.exports = [
                 }
             }
         },
-        cubes: MOVIE_THEATRE_2_KEY,
+        cubes: CINEMA_STREET_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER

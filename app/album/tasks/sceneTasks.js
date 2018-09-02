@@ -25,7 +25,7 @@ module.exports = [
      */
 
     {
-        taskName: `TAIWAN_PUPPET_SHOW_KEY`,
+        taskName: `PUPPET_SHOW_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -35,62 +35,62 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `TETHERBALL_SCENE_KEY`,
+        taskName: `TETHERBALL_COURT_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `ODIN_SCENE_1_KEY`,
+        taskName: `TAIWAN_ROOM_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `ODIN_SCENE_2_KEY`,
+        taskName: `TAIWAN_STAIRS_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `ODIN_SCENE_3_KEY`,
+        taskName: `TAIWAN_GATE_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `ODIN_SCENE_4_KEY`,
+        taskName: `RICKSHAW_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `ODIN_SCENE_5_KEY`,
+        taskName: `SHORE_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `ODIN_SCENE_6_KEY`,
+        taskName: `BUOY_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `ODIN_SCENE_7_KEY`,
+        taskName: `OCEAN_DEPTHS_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `ODIN_SCENE_8_KEY`,
+        taskName: `OCEAN_FLOOR_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SNOW_GLOBES_1_KEY`,
+        taskName: `SNOWGLOBES_PAST_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SNOW_GLOBES_2_KEY`,
+        taskName: `SNOWGLOBES_PRESENT_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SNOW_GLOBES_3_KEY`,
+        taskName: `SNOWGLOBES_FUTURE_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -110,12 +110,12 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `DREAM_CLIFF_KEY`,
+        taskName: `CLIFF_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `DREAM_DEATHBED_KEY`,
+        taskName: `CLIFF_DEATHBED_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -125,57 +125,57 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `PRETEEN_BENNETT_ROOM_KEY`,
+        taskName: `BENNETT_ROOM_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `PRETEEN_BENNETT_ROOM_OPEN_BED_KEY`,
+        taskName: `BENNETT_ROOM_OPEN_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY`,
+        taskName: `BENNETT_ROOM_DOGS_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_KEY`,
+        taskName: `BENNETT_ROOM_SPACE_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `JUNIOR_HIGH_HALLWAY_KEY`,
+        taskName: `VAN_NUYS_HALLWAY_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `BENNETT_APARTMENT_COUCH_KEY`,
+        taskName: `BENNETT_COUCH_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `BENNETT_APARTMENT_COUCH_THOUGHT_KEY`,
+        taskName: `BENNETT_COUCH_THOUGHT_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `BENNETT_BASEMENT_KEY`,
+        taskName: `BASEMENT_BED_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SHOW_STAGE_FRONT_KEY`,
+        taskName: `CLUB_FRONT_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SHOW_STAGE_FRONT_FAR_KEY`,
+        taskName: `CLUB_FRONT_FAR_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `REHEARSAL_SPACE_KEY`,
+        taskName: `BASEMENT_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -195,7 +195,7 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `BENNETT_APARTMENT_BED_KEY`,
+        taskName: `BENNETT_BED_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -205,7 +205,7 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `SITA_APARTMENT_BED_KEY`,
+        taskName: `LIZ_BED_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -220,27 +220,27 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `HOWIE_ATTIC_KEY`,
+        taskName: `ATTIC_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SHOW_STAGE_SIDE_1_KEY`,
+        taskName: `CLUB_SIDE_CROWD_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SHOW_STAGE_SIDE_2_KEY`,
+        taskName: `CLUB_SIDE_STAGE_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SITA_APARTMENT_COUCH_KEY`,
+        taskName: `LIZ_COUCH_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SITA_APARTMENT_COUCH_THOUGHT_KEY`,
+        taskName: `LIZ_COUCH_THOUGHT_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -265,17 +265,17 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `JUNIOR_HIGH_LOCKERS_KEY`,
+        taskName: `VAN_NUYS_LOCKERS_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `JUNIOR_HIGH_QUAD_KEY`,
+        taskName: `VAN_NUYS_QUAD_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `BENNETT_APARTMENT_COURTYARD_KEY`,
+        taskName: `BENNETT_COURTYARD_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -285,47 +285,47 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `SPROUL_PLAZA_KEY`,
+        taskName: `BANCROFT_LIBRARY_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `BERKELEY_WALKWAY_KEY`,
+        taskName: `CAMPANILE_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `MOVIE_THEATRE_1_KEY`,
+        taskName: `CINEMA_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `MOVIE_THEATRE_2_KEY`,
+        taskName: `CINEMA_STREET_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SITA_APARTMENT_GATE_1_KEY`,
+        taskName: `LIZ_GATE_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `SITA_APARTMENT_GATE_2_KEY`,
+        taskName: `LIZ_GATE_STREET_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `GO_KART_KEY`,
+        taskName: `GO_KARTS_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `BENNETT_APARTMENT_GATE_KEY`,
+        taskName: `BENNETT_GATE_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `UCLA_CAMPUS_KEY`,
+        taskName: `ROYCE_HALL_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
@@ -340,52 +340,52 @@ module.exports = [
         neededHours: 0.5
     },
     {
-        taskName: `SHOW_UNLOADING_KEY`,
+        taskName: `CLUB_LOADING`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `VOLKSWAGEN_KEY`,
+        taskName: `OAKLAND_HOUSES_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `OAKLAND_STREET_SIDE_KEY`,
+        taskName: `OAKLAND_HOUSES_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `OAKLAND_STREET_FRONT_1_KEY`,
+        taskName: `OAKLAND_RESIDENTIAL_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `OAKLAND_STREET_FRONT_2_KEY`,
+        taskName: `OAKLAND_COMMERCIAL_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `OAKLAND_STREET_FRONT_3_KEY`,
+        taskName: `OAKLAND_PUBLIC_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `CREMATED_CLIFF_KEY`,
+        taskName: `EL_CERRITO_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `CREMATED_CLIFF_CONVERTIBLE_KEY`,
+        taskName: `EL_CERRITO_CAR_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `CREMATED_DEATHBED_KEY`,
+        taskName: `EL_CERRITO_DEATHBED_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },
     {
-        taskName: `CREMATED_DEATHBED_TENNIS_KEY`,
+        taskName: `EL_CERRITO_TENNIS_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },

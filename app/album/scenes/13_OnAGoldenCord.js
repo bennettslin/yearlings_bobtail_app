@@ -1,9 +1,9 @@
 import {
-    SITA_APARTMENT_COUCH_THOUGHT_KEY,
-    OAKLAND_STREET_SIDE_KEY,
-    OAKLAND_STREET_FRONT_1_KEY,
-    OAKLAND_STREET_FRONT_2_KEY,
-    OAKLAND_STREET_FRONT_3_KEY
+    LIZ_COUCH_THOUGHT_KEY,
+    OAKLAND_HOUSES_KEY,
+    OAKLAND_RESIDENTIAL_KEY,
+    OAKLAND_COMMERCIAL_KEY,
+    OAKLAND_PUBLIC_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -58,7 +58,7 @@ module.exports = [
                 }
             }
         },
-        cubes: OAKLAND_STREET_SIDE_KEY,
+        cubes: OAKLAND_HOUSES_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -85,7 +85,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_THOUGHT_KEY,
+        cubes: LIZ_COUCH_THOUGHT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -112,7 +112,7 @@ module.exports = [
                 }
             }
         },
-        cubes: OAKLAND_STREET_FRONT_1_KEY,
+        cubes: OAKLAND_RESIDENTIAL_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -147,7 +147,7 @@ module.exports = [
                 }
             }
         },
-        cubes: OAKLAND_STREET_FRONT_2_KEY,
+        cubes: OAKLAND_COMMERCIAL_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -206,7 +206,7 @@ module.exports = [
                 }
             }
         },
-        cubes: OAKLAND_STREET_FRONT_3_KEY,
+        cubes: OAKLAND_PUBLIC_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

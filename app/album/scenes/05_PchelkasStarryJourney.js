@@ -1,11 +1,11 @@
 import {
-    PRETEEN_BENNETT_ROOM_KEY,
-    PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
-    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_KEY,
-    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY,
-    JUNIOR_HIGH_HALLWAY_KEY,
-    JUNIOR_HIGH_LOCKERS_KEY,
-    JUNIOR_HIGH_QUAD_KEY
+    BENNETT_ROOM_KEY,
+    BENNETT_ROOM_OPEN_KEY,
+    BENNETT_ROOM_SPACE_KEY,
+    BENNETT_ROOM_DOGS_KEY,
+    VAN_NUYS_HALLWAY_KEY,
+    VAN_NUYS_LOCKERS_KEY,
+    VAN_NUYS_QUAD_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -62,7 +62,7 @@ module.exports = [
     {
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,
-        cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
+        cubes: BENNETT_ROOM_OPEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -87,7 +87,7 @@ module.exports = [
                 }
             }
         },
-        cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
+        cubes: BENNETT_ROOM_OPEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -106,7 +106,7 @@ module.exports = [
                 }
             }
         },
-        cubes: PRETEEN_BENNETT_ROOM_KEY,
+        cubes: BENNETT_ROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -125,7 +125,7 @@ module.exports = [
                 }
             }
         },
-        cubes: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY,
+        cubes: BENNETT_ROOM_DOGS_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -144,7 +144,7 @@ module.exports = [
                 }
             }
         },
-        cubes: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_KEY,
+        cubes: BENNETT_ROOM_SPACE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -175,7 +175,7 @@ module.exports = [
                 }
             }
         },
-        cubes: JUNIOR_HIGH_LOCKERS_KEY,
+        cubes: VAN_NUYS_LOCKERS_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -214,7 +214,7 @@ module.exports = [
                 }
             }
         },
-        cubes: JUNIOR_HIGH_QUAD_KEY,
+        cubes: VAN_NUYS_QUAD_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -253,7 +253,7 @@ module.exports = [
                 }
             }
         },
-        cubes: JUNIOR_HIGH_HALLWAY_KEY,
+        cubes: VAN_NUYS_HALLWAY_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER

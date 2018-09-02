@@ -1,8 +1,8 @@
 import {
-    SITA_APARTMENT_COUCH_KEY,
-    BENNETT_BASEMENT_KEY,
-    SHOW_STAGE_FRONT_KEY,
-    VOLKSWAGEN_KEY
+    LIZ_COUCH_KEY,
+    BASEMENT_BED_KEY,
+    CLUB_FRONT_KEY,
+    OAKLAND_HOUSES_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -67,7 +67,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -104,7 +104,7 @@ module.exports = [
                 }
             }
         },
-        cubes: VOLKSWAGEN_KEY,
+        cubes: OAKLAND_HOUSES_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -131,7 +131,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_BASEMENT_KEY,
+        cubes: BASEMENT_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -168,7 +168,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SHOW_STAGE_FRONT_KEY,
+        cubes: CLUB_FRONT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -195,7 +195,7 @@ module.exports = [
                 }
             }
         },
-        cubes: SITA_APARTMENT_COUCH_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

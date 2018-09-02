@@ -1,7 +1,7 @@
 import {
-    TAIWAN_PUPPET_SHOW_KEY,
+    PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
-    TETHERBALL_SCENE_KEY
+    TETHERBALL_COURT_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -37,7 +37,7 @@ module.exports = [
     {
         unitIndex: 1,
         description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
-        cubes: TAIWAN_PUPPET_SHOW_KEY,
+        cubes: PUPPET_SHOW_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -48,7 +48,7 @@ module.exports = [
         description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
         actors: {
         },
-        cubes: TAIWAN_PUPPET_SHOW_KEY,
+        cubes: PUPPET_SHOW_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -118,7 +118,7 @@ module.exports = [
                 }
             }
         },
-        cubes: TETHERBALL_SCENE_KEY,
+        cubes: TETHERBALL_COURT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -128,7 +128,7 @@ module.exports = [
         unitIndex: 12,
         description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
         actors: {},
-        cubes: TAIWAN_PUPPET_SHOW_KEY,
+        cubes: PUPPET_SHOW_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER

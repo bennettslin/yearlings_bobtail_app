@@ -1,12 +1,12 @@
 import {
-    ODIN_SCENE_1_KEY,
-    ODIN_SCENE_2_KEY,
-    ODIN_SCENE_3_KEY,
-    ODIN_SCENE_4_KEY,
-    ODIN_SCENE_5_KEY,
-    ODIN_SCENE_6_KEY,
-    ODIN_SCENE_7_KEY,
-    ODIN_SCENE_8_KEY
+    TAIWAN_ROOM_KEY,
+    TAIWAN_STAIRS_KEY,
+    TAIWAN_GATE_KEY,
+    RICKSHAW_KEY,
+    SHORE_KEY,
+    BUOY_KEY,
+    OCEAN_DEPTHS_KEY,
+    OCEAN_FLOOR_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -46,7 +46,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ODIN_SCENE_1_KEY,
+        cubes: TAIWAN_ROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -65,7 +65,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ODIN_SCENE_2_KEY,
+        cubes: TAIWAN_STAIRS_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -84,7 +84,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ODIN_SCENE_3_KEY,
+        cubes: TAIWAN_GATE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -103,7 +103,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ODIN_SCENE_4_KEY,
+        cubes: RICKSHAW_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -122,7 +122,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ODIN_SCENE_5_KEY,
+        cubes: SHORE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -141,7 +141,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ODIN_SCENE_6_KEY,
+        cubes: BUOY_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -166,7 +166,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ODIN_SCENE_7_KEY,
+        cubes: OCEAN_DEPTHS_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -185,7 +185,7 @@ module.exports = [
                 }
             }
         },
-        cubes: ODIN_SCENE_8_KEY,
+        cubes: OCEAN_FLOOR_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

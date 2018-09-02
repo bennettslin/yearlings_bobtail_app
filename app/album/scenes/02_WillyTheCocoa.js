@@ -1,5 +1,5 @@
 import {
-    PRETEEN_BENNETT_ROOM_KEY,
+    BENNETT_ROOM_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
     NOHO_HOUSES_KEY,
@@ -145,7 +145,7 @@ module.exports = [
                 }
             }
         },
-        cubes: PRETEEN_BENNETT_ROOM_KEY,
+        cubes: BENNETT_ROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -205,7 +205,7 @@ module.exports = [
                 }
             }
         },
-        cubes: PRETEEN_BENNETT_ROOM_KEY,
+        cubes: BENNETT_ROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER

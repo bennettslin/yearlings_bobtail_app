@@ -4,31 +4,30 @@ import {
     FREEWAY_KEY,
     PORCH_KEY,
     CHANGELING_CAVE_KEY,
-    JUNIOR_HIGH_LOCKERS_KEY,
-    JUNIOR_HIGH_QUAD_KEY,
-    BENNETT_APARTMENT_COURTYARD_KEY,
+    VAN_NUYS_LOCKERS_KEY,
+    VAN_NUYS_QUAD_KEY,
+    BENNETT_COURTYARD_KEY,
     CATHOLIC_CHURCH_KEY,
-    SPROUL_PLAZA_KEY,
-    BERKELEY_WALKWAY_KEY,
-    MOVIE_THEATRE_1_KEY,
-    MOVIE_THEATRE_2_KEY,
-    SITA_APARTMENT_GATE_1_KEY,
-    SITA_APARTMENT_GATE_2_KEY,
-    GO_KART_KEY,
-    BENNETT_APARTMENT_GATE_KEY,
-    UCLA_CAMPUS_KEY,
+    BANCROFT_LIBRARY_KEY,
+    CAMPANILE_KEY,
+    CINEMA_KEY,
+    CINEMA_STREET_KEY,
+    LIZ_GATE_KEY,
+    LIZ_GATE_STREET_KEY,
+    GO_KARTS_KEY,
+    BENNETT_GATE_KEY,
+    ROYCE_HALL_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY,
-    SHOW_UNLOADING_KEY,
-    VOLKSWAGEN_KEY,
-    OAKLAND_STREET_SIDE_KEY,
-    OAKLAND_STREET_FRONT_1_KEY,
-    OAKLAND_STREET_FRONT_2_KEY,
-    OAKLAND_STREET_FRONT_3_KEY,
-    CREMATED_CLIFF_KEY,
-    CREMATED_CLIFF_CONVERTIBLE_KEY,
-    CREMATED_DEATHBED_KEY,
-    CREMATED_DEATHBED_TENNIS_KEY,
+    CLUB_LOADING,
+    OAKLAND_HOUSES_KEY,
+    OAKLAND_RESIDENTIAL_KEY,
+    OAKLAND_COMMERCIAL_KEY,
+    OAKLAND_PUBLIC_KEY,
+    EL_CERRITO_KEY,
+    EL_CERRITO_CAR_KEY,
+    EL_CERRITO_DEATHBED_KEY,
+    EL_CERRITO_TENNIS_KEY,
     ALLEY_KEY
 } from '../cubesKeys'
 
@@ -85,7 +84,7 @@ const
             ]
         }
     },
-    JUNIOR_HIGH_LOCKERS_CUBES = {
+    VAN_NUYS_LOCKERS_CUBES = {
         // Overall height of lockers is 6.5'.
         ceiling: {
             zIndices: [
@@ -104,7 +103,7 @@ const
             ]
         }
     },
-    JUNIOR_HIGH_QUAD_CUBES = {
+    VAN_NUYS_QUAD_CUBES = {
         ceiling: {
             zIndices: [
                 [g, g, g, g, g, g, g, g, g, g, g],
@@ -124,7 +123,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_COURTYARD_CUBES = {
+    BENNETT_COURTYARD_CUBES = {
         // Outdoor wall is 8'. Windowsill height is 3'.
         floor: {
             zIndices: [
@@ -135,7 +134,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_GATE_CUBES = {
+    BENNETT_GATE_CUBES = {
         floor: {
             zIndices: [
                 [g],
@@ -159,7 +158,7 @@ const
             ]
         }
     },
-    SPROUL_PLAZA_CUBES = {
+    BANCROFT_LIBRARY_CUBES = {
         // Outdoor wall is 8'. Platform is 1'.
         floor: {
             zIndices: [
@@ -171,7 +170,7 @@ const
             ]
         }
     },
-    BERKELEY_WALKWAY_CUBES = {
+    CAMPANILE_CUBES = {
         floor: {
             zIndices: [
                 [g, g, 3, 9, 1],
@@ -182,7 +181,7 @@ const
             ]
         }
     },
-    MOVIE_THEATRE_1_CUBES = {
+    CINEMA_CUBES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
@@ -195,7 +194,7 @@ const
             ]
         }
     },
-    MOVIE_THEATRE_2_CUBES = {
+    CINEMA_STREET_CUBES = {
         floor: {
             zIndices: [
                 [g, g, g, 1, 1, 0],
@@ -207,7 +206,7 @@ const
             ]
         }
     },
-    GO_KART_CUBES = {
+    GO_KARTS_CUBES = {
         floor: {
             zIndices: [
                 [0],
@@ -218,7 +217,7 @@ const
             ]
         }
     },
-    UCLA_CAMPUS_CUBES = {
+    ROYCE_HALL_CUBES = {
         floor: {
             zIndices: [
                 [1]
@@ -261,7 +260,7 @@ const
         }
     },
 
-    SITA_APARTMENT_GATE_1_CUBES = {
+    LIZ_GATE_CUBES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
@@ -274,7 +273,7 @@ const
             ]
         }
     },
-    SITA_APARTMENT_GATE_2_CUBES = {
+    LIZ_GATE_STREET_CUBES = {
         floor: {
             zIndices: [
                 [g, g, g, g, g, 1, 7, 1, 1, 0],
@@ -287,20 +286,7 @@ const
         }
     },
 
-    VOLKSWAGEN_CUBES = {
-        // Same as Catholic church tiles.
-        floor: {
-            zIndices: [
-                [0],
-                [0],
-                [0],
-                [0],
-                [1],
-                [1]
-            ]
-        }
-    },
-    OAKLAND_STREET_SIDE_CUBES = {
+    OAKLAND_HOUSES_CUBES = {
         floor: {
             zIndices: [
                 [1],
@@ -312,7 +298,7 @@ const
             ]
         }
     },
-    OAKLAND_STREET_FRONT_1_CUBES = {
+    OAKLAND_RESIDENTIAL_CUBES = {
         floor: {
             zIndices: [
                 [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
@@ -321,21 +307,21 @@ const
             ]
         }
     },
-    OAKLAND_STREET_FRONT_2_CUBES = {
+    OAKLAND_COMMERCIAL_CUBES = {
         floor: {
             zIndices: [
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ]
         }
     },
-    OAKLAND_STREET_FRONT_3_CUBES = {
+    OAKLAND_PUBLIC_CUBES = {
         floor: {
             zIndices: [
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
             ]
         }
     },
-    CREMATED_CLIFF_CUBES = {
+    EL_CERRITO_CUBES = {
         slantDirection: RIGHT,
         /**
          * -----------.--
@@ -356,7 +342,7 @@ const
             ]
         }
     },
-    CREMATED_CLIFF_CONVERTIBLE_CUBES = {
+    EL_CERRITO_CAR_CUBES = {
         slantDirection: RIGHT,
         ceiling: {
             zIndices: [
@@ -374,7 +360,7 @@ const
             ]
         }
     },
-    CREMATED_DEATHBED_CUBES = {
+    EL_CERRITO_DEATHBED_CUBES = {
         slantDirection: RIGHT,
         floor: {
             zIndices: [
@@ -387,7 +373,7 @@ const
             ]
         }
     },
-    CREMATED_DEATHBED_TENNIS_CUBES = {
+    EL_CERRITO_TENNIS_CUBES = {
         slantDirection: RIGHT,
         floor: {
             zIndices: [
@@ -414,31 +400,30 @@ const
         [FREEWAY_KEY]: FREEWAY_CUBES,
         [PORCH_KEY]: PORCH_CUBES,
         [CHANGELING_CAVE_KEY]: CHANGELING_CAVE_CUBES,
-        [JUNIOR_HIGH_LOCKERS_KEY]: JUNIOR_HIGH_LOCKERS_CUBES,
-        [JUNIOR_HIGH_QUAD_KEY]: JUNIOR_HIGH_QUAD_CUBES,
-        [BENNETT_APARTMENT_COURTYARD_KEY]: BENNETT_APARTMENT_COURTYARD_CUBES,
+        [VAN_NUYS_LOCKERS_KEY]: VAN_NUYS_LOCKERS_CUBES,
+        [VAN_NUYS_QUAD_KEY]: VAN_NUYS_QUAD_CUBES,
+        [BENNETT_COURTYARD_KEY]: BENNETT_COURTYARD_CUBES,
         [CATHOLIC_CHURCH_KEY]: CATHOLIC_CHURCH_CUBES,
-        [SPROUL_PLAZA_KEY]: SPROUL_PLAZA_CUBES,
-        [BERKELEY_WALKWAY_KEY]: BERKELEY_WALKWAY_CUBES,
-        [MOVIE_THEATRE_1_KEY]: MOVIE_THEATRE_1_CUBES,
-        [MOVIE_THEATRE_2_KEY]: MOVIE_THEATRE_2_CUBES,
-        [SITA_APARTMENT_GATE_1_KEY]: SITA_APARTMENT_GATE_1_CUBES,
-        [SITA_APARTMENT_GATE_2_KEY]: SITA_APARTMENT_GATE_2_CUBES,
-        [GO_KART_KEY]: GO_KART_CUBES,
-        [BENNETT_APARTMENT_GATE_KEY]: BENNETT_APARTMENT_GATE_CUBES,
-        [UCLA_CAMPUS_KEY]: UCLA_CAMPUS_CUBES,
+        [BANCROFT_LIBRARY_KEY]: BANCROFT_LIBRARY_CUBES,
+        [CAMPANILE_KEY]: CAMPANILE_CUBES,
+        [CINEMA_KEY]: CINEMA_CUBES,
+        [CINEMA_STREET_KEY]: CINEMA_STREET_CUBES,
+        [LIZ_GATE_KEY]: LIZ_GATE_CUBES,
+        [LIZ_GATE_STREET_KEY]: LIZ_GATE_STREET_CUBES,
+        [GO_KARTS_KEY]: GO_KARTS_CUBES,
+        [BENNETT_GATE_KEY]: BENNETT_GATE_CUBES,
+        [ROYCE_HALL_KEY]: ROYCE_HALL_CUBES,
         [CEMETERY_KEY]: CEMETERY_CUBES,
         [STATION_WAGON_KEY]: STATION_WAGON_CUBES,
-        [SHOW_UNLOADING_KEY]: SHOW_UNLOADING_CUBES,
-        [VOLKSWAGEN_KEY]: VOLKSWAGEN_CUBES,
-        [OAKLAND_STREET_SIDE_KEY]: OAKLAND_STREET_SIDE_CUBES,
-        [OAKLAND_STREET_FRONT_1_KEY]: OAKLAND_STREET_FRONT_1_CUBES,
-        [OAKLAND_STREET_FRONT_2_KEY]: OAKLAND_STREET_FRONT_2_CUBES,
-        [OAKLAND_STREET_FRONT_3_KEY]: OAKLAND_STREET_FRONT_3_CUBES,
-        [CREMATED_CLIFF_KEY]: CREMATED_CLIFF_CUBES,
-        [CREMATED_CLIFF_CONVERTIBLE_KEY]: CREMATED_CLIFF_CONVERTIBLE_CUBES,
-        [CREMATED_DEATHBED_KEY]: CREMATED_DEATHBED_CUBES,
-        [CREMATED_DEATHBED_TENNIS_KEY]: CREMATED_DEATHBED_TENNIS_CUBES,
+        [CLUB_LOADING]: SHOW_UNLOADING_CUBES,
+        [OAKLAND_HOUSES_KEY]: OAKLAND_HOUSES_CUBES,
+        [OAKLAND_RESIDENTIAL_KEY]: OAKLAND_RESIDENTIAL_CUBES,
+        [OAKLAND_COMMERCIAL_KEY]: OAKLAND_COMMERCIAL_CUBES,
+        [OAKLAND_PUBLIC_KEY]: OAKLAND_PUBLIC_CUBES,
+        [EL_CERRITO_KEY]: EL_CERRITO_CUBES,
+        [EL_CERRITO_CAR_KEY]: EL_CERRITO_CAR_CUBES,
+        [EL_CERRITO_DEATHBED_KEY]: EL_CERRITO_DEATHBED_CUBES,
+        [EL_CERRITO_TENNIS_KEY]: EL_CERRITO_TENNIS_CUBES,
         [ALLEY_KEY]: ALLEY_CUBES
     }
 

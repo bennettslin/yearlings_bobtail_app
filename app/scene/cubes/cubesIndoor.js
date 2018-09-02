@@ -1,30 +1,30 @@
 // Separating indoor cubes purely for purpose of keeping file smaller.
 
 import {
-    PRETEEN_BENNETT_ROOM_KEY,
-    PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
-    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY,
-    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_KEY,
-    JUNIOR_HIGH_HALLWAY_KEY,
-    BENNETT_APARTMENT_COUCH_KEY,
-    BENNETT_APARTMENT_COUCH_THOUGHT_KEY,
-    BENNETT_BASEMENT_KEY,
-    SHOW_STAGE_FRONT_KEY,
-    SHOW_STAGE_FRONT_FAR_KEY,
-    REHEARSAL_SPACE_KEY,
+    BENNETT_ROOM_KEY,
+    BENNETT_ROOM_OPEN_KEY,
+    BENNETT_ROOM_DOGS_KEY,
+    BENNETT_ROOM_SPACE_KEY,
+    VAN_NUYS_HALLWAY_KEY,
+    BENNETT_COUCH_KEY,
+    BENNETT_COUCH_THOUGHT_KEY,
+    BASEMENT_BED_KEY,
+    CLUB_FRONT_KEY,
+    CLUB_FRONT_FAR_KEY,
+    BASEMENT_KEY,
     MUSEUM_KEY,
     BACKSTAGE_KEY,
     DISHROOM_KEY,
-    BENNETT_APARTMENT_BED_KEY,
+    BENNETT_BED_KEY,
     WAITING_ROOM_KEY,
-    SITA_APARTMENT_BED_KEY,
+    LIZ_BED_KEY,
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,
-    HOWIE_ATTIC_KEY,
-    SHOW_STAGE_SIDE_1_KEY,
-    SHOW_STAGE_SIDE_2_KEY,
-    SITA_APARTMENT_COUCH_KEY,
-    SITA_APARTMENT_COUCH_THOUGHT_KEY
+    ATTIC_KEY,
+    CLUB_SIDE_CROWD_KEY,
+    CLUB_SIDE_STAGE_KEY,
+    LIZ_COUCH_KEY,
+    LIZ_COUCH_THOUGHT_KEY
 } from '../cubesKeys'
 
 import {
@@ -42,7 +42,7 @@ import {
 
 const
 
-    PRETEEN_BENNETT_ROOM_CEILING = [
+    BENNETT_ROOM_CEILING = [
         [k, k, k, k, k, g, k, g, g, g, k],
         [k, k, k, g, g, g, g, g, g, g, k],
         [k, k, g, g, g, g, g, g, g, g, g, k],
@@ -50,11 +50,11 @@ const
         [g, g, g, g, g, g, g, g, g, g, g, k],
         [g]
     ],
-    PRETEEN_BENNETT_ROOM_CUBES = {
+    BENNETT_ROOM_CUBES = {
         slantDirection: LEFT,
         // Captain bed height is 3.5'.
         ceiling: {
-            zIndices: PRETEEN_BENNETT_ROOM_CEILING
+            zIndices: BENNETT_ROOM_CEILING
         },
         /**
          * --.-----------
@@ -80,10 +80,10 @@ const
             ]
         }
     },
-    PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES = {
+    BENNETT_ROOM_OPEN_CUBES = {
         slantDirection: LEFT,
         ceiling: {
-            zIndices: PRETEEN_BENNETT_ROOM_CEILING
+            zIndices: BENNETT_ROOM_CEILING
         },
         floor: {
             zIndices: [
@@ -96,10 +96,10 @@ const
             ]
         }
     },
-    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES = {
+    BENNETT_ROOM_DOGS_CUBES = {
         slantDirection: LEFT,
         ceiling: {
-            zIndices: PRETEEN_BENNETT_ROOM_CEILING
+            zIndices: BENNETT_ROOM_CEILING
         },
         floor: {
             zIndices: [
@@ -112,10 +112,10 @@ const
             ]
         }
     },
-    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES = {
+    BENNETT_ROOM_SPACE_CUBES = {
         slantDirection: LEFT,
         ceiling: {
-            zIndices: PRETEEN_BENNETT_ROOM_CEILING
+            zIndices: BENNETT_ROOM_CEILING
         },
         floor: {
             zIndices: [
@@ -127,7 +127,7 @@ const
             ]
         }
     },
-    JUNIOR_HIGH_HALLWAY_CUBES = {
+    VAN_NUYS_HALLWAY_CUBES = {
         // Indoor wall is 7.5'.
         ceiling: {
             zIndices: [
@@ -145,7 +145,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_BED_CUBES = {
+    BENNETT_BED_CUBES = {
         // Outdoor wall is 8'. Indoor wall is 7.5'. Bed is 7.5 long, 1' tall.
         floor: {
             zIndices: [
@@ -158,7 +158,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_COUCH_CUBES = {
+    BENNETT_COUCH_CUBES = {
         // Indoor wall is 7.5'. Couch seat cushions add extra 0.5'.
         ceiling: {
             zIndices: [
@@ -175,7 +175,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_COUCH_THOUGHT_CUBES = {
+    BENNETT_COUCH_THOUGHT_CUBES = {
         // Couch seat cushions add extra half foot.
         floor: {
             zIndices: [
@@ -187,7 +187,7 @@ const
             ]
         }
     },
-    BENNETT_BASEMENT_CUBES = {
+    BASEMENT_BED_CUBES = {
         // Basement wall is 6', depth is 2.5'. Bed is 1'.
         ceiling: {
             zIndices: [
@@ -205,7 +205,7 @@ const
             ]
         }
     },
-    REHEARSAL_SPACE_CUBES = {
+    BASEMENT_CUBES = {
         ceiling: {
             zIndices: [
                 [g]
@@ -290,7 +290,7 @@ const
             ]
         }
     },
-    HOWIE_ATTIC_CUBES = {
+    ATTIC_CUBES = {
         ceiling: {
             zIndices: [
                 [d, d, e, e, f, f, g]
@@ -308,7 +308,7 @@ const
         }
     },
 
-    SHOW_STAGE_FRONT_CUBES = {
+    CLUB_FRONT_CUBES = {
         // Indoor wall of club is 9'. Club stage is 2.5'.
         floor: {
             zIndices: [
@@ -321,7 +321,7 @@ const
             ]
         }
     },
-    SHOW_STAGE_FRONT_FAR_CUBES = {
+    CLUB_FRONT_FAR_CUBES = {
         // Indoor wall of club is 9'. Club stage is 2.5'.
         ceiling: {
             zIndices: [
@@ -337,7 +337,7 @@ const
         }
     },
 
-    SHOW_STAGE_SIDE_1_CUBES = {
+    CLUB_SIDE_CROWD_CUBES = {
         ceiling: {
             zIndices: [
                 [f]
@@ -354,7 +354,7 @@ const
             ]
         }
     },
-    SHOW_STAGE_SIDE_2_CUBES = {
+    CLUB_SIDE_STAGE_CUBES = {
         ceiling: {
             zIndices: [
                 [f]
@@ -372,7 +372,7 @@ const
         }
     },
 
-    SITA_APARTMENT_BED_CUBES = {
+    LIZ_BED_CUBES = {
         floor: {
             zIndices: [
                 [1, 7, 7, 7, 9, 9, 9, 9, 7, 7, 7, 1],
@@ -384,7 +384,7 @@ const
             ]
         }
     },
-    SITA_APARTMENT_COUCH_CUBES = {
+    LIZ_COUCH_CUBES = {
         // Indoor wall is 7.5'.
         ceiling: {
             zIndices: [
@@ -402,7 +402,7 @@ const
             ]
         }
     },
-    SITA_APARTMENT_COUCH_THOUGHT_CUBES = {
+    LIZ_COUCH_THOUGHT_CUBES = {
         floor: {
             zIndices: [
                 [1],
@@ -413,30 +413,30 @@ const
     },
 
     CUBES_INDOOR = {
-        [PRETEEN_BENNETT_ROOM_KEY]: PRETEEN_BENNETT_ROOM_CUBES,
-        [PRETEEN_BENNETT_ROOM_OPEN_BED_KEY]: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
-        [PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY]: [PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES],
-        [PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_KEY]: [PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES],
-        [JUNIOR_HIGH_HALLWAY_KEY]: JUNIOR_HIGH_HALLWAY_CUBES,
-        [BENNETT_APARTMENT_COUCH_KEY]: BENNETT_APARTMENT_COUCH_CUBES,
-        [BENNETT_APARTMENT_COUCH_THOUGHT_KEY]: [BENNETT_APARTMENT_COUCH_THOUGHT_CUBES],
-        [BENNETT_BASEMENT_KEY]: BENNETT_BASEMENT_CUBES,
-        [SHOW_STAGE_FRONT_KEY]: SHOW_STAGE_FRONT_CUBES,
-        [SHOW_STAGE_FRONT_FAR_KEY]: SHOW_STAGE_FRONT_FAR_CUBES,
-        [REHEARSAL_SPACE_KEY]: REHEARSAL_SPACE_CUBES,
+        [BENNETT_ROOM_KEY]: BENNETT_ROOM_CUBES,
+        [BENNETT_ROOM_OPEN_KEY]: BENNETT_ROOM_OPEN_CUBES,
+        [BENNETT_ROOM_DOGS_KEY]: [BENNETT_ROOM_DOGS_CUBES],
+        [BENNETT_ROOM_SPACE_KEY]: [BENNETT_ROOM_SPACE_CUBES],
+        [VAN_NUYS_HALLWAY_KEY]: VAN_NUYS_HALLWAY_CUBES,
+        [BENNETT_COUCH_KEY]: BENNETT_COUCH_CUBES,
+        [BENNETT_COUCH_THOUGHT_KEY]: [BENNETT_COUCH_THOUGHT_CUBES],
+        [BASEMENT_BED_KEY]: BASEMENT_BED_CUBES,
+        [CLUB_FRONT_KEY]: CLUB_FRONT_CUBES,
+        [CLUB_FRONT_FAR_KEY]: CLUB_FRONT_FAR_CUBES,
+        [BASEMENT_KEY]: BASEMENT_CUBES,
         [MUSEUM_KEY]: MUSEUM_CUBES,
         [BACKSTAGE_KEY]: BACKSTAGE_CUBES,
         [DISHROOM_KEY]: DISHROOM_CUBES,
-        [BENNETT_APARTMENT_BED_KEY]: BENNETT_APARTMENT_BED_CUBES,
+        [BENNETT_BED_KEY]: BENNETT_BED_CUBES,
         [WAITING_ROOM_KEY]: WAITING_ROOM_CUBES,
-        [SITA_APARTMENT_BED_KEY]: SITA_APARTMENT_BED_CUBES,
+        [LIZ_BED_KEY]: LIZ_BED_CUBES,
         [WALGREENS_KEY]: WALGREENS_CUBES,
         [STEAM_TUNNEL_KEY]: STEAM_TUNNEL_CUBES,
-        [HOWIE_ATTIC_KEY]: HOWIE_ATTIC_CUBES,
-        [SHOW_STAGE_SIDE_1_KEY]: SHOW_STAGE_SIDE_1_CUBES,
-        [SHOW_STAGE_SIDE_2_KEY]: SHOW_STAGE_SIDE_2_CUBES,
-        [SITA_APARTMENT_COUCH_KEY]: SITA_APARTMENT_COUCH_CUBES,
-        [SITA_APARTMENT_COUCH_THOUGHT_KEY]: SITA_APARTMENT_COUCH_THOUGHT_CUBES
+        [ATTIC_KEY]: ATTIC_CUBES,
+        [CLUB_SIDE_CROWD_KEY]: CLUB_SIDE_CROWD_CUBES,
+        [CLUB_SIDE_STAGE_KEY]: CLUB_SIDE_STAGE_CUBES,
+        [LIZ_COUCH_KEY]: LIZ_COUCH_CUBES,
+        [LIZ_COUCH_THOUGHT_KEY]: LIZ_COUCH_THOUGHT_CUBES
     }
 
 export {
