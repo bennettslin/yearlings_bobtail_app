@@ -1,7 +1,9 @@
-import { CEMETERY } from 'scene/instanceKeys/songs'
+import {
+    STATION_WAGON
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [CEMETERY]: {
+    [STATION_WAGON]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
