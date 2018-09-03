@@ -1,9 +1,9 @@
 import {
-    FLIRTING
+    GOPI
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [FLIRTING]: {
+    [GOPI]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

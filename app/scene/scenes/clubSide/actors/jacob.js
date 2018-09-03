@@ -1,9 +1,9 @@
 import {
-    FLIRTING
+    CARRYING
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [FLIRTING]: {
+    [CARRYING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

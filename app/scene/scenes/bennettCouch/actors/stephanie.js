@@ -1,19 +1,22 @@
 import {
-    USHER_WAITING,
-    USHER_LOOKING
-} from 'scene/instanceKeys/howie'
+    BENNETT_KEYBOARD,
+    FLAPPER,
+    BENNETT_DEFIANT,
+    BENNETT_HORSING,
+    BENNETT_SORROWFUL,
+    BENNETT_BANJO,
+    BENNETT_RECORDING
+} from 'scene/instanceKeys/stephanie'
 
 import {
-    ABBEY_ROAD,
-    WALGREENS,
-    STEAM_TUNNEL,
-    CEMETERY,
-    STATION_WAGON,
-    ATTIC
+    SQUEEZING,
+    MINGLING,
+    PROTESTER,
+    EPILOGUE
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [USHER_WAITING]: {
+    [BENNETT_KEYBOARD]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -21,7 +24,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [USHER_LOOKING]: {
+    [FLAPPER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -29,7 +32,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [ABBEY_ROAD]: {
+    [SQUEEZING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -37,7 +40,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [WALGREENS]: {
+    [MINGLING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -45,7 +48,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [STEAM_TUNNEL]: {
+    [BENNETT_DEFIANT]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -53,7 +56,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [CEMETERY]: {
+    [BENNETT_HORSING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -61,7 +64,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [STATION_WAGON]: {
+    [BENNETT_SORROWFUL]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -69,7 +72,31 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [ATTIC]: {
+    [BENNETT_BANJO]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [BENNETT_RECORDING]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [PROTESTER]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [EPILOGUE]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

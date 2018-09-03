@@ -1,15 +1,16 @@
 import {
-    CHARMED,
-    INDIGNANT,
-    MERMAID,
-    POPULAR_GIRL,
-    COMFORTING
-} from 'scene/instanceKeys/sasha'
+    CATHOLIC_GUY,
+    WATCHING
+} from 'scene/instanceKeys/wade'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import {
+    MINGLING,
+    PROTESTER,
+    EPILOGUE
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [CHARMED]: {
+    [CATHOLIC_GUY]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -17,7 +18,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [INDIGNANT]: {
+    [WATCHING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -25,7 +26,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [MERMAID]: {
+    [MINGLING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -33,15 +34,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [POPULAR_GIRL]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [COMFORTING]: {
+    [PROTESTER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

@@ -1,19 +1,30 @@
 import {
-    SMOKER,
-    OFFICER,
-    DOCTOR
-} from 'scene/instanceKeys/amy'
+    BENNETT_KEYBOARD,
+    FLAPPER,
+    BENNETT_DEFIANT,
+    BENNETT_HORSING,
+    BENNETT_SORROWFUL,
+    BENNETT_BANJO,
+    BENNETT_RECORDING
+} from 'scene/instanceKeys/stephanie'
 
 import {
     SQUEEZING,
-    FLIRTING,
     MINGLING,
     PROTESTER,
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [SMOKER]: {
+    [BENNETT_KEYBOARD]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [FLAPPER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -29,14 +40,6 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [FLIRTING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
     [MINGLING]: {
         yIndex: -1,
         arrangement: {
@@ -45,7 +48,39 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [OFFICER]: {
+    [BENNETT_DEFIANT]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [BENNETT_HORSING]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [BENNETT_SORROWFUL]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [BENNETT_BANJO]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [BENNETT_RECORDING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -54,14 +89,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [PROTESTER]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [DOCTOR]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

@@ -1,10 +1,13 @@
 import {
-    SHANE_BUYING,
-    SHANE_SPILLING
-} from 'scene/instanceKeys/tomer'
+    SMOKER
+} from 'scene/instanceKeys/amy'
+
+import {
+    PROTESTER
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [SHANE_BUYING]: {
+    [SMOKER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -12,7 +15,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [SHANE_SPILLING]: {
+    [PROTESTER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

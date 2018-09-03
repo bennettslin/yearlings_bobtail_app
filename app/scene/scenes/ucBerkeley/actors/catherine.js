@@ -1,9 +1,9 @@
 import {
-    FLIRTING
-} from 'scene/instanceKeys/songs'
+    PUZZLED
+} from 'scene/instanceKeys/catherine'
 
 const ARRANGEMENTS_MAP = {
-    [FLIRTING]: {
+    [PUZZLED]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

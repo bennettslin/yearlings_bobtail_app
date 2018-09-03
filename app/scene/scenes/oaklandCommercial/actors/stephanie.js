@@ -1,23 +1,22 @@
 import {
-    SQUATTING,
-    CHUCKLING,
-    SMIRKING
-} from 'scene/instanceKeys/ana'
+    BENNETT_KEYBOARD,
+    FLAPPER,
+    BENNETT_DEFIANT,
+    BENNETT_HORSING,
+    BENNETT_SORROWFUL,
+    BENNETT_BANJO,
+    BENNETT_RECORDING
+} from 'scene/instanceKeys/stephanie'
 
 import {
-    EATING,
-    ABBEY_ROAD,
-    WALGREENS,
-    STEAM_TUNNEL,
-    CEMETERY,
-    STATION_WAGON,
-    PERFORMING,
-    WAITING,
+    SQUEEZING,
+    MINGLING,
+    PROTESTER,
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [SQUATTING]: {
+    [BENNETT_KEYBOARD]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -25,7 +24,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [EATING]: {
+    [FLAPPER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -33,7 +32,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [ABBEY_ROAD]: {
+    [SQUEEZING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -41,7 +40,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [WALGREENS]: {
+    [MINGLING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -49,7 +48,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [STEAM_TUNNEL]: {
+    [BENNETT_DEFIANT]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -57,7 +56,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [CEMETERY]: {
+    [BENNETT_HORSING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -65,7 +64,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [STATION_WAGON]: {
+    [BENNETT_SORROWFUL]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -73,7 +72,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PERFORMING]: {
+    [BENNETT_BANJO]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -81,7 +80,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [WAITING]: {
+    [BENNETT_RECORDING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -89,15 +88,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [CHUCKLING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [SMIRKING]: {
+    [PROTESTER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

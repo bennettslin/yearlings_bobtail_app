@@ -1,18 +1,9 @@
 import {
-    PROLOGUE,
-    EPILOGUE
+    GOPI
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [PROLOGUE]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
-        }
-    },
-    [EPILOGUE]: {
+    [GOPI]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

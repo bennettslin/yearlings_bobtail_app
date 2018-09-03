@@ -1,25 +1,8 @@
 import keys from 'lodash.keys'
 
 import {
-    YOUNG_BENNETT,
-    PRETEEN_BENNETT,
     BENNETT,
-    OLD_BENNETT,
-    ANITA,
-    ESTHER,
-    WILLY,
-    MOTHER,
-    FATHER,
-    CHRISTOPHER,
-    SASHA,
-    BRAD,
-    ANDREW,
-    CATHERINE,
-    MARA,
-    JACOB,
     ANA,
-    HOWIE,
-    TOMER,
     LIZ,
     KHARI,
     MIRIAM,
@@ -34,42 +17,25 @@ import {
 } from 'scene/actorKeys'
 
 // TODO: Delete.
-import ARRANGEMENTS_YOUNG_BENNETT from './actors/youngBennett'
-import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 import {
     ARRANGEMENTS_BENNETT,
     ARRANGEMENTS_BENNETT_REFLECTION
-} from './actors/bennett'
-import ARRANGEMENTS_OLD_BENNETT from './actors/oldBennett'
-import ARRANGEMENTS_ANITA from './actors/anita'
-import ARRANGEMENTS_ESTHER from './actors/esther'
-import ARRANGEMENTS_WILLY from './actors/willy'
-import ARRANGEMENTS_MOTHER from './actors/mother'
-import ARRANGEMENTS_FATHER from './actors/father'
-import ARRANGEMENTS_CHRISTOPHER from './actors/christopher'
-import ARRANGEMENTS_SASHA from './actors/sasha'
-import ARRANGEMENTS_BRAD from './actors/brad'
-import ARRANGEMENTS_ANDREW from './actors/andrew'
-import ARRANGEMENTS_CATHERINE from './actors/catherine'
-import ARRANGEMENTS_MARA from './actors/mara'
-import ARRANGEMENTS_JACOB from './actors/jacob'
-import ARRANGEMENTS_ANA from './actors/ana'
-import ARRANGEMENTS_HOWIE from './actors/howie'
-import ARRANGEMENTS_TOMER from './actors/tomer'
+} from 'scene/scenes/actors/bennett'
+import ARRANGEMENTS_ANA from 'scene/scenes/actors/ana'
 import {
     ARRANGEMENTS_LIZ,
     ARRANGEMENTS_LIZ_REFLECTION
-} from './actors/liz'
+} from 'scene/scenes/actors/liz'
 import {
     ARRANGEMENTS_KHARI,
     ARRANGEMENTS_KHARI_REFLECTION
-} from './actors/khari'
-import ARRANGEMENTS_MIRIAM from './actors/miriam'
-import ARRANGEMENTS_TRISTAN from './actors/tristan'
-import ARRANGEMENTS_NESTOR from './actors/nestor'
-import ARRANGEMENTS_AMY from './actors/amy'
-import ARRANGEMENTS_STEPHANIE from './actors/stephanie'
-import ARRANGEMENTS_WADE from './actors/wade'
+} from 'scene/scenes/actors/khari'
+import ARRANGEMENTS_MIRIAM from 'scene/scenes/actors/miriam'
+import ARRANGEMENTS_TRISTAN from 'scene/scenes/actors/tristan'
+import ARRANGEMENTS_NESTOR from 'scene/scenes/actors/nestor'
+import ARRANGEMENTS_AMY from 'scene/scenes/actors/amy'
+import ARRANGEMENTS_STEPHANIE from 'scene/scenes/actors/stephanie'
+import ARRANGEMENTS_WADE from 'scene/scenes/actors/wade'
 
 import ACTORS_LOGUE from 'scene/scenes/logue/actors'
 import ACTORS_NOHO_HOUSES from 'scene/scenes/nohoHouses/actors'
@@ -133,25 +99,8 @@ import ACTORS_CLIFF from 'scene/scenes/cliff/actors'
 
 // TODO: Delete.
 const ARRANGEMENTS_ACTORS = {
-    [YOUNG_BENNETT]: ARRANGEMENTS_YOUNG_BENNETT,
-    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
     [BENNETT]: ARRANGEMENTS_BENNETT,
-    [OLD_BENNETT]: ARRANGEMENTS_OLD_BENNETT,
-    [ANITA]: ARRANGEMENTS_ANITA,
-    [ESTHER]: ARRANGEMENTS_ESTHER,
-    [WILLY]: ARRANGEMENTS_WILLY,
-    [MOTHER]: ARRANGEMENTS_MOTHER,
-    [FATHER]: ARRANGEMENTS_FATHER,
-    [CHRISTOPHER]: ARRANGEMENTS_CHRISTOPHER,
-    [SASHA]: ARRANGEMENTS_SASHA,
-    [BRAD]: ARRANGEMENTS_BRAD,
-    [ANDREW]: ARRANGEMENTS_ANDREW,
-    [CATHERINE]: ARRANGEMENTS_CATHERINE,
-    [MARA]: ARRANGEMENTS_MARA,
-    [JACOB]: ARRANGEMENTS_JACOB,
     [ANA]: ARRANGEMENTS_ANA,
-    [HOWIE]: ARRANGEMENTS_HOWIE,
-    [TOMER]: ARRANGEMENTS_TOMER,
     [LIZ]: ARRANGEMENTS_LIZ,
     [KHARI]: ARRANGEMENTS_KHARI,
     [MIRIAM]: ARRANGEMENTS_MIRIAM,

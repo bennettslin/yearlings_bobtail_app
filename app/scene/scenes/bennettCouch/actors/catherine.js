@@ -1,9 +1,9 @@
 import {
-    YOUNG_CHILD
-} from 'scene/instanceKeys/songs'
+    QUIPPING
+} from 'scene/instanceKeys/catherine'
 
 const ARRANGEMENTS_MAP = {
-    [YOUNG_CHILD]: {
+    [QUIPPING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

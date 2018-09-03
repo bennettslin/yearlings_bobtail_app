@@ -1,9 +1,9 @@
 import {
-    FLIRTING
-} from 'scene/instanceKeys/songs'
+    DOCTOR
+} from 'scene/instanceKeys/amy'
 
 const ARRANGEMENTS_MAP = {
-    [FLIRTING]: {
+    [DOCTOR]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

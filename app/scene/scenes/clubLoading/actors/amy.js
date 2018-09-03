@@ -1,9 +1,9 @@
 import {
-    FLIRTING
+    MINGLING
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [FLIRTING]: {
+    [MINGLING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

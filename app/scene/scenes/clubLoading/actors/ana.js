@@ -1,9 +1,9 @@
 import {
-    FLIRTING
+    WAITING
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [FLIRTING]: {
+    [WAITING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
