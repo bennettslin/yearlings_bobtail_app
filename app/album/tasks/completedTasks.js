@@ -3823,4 +3823,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Arrange non-actor presences by scene.`,
+        workedHours: 12,
+        neededHours: 12
+    },
 ]

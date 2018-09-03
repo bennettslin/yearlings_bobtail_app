@@ -86,12 +86,12 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Bennett's couch cushions (Ash, M, Garryowen)`,
+        taskName: `Bennett's couch cushions (Ash, M)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Bennett's bed mattress (Grasshoppers, Uncanny)`,
+        taskName: `Bennett's bed mattress (Grasshoppers, Garryowen, Uncanny)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -122,6 +122,11 @@ module.exports = [
     },
     {
         taskName: `Sita's couch cushions (Garryowen, Golden Cord, Kyon, Uncanny)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Miriam's couch cushions (Uncanny)`,
         workedHours: 0,
         neededHours: 3
     },

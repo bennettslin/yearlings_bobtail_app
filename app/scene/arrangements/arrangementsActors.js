@@ -1,5 +1,11 @@
 import keys from 'lodash.keys'
 
+/**
+ * Organising actor instances by scene just makes it easier to tweak the
+ * arrangements of all the various presences within the same scene together.
+ * They are actually compiled into a single object used for lookup by the
+ * components, which do not distinguish by scene.
+ */
 import ACTORS_LOGUE from 'scene/scenes/logue/actors'
 import ACTORS_NOHO_HOUSES from 'scene/scenes/nohoHouses/actors'
 import ACTORS_NOHO_SCHOOL from 'scene/scenes/nohoSchool/actors'
