@@ -1,19 +1,23 @@
 import {
-    STOOPING,
-    COMFORTING,
-    ARGUING,
-    CONSOLING,
-    SHIELDING
-} from 'scene/instanceKeys/mother'
+    SQUATTING,
+    CHUCKLING,
+    SMIRKING
+} from 'scene/instanceKeys/ana'
 
 import {
-    PRESENT,
-    FUTURE,
+    EATING,
+    ABBEY_ROAD,
+    WALGREENS,
+    STEAM_TUNNEL,
+    CEMETERY,
+    STATION_WAGON,
+    PERFORMING,
+    WAITING,
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [STOOPING]: {
+    [SQUATTING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -21,7 +25,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [COMFORTING]: {
+    [EATING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -29,7 +33,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [ARGUING]: {
+    [ABBEY_ROAD]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -37,7 +41,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [CONSOLING]: {
+    [WALGREENS]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -45,7 +49,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PRESENT]: {
+    [STEAM_TUNNEL]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -53,7 +57,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [FUTURE]: {
+    [CEMETERY]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -61,7 +65,39 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [SHIELDING]: {
+    [STATION_WAGON]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [PERFORMING]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [WAITING]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [CHUCKLING]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [SMIRKING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

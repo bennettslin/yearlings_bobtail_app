@@ -1,15 +1,14 @@
 import {
-    CHARMED,
-    INDIGNANT,
-    MERMAID,
-    POPULAR_GIRL,
-    COMFORTING
-} from 'scene/instanceKeys/sasha'
-
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+    FLIRTING,
+    EATING,
+    CARRYING,
+    WAITING,
+    GOPI,
+    EPILOGUE
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [CHARMED]: {
+    [FLIRTING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -17,7 +16,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [INDIGNANT]: {
+    [EATING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -25,7 +24,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [MERMAID]: {
+    [CARRYING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -33,7 +32,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [POPULAR_GIRL]: {
+    [WAITING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -41,7 +40,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [COMFORTING]: {
+    [GOPI]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

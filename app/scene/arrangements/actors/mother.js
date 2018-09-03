@@ -8,8 +8,7 @@ import {
 
 import {
     PRESENT,
-    FUTURE,
-    EPILOGUE
+    FUTURE
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
@@ -62,14 +61,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [SHIELDING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [EPILOGUE]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

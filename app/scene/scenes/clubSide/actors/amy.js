@@ -1,18 +1,19 @@
 import {
-    ROARING,
-    ACCUSATORY,
-    REELING
-} from 'scene/instanceKeys/father'
+    SMOKER,
+    OFFICER,
+    DOCTOR
+} from 'scene/instanceKeys/amy'
 
 import {
-    PAST,
-    PRESENT,
-    FUTURE,
+    SQUEEZING,
+    FLIRTING,
+    MINGLING,
+    PROTESTER,
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [ROARING]: {
+    [SMOKER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -20,7 +21,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [ACCUSATORY]: {
+    [SQUEEZING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -28,7 +29,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PAST]: {
+    [FLIRTING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -36,7 +37,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PRESENT]: {
+    [MINGLING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -44,7 +45,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [FUTURE]: {
+    [OFFICER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -52,7 +53,15 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [REELING]: {
+    [PROTESTER]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [DOCTOR]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

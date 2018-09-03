@@ -4,25 +4,15 @@ import {
 } from 'scene/instanceKeys/howie'
 
 import {
-    GANGBANGER,
     ABBEY_ROAD,
     WALGREENS,
     STEAM_TUNNEL,
     CEMETERY,
     STATION_WAGON,
-    ATTIC,
-    EPILOGUE
+    ATTIC
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [GANGBANGER]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
     [USHER_WAITING]: {
         yIndex: -1,
         arrangement: {
@@ -80,14 +70,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [ATTIC]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [EPILOGUE]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

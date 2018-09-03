@@ -1,20 +1,14 @@
 import {
-    SHANE_BUYING,
-    SHANE_SPILLING
-} from 'scene/instanceKeys/tomer'
-
-import {
-    GANGBANGER,
-    ABBEY_ROAD,
-    WALGREENS,
-    STEAM_TUNNEL,
-    CEMETERY,
-    STATION_WAGON,
+    FLIRTING,
+    EATING,
+    CARRYING,
+    WAITING,
+    GOPI,
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [GANGBANGER]: {
+    [FLIRTING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -22,7 +16,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [SHANE_BUYING]: {
+    [EATING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -30,7 +24,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [ABBEY_ROAD]: {
+    [CARRYING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -38,7 +32,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [WALGREENS]: {
+    [WAITING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -46,31 +40,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [STEAM_TUNNEL]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [CEMETERY]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [STATION_WAGON]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [SHANE_SPILLING]: {
+    [GOPI]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

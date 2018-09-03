@@ -1,15 +1,16 @@
 import {
-    TANTRUM,
-    SOBBING,
-    REASSURING,
-    BLISSFUL,
-    STARING
-} from 'scene/instanceKeys/christopher'
+    CATHOLIC_GUY,
+    WATCHING
+} from 'scene/instanceKeys/wade'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import {
+    MINGLING,
+    PROTESTER,
+    EPILOGUE
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [TANTRUM]: {
+    [CATHOLIC_GUY]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -17,7 +18,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [SOBBING]: {
+    [WATCHING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -25,7 +26,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [REASSURING]: {
+    [MINGLING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -33,15 +34,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [BLISSFUL]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [STARING]: {
+    [PROTESTER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

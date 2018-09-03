@@ -1,13 +1,12 @@
 import {
-    FEIGNING_FEAR,
-    THROWING,
-    NOODLING
-} from 'scene/instanceKeys/andrew'
-
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+    FLIRTING,
+    EATING,
+    CARRYING,
+    EPILOGUE
+} from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [FEIGNING_FEAR]: {
+    [CARRYING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -15,7 +14,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [THROWING]: {
+    [FLIRTING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -23,7 +22,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [NOODLING]: {
+    [EATING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

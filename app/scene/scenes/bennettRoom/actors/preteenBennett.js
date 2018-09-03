@@ -1,39 +1,13 @@
 import {
-    CAUTIOUS,
     ENRAGED,
     FEARFUL,
-    ENCHANTED,
-    PANICKED,
-    TETHERED,
-    MAT,
-    STAIRS,
-    GATE,
-    RICKSHAW,
-    SHORE,
-    BUOY,
-    SINKING,
-    OCEAN_FLOOR,
     GUILT_RIDDEN,
     FEIGNING_SICK,
     ASLEEP,
-    SHAKEN,
-    STOIC,
-    WISTFUL,
-    SHEEPISH,
-    HUMILIATED
+    SHAKEN
 } from 'scene/instanceKeys/preteenBennett'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
-
 const ARRANGEMENTS_MAP = {
-    [CAUTIOUS]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
     [ENRAGED]: {
         yIndex: -1,
         arrangement: {
@@ -43,94 +17,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [FEARFUL]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [ENCHANTED]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [PANICKED]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [TETHERED]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [MAT]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [STAIRS]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [GATE]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [RICKSHAW]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [SHORE]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [BUOY]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [SINKING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [OCEAN_FLOOR]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -163,46 +49,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [SHAKEN]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [STOIC]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [WISTFUL]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [SHEEPISH]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [HUMILIATED]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [EPILOGUE]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

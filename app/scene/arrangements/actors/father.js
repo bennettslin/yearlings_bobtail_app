@@ -5,10 +5,7 @@ import {
 } from 'scene/instanceKeys/father'
 
 import {
-    PAST,
-    PRESENT,
-    FUTURE,
-    EPILOGUE
+    PAST
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
@@ -36,31 +33,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PRESENT]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [FUTURE]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
     [REELING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [EPILOGUE]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
