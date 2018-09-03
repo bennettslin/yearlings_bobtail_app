@@ -1,0 +1,20 @@
+import {
+    PRETEEN_BENNETT,
+    WILLY,
+    MOTHER,
+    CHRISTOPHER
+} from 'scene/actorKeys'
+
+import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
+import ARRANGEMENTS_WILLY from './actors/willy'
+import ARRANGEMENTS_MOTHER from './actors/mother'
+import ARRANGEMENTS_CHRISTOPHER from './actors/christopher'
+
+const ARRANGEMENTS_ACTORS = {
+    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
+    [WILLY]: ARRANGEMENTS_WILLY,
+    [MOTHER]: ARRANGEMENTS_MOTHER,
+    [CHRISTOPHER]: ARRANGEMENTS_CHRISTOPHER
+}
+
+export default ARRANGEMENTS_ACTORS

@@ -1,9 +1,7 @@
-import {
-    YOUNG_CHILD
-} from 'scene/instanceKeys/songs'
+import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [YOUNG_CHILD]: {
+    [EPILOGUE]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

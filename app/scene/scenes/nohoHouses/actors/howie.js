@@ -1,9 +1,9 @@
 import {
-    YOUNG_CHILD
+    GANGBANGER
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [YOUNG_CHILD]: {
+    [GANGBANGER]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
