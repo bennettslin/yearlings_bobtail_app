@@ -1,17 +1,8 @@
 import {
-    DOUBLE_ALBERT,
-    ARRIVED,
-    JUDGMENTAL,
-    CONCERNED,
-    JOKING,
-    PROTECTIVE,
-    CARESSING,
-    CARESSING_REFLECTION
+    DOUBLE_ALBERT
 } from 'scene/instanceKeys/khari'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
-
-const ARRANGEMENTS_KHARI = {
+const ARRANGEMENTS_MAP = {
     [DOUBLE_ALBERT]: {
         yIndex: -1,
         arrangement: {
@@ -19,76 +10,7 @@ const ARRANGEMENTS_KHARI = {
             xWidth: 0,
             zHeight: 0
         }
-    },
-    [ARRIVED]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [JUDGMENTAL]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [CONCERNED]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [JOKING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [PROTECTIVE]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [CARESSING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [EPILOGUE]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    }
-},
-ARRANGEMENTS_KHARI_REFLECTION = {
-    [CARESSING_REFLECTION]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
     }
 }
 
-export {
-    ARRANGEMENTS_KHARI,
-    ARRANGEMENTS_KHARI_REFLECTION
-}
+export default ARRANGEMENTS_MAP

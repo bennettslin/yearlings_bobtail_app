@@ -1,16 +1,15 @@
 import {
-    PRINCIPAL,
-    PUNCHING,
-    INTRODUCING
-} from 'scene/instanceKeys/tristan'
+    SHOES_REFLECTION
+} from 'scene/instanceKeys/bennett'
 
 import {
-    NOOGIE,
-    EPILOGUE
+    HARD_ON_REFLECTION,
+    MISSIONARY_REFLECTION,
+    AFTERGLOW_REFLECTION
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [PRINCIPAL]: {
+    [HARD_ON_REFLECTION]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -18,7 +17,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PUNCHING]: {
+    [MISSIONARY_REFLECTION]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -26,7 +25,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [NOOGIE]: {
+    [AFTERGLOW_REFLECTION]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -34,15 +33,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [INTRODUCING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [EPILOGUE]: {
+    [SHOES_REFLECTION]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

@@ -1,15 +1,16 @@
 import {
-    JOGGER,
-    INJURED
-} from 'scene/instanceKeys/nestor'
+    REMOVING_PANTS,
+    INFIRM,
+    DISPOSING_CONDOM
+} from 'scene/instanceKeys/bennett'
 
 import {
-    GREETING,
-    EPILOGUE
+    COWGIRL,
+    BLOWJOB
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [JOGGER]: {
+    [REMOVING_PANTS]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -17,7 +18,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [INJURED]: {
+    [COWGIRL]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -25,7 +26,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [GREETING]: {
+    [BLOWJOB]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -33,7 +34,15 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [EPILOGUE]: {
+    [INFIRM]: {
+        yIndex: -1,
+        arrangement: {
+            xFloat: 0,
+            xWidth: 0,
+            zHeight: 0
+        }
+    },
+    [DISPOSING_CONDOM]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

@@ -1,42 +1,5 @@
 import keys from 'lodash.keys'
 
-import {
-    BENNETT,
-    ANA,
-    LIZ,
-    KHARI,
-    MIRIAM,
-    TRISTAN,
-    NESTOR,
-    AMY,
-    STEPHANIE,
-    WADE,
-    BENNETT_REFLECTION,
-    LIZ_REFLECTION,
-    KHARI_REFLECTION
-} from 'scene/actorKeys'
-
-// TODO: Delete.
-import {
-    ARRANGEMENTS_BENNETT,
-    ARRANGEMENTS_BENNETT_REFLECTION
-} from 'scene/scenes/actors/bennett'
-import ARRANGEMENTS_ANA from 'scene/scenes/actors/ana'
-import {
-    ARRANGEMENTS_LIZ,
-    ARRANGEMENTS_LIZ_REFLECTION
-} from 'scene/scenes/actors/liz'
-import {
-    ARRANGEMENTS_KHARI,
-    ARRANGEMENTS_KHARI_REFLECTION
-} from 'scene/scenes/actors/khari'
-import ARRANGEMENTS_MIRIAM from 'scene/scenes/actors/miriam'
-import ARRANGEMENTS_TRISTAN from 'scene/scenes/actors/tristan'
-import ARRANGEMENTS_NESTOR from 'scene/scenes/actors/nestor'
-import ARRANGEMENTS_AMY from 'scene/scenes/actors/amy'
-import ARRANGEMENTS_STEPHANIE from 'scene/scenes/actors/stephanie'
-import ARRANGEMENTS_WADE from 'scene/scenes/actors/wade'
-
 import ACTORS_LOGUE from 'scene/scenes/logue/actors'
 import ACTORS_NOHO_HOUSES from 'scene/scenes/nohoHouses/actors'
 import ACTORS_NOHO_SCHOOL from 'scene/scenes/nohoSchool/actors'
@@ -97,25 +60,7 @@ import ACTORS_PAMPAS from 'scene/scenes/pampas/actors'
 import ACTORS_OUTDOOR_WEDDING from 'scene/scenes/outdoorWedding/actors'
 import ACTORS_CLIFF from 'scene/scenes/cliff/actors'
 
-// TODO: Delete.
-const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [ANA]: ARRANGEMENTS_ANA,
-    [LIZ]: ARRANGEMENTS_LIZ,
-    [KHARI]: ARRANGEMENTS_KHARI,
-    [MIRIAM]: ARRANGEMENTS_MIRIAM,
-    [TRISTAN]: ARRANGEMENTS_TRISTAN,
-    [NESTOR]: ARRANGEMENTS_NESTOR,
-    [AMY]: ARRANGEMENTS_AMY,
-    [STEPHANIE]: ARRANGEMENTS_STEPHANIE,
-    [WADE]: ARRANGEMENTS_WADE,
-    [BENNETT_REFLECTION]: ARRANGEMENTS_BENNETT_REFLECTION,
-    [LIZ_REFLECTION]: ARRANGEMENTS_LIZ_REFLECTION,
-    [KHARI_REFLECTION]: ARRANGEMENTS_KHARI_REFLECTION
-}
-
 const SCENE_ARRANGEMENTS = [
-    ARRANGEMENTS_ACTORS,
     ACTORS_LOGUE,
     ACTORS_NOHO_HOUSES,
     ACTORS_NOHO_SCHOOL,

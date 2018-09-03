@@ -1,22 +1,21 @@
 import {
-    BENNETT_KEYBOARD,
-    FLAPPER,
-    BENNETT_DEFIANT,
-    BENNETT_HORSING,
-    BENNETT_SORROWFUL,
-    BENNETT_BANJO,
-    BENNETT_RECORDING
-} from 'scene/instanceKeys/stephanie'
+    BRUSHED_OFF,
+    RETURNING_CORD,
+    PETTING_SEATED,
+    PETTING_STANDING,
+    SIFTING_TCHOTCHKES,
+    OPENING_DOOR,
+    DEFENDING,
+    NOT_HUNGRY,
+    ASLEEP_COUCH
+} from 'scene/instanceKeys/liz'
 
 import {
-    SQUEEZING,
-    MINGLING,
-    PROTESTER,
-    EPILOGUE
+    LEAVING_CRUMBLED
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [BENNETT_KEYBOARD]: {
+    [BRUSHED_OFF]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -24,7 +23,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [FLAPPER]: {
+    [LEAVING_CRUMBLED]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -32,7 +31,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [SQUEEZING]: {
+    [RETURNING_CORD]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -40,7 +39,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [MINGLING]: {
+    [PETTING_SEATED]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -48,7 +47,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [BENNETT_DEFIANT]: {
+    [PETTING_STANDING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -56,7 +55,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [BENNETT_HORSING]: {
+    [SIFTING_TCHOTCHKES]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -64,7 +63,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [BENNETT_SORROWFUL]: {
+    [OPENING_DOOR]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -72,7 +71,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [BENNETT_BANJO]: {
+    [DEFENDING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -80,7 +79,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [BENNETT_RECORDING]: {
+    [NOT_HUNGRY]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -88,15 +87,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PROTESTER]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [EPILOGUE]: {
+    [ASLEEP_COUCH]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

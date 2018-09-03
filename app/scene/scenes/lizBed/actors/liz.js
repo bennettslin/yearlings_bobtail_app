@@ -1,16 +1,16 @@
 import {
-    CATHOLIC_GUY,
-    WATCHING
-} from 'scene/instanceKeys/wade'
+    ASLEEP_REACHING,
+    CARESSED
+} from 'scene/instanceKeys/liz'
 
 import {
-    MINGLING,
-    PROTESTER,
-    EPILOGUE
+    HARD_ON,
+    MISSIONARY,
+    AFTERGLOW
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [CATHOLIC_GUY]: {
+    [HARD_ON]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -18,7 +18,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [WATCHING]: {
+    [MISSIONARY]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -26,7 +26,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [MINGLING]: {
+    [AFTERGLOW]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -34,7 +34,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PROTESTER]: {
+    [ASLEEP_REACHING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -42,7 +42,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [EPILOGUE]: {
+    [CARESSED]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

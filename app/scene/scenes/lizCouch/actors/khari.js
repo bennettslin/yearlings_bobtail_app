@@ -1,15 +1,11 @@
 import {
-    SQUATTING,
-    CHUCKLING,
-    SMIRKING
-} from 'scene/instanceKeys/ana'
-
-import {
-    PERFORMING
-} from 'scene/instanceKeys/songs'
+    ARRIVED,
+    JUDGMENTAL,
+    CONCERNED
+} from 'scene/instanceKeys/khari'
 
 const ARRANGEMENTS_MAP = {
-    [SQUATTING]: {
+    [ARRIVED]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -17,7 +13,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [PERFORMING]: {
+    [JUDGMENTAL]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -25,15 +21,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [CHUCKLING]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [SMIRKING]: {
+    [CONCERNED]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
