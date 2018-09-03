@@ -1,28 +1,10 @@
 import {
-    FIRE_HYDRANT,
-    PLAYGROUND_SLIDE,
     BATHTUB,
     MIRRORED_SINK,
     TOWEL_RACK
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
-    [FIRE_HYDRANT]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 1,
-            xWidth: 1,
-            zHeight: 2
-        }
-    },
-    [PLAYGROUND_SLIDE]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 4,
-            xWidth: 2,
-            zHeight: 3
-        }
-    },
     [BATHTUB]: {
         yIndex: 4,
         arrangement: {

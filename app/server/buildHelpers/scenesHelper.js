@@ -2,8 +2,8 @@
 
 import keys from 'lodash.keys'
 
-import ARRANGEMENTS_ACTORS from 'scene/arrangements/arrangementsActors'
-import ARRANGEMENTS_THINGS from 'scene/arrangements/arrangementsThings'
+import ARRANGEMENTS_ACTORS from 'scene/actors'
+import ARRANGEMENTS_THINGS from 'scene/things'
 
 import { ACTORS } from 'constants/scene'
 

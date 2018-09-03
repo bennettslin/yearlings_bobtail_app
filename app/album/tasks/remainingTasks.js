@@ -3,7 +3,7 @@ module.exports = [
     {
         taskName: `Create instance components of all cutouts, fixtures, and flats.`,
         workedHours: 0,
-        neededHours: 10
+        neededHours: 16
     },
 
     /**
