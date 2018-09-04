@@ -1,4 +1,11 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    FIXTURES,
+    FLATS
+} from 'constants/scene'
+
+import {
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
     FAMILY_BATHROOM_KEY,
@@ -47,6 +54,11 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
+    PLAYGROUND_BALL,
+    RECORD_PLAYER_STOOL
+} from 'scene/fixtureKeys'
+
+import {
     NOHO_HOUSES_BACKDROP,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
@@ -55,20 +67,15 @@ import {
     NURSE_OFFICE_BUBBLE
 } from 'scene/flatKeys'
 
-import {
-    PLAYGROUND_BALL,
-    RECORD_PLAYER_STOOL
-} from 'scene/fixtureKeys'
-
 module.exports = [
     {
         unitIndex: 1,
         description: `North Hollywood houses.`,
         presences: {
-            cutouts: {
+            [CUTOUTS]: {
                 [FIRE_HYDRANT]: true
             },
-            flats: {
+            [FLATS]: {
                 [NOHO_HOUSES_BACKDROP]: true,
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
@@ -84,7 +91,7 @@ module.exports = [
         unitIndex: 3,
         description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [ESTHER]: {
                     todo: true,
                     workedHours: 3,
@@ -104,10 +111,10 @@ module.exports = [
                     instance: PANICKED
                 }
             },
-            cutouts: {
+            [CUTOUTS]: {
                 [FIRE_HYDRANT]: true
             },
-            flats: {
+            [FLATS]: {
                 [NOHO_HOUSES_BACKDROP]: true,
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
@@ -123,7 +130,7 @@ module.exports = [
         unitIndex: 6,
         description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells the playground about this. Anita overhears and looks upset.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [ANITA]: {
                     todo: true,
                     workedHours: 3,
@@ -143,13 +150,13 @@ module.exports = [
                     instance: FLUSTERED
                 }
             },
-            cutouts: {
+            [CUTOUTS]: {
                 [PLAYGROUND_SLIDE]: true
             },
-            fixtures: {
+            [FIXTURES]: {
                 [PLAYGROUND_BALL]: true
             },
-            flats: {
+            [FLATS]: {
                 [NOHO_SCHOOL_BACKDROP]: true,
                 [NOHO_SCHOOLHOUSE]: true,
                 [NURSE_OFFICE_BUBBLE]: true
@@ -165,7 +172,7 @@ module.exports = [
         unitIndex: 8,
         description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -173,7 +180,7 @@ module.exports = [
                     instance: BATHING
                 }
             },
-            cutouts: {
+            [CUTOUTS]: {
                 [MIRRORED_SINK]: true,
                 [BATHTUB]: true,
                 [TOWEL_RACK]: true
@@ -189,7 +196,7 @@ module.exports = [
         unitIndex: 12,
         description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [ANITA]: {
                     todo: true,
                     workedHours: 3,
@@ -203,14 +210,14 @@ module.exports = [
                     instance: SINGING
                 }
             },
-            cutouts: {
+            [CUTOUTS]: {
                 [MIRRORED_SINK]: true,
                 [BATHTUB]: true
             },
-            fixtures: {
+            [FIXTURES]: {
                 [RECORD_PLAYER_STOOL]: true
             },
-            flats: {
+            [FLATS]: {
                 [NOHO_HOUSES_BACKDROP]: true
             }
         },

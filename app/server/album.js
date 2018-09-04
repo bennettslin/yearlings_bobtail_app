@@ -46,6 +46,7 @@ const rawAlbum = {
 
         completedTasks: require('album/tasks/completedTasks')
             .concat(require('album/tasks/completedDrawingTasks'))
+            .concat(require('album/tasks/completedSceneTasks'))
     },
 
     // Restructure raw data to be usable by app.

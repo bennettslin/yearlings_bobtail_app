@@ -9,7 +9,6 @@ import Concerned from './Instances/Concerned'
 import Joking from './Instances/Joking'
 import Protective from './Instances/Protective'
 import Caressing from './Instances/Caressing'
-import CaressingReflection from './Instances/CaressingReflection'
 import Epilogue from './Instances/Epilogue'
 
 import {
@@ -19,8 +18,7 @@ import {
     CONCERNED,
     JOKING,
     PROTECTIVE,
-    CARESSING,
-    CARESSING_REFLECTION
+    CARESSING
 } from 'scene/instanceKeys/khari'
 
 import { EPILOGUE } from 'scene/instanceKeys/songs'
@@ -33,7 +31,6 @@ const INSTANCES_MAP = {
     [JOKING]: Joking,
     [PROTECTIVE]: Protective,
     [CARESSING]: Caressing,
-    [CARESSING_REFLECTION]: CaressingReflection,
     [EPILOGUE]: Epilogue
 }
 

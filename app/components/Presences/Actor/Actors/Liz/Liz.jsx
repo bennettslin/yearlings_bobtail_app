@@ -15,11 +15,7 @@ import CheekUnveiled from './Instances/CheekUnveiled'
 import HardOn from './Instances/HardOn'
 import Missionary from './Instances/Missionary'
 import Afterglow from './Instances/Afterglow'
-import HardOnReflection from './Instances/HardOnReflection'
-import MissionaryReflection from './Instances/MissionaryReflection'
-import AfterglowReflection from './Instances/AfterglowReflection'
 import AsleepReaching from './Instances/AsleepReaching';
-import ReachingReflection from './Instances/ReachingReflection';
 import BrushedOff from './Instances/BrushedOff'
 import FreezingNaked from './Instances/FreezingNaked'
 import ReturningCord from './Instances/ReturningCord'
@@ -34,7 +30,6 @@ import PettingSeated from './Instances/PettingSeated'
 import Laughing from './Instances/Laughing'
 import SelflessConcern from './Instances/SelflessConcern'
 import Caressed from './Instances/Caressed'
-import CaressedReflection from './Instances/CaressedReflection'
 import ElTorito from './Instances/ElTorito'
 import Pampas from './Instances/Pampas'
 import GettingDark from './Instances/GettingDark'
@@ -44,7 +39,6 @@ import Epilogue from './Instances/Epilogue'
 
 import {
     ASLEEP_REACHING,
-    REACHING_REFLECTION,
     BRUSHED_OFF,
     FREEZING_NAKED,
     RETURNING_CORD,
@@ -57,8 +51,7 @@ import {
     ASLEEP_COUCH,
     LAUGHING,
     SELFLESS_CONCERN,
-    CARESSED,
-    CARESSED_REFLECTION
+    CARESSED
 } from 'scene/instanceKeys/liz'
 
 import {
@@ -75,9 +68,6 @@ import {
     HARD_ON,
     MISSIONARY,
     AFTERGLOW,
-    HARD_ON_REFLECTION,
-    MISSIONARY_REFLECTION,
-    AFTERGLOW_REFLECTION,
     LEAVING_CRUMBLED,
     EL_TORITO,
     PAMPAS,
@@ -101,11 +91,7 @@ const INSTANCES_MAP = {
     [HARD_ON]: HardOn,
     [MISSIONARY]: Missionary,
     [AFTERGLOW]: Afterglow,
-    [HARD_ON_REFLECTION]: HardOnReflection,
-    [MISSIONARY_REFLECTION]: MissionaryReflection,
-    [AFTERGLOW_REFLECTION]: AfterglowReflection,
     [ASLEEP_REACHING]: AsleepReaching,
-    [REACHING_REFLECTION]: ReachingReflection,
     [BRUSHED_OFF]: BrushedOff,
     [FREEZING_NAKED]: FreezingNaked,
     [RETURNING_CORD]: ReturningCord,
@@ -120,7 +106,6 @@ const INSTANCES_MAP = {
     [LAUGHING]: Laughing,
     [SELFLESS_CONCERN]: SelflessConcern,
     [CARESSED]: Caressed,
-    [CARESSED_REFLECTION]: CaressedReflection,
     [EL_TORITO]: ElTorito,
     [PAMPAS]: Pampas,
     [GETTING_DARK]: GettingDark,

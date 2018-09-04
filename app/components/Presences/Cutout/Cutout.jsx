@@ -7,13 +7,17 @@ import PlaygroundSlide from './Cutouts/NohoSchool/PlaygroundSlide'
 import Bathtub from './Cutouts/FamilyBathroom/Bathtub'
 import MirroredSink from './Cutouts/FamilyBathroom/MirroredSink'
 import TowelRack from './Cutouts/FamilyBathroom/TowelRack'
+import OverpassSignFront from './Cutouts/Freeway/OverpassSignFront'
+import OverpassSignBack from './Cutouts/Freeway/OverpassSignBack'
 
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
     BATHTUB,
     MIRRORED_SINK,
-    TOWEL_RACK
+    TOWEL_RACK,
+    OVERPASS_SIGN_FRONT,
+    OVERPASS_SIGN_BACK
 } from 'scene/cutoutKeys'
 
 const CUTOUTS_MAP = {
@@ -21,7 +25,9 @@ const CUTOUTS_MAP = {
     [PLAYGROUND_SLIDE]: PlaygroundSlide,
     [BATHTUB]: Bathtub,
     [MIRRORED_SINK]: MirroredSink,
-    [TOWEL_RACK]: TowelRack
+    [TOWEL_RACK]: TowelRack,
+    [OVERPASS_SIGN_FRONT]: OverpassSignFront,
+    [OVERPASS_SIGN_BACK]: OverpassSignBack
 },
 DEFAULT_COMPONENT = () => (null)
 

@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Create instance components of all cutouts, fixtures, and flats.`,
+        taskName: `Account for combined presences.`,
         workedHours: 0,
-        neededHours: 16
+        neededHours: 3
     },
 
     /**
@@ -19,6 +19,11 @@ module.exports = [
         taskName: `Presence transition order.`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        task: 'Hsla keys for all scenes, and values for all keys.',
+        workedHours: 0,
+        neededHours: 16
     },
 
     /**

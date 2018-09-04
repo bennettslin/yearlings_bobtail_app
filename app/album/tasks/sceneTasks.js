@@ -1,397 +1,277 @@
 module.exports = [
-
-    /**
-     * Completed.
-     */
-
     {
-        taskName: `Prologue.`,
-        workedHours: 1,
+        task: 'porch',
+        workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `North Hollywood neighbourhood.`,
-        workedHours: 0.5,
-        neededHours: 0.5
-    },
-    {
-        taskName: `Elementary school playground.`,
-        workedHours: 1,
+        task: 'changelingCave',
+        workedHours: 0,
         neededHours: 1
     },
-
-    /**
-     * Remaining.
-     */
-
     {
-        taskName: `PUPPET_SHOW_KEY`,
+        task: 'puppetShow',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `SCHOOLBUS_KEY`,
+        task: 'schoolbus',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `TETHERBALL_COURT_KEY`,
+        task: 'tetherballCourt',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `TAIWAN_ROOM_KEY`,
+        task: 'taiwanRoom',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `TAIWAN_STAIRS_KEY`,
+        task: 'taiwanStairs',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `TAIWAN_GATE_KEY`,
+        task: 'taiwanGate',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `RICKSHAW_KEY`,
+        task: 'rickshaw',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `SHORE_KEY`,
+        task: 'shore',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BUOY_KEY`,
+        task: 'buoy',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `OCEAN_DEPTHS_KEY`,
+        task: 'oceanDepths',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `OCEAN_FLOOR_KEY`,
+        task: 'oceanFloor',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `SNOWGLOBES_PAST_KEY`,
+        task: 'bennettRoom',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `SNOWGLOBES_PRESENT_KEY`,
+        task: 'vanNuysLockers',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `SNOWGLOBES_FUTURE_KEY`,
+        task: 'vanNuysQuad',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `EL_TORITO_KEY`,
+        task: 'vanNuysHallway',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `PAMPAS_KEY`,
+        task: 'catholicChurch',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `OUTDOOR_WEDDING_KEY`,
+        task: 'ucBerkeley',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `CLIFF_KEY`,
+        task: 'cinema',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `CLIFF_DEATHBED_KEY`,
+        task: 'basement',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `FAMILY_BATHROOM_KEY`,
+        task: 'museum',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BENNETT_ROOM_KEY`,
+        task: 'backstage',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BENNETT_ROOM_OPEN_KEY`,
+        task: 'goKarts',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BENNETT_ROOM_DOGS_KEY`,
+        task: 'dishroom',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BENNETT_ROOM_SPACE_KEY`,
+        task: 'waitingRoom',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `VAN_NUYS_HALLWAY_KEY`,
+        task: 'clubFront',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BENNETT_COUCH_KEY`,
+        task: 'clubSide',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BENNETT_COUCH_THOUGHT_KEY`,
+        task: 'clubLoading',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BASEMENT_BED_KEY`,
+        task: 'bennettBed',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `CLUB_FRONT_KEY`,
+        task: 'bennettCouch',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `CLUB_FRONT_FAR_KEY`,
+        task: 'bennettCourtyard',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BASEMENT_KEY`,
+        task: 'bennettGate',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `MUSEUM_KEY`,
+        task: 'lizBed',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BACKSTAGE_KEY`,
+        task: 'lizCouch',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `DISHROOM_KEY`,
+        task: 'lizGate',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BENNETT_BED_KEY`,
+        task: 'royceHall',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `WAITING_ROOM_KEY`,
+        task: 'walgreens',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `LIZ_BED_KEY`,
+        task: 'steamTunnel',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `WALGREENS_KEY`,
+        task: 'cemetery',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `STEAM_TUNNEL_KEY`,
+        task: 'stationWagon',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `ATTIC_KEY`,
+        task: 'attic',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `CLUB_SIDE_CROWD_KEY`,
+        task: 'oaklandHouses',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `CLUB_SIDE_STAGE_KEY`,
+        task: 'oaklandResidential',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `LIZ_COUCH_KEY`,
+        task: 'oaklandCommercial',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `LIZ_COUCH_THOUGHT_KEY`,
+        task: 'oaklandPublic',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `NOHO_SCHOOL_KEY`,
+        task: 'snowglobesPast',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `FREEWAY_KEY`,
+        task: 'snowglobesPresent',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `PORCH_KEY`,
+        task: 'snowglobesFuture',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `CHANGELING_CAVE_KEY`,
+        task: 'elCerrito',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `VAN_NUYS_LOCKERS_KEY`,
+        task: 'alley',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `VAN_NUYS_QUAD_KEY`,
+        task: 'elTorito',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BENNETT_COURTYARD_KEY`,
+        task: 'pampas',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `CATHOLIC_CHURCH_KEY`,
+        task: 'outdoorWedding',
         workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
-        taskName: `BANCROFT_LIBRARY_KEY`,
+        task: 'cliff',
         workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `CAMPANILE_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `CINEMA_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `CINEMA_STREET_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `LIZ_GATE_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `LIZ_GATE_STREET_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `GO_KARTS_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `BENNETT_GATE_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `ROYCE_HALL_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `CEMETERY_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `STATION_WAGON_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `CLUB_LOADING`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `OAKLAND_HOUSES_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `OAKLAND_HOUSES_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `OAKLAND_RESIDENTIAL_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `OAKLAND_COMMERCIAL_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `OAKLAND_PUBLIC_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `EL_CERRITO_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `EL_CERRITO_CAR_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `EL_CERRITO_DEATHBED_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `EL_CERRITO_TENNIS_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `ALLEY_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     }
 ]

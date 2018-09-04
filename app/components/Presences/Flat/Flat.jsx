@@ -8,6 +8,7 @@ import NohoHouseRight from './Flats/NohoHouses/NohoHouseRight'
 import NohoSchoolBackdrop from './Flats/NohoSchool/NohoSchoolBackdrop'
 import NohoSchoolhouse from './Flats/NohoSchool/NohoSchoolhouse'
 import NurseOfficeBubble from './Flats/NohoSchool/NurseOfficeBubble'
+import ValleyBackdrop from './Flats/Freeway/ValleyBackdrop'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -15,7 +16,8 @@ import {
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOL_BACKDROP,
     NOHO_SCHOOLHOUSE,
-    NURSE_OFFICE_BUBBLE
+    NURSE_OFFICE_BUBBLE,
+    VALLEY_BACKDROP
 } from 'scene/flatKeys'
 
 const FLATS_MAP = {
@@ -24,7 +26,8 @@ const FLATS_MAP = {
     [NOHO_HOUSE_RIGHT]: NohoHouseRight,
     [NOHO_SCHOOL_BACKDROP]: NohoSchoolBackdrop,
     [NOHO_SCHOOLHOUSE]: NohoSchoolhouse,
-    [NURSE_OFFICE_BUBBLE]: NurseOfficeBubble
+    [NURSE_OFFICE_BUBBLE]: NurseOfficeBubble,
+    [VALLEY_BACKDROP]: ValleyBackdrop
 },
 DEFAULT_COMPONENT = () => (null)
 
