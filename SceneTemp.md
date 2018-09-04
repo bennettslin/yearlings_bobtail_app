@@ -1,14 +1,6 @@
 # Steps
 * Go to the song.
 
-### Actors
-* Add name and instance constants.
-* Clone new directory for each actor.
-* Clone component in presence instances. Replace with correct name.
-* Hook up and add to map in root component.
-* Add to song scenes.
-* Delete from this list.
-
 ### Cutouts and Fixtures
 * Add name constants.
 * Create new directory for each general scene.
@@ -37,19 +29,10 @@
 
 ## Scene 1
 
-### Actor
-* willy: collecting
-
 ### Fixture
 * shoppingCartFull
 
 ## Scene 2
-
-### Actor
-* willy: ducking
-* mother: stooping
-* preteenBennett: cautious
-* christopher: tantrum
 
 ### Cutout
 * nohoHousePlants
@@ -61,11 +44,6 @@
 * nohoHouse
 
 ## Scene 3
-
-### Actor
-* preteenBennett: enraged
-* christopher: sobbing
-* father: roaring
 
 ### Cubes
 * bennettRoomDay
@@ -79,19 +57,10 @@
 
 ## Scene 4
 
-### Actor
-* willy: fighting
-* howie: gangbanger
-* tomer: gangbanger
-
 ### Fixtures
 * puddle
 
 ## Scene 5
-
-### Actor
-* preteenBennett: fearful
-* mother: comforting
 
 ### Cutout
 * nohoNeighbourhoodSiren
@@ -100,11 +69,6 @@
 * bennettRoomNight
 
 ## Scene 6
-
-### Actor
-* preteenBennett: enchanted
-* christopher: reassuring
-* willy: greeting
 
 ### Cutout
 * nohoNeighbourhood
@@ -116,6 +80,7 @@
 
 ### Cubes
 * trollCave
+
 
 # Dear Saskia
 
