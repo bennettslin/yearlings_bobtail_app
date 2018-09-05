@@ -11,6 +11,7 @@ import Actor from './Actor/Actor'
 import Cutout from './Cutout/Cutout'
 import Fixture from './Fixture/Fixture'
 import Flat from './Flat/Flat'
+import Furniture from './Furniture/Furniture'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -23,7 +24,8 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    FLATS
+    FLATS,
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -34,7 +36,8 @@ const PRESENCE_TYPE_COMPONENTS = {
     [ACTORS]: Actor,
     [CUTOUTS]: Cutout,
     [FIXTURES]: Fixture,
-    [FLATS]: Flat
+    [FLATS]: Flat,
+    [FURNITURES]: Furniture
 }
 
 const propTypes = {

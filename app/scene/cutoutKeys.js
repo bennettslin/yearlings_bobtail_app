@@ -7,7 +7,9 @@ const
     MIRRORED_SINK = 'mirroredSink',
     TOWEL_RACK = 'towelRack',
     OVERPASS_SIGN_FRONT = 'overpassSignFront',
-    OVERPASS_SIGN_BACK = 'overpassSignBack'
+    OVERPASS_SIGN_BACK = 'overpassSignBack',
+    PORCH_PLANTS_LEFT = 'porchPlantsLeft',
+    PORCH_PLANTS_RIGHT = 'porchPlantsRight'
 
 export {
     FIRE_HYDRANT,
@@ -16,5 +18,7 @@ export {
     MIRRORED_SINK,
     TOWEL_RACK,
     OVERPASS_SIGN_FRONT,
-    OVERPASS_SIGN_BACK
+    OVERPASS_SIGN_BACK,
+    PORCH_PLANTS_LEFT,
+    PORCH_PLANTS_RIGHT
 }

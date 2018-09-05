@@ -2,7 +2,8 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    FLATS
+    FLATS,
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -63,7 +64,9 @@ import {
 
 import {
     OVERPASS_SIGN_FRONT,
-    OVERPASS_SIGN_BACK
+    OVERPASS_SIGN_BACK,
+    PORCH_PLANTS_LEFT,
+    PORCH_PLANTS_RIGHT
 } from 'scene/cutoutKeys'
 
 import {
@@ -73,6 +76,10 @@ import {
 import {
     VALLEY_BACKDROP
 } from 'scene/flatKeys'
+
+import {
+    PORCH_DOOR
+} from 'scene/furnitureKeys'
 
 module.exports = [
     {
@@ -154,6 +161,13 @@ module.exports = [
                     description: 'stepping off porch, cautious, trying to calm Christopher',
                     instance: CAUTIOUS
                 }
+            },
+            [CUTOUTS]: {
+                [PORCH_PLANTS_LEFT]: true,
+                [PORCH_PLANTS_RIGHT]: true
+            },
+            [FURNITURES]: {
+                [PORCH_DOOR]: true
             }
         },
         cubes: PORCH_KEY,

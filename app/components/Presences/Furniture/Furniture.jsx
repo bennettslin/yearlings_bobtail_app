@@ -2,7 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import PorchDoor from './Furnitures/Porch/PorchDoor'
+
+import {
+    PORCH_DOOR
+} from 'scene/furnitureKeys'
+
+
 const FURNITURES_MAP = {
+    [PORCH_DOOR]: PorchDoor
 },
 DEFAULT_COMPONENT = () => (null)
 

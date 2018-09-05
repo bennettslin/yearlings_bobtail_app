@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Furniture transition, just opacity.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Account for combined presences.`,
         workedHours: 0,
         neededHours: 3

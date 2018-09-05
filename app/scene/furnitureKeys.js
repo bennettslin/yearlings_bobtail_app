@@ -1,8 +1,8 @@
 // Keep furniture instances in this file.
 
 const
-    ATTIC_COUCH = 'atticCouch'
+    PORCH_DOOR = 'porchDoor'
 
 export {
-    ATTIC_COUCH
+    PORCH_DOOR
 }

@@ -1,10 +1,5 @@
 module.exports = [
     {
-        task: 'porch',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         task: 'changelingCave',
         workedHours: 0,
         neededHours: 1

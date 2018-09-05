@@ -2,19 +2,19 @@ import {
 //     CUTOUTS,
 //     FIXTURES,
 //     FLATS,
-//     FURNITURE
+//     FURNITURES
 } from 'constants/scene'
 
 // import ARRANGEMENTS_CUTOUTS from './things/cutouts'
 // import ARRANGEMENTS_FIXTURES from './things/fixtures'
 // import ARRANGEMENTS_FLATS from './things/flats'
-// import ARRANGEMENTS_FURNITURE from './things/furniture'
+// import ARRANGEMENTS_FURNITURES from './things/furnitures'
 
 const ARRANGEMENTS_THINGS = {
 //     [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
 //     [FIXTURES]: ARRANGEMENTS_FIXTURES,
 //     [FLATS]: ARRANGEMENTS_FLATS,
-//     [FURNITURE]: ARRANGEMENTS_FURNITURE
+//     [FURNITURES]: ARRANGEMENTS_FURNITURES
 }
 
 export default ARRANGEMENTS_THINGS

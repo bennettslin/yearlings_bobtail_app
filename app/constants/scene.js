@@ -16,7 +16,7 @@ const
     CUTOUTS = 'cutouts',
     FIXTURES = 'fixtures',
     FLATS = 'flats',
-    FURNITURE = 'furniture'
+    FURNITURES = 'furnitures'
 
 module.exports = {
 
@@ -48,13 +48,13 @@ module.exports = {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURE,
+    FURNITURES,
     PRESENCE_TYPES: [
         ACTORS,
         CUTOUTS,
         FIXTURES,
         FLATS,
-        FURNITURE
+        FURNITURES
     ],
 
     Z_INDICES_MATRIX_NAME,

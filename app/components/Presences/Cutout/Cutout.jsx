@@ -9,6 +9,8 @@ import MirroredSink from './Cutouts/FamilyBathroom/MirroredSink'
 import TowelRack from './Cutouts/FamilyBathroom/TowelRack'
 import OverpassSignFront from './Cutouts/Freeway/OverpassSignFront'
 import OverpassSignBack from './Cutouts/Freeway/OverpassSignBack'
+import PorchPlantsLeft from './Cutouts/Porch/PorchPlantsLeft'
+import PorchPlantsRight from './Cutouts/Porch/PorchPlantsRight'
 
 import {
     FIRE_HYDRANT,
@@ -17,7 +19,9 @@ import {
     MIRRORED_SINK,
     TOWEL_RACK,
     OVERPASS_SIGN_FRONT,
-    OVERPASS_SIGN_BACK
+    OVERPASS_SIGN_BACK,
+    PORCH_PLANTS_LEFT,
+    PORCH_PLANTS_RIGHT
 } from 'scene/cutoutKeys'
 
 const CUTOUTS_MAP = {
@@ -27,7 +31,9 @@ const CUTOUTS_MAP = {
     [MIRRORED_SINK]: MirroredSink,
     [TOWEL_RACK]: TowelRack,
     [OVERPASS_SIGN_FRONT]: OverpassSignFront,
-    [OVERPASS_SIGN_BACK]: OverpassSignBack
+    [OVERPASS_SIGN_BACK]: OverpassSignBack,
+    [PORCH_PLANTS_LEFT]: PorchPlantsLeft,
+    [PORCH_PLANTS_RIGHT]: PorchPlantsRight
 },
 DEFAULT_COMPONENT = () => (null)
 

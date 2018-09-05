@@ -156,7 +156,7 @@ export const finalRegisterPresenceYIndices = (
                     arrangementObject =
                         ARRANGEMENTS_ACTORS[presenceName][instance]
 
-                // Cutout, fixture, flat.
+                // Cutout, fixture, flat, furniture.
                 } else {
                     arrangementObject =
                         ARRANGEMENTS_THINGS[presenceType][presenceName]
