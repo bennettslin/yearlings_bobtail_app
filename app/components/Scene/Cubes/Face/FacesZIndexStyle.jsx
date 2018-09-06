@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
@@ -27,8 +27,14 @@ import {
     LEVELS,
     FLOOR,
     FACES,
+    TILE,
     Z_INDICES_MATRIX_NAME
 } from 'constants/scene'
+
+import {
+    g,
+    k
+} from 'scene/cubesConstants'
 
 import { CUBE_Z_INDICES } from '../cubeIndexConstants'
 
@@ -87,9 +93,34 @@ FacesZIndexStyle = ({
                                 xIndex,
                                 yIndex,
                                 value: zIndex
-                            })
+                            }),
+                            isBaseCeiling = zIndex === g,
+                            isNegativeCeiling = zIndex === k,
 
-                        return FACES.map(face => {
+                            /**
+                             * Ceiling front and side faces will never descend
+                             * beyond base. So if it's the negative zIndex,
+                             * only set path styling for tile faces.
+                             */
+                            facesArray = isNegativeCeiling ?
+                                [TILE] : FACES,
+
+                            /**
+                             * Then, when it's the base zIndex, include the
+                             * negative zIndex parent class for front and side
+                             * faces so that they'll share path styling with
+                             * their base zIndex counterparts.
+                             */
+                            negativeParentPrefix = isBaseCeiling ?
+                                getParentClassNameForSceneLogic({
+                                    matrixName: Z_INDICES_MATRIX_NAME,
+                                    level,
+                                    xIndex,
+                                    yIndex,
+                                    value: k
+                                }) : null
+
+                        return facesArray.map(face => {
 
                             const
                                 polygonPoints = getPolygonPoints({
@@ -108,21 +139,41 @@ FacesZIndexStyle = ({
                                 pathString = getPathString(polygonPoints)
 
                             return (
-                                <DynamicStyling
+                                <Fragment
                                     key={`${slantDirection}${zIndex}${face}`}
-                                    {...{
-                                        parentPrefixes: [
-                                            slantDirectionClassName,
-                                            parentPrefix
-                                        ],
-                                        childPrefixes: [
-                                            childPrefix
-                                        ],
-                                        style: {
-                                            d: `path("${pathString}")`
-                                        }
-                                    }}
-                                />
+                                >
+                                    <DynamicStyling
+                                        {...{
+                                            parentPrefixes: [
+                                                slantDirectionClassName,
+                                                parentPrefix
+                                            ],
+                                            childPrefixes: [
+                                                childPrefix
+                                            ],
+                                            style: {
+                                                d: `path("${pathString}")`
+                                            }
+                                        }}
+                                    />
+                                    {negativeParentPrefix && (
+                                        <DynamicStyling
+                                            {...{
+                                                parentPrefixes: [
+                                                    slantDirectionClassName,
+                                                    negativeParentPrefix
+                                                ],
+                                                childPrefixes: [
+                                                    childPrefix
+                                                ],
+                                                style: {
+                                                    d: `path("${pathString}")`,
+                                                    stroke: 'transparent'
+                                                }
+                                            }}
+                                        />
+                                    )}
+                                </Fragment>
                             )
                         })
                     })

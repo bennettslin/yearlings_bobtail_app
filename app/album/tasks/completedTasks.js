@@ -3833,4 +3833,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Make negative ceiling tiles not show.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

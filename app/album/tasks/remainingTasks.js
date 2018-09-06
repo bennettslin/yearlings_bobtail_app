@@ -1,6 +1,16 @@
 module.exports = [
 
     {
+        taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Weirdness of presences or presence texts not rendering. Maybe just a Chrome issue?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Furniture transition, just opacity.`,
         workedHours: 0,
         neededHours: 1
@@ -9,11 +19,6 @@ module.exports = [
         taskName: `Account for combined presences.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Make negative ceiling tiles not show.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     /**
