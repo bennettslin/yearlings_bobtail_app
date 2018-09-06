@@ -3838,4 +3838,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Furniture transition, just opacity.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

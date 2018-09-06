@@ -1,19 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Weirdness of presences or presence texts not rendering. Maybe just a Chrome issue?`,
+        taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Furniture transition, just opacity.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Account for combined presences.`,
@@ -62,6 +52,11 @@ module.exports = [
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa. This might involve generally rethinking how to do determine verse bars after a scroll.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
+        workedHours: 0,
+        neededHours: 8
     },
 
     /**
