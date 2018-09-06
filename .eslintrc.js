@@ -1,3 +1,14 @@
+const pkg = require('./package.json')
+
+const reactVersion = () => {
+  if (pkg.dependencies && pkg.dependencies.react) {
+    return { version: pkg.dependencies.react.replace(/[^0-9.]/g, '') }
+  }
+  if (pkg.devDependencies && pkg.devDependencies.react) {
+    return { version: pkg.devDependencies.react.replace(/[^0-9.]/g, '') }
+  }
+}
+
 module.exports = {
     "env": {
         "browser": true,
@@ -24,6 +35,11 @@ module.exports = {
     "plugins": [
         "react"
     ],
+    "settings": {
+        "react": {
+            ...reactVersion()
+        }
+    },
     "rules": {
         "accessor-pairs": "error",
         "array-bracket-spacing": [
