@@ -31,9 +31,6 @@ import CheekUnveiled from './Instances/CheekUnveiled'
 import HardOn from './Instances/HardOn'
 import Missionary from './Instances/Missionary'
 import Afterglow from './Instances/Afterglow'
-import HardOnReflection from './Instances/HardOnReflection'
-import MissionaryReflection from './Instances/MissionaryReflection'
-import AfterglowReflection from './Instances/AfterglowReflection'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
@@ -44,7 +41,6 @@ import Performing from './Instances/Performing'
 import Flirting from './Instances/Flirting'
 import SidelongHesitance from './Instances/SidelongHesitance'
 import RemovingShoes from './Instances/RemovingShoes'
-import ShoesReflection from './Instances/ShoesReflection'
 import BrushingOff from './Instances/BrushingOff'
 import DroppingMeats from './Instances/DroppingMeats'
 import DrunkCelibate from './Instances/DrunkCelibate'
@@ -95,7 +91,6 @@ import {
     WAITING_ROOM_THOUGHTS,
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
-    SHOES_REFLECTION,
     BRUSHING_OFF,
     DROPPING_MEATS,
     DRUNK_CELIBATE,
@@ -131,9 +126,6 @@ import {
     HARD_ON,
     MISSIONARY,
     AFTERGLOW,
-    HARD_ON_REFLECTION,
-    MISSIONARY_REFLECTION,
-    AFTERGLOW_REFLECTION,
     ABBEY_ROAD,
     WALGREENS,
     STEAM_TUNNEL,
@@ -187,9 +179,6 @@ const INSTANCES_MAP = {
     [HARD_ON]: HardOn,
     [MISSIONARY]: Missionary,
     [AFTERGLOW]: Afterglow,
-    [HARD_ON_REFLECTION]: HardOnReflection,
-    [MISSIONARY_REFLECTION]: MissionaryReflection,
-    [AFTERGLOW_REFLECTION]: AfterglowReflection,
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
     [STEAM_TUNNEL]: SteamTunnel,
@@ -200,7 +189,6 @@ const INSTANCES_MAP = {
     [FLIRTING]: Flirting,
     [SIDELONG_HESITANCE]: SidelongHesitance,
     [REMOVING_SHOES]: RemovingShoes,
-    [SHOES_REFLECTION]: ShoesReflection,
     [BRUSHING_OFF]: BrushingOff,
     [DROPPING_MEATS]: DroppingMeats,
     [DRUNK_CELIBATE]: DrunkCelibate,

@@ -4,16 +4,19 @@ import cx from 'classnames'
 
 import PlaygroundBall from './Fixtures/NohoSchool/PlaygroundBall'
 import RecordPlayerStool from './Fixtures/FamilyBathroom/RecordPlayerStool'
+import ShoppingCart from './Fixtures/Freeway/ShoppingCart'
 
 import {
     PLAYGROUND_BALL,
-    RECORD_PLAYER_STOOL
+    RECORD_PLAYER_STOOL,
+    SHOPPING_CART
 } from 'scene/fixtureKeys'
 
 
 const FIXTURES_MAP = {
     [PLAYGROUND_BALL]: PlaygroundBall,
-    [RECORD_PLAYER_STOOL]: RecordPlayerStool
+    [RECORD_PLAYER_STOOL]: RecordPlayerStool,
+    [SHOPPING_CART]: ShoppingCart
 },
 DEFAULT_COMPONENT = () => (null)
 

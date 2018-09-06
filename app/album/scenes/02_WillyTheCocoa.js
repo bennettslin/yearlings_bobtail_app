@@ -1,4 +1,11 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    FIXTURES,
+    FLATS
+} from 'constants/scene'
+
+import {
     BENNETT_ROOM_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
@@ -54,11 +61,36 @@ import {
     GREETING
 } from 'scene/instanceKeys/songs'
 
+import {
+    OVERPASS_SIGN_FRONT,
+    OVERPASS_SIGN_BACK
+} from 'scene/cutoutKeys'
+
+import {
+    SHOPPING_CART
+} from 'scene/fixtureKeys'
+
+import {
+    VALLEY_BACKDROP
+} from 'scene/flatKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: ``,
         cubes: FREEWAY_KEY,
+        presences: {
+            [CUTOUTS]: {
+                [OVERPASS_SIGN_FRONT]: true,
+                [OVERPASS_SIGN_BACK]: true
+            },
+            [FIXTURES]: {
+                [SHOPPING_CART]: true
+            },
+            [FLATS]: {
+                [VALLEY_BACKDROP]: true
+            }
+        },
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -68,13 +100,23 @@ module.exports = [
         unitIndex: 2,
         description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, holding up a bottle, squinting',
                     instance: COLLECTING
                 }
+            },
+            [CUTOUTS]: {
+                [OVERPASS_SIGN_FRONT]: true,
+                [OVERPASS_SIGN_BACK]: true
+            },
+            [FIXTURES]: {
+                [SHOPPING_CART]: true
+            },
+            [FLATS]: {
+                [VALLEY_BACKDROP]: true
             }
         },
         cubes: FREEWAY_KEY,
@@ -87,7 +129,7 @@ module.exports = [
         unitIndex: 5,
         description: `Outside next to the porch, Bennett's mother had been cutting Christopher's hair a moment ago. Christopher has just leapt out of his chair in panic. The cloth that had been draped around him has been tossed in the air. Looking exasperated, Bennett tries to catch him. Having just arrived, Willy is ducked behind the porch, a kind chuckle on his face.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,
@@ -124,7 +166,7 @@ module.exports = [
         unitIndex: 7,
         description: `Inside the house, holding his X-ray specs, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Tattered comics and cut-out letters are on the ground. Bennett's father is rushing in, angry and determined to stop the fight.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
@@ -155,7 +197,7 @@ module.exports = [
         unitIndex: 9,
         description: `Willy is in a fight with two gangbangers. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,
@@ -190,7 +232,7 @@ module.exports = [
         unitIndex: 12,
         description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort. Outside, the window shows a scene with police hovering over a dead body. Mother is getting up to close the window.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
@@ -215,7 +257,7 @@ module.exports = [
         unitIndex: 14,
         description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [WILLY]: {
                     todo: true,
                     workedHours: 3,

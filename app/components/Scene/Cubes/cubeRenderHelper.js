@@ -115,8 +115,7 @@ const _getXYPercentages = (
     yCornerIndex,
 
     /**
-     * This is an interval from 0 to 10, with 0 being ground level, and 10
-     * being level with the vanishing point.
+     * This is a number from 0 to 16, and also 20.
      */
     zIndex = 0,
 

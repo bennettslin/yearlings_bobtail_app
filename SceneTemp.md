@@ -17,12 +17,14 @@
 ## Scene 0
 
 ### Cutout
-* valleyBackdrop
-* valleyFreeway
-* overpassSign
+* overpassSignFront
+* overpassSignBack
 
 ### Fixture
-* shoppingCartFull
+* shoppingCart
+
+### Flat
+* valleyBackdrop
 
 ### Cubes
 * overpass
