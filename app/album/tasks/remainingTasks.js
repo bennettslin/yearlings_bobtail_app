@@ -1,25 +1,14 @@
 module.exports = [
 
-    {
-        taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Account for combined presences.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     /**
-     * Final scene stuff.
+     * TODO: At home. Finish all scene tasks, plus these. Aim for bringing
+     * deadline back to end of April.
      */
     {
         taskName: `Allow cutouts and fixtures to persist across scenes. Probably needs React CSS transition group.`,
         workedHours: 0,
         neededHours: 8
     },
-
     {
         taskName: `Presence transition order.`,
         workedHours: 0,
@@ -29,6 +18,31 @@ module.exports = [
         task: 'Hsla keys for all scenes, and values for all keys.',
         workedHours: 0,
         neededHours: 16
+    },
+    {
+        taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Categorise each instance by facial emotion?`,
+        workedHours: 0,
+        neededHours: 16
+    },
+
+    /**
+     * End home tasks.
+     */
+
+    {
+        taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Account for combined presences.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     /**
@@ -52,11 +66,6 @@ module.exports = [
         taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa. This might involve generally rethinking how to do determine verse bars after a scroll.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
-        workedHours: 0,
-        neededHours: 8
     },
 
     /**
