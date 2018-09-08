@@ -5,6 +5,11 @@ module.exports = [
      * deadline back to end of April.
      */
     {
+        taskName: `Create Puppet presence.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Allow cutouts and fixtures to persist across scenes. Probably needs React CSS transition group.`,
         workedHours: 0,
         neededHours: 8
