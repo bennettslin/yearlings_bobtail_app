@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [STOOPING]: {
-        yIndex: -1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 4,
+            xWidth: 2,
+            zHeight: 4
         }
     }
 }

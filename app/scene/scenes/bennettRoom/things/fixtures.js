@@ -1,14 +1,14 @@
 import {
-    TANTRUM
-} from 'scene/instanceKeys/christopher'
+    MAGAZINE_LETTERS
+} from 'scene/fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
-    [TANTRUM]: {
+    [MAGAZINE_LETTERS]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 9.5,
+            xFloat: 5,
             xWidth: 1,
-            zHeight: 3
+            zHeight: 1
         }
     }
 }

@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [DUCKING]: {
-        yIndex: -1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 0.5,
+            xWidth: 1,
+            zHeight: 5
         }
     }
 }

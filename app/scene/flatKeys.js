@@ -7,7 +7,9 @@ const
     NOHO_SCHOOL_BACKDROP = 'nohoSchoolBackdrop',
     NOHO_SCHOOLHOUSE = 'nohoSchoolhouse',
     NURSE_OFFICE_BUBBLE = 'nurseOfficeBubble',
-    VALLEY_BACKDROP = 'valleyBackdrop'
+    VALLEY_BACKDROP = 'valleyBackdrop',
+    SIREN_BACKDROP = 'sirenBackdrop',
+    CAPTAIN_BED_DRAWERS = 'captainBedDrawers'
 
 export {
     NOHO_HOUSES_BACKDROP,
@@ -16,5 +18,7 @@ export {
     NOHO_SCHOOL_BACKDROP,
     NOHO_SCHOOLHOUSE,
     NURSE_OFFICE_BUBBLE,
-    VALLEY_BACKDROP
+    VALLEY_BACKDROP,
+    SIREN_BACKDROP,
+    CAPTAIN_BED_DRAWERS
 }

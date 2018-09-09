@@ -66,19 +66,28 @@ import {
     OVERPASS_SIGN_FRONT,
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
-    PORCH_PLANTS_RIGHT
+    PORCH_PLANTS_RIGHT,
+    FIRE_HYDRANT
 } from 'scene/cutoutKeys'
 
 import {
-    SHOPPING_CART
+    SHOPPING_CART,
+    MAGAZINE_LETTERS
 } from 'scene/fixtureKeys'
 
 import {
-    VALLEY_BACKDROP
+    VALLEY_BACKDROP,
+    NOHO_HOUSES_BACKDROP,
+    NOHO_HOUSE_LEFT,
+    NOHO_HOUSE_RIGHT,
+    SIREN_BACKDROP,
+    CAPTAIN_BED_DRAWERS
 } from 'scene/flatKeys'
 
 import {
-    PORCH_DOOR
+    PORCH_DOOR,
+    BENNETT_ROOM_BLINDS,
+    CAPTAIN_BED_MATTRESS
 } from 'scene/furnitureKeys'
 
 module.exports = [
@@ -199,6 +208,17 @@ module.exports = [
                     description: 'side angle, aggressive stance, angry',
                     instance: ENRAGED
                 }
+            },
+            [FIXTURES]: {
+                [MAGAZINE_LETTERS]: true
+            },
+            [FLATS]: {
+                [SIREN_BACKDROP]: true,
+                [CAPTAIN_BED_DRAWERS]: true
+            },
+            [FURNITURES]: {
+                [BENNETT_ROOM_BLINDS]: true,
+                [CAPTAIN_BED_MATTRESS]: true
             }
         },
         cubes: BENNETT_ROOM_KEY,
@@ -234,6 +254,14 @@ module.exports = [
                         instance: GANGBANGER
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [FIRE_HYDRANT]: true
+            },
+            [FLATS]: {
+                [NOHO_HOUSES_BACKDROP]: true,
+                [NOHO_HOUSE_LEFT]: true,
+                [NOHO_HOUSE_RIGHT]: true
             }
         },
         cubes: NOHO_HOUSES_KEY,

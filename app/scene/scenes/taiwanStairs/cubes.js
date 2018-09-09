@@ -1,20 +1,32 @@
 import { TAIWAN_STAIRS_KEY } from 'scene/cubesKeys'
 
 import {
-    b,
-    g
+    e,
+    f,
+    g,
+    k
 } from 'scene/cubesConstants'
 
 const
     TAIWAN_STAIRS_CUBES = {
-        // Windowsill height of 3'.
+        ceiling: {
+            zIndices: [
+                [k],
+                [k],
+                [g, g, e, e, e, e, e, g],
+                [g],
+                [g],
+                [g, g, g, g, g, g, g, g, f, g]
+            ]
+        },
         floor: {
             zIndices: [
-                [g, g, g, b, b, b, b, b, b, g],
-                [g, 5, 5, 4, 3, 2, 1, 0],
-                [g, 5, 5, 4, 3, 2, 1, 0],
-                [g, 5, 5, 4, 3, 2, 1, 0],
-                [g, 5, 5]
+                [0],
+                [0],
+                [g, g, 6, 6, 6, 6, 6, g],
+                [g, 4, 4, 3, 2, 1, 0, 0, 0, 0, 0, g],
+                [g, 4, 4, 4, 4, 4, 4, 4, g],
+                [g, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, g]
             ]
         }
     },

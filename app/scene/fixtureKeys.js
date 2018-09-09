@@ -3,10 +3,12 @@
 const
     PLAYGROUND_BALL = 'playgroundBall',
     RECORD_PLAYER_STOOL = 'recordPlayerStool',
-    SHOPPING_CART = 'shoppingCart'
+    SHOPPING_CART = 'shoppingCart',
+    MAGAZINE_LETTERS = 'magazineLetters'
 
 export {
     PLAYGROUND_BALL,
     RECORD_PLAYER_STOOL,
-    SHOPPING_CART
+    SHOPPING_CART,
+    MAGAZINE_LETTERS
 }

@@ -6,6 +6,7 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    e,
     g,
     k,
     LEFT
@@ -14,9 +15,9 @@ import {
 const
     BENNETT_ROOM_CEILING = [
         [k, k, k, k, k, g, k, g, g, g, k],
-        [k, k, k, g, g, g, g, g, g, g, k],
-        [k, k, g, g, g, g, g, g, g, g, g, k],
-        [g, g, g, g, g, g, g, g, g, g, g, k],
+        [k, k, k, e, e, g, g, g, g, g, k],
+        [k, k, e, e, g, g, g, g, g, g, g, k],
+        [g, e, g, g, g, g, g, g, g, g, g, k],
         [g, g, g, g, g, g, g, g, g, g, g, k],
         [g]
     ],
@@ -42,11 +43,11 @@ const
         floor: {
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
-                [0, 0, 0, g, g, 1, g, 8, 8, g, 0],
-                [0, 0, g, g, 5, 1, 1, 8, 8, 8, g, 0],
-                [g, g, 5, 5, 1, 1, 1, 8, 8, 8, g, 0],
-                [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 0],
-                [1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, g]
+                [0, 0, 0, 7, 7, 1, g, 6, 6, g, 0],
+                [0, 0, 7, 7, 5, 1, 1, 6, 6, 6, g, 0],
+                [g, 7, 5, 5, 1, 1, 1, 6, 6, 6, g, 0],
+                [1, 1, 1, 1, 1, 1, 1, 6, 6, 6, g, 0],
+                [g, 1, 1, 1, 1, 1, 1, 1, 6, 1, 1, g]
             ]
         }
     },

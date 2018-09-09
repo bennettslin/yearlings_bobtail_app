@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [CAUTIOUS]: {
-        yIndex: -1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 7,
+            xWidth: 1.5,
+            zHeight: 4
         }
     }
 }
