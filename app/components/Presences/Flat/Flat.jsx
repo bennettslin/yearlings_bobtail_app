@@ -38,6 +38,15 @@ import DogsSketchbook from './Flats/Bedroom/DogsSketchbook'
 import BedroomBusBackdrop from './Flats/Bedroom/BedroomBusBackdrop'
 import EscapePodSketchbook from './Flats/VanNuysQuad/EscapePodSketchbook'
 import VanNuysSchoolBackdrop from './Flats/VanNuysLockers/VanNuysSchoolBackdrop'
+import BennettCouchThought from './Flats/BennettCouch/BennettCouchThought'
+import WestBerkeleyBackdrop from './Flats/CatholicChurch/WestBerkeleyBackdrop'
+import StJosephsChurch from './Flats/CatholicChurch/StJosephsChurch'
+import UcBerkeleyBackdrop from './Flats/UcBerkeley/UcBerkeleyBackdrop'
+import Campanile from './Flats/UcBerkeley/Campanile'
+import BayAreaBackdrop from './Flats/Cinema/BayAreaBackdrop'
+import CinemaThoughts from './Flats/Cinema/CinemaThoughts'
+import MuseumDisplay from './Flats/Museum/MuseumDisplay'
+import GoKartThought from './Flats/GoKarts/GoKartThought'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -75,7 +84,16 @@ import {
     DOGS_SKETCHBOOK,
     BEDROOM_BUS_BACKDROP,
     ESCAPE_POD_SKETCHBOOK,
-    VAN_NUYS_SCHOOL_BACKDROP
+    VAN_NUYS_SCHOOL_BACKDROP,
+    BENNETT_COUCH_THOUGHT,
+    WEST_BERKELEY_BACKDROP,
+    ST_JOSEPHS_CHURCH,
+    UC_BERKELEY_BACKDROP,
+    CAMPANILE,
+    BAY_AREA_BACKDROP,
+    CINEMA_THOUGHTS,
+    MUSEUM_DISPLAY,
+    GO_KART_THOUGHT
 } from 'scene/flatKeys'
 
 const FLATS_MAP = {
@@ -114,7 +132,16 @@ const FLATS_MAP = {
     [DOGS_SKETCHBOOK]: DogsSketchbook,
     [BEDROOM_BUS_BACKDROP]: BedroomBusBackdrop,
     [ESCAPE_POD_SKETCHBOOK]: EscapePodSketchbook,
-    [VAN_NUYS_SCHOOL_BACKDROP]: VanNuysSchoolBackdrop
+    [VAN_NUYS_SCHOOL_BACKDROP]: VanNuysSchoolBackdrop,
+    [BENNETT_COUCH_THOUGHT]: BennettCouchThought,
+    [WEST_BERKELEY_BACKDROP]: WestBerkeleyBackdrop,
+    [ST_JOSEPHS_CHURCH]: StJosephsChurch,
+    [UC_BERKELEY_BACKDROP]: UcBerkeleyBackdrop,
+    [CAMPANILE]: Campanile,
+    [BAY_AREA_BACKDROP]: BayAreaBackdrop,
+    [CINEMA_THOUGHTS]: CinemaThoughts,
+    [MUSEUM_DISPLAY]: MuseumDisplay,
+    [GO_KART_THOUGHT]: GoKartThought
 },
 DEFAULT_COMPONENT = () => (null)
 

@@ -7,15 +7,6 @@ Scene review
 * Transfer task hours to presences.
 
 ## Flats
-BENNETT_COUCH_THOUGHT = 'bennettCouchThought'
-WEST_BERKELEY_BACKDROP = 'westBerkeleyBackdrop'
-ST_JOSEPHS_CHURCH = 'stJosephsChurch
-UC_BERKELEY_BACKDROP = 'ucBerkeleyBackdrop'
-CAMPANILE = 'campanile'
-BAY_AREA_BACKDROP = 'bayAreaBackdrop'
-CINEMA_THOUGHTS = 'cinemaThoughts'
-MUSEUM_DISPLAY = 'museumDisplay'
-GO_KART_THOUGHT = 'goKartThought'
 
 ## Furnitures
 BENNETT_BLINDS_OPEN = 'bennettBlinds'

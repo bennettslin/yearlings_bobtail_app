@@ -2,7 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -65,6 +65,14 @@ import {
     BENNETT_COUCH_LAMP
 } from 'scene/fixtureKeys'
 
+import {
+    BENNETT_COUCH_THOUGHT,
+    WEST_BERKELEY_BACKDROP,
+    ST_JOSEPHS_CHURCH,
+    UC_BERKELEY_BACKDROP,
+    CAMPANILE
+} from 'scene/flatKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -119,6 +127,9 @@ module.exports = [
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
+            },
+            [FLATS]: {
+                [BENNETT_COUCH_THOUGHT]: true
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,
@@ -143,6 +154,10 @@ module.exports = [
                 [DISPENSER_LEFT]: true,
                 [DISPENSER_RIGHT]: true,
                 [BERKELEY_LAMPPOST]: true
+            },
+            [FLATS]: {
+                [WEST_BERKELEY_BACKDROP]: true,
+                [ST_JOSEPHS_CHURCH]: true
             }
         },
         cubes: CATHOLIC_CHURCH_KEY,
@@ -181,6 +196,9 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [BANCROFT_SHRUB_LEFT]: true
+            },
+            [FLATS]: {
+                [UC_BERKELEY_BACKDROP]: true
             }
         },
         cubes: BANCROFT_LIBRARY_KEY,
@@ -212,6 +230,10 @@ module.exports = [
                 [SIGNPOST]: true,
                 [UC_BERKELEY_TREE_LEFT]: true,
                 [UC_BERKELEY_TREE_RIGHT]: true
+            },
+            [FLATS]: {
+                [UC_BERKELEY_BACKDROP]: true,
+                [CAMPANILE]: true
             }
         },
         cubes: CAMPANILE_KEY,

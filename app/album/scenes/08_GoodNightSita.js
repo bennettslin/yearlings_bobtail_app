@@ -2,7 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -52,6 +52,11 @@ import {
     STEPLADDER,
     MANNEQUIN
 } from 'scene/fixtureKeys'
+
+import {
+    MUSEUM_DISPLAY,
+    GO_KART_THOUGHT
+} from 'scene/flatKeys'
 
 module.exports = [
     {
@@ -103,6 +108,9 @@ module.exports = [
             },
             [FIXTURES]: {
                 [CAVEMAN_BONES]: true
+            },
+            [FLATS]: {
+                [MUSEUM_DISPLAY]: true
             }
         },
         cubes: MUSEUM_KEY,
@@ -184,6 +192,9 @@ module.exports = [
             [CUTOUTS]: {
                 [GO_KART_LEFT]: true,
                 [GO_KART_RIGHT]: true
+            },
+            [FLATS]: {
+                [GO_KART_THOUGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,

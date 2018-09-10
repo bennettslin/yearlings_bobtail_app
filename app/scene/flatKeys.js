@@ -36,7 +36,16 @@ const
     DOGS_SKETCHBOOK = 'dogsSketchbook',
     BEDROOM_BUS_BACKDROP = 'bedroomBusBackdrop',
     ESCAPE_POD_SKETCHBOOK = 'escapePodSketchbook',
-    VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop'
+    VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
+    BENNETT_COUCH_THOUGHT = 'bennettCouchThought',
+    WEST_BERKELEY_BACKDROP = 'westBerkeleyBackdrop',
+    ST_JOSEPHS_CHURCH = 'stJosephsChurch',
+    UC_BERKELEY_BACKDROP = 'ucBerkeleyBackdrop',
+    CAMPANILE = 'campanile',
+    BAY_AREA_BACKDROP = 'bayAreaBackdrop',
+    CINEMA_THOUGHTS = 'cinemaThoughts',
+    MUSEUM_DISPLAY = 'museumDisplay',
+    GO_KART_THOUGHT = 'goKartThought'
 
 export {
     NOHO_HOUSES_BACKDROP,
@@ -74,5 +83,14 @@ export {
     DOGS_SKETCHBOOK,
     BEDROOM_BUS_BACKDROP,
     ESCAPE_POD_SKETCHBOOK,
-    VAN_NUYS_SCHOOL_BACKDROP
+    VAN_NUYS_SCHOOL_BACKDROP,
+    BENNETT_COUCH_THOUGHT,
+    WEST_BERKELEY_BACKDROP,
+    ST_JOSEPHS_CHURCH,
+    UC_BERKELEY_BACKDROP,
+    CAMPANILE,
+    BAY_AREA_BACKDROP,
+    CINEMA_THOUGHTS,
+    MUSEUM_DISPLAY,
+    GO_KART_THOUGHT
 }

@@ -2,7 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -83,6 +83,11 @@ import {
     BASS_CASE,
     GUITAR_CASE
 } from 'scene/fixtureKeys'
+
+import {
+    BAY_AREA_BACKDROP,
+    CINEMA_THOUGHTS
+} from 'scene/flatKeys'
 
 module.exports = [
     {
@@ -361,6 +366,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [CINEMA_POSTER_RIGHT]: true
+            },
+            [FLATS]: {
+                [BAY_AREA_BACKDROP]: true,
+                [CINEMA_THOUGHTS]: true
             }
         },
         cubes: CINEMA_STREET_KEY,
