@@ -4,17 +4,25 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    g
+    e,
+    g,
+    k
 } from 'scene/cubesConstants'
 
 const
     LIZ_GATE_CUBES = {
-        // Outdoor wall is 8'.
+        ceiling: {
+            zIndices: [
+                [k],
+                [g, e, e, e, e, e, g, g, g, g, g, k],
+                [k]
+            ]
+        },
         floor: {
             zIndices: [
-                [g, g, g, g, g, g, g, g, g, g, 1, 7],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7],
-                [7, 7, 7, 7, 7, 7, 1, 1, 1, 7, 7, 7],
+                [0],
+                [g, 6, 6, 6, 6, 6, g, g, g, g, g, 7],
+                [7, 7, 7, 7, 7, 7, 7, 1, 1, 1, 7, 7],
                 [1],
                 [1],
                 [0]
@@ -22,13 +30,18 @@ const
         }
     },
     LIZ_GATE_STREET_CUBES = {
+        ceiling: {
+            zIndices: [
+                [k]
+            ]
+        },
         floor: {
             zIndices: [
-                [g, g, g, g, g, 1, 7, 1, 1, 0],
-                [1, 1, 1, 1, 1, 1, 7, 1, 1, 0],
-                [7, 1, 1, 1, 7, 7, 7, 1, 1, 0],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0],
+                [g, g, g, g, g, 7, 1, 1, 0],
+                [7, 1, 1, 1, 7, 7, 1, 1, 0],
+                [1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
             ]
         }

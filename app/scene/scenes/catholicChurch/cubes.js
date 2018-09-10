@@ -4,8 +4,8 @@ const
     CATHOLIC_CHURCH_CUBES = {
         floor: {
             zIndices: [
-                [0],
-                [0],
+                [1],
+                [1],
                 [0],
                 [0],
                 [1],

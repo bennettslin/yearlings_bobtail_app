@@ -4,20 +4,29 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    f
+    f,
+    g
 } from 'scene/cubesConstants'
 
 const
     CLUB_FRONT_CUBES = {
-        // Indoor wall of club is 9'. Club stage is 2.5'.
+        ceiling: {
+            zIndices: [
+                [g],
+                [g],
+                [f, g],
+                [f, g],
+                [g]
+            ]
+        },
         floor: {
             zIndices: [
-                [f],
-                [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
-                [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
-                [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
-                [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
-                [1]
+                [g],
+                [g, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, g],
+                [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, g],
+                [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, g],
+                [g, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, g],
+                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
     },
@@ -25,13 +34,13 @@ const
         // Indoor wall of club is 9'. Club stage is 2.5'.
         ceiling: {
             zIndices: [
-                [f]
+                [g]
             ]
         },
         floor: {
             zIndices: [
-                [f],
-                [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+                [g],
+                [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
                 [1]
             ]
         }

@@ -4,17 +4,28 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    g
+    e,
+    f,
+    k
 } from 'scene/cubesConstants'
 
 const
     CINEMA_CUBES = {
-        // Outdoor wall is 8'.
+        ceiling: {
+            zIndices: [
+                [f, f, f, e, e, e, e, e, e, f],
+                [f],
+                [f],
+                [f],
+                [f],
+                [k]
+            ]
+        },
         floor: {
             zIndices: [
-                [g],
-                [g, g, g, 1, 1, 1, 1, 1, 1, g],
-                [g, g, g, 1, 1, 1, 1, 1, 1, g],
+                [f, f, f, 1, 1, 1, 1, 1, 1, f],
+                [f, f, f, 1, 1, 1, 1, 1, 1, f],
+                [f, f, f, 1, 1, 1, 1, 1, 1, f],
                 [1],
                 [1],
                 [0]
@@ -22,13 +33,23 @@ const
         }
     },
     CINEMA_STREET_CUBES = {
+        ceiling: {
+            zIndices: [
+                [f, f, f, f, k],
+                [f, f, f, f, k],
+                [f, f, f, f, k],
+                [f, f, f, f, k],
+                [f, f, f, f, k],
+                [k]
+            ]
+        },
         floor: {
             zIndices: [
-                [g, g, g, 1, 1, 0],
-                [g, g, g, 1, 1, 0],
-                [g, g, g, 1, 1, 0],
-                [1],
-                [1],
+                [f, f, f, 1, 1, 0],
+                [f, f, f, 1, 1, 0],
+                [f, f, f, 1, 1, 0],
+                [1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 1, 0],
                 [0]
             ]
         }
