@@ -7,21 +7,6 @@ Scene review
 * Transfer task hours to presences.
 
 ## Puppets
-(Figure out Christopher)
-PuppetBennettBegin
-PuppetAnitaBegin
-PuppetMotherBegin
-PuppetFatherBegin
-PuppetBennettMiddle
-PuppetAnitaMiddle
-PuppetMotherMiddle
-PuppetFatherMiddle
-PuppetBennettEnd
-PuppetAnitaEnd
-PuppetMotherEnd
-PuppetFatherEnd
-Earth
-SpaceColony
 
 # THINGS_BENNETT_BED
 # THINGS_BENNETT_COUCH

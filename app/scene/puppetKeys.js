@@ -1,12 +1,40 @@
 // Keep puppet instances in this file.
 
 const
+    PUPPET_BENNETT_BEGIN = 'puppetBennettBegin',
+    PUPPET_ANITA_BEGIN = 'puppetAnitaBegin',
+    PUPPET_MOTHER_BEGIN = 'puppetMotherBegin',
+    PUPPET_FATHER_BEGIN = 'puppetFatherBegin',
+    PUPPET_BENNETT_MIDDLE = 'puppetBennettMiddle',
+    PUPPET_ANITA_MIDDLE = 'puppetAnitaMiddle',
+    PUPPET_MOTHER_MIDDLE = 'puppetMotherMiddle',
+    PUPPET_FATHER_MIDDLE = 'puppetFatherMiddle',
+    PUPPET_BENNETT_END = 'puppetBennettEnd',
+    PUPPET_ANITA_END = 'puppetAnitaEnd',
+    PUPPET_MOTHER_END = 'puppetMotherEnd',
+    PUPPET_FATHER_END = 'puppetFatherEnd',
     PCHELKA = 'pchelka',
     MUSHKA = 'mushka',
-    ROCKET = 'rocket'
+    ROCKET = 'rocket',
+    EARTH = 'earth',
+    SPACE_COLONY = 'spaceColony'
 
 export {
+    PUPPET_BENNETT_BEGIN,
+    PUPPET_ANITA_BEGIN,
+    PUPPET_MOTHER_BEGIN,
+    PUPPET_FATHER_BEGIN,
+    PUPPET_BENNETT_MIDDLE,
+    PUPPET_ANITA_MIDDLE,
+    PUPPET_MOTHER_MIDDLE,
+    PUPPET_FATHER_MIDDLE,
+    PUPPET_BENNETT_END,
+    PUPPET_ANITA_END,
+    PUPPET_MOTHER_END,
+    PUPPET_FATHER_END,
     PCHELKA,
     MUSHKA,
-    ROCKET
+    ROCKET,
+    EARTH,
+    SPACE_COLONY
 }

@@ -98,7 +98,9 @@ import {
 import {
     PCHELKA,
     MUSHKA,
-    ROCKET
+    ROCKET,
+    EARTH,
+    SPACE_COLONY
 } from 'scene/puppetKeys'
 
 /**
@@ -237,6 +239,10 @@ module.exports = [
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true
+            },
+            [PUPPETS]: {
+                [EARTH]: true,
+                [SPACE_COLONY]: true
             }
         },
         cubes: BEDROOM_SPACE_KEY,
