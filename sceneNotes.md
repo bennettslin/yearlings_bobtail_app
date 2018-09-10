@@ -7,9 +7,21 @@ Scene review
 * Transfer task hours to presences.
 
 ## Puppets
-PuppetsFamilyBegin
-PuppetsFamilyMiddle
-PuppetsFamilyEnd
+(Figure out Christopher)
+PuppetBennettBegin
+PuppetAnitaBegin
+PuppetMotherBegin
+PuppetFatherBegin
+PuppetBennettMiddle
+PuppetAnitaMiddle
+PuppetMotherMiddle
+PuppetFatherMiddle
+PuppetBennettEnd
+PuppetAnitaEnd
+PuppetMotherEnd
+PuppetFatherEnd
+Earth
+SpaceColony
 
 # THINGS_CATHOLIC_CHURCH
 # THINGS_UC_BERKELEY

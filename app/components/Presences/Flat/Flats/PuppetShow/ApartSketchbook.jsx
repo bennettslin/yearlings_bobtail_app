@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const SpaceStationSketchbook = ({
+const ApartSketchbook = ({
 
     className,
 
@@ -18,7 +18,7 @@ const SpaceStationSketchbook = ({
     return (
         <Svg
             className={cx(
-                'SpaceStationSketchbook',
+                'ApartSketchbook',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const SpaceStationSketchbook = ({
                 {...other}
             >
                 {cx(
-                    'SpaceStationSketchbook'
+                    'ApartSketchbook'
                 )}
             </text>
         </Svg>
     )
 }
 
-SpaceStationSketchbook.propTypes = propTypes;
+ApartSketchbook.propTypes = propTypes;
 
-export default SpaceStationSketchbook
+export default ApartSketchbook

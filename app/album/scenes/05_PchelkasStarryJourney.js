@@ -3,7 +3,8 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PUPPETS
 } from 'constants/scene'
 
 import {
@@ -82,7 +83,7 @@ import {
     BEDROOM_BUS_BACKDROP,
     CAPTAIN_BED_DRAWERS,
     DOGS_SKETCHBOOK,
-    SPACE_STATION_SKETCHBOOK,
+    ESCAPE_POD_SKETCHBOOK,
     VAN_NUYS_SCHOOL_BACKDROP,
     VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
@@ -94,11 +95,11 @@ import {
     PRINCIPAL_DOOR
 } from 'scene/furnitureKeys'
 
-// import {
-//     PCHELKA,
-//     MUSHKA,
-//     ROCKET
-// } from 'scene/puppetKeys'
+import {
+    PCHELKA,
+    MUSHKA,
+    ROCKET
+} from 'scene/puppetKeys'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -206,6 +207,11 @@ module.exports = [
             [FURNITURES]: {
                 [BEDROOM_BLINDS]: true,
                 [CAPTAIN_BED_MATTRESS]: true
+            },
+            [PUPPETS]: {
+                [PCHELKA]: true,
+                [MUSHKA]: true,
+                [ROCKET]: true
             }
         },
         cubes: BEDROOM_DOGS_KEY,
@@ -227,8 +233,7 @@ module.exports = [
                 }
             },
             [FLATS]: {
-                [BEDROOM_BACKDROP]: true,
-                [SPACE_STATION_SKETCHBOOK]: true
+                [BEDROOM_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true
@@ -321,6 +326,7 @@ module.exports = [
                 [VAN_NUYS_LOGO]: true
             },
             [FLATS]: {
+                [ESCAPE_POD_SKETCHBOOK]: true,
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             }
         },

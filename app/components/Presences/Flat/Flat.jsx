@@ -11,10 +11,7 @@ import NurseOfficeBubble from './Flats/NohoSchool/NurseOfficeBubble'
 import ValleyBackdrop from './Flats/Freeway/ValleyBackdrop'
 import BedroomBackdrop from './Flats/Bedroom/BedroomBackdrop'
 import BedroomSirenBackdrop from './Flats/Bedroom/BedroomSirenBackdrop'
-import BedroomBusBackdrop from './Flats/Bedroom/BedroomBusBackdrop'
 import CaptainBedDrawers from './Flats/Bedroom/CaptainBedDrawers'
-import DogsSketchbook from './Flats/Bedroom/DogsSketchbook'
-import SpaceStationSketchbook from './Flats/Bedroom/SpaceStationSketchbook'
 import FamilyHouse from './Flats/ChangelingCave/FamilyHouse'
 import CaveShadows from './Flats/ChangelingCave/CaveShadows'
 import Stalactites from './Flats/ChangelingCave/Stalactites'
@@ -22,9 +19,11 @@ import TaiwanMountainsFar from './Flats/PuppetShow/TaiwanMountainsFar'
 import TaiwanMountainsBridged from './Flats/PuppetShow/TaiwanMountainsBridged'
 import TaiwanMountainsNear from './Flats/PuppetShow/TaiwanMountainsNear'
 import TaiwanClouds from './Flats/PuppetShow/TaiwanClouds'
+import TogetherSketchbook from './Flats/PuppetShow/TogetherSketchbook'
 import SchoolbusStreetThought from './Flats/Schoolbus/SchoolbusStreetThought'
 import VanNuysSchoolThought from './Flats/TetherballCourt/VanNuysSchoolThought'
 import VanNuysSchoolhouse from './Flats/TetherballCourt/VanNuysSchoolhouse'
+import ApartSketchbook from './Flats/PuppetShow/ApartSketchbook'
 import TaiwanGate from './Flats/TaiwanStairs/TaiwanGate'
 import TaiwanStreetsBackdrop from './Flats/TaiwanGate/TaiwanStreetsBackdrop'
 import ShoreBackdrop from './Flats/Rickshaw/ShoreBackdrop'
@@ -35,6 +34,9 @@ import OceanDepthsBack from './Flats/Buoy/OceanDepthsBack'
 import OceanWaves from './Flats/OceanDepths/OceanWaves'
 import OceanBottomFar from './Flats/OceanDepths/OceanBottomFar'
 import OceanBottomNear from './Flats/OceanFloor/OceanBottomNear'
+import DogsSketchbook from './Flats/Bedroom/DogsSketchbook'
+import BedroomBusBackdrop from './Flats/Bedroom/BedroomBusBackdrop'
+import EscapePodSketchbook from './Flats/VanNuysQuad/EscapePodSketchbook'
 import VanNuysSchoolBackdrop from './Flats/VanNuysLockers/VanNuysSchoolBackdrop'
 
 import {
@@ -47,10 +49,7 @@ import {
     VALLEY_BACKDROP,
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
-    BEDROOM_BUS_BACKDROP,
     CAPTAIN_BED_DRAWERS,
-    DOGS_SKETCHBOOK,
-    SPACE_STATION_SKETCHBOOK,
     FAMILY_HOUSE,
     CAVE_SHADOWS,
     STALACTITES,
@@ -58,9 +57,11 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
+    TOGETHER_SKETCHBOOK,
     SCHOOLBUS_STREET_THOUGHT,
     VAN_NUYS_SCHOOL_THOUGHT,
     VAN_NUYS_SCHOOLHOUSE,
+    APART_SKETCHBOOK,
     TAIWAN_GATE,
     TAIWAN_STREETS_BACKDROP,
     SHORE_BACKDROP,
@@ -71,6 +72,9 @@ import {
     OCEAN_WAVES,
     OCEAN_BOTTOM_FAR,
     OCEAN_BOTTOM_NEAR,
+    DOGS_SKETCHBOOK,
+    BEDROOM_BUS_BACKDROP,
+    ESCAPE_POD_SKETCHBOOK,
     VAN_NUYS_SCHOOL_BACKDROP
 } from 'scene/flatKeys'
 
@@ -84,10 +88,7 @@ const FLATS_MAP = {
     [VALLEY_BACKDROP]: ValleyBackdrop,
     [BEDROOM_BACKDROP]: BedroomBackdrop,
     [BEDROOM_SIREN_BACKDROP]: BedroomSirenBackdrop,
-    [BEDROOM_BUS_BACKDROP]: BedroomBusBackdrop,
     [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers,
-    [DOGS_SKETCHBOOK]: DogsSketchbook,
-    [SPACE_STATION_SKETCHBOOK]: SpaceStationSketchbook,
     [FAMILY_HOUSE]: FamilyHouse,
     [CAVE_SHADOWS]: CaveShadows,
     [STALACTITES]: Stalactites,
@@ -95,9 +96,11 @@ const FLATS_MAP = {
     [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
     [TAIWAN_MOUNTAINS_NEAR]: TaiwanMountainsNear,
     [TAIWAN_CLOUDS]: TaiwanClouds,
+    [TOGETHER_SKETCHBOOK]: TogetherSketchbook,
     [SCHOOLBUS_STREET_THOUGHT]: SchoolbusStreetThought,
     [VAN_NUYS_SCHOOL_THOUGHT]: VanNuysSchoolThought,
     [VAN_NUYS_SCHOOLHOUSE]: VanNuysSchoolhouse,
+    [APART_SKETCHBOOK]: ApartSketchbook,
     [TAIWAN_GATE]: TaiwanGate,
     [TAIWAN_STREETS_BACKDROP]: TaiwanStreetsBackdrop,
     [SHORE_BACKDROP]: ShoreBackdrop,
@@ -108,6 +111,9 @@ const FLATS_MAP = {
     [OCEAN_WAVES]: OceanWaves,
     [OCEAN_BOTTOM_FAR]: OceanBottomFar,
     [OCEAN_BOTTOM_NEAR]: OceanBottomNear,
+    [DOGS_SKETCHBOOK]: DogsSketchbook,
+    [BEDROOM_BUS_BACKDROP]: BedroomBusBackdrop,
+    [ESCAPE_POD_SKETCHBOOK]: EscapePodSketchbook,
     [VAN_NUYS_SCHOOL_BACKDROP]: VanNuysSchoolBackdrop
 },
 DEFAULT_COMPONENT = () => (null)

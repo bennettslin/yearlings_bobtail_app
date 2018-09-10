@@ -8,7 +8,7 @@ const ARRANGEMENTS_MAP = {
     [PCHELKA]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 3,
+            xFloat: 5,
             xWidth: 5,
             zHeight: 3
         }
@@ -16,7 +16,7 @@ const ARRANGEMENTS_MAP = {
     [MUSHKA]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 3,
+            xFloat: 5,
             xWidth: 5,
             zHeight: 3
         }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_MAP = {
     [ROCKET]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 8,
+            xFloat: 5,
             xWidth: 4,
             zHeight: 1
         }

@@ -56,9 +56,11 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
+    TOGETHER_SKETCHBOOK,
     SCHOOLBUS_STREET_THOUGHT,
     VAN_NUYS_SCHOOL_THOUGHT,
-    VAN_NUYS_SCHOOLHOUSE
+    VAN_NUYS_SCHOOLHOUSE,
+    APART_SKETCHBOOK
 } from 'scene/flatKeys'
 
 import {
@@ -92,7 +94,8 @@ module.exports = [
                 [TAIWAN_MOUNTAINS_FAR]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAINS_NEAR]: true,
-                [TAIWAN_CLOUDS]: true
+                [TAIWAN_CLOUDS]: true,
+                [TOGETHER_SKETCHBOOK]: true
             }
         },
         cubes: PUPPET_SHOW_KEY,
@@ -198,7 +201,8 @@ module.exports = [
                 [TAIWAN_MOUNTAINS_FAR]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAINS_NEAR]: true,
-                [TAIWAN_CLOUDS]: true
+                [TAIWAN_CLOUDS]: true,
+                [APART_SKETCHBOOK]: true
             }
         },
         cubes: PUPPET_SHOW_KEY,
