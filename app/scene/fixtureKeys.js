@@ -5,12 +5,20 @@ const
     RECORD_PLAYER_STOOL = 'recordPlayerStool',
     SHOPPING_CART = 'shoppingCart',
     MAGAZINE_LETTERS = 'magazineLetters',
-    CAPTAIN_BED_LAMP = 'captainBedLamp'
+    CAPTAIN_BED_LAMP = 'captainBedLamp',
+    BACKPACK_BENNETT = 'backpackBennett',
+    BACKPACK_SASHA = 'backpackSasha',
+    FRIDGE_DRAWINGS = 'fridgeDrawings',
+    THROWN_FRUIT = 'thrownFruit'
 
 export {
     PLAYGROUND_BALL,
     RECORD_PLAYER_STOOL,
     SHOPPING_CART,
     MAGAZINE_LETTERS,
-    CAPTAIN_BED_LAMP
+    CAPTAIN_BED_LAMP,
+    BACKPACK_BENNETT,
+    BACKPACK_SASHA,
+    FRIDGE_DRAWINGS,
+    THROWN_FRUIT
 }

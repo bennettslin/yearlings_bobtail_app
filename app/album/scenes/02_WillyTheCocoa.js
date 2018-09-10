@@ -68,7 +68,10 @@ import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
-    FIRE_HYDRANT
+    FIRE_HYDRANT,
+    TROLL_SHADOW_LEFT,
+    TROLL_SHADOW_RIGHT,
+    CAMPFIRE
 } from 'scene/cutoutKeys'
 
 import {
@@ -83,7 +86,10 @@ import {
     NOHO_HOUSE_RIGHT,
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
-    CAPTAIN_BED_DRAWERS
+    CAPTAIN_BED_DRAWERS,
+    FAMILY_HOUSE,
+    CAVE_SHADOWS,
+    STALACTITES
 } from 'scene/flatKeys'
 
 import {
@@ -328,6 +334,16 @@ module.exports = [
                     description: 'side angle, wide-eyed, needing reassurance',
                     instance: ENCHANTED
                 }
+            },
+            [CUTOUTS]: {
+                [TROLL_SHADOW_LEFT]: true,
+                [TROLL_SHADOW_RIGHT]: true,
+                [CAMPFIRE]: true
+            },
+            [FLATS]: {
+                [FAMILY_HOUSE]: true,
+                [CAVE_SHADOWS]: true,
+                [STALACTITES]: true
             }
         },
         cubes: CHANGELING_CAVE_KEY,

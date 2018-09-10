@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    FIXTURES,
+    FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     TAIWAN_ROOM_KEY,
     TAIWAN_STAIRS_KEY,
     TAIWAN_GATE_KEY,
@@ -32,18 +40,63 @@ import {
 
 import { MERMAID } from 'scene/instanceKeys/sasha'
 
+import {
+    BUDDHA_SHRINE,
+    TAIWAN_FRIDGE_FRONT,
+    BENNETT_TAIWAN_STAIRS,
+    ODIN_TAIWAN_STAIRS,
+    TAIWAN_FRIDGE_SIDE,
+    BENNETT_TAIWAN_GATE,
+    ODIN_TAIWAN_GATE,
+    BENNETT_ODIN_RICKSHAW,
+    BENNETT_SHORE,
+    ODIN_SHORE,
+    BENNETT_ODIN_BUOY,
+    YELLOW_TAPED_GRILL,
+    BENNETT_ODIN_DEPTHS,
+    SEA_SERPENTS,
+    BENNETT_OCEAN_FLOOR,
+    ODIN_OCEAN_FLOOR,
+    BENNETT_MAT,
+    ODIN_MAT,
+    BUDDHA_CAVE
+} from 'scene/cutoutKeys'
+
+import {
+    FRIDGE_DRAWINGS
+} from 'scene/fixtureKeys'
+
+import {
+    TAIWAN_GATE,
+    TAIWAN_STREETS_BACKDROP,
+    SHORE_BACKDROP,
+    SHORE_FRONT,
+    SHORE_BACK,
+    OCEAN_DEPTHS_FRONT,
+    OCEAN_DEPTHS_BACK,
+    OCEAN_WAVES,
+    OCEAN_BOTTOM_FAR,
+    OCEAN_BOTTOM_NEAR
+} from 'scene/flatKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Bennett is lying on a mat on the floor. In the distance, he sees himself creeping out of the house in pitch darkness. Papers are strewn where he walked.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, lying on floor, propped up',
                     instance: MAT
                 }
+            },
+            [CUTOUTS]: {
+                [BUDDHA_SHRINE]: true,
+                [TAIWAN_FRIDGE_FRONT]: true,
+                [BENNETT_TAIWAN_STAIRS]: true,
+                [ODIN_TAIWAN_STAIRS]: true
             }
         },
         cubes: TAIWAN_ROOM_KEY,
@@ -56,13 +109,24 @@ module.exports = [
         unitIndex: 4,
         description: `From top of stairs, Bennett sees himself opening the gate and peering out.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, looking down stairs',
                     instance: STAIRS
                 }
+            },
+            [CUTOUTS]: {
+                [TAIWAN_FRIDGE_SIDE]: true,
+                [BENNETT_TAIWAN_GATE]: true,
+                [ODIN_TAIWAN_GATE]: true
+            },
+            [FIXTURES]: {
+                [FRIDGE_DRAWINGS]: true
+            },
+            [FLATS]: {
+                [TAIWAN_GATE]: true
             }
         },
         cubes: TAIWAN_STAIRS_KEY,
@@ -75,13 +139,19 @@ module.exports = [
         unitIndex: 6,
         description: `Bennett is stepping through the front gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, peeking out from gate',
                     instance: GATE
                 }
+            },
+            [CUTOUTS]: {
+                [BENNETT_ODIN_RICKSHAW]: true
+            },
+            [FLATS]: {
+                [TAIWAN_STREETS_BACKDROP]: true
             }
         },
         cubes: TAIWAN_GATE_KEY,
@@ -94,13 +164,20 @@ module.exports = [
         unitIndex: 9,
         description: ``,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'getting off rickshaw bike',
                     instance: RICKSHAW
                 }
+            },
+            [CUTOUTS]: {
+                [BENNETT_SHORE]: true,
+                [ODIN_SHORE]: true
+            },
+            [FLATS]: {
+                [SHORE_BACKDROP]: true
             }
         },
         cubes: RICKSHAW_KEY,
@@ -113,13 +190,21 @@ module.exports = [
         unitIndex: 11,
         description: `Bennett is standing on the shore. He sees himself in the water, on a buoy. Footprints lead into the water.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side back, looking out to ocean',
                     instance: SHORE
                 }
+            },
+            [CUTOUTS]: {
+                [BENNETT_ODIN_BUOY]: true,
+                [YELLOW_TAPED_GRILL]: true
+            },
+            [FLATS]: {
+                [SHORE_FRONT]: true,
+                [SHORE_BACK]: true
             }
         },
         cubes: SHORE_KEY,
@@ -132,13 +217,21 @@ module.exports = [
         unitIndex: 14,
         description: `Sea serpents are surrounding Bennett in the ocean.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'peering down from buoy',
                     instance: BUOY
                 }
+            },
+            [CUTOUTS]: {
+                [BENNETT_ODIN_DEPTHS]: true,
+                [SEA_SERPENTS]: true
+            },
+            [FLATS]: {
+                [OCEAN_DEPTHS_FRONT]: true,
+                [OCEAN_DEPTHS_BACK]: true
             }
         },
         cubes: BUOY_KEY,
@@ -151,7 +244,7 @@ module.exports = [
         unitIndex: 18,
         description: `Sasha is a mermaid, rescuing Bennett. She points down to Bennett on the ocean floor.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -164,6 +257,14 @@ module.exports = [
                     description: 'mermaid',
                     instance: MERMAID
                 }
+            },
+            [CUTOUTS]: {
+                [BENNETT_OCEAN_FLOOR]: true,
+                [ODIN_OCEAN_FLOOR]: true
+            },
+            [FLATS]: {
+                [OCEAN_WAVES]: true,
+                [OCEAN_BOTTOM_FAR]: true
             }
         },
         cubes: OCEAN_DEPTHS_KEY,
@@ -176,13 +277,21 @@ module.exports = [
         unitIndex: 20,
         description: `Bennett sits on the shore gazing at the ocean. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, crouched in sand, looking back',
                     instance: OCEAN_FLOOR
                 }
+            },
+            [CUTOUTS]: {
+                [BENNETT_MAT]: true,
+                [ODIN_MAT]: true,
+                [BUDDHA_CAVE]: true
+            },
+            [FLATS]: {
+                [OCEAN_BOTTOM_NEAR]: true
             }
         },
         cubes: OCEAN_FLOOR_KEY,

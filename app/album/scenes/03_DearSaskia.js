@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    FIXTURES,
+    FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_COURT_KEY
@@ -33,10 +41,38 @@ import {
     INDIGNANT
 } from 'scene/instanceKeys/sasha'
 
+import {
+    SCHOOLBUS_FRONT,
+    SCHOOLBUS_BACK
+} from 'scene/cutoutKeys'
+
+import {
+    BACKPACK_BENNETT,
+    BACKPACK_SASHA
+} from 'scene/fixtureKeys'
+
+import {
+    TAIWAN_MOUNTAINS_FAR,
+    TAIWAN_MOUNTAINS_BRIDGED,
+    TAIWAN_MOUNTAINS_NEAR,
+    TAIWAN_CLOUDS,
+    SCHOOLBUS_STREET_THOUGHT,
+    VAN_NUYS_SCHOOL_THOUGHT,
+    VAN_NUYS_SCHOOLHOUSE
+} from 'scene/flatKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
+        presences: {
+            [FLATS]: {
+                [TAIWAN_MOUNTAINS_FAR]: true,
+                [TAIWAN_MOUNTAINS_BRIDGED]: true,
+                [TAIWAN_MOUNTAINS_NEAR]: true,
+                [TAIWAN_CLOUDS]: true
+            }
+        },
         cubes: PUPPET_SHOW_KEY,
         sky: {
             time: TIME_ANYTIME,
@@ -46,7 +82,13 @@ module.exports = [
     {
         unitIndex: 4,
         description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
-        actors: {
+        presences: {
+            [FLATS]: {
+                [TAIWAN_MOUNTAINS_FAR]: true,
+                [TAIWAN_MOUNTAINS_BRIDGED]: true,
+                [TAIWAN_MOUNTAINS_NEAR]: true,
+                [TAIWAN_CLOUDS]: true
+            }
         },
         cubes: PUPPET_SHOW_KEY,
         sky: {
@@ -58,7 +100,7 @@ module.exports = [
         unitIndex: 6,
         description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -79,6 +121,17 @@ module.exports = [
                         instance: JEWISH_BOY
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [SCHOOLBUS_BACK]: true,
+                [SCHOOLBUS_FRONT]: true
+            },
+            [FIXTURES]: {
+                [BACKPACK_BENNETT]: true,
+                [BACKPACK_SASHA]: true
+            },
+            [FLATS]: {
+                [SCHOOLBUS_STREET_THOUGHT]: true
             }
         },
         cubes: SCHOOLBUS_KEY,
@@ -91,7 +144,7 @@ module.exports = [
         unitIndex: 9,
         description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -116,6 +169,10 @@ module.exports = [
                     description: 'laughing, tying up Bennett',
                     instance: TYING
                 }
+            },
+            [FLATS]: {
+                [VAN_NUYS_SCHOOL_THOUGHT]: true,
+                [VAN_NUYS_SCHOOLHOUSE]: true
             }
         },
         cubes: TETHERBALL_COURT_KEY,
@@ -127,7 +184,14 @@ module.exports = [
     {
         unitIndex: 12,
         description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
-        actors: {},
+        presences: {
+            [FLATS]: {
+                [TAIWAN_MOUNTAINS_FAR]: true,
+                [TAIWAN_MOUNTAINS_BRIDGED]: true,
+                [TAIWAN_MOUNTAINS_NEAR]: true,
+                [TAIWAN_CLOUDS]: true
+            }
+        },
         cubes: PUPPET_SHOW_KEY,
         sky: {
             time: TIME_ANYTIME,

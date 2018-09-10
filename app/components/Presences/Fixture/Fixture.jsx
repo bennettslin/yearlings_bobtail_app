@@ -7,13 +7,21 @@ import RecordPlayerStool from './Fixtures/FamilyBathroom/RecordPlayerStool'
 import ShoppingCart from './Fixtures/Freeway/ShoppingCart'
 import MagazineLetters from './Fixtures/Bedroom/MagazineLetters'
 import CaptainBedLamp from './Fixtures/Bedroom/CaptainBedLamp'
+import BackpackBennett from './Fixtures/Schoolbus/BackpackBennett'
+import BackpackSasha from './Fixtures/Schoolbus/BackpackSasha'
+import FridgeDrawings from './Fixtures/TaiwanStairs/FridgeDrawings'
+import ThrownFruit from './Fixtures/VanNuysLockers/ThrownFruit'
 
 import {
     PLAYGROUND_BALL,
     RECORD_PLAYER_STOOL,
     SHOPPING_CART,
     MAGAZINE_LETTERS,
-    CAPTAIN_BED_LAMP
+    CAPTAIN_BED_LAMP,
+    BACKPACK_BENNETT,
+    BACKPACK_SASHA,
+    FRIDGE_DRAWINGS,
+    THROWN_FRUIT
 } from 'scene/fixtureKeys'
 
 
@@ -22,7 +30,11 @@ const FIXTURES_MAP = {
     [RECORD_PLAYER_STOOL]: RecordPlayerStool,
     [SHOPPING_CART]: ShoppingCart,
     [MAGAZINE_LETTERS]: MagazineLetters,
-    [CAPTAIN_BED_LAMP]: CaptainBedLamp
+    [CAPTAIN_BED_LAMP]: CaptainBedLamp,
+    [BACKPACK_BENNETT]: BackpackBennett,
+    [BACKPACK_SASHA]: BackpackSasha,
+    [FRIDGE_DRAWINGS]: FridgeDrawings,
+    [THROWN_FRUIT]: ThrownFruit
 },
 DEFAULT_COMPONENT = () => (null)
 

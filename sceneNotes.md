@@ -10,69 +10,6 @@ What is the distinction between a cutout and a flat, exactly?
 
 Puppets have string.
 
-## Cutouts
-TrollShadowLeft
-TrollShadowRight
-Campfire
-SchoolbusFront
-SchoolbusBack
-BuddhaShrine
-TaiwanFridgeFront
-BennettTaiwanStairs
-OdinTaiwanStairs
-TaiwanFridgeSide
-BennettTaiwanGate
-OdinTaiwanGate
-BennettOdinRickshaw
-BennettShore
-OdinShore
-BennettOdinBuoy
-YellowTapedGrill
-BennettOdinOceanDepths
-SeaSerpents
-BennettOceanFloor
-OdinOceanFloor
-BennettMat
-OdinMat
-BuddhaCave
-LockerBank
-TrashCanBack
-VanNuysPlantsFront
-LockerBank
-TrashCanFront
-VanNuysPlantsBack
-
-## Fixtures
-BackpackBennett
-BackpackSasha
-Drawings
-ThrownFruit
-
-## Flats
-NohoBackdrop
-FamilyHouse
-CaveShadows
-Stalactites
-MountainsFar
-MountainsBridged
-MountainsNear
-Clouds
-ValleyStreetThought
-VanNuysThought
-VanNuysSchoolhouse
-TaiwanGate
-TaiwanStreets
-ShoreBackdrop
-ShoreFront
-ShoreBack
-OceanDepthsFront
-OceanDepthsBack
-OceanWaves
-OceanFloor
-OceanBottom
-VanNuysSchoolBackdrop
-VanNuysSchoolhouse
-
 ## Furniture
 SchoolbusSeatFront
 SchoolbusSeatBack
@@ -80,7 +17,7 @@ SleepingMat
 StairwellRailing
 IronGate
 Buoy
-VanNuysHallwayDoor
+PrincipalDoor
 
 ## Puppets
 PuppetsFamilyBegin
