@@ -73,6 +73,7 @@ import {
 
 import {
     CAPTAIN_BED_LAMP,
+    BENNETT_LETTERS,
     THROWN_FRUIT
 } from 'scene/fixtureKeys'
 
@@ -142,7 +143,8 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [CAPTAIN_BED_LAMP]: true
+                [CAPTAIN_BED_LAMP]: true,
+                [BENNETT_LETTERS]: true
             },
             [FLATS]: {
                 [BEDROOM_BACKDROP]: true

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const MagazineLetters = ({
+const BennettLetters = ({
 
     className,
 
@@ -18,7 +18,7 @@ const MagazineLetters = ({
     return (
         <Svg
             className={cx(
-                'MagazineLetters',
+                'BennettLetters',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const MagazineLetters = ({
                 {...other}
             >
                 {cx(
-                    'MagazineLetters'
+                    'BennettLetters'
                 )}
             </text>
         </Svg>
     )
 }
 
-MagazineLetters.propTypes = propTypes;
+BennettLetters.propTypes = propTypes;
 
-export default MagazineLetters
+export default BennettLetters

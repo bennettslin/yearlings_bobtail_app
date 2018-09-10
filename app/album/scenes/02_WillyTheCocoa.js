@@ -76,7 +76,7 @@ import {
 
 import {
     SHOPPING_CART,
-    MAGAZINE_LETTERS
+    CHRISTOPHER_LETTERS
 } from 'scene/fixtureKeys'
 
 import {
@@ -218,7 +218,7 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [MAGAZINE_LETTERS]: true
+                [CHRISTOPHER_LETTERS]: true
             },
             [FLATS]: {
                 [BEDROOM_BACKDROP]: true,

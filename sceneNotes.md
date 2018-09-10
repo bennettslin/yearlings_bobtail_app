@@ -6,15 +6,6 @@ Scene review
 * Create placeholder components for presences.
 * Transfer task hours to presences.
 
-## Furniture
-SchoolbusSeatFront
-SchoolbusSeatBack
-SleepingMat
-StairwellRailing
-IronGate
-Buoy
-PrincipalDoor
-
 ## Puppets
 PuppetsFamilyBegin
 PuppetsFamilyMiddle

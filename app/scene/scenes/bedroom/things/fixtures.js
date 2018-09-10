@@ -1,10 +1,11 @@
 import {
-    MAGAZINE_LETTERS,
-    CAPTAIN_BED_LAMP
+    CHRISTOPHER_LETTERS,
+    CAPTAIN_BED_LAMP,
+    BENNETT_LETTERS
 } from 'scene/fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
-    [MAGAZINE_LETTERS]: {
+    [CHRISTOPHER_LETTERS]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5,
@@ -13,6 +14,14 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [CAPTAIN_BED_LAMP]: {
+        yIndex: 5,
+        arrangement: {
+            xFloat: 5,
+            xWidth: 1,
+            zHeight: 1
+        }
+    },
+    [BENNETT_LETTERS]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5,
