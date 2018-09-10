@@ -9,29 +9,7 @@ Scene review
 # THINGS_BENNETT_COURTYARD
 
 ## Cutouts
-RECYCLABLES = 'recyclables'
-BENNETT_COUCH_FAR = 'bennettCouchFar'
-NIRVANA_POSTER = 'nirvanaPoster'
-LEONARD_COHEN_POSTER = 'leonardCohenPoster'
-NEWSPAPER_DISPENSER_LEFT = 'newspaperDispenserLeft'
-NEWSPAPER_DISPENSER_RIGHT = 'newspaperDispenserRight'
-WEST_BERKELEY_LAMPPOST = 'westBerkeleyLamppost'
-SIGNPOST = 'signPost',
-BANCROFT_SHRUB_LEFT = 'bancroftShrubLeft'
-BANCROFT_SHRUB_RIGHT = 'bancroftShrubRight'
-UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft'
-UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight'
-MONITOR_SPEAKER_LEFT = 'monitorSpeakerLeft'
-MONITOR_SPEAKER_RIGHT = 'monitorSpeakerRight'
-WALL_SPEAKER_LEFT = 'wallSpeakerLeft'
-WALL_SPEAKER_RIGHT = 'wallSpeakerRight'
-CINEMA_POSTER_LEFT = 'cinemaPosterLeft'
-CINEMA_POSTER_RIGHT = 'cinemaPosterRight'
-TRAFFIC_LIGHT = 'trafficLight'
-SANDBAGS = 'sandbags'
-STAGE_LIGHTS = 'stageLights'
-GO_KART_LEFT = 'goKartLeft'
-GO_KART_RIGHT = 'goKartRight'
+
 
 ## Fixtures
 BENNETT_RECORD_PLAYER = 'bennettRecordPlayer'

@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    // FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     BENNETT_COUCH_THOUGHT_KEY,
     BENNETT_COURTYARD_KEY,
     CATHOLIC_CHURCH_KEY,
@@ -38,12 +46,26 @@ import {
 
 import { CATHOLIC_GUY } from 'scene/instanceKeys/wade'
 
+import {
+    RECYCLABLES,
+    BENNETT_COUCH_FAR,
+    NIRVANA_POSTER,
+    DISPENSER_LEFT,
+    DISPENSER_RIGHT,
+    BERKELEY_LAMPPOST,
+    SIGNPOST,
+    BANCROFT_SHRUB_LEFT,
+    BANCROFT_SHRUB_RIGHT,
+    UC_BERKELEY_TREE_LEFT,
+    UC_BERKELEY_TREE_RIGHT
+} from 'scene/cutoutKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Bennett is standing outside his doorway at night, drenched in rain. Catherine is getting into a taxicab.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -56,6 +78,10 @@ module.exports = [
                     description: 'walking away, in a bad mood',
                     instance: WEEPING
                 }
+            },
+            [CUTOUTS]: {
+                [RECYCLABLES]: true,
+                [BENNETT_COUCH_FAR]: true
             }
         },
         cubes: BENNETT_COURTYARD_KEY,
@@ -68,7 +94,7 @@ module.exports = [
         unitIndex: 3,
         description: `In Bennett's thoughts, he and Catherine are together on the couch. She is putting down the book she is reading, while he is playing the guitar, a pencil and notepad in hand, implying that he is writing a song, looking at her inquisitively.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -81,6 +107,9 @@ module.exports = [
                     description: 'sitting upright, droll smile',
                     instance: QUIPPING
                 }
+            },
+            [CUTOUTS]: {
+                [NIRVANA_POSTER]: true
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,
@@ -93,13 +122,18 @@ module.exports = [
         unitIndex: 5,
         description: `Bennett is standing in the rain at night, staring at a Catholic church across the street.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'standing, back forward, hands in pocket',
                     instance: CATHOLIC_PENSIVE
                 }
+            },
+            [CUTOUTS]: {
+                [DISPENSER_LEFT]: true,
+                [DISPENSER_RIGHT]: true,
+                [BERKELEY_LAMPPOST]: true
             }
         },
         cubes: CATHOLIC_CHURCH_KEY,
@@ -112,7 +146,7 @@ module.exports = [
         unitIndex: 7,
         description: `Bennett is staring at an outdoor ashtray. Someone with a cross on their forehead is walking behind him in the other direction, while someone who has just put out a cigarette in the ashtray is walking in front of him, exhaling the smoke. Bennett looks back at the person behind him.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -135,6 +169,9 @@ module.exports = [
                         instance: SMOKER
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [BANCROFT_SHRUB_LEFT]: true
             }
         },
         cubes: BANCROFT_LIBRARY_KEY,
@@ -147,7 +184,7 @@ module.exports = [
         unitIndex: 8,
         description: `Bennett now has an ashed cross on his forehead, eyes closed and head held high, looking both pious and pompous. Catherine walks towards him from the other side of the stage.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -160,6 +197,12 @@ module.exports = [
                     description: 'walking forward, confused and curious at Bennett',
                     instance: PUZZLED
                 }
+            },
+            [CUTOUTS]: {
+                [BANCROFT_SHRUB_RIGHT]: true,
+                [SIGNPOST]: true,
+                [UC_BERKELEY_TREE_LEFT]: true,
+                [UC_BERKELEY_TREE_RIGHT]: true
             }
         },
         cubes: CAMPANILE_KEY,

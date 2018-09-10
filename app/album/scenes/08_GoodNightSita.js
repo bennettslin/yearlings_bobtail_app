@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    // FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     MUSEUM_KEY,
     BACKSTAGE_KEY,
     LIZ_GATE_KEY,
@@ -30,12 +38,20 @@ import {
     DATE_ENDED
 } from 'scene/instanceKeys/songs'
 
+import {
+    SANDBAGS,
+    STAGE_LIGHTS,
+    GO_KART_LEFT,
+    GO_KART_RIGHT,
+    TRAFFIC_LIGHT
+} from 'scene/cutoutKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Bennett and Sita are standing outside her gate at night. In a thought bubble, he is reaching out to Sita, who is reaching back.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -62,7 +78,7 @@ module.exports = [
         unitIndex: 5,
         description: `In a thought bubble, Bennett and Sita are at a museum, looking at the skeleton of an early human. Bennett is standing behind the display case, leaning in towards Sita.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -89,7 +105,7 @@ module.exports = [
         unitIndex: 8,
         description: `In a thought bubble, Bennett and Sita are backstage after a play. While Sita and her friend are chatting away, Bennett looks away and is visibly uncomfortable.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -118,6 +134,10 @@ module.exports = [
                         instance: FLAPPER
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [SANDBAGS]: true,
+                [STAGE_LIGHTS]: true
             }
         },
         cubes: BACKSTAGE_KEY,
@@ -130,7 +150,7 @@ module.exports = [
         unitIndex: 11,
         description: `In a thought bubble, Bennett and Sita are at a motorsports course, riding in separate go-karts.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -145,6 +165,10 @@ module.exports = [
                         instance: GO_KARTS
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [GO_KART_LEFT]: true,
+                [GO_KART_RIGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,
@@ -157,7 +181,7 @@ module.exports = [
         unitIndex: 14,
         description: `Having bid each other good night, Bennett is walking away, looking dejected. Sita is closing the gate from the inside, looking towards him with concern. In his thought bubble, she is inviting him in.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -172,6 +196,9 @@ module.exports = [
                         instance: DATE_ENDED
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [TRAFFIC_LIGHT]: true
             }
         },
         cubes: LIZ_GATE_STREET_KEY,

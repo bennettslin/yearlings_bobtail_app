@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    // FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     BENNETT_COUCH_KEY,
     CLUB_FRONT_KEY,
     BASEMENT_KEY,
@@ -55,18 +63,31 @@ import {
     EATING
 } from 'scene/instanceKeys/songs'
 
+import {
+    LEONARD_COHEN_POSTER,
+    MONITOR_SPEAKER_LEFT,
+    MONITOR_SPEAKER_RIGHT,
+    WALL_SPEAKER_LEFT,
+    WALL_SPEAKER_RIGHT,
+    CINEMA_POSTER_LEFT,
+    CINEMA_POSTER_RIGHT
+} from 'scene/cutoutKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Bennett's room`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'looking at Leonard Cohen poster',
                     instance: PONDERING
                 }
+            },
+            [CUTOUTS]: {
+                [LEONARD_COHEN_POSTER]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -79,13 +100,16 @@ module.exports = [
         unitIndex: 2,
         description: `Bennett is in his room, trying to figure out a Rubik's Cube.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting on couch, figuring out Rubiks Cube',
                     instance: RUBIKS_CUBE
                 }
+            },
+            [CUTOUTS]: {
+                [LEONARD_COHEN_POSTER]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -98,7 +122,7 @@ module.exports = [
         unitIndex: 4,
         description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a keyboard and writing stuff down on a notepad, another is reading a book.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -113,6 +137,9 @@ module.exports = [
                         instance: BENNETT_KEYBOARD
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [LEONARD_COHEN_POSTER]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -125,7 +152,7 @@ module.exports = [
         unitIndex: 5,
         description: `It's after a show, and the Yearlings are breaking down their set. Jacob is flirting with Mara. Bennett is selling a CD to a hipster, but is distracted by the sight of Mara.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -158,6 +185,12 @@ module.exports = [
                         instance: SHANE_BUYING
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [MONITOR_SPEAKER_LEFT]: true,
+                [MONITOR_SPEAKER_RIGHT]: true,
+                [WALL_SPEAKER_LEFT]: true,
+                [WALL_SPEAKER_RIGHT]: true
             }
         },
         cubes: CLUB_FRONT_KEY,
@@ -170,7 +203,7 @@ module.exports = [
         unitIndex: 7,
         description: `The Yearlings are taking a break from band practise, eating burgers around a table. Mara is with them, cuddling with Jacob. Bennett is visibly agitated.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -207,7 +240,7 @@ module.exports = [
         unitIndex: 9,
         description: `Bennett is walking along outside. He sees Mara's face everywhere he looks: in clouds, on the sides of buildings, and so forth.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -222,6 +255,10 @@ module.exports = [
                         instance: INFANT_CURIOUS
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [CINEMA_POSTER_LEFT]: true,
+                [CINEMA_POSTER_RIGHT]: true
             }
         },
         cubes: CINEMA_KEY,
@@ -234,7 +271,7 @@ module.exports = [
         unitIndex: 11,
         description: `Bennett is looking at the woman holding a baby who just passed by.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -257,6 +294,10 @@ module.exports = [
                         instance: USHER_WAITING
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [CINEMA_POSTER_LEFT]: true,
+                [CINEMA_POSTER_RIGHT]: true
             }
         },
         cubes: CINEMA_KEY,
@@ -269,7 +310,7 @@ module.exports = [
         unitIndex: 14,
         description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself recording all the instruments in a band. Finally, he imagines Mara finding his album in a record store.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -284,6 +325,9 @@ module.exports = [
                         instance: USHER_LOOKING
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [CINEMA_POSTER_RIGHT]: true
             }
         },
         cubes: CINEMA_STREET_KEY,

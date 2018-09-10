@@ -41,6 +41,29 @@ import VanNuysPlantsBack from './Cutouts/VanNuysLockers/VanNuysPlantsBack'
 import TrashCanFront from './Cutouts/VanNuysQuad/TrashCanFront'
 import VanNuysPlantsFront from './Cutouts/VanNuysQuad/VanNuysPlantsFront'
 import VanNuysLogo from './Cutouts/VanNuysQuad/VanNuysLogo'
+import Recyclables from './Cutouts/BennettCourtyard/Recyclables'
+import BennettCouchFar from './Cutouts/BennettCourtyard/BennettCouchFar'
+import NirvanaPoster from './Cutouts/BennettCouch/NirvanaPoster'
+import DispenserLeft from './Cutouts/CatholicChurch/DispenserLeft'
+import DispenserRight from './Cutouts/CatholicChurch/DispenserRight'
+import BerkeleyLamppost from './Cutouts/CatholicChurch/BerkeleyLamppost'
+import SignPost from './Cutouts/UcBerkeley/SignPost'
+import BancroftShrubLeft from './Cutouts/UcBerkeley/BancroftShrubLeft'
+import BancroftShrubRight from './Cutouts/UcBerkeley/BancroftShrubRight'
+import UcBerkeleyTreeLeft from './Cutouts/UcBerkeley/UcBerkeleyTreeLeft'
+import UcBerkeleyTreeRight from './Cutouts/UcBerkeley/UcBerkeleyTreeRight'
+import LeonardCohenPoster from './Cutouts/BennettCouch/LeonardCohenPoster'
+import MonitorSpeakerLeft from './Cutouts/ClubFront/MonitorSpeakerLeft'
+import MonitorSpeakerRight from './Cutouts/ClubFront/MonitorSpeakerRight'
+import WallSpeakerLeft from './Cutouts/ClubFront/WallSpeakerLeft'
+import WallSpeakerRight from './Cutouts/ClubFront/WallSpeakerRight'
+import CinemaPosterLeft from './Cutouts/Cinema/CinemaPosterLeft'
+import CinemaPosterRight from './Cutouts/Cinema/CinemaPosterRight'
+import Sandbags from './Cutouts/Backstage/Sandbags'
+import StageLights from './Cutouts/Backstage/StageLights'
+import GoKartLeft from './Cutouts/GoKarts/GoKartLeft'
+import GoKartRight from './Cutouts/GoKarts/GoKartRight'
+import TrafficLight from './Cutouts/LizGate/TrafficLight'
 
 import {
     FIRE_HYDRANT,
@@ -81,7 +104,30 @@ import {
     VAN_NUYS_PLANTS_BACK,
     TRASH_CAN_FRONT,
     VAN_NUYS_PLANTS_FRONT,
-    VAN_NUYS_LOGO
+    VAN_NUYS_LOGO,
+    RECYCLABLES,
+    BENNETT_COUCH_FAR,
+    NIRVANA_POSTER,
+    DISPENSER_LEFT,
+    DISPENSER_RIGHT,
+    BERKELEY_LAMPPOST,
+    SIGNPOST,
+    BANCROFT_SHRUB_LEFT,
+    BANCROFT_SHRUB_RIGHT,
+    UC_BERKELEY_TREE_LEFT,
+    UC_BERKELEY_TREE_RIGHT,
+    LEONARD_COHEN_POSTER,
+    MONITOR_SPEAKER_LEFT,
+    MONITOR_SPEAKER_RIGHT,
+    WALL_SPEAKER_LEFT,
+    WALL_SPEAKER_RIGHT,
+    CINEMA_POSTER_LEFT,
+    CINEMA_POSTER_RIGHT,
+    SANDBAGS,
+    STAGE_LIGHTS,
+    GO_KART_LEFT,
+    GO_KART_RIGHT,
+    TRAFFIC_LIGHT
 } from 'scene/cutoutKeys'
 
 const CUTOUTS_MAP = {
@@ -123,7 +169,30 @@ const CUTOUTS_MAP = {
     [VAN_NUYS_PLANTS_BACK]: VanNuysPlantsBack,
     [TRASH_CAN_FRONT]: TrashCanFront,
     [VAN_NUYS_PLANTS_FRONT]: VanNuysPlantsFront,
-    [VAN_NUYS_LOGO]: VanNuysLogo
+    [VAN_NUYS_LOGO]: VanNuysLogo,
+    [RECYCLABLES]: Recyclables,
+    [BENNETT_COUCH_FAR]: BennettCouchFar,
+    [NIRVANA_POSTER]: NirvanaPoster,
+    [DISPENSER_LEFT]: DispenserLeft,
+    [DISPENSER_RIGHT]: DispenserRight,
+    [BERKELEY_LAMPPOST]: BerkeleyLamppost,
+    [SIGNPOST]: SignPost,
+    [BANCROFT_SHRUB_LEFT]: BancroftShrubLeft,
+    [BANCROFT_SHRUB_RIGHT]: BancroftShrubRight,
+    [UC_BERKELEY_TREE_LEFT]: UcBerkeleyTreeLeft,
+    [UC_BERKELEY_TREE_RIGHT]: UcBerkeleyTreeRight,
+    [LEONARD_COHEN_POSTER]: LeonardCohenPoster,
+    [MONITOR_SPEAKER_LEFT]: MonitorSpeakerLeft,
+    [MONITOR_SPEAKER_RIGHT]: MonitorSpeakerRight,
+    [WALL_SPEAKER_LEFT]: WallSpeakerLeft,
+    [WALL_SPEAKER_RIGHT]: WallSpeakerRight,
+    [CINEMA_POSTER_LEFT]: CinemaPosterLeft,
+    [CINEMA_POSTER_RIGHT]: CinemaPosterRight,
+    [SANDBAGS]: Sandbags,
+    [STAGE_LIGHTS]: StageLights,
+    [GO_KART_LEFT]: GoKartLeft,
+    [GO_KART_RIGHT]: GoKartRight,
+    [TRAFFIC_LIGHT]: TrafficLight
 },
 DEFAULT_COMPONENT = () => (null)
 
