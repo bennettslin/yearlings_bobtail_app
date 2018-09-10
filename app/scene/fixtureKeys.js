@@ -10,7 +10,19 @@ const
     FRIDGE_DRAWINGS = 'fridgeDrawings',
     BENNETT_LETTERS = 'bennettLetters',
     CAPTAIN_BED_LAMP = 'captainBedLamp',
-    THROWN_FRUIT = 'thrownFruit'
+    THROWN_FRUIT = 'thrownFruit',
+    BENNETT_RECORD_PLAYER = 'bennettRecordPlayer',
+    BENNETT_COUCH_LAMP = 'bennettCouchLamp',
+    MICROPHONE_STAND = 'microphoneStand',
+    ALBUMS_MILK_CRATE = 'albumsMilkCrate',
+    BASS_CASE_OPEN = 'bassCaseOpen',
+    DRUMKIT = 'drumKit',
+    BASS_CASE = 'bassCase',
+    GUITAR_CASE = 'guitarCase',
+    CAVEMAN_BONES = 'cavemanBones',
+    PUSH_BROOM = 'pushBroom',
+    STEPLADDER = 'stepladder',
+    MANNEQUIN = 'mannequin'
 
 export {
     PLAYGROUND_BALL,
@@ -22,5 +34,17 @@ export {
     FRIDGE_DRAWINGS,
     BENNETT_LETTERS,
     CAPTAIN_BED_LAMP,
-    THROWN_FRUIT
+    THROWN_FRUIT,
+    BENNETT_RECORD_PLAYER,
+    BENNETT_COUCH_LAMP,
+    MICROPHONE_STAND,
+    ALBUMS_MILK_CRATE,
+    BASS_CASE_OPEN,
+    DRUMKIT,
+    BASS_CASE,
+    GUITAR_CASE,
+    CAVEMAN_BONES,
+    PUSH_BROOM,
+    STEPLADDER,
+    MANNEQUIN
 }

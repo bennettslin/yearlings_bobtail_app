@@ -1,7 +1,7 @@
 import {
     ACTORS,
     CUTOUTS,
-    // FIXTURES,
+    FIXTURES,
     // FLATS,
     // FURNITURES
 } from 'constants/scene'
@@ -45,6 +45,13 @@ import {
     GO_KART_RIGHT,
     TRAFFIC_LIGHT
 } from 'scene/cutoutKeys'
+
+import {
+    CAVEMAN_BONES,
+    PUSH_BROOM,
+    STEPLADDER,
+    MANNEQUIN
+} from 'scene/fixtureKeys'
 
 module.exports = [
     {
@@ -93,6 +100,9 @@ module.exports = [
                         instance: MUSEUM
                     }
                 }
+            },
+            [FIXTURES]: {
+                [CAVEMAN_BONES]: true
             }
         },
         cubes: MUSEUM_KEY,
@@ -138,6 +148,11 @@ module.exports = [
             [CUTOUTS]: {
                 [SANDBAGS]: true,
                 [STAGE_LIGHTS]: true
+            },
+            [FIXTURES]: {
+                [PUSH_BROOM]: true,
+                [STEPLADDER]: true,
+                [MANNEQUIN]: true
             }
         },
         cubes: BACKSTAGE_KEY,

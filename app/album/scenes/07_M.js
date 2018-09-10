@@ -1,7 +1,7 @@
 import {
     ACTORS,
     CUTOUTS,
-    // FIXTURES,
+    FIXTURES,
     // FLATS,
     // FURNITURES
 } from 'constants/scene'
@@ -73,6 +73,17 @@ import {
     CINEMA_POSTER_RIGHT
 } from 'scene/cutoutKeys'
 
+import {
+    BENNETT_RECORD_PLAYER,
+    BENNETT_COUCH_LAMP,
+    MICROPHONE_STAND,
+    ALBUMS_MILK_CRATE,
+    BASS_CASE_OPEN,
+    DRUMKIT,
+    BASS_CASE,
+    GUITAR_CASE
+} from 'scene/fixtureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -88,6 +99,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [LEONARD_COHEN_POSTER]: true
+            },
+            [FIXTURES]: {
+                [BENNETT_RECORD_PLAYER]: true,
+                [BENNETT_COUCH_LAMP]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -110,6 +125,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [LEONARD_COHEN_POSTER]: true
+            },
+            [FIXTURES]: {
+                [BENNETT_RECORD_PLAYER]: true,
+                [BENNETT_COUCH_LAMP]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -140,6 +159,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [LEONARD_COHEN_POSTER]: true
+            },
+            [FIXTURES]: {
+                [BENNETT_RECORD_PLAYER]: true,
+                [BENNETT_COUCH_LAMP]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -191,6 +214,12 @@ module.exports = [
                 [MONITOR_SPEAKER_RIGHT]: true,
                 [WALL_SPEAKER_LEFT]: true,
                 [WALL_SPEAKER_RIGHT]: true
+            },
+            [FIXTURES]: {
+                [MICROPHONE_STAND]: true,
+                [ALBUMS_MILK_CRATE]: true,
+                [BASS_CASE_OPEN]: true,
+                [DRUMKIT]: true
             }
         },
         cubes: CLUB_FRONT_KEY,
@@ -228,6 +257,10 @@ module.exports = [
                     description: 'sitting, eating fries, laughing',
                     instance: EATING
                 }
+            },
+            [FIXTURES]: {
+                [BASS_CASE]: true,
+                [GUITAR_CASE]: true
             }
         },
         cubes: BASEMENT_KEY,

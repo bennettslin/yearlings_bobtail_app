@@ -6,25 +6,6 @@ Scene review
 * Create placeholder components for presences.
 * Transfer task hours to presences.
 
-# THINGS_BENNETT_COURTYARD
-
-## Cutouts
-
-
-## Fixtures
-BENNETT_RECORD_PLAYER = 'bennettRecordPlayer'
-BENNETT_COUCH_LAMP = 'bennettCouchLamp'
-MICROPHONE_STAND = 'microphoneStand'
-ALBUMS_MILK_CRATE = 'albumsMilkCrate'
-BASS_CASE_OPEN = 'bassCaseOpen'
-DRUMKIT = 'drumKit'
-BASS_CASE = 'bassCase'
-GUITAR_CASE = 'guitarCase'
-CAVEMAN_BONES = 'cavemanBones'
-PUSH_BROOM = 'pushBroom'
-STEPLADDER = 'stepladder'
-MANNEQUIN = 'mannequin'
-
 ## Flats
 BENNETT_COUCH_THOUGHT = 'bennettCouchThought'
 WEST_BERKELEY_BACKDROP = 'westBerkeleyBackdrop'

@@ -12,6 +12,18 @@ import FridgeDrawings from './Fixtures/TaiwanStairs/FridgeDrawings'
 import CaptainBedLamp from './Fixtures/Bedroom/CaptainBedLamp'
 import BennettLetters from './Fixtures/Bedroom/BennettLetters'
 import ThrownFruit from './Fixtures/VanNuysLockers/ThrownFruit'
+import BennettRecordPlayer from './Fixtures/BennettCouch/BennettRecordPlayer'
+import BennettCouchLamp from './Fixtures/BennettCouch/BennettCouchLamp'
+import MicrophoneStand from './Fixtures/ClubFront/MicrophoneStand'
+import AlbumsMilkCrate from './Fixtures/ClubFront/AlbumsMilkCrate'
+import BassCaseOpen from './Fixtures/ClubFront/BassCaseOpen'
+import DrumKit from './Fixtures/ClubFront/DrumKit'
+import BassCase from './Fixtures/Basement/BassCase'
+import GuitarCase from './Fixtures/Basement/GuitarCase'
+import CavemanBones from './Fixtures/Museum/CavemanBones'
+import PushBroom from './Fixtures/Backstage/PushBroom'
+import Stepladder from './Fixtures/Backstage/Stepladder'
+import Mannequin from './Fixtures/Backstage/Mannequin'
 
 import {
     PLAYGROUND_BALL,
@@ -23,9 +35,20 @@ import {
     FRIDGE_DRAWINGS,
     CAPTAIN_BED_LAMP,
     BENNETT_LETTERS,
-    THROWN_FRUIT
+    THROWN_FRUIT,
+    BENNETT_RECORD_PLAYER,
+    BENNETT_COUCH_LAMP,
+    MICROPHONE_STAND,
+    ALBUMS_MILK_CRATE,
+    BASS_CASE_OPEN,
+    DRUMKIT,
+    BASS_CASE,
+    GUITAR_CASE,
+    CAVEMAN_BONES,
+    PUSH_BROOM,
+    STEPLADDER,
+    MANNEQUIN
 } from 'scene/fixtureKeys'
-
 
 const FIXTURES_MAP = {
     [PLAYGROUND_BALL]: PlaygroundBall,
@@ -37,7 +60,19 @@ const FIXTURES_MAP = {
     [FRIDGE_DRAWINGS]: FridgeDrawings,
     [CAPTAIN_BED_LAMP]: CaptainBedLamp,
     [BENNETT_LETTERS]: BennettLetters,
-    [THROWN_FRUIT]: ThrownFruit
+    [THROWN_FRUIT]: ThrownFruit,
+    [BENNETT_RECORD_PLAYER]: BennettRecordPlayer,
+    [BENNETT_COUCH_LAMP]: BennettCouchLamp,
+    [MICROPHONE_STAND]: MicrophoneStand,
+    [ALBUMS_MILK_CRATE]: AlbumsMilkCrate,
+    [BASS_CASE_OPEN]: BassCaseOpen,
+    [DRUMKIT]: DrumKit,
+    [BASS_CASE]: BassCase,
+    [GUITAR_CASE]: GuitarCase,
+    [CAVEMAN_BONES]: CavemanBones,
+    [PUSH_BROOM]: PushBroom,
+    [STEPLADDER]: Stepladder,
+    [MANNEQUIN]: Mannequin
 },
 DEFAULT_COMPONENT = () => (null)
 

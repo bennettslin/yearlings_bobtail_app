@@ -1,7 +1,7 @@
 import {
     ACTORS,
     CUTOUTS,
-    // FIXTURES,
+    FIXTURES,
     // FLATS,
     // FURNITURES
 } from 'constants/scene'
@@ -60,6 +60,11 @@ import {
     UC_BERKELEY_TREE_RIGHT
 } from 'scene/cutoutKeys'
 
+import {
+    BENNETT_RECORD_PLAYER,
+    BENNETT_COUCH_LAMP
+} from 'scene/fixtureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -110,6 +115,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [NIRVANA_POSTER]: true
+            },
+            [FIXTURES]: {
+                [BENNETT_RECORD_PLAYER]: true,
+                [BENNETT_COUCH_LAMP]: true
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,
