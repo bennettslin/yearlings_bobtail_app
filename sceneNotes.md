@@ -10,185 +10,82 @@ What is the distinction between a cutout and a flat, exactly?
 
 Puppets have string.
 
-# THINGS_CHANGELING_CAVE
-
 ## Cutouts
 TrollShadowLeft
 TrollShadowRight
 Campfire
+SchoolbusFront
+SchoolbusBack
+BuddhaShrine
+TaiwanFridgeFront
+BennettTaiwanStairs
+OdinTaiwanStairs
+TaiwanFridgeSide
+BennettTaiwanGate
+OdinTaiwanGate
+BennettOdinRickshaw
+BennettShore
+OdinShore
+BennettOdinBuoy
+YellowTapedGrill
+BennettOdinOceanDepths
+SeaSerpents
+BennettOceanFloor
+OdinOceanFloor
+BennettMat
+OdinMat
+BuddhaCave
+LockerBank
+TrashCanBack
+VanNuysPlantsFront
+LockerBank
+TrashCanFront
+VanNuysPlantsBack
+
+## Fixtures
+BackpackBennett
+BackpackSasha
+Drawings
+ThrownFruit
 
 ## Flats
 NohoBackdrop
 FamilyHouse
 CaveShadows
 Stalactites
+MountainsFar
+MountainsBridged
+MountainsNear
+Clouds
+ValleyStreetThought
+VanNuysThought
+VanNuysSchoolhouse
+TaiwanGate
+TaiwanStreets
+ShoreBackdrop
+ShoreFront
+ShoreBack
+OceanDepthsFront
+OceanDepthsBack
+OceanWaves
+OceanFloor
+OceanBottom
+VanNuysSchoolBackdrop
+VanNuysSchoolhouse
 
-# THINGS_PUPPET_SHOW
+## Furniture
+SchoolbusSeatFront
+SchoolbusSeatBack
+SleepingMat
+StairwellRailing
+IronGate
+Buoy
+VanNuysHallwayDoor
 
 ## Puppets
 PuppetsFamilyBegin
 PuppetsFamilyMiddle
 PuppetsFamilyEnd
-
-## Flats
-MountainsFar
-MountainsBridged
-MountainsNear
-Clouds
-
-# THINGS_SCHOOLBUS
-
-## Cutouts
-SchoolbusFront
-SchoolbusBack
-
-## Fixtures
-BackpackBennett
-BackpackSasha
-
-## Flats
-ValleyStreetThought
-
-## Furniture
-SchoolbusSeatFront
-SchoolbusSeatBack
-
-# THINGS_TETHERBALL_COURT
-
-## Flats
-VanNuysThought
-VanNuysSchoolhouse
-
-# THINGS_TAIWAN_ROOM
-
-## Cutouts
-BuddhaShrine
-TaiwanFridgeFront
-BennettTaiwanStairs
-OdinTaiwanStairs
-
-## Furniture
-SleepingMat
-
-# THINGS_TAIWAN_STAIRS
-
-## Cutouts
-TaiwanFridgeSide
-BennettTaiwanGate
-OdinTaiwanGate
-
-## Fixtures
-Drawings
-
-## Flats
-TaiwanGate
-
-## Furniture
-StairwellRailing
-
-# THINGS_TAIWAN_GATE
-
-## Cutouts
-BennettOdinRickshaw
-
-## Flats
-TaiwanStreets
-
-## Furniture
-IronGate
-
-# THINGS_RICKSHAW
-
-## Cutouts
-BennettShore
-OdinShore
-
-## Flats
-ShoreBackdrop
-
-# THINGS_SHORE
-
-## Cutouts
-BennettOdinBuoy
-YellowTapedGrill
-
-## Flats
-ShoreFront
-ShoreBack
-
-# THINGS_BUOY
-
-## Cutouts
-BennettOdinOceanDepths
-SeaSerpents
-
-## Flats
-OceanDepthsFront
-OceanDepthsBack
-
-## Furniture
-Buoy
-
-# THINGS_OCEAN_DEPTHS
-
-## Cutouts
-BennettOceanFloor
-OdinOceanFloor
-
-## Flats
-OceanWaves
-OceanFloor
-
-# THINGS_OCEAN_FLOOR
-
-## Cutouts
-BennettMat
-OdinMat
-BuddhaCave
-
-## Flats
-OceanBottom
-
-# THINGS_BEDROOM
-
-## Flats
-BedroomBusBackdrop
-DogsSketchbook
-SpaceStationSketchbook
-
-## Fixtures
-CaptainBedLamp
-
-## Puppets
-Mushka
-Pchelka
-Rocket
-
-# THINGS_VAN_NUYS_LOCKERS
-
-## Cutouts
-LockerBank
-TrashCanBack
-VanNuysPlantsFront
-
-## Fixtures
-ThrownFruit
-
-## Flats
-VanNuysSchoolBackdrop
-VanNuysSchoolhouse
-
-# THINGS_VAN_NUYS_QUAD
-
-## Cutouts
-LockerBank
-TrashCanFront
-VanNuysPlantsBack
-
-# THINGS_VAN_NUYS_HALLWAY
-
-## Furniture
-VanNuysHallwayDoor
 
 # THINGS_CATHOLIC_CHURCH
 # THINGS_UC_BERKELEY
