@@ -6,10 +6,6 @@ Scene review
 * Create placeholder components for presences.
 * Transfer task hours to presences.
 
-What is the distinction between a cutout and a flat, exactly?
-
-Puppets have string.
-
 ## Furniture
 SchoolbusSeatFront
 SchoolbusSeatBack
