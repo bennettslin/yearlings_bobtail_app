@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Buoy = ({
+const BuoyFloat = ({
 
     className,
 
@@ -18,7 +18,7 @@ const Buoy = ({
     return (
         <Svg
             className={cx(
-                'Buoy',
+                'BuoyFloat',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const Buoy = ({
                 {...other}
             >
                 {cx(
-                    'Buoy'
+                    'BuoyFloat'
                 )}
             </text>
         </Svg>
     )
 }
 
-Buoy.propTypes = propTypes;
+BuoyFloat.propTypes = propTypes;
 
-export default Buoy
+export default BuoyFloat

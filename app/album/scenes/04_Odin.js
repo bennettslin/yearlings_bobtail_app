@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -79,6 +79,13 @@ import {
     OCEAN_BOTTOM_NEAR
 } from 'scene/flatKeys'
 
+import {
+    SLEEPING_MAT,
+    STAIRWELL_RAILING,
+    IRON_GATE,
+    BUOY_FLOAT
+} from 'scene/furnitureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -97,6 +104,9 @@ module.exports = [
                 [TAIWAN_FRIDGE_FRONT]: true,
                 [BENNETT_TAIWAN_STAIRS]: true,
                 [ODIN_TAIWAN_STAIRS]: true
+            },
+            [FURNITURES]: {
+                [SLEEPING_MAT]: true
             }
         },
         cubes: TAIWAN_ROOM_KEY,
@@ -127,6 +137,9 @@ module.exports = [
             },
             [FLATS]: {
                 [TAIWAN_GATE]: true
+            },
+            [FURNITURES]: {
+                [STAIRWELL_RAILING]: true
             }
         },
         cubes: TAIWAN_STAIRS_KEY,
@@ -152,6 +165,9 @@ module.exports = [
             },
             [FLATS]: {
                 [TAIWAN_STREETS_BACKDROP]: true
+            },
+            [FURNITURES]: {
+                [IRON_GATE]: true
             }
         },
         cubes: TAIWAN_GATE_KEY,
@@ -232,6 +248,9 @@ module.exports = [
             [FLATS]: {
                 [OCEAN_DEPTHS_FRONT]: true,
                 [OCEAN_DEPTHS_BACK]: true
+            },
+            [FURNITURES]: {
+                [BUOY_FLOAT]: true
             }
         },
         cubes: BUOY_KEY,

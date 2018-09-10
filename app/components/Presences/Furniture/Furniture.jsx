@@ -11,7 +11,7 @@ import SchoolbusSeatBack from './Furnitures/Schoolbus/SchoolbusSeatBack'
 import SleepingMat from './Furnitures/TaiwanRoom/SleepingMat'
 import StairwellRailing from './Furnitures/TaiwanStairs/StairwellRailing'
 import IronGate from './Furnitures/TaiwanGate/IronGate'
-import Buoy from './Furnitures/Buoy/Buoy'
+import BuoyFloat from './Furnitures/Buoy/BuoyFloat'
 import PrincipalDoor from './Furnitures/VanNuysHallway/PrincipalDoor'
 
 import {
@@ -24,7 +24,7 @@ import {
     SLEEPING_MAT,
     STAIRWELL_RAILING,
     IRON_GATE,
-    BUOY,
+    BUOY_FLOAT,
     PRINCIPAL_DOOR
 } from 'scene/furnitureKeys'
 
@@ -38,7 +38,7 @@ const FURNITURES_MAP = {
     [SLEEPING_MAT]: SleepingMat,
     [STAIRWELL_RAILING]: StairwellRailing,
     [IRON_GATE]: IronGate,
-    [BUOY]: Buoy,
+    [BUOY_FLOAT]: BuoyFloat,
     [PRINCIPAL_DOOR]: PrincipalDoor
 },
 DEFAULT_COMPONENT = () => (null)

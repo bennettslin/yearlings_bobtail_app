@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -86,11 +86,12 @@ import {
     VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
 
-// import {
-//     BEDROOM_BLINDS,
-//     BEDROOM_BLINDS_OPEN,
-//     CAPTAIN_BED_MATTRESS
-// } from 'scene/furnitureKeys'
+import {
+    BEDROOM_BLINDS,
+    BEDROOM_BLINDS_OPEN,
+    CAPTAIN_BED_MATTRESS,
+    PRINCIPAL_DOOR
+} from 'scene/furnitureKeys'
 
 // import {
 //     PCHELKA,
@@ -110,6 +111,10 @@ module.exports = [
             [FLATS]: {
                 [BEDROOM_BACKDROP]: true,
                 [CAPTAIN_BED_DRAWERS]: true
+            },
+            [FURNITURES]: {
+                [BEDROOM_BLINDS_OPEN]: true,
+                [CAPTAIN_BED_MATTRESS]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -141,6 +146,9 @@ module.exports = [
             },
             [FLATS]: {
                 [BEDROOM_BACKDROP]: true
+            },
+            [FURNITURES]: {
+                [BEDROOM_BLINDS_OPEN]: true
             }
         },
         cubes: BEDROOM_OPEN_KEY,
@@ -164,6 +172,10 @@ module.exports = [
             [FLATS]: {
                 [BEDROOM_BUS_BACKDROP]: true,
                 [CAPTAIN_BED_DRAWERS]: true
+            },
+            [FURNITURES]: {
+                [BEDROOM_BLINDS_OPEN]: true,
+                [CAPTAIN_BED_MATTRESS]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -188,6 +200,10 @@ module.exports = [
                 [BEDROOM_BACKDROP]: true,
                 [CAPTAIN_BED_DRAWERS]: true,
                 [DOGS_SKETCHBOOK]: true
+            },
+            [FURNITURES]: {
+                [BEDROOM_BLINDS]: true,
+                [CAPTAIN_BED_MATTRESS]: true
             }
         },
         cubes: BEDROOM_DOGS_KEY,
@@ -210,8 +226,10 @@ module.exports = [
             },
             [FLATS]: {
                 [BEDROOM_BACKDROP]: true,
-                [CAPTAIN_BED_DRAWERS]: true,
                 [SPACE_STATION_SKETCHBOOK]: true
+            },
+            [FURNITURES]: {
+                [BEDROOM_BLINDS_OPEN]: true
             }
         },
         cubes: BEDROOM_SPACE_KEY,
@@ -341,6 +359,9 @@ module.exports = [
                         instance: PRINCIPAL
                     }
                 }
+            },
+            [FURNITURES]: {
+                [PRINCIPAL_DOOR]: true
             }
         },
         cubes: VAN_NUYS_HALLWAY_KEY,

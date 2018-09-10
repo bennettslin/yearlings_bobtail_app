@@ -10,7 +10,7 @@ const
     SLEEPING_MAT = 'sleepingMat',
     STAIRWELL_RAILING = 'stairwellRailing',
     IRON_GATE = 'ironGate',
-    BUOY = 'buoy',
+    BUOY_FLOAT = 'buoy',
     PRINCIPAL_DOOR = 'principalDoor'
 
 export {
@@ -23,6 +23,6 @@ export {
     SLEEPING_MAT,
     STAIRWELL_RAILING,
     IRON_GATE,
-    BUOY,
+    BUOY_FLOAT,
     PRINCIPAL_DOOR
 }

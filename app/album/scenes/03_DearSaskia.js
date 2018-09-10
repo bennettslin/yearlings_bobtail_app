@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -60,6 +60,11 @@ import {
     VAN_NUYS_SCHOOL_THOUGHT,
     VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
+
+import {
+    SCHOOLBUS_SEAT_FRONT,
+    SCHOOLBUS_SEAT_BACK
+} from 'scene/furnitureKeys'
 
 module.exports = [
     {
@@ -132,6 +137,10 @@ module.exports = [
             },
             [FLATS]: {
                 [SCHOOLBUS_STREET_THOUGHT]: true
+            },
+            [FURNITURES]: {
+                [SCHOOLBUS_SEAT_BACK]: true,
+                [SCHOOLBUS_SEAT_FRONT]: true
             }
         },
         cubes: SCHOOLBUS_KEY,
