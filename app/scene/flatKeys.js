@@ -8,8 +8,12 @@ const
     NOHO_SCHOOLHOUSE = 'nohoSchoolhouse',
     NURSE_OFFICE_BUBBLE = 'nurseOfficeBubble',
     VALLEY_BACKDROP = 'valleyBackdrop',
-    SIREN_BACKDROP = 'sirenBackdrop',
-    CAPTAIN_BED_DRAWERS = 'captainBedDrawers'
+    BEDROOM_BACKDROP = 'bedroomBackdrop',
+    BEDROOM_SIREN_BACKDROP = 'bedroomSirenBackdrop',
+    BEDROOM_BUS_BACKDROP = 'bedroomBusBackdrop',
+    CAPTAIN_BED_DRAWERS = 'captainBedDrawers',
+    DOGS_SKETCHBOOK = 'dogsSketchbook',
+    SPACE_STATION_SKETCHBOOK = 'spaceStationSketchbook'
 
 export {
     NOHO_HOUSES_BACKDROP,
@@ -19,6 +23,10 @@ export {
     NOHO_SCHOOLHOUSE,
     NURSE_OFFICE_BUBBLE,
     VALLEY_BACKDROP,
-    SIREN_BACKDROP,
-    CAPTAIN_BED_DRAWERS
+    BEDROOM_BACKDROP,
+    BEDROOM_SIREN_BACKDROP,
+    BEDROOM_BUS_BACKDROP,
+    CAPTAIN_BED_DRAWERS,
+    DOGS_SKETCHBOOK,
+    SPACE_STATION_SKETCHBOOK
 }

@@ -23,7 +23,7 @@ import ACTORS_SHORE from 'scene/scenes/shore/actors'
 import ACTORS_BUOY from 'scene/scenes/buoy/actors'
 import ACTORS_OCEAN_DEPTHS from 'scene/scenes/oceanDepths/actors'
 import ACTORS_OCEAN_FLOOR from 'scene/scenes/oceanFloor/actors'
-import ACTORS_BENNETT_ROOM from 'scene/scenes/bennettRoom/actors'
+import ACTORS_BEDROOM from 'scene/scenes/bedroom/actors'
 import ACTORS_VAN_NUYS_LOCKERS from 'scene/scenes/vanNuysLockers/actors'
 import ACTORS_VAN_NUYS_QUAD from 'scene/scenes/vanNuysQuad/actors'
 import ACTORS_VAN_NUYS_HALLWAY from 'scene/scenes/vanNuysHallway/actors'
@@ -84,7 +84,7 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_BUOY,
     ACTORS_OCEAN_DEPTHS,
     ACTORS_OCEAN_FLOOR,
-    ACTORS_BENNETT_ROOM,
+    ACTORS_BEDROOM,
     ACTORS_VAN_NUYS_LOCKERS,
     ACTORS_VAN_NUYS_QUAD,
     ACTORS_VAN_NUYS_HALLWAY,

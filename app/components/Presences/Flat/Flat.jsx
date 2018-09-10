@@ -9,8 +9,12 @@ import NohoSchoolBackdrop from './Flats/NohoSchool/NohoSchoolBackdrop'
 import NohoSchoolhouse from './Flats/NohoSchool/NohoSchoolhouse'
 import NurseOfficeBubble from './Flats/NohoSchool/NurseOfficeBubble'
 import ValleyBackdrop from './Flats/Freeway/ValleyBackdrop'
-import SirenBackdrop from './Flats/BennettRoom/SirenBackdrop'
-import CaptainBedDrawers from './Flats/BennettRoom/CaptainBedDrawers'
+import BedroomBackdrop from './Flats/Bedroom/BedroomBackdrop'
+import BedroomSirenBackdrop from './Flats/Bedroom/BedroomSirenBackdrop'
+import BedroomBusBackdrop from './Flats/Bedroom/BedroomBusBackdrop'
+import CaptainBedDrawers from './Flats/Bedroom/CaptainBedDrawers'
+import DogsSketchbook from './Flats/Bedroom/DogsSketchbook'
+import SpaceStationSketchbook from './Flats/Bedroom/SpaceStationSketchbook'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -20,8 +24,12 @@ import {
     NOHO_SCHOOLHOUSE,
     NURSE_OFFICE_BUBBLE,
     VALLEY_BACKDROP,
-    SIREN_BACKDROP,
-    CAPTAIN_BED_DRAWERS
+    BEDROOM_BACKDROP,
+    BEDROOM_SIREN_BACKDROP,
+    BEDROOM_BUS_BACKDROP,
+    CAPTAIN_BED_DRAWERS,
+    DOGS_SKETCHBOOK,
+    SPACE_STATION_SKETCHBOOK
 } from 'scene/flatKeys'
 
 const FLATS_MAP = {
@@ -32,8 +40,12 @@ const FLATS_MAP = {
     [NOHO_SCHOOLHOUSE]: NohoSchoolhouse,
     [NURSE_OFFICE_BUBBLE]: NurseOfficeBubble,
     [VALLEY_BACKDROP]: ValleyBackdrop,
-    [SIREN_BACKDROP]: SirenBackdrop,
-    [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers
+    [BEDROOM_BACKDROP]: BedroomBackdrop,
+    [BEDROOM_SIREN_BACKDROP]: BedroomSirenBackdrop,
+    [BEDROOM_BUS_BACKDROP]: BedroomBusBackdrop,
+    [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers,
+    [DOGS_SKETCHBOOK]: DogsSketchbook,
+    [SPACE_STATION_SKETCHBOOK]: SpaceStationSketchbook
 },
 DEFAULT_COMPONENT = () => (null)
 

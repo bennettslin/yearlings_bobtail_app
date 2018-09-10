@@ -7,7 +7,8 @@ import {
 } from 'constants/scene'
 
 import {
-    BENNETT_ROOM_KEY,
+    BEDROOM_KEY,
+    BEDROOM_STOOL_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
     NOHO_HOUSES_KEY,
@@ -80,13 +81,14 @@ import {
     NOHO_HOUSES_BACKDROP,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-    SIREN_BACKDROP,
+    BEDROOM_BACKDROP,
+    BEDROOM_SIREN_BACKDROP,
     CAPTAIN_BED_DRAWERS
 } from 'scene/flatKeys'
 
 import {
     PORCH_DOOR,
-    BENNETT_ROOM_BLINDS,
+    BEDROOM_BLINDS_OPEN,
     CAPTAIN_BED_MATTRESS
 } from 'scene/furnitureKeys'
 
@@ -213,15 +215,15 @@ module.exports = [
                 [MAGAZINE_LETTERS]: true
             },
             [FLATS]: {
-                [SIREN_BACKDROP]: true,
+                [BEDROOM_BACKDROP]: true,
                 [CAPTAIN_BED_DRAWERS]: true
             },
             [FURNITURES]: {
-                [BENNETT_ROOM_BLINDS]: true,
+                [BEDROOM_BLINDS_OPEN]: true,
                 [CAPTAIN_BED_MATTRESS]: true
             }
         },
-        cubes: BENNETT_ROOM_KEY,
+        cubes: BEDROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER
@@ -287,9 +289,17 @@ module.exports = [
                     description: 'lying in bed, worried, scared',
                     instance: FEARFUL
                 }
+            },
+            [FLATS]: {
+                [BEDROOM_SIREN_BACKDROP]: true,
+                [CAPTAIN_BED_DRAWERS]: true
+            },
+            [FURNITURES]: {
+                [BEDROOM_BLINDS_OPEN]: true,
+                [CAPTAIN_BED_MATTRESS]: true
             }
         },
-        cubes: BENNETT_ROOM_KEY,
+        cubes: BEDROOM_STOOL_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SUMMER

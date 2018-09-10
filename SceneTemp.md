@@ -48,10 +48,10 @@
 ## Scene 3
 
 ### Cubes
-* bennettRoomDay
+* bedroomDay
 
 ### Furniture
-* bennettRoomMattress
+* bedroomMattress
 * bennettDesk
 
 ### Fixtures
@@ -68,7 +68,7 @@
 * nohoNeighbourhoodSiren
 
 ### Cubes
-* bennettRoomNight
+* bedroomNight
 
 ## Scene 6
 

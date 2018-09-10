@@ -1,8 +1,8 @@
 import {
-    BENNETT_ROOM_KEY,
-    BENNETT_ROOM_OPEN_KEY,
-    BENNETT_ROOM_SPACE_KEY,
-    BENNETT_ROOM_DOGS_KEY,
+    BEDROOM_KEY,
+    BEDROOM_OPEN_KEY,
+    BEDROOM_DOGS_KEY,
+    BEDROOM_SPACE_KEY,
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY
@@ -54,6 +54,30 @@ import { POPULAR_GIRL } from 'scene/instanceKeys/sasha'
 
 import { PRINCIPAL } from 'scene/instanceKeys/tristan'
 
+// import {
+//     CAPTAIN_BED_LAMP
+// } from 'scene/fixtureKeys'
+
+// import {
+//     BEDROOM_BACKDROP,
+//     BEDROOM_BUS_BACKDROP,
+//     CAPTAIN_BED_DRAWERS,
+//     DOGS_SKETCHBOOK,
+//     SPACE_STATION_SKETCHBOOK
+// } from 'scene/flatKeys'
+
+// import {
+//     BEDROOM_BLINDS,
+//     BEDROOM_BLINDS_OPEN,
+//     CAPTAIN_BED_MATTRESS
+// } from 'scene/furnitureKeys'
+
+// import {
+//     PCHELKA,
+//     MUSHKA,
+//     ROCKET
+// } from 'scene/puppetKeys'
+
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
  * song list order on the album.
@@ -62,7 +86,7 @@ module.exports = [
     {
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,
-        cubes: BENNETT_ROOM_OPEN_KEY,
+        cubes: BEDROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -87,7 +111,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_ROOM_OPEN_KEY,
+        cubes: BEDROOM_OPEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -106,7 +130,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_ROOM_KEY,
+        cubes: BEDROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -125,7 +149,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_ROOM_DOGS_KEY,
+        cubes: BEDROOM_DOGS_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -144,7 +168,7 @@ module.exports = [
                 }
             }
         },
-        cubes: BENNETT_ROOM_SPACE_KEY,
+        cubes: BEDROOM_SPACE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER

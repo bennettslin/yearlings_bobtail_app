@@ -34,6 +34,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 16
     },
+    {
+        taskName: `Position presences in slanted cubes.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /**
      * End home tasks.

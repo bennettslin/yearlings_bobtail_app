@@ -59,16 +59,13 @@ SchoolbusSeatBack
 VanNuysThought
 VanNuysSchoolhouse
 
-## Furniture
-TetherballPole
-
 # THINGS_TAIWAN_ROOM
 
 ## Cutouts
 BuddhaShrine
 TaiwanFridgeFront
-BennettTaiwanRoom
-OdinTaiwanRoom
+BennettTaiwanStairs
+OdinTaiwanStairs
 
 ## Furniture
 SleepingMat
@@ -77,8 +74,8 @@ SleepingMat
 
 ## Cutouts
 TaiwanFridgeSide
-BennettTaiwanStairs
-OdinTaiwanStairs
+BennettTaiwanGate
+OdinTaiwanGate
 
 ## Fixtures
 Drawings
@@ -91,17 +88,108 @@ StairwellRailing
 
 # THINGS_TAIWAN_GATE
 
+## Cutouts
+BennettOdinRickshaw
+
+## Flats
+TaiwanStreets
+
+## Furniture
+IronGate
 
 # THINGS_RICKSHAW
+
+## Cutouts
+BennettShore
+OdinShore
+
+## Flats
+ShoreBackdrop
+
 # THINGS_SHORE
+
+## Cutouts
+BennettOdinBuoy
+YellowTapedGrill
+
+## Flats
+ShoreFront
+ShoreBack
+
 # THINGS_BUOY
+
+## Cutouts
+BennettOdinOceanDepths
+SeaSerpents
+
+## Flats
+OceanDepthsFront
+OceanDepthsBack
+
+## Furniture
+Buoy
+
 # THINGS_OCEAN_DEPTHS
+
+## Cutouts
+BennettOceanFloor
+OdinOceanFloor
+
+## Flats
+OceanWaves
+OceanFloor
+
 # THINGS_OCEAN_FLOOR
 
-# THINGS_BENNETT_ROOM
+## Cutouts
+BennettMat
+OdinMat
+BuddhaCave
+
+## Flats
+OceanBottom
+
+# THINGS_BEDROOM
+
+## Flats
+BedroomBusBackdrop
+DogsSketchbook
+SpaceStationSketchbook
+
+## Fixtures
+CaptainBedLamp
+
+## Puppets
+Mushka
+Pchelka
+Rocket
+
 # THINGS_VAN_NUYS_LOCKERS
+
+## Cutouts
+LockerBank
+TrashCanBack
+VanNuysPlantsFront
+
+## Fixtures
+ThrownFruit
+
+## Flats
+VanNuysSchoolBackdrop
+VanNuysSchoolhouse
+
 # THINGS_VAN_NUYS_QUAD
+
+## Cutouts
+LockerBank
+TrashCanFront
+VanNuysPlantsBack
+
 # THINGS_VAN_NUYS_HALLWAY
+
+## Furniture
+VanNuysHallwayDoor
+
 # THINGS_CATHOLIC_CHURCH
 # THINGS_UC_BERKELEY
 # THINGS_CINEMA

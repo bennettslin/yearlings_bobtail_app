@@ -1,10 +1,11 @@
 import {
-    BENNETT_ROOM_BLINDS,
-    CAPTAIN_BED_MATTRESS
-} from 'scene/furnitureKeys'
+    PCHELKA,
+    MUSHKA,
+    ROCKET
+} from 'scene/puppetKeys'
 
 const ARRANGEMENTS_MAP = {
-    [BENNETT_ROOM_BLINDS]: {
+    [PCHELKA]: {
         yIndex: 1,
         arrangement: {
             xFloat: 3,
@@ -12,7 +13,15 @@ const ARRANGEMENTS_MAP = {
             zHeight: 3
         }
     },
-    [CAPTAIN_BED_MATTRESS]: {
+    [MUSHKA]: {
+        yIndex: 1,
+        arrangement: {
+            xFloat: 3,
+            xWidth: 5,
+            zHeight: 3
+        }
+    },
+    [ROCKET]: {
         yIndex: 4,
         arrangement: {
             xFloat: 8,

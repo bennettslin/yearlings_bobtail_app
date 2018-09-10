@@ -3,19 +3,21 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import PorchDoor from './Furnitures/Porch/PorchDoor'
-import BennettRoomBlinds from './Furnitures/BennettRoom/BennettRoomBlinds'
-import CaptainBedMattress from './Furnitures/BennettRoom/CaptainBedMattress'
+import BedroomBlinds from './Furnitures/Bedroom/BedroomBlinds'
+import BedroomBlindsOpen from './Furnitures/Bedroom/BedroomBlindsOpen'
+import CaptainBedMattress from './Furnitures/Bedroom/CaptainBedMattress'
 
 import {
     PORCH_DOOR,
-    BENNETT_ROOM_BLINDS,
+    BEDROOM_BLINDS,
+    BEDROOM_BLINDS_OPEN,
     CAPTAIN_BED_MATTRESS
 } from 'scene/furnitureKeys'
 
-
 const FURNITURES_MAP = {
     [PORCH_DOOR]: PorchDoor,
-    [BENNETT_ROOM_BLINDS]: BennettRoomBlinds,
+    [BEDROOM_BLINDS]: BedroomBlinds,
+    [BEDROOM_BLINDS_OPEN]: BedroomBlindsOpen,
     [CAPTAIN_BED_MATTRESS]: CaptainBedMattress
 },
 DEFAULT_COMPONENT = () => (null)

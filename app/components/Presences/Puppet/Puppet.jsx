@@ -2,8 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-const PUPPETS_MAP = {
+import Pchelka from './Puppets/Bedroom/Pchelka'
+import Mushka from './Puppets/Bedroom/Mushka'
+import Rocket from './Puppets/Bedroom/Rocket'
 
+import {
+    PCHELKA,
+    MUSHKA,
+    ROCKET
+} from 'scene/puppetKeys'
+
+const PUPPETS_MAP = {
+    [PCHELKA]: Pchelka,
+    [MUSHKA]: Mushka,
+    [ROCKET]: Rocket
 },
 DEFAULT_COMPONENT = () => (null)
 

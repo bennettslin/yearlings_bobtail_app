@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const SirenBackdrop = ({
+const DogsSketchbook = ({
 
     className,
 
@@ -18,7 +18,7 @@ const SirenBackdrop = ({
     return (
         <Svg
             className={cx(
-                'SirenBackdrop',
+                'DogsSketchbook',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const SirenBackdrop = ({
                 {...other}
             >
                 {cx(
-                    'SirenBackdrop'
+                    'DogsSketchbook'
                 )}
             </text>
         </Svg>
     )
 }
 
-SirenBackdrop.propTypes = propTypes;
+DogsSketchbook.propTypes = propTypes;
 
-export default SirenBackdrop
+export default DogsSketchbook

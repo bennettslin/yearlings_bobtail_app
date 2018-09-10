@@ -17,7 +17,7 @@ import THINGS_SHORE from 'scene/scenes/shore/things'
 import THINGS_BUOY from 'scene/scenes/buoy/things'
 import THINGS_OCEAN_DEPTHS from 'scene/scenes/oceanDepths/things'
 import THINGS_OCEAN_FLOOR from 'scene/scenes/oceanFloor/things'
-import THINGS_BENNETT_ROOM from 'scene/scenes/bennettRoom/things'
+import THINGS_BEDROOM from 'scene/scenes/bedroom/things'
 import THINGS_VAN_NUYS_LOCKERS from 'scene/scenes/vanNuysLockers/things'
 import THINGS_VAN_NUYS_QUAD from 'scene/scenes/vanNuysQuad/things'
 import THINGS_VAN_NUYS_HALLWAY from 'scene/scenes/vanNuysHallway/things'
@@ -78,7 +78,7 @@ const SCENE_ARRANGEMENTS = [
     THINGS_BUOY,
     THINGS_OCEAN_DEPTHS,
     THINGS_OCEAN_FLOOR,
-    THINGS_BENNETT_ROOM,
+    THINGS_BEDROOM,
     THINGS_VAN_NUYS_LOCKERS,
     THINGS_VAN_NUYS_QUAD,
     THINGS_VAN_NUYS_HALLWAY,

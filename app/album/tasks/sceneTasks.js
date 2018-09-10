@@ -60,7 +60,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        task: 'bennettRoom',
+        task: 'bedroom',
         workedHours: 0,
         neededHours: 1
     },

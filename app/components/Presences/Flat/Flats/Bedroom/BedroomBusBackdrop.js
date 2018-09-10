@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BennettRoomBlinds = ({
+const BedroomBusBackdrop = ({
 
     className,
 
@@ -18,13 +18,13 @@ const BennettRoomBlinds = ({
     return (
         <Svg
             className={cx(
-                'BennettRoomBlinds',
+                'BedroomBusBackdrop',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Furniture__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const BennettRoomBlinds = ({
                 {...other}
             >
                 {cx(
-                    'BennettRoomBlinds'
+                    'BedroomBusBackdrop'
                 )}
             </text>
         </Svg>
     )
 }
 
-BennettRoomBlinds.propTypes = propTypes;
+BedroomBusBackdrop.propTypes = propTypes;
 
-export default BennettRoomBlinds
+export default BedroomBusBackdrop

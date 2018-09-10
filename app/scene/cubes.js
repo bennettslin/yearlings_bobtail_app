@@ -17,7 +17,7 @@ import CUBES_SHORE from 'scene/scenes/shore/cubes'
 import CUBES_BUOY from 'scene/scenes/buoy/cubes'
 import CUBES_OCEAN_DEPTHS from 'scene/scenes/oceanDepths/cubes'
 import CUBES_OCEAN_FLOOR from 'scene/scenes/oceanFloor/cubes'
-import CUBES_BENNETT_ROOM from 'scene/scenes/bennettRoom/cubes'
+import CUBES_BEDROOM from 'scene/scenes/bedroom/cubes'
 import CUBES_VAN_NUYS_LOCKERS from 'scene/scenes/vanNuysLockers/cubes'
 import CUBES_VAN_NUYS_QUAD from 'scene/scenes/vanNuysQuad/cubes'
 import CUBES_VAN_NUYS_HALLWAY from 'scene/scenes/vanNuysHallway/cubes'
@@ -80,7 +80,7 @@ const CUBES = {
     ...CUBES_BUOY,
     ...CUBES_OCEAN_DEPTHS,
     ...CUBES_OCEAN_FLOOR,
-    ...CUBES_BENNETT_ROOM,
+    ...CUBES_BEDROOM,
     ...CUBES_VAN_NUYS_LOCKERS,
     ...CUBES_VAN_NUYS_QUAD,
     ...CUBES_VAN_NUYS_HALLWAY,
