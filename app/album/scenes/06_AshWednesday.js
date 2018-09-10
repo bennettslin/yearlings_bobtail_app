@@ -3,12 +3,12 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
     BENNETT_COUCH_THOUGHT_KEY,
-    BENNETT_COURTYARD_KEY,
+    COURTYARD_KEY,
     CATHOLIC_CHURCH_KEY,
     BANCROFT_LIBRARY_KEY,
     CAMPANILE_KEY
@@ -73,6 +73,14 @@ import {
     CAMPANILE
 } from 'scene/flatKeys'
 
+import {
+    BENNETT_BLINDS,
+    BENNETT_DOOR_OUTSIDE,
+    BENNETT_GATE_SIDE,
+    BENNETT_CUSHIONS,
+    BANCROFT_DOOR
+} from 'scene/furnitureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -95,9 +103,14 @@ module.exports = [
             [CUTOUTS]: {
                 [RECYCLABLES]: true,
                 [BENNETT_COUCH_FAR]: true
+            },
+            [FURNITURES]: {
+                [BENNETT_BLINDS]: true,
+                [BENNETT_DOOR_OUTSIDE]: true,
+                [BENNETT_GATE_SIDE]: true
             }
         },
-        cubes: BENNETT_COURTYARD_KEY,
+        cubes: COURTYARD_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING
@@ -130,6 +143,9 @@ module.exports = [
             },
             [FLATS]: {
                 [BENNETT_COUCH_THOUGHT]: true
+            },
+            [FURNITURES]: {
+                [BENNETT_CUSHIONS]: true
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,
@@ -199,6 +215,9 @@ module.exports = [
             },
             [FLATS]: {
                 [UC_BERKELEY_BACKDROP]: true
+            },
+            [FURNITURES]: {
+                [BANCROFT_DOOR]: true
             }
         },
         cubes: BANCROFT_LIBRARY_KEY,

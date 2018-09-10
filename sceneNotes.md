@@ -6,21 +6,6 @@ Scene review
 * Create placeholder components for presences.
 * Transfer task hours to presences.
 
-## Flats
-
-## Furnitures
-BENNETT_BLINDS_OPEN = 'bennettBlinds'
-BENNETT_DOOR_OUTSIDE_OPEN = 'bennettDoorOutsideOpen'
-BENNETT_GATE_SIDE = 'bennettGateSide'
-BENNETT_COUCH_CUSHIONS = 'bennettCouchCushions'
-BANCROFT_DOOR = 'bancroftDoor'
-BASEMENT_DOOR = 'basementDoor'
-BASEMENT_DOOR_OPEN = 'basementDoorOpen'
-CINEMA_DOORS = 'cinemaDoors'
-LIZ_BLINDS_OUTSIDE = 'lizBlindsOutside'
-LIZ_GATE_OUTSIDE = 'lizGateOutside'
-LIZ_GATE_OUTSIDE_OPEN = 'lizGateOutsideOpen'
-
 # THINGS_DISHROOM
 # THINGS_BENNETT_GATE
 # THINGS_BENNETT_BED

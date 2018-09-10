@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -88,6 +88,11 @@ import {
     BAY_AREA_BACKDROP,
     CINEMA_THOUGHTS
 } from 'scene/flatKeys'
+
+import {
+    BASEMENT_DOOR_OPEN,
+    CINEMA_DOORS
+} from 'scene/furnitureKeys'
 
 module.exports = [
     {
@@ -266,6 +271,9 @@ module.exports = [
             [FIXTURES]: {
                 [BASS_CASE]: true,
                 [GUITAR_CASE]: true
+            },
+            [FURNITURES]: {
+                [BASEMENT_DOOR_OPEN]: true
             }
         },
         cubes: BASEMENT_KEY,
@@ -297,6 +305,9 @@ module.exports = [
             [CUTOUTS]: {
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: true
+            },
+            [FURNITURES]: {
+                [CINEMA_DOORS]: true
             }
         },
         cubes: CINEMA_KEY,
@@ -336,6 +347,9 @@ module.exports = [
             [CUTOUTS]: {
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: true
+            },
+            [FURNITURES]: {
+                [CINEMA_DOORS]: true
             }
         },
         cubes: CINEMA_KEY,

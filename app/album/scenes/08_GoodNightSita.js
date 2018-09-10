@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -58,6 +58,14 @@ import {
     GO_KART_THOUGHT
 } from 'scene/flatKeys'
 
+import {
+    LIZ_BLINDS,
+    LIZ_GATE_OUTSIDE,
+    GO_KART_INTERIOR_LEFT,
+    GO_KART_INTERIOR_RIGHT,
+    LIZ_GATE_OUTSIDE_OPEN
+} from 'scene/furnitureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -78,6 +86,10 @@ module.exports = [
                         instance: DATE_ENDING
                     }
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_BLINDS]: true,
+                [LIZ_GATE_OUTSIDE]: true
             }
         },
         cubes: LIZ_GATE_KEY,
@@ -195,6 +207,10 @@ module.exports = [
             },
             [FLATS]: {
                 [GO_KART_THOUGHT]: true
+            },
+            [FURNITURES]: {
+                [GO_KART_INTERIOR_LEFT]: true,
+                [GO_KART_INTERIOR_RIGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,
@@ -225,6 +241,9 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [TRAFFIC_LIGHT]: true
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_OUTSIDE_OPEN]: true
             }
         },
         cubes: LIZ_GATE_STREET_KEY,

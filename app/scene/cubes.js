@@ -35,7 +35,7 @@ import CUBES_CLUB_SIDE from 'scene/scenes/clubSide/cubes'
 import CUBES_CLUB_LOADING from 'scene/scenes/clubLoading/cubes'
 import CUBES_BENNETT_BED from 'scene/scenes/bennettBed/cubes'
 import CUBES_BENNETT_COUCH from 'scene/scenes/bennettCouch/cubes'
-import CUBES_BENNETT_COURTYARD from 'scene/scenes/bennettCourtyard/cubes'
+import CUBES_COURTYARD from 'scene/scenes/courtyard/cubes'
 import CUBES_BENNETT_GATE from 'scene/scenes/bennettGate/cubes'
 import CUBES_LIZ_BED from 'scene/scenes/lizBed/cubes'
 import CUBES_LIZ_COUCH from 'scene/scenes/lizCouch/cubes'
@@ -98,7 +98,7 @@ const CUBES = {
     ...CUBES_CLUB_LOADING,
     ...CUBES_BENNETT_BED,
     ...CUBES_BENNETT_COUCH,
-    ...CUBES_BENNETT_COURTYARD,
+    ...CUBES_COURTYARD,
     ...CUBES_BENNETT_GATE,
     ...CUBES_LIZ_BED,
     ...CUBES_LIZ_COUCH,

@@ -11,7 +11,20 @@ const
     STAIRWELL_RAILING = 'stairwellRailing',
     IRON_GATE = 'ironGate',
     BUOY_FLOAT = 'buoy',
-    PRINCIPAL_DOOR = 'principalDoor'
+    PRINCIPAL_DOOR = 'principalDoor',
+    BENNETT_BLINDS = 'bennettBlinds',
+    BENNETT_DOOR_OUTSIDE = 'bennettDoorOutside',
+    BENNETT_GATE_SIDE = 'bennettGateSide',
+    BENNETT_CUSHIONS = 'bennettCushions',
+    BANCROFT_DOOR = 'bancroftDoor',
+    BASEMENT_DOOR = 'basementDoor',
+    BASEMENT_DOOR_OPEN = 'basementDoorOpen',
+    CINEMA_DOORS = 'cinemaDoors',
+    LIZ_BLINDS = 'lizBlinds',
+    LIZ_GATE_OUTSIDE = 'lizGateOutside',
+    GO_KART_INTERIOR_LEFT = 'goKartInteriorLeft',
+    GO_KART_INTERIOR_RIGHT = 'goKartInteriorRight',
+    LIZ_GATE_OUTSIDE_OPEN = 'lizGateOutsideOpen'
 
 export {
     PORCH_DOOR,
@@ -24,5 +37,18 @@ export {
     STAIRWELL_RAILING,
     IRON_GATE,
     BUOY_FLOAT,
-    PRINCIPAL_DOOR
+    PRINCIPAL_DOOR,
+    BENNETT_BLINDS,
+    BENNETT_DOOR_OUTSIDE,
+    BENNETT_GATE_SIDE,
+    BENNETT_CUSHIONS,
+    BANCROFT_DOOR,
+    BASEMENT_DOOR,
+    BASEMENT_DOOR_OPEN,
+    CINEMA_DOORS,
+    LIZ_BLINDS,
+    LIZ_GATE_OUTSIDE,
+    GO_KART_INTERIOR_LEFT,
+    GO_KART_INTERIOR_RIGHT,
+    LIZ_GATE_OUTSIDE_OPEN
 }

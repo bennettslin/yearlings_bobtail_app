@@ -35,7 +35,7 @@ import THINGS_CLUB_SIDE from 'scene/scenes/clubSide/things'
 import THINGS_CLUB_LOADING from 'scene/scenes/clubLoading/things'
 import THINGS_BENNETT_BED from 'scene/scenes/bennettBed/things'
 import THINGS_BENNETT_COUCH from 'scene/scenes/bennettCouch/things'
-import THINGS_BENNETT_COURTYARD from 'scene/scenes/bennettCourtyard/things'
+import THINGS_COURTYARD from 'scene/scenes/courtyard/things'
 import THINGS_BENNETT_GATE from 'scene/scenes/bennettGate/things'
 import THINGS_LIZ_BED from 'scene/scenes/lizBed/things'
 import THINGS_LIZ_COUCH from 'scene/scenes/lizCouch/things'
@@ -96,7 +96,7 @@ const SCENE_ARRANGEMENTS = [
     THINGS_CLUB_LOADING,
     THINGS_BENNETT_BED,
     THINGS_BENNETT_COUCH,
-    THINGS_BENNETT_COURTYARD,
+    THINGS_COURTYARD,
     THINGS_BENNETT_GATE,
     THINGS_LIZ_BED,
     THINGS_LIZ_COUCH,

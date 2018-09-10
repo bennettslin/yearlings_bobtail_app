@@ -13,6 +13,19 @@ import StairwellRailing from './Furnitures/TaiwanStairs/StairwellRailing'
 import IronGate from './Furnitures/TaiwanGate/IronGate'
 import BuoyFloat from './Furnitures/Buoy/BuoyFloat'
 import PrincipalDoor from './Furnitures/VanNuysHallway/PrincipalDoor'
+import BennettBlinds from './Furnitures/Courtyard/BennettBlinds'
+import BennettDoorOutside from './Furnitures/Courtyard/BennettDoorOutside'
+import BennettGateSide from './Furnitures/Courtyard/BennettGateSide'
+import BennettCushions from './Furnitures/BennettCouch/BennettCushions'
+import BancroftDoor from './Furnitures/UcBerkeley/BancroftDoor'
+import BasementDoor from './Furnitures/Basement/BasementDoor'
+import BasementDoorOpen from './Furnitures/Basement/BasementDoorOpen'
+import CinemaDoors from './Furnitures/Cinema/CinemaDoors'
+import LizBlinds from './Furnitures/LizGate/LizBlinds'
+import LizGateOutside from './Furnitures/LizGate/LizGateOutside'
+import GoKartInteriorLeft from './Furnitures/GoKarts/GoKartInteriorLeft'
+import GoKartInteriorRight from './Furnitures/GoKarts/GoKartInteriorRight'
+import LizGateOutsideOpen from './Furnitures/LizGate/LizGateOutsideOpen'
 
 import {
     PORCH_DOOR,
@@ -25,7 +38,20 @@ import {
     STAIRWELL_RAILING,
     IRON_GATE,
     BUOY_FLOAT,
-    PRINCIPAL_DOOR
+    PRINCIPAL_DOOR,
+    BENNETT_BLINDS,
+    BENNETT_DOOR_OUTSIDE,
+    BENNETT_GATE_SIDE,
+    BENNETT_CUSHIONS,
+    BANCROFT_DOOR,
+    BASEMENT_DOOR,
+    BASEMENT_DOOR_OPEN,
+    CINEMA_DOORS,
+    LIZ_BLINDS,
+    LIZ_GATE_OUTSIDE,
+    GO_KART_INTERIOR_LEFT,
+    GO_KART_INTERIOR_RIGHT,
+    LIZ_GATE_OUTSIDE_OPEN
 } from 'scene/furnitureKeys'
 
 const FURNITURES_MAP = {
@@ -39,7 +65,20 @@ const FURNITURES_MAP = {
     [STAIRWELL_RAILING]: StairwellRailing,
     [IRON_GATE]: IronGate,
     [BUOY_FLOAT]: BuoyFloat,
-    [PRINCIPAL_DOOR]: PrincipalDoor
+    [PRINCIPAL_DOOR]: PrincipalDoor,
+    [BENNETT_BLINDS]: BennettBlinds,
+    [BENNETT_DOOR_OUTSIDE]: BennettDoorOutside,
+    [BENNETT_GATE_SIDE]: BennettGateSide,
+    [BENNETT_CUSHIONS]: BennettCushions,
+    [BANCROFT_DOOR]: BancroftDoor,
+    [BASEMENT_DOOR]: BasementDoor,
+    [BASEMENT_DOOR_OPEN]: BasementDoorOpen,
+    [CINEMA_DOORS]: CinemaDoors,
+    [LIZ_BLINDS]: LizBlinds,
+    [LIZ_GATE_OUTSIDE]: LizGateOutside,
+    [GO_KART_INTERIOR_LEFT]: GoKartInteriorLeft,
+    [GO_KART_INTERIOR_RIGHT]: GoKartInteriorRight,
+    [LIZ_GATE_OUTSIDE_OPEN]: LizGateOutsideOpen
 },
 DEFAULT_COMPONENT = () => (null)
 

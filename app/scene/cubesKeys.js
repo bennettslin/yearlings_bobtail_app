@@ -60,7 +60,7 @@ const
     BENNETT_BED_KEY = 'bennettBed',
     BENNETT_COUCH_KEY = 'bennettCouch',
     BENNETT_COUCH_THOUGHT_KEY = 'bennettCouchThought',
-    BENNETT_COURTYARD_KEY = 'bennettCourtyard',
+    COURTYARD_KEY = 'courtyard',
     BENNETT_GATE_KEY = 'bennettGate',
 
     LIZ_BED_KEY = 'lizBed',
@@ -147,7 +147,7 @@ export {
     BENNETT_BED_KEY,
     BENNETT_COUCH_KEY,
     BENNETT_COUCH_THOUGHT_KEY,
-    BENNETT_COURTYARD_KEY,
+    COURTYARD_KEY,
     BENNETT_GATE_KEY,
     LIZ_BED_KEY,
     LIZ_COUCH_KEY,

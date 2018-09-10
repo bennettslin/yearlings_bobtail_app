@@ -41,7 +41,7 @@ import ACTORS_CLUB_SIDE from 'scene/scenes/clubSide/actors'
 import ACTORS_CLUB_LOADING from 'scene/scenes/clubLoading/actors'
 import ACTORS_BENNETT_BED from 'scene/scenes/bennettBed/actors'
 import ACTORS_BENNETT_COUCH from 'scene/scenes/bennettCouch/actors'
-import ACTORS_BENNETT_COURTYARD from 'scene/scenes/bennettCourtyard/actors'
+import ACTORS_COURTYARD from 'scene/scenes/courtyard/actors'
 import ACTORS_BENNETT_GATE from 'scene/scenes/bennettGate/actors'
 import ACTORS_LIZ_BED from 'scene/scenes/lizBed/actors'
 import ACTORS_LIZ_COUCH from 'scene/scenes/lizCouch/actors'
@@ -102,7 +102,7 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_CLUB_LOADING,
     ACTORS_BENNETT_BED,
     ACTORS_BENNETT_COUCH,
-    ACTORS_BENNETT_COURTYARD,
+    ACTORS_COURTYARD,
     ACTORS_BENNETT_GATE,
     ACTORS_LIZ_BED,
     ACTORS_LIZ_COUCH,

@@ -1,4 +1,4 @@
-import { BENNETT_COURTYARD_KEY } from 'scene/cubesKeys'
+import { COURTYARD_KEY } from 'scene/cubesKeys'
 
 import {
     d,
@@ -9,7 +9,7 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    BENNETT_COURTYARD_CUBES = {
+    COURTYARD_CUBES = {
         // Outdoor wall is 8'. Windowsill height is 3'.
         ceiling: {
             zIndices: [
@@ -32,7 +32,7 @@ const
     },
 
     CUBES = {
-        [BENNETT_COURTYARD_KEY]: BENNETT_COURTYARD_CUBES
+        [COURTYARD_KEY]: COURTYARD_CUBES
     }
 
 export default CUBES
