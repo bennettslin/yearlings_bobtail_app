@@ -6,8 +6,8 @@ module.exports = [
      */
     {
         taskName: `Scene work.`,
-        workedHours: 12,
-        neededHours: 12
+        workedHours: 18,
+        neededHours: 18
     },
     {
         taskName: `Allow cutouts and fixtures to persist across scenes. Probably needs React CSS transition group.`,
@@ -36,6 +36,11 @@ module.exports = [
     },
     {
         taskName: `Position presences in slanted cubes.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Allow presences to have different positions.`,
         workedHours: 0,
         neededHours: 2
     },

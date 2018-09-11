@@ -64,6 +64,20 @@ import StageLights from './Cutouts/Backstage/StageLights'
 import GoKartLeft from './Cutouts/GoKarts/GoKartLeft'
 import GoKartRight from './Cutouts/GoKarts/GoKartRight'
 import TrafficLight from './Cutouts/LizGate/TrafficLight'
+import DishroomSink from './Cutouts/Dishroom/DishroomSink'
+import CodeBox from './Cutouts/BennettGate/CodeBox'
+import LightSwitch from './Cutouts/BennettBed/LightSwitch'
+import Clipboard from './Cutouts/WaitingRoom/Clipboard'
+import Painting from './Cutouts/WaitingRoom/Painting'
+import WaitingRoomPlant from './Cutouts/WaitingRoom/WaitingRoomPlant'
+import StationWagonFront from './Cutouts/StationWagon/StationWagonFront'
+import StationWagonBack from './Cutouts/StationWagon/StationWagonBack'
+import StorageBoxes from './Cutouts/Attic/StorageBoxes'
+import StorageChest from './Cutouts/Attic/StorageChest'
+import HowieFridge from './Cutouts/Attic/HowieFridge'
+import Television from './Cutouts/Attic/Television'
+import MonitorSpeakerSide from './Cutouts/ClubSide/MonitorSpeakerSide'
+import WallSpeakerSide from './Cutouts/ClubSide/WallSpeakerSide'
 
 import {
     FIRE_HYDRANT,
@@ -127,7 +141,21 @@ import {
     STAGE_LIGHTS,
     GO_KART_LEFT,
     GO_KART_RIGHT,
-    TRAFFIC_LIGHT
+    TRAFFIC_LIGHT,
+    DISHROOM_SINK,
+    CODE_BOX,
+    LIGHT_SWITCH,
+    CLIPBOARD,
+    PAINTING,
+    WAITING_ROOM_PLANT,
+    STATION_WAGON_FRONT,
+    STATION_WAGON_BACK,
+    STORAGE_BOXES,
+    STORAGE_CHEST,
+    HOWIE_FRIDGE,
+    TELEVISION,
+    MONITOR_SPEAKER_SIDE,
+    WALL_SPEAKER_SIDE
 } from 'scene/cutoutKeys'
 
 const CUTOUTS_MAP = {
@@ -192,7 +220,21 @@ const CUTOUTS_MAP = {
     [STAGE_LIGHTS]: StageLights,
     [GO_KART_LEFT]: GoKartLeft,
     [GO_KART_RIGHT]: GoKartRight,
-    [TRAFFIC_LIGHT]: TrafficLight
+    [TRAFFIC_LIGHT]: TrafficLight,
+    [DISHROOM_SINK]: DishroomSink,
+    [CODE_BOX]: CodeBox,
+    [LIGHT_SWITCH]: LightSwitch,
+    [CLIPBOARD]: Clipboard,
+    [PAINTING]: Painting,
+    [WAITING_ROOM_PLANT]: WaitingRoomPlant,
+    [STATION_WAGON_FRONT]: StationWagonFront,
+    [STATION_WAGON_BACK]: StationWagonBack,
+    [STORAGE_BOXES]: StorageBoxes,
+    [STORAGE_CHEST]: StorageChest,
+    [HOWIE_FRIDGE]: HowieFridge,
+    [TELEVISION]: Television,
+    [MONITOR_SPEAKER_SIDE]: MonitorSpeakerSide,
+    [WALL_SPEAKER_SIDE]: WallSpeakerSide
 },
 DEFAULT_COMPONENT = () => (null)
 

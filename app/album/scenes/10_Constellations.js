@@ -3,6 +3,14 @@
  * not being clear and being too obvious.
  */
 import {
+    ACTORS,
+    CUTOUTS,
+    // FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,
     ATTIC_KEY,
@@ -32,12 +40,21 @@ import {
     ATTIC
 } from 'scene/instanceKeys/songs'
 
+import {
+    STATION_WAGON_FRONT,
+    STATION_WAGON_BACK,
+    STORAGE_BOXES,
+    STORAGE_CHEST,
+    HOWIE_FRIDGE,
+    TELEVISION
+} from 'scene/cutoutKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Abbey Road`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -74,7 +91,7 @@ module.exports = [
         unitIndex: 3,
         description: `The gang is at Walgreens, picking out cough syrup.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -111,7 +128,7 @@ module.exports = [
         unitIndex: 6,
         description: `The gang is wandering through the steam tunnels. Bennett is blathering, Howie is half paying attention. Tomer and Ana are play fighting.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -148,7 +165,7 @@ module.exports = [
         unitIndex: 9,
         description: `The gang is at the cemetery, standing over Adam's grave. Tomer is kneeling and pouring a bottle of water over the gravestone. Bennett is looking up. Howie and Ana are tentatively cuddling.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -185,7 +202,7 @@ module.exports = [
         unitIndex: 11,
         description: `The gang is driving in a car. Bennett is sitting in the back with his eyes closed. He pictures himself and Sita as a mastodon and a sabre-tooth tiger, and his brother and sister as Loki and Freyja.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -210,6 +227,10 @@ module.exports = [
                     description: 'back angle, sleeping in car',
                     instance: STATION_WAGON
                 }
+            },
+            [CUTOUTS]: {
+                [STATION_WAGON_FRONT]: true,
+                [STATION_WAGON_BACK]: true
             }
         },
         cubes: STATION_WAGON_KEY,
@@ -222,7 +243,7 @@ module.exports = [
         unitIndex: 15,
         description: `Bennett is in the attic, huddled under a blanket on a couch, lit up by an old television facing away from the audience. Howie is downstairs, in anguish, clutching at his head.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -235,6 +256,12 @@ module.exports = [
                     description: 'downstairs, in agony',
                     instance: ATTIC
                 }
+            },
+            [CUTOUTS]: {
+                [STORAGE_BOXES]: true,
+                [STORAGE_CHEST]: true,
+                [HOWIE_FRIDGE]: true,
+                [TELEVISION]: true
             }
         },
         cubes: ATTIC_KEY,

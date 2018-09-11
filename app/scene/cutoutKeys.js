@@ -62,7 +62,21 @@ const
     STAGE_LIGHTS = 'stageLights',
     GO_KART_LEFT = 'goKartLeft',
     GO_KART_RIGHT = 'goKartRight',
-    TRAFFIC_LIGHT = 'trafficLight'
+    TRAFFIC_LIGHT = 'trafficLight',
+    DISHROOM_SINK = 'dishroomSink',
+    CODE_BOX = 'codeBox',
+    LIGHT_SWITCH = 'lightSwitch',
+    CLIPBOARD = 'clipboard',
+    PAINTING = 'painting',
+    WAITING_ROOM_PLANT = 'waitingRoomPlant',
+    STATION_WAGON_FRONT = 'stationWagonFront',
+    STATION_WAGON_BACK = 'stationWagonBack',
+    STORAGE_BOXES = 'storageBoxes',
+    STORAGE_CHEST = 'storageChest',
+    HOWIE_FRIDGE = 'howieFridge',
+    TELEVISION = 'television',
+    MONITOR_SPEAKER_SIDE = 'monitorSpeakerSide',
+    WALL_SPEAKER_SIDE = 'wallSpeakerSide'
 
 export {
     FIRE_HYDRANT,
@@ -126,5 +140,19 @@ export {
     STAGE_LIGHTS,
     GO_KART_LEFT,
     GO_KART_RIGHT,
-    TRAFFIC_LIGHT
+    TRAFFIC_LIGHT,
+    DISHROOM_SINK,
+    CODE_BOX,
+    LIGHT_SWITCH,
+    CLIPBOARD,
+    PAINTING,
+    WAITING_ROOM_PLANT,
+    STATION_WAGON_FRONT,
+    STATION_WAGON_BACK,
+    STORAGE_BOXES,
+    STORAGE_CHEST,
+    HOWIE_FRIDGE,
+    TELEVISION,
+    MONITOR_SPEAKER_SIDE,
+    WALL_SPEAKER_SIDE
 }

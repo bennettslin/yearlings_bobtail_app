@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    // FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,
     WAITING_ROOM_KEY,
@@ -46,6 +54,15 @@ import {
     AFTERGLOW_REFLECTION
 } from 'scene/instanceKeys/songs'
 
+import {
+    DISHROOM_SINK,
+    CODE_BOX,
+    LIGHT_SWITCH,
+    CLIPBOARD,
+    PAINTING,
+    WAITING_ROOM_PLANT
+} from 'scene/cutoutKeys'
+
 /**
  * All of these scenes repeat twice.
  */
@@ -54,13 +71,16 @@ module.exports = [
         unitIndex: 1,
         description: `Bennett is in a cafeteria dishroom, reading a novel while dishes gradually pile up. He eyes a lancing device on a tray.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'back, reading book, pulling tray from belt.',
                     instance: DISHROOM_READING
                 }
+            },
+            [CUTOUTS]: {
+                [DISHROOM_SINK]: true
             }
         },
         cubes: DISHROOM_KEY,
@@ -73,7 +93,7 @@ module.exports = [
         unitIndex: 4,
         description: `Same scene. Sita is asking for the lancing device. Bennett hands it to her, but simultaneously is asking her out on a date.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -88,6 +108,9 @@ module.exports = [
                         instance: DISHROOM_LANCET
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [DISHROOM_SINK]: true
             }
         },
         cubes: DISHROOM_KEY,
@@ -118,7 +141,7 @@ module.exports = [
         unitIndex: 8,
         description: `Bennett is walking home from work, looking dejected. In his thought bubble, he is remembering the night that he walked home from the date with Sita. A jogger passes by.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -133,6 +156,9 @@ module.exports = [
                         instance: JOGGER
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [CODE_BOX]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -145,7 +171,7 @@ module.exports = [
         unitIndex: 10,
         description: `Same scene. As he begins to enter the front gate, he notices that Sita is standing several feet behind him.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -160,6 +186,9 @@ module.exports = [
                         instance: GATE_CODE
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [CODE_BOX]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -172,7 +201,7 @@ module.exports = [
         unitIndex: 11,
         description: `Bennett's apartment is dark inside. Through a window, we see him opening the gate for Sita to pass through. She takes his arm.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -187,6 +216,9 @@ module.exports = [
                         instance: GINGERBREAD_PRISON
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [LIGHT_SWITCH]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -199,7 +231,7 @@ module.exports = [
         unitIndex: 12,
         description: `Same scene. Bennett and Sita have now entered the apartment. Bennett has turned on a light switch. On his bed is a jar of Vaseline, along with sketches to which he has clearly been masturbating.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -214,6 +246,9 @@ module.exports = [
                         instance: RUMPLED_LINENS
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [LIGHT_SWITCH]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -226,13 +261,18 @@ module.exports = [
         unitIndex: 13,
         description: `In an emergency room, Bennett is sitting in an armchair with his arm around Sita's purse. In his thought bubbles, he imagines the scenes of his burgeoning friendship with Sita.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eyes closed, falling asleep',
                     instance: WAITING_ROOM_THOUGHTS
                 }
+            },
+            [CUTOUTS]: {
+                [CLIPBOARD]: true,
+                [PAINTING]: true,
+                [WAITING_ROOM_PLANT]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -245,7 +285,7 @@ module.exports = [
         unitIndex: 15,
         description: `Same scene. Sita has come to get her purse, and is waking Bennett up.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -260,6 +300,11 @@ module.exports = [
                         instance: CHEEK_UNVEILED
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [CLIPBOARD]: true,
+                [PAINTING]: true,
+                [WAITING_ROOM_PLANT]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -272,7 +317,7 @@ module.exports = [
         unitIndex: 16,
         description: `Bennett and Sita are both naked in bed. Sita is lying down, while Bennett hovers over her, a look of uncertainty on his face.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -315,7 +360,7 @@ module.exports = [
         unitIndex: 17,
         description: `Same scene. `,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -358,7 +403,7 @@ module.exports = [
         unitIndex: 19,
         description: `Same scene. Bennett and Sita are together in bed, having just had sex, a look that is a mixture of serenity and uncertainty on both their faces.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,

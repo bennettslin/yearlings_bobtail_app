@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    // FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
@@ -48,12 +56,17 @@ import {
     WAITING,
 } from 'scene/instanceKeys/songs'
 
+import {
+    MONITOR_SPEAKER_SIDE,
+    WALL_SPEAKER_SIDE
+} from 'scene/cutoutKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and making her way through the crowd.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -92,6 +105,9 @@ module.exports = [
                     description: 'side, squeezing through, awkward',
                     instance: SQUEEZING
                 }
+            },
+            [CUTOUTS]: {
+                [MONITOR_SPEAKER_SIDE]: true
             }
         },
         cubes: CLUB_SIDE_CROWD_KEY,
@@ -104,7 +120,7 @@ module.exports = [
         unitIndex: 5,
         description: `After the show, Bennett is breaking down the set. Another band is setting up. The redhead has introduced herself to Bennett, and is flirting with him.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -129,6 +145,10 @@ module.exports = [
                     description: 'side, walking, carrying cymbal, talking',
                     instance: CARRYING
                 }
+            },
+            [CUTOUTS]: {
+                [MONITOR_SPEAKER_SIDE]: true,
+                [WALL_SPEAKER_SIDE]: true
             }
         },
         cubes: CLUB_SIDE_STAGE_KEY,
@@ -141,7 +161,7 @@ module.exports = [
         unitIndex: 8,
         description: `At the end of the show, Bennett and his bandmates are loading their equipment into their van. The redhead and her friends are looking in his direction, but Bennett walks by them.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -190,7 +210,7 @@ module.exports = [
         unitIndex: 12,
         description: `Bennett is back home, sitting on the edge of Sita's bed. Sita is half asleep, looking peaceful, and is reaching towards him. He does not respond. In his thought bubble, he is reaching for the redhead, who is in bed in place of Sita.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
