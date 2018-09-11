@@ -1,7 +1,7 @@
 import {
     ACTORS,
     CUTOUTS,
-    // FIXTURES,
+    FIXTURES,
     // FLATS,
     // FURNITURES
 } from 'constants/scene'
@@ -60,6 +60,18 @@ import {
     MONITOR_SPEAKER_SIDE,
     WALL_SPEAKER_SIDE
 } from 'scene/cutoutKeys'
+
+import {
+    GUITAR_STAND,
+    GUITAR_AMP,
+    DRUMS_STACKED,
+    BASS_AMP,
+    CEILING_MIRROR,
+    LIZ_NIGHTSTAND,
+    LIZ_NIGHTSTAND_REFLECTION,
+    LIZ_PHONE,
+    LIZ_PHONE_REFLECTION
+} from 'scene/fixtureKeys'
 
 module.exports = [
     {
@@ -149,6 +161,11 @@ module.exports = [
             [CUTOUTS]: {
                 [MONITOR_SPEAKER_SIDE]: true,
                 [WALL_SPEAKER_SIDE]: true
+            },
+            [FIXTURES]: {
+                [GUITAR_STAND]: true,
+                [GUITAR_AMP]: true,
+                [BASS_AMP]: true
             }
         },
         cubes: CLUB_SIDE_STAGE_KEY,
@@ -198,6 +215,9 @@ module.exports = [
                     description: 'front, talking to Stephanie',
                     instance: MINGLING
                 }
+            },
+            [FIXTURES]: {
+                [DRUMS_STACKED]: true
             }
         },
         cubes: CLUB_LOADING,
@@ -241,6 +261,13 @@ module.exports = [
                         instance: REACHING_REFLECTION
                     }
                 }
+            },
+            [FIXTURES]: {
+                [CEILING_MIRROR]: true,
+                [LIZ_NIGHTSTAND]: true,
+                [LIZ_NIGHTSTAND_REFLECTION]: true,
+                [LIZ_PHONE]: true,
+                [LIZ_PHONE_REFLECTION]: true
             }
         },
         cubes: LIZ_BED_KEY,

@@ -5,7 +5,7 @@
 import {
     ACTORS,
     CUTOUTS,
-    // FIXTURES,
+    FIXTURES,
     // FLATS,
     // FURNITURES
 } from 'constants/scene'
@@ -48,6 +48,11 @@ import {
     HOWIE_FRIDGE,
     TELEVISION
 } from 'scene/cutoutKeys'
+
+import {
+    GRAVESTONE,
+    EVIAN_BOTTLES
+} from 'scene/fixtureKeys'
 
 module.exports = [
     {
@@ -190,6 +195,9 @@ module.exports = [
                     description: 'side angle, squatting, pouring water on grave',
                     instance: CEMETERY
                 }
+            },
+            [FIXTURES]: {
+                [GRAVESTONE]: true
             }
         },
         cubes: CEMETERY_KEY,
@@ -231,6 +239,9 @@ module.exports = [
             [CUTOUTS]: {
                 [STATION_WAGON_FRONT]: true,
                 [STATION_WAGON_BACK]: true
+            },
+            [FIXTURES]: {
+                [EVIAN_BOTTLES]: true
             }
         },
         cubes: STATION_WAGON_KEY,

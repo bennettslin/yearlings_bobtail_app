@@ -24,6 +24,27 @@ import CavemanBones from './Fixtures/Museum/CavemanBones'
 import PushBroom from './Fixtures/Backstage/PushBroom'
 import Stepladder from './Fixtures/Backstage/Stepladder'
 import Mannequin from './Fixtures/Backstage/Mannequin'
+import ConveyorBelt from './Fixtures/Dishroom/ConveyorBelt'
+import GlassCart from './Fixtures/Dishroom/GlassCart'
+import TrayCart from './Fixtures/Dishroom/TrayCart'
+import GlassRack from './Fixtures/Dishroom/GlassRack'
+import TrayRack from './Fixtures/Dishroom/TrayRack'
+import DishPile from './Fixtures/Dishroom/DishPile'
+import NudeDrawings from './Fixtures/BennettBed/NudeDrawings'
+import Vaseline from './Fixtures/BennettBed/Vaseline'
+import CeilingMirror from './Fixtures/LizBed/CeilingMirror'
+import LizNightstand from './Fixtures/LizBed/LizNightstand'
+import LizNightstandReflection from './Fixtures/LizBed/LizNightstandReflection'
+import LizPhone from './Fixtures/LizBed/LizPhone'
+import LizPhoneBase from './Fixtures/LizBed/LizPhoneBase'
+import LizPhoneReflection from './Fixtures/LizBed/LizPhoneReflection'
+import LizPhoneBaseReflection from './Fixtures/LizBed/LizPhoneBaseReflection'
+import Gravestone from './Fixtures/Cemetery/Gravestone'
+import EvianBottles from './Fixtures/StationWagon/EvianBottles'
+import GuitarStand from './Fixtures/ClubSide/GuitarStand'
+import GuitarAmp from './Fixtures/ClubSide/GuitarAmp'
+import DrumsStacked from './Fixtures/ClubSide/DrumsStacked'
+import BassAmp from './Fixtures/ClubSide/BassAmp'
 
 import {
     PLAYGROUND_BALL,
@@ -47,7 +68,28 @@ import {
     CAVEMAN_BONES,
     PUSH_BROOM,
     STEPLADDER,
-    MANNEQUIN
+    MANNEQUIN,
+    CONVEYOR_BELT,
+    GLASS_CART,
+    TRAY_CART,
+    GLASS_RACK,
+    TRAY_RACK,
+    DISH_PILE,
+    NUDE_DRAWINGS,
+    VASELINE,
+    CEILING_MIRROR,
+    LIZ_NIGHTSTAND,
+    LIZ_NIGHTSTAND_REFLECTION,
+    LIZ_PHONE,
+    LIZ_PHONE_BASE,
+    LIZ_PHONE_REFLECTION,
+    LIZ_PHONE_BASE_REFLECTION,
+    GRAVESTONE,
+    EVIAN_BOTTLES,
+    GUITAR_STAND,
+    GUITAR_AMP,
+    DRUMS_STACKED,
+    BASS_AMP
 } from 'scene/fixtureKeys'
 
 const FIXTURES_MAP = {
@@ -72,7 +114,28 @@ const FIXTURES_MAP = {
     [CAVEMAN_BONES]: CavemanBones,
     [PUSH_BROOM]: PushBroom,
     [STEPLADDER]: Stepladder,
-    [MANNEQUIN]: Mannequin
+    [MANNEQUIN]: Mannequin,
+    [CONVEYOR_BELT]: ConveyorBelt,
+    [GLASS_CART]: GlassCart,
+    [TRAY_CART]: TrayCart,
+    [GLASS_RACK]: GlassRack,
+    [TRAY_RACK]: TrayRack,
+    [DISH_PILE]: DishPile,
+    [NUDE_DRAWINGS]: NudeDrawings,
+    [VASELINE]: Vaseline,
+    [CEILING_MIRROR]: CeilingMirror,
+    [LIZ_NIGHTSTAND]: LizNightstand,
+    [LIZ_NIGHTSTAND_REFLECTION]: LizNightstandReflection,
+    [LIZ_PHONE]: LizPhone,
+    [LIZ_PHONE_BASE]: LizPhoneBase,
+    [LIZ_PHONE_REFLECTION]: LizPhoneReflection,
+    [LIZ_PHONE_BASE_REFLECTION]: LizPhoneBaseReflection,
+    [GRAVESTONE]: Gravestone,
+    [EVIAN_BOTTLES]: EvianBottles,
+    [GUITAR_STAND]: GuitarStand,
+    [GUITAR_AMP]: GuitarAmp,
+    [DRUMS_STACKED]: DrumsStacked,
+    [BASS_AMP]: BassAmp
 },
 DEFAULT_COMPONENT = () => (null)
 

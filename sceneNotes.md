@@ -6,44 +6,7 @@ Scene review
 * Create placeholder components for presences.
 * Transfer task hours to presences.
 
-## Cutouts
-DISHROOM_SINK = 'dishroomSink'
-CODE_BOX = 'codeBox'
-LIGHT_SWITCH = 'lightSwitch'
-CLIPBOARD = 'clipboard'
-PAINTING = 'painting'
-WAITING_ROOM_PLANT = 'waitingRoomPlant'
-STATION_WAGON_FRONT = 'stationWagonFront'
-STATION_WAGON_BACK = 'stationWagonBack'
-STORAGE_BOXES = 'storageBoxes
-STORAGE_CHEST = 'storageChest'
-HOWIE_FRIDGE = 'howieFridge'
-TELEVISION = 'television'
-MONITOR_SPEAKER_SIDE = 'monitorSpeakerSide'
-WALL_SPEAKER_SIDE = 'wallSpeakerSide'
-
 ## Fixtures
-CONVEYOR_BELT = 'conveyorBelt'
-GLASS_CART = 'glassCart'
-TRAY_CART = 'trayCart
-GLASS_RACK = 'glassRack',
-TRAY_RACK = 'trayRack'
-DISH_PILE = 'dishPile'
-NUDE_DRAWINGS = 'nudeDrawings'
-VASELINE = 'vaseline'
-CEILING_MIRROR = 'ceilingMirror'
-LIZ_NIGHTSTAND = 'lizNightstand'
-LIZ_NIGHTSTAND_REFLECTION = 'lizNightstandReflection'
-LIZ_PHONE = 'lizPhone'
-LIZ_PHONE_BASE = 'lizPhoneBase'
-LIZ_PHONE_REFLECTION = 'lizPhoneReflection'
-LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection'
-GRAVESTONE = 'graveStone'
-EVIAN_BOTTLES = 'evianBottles'
-GUITAR_STAND = 'guitarStand'
-GUITAR_AMP = 'guitarAmp'
-DRUMS_STACKED = 'drumsStacked'
-BASS_AMP = 'bassAmp'
 
 ## Flats
 UCLA_BACKDROP = 'uclaBackdrop'

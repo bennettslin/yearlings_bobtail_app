@@ -1,7 +1,7 @@
 import {
     ACTORS,
     CUTOUTS,
-    // FIXTURES,
+    FIXTURES,
     // FLATS,
     // FURNITURES
 } from 'constants/scene'
@@ -63,6 +63,22 @@ import {
     WAITING_ROOM_PLANT
 } from 'scene/cutoutKeys'
 
+import {
+    CONVEYOR_BELT,
+    GLASS_CART,
+    TRAY_CART,
+    GLASS_RACK,
+    TRAY_RACK,
+    DISH_PILE,
+    NUDE_DRAWINGS,
+    VASELINE,
+    CEILING_MIRROR,
+    LIZ_NIGHTSTAND,
+    LIZ_NIGHTSTAND_REFLECTION,
+    LIZ_PHONE,
+    LIZ_PHONE_REFLECTION
+} from 'scene/fixtureKeys'
+
 /**
  * All of these scenes repeat twice.
  */
@@ -81,6 +97,14 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [DISHROOM_SINK]: true
+            },
+            [FIXTURES]: {
+                [CONVEYOR_BELT]: true,
+                [GLASS_CART]: true,
+                [TRAY_CART]: true,
+                [GLASS_RACK]: true,
+                [TRAY_RACK]: true,
+                [DISH_PILE]: true
             }
         },
         cubes: DISHROOM_KEY,
@@ -111,6 +135,14 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [DISHROOM_SINK]: true
+            },
+            [FIXTURES]: {
+                [CONVEYOR_BELT]: true,
+                [GLASS_CART]: true,
+                [TRAY_CART]: true,
+                [GLASS_RACK]: true,
+                [TRAY_RACK]: true,
+                [DISH_PILE]: true
             }
         },
         cubes: DISHROOM_KEY,
@@ -219,6 +251,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [LIGHT_SWITCH]: true
+            },
+            [FIXTURES]: {
+                [NUDE_DRAWINGS]: true,
+                [VASELINE]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -249,6 +285,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [LIGHT_SWITCH]: true
+            },
+            [FIXTURES]: {
+                [NUDE_DRAWINGS]: true,
+                [VASELINE]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -348,6 +388,13 @@ module.exports = [
                         instance: HARD_ON_REFLECTION
                     }
                 }
+            },
+            [FIXTURES]: {
+                [CEILING_MIRROR]: true,
+                [LIZ_NIGHTSTAND]: true,
+                [LIZ_NIGHTSTAND_REFLECTION]: true,
+                [LIZ_PHONE]: true,
+                [LIZ_PHONE_REFLECTION]: true
             }
         },
         cubes: LIZ_BED_KEY,
@@ -391,6 +438,13 @@ module.exports = [
                         instance: MISSIONARY_REFLECTION
                     }
                 }
+            },
+            [FIXTURES]: {
+                [CEILING_MIRROR]: true,
+                [LIZ_NIGHTSTAND]: true,
+                [LIZ_NIGHTSTAND_REFLECTION]: true,
+                [LIZ_PHONE]: true,
+                [LIZ_PHONE_REFLECTION]: true
             }
         },
         cubes: LIZ_BED_KEY,
@@ -434,6 +488,13 @@ module.exports = [
                         instance: AFTERGLOW_REFLECTION
                     }
                 }
+            },
+            [FIXTURES]: {
+                [CEILING_MIRROR]: true,
+                [LIZ_NIGHTSTAND]: true,
+                [LIZ_NIGHTSTAND_REFLECTION]: true,
+                [LIZ_PHONE]: true,
+                [LIZ_PHONE_REFLECTION]: true
             }
         },
         cubes: LIZ_BED_KEY,
