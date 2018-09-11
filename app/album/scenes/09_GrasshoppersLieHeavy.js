@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     // FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -79,6 +79,24 @@ import {
     LIZ_PHONE_REFLECTION
 } from 'scene/fixtureKeys'
 
+import {
+    DISHROOM_DOOR,
+    BENNETT_GATE_FRONT,
+    BENNETT_GATE_SIDE_OPEN,
+    BENNETT_DOOR_INSIDE,
+    BENNETT_DOOR_INSIDE_OPEN,
+    BENNETT_MATTRESS,
+    BENNETT_PILLOWS,
+    ARMCHAIR_LEFT,
+    ARMCHAIR_RIGHT,
+    WAITING_ROOM_DOOR,
+    WAITING_ROOM_DOOR_OPEN,
+    LIZ_MATTRESS,
+    LIZ_PILLOWS,
+    LIZ_MATTRESS_REFLECTION,
+    LIZ_PILLOWS_REFLECTION
+} from 'scene/furnitureKeys'
+
 /**
  * All of these scenes repeat twice.
  */
@@ -105,6 +123,9 @@ module.exports = [
                 [GLASS_RACK]: true,
                 [TRAY_RACK]: true,
                 [DISH_PILE]: true
+            },
+            [FURNITURES]: {
+                [DISHROOM_DOOR]: true
             }
         },
         cubes: DISHROOM_KEY,
@@ -143,6 +164,9 @@ module.exports = [
                 [GLASS_RACK]: true,
                 [TRAY_RACK]: true,
                 [DISH_PILE]: true
+            },
+            [FURNITURES]: {
+                [DISHROOM_DOOR]: true
             }
         },
         cubes: DISHROOM_KEY,
@@ -191,6 +215,9 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [CODE_BOX]: true
+            },
+            [FURNITURES]: {
+                [BENNETT_GATE_FRONT]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -221,6 +248,9 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [CODE_BOX]: true
+            },
+            [FURNITURES]: {
+                [BENNETT_GATE_FRONT]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -255,6 +285,12 @@ module.exports = [
             [FIXTURES]: {
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
+            },
+            [FURNITURES]: {
+                [BENNETT_GATE_SIDE_OPEN]: true,
+                [BENNETT_DOOR_INSIDE]: true,
+                [BENNETT_MATTRESS]: true,
+                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -289,6 +325,11 @@ module.exports = [
             [FIXTURES]: {
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
+            },
+            [FURNITURES]: {
+                [BENNETT_DOOR_INSIDE_OPEN]: true,
+                [BENNETT_MATTRESS]: true,
+                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -313,6 +354,11 @@ module.exports = [
                 [CLIPBOARD]: true,
                 [PAINTING]: true,
                 [WAITING_ROOM_PLANT]: true
+            },
+            [FURNITURES]: {
+                [ARMCHAIR_LEFT]: true,
+                [ARMCHAIR_RIGHT]: true,
+                [WAITING_ROOM_DOOR]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -345,6 +391,11 @@ module.exports = [
                 [CLIPBOARD]: true,
                 [PAINTING]: true,
                 [WAITING_ROOM_PLANT]: true
+            },
+            [FURNITURES]: {
+                [ARMCHAIR_LEFT]: true,
+                [ARMCHAIR_RIGHT]: true,
+                [WAITING_ROOM_DOOR_OPEN]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -395,6 +446,12 @@ module.exports = [
                 [LIZ_NIGHTSTAND_REFLECTION]: true,
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
+            },
+            [FURNITURES]: {
+                [LIZ_MATTRESS]: true,
+                [LIZ_PILLOWS]: true,
+                [LIZ_MATTRESS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true,
             }
         },
         cubes: LIZ_BED_KEY,
@@ -445,6 +502,12 @@ module.exports = [
                 [LIZ_NIGHTSTAND_REFLECTION]: true,
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
+            },
+            [FURNITURES]: {
+                [LIZ_MATTRESS]: true,
+                [LIZ_PILLOWS]: true,
+                [LIZ_MATTRESS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true,
             }
         },
         cubes: LIZ_BED_KEY,
@@ -495,6 +558,12 @@ module.exports = [
                 [LIZ_NIGHTSTAND_REFLECTION]: true,
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
+            },
+            [FURNITURES]: {
+                [LIZ_MATTRESS]: true,
+                [LIZ_PILLOWS]: true,
+                [LIZ_MATTRESS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true,
             }
         },
         cubes: LIZ_BED_KEY,

@@ -7,7 +7,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -66,6 +66,12 @@ import {
     TARPIT_THOUGHT,
     SIBLING_THOUGHT
 } from 'scene/flatKeys'
+
+import {
+    STATION_WAGON_SEAT_FRONT,
+    STATION_WAGON_SEAT_BACK,
+    ATTIC_CUSHIONS
+} from 'scene/furnitureKeys'
 
 module.exports = [
     {
@@ -275,6 +281,10 @@ module.exports = [
                 [LOS_ANGELES_BACKDROP]: true,
                 [TARPIT_THOUGHT]: true,
                 [SIBLING_THOUGHT]: true
+            },
+            [FURNITURES]: {
+                [STATION_WAGON_SEAT_BACK]: true,
+                [STATION_WAGON_SEAT_FRONT]: true
             }
         },
         cubes: STATION_WAGON_KEY,
@@ -306,6 +316,9 @@ module.exports = [
                 [STORAGE_CHEST]: true,
                 [HOWIE_FRIDGE]: true,
                 [TELEVISION]: true
+            },
+            [FURNITURES]: {
+                [ATTIC_CUSHIONS]: true
             }
         },
         cubes: ATTIC_KEY,

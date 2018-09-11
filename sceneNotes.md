@@ -6,27 +6,6 @@ Scene review
 * Create placeholder components for presences.
 * Transfer task hours to presences.
 
-## Furnitures
-DISHROOM_DOOR = 'dishroomDoor'
-BENNETT_GATE_FRONT = 'bennettGateFront'
-BENNETT_GATE_SIDE_OPEN = 'bennettGateSideOpen'
-BENNETT_DOOR_INSIDE = 'bennettDoorInside'
-BENNETT_DOOR_INSIDE_OPEN = 'bennettDoorInsideOpen'
-BENNETT_MATTRESS = 'bennettMattress'
-BENNETT_PILLOWS = 'bennettPillows'
-ARMCHAIR_LEFT = 'armchairLeft'
-ARMCHAIR_RIGHT = 'armchairRight',
-WAITING_ROOM_DOOR = 'waitingRoomDoor'
-WAITING_ROOM_DOOR_OPEN = 'waitingRoomDoorOpen'
-LIZ_MATTRESS = 'lizMattress'
-LIZ_PILLOWS = 'lizPillows'
-LIZ_MATTRESS_REFLECTION = 'lizMattressReflection'
-LIZ_PILLOWS_REFLECTION = 'lizPillowsReflection'
-STATION_WAGON_SEAT_FRONT = 'stationWagonSeatFront'
-STATION_WAGON_SEAT_BACK = 'stationWagonSeatBack'
-ATTIC_CUSHIONS = 'atticCushions'
-CLUB_DOOR = 'clubDoor'
-
 # THINGS_LIZ_COUCH
 # THINGS_OAKLAND_HOUSES
 # THINGS_OAKLAND_RESIDENTIAL

@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     // FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -72,6 +72,10 @@ import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION
 } from 'scene/fixtureKeys'
+
+import {
+    CLUB_DOOR
+} from 'scene/furnitureKeys'
 
 module.exports = [
     {
@@ -218,6 +222,9 @@ module.exports = [
             },
             [FIXTURES]: {
                 [DRUMS_STACKED]: true
+            },
+            [FURNITURES]: {
+                [CLUB_DOOR]: true
             }
         },
         cubes: CLUB_LOADING,
