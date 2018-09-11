@@ -47,6 +47,16 @@ import BayAreaBackdrop from './Flats/Cinema/BayAreaBackdrop'
 import CinemaThoughts from './Flats/Cinema/CinemaThoughts'
 import MuseumDisplay from './Flats/Museum/MuseumDisplay'
 import GoKartThought from './Flats/GoKarts/GoKartThought'
+import UclaBackdrop from './Flats/RoyceHall/UclaBackdrop'
+import RoyceHall from './Flats/RoyceHall/RoyceHall'
+import PharmacyThought from './Flats/Walgreens/PharmacyThought'
+import PharmacyAisle from './Flats/Walgreens/PharmacyAisle'
+import SteamPipes from './Flats/SteamTunnel/SteamPipes'
+import CemeteryHillsNear from './Flats/Cemetery/CemeteryHillsNear'
+import CemeteryHillsFar from './Flats/Cemetery/CemeteryHillsFar'
+import LosAngelesBackdrop from './Flats/StationWagon/LosAngelesBackdrop'
+import TarpitThought from './Flats/StationWagon/TarpitThought'
+import SiblingThought from './Flats/StationWagon/SiblingThought'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -93,7 +103,17 @@ import {
     BAY_AREA_BACKDROP,
     CINEMA_THOUGHTS,
     MUSEUM_DISPLAY,
-    GO_KART_THOUGHT
+    GO_KART_THOUGHT,
+    UCLA_BACKDROP,
+    ROYCE_HALL,
+    PHARMACY_THOUGHT,
+    PHARMACY_AISLE,
+    STEAM_PIPES,
+    CEMETERY_HILLS_NEAR,
+    CEMETERY_HILLS_FAR,
+    LOS_ANGELES_BACKDROP,
+    TARPIT_THOUGHT,
+    SIBLING_THOUGHT
 } from 'scene/flatKeys'
 
 const FLATS_MAP = {
@@ -141,7 +161,17 @@ const FLATS_MAP = {
     [BAY_AREA_BACKDROP]: BayAreaBackdrop,
     [CINEMA_THOUGHTS]: CinemaThoughts,
     [MUSEUM_DISPLAY]: MuseumDisplay,
-    [GO_KART_THOUGHT]: GoKartThought
+    [GO_KART_THOUGHT]: GoKartThought,
+    [UCLA_BACKDROP]: UclaBackdrop,
+    [ROYCE_HALL]: RoyceHall,
+    [PHARMACY_THOUGHT]: PharmacyThought,
+    [PHARMACY_AISLE]: PharmacyAisle,
+    [STEAM_PIPES]: SteamPipes,
+    [CEMETERY_HILLS_NEAR]: CemeteryHillsNear,
+    [CEMETERY_HILLS_FAR]: CemeteryHillsFar,
+    [LOS_ANGELES_BACKDROP]: LosAngelesBackdrop,
+    [TARPIT_THOUGHT]: TarpitThought,
+    [SIBLING_THOUGHT]: SiblingThought
 },
 DEFAULT_COMPONENT = () => (null)
 

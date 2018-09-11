@@ -45,7 +45,17 @@ const
     BAY_AREA_BACKDROP = 'bayAreaBackdrop',
     CINEMA_THOUGHTS = 'cinemaThoughts',
     MUSEUM_DISPLAY = 'museumDisplay',
-    GO_KART_THOUGHT = 'goKartThought'
+    GO_KART_THOUGHT = 'goKartThought',
+    UCLA_BACKDROP = 'uclaBackdrop',
+    ROYCE_HALL = 'royceHall',
+    PHARMACY_THOUGHT = 'pharmacyThought',
+    PHARMACY_AISLE = 'pharmacyAisle',
+    STEAM_PIPES = 'steamPipes',
+    CEMETERY_HILLS_NEAR = 'cemeteryHillsNear',
+    CEMETERY_HILLS_FAR = 'cemeteryHillsFar',
+    LOS_ANGELES_BACKDROP = 'losAngelesBackdrop',
+    TARPIT_THOUGHT = 'tarpitThought',
+    SIBLING_THOUGHT = 'siblingThought'
 
 export {
     NOHO_HOUSES_BACKDROP,
@@ -92,5 +102,15 @@ export {
     BAY_AREA_BACKDROP,
     CINEMA_THOUGHTS,
     MUSEUM_DISPLAY,
-    GO_KART_THOUGHT
+    GO_KART_THOUGHT,
+    UCLA_BACKDROP,
+    ROYCE_HALL,
+    PHARMACY_THOUGHT,
+    PHARMACY_AISLE,
+    STEAM_PIPES,
+    CEMETERY_HILLS_NEAR,
+    CEMETERY_HILLS_FAR,
+    LOS_ANGELES_BACKDROP,
+    TARPIT_THOUGHT,
+    SIBLING_THOUGHT
 }

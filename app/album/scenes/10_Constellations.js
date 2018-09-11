@@ -6,7 +6,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -54,6 +54,19 @@ import {
     EVIAN_BOTTLES
 } from 'scene/fixtureKeys'
 
+import {
+    UCLA_BACKDROP,
+    ROYCE_HALL,
+    PHARMACY_THOUGHT,
+    PHARMACY_AISLE,
+    STEAM_PIPES,
+    CEMETERY_HILLS_NEAR,
+    CEMETERY_HILLS_FAR,
+    LOS_ANGELES_BACKDROP,
+    TARPIT_THOUGHT,
+    SIBLING_THOUGHT
+} from 'scene/flatKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -84,6 +97,10 @@ module.exports = [
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 }
+            },
+            [FLATS]: {
+                [UCLA_BACKDROP]: true,
+                [ROYCE_HALL]: true
             }
         },
         cubes: ROYCE_HALL_KEY,
@@ -121,6 +138,10 @@ module.exports = [
                     description: 'side angle, feigning superiority',
                     instance: WALGREENS
                 }
+            },
+            [FLATS]: {
+                [PHARMACY_THOUGHT]: true,
+                [PHARMACY_AISLE]: true
             }
         },
         cubes: WALGREENS_KEY,
@@ -158,6 +179,9 @@ module.exports = [
                     description: 'side angle, play fighting',
                     instance: STEAM_TUNNEL
                 }
+            },
+            [FLATS]: {
+                [STEAM_PIPES]: true
             }
         },
         cubes: STEAM_TUNNEL_KEY,
@@ -198,6 +222,10 @@ module.exports = [
             },
             [FIXTURES]: {
                 [GRAVESTONE]: true
+            },
+            [FLATS]: {
+                [CEMETERY_HILLS_FAR]: true,
+                [CEMETERY_HILLS_NEAR]: true
             }
         },
         cubes: CEMETERY_KEY,
@@ -242,6 +270,11 @@ module.exports = [
             },
             [FIXTURES]: {
                 [EVIAN_BOTTLES]: true
+            },
+            [FLATS]: {
+                [LOS_ANGELES_BACKDROP]: true,
+                [TARPIT_THOUGHT]: true,
+                [SIBLING_THOUGHT]: true
             }
         },
         cubes: STATION_WAGON_KEY,

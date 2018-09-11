@@ -6,20 +6,6 @@ Scene review
 * Create placeholder components for presences.
 * Transfer task hours to presences.
 
-## Fixtures
-
-## Flats
-UCLA_BACKDROP = 'uclaBackdrop'
-ROYCE_HALL = 'royceHall'
-PHARMACY_THOUGHT = 'pharmacyThought'
-PHARMACY_AISLE = 'pharmacyAisle'
-STEAM_PIPES = 'steamPipes'
-CEMETERY_HILLS_NEAR = 'cemeteryHillsNear'
-CEMETERY_HILLS_FAR = 'cemeteryHillsFar'
-STATION_WAGON_STREET_BACKDROP = 'stationWagonStreetBackdrop'
-TARPIT_THOUGHT = 'tarpitThought'
-SIBLING_THOUGHT = 'siblingThought'
-
 ## Furnitures
 DISHROOM_DOOR = 'dishroomDoor'
 BENNETT_GATE_FRONT = 'bennettGateFront'

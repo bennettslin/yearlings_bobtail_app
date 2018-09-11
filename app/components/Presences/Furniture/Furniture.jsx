@@ -26,6 +26,25 @@ import LizGateOutside from './Furnitures/LizGate/LizGateOutside'
 import GoKartInteriorLeft from './Furnitures/GoKarts/GoKartInteriorLeft'
 import GoKartInteriorRight from './Furnitures/GoKarts/GoKartInteriorRight'
 import LizGateOutsideOpen from './Furnitures/LizGate/LizGateOutsideOpen'
+import DishroomDoor from './Furnitures/Dishroom/DishroomDoor'
+import BennettGateFront from './Furnitures/BennettGate/BennettGateFront'
+import BennettGateSideOpen from './Furnitures/BennettBed/BennettGateSideOpen'
+import BennettDoorInside from './Furnitures/BennettBed/BennettDoorInside'
+import BennettDoorInsideOpen from './Furnitures/BennettBed/BennettDoorInsideOpen'
+import BennettMattress from './Furnitures/BennettBed/BennettMattress'
+import BennettPillows from './Furnitures/BennettBed/BennettPillows'
+import ArmchairLeft from './Furnitures/WaitingRoom/ArmchairLeft'
+import ArmchairRight from './Furnitures/WaitingRoom/ArmchairRight'
+import WaitingRoomDoor from './Furnitures/WaitingRoom/WaitingRoomDoor'
+import WaitingRoomDoorOpen from './Furnitures/WaitingRoom/WaitingRoomDoorOpen'
+import LizMattress from './Furnitures/LizBed/LizMattress'
+import LizPillows from './Furnitures/LizBed/LizPillows'
+import LizMattressReflection from './Furnitures/LizBed/LizMattressReflection'
+import LizPillowsReflection from './Furnitures/LizBed/LizPillowsReflection'
+import StationWagonSeatFront from './Furnitures/StationWagon/StationWagonSeatFront'
+import StationWagonSeatBack from './Furnitures/StationWagon/StationWagonSeatBack'
+import AtticCushions from './Furnitures/Attic/AtticCushions'
+import ClubDoor from './Furnitures/ClubLoading/ClubDoor'
 
 import {
     PORCH_DOOR,
@@ -51,7 +70,26 @@ import {
     LIZ_GATE_OUTSIDE,
     GO_KART_INTERIOR_LEFT,
     GO_KART_INTERIOR_RIGHT,
-    LIZ_GATE_OUTSIDE_OPEN
+    LIZ_GATE_OUTSIDE_OPEN,
+    DISHROOM_DOOR,
+    BENNETT_GATE_FRONT,
+    BENNETT_GATE_SIDE_OPEN,
+    BENNETT_DOOR_INSIDE,
+    BENNETT_DOOR_INSIDE_OPEN,
+    BENNETT_MATTRESS,
+    BENNETT_PILLOWS,
+    ARMCHAIR_LEFT,
+    ARMCHAIR_RIGHT,
+    WAITING_ROOM_DOOR,
+    WAITING_ROOM_DOOR_OPEN,
+    LIZ_MATTRESS,
+    LIZ_PILLOWS,
+    LIZ_MATTRESS_REFLECTION,
+    LIZ_PILLOWS_REFLECTION,
+    STATION_WAGON_SEAT_FRONT,
+    STATION_WAGON_SEAT_BACK,
+    ATTIC_CUSHIONS,
+    CLUB_DOOR
 } from 'scene/furnitureKeys'
 
 const FURNITURES_MAP = {
@@ -78,7 +116,26 @@ const FURNITURES_MAP = {
     [LIZ_GATE_OUTSIDE]: LizGateOutside,
     [GO_KART_INTERIOR_LEFT]: GoKartInteriorLeft,
     [GO_KART_INTERIOR_RIGHT]: GoKartInteriorRight,
-    [LIZ_GATE_OUTSIDE_OPEN]: LizGateOutsideOpen
+    [LIZ_GATE_OUTSIDE_OPEN]: LizGateOutsideOpen,
+    [DISHROOM_DOOR]: DishroomDoor,
+    [BENNETT_GATE_FRONT]: BennettGateFront,
+    [BENNETT_GATE_SIDE_OPEN]: BennettGateSideOpen,
+    [BENNETT_DOOR_INSIDE]: BennettDoorInside,
+    [BENNETT_DOOR_INSIDE_OPEN]: BennettDoorInsideOpen,
+    [BENNETT_MATTRESS]: BennettMattress,
+    [BENNETT_PILLOWS]: BennettPillows,
+    [ARMCHAIR_LEFT]: ArmchairLeft,
+    [ARMCHAIR_RIGHT]: ArmchairRight,
+    [WAITING_ROOM_DOOR]: WaitingRoomDoor,
+    [WAITING_ROOM_DOOR_OPEN]: WaitingRoomDoorOpen,
+    [LIZ_MATTRESS]: LizMattress,
+    [LIZ_PILLOWS]: LizPillows,
+    [LIZ_MATTRESS_REFLECTION]: LizMattressReflection,
+    [LIZ_PILLOWS_REFLECTION]: LizPillowsReflection,
+    [STATION_WAGON_SEAT_FRONT]: StationWagonSeatFront,
+    [STATION_WAGON_SEAT_BACK]: StationWagonSeatBack,
+    [ATTIC_CUSHIONS]: AtticCushions,
+    [CLUB_DOOR]: ClubDoor
 },
 DEFAULT_COMPONENT = () => (null)
 
