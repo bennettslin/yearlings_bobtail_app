@@ -1,3 +1,5 @@
+import { ACTORS } from 'constants/scene'
+
 import { LOGUE_KEY } from 'scene/cubesKeys'
 
 import {
@@ -42,7 +44,7 @@ module.exports = [
         verseIndex: 0,
         description: `Everyone is standing at the end of the play. We are all really just actors.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [OLD_BENNETT]: {
                     todo: true,
                     workedHours: 3,

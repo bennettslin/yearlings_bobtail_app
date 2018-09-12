@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
@@ -32,12 +40,20 @@ import {
     BLOWJOB
 } from 'scene/instanceKeys/songs'
 
+import {
+    IV_DRIP
+} from 'scene/cutoutKeys'
+
+import {
+    HOSPITAL_RECORD_PLAYER
+} from 'scene/fixtureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Bennett and Miriam are sitting in her car.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -62,7 +78,7 @@ module.exports = [
         unitIndex: 3,
         description: `Bennett and Miriam are having sex in a car overlooking a cliff. Miriam is on top.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -87,7 +103,7 @@ module.exports = [
         unitIndex: 5,
         description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. Their child is a pinhead.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -112,13 +128,19 @@ module.exports = [
         unitIndex: 7,
         description: `In a thought bubble, Bennett is dying in a hospital bed next to a record player. In another thought bubble, Miriam is playing tennis.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'front angle, dying, infirm',
                     instance: INFIRM
                 }
+            },
+            [CUTOUTS]: {
+                [IV_DRIP]: true
+            },
+            [FIXTURES]: {
+                [HOSPITAL_RECORD_PLAYER]: true
             }
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
@@ -131,13 +153,19 @@ module.exports = [
         unitIndex: 8,
         description: `In the same scene, Miriam now appears in Bennett's thought bubble. She is playing tennis.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'serving in tennis',
                     instance: TENNIS
                 }
+            },
+            [CUTOUTS]: {
+                [IV_DRIP]: true
+            },
+            [FIXTURES]: {
+                [HOSPITAL_RECORD_PLAYER]: true
             }
         },
         cubes: EL_CERRITO_TENNIS_KEY,
@@ -150,7 +178,7 @@ module.exports = [
         unitIndex: 9,
         description: `They drive away. Bennett, with his seat back, hesitantly drops the used condom on the ground, looking at it wistfully. Miriam is looking away, backing up the car.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,

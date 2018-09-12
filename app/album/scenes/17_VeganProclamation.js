@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    CUTOUTS,
+    FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     CLUB_FAR_KEY,
     LIZ_BED_KEY,
     ALLEY_KEY,
@@ -52,12 +60,22 @@ import {
     PROTESTER
 } from 'scene/instanceKeys/songs'
 
+import {
+    CROWD_BACK_NEAR,
+    CROWD_BACK_FAR,
+    DUMPSTER
+} from 'scene/cutoutKeys'
+
+import {
+    BURGER_WRAPPER
+} from 'scene/fixtureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -90,7 +108,7 @@ module.exports = [
         unitIndex: 4,
         description: `Bennett is by himself with Odin at a show, looking agitated and bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -115,6 +133,10 @@ module.exports = [
                     description: 'side, eager',
                     instance: GREETING
                 }
+            },
+            [CUTOUTS]: {
+                [CROWD_BACK_FAR]: true,
+                [CROWD_BACK_NEAR]: true
             }
         },
         cubes: CLUB_FAR_KEY,
@@ -127,13 +149,19 @@ module.exports = [
         unitIndex: 7,
         description: `Bennett is walking through an alley.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
                     description: 'walking through alley',
                     instance: ALLEY
                 }
+            },
+            [CUTOUTS]: {
+                [DUMPSTER]: true
+            },
+            [FIXTURES]: {
+                [BURGER_WRAPPER]: true
             }
         },
         cubes: ALLEY_KEY,
@@ -146,7 +174,7 @@ module.exports = [
         unitIndex: 10,
         description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed snuggling with her friend.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -195,7 +223,7 @@ module.exports = [
         unitIndex: 12,
         description: `Bennett is with Odin, and happens upon a Peta demonstration. One of the demonstrators is petting Odin.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,

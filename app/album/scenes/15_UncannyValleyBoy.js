@@ -1,4 +1,12 @@
 import {
+    ACTORS,
+    // CUTOUTS,
+    FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
+import {
     BASEMENT_BED_KEY,
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
@@ -68,12 +76,18 @@ import {
     FUTURE
 } from 'scene/instanceKeys/songs'
 
+import {
+    RECORDING_CONSOLE,
+    RECORDING_MIC,
+    RECORDING_BEERS
+} from 'scene/fixtureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
         description: `Bennett is sleeping in bed with Miriam.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -98,7 +112,7 @@ module.exports = [
         unitIndex: 2,
         description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Chinese garb. His father is stern and disapproving, while his mother consoles a weeping Sita.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [MOTHER]: {
                     todo: true,
                     workedHours: 3,
@@ -131,7 +145,7 @@ module.exports = [
         unitIndex: 4,
         description: `Bennett's father takes him to visit his childhood past. They watch as young Bennett, having just been bullied, lashes out in anger, to no one in particular. Sasha is with him, and is understanding but clearly keeping her distance. Bennett winces.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -168,7 +182,7 @@ module.exports = [
         unitIndex: 8,
         description: `Bennett's mother is back. They next take him to visit the present. Sita is at home crying, as in the first scene of Kyon, while Bennett is playing guitar next to Miriam on her bed.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -213,7 +227,7 @@ module.exports = [
         unitIndex: 11,
         description: `Finally, they take him to visit the future. Unknowingly, they cross paths with Sita who is laughing with her friend in a park. Meanwhile, Bennett is at home alone, recording and depressed.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,
@@ -254,6 +268,11 @@ module.exports = [
                     description: 'side angle, cheerful, making a point',
                     instance: JOKING
                 }
+            },
+            [FIXTURES]: {
+                [RECORDING_CONSOLE]: true,
+                [RECORDING_MIC]: true,
+                [RECORDING_BEERS]: true
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,
@@ -266,7 +285,7 @@ module.exports = [
         unitIndex: 14,
         description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is casting an imaginary spell to release him from their grasp. His father flinches, while his mother shields Sita from the view.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 3,

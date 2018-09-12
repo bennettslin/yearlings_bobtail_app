@@ -2,7 +2,6 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    // FLATS,
     FURNITURES
 } from 'constants/scene'
 

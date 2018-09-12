@@ -1,3 +1,11 @@
+import {
+    ACTORS,
+    // CUTOUTS,
+    // FIXTURES,
+    // FLATS,
+    // FURNITURES
+} from 'constants/scene'
+
 import { LIZ_COUCH_KEY } from 'scene/cubesKeys'
 
 import {
@@ -31,7 +39,7 @@ module.exports = [
         unitIndex: 1,
         description: `Sita is sitting on the couch in her living room, petting a cat.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -52,7 +60,7 @@ module.exports = [
         unitIndex: 2,
         description: `Sita is standing by the window, still depressed.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -73,7 +81,7 @@ module.exports = [
         unitIndex: 4,
         description: `Sita is imagining how she met Bennett in three thought bubbles. In the first, she is breaking up with her ex over a cafeteria dinner. In the second, in tears over the incident, she busses her tray, leaving her lancing device behind. In the third, Bennett is hitting on her in the cafeteria, while she looks uncertain.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -94,7 +102,7 @@ module.exports = [
         unitIndex: 7,
         description: `Sita is still thinking. In the last thought bubble, Bennett is walking away, rejected by Sita. Sita has gotten up and opened the door. Sita's friend is in the doorway, having arrived with Chinese takeout.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -121,7 +129,7 @@ module.exports = [
         unitIndex: 8,
         description: `Sita and her friend are eating the food. In his speech bubble, Bennett is flirting with a fan, while Sita looks on jealous. In her speech bubble, she is going home with Bennett, triumphant.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -148,7 +156,7 @@ module.exports = [
         unitIndex: 10,
         description: `Sita's friend has left, looking back at her through the window. She is absorbed in her thoughts. In her thought bubble, she and Bennett have gotten back together, both in tears.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -175,7 +183,7 @@ module.exports = [
         unitIndex: 11,
         description: `Same scene. No thought bubble. The room is now completely dark.`,
         presences: {
-            actors: {
+            [ACTORS]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
