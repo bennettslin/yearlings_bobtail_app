@@ -36,6 +36,7 @@ import {
 } from 'scene/instanceKeys/liz'
 
 import {
+    LIZ_BLINDS_OPEN,
     LIZ_CUSHIONS,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
@@ -65,6 +66,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
@@ -94,6 +96,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
@@ -123,6 +126,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
@@ -158,6 +162,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR_OPEN]: true
@@ -190,6 +195,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
@@ -222,6 +228,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE_OPEN]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
@@ -248,6 +255,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
@@ -267,6 +275,7 @@ module.exports = [
         description: `Same scene. Peacocks.`,
         presences: {
             [FURNITURES]: {
+                [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true

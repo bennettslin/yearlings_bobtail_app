@@ -243,6 +243,7 @@ module.exports = [
                 [TRAFFIC_LIGHT]: true
             },
             [FURNITURES]: {
+                [LIZ_BLINDS]: true,
                 [LIZ_GATE_OUTSIDE_OPEN]: true
             }
         },

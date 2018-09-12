@@ -21,7 +21,6 @@ import BancroftDoor from './Furnitures/UcBerkeley/BancroftDoor'
 import BasementDoor from './Furnitures/Basement/BasementDoor'
 import BasementDoorOpen from './Furnitures/Basement/BasementDoorOpen'
 import CinemaDoors from './Furnitures/Cinema/CinemaDoors'
-import LizBlinds from './Furnitures/LizGate/LizBlinds'
 import LizGateOutside from './Furnitures/LizGate/LizGateOutside'
 import GoKartInteriorLeft from './Furnitures/GoKarts/GoKartInteriorLeft'
 import GoKartInteriorRight from './Furnitures/GoKarts/GoKartInteriorRight'
@@ -45,6 +44,8 @@ import StationWagonSeatFront from './Furnitures/StationWagon/StationWagonSeatFro
 import StationWagonSeatBack from './Furnitures/StationWagon/StationWagonSeatBack'
 import AtticCushions from './Furnitures/Attic/AtticCushions'
 import ClubDoor from './Furnitures/ClubLoading/ClubDoor'
+import LizBlinds from './Furnitures/LizCouch/LizBlinds'
+import LizBlindsOpen from './Furnitures/LizCouch/LizBlindsOpen'
 import LizCushions from './Furnitures/LizCouch/LizCushions'
 import LizDoor from './Furnitures/LizCouch/LizDoor'
 import LizDoorOpen from './Furnitures/LizCouch/LizDoorOpen'
@@ -77,7 +78,6 @@ import {
     BASEMENT_DOOR,
     BASEMENT_DOOR_OPEN,
     CINEMA_DOORS,
-    LIZ_BLINDS,
     LIZ_GATE_OUTSIDE,
     GO_KART_INTERIOR_LEFT,
     GO_KART_INTERIOR_RIGHT,
@@ -101,6 +101,8 @@ import {
     STATION_WAGON_SEAT_BACK,
     ATTIC_CUSHIONS,
     CLUB_DOOR,
+    LIZ_BLINDS,
+    LIZ_BLINDS_OPEN,
     LIZ_CUSHIONS,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
@@ -134,7 +136,6 @@ const FURNITURES_MAP = {
     [BASEMENT_DOOR]: BasementDoor,
     [BASEMENT_DOOR_OPEN]: BasementDoorOpen,
     [CINEMA_DOORS]: CinemaDoors,
-    [LIZ_BLINDS]: LizBlinds,
     [LIZ_GATE_OUTSIDE]: LizGateOutside,
     [GO_KART_INTERIOR_LEFT]: GoKartInteriorLeft,
     [GO_KART_INTERIOR_RIGHT]: GoKartInteriorRight,
@@ -158,6 +159,8 @@ const FURNITURES_MAP = {
     [STATION_WAGON_SEAT_BACK]: StationWagonSeatBack,
     [ATTIC_CUSHIONS]: AtticCushions,
     [CLUB_DOOR]: ClubDoor,
+    [LIZ_BLINDS]: LizBlinds,
+    [LIZ_BLINDS_OPEN]: LizBlindsOpen,
     [LIZ_CUSHIONS]: LizCushions,
     [LIZ_DOOR]: LizDoor,
     [LIZ_DOOR_OPEN]: LizDoorOpen,

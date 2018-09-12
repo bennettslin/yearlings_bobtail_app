@@ -64,6 +64,7 @@ import {
 } from 'scene/flatKeys'
 
 import {
+    LIZ_BLINDS,
     LIZ_CUSHIONS,
     LIZ_DOOR,
     LIZ_GATE_INSIDE
@@ -91,6 +92,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
@@ -232,6 +234,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
+                [LIZ_BLINDS]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
