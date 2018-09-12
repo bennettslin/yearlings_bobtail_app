@@ -245,6 +245,11 @@ module.exports = [
         neededHours: 1
     },
     {
+        task: 'clubFar',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         task: 'alley',
         workedHours: 0,
         neededHours: 1
@@ -266,6 +271,11 @@ module.exports = [
     },
     {
         task: 'cliff',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        task: 'deathbed',
         workedHours: 0,
         neededHours: 1
     }

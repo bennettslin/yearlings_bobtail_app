@@ -17,7 +17,13 @@ const
     MUSHKA = 'mushka',
     ROCKET = 'rocket',
     EARTH = 'earth',
-    SPACE_COLONY = 'spaceColony'
+    SPACE_COLONY = 'spaceColony',
+    OPAL_LAP = 'opalLap',
+    OPAL_WINDOW = 'opalWindow',
+    OPAL_COUCH = 'opalCouch',
+    CONVERTIBLE_FAR = 'convertibleFar',
+    PUPPET_KHARI = 'puppetKhari',
+    PUPPET_LIZ = 'puppetLiz'
 
 export {
     PUPPET_BENNETT_BEGIN,
@@ -36,5 +42,11 @@ export {
     MUSHKA,
     ROCKET,
     EARTH,
-    SPACE_COLONY
+    SPACE_COLONY,
+    OPAL_LAP,
+    OPAL_WINDOW,
+    OPAL_COUCH,
+    CONVERTIBLE_FAR,
+    PUPPET_KHARI,
+    PUPPET_LIZ
 }

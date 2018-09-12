@@ -45,6 +45,17 @@ import StationWagonSeatFront from './Furnitures/StationWagon/StationWagonSeatFro
 import StationWagonSeatBack from './Furnitures/StationWagon/StationWagonSeatBack'
 import AtticCushions from './Furnitures/Attic/AtticCushions'
 import ClubDoor from './Furnitures/ClubLoading/ClubDoor'
+import LizCushions from './Furnitures/LizCouch/LizCushions'
+import LizDoor from './Furnitures/LizCouch/LizDoor'
+import LizDoorOpen from './Furnitures/LizCouch/LizDoorOpen'
+import LizGateInside from './Furnitures/LizCouch/LizGateInside'
+import LizGateInsideOpen from './Furnitures/LizCouch/LizGateInsideOpen'
+import MiriamCushions from './Furnitures/SnowglobesPresent/MiriamCushions'
+import ConvertibleInterior from './Furnitures/ElCerrito/ConvertibleInterior'
+import LoadingDockDoor from './Furnitures/Alley/LoadingDockDoor'
+import ElToritoDoorLeft from './Furnitures/ElTorito/ElToritoDoorLeft'
+import ElToritoDoorRight from './Furnitures/ElTorito/ElToritoDoorRight'
+import HospitalMattress from './Furnitures/Deathbed/HospitalMattress'
 
 import {
     PORCH_DOOR,
@@ -89,7 +100,18 @@ import {
     STATION_WAGON_SEAT_FRONT,
     STATION_WAGON_SEAT_BACK,
     ATTIC_CUSHIONS,
-    CLUB_DOOR
+    CLUB_DOOR,
+    LIZ_CUSHIONS,
+    LIZ_DOOR,
+    LIZ_DOOR_OPEN,
+    LIZ_GATE_INSIDE,
+    LIZ_GATE_INSIDE_OPEN,
+    MIRIAM_CUSHIONS,
+    CONVERTIBLE_INTERIOR,
+    LOADING_DOCK_DOOR,
+    EL_TORITO_DOOR_LEFT,
+    EL_TORITO_DOOR_RIGHT,
+    HOSPITAL_MATTRESS
 } from 'scene/furnitureKeys'
 
 const FURNITURES_MAP = {
@@ -135,7 +157,18 @@ const FURNITURES_MAP = {
     [STATION_WAGON_SEAT_FRONT]: StationWagonSeatFront,
     [STATION_WAGON_SEAT_BACK]: StationWagonSeatBack,
     [ATTIC_CUSHIONS]: AtticCushions,
-    [CLUB_DOOR]: ClubDoor
+    [CLUB_DOOR]: ClubDoor,
+    [LIZ_CUSHIONS]: LizCushions,
+    [LIZ_DOOR]: LizDoor,
+    [LIZ_DOOR_OPEN]: LizDoorOpen,
+    [LIZ_GATE_INSIDE]: LizGateInside,
+    [LIZ_GATE_INSIDE_OPEN]: LizGateInsideOpen,
+    [MIRIAM_CUSHIONS]: MiriamCushions,
+    [CONVERTIBLE_INTERIOR]: ConvertibleInterior,
+    [LOADING_DOCK_DOOR]: LoadingDockDoor,
+    [EL_TORITO_DOOR_LEFT]: ElToritoDoorLeft,
+    [EL_TORITO_DOOR_RIGHT]: ElToritoDoorRight,
+    [HOSPITAL_MATTRESS]: HospitalMattress
 },
 DEFAULT_COMPONENT = () => (null)
 

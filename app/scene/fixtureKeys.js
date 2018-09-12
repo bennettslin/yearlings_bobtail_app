@@ -43,7 +43,12 @@ const
     GUITAR_STAND = 'guitarStand',
     GUITAR_AMP = 'guitarAmp',
     DRUMS_STACKED = 'drumsStacked',
-    BASS_AMP = 'bassAmp'
+    BASS_AMP = 'bassAmp',
+    RECORDING_CONSOLE = 'recordingConsole',
+    RECORDING_MIC = 'recordingMic',
+    RECORDING_BEERS = 'recordingBeers',
+    BURGER_WRAPPER = 'burgerWrapper',
+    HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer'
 
 export {
     PLAYGROUND_BALL,
@@ -88,5 +93,10 @@ export {
     GUITAR_STAND,
     GUITAR_AMP,
     DRUMS_STACKED,
-    BASS_AMP
+    BASS_AMP,
+    RECORDING_CONSOLE,
+    RECORDING_MIC,
+    RECORDING_BEERS,
+    BURGER_WRAPPER,
+    HOSPITAL_RECORD_PLAYER
 }

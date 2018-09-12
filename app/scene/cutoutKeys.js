@@ -76,7 +76,12 @@ const
     HOWIE_FRIDGE = 'howieFridge',
     TELEVISION = 'television',
     MONITOR_SPEAKER_SIDE = 'monitorSpeakerSide',
-    WALL_SPEAKER_SIDE = 'wallSpeakerSide'
+    WALL_SPEAKER_SIDE = 'wallSpeakerSide',
+    VOLKSWAGEN = 'volkswagen',
+    DUMPSTER = 'dumpster',
+    WEDDING_PLATFORM = 'weddingPlatform',
+    WEDDING_CROWD = 'weddingCrowd',
+    IV_DRIP = 'ivDrip'
 
 export {
     FIRE_HYDRANT,
@@ -154,5 +159,10 @@ export {
     HOWIE_FRIDGE,
     TELEVISION,
     MONITOR_SPEAKER_SIDE,
-    WALL_SPEAKER_SIDE
+    WALL_SPEAKER_SIDE,
+    VOLKSWAGEN,
+    DUMPSTER,
+    WEDDING_PLATFORM,
+    WEDDING_CROWD,
+    IV_DRIP
 }

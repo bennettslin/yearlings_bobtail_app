@@ -45,6 +45,11 @@ import GuitarStand from './Fixtures/ClubSide/GuitarStand'
 import GuitarAmp from './Fixtures/ClubSide/GuitarAmp'
 import DrumsStacked from './Fixtures/ClubSide/DrumsStacked'
 import BassAmp from './Fixtures/ClubSide/BassAmp'
+import RecordingConsole from './Fixtures/SnowglobesFuture/RecordingConsole'
+import RecordingMic from './Fixtures/SnowglobesFuture/RecordingMic'
+import RecordingBeers from './Fixtures/SnowglobesFuture/RecordingBeers'
+import BurgerWrapper from './Fixtures/Alley/BurgerWrapper'
+import HospitalRecordPlayer from './Fixtures/Deathbed/HospitalRecordPlayer'
 
 import {
     PLAYGROUND_BALL,
@@ -89,7 +94,12 @@ import {
     GUITAR_STAND,
     GUITAR_AMP,
     DRUMS_STACKED,
-    BASS_AMP
+    BASS_AMP,
+    RECORDING_CONSOLE,
+    RECORDING_MIC,
+    RECORDING_BEERS,
+    BURGER_WRAPPER,
+    HOSPITAL_RECORD_PLAYER
 } from 'scene/fixtureKeys'
 
 const FIXTURES_MAP = {
@@ -135,7 +145,12 @@ const FIXTURES_MAP = {
     [GUITAR_STAND]: GuitarStand,
     [GUITAR_AMP]: GuitarAmp,
     [DRUMS_STACKED]: DrumsStacked,
-    [BASS_AMP]: BassAmp
+    [BASS_AMP]: BassAmp,
+    [RECORDING_CONSOLE]: RecordingConsole,
+    [RECORDING_MIC]: RecordingMic,
+    [RECORDING_BEERS]: RecordingBeers,
+    [BURGER_WRAPPER]: BurgerWrapper,
+    [HOSPITAL_RECORD_PLAYER]: HospitalRecordPlayer
 },
 DEFAULT_COMPONENT = () => (null)
 

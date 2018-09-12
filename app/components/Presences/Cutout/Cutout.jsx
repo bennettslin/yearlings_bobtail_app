@@ -78,6 +78,11 @@ import HowieFridge from './Cutouts/Attic/HowieFridge'
 import Television from './Cutouts/Attic/Television'
 import MonitorSpeakerSide from './Cutouts/ClubSide/MonitorSpeakerSide'
 import WallSpeakerSide from './Cutouts/ClubSide/WallSpeakerSide'
+import Volkswagen from './Cutouts/OaklandHouses/Volkswagen'
+import Dumpster from './Cutouts/Alley/Dumpster'
+import WeddingPlatform from './Cutouts/OutdoorWedding/WeddingPlatform'
+import WeddingCrowd from './Cutouts/OutdoorWedding/WeddingCrowd'
+import IvDrip from './Cutouts/Deathbed/IvDrip'
 
 import {
     FIRE_HYDRANT,
@@ -155,7 +160,12 @@ import {
     HOWIE_FRIDGE,
     TELEVISION,
     MONITOR_SPEAKER_SIDE,
-    WALL_SPEAKER_SIDE
+    WALL_SPEAKER_SIDE,
+    VOLKSWAGEN,
+    DUMPSTER,
+    WEDDING_PLATFORM,
+    WEDDING_CROWD,
+    IV_DRIP
 } from 'scene/cutoutKeys'
 
 const CUTOUTS_MAP = {
@@ -234,7 +244,12 @@ const CUTOUTS_MAP = {
     [HOWIE_FRIDGE]: HowieFridge,
     [TELEVISION]: Television,
     [MONITOR_SPEAKER_SIDE]: MonitorSpeakerSide,
-    [WALL_SPEAKER_SIDE]: WallSpeakerSide
+    [WALL_SPEAKER_SIDE]: WallSpeakerSide,
+    [VOLKSWAGEN]: Volkswagen,
+    [DUMPSTER]: Dumpster,
+    [WEDDING_PLATFORM]: WeddingPlatform,
+    [WEDDING_CROWD]: WeddingCrowd,
+    [IV_DRIP]: IvDrip
 },
 DEFAULT_COMPONENT = () => (null)
 

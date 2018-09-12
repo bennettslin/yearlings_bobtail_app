@@ -57,6 +57,41 @@ import CemeteryHillsFar from './Flats/Cemetery/CemeteryHillsFar'
 import LosAngelesBackdrop from './Flats/StationWagon/LosAngelesBackdrop'
 import TarpitThought from './Flats/StationWagon/TarpitThought'
 import SiblingThought from './Flats/StationWagon/SiblingThought'
+import OaklandBackdrop from './Flats/OaklandHouses/OaklandBackdrop'
+import OaklandHouseLeft from './Flats/OaklandHouses/OaklandHouseLeft'
+import OaklandHouseRight from './Flats/OaklandHouses/OaklandHouseRight'
+import ResidenceBackdrop from './Flats/OaklandResidential/ResidenceBackdrop'
+import ResidentialLeft from './Flats/OaklandResidential/ResidentialLeft'
+import ResidentialRight from './Flats/OaklandResidential/ResidentialRight'
+import CommercialBackdrop from './Flats/OaklandCommercial/CommercialBackdrop'
+import CommercialLeft from './Flats/OaklandCommercial/CommercialLeft'
+import CommercialRight from './Flats/OaklandCommercial/CommercialRight'
+import PublicBackdrop from './Flats/OaklandPublic/PublicBackdrop'
+import PublicLeft from './Flats/OaklandPublic/PublicLeft'
+import PublicRight from './Flats/OaklandPublic/PublicRight'
+import SnowglobesPast from './Flats/SnowglobesPast/SnowglobesPast'
+import SnowglobeTetherball from './Flats/SnowglobesPast/SnowglobeTetherball'
+import SnowglobesPresent from './Flats/SnowglobesPresent/SnowglobesPresent'
+import SnowglobeLizBlinds from './Flats/SnowglobesPresent/SnowglobeLizBlinds'
+import SnowglobeMiriam from './Flats/SnowglobesPresent/SnowglobeMiriam'
+import SnowglobesFuture from './Flats/SnowglobesFuture/SnowglobesFuture'
+import SnowglobeLizCouch from './Flats/SnowglobesFuture/SnowglobeLizCouch'
+import SnowglobeBennett from './Flats/SnowglobesFuture/SnowglobeBennett'
+import ElCerritoBackdrop from './Flats/ElCerrito/ElCerritoBackdrop'
+import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
+import ConvertibleFront from './Flats/ElCerrito/ConvertibleFront'
+import ConvertibleBack from './Flats/ElCerrito/ConvertibleBack'
+import CrowdSideNear from './Flats/ClubFar/CrowdSideNear'
+import CrowdSideFar from './Flats/ClubFar/CrowdSideFar'
+import CrowdBackNear from './Flats/ClubFar/CrowdBackNear'
+import CrowdBackFar from './Flats/ClubFar/CrowdBackFar'
+import PampasBackdrop from './Flats/Pampas/PampasBackdrop'
+import WeddingBackdrop from './Flats/OutdoorWedding/WeddingBackdrop'
+import CliffBackdrop from './Flats/Cliff/CliffBackdrop'
+import CliffGravesBackdrop from './Flats/Cliff/CliffGravesBackdrop'
+import HospitalThought from './Flats/Deathbed/HospitalThought'
+import TennisThought from './Flats/Deathbed/TennisThought'
+import InverseThought from './Flats/Deathbed/InverseThought'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -113,7 +148,42 @@ import {
     CEMETERY_HILLS_FAR,
     LOS_ANGELES_BACKDROP,
     TARPIT_THOUGHT,
-    SIBLING_THOUGHT
+    SIBLING_THOUGHT,
+    OAKLAND_BACKDROP,
+    OAKLAND_HOUSE_LEFT,
+    OAKLAND_HOUSE_RIGHT,
+    RESIDENCE_BACKDROP,
+    RESIDENTIAL_LEFT,
+    RESIDENTIAL_RIGHT,
+    COMMERCIAL_BACKDROP,
+    COMMERCIAL_LEFT,
+    COMMERCIAL_RIGHT,
+    PUBLIC_BACKDROP,
+    PUBLIC_LEFT,
+    PUBLIC_RIGHT,
+    SNOWGLOBES_PAST,
+    SNOWGLOBE_TETHERBALL,
+    SNOWGLOBES_PRESENT,
+    SNOWGLOBE_LIZ_BLINDS,
+    SNOWGLOBE_MIRIAM,
+    SNOWGLOBES_FUTURE,
+    SNOWGLOBE_LIZ_COUCH,
+    SNOWGLOBE_BENNETT,
+    EL_CERRITO_BACKDROP,
+    EL_CERRITO_ROAD,
+    CONVERTIBLE_FRONT,
+    CONVERTIBLE_BACK,
+    CROWD_SIDE_NEAR,
+    CROWD_SIDE_FAR,
+    CROWD_BACK_NEAR,
+    CROWD_BACK_FAR,
+    PAMPAS_BACKDROP,
+    WEDDING_BACKDROP,
+    CLIFF_BACKDROP,
+    CLIFF_GRAVES_BACKDROP,
+    HOSPITAL_THOUGHT,
+    TENNIS_THOUGHT,
+    INVERSE_THOUGHT
 } from 'scene/flatKeys'
 
 const FLATS_MAP = {
@@ -171,7 +241,42 @@ const FLATS_MAP = {
     [CEMETERY_HILLS_FAR]: CemeteryHillsFar,
     [LOS_ANGELES_BACKDROP]: LosAngelesBackdrop,
     [TARPIT_THOUGHT]: TarpitThought,
-    [SIBLING_THOUGHT]: SiblingThought
+    [SIBLING_THOUGHT]: SiblingThought,
+    [OAKLAND_BACKDROP]: OaklandBackdrop,
+    [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
+    [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
+    [RESIDENCE_BACKDROP]: ResidenceBackdrop,
+    [RESIDENTIAL_LEFT]: ResidentialLeft,
+    [RESIDENTIAL_RIGHT]: ResidentialRight,
+    [COMMERCIAL_BACKDROP]: CommercialBackdrop,
+    [COMMERCIAL_LEFT]: CommercialLeft,
+    [COMMERCIAL_RIGHT]: CommercialRight,
+    [PUBLIC_BACKDROP]: PublicBackdrop,
+    [PUBLIC_LEFT]: PublicLeft,
+    [PUBLIC_RIGHT]: PublicRight,
+    [SNOWGLOBES_PAST]: SnowglobesPast,
+    [SNOWGLOBE_TETHERBALL]: SnowglobeTetherball,
+    [SNOWGLOBES_PRESENT]: SnowglobesPresent,
+    [SNOWGLOBE_LIZ_BLINDS]: SnowglobeLizBlinds,
+    [SNOWGLOBE_MIRIAM]: SnowglobeMiriam,
+    [SNOWGLOBES_FUTURE]: SnowglobesFuture,
+    [SNOWGLOBE_LIZ_COUCH]: SnowglobeLizCouch,
+    [SNOWGLOBE_BENNETT]: SnowglobeBennett,
+    [EL_CERRITO_BACKDROP]: ElCerritoBackdrop,
+    [EL_CERRITO_ROAD]: ElCerritoRoad,
+    [CONVERTIBLE_FRONT]: ConvertibleFront,
+    [CONVERTIBLE_BACK]: ConvertibleBack,
+    [CROWD_SIDE_NEAR]: CrowdSideNear,
+    [CROWD_SIDE_FAR]: CrowdSideFar,
+    [CROWD_BACK_NEAR]: CrowdBackNear,
+    [CROWD_BACK_FAR]: CrowdBackFar,
+    [PAMPAS_BACKDROP]: PampasBackdrop,
+    [WEDDING_BACKDROP]: WeddingBackdrop,
+    [CLIFF_BACKDROP]: CliffBackdrop,
+    [CLIFF_GRAVES_BACKDROP]: CliffGravesBackdrop,
+    [HOSPITAL_THOUGHT]: HospitalThought,
+    [TENNIS_THOUGHT]: TennisThought,
+    [INVERSE_THOUGHT]: InverseThought
 },
 DEFAULT_COMPONENT = () => (null)
 

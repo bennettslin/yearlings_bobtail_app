@@ -19,6 +19,12 @@ import Mushka from './Puppets/Bedroom/Mushka'
 import Rocket from './Puppets/Bedroom/Rocket'
 import Earth from './Puppets/Bedroom/Earth'
 import SpaceColony from './Puppets/Bedroom/SpaceColony'
+import OpalLap from './Puppets/LizCouch/OpalLap'
+import OpalWindow from './Puppets/LizCouch/OpalWindow'
+import OpalCouch from './Puppets/LizCouch/OpalCouch'
+import ConvertibleFar from './Puppets/ElCerrito/ConvertibleFar'
+import PuppetKhari from './Puppets/OutdoorWedding/PuppetKhari'
+import PuppetLiz from './Puppets/OutdoorWedding/PuppetLiz'
 
 import {
     PUPPET_BENNETT_BEGIN,
@@ -37,7 +43,13 @@ import {
     MUSHKA,
     ROCKET,
     EARTH,
-    SPACE_COLONY
+    SPACE_COLONY,
+    OPAL_LAP,
+    OPAL_WINDOW,
+    OPAL_COUCH,
+    CONVERTIBLE_FAR,
+    PUPPET_KHARI,
+    PUPPET_LIZ
 } from 'scene/puppetKeys'
 
 const PUPPETS_MAP = {
@@ -57,7 +69,13 @@ const PUPPETS_MAP = {
     [MUSHKA]: Mushka,
     [ROCKET]: Rocket,
     [EARTH]: Earth,
-    [SPACE_COLONY]: SpaceColony
+    [SPACE_COLONY]: SpaceColony,
+    [OPAL_LAP]: OpalLap,
+    [OPAL_WINDOW]: OpalWindow,
+    [OPAL_COUCH]: OpalCouch,
+    [CONVERTIBLE_FAR]: ConvertibleFar,
+    [PUPPET_KHARI]: PuppetKhari,
+    [PUPPET_LIZ]: PuppetLiz
 },
 DEFAULT_COMPONENT = () => (null)
 

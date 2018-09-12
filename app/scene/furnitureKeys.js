@@ -43,7 +43,18 @@ const
     STATION_WAGON_SEAT_FRONT = 'stationWagonSeatFront',
     STATION_WAGON_SEAT_BACK = 'stationWagonSeatBack',
     ATTIC_CUSHIONS = 'atticCushions',
-    CLUB_DOOR = 'clubDoor'
+    CLUB_DOOR = 'clubDoor',
+    LIZ_CUSHIONS = 'lizCushions',
+    LIZ_DOOR = 'lizDoor',
+    LIZ_DOOR_OPEN = 'lizDoorOpen',
+    LIZ_GATE_INSIDE = 'lizGateInside',
+    LIZ_GATE_INSIDE_OPEN = 'lizGateInsideOpen',
+    MIRIAM_CUSHIONS = 'miriamCushions',
+    CONVERTIBLE_INTERIOR = 'convertibleInterior',
+    LOADING_DOCK_DOOR = 'loadingDockDoor',
+    EL_TORITO_DOOR_LEFT = 'elToritoDoorLeft',
+    EL_TORITO_DOOR_RIGHT = 'elToritoDoorRight',
+    HOSPITAL_MATTRESS = 'hospitalMattress'
 
 export {
     PORCH_DOOR,
@@ -88,5 +99,16 @@ export {
     STATION_WAGON_SEAT_FRONT,
     STATION_WAGON_SEAT_BACK,
     ATTIC_CUSHIONS,
-    CLUB_DOOR
+    CLUB_DOOR,
+    LIZ_CUSHIONS,
+    LIZ_DOOR,
+    LIZ_DOOR_OPEN,
+    LIZ_GATE_INSIDE,
+    LIZ_GATE_INSIDE_OPEN,
+    MIRIAM_CUSHIONS,
+    CONVERTIBLE_INTERIOR,
+    LOADING_DOCK_DOOR,
+    EL_TORITO_DOOR_LEFT,
+    EL_TORITO_DOOR_RIGHT,
+    HOSPITAL_MATTRESS
 }
