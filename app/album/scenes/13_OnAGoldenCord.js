@@ -56,6 +56,7 @@ import {
     OAKLAND_BACKDROP,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
+    LIZ_COUCH_THOUGHT,
     RESIDENCE_BACKDROP,
     RESIDENTIAL_LEFT,
     RESIDENTIAL_RIGHT,
@@ -115,6 +116,9 @@ module.exports = [
                         instance: RETURNING_CORD
                     }
                 }
+            },
+            [FLATS]: {
+                [LIZ_COUCH_THOUGHT]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true

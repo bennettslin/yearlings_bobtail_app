@@ -59,6 +59,7 @@ import SiblingThought from './Flats/StationWagon/SiblingThought'
 import OaklandBackdrop from './Flats/OaklandHouses/OaklandBackdrop'
 import OaklandHouseLeft from './Flats/OaklandHouses/OaklandHouseLeft'
 import OaklandHouseRight from './Flats/OaklandHouses/OaklandHouseRight'
+import LizCouchThought from './Flats/LizCouch/LizCouchThought'
 import ResidenceBackdrop from './Flats/OaklandResidential/ResidenceBackdrop'
 import ResidentialLeft from './Flats/OaklandResidential/ResidentialLeft'
 import ResidentialRight from './Flats/OaklandResidential/ResidentialRight'
@@ -146,6 +147,7 @@ import {
     OAKLAND_BACKDROP,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
+    LIZ_COUCH_THOUGHT,
     RESIDENCE_BACKDROP,
     RESIDENTIAL_LEFT,
     RESIDENTIAL_RIGHT,
@@ -234,6 +236,7 @@ const FLATS_MAP = {
     [OAKLAND_BACKDROP]: OaklandBackdrop,
     [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
+    [LIZ_COUCH_THOUGHT]: LizCouchThought,
     [RESIDENCE_BACKDROP]: ResidenceBackdrop,
     [RESIDENTIAL_LEFT]: ResidentialLeft,
     [RESIDENTIAL_RIGHT]: ResidentialRight,
