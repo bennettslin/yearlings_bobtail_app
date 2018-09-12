@@ -10,7 +10,7 @@ const
     NOHO_SCHOOL = {
         floor: {
             zIndices: [
-                [1],
+                [0],
                 [1],
                 [1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],

@@ -7,8 +7,11 @@
 
 /**
  * General rules:
+ * Backdrop flats should be level with floor.
  * Rooms are 7.5 cubes high.
  * Doors are 2 cubes wide, 6 cubes high.
+ * Chairs are 1.5 cubes high.
+ * Couches are 1 cube high (with cushion making up rest of height).
  */
 
 module.exports = [

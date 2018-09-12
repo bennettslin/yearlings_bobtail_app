@@ -6,8 +6,7 @@ import {
 import {
     d,
     f,
-    g,
-    k
+    g
 } from 'scene/cubesConstants'
 
 /**
@@ -39,11 +38,6 @@ const
         }
     },
     LIZ_COUCH_THOUGHT_CUBES = {
-        ceiling: {
-            zIndices: [
-                [k]
-            ]
-        },
         floor: {
             zIndices: [
                 [0],
