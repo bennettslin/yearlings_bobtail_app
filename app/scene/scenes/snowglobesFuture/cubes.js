@@ -3,18 +3,27 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    g
+    k
 } from 'scene/cubesConstants'
+
+/**
+ * Couch should match in lizCouch.
+ */
 
 const
     SNOWGLOBES_FUTURE_CUBES = {
+        ceiling: {
+            zIndices: [
+                [k]
+            ]
+        },
         floor: {
             zIndices: [
-                [g],
-                [g, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0],
-                [g, 8, 4, 4, 2, 2, 5, 5, 5, 5, 5, 0],
-                [g, 8, 4, 4, 2, 2, 5, 5, 5, 5, 5, 0],
-                [g, 8, 4, 4, 2, 2, 5, 5, 5, 5, 5, 0],
+                [0],
+                [0],
+                [0, 7, 3, 3, 0],
+                [0, 7, 3, 3, 0],
+                [0, 7, 3, 3, 0],
                 [0]
             ]
         }

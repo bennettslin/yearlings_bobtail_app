@@ -1,4 +1,47 @@
+/**
+ * 25%: Establish components for scene.
+ * 25%: Establish component configs for scene.
+ * 25%: Establish cubes for scene.
+ * 25%: Establish colours for scene.
+ */
+
+/**
+ * General rules:
+ * Rooms are 7.5 cubes high.
+ * Doors are 2 cubes wide, 6 cubes high.
+ */
+
 module.exports = [
+    {
+        task: 'logue',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        task: 'nohoHouses',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        task: 'nohoSchool',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        task: 'familyBathroom',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        task: 'freeway',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        task: 'porch',
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         task: 'changelingCave',
         workedHours: 0,

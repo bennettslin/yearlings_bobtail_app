@@ -4,8 +4,8 @@ const
     OAKLAND_HOUSES_CUBES = {
         floor: {
             zIndices: [
-                [1],
                 [0],
+                [1],
                 [0],
                 [0],
                 [0],
