@@ -3,7 +3,8 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PUPPETS
 } from 'constants/scene'
 
 import {
@@ -61,6 +62,10 @@ import {
     CONVERTIBLE_INTERIOR,
     HOSPITAL_MATTRESS
 } from 'scene/furnitureKeys'
+
+import {
+    CONVERTIBLE_FAR
+} from 'scene/puppetKeys'
 
 module.exports = [
     {
@@ -269,6 +274,9 @@ module.exports = [
             [FLATS]: {
                 [EL_CERRITO_BACKDROP]: true,
                 [EL_CERRITO_ROAD]: true
+            },
+            [PUPPETS]: {
+                [CONVERTIBLE_FAR]: true
             }
         },
         cubes: EL_CERRITO_KEY,

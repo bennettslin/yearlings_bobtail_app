@@ -3,7 +3,8 @@ import {
     // CUTOUTS,
     // FIXTURES,
     // FLATS,
-    FURNITURES
+    FURNITURES,
+    PUPPETS
 } from 'constants/scene'
 
 import { LIZ_COUCH_KEY } from 'scene/cubesKeys'
@@ -42,6 +43,12 @@ import {
     LIZ_GATE_INSIDE_OPEN
 } from 'scene/furnitureKeys'
 
+import {
+    OPAL_LAP,
+    OPAL_WINDOW,
+    OPAL_COUCH
+} from 'scene/puppetKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -61,6 +68,9 @@ module.exports = [
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [PUPPETS]: {
+                [OPAL_LAP]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -87,6 +97,9 @@ module.exports = [
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [PUPPETS]: {
+                [OPAL_WINDOW]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -113,6 +126,9 @@ module.exports = [
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [PUPPETS]: {
+                [OPAL_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -235,6 +251,9 @@ module.exports = [
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [PUPPETS]: {
+                [OPAL_WINDOW]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

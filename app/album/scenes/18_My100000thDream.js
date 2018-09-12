@@ -3,7 +3,8 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PUPPETS
 } from 'constants/scene'
 
 import {
@@ -64,6 +65,11 @@ import {
     EL_TORITO_DOOR_RIGHT,
     HOSPITAL_MATTRESS
 } from 'scene/furnitureKeys'
+
+import {
+    PUPPET_KHARI,
+    PUPPET_LIZ
+} from 'scene/puppetKeys'
 
 module.exports = [
     {
@@ -177,6 +183,10 @@ module.exports = [
             },
             [FLATS]: {
                 [WEDDING_BACKDROP]: true
+            },
+            [PUPPETS]: {
+                [PUPPET_KHARI]: true,
+                [PUPPET_LIZ]: true
             }
         },
         cubes: OUTDOOR_WEDDING_KEY,
