@@ -1,13 +1,11 @@
 import {
-    PCHELKA,
-    MUSHKA,
-    ROCKET,
-    EARTH,
-    SPACE_COLONY
+    OPAL_LAP,
+    OPAL_WINDOW,
+    OPAL_COUCH
 } from 'scene/puppetKeys'
 
 const ARRANGEMENTS_MAP = {
-    [PCHELKA]: {
+    [OPAL_LAP]: {
         yIndex: 1,
         arrangement: {
             xFloat: 5,
@@ -15,7 +13,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 3
         }
     },
-    [MUSHKA]: {
+    [OPAL_WINDOW]: {
         yIndex: 1,
         arrangement: {
             xFloat: 5,
@@ -23,23 +21,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 3
         }
     },
-    [ROCKET]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 5,
-            xWidth: 4,
-            zHeight: 1
-        }
-    },
-    [EARTH]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 5,
-            xWidth: 4,
-            zHeight: 1
-        }
-    },
-    [SPACE_COLONY]: {
+    [OPAL_COUCH]: {
         yIndex: 4,
         arrangement: {
             xFloat: 5,
