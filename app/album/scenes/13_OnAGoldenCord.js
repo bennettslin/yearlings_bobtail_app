@@ -2,7 +2,7 @@ import {
     ACTORS,
     // CUTOUTS,
     // FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -52,6 +52,21 @@ import { CROSSING_GUARD } from 'scene/instanceKeys/willy'
 
 import { YOUNG_CHILD } from 'scene/instanceKeys/songs'
 
+import {
+    OAKLAND_BACKDROP,
+    OAKLAND_HOUSE_LEFT,
+    OAKLAND_HOUSE_RIGHT,
+    RESIDENCE_BACKDROP,
+    RESIDENTIAL_LEFT,
+    RESIDENTIAL_RIGHT,
+    COMMERCIAL_BACKDROP,
+    COMMERCIAL_LEFT,
+    COMMERCIAL_RIGHT,
+    PUBLIC_BACKDROP,
+    PUBLIC_LEFT,
+    PUBLIC_RIGHT
+} from 'scene/flatKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -64,6 +79,11 @@ module.exports = [
                     description: 'side angle, cradling bracelet, blank',
                     instance: CORD_SIDE
                 }
+            },
+            [FLATS]: {
+                [OAKLAND_BACKDROP]: true,
+                [OAKLAND_HOUSE_LEFT]: true,
+                [OAKLAND_HOUSE_RIGHT]: true
             }
         },
         cubes: OAKLAND_HOUSES_KEY,
@@ -118,6 +138,11 @@ module.exports = [
                         instance: BENNETT_DEFIANT
                     }
                 }
+            },
+            [FLATS]: {
+                [RESIDENCE_BACKDROP]: true,
+                [RESIDENTIAL_LEFT]: true,
+                [RESIDENTIAL_RIGHT]: true
             }
         },
         cubes: OAKLAND_RESIDENTIAL_KEY,
@@ -153,6 +178,11 @@ module.exports = [
                         instance: OFFICER
                     }
                 }
+            },
+            [FLATS]: {
+                [COMMERCIAL_BACKDROP]: true,
+                [COMMERCIAL_LEFT]: true,
+                [COMMERCIAL_RIGHT]: true
             }
         },
         cubes: OAKLAND_COMMERCIAL_KEY,
@@ -212,6 +242,11 @@ module.exports = [
                         instance: CROSSING_GUARD
                     }
                 }
+            },
+            [FLATS]: {
+                [PUBLIC_BACKDROP]: true,
+                [PUBLIC_LEFT]: true,
+                [PUBLIC_RIGHT]: true
             }
         },
         cubes: OAKLAND_PUBLIC_KEY,

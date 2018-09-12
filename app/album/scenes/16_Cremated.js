@@ -2,7 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -48,6 +48,15 @@ import {
     HOSPITAL_RECORD_PLAYER
 } from 'scene/fixtureKeys'
 
+import {
+    EL_CERRITO_BACKDROP,
+    EL_CERRITO_ROAD,
+    CONVERTIBLE_FRONT,
+    CONVERTIBLE_BACK,
+    HOSPITAL_THOUGHT,
+    TENNIS_THOUGHT
+} from 'scene/flatKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -66,6 +75,12 @@ module.exports = [
                     description: 'sitting in car, putting on perfume',
                     instance: PERFUMING
                 }
+            },
+            [FLATS]: {
+                [EL_CERRITO_BACKDROP]: true,
+                [EL_CERRITO_ROAD]: true,
+                [CONVERTIBLE_FRONT]: true,
+                [CONVERTIBLE_BACK]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -91,6 +106,12 @@ module.exports = [
                     description: 'back angle, eyes closed, trying to get off',
                     instance: COWGIRL
                 }
+            },
+            [FLATS]: {
+                [EL_CERRITO_BACKDROP]: true,
+                [EL_CERRITO_ROAD]: true,
+                [CONVERTIBLE_FRONT]: true,
+                [CONVERTIBLE_BACK]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -116,6 +137,12 @@ module.exports = [
                     description: 'back angle, giving blowjob',
                     instance: BLOWJOB
                 }
+            },
+            [FLATS]: {
+                [EL_CERRITO_BACKDROP]: true,
+                [EL_CERRITO_ROAD]: true,
+                [CONVERTIBLE_FRONT]: true,
+                [CONVERTIBLE_BACK]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -141,6 +168,9 @@ module.exports = [
             },
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
+            },
+            [FLATS]: {
+                [HOSPITAL_THOUGHT]: true
             }
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
@@ -166,6 +196,10 @@ module.exports = [
             },
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
+            },
+            [FLATS]: {
+                [HOSPITAL_THOUGHT]: true,
+                [TENNIS_THOUGHT]: true
             }
         },
         cubes: EL_CERRITO_TENNIS_KEY,
@@ -191,6 +225,12 @@ module.exports = [
                     description: 'side, looking back, reversing car',
                     instance: REVERSING
                 }
+            },
+            [FLATS]: {
+                [EL_CERRITO_BACKDROP]: true,
+                [EL_CERRITO_ROAD]: true,
+                [CONVERTIBLE_FRONT]: true,
+                [CONVERTIBLE_BACK]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -202,6 +242,12 @@ module.exports = [
     {
         unitIndex: 11,
         description: `The car is in the background.`,
+        presences: {
+            [FLATS]: {
+                [EL_CERRITO_BACKDROP]: true,
+                [EL_CERRITO_ROAD]: true
+            }
+        },
         cubes: EL_CERRITO_KEY,
         sky: {
             time: TIME_ANYTIME,

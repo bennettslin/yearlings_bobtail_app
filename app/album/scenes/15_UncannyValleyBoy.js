@@ -2,7 +2,7 @@ import {
     ACTORS,
     // CUTOUTS,
     FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -81,6 +81,17 @@ import {
     RECORDING_MIC,
     RECORDING_BEERS
 } from 'scene/fixtureKeys'
+
+import {
+    SNOWGLOBES_PAST,
+    SNOWGLOBE_TETHERBALL,
+    SNOWGLOBES_PRESENT,
+    SNOWGLOBE_LIZ_BLINDS,
+    SNOWGLOBE_MIRIAM,
+    SNOWGLOBES_FUTURE,
+    SNOWGLOBE_LIZ_COUCH,
+    SNOWGLOBE_BENNETT
+} from 'scene/flatKeys'
 
 module.exports = [
     {
@@ -170,6 +181,10 @@ module.exports = [
                     description: 'side angle, consoling, cautious',
                     instance: COMFORTING
                 }
+            },
+            [FLATS]: {
+                [SNOWGLOBES_PAST]: true,
+                [SNOWGLOBE_TETHERBALL]: true
             }
         },
         cubes: SNOWGLOBES_PAST_KEY,
@@ -215,6 +230,11 @@ module.exports = [
                         instance: BENNETT_BANJO
                     }
                 }
+            },
+            [FLATS]: {
+                [SNOWGLOBES_PRESENT]: true,
+                [SNOWGLOBE_LIZ_BLINDS]: true,
+                [SNOWGLOBE_MIRIAM]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
@@ -273,6 +293,11 @@ module.exports = [
                 [RECORDING_CONSOLE]: true,
                 [RECORDING_MIC]: true,
                 [RECORDING_BEERS]: true
+            },
+            [FLATS]: {
+                [SNOWGLOBES_FUTURE]: true,
+                [SNOWGLOBE_LIZ_COUCH]: true,
+                [SNOWGLOBE_BENNETT]: true
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,

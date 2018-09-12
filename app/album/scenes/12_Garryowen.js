@@ -2,7 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     // FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -56,6 +56,13 @@ import {
 import {
     VOLKSWAGEN
 } from 'scene/cutoutKeys'
+
+import {
+    OAKLAND_BACKDROP,
+    OAKLAND_HOUSE_LEFT,
+    OAKLAND_HOUSE_RIGHT
+} from 'scene/flatKeys'
+
 
 module.exports = [
     {
@@ -117,6 +124,11 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [VOLKSWAGEN]: true
+            },
+            [FLATS]: {
+                [OAKLAND_BACKDROP]: true,
+                [OAKLAND_HOUSE_LEFT]: true,
+                [OAKLAND_HOUSE_RIGHT]: true
             }
         },
         cubes: OAKLAND_HOUSES_KEY,

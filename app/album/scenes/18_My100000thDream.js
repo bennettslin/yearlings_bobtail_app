@@ -2,7 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    // FLATS,
+    FLATS,
     // FURNITURES
 } from 'constants/scene'
 
@@ -50,6 +50,14 @@ import {
 import {
     HOSPITAL_RECORD_PLAYER
 } from 'scene/fixtureKeys'
+
+import {
+    PAMPAS_BACKDROP,
+    WEDDING_BACKDROP,
+    CLIFF_BACKDROP,
+    CLIFF_GRAVES_BACKDROP,
+    INVERSE_THOUGHT
+} from 'scene/flatKeys'
 
 module.exports = [
     {
@@ -122,6 +130,9 @@ module.exports = [
                         instance: GOPI
                     }
                 }
+            },
+            [FLATS]: {
+                [PAMPAS_BACKDROP]: true
             }
         },
         cubes: PAMPAS_KEY,
@@ -153,6 +164,9 @@ module.exports = [
             [CUTOUTS]: {
                 [WEDDING_PLATFORM]: true,
                 [WEDDING_CROWD]: true
+            },
+            [FLATS]: {
+                [WEDDING_BACKDROP]: true
             }
         },
         cubes: OUTDOOR_WEDDING_KEY,
@@ -180,6 +194,10 @@ module.exports = [
                         instance: CLIFF
                     }
                 }
+            },
+            [FLATS]: {
+                [CLIFF_BACKDROP]: true,
+                [CLIFF_GRAVES_BACKDROP]: true
             }
         },
         cubes: CLIFF_KEY,
@@ -221,6 +239,9 @@ module.exports = [
             },
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
+            },
+            [FLATS]: {
+                [INVERSE_THOUGHT]: true
             }
         },
         cubes: CLIFF_DEATHBED_KEY,
