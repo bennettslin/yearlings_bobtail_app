@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -57,6 +57,11 @@ import {
     TENNIS_THOUGHT
 } from 'scene/flatKeys'
 
+import {
+    CONVERTIBLE_INTERIOR,
+    HOSPITAL_MATTRESS
+} from 'scene/furnitureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -81,6 +86,9 @@ module.exports = [
                 [EL_CERRITO_ROAD]: true,
                 [CONVERTIBLE_FRONT]: true,
                 [CONVERTIBLE_BACK]: true
+            },
+            [FURNITURES]: {
+                [CONVERTIBLE_INTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -112,6 +120,9 @@ module.exports = [
                 [EL_CERRITO_ROAD]: true,
                 [CONVERTIBLE_FRONT]: true,
                 [CONVERTIBLE_BACK]: true
+            },
+            [FURNITURES]: {
+                [CONVERTIBLE_INTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -143,6 +154,9 @@ module.exports = [
                 [EL_CERRITO_ROAD]: true,
                 [CONVERTIBLE_FRONT]: true,
                 [CONVERTIBLE_BACK]: true
+            },
+            [FURNITURES]: {
+                [CONVERTIBLE_INTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -171,6 +185,9 @@ module.exports = [
             },
             [FLATS]: {
                 [HOSPITAL_THOUGHT]: true
+            },
+            [FURNITURES]: {
+                [HOSPITAL_MATTRESS]: true
             }
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
@@ -200,6 +217,9 @@ module.exports = [
             [FLATS]: {
                 [HOSPITAL_THOUGHT]: true,
                 [TENNIS_THOUGHT]: true
+            },
+            [FURNITURES]: {
+                [HOSPITAL_MATTRESS]: true
             }
         },
         cubes: EL_CERRITO_TENNIS_KEY,
@@ -231,6 +251,9 @@ module.exports = [
                 [EL_CERRITO_ROAD]: true,
                 [CONVERTIBLE_FRONT]: true,
                 [CONVERTIBLE_BACK]: true
+            },
+            [FURNITURES]: {
+                [CONVERTIBLE_INTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,

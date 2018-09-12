@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     // FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -63,6 +63,11 @@ import {
     OAKLAND_HOUSE_RIGHT
 } from 'scene/flatKeys'
 
+import {
+    LIZ_CUSHIONS,
+    LIZ_DOOR,
+    LIZ_GATE_INSIDE
+} from 'scene/furnitureKeys'
 
 module.exports = [
     {
@@ -84,6 +89,11 @@ module.exports = [
                         instance: BRUSHED_OFF
                     }
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -220,6 +230,11 @@ module.exports = [
                         instance: LEAVING_CRUMBLED
                     }
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

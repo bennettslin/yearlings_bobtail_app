@@ -3,7 +3,7 @@ import {
     // CUTOUTS,
     // FIXTURES,
     // FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import { LIZ_COUCH_KEY } from 'scene/cubesKeys'
@@ -34,6 +34,14 @@ import {
     ASLEEP_COUCH
 } from 'scene/instanceKeys/liz'
 
+import {
+    LIZ_CUSHIONS,
+    LIZ_DOOR,
+    LIZ_DOOR_OPEN,
+    LIZ_GATE_INSIDE,
+    LIZ_GATE_INSIDE_OPEN
+} from 'scene/furnitureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -48,6 +56,11 @@ module.exports = [
                         instance: PETTING_SEATED
                     }
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -69,6 +82,11 @@ module.exports = [
                         instance: PETTING_STANDING
                     }
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -90,6 +108,11 @@ module.exports = [
                         instance: SIFTING_TCHOTCHKES
                     }
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -117,6 +140,11 @@ module.exports = [
                     description: 'side, cheery in a low-key way',
                     instance: ARRIVED
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR_OPEN]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -144,6 +172,11 @@ module.exports = [
                     description: 'side, seated, eating, judgmental',
                     instance: JUDGMENTAL
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -171,6 +204,11 @@ module.exports = [
                     description: 'back angle, concerned',
                     instance: CONCERNED
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE_OPEN]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -192,6 +230,11 @@ module.exports = [
                         instance: ASLEEP_COUCH
                     }
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -203,6 +246,13 @@ module.exports = [
     {
         unitIndex: 12,
         description: `Same scene. Peacocks.`,
+        presences: {
+            [FURNITURES]: {
+                [LIZ_GATE_INSIDE]: true,
+                [LIZ_CUSHIONS]: true,
+                [LIZ_DOOR]: true
+            }
+        },
         cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,

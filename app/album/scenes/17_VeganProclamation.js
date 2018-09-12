@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     // FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -69,6 +69,10 @@ import {
 import {
     BURGER_WRAPPER
 } from 'scene/fixtureKeys'
+
+import {
+    LOADING_DOCK_DOOR
+} from 'scene/furnitureKeys'
 
 module.exports = [
     {
@@ -162,6 +166,9 @@ module.exports = [
             },
             [FIXTURES]: {
                 [BURGER_WRAPPER]: true
+            },
+            [FURNITURES]: {
+                [LOADING_DOCK_DOOR]: true
             }
         },
         cubes: ALLEY_KEY,

@@ -3,7 +3,7 @@ import {
     // CUTOUTS,
     // FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -67,6 +67,10 @@ import {
     PUBLIC_RIGHT
 } from 'scene/flatKeys'
 
+import {
+    LIZ_CUSHIONS
+} from 'scene/furnitureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -111,6 +115,9 @@ module.exports = [
                         instance: RETURNING_CORD
                     }
                 }
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,

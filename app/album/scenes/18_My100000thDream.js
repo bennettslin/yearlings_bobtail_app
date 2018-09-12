@@ -3,7 +3,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -59,6 +59,12 @@ import {
     INVERSE_THOUGHT
 } from 'scene/flatKeys'
 
+import {
+    EL_TORITO_DOOR_LEFT,
+    EL_TORITO_DOOR_RIGHT,
+    HOSPITAL_MATTRESS
+} from 'scene/furnitureKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -79,6 +85,10 @@ module.exports = [
                         instance: EL_TORITO
                     }
                 }
+            },
+            [FURNITURES]: {
+                [EL_TORITO_DOOR_LEFT]: true,
+                [EL_TORITO_DOOR_RIGHT]: true
             }
         },
         cubes: EL_TORITO_KEY,
@@ -242,6 +252,9 @@ module.exports = [
             },
             [FLATS]: {
                 [INVERSE_THOUGHT]: true
+            },
+            [FURNITURES]: {
+                [HOSPITAL_MATTRESS]: true
             }
         },
         cubes: CLIFF_DEATHBED_KEY,

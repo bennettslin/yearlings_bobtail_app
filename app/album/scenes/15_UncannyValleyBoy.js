@@ -3,7 +3,7 @@ import {
     // CUTOUTS,
     FIXTURES,
     FLATS,
-    // FURNITURES
+    FURNITURES
 } from 'constants/scene'
 
 import {
@@ -92,6 +92,11 @@ import {
     SNOWGLOBE_LIZ_COUCH,
     SNOWGLOBE_BENNETT
 } from 'scene/flatKeys'
+
+import {
+    LIZ_CUSHIONS,
+    MIRIAM_CUSHIONS
+} from 'scene/furnitureKeys'
 
 module.exports = [
     {
@@ -235,6 +240,9 @@ module.exports = [
                 [SNOWGLOBES_PRESENT]: true,
                 [SNOWGLOBE_LIZ_BLINDS]: true,
                 [SNOWGLOBE_MIRIAM]: true
+            },
+            [FURNITURES]: {
+                [MIRIAM_CUSHIONS]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
@@ -298,6 +306,9 @@ module.exports = [
                 [SNOWGLOBES_FUTURE]: true,
                 [SNOWGLOBE_LIZ_COUCH]: true,
                 [SNOWGLOBE_BENNETT]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,
