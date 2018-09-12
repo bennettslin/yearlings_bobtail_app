@@ -1,18 +1,9 @@
 import {
-    CROWD_BACK_NEAR,
-    CROWD_BACK_FAR
+    IV_DRIP
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
-    [CROWD_BACK_NEAR]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 1,
-            xWidth: 1,
-            zHeight: 2
-        }
-    },
-    [CROWD_BACK_FAR]: {
+    [IV_DRIP]: {
         yIndex: 5,
         arrangement: {
             xFloat: 1,

@@ -1,14 +1,11 @@
 import {
-    CUTOUTS,
-    FIXTURES
+    CUTOUTS
 } from 'constants/scene'
 
 import ARRANGEMENTS_CUTOUTS from './things/cutouts'
-import ARRANGEMENTS_FIXTURES from './things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
-    [FIXTURES]: ARRANGEMENTS_FIXTURES
+    [CUTOUTS]: ARRANGEMENTS_CUTOUTS
 }
 
 export default ARRANGEMENTS_THINGS

@@ -1,10 +1,10 @@
 import {
-    CROWD_BACK_NEAR,
-    CROWD_BACK_FAR
+    WEDDING_PLATFORM,
+    WEDDING_CROWD
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
-    [CROWD_BACK_NEAR]: {
+    [WEDDING_PLATFORM]: {
         yIndex: 5,
         arrangement: {
             xFloat: 1,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 2
         }
     },
-    [CROWD_BACK_FAR]: {
+    [WEDDING_CROWD]: {
         yIndex: 5,
         arrangement: {
             xFloat: 1,
