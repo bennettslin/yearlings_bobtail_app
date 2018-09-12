@@ -1,9 +1,9 @@
 import {
-    CLIFF
-} from 'scene/instanceKeys/songs'
+    SHOW_ANNOYED
+} from 'scene/instanceKeys/bennett'
 
 const ARRANGEMENTS_MAP = {
-    [CLIFF]: {
+    [SHOW_ANNOYED]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

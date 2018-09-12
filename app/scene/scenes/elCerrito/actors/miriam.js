@@ -1,6 +1,5 @@
 import {
     PERFUMING,
-    TENNIS,
     REVERSING
 } from 'scene/instanceKeys/miriam'
 
@@ -27,14 +26,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [BLOWJOB]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [TENNIS]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

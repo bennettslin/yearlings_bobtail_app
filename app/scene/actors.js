@@ -38,6 +38,7 @@ import ACTORS_DISHROOM from 'scene/scenes/dishroom/actors'
 import ACTORS_WAITING_ROOM from 'scene/scenes/waitingRoom/actors'
 import ACTORS_CLUB_FRONT from 'scene/scenes/clubFront/actors'
 import ACTORS_CLUB_SIDE from 'scene/scenes/clubSide/actors'
+import ACTORS_CLUB_FAR from 'scene/scenes/clubFar/actors'
 import ACTORS_CLUB_LOADING from 'scene/scenes/clubLoading/actors'
 import ACTORS_BENNETT_BED from 'scene/scenes/bennettBed/actors'
 import ACTORS_BENNETT_COUCH from 'scene/scenes/bennettCouch/actors'
@@ -65,6 +66,7 @@ import ACTORS_EL_TORITO from 'scene/scenes/elTorito/actors'
 import ACTORS_PAMPAS from 'scene/scenes/pampas/actors'
 import ACTORS_OUTDOOR_WEDDING from 'scene/scenes/outdoorWedding/actors'
 import ACTORS_CLIFF from 'scene/scenes/cliff/actors'
+import ACTORS_DEATHBED from 'scene/scenes/deathbed/actors'
 
 const SCENE_ARRANGEMENTS = [
     ACTORS_LOGUE,
@@ -99,6 +101,7 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_WAITING_ROOM,
     ACTORS_CLUB_FRONT,
     ACTORS_CLUB_SIDE,
+    ACTORS_CLUB_FAR,
     ACTORS_CLUB_LOADING,
     ACTORS_BENNETT_BED,
     ACTORS_BENNETT_COUCH,
@@ -125,7 +128,8 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_EL_TORITO,
     ACTORS_PAMPAS,
     ACTORS_OUTDOOR_WEDDING,
-    ACTORS_CLIFF
+    ACTORS_CLIFF,
+    ACTORS_DEATHBED
 ]
 
 const ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((arrangements, arrangement) => {

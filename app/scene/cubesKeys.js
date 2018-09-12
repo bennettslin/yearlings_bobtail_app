@@ -52,7 +52,7 @@ const
     WAITING_ROOM_KEY = 'waitingRoom',
 
     CLUB_FRONT_KEY = 'clubFront',
-    CLUB_FRONT_FAR_KEY = 'clubFrontFar',
+    CLUB_FAR_KEY = 'clubFrontFar',
     CLUB_SIDE_CROWD_KEY = 'clubSideCrowd',
     CLUB_SIDE_STAGE_KEY = 'clubSideStage',
     CLUB_LOADING = 'clubLoading',
@@ -140,7 +140,7 @@ export {
     DISHROOM_KEY,
     WAITING_ROOM_KEY,
     CLUB_FRONT_KEY,
-    CLUB_FRONT_FAR_KEY,
+    CLUB_FAR_KEY,
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
     CLUB_LOADING,

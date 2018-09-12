@@ -1,9 +1,9 @@
 import {
-    CLIFF
-} from 'scene/instanceKeys/songs'
+    TENNIS
+} from 'scene/instanceKeys/miriam'
 
 const ARRANGEMENTS_MAP = {
-    [CLIFF]: {
+    [TENNIS]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

@@ -1,9 +1,9 @@
 import {
-    CLIFF
-} from 'scene/instanceKeys/songs'
+    INTRODUCING
+} from 'scene/instanceKeys/tristan'
 
 const ARRANGEMENTS_MAP = {
-    [CLIFF]: {
+    [INTRODUCING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

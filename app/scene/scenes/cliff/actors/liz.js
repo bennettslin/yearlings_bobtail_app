@@ -1,18 +1,9 @@
 import {
-    CLIFF,
-    FINAL_DREAM
+    CLIFF
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [CLIFF]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [FINAL_DREAM]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

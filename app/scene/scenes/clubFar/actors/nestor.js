@@ -1,9 +1,9 @@
 import {
-    CLIFF
+    GREETING
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [CLIFF]: {
+    [GREETING]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

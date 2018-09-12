@@ -1,6 +1,5 @@
 import {
     REMOVING_PANTS,
-    INFIRM,
     DISPOSING_CONDOM
 } from 'scene/instanceKeys/bennett'
 
@@ -27,14 +26,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [BLOWJOB]: {
-        yIndex: -1,
-        arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
-        }
-    },
-    [INFIRM]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

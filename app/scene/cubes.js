@@ -32,6 +32,7 @@ import CUBES_DISHROOM from 'scene/scenes/dishroom/cubes'
 import CUBES_WAITING_ROOM from 'scene/scenes/waitingRoom/cubes'
 import CUBES_CLUB_FRONT from 'scene/scenes/clubFront/cubes'
 import CUBES_CLUB_SIDE from 'scene/scenes/clubSide/cubes'
+import CUBES_CLUB_FAR from 'scene/scenes/clubFar/cubes'
 import CUBES_CLUB_LOADING from 'scene/scenes/clubLoading/cubes'
 import CUBES_BENNETT_BED from 'scene/scenes/bennettBed/cubes'
 import CUBES_BENNETT_COUCH from 'scene/scenes/bennettCouch/cubes'
@@ -59,6 +60,7 @@ import CUBES_EL_TORITO from 'scene/scenes/elTorito/cubes'
 import CUBES_PAMPAS from 'scene/scenes/pampas/cubes'
 import CUBES_OUTDOOR_WEDDING from 'scene/scenes/outdoorWedding/cubes'
 import CUBES_CLIFF from 'scene/scenes/cliff/cubes'
+import CUBES_DEATHBED from 'scene/scenes/deathbed/cubes'
 
 const CUBES = {
     ...CUBES_DEFAULT_STAGE,
@@ -95,6 +97,7 @@ const CUBES = {
     ...CUBES_WAITING_ROOM,
     ...CUBES_CLUB_FRONT,
     ...CUBES_CLUB_SIDE,
+    ...CUBES_CLUB_FAR,
     ...CUBES_CLUB_LOADING,
     ...CUBES_BENNETT_BED,
     ...CUBES_BENNETT_COUCH,
@@ -121,7 +124,8 @@ const CUBES = {
     ...CUBES_EL_TORITO,
     ...CUBES_PAMPAS,
     ...CUBES_OUTDOOR_WEDDING,
-    ...CUBES_CLIFF
+    ...CUBES_CLIFF,
+    ...CUBES_DEATHBED
 }
 
 export {

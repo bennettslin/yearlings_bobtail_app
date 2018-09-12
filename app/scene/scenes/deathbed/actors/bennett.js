@@ -1,13 +1,13 @@
 import {
-    DISTRACTED
+    INFIRM
 } from 'scene/instanceKeys/bennett'
 
 import {
-    GREETING
+    FINAL_DREAM
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [DISTRACTED]: {
+    [INFIRM]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
@@ -15,7 +15,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0
         }
     },
-    [GREETING]: {
+    [FINAL_DREAM]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,

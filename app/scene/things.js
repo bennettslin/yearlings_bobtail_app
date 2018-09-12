@@ -32,6 +32,7 @@ import THINGS_DISHROOM from 'scene/scenes/dishroom/things'
 import THINGS_WAITING_ROOM from 'scene/scenes/waitingRoom/things'
 import THINGS_CLUB_FRONT from 'scene/scenes/clubFront/things'
 import THINGS_CLUB_SIDE from 'scene/scenes/clubSide/things'
+import THINGS_CLUB_FAR from 'scene/scenes/clubFar/things'
 import THINGS_CLUB_LOADING from 'scene/scenes/clubLoading/things'
 import THINGS_BENNETT_BED from 'scene/scenes/bennettBed/things'
 import THINGS_BENNETT_COUCH from 'scene/scenes/bennettCouch/things'
@@ -59,6 +60,7 @@ import THINGS_EL_TORITO from 'scene/scenes/elTorito/things'
 import THINGS_PAMPAS from 'scene/scenes/pampas/things'
 import THINGS_OUTDOOR_WEDDING from 'scene/scenes/outdoorWedding/things'
 import THINGS_CLIFF from 'scene/scenes/cliff/things'
+import THINGS_DEATHBED from 'scene/scenes/deathbed/things'
 
 const SCENE_ARRANGEMENTS = [
     THINGS_NOHO_HOUSES,
@@ -93,6 +95,7 @@ const SCENE_ARRANGEMENTS = [
     THINGS_WAITING_ROOM,
     THINGS_CLUB_FRONT,
     THINGS_CLUB_SIDE,
+    THINGS_CLUB_FAR,
     THINGS_CLUB_LOADING,
     THINGS_BENNETT_BED,
     THINGS_BENNETT_COUCH,
@@ -119,7 +122,8 @@ const SCENE_ARRANGEMENTS = [
     THINGS_EL_TORITO,
     THINGS_PAMPAS,
     THINGS_OUTDOOR_WEDDING,
-    THINGS_CLIFF
+    THINGS_CLIFF,
+    THINGS_DEATHBED
 ]
 
 const ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((arrangements, arrangement) => {

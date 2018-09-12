@@ -1,5 +1,5 @@
 import {
-    CLUB_FRONT_FAR_KEY,
+    CLUB_FAR_KEY,
     LIZ_BED_KEY,
     ALLEY_KEY,
     BANCROFT_LIBRARY_KEY,
@@ -117,7 +117,7 @@ module.exports = [
                 }
             }
         },
-        cubes: CLUB_FRONT_FAR_KEY,
+        cubes: CLUB_FAR_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
