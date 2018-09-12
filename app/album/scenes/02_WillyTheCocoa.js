@@ -71,7 +71,8 @@ import {
     FIRE_HYDRANT,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
-    CAMPFIRE
+    CAMPFIRE,
+    STALACTITES
 } from 'scene/cutoutKeys'
 
 import {
@@ -88,8 +89,7 @@ import {
     BEDROOM_SIREN_BACKDROP,
     CAPTAIN_BED_DRAWERS,
     FAMILY_HOUSE,
-    CAVE_SHADOWS,
-    STALACTITES
+    CAVE_SHADOWS
 } from 'scene/flatKeys'
 
 import {
@@ -338,12 +338,12 @@ module.exports = [
             [CUTOUTS]: {
                 [TROLL_SHADOW_LEFT]: true,
                 [TROLL_SHADOW_RIGHT]: true,
-                [CAMPFIRE]: true
+                [CAMPFIRE]: true,
+                [STALACTITES]: true
             },
             [FLATS]: {
                 [FAMILY_HOUSE]: true,
-                [CAVE_SHADOWS]: true,
-                [STALACTITES]: true
+                [CAVE_SHADOWS]: true
             }
         },
         cubes: CHANGELING_CAVE_KEY,

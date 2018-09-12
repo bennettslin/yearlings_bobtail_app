@@ -1,7 +1,6 @@
 import {
     FAMILY_HOUSE,
-    CAVE_SHADOWS,
-    STALACTITES
+    CAVE_SHADOWS
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -19,14 +18,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 2,
             xWidth: 5,
             zHeight: 3
-        }
-    },
-    [STALACTITES]: {
-        yIndex: 2,
-        arrangement: {
-            xFloat: 8,
-            xWidth: 5,
-            zHeight: 5
         }
     }
 }

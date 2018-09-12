@@ -14,7 +14,6 @@ import BedroomSirenBackdrop from './Flats/Bedroom/BedroomSirenBackdrop'
 import CaptainBedDrawers from './Flats/Bedroom/CaptainBedDrawers'
 import FamilyHouse from './Flats/ChangelingCave/FamilyHouse'
 import CaveShadows from './Flats/ChangelingCave/CaveShadows'
-import Stalactites from './Flats/ChangelingCave/Stalactites'
 import TaiwanMountainsFar from './Flats/PuppetShow/TaiwanMountainsFar'
 import TaiwanMountainsBridged from './Flats/PuppetShow/TaiwanMountainsBridged'
 import TaiwanMountainsNear from './Flats/PuppetShow/TaiwanMountainsNear'
@@ -81,10 +80,6 @@ import ElCerritoBackdrop from './Flats/ElCerrito/ElCerritoBackdrop'
 import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
 import ConvertibleFront from './Flats/ElCerrito/ConvertibleFront'
 import ConvertibleBack from './Flats/ElCerrito/ConvertibleBack'
-import CrowdSideNear from './Flats/ClubFar/CrowdSideNear'
-import CrowdSideFar from './Flats/ClubFar/CrowdSideFar'
-import CrowdBackNear from './Flats/ClubFar/CrowdBackNear'
-import CrowdBackFar from './Flats/ClubFar/CrowdBackFar'
 import PampasBackdrop from './Flats/Pampas/PampasBackdrop'
 import WeddingBackdrop from './Flats/OutdoorWedding/WeddingBackdrop'
 import CliffBackdrop from './Flats/Cliff/CliffBackdrop'
@@ -106,7 +101,6 @@ import {
     CAPTAIN_BED_DRAWERS,
     FAMILY_HOUSE,
     CAVE_SHADOWS,
-    STALACTITES,
     TAIWAN_MOUNTAINS_FAR,
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
@@ -173,10 +167,6 @@ import {
     EL_CERRITO_ROAD,
     CONVERTIBLE_FRONT,
     CONVERTIBLE_BACK,
-    CROWD_SIDE_NEAR,
-    CROWD_SIDE_FAR,
-    CROWD_BACK_NEAR,
-    CROWD_BACK_FAR,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     CLIFF_BACKDROP,
@@ -199,7 +189,6 @@ const FLATS_MAP = {
     [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers,
     [FAMILY_HOUSE]: FamilyHouse,
     [CAVE_SHADOWS]: CaveShadows,
-    [STALACTITES]: Stalactites,
     [TAIWAN_MOUNTAINS_FAR]: TaiwanMountainsFar,
     [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
     [TAIWAN_MOUNTAINS_NEAR]: TaiwanMountainsNear,
@@ -266,10 +255,6 @@ const FLATS_MAP = {
     [EL_CERRITO_ROAD]: ElCerritoRoad,
     [CONVERTIBLE_FRONT]: ConvertibleFront,
     [CONVERTIBLE_BACK]: ConvertibleBack,
-    [CROWD_SIDE_NEAR]: CrowdSideNear,
-    [CROWD_SIDE_FAR]: CrowdSideFar,
-    [CROWD_BACK_NEAR]: CrowdBackNear,
-    [CROWD_BACK_FAR]: CrowdBackFar,
     [PAMPAS_BACKDROP]: PampasBackdrop,
     [WEDDING_BACKDROP]: WeddingBackdrop,
     [CLIFF_BACKDROP]: CliffBackdrop,

@@ -14,6 +14,7 @@ import PorchPlantsRight from './Cutouts/Porch/PorchPlantsRight'
 import TrollShadowLeft from './Cutouts/ChangelingCave/TrollShadowLeft'
 import TrollShadowRight from './Cutouts/ChangelingCave/TrollShadowRight'
 import Campfire from './Cutouts/ChangelingCave/Campfire'
+import Stalactites from './Cutouts/ChangelingCave/Stalactites'
 import SchoolbusFront from './Cutouts/Schoolbus/SchoolbusFront'
 import SchoolbusBack from './Cutouts/Schoolbus/SchoolbusBack'
 import BuddhaShrine from './Cutouts/TaiwanRoom/BuddhaShrine'
@@ -78,7 +79,11 @@ import HowieFridge from './Cutouts/Attic/HowieFridge'
 import Television from './Cutouts/Attic/Television'
 import MonitorSpeakerSide from './Cutouts/ClubSide/MonitorSpeakerSide'
 import WallSpeakerSide from './Cutouts/ClubSide/WallSpeakerSide'
+import CrowdSideNear from './Cutouts/ClubSide/CrowdSideNear'
+import CrowdSideFar from './Cutouts/ClubSide/CrowdSideFar'
 import Volkswagen from './Cutouts/OaklandHouses/Volkswagen'
+import CrowdBackNear from './Cutouts/ClubFar/CrowdBackNear'
+import CrowdBackFar from './Cutouts/ClubFar/CrowdBackFar'
 import Dumpster from './Cutouts/Alley/Dumpster'
 import WeddingPlatform from './Cutouts/OutdoorWedding/WeddingPlatform'
 import WeddingCrowd from './Cutouts/OutdoorWedding/WeddingCrowd'
@@ -97,6 +102,7 @@ import {
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
+    STALACTITES,
     SCHOOLBUS_FRONT,
     SCHOOLBUS_BACK,
     BUDDHA_SHRINE,
@@ -161,7 +167,11 @@ import {
     TELEVISION,
     MONITOR_SPEAKER_SIDE,
     WALL_SPEAKER_SIDE,
+    CROWD_SIDE_NEAR,
+    CROWD_SIDE_FAR,
     VOLKSWAGEN,
+    CROWD_BACK_NEAR,
+    CROWD_BACK_FAR,
     DUMPSTER,
     WEDDING_PLATFORM,
     WEDDING_CROWD,
@@ -181,6 +191,7 @@ const CUTOUTS_MAP = {
     [TROLL_SHADOW_LEFT]: TrollShadowLeft,
     [TROLL_SHADOW_RIGHT]: TrollShadowRight,
     [CAMPFIRE]: Campfire,
+    [STALACTITES]: Stalactites,
     [SCHOOLBUS_FRONT]: SchoolbusFront,
     [SCHOOLBUS_BACK]: SchoolbusBack,
     [BUDDHA_SHRINE]: BuddhaShrine,
@@ -245,7 +256,11 @@ const CUTOUTS_MAP = {
     [TELEVISION]: Television,
     [MONITOR_SPEAKER_SIDE]: MonitorSpeakerSide,
     [WALL_SPEAKER_SIDE]: WallSpeakerSide,
+    [CROWD_SIDE_NEAR]: CrowdSideNear,
+    [CROWD_SIDE_FAR]: CrowdSideFar,
     [VOLKSWAGEN]: Volkswagen,
+    [CROWD_BACK_NEAR]: CrowdBackNear,
+    [CROWD_BACK_FAR]: CrowdBackFar,
     [DUMPSTER]: Dumpster,
     [WEDDING_PLATFORM]: WeddingPlatform,
     [WEDDING_CROWD]: WeddingCrowd,

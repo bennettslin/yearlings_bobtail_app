@@ -1,7 +1,8 @@
 import {
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
-    CAMPFIRE
+    CAMPFIRE,
+    STALACTITES
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -27,6 +28,14 @@ const ARRANGEMENTS_MAP = {
             xFloat: 10.5,
             xWidth: 2,
             zHeight: 3
+        }
+    },
+    [STALACTITES]: {
+        yIndex: 2,
+        arrangement: {
+            xFloat: 8,
+            xWidth: 5,
+            zHeight: 5
         }
     }
 }
