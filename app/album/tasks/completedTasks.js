@@ -3852,4 +3852,14 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Have a past sky.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Change zOffset to measure whole cubes, not half.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

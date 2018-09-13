@@ -9,7 +9,7 @@ const ARRANGEMENTS_MAP = {
             xFloat: 2,
             xWidth: 1,
             zHeight: 1,
-            zOffset: 2
+            zOffset: 1
         }
     }
 }

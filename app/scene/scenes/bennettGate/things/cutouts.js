@@ -18,7 +18,7 @@ const ARRANGEMENTS_MAP = {
             xFloat: 5.5,
             xWidth: 1,
             zHeight: 1,
-            zOffset: 5
+            zOffset: 3
         }
     }
 }

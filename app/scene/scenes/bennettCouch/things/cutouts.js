@@ -10,7 +10,7 @@ const ARRANGEMENTS_MAP = {
             xFloat: 9,
             xWidth: 2,
             zHeight: 3,
-            zOffset: 4
+            zOffset: 2
         }
     },
     [LEONARD_COHEN_POSTER]: {
@@ -19,7 +19,7 @@ const ARRANGEMENTS_MAP = {
             xFloat: 9,
             xWidth: 2,
             zHeight: 3,
-            zOffset: 4
+            zOffset: 2
         }
     }
 }

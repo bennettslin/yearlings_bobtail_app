@@ -21,7 +21,8 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_SPRING
+    SEASON_SPRING,
+    SEASON_PAST
 } from 'scene/sky'
 
 import {
@@ -154,7 +155,7 @@ module.exports = [
         cubes: WALGREENS_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SPRING
+            season: SEASON_PAST
         }
     },
     {

@@ -308,19 +308,25 @@ export const getHorizontalPlaneFractionsForSlantDirection = ({
     slantDirection
 }) => {
 
+    /**
+     * Scenes measure zOffset height at same scale as width. We'll adjust it
+     * here to reflect zIndex height.
+     */
+    const adjustedZOffset = zOffset * 2
+
     if (slantDirection === 'left') {
         return _getHorizontalPlaneFractionsForSlantedLeft(
-            xIndex, yIndex, zIndex, xOffset, zOffset
+            xIndex, yIndex, zIndex, xOffset, adjustedZOffset
         )
 
     } else if (slantDirection === 'right') {
         return _getHorizontalPlaneFractionsForSlantedRight(
-            xIndex, yIndex, zIndex, xOffset, zOffset
+            xIndex, yIndex, zIndex, xOffset, adjustedZOffset
         )
 
     } else {
         return _getHorizontalPlaneFractionsForDefault(
-            xIndex, yIndex, zIndex, xOffset, zOffset
+            xIndex, yIndex, zIndex, xOffset, adjustedZOffset
         )
     }
 }

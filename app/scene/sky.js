@@ -13,7 +13,8 @@ SEASON_INDOOR = 'indoor',
 SEASON_SPRING = 'spring',
 SEASON_SUMMER = 'summer',
 SEASON_AUTUMN = 'autumn',
-SEASON_WINTER = 'winter'
+SEASON_WINTER = 'winter',
+SEASON_PAST = 'past'
 
 export {
     TIME_ANYTIME,
@@ -28,5 +29,6 @@ export {
     SEASON_SPRING,
     SEASON_SUMMER,
     SEASON_AUTUMN,
-    SEASON_WINTER
+    SEASON_WINTER,
+    SEASON_PAST
 }

@@ -11,7 +11,7 @@ const ARRANGEMENTS_MAP = {
             xFloat: 9,
             xWidth: 1,
             zHeight: 2,
-            zOffset: 4
+            zOffset: 2
         }
     },
     [PAINTING]: {
@@ -20,7 +20,7 @@ const ARRANGEMENTS_MAP = {
             xFloat: 4,
             xWidth: 3,
             zHeight: 2,
-            zOffset: 3
+            zOffset: 4
         }
     },
     [WAITING_ROOM_PLANT]: {

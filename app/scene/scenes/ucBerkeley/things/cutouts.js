@@ -28,8 +28,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 4,
             xWidth: 2,
-            zHeight: 2,
-            zOffset: 3
+            zHeight: 2
         }
     },
     [UC_BERKELEY_TREE_LEFT]: {
@@ -37,8 +36,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 4,
             xWidth: 2,
-            zHeight: 2,
-            zOffset: 3
+            zHeight: 2
         }
     },
     [UC_BERKELEY_TREE_RIGHT]: {
@@ -46,8 +44,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 4,
             xWidth: 2,
-            zHeight: 2,
-            zOffset: 3
+            zHeight: 2
         }
     }
 }

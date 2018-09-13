@@ -14,7 +14,7 @@ const ARRANGEMENTS_MAP = {
             xFloat: 4,
             xWidth: 5,
             zHeight: 2,
-            zOffset: 4
+            zOffset: 2
         }
     },
     [TRAY_CART]: {

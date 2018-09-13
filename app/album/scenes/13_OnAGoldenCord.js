@@ -16,7 +16,8 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_AUTUMN
+    SEASON_AUTUMN,
+    SEASON_PAST
 } from 'scene/sky'
 
 import {
@@ -127,7 +128,7 @@ module.exports = [
         cubes: LIZ_COUCH_THOUGHT_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_PAST
         }
     },
     {
