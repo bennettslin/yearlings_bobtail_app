@@ -58,8 +58,8 @@ const
     EL_TORITO_DOOR_RIGHT = 'elToritoDoorRight',
     HOSPITAL_MATTRESS = 'hospitalMattress',
 
-    ARRANGEMENT_LIZ_BLINDS_LEFT = 'arrangementLizBlindsLeft',
-    ARRANGEMENT_LIZ_BLINDS_RIGHT = 'arrangementLizBlindsRight'
+    ARRANGEMENT_LIZ_BLINDS_GATE = 'arrangementLizBlindsGate',
+    ARRANGEMENT_LIZ_BLINDS_STREET = 'arrangementLizBlindsStreet'
 
 export {
     PORCH_DOOR,
@@ -119,6 +119,6 @@ export {
     EL_TORITO_DOOR_RIGHT,
     HOSPITAL_MATTRESS,
 
-    ARRANGEMENT_LIZ_BLINDS_LEFT,
-    ARRANGEMENT_LIZ_BLINDS_RIGHT
+    ARRANGEMENT_LIZ_BLINDS_GATE,
+    ARRANGEMENT_LIZ_BLINDS_STREET
 }

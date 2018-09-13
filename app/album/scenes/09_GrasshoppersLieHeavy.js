@@ -84,6 +84,8 @@ import {
 import {
     DISHROOM_DOOR,
     LIZ_BLINDS,
+    ARRANGEMENT_LIZ_BLINDS_GATE,
+    ARRANGEMENT_LIZ_BLINDS_STREET,
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
     BENNETT_GATE_FRONT,
@@ -196,7 +198,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_BLINDS]: true,
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_GATE,
                 [LIZ_GATE_OUTSIDE]: true
             }
         },
@@ -227,7 +229,7 @@ module.exports = [
                 [TRAFFIC_LIGHT]: true
             },
             [FURNITURES]: {
-                [LIZ_BLINDS]: true,
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET,
                 [LIZ_GATE_OUTSIDE_OPEN]: true
             }
         },

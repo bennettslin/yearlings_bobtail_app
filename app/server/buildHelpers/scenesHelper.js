@@ -158,8 +158,19 @@ export const finalRegisterPresenceYIndices = (
 
                 // Cutout, fixture, flat, furniture.
                 } else {
-                    arrangementObject =
-                        ARRANGEMENTS_THINGS[presenceType][presenceName]
+
+                    // This presence has only one arrangement.
+                    if (presence === true) {
+                        arrangementObject =
+                            ARRANGEMENTS_THINGS[presenceType][presenceName]
+
+                    /**
+                     * This presence has multiple arrangements.
+                     */
+                    } else {
+                        arrangementObject =
+                            ARRANGEMENTS_THINGS[presenceType][presenceName][presence]
+                    }
                 }
 
                 const {

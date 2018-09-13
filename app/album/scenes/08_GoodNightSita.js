@@ -60,8 +60,8 @@ import {
 
 import {
     LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS_LEFT,
-    ARRANGEMENT_LIZ_BLINDS_RIGHT,
+    ARRANGEMENT_LIZ_BLINDS_GATE,
+    ARRANGEMENT_LIZ_BLINDS_STREET,
     LIZ_GATE_OUTSIDE,
     GO_KART_INTERIOR_LEFT,
     GO_KART_INTERIOR_RIGHT,
@@ -90,7 +90,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_LEFT,
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_GATE,
                 [LIZ_GATE_OUTSIDE]: true
             }
         },
@@ -245,7 +245,7 @@ module.exports = [
                 [TRAFFIC_LIGHT]: true
             },
             [FURNITURES]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_RIGHT,
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET,
                 [LIZ_GATE_OUTSIDE_OPEN]: true
             }
         },

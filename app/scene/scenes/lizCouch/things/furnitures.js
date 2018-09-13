@@ -1,5 +1,7 @@
 import {
     LIZ_BLINDS,
+    ARRANGEMENT_LIZ_BLINDS_GATE,
+    ARRANGEMENT_LIZ_BLINDS_STREET,
     LIZ_BLINDS_OPEN,
     LIZ_CUSHIONS,
     LIZ_DOOR,
@@ -10,11 +12,25 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [LIZ_BLINDS]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 6,
-            xWidth: 5,
-            zHeight: 3.5
+        /**
+         * This is somewhat fragile, as this arrangement is used by both
+         * lizGate and lizCouch, but it is only a coincidence.
+         */
+        [ARRANGEMENT_LIZ_BLINDS_GATE]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 6,
+                xWidth: 5,
+                zHeight: 3.5
+            }
+        },
+        [ARRANGEMENT_LIZ_BLINDS_STREET]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 3,
+                xWidth: 5,
+                zHeight: 3.5
+            }
         }
     },
     [LIZ_BLINDS_OPEN]: {

@@ -3862,4 +3862,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Allow the same presence to have multiple arrangements.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

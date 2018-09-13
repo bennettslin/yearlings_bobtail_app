@@ -30,11 +30,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Allow presences to have different positions.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Allow cube keys to have different colours.`,
         workedHours: 0,
         neededHours: 2
