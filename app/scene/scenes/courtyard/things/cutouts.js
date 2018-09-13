@@ -5,10 +5,10 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [RECYCLABLES]: {
-        yIndex: 4,
+        yIndex: 2,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
+            xFloat: 2.5,
+            xWidth: 2.5,
             zHeight: 1.5
         }
     },

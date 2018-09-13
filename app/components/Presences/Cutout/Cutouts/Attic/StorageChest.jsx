@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BennettOdinRickshaw = ({
+const StorageChest = ({
 
     className,
 
@@ -18,7 +18,7 @@ const BennettOdinRickshaw = ({
     return (
         <Svg
             className={cx(
-                'BennettOdinRickshaw',
+                'StorageChest',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const BennettOdinRickshaw = ({
                 {...other}
             >
                 {cx(
-                    'BennettOdinRickshaw'
+                    'StorageChest'
                 )}
             </text>
         </Svg>
     )
 }
 
-BennettOdinRickshaw.propTypes = propTypes;
+StorageChest.propTypes = propTypes;
 
-export default BennettOdinRickshaw
+export default StorageChest

@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        task: 'Hsla keys for all scenes, and values for all keys.',
-        workedHours: 0,
-        neededHours: 16
-    },
-    {
         taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
         workedHours: 0,
         neededHours: 8

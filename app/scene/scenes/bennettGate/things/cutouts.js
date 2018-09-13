@@ -4,11 +4,12 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [CODE_BOX]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 1,
+            zOffset: 5
         }
     }
 }

@@ -8,25 +8,31 @@ import {
     k
 } from 'scene/cubesConstants'
 
+/**
+ * Blinds and door should match in bennettBed.
+ * Gate should match in bennettGate.
+ */
+
 const
     COURTYARD_CUBES = {
-        // Outdoor wall is 8'. Windowsill height is 3'.
         ceiling: {
             zIndices: [
                 [g],
-                [g],
-                [g, g, d, d, d, d, d, g, e, e, e, g],
-                [f],
-                [k]
+                [g, g, d, d, d, d, g, d, d, d, g],
+                [g, f],
+                [e, k],
+                [e, k],
+                [g, k]
             ]
         },
         floor: {
             zIndices: [
-                [g],
                 [g, 1],
-                [g, g, 6, 6, 6, 6, 6, g, 1, 1, 1, g],
-                [f, 1],
-                [1]
+                [g, g, 6, 6, 6, 6, g, 1, 1, 1, g],
+                [g, 1],
+                [1],
+                [1],
+                [g, 1]
             ]
         }
     },

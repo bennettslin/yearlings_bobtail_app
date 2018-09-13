@@ -41,6 +41,8 @@ import {
 
 import {
     DISHROOM_LANCET,
+    DATE_ENDING,
+    DATE_ENDED,
     GATE_CODE,
     GINGERBREAD_PRISON,
     RUMPLED_LINENS,
@@ -55,6 +57,7 @@ import {
 
 import {
     DISHROOM_SINK,
+    TRAFFIC_LIGHT,
     CODE_BOX,
     LIGHT_SWITCH,
     CLIPBOARD,
@@ -80,7 +83,11 @@ import {
 
 import {
     DISHROOM_DOOR,
+    LIZ_BLINDS,
+    LIZ_GATE_OUTSIDE,
+    LIZ_GATE_OUTSIDE_OPEN,
     BENNETT_GATE_FRONT,
+    BENNETT_BLINDS_OPEN,
     BENNETT_GATE_SIDE_OPEN,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
@@ -177,6 +184,24 @@ module.exports = [
     {
         unitIndex: 6,
         description: `Grasshoppers scene 1`,
+        presences: {
+            [ACTORS]: {
+                [BENNETT]: {
+                    description: 'side, awkward, wanting to make a move',
+                    instance: DATE_ENDING
+                },
+                [LIZ]: {
+                    sita: {
+                        description: 'side, friendly, guarded',
+                        instance: DATE_ENDING
+                    }
+                }
+            },
+            [FURNITURES]: {
+                [LIZ_BLINDS]: true,
+                [LIZ_GATE_OUTSIDE]: true
+            }
+        },
         cubes: LIZ_GATE_KEY,
         sky: {
             time: TIME_ANYTIME,
@@ -187,6 +212,27 @@ module.exports = [
         unitIndex: 7,
         description: `Grasshoppers scene 5`,
         cubes: LIZ_GATE_STREET_KEY,
+        presences: {
+            [ACTORS]: {
+                [BENNETT]: {
+                    description: 'side, walking away dejected, slumped over',
+                    instance: DATE_ENDED
+                },
+                [LIZ]: {
+                    sita: {
+                        description: 'front, closing gate, looking concerned',
+                        instance: DATE_ENDED
+                    }
+                }
+            },
+            [CUTOUTS]: {
+                [TRAFFIC_LIGHT]: true
+            },
+            [FURNITURES]: {
+                [LIZ_BLINDS]: true,
+                [LIZ_GATE_OUTSIDE_OPEN]: true
+            }
+        },
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -286,6 +332,7 @@ module.exports = [
                 [VASELINE]: true
             },
             [FURNITURES]: {
+                [BENNETT_BLINDS_OPEN]: true,
                 [BENNETT_GATE_SIDE_OPEN]: true,
                 [BENNETT_DOOR_INSIDE]: true,
                 [BENNETT_MATTRESS]: true,
@@ -326,6 +373,7 @@ module.exports = [
                 [VASELINE]: true
             },
             [FURNITURES]: {
+                [BENNETT_BLINDS_OPEN]: true,
                 [BENNETT_DOOR_INSIDE_OPEN]: true,
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true

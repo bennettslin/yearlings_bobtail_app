@@ -5,19 +5,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [LIZ_GATE_OUTSIDE]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 6,
+            xWidth: 3,
+            zHeight: 3
         }
     },
     [LIZ_GATE_OUTSIDE_OPEN]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3,
+            xWidth: 3,
+            zHeight: 3
         }
     }
 }

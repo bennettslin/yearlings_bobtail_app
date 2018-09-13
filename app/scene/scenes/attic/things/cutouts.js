@@ -7,37 +7,35 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [STORAGE_BOXES]: {
-        yIndex: 4,
+        yIndex: 1,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 5,
+            xWidth: 1,
+            zHeight: 2.5
         }
     },
     [STORAGE_CHEST]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 8,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 1,
+            xWidth: 1,
+            zHeight: 1.5
         }
     },
     [HOWIE_FRIDGE]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 4,
-            xWidth: 2,
-            zHeight: 2,
-            zOffset: 3
+            xFloat: 8.5,
+            xWidth: 3,
+            zHeight: 5
         }
     },
     [TELEVISION]: {
-        yIndex: 1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 4,
-            xWidth: 2,
-            zHeight: 2,
-            zOffset: 3
+            xFloat: 2.5,
+            xWidth: 1.5,
+            zHeight: 1
         }
     }
 }

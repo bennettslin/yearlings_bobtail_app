@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_CUSHIONS]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 5,
+            xWidth: 5,
+            zHeight: 0.5
         }
     }
 }

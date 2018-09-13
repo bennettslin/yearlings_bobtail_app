@@ -4,11 +4,12 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [LIGHT_SWITCH]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 5,
+            xWidth: 0.5,
+            zHeight: 0.5,
+            zOffset: 6
         }
     }
 }

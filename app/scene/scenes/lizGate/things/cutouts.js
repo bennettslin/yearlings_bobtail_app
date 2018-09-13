@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TRAFFIC_LIGHT]: {
-        yIndex: 4,
+        yIndex: 5,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 10,
+            xWidth: 1,
+            zHeight: 7
         }
     }
 }

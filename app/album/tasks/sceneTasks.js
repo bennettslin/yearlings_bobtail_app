@@ -2,14 +2,14 @@
  * 25%: Establish components for scene.
  * 25%: Establish component configs for scene.
  * 25%: Establish cubes for scene.
- * 25%: Establish colours for scene.
+ * 25%: Establish colours and sky for scene.
  */
 
 /**
  * General rules:
  * Backdrop flats should be level with floor.
  * Rooms are 7.5 cubes high.
- * Doors are 2 cubes wide, 6 cubes high.
+ * Doors are 6 cubes high. Side doors are 2 cubes wide, front doors are 3.
  * Chairs are 1.5 cubes high.
  * Couches are 1 cube high (with cushion making up rest of height).
  */

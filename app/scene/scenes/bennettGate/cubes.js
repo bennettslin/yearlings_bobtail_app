@@ -1,19 +1,36 @@
 import { BENNETT_GATE_KEY } from 'scene/cubesKeys'
 
 import {
-    g
+    e,
+    f,
+    g,
+    k
 } from 'scene/cubesConstants'
+
+/**
+ * Gate should match in courtyard.
+ */
 
 const
     BENNETT_GATE_CUBES = {
+        ceiling: {
+            zIndices: [
+                [k],
+                [k],
+                [g, g, g, g, g, g, g, e, e, e, g],
+                [f],
+                [f],
+                [k]
+            ]
+        },
         floor: {
             zIndices: [
-                [g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
                 [1],
                 [1],
-                [0]
+                [g, g, g, g, g, g, g, 1, 1, 1, g],
+                [1],
+                [1],
+                [1]
             ]
         }
     },

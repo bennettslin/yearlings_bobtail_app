@@ -5,18 +5,18 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_RECORD_PLAYER]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 9,
+            xWidth: 2,
+            zHeight: 2
         }
     },
     [BENNETT_COUCH_LAMP]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
+            xFloat: 2,
+            xWidth: 0.5,
             zHeight: 1
         }
     },

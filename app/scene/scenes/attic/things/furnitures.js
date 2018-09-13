@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [ATTIC_CUSHIONS]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 2.5,
+            xWidth: 4,
+            zHeight: 0.5
         }
     }
 }

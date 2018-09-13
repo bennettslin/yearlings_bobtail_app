@@ -6,27 +6,27 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_BLINDS]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3.5,
+            xWidth: 4,
+            zHeight: 3.5
         }
     },
     [BENNETT_DOOR_OUTSIDE]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 8,
+            xWidth: 3,
+            zHeight: 6
         }
     },
     [BENNETT_GATE_SIDE]: {
-        yIndex: 0,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 0,
+            xWidth: 1,
+            zHeight: 6
         }
     }
 }

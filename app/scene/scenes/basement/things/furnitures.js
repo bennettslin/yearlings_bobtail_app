@@ -5,19 +5,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BASEMENT_DOOR_OPEN]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 1.5,
             xWidth: 2,
-            zHeight: 5.5
+            zHeight: 4
         }
     },
     [BASEMENT_DOOR]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 1.5,
             xWidth: 2,
-            zHeight: 5.5
+            zHeight: 4
         }
     }
 }

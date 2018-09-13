@@ -5,19 +5,21 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [NIRVANA_POSTER]: {
-        yIndex: 4,
+        yIndex: 1,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 9,
+            xWidth: 2,
+            zHeight: 3,
+            zOffset: 4
         }
     },
     [LEONARD_COHEN_POSTER]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 8,
+            xFloat: 9,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 3,
+            zOffset: 4
         }
     }
 }

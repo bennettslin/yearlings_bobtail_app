@@ -27,6 +27,7 @@ import GoKartInteriorRight from './Furnitures/GoKarts/GoKartInteriorRight'
 import LizGateOutsideOpen from './Furnitures/LizGate/LizGateOutsideOpen'
 import DishroomDoor from './Furnitures/Dishroom/DishroomDoor'
 import BennettGateFront from './Furnitures/BennettGate/BennettGateFront'
+import BennettBlindsOpen from './Furnitures/BennettBed/BennettBlindsOpen'
 import BennettGateSideOpen from './Furnitures/BennettBed/BennettGateSideOpen'
 import BennettDoorInside from './Furnitures/BennettBed/BennettDoorInside'
 import BennettDoorInsideOpen from './Furnitures/BennettBed/BennettDoorInsideOpen'
@@ -84,6 +85,7 @@ import {
     LIZ_GATE_OUTSIDE_OPEN,
     DISHROOM_DOOR,
     BENNETT_GATE_FRONT,
+    BENNETT_BLINDS_OPEN,
     BENNETT_GATE_SIDE_OPEN,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
@@ -142,6 +144,7 @@ const FURNITURES_MAP = {
     [LIZ_GATE_OUTSIDE_OPEN]: LizGateOutsideOpen,
     [DISHROOM_DOOR]: DishroomDoor,
     [BENNETT_GATE_FRONT]: BennettGateFront,
+    [BENNETT_BLINDS_OPEN]: BennettBlindsOpen,
     [BENNETT_GATE_SIDE_OPEN]: BennettGateSideOpen,
     [BENNETT_DOOR_INSIDE]: BennettDoorInside,
     [BENNETT_DOOR_INSIDE_OPEN]: BennettDoorInsideOpen,

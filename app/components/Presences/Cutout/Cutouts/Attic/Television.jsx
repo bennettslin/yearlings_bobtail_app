@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BennettOdinRickshaw = ({
+const Television = ({
 
     className,
 
@@ -18,7 +18,7 @@ const BennettOdinRickshaw = ({
     return (
         <Svg
             className={cx(
-                'BennettOdinRickshaw',
+                'Television',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const BennettOdinRickshaw = ({
                 {...other}
             >
                 {cx(
-                    'BennettOdinRickshaw'
+                    'Television'
                 )}
             </text>
         </Svg>
     )
 }
 
-BennettOdinRickshaw.propTypes = propTypes;
+Television.propTypes = propTypes;
 
-export default BennettOdinRickshaw
+export default Television
