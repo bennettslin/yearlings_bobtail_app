@@ -49,11 +49,11 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [BENNETT_PILLOWS]: {
-        yIndex: 0,
+        yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 9,
+            xWidth: 1,
+            zHeight: 0.5
         }
     }
 }

@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [CAVEMAN_BONES]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 8.5,
+            xWidth: 1.5,
+            zHeight: 4
         }
     }
 }

@@ -6,27 +6,27 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [OPAL_LAP]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 2.5,
+            xWidth: 1,
+            zHeight: 0.5
         }
     },
     [OPAL_WINDOW]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 5,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 6,
+            xWidth: 1,
+            zHeight: 0.5
         }
     },
     [OPAL_COUCH]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 5,
-            xWidth: 4,
-            zHeight: 1
+            xFloat: 1,
+            xWidth: 1,
+            zHeight: 0.5
         }
     }
 }

@@ -6,9 +6,10 @@ const ARRANGEMENTS_MAP = {
     [ESCAPE_POD_SKETCHBOOK]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 2.5,
+            xWidth: 4,
+            zHeight: 3,
+            zOffset: 6
         }
     }
 }

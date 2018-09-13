@@ -94,6 +94,9 @@ import {
 } from 'scene/flatKeys'
 
 import {
+    BASEMENT_DOOR,
+    BENNETT_MATTRESS,
+    BENNETT_PILLOWS,
     LIZ_CUSHIONS,
     MIRIAM_CUSHIONS
 } from 'scene/furnitureKeys'
@@ -116,6 +119,11 @@ module.exports = [
                     description: 'side, asleep',
                     instance: ASLEEP
                 }
+            },
+            [FURNITURES]: {
+                [BASEMENT_DOOR]: true,
+                [BENNETT_MATTRESS]: true,
+                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BASEMENT_BED_KEY,
@@ -149,6 +157,11 @@ module.exports = [
                         instance: SITA_HURT
                     }
                 }
+            },
+            [FURNITURES]: {
+                [BASEMENT_DOOR]: true,
+                [BENNETT_MATTRESS]: true,
+                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BASEMENT_BED_KEY,
@@ -354,6 +367,11 @@ module.exports = [
                         instance: SITA_SOBBING
                     }
                 }
+            },
+            [FURNITURES]: {
+                [BASEMENT_DOOR]: true,
+                [BENNETT_MATTRESS]: true,
+                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BASEMENT_BED_KEY,

@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [MUSEUM_DISPLAY]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 12,
-            zHeight: 4
+            xFloat: 4.5,
+            xWidth: 6,
+            zHeight: 6
         }
     }
 }

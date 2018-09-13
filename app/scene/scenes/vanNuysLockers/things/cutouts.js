@@ -6,27 +6,27 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [LOCKER_BANK]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 0.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 3.5,
+            xWidth: 4,
+            zHeight: 4
         }
     },
     [TRASH_CAN_BACK]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
             xFloat: 10.5,
-            xWidth: 2,
+            xWidth: 1.5,
             zHeight: 3
         }
     },
     [VAN_NUYS_PLANTS_BACK]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 10.5,
+            xFloat: 7.5,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 1.5
         }
     }
 }

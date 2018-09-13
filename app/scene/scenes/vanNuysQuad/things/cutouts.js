@@ -6,27 +6,28 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TRASH_CAN_FRONT]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
             xFloat: 0.5,
-            xWidth: 2,
+            xWidth: 1.5,
             zHeight: 3
         }
     },
     [VAN_NUYS_PLANTS_FRONT]: {
-        yIndex: 1,
+        yIndex: 3,
         arrangement: {
-            xFloat: 10.5,
+            xFloat: 3.5,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 1.5
         }
     },
     [VAN_NUYS_LOGO]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 7.5,
+            xWidth: 3,
+            zHeight: 3,
+            zOffset: 3
         }
     }
 }

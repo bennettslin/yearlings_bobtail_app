@@ -26,43 +26,43 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [LIZ_CUSHIONS]: {
-        yIndex: 0,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 2.5,
             xWidth: 2,
-            zHeight: 5.5
+            zHeight: 0.5
         }
     },
     [LIZ_DOOR]: {
-        yIndex: 0,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 10.5,
+            xWidth: 1,
+            zHeight: 6
         }
     },
     [LIZ_DOOR_OPEN]: {
-        yIndex: 0,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 10.5,
+            xWidth: 1,
+            zHeight: 6
         }
     },
     [LIZ_GATE_INSIDE]: {
         yIndex: 0,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 6,
+            xWidth: 3,
+            zHeight: 3
         }
     },
     [LIZ_GATE_INSIDE_OPEN]: {
         yIndex: 0,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 6,
+            xWidth: 3,
+            zHeight: 3
         }
     }
 }
