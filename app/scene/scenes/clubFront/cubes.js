@@ -3,7 +3,6 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    f,
     g
 } from 'scene/cubesConstants'
 
@@ -11,10 +10,6 @@ const
     CLUB_FRONT_CUBES = {
         ceiling: {
             zIndices: [
-                [g],
-                [g],
-                [f, g],
-                [f, g],
                 [g]
             ]
         },

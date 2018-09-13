@@ -65,7 +65,7 @@ import {
 
 import {
     LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS_GATE,
+    ARRANGEMENT_LIZ_BLINDS,
     LIZ_CUSHIONS,
     LIZ_DOOR,
     LIZ_GATE_INSIDE
@@ -93,7 +93,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_GATE,
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
@@ -235,7 +235,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_GATE,
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true

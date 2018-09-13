@@ -58,7 +58,7 @@ const
     EL_TORITO_DOOR_RIGHT = 'elToritoDoorRight',
     HOSPITAL_MATTRESS = 'hospitalMattress',
 
-    ARRANGEMENT_LIZ_BLINDS_GATE = 'arrangementLizBlindsGate',
+    ARRANGEMENT_LIZ_BLINDS = 'arrangementLizBlinds',
     ARRANGEMENT_LIZ_BLINDS_STREET = 'arrangementLizBlindsStreet'
 
 export {
@@ -119,6 +119,6 @@ export {
     EL_TORITO_DOOR_RIGHT,
     HOSPITAL_MATTRESS,
 
-    ARRANGEMENT_LIZ_BLINDS_GATE,
+    ARRANGEMENT_LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS_STREET
 }

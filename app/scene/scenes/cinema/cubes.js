@@ -35,7 +35,7 @@ const
     CINEMA_STREET_CUBES = {
         ceiling: {
             zIndices: [
-                [f, f, f, f, k],
+                [k],
                 [f, f, f, f, k],
                 [f, f, f, f, k],
                 [f, f, f, f, k],
@@ -45,7 +45,7 @@ const
         },
         floor: {
             zIndices: [
-                [f, f, f, 1, 1, 0],
+                [0],
                 [f, f, f, 1, 1, 0],
                 [f, f, f, 1, 1, 0],
                 [1, 1, 1, 1, 1, 0],

@@ -1,23 +1,38 @@
 import {
     CINEMA_POSTER_LEFT,
-    CINEMA_POSTER_RIGHT
+    CINEMA_POSTER_RIGHT,
+    ARRANGEMENT_CINEMA_POSTER,
+    ARRANGEMENT_CINEMA_POSTER_STREET
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [CINEMA_POSTER_LEFT]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 1,
+            xWidth: 2.5,
+            zHeight: 4,
+            zOffset: 2
         }
     },
     [CINEMA_POSTER_RIGHT]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 8,
-            xWidth: 2,
-            zHeight: 3
+        [ARRANGEMENT_CINEMA_POSTER]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 10,
+                xWidth: 2.5,
+                zHeight: 4,
+                zOffset: 2
+            }
+        },
+        [ARRANGEMENT_CINEMA_POSTER_STREET]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 1,
+                xWidth: 2.5,
+                zHeight: 4,
+                zOffset: 2
+            }
         }
     }
 }

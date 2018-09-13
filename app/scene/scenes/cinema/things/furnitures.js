@@ -7,8 +7,8 @@ const ARRANGEMENTS_MAP = {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xWidth: 6,
+            zHeight: 6.5
         }
     }
 }

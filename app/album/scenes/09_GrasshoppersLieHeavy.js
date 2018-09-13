@@ -84,7 +84,7 @@ import {
 import {
     DISHROOM_DOOR,
     LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS_GATE,
+    ARRANGEMENT_LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS_STREET,
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
@@ -198,7 +198,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_GATE,
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
                 [LIZ_GATE_OUTSIDE]: true
             }
         },

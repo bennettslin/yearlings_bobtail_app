@@ -14,6 +14,7 @@ import {
 
 import {
     TIME_ANYTIME,
+    SEASON_INDOOR,
     SEASON_SUMMER
 } from 'scene/sky'
 
@@ -132,7 +133,7 @@ module.exports = [
         cubes: CLUB_SIDE_CROWD_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SUMMER
+            season: SEASON_INDOOR
         }
     },
     {
@@ -178,7 +179,7 @@ module.exports = [
         cubes: CLUB_SIDE_STAGE_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SUMMER
+            season: SEASON_INDOOR
         }
     },
     {

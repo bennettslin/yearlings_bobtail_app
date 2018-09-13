@@ -60,7 +60,7 @@ import {
 
 import {
     LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS_GATE,
+    ARRANGEMENT_LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS_STREET,
     LIZ_GATE_OUTSIDE,
     GO_KART_INTERIOR_LEFT,
@@ -90,7 +90,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_GATE,
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
                 [LIZ_GATE_OUTSIDE]: true
             }
         },

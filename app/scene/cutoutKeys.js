@@ -86,7 +86,10 @@ const
     DUMPSTER = 'dumpster',
     WEDDING_PLATFORM = 'weddingPlatform',
     WEDDING_CROWD = 'weddingCrowd',
-    IV_DRIP = 'ivDrip'
+    IV_DRIP = 'ivDrip',
+
+    ARRANGEMENT_CINEMA_POSTER = 'arrangementCinemaPoster',
+    ARRANGEMENT_CINEMA_POSTER_STREET = 'arrangementCinemaPosterStreet'
 
 export {
     FIRE_HYDRANT,
@@ -174,5 +177,8 @@ export {
     DUMPSTER,
     WEDDING_PLATFORM,
     WEDDING_CROWD,
-    IV_DRIP
+    IV_DRIP,
+
+    ARRANGEMENT_CINEMA_POSTER,
+    ARRANGEMENT_CINEMA_POSTER_STREET
 }
