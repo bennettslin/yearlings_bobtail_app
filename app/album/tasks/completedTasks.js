@@ -3847,4 +3847,9 @@ module.exports = [
         workedHours: 30,
         neededHours: 30
     },
+    {
+        taskName: `Basic work on scene cubes.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

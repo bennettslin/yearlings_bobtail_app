@@ -48,7 +48,6 @@ import { CATHOLIC_GUY } from 'scene/instanceKeys/wade'
 
 import {
     RECYCLABLES,
-    BENNETT_COUCH_FAR,
     NIRVANA_POSTER,
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
@@ -101,8 +100,7 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [RECYCLABLES]: true,
-                [BENNETT_COUCH_FAR]: true
+                [RECYCLABLES]: true
             },
             [FURNITURES]: {
                 [BENNETT_BLINDS]: true,

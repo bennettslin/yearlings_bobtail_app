@@ -1,6 +1,5 @@
 import {
-    RECYCLABLES,
-    BENNETT_COUCH_FAR
+    RECYCLABLES
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -10,14 +9,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 2.5,
             xWidth: 2.5,
             zHeight: 1.5
-        }
-    },
-    [BENNETT_COUCH_FAR]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 8,
-            xWidth: 2,
-            zHeight: 3
         }
     }
 }

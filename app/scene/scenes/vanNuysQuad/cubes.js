@@ -2,26 +2,24 @@ import { VAN_NUYS_QUAD_KEY } from 'scene/cubesKeys'
 
 import {
     f,
-    g
+    k
 } from 'scene/cubesConstants'
 
 const
     VAN_NUYS_QUAD_CUBES = {
         ceiling: {
             zIndices: [
-                [g, g, g, g, g, g, g, g, g, g, g],
-                [g, g, g, g, g, g, g, g, g, g, g],
-                [g, g, g, g, g, g, g, g, g, g, g],
-                [g, g, g, g, g, g, g, g, g, g, g],
-                [g]
+                [k, k, f],
+                [k, k, f],
+                [k, k, f],
+                [k]
             ]
         },
         floor: {
             zIndices: [
-                [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
-                [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
-                [1, 1, 2, 2, 2, f, f, f, f, 2, 1],
-                [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+                [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+                [1, 1, 2, 2, 2, f, f, f, f, f, f, 2],
+                [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
                 [1]
             ]
         }

@@ -43,7 +43,6 @@ import TrashCanFront from './Cutouts/VanNuysQuad/TrashCanFront'
 import VanNuysPlantsFront from './Cutouts/VanNuysQuad/VanNuysPlantsFront'
 import VanNuysLogo from './Cutouts/VanNuysQuad/VanNuysLogo'
 import Recyclables from './Cutouts/Courtyard/Recyclables'
-import BennettCouchFar from './Cutouts/Courtyard/BennettCouchFar'
 import NirvanaPoster from './Cutouts/BennettCouch/NirvanaPoster'
 import DispenserLeft from './Cutouts/CatholicChurch/DispenserLeft'
 import DispenserRight from './Cutouts/CatholicChurch/DispenserRight'
@@ -132,7 +131,6 @@ import {
     VAN_NUYS_PLANTS_FRONT,
     VAN_NUYS_LOGO,
     RECYCLABLES,
-    BENNETT_COUCH_FAR,
     NIRVANA_POSTER,
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
@@ -222,7 +220,6 @@ const CUTOUTS_MAP = {
     [VAN_NUYS_PLANTS_FRONT]: VanNuysPlantsFront,
     [VAN_NUYS_LOGO]: VanNuysLogo,
     [RECYCLABLES]: Recyclables,
-    [BENNETT_COUCH_FAR]: BennettCouchFar,
     [NIRVANA_POSTER]: NirvanaPoster,
     [DISPENSER_LEFT]: DispenserLeft,
     [DISPENSER_RIGHT]: DispenserRight,
