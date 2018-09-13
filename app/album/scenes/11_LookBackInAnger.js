@@ -73,7 +73,11 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    CLUB_DOOR
+    CLUB_DOOR,
+    LIZ_MATTRESS,
+    LIZ_PILLOWS,
+    LIZ_MATTRESS_REFLECTION,
+    LIZ_PILLOWS_REFLECTION
 } from 'scene/furnitureKeys'
 
 module.exports = [
@@ -274,6 +278,12 @@ module.exports = [
                 [LIZ_NIGHTSTAND_REFLECTION]: true,
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
+            },
+            [FURNITURES]: {
+                [LIZ_MATTRESS]: true,
+                [LIZ_PILLOWS]: true,
+                [LIZ_MATTRESS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true,
             }
         },
         cubes: LIZ_BED_KEY,

@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [STEAM_PIPES]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
             xFloat: 5.5,
-            xWidth: 12,
-            zHeight: 4
+            xWidth: 8,
+            zHeight: 6
         }
     }
 }

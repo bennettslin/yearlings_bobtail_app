@@ -71,7 +71,6 @@ import {
     GLASS_CART,
     TRAY_CART,
     GLASS_RACK,
-    TRAY_RACK,
     DISH_PILE,
     NUDE_DRAWINGS,
     VASELINE,
@@ -128,7 +127,6 @@ module.exports = [
                 [GLASS_CART]: true,
                 [TRAY_CART]: true,
                 [GLASS_RACK]: true,
-                [TRAY_RACK]: true,
                 [DISH_PILE]: true
             },
             [FURNITURES]: {
@@ -169,7 +167,6 @@ module.exports = [
                 [GLASS_CART]: true,
                 [TRAY_CART]: true,
                 [GLASS_RACK]: true,
-                [TRAY_RACK]: true,
                 [DISH_PILE]: true
             },
             [FURNITURES]: {

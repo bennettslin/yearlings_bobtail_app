@@ -1,16 +1,11 @@
 import { WALGREENS_KEY } from 'scene/cubesKeys'
 
-import {
-    g
-} from 'scene/cubesConstants'
-
 const
     WALGREENS_CUBES = {
         floor: {
             zIndices: [
-                [g],
-                [5],
-                [0]
+                [0],
+                [1]
             ]
         }
     },

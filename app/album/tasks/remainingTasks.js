@@ -25,14 +25,29 @@ module.exports = [
         neededHours: 16
     },
     {
-        taskName: `Position presences in slanted cubes.`,
+        taskName: `Allow presences to specify zIndex. Position presences in slanted cubes.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
     {
         taskName: `Allow presences to have different positions.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Allow cube keys to have different colours.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Change zOffset to measure whole cubes, not half.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Have a past sky.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     /**

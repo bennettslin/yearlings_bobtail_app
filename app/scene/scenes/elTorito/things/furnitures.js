@@ -5,19 +5,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [EL_TORITO_DOOR_LEFT]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 4,
+            xWidth: 3,
+            zHeight: 6
         }
     },
     [EL_TORITO_DOOR_RIGHT]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 7,
+            xWidth: 3,
+            zHeight: 6
         }
     }
 }

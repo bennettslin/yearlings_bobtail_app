@@ -28,7 +28,6 @@ import ConveyorBelt from './Fixtures/Dishroom/ConveyorBelt'
 import GlassCart from './Fixtures/Dishroom/GlassCart'
 import TrayCart from './Fixtures/Dishroom/TrayCart'
 import GlassRack from './Fixtures/Dishroom/GlassRack'
-import TrayRack from './Fixtures/Dishroom/TrayRack'
 import DishPile from './Fixtures/Dishroom/DishPile'
 import NudeDrawings from './Fixtures/BennettBed/NudeDrawings'
 import Vaseline from './Fixtures/BennettBed/Vaseline'
@@ -78,7 +77,6 @@ import {
     GLASS_CART,
     TRAY_CART,
     GLASS_RACK,
-    TRAY_RACK,
     DISH_PILE,
     NUDE_DRAWINGS,
     VASELINE,
@@ -129,7 +127,6 @@ const FIXTURES_MAP = {
     [GLASS_CART]: GlassCart,
     [TRAY_CART]: TrayCart,
     [GLASS_RACK]: GlassRack,
-    [TRAY_RACK]: TrayRack,
     [DISH_PILE]: DishPile,
     [NUDE_DRAWINGS]: NudeDrawings,
     [VASELINE]: Vaseline,

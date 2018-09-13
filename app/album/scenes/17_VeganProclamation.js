@@ -67,11 +67,20 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
-    BURGER_WRAPPER
+    BURGER_WRAPPER,
+    CEILING_MIRROR,
+    LIZ_NIGHTSTAND,
+    LIZ_NIGHTSTAND_REFLECTION,
+    LIZ_PHONE_BASE,
+    LIZ_PHONE_BASE_REFLECTION
 } from 'scene/fixtureKeys'
 
 import {
-    LOADING_DOCK_DOOR
+    LOADING_DOCK_DOOR,
+    LIZ_MATTRESS,
+    LIZ_PILLOWS,
+    LIZ_MATTRESS_REFLECTION,
+    LIZ_PILLOWS_REFLECTION
 } from 'scene/furnitureKeys'
 
 module.exports = [
@@ -218,6 +227,19 @@ module.exports = [
                         instance: CARESSING_REFLECTION
                     }
                 }
+            },
+            [FIXTURES]: {
+                [CEILING_MIRROR]: true,
+                [LIZ_NIGHTSTAND]: true,
+                [LIZ_NIGHTSTAND_REFLECTION]: true,
+                [LIZ_PHONE_BASE]: true,
+                [LIZ_PHONE_BASE_REFLECTION]: true
+            },
+            [FURNITURES]: {
+                [LIZ_MATTRESS]: true,
+                [LIZ_PILLOWS]: true,
+                [LIZ_MATTRESS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true,
             }
         },
         cubes: LIZ_BED_KEY,

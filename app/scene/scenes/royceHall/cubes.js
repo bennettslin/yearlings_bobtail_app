@@ -4,6 +4,7 @@ const
     ROYCE_HALL_CUBES = {
         floor: {
             zIndices: [
+                [0],
                 [1]
             ]
         }

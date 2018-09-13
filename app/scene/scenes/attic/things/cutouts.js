@@ -9,15 +9,15 @@ const ARRANGEMENTS_MAP = {
     [STORAGE_BOXES]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 5,
-            xWidth: 1,
-            zHeight: 2.5
+            xFloat: 5.5,
+            xWidth: 2,
+            zHeight: 3
         }
     },
     [STORAGE_CHEST]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 1,
+            xFloat: 1.5,
             xWidth: 1,
             zHeight: 1.5
         }
@@ -25,15 +25,15 @@ const ARRANGEMENTS_MAP = {
     [HOWIE_FRIDGE]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 8.5,
-            xWidth: 3,
+            xFloat: 9,
+            xWidth: 2.5,
             zHeight: 5
         }
     },
     [TELEVISION]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 2.5,
+            xFloat: 3.5,
             xWidth: 1.5,
             zHeight: 1
         }

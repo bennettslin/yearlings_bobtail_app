@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [DISHROOM_DOOR]: {
         yIndex: 0,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 9.5,
             xWidth: 2,
             zHeight: 5.5
         }

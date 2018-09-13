@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [ATTIC_CUSHIONS]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 2.5,
+            xFloat: 3.5,
             xWidth: 4,
             zHeight: 0.5
         }

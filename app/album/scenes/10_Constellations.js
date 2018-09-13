@@ -50,6 +50,7 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
+    PUSH_BROOM,
     GRAVESTONE,
     EVIAN_BOTTLES
 } from 'scene/fixtureKeys'
@@ -185,6 +186,9 @@ module.exports = [
                     description: 'side angle, play fighting',
                     instance: STEAM_TUNNEL
                 }
+            },
+            [FIXTURES]: {
+                [PUSH_BROOM]: true
             },
             [FLATS]: {
                 [STEAM_PIPES]: true

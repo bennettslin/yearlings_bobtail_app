@@ -9,15 +9,15 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 5.5,
             xWidth: 12,
-            zHeight: 4
+            zHeight: 6
         }
     },
     [PHARMACY_AISLE]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 2,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 5.5,
+            xWidth: 8,
+            zHeight: 5
         }
     }
 }

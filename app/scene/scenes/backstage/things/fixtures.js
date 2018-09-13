@@ -6,11 +6,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [PUSH_BROOM]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 4,
             xWidth: 1,
-            zHeight: 1
+            zHeight: 3
         }
     },
     [STEPLADDER]: {

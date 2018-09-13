@@ -1,20 +1,32 @@
 import { EL_TORITO_KEY } from 'scene/cubesKeys'
 
 import {
-    g
+    e,
+    f,
+    g,
+    k
 } from 'scene/cubesConstants'
 
 const
     EL_TORITO_CUBES = {
-        // Outdoor wall is 8'.
+        ceiling: {
+            zIndices: [
+                [g],
+                [g],
+                [f, f, f, e, e, e, e, e, e, f],
+                [f],
+                [f],
+                [k]
+            ]
+        },
         floor: {
             zIndices: [
-                [g, g, g, g, 1, 1, 1, 1, g],
-                [1],
-                [1, g, 1, 1, 1, 1, 1, 1, 1, 1, g, 1],
-                [1],
-                [1],
-                [0]
+                [g],
+                [2],
+                [f, f, f, 2, 2, 2, 2, 2, 2, f],
+                [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
+                [1, f, 1, 1, 1, 1, 1, 1, 1, 1, f, 1],
+                [1]
             ]
         }
     },
