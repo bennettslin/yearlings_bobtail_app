@@ -3,8 +3,7 @@ import { BENNETT_BED_KEY } from 'scene/cubesKeys'
 import {
     d,
     f,
-    g,
-    // k
+    g
 } from 'scene/cubesConstants'
 
 /**

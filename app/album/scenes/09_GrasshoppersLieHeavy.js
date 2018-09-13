@@ -58,6 +58,7 @@ import {
 import {
     DISHROOM_SINK,
     TRAFFIC_LIGHT,
+    APARTMENT_PLANT,
     CODE_BOX,
     LIGHT_SWITCH,
     CLIPBOARD,
@@ -259,6 +260,7 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
+                [APARTMENT_PLANT]: true,
                 [CODE_BOX]: true
             },
             [FURNITURES]: {
@@ -292,6 +294,7 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
+                [APARTMENT_PLANT]: true,
                 [CODE_BOX]: true
             },
             [FURNITURES]: {

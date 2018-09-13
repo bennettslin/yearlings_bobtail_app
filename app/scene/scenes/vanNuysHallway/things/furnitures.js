@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [PRINCIPAL_DOOR]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3,
+            xWidth: 3,
+            zHeight: 6
         }
     }
 }

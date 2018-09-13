@@ -16,20 +16,17 @@ const
         ceiling: {
             zIndices: [
                 [k],
-                [k],
-                [g, g, g, g, g, g, g, e, e, e, g],
+                [g, g, g, g, g, g, g, e, e, e, e, g],
                 [f],
-                [f],
+                [k, k, k, k, k, f],
+                [k, k, k, k, k, f],
                 [k]
             ]
         },
         floor: {
             zIndices: [
                 [1],
-                [1],
-                [g, g, g, g, g, g, g, 1, 1, 1, g],
-                [1],
-                [1],
+                [g, g, g, g, g, g, g, 1, 1, 1, 1, g],
                 [1]
             ]
         }

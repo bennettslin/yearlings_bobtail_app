@@ -19,10 +19,10 @@ const
             zIndices: [
                 [g],
                 [g, g, d, d, d, d, g, d, d, d, g],
-                [g, f],
-                [e, k],
-                [e, k],
-                [g, k]
+                [g, f, f],
+                [e, f, k],
+                [e, f, k],
+                [g, f, k]
             ]
         },
         floor: {

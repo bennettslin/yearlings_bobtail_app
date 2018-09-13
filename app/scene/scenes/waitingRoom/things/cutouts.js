@@ -6,28 +6,29 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [CLIPBOARD]: {
-        yIndex: 4,
+        yIndex: 2,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 9,
+            xWidth: 1,
+            zHeight: 2,
+            zOffset: 4
         }
     },
     [PAINTING]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 8,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 4,
+            xWidth: 3,
+            zHeight: 2,
+            zOffset: 3
         }
     },
     [WAITING_ROOM_PLANT]: {
-        yIndex: 1,
+        yIndex: 3,
         arrangement: {
-            xFloat: 4,
-            xWidth: 2,
-            zHeight: 2,
-            zOffset: 3
+            xFloat: 8,
+            xWidth: 1,
+            zHeight: 4
         }
     }
 }

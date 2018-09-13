@@ -66,6 +66,7 @@ import GoKartLeft from './Cutouts/GoKarts/GoKartLeft'
 import GoKartRight from './Cutouts/GoKarts/GoKartRight'
 import TrafficLight from './Cutouts/LizGate/TrafficLight'
 import DishroomSink from './Cutouts/Dishroom/DishroomSink'
+import ApartmentPlant from './Cutouts/BennettGate/ApartmentPlant'
 import CodeBox from './Cutouts/BennettGate/CodeBox'
 import LightSwitch from './Cutouts/BennettBed/LightSwitch'
 import Clipboard from './Cutouts/WaitingRoom/Clipboard'
@@ -154,6 +155,7 @@ import {
     GO_KART_RIGHT,
     TRAFFIC_LIGHT,
     DISHROOM_SINK,
+    APARTMENT_PLANT,
     CODE_BOX,
     LIGHT_SWITCH,
     CLIPBOARD,
@@ -243,6 +245,7 @@ const CUTOUTS_MAP = {
     [GO_KART_RIGHT]: GoKartRight,
     [TRAFFIC_LIGHT]: TrafficLight,
     [DISHROOM_SINK]: DishroomSink,
+    [APARTMENT_PLANT]: ApartmentPlant,
     [CODE_BOX]: CodeBox,
     [LIGHT_SWITCH]: LightSwitch,
     [CLIPBOARD]: Clipboard,

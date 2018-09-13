@@ -4,10 +4,10 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_GATE_FRONT]: {
-        yIndex: 2,
+        yIndex: 1,
         arrangement: {
-            xFloat: 8,
-            xWidth: 3,
+            xFloat: 8.5,
+            xWidth: 4,
             zHeight: 6
         }
     }

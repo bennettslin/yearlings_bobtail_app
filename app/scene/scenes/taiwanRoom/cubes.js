@@ -1,7 +1,6 @@
 import { TAIWAN_ROOM_KEY } from 'scene/cubesKeys'
 
 import {
-    c,
     e,
     f,
     g
@@ -14,18 +13,18 @@ const
                 [g],
                 [g],
                 [g, g, g, g, g, g, g, g, g, g, g, e],
-                [g, g, c, c, g, f, f, g, g, g, g, e],
+                [g, f, f, f, f, f, f, g, g, g, g, e],
                 [g]
             ]
         },
         floor: {
             zIndices: [
                 [g],
-                [g, g, g, g, g, 4, 4, 4, 4, 4, 4, g],
-                [g, g, g, g, g, 4, 4, 4, 4, 4, 4, 6],
-                [g, g, 8, 8, g, 4, 4, g, g, 3, 3, 6],
-                [g, 4, 4, 4, 4, 4, 4, 4, g, 2, 2, g],
-                [g, 4, 4, 4, 4, 4, 4, 4, g, 1, 1, g]
+                [g, g, g, g, 5, 5, 5, 5, 5, 5, 5, g],
+                [g, g, g, g, 5, 5, 5, 5, 5, 4, 4, g],
+                [g, 8, 8, 8, 5, 5, 5, g, g, 3, 3, 6],
+                [g, 5, 5, 5, 5, 5, 5, 5, g, 2, 2, g],
+                [g, 5, 5, 5, 5, 5, 5, 5, g, 1, 1, g]
             ]
         }
     },
