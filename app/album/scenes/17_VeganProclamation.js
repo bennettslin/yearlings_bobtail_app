@@ -2,7 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    // FLATS,
+    FLATS,
     FURNITURES
 } from 'constants/scene'
 
@@ -71,6 +71,10 @@ import {
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
 } from 'scene/fixtureKeys'
+
+import {
+    PHONE_BUBBLE
+} from 'scene/flatKeys'
 
 import {
     LOADING_DOCK_DOOR,
@@ -228,6 +232,9 @@ module.exports = [
             [FIXTURES]: {
                 [LIZ_PHONE_BASE]: true,
                 [LIZ_PHONE_BASE_REFLECTION]: true
+            },
+            [FLATS]: {
+                [PHONE_BUBBLE]: true
             },
             [FURNITURES]: {
                 [LIZ_MATTRESS]: true,
