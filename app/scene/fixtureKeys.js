@@ -18,8 +18,8 @@ const
     ALBUMS_MILK_CRATE = 'albumsMilkCrate',
     BASS_CASE_OPEN = 'bassCaseOpen',
     DRUMKIT = 'drumKit',
-    BASS_CASE = 'bassCase',
     GUITAR_CASE = 'guitarCase',
+    BASS_CASE_SIDE = 'bassCaseSide',
     CAVEMAN_BONES = 'cavemanBones',
     PUSH_BROOM = 'pushBroom',
     STEPLADDER = 'stepladder',
@@ -39,6 +39,7 @@ const
     EVIAN_BOTTLES = 'evianBottles',
     GUITAR_STAND = 'guitarStand',
     GUITAR_AMP = 'guitarAmp',
+    BASS_CASE_UPRIGHT = 'bassCaseUpright',
     DRUMS_STACKED = 'drumsStacked',
     BASS_AMP = 'bassAmp',
     RECORDING_CONSOLE = 'recordingConsole',
@@ -48,7 +49,9 @@ const
     HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
 
     ARRANGEMENT_PUSH_BROOM_BACKSTAGE = 'arrangementPushBroomBackstage',
-    ARRANGEMENT_PUSH_BROOM_TUNNEL = 'arrangementPushBroomTunnel'
+    ARRANGEMENT_PUSH_BROOM_TUNNEL = 'arrangementPushBroomTunnel',
+    ARRANGEMENT_DRUMS_STACKED_BASEMENT = 'arrangementDrumsStackedBasement',
+    ARRANGEMENT_DRUMS_STACKED_CLUB = 'arrangementDrumsStackedClub'
 
 export {
     PLAYGROUND_BALL,
@@ -68,8 +71,8 @@ export {
     ALBUMS_MILK_CRATE,
     BASS_CASE_OPEN,
     DRUMKIT,
-    BASS_CASE,
     GUITAR_CASE,
+    BASS_CASE_SIDE,
     CAVEMAN_BONES,
     PUSH_BROOM,
     STEPLADDER,
@@ -89,6 +92,7 @@ export {
     EVIAN_BOTTLES,
     GUITAR_STAND,
     GUITAR_AMP,
+    BASS_CASE_UPRIGHT,
     DRUMS_STACKED,
     BASS_AMP,
     RECORDING_CONSOLE,
@@ -98,5 +102,7 @@ export {
     HOSPITAL_RECORD_PLAYER,
 
     ARRANGEMENT_PUSH_BROOM_BACKSTAGE,
-    ARRANGEMENT_PUSH_BROOM_TUNNEL
+    ARRANGEMENT_PUSH_BROOM_TUNNEL,
+    ARRANGEMENT_DRUMS_STACKED_BASEMENT,
+    ARRANGEMENT_DRUMS_STACKED_CLUB
 }

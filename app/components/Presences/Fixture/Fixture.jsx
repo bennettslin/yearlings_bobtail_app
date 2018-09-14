@@ -40,7 +40,8 @@ import Gravestone from './Fixtures/Cemetery/Gravestone'
 import EvianBottles from './Fixtures/StationWagon/EvianBottles'
 import GuitarStand from './Fixtures/ClubSide/GuitarStand'
 import GuitarAmp from './Fixtures/ClubSide/GuitarAmp'
-import DrumsStacked from './Fixtures/ClubSide/DrumsStacked'
+import BassCaseUpright from './Fixtures/ClubLoading/BassCaseUpright'
+import DrumsStacked from './Fixtures/ClubLoading/DrumsStacked'
 import BassAmp from './Fixtures/ClubSide/BassAmp'
 import RecordingConsole from './Fixtures/SnowglobesFuture/RecordingConsole'
 import RecordingMic from './Fixtures/SnowglobesFuture/RecordingMic'
@@ -66,7 +67,7 @@ import {
     ALBUMS_MILK_CRATE,
     BASS_CASE_OPEN,
     DRUMKIT,
-    BASS_CASE,
+    BASS_CASE_SIDE,
     GUITAR_CASE,
     CAVEMAN_BONES,
     PUSH_BROOM,
@@ -87,6 +88,7 @@ import {
     EVIAN_BOTTLES,
     GUITAR_STAND,
     GUITAR_AMP,
+    BASS_CASE_UPRIGHT,
     DRUMS_STACKED,
     BASS_AMP,
     RECORDING_CONSOLE,
@@ -114,7 +116,7 @@ const FIXTURES_MAP = {
     [ALBUMS_MILK_CRATE]: AlbumsMilkCrate,
     [BASS_CASE_OPEN]: BassCaseOpen,
     [DRUMKIT]: DrumKit,
-    [BASS_CASE]: BassCase,
+    [BASS_CASE_SIDE]: BassCase,
     [GUITAR_CASE]: GuitarCase,
     [CAVEMAN_BONES]: CavemanBones,
     [PUSH_BROOM]: PushBroom,
@@ -135,6 +137,7 @@ const FIXTURES_MAP = {
     [EVIAN_BOTTLES]: EvianBottles,
     [GUITAR_STAND]: GuitarStand,
     [GUITAR_AMP]: GuitarAmp,
+    [BASS_CASE_UPRIGHT]: BassCaseUpright,
     [DRUMS_STACKED]: DrumsStacked,
     [BASS_AMP]: BassAmp,
     [RECORDING_CONSOLE]: RecordingConsole,

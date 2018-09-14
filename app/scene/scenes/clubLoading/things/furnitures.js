@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [CLUB_DOOR]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 4,
+            xFloat: 5,
             xWidth: 3,
             zHeight: 6
         }

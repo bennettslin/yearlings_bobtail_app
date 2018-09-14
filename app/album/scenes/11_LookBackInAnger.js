@@ -64,7 +64,9 @@ import {
 import {
     GUITAR_STAND,
     GUITAR_AMP,
+    BASS_CASE_UPRIGHT,
     DRUMS_STACKED,
+    ARRANGEMENT_DRUMS_STACKED_CLUB,
     BASS_AMP,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION
@@ -222,7 +224,8 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [DRUMS_STACKED]: true
+                [BASS_CASE_UPRIGHT]: true,
+                [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_CLUB
             },
             [FURNITURES]: {
                 [CLUB_DOOR]: true

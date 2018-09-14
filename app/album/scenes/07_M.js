@@ -82,7 +82,9 @@ import {
     ALBUMS_MILK_CRATE,
     BASS_CASE_OPEN,
     DRUMKIT,
-    BASS_CASE,
+    DRUMS_STACKED,
+    ARRANGEMENT_DRUMS_STACKED_BASEMENT,
+    BASS_CASE_SIDE,
     GUITAR_CASE
 } from 'scene/fixtureKeys'
 
@@ -271,8 +273,9 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [BASS_CASE]: true,
-                [GUITAR_CASE]: true
+                [BASS_CASE_SIDE]: true,
+                [GUITAR_CASE]: true,
+                [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_BASEMENT
             },
             [FURNITURES]: {
                 [BASEMENT_DOOR_OPEN]: true
