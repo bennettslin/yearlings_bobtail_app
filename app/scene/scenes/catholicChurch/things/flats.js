@@ -1,5 +1,6 @@
 import {
     WEST_BERKELEY_BACKDROP,
+    ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH
 } from 'scene/flatKeys'
 
@@ -12,12 +13,20 @@ const ARRANGEMENTS_MAP = {
             zHeight: 4
         }
     },
-    [ST_JOSEPHS_CHURCH]: {
-        yIndex: 0,
+    [ST_JOSEPHS_ANNEX]: {
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 12,
-            zHeight: 4
+            xFloat: 2.5,
+            xWidth: 4.5,
+            zHeight: 3
+        }
+    },
+    [ST_JOSEPHS_CHURCH]: {
+        yIndex: 1,
+        arrangement: {
+            xFloat: 8,
+            xWidth: 6,
+            zHeight: 5
         }
     }
 }

@@ -47,7 +47,10 @@ const
     RECORDING_MIC = 'recordingMic',
     RECORDING_BEERS = 'recordingBeers',
     BURGER_WRAPPER = 'burgerWrapper',
-    HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer'
+    HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
+
+    ARRANGEMENT_PUSH_BROOM_BACKSTAGE = 'arrangementPushBroomBackstage',
+    ARRANGEMENT_PUSH_BROOM_TUNNEL = 'arrangementPushBroomTunnel'
 
 export {
     PLAYGROUND_BALL,
@@ -96,5 +99,8 @@ export {
     RECORDING_MIC,
     RECORDING_BEERS,
     BURGER_WRAPPER,
-    HOSPITAL_RECORD_PLAYER
+    HOSPITAL_RECORD_PLAYER,
+
+    ARRANGEMENT_PUSH_BROOM_BACKSTAGE,
+    ARRANGEMENT_PUSH_BROOM_TUNNEL
 }

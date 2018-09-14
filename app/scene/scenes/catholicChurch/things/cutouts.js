@@ -8,25 +8,25 @@ const ARRANGEMENTS_MAP = {
     [DISPENSER_LEFT]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 1,
+            xWidth: 2,
+            zHeight: 3
         }
     },
     [DISPENSER_RIGHT]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 8,
+            xFloat: 3,
             xWidth: 2,
             zHeight: 3
         }
     },
     [BERKELEY_LAMPPOST]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 4,
-            xWidth: 2,
-            zHeight: 2
+            xFloat: 11,
+            xWidth: 1,
+            zHeight: 6
         }
     }
 }

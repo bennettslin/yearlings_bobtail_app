@@ -8,43 +8,43 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [SIGNPOST]: {
-        yIndex: 4,
+        yIndex: 5,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 10.5,
+            xWidth: 1,
+            zHeight: 7
         }
     },
     [BANCROFT_SHRUB_LEFT]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 8,
-            xWidth: 2,
+            xFloat: 3.5,
+            xWidth: 3,
             zHeight: 3
         }
     },
     [BANCROFT_SHRUB_RIGHT]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 4,
-            xWidth: 2,
-            zHeight: 2
+            xFloat: 2.5,
+            xWidth: 3,
+            zHeight: 3
         }
     },
     [UC_BERKELEY_TREE_LEFT]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 4,
+            xFloat: 0.5,
             xWidth: 2,
-            zHeight: 2
+            zHeight: 4
         }
     },
     [UC_BERKELEY_TREE_RIGHT]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 4,
+            xFloat: 9.5,
             xWidth: 2,
-            zHeight: 2
+            zHeight: 4
         }
     }
 }

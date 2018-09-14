@@ -7,16 +7,17 @@ const ARRANGEMENTS_MAP = {
     [SANDBAGS]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 3,
+            xWidth: 3,
+            zHeight: 2,
+            zOffset: 4
         }
     },
     [STAGE_LIGHTS]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 8,
-            xWidth: 2,
+            xFloat: 3,
+            xWidth: 4,
             zHeight: 3
         }
     }

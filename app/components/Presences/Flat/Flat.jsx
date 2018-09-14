@@ -38,6 +38,7 @@ import EscapePodSketchbook from './Flats/VanNuysQuad/EscapePodSketchbook'
 import VanNuysSchoolBackdrop from './Flats/VanNuysLockers/VanNuysSchoolBackdrop'
 import BennettCouchThought from './Flats/BennettCouch/BennettCouchThought'
 import WestBerkeleyBackdrop from './Flats/CatholicChurch/WestBerkeleyBackdrop'
+import StJosephsAnnex from './Flats/CatholicChurch/StJosephsAnnex'
 import StJosephsChurch from './Flats/CatholicChurch/StJosephsChurch'
 import UcBerkeleyBackdrop from './Flats/UcBerkeley/UcBerkeleyBackdrop'
 import Campanile from './Flats/UcBerkeley/Campanile'
@@ -125,6 +126,7 @@ import {
     VAN_NUYS_SCHOOL_BACKDROP,
     BENNETT_COUCH_THOUGHT,
     WEST_BERKELEY_BACKDROP,
+    ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     UC_BERKELEY_BACKDROP,
     CAMPANILE,
@@ -213,6 +215,7 @@ const FLATS_MAP = {
     [VAN_NUYS_SCHOOL_BACKDROP]: VanNuysSchoolBackdrop,
     [BENNETT_COUCH_THOUGHT]: BennettCouchThought,
     [WEST_BERKELEY_BACKDROP]: WestBerkeleyBackdrop,
+    [ST_JOSEPHS_ANNEX]: StJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: StJosephsChurch,
     [UC_BERKELEY_BACKDROP]: UcBerkeleyBackdrop,
     [CAMPANILE]: Campanile,

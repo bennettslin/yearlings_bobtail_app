@@ -69,6 +69,7 @@ import {
     BENNETT_COUCH_THOUGHT,
     WEST_BERKELEY_BACKDROP,
     ST_JOSEPHS_CHURCH,
+    ST_JOSEPHS_ANNEX,
     UC_BERKELEY_BACKDROP,
     CAMPANILE
 } from 'scene/flatKeys'
@@ -172,6 +173,7 @@ module.exports = [
             },
             [FLATS]: {
                 [WEST_BERKELEY_BACKDROP]: true,
+                [ST_JOSEPHS_ANNEX]: true,
                 [ST_JOSEPHS_CHURCH]: true
             }
         },
@@ -210,7 +212,8 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [BANCROFT_SHRUB_LEFT]: true
+                [BANCROFT_SHRUB_LEFT]: true,
+                [UC_BERKELEY_TREE_LEFT]: true
             },
             [FLATS]: {
                 [UC_BERKELEY_BACKDROP]: true
@@ -246,7 +249,6 @@ module.exports = [
             [CUTOUTS]: {
                 [BANCROFT_SHRUB_RIGHT]: true,
                 [SIGNPOST]: true,
-                [UC_BERKELEY_TREE_LEFT]: true,
                 [UC_BERKELEY_TREE_RIGHT]: true
             },
             [FLATS]: {

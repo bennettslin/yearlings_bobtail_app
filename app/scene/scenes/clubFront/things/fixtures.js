@@ -7,35 +7,35 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [MICROPHONE_STAND]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 4,
+            xWidth: 0.5,
+            zHeight: 4
         }
     },
     [ALBUMS_MILK_CRATE]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 4.5,
+            xWidth: 1.5,
+            zHeight: 1.5
         }
     },
     [BASS_CASE_OPEN]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
+            xFloat: 8,
+            xWidth: 4,
             zHeight: 1
         }
     },
     [DRUMKIT]: {
-        yIndex: 5,
+        yIndex: 1,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 5.5,
+            xWidth: 4,
+            zHeight: 3
         }
     }
 }

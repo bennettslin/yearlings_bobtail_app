@@ -5,19 +5,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BASS_CASE]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 9,
             xWidth: 1,
-            zHeight: 1
+            zHeight: 5
         }
     },
     [GUITAR_CASE]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 10,
             xWidth: 1,
-            zHeight: 1
+            zHeight: 5
         }
     }
 }

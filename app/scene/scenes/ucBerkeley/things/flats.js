@@ -13,11 +13,11 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [CAMPANILE]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 12,
-            zHeight: 4
+            xFloat: 6,
+            xWidth: 3,
+            zHeight: 7.5
         }
     }
 }

@@ -9,35 +9,35 @@ const ARRANGEMENTS_MAP = {
     [MONITOR_SPEAKER_LEFT]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 2.5,
+            xWidth: 1.5,
+            zHeight: 1
         }
     },
     [MONITOR_SPEAKER_RIGHT]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 8,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 8.5,
+            xWidth: 1.5,
+            zHeight: 1
         }
     },
     [WALL_SPEAKER_LEFT]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 4,
-            xWidth: 2,
+            xFloat: 1.5,
+            xWidth: 1.5,
             zHeight: 2,
-            zOffset: 3
+            zOffset: 4
         }
     },
     [WALL_SPEAKER_RIGHT]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 4,
-            xWidth: 2,
+            xFloat: 9.5,
+            xWidth: 1.5,
             zHeight: 2,
-            zOffset: 3
+            zOffset: 4
         }
     }
 }
