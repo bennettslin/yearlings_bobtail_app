@@ -15,7 +15,10 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_AUTUMN
+    SEASON_AUTUMN,
+    SEASON_PAST,
+    SEASON_PRESENT,
+    SEASON_FUTURE
 } from 'scene/sky'
 
 import {
@@ -208,7 +211,7 @@ module.exports = [
         cubes: SNOWGLOBES_PAST_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_PAST
         }
     },
     {
@@ -261,7 +264,7 @@ module.exports = [
         cubes: SNOWGLOBES_PRESENT_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_PRESENT
         }
     },
     {
@@ -327,7 +330,7 @@ module.exports = [
         cubes: SNOWGLOBES_FUTURE_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_FUTURE
         }
     },
     {

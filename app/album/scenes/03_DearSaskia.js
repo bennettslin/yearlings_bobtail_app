@@ -15,7 +15,7 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_SUMMER,
+    SEASON_PRESENT,
     SEASON_PAST
 } from 'scene/sky'
 
@@ -106,7 +106,7 @@ module.exports = [
         cubes: PUPPET_SHOW_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SUMMER
+            season: SEASON_PRESENT
         }
     },
     {
@@ -130,7 +130,7 @@ module.exports = [
         cubes: PUPPET_SHOW_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SUMMER
+            season: SEASON_PRESENT
         }
     },
     {
@@ -243,7 +243,7 @@ module.exports = [
         cubes: PUPPET_SHOW_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SUMMER
+            season: SEASON_PRESENT
         }
     }
 ]

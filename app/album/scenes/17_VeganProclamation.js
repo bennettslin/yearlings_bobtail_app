@@ -16,7 +16,8 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_WINTER
+    SEASON_WINTER,
+    SEASON_LOVE
 } from 'scene/sky'
 
 import {
@@ -246,7 +247,7 @@ module.exports = [
         cubes: LIZ_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_WINTER
+            season: SEASON_LOVE
         }
     },
     {
