@@ -7,17 +7,17 @@ const ARRANGEMENTS_MAP = {
     [FAMILY_HOUSE]: {
         yIndex: 0,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 12,
-            zHeight: 4
+            xFloat: 1.5,
+            xWidth: 3,
+            zHeight: 2
         }
     },
     [CAVE_SHADOWS]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 2,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 7,
+            xWidth: 9,
+            zHeight: 7
         }
     }
 }

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const SleepingMat = ({
+const IronGateLow = ({
 
     className,
 
@@ -18,7 +18,7 @@ const SleepingMat = ({
     return (
         <Svg
             className={cx(
-                'SleepingMat',
+                'IronGateLow',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const SleepingMat = ({
                 {...other}
             >
                 {cx(
-                    'SleepingMat'
+                    'IronGateLow'
                 )}
             </text>
         </Svg>
     )
 }
 
-SleepingMat.propTypes = propTypes;
+IronGateLow.propTypes = propTypes;
 
-export default SleepingMat
+export default IronGateLow

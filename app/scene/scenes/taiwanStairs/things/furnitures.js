@@ -1,14 +1,23 @@
 import {
+    IRON_GATE_LOW,
     STAIRWELL_RAILING
 } from 'scene/furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
-    [STAIRWELL_RAILING]: {
+    [IRON_GATE_LOW]: {
         yIndex: 0,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 5,
+            xWidth: 3,
+            zHeight: 3
+        }
+    },
+    [STAIRWELL_RAILING]: {
+        yIndex: 4,
+        arrangement: {
+            xFloat: 6,
+            xWidth: 5,
+            zHeight: 2.5
         }
     }
 }

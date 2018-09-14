@@ -6,9 +6,9 @@ const ARRANGEMENTS_MAP = {
     [FRIDGE_DRAWINGS]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 3.5,
             xWidth: 1,
-            zHeight: 1
+            zHeight: 0.5
         }
     }
 }

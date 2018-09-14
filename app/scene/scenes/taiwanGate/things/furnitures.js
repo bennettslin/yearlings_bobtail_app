@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [IRON_GATE]: {
-        yIndex: 0,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 2,
+            xWidth: 3,
+            zHeight: 6
         }
     }
 }

@@ -5,17 +5,17 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BACKPACK_BENNETT]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 4,
             xWidth: 1,
             zHeight: 1
         }
     },
     [BACKPACK_SASHA]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 7,
             xWidth: 1,
             zHeight: 1
         }

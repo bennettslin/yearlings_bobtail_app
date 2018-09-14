@@ -5,12 +5,22 @@
     stroke: #444;
 }
 
+// .Cutout {
+//     transition: top $animationDuration__default;
+//     top: -100%;
+
+//     .Scene__shown
+//     & {
+//         top: 0;
+//     }
+// }
+
 .Cutout {
-    transition: top $animationDuration__default;
-    top: -100%;
+    transition: opacity $animationDuration__default;
+    opacity: 0;
 
     .Scene__shown
     & {
-        top: 0;
+        opacity: 1;
     }
 }

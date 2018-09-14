@@ -15,99 +15,99 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [PUPPET_BENNETT_BEGIN]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 2,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_ANITA_BEGIN]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_MOTHER_BEGIN]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 2.5,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_FATHER_BEGIN]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3.5,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_BENNETT_MIDDLE]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 2.5,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_ANITA_MIDDLE]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 4,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_MOTHER_MIDDLE]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3.5,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_FATHER_MIDDLE]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 4.5,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_BENNETT_END]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 6.5,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_ANITA_END]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 10,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_MOTHER_END]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 9.5,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_FATHER_END]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 10.5,
+            xWidth: 0.5,
+            zHeight: 1
         }
     }
 }

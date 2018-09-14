@@ -6,8 +6,6 @@ import {
 
 const
     OUTDOOR_WEDDING_CUBES = {
-        // TODO: Make more natural.
-        // Grass.
         slantDirection: RIGHT,
         floor: {
             zIndices: [

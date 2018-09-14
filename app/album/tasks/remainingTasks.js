@@ -1,38 +1,9 @@
 module.exports = [
 
-    /**
-     * TODO: At home. Finish all scene tasks, plus these. Aim for bringing
-     * deadline back to end of April.
-     */
-    {
-        taskName: `Allow cutouts and fixtures to persist across scenes. Probably needs React CSS transition group.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Presence transition order.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
-        workedHours: 0,
-        neededHours: 8
-    },
     {
         taskName: `Categorise each instance by facial emotion?`,
         workedHours: 0,
         neededHours: 16
-    },
-    {
-        taskName: `Allow presences to specify zIndex. Position presences in slanted cubes.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Allow cube keys to have different colours.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     /**
@@ -196,8 +167,31 @@ module.exports = [
         neededHours: 5
     },
 
+    /**
+     * Do once the presence svgs are mostly done.
+     */
     {
         taskName: `Finalise loading page. Use image of Mara.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Allow cutouts and fixtures to persist across scenes. Probably needs React CSS transition group.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Presence transition order.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Allow presences to specify zIndex. Position presences in slanted cubes.`,
         workedHours: 0,
         neededHours: 5
     },

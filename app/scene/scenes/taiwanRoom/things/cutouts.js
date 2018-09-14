@@ -7,35 +7,35 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BUDDHA_SHRINE]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 0.5,
+            xFloat: 2,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 2
         }
     },
     [TAIWAN_FRIDGE_FRONT]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 5,
+            xWidth: 2.5,
+            zHeight: 4
         }
     },
     [BENNETT_TAIWAN_STAIRS]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 7,
+            xWidth: 1,
+            zHeight: 4
         }
     },
     [ODIN_TAIWAN_STAIRS]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 10.5,
+            xFloat: 9.5,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 1
         }
     }
 }

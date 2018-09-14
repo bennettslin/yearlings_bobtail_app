@@ -6,27 +6,27 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_FRIDGE_SIDE]: {
-        yIndex: 1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0.5,
+            xFloat: 1.5,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 5
         }
     },
     [BENNETT_TAIWAN_GATE]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
+            xFloat: 6,
+            xWidth: 1,
             zHeight: 3
         }
     },
     [ODIN_TAIWAN_GATE]: {
-        yIndex: 1,
+        yIndex: 0,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 7,
+            xWidth: 1,
+            zHeight: 1
         }
     }
 }

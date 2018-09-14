@@ -8,8 +8,8 @@ import BedroomBlindsOpen from './Furnitures/Bedroom/BedroomBlindsOpen'
 import CaptainBedMattress from './Furnitures/Bedroom/CaptainBedMattress'
 import SchoolbusSeatFront from './Furnitures/Schoolbus/SchoolbusSeatFront'
 import SchoolbusSeatBack from './Furnitures/Schoolbus/SchoolbusSeatBack'
-import SleepingMat from './Furnitures/TaiwanRoom/SleepingMat'
 import StairwellRailing from './Furnitures/TaiwanStairs/StairwellRailing'
+import IronGateLow from './Furnitures/TaiwanStairs/IronGateLow'
 import IronGate from './Furnitures/TaiwanGate/IronGate'
 import BuoyFloat from './Furnitures/Buoy/BuoyFloat'
 import PrincipalDoor from './Furnitures/VanNuysHallway/PrincipalDoor'
@@ -66,8 +66,8 @@ import {
     CAPTAIN_BED_MATTRESS,
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_BACK,
-    SLEEPING_MAT,
     STAIRWELL_RAILING,
+    IRON_GATE_LOW,
     IRON_GATE,
     BUOY_FLOAT,
     PRINCIPAL_DOOR,
@@ -125,8 +125,8 @@ const FURNITURES_MAP = {
     [CAPTAIN_BED_MATTRESS]: CaptainBedMattress,
     [SCHOOLBUS_SEAT_FRONT]: SchoolbusSeatFront,
     [SCHOOLBUS_SEAT_BACK]: SchoolbusSeatBack,
-    [SLEEPING_MAT]: SleepingMat,
     [STAIRWELL_RAILING]: StairwellRailing,
+    [IRON_GATE_LOW]: IronGateLow,
     [IRON_GATE]: IronGate,
     [BUOY_FLOAT]: BuoyFloat,
     [PRINCIPAL_DOOR]: PrincipalDoor,

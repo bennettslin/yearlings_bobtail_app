@@ -9,51 +9,54 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_MOUNTAINS_FAR]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
             xFloat: 5.5,
-            xWidth: 12,
+            xWidth: 10,
             zHeight: 4
         }
     },
     [TAIWAN_MOUNTAINS_BRIDGED]: {
-        yIndex: 1,
+        yIndex: 3,
         arrangement: {
-            xFloat: 2,
-            xWidth: 5,
+            xFloat: 5.5,
+            xWidth: 10,
             zHeight: 3
         }
     },
     [TAIWAN_MOUNTAINS_NEAR]: {
-        yIndex: 2,
+        yIndex: 4,
         arrangement: {
-            xFloat: 8,
-            xWidth: 5,
-            zHeight: 5
+            xFloat: 5.5,
+            xWidth: 10,
+            zHeight: 1.5
         }
     },
     [TAIWAN_CLOUDS]: {
-        yIndex: 2,
+        yIndex: 4,
         arrangement: {
-            xFloat: 8,
-            xWidth: 5,
-            zHeight: 5
+            xFloat: 5.5,
+            xWidth: 10,
+            zHeight: 1.5,
+            zOffset: 6
         }
     },
     [TOGETHER_SKETCHBOOK]: {
-        yIndex: 2,
+        yIndex: 5,
         arrangement: {
-            xFloat: 8,
-            xWidth: 5,
-            zHeight: 5
+            xFloat: 8.5,
+            xWidth: 4,
+            zHeight: 3,
+            zOffset: 4.5
         }
     },
     [APART_SKETCHBOOK]: {
-        yIndex: 2,
+        yIndex: 5,
         arrangement: {
-            xFloat: 8,
-            xWidth: 5,
-            zHeight: 5
+            xFloat: 2.5,
+            xWidth: 4,
+            zHeight: 3,
+            zOffset: 4.5
         }
     }
 }

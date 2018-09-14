@@ -28,7 +28,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 6,
             xWidth: 3,
-            zHeight: 4
+            zHeight: 2.5
         }
     },
     [DOGS_SKETCHBOOK]: {

@@ -67,7 +67,6 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    TAIWAN_GATE,
     TAIWAN_STREETS_BACKDROP,
     SHORE_BACKDROP,
     SHORE_FRONT,
@@ -80,8 +79,8 @@ import {
 } from 'scene/flatKeys'
 
 import {
-    SLEEPING_MAT,
     STAIRWELL_RAILING,
+    IRON_GATE_LOW,
     IRON_GATE,
     BUOY_FLOAT
 } from 'scene/furnitureKeys'
@@ -104,9 +103,6 @@ module.exports = [
                 [TAIWAN_FRIDGE_FRONT]: true,
                 [BENNETT_TAIWAN_STAIRS]: true,
                 [ODIN_TAIWAN_STAIRS]: true
-            },
-            [FURNITURES]: {
-                [SLEEPING_MAT]: true
             }
         },
         cubes: TAIWAN_ROOM_KEY,
@@ -135,10 +131,8 @@ module.exports = [
             [FIXTURES]: {
                 [FRIDGE_DRAWINGS]: true
             },
-            [FLATS]: {
-                [TAIWAN_GATE]: true
-            },
             [FURNITURES]: {
+                [IRON_GATE_LOW]: true,
                 [STAIRWELL_RAILING]: true
             }
         },

@@ -1,8 +1,8 @@
 /**
- * 25%: Establish components for scene.
- * 25%: Establish component configs for scene.
- * 25%: Establish cubes for scene.
- * 25%: Establish colours and sky for scene.
+ * 10%: Review components for scene.
+ * 10%: Raw component configs for scene.
+ * 30%: Raw cubes for scene.
+ * 50%: Establish colours and sky for scene.
  */
 
 /**

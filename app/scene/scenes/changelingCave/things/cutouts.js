@@ -7,35 +7,36 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TROLL_SHADOW_LEFT]: {
-        yIndex: 1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 1.5,
+            xWidth: 3,
+            zHeight: 2
         }
     },
     [TROLL_SHADOW_RIGHT]: {
-        yIndex: 1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 9,
+            xWidth: 4,
+            zHeight: 4
         }
     },
     [CAMPFIRE]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 10.5,
+            xFloat: 4,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 1.5
         }
     },
     [STALACTITES]: {
-        yIndex: 2,
+        yIndex: 4,
         arrangement: {
-            xFloat: 8,
-            xWidth: 5,
-            zHeight: 5
+            xFloat: 5.5,
+            xWidth: 12,
+            zHeight: 1.5,
+            zOffset: 6.5
         }
     }
 }

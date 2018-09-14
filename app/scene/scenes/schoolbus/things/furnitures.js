@@ -5,19 +5,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [SCHOOLBUS_SEAT_BACK]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3,
+            xWidth: 1,
+            zHeight: 0.5
         }
     },
     [SCHOOLBUS_SEAT_FRONT]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 6,
+            xWidth: 1,
+            zHeight: 0.5
         }
     }
 }

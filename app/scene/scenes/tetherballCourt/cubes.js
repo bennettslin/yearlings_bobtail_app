@@ -4,6 +4,7 @@ const
     TETHERBALL_COURT_CUBES = {
         floor: {
             zIndices: [
+                [0],
                 [1]
             ]
         }

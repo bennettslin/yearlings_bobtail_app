@@ -15,7 +15,8 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_SUMMER
+    SEASON_SUMMER,
+    SEASON_PAST
 } from 'scene/sky'
 
 import {
@@ -177,7 +178,7 @@ module.exports = [
         cubes: SCHOOLBUS_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SUMMER
+            season: SEASON_PAST
         }
     },
     {
@@ -218,7 +219,7 @@ module.exports = [
         cubes: TETHERBALL_COURT_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SUMMER
+            season: SEASON_PAST
         }
     },
     {

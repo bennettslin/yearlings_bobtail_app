@@ -68,7 +68,10 @@ import {
     ARRANGEMENT_LIZ_BLINDS,
     LIZ_CUSHIONS,
     LIZ_DOOR,
-    LIZ_GATE_INSIDE
+    LIZ_GATE_INSIDE,
+    BASEMENT_DOOR,
+    BENNETT_MATTRESS,
+    BENNETT_PILLOWS
 } from 'scene/furnitureKeys'
 
 module.exports = [
@@ -169,6 +172,11 @@ module.exports = [
                         instance: FREEZING_NAKED
                     }
                 }
+            },
+            [FURNITURES]: {
+                [BASEMENT_DOOR]: true,
+                [BENNETT_MATTRESS]: true,
+                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BASEMENT_BED_KEY,

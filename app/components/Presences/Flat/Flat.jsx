@@ -23,7 +23,6 @@ import SchoolbusStreetThought from './Flats/Schoolbus/SchoolbusStreetThought'
 import VanNuysSchoolThought from './Flats/TetherballCourt/VanNuysSchoolThought'
 import VanNuysSchoolhouse from './Flats/TetherballCourt/VanNuysSchoolhouse'
 import ApartSketchbook from './Flats/PuppetShow/ApartSketchbook'
-import TaiwanGate from './Flats/TaiwanStairs/TaiwanGate'
 import TaiwanStreetsBackdrop from './Flats/TaiwanGate/TaiwanStreetsBackdrop'
 import ShoreBackdrop from './Flats/Rickshaw/ShoreBackdrop'
 import ShoreFront from './Flats/Shore/ShoreFront'
@@ -111,7 +110,6 @@ import {
     VAN_NUYS_SCHOOL_THOUGHT,
     VAN_NUYS_SCHOOLHOUSE,
     APART_SKETCHBOOK,
-    TAIWAN_GATE,
     TAIWAN_STREETS_BACKDROP,
     SHORE_BACKDROP,
     SHORE_FRONT,
@@ -200,7 +198,6 @@ const FLATS_MAP = {
     [VAN_NUYS_SCHOOL_THOUGHT]: VanNuysSchoolThought,
     [VAN_NUYS_SCHOOLHOUSE]: VanNuysSchoolhouse,
     [APART_SKETCHBOOK]: ApartSketchbook,
-    [TAIWAN_GATE]: TaiwanGate,
     [TAIWAN_STREETS_BACKDROP]: TaiwanStreetsBackdrop,
     [SHORE_BACKDROP]: ShoreBackdrop,
     [SHORE_FRONT]: ShoreFront,

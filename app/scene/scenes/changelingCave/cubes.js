@@ -4,6 +4,7 @@ const
     CHANGELING_CAVE_CUBES = {
         floor: {
             zIndices: [
+                [1],
                 [0]
             ]
         }

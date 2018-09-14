@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_ODIN_RICKSHAW]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 0.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 7.5,
+            xWidth: 2.5,
+            zHeight: 4
         }
     }
 }
