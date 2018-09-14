@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CaptainBedDrawers = ({
+const AshCan = ({
 
     className,
 
@@ -18,13 +18,13 @@ const CaptainBedDrawers = ({
     return (
         <Svg
             className={cx(
-                'CaptainBedDrawers',
+                'AshCan',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Fixture__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const CaptainBedDrawers = ({
                 {...other}
             >
                 {cx(
-                    'CaptainBedDrawers'
+                    'AshCan'
                 )}
             </text>
         </Svg>
     )
 }
 
-CaptainBedDrawers.propTypes = propTypes;
+AshCan.propTypes = propTypes;
 
-export default CaptainBedDrawers
+export default AshCan

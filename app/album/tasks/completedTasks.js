@@ -3848,9 +3848,9 @@ module.exports = [
         neededHours: 30
     },
     {
-        taskName: `Basic work on scene cubes.`,
-        workedHours: 8,
-        neededHours: 8
+        taskName: `Raw work on scene cubes.`,
+        workedHours: 14,
+        neededHours: 14
     },
     {
         taskName: `Have a past sky.`,
@@ -3866,5 +3866,5 @@ module.exports = [
         taskName: `Allow the same presence to have multiple arrangements.`,
         workedHours: 2,
         neededHours: 2
-    },
+    }
 ]

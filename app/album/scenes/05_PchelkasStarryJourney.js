@@ -64,6 +64,7 @@ import { POPULAR_GIRL } from 'scene/instanceKeys/sasha'
 import { PRINCIPAL } from 'scene/instanceKeys/tristan'
 
 import {
+    CAPTAIN_BED_DRAWERS,
     LOCKER_BANK,
     TRASH_CAN_BACK,
     VAN_NUYS_PLANTS_BACK,
@@ -81,7 +82,6 @@ import {
 import {
     BEDROOM_BACKDROP,
     BEDROOM_BUS_BACKDROP,
-    CAPTAIN_BED_DRAWERS,
     DOGS_SKETCHBOOK,
     ESCAPE_POD_SKETCHBOOK,
     VAN_NUYS_SCHOOL_BACKDROP,
@@ -112,9 +112,11 @@ module.exports = [
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,
         presences: {
-            [FLATS]: {
-                [BEDROOM_BACKDROP]: true,
+            [CUTOUTS]: {
                 [CAPTAIN_BED_DRAWERS]: true
+            },
+            [FLATS]: {
+                [BEDROOM_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -174,9 +176,11 @@ module.exports = [
                     instance: FEIGNING_SICK
                 }
             },
-            [FLATS]: {
-                [BEDROOM_BUS_BACKDROP]: true,
+            [CUTOUTS]: {
                 [CAPTAIN_BED_DRAWERS]: true
+            },
+            [FLATS]: {
+                [BEDROOM_BUS_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -201,9 +205,11 @@ module.exports = [
                     instance: ASLEEP
                 }
             },
+            [CUTOUTS]: {
+                [CAPTAIN_BED_DRAWERS]: true
+            },
             [FLATS]: {
                 [BEDROOM_BACKDROP]: true,
-                [CAPTAIN_BED_DRAWERS]: true,
                 [DOGS_SKETCHBOOK]: true
             },
             [FURNITURES]: {

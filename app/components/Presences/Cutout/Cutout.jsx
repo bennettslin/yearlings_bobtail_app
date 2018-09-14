@@ -11,6 +11,7 @@ import OverpassSignFront from './Cutouts/Freeway/OverpassSignFront'
 import OverpassSignBack from './Cutouts/Freeway/OverpassSignBack'
 import PorchPlantsLeft from './Cutouts/Porch/PorchPlantsLeft'
 import PorchPlantsRight from './Cutouts/Porch/PorchPlantsRight'
+import CaptainBedDrawers from './Cutouts/Bedroom/CaptainBedDrawers'
 import TrollShadowLeft from './Cutouts/ChangelingCave/TrollShadowLeft'
 import TrollShadowRight from './Cutouts/ChangelingCave/TrollShadowRight'
 import Campfire from './Cutouts/ChangelingCave/Campfire'
@@ -99,6 +100,7 @@ import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
+    CAPTAIN_BED_DRAWERS,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
@@ -188,6 +190,7 @@ const CUTOUTS_MAP = {
     [OVERPASS_SIGN_BACK]: OverpassSignBack,
     [PORCH_PLANTS_LEFT]: PorchPlantsLeft,
     [PORCH_PLANTS_RIGHT]: PorchPlantsRight,
+    [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers,
     [TROLL_SHADOW_LEFT]: TrollShadowLeft,
     [TROLL_SHADOW_RIGHT]: TrollShadowRight,
     [CAMPFIRE]: Campfire,

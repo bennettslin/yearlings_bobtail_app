@@ -11,7 +11,6 @@ import NurseOfficeBubble from './Flats/NohoSchool/NurseOfficeBubble'
 import ValleyBackdrop from './Flats/Freeway/ValleyBackdrop'
 import BedroomBackdrop from './Flats/Bedroom/BedroomBackdrop'
 import BedroomSirenBackdrop from './Flats/Bedroom/BedroomSirenBackdrop'
-import CaptainBedDrawers from './Flats/Bedroom/CaptainBedDrawers'
 import FamilyHouse from './Flats/ChangelingCave/FamilyHouse'
 import CaveShadows from './Flats/ChangelingCave/CaveShadows'
 import TaiwanMountainsFar from './Flats/PuppetShow/TaiwanMountainsFar'
@@ -99,7 +98,6 @@ import {
     VALLEY_BACKDROP,
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
-    CAPTAIN_BED_DRAWERS,
     FAMILY_HOUSE,
     CAVE_SHADOWS,
     TAIWAN_MOUNTAINS_FAR,
@@ -188,7 +186,6 @@ const FLATS_MAP = {
     [VALLEY_BACKDROP]: ValleyBackdrop,
     [BEDROOM_BACKDROP]: BedroomBackdrop,
     [BEDROOM_SIREN_BACKDROP]: BedroomSirenBackdrop,
-    [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers,
     [FAMILY_HOUSE]: FamilyHouse,
     [CAVE_SHADOWS]: CaveShadows,
     [TAIWAN_MOUNTAINS_FAR]: TaiwanMountainsFar,

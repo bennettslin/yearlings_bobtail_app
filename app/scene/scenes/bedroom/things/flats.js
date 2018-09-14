@@ -1,7 +1,6 @@
 import {
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
-    CAPTAIN_BED_DRAWERS,
     DOGS_SKETCHBOOK,
     BEDROOM_BUS_BACKDROP
 } from 'scene/flatKeys'
@@ -21,14 +20,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 3,
             xWidth: 6,
             zHeight: 8
-        }
-    },
-    [CAPTAIN_BED_DRAWERS]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 6,
-            xWidth: 3,
-            zHeight: 2.5
         }
     },
     [DOGS_SKETCHBOOK]: {

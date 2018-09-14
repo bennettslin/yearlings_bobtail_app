@@ -68,6 +68,7 @@ import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
+    CAPTAIN_BED_DRAWERS,
     FIRE_HYDRANT,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
@@ -87,7 +88,6 @@ import {
     NOHO_HOUSE_RIGHT,
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
-    CAPTAIN_BED_DRAWERS,
     FAMILY_HOUSE,
     CAVE_SHADOWS
 } from 'scene/flatKeys'
@@ -217,12 +217,14 @@ module.exports = [
                     instance: ENRAGED
                 }
             },
+            [CUTOUTS]: {
+                [CAPTAIN_BED_DRAWERS]: true
+            },
             [FIXTURES]: {
                 [CHRISTOPHER_LETTERS]: true
             },
             [FLATS]: {
-                [BEDROOM_BACKDROP]: true,
-                [CAPTAIN_BED_DRAWERS]: true
+                [BEDROOM_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -296,9 +298,11 @@ module.exports = [
                     instance: FEARFUL
                 }
             },
-            [FLATS]: {
-                [BEDROOM_SIREN_BACKDROP]: true,
+            [CUTOUTS]: {
                 [CAPTAIN_BED_DRAWERS]: true
+            },
+            [FLATS]: {
+                [BEDROOM_SIREN_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,

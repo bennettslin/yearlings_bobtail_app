@@ -14,6 +14,7 @@ import BennettLetters from './Fixtures/Bedroom/BennettLetters'
 import ThrownFruit from './Fixtures/VanNuysLockers/ThrownFruit'
 import BennettRecordPlayer from './Fixtures/BennettCouch/BennettRecordPlayer'
 import BennettCouchLamp from './Fixtures/BennettCouch/BennettCouchLamp'
+import AshCan from './Fixtures/UcBerkeley/AshCan'
 import MicrophoneStand from './Fixtures/ClubFront/MicrophoneStand'
 import AlbumsMilkCrate from './Fixtures/ClubFront/AlbumsMilkCrate'
 import BassCaseOpen from './Fixtures/ClubFront/BassCaseOpen'
@@ -63,6 +64,7 @@ import {
     THROWN_FRUIT,
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
+    ASH_CAN,
     MICROPHONE_STAND,
     ALBUMS_MILK_CRATE,
     BASS_CASE_OPEN,
@@ -113,6 +115,7 @@ const FIXTURES_MAP = {
     [THROWN_FRUIT]: ThrownFruit,
     [BENNETT_RECORD_PLAYER]: BennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: BennettCouchLamp,
+    [ASH_CAN]: AshCan,
     [MICROPHONE_STAND]: MicrophoneStand,
     [ALBUMS_MILK_CRATE]: AlbumsMilkCrate,
     [BASS_CASE_OPEN]: BassCaseOpen,

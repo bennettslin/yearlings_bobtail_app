@@ -62,7 +62,8 @@ import {
 
 import {
     BENNETT_RECORD_PLAYER,
-    BENNETT_COUCH_LAMP
+    BENNETT_COUCH_LAMP,
+    ASH_CAN
 } from 'scene/fixtureKeys'
 
 import {
@@ -214,6 +215,9 @@ module.exports = [
             [CUTOUTS]: {
                 [BANCROFT_SHRUB_LEFT]: true,
                 [UC_BERKELEY_TREE_LEFT]: true
+            },
+            [FIXTURES]: {
+                [ASH_CAN]: true
             },
             [FLATS]: {
                 [UC_BERKELEY_BACKDROP]: true
