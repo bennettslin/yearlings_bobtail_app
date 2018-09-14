@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [BANCROFT_DOOR]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 8,
+            xFloat: 9,
             xWidth: 3,
             zHeight: 6
         }

@@ -34,7 +34,7 @@ const ARRANGEMENTS_MAP = {
     [UC_BERKELEY_TREE_LEFT]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 0.5,
+            xFloat: 1,
             xWidth: 2,
             zHeight: 4
         }

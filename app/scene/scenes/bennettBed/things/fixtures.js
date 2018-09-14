@@ -8,17 +8,17 @@ const ARRANGEMENTS_MAP = {
     [NUDE_DRAWINGS]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 7,
+            xWidth: 0.5,
+            zHeight: 0.5
         }
     },
     [VASELINE]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 8,
+            xWidth: 0.5,
+            zHeight: 0.5
         }
     }
 }

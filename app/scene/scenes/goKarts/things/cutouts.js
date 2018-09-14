@@ -7,17 +7,17 @@ const ARRANGEMENTS_MAP = {
     [GO_KART_LEFT]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 4.5,
-            xWidth: 5,
-            zHeight: 1.5
+            xFloat: 3,
+            xWidth: 4,
+            zHeight: 1
         }
     },
     [GO_KART_RIGHT]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
             xFloat: 8,
-            xWidth: 2,
-            zHeight: 3
+            xWidth: 4,
+            zHeight: 1
         }
     }
 }

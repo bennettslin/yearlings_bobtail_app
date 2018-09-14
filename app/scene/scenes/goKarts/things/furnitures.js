@@ -5,19 +5,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_INTERIOR_LEFT]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3,
+            xWidth: 3,
+            zHeight: 1
         }
     },
     [GO_KART_INTERIOR_RIGHT]: {
-        yIndex: 0,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 8,
+            xWidth: 3,
+            zHeight: 1
         }
     }
 }

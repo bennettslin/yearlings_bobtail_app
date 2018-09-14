@@ -74,9 +74,6 @@ import {
     DISH_PILE,
     NUDE_DRAWINGS,
     VASELINE,
-    CEILING_MIRROR,
-    LIZ_NIGHTSTAND,
-    LIZ_NIGHTSTAND_REFLECTION,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION
 } from 'scene/fixtureKeys'
@@ -490,9 +487,6 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [CEILING_MIRROR]: true,
-                [LIZ_NIGHTSTAND]: true,
-                [LIZ_NIGHTSTAND_REFLECTION]: true,
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
             },
@@ -546,9 +540,6 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [CEILING_MIRROR]: true,
-                [LIZ_NIGHTSTAND]: true,
-                [LIZ_NIGHTSTAND_REFLECTION]: true,
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
             },
@@ -602,9 +593,6 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [CEILING_MIRROR]: true,
-                [LIZ_NIGHTSTAND]: true,
-                [LIZ_NIGHTSTAND_REFLECTION]: true,
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
             },

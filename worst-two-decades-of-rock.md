@@ -1,3 +1,7 @@
+Women and minorities are reluctant to advocate for themselves in the public arena, because a lifetime lived in their shoes has taught them that it's not worth their time and energy to navigate through that minefield of unconscious bias. The smart path for them is to advocate for themselves in the private arena, in intimate, face-to-face settings where they have the most control to counter the effects of unconscious bias, to limit its damage. And slowly build up partnerships and alliances, and then have these partners and allies advocate for them in the public arena.
+
+The whole point of indie rock is to compete for the most participation trophies. Alternate sports league?
+
 Indie rock, by its nature, must believe in natural talent. That's the only way it makes sense to celebrate the reality it forces upon its artists, to have to sacrifice time that would otherwise be spent on artistic tasks to do administrative tasks.
 
 Must renounce Radiohead. It is needlessly risky for minorities to participate in a subculture founded by whites, in which the rules are both arbitrary/absurd and inconsistently enforced. Unlike say, sports.

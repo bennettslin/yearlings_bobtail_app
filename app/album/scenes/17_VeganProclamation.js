@@ -68,9 +68,6 @@ import {
 
 import {
     BURGER_WRAPPER,
-    CEILING_MIRROR,
-    LIZ_NIGHTSTAND,
-    LIZ_NIGHTSTAND_REFLECTION,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
 } from 'scene/fixtureKeys'
@@ -229,9 +226,6 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [CEILING_MIRROR]: true,
-                [LIZ_NIGHTSTAND]: true,
-                [LIZ_NIGHTSTAND_REFLECTION]: true,
                 [LIZ_PHONE_BASE]: true,
                 [LIZ_PHONE_BASE_REFLECTION]: true
             },

@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [ASH_CAN]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 5,
+            xFloat: 5.5,
             xWidth: 1,
             zHeight: 3
         }

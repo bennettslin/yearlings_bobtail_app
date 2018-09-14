@@ -32,9 +32,6 @@ import GlassRack from './Fixtures/Dishroom/GlassRack'
 import DishPile from './Fixtures/Dishroom/DishPile'
 import NudeDrawings from './Fixtures/BennettBed/NudeDrawings'
 import Vaseline from './Fixtures/BennettBed/Vaseline'
-import CeilingMirror from './Fixtures/LizBed/CeilingMirror'
-import LizNightstand from './Fixtures/LizBed/LizNightstand'
-import LizNightstandReflection from './Fixtures/LizBed/LizNightstandReflection'
 import LizPhone from './Fixtures/LizBed/LizPhone'
 import LizPhoneBase from './Fixtures/LizBed/LizPhoneBase'
 import LizPhoneReflection from './Fixtures/LizBed/LizPhoneReflection'
@@ -82,9 +79,6 @@ import {
     DISH_PILE,
     NUDE_DRAWINGS,
     VASELINE,
-    CEILING_MIRROR,
-    LIZ_NIGHTSTAND,
-    LIZ_NIGHTSTAND_REFLECTION,
     LIZ_PHONE,
     LIZ_PHONE_BASE,
     LIZ_PHONE_REFLECTION,
@@ -133,9 +127,6 @@ const FIXTURES_MAP = {
     [DISH_PILE]: DishPile,
     [NUDE_DRAWINGS]: NudeDrawings,
     [VASELINE]: Vaseline,
-    [CEILING_MIRROR]: CeilingMirror,
-    [LIZ_NIGHTSTAND]: LizNightstand,
-    [LIZ_NIGHTSTAND_REFLECTION]: LizNightstandReflection,
     [LIZ_PHONE]: LizPhone,
     [LIZ_PHONE_BASE]: LizPhoneBase,
     [LIZ_PHONE_REFLECTION]: LizPhoneReflection,

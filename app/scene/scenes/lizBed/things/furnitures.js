@@ -7,35 +7,37 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [LIZ_MATTRESS]: {
-        yIndex: 0,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 5,
+            xWidth: 5,
+            zHeight: 0.5
         }
     },
     [LIZ_PILLOWS]: {
-        yIndex: 0,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 5,
+            xWidth: 5,
+            zHeight: 0.5
         }
     },
     [LIZ_MATTRESS_REFLECTION]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 5,
+            xWidth: 5,
+            zHeight: 6,
+            zOffset: 0.5
         }
     },
     [LIZ_PILLOWS_REFLECTION]: {
-        yIndex: 0,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 5,
+            xWidth: 5,
+            zHeight: 1,
+            zOffset: 5.5
         }
     }
 }
