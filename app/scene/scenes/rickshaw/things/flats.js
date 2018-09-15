@@ -1,9 +1,9 @@
 import {
-    SHORE_BACKDROP
+    SHORE_RICKSHAW_BACKDROP
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [SHORE_BACKDROP]: {
+    [SHORE_RICKSHAW_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

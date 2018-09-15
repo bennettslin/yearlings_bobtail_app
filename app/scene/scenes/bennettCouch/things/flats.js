@@ -1,9 +1,9 @@
 import {
-    BENNETT_COUCH_THOUGHT
+    BENNETT_COUCH_THOUGHT_BACKDROP
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [BENNETT_COUCH_THOUGHT]: {
+    [BENNETT_COUCH_THOUGHT_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

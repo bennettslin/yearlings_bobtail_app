@@ -1,9 +1,9 @@
 import {
-    OCEAN_BOTTOM_NEAR
+    OCEAN_FLOOR_BACKDROP
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [OCEAN_BOTTOM_NEAR]: {
+    [OCEAN_FLOOR_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

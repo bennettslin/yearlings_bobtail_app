@@ -1,10 +1,10 @@
 import {
-    VAN_NUYS_SCHOOL_THOUGHT,
+    VAN_NUYS_THOUGHT_BACKDROP,
     VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [VAN_NUYS_SCHOOL_THOUGHT]: {
+    [VAN_NUYS_THOUGHT_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

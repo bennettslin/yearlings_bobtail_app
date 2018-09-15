@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const VanNuysSchoolThought = ({
+const SchoolbusThoughtBackdrop = ({
 
     className,
 
@@ -18,7 +18,7 @@ const VanNuysSchoolThought = ({
     return (
         <Svg
             className={cx(
-                'VanNuysSchoolThought',
+                'SchoolbusThoughtBackdrop',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const VanNuysSchoolThought = ({
                 {...other}
             >
                 {cx(
-                    'VanNuysSchoolThought'
+                    'SchoolbusThoughtBackdrop'
                 )}
             </text>
         </Svg>
     )
 }
 
-VanNuysSchoolThought.propTypes = propTypes;
+SchoolbusThoughtBackdrop.propTypes = propTypes;
 
-export default VanNuysSchoolThought
+export default SchoolbusThoughtBackdrop

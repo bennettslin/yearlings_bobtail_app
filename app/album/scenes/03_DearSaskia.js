@@ -59,8 +59,8 @@ import {
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
     TOGETHER_SKETCHBOOK,
-    SCHOOLBUS_STREET_THOUGHT,
-    VAN_NUYS_SCHOOL_THOUGHT,
+    SCHOOLBUS_THOUGHT_BACKDROP,
+    VAN_NUYS_THOUGHT_BACKDROP,
     VAN_NUYS_SCHOOLHOUSE,
     APART_SKETCHBOOK
 } from 'scene/flatKeys'
@@ -168,7 +168,7 @@ module.exports = [
                 [BACKPACK_SASHA]: true
             },
             [FLATS]: {
-                [SCHOOLBUS_STREET_THOUGHT]: true
+                [SCHOOLBUS_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
                 [SCHOOLBUS_SEAT_REAR]: true,
@@ -212,7 +212,7 @@ module.exports = [
                 }
             },
             [FLATS]: {
-                [VAN_NUYS_SCHOOL_THOUGHT]: true,
+                [VAN_NUYS_THOUGHT_BACKDROP]: true,
                 [VAN_NUYS_SCHOOLHOUSE]: true
             }
         },

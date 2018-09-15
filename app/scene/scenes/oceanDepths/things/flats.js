@@ -1,10 +1,10 @@
 import {
-    OCEAN_WAVES,
+    OCEAN_DEPTHS_BACKDROP,
     OCEAN_BOTTOM_FAR
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [OCEAN_WAVES]: {
+    [OCEAN_DEPTHS_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

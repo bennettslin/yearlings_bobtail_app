@@ -1,10 +1,10 @@
 import {
-    SHORE_FRONT,
+    SHORE_BUOY_BACKDROP,
     SHORE_BACK
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [SHORE_FRONT]: {
+    [SHORE_BUOY_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

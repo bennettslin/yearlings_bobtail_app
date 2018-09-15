@@ -68,14 +68,14 @@ import {
 
 import {
     TAIWAN_STREETS_BACKDROP,
-    SHORE_BACKDROP,
-    SHORE_FRONT,
+    SHORE_RICKSHAW_BACKDROP,
+    SHORE_BUOY_BACKDROP,
     SHORE_BACK,
-    OCEAN_DEPTHS_FRONT,
+    OCEAN_BUOY_BACKDROP,
     OCEAN_DEPTHS_BACK,
-    OCEAN_WAVES,
+    OCEAN_DEPTHS_BACKDROP,
     OCEAN_BOTTOM_FAR,
-    OCEAN_BOTTOM_NEAR
+    OCEAN_FLOOR_BACKDROP
 } from 'scene/flatKeys'
 
 import {
@@ -187,7 +187,7 @@ module.exports = [
                 [ODIN_SHORE]: true
             },
             [FLATS]: {
-                [SHORE_BACKDROP]: true
+                [SHORE_RICKSHAW_BACKDROP]: true
             }
         },
         cubes: RICKSHAW_KEY,
@@ -213,7 +213,7 @@ module.exports = [
                 [YELLOW_TAPED_GRILL]: true
             },
             [FLATS]: {
-                [SHORE_FRONT]: true,
+                [SHORE_BUOY_BACKDROP]: true,
                 [SHORE_BACK]: true
             }
         },
@@ -240,7 +240,7 @@ module.exports = [
                 [SEA_SERPENTS]: true
             },
             [FLATS]: {
-                [OCEAN_DEPTHS_FRONT]: true,
+                [OCEAN_BUOY_BACKDROP]: true,
                 [OCEAN_DEPTHS_BACK]: true
             },
             [FURNITURES]: {
@@ -276,7 +276,7 @@ module.exports = [
                 [ODIN_OCEAN_FLOOR]: true
             },
             [FLATS]: {
-                [OCEAN_WAVES]: true,
+                [OCEAN_DEPTHS_BACKDROP]: true,
                 [OCEAN_BOTTOM_FAR]: true
             }
         },
@@ -304,7 +304,7 @@ module.exports = [
                 [BUDDHA_CAVE]: true
             },
             [FLATS]: {
-                [OCEAN_BOTTOM_NEAR]: true
+                [OCEAN_FLOOR_BACKDROP]: true
             }
         },
         cubes: OCEAN_FLOOR_KEY,

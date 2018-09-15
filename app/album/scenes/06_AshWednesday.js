@@ -67,7 +67,7 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    BENNETT_COUCH_THOUGHT,
+    BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
@@ -143,7 +143,7 @@ module.exports = [
                 [BENNETT_COUCH_LAMP]: true
             },
             [FLATS]: {
-                [BENNETT_COUCH_THOUGHT]: true
+                [BENNETT_COUCH_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BENNETT_CUSHIONS]: true

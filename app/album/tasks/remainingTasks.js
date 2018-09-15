@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Categorise each instance by facial emotion?`,
+        taskName: `Separate backdrops, bubbles, and interactive panels.`,
         workedHours: 0,
-        neededHours: 16
+        neededHours: 4
     },
 
     /**
