@@ -1,5 +1,4 @@
 import {
-    TAIWAN_MOUNTAINS_BACKDROP,
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
@@ -8,14 +7,6 @@ import {
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [TAIWAN_MOUNTAINS_BACKDROP]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 10,
-            zHeight: 4
-        }
-    },
     [TAIWAN_MOUNTAINS_BRIDGED]: {
         yIndex: 3,
         arrangement: {

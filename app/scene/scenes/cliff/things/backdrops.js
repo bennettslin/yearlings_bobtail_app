@@ -1,9 +1,9 @@
 import {
-    GO_KART_THOUGHT
-} from 'scene/flatKeys'
+    CLIFF_BACKDROP
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [GO_KART_THOUGHT]: {
+    [CLIFF_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

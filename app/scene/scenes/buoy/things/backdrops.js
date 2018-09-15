@@ -1,9 +1,9 @@
 import {
-    PAMPAS_BACKDROP
-} from 'scene/flatKeys'
+    OCEAN_BUOY_BACKDROP
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [PAMPAS_BACKDROP]: {
+    [OCEAN_BUOY_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

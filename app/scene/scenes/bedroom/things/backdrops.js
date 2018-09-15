@@ -1,9 +1,8 @@
 import {
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
-    DOGS_SKETCHBOOK,
     BEDROOM_BUS_BACKDROP
-} from 'scene/flatKeys'
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [BEDROOM_BACKDROP]: {
@@ -20,14 +19,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 3,
             xWidth: 6,
             zHeight: 8
-        }
-    },
-    [DOGS_SKETCHBOOK]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 6,
-            xWidth: 3,
-            zHeight: 4
         }
     },
     [BEDROOM_BUS_BACKDROP]: {

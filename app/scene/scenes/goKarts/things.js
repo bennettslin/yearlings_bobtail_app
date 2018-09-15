@@ -1,16 +1,16 @@
 import {
     CUTOUTS,
-    FLATS,
+    BACKDROPS,
     FURNITURES
 } from 'constants/scene'
 
 import ARRANGEMENTS_CUTOUTS from './things/cutouts'
-import ARRANGEMENTS_FLATS from './things/flats'
+import ARRANGEMENTS_BACKDROPS from './things/backdrops'
 import ARRANGEMENTS_FURNITURES from './things/furnitures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
-    [FLATS]: ARRANGEMENTS_FLATS,
+    [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
     [FURNITURES]: ARRANGEMENTS_FURNITURES
 }
 

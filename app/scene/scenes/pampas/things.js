@@ -1,11 +1,11 @@
 import {
-    FLATS
+    BACKDROPS
 } from 'constants/scene'
 
-import ARRANGEMENTS_FLATS from './things/flats'
+import ARRANGEMENTS_BACKDROPS from './things/backdrops'
 
 const ARRANGEMENTS_THINGS = {
-    [FLATS]: ARRANGEMENTS_FLATS
+    [BACKDROPS]: ARRANGEMENTS_BACKDROPS
 }
 
 export default ARRANGEMENTS_THINGS

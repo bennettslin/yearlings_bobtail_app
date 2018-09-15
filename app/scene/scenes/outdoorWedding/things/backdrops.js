@@ -1,6 +1,6 @@
 import {
     WEDDING_BACKDROP
-} from 'scene/flatKeys'
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [WEDDING_BACKDROP]: {

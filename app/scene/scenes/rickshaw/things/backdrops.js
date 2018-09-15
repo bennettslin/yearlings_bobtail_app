@@ -1,9 +1,9 @@
 import {
-    OCEAN_FLOOR_BACKDROP
-} from 'scene/flatKeys'
+    SHORE_RICKSHAW_BACKDROP
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [OCEAN_FLOOR_BACKDROP]: {
+    [SHORE_RICKSHAW_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

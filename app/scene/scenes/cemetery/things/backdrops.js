@@ -1,14 +1,14 @@
 import {
-    SCHOOLBUS_THOUGHT_BACKDROP
-} from 'scene/flatKeys'
+    CEMETERY_BACKDROP
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [SCHOOLBUS_THOUGHT_BACKDROP]: {
+    [CEMETERY_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,
-            xWidth: 10,
-            zHeight: 7
+            xWidth: 12,
+            zHeight: 4
         }
     }
 }

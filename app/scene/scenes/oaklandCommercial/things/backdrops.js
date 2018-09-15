@@ -1,9 +1,9 @@
 import {
-    VALLEY_BACKDROP
-} from 'scene/flatKeys'
+    COMMERCIAL_BACKDROP
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [VALLEY_BACKDROP]: {
+    [COMMERCIAL_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

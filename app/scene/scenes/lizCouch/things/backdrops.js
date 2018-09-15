@@ -1,6 +1,6 @@
 import {
     LIZ_COUCH_THOUGHT
-} from 'scene/flatKeys'
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [LIZ_COUCH_THOUGHT]: {

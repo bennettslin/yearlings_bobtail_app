@@ -1,14 +1,14 @@
 import {
-    BENNETT_COUCH_THOUGHT_BACKDROP
-} from 'scene/flatKeys'
+    BAY_AREA_BACKDROP
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [BENNETT_COUCH_THOUGHT_BACKDROP]: {
+    [BAY_AREA_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,
-            xWidth: 10,
-            zHeight: 8
+            xWidth: 12,
+            zHeight: 4
         }
     }
 }

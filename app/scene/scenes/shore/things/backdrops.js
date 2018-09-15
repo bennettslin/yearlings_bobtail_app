@@ -1,9 +1,9 @@
 import {
-    VAN_NUYS_SCHOOL_BACKDROP
-} from 'scene/flatKeys'
+    SHORE_BUOY_BACKDROP
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [VAN_NUYS_SCHOOL_BACKDROP]: {
+    [SHORE_BUOY_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

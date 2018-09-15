@@ -1,9 +1,9 @@
 import {
-    TAIWAN_STREETS_BACKDROP
-} from 'scene/flatKeys'
+    EL_CERRITO_BACKDROP
+} from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [TAIWAN_STREETS_BACKDROP]: {
+    [EL_CERRITO_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,
