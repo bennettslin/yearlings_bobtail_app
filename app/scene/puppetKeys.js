@@ -21,6 +21,8 @@ const
     OPAL_LAP = 'opalLap',
     OPAL_WINDOW = 'opalWindow',
     OPAL_COUCH = 'opalCouch',
+    PEAHEN = 'peahen',
+    PEACOCK = 'peacock',
     CONVERTIBLE_FAR = 'convertibleFar',
     PUPPET_KHARI = 'puppetKhari',
     PUPPET_LIZ = 'puppetLiz'
@@ -46,6 +48,8 @@ export {
     OPAL_LAP,
     OPAL_WINDOW,
     OPAL_COUCH,
+    PEAHEN,
+    PEACOCK,
     CONVERTIBLE_FAR,
     PUPPET_KHARI,
     PUPPET_LIZ

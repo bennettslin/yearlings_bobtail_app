@@ -84,7 +84,7 @@ import {
     DRUMKIT,
     DRUMS_STACKED,
     ARRANGEMENT_DRUMS_STACKED_BASEMENT,
-    BASS_CASE_SIDE,
+    BASS_CASE_UPRIGHT,
     GUITAR_CASE
 } from 'scene/fixtureKeys'
 
@@ -273,7 +273,7 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [BASS_CASE_SIDE]: true,
+                [BASS_CASE_UPRIGHT]: true,
                 [GUITAR_CASE]: true,
                 [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_BASEMENT
             },

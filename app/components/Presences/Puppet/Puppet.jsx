@@ -22,6 +22,8 @@ import SpaceColony from './Puppets/Bedroom/SpaceColony'
 import OpalLap from './Puppets/LizCouch/OpalLap'
 import OpalWindow from './Puppets/LizCouch/OpalWindow'
 import OpalCouch from './Puppets/LizCouch/OpalCouch'
+import Peahen from './Puppets/LizCouch/Peahen'
+import Peacock from './Puppets/LizCouch/Peacock'
 import ConvertibleFar from './Puppets/ElCerrito/ConvertibleFar'
 import PuppetKhari from './Puppets/OutdoorWedding/PuppetKhari'
 import PuppetLiz from './Puppets/OutdoorWedding/PuppetLiz'
@@ -47,6 +49,8 @@ import {
     OPAL_LAP,
     OPAL_WINDOW,
     OPAL_COUCH,
+    PEAHEN,
+    PEACOCK,
     CONVERTIBLE_FAR,
     PUPPET_KHARI,
     PUPPET_LIZ
@@ -73,6 +77,8 @@ const PUPPETS_MAP = {
     [OPAL_LAP]: OpalLap,
     [OPAL_WINDOW]: OpalWindow,
     [OPAL_COUCH]: OpalCouch,
+    [PEAHEN]: Peahen,
+    [PEACOCK]: Peacock,
     [CONVERTIBLE_FAR]: ConvertibleFar,
     [PUPPET_KHARI]: PuppetKhari,
     [PUPPET_LIZ]: PuppetLiz

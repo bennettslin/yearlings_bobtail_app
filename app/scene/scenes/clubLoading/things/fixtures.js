@@ -1,5 +1,5 @@
 import {
-    BASS_CASE_UPRIGHT,
+    BASS_CASE_SIDE,
     DRUMS_STACKED,
     ARRANGEMENT_DRUMS_STACKED_BASEMENT,
     ARRANGEMENT_DRUMS_STACKED_CLUB
@@ -7,12 +7,12 @@ import {
 
 
 const ARRANGEMENTS_MAP = {
-    [BASS_CASE_UPRIGHT]: {
+    [BASS_CASE_SIDE]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 2.5,
-            xWidth: 1.5,
-            zHeight: 4
+            xFloat: 1,
+            xWidth: 3,
+            zHeight: 2
         }
     },
     [DRUMS_STACKED]: {
@@ -27,7 +27,7 @@ const ARRANGEMENTS_MAP = {
         [ARRANGEMENT_DRUMS_STACKED_CLUB]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 0.5,
+                xFloat: 2.5,
                 xWidth: 1.5,
                 zHeight: 5
             }

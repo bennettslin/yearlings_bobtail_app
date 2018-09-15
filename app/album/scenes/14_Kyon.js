@@ -47,7 +47,9 @@ import {
 import {
     OPAL_LAP,
     OPAL_WINDOW,
-    OPAL_COUCH
+    OPAL_COUCH,
+    PEAHEN,
+    PEACOCK
 } from 'scene/puppetKeys'
 
 module.exports = [
@@ -279,6 +281,10 @@ module.exports = [
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [PUPPETS]: {
+                [PEAHEN]: true,
+                [PEACOCK]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

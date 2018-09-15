@@ -1,7 +1,9 @@
 import {
     OPAL_LAP,
     OPAL_WINDOW,
-    OPAL_COUCH
+    OPAL_COUCH,
+    PEAHEN,
+    PEACOCK
 } from 'scene/puppetKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -27,6 +29,22 @@ const ARRANGEMENTS_MAP = {
             xFloat: 1,
             xWidth: 1,
             zHeight: 0.5
+        }
+    },
+    [PEAHEN]: {
+        yIndex: 4,
+        arrangement: {
+            xFloat: 6,
+            xWidth: 1,
+            zHeight: 2
+        }
+    },
+    [PEACOCK]: {
+        yIndex: 4,
+        arrangement: {
+            xFloat: 7,
+            xWidth: 1,
+            zHeight: 2
         }
     }
 }

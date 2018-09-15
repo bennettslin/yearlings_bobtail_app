@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BassCase = ({
+const Peacock = ({
 
     className,
 
@@ -18,13 +18,13 @@ const BassCase = ({
     return (
         <Svg
             className={cx(
-                'BassCase',
+                'Peacock',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Fixture__temporaryRect'
+                    'Puppet__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const BassCase = ({
                 {...other}
             >
                 {cx(
-                    'BassCase'
+                    'Peacock'
                 )}
             </text>
         </Svg>
     )
 }
 
-BassCase.propTypes = propTypes;
+Peacock.propTypes = propTypes;
 
-export default BassCase
+export default Peacock

@@ -62,6 +62,8 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    WALL_SPEAKER_LEFT,
+    WALL_SPEAKER_RIGHT,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR,
     DUMPSTER
@@ -150,6 +152,8 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
+                [WALL_SPEAKER_LEFT]: true,
+                [WALL_SPEAKER_RIGHT]: true,
                 [CROWD_BACK_FAR]: true,
                 [CROWD_BACK_NEAR]: true
             }

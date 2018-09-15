@@ -1,23 +1,23 @@
 import {
-    BASS_CASE_SIDE,
+    BASS_CASE_UPRIGHT,
     GUITAR_CASE
 } from 'scene/fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
-    [BASS_CASE_SIDE]: {
+    [BASS_CASE_UPRIGHT]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 9,
+            xFloat: 6.5,
             xWidth: 1,
-            zHeight: 5
+            zHeight: 4
         }
     },
     [GUITAR_CASE]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
-            xFloat: 10,
+            xFloat: 9.5,
             xWidth: 1,
-            zHeight: 5
+            zHeight: 4
         }
     }
 }

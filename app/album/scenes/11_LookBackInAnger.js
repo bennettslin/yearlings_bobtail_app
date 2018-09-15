@@ -58,13 +58,21 @@ import {
 
 import {
     MONITOR_SPEAKER_SIDE,
-    WALL_SPEAKER_SIDE
+    ARRANGEMENT_MONITOR_SIDE_CROWD,
+    ARRANGEMENT_MONITOR_SIDE_STAGE,
+    WALL_SPEAKER_SIDE,
+    ARRANGEMENT_WALL_SIDE_CROWD,
+    ARRANGEMENT_WALL_SIDE_STAGE,
+    CROWD_SIDE_FAR,
+    CROWD_SIDE_NEAR
 } from 'scene/cutoutKeys'
 
 import {
     GUITAR_STAND,
     GUITAR_AMP,
-    BASS_CASE_UPRIGHT,
+    KICK_DRUM,
+    GUITAR_CASE_OPEN,
+    BASS_CASE_SIDE,
     DRUMS_STACKED,
     ARRANGEMENT_DRUMS_STACKED_CLUB,
     BASS_AMP,
@@ -126,7 +134,10 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [MONITOR_SPEAKER_SIDE]: true
+                [MONITOR_SPEAKER_SIDE]: ARRANGEMENT_MONITOR_SIDE_CROWD,
+                [WALL_SPEAKER_SIDE]: ARRANGEMENT_WALL_SIDE_CROWD,
+                [CROWD_SIDE_FAR]: true,
+                [CROWD_SIDE_NEAR]: true
             }
         },
         cubes: CLUB_SIDE_CROWD_KEY,
@@ -166,13 +177,15 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [MONITOR_SPEAKER_SIDE]: true,
-                [WALL_SPEAKER_SIDE]: true
+                [MONITOR_SPEAKER_SIDE]: ARRANGEMENT_MONITOR_SIDE_STAGE,
+                [WALL_SPEAKER_SIDE]: ARRANGEMENT_WALL_SIDE_STAGE
             },
             [FIXTURES]: {
                 [GUITAR_STAND]: true,
                 [GUITAR_AMP]: true,
-                [BASS_AMP]: true
+                [BASS_AMP]: true,
+                [KICK_DRUM]: true,
+                [GUITAR_CASE_OPEN]: true
             }
         },
         cubes: CLUB_SIDE_STAGE_KEY,
@@ -224,7 +237,7 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [BASS_CASE_UPRIGHT]: true,
+                [BASS_CASE_SIDE]: true,
                 [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_CLUB
             },
             [FURNITURES]: {

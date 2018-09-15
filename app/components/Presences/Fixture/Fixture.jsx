@@ -19,7 +19,7 @@ import MicrophoneStand from './Fixtures/ClubFront/MicrophoneStand'
 import AlbumsMilkCrate from './Fixtures/ClubFront/AlbumsMilkCrate'
 import BassCaseOpen from './Fixtures/ClubFront/BassCaseOpen'
 import DrumKit from './Fixtures/ClubFront/DrumKit'
-import BassCase from './Fixtures/Basement/BassCase'
+import BassCaseUpright from './Fixtures/ClubLoading/BassCaseUpright'
 import GuitarCase from './Fixtures/Basement/GuitarCase'
 import CavemanBones from './Fixtures/Museum/CavemanBones'
 import PushBroom from './Fixtures/Backstage/PushBroom'
@@ -40,7 +40,9 @@ import Gravestone from './Fixtures/Cemetery/Gravestone'
 import EvianBottles from './Fixtures/StationWagon/EvianBottles'
 import GuitarStand from './Fixtures/ClubSide/GuitarStand'
 import GuitarAmp from './Fixtures/ClubSide/GuitarAmp'
-import BassCaseUpright from './Fixtures/ClubLoading/BassCaseUpright'
+import KickDrum from './Fixtures/ClubSide/KickDrum'
+import GuitarCaseOpen from './Fixtures/ClubSide/GuitarCaseOpen'
+import BassCaseSide from './Fixtures/Basement/BassCaseSide'
 import DrumsStacked from './Fixtures/ClubLoading/DrumsStacked'
 import BassAmp from './Fixtures/ClubSide/BassAmp'
 import RecordingConsole from './Fixtures/SnowglobesFuture/RecordingConsole'
@@ -67,7 +69,7 @@ import {
     ALBUMS_MILK_CRATE,
     BASS_CASE_OPEN,
     DRUMKIT,
-    BASS_CASE_SIDE,
+    BASS_CASE_UPRIGHT,
     GUITAR_CASE,
     CAVEMAN_BONES,
     PUSH_BROOM,
@@ -88,7 +90,9 @@ import {
     EVIAN_BOTTLES,
     GUITAR_STAND,
     GUITAR_AMP,
-    BASS_CASE_UPRIGHT,
+    KICK_DRUM,
+    GUITAR_CASE_OPEN,
+    BASS_CASE_SIDE,
     DRUMS_STACKED,
     BASS_AMP,
     RECORDING_CONSOLE,
@@ -116,7 +120,7 @@ const FIXTURES_MAP = {
     [ALBUMS_MILK_CRATE]: AlbumsMilkCrate,
     [BASS_CASE_OPEN]: BassCaseOpen,
     [DRUMKIT]: DrumKit,
-    [BASS_CASE_SIDE]: BassCase,
+    [BASS_CASE_UPRIGHT]: BassCaseUpright,
     [GUITAR_CASE]: GuitarCase,
     [CAVEMAN_BONES]: CavemanBones,
     [PUSH_BROOM]: PushBroom,
@@ -137,7 +141,9 @@ const FIXTURES_MAP = {
     [EVIAN_BOTTLES]: EvianBottles,
     [GUITAR_STAND]: GuitarStand,
     [GUITAR_AMP]: GuitarAmp,
-    [BASS_CASE_UPRIGHT]: BassCaseUpright,
+    [KICK_DRUM]: KickDrum,
+    [GUITAR_CASE_OPEN]: GuitarCaseOpen,
+    [BASS_CASE_SIDE]: BassCaseSide,
     [DRUMS_STACKED]: DrumsStacked,
     [BASS_AMP]: BassAmp,
     [RECORDING_CONSOLE]: RecordingConsole,
