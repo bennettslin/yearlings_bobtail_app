@@ -26,7 +26,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 11,
             xWidth: 1,
-            zHeight: 6
+            zHeight: 7
         }
     }
 }

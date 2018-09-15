@@ -1,6 +1,6 @@
 import {
     ACTORS,
-    // CUTOUTS,
+    CUTOUTS,
     // FIXTURES,
     FLATS,
     FURNITURES
@@ -52,6 +52,10 @@ import {
 import { CROSSING_GUARD } from 'scene/instanceKeys/willy'
 
 import { YOUNG_CHILD } from 'scene/instanceKeys/songs'
+
+import {
+    TWIN_STREETLAMP
+} from 'scene/cutoutKeys'
 
 import {
     OAKLAND_BACKDROP,
@@ -150,6 +154,9 @@ module.exports = [
                         instance: BENNETT_DEFIANT
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [TWIN_STREETLAMP]: true
             },
             [FLATS]: {
                 [RESIDENCE_BACKDROP]: true,

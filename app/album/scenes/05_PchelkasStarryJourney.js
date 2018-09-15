@@ -66,10 +66,12 @@ import { PRINCIPAL } from 'scene/instanceKeys/tristan'
 import {
     CAPTAIN_BED_DRAWERS,
     LOCKER_BANK,
-    TRASH_CAN_BACK,
-    VAN_NUYS_PLANTS_BACK,
-    TRASH_CAN_FRONT,
-    VAN_NUYS_PLANTS_FRONT,
+    TRASH_CAN,
+    ARRANGEMENT_TRASH_CAN_LOCKERS,
+    ARRANGEMENT_TRASH_CAN_QUAD,
+    VAN_NUYS_PLANTS,
+    ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS,
+    ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
     VAN_NUYS_LOGO
 } from 'scene/cutoutKeys'
 
@@ -283,8 +285,8 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [LOCKER_BANK]: true,
-                [TRASH_CAN_BACK]: true,
-                [VAN_NUYS_PLANTS_BACK]: true
+                [TRASH_CAN]: ARRANGEMENT_TRASH_CAN_LOCKERS,
+                [VAN_NUYS_PLANTS]: ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS
             },
             [FIXTURES]: {
                 [THROWN_FRUIT]: true
@@ -333,8 +335,8 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [TRASH_CAN_FRONT]: true,
-                [VAN_NUYS_PLANTS_FRONT]: true,
+                [TRASH_CAN]: ARRANGEMENT_TRASH_CAN_QUAD,
+                [VAN_NUYS_PLANTS]: ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
                 [VAN_NUYS_LOGO]: true
             },
             [FLATS]: {

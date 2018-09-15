@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const TrashCanBack = ({
+const TrashCan = ({
 
     className,
 
@@ -18,7 +18,7 @@ const TrashCanBack = ({
     return (
         <Svg
             className={cx(
-                'TrashCanBack',
+                'TrashCan',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const TrashCanBack = ({
                 {...other}
             >
                 {cx(
-                    'TrashCanBack'
+                    'TrashCan'
                 )}
             </text>
         </Svg>
     )
 }
 
-TrashCanBack.propTypes = propTypes;
+TrashCan.propTypes = propTypes;
 
-export default TrashCanBack
+export default TrashCan

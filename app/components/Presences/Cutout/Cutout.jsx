@@ -38,10 +38,8 @@ import BennettMat from './Cutouts/OceanFloor/BennettMat'
 import OdinMat from './Cutouts/OceanFloor/OdinMat'
 import BuddhaCave from './Cutouts/OceanFloor/BuddhaCave'
 import LockerBank from './Cutouts/VanNuysLockers/LockerBank'
-import TrashCanBack from './Cutouts/VanNuysLockers/TrashCanBack'
-import VanNuysPlantsBack from './Cutouts/VanNuysLockers/VanNuysPlantsBack'
-import TrashCanFront from './Cutouts/VanNuysQuad/TrashCanFront'
-import VanNuysPlantsFront from './Cutouts/VanNuysQuad/VanNuysPlantsFront'
+import TrashCan from './Cutouts/VanNuysLockers/TrashCan'
+import VanNuysPlants from './Cutouts/VanNuysLockers/VanNuysPlants'
 import VanNuysLogo from './Cutouts/VanNuysQuad/VanNuysLogo'
 import Recyclables from './Cutouts/Courtyard/Recyclables'
 import NirvanaPoster from './Cutouts/BennettCouch/NirvanaPoster'
@@ -83,6 +81,7 @@ import WallSpeakerSide from './Cutouts/ClubSide/WallSpeakerSide'
 import CrowdSideNear from './Cutouts/ClubSide/CrowdSideNear'
 import CrowdSideFar from './Cutouts/ClubSide/CrowdSideFar'
 import Volkswagen from './Cutouts/OaklandHouses/Volkswagen'
+import TwinStreetlamp from './Cutouts/OaklandResidential/TwinStreetlamp'
 import CrowdBackNear from './Cutouts/ClubFar/CrowdBackNear'
 import CrowdBackFar from './Cutouts/ClubFar/CrowdBackFar'
 import Dumpster from './Cutouts/Alley/Dumpster'
@@ -127,10 +126,8 @@ import {
     ODIN_MAT,
     BUDDHA_CAVE,
     LOCKER_BANK,
-    TRASH_CAN_BACK,
-    VAN_NUYS_PLANTS_BACK,
-    TRASH_CAN_FRONT,
-    VAN_NUYS_PLANTS_FRONT,
+    TRASH_CAN,
+    VAN_NUYS_PLANTS,
     VAN_NUYS_LOGO,
     RECYCLABLES,
     NIRVANA_POSTER,
@@ -172,6 +169,7 @@ import {
     CROWD_SIDE_NEAR,
     CROWD_SIDE_FAR,
     VOLKSWAGEN,
+    TWIN_STREETLAMP,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR,
     DUMPSTER,
@@ -217,10 +215,8 @@ const CUTOUTS_MAP = {
     [ODIN_MAT]: OdinMat,
     [BUDDHA_CAVE]: BuddhaCave,
     [LOCKER_BANK]: LockerBank,
-    [TRASH_CAN_BACK]: TrashCanBack,
-    [VAN_NUYS_PLANTS_BACK]: VanNuysPlantsBack,
-    [TRASH_CAN_FRONT]: TrashCanFront,
-    [VAN_NUYS_PLANTS_FRONT]: VanNuysPlantsFront,
+    [TRASH_CAN]: TrashCan,
+    [VAN_NUYS_PLANTS]: VanNuysPlants,
     [VAN_NUYS_LOGO]: VanNuysLogo,
     [RECYCLABLES]: Recyclables,
     [NIRVANA_POSTER]: NirvanaPoster,
@@ -262,6 +258,7 @@ const CUTOUTS_MAP = {
     [CROWD_SIDE_NEAR]: CrowdSideNear,
     [CROWD_SIDE_FAR]: CrowdSideFar,
     [VOLKSWAGEN]: Volkswagen,
+    [TWIN_STREETLAMP]: TwinStreetlamp,
     [CROWD_BACK_NEAR]: CrowdBackNear,
     [CROWD_BACK_FAR]: CrowdBackFar,
     [DUMPSTER]: Dumpster,
