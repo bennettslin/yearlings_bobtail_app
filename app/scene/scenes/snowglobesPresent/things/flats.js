@@ -1,7 +1,7 @@
 import {
     SNOWGLOBES_PRESENT,
-    SNOWGLOBE_LIZ_BLINDS,
-    SNOWGLOBE_MIRIAM
+    SNOWGLOBE_LIZ_ALONE,
+    SNOWGLOBE_BENNETT_MIRIAM
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -13,20 +13,21 @@ const ARRANGEMENTS_MAP = {
             zHeight: 8
         }
     },
-    [SNOWGLOBE_LIZ_BLINDS]: {
-        yIndex: 1,
+    [SNOWGLOBE_LIZ_ALONE]: {
+        yIndex: 5,
         arrangement: {
-            xFloat: 2,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 2.5,
+            xWidth: 4,
+            zHeight: 4,
+            zOffset: 0.5
         }
     },
-    [SNOWGLOBE_MIRIAM]: {
-        yIndex: 1,
+    [SNOWGLOBE_BENNETT_MIRIAM]: {
+        yIndex: 5,
         arrangement: {
-            xFloat: 9,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 8,
+            xWidth: 5.5,
+            zHeight: 5.5
         }
     }
 }

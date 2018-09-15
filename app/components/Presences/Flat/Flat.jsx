@@ -71,11 +71,11 @@ import PublicRight from './Flats/OaklandPublic/PublicRight'
 import SnowglobesPast from './Flats/SnowglobesPast/SnowglobesPast'
 import SnowglobeTetherball from './Flats/SnowglobesPast/SnowglobeTetherball'
 import SnowglobesPresent from './Flats/SnowglobesPresent/SnowglobesPresent'
-import SnowglobeLizBlinds from './Flats/SnowglobesPresent/SnowglobeLizBlinds'
-import SnowglobeMiriam from './Flats/SnowglobesPresent/SnowglobeMiriam'
+import SnowglobeLizAlone from './Flats/SnowglobesPresent/SnowglobeLizAlone'
+import SnowglobeBennettMiriam from './Flats/SnowglobesPresent/SnowglobeBennettMiriam'
 import SnowglobesFuture from './Flats/SnowglobesFuture/SnowglobesFuture'
-import SnowglobeLizCouch from './Flats/SnowglobesFuture/SnowglobeLizCouch'
-import SnowglobeBennett from './Flats/SnowglobesFuture/SnowglobeBennett'
+import SnowglobeLizKhari from './Flats/SnowglobesFuture/SnowglobeLizKhari'
+import SnowglobeBennettAlone from './Flats/SnowglobesFuture/SnowglobeBennettAlone'
 import ElCerritoBackdrop from './Flats/ElCerrito/ElCerritoBackdrop'
 import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
 import PhoneBubble from './Flats/LizBed/PhoneBubble'
@@ -157,11 +157,11 @@ import {
     SNOWGLOBES_PAST,
     SNOWGLOBE_TETHERBALL,
     SNOWGLOBES_PRESENT,
-    SNOWGLOBE_LIZ_BLINDS,
-    SNOWGLOBE_MIRIAM,
+    SNOWGLOBE_LIZ_ALONE,
+    SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBES_FUTURE,
-    SNOWGLOBE_LIZ_COUCH,
-    SNOWGLOBE_BENNETT,
+    SNOWGLOBE_LIZ_KHARI,
+    SNOWGLOBE_BENNETT_ALONE,
     EL_CERRITO_BACKDROP,
     EL_CERRITO_ROAD,
     PHONE_BUBBLE,
@@ -244,11 +244,11 @@ const FLATS_MAP = {
     [SNOWGLOBES_PAST]: SnowglobesPast,
     [SNOWGLOBE_TETHERBALL]: SnowglobeTetherball,
     [SNOWGLOBES_PRESENT]: SnowglobesPresent,
-    [SNOWGLOBE_LIZ_BLINDS]: SnowglobeLizBlinds,
-    [SNOWGLOBE_MIRIAM]: SnowglobeMiriam,
+    [SNOWGLOBE_LIZ_ALONE]: SnowglobeLizAlone,
+    [SNOWGLOBE_BENNETT_MIRIAM]: SnowglobeBennettMiriam,
     [SNOWGLOBES_FUTURE]: SnowglobesFuture,
-    [SNOWGLOBE_LIZ_COUCH]: SnowglobeLizCouch,
-    [SNOWGLOBE_BENNETT]: SnowglobeBennett,
+    [SNOWGLOBE_LIZ_KHARI]: SnowglobeLizKhari,
+    [SNOWGLOBE_BENNETT_ALONE]: SnowglobeBennettAlone,
     [EL_CERRITO_BACKDROP]: ElCerritoBackdrop,
     [EL_CERRITO_ROAD]: ElCerritoRoad,
     [PHONE_BUBBLE]: PhoneBubble,

@@ -8,6 +8,7 @@ import {
 
 import {
     BASEMENT_BED_KEY,
+    BASEMENT_MAGIC_KEY,
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
     SNOWGLOBES_FUTURE_KEY
@@ -16,6 +17,7 @@ import {
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
+    SEASON_MAGIC,
     SEASON_PAST,
     SEASON_PRESENT,
     SEASON_FUTURE
@@ -51,7 +53,10 @@ import {
 
 import { JOKING } from 'scene/instanceKeys/khari'
 
-import { LAUGHING } from 'scene/instanceKeys/liz'
+import {
+    SIFTING_TCHOTCHKES,
+    LAUGHING
+} from 'scene/instanceKeys/liz'
 
 import {
     ASLEEP,
@@ -89,11 +94,11 @@ import {
     SNOWGLOBES_PAST,
     SNOWGLOBE_TETHERBALL,
     SNOWGLOBES_PRESENT,
-    SNOWGLOBE_LIZ_BLINDS,
-    SNOWGLOBE_MIRIAM,
+    SNOWGLOBE_LIZ_ALONE,
+    SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBES_FUTURE,
-    SNOWGLOBE_LIZ_COUCH,
-    SNOWGLOBE_BENNETT
+    SNOWGLOBE_LIZ_KHARI,
+    SNOWGLOBE_BENNETT_ALONE
 } from 'scene/flatKeys'
 
 import {
@@ -162,15 +167,14 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [BASEMENT_DOOR]: true,
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
         },
-        cubes: BASEMENT_BED_KEY,
+        cubes: BASEMENT_MAGIC_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_MAGIC
         }
     },
     {
@@ -237,6 +241,12 @@ module.exports = [
                     description: 'front angle, gesturing with blame',
                     instance: PRESENT
                 },
+                [LIZ]: {
+                    sita: {
+                        description: 'side, seated, pensive',
+                        instance: SIFTING_TCHOTCHKES
+                    }
+                },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,
@@ -254,8 +264,8 @@ module.exports = [
             },
             [FLATS]: {
                 [SNOWGLOBES_PRESENT]: true,
-                [SNOWGLOBE_LIZ_BLINDS]: true,
-                [SNOWGLOBE_MIRIAM]: true
+                [SNOWGLOBE_LIZ_ALONE]: true,
+                [SNOWGLOBE_BENNETT_MIRIAM]: true
             },
             [FURNITURES]: {
                 [MIRIAM_CUSHIONS]: true
@@ -320,8 +330,8 @@ module.exports = [
             },
             [FLATS]: {
                 [SNOWGLOBES_FUTURE]: true,
-                [SNOWGLOBE_LIZ_COUCH]: true,
-                [SNOWGLOBE_BENNETT]: true
+                [SNOWGLOBE_LIZ_KHARI]: true,
+                [SNOWGLOBE_BENNETT_ALONE]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true
@@ -372,15 +382,14 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [BASEMENT_DOOR]: true,
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
         },
-        cubes: BASEMENT_BED_KEY,
+        cubes: BASEMENT_MAGIC_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_MAGIC
         }
     }
 ]

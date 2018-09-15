@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [MIRIAM_CUSHIONS]: {
-        yIndex: 0,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 8,
+            xWidth: 5,
+            zHeight: 0.5
         }
     }
 }

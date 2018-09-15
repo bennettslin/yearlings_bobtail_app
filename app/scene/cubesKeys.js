@@ -43,6 +43,7 @@ const
 
     BASEMENT_KEY = 'basement',
     BASEMENT_BED_KEY = 'basementBed',
+    BASEMENT_MAGIC_KEY = 'basementMagic',
 
     MUSEUM_KEY = 'museum',
     BACKSTAGE_KEY = 'backstage',
@@ -135,6 +136,7 @@ export {
     CINEMA_STREET_KEY,
     BASEMENT_KEY,
     BASEMENT_BED_KEY,
+    BASEMENT_MAGIC_KEY,
     MUSEUM_KEY,
     BACKSTAGE_KEY,
     GO_KARTS_KEY,

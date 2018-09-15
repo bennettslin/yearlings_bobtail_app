@@ -1,7 +1,7 @@
 import {
     SNOWGLOBES_FUTURE,
-    SNOWGLOBE_LIZ_COUCH,
-    SNOWGLOBE_BENNETT
+    SNOWGLOBE_LIZ_KHARI,
+    SNOWGLOBE_BENNETT_ALONE
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -13,7 +13,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 8
         }
     },
-    [SNOWGLOBE_LIZ_COUCH]: {
+    [SNOWGLOBE_LIZ_KHARI]: {
         yIndex: 5,
         arrangement: {
             xFloat: 3,
@@ -21,12 +21,12 @@ const ARRANGEMENTS_MAP = {
             zHeight: 5
         }
     },
-    [SNOWGLOBE_BENNETT]: {
+    [SNOWGLOBE_BENNETT_ALONE]: {
         yIndex: 4,
         arrangement: {
             xFloat: 8.5,
-            xWidth: 4,
-            zHeight: 4,
+            xWidth: 4.5,
+            zHeight: 4.5,
             zOffset: 1.5
         }
     }
