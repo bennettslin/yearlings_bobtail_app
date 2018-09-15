@@ -68,14 +68,11 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
-    GUITAR_STAND,
-    GUITAR_AMP,
     KICK_DRUM,
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
     DRUMS_STACKED,
     ARRANGEMENT_DRUMS_STACKED_CLUB,
-    BASS_AMP,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION
 } from 'scene/fixtureKeys'
@@ -181,9 +178,6 @@ module.exports = [
                 [WALL_SPEAKER_SIDE]: ARRANGEMENT_WALL_SIDE_STAGE
             },
             [FIXTURES]: {
-                [GUITAR_STAND]: true,
-                [GUITAR_AMP]: true,
-                [BASS_AMP]: true,
                 [KICK_DRUM]: true,
                 [GUITAR_CASE_OPEN]: true
             }

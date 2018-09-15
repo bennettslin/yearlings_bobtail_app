@@ -62,6 +62,7 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
+    GUITAR,
     MICROPHONE_STAND,
     DRUMKIT
 } from 'scene/fixtureKeys'
@@ -231,6 +232,7 @@ module.exports = [
                 [WALL_SPEAKER_RIGHT]: true
             },
             [FIXTURES]: {
+                [GUITAR]: true,
                 [MICROPHONE_STAND]: true,
                 [DRUMKIT]: true
             }

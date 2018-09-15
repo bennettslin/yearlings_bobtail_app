@@ -37,11 +37,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Milk crate with Yearlings albums (M)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Record player (Cremated, Dream)`,
         workedHours: 0,
         neededHours: 3

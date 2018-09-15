@@ -15,8 +15,8 @@ import ThrownFruit from './Fixtures/VanNuysLockers/ThrownFruit'
 import BennettRecordPlayer from './Fixtures/BennettCouch/BennettRecordPlayer'
 import BennettCouchLamp from './Fixtures/BennettCouch/BennettCouchLamp'
 import AshCan from './Fixtures/UcBerkeley/AshCan'
+import Guitar from './Fixtures/ClubFront/Guitar'
 import MicrophoneStand from './Fixtures/ClubFront/MicrophoneStand'
-import AlbumsMilkCrate from './Fixtures/ClubFront/AlbumsMilkCrate'
 import BassCaseOpen from './Fixtures/ClubFront/BassCaseOpen'
 import DrumKit from './Fixtures/ClubFront/DrumKit'
 import BassCaseUpright from './Fixtures/Basement/BassCaseUpright'
@@ -38,13 +38,10 @@ import LizPhoneReflection from './Fixtures/LizBed/LizPhoneReflection'
 import LizPhoneBaseReflection from './Fixtures/LizBed/LizPhoneBaseReflection'
 import Gravestone from './Fixtures/Cemetery/Gravestone'
 import EvianBottles from './Fixtures/StationWagon/EvianBottles'
-import GuitarStand from './Fixtures/ClubSide/GuitarStand'
-import GuitarAmp from './Fixtures/ClubSide/GuitarAmp'
 import KickDrum from './Fixtures/ClubSide/KickDrum'
 import GuitarCaseOpen from './Fixtures/ClubSide/GuitarCaseOpen'
 import BassCaseSide from './Fixtures/ClubLoading/BassCaseSide'
 import DrumsStacked from './Fixtures/ClubLoading/DrumsStacked'
-import BassAmp from './Fixtures/ClubSide/BassAmp'
 import RecordingConsole from './Fixtures/SnowglobesFuture/RecordingConsole'
 import RecordingMic from './Fixtures/SnowglobesFuture/RecordingMic'
 import RecordingBeers from './Fixtures/SnowglobesFuture/RecordingBeers'
@@ -65,8 +62,8 @@ import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN,
+    GUITAR,
     MICROPHONE_STAND,
-    ALBUMS_MILK_CRATE,
     BASS_CASE_OPEN,
     DRUMKIT,
     BASS_CASE_UPRIGHT,
@@ -88,13 +85,10 @@ import {
     LIZ_PHONE_BASE_REFLECTION,
     GRAVESTONE,
     EVIAN_BOTTLES,
-    GUITAR_STAND,
-    GUITAR_AMP,
     KICK_DRUM,
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
     DRUMS_STACKED,
-    BASS_AMP,
     RECORDING_CONSOLE,
     RECORDING_MIC,
     RECORDING_BEERS,
@@ -116,8 +110,8 @@ const FIXTURES_MAP = {
     [BENNETT_RECORD_PLAYER]: BennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: BennettCouchLamp,
     [ASH_CAN]: AshCan,
+    [GUITAR]: Guitar,
     [MICROPHONE_STAND]: MicrophoneStand,
-    [ALBUMS_MILK_CRATE]: AlbumsMilkCrate,
     [BASS_CASE_OPEN]: BassCaseOpen,
     [DRUMKIT]: DrumKit,
     [BASS_CASE_UPRIGHT]: BassCaseUpright,
@@ -139,13 +133,10 @@ const FIXTURES_MAP = {
     [LIZ_PHONE_BASE_REFLECTION]: LizPhoneBaseReflection,
     [GRAVESTONE]: Gravestone,
     [EVIAN_BOTTLES]: EvianBottles,
-    [GUITAR_STAND]: GuitarStand,
-    [GUITAR_AMP]: GuitarAmp,
     [KICK_DRUM]: KickDrum,
     [GUITAR_CASE_OPEN]: GuitarCaseOpen,
     [BASS_CASE_SIDE]: BassCaseSide,
     [DRUMS_STACKED]: DrumsStacked,
-    [BASS_AMP]: BassAmp,
     [RECORDING_CONSOLE]: RecordingConsole,
     [RECORDING_MIC]: RecordingMic,
     [RECORDING_BEERS]: RecordingBeers,
