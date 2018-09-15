@@ -16,7 +16,6 @@ import BennettRecordPlayer from './Fixtures/BennettCouch/BennettRecordPlayer'
 import BennettCouchLamp from './Fixtures/BennettCouch/BennettCouchLamp'
 import AshCan from './Fixtures/UcBerkeley/AshCan'
 import Guitar from './Fixtures/ClubFront/Guitar'
-import MicrophoneStand from './Fixtures/ClubFront/MicrophoneStand'
 import BassCaseOpen from './Fixtures/ClubFront/BassCaseOpen'
 import DrumKit from './Fixtures/ClubFront/DrumKit'
 import BassCaseUpright from './Fixtures/Basement/BassCaseUpright'
@@ -38,6 +37,7 @@ import LizPhoneReflection from './Fixtures/LizBed/LizPhoneReflection'
 import LizPhoneBaseReflection from './Fixtures/LizBed/LizPhoneBaseReflection'
 import Gravestone from './Fixtures/Cemetery/Gravestone'
 import EvianBottles from './Fixtures/StationWagon/EvianBottles'
+import StageMicSide from './Fixtures/ClubSide/StageMicSide'
 import KickDrum from './Fixtures/ClubSide/KickDrum'
 import GuitarCaseOpen from './Fixtures/ClubSide/GuitarCaseOpen'
 import BassCaseSide from './Fixtures/ClubLoading/BassCaseSide'
@@ -45,6 +45,7 @@ import DrumsStacked from './Fixtures/ClubLoading/DrumsStacked'
 import RecordingConsole from './Fixtures/SnowglobesFuture/RecordingConsole'
 import RecordingMic from './Fixtures/SnowglobesFuture/RecordingMic'
 import RecordingBeers from './Fixtures/SnowglobesFuture/RecordingBeers'
+import StageMicFar from './Fixtures/ClubFar/StageMicFar'
 import BurgerWrapper from './Fixtures/Alley/BurgerWrapper'
 import HospitalRecordPlayer from './Fixtures/Deathbed/HospitalRecordPlayer'
 
@@ -63,7 +64,6 @@ import {
     BENNETT_COUCH_LAMP,
     ASH_CAN,
     GUITAR,
-    MICROPHONE_STAND,
     BASS_CASE_OPEN,
     DRUMKIT,
     BASS_CASE_UPRIGHT,
@@ -85,6 +85,7 @@ import {
     LIZ_PHONE_BASE_REFLECTION,
     GRAVESTONE,
     EVIAN_BOTTLES,
+    STAGE_MIC_SIDE,
     KICK_DRUM,
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
@@ -92,6 +93,7 @@ import {
     RECORDING_CONSOLE,
     RECORDING_MIC,
     RECORDING_BEERS,
+    STAGE_MIC_FAR,
     BURGER_WRAPPER,
     HOSPITAL_RECORD_PLAYER
 } from 'scene/fixtureKeys'
@@ -111,7 +113,7 @@ const FIXTURES_MAP = {
     [BENNETT_COUCH_LAMP]: BennettCouchLamp,
     [ASH_CAN]: AshCan,
     [GUITAR]: Guitar,
-    [MICROPHONE_STAND]: MicrophoneStand,
+    [STAGE_MIC_SIDE]: StageMicSide,
     [BASS_CASE_OPEN]: BassCaseOpen,
     [DRUMKIT]: DrumKit,
     [BASS_CASE_UPRIGHT]: BassCaseUpright,
@@ -140,6 +142,7 @@ const FIXTURES_MAP = {
     [RECORDING_CONSOLE]: RecordingConsole,
     [RECORDING_MIC]: RecordingMic,
     [RECORDING_BEERS]: RecordingBeers,
+    [STAGE_MIC_FAR]: StageMicFar,
     [BURGER_WRAPPER]: BurgerWrapper,
     [HOSPITAL_RECORD_PLAYER]: HospitalRecordPlayer
 },

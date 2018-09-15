@@ -68,6 +68,7 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
+    STAGE_MIC_SIDE,
     KICK_DRUM,
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
@@ -178,6 +179,7 @@ module.exports = [
                 [WALL_SPEAKER_SIDE]: ARRANGEMENT_WALL_SIDE_STAGE
             },
             [FIXTURES]: {
+                [STAGE_MIC_SIDE]: true,
                 [KICK_DRUM]: true,
                 [GUITAR_CASE_OPEN]: true
             }

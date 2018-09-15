@@ -63,7 +63,6 @@ import {
 
 import {
     GUITAR,
-    MICROPHONE_STAND,
     DRUMKIT
 } from 'scene/fixtureKeys'
 
@@ -233,7 +232,6 @@ module.exports = [
             },
             [FIXTURES]: {
                 [GUITAR]: true,
-                [MICROPHONE_STAND]: true,
                 [DRUMKIT]: true
             }
         },

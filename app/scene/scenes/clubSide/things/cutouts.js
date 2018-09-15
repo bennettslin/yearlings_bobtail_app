@@ -53,7 +53,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 7,
             xWidth: 7,
-            zHeight: 5
+            zHeight: 4
         }
     },
     [CROWD_SIDE_NEAR]: {
@@ -61,7 +61,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 7,
             xWidth: 7,
-            zHeight: 5
+            zHeight: 4
         }
     }
 }

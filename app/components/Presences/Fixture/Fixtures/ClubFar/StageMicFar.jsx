@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const MicrophoneStand = ({
+const StageMicFar = ({
 
     className,
 
@@ -18,7 +18,7 @@ const MicrophoneStand = ({
     return (
         <Svg
             className={cx(
-                'MicrophoneStand',
+                'StageMicFar',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const MicrophoneStand = ({
                 {...other}
             >
                 {cx(
-                    'MicrophoneStand'
+                    'StageMicFar'
                 )}
             </text>
         </Svg>
     )
 }
 
-MicrophoneStand.propTypes = propTypes;
+StageMicFar.propTypes = propTypes;
 
-export default MicrophoneStand
+export default StageMicFar

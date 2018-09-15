@@ -1,6 +1,5 @@
 import {
     GUITAR,
-    MICROPHONE_STAND,
     BASS_CASE_OPEN,
     DRUMKIT
 } from 'scene/fixtureKeys'
@@ -12,14 +11,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 1,
             xWidth: 1,
             zHeight: 3
-        }
-    },
-    [MICROPHONE_STAND]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 4,
-            xWidth: 0.5,
-            zHeight: 4
         }
     },
     [BASS_CASE_OPEN]: {

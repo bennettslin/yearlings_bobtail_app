@@ -79,7 +79,6 @@ import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     GUITAR,
-    MICROPHONE_STAND,
     BASS_CASE_OPEN,
     DRUMKIT,
     DRUMS_STACKED,
@@ -231,7 +230,6 @@ module.exports = [
             },
             [FIXTURES]: {
                 [GUITAR]: true,
-                [MICROPHONE_STAND]: true,
                 [BASS_CASE_OPEN]: true,
                 [DRUMKIT]: true
             }

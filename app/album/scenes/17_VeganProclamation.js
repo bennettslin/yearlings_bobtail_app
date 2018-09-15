@@ -70,6 +70,7 @@ import {
 } from 'scene/cutoutKeys'
 
 import {
+    STAGE_MIC_FAR,
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
@@ -156,6 +157,9 @@ module.exports = [
                 [WALL_SPEAKER_RIGHT]: true,
                 [CROWD_BACK_FAR]: true,
                 [CROWD_BACK_NEAR]: true
+            },
+            [FIXTURES]: {
+                [STAGE_MIC_FAR]: true
             }
         },
         cubes: CLUB_FAR_KEY,
