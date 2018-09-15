@@ -1,7 +1,7 @@
 import {
     ACTORS,
     CUTOUTS,
-    // FIXTURES,
+    FIXTURES,
     FLATS,
     FURNITURES
 } from 'constants/scene'
@@ -54,8 +54,17 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
-    VOLKSWAGEN
+    VOLKSWAGEN,
+    MONITOR_SPEAKER_LEFT,
+    MONITOR_SPEAKER_RIGHT,
+    WALL_SPEAKER_LEFT,
+    WALL_SPEAKER_RIGHT
 } from 'scene/cutoutKeys'
+
+import {
+    MICROPHONE_STAND,
+    DRUMKIT
+} from 'scene/fixtureKeys'
 
 import {
     OAKLAND_BACKDROP,
@@ -214,6 +223,16 @@ module.exports = [
                     description: 'front, removing bass, rolling eyes',
                     instance: SMIRKING
                 }
+            },
+            [CUTOUTS]: {
+                [MONITOR_SPEAKER_LEFT]: true,
+                [MONITOR_SPEAKER_RIGHT]: true,
+                [WALL_SPEAKER_LEFT]: true,
+                [WALL_SPEAKER_RIGHT]: true
+            },
+            [FIXTURES]: {
+                [MICROPHONE_STAND]: true,
+                [DRUMKIT]: true
             }
         },
         cubes: CLUB_FRONT_KEY,

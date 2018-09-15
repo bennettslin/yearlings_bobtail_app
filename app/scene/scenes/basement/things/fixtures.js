@@ -1,6 +1,6 @@
 import {
     BASS_CASE_UPRIGHT,
-    GUITAR_CASE
+    GUITAR_CASE_UPRIGHT
 } from 'scene/fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 4
         }
     },
-    [GUITAR_CASE]: {
+    [GUITAR_CASE_UPRIGHT]: {
         yIndex: 3,
         arrangement: {
             xFloat: 9.5,

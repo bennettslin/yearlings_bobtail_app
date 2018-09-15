@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const GuitarCase = ({
+const GuitarCaseUpright = ({
 
     className,
 
@@ -18,7 +18,7 @@ const GuitarCase = ({
     return (
         <Svg
             className={cx(
-                'GuitarCase',
+                'GuitarCaseUpright',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const GuitarCase = ({
                 {...other}
             >
                 {cx(
-                    'GuitarCase'
+                    'GuitarCaseUpright'
                 )}
             </text>
         </Svg>
     )
 }
 
-GuitarCase.propTypes = propTypes;
+GuitarCaseUpright.propTypes = propTypes;
 
-export default GuitarCase
+export default GuitarCaseUpright

@@ -7,7 +7,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [MONITOR_SPEAKER_LEFT]: {
-        yIndex: 4,
+        yIndex: 5,
         arrangement: {
             xFloat: 2.5,
             xWidth: 1.5,
@@ -15,7 +15,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [MONITOR_SPEAKER_RIGHT]: {
-        yIndex: 4,
+        yIndex: 5,
         arrangement: {
             xFloat: 8.5,
             xWidth: 1.5,

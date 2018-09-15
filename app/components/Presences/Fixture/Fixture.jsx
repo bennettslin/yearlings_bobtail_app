@@ -19,8 +19,8 @@ import MicrophoneStand from './Fixtures/ClubFront/MicrophoneStand'
 import AlbumsMilkCrate from './Fixtures/ClubFront/AlbumsMilkCrate'
 import BassCaseOpen from './Fixtures/ClubFront/BassCaseOpen'
 import DrumKit from './Fixtures/ClubFront/DrumKit'
-import BassCaseUpright from './Fixtures/ClubLoading/BassCaseUpright'
-import GuitarCase from './Fixtures/Basement/GuitarCase'
+import BassCaseUpright from './Fixtures/Basement/BassCaseUpright'
+import GuitarCaseUpright from './Fixtures/Basement/GuitarCaseUpright'
 import CavemanBones from './Fixtures/Museum/CavemanBones'
 import PushBroom from './Fixtures/Backstage/PushBroom'
 import Stepladder from './Fixtures/Backstage/Stepladder'
@@ -42,7 +42,7 @@ import GuitarStand from './Fixtures/ClubSide/GuitarStand'
 import GuitarAmp from './Fixtures/ClubSide/GuitarAmp'
 import KickDrum from './Fixtures/ClubSide/KickDrum'
 import GuitarCaseOpen from './Fixtures/ClubSide/GuitarCaseOpen'
-import BassCaseSide from './Fixtures/Basement/BassCaseSide'
+import BassCaseSide from './Fixtures/ClubLoading/BassCaseSide'
 import DrumsStacked from './Fixtures/ClubLoading/DrumsStacked'
 import BassAmp from './Fixtures/ClubSide/BassAmp'
 import RecordingConsole from './Fixtures/SnowglobesFuture/RecordingConsole'
@@ -70,7 +70,7 @@ import {
     BASS_CASE_OPEN,
     DRUMKIT,
     BASS_CASE_UPRIGHT,
-    GUITAR_CASE,
+    GUITAR_CASE_UPRIGHT,
     CAVEMAN_BONES,
     PUSH_BROOM,
     STEPLADDER,
@@ -121,7 +121,7 @@ const FIXTURES_MAP = {
     [BASS_CASE_OPEN]: BassCaseOpen,
     [DRUMKIT]: DrumKit,
     [BASS_CASE_UPRIGHT]: BassCaseUpright,
-    [GUITAR_CASE]: GuitarCase,
+    [GUITAR_CASE_UPRIGHT]: GuitarCaseUpright,
     [CAVEMAN_BONES]: CavemanBones,
     [PUSH_BROOM]: PushBroom,
     [STEPLADDER]: Stepladder,
