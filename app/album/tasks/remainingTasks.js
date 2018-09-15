@@ -101,16 +101,6 @@ module.exports = [
     },
 
     /**
-     * Remaining scene work.
-     */
-
-    {
-        taskName: `Rethink tasks for panels, doors, and windows.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    /**
      * Content.
      */
     {
