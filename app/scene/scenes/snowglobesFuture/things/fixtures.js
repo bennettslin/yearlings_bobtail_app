@@ -6,25 +6,25 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [RECORDING_CONSOLE]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 9,
+            xWidth: 2,
+            zHeight: 0.5
         }
     },
     [RECORDING_MIC]: {
-        yIndex: 5,
+        yIndex: 1,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 10,
+            xWidth: 0.5,
+            zHeight: 2
         }
     },
     [RECORDING_BEERS]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 7,
             xWidth: 1,
             zHeight: 1
         }

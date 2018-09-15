@@ -216,7 +216,7 @@ module.exports = {
                             },
                             {
                                 description: [
-                                    `Ana's friends Howie and Tomer, being seasoned drug users but having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as`,
+                                    `Ana's friends Howie and Tomer, being seasoned drug users but having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers like`,
                                     {
                                         anchor: `"Vicodin."`,
                                         wiki: `Hydrocodone/paracetamol`

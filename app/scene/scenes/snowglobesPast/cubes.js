@@ -1,17 +1,17 @@
 import { SNOWGLOBES_PAST_KEY } from 'scene/cubesKeys'
 
-import {
-    g
-} from 'scene/cubesConstants'
+// import {
+//     g
+// } from 'scene/cubesConstants'
 
 const
     SNOWGLOBES_PAST_CUBES = {
         floor: {
             zIndices: [
-                [g],
-                [0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0],
-                [0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0],
-                [0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0],
+                [0],
+                [0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0],
+                [0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0],
+                [0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0],
                 [0]
             ]
         }

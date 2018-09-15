@@ -10,7 +10,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 5.5,
             xWidth: 12,
-            zHeight: 4
+            zHeight: 8
         }
     },
     [SNOWGLOBE_LIZ_BLINDS]: {

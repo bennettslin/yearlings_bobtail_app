@@ -10,23 +10,24 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 5.5,
             xWidth: 12,
-            zHeight: 4
+            zHeight: 8
         }
     },
     [SNOWGLOBE_LIZ_COUCH]: {
-        yIndex: 1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 2,
+            xFloat: 3,
             xWidth: 5,
-            zHeight: 3
+            zHeight: 5
         }
     },
     [SNOWGLOBE_BENNETT]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 9,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 8.5,
+            xWidth: 4,
+            zHeight: 4,
+            zOffset: 1.5
         }
     }
 }
