@@ -3849,8 +3849,8 @@ module.exports = [
     },
     {
         taskName: `Raw work on scene cubes.`,
-        workedHours: 14,
-        neededHours: 14
+        workedHours: 20,
+        neededHours: 20
     },
     {
         taskName: `Have a past sky.`,

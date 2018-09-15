@@ -1,23 +1,32 @@
 import {
-    STATION_WAGON_SEAT_FRONT,
-    STATION_WAGON_SEAT_BACK
+    SATURN_SEAT_REAR,
+    SATURN_SEAT_FRONT,
+    SATURN_DASHBOARD
 } from 'scene/furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
-    [STATION_WAGON_SEAT_FRONT]: {
-        yIndex: 0,
+    [SATURN_SEAT_REAR]: {
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 3.5,
             xWidth: 2,
-            zHeight: 5.5
+            zHeight: 0.5
         }
     },
-    [STATION_WAGON_SEAT_BACK]: {
-        yIndex: 0,
+    [SATURN_SEAT_FRONT]: {
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 6.5,
             xWidth: 2,
-            zHeight: 5.5
+            zHeight: 0.5
+        }
+    },
+    [SATURN_DASHBOARD]: {
+        yIndex: 3,
+        arrangement: {
+            xFloat: 8.5,
+            xWidth: 2,
+            zHeight: 3
         }
     }
 }

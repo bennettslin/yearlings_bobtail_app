@@ -14,19 +14,21 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [TARPIT_THOUGHT]: {
-        yIndex: 1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 2,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 3,
+            xWidth: 4,
+            zHeight: 3,
+            zOffset: 4.5
         }
     },
     [SIBLING_THOUGHT]: {
-        yIndex: 1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 9,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 8,
+            xWidth: 4,
+            zHeight: 3,
+            zOffset: 4.5
         }
     }
 }

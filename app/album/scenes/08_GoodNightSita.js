@@ -41,8 +41,8 @@ import {
 import {
     SANDBAGS,
     STAGE_LIGHTS,
-    GO_KART_LEFT,
-    GO_KART_RIGHT,
+    GO_KART_EXTERIOR_LEFT,
+    GO_KART_EXTERIOR_RIGHT,
     TRAFFIC_LIGHT
 } from 'scene/cutoutKeys'
 
@@ -64,8 +64,10 @@ import {
     ARRANGEMENT_LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS_STREET,
     LIZ_GATE_OUTSIDE,
-    GO_KART_INTERIOR_LEFT,
-    GO_KART_INTERIOR_RIGHT,
+    GO_KART_SEAT_LEFT,
+    GO_KART_SEAT_RIGHT,
+    GO_KART_DASHBOARD_LEFT,
+    GO_KART_DASHBOARD_RIGHT,
     LIZ_GATE_OUTSIDE_OPEN
 } from 'scene/furnitureKeys'
 
@@ -205,15 +207,17 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [GO_KART_LEFT]: true,
-                [GO_KART_RIGHT]: true
+                [GO_KART_EXTERIOR_LEFT]: true,
+                [GO_KART_EXTERIOR_RIGHT]: true
             },
             [FLATS]: {
                 [GO_KART_THOUGHT]: true
             },
             [FURNITURES]: {
-                [GO_KART_INTERIOR_LEFT]: true,
-                [GO_KART_INTERIOR_RIGHT]: true
+                [GO_KART_SEAT_LEFT]: true,
+                [GO_KART_SEAT_RIGHT]: true,
+                [GO_KART_DASHBOARD_LEFT]: true,
+                [GO_KART_DASHBOARD_RIGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,

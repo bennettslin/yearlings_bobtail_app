@@ -78,8 +78,6 @@ import SnowglobeLizCouch from './Flats/SnowglobesFuture/SnowglobeLizCouch'
 import SnowglobeBennett from './Flats/SnowglobesFuture/SnowglobeBennett'
 import ElCerritoBackdrop from './Flats/ElCerrito/ElCerritoBackdrop'
 import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
-import ConvertibleFront from './Flats/ElCerrito/ConvertibleFront'
-import ConvertibleBack from './Flats/ElCerrito/ConvertibleBack'
 import PhoneBubble from './Flats/LizBed/PhoneBubble'
 import PampasBackdrop from './Flats/Pampas/PampasBackdrop'
 import WeddingBackdrop from './Flats/OutdoorWedding/WeddingBackdrop'
@@ -166,8 +164,6 @@ import {
     SNOWGLOBE_BENNETT,
     EL_CERRITO_BACKDROP,
     EL_CERRITO_ROAD,
-    CONVERTIBLE_FRONT,
-    CONVERTIBLE_BACK,
     PHONE_BUBBLE,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
@@ -255,8 +251,6 @@ const FLATS_MAP = {
     [SNOWGLOBE_BENNETT]: SnowglobeBennett,
     [EL_CERRITO_BACKDROP]: ElCerritoBackdrop,
     [EL_CERRITO_ROAD]: ElCerritoRoad,
-    [CONVERTIBLE_FRONT]: ConvertibleFront,
-    [CONVERTIBLE_BACK]: ConvertibleBack,
     [PHONE_BUBBLE]: PhoneBubble,
     [PAMPAS_BACKDROP]: PampasBackdrop,
     [WEDDING_BACKDROP]: WeddingBackdrop,

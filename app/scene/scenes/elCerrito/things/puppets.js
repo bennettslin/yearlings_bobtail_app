@@ -1,9 +1,9 @@
 import {
-    CONVERTIBLE_FAR
+    PUPPET_REATTA
 } from 'scene/puppetKeys'
 
 const ARRANGEMENTS_MAP = {
-    [CONVERTIBLE_FAR]: {
+    [PUPPET_REATTA]: {
         yIndex: 1,
         arrangement: {
             xFloat: 5,

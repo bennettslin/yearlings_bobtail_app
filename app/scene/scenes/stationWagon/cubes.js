@@ -1,7 +1,7 @@
 import { STATION_WAGON_KEY } from 'scene/cubesKeys'
 
 import {
-    a
+    // a
 } from 'scene/cubesConstants'
 
 const
@@ -9,10 +9,9 @@ const
         floor: {
             zIndices: [
                 [0],
-                [0, a, a, a, a, a, a, a, a, 6, 6, 0],
-                [0, 2, 2, 4, 4, 2, 4, 4, 2, 6, 6, 0],
-                [0, 2, 2, 4, 4, 2, 4, 4, 2, 6, 6, 0],
-                [0, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 0],
+                [0],
+                [0, 2, 2, 4, 4, 2, 4, 4, 2, 2, 2, 0],
+                [0, 2, 2, 4, 4, 2, 4, 4, 2, 2, 2, 0],
                 [0]
             ]
         }

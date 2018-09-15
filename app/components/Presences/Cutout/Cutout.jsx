@@ -16,8 +16,8 @@ import TrollShadowLeft from './Cutouts/ChangelingCave/TrollShadowLeft'
 import TrollShadowRight from './Cutouts/ChangelingCave/TrollShadowRight'
 import Campfire from './Cutouts/ChangelingCave/Campfire'
 import Stalactites from './Cutouts/ChangelingCave/Stalactites'
-import SchoolbusFront from './Cutouts/Schoolbus/SchoolbusFront'
-import SchoolbusBack from './Cutouts/Schoolbus/SchoolbusBack'
+import SchoolbusExterior from './Cutouts/Schoolbus/SchoolbusExterior'
+import SchoolbusInterior from './Cutouts/Schoolbus/SchoolbusInterior'
 import BuddhaShrine from './Cutouts/TaiwanRoom/BuddhaShrine'
 import TaiwanFridgeFront from './Cutouts/TaiwanRoom/TaiwanFridgeFront'
 import BennettTaiwanStairs from './Cutouts/TaiwanRoom/BennettTaiwanStairs'
@@ -60,8 +60,8 @@ import CinemaPosterLeft from './Cutouts/Cinema/CinemaPosterLeft'
 import CinemaPosterRight from './Cutouts/Cinema/CinemaPosterRight'
 import Sandbags from './Cutouts/Backstage/Sandbags'
 import StageLights from './Cutouts/Backstage/StageLights'
-import GoKartLeft from './Cutouts/GoKarts/GoKartLeft'
-import GoKartRight from './Cutouts/GoKarts/GoKartRight'
+import GoKartExteriorLeft from './Cutouts/GoKarts/GoKartExteriorLeft'
+import GoKartExteriorRight from './Cutouts/GoKarts/GoKartExteriorRight'
 import TrafficLight from './Cutouts/LizGate/TrafficLight'
 import DishroomSink from './Cutouts/Dishroom/DishroomSink'
 import ApartmentPlant from './Cutouts/BennettGate/ApartmentPlant'
@@ -70,8 +70,8 @@ import LightSwitch from './Cutouts/BennettBed/LightSwitch'
 import Clipboard from './Cutouts/WaitingRoom/Clipboard'
 import Painting from './Cutouts/WaitingRoom/Painting'
 import WaitingRoomPlant from './Cutouts/WaitingRoom/WaitingRoomPlant'
-import StationWagonFront from './Cutouts/StationWagon/StationWagonFront'
-import StationWagonBack from './Cutouts/StationWagon/StationWagonBack'
+import SaturnExterior from './Cutouts/StationWagon/SaturnExterior'
+import SaturnInterior from './Cutouts/StationWagon/SaturnInterior'
 import StorageBoxes from './Cutouts/Attic/StorageBoxes'
 import StorageChest from './Cutouts/Attic/StorageChest'
 import HowieFridge from './Cutouts/Attic/HowieFridge'
@@ -82,6 +82,8 @@ import CrowdSideNear from './Cutouts/ClubSide/CrowdSideNear'
 import CrowdSideFar from './Cutouts/ClubSide/CrowdSideFar'
 import Volkswagen from './Cutouts/OaklandHouses/Volkswagen'
 import TwinStreetlamp from './Cutouts/OaklandResidential/TwinStreetlamp'
+import ReattaExterior from './Cutouts/ElCerrito/ReattaExterior'
+import ReattaInterior from '../Cutout/Cutouts/ElCerrito/ReattaInterior'
 import CrowdBackNear from './Cutouts/ClubFar/CrowdBackNear'
 import CrowdBackFar from './Cutouts/ClubFar/CrowdBackFar'
 import Dumpster from './Cutouts/Alley/Dumpster'
@@ -104,8 +106,8 @@ import {
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
     STALACTITES,
-    SCHOOLBUS_FRONT,
-    SCHOOLBUS_BACK,
+    SCHOOLBUS_EXTERIOR,
+    SCHOOLBUS_INTERIOR,
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE_FRONT,
     BENNETT_TAIWAN_STAIRS,
@@ -148,8 +150,8 @@ import {
     CINEMA_POSTER_RIGHT,
     SANDBAGS,
     STAGE_LIGHTS,
-    GO_KART_LEFT,
-    GO_KART_RIGHT,
+    GO_KART_EXTERIOR_LEFT,
+    GO_KART_EXTERIOR_RIGHT,
     TRAFFIC_LIGHT,
     DISHROOM_SINK,
     APARTMENT_PLANT,
@@ -158,8 +160,8 @@ import {
     CLIPBOARD,
     PAINTING,
     WAITING_ROOM_PLANT,
-    STATION_WAGON_FRONT,
-    STATION_WAGON_BACK,
+    SATURN_EXTERIOR,
+    SATURN_INTERIOR,
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
@@ -170,6 +172,8 @@ import {
     CROWD_SIDE_FAR,
     VOLKSWAGEN,
     TWIN_STREETLAMP,
+    REATTA_EXTERIOR,
+    REATTA_INTERIOR,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR,
     DUMPSTER,
@@ -193,8 +197,8 @@ const CUTOUTS_MAP = {
     [TROLL_SHADOW_RIGHT]: TrollShadowRight,
     [CAMPFIRE]: Campfire,
     [STALACTITES]: Stalactites,
-    [SCHOOLBUS_FRONT]: SchoolbusFront,
-    [SCHOOLBUS_BACK]: SchoolbusBack,
+    [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
+    [SCHOOLBUS_INTERIOR]: SchoolbusInterior,
     [BUDDHA_SHRINE]: BuddhaShrine,
     [TAIWAN_FRIDGE_FRONT]: TaiwanFridgeFront,
     [BENNETT_TAIWAN_STAIRS]: BennettTaiwanStairs,
@@ -237,8 +241,8 @@ const CUTOUTS_MAP = {
     [CINEMA_POSTER_RIGHT]: CinemaPosterRight,
     [SANDBAGS]: Sandbags,
     [STAGE_LIGHTS]: StageLights,
-    [GO_KART_LEFT]: GoKartLeft,
-    [GO_KART_RIGHT]: GoKartRight,
+    [GO_KART_EXTERIOR_LEFT]: GoKartExteriorLeft,
+    [GO_KART_EXTERIOR_RIGHT]: GoKartExteriorRight,
     [TRAFFIC_LIGHT]: TrafficLight,
     [DISHROOM_SINK]: DishroomSink,
     [APARTMENT_PLANT]: ApartmentPlant,
@@ -247,8 +251,8 @@ const CUTOUTS_MAP = {
     [CLIPBOARD]: Clipboard,
     [PAINTING]: Painting,
     [WAITING_ROOM_PLANT]: WaitingRoomPlant,
-    [STATION_WAGON_FRONT]: StationWagonFront,
-    [STATION_WAGON_BACK]: StationWagonBack,
+    [SATURN_EXTERIOR]: SaturnExterior,
+    [SATURN_INTERIOR]: SaturnInterior,
     [STORAGE_BOXES]: StorageBoxes,
     [STORAGE_CHEST]: StorageChest,
     [HOWIE_FRIDGE]: HowieFridge,
@@ -259,6 +263,8 @@ const CUTOUTS_MAP = {
     [CROWD_SIDE_FAR]: CrowdSideFar,
     [VOLKSWAGEN]: Volkswagen,
     [TWIN_STREETLAMP]: TwinStreetlamp,
+    [REATTA_EXTERIOR]: ReattaExterior,
+    [REATTA_INTERIOR]: ReattaInterior,
     [CROWD_BACK_NEAR]: CrowdBackNear,
     [CROWD_BACK_FAR]: CrowdBackFar,
     [DUMPSTER]: Dumpster,

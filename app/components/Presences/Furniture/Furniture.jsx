@@ -7,7 +7,7 @@ import BedroomBlinds from './Furnitures/Bedroom/BedroomBlinds'
 import BedroomBlindsOpen from './Furnitures/Bedroom/BedroomBlindsOpen'
 import CaptainBedMattress from './Furnitures/Bedroom/CaptainBedMattress'
 import SchoolbusSeatFront from './Furnitures/Schoolbus/SchoolbusSeatFront'
-import SchoolbusSeatBack from './Furnitures/Schoolbus/SchoolbusSeatBack'
+import SchoolbusSeatRear from './Furnitures/Schoolbus/SchoolbusSeatRear'
 import StairwellRailing from './Furnitures/TaiwanStairs/StairwellRailing'
 import IronGateLow from './Furnitures/TaiwanStairs/IronGateLow'
 import IronGate from './Furnitures/TaiwanGate/IronGate'
@@ -22,8 +22,10 @@ import BasementDoor from './Furnitures/Basement/BasementDoor'
 import BasementDoorOpen from './Furnitures/Basement/BasementDoorOpen'
 import CinemaDoors from './Furnitures/Cinema/CinemaDoors'
 import LizGateOutside from './Furnitures/LizGate/LizGateOutside'
-import GoKartInteriorLeft from './Furnitures/GoKarts/GoKartInteriorLeft'
-import GoKartInteriorRight from './Furnitures/GoKarts/GoKartInteriorRight'
+import GoKartSeatLeft from './Furnitures/GoKarts/GoKartSeatLeft'
+import GoKartSeatRight from './Furnitures/GoKarts/GoKartSeatRight'
+import GoKartDashboardLeft from './Furnitures/GoKarts/GoKartDashboardLeft'
+import GoKartDashboardRight from './Furnitures/GoKarts/GoKartDashboardRight'
 import LizGateOutsideOpen from './Furnitures/LizGate/LizGateOutsideOpen'
 import DishroomDoor from './Furnitures/Dishroom/DishroomDoor'
 import BennettGateFront from './Furnitures/BennettGate/BennettGateFront'
@@ -41,8 +43,9 @@ import LizMattress from './Furnitures/LizBed/LizMattress'
 import LizPillows from './Furnitures/LizBed/LizPillows'
 import LizMattressReflection from './Furnitures/LizBed/LizMattressReflection'
 import LizPillowsReflection from './Furnitures/LizBed/LizPillowsReflection'
-import StationWagonSeatFront from './Furnitures/StationWagon/StationWagonSeatFront'
-import StationWagonSeatBack from './Furnitures/StationWagon/StationWagonSeatBack'
+import SaturnSeatFront from './Furnitures/StationWagon/SaturnSeatFront'
+import SaturnSeatRear from './Furnitures/StationWagon/SaturnSeatRear'
+import SaturnDashboard from './Furnitures/StationWagon/SaturnDashboard'
 import AtticCushions from './Furnitures/Attic/AtticCushions'
 import ClubDoor from './Furnitures/ClubLoading/ClubDoor'
 import LizBlinds from './Furnitures/LizCouch/LizBlinds'
@@ -53,7 +56,9 @@ import LizDoorOpen from './Furnitures/LizCouch/LizDoorOpen'
 import LizGateInside from './Furnitures/LizCouch/LizGateInside'
 import LizGateInsideOpen from './Furnitures/LizCouch/LizGateInsideOpen'
 import MiriamCushions from './Furnitures/SnowglobesPresent/MiriamCushions'
-import ConvertibleInterior from './Furnitures/ElCerrito/ConvertibleInterior'
+import ReattaSeat from './Furnitures/ElCerrito/ReattaSeat'
+import ReattaSeatLowered from './Furnitures/ElCerrito/ReattaSeatLowered'
+import ReattaDashboard from './Furnitures/ElCerrito/ReattaDashboard'
 import LoadingDockDoor from './Furnitures/Alley/LoadingDockDoor'
 import ElToritoDoorLeft from './Furnitures/ElTorito/ElToritoDoorLeft'
 import ElToritoDoorRight from './Furnitures/ElTorito/ElToritoDoorRight'
@@ -65,7 +70,7 @@ import {
     BEDROOM_BLINDS_OPEN,
     CAPTAIN_BED_MATTRESS,
     SCHOOLBUS_SEAT_FRONT,
-    SCHOOLBUS_SEAT_BACK,
+    SCHOOLBUS_SEAT_REAR,
     STAIRWELL_RAILING,
     IRON_GATE_LOW,
     IRON_GATE,
@@ -80,8 +85,10 @@ import {
     BASEMENT_DOOR_OPEN,
     CINEMA_DOORS,
     LIZ_GATE_OUTSIDE,
-    GO_KART_INTERIOR_LEFT,
-    GO_KART_INTERIOR_RIGHT,
+    GO_KART_SEAT_LEFT,
+    GO_KART_SEAT_RIGHT,
+    GO_KART_DASHBOARD_LEFT,
+    GO_KART_DASHBOARD_RIGHT,
     LIZ_GATE_OUTSIDE_OPEN,
     DISHROOM_DOOR,
     BENNETT_GATE_FRONT,
@@ -99,8 +106,9 @@ import {
     LIZ_PILLOWS,
     LIZ_MATTRESS_REFLECTION,
     LIZ_PILLOWS_REFLECTION,
-    STATION_WAGON_SEAT_FRONT,
-    STATION_WAGON_SEAT_BACK,
+    SATURN_SEAT_FRONT,
+    SATURN_SEAT_REAR,
+    SATURN_DASHBOARD,
     ATTIC_CUSHIONS,
     CLUB_DOOR,
     LIZ_BLINDS,
@@ -111,7 +119,9 @@ import {
     LIZ_GATE_INSIDE,
     LIZ_GATE_INSIDE_OPEN,
     MIRIAM_CUSHIONS,
-    CONVERTIBLE_INTERIOR,
+    REATTA_SEAT,
+    REATTA_SEAT_LOWERED,
+    REATTA_DASHBOARD,
     LOADING_DOCK_DOOR,
     EL_TORITO_DOOR_LEFT,
     EL_TORITO_DOOR_RIGHT,
@@ -124,7 +134,7 @@ const FURNITURES_MAP = {
     [BEDROOM_BLINDS_OPEN]: BedroomBlindsOpen,
     [CAPTAIN_BED_MATTRESS]: CaptainBedMattress,
     [SCHOOLBUS_SEAT_FRONT]: SchoolbusSeatFront,
-    [SCHOOLBUS_SEAT_BACK]: SchoolbusSeatBack,
+    [SCHOOLBUS_SEAT_REAR]: SchoolbusSeatRear,
     [STAIRWELL_RAILING]: StairwellRailing,
     [IRON_GATE_LOW]: IronGateLow,
     [IRON_GATE]: IronGate,
@@ -139,8 +149,10 @@ const FURNITURES_MAP = {
     [BASEMENT_DOOR_OPEN]: BasementDoorOpen,
     [CINEMA_DOORS]: CinemaDoors,
     [LIZ_GATE_OUTSIDE]: LizGateOutside,
-    [GO_KART_INTERIOR_LEFT]: GoKartInteriorLeft,
-    [GO_KART_INTERIOR_RIGHT]: GoKartInteriorRight,
+    [GO_KART_SEAT_LEFT]: GoKartSeatLeft,
+    [GO_KART_SEAT_RIGHT]: GoKartSeatRight,
+    [GO_KART_DASHBOARD_LEFT]: GoKartDashboardLeft,
+    [GO_KART_DASHBOARD_RIGHT]: GoKartDashboardRight,
     [LIZ_GATE_OUTSIDE_OPEN]: LizGateOutsideOpen,
     [DISHROOM_DOOR]: DishroomDoor,
     [BENNETT_GATE_FRONT]: BennettGateFront,
@@ -158,8 +170,9 @@ const FURNITURES_MAP = {
     [LIZ_PILLOWS]: LizPillows,
     [LIZ_MATTRESS_REFLECTION]: LizMattressReflection,
     [LIZ_PILLOWS_REFLECTION]: LizPillowsReflection,
-    [STATION_WAGON_SEAT_FRONT]: StationWagonSeatFront,
-    [STATION_WAGON_SEAT_BACK]: StationWagonSeatBack,
+    [SATURN_SEAT_FRONT]: SaturnSeatFront,
+    [SATURN_SEAT_REAR]: SaturnSeatRear,
+    [SATURN_DASHBOARD]: SaturnDashboard,
     [ATTIC_CUSHIONS]: AtticCushions,
     [CLUB_DOOR]: ClubDoor,
     [LIZ_BLINDS]: LizBlinds,
@@ -170,7 +183,9 @@ const FURNITURES_MAP = {
     [LIZ_GATE_INSIDE]: LizGateInside,
     [LIZ_GATE_INSIDE_OPEN]: LizGateInsideOpen,
     [MIRIAM_CUSHIONS]: MiriamCushions,
-    [CONVERTIBLE_INTERIOR]: ConvertibleInterior,
+    [REATTA_SEAT]: ReattaSeat,
+    [REATTA_SEAT_LOWERED]: ReattaSeatLowered,
+    [REATTA_DASHBOARD]: ReattaDashboard,
     [LOADING_DOCK_DOOR]: LoadingDockDoor,
     [EL_TORITO_DOOR_LEFT]: ElToritoDoorLeft,
     [EL_TORITO_DOOR_RIGHT]: ElToritoDoorRight,

@@ -24,7 +24,7 @@ import OpalWindow from './Puppets/LizCouch/OpalWindow'
 import OpalCouch from './Puppets/LizCouch/OpalCouch'
 import Peahen from './Puppets/LizCouch/Peahen'
 import Peacock from './Puppets/LizCouch/Peacock'
-import ConvertibleFar from './Puppets/ElCerrito/ConvertibleFar'
+import PuppetReatta from './Puppets/ElCerrito/PuppetReatta'
 import PuppetKhari from './Puppets/OutdoorWedding/PuppetKhari'
 import PuppetLiz from './Puppets/OutdoorWedding/PuppetLiz'
 
@@ -51,7 +51,7 @@ import {
     OPAL_COUCH,
     PEAHEN,
     PEACOCK,
-    CONVERTIBLE_FAR,
+    PUPPET_REATTA,
     PUPPET_KHARI,
     PUPPET_LIZ
 } from 'scene/puppetKeys'
@@ -79,7 +79,7 @@ const PUPPETS_MAP = {
     [OPAL_COUCH]: OpalCouch,
     [PEAHEN]: Peahen,
     [PEACOCK]: Peacock,
-    [CONVERTIBLE_FAR]: ConvertibleFar,
+    [PUPPET_REATTA]: PuppetReatta,
     [PUPPET_KHARI]: PuppetKhari,
     [PUPPET_LIZ]: PuppetLiz
 },

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const StationWagonBack = ({
+const GoKartDashboardLeft = ({
 
     className,
 
@@ -18,13 +18,13 @@ const StationWagonBack = ({
     return (
         <Svg
             className={cx(
-                'StationWagonBack',
+                'GoKartDashboardLeft',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Furniture__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const StationWagonBack = ({
                 {...other}
             >
                 {cx(
-                    'StationWagonBack'
+                    'GoKartDashboardLeft'
                 )}
             </text>
         </Svg>
     )
 }
 
-StationWagonBack.propTypes = propTypes;
+GoKartDashboardLeft.propTypes = propTypes;
 
-export default StationWagonBack
+export default GoKartDashboardLeft

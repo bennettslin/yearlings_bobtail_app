@@ -42,8 +42,8 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
-    STATION_WAGON_FRONT,
-    STATION_WAGON_BACK,
+    SATURN_EXTERIOR,
+    SATURN_INTERIOR,
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
@@ -71,8 +71,9 @@ import {
 } from 'scene/flatKeys'
 
 import {
-    STATION_WAGON_SEAT_FRONT,
-    STATION_WAGON_SEAT_BACK,
+    SATURN_SEAT_FRONT,
+    SATURN_SEAT_REAR,
+    SATURN_DASHBOARD,
     ATTIC_CUSHIONS
 } from 'scene/furnitureKeys'
 
@@ -277,8 +278,8 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [STATION_WAGON_FRONT]: true,
-                [STATION_WAGON_BACK]: true
+                [SATURN_EXTERIOR]: true,
+                [SATURN_INTERIOR]: true
             },
             [FIXTURES]: {
                 [EVIAN_BOTTLES]: true
@@ -289,8 +290,9 @@ module.exports = [
                 [SIBLING_THOUGHT]: true
             },
             [FURNITURES]: {
-                [STATION_WAGON_SEAT_BACK]: true,
-                [STATION_WAGON_SEAT_FRONT]: true
+                [SATURN_SEAT_REAR]: true,
+                [SATURN_SEAT_FRONT]: true,
+                [SATURN_DASHBOARD]: true
             }
         },
         cubes: STATION_WAGON_KEY,

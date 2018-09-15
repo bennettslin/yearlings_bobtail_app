@@ -23,7 +23,7 @@ const
     OPAL_COUCH = 'opalCouch',
     PEAHEN = 'peahen',
     PEACOCK = 'peacock',
-    CONVERTIBLE_FAR = 'convertibleFar',
+    PUPPET_REATTA = 'puppetReatta',
     PUPPET_KHARI = 'puppetKhari',
     PUPPET_LIZ = 'puppetLiz'
 
@@ -50,7 +50,7 @@ export {
     OPAL_COUCH,
     PEAHEN,
     PEACOCK,
-    CONVERTIBLE_FAR,
+    PUPPET_REATTA,
     PUPPET_KHARI,
     PUPPET_LIZ
 }

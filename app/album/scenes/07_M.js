@@ -307,7 +307,7 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [CINEMA_POSTER_LEFT]: true,
-                [CINEMA_POSTER_RIGHT]: true
+                [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER
             },
             [FURNITURES]: {
                 [CINEMA_DOORS]: true

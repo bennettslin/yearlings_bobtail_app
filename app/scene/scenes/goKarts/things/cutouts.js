@@ -1,10 +1,10 @@
 import {
-    GO_KART_LEFT,
-    GO_KART_RIGHT
+    GO_KART_EXTERIOR_LEFT,
+    GO_KART_EXTERIOR_RIGHT
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
-    [GO_KART_LEFT]: {
+    [GO_KART_EXTERIOR_LEFT]: {
         yIndex: 4,
         arrangement: {
             xFloat: 3,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 1
         }
     },
-    [GO_KART_RIGHT]: {
+    [GO_KART_EXTERIOR_RIGHT]: {
         yIndex: 4,
         arrangement: {
             xFloat: 8,

@@ -1,22 +1,22 @@
 import {
     SCHOOLBUS_SEAT_FRONT,
-    SCHOOLBUS_SEAT_BACK
+    SCHOOLBUS_SEAT_REAR
 } from 'scene/furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
-    [SCHOOLBUS_SEAT_BACK]: {
+    [SCHOOLBUS_SEAT_REAR]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 3,
-            xWidth: 1,
+            xFloat: 2.5,
+            xWidth: 2,
             zHeight: 0.5
         }
     },
     [SCHOOLBUS_SEAT_FRONT]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 6,
-            xWidth: 1,
+            xFloat: 5.5,
+            xWidth: 2,
             zHeight: 0.5
         }
     }

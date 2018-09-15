@@ -44,8 +44,8 @@ import {
 } from 'scene/instanceKeys/sasha'
 
 import {
-    SCHOOLBUS_FRONT,
-    SCHOOLBUS_BACK
+    SCHOOLBUS_EXTERIOR,
+    SCHOOLBUS_INTERIOR
 } from 'scene/cutoutKeys'
 
 import {
@@ -67,7 +67,7 @@ import {
 
 import {
     SCHOOLBUS_SEAT_FRONT,
-    SCHOOLBUS_SEAT_BACK
+    SCHOOLBUS_SEAT_REAR
 } from 'scene/furnitureKeys'
 
 import {
@@ -160,8 +160,8 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [SCHOOLBUS_BACK]: true,
-                [SCHOOLBUS_FRONT]: true
+                [SCHOOLBUS_INTERIOR]: true,
+                [SCHOOLBUS_EXTERIOR]: true
             },
             [FIXTURES]: {
                 [BACKPACK_BENNETT]: true,
@@ -171,7 +171,7 @@ module.exports = [
                 [SCHOOLBUS_STREET_THOUGHT]: true
             },
             [FURNITURES]: {
-                [SCHOOLBUS_SEAT_BACK]: true,
+                [SCHOOLBUS_SEAT_REAR]: true,
                 [SCHOOLBUS_SEAT_FRONT]: true
             }
         },

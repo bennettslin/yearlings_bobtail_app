@@ -42,6 +42,8 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    REATTA_EXTERIOR,
+    REATTA_INTERIOR,
     IV_DRIP
 } from 'scene/cutoutKeys'
 
@@ -52,19 +54,19 @@ import {
 import {
     EL_CERRITO_BACKDROP,
     EL_CERRITO_ROAD,
-    CONVERTIBLE_FRONT,
-    CONVERTIBLE_BACK,
     HOSPITAL_THOUGHT,
     TENNIS_THOUGHT
 } from 'scene/flatKeys'
 
 import {
-    CONVERTIBLE_INTERIOR,
+    REATTA_SEAT,
+    REATTA_SEAT_LOWERED,
+    REATTA_DASHBOARD,
     HOSPITAL_MATTRESS
 } from 'scene/furnitureKeys'
 
 import {
-    CONVERTIBLE_FAR
+    PUPPET_REATTA
 } from 'scene/puppetKeys'
 
 module.exports = [
@@ -86,14 +88,17 @@ module.exports = [
                     instance: PERFUMING
                 }
             },
+            [CUTOUTS]: {
+                [REATTA_EXTERIOR]: true,
+                [REATTA_INTERIOR]: true
+            },
             [FLATS]: {
                 [EL_CERRITO_BACKDROP]: true,
-                [EL_CERRITO_ROAD]: true,
-                [CONVERTIBLE_FRONT]: true,
-                [CONVERTIBLE_BACK]: true
+                [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
-                [CONVERTIBLE_INTERIOR]: true
+                [REATTA_SEAT]: true,
+                [REATTA_DASHBOARD]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -120,14 +125,17 @@ module.exports = [
                     instance: COWGIRL
                 }
             },
+            [CUTOUTS]: {
+                [REATTA_EXTERIOR]: true,
+                [REATTA_INTERIOR]: true
+            },
             [FLATS]: {
                 [EL_CERRITO_BACKDROP]: true,
-                [EL_CERRITO_ROAD]: true,
-                [CONVERTIBLE_FRONT]: true,
-                [CONVERTIBLE_BACK]: true
+                [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
-                [CONVERTIBLE_INTERIOR]: true
+                [REATTA_SEAT]: true,
+                [REATTA_DASHBOARD]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -154,14 +162,17 @@ module.exports = [
                     instance: BLOWJOB
                 }
             },
+            [CUTOUTS]: {
+                [REATTA_EXTERIOR]: true,
+                [REATTA_INTERIOR]: true
+            },
             [FLATS]: {
                 [EL_CERRITO_BACKDROP]: true,
-                [EL_CERRITO_ROAD]: true,
-                [CONVERTIBLE_FRONT]: true,
-                [CONVERTIBLE_BACK]: true
+                [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
-                [CONVERTIBLE_INTERIOR]: true
+                [REATTA_SEAT_LOWERED]: true,
+                [REATTA_DASHBOARD]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -251,14 +262,17 @@ module.exports = [
                     instance: REVERSING
                 }
             },
+            [CUTOUTS]: {
+                [REATTA_EXTERIOR]: true,
+                [REATTA_INTERIOR]: true
+            },
             [FLATS]: {
                 [EL_CERRITO_BACKDROP]: true,
-                [EL_CERRITO_ROAD]: true,
-                [CONVERTIBLE_FRONT]: true,
-                [CONVERTIBLE_BACK]: true
+                [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
-                [CONVERTIBLE_INTERIOR]: true
+                [REATTA_SEAT]: true,
+                [REATTA_DASHBOARD]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -276,7 +290,7 @@ module.exports = [
                 [EL_CERRITO_ROAD]: true
             },
             [PUPPETS]: {
-                [CONVERTIBLE_FAR]: true
+                [PUPPET_REATTA]: true
             }
         },
         cubes: EL_CERRITO_KEY,

@@ -5,9 +5,9 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [EVIAN_BOTTLES]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5,
+            xFloat: 1.5,
             xWidth: 1,
             zHeight: 1
         }

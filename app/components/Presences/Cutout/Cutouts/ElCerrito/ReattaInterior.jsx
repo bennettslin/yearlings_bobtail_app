@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const GoKartLeft = ({
+const ReattaInterior = ({
 
     className,
 
@@ -18,7 +18,7 @@ const GoKartLeft = ({
     return (
         <Svg
             className={cx(
-                'GoKartLeft',
+                'ReattaInterior',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const GoKartLeft = ({
                 {...other}
             >
                 {cx(
-                    'GoKartLeft'
+                    'ReattaInterior'
                 )}
             </text>
         </Svg>
     )
 }
 
-GoKartLeft.propTypes = propTypes;
+ReattaInterior.propTypes = propTypes;
 
-export default GoKartLeft
+export default ReattaInterior

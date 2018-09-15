@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const ConvertibleInterior = ({
+const PuppetReatta = ({
 
     className,
 
@@ -18,13 +18,13 @@ const ConvertibleInterior = ({
     return (
         <Svg
             className={cx(
-                'ConvertibleInterior',
+                'PuppetReatta',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Furniture__temporaryRect'
+                    'Puppet__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const ConvertibleInterior = ({
                 {...other}
             >
                 {cx(
-                    'ConvertibleInterior'
+                    'PuppetReatta'
                 )}
             </text>
         </Svg>
     )
 }
 
-ConvertibleInterior.propTypes = propTypes;
+PuppetReatta.propTypes = propTypes;
 
-export default ConvertibleInterior
+export default PuppetReatta

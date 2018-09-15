@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const ConvertibleFar = ({
+const SaturnExterior = ({
 
     className,
 
@@ -18,13 +18,13 @@ const ConvertibleFar = ({
     return (
         <Svg
             className={cx(
-                'ConvertibleFar',
+                'SaturnExterior',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Puppet__temporaryRect'
+                    'Cutout__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const ConvertibleFar = ({
                 {...other}
             >
                 {cx(
-                    'ConvertibleFar'
+                    'SaturnExterior'
                 )}
             </text>
         </Svg>
     )
 }
 
-ConvertibleFar.propTypes = propTypes;
+SaturnExterior.propTypes = propTypes;
 
-export default ConvertibleFar
+export default SaturnExterior

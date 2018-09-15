@@ -1,10 +1,10 @@
 import {
-    SCHOOLBUS_BACK,
-    SCHOOLBUS_FRONT
+    SCHOOLBUS_INTERIOR,
+    SCHOOLBUS_EXTERIOR
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
-    [SCHOOLBUS_BACK]: {
+    [SCHOOLBUS_INTERIOR]: {
         yIndex: 1,
         arrangement: {
             xFloat: 5.5,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 5
         }
     },
-    [SCHOOLBUS_FRONT]: {
+    [SCHOOLBUS_EXTERIOR]: {
         yIndex: 4,
         arrangement: {
             xFloat: 5.5,

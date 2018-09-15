@@ -1,8 +1,6 @@
 import {
     EL_CERRITO_BACKDROP,
-    EL_CERRITO_ROAD,
-    CONVERTIBLE_FRONT,
-    CONVERTIBLE_BACK
+    EL_CERRITO_ROAD
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -18,22 +16,6 @@ const ARRANGEMENTS_MAP = {
         yIndex: 1,
         arrangement: {
             xFloat: 2,
-            xWidth: 5,
-            zHeight: 3
-        }
-    },
-    [CONVERTIBLE_FRONT]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 9,
-            xWidth: 5,
-            zHeight: 3
-        }
-    },
-    [CONVERTIBLE_BACK]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 9,
             xWidth: 5,
             zHeight: 3
         }
