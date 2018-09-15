@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const PharmacyThought = ({
+const PharmacyThoughtBackdrop = ({
 
     className,
 
@@ -18,7 +18,7 @@ const PharmacyThought = ({
     return (
         <Svg
             className={cx(
-                'PharmacyThought',
+                'PharmacyThoughtBackdrop',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const PharmacyThought = ({
                 {...other}
             >
                 {cx(
-                    'PharmacyThought'
+                    'PharmacyThoughtBackdrop'
                 )}
             </text>
         </Svg>
     )
 }
 
-PharmacyThought.propTypes = propTypes;
+PharmacyThoughtBackdrop.propTypes = propTypes;
 
-export default PharmacyThought
+export default PharmacyThoughtBackdrop

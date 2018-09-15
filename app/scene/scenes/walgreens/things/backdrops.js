@@ -1,9 +1,9 @@
 import {
-    PHARMACY_THOUGHT
+    PHARMACY_THOUGHT_BACKDROP
 } from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [PHARMACY_THOUGHT]: {
+    [PHARMACY_THOUGHT_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

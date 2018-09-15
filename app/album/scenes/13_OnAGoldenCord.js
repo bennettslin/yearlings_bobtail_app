@@ -56,10 +56,10 @@ import { YOUNG_CHILD } from 'scene/instanceKeys/songs'
 
 import {
     OAKLAND_BACKDROP,
-    LIZ_COUCH_THOUGHT,
+    LIZ_COUCH_THOUGHT_BACKDROP,
     RESIDENCE_BACKDROP,
     COMMERCIAL_BACKDROP,
-    PUBLIC_BACKDROP,
+    PUBLIC_BACKDROP
 } from 'scene/backdropKeys'
 
 import {
@@ -129,7 +129,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [LIZ_COUCH_THOUGHT]: true
+                [LIZ_COUCH_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true

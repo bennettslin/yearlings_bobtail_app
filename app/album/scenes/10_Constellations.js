@@ -44,7 +44,7 @@ import {
 
 import {
     UCLA_BACKDROP,
-    PHARMACY_THOUGHT,
+    PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     LOS_ANGELES_BACKDROP
 } from 'scene/backdropKeys'
@@ -156,7 +156,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [PHARMACY_THOUGHT]: true
+                [PHARMACY_THOUGHT_BACKDROP]: true
             },
             [FLATS]: {
                 [PHARMACY_AISLE]: true

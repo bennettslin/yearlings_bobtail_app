@@ -3866,5 +3866,10 @@ module.exports = [
         taskName: `Allow the same presence to have multiple arrangements.`,
         workedHours: 2,
         neededHours: 2
-    }
+    },
+    {
+        taskName: `Separate backdrops from flats.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

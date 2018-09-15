@@ -7,7 +7,7 @@ import NohoSchoolBackdrop from './Backdrops/NohoSchoolBackdrop'
 import ValleyBackdrop from './Backdrops/ValleyBackdrop'
 import BedroomBackdrop from './Backdrops/BedroomBackdrop'
 import BedroomSirenBackdrop from './Backdrops/BedroomSirenBackdrop'
-import TaiwanMountsBackdrop from './Backdrops/TaiwanMountsBackdrop'
+import TaiwanMountainsBackdrop from './Backdrops/TaiwanMountainsBackdrop'
 import SchoolbusThoughtBackdrop from './Backdrops/SchoolbusThoughtBackdrop'
 import VanNuysThoughtBackdrop from './Backdrops/VanNuysThoughtBackdrop'
 import TaiwanStreetsBackdrop from './Backdrops/TaiwanStreetsBackdrop'
@@ -22,13 +22,13 @@ import BennettCouchThoughtBackdrop from './Backdrops/BennettCouchThoughtBackdrop
 import WestBerkeleyBackdrop from './Backdrops/WestBerkeleyBackdrop'
 import UcBerkeleyBackdrop from './Backdrops/UcBerkeleyBackdrop'
 import BayAreaBackdrop from './Backdrops/BayAreaBackdrop'
-import GoKartThought from './Backdrops/GoKartThought'
+import GoKartThoughtBackdrop from './Backdrops/GoKartThoughtBackdrop'
 import UclaBackdrop from './Backdrops/UclaBackdrop'
-import PharmacyThought from './Backdrops/PharmacyThought'
+import PharmacyThoughtBackdrop from './Backdrops/PharmacyThoughtBackdrop'
 import CemeteryBackdrop from './Backdrops/CemeteryBackdrop'
 import LosAngelesBackdrop from './Backdrops/LosAngelesBackdrop'
 import OaklandBackdrop from './Backdrops/OaklandBackdrop'
-import LizCouchThought from './Backdrops/LizCouchThought'
+import LizCouchThoughtBackdrop from './Backdrops/LizCouchThoughtBackdrop'
 import ResidenceBackdrop from './Backdrops/ResidenceBackdrop'
 import CommercialBackdrop from './Backdrops/CommercialBackdrop'
 import PublicBackdrop from './Backdrops/PublicBackdrop'
@@ -59,13 +59,13 @@ import {
     WEST_BERKELEY_BACKDROP,
     UC_BERKELEY_BACKDROP,
     BAY_AREA_BACKDROP,
-    GO_KART_THOUGHT,
+    GO_KART_THOUGHT_BACKDROP,
     UCLA_BACKDROP,
-    PHARMACY_THOUGHT,
+    PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     LOS_ANGELES_BACKDROP,
     OAKLAND_BACKDROP,
-    LIZ_COUCH_THOUGHT,
+    LIZ_COUCH_THOUGHT_BACKDROP,
     RESIDENCE_BACKDROP,
     COMMERCIAL_BACKDROP,
     PUBLIC_BACKDROP,
@@ -82,7 +82,7 @@ const BACKDROPS_MAP = {
     [VALLEY_BACKDROP]: ValleyBackdrop,
     [BEDROOM_BACKDROP]: BedroomBackdrop,
     [BEDROOM_SIREN_BACKDROP]: BedroomSirenBackdrop,
-    [TAIWAN_MOUNTAINS_BACKDROP]: TaiwanMountsBackdrop,
+    [TAIWAN_MOUNTAINS_BACKDROP]: TaiwanMountainsBackdrop,
     [SCHOOLBUS_THOUGHT_BACKDROP]: SchoolbusThoughtBackdrop,
     [VAN_NUYS_THOUGHT_BACKDROP]: VanNuysThoughtBackdrop,
     [TAIWAN_STREETS_BACKDROP]: TaiwanStreetsBackdrop,
@@ -97,13 +97,13 @@ const BACKDROPS_MAP = {
     [WEST_BERKELEY_BACKDROP]: WestBerkeleyBackdrop,
     [UC_BERKELEY_BACKDROP]: UcBerkeleyBackdrop,
     [BAY_AREA_BACKDROP]: BayAreaBackdrop,
-    [GO_KART_THOUGHT]: GoKartThought,
+    [GO_KART_THOUGHT_BACKDROP]: GoKartThoughtBackdrop,
     [UCLA_BACKDROP]: UclaBackdrop,
-    [PHARMACY_THOUGHT]: PharmacyThought,
+    [PHARMACY_THOUGHT_BACKDROP]: PharmacyThoughtBackdrop,
     [CEMETERY_BACKDROP]: CemeteryBackdrop,
     [LOS_ANGELES_BACKDROP]: LosAngelesBackdrop,
     [OAKLAND_BACKDROP]: OaklandBackdrop,
-    [LIZ_COUCH_THOUGHT]: LizCouchThought,
+    [LIZ_COUCH_THOUGHT_BACKDROP]: LizCouchThoughtBackdrop,
     [RESIDENCE_BACKDROP]: ResidenceBackdrop,
     [COMMERCIAL_BACKDROP]: CommercialBackdrop,
     [PUBLIC_BACKDROP]: PublicBackdrop,

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const LizCouchThought = ({
+const GoKartThoughtBackdrop = ({
 
     className,
 
@@ -18,7 +18,7 @@ const LizCouchThought = ({
     return (
         <Svg
             className={cx(
-                'LizCouchThought',
+                'GoKartThoughtBackdrop',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const LizCouchThought = ({
                 {...other}
             >
                 {cx(
-                    'LizCouchThought'
+                    'GoKartThoughtBackdrop'
                 )}
             </text>
         </Svg>
     )
 }
 
-LizCouchThought.propTypes = propTypes;
+GoKartThoughtBackdrop.propTypes = propTypes;
 
-export default LizCouchThought
+export default GoKartThoughtBackdrop

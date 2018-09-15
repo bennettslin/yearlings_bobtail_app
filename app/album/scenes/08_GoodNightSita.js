@@ -40,7 +40,7 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
-    GO_KART_THOUGHT
+    GO_KART_THOUGHT_BACKDROP
 } from 'scene/backdropKeys'
 
 import {
@@ -60,7 +60,7 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    MUSEUM_DISPLAY,
+    MUSEUM_DISPLAY
 } from 'scene/flatKeys'
 
 import {
@@ -211,7 +211,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [GO_KART_THOUGHT]: true
+                [GO_KART_THOUGHT_BACKDROP]: true
             },
             [CUTOUTS]: {
                 [GO_KART_EXTERIOR_LEFT]: true,

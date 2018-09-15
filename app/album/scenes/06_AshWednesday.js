@@ -51,7 +51,7 @@ import { CATHOLIC_GUY } from 'scene/instanceKeys/wade'
 import {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
-    UC_BERKELEY_BACKDROP,
+    UC_BERKELEY_BACKDROP
 } from 'scene/backdropKeys'
 
 import {

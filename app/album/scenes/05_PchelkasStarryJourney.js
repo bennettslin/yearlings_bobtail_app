@@ -67,7 +67,7 @@ import { PRINCIPAL } from 'scene/instanceKeys/tristan'
 import {
     BEDROOM_BACKDROP,
     BEDROOM_BUS_BACKDROP,
-    VAN_NUYS_SCHOOL_BACKDROP,
+    VAN_NUYS_SCHOOL_BACKDROP
 } from 'scene/backdropKeys'
 
 import {

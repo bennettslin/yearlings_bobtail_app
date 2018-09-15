@@ -1,9 +1,9 @@
 import {
-    LIZ_COUCH_THOUGHT
+    LIZ_COUCH_THOUGHT_BACKDROP
 } from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [LIZ_COUCH_THOUGHT]: {
+    [LIZ_COUCH_THOUGHT_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

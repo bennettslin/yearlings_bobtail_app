@@ -1,11 +1,11 @@
-.Puppet__temporaryRect {
-    fill: rgba(250, 200, 250, 0.75);
+.Backdrop__temporaryRect {
+    fill: rgba(150, 150, 200, 0.75);
     vector-effect: non-scaling-stroke;
     stroke-width: 1px;
     stroke: #444;
 }
 
-.Puppet {
+.Backdrop {
     transition: opacity $animationDuration__default;
     opacity: 0;
 

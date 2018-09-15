@@ -47,7 +47,7 @@ import {
 import {
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
-    VAN_NUYS_THOUGHT_BACKDROP,
+    VAN_NUYS_THOUGHT_BACKDROP
 } from 'scene/backdropKeys'
 
 import {
