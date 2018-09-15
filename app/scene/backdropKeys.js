@@ -4,7 +4,7 @@ const
     VALLEY_BACKDROP = 'valleyBackdrop',
     BEDROOM_BACKDROP = 'bedroomBackdrop',
     BEDROOM_SIREN_BACKDROP = 'bedroomSirenBackdrop',
-    TAIWAN_MOUNTAINS_FAR = 'taiwanMountainsFar',
+    TAIWAN_MOUNTAINS_BACKDROP = 'taiwanMountainsBackdrop',
     SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop',
     VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
     TAIWAN_STREETS_BACKDROP = 'taiwanStreetsBackdrop',
@@ -22,7 +22,7 @@ const
     GO_KART_THOUGHT = 'goKartThought',
     UCLA_BACKDROP = 'uclaBackdrop',
     PHARMACY_THOUGHT = 'pharmacyThought',
-    CEMETERY_HILLS_FAR = 'cemeteryHillsFar',
+    CEMETERY_BACKDROP = 'cemeteryBackdrop',
     LOS_ANGELES_BACKDROP = 'losAngelesBackdrop',
     OAKLAND_BACKDROP = 'oaklandBackdrop',
     LIZ_COUCH_THOUGHT = 'lizCouchThought',
@@ -33,8 +33,7 @@ const
     PAMPAS_BACKDROP = 'pampasBackdrop',
     WEDDING_BACKDROP = 'weddingBackdrop',
     CLIFF_BACKDROP = 'cliffBackdrop',
-    CLIFF_GRAVES_BACKDROP = 'cliffGravesBackdrop',
-    INVERSE_THOUGHT = 'inverseThought'
+    INVERSE_THOUGHT_BACKDROP = 'inverseThoughtBackdrop'
 
 export {
     NOHO_HOUSES_BACKDROP,
@@ -42,7 +41,7 @@ export {
     VALLEY_BACKDROP,
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
-    TAIWAN_MOUNTAINS_FAR,
+    TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP,
     TAIWAN_STREETS_BACKDROP,
@@ -60,7 +59,7 @@ export {
     GO_KART_THOUGHT,
     UCLA_BACKDROP,
     PHARMACY_THOUGHT,
-    CEMETERY_HILLS_FAR,
+    CEMETERY_BACKDROP,
     LOS_ANGELES_BACKDROP,
     OAKLAND_BACKDROP,
     LIZ_COUCH_THOUGHT,
@@ -71,6 +70,5 @@ export {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     CLIFF_BACKDROP,
-    CLIFF_GRAVES_BACKDROP,
-    INVERSE_THOUGHT
+    INVERSE_THOUGHT_BACKDROP
 }

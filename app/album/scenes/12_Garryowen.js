@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -54,6 +55,10 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    OAKLAND_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
     VOLKSWAGEN,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
@@ -67,7 +72,6 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    OAKLAND_BACKDROP,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
 } from 'scene/flatKeys'
@@ -147,11 +151,13 @@ module.exports = [
                     instance: INJURED
                 }
             },
+            [BACKDROPS]: {
+                [OAKLAND_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [VOLKSWAGEN]: true
             },
             [FLATS]: {
-                [OAKLAND_BACKDROP]: true,
                 [OAKLAND_HOUSE_LEFT]: true,
                 [OAKLAND_HOUSE_RIGHT]: true
             }

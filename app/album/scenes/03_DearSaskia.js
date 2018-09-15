@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -44,6 +45,12 @@ import {
 } from 'scene/instanceKeys/sasha'
 
 import {
+    TAIWAN_MOUNTAINS_BACKDROP,
+    SCHOOLBUS_THOUGHT_BACKDROP,
+    VAN_NUYS_THOUGHT_BACKDROP,
+} from 'scene/backdropKeys'
+
+import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
 } from 'scene/cutoutKeys'
@@ -54,13 +61,10 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    TAIWAN_MOUNTAINS_FAR,
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
     TOGETHER_SKETCHBOOK,
-    SCHOOLBUS_THOUGHT_BACKDROP,
-    VAN_NUYS_THOUGHT_BACKDROP,
     VAN_NUYS_SCHOOLHOUSE,
     APART_SKETCHBOOK
 } from 'scene/flatKeys'
@@ -90,8 +94,10 @@ module.exports = [
         unitIndex: 1,
         description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
         presences: {
+            [BACKDROPS]: {
+                [TAIWAN_MOUNTAINS_BACKDROP]: true
+            },
             [FLATS]: {
-                [TAIWAN_MOUNTAINS_FAR]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAINS_NEAR]: true,
                 [TAIWAN_CLOUDS]: true
@@ -113,8 +119,10 @@ module.exports = [
         unitIndex: 4,
         description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
         presences: {
+            [BACKDROPS]: {
+                [TAIWAN_MOUNTAINS_BACKDROP]: true
+            },
             [FLATS]: {
-                [TAIWAN_MOUNTAINS_FAR]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAINS_NEAR]: true,
                 [TAIWAN_CLOUDS]: true,
@@ -159,6 +167,9 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [SCHOOLBUS_THOUGHT_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [SCHOOLBUS_INTERIOR]: true,
                 [SCHOOLBUS_EXTERIOR]: true
@@ -166,9 +177,6 @@ module.exports = [
             [FIXTURES]: {
                 [BACKPACK_BENNETT]: true,
                 [BACKPACK_SASHA]: true
-            },
-            [FLATS]: {
-                [SCHOOLBUS_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
                 [SCHOOLBUS_SEAT_REAR]: true,
@@ -211,8 +219,10 @@ module.exports = [
                     instance: TYING
                 }
             },
+            [BACKDROPS]: {
+                [VAN_NUYS_THOUGHT_BACKDROP]: true
+            },
             [FLATS]: {
-                [VAN_NUYS_THOUGHT_BACKDROP]: true,
                 [VAN_NUYS_SCHOOLHOUSE]: true
             }
         },
@@ -226,8 +236,10 @@ module.exports = [
         unitIndex: 12,
         description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
         presences: {
+            [BACKDROPS]: {
+                [TAIWAN_MOUNTAINS_BACKDROP]: true
+            },
             [FLATS]: {
-                [TAIWAN_MOUNTAINS_FAR]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAINS_NEAR]: true,
                 [TAIWAN_CLOUDS]: true,

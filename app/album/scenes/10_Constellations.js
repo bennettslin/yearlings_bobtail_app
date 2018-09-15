@@ -4,6 +4,7 @@
  */
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -42,6 +43,13 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    UCLA_BACKDROP,
+    PHARMACY_THOUGHT,
+    CEMETERY_BACKDROP,
+    LOS_ANGELES_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
     STORAGE_BOXES,
@@ -58,14 +66,10 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    UCLA_BACKDROP,
     ROYCE_HALL,
-    PHARMACY_THOUGHT,
     PHARMACY_AISLE,
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR,
-    CEMETERY_HILLS_FAR,
-    LOS_ANGELES_BACKDROP,
     TARPIT_THOUGHT,
     SIBLING_THOUGHT
 } from 'scene/flatKeys'
@@ -108,8 +112,10 @@ module.exports = [
                     instance: ABBEY_ROAD
                 }
             },
+            [BACKDROPS]: {
+                [UCLA_BACKDROP]: true
+            },
             [FLATS]: {
-                [UCLA_BACKDROP]: true,
                 [ROYCE_HALL]: true
             }
         },
@@ -149,8 +155,10 @@ module.exports = [
                     instance: WALGREENS
                 }
             },
+            [BACKDROPS]: {
+                [PHARMACY_THOUGHT]: true
+            },
             [FLATS]: {
-                [PHARMACY_THOUGHT]: true,
                 [PHARMACY_AISLE]: true
             }
         },
@@ -233,11 +241,13 @@ module.exports = [
                     instance: CEMETERY
                 }
             },
+            [BACKDROPS]: {
+                [CEMETERY_BACKDROP]: true
+            },
             [FIXTURES]: {
                 [GRAVESTONE]: true
             },
             [FLATS]: {
-                [CEMETERY_HILLS_FAR]: true,
                 [CEMETERY_HILLS_NEAR]: true
             }
         },
@@ -277,6 +287,9 @@ module.exports = [
                     instance: STATION_WAGON
                 }
             },
+            [BACKDROPS]: {
+                [LOS_ANGELES_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [SATURN_EXTERIOR]: true,
                 [SATURN_INTERIOR]: true
@@ -285,7 +298,6 @@ module.exports = [
                 [EVIAN_BOTTLES]: true
             },
             [FLATS]: {
-                [LOS_ANGELES_BACKDROP]: true,
                 [TARPIT_THOUGHT]: true,
                 [SIBLING_THOUGHT]: true
             },

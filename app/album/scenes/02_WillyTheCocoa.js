@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -64,6 +65,13 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    NOHO_HOUSES_BACKDROP,
+    VALLEY_BACKDROP,
+    BEDROOM_BACKDROP,
+    BEDROOM_SIREN_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
     OVERPASS_SIGN_FRONT,
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
@@ -82,12 +90,8 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    VALLEY_BACKDROP,
-    NOHO_HOUSES_BACKDROP,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-    BEDROOM_BACKDROP,
-    BEDROOM_SIREN_BACKDROP,
     FAMILY_HOUSE,
     CAVE_SHADOWS
 } from 'scene/flatKeys'
@@ -104,15 +108,15 @@ module.exports = [
         description: ``,
         cubes: FREEWAY_KEY,
         presences: {
+            [BACKDROPS]: {
+                [VALLEY_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [OVERPASS_SIGN_FRONT]: true,
                 [OVERPASS_SIGN_BACK]: true
             },
             [FIXTURES]: {
                 [SHOPPING_CART]: true
-            },
-            [FLATS]: {
-                [VALLEY_BACKDROP]: true
             }
         },
         sky: {
@@ -132,15 +136,15 @@ module.exports = [
                     instance: COLLECTING
                 }
             },
+            [BACKDROPS]: {
+                [VALLEY_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [OVERPASS_SIGN_FRONT]: true,
                 [OVERPASS_SIGN_BACK]: true
             },
             [FIXTURES]: {
                 [SHOPPING_CART]: true
-            },
-            [FLATS]: {
-                [VALLEY_BACKDROP]: true
             }
         },
         cubes: FREEWAY_KEY,
@@ -217,14 +221,14 @@ module.exports = [
                     instance: ENRAGED
                 }
             },
+            [BACKDROPS]: {
+                [BEDROOM_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [CAPTAIN_BED_DRAWERS]: true
             },
             [FIXTURES]: {
                 [CHRISTOPHER_LETTERS]: true
-            },
-            [FLATS]: {
-                [BEDROOM_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -265,11 +269,13 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [NOHO_HOUSES_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [FIRE_HYDRANT]: true
             },
             [FLATS]: {
-                [NOHO_HOUSES_BACKDROP]: true,
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -298,11 +304,11 @@ module.exports = [
                     instance: FEARFUL
                 }
             },
+            [BACKDROPS]: {
+                [BEDROOM_SIREN_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [CAPTAIN_BED_DRAWERS]: true
-            },
-            [FLATS]: {
-                [BEDROOM_SIREN_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,

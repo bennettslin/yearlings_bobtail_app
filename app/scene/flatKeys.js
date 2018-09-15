@@ -46,7 +46,8 @@ const
     EL_CERRITO_ROAD = 'elCerritoRoad',
     PHONE_BUBBLE = 'phoneBubble',
     HOSPITAL_THOUGHT = 'hospitalThought',
-    TENNIS_THOUGHT = 'tennisThought'
+    TENNIS_THOUGHT = 'tennisThought',
+    CLIFF_GRAVES = 'cliffGraves'
 
 export {
     NOHO_HOUSE_LEFT,
@@ -96,5 +97,6 @@ export {
     EL_CERRITO_ROAD,
     PHONE_BUBBLE,
     HOSPITAL_THOUGHT,
-    TENNIS_THOUGHT
+    TENNIS_THOUGHT,
+    CLIFF_GRAVES
 }

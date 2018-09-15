@@ -1,6 +1,6 @@
 import {
     CLIFF_BACKDROP,
-    CLIFF_GRAVES_BACKDROP
+    CLIFF_GRAVES
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 4
         }
     },
-    [CLIFF_GRAVES_BACKDROP]: {
+    [CLIFF_GRAVES]: {
         yIndex: 1,
         arrangement: {
             xFloat: 2,

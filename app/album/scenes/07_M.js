@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -64,6 +65,10 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    BAY_AREA_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
     LEONARD_COHEN_POSTER,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
@@ -88,7 +93,6 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    BAY_AREA_BACKDROP,
     CINEMA_THOUGHTS
 } from 'scene/flatKeys'
 
@@ -381,11 +385,13 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [BAY_AREA_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER_STREET
             },
             [FLATS]: {
-                [BAY_AREA_BACKDROP]: true,
                 [CINEMA_THOUGHTS]: true
             }
         },

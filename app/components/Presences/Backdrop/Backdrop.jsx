@@ -7,7 +7,7 @@ import NohoSchoolBackdrop from './Backdrops/NohoSchoolBackdrop'
 import ValleyBackdrop from './Backdrops/ValleyBackdrop'
 import BedroomBackdrop from './Backdrops/BedroomBackdrop'
 import BedroomSirenBackdrop from './Backdrops/BedroomSirenBackdrop'
-import TaiwanMountainsFar from './Backdrops/TaiwanMountainsFar'
+import TaiwanMountsBackdrop from './Backdrops/TaiwanMountsBackdrop'
 import SchoolbusThoughtBackdrop from './Backdrops/SchoolbusThoughtBackdrop'
 import VanNuysThoughtBackdrop from './Backdrops/VanNuysThoughtBackdrop'
 import TaiwanStreetsBackdrop from './Backdrops/TaiwanStreetsBackdrop'
@@ -25,7 +25,7 @@ import BayAreaBackdrop from './Backdrops/BayAreaBackdrop'
 import GoKartThought from './Backdrops/GoKartThought'
 import UclaBackdrop from './Backdrops/UclaBackdrop'
 import PharmacyThought from './Backdrops/PharmacyThought'
-import CemeteryHillsFar from './Backdrops/CemeteryHillsFar'
+import CemeteryBackdrop from './Backdrops/CemeteryBackdrop'
 import LosAngelesBackdrop from './Backdrops/LosAngelesBackdrop'
 import OaklandBackdrop from './Backdrops/OaklandBackdrop'
 import LizCouchThought from './Backdrops/LizCouchThought'
@@ -36,8 +36,7 @@ import ElCerritoBackdrop from './Backdrops/ElCerritoBackdrop'
 import PampasBackdrop from './Backdrops/PampasBackdrop'
 import WeddingBackdrop from './Backdrops/WeddingBackdrop'
 import CliffBackdrop from './Backdrops/CliffBackdrop'
-import CliffGravesBackdrop from './Backdrops/CliffGravesBackdrop'
-import InverseThought from './Backdrops/InverseThought'
+import InverseThoughtBackdrop from './Backdrops/InverseThoughtBackdrop'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -45,7 +44,7 @@ import {
     VALLEY_BACKDROP,
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
-    TAIWAN_MOUNTAINS_FAR,
+    TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP,
     TAIWAN_STREETS_BACKDROP,
@@ -63,7 +62,7 @@ import {
     GO_KART_THOUGHT,
     UCLA_BACKDROP,
     PHARMACY_THOUGHT,
-    CEMETERY_HILLS_FAR,
+    CEMETERY_BACKDROP,
     LOS_ANGELES_BACKDROP,
     OAKLAND_BACKDROP,
     LIZ_COUCH_THOUGHT,
@@ -74,8 +73,7 @@ import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     CLIFF_BACKDROP,
-    CLIFF_GRAVES_BACKDROP,
-    INVERSE_THOUGHT
+    INVERSE_THOUGHT_BACKDROP
 } from 'scene/backdropKeys'
 
 const BACKDROPS_MAP = {
@@ -84,7 +82,7 @@ const BACKDROPS_MAP = {
     [VALLEY_BACKDROP]: ValleyBackdrop,
     [BEDROOM_BACKDROP]: BedroomBackdrop,
     [BEDROOM_SIREN_BACKDROP]: BedroomSirenBackdrop,
-    [TAIWAN_MOUNTAINS_FAR]: TaiwanMountainsFar,
+    [TAIWAN_MOUNTAINS_BACKDROP]: TaiwanMountsBackdrop,
     [SCHOOLBUS_THOUGHT_BACKDROP]: SchoolbusThoughtBackdrop,
     [VAN_NUYS_THOUGHT_BACKDROP]: VanNuysThoughtBackdrop,
     [TAIWAN_STREETS_BACKDROP]: TaiwanStreetsBackdrop,
@@ -102,7 +100,7 @@ const BACKDROPS_MAP = {
     [GO_KART_THOUGHT]: GoKartThought,
     [UCLA_BACKDROP]: UclaBackdrop,
     [PHARMACY_THOUGHT]: PharmacyThought,
-    [CEMETERY_HILLS_FAR]: CemeteryHillsFar,
+    [CEMETERY_BACKDROP]: CemeteryBackdrop,
     [LOS_ANGELES_BACKDROP]: LosAngelesBackdrop,
     [OAKLAND_BACKDROP]: OaklandBackdrop,
     [LIZ_COUCH_THOUGHT]: LizCouchThought,
@@ -113,8 +111,7 @@ const BACKDROPS_MAP = {
     [PAMPAS_BACKDROP]: PampasBackdrop,
     [WEDDING_BACKDROP]: WeddingBackdrop,
     [CLIFF_BACKDROP]: CliffBackdrop,
-    [CLIFF_GRAVES_BACKDROP]: CliffGravesBackdrop,
-    [INVERSE_THOUGHT]: InverseThought
+    [INVERSE_THOUGHT_BACKDROP]: InverseThoughtBackdrop
 },
 DEFAULT_COMPONENT = () => (null)
 

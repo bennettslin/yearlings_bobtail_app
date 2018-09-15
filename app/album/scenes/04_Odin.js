@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -41,6 +42,15 @@ import {
 import { MERMAID } from 'scene/instanceKeys/sasha'
 
 import {
+    TAIWAN_STREETS_BACKDROP,
+    SHORE_RICKSHAW_BACKDROP,
+    SHORE_BUOY_BACKDROP,
+    OCEAN_BUOY_BACKDROP,
+    OCEAN_DEPTHS_BACKDROP,
+    OCEAN_FLOOR_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE_FRONT,
     BENNETT_TAIWAN_STAIRS,
@@ -67,15 +77,9 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    TAIWAN_STREETS_BACKDROP,
-    SHORE_RICKSHAW_BACKDROP,
-    SHORE_BUOY_BACKDROP,
     SHORE_BACK,
-    OCEAN_BUOY_BACKDROP,
     OCEAN_DEPTHS_BACK,
-    OCEAN_DEPTHS_BACKDROP,
-    OCEAN_BOTTOM_FAR,
-    OCEAN_FLOOR_BACKDROP
+    OCEAN_BOTTOM_FAR
 } from 'scene/flatKeys'
 
 import {
@@ -154,11 +158,11 @@ module.exports = [
                     instance: GATE
                 }
             },
+            [BACKDROPS]: {
+                [TAIWAN_STREETS_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [BENNETT_ODIN_RICKSHAW]: true
-            },
-            [FLATS]: {
-                [TAIWAN_STREETS_BACKDROP]: true
             },
             [FURNITURES]: {
                 [IRON_GATE]: true
@@ -182,12 +186,12 @@ module.exports = [
                     instance: RICKSHAW
                 }
             },
+            [BACKDROPS]: {
+                [SHORE_RICKSHAW_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [BENNETT_SHORE]: true,
                 [ODIN_SHORE]: true
-            },
-            [FLATS]: {
-                [SHORE_RICKSHAW_BACKDROP]: true
             }
         },
         cubes: RICKSHAW_KEY,
@@ -208,12 +212,14 @@ module.exports = [
                     instance: SHORE
                 }
             },
+            [BACKDROPS]: {
+                [SHORE_BUOY_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [BENNETT_ODIN_BUOY]: true,
                 [YELLOW_TAPED_GRILL]: true
             },
             [FLATS]: {
-                [SHORE_BUOY_BACKDROP]: true,
                 [SHORE_BACK]: true
             }
         },
@@ -235,12 +241,14 @@ module.exports = [
                     instance: BUOY
                 }
             },
+            [BACKDROPS]: {
+                [OCEAN_BUOY_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [BENNETT_ODIN_DEPTHS]: true,
                 [SEA_SERPENTS]: true
             },
             [FLATS]: {
-                [OCEAN_BUOY_BACKDROP]: true,
                 [OCEAN_DEPTHS_BACK]: true
             },
             [FURNITURES]: {
@@ -271,12 +279,14 @@ module.exports = [
                     instance: MERMAID
                 }
             },
+            [BACKDROPS]: {
+                [OCEAN_DEPTHS_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [BENNETT_OCEAN_FLOOR]: true,
                 [ODIN_OCEAN_FLOOR]: true
             },
             [FLATS]: {
-                [OCEAN_DEPTHS_BACKDROP]: true,
                 [OCEAN_BOTTOM_FAR]: true
             }
         },
@@ -298,13 +308,13 @@ module.exports = [
                     instance: OCEAN_FLOOR
                 }
             },
+            [BACKDROPS]: {
+                [OCEAN_FLOOR_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [BENNETT_MAT]: true,
                 [ODIN_MAT]: true,
                 [BUDDHA_CAVE]: true
-            },
-            [FLATS]: {
-                [OCEAN_FLOOR_BACKDROP]: true
             }
         },
         cubes: OCEAN_FLOOR_KEY,

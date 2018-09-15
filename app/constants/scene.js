@@ -13,6 +13,7 @@ const
     HSLA_MATRIX_NAME = 'hslaColours',
 
     ACTORS = 'actors',
+    BACKDROPS = 'backdrops',
     CUTOUTS = 'cutouts',
     FIXTURES = 'fixtures',
     FLATS = 'flats',
@@ -46,6 +47,7 @@ module.exports = {
     ],
 
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -53,6 +55,7 @@ module.exports = {
     PUPPETS,
     PRESENCE_TYPES: [
         ACTORS,
+        BACKDROPS,
         CUTOUTS,
         FIXTURES,
         FLATS,

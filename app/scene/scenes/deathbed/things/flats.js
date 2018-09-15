@@ -1,7 +1,7 @@
 import {
     HOSPITAL_THOUGHT,
     TENNIS_THOUGHT,
-    INVERSE_THOUGHT
+    INVERSE_THOUGHT_BACKDROP
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 3
         }
     },
-    [INVERSE_THOUGHT]: {
+    [INVERSE_THOUGHT_BACKDROP]: {
         yIndex: 1,
         arrangement: {
             xFloat: 9,

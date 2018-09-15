@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -43,6 +44,13 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    PAMPAS_BACKDROP,
+    WEDDING_BACKDROP,
+    CLIFF_BACKDROP,
+    INVERSE_THOUGHT_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
     WEDDING_PLATFORM,
     WEDDING_CROWD,
     IV_DRIP
@@ -53,11 +61,7 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    PAMPAS_BACKDROP,
-    WEDDING_BACKDROP,
-    CLIFF_BACKDROP,
-    CLIFF_GRAVES_BACKDROP,
-    INVERSE_THOUGHT
+    CLIFF_GRAVES
 } from 'scene/flatKeys'
 
 import {
@@ -147,7 +151,7 @@ module.exports = [
                     }
                 }
             },
-            [FLATS]: {
+            [BACKDROPS]: {
                 [PAMPAS_BACKDROP]: true
             }
         },
@@ -181,7 +185,7 @@ module.exports = [
                 [WEDDING_PLATFORM]: true,
                 [WEDDING_CROWD]: true
             },
-            [FLATS]: {
+            [BACKDROPS]: {
                 [WEDDING_BACKDROP]: true
             },
             [PUPPETS]: {
@@ -215,9 +219,11 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [CLIFF_BACKDROP]: true
+            },
             [FLATS]: {
-                [CLIFF_BACKDROP]: true,
-                [CLIFF_GRAVES_BACKDROP]: true
+                [CLIFF_GRAVES]: true
             }
         },
         cubes: CLIFF_KEY,
@@ -260,8 +266,8 @@ module.exports = [
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
-            [FLATS]: {
-                [INVERSE_THOUGHT]: true
+            [BACKDROPS]: {
+                [INVERSE_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
                 [HOSPITAL_MATTRESS]: true

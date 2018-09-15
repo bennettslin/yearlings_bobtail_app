@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS
@@ -46,6 +47,11 @@ import {
 } from 'scene/instanceKeys/esther'
 
 import {
+    NOHO_HOUSES_BACKDROP,
+    NOHO_SCHOOL_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
     BATHTUB,
@@ -59,10 +65,8 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    NOHO_HOUSES_BACKDROP,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-    NOHO_SCHOOL_BACKDROP,
     NOHO_SCHOOLHOUSE,
     NURSE_OFFICE_BUBBLE
 } from 'scene/flatKeys'
@@ -72,11 +76,13 @@ module.exports = [
         unitIndex: 1,
         description: `North Hollywood houses.`,
         presences: {
+            [BACKDROPS]: {
+                [NOHO_HOUSES_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [FIRE_HYDRANT]: true
             },
             [FLATS]: {
-                [NOHO_HOUSES_BACKDROP]: true,
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -111,11 +117,13 @@ module.exports = [
                     instance: PANICKED
                 }
             },
+            [BACKDROPS]: {
+                [NOHO_HOUSES_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [FIRE_HYDRANT]: true
             },
             [FLATS]: {
-                [NOHO_HOUSES_BACKDROP]: true,
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -150,6 +158,9 @@ module.exports = [
                     instance: FLUSTERED
                 }
             },
+            [BACKDROPS]: {
+                [NOHO_SCHOOL_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [PLAYGROUND_SLIDE]: true
             },
@@ -157,7 +168,6 @@ module.exports = [
                 [PLAYGROUND_BALL]: true
             },
             [FLATS]: {
-                [NOHO_SCHOOL_BACKDROP]: true,
                 [NOHO_SCHOOLHOUSE]: true,
                 [NURSE_OFFICE_BUBBLE]: true
             }
@@ -210,15 +220,15 @@ module.exports = [
                     instance: SINGING
                 }
             },
+            [BACKDROPS]: {
+                [NOHO_HOUSES_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [MIRRORED_SINK]: true,
                 [BATHTUB]: true
             },
             [FIXTURES]: {
                 [RECORD_PLAYER_STOOL]: true
-            },
-            [FLATS]: {
-                [NOHO_HOUSES_BACKDROP]: true
             }
         },
         cubes: FAMILY_BATHROOM_OPEN_KEY,

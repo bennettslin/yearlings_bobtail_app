@@ -50,6 +50,7 @@ import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
 import PhoneBubble from './Flats/LizBed/PhoneBubble'
 import HospitalThought from './Flats/Deathbed/HospitalThought'
 import TennisThought from './Flats/Deathbed/TennisThought'
+import CliffGravesBackdrop from './Flats/Cliff/CliffGravesBackdrop'
 
 import {
     NOHO_HOUSE_LEFT,
@@ -99,7 +100,8 @@ import {
     EL_CERRITO_ROAD,
     PHONE_BUBBLE,
     HOSPITAL_THOUGHT,
-    TENNIS_THOUGHT
+    TENNIS_THOUGHT,
+    CLIFF_GRAVES
 } from 'scene/flatKeys'
 
 const FLATS_MAP = {
@@ -150,7 +152,8 @@ const FLATS_MAP = {
     [EL_CERRITO_ROAD]: ElCerritoRoad,
     [PHONE_BUBBLE]: PhoneBubble,
     [HOSPITAL_THOUGHT]: HospitalThought,
-    [TENNIS_THOUGHT]: TennisThought
+    [TENNIS_THOUGHT]: TennisThought,
+    [CLIFF_GRAVES]: CliffGravesBackdrop
 },
 DEFAULT_COMPONENT = () => (null)
 

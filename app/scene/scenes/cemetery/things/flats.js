@@ -1,10 +1,10 @@
 import {
-    CEMETERY_HILLS_FAR,
+    CEMETERY_BACKDROP,
     CEMETERY_HILLS_NEAR
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [CEMETERY_HILLS_FAR]: {
+    [CEMETERY_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

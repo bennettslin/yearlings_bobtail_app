@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     // FIXTURES,
     FLATS,
@@ -54,21 +55,24 @@ import { CROSSING_GUARD } from 'scene/instanceKeys/willy'
 import { YOUNG_CHILD } from 'scene/instanceKeys/songs'
 
 import {
+    OAKLAND_BACKDROP,
+    LIZ_COUCH_THOUGHT,
+    RESIDENCE_BACKDROP,
+    COMMERCIAL_BACKDROP,
+    PUBLIC_BACKDROP,
+} from 'scene/backdropKeys'
+
+import {
     TWIN_STREETLAMP
 } from 'scene/cutoutKeys'
 
 import {
-    OAKLAND_BACKDROP,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
-    LIZ_COUCH_THOUGHT,
-    RESIDENCE_BACKDROP,
     RESIDENTIAL_LEFT,
     RESIDENTIAL_RIGHT,
-    COMMERCIAL_BACKDROP,
     COMMERCIAL_LEFT,
     COMMERCIAL_RIGHT,
-    PUBLIC_BACKDROP,
     PUBLIC_LEFT,
     PUBLIC_RIGHT
 } from 'scene/flatKeys'
@@ -90,8 +94,10 @@ module.exports = [
                     instance: CORD_SIDE
                 }
             },
+            [BACKDROPS]: {
+                [OAKLAND_BACKDROP]: true
+            },
             [FLATS]: {
-                [OAKLAND_BACKDROP]: true,
                 [OAKLAND_HOUSE_LEFT]: true,
                 [OAKLAND_HOUSE_RIGHT]: true
             }
@@ -122,7 +128,7 @@ module.exports = [
                     }
                 }
             },
-            [FLATS]: {
+            [BACKDROPS]: {
                 [LIZ_COUCH_THOUGHT]: true
             },
             [FURNITURES]: {
@@ -155,11 +161,13 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [RESIDENCE_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [TWIN_STREETLAMP]: true
             },
             [FLATS]: {
-                [RESIDENCE_BACKDROP]: true,
                 [RESIDENTIAL_LEFT]: true,
                 [RESIDENTIAL_RIGHT]: true
             }
@@ -198,8 +206,10 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [COMMERCIAL_BACKDROP]: true
+            },
             [FLATS]: {
-                [COMMERCIAL_BACKDROP]: true,
                 [COMMERCIAL_LEFT]: true,
                 [COMMERCIAL_RIGHT]: true
             }
@@ -262,8 +272,10 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [PUBLIC_BACKDROP]: true
+            },
             [FLATS]: {
-                [PUBLIC_BACKDROP]: true,
                 [PUBLIC_LEFT]: true,
                 [PUBLIC_RIGHT]: true
             }

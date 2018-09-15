@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -48,6 +49,12 @@ import {
 import { CATHOLIC_GUY } from 'scene/instanceKeys/wade'
 
 import {
+    BENNETT_COUCH_THOUGHT_BACKDROP,
+    WEST_BERKELEY_BACKDROP,
+    UC_BERKELEY_BACKDROP,
+} from 'scene/backdropKeys'
+
+import {
     RECYCLABLES,
     NIRVANA_POSTER,
     DISPENSER_LEFT,
@@ -67,11 +74,8 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    BENNETT_COUCH_THOUGHT_BACKDROP,
-    WEST_BERKELEY_BACKDROP,
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
-    UC_BERKELEY_BACKDROP,
     CAMPANILE
 } from 'scene/flatKeys'
 
@@ -135,15 +139,15 @@ module.exports = [
                     instance: QUIPPING
                 }
             },
+            [BACKDROPS]: {
+                [BENNETT_COUCH_THOUGHT_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [NIRVANA_POSTER]: true
             },
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
-            },
-            [FLATS]: {
-                [BENNETT_COUCH_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BENNETT_CUSHIONS]: true
@@ -167,13 +171,15 @@ module.exports = [
                     instance: CATHOLIC_PENSIVE
                 }
             },
+            [BACKDROPS]: {
+                [WEST_BERKELEY_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [DISPENSER_LEFT]: true,
                 [DISPENSER_RIGHT]: true,
                 [BERKELEY_LAMPPOST]: true
             },
             [FLATS]: {
-                [WEST_BERKELEY_BACKDROP]: true,
                 [ST_JOSEPHS_ANNEX]: true,
                 [ST_JOSEPHS_CHURCH]: true
             }
@@ -212,15 +218,15 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [UC_BERKELEY_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [BANCROFT_SHRUB_LEFT]: true,
                 [UC_BERKELEY_TREE_LEFT]: true
             },
             [FIXTURES]: {
                 [ASH_CAN]: true
-            },
-            [FLATS]: {
-                [UC_BERKELEY_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BANCROFT_DOOR]: true
@@ -250,13 +256,15 @@ module.exports = [
                     instance: PUZZLED
                 }
             },
+            [BACKDROPS]: {
+                [UC_BERKELEY_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [BANCROFT_SHRUB_RIGHT]: true,
                 [SIGNPOST]: true,
                 [UC_BERKELEY_TREE_RIGHT]: true
             },
             [FLATS]: {
-                [UC_BERKELEY_BACKDROP]: true,
                 [CAMPANILE]: true
             }
         },

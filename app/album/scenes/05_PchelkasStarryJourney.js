@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -64,6 +65,12 @@ import { POPULAR_GIRL } from 'scene/instanceKeys/sasha'
 import { PRINCIPAL } from 'scene/instanceKeys/tristan'
 
 import {
+    BEDROOM_BACKDROP,
+    BEDROOM_BUS_BACKDROP,
+    VAN_NUYS_SCHOOL_BACKDROP,
+} from 'scene/backdropKeys'
+
+import {
     CAPTAIN_BED_DRAWERS,
     LOCKER_BANK,
     TRASH_CAN,
@@ -82,11 +89,8 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    BEDROOM_BACKDROP,
-    BEDROOM_BUS_BACKDROP,
     DOGS_SKETCHBOOK,
     ESCAPE_POD_SKETCHBOOK,
-    VAN_NUYS_SCHOOL_BACKDROP,
     VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
 
@@ -114,11 +118,11 @@ module.exports = [
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,
         presences: {
+            [BACKDROPS]: {
+                [BEDROOM_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [CAPTAIN_BED_DRAWERS]: true
-            },
-            [FLATS]: {
-                [BEDROOM_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -149,12 +153,12 @@ module.exports = [
                     instance: BLISSFUL
                 }
             },
+            [BACKDROPS]: {
+                [BEDROOM_BACKDROP]: true
+            },
             [FIXTURES]: {
                 [CAPTAIN_BED_LAMP]: true,
                 [BENNETT_LETTERS]: true
-            },
-            [FLATS]: {
-                [BEDROOM_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true
@@ -178,11 +182,11 @@ module.exports = [
                     instance: FEIGNING_SICK
                 }
             },
+            [BACKDROPS]: {
+                [BEDROOM_BUS_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [CAPTAIN_BED_DRAWERS]: true
-            },
-            [FLATS]: {
-                [BEDROOM_BUS_BACKDROP]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -207,11 +211,13 @@ module.exports = [
                     instance: ASLEEP
                 }
             },
+            [BACKDROPS]: {
+                [BEDROOM_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [CAPTAIN_BED_DRAWERS]: true
             },
             [FLATS]: {
-                [BEDROOM_BACKDROP]: true,
                 [DOGS_SKETCHBOOK]: true
             },
             [FURNITURES]: {
@@ -242,7 +248,7 @@ module.exports = [
                     instance: SHAKEN
                 }
             },
-            [FLATS]: {
+            [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
             [FURNITURES]: {
@@ -283,6 +289,9 @@ module.exports = [
                     instance: THROWING
                 }
             },
+            [BACKDROPS]: {
+                [VAN_NUYS_SCHOOL_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [LOCKER_BANK]: true,
                 [TRASH_CAN]: ARRANGEMENT_TRASH_CAN_LOCKERS,
@@ -292,7 +301,6 @@ module.exports = [
                 [THROWN_FRUIT]: true
             },
             [FLATS]: {
-                [VAN_NUYS_SCHOOL_BACKDROP]: true,
                 [VAN_NUYS_SCHOOLHOUSE]: true
             }
         },
@@ -334,14 +342,16 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [VAN_NUYS_SCHOOL_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [TRASH_CAN]: ARRANGEMENT_TRASH_CAN_QUAD,
                 [VAN_NUYS_PLANTS]: ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
                 [VAN_NUYS_LOGO]: true
             },
             [FLATS]: {
-                [ESCAPE_POD_SKETCHBOOK]: true,
-                [VAN_NUYS_SCHOOL_BACKDROP]: true
+                [ESCAPE_POD_SKETCHBOOK]: true
             }
         },
         cubes: VAN_NUYS_QUAD_KEY,

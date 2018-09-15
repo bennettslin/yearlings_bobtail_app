@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -42,6 +43,10 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    EL_CERRITO_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
     IV_DRIP
@@ -52,7 +57,6 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    EL_CERRITO_BACKDROP,
     EL_CERRITO_ROAD,
     HOSPITAL_THOUGHT,
     TENNIS_THOUGHT
@@ -88,12 +92,14 @@ module.exports = [
                     instance: PERFUMING
                 }
             },
+            [BACKDROPS]: {
+                [EL_CERRITO_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
             },
             [FLATS]: {
-                [EL_CERRITO_BACKDROP]: true,
                 [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
@@ -125,12 +131,14 @@ module.exports = [
                     instance: COWGIRL
                 }
             },
+            [BACKDROPS]: {
+                [EL_CERRITO_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
             },
             [FLATS]: {
-                [EL_CERRITO_BACKDROP]: true,
                 [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
@@ -162,12 +170,14 @@ module.exports = [
                     instance: BLOWJOB
                 }
             },
+            [BACKDROPS]: {
+                [EL_CERRITO_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
             },
             [FLATS]: {
-                [EL_CERRITO_BACKDROP]: true,
                 [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
@@ -262,12 +272,14 @@ module.exports = [
                     instance: REVERSING
                 }
             },
+            [BACKDROPS]: {
+                [EL_CERRITO_BACKDROP]: true
+            },
             [CUTOUTS]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
             },
             [FLATS]: {
-                [EL_CERRITO_BACKDROP]: true,
                 [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
@@ -285,8 +297,10 @@ module.exports = [
         unitIndex: 11,
         description: `The car is in the background.`,
         presences: {
+            [BACKDROPS]: {
+                [EL_CERRITO_BACKDROP]: true
+            },
             [FLATS]: {
-                [EL_CERRITO_BACKDROP]: true,
                 [EL_CERRITO_ROAD]: true
             },
             [PUPPETS]: {

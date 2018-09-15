@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -39,6 +40,10 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    GO_KART_THOUGHT
+} from 'scene/backdropKeys'
+
+import {
     SANDBAGS,
     STAGE_LIGHTS,
     GO_KART_EXTERIOR_LEFT,
@@ -56,7 +61,6 @@ import {
 
 import {
     MUSEUM_DISPLAY,
-    GO_KART_THOUGHT
 } from 'scene/flatKeys'
 
 import {
@@ -206,12 +210,12 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [GO_KART_THOUGHT]: true
+            },
             [CUTOUTS]: {
                 [GO_KART_EXTERIOR_LEFT]: true,
                 [GO_KART_EXTERIOR_RIGHT]: true
-            },
-            [FLATS]: {
-                [GO_KART_THOUGHT]: true
             },
             [FURNITURES]: {
                 [GO_KART_SEAT_LEFT]: true,
