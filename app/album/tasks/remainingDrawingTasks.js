@@ -78,7 +78,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Sita's bedroom and ceiling mirror (Grasshoppers, Look Back, Vegan)`,
+        taskName: `Sita's bedroom (Grasshoppers, Look Back, Vegan)`,
         workedHours: 0,
         neededHours: 3
     },

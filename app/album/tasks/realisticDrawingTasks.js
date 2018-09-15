@@ -37,16 +37,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `4 * Guitar amp (M, Look Back, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `4 * Bass amp (M, Look Back, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Milk crate with Yearlings albums (M)`,
         workedHours: 0,
         neededHours: 3
@@ -101,7 +91,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `2 * Sita's bedside stand lamp and phone (Grasshoppers, Look Back, Vegan)`,
+        taskName: `2 * Sita's phone (Grasshoppers, Look Back, Vegan)`,
         workedHours: 0,
         neededHours: 3
     },

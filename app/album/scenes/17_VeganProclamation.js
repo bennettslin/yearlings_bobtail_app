@@ -8,7 +8,7 @@ import {
 
 import {
     CLUB_FAR_KEY,
-    LIZ_BED_KEY,
+    LIZ_BED_OPEN_KEY,
     ALLEY_KEY,
     BANCROFT_LIBRARY_KEY,
     CAMPANILE_KEY
@@ -244,7 +244,7 @@ module.exports = [
                 [LIZ_PILLOWS_REFLECTION]: true,
             }
         },
-        cubes: LIZ_BED_KEY,
+        cubes: LIZ_BED_OPEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_LOVE

@@ -64,6 +64,7 @@ const
     BENNETT_GATE_KEY = 'bennettGate',
 
     LIZ_BED_KEY = 'lizBed',
+    LIZ_BED_OPEN_KEY = 'lizBedOpen',
     LIZ_COUCH_KEY = 'lizCouch',
     LIZ_COUCH_THOUGHT_KEY = 'lizCouchThought',
     LIZ_GATE_KEY = 'lizGate',
@@ -150,6 +151,7 @@ export {
     COURTYARD_KEY,
     BENNETT_GATE_KEY,
     LIZ_BED_KEY,
+    LIZ_BED_OPEN_KEY,
     LIZ_COUCH_KEY,
     LIZ_COUCH_THOUGHT_KEY,
     LIZ_GATE_KEY,
