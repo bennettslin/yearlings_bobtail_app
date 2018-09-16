@@ -1,16 +1,16 @@
-@import "./NavPanelIcon";
+@import "./ThumbIcon";
 
-$NavPanel-length: 100px;
+$length__thumb: 100px;
 
-.NavPanel {
+.Thumb {
     position: absolute;
 
     /**
      * Arbitrary for now. However, make sure that it is never too wide that the
      * next to leftmost or rightmost goes outside the books block.
      */
-    width: $NavPanel-length;
-    height: $NavPanel-length;
+    width: $length__thumb;
+    height: $length__thumb;
 
     display: flex;
     flex-direction: column;
@@ -38,10 +38,10 @@ $NavPanel-length: 100px;
     }
 
     .RM__accessOn.RM__carouselNavShowable.RM__navExpanded
-    &.NavPanel__isAccessed,
+    &.Thumb__isAccessed,
 
     .RM__accessOff.RM__carouselNavShowable.RM__navExpanded
-    // Prevent panel from showing when hovering over hidden column elements.
+    // Prevent thumb from showing when hovering over hidden column elements.
     .NavColumn__shown
     .Button__navSong:hover
     & {
@@ -50,24 +50,24 @@ $NavPanel-length: 100px;
     }
 }
 
-.NavPanel__default {
+.Thumb__default {
     left: 50%;
     transform: translateX(-50%);
 }
 
-.NavPanel__leftmost {
+.Thumb__leftmost {
     left: 0;
 }
 
-.NavPanel__rightmost {
+.Thumb__rightmost {
     right: 0;
 }
 
-.NavPanelField {
+.ThumbField {
     fill: #ff8;
 }
 
-.NavPanelTitle {
+.ThumbTitle {
     position: relative;
     width: 100%;
     text-align: center;

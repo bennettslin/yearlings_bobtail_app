@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const WillyPanelIcon = ({
+const MThumbIcon = ({
 
     className
 
@@ -21,6 +21,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-WillyPanelIcon.propTypes = propTypes
+MThumbIcon.propTypes = propTypes
 
-export default WillyPanelIcon
+export default MThumbIcon

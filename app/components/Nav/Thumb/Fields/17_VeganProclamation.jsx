@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const PchelkaPanelIcon = ({
+const VeganThumbIcon = ({
 
     className
 
@@ -21,6 +21,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-PchelkaPanelIcon.propTypes = propTypes
+VeganThumbIcon.propTypes = propTypes
 
-export default PchelkaPanelIcon
+export default VeganThumbIcon

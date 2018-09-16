@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const LookBackPanelIcon = ({
+const EpilogueThumbIcon = ({
 
     className
 
@@ -21,6 +21,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-LookBackPanelIcon.propTypes = propTypes
+EpilogueThumbIcon.propTypes = propTypes
 
-export default LookBackPanelIcon
+export default EpilogueThumbIcon

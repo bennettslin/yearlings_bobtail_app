@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const GrasshoppersPanelIcon = ({
+const GoldenCordThumbIcon = ({
 
     className
 
@@ -21,6 +21,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-GrasshoppersPanelIcon.propTypes = propTypes
+GoldenCordThumbIcon.propTypes = propTypes
 
-export default GrasshoppersPanelIcon
+export default GoldenCordThumbIcon

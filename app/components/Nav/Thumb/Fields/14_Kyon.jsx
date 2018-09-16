@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const CrematedPanelIcon = ({
+const KyonThumbIcon = ({
 
     className
 
@@ -21,6 +21,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-CrematedPanelIcon.propTypes = propTypes
+KyonThumbIcon.propTypes = propTypes
 
-export default CrematedPanelIcon
+export default KyonThumbIcon

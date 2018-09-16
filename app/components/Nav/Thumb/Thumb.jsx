@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Svg from 'components/Svg/Svg'
-import NavPanelIcon from './NavPanelIcon'
+import ThumbIcon from './ThumbIcon'
 
 import { getSongTitle } from 'helpers/dataHelper'
 
-const navPanelPropTypes = {
+const propTypes = {
     // From parent.
     isAccessed: PropTypes.bool,
     isLeftmost: PropTypes.bool,
@@ -17,7 +17,7 @@ const navPanelPropTypes = {
     songIndex: PropTypes.number
 },
 
-NavPanel = ({
+Thumb = ({
 
     // From props.
     isAccessed,
@@ -27,30 +27,30 @@ NavPanel = ({
 
 }) => {
 
-    const panelTitle = getSongTitle({
-
+    const thumbTitle = getSongTitle({
         songIndex,
         showIndex: false
-
     })
 
     return (
         <div className={cx(
-            'NavPanel',
-            { 'NavPanel__isAccessed': isAccessed,
-              'NavPanel__leftmost': isLeftmost,
-              'NavPanel__rightmost': isRightmost,
-              'NavPanel__default': !isLeftmost && !isRightmost }
+            'Thumb',
+            {
+                'Thumb__isAccessed': isAccessed,
+                'Thumb__leftmost': isLeftmost,
+                'Thumb__rightmost': isRightmost,
+                'Thumb__default': !isLeftmost && !isRightmost
+            }
         )}>
             <Svg
                 className={cx(
-                    'NavPanelImage',
+                    'ThumbImage',
                     'absoluteFullContainer'
                 )}
             >
                 <rect
                     className={cx(
-                        'NavPanelField'
+                        'ThumbField'
                     )}
                     {...{
                         x: 0,
@@ -59,19 +59,19 @@ NavPanel = ({
                         height: 100
                     }}
                 />
-                <NavPanelIcon
+                <ThumbIcon
                     {...{
                         songIndex
                     }}
                 />
             </Svg>
-            <div className="NavPanelTitle">
-                {panelTitle}
+            <div className="ThumbTitle">
+                {thumbTitle}
             </div>
         </div>
     )
 }
 
-NavPanel.propTypes = navPanelPropTypes
+Thumb.propTypes = propTypes
 
-export default NavPanel
+export default Thumb

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const DreamPanelIcon = ({
+const GarryowenThumbIcon = ({
 
     className
 
@@ -21,6 +21,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-DreamPanelIcon.propTypes = propTypes
+GarryowenThumbIcon.propTypes = propTypes
 
-export default DreamPanelIcon
+export default GarryowenThumbIcon

@@ -103,14 +103,13 @@ const _getYPercentage = (
 const _getXYPercentages = (
 
     /**
-     * When default, this is an interval from 0 to 12. There are twelve floor
-     * panel columns.
+     * When default, this is an interval from 0 to 12. There are twelve cube
+     * columns.
      */
     xCornerIndex,
 
     /**
-     * When default, this is an interval from 0 to 6. There are six floor panel
-     * rows.
+     * When default, this is an interval from 0 to 6. There are six cube rows.
      */
     yCornerIndex,
 

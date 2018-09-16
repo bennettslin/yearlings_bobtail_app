@@ -2848,7 +2848,7 @@ module.exports = [
         neededHours: 24
     },
     {
-        taskName: `Shouldn't be able to hover on NavPanel.`,
+        taskName: `Shouldn't be able to hover on Thumb.`,
         workedHours: 1,
         neededHours: 1
     },

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const UncannyValleyPanelIcon = ({
+const LookBackThumbIcon = ({
 
     className
 
@@ -21,6 +21,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-UncannyValleyPanelIcon.propTypes = propTypes
+LookBackThumbIcon.propTypes = propTypes
 
-export default UncannyValleyPanelIcon
+export default LookBackThumbIcon

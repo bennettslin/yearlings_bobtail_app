@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Button from 'components/Button/Button'
-import NavPanel from './Panel/NavPanel'
+import Thumb from './Thumb/Thumb'
+
 import { ENTER } from 'constants/access'
 import {
     NAV_BOOK_BUTTON_KEY,
@@ -117,7 +118,7 @@ class NavButton extends Component {
                     handleButtonClick={this._handleButtonClick}
                 >
                     {!isBook && (
-                        <NavPanel
+                        <Thumb
                             isAccessed={isAccessed && isNavigable}
                             isLeftmost={isLeftmost}
                             isRightmost={isRightmost}

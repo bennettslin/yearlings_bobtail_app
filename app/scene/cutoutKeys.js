@@ -1,5 +1,3 @@
-// Keep cutout instances in this file.
-
 const
     FIRE_HYDRANT = 'fireHydrant',
     PLAYGROUND_SLIDE = 'playgroundSlide',
