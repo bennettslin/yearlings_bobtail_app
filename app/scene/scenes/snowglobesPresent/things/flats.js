@@ -1,9 +1,9 @@
 import {
-    SNOWGLOBES_PRESENT
+    ROAD_PRESENT
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [SNOWGLOBES_PRESENT]: {
+    [ROAD_PRESENT]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

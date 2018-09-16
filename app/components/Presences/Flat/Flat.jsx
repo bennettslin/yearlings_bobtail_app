@@ -38,9 +38,9 @@ import CommercialLeft from './Flats/OaklandCommercial/CommercialLeft'
 import CommercialRight from './Flats/OaklandCommercial/CommercialRight'
 import PublicLeft from './Flats/OaklandPublic/PublicLeft'
 import PublicRight from './Flats/OaklandPublic/PublicRight'
-import SnowglobesPast from './Flats/SnowglobesPast/SnowglobesPast'
-import SnowglobesPresent from './Flats/SnowglobesPresent/SnowglobesPresent'
-import SnowglobesFuture from './Flats/SnowglobesFuture/SnowglobesFuture'
+import RoadPast from './Flats/SnowglobesPast/RoadPast'
+import RoadPresent from './Flats/SnowglobesPresent/RoadPresent'
+import RoadFuture from './Flats/SnowglobesFuture/RoadFuture'
 import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
 import PhoneBubble from './Flats/LizBed/PhoneBubble'
 import HospitalThought from './Flats/Deathbed/HospitalThought'
@@ -84,9 +84,9 @@ import {
     COMMERCIAL_RIGHT,
     PUBLIC_LEFT,
     PUBLIC_RIGHT,
-    SNOWGLOBES_PAST,
-    SNOWGLOBES_PRESENT,
-    SNOWGLOBES_FUTURE,
+    ROAD_PAST,
+    ROAD_PRESENT,
+    ROAD_FUTURE,
     EL_CERRITO_ROAD,
     PHONE_BUBBLE,
     HOSPITAL_THOUGHT,
@@ -131,9 +131,9 @@ const FLATS_MAP = {
     [COMMERCIAL_RIGHT]: CommercialRight,
     [PUBLIC_LEFT]: PublicLeft,
     [PUBLIC_RIGHT]: PublicRight,
-    [SNOWGLOBES_PAST]: SnowglobesPast,
-    [SNOWGLOBES_PRESENT]: SnowglobesPresent,
-    [SNOWGLOBES_FUTURE]: SnowglobesFuture,
+    [ROAD_PAST]: RoadPast,
+    [ROAD_PRESENT]: RoadPresent,
+    [ROAD_FUTURE]: RoadFuture,
     [EL_CERRITO_ROAD]: ElCerritoRoad,
     [PHONE_BUBBLE]: PhoneBubble,
     [HOSPITAL_THOUGHT]: HospitalThought,

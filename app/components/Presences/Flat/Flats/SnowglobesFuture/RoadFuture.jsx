@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const SnowglobesFuture = ({
+const RoadFuture = ({
 
     className,
 
@@ -18,7 +18,7 @@ const SnowglobesFuture = ({
     return (
         <Svg
             className={cx(
-                'SnowglobesFuture',
+                'RoadFuture',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const SnowglobesFuture = ({
                 {...other}
             >
                 {cx(
-                    'SnowglobesFuture'
+                    'RoadFuture'
                 )}
             </text>
         </Svg>
     )
 }
 
-SnowglobesFuture.propTypes = propTypes;
+RoadFuture.propTypes = propTypes;
 
-export default SnowglobesFuture
+export default RoadFuture

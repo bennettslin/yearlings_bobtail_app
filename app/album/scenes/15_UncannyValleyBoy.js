@@ -92,9 +92,9 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    SNOWGLOBES_PAST,
-    SNOWGLOBES_PRESENT,
-    SNOWGLOBES_FUTURE
+    ROAD_PAST,
+    ROAD_PRESENT,
+    ROAD_FUTURE
 } from 'scene/flatKeys'
 
 import {
@@ -213,7 +213,7 @@ module.exports = [
                 }
             },
             [FLATS]: {
-                [SNOWGLOBES_PAST]: true
+                [ROAD_PAST]: true
             },
             [PANELS]: {
                 [SNOWGLOBE_TETHERBALL]: true
@@ -270,7 +270,7 @@ module.exports = [
                 }
             },
             [FLATS]: {
-                [SNOWGLOBES_PRESENT]: true
+                [ROAD_PRESENT]: true
             },
             [FURNITURES]: {
                 [MIRIAM_CUSHIONS]: true
@@ -338,7 +338,7 @@ module.exports = [
                 [RECORDING_BEERS]: true
             },
             [FLATS]: {
-                [SNOWGLOBES_FUTURE]: true
+                [ROAD_FUTURE]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true
