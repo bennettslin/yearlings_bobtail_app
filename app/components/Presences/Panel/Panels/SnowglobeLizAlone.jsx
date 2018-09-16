@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const SnowglobeLizKhari = ({
+const SnowglobeLizAlone = ({
 
     className,
 
@@ -18,13 +18,13 @@ const SnowglobeLizKhari = ({
     return (
         <Svg
             className={cx(
-                'SnowglobeLizKhari',
+                'SnowglobeLizAlone',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const SnowglobeLizKhari = ({
                 {...other}
             >
                 {cx(
-                    'SnowglobeLizKhari'
+                    'SnowglobeLizAlone'
                 )}
             </text>
         </Svg>
     )
 }
 
-SnowglobeLizKhari.propTypes = propTypes;
+SnowglobeLizAlone.propTypes = propTypes;
 
-export default SnowglobeLizKhari
+export default SnowglobeLizAlone

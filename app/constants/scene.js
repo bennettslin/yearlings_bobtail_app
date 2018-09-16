@@ -18,6 +18,7 @@ const
     FIXTURES = 'fixtures',
     FLATS = 'flats',
     FURNITURES = 'furnitures',
+    PANELS = 'panels',
     PUPPETS = 'puppets'
 
 module.exports = {
@@ -52,6 +53,7 @@ module.exports = {
     FIXTURES,
     FLATS,
     FURNITURES,
+    PANELS,
     PUPPETS,
     PRESENCE_TYPES: [
         ACTORS,
@@ -60,6 +62,7 @@ module.exports = {
         FIXTURES,
         FLATS,
         FURNITURES,
+        PANELS,
         PUPPETS
     ],
 

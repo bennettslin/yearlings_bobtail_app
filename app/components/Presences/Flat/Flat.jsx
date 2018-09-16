@@ -39,13 +39,8 @@ import CommercialRight from './Flats/OaklandCommercial/CommercialRight'
 import PublicLeft from './Flats/OaklandPublic/PublicLeft'
 import PublicRight from './Flats/OaklandPublic/PublicRight'
 import SnowglobesPast from './Flats/SnowglobesPast/SnowglobesPast'
-import SnowglobeTetherball from './Flats/SnowglobesPast/SnowglobeTetherball'
 import SnowglobesPresent from './Flats/SnowglobesPresent/SnowglobesPresent'
-import SnowglobeLizAlone from './Flats/SnowglobesPresent/SnowglobeLizAlone'
-import SnowglobeBennettMiriam from './Flats/SnowglobesPresent/SnowglobeBennettMiriam'
 import SnowglobesFuture from './Flats/SnowglobesFuture/SnowglobesFuture'
-import SnowglobeLizKhari from './Flats/SnowglobesFuture/SnowglobeLizKhari'
-import SnowglobeBennettAlone from './Flats/SnowglobesFuture/SnowglobeBennettAlone'
 import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
 import PhoneBubble from './Flats/LizBed/PhoneBubble'
 import HospitalThought from './Flats/Deathbed/HospitalThought'
@@ -90,13 +85,8 @@ import {
     PUBLIC_LEFT,
     PUBLIC_RIGHT,
     SNOWGLOBES_PAST,
-    SNOWGLOBE_TETHERBALL,
     SNOWGLOBES_PRESENT,
-    SNOWGLOBE_LIZ_ALONE,
-    SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBES_FUTURE,
-    SNOWGLOBE_LIZ_KHARI,
-    SNOWGLOBE_BENNETT_ALONE,
     EL_CERRITO_ROAD,
     PHONE_BUBBLE,
     HOSPITAL_THOUGHT,
@@ -142,13 +132,8 @@ const FLATS_MAP = {
     [PUBLIC_LEFT]: PublicLeft,
     [PUBLIC_RIGHT]: PublicRight,
     [SNOWGLOBES_PAST]: SnowglobesPast,
-    [SNOWGLOBE_TETHERBALL]: SnowglobeTetherball,
     [SNOWGLOBES_PRESENT]: SnowglobesPresent,
-    [SNOWGLOBE_LIZ_ALONE]: SnowglobeLizAlone,
-    [SNOWGLOBE_BENNETT_MIRIAM]: SnowglobeBennettMiriam,
     [SNOWGLOBES_FUTURE]: SnowglobesFuture,
-    [SNOWGLOBE_LIZ_KHARI]: SnowglobeLizKhari,
-    [SNOWGLOBE_BENNETT_ALONE]: SnowglobeBennettAlone,
     [EL_CERRITO_ROAD]: ElCerritoRoad,
     [PHONE_BUBBLE]: PhoneBubble,
     [HOSPITAL_THOUGHT]: HospitalThought,

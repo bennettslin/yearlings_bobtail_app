@@ -3,7 +3,8 @@ import {
     // CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -92,13 +93,8 @@ import {
 
 import {
     SNOWGLOBES_PAST,
-    SNOWGLOBE_TETHERBALL,
     SNOWGLOBES_PRESENT,
-    SNOWGLOBE_LIZ_ALONE,
-    SNOWGLOBE_BENNETT_MIRIAM,
-    SNOWGLOBES_FUTURE,
-    SNOWGLOBE_LIZ_KHARI,
-    SNOWGLOBE_BENNETT_ALONE
+    SNOWGLOBES_FUTURE
 } from 'scene/flatKeys'
 
 import {
@@ -108,6 +104,15 @@ import {
     LIZ_CUSHIONS,
     MIRIAM_CUSHIONS
 } from 'scene/furnitureKeys'
+
+
+import {
+    SNOWGLOBE_TETHERBALL,
+    SNOWGLOBE_LIZ_ALONE,
+    SNOWGLOBE_BENNETT_MIRIAM,
+    SNOWGLOBE_LIZ_KHARI,
+    SNOWGLOBE_BENNETT_ALONE
+} from 'scene/panelKeys'
 
 module.exports = [
     {
@@ -208,7 +213,9 @@ module.exports = [
                 }
             },
             [FLATS]: {
-                [SNOWGLOBES_PAST]: true,
+                [SNOWGLOBES_PAST]: true
+            },
+            [PANELS]: {
                 [SNOWGLOBE_TETHERBALL]: true
             }
         },
@@ -263,12 +270,14 @@ module.exports = [
                 }
             },
             [FLATS]: {
-                [SNOWGLOBES_PRESENT]: true,
-                [SNOWGLOBE_LIZ_ALONE]: true,
-                [SNOWGLOBE_BENNETT_MIRIAM]: true
+                [SNOWGLOBES_PRESENT]: true
             },
             [FURNITURES]: {
                 [MIRIAM_CUSHIONS]: true
+            },
+            [PANELS]: {
+                [SNOWGLOBE_LIZ_ALONE]: true,
+                [SNOWGLOBE_BENNETT_MIRIAM]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
@@ -329,12 +338,14 @@ module.exports = [
                 [RECORDING_BEERS]: true
             },
             [FLATS]: {
-                [SNOWGLOBES_FUTURE]: true,
-                [SNOWGLOBE_LIZ_KHARI]: true,
-                [SNOWGLOBE_BENNETT_ALONE]: true
+                [SNOWGLOBES_FUTURE]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true
+            },
+            [PANELS]: {
+                [SNOWGLOBE_LIZ_KHARI]: true,
+                [SNOWGLOBE_BENNETT_ALONE]: true
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,

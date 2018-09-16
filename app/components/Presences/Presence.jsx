@@ -13,6 +13,7 @@ import Cutout from './Cutout/Cutout'
 import Fixture from './Fixture/Fixture'
 import Flat from './Flat/Flat'
 import Furniture from './Furniture/Furniture'
+import Panel from './Panel/Panel'
 import Puppet from './Puppet/Puppet'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -29,6 +30,7 @@ import {
     FIXTURES,
     FLATS,
     FURNITURES,
+    PANELS,
     PUPPETS
 } from 'constants/scene'
 
@@ -43,6 +45,7 @@ const PRESENCE_TYPE_COMPONENTS = {
     [FIXTURES]: Fixture,
     [FLATS]: Flat,
     [FURNITURES]: Furniture,
+    [PANELS]: Panel,
     [PUPPETS]: Puppet
 }
 

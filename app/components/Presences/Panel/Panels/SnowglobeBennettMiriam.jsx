@@ -24,7 +24,7 @@ const SnowglobeBennettMiriam = ({
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
