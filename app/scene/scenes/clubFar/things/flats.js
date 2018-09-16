@@ -1,7 +1,7 @@
 import {
     CROWD_BACK_FAR,
     CROWD_BACK_NEAR
-} from 'scene/cutoutKeys'
+} from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [CROWD_BACK_FAR]: {

@@ -79,7 +79,6 @@ import {
 } from 'scene/bubbleKeys'
 
 import {
-    LOCKER_BANK,
     TRASH_CAN,
     ARRANGEMENT_TRASH_CAN_LOCKERS,
     ARRANGEMENT_TRASH_CAN_QUAD,
@@ -96,6 +95,7 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
+    LOCKER_BANK,
     VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
 
@@ -311,7 +311,6 @@ module.exports = [
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [LOCKER_BANK]: true,
                 [TRASH_CAN]: ARRANGEMENT_TRASH_CAN_LOCKERS,
                 [VAN_NUYS_PLANTS]: ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS
             },
@@ -319,6 +318,7 @@ module.exports = [
                 [THROWN_FRUIT]: true
             },
             [FLATS]: {
+                [LOCKER_BANK]: true,
                 [VAN_NUYS_SCHOOLHOUSE]: true
             }
         },

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const TaiwanMountainsNear = ({
+const CrowdSideFar = ({
 
     className,
 
@@ -18,13 +18,13 @@ const TaiwanMountainsNear = ({
     return (
         <Svg
             className={cx(
-                'TaiwanMountainsNear',
+                'CrowdSideFar',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const TaiwanMountainsNear = ({
                 {...other}
             >
                 {cx(
-                    'TaiwanMountainsNear'
+                    'CrowdSideFar'
                 )}
             </text>
         </Svg>
     )
 }
 
-TaiwanMountainsNear.propTypes = propTypes;
+CrowdSideFar.propTypes = propTypes;
 
-export default TaiwanMountainsNear
+export default CrowdSideFar

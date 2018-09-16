@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const OceanDepthsBack = ({
+const TaiwanMountainsNear = ({
 
     className,
 
@@ -18,13 +18,13 @@ const OceanDepthsBack = ({
     return (
         <Svg
             className={cx(
-                'OceanDepthsBack',
+                'TaiwanMountainsNear',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const OceanDepthsBack = ({
                 {...other}
             >
                 {cx(
-                    'OceanDepthsBack'
+                    'TaiwanMountainsNear'
                 )}
             </text>
         </Svg>
     )
 }
 
-OceanDepthsBack.propTypes = propTypes;
+TaiwanMountainsNear.propTypes = propTypes;
 
-export default OceanDepthsBack
+export default TaiwanMountainsNear

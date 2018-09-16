@@ -2,6 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
+    FLATS,
     DOORS,
     FURNITURES,
     PANELS
@@ -65,8 +66,6 @@ import {
 import {
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT,
-    CROWD_BACK_NEAR,
-    CROWD_BACK_FAR,
     DUMPSTER
 } from 'scene/cutoutKeys'
 
@@ -76,6 +75,11 @@ import {
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
 } from 'scene/fixtureKeys'
+
+import {
+    CROWD_BACK_NEAR,
+    CROWD_BACK_FAR
+} from 'scene/flatKeys'
 
 import {
     LOADING_DOCK_DOOR
@@ -158,12 +162,14 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [WALL_SPEAKER_LEFT]: true,
-                [WALL_SPEAKER_RIGHT]: true,
-                [CROWD_BACK_FAR]: true,
-                [CROWD_BACK_NEAR]: true
+                [WALL_SPEAKER_RIGHT]: true
             },
             [FIXTURES]: {
                 [STAGE_MIC_FAR]: true
+            },
+            [FLATS]: {
+                [CROWD_BACK_FAR]: true,
+                [CROWD_BACK_NEAR]: true
             }
         },
         cubes: CLUB_FAR_KEY,

@@ -4,9 +4,7 @@ import {
     ARRANGEMENT_MONITOR_SIDE_STAGE,
     WALL_SPEAKER_SIDE,
     ARRANGEMENT_WALL_SIDE_CROWD,
-    ARRANGEMENT_WALL_SIDE_STAGE,
-    CROWD_SIDE_NEAR,
-    CROWD_SIDE_FAR
+    ARRANGEMENT_WALL_SIDE_STAGE
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -46,22 +44,6 @@ const ARRANGEMENTS_MAP = {
                 zHeight: 2,
                 zOffset: 5
             }
-        }
-    },
-    [CROWD_SIDE_FAR]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 7,
-            xWidth: 7,
-            zHeight: 4
-        }
-    },
-    [CROWD_SIDE_NEAR]: {
-        yIndex: 2,
-        arrangement: {
-            xFloat: 7,
-            xWidth: 7,
-            zHeight: 4
         }
     }
 }

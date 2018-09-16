@@ -1,5 +1,4 @@
 import {
-    LOCKER_BANK,
     TRASH_CAN,
     ARRANGEMENT_TRASH_CAN_LOCKERS,
     ARRANGEMENT_TRASH_CAN_QUAD,
@@ -9,14 +8,6 @@ import {
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
-    [LOCKER_BANK]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 3.5,
-            xWidth: 4,
-            zHeight: 4
-        }
-    },
     [TRASH_CAN]: {
         [ARRANGEMENT_TRASH_CAN_LOCKERS]: {
             yIndex: 2,

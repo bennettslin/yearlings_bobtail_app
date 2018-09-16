@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CrowdBackNear = ({
+const OceanBottomFar = ({
 
     className,
 
@@ -18,13 +18,13 @@ const CrowdBackNear = ({
     return (
         <Svg
             className={cx(
-                'CrowdBackNear',
+                'OceanBottomFar',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const CrowdBackNear = ({
                 {...other}
             >
                 {cx(
-                    'CrowdBackNear'
+                    'OceanBottomFar'
                 )}
             </text>
         </Svg>
     )
 }
 
-CrowdBackNear.propTypes = propTypes;
+OceanBottomFar.propTypes = propTypes;
 
-export default CrowdBackNear
+export default OceanBottomFar

@@ -2,39 +2,44 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NohoHouseLeft from './Flats/NohoHouses/NohoHouseLeft'
-import NohoHouseRight from './Flats/NohoHouses/NohoHouseRight'
-import NohoSchoolhouse from './Flats/NohoSchool/NohoSchoolhouse'
-import FamilyHouse from './Flats/ChangelingCave/FamilyHouse'
-import CaveShadows from './Flats/ChangelingCave/CaveShadows'
-import TaiwanMountainsBridged from './Flats/PuppetShow/TaiwanMountainsBridged'
-import TaiwanMountainsNear from './Flats/PuppetShow/TaiwanMountainsNear'
-import TaiwanClouds from './Flats/PuppetShow/TaiwanClouds'
-import VanNuysSchoolhouse from './Flats/TetherballCourt/VanNuysSchoolhouse'
-import ShoreBack from './Flats/Shore/ShoreBack'
-import OceanDepthsBack from './Flats/Buoy/OceanDepthsBack'
-import OceanBottomFar from './Flats/OceanDepths/OceanBottomFar'
-import StJosephsAnnex from './Flats/CatholicChurch/StJosephsAnnex'
-import StJosephsChurch from './Flats/CatholicChurch/StJosephsChurch'
-import Campanile from './Flats/UcBerkeley/Campanile'
-import MuseumDisplay from './Flats/Museum/MuseumDisplay'
-import RoyceHall from './Flats/RoyceHall/RoyceHall'
-import PharmacyAisle from './Flats/Walgreens/PharmacyAisle'
-import SteamPipes from './Flats/SteamTunnel/SteamPipes'
-import CemeteryHillsNear from './Flats/Cemetery/CemeteryHillsNear'
-import OaklandHouseLeft from './Flats/OaklandHouses/OaklandHouseLeft'
-import OaklandHouseRight from './Flats/OaklandHouses/OaklandHouseRight'
-import ResidentialLeft from './Flats/OaklandResidential/ResidentialLeft'
-import ResidentialRight from './Flats/OaklandResidential/ResidentialRight'
-import CommercialLeft from './Flats/OaklandCommercial/CommercialLeft'
-import CommercialRight from './Flats/OaklandCommercial/CommercialRight'
-import PublicLeft from './Flats/OaklandPublic/PublicLeft'
-import PublicRight from './Flats/OaklandPublic/PublicRight'
-import RoadPast from './Flats/SnowglobesPast/RoadPast'
-import RoadPresent from './Flats/SnowglobesPresent/RoadPresent'
-import RoadFuture from './Flats/SnowglobesFuture/RoadFuture'
-import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
-import CliffGravesBackdrop from './Flats/Cliff/CliffGravesBackdrop'
+import NohoHouseLeft from './Flats/NohoHouseLeft'
+import NohoHouseRight from './Flats/NohoHouseRight'
+import NohoSchoolhouse from './Flats/NohoSchoolhouse'
+import FamilyHouse from './Flats/FamilyHouse'
+import CaveShadows from './Flats/CaveShadows'
+import TaiwanMountainsBridged from './Flats/TaiwanMountainsBridged'
+import TaiwanMountainsNear from './Flats/TaiwanMountainsNear'
+import TaiwanClouds from './Flats/TaiwanClouds'
+import VanNuysSchoolhouse from './Flats/VanNuysSchoolhouse'
+import ShoreBack from './Flats/ShoreBack'
+import OceanDepthsBack from './Flats/OceanDepthsBack'
+import OceanBottomFar from './Flats/OceanBottomFar'
+import LockerBank from './Flats/LockerBank'
+import StJosephsAnnex from './Flats/StJosephsAnnex'
+import StJosephsChurch from './Flats/StJosephsChurch'
+import Campanile from './Flats/Campanile'
+import MuseumDisplay from './Flats/MuseumDisplay'
+import RoyceHall from './Flats/RoyceHall'
+import PharmacyAisle from './Flats/PharmacyAisle'
+import SteamPipes from './Flats/SteamPipes'
+import CemeteryHillsNear from './Flats/CemeteryHillsNear'
+import CrowdSideNear from './Flats/CrowdSideNear'
+import CrowdSideFar from './Flats/CrowdSideFar'
+import OaklandHouseLeft from './Flats/OaklandHouseLeft'
+import OaklandHouseRight from './Flats/OaklandHouseRight'
+import ResidentialLeft from './Flats/ResidentialLeft'
+import ResidentialRight from './Flats/ResidentialRight'
+import CommercialLeft from './Flats/CommercialLeft'
+import CommercialRight from './Flats/CommercialRight'
+import PublicLeft from './Flats/PublicLeft'
+import PublicRight from './Flats/PublicRight'
+import RoadPast from './Flats/RoadPast'
+import RoadPresent from './Flats/RoadPresent'
+import RoadFuture from './Flats/RoadFuture'
+import ElCerritoRoad from './Flats/ElCerritoRoad'
+import CrowdBackNear from './Flats/CrowdBackNear'
+import CrowdBackFar from './Flats/CrowdBackFar'
+import CliffGravesBackdrop from './Flats/CliffGravesBackdrop'
 
 import {
     NOHO_HOUSE_LEFT,
@@ -49,6 +54,7 @@ import {
     SHORE_BACK,
     OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR,
+    LOCKER_BANK,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
@@ -57,6 +63,8 @@ import {
     PHARMACY_AISLE,
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR,
+    CROWD_SIDE_NEAR,
+    CROWD_SIDE_FAR,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
     RESIDENTIAL_LEFT,
@@ -69,6 +77,8 @@ import {
     ROAD_PRESENT,
     ROAD_FUTURE,
     EL_CERRITO_ROAD,
+    CROWD_BACK_NEAR,
+    CROWD_BACK_FAR,
     CLIFF_GRAVES
 } from 'scene/flatKeys'
 
@@ -85,6 +95,7 @@ const FLATS_MAP = {
     [SHORE_BACK]: ShoreBack,
     [OCEAN_DEPTHS_BACK]: OceanDepthsBack,
     [OCEAN_BOTTOM_FAR]: OceanBottomFar,
+    [LOCKER_BANK]: LockerBank,
     [ST_JOSEPHS_ANNEX]: StJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: StJosephsChurch,
     [CAMPANILE]: Campanile,
@@ -93,6 +104,8 @@ const FLATS_MAP = {
     [PHARMACY_AISLE]: PharmacyAisle,
     [STEAM_PIPES]: SteamPipes,
     [CEMETERY_HILLS_NEAR]: CemeteryHillsNear,
+    [CROWD_SIDE_NEAR]: CrowdSideNear,
+    [CROWD_SIDE_FAR]: CrowdSideFar,
     [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
     [RESIDENTIAL_LEFT]: ResidentialLeft,
@@ -105,6 +118,8 @@ const FLATS_MAP = {
     [ROAD_PRESENT]: RoadPresent,
     [ROAD_FUTURE]: RoadFuture,
     [EL_CERRITO_ROAD]: ElCerritoRoad,
+    [CROWD_BACK_NEAR]: CrowdBackNear,
+    [CROWD_BACK_FAR]: CrowdBackFar,
     [CLIFF_GRAVES]: CliffGravesBackdrop
 },
 DEFAULT_COMPONENT = () => (null)

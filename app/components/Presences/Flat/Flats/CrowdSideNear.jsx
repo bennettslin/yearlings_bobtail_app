@@ -24,7 +24,7 @@ const CrowdSideNear = ({
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />

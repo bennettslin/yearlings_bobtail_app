@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const LockerBank = ({
+const CrowdBackNear = ({
 
     className,
 
@@ -18,13 +18,13 @@ const LockerBank = ({
     return (
         <Svg
             className={cx(
-                'LockerBank',
+                'CrowdBackNear',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const LockerBank = ({
                 {...other}
             >
                 {cx(
-                    'LockerBank'
+                    'CrowdBackNear'
                 )}
             </text>
         </Svg>
     )
 }
 
-LockerBank.propTypes = propTypes;
+CrowdBackNear.propTypes = propTypes;
 
-export default LockerBank
+export default CrowdBackNear

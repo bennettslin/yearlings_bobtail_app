@@ -2,6 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
+    FLATS,
     DOORS,
     FURNITURES
 } from 'constants/scene'
@@ -63,9 +64,7 @@ import {
     ARRANGEMENT_MONITOR_SIDE_STAGE,
     WALL_SPEAKER_SIDE,
     ARRANGEMENT_WALL_SIDE_CROWD,
-    ARRANGEMENT_WALL_SIDE_STAGE,
-    CROWD_SIDE_FAR,
-    CROWD_SIDE_NEAR
+    ARRANGEMENT_WALL_SIDE_STAGE
 } from 'scene/cutoutKeys'
 
 import {
@@ -78,6 +77,11 @@ import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION
 } from 'scene/fixtureKeys'
+
+import {
+    CROWD_SIDE_FAR,
+    CROWD_SIDE_NEAR
+} from 'scene/flatKeys'
 
 import {
     CLUB_DOOR
@@ -137,7 +141,9 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [MONITOR_SPEAKER_SIDE]: ARRANGEMENT_MONITOR_SIDE_CROWD,
-                [WALL_SPEAKER_SIDE]: ARRANGEMENT_WALL_SIDE_CROWD,
+                [WALL_SPEAKER_SIDE]: ARRANGEMENT_WALL_SIDE_CROWD
+            },
+            [FLATS]: {
                 [CROWD_SIDE_FAR]: true,
                 [CROWD_SIDE_NEAR]: true
             }

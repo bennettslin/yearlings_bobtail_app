@@ -11,6 +11,7 @@ const
     SHORE_BACK = 'shoreBack',
     OCEAN_DEPTHS_BACK = 'oceanDepthsBack',
     OCEAN_BOTTOM_FAR = 'oceanBottomFar',
+    LOCKER_BANK = 'lockerBank',
     ST_JOSEPHS_ANNEX = 'stJosephsAnnex',
     ST_JOSEPHS_CHURCH = 'stJosephsChurch',
     CAMPANILE = 'campanile',
@@ -19,6 +20,8 @@ const
     PHARMACY_AISLE = 'pharmacyAisle',
     STEAM_PIPES = 'steamPipes',
     CEMETERY_HILLS_NEAR = 'cemeteryHillsNear',
+    CROWD_SIDE_NEAR = 'crowdSideNear',
+    CROWD_SIDE_FAR = 'crowdSideFar',
     OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft',
     OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight',
     RESIDENTIAL_LEFT = 'residentialLeft',
@@ -31,6 +34,8 @@ const
     ROAD_PRESENT = 'roadPresent',
     ROAD_FUTURE = 'roadFuture',
     EL_CERRITO_ROAD = 'elCerritoRoad',
+    CROWD_BACK_NEAR = 'crowdBackNear',
+    CROWD_BACK_FAR = 'crowdBackFar',
     CLIFF_GRAVES = 'cliffGraves'
 
 export {
@@ -46,6 +51,7 @@ export {
     SHORE_BACK,
     OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR,
+    LOCKER_BANK,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
@@ -54,6 +60,8 @@ export {
     PHARMACY_AISLE,
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR,
+    CROWD_SIDE_NEAR,
+    CROWD_SIDE_FAR,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
     RESIDENTIAL_LEFT,
@@ -66,5 +74,7 @@ export {
     ROAD_PRESENT,
     ROAD_FUTURE,
     EL_CERRITO_ROAD,
+    CROWD_BACK_NEAR,
+    CROWD_BACK_FAR,
     CLIFF_GRAVES
 }

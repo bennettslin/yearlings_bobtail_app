@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const OceanBottomFar = ({
+const LockerBank = ({
 
     className,
 
@@ -18,13 +18,13 @@ const OceanBottomFar = ({
     return (
         <Svg
             className={cx(
-                'OceanBottomFar',
+                'LockerBank',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const OceanBottomFar = ({
                 {...other}
             >
                 {cx(
-                    'OceanBottomFar'
+                    'LockerBank'
                 )}
             </text>
         </Svg>
     )
 }
 
-OceanBottomFar.propTypes = propTypes;
+LockerBank.propTypes = propTypes;
 
-export default OceanBottomFar
+export default LockerBank

@@ -33,7 +33,6 @@ import OdinOceanFloor from './Cutouts/OceanDepths/OdinOceanFloor'
 import BennettMat from './Cutouts/OceanFloor/BennettMat'
 import OdinMat from './Cutouts/OceanFloor/OdinMat'
 import BuddhaCave from './Cutouts/OceanFloor/BuddhaCave'
-import LockerBank from './Cutouts/VanNuysLockers/LockerBank'
 import TrashCan from './Cutouts/VanNuysLockers/TrashCan'
 import VanNuysPlants from './Cutouts/VanNuysLockers/VanNuysPlants'
 import VanNuysLogo from './Cutouts/VanNuysQuad/VanNuysLogo'
@@ -69,12 +68,8 @@ import HowieFridge from './Cutouts/Attic/HowieFridge'
 import Television from './Cutouts/Attic/Television'
 import MonitorSpeakerSide from './Cutouts/ClubSide/MonitorSpeakerSide'
 import WallSpeakerSide from './Cutouts/ClubSide/WallSpeakerSide'
-import CrowdSideNear from './Cutouts/ClubSide/CrowdSideNear'
-import CrowdSideFar from './Cutouts/ClubSide/CrowdSideFar'
 import Volkswagen from './Cutouts/OaklandHouses/Volkswagen'
 import TwinStreetlamp from './Cutouts/OaklandResidential/TwinStreetlamp'
-import CrowdBackNear from './Cutouts/ClubFar/CrowdBackNear'
-import CrowdBackFar from './Cutouts/ClubFar/CrowdBackFar'
 import Dumpster from './Cutouts/Alley/Dumpster'
 import WeddingPlatform from './Cutouts/OutdoorWedding/WeddingPlatform'
 import WeddingCrowd from './Cutouts/OutdoorWedding/WeddingCrowd'
@@ -112,7 +107,6 @@ import {
     BENNETT_MAT,
     ODIN_MAT,
     BUDDHA_CAVE,
-    LOCKER_BANK,
     TRASH_CAN,
     VAN_NUYS_PLANTS,
     VAN_NUYS_LOGO,
@@ -148,12 +142,8 @@ import {
     TELEVISION,
     MONITOR_SPEAKER_SIDE,
     WALL_SPEAKER_SIDE,
-    CROWD_SIDE_NEAR,
-    CROWD_SIDE_FAR,
     VOLKSWAGEN,
     TWIN_STREETLAMP,
-    CROWD_BACK_NEAR,
-    CROWD_BACK_FAR,
     DUMPSTER,
     WEDDING_PLATFORM,
     WEDDING_CROWD,
@@ -192,7 +182,6 @@ const CUTOUTS_MAP = {
     [BENNETT_MAT]: BennettMat,
     [ODIN_MAT]: OdinMat,
     [BUDDHA_CAVE]: BuddhaCave,
-    [LOCKER_BANK]: LockerBank,
     [TRASH_CAN]: TrashCan,
     [VAN_NUYS_PLANTS]: VanNuysPlants,
     [VAN_NUYS_LOGO]: VanNuysLogo,
@@ -228,12 +217,8 @@ const CUTOUTS_MAP = {
     [TELEVISION]: Television,
     [MONITOR_SPEAKER_SIDE]: MonitorSpeakerSide,
     [WALL_SPEAKER_SIDE]: WallSpeakerSide,
-    [CROWD_SIDE_NEAR]: CrowdSideNear,
-    [CROWD_SIDE_FAR]: CrowdSideFar,
     [VOLKSWAGEN]: Volkswagen,
     [TWIN_STREETLAMP]: TwinStreetlamp,
-    [CROWD_BACK_NEAR]: CrowdBackNear,
-    [CROWD_BACK_FAR]: CrowdBackFar,
     [DUMPSTER]: Dumpster,
     [WEDDING_PLATFORM]: WeddingPlatform,
     [WEDDING_CROWD]: WeddingCrowd,

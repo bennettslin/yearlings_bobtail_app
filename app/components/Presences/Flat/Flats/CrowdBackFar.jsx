@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CrowdSideFar = ({
+const CrowdBackFar = ({
 
     className,
 
@@ -18,13 +18,13 @@ const CrowdSideFar = ({
     return (
         <Svg
             className={cx(
-                'CrowdSideFar',
+                'CrowdBackFar',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const CrowdSideFar = ({
                 {...other}
             >
                 {cx(
-                    'CrowdSideFar'
+                    'CrowdBackFar'
                 )}
             </text>
         </Svg>
     )
 }
 
-CrowdSideFar.propTypes = propTypes;
+CrowdBackFar.propTypes = propTypes;
 
-export default CrowdSideFar
+export default CrowdBackFar
