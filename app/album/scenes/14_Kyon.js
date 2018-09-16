@@ -3,6 +3,7 @@ import {
     // CUTOUTS,
     // FIXTURES,
     // FLATS,
+    DOORS,
     FURNITURES,
     PUPPETS
 } from 'constants/scene'
@@ -37,11 +38,14 @@ import {
 
 import {
     LIZ_BLINDS_OPEN,
-    LIZ_CUSHIONS,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE,
     LIZ_GATE_INSIDE_OPEN
+} from 'scene/doorKeys'
+
+import {
+    LIZ_CUSHIONS
 } from 'scene/furnitureKeys'
 
 import {
@@ -67,11 +71,13 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [OPAL_LAP]: true
@@ -97,11 +103,13 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [OPAL_WINDOW]: true
@@ -127,11 +135,13 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [OPAL_COUCH]: true
@@ -163,11 +173,13 @@ module.exports = [
                     instance: ARRIVED
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR_OPEN]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -196,11 +208,13 @@ module.exports = [
                     instance: JUDGMENTAL
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -229,11 +243,13 @@ module.exports = [
                     instance: CONCERNED
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE_OPEN]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -256,11 +272,13 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [OPAL_WINDOW]: true
@@ -276,11 +294,13 @@ module.exports = [
         unitIndex: 12,
         description: `Same scene. Peacocks.`,
         presences: {
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [PEAHEN]: true,

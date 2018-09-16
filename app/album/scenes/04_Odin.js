@@ -4,6 +4,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
+    DOORS,
     FURNITURES
 } from 'constants/scene'
 
@@ -83,9 +84,12 @@ import {
 } from 'scene/flatKeys'
 
 import {
-    STAIRWELL_RAILING,
     IRON_GATE_LOW,
-    IRON_GATE,
+    IRON_GATE
+} from 'scene/doorKeys'
+
+import {
+    STAIRWELL_RAILING,
     BUOY_FLOAT
 } from 'scene/furnitureKeys'
 
@@ -135,8 +139,10 @@ module.exports = [
             [FIXTURES]: {
                 [FRIDGE_DRAWINGS]: true
             },
+            [DOORS]: {
+                [IRON_GATE_LOW]: true
+            },
             [FURNITURES]: {
-                [IRON_GATE_LOW]: true,
                 [STAIRWELL_RAILING]: true
             }
         },
@@ -164,7 +170,7 @@ module.exports = [
             [CUTOUTS]: {
                 [BENNETT_ODIN_RICKSHAW]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [IRON_GATE]: true
             }
         },

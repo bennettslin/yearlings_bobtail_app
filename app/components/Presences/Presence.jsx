@@ -11,6 +11,7 @@ import Actor from './Actor/Actor'
 import Backdrop from './Backdrop/Backdrop'
 import Bubble from './Bubble/Bubble'
 import Cutout from './Cutout/Cutout'
+import Door from './Door/Door'
 import Fixture from './Fixture/Fixture'
 import Flat from './Flat/Flat'
 import Furniture from './Furniture/Furniture'
@@ -29,6 +30,7 @@ import {
     BACKDROPS,
     BUBBLES,
     CUTOUTS,
+    DOORS,
     FIXTURES,
     FLATS,
     FURNITURES,
@@ -45,6 +47,7 @@ const PRESENCE_TYPE_COMPONENTS = {
     [BACKDROPS]: Backdrop,
     [BUBBLES]: Bubble,
     [CUTOUTS]: Cutout,
+    [DOORS]: Door,
     [FIXTURES]: Fixture,
     [FLATS]: Flat,
     [FURNITURES]: Furniture,

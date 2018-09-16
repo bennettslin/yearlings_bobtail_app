@@ -2,6 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
+    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -91,12 +92,15 @@ import {
     BENNETT_GATE_SIDE_OPEN,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
+    WAITING_ROOM_DOOR,
+    WAITING_ROOM_DOOR_OPEN
+} from 'scene/doorKeys'
+
+import {
     BENNETT_MATTRESS,
     BENNETT_PILLOWS,
     ARMCHAIR_LEFT,
     ARMCHAIR_RIGHT,
-    WAITING_ROOM_DOOR,
-    WAITING_ROOM_DOOR_OPEN,
     LIZ_MATTRESS,
     LIZ_PILLOWS,
     LIZ_MATTRESS_REFLECTION,
@@ -130,7 +134,7 @@ module.exports = [
                 [GLASS_RACK]: true,
                 [DISH_PILE]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [DISHROOM_DOOR]: true
             },
             [PANELS]: {
@@ -170,7 +174,7 @@ module.exports = [
                 [GLASS_RACK]: true,
                 [DISH_PILE]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [DISHROOM_DOOR]: true
             },
             [PANELS]: {
@@ -199,7 +203,7 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
                 [LIZ_GATE_OUTSIDE]: true
             }
@@ -230,7 +234,7 @@ module.exports = [
             [CUTOUTS]: {
                 [TRAFFIC_LIGHT]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET,
                 [LIZ_GATE_OUTSIDE_OPEN]: true
             }
@@ -264,7 +268,7 @@ module.exports = [
                 [APARTMENT_PLANT]: true,
                 [CODE_BOX]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BENNETT_GATE_FRONT]: true
             }
         },
@@ -298,7 +302,7 @@ module.exports = [
                 [APARTMENT_PLANT]: true,
                 [CODE_BOX]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BENNETT_GATE_FRONT]: true
             }
         },
@@ -335,10 +339,12 @@ module.exports = [
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BENNETT_BLINDS_OPEN]: true,
                 [BENNETT_GATE_SIDE_OPEN]: true,
                 [BENNETT_DOOR_INSIDE]: true,
+            },
+            [FURNITURES]: {
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
@@ -376,9 +382,11 @@ module.exports = [
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BENNETT_BLINDS_OPEN]: true,
                 [BENNETT_DOOR_INSIDE_OPEN]: true,
+            },
+            [FURNITURES]: {
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
@@ -406,10 +414,12 @@ module.exports = [
                 [PAINTING]: true,
                 [WAITING_ROOM_PLANT]: true
             },
+            [DOORS]: {
+                [WAITING_ROOM_DOOR]: true
+            },
             [FURNITURES]: {
                 [ARMCHAIR_LEFT]: true,
-                [ARMCHAIR_RIGHT]: true,
-                [WAITING_ROOM_DOOR]: true
+                [ARMCHAIR_RIGHT]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -443,10 +453,12 @@ module.exports = [
                 [PAINTING]: true,
                 [WAITING_ROOM_PLANT]: true
             },
+            [DOORS]: {
+                [WAITING_ROOM_DOOR_OPEN]: true
+            },
             [FURNITURES]: {
                 [ARMCHAIR_LEFT]: true,
-                [ARMCHAIR_RIGHT]: true,
-                [WAITING_ROOM_DOOR_OPEN]: true
+                [ARMCHAIR_RIGHT]: true
             }
         },
         cubes: WAITING_ROOM_KEY,

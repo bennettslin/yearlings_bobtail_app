@@ -2,6 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
+    DOORS,
     FURNITURES
 } from 'constants/scene'
 
@@ -79,7 +80,10 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    CLUB_DOOR,
+    CLUB_DOOR
+} from 'scene/doorKeys'
+
+import {
     LIZ_MATTRESS,
     LIZ_PILLOWS,
     LIZ_MATTRESS_REFLECTION,
@@ -236,7 +240,7 @@ module.exports = [
                 [BASS_CASE_SIDE]: true,
                 [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_CLUB
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [CLUB_DOOR]: true
             }
         },

@@ -4,6 +4,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
+    DOORS,
     FURNITURES,
     PUPPETS
 } from 'constants/scene'
@@ -66,7 +67,10 @@ import {
 
 import {
     EL_TORITO_DOOR_LEFT,
-    EL_TORITO_DOOR_RIGHT,
+    EL_TORITO_DOOR_RIGHT
+} from 'scene/doorKeys'
+
+import {
     HOSPITAL_MATTRESS
 } from 'scene/furnitureKeys'
 
@@ -96,7 +100,7 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [EL_TORITO_DOOR_LEFT]: true,
                 [EL_TORITO_DOOR_RIGHT]: true
             }

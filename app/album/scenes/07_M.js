@@ -4,7 +4,7 @@ import {
     BUBBLES,
     CUTOUTS,
     FIXTURES,
-    FURNITURES
+    DOORS
 } from 'constants/scene'
 
 import {
@@ -99,7 +99,7 @@ import {
 import {
     BASEMENT_DOOR_OPEN,
     CINEMA_DOORS
-} from 'scene/furnitureKeys'
+} from 'scene/doorKeys'
 
 module.exports = [
     {
@@ -279,7 +279,7 @@ module.exports = [
                 [GUITAR_CASE_UPRIGHT]: true,
                 [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_BASEMENT
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BASEMENT_DOOR_OPEN]: true
             }
         },
@@ -313,7 +313,7 @@ module.exports = [
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [CINEMA_DOORS]: true
             }
         },
@@ -355,7 +355,7 @@ module.exports = [
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [CINEMA_DOORS]: true
             }
         },

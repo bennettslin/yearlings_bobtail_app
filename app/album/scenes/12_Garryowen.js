@@ -4,6 +4,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
+    DOORS,
     FURNITURES
 } from 'constants/scene'
 
@@ -79,10 +80,13 @@ import {
 import {
     LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS,
-    LIZ_CUSHIONS,
     LIZ_DOOR,
     LIZ_GATE_INSIDE,
-    BASEMENT_DOOR,
+    BASEMENT_DOOR
+} from 'scene/doorKeys'
+
+import {
+    LIZ_CUSHIONS,
     BENNETT_MATTRESS,
     BENNETT_PILLOWS
 } from 'scene/furnitureKeys'
@@ -108,11 +112,13 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -188,8 +194,10 @@ module.exports = [
                     }
                 }
             },
+            [DOORS]: {
+                [BASEMENT_DOOR]: true
+            },
             [FURNITURES]: {
-                [BASEMENT_DOOR]: true,
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
@@ -267,11 +275,13 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
                 [LIZ_GATE_INSIDE]: true,
-                [LIZ_CUSHIONS]: true,
                 [LIZ_DOOR]: true
+            },
+            [FURNITURES]: {
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

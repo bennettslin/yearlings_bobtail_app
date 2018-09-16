@@ -5,6 +5,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
+    DOORS,
     FURNITURES,
     PANELS,
     PUPPETS
@@ -101,8 +102,11 @@ import {
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN,
-    CAPTAIN_BED_MATTRESS,
     PRINCIPAL_DOOR
+} from 'scene/doorKeys'
+
+import {
+    CAPTAIN_BED_MATTRESS
 } from 'scene/furnitureKeys'
 
 import {
@@ -129,8 +133,10 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
+            [DOORS]: {
+                [BEDROOM_BLINDS_OPEN]: true
+            },
             [FURNITURES]: {
-                [BEDROOM_BLINDS_OPEN]: true,
                 [CAPTAIN_BED_MATTRESS]: true
             },
             [PANELS]: {
@@ -168,7 +174,7 @@ module.exports = [
                 [CAPTAIN_BED_LAMP]: true,
                 [BENNETT_LETTERS]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
             }
         },
@@ -193,8 +199,10 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BUS_BACKDROP]: true
             },
+            [DOORS]: {
+                [BEDROOM_BLINDS_OPEN]: true
+            },
             [FURNITURES]: {
-                [BEDROOM_BLINDS_OPEN]: true,
                 [CAPTAIN_BED_MATTRESS]: true
             },
             [PANELS]: {
@@ -225,8 +233,10 @@ module.exports = [
             [BUBBLES]: {
                 [DOGS_SKETCHBOOK]: true
             },
+            [DOORS]: {
+                [BEDROOM_BLINDS]: true
+            },
             [FURNITURES]: {
-                [BEDROOM_BLINDS]: true,
                 [CAPTAIN_BED_MATTRESS]: true
             },
             [PANELS]: {
@@ -259,7 +269,7 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
             },
             [PUPPETS]: {
@@ -400,7 +410,7 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [PRINCIPAL_DOOR]: true
             }
         },

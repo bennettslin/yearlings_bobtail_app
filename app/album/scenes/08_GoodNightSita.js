@@ -4,6 +4,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
+    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -67,11 +68,14 @@ import {
     ARRANGEMENT_LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS_STREET,
     LIZ_GATE_OUTSIDE,
+    LIZ_GATE_OUTSIDE_OPEN
+} from 'scene/doorKeys'
+
+import {
     GO_KART_SEAT_LEFT,
     GO_KART_SEAT_RIGHT,
     GO_KART_DASHBOARD_LEFT,
-    GO_KART_DASHBOARD_RIGHT,
-    LIZ_GATE_OUTSIDE_OPEN
+    GO_KART_DASHBOARD_RIGHT
 } from 'scene/furnitureKeys'
 
 import {
@@ -100,7 +104,7 @@ module.exports = [
                     }
                 }
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
                 [LIZ_GATE_OUTSIDE]: true
             }
@@ -257,7 +261,7 @@ module.exports = [
             [CUTOUTS]: {
                 [TRAFFIC_LIGHT]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET,
                 [LIZ_GATE_OUTSIDE_OPEN]: true
             }

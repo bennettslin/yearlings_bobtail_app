@@ -4,6 +4,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
+    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -98,7 +99,10 @@ import {
 
 import {
     PORCH_DOOR,
-    BEDROOM_BLINDS_OPEN,
+    BEDROOM_BLINDS_OPEN
+} from 'scene/doorKeys'
+
+import {
     CAPTAIN_BED_MATTRESS
 } from 'scene/furnitureKeys'
 
@@ -191,7 +195,7 @@ module.exports = [
                 [PORCH_PLANTS_LEFT]: true,
                 [PORCH_PLANTS_RIGHT]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [PORCH_DOOR]: true
             }
         },
@@ -231,8 +235,10 @@ module.exports = [
             [FIXTURES]: {
                 [CHRISTOPHER_LETTERS]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true,
+            },
+            [FURNITURES]: {
                 [CAPTAIN_BED_MATTRESS]: true
             },
             [PANELS]: {
@@ -311,8 +317,10 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_SIREN_BACKDROP]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true,
+            },
+            [FURNITURES]: {
                 [CAPTAIN_BED_MATTRESS]: true
             },
             [PANELS]: {

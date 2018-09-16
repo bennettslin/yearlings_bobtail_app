@@ -1,8 +1,6 @@
 import {
     ARMCHAIR_LEFT,
-    ARMCHAIR_RIGHT,
-    WAITING_ROOM_DOOR,
-    WAITING_ROOM_DOOR_OPEN
+    ARMCHAIR_RIGHT
 } from 'scene/furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -20,22 +18,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 5.5,
             xWidth: 2,
             zHeight: 0.5
-        }
-    },
-    [WAITING_ROOM_DOOR]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 11,
-            xWidth: 1,
-            zHeight: 6
-        }
-    },
-    [WAITING_ROOM_DOOR_OPEN]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 11,
-            xWidth: 1,
-            zHeight: 6
         }
     }
 }

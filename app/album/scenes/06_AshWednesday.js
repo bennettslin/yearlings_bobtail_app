@@ -4,6 +4,7 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
+    DOORS,
     FURNITURES
 } from 'constants/scene'
 
@@ -83,8 +84,11 @@ import {
     BENNETT_BLINDS,
     BENNETT_DOOR_OUTSIDE,
     BENNETT_GATE_SIDE,
-    BENNETT_CUSHIONS,
     BANCROFT_DOOR
+} from 'scene/doorKeys'
+
+import {
+    BENNETT_CUSHIONS
 } from 'scene/furnitureKeys'
 
 module.exports = [
@@ -109,7 +113,7 @@ module.exports = [
             [CUTOUTS]: {
                 [RECYCLABLES]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BENNETT_BLINDS]: true,
                 [BENNETT_DOOR_OUTSIDE]: true,
                 [BENNETT_GATE_SIDE]: true
@@ -228,7 +232,7 @@ module.exports = [
             [FIXTURES]: {
                 [ASH_CAN]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [BANCROFT_DOOR]: true
             }
         },

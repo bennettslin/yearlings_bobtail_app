@@ -2,6 +2,7 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
+    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -77,7 +78,10 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    LOADING_DOCK_DOOR,
+    LOADING_DOCK_DOOR
+} from 'scene/doorKeys'
+
+import {
     LIZ_MATTRESS,
     LIZ_PILLOWS,
     LIZ_MATTRESS_REFLECTION,
@@ -186,7 +190,7 @@ module.exports = [
             [FIXTURES]: {
                 [BURGER_WRAPPER]: true
             },
-            [FURNITURES]: {
+            [DOORS]: {
                 [LOADING_DOCK_DOOR]: true
             }
         },

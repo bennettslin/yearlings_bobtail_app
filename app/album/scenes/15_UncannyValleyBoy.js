@@ -3,6 +3,7 @@ import {
     // CUTOUTS,
     FIXTURES,
     FLATS,
+    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -98,13 +99,15 @@ import {
 } from 'scene/flatKeys'
 
 import {
-    BASEMENT_DOOR,
+    BASEMENT_DOOR
+} from 'scene/doorKeys'
+
+import {
     BENNETT_MATTRESS,
     BENNETT_PILLOWS,
     LIZ_CUSHIONS,
     MIRIAM_CUSHIONS
 } from 'scene/furnitureKeys'
-
 
 import {
     SNOWGLOBE_TETHERBALL,
@@ -133,8 +136,10 @@ module.exports = [
                     instance: ASLEEP
                 }
             },
+            [DOORS]: {
+                [BASEMENT_DOOR]: true
+            },
             [FURNITURES]: {
-                [BASEMENT_DOOR]: true,
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }

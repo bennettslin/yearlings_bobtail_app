@@ -1,14 +1,14 @@
 import {
     CUTOUTS,
-    FURNITURES
+    DOORS
 } from 'constants/scene'
 
 import ARRANGEMENTS_CUTOUTS from './things/cutouts'
-import ARRANGEMENTS_FURNITURES from './things/furnitures'
+import ARRANGEMENTS_DOORS from './things/doors'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
-    [FURNITURES]: ARRANGEMENTS_FURNITURES
+    [DOORS]: ARRANGEMENTS_DOORS
 }
 
 export default ARRANGEMENTS_THINGS
