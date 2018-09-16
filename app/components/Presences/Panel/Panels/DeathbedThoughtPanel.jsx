@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Bathtub = ({
+const DeathbedThoughtPanel = ({
 
     className,
 
@@ -18,13 +18,13 @@ const Bathtub = ({
     return (
         <Svg
             className={cx(
-                'Bathtub',
+                'DeathbedThoughtPanel',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const Bathtub = ({
                 {...other}
             >
                 {cx(
-                    'Bathtub'
+                    'DeathbedThoughtPanel'
                 )}
             </text>
         </Svg>
     )
 }
 
-Bathtub.propTypes = propTypes;
+DeathbedThoughtPanel.propTypes = propTypes;
 
-export default Bathtub
+export default DeathbedThoughtPanel

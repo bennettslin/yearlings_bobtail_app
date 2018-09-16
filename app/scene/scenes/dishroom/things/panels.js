@@ -1,12 +1,12 @@
 import {
-    NOHO_SCHOOLHOUSE
-} from 'scene/flatKeys'
+    DISHROOM_SINK
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
-    [NOHO_SCHOOLHOUSE]: {
-        yIndex: 1,
+    [DISHROOM_SINK]: {
+        yIndex: 3,
         arrangement: {
-            xFloat: 2,
+            xFloat: 4,
             xWidth: 5,
             zHeight: 3
         }

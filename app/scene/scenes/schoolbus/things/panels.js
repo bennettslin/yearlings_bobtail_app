@@ -1,7 +1,7 @@
 import {
-    SCHOOLBUS_INTERIOR,
-    SCHOOLBUS_EXTERIOR
-} from 'scene/cutoutKeys'
+    SCHOOLBUS_EXTERIOR,
+    SCHOOLBUS_INTERIOR
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [SCHOOLBUS_INTERIOR]: {

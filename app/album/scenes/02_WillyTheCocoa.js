@@ -4,7 +4,8 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -76,7 +77,6 @@ import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
-    CAPTAIN_BED_DRAWERS,
     FIRE_HYDRANT,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
@@ -101,6 +101,10 @@ import {
     BEDROOM_BLINDS_OPEN,
     CAPTAIN_BED_MATTRESS
 } from 'scene/furnitureKeys'
+
+import {
+    CAPTAIN_BED_DRAWERS
+} from 'scene/panelKeys'
 
 module.exports = [
     {
@@ -224,15 +228,15 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [CAPTAIN_BED_DRAWERS]: true
-            },
             [FIXTURES]: {
                 [CHRISTOPHER_LETTERS]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
                 [CAPTAIN_BED_MATTRESS]: true
+            },
+            [PANELS]: {
+                [CAPTAIN_BED_DRAWERS]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -307,12 +311,12 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_SIREN_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [CAPTAIN_BED_DRAWERS]: true
-            },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
                 [CAPTAIN_BED_MATTRESS]: true
+            },
+            [PANELS]: {
+                [CAPTAIN_BED_DRAWERS]: true
             }
         },
         cubes: BEDROOM_STOOL_KEY,

@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Separate backdrops, bubbles, and interactive panels.`,
+        taskName: `Separate bubbles.`,
         workedHours: 0,
-        neededHours: 4
+        neededHours: 2
     },
 
     /**

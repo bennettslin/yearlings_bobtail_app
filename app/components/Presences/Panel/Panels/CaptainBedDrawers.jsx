@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const GoKartExteriorRight = ({
+const CaptainBedDrawers = ({
 
     className,
 
@@ -18,13 +18,13 @@ const GoKartExteriorRight = ({
     return (
         <Svg
             className={cx(
-                'GoKartExteriorRight',
+                'CaptainBedDrawers',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const GoKartExteriorRight = ({
                 {...other}
             >
                 {cx(
-                    'GoKartExteriorRight'
+                    'CaptainBedDrawers'
                 )}
             </text>
         </Svg>
     )
 }
 
-GoKartExteriorRight.propTypes = propTypes;
+CaptainBedDrawers.propTypes = propTypes;
 
-export default GoKartExteriorRight
+export default CaptainBedDrawers

@@ -1,7 +1,7 @@
 import {
     GO_KART_EXTERIOR_LEFT,
     GO_KART_EXTERIOR_RIGHT
-} from 'scene/cutoutKeys'
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_EXTERIOR_LEFT]: {

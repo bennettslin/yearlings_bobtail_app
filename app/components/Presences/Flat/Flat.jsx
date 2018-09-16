@@ -5,7 +5,6 @@ import cx from 'classnames'
 import NohoHouseLeft from './Flats/NohoHouses/NohoHouseLeft'
 import NohoHouseRight from './Flats/NohoHouses/NohoHouseRight'
 import NohoSchoolhouse from './Flats/NohoSchool/NohoSchoolhouse'
-import NurseOfficeBubble from './Flats/NohoSchool/NurseOfficeBubble'
 import FamilyHouse from './Flats/ChangelingCave/FamilyHouse'
 import CaveShadows from './Flats/ChangelingCave/CaveShadows'
 import TaiwanMountainsBridged from './Flats/PuppetShow/TaiwanMountainsBridged'
@@ -42,16 +41,12 @@ import RoadPast from './Flats/SnowglobesPast/RoadPast'
 import RoadPresent from './Flats/SnowglobesPresent/RoadPresent'
 import RoadFuture from './Flats/SnowglobesFuture/RoadFuture'
 import ElCerritoRoad from './Flats/ElCerrito/ElCerritoRoad'
-import PhoneBubble from './Flats/LizBed/PhoneBubble'
-import HospitalThought from './Flats/Deathbed/HospitalThought'
-import TennisThought from './Flats/Deathbed/TennisThought'
 import CliffGravesBackdrop from './Flats/Cliff/CliffGravesBackdrop'
 
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE,
-    NURSE_OFFICE_BUBBLE,
     FAMILY_HOUSE,
     CAVE_SHADOWS,
     TAIWAN_MOUNTAINS_BRIDGED,
@@ -88,9 +83,6 @@ import {
     ROAD_PRESENT,
     ROAD_FUTURE,
     EL_CERRITO_ROAD,
-    PHONE_BUBBLE,
-    HOSPITAL_THOUGHT,
-    TENNIS_THOUGHT,
     CLIFF_GRAVES
 } from 'scene/flatKeys'
 
@@ -98,7 +90,6 @@ const FLATS_MAP = {
     [NOHO_HOUSE_LEFT]: NohoHouseLeft,
     [NOHO_HOUSE_RIGHT]: NohoHouseRight,
     [NOHO_SCHOOLHOUSE]: NohoSchoolhouse,
-    [NURSE_OFFICE_BUBBLE]: NurseOfficeBubble,
     [FAMILY_HOUSE]: FamilyHouse,
     [CAVE_SHADOWS]: CaveShadows,
     [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
@@ -135,9 +126,6 @@ const FLATS_MAP = {
     [ROAD_PRESENT]: RoadPresent,
     [ROAD_FUTURE]: RoadFuture,
     [EL_CERRITO_ROAD]: ElCerritoRoad,
-    [PHONE_BUBBLE]: PhoneBubble,
-    [HOSPITAL_THOUGHT]: HospitalThought,
-    [TENNIS_THOUGHT]: TennisThought,
     [CLIFF_GRAVES]: CliffGravesBackdrop
 },
 DEFAULT_COMPONENT = () => (null)

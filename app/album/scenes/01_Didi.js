@@ -3,7 +3,8 @@ import {
     BACKDROPS,
     CUTOUTS,
     FIXTURES,
-    FLATS
+    FLATS,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -54,7 +55,6 @@ import {
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
-    BATHTUB,
     MIRRORED_SINK,
     TOWEL_RACK
 } from 'scene/cutoutKeys'
@@ -67,9 +67,13 @@ import {
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-    NOHO_SCHOOLHOUSE,
-    NURSE_OFFICE_BUBBLE
+    NOHO_SCHOOLHOUSE
 } from 'scene/flatKeys'
+
+import {
+    ESTHER_SPEECH_PANEL,
+    BATHTUB
+} from 'scene/panelKeys'
 
 module.exports = [
     {
@@ -169,7 +173,9 @@ module.exports = [
             },
             [FLATS]: {
                 [NOHO_SCHOOLHOUSE]: true,
-                [NURSE_OFFICE_BUBBLE]: true
+            },
+            [PANELS]: {
+                [ESTHER_SPEECH_PANEL]: true
             }
         },
         cubes: NOHO_SCHOOL_KEY,
@@ -192,8 +198,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [MIRRORED_SINK]: true,
-                [BATHTUB]: true,
                 [TOWEL_RACK]: true
+            },
+            [PANELS]: {
+                [BATHTUB]: true
             }
         },
         cubes: FAMILY_BATHROOM_KEY,
@@ -224,11 +232,13 @@ module.exports = [
                 [NOHO_HOUSES_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [MIRRORED_SINK]: true,
-                [BATHTUB]: true
+                [MIRRORED_SINK]: true
             },
             [FIXTURES]: {
                 [RECORD_PLAYER_STOOL]: true
+            },
+            [PANELS]: {
+                [BATHTUB]: true
             }
         },
         cubes: FAMILY_BATHROOM_OPEN_KEY,

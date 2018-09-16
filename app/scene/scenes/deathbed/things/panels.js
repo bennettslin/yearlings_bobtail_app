@@ -1,10 +1,10 @@
 import {
-    HOSPITAL_THOUGHT,
-    TENNIS_THOUGHT
-} from 'scene/flatKeys'
+    DEATHBED_THOUGHT_PANEL,
+    TENNIS_THOUGHT_PANEL
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
-    [HOSPITAL_THOUGHT]: {
+    [DEATHBED_THOUGHT_PANEL]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 4
         }
     },
-    [TENNIS_THOUGHT]: {
+    [TENNIS_THOUGHT_PANEL]: {
         yIndex: 1,
         arrangement: {
             xFloat: 2,

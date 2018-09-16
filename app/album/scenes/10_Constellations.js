@@ -8,7 +8,8 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -50,8 +51,6 @@ import {
 } from 'scene/backdropKeys'
 
 import {
-    SATURN_EXTERIOR,
-    SATURN_INTERIOR,
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
@@ -80,6 +79,11 @@ import {
     SATURN_DASHBOARD,
     ATTIC_CUSHIONS
 } from 'scene/furnitureKeys'
+
+import {
+    SATURN_EXTERIOR,
+    SATURN_INTERIOR
+} from 'scene/panelKeys'
 
 module.exports = [
     {
@@ -290,10 +294,6 @@ module.exports = [
             [BACKDROPS]: {
                 [LOS_ANGELES_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [SATURN_EXTERIOR]: true,
-                [SATURN_INTERIOR]: true
-            },
             [FIXTURES]: {
                 [EVIAN_BOTTLES]: true
             },
@@ -305,6 +305,10 @@ module.exports = [
                 [SATURN_SEAT_REAR]: true,
                 [SATURN_SEAT_FRONT]: true,
                 [SATURN_DASHBOARD]: true
+            },
+            [PANELS]: {
+                [SATURN_EXTERIOR]: true,
+                [SATURN_INTERIOR]: true
             }
         },
         cubes: STATION_WAGON_KEY,

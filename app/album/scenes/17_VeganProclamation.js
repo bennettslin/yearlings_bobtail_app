@@ -2,8 +2,8 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    FLATS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -77,16 +77,16 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    PHONE_BUBBLE
-} from 'scene/flatKeys'
-
-import {
     LOADING_DOCK_DOOR,
     LIZ_MATTRESS,
     LIZ_PILLOWS,
     LIZ_MATTRESS_REFLECTION,
     LIZ_PILLOWS_REFLECTION
 } from 'scene/furnitureKeys'
+
+import {
+    PHONE_CALL_PANEL
+} from 'scene/panelKeys'
 
 module.exports = [
     {
@@ -242,8 +242,8 @@ module.exports = [
                 [LIZ_PHONE_BASE]: true,
                 [LIZ_PHONE_BASE_REFLECTION]: true
             },
-            [FLATS]: {
-                [PHONE_BUBBLE]: true
+            [PANELS]: {
+                [PHONE_CALL_PANEL]: true
             },
             [FURNITURES]: {
                 [LIZ_MATTRESS]: true,

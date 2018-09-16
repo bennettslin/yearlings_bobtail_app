@@ -2,7 +2,6 @@ const
     NOHO_HOUSE_LEFT = 'nohoHouseLeft',
     NOHO_HOUSE_RIGHT = 'nohoHouseRight',
     NOHO_SCHOOLHOUSE = 'nohoSchoolhouse',
-    NURSE_OFFICE_BUBBLE = 'nurseOfficeBubble',
     FAMILY_HOUSE = 'familyHouse',
     CAVE_SHADOWS = 'caveShadows',
     TAIWAN_MOUNTAINS_BRIDGED = 'taiwanMountainsBridged',
@@ -39,16 +38,12 @@ const
     ROAD_PRESENT = 'roadPresent',
     ROAD_FUTURE = 'roadFuture',
     EL_CERRITO_ROAD = 'elCerritoRoad',
-    PHONE_BUBBLE = 'phoneBubble',
-    HOSPITAL_THOUGHT = 'hospitalThought',
-    TENNIS_THOUGHT = 'tennisThought',
     CLIFF_GRAVES = 'cliffGraves'
 
 export {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE,
-    NURSE_OFFICE_BUBBLE,
     FAMILY_HOUSE,
     CAVE_SHADOWS,
     TAIWAN_MOUNTAINS_BRIDGED,
@@ -85,8 +80,5 @@ export {
     ROAD_PRESENT,
     ROAD_FUTURE,
     EL_CERRITO_ROAD,
-    PHONE_BUBBLE,
-    HOSPITAL_THOUGHT,
-    TENNIS_THOUGHT,
     CLIFF_GRAVES
 }

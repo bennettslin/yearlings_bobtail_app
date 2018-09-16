@@ -4,7 +4,8 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -46,8 +47,6 @@ import {
 import {
     SANDBAGS,
     STAGE_LIGHTS,
-    GO_KART_EXTERIOR_LEFT,
-    GO_KART_EXTERIOR_RIGHT,
     TRAFFIC_LIGHT
 } from 'scene/cutoutKeys'
 
@@ -74,6 +73,11 @@ import {
     GO_KART_DASHBOARD_RIGHT,
     LIZ_GATE_OUTSIDE_OPEN
 } from 'scene/furnitureKeys'
+
+import {
+    GO_KART_EXTERIOR_LEFT,
+    GO_KART_EXTERIOR_RIGHT
+} from 'scene/panelKeys'
 
 module.exports = [
     {
@@ -213,15 +217,15 @@ module.exports = [
             [BACKDROPS]: {
                 [GO_KART_THOUGHT_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [GO_KART_EXTERIOR_LEFT]: true,
-                [GO_KART_EXTERIOR_RIGHT]: true
-            },
             [FURNITURES]: {
                 [GO_KART_SEAT_LEFT]: true,
                 [GO_KART_SEAT_RIGHT]: true,
                 [GO_KART_DASHBOARD_LEFT]: true,
                 [GO_KART_DASHBOARD_RIGHT]: true
+            },
+            [PANELS]: {
+                [GO_KART_EXTERIOR_LEFT]: true,
+                [GO_KART_EXTERIOR_RIGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,

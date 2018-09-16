@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const SaturnInterior = ({
+const SaturnExterior = ({
 
     className,
 
@@ -18,13 +18,13 @@ const SaturnInterior = ({
     return (
         <Svg
             className={cx(
-                'SaturnInterior',
+                'SaturnExterior',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const SaturnInterior = ({
                 {...other}
             >
                 {cx(
-                    'SaturnInterior'
+                    'SaturnExterior'
                 )}
             </text>
         </Svg>
     )
 }
 
-SaturnInterior.propTypes = propTypes;
+SaturnExterior.propTypes = propTypes;
 
-export default SaturnInterior
+export default SaturnExterior

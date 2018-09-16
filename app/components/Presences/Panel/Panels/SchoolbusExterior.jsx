@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const NurseOfficeBubble = ({
+const SchoolbusExterior = ({
 
     className,
 
@@ -18,13 +18,13 @@ const NurseOfficeBubble = ({
     return (
         <Svg
             className={cx(
-                'NurseOfficeBubble',
+                'SchoolbusExterior',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const NurseOfficeBubble = ({
                 {...other}
             >
                 {cx(
-                    'NurseOfficeBubble'
+                    'SchoolbusExterior'
                 )}
             </text>
         </Svg>
     )
 }
 
-NurseOfficeBubble.propTypes = propTypes;
+SchoolbusExterior.propTypes = propTypes;
 
-export default NurseOfficeBubble
+export default SchoolbusExterior

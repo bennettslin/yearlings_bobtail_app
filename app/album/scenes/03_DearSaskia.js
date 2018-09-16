@@ -1,10 +1,10 @@
 import {
     ACTORS,
     BACKDROPS,
-    CUTOUTS,
     FIXTURES,
     FLATS,
     FURNITURES,
+    PANELS,
     PUPPETS
 } from 'constants/scene'
 
@@ -53,7 +53,7 @@ import {
 import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
-} from 'scene/cutoutKeys'
+} from 'scene/panelKeys'
 
 import {
     BACKPACK_BENNETT,
@@ -170,10 +170,6 @@ module.exports = [
             [BACKDROPS]: {
                 [SCHOOLBUS_THOUGHT_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [SCHOOLBUS_INTERIOR]: true,
-                [SCHOOLBUS_EXTERIOR]: true
-            },
             [FIXTURES]: {
                 [BACKPACK_BENNETT]: true,
                 [BACKPACK_SASHA]: true
@@ -181,6 +177,10 @@ module.exports = [
             [FURNITURES]: {
                 [SCHOOLBUS_SEAT_REAR]: true,
                 [SCHOOLBUS_SEAT_FRONT]: true
+            },
+            [PANELS]: {
+                [SCHOOLBUS_INTERIOR]: true,
+                [SCHOOLBUS_EXTERIOR]: true
             }
         },
         cubes: SCHOOLBUS_KEY,

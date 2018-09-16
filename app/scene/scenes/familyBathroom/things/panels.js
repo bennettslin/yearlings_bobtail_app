@@ -1,14 +1,14 @@
 import {
-    DISHROOM_SINK
-} from 'scene/cutoutKeys'
+    BATHTUB
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
-    [DISHROOM_SINK]: {
-        yIndex: 3,
+    [BATHTUB]: {
+        yIndex: 4,
         arrangement: {
-            xFloat: 4,
+            xFloat: 4.5,
             xWidth: 5,
-            zHeight: 3
+            zHeight: 1.5
         }
     }
 }

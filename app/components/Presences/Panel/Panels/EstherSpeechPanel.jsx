@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const HospitalThought = ({
+const EstherSpeechPanel = ({
 
     className,
 
@@ -18,13 +18,13 @@ const HospitalThought = ({
     return (
         <Svg
             className={cx(
-                'HospitalThought',
+                'EstherSpeechPanel',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const HospitalThought = ({
                 {...other}
             >
                 {cx(
-                    'HospitalThought'
+                    'EstherSpeechPanel'
                 )}
             </text>
         </Svg>
     )
 }
 
-HospitalThought.propTypes = propTypes;
+EstherSpeechPanel.propTypes = propTypes;
 
-export default HospitalThought
+export default EstherSpeechPanel

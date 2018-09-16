@@ -1,14 +1,14 @@
 import {
-    CAPTAIN_BED_DRAWERS
-} from 'scene/cutoutKeys'
+    PHONE_CALL_PANEL
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
-    [CAPTAIN_BED_DRAWERS]: {
+    [PHONE_CALL_PANEL]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 6,
+            xFloat: 9,
             xWidth: 3,
-            zHeight: 2.5
+            zHeight: 3
         }
     }
 }

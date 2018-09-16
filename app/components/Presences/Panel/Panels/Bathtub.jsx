@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const PhoneBubble = ({
+const Bathtub = ({
 
     className,
 
@@ -18,13 +18,13 @@ const PhoneBubble = ({
     return (
         <Svg
             className={cx(
-                'PhoneBubble',
+                'Bathtub',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const PhoneBubble = ({
                 {...other}
             >
                 {cx(
-                    'PhoneBubble'
+                    'Bathtub'
                 )}
             </text>
         </Svg>
     )
 }
 
-PhoneBubble.propTypes = propTypes;
+Bathtub.propTypes = propTypes;
 
-export default PhoneBubble
+export default Bathtub

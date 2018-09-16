@@ -2,7 +2,8 @@ import {
     ACTORS,
     CUTOUTS,
     FIXTURES,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -57,7 +58,6 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
-    DISHROOM_SINK,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     CODE_BOX,
@@ -103,6 +103,10 @@ import {
     LIZ_PILLOWS_REFLECTION
 } from 'scene/furnitureKeys'
 
+import {
+    DISHROOM_SINK
+} from 'scene/panelKeys'
+
 /**
  * All of these scenes repeat twice.
  */
@@ -119,9 +123,6 @@ module.exports = [
                     instance: DISHROOM_READING
                 }
             },
-            [CUTOUTS]: {
-                [DISHROOM_SINK]: true
-            },
             [FIXTURES]: {
                 [CONVEYOR_BELT]: true,
                 [GLASS_CART]: true,
@@ -131,6 +132,9 @@ module.exports = [
             },
             [FURNITURES]: {
                 [DISHROOM_DOOR]: true
+            },
+            [PANELS]: {
+                [DISHROOM_SINK]: true
             }
         },
         cubes: DISHROOM_KEY,
@@ -159,9 +163,6 @@ module.exports = [
                     }
                 }
             },
-            [CUTOUTS]: {
-                [DISHROOM_SINK]: true
-            },
             [FIXTURES]: {
                 [CONVEYOR_BELT]: true,
                 [GLASS_CART]: true,
@@ -171,6 +172,9 @@ module.exports = [
             },
             [FURNITURES]: {
                 [DISHROOM_DOOR]: true
+            },
+            [PANELS]: {
+                [DISHROOM_SINK]: true
             }
         },
         cubes: DISHROOM_KEY,

@@ -5,6 +5,7 @@ import {
     FIXTURES,
     FLATS,
     FURNITURES,
+    PANELS,
     PUPPETS
 } from 'constants/scene'
 
@@ -47,8 +48,6 @@ import {
 } from 'scene/backdropKeys'
 
 import {
-    REATTA_EXTERIOR,
-    REATTA_INTERIOR,
     IV_DRIP
 } from 'scene/cutoutKeys'
 
@@ -57,9 +56,7 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    EL_CERRITO_ROAD,
-    HOSPITAL_THOUGHT,
-    TENNIS_THOUGHT
+    EL_CERRITO_ROAD
 } from 'scene/flatKeys'
 
 import {
@@ -68,6 +65,13 @@ import {
     REATTA_DASHBOARD,
     HOSPITAL_MATTRESS
 } from 'scene/furnitureKeys'
+
+import {
+    REATTA_EXTERIOR,
+    REATTA_INTERIOR,
+    DEATHBED_THOUGHT_PANEL,
+    TENNIS_THOUGHT_PANEL
+} from 'scene/panelKeys'
 
 import {
     PUPPET_REATTA
@@ -95,16 +99,16 @@ module.exports = [
             [BACKDROPS]: {
                 [EL_CERRITO_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [REATTA_EXTERIOR]: true,
-                [REATTA_INTERIOR]: true
-            },
             [FLATS]: {
                 [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
                 [REATTA_SEAT]: true,
                 [REATTA_DASHBOARD]: true
+            },
+            [PANELS]: {
+                [REATTA_EXTERIOR]: true,
+                [REATTA_INTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -134,16 +138,16 @@ module.exports = [
             [BACKDROPS]: {
                 [EL_CERRITO_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [REATTA_EXTERIOR]: true,
-                [REATTA_INTERIOR]: true
-            },
             [FLATS]: {
                 [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
                 [REATTA_SEAT]: true,
                 [REATTA_DASHBOARD]: true
+            },
+            [PANELS]: {
+                [REATTA_EXTERIOR]: true,
+                [REATTA_INTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -173,16 +177,16 @@ module.exports = [
             [BACKDROPS]: {
                 [EL_CERRITO_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [REATTA_EXTERIOR]: true,
-                [REATTA_INTERIOR]: true
-            },
             [FLATS]: {
                 [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
                 [REATTA_SEAT_LOWERED]: true,
                 [REATTA_DASHBOARD]: true
+            },
+            [PANELS]: {
+                [REATTA_EXTERIOR]: true,
+                [REATTA_INTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -209,11 +213,11 @@ module.exports = [
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
-            [FLATS]: {
-                [HOSPITAL_THOUGHT]: true
-            },
             [FURNITURES]: {
                 [HOSPITAL_MATTRESS]: true
+            },
+            [PANELS]: {
+                [DEATHBED_THOUGHT_PANEL]: true
             }
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
@@ -240,12 +244,12 @@ module.exports = [
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
-            [FLATS]: {
-                [HOSPITAL_THOUGHT]: true,
-                [TENNIS_THOUGHT]: true
-            },
             [FURNITURES]: {
                 [HOSPITAL_MATTRESS]: true
+            },
+            [PANELS]: {
+                [DEATHBED_THOUGHT_PANEL]: true,
+                [TENNIS_THOUGHT_PANEL]: true
             }
         },
         cubes: EL_CERRITO_TENNIS_KEY,
@@ -275,16 +279,16 @@ module.exports = [
             [BACKDROPS]: {
                 [EL_CERRITO_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [REATTA_EXTERIOR]: true,
-                [REATTA_INTERIOR]: true
-            },
             [FLATS]: {
                 [EL_CERRITO_ROAD]: true
             },
             [FURNITURES]: {
                 [REATTA_SEAT]: true,
                 [REATTA_DASHBOARD]: true
+            },
+            [PANELS]: {
+                [REATTA_EXTERIOR]: true,
+                [REATTA_INTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,

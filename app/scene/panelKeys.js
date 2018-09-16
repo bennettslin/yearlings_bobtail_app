@@ -1,14 +1,44 @@
 const
+    ESTHER_SPEECH_PANEL = 'estherSpeechPanel',
+    BATHTUB = 'bathtub',
+    CAPTAIN_BED_DRAWERS = 'captainBedDrawers',
+    SCHOOLBUS_EXTERIOR = 'schoolbusExterior',
+    SCHOOLBUS_INTERIOR = 'schoolbusInterior',
+    GO_KART_EXTERIOR_LEFT = 'goKartExteriorLeft',
+    GO_KART_EXTERIOR_RIGHT = 'goKartExteriorRight',
+    DISHROOM_SINK = 'dishroomSink',
+    SATURN_EXTERIOR = 'saturnExterior',
+    SATURN_INTERIOR = 'saturnInterior',
     SNOWGLOBE_TETHERBALL = 'snowglobeTetherball',
     SNOWGLOBE_LIZ_ALONE = 'snowglobeLizAlone',
     SNOWGLOBE_BENNETT_MIRIAM = 'snowglobeBennettMiriam',
     SNOWGLOBE_LIZ_KHARI = 'snowglobeLizKhari',
-    SNOWGLOBE_BENNETT_ALONE = 'snowglobeBennettAlone'
+    SNOWGLOBE_BENNETT_ALONE = 'snowglobeBennettAlone',
+    REATTA_EXTERIOR = 'reattaExterior',
+    REATTA_INTERIOR = 'reattaInterior',
+    DEATHBED_THOUGHT_PANEL = 'deathbedThoughtPanel',
+    TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel',
+    PHONE_CALL_PANEL = 'phoneCallPanel'
 
 export {
+    ESTHER_SPEECH_PANEL,
+    BATHTUB,
+    CAPTAIN_BED_DRAWERS,
+    SCHOOLBUS_EXTERIOR,
+    SCHOOLBUS_INTERIOR,
+    GO_KART_EXTERIOR_LEFT,
+    GO_KART_EXTERIOR_RIGHT,
+    DISHROOM_SINK,
+    SATURN_EXTERIOR,
+    SATURN_INTERIOR,
     SNOWGLOBE_TETHERBALL,
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBE_LIZ_KHARI,
-    SNOWGLOBE_BENNETT_ALONE
+    SNOWGLOBE_BENNETT_ALONE,
+    REATTA_EXTERIOR,
+    REATTA_INTERIOR,
+    DEATHBED_THOUGHT_PANEL,
+    TENNIS_THOUGHT_PANEL,
+    PHONE_CALL_PANEL
 }

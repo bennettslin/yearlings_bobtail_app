@@ -1,7 +1,7 @@
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR
-} from 'scene/cutoutKeys'
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [REATTA_EXTERIOR]: {

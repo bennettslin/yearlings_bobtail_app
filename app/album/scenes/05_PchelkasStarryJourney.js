@@ -5,6 +5,7 @@ import {
     FIXTURES,
     FLATS,
     FURNITURES,
+    PANELS,
     PUPPETS
 } from 'constants/scene'
 
@@ -71,7 +72,6 @@ import {
 } from 'scene/backdropKeys'
 
 import {
-    CAPTAIN_BED_DRAWERS,
     LOCKER_BANK,
     TRASH_CAN,
     ARRANGEMENT_TRASH_CAN_LOCKERS,
@@ -102,6 +102,10 @@ import {
 } from 'scene/furnitureKeys'
 
 import {
+    CAPTAIN_BED_DRAWERS
+} from 'scene/panelKeys'
+
+import {
     PCHELKA,
     MUSHKA,
     ROCKET,
@@ -121,12 +125,12 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [CAPTAIN_BED_DRAWERS]: true
-            },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
                 [CAPTAIN_BED_MATTRESS]: true
+            },
+            [PANELS]: {
+                [CAPTAIN_BED_DRAWERS]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -185,12 +189,12 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BUS_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [CAPTAIN_BED_DRAWERS]: true
-            },
             [FURNITURES]: {
                 [BEDROOM_BLINDS_OPEN]: true,
                 [CAPTAIN_BED_MATTRESS]: true
+            },
+            [PANELS]: {
+                [CAPTAIN_BED_DRAWERS]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -214,15 +218,15 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [CAPTAIN_BED_DRAWERS]: true
-            },
             [FLATS]: {
                 [DOGS_SKETCHBOOK]: true
             },
             [FURNITURES]: {
                 [BEDROOM_BLINDS]: true,
                 [CAPTAIN_BED_MATTRESS]: true
+            },
+            [PANELS]: {
+                [CAPTAIN_BED_DRAWERS]: true
             },
             [PUPPETS]: {
                 [PCHELKA]: true,

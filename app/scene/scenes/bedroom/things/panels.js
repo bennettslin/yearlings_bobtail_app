@@ -1,14 +1,14 @@
 import {
-    PHONE_BUBBLE
-} from 'scene/flatKeys'
+    CAPTAIN_BED_DRAWERS
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
-    [PHONE_BUBBLE]: {
+    [CAPTAIN_BED_DRAWERS]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 9,
+            xFloat: 6,
             xWidth: 3,
-            zHeight: 3
+            zHeight: 2.5
         }
     }
 }
