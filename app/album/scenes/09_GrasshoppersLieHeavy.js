@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BUBBLES,
     CUTOUTS,
     FIXTURES,
     DOORS,
@@ -35,7 +36,7 @@ import {
 import {
     DISHROOM_READING,
     MOP_SOPPED,
-    WAITING_ROOM_THOUGHTS
+    WAITING_ROOM_ASLEEP
 } from 'scene/instanceKeys/bennett'
 
 import {
@@ -57,6 +58,10 @@ import {
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
 } from 'scene/instanceKeys/songs'
+
+import {
+    WAITING_ROOM_THOUGHTS
+} from 'scene/bubbleKeys'
 
 import {
     TRAFFIC_LIGHT,
@@ -406,8 +411,11 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     description: 'sitting, eyes closed, falling asleep',
-                    instance: WAITING_ROOM_THOUGHTS
+                    instance: WAITING_ROOM_ASLEEP
                 }
+            },
+            [BUBBLES]: {
+                [WAITING_ROOM_THOUGHTS]: true
             },
             [CUTOUTS]: {
                 [CLIPBOARD]: true,

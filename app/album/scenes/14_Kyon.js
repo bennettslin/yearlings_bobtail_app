@@ -1,8 +1,6 @@
 import {
     ACTORS,
-    // CUTOUTS,
-    // FIXTURES,
-    // FLATS,
+    BUBBLES,
     DOORS,
     FURNITURES,
     PUPPETS
@@ -35,6 +33,12 @@ import {
     NOT_HUNGRY,
     ASLEEP_COUCH
 } from 'scene/instanceKeys/liz'
+
+import {
+    KHARI_ATTACK_SPEECH,
+    LIZ_DEFENCE_SPEECH,
+    LIZ_THOUGHT
+} from 'scene/bubbleKeys'
 
 import {
     LIZ_BLINDS_OPEN,
@@ -208,6 +212,10 @@ module.exports = [
                     instance: JUDGMENTAL
                 }
             },
+            [BUBBLES]: {
+                [KHARI_ATTACK_SPEECH]: true,
+                [LIZ_DEFENCE_SPEECH]: true,
+            },
             [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
@@ -242,6 +250,9 @@ module.exports = [
                     description: 'back angle, concerned',
                     instance: CONCERNED
                 }
+            },
+            [BUBBLES]: {
+                [LIZ_THOUGHT]: true
             },
             [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,

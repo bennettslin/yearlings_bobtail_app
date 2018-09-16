@@ -26,7 +26,7 @@ import MopSopped from './Instances/MopSopped'
 import GateCode from './Instances/GateCode'
 import GingerbreadPrison from './Instances/GingerbreadPrison'
 import RumpledLinens from './Instances/RumpledLinens'
-import WaitingRoomThoughts from './Instances/WaitingRoomThoughts'
+import WaitingRoomAsleep from './Instances/WaitingRoomAsleep'
 import CheekUnveiled from './Instances/CheekUnveiled'
 import HardOn from './Instances/HardOn'
 import Missionary from './Instances/Missionary'
@@ -88,7 +88,7 @@ import {
     MERRILY_DERANGED,
     DISHROOM_READING,
     MOP_SOPPED,
-    WAITING_ROOM_THOUGHTS,
+    WAITING_ROOM_ASLEEP,
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     BRUSHING_OFF,
@@ -174,7 +174,7 @@ const INSTANCES_MAP = {
     [GATE_CODE]: GateCode,
     [GINGERBREAD_PRISON]: GingerbreadPrison,
     [RUMPLED_LINENS]: RumpledLinens,
-    [WAITING_ROOM_THOUGHTS]: WaitingRoomThoughts,
+    [WAITING_ROOM_ASLEEP]: WaitingRoomAsleep,
     [CHEEK_UNVEILED]: CheekUnveiled,
     [HARD_ON]: HardOn,
     [MISSIONARY]: Missionary,

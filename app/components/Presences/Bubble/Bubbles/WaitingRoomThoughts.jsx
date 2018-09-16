@@ -18,13 +18,13 @@ const WaitingRoomThoughts = ({
     return (
         <Svg
             className={cx(
-                className,
-                'WaitingRoomThoughts'
+                'WaitingRoomThoughts',
+                className
             )}
         >
             <rect
                 className={cx(
-                    'Actor__temporaryRect'
+                    'Bubble__temporaryRect'
                 )}
                 {...other}
             />

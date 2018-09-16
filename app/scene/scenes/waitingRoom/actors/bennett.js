@@ -1,5 +1,5 @@
 import {
-    WAITING_ROOM_THOUGHTS
+    WAITING_ROOM_ASLEEP
 } from 'scene/instanceKeys/bennett'
 
 import {
@@ -7,7 +7,7 @@ import {
 } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [WAITING_ROOM_THOUGHTS]: {
+    [WAITING_ROOM_ASLEEP]: {
         yIndex: -1,
         arrangement: {
             xFloat: 0,
