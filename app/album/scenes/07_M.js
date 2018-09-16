@@ -1,9 +1,9 @@
 import {
     ACTORS,
     BACKDROPS,
+    BUBBLES,
     CUTOUTS,
     FIXTURES,
-    FLATS,
     FURNITURES
 } from 'constants/scene'
 
@@ -69,6 +69,10 @@ import {
 } from 'scene/backdropKeys'
 
 import {
+    CINEMA_THOUGHTS
+} from 'scene/bubbleKeys'
+
+import {
     LEONARD_COHEN_POSTER,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
@@ -91,10 +95,6 @@ import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT
 } from 'scene/fixtureKeys'
-
-import {
-    CINEMA_THOUGHTS
-} from 'scene/flatKeys'
 
 import {
     BASEMENT_DOOR_OPEN,
@@ -388,11 +388,11 @@ module.exports = [
             [BACKDROPS]: {
                 [BAY_AREA_BACKDROP]: true
             },
+            [BUBBLES]: {
+                [CINEMA_THOUGHTS]: true
+            },
             [CUTOUTS]: {
                 [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER_STREET
-            },
-            [FLATS]: {
-                [CINEMA_THOUGHTS]: true
             }
         },
         cubes: CINEMA_STREET_KEY,

@@ -9,6 +9,7 @@ import cx from 'classnames'
 
 import Actor from './Actor/Actor'
 import Backdrop from './Backdrop/Backdrop'
+import Bubble from './Bubble/Bubble'
 import Cutout from './Cutout/Cutout'
 import Fixture from './Fixture/Fixture'
 import Flat from './Flat/Flat'
@@ -26,6 +27,7 @@ import {
 import {
     ACTORS,
     BACKDROPS,
+    BUBBLES,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -41,6 +43,7 @@ import {
 const PRESENCE_TYPE_COMPONENTS = {
     [ACTORS]: Actor,
     [BACKDROPS]: Backdrop,
+    [BUBBLES]: Bubble,
     [CUTOUTS]: Cutout,
     [FIXTURES]: Fixture,
     [FLATS]: Flat,

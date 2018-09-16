@@ -5,6 +5,7 @@
 import {
     ACTORS,
     BACKDROPS,
+    BUBBLES,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -51,6 +52,11 @@ import {
 } from 'scene/backdropKeys'
 
 import {
+    TARPIT_THOUGHT,
+    SIBLING_THOUGHT
+} from 'scene/bubbleKeys'
+
+import {
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
@@ -68,9 +74,7 @@ import {
     ROYCE_HALL,
     PHARMACY_AISLE,
     STEAM_PIPES,
-    CEMETERY_HILLS_NEAR,
-    TARPIT_THOUGHT,
-    SIBLING_THOUGHT
+    CEMETERY_HILLS_NEAR
 } from 'scene/flatKeys'
 
 import {
@@ -294,12 +298,12 @@ module.exports = [
             [BACKDROPS]: {
                 [LOS_ANGELES_BACKDROP]: true
             },
-            [FIXTURES]: {
-                [EVIAN_BOTTLES]: true
-            },
-            [FLATS]: {
+            [BUBBLES]: {
                 [TARPIT_THOUGHT]: true,
                 [SIBLING_THOUGHT]: true
+            },
+            [FIXTURES]: {
+                [EVIAN_BOTTLES]: true
             },
             [FURNITURES]: {
                 [SATURN_SEAT_REAR]: true,

@@ -1,9 +1,7 @@
 import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
-    TAIWAN_CLOUDS,
-    TOGETHER_SKETCHBOOK,
-    APART_SKETCHBOOK,
+    TAIWAN_CLOUDS
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -30,24 +28,6 @@ const ARRANGEMENTS_MAP = {
             xWidth: 10,
             zHeight: 1.5,
             zOffset: 6
-        }
-    },
-    [TOGETHER_SKETCHBOOK]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 8.5,
-            xWidth: 4,
-            zHeight: 3,
-            zOffset: 4.5
-        }
-    },
-    [APART_SKETCHBOOK]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 2.5,
-            xWidth: 4,
-            zHeight: 3,
-            zOffset: 4.5
         }
     }
 }

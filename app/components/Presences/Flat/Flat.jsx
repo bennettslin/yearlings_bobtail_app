@@ -10,25 +10,18 @@ import CaveShadows from './Flats/ChangelingCave/CaveShadows'
 import TaiwanMountainsBridged from './Flats/PuppetShow/TaiwanMountainsBridged'
 import TaiwanMountainsNear from './Flats/PuppetShow/TaiwanMountainsNear'
 import TaiwanClouds from './Flats/PuppetShow/TaiwanClouds'
-import TogetherSketchbook from './Flats/PuppetShow/TogetherSketchbook'
 import VanNuysSchoolhouse from './Flats/TetherballCourt/VanNuysSchoolhouse'
-import ApartSketchbook from './Flats/PuppetShow/ApartSketchbook'
 import ShoreBack from './Flats/Shore/ShoreBack'
 import OceanDepthsBack from './Flats/Buoy/OceanDepthsBack'
 import OceanBottomFar from './Flats/OceanDepths/OceanBottomFar'
-import DogsSketchbook from './Flats/Bedroom/DogsSketchbook'
-import EscapePodSketchbook from './Flats/VanNuysQuad/EscapePodSketchbook'
 import StJosephsAnnex from './Flats/CatholicChurch/StJosephsAnnex'
 import StJosephsChurch from './Flats/CatholicChurch/StJosephsChurch'
 import Campanile from './Flats/UcBerkeley/Campanile'
-import CinemaThoughts from './Flats/Cinema/CinemaThoughts'
 import MuseumDisplay from './Flats/Museum/MuseumDisplay'
 import RoyceHall from './Flats/RoyceHall/RoyceHall'
 import PharmacyAisle from './Flats/Walgreens/PharmacyAisle'
 import SteamPipes from './Flats/SteamTunnel/SteamPipes'
 import CemeteryHillsNear from './Flats/Cemetery/CemeteryHillsNear'
-import TarpitThought from './Flats/StationWagon/TarpitThought'
-import SiblingThought from './Flats/StationWagon/SiblingThought'
 import OaklandHouseLeft from './Flats/OaklandHouses/OaklandHouseLeft'
 import OaklandHouseRight from './Flats/OaklandHouses/OaklandHouseRight'
 import ResidentialLeft from './Flats/OaklandResidential/ResidentialLeft'
@@ -52,25 +45,18 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
-    TOGETHER_SKETCHBOOK,
     VAN_NUYS_SCHOOLHOUSE,
-    APART_SKETCHBOOK,
     SHORE_BACK,
     OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR,
-    DOGS_SKETCHBOOK,
-    ESCAPE_POD_SKETCHBOOK,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
-    CINEMA_THOUGHTS,
     MUSEUM_DISPLAY,
     ROYCE_HALL,
     PHARMACY_AISLE,
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR,
-    TARPIT_THOUGHT,
-    SIBLING_THOUGHT,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
     RESIDENTIAL_LEFT,
@@ -95,25 +81,18 @@ const FLATS_MAP = {
     [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
     [TAIWAN_MOUNTAINS_NEAR]: TaiwanMountainsNear,
     [TAIWAN_CLOUDS]: TaiwanClouds,
-    [TOGETHER_SKETCHBOOK]: TogetherSketchbook,
     [VAN_NUYS_SCHOOLHOUSE]: VanNuysSchoolhouse,
-    [APART_SKETCHBOOK]: ApartSketchbook,
     [SHORE_BACK]: ShoreBack,
     [OCEAN_DEPTHS_BACK]: OceanDepthsBack,
     [OCEAN_BOTTOM_FAR]: OceanBottomFar,
-    [DOGS_SKETCHBOOK]: DogsSketchbook,
-    [ESCAPE_POD_SKETCHBOOK]: EscapePodSketchbook,
     [ST_JOSEPHS_ANNEX]: StJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: StJosephsChurch,
     [CAMPANILE]: Campanile,
-    [CINEMA_THOUGHTS]: CinemaThoughts,
     [MUSEUM_DISPLAY]: MuseumDisplay,
     [ROYCE_HALL]: RoyceHall,
     [PHARMACY_AISLE]: PharmacyAisle,
     [STEAM_PIPES]: SteamPipes,
     [CEMETERY_HILLS_NEAR]: CemeteryHillsNear,
-    [TARPIT_THOUGHT]: TarpitThought,
-    [SIBLING_THOUGHT]: SiblingThought,
     [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
     [RESIDENTIAL_LEFT]: ResidentialLeft,

@@ -1,22 +1,22 @@
 import {
-    TARPIT_THOUGHT,
-    SIBLING_THOUGHT
-} from 'scene/flatKeys'
+    TOGETHER_SKETCHBOOK,
+    APART_SKETCHBOOK
+} from 'scene/bubbleKeys'
 
 const ARRANGEMENTS_MAP = {
-    [TARPIT_THOUGHT]: {
+    [TOGETHER_SKETCHBOOK]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 3,
+            xFloat: 8.5,
             xWidth: 4,
             zHeight: 3,
             zOffset: 4.5
         }
     },
-    [SIBLING_THOUGHT]: {
+    [APART_SKETCHBOOK]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 8,
+            xFloat: 2.5,
             xWidth: 4,
             zHeight: 3,
             zOffset: 4.5

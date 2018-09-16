@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const EscapePodSketchbook = ({
+const TogetherSketchbook = ({
 
     className,
 
@@ -18,13 +18,13 @@ const EscapePodSketchbook = ({
     return (
         <Svg
             className={cx(
-                'EscapePodSketchbook',
+                'TogetherSketchbook',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Bubble__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const EscapePodSketchbook = ({
                 {...other}
             >
                 {cx(
-                    'EscapePodSketchbook'
+                    'TogetherSketchbook'
                 )}
             </text>
         </Svg>
     )
 }
 
-EscapePodSketchbook.propTypes = propTypes;
+TogetherSketchbook.propTypes = propTypes;
 
-export default EscapePodSketchbook
+export default TogetherSketchbook

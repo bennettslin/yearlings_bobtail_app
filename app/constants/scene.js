@@ -14,6 +14,7 @@ const
 
     ACTORS = 'actors',
     BACKDROPS = 'backdrops',
+    BUBBLES = 'bubbles',
     CUTOUTS = 'cutouts',
     FIXTURES = 'fixtures',
     FLATS = 'flats',
@@ -49,6 +50,7 @@ module.exports = {
 
     ACTORS,
     BACKDROPS,
+    BUBBLES,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -58,6 +60,7 @@ module.exports = {
     PRESENCE_TYPES: [
         ACTORS,
         BACKDROPS,
+        BUBBLES,
         CUTOUTS,
         FIXTURES,
         FLATS,

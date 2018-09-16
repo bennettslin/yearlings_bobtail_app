@@ -1,6 +1,6 @@
 import {
     ESCAPE_POD_SKETCHBOOK
-} from 'scene/flatKeys'
+} from 'scene/bubbleKeys'
 
 const ARRANGEMENTS_MAP = {
     [ESCAPE_POD_SKETCHBOOK]: {

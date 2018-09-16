@@ -1,6 +1,6 @@
 import {
     CINEMA_THOUGHTS
-} from 'scene/flatKeys'
+} from 'scene/bubbleKeys'
 
 const ARRANGEMENTS_MAP = {
     [CINEMA_THOUGHTS]: {

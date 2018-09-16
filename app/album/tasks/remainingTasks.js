@@ -1,11 +1,5 @@
 module.exports = [
 
-    {
-        taskName: `Separate bubbles.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     /**
      * End home tasks.
      */

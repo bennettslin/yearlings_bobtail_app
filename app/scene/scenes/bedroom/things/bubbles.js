@@ -1,6 +1,6 @@
 import {
     DOGS_SKETCHBOOK
-} from 'scene/flatKeys'
+} from 'scene/bubbleKeys'
 
 const ARRANGEMENTS_MAP = {
     [DOGS_SKETCHBOOK]: {

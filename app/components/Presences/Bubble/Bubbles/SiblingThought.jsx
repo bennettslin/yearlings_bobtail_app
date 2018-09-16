@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const DogsSketchbook = ({
+const SiblingThought = ({
 
     className,
 
@@ -18,13 +18,13 @@ const DogsSketchbook = ({
     return (
         <Svg
             className={cx(
-                'DogsSketchbook',
+                'SiblingThought',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Bubble__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const DogsSketchbook = ({
                 {...other}
             >
                 {cx(
-                    'DogsSketchbook'
+                    'SiblingThought'
                 )}
             </text>
         </Svg>
     )
 }
 
-DogsSketchbook.propTypes = propTypes;
+SiblingThought.propTypes = propTypes;
 
-export default DogsSketchbook
+export default SiblingThought

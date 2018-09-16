@@ -1,6 +1,7 @@
 import {
     ACTORS,
     BACKDROPS,
+    BUBBLES,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -72,6 +73,11 @@ import {
 } from 'scene/backdropKeys'
 
 import {
+    DOGS_SKETCHBOOK,
+    ESCAPE_POD_SKETCHBOOK
+} from 'scene/bubbleKeys'
+
+import {
     LOCKER_BANK,
     TRASH_CAN,
     ARRANGEMENT_TRASH_CAN_LOCKERS,
@@ -89,8 +95,6 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    DOGS_SKETCHBOOK,
-    ESCAPE_POD_SKETCHBOOK,
     VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
 
@@ -218,7 +222,7 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
-            [FLATS]: {
+            [BUBBLES]: {
                 [DOGS_SKETCHBOOK]: true
             },
             [FURNITURES]: {
@@ -349,13 +353,13 @@ module.exports = [
             [BACKDROPS]: {
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             },
+            [BUBBLES]: {
+                [ESCAPE_POD_SKETCHBOOK]: true
+            },
             [CUTOUTS]: {
                 [TRASH_CAN]: ARRANGEMENT_TRASH_CAN_QUAD,
                 [VAN_NUYS_PLANTS]: ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
                 [VAN_NUYS_LOGO]: true
-            },
-            [FLATS]: {
-                [ESCAPE_POD_SKETCHBOOK]: true
             }
         },
         cubes: VAN_NUYS_QUAD_KEY,

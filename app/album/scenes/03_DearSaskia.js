@@ -1,6 +1,7 @@
 import {
     ACTORS,
     BACKDROPS,
+    BUBBLES,
     FIXTURES,
     FLATS,
     FURNITURES,
@@ -51,9 +52,9 @@ import {
 } from 'scene/backdropKeys'
 
 import {
-    SCHOOLBUS_EXTERIOR,
-    SCHOOLBUS_INTERIOR
-} from 'scene/panelKeys'
+    TOGETHER_SKETCHBOOK,
+    APART_SKETCHBOOK
+} from 'scene/bubbleKeys'
 
 import {
     BACKPACK_BENNETT,
@@ -64,15 +65,18 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
-    TOGETHER_SKETCHBOOK,
-    VAN_NUYS_SCHOOLHOUSE,
-    APART_SKETCHBOOK
+    VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
 
 import {
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_REAR
 } from 'scene/furnitureKeys'
+
+import {
+    SCHOOLBUS_EXTERIOR,
+    SCHOOLBUS_INTERIOR
+} from 'scene/panelKeys'
 
 import {
     PUPPET_BENNETT_BEGIN,
@@ -122,11 +126,13 @@ module.exports = [
             [BACKDROPS]: {
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
+            [BUBBLES]: {
+                [TOGETHER_SKETCHBOOK]: true
+            },
             [FLATS]: {
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAINS_NEAR]: true,
-                [TAIWAN_CLOUDS]: true,
-                [TOGETHER_SKETCHBOOK]: true
+                [TAIWAN_CLOUDS]: true
             },
             [PUPPETS]: {
                 [PUPPET_BENNETT_MIDDLE]: true,
@@ -239,11 +245,13 @@ module.exports = [
             [BACKDROPS]: {
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
+            [BUBBLES]: {
+                [APART_SKETCHBOOK]: true
+            },
             [FLATS]: {
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAINS_NEAR]: true,
-                [TAIWAN_CLOUDS]: true,
-                [APART_SKETCHBOOK]: true
+                [TAIWAN_CLOUDS]: true
             },
             [PUPPETS]: {
                 [PUPPET_BENNETT_END]: true,

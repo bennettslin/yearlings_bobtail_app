@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CinemaThoughts = ({
+const ApartSketchbook = ({
 
     className,
 
@@ -18,13 +18,13 @@ const CinemaThoughts = ({
     return (
         <Svg
             className={cx(
-                'CinemaThoughts',
+                'ApartSketchbook',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Bubble__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const CinemaThoughts = ({
                 {...other}
             >
                 {cx(
-                    'CinemaThoughts'
+                    'ApartSketchbook'
                 )}
             </text>
         </Svg>
     )
 }
 
-CinemaThoughts.propTypes = propTypes;
+ApartSketchbook.propTypes = propTypes;
 
-export default CinemaThoughts
+export default ApartSketchbook
