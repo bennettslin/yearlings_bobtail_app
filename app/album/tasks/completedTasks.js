@@ -3886,5 +3886,5 @@ module.exports = [
         taskName: `Separate doors.`,
         workedHours: 1,
         neededHours: 1
-    },
+    }
 ]
