@@ -26,7 +26,7 @@ House key (always keep in suitcase)
 Toiletries bag
 
 ## Bring back
-Vitamins
+Vitamins (probably don't bother next time)
 Soylent
 
 ## Things to bring next time

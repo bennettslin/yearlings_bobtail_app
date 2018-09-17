@@ -6,7 +6,10 @@ import {
     PUPPETS
 } from 'constants/scene'
 
-import { LIZ_COUCH_KEY } from 'scene/cubesKeys'
+import {
+    LIZ_COUCH_KEY,
+    LIZ_COUCH_SEAT_KEY
+} from 'scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -225,7 +228,7 @@ module.exports = [
                 [LIZ_CUSHIONS]: true
             }
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_SEAT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

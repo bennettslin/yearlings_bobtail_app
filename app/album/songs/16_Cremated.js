@@ -946,7 +946,7 @@ module.exports = {
                     {
                         anchor: `preparing the scoop,`,
                         annotation: {
-                            description: `Miriam searches for a way to deliver the bad news in the least messy way possible, like a homeowner ready to swoop in with "scoop" in hand as her dog takes its "dump" on her freshly manicured lawn.`,
+                            description: `Miriam searches for a way to deliver the bad news in the least messy way possible, as if swooping in with "scoop" in hand after a pet takes its "dump" on her freshly manicured lawn.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true,
