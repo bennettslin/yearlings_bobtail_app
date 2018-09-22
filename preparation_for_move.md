@@ -1,6 +1,5 @@
 # One-time hassles.
-Sell dumbbells.
-Take down pole and get rid.
+Pole.
 Take down guitar mounts.
 Take down coat rack.
 Take down vacuum cleaner.
@@ -8,7 +7,7 @@ Unmount monitor arm.
 Put back shower stopper.
 
 # Periodic hassles.
-Switch renter's insurance.
+<!-- Switch renter's insurance. -->
 Change Wave address.
 
 # Major things to move.
@@ -34,3 +33,14 @@ Bedstand.
 # Definitely need help to move.
 Bed.
 Desk.
+
+75" to bottom of pullup bar.
+54" to screw for coat rack.
+65" to bottom screw for guitar mount.
+
+# After move.
+Put up guitar mounts.
+Put up coat rack.
+Put up vacuum cleaner.
+
+Buy storage units.
