@@ -108,6 +108,7 @@ import {
 } from 'scene/doorKeys'
 
 import {
+    BEDROOM_DESK,
     CAPTAIN_BED_MATTRESS
 } from 'scene/furnitureKeys'
 
@@ -139,6 +140,7 @@ module.exports = [
                 [BEDROOM_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
+                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_MATTRESS]: true
             },
             [PANELS]: {
@@ -178,6 +180,9 @@ module.exports = [
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
+            },
+            [FURNITURES]: {
+                [BEDROOM_DESK]: true
             }
         },
         cubes: BEDROOM_OPEN_KEY,
@@ -208,7 +213,8 @@ module.exports = [
                 [RED_ENVELOPE_MONEY]: true
             },
             [FURNITURES]: {
-                [CAPTAIN_BED_MATTRESS]: true
+                [CAPTAIN_BED_MATTRESS]: true,
+                [BEDROOM_DESK]: true
             },
             [PANELS]: {
                 [CAPTAIN_BED_DRAWERS]: true
@@ -276,6 +282,9 @@ module.exports = [
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
+            },
+            [FURNITURES]: {
+                [BEDROOM_DESK]: true
             },
             [FIXTURES]: {
                 [BEYONDER_ENVELOPE]: true

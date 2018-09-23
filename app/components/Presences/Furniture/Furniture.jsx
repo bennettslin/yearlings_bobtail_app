@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import BedroomDesk from './Furnitures/Bedroom/BedroomDesk'
 import CaptainBedMattress from './Furnitures/Bedroom/CaptainBedMattress'
 import SchoolbusSeatFront from './Furnitures/Schoolbus/SchoolbusSeatFront'
 import SchoolbusSeatRear from './Furnitures/Schoolbus/SchoolbusSeatRear'
@@ -32,6 +33,7 @@ import ReattaDashboard from './Furnitures/ElCerrito/ReattaDashboard'
 import HospitalMattress from './Furnitures/Deathbed/HospitalMattress'
 
 import {
+    BEDROOM_DESK,
     CAPTAIN_BED_MATTRESS,
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_REAR,
@@ -63,6 +65,7 @@ import {
 } from 'scene/furnitureKeys'
 
 const FURNITURES_MAP = {
+    [BEDROOM_DESK]: BedroomDesk,
     [CAPTAIN_BED_MATTRESS]: CaptainBedMattress,
     [SCHOOLBUS_SEAT_FRONT]: SchoolbusSeatFront,
     [SCHOOLBUS_SEAT_REAR]: SchoolbusSeatRear,

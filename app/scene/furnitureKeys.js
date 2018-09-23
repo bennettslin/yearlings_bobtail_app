@@ -1,5 +1,8 @@
 const
     // TODO
+    BEDROOM_DESK = 'bedroomDesk',
+
+    // TODO
     CAPTAIN_BED_MATTRESS = 'captainBedMattress',
 
     // TODO
@@ -68,6 +71,7 @@ const
     HOSPITAL_MATTRESS = 'hospitalMattress'
 
 export {
+    BEDROOM_DESK,
     CAPTAIN_BED_MATTRESS,
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_REAR,

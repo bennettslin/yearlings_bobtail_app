@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `bedroomDesk`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: 'captainBedMattress',
         workedHours: 0,
         neededHours: 2
@@ -113,14 +118,5 @@ module.exports = [
         taskName: 'hospitalMattress',
         workedHours: 0,
         neededHours: 2
-    },
-
-    /**
-     * Furniture and touched props (lifelike)
-     */
-    {
-        taskName: `Desk top (Willy, Pchelka)`,
-        workedHours: 0,
-        neededHours: 3
     }
 ]

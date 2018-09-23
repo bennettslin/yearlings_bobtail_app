@@ -106,6 +106,7 @@ import {
 } from 'scene/doorKeys'
 
 import {
+    BEDROOM_DESK,
     CAPTAIN_BED_MATTRESS
 } from 'scene/furnitureKeys'
 
@@ -245,6 +246,7 @@ module.exports = [
                 [BEDROOM_BLINDS_OPEN]: true,
             },
             [FURNITURES]: {
+                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_MATTRESS]: true
             },
             [PANELS]: {
@@ -331,6 +333,7 @@ module.exports = [
                 [BEDROOM_BLINDS_OPEN]: true,
             },
             [FURNITURES]: {
+                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_MATTRESS]: true
             },
             [PANELS]: {
