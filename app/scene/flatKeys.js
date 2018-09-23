@@ -1,6 +1,6 @@
 const
 
-    // With nohoHouses backdrop.
+    // With nohoHouses backdrop. Requires editing.
     NOHO_HOUSE_LEFT = 'nohoHouseLeft',
     NOHO_HOUSE_RIGHT = 'nohoHouseRight',
 
@@ -23,7 +23,11 @@ const
 
     // TODO
     SHORE_BACK = 'shoreBack',
+
+    // TODO
     OCEAN_DEPTHS_BACK = 'oceanDepthsBack',
+
+    // TODO
     OCEAN_BOTTOM_FAR = 'oceanBottomFar',
 
     // Own page.
@@ -33,7 +37,7 @@ const
     ST_JOSEPHS_ANNEX = 'stJosephsAnnex',
     ST_JOSEPHS_CHURCH = 'stJosephsChurch',
 
-    // With ucBerkeley backdrop and cutouts.
+    // With ucBerkeley backdrop and cutouts. Requires editing.
     CAMPANILE = 'campanile',
 
     // Own page.
@@ -48,25 +52,40 @@ const
     // Own page.
     STEAM_PIPES = 'steamPipes',
 
+    // TODO
     CEMETERY_HILLS_NEAR = 'cemeteryHillsNear',
+
+    // With stage cutouts. Requires editing.
     CROWD_SIDE_NEAR = 'crowdSideNear',
     CROWD_SIDE_FAR = 'crowdSideFar',
-    OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft',
-    OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight',
-    RESIDENTIAL_LEFT = 'residentialLeft',
-    RESIDENTIAL_RIGHT = 'residentialRight',
-    COMMERCIAL_LEFT = 'commercialLeft',
-    COMMERCIAL_RIGHT = 'commercialRight',
-    PUBLIC_LEFT = 'publicLeft',
-    PUBLIC_RIGHT = 'publicRight',
-    ROAD_PAST = 'roadPast',
-    ROAD_PRESENT = 'roadPresent',
-    ROAD_FUTURE = 'roadFuture',
-    EL_CERRITO_ROAD = 'elCerritoRoad',
-
     CROWD_BACK_NEAR = 'crowdBackNear',
     CROWD_BACK_FAR = 'crowdBackFar',
 
+    // Houses and shrubs on two pages. Requires editing.
+    OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft',
+    OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight',
+
+    // TODO
+    RESIDENTIAL_LEFT = 'residentialLeft',
+    RESIDENTIAL_RIGHT = 'residentialRight',
+
+    // TODO
+    COMMERCIAL_LEFT = 'commercialLeft',
+    COMMERCIAL_RIGHT = 'commercialRight',
+
+    // TODO
+    PUBLIC_LEFT = 'publicLeft',
+    PUBLIC_RIGHT = 'publicRight',
+
+    // TODO
+    ROAD_PAST = 'roadPast',
+    ROAD_PRESENT = 'roadPresent',
+    ROAD_FUTURE = 'roadFuture',
+
+    // TODO
+    EL_CERRITO_ROAD = 'elCerritoRoad',
+
+    // TODO
     CLIFF_GRAVES = 'cliffGraves'
 
 export {

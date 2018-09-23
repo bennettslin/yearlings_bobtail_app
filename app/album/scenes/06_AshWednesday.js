@@ -63,8 +63,9 @@ import {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE_LEFT,
-    UC_BERKELEY_TREE_RIGHT
+    UC_BERKELEY_TREE,
+    ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
+    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
 } from 'scene/cutoutKeys'
 
 import {
@@ -225,7 +226,7 @@ module.exports = [
                 [UC_BERKELEY_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [UC_BERKELEY_TREE_LEFT]: true
+                [UC_BERKELEY_TREE]: ARRANGEMENT_UC_BERKELEY_TREE_LEFT
             },
             [FIXTURES]: {
                 [ASH_CAN]: true
@@ -264,7 +265,7 @@ module.exports = [
             [CUTOUTS]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
-                [UC_BERKELEY_TREE_RIGHT]: true
+                [UC_BERKELEY_TREE]: ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
             },
             [FLATS]: {
                 [CAMPANILE]: true

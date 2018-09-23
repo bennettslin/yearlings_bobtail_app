@@ -1,8 +1,9 @@
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE_LEFT,
-    UC_BERKELEY_TREE_RIGHT
+    UC_BERKELEY_TREE,
+    ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
+    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
 } from 'scene/cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -22,20 +23,22 @@ const ARRANGEMENTS_MAP = {
             zHeight: 3
         }
     },
-    [UC_BERKELEY_TREE_LEFT]: {
-        yIndex: 2,
-        arrangement: {
-            xFloat: 1,
-            xWidth: 2,
-            zHeight: 4
-        }
-    },
-    [UC_BERKELEY_TREE_RIGHT]: {
-        yIndex: 2,
-        arrangement: {
-            xFloat: 9.5,
-            xWidth: 2,
-            zHeight: 4
+    [UC_BERKELEY_TREE]: {
+        [ARRANGEMENT_UC_BERKELEY_TREE_LEFT]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 1,
+                xWidth: 2,
+                zHeight: 4
+            }
+        },
+        [ARRANGEMENT_UC_BERKELEY_TREE_RIGHT]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 9.5,
+                xWidth: 2,
+                zHeight: 4
+            }
         }
     }
 }

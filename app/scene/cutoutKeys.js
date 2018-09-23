@@ -95,8 +95,7 @@ const
     BANCROFT_SHRUBS = 'bancroftShrubs',
 
     // With ucBerkeley backdrop and flat.
-    UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft',
-    UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight',
+    UC_BERKELEY_TREE = 'ucBerkeleyTree',
 
     // TODO
     LEONARD_COHEN_POSTER = 'leonardCohenPoster',
@@ -144,6 +143,8 @@ const
     ARRANGEMENT_VAN_NUYS_PLANT_QUAD = 'arrangementVanNuysPlantQuad',
     ARRANGEMENT_TRASH_CAN_LOCKERS = 'arrangementTrashCanLockers',
     ARRANGEMENT_TRASH_CAN_QUAD = 'arrangementTrashCanQuad',
+    ARRANGEMENT_UC_BERKELEY_TREE_LEFT = 'arrangementUcBerkeleyTreeLeft',
+    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT = 'arrangementUcBerkeleyTreeRight',
     ARRANGEMENT_CINEMA_POSTER = 'arrangementCinemaPoster',
     ARRANGEMENT_CINEMA_POSTER_STREET = 'arrangementCinemaPosterStreet',
     ARRANGEMENT_MONITOR_SIDE_CROWD = 'arrangementMonitorSideCrowd',
@@ -193,8 +194,7 @@ export {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE_LEFT,
-    UC_BERKELEY_TREE_RIGHT,
+    UC_BERKELEY_TREE,
     LEONARD_COHEN_POSTER,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
@@ -226,6 +226,8 @@ export {
     ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
     ARRANGEMENT_TRASH_CAN_LOCKERS,
     ARRANGEMENT_TRASH_CAN_QUAD,
+    ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
+    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT,
     ARRANGEMENT_CINEMA_POSTER,
     ARRANGEMENT_CINEMA_POSTER_STREET,
     ARRANGEMENT_MONITOR_SIDE_CROWD,

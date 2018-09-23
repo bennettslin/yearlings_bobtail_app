@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const UcBerkeleyTreeLeft = ({
+const UcBerkeleyTree = ({
 
     className,
 
@@ -18,7 +18,7 @@ const UcBerkeleyTreeLeft = ({
     return (
         <Svg
             className={cx(
-                'UcBerkeleyTreeLeft',
+                'UcBerkeleyTree',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const UcBerkeleyTreeLeft = ({
                 {...other}
             >
                 {cx(
-                    'UcBerkeleyTreeLeft'
+                    'UcBerkeleyTree'
                 )}
             </text>
         </Svg>
     )
 }
 
-UcBerkeleyTreeLeft.propTypes = propTypes;
+UcBerkeleyTree.propTypes = propTypes;
 
-export default UcBerkeleyTreeLeft
+export default UcBerkeleyTree

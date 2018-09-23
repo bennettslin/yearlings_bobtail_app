@@ -43,8 +43,7 @@ import DispenserRight from './Cutouts/CatholicChurch/DispenserRight'
 import BerkeleyLamppost from './Cutouts/CatholicChurch/BerkeleyLamppost'
 import SignPost from './Cutouts/UcBerkeley/SignPost'
 import BancroftShrubs from './Cutouts/UcBerkeley/BancroftShrubs'
-import UcBerkeleyTreeLeft from './Cutouts/UcBerkeley/UcBerkeleyTreeLeft'
-import UcBerkeleyTreeRight from './Cutouts/UcBerkeley/UcBerkeleyTreeRight'
+import UcBerkeleyTree from './Cutouts/UcBerkeley/UcBerkeleyTree'
 import LeonardCohenPoster from './Cutouts/BennettCouch/LeonardCohenPoster'
 import MonitorSpeakerLeft from './Cutouts/ClubFront/MonitorSpeakerLeft'
 import MonitorSpeakerRight from './Cutouts/ClubFront/MonitorSpeakerRight'
@@ -114,8 +113,7 @@ import {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE_LEFT,
-    UC_BERKELEY_TREE_RIGHT,
+    UC_BERKELEY_TREE,
     LEONARD_COHEN_POSTER,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
@@ -186,8 +184,7 @@ const CUTOUTS_MAP = {
     [BERKELEY_LAMPPOST]: BerkeleyLamppost,
     [SIGNPOST]: SignPost,
     [BANCROFT_SHRUBS]: BancroftShrubs,
-    [UC_BERKELEY_TREE_LEFT]: UcBerkeleyTreeLeft,
-    [UC_BERKELEY_TREE_RIGHT]: UcBerkeleyTreeRight,
+    [UC_BERKELEY_TREE]: UcBerkeleyTree,
     [LEONARD_COHEN_POSTER]: LeonardCohenPoster,
     [MONITOR_SPEAKER_LEFT]: MonitorSpeakerLeft,
     [MONITOR_SPEAKER_RIGHT]: MonitorSpeakerRight,
