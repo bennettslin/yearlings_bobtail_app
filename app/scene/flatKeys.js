@@ -1,5 +1,4 @@
 const
-
     // With nohoHouses backdrop. Requires editing.
     NOHO_HOUSE_LEFT = 'nohoHouseLeft',
     NOHO_HOUSE_RIGHT = 'nohoHouseRight',

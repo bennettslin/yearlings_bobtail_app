@@ -48,7 +48,7 @@ import {
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
-    LOS_ANGELES_BACKDROP
+    STATION_WAGON_BACKDROP
 } from 'scene/backdropKeys'
 
 import {
@@ -296,7 +296,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [LOS_ANGELES_BACKDROP]: true
+                [STATION_WAGON_BACKDROP]: true
             },
             [BUBBLES]: {
                 [TARPIT_THOUGHT]: true,

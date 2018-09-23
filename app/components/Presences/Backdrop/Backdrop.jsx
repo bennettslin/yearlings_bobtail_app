@@ -26,7 +26,7 @@ import GoKartThoughtBackdrop from './Backdrops/GoKartThoughtBackdrop'
 import UclaBackdrop from './Backdrops/UclaBackdrop'
 import PharmacyThoughtBackdrop from './Backdrops/PharmacyThoughtBackdrop'
 import CemeteryBackdrop from './Backdrops/CemeteryBackdrop'
-import LosAngelesBackdrop from './Backdrops/LosAngelesBackdrop'
+import StationWagonBackdrop from './Backdrops/StationWagonBackdrop'
 import OaklandBackdrop from './Backdrops/OaklandBackdrop'
 import LizCouchThoughtBackdrop from './Backdrops/LizCouchThoughtBackdrop'
 import ResidenceBackdrop from './Backdrops/ResidenceBackdrop'
@@ -63,7 +63,7 @@ import {
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
-    LOS_ANGELES_BACKDROP,
+    STATION_WAGON_BACKDROP,
     OAKLAND_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     RESIDENCE_BACKDROP,
@@ -101,7 +101,7 @@ const BACKDROPS_MAP = {
     [UCLA_BACKDROP]: UclaBackdrop,
     [PHARMACY_THOUGHT_BACKDROP]: PharmacyThoughtBackdrop,
     [CEMETERY_BACKDROP]: CemeteryBackdrop,
-    [LOS_ANGELES_BACKDROP]: LosAngelesBackdrop,
+    [STATION_WAGON_BACKDROP]: StationWagonBackdrop,
     [OAKLAND_BACKDROP]: OaklandBackdrop,
     [LIZ_COUCH_THOUGHT_BACKDROP]: LizCouchThoughtBackdrop,
     [RESIDENCE_BACKDROP]: ResidenceBackdrop,

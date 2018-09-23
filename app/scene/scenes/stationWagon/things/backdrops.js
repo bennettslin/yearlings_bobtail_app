@@ -1,9 +1,9 @@
 import {
-    LOS_ANGELES_BACKDROP
+    STATION_WAGON_BACKDROP
 } from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [LOS_ANGELES_BACKDROP]: {
+    [STATION_WAGON_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

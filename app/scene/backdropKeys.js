@@ -1,11 +1,10 @@
 // Each scene has one backdrop at most. Backdrop is always the furthest back.
 
 const
-
     // With nohoHouses flats. Requires editing.
     NOHO_HOUSES_BACKDROP = 'nohoHousesBackdrop',
 
-    // With nohoSchool cutout and flat.
+    // With nohoSchool cutout and flat. Requires editing.
     NOHO_SCHOOL_BACKDROP = 'nohoSchoolBackdrop',
 
     // Own page.
@@ -43,33 +42,60 @@ const
     // TODO
     OCEAN_FLOOR_BACKDROP = 'oceanFloorBackdrop',
 
-
+    // TODO
     VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
 
     // TODO
     BENNETT_COUCH_THOUGHT_BACKDROP = 'bennettCouchThoughtBackdrop',
 
-
+    // Together on one page. Requires editing.
     WEST_BERKELEY_BACKDROP = 'westBerkeleyBackdrop',
-
-    // With ucBerkeley backdrop and cutouts. Requires editing.
-    UC_BERKELEY_BACKDROP = 'ucBerkeleyBackdrop',
-
-    CINEMA_BACKDROP = 'cinemaBackdrop',
-    GO_KART_THOUGHT_BACKDROP = 'goKartThought',
     UCLA_BACKDROP = 'uclaBackdrop',
-    PHARMACY_THOUGHT_BACKDROP = 'pharmacyThought',
-    CEMETERY_BACKDROP = 'cemeteryBackdrop',
-    LOS_ANGELES_BACKDROP = 'losAngelesBackdrop',
+
+    // Background, buildings and trees on two pages. Background with ucBerkeley backdrop and cutouts. Requires editing.
+    UC_BERKELEY_BACKDROP = 'ucBerkeleyBackdrop',
     OAKLAND_BACKDROP = 'oaklandBackdrop',
+
+    // TODO
+    CINEMA_BACKDROP = 'cinemaBackdrop',
+
+    // TODO
+    GO_KART_THOUGHT_BACKDROP = 'goKartThought',
+
+    // TODO
+    PHARMACY_THOUGHT_BACKDROP = 'pharmacyThought',
+
+    // TODO
+    CEMETERY_BACKDROP = 'cemeteryBackdrop',
+
+    // TODO
+    STATION_WAGON_BACKDROP = 'stationWagonBackdrop',
+
+    // TODO
     LIZ_COUCH_THOUGHT_BACKDROP = 'lizCouchThought',
+
+    // TODO
     RESIDENCE_BACKDROP = 'residenceBackdrop',
+
+    // TODO
     COMMERCIAL_BACKDROP = 'commercialBackdrop',
+
+    // TODO
     PUBLIC_BACKDROP = 'publicBackdrop',
+
+    // TODO
     EL_CERRITO_BACKDROP = 'elCerritoBackdrop',
+
+    // TODO
     PAMPAS_BACKDROP = 'pampasBackdrop',
+
+    // TODO
     WEDDING_BACKDROP = 'weddingBackdrop',
+
+    // TODO
     CLIFF_BACKDROP = 'cliffBackdrop',
+
+    // TODO
     INVERSE_THOUGHT_BACKDROP = 'inverseThoughtBackdrop'
 
 export {
@@ -97,7 +123,7 @@ export {
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
-    LOS_ANGELES_BACKDROP,
+    STATION_WAGON_BACKDROP,
     OAKLAND_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     RESIDENCE_BACKDROP,
