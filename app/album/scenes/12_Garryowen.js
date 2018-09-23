@@ -5,7 +5,8 @@ import {
     FIXTURES,
     FLATS,
     DOORS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -60,7 +61,6 @@ import {
 } from 'scene/backdropKeys'
 
 import {
-    VOLKSWAGEN,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
@@ -90,6 +90,10 @@ import {
     BENNETT_MATTRESS,
     BENNETT_PILLOWS
 } from 'scene/furnitureKeys'
+
+import {
+    VOLKSWAGEN
+} from 'scene/panelKeys'
 
 module.exports = [
     {
@@ -160,12 +164,12 @@ module.exports = [
             [BACKDROPS]: {
                 [OAKLAND_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [VOLKSWAGEN]: true
-            },
             [FLATS]: {
                 [OAKLAND_HOUSE_LEFT]: true,
                 [OAKLAND_HOUSE_RIGHT]: true
+            },
+            [PANELS]: {
+                [VOLKSWAGEN]: true
             }
         },
         cubes: OAKLAND_HOUSES_KEY,

@@ -68,7 +68,6 @@ import HowieFridge from './Cutouts/Attic/HowieFridge'
 import Television from './Cutouts/Attic/Television'
 import MonitorSpeakerSide from './Cutouts/ClubSide/MonitorSpeakerSide'
 import WallSpeakerSide from './Cutouts/ClubSide/WallSpeakerSide'
-import Volkswagen from './Cutouts/OaklandHouses/Volkswagen'
 import TwinStreetlamp from './Cutouts/OaklandResidential/TwinStreetlamp'
 import Dumpster from './Cutouts/Alley/Dumpster'
 import WeddingPlatform from './Cutouts/OutdoorWedding/WeddingPlatform'
@@ -142,7 +141,6 @@ import {
     TELEVISION,
     MONITOR_SPEAKER_SIDE,
     WALL_SPEAKER_SIDE,
-    VOLKSWAGEN,
     TWIN_STREETLAMP,
     DUMPSTER,
     WEDDING_PLATFORM,
@@ -217,7 +215,6 @@ const CUTOUTS_MAP = {
     [TELEVISION]: Television,
     [MONITOR_SPEAKER_SIDE]: MonitorSpeakerSide,
     [WALL_SPEAKER_SIDE]: WallSpeakerSide,
-    [VOLKSWAGEN]: Volkswagen,
     [TWIN_STREETLAMP]: TwinStreetlamp,
     [DUMPSTER]: Dumpster,
     [WEDDING_PLATFORM]: WeddingPlatform,

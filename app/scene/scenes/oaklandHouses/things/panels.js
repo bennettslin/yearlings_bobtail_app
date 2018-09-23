@@ -1,6 +1,6 @@
 import {
     VOLKSWAGEN
-} from 'scene/cutoutKeys'
+} from 'scene/panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [VOLKSWAGEN]: {

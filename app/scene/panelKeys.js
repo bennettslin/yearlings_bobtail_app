@@ -1,5 +1,7 @@
 const
     ESTHER_SPEECH_PANEL = 'estherSpeechPanel',
+
+
     BATHTUB = 'bathtub',
     CAPTAIN_BED_DRAWERS = 'captainBedDrawers',
     SCHOOLBUS_EXTERIOR = 'schoolbusExterior',
@@ -9,6 +11,7 @@ const
     DISHROOM_SINK = 'dishroomSink',
     SATURN_EXTERIOR = 'saturnExterior',
     SATURN_INTERIOR = 'saturnInterior',
+    VOLKSWAGEN = 'volkswagen',
     SNOWGLOBE_TETHERBALL = 'snowglobeTetherball',
     SNOWGLOBE_LIZ_ALONE = 'snowglobeLizAlone',
     SNOWGLOBE_BENNETT_MIRIAM = 'snowglobeBennettMiriam',
@@ -31,6 +34,7 @@ export {
     DISHROOM_SINK,
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
+    VOLKSWAGEN,
     SNOWGLOBE_TETHERBALL,
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,

@@ -30,6 +30,7 @@ const
     BACKPACK_SASHA = 'backpackSasha',
     BACKPACK_JEWISH_BOY = 'backpackJewishBoy',
 
+    // TODO
     FRIDGE_DRAWINGS = 'fridgeDrawings',
 
     // With guilt-ridden PreteenBennett and blissful Christopher.
@@ -45,6 +46,7 @@ const
     // With stoic PreteenBennett.
     THROWN_FRUIT = 'thrownFruit',
 
+    // TODO
     BENNETT_RECORD_PLAYER = 'bennettRecordPlayer',
 
     // With solicitingOpinion Bennett.
@@ -94,10 +96,13 @@ const
     GLASS_RACK = 'glassRack',
     DISH_PILE = 'dishPile',
 
+    // TODO
     NUDE_DRAWINGS = 'nudeDrawings',
+    // TODO
     VASELINE = 'vaseline',
-
+    // TODO
     LIZ_PHONE = 'lizPhone',
+    // TODO
     LIZ_PHONE_REFLECTION = 'lizPhoneReflection',
 
     // With cemetery Tomer.
@@ -131,6 +136,7 @@ const
     // With comforting Sasha and humiliated PreteenBennett.
     TETHERBALL_POLE = 'tetherballPole',
 
+    // TODO: Partly completed in cymbal stand fixtures.
     RECORDING_MIC = 'recordingMic',
 
     // With bennett-recording Stephanie.
@@ -150,6 +156,7 @@ const
     LIZ_PHONE_BASE = 'lizPhoneBase',
     LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection',
 
+    // TODO
     HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
 
     ARRANGEMENT_PUSH_BROOM_BACKSTAGE = 'arrangementPushBroomBackstage',

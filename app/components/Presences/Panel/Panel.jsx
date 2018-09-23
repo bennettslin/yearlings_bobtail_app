@@ -12,6 +12,7 @@ import GoKartExteriorRight from './Panels/GoKartExteriorRight'
 import DishroomSink from './Panels/DishroomSink'
 import SaturnExterior from './Panels/SaturnExterior'
 import SaturnInterior from './Panels/SaturnInterior'
+import Volkswagen from './Panels/Volkswagen'
 import SnowglobeTetherball from './Panels/SnowglobeTetherball'
 import SnowglobeLizAlone from './Panels/SnowglobeLizAlone'
 import SnowglobeBennettMiriam from './Panels/SnowglobeBennettMiriam'
@@ -34,6 +35,7 @@ import {
     DISHROOM_SINK,
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
+    VOLKSWAGEN,
     SNOWGLOBE_TETHERBALL,
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,
@@ -57,6 +59,7 @@ const PANELS_MAP = {
     [DISHROOM_SINK]: DishroomSink,
     [SATURN_EXTERIOR]: SaturnExterior,
     [SATURN_INTERIOR]: SaturnInterior,
+    [VOLKSWAGEN]: Volkswagen,
     [SNOWGLOBE_TETHERBALL]: SnowglobeTetherball,
     [SNOWGLOBE_LIZ_ALONE]: SnowglobeLizAlone,
     [SNOWGLOBE_BENNETT_MIRIAM]: SnowglobeBennettMiriam,
