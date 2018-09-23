@@ -12,7 +12,7 @@ const
     SCHOOLBUS_EXTERIOR = 'schoolbusExterior',
     SCHOOLBUS_INTERIOR = 'schoolbusInterior',
 
-    // TODO: Probably just a single one, with different arrangements.
+    // TODO: Single component with different arrangements.
     GO_KART_EXTERIOR_LEFT = 'goKartExteriorLeft',
     GO_KART_EXTERIOR_RIGHT = 'goKartExteriorRight',
 
@@ -26,7 +26,7 @@ const
     // With volkswagen panel.
     VOLKSWAGEN = 'volkswagen',
 
-    // TODO: Probably just a single one, of varying size.
+    // TODO: Single drawing for components of varying size.
     SNOWGLOBE_TETHERBALL = 'snowglobeTetherball',
     SNOWGLOBE_LIZ_ALONE = 'snowglobeLizAlone',
     SNOWGLOBE_BENNETT_MIRIAM = 'snowglobeBennettMiriam',

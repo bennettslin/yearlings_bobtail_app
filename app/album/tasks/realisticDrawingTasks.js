@@ -15,20 +15,6 @@ module.exports = [
     },
 
     /**
-     * Actual vehicles.
-     */
-    {
-        taskName: `Buoy (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `2 * Go-karts (Good Night)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    /**
      * Fabrics.
      */
     {
