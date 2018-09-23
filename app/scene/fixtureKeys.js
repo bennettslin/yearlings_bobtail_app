@@ -33,11 +33,11 @@ const
     // TODO
     FRIDGE_DRAWINGS = 'fridgeDrawings',
 
-    // With guilt-ridden PreteenBennett and blissful Christopher.
+    // With guiltRidden PreteenBennett and blissful Christopher.
     BENNETT_LETTERS = 'bennettLetters',
     CAPTAIN_BED_LAMP = 'captainBedLamp',
 
-    // With feigning-sick PreteenBennett.
+    // With feigningSick PreteenBennett.
     RED_ENVELOPE_MONEY = 'redEnvelopeMoney',
 
     // With shaken PreteenBennett.
@@ -55,7 +55,7 @@ const
     // With smoker Amy.
     ASH_CAN = 'ashCan',
 
-    // With bennett-keyboard Stephanie.
+    // With bennettKeyboard Stephanie.
     KEYBOARD = 'keyboard',
 
     // With distracted Bennett.
@@ -100,6 +100,7 @@ const
     NUDE_DRAWINGS = 'nudeDrawings',
     // TODO
     VASELINE = 'vaseline',
+
     // TODO
     LIZ_PHONE = 'lizPhone',
     // TODO
@@ -108,7 +109,7 @@ const
     // With cemetery Tomer.
     GRAVESTONE = 'gravestone',
 
-    // With saturn panels.
+    // With saturn panel.
     EVIAN_BOTTLES = 'evianBottles',
 
     // With performing Bennett.
@@ -126,11 +127,11 @@ const
     // With flirting Jacob.
     DRUMS_STACKED = 'drumsStacked',
 
-    // With removing-shoes Bennett.
+    // With removingShoes Bennett.
     BENNETT_SHOE = 'bennettShoe',
     BENNETT_SHOE_REFLECTION = 'bennettShoeReflection',
 
-    // With sifting-tchotchkes Liz.
+    // With siftingTchotchkes Liz.
     TCHOTCHKES = 'tchotchkes',
 
     // With comforting Sasha and humiliated PreteenBennett.
@@ -139,11 +140,11 @@ const
     // TODO: Partly completed in cymbal stand fixtures.
     RECORDING_MIC = 'recordingMic',
 
-    // With bennett-recording Stephanie.
+    // With bennettRecording Stephanie.
     RECORDING_CONSOLE = 'recordingConsole',
     RECORDING_BEERS = 'recordingBeers',
 
-    // With sita-sobbing Esther and shielding Mother.
+    // With sitaSobbing Esther and shielding Mother.
     CRACKED_PICTURE = 'crackedPicture',
 
     // With performing Bennett.
