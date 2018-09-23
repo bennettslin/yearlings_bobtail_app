@@ -1,5 +1,11 @@
 module.exports = [
 
+    {
+        taskName: `Presence task planning`,
+        workedHours: 4,
+        neededHours: 8
+    },
+
     /**
      * End home tasks.
      */
