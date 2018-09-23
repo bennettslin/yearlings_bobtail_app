@@ -35,32 +35,42 @@ const
     TAIWAN_FRIDGE_FRONT = 'taiwanFridgeFront',
     TAIWAN_FRIDGE_SIDE = 'taiwanFridgeSide',
 
+    // TODO
     BENNETT_TAIWAN_STAIRS = 'bennettTaiwanStairs',
     ODIN_TAIWAN_STAIRS = 'odinTaiwanStairs',
 
+    // TODO
     BENNETT_TAIWAN_GATE = 'bennettTaiwanGate',
     ODIN_TAIWAN_GATE = 'odinTaiwanGate',
 
+    // TODO
     BENNETT_ODIN_RICKSHAW = 'bennettOdinRickshaw',
 
+    // TODO
     BENNETT_SHORE = 'bennettShore',
     ODIN_SHORE = 'odinShore',
 
+    // TODO
     BENNETT_ODIN_BUOY = 'bennettOdinBuoy',
 
     // Own page.
     YELLOW_TAPED_GRILL = 'yellowTapedGrill',
 
+    // TODO
     BENNETT_ODIN_DEPTHS = 'bennettOdinDepths',
 
+    // TODO
     SEA_SERPENTS = 'seaSerpents',
 
+    // TODO
     BENNETT_OCEAN_FLOOR = 'bennettOceanFloor',
     ODIN_OCEAN_FLOOR = 'odinOceanFloor',
 
+    // TODO
     BENNETT_MAT = 'bennettMat',
     ODIN_MAT = 'odinMat',
 
+    // TODO
     BUDDHA_CAVE = 'buddhaCave',
 
     // Together on one page.
