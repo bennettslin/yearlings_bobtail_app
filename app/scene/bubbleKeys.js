@@ -1,14 +1,25 @@
 const
+    // TODO
     TOGETHER_SKETCHBOOK = 'togetherSketchbook',
+    // TODO
     APART_SKETCHBOOK = 'apartSketchbook',
+    // TODO
     DOGS_SKETCHBOOK = 'dogsSketchbook',
+    // TODO
     ESCAPE_POD_SKETCHBOOK = 'escapePodSketchbook',
+    // TODO
     CINEMA_THOUGHTS = 'cinemaThoughts',
+    // TODO
     WAITING_ROOM_THOUGHTS = 'waitingRoomThoughts',
+    // TODO
     TARPIT_THOUGHT = 'tarpitThought',
+    // TODO
     SIBLING_THOUGHT = 'siblingThought',
+    // TODO
     KHARI_ATTACK_SPEECH = 'khariAttackSpeech',
+    // TODO
     LIZ_DEFENCE_SPEECH = 'lizDefenceSpeech',
+    // TODO
     LIZ_THOUGHT = 'lizThought'
 
 export {
