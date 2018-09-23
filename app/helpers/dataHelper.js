@@ -28,6 +28,11 @@ export const getBookColumnIndex = (songIndex) => {
     return songIndex < bookStartingIndices[1] ? 0 : 1
 }
 
+export const getTempInstanceCount = () => {
+    const { tempInstanceCount } = album
+    return tempInstanceCount
+}
+
 /*********
  * SONGS *
  *********/

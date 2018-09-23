@@ -275,6 +275,8 @@ const _initialRegisterAnnotation = ({
 
 const _finalPrepareAlbum = (albumObject) => {
 
+    albumObject.tempInstanceCount = 0
+
     albumObject.songs.forEach((songObject, songIndex) => {
 
         if (!getSongIsLogue(songIndex, albumObject.songs)) {

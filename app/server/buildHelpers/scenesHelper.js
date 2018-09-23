@@ -156,6 +156,9 @@ export const finalRegisterPresenceYIndices = (
                     arrangementObject =
                         ARRANGEMENTS_ACTORS[presenceName][instance]
 
+                    // Can be deleted.
+                    album.tempInstanceCount++
+
                 // Cutout, fixture, flat, furniture.
                 } else {
 

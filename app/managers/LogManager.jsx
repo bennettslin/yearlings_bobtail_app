@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
+    getTempInstanceCount,
     getSongObject,
     getSceneObject,
     getDrawings
@@ -41,10 +42,16 @@ class LogManager extends Component {
     }
 
     _assignDebugLogFunctions() {
+        global.i = this.logInstances
         global.d = this.logDrawings
         global.z = this.logScene
         global.s = this.logSong
         global.t = this.logStorage
+    }
+
+    logInstances = () => {
+        const tempInstanceCount = getTempInstanceCount()
+        return this._logObject('temp instance count', tempInstanceCount)
     }
 
     logDrawings = () => {
