@@ -2,13 +2,13 @@ const
     // TODO
     ESTHER_SPEECH_PANEL = 'estherSpeechPanel',
 
-    // With bathtub panel.
+    // Own page.
     BATHTUB = 'bathtub',
 
     // TODO
     CAPTAIN_BED_DRAWERS = 'captainBedDrawers',
 
-    // With schoolbus panel.
+    // Own page.
     SCHOOLBUS_EXTERIOR = 'schoolbusExterior',
     SCHOOLBUS_INTERIOR = 'schoolbusInterior',
 
@@ -16,14 +16,14 @@ const
     GO_KART_EXTERIOR_LEFT = 'goKartExteriorLeft',
     GO_KART_EXTERIOR_RIGHT = 'goKartExteriorRight',
 
-    // With dishroom panel.
+    // With dishroom fixtures.
     DISHROOM_SINK = 'dishroomSink',
 
-    // With saturn panel.
+    // Own page.
     SATURN_EXTERIOR = 'saturnExterior',
     SATURN_INTERIOR = 'saturnInterior',
 
-    // With volkswagen panel.
+    // Own page.
     VOLKSWAGEN = 'volkswagen',
 
     // TODO: Single drawing for components of varying size.
@@ -33,10 +33,10 @@ const
     SNOWGLOBE_LIZ_KHARI = 'snowglobeLizKhari',
     SNOWGLOBE_BENNETT_ALONE = 'snowglobeBennettAlone',
 
-    // With reattaExterior panel.
+    // Own page.
     REATTA_EXTERIOR = 'reattaExterior',
 
-    // With reattaInterior panel.
+    // Own page.
     REATTA_INTERIOR = 'reattaInterior',
 
     // TODO

@@ -1,87 +1,136 @@
 const
+    // Together on one page. Requires editing.
     FIRE_HYDRANT = 'fireHydrant',
+    BERKELEY_LAMPPOST = 'berkeleyLamppost',
+    TWIN_STREETLAMP = 'twinStreetlamp',
+    TRAFFIC_LIGHT = 'trafficLight',
+
+    // With nohoSchool backdrop and flat.
     PLAYGROUND_SLIDE = 'playgroundSlide',
+
+    // Together on one page.
     MIRRORED_SINK = 'mirroredSink',
     TOWEL_RACK = 'towelRack',
+
+    // Together on one page.
     OVERPASS_SIGN_FRONT = 'overpassSignFront',
     OVERPASS_SIGN_BACK = 'overpassSignBack',
 
-    // With noho cutouts.
+    // With nohoHouse flat.
     PORCH_PLANTS_LEFT = 'porchPlantsLeft',
     PORCH_PLANTS_RIGHT = 'porchPlantsRight',
 
+    // Together on one page.
     TROLL_SHADOW_LEFT = 'trollShadowLeft',
     TROLL_SHADOW_RIGHT = 'trollShadowRight',
-    CAMPFIRE = 'campfire',
     STALACTITES = 'stalactites',
+
+    // Own page. Requires editing.
+    CAMPFIRE = 'campfire',
+
+    // TODO
     BUDDHA_SHRINE = 'buddhaShrine',
+
+    // TODO
     TAIWAN_FRIDGE_FRONT = 'taiwanFridgeFront',
+    TAIWAN_FRIDGE_SIDE = 'taiwanFridgeSide',
+
     BENNETT_TAIWAN_STAIRS = 'bennettTaiwanStairs',
     ODIN_TAIWAN_STAIRS = 'odinTaiwanStairs',
-    TAIWAN_FRIDGE_SIDE = 'taiwanFridgeSide',
+
     BENNETT_TAIWAN_GATE = 'bennettTaiwanGate',
     ODIN_TAIWAN_GATE = 'odinTaiwanGate',
+
     BENNETT_ODIN_RICKSHAW = 'bennettOdinRickshaw',
+
     BENNETT_SHORE = 'bennettShore',
     ODIN_SHORE = 'odinShore',
+
     BENNETT_ODIN_BUOY = 'bennettOdinBuoy',
+
+    // Own page.
     YELLOW_TAPED_GRILL = 'yellowTapedGrill',
+
     BENNETT_ODIN_DEPTHS = 'bennettOdinDepths',
+
     SEA_SERPENTS = 'seaSerpents',
+
     BENNETT_OCEAN_FLOOR = 'bennettOceanFloor',
     ODIN_OCEAN_FLOOR = 'odinOceanFloor',
+
     BENNETT_MAT = 'bennettMat',
     ODIN_MAT = 'odinMat',
+
     BUDDHA_CAVE = 'buddhaCave',
+
+    // Together on one page.
     TRASH_CAN = 'trashCan',
     VAN_NUYS_PLANTS = 'vanNuysPlants',
+
+    // TODO
     VAN_NUYS_LOGO = 'vanNuysLogo',
+
+    // TODO
     RECYCLABLES = 'recyclables',
+
+    // TODO
     NIRVANA_POSTER = 'nirvanaPoster',
+
+    // Together on one page.
     DISPENSER_LEFT = 'dispenserLeft',
     DISPENSER_RIGHT = 'dispenserRight',
-    BERKELEY_LAMPPOST = 'berkeleyLamppost',
     SIGNPOST = 'signPost',
+
+    // TODO
     BANCROFT_SHRUB_LEFT = 'bancroftShrubLeft',
     BANCROFT_SHRUB_RIGHT = 'bancroftShrubRight',
 
-    // With uc-berkeley cutouts.
+    // With ucBerkeley backdrop and flat.
     UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft',
     UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight',
 
+    // TODO
     LEONARD_COHEN_POSTER = 'leonardCohenPoster',
+
+    // Together on one page. Requires editing.
     MONITOR_SPEAKER_LEFT = 'monitorSpeakerLeft',
     MONITOR_SPEAKER_RIGHT = 'monitorSpeakerRight',
     WALL_SPEAKER_LEFT = 'wallSpeakerLeft',
     WALL_SPEAKER_RIGHT = 'wallSpeakerRight',
+    MONITOR_SPEAKER_SIDE = 'monitorSpeakerSide',
+    WALL_SPEAKER_SIDE = 'wallSpeakerSide',
+
+    // TODO
     CINEMA_POSTER_LEFT = 'cinemaPosterLeft',
     CINEMA_POSTER_RIGHT = 'cinemaPosterRight',
 
-    // With theatre cutouts.
+    // Together on one page.
     SANDBAGS = 'sandbags',
     STAGE_LIGHTS = 'stageLights',
-
-    TRAFFIC_LIGHT = 'trafficLight',
-    APARTMENT_PLANT = 'apartmentPlant',
-    CODE_BOX = 'codeBox',
-    LIGHT_SWITCH = 'lightSwitch',
-
-    // With waiting-room cutouts.
     CLIPBOARD = 'clipboard',
     PAINTING = 'painting',
     WAITING_ROOM_PLANT = 'waitingRoomPlant',
 
+    // TODO
+    APARTMENT_PLANT = 'apartmentPlant',
+    CODE_BOX = 'codeBox',
+    LIGHT_SWITCH = 'lightSwitch',
+
+    // Together on one page.
     STORAGE_BOXES = 'storageBoxes',
     STORAGE_CHEST = 'storageChest',
     HOWIE_FRIDGE = 'howieFridge',
+
+    // Together on one page.
     TELEVISION = 'television',
-    MONITOR_SPEAKER_SIDE = 'monitorSpeakerSide',
-    WALL_SPEAKER_SIDE = 'wallSpeakerSide',
-    TWIN_STREETLAMP = 'twinStreetlamp',
+    IV_DRIP = 'ivDrip',
+
+    // Own page.
     DUMPSTER = 'dumpster',
+
+    // TODO
     WEDDING_PLATFORM = 'weddingPlatform',
     WEDDING_CROWD = 'weddingCrowd',
-    IV_DRIP = 'ivDrip',
 
     ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS = 'arrangementVanNuysPlantLockers',
     ARRANGEMENT_VAN_NUYS_PLANT_QUAD = 'arrangementVanNuysPlantQuad',

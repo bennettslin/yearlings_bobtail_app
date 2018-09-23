@@ -11,14 +11,28 @@ const
     SHORE_BACK = 'shoreBack',
     OCEAN_DEPTHS_BACK = 'oceanDepthsBack',
     OCEAN_BOTTOM_FAR = 'oceanBottomFar',
+
+    // Own page.
     LOCKER_BANK = 'lockerBank',
+
+    // Together on one page.
     ST_JOSEPHS_ANNEX = 'stJosephsAnnex',
     ST_JOSEPHS_CHURCH = 'stJosephsChurch',
+
     CAMPANILE = 'campanile',
+
+    // Own page.
     MUSEUM_DISPLAY = 'museumDisplay',
+
+    // Own page.
     ROYCE_HALL = 'royceHall',
+
+    // Own page.
     PHARMACY_AISLE = 'pharmacyAisle',
+
+    // Own page.
     STEAM_PIPES = 'steamPipes',
+
     CEMETERY_HILLS_NEAR = 'cemeteryHillsNear',
     CROWD_SIDE_NEAR = 'crowdSideNear',
     CROWD_SIDE_FAR = 'crowdSideFar',

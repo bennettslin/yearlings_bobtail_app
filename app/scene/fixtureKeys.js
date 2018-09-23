@@ -7,21 +7,19 @@ const
     // With flustered YoungBennett.
     SAFEWAY_BAG = 'safewayBag',
 
-    // With singing YoungBennett.
+    // With singing YoungBennett. Requires editing.
     RECORD_PLAYER_STOOL = 'recordPlayerStool',
 
-    // With shopping cart fixtures.
+    // Together on one page. Requires editing.
     SHOPPING_CART = 'shoppingCart',
+    GARBAGE_BAG = 'garbageBag',
+    SHOPPING_CART_FULL = 'shoppingCartFull',
 
     // With stooping Mother.
     HAIRCUT_SCISSORS = 'haircutScissors',
 
-    // Scissors with sobbing Christopher, letters with enraged preteenBennett.
+    // Scissors with sobbing Christopher, letters with enraged preteenBennett. Requires editing.
     CHRISTOPHER_LETTERS = 'christopherLetters',
-
-    // With shopping cart fixtures.
-    GARBAGE_BAG = 'garbageBag',
-    SHOPPING_CART_FULL = 'shoppingCartFull',
 
     // With panicked PreteenBennett.
     BACKPACK_BENNETT = 'backpackBennett',
@@ -33,17 +31,17 @@ const
     // TODO
     FRIDGE_DRAWINGS = 'fridgeDrawings',
 
-    // With guiltRidden PreteenBennett and blissful Christopher.
+    // With guiltRidden PreteenBennett and blissful Christopher. Requires editing.
     BENNETT_LETTERS = 'bennettLetters',
     CAPTAIN_BED_LAMP = 'captainBedLamp',
 
-    // With feigningSick PreteenBennett.
+    // With feigningSick PreteenBennett. Requires editing.
     RED_ENVELOPE_MONEY = 'redEnvelopeMoney',
 
     // With shaken PreteenBennett.
     BEYONDER_ENVELOPE = 'beyonderEnvelope',
 
-    // With stoic PreteenBennett.
+    // With stoic PreteenBennett. Requires editing.
     THROWN_FRUIT = 'thrownFruit',
 
     // TODO
@@ -64,32 +62,32 @@ const
     // With flirting Bennett.
     GUITAR = 'guitar',
 
-    // With bass case fixtures.
+    // Together on one page.
     BASS_CASE_OPEN = 'bassCaseOpen',
+    BASS_CASE_UPRIGHT = 'bassCaseUpright',
+    BASS_CASE_SIDE = 'bassCaseSide',
 
-    // With throne, cymbal stand, and drums fixtures.
+    // Throne, cymbal stands, and drums on three pages. Requires editing.
     DRUMKIT = 'drumKit',
 
-    // With guitar case fixtures.
+    // Together on one page.
     GUITAR_CASE_UPRIGHT = 'guitarCaseUpright',
+    GUITAR_CASE_OPEN = 'guitarCaseOpen',
 
-    // With bass case fixtures.
-    BASS_CASE_UPRIGHT = 'bassCaseUpright',
-
-    // With eating Bennett.
+    // With eating Bennett. Requires editing.
     BASEMENT_BEER_CASE = 'basementBeerCase',
     BASEMENT_BEER_MARA = 'basementBeerMara',
     BASEMENT_BEER_BENNETT = 'basementBeerBennett',
 
-    // With caveman fixtures.
+    // Own page.
     CAVEMAN_BONES = 'cavemanBones',
 
-    // With theatre fixtures.
+    // Together on one page.
     PUSH_BROOM = 'pushBroom',
     STEPLADDER = 'stepladder',
     MANNEQUIN = 'mannequin',
 
-    // With dishroom fixtures.
+    // Together on one page. Requires editing.
     CONVEYOR_BELT = 'conveyorBelt',
     GLASS_CART = 'glassCart',
     TRAY_CART = 'trayCart',
@@ -98,31 +96,24 @@ const
 
     // TODO
     NUDE_DRAWINGS = 'nudeDrawings',
-    // TODO
     VASELINE = 'vaseline',
 
     // TODO
     LIZ_PHONE = 'lizPhone',
-    // TODO
     LIZ_PHONE_REFLECTION = 'lizPhoneReflection',
 
-    // With cemetery Tomer.
+    // With cemetery Tomer. Requires editing.
     GRAVESTONE = 'gravestone',
 
-    // With saturn panel.
+    // With saturn panel. Requires editing.
     EVIAN_BOTTLES = 'evianBottles',
 
-    // With performing Bennett.
+    // With performing Bennett. Requires editing.
     STAGE_MIC_SIDE = 'stageMicSide',
+    STAGE_MIC_FAR = 'stageMicFar',
 
     // With waiting Mara.
     KICK_DRUM = 'kickDrum',
-
-    // With guitar case fixtures.
-    GUITAR_CASE_OPEN = 'guitarCaseOpen',
-
-    // With bass case fixtures.
-    BASS_CASE_SIDE = 'bassCaseSide',
 
     // With flirting Jacob.
     DRUMS_STACKED = 'drumsStacked',
@@ -131,24 +122,21 @@ const
     BENNETT_SHOE = 'bennettShoe',
     BENNETT_SHOE_REFLECTION = 'bennettShoeReflection',
 
-    // With siftingTchotchkes Liz.
+    // With siftingTchotchkes Liz. Requires editing.
     TCHOTCHKES = 'tchotchkes',
 
     // With comforting Sasha and humiliated PreteenBennett.
     TETHERBALL_POLE = 'tetherballPole',
 
-    // TODO: Partly completed in cymbal stand fixtures.
+    // TODO: Partly completed, with cymbal stand fixtures.
     RECORDING_MIC = 'recordingMic',
 
-    // With bennettRecording Stephanie.
+    // With bennettRecording Stephanie. Requires editing.
     RECORDING_CONSOLE = 'recordingConsole',
     RECORDING_BEERS = 'recordingBeers',
 
-    // With sitaSobbing Esther and shielding Mother.
+    // With sitaSobbing Esther and shielding Mother. Requires editing.
     CRACKED_PICTURE = 'crackedPicture',
-
-    // With performing Bennett.
-    STAGE_MIC_FAR = 'stageMicFar',
 
     // With alley Bennett.
     BURGER_WRAPPER = 'burgerWrapper',
