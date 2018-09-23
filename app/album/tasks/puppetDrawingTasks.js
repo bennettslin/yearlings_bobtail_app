@@ -1,35 +1,132 @@
 module.exports = [
-    /**
-     * Animals and puppets
-     */
     {
-        taskName: `3 * Family (Saskia)`,
+        taskName: `horse`,
         workedHours: 0,
-        neededHours: 5
-    },
-        {
-        taskName: `Mushka and Pchelka (Pchelka)`,
-        workedHours: 0,
-        neededHours: 5
+        neededHours: 4
     },
     {
-        taskName: `Horse (Golden Cord)`,
+        taskName: 'puppetBennettBegin',
         workedHours: 0,
-        neededHours: 5
+        neededHours: 2
     },
     {
-        taskName: `Peafowl (Kyon)`,
+        taskName: 'puppetAnitaBegin',
         workedHours: 0,
-        neededHours: 5
+        neededHours: 2
     },
     {
-        taskName: `9 * Opal (Garryowen, Kyon, Uncanny)`,
+        taskName: 'puppetMotherBegin',
         workedHours: 0,
-        neededHours: 5
+        neededHours: 2
     },
     {
-        taskName: `5 * Odin (Vegan)`,
+        taskName: 'puppetFatherBegin',
         workedHours: 0,
-        neededHours: 5
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetBennettMiddle',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetAnitaMiddle',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetMotherMiddle',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetFatherMiddle',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetBennettEnd',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetAnitaEnd',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetMotherEnd',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetFatherEnd',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'pchelka',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'mushka',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'rocket',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'earth',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'spaceColony',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'opalLap',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'opalWindow',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'opalCouch',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'peahen',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'peacock',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'puppetReatta',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'puppetKhari',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetLiz',
+        workedHours: 0,
+        neededHours: 2
     }
 ]
