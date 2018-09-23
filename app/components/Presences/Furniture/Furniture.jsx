@@ -13,6 +13,7 @@ import GoKartSeatLeft from './Furnitures/GoKarts/GoKartSeatLeft'
 import GoKartSeatRight from './Furnitures/GoKarts/GoKartSeatRight'
 import GoKartDashboardLeft from './Furnitures/GoKarts/GoKartDashboardLeft'
 import GoKartDashboardRight from './Furnitures/GoKarts/GoKartDashboardRight'
+import LightSwitch from './Furnitures/BennettBed/LightSwitch'
 import BennettMattress from './Furnitures/BennettBed/BennettMattress'
 import BennettPillows from './Furnitures/BennettBed/BennettPillows'
 import ArmchairLeft from './Furnitures/WaitingRoom/ArmchairLeft'
@@ -44,6 +45,7 @@ import {
     GO_KART_SEAT_RIGHT,
     GO_KART_DASHBOARD_LEFT,
     GO_KART_DASHBOARD_RIGHT,
+    LIGHT_SWITCH,
     BENNETT_MATTRESS,
     BENNETT_PILLOWS,
     ARMCHAIR_LEFT,
@@ -76,6 +78,7 @@ const FURNITURES_MAP = {
     [GO_KART_SEAT_RIGHT]: GoKartSeatRight,
     [GO_KART_DASHBOARD_LEFT]: GoKartDashboardLeft,
     [GO_KART_DASHBOARD_RIGHT]: GoKartDashboardRight,
+    [LIGHT_SWITCH]: LightSwitch,
     [BENNETT_MATTRESS]: BennettMattress,
     [BENNETT_PILLOWS]: BennettPillows,
     [ARMCHAIR_LEFT]: ArmchairLeft,

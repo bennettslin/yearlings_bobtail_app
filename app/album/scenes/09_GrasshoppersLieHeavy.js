@@ -67,7 +67,6 @@ import {
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     CODE_BOX,
-    LIGHT_SWITCH,
     CLIPBOARD,
     PAINTING,
     WAITING_ROOM_PLANT
@@ -102,6 +101,7 @@ import {
 } from 'scene/doorKeys'
 
 import {
+    LIGHT_SWITCH,
     BENNETT_MATTRESS,
     BENNETT_PILLOWS,
     ARMCHAIR_LEFT,
@@ -337,9 +337,6 @@ module.exports = [
                     }
                 }
             },
-            [CUTOUTS]: {
-                [LIGHT_SWITCH]: true
-            },
             [FIXTURES]: {
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
@@ -350,6 +347,7 @@ module.exports = [
                 [BENNETT_DOOR_INSIDE]: true,
             },
             [FURNITURES]: {
+                [LIGHT_SWITCH]: true,
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
@@ -380,9 +378,6 @@ module.exports = [
                     }
                 }
             },
-            [CUTOUTS]: {
-                [LIGHT_SWITCH]: true
-            },
             [FIXTURES]: {
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
@@ -392,6 +387,7 @@ module.exports = [
                 [BENNETT_DOOR_INSIDE_OPEN]: true,
             },
             [FURNITURES]: {
+                [LIGHT_SWITCH]: true,
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }

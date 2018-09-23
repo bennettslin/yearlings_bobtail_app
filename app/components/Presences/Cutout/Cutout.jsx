@@ -58,7 +58,6 @@ import StageLights from './Cutouts/Backstage/StageLights'
 import TrafficLight from './Cutouts/LizGate/TrafficLight'
 import ApartmentPlant from './Cutouts/BennettGate/ApartmentPlant'
 import CodeBox from './Cutouts/BennettGate/CodeBox'
-import LightSwitch from './Cutouts/BennettBed/LightSwitch'
 import Clipboard from './Cutouts/WaitingRoom/Clipboard'
 import Painting from './Cutouts/WaitingRoom/Painting'
 import WaitingRoomPlant from './Cutouts/WaitingRoom/WaitingRoomPlant'
@@ -131,7 +130,6 @@ import {
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     CODE_BOX,
-    LIGHT_SWITCH,
     CLIPBOARD,
     PAINTING,
     WAITING_ROOM_PLANT,
@@ -205,7 +203,6 @@ const CUTOUTS_MAP = {
     [TRAFFIC_LIGHT]: TrafficLight,
     [APARTMENT_PLANT]: ApartmentPlant,
     [CODE_BOX]: CodeBox,
-    [LIGHT_SWITCH]: LightSwitch,
     [CLIPBOARD]: Clipboard,
     [PAINTING]: Painting,
     [WAITING_ROOM_PLANT]: WaitingRoomPlant,

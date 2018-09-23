@@ -114,7 +114,6 @@ const
     // TODO
     APARTMENT_PLANT = 'apartmentPlant',
     CODE_BOX = 'codeBox',
-    LIGHT_SWITCH = 'lightSwitch',
 
     // Together on one page.
     STORAGE_BOXES = 'storageBoxes',
@@ -200,7 +199,6 @@ export {
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     CODE_BOX,
-    LIGHT_SWITCH,
     CLIPBOARD,
     PAINTING,
     WAITING_ROOM_PLANT,

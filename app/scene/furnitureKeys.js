@@ -27,6 +27,8 @@ const
     GO_KART_DASHBOARD_RIGHT = 'goKartDashboardRight',
 
     // TODO
+    LIGHT_SWITCH = 'lightSwitch',
+    // TODO
     BENNETT_MATTRESS = 'bennettMattress',
     // TODO
     BENNETT_PILLOWS = 'bennettPillows',
@@ -82,6 +84,7 @@ export {
     GO_KART_SEAT_RIGHT,
     GO_KART_DASHBOARD_LEFT,
     GO_KART_DASHBOARD_RIGHT,
+    LIGHT_SWITCH,
     BENNETT_MATTRESS,
     BENNETT_PILLOWS,
     ARMCHAIR_LEFT,

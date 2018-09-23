@@ -40,6 +40,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: 'lightSwitch',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: 'bennettMattress',
         workedHours: 0,
         neededHours: 2
