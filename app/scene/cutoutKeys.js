@@ -5,8 +5,11 @@ const
     TOWEL_RACK = 'towelRack',
     OVERPASS_SIGN_FRONT = 'overpassSignFront',
     OVERPASS_SIGN_BACK = 'overpassSignBack',
+
+    // With noho cutouts.
     PORCH_PLANTS_LEFT = 'porchPlantsLeft',
     PORCH_PLANTS_RIGHT = 'porchPlantsRight',
+
     TROLL_SHADOW_LEFT = 'trollShadowLeft',
     TROLL_SHADOW_RIGHT = 'trollShadowRight',
     CAMPFIRE = 'campfire',
@@ -41,8 +44,11 @@ const
     SIGNPOST = 'signPost',
     BANCROFT_SHRUB_LEFT = 'bancroftShrubLeft',
     BANCROFT_SHRUB_RIGHT = 'bancroftShrubRight',
+
+    // With uc-berkeley cutouts.
     UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft',
     UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight',
+
     LEONARD_COHEN_POSTER = 'leonardCohenPoster',
     MONITOR_SPEAKER_LEFT = 'monitorSpeakerLeft',
     MONITOR_SPEAKER_RIGHT = 'monitorSpeakerRight',
@@ -50,15 +56,21 @@ const
     WALL_SPEAKER_RIGHT = 'wallSpeakerRight',
     CINEMA_POSTER_LEFT = 'cinemaPosterLeft',
     CINEMA_POSTER_RIGHT = 'cinemaPosterRight',
+
+    // With theatre cutouts.
     SANDBAGS = 'sandbags',
     STAGE_LIGHTS = 'stageLights',
+
     TRAFFIC_LIGHT = 'trafficLight',
     APARTMENT_PLANT = 'apartmentPlant',
     CODE_BOX = 'codeBox',
     LIGHT_SWITCH = 'lightSwitch',
+
+    // With waiting-room cutouts.
     CLIPBOARD = 'clipboard',
     PAINTING = 'painting',
     WAITING_ROOM_PLANT = 'waitingRoomPlant',
+
     STORAGE_BOXES = 'storageBoxes',
     STORAGE_CHEST = 'storageChest',
     HOWIE_FRIDGE = 'howieFridge',

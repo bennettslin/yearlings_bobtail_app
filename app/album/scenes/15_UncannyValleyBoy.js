@@ -87,8 +87,8 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
-    RECORDING_CONSOLE,
     RECORDING_MIC,
+    RECORDING_CONSOLE,
     RECORDING_BEERS
 } from 'scene/fixtureKeys'
 
@@ -338,8 +338,8 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [RECORDING_CONSOLE]: true,
                 [RECORDING_MIC]: true,
+                [RECORDING_CONSOLE]: true,
                 [RECORDING_BEERS]: true
             },
             [FLATS]: {

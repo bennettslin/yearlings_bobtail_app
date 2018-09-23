@@ -37,6 +37,15 @@ const rawAlbum = {
             }`)
         )),
         remainingTasks: require('album/tasks/remainingTasks')
+
+            .concat(require('album/tasks/cutoutDrawingTasks'))
+            .concat(require('album/tasks/doorDrawingTasks'))
+            .concat(require('album/tasks/fixtureDrawingTasks'))
+            .concat(require('album/tasks/flatDrawingTasks'))
+            .concat(require('album/tasks/furnitureDrawingTasks'))
+            .concat(require('album/tasks/panelDrawingTasks'))
+            .concat(require('album/tasks/puppetDrawingTasks'))
+
             .concat(require('album/tasks/detailedDrawingTasks'))
             .concat(require('album/tasks/illustratorDrawingTasks'))
             .concat(require('album/tasks/remainingDrawingTasks'))
