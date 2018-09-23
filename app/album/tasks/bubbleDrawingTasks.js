@@ -22,12 +22,12 @@ module.exports = [
     {
         taskName: 'cinemaThoughts',
         workedHours: 0,
-        neededHours: 5
+        neededHours: 8
     },
     {
         taskName: 'waitingRoomThoughts',
         workedHours: 0,
-        neededHours: 5
+        neededHours: 8
     },
     {
         taskName: 'tarpitThought',
