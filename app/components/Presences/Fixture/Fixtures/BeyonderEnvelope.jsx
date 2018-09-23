@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const GuitarAmp = ({
+const BeyonderEnvelope = ({
 
     className,
 
@@ -18,7 +18,7 @@ const GuitarAmp = ({
     return (
         <Svg
             className={cx(
-                'GuitarAmp',
+                'BeyonderEnvelope',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const GuitarAmp = ({
                 {...other}
             >
                 {cx(
-                    'GuitarAmp'
+                    'BeyonderEnvelope'
                 )}
             </text>
         </Svg>
     )
 }
 
-GuitarAmp.propTypes = propTypes;
+BeyonderEnvelope.propTypes = propTypes;
 
-export default GuitarAmp
+export default BeyonderEnvelope

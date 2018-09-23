@@ -2,72 +2,99 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import PlaygroundBall from './Fixtures/NohoSchool/PlaygroundBall'
-import RecordPlayerStool from './Fixtures/FamilyBathroom/RecordPlayerStool'
-import ShoppingCart from './Fixtures/Freeway/ShoppingCart'
-import ChristopherLetters from './Fixtures/Bedroom/ChristopherLetters'
-import BackpackBennett from './Fixtures/Schoolbus/BackpackBennett'
-import BackpackSasha from './Fixtures/Schoolbus/BackpackSasha'
-import FridgeDrawings from './Fixtures/TaiwanStairs/FridgeDrawings'
-import CaptainBedLamp from './Fixtures/Bedroom/CaptainBedLamp'
-import BennettLetters from './Fixtures/Bedroom/BennettLetters'
-import ThrownFruit from './Fixtures/VanNuysLockers/ThrownFruit'
-import BennettRecordPlayer from './Fixtures/BennettCouch/BennettRecordPlayer'
-import BennettCouchLamp from './Fixtures/BennettCouch/BennettCouchLamp'
-import AshCan from './Fixtures/UcBerkeley/AshCan'
-import Guitar from './Fixtures/ClubFront/Guitar'
-import BassCaseOpen from './Fixtures/ClubFront/BassCaseOpen'
-import DrumKit from './Fixtures/ClubFront/DrumKit'
-import BassCaseUpright from './Fixtures/Basement/BassCaseUpright'
-import GuitarCaseUpright from './Fixtures/Basement/GuitarCaseUpright'
-import CavemanBones from './Fixtures/Museum/CavemanBones'
-import PushBroom from './Fixtures/Backstage/PushBroom'
-import Stepladder from './Fixtures/Backstage/Stepladder'
-import Mannequin from './Fixtures/Backstage/Mannequin'
-import ConveyorBelt from './Fixtures/Dishroom/ConveyorBelt'
-import GlassCart from './Fixtures/Dishroom/GlassCart'
-import TrayCart from './Fixtures/Dishroom/TrayCart'
-import GlassRack from './Fixtures/Dishroom/GlassRack'
-import DishPile from './Fixtures/Dishroom/DishPile'
-import NudeDrawings from './Fixtures/BennettBed/NudeDrawings'
-import Vaseline from './Fixtures/BennettBed/Vaseline'
-import LizPhone from './Fixtures/LizBed/LizPhone'
-import LizPhoneBase from './Fixtures/LizBed/LizPhoneBase'
-import LizPhoneReflection from './Fixtures/LizBed/LizPhoneReflection'
-import LizPhoneBaseReflection from './Fixtures/LizBed/LizPhoneBaseReflection'
-import Gravestone from './Fixtures/Cemetery/Gravestone'
-import EvianBottles from './Fixtures/StationWagon/EvianBottles'
-import StageMicSide from './Fixtures/ClubSide/StageMicSide'
-import KickDrum from './Fixtures/ClubSide/KickDrum'
-import GuitarCaseOpen from './Fixtures/ClubSide/GuitarCaseOpen'
-import BassCaseSide from './Fixtures/ClubLoading/BassCaseSide'
-import DrumsStacked from './Fixtures/ClubLoading/DrumsStacked'
-import RecordingConsole from './Fixtures/SnowglobesFuture/RecordingConsole'
-import RecordingMic from './Fixtures/SnowglobesFuture/RecordingMic'
-import RecordingBeers from './Fixtures/SnowglobesFuture/RecordingBeers'
-import StageMicFar from './Fixtures/ClubFar/StageMicFar'
-import BurgerWrapper from './Fixtures/Alley/BurgerWrapper'
-import HospitalRecordPlayer from './Fixtures/Deathbed/HospitalRecordPlayer'
+import PlaygroundBall from './Fixtures/PlaygroundBall'
+import SafewayBag from './Fixtures/SafewayBag'
+import RecordPlayerStool from './Fixtures/RecordPlayerStool'
+import ShoppingCart from './Fixtures/ShoppingCart'
+import HaircutScissors from './Fixtures/HaircutScissors'
+import ChristopherLetters from './Fixtures/ChristopherLetters'
+import GarbageBag from './Fixtures/GarbageBag'
+import BackpackBennett from './Fixtures/BackpackBennett'
+import BackpackSasha from './Fixtures/BackpackSasha'
+import BackpackJewishBoy from './Fixtures/BackpackJewishBoy'
+import FridgeDrawings from './Fixtures/FridgeDrawings'
+import CaptainBedLamp from './Fixtures/CaptainBedLamp'
+import RedEnvelopeMoney from './Fixtures/RedEnvelopeMoney'
+import BeyonderEnvelope from './Fixtures/BeyonderEnvelope'
+import BennettLetters from './Fixtures/BennettLetters'
+import ThrownFruit from './Fixtures/ThrownFruit'
+import BennettRecordPlayer from './Fixtures/BennettRecordPlayer'
+import BennettCouchLamp from './Fixtures/BennettCouchLamp'
+import AshCan from './Fixtures/AshCan'
+import Keyboard from './Fixtures/Keyboard'
+import CashBox from './Fixtures/CashBox'
+import Guitar from './Fixtures/Guitar'
+import BassCaseOpen from './Fixtures/BassCaseOpen'
+import DrumKit from './Fixtures/DrumKit'
+import BassCaseUpright from './Fixtures/BassCaseUpright'
+import GuitarCaseUpright from './Fixtures/GuitarCaseUpright'
+import BasementBeerCase from './Fixtures/BasementBeerCase'
+import BasementBeerMara from './Fixtures/BasementBeerMara'
+import BasementBeerBennett from './Fixtures/BasementBeerBennett'
+import CavemanBones from './Fixtures/CavemanBones'
+import PushBroom from './Fixtures/PushBroom'
+import Stepladder from './Fixtures/Stepladder'
+import Mannequin from './Fixtures/Mannequin'
+import ConveyorBelt from './Fixtures/ConveyorBelt'
+import GlassCart from './Fixtures/GlassCart'
+import TrayCart from './Fixtures/TrayCart'
+import GlassRack from './Fixtures/GlassRack'
+import DishPile from './Fixtures/DishPile'
+import NudeDrawings from './Fixtures/NudeDrawings'
+import Vaseline from './Fixtures/Vaseline'
+import LizPhone from './Fixtures/LizPhone'
+import LizPhoneBase from './Fixtures/LizPhoneBase'
+import LizPhoneReflection from './Fixtures/LizPhoneReflection'
+import LizPhoneBaseReflection from './Fixtures/LizPhoneBaseReflection'
+import Gravestone from './Fixtures/Gravestone'
+import EvianBottles from './Fixtures/EvianBottles'
+import StageMicSide from './Fixtures/StageMicSide'
+import KickDrum from './Fixtures/KickDrum'
+import GuitarCaseOpen from './Fixtures/GuitarCaseOpen'
+import BassCaseSide from './Fixtures/BassCaseSide'
+import DrumsStacked from './Fixtures/DrumsStacked'
+import BennettShoe from './Fixtures/BennettShoe'
+import BennettShoeReflection from './Fixtures/BennettShoeReflection'
+import Tchotchkes from './Fixtures/Tchotchkes'
+import TetherballPole from './Fixtures/TetherballPole'
+import RecordingConsole from './Fixtures/RecordingConsole'
+import RecordingMic from './Fixtures/RecordingMic'
+import RecordingBeers from './Fixtures/RecordingBeers'
+import CrackedPicture from './Fixtures/CrackedPicture'
+import StageMicFar from './Fixtures/StageMicFar'
+import BurgerWrapper from './Fixtures/BurgerWrapper'
+import HospitalRecordPlayer from './Fixtures/HospitalRecordPlayer'
 
 import {
     PLAYGROUND_BALL,
+    SAFEWAY_BAG,
     RECORD_PLAYER_STOOL,
     SHOPPING_CART,
+    HAIRCUT_SCISSORS,
     CHRISTOPHER_LETTERS,
+    GARBAGE_BAG,
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
+    BACKPACK_JEWISH_BOY,
     FRIDGE_DRAWINGS,
-    CAPTAIN_BED_LAMP,
     BENNETT_LETTERS,
+    CAPTAIN_BED_LAMP,
+    RED_ENVELOPE_MONEY,
+    BEYONDER_ENVELOPE,
     THROWN_FRUIT,
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN,
+    KEYBOARD,
+    CASH_BOX,
     GUITAR,
     BASS_CASE_OPEN,
     DRUMKIT,
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
+    BASEMENT_BEER_CASE,
+    BASEMENT_BEER_MARA,
+    BASEMENT_BEER_BENNETT,
     CAVEMAN_BONES,
     PUSH_BROOM,
     STEPLADDER,
@@ -90,9 +117,14 @@ import {
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
     DRUMS_STACKED,
+    BENNETT_SHOE,
+    BENNETT_SHOE_REFLECTION,
+    TCHOTCHKES,
+    TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_CONSOLE,
     RECORDING_BEERS,
+    CRACKED_PICTURE,
     STAGE_MIC_FAR,
     BURGER_WRAPPER,
     HOSPITAL_RECORD_PLAYER
@@ -100,24 +132,35 @@ import {
 
 const FIXTURES_MAP = {
     [PLAYGROUND_BALL]: PlaygroundBall,
+    [SAFEWAY_BAG]: SafewayBag,
     [RECORD_PLAYER_STOOL]: RecordPlayerStool,
     [SHOPPING_CART]: ShoppingCart,
+    [HAIRCUT_SCISSORS]: HaircutScissors,
     [CHRISTOPHER_LETTERS]: ChristopherLetters,
+    [GARBAGE_BAG]: GarbageBag,
     [BACKPACK_BENNETT]: BackpackBennett,
     [BACKPACK_SASHA]: BackpackSasha,
+    [BACKPACK_JEWISH_BOY]: BackpackJewishBoy,
     [FRIDGE_DRAWINGS]: FridgeDrawings,
     [CAPTAIN_BED_LAMP]: CaptainBedLamp,
+    [RED_ENVELOPE_MONEY]: RedEnvelopeMoney,
+    [BEYONDER_ENVELOPE]: BeyonderEnvelope,
     [BENNETT_LETTERS]: BennettLetters,
     [THROWN_FRUIT]: ThrownFruit,
     [BENNETT_RECORD_PLAYER]: BennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: BennettCouchLamp,
     [ASH_CAN]: AshCan,
+    [KEYBOARD]: Keyboard,
+    [CASH_BOX]: CashBox,
     [GUITAR]: Guitar,
     [STAGE_MIC_SIDE]: StageMicSide,
     [BASS_CASE_OPEN]: BassCaseOpen,
     [DRUMKIT]: DrumKit,
     [BASS_CASE_UPRIGHT]: BassCaseUpright,
     [GUITAR_CASE_UPRIGHT]: GuitarCaseUpright,
+    [BASEMENT_BEER_CASE]: BasementBeerCase,
+    [BASEMENT_BEER_MARA]: BasementBeerMara,
+    [BASEMENT_BEER_BENNETT]: BasementBeerBennett,
     [CAVEMAN_BONES]: CavemanBones,
     [PUSH_BROOM]: PushBroom,
     [STEPLADDER]: Stepladder,
@@ -139,9 +182,14 @@ const FIXTURES_MAP = {
     [GUITAR_CASE_OPEN]: GuitarCaseOpen,
     [BASS_CASE_SIDE]: BassCaseSide,
     [DRUMS_STACKED]: DrumsStacked,
+    [BENNETT_SHOE]: BennettShoe,
+    [BENNETT_SHOE_REFLECTION]: BennettShoeReflection,
+    [TCHOTCHKES]: Tchotchkes,
+    [TETHERBALL_POLE]: TetherballPole,
     [RECORDING_MIC]: RecordingMic,
     [RECORDING_CONSOLE]: RecordingConsole,
     [RECORDING_BEERS]: RecordingBeers,
+    [CRACKED_PICTURE]: CrackedPicture,
     [STAGE_MIC_FAR]: StageMicFar,
     [BURGER_WRAPPER]: BurgerWrapper,
     [HOSPITAL_RECORD_PLAYER]: HospitalRecordPlayer

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BassAmp = ({
+const CrackedPicture = ({
 
     className,
 
@@ -18,7 +18,7 @@ const BassAmp = ({
     return (
         <Svg
             className={cx(
-                'BassAmp',
+                'CrackedPicture',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const BassAmp = ({
                 {...other}
             >
                 {cx(
-                    'BassAmp'
+                    'CrackedPicture'
                 )}
             </text>
         </Svg>
     )
 }
 
-BassAmp.propTypes = propTypes;
+CrackedPicture.propTypes = propTypes;
 
-export default BassAmp
+export default CrackedPicture
