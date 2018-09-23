@@ -75,7 +75,9 @@ import {
     DRUMS_STACKED,
     ARRANGEMENT_DRUMS_STACKED_CLUB,
     LIZ_PHONE,
-    LIZ_PHONE_REFLECTION
+    LIZ_PHONE_REFLECTION,
+    BENNETT_SHOE,
+    BENNETT_SHOE_REFLECTION
 } from 'scene/fixtureKeys'
 
 import {
@@ -294,13 +296,15 @@ module.exports = [
             },
             [FIXTURES]: {
                 [LIZ_PHONE]: true,
-                [LIZ_PHONE_REFLECTION]: true
+                [LIZ_PHONE_REFLECTION]: true,
+                [BENNETT_SHOE]: true,
+                [BENNETT_SHOE_REFLECTION]: true
             },
             [FURNITURES]: {
                 [LIZ_MATTRESS]: true,
-                [LIZ_PILLOWS]: true,
                 [LIZ_MATTRESS_REFLECTION]: true,
-                [LIZ_PILLOWS_REFLECTION]: true,
+                [LIZ_PILLOWS]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             }
         },
         cubes: LIZ_BED_KEY,

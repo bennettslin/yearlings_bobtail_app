@@ -2,6 +2,7 @@ import {
     ACTORS,
     BUBBLES,
     DOORS,
+    FIXTURES,
     FURNITURES,
     PUPPETS
 } from 'constants/scene'
@@ -50,6 +51,10 @@ import {
     LIZ_GATE_INSIDE,
     LIZ_GATE_INSIDE_OPEN
 } from 'scene/doorKeys'
+
+import {
+    TCHOTCHKES
+} from 'scene/fixtureKeys'
 
 import {
     LIZ_CUSHIONS
@@ -146,6 +151,9 @@ module.exports = [
                 [LIZ_BLINDS_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true,
                 [LIZ_DOOR]: true
+            },
+            [FIXTURES]: {
+                [TCHOTCHKES]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true

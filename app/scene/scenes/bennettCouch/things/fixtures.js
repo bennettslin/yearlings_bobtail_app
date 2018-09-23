@@ -1,6 +1,7 @@
 import {
     BENNETT_RECORD_PLAYER,
-    BENNETT_COUCH_LAMP
+    BENNETT_COUCH_LAMP,
+    KEYBOARD
 } from 'scene/fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -20,6 +21,14 @@ const ARRANGEMENTS_MAP = {
             zHeight: 1
         }
     },
+    [KEYBOARD]: {
+        yIndex: 2,
+        arrangement: {
+            xFloat: 2,
+            xWidth: 0.5,
+            zHeight: 1
+        }
+    }
 }
 
 export default ARRANGEMENTS_MAP

@@ -1,6 +1,10 @@
 import {
     BASS_CASE_UPRIGHT,
-    GUITAR_CASE_UPRIGHT
+    GUITAR_CASE_UPRIGHT,
+    BASEMENT_BEER_CASE,
+    BASEMENT_BEER_MARA,
+    BASEMENT_BEER_BENNETT,
+    CRACKED_PICTURE
 } from 'scene/fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -13,6 +17,38 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [GUITAR_CASE_UPRIGHT]: {
+        yIndex: 3,
+        arrangement: {
+            xFloat: 9.5,
+            xWidth: 1,
+            zHeight: 4
+        }
+    },
+    [BASEMENT_BEER_CASE]: {
+        yIndex: 3,
+        arrangement: {
+            xFloat: 9.5,
+            xWidth: 1,
+            zHeight: 4
+        }
+    },
+    [BASEMENT_BEER_MARA]: {
+        yIndex: 3,
+        arrangement: {
+            xFloat: 9.5,
+            xWidth: 1,
+            zHeight: 4
+        }
+    },
+    [BASEMENT_BEER_BENNETT]: {
+        yIndex: 3,
+        arrangement: {
+            xFloat: 9.5,
+            xWidth: 1,
+            zHeight: 4
+        }
+    },
+    [CRACKED_PICTURE]: {
         yIndex: 3,
         arrangement: {
             xFloat: 9.5,

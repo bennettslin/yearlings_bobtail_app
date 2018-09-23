@@ -87,6 +87,9 @@ import {
 
 import {
     SHOPPING_CART,
+    HAIRCUT_SCISSORS,
+    GARBAGE_BAG,
+    SHOPPING_CART_FULL,
     CHRISTOPHER_LETTERS
 } from 'scene/fixtureKeys'
 
@@ -197,6 +200,9 @@ module.exports = [
             },
             [DOORS]: {
                 [PORCH_DOOR]: true
+            },
+            [FIXTURES]: {
+                [HAIRCUT_SCISSORS]: true
             }
         },
         cubes: PORCH_KEY,
@@ -284,6 +290,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [FIRE_HYDRANT]: true
+            },
+            [FIXTURES]: {
+                [GARBAGE_BAG]: true,
+                [SHOPPING_CART_FULL]: true
             },
             [FLATS]: {
                 [NOHO_HOUSE_LEFT]: true,

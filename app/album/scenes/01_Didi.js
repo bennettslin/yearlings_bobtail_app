@@ -61,6 +61,7 @@ import {
 
 import {
     PLAYGROUND_BALL,
+    SAFEWAY_BAG,
     RECORD_PLAYER_STOOL
 } from 'scene/fixtureKeys'
 
@@ -169,7 +170,8 @@ module.exports = [
                 [PLAYGROUND_SLIDE]: true
             },
             [FIXTURES]: {
-                [PLAYGROUND_BALL]: true
+                [PLAYGROUND_BALL]: true,
+                [SAFEWAY_BAG]: true
             },
             [FLATS]: {
                 [NOHO_SCHOOLHOUSE]: true,

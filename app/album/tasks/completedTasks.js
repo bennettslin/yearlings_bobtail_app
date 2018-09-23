@@ -3886,5 +3886,10 @@ module.exports = [
         taskName: `Separate doors.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Add new fixtures based on current drawings.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

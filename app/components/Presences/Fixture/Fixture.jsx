@@ -9,6 +9,7 @@ import ShoppingCart from './Fixtures/ShoppingCart'
 import HaircutScissors from './Fixtures/HaircutScissors'
 import ChristopherLetters from './Fixtures/ChristopherLetters'
 import GarbageBag from './Fixtures/GarbageBag'
+import ShoppingCartFull from './Fixtures/ShoppingCartFull'
 import BackpackBennett from './Fixtures/BackpackBennett'
 import BackpackSasha from './Fixtures/BackpackSasha'
 import BackpackJewishBoy from './Fixtures/BackpackJewishBoy'
@@ -43,9 +44,7 @@ import DishPile from './Fixtures/DishPile'
 import NudeDrawings from './Fixtures/NudeDrawings'
 import Vaseline from './Fixtures/Vaseline'
 import LizPhone from './Fixtures/LizPhone'
-import LizPhoneBase from './Fixtures/LizPhoneBase'
 import LizPhoneReflection from './Fixtures/LizPhoneReflection'
-import LizPhoneBaseReflection from './Fixtures/LizPhoneBaseReflection'
 import Gravestone from './Fixtures/Gravestone'
 import EvianBottles from './Fixtures/EvianBottles'
 import StageMicSide from './Fixtures/StageMicSide'
@@ -63,6 +62,8 @@ import RecordingBeers from './Fixtures/RecordingBeers'
 import CrackedPicture from './Fixtures/CrackedPicture'
 import StageMicFar from './Fixtures/StageMicFar'
 import BurgerWrapper from './Fixtures/BurgerWrapper'
+import LizPhoneBase from './Fixtures/LizPhoneBase'
+import LizPhoneBaseReflection from './Fixtures/LizPhoneBaseReflection'
 import HospitalRecordPlayer from './Fixtures/HospitalRecordPlayer'
 
 import {
@@ -73,6 +74,7 @@ import {
     HAIRCUT_SCISSORS,
     CHRISTOPHER_LETTERS,
     GARBAGE_BAG,
+    SHOPPING_CART_FULL,
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY,
@@ -107,9 +109,7 @@ import {
     NUDE_DRAWINGS,
     VASELINE,
     LIZ_PHONE,
-    LIZ_PHONE_BASE,
     LIZ_PHONE_REFLECTION,
-    LIZ_PHONE_BASE_REFLECTION,
     GRAVESTONE,
     EVIAN_BOTTLES,
     STAGE_MIC_SIDE,
@@ -127,6 +127,8 @@ import {
     CRACKED_PICTURE,
     STAGE_MIC_FAR,
     BURGER_WRAPPER,
+    LIZ_PHONE_BASE,
+    LIZ_PHONE_BASE_REFLECTION,
     HOSPITAL_RECORD_PLAYER
 } from 'scene/fixtureKeys'
 
@@ -138,6 +140,7 @@ const FIXTURES_MAP = {
     [HAIRCUT_SCISSORS]: HaircutScissors,
     [CHRISTOPHER_LETTERS]: ChristopherLetters,
     [GARBAGE_BAG]: GarbageBag,
+    [SHOPPING_CART_FULL]: ShoppingCartFull,
     [BACKPACK_BENNETT]: BackpackBennett,
     [BACKPACK_SASHA]: BackpackSasha,
     [BACKPACK_JEWISH_BOY]: BackpackJewishBoy,
@@ -173,9 +176,7 @@ const FIXTURES_MAP = {
     [NUDE_DRAWINGS]: NudeDrawings,
     [VASELINE]: Vaseline,
     [LIZ_PHONE]: LizPhone,
-    [LIZ_PHONE_BASE]: LizPhoneBase,
     [LIZ_PHONE_REFLECTION]: LizPhoneReflection,
-    [LIZ_PHONE_BASE_REFLECTION]: LizPhoneBaseReflection,
     [GRAVESTONE]: Gravestone,
     [EVIAN_BOTTLES]: EvianBottles,
     [KICK_DRUM]: KickDrum,
@@ -192,6 +193,8 @@ const FIXTURES_MAP = {
     [CRACKED_PICTURE]: CrackedPicture,
     [STAGE_MIC_FAR]: StageMicFar,
     [BURGER_WRAPPER]: BurgerWrapper,
+    [LIZ_PHONE_BASE]: LizPhoneBase,
+    [LIZ_PHONE_BASE_REFLECTION]: LizPhoneBaseReflection,
     [HOSPITAL_RECORD_PLAYER]: HospitalRecordPlayer
 },
 DEFAULT_COMPONENT = () => (null)

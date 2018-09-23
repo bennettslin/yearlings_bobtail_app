@@ -91,6 +91,8 @@ import {
 import {
     CAPTAIN_BED_LAMP,
     BENNETT_LETTERS,
+    RED_ENVELOPE_MONEY,
+    BEYONDER_ENVELOPE,
     THROWN_FRUIT
 } from 'scene/fixtureKeys'
 
@@ -202,6 +204,9 @@ module.exports = [
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
             },
+            [FIXTURES]: {
+                [RED_ENVELOPE_MONEY]: true
+            },
             [FURNITURES]: {
                 [CAPTAIN_BED_MATTRESS]: true
             },
@@ -271,6 +276,9 @@ module.exports = [
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
+            },
+            [FIXTURES]: {
+                [BEYONDER_ENVELOPE]: true
             },
             [PUPPETS]: {
                 [EARTH]: true,

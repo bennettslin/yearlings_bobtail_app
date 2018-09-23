@@ -1,6 +1,7 @@
 import {
     BACKPACK_BENNETT,
-    BACKPACK_SASHA
+    BACKPACK_SASHA,
+    BACKPACK_JEWISH_BOY
 } from 'scene/fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -13,6 +14,14 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [BACKPACK_SASHA]: {
+        yIndex: 2,
+        arrangement: {
+            xFloat: 7,
+            xWidth: 1,
+            zHeight: 1
+        }
+    },
+    [BACKPACK_JEWISH_BOY]: {
         yIndex: 2,
         arrangement: {
             xFloat: 7,

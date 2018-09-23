@@ -1,6 +1,5 @@
 import {
     ACTORS,
-    // CUTOUTS,
     FIXTURES,
     FLATS,
     DOORS,
@@ -87,9 +86,11 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_CONSOLE,
-    RECORDING_BEERS
+    RECORDING_BEERS,
+    CRACKED_PICTURE
 } from 'scene/fixtureKeys'
 
 import {
@@ -216,6 +217,9 @@ module.exports = [
                     description: 'side angle, consoling, cautious',
                     instance: COMFORTING
                 }
+            },
+            [FIXTURES]: {
+                [TETHERBALL_POLE]: true
             },
             [FLATS]: {
                 [ROAD_PAST]: true
@@ -396,6 +400,9 @@ module.exports = [
                         instance: SITA_SOBBING
                     }
                 }
+            },
+            [FIXTURES]: {
+                [CRACKED_PICTURE]: true
             },
             [FURNITURES]: {
                 [BENNETT_MATTRESS]: true,

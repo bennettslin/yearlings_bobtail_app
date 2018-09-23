@@ -58,7 +58,9 @@ import {
 
 import {
     BACKPACK_BENNETT,
-    BACKPACK_SASHA
+    BACKPACK_SASHA,
+    BACKPACK_JEWISH_BOY,
+    TETHERBALL_POLE
 } from 'scene/fixtureKeys'
 
 import {
@@ -178,7 +180,8 @@ module.exports = [
             },
             [FIXTURES]: {
                 [BACKPACK_BENNETT]: true,
-                [BACKPACK_SASHA]: true
+                [BACKPACK_SASHA]: true,
+                [BACKPACK_JEWISH_BOY]: true
             },
             [FURNITURES]: {
                 [SCHOOLBUS_SEAT_REAR]: true,
@@ -227,6 +230,9 @@ module.exports = [
             },
             [BACKDROPS]: {
                 [VAN_NUYS_THOUGHT_BACKDROP]: true
+            },
+            [FIXTURES]: {
+                [TETHERBALL_POLE]: true
             },
             [FLATS]: {
                 [VAN_NUYS_SCHOOLHOUSE]: true

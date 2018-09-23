@@ -21,6 +21,7 @@ const
 
     // With shopping cart fixtures.
     GARBAGE_BAG = 'garbageBag',
+    SHOPPING_CART_FULL = 'shoppingCartFull',
 
     // With panicked PreteenBennett.
     BACKPACK_BENNETT = 'backpackBennett',
@@ -97,14 +98,7 @@ const
     VASELINE = 'vaseline',
 
     LIZ_PHONE = 'lizPhone',
-
-    // With caressed Liz and caressing KhariReflection.
-    LIZ_PHONE_BASE = 'lizPhoneBase',
-
     LIZ_PHONE_REFLECTION = 'lizPhoneReflection',
-
-    // With caressed LizReflection and caressing KhariReflection.
-    LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection',
 
     // With cemetery Tomer.
     GRAVESTONE = 'gravestone',
@@ -152,6 +146,10 @@ const
     // With alley Bennett.
     BURGER_WRAPPER = 'burgerWrapper',
 
+    // With caressed Liz and caressing KhariReflection.
+    LIZ_PHONE_BASE = 'lizPhoneBase',
+    LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection',
+
     HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
 
     ARRANGEMENT_PUSH_BROOM_BACKSTAGE = 'arrangementPushBroomBackstage',
@@ -167,6 +165,7 @@ export {
     HAIRCUT_SCISSORS,
     CHRISTOPHER_LETTERS,
     GARBAGE_BAG,
+    SHOPPING_CART_FULL,
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY,
@@ -201,9 +200,7 @@ export {
     NUDE_DRAWINGS,
     VASELINE,
     LIZ_PHONE,
-    LIZ_PHONE_BASE,
     LIZ_PHONE_REFLECTION,
-    LIZ_PHONE_BASE_REFLECTION,
     GRAVESTONE,
     EVIAN_BOTTLES,
     STAGE_MIC_SIDE,
@@ -221,6 +218,8 @@ export {
     CRACKED_PICTURE,
     STAGE_MIC_FAR,
     BURGER_WRAPPER,
+    LIZ_PHONE_BASE,
+    LIZ_PHONE_BASE_REFLECTION,
     HOSPITAL_RECORD_PLAYER,
 
     ARRANGEMENT_PUSH_BROOM_BACKSTAGE,
