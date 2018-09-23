@@ -2,7 +2,10 @@
 
 import keys from 'lodash.keys'
 
-import { PRESENCE_TYPES } from 'constants/scene'
+import {
+    ACTORS,
+    PRESENCE_TYPES
+} from 'constants/scene'
 
 /**
  * FIXME: These are a mess, but this is only for admin. Will be deleted at some
@@ -42,7 +45,7 @@ export const adminGatherDrawings = (album, songIndex) => {
                         album._drawings[drawingType][name] = []
                     }
 
-                    if (drawingType === 'actors') {
+                    if (drawingType === ACTORS) {
 
                         /**
                          * The nesting is different if the actor is playing
@@ -68,11 +71,15 @@ export const adminGatherDrawings = (album, songIndex) => {
                         presenceObject.character = characterName
                         presenceObject.descriptionEntity = descriptionEntity
 
+                        // Don't count duplicate instances.
+                        if (!descriptionEntity.duplicate) {
+                            album._drawings[drawingType][name].push(presenceObject)
+                        }
+
                     } else {
                         presenceObject.descriptionEntity = typePresences[name]
+                        album._drawings[drawingType][name].push(presenceObject)
                     }
-
-                    album._drawings[drawingType][name].push(presenceObject)
                 }
             })
         }
@@ -90,7 +97,7 @@ export const _adminFinaliseActors = (album) => {
 
     // Turn actors object into array for easier frontend parsing.
     const { _drawings } = album,
-            actors = []
+        actors = []
     let actorsTotalCount = 0,
         actorsTodoCount = 0
 
@@ -103,14 +110,19 @@ export const _adminFinaliseActors = (album) => {
 
         roles.forEach(role => {
 
-            const { songIndex,
+            const {
+                    songIndex,
                     sceneIndex,
                     descriptionEntity,
-                    subtasks } = role,
-                roleObject = { songIndex,
-                               sceneIndex,
-                               workedHours: descriptionEntity.workedHours,
-                               subtasks }
+                    subtasks
+                } = role,
+
+                roleObject = {
+                    songIndex,
+                    sceneIndex,
+                    workedHours: descriptionEntity.workedHours,
+                    subtasks
+                }
 
             // This will eventually always be an object.
             if (typeof descriptionEntity === 'object') {
@@ -191,7 +203,7 @@ export const _adminFinaliseActors = (album) => {
 export const adminRegisterDrawingTasks = (song) => {
 
     const { actorsWorkedHours,
-            actorsNeededHours } = song
+        actorsNeededHours } = song
 
     if (!song.tasks) {
         song.tasks = []

@@ -198,11 +198,13 @@ module.exports = [
         presences: {
             [ACTORS]: {
                 [BENNETT]: {
+                    duplicate: true,
                     description: 'side, awkward, wanting to make a move',
                     instance: DATE_ENDING
                 },
                 [LIZ]: {
                     sita: {
+                        duplicate: true,
                         description: 'side, friendly, guarded',
                         instance: DATE_ENDING
                     }
@@ -226,11 +228,13 @@ module.exports = [
         presences: {
             [ACTORS]: {
                 [BENNETT]: {
+                    duplicate: true,
                     description: 'side, walking away dejected, slumped over',
                     instance: DATE_ENDED
                 },
                 [LIZ]: {
                     sita: {
+                        duplicate: true,
                         description: 'front, closing gate, looking concerned',
                         instance: DATE_ENDED
                     }

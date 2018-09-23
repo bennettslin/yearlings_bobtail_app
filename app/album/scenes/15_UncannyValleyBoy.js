@@ -259,6 +259,7 @@ module.exports = [
                 },
                 [LIZ]: {
                     sita: {
+                        duplicate: true,
                         description: 'side, seated, pensive',
                         instance: SIFTING_TCHOTCHKES
                     }
