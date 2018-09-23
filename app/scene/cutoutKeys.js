@@ -16,7 +16,7 @@ const
     OVERPASS_SIGN_FRONT = 'overpassSignFront',
     OVERPASS_SIGN_BACK = 'overpassSignBack',
 
-    // With nohoHouse flat.
+    // With familyHouse flat.
     PORCH_PLANTS_LEFT = 'porchPlantsLeft',
     PORCH_PLANTS_RIGHT = 'porchPlantsRight',
 
@@ -92,8 +92,7 @@ const
     SIGNPOST = 'signPost',
 
     // TODO
-    BANCROFT_SHRUB_LEFT = 'bancroftShrubLeft',
-    BANCROFT_SHRUB_RIGHT = 'bancroftShrubRight',
+    BANCROFT_SHRUBS = 'bancroftShrubs',
 
     // With ucBerkeley backdrop and flat.
     UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft',
@@ -193,8 +192,7 @@ export {
     DISPENSER_RIGHT,
     BERKELEY_LAMPPOST,
     SIGNPOST,
-    BANCROFT_SHRUB_LEFT,
-    BANCROFT_SHRUB_RIGHT,
+    BANCROFT_SHRUBS,
     UC_BERKELEY_TREE_LEFT,
     UC_BERKELEY_TREE_RIGHT,
     LEONARD_COHEN_POSTER,

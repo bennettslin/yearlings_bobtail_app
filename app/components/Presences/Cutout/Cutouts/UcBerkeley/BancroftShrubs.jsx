@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BancroftShrubRight = ({
+const BancroftShrubs = ({
 
     className,
 
@@ -18,7 +18,7 @@ const BancroftShrubRight = ({
     return (
         <Svg
             className={cx(
-                'BancroftShrubRight',
+                'BancroftShrubs',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const BancroftShrubRight = ({
                 {...other}
             >
                 {cx(
-                    'BancroftShrubRight'
+                    'BancroftShrubs'
                 )}
             </text>
         </Svg>
     )
 }
 
-BancroftShrubRight.propTypes = propTypes;
+BancroftShrubs.propTypes = propTypes;
 
-export default BancroftShrubRight
+export default BancroftShrubs

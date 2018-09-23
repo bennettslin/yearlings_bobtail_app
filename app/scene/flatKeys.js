@@ -1,13 +1,27 @@
 const
+
+    // With nohoHouses backdrop.
     NOHO_HOUSE_LEFT = 'nohoHouseLeft',
     NOHO_HOUSE_RIGHT = 'nohoHouseRight',
+
+    // With nohoSchool backdrop and cutout.
     NOHO_SCHOOLHOUSE = 'nohoSchoolhouse',
+
+    // Own page.
     FAMILY_HOUSE = 'familyHouse',
+
+    // Own page.
     CAVE_SHADOWS = 'caveShadows',
+
+    // TODO
     TAIWAN_MOUNTAINS_BRIDGED = 'taiwanMountainsBridged',
     TAIWAN_MOUNTAINS_NEAR = 'taiwanMountainsNear',
     TAIWAN_CLOUDS = 'taiwanClouds',
+
+    // Own page.
     VAN_NUYS_SCHOOLHOUSE = 'vanNuysSchoolhouse',
+
+    // TODO
     SHORE_BACK = 'shoreBack',
     OCEAN_DEPTHS_BACK = 'oceanDepthsBack',
     OCEAN_BOTTOM_FAR = 'oceanBottomFar',
@@ -19,6 +33,7 @@ const
     ST_JOSEPHS_ANNEX = 'stJosephsAnnex',
     ST_JOSEPHS_CHURCH = 'stJosephsChurch',
 
+    // With ucBerkeley backdrop and cutouts.
     CAMPANILE = 'campanile',
 
     // Own page.
@@ -48,8 +63,10 @@ const
     ROAD_PRESENT = 'roadPresent',
     ROAD_FUTURE = 'roadFuture',
     EL_CERRITO_ROAD = 'elCerritoRoad',
+
     CROWD_BACK_NEAR = 'crowdBackNear',
     CROWD_BACK_FAR = 'crowdBackFar',
+
     CLIFF_GRAVES = 'cliffGraves'
 
 export {

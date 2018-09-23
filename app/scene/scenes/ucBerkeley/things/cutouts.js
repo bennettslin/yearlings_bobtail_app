@@ -1,7 +1,6 @@
 import {
     SIGNPOST,
-    BANCROFT_SHRUB_LEFT,
-    BANCROFT_SHRUB_RIGHT,
+    BANCROFT_SHRUBS,
     UC_BERKELEY_TREE_LEFT,
     UC_BERKELEY_TREE_RIGHT
 } from 'scene/cutoutKeys'
@@ -15,15 +14,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 7
         }
     },
-    [BANCROFT_SHRUB_LEFT]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 3.5,
-            xWidth: 3,
-            zHeight: 3
-        }
-    },
-    [BANCROFT_SHRUB_RIGHT]: {
+    [BANCROFT_SHRUBS]: {
         yIndex: 4,
         arrangement: {
             xFloat: 2.5,
