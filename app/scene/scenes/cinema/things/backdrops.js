@@ -1,9 +1,9 @@
 import {
-    BAY_AREA_BACKDROP
+    CINEMA_BACKDROP
 } from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [BAY_AREA_BACKDROP]: {
+    [CINEMA_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

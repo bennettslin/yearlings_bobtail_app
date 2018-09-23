@@ -65,7 +65,7 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
-    BAY_AREA_BACKDROP
+    CINEMA_BACKDROP
 } from 'scene/backdropKeys'
 
 import {
@@ -396,7 +396,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [BAY_AREA_BACKDROP]: true
+                [CINEMA_BACKDROP]: true
             },
             [BUBBLES]: {
                 [CINEMA_THOUGHTS]: true

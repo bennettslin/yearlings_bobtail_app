@@ -1,26 +1,61 @@
 // Each scene has one backdrop at most. Backdrop is always the furthest back.
 
 const
+
+    // With nohoHouses flats. Requires editing.
     NOHO_HOUSES_BACKDROP = 'nohoHousesBackdrop',
+
+    // With nohoSchool cutout and flat.
     NOHO_SCHOOL_BACKDROP = 'nohoSchoolBackdrop',
+
+    // Own page.
     VALLEY_BACKDROP = 'valleyBackdrop',
+
+    // TODO
     BEDROOM_BACKDROP = 'bedroomBackdrop',
     BEDROOM_SIREN_BACKDROP = 'bedroomSirenBackdrop',
-    TAIWAN_MOUNTAINS_BACKDROP = 'taiwanMountainsBackdrop',
-    SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop',
-    VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
-    TAIWAN_STREETS_BACKDROP = 'taiwanStreetsBackdrop',
-    SHORE_RICKSHAW_BACKDROP = 'shoreRickshawBackdrop',
-    SHORE_BUOY_BACKDROP = 'shoreBuoyBackdrop',
-    OCEAN_BUOY_BACKDROP = 'oceanBuoyBackdrop',
-    OCEAN_DEPTHS_BACKDROP = 'oceanDepthsBackdrop',
-    OCEAN_FLOOR_BACKDROP = 'oceanFloorBackdrop',
     BEDROOM_BUS_BACKDROP = 'bedroomBusBackdrop',
+
+    // TODO
+    TAIWAN_MOUNTAINS_BACKDROP = 'taiwanMountainsBackdrop',
+
+    // TODO
+    SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop',
+
+    // TODO
+    VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
+
+    // TODO
+    TAIWAN_STREETS_BACKDROP = 'taiwanStreetsBackdrop',
+
+    // TODO
+    SHORE_RICKSHAW_BACKDROP = 'shoreRickshawBackdrop',
+
+    // TODO
+    SHORE_BUOY_BACKDROP = 'shoreBuoyBackdrop',
+
+    // TODO
+    OCEAN_BUOY_BACKDROP = 'oceanBuoyBackdrop',
+
+    // TODO
+    OCEAN_DEPTHS_BACKDROP = 'oceanDepthsBackdrop',
+
+    // TODO
+    OCEAN_FLOOR_BACKDROP = 'oceanFloorBackdrop',
+
+
     VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
+
+    // TODO
     BENNETT_COUCH_THOUGHT_BACKDROP = 'bennettCouchThoughtBackdrop',
+
+
     WEST_BERKELEY_BACKDROP = 'westBerkeleyBackdrop',
+
+    // With ucBerkeley backdrop and cutouts. Requires editing.
     UC_BERKELEY_BACKDROP = 'ucBerkeleyBackdrop',
-    BAY_AREA_BACKDROP = 'bayAreaBackdrop',
+
+    CINEMA_BACKDROP = 'cinemaBackdrop',
     GO_KART_THOUGHT_BACKDROP = 'goKartThought',
     UCLA_BACKDROP = 'uclaBackdrop',
     PHARMACY_THOUGHT_BACKDROP = 'pharmacyThought',
@@ -57,7 +92,7 @@ export {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
     UC_BERKELEY_BACKDROP,
-    BAY_AREA_BACKDROP,
+    CINEMA_BACKDROP,
     GO_KART_THOUGHT_BACKDROP,
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BayAreaBackdrop = ({
+const CinemaBackdrop = ({
 
     className,
 
@@ -18,7 +18,7 @@ const BayAreaBackdrop = ({
     return (
         <Svg
             className={cx(
-                'BayAreaBackdrop',
+                'CinemaBackdrop',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const BayAreaBackdrop = ({
                 {...other}
             >
                 {cx(
-                    'BayAreaBackdrop'
+                    'CinemaBackdrop'
                 )}
             </text>
         </Svg>
     )
 }
 
-BayAreaBackdrop.propTypes = propTypes;
+CinemaBackdrop.propTypes = propTypes;
 
-export default BayAreaBackdrop
+export default CinemaBackdrop
