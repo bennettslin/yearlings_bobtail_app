@@ -78,6 +78,7 @@ import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
+    TINTIN_POSTER,
     FIRE_HYDRANT,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
@@ -239,6 +240,9 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [TINTIN_POSTER]: true,
+            },
             [FIXTURES]: {
                 [CHRISTOPHER_LETTERS]: true
             },
@@ -328,6 +332,9 @@ module.exports = [
             },
             [BACKDROPS]: {
                 [BEDROOM_SIREN_BACKDROP]: true
+            },
+            [CUTOUTS]: {
+                [TINTIN_POSTER]: true,
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true,

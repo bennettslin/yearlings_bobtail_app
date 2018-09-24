@@ -3894,7 +3894,7 @@ module.exports = [
     },
     {
         taskName: `Presence task planning`,
-        workedHours: 8,
-        neededHours: 8
+        workedHours: 10,
+        neededHours: 10
     },
 ]

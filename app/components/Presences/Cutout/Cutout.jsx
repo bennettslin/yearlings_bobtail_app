@@ -2,74 +2,77 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import FireHydrant from './Cutouts/NohoHouses/FireHydrant'
-import PlaygroundSlide from './Cutouts/NohoSchool/PlaygroundSlide'
-import MirroredSink from './Cutouts/FamilyBathroom/MirroredSink'
-import TowelRack from './Cutouts/FamilyBathroom/TowelRack'
-import OverpassSignFront from './Cutouts/Freeway/OverpassSignFront'
-import OverpassSignBack from './Cutouts/Freeway/OverpassSignBack'
-import PorchPlantsLeft from './Cutouts/Porch/PorchPlantsLeft'
-import PorchPlantsRight from './Cutouts/Porch/PorchPlantsRight'
-import TrollShadowLeft from './Cutouts/ChangelingCave/TrollShadowLeft'
-import TrollShadowRight from './Cutouts/ChangelingCave/TrollShadowRight'
-import Campfire from './Cutouts/ChangelingCave/Campfire'
-import Stalactites from './Cutouts/ChangelingCave/Stalactites'
-import BuddhaShrine from './Cutouts/TaiwanRoom/BuddhaShrine'
-import TaiwanFridgeFront from './Cutouts/TaiwanRoom/TaiwanFridgeFront'
-import BennettTaiwanStairs from './Cutouts/TaiwanRoom/BennettTaiwanStairs'
-import OdinTaiwanStairs from './Cutouts/TaiwanRoom/OdinTaiwanStairs'
-import TaiwanFridgeSide from './Cutouts/TaiwanStairs/TaiwanFridgeSide'
-import BennettTaiwanGate from './Cutouts/TaiwanStairs/BennettTaiwanGate'
-import OdinTaiwanGate from './Cutouts/TaiwanStairs/OdinTaiwanGate'
-import BennettOdinRickshaw from './Cutouts/TaiwanGate/BennettOdinRickshaw'
-import BennettShore from './Cutouts/Rickshaw/BennettShore'
-import OdinShore from './Cutouts/Rickshaw/OdinShore'
-import BennettOdinBuoy from './Cutouts/Shore/BennettOdinBuoy'
-import YellowTapedGrill from './Cutouts/Shore/YellowTapedGrill'
-import BennettOdinDepths from './Cutouts/Buoy/BennettOdinDepths'
-import SeaSerpents from './Cutouts/Buoy/SeaSerpents'
-import BennettOceanFloor from './Cutouts/OceanDepths/BennettOceanFloor'
-import OdinOceanFloor from './Cutouts/OceanDepths/OdinOceanFloor'
-import BennettMat from './Cutouts/OceanFloor/BennettMat'
-import OdinMat from './Cutouts/OceanFloor/OdinMat'
-import BuddhaCave from './Cutouts/OceanFloor/BuddhaCave'
-import TrashCan from './Cutouts/VanNuysLockers/TrashCan'
-import VanNuysPlants from './Cutouts/VanNuysLockers/VanNuysPlants'
-import VanNuysLogo from './Cutouts/VanNuysQuad/VanNuysLogo'
-import Recyclables from './Cutouts/Courtyard/Recyclables'
-import NirvanaPoster from './Cutouts/BennettCouch/NirvanaPoster'
-import DispenserLeft from './Cutouts/CatholicChurch/DispenserLeft'
-import DispenserRight from './Cutouts/CatholicChurch/DispenserRight'
-import BerkeleyLamppost from './Cutouts/CatholicChurch/BerkeleyLamppost'
-import SignPost from './Cutouts/UcBerkeley/SignPost'
-import BancroftShrubs from './Cutouts/UcBerkeley/BancroftShrubs'
-import UcBerkeleyTree from './Cutouts/UcBerkeley/UcBerkeleyTree'
-import LeonardCohenPoster from './Cutouts/BennettCouch/LeonardCohenPoster'
-import MonitorSpeakerLeft from './Cutouts/ClubFront/MonitorSpeakerLeft'
-import MonitorSpeakerRight from './Cutouts/ClubFront/MonitorSpeakerRight'
-import WallSpeakerLeft from './Cutouts/ClubFront/WallSpeakerLeft'
-import WallSpeakerRight from './Cutouts/ClubFront/WallSpeakerRight'
-import CinemaPosterLeft from './Cutouts/Cinema/CinemaPosterLeft'
-import CinemaPosterRight from './Cutouts/Cinema/CinemaPosterRight'
-import Sandbags from './Cutouts/Backstage/Sandbags'
-import StageLights from './Cutouts/Backstage/StageLights'
-import TrafficLight from './Cutouts/LizGate/TrafficLight'
-import ApartmentPlant from './Cutouts/BennettGate/ApartmentPlant'
-import CodeBox from './Cutouts/BennettGate/CodeBox'
-import Clipboard from './Cutouts/WaitingRoom/Clipboard'
-import Painting from './Cutouts/WaitingRoom/Painting'
-import WaitingRoomPlant from './Cutouts/WaitingRoom/WaitingRoomPlant'
-import StorageBoxes from './Cutouts/Attic/StorageBoxes'
-import StorageChest from './Cutouts/Attic/StorageChest'
-import HowieFridge from './Cutouts/Attic/HowieFridge'
-import Television from './Cutouts/Attic/Television'
-import MonitorSpeakerSide from './Cutouts/ClubSide/MonitorSpeakerSide'
-import WallSpeakerSide from './Cutouts/ClubSide/WallSpeakerSide'
-import TwinStreetlamp from './Cutouts/OaklandResidential/TwinStreetlamp'
-import Dumpster from './Cutouts/Alley/Dumpster'
-import WeddingPlatform from './Cutouts/OutdoorWedding/WeddingPlatform'
-import WeddingCrowd from './Cutouts/OutdoorWedding/WeddingCrowd'
-import IvDrip from './Cutouts/Deathbed/IvDrip'
+import FireHydrant from './Cutouts/FireHydrant'
+import PlaygroundSlide from './Cutouts/PlaygroundSlide'
+import MirroredSink from './Cutouts/MirroredSink'
+import TowelRack from './Cutouts/TowelRack'
+import OverpassSignFront from './Cutouts/OverpassSignFront'
+import OverpassSignBack from './Cutouts/OverpassSignBack'
+import PorchPlantsLeft from './Cutouts/PorchPlantsLeft'
+import PorchPlantsRight from './Cutouts/PorchPlantsRight'
+import TintinPoster from './Cutouts/TintinPoster'
+import TrollShadowLeft from './Cutouts/TrollShadowLeft'
+import TrollShadowRight from './Cutouts/TrollShadowRight'
+import Campfire from './Cutouts/Campfire'
+import Stalactites from './Cutouts/Stalactites'
+import BuddhaShrine from './Cutouts/BuddhaShrine'
+import TaiwanFridgeFront from './Cutouts/TaiwanFridgeFront'
+import BennettTaiwanStairs from './Cutouts/BennettTaiwanStairs'
+import OdinTaiwanStairs from './Cutouts/OdinTaiwanStairs'
+import TaiwanFridgeSide from './Cutouts/TaiwanFridgeSide'
+import BennettTaiwanGate from './Cutouts/BennettTaiwanGate'
+import OdinTaiwanGate from './Cutouts/OdinTaiwanGate'
+import BennettOdinRickshaw from './Cutouts/BennettOdinRickshaw'
+import BennettShore from './Cutouts/BennettShore'
+import OdinShore from './Cutouts/OdinShore'
+import BennettOdinBuoy from './Cutouts/BennettOdinBuoy'
+import YellowTapedGrill from './Cutouts/YellowTapedGrill'
+import BennettOdinDepths from './Cutouts/BennettOdinDepths'
+import SeaSerpents from './Cutouts/SeaSerpents'
+import BennettOceanFloor from './Cutouts/BennettOceanFloor'
+import OdinOceanFloor from './Cutouts/OdinOceanFloor'
+import BennettMat from './Cutouts/BennettMat'
+import OdinMat from './Cutouts/OdinMat'
+import BuddhaCave from './Cutouts/BuddhaCave'
+import TrashCan from './Cutouts/TrashCan'
+import VanNuysPlants from './Cutouts/VanNuysPlants'
+import VanNuysLogo from './Cutouts/VanNuysLogo'
+import Corkboard from './Cutouts/Corkboard'
+import Recyclables from './Cutouts/Recyclables'
+import NirvanaPoster from './Cutouts/NirvanaPoster'
+import DispenserLeft from './Cutouts/DispenserLeft'
+import DispenserRight from './Cutouts/DispenserRight'
+import BerkeleyLamppost from './Cutouts/BerkeleyLamppost'
+import SignPost from './Cutouts/SignPost'
+import BancroftShrubs from './Cutouts/BancroftShrubs'
+import UcBerkeleyTree from './Cutouts/UcBerkeleyTree'
+import LeonardCohenPoster from './Cutouts/LeonardCohenPoster'
+import MonitorSpeakerLeft from './Cutouts/MonitorSpeakerLeft'
+import MonitorSpeakerRight from './Cutouts/MonitorSpeakerRight'
+import WallSpeakerLeft from './Cutouts/WallSpeakerLeft'
+import WallSpeakerRight from './Cutouts/WallSpeakerRight'
+import CinemaPosterLeft from './Cutouts/CinemaPosterLeft'
+import CinemaPosterRight from './Cutouts/CinemaPosterRight'
+import Sandbags from './Cutouts/Sandbags'
+import StageLights from './Cutouts/StageLights'
+import TrafficLight from './Cutouts/TrafficLight'
+import ApartmentPlant from './Cutouts/ApartmentPlant'
+import CodeBox from './Cutouts/CodeBox'
+import Clipboard from './Cutouts/Clipboard'
+import Painting from './Cutouts/Painting'
+import WaitingRoomPlant from './Cutouts/WaitingRoomPlant'
+import StorageBoxes from './Cutouts/StorageBoxes'
+import StorageChest from './Cutouts/StorageChest'
+import HowieFridge from './Cutouts/HowieFridge'
+import Television from './Cutouts/Television'
+import MonitorSpeakerSide from './Cutouts/MonitorSpeakerSide'
+import WallSpeakerSide from './Cutouts/WallSpeakerSide'
+import TwinStreetlamp from './Cutouts/TwinStreetlamp'
+import ElliottSmithPoster from './Cutouts/ElliottSmithPoster'
+import Dumpster from './Cutouts/Dumpster'
+import WeddingPlatform from './Cutouts/WeddingPlatform'
+import WeddingCrowd from './Cutouts/WeddingCrowd'
+import IvDrip from './Cutouts/IvDrip'
 
 import {
     FIRE_HYDRANT,
@@ -80,6 +83,7 @@ import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
+    TINTIN_POSTER,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
@@ -106,6 +110,7 @@ import {
     TRASH_CAN,
     VAN_NUYS_PLANTS,
     VAN_NUYS_LOGO,
+    CORKBOARD,
     RECYCLABLES,
     NIRVANA_POSTER,
     DISPENSER_LEFT,
@@ -136,6 +141,7 @@ import {
     MONITOR_SPEAKER_SIDE,
     WALL_SPEAKER_SIDE,
     TWIN_STREETLAMP,
+    ELLIOTT_SMITH_POSTER,
     DUMPSTER,
     WEDDING_PLATFORM,
     WEDDING_CROWD,
@@ -151,6 +157,7 @@ const CUTOUTS_MAP = {
     [OVERPASS_SIGN_BACK]: OverpassSignBack,
     [PORCH_PLANTS_LEFT]: PorchPlantsLeft,
     [PORCH_PLANTS_RIGHT]: PorchPlantsRight,
+    [TINTIN_POSTER]: TintinPoster,
     [TROLL_SHADOW_LEFT]: TrollShadowLeft,
     [TROLL_SHADOW_RIGHT]: TrollShadowRight,
     [CAMPFIRE]: Campfire,
@@ -177,6 +184,7 @@ const CUTOUTS_MAP = {
     [TRASH_CAN]: TrashCan,
     [VAN_NUYS_PLANTS]: VanNuysPlants,
     [VAN_NUYS_LOGO]: VanNuysLogo,
+    [CORKBOARD]: Corkboard,
     [RECYCLABLES]: Recyclables,
     [NIRVANA_POSTER]: NirvanaPoster,
     [DISPENSER_LEFT]: DispenserLeft,
@@ -207,6 +215,7 @@ const CUTOUTS_MAP = {
     [MONITOR_SPEAKER_SIDE]: MonitorSpeakerSide,
     [WALL_SPEAKER_SIDE]: WallSpeakerSide,
     [TWIN_STREETLAMP]: TwinStreetlamp,
+    [ELLIOTT_SMITH_POSTER]: ElliottSmithPoster,
     [DUMPSTER]: Dumpster,
     [WEDDING_PLATFORM]: WeddingPlatform,
     [WEDDING_CROWD]: WeddingCrowd,

@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `tintinPoster`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: 'buddhaShrine and buddhaCave',
         workedHours: 0,
         neededHours: 3
@@ -91,6 +96,12 @@ module.exports = [
     },
 
     {
+        taskName: `corkboard`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
         taskName: 'vanNuysLogo',
         workedHours: 0,
         neededHours: 3
@@ -140,6 +151,12 @@ module.exports = [
         taskName: 'codeBox',
         workedHours: 0,
         neededHours: 2
+    },
+
+    {
+        taskName: `elliottSmithPoster`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     {

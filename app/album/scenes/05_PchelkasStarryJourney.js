@@ -79,13 +79,15 @@ import {
 } from 'scene/bubbleKeys'
 
 import {
+    TINTIN_POSTER,
     TRASH_CAN,
     ARRANGEMENT_TRASH_CAN_LOCKERS,
     ARRANGEMENT_TRASH_CAN_QUAD,
     VAN_NUYS_PLANTS,
     ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS,
     ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
-    VAN_NUYS_LOGO
+    VAN_NUYS_LOGO,
+    CORKBOARD
 } from 'scene/cutoutKeys'
 
 import {
@@ -136,6 +138,9 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [TINTIN_POSTER]: true,
+            },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
             },
@@ -174,6 +179,9 @@ module.exports = [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [TINTIN_POSTER]: true,
+            },
             [FIXTURES]: {
                 [CAPTAIN_BED_LAMP]: true,
                 [BENNETT_LETTERS]: true
@@ -205,6 +213,9 @@ module.exports = [
             },
             [BACKDROPS]: {
                 [BEDROOM_BUS_BACKDROP]: true
+            },
+            [CUTOUTS]: {
+                [TINTIN_POSTER]: true,
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
@@ -243,6 +254,9 @@ module.exports = [
             },
             [BUBBLES]: {
                 [DOGS_SKETCHBOOK]: true
+            },
+            [CUTOUTS]: {
+                [TINTIN_POSTER]: true,
             },
             [DOORS]: {
                 [BEDROOM_BLINDS]: true
@@ -426,6 +440,9 @@ module.exports = [
                         instance: PRINCIPAL
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [CORKBOARD]: true,
             },
             [DOORS]: {
                 [PRINCIPAL_DOOR]: true

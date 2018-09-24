@@ -20,6 +20,9 @@ const
     PORCH_PLANTS_LEFT = 'porchPlantsLeft',
     PORCH_PLANTS_RIGHT = 'porchPlantsRight',
 
+    // TODO
+    TINTIN_POSTER = 'tintinPoster',
+
     // Together on one page.
     TROLL_SHADOW_LEFT = 'trollShadowLeft',
     TROLL_SHADOW_RIGHT = 'trollShadowRight',
@@ -81,6 +84,9 @@ const
     VAN_NUYS_LOGO = 'vanNuysLogo',
 
     // TODO
+    CORKBOARD = 'corkboard',
+
+    // TODO
     RECYCLABLES = 'recyclables',
 
     // TODO
@@ -132,6 +138,9 @@ const
     TELEVISION = 'television',
     IV_DRIP = 'ivDrip',
 
+    // TODO
+    ELLIOTT_SMITH_POSTER = 'elliottSmithPoster',
+
     // Own page.
     DUMPSTER = 'dumpster',
 
@@ -161,6 +170,7 @@ export {
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
+    TINTIN_POSTER,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
@@ -187,6 +197,7 @@ export {
     TRASH_CAN,
     VAN_NUYS_PLANTS,
     VAN_NUYS_LOGO,
+    CORKBOARD,
     RECYCLABLES,
     NIRVANA_POSTER,
     DISPENSER_LEFT,
@@ -217,6 +228,7 @@ export {
     MONITOR_SPEAKER_SIDE,
     WALL_SPEAKER_SIDE,
     TWIN_STREETLAMP,
+    ELLIOTT_SMITH_POSTER,
     DUMPSTER,
     WEDDING_PLATFORM,
     WEDDING_CROWD,

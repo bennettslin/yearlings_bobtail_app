@@ -61,6 +61,7 @@ import {
 } from 'scene/backdropKeys'
 
 import {
+    ELLIOTT_SMITH_POSTER,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
@@ -197,6 +198,9 @@ module.exports = [
                         instance: FREEZING_NAKED
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [ELLIOTT_SMITH_POSTER]: true,
             },
             [DOORS]: {
                 [BASEMENT_DOOR]: true

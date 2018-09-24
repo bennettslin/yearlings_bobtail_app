@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    CUTOUTS,
     FIXTURES,
     FLATS,
     DOORS,
@@ -86,6 +87,10 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    ELLIOTT_SMITH_POSTER
+} from 'scene/cutoutKeys'
+
+import {
     TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_CONSOLE,
@@ -136,6 +141,9 @@ module.exports = [
                     description: 'side, asleep',
                     instance: ASLEEP
                 }
+            },
+            [CUTOUTS]: {
+                [ELLIOTT_SMITH_POSTER]: true,
             },
             [DOORS]: {
                 [BASEMENT_DOOR]: true
