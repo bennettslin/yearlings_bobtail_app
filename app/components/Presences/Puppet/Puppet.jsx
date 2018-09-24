@@ -2,31 +2,36 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import PuppetBennettBegin from './Puppets/PuppetShow/PuppetBennettBegin'
-import PuppetAnitaBegin from './Puppets/PuppetShow/PuppetAnitaBegin'
-import PuppetMotherBegin from './Puppets/PuppetShow/PuppetMotherBegin'
-import PuppetFatherBegin from './Puppets/PuppetShow/PuppetFatherBegin'
-import PuppetBennettMiddle from './Puppets/PuppetShow/PuppetBennettMiddle'
-import PuppetAnitaMiddle from './Puppets/PuppetShow/PuppetAnitaMiddle'
-import PuppetMotherMiddle from './Puppets/PuppetShow/PuppetMotherMiddle'
-import PuppetFatherMiddle from './Puppets/PuppetShow/PuppetFatherMiddle'
-import PuppetBennettEnd from './Puppets/PuppetShow/PuppetBennettEnd'
-import PuppetAnitaEnd from './Puppets/PuppetShow/PuppetAnitaEnd'
-import PuppetMotherEnd from './Puppets/PuppetShow/PuppetMotherEnd'
-import PuppetFatherEnd from './Puppets/PuppetShow/PuppetFatherEnd'
-import Pchelka from './Puppets/Bedroom/Pchelka'
-import Mushka from './Puppets/Bedroom/Mushka'
-import Rocket from './Puppets/Bedroom/Rocket'
-import Earth from './Puppets/Bedroom/Earth'
-import SpaceColony from './Puppets/Bedroom/SpaceColony'
-import OpalLap from './Puppets/LizCouch/OpalLap'
-import OpalWindow from './Puppets/LizCouch/OpalWindow'
-import OpalCouch from './Puppets/LizCouch/OpalCouch'
-import Peahen from './Puppets/LizCouch/Peahen'
-import Peacock from './Puppets/LizCouch/Peacock'
-import PuppetReatta from './Puppets/ElCerrito/PuppetReatta'
-import PuppetKhari from './Puppets/OutdoorWedding/PuppetKhari'
-import PuppetLiz from './Puppets/OutdoorWedding/PuppetLiz'
+import PuppetBennettBegin from './Puppets/PuppetBennettBegin'
+import PuppetAnitaBegin from './Puppets/PuppetAnitaBegin'
+import PuppetMotherBegin from './Puppets/PuppetMotherBegin'
+import PuppetFatherBegin from './Puppets/PuppetFatherBegin'
+import PuppetBennettMiddle from './Puppets/PuppetBennettMiddle'
+import PuppetAnitaMiddle from './Puppets/PuppetAnitaMiddle'
+import PuppetMotherMiddle from './Puppets/PuppetMotherMiddle'
+import PuppetFatherMiddle from './Puppets/PuppetFatherMiddle'
+import PuppetBennettEnd from './Puppets/PuppetBennettEnd'
+import PuppetAnitaEnd from './Puppets/PuppetAnitaEnd'
+import PuppetMotherEnd from './Puppets/PuppetMotherEnd'
+import PuppetFatherEnd from './Puppets/PuppetFatherEnd'
+import Pchelka from './Puppets/Pchelka'
+import Mushka from './Puppets/Mushka'
+import Rocket from './Puppets/Rocket'
+import Earth from './Puppets/Earth'
+import SpaceColony from './Puppets/SpaceColony'
+import OpalLap from './Puppets/OpalLap'
+import OpalWindow from './Puppets/OpalWindow'
+import OpalCouch from './Puppets/OpalCouch'
+import Peahen from './Puppets/Peahen'
+import Peacock from './Puppets/Peacock'
+import PuppetReatta from './Puppets/PuppetReatta'
+import GhostOdinCampus from './Puppets/GhostOdinCampus'
+import GhostOdinClub from './Puppets/GhostOdinClub'
+import GhostOdinAlley from './Puppets/GhostOdinAlley'
+import GhostOdinPhone from './Puppets/GhostOdinPhone'
+import GhostOdinDemonstration from './Puppets/GhostOdinDemonstration'
+import PuppetKhari from './Puppets/PuppetKhari'
+import PuppetLiz from './Puppets/PuppetLiz'
 
 import {
     PUPPET_BENNETT_BEGIN,
@@ -52,6 +57,11 @@ import {
     PEAHEN,
     PEACOCK,
     PUPPET_REATTA,
+    GHOST_ODIN_CAMPUS,
+    GHOST_ODIN_CLUB,
+    GHOST_ODIN_ALLEY,
+    GHOST_ODIN_PHONE,
+    GHOST_ODIN_DEMONSTRATION,
     PUPPET_KHARI,
     PUPPET_LIZ
 } from 'scene/puppetKeys'
@@ -80,6 +90,11 @@ const PUPPETS_MAP = {
     [PEAHEN]: Peahen,
     [PEACOCK]: Peacock,
     [PUPPET_REATTA]: PuppetReatta,
+    [GHOST_ODIN_CAMPUS]: GhostOdinCampus,
+    [GHOST_ODIN_CLUB]: GhostOdinClub,
+    [GHOST_ODIN_ALLEY]: GhostOdinAlley,
+    [GHOST_ODIN_PHONE]: GhostOdinPhone,
+    [GHOST_ODIN_DEMONSTRATION]: GhostOdinDemonstration,
     [PUPPET_KHARI]: PuppetKhari,
     [PUPPET_LIZ]: PuppetLiz
 },

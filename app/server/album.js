@@ -38,6 +38,7 @@ const rawAlbum = {
         )),
         remainingTasks: require('album/tasks/remainingTasks')
 
+            // Presences.
             .concat(require('album/tasks/backdropDrawingTasks'))
             .concat(require('album/tasks/bubbleDrawingTasks'))
             .concat(require('album/tasks/cutoutDrawingTasks'))
@@ -48,10 +49,11 @@ const rawAlbum = {
             .concat(require('album/tasks/panelDrawingTasks'))
             .concat(require('album/tasks/puppetDrawingTasks'))
 
+            // Additional work on presences.
+            .concat(require('album/tasks/fabricDrawingTasks'))
             .concat(require('album/tasks/detailedDrawingTasks'))
+
             .concat(require('album/tasks/illustratorDrawingTasks'))
-            .concat(require('album/tasks/remainingDrawingTasks'))
-            .concat(require('album/tasks/realisticDrawingTasks'))
             .concat(require('album/tasks/sceneTasks'))
             .concat(require('album/tasks/svgDrawingTasks')),
 

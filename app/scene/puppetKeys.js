@@ -47,6 +47,14 @@ const
     PEACOCK = 'peacock',
     // TODO
     PUPPET_REATTA = 'puppetReatta',
+
+    // TODO
+    GHOST_ODIN_CAMPUS = 'ghostOdinCampus',
+    GHOST_ODIN_CLUB = 'ghostOdinClub',
+    GHOST_ODIN_ALLEY = 'ghostOdinAlley',
+    GHOST_ODIN_PHONE = 'ghostOdinPhone',
+    GHOST_ODIN_DEMONSTRATION = 'ghostOdinDemonstration',
+
     // TODO
     PUPPET_KHARI = 'puppetKhari',
     // TODO
@@ -76,6 +84,11 @@ export {
     PEAHEN,
     PEACOCK,
     PUPPET_REATTA,
+    GHOST_ODIN_CAMPUS,
+    GHOST_ODIN_CLUB,
+    GHOST_ODIN_ALLEY,
+    GHOST_ODIN_PHONE,
+    GHOST_ODIN_DEMONSTRATION,
     PUPPET_KHARI,
     PUPPET_LIZ
 }

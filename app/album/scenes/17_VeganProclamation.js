@@ -5,7 +5,8 @@ import {
     FLATS,
     DOORS,
     FURNITURES,
-    PANELS
+    PANELS,
+    PUPPETS
 } from 'constants/scene'
 
 import {
@@ -96,6 +97,14 @@ import {
     PHONE_CALL_PANEL
 } from 'scene/panelKeys'
 
+import {
+    GHOST_ODIN_CAMPUS,
+    GHOST_ODIN_CLUB,
+    GHOST_ODIN_ALLEY,
+    GHOST_ODIN_PHONE,
+    GHOST_ODIN_DEMONSTRATION,
+} from 'scene/puppetKeys'
+
 module.exports = [
     {
         unitIndex: 1,
@@ -122,6 +131,9 @@ module.exports = [
                     description: 'side, protective, judgmental',
                     instance: PROTECTIVE
                 }
+            },
+            [PUPPETS]: {
+                [GHOST_ODIN_CAMPUS]: true
             }
         },
         cubes: CAMPANILE_KEY,
@@ -170,6 +182,9 @@ module.exports = [
             [FLATS]: {
                 [CROWD_BACK_FAR]: true,
                 [CROWD_BACK_NEAR]: true
+            },
+            [PUPPETS]: {
+                [GHOST_ODIN_CLUB]: true
             }
         },
         cubes: CLUB_FAR_KEY,
@@ -198,6 +213,9 @@ module.exports = [
             },
             [DOORS]: {
                 [LOADING_DOCK_DOOR]: true
+            },
+            [PUPPETS]: {
+                [GHOST_ODIN_ALLEY]: true
             }
         },
         cubes: ALLEY_KEY,
@@ -260,6 +278,9 @@ module.exports = [
                 [LIZ_PILLOWS]: true,
                 [LIZ_MATTRESS_REFLECTION]: true,
                 [LIZ_PILLOWS_REFLECTION]: true,
+            },
+            [PUPPETS]: {
+                [GHOST_ODIN_PHONE]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,
@@ -303,6 +324,9 @@ module.exports = [
                         instance: PROTESTER
                     }
                 }
+            },
+            [PUPPETS]: {
+                [GHOST_ODIN_DEMONSTRATION]: true
             }
         },
         cubes: BANCROFT_LIBRARY_KEY,

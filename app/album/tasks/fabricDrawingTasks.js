@@ -1,19 +1,4 @@
 module.exports = [
-
-    /**
-     * Clothes.
-     */
-    {
-        taskName: `Bennett and Sita's clothes (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Sita and Khari's clothes (Vegan)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     /**
      * Fabrics.
      */

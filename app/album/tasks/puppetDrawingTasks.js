@@ -120,6 +120,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: 'ghostOdins',
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
         taskName: 'puppetKhari',
         workedHours: 0,
         neededHours: 2
