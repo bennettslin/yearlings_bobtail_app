@@ -1,9 +1,12 @@
 import { SHORE_KEY } from 'scene/cubesKeys'
 
+import {
+    RIGHT
+} from 'scene/cubesConstants'
+
 const
     SHORE_CUBES = {
-        // TODO: Make more natural.
-        // Sand.
+        slantDirection: RIGHT,
         floor: {
             zIndices: [
                 [0]

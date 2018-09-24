@@ -2,10 +2,13 @@ import {
     RICKSHAW_KEY
 } from 'scene/cubesKeys'
 
+import {
+    RIGHT
+} from 'scene/cubesConstants'
+
 const
     RICKSHAW_CUBES = {
-        // TODO: Make more natural.
-        // Sand.
+        slantDirection: RIGHT,
         floor: {
             zIndices: [
                 [0]

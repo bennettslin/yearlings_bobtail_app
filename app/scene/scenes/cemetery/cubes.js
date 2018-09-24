@@ -1,9 +1,12 @@
 import { CEMETERY_KEY } from 'scene/cubesKeys'
 
+import {
+    LEFT
+} from 'scene/cubesConstants'
+
 const
     CEMETERY_CUBES = {
-        // TODO: Make more natural.
-        // Hill.
+        slantDirection: LEFT,
         floor: {
             zIndices: [
                 [0],

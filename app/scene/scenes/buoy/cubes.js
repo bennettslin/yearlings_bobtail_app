@@ -1,16 +1,20 @@
 import { BUOY_KEY } from 'scene/cubesKeys'
 
+import {
+    a,
+    RIGHT
+} from 'scene/cubesConstants'
+
 const
     BUOY_CUBES = {
-        // TODO: Make more natural.
-        // Ocean wave.
+        slantDirection: RIGHT,
         floor: {
             zIndices: [
-                [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+                [a, a, a, a, a, a, a, a, a, a, a, a],
+                [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
+                [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
                 [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
-                [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
                 [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             ]
         }
