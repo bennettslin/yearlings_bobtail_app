@@ -86,8 +86,10 @@ const
     // TODO
     CORKBOARD = 'corkboard',
 
-    // TODO
+    // Together on one page.
     RECYCLABLES = 'recyclables',
+    APARTMENT_PLANT = 'apartmentPlant',
+    CODE_BOX = 'codeBox',
 
     // TODO
     NIRVANA_POSTER = 'nirvanaPoster',
@@ -97,10 +99,8 @@ const
     DISPENSER_RIGHT = 'dispenserRight',
     SIGNPOST = 'signPost',
 
-    // TODO
-    BANCROFT_SHRUBS = 'bancroftShrubs',
-
     // With ucBerkeley backdrop and flat.
+    BANCROFT_SHRUBS = 'bancroftShrubs',
     UC_BERKELEY_TREE = 'ucBerkeleyTree',
 
     // TODO
@@ -124,10 +124,6 @@ const
     CLIPBOARD = 'clipboard',
     PAINTING = 'painting',
     WAITING_ROOM_PLANT = 'waitingRoomPlant',
-
-    // TODO
-    APARTMENT_PLANT = 'apartmentPlant',
-    CODE_BOX = 'codeBox',
 
     // Together on one page.
     STORAGE_BOXES = 'storageBoxes',

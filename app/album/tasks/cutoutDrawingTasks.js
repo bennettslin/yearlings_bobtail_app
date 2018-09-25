@@ -1,4 +1,19 @@
 module.exports = [
+
+    /**
+     * TODO next.
+     */
+    {
+        taskName: 'taiwanFridges',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `corkboard`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     {
         taskName: `tintinPoster`,
         workedHours: 0,
@@ -6,12 +21,6 @@ module.exports = [
     },
     {
         taskName: 'buddhaShrine and buddhaCave',
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: 'taiwanFridges',
         workedHours: 0,
         neededHours: 3
     },
@@ -96,33 +105,15 @@ module.exports = [
     },
 
     {
-        taskName: `corkboard`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: 'vanNuysLogo',
         workedHours: 0,
         neededHours: 3
     },
 
     {
-        taskName: 'recyclables',
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: 'nirvanaPoster',
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: 'bancroftShrubs',
-        workedHours: 0,
-        neededHours: 2
     },
 
     {
@@ -140,17 +131,6 @@ module.exports = [
         taskName: 'cinemaPosterRight',
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: 'apartmentPlant',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'codeBox',
-        workedHours: 0,
-        neededHours: 2
     },
 
     {

@@ -13,11 +13,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Locker stickers`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Yearlings logo on kick drum (M, Garryowen)`,
         workedHours: 0,
         neededHours: 1

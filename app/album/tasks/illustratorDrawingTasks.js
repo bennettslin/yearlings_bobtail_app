@@ -193,6 +193,26 @@ module.exports = [
         neededHours: 1
     },
     {
+        taskName: 'bancroftShrubs',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'recyclables',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'apartmentPlant',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'codeBox',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `VW bug (Garryowen)`,
         workedHours: 1,
         neededHours: 2

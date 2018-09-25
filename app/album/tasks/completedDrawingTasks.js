@@ -770,5 +770,10 @@ module.exports = [
                 neededHours: 3
             }
         ]
-    }
+    },
+    {
+        taskName: `Locker stickers`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
