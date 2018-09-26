@@ -23,11 +23,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Bennett and Sita's clothes (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `recordingMic`,
         workedHours: 0,
         neededHours: 2
@@ -39,11 +34,6 @@ module.exports = [
     },
     {
         taskName: `lizPhoneReflection`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Sita and Khari's clothes (Vegan)`,
         workedHours: 0,
         neededHours: 2
     },

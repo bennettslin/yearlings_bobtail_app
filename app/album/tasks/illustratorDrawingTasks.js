@@ -29,9 +29,24 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: 'taiwanFridges',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `corkboard`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `St Joseph the Worker church and surroundings (Ash)`,
         workedHours: 2,
         neededHours: 3
+    },
+    {
+        taskName: 'lightSwitch',
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Royce Hall (Constellations)`,

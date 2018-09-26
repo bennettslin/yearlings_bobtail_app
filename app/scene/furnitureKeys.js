@@ -26,8 +26,9 @@ const
     GO_KART_DASHBOARD_LEFT = 'goKartDashboardLeft',
     GO_KART_DASHBOARD_RIGHT = 'goKartDashboardRight',
 
-    // TODO
+    // With apartment cutouts.
     LIGHT_SWITCH = 'lightSwitch',
+
     // TODO
     BENNETT_MATTRESS = 'bennettMattress',
     // TODO

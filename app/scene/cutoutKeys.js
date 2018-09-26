@@ -34,7 +34,7 @@ const
     // TODO
     BUDDHA_SHRINE = 'buddhaShrine',
 
-    // TODO
+    // Own page.
     TAIWAN_FRIDGE_FRONT = 'taiwanFridgeFront',
     TAIWAN_FRIDGE_SIDE = 'taiwanFridgeSide',
 
@@ -83,10 +83,8 @@ const
     // TODO
     VAN_NUYS_LOGO = 'vanNuysLogo',
 
-    // TODO
-    CORKBOARD = 'corkboard',
-
     // Together on one page.
+    CORKBOARD = 'corkboard',
     RECYCLABLES = 'recyclables',
     APARTMENT_PLANT = 'apartmentPlant',
     CODE_BOX = 'codeBox',

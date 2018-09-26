@@ -1,19 +1,5 @@
 module.exports = [
 
-    /**
-     * TODO next.
-     */
-    {
-        taskName: 'taiwanFridges',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `corkboard`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     {
         taskName: `tintinPoster`,
         workedHours: 0,
