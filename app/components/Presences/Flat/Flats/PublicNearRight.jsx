@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const PublicLeft = ({
+const PublicNearRight = ({
 
     className,
 
@@ -18,7 +18,7 @@ const PublicLeft = ({
     return (
         <Svg
             className={cx(
-                'PublicLeft',
+                'PublicNearRight',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const PublicLeft = ({
                 {...other}
             >
                 {cx(
-                    'PublicLeft'
+                    'PublicNearRight'
                 )}
             </text>
         </Svg>
     )
 }
 
-PublicLeft.propTypes = propTypes;
+PublicNearRight.propTypes = propTypes;
 
-export default PublicLeft
+export default PublicNearRight

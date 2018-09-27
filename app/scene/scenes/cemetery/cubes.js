@@ -10,6 +10,7 @@ const
         floor: {
             zIndices: [
                 [0],
+                [0],
                 [2]
             ]
         }

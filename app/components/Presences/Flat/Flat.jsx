@@ -27,12 +27,24 @@ import CrowdSideNear from './Flats/CrowdSideNear'
 import CrowdSideFar from './Flats/CrowdSideFar'
 import OaklandHouseLeft from './Flats/OaklandHouseLeft'
 import OaklandHouseRight from './Flats/OaklandHouseRight'
-import ResidentialLeft from './Flats/ResidentialLeft'
-import ResidentialRight from './Flats/ResidentialRight'
-import CommercialLeft from './Flats/CommercialLeft'
-import CommercialRight from './Flats/CommercialRight'
-import PublicLeft from './Flats/PublicLeft'
-import PublicRight from './Flats/PublicRight'
+import ResidentialFarLeft from './Flats/ResidentialFarLeft'
+import ResidentialMiddleLeft from './Flats/ResidentialMiddleLeft'
+import ResidentialNearLeft from './Flats/ResidentialNearLeft'
+import ResidentialFarRight from './Flats/ResidentialFarRight'
+import ResidentialMiddleRight from './Flats/ResidentialMiddleRight'
+import ResidentialNearRight from './Flats/ResidentialNearRight'
+import CommercialFarLeft from './Flats/CommercialFarLeft'
+import CommercialMiddleLeft from './Flats/CommercialMiddleLeft'
+import CommercialNearLeft from './Flats/CommercialNearLeft'
+import CommercialFarRight from './Flats/CommercialFarRight'
+import CommercialMiddleRight from './Flats/CommercialMiddleRight'
+import CommercialNearRight from './Flats/CommercialNearRight'
+import PublicFarLeft from './Flats/PublicFarLeft'
+import PublicMiddleLeft from './Flats/PublicMiddleLeft'
+import PublicNearLeft from './Flats/PublicNearLeft'
+import PublicFarRight from './Flats/PublicFarRight'
+import PublicMiddleRight from './Flats/PublicMiddleRight'
+import PublicNearRight from './Flats/PublicNearRight'
 import RoadPast from './Flats/RoadPast'
 import RoadPresent from './Flats/RoadPresent'
 import RoadFuture from './Flats/RoadFuture'
@@ -67,12 +79,24 @@ import {
     CROWD_SIDE_FAR,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
-    RESIDENTIAL_LEFT,
-    RESIDENTIAL_RIGHT,
-    COMMERCIAL_LEFT,
-    COMMERCIAL_RIGHT,
-    PUBLIC_LEFT,
-    PUBLIC_RIGHT,
+    RESIDENTIAL_FAR_LEFT,
+    RESIDENTIAL_MIDDLE_LEFT,
+    RESIDENTIAL_NEAR_LEFT,
+    RESIDENTIAL_FAR_RIGHT,
+    RESIDENTIAL_MIDDLE_RIGHT,
+    RESIDENTIAL_NEAR_RIGHT,
+    COMMERCIAL_FAR_LEFT,
+    COMMERCIAL_MIDDLE_LEFT,
+    COMMERCIAL_NEAR_LEFT,
+    COMMERCIAL_FAR_RIGHT,
+    COMMERCIAL_MIDDLE_RIGHT,
+    COMMERCIAL_NEAR_RIGHT,
+    PUBLIC_FAR_LEFT,
+    PUBLIC_MIDDLE_LEFT,
+    PUBLIC_NEAR_LEFT,
+    PUBLIC_FAR_RIGHT,
+    PUBLIC_MIDDLE_RIGHT,
+    PUBLIC_NEAR_RIGHT,
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
@@ -108,12 +132,24 @@ const FLATS_MAP = {
     [CROWD_SIDE_FAR]: CrowdSideFar,
     [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
-    [RESIDENTIAL_LEFT]: ResidentialLeft,
-    [RESIDENTIAL_RIGHT]: ResidentialRight,
-    [COMMERCIAL_LEFT]: CommercialLeft,
-    [COMMERCIAL_RIGHT]: CommercialRight,
-    [PUBLIC_LEFT]: PublicLeft,
-    [PUBLIC_RIGHT]: PublicRight,
+    [RESIDENTIAL_FAR_LEFT]: ResidentialFarLeft,
+    [RESIDENTIAL_FAR_RIGHT]: ResidentialFarRight,
+    [RESIDENTIAL_MIDDLE_LEFT]: ResidentialMiddleLeft,
+    [RESIDENTIAL_MIDDLE_RIGHT]: ResidentialMiddleRight,
+    [RESIDENTIAL_NEAR_LEFT]: ResidentialNearLeft,
+    [RESIDENTIAL_NEAR_RIGHT]: ResidentialNearRight,
+    [COMMERCIAL_FAR_LEFT]: CommercialFarLeft,
+    [COMMERCIAL_FAR_RIGHT]: CommercialFarRight,
+    [COMMERCIAL_MIDDLE_LEFT]: CommercialMiddleLeft,
+    [COMMERCIAL_MIDDLE_RIGHT]: CommercialMiddleRight,
+    [COMMERCIAL_NEAR_LEFT]: CommercialNearLeft,
+    [COMMERCIAL_NEAR_RIGHT]: CommercialNearRight,
+    [PUBLIC_FAR_LEFT]: PublicFarLeft,
+    [PUBLIC_FAR_RIGHT]: PublicFarRight,
+    [PUBLIC_MIDDLE_LEFT]: PublicMiddleLeft,
+    [PUBLIC_MIDDLE_RIGHT]: PublicMiddleRight,
+    [PUBLIC_NEAR_LEFT]: PublicNearLeft,
+    [PUBLIC_NEAR_RIGHT]: PublicNearRight,
     [ROAD_PAST]: RoadPast,
     [ROAD_PRESENT]: RoadPresent,
     [ROAD_FUTURE]: RoadFuture,

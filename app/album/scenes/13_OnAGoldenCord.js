@@ -63,18 +63,33 @@ import {
 } from 'scene/backdropKeys'
 
 import {
-    TWIN_STREETLAMP
+    TWIN_STREETLAMP,
+    ARRANGEMENT_TWIN_STREETLAMP_FAR,
+    ARRANGEMENT_TWIN_STREETLAMP_MIDDLE,
+    ARRANGEMENT_TWIN_STREETLAMP_NEAR
 } from 'scene/cutoutKeys'
 
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
-    RESIDENTIAL_LEFT,
-    RESIDENTIAL_RIGHT,
-    COMMERCIAL_LEFT,
-    COMMERCIAL_RIGHT,
-    PUBLIC_LEFT,
-    PUBLIC_RIGHT
+    RESIDENTIAL_FAR_LEFT,
+    RESIDENTIAL_MIDDLE_LEFT,
+    RESIDENTIAL_NEAR_LEFT,
+    RESIDENTIAL_FAR_RIGHT,
+    RESIDENTIAL_MIDDLE_RIGHT,
+    RESIDENTIAL_NEAR_RIGHT,
+    COMMERCIAL_FAR_LEFT,
+    COMMERCIAL_MIDDLE_LEFT,
+    COMMERCIAL_NEAR_LEFT,
+    COMMERCIAL_FAR_RIGHT,
+    COMMERCIAL_MIDDLE_RIGHT,
+    COMMERCIAL_NEAR_RIGHT,
+    PUBLIC_FAR_LEFT,
+    PUBLIC_MIDDLE_LEFT,
+    PUBLIC_NEAR_LEFT,
+    PUBLIC_FAR_RIGHT,
+    PUBLIC_MIDDLE_RIGHT,
+    PUBLIC_NEAR_RIGHT
 } from 'scene/flatKeys'
 
 import {
@@ -165,11 +180,17 @@ module.exports = [
                 [RESIDENCE_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TWIN_STREETLAMP]: true
+                [TWIN_STREETLAMP]: ARRANGEMENT_TWIN_STREETLAMP_FAR,
+                [TWIN_STREETLAMP]: ARRANGEMENT_TWIN_STREETLAMP_MIDDLE,
+                [TWIN_STREETLAMP]: ARRANGEMENT_TWIN_STREETLAMP_NEAR
             },
             [FLATS]: {
-                [RESIDENTIAL_LEFT]: true,
-                [RESIDENTIAL_RIGHT]: true
+                [RESIDENTIAL_FAR_LEFT]: true,
+                [RESIDENTIAL_FAR_RIGHT]: true,
+                [RESIDENTIAL_MIDDLE_LEFT]: true,
+                [RESIDENTIAL_MIDDLE_RIGHT]: true,
+                [RESIDENTIAL_NEAR_LEFT]: true,
+                [RESIDENTIAL_NEAR_RIGHT]: true
             }
         },
         cubes: OAKLAND_RESIDENTIAL_KEY,
@@ -210,8 +231,12 @@ module.exports = [
                 [COMMERCIAL_BACKDROP]: true
             },
             [FLATS]: {
-                [COMMERCIAL_LEFT]: true,
-                [COMMERCIAL_RIGHT]: true
+                [COMMERCIAL_FAR_LEFT]: true,
+                [COMMERCIAL_FAR_RIGHT]: true,
+                [COMMERCIAL_MIDDLE_LEFT]: true,
+                [COMMERCIAL_MIDDLE_RIGHT]: true,
+                [COMMERCIAL_NEAR_LEFT]: true,
+                [COMMERCIAL_NEAR_RIGHT]: true
             }
         },
         cubes: OAKLAND_COMMERCIAL_KEY,
@@ -276,8 +301,12 @@ module.exports = [
                 [PUBLIC_BACKDROP]: true
             },
             [FLATS]: {
-                [PUBLIC_LEFT]: true,
-                [PUBLIC_RIGHT]: true
+                [PUBLIC_FAR_LEFT]: true,
+                [PUBLIC_FAR_RIGHT]: true,
+                [PUBLIC_MIDDLE_LEFT]: true,
+                [PUBLIC_MIDDLE_RIGHT]: true,
+                [PUBLIC_NEAR_LEFT]: true,
+                [PUBLIC_NEAR_RIGHT]: true
             }
         },
         cubes: OAKLAND_PUBLIC_KEY,

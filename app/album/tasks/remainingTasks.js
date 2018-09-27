@@ -1,9 +1,10 @@
 module.exports = [
 
-    /**
-     * End home tasks.
-     */
-
+    {
+        taskName: `Allow multiple instances of the same presence (twin streetlamp) in the same scene.`,
+        workedHours: 0,
+        neededHours: 2
+    },
     {
         taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
         workedHours: 0,

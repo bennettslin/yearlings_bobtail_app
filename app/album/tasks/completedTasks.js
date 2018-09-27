@@ -3897,4 +3897,9 @@ module.exports = [
         workedHours: 10,
         neededHours: 10
     },
+    {
+        taskName: `Figure out strategy for Golden Cord perspective scenes.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

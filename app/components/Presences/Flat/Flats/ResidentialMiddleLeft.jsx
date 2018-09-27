@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const ResidentialLeft = ({
+const ResidentialMiddleLeft = ({
 
     className,
 
@@ -18,7 +18,7 @@ const ResidentialLeft = ({
     return (
         <Svg
             className={cx(
-                'ResidentialLeft',
+                'ResidentialMiddleLeft',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const ResidentialLeft = ({
                 {...other}
             >
                 {cx(
-                    'ResidentialLeft'
+                    'ResidentialMiddleLeft'
                 )}
             </text>
         </Svg>
     )
 }
 
-ResidentialLeft.propTypes = propTypes;
+ResidentialMiddleLeft.propTypes = propTypes;
 
-export default ResidentialLeft
+export default ResidentialMiddleLeft

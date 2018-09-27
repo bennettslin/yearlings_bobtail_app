@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CommercialRight = ({
+const PublicMiddleLeft = ({
 
     className,
 
@@ -18,7 +18,7 @@ const CommercialRight = ({
     return (
         <Svg
             className={cx(
-                'CommercialRight',
+                'PublicMiddleLeft',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const CommercialRight = ({
                 {...other}
             >
                 {cx(
-                    'CommercialRight'
+                    'PublicMiddleLeft'
                 )}
             </text>
         </Svg>
     )
 }
 
-CommercialRight.propTypes = propTypes;
+PublicMiddleLeft.propTypes = propTypes;
 
-export default CommercialRight
+export default PublicMiddleLeft
