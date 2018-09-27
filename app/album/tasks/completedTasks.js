@@ -3902,4 +3902,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Allow multiple instances of the same presence (twin streetlamp) in the same scene.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

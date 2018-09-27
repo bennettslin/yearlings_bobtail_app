@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Allow multiple instances of the same presence (twin streetlamp) in the same scene.`,
+        taskName: `Have way to see random annotation.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
     {
         taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,

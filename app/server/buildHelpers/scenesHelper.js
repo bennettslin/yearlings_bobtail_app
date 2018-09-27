@@ -134,27 +134,28 @@ export const finalRegisterPresenceYIndices = (
             // Iterate through presences.
             keys(presences[presenceType]).forEach(presenceName => {
 
-                const presence = presences[presenceType][presenceName]
+                const
+                    presenceValue = presences[presenceType][presenceName],
+                    arrangementObjects = []
 
-                let arrangementObject,
-                    { instance } = presence
+                let { instance } = presenceValue
 
                 // Actor.
                 if (presenceType === ACTORS) {
-
                     /**
                      * If this is an alternate character, the instance is
                      * nested within the character object.
                      */
                     if (!instance) {
-                        const characterName = keys(presence)[0],
-                            characterPresence = presence[characterName]
+                        const characterName = keys(presenceValue)[0],
+                            characterPresence = presenceValue[characterName]
 
                         instance = characterPresence.instance
                     }
 
-                    arrangementObject =
+                    arrangementObjects.push(
                         ARRANGEMENTS_ACTORS[presenceName][instance]
+                    )
 
                     // Can be deleted.
                     album.tempInstanceCount++
@@ -163,52 +164,68 @@ export const finalRegisterPresenceYIndices = (
                 } else {
 
                     // This presence has only one arrangement.
-                    if (presence === true) {
-                        arrangementObject =
+                    if (presenceValue === true) {
+                        arrangementObjects.push(
                             ARRANGEMENTS_THINGS[presenceType][presenceName]
+                        )
 
                     /**
-                     * This presence has multiple arrangements.
+                     * This presence has multiple arrangements in a single
+                     * scene (at present, this applies to twin streetlamp).
+                     */
+                    } else if (Array.isArray(presenceValue)) {
+                        presenceValue.forEach(arrangement => {
+                            arrangementObjects.push(
+                                ARRANGEMENTS_THINGS[presenceType][presenceName][arrangement]
+                            )
+                        })
+
+                    /**
+                     * This presence has multiple arrangements, but only one
+                     * per scene.
                      */
                     } else {
-                        arrangementObject =
-                            ARRANGEMENTS_THINGS[presenceType][presenceName][presence]
+                        arrangementObjects.push(
+                            ARRANGEMENTS_THINGS[presenceType][presenceName][presenceValue]
+                        )
                     }
                 }
 
-                const {
-                    /**
-                     * Determine the yIndex of each presence.
-                     */
-                    yIndex,
-                    arrangement
-                } = arrangementObject
-
-                /**
-                 * TODO: Eventually, all presences should have a yIndex. For
-                 * now, we will check if they don't. Placeholders have negative
-                 * yIndex.
-                 */
-                if (!isNaN(yIndex) && yIndex > -1) {
-                    /**
-                     * If this is the first presence for that yIndex,
-                     * initialise the yIndex array.
-                     */
-                    if (!scene.presenceYIndices[yIndex]) {
-                        scene.presenceYIndices[yIndex] = []
-                    }
-
-                    /**
-                     * Add presence to the scene's presenceYIndices object
-                     * under that yIndex.
-                     */
-                    scene.presenceYIndices[yIndex].push({
-                        type: presenceType,
-                        name: presenceName,
-                        instance,
+                arrangementObjects.forEach(arrangementObject => {
+                    const {
+                        /**
+                         * Determine the yIndex of each presence.
+                         */
+                        yIndex,
                         arrangement
-                    })
-                }
+                    } = arrangementObject
+
+                    /**
+                     * TODO: Eventually, all presences should have a yIndex. For
+                     * now, we will check if they don't. Placeholders have negative
+                     * yIndex.
+                     */
+                    if (!isNaN(yIndex) && yIndex > -1) {
+                        /**
+                         * If this is the first presence for that yIndex,
+                         * initialise the yIndex array.
+                         */
+                        if (!scene.presenceYIndices[yIndex]) {
+                            scene.presenceYIndices[yIndex] = []
+                        }
+
+                        /**
+                         * Add presence to the scene's presenceYIndices object
+                         * under that yIndex.
+                         */
+                        scene.presenceYIndices[yIndex].push({
+                            type: presenceType,
+                            name: presenceName,
+                            instance,
+                            arrangement
+                        })
+                    }
+                })
             })
         })
 

@@ -180,9 +180,11 @@ module.exports = [
                 [RESIDENCE_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TWIN_STREETLAMP]: ARRANGEMENT_TWIN_STREETLAMP_FAR,
-                [TWIN_STREETLAMP]: ARRANGEMENT_TWIN_STREETLAMP_MIDDLE,
-                [TWIN_STREETLAMP]: ARRANGEMENT_TWIN_STREETLAMP_NEAR
+                [TWIN_STREETLAMP]: [
+                    ARRANGEMENT_TWIN_STREETLAMP_FAR,
+                    ARRANGEMENT_TWIN_STREETLAMP_MIDDLE,
+                    ARRANGEMENT_TWIN_STREETLAMP_NEAR
+                ]
             },
             [FLATS]: {
                 [RESIDENTIAL_FAR_LEFT]: true,
