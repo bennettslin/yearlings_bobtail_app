@@ -96,7 +96,7 @@ const _getHasWiki = (descriptionEntity) => {
 
     } else {
         return keys(descriptionEntity).reduce((keyFound, currentKey) => {
-            const hasWiki = !!descriptionEntity[WIKI]
+            const hasWiki = Boolean(descriptionEntity[WIKI])
 
             return keyFound || hasWiki || _getHasWiki(descriptionEntity[currentKey])
         }, false)
@@ -262,7 +262,7 @@ const _finalParseWiki = (annotationObject, entity) => {
 
     } else {
         return keys(entity).reduce((keyFound, currentKey) => {
-            const hasWiki = !!entity[WIKI]
+            const hasWiki = Boolean(entity[WIKI])
 
             if (!entity[WIKI_INDEX] && typeof entity[WIKI] === 'string') {
 

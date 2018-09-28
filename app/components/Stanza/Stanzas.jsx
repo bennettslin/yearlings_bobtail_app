@@ -3,229 +3,69 @@
  * optional index, such as Verse 1 or Bridge.
  */
 
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
-// import debounce from 'debounce'
 
 import Stanza from './Stanza'
 import StanzaHoc from './Hoc/StanzaHoc'
 import Unit from './Unit/Unit'
-import {
-    getSongStanzaConfigs,
-    getLastUnitDotCardIndex
-} from 'helpers/dataHelper'
-import {
-    getPropsAreShallowEqual
-} from 'helpers/generalHelper'
-
-const mapStateToProps = ({
-    renderStore: { canLyricRender },
-    renderedStore: { renderedSongIndex }
-}) => ({
-    canLyricRender,
-    renderedSongIndex
-})
-
-/*************
- * CONTAINER *
- *************/
-
-class Stanzas extends Component {
-
-    static propTypes = {
-        // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        isTransitioningHeight: PropTypes.bool.isRequired,
-        completeHeightTransition: PropTypes.func.isRequired,
-        handleLyricWheel: PropTypes.func.isRequired,
-        setLyricRef: PropTypes.func.isRequired,
-        setLyricVerseParentRef: PropTypes.func.isRequired
-    }
-
-    // Handle only once every 10ms at most.
-    // _handleDebouncedWheel = debounce(
-    //     this._handleDebouncedWheel, 10
-    // )
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
-    }
-
-    /**
-     * Not necessary to check shouldComponentUpdate, since the changed props
-     * upon which to update are a subset of those in lyric column.
-     */
-
-    componentDidUpdate(prevProps) {
-        logger.warn('Stanzas rendered.')
-
-        if (
-            this.props.isTransitioningHeight &&
-            !prevProps.isTransitioningHeight
-        ) {
-
-            /**
-             * We are calling this because collapsing and expanding the lyric
-             * section may change the verse bar status.
-             */
-            this._handleWheel()
-            this.props.completeHeightTransition()
-        }
-    }
-
-    _handleWheel = (e) => {
-        // console.error('on wheel', e)
-        this._handleDebouncedWheel(e)
-    }
-
-    _handleScroll = () => {
-        // console.error('on scroll', this.lyricRef.scrollTop, e)
-        // this._handleDebouncedWheel(e)
-    }
-
-    // NOTE: No longer using debounce. We'll keep as it is for now, though.
-    _handleDebouncedWheel(e) {
-        this.props.handleLyricWheel(e)
-    }
-
-    setLyricRef = (node) => {
-        // For internal reference.
-        // this.lyricRef = node
-
-        // For keyboard events.
-        this.props.setLyricRef(node)
-
-        // For scrolling.
-        this.props.setLyricVerseParentRef(node)
-    }
-
-    render() {
-        const {
-                /* eslint-disable no-unused-vars */
-                canLyricRender,
-                isTransitioningHeight,
-                completeHeightTransition,
-                handleLyricWheel,
-                setLyricRef,
-                setLyricVerseParentRef,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
-                renderedSongIndex,
-                ...other
-            } = this.props,
-
-            songStanzaConfigs = getSongStanzaConfigs(
-                renderedSongIndex
-            ),
-
-            lastUnitDotCardIndex = getLastUnitDotCardIndex(
-                renderedSongIndex
-            )
-
-        return (
-            <StanzasView {...other}
-                {...{
-                    songStanzaConfigs,
-                    lastUnitDotCardIndex,
-                    handleWheel: this._handleWheel,
-                    handleScroll: this._handleScroll,
-                    setRef: this.setLyricRef
-                }}
-            />
-        )
-    }
-}
-
-/****************
- * PRESENTATION *
- ****************/
 
 const propTypes = {
     // From parent.
     songStanzaConfigs: PropTypes.array.isRequired,
-    lastUnitDotCardIndex: PropTypes.number.isRequired,
-
-    setRef: PropTypes.func.isRequired,
-    handleWheel: PropTypes.func.isRequired,
-    handleScroll: PropTypes.func.isRequired
+    lastUnitDotCardIndex: PropTypes.number.isRequired
 },
 
-StanzasView = ({
+Stanzas = ({
 
     songStanzaConfigs,
     lastUnitDotCardIndex,
 
-    setRef,
-    handleWheel,
-    handleScroll,
-
 ...other }) => {
 
     return songStanzaConfigs.length && (
-        <div
-            ref={setRef}
-            className={cx(
-                'Lyric__scroll',
-                'absoluteFullContainer',
+        <div className={cx(
+            'LyricScroll'
+        )}>
 
-                // This gradient does not obscure the lyric toggle buttons.
-                'gradientMask__lyricColumn__mobileCollapsed'
-            )}
-            tabIndex="-1"
-            onWheel={handleWheel}
-            onScroll={handleScroll}
-        >
-            <div className={cx(
-                'Stanzas'
-            )}>
+            {/* This is the title. */}
+            <Unit {...other}
+                {...{
+                    unitIndex: 0
+                }}
+            />
 
-                {/* This is the title. */}
-                <Unit {...other}
-                    {...{
-                        unitIndex: 0
-                    }}
-                />
+            {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
 
-                {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
+                const isLastStanza =
+                    stanzaIndex === songStanzaConfigs.length - 1
 
-                    const isLastStanza =
-                        stanzaIndex === songStanzaConfigs.length - 1
-
-                    return (
-                        <StanzaHoc {...other}
-                            key={stanzaIndex}
-                            {...{
-                                stanzaConfig,
-                                stanzaIndex,
-                                isLastStanza,
-                                StanzaComponent: Stanza
-                            }}
-                        />
-                    )
-                })}
-
-                {/* This is the last unit dot card, if there is one. */}
-                {lastUnitDotCardIndex > -1 && (
-                    <Unit {...other}
+                return (
+                    <StanzaHoc {...other}
+                        key={stanzaIndex}
                         {...{
-                            unitIndex: lastUnitDotCardIndex
+                            stanzaConfig,
+                            stanzaIndex,
+                            isLastStanza,
+                            StanzaComponent: Stanza
                         }}
                     />
-                )}
-            </div>
+                )
+            })}
+
+            {/* This is the last unit dot card, if there is one. */}
+            {lastUnitDotCardIndex > -1 && (
+                <Unit {...other}
+                    {...{
+                        unitIndex: lastUnitDotCardIndex
+                    }}
+                />
+            )}
         </div>
     )
 }
 
-StanzasView.propTypes = propTypes
+Stanzas.propTypes = propTypes
 
-export default connect(mapStateToProps)(Stanzas)
+export default Stanzas

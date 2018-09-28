@@ -62,7 +62,7 @@ export const getAnnotationIndexForDirection = ({
     const annotationsCount = getAnnotationsCount(selectedSongIndex),
 
         // If a direction is given for this method, it has modulo.
-        useModulo = !!direction
+        useModulo = Boolean(direction)
 
     /**
      * Begin with a valid annotation index, in case there is no current

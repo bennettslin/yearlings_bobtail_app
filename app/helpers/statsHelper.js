@@ -14,7 +14,7 @@ export default {
         const objectKeys = keys(textObject)
 
         return objectKeys.reduce((todoCount, objectKey) => {
-            return todoCount + !!textObject[objectKey].todo
+            return todoCount + Boolean(textObject[objectKey].todo)
         }, 0)
     },
 
@@ -33,7 +33,10 @@ export default {
         }, 0)
     },
 
-    getTotalWords(textEntity = '', textKeys = STAT_TEXT_KEYS) {
+    getTotalWords(
+        textEntity = '',
+        textKeys = STAT_TEXT_KEYS
+    ) {
         if (textEntity instanceof Array) {
             return textEntity.reduce((wordCount, textValue) => {
                 return wordCount + this.getTotalWords(textValue, textKeys)

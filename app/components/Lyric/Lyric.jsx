@@ -9,7 +9,7 @@ import LyricAccess from './LyricAccess/LyricAccess'
 import LyricToggleEar from './LyricToggle/LyricToggleEar'
 import LyricToggleExpand from './LyricToggle/LyricToggleExpand'
 import LyricToggleScroll from './LyricToggle/LyricToggleScroll'
-import Stanzas from 'components/Stanza/Stanzas'
+import LyricScroll from './LyricScroll'
 import VerseBar from 'components/Verse/VerseBar/VerseBar'
 
 const mapStateToProps = ({
@@ -181,7 +181,7 @@ LyricColumnView = ({
             )}
             onTransitionEnd={handleTransition}
         >
-            <Stanzas {...other} />
+            <LyricScroll {...other} />
 
             <LyricToggleEar
                 handleLyricColumnSelect={handleLyricColumnSelect}

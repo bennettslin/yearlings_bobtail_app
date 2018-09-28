@@ -20,7 +20,7 @@ import {
 
 module.exports = {
     totalTime: 175,
-    overview: `With The Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my misery didn't abate, but instead simmered into a hard-boiled anger. I also began to regret my relationship with Sita, which now felt like a decision I was coerced to make, under deprived conditions from which I'd since been freed.`,
+    overview: `With The Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my misery didn't abate, but instead simmered into a hard-boiled resentment. I also began to regret my relationship with Sita, which now felt like a decision I was coerced to make, under deprived conditions from which I'd since been freed.`,
     title: {
         anchor: `Look Back in Anger`,
         annotation: {
@@ -32,7 +32,7 @@ module.exports = {
                         wiki: `Look_Back_in_Anger`
                     }
                 },
-                `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit a little too close to home when I read it.`
+                `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit unnervingly close to home when I read it.`
             ],
             dotKeys: {
                 [BACKSTORY]: true

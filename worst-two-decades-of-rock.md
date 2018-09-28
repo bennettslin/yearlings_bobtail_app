@@ -1,3 +1,5 @@
+Indie rock is like Donald Trump, in that all the dots you need to connect to draw a picture of privileged mediocrity are already there.
+
 Women and minorities are reluctant to advocate for themselves in the public arena, because a lifetime lived in their shoes has taught them that it's not worth their time and energy to navigate through that minefield of unconscious bias. The smart path for them is to advocate for themselves in the private arena, in intimate, face-to-face settings where they have the most control to counter the effects of unconscious bias, to limit its damage. And slowly build up partnerships and alliances, and then have these partners and allies advocate for them in the public arena.
 
 The whole point of indie rock is to compete for the most participation trophies. Alternate sports league?

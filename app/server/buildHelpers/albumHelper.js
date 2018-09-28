@@ -49,6 +49,7 @@ export const parseAlbumData = (albumObject) => {
 
     // Initialise album.
     albumObject.tempWormholeLinks = {}
+    albumObject.tempGlobalAnnotationIndex = 0
 
     // Combine completed and remaining tasks.
     _mergeAlbumTasks(albumObject)
@@ -68,6 +69,9 @@ export const parseAlbumData = (albumObject) => {
     addDestinationWormholeIndices(albumObject)
 
     logger.warn('End parse album data.')
+
+    delete albumObject.tempGlobalAnnotationIndex
+
     return albumObject
 }
 
@@ -253,6 +257,10 @@ const _initialRegisterAnnotation = ({
         cards,
         annotationDotKeys
     })
+
+    // Let annotation object know its global index.
+    annotationObject.globalIndex = albumObject.tempGlobalAnnotationIndex
+    albumObject.tempGlobalAnnotationIndex++
 
     // Let annotation object know its cards.
     annotationObject.cards = cards

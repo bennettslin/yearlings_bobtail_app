@@ -8,6 +8,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getTempInstanceCount,
+    getAnnotationObject,
     getSongObject,
     getSceneObject,
     getDrawings
@@ -43,6 +44,7 @@ class LogManager extends Component {
 
     _assignDebugLogFunctions() {
         global.i = this.logInstances
+        global.a = this.logAnnotation
         global.d = this.logDrawings
         global.z = this.logScene
         global.s = this.logSong
@@ -52,6 +54,20 @@ class LogManager extends Component {
     logInstances = () => {
         const tempInstanceCount = getTempInstanceCount()
         return this._logObject('temp instance count', tempInstanceCount)
+    }
+
+    logAnnotation = () => {
+        const {
+            renderedSongIndex,
+            renderedAnnotationIndex
+        } = this.props,
+
+        renderedAnnotationObject = getAnnotationObject(
+            renderedSongIndex,
+            renderedAnnotationIndex
+        )
+
+        return this._logObject('rendered annotation', renderedAnnotationObject)
     }
 
     logDrawings = () => {
