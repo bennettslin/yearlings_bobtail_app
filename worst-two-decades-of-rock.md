@@ -1,3 +1,7 @@
+An everyman is a lone individual who, by sheer virtue of their modest circumstances, can represent everyone else. They are necessarily a member of the privileged, dominant group. Everyman cultures in the 21st century are increasingly going to suck.
+
+Donald Trump forced white liberals to finally admit what indie rock has required them all these years to never admit.
+
 Indie rock is like Donald Trump, in that all the dots you need to connect to draw a picture of privileged mediocrity are already there.
 
 Women and minorities are reluctant to advocate for themselves in the public arena, because a lifetime lived in their shoes has taught them that it's not worth their time and energy to navigate through that minefield of unconscious bias. The smart path for them is to advocate for themselves in the private arena, in intimate, face-to-face settings where they have the most control to counter the effects of unconscious bias, to limit its damage. And slowly build up partnerships and alliances, and then have these partners and allies advocate for them in the public arena.

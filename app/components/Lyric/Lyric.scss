@@ -120,6 +120,35 @@
     }
 }
 
-.TempGlobalAnnotations {
-    background-color: white;
+.TempGlobalAnnotation {
+    background-color: #fafafa;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: $boxShadow__admin;
+}
+
+.TempGlobalAnnotation__header {
+    font-size: 1.15em;
+    border-radius: 5px;
+    border: 1px solid #cca;
+    background-color: #ffe;
+    padding: 5px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.TempGlobalAnnotationCard {
+    font-size: 0.95em;
+    border: 1px solid #acc;
+    background-color: #eff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.Button__increment {
+    background-color: #ea7;
 }

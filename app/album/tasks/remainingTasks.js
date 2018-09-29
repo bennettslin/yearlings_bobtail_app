@@ -2,7 +2,7 @@ module.exports = [
 
     {
         taskName: `Have way to see random annotation.`,
-        workedHours: 0,
+        workedHours: 5,
         neededHours: 5
     },
     {
