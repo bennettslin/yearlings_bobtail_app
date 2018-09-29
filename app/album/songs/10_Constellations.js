@@ -564,12 +564,12 @@ module.exports = {
                         annotation: [
                             {
                                 description: [
-                                    `As we rush down the earthen steps leading into the steam tunnels, I imagine us as 13th-century Mongol horsemen sweeping down from the Asian`,
+                                    `As we rush down the earthen "steps" leading into the steam tunnels, I imagine us as 13th-century Mongol horsemen sweeping down from the Asian`,
                                     {
                                         anchor: `steppes`,
                                         wiki: `Steppe`
                                     },
-                                    `to begin their conquests.`
+                                    `to begin our conquests.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

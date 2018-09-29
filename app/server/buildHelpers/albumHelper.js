@@ -49,7 +49,8 @@ export const parseAlbumData = (albumObject) => {
 
     // Initialise album.
     albumObject.tempWormholeLinks = {}
-    albumObject.tempGlobalAnnotationIndex = 0
+    albumObject.globalAnnotationsCount = 0
+    albumObject.globalAnnotationIndices = {}
 
     // Combine completed and remaining tasks.
     _mergeAlbumTasks(albumObject)
@@ -69,8 +70,6 @@ export const parseAlbumData = (albumObject) => {
     addDestinationWormholeIndices(albumObject)
 
     logger.warn('End parse album data.')
-
-    delete albumObject.tempGlobalAnnotationIndex
 
     return albumObject
 }
@@ -94,6 +93,8 @@ const _mergeAlbumTasks = (albumObject) => {
 const _initialPrepareAlbum = (albumObject) => {
 
     albumObject.songs.forEach((songObject, songIndex) => {
+
+        songObject.songIndex = songIndex
 
         adminGatherDrawings(albumObject, songIndex)
 
@@ -259,8 +260,14 @@ const _initialRegisterAnnotation = ({
     })
 
     // Let annotation object know its global index.
-    annotationObject.globalIndex = albumObject.tempGlobalAnnotationIndex
-    albumObject.tempGlobalAnnotationIndex++
+    annotationObject.globalIndex = albumObject.globalAnnotationsCount
+    albumObject.globalAnnotationIndices[
+        albumObject.globalAnnotationsCount
+    ] = {
+        songIndex: songObject.songIndex,
+        annotationIndex
+    }
+    albumObject.globalAnnotationsCount++
 
     // Let annotation object know its cards.
     annotationObject.cards = cards

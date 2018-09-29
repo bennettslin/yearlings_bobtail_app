@@ -14,6 +14,8 @@ import {
     getPropsAreShallowEqual
 } from 'helpers/generalHelper'
 
+import TempGlobalAnnotations from './TempGlobalAnnotations';
+
 const mapStateToProps = ({
     renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
@@ -139,12 +141,16 @@ class LyricScroll extends Component {
                 onWheel={this._handleWheel}
                 onScroll={this._handleScroll}
             >
-                <Stanzas {...other}
-                    {...{
-                        songStanzaConfigs,
-                        lastUnitDotCardIndex
-                    }}
-                />
+                {/* TODO: Undo this. */}
+                {false && (
+                    <Stanzas {...other}
+                        {...{
+                            songStanzaConfigs,
+                            lastUnitDotCardIndex
+                        }}
+                    />
+                )}
+                <TempGlobalAnnotations />
             </div>
         )
     }

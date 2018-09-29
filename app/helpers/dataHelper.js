@@ -11,6 +11,11 @@ import { SOURCE_WORMHOLE_INDEX } from 'constants/lyrics'
  * ALBUM *
  *********/
 
+// For logging.
+export const getAlbum = () => {
+    return album
+}
+
 export const getMp3s = () => {
     const { mp3s } = album
     return mp3s
@@ -31,6 +36,12 @@ export const getBookColumnIndex = (songIndex) => {
 export const getTempInstanceCount = () => {
     const { tempInstanceCount } = album
     return tempInstanceCount
+}
+
+// For logging.
+export const getGlobalAnnotationObject = (globalIndex) => {
+    const { globalAnnotationIndices } = album
+    return globalAnnotationIndices[globalIndex]
 }
 
 /*********

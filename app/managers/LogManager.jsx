@@ -7,8 +7,10 @@ import { connect } from 'react-redux'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
+    getAlbum,
     getTempInstanceCount,
     getAnnotationObject,
+    getGlobalAnnotationObject,
     getSongObject,
     getSceneObject,
     getDrawings
@@ -43,17 +45,31 @@ class LogManager extends Component {
     }
 
     _assignDebugLogFunctions() {
-        global.i = this.logInstances
-        global.a = this.logAnnotation
+        global.a = this.logAlbum
         global.d = this.logDrawings
+        global.g = this.logGlobalAnnotation
+        global.n = this.logAnnotation
+        global.i = this.logInstances
         global.z = this.logScene
         global.s = this.logSong
         global.t = this.logStorage
     }
 
-    logInstances = () => {
-        const tempInstanceCount = getTempInstanceCount()
-        return this._logObject('temp instance count', tempInstanceCount)
+    logAlbum = () => {
+        const copiedAlbum = {
+            ...getAlbum()
+        }
+
+        copiedAlbum.drawings = `drawings: ${copiedAlbum.drawings.length}`
+        copiedAlbum.mp3s = `mp3s: ${copiedAlbum.mp3s.length}`
+        copiedAlbum.scenes = `scenes: ${copiedAlbum.scenes.length}`
+        copiedAlbum.scores = `scores: ${copiedAlbum.scores.length}`
+        copiedAlbum.songs = `songs: ${copiedAlbum.songs.length}`
+        copiedAlbum.tasks = `tasks: ${copiedAlbum.tasks.length}`
+        copiedAlbum.tips = `tips: ${copiedAlbum.tips.length}`
+        copiedAlbum.globalAnnotationIndices = `globalAnnotationIndices: ${copiedAlbum.globalAnnotationIndices.length}`
+
+        return this._logObject('album', copiedAlbum)
     }
 
     logAnnotation = () => {
@@ -78,6 +94,17 @@ class LogManager extends Component {
         copiedDrawings.actors = `actors: ${copiedDrawings.actors.length}`
 
         return this._logObject('admin drawings', copiedDrawings)
+    }
+
+    logGlobalAnnotation = (globalIndex) => {
+        return this._logObject(
+            'global annotation', getGlobalAnnotationObject(globalIndex)
+        )
+    }
+
+    logInstances = () => {
+        const tempInstanceCount = getTempInstanceCount()
+        return this._logObject('temp instance count', tempInstanceCount)
     }
 
     logScene = () => {
