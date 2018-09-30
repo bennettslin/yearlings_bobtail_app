@@ -75,32 +75,12 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: 'cemeteryBackdrop',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: 'stationWagonBackdrop',
         workedHours: 0,
         neededHours: 5
     },
     {
         taskName: 'lizCouchThought',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: 'residenceBackdrop',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: 'commercialBackdrop',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: 'publicBackdrop',
         workedHours: 0,
         neededHours: 5
     },

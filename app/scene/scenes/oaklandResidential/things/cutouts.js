@@ -8,7 +8,7 @@ import {
 const ARRANGEMENTS_MAP = {
     [TWIN_STREETLAMP]: {
         [ARRANGEMENT_TWIN_STREETLAMP_FAR]: {
-            yIndex: 1,
+            yIndex: 2,
             arrangement: {
                 xFloat: 5.5,
                 xWidth: 1,
@@ -16,7 +16,7 @@ const ARRANGEMENTS_MAP = {
             }
         },
         [ARRANGEMENT_TWIN_STREETLAMP_MIDDLE]: {
-            yIndex: 2,
+            yIndex: 3,
             arrangement: {
                 xFloat: 5.5,
                 xWidth: 1,
@@ -24,7 +24,7 @@ const ARRANGEMENTS_MAP = {
             }
         },
         [ARRANGEMENT_TWIN_STREETLAMP_NEAR]: {
-            yIndex: 3,
+            yIndex: 4,
             arrangement: {
                 xFloat: 5.5,
                 xWidth: 1,

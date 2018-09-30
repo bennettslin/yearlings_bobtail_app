@@ -57,7 +57,7 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
-    OAKLAND_BACKDROP
+    OAKLAND_SIDE_BACKDROP
 } from 'scene/backdropKeys'
 
 import {
@@ -163,7 +163,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [OAKLAND_BACKDROP]: true
+                [OAKLAND_SIDE_BACKDROP]: true
             },
             [FLATS]: {
                 [OAKLAND_HOUSE_LEFT]: true,

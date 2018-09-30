@@ -1,9 +1,9 @@
 import {
-    RESIDENCE_BACKDROP
+    OAKLAND_FRONT_BACKDROP
 } from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [RESIDENCE_BACKDROP]: {
+    [OAKLAND_FRONT_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

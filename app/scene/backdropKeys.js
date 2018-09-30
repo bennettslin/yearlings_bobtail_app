@@ -54,7 +54,7 @@ const
 
     // Background, buildings and trees on two pages. Background with ucBerkeley backdrop and cutouts. Requires editing.
     UC_BERKELEY_BACKDROP = 'ucBerkeleyBackdrop',
-    OAKLAND_BACKDROP = 'oaklandBackdrop',
+    OAKLAND_SIDE_BACKDROP = 'oaklandSideBackdrop',
 
     // TODO
     CINEMA_BACKDROP = 'cinemaBackdrop',
@@ -65,7 +65,7 @@ const
     // TODO
     PHARMACY_THOUGHT_BACKDROP = 'pharmacyThought',
 
-    // TODO
+    // With cemetery flat.
     CEMETERY_BACKDROP = 'cemeteryBackdrop',
 
     // TODO
@@ -74,14 +74,8 @@ const
     // TODO
     LIZ_COUCH_THOUGHT_BACKDROP = 'lizCouchThought',
 
-    // TODO
-    RESIDENCE_BACKDROP = 'residenceBackdrop',
-
-    // TODO
-    COMMERCIAL_BACKDROP = 'commercialBackdrop',
-
-    // TODO
-    PUBLIC_BACKDROP = 'publicBackdrop',
+    // Own page.
+    OAKLAND_FRONT_BACKDROP = 'oaklandFrontBackdrop',
 
     // TODO
     EL_CERRITO_BACKDROP = 'elCerritoBackdrop',
@@ -124,11 +118,9 @@ export {
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     STATION_WAGON_BACKDROP,
-    OAKLAND_BACKDROP,
+    OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
-    RESIDENCE_BACKDROP,
-    COMMERCIAL_BACKDROP,
-    PUBLIC_BACKDROP,
+    OAKLAND_FRONT_BACKDROP,
     EL_CERRITO_BACKDROP,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,

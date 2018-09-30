@@ -27,18 +27,21 @@ import CrowdSideNear from './Flats/CrowdSideNear'
 import CrowdSideFar from './Flats/CrowdSideFar'
 import OaklandHouseLeft from './Flats/OaklandHouseLeft'
 import OaklandHouseRight from './Flats/OaklandHouseRight'
+import ResidentialCentre from './Flats/ResidentialCentre'
 import ResidentialFarLeft from './Flats/ResidentialFarLeft'
 import ResidentialMiddleLeft from './Flats/ResidentialMiddleLeft'
 import ResidentialNearLeft from './Flats/ResidentialNearLeft'
 import ResidentialFarRight from './Flats/ResidentialFarRight'
 import ResidentialMiddleRight from './Flats/ResidentialMiddleRight'
 import ResidentialNearRight from './Flats/ResidentialNearRight'
+import CommercialCentre from './Flats/CommercialCentre'
 import CommercialFarLeft from './Flats/CommercialFarLeft'
 import CommercialMiddleLeft from './Flats/CommercialMiddleLeft'
 import CommercialNearLeft from './Flats/CommercialNearLeft'
 import CommercialFarRight from './Flats/CommercialFarRight'
 import CommercialMiddleRight from './Flats/CommercialMiddleRight'
 import CommercialNearRight from './Flats/CommercialNearRight'
+import PublicCentre from './Flats/PublicCentre'
 import PublicFarLeft from './Flats/PublicFarLeft'
 import PublicMiddleLeft from './Flats/PublicMiddleLeft'
 import PublicNearLeft from './Flats/PublicNearLeft'
@@ -79,18 +82,21 @@ import {
     CROWD_SIDE_FAR,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
+    RESIDENTIAL_CENTRE,
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
     RESIDENTIAL_NEAR_LEFT,
     RESIDENTIAL_FAR_RIGHT,
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT,
+    COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,
     COMMERCIAL_MIDDLE_LEFT,
     COMMERCIAL_NEAR_LEFT,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
+    PUBLIC_CENTRE,
     PUBLIC_FAR_LEFT,
     PUBLIC_MIDDLE_LEFT,
     PUBLIC_NEAR_LEFT,
@@ -132,18 +138,21 @@ const FLATS_MAP = {
     [CROWD_SIDE_FAR]: CrowdSideFar,
     [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
+    [RESIDENTIAL_CENTRE]: ResidentialCentre,
     [RESIDENTIAL_FAR_LEFT]: ResidentialFarLeft,
     [RESIDENTIAL_FAR_RIGHT]: ResidentialFarRight,
     [RESIDENTIAL_MIDDLE_LEFT]: ResidentialMiddleLeft,
     [RESIDENTIAL_MIDDLE_RIGHT]: ResidentialMiddleRight,
     [RESIDENTIAL_NEAR_LEFT]: ResidentialNearLeft,
     [RESIDENTIAL_NEAR_RIGHT]: ResidentialNearRight,
+    [COMMERCIAL_CENTRE]: CommercialCentre,
     [COMMERCIAL_FAR_LEFT]: CommercialFarLeft,
     [COMMERCIAL_FAR_RIGHT]: CommercialFarRight,
     [COMMERCIAL_MIDDLE_LEFT]: CommercialMiddleLeft,
     [COMMERCIAL_MIDDLE_RIGHT]: CommercialMiddleRight,
     [COMMERCIAL_NEAR_LEFT]: CommercialNearLeft,
     [COMMERCIAL_NEAR_RIGHT]: CommercialNearRight,
+    [PUBLIC_CENTRE]: PublicCentre,
     [PUBLIC_FAR_LEFT]: PublicFarLeft,
     [PUBLIC_FAR_RIGHT]: PublicFarRight,
     [PUBLIC_MIDDLE_LEFT]: PublicMiddleLeft,

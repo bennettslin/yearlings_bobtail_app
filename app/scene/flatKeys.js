@@ -51,7 +51,7 @@ const
     // Own page.
     STEAM_PIPES = 'steamPipes',
 
-    // TODO
+    // With cemetery flat. Requires editing.
     CEMETERY_HILLS_NEAR = 'cemeteryHillsNear',
 
     // With stage cutouts. Requires editing.
@@ -65,6 +65,7 @@ const
     OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight',
 
     // TODO
+    RESIDENTIAL_CENTRE = 'residentialCentre',
     RESIDENTIAL_FAR_LEFT = 'residentialFarLeft',
     RESIDENTIAL_MIDDLE_LEFT = 'residentialMiddleLeft',
     RESIDENTIAL_NEAR_LEFT = 'residentialNearLeft',
@@ -73,6 +74,7 @@ const
     RESIDENTIAL_NEAR_RIGHT = 'residentialNearRight',
 
     // TODO
+    COMMERCIAL_CENTRE = 'commercialCentre',
     COMMERCIAL_FAR_LEFT = 'commercialFarLeft',
     COMMERCIAL_MIDDLE_LEFT = 'commercialMiddleLeft',
     COMMERCIAL_NEAR_LEFT = 'commercialNearLeft',
@@ -81,6 +83,7 @@ const
     COMMERCIAL_NEAR_RIGHT = 'commercialNearRight',
 
     // TODO
+    PUBLIC_CENTRE = 'publicCentre',
     PUBLIC_FAR_LEFT = 'publicFarLeft',
     PUBLIC_MIDDLE_LEFT = 'publicMiddleLeft',
     PUBLIC_NEAR_LEFT = 'publicNearLeft',
@@ -125,18 +128,21 @@ export {
     CROWD_SIDE_FAR,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
+    RESIDENTIAL_CENTRE,
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
     RESIDENTIAL_NEAR_LEFT,
     RESIDENTIAL_FAR_RIGHT,
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT,
+    COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,
     COMMERCIAL_MIDDLE_LEFT,
     COMMERCIAL_NEAR_LEFT,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
+    PUBLIC_CENTRE,
     PUBLIC_FAR_LEFT,
     PUBLIC_MIDDLE_LEFT,
     PUBLIC_NEAR_LEFT,

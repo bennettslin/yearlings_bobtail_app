@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CommercialBackdrop = ({
+const CommercialCentre = ({
 
     className,
 
@@ -18,13 +18,13 @@ const CommercialBackdrop = ({
     return (
         <Svg
             className={cx(
-                'CommercialBackdrop',
+                'CommercialCentre',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Backdrop__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const CommercialBackdrop = ({
                 {...other}
             >
                 {cx(
-                    'CommercialBackdrop'
+                    'CommercialCentre'
                 )}
             </text>
         </Svg>
     )
 }
 
-CommercialBackdrop.propTypes = propTypes;
+CommercialCentre.propTypes = propTypes;
 
-export default CommercialBackdrop
+export default CommercialCentre

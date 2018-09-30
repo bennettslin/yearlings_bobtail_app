@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const PublicBackdrop = ({
+const OaklandSideBackdrop = ({
 
     className,
 
@@ -18,7 +18,7 @@ const PublicBackdrop = ({
     return (
         <Svg
             className={cx(
-                'PublicBackdrop',
+                'OaklandSideBackdrop',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const PublicBackdrop = ({
                 {...other}
             >
                 {cx(
-                    'PublicBackdrop'
+                    'OaklandSideBackdrop'
                 )}
             </text>
         </Svg>
     )
 }
 
-PublicBackdrop.propTypes = propTypes;
+OaklandSideBackdrop.propTypes = propTypes;
 
-export default PublicBackdrop
+export default OaklandSideBackdrop

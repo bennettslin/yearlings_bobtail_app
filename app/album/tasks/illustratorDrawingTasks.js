@@ -188,6 +188,21 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: 'cemeteryBackdrop',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'cemeteryHillsNear',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'oaklandFrontBackdrop',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Howie's station wagon exterior (Constellations)`,
         workedHours: 2,
         neededHours: 3

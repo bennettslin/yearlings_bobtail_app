@@ -55,11 +55,9 @@ import { CROSSING_GUARD } from 'scene/instanceKeys/willy'
 import { YOUNG_CHILD } from 'scene/instanceKeys/songs'
 
 import {
-    OAKLAND_BACKDROP,
+    OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
-    RESIDENCE_BACKDROP,
-    COMMERCIAL_BACKDROP,
-    PUBLIC_BACKDROP
+    OAKLAND_FRONT_BACKDROP
 } from 'scene/backdropKeys'
 
 import {
@@ -72,18 +70,21 @@ import {
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
+    RESIDENTIAL_CENTRE,
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
     RESIDENTIAL_NEAR_LEFT,
     RESIDENTIAL_FAR_RIGHT,
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT,
+    COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,
     COMMERCIAL_MIDDLE_LEFT,
     COMMERCIAL_NEAR_LEFT,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
+    PUBLIC_CENTRE,
     PUBLIC_FAR_LEFT,
     PUBLIC_MIDDLE_LEFT,
     PUBLIC_NEAR_LEFT,
@@ -110,7 +111,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [OAKLAND_BACKDROP]: true
+                [OAKLAND_SIDE_BACKDROP]: true
             },
             [FLATS]: {
                 [OAKLAND_HOUSE_LEFT]: true,
@@ -177,7 +178,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [RESIDENCE_BACKDROP]: true
+                [OAKLAND_FRONT_BACKDROP]: true
             },
             [CUTOUTS]: {
                 [TWIN_STREETLAMP]: [
@@ -187,6 +188,7 @@ module.exports = [
                 ]
             },
             [FLATS]: {
+                [RESIDENTIAL_CENTRE]: true,
                 [RESIDENTIAL_FAR_LEFT]: true,
                 [RESIDENTIAL_FAR_RIGHT]: true,
                 [RESIDENTIAL_MIDDLE_LEFT]: true,
@@ -230,9 +232,10 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [COMMERCIAL_BACKDROP]: true
+                [OAKLAND_FRONT_BACKDROP]: true
             },
             [FLATS]: {
+                [COMMERCIAL_CENTRE]: true,
                 [COMMERCIAL_FAR_LEFT]: true,
                 [COMMERCIAL_FAR_RIGHT]: true,
                 [COMMERCIAL_MIDDLE_LEFT]: true,
@@ -300,9 +303,10 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [PUBLIC_BACKDROP]: true
+                [OAKLAND_FRONT_BACKDROP]: true
             },
             [FLATS]: {
+                [PUBLIC_CENTRE]: true,
                 [PUBLIC_FAR_LEFT]: true,
                 [PUBLIC_FAR_RIGHT]: true,
                 [PUBLIC_MIDDLE_LEFT]: true,

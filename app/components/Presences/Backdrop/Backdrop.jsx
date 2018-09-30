@@ -27,11 +27,9 @@ import UclaBackdrop from './Backdrops/UclaBackdrop'
 import PharmacyThoughtBackdrop from './Backdrops/PharmacyThoughtBackdrop'
 import CemeteryBackdrop from './Backdrops/CemeteryBackdrop'
 import StationWagonBackdrop from './Backdrops/StationWagonBackdrop'
-import OaklandBackdrop from './Backdrops/OaklandBackdrop'
+import OaklandSideBackdrop from './Backdrops/OaklandSideBackdrop'
 import LizCouchThoughtBackdrop from './Backdrops/LizCouchThoughtBackdrop'
-import ResidenceBackdrop from './Backdrops/ResidenceBackdrop'
-import CommercialBackdrop from './Backdrops/CommercialBackdrop'
-import PublicBackdrop from './Backdrops/PublicBackdrop'
+import OaklandFrontBackdrop from './Backdrops/OaklandFrontBackdrop'
 import ElCerritoBackdrop from './Backdrops/ElCerritoBackdrop'
 import PampasBackdrop from './Backdrops/PampasBackdrop'
 import WeddingBackdrop from './Backdrops/WeddingBackdrop'
@@ -64,11 +62,9 @@ import {
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     STATION_WAGON_BACKDROP,
-    OAKLAND_BACKDROP,
+    OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
-    RESIDENCE_BACKDROP,
-    COMMERCIAL_BACKDROP,
-    PUBLIC_BACKDROP,
+    OAKLAND_FRONT_BACKDROP,
     EL_CERRITO_BACKDROP,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
@@ -102,11 +98,9 @@ const BACKDROPS_MAP = {
     [PHARMACY_THOUGHT_BACKDROP]: PharmacyThoughtBackdrop,
     [CEMETERY_BACKDROP]: CemeteryBackdrop,
     [STATION_WAGON_BACKDROP]: StationWagonBackdrop,
-    [OAKLAND_BACKDROP]: OaklandBackdrop,
+    [OAKLAND_SIDE_BACKDROP]: OaklandSideBackdrop,
     [LIZ_COUCH_THOUGHT_BACKDROP]: LizCouchThoughtBackdrop,
-    [RESIDENCE_BACKDROP]: ResidenceBackdrop,
-    [COMMERCIAL_BACKDROP]: CommercialBackdrop,
-    [PUBLIC_BACKDROP]: PublicBackdrop,
+    [OAKLAND_FRONT_BACKDROP]: OaklandFrontBackdrop,
     [EL_CERRITO_BACKDROP]: ElCerritoBackdrop,
     [PAMPAS_BACKDROP]: PampasBackdrop,
     [WEDDING_BACKDROP]: WeddingBackdrop,
