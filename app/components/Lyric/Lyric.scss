@@ -120,11 +120,12 @@
     }
 }
 
-.TempGlobalAnnotation {
+.TempGlobalAnnotation,
+.TempGlobalAnnotationsCounter {
     background-color: #fafafa;
     border: 1px solid #aaa;
     border-radius: 5px;
-    margin: 20px;
+    margin: 20px 80px;
     padding: 10px;
     box-shadow: $boxShadow__admin;
 }
@@ -151,4 +152,8 @@
 
 .Button__increment {
     background-color: #ea7;
+}
+
+.Button__reset {
+    background-color: #7ae;
 }

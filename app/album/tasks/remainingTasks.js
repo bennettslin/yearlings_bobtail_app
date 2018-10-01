@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Have daily counter for edited annotations.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
         workedHours: 0,
         neededHours: 2

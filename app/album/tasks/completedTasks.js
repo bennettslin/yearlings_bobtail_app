@@ -3912,4 +3912,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Have daily counter for edited annotations.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

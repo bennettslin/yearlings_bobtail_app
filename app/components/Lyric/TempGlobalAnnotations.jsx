@@ -10,6 +10,29 @@ import {
     getGlobalAnnotationObject
 } from 'helpers/dataHelper'
 
+const TempGlobalAnnotationsCounter = ({
+    counter,
+    handleButtonClick
+}) => {
+
+    return (
+        <div className="TempGlobalAnnotationsCounter">
+            <div className="TempGlobalAnnotation__header">
+                <span>
+                    {`Annotations edited today: ${counter}`}
+                </span>
+                <Button
+                    isSmallSize
+                    {...{
+                        buttonName: 'reset',
+                        handleButtonClick
+                    }}
+                />
+            </div>
+        </div>
+    )
+}
+
 const TempGlobalAnnotation = ({
     globalAnnotationIndex,
     handleButtonClick
@@ -71,6 +94,10 @@ class TempGlobalAnnotations extends Component {
                 globalAnnotationIndices.length / 3
             )
 
+        if (!global.localStorage.globalAnnotationsCounter) {
+            global.localStorage.globalAnnotationsCounter = 0
+        }
+
         if (!global.localStorage.globalAnnotationIndexFirst) {
             global.localStorage.globalAnnotationIndexFirst = 0
         }
@@ -86,37 +113,55 @@ class TempGlobalAnnotations extends Component {
         this.setState({
             first: parseInt(global.localStorage.globalAnnotationIndexFirst),
             second: parseInt(global.localStorage.globalAnnotationIndexSecond),
-            third: parseInt(global.localStorage.globalAnnotationIndexThird)
+            third: parseInt(global.localStorage.globalAnnotationIndexThird),
+            counter: parseInt(global.localStorage.globalAnnotationsCounter)
         })
     }
 
     incrementFirst = () => {
-        const first = this.state.first + 1
+        const first = this.state.first + 1,
+            counter = this.state.counter + 1
 
         global.localStorage.globalAnnotationIndexFirst = first
+        global.localStorage.globalAnnotationsCounter = counter
 
         this.setState({
-            first
+            first,
+            counter
         })
     }
 
     incrementSecond = () => {
-        const second = this.state.second + 1
+        const second = this.state.second + 1,
+            counter = this.state.counter + 1
 
         global.localStorage.globalAnnotationIndexSecond = second
+        global.localStorage.globalAnnotationsCounter = counter
 
         this.setState({
-            second
+            second,
+            counter
         })
     }
 
     incrementThird = () => {
-        const third = this.state.third + 1
+        const third = this.state.third + 1,
+            counter = this.state.counter + 1
 
         global.localStorage.globalAnnotationIndexThird = third
+        global.localStorage.globalAnnotationsCounter = counter
 
         this.setState({
-            third
+            third,
+            counter
+        })
+    }
+
+    resetCounter = () => {
+        global.localStorage.globalAnnotationsCounter = 0
+
+        this.setState({
+            counter: 0
         })
     }
 
@@ -125,11 +170,18 @@ class TempGlobalAnnotations extends Component {
         const {
             first,
             second,
-            third
+            third,
+            counter
         } = this.state
 
         return first !== null && (
             <div className="TempGlobalAnnotations">
+                <TempGlobalAnnotationsCounter
+                    {...{
+                        counter,
+                        handleButtonClick: this.resetCounter
+                    }}
+                />
                 <TempGlobalAnnotation
                     {...{
                         globalAnnotationIndex: first,
