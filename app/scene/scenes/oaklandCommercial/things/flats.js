@@ -14,7 +14,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 5.5,
             xWidth: 6,
-            zHeight: 2
+            zHeight: 3
         }
     },
     [COMMERCIAL_FAR_LEFT]: {
@@ -22,7 +22,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 2.5,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 4
         }
     },
     [COMMERCIAL_FAR_RIGHT]: {
@@ -30,7 +30,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 8.5,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 4
         }
     },
     [COMMERCIAL_MIDDLE_LEFT]: {
@@ -38,7 +38,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 1.5,
             xWidth: 2,
-            zHeight: 4
+            zHeight: 5
         }
     },
     [COMMERCIAL_MIDDLE_RIGHT]: {
@@ -46,7 +46,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 9.5,
             xWidth: 2,
-            zHeight: 4
+            zHeight: 5
         }
     },
     [COMMERCIAL_NEAR_LEFT]: {
@@ -54,7 +54,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 0.5,
             xWidth: 2,
-            zHeight: 5
+            zHeight: 6
         }
     },
     [COMMERCIAL_NEAR_RIGHT]: {
@@ -62,7 +62,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 10.5,
             xWidth: 2,
-            zHeight: 5
+            zHeight: 6
         }
     }
 }
