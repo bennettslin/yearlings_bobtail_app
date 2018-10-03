@@ -6,7 +6,7 @@ Sleep machine
 ## Get from Zillow
 
 ## Backpack
-<!-- EpiPen -->
+EpiPen
 <!-- My new MacBook Pro -->
 <!-- Hard drive -->
 USB adapters
