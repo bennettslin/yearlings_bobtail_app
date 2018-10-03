@@ -10,7 +10,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [COMMERCIAL_CENTRE]: {
-        yIndex: 1,
+        yIndex: 0,
         arrangement: {
             xFloat: 5.5,
             xWidth: 6,
@@ -18,7 +18,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [COMMERCIAL_FAR_LEFT]: {
-        yIndex: 2,
+        yIndex: 1,
         arrangement: {
             xFloat: 2.5,
             xWidth: 2,
@@ -26,7 +26,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [COMMERCIAL_FAR_RIGHT]: {
-        yIndex: 2,
+        yIndex: 1,
         arrangement: {
             xFloat: 8.5,
             xWidth: 2,
@@ -34,7 +34,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [COMMERCIAL_MIDDLE_LEFT]: {
-        yIndex: 3,
+        yIndex: 2,
         arrangement: {
             xFloat: 1.5,
             xWidth: 2,
@@ -42,7 +42,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [COMMERCIAL_MIDDLE_RIGHT]: {
-        yIndex: 3,
+        yIndex: 2,
         arrangement: {
             xFloat: 9.5,
             xWidth: 2,
@@ -50,7 +50,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [COMMERCIAL_NEAR_LEFT]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
             xFloat: 0.5,
             xWidth: 2,
@@ -58,7 +58,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [COMMERCIAL_NEAR_RIGHT]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
             xFloat: 10.5,
             xWidth: 2,

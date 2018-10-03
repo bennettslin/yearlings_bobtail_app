@@ -70,7 +70,6 @@ import {
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
-    RESIDENTIAL_CENTRE,
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
     RESIDENTIAL_NEAR_LEFT,
@@ -188,7 +187,6 @@ module.exports = [
                 ]
             },
             [FLATS]: {
-                [RESIDENTIAL_CENTRE]: true,
                 [RESIDENTIAL_FAR_LEFT]: true,
                 [RESIDENTIAL_FAR_RIGHT]: true,
                 [RESIDENTIAL_MIDDLE_LEFT]: true,
@@ -230,9 +228,6 @@ module.exports = [
                         instance: OFFICER
                     }
                 }
-            },
-            [BACKDROPS]: {
-                [OAKLAND_FRONT_BACKDROP]: true
             },
             [FLATS]: {
                 [COMMERCIAL_CENTRE]: true,
