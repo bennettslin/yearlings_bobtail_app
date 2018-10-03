@@ -26,7 +26,7 @@ module.exports = [
     },
     {
         taskName: 'residentialHouses',
-        workedHours: 0,
+        workedHours: 2,
         neededHours: 6
     },
     {
