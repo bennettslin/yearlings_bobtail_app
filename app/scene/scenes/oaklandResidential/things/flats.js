@@ -20,48 +20,48 @@ const ARRANGEMENTS_MAP = {
     [RESIDENTIAL_FAR_LEFT]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 2.5,
-            xWidth: 2,
+            xFloat: 3,
+            xWidth: 3,
             zHeight: 4
         }
     },
     [RESIDENTIAL_FAR_RIGHT]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 8.5,
-            xWidth: 2,
+            xFloat: 8,
+            xWidth: 3,
             zHeight: 4
         }
     },
     [RESIDENTIAL_MIDDLE_LEFT]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 1.5,
-            xWidth: 2,
+            xFloat: 2,
+            xWidth: 3,
             zHeight: 5
         }
     },
     [RESIDENTIAL_MIDDLE_RIGHT]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 9.5,
-            xWidth: 2,
+            xFloat: 9,
+            xWidth: 3,
             zHeight: 5
         }
     },
     [RESIDENTIAL_NEAR_LEFT]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 0.5,
-            xWidth: 2,
+            xFloat: 1,
+            xWidth: 3,
             zHeight: 6
         }
     },
     [RESIDENTIAL_NEAR_RIGHT]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
+            xFloat: 10,
+            xWidth: 3,
             zHeight: 6
         }
     }

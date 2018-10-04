@@ -83,12 +83,12 @@ import {
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
-    PUBLIC_CENTRE,
+    // PUBLIC_CENTRE,
     PUBLIC_FAR_LEFT,
-    PUBLIC_MIDDLE_LEFT,
+    // PUBLIC_MIDDLE_LEFT,
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
-    PUBLIC_MIDDLE_RIGHT,
+    // PUBLIC_MIDDLE_RIGHT,
     PUBLIC_NEAR_RIGHT
 } from 'scene/flatKeys'
 
@@ -297,15 +297,12 @@ module.exports = [
                     }
                 }
             },
-            [BACKDROPS]: {
-                [OAKLAND_FRONT_BACKDROP]: true
-            },
             [FLATS]: {
-                [PUBLIC_CENTRE]: true,
+                // [PUBLIC_CENTRE]: true,
                 [PUBLIC_FAR_LEFT]: true,
                 [PUBLIC_FAR_RIGHT]: true,
-                [PUBLIC_MIDDLE_LEFT]: true,
-                [PUBLIC_MIDDLE_RIGHT]: true,
+                // [PUBLIC_MIDDLE_LEFT]: true,
+                // [PUBLIC_MIDDLE_RIGHT]: true,
                 [PUBLIC_NEAR_LEFT]: true,
                 [PUBLIC_NEAR_RIGHT]: true
             }
