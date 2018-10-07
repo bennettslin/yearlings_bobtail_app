@@ -1,7 +1,11 @@
 import { CLUB_LOADING } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    PAVEMENT_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -11,12 +15,19 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    V = PAVEMENT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
 
     CLUB_LOADING_CUBES = {
         ceiling: {
             hslaColours: [
+                [C],
+                [C],
+                [C, C, C, C, W, W, W, C],
+                [C],
                 [D]
             ],
             zIndices: [
@@ -29,7 +40,10 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [V, W],
+                [V, W, F],
+                [V, W, W, W, F, F, F, W],
+                [V]
             ],
             zIndices: [
                 [1, f],

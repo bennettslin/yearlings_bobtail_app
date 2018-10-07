@@ -32,7 +32,7 @@ const
     R = FURNITURE_HSLA,
     S = SEAT_HSLA,
 
-    DEFAULT_BEDROOM_CEILING = {
+    DEFAULT_CEILING = {
         hslaColours: [
             [D, D, D, D, D, C, D, C, C, C, D],
             [D, D, D, W, W, C, C, C, C, C, D],
@@ -53,7 +53,7 @@ const
 
     BEDROOM_CUBES = {
         slantDirection: LEFT,
-        ceiling: DEFAULT_BEDROOM_CEILING,
+        ceiling: DEFAULT_CEILING,
         /**
          * --.-----------
          * --...---------
@@ -88,7 +88,7 @@ const
     },
     BEDROOM_STOOL_CUBES = {
         slantDirection: LEFT,
-        ceiling: DEFAULT_BEDROOM_CEILING,
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [G, G, G, G, G, W, G, W, W, W, G],
@@ -110,7 +110,7 @@ const
     },
     BEDROOM_OPEN_CUBES = {
         slantDirection: LEFT,
-        ceiling: DEFAULT_BEDROOM_CEILING,
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [G, G, G, G, G, W, G, W, W, W, G],

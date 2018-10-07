@@ -1,7 +1,10 @@
 import { BENNETT_GATE_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    PAVEMENT_HSLA,
+    GATE_HSLA,
+    CEILING_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -16,12 +19,19 @@ import {
  */
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    V = PAVEMENT_HSLA,
+    A = GATE_HSLA,
+    C = CEILING_HSLA,
 
     BENNETT_GATE_CUBES = {
         ceiling: {
             hslaColours: [
+                [D],
+                [C, C, C, C, C, C, C, A, A, A, A, C],
+                [C],
+                [D, D, D, D, D, C],
+                [D, D, D, D, D, C],
                 [D]
             ],
             zIndices: [
@@ -35,7 +45,9 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [V],
+                [A, A, A, A, A, A, A, V, V, V, V, A],
+                [V]
             ],
             zIndices: [
                 [1],

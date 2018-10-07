@@ -1,13 +1,18 @@
 import { BENNETT_BED_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    PAVEMENT_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
 
 import {
     d,
-    f,
-    g
+    g,
+    k
 } from 'scene/cubesConstants'
 
 /**
@@ -16,24 +21,36 @@ import {
  */
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    V = PAVEMENT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    S = SEAT_HSLA,
 
     BENNETT_BED_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C],
+                [D],
+                [C, C, W, W, W, C, W, W, W, W, C],
+                [C]
             ],
             zIndices: [
-                [f],
-                [f],
+                [g],
+                [k],
                 [g, g, d, d, d, g, d, d, d, d, g],
                 [g]
             ]
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [V, V, V, V, V, V, V, V, V, V, V, W],
+                [W, W, F, F, F, W],
+                [W, F, F, F, F, S, S, S, S, S, S, W],
+                [W, F, F, F, F, S, S, S, S, S, S, W],
+                [W, F, F, F, F, S, S, S, S, S, S, W]
             ],
             zIndices: [
                 [g],

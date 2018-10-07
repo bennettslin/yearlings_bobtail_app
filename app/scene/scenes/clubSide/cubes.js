@@ -4,7 +4,10 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -14,13 +17,20 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
 
     CLUB_SIDE_CROWD_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C],
+                [C],
+                [C],
+                [C, C, C, C, C, C, C, C, C, C, C, W],
+                [C, C, C, C, C, C, C, C, C, C, C, W],
+                [C]
             ],
             zIndices: [
                 [g],
@@ -33,7 +43,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [P, P, P, P, F, F, F, F, F, F, F, W],
+                [P, P, P, P, F, F, F, F, F, F, F, W],
+                [P, P, P, P, F],
+                [P, P, P, P, F],
+                [F, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [g],
@@ -48,7 +63,11 @@ const
     CLUB_SIDE_STAGE_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C],
+                [C],
+                [W, C],
+                [W, C],
+                [C]
             ],
             zIndices: [
                 [g],
@@ -60,7 +79,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [W, P, P, P, P, P, P, P, P, P, F],
+                [F, P, P, P, P, P, P, P, P, P, F],
+                [F, P, P, P, P, P, P, P, P, P, F],
+                [W, P, P, P, P, P, P, P, P, P, F],
+                [W, F]
             ],
             zIndices: [
                 [g],

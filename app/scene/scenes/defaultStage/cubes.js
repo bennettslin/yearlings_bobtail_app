@@ -9,7 +9,6 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
 
     DEFAULT_STAGE = {

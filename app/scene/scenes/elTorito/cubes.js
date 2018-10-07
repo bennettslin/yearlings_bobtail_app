@@ -1,7 +1,12 @@
 import { EL_TORITO_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    PAVEMENT_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -12,12 +17,21 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    V = PAVEMENT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
 
     EL_TORITO_CUBES = {
         ceiling: {
             hslaColours: [
+                [C],
+                [C],
+                [C, C, C, W, W, W, W, W, W, C],
+                [C],
+                [C],
                 [D]
             ],
             zIndices: [
@@ -31,7 +45,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [F],
+                [W, W, W, F, F, F, F, F, F, W],
+                [V, V, V, P, P, P, P, P, P, V],
+                [V, W, V, V, V, V, V, V, V, V, W, V],
+                [V]
             ],
             zIndices: [
                 [g],

@@ -5,13 +5,20 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    GROUND_HSLA,
+    PAVEMENT_HSLA,
+    GATE_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
 
 import {
     d,
-    f,
-    g
+    g,
+    k
 } from 'scene/cubesConstants'
 
 /**
@@ -20,26 +27,44 @@ import {
  */
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    V = PAVEMENT_HSLA,
+    A = GATE_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    S = SEAT_HSLA,
+
+    DEFAULT_CEILING = {
+        hslaColours: [
+            [D],
+            [C, C, C, C, W, W, W, W, W, C],
+            [C],
+            [C, C, C, C, C, C, C, C, C, C, C, W],
+            [C, C, C, C, C, C, C, C, C, C, C, W],
+            [C],
+        ],
+        zIndices: [
+            [k],
+            [g, g, g, g, d, d, d, d, d, g],
+            [g],
+            [g, g, g, g, g, g, g, g, g, g, g, d],
+            [g, g, g, g, g, g, g, g, g, g, g, d],
+            [g],
+        ]
+    },
 
     LIZ_COUCH_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: [
-                [f],
-                [g, g, g, g, d, d, d, d, d, g],
-                [g],
-                [g, g, g, g, g, g, g, g, g, g, g, d],
-                [g, g, g, g, g, g, g, g, g, g, g, d],
-                [g],
-            ]
-        },
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [D]
+                [A, A, A, A, A, V, V, V, A],
+                [W, W, W, W, W, W, W, W, W, W],
+                [W, S, S, S, F, F, F, F, F, F, F, W],
+                [W, S, S, S, F],
+                [W, S, S, S, F],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
@@ -52,22 +77,15 @@ const
         }
     },
     LIZ_COUCH_SEAT_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: [
-                [f],
-                [g, g, g, g, d, d, d, d, d, g],
-                [g],
-                [g, g, g, g, g, g, g, g, g, g, g, d],
-                [g, g, g, g, g, g, g, g, g, g, g, d],
-                [g],
-            ]
-        },
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [D]
+                [A, A, A, A, A, V, V, V, A],
+                [W, W, W, W, W, W, W, W, W, W],
+                [W, S, S, S, F, F, F, F, F, F, F, W],
+                [W, S, S, S, F, F, F, F, F, S, F],
+                [W, S, S, S, F],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
@@ -82,7 +100,12 @@ const
     LIZ_COUCH_THOUGHT_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [F],
+                [F, S, S, S, F],
+                [F, S, S, S, F],
+                [F, S, S, S, F],
+                [F]
             ],
             zIndices: [
                 [0],

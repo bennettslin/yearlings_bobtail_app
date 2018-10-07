@@ -1,5 +1,6 @@
 import {
     ACTORS,
+    BACKDROPS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -65,12 +66,22 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
+    UC_BERKELEY_BACKDROP
+} from 'scene/backdropKeys'
+
+import {
+    SIGNPOST,
+    BANCROFT_SHRUBS,
+    UC_BERKELEY_TREE,
+    ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
+    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT,
     DUMPSTER
 } from 'scene/cutoutKeys'
 
 import {
+    ASH_CAN,
     STAGE_MIC_FAR,
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
@@ -78,11 +89,13 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
+    CAMPANILE,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR
 } from 'scene/flatKeys'
 
 import {
+    BANCROFT_DOOR,
     LOADING_DOCK_DOOR
 } from 'scene/doorKeys'
 
@@ -102,7 +115,7 @@ import {
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_PHONE,
-    GHOST_ODIN_DEMONSTRATION,
+    GHOST_ODIN_DEMONSTRATION
 } from 'scene/puppetKeys'
 
 module.exports = [
@@ -131,6 +144,17 @@ module.exports = [
                     description: 'side, protective, judgmental',
                     instance: PROTECTIVE
                 }
+            },
+            [BACKDROPS]: {
+                [UC_BERKELEY_BACKDROP]: true
+            },
+            [CUTOUTS]: {
+                [BANCROFT_SHRUBS]: true,
+                [SIGNPOST]: true,
+                [UC_BERKELEY_TREE]: ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
+            },
+            [FLATS]: {
+                [CAMPANILE]: true
             },
             [PUPPETS]: {
                 [GHOST_ODIN_CAMPUS]: true
@@ -324,6 +348,18 @@ module.exports = [
                         instance: PROTESTER
                     }
                 }
+            },
+            [BACKDROPS]: {
+                [UC_BERKELEY_BACKDROP]: true
+            },
+            [CUTOUTS]: {
+                [UC_BERKELEY_TREE]: ARRANGEMENT_UC_BERKELEY_TREE_LEFT
+            },
+            [FIXTURES]: {
+                [ASH_CAN]: true
+            },
+            [DOORS]: {
+                [BANCROFT_DOOR]: true
             },
             [PUPPETS]: {
                 [GHOST_ODIN_DEMONSTRATION]: true

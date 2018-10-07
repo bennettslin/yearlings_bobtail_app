@@ -3,7 +3,10 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -11,13 +14,15 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
 
     CLUB_FAR_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C]
             ],
             zIndices: [
                 [g]
@@ -25,7 +30,9 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [W, P, P, P, P, P, P, P, P, P, P, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [g],
