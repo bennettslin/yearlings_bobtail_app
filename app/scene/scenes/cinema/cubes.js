@@ -4,14 +4,24 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     e,
     f,
     k
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     CINEMA_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [f, f, f, e, e, e, e, e, e, f],
                 [f],
@@ -22,6 +32,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
@@ -34,6 +47,9 @@ const
     },
     CINEMA_STREET_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k],
                 [f, f, f, f, k],
@@ -44,6 +60,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0],
                 [f, f, f, 1, 1, 0],

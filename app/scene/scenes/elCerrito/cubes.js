@@ -4,11 +4,18 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     g,
     RIGHT
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     EL_CERRITO_CUBES = {
         slantDirection: RIGHT,
         /**
@@ -25,6 +32,9 @@ const
          * --@-----------
          */
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
             ]
@@ -33,11 +43,17 @@ const
     EL_CERRITO_CAR_CUBES = {
         slantDirection: RIGHT,
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g, g, g, g, g, g, g, g, g, g, g, g]
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [4, 4, 4, 8, 8, 4, 4, 4, 4, 4, 0],
                 [4, 4, 8, 6, 8, 8, 4, 4, 4, 4, 0],

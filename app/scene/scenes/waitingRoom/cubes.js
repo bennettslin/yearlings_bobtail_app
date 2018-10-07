@@ -1,13 +1,23 @@
 import { WAITING_ROOM_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     d,
     g
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     WAITING_ROOM_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g],
                 [g],
@@ -18,6 +28,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [1],
                 [g, g, g, g, g, g, g, g, g, g, g, g],

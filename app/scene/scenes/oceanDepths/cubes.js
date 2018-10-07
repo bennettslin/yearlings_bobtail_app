@@ -1,13 +1,23 @@
 import { OCEAN_DEPTHS_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     RIGHT
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     OCEAN_DEPTHS_CUBES = {
         slantDirection: RIGHT,
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0]
             ]

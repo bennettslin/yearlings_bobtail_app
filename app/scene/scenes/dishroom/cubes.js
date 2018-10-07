@@ -1,20 +1,33 @@
 import { DISHROOM_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     b,
     f,
     g
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     DISHROOM_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g, g, f, f, f, f, f, g],
                 [g]
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g, g, b, b, b, b, b, g, g, 5, 5, g],
                 [g, 1, 7, 7, 7, 7, 7, 1, g, 5, 5, g],

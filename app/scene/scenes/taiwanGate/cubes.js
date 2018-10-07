@@ -1,14 +1,23 @@
 import { TAIWAN_GATE_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     d,
     g
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     TAIWAN_GATE_CUBES = {
-        // House wall is 6'.
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0],
                 [g, g, g, 1, d, 1, 0, 0, 0, 0, 1, 1],

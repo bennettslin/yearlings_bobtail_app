@@ -1,14 +1,24 @@
 import { BUOY_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     a,
     RIGHT
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     BUOY_CUBES = {
         slantDirection: RIGHT,
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [a, a, a, a, a, a, a, a, a, a, a, a],
                 [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],

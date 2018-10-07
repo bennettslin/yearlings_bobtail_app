@@ -31,7 +31,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        task: 'familyBathroom',
+        task: 'bathroom',
         workedHours: 0,
         neededHours: 1
     },

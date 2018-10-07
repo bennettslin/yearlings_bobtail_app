@@ -4,8 +4,8 @@ const
 
     NOHO_HOUSES_KEY = 'nohoHouses',
     NOHO_SCHOOL_KEY = 'nohoSchool',
-    FAMILY_BATHROOM_KEY = 'familyBathroom',
-    FAMILY_BATHROOM_OPEN_KEY = 'familyBathroomOpen',
+    BATHROOM_KEY = 'bathroom',
+    BATHROOM_OPEN_KEY = 'familyBathroomOpen',
 
     FREEWAY_KEY = 'freeway',
     PORCH_KEY = 'porch',
@@ -107,8 +107,8 @@ export {
     LOGUE_KEY,
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
-    FAMILY_BATHROOM_KEY,
-    FAMILY_BATHROOM_OPEN_KEY,
+    BATHROOM_KEY,
+    BATHROOM_OPEN_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
     CHANGELING_CAVE_KEY,

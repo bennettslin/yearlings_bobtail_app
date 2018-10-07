@@ -1,14 +1,24 @@
 import { TAIWAN_ROOM_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     e,
     f,
     g
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     TAIWAN_ROOM_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g],
                 [g],
@@ -19,6 +29,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g],
                 [g, 5, 5, g, 5, 5, 5, 5, 5, 5, 5, g],

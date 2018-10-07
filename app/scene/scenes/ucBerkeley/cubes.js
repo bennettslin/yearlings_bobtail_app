@@ -4,15 +4,24 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     f,
     g,
     k
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     BANCROFT_LIBRARY_CUBES = {
-        // Outdoor wall is 8'. Platform is 1'.
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k],
                 [k],
@@ -21,6 +30,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0],
                 [1],
@@ -33,6 +45,9 @@ const
     },
     CAMPANILE_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k],
                 [k],
@@ -41,6 +56,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0],
                 [1],

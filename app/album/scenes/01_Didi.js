@@ -10,8 +10,8 @@ import {
 import {
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
-    FAMILY_BATHROOM_KEY,
-    FAMILY_BATHROOM_OPEN_KEY
+    BATHROOM_KEY,
+    BATHROOM_OPEN_KEY
 } from 'scene/cubesKeys'
 
 import {
@@ -206,7 +206,7 @@ module.exports = [
                 [BATHTUB]: true
             }
         },
-        cubes: FAMILY_BATHROOM_KEY,
+        cubes: BATHROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING
@@ -243,7 +243,7 @@ module.exports = [
                 [BATHTUB]: true
             }
         },
-        cubes: FAMILY_BATHROOM_OPEN_KEY,
+        cubes: BATHROOM_OPEN_KEY,
         sky: {
             time: TIME_AFTERNOON,
             season: SEASON_SPRING

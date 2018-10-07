@@ -1,29 +1,32 @@
 import { DEFAULT_STAGE_KEY } from 'scene/cubesKeys'
 
 import {
-    _TS
-} from 'scene/hslaKeys'
+    DEFAULT_HSLA
+} from '../../hslaKeys'
 
 import {
     k
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     DEFAULT_STAGE = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k]
-            ],
-            hslaColours: [
-                [_TS]
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0]
-            ],
-            hslaColours: [
-                [_TS]
             ]
         }
     },

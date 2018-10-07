@@ -7,6 +7,10 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     d,
     g,
     k,
@@ -14,6 +18,9 @@ import {
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     BEDROOM_CEILING = [
         [k, k, k, k, k, g, k, g, g, g, k],
         [k, k, k, d, d, g, g, g, g, g, k],
@@ -24,8 +31,10 @@ const
     ],
     BEDROOM_CUBES = {
         slantDirection: LEFT,
-        // Captain bed height is 3.5'.
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: BEDROOM_CEILING
         },
         /**
@@ -42,6 +51,9 @@ const
          * -----------#--
          */
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
                 [0, 0, 0, 6, 6, 1, g, 6, 6, g, 0],
@@ -55,9 +67,15 @@ const
     BEDROOM_STOOL_CUBES = {
         slantDirection: LEFT,
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: BEDROOM_CEILING
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
                 [0, 0, 0, 6, 6, 1, g, 6, 6, g, 0],
@@ -71,9 +89,15 @@ const
     BEDROOM_OPEN_CUBES = {
         slantDirection: LEFT,
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: BEDROOM_CEILING
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
                 [0, 0, 0, 6, 6, 1, g, 1, 1, g, 0],
@@ -87,6 +111,9 @@ const
     BEDROOM_DOGS_CUBES = {
         slantDirection: LEFT,
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k, k, k, k, k, k, k, g, g, g, k],
                 [k, k, k, k, k, k, g, g, g, g, k],
@@ -97,6 +124,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0, 0, 0, 0, 0, 0, 0, g, g, g, 0],
                 [0, 0, 0, 0, 0, 0, g, 6, 6, g, 0],
@@ -110,6 +140,9 @@ const
     BEDROOM_SPACE_CUBES = {
         slantDirection: LEFT,
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k, k, k, k, k, g, k],
                 [k, k, k, d, d, g, k],
@@ -119,6 +152,9 @@ const
             ],
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0],
                 [0, 0, 0, 6, 6, 1, 0],

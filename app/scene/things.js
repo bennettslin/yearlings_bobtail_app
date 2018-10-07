@@ -2,7 +2,7 @@ import keys from 'lodash.keys'
 
 import THINGS_NOHO_HOUSES from 'scene/scenes/nohoHouses/things'
 import THINGS_NOHO_SCHOOL from 'scene/scenes/nohoSchool/things'
-import THINGS_FAMILY_BATHROOM from 'scene/scenes/familyBathroom/things'
+import THINGS_BATHROOM from 'scene/scenes/bathroom/things'
 import THINGS_FREEWAY from 'scene/scenes/freeway/things'
 import THINGS_PORCH from 'scene/scenes/porch/things'
 import THINGS_CHANGELING_CAVE from 'scene/scenes/changelingCave/things'
@@ -65,7 +65,7 @@ import THINGS_DEATHBED from 'scene/scenes/deathbed/things'
 const SCENE_ARRANGEMENTS = [
     THINGS_NOHO_HOUSES,
     THINGS_NOHO_SCHOOL,
-    THINGS_FAMILY_BATHROOM,
+    THINGS_BATHROOM,
     THINGS_FREEWAY,
     THINGS_PORCH,
     THINGS_CHANGELING_CAVE,

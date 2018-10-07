@@ -1,6 +1,10 @@
 import { COURTYARD_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     d,
     e,
     f,
@@ -14,8 +18,14 @@ import {
  */
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     COURTYARD_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g],
                 [g, g, d, d, d, d, g, d, d, d, g],
@@ -26,6 +36,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g, 1],
                 [g, g, 6, 6, 6, 6, g, 1, 1, 1, g],

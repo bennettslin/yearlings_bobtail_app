@@ -5,14 +5,24 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     c,
     f,
     k
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     BASEMENT_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k],
                 [f, c, c, f],
@@ -20,6 +30,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [4],
                 [f, 4, 4, f],
@@ -31,8 +44,10 @@ const
         }
     },
     BASEMENT_BED_CUBES = {
-        // Basement wall is 6', depth is 2.5'. Bed is 1'.
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k],
                 [f, c, c, f],
@@ -40,6 +55,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [4],
                 [f, 4, 4, f],
@@ -51,13 +69,18 @@ const
         }
     },
     BASEMENT_MAGIC_CUBES = {
-        // Basement wall is 6', depth is 2.5'. Bed is 1'.
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k]
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0],
                 [0],

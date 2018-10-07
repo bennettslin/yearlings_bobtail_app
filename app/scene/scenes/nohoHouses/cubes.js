@@ -1,13 +1,27 @@
 import { NOHO_HOUSES_KEY } from 'scene/cubesKeys'
 
 import {
-    _LW,
-    _PV
-} from 'scene/hslaKeys'
+    LAWN_HSLA,
+    SIDEWALK_HSLA
+} from '../../hslaKeys'
 
 const
+    // Sidewalk.
+    K = SIDEWALK_HSLA,
+
+    // Lawn.
+    L = LAWN_HSLA,
+
     NOHO_HOUSES = {
         floor: {
+            hslaColours: [
+                [L],
+                [L],
+                [L],
+                [L],
+                [K],
+                [K]
+            ],
             zIndices: [
                 [0],
                 [1],
@@ -15,14 +29,6 @@ const
                 [1],
                 [1],
                 [1]
-            ],
-            hslaColours: [
-                [_LW],
-                [_LW],
-                [_LW],
-                [_LW],
-                [_PV],
-                [_PV]
             ]
         }
     },

@@ -1,12 +1,18 @@
 import { SNOWGLOBES_PRESENT_KEY } from 'scene/cubesKeys'
 
-// import {
-//     g
-// } from 'scene/cubesConstants'
+import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     SNOWGLOBES_PRESENT_CUBES = {
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0],
                 [0],

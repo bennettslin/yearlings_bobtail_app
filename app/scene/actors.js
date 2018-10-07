@@ -9,7 +9,7 @@ import keys from 'lodash.keys'
 import ACTORS_LOGUE from 'scene/scenes/logue/actors'
 import ACTORS_NOHO_HOUSES from 'scene/scenes/nohoHouses/actors'
 import ACTORS_NOHO_SCHOOL from 'scene/scenes/nohoSchool/actors'
-import ACTORS_FAMILY_BATHROOM from 'scene/scenes/familyBathroom/actors'
+import ACTORS_BATHROOM from 'scene/scenes/bathroom/actors'
 import ACTORS_FREEWAY from 'scene/scenes/freeway/actors'
 import ACTORS_PORCH from 'scene/scenes/porch/actors'
 import ACTORS_CHANGELING_CAVE from 'scene/scenes/changelingCave/actors'
@@ -72,7 +72,7 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_LOGUE,
     ACTORS_NOHO_HOUSES,
     ACTORS_NOHO_SCHOOL,
-    ACTORS_FAMILY_BATHROOM,
+    ACTORS_BATHROOM,
     ACTORS_FREEWAY,
     ACTORS_PORCH,
     ACTORS_CHANGELING_CAVE,

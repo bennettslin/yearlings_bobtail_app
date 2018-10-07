@@ -5,6 +5,10 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     d,
     f,
     g
@@ -16,8 +20,14 @@ import {
  */
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     LIZ_COUCH_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [f],
                 [g, g, g, g, d, d, d, d, d, g],
@@ -28,6 +38,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
                 [g, g, g, g, 6, 6, 6, 6, 6, g],
@@ -40,6 +53,9 @@ const
     },
     LIZ_COUCH_SEAT_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [f],
                 [g, g, g, g, d, d, d, d, d, g],
@@ -50,6 +66,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
                 [g, g, g, g, 6, 6, 6, 6, 6, g],
@@ -62,6 +81,9 @@ const
     },
     LIZ_COUCH_THOUGHT_CUBES = {
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0],
                 [1],

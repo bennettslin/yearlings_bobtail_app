@@ -3,18 +3,30 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     g
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     CLUB_FAR_CUBES = {
-        // Indoor wall of club is 9'. Club stage is 2.5'.
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g]
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g],
                 [g, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, g],

@@ -4,14 +4,24 @@ import {
 } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     e,
     g,
     k
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     LIZ_BED_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g],
                 [g, g, e, 4, 4, 4, 4, 4, g],
@@ -19,6 +29,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [g],
                 [g, 1, 1, 3, 3, 3, 3, 3, 1, 1, 1, g],
@@ -31,6 +44,9 @@ const
     },
     LIZ_BED_OPEN_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, k],
                 [k, k, e, 4, 4, 4, 4, 4, k],
@@ -38,6 +54,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [0],
                 [0, 1, 1, 3, 3, 3, 3, 3, 1, 1, 1, 0],

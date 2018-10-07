@@ -1,6 +1,10 @@
 import { BENNETT_GATE_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     e,
     f,
     g,
@@ -12,8 +16,14 @@ import {
  */
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     BENNETT_GATE_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k],
                 [g, g, g, g, g, g, g, e, e, e, e, g],
@@ -24,6 +34,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [1],
                 [g, g, g, g, g, g, g, 1, 1, 1, 1, g],

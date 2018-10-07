@@ -2,7 +2,7 @@ import CUBES_DEFAULT_STAGE from 'scene/scenes/defaultStage/cubes'
 import CUBES_LOGUE from 'scene/scenes/logue/cubes'
 import CUBES_NOHO_HOUSES from 'scene/scenes/nohoHouses/cubes'
 import CUBES_NOHO_SCHOOL from 'scene/scenes/nohoSchool/cubes'
-import CUBES_FAMILY_BATHROOM from 'scene/scenes/familyBathroom/cubes'
+import CUBES_BATHROOM from 'scene/scenes/bathroom/cubes'
 import CUBES_FREEWAY from 'scene/scenes/freeway/cubes'
 import CUBES_PORCH from 'scene/scenes/porch/cubes'
 import CUBES_CHANGELING_CAVE from 'scene/scenes/changelingCave/cubes'
@@ -67,7 +67,7 @@ const CUBES = {
     ...CUBES_LOGUE,
     ...CUBES_NOHO_HOUSES,
     ...CUBES_NOHO_SCHOOL,
-    ...CUBES_FAMILY_BATHROOM,
+    ...CUBES_BATHROOM,
     ...CUBES_FREEWAY,
     ...CUBES_PORCH,
     ...CUBES_CHANGELING_CAVE,

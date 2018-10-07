@@ -1,6 +1,10 @@
 import { TAIWAN_STAIRS_KEY } from 'scene/cubesKeys'
 
 import {
+    DEFAULT_HSLA
+} from '../../hslaKeys'
+
+import {
     e,
     // f,
     g,
@@ -8,8 +12,14 @@ import {
 } from 'scene/cubesConstants'
 
 const
+    // Default.
+    D = DEFAULT_HSLA,
+
     TAIWAN_STAIRS_CUBES = {
         ceiling: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [k],
                 [k],
@@ -20,6 +30,9 @@ const
             ]
         },
         floor: {
+            hslaColours: [
+                [D]
+            ],
             zIndices: [
                 [6, 6, 6, 6, 1, 1, 1, 6, 6],
                 [6, 1],

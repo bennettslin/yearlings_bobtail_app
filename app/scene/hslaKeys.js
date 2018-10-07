@@ -1,50 +1,48 @@
 const
 
 // Other.
-_TS = 'test',
-_SP = 'stagePlatform',
-_ST = 'stage',
+DEFAULT_HSLA = 'default',
 
-_LW = 'lawn',
-_PV = 'pavement',
+STAGE_FLOOR_HSLA = 'stageFloor',
+STAGE_PLATFORM_HSLA = 'stagePlatform',
 
-_BL = 'blacktop',
+STREET_HSLA = 'street',
+SIDEWALK_HSLA = 'sidewalk',
+GROUND_HSLA = 'ground',
+LAWN_HSLA = 'lawn',
 
-_SF = 'schoolhouseFloor',
-_SB = 'schoolhouseBench',
+CEILING_HSLA = 'ceiling',
+FLOOR_HSLA = 'floor',
+WALL_HSLA = 'wall',
 
-_BC = 'bathroomCeiling',
-_BF = 'bathroomFloor',
-_BW = 'bathroomWall',
+SEAT_HSLA = 'seat',
 
 HSLA_KEYS = [
-    _TS,
-    _SP,
-    _ST,
-    _LW,
-    _PV,
-    _BL,
-    _SF,
-    _SB,
-    _BC,
-    _BF,
-    _BW
-
+    DEFAULT_HSLA,
+    STAGE_FLOOR_HSLA,
+    STAGE_PLATFORM_HSLA,
+    STREET_HSLA,
+    SIDEWALK_HSLA,
+    GROUND_HSLA,
+    LAWN_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    SEAT_HSLA
 ]
 
 export {
     HSLA_KEYS,
 
-    _TS,
-    _SP,
-    _ST,
-    _LW,
-    _PV,
-    _BL,
-    _SF,
-    _SB,
-    _BC,
-    _BF,
-    _BW
-
+    DEFAULT_HSLA,
+    STAGE_FLOOR_HSLA,
+    STAGE_PLATFORM_HSLA,
+    STREET_HSLA,
+    SIDEWALK_HSLA,
+    GROUND_HSLA,
+    LAWN_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    SEAT_HSLA
 }
