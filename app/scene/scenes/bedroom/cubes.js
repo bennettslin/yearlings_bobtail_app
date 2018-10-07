@@ -7,7 +7,13 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    GROUND_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    FURNITURE_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -18,25 +24,36 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    R = FURNITURE_HSLA,
+    S = SEAT_HSLA,
 
-    BEDROOM_CEILING = [
-        [k, k, k, k, k, g, k, g, g, g, k],
-        [k, k, k, d, d, g, g, g, g, g, k],
-        [k, k, d, d, g, g, g, g, g, g, g, k],
-        [g, d, g, g, g, g, g, g, g, g, g, k],
-        [g, g, g, g, g, g, g, g, g, g, g, k],
-        [g]
-    ],
+    DEFAULT_BEDROOM_CEILING = {
+        hslaColours: [
+            [D, D, D, D, D, C, D, C, C, C, D],
+            [D, D, D, W, W, C, C, C, C, C, D],
+            [D, D, W, W, C, C, C, C, C, C, C, D],
+            [C, W, C, C, C, C, C, C, C, C, C, D],
+            [C, C, C, C, C, C, C, C, C, C, C, D],
+            [C]
+        ],
+        zIndices: [
+            [k, k, k, k, k, g, k, g, g, g, k],
+            [k, k, k, d, d, g, g, g, g, g, k],
+            [k, k, d, d, g, g, g, g, g, g, g, k],
+            [g, d, g, g, g, g, g, g, g, g, g, k],
+            [g, g, g, g, g, g, g, g, g, g, g, k],
+            [g]
+        ]
+    },
+
     BEDROOM_CUBES = {
         slantDirection: LEFT,
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: BEDROOM_CEILING
-        },
+        ceiling: DEFAULT_BEDROOM_CEILING,
         /**
          * --.-----------
          * --...---------
@@ -52,7 +69,12 @@ const
          */
         floor: {
             hslaColours: [
-                [D]
+                [G, G, G, G, G, W, G, W, W, W, G],
+                [G, G, G, W, W, F, W, R, R, W, G],
+                [G, G, W, W, R, F, F, R, R, R, W, G],
+                [W, W, R, R, F, F, F, R, R, R, W, G],
+                [F, F, F, F, F, F, F, R, R, R, W, G],
+                [W, F, F, F, F, F, F, F, R, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -66,15 +88,15 @@ const
     },
     BEDROOM_STOOL_CUBES = {
         slantDirection: LEFT,
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: BEDROOM_CEILING
-        },
+        ceiling: DEFAULT_BEDROOM_CEILING,
         floor: {
             hslaColours: [
-                [D]
+                [G, G, G, G, G, W, G, W, W, W, G],
+                [G, G, G, W, W, F, W, R, R, W, G],
+                [G, G, W, W, R, F, F, R, R, R, W, G],
+                [W, W, R, R, F, S, F, R, R, R, W, G],
+                [F, F, F, F, F, F, F, R, R, R, W, G],
+                [W, F, F, F, F, F, F, F, R, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -88,15 +110,15 @@ const
     },
     BEDROOM_OPEN_CUBES = {
         slantDirection: LEFT,
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: BEDROOM_CEILING
-        },
+        ceiling: DEFAULT_BEDROOM_CEILING,
         floor: {
             hslaColours: [
-                [D]
+                [G, G, G, G, G, W, G, W, W, W, G],
+                [G, G, G, W, W, F, W, R, R, W, G],
+                [G, G, W, W, R, F, F, R, R, R, W, G],
+                [W, W, R, R, F, F, F, R, R, R, W, G],
+                [F, F, F, F, F, F, F, R, R, R, W, G],
+                [W, F, F, F, F, F, F, F, R, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -112,7 +134,12 @@ const
         slantDirection: LEFT,
         ceiling: {
             hslaColours: [
-                [D]
+                [D, D, D, D, D, D, D, C, C, C, D],
+                [D, D, D, D, D, D, C, C, C, C, D],
+                [D, D, D, D, D, D, C, C, C, C, C, D],
+                [D, D, D, D, D, D, C, C, C, C, C, D],
+                [D, D, D, D, D, D, C, C, C, C, C, D],
+                [D, D, D, D, D, D, C]
             ],
             zIndices: [
                 [k, k, k, k, k, k, k, g, g, g, k],
@@ -125,7 +152,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [G, G, G, G, G, G, G, W, W, W, G],
+                [G, G, G, G, G, G, W, R, R, W, G],
+                [G, G, G, G, G, G, F, R, R, R, W, G],
+                [G, G, G, G, G, G, F, R, R, R, W, G],
+                [G, G, G, G, G, G, F, R, R, R, W, G],
+                [G, G, G, G, G, G, F, F, R, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, 0, 0, g, g, g, 0],
@@ -141,7 +173,11 @@ const
         slantDirection: LEFT,
         ceiling: {
             hslaColours: [
-                [D]
+                [D, D, D, D, D, C, D],
+                [D, D, D, W, W, C, D],
+                [D, D, W, W, C, C, D],
+                [C, W, C, C, C, C, D],
+                [C, C, C, C, C, C, D]
             ],
             zIndices: [
                 [k, k, k, k, k, g, k],
@@ -153,7 +189,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [G, G, G, G, G, W, G],
+                [G, G, G, W, W, F, G],
+                [G, G, W, W, R, F, G],
+                [W, W, R, R, F, F, G],
+                [F, F, F, F, F, F, G],
+                [W, F, F, F, S, F, G]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0],

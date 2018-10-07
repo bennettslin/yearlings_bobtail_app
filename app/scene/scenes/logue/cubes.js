@@ -6,20 +6,17 @@ import {
 } from '../../hslaKeys'
 
 const
-    // Floor.
-    F = STAGE_FLOOR_HSLA,
-
-    // Platform.
+    G = STAGE_FLOOR_HSLA,
     P = STAGE_PLATFORM_HSLA,
 
     LOGUE = {
         floor: {
             hslaColours: [
-                [F],
-                [F, P, P, P, P, P, P, P, P, P, P, F],
-                [F, P, P, P, P, P, P, P, P, P, P, F],
-                [F, P, P, P, P, P, P, P, P, P, P, F],
-                [F]
+                [G],
+                [G, P, P, P, P, P, P, P, P, P, P, G],
+                [G, P, P, P, P, P, P, P, P, P, P, G],
+                [G, P, P, P, P, P, P, P, P, P, P, G],
+                [G]
             ],
             zIndices: [
                 [0],

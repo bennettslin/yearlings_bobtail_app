@@ -1,17 +1,19 @@
 import { CHANGELING_CAVE_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    PAVEMENT_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    V = PAVEMENT_HSLA,
 
     CHANGELING_CAVE_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [V],
+                [G]
             ],
             zIndices: [
                 [1],

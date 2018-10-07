@@ -4,7 +4,7 @@ import {
     DEFAULT_HSLA,
     LAWN_HSLA,
     CEILING_HSLA,
-    FLOOR_HSLA,
+    PLATFORM_HSLA,
     WALL_HSLA
 } from '../../hslaKeys'
 
@@ -15,20 +15,11 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
-
-    // Lawn.
     L = LAWN_HSLA,
-
-    // Ceiling.
     C = CEILING_HSLA,
-
-    // Floor.
-    F = FLOOR_HSLA,
-
-    // Wall.
     W = WALL_HSLA,
+    P = PLATFORM_HSLA,
 
     PORCH_CUBES = {
         ceiling: {
@@ -46,10 +37,10 @@ const
         floor: {
             hslaColours: [
                 [W],
-                [L, L, F, F, F, F, F, F, F, F, L],
-                [L, L, F, F, F, F, F, F, F, F, L],
-                [L, L, F, F, F, F, F, F, F, F, L],
-                [L, L, W, F, F, F, F, F, F, W, L],
+                [L, L, P, P, P, P, P, P, P, P, L],
+                [L, L, P, P, P, P, P, P, P, P, L],
+                [L, L, P, P, P, P, P, P, P, P, L],
+                [L, L, W, P, P, P, P, P, P, W, L],
                 [L]
             ],
             zIndices: [

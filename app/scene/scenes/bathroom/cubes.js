@@ -4,11 +4,11 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA,
     GROUND_HSLA,
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    FURNITURE_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -16,25 +16,16 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
-
-    // Ground.
     G = GROUND_HSLA,
-
-    // Ceiling.
     C = CEILING_HSLA,
-
-    // Floor.
     F = FLOOR_HSLA,
-
-    // Wall.
     W = WALL_HSLA,
+    R = FURNITURE_HSLA,
 
     BATHROOM = {
         ceiling: {
             hslaColours: [
-                [W, W, C, C, C, C, C, C, C, C, W, W]
+                [C]
             ],
             zIndices: [
                 [f]
@@ -44,8 +35,8 @@ const
             hslaColours: [
                 [W],
                 [W, W, F, F, F, F, F, F, F, F, W, W],
-                [W, W, F, D, D, D, D, F, F, F, W, W],
-                [W, W, F, D, D, D, D, F, F, F, W, W],
+                [W, W, F, R, R, R, R, F, F, F, W, W],
+                [W, W, F, R, R, R, R, F, F, F, W, W],
                 [W, W, F, F, F, F, F, F, F, F, W, W]
             ],
             zIndices: [
@@ -63,8 +54,8 @@ const
             hslaColours: [
                 [G],
                 [G, G, F, F, F, F, F, F, F, F, G, G],
-                [G, G, F, D, D, D, D, F, F, F, G, G],
-                [G, G, F, D, D, D, D, F, F, F, G, G],
+                [G, G, F, R, R, R, R, F, F, F, G, G],
+                [G, G, F, R, R, R, R, F, F, F, G, G],
                 [G, G, F, F, F, F, F, F, F, F, G, G]
             ],
             zIndices: [

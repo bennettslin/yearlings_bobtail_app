@@ -1,26 +1,25 @@
 import { FREEWAY_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA,
-    STAGE_PLATFORM_HSLA
+    GROUND_HSLA,
+    PAVEMENT_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
-
-    // Platform.
-    P = STAGE_PLATFORM_HSLA,
+    G = GROUND_HSLA,
+    V = PAVEMENT_HSLA,
+    P = PLATFORM_HSLA,
 
     FREEWAY_CUBES = {
         floor: {
             hslaColours: [
-                [D],
-                [D],
+                [G],
+                [G],
                 [P],
-                [D],
+                [V],
                 [P],
-                [D]
+                [G]
             ],
             zIndices: [
                 [0],

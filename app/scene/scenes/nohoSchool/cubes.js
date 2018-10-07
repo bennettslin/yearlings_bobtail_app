@@ -1,30 +1,25 @@
 import { NOHO_SCHOOL_KEY } from 'scene/cubesKeys'
 
 import {
-    GROUND_HSLA,
+    PAVEMENT_HSLA,
     FLOOR_HSLA,
     SEAT_HSLA
 } from '../../hslaKeys'
 
 const
-    // Ground.
-    G = GROUND_HSLA,
-
-    // Floor.
+    V = PAVEMENT_HSLA,
     F = FLOOR_HSLA,
-
-    // Seat.
     S = SEAT_HSLA,
 
     NOHO_SCHOOL = {
         floor: {
             hslaColours: [
-                [G],
-                [G],
-                [G, G, G, G, G, G, G, F, F, F, G],
-                [G, G, G, G, G, G, G, F, F, S, G],
-                [G, G, G, G, G, G, G, F, F, S, G],
-                [G, G, G, G, G, G, G, F, F, F, G]
+                [V],
+                [V],
+                [V, V, V, V, V, V, V, F, F, F, V],
+                [V, V, V, V, V, V, V, F, F, S, V],
+                [V, V, V, V, V, V, V, F, F, S, V],
+                [V, V, V, V, V, V, V, F, F, F, V]
             ],
             zIndices: [
                 [0],

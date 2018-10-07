@@ -1,17 +1,24 @@
 import { OAKLAND_PUBLIC_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    STREET_HSLA,
+    CROSSWALK_HSLA,
+    PAVEMENT_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    T = STREET_HSLA,
+    X = CROSSWALK_HSLA,
+    V = PAVEMENT_HSLA,
 
     OAKLAND_PUBLIC_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [V, V, T, X, T, X, T, X, T, X, V],
+                [V, V, T, X, T, X, T, X, T, X, V],
+                [V, X, T, X, T, X, T, X, T, X, T, V],
+                [V, X, T, X, T, X, T, X, T, X, T, V],
+                [T]
             ],
             zIndices: [
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],

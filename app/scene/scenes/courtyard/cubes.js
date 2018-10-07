@@ -1,14 +1,18 @@
 import { COURTYARD_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    PAVEMENT_HSLA,
+    GATE_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA
 } from '../../hslaKeys'
 
 import {
     d,
     e,
     f,
-    g,
     k
 } from 'scene/cubesConstants'
 
@@ -18,34 +22,48 @@ import {
  */
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    V = PAVEMENT_HSLA,
+    A = GATE_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
 
     COURTYARD_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C],
+                [C, C, W, W, W, W, C, W, W, W, C],
+                [C, C, C],
+                [A, C, D],
+                [A, C, D],
+                [C, C, D],
             ],
             zIndices: [
-                [g],
-                [g, g, d, d, d, d, g, d, d, d, g],
-                [g, f, f],
+                [f],
+                [f, f, d, d, d, d, f, d, d, d, f],
+                [f, f, f],
                 [e, f, k],
                 [e, f, k],
-                [g, f, k]
+                [f, f, k]
             ]
         },
         floor: {
             hslaColours: [
-                [D]
+                [F],
+                [W, W, W, W, W, W, W, F, F, F, W],
+                [A, V],
+                [V],
+                [V],
+                [A, V]
             ],
             zIndices: [
-                [g, 1],
-                [g, g, 6, 6, 6, 6, g, 1, 1, 1, g],
-                [g, 1],
+                [f, 1],
+                [f, f, 6, 6, 6, 6, f, 1, 1, 1, f],
+                [f, 1],
                 [1],
                 [1],
-                [g, 1]
+                [f, 1]
             ]
         }
     },

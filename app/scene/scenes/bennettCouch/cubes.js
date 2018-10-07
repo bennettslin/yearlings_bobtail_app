@@ -4,7 +4,12 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    FURNITURE_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -12,13 +17,17 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    R = FURNITURE_HSLA,
+    S = SEAT_HSLA,
 
     BENNETT_COUCH_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C]
             ],
             zIndices: [
                 [g]
@@ -26,7 +35,11 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [W, F, F, S, S, S, S, S, F, F, F, W],
+                [W, F, R, S, S, S, S, S, F, F, F, W],
+                [W, F, F, S, S, S, S, S, F, F, F, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [g],
@@ -40,7 +53,12 @@ const
     BENNETT_COUCH_THOUGHT_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [G, F, F, S, S, S, S, S, F, F, F, G],
+                [G, F, R, S, S, S, S, S, F, F, F, G],
+                [G, F, F, S, S, S, S, S, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G]
             ],
             zIndices: [
                 [0],
