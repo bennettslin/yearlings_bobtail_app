@@ -1,3 +1,5 @@
+Indie rock is like the popular kids who can make something uncool cool. The less popular kids can tap into that coolness, but they have no power to make it cool themselves.
+
 An everyman is a lone individual who, by sheer virtue of their modest circumstances, can represent everyone else. They are necessarily a member of the privileged, dominant group. Everyman cultures in the 21st century are increasingly going to suck.
 
 Donald Trump forced white liberals to finally admit what indie rock has required them all these years to never admit.

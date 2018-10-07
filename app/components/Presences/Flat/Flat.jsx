@@ -41,12 +41,9 @@ import CommercialNearLeft from './Flats/CommercialNearLeft'
 import CommercialFarRight from './Flats/CommercialFarRight'
 import CommercialMiddleRight from './Flats/CommercialMiddleRight'
 import CommercialNearRight from './Flats/CommercialNearRight'
-import PublicCentre from './Flats/PublicCentre'
 import PublicFarLeft from './Flats/PublicFarLeft'
-import PublicMiddleLeft from './Flats/PublicMiddleLeft'
 import PublicNearLeft from './Flats/PublicNearLeft'
 import PublicFarRight from './Flats/PublicFarRight'
-import PublicMiddleRight from './Flats/PublicMiddleRight'
 import PublicNearRight from './Flats/PublicNearRight'
 import RoadPast from './Flats/RoadPast'
 import RoadPresent from './Flats/RoadPresent'
@@ -96,12 +93,9 @@ import {
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
-    PUBLIC_CENTRE,
     PUBLIC_FAR_LEFT,
-    PUBLIC_MIDDLE_LEFT,
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
-    PUBLIC_MIDDLE_RIGHT,
     PUBLIC_NEAR_RIGHT,
     ROAD_PAST,
     ROAD_PRESENT,
@@ -152,11 +146,8 @@ const FLATS_MAP = {
     [COMMERCIAL_MIDDLE_RIGHT]: CommercialMiddleRight,
     [COMMERCIAL_NEAR_LEFT]: CommercialNearLeft,
     [COMMERCIAL_NEAR_RIGHT]: CommercialNearRight,
-    [PUBLIC_CENTRE]: PublicCentre,
     [PUBLIC_FAR_LEFT]: PublicFarLeft,
     [PUBLIC_FAR_RIGHT]: PublicFarRight,
-    [PUBLIC_MIDDLE_LEFT]: PublicMiddleLeft,
-    [PUBLIC_MIDDLE_RIGHT]: PublicMiddleRight,
     [PUBLIC_NEAR_LEFT]: PublicNearLeft,
     [PUBLIC_NEAR_RIGHT]: PublicNearRight,
     [ROAD_PAST]: RoadPast,

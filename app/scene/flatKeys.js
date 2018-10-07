@@ -83,12 +83,9 @@ const
     COMMERCIAL_NEAR_RIGHT = 'commercialNearRight',
 
     // TODO
-    PUBLIC_CENTRE = 'publicCentre',
     PUBLIC_FAR_LEFT = 'publicFarLeft',
-    PUBLIC_MIDDLE_LEFT = 'publicMiddleLeft',
     PUBLIC_NEAR_LEFT = 'publicNearLeft',
     PUBLIC_FAR_RIGHT = 'publicFarRight',
-    PUBLIC_MIDDLE_RIGHT = 'publicMiddleRight',
     PUBLIC_NEAR_RIGHT = 'publicNearRight',
 
     // TODO
@@ -142,12 +139,9 @@ export {
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
-    PUBLIC_CENTRE,
     PUBLIC_FAR_LEFT,
-    PUBLIC_MIDDLE_LEFT,
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
-    PUBLIC_MIDDLE_RIGHT,
     PUBLIC_NEAR_RIGHT,
     ROAD_PAST,
     ROAD_PRESENT,
