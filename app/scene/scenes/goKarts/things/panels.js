@@ -5,7 +5,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_EXTERIOR_LEFT]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
             xFloat: 3,
             xWidth: 4,
@@ -13,7 +13,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [GO_KART_EXTERIOR_RIGHT]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
             xFloat: 8,
             xWidth: 4,

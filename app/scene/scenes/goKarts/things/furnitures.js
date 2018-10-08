@@ -7,7 +7,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_SEAT_LEFT]: {
-        yIndex: 3,
+        yIndex: 2,
         arrangement: {
             xFloat: 2,
             xWidth: 1,
@@ -15,7 +15,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [GO_KART_SEAT_RIGHT]: {
-        yIndex: 3,
+        yIndex: 2,
         arrangement: {
             xFloat: 7,
             xWidth: 1,
@@ -23,7 +23,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [GO_KART_DASHBOARD_LEFT]: {
-        yIndex: 3,
+        yIndex: 2,
         arrangement: {
             xFloat: 3.5,
             xWidth: 2,
@@ -31,7 +31,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [GO_KART_DASHBOARD_RIGHT]: {
-        yIndex: 3,
+        yIndex: 2,
         arrangement: {
             xFloat: 8.5,
             xWidth: 2,

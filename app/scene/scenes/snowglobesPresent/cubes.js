@@ -1,25 +1,35 @@
 import { SNOWGLOBES_PRESENT_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    PLATFORM_HSLA,
+    UPHOLSTERY_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    P = PLATFORM_HSLA,
+    Q = PLATFORM_HSLA, // Second globe.
+    U = UPHOLSTERY_HSLA,
+    Z = UPHOLSTERY_HSLA, // Second globe.
 
     SNOWGLOBES_PRESENT_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [G, U, U, U, P, G],
+                [G, U, U, U, P, G, Z, Z, Z, Z, Z, G],
+                [G, U, U, U, P, G, Z, Z, Z, Z, Z, G],
+                [G, P, P, P, P, G, Z, Z, Z, Z, Z, G],
+                [G, G, G, G, G, G, Q, Q, Q, Q, Q, G]
             ],
             zIndices: [
                 [0],
-                [0],
-                [0, 7, 3, 3, 0, 0, 7, 7, 7, 7, 7, 0],
-                [0, 7, 3, 3, 0, 0, 3, 3, 3, 3, 3, 0],
-                [0, 7, 3, 3, 0, 0, 3, 3, 3, 3, 3, 0],
-                [0]
+                [0, 7, 3, 3, 1, 0],
+                [0, 7, 3, 3, 1, 0, 5, 5, 5, 5, 5, 0],
+                [0, 7, 3, 3, 1, 0, 2, 2, 2, 2, 2, 0],
+                [0, 1, 1, 1, 1, 0, 2, 2, 2, 2, 2, 0],
+                [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0]
             ]
         }
     },

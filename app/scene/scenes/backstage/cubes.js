@@ -1,7 +1,10 @@
 import { BACKSTAGE_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -9,13 +12,15 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G  = GROUND_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
 
     BACKSTAGE_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C]
             ],
             zIndices: [
                 [g]
@@ -23,7 +28,8 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [G, F, F, F, F, F, F, F, F, F, F, G]
             ],
             zIndices: [
                 [g],

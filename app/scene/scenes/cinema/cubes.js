@@ -4,7 +4,12 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    STREET_HSLA,
+    PAVEMENT_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -14,12 +19,21 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    T = STREET_HSLA,
+    V = PAVEMENT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
 
     CINEMA_CUBES = {
         ceiling: {
             hslaColours: [
+                [C, C, C, W, W, W, W, W, W, C],
+                [C],
+                [C],
+                [C],
+                [C],
                 [D]
             ],
             zIndices: [
@@ -33,7 +47,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W, W, W, F, F, F, F, F, F, W],
+                [W, W, W, F, F, F, F, F, F, W],
+                [W, W, W, F, F, F, F, F, F, W],
+                [V],
+                [V],
+                [T]
             ],
             zIndices: [
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
@@ -48,6 +67,11 @@ const
     CINEMA_STREET_CUBES = {
         ceiling: {
             hslaColours: [
+                [D],
+                [C, C, C, C, D],
+                [C, C, C, C, D],
+                [C, C, C, C, D],
+                [C, C, C, C, D],
                 [D]
             ],
             zIndices: [
@@ -61,7 +85,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [T],
+                [W, W, W, V, V, T],
+                [W, W, W, V, V, T],
+                [V, V, V, V, V, T],
+                [V, V, V, V, V, T],
+                [T]
             ],
             zIndices: [
                 [0],

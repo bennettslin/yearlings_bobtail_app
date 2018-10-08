@@ -9,8 +9,8 @@ const ARRANGEMENTS_MAP = {
     [PUBLIC_FAR_LEFT]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 0.5,
-            xWidth: 2,
+            xFloat: 1,
+            xWidth: 3,
             zHeight: 5
         }
     },
@@ -25,8 +25,8 @@ const ARRANGEMENTS_MAP = {
     [PUBLIC_NEAR_LEFT]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 0,
-            xWidth: 1,
+            xFloat: 0.5,
+            xWidth: 2,
             zHeight: 6
         }
     },

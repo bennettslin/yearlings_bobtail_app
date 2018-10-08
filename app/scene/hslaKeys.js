@@ -1,6 +1,4 @@
 const
-
-// Other.
 DEFAULT_HSLA = 'default',
 
 STAGE_FLOOR_HSLA = 'stageFloor',
@@ -24,7 +22,6 @@ FURNITURE_HSLA = 'furniture',
 UPHOLSTERY_HSLA = 'upholstery',
 SEAT_HSLA = 'seat',
 
-// TODO: Make single object.
 HSLA_KEYS = [
     DEFAULT_HSLA,
     STAGE_FLOOR_HSLA,

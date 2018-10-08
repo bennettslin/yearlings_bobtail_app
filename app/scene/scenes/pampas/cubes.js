@@ -1,7 +1,8 @@
 import { PAMPAS_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    HILL_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -9,17 +10,19 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    H = HILL_HSLA,
 
     PAMPAS_CUBES = {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [H]
             ],
             zIndices: [
-                [4]
+                [0],
+                [2]
             ]
         }
     },
