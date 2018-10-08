@@ -1,21 +1,31 @@
 import { TETHERBALL_COURT_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    PAVEMENT_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    V = PAVEMENT_HSLA,
 
     TETHERBALL_COURT_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [G, V, V, V, V, V, V, V, V, V, V, G],
+                [G, V, V, V, V, V, V, V, V, V, V, G],
+                [G, V, V, V, V, V, V, V, V, V, V, G],
+                [G, V, V, V, V, V, V, V, V, V, V, G],
+                [G]
             ],
             zIndices: [
                 [0],
-                [1]
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0]
             ]
         }
     },

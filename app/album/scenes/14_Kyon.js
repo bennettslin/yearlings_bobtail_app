@@ -57,7 +57,8 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    LIZ_CUSHIONS
+    LIZ_CUSHIONS,
+    ARRANGEMENT_LIZ_CUSHIONS
 } from 'scene/furnitureKeys'
 
 import {
@@ -89,7 +90,7 @@ module.exports = [
                 [LIZ_DOOR]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
             [PUPPETS]: {
                 [OPAL_LAP]: true
@@ -121,7 +122,7 @@ module.exports = [
                 [LIZ_DOOR]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
             [PUPPETS]: {
                 [OPAL_WINDOW]: true
@@ -156,7 +157,7 @@ module.exports = [
                 [TCHOTCHKES]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
             [PUPPETS]: {
                 [OPAL_COUCH]: true
@@ -194,7 +195,7 @@ module.exports = [
                 [LIZ_DOOR_OPEN]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -233,7 +234,7 @@ module.exports = [
                 [LIZ_DOOR]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,
@@ -271,7 +272,7 @@ module.exports = [
                 [LIZ_DOOR]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -300,7 +301,7 @@ module.exports = [
                 [LIZ_DOOR]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
             [PUPPETS]: {
                 [OPAL_WINDOW]: true
@@ -322,7 +323,7 @@ module.exports = [
                 [LIZ_DOOR]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
             [PUPPETS]: {
                 [PEAHEN]: true,

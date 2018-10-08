@@ -90,7 +90,8 @@ import {
 } from 'scene/flatKeys'
 
 import {
-    LIZ_CUSHIONS
+    LIZ_CUSHIONS,
+    ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
 } from 'scene/furnitureKeys'
 
 module.exports = [
@@ -144,7 +145,7 @@ module.exports = [
                 [LIZ_COUCH_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
+                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,

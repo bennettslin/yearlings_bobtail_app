@@ -26,7 +26,7 @@ House key (always keep in suitcase)
 Toiletries bag
 
 ## Things to bring next time
-Pencil cup
+Soap
 
 ## Things I have in LA
 

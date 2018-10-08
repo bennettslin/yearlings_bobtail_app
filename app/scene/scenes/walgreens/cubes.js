@@ -1,21 +1,31 @@
 import { WALGREENS_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    FLOOR_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    F = FLOOR_HSLA,
 
     WALGREENS_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G]
             ],
             zIndices: [
                 [0],
-                [1]
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0]
             ]
         }
     },

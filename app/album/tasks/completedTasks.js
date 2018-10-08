@@ -3919,7 +3919,7 @@ module.exports = [
     },
     {
         taskName: `Begin adding hslas to scenes.`,
-        workedHours: 8,
-        neededHours: 8
+        workedHours: 9,
+        neededHours: 9
     },
 ]

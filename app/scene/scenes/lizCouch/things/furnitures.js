@@ -1,14 +1,26 @@
 import {
-    LIZ_CUSHIONS
+    LIZ_CUSHIONS,
+    ARRANGEMENT_LIZ_CUSHIONS,
+    ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
 } from 'scene/furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [LIZ_CUSHIONS]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 2.5,
-            xWidth: 2,
-            zHeight: 0.5
+        [ARRANGEMENT_LIZ_CUSHIONS]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 2,
+                zHeight: 0.5
+            }
+        },
+        [ARRANGEMENT_LIZ_CUSHIONS_THOUGHT]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 2,
+                zHeight: 0.5
+            }
         }
     }
 }

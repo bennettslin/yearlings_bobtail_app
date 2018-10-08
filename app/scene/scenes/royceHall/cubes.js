@@ -1,17 +1,16 @@
 import { ROYCE_HALL_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    PAVEMENT_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    V = PAVEMENT_HSLA,
 
     ROYCE_HALL_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [V]
             ],
             zIndices: [
                 [0],

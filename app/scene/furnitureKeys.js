@@ -71,7 +71,10 @@ const
     REATTA_DASHBOARD = 'reattaDashboard',
 
     // TODO
-    HOSPITAL_MATTRESS = 'hospitalMattress'
+    HOSPITAL_MATTRESS = 'hospitalMattress',
+
+    ARRANGEMENT_LIZ_CUSHIONS = 'arrangementLizCushions',
+    ARRANGEMENT_LIZ_CUSHIONS_THOUGHT = 'arrangementLizCushionsThought'
 
 export {
     BEDROOM_DESK,
@@ -103,5 +106,7 @@ export {
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
     REATTA_DASHBOARD,
-    HOSPITAL_MATTRESS
+    HOSPITAL_MATTRESS,
+    ARRANGEMENT_LIZ_CUSHIONS,
+    ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
 }
