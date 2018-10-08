@@ -1,7 +1,9 @@
 import { STEAM_TUNNEL_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    FLOOR_HSLA,
+    CEILING_HSLA,
+    WALL_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -10,13 +12,19 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    F = FLOOR_HSLA,
+    C = CEILING_HSLA,
+    W = WALL_HSLA,
 
     STEAM_TUNNEL_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C],
+                [C],
+                [C],
+                [W, C, C, C, C, C, C, C, C, C, C, W],
+                [W, C, C, C, C, C, C, C, C, C, C, W],
+                [C]
             ],
             zIndices: [
                 [d],
@@ -29,7 +37,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [W, F, F, F, F, F, F, F, F, F, F, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W],
+                [F, F, F, F, F, F, F, F, F, F, F, F],
+                [F, F, F, F, F, F, F, F, F, F, F, F],
+                [W, F, F, F, F, F, F, F, F, F, F, W],
             ],
             zIndices: [
                 [d],

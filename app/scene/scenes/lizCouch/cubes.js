@@ -12,6 +12,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    UPHOLSTERY_HSLA,
     SEAT_HSLA
 } from '../../hslaKeys'
 
@@ -34,6 +35,7 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
+    U = UPHOLSTERY_HSLA,
     S = SEAT_HSLA,
 
     DEFAULT_CEILING = {
@@ -61,9 +63,9 @@ const
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
                 [W, W, W, W, W, W, W, W, W, W],
-                [W, S, S, S, F, F, F, F, F, F, F, W],
-                [W, S, S, S, F],
-                [W, S, S, S, F],
+                [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, F],
+                [W, U, U, U, F],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
@@ -82,9 +84,9 @@ const
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
                 [W, W, W, W, W, W, W, W, W, W],
-                [W, S, S, S, F, F, F, F, F, F, F, W],
-                [W, S, S, S, F, F, F, F, F, S, F],
-                [W, S, S, S, F],
+                [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, F, F, F, F, F, S, F],
+                [W, U, U, U, F],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
@@ -102,9 +104,9 @@ const
             hslaColours: [
                 [G],
                 [F],
-                [F, S, S, S, F],
-                [F, S, S, S, F],
-                [F, S, S, S, F],
+                [F, U, U, U, F],
+                [F, U, U, U, F],
+                [F, U, U, U, F],
                 [F]
             ],
             zIndices: [

@@ -1,7 +1,11 @@
 import { VAN_NUYS_LOCKERS_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    LAWN_HSLA,
+    CEILING_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -10,13 +14,21 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    L = LAWN_HSLA,
+    C = CEILING_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
 
     VAN_NUYS_LOCKERS_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [D],
+                [D],
+                [C, C, C, C, C, C, C, C, C, C, D],
+                [C, C, C, C, C, C, C, C, C, C, D],
+                [C, C, C, C, C, C, C, C, C, C, D],
+                [C, C, C, C, C, C, C, C, C, C, D]
             ],
             zIndices: [
                 [k],
@@ -29,7 +41,11 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [L],
+                [L],
+                [P, P, P, P, P, P, P, P, P, P, L],
+                [P, W, W, W, W, W, W, P, P, P, L],
+                [P, P, P, P, P, P, P, P, P, P, L]
             ],
             zIndices: [
                 [1],

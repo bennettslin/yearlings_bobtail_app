@@ -1,7 +1,11 @@
 import { VAN_NUYS_QUAD_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    LAWN_HSLA,
+    CEILING_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -10,12 +14,18 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    L = LAWN_HSLA,
+    C = CEILING_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
 
     VAN_NUYS_QUAD_CUBES = {
         ceiling: {
             hslaColours: [
+                [D, D, C],
+                [D, D, C],
+                [D, D, C],
                 [D]
             ],
             zIndices: [
@@ -27,7 +37,10 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [L, L, P, P, P, P, P, P, P, P, P, P],
+                [L, L, P, P, P, W, W, W, W, W, W, P],
+                [L, L, P, P, P, P, P, P, P, P, P, P],
+                [L]
             ],
             zIndices: [
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],

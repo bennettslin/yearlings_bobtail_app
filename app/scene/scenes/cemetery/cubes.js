@@ -1,7 +1,7 @@
 import { CEMETERY_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    HILL_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -9,14 +9,13 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    H = HILL_HSLA,
 
     CEMETERY_CUBES = {
         slantDirection: LEFT,
         floor: {
             hslaColours: [
-                [D]
+                [H]
             ],
             zIndices: [
                 [0],

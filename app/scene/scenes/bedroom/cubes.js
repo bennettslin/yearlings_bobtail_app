@@ -13,6 +13,7 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     FURNITURE_HSLA,
+    UPHOLSTERY_HSLA,
     SEAT_HSLA
 } from '../../hslaKeys'
 
@@ -30,6 +31,7 @@ const
     F = FLOOR_HSLA,
     W = WALL_HSLA,
     R = FURNITURE_HSLA,
+    U = UPHOLSTERY_HSLA,
     S = SEAT_HSLA,
 
     DEFAULT_CEILING = {
@@ -70,11 +72,11 @@ const
         floor: {
             hslaColours: [
                 [G, G, G, G, G, W, G, W, W, W, G],
-                [G, G, G, W, W, F, W, R, R, W, G],
-                [G, G, W, W, R, F, F, R, R, R, W, G],
-                [W, W, R, R, F, F, F, R, R, R, W, G],
-                [F, F, F, F, F, F, F, R, R, R, W, G],
-                [W, F, F, F, F, F, F, F, R, F, F, W]
+                [G, G, G, W, W, F, W, U, U, W, G],
+                [G, G, W, W, R, F, F, U, U, U, W, G],
+                [W, W, R, R, F, F, F, U, U, U, W, G],
+                [F, F, F, F, F, F, F, U, U, U, W, G],
+                [W, F, F, F, F, F, F, F, U, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -92,11 +94,11 @@ const
         floor: {
             hslaColours: [
                 [G, G, G, G, G, W, G, W, W, W, G],
-                [G, G, G, W, W, F, W, R, R, W, G],
-                [G, G, W, W, R, F, F, R, R, R, W, G],
-                [W, W, R, R, F, S, F, R, R, R, W, G],
-                [F, F, F, F, F, F, F, R, R, R, W, G],
-                [W, F, F, F, F, F, F, F, R, F, F, W]
+                [G, G, G, W, W, F, W, U, U, W, G],
+                [G, G, W, W, R, F, F, U, U, U, W, G],
+                [W, W, R, R, F, S, F, U, U, U, W, G],
+                [F, F, F, F, F, F, F, U, U, U, W, G],
+                [W, F, F, F, F, F, F, F, U, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -114,11 +116,11 @@ const
         floor: {
             hslaColours: [
                 [G, G, G, G, G, W, G, W, W, W, G],
-                [G, G, G, W, W, F, W, R, R, W, G],
-                [G, G, W, W, R, F, F, R, R, R, W, G],
-                [W, W, R, R, F, F, F, R, R, R, W, G],
-                [F, F, F, F, F, F, F, R, R, R, W, G],
-                [W, F, F, F, F, F, F, F, R, F, F, W]
+                [G, G, G, W, W, F, W, U, U, W, G],
+                [G, G, W, W, R, F, F, U, U, U, W, G],
+                [W, W, R, R, F, F, F, U, U, U, W, G],
+                [F, F, F, F, F, F, F, U, U, U, W, G],
+                [W, F, F, F, F, F, F, F, U, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -153,11 +155,11 @@ const
         floor: {
             hslaColours: [
                 [G, G, G, G, G, G, G, W, W, W, G],
-                [G, G, G, G, G, G, W, R, R, W, G],
-                [G, G, G, G, G, G, F, R, R, R, W, G],
-                [G, G, G, G, G, G, F, R, R, R, W, G],
-                [G, G, G, G, G, G, F, R, R, R, W, G],
-                [G, G, G, G, G, G, F, F, R, F, F, W]
+                [G, G, G, G, G, G, W, U, U, W, G],
+                [G, G, G, G, G, G, F, U, U, U, W, G],
+                [G, G, G, G, G, G, F, U, U, U, W, G],
+                [G, G, G, G, G, G, F, U, U, U, W, G],
+                [G, G, G, G, G, G, F, F, U, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, 0, 0, g, g, g, 0],

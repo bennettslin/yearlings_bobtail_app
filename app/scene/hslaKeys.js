@@ -6,7 +6,9 @@ DEFAULT_HSLA = 'default',
 STAGE_FLOOR_HSLA = 'stageFloor',
 STAGE_PLATFORM_HSLA = 'stagePlatform',
 
+HILL_HSLA = 'hill',
 GROUND_HSLA = 'ground',
+
 STREET_HSLA = 'street',
 CROSSWALK_HSLA = 'crosswalk',
 PAVEMENT_HSLA = 'pavement',
@@ -19,12 +21,15 @@ WALL_HSLA = 'wall',
 
 PLATFORM_HSLA = 'platform',
 FURNITURE_HSLA = 'furniture',
+UPHOLSTERY_HSLA = 'upholstery',
 SEAT_HSLA = 'seat',
 
+// TODO: Make single object.
 HSLA_KEYS = [
     DEFAULT_HSLA,
     STAGE_FLOOR_HSLA,
     STAGE_PLATFORM_HSLA,
+    HILL_HSLA,
     GROUND_HSLA,
     STREET_HSLA,
     CROSSWALK_HSLA,
@@ -36,6 +41,7 @@ HSLA_KEYS = [
     WALL_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA,
+    UPHOLSTERY_HSLA,
     SEAT_HSLA
 ]
 
@@ -45,6 +51,7 @@ export {
     DEFAULT_HSLA,
     STAGE_FLOOR_HSLA,
     STAGE_PLATFORM_HSLA,
+    HILL_HSLA,
     GROUND_HSLA,
     STREET_HSLA,
     CROSSWALK_HSLA,
@@ -56,5 +63,6 @@ export {
     WALL_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA,
+    UPHOLSTERY_HSLA,
     SEAT_HSLA
 }

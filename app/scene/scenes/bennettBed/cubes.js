@@ -6,7 +6,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
-    SEAT_HSLA
+    UPHOLSTERY_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -26,7 +26,7 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
-    S = SEAT_HSLA,
+    U = UPHOLSTERY_HSLA,
 
     BENNETT_BED_CUBES = {
         ceiling: {
@@ -48,9 +48,9 @@ const
                 [W],
                 [V, V, V, V, V, V, V, V, V, V, V, W],
                 [W, W, F, F, F, W],
-                [W, F, F, F, F, S, S, S, S, S, S, W],
-                [W, F, F, F, F, S, S, S, S, S, S, W],
-                [W, F, F, F, F, S, S, S, S, S, S, W]
+                [W, F, F, F, F, U, U, U, U, U, U, W],
+                [W, F, F, F, F, U, U, U, U, U, U, W],
+                [W, F, F, F, F, U, U, U, U, U, U, W]
             ],
             zIndices: [
                 [g],

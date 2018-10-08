@@ -1,7 +1,10 @@
 import { VAN_NUYS_HALLWAY_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -10,13 +13,19 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    S = SEAT_HSLA,
 
     VAN_NUYS_HALLWAY_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C],
+                [C],
+                [C],
+                [C, C, W, W, W, C],
+                [C]
             ],
             zIndices: [
                 [g],
@@ -28,7 +37,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [W, F, F, F, F, F, F, F, F, F, F, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W],
+                [W, W, F, F, F, W, W, W, W, W, W, W],
+                [W, F, F, F, F, F, S, S, S, F, F, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [g],

@@ -9,7 +9,7 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     FURNITURE_HSLA,
-    SEAT_HSLA
+    UPHOLSTERY_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -24,13 +24,13 @@ const
     F = FLOOR_HSLA,
     W = WALL_HSLA,
     R = FURNITURE_HSLA,
-    S = SEAT_HSLA,
+    U = UPHOLSTERY_HSLA,
 
     LIZ_BED_CUBES = {
         ceiling: {
             hslaColours: [
                 [W],
-                [W, W, R, S, S, S, S, S, W],
+                [W, W, R, U, U, U, U, U, W],
                 [W]
             ],
             zIndices: [
@@ -42,10 +42,10 @@ const
         floor: {
             hslaColours: [
                 [W, F, F, F, F, F, F, F, F, F, F, W],
-                [W, F, F, S, S, S, S, S, F, F, F, W],
-                [W, F, F, S, S, S, S, S, F, F, F, W],
-                [W, F, F, S, S, S, S, S, F, F, F, W],
-                [W, F, R, S, S, S, S, S, F, F, F, W],
+                [W, F, F, U, U, U, U, U, F, F, F, W],
+                [W, F, F, U, U, U, U, U, F, F, F, W],
+                [W, F, F, U, U, U, U, U, F, F, F, W],
+                [W, F, R, U, U, U, U, U, F, F, F, W],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
@@ -61,8 +61,8 @@ const
     LIZ_BED_OPEN_CUBES = {
         ceiling: {
             hslaColours: [
-                [D, W, W, W, W, W, W, W, W, W, W, D],
-                [D, D, R, S, S, S, S, S, D],
+                [D, F, F, F, F, F, F, F, F, F, F, D],
+                [D, D, R, U, U, U, U, U, D],
                 [D]
             ],
             zIndices: [
@@ -74,10 +74,10 @@ const
         floor: {
             hslaColours: [
                 [G],
-                [G, F, F, S, S, S, S, S, F, F, F, G],
-                [G, F, F, S, S, S, S, S, F, F, F, G],
-                [G, F, F, S, S, S, S, S, F, F, F, G],
-                [G, F, R, S, S, S, S, S, F, F, F, G],
+                [G, F, F, U, U, U, U, U, F, F, F, G],
+                [G, F, F, U, U, U, U, U, F, F, F, G],
+                [G, F, F, U, U, U, U, U, F, F, F, G],
+                [G, F, R, U, U, U, U, U, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G]
             ],
             zIndices: [

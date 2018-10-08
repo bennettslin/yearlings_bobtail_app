@@ -1,7 +1,11 @@
 import { DISHROOM_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA,
+    FURNITURE_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -11,13 +15,17 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
+    R = FURNITURE_HSLA,
 
     DISHROOM_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C, C, W, W, W, W, W, C],
+                [C]
             ],
             zIndices: [
                 [g, g, f, f, f, f, f, g],
@@ -26,7 +34,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W, W, W, W, W, W, W, W, W, P, P, W],
+                [W, F, R, R, R, R, R, F, W, P, P, W],
+                [W, F, R, R, R, R, R, F, W, P, P, W],
+                [W, F, F, F, F, F, F, F, W, P, P, W],
+                [W, F, F, F, F, F, F, F, W, P, P, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [g, g, b, b, b, b, b, g, g, 5, 5, g],

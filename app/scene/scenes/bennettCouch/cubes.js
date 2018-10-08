@@ -9,7 +9,7 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     FURNITURE_HSLA,
-    SEAT_HSLA
+    UPHOLSTERY_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -22,7 +22,7 @@ const
     F = FLOOR_HSLA,
     W = WALL_HSLA,
     R = FURNITURE_HSLA,
-    S = SEAT_HSLA,
+    U = UPHOLSTERY_HSLA,
 
     BENNETT_COUCH_CUBES = {
         ceiling: {
@@ -36,9 +36,9 @@ const
         floor: {
             hslaColours: [
                 [W],
-                [W, F, F, S, S, S, S, S, F, F, F, W],
-                [W, F, R, S, S, S, S, S, F, F, F, W],
-                [W, F, F, S, S, S, S, S, F, F, F, W],
+                [W, F, F, U, U, U, U, U, F, F, F, W],
+                [W, F, R, U, U, U, U, U, F, F, F, W],
+                [W, F, F, U, U, U, U, U, F, F, F, W],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
@@ -54,9 +54,9 @@ const
         floor: {
             hslaColours: [
                 [G],
-                [G, F, F, S, S, S, S, S, F, F, F, G],
-                [G, F, R, S, S, S, S, S, F, F, F, G],
-                [G, F, F, S, S, S, S, S, F, F, F, G],
+                [G, F, F, U, U, U, U, U, F, F, F, G],
+                [G, F, R, U, U, U, U, U, F, F, F, G],
+                [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G],
                 [G]
             ],
@@ -64,7 +64,7 @@ const
                 [0],
                 [0, 1, 1, 7, 7, 7, 7, 7, 1, 1, 1, 0],
                 [0, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 0],
-                [0, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 0],
+                [0, 1, 1, 3, 3, 3, 3, 3, 1, 1, 1, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
             ]

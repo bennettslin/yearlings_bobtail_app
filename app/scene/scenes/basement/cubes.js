@@ -5,7 +5,14 @@ import {
 } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    GROUND_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA,
+    UPHOLSTERY_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -14,24 +21,40 @@ import {
     k
 } from 'scene/cubesConstants'
 
+/* eslint-disable */
 const
-    // Default.
     D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
+    U = UPHOLSTERY_HSLA,
+    S = SEAT_HSLA,
+
+    DEFAULT_CEILING = {
+        hslaColours: [
+            [D],
+            [C, W, W, C],
+            [C]
+        ],
+        zIndices: [
+            [k],
+            [f, c, c, f],
+            [f]
+        ]
+    },
 
     BASEMENT_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: [
-                [k],
-                [f, c, c, f],
-                [f]
-            ]
-        },
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [W, G, G, W],
+                [W, P, P, P, P, P, P, P, P, P, P, W],
+                [W, P, P, F, F, S, F, F, S, F, F, W],
+                [W, P, P, F, S, F, F, F, F, F, F, W],
+                [W, P, P, F, F, F, F, F, F, S, F, W]
             ],
             zIndices: [
                 [4],
@@ -44,19 +67,15 @@ const
         }
     },
     BASEMENT_BED_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: [
-                [k],
-                [f, c, c, f],
-                [f]
-            ]
-        },
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [W, G, G, W],
+                [W, P, P, P, P, P, P, P, P, P, P, W],
+                [W, P, P, F, F, U, U, U, U, U, U, W],
+                [W, P, P, F, F, U, U, U, U, U, U, W],
+                [W, P, P, F, F, U, U, U, U, U, U, W]
             ],
             zIndices: [
                 [4],
@@ -69,17 +88,14 @@ const
         }
     },
     BASEMENT_MAGIC_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: [
-                [k]
-            ]
-        },
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [G],
+                [G, P, P, P, P, P, P, P, P, P, P, G],
+                [G, P, P, F, F, U, U, U, U, U, U, G],
+                [G, P, P, F, F, U, U, U, U, U, U, G],
+                [G, P, P, F, F, U, U, U, U, U, U, G]
             ],
             zIndices: [
                 [0],

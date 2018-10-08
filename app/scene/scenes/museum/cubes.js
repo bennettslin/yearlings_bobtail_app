@@ -1,7 +1,10 @@
 import { MUSEUM_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    FURNITURE_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -10,13 +13,20 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    R = FURNITURE_HSLA,
 
     MUSEUM_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C],
+                [C],
+                [W, C],
+                [W, C],
+                [W, C],
+                [C]
             ],
             zIndices: [
                 [g],
@@ -29,7 +39,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [W, F, F, F, F, F, F, F, F, F, F, W],
+                [F, F, F, F, F, F, F, F, F, F, F, W],
+                [F, F, F, F, F, F, F, F, R, R, F, W],
+                [F, F, F, F, F, F, F, F, R, R, F, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [g],

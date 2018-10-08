@@ -2,6 +2,7 @@ import {
     DEFAULT_HSLA,
     STAGE_PLATFORM_HSLA,
     STAGE_FLOOR_HSLA,
+    HILL_HSLA,
     GROUND_HSLA,
     STREET_HSLA,
     CROSSWALK_HSLA,
@@ -13,25 +14,40 @@ import {
     WALL_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA,
+    UPHOLSTERY_HSLA,
     SEAT_HSLA
 } from './hslaKeys'
 
 const
-    // D.
+    /**
+     * D.
+     */
     DEFAULT = {
         h: 0,
         s: 0,
         l: 100
     },
 
-    // P.
+    /**
+     * P.
+     */
     STAGE_PLATFORM = {
         h: 3,
         s: 13,
         l: 34
     },
 
-    // G.
+    /**
+     * H.
+     */
+    HILL = {
+        h: 120,
+        s: 50,
+        l: 50
+    },
+    /**
+     * G.
+     */
     GROUND = {
         h: 0,
         s: 0,
@@ -56,26 +72,34 @@ const
         l: 100
     },
 
-    // V.
+    /**
+     * V.
+     */
     PAVEMENT = {
         h: 0,
         s: 0,
         l: 75
     },
-    // L.
+    /**
+     * L.
+     */
     LAWN = {
         h: 120,
         s: 80,
         l: 75
     },
-    // A.
+    /**
+     * A.
+     */
     GATE = {
         h: 250,
         s: 50,
         l: 75
     },
 
-    // C.
+    /**
+     * C.
+     */
     CEILING = {
         h: 60,
         s: 50,
@@ -96,26 +120,42 @@ const
         l: 20
     },
 
-    // W.
+    /**
+     * W.
+     */
     WALL = {
         h: 300,
         s: 50,
         l: 75
     },
 
-    // P.
+    /**
+     * P.
+     */
     PLATFORM = {
         h: 30,
         s: 50,
         l: 25
     },
-    // R.
+    /**
+     * R.
+     */
     FURNITURE = {
-        h: 30,
+        h: 330,
         s: 50,
-        l: 50
+        l: 75
     },
-    // S.
+    /**
+     * U.
+     */
+    UPHOLSTERY = {
+        h: 90,
+        s: 50,
+        l: 75
+    },
+    /**
+     * S.
+     */
     SEAT = {
         h: 30,
         s: 50,
@@ -128,7 +168,9 @@ const
         [STAGE_PLATFORM_HSLA]: STAGE_PLATFORM,
         [STAGE_FLOOR_HSLA]: STAGE_FLOOR,
 
+        [HILL_HSLA]: HILL,
         [GROUND_HSLA]: GROUND,
+
         [STREET_HSLA]: STREET,
         [CROSSWALK_HSLA]: CROSSWALK,
         [PAVEMENT_HSLA]: PAVEMENT,
@@ -141,6 +183,7 @@ const
 
         [PLATFORM_HSLA]: PLATFORM,
         [FURNITURE_HSLA]: FURNITURE,
+        [UPHOLSTERY_HSLA]: UPHOLSTERY,
         [SEAT_HSLA]: SEAT
     }
 

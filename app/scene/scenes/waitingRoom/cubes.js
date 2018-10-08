@@ -5,7 +5,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
-    SEAT_HSLA
+    UPHOLSTERY_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -18,7 +18,7 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
-    S = SEAT_HSLA,
+    U = UPHOLSTERY_HSLA,
 
     WAITING_ROOM_CUBES = {
         ceiling: {
@@ -43,9 +43,9 @@ const
             hslaColours: [
                 [G],
                 [W, W, W, W, W, W, W, W, W, W, W, W],
-                [W, F, S, S, F, S, S, F, F, F, F, W],
-                [W, F, S, S, F, S, S, F, F, F, F, F],
-                [W, F, S, S, F, S, S, F, F, F, F, F],
+                [W, F, U, U, F, U, U, F, F, F, F, W],
+                [W, F, U, U, F, U, U, F, F, F, F, F],
+                [W, F, U, U, F, U, U, F, F, F, F, F],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
