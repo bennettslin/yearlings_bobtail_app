@@ -1,5 +1,4 @@
 import {
-    RESIDENTIAL_CENTRE,
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
     RESIDENTIAL_NEAR_LEFT,
@@ -9,14 +8,6 @@ import {
 } from 'scene/flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [RESIDENTIAL_CENTRE]: {
-        yIndex: 0,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 6,
-            zHeight: 3
-        }
-    },
     [RESIDENTIAL_FAR_LEFT]: {
         yIndex: 1,
         arrangement: {

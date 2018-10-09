@@ -203,6 +203,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'residentialHouses',
+        workedHours: 4,
+        neededHours: 6
+    },
+    {
         taskName: 'commercialStores',
         workedHours: 3,
         neededHours: 5

@@ -64,8 +64,7 @@ const
     OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft',
     OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight',
 
-    // TODO
-    RESIDENTIAL_CENTRE = 'residentialCentre',
+    // Houses on two pages.
     RESIDENTIAL_FAR_LEFT = 'residentialFarLeft',
     RESIDENTIAL_MIDDLE_LEFT = 'residentialMiddleLeft',
     RESIDENTIAL_NEAR_LEFT = 'residentialNearLeft',
@@ -73,7 +72,7 @@ const
     RESIDENTIAL_MIDDLE_RIGHT = 'residentialMiddleRight',
     RESIDENTIAL_NEAR_RIGHT = 'residentialNearRight',
 
-    // TODO
+    // Stores on two pages.
     COMMERCIAL_CENTRE = 'commercialCentre',
     COMMERCIAL_FAR_LEFT = 'commercialFarLeft',
     COMMERCIAL_MIDDLE_LEFT = 'commercialMiddleLeft',
@@ -125,7 +124,6 @@ export {
     CROWD_SIDE_FAR,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
-    RESIDENTIAL_CENTRE,
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
     RESIDENTIAL_NEAR_LEFT,

@@ -27,7 +27,6 @@ import CrowdSideNear from './Flats/CrowdSideNear'
 import CrowdSideFar from './Flats/CrowdSideFar'
 import OaklandHouseLeft from './Flats/OaklandHouseLeft'
 import OaklandHouseRight from './Flats/OaklandHouseRight'
-import ResidentialCentre from './Flats/ResidentialCentre'
 import ResidentialFarLeft from './Flats/ResidentialFarLeft'
 import ResidentialMiddleLeft from './Flats/ResidentialMiddleLeft'
 import ResidentialNearLeft from './Flats/ResidentialNearLeft'
@@ -79,7 +78,6 @@ import {
     CROWD_SIDE_FAR,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
-    RESIDENTIAL_CENTRE,
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
     RESIDENTIAL_NEAR_LEFT,
@@ -132,7 +130,6 @@ const FLATS_MAP = {
     [CROWD_SIDE_FAR]: CrowdSideFar,
     [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
-    [RESIDENTIAL_CENTRE]: ResidentialCentre,
     [RESIDENTIAL_FAR_LEFT]: ResidentialFarLeft,
     [RESIDENTIAL_FAR_RIGHT]: ResidentialFarRight,
     [RESIDENTIAL_MIDDLE_LEFT]: ResidentialMiddleLeft,

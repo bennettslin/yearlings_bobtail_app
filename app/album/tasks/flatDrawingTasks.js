@@ -25,11 +25,6 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: 'residentialHouses',
-        workedHours: 2,
-        neededHours: 6
-    },
-    {
         taskName: 'publicBuildings',
         workedHours: 0,
         neededHours: 6
