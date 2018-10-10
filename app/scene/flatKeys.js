@@ -81,7 +81,7 @@ const
     COMMERCIAL_MIDDLE_RIGHT = 'commercialMiddleRight',
     COMMERCIAL_NEAR_RIGHT = 'commercialNearRight',
 
-    // TODO
+    // Own page.
     PUBLIC_FAR_LEFT = 'publicFarLeft',
     PUBLIC_NEAR_LEFT = 'publicNearLeft',
     PUBLIC_FAR_RIGHT = 'publicFarRight',

@@ -213,6 +213,11 @@ module.exports = [
         neededHours: 5
     },
     {
+        taskName: 'publicBuildings',
+        workedHours: 1,
+        neededHours: 3
+    },
+    {
         taskName: `Howie's station wagon exterior (Constellations)`,
         workedHours: 2,
         neededHours: 3
