@@ -10,6 +10,8 @@ import CaveShadows from './Flats/CaveShadows'
 import TaiwanMountainsBridged from './Flats/TaiwanMountainsBridged'
 import TaiwanMountainsNear from './Flats/TaiwanMountainsNear'
 import TaiwanClouds from './Flats/TaiwanClouds'
+import TaiwanHouseFar from './Flats/TaiwanHouseFar'
+import TaiwanHouseNear from './Flats/TaiwanHouseNear'
 import VanNuysSchoolhouse from './Flats/VanNuysSchoolhouse'
 import ShoreBack from './Flats/ShoreBack'
 import OceanDepthsBack from './Flats/OceanDepthsBack'
@@ -61,6 +63,8 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
+    TAIWAN_HOUSE_FAR,
+    TAIWAN_HOUSE_NEAR,
     VAN_NUYS_SCHOOLHOUSE,
     SHORE_BACK,
     OCEAN_DEPTHS_BACK,
@@ -113,6 +117,8 @@ const FLATS_MAP = {
     [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
     [TAIWAN_MOUNTAINS_NEAR]: TaiwanMountainsNear,
     [TAIWAN_CLOUDS]: TaiwanClouds,
+    [TAIWAN_HOUSE_FAR]: TaiwanHouseFar,
+    [TAIWAN_HOUSE_NEAR]: TaiwanHouseNear,
     [VAN_NUYS_SCHOOLHOUSE]: VanNuysSchoolhouse,
     [SHORE_BACK]: ShoreBack,
     [OCEAN_DEPTHS_BACK]: OceanDepthsBack,

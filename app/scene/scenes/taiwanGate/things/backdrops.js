@@ -6,8 +6,8 @@ const ARRANGEMENTS_MAP = {
     [TAIWAN_STREETS_BACKDROP]: {
         yIndex: 0,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 12,
+            xFloat: 7,
+            xWidth: 9,
             zHeight: 4
         }
     }

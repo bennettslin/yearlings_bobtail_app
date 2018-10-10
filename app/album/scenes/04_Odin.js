@@ -78,6 +78,8 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
+    TAIWAN_HOUSE_FAR,
+    TAIWAN_HOUSE_NEAR,
     SHORE_BACK,
     OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR
@@ -172,6 +174,10 @@ module.exports = [
             },
             [DOORS]: {
                 [IRON_GATE]: true
+            },
+            [FLATS]: {
+                [TAIWAN_HOUSE_FAR]: true,
+                [TAIWAN_HOUSE_NEAR]: true
             }
         },
         cubes: TAIWAN_GATE_KEY,

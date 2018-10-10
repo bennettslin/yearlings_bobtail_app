@@ -17,6 +17,10 @@ const
     TAIWAN_MOUNTAINS_NEAR = 'taiwanMountainsNear',
     TAIWAN_CLOUDS = 'taiwanClouds',
 
+    // TODO
+    TAIWAN_HOUSE_FAR = 'taiwanHouseFar',
+    TAIWAN_HOUSE_NEAR = 'taiwanHouseNear',
+
     // Own page.
     VAN_NUYS_SCHOOLHOUSE = 'vanNuysSchoolhouse',
 
@@ -107,6 +111,8 @@ export {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
+    TAIWAN_HOUSE_FAR,
+    TAIWAN_HOUSE_NEAR,
     VAN_NUYS_SCHOOLHOUSE,
     SHORE_BACK,
     OCEAN_DEPTHS_BACK,
