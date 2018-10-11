@@ -64,9 +64,11 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    TAIWAN_MOUNTAINS_BRIDGED,
-    TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
+    TAIWAN_FOG,
+    TAIWAN_MOUNTAINS_BRIDGED,
+    TAIWAN_MOUNTAIN_LEFT,
+    TAIWAN_MOUNTAIN_RIGHT,
     VAN_NUYS_SCHOOLHOUSE
 } from 'scene/flatKeys'
 
@@ -104,9 +106,11 @@ module.exports = [
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
             [FLATS]: {
+                [TAIWAN_CLOUDS]: true,
+                [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
-                [TAIWAN_MOUNTAINS_NEAR]: true,
-                [TAIWAN_CLOUDS]: true
+                [TAIWAN_MOUNTAIN_LEFT]: true,
+                [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PUPPETS]: {
                 [PUPPET_BENNETT_BEGIN]: true,
@@ -132,9 +136,11 @@ module.exports = [
                 [TOGETHER_SKETCHBOOK]: true
             },
             [FLATS]: {
+                [TAIWAN_CLOUDS]: true,
+                [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
-                [TAIWAN_MOUNTAINS_NEAR]: true,
-                [TAIWAN_CLOUDS]: true
+                [TAIWAN_MOUNTAIN_LEFT]: true,
+                [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PUPPETS]: {
                 [PUPPET_BENNETT_MIDDLE]: true,
@@ -255,9 +261,11 @@ module.exports = [
                 [APART_SKETCHBOOK]: true
             },
             [FLATS]: {
+                [TAIWAN_CLOUDS]: true,
+                [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
-                [TAIWAN_MOUNTAINS_NEAR]: true,
-                [TAIWAN_CLOUDS]: true
+                [TAIWAN_MOUNTAIN_LEFT]: true,
+                [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PUPPETS]: {
                 [PUPPET_BENNETT_END]: true,

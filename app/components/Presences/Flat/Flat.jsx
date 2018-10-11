@@ -7,9 +7,11 @@ import NohoHouseRight from './Flats/NohoHouseRight'
 import NohoSchoolhouse from './Flats/NohoSchoolhouse'
 import FamilyHouse from './Flats/FamilyHouse'
 import CaveShadows from './Flats/CaveShadows'
-import TaiwanMountainsBridged from './Flats/TaiwanMountainsBridged'
-import TaiwanMountainsNear from './Flats/TaiwanMountainsNear'
 import TaiwanClouds from './Flats/TaiwanClouds'
+import TaiwanFog from './Flats/TaiwanFog'
+import TaiwanMountainsBridged from './Flats/TaiwanMountainsBridged'
+import TaiwanMountainLeft from './Flats/TaiwanMountainLeft'
+import TaiwanMountainRight from './Flats/TaiwanMountainRight'
 import TaiwanHouseFar from './Flats/TaiwanHouseFar'
 import TaiwanHouseNear from './Flats/TaiwanHouseNear'
 import VanNuysSchoolhouse from './Flats/VanNuysSchoolhouse'
@@ -60,9 +62,11 @@ import {
     NOHO_SCHOOLHOUSE,
     FAMILY_HOUSE,
     CAVE_SHADOWS,
-    TAIWAN_MOUNTAINS_BRIDGED,
-    TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
+    TAIWAN_FOG,
+    TAIWAN_MOUNTAINS_BRIDGED,
+    TAIWAN_MOUNTAIN_LEFT,
+    TAIWAN_MOUNTAIN_RIGHT,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
     VAN_NUYS_SCHOOLHOUSE,
@@ -114,9 +118,11 @@ const FLATS_MAP = {
     [NOHO_SCHOOLHOUSE]: NohoSchoolhouse,
     [FAMILY_HOUSE]: FamilyHouse,
     [CAVE_SHADOWS]: CaveShadows,
-    [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
-    [TAIWAN_MOUNTAINS_NEAR]: TaiwanMountainsNear,
     [TAIWAN_CLOUDS]: TaiwanClouds,
+    [TAIWAN_FOG]: TaiwanFog,
+    [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
+    [TAIWAN_MOUNTAIN_LEFT]: TaiwanMountainLeft,
+    [TAIWAN_MOUNTAIN_RIGHT]: TaiwanMountainRight,
     [TAIWAN_HOUSE_FAR]: TaiwanHouseFar,
     [TAIWAN_HOUSE_NEAR]: TaiwanHouseNear,
     [VAN_NUYS_SCHOOLHOUSE]: VanNuysSchoolhouse,

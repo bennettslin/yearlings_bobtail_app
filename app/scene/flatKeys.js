@@ -13,9 +13,11 @@ const
     CAVE_SHADOWS = 'caveShadows',
 
     // TODO
-    TAIWAN_MOUNTAINS_BRIDGED = 'taiwanMountainsBridged',
-    TAIWAN_MOUNTAINS_NEAR = 'taiwanMountainsNear',
     TAIWAN_CLOUDS = 'taiwanClouds',
+    TAIWAN_FOG = 'taiwanFog',
+    TAIWAN_MOUNTAINS_BRIDGED = 'taiwanMountainsBridged',
+    TAIWAN_MOUNTAIN_LEFT = 'taiwanMountainLeft',
+    TAIWAN_MOUNTAIN_RIGHT = 'taiwanMountainRight',
 
     // TODO
     TAIWAN_HOUSE_FAR = 'taiwanHouseFar',
@@ -108,9 +110,11 @@ export {
     NOHO_SCHOOLHOUSE,
     FAMILY_HOUSE,
     CAVE_SHADOWS,
-    TAIWAN_MOUNTAINS_BRIDGED,
-    TAIWAN_MOUNTAINS_NEAR,
     TAIWAN_CLOUDS,
+    TAIWAN_FOG,
+    TAIWAN_MOUNTAINS_BRIDGED,
+    TAIWAN_MOUNTAIN_LEFT,
+    TAIWAN_MOUNTAIN_RIGHT,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
     VAN_NUYS_SCHOOLHOUSE,

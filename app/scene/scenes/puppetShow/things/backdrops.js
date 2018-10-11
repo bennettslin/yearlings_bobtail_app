@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_MOUNTAINS_BACKDROP]: {
-        yIndex: 1,
+        yIndex: 0,
         arrangement: {
             xFloat: 5.5,
-            xWidth: 10,
-            zHeight: 4
+            xWidth: 12,
+            zHeight: 8
         }
     }
 }
