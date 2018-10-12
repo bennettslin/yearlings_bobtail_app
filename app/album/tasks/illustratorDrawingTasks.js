@@ -103,6 +103,16 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'taiwanStreetsBackdrop',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'taiwanHouses',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
         taskName: `Barbecue grill (Odin)`,
         workedHours: 1,
         neededHours: 2

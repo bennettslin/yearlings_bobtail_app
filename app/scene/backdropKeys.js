@@ -24,7 +24,7 @@ const
     // TODO
     VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
 
-    // TODO
+    // With taiwanHouses flats.
     TAIWAN_STREETS_BACKDROP = 'taiwanStreetsBackdrop',
 
     // TODO

@@ -19,7 +19,7 @@ const
     TAIWAN_MOUNTAIN_LEFT = 'taiwanMountainLeft',
     TAIWAN_MOUNTAIN_RIGHT = 'taiwanMountainRight',
 
-    // TODO
+    // With taiwanStreets backdrop.
     TAIWAN_HOUSE_FAR = 'taiwanHouseFar',
     TAIWAN_HOUSE_NEAR = 'taiwanHouseNear',
 
