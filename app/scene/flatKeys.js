@@ -12,7 +12,7 @@ const
     // Own page.
     CAVE_SHADOWS = 'caveShadows',
 
-    // TODO
+    // Together on three pages.
     TAIWAN_CLOUDS = 'taiwanClouds',
     TAIWAN_FOG = 'taiwanFog',
     TAIWAN_MOUNTAINS_BRIDGED = 'taiwanMountainsBridged',

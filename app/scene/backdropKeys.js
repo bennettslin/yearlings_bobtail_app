@@ -15,7 +15,7 @@ const
     BEDROOM_SIREN_BACKDROP = 'bedroomSirenBackdrop',
     BEDROOM_BUS_BACKDROP = 'bedroomBusBackdrop',
 
-    // TODO
+    // Own page.
     TAIWAN_MOUNTAINS_BACKDROP = 'taiwanMountainsBackdrop',
 
     // TODO
