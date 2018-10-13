@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: 'taiwanClouds',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: 'shoreBack',
         workedHours: 0,
         neededHours: 4

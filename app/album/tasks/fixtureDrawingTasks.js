@@ -28,11 +28,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `lizPhone`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `lizPhoneReflection`,
         workedHours: 0,
         neededHours: 2
