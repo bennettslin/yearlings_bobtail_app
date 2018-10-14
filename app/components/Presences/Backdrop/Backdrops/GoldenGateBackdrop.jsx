@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const ElCerritoBackdrop = ({
+const GoldenGateBackdrop = ({
 
     className,
 
@@ -18,7 +18,7 @@ const ElCerritoBackdrop = ({
     return (
         <Svg
             className={cx(
-                'ElCerritoBackdrop',
+                'GoldenGateBackdrop',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const ElCerritoBackdrop = ({
                 {...other}
             >
                 {cx(
-                    'ElCerritoBackdrop'
+                    'GoldenGateBackdrop'
                 )}
             </text>
         </Svg>
     )
 }
 
-ElCerritoBackdrop.propTypes = propTypes;
+GoldenGateBackdrop.propTypes = propTypes;
 
-export default ElCerritoBackdrop
+export default GoldenGateBackdrop

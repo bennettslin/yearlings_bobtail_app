@@ -87,9 +87,6 @@ const
     WEDDING_BACKDROP = 'weddingBackdrop',
 
     // TODO
-    CLIFF_BACKDROP = 'cliffBackdrop',
-
-    // TODO
     INVERSE_THOUGHT_BACKDROP = 'inverseThoughtBackdrop'
 
 export {
@@ -124,6 +121,5 @@ export {
     GOLDEN_GATE_BACKDROP,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
-    CLIFF_BACKDROP,
     INVERSE_THOUGHT_BACKDROP
 }

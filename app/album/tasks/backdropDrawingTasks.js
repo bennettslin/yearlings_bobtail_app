@@ -90,11 +90,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: 'cliffBackdrop',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: 'inverseThoughtBackdrop',
         workedHours: 0,
         neededHours: 5

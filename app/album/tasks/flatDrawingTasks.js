@@ -15,7 +15,7 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: 'roads',
+        taskName: 'past, present, and future',
         workedHours: 0,
         neededHours: 4
     },
@@ -25,8 +25,8 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: 'cliffGraves',
+        taskName: 'cliff tree and city',
         workedHours: 0,
-        neededHours: 4
+        neededHours: 5
     }
 ]

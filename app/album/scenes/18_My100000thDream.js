@@ -47,7 +47,7 @@ import {
 import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
-    CLIFF_BACKDROP,
+    GOLDEN_GATE_BACKDROP,
     INVERSE_THOUGHT_BACKDROP
 } from '../../scene/backdropKeys'
 
@@ -226,7 +226,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [CLIFF_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true
             },
             [FLATS]: {
                 [CLIFF_TREE]: true,

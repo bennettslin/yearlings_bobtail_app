@@ -30,10 +30,9 @@ import StationWagonBackdrop from './Backdrops/StationWagonBackdrop'
 import OaklandSideBackdrop from './Backdrops/OaklandSideBackdrop'
 import LizCouchThoughtBackdrop from './Backdrops/LizCouchThoughtBackdrop'
 import OaklandFrontBackdrop from './Backdrops/OaklandFrontBackdrop'
-import ElCerritoBackdrop from './Backdrops/ElCerritoBackdrop'
+import GoldenGateBackdrop from './Backdrops/GoldenGateBackdrop'
 import PampasBackdrop from './Backdrops/PampasBackdrop'
 import WeddingBackdrop from './Backdrops/WeddingBackdrop'
-import CliffBackdrop from './Backdrops/CliffBackdrop'
 import InverseThoughtBackdrop from './Backdrops/InverseThoughtBackdrop'
 
 import {
@@ -68,7 +67,6 @@ import {
     GOLDEN_GATE_BACKDROP,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
-    CLIFF_BACKDROP,
     INVERSE_THOUGHT_BACKDROP
 } from 'scene/backdropKeys'
 
@@ -101,10 +99,9 @@ const BACKDROPS_MAP = {
     [OAKLAND_SIDE_BACKDROP]: OaklandSideBackdrop,
     [LIZ_COUCH_THOUGHT_BACKDROP]: LizCouchThoughtBackdrop,
     [OAKLAND_FRONT_BACKDROP]: OaklandFrontBackdrop,
-    [GOLDEN_GATE_BACKDROP]: ElCerritoBackdrop,
+    [GOLDEN_GATE_BACKDROP]: GoldenGateBackdrop,
     [PAMPAS_BACKDROP]: PampasBackdrop,
     [WEDDING_BACKDROP]: WeddingBackdrop,
-    [CLIFF_BACKDROP]: CliffBackdrop,
     [INVERSE_THOUGHT_BACKDROP]: InverseThoughtBackdrop
 },
 DEFAULT_COMPONENT = () => (null)
