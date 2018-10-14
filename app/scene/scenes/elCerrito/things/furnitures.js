@@ -6,27 +6,27 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [REATTA_SEAT]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 2,
             xWidth: 2,
-            zHeight: 5.5
+            zHeight: 2
         }
     },
     [REATTA_SEAT_LOWERED]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 2,
             xWidth: 2,
-            zHeight: 5.5
+            zHeight: 2
         }
     },
     [REATTA_DASHBOARD]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 3.5,
             xWidth: 2,
-            zHeight: 5.5
+            zHeight: 2
         }
     }
 }

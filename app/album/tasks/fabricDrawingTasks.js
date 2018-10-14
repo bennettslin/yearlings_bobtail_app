@@ -18,6 +18,11 @@ module.exports = [
         neededHours: 1
     },
     {
+        taskName: `Bloody towel and condom`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Sita's blanket and pillows (Grasshoppers, Look Back)`,
         workedHours: 0,
         neededHours: 2

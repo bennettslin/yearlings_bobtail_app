@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const ElCerritoRoad = ({
+const ElCerritoNear = ({
 
     className,
 
@@ -18,7 +18,7 @@ const ElCerritoRoad = ({
     return (
         <Svg
             className={cx(
-                'ElCerritoRoad',
+                'ElCerritoNear',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const ElCerritoRoad = ({
                 {...other}
             >
                 {cx(
-                    'ElCerritoRoad'
+                    'ElCerritoNear'
                 )}
             </text>
         </Svg>
     )
 }
 
-ElCerritoRoad.propTypes = propTypes;
+ElCerritoNear.propTypes = propTypes;
 
-export default ElCerritoRoad
+export default ElCerritoNear

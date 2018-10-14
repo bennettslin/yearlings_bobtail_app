@@ -51,7 +51,9 @@ import PublicNearRight from './Flats/PublicNearRight'
 import RoadPast from './Flats/RoadPast'
 import RoadPresent from './Flats/RoadPresent'
 import RoadFuture from './Flats/RoadFuture'
-import ElCerritoRoad from './Flats/ElCerritoRoad'
+import ElCerritoTree from './Flats/ElCerritoTree'
+import ElCerritoFar from './Flats/ElCerritoFar'
+import ElCerritoNear from './Flats/ElCerritoNear'
 import CrowdBackNear from './Flats/CrowdBackNear'
 import CrowdBackFar from './Flats/CrowdBackFar'
 import CliffGravesBackdrop from './Flats/CliffGravesBackdrop'
@@ -106,7 +108,9 @@ import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
-    EL_CERRITO_ROAD,
+    EL_CERRITO_TREE,
+    EL_CERRITO_FAR,
+    EL_CERRITO_NEAR,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR,
     CLIFF_GRAVES
@@ -162,7 +166,9 @@ const FLATS_MAP = {
     [ROAD_PAST]: RoadPast,
     [ROAD_PRESENT]: RoadPresent,
     [ROAD_FUTURE]: RoadFuture,
-    [EL_CERRITO_ROAD]: ElCerritoRoad,
+    [EL_CERRITO_TREE]: ElCerritoTree,
+    [EL_CERRITO_FAR]: ElCerritoFar,
+    [EL_CERRITO_NEAR]: ElCerritoNear,
     [CROWD_BACK_NEAR]: CrowdBackNear,
     [CROWD_BACK_FAR]: CrowdBackFar,
     [CLIFF_GRAVES]: CliffGravesBackdrop

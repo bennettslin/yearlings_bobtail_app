@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [PUPPET_REATTA]: {
-        yIndex: 1,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 10,
+            xWidth: 1,
+            zHeight: 0.5
         }
     }
 }

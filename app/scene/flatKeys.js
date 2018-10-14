@@ -99,7 +99,9 @@ const
     ROAD_FUTURE = 'roadFuture',
 
     // TODO
-    EL_CERRITO_ROAD = 'elCerritoRoad',
+    EL_CERRITO_TREE = 'elCerritoTree',
+    EL_CERRITO_FAR = 'elCerritoFar',
+    EL_CERRITO_NEAR = 'elCerritoNear',
 
     // TODO
     CLIFF_GRAVES = 'cliffGraves'
@@ -154,7 +156,9 @@ export {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
-    EL_CERRITO_ROAD,
+    EL_CERRITO_TREE,
+    EL_CERRITO_FAR,
+    EL_CERRITO_NEAR,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR,
     CLIFF_GRAVES

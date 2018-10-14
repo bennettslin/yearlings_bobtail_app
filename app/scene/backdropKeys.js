@@ -78,7 +78,7 @@ const
     OAKLAND_FRONT_BACKDROP = 'oaklandFrontBackdrop',
 
     // TODO
-    EL_CERRITO_BACKDROP = 'elCerritoBackdrop',
+    GOLDEN_GATE_BACKDROP = 'goldenGateBackdrop',
 
     // TODO
     PAMPAS_BACKDROP = 'pampasBackdrop',
@@ -121,7 +121,7 @@ export {
     OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP,
-    EL_CERRITO_BACKDROP,
+    GOLDEN_GATE_BACKDROP,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     CLIFF_BACKDROP,

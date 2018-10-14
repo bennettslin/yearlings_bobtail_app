@@ -10,7 +10,7 @@
 ## Annotation review
 * Try to do ten a day. Assume that I'll do three total passes.
 * First pass:
-    * Grammary, flow, meaning.
+    * Grammar, flow, meaning.
     * Be mindful of eventually setting dotKey rules.
 * TODO: Have way to track total count for each day.
 

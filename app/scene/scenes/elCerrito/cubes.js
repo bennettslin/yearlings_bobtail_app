@@ -3,64 +3,78 @@ import {
     EL_CERRITO_CAR_KEY
 } from 'scene/cubesKeys'
 
+/* eslint-disable */
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    HILL_HSLA,
+    STREET_HSLA,
+    CROSSWALK_HSLA,
+    PLATFORM_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
-
 import {
-    g,
     RIGHT
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    H = HILL_HSLA,
+    T = STREET_HSLA,
+    P = PLATFORM_HSLA,
+    S = SEAT_HSLA,
 
     EL_CERRITO_CUBES = {
         slantDirection: RIGHT,
         /**
-         * -----------.--
-         * ---------@...-
-         * -------@@@@..-
-         * -----@@@@@@...
-         * ---######@@@..
-         * -@@#xxxxx@@@.-
-         * @@@#xxxxx@@---
-         * -@@#xxxxx-----
-         * -@@@@@@-------
-         * --@@@---------
-         * --@-----------
+         * ...........-..
+         * .........----.
+         * .......------.
+         * .....--**=====
+         * ...--*****----
+         * .--*******---.
+         * -*@#@@@***-...
+         * .*@#@@@**.....
+         * .******.......
+         * ..***.........
+         * ..*...........
          */
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [H, H, H, H, H, H, H, H, G],
+                [H, H, H, H, H, H, H, H, T, T, G],
+                [H, H, H, H, H, H, H, H, H, G, T, T],
+                [H, H, H, H, H, H, H, H, G, G, G, T],
+                [H, H, H, H, H, H, H, H, G]
             ],
             zIndices: [
-                [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
+                [0],
+                [2, 2, 2, 2, 2, 2, 2, 2, 0],
+                [2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0],
+                [2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 1, 1],
+                [2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1],
+                [2, 2, 2, 2, 2, 2, 2, 2, 0]
             ]
         }
     },
     EL_CERRITO_CAR_CUBES = {
         slantDirection: RIGHT,
-        ceiling: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: [
-                [g, g, g, g, g, g, g, g, g, g, g, g]
-            ]
-        },
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [H, P, H, H, H, H, H, H, G],
+                [H, P, S, P, H, H, H, H, T, T, G],
+                [H, H, S, P, P, P, H, H, H, G, T, T],
+                [H, H, H, P, P, H, H, H, G, G, G, T],
+                [H, H, H, H, H, H, H, H, G]
             ],
             zIndices: [
-                [4, 4, 4, 8, 8, 4, 4, 4, 4, 4, 0],
-                [4, 4, 8, 6, 8, 8, 4, 4, 4, 4, 0],
-                [4, 4, 8, 6, 6, 8, 8, 8, 4, 4, 0],
-                [4, 4, 8, 6, 6, 8, 6, 6, 4, 4, 0],
-                [4, 4, 4, 6, 8, 6, 6, 4, 4, 4, 0],
-                [4, 4, 4, 4, 4, 6, 6, 4, 4, 4, 0]
+                [0],
+                [2, 3, 2, 2, 2, 2, 2, 2, 0],
+                [2, 3, 4, 3, 2, 2, 2, 2, 1, 1, 0],
+                [2, 2, 4, 3, 3, 3, 2, 2, 2, 0, 1, 1],
+                [2, 2, 2, 3, 3, 2, 2, 2, 0, 0, 0, 1],
+                [2, 2, 2, 2, 2, 2, 2, 2, 0]
             ]
         }
     },

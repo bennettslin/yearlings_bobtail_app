@@ -44,7 +44,7 @@ import {
 } from 'scene/instanceKeys/songs'
 
 import {
-    EL_CERRITO_BACKDROP
+    GOLDEN_GATE_BACKDROP
 } from 'scene/backdropKeys'
 
 import {
@@ -56,7 +56,9 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    EL_CERRITO_ROAD
+    EL_CERRITO_TREE,
+    EL_CERRITO_FAR,
+    EL_CERRITO_NEAR
 } from 'scene/flatKeys'
 
 import {
@@ -97,10 +99,12 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [EL_CERRITO_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true
             },
             [FLATS]: {
-                [EL_CERRITO_ROAD]: true
+                [EL_CERRITO_TREE]: true,
+                [EL_CERRITO_FAR]: true,
+                [EL_CERRITO_NEAR]: true
             },
             [FURNITURES]: {
                 [REATTA_SEAT]: true,
@@ -136,10 +140,12 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [EL_CERRITO_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true
             },
             [FLATS]: {
-                [EL_CERRITO_ROAD]: true
+                [EL_CERRITO_TREE]: true,
+                [EL_CERRITO_FAR]: true,
+                [EL_CERRITO_NEAR]: true
             },
             [FURNITURES]: {
                 [REATTA_SEAT]: true,
@@ -175,10 +181,12 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [EL_CERRITO_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true
             },
             [FLATS]: {
-                [EL_CERRITO_ROAD]: true
+                [EL_CERRITO_TREE]: true,
+                [EL_CERRITO_FAR]: true,
+                [EL_CERRITO_NEAR]: true
             },
             [FURNITURES]: {
                 [REATTA_SEAT_LOWERED]: true,
@@ -277,10 +285,12 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [EL_CERRITO_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true
             },
             [FLATS]: {
-                [EL_CERRITO_ROAD]: true
+                [EL_CERRITO_TREE]: true,
+                [EL_CERRITO_FAR]: true,
+                [EL_CERRITO_NEAR]: true
             },
             [FURNITURES]: {
                 [REATTA_SEAT]: true,
@@ -302,10 +312,12 @@ module.exports = [
         description: `The car is in the background.`,
         presences: {
             [BACKDROPS]: {
-                [EL_CERRITO_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true
             },
             [FLATS]: {
-                [EL_CERRITO_ROAD]: true
+                [EL_CERRITO_TREE]: true,
+                [EL_CERRITO_FAR]: true,
+                [EL_CERRITO_NEAR]: true
             },
             [PUPPETS]: {
                 [PUPPET_REATTA]: true

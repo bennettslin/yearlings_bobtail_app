@@ -1,14 +1,14 @@
 import {
-    EL_CERRITO_BACKDROP
+    GOLDEN_GATE_BACKDROP
 } from 'scene/backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [EL_CERRITO_BACKDROP]: {
+    [GOLDEN_GATE_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,
             xWidth: 12,
-            zHeight: 4
+            zHeight: 5
         }
     }
 }

@@ -5,19 +5,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [REATTA_EXTERIOR]: {
-        yIndex: 1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 9,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 4,
+            xWidth: 9,
+            zHeight: 4
         }
     },
     [REATTA_INTERIOR]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 9,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 4,
+            xWidth: 9,
+            zHeight: 4
         }
     }
 }

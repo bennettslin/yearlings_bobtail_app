@@ -3922,4 +3922,9 @@ module.exports = [
         workedHours: 13,
         neededHours: 13
     },
+    {
+        taskName: `Figure out El Cerrito scene.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

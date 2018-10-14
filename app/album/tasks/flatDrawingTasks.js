@@ -20,9 +20,9 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: 'elCerritoRoad',
+        taskName: 'elCerrito tree and city',
         workedHours: 0,
-        neededHours: 4
+        neededHours: 5
     },
     {
         taskName: 'cliffGraves',
