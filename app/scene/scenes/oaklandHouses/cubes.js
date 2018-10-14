@@ -1,4 +1,4 @@
-import { OAKLAND_HOUSES_KEY } from 'scene/cubesKeys'
+import { OAKLAND_HOUSES_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,

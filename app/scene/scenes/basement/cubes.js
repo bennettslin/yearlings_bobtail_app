@@ -2,7 +2,7 @@ import {
     BASEMENT_KEY,
     BASEMENT_BED_KEY,
     BASEMENT_MAGIC_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -19,7 +19,7 @@ import {
     c,
     f,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

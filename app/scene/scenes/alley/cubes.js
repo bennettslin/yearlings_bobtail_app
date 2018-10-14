@@ -1,4 +1,4 @@
-import { ALLEY_KEY } from 'scene/cubesKeys'
+import { ALLEY_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -10,7 +10,7 @@ import {
     e,
     g,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

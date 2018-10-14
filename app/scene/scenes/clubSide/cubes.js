@@ -1,7 +1,7 @@
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     CEILING_HSLA,
@@ -14,7 +14,7 @@ import {
     d,
     e,
     g
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     C = CEILING_HSLA,

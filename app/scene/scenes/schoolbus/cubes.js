@@ -1,4 +1,4 @@
-import { SCHOOLBUS_KEY } from 'scene/cubesKeys'
+import { SCHOOLBUS_KEY } from '../../cubesKeys'
 
 import {
     STREET_HSLA,

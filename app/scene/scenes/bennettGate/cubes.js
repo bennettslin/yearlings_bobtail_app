@@ -1,4 +1,4 @@
-import { BENNETT_GATE_KEY } from 'scene/cubesKeys'
+import { BENNETT_GATE_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -12,7 +12,7 @@ import {
     f,
     g,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 /**
  * Gate should match in courtyard.

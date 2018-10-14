@@ -1,4 +1,4 @@
-import { ROYCE_HALL_KEY } from 'scene/cubesKeys'
+import { ROYCE_HALL_KEY } from '../../cubesKeys'
 
 import {
     PAVEMENT_HSLA

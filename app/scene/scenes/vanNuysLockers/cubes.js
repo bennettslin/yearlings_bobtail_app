@@ -1,4 +1,4 @@
-import { VAN_NUYS_LOCKERS_KEY } from 'scene/cubesKeys'
+import { VAN_NUYS_LOCKERS_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -11,7 +11,7 @@ import {
 import {
     f,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

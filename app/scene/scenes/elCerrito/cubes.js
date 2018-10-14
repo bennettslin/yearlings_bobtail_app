@@ -1,7 +1,7 @@
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -13,7 +13,7 @@ import {
 } from '../../hslaKeys'
 import {
     RIGHT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     G = GROUND_HSLA,

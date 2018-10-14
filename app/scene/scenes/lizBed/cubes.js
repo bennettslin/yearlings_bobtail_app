@@ -1,7 +1,7 @@
 import {
     LIZ_BED_KEY,
     LIZ_BED_OPEN_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -16,7 +16,7 @@ import {
     e,
     g,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

@@ -1,4 +1,4 @@
-import { OAKLAND_PUBLIC_KEY } from 'scene/cubesKeys'
+import { OAKLAND_PUBLIC_KEY } from '../../cubesKeys'
 
 import {
     STREET_HSLA,

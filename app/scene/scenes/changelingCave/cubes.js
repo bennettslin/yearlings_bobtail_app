@@ -1,4 +1,4 @@
-import { CHANGELING_CAVE_KEY } from 'scene/cubesKeys'
+import { CHANGELING_CAVE_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,

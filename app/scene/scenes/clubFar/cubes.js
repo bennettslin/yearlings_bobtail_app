@@ -1,6 +1,6 @@
 import {
     CLUB_FAR_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     CEILING_HSLA,
@@ -11,7 +11,7 @@ import {
 
 import {
     g
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     C = CEILING_HSLA,

@@ -1,4 +1,4 @@
-import { CLUB_LOADING } from 'scene/cubesKeys'
+import { CLUB_LOADING } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -12,7 +12,7 @@ import {
     d,
     f,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

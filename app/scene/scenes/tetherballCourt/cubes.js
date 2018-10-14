@@ -1,4 +1,4 @@
-import { TETHERBALL_COURT_KEY } from 'scene/cubesKeys'
+import { TETHERBALL_COURT_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,

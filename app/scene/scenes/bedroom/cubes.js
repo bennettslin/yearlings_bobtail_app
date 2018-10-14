@@ -4,7 +4,7 @@ import {
     BEDROOM_OPEN_KEY,
     BEDROOM_DOGS_KEY,
     BEDROOM_SPACE_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -22,7 +22,7 @@ import {
     g,
     k,
     LEFT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

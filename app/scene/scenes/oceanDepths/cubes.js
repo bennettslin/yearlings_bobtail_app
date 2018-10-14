@@ -1,4 +1,4 @@
-import { OCEAN_DEPTHS_KEY } from 'scene/cubesKeys'
+import { OCEAN_DEPTHS_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA
@@ -6,7 +6,7 @@ import {
 
 import {
     RIGHT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     // Default.

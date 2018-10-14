@@ -1,4 +1,4 @@
-import { CEMETERY_KEY } from 'scene/cubesKeys'
+import { CEMETERY_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -8,7 +8,7 @@ import {
 
 import {
     LEFT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     G = GROUND_HSLA,

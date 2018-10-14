@@ -1,4 +1,4 @@
-import { PAMPAS_KEY } from 'scene/cubesKeys'
+import { PAMPAS_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -8,7 +8,7 @@ import {
 
 import {
     RIGHT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     G = GROUND_HSLA,

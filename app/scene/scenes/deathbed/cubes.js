@@ -2,7 +2,7 @@ import {
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY,
     CLIFF_DEATHBED_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA
@@ -11,7 +11,7 @@ import {
 import {
     g,
     RIGHT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     // Default.

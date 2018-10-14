@@ -1,4 +1,4 @@
-import { PORCH_KEY } from 'scene/cubesKeys'
+import { PORCH_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -12,7 +12,7 @@ import {
     e,
     f,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

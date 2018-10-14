@@ -1,6 +1,6 @@
 import {
     CLIFF_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -10,7 +10,7 @@ import {
 
 import {
     RIGHT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     G = GROUND_HSLA,

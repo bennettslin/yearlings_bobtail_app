@@ -1,4 +1,4 @@
-import { STEAM_TUNNEL_KEY } from 'scene/cubesKeys'
+import { STEAM_TUNNEL_KEY } from '../../cubesKeys'
 
 import {
     FLOOR_HSLA,
@@ -9,7 +9,7 @@ import {
 import {
     b,
     d
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     F = FLOOR_HSLA,

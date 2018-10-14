@@ -2,7 +2,7 @@ import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_THOUGHT_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -20,7 +20,7 @@ import {
     d,
     g,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 /**
  * Blinds and gate should match in lizGate.

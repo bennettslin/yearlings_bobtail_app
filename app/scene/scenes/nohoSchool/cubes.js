@@ -1,4 +1,4 @@
-import { NOHO_SCHOOL_KEY } from 'scene/cubesKeys'
+import { NOHO_SCHOOL_KEY } from '../../cubesKeys'
 
 import {
     PAVEMENT_HSLA,

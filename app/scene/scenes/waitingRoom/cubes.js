@@ -1,4 +1,4 @@
-import { WAITING_ROOM_KEY } from 'scene/cubesKeys'
+import { WAITING_ROOM_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -11,7 +11,7 @@ import {
 import {
     d,
     g
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     G = GROUND_HSLA,

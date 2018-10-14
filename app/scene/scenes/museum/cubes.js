@@ -1,4 +1,4 @@
-import { MUSEUM_KEY } from 'scene/cubesKeys'
+import { MUSEUM_KEY } from '../../cubesKeys'
 
 import {
     CEILING_HSLA,
@@ -10,7 +10,7 @@ import {
 import {
     d,
     g
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     C = CEILING_HSLA,

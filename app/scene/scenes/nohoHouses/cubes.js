@@ -1,4 +1,4 @@
-import { NOHO_HOUSES_KEY } from 'scene/cubesKeys'
+import { NOHO_HOUSES_KEY } from '../../cubesKeys'
 
 import {
     LAWN_HSLA,

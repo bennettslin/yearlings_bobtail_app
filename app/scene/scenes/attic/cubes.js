@@ -1,4 +1,4 @@
-import { ATTIC_KEY } from 'scene/cubesKeys'
+import { ATTIC_KEY } from '../../cubesKeys'
 
 import {
     CEILING_HSLA,
@@ -14,7 +14,7 @@ import {
     e,
     f,
     g
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     C = CEILING_HSLA,

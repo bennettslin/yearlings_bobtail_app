@@ -1,4 +1,4 @@
-import { CATHOLIC_CHURCH_KEY } from 'scene/cubesKeys'
+import { CATHOLIC_CHURCH_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,

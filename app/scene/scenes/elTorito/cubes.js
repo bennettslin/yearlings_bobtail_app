@@ -1,4 +1,4 @@
-import { EL_TORITO_KEY } from 'scene/cubesKeys'
+import { EL_TORITO_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -14,7 +14,7 @@ import {
     f,
     g,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

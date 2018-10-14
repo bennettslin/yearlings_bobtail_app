@@ -1,7 +1,7 @@
 import {
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -13,7 +13,7 @@ import {
 
 import {
     f
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     G = GROUND_HSLA,

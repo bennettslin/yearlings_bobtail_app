@@ -1,4 +1,4 @@
-import { GO_KARTS_KEY } from 'scene/cubesKeys'
+import { GO_KARTS_KEY } from '../../cubesKeys'
 
 import {
     STREET_HSLA,

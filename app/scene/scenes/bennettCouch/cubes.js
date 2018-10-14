@@ -1,7 +1,7 @@
 import {
     BENNETT_COUCH_KEY,
     BENNETT_COUCH_THOUGHT_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -14,7 +14,7 @@ import {
 
 import {
     g
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     G = GROUND_HSLA,

@@ -1,4 +1,4 @@
-import { SNOWGLOBES_PAST_KEY } from 'scene/cubesKeys'
+import { SNOWGLOBES_PAST_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,

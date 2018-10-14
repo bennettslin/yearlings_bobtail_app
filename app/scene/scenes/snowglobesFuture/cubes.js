@@ -1,6 +1,6 @@
 import {
     SNOWGLOBES_FUTURE_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     GROUND_HSLA,

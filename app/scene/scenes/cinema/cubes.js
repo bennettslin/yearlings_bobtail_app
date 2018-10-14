@@ -1,7 +1,7 @@
 import {
     CINEMA_KEY,
     CINEMA_STREET_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -16,7 +16,7 @@ import {
     e,
     f,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

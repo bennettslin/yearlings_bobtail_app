@@ -1,4 +1,4 @@
-import { COURTYARD_KEY } from 'scene/cubesKeys'
+import { COURTYARD_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
@@ -14,7 +14,7 @@ import {
     e,
     f,
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 /**
  * Blinds and door should match in bennettBed.

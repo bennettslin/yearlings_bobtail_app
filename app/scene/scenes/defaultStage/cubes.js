@@ -1,4 +1,4 @@
-import { DEFAULT_STAGE_KEY } from 'scene/cubesKeys'
+import { DEFAULT_STAGE_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA
@@ -6,7 +6,7 @@ import {
 
 import {
     k
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     D = DEFAULT_HSLA,

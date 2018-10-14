@@ -1,4 +1,4 @@
-import { BACKSTAGE_KEY } from 'scene/cubesKeys'
+import { BACKSTAGE_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -9,7 +9,7 @@ import {
 
 import {
     g
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     G  = GROUND_HSLA,

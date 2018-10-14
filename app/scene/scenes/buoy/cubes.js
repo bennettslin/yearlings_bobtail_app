@@ -1,4 +1,4 @@
-import { BUOY_KEY } from 'scene/cubesKeys'
+import { BUOY_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA
@@ -7,7 +7,7 @@ import {
 import {
     a,
     RIGHT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     // Default.

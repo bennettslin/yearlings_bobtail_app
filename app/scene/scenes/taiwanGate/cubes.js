@@ -1,4 +1,4 @@
-import { TAIWAN_GATE_KEY } from 'scene/cubesKeys'
+import { TAIWAN_GATE_KEY } from '../../cubesKeys'
 
 import {
     STREET_HSLA,
@@ -10,7 +10,7 @@ import {
 import {
     d,
     g
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     T = STREET_HSLA,

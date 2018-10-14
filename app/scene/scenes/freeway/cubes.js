@@ -1,4 +1,4 @@
-import { FREEWAY_KEY } from 'scene/cubesKeys'
+import { FREEWAY_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,

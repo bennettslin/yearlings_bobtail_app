@@ -1,4 +1,4 @@
-import { WALGREENS_KEY } from 'scene/cubesKeys'
+import { WALGREENS_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,

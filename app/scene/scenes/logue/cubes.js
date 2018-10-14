@@ -1,4 +1,4 @@
-import { LOGUE_KEY } from 'scene/cubesKeys'
+import { LOGUE_KEY } from '../../cubesKeys'
 
 import {
     STAGE_FLOOR_HSLA,

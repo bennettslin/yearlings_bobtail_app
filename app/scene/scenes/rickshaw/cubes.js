@@ -1,6 +1,6 @@
 import {
     RICKSHAW_KEY
-} from 'scene/cubesKeys'
+} from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA
@@ -8,7 +8,7 @@ import {
 
 import {
     RIGHT
-} from 'scene/cubesConstants'
+} from '../../cubesConstants'
 
 const
     // Default.
