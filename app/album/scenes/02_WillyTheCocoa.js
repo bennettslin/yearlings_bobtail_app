@@ -16,12 +16,12 @@ import {
     PORCH_KEY,
     NOHO_HOUSES_KEY,
     CHANGELING_CAVE_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     PRETEEN_BENNETT,
@@ -31,47 +31,47 @@ import {
     CHRISTOPHER,
     HOWIE,
     TOMER
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL,
     ENCHANTED
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../scene/instanceKeys/preteenBennett'
 
 import {
     COLLECTING,
     DUCKING,
     FIGHTING
-} from 'scene/instanceKeys/willy'
+} from '../../scene/instanceKeys/willy'
 
 import {
     STOOPING,
     COMFORTING
-} from 'scene/instanceKeys/mother'
+} from '../../scene/instanceKeys/mother'
 
 import {
     ROARING
-} from 'scene/instanceKeys/father'
+} from '../../scene/instanceKeys/father'
 
 import {
     TANTRUM,
     SOBBING,
     REASSURING
-} from 'scene/instanceKeys/christopher'
+} from '../../scene/instanceKeys/christopher'
 
 import {
     GANGBANGER,
     GREETING
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     NOHO_HOUSES_BACKDROP,
     VALLEY_BACKDROP,
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     OVERPASS_SIGN_FRONT,
@@ -84,7 +84,7 @@ import {
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
     STALACTITES
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     SHOPPING_CART,
@@ -92,28 +92,28 @@ import {
     GARBAGE_BAG,
     SHOPPING_CART_FULL,
     CHRISTOPHER_LETTERS
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     FAMILY_HOUSE,
     CAVE_SHADOWS
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     PORCH_DOOR,
     BEDROOM_BLINDS_OPEN
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     BEDROOM_DESK,
     CAPTAIN_BED_MATTRESS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     CAPTAIN_BED_DRAWERS
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 module.exports = [
     {

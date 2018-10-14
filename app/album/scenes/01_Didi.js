@@ -12,7 +12,7 @@ import {
     NOHO_SCHOOL_KEY,
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -21,60 +21,60 @@ import {
     TIME_NOON,
     TIME_AFTERNOON,
     SEASON_SPRING
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
     SINGING
-} from 'scene/instanceKeys/youngBennett'
+} from '../../scene/instanceKeys/youngBennett'
 
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from 'scene/instanceKeys/anita'
+} from '../../scene/instanceKeys/anita'
 
 import {
     CURIOUS,
     SNICKERING
-} from 'scene/instanceKeys/esther'
+} from '../../scene/instanceKeys/esther'
 
 import {
     NOHO_HOUSES_BACKDROP,
     NOHO_SCHOOL_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
     MIRRORED_SINK,
     TOWEL_RACK
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     ESTHER_SPEECH_PANEL,
     BATHTUB
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 module.exports = [
     {

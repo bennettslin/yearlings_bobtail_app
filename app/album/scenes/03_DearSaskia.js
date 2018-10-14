@@ -13,55 +13,55 @@ import {
     PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_COURT_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_PRESENT,
     SEASON_PAST
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     PRETEEN_BENNETT,
     SASHA,
     BRAD,
     ANDREW
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
-import { FEIGNING_FEAR } from 'scene/instanceKeys/andrew'
+import { FEIGNING_FEAR } from '../../scene/instanceKeys/andrew'
 
 import {
     JEWISH_BOY,
     TYING
-} from 'scene/instanceKeys/brad'
+} from '../../scene/instanceKeys/brad'
 
 import {
     PANICKED,
     TETHERED
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../scene/instanceKeys/preteenBennett'
 
 import {
     CHARMED,
     INDIGNANT
-} from 'scene/instanceKeys/sasha'
+} from '../../scene/instanceKeys/sasha'
 
 import {
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     TOGETHER_SKETCHBOOK,
     APART_SKETCHBOOK
-} from 'scene/bubbleKeys'
+} from '../../scene/bubbleKeys'
 
 import {
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY,
     TETHERBALL_POLE
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     TAIWAN_CLOUDS,
@@ -70,17 +70,17 @@ import {
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
     VAN_NUYS_SCHOOLHOUSE
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_REAR
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 import {
     PUPPET_BENNETT_BEGIN,
@@ -95,7 +95,7 @@ import {
     PUPPET_ANITA_END,
     PUPPET_MOTHER_END,
     PUPPET_FATHER_END
-} from 'scene/puppetKeys'
+} from '../../scene/puppetKeys'
 
 module.exports = [
     {

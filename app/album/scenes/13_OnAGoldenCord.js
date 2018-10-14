@@ -13,13 +13,13 @@ import {
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
     OAKLAND_PUBLIC_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_PAST
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     YOUNG_BENNETT,
@@ -30,9 +30,9 @@ import {
     LIZ,
     AMY,
     STEPHANIE
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
-import { OFFICER } from 'scene/instanceKeys/amy'
+import { OFFICER } from '../../scene/instanceKeys/amy'
 
 import {
     CORD_SIDE,
@@ -40,32 +40,32 @@ import {
     CORD_REAR,
     HORSING,
     DRYING_TEARS
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
-import { RETURNING_CORD } from 'scene/instanceKeys/liz'
+import { RETURNING_CORD } from '../../scene/instanceKeys/liz'
 
 import {
     BENNETT_DEFIANT,
     BENNETT_HORSING,
     BENNETT_SORROWFUL
-} from 'scene/instanceKeys/stephanie'
+} from '../../scene/instanceKeys/stephanie'
 
-import { CROSSING_GUARD } from 'scene/instanceKeys/willy'
+import { CROSSING_GUARD } from '../../scene/instanceKeys/willy'
 
-import { YOUNG_CHILD } from 'scene/instanceKeys/songs'
+import { YOUNG_CHILD } from '../../scene/instanceKeys/songs'
 
 import {
     OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     TWIN_STREETLAMP,
     ARRANGEMENT_TWIN_STREETLAMP_FAR,
     ARRANGEMENT_TWIN_STREETLAMP_MIDDLE,
     ARRANGEMENT_TWIN_STREETLAMP_NEAR
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     OAKLAND_HOUSE_LEFT,
@@ -87,12 +87,12 @@ import {
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 module.exports = [
     {

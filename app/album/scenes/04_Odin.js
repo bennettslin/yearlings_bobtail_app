@@ -17,17 +17,17 @@ import {
     BUOY_KEY,
     OCEAN_DEPTHS_KEY,
     OCEAN_FLOOR_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     PRETEEN_BENNETT,
     SASHA
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     MAT,
@@ -38,9 +38,9 @@ import {
     BUOY,
     SINKING,
     OCEAN_FLOOR
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../scene/instanceKeys/preteenBennett'
 
-import { MERMAID } from 'scene/instanceKeys/sasha'
+import { MERMAID } from '../../scene/instanceKeys/sasha'
 
 import {
     TAIWAN_STREETS_BACKDROP,
@@ -49,7 +49,7 @@ import {
     OCEAN_BUOY_BACKDROP,
     OCEAN_DEPTHS_BACKDROP,
     OCEAN_FLOOR_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     BUDDHA_SHRINE,
@@ -71,11 +71,11 @@ import {
     BENNETT_MAT,
     ODIN_MAT,
     BUDDHA_CAVE
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     FRIDGE_DRAWINGS
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     TAIWAN_HOUSE_FAR,
@@ -83,17 +83,17 @@ import {
     SHORE_BACK,
     OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     IRON_GATE_LOW,
     IRON_GATE
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     STAIRWELL_RAILING,
     BUOY_FLOAT
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 module.exports = [
     {

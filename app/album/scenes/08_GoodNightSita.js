@@ -15,23 +15,23 @@ import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     GO_KARTS_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
     LIZ,
     KHARI,
     STEPHANIE
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
-import { DOUBLE_ALBERT } from 'scene/instanceKeys/khari'
+import { DOUBLE_ALBERT } from '../../scene/instanceKeys/khari'
 
-import { FLAPPER } from 'scene/instanceKeys/stephanie'
+import { FLAPPER } from '../../scene/instanceKeys/stephanie'
 
 import {
     DATE_ENDING,
@@ -39,17 +39,17 @@ import {
     BACKSTAGE,
     GO_KARTS,
     DATE_ENDED
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     GO_KART_THOUGHT_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     CAVEMAN_BONES,
@@ -57,11 +57,11 @@ import {
     ARRANGEMENT_PUSH_BROOM_BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     MUSEUM_DISPLAY
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     LIZ_BLINDS,
@@ -69,19 +69,19 @@ import {
     ARRANGEMENT_LIZ_BLINDS_STREET,
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     GO_KART_SEAT_LEFT,
     GO_KART_SEAT_RIGHT,
     GO_KART_DASHBOARD_LEFT,
     GO_KART_DASHBOARD_RIGHT
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     GO_KART_EXTERIOR_LEFT,
     GO_KART_EXTERIOR_RIGHT
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 module.exports = [
     {

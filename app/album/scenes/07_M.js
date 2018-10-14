@@ -13,12 +13,12 @@ import {
     BASEMENT_KEY,
     CINEMA_KEY,
     CINEMA_STREET_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
@@ -29,11 +29,11 @@ import {
     TOMER,
     MIRIAM,
     STEPHANIE
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     SQUATTING
-} from 'scene/instanceKeys/ana'
+} from '../../scene/instanceKeys/ana'
 
 import {
     PONDERING,
@@ -43,34 +43,34 @@ import {
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from 'scene/instanceKeys/howie'
+} from '../../scene/instanceKeys/howie'
 
 import {
     INFANT_CURIOUS,
     INFANT_NURSING
-} from 'scene/instanceKeys/miriam'
+} from '../../scene/instanceKeys/miriam'
 
-import { BENNETT_KEYBOARD } from 'scene/instanceKeys/stephanie'
+import { BENNETT_KEYBOARD } from '../../scene/instanceKeys/stephanie'
 
-import { SHANE_BUYING } from 'scene/instanceKeys/tomer'
+import { SHANE_BUYING } from '../../scene/instanceKeys/tomer'
 
 import {
     FLIRTING,
     EATING
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     CINEMA_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     CINEMA_THOUGHTS
-} from 'scene/bubbleKeys'
+} from '../../scene/bubbleKeys'
 
 import {
     LEONARD_COHEN_POSTER,
@@ -82,7 +82,7 @@ import {
     CINEMA_POSTER_RIGHT,
     ARRANGEMENT_CINEMA_POSTER,
     ARRANGEMENT_CINEMA_POSTER_STREET
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     BENNETT_RECORD_PLAYER,
@@ -99,12 +99,12 @@ import {
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     BASEMENT_DOOR_OPEN,
     CINEMA_DOORS
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 module.exports = [
     {

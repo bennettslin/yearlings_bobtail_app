@@ -1,11 +1,11 @@
 import { ACTORS } from 'constants/scene'
 
-import { LOGUE_KEY } from 'scene/cubesKeys'
+import { LOGUE_KEY } from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     YOUNG_BENNETT,
@@ -35,9 +35,9 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import { EPILOGUE } from '../../scene/instanceKeys/songs'
 
 module.exports = [
     {

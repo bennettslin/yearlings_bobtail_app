@@ -14,7 +14,7 @@ import {
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
     SNOWGLOBES_FUTURE_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
@@ -23,7 +23,7 @@ import {
     SEASON_PAST,
     SEASON_PRESENT,
     SEASON_FUTURE
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     PRETEEN_BENNETT,
@@ -36,59 +36,59 @@ import {
     KHARI,
     MIRIAM,
     STEPHANIE
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     WAKENED_FEARFUL,
     SEEKING_PROTECTION
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
 import {
     SITA_HURT,
     SITA_SOBBING
-} from 'scene/instanceKeys/esther'
+} from '../../scene/instanceKeys/esther'
 
 import {
     ACCUSATORY,
     REELING
-} from 'scene/instanceKeys/father'
+} from '../../scene/instanceKeys/father'
 
-import { JOKING } from 'scene/instanceKeys/khari'
+import { JOKING } from '../../scene/instanceKeys/khari'
 
 import {
     SIFTING_TCHOTCHKES,
     LAUGHING
-} from 'scene/instanceKeys/liz'
+} from '../../scene/instanceKeys/liz'
 
 import {
     ASLEEP,
     MISCHIEVOUS,
     FENDING
-} from 'scene/instanceKeys/miriam'
+} from '../../scene/instanceKeys/miriam'
 
 import {
     CONSOLING,
     SHIELDING
-} from 'scene/instanceKeys/mother'
+} from '../../scene/instanceKeys/mother'
 
-import { HUMILIATED } from 'scene/instanceKeys/preteenBennett'
+import { HUMILIATED } from '../../scene/instanceKeys/preteenBennett'
 
-import { COMFORTING } from 'scene/instanceKeys/sasha'
+import { COMFORTING } from '../../scene/instanceKeys/sasha'
 
 import {
     BENNETT_BANJO,
     BENNETT_RECORDING
-} from 'scene/instanceKeys/stephanie'
+} from '../../scene/instanceKeys/stephanie'
 
 import {
     PAST,
     PRESENT,
     FUTURE
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     ELLIOTT_SMITH_POSTER
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     TETHERBALL_POLE,
@@ -96,17 +96,17 @@ import {
     RECORDING_CONSOLE,
     RECORDING_BEERS,
     CRACKED_PICTURE
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     BASEMENT_DOOR
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     BENNETT_MATTRESS,
@@ -115,7 +115,7 @@ import {
     ARRANGEMENT_LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS_THOUGHT,
     MIRIAM_CUSHIONS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     SNOWGLOBE_TETHERBALL,
@@ -123,7 +123,7 @@ import {
     SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBE_LIZ_KHARI,
     SNOWGLOBE_BENNETT_ALONE
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 module.exports = [
     {

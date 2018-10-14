@@ -16,14 +16,14 @@ import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     BENNETT_GATE_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_WINTER,
     SEASON_LOVE
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
@@ -31,17 +31,17 @@ import {
     NESTOR,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
 import {
     JOGGER
-} from 'scene/instanceKeys/nestor'
+} from '../../scene/instanceKeys/nestor'
 
 import {
     DISHROOM_LANCET,
@@ -57,11 +57,11 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     WAITING_ROOM_THOUGHTS
-} from 'scene/bubbleKeys'
+} from '../../scene/bubbleKeys'
 
 import {
     TRAFFIC_LIGHT,
@@ -70,7 +70,7 @@ import {
     CLIPBOARD,
     PAINTING,
     WAITING_ROOM_PLANT
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     CONVEYOR_BELT,
@@ -82,7 +82,7 @@ import {
     VASELINE,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     DISHROOM_DOOR,
@@ -98,7 +98,7 @@ import {
     BENNETT_DOOR_INSIDE_OPEN,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     LIGHT_SWITCH,
@@ -110,11 +110,11 @@ import {
     LIZ_PILLOWS,
     LIZ_MATTRESS_REFLECTION,
     LIZ_PILLOWS_REFLECTION
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     DISHROOM_SINK
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 /**
  * All of these scenes repeat twice.

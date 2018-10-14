@@ -12,13 +12,13 @@ import {
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
     CLUB_LOADING
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_INDOOR,
     SEASON_SUMMER
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
@@ -32,22 +32,22 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from 'scene/instanceKeys/liz'
+} from '../../scene/instanceKeys/liz'
 
-import { SHANE_SPILLING } from 'scene/instanceKeys/tomer'
+import { SHANE_SPILLING } from '../../scene/instanceKeys/tomer'
 
-import { WATCHING } from 'scene/instanceKeys/wade'
+import { WATCHING } from '../../scene/instanceKeys/wade'
 
 import {
     PERFORMING,
@@ -56,7 +56,7 @@ import {
     CARRYING,
     MINGLING,
     WAITING,
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     MONITOR_SPEAKER_SIDE,
@@ -65,7 +65,7 @@ import {
     WALL_SPEAKER_SIDE,
     ARRANGEMENT_WALL_SIDE_CROWD,
     ARRANGEMENT_WALL_SIDE_STAGE
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     STAGE_MIC_SIDE,
@@ -78,23 +78,23 @@ import {
     LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     CROWD_SIDE_FAR,
     CROWD_SIDE_NEAR
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     CLUB_DOOR
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     LIZ_MATTRESS,
     LIZ_PILLOWS,
     LIZ_MATTRESS_REFLECTION,
     LIZ_PILLOWS_REFLECTION
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 module.exports = [
     {

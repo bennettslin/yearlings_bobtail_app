@@ -14,70 +14,70 @@ import {
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
     MIRIAM
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
 import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from 'scene/instanceKeys/miriam'
+} from '../../scene/instanceKeys/miriam'
 
 import {
     COWGIRL,
     BLOWJOB
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     GOLDEN_GATE_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     IV_DRIP
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     HOSPITAL_RECORD_PLAYER
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     EL_CERRITO_TREE,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
     REATTA_DASHBOARD,
     HOSPITAL_MATTRESS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 import {
     PUPPET_REATTA
-} from 'scene/puppetKeys'
+} from '../../scene/puppetKeys'
 
 module.exports = [
     {

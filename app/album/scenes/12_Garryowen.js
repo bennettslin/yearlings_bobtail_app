@@ -14,12 +14,12 @@ import {
     BASEMENT_BED_KEY,
     CLUB_FRONT_KEY,
     OAKLAND_HOUSES_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
@@ -28,37 +28,37 @@ import {
     MIRIAM,
     TRISTAN,
     NESTOR
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     CHUCKLING,
     SMIRKING
-} from 'scene/instanceKeys/ana'
+} from '../../scene/instanceKeys/ana'
 
 import {
     BRUSHING_OFF,
     DROPPING_MEATS,
     DRUNK_CELIBATE
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
 import {
     BRUSHED_OFF,
     FREEZING_NAKED
-} from 'scene/instanceKeys/liz'
+} from '../../scene/instanceKeys/liz'
 
-import { INJURED } from 'scene/instanceKeys/nestor'
+import { INJURED } from '../../scene/instanceKeys/nestor'
 
-import { PUNCHING } from 'scene/instanceKeys/tristan'
+import { PUNCHING } from '../../scene/instanceKeys/tristan'
 
 import {
     GREETING,
     LEAVING_CRUMBLED,
     NOOGIE
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     OAKLAND_SIDE_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     ELLIOTT_SMITH_POSTER,
@@ -66,17 +66,17 @@ import {
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     GUITAR,
     DRUMKIT
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     LIZ_BLINDS,
@@ -84,18 +84,18 @@ import {
     LIZ_DOOR,
     LIZ_GATE_INSIDE,
     BASEMENT_DOOR
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS,
     BENNETT_MATTRESS,
     BENNETT_PILLOWS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     VOLKSWAGEN
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 module.exports = [
     {

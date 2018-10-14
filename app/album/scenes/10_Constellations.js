@@ -20,20 +20,20 @@ import {
     ROYCE_HALL_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
     SEASON_PAST
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
     ANA,
     HOWIE,
     TOMER
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     ABBEY_ROAD,
@@ -42,52 +42,52 @@ import {
     CEMETERY,
     STATION_WAGON,
     ATTIC
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     STATION_WAGON_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     TARPIT_THOUGHT,
     SIBLING_THOUGHT
-} from 'scene/bubbleKeys'
+} from '../../scene/bubbleKeys'
 
 import {
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     PUSH_BROOM,
     ARRANGEMENT_PUSH_BROOM_TUNNEL,
     GRAVESTONE,
     EVIAN_BOTTLES
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     ROYCE_HALL,
     PHARMACY_AISLE,
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     SATURN_SEAT_FRONT,
     SATURN_SEAT_REAR,
     SATURN_DASHBOARD,
     ATTIC_CUSHIONS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     SATURN_EXTERIOR,
     SATURN_INTERIOR
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 module.exports = [
     {

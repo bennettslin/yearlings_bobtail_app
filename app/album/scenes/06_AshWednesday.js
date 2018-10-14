@@ -14,24 +14,24 @@ import {
     CATHOLIC_CHURCH_KEY,
     BANCROFT_LIBRARY_KEY,
     CAMPANILE_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
     SEASON_PAST
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
     CATHERINE,
     AMY,
     WADE
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     SMOKER
-} from 'scene/instanceKeys/amy'
+} from '../../scene/instanceKeys/amy'
 
 import {
     BREAKUP_DEJECTED,
@@ -39,21 +39,21 @@ import {
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
     PIOUS,
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
 import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from 'scene/instanceKeys/catherine'
+} from '../../scene/instanceKeys/catherine'
 
-import { CATHOLIC_GUY } from 'scene/instanceKeys/wade'
+import { CATHOLIC_GUY } from '../../scene/instanceKeys/wade'
 
 import {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
     UC_BERKELEY_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     RECYCLABLES,
@@ -66,30 +66,30 @@ import {
     UC_BERKELEY_TREE,
     ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
     ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
     CAMPANILE
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     BENNETT_BLINDS,
     BENNETT_DOOR_OUTSIDE,
     BENNETT_GATE_SIDE,
     BANCROFT_DOOR
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     BENNETT_CUSHIONS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 module.exports = [
     {

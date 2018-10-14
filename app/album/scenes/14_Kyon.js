@@ -10,23 +10,23 @@ import {
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     LIZ,
     KHARI
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
-} from 'scene/instanceKeys/khari'
+} from '../../scene/instanceKeys/khari'
 
 import {
     PETTING_SEATED,
@@ -36,13 +36,13 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from 'scene/instanceKeys/liz'
+} from '../../scene/instanceKeys/liz'
 
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
-} from 'scene/bubbleKeys'
+} from '../../scene/bubbleKeys'
 
 import {
     LIZ_BLINDS_OPEN,
@@ -50,16 +50,16 @@ import {
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE,
     LIZ_GATE_INSIDE_OPEN
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     TCHOTCHKES
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     OPAL_LAP,
@@ -67,7 +67,7 @@ import {
     OPAL_COUCH,
     PEAHEN,
     PEACOCK
-} from 'scene/puppetKeys'
+} from '../../scene/puppetKeys'
 
 module.exports = [
     {

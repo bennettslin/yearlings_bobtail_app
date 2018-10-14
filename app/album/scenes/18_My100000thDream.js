@@ -15,12 +15,12 @@ import {
     OUTDOOR_WEDDING_KEY,
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
@@ -29,11 +29,11 @@ import {
     LIZ,
     MIRIAM,
     AMY
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     DOCTOR
-} from 'scene/instanceKeys/amy'
+} from '../../scene/instanceKeys/amy'
 
 import {
     EL_TORITO,
@@ -42,44 +42,44 @@ import {
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     CLIFF_BACKDROP,
     INVERSE_THOUGHT_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     WEDDING_PLATFORM,
     WEDDING_CROWD,
     IV_DRIP
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     HOSPITAL_RECORD_PLAYER
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     CLIFF_TREE,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     EL_TORITO_DOOR_LEFT,
     EL_TORITO_DOOR_RIGHT
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     HOSPITAL_MATTRESS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     PUPPET_KHARI,
     PUPPET_LIZ
-} from 'scene/puppetKeys'
+} from '../../scene/puppetKeys'
 
 module.exports = [
     {

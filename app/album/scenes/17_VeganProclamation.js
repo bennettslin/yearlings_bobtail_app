@@ -16,13 +16,13 @@ import {
     ALLEY_KEY,
     BANCROFT_LIBRARY_KEY,
     CAMPANILE_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_WINTER,
     SEASON_LOVE
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     BENNETT,
@@ -36,7 +36,7 @@ import {
     WADE,
     LIZ_REFLECTION,
     KHARI_REFLECTION
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     CAMPUS_ASHAMED,
@@ -44,30 +44,30 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from 'scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennett'
 
 import {
     PROTECTIVE,
     CARESSING,
     CARESSING_REFLECTION
-} from 'scene/instanceKeys/khari'
+} from '../../scene/instanceKeys/khari'
 
 import {
     SELFLESS_CONCERN,
     CARESSED,
     CARESSED_REFLECTION
-} from 'scene/instanceKeys/liz'
+} from '../../scene/instanceKeys/liz'
 
-import { INTRODUCING } from 'scene/instanceKeys/tristan'
+import { INTRODUCING } from '../../scene/instanceKeys/tristan'
 
 import {
     GREETING,
     PROTESTER
-} from 'scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/songs'
 
 import {
     UC_BERKELEY_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     SIGNPOST,
@@ -78,7 +78,7 @@ import {
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT,
     DUMPSTER
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     ASH_CAN,
@@ -86,29 +86,29 @@ import {
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     CAMPANILE,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     BANCROFT_DOOR,
     LOADING_DOCK_DOOR
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     LIZ_MATTRESS,
     LIZ_PILLOWS,
     LIZ_MATTRESS_REFLECTION,
     LIZ_PILLOWS_REFLECTION
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     PHONE_CALL_PANEL
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 import {
     GHOST_ODIN_CAMPUS,
@@ -116,7 +116,7 @@ import {
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_PHONE,
     GHOST_ODIN_DEMONSTRATION
-} from 'scene/puppetKeys'
+} from '../../scene/puppetKeys'
 
 module.exports = [
     {

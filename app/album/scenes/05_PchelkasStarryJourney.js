@@ -19,12 +19,12 @@ import {
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY
-} from 'scene/cubesKeys'
+} from '../../scene/cubesKeys'
 
 import {
     TIME_ANYTIME,
     SEASON_WINTER
-} from 'scene/sky'
+} from '../../scene/sky'
 
 import {
     PRETEEN_BENNETT,
@@ -34,24 +34,24 @@ import {
     BRAD,
     ANDREW,
     TRISTAN
-} from 'scene/actorKeys'
+} from '../../scene/actorKeys'
 
 import {
     THROWING,
     NOODLING
-} from 'scene/instanceKeys/andrew'
+} from '../../scene/instanceKeys/andrew'
 
 import {
     GESTURING,
     SNACKING
-} from 'scene/instanceKeys/brad'
+} from '../../scene/instanceKeys/brad'
 
 import {
     BLISSFUL,
     STARING
-} from 'scene/instanceKeys/christopher'
+} from '../../scene/instanceKeys/christopher'
 
-import { ARGUING } from 'scene/instanceKeys/mother'
+import { ARGUING } from '../../scene/instanceKeys/mother'
 
 import {
     GUILT_RIDDEN,
@@ -61,22 +61,22 @@ import {
     STOIC,
     WISTFUL,
     SHEEPISH
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../scene/instanceKeys/preteenBennett'
 
-import { POPULAR_GIRL } from 'scene/instanceKeys/sasha'
+import { POPULAR_GIRL } from '../../scene/instanceKeys/sasha'
 
-import { PRINCIPAL } from 'scene/instanceKeys/tristan'
+import { PRINCIPAL } from '../../scene/instanceKeys/tristan'
 
 import {
     BEDROOM_BACKDROP,
     BEDROOM_BUS_BACKDROP,
     VAN_NUYS_SCHOOL_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../scene/backdropKeys'
 
 import {
     DOGS_SKETCHBOOK,
     ESCAPE_POD_SKETCHBOOK
-} from 'scene/bubbleKeys'
+} from '../../scene/bubbleKeys'
 
 import {
     TINTIN_POSTER,
@@ -88,7 +88,7 @@ import {
     ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
     VAN_NUYS_LOGO,
     CORKBOARD
-} from 'scene/cutoutKeys'
+} from '../../scene/cutoutKeys'
 
 import {
     CAPTAIN_BED_LAMP,
@@ -96,27 +96,27 @@ import {
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
     THROWN_FRUIT
-} from 'scene/fixtureKeys'
+} from '../../scene/fixtureKeys'
 
 import {
     LOCKER_BANK,
     VAN_NUYS_SCHOOLHOUSE
-} from 'scene/flatKeys'
+} from '../../scene/flatKeys'
 
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN,
     PRINCIPAL_DOOR
-} from 'scene/doorKeys'
+} from '../../scene/doorKeys'
 
 import {
     BEDROOM_DESK,
     CAPTAIN_BED_MATTRESS
-} from 'scene/furnitureKeys'
+} from '../../scene/furnitureKeys'
 
 import {
     CAPTAIN_BED_DRAWERS
-} from 'scene/panelKeys'
+} from '../../scene/panelKeys'
 
 import {
     PCHELKA,
@@ -124,7 +124,7 @@ import {
     ROCKET,
     EARTH,
     SPACE_COLONY
-} from 'scene/puppetKeys'
+} from '../../scene/puppetKeys'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
