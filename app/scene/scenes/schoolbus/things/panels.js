@@ -9,7 +9,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 5.5,
             xWidth: 10,
-            zHeight: 5
+            zHeight: 6
         }
     },
     [SCHOOLBUS_EXTERIOR]: {
@@ -17,7 +17,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 5.5,
             xWidth: 10,
-            zHeight: 5
+            zHeight: 6
         }
     }
 }

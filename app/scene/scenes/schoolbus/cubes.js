@@ -1,25 +1,35 @@
 import { SCHOOLBUS_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    STREET_HSLA,
+    CROSSWALK_HSLA,
+    PLATFORM_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    T = STREET_HSLA,
+    X = CROSSWALK_HSLA,
+    P = PLATFORM_HSLA,
+    S = SEAT_HSLA,
 
     SCHOOLBUS_CUBES = {
         /** https://www.the-blueprints.com/blueprints/buses/international-buses/56427/view/international_school_bus_%281992%29/
          */
         floor: {
             hslaColours: [
-                [D]
+                [T],
+                [T],
+                [T, P, S, P, P, S, P, P, P, P, P, T],
+                [T, P, S, P, P, S, P, P, P, P, P, T],
+                [T],
+                [X]
             ],
             zIndices: [
                 [0],
                 [0],
-                [0, 3, 6, 6, 3, 6, 6, 3, 3, 3, 3, 0],
-                [0, 3, 6, 6, 3, 6, 6, 3, 3, 3, 3, 0],
+                [0, 4, 6, 4, 4, 6, 4, 4, 4, 4, 4, 0],
+                [0, 4, 6, 4, 4, 6, 4, 4, 4, 4, 4, 0],
                 [0]
             ]
         }

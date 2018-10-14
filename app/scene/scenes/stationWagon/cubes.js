@@ -1,23 +1,33 @@
 import { STATION_WAGON_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    STREET_HSLA,
+    CROSSWALK_HSLA,
+    PLATFORM_HSLA,
+    SEAT_HSLA
 } from '../../hslaKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    T = STREET_HSLA,
+    X = CROSSWALK_HSLA,
+    P = PLATFORM_HSLA,
+    S = SEAT_HSLA,
 
     STATION_WAGON_CUBES = {
         floor: {
             hslaColours: [
-                [D]
+                [T],
+                [T],
+                [T, P, P, S, P, P, S, P, P, P, P, T],
+                [T, P, P, S, P, P, S, P, P, P, P, T],
+                [T],
+                [X]
             ],
             zIndices: [
                 [0],
                 [0],
-                [0, 2, 2, 4, 4, 2, 4, 4, 2, 2, 2, 0],
-                [0, 2, 2, 4, 4, 2, 4, 4, 2, 2, 2, 0],
+                [0, 3, 3, 2, 1, 1, 2, 1, 1, 1, 1, 0],
+                [0, 3, 3, 2, 1, 1, 2, 1, 1, 1, 1, 0],
                 [0]
             ]
         }

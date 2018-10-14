@@ -8,25 +8,25 @@ const ARRANGEMENTS_MAP = {
     [SATURN_SEAT_REAR]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 3.5,
+            xFloat: 3,
             xWidth: 2,
-            zHeight: 0.5
+            zHeight: 2
         }
     },
     [SATURN_SEAT_FRONT]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 6,
             xWidth: 2,
-            zHeight: 0.5
+            zHeight: 2
         }
     },
     [SATURN_DASHBOARD]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 8.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 9,
+            xWidth: 3,
+            zHeight: 2
         }
     }
 }

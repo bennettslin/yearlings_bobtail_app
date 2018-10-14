@@ -8,7 +8,7 @@ const ARRANGEMENTS_MAP = {
     [BACKPACK_BENNETT]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 4,
+            xFloat: 3.5,
             xWidth: 1,
             zHeight: 1
         }
@@ -16,13 +16,13 @@ const ARRANGEMENTS_MAP = {
     [BACKPACK_SASHA]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 7,
+            xFloat: 6.5,
             xWidth: 1,
             zHeight: 1
         }
     },
     [BACKPACK_JEWISH_BOY]: {
-        yIndex: 2,
+        yIndex: 3,
         arrangement: {
             xFloat: 7,
             xWidth: 1,

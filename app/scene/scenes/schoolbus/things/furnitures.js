@@ -7,17 +7,17 @@ const ARRANGEMENTS_MAP = {
     [SCHOOLBUS_SEAT_REAR]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 2.5,
+            xFloat: 2,
             xWidth: 2,
-            zHeight: 0.5
+            zHeight: 2
         }
     },
     [SCHOOLBUS_SEAT_FRONT]: {
         yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 5,
             xWidth: 2,
-            zHeight: 0.5
+            zHeight: 2
         }
     }
 }
