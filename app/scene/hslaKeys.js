@@ -5,6 +5,7 @@ STAGE_FLOOR_HSLA = 'stageFloor',
 STAGE_PLATFORM_HSLA = 'stagePlatform',
 
 HILL_HSLA = 'hill',
+HILL_DARKER_HSLA = 'hillDarker',
 GROUND_HSLA = 'ground',
 
 STREET_HSLA = 'street',
@@ -27,6 +28,7 @@ HSLA_KEYS = [
     STAGE_FLOOR_HSLA,
     STAGE_PLATFORM_HSLA,
     HILL_HSLA,
+    HILL_DARKER_HSLA,
     GROUND_HSLA,
     STREET_HSLA,
     CROSSWALK_HSLA,
@@ -49,6 +51,7 @@ export {
     STAGE_FLOOR_HSLA,
     STAGE_PLATFORM_HSLA,
     HILL_HSLA,
+    HILL_DARKER_HSLA,
     GROUND_HSLA,
     STREET_HSLA,
     CROSSWALK_HSLA,

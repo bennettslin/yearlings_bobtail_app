@@ -3,6 +3,7 @@ import {
     STAGE_PLATFORM_HSLA,
     STAGE_FLOOR_HSLA,
     HILL_HSLA,
+    HILL_DARKER_HSLA,
     GROUND_HSLA,
     STREET_HSLA,
     CROSSWALK_HSLA,
@@ -44,6 +45,14 @@ const
         h: 120,
         s: 50,
         l: 50
+    },
+    /**
+     * I.
+     */
+    HILL_DARKER = {
+        h: 120,
+        s: 50,
+        l: 40
     },
     /**
      * G.
@@ -169,6 +178,7 @@ const
         [STAGE_FLOOR_HSLA]: STAGE_FLOOR,
 
         [HILL_HSLA]: HILL,
+        [HILL_DARKER_HSLA]: HILL_DARKER,
         [GROUND_HSLA]: GROUND,
 
         [STREET_HSLA]: STREET,

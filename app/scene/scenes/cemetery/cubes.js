@@ -2,7 +2,8 @@ import { CEMETERY_KEY } from 'scene/cubesKeys'
 
 import {
     GROUND_HSLA,
-    HILL_HSLA
+    HILL_HSLA,
+    HILL_DARKER_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -12,6 +13,7 @@ import {
 const
     G = GROUND_HSLA,
     H = HILL_HSLA,
+    I = HILL_DARKER_HSLA,
 
     CEMETERY_CUBES = {
         slantDirection: LEFT,
@@ -19,7 +21,10 @@ const
             hslaColours: [
                 [G],
                 [G],
-                [H]
+                [H, I, I, H, H, I, I, H, H, I, I, H],
+                [I, H, H, I, I, H, H, I, I, H, H, I],
+                [H, I, I, H, H, I, I, H, H, I, I, H],
+                [I, I, H, H, I, I, H, H, I, I, H]
             ],
             zIndices: [
                 [0],
