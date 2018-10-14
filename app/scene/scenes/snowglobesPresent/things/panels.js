@@ -9,7 +9,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 2.5,
             xWidth: 4.5,
-            zHeight: 4.5
+            zHeight: 4
         }
     },
     [SNOWGLOBE_BENNETT_MIRIAM]: {
@@ -17,7 +17,7 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 8,
             xWidth: 6,
-            zHeight: 6
+            zHeight: 5.5
         }
     }
 }
