@@ -4,7 +4,7 @@ import {
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [CHRISTOPHER_LETTERS]: {

@@ -1,6 +1,6 @@
 import {
     NOHO_SCHOOLHOUSE
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [NOHO_SCHOOLHOUSE]: {

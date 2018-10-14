@@ -1,7 +1,7 @@
 import {
     CROWD_BACK_FAR,
     CROWD_BACK_NEAR
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [CROWD_BACK_FAR]: {

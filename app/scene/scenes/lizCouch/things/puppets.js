@@ -4,7 +4,7 @@ import {
     OPAL_COUCH,
     PEAHEN,
     PEACOCK
-} from 'scene/puppetKeys'
+} from '../../../puppetKeys'
 
 const ARRANGEMENTS_MAP = {
     [OPAL_LAP]: {

@@ -3,7 +3,7 @@ import {
     CINEMA_POSTER_RIGHT,
     ARRANGEMENT_CINEMA_POSTER,
     ARRANGEMENT_CINEMA_POSTER_STREET
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [CINEMA_POSTER_LEFT]: {

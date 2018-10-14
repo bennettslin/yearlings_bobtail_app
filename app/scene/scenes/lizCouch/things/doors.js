@@ -7,7 +7,7 @@ import {
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE,
     LIZ_GATE_INSIDE_OPEN
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [LIZ_BLINDS]: {

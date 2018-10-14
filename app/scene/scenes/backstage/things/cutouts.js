@@ -1,7 +1,7 @@
 import {
     SANDBAGS,
     STAGE_LIGHTS
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [SANDBAGS]: {

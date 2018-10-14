@@ -1,6 +1,6 @@
 import {
     SHORE_BACK
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [SHORE_BACK]: {

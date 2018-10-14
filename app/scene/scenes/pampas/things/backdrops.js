@@ -1,6 +1,6 @@
 import {
     PAMPAS_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [PAMPAS_BACKDROP]: {

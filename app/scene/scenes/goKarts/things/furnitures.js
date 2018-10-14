@@ -3,7 +3,7 @@ import {
     GO_KART_SEAT_RIGHT,
     GO_KART_DASHBOARD_LEFT,
     GO_KART_DASHBOARD_RIGHT
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_SEAT_LEFT]: {

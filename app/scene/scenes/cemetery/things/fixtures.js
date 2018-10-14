@@ -1,6 +1,6 @@
 import {
     GRAVESTONE
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 
 const ARRANGEMENTS_MAP = {

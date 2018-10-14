@@ -1,6 +1,6 @@
 import {
     STAGE_MIC_FAR
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [STAGE_MIC_FAR]: {

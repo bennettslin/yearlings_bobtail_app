@@ -1,6 +1,6 @@
 import {
     SHORE_BUOY_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [SHORE_BUOY_BACKDROP]: {

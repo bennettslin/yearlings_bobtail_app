@@ -1,7 +1,7 @@
 import {
     NIRVANA_POSTER,
     LEONARD_COHEN_POSTER
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [NIRVANA_POSTER]: {

@@ -5,7 +5,7 @@ import {
     VAN_NUYS_PLANTS,
     ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS,
     ARRANGEMENT_VAN_NUYS_PLANT_QUAD
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [TRASH_CAN]: {

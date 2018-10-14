@@ -1,6 +1,6 @@
 import {
     ESTHER_SPEECH_PANEL
-} from 'scene/panelKeys'
+} from '../../../panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [ESTHER_SPEECH_PANEL]: {

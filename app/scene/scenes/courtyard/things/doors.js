@@ -2,7 +2,7 @@ import {
     BENNETT_BLINDS,
     BENNETT_DOOR_OUTSIDE,
     BENNETT_GATE_SIDE
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_BLINDS]: {

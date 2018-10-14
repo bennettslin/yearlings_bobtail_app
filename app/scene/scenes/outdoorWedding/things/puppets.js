@@ -1,7 +1,7 @@
 import {
     PUPPET_KHARI,
     PUPPET_LIZ
-} from 'scene/puppetKeys'
+} from '../../../puppetKeys'
 
 const ARRANGEMENTS_MAP = {
     [PUPPET_KHARI]: {

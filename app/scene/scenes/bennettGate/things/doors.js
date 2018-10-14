@@ -1,6 +1,6 @@
 import {
     BENNETT_GATE_FRONT
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_GATE_FRONT]: {

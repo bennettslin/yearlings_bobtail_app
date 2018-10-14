@@ -1,6 +1,6 @@
 import {
     HOSPITAL_RECORD_PLAYER
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [HOSPITAL_RECORD_PLAYER]: {

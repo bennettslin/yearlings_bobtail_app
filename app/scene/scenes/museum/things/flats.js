@@ -1,6 +1,6 @@
 import {
     MUSEUM_DISPLAY
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [MUSEUM_DISPLAY]: {

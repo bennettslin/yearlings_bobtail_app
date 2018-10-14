@@ -1,7 +1,7 @@
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [BEDROOM_BLINDS]: {

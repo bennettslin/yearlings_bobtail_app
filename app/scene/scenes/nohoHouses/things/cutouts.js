@@ -1,6 +1,6 @@
 import {
     FIRE_HYDRANT
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [FIRE_HYDRANT]: {

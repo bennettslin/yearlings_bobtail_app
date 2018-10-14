@@ -1,6 +1,6 @@
 import {
     CINEMA_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [CINEMA_BACKDROP]: {

@@ -1,6 +1,6 @@
 import {
     PHONE_CALL_PANEL
-} from 'scene/panelKeys'
+} from '../../../panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [PHONE_CALL_PANEL]: {

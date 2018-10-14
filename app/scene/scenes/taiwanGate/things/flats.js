@@ -1,7 +1,7 @@
 import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_HOUSE_FAR]: {

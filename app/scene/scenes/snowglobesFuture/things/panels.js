@@ -1,7 +1,7 @@
 import {
     SNOWGLOBE_LIZ_KHARI,
     SNOWGLOBE_BENNETT_ALONE
-} from 'scene/panelKeys'
+} from '../../../panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [SNOWGLOBE_LIZ_KHARI]: {

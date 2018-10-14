@@ -1,6 +1,6 @@
 import {
     VAN_NUYS_LOGO
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [VAN_NUYS_LOGO]: {

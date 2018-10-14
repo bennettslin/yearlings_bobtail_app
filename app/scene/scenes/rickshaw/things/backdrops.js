@@ -1,6 +1,6 @@
 import {
     SHORE_RICKSHAW_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [SHORE_RICKSHAW_BACKDROP]: {

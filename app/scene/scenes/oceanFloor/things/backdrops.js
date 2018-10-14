@@ -1,6 +1,6 @@
 import {
     OCEAN_FLOOR_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [OCEAN_FLOOR_BACKDROP]: {

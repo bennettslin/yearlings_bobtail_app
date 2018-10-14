@@ -2,7 +2,7 @@ import {
     SATURN_SEAT_REAR,
     SATURN_SEAT_FRONT,
     SATURN_DASHBOARD
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [SATURN_SEAT_REAR]: {

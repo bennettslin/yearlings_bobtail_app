@@ -1,6 +1,6 @@
 import {
     OCEAN_BOTTOM_FAR
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [OCEAN_BOTTOM_FAR]: {

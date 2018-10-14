@@ -1,6 +1,6 @@
 import {
     GO_KART_THOUGHT_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_THOUGHT_BACKDROP]: {

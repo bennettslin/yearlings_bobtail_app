@@ -1,7 +1,7 @@
 import {
     WEDDING_PLATFORM,
     WEDDING_CROWD
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [WEDDING_PLATFORM]: {

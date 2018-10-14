@@ -2,7 +2,7 @@ import {
     BENNETT_MAT,
     ODIN_MAT,
     BUDDHA_CAVE
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_MAT]: {

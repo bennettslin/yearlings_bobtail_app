@@ -1,7 +1,7 @@
 import {
     BENNETT_ODIN_BUOY,
     YELLOW_TAPED_GRILL
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_ODIN_BUOY]: {

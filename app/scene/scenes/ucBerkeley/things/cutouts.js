@@ -4,7 +4,7 @@ import {
     UC_BERKELEY_TREE,
     ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
     ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [SIGNPOST]: {

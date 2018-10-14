@@ -1,6 +1,6 @@
 import {
     SNOWGLOBE_TETHERBALL
-} from 'scene/panelKeys'
+} from '../../../panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [SNOWGLOBE_TETHERBALL]: {

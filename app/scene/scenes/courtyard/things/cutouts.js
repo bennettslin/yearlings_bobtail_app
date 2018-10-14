@@ -1,6 +1,6 @@
 import {
     RECYCLABLES
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [RECYCLABLES]: {

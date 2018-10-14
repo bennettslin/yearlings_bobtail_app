@@ -5,7 +5,7 @@ import {
     BENNETT_SHOE_REFLECTION,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 
 const ARRANGEMENTS_MAP = {

@@ -3,7 +3,7 @@ import {
     GUITAR,
     BASS_CASE_OPEN,
     DRUMKIT
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [CASH_BOX]: {

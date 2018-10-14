@@ -1,6 +1,6 @@
 import {
     ELLIOTT_SMITH_POSTER
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [ELLIOTT_SMITH_POSTER]: {

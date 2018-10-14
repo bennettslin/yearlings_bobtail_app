@@ -3,7 +3,7 @@ import {
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [PUBLIC_FAR_LEFT]: {

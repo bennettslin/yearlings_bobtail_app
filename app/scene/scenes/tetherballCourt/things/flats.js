@@ -1,6 +1,6 @@
 import {
     VAN_NUYS_SCHOOLHOUSE
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [VAN_NUYS_SCHOOLHOUSE]: {

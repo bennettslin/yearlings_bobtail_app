@@ -1,6 +1,6 @@
 import {
     UC_BERKELEY_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [UC_BERKELEY_BACKDROP]: {

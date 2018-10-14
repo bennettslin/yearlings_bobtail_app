@@ -1,7 +1,7 @@
 import {
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM
-} from 'scene/panelKeys'
+} from '../../../panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [SNOWGLOBE_LIZ_ALONE]: {

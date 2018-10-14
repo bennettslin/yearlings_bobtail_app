@@ -1,7 +1,7 @@
 import {
     EL_TORITO_DOOR_LEFT,
     EL_TORITO_DOOR_RIGHT
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [EL_TORITO_DOOR_LEFT]: {

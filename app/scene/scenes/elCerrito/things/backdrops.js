@@ -1,6 +1,6 @@
 import {
     GOLDEN_GATE_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [GOLDEN_GATE_BACKDROP]: {

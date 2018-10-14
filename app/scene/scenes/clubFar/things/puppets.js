@@ -1,6 +1,6 @@
 import {
     GHOST_ODIN_CLUB
-} from 'scene/puppetKeys'
+} from '../../../puppetKeys'
 
 const ARRANGEMENTS_MAP = {
     [GHOST_ODIN_CLUB]: {

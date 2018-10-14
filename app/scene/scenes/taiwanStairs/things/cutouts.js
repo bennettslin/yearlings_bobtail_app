@@ -2,7 +2,7 @@ import {
     TAIWAN_FRIDGE_SIDE,
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_FRIDGE_SIDE]: {

@@ -1,6 +1,6 @@
 import {
     CAMPANILE
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [CAMPANILE]: {

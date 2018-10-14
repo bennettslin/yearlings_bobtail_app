@@ -1,6 +1,6 @@
 import {
     LOCKER_BANK
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [LOCKER_BANK]: {

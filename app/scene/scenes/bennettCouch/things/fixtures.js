@@ -2,7 +2,7 @@ import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     KEYBOARD
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_RECORD_PLAYER]: {

@@ -1,6 +1,6 @@
 import {
     DISHROOM_SINK
-} from 'scene/panelKeys'
+} from '../../../panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [DISHROOM_SINK]: {

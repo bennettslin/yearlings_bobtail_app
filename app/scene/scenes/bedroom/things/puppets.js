@@ -4,7 +4,7 @@ import {
     ROCKET,
     EARTH,
     SPACE_COLONY
-} from 'scene/puppetKeys'
+} from '../../../puppetKeys'
 
 const ARRANGEMENTS_MAP = {
     [PCHELKA]: {

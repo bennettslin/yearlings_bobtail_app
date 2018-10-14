@@ -1,6 +1,6 @@
 import {
     INVERSE_THOUGHT_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [INVERSE_THOUGHT_BACKDROP]: {

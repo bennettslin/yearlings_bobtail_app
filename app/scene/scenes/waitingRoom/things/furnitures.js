@@ -1,7 +1,7 @@
 import {
     ARMCHAIR_LEFT,
     ARMCHAIR_RIGHT
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [ARMCHAIR_LEFT]: {

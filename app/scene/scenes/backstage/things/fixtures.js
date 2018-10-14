@@ -4,7 +4,7 @@ import {
     ARRANGEMENT_PUSH_BROOM_TUNNEL,
     STEPLADDER,
     MANNEQUIN
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [PUSH_BROOM]: {

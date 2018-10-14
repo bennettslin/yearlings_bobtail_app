@@ -2,7 +2,7 @@ import {
     CLIFF_TREE,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [CLIFF_TREE]: {

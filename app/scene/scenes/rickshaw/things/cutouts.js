@@ -1,7 +1,7 @@
 import {
     BENNETT_SHORE,
     ODIN_SHORE
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_SHORE]: {

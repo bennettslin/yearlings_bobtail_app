@@ -1,6 +1,6 @@
 import {
     ROAD_PAST
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [ROAD_PAST]: {

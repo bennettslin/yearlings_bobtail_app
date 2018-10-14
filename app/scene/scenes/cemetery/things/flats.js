@@ -1,6 +1,6 @@
 import {
     CEMETERY_HILLS_NEAR
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [CEMETERY_HILLS_NEAR]: {

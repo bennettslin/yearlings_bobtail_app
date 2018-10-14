@@ -1,7 +1,7 @@
 import {
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_REAR
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [SCHOOLBUS_SEAT_REAR]: {

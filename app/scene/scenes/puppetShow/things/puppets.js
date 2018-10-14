@@ -11,7 +11,7 @@ import {
     PUPPET_ANITA_END,
     PUPPET_MOTHER_END,
     PUPPET_FATHER_END
-} from 'scene/puppetKeys'
+} from '../../../puppetKeys'
 
 const ARRANGEMENTS_MAP = {
     [PUPPET_BENNETT_BEGIN]: {

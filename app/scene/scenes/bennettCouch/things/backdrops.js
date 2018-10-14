@@ -1,6 +1,6 @@
 import {
     BENNETT_COUCH_THOUGHT_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_COUCH_THOUGHT_BACKDROP]: {

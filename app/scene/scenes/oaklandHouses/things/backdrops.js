@@ -1,6 +1,6 @@
 import {
     OAKLAND_SIDE_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [OAKLAND_SIDE_BACKDROP]: {

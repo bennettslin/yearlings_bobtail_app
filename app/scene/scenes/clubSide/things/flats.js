@@ -1,7 +1,7 @@
 import {
     CROWD_SIDE_NEAR,
     CROWD_SIDE_FAR
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [CROWD_SIDE_FAR]: {

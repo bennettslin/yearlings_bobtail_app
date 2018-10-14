@@ -5,7 +5,7 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT,
     CRACKED_PICTURE
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [BASS_CASE_UPRIGHT]: {

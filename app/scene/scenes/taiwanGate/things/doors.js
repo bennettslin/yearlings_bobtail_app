@@ -1,6 +1,6 @@
 import {
     IRON_GATE
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [IRON_GATE]: {

@@ -1,6 +1,6 @@
 import {
     DUMPSTER
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [DUMPSTER]: {

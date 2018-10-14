@@ -5,7 +5,7 @@ import {
     RESIDENTIAL_FAR_RIGHT,
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [RESIDENTIAL_FAR_LEFT]: {

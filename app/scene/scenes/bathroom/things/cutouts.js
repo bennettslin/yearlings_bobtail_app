@@ -1,7 +1,7 @@
 import {
     MIRRORED_SINK,
     TOWEL_RACK
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [MIRRORED_SINK]: {

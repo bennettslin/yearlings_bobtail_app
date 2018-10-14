@@ -1,7 +1,7 @@
 import {
     FAMILY_HOUSE,
     CAVE_SHADOWS
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [FAMILY_HOUSE]: {

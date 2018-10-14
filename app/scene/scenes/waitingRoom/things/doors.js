@@ -1,7 +1,7 @@
 import {
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [WAITING_ROOM_DOOR]: {

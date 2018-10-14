@@ -1,6 +1,6 @@
 import {
     CINEMA_DOORS
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [CINEMA_DOORS]: {

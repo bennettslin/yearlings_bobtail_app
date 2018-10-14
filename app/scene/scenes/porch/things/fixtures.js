@@ -1,6 +1,6 @@
 import {
     HAIRCUT_SCISSORS
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [HAIRCUT_SCISSORS]: {

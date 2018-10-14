@@ -1,7 +1,7 @@
 import {
     BASEMENT_DOOR_OPEN,
     BASEMENT_DOOR
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [BASEMENT_DOOR_OPEN]: {

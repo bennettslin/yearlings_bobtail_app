@@ -1,6 +1,6 @@
 import {
     CAPTAIN_BED_DRAWERS
-} from 'scene/panelKeys'
+} from '../../../panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [CAPTAIN_BED_DRAWERS]: {

@@ -1,6 +1,6 @@
 import {
     CEMETERY_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [CEMETERY_BACKDROP]: {

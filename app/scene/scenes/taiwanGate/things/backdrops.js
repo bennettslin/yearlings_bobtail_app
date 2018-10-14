@@ -1,6 +1,6 @@
 import {
     TAIWAN_STREETS_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_STREETS_BACKDROP]: {

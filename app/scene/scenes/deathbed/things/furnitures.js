@@ -1,6 +1,6 @@
 import {
     HOSPITAL_MATTRESS
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [HOSPITAL_MATTRESS]: {

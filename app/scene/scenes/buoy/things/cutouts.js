@@ -1,7 +1,7 @@
 import {
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENTS
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_ODIN_DEPTHS]: {

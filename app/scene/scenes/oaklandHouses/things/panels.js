@@ -1,6 +1,6 @@
 import {
     VOLKSWAGEN
-} from 'scene/panelKeys'
+} from '../../../panelKeys'
 
 const ARRANGEMENTS_MAP = {
     [VOLKSWAGEN]: {

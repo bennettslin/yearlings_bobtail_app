@@ -3,7 +3,7 @@ import {
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
     STALACTITES
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [TROLL_SHADOW_LEFT]: {

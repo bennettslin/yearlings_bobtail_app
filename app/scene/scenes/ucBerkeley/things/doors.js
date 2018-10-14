@@ -1,6 +1,6 @@
 import {
     BANCROFT_DOOR
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [BANCROFT_DOOR]: {

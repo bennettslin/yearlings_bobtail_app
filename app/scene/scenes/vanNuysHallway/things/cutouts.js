@@ -1,6 +1,6 @@
 import {
     CORKBOARD
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [CORKBOARD]: {

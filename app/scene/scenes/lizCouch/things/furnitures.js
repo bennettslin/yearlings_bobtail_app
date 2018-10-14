@@ -2,7 +2,7 @@ import {
     LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [LIZ_CUSHIONS]: {

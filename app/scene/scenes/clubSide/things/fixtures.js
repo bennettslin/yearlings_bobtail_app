@@ -2,7 +2,7 @@ import {
     STAGE_MIC_SIDE,
     KICK_DRUM,
     GUITAR_CASE_OPEN
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 
 const ARRANGEMENTS_MAP = {

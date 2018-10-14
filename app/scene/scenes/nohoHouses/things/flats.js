@@ -1,7 +1,7 @@
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [NOHO_HOUSE_LEFT]: {

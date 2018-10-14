@@ -1,6 +1,6 @@
 import {
     ATTIC_CUSHIONS
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [ATTIC_CUSHIONS]: {

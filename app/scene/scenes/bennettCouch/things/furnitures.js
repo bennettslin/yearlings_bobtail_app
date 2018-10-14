@@ -1,6 +1,6 @@
 import {
     BENNETT_CUSHIONS
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_CUSHIONS]: {

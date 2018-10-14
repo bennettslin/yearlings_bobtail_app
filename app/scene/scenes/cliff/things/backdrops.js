@@ -1,6 +1,6 @@
 import {
     CLIFF_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [CLIFF_BACKDROP]: {

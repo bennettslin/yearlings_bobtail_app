@@ -1,6 +1,6 @@
 import {
     TETHERBALL_POLE
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [TETHERBALL_POLE]: {

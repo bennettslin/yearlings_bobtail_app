@@ -1,6 +1,6 @@
 import {
     RECORD_PLAYER_STOOL
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [RECORD_PLAYER_STOOL]: {

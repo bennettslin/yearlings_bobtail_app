@@ -1,6 +1,6 @@
 import {
     BENNETT_ODIN_RICKSHAW
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_ODIN_RICKSHAW]: {

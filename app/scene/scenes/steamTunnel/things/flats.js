@@ -1,6 +1,6 @@
 import {
     STEAM_PIPES
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [STEAM_PIPES]: {

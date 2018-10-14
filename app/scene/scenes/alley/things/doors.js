@@ -1,6 +1,6 @@
 import {
     LOADING_DOCK_DOOR
-} from 'scene/doorKeys'
+} from '../../../doorKeys'
 
 const ARRANGEMENTS_MAP = {
     [LOADING_DOCK_DOOR]: {

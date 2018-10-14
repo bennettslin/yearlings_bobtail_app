@@ -1,6 +1,6 @@
 import {
     FRIDGE_DRAWINGS
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [FRIDGE_DRAWINGS]: {

@@ -2,7 +2,7 @@ import {
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
     REATTA_DASHBOARD
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [REATTA_SEAT]: {

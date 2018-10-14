@@ -1,6 +1,6 @@
 import {
     STAIRWELL_RAILING
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [STAIRWELL_RAILING]: {

@@ -2,7 +2,7 @@ import {
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [BACKPACK_BENNETT]: {

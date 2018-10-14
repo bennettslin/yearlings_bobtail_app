@@ -1,7 +1,7 @@
 import {
     BEDROOM_DESK,
     CAPTAIN_BED_MATTRESS
-} from 'scene/furnitureKeys'
+} from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
     [BEDROOM_DESK]: {

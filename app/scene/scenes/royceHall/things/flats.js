@@ -1,6 +1,6 @@
 import {
     ROYCE_HALL
-} from 'scene/flatKeys'
+} from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
     [ROYCE_HALL]: {

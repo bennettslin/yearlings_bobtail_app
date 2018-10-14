@@ -1,6 +1,6 @@
 import {
     WEST_BERKELEY_BACKDROP
-} from 'scene/backdropKeys'
+} from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
     [WEST_BERKELEY_BACKDROP]: {

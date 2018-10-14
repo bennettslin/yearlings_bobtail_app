@@ -1,7 +1,7 @@
 import {
     NUDE_DRAWINGS,
     VASELINE
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 
 const ARRANGEMENTS_MAP = {

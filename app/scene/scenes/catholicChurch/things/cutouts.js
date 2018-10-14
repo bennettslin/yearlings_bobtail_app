@@ -2,7 +2,7 @@ import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
     BERKELEY_LAMPPOST
-} from 'scene/cutoutKeys'
+} from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
     [DISPENSER_LEFT]: {

@@ -3,7 +3,7 @@ import {
     DRUMS_STACKED,
     ARRANGEMENT_DRUMS_STACKED_BASEMENT,
     ARRANGEMENT_DRUMS_STACKED_CLUB
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 
 const ARRANGEMENTS_MAP = {

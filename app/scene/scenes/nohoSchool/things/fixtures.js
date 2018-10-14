@@ -1,7 +1,7 @@
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [PLAYGROUND_BALL]: {

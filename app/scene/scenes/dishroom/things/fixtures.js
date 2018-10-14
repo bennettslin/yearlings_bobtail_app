@@ -4,7 +4,7 @@ import {
     GLASS_CART,
     GLASS_RACK,
     DISH_PILE
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 
 const ARRANGEMENTS_MAP = {

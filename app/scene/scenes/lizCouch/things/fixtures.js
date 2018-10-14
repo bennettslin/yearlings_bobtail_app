@@ -1,6 +1,6 @@
 import {
     TCHOTCHKES
-} from 'scene/fixtureKeys'
+} from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
     [TCHOTCHKES]: {
