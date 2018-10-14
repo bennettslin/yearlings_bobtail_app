@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [LOADING_DOCK_DOOR]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 3,
+            xWidth: 5,
+            zHeight: 5
         }
     }
 }

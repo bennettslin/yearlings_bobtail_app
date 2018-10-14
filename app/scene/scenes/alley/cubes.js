@@ -1,24 +1,44 @@
 import { ALLEY_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    PAVEMENT_HSLA,
+    WALL_HSLA
 } from '../../hslaKeys'
 
 import {
-    g
+    e,
+    g,
+    k
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    V = PAVEMENT_HSLA,
+    W = WALL_HSLA,
 
     ALLEY_CUBES = {
-        floor: {
+        ceiling: {
             hslaColours: [
+                [W],
+                [W],
                 [D]
             ],
             zIndices: [
                 [g],
+                [g, e, e, e, e, e, g],
+                [k]
+            ]
+        },
+        floor: {
+            hslaColours: [
+                [W],
+                [W],
+                [V]
+            ],
+            zIndices: [
+                [g],
+                [g, 4, 4, 4, 4, 4, g],
                 [1]
             ]
         }

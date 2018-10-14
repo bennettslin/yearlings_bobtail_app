@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [DUMPSTER]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 1,
-            xWidth: 1,
-            zHeight: 2
+            xFloat: 9,
+            xWidth: 4.5,
+            zHeight: 3
         }
     }
 }

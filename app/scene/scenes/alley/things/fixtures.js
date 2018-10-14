@@ -4,11 +4,12 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BURGER_WRAPPER]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
-            xFloat: 6.5,
-            xWidth: 1,
-            zHeight: 1
+            xFloat: 6,
+            xWidth: 0.5,
+            zHeight: 0.5,
+            zOffset: 1.5
         }
     }
 }

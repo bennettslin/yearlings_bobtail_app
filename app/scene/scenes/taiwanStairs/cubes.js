@@ -1,24 +1,39 @@
 import { TAIWAN_STAIRS_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_HSLA,
+    PAVEMENT_HSLA,
+    GATE_HSLA,
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 import {
     e,
-    // f,
     g,
     k
 } from 'scene/cubesConstants'
 
 const
-    // Default.
     D = DEFAULT_HSLA,
+    V = PAVEMENT_HSLA,
+    G = GATE_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
 
     TAIWAN_STAIRS_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [D],
+                [D],
+                [C, C, C, C, C, W, W, W, C],
+                [C],
+                [C],
+                [C, C, C, C, C, C, C, C, C, C]
             ],
             zIndices: [
                 [k],
@@ -31,7 +46,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [G, G, G, G, V, V, V, G, G],
+                [G, V],
+                [W, W, W, W, W, W, W, W, W],
+                [W, F, F, F, P, P, P, P, P, P, P, W],
+                [W, F, F, F, F, F, F, F, F, W, W, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [6, 6, 6, 6, 1, 1, 1, 6, 6],

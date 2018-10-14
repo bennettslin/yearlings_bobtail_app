@@ -21,7 +21,6 @@ import {
     k
 } from 'scene/cubesConstants'
 
-/* eslint-disable */
 const
     D = DEFAULT_HSLA,
     G = GROUND_HSLA,

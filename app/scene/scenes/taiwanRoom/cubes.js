@@ -1,7 +1,11 @@
 import { TAIWAN_ROOM_KEY } from 'scene/cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    CEILING_HSLA,
+    FLOOR_HSLA,
+    WALL_HSLA,
+    PLATFORM_HSLA,
+    FURNITURE_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -11,13 +15,21 @@ import {
 } from 'scene/cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    C = CEILING_HSLA,
+    F = FLOOR_HSLA,
+    W = WALL_HSLA,
+    P = PLATFORM_HSLA,
+    R = FURNITURE_HSLA,
 
     TAIWAN_ROOM_CUBES = {
         ceiling: {
             hslaColours: [
-                [D]
+                [C],
+                [C],
+                [C],
+                [C, C, C, C, W, W, W, C, C, C, C, W],
+                [C, C, C, C, C, C, C, C, C, C, C, W],
+                [C]
             ],
             zIndices: [
                 [g],
@@ -30,7 +42,12 @@ const
         },
         floor: {
             hslaColours: [
-                [D]
+                [W],
+                [W, F, F, W, F, F, F, F, F, F, F, W],
+                [W, F, F, W, F, F, F, F, F, P, P, W],
+                [W, W, W, W, F, F, F, W, W, P, P, W],
+                [W, R, R, R, F, F, F, F, W, P, P, W],
+                [W, F, F, F, F, F, F, F, W, P, P, W]
             ],
             zIndices: [
                 [g],

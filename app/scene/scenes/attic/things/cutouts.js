@@ -31,7 +31,7 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [TELEVISION]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
             xFloat: 3.5,
             xWidth: 1.5,

@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [GHOST_ODIN_ALLEY]: {
-        yIndex: 1,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 7.5,
+            xWidth: 1,
+            zHeight: 2
         }
     }
 }
