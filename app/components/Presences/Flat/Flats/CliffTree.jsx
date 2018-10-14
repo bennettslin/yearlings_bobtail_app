@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CliffGravesBackdrop = ({
+const CliffTree = ({
 
     className,
 
@@ -18,7 +18,7 @@ const CliffGravesBackdrop = ({
     return (
         <Svg
             className={cx(
-                'CliffGravesBackdrop',
+                'CliffTree',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const CliffGravesBackdrop = ({
                 {...other}
             >
                 {cx(
-                    'CliffGravesBackdrop'
+                    'CliffTree'
                 )}
             </text>
         </Svg>
     )
 }
 
-CliffGravesBackdrop.propTypes = propTypes;
+CliffTree.propTypes = propTypes;
 
-export default CliffGravesBackdrop
+export default CliffTree

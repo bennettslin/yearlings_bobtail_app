@@ -56,7 +56,9 @@ import ElCerritoFar from './Flats/ElCerritoFar'
 import ElCerritoNear from './Flats/ElCerritoNear'
 import CrowdBackNear from './Flats/CrowdBackNear'
 import CrowdBackFar from './Flats/CrowdBackFar'
-import CliffGravesBackdrop from './Flats/CliffGravesBackdrop'
+import CliffTree from './Flats/CliffTree'
+import CliffGravesFar from './Flats/CliffGravesFar'
+import CliffGravesNear from './Flats/CliffGravesNear'
 
 import {
     NOHO_HOUSE_LEFT,
@@ -113,7 +115,9 @@ import {
     EL_CERRITO_NEAR,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR,
-    CLIFF_GRAVES
+    CLIFF_TREE,
+    CLIFF_GRAVES_FAR,
+    CLIFF_GRAVES_NEAR
 } from 'scene/flatKeys'
 
 const FLATS_MAP = {
@@ -171,7 +175,9 @@ const FLATS_MAP = {
     [EL_CERRITO_NEAR]: ElCerritoNear,
     [CROWD_BACK_NEAR]: CrowdBackNear,
     [CROWD_BACK_FAR]: CrowdBackFar,
-    [CLIFF_GRAVES]: CliffGravesBackdrop
+    [CLIFF_TREE]: CliffTree,
+    [CLIFF_GRAVES_FAR]: CliffGravesFar,
+    [CLIFF_GRAVES_NEAR]: CliffGravesNear
 },
 DEFAULT_COMPONENT = () => (null)
 

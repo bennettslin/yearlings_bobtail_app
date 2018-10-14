@@ -62,7 +62,9 @@ import {
 } from 'scene/fixtureKeys'
 
 import {
-    CLIFF_GRAVES
+    CLIFF_TREE,
+    CLIFF_GRAVES_FAR,
+    CLIFF_GRAVES_NEAR
 } from 'scene/flatKeys'
 
 import {
@@ -227,7 +229,9 @@ module.exports = [
                 [CLIFF_BACKDROP]: true
             },
             [FLATS]: {
-                [CLIFF_GRAVES]: true
+                [CLIFF_TREE]: true,
+                [CLIFF_GRAVES_FAR]: true,
+                [CLIFF_GRAVES_NEAR]: true
             }
         },
         cubes: CLIFF_KEY,
