@@ -288,12 +288,17 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: 'elCerrito tree and city',
+        taskName: 'golden gate backdrop',
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
+        taskName: 'elCerrito tree, city near and far',
         workedHours: 3,
         neededHours: 5
     },
     {
-        taskName: 'cliff tree and city',
+        taskName: 'cliff tree, graves near and far',
         workedHours: 2,
         neededHours: 3
     },

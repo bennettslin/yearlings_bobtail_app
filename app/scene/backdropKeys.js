@@ -77,7 +77,7 @@ const
     // Own page.
     OAKLAND_FRONT_BACKDROP = 'oaklandFrontBackdrop',
 
-    // TODO
+    // Own page. Requires editing.
     GOLDEN_GATE_BACKDROP = 'goldenGateBackdrop',
 
     // TODO
