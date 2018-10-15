@@ -3,7 +3,8 @@ import { ALLEY_KEY } from '../../cubesKeys'
 import {
     DEFAULT_HSLA,
     PAVEMENT_HSLA,
-    WALL_HSLA
+    WALL_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -16,6 +17,7 @@ const
     D = DEFAULT_HSLA,
     V = PAVEMENT_HSLA,
     W = WALL_HSLA,
+    P = PLATFORM_HSLA,
 
     ALLEY_CUBES = {
         ceiling: {
@@ -34,11 +36,13 @@ const
             hslaColours: [
                 [W],
                 [W],
+                [P, P, P, P, P, P, P, V],
                 [V]
             ],
             zIndices: [
                 [g],
                 [g, 4, 4, 4, 4, 4, g],
+                [4, 4, 4, 4, 4, 4, 4, 1],
                 [1]
             ]
         }

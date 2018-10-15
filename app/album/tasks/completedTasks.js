@@ -3919,8 +3919,8 @@ module.exports = [
     },
     {
         taskName: `Add hslas to scenes.`,
-        workedHours: 13,
-        neededHours: 13
+        workedHours: 15,
+        neededHours: 15
     },
     {
         taskName: `Figure out El Cerrito scene.`,

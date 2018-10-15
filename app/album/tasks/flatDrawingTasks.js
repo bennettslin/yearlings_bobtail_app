@@ -18,15 +18,5 @@ module.exports = [
         taskName: 'past, present, and future',
         workedHours: 0,
         neededHours: 4
-    },
-    {
-        taskName: 'elCerrito tree and city',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: 'cliff tree and city',
-        workedHours: 0,
-        neededHours: 5
     }
 ]

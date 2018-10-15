@@ -288,6 +288,16 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'elCerrito tree and city',
+        workedHours: 3,
+        neededHours: 5
+    },
+    {
+        taskName: 'cliff tree and city',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `Miriam's convertible exterior (Cremated)`,
         workedHours: 2,
         neededHours: 3

@@ -11,6 +11,7 @@ import {
 } from '../../cubesConstants'
 
 const
+    // Default.
     G = GROUND_HSLA,
     H = HILL_HSLA,
     I = HILL_DARKER_HSLA,

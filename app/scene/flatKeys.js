@@ -98,13 +98,13 @@ const
     ROAD_PRESENT = 'roadPresent',
     ROAD_FUTURE = 'roadFuture',
 
-    // TODO
+    // Together on one page.
     EL_CERRITO_TREE = 'elCerritoTree',
+    CLIFF_TREE = 'cliffTree',
+
+    // Together on one page.
     EL_CERRITO_FAR = 'elCerritoFar',
     EL_CERRITO_NEAR = 'elCerritoNear',
-
-    // TODO
-    CLIFF_TREE = 'cliffTree',
     CLIFF_GRAVES_FAR = 'cliffGravesFar',
     CLIFF_GRAVES_NEAR = 'cliffGravesNear'
 
