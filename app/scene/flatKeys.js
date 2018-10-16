@@ -27,7 +27,10 @@ const
     VAN_NUYS_SCHOOLHOUSE = 'vanNuysSchoolhouse',
 
     // TODO
-    SHORE_BACK = 'shoreBack',
+    RICKSHAW_TOWN = 'rickshawTown',
+
+    // TODO
+    SHORE_CARNIVAL = 'shoreCarnival',
 
     // TODO
     OCEAN_DEPTHS_BACK = 'oceanDepthsBack',
@@ -44,6 +47,10 @@ const
 
     // With ucBerkeley backdrop and cutouts. Requires editing.
     CAMPANILE = 'campanile',
+
+    // TODO
+    CINEMA_STREET_FAR = 'cinemaStreetFar',
+    CINEMA_STREET_NEAR = 'cinemaStreetNear',
 
     // Own page.
     MUSEUM_DISPLAY = 'museumDisplay',
@@ -122,13 +129,16 @@ export {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
     VAN_NUYS_SCHOOLHOUSE,
-    SHORE_BACK,
+    RICKSHAW_TOWN,
+    SHORE_CARNIVAL,
     OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR,
     LOCKER_BANK,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
+    CINEMA_STREET_FAR,
+    CINEMA_STREET_NEAR,
     MUSEUM_DISPLAY,
     ROYCE_HALL,
     PHARMACY_AISLE,

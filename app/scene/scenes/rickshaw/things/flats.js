@@ -1,12 +1,12 @@
 import {
-    SHORE_CARNIVAL
+    RICKSHAW_TOWN
 } from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [SHORE_CARNIVAL]: {
+    [RICKSHAW_TOWN]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 2,
+            xFloat: 9,
             xWidth: 5,
             zHeight: 3
         }

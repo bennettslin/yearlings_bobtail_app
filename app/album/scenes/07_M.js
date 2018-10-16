@@ -4,6 +4,7 @@ import {
     BUBBLES,
     CUTOUTS,
     FIXTURES,
+    FLATS,
     DOORS
 } from 'constants/scene'
 
@@ -100,6 +101,11 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../scene/fixtureKeys'
+
+import {
+    CINEMA_STREET_FAR,
+    CINEMA_STREET_NEAR
+} from '../../scene/flatKeys'
 
 import {
     BASEMENT_DOOR_OPEN,
@@ -403,6 +409,10 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER_STREET
+            },
+            [FLATS]: {
+                [CINEMA_STREET_FAR]: true,
+                [CINEMA_STREET_NEAR]: true
             }
         },
         cubes: CINEMA_STREET_KEY,

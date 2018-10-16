@@ -1,22 +1,21 @@
 import { SHORE_KEY } from '../../cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    SAND_HSLA
 } from '../../hslaKeys'
 
 import {
-    RIGHT
+    LEFT
 } from '../../cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    N = SAND_HSLA,
 
     SHORE_CUBES = {
-        slantDirection: RIGHT,
+        slantDirection: LEFT,
         floor: {
             hslaColours: [
-                [D]
+                [N]
             ],
             zIndices: [
                 [0]

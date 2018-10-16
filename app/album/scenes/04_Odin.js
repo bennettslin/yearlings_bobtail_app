@@ -80,7 +80,8 @@ import {
 import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
-    SHORE_BACK,
+    RICKSHAW_TOWN,
+    SHORE_CARNIVAL,
     OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR
 } from '../../scene/flatKeys'
@@ -204,6 +205,9 @@ module.exports = [
             [CUTOUTS]: {
                 [BENNETT_SHORE]: true,
                 [ODIN_SHORE]: true
+            },
+            [FLATS]: {
+                [RICKSHAW_TOWN]: true
             }
         },
         cubes: RICKSHAW_KEY,
@@ -232,7 +236,7 @@ module.exports = [
                 [YELLOW_TAPED_GRILL]: true
             },
             [FLATS]: {
-                [SHORE_BACK]: true
+                [SHORE_CARNIVAL]: true
             }
         },
         cubes: SHORE_KEY,

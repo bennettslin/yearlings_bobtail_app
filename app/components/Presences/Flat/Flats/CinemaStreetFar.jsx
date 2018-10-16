@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const ShoreBack = ({
+const CinemaStreetFar = ({
 
     className,
 
@@ -18,7 +18,7 @@ const ShoreBack = ({
     return (
         <Svg
             className={cx(
-                'ShoreBack',
+                'CinemaStreetFar',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const ShoreBack = ({
                 {...other}
             >
                 {cx(
-                    'ShoreBack'
+                    'CinemaStreetFar'
                 )}
             </text>
         </Svg>
     )
 }
 
-ShoreBack.propTypes = propTypes;
+CinemaStreetFar.propTypes = propTypes;
 
-export default ShoreBack
+export default CinemaStreetFar

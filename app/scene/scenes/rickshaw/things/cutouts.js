@@ -8,16 +8,16 @@ const ARRANGEMENTS_MAP = {
         yIndex: 1,
         arrangement: {
             xFloat: 0.5,
-            xWidth: 2,
-            zHeight: 3
+            xWidth: 1,
+            zHeight: 2
         }
     },
     [ODIN_SHORE]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 10.5,
+            xFloat: 2,
             xWidth: 2,
-            zHeight: 3
+            zHeight: 1
         }
     }
 }

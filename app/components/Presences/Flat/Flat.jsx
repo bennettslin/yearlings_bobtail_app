@@ -15,13 +15,16 @@ import TaiwanMountainRight from './Flats/TaiwanMountainRight'
 import TaiwanHouseFar from './Flats/TaiwanHouseFar'
 import TaiwanHouseNear from './Flats/TaiwanHouseNear'
 import VanNuysSchoolhouse from './Flats/VanNuysSchoolhouse'
-import ShoreBack from './Flats/ShoreBack'
+import RickshawTown from './Flats/RickshawTown'
+import ShoreCarnival from './Flats/ShoreCarnival'
 import OceanDepthsBack from './Flats/OceanDepthsBack'
 import OceanBottomFar from './Flats/OceanBottomFar'
 import LockerBank from './Flats/LockerBank'
 import StJosephsAnnex from './Flats/StJosephsAnnex'
 import StJosephsChurch from './Flats/StJosephsChurch'
 import Campanile from './Flats/Campanile'
+import CinemaStreetFar from './Flats/CinemaStreetFar'
+import CinemaStreetNear from './Flats/CinemaStreetNear'
 import MuseumDisplay from './Flats/MuseumDisplay'
 import RoyceHall from './Flats/RoyceHall'
 import PharmacyAisle from './Flats/PharmacyAisle'
@@ -74,13 +77,16 @@ import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
     VAN_NUYS_SCHOOLHOUSE,
-    SHORE_BACK,
+    RICKSHAW_TOWN,
+    SHORE_CARNIVAL,
     OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR,
     LOCKER_BANK,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
+    CINEMA_STREET_FAR,
+    CINEMA_STREET_NEAR,
     MUSEUM_DISPLAY,
     ROYCE_HALL,
     PHARMACY_AISLE,
@@ -134,13 +140,16 @@ const FLATS_MAP = {
     [TAIWAN_HOUSE_FAR]: TaiwanHouseFar,
     [TAIWAN_HOUSE_NEAR]: TaiwanHouseNear,
     [VAN_NUYS_SCHOOLHOUSE]: VanNuysSchoolhouse,
-    [SHORE_BACK]: ShoreBack,
+    [RICKSHAW_TOWN]: RickshawTown,
+    [SHORE_CARNIVAL]: ShoreCarnival,
     [OCEAN_DEPTHS_BACK]: OceanDepthsBack,
     [OCEAN_BOTTOM_FAR]: OceanBottomFar,
     [LOCKER_BANK]: LockerBank,
     [ST_JOSEPHS_ANNEX]: StJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: StJosephsChurch,
     [CAMPANILE]: Campanile,
+    [CINEMA_STREET_FAR]: CinemaStreetFar,
+    [CINEMA_STREET_NEAR]: CinemaStreetNear,
     [MUSEUM_DISPLAY]: MuseumDisplay,
     [ROYCE_HALL]: RoyceHall,
     [PHARMACY_AISLE]: PharmacyAisle,

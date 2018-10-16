@@ -5,6 +5,7 @@ import {
     HILL_HSLA,
     HILL_DARKER_HSLA,
     GROUND_HSLA,
+    SAND_HSLA,
     STREET_HSLA,
     CROSSWALK_HSLA,
     PAVEMENT_HSLA,
@@ -61,6 +62,14 @@ const
         h: 0,
         s: 0,
         l: 25
+    },
+    /**
+     * N.
+     */
+    SAND = {
+        h: 60,
+        s: 25,
+        l: 90
     },
 
     /**
@@ -180,6 +189,7 @@ const
         [HILL_HSLA]: HILL,
         [HILL_DARKER_HSLA]: HILL_DARKER,
         [GROUND_HSLA]: GROUND,
+        [SAND_HSLA]: SAND,
 
         [STREET_HSLA]: STREET,
         [CROSSWALK_HSLA]: CROSSWALK,

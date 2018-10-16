@@ -3,22 +3,28 @@ import {
 } from '../../cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    SAND_HSLA,
+    STREET_HSLA
 } from '../../hslaKeys'
 
 import {
-    RIGHT
+    LEFT
 } from '../../cubesConstants'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    N = SAND_HSLA,
+    T = STREET_HSLA,
 
     RICKSHAW_CUBES = {
-        slantDirection: RIGHT,
+        slantDirection: LEFT,
         floor: {
             hslaColours: [
-                [D]
+                [N, N, N, N, N, N, N, N, N, T],
+                [N, N, N, N, N, N, N, T],
+                [N, N, N, N, N, N, T],
+                [N, N, N, N, T],
+                [N, N, T],
+                [N, T],
             ],
             zIndices: [
                 [0]

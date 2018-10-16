@@ -86,16 +86,16 @@ const
         floor: {
             hslaColours: [
                 [T],
-                [W, W, W, V, V, T],
-                [W, W, W, V, V, T],
+                [W, W, W, V, V, T, T, T, V],
+                [W, W, W, V, V, T, T, T, T, V],
                 [V, V, V, V, V, T],
                 [V, V, V, V, V, T],
                 [T]
             ],
             zIndices: [
                 [0],
-                [f, f, f, 1, 1, 0],
-                [f, f, f, 1, 1, 0],
+                [f, f, f, 1, 1, 0, 0, 0, 1],
+                [f, f, f, 1, 1, 0, 0, 0, 0, 1],
                 [1, 1, 1, 1, 1, 0],
                 [1, 1, 1, 1, 1, 0],
                 [0]
