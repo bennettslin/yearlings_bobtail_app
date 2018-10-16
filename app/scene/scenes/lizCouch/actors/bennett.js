@@ -9,27 +9,27 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BRUSHING_OFF]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [LEAVING_CRUMBLED]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [AWKWARD_CONSOLATION]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     }
 }

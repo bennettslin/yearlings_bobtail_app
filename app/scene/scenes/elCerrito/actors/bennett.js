@@ -10,35 +10,35 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [REMOVING_PANTS]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [COWGIRL]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [BLOWJOB]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [DISPOSING_CONDOM]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     }
 }

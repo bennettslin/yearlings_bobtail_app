@@ -16,83 +16,83 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BRUSHED_OFF]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [LEAVING_CRUMBLED]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [RETURNING_CORD]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [PETTING_SEATED]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [PETTING_STANDING]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [SIFTING_TCHOTCHKES]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [OPENING_DOOR]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [DEFENDING]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [NOT_HUNGRY]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [ASLEEP_COUCH]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     }
 }

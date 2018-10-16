@@ -11,43 +11,43 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [HARD_ON_REFLECTION]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [MISSIONARY_REFLECTION]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [AFTERGLOW_REFLECTION]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [REACHING_REFLECTION]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [CARESSED_REFLECTION]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     }
 }

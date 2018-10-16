@@ -9,51 +9,51 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [ENRAGED]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [FEARFUL]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [GUILT_RIDDEN]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [FEIGNING_SICK]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [ASLEEP]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     },
     [SHAKEN]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     }
 }

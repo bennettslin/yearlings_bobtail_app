@@ -2,11 +2,11 @@ import { EPILOGUE } from 'scene/instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [EPILOGUE]: {
-        yIndex: -1,
+        yIndex: 5,
         arrangement: {
-            xFloat: 0,
-            xWidth: 0,
-            zHeight: 0
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
         }
     }
 }
