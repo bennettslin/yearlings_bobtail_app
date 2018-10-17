@@ -21,7 +21,8 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_AUTUMN
+    SEASON_AUTUMN,
+    SEASON_OCEAN
 } from '../../scene/sky'
 
 import {
@@ -82,8 +83,10 @@ import {
     TAIWAN_HOUSE_NEAR,
     RICKSHAW_TOWN,
     SHORE_CARNIVAL,
-    OCEAN_DEPTHS_BACK,
-    OCEAN_BOTTOM_FAR
+    OCEAN_BOTTOM_FAR,
+    OCEAN_BOTTOM_MIDDLE,
+    OCEAN_BOTTOM_NEAR,
+    OCEAN_FLOOR_FAR
 } from '../../scene/flatKeys'
 
 import {
@@ -264,9 +267,6 @@ module.exports = [
                 [BENNETT_ODIN_DEPTHS]: true,
                 [SEA_SERPENTS]: true
             },
-            [FLATS]: {
-                [OCEAN_DEPTHS_BACK]: true
-            },
             [FURNITURES]: {
                 [BUOY_FLOAT]: true
             }
@@ -274,7 +274,7 @@ module.exports = [
         cubes: BUOY_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_OCEAN
         }
     },
     {
@@ -303,13 +303,15 @@ module.exports = [
                 [ODIN_OCEAN_FLOOR]: true
             },
             [FLATS]: {
-                [OCEAN_BOTTOM_FAR]: true
+                [OCEAN_BOTTOM_FAR]: true,
+                [OCEAN_BOTTOM_MIDDLE]: true,
+                [OCEAN_BOTTOM_NEAR]: true
             }
         },
         cubes: OCEAN_DEPTHS_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_OCEAN
         }
     },
     {
@@ -331,12 +333,15 @@ module.exports = [
                 [BENNETT_MAT]: true,
                 [ODIN_MAT]: true,
                 [BUDDHA_CAVE]: true
+            },
+            [FLATS]: {
+                [OCEAN_FLOOR_FAR]: true
             }
         },
         cubes: OCEAN_FLOOR_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_OCEAN
         }
     }
 ]

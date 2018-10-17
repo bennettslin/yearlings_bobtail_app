@@ -1,7 +1,7 @@
 import { OCEAN_FLOOR_KEY } from '../../cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    SAND_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -10,13 +10,13 @@ import {
 
 const
     // Default.
-    D = DEFAULT_HSLA,
+    S = SAND_HSLA,
 
     OCEAN_FLOOR_CUBES = {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
-                [D]
+                [S]
             ],
             zIndices: [
                 [0]

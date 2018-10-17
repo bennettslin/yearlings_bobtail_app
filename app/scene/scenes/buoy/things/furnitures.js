@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BUOY_FLOAT]: {
-        yIndex: 0,
+        yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 2,
-            zHeight: 5.5
+            xFloat: 9,
+            xWidth: 4,
+            zHeight: 4
         }
     }
 }

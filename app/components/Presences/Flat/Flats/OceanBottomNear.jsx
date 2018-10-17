@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const OceanDepthsBack = ({
+const OceanBottomNear = ({
 
     className,
 
@@ -18,7 +18,7 @@ const OceanDepthsBack = ({
     return (
         <Svg
             className={cx(
-                'OceanDepthsBack',
+                'OceanBottomNear',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const OceanDepthsBack = ({
                 {...other}
             >
                 {cx(
-                    'OceanDepthsBack'
+                    'OceanBottomNear'
                 )}
             </text>
         </Svg>
     )
 }
 
-OceanDepthsBack.propTypes = propTypes;
+OceanBottomNear.propTypes = propTypes;
 
-export default OceanDepthsBack
+export default OceanBottomNear

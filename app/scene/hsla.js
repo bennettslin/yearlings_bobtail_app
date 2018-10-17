@@ -17,7 +17,8 @@ import {
     PLATFORM_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
-    SEAT_HSLA
+    SEAT_HSLA,
+    OCEAN_HSLA
 } from './hslaKeys'
 
 const
@@ -180,6 +181,15 @@ const
         l: 75
     },
 
+    /**
+     * O.
+     */
+    OCEAN = {
+        h: 240,
+        s: 50,
+        l: 75
+    },
+
     HSLA_MAP = {
         [DEFAULT_HSLA]: DEFAULT,
 
@@ -204,7 +214,8 @@ const
         [PLATFORM_HSLA]: PLATFORM,
         [FURNITURE_HSLA]: FURNITURE,
         [UPHOLSTERY_HSLA]: UPHOLSTERY,
-        [SEAT_HSLA]: SEAT
+        [SEAT_HSLA]: SEAT,
+        [OCEAN_HSLA]: OCEAN
     }
 
 export {

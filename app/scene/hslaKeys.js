@@ -23,6 +23,7 @@ PLATFORM_HSLA = 'platform',
 FURNITURE_HSLA = 'furniture',
 UPHOLSTERY_HSLA = 'upholstery',
 SEAT_HSLA = 'seat',
+OCEAN_HSLA = 'ocean',
 
 HSLA_KEYS = [
     DEFAULT_HSLA,
@@ -43,7 +44,8 @@ HSLA_KEYS = [
     PLATFORM_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
-    SEAT_HSLA
+    SEAT_HSLA,
+    OCEAN_HSLA
 ]
 
 export {
@@ -67,5 +69,6 @@ export {
     PLATFORM_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
-    SEAT_HSLA
+    SEAT_HSLA,
+    OCEAN_HSLA
 }

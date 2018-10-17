@@ -6,27 +6,27 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_MAT]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 0.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 2.5,
+            xWidth: 0.5,
+            zHeight: 0.5
         }
     },
     [ODIN_MAT]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 3,
+            xWidth: 0.5,
+            zHeight: 0.5
         }
     },
     [BUDDHA_CAVE]: {
-        yIndex: 1,
+        yIndex: 3,
         arrangement: {
-            xFloat: 10.5,
-            xWidth: 2,
-            zHeight: 3
+            xFloat: 3,
+            xWidth: 5,
+            zHeight: 2
         }
     }
 }

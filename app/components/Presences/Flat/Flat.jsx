@@ -17,8 +17,10 @@ import TaiwanHouseNear from './Flats/TaiwanHouseNear'
 import VanNuysSchoolhouse from './Flats/VanNuysSchoolhouse'
 import RickshawTown from './Flats/RickshawTown'
 import ShoreCarnival from './Flats/ShoreCarnival'
-import OceanDepthsBack from './Flats/OceanDepthsBack'
 import OceanBottomFar from './Flats/OceanBottomFar'
+import OceanBottomMiddle from './Flats/OceanBottomMiddle'
+import OceanBottomNear from './Flats/OceanBottomNear'
+import OceanFloorFar from './Flats/OceanFloorFar'
 import LockerBank from './Flats/LockerBank'
 import StJosephsAnnex from './Flats/StJosephsAnnex'
 import StJosephsChurch from './Flats/StJosephsChurch'
@@ -79,8 +81,10 @@ import {
     VAN_NUYS_SCHOOLHOUSE,
     RICKSHAW_TOWN,
     SHORE_CARNIVAL,
-    OCEAN_DEPTHS_BACK,
     OCEAN_BOTTOM_FAR,
+    OCEAN_BOTTOM_MIDDLE,
+    OCEAN_BOTTOM_NEAR,
+    OCEAN_FLOOR_FAR,
     LOCKER_BANK,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
@@ -142,8 +146,10 @@ const FLATS_MAP = {
     [VAN_NUYS_SCHOOLHOUSE]: VanNuysSchoolhouse,
     [RICKSHAW_TOWN]: RickshawTown,
     [SHORE_CARNIVAL]: ShoreCarnival,
-    [OCEAN_DEPTHS_BACK]: OceanDepthsBack,
     [OCEAN_BOTTOM_FAR]: OceanBottomFar,
+    [OCEAN_BOTTOM_MIDDLE]: OceanBottomMiddle,
+    [OCEAN_BOTTOM_NEAR]: OceanBottomNear,
+    [OCEAN_FLOOR_FAR]: OceanFloorFar,
     [LOCKER_BANK]: LockerBank,
     [ST_JOSEPHS_ANNEX]: StJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: StJosephsChurch,

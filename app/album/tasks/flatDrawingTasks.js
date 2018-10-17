@@ -1,16 +1,21 @@
 module.exports = [
     {
-        taskName: 'shoreBack',
+        taskName: 'rickshawTown',
         workedHours: 0,
         neededHours: 4
     },
     {
-        taskName: 'oceanDepthsBack',
+        taskName: 'shoreCarnival',
         workedHours: 0,
         neededHours: 4
     },
     {
-        taskName: 'oceanBottomFar',
+        taskName: 'oceanBottoms',
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: 'oceanFloorFar',
         workedHours: 0,
         neededHours: 4
     },
