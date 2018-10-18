@@ -13,9 +13,6 @@ import VanNuysThoughtBackdrop from './Backdrops/VanNuysThoughtBackdrop'
 import TaiwanStreetsBackdrop from './Backdrops/TaiwanStreetsBackdrop'
 import ShoreRickshawBackdrop from './Backdrops/ShoreRickshawBackdrop'
 import ShoreBuoyBackdrop from './Backdrops/ShoreBuoyBackdrop'
-import OceanBuoyBackdrop from './Backdrops/OceanBuoyBackdrop'
-import OceanDepthsBackdrop from './Backdrops/OceanDepthsBackdrop'
-import OceanFloorBackdrop from './Backdrops/OceanFloorBackdrop'
 import BedroomBusBackdrop from './Backdrops/BedroomBusBackdrop'
 import VanNuysSchoolBackdrop from './Backdrops/VanNuysSchoolBackdrop'
 import BennettCouchThoughtBackdrop from './Backdrops/BennettCouchThoughtBackdrop'
@@ -47,9 +44,6 @@ import {
     TAIWAN_STREETS_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,
-    OCEAN_BUOY_BACKDROP,
-    OCEAN_DEPTHS_BACKDROP,
-    OCEAN_FLOOR_BACKDROP,
     BEDROOM_BUS_BACKDROP,
     VAN_NUYS_SCHOOL_BACKDROP,
     BENNETT_COUCH_THOUGHT_BACKDROP,
@@ -82,9 +76,6 @@ const BACKDROPS_MAP = {
     [TAIWAN_STREETS_BACKDROP]: TaiwanStreetsBackdrop,
     [SHORE_RICKSHAW_BACKDROP]: ShoreRickshawBackdrop,
     [SHORE_BUOY_BACKDROP]: ShoreBuoyBackdrop,
-    [OCEAN_BUOY_BACKDROP]: OceanBuoyBackdrop,
-    [OCEAN_DEPTHS_BACKDROP]: OceanDepthsBackdrop,
-    [OCEAN_FLOOR_BACKDROP]: OceanFloorBackdrop,
     [BEDROOM_BUS_BACKDROP]: BedroomBusBackdrop,
     [VAN_NUYS_SCHOOL_BACKDROP]: VanNuysSchoolBackdrop,
     [BENNETT_COUCH_THOUGHT_BACKDROP]: BennettCouchThoughtBackdrop,

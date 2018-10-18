@@ -34,15 +34,6 @@ const
     SHORE_BUOY_BACKDROP = 'shoreBuoyBackdrop',
 
     // TODO
-    OCEAN_BUOY_BACKDROP = 'oceanBuoyBackdrop',
-
-    // TODO
-    OCEAN_DEPTHS_BACKDROP = 'oceanDepthsBackdrop',
-
-    // TODO
-    OCEAN_FLOOR_BACKDROP = 'oceanFloorBackdrop',
-
-    // TODO
     VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
 
     // TODO
@@ -101,9 +92,6 @@ export {
     TAIWAN_STREETS_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,
-    OCEAN_BUOY_BACKDROP,
-    OCEAN_DEPTHS_BACKDROP,
-    OCEAN_FLOOR_BACKDROP,
     BEDROOM_BUS_BACKDROP,
     VAN_NUYS_SCHOOL_BACKDROP,
     BENNETT_COUCH_THOUGHT_BACKDROP,

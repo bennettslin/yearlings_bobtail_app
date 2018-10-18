@@ -138,6 +138,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'oceanBottoms',
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
         taskName: `2 * Locker bank (inside and outside) (Pchelka)`,
         workedHours: 1,
         neededHours: 2

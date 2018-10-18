@@ -32,7 +32,7 @@ const
     // TODO
     SHORE_CARNIVAL = 'shoreCarnival',
 
-    // TODO
+    // Together on one page.
     OCEAN_BOTTOM_FAR = 'oceanBottomFar',
     OCEAN_BOTTOM_MIDDLE = 'oceanBottomMiddle',
     OCEAN_BOTTOM_NEAR = 'oceanBottomNear',

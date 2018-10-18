@@ -46,10 +46,7 @@ import { MERMAID } from '../../scene/instanceKeys/sasha'
 import {
     TAIWAN_STREETS_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
-    SHORE_BUOY_BACKDROP,
-    OCEAN_BUOY_BACKDROP,
-    OCEAN_DEPTHS_BACKDROP,
-    OCEAN_FLOOR_BACKDROP
+    SHORE_BUOY_BACKDROP
 } from '../../scene/backdropKeys'
 
 import {
@@ -260,9 +257,6 @@ module.exports = [
                     instance: BUOY
                 }
             },
-            [BACKDROPS]: {
-                [OCEAN_BUOY_BACKDROP]: true
-            },
             [CUTOUTS]: {
                 [BENNETT_ODIN_DEPTHS]: true,
                 [SEA_SERPENTS]: true
@@ -295,9 +289,6 @@ module.exports = [
                     instance: MERMAID
                 }
             },
-            [BACKDROPS]: {
-                [OCEAN_DEPTHS_BACKDROP]: true
-            },
             [CUTOUTS]: {
                 [BENNETT_OCEAN_FLOOR]: true,
                 [ODIN_OCEAN_FLOOR]: true
@@ -325,9 +316,6 @@ module.exports = [
                     description: 'side angle, crouched in sand, looking back',
                     instance: OCEAN_FLOOR
                 }
-            },
-            [BACKDROPS]: {
-                [OCEAN_FLOOR_BACKDROP]: true
             },
             [CUTOUTS]: {
                 [BENNETT_MAT]: true,
