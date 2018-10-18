@@ -4,7 +4,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [OCEAN_FLOOR_FAR]: {
-        yIndex: 1,
+        yIndex: 0,
         arrangement: {
             xFloat: 5.5,
             xWidth: 12,

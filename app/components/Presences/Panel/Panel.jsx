@@ -5,21 +5,23 @@ import cx from 'classnames'
 import EstherSpeechPanel from './Panels/EstherSpeechPanel'
 import Bathtub from './Panels/Bathtub'
 import CaptainBedDrawers from './Panels/CaptainBedDrawers'
-import SchoolbusExterior from './Panels/SchoolbusExterior'
 import SchoolbusInterior from './Panels/SchoolbusInterior'
+import SchoolbusExterior from './Panels/SchoolbusExterior'
+import OceanCaveInterior from './Panels/OceanCaveInterior'
+import OceanCaveExterior from './Panels/OceanCaveExterior'
 import GoKartExteriorLeft from './Panels/GoKartExteriorLeft'
 import GoKartExteriorRight from './Panels/GoKartExteriorRight'
 import DishroomSink from './Panels/DishroomSink'
-import SaturnExterior from './Panels/SaturnExterior'
 import SaturnInterior from './Panels/SaturnInterior'
+import SaturnExterior from './Panels/SaturnExterior'
 import Volkswagen from './Panels/Volkswagen'
 import SnowglobeTetherball from './Panels/SnowglobeTetherball'
 import SnowglobeLizAlone from './Panels/SnowglobeLizAlone'
 import SnowglobeBennettMiriam from './Panels/SnowglobeBennettMiriam'
 import SnowglobeLizKhari from './Panels/SnowglobeLizKhari'
 import SnowglobeBennettAlone from './Panels/SnowglobeBennettAlone'
-import ReattaExterior from './Panels/ReattaExterior'
 import ReattaInterior from './Panels/ReattaInterior'
+import ReattaExterior from './Panels/ReattaExterior'
 import PhoneCallPanel from './Panels/PhoneCallPanel'
 import DeathbedThoughtPanel from './Panels/DeathbedThoughtPanel'
 import TennisThoughtPanel from './Panels/TennisThoughtPanel'
@@ -30,6 +32,8 @@ import {
     CAPTAIN_BED_DRAWERS,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
+    OCEAN_CAVE_INTERIOR,
+    OCEAN_CAVE_EXTERIOR,
     GO_KART_EXTERIOR_LEFT,
     GO_KART_EXTERIOR_RIGHT,
     DISHROOM_SINK,
@@ -52,21 +56,23 @@ const PANELS_MAP = {
     [ESTHER_SPEECH_PANEL]: EstherSpeechPanel,
     [BATHTUB]: Bathtub,
     [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers,
-    [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
     [SCHOOLBUS_INTERIOR]: SchoolbusInterior,
+    [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
+    [OCEAN_CAVE_INTERIOR]: OceanCaveInterior,
+    [OCEAN_CAVE_EXTERIOR]: OceanCaveExterior,
     [GO_KART_EXTERIOR_LEFT]: GoKartExteriorLeft,
     [GO_KART_EXTERIOR_RIGHT]: GoKartExteriorRight,
     [DISHROOM_SINK]: DishroomSink,
-    [SATURN_EXTERIOR]: SaturnExterior,
     [SATURN_INTERIOR]: SaturnInterior,
+    [SATURN_EXTERIOR]: SaturnExterior,
     [VOLKSWAGEN]: Volkswagen,
     [SNOWGLOBE_TETHERBALL]: SnowglobeTetherball,
     [SNOWGLOBE_LIZ_ALONE]: SnowglobeLizAlone,
     [SNOWGLOBE_BENNETT_MIRIAM]: SnowglobeBennettMiriam,
     [SNOWGLOBE_LIZ_KHARI]: SnowglobeLizKhari,
     [SNOWGLOBE_BENNETT_ALONE]: SnowglobeBennettAlone,
-    [REATTA_EXTERIOR]: ReattaExterior,
     [REATTA_INTERIOR]: ReattaInterior,
+    [REATTA_EXTERIOR]: ReattaExterior,
     [PHONE_CALL_PANEL]: PhoneCallPanel,
     [DEATHBED_THOUGHT_PANEL]: DeathbedThoughtPanel,
     [TENNIS_THOUGHT_PANEL]: TennisThoughtPanel

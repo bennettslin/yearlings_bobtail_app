@@ -1,7 +1,6 @@
 import {
     BENNETT_MAT,
-    ODIN_MAT,
-    BUDDHA_CAVE
+    ODIN_MAT
 } from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -19,14 +18,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 3,
             xWidth: 0.5,
             zHeight: 0.5
-        }
-    },
-    [BUDDHA_CAVE]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 3,
-            xWidth: 5,
-            zHeight: 2
         }
     }
 }

@@ -73,9 +73,6 @@ const
     BENNETT_MAT = 'bennettMat',
     ODIN_MAT = 'odinMat',
 
-    // TODO
-    BUDDHA_CAVE = 'buddhaCave',
-
     // Together on one page.
     TRASH_CAN = 'trashCan',
     VAN_NUYS_PLANTS = 'vanNuysPlants',
@@ -190,7 +187,6 @@ export {
     ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT,
-    BUDDHA_CAVE,
     TRASH_CAN,
     VAN_NUYS_PLANTS,
     VAN_NUYS_LOGO,

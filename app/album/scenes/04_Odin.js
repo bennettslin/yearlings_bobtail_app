@@ -5,7 +5,8 @@ import {
     FIXTURES,
     FLATS,
     DOORS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -67,8 +68,7 @@ import {
     BENNETT_OCEAN_FLOOR,
     ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
-    ODIN_MAT,
-    BUDDHA_CAVE
+    ODIN_MAT
 } from '../../scene/cutoutKeys'
 
 import {
@@ -95,6 +95,11 @@ import {
     STAIRWELL_RAILING,
     BUOY_FLOAT
 } from '../../scene/furnitureKeys'
+
+import {
+    OCEAN_CAVE_INTERIOR,
+    OCEAN_CAVE_EXTERIOR
+} from '../../scene/panelKeys'
 
 module.exports = [
     {
@@ -319,11 +324,14 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [BENNETT_MAT]: true,
-                [ODIN_MAT]: true,
-                [BUDDHA_CAVE]: true
+                [ODIN_MAT]: true
             },
             [FLATS]: {
                 [OCEAN_FLOOR_FAR]: true
+            },
+            [PANELS]: {
+                [OCEAN_CAVE_INTERIOR]: true,
+                [OCEAN_CAVE_EXTERIOR]: true
             }
         },
         cubes: OCEAN_FLOOR_KEY,

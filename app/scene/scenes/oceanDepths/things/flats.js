@@ -6,6 +6,14 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [OCEAN_BOTTOM_FAR]: {
+        yIndex: 0,
+        arrangement: {
+            xFloat: 5.5,
+            xWidth: 12,
+            zHeight: 4
+        }
+    },
+    [OCEAN_BOTTOM_MIDDLE]: {
         yIndex: 1,
         arrangement: {
             xFloat: 5.5,
@@ -13,20 +21,12 @@ const ARRANGEMENTS_MAP = {
             zHeight: 3
         }
     },
-    [OCEAN_BOTTOM_MIDDLE]: {
+    [OCEAN_BOTTOM_NEAR]: {
         yIndex: 2,
         arrangement: {
             xFloat: 5.5,
             xWidth: 12,
             zHeight: 2
-        }
-    },
-    [OCEAN_BOTTOM_NEAR]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 12,
-            zHeight: 1
         }
     }
 }

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BuddhaCave = ({
+const OceanCaveExterior = ({
 
     className,
 
@@ -18,13 +18,13 @@ const BuddhaCave = ({
     return (
         <Svg
             className={cx(
-                'BuddhaCave',
+                'OceanCaveExterior',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const BuddhaCave = ({
                 {...other}
             >
                 {cx(
-                    'BuddhaCave'
+                    'OceanCaveExterior'
                 )}
             </text>
         </Svg>
     )
 }
 
-BuddhaCave.propTypes = propTypes;
+OceanCaveExterior.propTypes = propTypes;
 
-export default BuddhaCave
+export default OceanCaveExterior

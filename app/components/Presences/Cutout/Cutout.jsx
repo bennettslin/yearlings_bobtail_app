@@ -33,7 +33,6 @@ import BennettOceanFloor from './Cutouts/BennettOceanFloor'
 import OdinOceanFloor from './Cutouts/OdinOceanFloor'
 import BennettMat from './Cutouts/BennettMat'
 import OdinMat from './Cutouts/OdinMat'
-import BuddhaCave from './Cutouts/BuddhaCave'
 import TrashCan from './Cutouts/TrashCan'
 import VanNuysPlants from './Cutouts/VanNuysPlants'
 import VanNuysLogo from './Cutouts/VanNuysLogo'
@@ -106,7 +105,6 @@ import {
     ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT,
-    BUDDHA_CAVE,
     TRASH_CAN,
     VAN_NUYS_PLANTS,
     VAN_NUYS_LOGO,
@@ -180,7 +178,6 @@ const CUTOUTS_MAP = {
     [ODIN_OCEAN_FLOOR]: OdinOceanFloor,
     [BENNETT_MAT]: BennettMat,
     [ODIN_MAT]: OdinMat,
-    [BUDDHA_CAVE]: BuddhaCave,
     [TRASH_CAN]: TrashCan,
     [VAN_NUYS_PLANTS]: VanNuysPlants,
     [VAN_NUYS_LOGO]: VanNuysLogo,

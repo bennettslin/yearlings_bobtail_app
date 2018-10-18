@@ -8,9 +8,13 @@ const
     // TODO
     CAPTAIN_BED_DRAWERS = 'captainBedDrawers',
 
-    // Own page.
-    SCHOOLBUS_EXTERIOR = 'schoolbusExterior',
+    // Own page. Requires editing.
     SCHOOLBUS_INTERIOR = 'schoolbusInterior',
+    SCHOOLBUS_EXTERIOR = 'schoolbusExterior',
+
+    // TODO
+    OCEAN_CAVE_INTERIOR = 'oceanCaveInterior',
+    OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior',
 
     // TODO: Single component with different arrangements.
     GO_KART_EXTERIOR_LEFT = 'goKartExteriorLeft',
@@ -19,9 +23,9 @@ const
     // With dishroom fixtures.
     DISHROOM_SINK = 'dishroomSink',
 
-    // Own page.
-    SATURN_EXTERIOR = 'saturnExterior',
+    // Own page. Requires editing.
     SATURN_INTERIOR = 'saturnInterior',
+    SATURN_EXTERIOR = 'saturnExterior',
 
     // Own page.
     VOLKSWAGEN = 'volkswagen',
@@ -34,10 +38,10 @@ const
     SNOWGLOBE_BENNETT_ALONE = 'snowglobeBennettAlone',
 
     // Own page.
-    REATTA_EXTERIOR = 'reattaExterior',
+    REATTA_INTERIOR = 'reattaInterior',
 
     // Own page.
-    REATTA_INTERIOR = 'reattaInterior',
+    REATTA_EXTERIOR = 'reattaExterior',
 
     // TODO
     DEATHBED_THOUGHT_PANEL = 'deathbedThoughtPanel',
@@ -52,21 +56,23 @@ export {
     ESTHER_SPEECH_PANEL,
     BATHTUB,
     CAPTAIN_BED_DRAWERS,
-    SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
+    SCHOOLBUS_EXTERIOR,
+    OCEAN_CAVE_INTERIOR,
+    OCEAN_CAVE_EXTERIOR,
     GO_KART_EXTERIOR_LEFT,
     GO_KART_EXTERIOR_RIGHT,
     DISHROOM_SINK,
-    SATURN_EXTERIOR,
     SATURN_INTERIOR,
+    SATURN_EXTERIOR,
     VOLKSWAGEN,
     SNOWGLOBE_TETHERBALL,
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBE_LIZ_KHARI,
     SNOWGLOBE_BENNETT_ALONE,
-    REATTA_EXTERIOR,
     REATTA_INTERIOR,
+    REATTA_EXTERIOR,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
     PHONE_CALL_PANEL

@@ -5,19 +5,21 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_ODIN_DEPTHS]: {
-        yIndex: 1,
+        yIndex: 0,
         arrangement: {
             xFloat: 2,
-            xWidth: 0.5,
-            zHeight: 0.5
+            xWidth: 1,
+            zHeight: 1,
+            zOffset: 3.5
         }
     },
     [SEA_SERPENTS]: {
-        yIndex: 1,
+        yIndex: 0,
         arrangement: {
-            xFloat: 2,
-            xWidth: 2,
-            zHeight: 2
+            xFloat: 1,
+            xWidth: 5,
+            zHeight: 4,
+            zOffset: 2
         }
     }
 }
