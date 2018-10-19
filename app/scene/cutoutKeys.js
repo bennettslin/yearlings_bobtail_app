@@ -31,7 +31,7 @@ const
     // Own page. Requires editing.
     CAMPFIRE = 'campfire',
 
-    // TODO
+    // With ocean floor backdrop and ocean cave panels.
     BUDDHA_SHRINE = 'buddhaShrine',
 
     // Own page.

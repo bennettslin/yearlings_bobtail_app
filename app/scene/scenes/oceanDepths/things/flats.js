@@ -1,18 +1,9 @@
 import {
-    OCEAN_BOTTOM_FAR,
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
 } from '../../../flatKeys'
 
 const ARRANGEMENTS_MAP = {
-    [OCEAN_BOTTOM_FAR]: {
-        yIndex: 0,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 12,
-            zHeight: 4
-        }
-    },
     [OCEAN_BOTTOM_MIDDLE]: {
         yIndex: 1,
         arrangement: {

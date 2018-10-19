@@ -143,6 +143,16 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: 'ocean floor backdrop and ocean cave panels',
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
+        taskName: 'buddha shrine cutout',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `2 * Locker bank (inside and outside) (Pchelka)`,
         workedHours: 1,
         neededHours: 2

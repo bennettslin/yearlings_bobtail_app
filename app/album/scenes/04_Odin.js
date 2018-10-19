@@ -47,7 +47,9 @@ import { MERMAID } from '../../scene/instanceKeys/sasha'
 import {
     TAIWAN_STREETS_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
-    SHORE_BUOY_BACKDROP
+    SHORE_BUOY_BACKDROP,
+    OCEAN_BOTTOM_FAR,
+    OCEAN_FLOOR_FAR
 } from '../../scene/backdropKeys'
 
 import {
@@ -80,10 +82,8 @@ import {
     TAIWAN_HOUSE_NEAR,
     RICKSHAW_TOWN,
     SHORE_CARNIVAL,
-    OCEAN_BOTTOM_FAR,
     OCEAN_BOTTOM_MIDDLE,
-    OCEAN_BOTTOM_NEAR,
-    OCEAN_FLOOR_FAR
+    OCEAN_BOTTOM_NEAR
 } from '../../scene/flatKeys'
 
 import {
@@ -294,12 +294,14 @@ module.exports = [
                     instance: MERMAID
                 }
             },
+            [BACKDROPS]: {
+                [OCEAN_BOTTOM_FAR]: true
+            },
             [CUTOUTS]: {
                 [BENNETT_OCEAN_FLOOR]: true,
                 [ODIN_OCEAN_FLOOR]: true
             },
             [FLATS]: {
-                [OCEAN_BOTTOM_FAR]: true,
                 [OCEAN_BOTTOM_MIDDLE]: true,
                 [OCEAN_BOTTOM_NEAR]: true
             }
@@ -322,12 +324,12 @@ module.exports = [
                     instance: OCEAN_FLOOR
                 }
             },
+            [BACKDROPS]: {
+                [OCEAN_FLOOR_FAR]: true
+            },
             [CUTOUTS]: {
                 [BENNETT_MAT]: true,
                 [ODIN_MAT]: true
-            },
-            [FLATS]: {
-                [OCEAN_FLOOR_FAR]: true
             },
             [PANELS]: {
                 [OCEAN_CAVE_INTERIOR]: true,

@@ -12,7 +12,7 @@ const
     SCHOOLBUS_INTERIOR = 'schoolbusInterior',
     SCHOOLBUS_EXTERIOR = 'schoolbusExterior',
 
-    // TODO
+    // With buddha shrine cutout and ocean floor backdrop.
     OCEAN_CAVE_INTERIOR = 'oceanCaveInterior',
     OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior',
 

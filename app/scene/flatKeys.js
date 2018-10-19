@@ -32,13 +32,9 @@ const
     // TODO
     SHORE_CARNIVAL = 'shoreCarnival',
 
-    // Together on one page.
-    OCEAN_BOTTOM_FAR = 'oceanBottomFar',
+    // With ocean bottom backdrop.
     OCEAN_BOTTOM_MIDDLE = 'oceanBottomMiddle',
     OCEAN_BOTTOM_NEAR = 'oceanBottomNear',
-
-    // TODO
-    OCEAN_FLOOR_FAR = 'oceanFloorFar',
 
     // Own page.
     LOCKER_BANK = 'lockerBank',
@@ -133,10 +129,8 @@ export {
     VAN_NUYS_SCHOOLHOUSE,
     RICKSHAW_TOWN,
     SHORE_CARNIVAL,
-    OCEAN_BOTTOM_FAR,
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR,
-    OCEAN_FLOOR_FAR,
     LOCKER_BANK,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,

@@ -33,6 +33,12 @@ const
     // TODO
     SHORE_BUOY_BACKDROP = 'shoreBuoyBackdrop',
 
+    // With ocean bottom flats.
+    OCEAN_BOTTOM_FAR = 'oceanBottomFar',
+
+    // With buddha shrine cutout and ocean cave panels.
+    OCEAN_FLOOR_FAR = 'oceanFloorFar',
+
     // TODO
     VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
 
@@ -92,6 +98,8 @@ export {
     TAIWAN_STREETS_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,
+    OCEAN_BOTTOM_FAR,
+    OCEAN_FLOOR_FAR,
     BEDROOM_BUS_BACKDROP,
     VAN_NUYS_SCHOOL_BACKDROP,
     BENNETT_COUCH_THOUGHT_BACKDROP,

@@ -24,7 +24,7 @@ const OceanBottomFar = ({
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Backdrop__temporaryRect'
                 )}
                 {...other}
             />

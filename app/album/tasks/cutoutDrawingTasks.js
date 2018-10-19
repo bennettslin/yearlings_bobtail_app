@@ -6,12 +6,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'buddhaShrine and buddhaCave',
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: 'bennettTaiwanStairs',
         workedHours: 0,
         neededHours: 3
