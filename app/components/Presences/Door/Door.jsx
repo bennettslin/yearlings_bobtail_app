@@ -106,8 +106,7 @@ const DOORS_MAP = {
     [LOADING_DOCK_DOOR]: LoadingDockDoor,
     [EL_TORITO_DOOR_LEFT]: ElToritoDoorLeft,
     [EL_TORITO_DOOR_RIGHT]: ElToritoDoorRight
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -126,8 +125,7 @@ const Door = ({
 
 ...other }) => {
 
-    const DoorComponent =
-        DOORS_MAP[nameKey] || DEFAULT_COMPONENT
+    const DoorComponent = DOORS_MAP[nameKey]
 
     return (
         <DoorComponent {...other}

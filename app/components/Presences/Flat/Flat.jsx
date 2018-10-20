@@ -190,8 +190,7 @@ const FLATS_MAP = {
     [CLIFF_GRAVES_FAR]: CliffGravesFar,
     [CLIFF_GRAVES_NEAR]: CliffGravesNear,
     [PAMPAS_FAR]: PampasFar
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -210,8 +209,7 @@ const Flat = ({
 
 ...other }) => {
 
-    const FlatComponent =
-        FLATS_MAP[nameKey] || DEFAULT_COMPONENT
+    const FlatComponent = FLATS_MAP[nameKey]
 
     return (
         <FlatComponent {...other}

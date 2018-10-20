@@ -211,8 +211,7 @@ const CUTOUTS_MAP = {
     [DUMPSTER]: Dumpster,
     [WEDDING_CROWD]: WeddingCrowd,
     [IV_DRIP]: IvDrip
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -231,8 +230,7 @@ const Cutout = ({
 
 ...other }) => {
 
-    const CutoutComponent =
-        CUTOUTS_MAP[nameKey] || DEFAULT_COMPONENT
+    const CutoutComponent = CUTOUTS_MAP[nameKey]
 
     return (
         <CutoutComponent {...other}

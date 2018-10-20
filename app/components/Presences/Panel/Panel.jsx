@@ -67,8 +67,7 @@ const PANELS_MAP = {
     [DEATHBED_THOUGHT_PANEL]: DeathbedThoughtPanel,
     [TENNIS_THOUGHT_PANEL]: TennisThoughtPanel,
     [WEDDING_PLATFORM]: WeddingPlatform
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -80,26 +79,25 @@ const propTypes = {
     height: PropTypes.string.isRequired
 }
 
-const Puppet = ({
+const Panel = ({
 
     className,
     nameKey,
 
 ...other }) => {
 
-    const PuppetComponent =
-        PANELS_MAP[nameKey] || DEFAULT_COMPONENT
+    const PanelComponent = PANELS_MAP[nameKey]
 
     return (
-        <PuppetComponent {...other}
+        <PanelComponent {...other}
             className={cx(
-                'Puppet',
+                'Panel',
                 className
             )}
         />
     )
 }
 
-Puppet.propTypes = propTypes;
+Panel.propTypes = propTypes;
 
-export default Puppet
+export default Panel

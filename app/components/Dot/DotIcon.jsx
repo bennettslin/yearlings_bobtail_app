@@ -31,8 +31,7 @@ const DOT_ICONS_MAP = {
         [PUN]: PunIcon,
         [REFERENCE]: ReferenceIcon,
         [SONGWRITING]: SongwritingIcon
-    },
-    DEFAULT_COMPONENT = () => (null)
+    }
 
 const propTypes = {
     // From parent.
@@ -56,8 +55,7 @@ DotIcon = ({
 
 }) => {
 
-    const IconComponent =
-        DOT_ICONS_MAP[dotKey] || DEFAULT_COMPONENT
+    const IconComponent = DOT_ICONS_MAP[dotKey]
 
     return (
             <IconComponent

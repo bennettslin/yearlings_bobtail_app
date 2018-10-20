@@ -94,8 +94,7 @@ const FURNITURES_MAP = {
     [REATTA_SEAT_LOWERED]: ReattaSeatLowered,
     [REATTA_DASHBOARD]: ReattaDashboard,
     [HOSPITAL_MATTRESS]: HospitalMattress
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -114,8 +113,7 @@ const Furniture = ({
 
 ...other }) => {
 
-    const FurnitureComponent =
-        FURNITURES_MAP[nameKey] || DEFAULT_COMPONENT
+    const FurnitureComponent = FURNITURES_MAP[nameKey]
 
     return (
         <FurnitureComponent {...other}

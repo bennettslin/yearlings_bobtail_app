@@ -23,16 +23,15 @@ import {
 } from 'constants/dots'
 
 const DOT_FIELDS_MAP = {
-        [AFTERWORD]: AfterwordField,
-        [BACKSTORY]: BackstoryField,
-        [NARRATIVE]: NarrativeField,
-        [OBSERVATION]: ObservationField,
-        [WORMHOLE]: WormholeField,
-        [PUN]: PunField,
-        [REFERENCE]: ReferenceField,
-        [SONGWRITING]: SongwritingField
-    },
-    DEFAULT_COMPONENT = () => (null)
+    [AFTERWORD]: AfterwordField,
+    [BACKSTORY]: BackstoryField,
+    [NARRATIVE]: NarrativeField,
+    [OBSERVATION]: ObservationField,
+    [WORMHOLE]: WormholeField,
+    [PUN]: PunField,
+    [REFERENCE]: ReferenceField,
+    [SONGWRITING]: SongwritingField
+}
 
 const propTypes = {
     // From parent.
@@ -56,8 +55,7 @@ DotField = ({
 
 }) => {
 
-    const FieldComponent =
-        DOT_FIELDS_MAP[dotKey] || DEFAULT_COMPONENT
+    const FieldComponent = DOT_FIELDS_MAP[dotKey]
 
     return (
             <FieldComponent

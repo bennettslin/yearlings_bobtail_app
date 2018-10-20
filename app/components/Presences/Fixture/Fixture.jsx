@@ -196,8 +196,7 @@ const FIXTURES_MAP = {
     [LIZ_PHONE_BASE]: LizPhoneBase,
     [LIZ_PHONE_BASE_REFLECTION]: LizPhoneBaseReflection,
     [HOSPITAL_RECORD_PLAYER]: HospitalRecordPlayer
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -216,8 +215,7 @@ const Fixture = ({
 
 ...other }) => {
 
-    const FixtureComponent =
-        FIXTURES_MAP[nameKey] || DEFAULT_COMPONENT
+    const FixtureComponent = FIXTURES_MAP[nameKey]
 
     return (
         <FixtureComponent {...other}

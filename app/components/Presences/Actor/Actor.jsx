@@ -97,8 +97,7 @@ const ACTORS_MAP = {
     [BENNETT_REFLECTION]: BennettReflection,
     [LIZ_REFLECTION]: LizReflection,
     [KHARI_REFLECTION]: KhariReflection
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -119,8 +118,7 @@ const Actor = ({
 
 ...other }) => {
 
-    const ActorComponent =
-        ACTORS_MAP[nameKey] || DEFAULT_COMPONENT
+    const ActorComponent = ACTORS_MAP[nameKey]
 
     return (
         <ActorComponent {...other}

@@ -40,8 +40,7 @@ const BUBBLES_MAP = {
     [KHARI_ATTACK_SPEECH]: KhariAttackSpeech,
     [LIZ_DEFENCE_SPEECH]: LizDefenceSpeech,
     [LIZ_THOUGHT]: LizThought
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -60,8 +59,7 @@ const Bubble = ({
 
 ...other }) => {
 
-    const BubbleComponent =
-        BUBBLES_MAP[nameKey] || DEFAULT_COMPONENT
+    const BubbleComponent = BUBBLES_MAP[nameKey]
 
     return (
         <BubbleComponent {...other}

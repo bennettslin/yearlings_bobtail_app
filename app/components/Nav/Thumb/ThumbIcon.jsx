@@ -24,28 +24,27 @@ import DreamThumbIcon from './Fields/18_My100000thDream'
 import EpilogueThumbIcon from './Fields/19_Epilogue'
 
 const PANEL_ICONS_MAP = [
-        PrologueThumbIcon,
-        DidiThumbIcon,
-        WillyThumbIcon,
-        SaskiaThumbIcon,
-        OdinThumbIcon,
-        PchelkaThumbIcon,
-        AshWednesdayThumbIcon,
-        MThumbIcon,
-        GoodNightThumbIcon,
-        GrasshoppersThumbIcon,
-        ConstellationsThumbIcon,
-        LookBackThumbIcon,
-        GarryowenThumbIcon,
-        GoldenCordThumbIcon,
-        KyonThumbIcon,
-        UncannyValleyThumbIcon,
-        CrematedThumbIcon,
-        VeganThumbIcon,
-        DreamThumbIcon,
-        EpilogueThumbIcon
-    ],
-    DEFAULT_COMPONENT = () => (null)
+    PrologueThumbIcon,
+    DidiThumbIcon,
+    WillyThumbIcon,
+    SaskiaThumbIcon,
+    OdinThumbIcon,
+    PchelkaThumbIcon,
+    AshWednesdayThumbIcon,
+    MThumbIcon,
+    GoodNightThumbIcon,
+    GrasshoppersThumbIcon,
+    ConstellationsThumbIcon,
+    LookBackThumbIcon,
+    GarryowenThumbIcon,
+    GoldenCordThumbIcon,
+    KyonThumbIcon,
+    UncannyValleyThumbIcon,
+    CrematedThumbIcon,
+    VeganThumbIcon,
+    DreamThumbIcon,
+    EpilogueThumbIcon
+]
 
 const propTypes = {
     // From parent.
@@ -58,7 +57,7 @@ const ThumbIcon = ({
 
 }) => {
 
-    const IconComponent = PANEL_ICONS_MAP[songIndex] || DEFAULT_COMPONENT
+    const IconComponent = PANEL_ICONS_MAP[songIndex]
 
     return (
         <IconComponent

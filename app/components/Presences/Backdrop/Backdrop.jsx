@@ -103,8 +103,7 @@ const BACKDROPS_MAP = {
     [PAMPAS_BACKDROP]: PampasBackdrop,
     [WEDDING_BACKDROP]: WeddingBackdrop,
     [INVERSE_THOUGHT_BACKDROP]: InverseThoughtBackdrop
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -123,8 +122,7 @@ const Backdrop = ({
 
 ...other }) => {
 
-    const BackdropComponent =
-        BACKDROPS_MAP[nameKey] || DEFAULT_COMPONENT
+    const BackdropComponent = BACKDROPS_MAP[nameKey]
 
     return (
         <BackdropComponent {...other}

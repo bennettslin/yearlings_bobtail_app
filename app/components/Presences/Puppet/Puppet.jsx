@@ -97,8 +97,7 @@ const PUPPETS_MAP = {
     [GHOST_ODIN_DEMONSTRATION]: GhostOdinDemonstration,
     [PUPPET_KHARI]: PuppetKhari,
     [PUPPET_LIZ]: PuppetLiz
-},
-DEFAULT_COMPONENT = () => (null)
+}
 
 const propTypes = {
     // From parent.
@@ -117,8 +116,7 @@ const Puppet = ({
 
 ...other }) => {
 
-    const PuppetComponent =
-        PUPPETS_MAP[nameKey] || DEFAULT_COMPONENT
+    const PuppetComponent = PUPPETS_MAP[nameKey]
 
     return (
         <PuppetComponent {...other}
