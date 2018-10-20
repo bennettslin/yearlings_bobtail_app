@@ -4,11 +4,12 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [FUTURE]: {
-        yIndex: 5,
+        yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 8,
             xWidth: 1,
-            zHeight: 5
+            zHeight: 5,
+            zOffset: 2
         }
     }
 }

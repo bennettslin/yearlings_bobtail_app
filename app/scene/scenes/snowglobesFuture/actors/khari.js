@@ -4,9 +4,9 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [JOKING]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 3,
             xWidth: 1,
             zHeight: 5
         }

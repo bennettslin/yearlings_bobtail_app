@@ -4,9 +4,9 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_RECORDING]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 8.5,
             xWidth: 1,
             zHeight: 5
         }

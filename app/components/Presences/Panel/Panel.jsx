@@ -15,11 +15,7 @@ import DishroomSink from './Panels/DishroomSink'
 import SaturnInterior from './Panels/SaturnInterior'
 import SaturnExterior from './Panels/SaturnExterior'
 import Volkswagen from './Panels/Volkswagen'
-import SnowglobeTetherball from './Panels/SnowglobeTetherball'
-import SnowglobeLizAlone from './Panels/SnowglobeLizAlone'
-import SnowglobeBennettMiriam from './Panels/SnowglobeBennettMiriam'
-import SnowglobeLizKhari from './Panels/SnowglobeLizKhari'
-import SnowglobeBennettAlone from './Panels/SnowglobeBennettAlone'
+import Snowglobe from './Panels/Snowglobe'
 import ReattaInterior from './Panels/ReattaInterior'
 import ReattaExterior from './Panels/ReattaExterior'
 import PhoneCallPanel from './Panels/PhoneCallPanel'
@@ -41,11 +37,7 @@ import {
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
     VOLKSWAGEN,
-    SNOWGLOBE_TETHERBALL,
-    SNOWGLOBE_LIZ_ALONE,
-    SNOWGLOBE_BENNETT_MIRIAM,
-    SNOWGLOBE_LIZ_KHARI,
-    SNOWGLOBE_BENNETT_ALONE,
+    SNOWGLOBE,
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
     PHONE_CALL_PANEL,
@@ -68,11 +60,7 @@ const PANELS_MAP = {
     [SATURN_INTERIOR]: SaturnInterior,
     [SATURN_EXTERIOR]: SaturnExterior,
     [VOLKSWAGEN]: Volkswagen,
-    [SNOWGLOBE_TETHERBALL]: SnowglobeTetherball,
-    [SNOWGLOBE_LIZ_ALONE]: SnowglobeLizAlone,
-    [SNOWGLOBE_BENNETT_MIRIAM]: SnowglobeBennettMiriam,
-    [SNOWGLOBE_LIZ_KHARI]: SnowglobeLizKhari,
-    [SNOWGLOBE_BENNETT_ALONE]: SnowglobeBennettAlone,
+    [SNOWGLOBE]: Snowglobe,
     [REATTA_INTERIOR]: ReattaInterior,
     [REATTA_EXTERIOR]: ReattaExterior,
     [PHONE_CALL_PANEL]: PhoneCallPanel,

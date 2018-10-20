@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [COMFORTING]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 7,
             xWidth: 1,
-            zHeight: 5
+            zHeight: 4
         }
     }
 }
