@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [GETTING_DARK]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 6,
             xWidth: 1,
             zHeight: 5
         }

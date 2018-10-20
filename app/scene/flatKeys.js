@@ -111,7 +111,9 @@ const
     EL_CERRITO_FAR = 'elCerritoFar',
     EL_CERRITO_NEAR = 'elCerritoNear',
     CLIFF_GRAVES_FAR = 'cliffGravesFar',
-    CLIFF_GRAVES_NEAR = 'cliffGravesNear'
+    CLIFF_GRAVES_NEAR = 'cliffGravesNear',
+
+    PAMPAS_FAR = 'pampasFar'
 
 export {
     NOHO_HOUSE_LEFT,
@@ -173,5 +175,6 @@ export {
     CROWD_BACK_FAR,
     CLIFF_TREE,
     CLIFF_GRAVES_FAR,
-    CLIFF_GRAVES_NEAR
+    CLIFF_GRAVES_NEAR,
+    PAMPAS_FAR
 }

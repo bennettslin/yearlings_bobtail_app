@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const WeddingPlatform = ({
+const PampasFar = ({
 
     className,
 
@@ -18,13 +18,13 @@ const WeddingPlatform = ({
     return (
         <Svg
             className={cx(
-                'WeddingPlatform',
+                'PampasFar',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const WeddingPlatform = ({
                 {...other}
             >
                 {cx(
-                    'WeddingPlatform'
+                    'PampasFar'
                 )}
             </text>
         </Svg>
     )
 }
 
-WeddingPlatform.propTypes = propTypes;
+PampasFar.propTypes = propTypes;
 
-export default WeddingPlatform
+export default PampasFar

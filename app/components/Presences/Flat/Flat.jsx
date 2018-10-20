@@ -62,6 +62,7 @@ import CrowdBackFar from './Flats/CrowdBackFar'
 import CliffTree from './Flats/CliffTree'
 import CliffGravesFar from './Flats/CliffGravesFar'
 import CliffGravesNear from './Flats/CliffGravesNear'
+import PampasFar from './Flats/PampasFar'
 
 import {
     NOHO_HOUSE_LEFT,
@@ -123,7 +124,8 @@ import {
     CROWD_BACK_FAR,
     CLIFF_TREE,
     CLIFF_GRAVES_FAR,
-    CLIFF_GRAVES_NEAR
+    CLIFF_GRAVES_NEAR,
+    PAMPAS_FAR
 } from 'scene/flatKeys'
 
 const FLATS_MAP = {
@@ -186,7 +188,8 @@ const FLATS_MAP = {
     [CROWD_BACK_FAR]: CrowdBackFar,
     [CLIFF_TREE]: CliffTree,
     [CLIFF_GRAVES_FAR]: CliffGravesFar,
-    [CLIFF_GRAVES_NEAR]: CliffGravesNear
+    [CLIFF_GRAVES_NEAR]: CliffGravesNear,
+    [PAMPAS_FAR]: PampasFar
 },
 DEFAULT_COMPONENT = () => (null)
 

@@ -20,14 +20,13 @@ const
         floor: {
             hslaColours: [
                 [G],
-                [G],
+                [H, H, I, I, H, H, I, I, H, H, I, I],
                 [H, I, I, H, H, I, I, H, H, I, I, H],
                 [I, H, H, I, I, H, H, I, I, H, H, I],
                 [H, I, I, H, H, I, I, H, H, I, I, H],
                 [I, I, H, H, I, I, H, H, I, I, H]
             ],
             zIndices: [
-                [0],
                 [0],
                 [2]
             ]

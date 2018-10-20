@@ -3,7 +3,8 @@ import { OUTDOOR_WEDDING_KEY } from '../../cubesKeys'
 import {
     GROUND_HSLA,
     HILL_HSLA,
-    HILL_DARKER_HSLA
+    HILL_DARKER_HSLA,
+    PLATFORM_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -11,24 +12,41 @@ import {
 } from '../../cubesConstants'
 
 const
-    // Default.
     G = GROUND_HSLA,
     H = HILL_HSLA,
     I = HILL_DARKER_HSLA,
+    P = PLATFORM_HSLA,
 
     OUTDOOR_WEDDING_CUBES = {
         slantDirection: RIGHT,
+        /**
+         * ...........-..
+         * .........----.
+         * .......------.
+         * .....---------
+         * ...-----------
+         * .------------.
+         * -----------...
+         * .--------.....
+         * .------.......
+         * ..---.........
+         * ..-...........
+         */
         floor: {
             hslaColours: [
                 [G],
-                [H, I, I, H, H, I, I, H, H, I, I, H],
-                [I, H, H, I, I, H, H, I, I, H, H, I],
-                [H, I, I, H, H, I, I, H, H, I, I, H],
-                [H, H, I, I, H, H, I, I, H, H, I],
+                [P, P, I, H, H, I, I, H, H, I, I, H],
+                [P, P, P, I, I, H, H, I, I, H, H, I],
+                [P, P, P, H, H, I, I, H, H, I, I, H],
+                [H, P, I, I, H, H, I, I, H, H, I],
                 [I, I, H, H, I, I, H, H, I, I, H]
             ],
             zIndices: [
                 [0],
+                [3, 3, 2],
+                [3, 3, 3, 2],
+                [3, 3, 3, 2],
+                [2, 3, 2],
                 [2]
             ]
         }

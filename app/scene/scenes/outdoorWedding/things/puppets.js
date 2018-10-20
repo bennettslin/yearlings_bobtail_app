@@ -7,17 +7,17 @@ const ARRANGEMENTS_MAP = {
     [PUPPET_KHARI]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 5,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 1,
+            xWidth: 0.5,
+            zHeight: 1
         }
     },
     [PUPPET_LIZ]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 1,
+            xWidth: 0.5,
+            zHeight: 1
         }
     }
 }

@@ -6,6 +6,7 @@ import {
     FLATS,
     DOORS,
     FURNITURES,
+    PANELS,
     PUPPETS
 } from 'constants/scene'
 
@@ -52,7 +53,6 @@ import {
 } from '../../scene/backdropKeys'
 
 import {
-    WEDDING_PLATFORM,
     WEDDING_CROWD,
     IV_DRIP
 } from '../../scene/cutoutKeys'
@@ -64,7 +64,8 @@ import {
 import {
     CLIFF_TREE,
     CLIFF_GRAVES_FAR,
-    CLIFF_GRAVES_NEAR
+    CLIFF_GRAVES_NEAR,
+    PAMPAS_FAR
 } from '../../scene/flatKeys'
 
 import {
@@ -75,6 +76,10 @@ import {
 import {
     HOSPITAL_MATTRESS
 } from '../../scene/furnitureKeys'
+
+import {
+    WEDDING_PLATFORM
+} from '../../scene/panelKeys'
 
 import {
     PUPPET_KHARI,
@@ -159,6 +164,9 @@ module.exports = [
             },
             [BACKDROPS]: {
                 [PAMPAS_BACKDROP]: true
+            },
+            [FLATS]: {
+                [PAMPAS_FAR]: true
             }
         },
         cubes: PAMPAS_KEY,
@@ -188,11 +196,13 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [WEDDING_PLATFORM]: true,
                 [WEDDING_CROWD]: true
             },
             [BACKDROPS]: {
                 [WEDDING_BACKDROP]: true
+            },
+            [PANELS]: {
+                [WEDDING_PLATFORM]: true
             },
             [PUPPETS]: {
                 [PUPPET_KHARI]: true,

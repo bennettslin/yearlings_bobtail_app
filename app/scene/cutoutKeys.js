@@ -135,7 +135,6 @@ const
     DUMPSTER = 'dumpster',
 
     // TODO
-    WEDDING_PLATFORM = 'weddingPlatform',
     WEDDING_CROWD = 'weddingCrowd',
 
     ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS = 'arrangementVanNuysPlantLockers',
@@ -221,7 +220,6 @@ export {
     TWIN_STREETLAMP,
     ELLIOTT_SMITH_POSTER,
     DUMPSTER,
-    WEDDING_PLATFORM,
     WEDDING_CROWD,
     IV_DRIP,
 

@@ -68,7 +68,6 @@ import WallSpeakerSide from './Cutouts/WallSpeakerSide'
 import TwinStreetlamp from './Cutouts/TwinStreetlamp'
 import ElliottSmithPoster from './Cutouts/ElliottSmithPoster'
 import Dumpster from './Cutouts/Dumpster'
-import WeddingPlatform from './Cutouts/WeddingPlatform'
 import WeddingCrowd from './Cutouts/WeddingCrowd'
 import IvDrip from './Cutouts/IvDrip'
 
@@ -139,7 +138,6 @@ import {
     TWIN_STREETLAMP,
     ELLIOTT_SMITH_POSTER,
     DUMPSTER,
-    WEDDING_PLATFORM,
     WEDDING_CROWD,
     IV_DRIP
 } from 'scene/cutoutKeys'
@@ -211,7 +209,6 @@ const CUTOUTS_MAP = {
     [TWIN_STREETLAMP]: TwinStreetlamp,
     [ELLIOTT_SMITH_POSTER]: ElliottSmithPoster,
     [DUMPSTER]: Dumpster,
-    [WEDDING_PLATFORM]: WeddingPlatform,
     [WEDDING_CROWD]: WeddingCrowd,
     [IV_DRIP]: IvDrip
 },

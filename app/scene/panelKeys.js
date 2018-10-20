@@ -50,7 +50,10 @@ const
     TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel',
 
     // TODO
-    PHONE_CALL_PANEL = 'phoneCallPanel'
+    PHONE_CALL_PANEL = 'phoneCallPanel',
+
+    // TODO
+    WEDDING_PLATFORM = 'weddingPlatform'
 
 export {
     ESTHER_SPEECH_PANEL,
@@ -75,5 +78,6 @@ export {
     REATTA_EXTERIOR,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
-    PHONE_CALL_PANEL
+    PHONE_CALL_PANEL,
+    WEDDING_PLATFORM
 }

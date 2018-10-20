@@ -25,6 +25,7 @@ import ReattaExterior from './Panels/ReattaExterior'
 import PhoneCallPanel from './Panels/PhoneCallPanel'
 import DeathbedThoughtPanel from './Panels/DeathbedThoughtPanel'
 import TennisThoughtPanel from './Panels/TennisThoughtPanel'
+import WeddingPlatform from './Panels/WeddingPlatform'
 
 import {
     ESTHER_SPEECH_PANEL,
@@ -49,7 +50,8 @@ import {
     REATTA_INTERIOR,
     PHONE_CALL_PANEL,
     DEATHBED_THOUGHT_PANEL,
-    TENNIS_THOUGHT_PANEL
+    TENNIS_THOUGHT_PANEL,
+    WEDDING_PLATFORM
 } from 'scene/panelKeys'
 
 const PANELS_MAP = {
@@ -75,7 +77,8 @@ const PANELS_MAP = {
     [REATTA_EXTERIOR]: ReattaExterior,
     [PHONE_CALL_PANEL]: PhoneCallPanel,
     [DEATHBED_THOUGHT_PANEL]: DeathbedThoughtPanel,
-    [TENNIS_THOUGHT_PANEL]: TennisThoughtPanel
+    [TENNIS_THOUGHT_PANEL]: TennisThoughtPanel,
+    [WEDDING_PLATFORM]: WeddingPlatform
 },
 DEFAULT_COMPONENT = () => (null)
 
