@@ -29,7 +29,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'taiwanFridges',
+        taskName: 'taiwanFridge',
         workedHours: 1,
         neededHours: 2
     },

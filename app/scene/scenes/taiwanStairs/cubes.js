@@ -19,7 +19,7 @@ import {
 const
     D = DEFAULT_HSLA,
     V = PAVEMENT_HSLA,
-    G = GATE_HSLA,
+    A = GATE_HSLA,
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
@@ -30,36 +30,33 @@ const
             hslaColours: [
                 [D],
                 [D],
-                [C, C, C, C, C, W, W, W, C],
-                [C],
-                [C],
-                [C, C, C, C, C, C, C, C, C, C]
+                [D],
+                [W],
+                [W, W, C, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
                 [k],
                 [k],
-                [g, g, g, g, g, e, e, e, g],
-                [g],
-                [g],
-                [g, g, g, g, g, g, g, g, g, g]
+                [k],
+                [g, g, g, e, e, e, e, g],
+                [g]
             ]
         },
         floor: {
             hslaColours: [
-                [G, G, G, G, V, V, V, G, G],
-                [G, V],
-                [W, W, W, W, W, W, W, W, W],
-                [W, F, F, F, P, P, P, P, P, P, P, W],
-                [W, F, F, F, F, F, F, F, F, W, W, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [A],
+                [A, A, A, V, V, V, A],
+                [V],
+                [W],
+                [W, W, P, P, P, P, P, P, F, F, W]
             ],
             zIndices: [
-                [6, 6, 6, 6, 1, 1, 1, 6, 6],
-                [6, 1],
-                [g, g, g, g, g, 5, 5, 5, g],
-                [g, 5, 5, 5, 4, 3, 2, 1, 0, 0, 0, g],
-                [g, 5, 5, 5, 5, 5, 5, 5, 5, g, g, g],
-                [g, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, g]
+                [0],
+                [6, 6, 6, 1, 1, 1, 6],
+                [6, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6],
+                [g, g, g, 5, 5, 5, 5, g],
+                [g, g, 0, 0, 1, 2, 3, 4, 5, 5, g],
+                [g, g, 0, 0, 1, 2, 3, 4, 5, 5, g]
             ]
         }
     },

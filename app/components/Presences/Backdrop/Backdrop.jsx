@@ -10,6 +10,7 @@ import BedroomSirenBackdrop from './Backdrops/BedroomSirenBackdrop'
 import TaiwanMountainsBackdrop from './Backdrops/TaiwanMountainsBackdrop'
 import SchoolbusThoughtBackdrop from './Backdrops/SchoolbusThoughtBackdrop'
 import VanNuysThoughtBackdrop from './Backdrops/VanNuysThoughtBackdrop'
+import TaiwanStairsBackdrop from './Backdrops/TaiwanStairsBackdrop'
 import TaiwanStreetsBackdrop from './Backdrops/TaiwanStreetsBackdrop'
 import ShoreRickshawBackdrop from './Backdrops/ShoreRickshawBackdrop'
 import ShoreBuoyBackdrop from './Backdrops/ShoreBuoyBackdrop'
@@ -43,6 +44,7 @@ import {
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP,
+    TAIWAN_STAIRS_BACKDROP,
     TAIWAN_STREETS_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,
@@ -77,6 +79,7 @@ const BACKDROPS_MAP = {
     [TAIWAN_MOUNTAINS_BACKDROP]: TaiwanMountainsBackdrop,
     [SCHOOLBUS_THOUGHT_BACKDROP]: SchoolbusThoughtBackdrop,
     [VAN_NUYS_THOUGHT_BACKDROP]: VanNuysThoughtBackdrop,
+    [TAIWAN_STAIRS_BACKDROP]: TaiwanStairsBackdrop,
     [TAIWAN_STREETS_BACKDROP]: TaiwanStreetsBackdrop,
     [SHORE_RICKSHAW_BACKDROP]: ShoreRickshawBackdrop,
     [SHORE_BUOY_BACKDROP]: ShoreBuoyBackdrop,

@@ -9,7 +9,7 @@ const ARRANGEMENTS_MAP = {
     [BUDDHA_SHRINE]: {
         yIndex: 4,
         arrangement: {
-            xFloat: 2,
+            xFloat: 5.5,
             xWidth: 2,
             zHeight: 2
         }
@@ -17,7 +17,7 @@ const ARRANGEMENTS_MAP = {
     [TAIWAN_FRIDGE_FRONT]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 5,
+            xFloat: 9.5,
             xWidth: 2.5,
             zHeight: 4
         }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_MAP = {
     [ODIN_TAIWAN_STAIRS]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 9.5,
+            xFloat: 1.5,
             xWidth: 2,
             zHeight: 1
         }

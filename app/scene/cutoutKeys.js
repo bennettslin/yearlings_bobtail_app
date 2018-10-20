@@ -36,7 +36,6 @@ const
 
     // Own page.
     TAIWAN_FRIDGE_FRONT = 'taiwanFridgeFront',
-    TAIWAN_FRIDGE_SIDE = 'taiwanFridgeSide',
 
     // TODO
     BENNETT_TAIWAN_STAIRS = 'bennettTaiwanStairs',
@@ -173,7 +172,6 @@ export {
     TAIWAN_FRIDGE_FRONT,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
-    TAIWAN_FRIDGE_SIDE,
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE,
     BENNETT_ODIN_RICKSHAW,

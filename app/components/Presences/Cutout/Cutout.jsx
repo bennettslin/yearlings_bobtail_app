@@ -19,7 +19,6 @@ import BuddhaShrine from './Cutouts/BuddhaShrine'
 import TaiwanFridgeFront from './Cutouts/TaiwanFridgeFront'
 import BennettTaiwanStairs from './Cutouts/BennettTaiwanStairs'
 import OdinTaiwanStairs from './Cutouts/OdinTaiwanStairs'
-import TaiwanFridgeSide from './Cutouts/TaiwanFridgeSide'
 import BennettTaiwanGate from './Cutouts/BennettTaiwanGate'
 import OdinTaiwanGate from './Cutouts/OdinTaiwanGate'
 import BennettOdinRickshaw from './Cutouts/BennettOdinRickshaw'
@@ -91,7 +90,6 @@ import {
     TAIWAN_FRIDGE_FRONT,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
-    TAIWAN_FRIDGE_SIDE,
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE,
     BENNETT_ODIN_RICKSHAW,
@@ -164,7 +162,6 @@ const CUTOUTS_MAP = {
     [TAIWAN_FRIDGE_FRONT]: TaiwanFridgeFront,
     [BENNETT_TAIWAN_STAIRS]: BennettTaiwanStairs,
     [ODIN_TAIWAN_STAIRS]: OdinTaiwanStairs,
-    [TAIWAN_FRIDGE_SIDE]: TaiwanFridgeSide,
     [BENNETT_TAIWAN_GATE]: BennettTaiwanGate,
     [ODIN_TAIWAN_GATE]: OdinTaiwanGate,
     [BENNETT_ODIN_RICKSHAW]: BennettOdinRickshaw,

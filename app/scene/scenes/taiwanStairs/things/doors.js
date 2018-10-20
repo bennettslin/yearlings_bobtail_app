@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [IRON_GATE_LOW]: {
         yIndex: 0,
         arrangement: {
-            xFloat: 5,
+            xFloat: 4,
             xWidth: 3,
             zHeight: 3
         }

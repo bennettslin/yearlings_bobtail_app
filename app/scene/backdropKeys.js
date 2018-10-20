@@ -24,6 +24,9 @@ const
     // TODO
     VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
 
+    // TODO
+    TAIWAN_STAIRS_BACKDROP = 'taiwanStairsBackdrop',
+
     // With taiwanHouses flats.
     TAIWAN_STREETS_BACKDROP = 'taiwanStreetsBackdrop',
 
@@ -95,6 +98,7 @@ export {
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP,
+    TAIWAN_STAIRS_BACKDROP,
     TAIWAN_STREETS_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,

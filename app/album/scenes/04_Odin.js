@@ -45,6 +45,7 @@ import {
 import { MERMAID } from '../../scene/instanceKeys/sasha'
 
 import {
+    TAIWAN_STAIRS_BACKDROP,
     TAIWAN_STREETS_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,
@@ -57,7 +58,6 @@ import {
     TAIWAN_FRIDGE_FRONT,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
-    TAIWAN_FRIDGE_SIDE,
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE,
     BENNETT_ODIN_RICKSHAW,
@@ -92,7 +92,6 @@ import {
 } from '../../scene/doorKeys'
 
 import {
-    STAIRWELL_RAILING,
     BUOY_FLOAT
 } from '../../scene/furnitureKeys'
 
@@ -119,6 +118,9 @@ module.exports = [
                 [TAIWAN_FRIDGE_FRONT]: true,
                 [BENNETT_TAIWAN_STAIRS]: true,
                 [ODIN_TAIWAN_STAIRS]: true
+            },
+            [FIXTURES]: {
+                [FRIDGE_DRAWINGS]: true
             }
         },
         cubes: TAIWAN_ROOM_KEY,
@@ -139,19 +141,15 @@ module.exports = [
                     instance: STAIRS
                 }
             },
+            [BACKDROPS]: {
+                [TAIWAN_STAIRS_BACKDROP]: true
+            },
             [CUTOUTS]: {
-                [TAIWAN_FRIDGE_SIDE]: true,
                 [BENNETT_TAIWAN_GATE]: true,
                 [ODIN_TAIWAN_GATE]: true
             },
-            [FIXTURES]: {
-                [FRIDGE_DRAWINGS]: true
-            },
             [DOORS]: {
                 [IRON_GATE_LOW]: true
-            },
-            [FURNITURES]: {
-                [STAIRWELL_RAILING]: true
             }
         },
         cubes: TAIWAN_STAIRS_KEY,

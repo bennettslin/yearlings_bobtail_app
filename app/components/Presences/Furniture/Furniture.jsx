@@ -6,7 +6,6 @@ import BedroomDesk from './Furnitures/Bedroom/BedroomDesk'
 import CaptainBedMattress from './Furnitures/Bedroom/CaptainBedMattress'
 import SchoolbusSeatFront from './Furnitures/Schoolbus/SchoolbusSeatFront'
 import SchoolbusSeatRear from './Furnitures/Schoolbus/SchoolbusSeatRear'
-import StairwellRailing from './Furnitures/TaiwanStairs/StairwellRailing'
 import BuoyFloat from './Furnitures/Buoy/BuoyFloat'
 import BennettCushions from './Furnitures/BennettCouch/BennettCushions'
 import GoKartSeatLeft from './Furnitures/GoKarts/GoKartSeatLeft'
@@ -38,7 +37,6 @@ import {
     CAPTAIN_BED_MATTRESS,
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_REAR,
-    STAIRWELL_RAILING,
     BUOY_FLOAT,
     BENNETT_CUSHIONS,
     GO_KART_SEAT_LEFT,
@@ -71,7 +69,6 @@ const FURNITURES_MAP = {
     [CAPTAIN_BED_MATTRESS]: CaptainBedMattress,
     [SCHOOLBUS_SEAT_FRONT]: SchoolbusSeatFront,
     [SCHOOLBUS_SEAT_REAR]: SchoolbusSeatRear,
-    [STAIRWELL_RAILING]: StairwellRailing,
     [BUOY_FLOAT]: BuoyFloat,
     [BENNETT_CUSHIONS]: BennettCushions,
     [GO_KART_SEAT_LEFT]: GoKartSeatLeft,

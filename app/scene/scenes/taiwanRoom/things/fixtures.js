@@ -4,11 +4,12 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [FRIDGE_DRAWINGS]: {
-        yIndex: 5,
+        yIndex: 1,
         arrangement: {
-            xFloat: 3.5,
+            xFloat: 9.5,
             xWidth: 1,
-            zHeight: 0.5
+            zHeight: 0.5,
+            zOffset: 1
         }
     }
 }

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const TaiwanFridgeSide = ({
+const TaiwanStairsBackdrop = ({
 
     className,
 
@@ -18,13 +18,13 @@ const TaiwanFridgeSide = ({
     return (
         <Svg
             className={cx(
-                'TaiwanFridgeSide',
+                'TaiwanStairsBackdrop',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Backdrop__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const TaiwanFridgeSide = ({
                 {...other}
             >
                 {cx(
-                    'TaiwanFridgeSide'
+                    'TaiwanStairsBackdrop'
                 )}
             </text>
         </Svg>
     )
 }
 
-TaiwanFridgeSide.propTypes = propTypes;
+TaiwanStairsBackdrop.propTypes = propTypes;
 
-export default TaiwanFridgeSide
+export default TaiwanStairsBackdrop

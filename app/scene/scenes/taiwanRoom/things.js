@@ -1,11 +1,17 @@
 import {
-    CUTOUTS
+    BACKDROPS,
+    CUTOUTS,
+    FIXTURES
 } from 'constants/scene'
 
+import ARRANGEMENTS_BACKDROPS from './things/backdrops'
 import ARRANGEMENTS_CUTOUTS from './things/cutouts'
+import ARRANGEMENTS_FIXTURES from '../taiwanRoom/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: ARRANGEMENTS_CUTOUTS
+    [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
+    [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
+    [FIXTURES]: ARRANGEMENTS_FIXTURES
 }
 
 export default ARRANGEMENTS_THINGS

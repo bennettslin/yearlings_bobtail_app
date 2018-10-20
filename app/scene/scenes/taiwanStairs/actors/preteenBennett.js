@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [STAIRS]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 8,
             xWidth: 1,
             zHeight: 5
         }

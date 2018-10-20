@@ -10,9 +10,6 @@ const
     SCHOOLBUS_SEAT_REAR = 'schoolbusSeatBack',
 
     // TODO
-    STAIRWELL_RAILING = 'stairwellRailing',
-
-    // TODO
     BUOY_FLOAT = 'buoy',
 
     // TODO
@@ -81,7 +78,6 @@ export {
     CAPTAIN_BED_MATTRESS,
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_REAR,
-    STAIRWELL_RAILING,
     BUOY_FLOAT,
     BENNETT_CUSHIONS,
     GO_KART_SEAT_LEFT,

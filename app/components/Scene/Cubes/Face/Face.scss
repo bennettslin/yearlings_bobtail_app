@@ -11,7 +11,8 @@
     // This allows the stroke width to stay constant.
     vector-effect: non-scaling-stroke;
     stroke-width: 1px;
-    stroke: rgba(225, 225, 175, 0.5);
+    // stroke: rgba(225, 225, 175, 0.5);
+    stroke: rgba(225, 225, 175, 0.05);
 }
 
 .Face__shade__ceilingTile {

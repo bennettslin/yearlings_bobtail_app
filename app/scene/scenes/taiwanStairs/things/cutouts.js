@@ -1,30 +1,21 @@
 import {
-    TAIWAN_FRIDGE_SIDE,
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
 } from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
-    [TAIWAN_FRIDGE_SIDE]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 1.5,
-            xWidth: 2,
-            zHeight: 5
-        }
-    },
     [BENNETT_TAIWAN_GATE]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 6,
+            xFloat: 5,
             xWidth: 1,
             zHeight: 3
         }
     },
     [ODIN_TAIWAN_GATE]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
-            xFloat: 7,
+            xFloat: 6,
             xWidth: 1,
             zHeight: 1
         }
