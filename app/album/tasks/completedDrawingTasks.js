@@ -776,4 +776,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Steering wheels`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

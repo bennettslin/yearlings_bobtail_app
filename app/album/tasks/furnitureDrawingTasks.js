@@ -30,11 +30,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'goKartDashboards',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: 'bennettMattress',
         workedHours: 0,
         neededHours: 2
@@ -80,11 +75,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'saturnDashboard',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'atticCushions',
         workedHours: 0,
         neededHours: 2
@@ -103,11 +93,6 @@ module.exports = [
         taskName: 'reattaSeats',
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: 'reattaDashboard',
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: 'hospitalMattress',

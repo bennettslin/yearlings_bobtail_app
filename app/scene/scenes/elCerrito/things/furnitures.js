@@ -1,7 +1,6 @@
 import {
     REATTA_SEAT,
-    REATTA_SEAT_LOWERED,
-    REATTA_DASHBOARD
+    REATTA_SEAT_LOWERED
 } from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -17,14 +16,6 @@ const ARRANGEMENTS_MAP = {
         yIndex: 3,
         arrangement: {
             xFloat: 2,
-            xWidth: 2,
-            zHeight: 2
-        }
-    },
-    [REATTA_DASHBOARD]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 3.5,
             xWidth: 2,
             zHeight: 2
         }

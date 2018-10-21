@@ -80,7 +80,6 @@ import {
 import {
     SATURN_SEAT_FRONT,
     SATURN_SEAT_REAR,
-    SATURN_DASHBOARD,
     ATTIC_CUSHIONS
 } from '../../scene/furnitureKeys'
 
@@ -307,8 +306,7 @@ module.exports = [
             },
             [FURNITURES]: {
                 [SATURN_SEAT_REAR]: true,
-                [SATURN_SEAT_FRONT]: true,
-                [SATURN_DASHBOARD]: true
+                [SATURN_SEAT_FRONT]: true
             },
             [PANELS]: {
                 [SATURN_EXTERIOR]: true,

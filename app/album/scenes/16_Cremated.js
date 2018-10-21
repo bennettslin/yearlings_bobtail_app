@@ -64,7 +64,6 @@ import {
 import {
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
-    REATTA_DASHBOARD,
     HOSPITAL_MATTRESS
 } from '../../scene/furnitureKeys'
 
@@ -107,8 +106,7 @@ module.exports = [
                 [EL_CERRITO_NEAR]: true
             },
             [FURNITURES]: {
-                [REATTA_SEAT]: true,
-                [REATTA_DASHBOARD]: true
+                [REATTA_SEAT]: true
             },
             [PANELS]: {
                 [REATTA_EXTERIOR]: true,
@@ -148,8 +146,7 @@ module.exports = [
                 [EL_CERRITO_NEAR]: true
             },
             [FURNITURES]: {
-                [REATTA_SEAT]: true,
-                [REATTA_DASHBOARD]: true
+                [REATTA_SEAT]: true
             },
             [PANELS]: {
                 [REATTA_EXTERIOR]: true,
@@ -189,8 +186,7 @@ module.exports = [
                 [EL_CERRITO_NEAR]: true
             },
             [FURNITURES]: {
-                [REATTA_SEAT_LOWERED]: true,
-                [REATTA_DASHBOARD]: true
+                [REATTA_SEAT_LOWERED]: true
             },
             [PANELS]: {
                 [REATTA_EXTERIOR]: true,
@@ -293,8 +289,7 @@ module.exports = [
                 [EL_CERRITO_NEAR]: true
             },
             [FURNITURES]: {
-                [REATTA_SEAT]: true,
-                [REATTA_DASHBOARD]: true
+                [REATTA_SEAT]: true
             },
             [PANELS]: {
                 [REATTA_EXTERIOR]: true,

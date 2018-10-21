@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [PRESENT]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 5,
             xWidth: 1,
             zHeight: 5,
             zOffset: 2

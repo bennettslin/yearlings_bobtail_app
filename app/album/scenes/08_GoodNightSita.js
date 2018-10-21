@@ -73,9 +73,7 @@ import {
 
 import {
     GO_KART_SEAT_LEFT,
-    GO_KART_SEAT_RIGHT,
-    GO_KART_DASHBOARD_LEFT,
-    GO_KART_DASHBOARD_RIGHT
+    GO_KART_SEAT_RIGHT
 } from '../../scene/furnitureKeys'
 
 import {
@@ -224,9 +222,7 @@ module.exports = [
             },
             [FURNITURES]: {
                 [GO_KART_SEAT_LEFT]: true,
-                [GO_KART_SEAT_RIGHT]: true,
-                [GO_KART_DASHBOARD_LEFT]: true,
-                [GO_KART_DASHBOARD_RIGHT]: true
+                [GO_KART_SEAT_RIGHT]: true
             },
             [PANELS]: {
                 [GO_KART_EXTERIOR]: [

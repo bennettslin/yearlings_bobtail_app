@@ -1,7 +1,6 @@
 import {
     SATURN_SEAT_REAR,
-    SATURN_SEAT_FRONT,
-    SATURN_DASHBOARD
+    SATURN_SEAT_FRONT
 } from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -18,14 +17,6 @@ const ARRANGEMENTS_MAP = {
         arrangement: {
             xFloat: 6,
             xWidth: 2,
-            zHeight: 2
-        }
-    },
-    [SATURN_DASHBOARD]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 9,
-            xWidth: 3,
             zHeight: 2
         }
     }

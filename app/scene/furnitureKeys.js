@@ -19,10 +19,6 @@ const
     GO_KART_SEAT_LEFT = 'goKartSeatLeft',
     GO_KART_SEAT_RIGHT = 'goKartSeatRight',
 
-    // TODO
-    GO_KART_DASHBOARD_LEFT = 'goKartDashboardLeft',
-    GO_KART_DASHBOARD_RIGHT = 'goKartDashboardRight',
-
     // With apartment cutouts.
     LIGHT_SWITCH = 'lightSwitch',
 
@@ -49,9 +45,6 @@ const
     SATURN_SEAT_REAR = 'saturnSeatRear',
 
     // TODO
-    SATURN_DASHBOARD = 'saturnDashboard',
-
-    // TODO
     ATTIC_CUSHIONS = 'atticCushions',
 
     // TODO
@@ -63,9 +56,6 @@ const
     // TODO
     REATTA_SEAT = 'reattaSeat',
     REATTA_SEAT_LOWERED = 'reattaSeatLowered',
-
-    // TODO
-    REATTA_DASHBOARD = 'reattaDashboard',
 
     // TODO
     HOSPITAL_MATTRESS = 'hospitalMattress',
@@ -82,8 +72,6 @@ export {
     BENNETT_CUSHIONS,
     GO_KART_SEAT_LEFT,
     GO_KART_SEAT_RIGHT,
-    GO_KART_DASHBOARD_LEFT,
-    GO_KART_DASHBOARD_RIGHT,
     LIGHT_SWITCH,
     BENNETT_MATTRESS,
     BENNETT_PILLOWS,
@@ -95,13 +83,11 @@ export {
     LIZ_PILLOWS_REFLECTION,
     SATURN_SEAT_FRONT,
     SATURN_SEAT_REAR,
-    SATURN_DASHBOARD,
     ATTIC_CUSHIONS,
     LIZ_CUSHIONS,
     MIRIAM_CUSHIONS,
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
-    REATTA_DASHBOARD,
     HOSPITAL_MATTRESS,
     ARRANGEMENT_LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
