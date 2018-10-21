@@ -9,8 +9,7 @@ import SchoolbusInterior from './Panels/SchoolbusInterior'
 import SchoolbusExterior from './Panels/SchoolbusExterior'
 import OceanCaveInterior from './Panels/OceanCaveInterior'
 import OceanCaveExterior from './Panels/OceanCaveExterior'
-import GoKartExteriorLeft from './Panels/GoKartExteriorLeft'
-import GoKartExteriorRight from './Panels/GoKartExteriorRight'
+import GoKartExterior from './Panels/GoKartExterior'
 import DishroomSink from './Panels/DishroomSink'
 import SaturnInterior from './Panels/SaturnInterior'
 import SaturnExterior from './Panels/SaturnExterior'
@@ -31,8 +30,7 @@ import {
     SCHOOLBUS_INTERIOR,
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
-    GO_KART_EXTERIOR_LEFT,
-    GO_KART_EXTERIOR_RIGHT,
+    GO_KART_EXTERIOR,
     DISHROOM_SINK,
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
@@ -54,8 +52,7 @@ const PANELS_MAP = {
     [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
     [OCEAN_CAVE_INTERIOR]: OceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: OceanCaveExterior,
-    [GO_KART_EXTERIOR_LEFT]: GoKartExteriorLeft,
-    [GO_KART_EXTERIOR_RIGHT]: GoKartExteriorRight,
+    [GO_KART_EXTERIOR]: GoKartExterior,
     [DISHROOM_SINK]: DishroomSink,
     [SATURN_INTERIOR]: SaturnInterior,
     [SATURN_EXTERIOR]: SaturnExterior,

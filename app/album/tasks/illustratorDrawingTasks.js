@@ -213,6 +213,11 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: `goKart`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `Dishroom sink and other stuff (Grasshoppers)`,
         workedHours: 2,
         neededHours: 4
@@ -299,6 +304,11 @@ module.exports = [
     },
     {
         taskName: `VW bug (Garryowen)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `snowglobe`,
         workedHours: 1,
         neededHours: 2
     },

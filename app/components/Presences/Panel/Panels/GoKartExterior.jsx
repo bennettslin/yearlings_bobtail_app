@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const GoKartExteriorLeft = ({
+const GoKartExterior = ({
 
     className,
 
@@ -18,7 +18,7 @@ const GoKartExteriorLeft = ({
     return (
         <Svg
             className={cx(
-                'GoKartExteriorLeft',
+                'GoKartExterior',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const GoKartExteriorLeft = ({
                 {...other}
             >
                 {cx(
-                    'GoKartExteriorLeft'
+                    'GoKartExterior'
                 )}
             </text>
         </Svg>
     )
 }
 
-GoKartExteriorLeft.propTypes = propTypes;
+GoKartExterior.propTypes = propTypes;
 
-export default GoKartExteriorLeft
+export default GoKartExterior

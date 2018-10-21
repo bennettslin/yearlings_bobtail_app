@@ -3927,4 +3927,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Revise Taiwan and Dream scenes.`,
+        workedHours: 6,
+        neededHours: 6
+    },
 ]

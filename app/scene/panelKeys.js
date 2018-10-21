@@ -16,9 +16,9 @@ const
     OCEAN_CAVE_INTERIOR = 'oceanCaveInterior',
     OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior',
 
-    // TODO: Single component with different arrangements.
-    GO_KART_EXTERIOR_LEFT = 'goKartExteriorLeft',
-    GO_KART_EXTERIOR_RIGHT = 'goKartExteriorRight',
+    // Together on one page.
+    GO_KART_EXTERIOR = 'goKartExteriorLeft',
+    SNOWGLOBE = 'snowglobeTetherball',
 
     // With dishroom fixtures.
     DISHROOM_SINK = 'dishroomSink',
@@ -29,9 +29,6 @@ const
 
     // Own page.
     VOLKSWAGEN = 'volkswagen',
-
-    // TODO: Single drawing for components of varying size.
-    SNOWGLOBE = 'snowglobeTetherball',
 
     // Own page.
     REATTA_INTERIOR = 'reattaInterior',
@@ -51,6 +48,8 @@ const
     // TODO
     WEDDING_PLATFORM = 'weddingPlatform',
 
+    ARRANGEMENT_GO_KART_LEFT = 'arrangementGoKartLeft',
+    ARRANGEMENT_GO_KART_RIGHT = 'arrangementGoKartRight',
     ARRANGEMENT_SNOWGLOBE_TETHERBALL = 'arrangementSnowglobeTetherball',
     ARRANGEMENT_SNOWGLOBE_LIZ_ALONE = 'arrangementSnowglobeLizAlone',
     ARRANGEMENT_SNOWGLOBE_BENNETT_MIRIAM = 'arrangementSnowglobeBennettMiriam',
@@ -65,8 +64,7 @@ export {
     SCHOOLBUS_EXTERIOR,
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
-    GO_KART_EXTERIOR_LEFT,
-    GO_KART_EXTERIOR_RIGHT,
+    GO_KART_EXTERIOR,
     DISHROOM_SINK,
     SATURN_INTERIOR,
     SATURN_EXTERIOR,
@@ -78,6 +76,8 @@ export {
     TENNIS_THOUGHT_PANEL,
     PHONE_CALL_PANEL,
     WEDDING_PLATFORM,
+    ARRANGEMENT_GO_KART_LEFT,
+    ARRANGEMENT_GO_KART_RIGHT,
     ARRANGEMENT_SNOWGLOBE_TETHERBALL,
     ARRANGEMENT_SNOWGLOBE_LIZ_ALONE,
     ARRANGEMENT_SNOWGLOBE_BENNETT_MIRIAM,

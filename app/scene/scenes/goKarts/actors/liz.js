@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [GO_KARTS]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
+            xFloat: 8,
+            xWidth: 3,
+            zHeight: 3
         }
     }
 }
