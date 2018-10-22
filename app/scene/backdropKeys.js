@@ -24,14 +24,12 @@ const
     // TODO
     VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
 
-    // TODO
+    // Together with rickshaw town flat.
     TAIWAN_STAIRS_BACKDROP = 'taiwanStairsBackdrop',
+    SHORE_RICKSHAW_BACKDROP = 'shoreRickshawBackdrop',
 
     // With taiwanHouses flats.
     TAIWAN_STREETS_BACKDROP = 'taiwanStreetsBackdrop',
-
-    // With rickshaw town flat.
-    SHORE_RICKSHAW_BACKDROP = 'shoreRickshawBackdrop',
 
     // With shore carnival flat.
     SHORE_BUOY_BACKDROP = 'shoreBuoyBackdrop',

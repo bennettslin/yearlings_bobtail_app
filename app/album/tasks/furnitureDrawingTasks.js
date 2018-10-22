@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'buoy',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'bennettCushions',
         workedHours: 0,
         neededHours: 2

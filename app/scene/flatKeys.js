@@ -26,7 +26,7 @@ const
     // Own page.
     VAN_NUYS_SCHOOLHOUSE = 'vanNuysSchoolhouse',
 
-    // With shore rickshaw backdrop.
+    // Together with Taiwan stairs and shore rickshaw backdrop.
     RICKSHAW_TOWN = 'rickshawTown',
 
     // With shore buoy backdrop. Requires editing.

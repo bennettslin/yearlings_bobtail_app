@@ -158,6 +158,11 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: 'buoy',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: 'oceanBottoms',
         workedHours: 2,
         neededHours: 4
@@ -173,7 +178,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `2 * Locker bank (inside and outside) (Pchelka)`,
+        taskName: `Locker bank (Pchelka)`,
         workedHours: 1,
         neededHours: 2
     },
