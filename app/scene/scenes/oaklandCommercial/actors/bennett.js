@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [HORSING]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 5,
             xWidth: 1,
             zHeight: 5
         }

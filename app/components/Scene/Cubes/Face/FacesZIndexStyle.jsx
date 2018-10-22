@@ -34,7 +34,7 @@ import {
 import {
     g,
     k
-} from 'scene/cubesConstants'
+} from 'scene/zIndexKeys'
 
 import { CUBE_Z_INDICES } from '../cubeIndexConstants'
 

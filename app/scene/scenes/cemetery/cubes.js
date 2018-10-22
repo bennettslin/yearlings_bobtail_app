@@ -8,7 +8,7 @@ import {
 
 import {
     LEFT
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 const
     G = GROUND_HSLA,

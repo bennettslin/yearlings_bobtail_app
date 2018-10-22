@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [INJURED]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 9,
             xWidth: 1,
             zHeight: 5
         }

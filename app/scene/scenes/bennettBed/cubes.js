@@ -13,7 +13,7 @@ import {
     d,
     g,
     k
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 /**
  * Blinds and door should match in courtyard.

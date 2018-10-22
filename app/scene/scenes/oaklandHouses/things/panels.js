@@ -4,7 +4,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [VOLKSWAGEN]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
             xFloat: 6.5,
             xWidth: 8,

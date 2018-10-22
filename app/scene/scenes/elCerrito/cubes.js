@@ -13,7 +13,7 @@ import {
 } from '../../hslaKeys'
 import {
     RIGHT
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 const
     G = GROUND_HSLA,

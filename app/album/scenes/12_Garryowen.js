@@ -13,7 +13,7 @@ import {
     LIZ_COUCH_KEY,
     BASEMENT_BED_KEY,
     CLUB_FRONT_KEY,
-    OAKLAND_HOUSES_KEY
+    OAKLAND_VOLKSWAGEN_KEY
 } from '../../scene/cubesKeys'
 
 import {
@@ -174,7 +174,7 @@ module.exports = [
                 [VOLKSWAGEN]: true
             }
         },
-        cubes: OAKLAND_HOUSES_KEY,
+        cubes: OAKLAND_VOLKSWAGEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

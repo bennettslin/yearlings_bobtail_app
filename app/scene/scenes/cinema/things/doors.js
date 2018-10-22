@@ -4,10 +4,10 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [CINEMA_DOORS]: {
-        yIndex: 0,
+        yIndex: 1,
         arrangement: {
             xFloat: 5.5,
-            xWidth: 6,
+            xWidth: 4,
             zHeight: 6.5
         }
     }

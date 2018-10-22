@@ -16,7 +16,7 @@ import {
     d,
     f,
     k
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 /**
  * Blinds and gate should match in lizCouch.

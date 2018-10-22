@@ -14,7 +14,7 @@ import {
     e,
     f,
     k
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 /**
  * Blinds and door should match in bennettBed.

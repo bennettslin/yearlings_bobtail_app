@@ -16,7 +16,7 @@ import {
     e,
     f,
     k
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 const
     D = DEFAULT_HSLA,
@@ -29,38 +29,30 @@ const
     CINEMA_CUBES = {
         ceiling: {
             hslaColours: [
-                [C, C, C, W, W, W, W, W, W, C],
-                [C],
-                [C],
-                [C],
-                [C],
-                [D]
+                [D],
+                [C, C, C, C, W, W, W, W, C, C],
+                [C]
             ],
             zIndices: [
-                [f, f, f, e, e, e, e, e, e, f],
-                [f],
-                [f],
-                [f],
-                [f],
-                [k]
+                [k],
+                [f, f, f, f, e, e, e, e, f, f],
+                [f]
             ]
         },
         floor: {
             hslaColours: [
+                [T],
+                [W, W, W, W, F, F, F, F, W, W],
                 [W, W, W, F, F, F, F, F, F, W],
                 [W, W, W, F, F, F, F, F, F, W],
-                [W, W, W, F, F, F, F, F, F, W],
-                [V],
-                [V],
-                [T]
+                [V]
             ],
             zIndices: [
+                [0],
+                [f, f, f, f, 1, 1, 1, 1, f, f],
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
-                [f, f, f, 1, 1, 1, 1, 1, 1, f],
-                [1],
-                [1],
-                [0]
+                [1]
             ]
         }
     },
@@ -68,37 +60,29 @@ const
         ceiling: {
             hslaColours: [
                 [D],
-                [C, C, C, C, D],
-                [C, C, C, C, D],
-                [C, C, C, C, D],
-                [C, C, C, C, D],
-                [D]
+                [C, C, C, C, C, D]
             ],
             zIndices: [
                 [k],
-                [f, f, f, f, k],
-                [f, f, f, f, k],
-                [f, f, f, f, k],
-                [f, f, f, f, k],
-                [k]
+                [f, f, f, f, f, k]
             ]
         },
         floor: {
             hslaColours: [
                 [T],
+                [W, W, W, V],
                 [W, W, W, V, V, T, T, T, V],
                 [W, W, W, V, V, T, T, T, T, V],
-                [V, V, V, V, V, T],
-                [V, V, V, V, V, T],
-                [T]
+                [V, V, V, V, V, T, T, T, T, T, V],
+                [V, V, V, V, V, T]
             ],
             zIndices: [
                 [0],
+                [f, f, f, 1],
                 [f, f, f, 1, 1, 0, 0, 0, 1],
                 [f, f, f, 1, 1, 0, 0, 0, 0, 1],
-                [1, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1, 0],
-                [0]
+                [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 0]
             ]
         }
     },

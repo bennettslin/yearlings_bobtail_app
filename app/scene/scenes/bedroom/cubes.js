@@ -22,7 +22,7 @@ import {
     g,
     k,
     LEFT
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 const
     D = DEFAULT_HSLA,

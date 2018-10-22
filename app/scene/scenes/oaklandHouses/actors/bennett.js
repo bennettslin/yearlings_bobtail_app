@@ -7,7 +7,7 @@ const ARRANGEMENTS_MAP = {
     [DROPPING_MEATS]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 2,
             xWidth: 1,
             zHeight: 5
         }

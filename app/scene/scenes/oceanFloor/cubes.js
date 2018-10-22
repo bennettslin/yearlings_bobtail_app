@@ -6,7 +6,7 @@ import {
 
 import {
     RIGHT
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 const
     S = SAND_HSLA,

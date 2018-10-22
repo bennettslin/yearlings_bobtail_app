@@ -21,7 +21,6 @@ import VanNuysSchoolBackdrop from './Backdrops/VanNuysSchoolBackdrop'
 import BennettCouchThoughtBackdrop from './Backdrops/BennettCouchThoughtBackdrop'
 import WestBerkeleyBackdrop from './Backdrops/WestBerkeleyBackdrop'
 import UcBerkeleyBackdrop from './Backdrops/UcBerkeleyBackdrop'
-import CinemaBackdrop from './Backdrops/CinemaBackdrop'
 import GoKartThoughtBackdrop from './Backdrops/GoKartThoughtBackdrop'
 import UclaBackdrop from './Backdrops/UclaBackdrop'
 import PharmacyThoughtBackdrop from './Backdrops/PharmacyThoughtBackdrop'
@@ -55,7 +54,6 @@ import {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
     UC_BERKELEY_BACKDROP,
-    CINEMA_BACKDROP,
     GO_KART_THOUGHT_BACKDROP,
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
@@ -90,7 +88,6 @@ const BACKDROPS_MAP = {
     [BENNETT_COUCH_THOUGHT_BACKDROP]: BennettCouchThoughtBackdrop,
     [WEST_BERKELEY_BACKDROP]: WestBerkeleyBackdrop,
     [UC_BERKELEY_BACKDROP]: UcBerkeleyBackdrop,
-    [CINEMA_BACKDROP]: CinemaBackdrop,
     [GO_KART_THOUGHT_BACKDROP]: GoKartThoughtBackdrop,
     [UCLA_BACKDROP]: UclaBackdrop,
     [PHARMACY_THOUGHT_BACKDROP]: PharmacyThoughtBackdrop,

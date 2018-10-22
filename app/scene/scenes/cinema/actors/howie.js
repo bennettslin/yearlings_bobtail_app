@@ -7,7 +7,7 @@ const ARRANGEMENTS_MAP = {
     [USHER_WAITING]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 10,
             xWidth: 1,
             zHeight: 5
         }
@@ -15,7 +15,7 @@ const ARRANGEMENTS_MAP = {
     [USHER_LOOKING]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 1,
             xWidth: 1,
             zHeight: 5
         }

@@ -227,6 +227,9 @@ module.exports = [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [OAKLAND_FRONT_BACKDROP]: true
+            },
             [FLATS]: {
                 [COMMERCIAL_CENTRE]: true,
                 [COMMERCIAL_FAR_LEFT]: true,

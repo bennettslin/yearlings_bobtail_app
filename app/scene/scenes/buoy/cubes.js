@@ -14,7 +14,7 @@ import {
     g,
     k,
     RIGHT
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 const
     // Default.

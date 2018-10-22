@@ -46,10 +46,6 @@ const
     // With ucBerkeley backdrop and cutouts. Requires editing.
     CAMPANILE = 'campanile',
 
-    // TODO
-    CINEMA_STREET_FAR = 'cinemaStreetFar',
-    CINEMA_STREET_NEAR = 'cinemaStreetNear',
-
     // Own page.
     MUSEUM_DISPLAY = 'museumDisplay',
 
@@ -137,8 +133,6 @@ export {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
-    CINEMA_STREET_FAR,
-    CINEMA_STREET_NEAR,
     MUSEUM_DISPLAY,
     ROYCE_HALL,
     PHARMACY_AISLE,

@@ -12,7 +12,7 @@ import {
     f,
     g,
     k
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 /**
  * Gate should match in courtyard.

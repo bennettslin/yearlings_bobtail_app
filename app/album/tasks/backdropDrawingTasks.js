@@ -25,11 +25,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: 'cinemaBackdrop',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: 'goKartThought',
         workedHours: 0,
         neededHours: 5

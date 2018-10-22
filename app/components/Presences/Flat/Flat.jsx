@@ -23,8 +23,6 @@ import LockerBank from './Flats/LockerBank'
 import StJosephsAnnex from './Flats/StJosephsAnnex'
 import StJosephsChurch from './Flats/StJosephsChurch'
 import Campanile from './Flats/Campanile'
-import CinemaStreetFar from './Flats/CinemaStreetFar'
-import CinemaStreetNear from './Flats/CinemaStreetNear'
 import MuseumDisplay from './Flats/MuseumDisplay'
 import RoyceHall from './Flats/RoyceHall'
 import PharmacyAisle from './Flats/PharmacyAisle'
@@ -86,8 +84,6 @@ import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
-    CINEMA_STREET_FAR,
-    CINEMA_STREET_NEAR,
     MUSEUM_DISPLAY,
     ROYCE_HALL,
     PHARMACY_AISLE,
@@ -150,8 +146,6 @@ const FLATS_MAP = {
     [ST_JOSEPHS_ANNEX]: StJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: StJosephsChurch,
     [CAMPANILE]: Campanile,
-    [CINEMA_STREET_FAR]: CinemaStreetFar,
-    [CINEMA_STREET_NEAR]: CinemaStreetNear,
     [MUSEUM_DISPLAY]: MuseumDisplay,
     [ROYCE_HALL]: RoyceHall,
     [PHARMACY_AISLE]: PharmacyAisle,

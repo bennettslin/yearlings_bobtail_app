@@ -66,7 +66,7 @@ import {
 } from '../../scene/instanceKeys/songs'
 
 import {
-    CINEMA_BACKDROP
+    OAKLAND_FRONT_BACKDROP
 } from '../../scene/backdropKeys'
 
 import {
@@ -103,8 +103,10 @@ import {
 } from '../../scene/fixtureKeys'
 
 import {
-    CINEMA_STREET_FAR,
-    CINEMA_STREET_NEAR
+    COMMERCIAL_CENTRE,
+    COMMERCIAL_FAR_RIGHT,
+    COMMERCIAL_MIDDLE_RIGHT,
+    COMMERCIAL_NEAR_RIGHT
 } from '../../scene/flatKeys'
 
 import {
@@ -402,7 +404,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [CINEMA_BACKDROP]: true
+                [OAKLAND_FRONT_BACKDROP]: true
             },
             [BUBBLES]: {
                 [CINEMA_THOUGHTS]: true
@@ -411,8 +413,10 @@ module.exports = [
                 [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER_STREET
             },
             [FLATS]: {
-                [CINEMA_STREET_FAR]: true,
-                [CINEMA_STREET_NEAR]: true
+                [COMMERCIAL_CENTRE]: true,
+                [COMMERCIAL_FAR_RIGHT]: true,
+                [COMMERCIAL_MIDDLE_RIGHT]: true,
+                [COMMERCIAL_NEAR_RIGHT]: true
             }
         },
         cubes: CINEMA_STREET_KEY,

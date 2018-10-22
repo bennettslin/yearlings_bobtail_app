@@ -7,7 +7,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [CINEMA_POSTER_LEFT]: {
-        yIndex: 3,
+        yIndex: 4,
         arrangement: {
             xFloat: 1,
             xWidth: 2.5,
@@ -17,7 +17,7 @@ const ARRANGEMENTS_MAP = {
     },
     [CINEMA_POSTER_RIGHT]: {
         [ARRANGEMENT_CINEMA_POSTER]: {
-            yIndex: 3,
+            yIndex: 4,
             arrangement: {
                 xFloat: 10,
                 xWidth: 2.5,
@@ -26,7 +26,7 @@ const ARRANGEMENTS_MAP = {
             }
         },
         [ARRANGEMENT_CINEMA_POSTER_STREET]: {
-            yIndex: 3,
+            yIndex: 4,
             arrangement: {
                 xFloat: 1,
                 xWidth: 2.5,

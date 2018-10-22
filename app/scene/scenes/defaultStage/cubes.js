@@ -6,7 +6,7 @@ import {
 
 import {
     k
-} from '../../cubesConstants'
+} from '../../zIndexKeys'
 
 const
     D = DEFAULT_HSLA,

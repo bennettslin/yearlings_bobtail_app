@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [OFFICER]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 7,
             xWidth: 1,
             zHeight: 5
         }

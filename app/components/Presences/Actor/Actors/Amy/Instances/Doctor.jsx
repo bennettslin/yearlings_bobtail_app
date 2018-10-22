@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Protester = ({
+const Doctor = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Protester = ({
         <Svg
             className={cx(
                 className,
-                'Protester'
+                'Doctor'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Protester = ({
                 {...other}
             >
                 {cx(
-                    'Protester'
+                    'Doctor'
                 )}
             </text>
         </Svg>
     )
 }
 
-Protester.propTypes = propTypes;
+Doctor.propTypes = propTypes;
 
-export default Protester
+export default Doctor

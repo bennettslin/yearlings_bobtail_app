@@ -81,6 +81,7 @@ const
     ATTIC_KEY = 'attic',
 
     OAKLAND_HOUSES_KEY = 'oaklandHouses',
+    OAKLAND_VOLKSWAGEN_KEY = 'oaklandVolkswagen',
     OAKLAND_RESIDENTIAL_KEY = 'oaklandResidential',
     OAKLAND_COMMERCIAL_KEY = 'oaklandCommercial',
     OAKLAND_PUBLIC_KEY = 'oaklandPublic',
@@ -168,6 +169,7 @@ export {
     STATION_WAGON_KEY,
     ATTIC_KEY,
     OAKLAND_HOUSES_KEY,
+    OAKLAND_VOLKSWAGEN_KEY,
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
     OAKLAND_PUBLIC_KEY,
