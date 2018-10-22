@@ -118,6 +118,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: 'taiwanStairsBackdrop',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: 'taiwanStreetsBackdrop',
         workedHours: 1,
         neededHours: 2
@@ -128,14 +133,29 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: 'rickshawTown',
+        workedHours: 1,
+        neededHours: 3
+    },
+    {
+        taskName: 'shoreRickshawBackdrop',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Barbecue grill (Odin)`,
         workedHours: 1,
         neededHours: 2
     },
     {
-        taskName: `Buoy waves (Odin)`,
+        taskName: 'shoreBuoyBackdrop',
         workedHours: 1,
         neededHours: 2
+    },
+    {
+        taskName: 'shoreCarnival',
+        workedHours: 2,
+        neededHours: 4
     },
     {
         taskName: 'oceanBottoms',

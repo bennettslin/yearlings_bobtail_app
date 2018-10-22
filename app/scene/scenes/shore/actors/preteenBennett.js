@@ -4,9 +4,9 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [SHORE]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 5,
             xWidth: 1,
             zHeight: 5
         }

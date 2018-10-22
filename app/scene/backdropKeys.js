@@ -30,10 +30,10 @@ const
     // With taiwanHouses flats.
     TAIWAN_STREETS_BACKDROP = 'taiwanStreetsBackdrop',
 
-    // TODO
+    // With rickshaw town flat.
     SHORE_RICKSHAW_BACKDROP = 'shoreRickshawBackdrop',
 
-    // TODO
+    // With shore carnival flat.
     SHORE_BUOY_BACKDROP = 'shoreBuoyBackdrop',
 
     // With ocean bottom flats.

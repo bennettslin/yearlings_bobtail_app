@@ -4,10 +4,10 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [RICKSHAW]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
             xFloat: 5.5,
-            xWidth: 1,
+            xWidth: 3,
             zHeight: 5
         }
     }

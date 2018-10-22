@@ -9,7 +9,6 @@ import {
 } from '../../cubesConstants'
 
 const
-    // Default.
     S = SAND_HSLA,
 
     OCEAN_FLOOR_CUBES = {

@@ -26,10 +26,10 @@ const
     // Own page.
     VAN_NUYS_SCHOOLHOUSE = 'vanNuysSchoolhouse',
 
-    // TODO
+    // With shore rickshaw backdrop.
     RICKSHAW_TOWN = 'rickshawTown',
 
-    // TODO
+    // With shore buoy backdrop. Requires editing.
     SHORE_CARNIVAL = 'shoreCarnival',
 
     // With ocean bottom backdrop.

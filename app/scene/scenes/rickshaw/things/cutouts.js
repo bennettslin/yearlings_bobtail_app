@@ -5,19 +5,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_SHORE]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
-            xFloat: 0.5,
-            xWidth: 1,
+            xFloat: 1.5,
+            xWidth: 0.5,
             zHeight: 2
         }
     },
     [ODIN_SHORE]: {
-        yIndex: 1,
+        yIndex: 2,
         arrangement: {
             xFloat: 2,
-            xWidth: 2,
-            zHeight: 1
+            xWidth: 0.5,
+            zHeight: 0.5
         }
     }
 }

@@ -1,3 +1,5 @@
+The thing that indie rock cares about, the thing that distinguishes indie rock from just plain rock, is a luxury good. We don't want to see artists enduring real-life hardships, making real-world sacrifices, to build up indie cred. We would find such stories depressing, not uplifting. Building up a grassroots following from the ground up means playing weeknight shows in neighbouring towns hours away, where no one's heard of you and there's no guarantee you'll even have an audience. The opportunity cost of taking this path is incredibly high, and that's an objective reality.
+
 Indie rock is like the popular kids who can make something uncool cool. The less popular kids can tap into that coolness, but they have no power to make it cool themselves.
 
 An everyman is a lone individual who, by sheer virtue of their modest circumstances, can represent everyone else. They are necessarily a member of the privileged, dominant group. Everyman cultures in the 21st century are increasingly going to suck.

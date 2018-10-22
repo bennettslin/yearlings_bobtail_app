@@ -7,17 +7,16 @@ const ARRANGEMENTS_MAP = {
     [BENNETT_ODIN_BUOY]: {
         yIndex: 1,
         arrangement: {
-            xFloat: 10,
-            xWidth: 1,
-            zHeight: 1,
-            zOffset: 3
+            xFloat: 9,
+            xWidth: 0.5,
+            zHeight: 2
         }
     },
     [YELLOW_TAPED_GRILL]: {
-        yIndex: 2,
+        yIndex: 4,
         arrangement: {
-            xFloat: 10,
-            xWidth: 3,
+            xFloat: 7,
+            xWidth: 2,
             zHeight: 3
         }
     }
