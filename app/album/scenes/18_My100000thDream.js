@@ -54,7 +54,8 @@ import {
 
 import {
     WEDDING_CROWD,
-    IV_DRIP
+    IV_DRIP,
+    CLIFF_TREE
 } from '../../scene/cutoutKeys'
 
 import {
@@ -62,10 +63,10 @@ import {
 } from '../../scene/fixtureKeys'
 
 import {
-    CLIFF_TREE,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
-    PAMPAS_FAR
+    PAMPAS_FAR,
+    FOREBODING_TREES
 } from '../../scene/flatKeys'
 
 import {
@@ -201,6 +202,9 @@ module.exports = [
             [BACKDROPS]: {
                 [WEDDING_BACKDROP]: true
             },
+            [FLATS]: {
+                [FOREBODING_TREES]: true
+            },
             [PANELS]: {
                 [WEDDING_PLATFORM]: true
             },
@@ -238,8 +242,10 @@ module.exports = [
             [BACKDROPS]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [CLIFF_TREE]: true
+            },
             [FLATS]: {
-                [CLIFF_TREE]: true,
                 [CLIFF_GRAVES_FAR]: true,
                 [CLIFF_GRAVES_NEAR]: true
             }

@@ -48,6 +48,7 @@ import {
 } from '../../scene/backdropKeys'
 
 import {
+    EL_CERRITO_TREE,
     IV_DRIP
 } from '../../scene/cutoutKeys'
 
@@ -56,7 +57,6 @@ import {
 } from '../../scene/fixtureKeys'
 
 import {
-    EL_CERRITO_TREE,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
 } from '../../scene/flatKeys'
@@ -100,8 +100,10 @@ module.exports = [
             [BACKDROPS]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [EL_CERRITO_TREE]: true
+            },
             [FLATS]: {
-                [EL_CERRITO_TREE]: true,
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
@@ -140,8 +142,10 @@ module.exports = [
             [BACKDROPS]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [EL_CERRITO_TREE]: true
+            },
             [FLATS]: {
-                [EL_CERRITO_TREE]: true,
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
@@ -180,8 +184,10 @@ module.exports = [
             [BACKDROPS]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [EL_CERRITO_TREE]: true
+            },
             [FLATS]: {
-                [EL_CERRITO_TREE]: true,
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
@@ -283,8 +289,10 @@ module.exports = [
             [BACKDROPS]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [EL_CERRITO_TREE]: true
+            },
             [FLATS]: {
-                [EL_CERRITO_TREE]: true,
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
@@ -309,8 +317,10 @@ module.exports = [
             [BACKDROPS]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
+            [CUTOUTS]: {
+                [EL_CERRITO_TREE]: true
+            },
             [FLATS]: {
-                [EL_CERRITO_TREE]: true,
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },

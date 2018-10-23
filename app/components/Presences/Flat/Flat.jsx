@@ -52,12 +52,11 @@ import PublicNearRight from './Flats/PublicNearRight'
 import RoadPast from './Flats/RoadPast'
 import RoadPresent from './Flats/RoadPresent'
 import RoadFuture from './Flats/RoadFuture'
-import ElCerritoTree from './Flats/ElCerritoTree'
 import ElCerritoFar from './Flats/ElCerritoFar'
 import ElCerritoNear from './Flats/ElCerritoNear'
 import CrowdBackNear from './Flats/CrowdBackNear'
 import CrowdBackFar from './Flats/CrowdBackFar'
-import CliffTree from './Flats/CliffTree'
+import ForebodingTrees from './Flats/ForebodingTrees'
 import CliffGravesFar from './Flats/CliffGravesFar'
 import CliffGravesNear from './Flats/CliffGravesNear'
 import PampasFar from './Flats/PampasFar'
@@ -113,12 +112,11 @@ import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
-    EL_CERRITO_TREE,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR,
-    CLIFF_TREE,
+    FOREBODING_TREES,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR
@@ -175,12 +173,11 @@ const FLATS_MAP = {
     [ROAD_PAST]: RoadPast,
     [ROAD_PRESENT]: RoadPresent,
     [ROAD_FUTURE]: RoadFuture,
-    [EL_CERRITO_TREE]: ElCerritoTree,
     [EL_CERRITO_FAR]: ElCerritoFar,
     [EL_CERRITO_NEAR]: ElCerritoNear,
     [CROWD_BACK_NEAR]: CrowdBackNear,
     [CROWD_BACK_FAR]: CrowdBackFar,
-    [CLIFF_TREE]: CliffTree,
+    [FOREBODING_TREES]: ForebodingTrees,
     [CLIFF_GRAVES_FAR]: CliffGravesFar,
     [CLIFF_GRAVES_NEAR]: CliffGravesNear,
     [PAMPAS_FAR]: PampasFar

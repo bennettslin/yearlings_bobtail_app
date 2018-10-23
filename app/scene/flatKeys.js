@@ -100,14 +100,13 @@ const
     ROAD_FUTURE = 'roadFuture',
 
     // Together on one page.
-    EL_CERRITO_TREE = 'elCerritoTree',
-    CLIFF_TREE = 'cliffTree',
-
-    // Together on one page.
     EL_CERRITO_FAR = 'elCerritoFar',
     EL_CERRITO_NEAR = 'elCerritoNear',
     CLIFF_GRAVES_FAR = 'cliffGravesFar',
     CLIFF_GRAVES_NEAR = 'cliffGravesNear',
+
+    // TODO.
+    FOREBODING_TREES = 'forebodingTrees',
 
     // With pampas backdrop.
     PAMPAS_FAR = 'pampasFar'
@@ -163,12 +162,11 @@ export {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
-    EL_CERRITO_TREE,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR,
-    CLIFF_TREE,
+    FOREBODING_TREES,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR

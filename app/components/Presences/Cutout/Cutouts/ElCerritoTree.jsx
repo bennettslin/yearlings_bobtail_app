@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CliffTree = ({
+const ElCerritoTree = ({
 
     className,
 
@@ -18,13 +18,13 @@ const CliffTree = ({
     return (
         <Svg
             className={cx(
-                'CliffTree',
+                'ElCerritoTree',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Flat__temporaryRect'
+                    'Cutout__temporaryRect'
                 )}
                 {...other}
             />
@@ -35,13 +35,13 @@ const CliffTree = ({
                 {...other}
             >
                 {cx(
-                    'CliffTree'
+                    'ElCerritoTree'
                 )}
             </text>
         </Svg>
     )
 }
 
-CliffTree.propTypes = propTypes;
+ElCerritoTree.propTypes = propTypes;
 
-export default CliffTree
+export default ElCerritoTree

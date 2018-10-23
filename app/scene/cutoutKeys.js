@@ -131,6 +131,10 @@ const
     // TODO
     ELLIOTT_SMITH_POSTER = 'elliottSmithPoster',
 
+    // Together on one page.
+    EL_CERRITO_TREE = 'elCerritoTree',
+    CLIFF_TREE = 'cliffTree',
+
     // Own page.
     DUMPSTER = 'dumpster',
 
@@ -219,8 +223,10 @@ export {
     WALL_SPEAKER_SIDE,
     TWIN_STREETLAMP,
     ELLIOTT_SMITH_POSTER,
+    EL_CERRITO_TREE,
     DUMPSTER,
     WEDDING_CROWD,
+    CLIFF_TREE,
     IV_DRIP,
 
     ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS,

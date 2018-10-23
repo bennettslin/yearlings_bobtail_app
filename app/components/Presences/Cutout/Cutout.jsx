@@ -67,8 +67,10 @@ import MonitorSpeakerSide from './Cutouts/MonitorSpeakerSide'
 import WallSpeakerSide from './Cutouts/WallSpeakerSide'
 import TwinStreetlamp from './Cutouts/TwinStreetlamp'
 import ElliottSmithPoster from './Cutouts/ElliottSmithPoster'
+import ElCerritoTree from '../Cutout/Cutouts/ElCerritoTree'
 import Dumpster from './Cutouts/Dumpster'
 import WeddingCrowd from './Cutouts/WeddingCrowd'
+import CliffTree from '../Cutout/Cutouts/CliffTree'
 import IvDrip from './Cutouts/IvDrip'
 
 import {
@@ -137,8 +139,10 @@ import {
     WALL_SPEAKER_SIDE,
     TWIN_STREETLAMP,
     ELLIOTT_SMITH_POSTER,
+    EL_CERRITO_TREE,
     DUMPSTER,
     WEDDING_CROWD,
+    CLIFF_TREE,
     IV_DRIP
 } from 'scene/cutoutKeys'
 
@@ -208,8 +212,10 @@ const CUTOUTS_MAP = {
     [WALL_SPEAKER_SIDE]: WallSpeakerSide,
     [TWIN_STREETLAMP]: TwinStreetlamp,
     [ELLIOTT_SMITH_POSTER]: ElliottSmithPoster,
+    [EL_CERRITO_TREE]: ElCerritoTree,
     [DUMPSTER]: Dumpster,
     [WEDDING_CROWD]: WeddingCrowd,
+    [CLIFF_TREE]: CliffTree,
     [IV_DRIP]: IvDrip
 }
 
