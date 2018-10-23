@@ -98,7 +98,7 @@ const
     NUDE_DRAWINGS = 'nudeDrawings',
     VASELINE = 'vaseline',
 
-    // TODO
+    // With caressed Liz.
     LIZ_PHONE = 'lizPhone',
     LIZ_PHONE_REFLECTION = 'lizPhoneReflection',
 

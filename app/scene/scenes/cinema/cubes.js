@@ -30,26 +30,26 @@ const
         ceiling: {
             hslaColours: [
                 [D],
-                [C, C, C, C, W, W, W, W, C, C],
+                [C, C, C, W, W, W, W, W, W, C],
                 [C]
             ],
             zIndices: [
                 [k],
-                [f, f, f, f, e, e, e, e, f, f],
+                [f, f, f, e, e, e, e, e, e, f],
                 [f]
             ]
         },
         floor: {
             hslaColours: [
                 [T],
-                [W, W, W, W, F, F, F, F, W, W],
+                [W, W, W, F, F, F, F, F, F, W],
                 [W, W, W, F, F, F, F, F, F, W],
                 [W, W, W, F, F, F, F, F, F, W],
                 [V]
             ],
             zIndices: [
                 [0],
-                [f, f, f, f, 1, 1, 1, 1, f, f],
+                [f, f, f, 1, 1, 1, 1, 1, 1, f],
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
                 [1]

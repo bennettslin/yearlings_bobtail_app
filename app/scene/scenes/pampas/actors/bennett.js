@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [PAMPAS]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 4,
             xWidth: 1,
             zHeight: 5
         }

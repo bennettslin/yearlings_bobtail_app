@@ -38,6 +38,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Snowglobe contents`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Peta demonstration posters`,
         workedHours: 0,
         neededHours: 3

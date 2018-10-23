@@ -44,7 +44,6 @@ const rawAlbum = {
             .concat(require('album/tasks/cutoutDrawingTasks'))
             .concat(require('album/tasks/doorDrawingTasks'))
             .concat(require('album/tasks/fixtureDrawingTasks'))
-            .concat(require('album/tasks/flatDrawingTasks'))
             .concat(require('album/tasks/furnitureDrawingTasks'))
             .concat(require('album/tasks/panelDrawingTasks'))
             .concat(require('album/tasks/puppetDrawingTasks'))

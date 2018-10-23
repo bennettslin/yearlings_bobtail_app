@@ -94,7 +94,7 @@ const
     PUBLIC_FAR_RIGHT = 'publicFarRight',
     PUBLIC_NEAR_RIGHT = 'publicNearRight',
 
-    // TODO
+    // Each on own page.
     ROAD_PAST = 'roadPast',
     ROAD_PRESENT = 'roadPresent',
     ROAD_FUTURE = 'roadFuture',
@@ -109,6 +109,7 @@ const
     CLIFF_GRAVES_FAR = 'cliffGravesFar',
     CLIFF_GRAVES_NEAR = 'cliffGravesNear',
 
+    // With pampas backdrop.
     PAMPAS_FAR = 'pampasFar'
 
 export {

@@ -338,6 +338,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'past, present, and future roads',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: 'golden gate backdrop',
         workedHours: 2,
         neededHours: 4
@@ -377,4 +382,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 3
     },
+    {
+        taskName: 'pampas backdrop and flat',
+        workedHours: 1,
+        neededHours: 2
+    }
 ]

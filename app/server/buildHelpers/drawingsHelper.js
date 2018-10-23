@@ -177,8 +177,8 @@ export const _adminFinaliseActors = (album) => {
                 album.songs[songIndex].actorsTodoCount++
                 album.songs[songIndex].actorsWorkedHours += (descriptionEntity.workedHours || 0)
 
-                // Assume 4.5 hours per drawing.
-                album.songs[songIndex].actorsNeededHours += (descriptionEntity.neededHours || 4.5)
+                // Assume 5 hours per drawing.
+                album.songs[songIndex].actorsNeededHours += (descriptionEntity.neededHours || 5)
 
             }
             album.songs[songIndex].actorsTotalCount++

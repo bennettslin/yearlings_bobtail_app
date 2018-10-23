@@ -75,7 +75,7 @@ const
     // Own page. Requires editing.
     GOLDEN_GATE_BACKDROP = 'goldenGateBackdrop',
 
-    // TODO
+    // With pampas flat.
     PAMPAS_BACKDROP = 'pampasBackdrop',
 
     // TODO
