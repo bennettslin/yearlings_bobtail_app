@@ -8,19 +8,19 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [INFIRM]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
+            xFloat: 2.5,
+            xWidth: 3,
+            zHeight: 3
         }
     },
     [FINAL_DREAM]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 9,
             xWidth: 1,
-            zHeight: 5
+            zHeight: 4
         }
     }
 }

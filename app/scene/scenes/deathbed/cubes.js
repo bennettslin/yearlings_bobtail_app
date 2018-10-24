@@ -5,51 +5,49 @@ import {
 } from '../../cubesKeys'
 
 import {
-    DEFAULT_HSLA
+    GROUND_HSLA,
+    FLOOR_HSLA,
+    PLATFORM_HSLA,
+    UPHOLSTERY_HSLA,
+    HILL_HSLA,
+    HILL_DARKER_HSLA
 } from '../../hslaKeys'
 
 import {
-    g,
+    // g,
     RIGHT
 } from '../../zIndexKeys'
 
 const
-    // Default.
-    D = DEFAULT_HSLA,
+    G = GROUND_HSLA,
+    F = FLOOR_HSLA,
+    P = PLATFORM_HSLA,
+    U = UPHOLSTERY_HSLA,
+    H = HILL_HSLA,
+    I = HILL_DARKER_HSLA,
 
     EL_CERRITO_DEATHBED_CUBES = {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [F, U, F, F, F, F, F, G],
+                [F, U, U, U, F, F, F, F, G],
+                [F, F, U, U, U, U, F, F, G],
+                [F, F, F, U, U, F, F, G, G],
+                [F, F, F, F, F, F, G]
             ],
             zIndices: [
-                [0, 0, g, g, g, 0],
-                [0, g, 5, 5, g, g, 0],
-                [0, g, 5, 5, 5, 5, g, g, 0],
-                [0, g, 5, 5, 5, 5, 5, 1, 0],
-                [g, 1, 1, 5, 5, 5, 1, 0],
-                [g, 1, 1, 1, 1, 5, 1, 0]
+                [0],
+                [1, 5, 1, 1, 1, 1, 1, 0],
+                [1, 5, 5, 5, 1, 1, 1, 1, 0],
+                [1, 1, 5, 5, 5, 5, 1, 1, 0],
+                [1, 1, 1, 5, 5, 1, 1, 0, 0],
+                [1, 1, 1, 1, 1, 1, 0]
             ]
         }
     },
     EL_CERRITO_TENNIS_CUBES = {
-        slantDirection: RIGHT,
-        floor: {
-            hslaColours: [
-                [D]
-            ],
-            zIndices: [
-                [0, 0, g, g, g, 0],
-                [0, g, 5, 5, g, g, 0, 0, 0, 1],
-                [0, g, 5, 5, 5, 5, g, g, 0, 1],
-                [0, g, 5, 5, 5, 5, 5, 1, 0, 1],
-                [g, 1, 1, 5, 5, 5, 1, 0, 0, 1, 0],
-                [g, 1, 1, 1, 1, 5, 1, 0]
-            ]
-        }
-    },
-    CLIFF_DEATHBED_CUBES = {
         slantDirection: RIGHT,
         /**
          * ...........-..
@@ -66,7 +64,12 @@ const
          */
         floor: {
             hslaColours: [
-                [D]
+                [G],
+                [F, U, F, F, F, F, F, G],
+                [F, U, U, U, F, F, F, F, G, P],
+                [F, F, U, U, U, U, F, F, G, P],
+                [F, F, F, U, U, F, F, G, G, P, G],
+                [F, F, F, F, F, F, G]
             ],
             zIndices: [
                 [0],
@@ -76,28 +79,29 @@ const
                 [1, 1, 1, 5, 5, 1, 1, 0, 0, 3, 0],
                 [1, 1, 1, 1, 1, 1, 0]
             ]
+        }
+    },
 
-        /**
-         * ...........-..
-         * .........----.
-         * .......------.
-         * .....--**=====
-         * ...--*****----
-         * .--*******---.
-         * -*@#@@@***-...
-         * .*@#@@@**.....
-         * .******.......
-         * ..***.........
-         * ..*...........
-         */
-            // zIndices: [
-            //     [0],
-            //     [3, 4, 3, 3, 3, 3, 3, 1, 0],
-            //     [3, 4, 4, 4, 3, 3, 3, 3, 1, 1, 0],
-            //     [3, 3, 4, 4, 4, 4, 3, 3, 0, 0, 1],
-            //     [3, 3, 3, 4, 4, 3, 3, 0, 0, 0, 0, 1],
-            //     [3, 3, 3, 3, 3, 3, 0]
-            // ]
+    // TODO: These share the same zIndices, so consolidate?
+    CLIFF_DEATHBED_CUBES = {
+        slantDirection: RIGHT,
+        floor: {
+            hslaColours: [
+                [G],
+                [F, U, F, F, F, F, F, G],
+                [F, U, U, U, F, F, F, F, G, H, H, I],
+                [F, F, U, U, U, U, F, F, G, I, I, H],
+                [F, F, F, U, U, F, F, G, G, H, G],
+                [F, F, F, F, F, F, G]
+            ],
+            zIndices: [
+                [0],
+                [1, 5, 1, 1, 1, 1, 1, 0],
+                [1, 5, 5, 5, 1, 1, 1, 1, 0, 3],
+                [1, 1, 5, 5, 5, 5, 1, 1, 0, 3],
+                [1, 1, 1, 5, 5, 1, 1, 0, 0, 3, 0],
+                [1, 1, 1, 1, 1, 1, 0]
+            ]
         }
     },
 

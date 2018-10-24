@@ -59,6 +59,7 @@ const
 
     // TODO
     HOSPITAL_MATTRESS = 'hospitalMattress',
+    HOSPITAL_MATTRESS_LOWERED = 'hospitalMattressLowered',
 
     ARRANGEMENT_LIZ_CUSHIONS = 'arrangementLizCushions',
     ARRANGEMENT_LIZ_CUSHIONS_THOUGHT = 'arrangementLizCushionsThought'
@@ -89,6 +90,7 @@ export {
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
     HOSPITAL_MATTRESS,
+    HOSPITAL_MATTRESS_LOWERED,
     ARRANGEMENT_LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
 }

@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [FINAL_DREAM]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 11,
             xWidth: 1,
-            zHeight: 5
+            zHeight: 3
         }
     }
 }

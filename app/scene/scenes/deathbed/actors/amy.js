@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [DOCTOR]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 3,
             xWidth: 1,
             zHeight: 5
         }

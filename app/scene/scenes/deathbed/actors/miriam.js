@@ -4,9 +4,9 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TENNIS]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 10,
             xWidth: 1,
             zHeight: 5
         }

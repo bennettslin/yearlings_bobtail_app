@@ -27,6 +27,7 @@ import MiriamCushions from './Furnitures/MiriamCushions'
 import ReattaSeat from './Furnitures/ReattaSeat'
 import ReattaSeatLowered from './Furnitures/ReattaSeatLowered'
 import HospitalMattress from './Furnitures/HospitalMattress'
+import HospitalMattressLowered from './Furnitures/HospitalMattressLowered'
 
 import {
     BEDROOM_DESK,
@@ -53,7 +54,8 @@ import {
     MIRIAM_CUSHIONS,
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
-    HOSPITAL_MATTRESS
+    HOSPITAL_MATTRESS,
+    HOSPITAL_MATTRESS_LOWERED
 } from 'scene/furnitureKeys'
 
 const FURNITURES_MAP = {
@@ -81,7 +83,8 @@ const FURNITURES_MAP = {
     [MIRIAM_CUSHIONS]: MiriamCushions,
     [REATTA_SEAT]: ReattaSeat,
     [REATTA_SEAT_LOWERED]: ReattaSeatLowered,
-    [HOSPITAL_MATTRESS]: HospitalMattress
+    [HOSPITAL_MATTRESS]: HospitalMattress,
+    [HOSPITAL_MATTRESS_LOWERED]: HospitalMattressLowered
 }
 
 const propTypes = {

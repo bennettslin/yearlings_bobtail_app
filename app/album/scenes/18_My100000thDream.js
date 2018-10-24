@@ -75,7 +75,7 @@ import {
 } from '../../scene/doorKeys'
 
 import {
-    HOSPITAL_MATTRESS
+    HOSPITAL_MATTRESS_LOWERED
 } from '../../scene/furnitureKeys'
 
 import {
@@ -294,7 +294,7 @@ module.exports = [
                 [INVERSE_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
-                [HOSPITAL_MATTRESS]: true
+                [HOSPITAL_MATTRESS_LOWERED]: true
             }
         },
         cubes: CLIFF_DEATHBED_KEY,

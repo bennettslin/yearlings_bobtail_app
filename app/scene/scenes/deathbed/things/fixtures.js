@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [HOSPITAL_RECORD_PLAYER]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 6.5,
+            xFloat: 1,
             xWidth: 1,
-            zHeight: 1
+            zHeight: 2
         }
     }
 }

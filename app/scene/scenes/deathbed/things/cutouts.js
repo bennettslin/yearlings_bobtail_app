@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [IV_DRIP]: {
-        yIndex: 5,
+        yIndex: 1,
         arrangement: {
-            xFloat: 1,
+            xFloat: 2,
             xWidth: 1,
-            zHeight: 2
+            zHeight: 4
         }
     }
 }

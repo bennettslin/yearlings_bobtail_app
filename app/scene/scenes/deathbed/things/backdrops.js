@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [INVERSE_THOUGHT_BACKDROP]: {
-        yIndex: 1,
+        yIndex: 0,
         arrangement: {
-            xFloat: 9,
-            xWidth: 5,
-            zHeight: 3
+            xFloat: 5.5,
+            xWidth: 12,
+            zHeight: 8
         }
     }
 }
