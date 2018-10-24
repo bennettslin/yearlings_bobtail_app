@@ -6,11 +6,12 @@ import {
 
 import {
     GROUND_HSLA,
+    HILL_HSLA,
+    HILL_DARKER_HSLA,
     FLOOR_HSLA,
     PLATFORM_HSLA,
     UPHOLSTERY_HSLA,
-    HILL_HSLA,
-    HILL_DARKER_HSLA
+    FURNITURE_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -20,11 +21,12 @@ import {
 
 const
     G = GROUND_HSLA,
+    H = HILL_HSLA,
+    I = HILL_DARKER_HSLA,
     F = FLOOR_HSLA,
     P = PLATFORM_HSLA,
     U = UPHOLSTERY_HSLA,
-    H = HILL_HSLA,
-    I = HILL_DARKER_HSLA,
+    R = FURNITURE_HSLA,
 
     EL_CERRITO_DEATHBED_CUBES = {
         slantDirection: RIGHT,
@@ -33,7 +35,7 @@ const
                 [G],
                 [F, U, F, F, F, F, F, G],
                 [F, U, U, U, F, F, F, F, G],
-                [F, F, U, U, U, U, F, F, G],
+                [F, R, U, U, U, U, F, F, G],
                 [F, F, F, U, U, F, F, G, G],
                 [F, F, F, F, F, F, G]
             ],
@@ -41,7 +43,7 @@ const
                 [0],
                 [1, 5, 1, 1, 1, 1, 1, 0],
                 [1, 5, 5, 5, 1, 1, 1, 1, 0],
-                [1, 1, 5, 5, 5, 5, 1, 1, 0],
+                [1, 4, 5, 5, 5, 5, 1, 1, 0],
                 [1, 1, 1, 5, 5, 1, 1, 0, 0],
                 [1, 1, 1, 1, 1, 1, 0]
             ]
@@ -67,7 +69,7 @@ const
                 [G],
                 [F, U, F, F, F, F, F, G],
                 [F, U, U, U, F, F, F, F, G, P],
-                [F, F, U, U, U, U, F, F, G, P],
+                [F, R, U, U, U, U, F, F, G, P],
                 [F, F, F, U, U, F, F, G, G, P, G],
                 [F, F, F, F, F, F, G]
             ],
@@ -75,7 +77,7 @@ const
                 [0],
                 [1, 5, 1, 1, 1, 1, 1, 0],
                 [1, 5, 5, 5, 1, 1, 1, 1, 0, 3],
-                [1, 1, 5, 5, 5, 5, 1, 1, 0, 3],
+                [1, 4, 5, 5, 5, 5, 1, 1, 0, 3],
                 [1, 1, 1, 5, 5, 1, 1, 0, 0, 3, 0],
                 [1, 1, 1, 1, 1, 1, 0]
             ]
@@ -90,7 +92,7 @@ const
                 [G],
                 [F, U, F, F, F, F, F, G],
                 [F, U, U, U, F, F, F, F, G, H, H, I],
-                [F, F, U, U, U, U, F, F, G, I, I, H],
+                [F, R, U, U, U, U, F, F, G, I, I, H],
                 [F, F, F, U, U, F, F, G, G, H, G],
                 [F, F, F, F, F, F, G]
             ],
@@ -98,7 +100,7 @@ const
                 [0],
                 [1, 5, 1, 1, 1, 1, 1, 0],
                 [1, 5, 5, 5, 1, 1, 1, 1, 0, 3],
-                [1, 1, 5, 5, 5, 5, 1, 1, 0, 3],
+                [1, 4, 5, 5, 5, 5, 1, 1, 0, 3],
                 [1, 1, 1, 5, 5, 1, 1, 0, 0, 3, 0],
                 [1, 1, 1, 1, 1, 1, 0]
             ]
