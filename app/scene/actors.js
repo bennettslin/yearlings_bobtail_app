@@ -64,7 +64,7 @@ import ACTORS_EL_CERRITO from 'scene/scenes/elCerrito/actors'
 import ACTORS_ALLEY from 'scene/scenes/alley/actors'
 import ACTORS_EL_TORITO from 'scene/scenes/elTorito/actors'
 import ACTORS_PAMPAS from 'scene/scenes/pampas/actors'
-import ACTORS_OUTDOOR_WEDDING from 'scene/scenes/outdoorWedding/actors'
+import ACTORS_WEDDING from 'scene/scenes/wedding/actors'
 import ACTORS_CLIFF from 'scene/scenes/cliff/actors'
 import ACTORS_DEATHBED from 'scene/scenes/deathbed/actors'
 
@@ -127,7 +127,7 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_ALLEY,
     ACTORS_EL_TORITO,
     ACTORS_PAMPAS,
-    ACTORS_OUTDOOR_WEDDING,
+    ACTORS_WEDDING,
     ACTORS_CLIFF,
     ACTORS_DEATHBED
 ]

@@ -58,7 +58,7 @@ import THINGS_EL_CERRITO from 'scene/scenes/elCerrito/things'
 import THINGS_ALLEY from 'scene/scenes/alley/things'
 import THINGS_EL_TORITO from 'scene/scenes/elTorito/things'
 import THINGS_PAMPAS from 'scene/scenes/pampas/things'
-import THINGS_OUTDOOR_WEDDING from 'scene/scenes/outdoorWedding/things'
+import THINGS_WEDDING from 'scene/scenes/wedding/things'
 import THINGS_CLIFF from 'scene/scenes/cliff/things'
 import THINGS_DEATHBED from 'scene/scenes/deathbed/things'
 
@@ -121,7 +121,7 @@ const SCENE_ARRANGEMENTS = [
     THINGS_ALLEY,
     THINGS_EL_TORITO,
     THINGS_PAMPAS,
-    THINGS_OUTDOOR_WEDDING,
+    THINGS_WEDDING,
     THINGS_CLIFF,
     THINGS_DEATHBED
 ]

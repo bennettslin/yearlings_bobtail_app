@@ -1,4 +1,4 @@
-import { OUTDOOR_WEDDING_KEY } from '../../cubesKeys'
+import { WEDDING_KEY } from '../../cubesKeys'
 
 import {
     GROUND_HSLA,
@@ -17,7 +17,7 @@ const
     I = HILL_DARKER_HSLA,
     P = PLATFORM_HSLA,
 
-    OUTDOOR_WEDDING_CUBES = {
+    WEDDING_CUBES = {
         slantDirection: RIGHT,
         /**
          * ...........-..
@@ -53,7 +53,7 @@ const
     },
 
     CUBES = {
-        [OUTDOOR_WEDDING_KEY]: OUTDOOR_WEDDING_CUBES
+        [WEDDING_KEY]: WEDDING_CUBES
     }
 
 export default CUBES

@@ -117,11 +117,5 @@ module.exports = [
         taskName: `elliottSmithPoster`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: 'weddingPlatform, crowd, foreboding trees',
-        workedHours: 0,
-        neededHours: 4
     }
 ]

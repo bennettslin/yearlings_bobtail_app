@@ -138,7 +138,7 @@ const
     // Own page.
     DUMPSTER = 'dumpster',
 
-    // TODO
+    // With wedding backdrop, wedding platform panel, and foreboding trees flat.
     WEDDING_CROWD = 'weddingCrowd',
 
     ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS = 'arrangementVanNuysPlantLockers',

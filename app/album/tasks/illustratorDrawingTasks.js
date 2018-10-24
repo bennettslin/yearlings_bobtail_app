@@ -386,5 +386,15 @@ module.exports = [
         taskName: 'pampas backdrop and flat',
         workedHours: 1,
         neededHours: 2
+    },
+    {
+        taskName: 'weddingBackdrop',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'weddingPlatform panel, crowd, foreboding trees',
+        workedHours: 2,
+        neededHours: 4
     }
 ]

@@ -58,7 +58,7 @@ import CUBES_EL_CERRITO from 'scene/scenes/elCerrito/cubes'
 import CUBES_ALLEY from 'scene/scenes/alley/cubes'
 import CUBES_EL_TORITO from 'scene/scenes/elTorito/cubes'
 import CUBES_PAMPAS from 'scene/scenes/pampas/cubes'
-import CUBES_OUTDOOR_WEDDING from 'scene/scenes/outdoorWedding/cubes'
+import CUBES_WEDDING from 'scene/scenes/wedding/cubes'
 import CUBES_CLIFF from 'scene/scenes/cliff/cubes'
 import CUBES_DEATHBED from 'scene/scenes/deathbed/cubes'
 
@@ -123,7 +123,7 @@ const CUBES = {
     ...CUBES_ALLEY,
     ...CUBES_EL_TORITO,
     ...CUBES_PAMPAS,
-    ...CUBES_OUTDOOR_WEDDING,
+    ...CUBES_WEDDING,
     ...CUBES_CLIFF,
     ...CUBES_DEATHBED
 }

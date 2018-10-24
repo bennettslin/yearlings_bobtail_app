@@ -99,7 +99,7 @@ const
 
     EL_TORITO_KEY = 'elTorito',
     PAMPAS_KEY = 'pampas',
-    OUTDOOR_WEDDING_KEY = 'outdoorWedding',
+    WEDDING_KEY = 'wedding',
     CLIFF_KEY = 'cliff',
     CLIFF_DEATHBED_KEY = 'cliffDeathbed'
 
@@ -183,7 +183,7 @@ export {
     ALLEY_KEY,
     EL_TORITO_KEY,
     PAMPAS_KEY,
-    OUTDOOR_WEDDING_KEY,
+    WEDDING_KEY,
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY
 }

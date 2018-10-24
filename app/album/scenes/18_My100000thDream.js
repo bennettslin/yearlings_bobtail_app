@@ -13,7 +13,7 @@ import {
 import {
     EL_TORITO_KEY,
     PAMPAS_KEY,
-    OUTDOOR_WEDDING_KEY,
+    WEDDING_KEY,
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY
 } from '../../scene/cubesKeys'
@@ -213,7 +213,7 @@ module.exports = [
                 [PUPPET_LIZ]: true
             }
         },
-        cubes: OUTDOOR_WEDDING_KEY,
+        cubes: WEDDING_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING

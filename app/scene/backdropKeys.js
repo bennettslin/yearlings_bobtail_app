@@ -78,7 +78,7 @@ const
     // With pampas flat.
     PAMPAS_BACKDROP = 'pampasBackdrop',
 
-    // TODO
+    // With wedding platform panel, wedding crowd cutout, and foreboding trees flat.
     WEDDING_BACKDROP = 'weddingBackdrop',
 
     // TODO

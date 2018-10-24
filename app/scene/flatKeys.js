@@ -105,7 +105,7 @@ const
     CLIFF_GRAVES_FAR = 'cliffGravesFar',
     CLIFF_GRAVES_NEAR = 'cliffGravesNear',
 
-    // TODO.
+    // With wedding backdrop, wedding platform panel, and wedding crowd cutout. Requires editing.
     FOREBODING_TREES = 'forebodingTrees',
 
     // With pampas backdrop.

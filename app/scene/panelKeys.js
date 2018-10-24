@@ -45,7 +45,7 @@ const
     // TODO
     PHONE_CALL_PANEL = 'phoneCallPanel',
 
-    // TODO
+    // With wedding backdrop, wedding crowd cutout, and foreboding trees flat.
     WEDDING_PLATFORM = 'weddingPlatform',
 
     ARRANGEMENT_GO_KART_LEFT = 'arrangementGoKartLeft',
