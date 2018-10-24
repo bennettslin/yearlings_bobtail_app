@@ -120,13 +120,8 @@ module.exports = [
     },
 
     {
-        taskName: 'weddingPlatform',
+        taskName: 'weddingPlatform, crowd, foreboding trees',
         workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'weddingCrowd',
-        workedHours: 0,
-        neededHours: 2
+        neededHours: 4
     }
 ]
