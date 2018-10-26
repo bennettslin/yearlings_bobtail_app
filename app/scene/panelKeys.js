@@ -1,6 +1,7 @@
 const
-    // TODO
+    // Together on one page.
     ESTHER_SPEECH_PANEL = 'estherSpeechPanel',
+    PHONE_CALL_PANEL = 'phoneCallPanel',
 
     // Own page.
     BATHTUB = 'bathtub',
@@ -41,9 +42,6 @@ const
 
     // TODO
     TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel',
-
-    // TODO
-    PHONE_CALL_PANEL = 'phoneCallPanel',
 
     // With wedding backdrop, wedding crowd cutout, and foreboding trees flat.
     WEDDING_PLATFORM = 'weddingPlatform',

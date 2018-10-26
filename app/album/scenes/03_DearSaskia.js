@@ -69,7 +69,8 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
-    VAN_NUYS_SCHOOLHOUSE
+    VAN_NUYS_SCHOOLHOUSE_LEFT,
+    VAN_NUYS_SCHOOLHOUSE_RIGHT
 } from '../../scene/flatKeys'
 
 import {
@@ -241,7 +242,8 @@ module.exports = [
                 [TETHERBALL_POLE]: true
             },
             [FLATS]: {
-                [VAN_NUYS_SCHOOLHOUSE]: true
+                [VAN_NUYS_SCHOOLHOUSE_LEFT]: true,
+                [VAN_NUYS_SCHOOLHOUSE_RIGHT]: true
             }
         },
         cubes: TETHERBALL_COURT_KEY,

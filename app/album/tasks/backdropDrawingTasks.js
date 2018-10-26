@@ -10,16 +10,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: 'vanNuysThoughtBackdrop',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: 'vanNuysSchoolBackdrop',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: 'bennettCouchThoughtBackdrop',
         workedHours: 0,
         neededHours: 5

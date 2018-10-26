@@ -4,9 +4,9 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TETHERED]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 6,
             xWidth: 1,
             zHeight: 5
         }

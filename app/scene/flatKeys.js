@@ -23,8 +23,9 @@ const
     TAIWAN_HOUSE_FAR = 'taiwanHouseFar',
     TAIWAN_HOUSE_NEAR = 'taiwanHouseNear',
 
-    // Own page.
-    VAN_NUYS_SCHOOLHOUSE = 'vanNuysSchoolhouse',
+    // With vanNuys backdrop. Requires editing.
+    VAN_NUYS_SCHOOLHOUSE_LEFT = 'vanNuysSchoolhouseLeft',
+    VAN_NUYS_SCHOOLHOUSE_RIGHT = 'vanNuysSchoolhouseRight',
 
     // Together with Taiwan stairs and shore rickshaw backdrop.
     RICKSHAW_TOWN = 'rickshawTown',
@@ -124,7 +125,8 @@ export {
     TAIWAN_MOUNTAIN_RIGHT,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
-    VAN_NUYS_SCHOOLHOUSE,
+    VAN_NUYS_SCHOOLHOUSE_LEFT,
+    VAN_NUYS_SCHOOLHOUSE_RIGHT,
     RICKSHAW_TOWN,
     SHORE_CARNIVAL,
     OCEAN_BOTTOM_MIDDLE,

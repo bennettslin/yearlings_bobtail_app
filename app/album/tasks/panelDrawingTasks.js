@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `estherSpeechPanel`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `captainBedDrawers`,
         workedHours: 0,
         neededHours: 2

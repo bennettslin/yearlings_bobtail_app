@@ -14,7 +14,8 @@ import TaiwanMountainLeft from './Flats/TaiwanMountainLeft'
 import TaiwanMountainRight from './Flats/TaiwanMountainRight'
 import TaiwanHouseFar from './Flats/TaiwanHouseFar'
 import TaiwanHouseNear from './Flats/TaiwanHouseNear'
-import VanNuysSchoolhouse from './Flats/VanNuysSchoolhouse'
+import VanNuysSchoolhouseLeft from './Flats/VanNuysSchoolhouseLeft'
+import VanNuysSchoolhouseRight from './Flats/VanNuysSchoolhouseRight'
 import RickshawTown from './Flats/RickshawTown'
 import ShoreCarnival from './Flats/ShoreCarnival'
 import OceanBottomMiddle from './Flats/OceanBottomMiddle'
@@ -74,7 +75,8 @@ import {
     TAIWAN_MOUNTAIN_RIGHT,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
-    VAN_NUYS_SCHOOLHOUSE,
+    VAN_NUYS_SCHOOLHOUSE_LEFT,
+    VAN_NUYS_SCHOOLHOUSE_RIGHT,
     RICKSHAW_TOWN,
     SHORE_CARNIVAL,
     OCEAN_BOTTOM_MIDDLE,
@@ -135,7 +137,8 @@ const FLATS_MAP = {
     [TAIWAN_MOUNTAIN_RIGHT]: TaiwanMountainRight,
     [TAIWAN_HOUSE_FAR]: TaiwanHouseFar,
     [TAIWAN_HOUSE_NEAR]: TaiwanHouseNear,
-    [VAN_NUYS_SCHOOLHOUSE]: VanNuysSchoolhouse,
+    [VAN_NUYS_SCHOOLHOUSE_LEFT]: VanNuysSchoolhouseLeft,
+    [VAN_NUYS_SCHOOLHOUSE_RIGHT]: VanNuysSchoolhouseRight,
     [RICKSHAW_TOWN]: RickshawTown,
     [SHORE_CARNIVAL]: ShoreCarnival,
     [OCEAN_BOTTOM_MIDDLE]: OceanBottomMiddle,

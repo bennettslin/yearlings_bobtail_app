@@ -4,7 +4,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [TETHERBALL_POLE]: {
-        yIndex: 1,
+        yIndex: 3,
         arrangement: {
             xFloat: 7,
             xWidth: 0.5,

@@ -21,7 +21,8 @@ const
     // TODO
     SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop',
 
-    // TODO
+    // Together with vanNuys schoolhouse flat. Both require editing.
+    VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
     VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
 
     // Together with rickshaw town flat.
@@ -39,9 +40,6 @@ const
 
     // With buddha shrine cutout and ocean cave panels.
     OCEAN_FLOOR_FAR = 'oceanFloorFar',
-
-    // TODO
-    VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
 
     // TODO
     BENNETT_COUCH_THOUGHT_BACKDROP = 'bennettCouchThoughtBackdrop',

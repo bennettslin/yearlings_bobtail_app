@@ -24,6 +24,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `estherSpeechPanel`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Valley overlooking freeway (Willy)`,
         workedHours: 2,
         neededHours: 3
@@ -196,6 +201,16 @@ module.exports = [
         taskName: `Sepulveda school buildings (Pchelka)`,
         workedHours: 2,
         neededHours: 3
+    },
+    {
+        taskName: 'vanNuysSchoolBackdrop',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'vanNuysThoughtBackdrop',
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Streetlamp, twin streetlamp (Ash, Golden Cord)`,
