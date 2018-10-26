@@ -99,8 +99,7 @@ import {
 } from '../../scene/fixtureKeys'
 
 import {
-    LOCKER_BANK,
-    VAN_NUYS_SCHOOLHOUSE
+    LOCKER_BANK
 } from '../../scene/flatKeys'
 
 import {
@@ -349,8 +348,7 @@ module.exports = [
                 [THROWN_FRUIT]: true
             },
             [FLATS]: {
-                [LOCKER_BANK]: true,
-                [VAN_NUYS_SCHOOLHOUSE]: true
+                [LOCKER_BANK]: true
             }
         },
         cubes: VAN_NUYS_LOCKERS_KEY,

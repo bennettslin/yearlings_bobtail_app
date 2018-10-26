@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [WISTFUL]: {
-        yIndex: 5,
+        yIndex: 2,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
+            xFloat: 3.5,
+            xWidth: 2,
+            zHeight: 3
         }
     }
 }

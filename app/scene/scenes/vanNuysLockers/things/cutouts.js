@@ -18,7 +18,7 @@ const ARRANGEMENTS_MAP = {
             }
         },
         [ARRANGEMENT_TRASH_CAN_QUAD]: {
-            yIndex: 2,
+            yIndex: 3,
             arrangement: {
                 xFloat: 0.5,
                 xWidth: 1.5,
@@ -36,7 +36,7 @@ const ARRANGEMENTS_MAP = {
             }
         },
         [ARRANGEMENT_VAN_NUYS_PLANT_QUAD]: {
-            yIndex: 3,
+            yIndex: 4,
             arrangement: {
                 xFloat: 3,
                 xWidth: 2,

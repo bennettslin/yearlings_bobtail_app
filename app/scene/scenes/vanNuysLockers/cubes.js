@@ -2,7 +2,8 @@ import { VAN_NUYS_LOCKERS_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
-    LAWN_HSLA,
+    GROUND_HSLA,
+    PAVEMENT_HSLA,
     CEILING_HSLA,
     WALL_HSLA,
     PLATFORM_HSLA
@@ -15,7 +16,8 @@ import {
 
 const
     D = DEFAULT_HSLA,
-    L = LAWN_HSLA,
+    G = GROUND_HSLA,
+    V = PAVEMENT_HSLA,
     C = CEILING_HSLA,
     W = WALL_HSLA,
     P = PLATFORM_HSLA,
@@ -28,7 +30,7 @@ const
                 [C, C, C, C, C, C, C, C, C, C, D],
                 [C, C, C, C, C, C, C, C, C, C, D],
                 [C, C, C, C, C, C, C, C, C, C, D],
-                [C, C, C, C, C, C, C, C, C, C, D]
+                [D]
             ],
             zIndices: [
                 [k],
@@ -36,23 +38,25 @@ const
                 [f, f, f, f, f, f, f, f, f, f, k],
                 [f, f, f, f, f, f, f, f, f, f, k],
                 [f, f, f, f, f, f, f, f, f, f, k],
-                [f, f, f, f, f, f, f, f, f, f, k]
+                [k]
             ]
         },
         floor: {
             hslaColours: [
-                [L],
-                [L],
-                [P, P, P, P, P, P, P, P, P, P, L],
-                [P, W, W, W, W, W, W, P, P, P, L],
-                [P, P, P, P, P, P, P, P, P, P, L]
+                [G],
+                [V],
+                [P, W, W, W, W, W, W, P, P, P, V],
+                [P, P, P, P, P, P, P, P, P, P, V],
+                [P, P, P, P, P, P, P, P, P, P, V],
+                [V]
             ],
             zIndices: [
+                [0],
                 [1],
-                [1],
-                [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
                 [2, f, f, f, f, f, f, 2, 2, 2, 1],
-                [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1]
+                [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+                [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+                [1]
             ]
         }
     },

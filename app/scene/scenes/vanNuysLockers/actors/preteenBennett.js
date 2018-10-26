@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [STOIC]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
+            xFloat: 7.5,
+            xWidth: 2,
+            zHeight: 3
         }
     }
 }

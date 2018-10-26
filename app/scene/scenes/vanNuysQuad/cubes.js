@@ -2,7 +2,8 @@ import { VAN_NUYS_QUAD_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA,
-    LAWN_HSLA,
+    GROUND_HSLA,
+    PAVEMENT_HSLA,
     CEILING_HSLA,
     WALL_HSLA,
     PLATFORM_HSLA
@@ -15,7 +16,8 @@ import {
 
 const
     D = DEFAULT_HSLA,
-    L = LAWN_HSLA,
+    G = GROUND_HSLA,
+    V = PAVEMENT_HSLA,
     C = CEILING_HSLA,
     W = WALL_HSLA,
     P = PLATFORM_HSLA,
@@ -26,9 +28,11 @@ const
                 [D, D, C],
                 [D, D, C],
                 [D, D, C],
+                [D, D, C],
                 [D]
             ],
             zIndices: [
+                [k, k, f],
                 [k, k, f],
                 [k, k, f],
                 [k, k, f],
@@ -37,12 +41,14 @@ const
         },
         floor: {
             hslaColours: [
-                [L, L, P, P, P, P, P, P, P, P, P, P],
-                [L, L, P, P, P, W, W, W, W, W, W, P],
-                [L, L, P, P, P, P, P, P, P, P, P, P],
-                [L]
+                [G],
+                [V, V, P, P, P, P, P, P, P, P, P, P],
+                [V, V, P, P, P, W, W, W, W, W, W, P],
+                [V, V, P, P, P, P, P, P, P, P, P, P],
+                [V]
             ],
             zIndices: [
+                [0],
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
                 [1, 1, 2, 2, 2, f, f, f, f, f, f, 2],
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
