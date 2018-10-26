@@ -18,7 +18,7 @@ import {
 import {
     TIME_ANYTIME,
     SEASON_PRESENT,
-    SEASON_PAST
+    SEASON_THOUGHT
 } from '../../scene/sky'
 
 import {
@@ -202,7 +202,7 @@ module.exports = [
         cubes: SCHOOLBUS_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_PAST
+            season: SEASON_THOUGHT
         }
     },
     {
@@ -249,7 +249,7 @@ module.exports = [
         cubes: TETHERBALL_COURT_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_PAST
+            season: SEASON_THOUGHT
         }
     },
     {

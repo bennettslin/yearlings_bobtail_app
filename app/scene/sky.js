@@ -19,7 +19,8 @@ SEASON_PRESENT = 'present',
 SEASON_FUTURE = 'future',
 SEASON_LOVE = 'love',
 SEASON_MAGIC = 'magic',
-SEASON_OCEAN = 'ocean'
+SEASON_OCEAN = 'ocean',
+SEASON_THOUGHT = 'thought'
 
 export {
     TIME_ANYTIME,
@@ -40,5 +41,6 @@ export {
     SEASON_FUTURE,
     SEASON_LOVE,
     SEASON_MAGIC,
-    SEASON_OCEAN
+    SEASON_OCEAN,
+    SEASON_THOUGHT
 }

@@ -4,7 +4,7 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [PHONE_CALL_PANEL]: {
-        yIndex: 4,
+        yIndex: 3,
         arrangement: {
             xFloat: 9,
             xWidth: 3,

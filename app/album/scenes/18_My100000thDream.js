@@ -20,7 +20,8 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_SPRING
+    SEASON_SPRING,
+    SEASON_THOUGHT
 } from '../../scene/sky'
 
 import {
@@ -300,7 +301,7 @@ module.exports = [
         cubes: CLIFF_DEATHBED_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_SPRING
+            season: SEASON_THOUGHT
         }
     }
 ]

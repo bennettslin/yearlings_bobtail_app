@@ -19,7 +19,8 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_AUTUMN
+    SEASON_AUTUMN,
+    SEASON_THOUGHT
 } from '../../scene/sky'
 
 import {
@@ -234,7 +235,7 @@ module.exports = [
         cubes: GO_KARTS_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_THOUGHT
         }
     },
     {

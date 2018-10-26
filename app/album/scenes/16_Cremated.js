@@ -18,7 +18,8 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_AUTUMN
+    SEASON_AUTUMN,
+    SEASON_THOUGHT
 } from '../../scene/sky'
 
 import {
@@ -233,7 +234,7 @@ module.exports = [
         cubes: EL_CERRITO_DEATHBED_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_THOUGHT
         }
     },
     {
@@ -265,7 +266,7 @@ module.exports = [
         cubes: EL_CERRITO_TENNIS_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
+            season: SEASON_THOUGHT
         }
     },
     {

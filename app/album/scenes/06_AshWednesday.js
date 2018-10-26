@@ -19,7 +19,7 @@ import {
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
-    SEASON_PAST
+    SEASON_THOUGHT
 } from '../../scene/sky'
 
 import {
@@ -160,7 +160,7 @@ module.exports = [
         cubes: BENNETT_COUCH_THOUGHT_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_PAST
+            season: SEASON_THOUGHT
         }
     },
     {

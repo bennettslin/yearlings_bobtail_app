@@ -24,9 +24,9 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `estherSpeechPanel`,
-        workedHours: 1,
-        neededHours: 2
+        taskName: `estherSpeechPanel and phonePanel`,
+        workedHours: 2,
+        neededHours: 3
     },
     {
         taskName: `Valley overlooking freeway (Willy)`,

@@ -13,10 +13,5 @@ module.exports = [
         taskName: `tennisThoughtPanel`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `phoneCallPanel`,
-        workedHours: 0,
-        neededHours: 2
     }
 ]
