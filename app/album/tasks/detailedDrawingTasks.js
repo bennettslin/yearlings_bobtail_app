@@ -1,26 +1,4 @@
 module.exports = [
-    // TODO: Tomorrow.
-    {
-        taskName: `Teen pop idols on bathroom mirror (Didi)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Waiting room painting (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `keepsake photos (Kyon)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Peta demonstration posters`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     {
         taskName: `Johnny Horton album`,
         workedHours: 0,

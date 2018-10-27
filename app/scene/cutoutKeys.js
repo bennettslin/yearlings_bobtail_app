@@ -75,8 +75,6 @@ const
     // Together on one page.
     TRASH_CAN = 'trashCan',
     VAN_NUYS_PLANTS = 'vanNuysPlants',
-
-    // TODO
     VAN_NUYS_LOGO = 'vanNuysLogo',
 
     // Together on one page.

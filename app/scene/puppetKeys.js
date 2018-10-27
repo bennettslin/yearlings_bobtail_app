@@ -1,5 +1,3 @@
-// Keep puppet instances in this file.
-
 const
     // TODO
     PUPPET_BENNETT_BEGIN = 'puppetBennettBegin',

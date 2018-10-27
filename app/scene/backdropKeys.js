@@ -1,5 +1,3 @@
-// Each scene has one backdrop at most. Backdrop is always the furthest back.
-
 const
     // With nohoHouses flats. Requires editing.
     NOHO_HOUSES_BACKDROP = 'nohoHousesBackdrop',
@@ -21,10 +19,12 @@ const
     // On two pages. Requires editing.
     SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop',
     STATION_WAGON_BACKDROP = 'stationWagonBackdrop',
+    LIZ_COUCH_THOUGHT_BACKDROP = 'lizCouchThought',
 
     // With vanNuys schoolhouse flat on two pages. Both require editing.
     VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
     VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
+    BENNETT_COUCH_THOUGHT_BACKDROP = 'bennettCouchThoughtBackdrop',
 
     // Together with rickshaw town flat.
     TAIWAN_STAIRS_BACKDROP = 'taiwanStairsBackdrop',
@@ -42,9 +42,6 @@ const
     // With buddha shrine cutout and ocean cave panels.
     OCEAN_FLOOR_FAR = 'oceanFloorFar',
 
-    // TODO
-    BENNETT_COUCH_THOUGHT_BACKDROP = 'bennettCouchThoughtBackdrop',
-
     // Together on one page. Requires editing.
     WEST_BERKELEY_BACKDROP = 'westBerkeleyBackdrop',
     UCLA_BACKDROP = 'uclaBackdrop',
@@ -61,9 +58,6 @@ const
 
     // With cemetery flat.
     CEMETERY_BACKDROP = 'cemeteryBackdrop',
-
-    // TODO
-    LIZ_COUCH_THOUGHT_BACKDROP = 'lizCouchThought',
 
     // Own page.
     OAKLAND_FRONT_BACKDROP = 'oaklandFrontBackdrop',

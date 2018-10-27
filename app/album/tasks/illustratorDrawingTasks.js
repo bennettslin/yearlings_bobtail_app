@@ -108,7 +108,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: 'schoolbus and station wagon backdrops',
+        taskName: 'schoolbus and station wagon thought, lizCouch thought backdrops',
         workedHours: 1,
         neededHours: 3
     },
@@ -188,6 +188,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'vanNuysLogo',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Locker bank (Pchelka)`,
         workedHours: 1,
         neededHours: 2
@@ -208,7 +213,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'vanNuys school and thought backdrops',
+        taskName: 'vanNuys school and thought, bennettCouch thought backdrops',
         workedHours: 2,
         neededHours: 4
     },
@@ -376,6 +381,11 @@ module.exports = [
         taskName: `Miriam's convertible exterior (Cremated)`,
         workedHours: 2,
         neededHours: 3
+    },
+    {
+        taskName: `hospital record player`,
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Hospital drip (Cremated, Dream)`,

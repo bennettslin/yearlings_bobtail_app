@@ -1,5 +1,3 @@
-// Keep fixtures instances in this file.
-
 const
     // With concerned Anita.
     PLAYGROUND_BALL = 'playgroundBall',
@@ -145,7 +143,7 @@ const
     LIZ_PHONE_BASE = 'lizPhoneBase',
     LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection',
 
-    // TODO
+    // Own page.
     HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
 
     ARRANGEMENT_PUSH_BROOM_BACKSTAGE = 'arrangementPushBroomBackstage',

@@ -780,5 +780,25 @@ module.exports = [
         taskName: `Steering wheels`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Teen pop idols on bathroom mirror (Didi)`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `keepsake photos (Kyon)`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Peta demonstration posters`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Waiting room painting (Grasshoppers)`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
