@@ -5,12 +5,12 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: 'bedroomBlinds',
+        taskName: 'bedroomBlinds (slanted)',
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: 'bedroomBlindsOpen',
+        taskName: 'bedroomBlindsOpen (slanted)',
         workedHours: 0,
         neededHours: 2
     },

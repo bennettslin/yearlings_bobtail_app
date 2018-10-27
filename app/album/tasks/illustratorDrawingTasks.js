@@ -108,6 +108,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'schoolbus and station wagon backdrops',
+        workedHours: 1,
+        neededHours: 3
+    },
+    {
         taskName: 'taiwanMountainsBackdrop',
         workedHours: 4,
         neededHours: 5
@@ -203,14 +208,9 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'vanNuysSchoolBackdrop',
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
-        taskName: 'vanNuysThoughtBackdrop',
-        workedHours: 1,
-        neededHours: 2
+        taskName: 'vanNuys school and thought backdrops',
+        workedHours: 2,
+        neededHours: 4
     },
     {
         taskName: `Streetlamp, twin streetlamp (Ash, Golden Cord)`,
@@ -379,6 +379,11 @@ module.exports = [
     },
     {
         taskName: `Hospital drip (Cremated, Dream)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `deathBed and tennis thought panels`,
         workedHours: 1,
         neededHours: 2
     },

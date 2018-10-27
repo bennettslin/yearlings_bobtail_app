@@ -1,12 +1,16 @@
 module.exports = [
-    /**
-     * Fixtures.
-     */
+    // TODO: Tomorrow.
+    {
+        taskName: `hospitalRecordPlayer`,
+        workedHours: 0,
+        neededHours: 4
+    },
     {
         taskName: `fridgeDrawings`,
         workedHours: 0,
         neededHours: 2
     },
+
     {
         taskName: `bennettRecordPlayer`,
         workedHours: 0,
@@ -26,10 +30,5 @@ module.exports = [
         taskName: `recordingMic`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `hospitalRecordPlayer`,
-        workedHours: 0,
-        neededHours: 4
     }
 ]

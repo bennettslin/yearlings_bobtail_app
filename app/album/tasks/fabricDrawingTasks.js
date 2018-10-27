@@ -1,7 +1,4 @@
 module.exports = [
-    /**
-     * Fabrics.
-     */
     {
         taskName: `Barber cloth (Willy)`,
         workedHours: 0,
@@ -46,59 +43,5 @@ module.exports = [
         taskName: `2 * Bennett's hospital blanket (Cremated, Dream)`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    /**
-     * Clothing patterns
-     */
-    {
-        taskName: `Christopher shirt (stegosaurus)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Tristan patches`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Jacob shirt (unicorn?)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Tomer shirt (Escher)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Shane shirt (Lookout)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Stephanie shirt (80s)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Catherine shirt (college)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Miriam bikini top (American flag)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Chinese clothes patterns`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Indian clothes patterns`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]

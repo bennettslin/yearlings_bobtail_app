@@ -18,12 +18,13 @@ const
     // Own page.
     TAIWAN_MOUNTAINS_BACKDROP = 'taiwanMountainsBackdrop',
 
-    // TODO
+    // On two pages. Requires editing.
     SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop',
+    STATION_WAGON_BACKDROP = 'stationWagonBackdrop',
 
-    // Together with vanNuys schoolhouse flat. Both require editing.
-    VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
+    // With vanNuys schoolhouse flat on two pages. Both require editing.
     VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop',
+    VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop',
 
     // Together with rickshaw town flat.
     TAIWAN_STAIRS_BACKDROP = 'taiwanStairsBackdrop',
@@ -60,9 +61,6 @@ const
 
     // With cemetery flat.
     CEMETERY_BACKDROP = 'cemeteryBackdrop',
-
-    // TODO
-    STATION_WAGON_BACKDROP = 'stationWagonBackdrop',
 
     // TODO
     LIZ_COUCH_THOUGHT_BACKDROP = 'lizCouchThought',

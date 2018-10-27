@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: 'schoolbusThoughtBackdrop',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: 'bennettCouchThoughtBackdrop',
         workedHours: 0,
         neededHours: 5
@@ -21,11 +16,6 @@ module.exports = [
     },
     {
         taskName: 'pharmacyThought',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: 'stationWagonBackdrop',
         workedHours: 0,
         neededHours: 5
     },

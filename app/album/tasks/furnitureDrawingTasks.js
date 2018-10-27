@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `captainBedDrawers (technically a panel)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `bedroomDesk`,
         workedHours: 0,
         neededHours: 2
