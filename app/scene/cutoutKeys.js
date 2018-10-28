@@ -117,7 +117,7 @@ const
     PAINTING = 'painting',
     WAITING_ROOM_PLANT = 'waitingRoomPlant',
 
-    // Together on one page.
+    // Together on one page. With Taiwan drawing fixture, accidentally.
     STORAGE_BOXES = 'storageBoxes',
     STORAGE_CHEST = 'storageChest',
     HOWIE_FRIDGE = 'howieFridge',

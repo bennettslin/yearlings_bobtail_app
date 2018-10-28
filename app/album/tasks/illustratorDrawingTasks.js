@@ -1,5 +1,4 @@
 module.exports = [
-
     /**
      * Large painted panels
      */
@@ -34,7 +33,12 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'taiwanFridge',
+        taskName: 'Taiwan fridge',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Taiwan drawing`,
         workedHours: 1,
         neededHours: 2
     },
@@ -218,6 +222,11 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: `bennettRecordPlayer`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Streetlamp, twin streetlamp (Ash, Golden Cord)`,
         workedHours: 1,
         neededHours: 2
@@ -356,6 +365,11 @@ module.exports = [
         taskName: `horse`,
         workedHours: 3,
         neededHours: 4
+    },
+    {
+        taskName: `Pinky promise portrait (Uncanny)`,
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `snowglobe`,

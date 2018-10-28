@@ -95,7 +95,7 @@ const
     PUBLIC_FAR_RIGHT = 'publicFarRight',
     PUBLIC_NEAR_RIGHT = 'publicNearRight',
 
-    // Each on own page.
+    // Each on own page. Requires editing.
     ROAD_PAST = 'roadPast',
     ROAD_PRESENT = 'roadPresent',
     ROAD_FUTURE = 'roadFuture',

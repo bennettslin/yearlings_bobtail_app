@@ -801,4 +801,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Snowglobe contents`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

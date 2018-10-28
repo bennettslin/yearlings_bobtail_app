@@ -26,7 +26,7 @@ const
     BACKPACK_SASHA = 'backpackSasha',
     BACKPACK_JEWISH_BOY = 'backpackJewishBoy',
 
-    // TODO
+    // With attic and Howie fridge cutouts, accidentally. Requires editing.
     FRIDGE_DRAWINGS = 'fridgeDrawings',
 
     // With guiltRidden PreteenBennett and blissful Christopher. Requires editing.
@@ -42,8 +42,9 @@ const
     // With stoic PreteenBennett. Requires editing.
     THROWN_FRUIT = 'thrownFruit',
 
-    // TODO
+    // Together on one page.
     BENNETT_RECORD_PLAYER = 'bennettRecordPlayer',
+    HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
 
     // With solicitingOpinion Bennett.
     BENNETT_COUCH_LAMP = 'bennettCouchLamp',
@@ -142,9 +143,6 @@ const
     // With caressed Liz and caressing KhariReflection.
     LIZ_PHONE_BASE = 'lizPhoneBase',
     LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection',
-
-    // Own page.
-    HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
 
     ARRANGEMENT_PUSH_BROOM_BACKSTAGE = 'arrangementPushBroomBackstage',
     ARRANGEMENT_PUSH_BROOM_TUNNEL = 'arrangementPushBroomTunnel',
