@@ -367,6 +367,16 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: 'peahen',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'peacock',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
         taskName: `Pinky promise portrait (Uncanny)`,
         workedHours: 1,
         neededHours: 2
@@ -400,6 +410,11 @@ module.exports = [
         taskName: `Miriam's convertible exterior (Cremated)`,
         workedHours: 2,
         neededHours: 3
+    },
+    {
+        taskName: 'puppetReatta',
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `hospital record player`,

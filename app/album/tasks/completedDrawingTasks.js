@@ -806,4 +806,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `GoKart helmets`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

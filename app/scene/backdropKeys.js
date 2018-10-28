@@ -62,7 +62,7 @@ const
     // Own page.
     OAKLAND_FRONT_BACKDROP = 'oaklandFrontBackdrop',
 
-    // Own page. Requires editing.
+    // With reatta puppet. Requires editing.
     GOLDEN_GATE_BACKDROP = 'goldenGateBackdrop',
 
     // With pampas flat.

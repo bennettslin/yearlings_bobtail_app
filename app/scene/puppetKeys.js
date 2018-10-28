@@ -39,11 +39,13 @@ const
     OPAL_WINDOW = 'opalWindow',
     // TODO
     OPAL_COUCH = 'opalCouch',
-    // TODO
+
+    // Own page.
     PEAHEN = 'peahen',
-    // TODO
+    // Own page.
     PEACOCK = 'peacock',
-    // TODO
+
+    // With goldenGate backdrop.
     PUPPET_REATTA = 'puppetReatta',
 
     // TODO

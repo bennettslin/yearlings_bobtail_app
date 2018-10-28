@@ -1,21 +1,4 @@
 module.exports = [
-    // TODO: Tomorrow.
-    {
-        taskName: 'peahen',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: 'peacock',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: 'puppetReatta',
-        workedHours: 0,
-        neededHours: 3
-    },
-
     {
         taskName: 'puppetBennettBegin',
         workedHours: 0,
