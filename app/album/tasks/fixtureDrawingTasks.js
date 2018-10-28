@@ -1,4 +1,5 @@
 module.exports = [
+    // TODO: Tomorrow.
     {
         taskName: `fridgeDrawings`,
         workedHours: 0,
@@ -9,6 +10,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 4
     },
+
     {
         taskName: `nudeDrawings`,
         workedHours: 0,
