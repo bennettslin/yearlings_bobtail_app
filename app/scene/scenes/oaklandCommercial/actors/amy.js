@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [OFFICER]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
-            xFloat: 7,
-            xWidth: 1,
-            zHeight: 5
+            xFloat: 7.5,
+            xWidth: 2,
+            zHeight: 6
         }
     }
 }

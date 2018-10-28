@@ -1,10 +1,4 @@
 module.exports = [
-    // TODO: Tomorrow.
-    {
-        taskName: `horse`,
-        workedHours: 0,
-        neededHours: 4
-    },
     {
         taskName: 'peahen',
         workedHours: 0,
