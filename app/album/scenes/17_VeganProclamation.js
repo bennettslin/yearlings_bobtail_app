@@ -12,7 +12,7 @@ import {
 
 import {
     CLUB_FAR_KEY,
-    LIZ_BED_OPEN_KEY,
+    LIZ_BED_OPEN_PHONE_KEY,
     ALLEY_KEY,
     BANCROFT_LIBRARY_KEY,
     CAMPANILE_KEY
@@ -307,7 +307,7 @@ module.exports = [
                 [GHOST_ODIN_PHONE]: true
             }
         },
-        cubes: LIZ_BED_OPEN_KEY,
+        cubes: LIZ_BED_OPEN_PHONE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_LOVE

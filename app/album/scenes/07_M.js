@@ -111,7 +111,8 @@ import {
 
 import {
     BASEMENT_DOOR_OPEN,
-    CINEMA_DOORS
+    CINEMA_DOOR_LEFT,
+    CINEMA_DOOR_RIGHT
 } from '../../scene/doorKeys'
 
 module.exports = [
@@ -332,7 +333,7 @@ module.exports = [
                 [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER
             },
             [DOORS]: {
-                [CINEMA_DOORS]: true
+                [CINEMA_DOOR_LEFT]: true
             }
         },
         cubes: CINEMA_KEY,
@@ -374,7 +375,8 @@ module.exports = [
                 [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER
             },
             [DOORS]: {
-                [CINEMA_DOORS]: true
+                [CINEMA_DOOR_LEFT]: true,
+                [CINEMA_DOOR_RIGHT]: true
             }
         },
         cubes: CINEMA_KEY,

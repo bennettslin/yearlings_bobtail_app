@@ -24,7 +24,8 @@ const
     // TODO
     BASEMENT_DOOR_OPEN = 'basementDoorOpen',
     // TODO
-    CINEMA_DOORS = 'cinemaDoors',
+    CINEMA_DOOR_LEFT = 'cinemaDoorLeft',
+    CINEMA_DOOR_RIGHT = 'cinemaDoorRight',
     // TODO
     LIZ_BLINDS = 'lizBlinds',
     // TODO
@@ -82,7 +83,8 @@ export {
     BANCROFT_DOOR,
     BASEMENT_DOOR,
     BASEMENT_DOOR_OPEN,
-    CINEMA_DOORS,
+    CINEMA_DOOR_LEFT,
+    CINEMA_DOOR_RIGHT,
     LIZ_BLINDS,
     LIZ_BLINDS_OPEN,
     LIZ_GATE_OUTSIDE,

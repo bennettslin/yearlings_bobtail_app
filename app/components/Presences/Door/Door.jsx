@@ -14,7 +14,8 @@ import BennettGateSide from './Doors/BennettGateSide'
 import BancroftDoor from './Doors/BancroftDoor'
 import BasementDoor from './Doors/BasementDoor'
 import BasementDoorOpen from './Doors/BasementDoorOpen'
-import CinemaDoors from './Doors/CinemaDoors'
+import CinemaDoorLeft from './Doors/CinemaDoorLeft'
+import CinemaDoorRight from './Doors/CinemaDoorRight'
 import LizGateOutside from './Doors/LizGateOutside'
 import LizGateOutsideOpen from './Doors/LizGateOutsideOpen'
 import DishroomDoor from './Doors/DishroomDoor'
@@ -49,7 +50,8 @@ import {
     BANCROFT_DOOR,
     BASEMENT_DOOR,
     BASEMENT_DOOR_OPEN,
-    CINEMA_DOORS,
+    CINEMA_DOOR_LEFT,
+    CINEMA_DOOR_RIGHT,
     LIZ_BLINDS,
     LIZ_BLINDS_OPEN,
     LIZ_GATE_OUTSIDE,
@@ -85,7 +87,8 @@ const DOORS_MAP = {
     [BANCROFT_DOOR]: BancroftDoor,
     [BASEMENT_DOOR]: BasementDoor,
     [BASEMENT_DOOR_OPEN]: BasementDoorOpen,
-    [CINEMA_DOORS]: CinemaDoors,
+    [CINEMA_DOOR_LEFT]: CinemaDoorLeft,
+    [CINEMA_DOOR_RIGHT]: CinemaDoorRight,
     [LIZ_GATE_OUTSIDE]: LizGateOutside,
     [LIZ_GATE_OUTSIDE_OPEN]: LizGateOutsideOpen,
     [DISHROOM_DOOR]: DishroomDoor,

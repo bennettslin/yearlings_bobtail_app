@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CinemaDoors = ({
+const CinemaDoorRight = ({
 
     className,
 
@@ -18,7 +18,7 @@ const CinemaDoors = ({
     return (
         <Svg
             className={cx(
-                'CinemaDoors',
+                'CinemaDoorRight',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const CinemaDoors = ({
                 {...other}
             >
                 {cx(
-                    'CinemaDoors'
+                    'CinemaDoorRight'
                 )}
             </text>
         </Svg>
     )
 }
 
-CinemaDoors.propTypes = propTypes;
+CinemaDoorRight.propTypes = propTypes;
 
-export default CinemaDoors
+export default CinemaDoorRight
