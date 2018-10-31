@@ -113,8 +113,8 @@ module.exports = [
     },
     {
         taskName: 'schoolbus and station wagon thought, lizCouch thought backdrops',
-        workedHours: 1,
-        neededHours: 3
+        workedHours: 3,
+        neededHours: 5
     },
     {
         taskName: 'taiwanMountainsBackdrop',
@@ -353,6 +353,11 @@ module.exports = [
     },
     {
         taskName: 'codeBox',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'pharmacyThought',
         workedHours: 1,
         neededHours: 2
     },
