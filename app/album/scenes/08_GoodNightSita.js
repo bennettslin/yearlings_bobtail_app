@@ -1,6 +1,7 @@
 import {
     ACTORS,
     BACKDROPS,
+    BUBBLES,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -19,8 +20,7 @@ import {
 
 import {
     TIME_ANYTIME,
-    SEASON_AUTUMN,
-    SEASON_THOUGHT
+    SEASON_AUTUMN
 } from '../../scene/sky'
 
 import {
@@ -43,8 +43,12 @@ import {
 } from '../../scene/instanceKeys/songs'
 
 import {
-    GO_KART_THOUGHT_BACKDROP
+    GO_KART_BACKDROP
 } from '../../scene/backdropKeys'
+
+import {
+    GO_KART_THOUGHT
+} from '../../scene/bubbleKeys'
 
 import {
     SANDBAGS,
@@ -219,7 +223,7 @@ module.exports = [
                 }
             },
             [BACKDROPS]: {
-                [GO_KART_THOUGHT_BACKDROP]: true
+                [GO_KART_BACKDROP]: true
             },
             [FURNITURES]: {
                 [GO_KART_SEAT_LEFT]: true,
@@ -235,7 +239,7 @@ module.exports = [
         cubes: GO_KARTS_KEY,
         sky: {
             time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
+            season: SEASON_AUTUMN
         }
     },
     {
@@ -257,6 +261,9 @@ module.exports = [
                         instance: DATE_ENDED
                     }
                 }
+            },
+            [BUBBLES]: {
+                [GO_KART_THOUGHT]: true
             },
             [CUTOUTS]: {
                 [TRAFFIC_LIGHT]: true

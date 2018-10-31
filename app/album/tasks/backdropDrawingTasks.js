@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: 'goKartThought',
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: 'inverseThoughtBackdrop',
         workedHours: 0,
         neededHours: 5

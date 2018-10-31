@@ -10,6 +10,8 @@ const
     // TODO
     CINEMA_THOUGHTS = 'cinemaThoughts',
     // TODO
+    GO_KART_THOUGHT = 'goKartThought',
+    // TODO
     WAITING_ROOM_THOUGHTS = 'waitingRoomThoughts',
     // TODO
     TARPIT_THOUGHT = 'tarpitThought',
@@ -28,6 +30,7 @@ export {
     DOGS_SKETCHBOOK,
     ESCAPE_POD_SKETCHBOOK,
     CINEMA_THOUGHTS,
+    GO_KART_THOUGHT,
     WAITING_ROOM_THOUGHTS,
     TARPIT_THOUGHT,
     SIBLING_THOUGHT,

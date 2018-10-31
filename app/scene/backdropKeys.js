@@ -50,10 +50,10 @@ const
     UC_BERKELEY_BACKDROP = 'ucBerkeleyBackdrop',
     OAKLAND_SIDE_BACKDROP = 'oaklandSideBackdrop',
 
-    // TODO
-    GO_KART_THOUGHT_BACKDROP = 'goKartThought',
+    // Own page.
+    GO_KART_BACKDROP = 'goKartBackdrop',
 
-    // TODO
+    // Own page.
     PHARMACY_THOUGHT_BACKDROP = 'pharmacyThought',
 
     // With cemetery flat.
@@ -94,7 +94,7 @@ export {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
     UC_BERKELEY_BACKDROP,
-    GO_KART_THOUGHT_BACKDROP,
+    GO_KART_BACKDROP,
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,

@@ -1,9 +1,9 @@
 import {
-    GO_KART_THOUGHT_BACKDROP
+    GO_KART_BACKDROP
 } from '../../../backdropKeys'
 
 const ARRANGEMENTS_MAP = {
-    [GO_KART_THOUGHT_BACKDROP]: {
+    [GO_KART_BACKDROP]: {
         yIndex: 0,
         arrangement: {
             xFloat: 5.5,

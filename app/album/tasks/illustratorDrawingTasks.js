@@ -267,7 +267,12 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `goKart`,
+        taskName: `goKart panel`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: 'goKartbackdrop',
         workedHours: 2,
         neededHours: 3
     },

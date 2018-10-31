@@ -7,6 +7,7 @@ import ApartSketchbook from './Bubbles/ApartSketchbook'
 import DogsSketchbook from './Bubbles/DogsSketchbook'
 import EscapePodSketchbook from './Bubbles/EscapePodSketchbook'
 import CinemaThoughts from './Bubbles/CinemaThoughts'
+import GoKartThought from './Bubbles/GoKartThought'
 import WaitingRoomThoughts from './Bubbles/WaitingRoomThoughts'
 import TarpitThought from './Bubbles/TarpitThought'
 import SiblingThought from './Bubbles/SiblingThought'
@@ -20,6 +21,7 @@ import {
     DOGS_SKETCHBOOK,
     ESCAPE_POD_SKETCHBOOK,
     CINEMA_THOUGHTS,
+    GO_KART_THOUGHT,
     WAITING_ROOM_THOUGHTS,
     TARPIT_THOUGHT,
     SIBLING_THOUGHT,
@@ -34,6 +36,7 @@ const BUBBLES_MAP = {
     [DOGS_SKETCHBOOK]: DogsSketchbook,
     [ESCAPE_POD_SKETCHBOOK]: EscapePodSketchbook,
     [CINEMA_THOUGHTS]: CinemaThoughts,
+    [GO_KART_THOUGHT]: GoKartThought,
     [WAITING_ROOM_THOUGHTS]: WaitingRoomThoughts,
     [TARPIT_THOUGHT]: TarpitThought,
     [SIBLING_THOUGHT]: SiblingThought,
