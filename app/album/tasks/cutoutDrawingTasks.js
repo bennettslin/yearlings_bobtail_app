@@ -1,9 +1,36 @@
 module.exports = [
+    // TODO: Tomorrow.
     {
         taskName: `tintinPoster`,
         workedHours: 0,
         neededHours: 3
     },
+    {
+        taskName: 'nirvanaPoster',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'leonardCohenPoster',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'cinemaPosterLeft',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'cinemaPosterRight',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `elliottSmithPoster`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     {
         taskName: 'bennettTaiwanStairs',
         workedHours: 0,
@@ -79,34 +106,6 @@ module.exports = [
     },
     {
         taskName: 'odinMat',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: 'nirvanaPoster',
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: 'leonardCohenPoster',
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: 'cinemaPosterLeft',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: 'cinemaPosterRight',
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `elliottSmithPoster`,
         workedHours: 0,
         neededHours: 3
     }
