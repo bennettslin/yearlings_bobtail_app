@@ -37,10 +37,8 @@ const
     // Own page.
     REATTA_EXTERIOR = 'reattaExterior',
 
-    // TODO
+    // Together with inverse thought backdrop. Requires editing.
     DEATHBED_THOUGHT_PANEL = 'deathbedThoughtPanel',
-
-    // TODO
     TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel',
 
     // With wedding backdrop, wedding crowd cutout, and foreboding trees flat.

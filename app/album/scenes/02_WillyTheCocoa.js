@@ -91,6 +91,7 @@ import {
     HAIRCUT_SCISSORS,
     GARBAGE_BAG,
     SHOPPING_CART_FULL,
+    BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
 } from '../../scene/fixtureKeys'
 
@@ -244,6 +245,7 @@ module.exports = [
                 [TINTIN_POSTER]: true,
             },
             [FIXTURES]: {
+                [BEETHOVEN_BUST]: true,
                 [CHRISTOPHER_LETTERS]: true
             },
             [DOORS]: {
@@ -334,10 +336,13 @@ module.exports = [
                 [BEDROOM_SIREN_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TINTIN_POSTER]: true,
+                [TINTIN_POSTER]: true
             },
             [DOORS]: {
-                [BEDROOM_BLINDS_OPEN]: true,
+                [BEDROOM_BLINDS_OPEN]: true
+            },
+            [FIXTURES]: {
+                [BEETHOVEN_BUST]: true
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true,

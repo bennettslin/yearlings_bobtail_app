@@ -69,6 +69,7 @@ import {
 } from '../../scene/cutoutKeys'
 
 import {
+    POLICE_ALBUM,
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN
@@ -150,6 +151,7 @@ module.exports = [
                 [NIRVANA_POSTER]: true
             },
             [FIXTURES]: {
+                [POLICE_ALBUM]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },

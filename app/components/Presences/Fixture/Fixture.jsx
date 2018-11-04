@@ -5,8 +5,10 @@ import cx from 'classnames'
 import PlaygroundBall from './Fixtures/PlaygroundBall'
 import SafewayBag from './Fixtures/SafewayBag'
 import RecordPlayerStool from './Fixtures/RecordPlayerStool'
+import JohnnyHortonAlbum from './Fixtures/JohnnyHortonAlbum'
 import ShoppingCart from './Fixtures/ShoppingCart'
 import HaircutScissors from './Fixtures/HaircutScissors'
+import BeethovenBust from './Fixtures/BeethovenBust'
 import ChristopherLetters from './Fixtures/ChristopherLetters'
 import GarbageBag from './Fixtures/GarbageBag'
 import ShoppingCartFull from './Fixtures/ShoppingCartFull'
@@ -19,9 +21,11 @@ import RedEnvelopeMoney from './Fixtures/RedEnvelopeMoney'
 import BeyonderEnvelope from './Fixtures/BeyonderEnvelope'
 import BennettLetters from './Fixtures/BennettLetters'
 import ThrownFruit from './Fixtures/ThrownFruit'
+import PoliceAlbum from './Fixtures/PoliceAlbum'
 import BennettRecordPlayer from './Fixtures/BennettRecordPlayer'
 import BennettCouchLamp from './Fixtures/BennettCouchLamp'
 import AshCan from './Fixtures/AshCan'
+import TelevisionAlbum from './Fixtures/TelevisionAlbum'
 import Keyboard from './Fixtures/Keyboard'
 import CashBox from './Fixtures/CashBox'
 import Guitar from './Fixtures/Guitar'
@@ -54,6 +58,7 @@ import BassCaseSide from './Fixtures/BassCaseSide'
 import DrumsStacked from './Fixtures/DrumsStacked'
 import BennettShoe from './Fixtures/BennettShoe'
 import BennettShoeReflection from './Fixtures/BennettShoeReflection'
+import NasAlbum from './Fixtures/NasAlbum';
 import Tchotchkes from './Fixtures/Tchotchkes'
 import TetherballPole from './Fixtures/TetherballPole'
 import RecordingConsole from './Fixtures/RecordingConsole'
@@ -70,8 +75,10 @@ import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL,
+    JOHNNY_HORTON_ALBUM,
     SHOPPING_CART,
     HAIRCUT_SCISSORS,
+    BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
     GARBAGE_BAG,
     SHOPPING_CART_FULL,
@@ -84,9 +91,11 @@ import {
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
     THROWN_FRUIT,
+    POLICE_ALBUM,
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN,
+    TELEVISION_ALBUM,
     KEYBOARD,
     CASH_BOX,
     GUITAR,
@@ -119,6 +128,7 @@ import {
     DRUMS_STACKED,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
+    NAS_ALBUM,
     TCHOTCHKES,
     TETHERBALL_POLE,
     RECORDING_MIC,
@@ -136,8 +146,10 @@ const FIXTURES_MAP = {
     [PLAYGROUND_BALL]: PlaygroundBall,
     [SAFEWAY_BAG]: SafewayBag,
     [RECORD_PLAYER_STOOL]: RecordPlayerStool,
+    [JOHNNY_HORTON_ALBUM]: JohnnyHortonAlbum,
     [SHOPPING_CART]: ShoppingCart,
     [HAIRCUT_SCISSORS]: HaircutScissors,
+    [BEETHOVEN_BUST]: BeethovenBust,
     [CHRISTOPHER_LETTERS]: ChristopherLetters,
     [GARBAGE_BAG]: GarbageBag,
     [SHOPPING_CART_FULL]: ShoppingCartFull,
@@ -150,9 +162,11 @@ const FIXTURES_MAP = {
     [BEYONDER_ENVELOPE]: BeyonderEnvelope,
     [BENNETT_LETTERS]: BennettLetters,
     [THROWN_FRUIT]: ThrownFruit,
+    [POLICE_ALBUM]: PoliceAlbum,
     [BENNETT_RECORD_PLAYER]: BennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: BennettCouchLamp,
     [ASH_CAN]: AshCan,
+    [TELEVISION_ALBUM]: TelevisionAlbum,
     [KEYBOARD]: Keyboard,
     [CASH_BOX]: CashBox,
     [GUITAR]: Guitar,
@@ -185,6 +199,7 @@ const FIXTURES_MAP = {
     [DRUMS_STACKED]: DrumsStacked,
     [BENNETT_SHOE]: BennettShoe,
     [BENNETT_SHOE_REFLECTION]: BennettShoeReflection,
+    [NAS_ALBUM]: NasAlbum,
     [TCHOTCHKES]: Tchotchkes,
     [TETHERBALL_POLE]: TetherballPole,
     [RECORDING_MIC]: RecordingMic,

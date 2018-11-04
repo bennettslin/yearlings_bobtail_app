@@ -62,7 +62,8 @@ import {
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
-    RECORD_PLAYER_STOOL
+    RECORD_PLAYER_STOOL,
+    JOHNNY_HORTON_ALBUM
 } from '../../scene/fixtureKeys'
 
 import {
@@ -237,7 +238,8 @@ module.exports = [
                 [MIRRORED_SINK]: true
             },
             [FIXTURES]: {
-                [RECORD_PLAYER_STOOL]: true
+                [RECORD_PLAYER_STOOL]: true,
+                [JOHNNY_HORTON_ALBUM]: true
             },
             [PANELS]: {
                 [BATHTUB]: true

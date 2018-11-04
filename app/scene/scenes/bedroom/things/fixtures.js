@@ -1,4 +1,5 @@
 import {
+    BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
     CAPTAIN_BED_LAMP,
     BENNETT_LETTERS,
@@ -7,6 +8,14 @@ import {
 } from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
+    [BEETHOVEN_BUST]: {
+        yIndex: 5,
+        arrangement: {
+            xFloat: 5,
+            xWidth: 1,
+            zHeight: 1
+        }
+    },
     [CHRISTOPHER_LETTERS]: {
         yIndex: 5,
         arrangement: {

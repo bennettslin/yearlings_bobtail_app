@@ -45,6 +45,8 @@ import SignPost from './Cutouts/SignPost'
 import BancroftShrubs from './Cutouts/BancroftShrubs'
 import UcBerkeleyTree from './Cutouts/UcBerkeleyTree'
 import LeonardCohenPoster from './Cutouts/LeonardCohenPoster'
+import ProgressChartEarly from './Cutouts/ProgressChartEarly'
+import ProgressChartLate from './Cutouts/ProgressChartLate'
 import MonitorSpeakerLeft from './Cutouts/MonitorSpeakerLeft'
 import MonitorSpeakerRight from './Cutouts/MonitorSpeakerRight'
 import WallSpeakerLeft from './Cutouts/WallSpeakerLeft'
@@ -117,6 +119,8 @@ import {
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE,
     LEONARD_COHEN_POSTER,
+    PROGRESS_CHART_EARLY,
+    PROGRESS_CHART_LATE,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
@@ -190,6 +194,8 @@ const CUTOUTS_MAP = {
     [BANCROFT_SHRUBS]: BancroftShrubs,
     [UC_BERKELEY_TREE]: UcBerkeleyTree,
     [LEONARD_COHEN_POSTER]: LeonardCohenPoster,
+    [PROGRESS_CHART_EARLY]: ProgressChartEarly,
+    [PROGRESS_CHART_LATE]: ProgressChartLate,
     [MONITOR_SPEAKER_LEFT]: MonitorSpeakerLeft,
     [MONITOR_SPEAKER_RIGHT]: MonitorSpeakerRight,
     [WALL_SPEAKER_LEFT]: WallSpeakerLeft,

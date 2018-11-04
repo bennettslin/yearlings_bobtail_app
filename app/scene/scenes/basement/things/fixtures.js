@@ -4,6 +4,7 @@ import {
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT,
+    NAS_ALBUM,
     CRACKED_PICTURE
 } from '../../../fixtureKeys'
 
@@ -41,6 +42,14 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [BASEMENT_BEER_BENNETT]: {
+        yIndex: 3,
+        arrangement: {
+            xFloat: 9.5,
+            xWidth: 1,
+            zHeight: 4
+        }
+    },
+    [NAS_ALBUM]: {
         yIndex: 3,
         arrangement: {
             xFloat: 9.5,

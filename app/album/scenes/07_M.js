@@ -75,6 +75,8 @@ import {
 
 import {
     LEONARD_COHEN_POSTER,
+    PROGRESS_CHART_EARLY,
+    PROGRESS_CHART_LATE,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
@@ -88,6 +90,7 @@ import {
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
+    TELEVISION_ALBUM,
     KEYBOARD,
     CASH_BOX,
     GUITAR,
@@ -155,9 +158,10 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [LEONARD_COHEN_POSTER]: true
+                [PROGRESS_CHART_EARLY]: true
             },
             [FIXTURES]: {
+                [TELEVISION_ALBUM]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             }
@@ -189,7 +193,7 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [LEONARD_COHEN_POSTER]: true
+                [PROGRESS_CHART_LATE]: true
             },
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER]: true,

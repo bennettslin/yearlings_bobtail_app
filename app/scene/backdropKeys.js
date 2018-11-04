@@ -8,7 +8,7 @@ const
     // Own page.
     VALLEY_BACKDROP = 'valleyBackdrop',
 
-    // TODO
+    // Own page. Requires editing.
     BEDROOM_BACKDROP = 'bedroomBackdrop',
     BEDROOM_SIREN_BACKDROP = 'bedroomSirenBackdrop',
     BEDROOM_BUS_BACKDROP = 'bedroomBusBackdrop',
@@ -71,7 +71,7 @@ const
     // With wedding platform panel, wedding crowd cutout, and foreboding trees flat.
     WEDDING_BACKDROP = 'weddingBackdrop',
 
-    // TODO
+    // Together with deathbed and tennis thought panels. Requires editing.
     INVERSE_THOUGHT_BACKDROP = 'inverseThoughtBackdrop'
 
 export {

@@ -20,8 +20,11 @@ const
     PORCH_PLANTS_LEFT = 'porchPlantsLeft',
     PORCH_PLANTS_RIGHT = 'porchPlantsRight',
 
-    // TODO
+    // Together on one page. Requires editing.
     TINTIN_POSTER = 'tintinPoster',
+    NIRVANA_POSTER = 'nirvanaPoster',
+    LEONARD_COHEN_POSTER = 'leonardCohenPoster',
+    ELLIOTT_SMITH_POSTER = 'elliottSmithPoster',
 
     // Together on one page.
     TROLL_SHADOW_LEFT = 'trollShadowLeft',
@@ -83,9 +86,6 @@ const
     APARTMENT_PLANT = 'apartmentPlant',
     CODE_BOX = 'codeBox',
 
-    // TODO
-    NIRVANA_POSTER = 'nirvanaPoster',
-
     // Together on one page.
     DISPENSER_LEFT = 'dispenserLeft',
     DISPENSER_RIGHT = 'dispenserRight',
@@ -96,7 +96,8 @@ const
     UC_BERKELEY_TREE = 'ucBerkeleyTree',
 
     // TODO
-    LEONARD_COHEN_POSTER = 'leonardCohenPoster',
+    PROGRESS_CHART_EARLY = 'progressChartEarly',
+    PROGRESS_CHART_LATE = 'progressChartLate',
 
     // Together on one page. Requires editing.
     MONITOR_SPEAKER_LEFT = 'monitorSpeakerLeft',
@@ -125,9 +126,6 @@ const
     // Together on one page.
     TELEVISION = 'television',
     IV_DRIP = 'ivDrip',
-
-    // TODO
-    ELLIOTT_SMITH_POSTER = 'elliottSmithPoster',
 
     // Together on one page.
     EL_CERRITO_TREE = 'elCerritoTree',
@@ -199,6 +197,8 @@ export {
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE,
     LEONARD_COHEN_POSTER,
+    PROGRESS_CHART_EARLY,
+    PROGRESS_CHART_LATE,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,

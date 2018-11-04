@@ -70,7 +70,8 @@ import {
 
 import {
     GUITAR,
-    DRUMKIT
+    DRUMKIT,
+    NAS_ALBUM
 } from '../../scene/fixtureKeys'
 
 import {
@@ -205,6 +206,9 @@ module.exports = [
             },
             [DOORS]: {
                 [BASEMENT_DOOR]: true
+            },
+            [FIXTURES]: {
+                [NAS_ALBUM]: true
             },
             [FURNITURES]: {
                 [BENNETT_MATTRESS]: true,

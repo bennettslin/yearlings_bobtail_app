@@ -39,7 +39,6 @@ const rawAlbum = {
         remainingTasks: require('album/tasks/remainingTasks')
 
             // Presences.
-            .concat(require('album/tasks/backdropDrawingTasks'))
             .concat(require('album/tasks/bubbleDrawingTasks'))
             .concat(require('album/tasks/cutoutDrawingTasks'))
             .concat(require('album/tasks/doorDrawingTasks'))

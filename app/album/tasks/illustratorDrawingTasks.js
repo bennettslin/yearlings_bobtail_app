@@ -8,11 +8,6 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `Family house in distance and plants (Willy)`,
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
         taskName: `Playground (Didi)`,
         workedHours: 2,
         neededHours: 3
@@ -28,7 +23,22 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Family house in distance and plants (Willy)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Valley overlooking freeway (Willy)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: 'bedroom, siren, schoolbus backdrops',
+        workedHours: 1,
+        neededHours: 3
+    },
+    {
+        taskName: `tintinPoster`,
         workedHours: 2,
         neededHours: 3
     },
@@ -49,6 +59,11 @@ module.exports = [
     },
     {
         taskName: `St Joseph the Worker church and surroundings (Ash)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: 'nirvanaPoster',
         workedHours: 2,
         neededHours: 3
     },
@@ -247,6 +262,11 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: 'leonardCohenPoster',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `2 * Stage monitors (M, Look Back, Garryowen)`,
         workedHours: 1,
         neededHours: 2
@@ -372,6 +392,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `elliottSmithPoster`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `horse`,
         workedHours: 3,
         neededHours: 4
@@ -437,9 +462,9 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `deathBed and tennis thought panels`,
+        taskName: `deathBed, tennis and inverse thought panels`,
         workedHours: 1,
-        neededHours: 2
+        neededHours: 3
     },
     {
         taskName: `Park bench (Vegan)`,
