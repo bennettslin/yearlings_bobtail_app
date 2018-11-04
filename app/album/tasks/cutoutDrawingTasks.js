@@ -1,14 +1,14 @@
 module.exports = [
     // TODO: Tomorrow.
     {
-        taskName: 'cinemaPosterLeft',
+        taskName: 'cinemaPoster left',
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: 'cinemaPosterRight',
+        taskName: 'cinemaPosters right',
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
     {
         taskName: 'progressCharts',

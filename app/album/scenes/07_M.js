@@ -83,8 +83,7 @@ import {
     WALL_SPEAKER_RIGHT,
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT,
-    ARRANGEMENT_CINEMA_POSTER,
-    ARRANGEMENT_CINEMA_POSTER_STREET
+    CINEMA_POSTER_RIGHT_NORMAL
 } from '../../scene/cutoutKeys'
 
 import {
@@ -334,7 +333,7 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [CINEMA_POSTER_LEFT]: true,
-                [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER
+                [CINEMA_POSTER_RIGHT]: true
             },
             [DOORS]: {
                 [CINEMA_DOOR_LEFT]: true
@@ -376,7 +375,7 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [CINEMA_POSTER_LEFT]: true,
-                [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER
+                [CINEMA_POSTER_RIGHT]: true
             },
             [DOORS]: {
                 [CINEMA_DOOR_LEFT]: true,
@@ -416,7 +415,7 @@ module.exports = [
                 [CINEMA_THOUGHTS]: true
             },
             [CUTOUTS]: {
-                [CINEMA_POSTER_RIGHT]: ARRANGEMENT_CINEMA_POSTER_STREET
+                [CINEMA_POSTER_RIGHT_NORMAL]: true
             },
             [FLATS]: {
                 [COMMERCIAL_CENTRE]: true,

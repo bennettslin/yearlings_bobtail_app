@@ -53,6 +53,7 @@ import WallSpeakerLeft from './Cutouts/WallSpeakerLeft'
 import WallSpeakerRight from './Cutouts/WallSpeakerRight'
 import CinemaPosterLeft from './Cutouts/CinemaPosterLeft'
 import CinemaPosterRight from './Cutouts/CinemaPosterRight'
+import CinemaPosterRightNormal from './Cutouts/CinemaPosterRightNormal'
 import Sandbags from './Cutouts/Sandbags'
 import StageLights from './Cutouts/StageLights'
 import TrafficLight from './Cutouts/TrafficLight'
@@ -127,6 +128,7 @@ import {
     WALL_SPEAKER_RIGHT,
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT,
+    CINEMA_POSTER_RIGHT_NORMAL,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT,
@@ -202,6 +204,7 @@ const CUTOUTS_MAP = {
     [WALL_SPEAKER_RIGHT]: WallSpeakerRight,
     [CINEMA_POSTER_LEFT]: CinemaPosterLeft,
     [CINEMA_POSTER_RIGHT]: CinemaPosterRight,
+    [CINEMA_POSTER_RIGHT_NORMAL]: CinemaPosterRightNormal,
     [SANDBAGS]: Sandbags,
     [STAGE_LIGHTS]: StageLights,
     [TRAFFIC_LIGHT]: TrafficLight,

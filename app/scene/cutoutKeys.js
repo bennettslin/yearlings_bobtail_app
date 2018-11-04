@@ -110,6 +110,7 @@ const
     // TODO
     CINEMA_POSTER_LEFT = 'cinemaPosterLeft',
     CINEMA_POSTER_RIGHT = 'cinemaPosterRight',
+    CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal',
 
     // Together on one page.
     SANDBAGS = 'sandbags',
@@ -143,8 +144,6 @@ const
     ARRANGEMENT_TRASH_CAN_QUAD = 'arrangementTrashCanQuad',
     ARRANGEMENT_UC_BERKELEY_TREE_LEFT = 'arrangementUcBerkeleyTreeLeft',
     ARRANGEMENT_UC_BERKELEY_TREE_RIGHT = 'arrangementUcBerkeleyTreeRight',
-    ARRANGEMENT_CINEMA_POSTER = 'arrangementCinemaPoster',
-    ARRANGEMENT_CINEMA_POSTER_STREET = 'arrangementCinemaPosterStreet',
     ARRANGEMENT_MONITOR_SIDE_CROWD = 'arrangementMonitorSideCrowd',
     ARRANGEMENT_MONITOR_SIDE_STAGE = 'arrangementMonitorSideStage',
     ARRANGEMENT_WALL_SIDE_CROWD = 'arrangementWallSideCrowd',
@@ -205,6 +204,7 @@ export {
     WALL_SPEAKER_RIGHT,
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT,
+    CINEMA_POSTER_RIGHT_NORMAL,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT,
@@ -233,8 +233,6 @@ export {
     ARRANGEMENT_TRASH_CAN_QUAD,
     ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
     ARRANGEMENT_UC_BERKELEY_TREE_RIGHT,
-    ARRANGEMENT_CINEMA_POSTER,
-    ARRANGEMENT_CINEMA_POSTER_STREET,
     ARRANGEMENT_MONITOR_SIDE_CROWD,
     ARRANGEMENT_MONITOR_SIDE_STAGE,
     ARRANGEMENT_WALL_SIDE_CROWD,
