@@ -8,8 +8,12 @@ const
     // With singing YoungBennett. Requires editing.
     RECORD_PLAYER_STOOL = 'recordPlayerStool',
 
-    // TODO
+    // Together on one page. Requires editing.
     JOHNNY_HORTON_ALBUM = 'johnnyHortonAlbum',
+    BEETHOVEN_BUST = 'beethovenBust',
+    POLICE_ALBUM = 'policeAlbum',
+    TELEVISION_ALBUM = 'televisionAlbum',
+    NAS_ALBUM = 'nasAlbum',
 
     // Together on one page. Requires editing.
     SHOPPING_CART = 'shoppingCart',
@@ -18,9 +22,6 @@ const
 
     // With stooping Mother.
     HAIRCUT_SCISSORS = 'haircutScissors',
-
-    // TODO
-    BEETHOVEN_BUST = 'beethovenBust',
 
     // Scissors with sobbing Christopher, letters with enraged preteenBennett. Requires editing.
     CHRISTOPHER_LETTERS = 'christopherLetters',
@@ -48,9 +49,6 @@ const
     // With stoic PreteenBennett. Requires editing.
     THROWN_FRUIT = 'thrownFruit',
 
-    // TODO
-    POLICE_ALBUM = 'policeAlbum',
-
     // Together on one page.
     BENNETT_RECORD_PLAYER = 'bennettRecordPlayer',
     HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
@@ -60,9 +58,6 @@ const
 
     // With smoker Amy.
     ASH_CAN = 'ashCan',
-
-    // TODO
-    TELEVISION_ALBUM = 'televisionAlbum',
 
     // With bennettKeyboard Stephanie.
     KEYBOARD = 'keyboard',
@@ -132,9 +127,6 @@ const
     // With removingShoes Bennett.
     BENNETT_SHOE = 'bennettShoe',
     BENNETT_SHOE_REFLECTION = 'bennettShoeReflection',
-
-    // TODO
-    NAS_ALBUM = 'nasAlbum',
 
     // With siftingTchotchkes Liz. Requires editing.
     TCHOTCHKES = 'tchotchkes',

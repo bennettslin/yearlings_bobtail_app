@@ -8,6 +8,11 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: `Johnny Horton album`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Playground (Didi)`,
         workedHours: 2,
         neededHours: 3
@@ -43,6 +48,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Beethoven bust`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: 'Taiwan fridge',
         workedHours: 1,
         neededHours: 2
@@ -66,6 +76,21 @@ module.exports = [
         taskName: 'nirvanaPoster',
         workedHours: 2,
         neededHours: 3
+    },
+    {
+        taskName: `Police album`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Television album`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Bobtail Yearlings album`,
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: 'lightSwitch',
@@ -383,6 +408,11 @@ module.exports = [
     },
     {
         taskName: 'pharmacyThought',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Nas album`,
         workedHours: 1,
         neededHours: 2
     },

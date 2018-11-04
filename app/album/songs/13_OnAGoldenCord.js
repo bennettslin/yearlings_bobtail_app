@@ -122,10 +122,10 @@ module.exports = {
                         description: [
                             `This song evokes the country style of my childhood hero`,
                             {
-                                anchor: `Johnny Horton,`,
+                                anchor: `Johnny Horton.`,
                                 wiki: `Johnny_Horton`
                             },
-                            `whose albums were the first ones I owned because my mother adored him in her teenybopper years. None of my other friends knew who he was, until one day I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died from a car accident in 1960.`
+                            `His albums were the first ones I owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my friends had ever heard of him, until one day, I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
