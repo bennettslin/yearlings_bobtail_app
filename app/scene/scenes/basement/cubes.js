@@ -11,6 +11,7 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     PLATFORM_HSLA,
+    FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
     SEAT_HSLA
 } from '../../hslaKeys'
@@ -28,6 +29,7 @@ const
     F = FLOOR_HSLA,
     W = WALL_HSLA,
     P = PLATFORM_HSLA,
+    R = FURNITURE_HSLA,
     U = UPHOLSTERY_HSLA,
     S = SEAT_HSLA,
 
@@ -72,7 +74,7 @@ const
                 [G],
                 [W, G, G, W],
                 [W, P, P, P, P, P, P, P, P, P, P, W],
-                [W, P, P, F, F, U, U, U, U, U, U, W],
+                [W, P, P, R, R, U, U, U, U, U, U, W],
                 [W, P, P, F, F, U, U, U, U, U, U, W],
                 [W, P, P, F, F, U, U, U, U, U, U, W]
             ],
@@ -80,7 +82,7 @@ const
                 [4],
                 [f, 4, 4, f],
                 [f, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, f],
-                [f, 3, 3, 0, 0, 3, 3, 3, 3, 3, 4, f],
+                [f, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, f],
                 [f, 2, 2, 0, 0, 3, 3, 3, 3, 3, 4, f],
                 [f, 1, 1, 0, 0, 3, 3, 3, 3, 3, 4, f]
             ]
@@ -92,7 +94,7 @@ const
                 [G],
                 [G],
                 [G, P, P, P, P, P, P, P, P, P, P, G],
-                [G, P, P, F, F, U, U, U, U, U, U, G],
+                [G, P, P, R, R, U, U, U, U, U, U, G],
                 [G, P, P, F, F, U, U, U, U, U, U, G],
                 [G, P, P, F, F, U, U, U, U, U, U, G]
             ],
@@ -100,7 +102,7 @@ const
                 [0],
                 [0],
                 [0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0],
-                [0, 3, 3, 0, 0, 3, 3, 3, 3, 3, 4, 0],
+                [0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 0],
                 [0, 2, 2, 0, 0, 3, 3, 3, 3, 3, 4, 0],
                 [0, 1, 1, 0, 0, 3, 3, 3, 3, 3, 4, 0]
             ]

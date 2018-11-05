@@ -71,6 +71,7 @@ import {
 import {
     POLICE_ALBUM,
     BENNETT_RECORD_PLAYER,
+    ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
     BENNETT_COUCH_LAMP,
     ASH_CAN
 } from '../../scene/fixtureKeys'
@@ -152,7 +153,7 @@ module.exports = [
             },
             [FIXTURES]: {
                 [POLICE_ALBUM]: true,
-                [BENNETT_RECORD_PLAYER]: true,
+                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
                 [BENNETT_COUCH_LAMP]: true
             },
             [FURNITURES]: {

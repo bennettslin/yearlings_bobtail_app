@@ -1,6 +1,8 @@
 import {
     POLICE_ALBUM,
     BENNETT_RECORD_PLAYER,
+    ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
+    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
     BENNETT_COUCH_LAMP,
     TELEVISION_ALBUM,
     KEYBOARD
@@ -16,11 +18,21 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [BENNETT_RECORD_PLAYER]: {
-        yIndex: 2,
-        arrangement: {
-            xFloat: 9,
-            xWidth: 2,
-            zHeight: 2
+        [ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 8.5,
+                xWidth: 2,
+                zHeight: 2
+            }
+        },
+        [ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 3.5,
+                xWidth: 2,
+                zHeight: 2
+            }
         }
     },
     [BENNETT_COUCH_LAMP]: {

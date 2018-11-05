@@ -71,6 +71,8 @@ import {
 import {
     GUITAR,
     DRUMKIT,
+    BENNETT_RECORD_PLAYER,
+    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
     NAS_ALBUM
 } from '../../scene/fixtureKeys'
 
@@ -208,6 +210,7 @@ module.exports = [
                 [BASEMENT_DOOR]: true
             },
             [FIXTURES]: {
+                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
                 [NAS_ALBUM]: true
             },
             [FURNITURES]: {

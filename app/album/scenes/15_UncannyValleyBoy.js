@@ -91,6 +91,8 @@ import {
 } from '../../scene/cutoutKeys'
 
 import {
+    BENNETT_RECORD_PLAYER,
+    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
     TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_CONSOLE,
@@ -151,6 +153,9 @@ module.exports = [
             [DOORS]: {
                 [BASEMENT_DOOR]: true
             },
+            [FIXTURES]: {
+                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT
+            },
             [FURNITURES]: {
                 [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
@@ -187,6 +192,9 @@ module.exports = [
                         instance: SITA_HURT
                     }
                 }
+            },
+            [FIXTURES]: {
+                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT
             },
             [FURNITURES]: {
                 [BENNETT_MATTRESS]: true,
@@ -419,6 +427,7 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
+                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
                 [CRACKED_PICTURE]: true
             },
             [FURNITURES]: {
