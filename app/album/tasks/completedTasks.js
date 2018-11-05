@@ -3932,4 +3932,9 @@ module.exports = [
         workedHours: 6,
         neededHours: 6
     },
+    {
+        taskName: `Log work to add album and poster presences.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
