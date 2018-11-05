@@ -79,7 +79,7 @@ import {
 } from '../../scene/bubbleKeys'
 
 import {
-    TINTIN_POSTER,
+    MICHAEL_JACKSON_POSTER,
     TRASH_CAN,
     ARRANGEMENT_TRASH_CAN_LOCKERS,
     ARRANGEMENT_TRASH_CAN_QUAD,
@@ -138,7 +138,7 @@ module.exports = [
                 [BEDROOM_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TINTIN_POSTER]: true,
+                [MICHAEL_JACKSON_POSTER]: true,
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
@@ -179,7 +179,7 @@ module.exports = [
                 [BEDROOM_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TINTIN_POSTER]: true,
+                [MICHAEL_JACKSON_POSTER]: true,
             },
             [FIXTURES]: {
                 [CAPTAIN_BED_LAMP]: true,
@@ -214,7 +214,7 @@ module.exports = [
                 [BEDROOM_BUS_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TINTIN_POSTER]: true,
+                [MICHAEL_JACKSON_POSTER]: true,
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
@@ -255,7 +255,7 @@ module.exports = [
                 [DOGS_SKETCHBOOK]: true
             },
             [CUTOUTS]: {
-                [TINTIN_POSTER]: true,
+                [MICHAEL_JACKSON_POSTER]: true,
             },
             [DOORS]: {
                 [BEDROOM_BLINDS]: true

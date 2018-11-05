@@ -81,7 +81,8 @@ import {
     NUDE_DRAWINGS,
     VASELINE,
     LIZ_PHONE,
-    LIZ_PHONE_REFLECTION
+    LIZ_PHONE_REFLECTION,
+    BLOODY_TOWEL
 } from '../../scene/fixtureKeys'
 
 import {
@@ -619,7 +620,8 @@ module.exports = [
             },
             [FIXTURES]: {
                 [LIZ_PHONE]: true,
-                [LIZ_PHONE_REFLECTION]: true
+                [LIZ_PHONE_REFLECTION]: true,
+                [BLOODY_TOWEL]: true
             },
             [FURNITURES]: {
                 [LIZ_MATTRESS]: true,

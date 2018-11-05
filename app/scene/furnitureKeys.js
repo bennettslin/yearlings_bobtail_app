@@ -35,7 +35,7 @@ const
     LIZ_MATTRESS = 'lizMattress',
     // TODO
     LIZ_PILLOWS = 'lizPillows',
-    // TODO
+    // TODO: Include towel and stain.
     LIZ_MATTRESS_REFLECTION = 'lizMattressReflection',
     // TODO
     LIZ_PILLOWS_REFLECTION = 'lizPillowsReflection',

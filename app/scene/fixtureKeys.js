@@ -103,6 +103,7 @@ const
     // TODO
     NUDE_DRAWINGS = 'nudeDrawings',
     VASELINE = 'vaseline',
+    BLOODY_TOWEL = 'bloodyTowel',
 
     // With caressed Liz.
     LIZ_PHONE = 'lizPhone',
@@ -204,6 +205,7 @@ export {
     VASELINE,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
+    BLOODY_TOWEL,
     GRAVESTONE,
     EVIAN_BOTTLES,
     STAGE_MIC_SIDE,

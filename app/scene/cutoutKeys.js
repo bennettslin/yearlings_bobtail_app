@@ -75,6 +75,9 @@ const
     BENNETT_MAT = 'bennettMat',
     ODIN_MAT = 'odinMat',
 
+    // TODO
+    MICHAEL_JACKSON_POSTER = 'michaelJacksonPoster',
+
     // Together on one page.
     TRASH_CAN = 'trashCan',
     VAN_NUYS_PLANTS = 'vanNuysPlants',
@@ -183,6 +186,7 @@ export {
     ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT,
+    MICHAEL_JACKSON_POSTER,
     TRASH_CAN,
     VAN_NUYS_PLANTS,
     VAN_NUYS_LOGO,

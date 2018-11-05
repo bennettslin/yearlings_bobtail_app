@@ -1,7 +1,12 @@
 module.exports = [
     // TODO: Tomorrow.
     {
-        taskName: 'cinemaPoster left and marquee',
+        taskName: 'michaelJackson poster',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'cinemaPoster left and marquee frame',
         workedHours: 0,
         neededHours: 3
     },

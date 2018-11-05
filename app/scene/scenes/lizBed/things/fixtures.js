@@ -1,6 +1,7 @@
 import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
+    BLOODY_TOWEL,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
     LIZ_PHONE_BASE,
@@ -24,6 +25,14 @@ const ARRANGEMENTS_MAP = {
             xWidth: 1,
             zHeight: 1,
             zOffset: 6.5
+        }
+    },
+    [BLOODY_TOWEL]: {
+        yIndex: 4,
+        arrangement: {
+            xFloat: 2,
+            xWidth: 1,
+            zHeight: 1
         }
     },
     [BENNETT_SHOE]: {

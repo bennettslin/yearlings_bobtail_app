@@ -49,6 +49,7 @@ import NudeDrawings from './Fixtures/NudeDrawings'
 import Vaseline from './Fixtures/Vaseline'
 import LizPhone from './Fixtures/LizPhone'
 import LizPhoneReflection from './Fixtures/LizPhoneReflection'
+import BloodyTowel from './Fixtures/BloodyTowel';
 import Gravestone from './Fixtures/Gravestone'
 import EvianBottles from './Fixtures/EvianBottles'
 import StageMicSide from './Fixtures/StageMicSide'
@@ -119,6 +120,7 @@ import {
     VASELINE,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
+    BLOODY_TOWEL,
     GRAVESTONE,
     EVIAN_BOTTLES,
     STAGE_MIC_SIDE,
@@ -191,6 +193,7 @@ const FIXTURES_MAP = {
     [VASELINE]: Vaseline,
     [LIZ_PHONE]: LizPhone,
     [LIZ_PHONE_REFLECTION]: LizPhoneReflection,
+    [BLOODY_TOWEL]: BloodyTowel,
     [GRAVESTONE]: Gravestone,
     [EVIAN_BOTTLES]: EvianBottles,
     [KICK_DRUM]: KickDrum,
