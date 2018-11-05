@@ -93,6 +93,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'cinemaPosters right',
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
         taskName: 'lightSwitch',
         workedHours: 1,
         neededHours: 2
