@@ -63,6 +63,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: 'michaelJackson poster',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `corkboard`,
         workedHours: 1,
         neededHours: 2

@@ -75,8 +75,10 @@ const
     BENNETT_MAT = 'bennettMat',
     ODIN_MAT = 'odinMat',
 
-    // TODO
+    // Together on one page with marquee frame. Requires editing.
     MICHAEL_JACKSON_POSTER = 'michaelJacksonPoster',
+    CINEMA_POSTER_RIGHT = 'cinemaPosterRight',
+    CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal',
 
     // Together on one page.
     TRASH_CAN = 'trashCan',
@@ -112,8 +114,6 @@ const
 
     // TODO
     CINEMA_POSTER_LEFT = 'cinemaPosterLeft',
-    CINEMA_POSTER_RIGHT = 'cinemaPosterRight',
-    CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal',
 
     // Together on one page.
     SANDBAGS = 'sandbags',
