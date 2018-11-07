@@ -70,6 +70,7 @@ const
 
     LIZ_COUCH_KEY = 'lizCouch',
     LIZ_COUCH_SEAT_KEY = 'lizCouchSeat',
+    LIZ_COUCH_PEAFOWL_KEY = 'lizCouchPeafowl',
     LIZ_COUCH_THOUGHT_KEY = 'lizCouchThought',
     LIZ_GATE_KEY = 'lizGate',
     LIZ_GATE_STREET_KEY = 'lizGateStreet',
@@ -161,6 +162,7 @@ export {
     LIZ_BED_OPEN_PHONE_KEY,
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
+    LIZ_COUCH_PEAFOWL_KEY,
     LIZ_COUCH_THOUGHT_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,

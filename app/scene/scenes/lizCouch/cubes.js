@@ -1,6 +1,7 @@
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
+    LIZ_COUCH_PEAFOWL_KEY,
     LIZ_COUCH_THOUGHT_KEY
 } from '../../cubesKeys'
 
@@ -56,7 +57,6 @@ const
             [g],
         ]
     },
-
     LIZ_COUCH_CUBES = {
         ceiling: DEFAULT_CEILING,
         floor: {
@@ -99,6 +99,27 @@ const
             ]
         }
     },
+    LIZ_COUCH_PEAFOWL_CUBES = {
+        ceiling: DEFAULT_CEILING,
+        floor: {
+            hslaColours: [
+                [A, A, A, A, A, V, V, V, A],
+                [W, W, W, W, W, W, W, W, W, W],
+                [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, F],
+                [W, U, U, U, F],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
+            ],
+            zIndices: [
+                [7, 7, 7, 7, 7, 1, 1, 1, 7],
+                [g, g, g, g, 6, 6, 6, 6, 6, g],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, g],
+                [g, 7, 3, 3, 1],
+                [g, 7, 3, 3, 1],
+                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+            ]
+        }
+    },
     LIZ_COUCH_THOUGHT_CUBES = {
         floor: {
             hslaColours: [
@@ -123,6 +144,7 @@ const
     CUBES = {
         [LIZ_COUCH_KEY]: LIZ_COUCH_CUBES,
         [LIZ_COUCH_SEAT_KEY]: LIZ_COUCH_SEAT_CUBES,
+        [LIZ_COUCH_PEAFOWL_KEY]: LIZ_COUCH_PEAFOWL_CUBES,
         [LIZ_COUCH_THOUGHT_KEY]: LIZ_COUCH_THOUGHT_CUBES
     }
 

@@ -9,7 +9,8 @@ import {
 
 import {
     LIZ_COUCH_KEY,
-    LIZ_COUCH_SEAT_KEY
+    LIZ_COUCH_SEAT_KEY,
+    LIZ_COUCH_PEAFOWL_KEY
 } from '../../scene/cubesKeys'
 
 import {
@@ -330,7 +331,7 @@ module.exports = [
                 [PEACOCK]: true
             }
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_PEAFOWL_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
