@@ -114,7 +114,6 @@ import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
-    GHOST_ODIN_PHONE,
     GHOST_ODIN_DEMONSTRATION
 } from '../../scene/puppetKeys'
 
@@ -304,7 +303,6 @@ module.exports = [
                 [LIZ_PILLOWS_REFLECTION]: true,
             },
             [PUPPETS]: {
-                [GHOST_ODIN_PHONE]: true
             }
         },
         cubes: LIZ_BED_OPEN_PHONE_KEY,

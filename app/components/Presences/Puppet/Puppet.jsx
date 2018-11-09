@@ -28,7 +28,6 @@ import PuppetReatta from './Puppets/PuppetReatta'
 import GhostOdinCampus from './Puppets/GhostOdinCampus'
 import GhostOdinClub from './Puppets/GhostOdinClub'
 import GhostOdinAlley from './Puppets/GhostOdinAlley'
-import GhostOdinPhone from './Puppets/GhostOdinPhone'
 import GhostOdinDemonstration from './Puppets/GhostOdinDemonstration'
 import PuppetKhari from './Puppets/PuppetKhari'
 import PuppetLiz from './Puppets/PuppetLiz'
@@ -60,7 +59,6 @@ import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
-    GHOST_ODIN_PHONE,
     GHOST_ODIN_DEMONSTRATION,
     PUPPET_KHARI,
     PUPPET_LIZ
@@ -93,7 +91,6 @@ const PUPPETS_MAP = {
     [GHOST_ODIN_CAMPUS]: GhostOdinCampus,
     [GHOST_ODIN_CLUB]: GhostOdinClub,
     [GHOST_ODIN_ALLEY]: GhostOdinAlley,
-    [GHOST_ODIN_PHONE]: GhostOdinPhone,
     [GHOST_ODIN_DEMONSTRATION]: GhostOdinDemonstration,
     [PUPPET_KHARI]: PuppetKhari,
     [PUPPET_LIZ]: PuppetLiz
