@@ -100,7 +100,7 @@ const
     BANCROFT_SHRUBS = 'bancroftShrubs',
     UC_BERKELEY_TREE = 'ucBerkeleyTree',
 
-    // TODO
+    // With nude drawing and vaseline fixtures. Requires editing.
     PROGRESS_CHART_EARLY = 'progressChartEarly',
     PROGRESS_CHART_LATE = 'progressChartLate',
 
@@ -112,7 +112,7 @@ const
     MONITOR_SPEAKER_SIDE = 'monitorSpeakerSide',
     WALL_SPEAKER_SIDE = 'wallSpeakerSide',
 
-    // TODO
+    // Own page. Requires editing.
     CINEMA_POSTER_LEFT = 'cinemaPosterLeft',
 
     // Together on one page.

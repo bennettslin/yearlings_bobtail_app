@@ -337,7 +337,8 @@ module.exports = [
                 [CINEMA_POSTER_RIGHT]: true
             },
             [DOORS]: {
-                [CINEMA_DOOR_LEFT]: true
+                [CINEMA_DOOR_LEFT]: true,
+                [CINEMA_DOOR_RIGHT]: true
             }
         },
         cubes: CINEMA_KEY,

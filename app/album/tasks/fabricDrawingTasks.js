@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Barber cloth (Willy)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Bennett's blanket (Odin)`,
         workedHours: 0,
         neededHours: 1

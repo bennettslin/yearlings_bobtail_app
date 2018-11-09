@@ -1,11 +1,5 @@
 module.exports = [
     {
-        taskName: 'progressCharts',
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: 'bennettTaiwanStairs',
         workedHours: 0,
         neededHours: 3

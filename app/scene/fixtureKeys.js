@@ -100,9 +100,11 @@ const
     GLASS_RACK = 'glassRack',
     DISH_PILE = 'dishPile',
 
-    // TODO
+    // With progress chart cutouts.
     NUDE_DRAWINGS = 'nudeDrawings',
     VASELINE = 'vaseline',
+
+    // TODO
     BLOODY_TOWEL = 'bloodyTowel',
 
     // With caressed Liz.
