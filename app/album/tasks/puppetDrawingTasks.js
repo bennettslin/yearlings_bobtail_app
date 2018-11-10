@@ -90,7 +90,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'opalWindow',
+        taskName: 'opalGazing',
         workedHours: 0,
         neededHours: 3
     },

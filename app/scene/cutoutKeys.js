@@ -100,7 +100,7 @@ const
     BANCROFT_SHRUBS = 'bancroftShrubs',
     UC_BERKELEY_TREE = 'ucBerkeleyTree',
 
-    // With nude drawing and vaseline fixtures. Requires editing.
+    // With nude drawing, vaseline, and bloody towel fixtures. Requires editing.
     PROGRESS_CHART_EARLY = 'progressChartEarly',
     PROGRESS_CHART_LATE = 'progressChartLate',
 

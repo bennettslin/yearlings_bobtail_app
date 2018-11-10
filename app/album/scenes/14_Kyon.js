@@ -64,8 +64,9 @@ import {
 
 import {
     OPAL_LAP,
-    OPAL_WINDOW,
+    OPAL_GAZING,
     OPAL_COUCH,
+    OPAL_LICKING,
     PEAHEN,
     PEACOCK
 } from '../../scene/puppetKeys'
@@ -126,7 +127,7 @@ module.exports = [
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
             [PUPPETS]: {
-                [OPAL_WINDOW]: true
+                [OPAL_LICKING]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -305,7 +306,7 @@ module.exports = [
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
             [PUPPETS]: {
-                [OPAL_WINDOW]: true
+                [OPAL_GAZING]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

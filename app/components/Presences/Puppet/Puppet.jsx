@@ -20,8 +20,9 @@ import Rocket from './Puppets/Rocket'
 import Earth from './Puppets/Earth'
 import SpaceColony from './Puppets/SpaceColony'
 import OpalLap from './Puppets/OpalLap'
-import OpalWindow from './Puppets/OpalWindow'
+import OpalGazing from './Puppets/OpalGazing'
 import OpalCouch from './Puppets/OpalCouch'
+import OpalLicking from './Puppets/OpalLicking'
 import Peahen from './Puppets/Peahen'
 import Peacock from './Puppets/Peacock'
 import PuppetReatta from './Puppets/PuppetReatta'
@@ -51,8 +52,9 @@ import {
     EARTH,
     SPACE_COLONY,
     OPAL_LAP,
-    OPAL_WINDOW,
+    OPAL_GAZING,
     OPAL_COUCH,
+    OPAL_LICKING,
     PEAHEN,
     PEACOCK,
     PUPPET_REATTA,
@@ -83,8 +85,9 @@ const PUPPETS_MAP = {
     [EARTH]: Earth,
     [SPACE_COLONY]: SpaceColony,
     [OPAL_LAP]: OpalLap,
-    [OPAL_WINDOW]: OpalWindow,
+    [OPAL_GAZING]: OpalGazing,
     [OPAL_COUCH]: OpalCouch,
+    [OPAL_LICKING]: OpalLicking,
     [PEAHEN]: Peahen,
     [PEACOCK]: Peacock,
     [PUPPET_REATTA]: PuppetReatta,

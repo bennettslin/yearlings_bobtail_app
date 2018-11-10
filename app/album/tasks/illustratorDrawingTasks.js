@@ -128,6 +128,16 @@ module.exports = [
         neededHours: 5
     },
     {
+        taskName: `nude drawing and vaseline`,
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: `Bloody towel and condom`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Pharmacy aisle (Constellations)`,
         workedHours: 2,
         neededHours: 3

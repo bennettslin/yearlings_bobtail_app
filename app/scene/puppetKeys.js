@@ -33,12 +33,15 @@ const
     EARTH = 'earth',
     // TODO
     SPACE_COLONY = 'spaceColony',
+
     // TODO
     OPAL_LAP = 'opalLap',
     // TODO
-    OPAL_WINDOW = 'opalWindow',
+    OPAL_GAZING = 'opalGazing',
     // TODO
     OPAL_COUCH = 'opalCouch',
+    // TODO
+    OPAL_LICKING = 'opalLicking',
 
     // Own page.
     PEAHEN = 'peahen',
@@ -78,8 +81,9 @@ export {
     EARTH,
     SPACE_COLONY,
     OPAL_LAP,
-    OPAL_WINDOW,
+    OPAL_GAZING,
     OPAL_COUCH,
+    OPAL_LICKING,
     PEAHEN,
     PEACOCK,
     PUPPET_REATTA,

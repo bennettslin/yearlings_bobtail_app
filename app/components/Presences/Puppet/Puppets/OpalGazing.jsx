@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const OpalWindow = ({
+const OpalGazing = ({
 
     className,
 
@@ -18,7 +18,7 @@ const OpalWindow = ({
     return (
         <Svg
             className={cx(
-                'OpalWindow',
+                'OpalGazing',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const OpalWindow = ({
                 {...other}
             >
                 {cx(
-                    'OpalWindow'
+                    'OpalGazing'
                 )}
             </text>
         </Svg>
     )
 }
 
-OpalWindow.propTypes = propTypes;
+OpalGazing.propTypes = propTypes;
 
-export default OpalWindow
+export default OpalGazing

@@ -56,7 +56,7 @@ import {
 import { JOKING } from '../../scene/instanceKeys/khari'
 
 import {
-    SIFTING_TCHOTCHKES,
+    PETTING_SEATED,
     LAUGHING
 } from '../../scene/instanceKeys/liz'
 
@@ -280,7 +280,7 @@ module.exports = [
                     sita: {
                         duplicate: true,
                         description: 'side, seated, pensive',
-                        instance: SIFTING_TCHOTCHKES
+                        instance: PETTING_SEATED
                     }
                 },
                 [MIRIAM]: {

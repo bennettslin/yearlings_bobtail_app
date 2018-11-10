@@ -1,7 +1,8 @@
 import {
     OPAL_LAP,
-    OPAL_WINDOW,
+    OPAL_GAZING,
     OPAL_COUCH,
+    OPAL_LICKING,
     PEAHEN,
     PEACOCK
 } from '../../../puppetKeys'
@@ -15,7 +16,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 0.5
         }
     },
-    [OPAL_WINDOW]: {
+    [OPAL_GAZING]: {
         yIndex: 1,
         arrangement: {
             xFloat: 6,
@@ -27,6 +28,14 @@ const ARRANGEMENTS_MAP = {
         yIndex: 4,
         arrangement: {
             xFloat: 1,
+            xWidth: 1,
+            zHeight: 0.5
+        }
+    },
+    [OPAL_LICKING]: {
+        yIndex: 1,
+        arrangement: {
+            xFloat: 6,
             xWidth: 1,
             zHeight: 0.5
         }
