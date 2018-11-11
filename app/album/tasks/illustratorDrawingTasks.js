@@ -462,6 +462,11 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: `opals`,
+        workedHours: 3,
+        neededHours: 5
+    },
+    {
         taskName: 'peahen',
         workedHours: 1,
         neededHours: 2
@@ -530,6 +535,11 @@ module.exports = [
         taskName: `deathBed, tennis and inverse thought panels`,
         workedHours: 1,
         neededHours: 3
+    },
+    {
+        taskName: 'ghostOdins',
+        workedHours: 3,
+        neededHours: 5
     },
     {
         taskName: `Park bench (Vegan)`,

@@ -135,7 +135,7 @@ const
     // With comforting Sasha and humiliated PreteenBennett.
     TETHERBALL_POLE = 'tetherballPole',
 
-    // TODO: Partly completed, with cymbal stand fixtures.
+    // With cymbal stand fixtures.
     RECORDING_MIC = 'recordingMic',
 
     // With bennettRecording Stephanie. Requires editing.

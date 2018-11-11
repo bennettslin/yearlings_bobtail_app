@@ -34,13 +34,10 @@ const
     // TODO
     SPACE_COLONY = 'spaceColony',
 
-    // TODO
+    // Together on one page. Requires editing.
     OPAL_LAP = 'opalLap',
-    // TODO
     OPAL_GAZING = 'opalGazing',
-    // TODO
     OPAL_COUCH = 'opalCouch',
-    // TODO
     OPAL_LICKING = 'opalLicking',
 
     // Own page.
@@ -51,7 +48,7 @@ const
     // With goldenGate backdrop.
     PUPPET_REATTA = 'puppetReatta',
 
-    // TODO
+    // Together on one page.
     GHOST_ODIN_CAMPUS = 'ghostOdinCampus',
     GHOST_ODIN_CLUB = 'ghostOdinClub',
     GHOST_ODIN_ALLEY = 'ghostOdinAlley',

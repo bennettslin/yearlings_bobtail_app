@@ -85,27 +85,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: 'opalLap',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: 'opalGazing',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: 'opalCouch',
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: 'ghostOdins',
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: 'puppetKhari',
         workedHours: 0,
         neededHours: 2

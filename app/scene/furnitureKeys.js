@@ -9,7 +9,7 @@ const
     SCHOOLBUS_SEAT_FRONT = 'schoolbusSeatFront',
     SCHOOLBUS_SEAT_REAR = 'schoolbusSeatBack',
 
-    // TODO
+    // Own page.
     BUOY_FLOAT = 'buoy',
 
     // TODO
