@@ -3937,4 +3937,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Scan latest drawings.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

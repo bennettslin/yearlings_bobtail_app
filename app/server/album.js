@@ -36,13 +36,13 @@ const rawAlbum = {
                 HYPHENATED_SONG_PATHS[index]
             }`)
         )),
-        remainingTasks: require('album/tasks/remainingTasks')
+        remainingTasks:
+            require('album/tasks/remainingTasks')
 
             // Presences.
             .concat(require('album/tasks/bubbleDrawingTasks'))
             .concat(require('album/tasks/cutoutDrawingTasks'))
             .concat(require('album/tasks/doorDrawingTasks'))
-            .concat(require('album/tasks/fixtureDrawingTasks'))
             .concat(require('album/tasks/furnitureDrawingTasks'))
             .concat(require('album/tasks/puppetDrawingTasks'))
 
@@ -54,9 +54,10 @@ const rawAlbum = {
             .concat(require('album/tasks/sceneTasks'))
             .concat(require('album/tasks/svgDrawingTasks')),
 
-        completedTasks: require('album/tasks/completedTasks')
-            .concat(require('album/tasks/completedDrawingTasks'))
-            .concat(require('album/tasks/completedSceneTasks'))
+        completedTasks:
+            require('album/tasks/completed/completedTasks')
+            .concat(require('album/tasks/completed/completedDrawingTasks'))
+            .concat(require('album/tasks/completed/completedSceneTasks'))
     },
 
     // Restructure raw data to be usable by app.

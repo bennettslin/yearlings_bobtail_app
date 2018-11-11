@@ -1,13 +1,28 @@
 module.exports = [
     {
+        taskName: `Dim theatre for songs, brighten for logues.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Wire on puppets and others.`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Shadows.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: `Account for combined presences.`,
+        taskName: `Organise presences and scans to have same folder structure.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 8
     },
 
     /**

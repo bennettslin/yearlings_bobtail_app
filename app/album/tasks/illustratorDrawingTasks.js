@@ -487,6 +487,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `recordingMic`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: 'golden gate backdrop',
         workedHours: 2,
         neededHours: 4
