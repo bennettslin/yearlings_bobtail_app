@@ -35,7 +35,6 @@ import Pampas from './Instances/Pampas'
 import GettingDark from './Instances/GettingDark'
 import Cliff from './Instances/Cliff'
 import FinalDream from './Instances/FinalDream'
-import Epilogue from './Instances/Epilogue'
 
 import {
     ASLEEP_REACHING,
@@ -73,8 +72,7 @@ import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
-    FINAL_DREAM,
-    EPILOGUE
+    FINAL_DREAM
 } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
@@ -110,8 +108,7 @@ const INSTANCES_MAP = {
     [PAMPAS]: Pampas,
     [GETTING_DARK]: GettingDark,
     [CLIFF]: Cliff,
-    [FINAL_DREAM]: FinalDream,
-    [EPILOGUE]: Epilogue
+    [FINAL_DREAM]: FinalDream
 }
 
 const propTypes = {

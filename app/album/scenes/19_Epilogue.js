@@ -9,14 +9,12 @@ import {
 
 import {
     PRETEEN_BENNETT,
-    BENNETT,
-    OLD_BENNETT,
+    BENNETTS_CHRISTOPHER_LIZ,
     ANITA_BENNETT,
     ESTHER,
     WILLY,
     MOTHER,
     FATHER,
-    CHRISTOPHER,
     SASHA,
     BRAD,
     ANDREW,
@@ -26,7 +24,6 @@ import {
     ANA,
     HOWIE,
     TOMER,
-    LIZ,
     KHARI,
     MIRIAM,
     TRISTAN,
@@ -44,10 +41,11 @@ module.exports = [
         description: `Everyone is standing at the end of the play. We are all really just actors.`,
         presences: {
             [ACTORS]: {
-                [OLD_BENNETT]: {
+                [BENNETTS_CHRISTOPHER_LIZ]: {
                     todo: true,
                     workedHours: 3,
-                    realHeight: `5'4"`,
+                    compound: 4,
+                    realHeight: `5'4", 3'5", 4'9"`,
                     description: 'standing',
                     instance: EPILOGUE
                 },
@@ -77,13 +75,6 @@ module.exports = [
                     todo: true,
                     workedHours: 3,
                     realHeight: `5'0"`,
-                    description: 'standing',
-                    instance: EPILOGUE
-                },
-                [CHRISTOPHER]: {
-                    todo: true,
-                    workedHours: 3,
-                    realHeight: `3'5"`,
                     description: 'standing',
                     instance: EPILOGUE
                 },
@@ -143,13 +134,6 @@ module.exports = [
                     description: 'standing',
                     instance: EPILOGUE
                 },
-                [BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    realHeight: `5'4"`,
-                    description: 'standing',
-                    instance: EPILOGUE
-                },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 3,
@@ -203,13 +187,6 @@ module.exports = [
                     todo: true,
                     workedHours: 2.5,
                     realHeight: `5'1"`,
-                    description: 'standing',
-                    instance: EPILOGUE
-                },
-                [LIZ]: {
-                    todo: true,
-                    workedHours: 3,
-                    realHeight: `4'9"`,
                     description: 'standing',
                     instance: EPILOGUE
                 },

@@ -2,14 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Prologue from './Instances/Prologue'
+import Carrying from './Instances/Carrying'
+import Flirting from './Instances/Flirting'
+import Eating from './Instances/Eating'
+import Epilogue from './Instances/Epilogue'
 
 import {
-    PROLOGUE
+    FLIRTING,
+    EATING,
+    CARRYING,
+    EPILOGUE
 } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
-    [PROLOGUE]: Prologue
+    [CARRYING]: Carrying,
+    [FLIRTING]: Flirting,
+    [EATING]: Eating,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {
@@ -18,7 +27,7 @@ const propTypes = {
     instanceKey: PropTypes.string.isRequired
 }
 
-const OldBennett = ({
+const JacobMara = ({
 
     className,
     instanceKey,
@@ -30,13 +39,13 @@ const OldBennett = ({
     return (
         <InstanceComponent {...other}
             className={cx(
-                'OldBennett',
+                'JacobMara',
                 className
             )}
         />
     )
 }
 
-OldBennett.propTypes = propTypes;
+JacobMara.propTypes = propTypes;
 
-export default OldBennett
+export default JacobMara

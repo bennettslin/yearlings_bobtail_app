@@ -7,6 +7,7 @@ import Sobbing from './Instances/Sobbing'
 import Reassuring from './Instances/Reassuring'
 import Blissful from './Instances/Blissful'
 import Staring from './Instances/Staring'
+import Epilogue from './Instances/Epilogue'
 
 import {
     TANTRUM,
@@ -16,12 +17,15 @@ import {
     STARING
 } from '../../../../../scene/instanceKeys/christopher'
 
+import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
+
 const INSTANCES_MAP = {
     [TANTRUM]: Tantrum,
     [SOBBING]: Sobbing,
     [REASSURING]: Reassuring,
     [BLISSFUL]: Blissful,
-    [STARING]: Staring
+    [STARING]: Staring,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {
@@ -30,7 +34,7 @@ const propTypes = {
     instanceKey: PropTypes.string.isRequired
 }
 
-const Christopher = ({
+const ChristopherBennett = ({
 
     className,
     instanceKey,
@@ -42,13 +46,13 @@ const Christopher = ({
     return (
         <InstanceComponent {...other}
             className={cx(
-                'Christopher',
+                'ChristopherBennett',
                 className
             )}
         />
     )
 }
 
-Christopher.propTypes = propTypes;
+ChristopherBennett.propTypes = propTypes;
 
-export default Christopher
+export default ChristopherBennett

@@ -71,6 +71,7 @@ import Pampas from './Instances/Pampas'
 import GettingDark from './Instances/GettingDark'
 import Cliff from './Instances/Cliff'
 import FinalDream from './Instances/FinalDream'
+import Epilogue from './Instances/Epilogue'
 
 import {
     BREAKUP_DEJECTED,
@@ -144,7 +145,8 @@ import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
-    FINAL_DREAM
+    FINAL_DREAM,
+    EPILOGUE
 } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
@@ -216,7 +218,8 @@ const INSTANCES_MAP = {
     [PAMPAS]: Pampas,
     [GETTING_DARK]: GettingDark,
     [CLIFF]: Cliff,
-    [FINAL_DREAM]: FinalDream
+    [FINAL_DREAM]: FinalDream,
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {
@@ -225,7 +228,7 @@ const propTypes = {
     instanceKey: PropTypes.string.isRequired
 }
 
-const Bennett = ({
+const BennettStephanie = ({
 
     className,
     instanceKey,
@@ -237,13 +240,13 @@ const Bennett = ({
     return (
         <InstanceComponent {...other}
             className={cx(
-                'Bennett',
+                'BennettStephanie',
                 className
             )}
         />
     )
 }
 
-Bennett.propTypes = propTypes;
+BennettStephanie.propTypes = propTypes;
 
-export default Bennett
+export default BennettStephanie
