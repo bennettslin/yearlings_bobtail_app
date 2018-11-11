@@ -8,11 +8,10 @@ import {
 } from '../../scene/sky'
 
 import {
-    YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
     OLD_BENNETT,
-    ANITA,
+    ANITA_BENNETT,
     ESTHER,
     WILLY,
     MOTHER,
@@ -52,17 +51,11 @@ module.exports = [
                     description: 'standing',
                     instance: EPILOGUE
                 },
-                [ANITA]: {
+                [ANITA_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    realHeight: `3'9"`,
-                    description: 'standing',
-                    instance: EPILOGUE
-                },
-                [YOUNG_BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    realHeight: `3'6"`,
+                    compound: 2,
+                    realHeight: `3'9", 3'6"`,
                     description: 'standing',
                     instance: EPILOGUE
                 },

@@ -233,6 +233,7 @@ module.exports = [
                 [ANA_HOWIE]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side angle, shivering, feeling comforted',
                     instance: CEMETERY
                 },

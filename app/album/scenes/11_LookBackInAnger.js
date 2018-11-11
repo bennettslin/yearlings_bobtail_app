@@ -135,6 +135,7 @@ module.exports = [
                 [AMY_STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side, squeezing through, apologetic',
                     instance: SQUEEZING
                 }

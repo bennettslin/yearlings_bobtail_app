@@ -7,7 +7,6 @@ import Flustered from './Instances/Flustered'
 import Bathing from './Instances/Bathing'
 import Singing from './Instances/Singing'
 import YoungChild from './Instances/YoungChild'
-import Epilogue from './Instances/Epilogue'
 
 import {
     PANICKED,
@@ -17,8 +16,7 @@ import {
 } from '../../../../../scene/instanceKeys/youngBennett'
 
 import {
-    YOUNG_CHILD,
-    EPILOGUE
+    YOUNG_CHILD
 } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
@@ -26,8 +24,7 @@ const INSTANCES_MAP = {
     [FLUSTERED]: Flustered,
     [BATHING]: Bathing,
     [SINGING]: Singing,
-    [YOUNG_CHILD]: YoungChild,
-    [EPILOGUE]: Epilogue
+    [YOUNG_CHILD]: YoungChild
 }
 
 const propTypes = {

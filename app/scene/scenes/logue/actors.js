@@ -1,9 +1,8 @@
 import {
-    YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
     OLD_BENNETT,
-    ANITA,
+    ANITA_BENNETT,
     ESTHER,
     WILLY,
     MOTHER,
@@ -28,11 +27,10 @@ import {
     WADE
 } from '../../actorKeys'
 
-import ARRANGEMENTS_YOUNG_BENNETT from './actors/youngBennett'
 import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_OLD_BENNETT from './actors/oldBennett'
-import ARRANGEMENTS_ANITA from './actors/anita'
+import ARRANGEMENTS_ANITA_BENNETT from './actors/anitaBennett'
 import ARRANGEMENTS_ESTHER from './actors/esther'
 import ARRANGEMENTS_WILLY from './actors/willy'
 import ARRANGEMENTS_MOTHER from './actors/mother'
@@ -57,11 +55,10 @@ import ARRANGEMENTS_STEPHANIE from './actors/stephanie'
 import ARRANGEMENTS_WADE from './actors/wade'
 
 const ARRANGEMENTS_ACTORS = {
-    [YOUNG_BENNETT]: ARRANGEMENTS_YOUNG_BENNETT,
     [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
     [BENNETT]: ARRANGEMENTS_BENNETT,
     [OLD_BENNETT]: ARRANGEMENTS_OLD_BENNETT,
-    [ANITA]: ARRANGEMENTS_ANITA,
+    [ANITA_BENNETT]: ARRANGEMENTS_ANITA_BENNETT,
     [ESTHER]: ARRANGEMENTS_ESTHER,
     [WILLY]: ARRANGEMENTS_WILLY,
     [MOTHER]: ARRANGEMENTS_MOTHER,

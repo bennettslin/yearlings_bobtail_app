@@ -2,26 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Exasperated from './Instances/Exasperated'
-import Concerned from './Instances/Concerned'
-import Cheering from './Instances/Cheering'
-import YoungChild from './Instances/YoungChild'
+import Epilogue from './Instances/Epilogue'
 
 import {
-    EXASPERATED,
-    CONCERNED,
-    CHEERING
-} from '../../../../../scene/instanceKeys/anita'
-
-import {
-    YOUNG_CHILD
+    EPILOGUE
 } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
-    [EXASPERATED]: Exasperated,
-    [CONCERNED]: Concerned,
-    [CHEERING]: Cheering,
-    [YOUNG_CHILD]: YoungChild
+    [EPILOGUE]: Epilogue
 }
 
 const propTypes = {
@@ -30,7 +18,7 @@ const propTypes = {
     instanceKey: PropTypes.string.isRequired
 }
 
-const Anita = ({
+const AnitaBennett = ({
 
     className,
     instanceKey,
@@ -42,13 +30,13 @@ const Anita = ({
     return (
         <InstanceComponent {...other}
             className={cx(
-                'Anita',
+                'AnitaBennett',
                 className
             )}
         />
     )
 }
 
-Anita.propTypes = propTypes;
+AnitaBennett.propTypes = propTypes;
 
-export default Anita
+export default AnitaBennett

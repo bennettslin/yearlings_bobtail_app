@@ -7,6 +7,7 @@ import PreteenBennett from './Actors/PreteenBennett/PreteenBennett'
 import Bennett from './Actors/Bennett/Bennett'
 import OldBennett from './Actors/OldBennett/OldBennett'
 import Anita from './Actors/Anita/Anita'
+import AnitaBennett from './Actors/AnitaBennett/AnitaBennett';
 import Esther from './Actors/Esther/Esther'
 import Willy from './Actors/Willy/Willy'
 import Mother from './Actors/Mother/Mother'
@@ -42,6 +43,7 @@ import {
     BENNETT,
     OLD_BENNETT,
     ANITA,
+    ANITA_BENNETT,
     ESTHER,
     WILLY,
     MOTHER,
@@ -78,6 +80,7 @@ const ACTORS_MAP = {
     [BENNETT]: Bennett,
     [OLD_BENNETT]: OldBennett,
     [ANITA]: Anita,
+    [ANITA_BENNETT]: AnitaBennett,
     [ESTHER]: Esther,
     [WILLY]: Willy,
     [MOTHER]: Mother,
