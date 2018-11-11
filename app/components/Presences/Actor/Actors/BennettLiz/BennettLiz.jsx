@@ -49,8 +49,6 @@ import LeavingCrumbled from './Instances/LeavingCrumbled'
 import CordSide from './Instances/CordSide'
 import AwkwardConsolation from './Instances/AwkwardConsolation'
 import CordRear from './Instances/CordRear'
-import Horsing from './Instances/Horsing'
-import DryingTears from './Instances/DryingTears'
 import WakenedFearful from './Instances/WakenedFearful'
 import Past from './Instances/Past'
 import Present from './Instances/Present'
@@ -97,8 +95,6 @@ import {
     CORD_SIDE,
     AWKWARD_CONSOLATION,
     CORD_REAR,
-    HORSING,
-    DRYING_TEARS,
     WAKENED_FEARFUL,
     SEEKING_PROTECTION,
     REMOVING_PANTS,
@@ -197,8 +193,6 @@ const INSTANCES_MAP = {
     [CORD_SIDE]: CordSide,
     [AWKWARD_CONSOLATION]: AwkwardConsolation,
     [CORD_REAR]: CordRear,
-    [HORSING]: Horsing,
-    [DRYING_TEARS]: DryingTears,
     [WAKENED_FEARFUL]: WakenedFearful,
     [PAST]: Past,
     [PRESENT]: Present,

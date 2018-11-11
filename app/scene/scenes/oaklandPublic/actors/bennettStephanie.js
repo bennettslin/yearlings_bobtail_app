@@ -1,9 +1,9 @@
 import {
-    BENNETT_SORROWFUL
-} from 'scene/instanceKeys/stephanie'
+    DRYING_TEARS
+} from 'scene/instanceKeys/bennettStephanie'
 
 const ARRANGEMENTS_MAP = {
-    [BENNETT_SORROWFUL]: {
+    [DRYING_TEARS]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

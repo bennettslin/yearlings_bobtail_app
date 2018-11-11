@@ -7,8 +7,6 @@ import Flapper from './Instances/Flapper'
 import Squeezing from './Instances/Squeezing'
 import Mingling from './Instances/Mingling'
 import BennettDefiant from './Instances/BennettDefiant'
-import BennettHorsing from './Instances/BennettHorsing'
-import BennettSorrowful from './Instances/BennettSorrowful'
 import BennettBanjo from './Instances/BennettBanjo'
 import BennettRecording from './Instances/BennettRecording'
 import Protester from './Instances/Protester'
@@ -18,8 +16,6 @@ import {
     BENNETT_KEYBOARD,
     FLAPPER,
     BENNETT_DEFIANT,
-    BENNETT_HORSING,
-    BENNETT_SORROWFUL,
     BENNETT_BANJO,
     BENNETT_RECORDING
 } from '../../../../../scene/instanceKeys/stephanie'
@@ -37,8 +33,6 @@ const INSTANCES_MAP = {
     [SQUEEZING]: Squeezing,
     [MINGLING]: Mingling,
     [BENNETT_DEFIANT]: BennettDefiant,
-    [BENNETT_HORSING]: BennettHorsing,
-    [BENNETT_SORROWFUL]: BennettSorrowful,
     [BENNETT_BANJO]: BennettBanjo,
     [BENNETT_RECORDING]: BennettRecording,
     [PROTESTER]: Protester,

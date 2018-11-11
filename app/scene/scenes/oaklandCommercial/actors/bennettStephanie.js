@@ -1,12 +1,12 @@
 import {
-    DRYING_TEARS
-} from 'scene/instanceKeys/bennett'
+    HORSING
+} from 'scene/instanceKeys/bennettStephanie'
 
 const ARRANGEMENTS_MAP = {
-    [DRYING_TEARS]: {
+    [HORSING]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 5,
             xWidth: 1,
             zHeight: 5
         }

@@ -23,6 +23,7 @@ import {
 import {
     YOUNG_BENNETT,
     BENNETT,
+    BENNETT_STEPHANIE,
     ANITA,
     ESTHER,
     WILLY,
@@ -36,17 +37,18 @@ import { OFFICER } from '../../scene/instanceKeys/amyNestorTomer'
 import {
     CORD_SIDE,
     AWKWARD_CONSOLATION,
-    CORD_REAR,
+    CORD_REAR
+} from '../../scene/instanceKeys/bennett'
+
+import {
     HORSING,
     DRYING_TEARS
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/instanceKeys/bennettStephanie'
 
 import { RETURNING_CORD } from '../../scene/instanceKeys/liz'
 
 import {
-    BENNETT_DEFIANT,
-    BENNETT_HORSING,
-    BENNETT_SORROWFUL
+    BENNETT_DEFIANT
 } from '../../scene/instanceKeys/stephanie'
 
 import { CROSSING_GUARD } from '../../scene/instanceKeys/willy'
@@ -203,19 +205,12 @@ module.exports = [
         description: `Bennett and Garry are yucking it up, in a panicked and delirious kind of way. Bennett is yodelling, Garry is playing the banjo, saluting a female cop on a horse. The cop waves back.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side angle, playful, waving',
                     instance: HORSING
-                },
-                [STEPHANIE]: {
-                    [BENNETT]: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'back, playful',
-                        instance: BENNETT_HORSING
-                    }
                 },
                 [AMY_NESTOR_TOMER]: {
                     officer: {
@@ -250,19 +245,12 @@ module.exports = [
         description: `Garry is now facing the audience, his hand over his face, crying, and holding the gold bracelet over a group of kids crossing the street with a crossing guard. Bennett is trying to console him, as he faces forward.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'back, consoling',
                     instance: DRYING_TEARS
-                },
-                [STEPHANIE]: {
-                    [BENNETT]: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'back, head in hands, holding bracelet',
-                        instance: BENNETT_SORROWFUL
-                    }
                 },
                 [ESTHER]: {
                     youngGirl: {
