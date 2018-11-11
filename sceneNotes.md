@@ -16,3 +16,6 @@
 
 ## Illustrator task
 * Begin after coming back from LA.
+
+## Cube notes
+* Walls all the way to the top don't have ceiling cubes.

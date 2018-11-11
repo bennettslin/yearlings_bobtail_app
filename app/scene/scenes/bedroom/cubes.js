@@ -116,11 +116,11 @@ const
         floor: {
             hslaColours: [
                 [G, G, G, G, G, W, G, W, W, W, G],
-                [G, G, G, W, W, F, W, U, U, W, G],
-                [G, G, W, W, R, F, F, U, U, U, W, G],
-                [W, W, R, R, F, F, F, U, U, U, W, G],
-                [F, F, F, F, F, F, F, U, U, U, W, G],
-                [W, F, F, F, F, F, F, F, U, F, F, W]
+                [G, G, G, W, W, F, W, F, F, W, G],
+                [G, G, W, W, R, F, F, F, F, F, W, G],
+                [W, W, R, R, F, F, F, F, F, F, W, G],
+                [F, F, F, F, F, F, F, F, F, F, W, G],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -134,24 +134,6 @@ const
     },
     BEDROOM_DOGS_CUBES = {
         slantDirection: LEFT,
-        ceiling: {
-            hslaColours: [
-                [D, D, D, D, D, D, D, C, C, C, D],
-                [D, D, D, D, D, D, C, C, C, C, D],
-                [D, D, D, D, D, D, C, C, C, C, C, D],
-                [D, D, D, D, D, D, C, C, C, C, C, D],
-                [D, D, D, D, D, D, C, C, C, C, C, D],
-                [D, D, D, D, D, D, C]
-            ],
-            zIndices: [
-                [k, k, k, k, k, k, k, g, g, g, k],
-                [k, k, k, k, k, k, g, g, g, g, k],
-                [k, k, k, k, k, k, g, g, g, g, g, k],
-                [k, k, k, k, k, k, g, g, g, g, g, k],
-                [k, k, k, k, k, k, g, g, g, g, g, k],
-                [k, k, k, k, k, k, g]
-            ]
-        },
         floor: {
             hslaColours: [
                 [G, G, G, G, G, G, G, W, W, W, G],
@@ -175,18 +157,18 @@ const
         slantDirection: LEFT,
         ceiling: {
             hslaColours: [
-                [D, D, D, D, D, C, D],
-                [D, D, D, W, W, C, D],
-                [D, D, W, W, C, C, D],
-                [C, W, C, C, C, C, D],
-                [C, C, C, C, C, C, D]
+                [D, D, D, D, D, D, D],
+                [D, D, D, W, W, D, D],
+                [D, D, W, W, D, D, D],
+                [D, W, D, D, D, D, D],
+                [D, D, D, D, D, D, D]
             ],
             zIndices: [
-                [k, k, k, k, k, g, k],
-                [k, k, k, d, d, g, k],
-                [k, k, d, d, g, g, k],
-                [g, d, g, g, g, g, k],
-                [g, g, g, g, g, g, k]
+                [k],
+                [k, k, k, d, d, k],
+                [k, k, d, d, k],
+                [k, d, k],
+                [k]
             ],
         },
         floor: {
