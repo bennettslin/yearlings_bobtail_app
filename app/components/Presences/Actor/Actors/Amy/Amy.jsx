@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Smoker from './Instances/Smoker'
-import Squeezing from './Instances/Squeezing'
 import Flirting from './Instances/Flirting'
 import Mingling from './Instances/Mingling'
 import Officer from './Instances/Officer'
@@ -18,7 +17,6 @@ import {
 } from 'scene/instanceKeys/amy'
 
 import {
-    SQUEEZING,
     FLIRTING,
     MINGLING,
     PROTESTER,
@@ -27,7 +25,6 @@ import {
 
 const INSTANCES_MAP = {
     [SMOKER]: Smoker,
-    [SQUEEZING]: Squeezing,
     [FLIRTING]: Flirting,
     [MINGLING]: Mingling,
     [OFFICER]: Officer,

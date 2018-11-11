@@ -41,7 +41,6 @@ const
 
     // Look Back.
     PERFORMING = 'performing',
-    SQUEEZING = 'squeezing',
     CARRYING = 'carrying',
     MINGLING = 'mingling',
     WAITING = 'waiting',
@@ -104,7 +103,6 @@ export {
     STATION_WAGON,
     ATTIC,
     PERFORMING,
-    SQUEEZING,
     CARRYING,
     MINGLING,
     WAITING,

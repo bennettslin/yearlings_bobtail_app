@@ -35,6 +35,8 @@ const
     NESTOR = 'nestor',
 
     AMY = 'amy',
+    AMY_STEPHANIE = 'amyStephanie',
+    AMY_NESTOR_TOMER = 'amyNestorTomer',
     STEPHANIE = 'stephanie',
     WADE = 'wade',
 
@@ -68,8 +70,11 @@ export {
     TRISTAN,
     NESTOR,
     AMY,
+    AMY_STEPHANIE,
+    AMY_NESTOR_TOMER,
     STEPHANIE,
     WADE,
+
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
     KHARI_REFLECTION

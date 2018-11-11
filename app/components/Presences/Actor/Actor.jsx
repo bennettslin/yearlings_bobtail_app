@@ -27,6 +27,7 @@ import Miriam from './Actors/Miriam/Miriam'
 import Tristan from './Actors/Tristan/Tristan'
 import Nestor from './Actors/Nestor/Nestor'
 import Amy from './Actors/Amy/Amy'
+import AmyStephanie from './Actors/AmyStephanie/AmyStephanie'
 import Stephanie from './Actors/Stephanie/Stephanie'
 import Wade from './Actors/Wade/Wade'
 import BennettReflection from './Actors/BennettReflection/BennettReflection'
@@ -59,6 +60,7 @@ import {
     TRISTAN,
     NESTOR,
     AMY,
+    AMY_STEPHANIE,
     STEPHANIE,
     WADE,
     BENNETT_REFLECTION,
@@ -92,6 +94,7 @@ const ACTORS_MAP = {
     [TRISTAN]: Tristan,
     [NESTOR]: Nestor,
     [AMY]: Amy,
+    [AMY_STEPHANIE]: AmyStephanie,
     [STEPHANIE]: Stephanie,
     [WADE]: Wade,
     [BENNETT_REFLECTION]: BennettReflection,

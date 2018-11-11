@@ -28,6 +28,7 @@ import {
     TOMER,
     LIZ,
     AMY,
+    AMY_STEPHANIE,
     STEPHANIE,
     WADE,
     BENNETT_REFLECTION,
@@ -50,8 +51,11 @@ import { SHANE_SPILLING } from '../../scene/instanceKeys/tomer'
 import { WATCHING } from '../../scene/instanceKeys/wade'
 
 import {
+    SQUEEZING
+} from '../../scene/instanceKeys/amyStephanie'
+
+import {
     PERFORMING,
-    SQUEEZING,
     FLIRTING,
     CARRYING,
     MINGLING,
@@ -128,16 +132,10 @@ module.exports = [
                     description: 'side, drinking beer',
                     instance: WATCHING
                 },
-                [AMY]: {
+                [AMY_STEPHANIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, squeezing through, apologetic',
-                    instance: SQUEEZING
-                },
-                [STEPHANIE]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'side, squeezing through, awkward',
                     instance: SQUEEZING
                 }
             },
