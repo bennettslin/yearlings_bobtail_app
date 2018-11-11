@@ -10,9 +10,14 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `Shadows.`,
+        taskName: `Shadows for presences.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Halo for cubes.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,

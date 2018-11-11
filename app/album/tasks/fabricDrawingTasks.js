@@ -20,11 +20,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `4 * tentacle`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Bennett's blanket and pillows (Grasshoppers, Uncanny)`,
         workedHours: 0,
         neededHours: 2
