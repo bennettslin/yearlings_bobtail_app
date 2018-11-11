@@ -1,16 +1,16 @@
 import {
     BENNETT,
-    AMY,
+    AMY_NESTOR_TOMER,
     STEPHANIE
 } from 'scene/actorKeys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_AMY from './actors/amy'
+import ARRANGEMENTS_AMY_NESTOR_TOMER from './actors/amyNestorTomer'
 import ARRANGEMENTS_STEPHANIE from './actors/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: ARRANGEMENTS_BENNETT,
-    [AMY]: ARRANGEMENTS_AMY,
+    [AMY_NESTOR_TOMER]: ARRANGEMENTS_AMY_NESTOR_TOMER,
     [STEPHANIE]: ARRANGEMENTS_STEPHANIE
 }
 

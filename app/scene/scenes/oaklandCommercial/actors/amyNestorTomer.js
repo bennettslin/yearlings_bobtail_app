@@ -1,6 +1,6 @@
 import {
     OFFICER
-} from 'scene/instanceKeys/amy'
+} from 'scene/instanceKeys/amyNestorTomer'
 
 const ARRANGEMENTS_MAP = {
     [OFFICER]: {

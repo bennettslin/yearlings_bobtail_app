@@ -2,7 +2,6 @@ import {
     ACTORS,
     BACKDROPS,
     CUTOUTS,
-    // FIXTURES,
     FLATS,
     FURNITURES
 } from 'constants/scene'
@@ -28,11 +27,11 @@ import {
     ESTHER,
     WILLY,
     LIZ,
-    AMY,
+    AMY_NESTOR_TOMER,
     STEPHANIE
 } from '../../scene/actorKeys'
 
-import { OFFICER } from '../../scene/instanceKeys/amy'
+import { OFFICER } from '../../scene/instanceKeys/amyNestorTomer'
 
 import {
     CORD_SIDE,
@@ -218,7 +217,7 @@ module.exports = [
                         instance: BENNETT_HORSING
                     }
                 },
-                [AMY]: {
+                [AMY_NESTOR_TOMER]: {
                     officer: {
                         todo: true,
                         workedHours: 3,
