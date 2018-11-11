@@ -19,9 +19,9 @@ import {
     JOKING,
     PROTECTIVE,
     CARESSING
-} from 'scene/instanceKeys/khari'
+} from '../../../../../scene/instanceKeys/khari'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [DOUBLE_ALBERT]: DoubleAlbert,

@@ -14,14 +14,14 @@ import {
     SMOKER,
     OFFICER,
     DOCTOR
-} from 'scene/instanceKeys/amy'
+} from '../../../../../scene/instanceKeys/amy'
 
 import {
     FLIRTING,
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [SMOKER]: Smoker,

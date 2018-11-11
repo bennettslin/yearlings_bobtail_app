@@ -4,7 +4,7 @@ import {
     FATHER,
     MIRIAM,
     STEPHANIE
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_MOTHER from './actors/mother'

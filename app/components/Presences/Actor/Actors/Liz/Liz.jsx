@@ -52,7 +52,7 @@ import {
     LAUGHING,
     SELFLESS_CONCERN,
     CARESSED
-} from 'scene/instanceKeys/liz'
+} from '../../../../../scene/instanceKeys/liz'
 
 import {
     DATE_ENDING,
@@ -75,7 +75,7 @@ import {
     CLIFF,
     FINAL_DREAM,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [DATE_ENDING]: DateEnding,

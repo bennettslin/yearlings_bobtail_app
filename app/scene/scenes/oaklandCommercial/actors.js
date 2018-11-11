@@ -2,7 +2,7 @@ import {
     BENNETT,
     AMY_NESTOR_TOMER,
     STEPHANIE
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_AMY_NESTOR_TOMER from './actors/amyNestorTomer'

@@ -12,12 +12,12 @@ import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from 'scene/instanceKeys/anita'
+} from '../../../../../scene/instanceKeys/anita'
 
 import {
     YOUNG_CHILD,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [EXASPERATED]: Exasperated,

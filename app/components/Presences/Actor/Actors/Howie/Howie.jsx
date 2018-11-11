@@ -8,7 +8,6 @@ import UsherLooking from './Instances/UsherLooking'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
-import Cemetery from './Instances/Cemetery'
 import StationWagon from './Instances/StationWagon'
 import Attic from './Instances/Attic'
 import Epilogue from './Instances/Epilogue'
@@ -16,18 +15,17 @@ import Epilogue from './Instances/Epilogue'
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from 'scene/instanceKeys/howie'
+} from '../../../../../scene/instanceKeys/howie'
 
 import {
     GANGBANGER,
     ABBEY_ROAD,
     WALGREENS,
     STEAM_TUNNEL,
-    CEMETERY,
     STATION_WAGON,
     ATTIC,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [GANGBANGER]: Gangbanger,
@@ -36,7 +34,6 @@ const INSTANCES_MAP = {
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
     [STEAM_TUNNEL]: SteamTunnel,
-    [CEMETERY]: Cemetery,
     [STATION_WAGON]: StationWagon,
     [ATTIC]: Attic,
     [EPILOGUE]: Epilogue

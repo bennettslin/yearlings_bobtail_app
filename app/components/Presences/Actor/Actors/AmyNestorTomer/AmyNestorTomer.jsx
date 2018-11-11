@@ -6,7 +6,7 @@ import Officer from './Instances/Officer'
 
 import {
     OFFICER
-} from 'scene/instanceKeys/amyNestorTomer'
+} from '../../../../../scene/instanceKeys/amyNestorTomer'
 
 const INSTANCES_MAP = {
     [OFFICER]: Officer

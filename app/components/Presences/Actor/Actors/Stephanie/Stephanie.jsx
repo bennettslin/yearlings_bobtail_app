@@ -22,14 +22,14 @@ import {
     BENNETT_SORROWFUL,
     BENNETT_BANJO,
     BENNETT_RECORDING
-} from 'scene/instanceKeys/stephanie'
+} from '../../../../../scene/instanceKeys/stephanie'
 
 import {
     SQUEEZING,
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [BENNETT_KEYBOARD]: BennettKeyboard,

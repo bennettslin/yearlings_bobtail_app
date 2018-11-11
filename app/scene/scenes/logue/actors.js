@@ -26,7 +26,7 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_YOUNG_BENNETT from './actors/youngBennett'
 import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'

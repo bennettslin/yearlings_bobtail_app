@@ -26,7 +26,7 @@ import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from 'scene/instanceKeys/miriam'
+} from '../../../../../scene/instanceKeys/miriam'
 
 import {
     NOOGIE,
@@ -35,7 +35,7 @@ import {
     GREETING,
     GOPI,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [NOOGIE]: Noogie,

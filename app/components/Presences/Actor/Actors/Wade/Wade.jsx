@@ -11,13 +11,13 @@ import Epilogue from './Instances/Epilogue'
 import {
     CATHOLIC_GUY,
     WATCHING
-} from 'scene/instanceKeys/wade'
+} from '../../../../../scene/instanceKeys/wade'
 
 import {
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [CATHOLIC_GUY]: CatholicGuy,

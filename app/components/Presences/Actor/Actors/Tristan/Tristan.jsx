@@ -12,12 +12,12 @@ import {
     PRINCIPAL,
     PUNCHING,
     INTRODUCING
-} from 'scene/instanceKeys/tristan'
+} from '../../../../../scene/instanceKeys/tristan'
 
 import {
     NOOGIE,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [PRINCIPAL]: Principal,

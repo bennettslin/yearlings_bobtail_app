@@ -7,7 +7,6 @@ import Eating from './Instances/Eating'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
-import Cemetery from './Instances/Cemetery'
 import StationWagon from './Instances/StationWagon'
 import Performing from './Instances/Performing'
 import Waiting from './Instances/Waiting'
@@ -19,19 +18,18 @@ import {
     SQUATTING,
     CHUCKLING,
     SMIRKING
-} from 'scene/instanceKeys/ana'
+} from '../../../../../scene/instanceKeys/ana'
 
 import {
     EATING,
     ABBEY_ROAD,
     WALGREENS,
     STEAM_TUNNEL,
-    CEMETERY,
     STATION_WAGON,
     PERFORMING,
     WAITING,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [SQUATTING]: Squatting,
@@ -39,7 +37,6 @@ const INSTANCES_MAP = {
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
     [STEAM_TUNNEL]: SteamTunnel,
-    [CEMETERY]: Cemetery,
     [STATION_WAGON]: StationWagon,
     [PERFORMING]: Performing,
     [WAITING]: Waiting,

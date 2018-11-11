@@ -6,7 +6,7 @@ import {
     TOMER,
     MIRIAM,
     TRISTAN
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_MARA from './actors/mara'

@@ -31,6 +31,7 @@ import {
 import {
     BENNETT,
     ANA,
+    ANA_HOWIE,
     HOWIE,
     TOMER
 } from '../../scene/actorKeys'
@@ -229,16 +230,10 @@ module.exports = [
                     description: 'front, looking upwards, inspired',
                     instance: CEMETERY
                 },
-                [ANA]: {
+                [ANA_HOWIE]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, shivering, feeling comforted',
-                    instance: CEMETERY
-                },
-                [HOWIE]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'side angle, arm around Ana',
                     instance: CEMETERY
                 },
                 [TOMER]: {

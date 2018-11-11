@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import CaressingReflection from './Instances/CaressingReflection'
+import Cemetery from './Instances/Cemetery'
 
-import { CARESSING_REFLECTION } from '../../../../../scene/instanceKeys/khari'
+import {
+    CEMETERY
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
-    [CARESSING_REFLECTION]: CaressingReflection
+    [CEMETERY]: Cemetery
 }
 
 const propTypes = {
@@ -16,25 +18,26 @@ const propTypes = {
     instanceKey: PropTypes.string.isRequired
 }
 
-const Khari = ({
+const AnaHowie = ({
 
     className,
     instanceKey,
 
 ...other }) => {
 
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
+    const InstanceComponent =
+        INSTANCES_MAP[instanceKey]
 
     return (
         <InstanceComponent {...other}
             className={cx(
-                'Khari',
+                'AnaHowie',
                 className
             )}
         />
     )
 }
 
-Khari.propTypes = propTypes;
+AnaHowie.propTypes = propTypes;
 
-export default Khari
+export default AnaHowie

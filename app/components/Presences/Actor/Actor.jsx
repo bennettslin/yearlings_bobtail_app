@@ -19,6 +19,7 @@ import Catherine from './Actors/Catherine/Catherine'
 import Mara from './Actors/Mara/Mara'
 import Jacob from './Actors/Jacob/Jacob'
 import Ana from './Actors/Ana/Ana'
+import AnaHowie from './Actors/AnaHowie/AnaHowie'
 import Howie from './Actors/Howie/Howie'
 import Tomer from './Actors/Tomer/Tomer'
 import Liz from './Actors/Liz/Liz'
@@ -53,6 +54,7 @@ import {
     MARA,
     JACOB,
     ANA,
+    ANA_HOWIE,
     HOWIE,
     TOMER,
     LIZ,
@@ -68,7 +70,7 @@ import {
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
     KHARI_REFLECTION
-} from 'scene/actorKeys'
+} from '../../../scene/actorKeys'
 
 const ACTORS_MAP = {
     [YOUNG_BENNETT]: YoungBennett,
@@ -88,6 +90,7 @@ const ACTORS_MAP = {
     [MARA]: Mara,
     [JACOB]: Jacob,
     [ANA]: Ana,
+    [ANA_HOWIE]: AnaHowie,
     [HOWIE]: Howie,
     [TOMER]: Tomer,
     [LIZ]: Liz,

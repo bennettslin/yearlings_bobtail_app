@@ -3,7 +3,7 @@ import {
     WILLY,
     MOTHER,
     CHRISTOPHER
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 import ARRANGEMENTS_WILLY from './actors/willy'

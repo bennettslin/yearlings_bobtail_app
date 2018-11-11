@@ -15,9 +15,9 @@ import {
     MERMAID,
     POPULAR_GIRL,
     COMFORTING
-} from 'scene/instanceKeys/sasha'
+} from '../../../../../scene/instanceKeys/sasha'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [CHARMED]: Charmed,

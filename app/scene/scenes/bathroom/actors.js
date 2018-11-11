@@ -1,7 +1,7 @@
 import {
     YOUNG_BENNETT,
     ANITA
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_YOUNG_BENNETT from './actors/youngBennett'
 import ARRANGEMENTS_ANITA from './actors/anita'

@@ -14,12 +14,12 @@ import {
     SNICKERING,
     SITA_HURT,
     SITA_SOBBING
-} from 'scene/instanceKeys/esther'
+} from '../../../../../scene/instanceKeys/esther'
 
 import {
     YOUNG_CHILD,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [CURIOUS]: Curious,

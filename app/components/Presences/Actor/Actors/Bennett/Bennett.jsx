@@ -109,7 +109,7 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from 'scene/instanceKeys/bennett'
+} from '../../../../../scene/instanceKeys/bennett'
 
 import {
     EATING,
@@ -147,7 +147,7 @@ import {
     CLIFF,
     FINAL_DREAM,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [BREAKUP_DEJECTED]: BreakupDejected,

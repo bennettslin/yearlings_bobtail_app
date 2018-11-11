@@ -11,13 +11,13 @@ import CaressedReflection from './Instances/CaressedReflection'
 import {
     REACHING_REFLECTION,
     CARESSED_REFLECTION
-} from 'scene/instanceKeys/liz'
+} from '../../../../../scene/instanceKeys/liz'
 
 import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [HARD_ON_REFLECTION]: HardOnReflection,

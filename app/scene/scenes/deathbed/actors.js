@@ -3,7 +3,7 @@ import {
     LIZ,
     MIRIAM,
     AMY
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_LIZ from './actors/liz'

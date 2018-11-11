@@ -14,12 +14,12 @@ import {
     DUCKING,
     FIGHTING,
     CROSSING_GUARD
-} from 'scene/instanceKeys/willy'
+} from '../../../../../scene/instanceKeys/willy'
 
 import {
     GREETING,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [COLLECTING]: Collecting,

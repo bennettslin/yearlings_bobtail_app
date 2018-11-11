@@ -14,14 +14,14 @@ import {
     ROARING,
     ACCUSATORY,
     REELING
-} from 'scene/instanceKeys/father'
+} from '../../../../../scene/instanceKeys/father'
 
 import {
     PAST,
     PRESENT,
     FUTURE,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [ROARING]: Roaring,

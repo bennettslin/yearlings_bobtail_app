@@ -5,7 +5,7 @@ import {
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
     KHARI_REFLECTION
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_LIZ from './actors/liz'

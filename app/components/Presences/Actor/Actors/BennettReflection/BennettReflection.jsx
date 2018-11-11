@@ -9,13 +9,13 @@ import ShoesReflection from './Instances/ShoesReflection'
 
 import {
     SHOES_REFLECTION
-} from 'scene/instanceKeys/bennett'
+} from '../../../../../scene/instanceKeys/bennett'
 
 import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [HARD_ON_REFLECTION]: HardOnReflection,

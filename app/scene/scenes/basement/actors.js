@@ -8,7 +8,7 @@ import {
     ANA,
     LIZ,
     MIRIAM
-} from 'scene/actorKeys'
+} from '../../actorKeys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_ESTHER from './actors/esther'

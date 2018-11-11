@@ -12,7 +12,7 @@ import {
     EATING,
     CARRYING,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [CARRYING]: Carrying,

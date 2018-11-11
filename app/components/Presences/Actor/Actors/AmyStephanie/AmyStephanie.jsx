@@ -6,7 +6,7 @@ import Squeezing from './Instances/Squeezing'
 
 import {
     SQUEEZING
-} from 'scene/instanceKeys/amyStephanie'
+} from '../../../../../scene/instanceKeys/amyStephanie'
 
 const INSTANCES_MAP = {
     [SQUEEZING]: Squeezing
