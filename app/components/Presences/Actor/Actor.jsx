@@ -16,6 +16,7 @@ import Willy from './Actors/Willy/Willy'
 import Mother from './Actors/Mother/Mother'
 import Father from './Actors/Father/Father'
 import Christopher from './Actors/Christopher/Christopher'
+import ChristopherBennett from './Actors/ChristopherBennett/ChristopherBennett'
 import Sasha from './Actors/Sasha/Sasha'
 import Brad from './Actors/Brad/Brad'
 import BradBennett from './Actors/BradBennett/BradBennett'
@@ -57,6 +58,7 @@ import {
     MOTHER,
     FATHER,
     CHRISTOPHER,
+    CHRISTOPHER_BENNETT,
     SASHA,
     BRAD,
     BRAD_BENNETT,
@@ -99,6 +101,7 @@ const ACTORS_MAP = {
     [MOTHER]: Mother,
     [FATHER]: Father,
     [CHRISTOPHER]: Christopher,
+    [CHRISTOPHER_BENNETT]: ChristopherBennett,
     [SASHA]: Sasha,
     [BRAD]: Brad,
     [BRAD_BENNETT]: BradBennett,

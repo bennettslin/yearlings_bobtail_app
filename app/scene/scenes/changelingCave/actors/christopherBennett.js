@@ -1,9 +1,9 @@
 import {
-    REASSURING
-} from '../../../instanceKeys/christopher'
+    REASSURING_ENCHANTED
+} from '../../../instanceKeys/christopherBennett'
 
 const ARRANGEMENTS_MAP = {
-    [REASSURING]: {
+    [REASSURING_ENCHANTED]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

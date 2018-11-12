@@ -5,7 +5,6 @@ import cx from 'classnames'
 import Cautious from './Instances/Cautious'
 import Enraged from './Instances/Enraged'
 import Fearful from './Instances/Fearful'
-import Enchanted from './Instances/Enchanted'
 import Panicked from './Instances/Panicked'
 import Mat from './Instances/Mat'
 import Stairs from './Instances/Stairs'
@@ -15,7 +14,6 @@ import Shore from './Instances/Shore'
 import Buoy from './Instances/Buoy'
 import Sinking from './Instances/Sinking'
 import OceanFloor from './Instances/OceanFloor'
-import GuiltRidden from './Instances/GuiltRidden'
 import FeigningSick from './Instances/FeigningSick'
 import Asleep from './Instances/Asleep'
 import Shaken from './Instances/Shaken'
@@ -29,7 +27,6 @@ import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL,
-    ENCHANTED,
     PANICKED,
     MAT,
     STAIRS,
@@ -39,7 +36,6 @@ import {
     BUOY,
     SINKING,
     OCEAN_FLOOR,
-    GUILT_RIDDEN,
     FEIGNING_SICK,
     ASLEEP,
     SHAKEN,
@@ -55,7 +51,6 @@ const INSTANCES_MAP = {
     [CAUTIOUS]: Cautious,
     [ENRAGED]: Enraged,
     [FEARFUL]: Fearful,
-    [ENCHANTED]: Enchanted,
     [PANICKED]: Panicked,
     [MAT]: Mat,
     [STAIRS]: Stairs,
@@ -65,7 +60,6 @@ const INSTANCES_MAP = {
     [BUOY]: Buoy,
     [SINKING]: Sinking,
     [OCEAN_FLOOR]: OceanFloor,
-    [GUILT_RIDDEN]: GuiltRidden,
     [FEIGNING_SICK]: FeigningSick,
     [ASLEEP]: Asleep,
     [SHAKEN]: Shaken,

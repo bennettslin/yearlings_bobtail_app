@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Blissful = ({
+const ReassuringEnchanted = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Blissful = ({
         <Svg
             className={cx(
                 className,
-                'Blissful'
+                'ReassuringEnchanted'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Blissful = ({
                 {...other}
             >
                 {cx(
-                    'Blissful'
+                    'ReassuringEnchanted'
                 )}
             </text>
         </Svg>
     )
 }
 
-Blissful.propTypes = propTypes;
+ReassuringEnchanted.propTypes = propTypes;
 
-export default Blissful
+export default ReassuringEnchanted

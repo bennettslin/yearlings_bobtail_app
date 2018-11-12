@@ -1,7 +1,6 @@
 import {
     ENRAGED,
     FEARFUL,
-    GUILT_RIDDEN,
     FEIGNING_SICK,
     ASLEEP,
     SHAKEN
@@ -17,14 +16,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [FEARFUL]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
-        }
-    },
-    [GUILT_RIDDEN]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

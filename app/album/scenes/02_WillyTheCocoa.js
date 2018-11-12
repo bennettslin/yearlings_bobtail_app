@@ -29,6 +29,7 @@ import {
     MOTHER,
     FATHER,
     CHRISTOPHER,
+    CHRISTOPHER_BENNETT,
     HOWIE,
     TOMER
 } from '../../scene/actorKeys'
@@ -36,8 +37,7 @@ import {
 import {
     CAUTIOUS,
     ENRAGED,
-    FEARFUL,
-    ENCHANTED
+    FEARFUL
 } from '../../scene/instanceKeys/preteenBennett'
 
 import {
@@ -57,9 +57,12 @@ import {
 
 import {
     TANTRUM,
-    SOBBING,
-    REASSURING
+    SOBBING
 } from '../../scene/instanceKeys/christopher'
+
+import {
+    REASSURING_ENCHANTED
+} from '../../scene/instanceKeys/christopherBennett'
 
 import {
     GANGBANGER,
@@ -369,17 +372,12 @@ module.exports = [
                     description: 'side angle, merrily greeting trolls',
                     instance: GREETING
                 },
-                [CHRISTOPHER]: {
+                [CHRISTOPHER_BENNETT]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side angle, looking up at Bennett, reassuring',
-                    instance: REASSURING
-                },
-                [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'side angle, wide-eyed, needing reassurance',
-                    instance: ENCHANTED
+                    instance: REASSURING_ENCHANTED
                 }
             },
             [CUTOUTS]: {

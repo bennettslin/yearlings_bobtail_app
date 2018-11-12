@@ -2,30 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Tantrum from './Instances/Tantrum'
-import Sobbing from './Instances/Sobbing'
-import Reassuring from './Instances/Reassuring'
-import Blissful from './Instances/Blissful'
-import Staring from './Instances/Staring'
-import Epilogue from './Instances/Epilogue'
+import ReassuringEnchanted from './Instances/ReassuringEnchanted'
+import BlissfulGuilty from './Instances/BlissfulGuilty'
 
 import {
-    TANTRUM,
-    SOBBING,
-    REASSURING,
-    BLISSFUL,
-    STARING
-} from '../../../../../scene/instanceKeys/christopher'
-
-import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
+    REASSURING_ENCHANTED,
+    BLISSFUL_GUILTY
+} from '../../../../../scene/instanceKeys/christopherBennett'
 
 const INSTANCES_MAP = {
-    [TANTRUM]: Tantrum,
-    [SOBBING]: Sobbing,
-    [REASSURING]: Reassuring,
-    [BLISSFUL]: Blissful,
-    [STARING]: Staring,
-    [EPILOGUE]: Epilogue
+    [REASSURING_ENCHANTED]: ReassuringEnchanted,
+    [BLISSFUL_GUILTY]: BlissfulGuilty
 }
 
 const propTypes = {

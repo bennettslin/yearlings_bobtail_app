@@ -1,14 +1,8 @@
 const
-    TANTRUM = 'tantrum',
-    SOBBING = 'sobbing',
-    REASSURING = 'reassuring',
-    BLISSFUL = 'blissful',
-    STARING = 'staring'
+    REASSURING_ENCHANTED = 'reassuringEnchanted',
+    BLISSFUL_GUILTY = 'blissfulGuilty'
 
 export {
-    TANTRUM,
-    SOBBING,
-    REASSURING,
-    BLISSFUL,
-    STARING
+    REASSURING_ENCHANTED,
+    BLISSFUL_GUILTY
 }

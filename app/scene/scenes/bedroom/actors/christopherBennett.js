@@ -1,9 +1,9 @@
 import {
-    ENCHANTED
-} from '../../../instanceKeys/preteenBennett'
+    BLISSFUL_GUILTY
+} from '../../../instanceKeys/christopherBennett'
 
 const ARRANGEMENTS_MAP = {
-    [ENCHANTED]: {
+    [BLISSFUL_GUILTY]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

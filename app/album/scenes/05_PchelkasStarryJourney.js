@@ -33,7 +33,8 @@ import {
     SASHA,
     BRAD,
     ANDREW,
-    TRISTAN
+    TRISTAN,
+    CHRISTOPHER_BENNETT
 } from '../../scene/actorKeys'
 
 import {
@@ -47,14 +48,16 @@ import {
 } from '../../scene/instanceKeys/brad'
 
 import {
-    BLISSFUL,
     STARING
 } from '../../scene/instanceKeys/christopher'
+
+import {
+    BLISSFUL_GUILTY
+} from '../../scene/instanceKeys/christopherBennett'
 
 import { ARGUING } from '../../scene/instanceKeys/mother'
 
 import {
-    GUILT_RIDDEN,
     FEIGNING_SICK,
     ASLEEP,
     SHAKEN,
@@ -162,17 +165,12 @@ module.exports = [
         description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but happily playing. Bennett looks guilty. There is a drawing of the two as dogs.`,
         presences: {
             [ACTORS]: {
-                [PRETEEN_BENNETT]: {
+                [CHRISTOPHER_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'lying on stomach, drawing, guilty',
-                    instance: GUILT_RIDDEN
-                },
-                [CHRISTOPHER]: {
-                    todo: true,
-                    workedHours: 3,
+                    compound: 2,
                     description: 'w-sitting, blissful',
-                    instance: BLISSFUL
+                    instance: BLISSFUL_GUILTY
                 }
             },
             [BACKDROPS]: {
