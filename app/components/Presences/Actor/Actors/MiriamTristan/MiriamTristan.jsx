@@ -21,12 +21,15 @@ import {
     INFANT_CURIOUS,
     INFANT_NURSING,
     ASLEEP,
-    MISCHIEVOUS,
     FENDING,
     PERFUMING,
     TENNIS,
     REVERSING
 } from '../../../../../scene/instanceKeys/miriam'
+
+import {
+    MISCHIEVOUS_BANJO
+} from '../../../../../scene/instanceKeys/miriamStephanie'
 
 import {
     NOOGIE,
@@ -42,7 +45,7 @@ const INSTANCES_MAP = {
     [INFANT_CURIOUS]: InfantCurious,
     [INFANT_NURSING]: InfantNursing,
     [ASLEEP]: Asleep,
-    [MISCHIEVOUS]: Mischievous,
+    [MISCHIEVOUS_BANJO]: Mischievous,
     [FENDING]: Fending,
     [PERFUMING]: Perfuming,
     [COWGIRL]: Cowgirl,

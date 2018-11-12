@@ -35,6 +35,7 @@ import {
     LIZ,
     KHARI_LIZ,
     MIRIAM,
+    MIRIAM_STEPHANIE,
     STEPHANIE
 } from '../../scene/actorKeys'
 
@@ -61,18 +62,14 @@ import {
 
 import {
     ASLEEP,
-    MISCHIEVOUS,
     FENDING
 } from '../../scene/instanceKeys/miriam'
 
+import { MISCHIEVOUS_BANJO } from '../../scene/instanceKeys/miriamStephanie'
 import { HUMILIATED } from '../../scene/instanceKeys/preteenBennett'
-
 import { COMFORTING } from '../../scene/instanceKeys/sasha'
 
-import {
-    BENNETT_BANJO,
-    BENNETT_RECORDING
-} from '../../scene/instanceKeys/stephanie'
+import { BENNETT_RECORDING } from '../../scene/instanceKeys/stephanie'
 
 import {
     PAST,
@@ -272,19 +269,12 @@ module.exports = [
                         instance: PETTING_SEATED
                     }
                 },
-                [MIRIAM]: {
+                [MIRIAM_STEPHANIE]: {
                     todo: true,
                     workedHours: 2.5,
+                    compound: 2,
                     description: 'side, jumping on Bennett, grabbing his banjo',
-                    instance: MISCHIEVOUS
-                },
-                [STEPHANIE]: {
-                    [BENNETT]: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'making out with Miriam',
-                        instance: BENNETT_BANJO
-                    }
+                    instance: MISCHIEVOUS_BANJO
                 }
             },
             [FLATS]: {

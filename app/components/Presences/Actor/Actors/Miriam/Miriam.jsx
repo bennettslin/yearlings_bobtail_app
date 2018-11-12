@@ -6,7 +6,6 @@ import Noogie from './Instances/Noogie'
 import InfantCurious from './Instances/InfantCurious'
 import InfantNursing from './Instances/InfantNursing'
 import Asleep from './Instances/Asleep'
-import Mischievous from './Instances/Mischievous'
 import Fending from './Instances/Fending'
 import Perfuming from './Instances/Perfuming'
 import Cowgirl from './Instances/Cowgirl'
@@ -21,7 +20,6 @@ import {
     INFANT_CURIOUS,
     INFANT_NURSING,
     ASLEEP,
-    MISCHIEVOUS,
     FENDING,
     PERFUMING,
     TENNIS,
@@ -42,7 +40,6 @@ const INSTANCES_MAP = {
     [INFANT_CURIOUS]: InfantCurious,
     [INFANT_NURSING]: InfantNursing,
     [ASLEEP]: Asleep,
-    [MISCHIEVOUS]: Mischievous,
     [FENDING]: Fending,
     [PERFUMING]: Perfuming,
     [COWGIRL]: Cowgirl,

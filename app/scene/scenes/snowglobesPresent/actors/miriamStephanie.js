@@ -1,9 +1,9 @@
 import {
-    MISCHIEVOUS
-} from '../../../instanceKeys/miriam'
+    MISCHIEVOUS_BANJO
+} from '../../../instanceKeys/miriamStephanie'
 
 const ARRANGEMENTS_MAP = {
-    [MISCHIEVOUS]: {
+    [MISCHIEVOUS_BANJO]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BennettBanjo = ({
+const MischievousBanjo = ({
 
     className,
 
@@ -19,7 +19,7 @@ const BennettBanjo = ({
         <Svg
             className={cx(
                 className,
-                'BennettBanjo'
+                'MischievousBanjo'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const BennettBanjo = ({
                 {...other}
             >
                 {cx(
-                    'BennettBanjo'
+                    'MischievousBanjo'
                 )}
             </text>
         </Svg>
     )
 }
 
-BennettBanjo.propTypes = propTypes;
+MischievousBanjo.propTypes = propTypes;
 
-export default BennettBanjo
+export default MischievousBanjo
