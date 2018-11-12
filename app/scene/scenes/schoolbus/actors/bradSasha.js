@@ -1,9 +1,9 @@
 import {
-    CHARMED
-} from '../../../instanceKeys/sasha'
+    CHARMED_SCHOOLBUS
+} from '../../../instanceKeys/bradSasha'
 
 const ARRANGEMENTS_MAP = {
-    [CHARMED]: {
+    [CHARMED_SCHOOLBUS]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

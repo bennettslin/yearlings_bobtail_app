@@ -2,13 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import JewishBoy from './Instances/JewishBoy'
 import Gesturing from './Instances/Gesturing'
 import Snacking from './Instances/Snacking'
 import Epilogue from './Instances/Epilogue'
 
 import {
-    JEWISH_BOY,
     GESTURING,
     SNACKING
 } from '../../../../../scene/instanceKeys/brad'
@@ -16,7 +14,6 @@ import {
 import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
-    [JEWISH_BOY]: JewishBoy,
     [GESTURING]: Gesturing,
     [SNACKING]: Snacking,
     [EPILOGUE]: Epilogue

@@ -24,29 +24,16 @@ import {
 import {
     PRETEEN_BENNETT,
     SASHA,
-    BRAD,
     ANDREW,
-    BRAD_BENNETT
+    BRAD_BENNETT,
+    BRAD_SASHA
 } from '../../scene/actorKeys'
 
 import { FEIGNING_FEAR } from '../../scene/instanceKeys/andrew'
-
-import {
-    JEWISH_BOY
-} from '../../scene/instanceKeys/brad'
-
-import {
-    TYING_TETHER
-} from '../../scene/instanceKeys/bradBennett'
-
-import {
-    PANICKED
-} from '../../scene/instanceKeys/preteenBennett'
-
-import {
-    CHARMED,
-    INDIGNANT
-} from '../../scene/instanceKeys/sasha'
+import { TYING_TETHER } from '../../scene/instanceKeys/bradBennett'
+import { CHARMED_SCHOOLBUS } from '../../scene/instanceKeys/bradSasha'
+import { PANICKED } from '../../scene/instanceKeys/preteenBennett'
+import { INDIGNANT } from '../../scene/instanceKeys/sasha'
 
 import {
     TAIWAN_MOUNTAINS_BACKDROP,
@@ -170,19 +157,12 @@ module.exports = [
                     description: 'side seated, pretending to read, panicked',
                     instance: PANICKED
                 },
-                [SASHA]: {
+                [BRAD_SASHA]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side seated, laughing, braids trailing',
-                    instance: CHARMED
-                },
-                [BRAD]: {
-                    jewishBoy: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'side seated, turned away, pointing to window',
-                        instance: JEWISH_BOY
-                    }
+                    instance: CHARMED_SCHOOLBUS
                 }
             },
             [BACKDROPS]: {

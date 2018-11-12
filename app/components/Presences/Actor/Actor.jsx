@@ -19,6 +19,7 @@ import Christopher from './Actors/Christopher/Christopher'
 import Sasha from './Actors/Sasha/Sasha'
 import Brad from './Actors/Brad/Brad'
 import BradBennett from './Actors/BradBennett/BradBennett'
+import BradSasha from './Actors/BradSasha/BradSasha'
 import Andrew from './Actors/Andrew/Andrew'
 import Catherine from './Actors/Catherine/Catherine'
 import Mara from './Actors/Mara/Mara'
@@ -59,6 +60,7 @@ import {
     SASHA,
     BRAD,
     BRAD_BENNETT,
+    BRAD_SASHA,
     ANDREW,
     CATHERINE,
     MARA,
@@ -100,6 +102,7 @@ const ACTORS_MAP = {
     [SASHA]: Sasha,
     [BRAD]: Brad,
     [BRAD_BENNETT]: BradBennett,
+    [BRAD_SASHA]: BradSasha,
     [ANDREW]: Andrew,
     [CATHERINE]: Catherine,
     [MARA]: Mara,

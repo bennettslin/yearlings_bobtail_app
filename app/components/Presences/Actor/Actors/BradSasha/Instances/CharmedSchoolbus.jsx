@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Charmed = ({
+const CharmedSchoolbus = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Charmed = ({
         <Svg
             className={cx(
                 className,
-                'Charmed'
+                'CharmedSchoolbus'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Charmed = ({
                 {...other}
             >
                 {cx(
-                    'Charmed'
+                    'CharmedSchoolbus'
                 )}
             </text>
         </Svg>
     )
 }
 
-Charmed.propTypes = propTypes;
+CharmedSchoolbus.propTypes = propTypes;
 
-export default Charmed
+export default CharmedSchoolbus
