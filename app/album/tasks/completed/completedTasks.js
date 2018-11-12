@@ -3947,4 +3947,19 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Code to measure compound instances.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Audit that presences and scans largely match up.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Name prop presences and scans.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

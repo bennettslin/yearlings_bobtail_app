@@ -164,7 +164,10 @@ export const _adminFinaliseActors = (album) => {
             }
 
             if (roleObject.todo) {
-                const { subtasks } = roleObject
+                const { subtasks } = roleObject,
+
+                    // For compound instances, measure twice. (Or however many.)
+                    compoundValue = descriptionEntity.compound || 1
 
                 if (subtasks && subtasks.length) {
                     subtasks.forEach(subtask => {
@@ -175,10 +178,15 @@ export const _adminFinaliseActors = (album) => {
                 }
 
                 album.songs[songIndex].actorsTodoCount++
-                album.songs[songIndex].actorsWorkedHours += (descriptionEntity.workedHours || 0)
+
+                album.songs[songIndex].actorsWorkedHours += (
+                    descriptionEntity.workedHours || 0
+                ) * compoundValue
 
                 // Assume 5 hours per drawing.
-                album.songs[songIndex].actorsNeededHours += (descriptionEntity.neededHours || 5)
+                album.songs[songIndex].actorsNeededHours += (
+                    descriptionEntity.neededHours || 5
+                ) * compoundValue
 
             }
             album.songs[songIndex].actorsTotalCount++

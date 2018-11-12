@@ -6,7 +6,7 @@ const
     BENNETT = 'bennett',
     BENNETT_LIZ = 'bennettLiz',
     BENNETT_STEPHANIE = 'bennettStephanie',
-    BENNETTS_CHRISTOPHER_LIZ = 'bennettsLizChristopher',
+    BENNETTS_CHRISTOPHER_LIZ = 'bennettsChristopherLiz',
     OLD_BENNETT = 'oldBennett',
 
     ANITA = 'anita',
@@ -58,7 +58,7 @@ const
     BENNETT_REFLECTION = 'bennettReflection',
     BENNETT_LIZ_REFLECTION = 'bennettLizReflection',
     LIZ_REFLECTION = 'lizReflection',
-    KHARI_REFLECTION = 'khariReflection'
+    KHARI_LIZ_REFLECTION = 'khariLizReflection'
 
 export {
     YOUNG_BENNETT,
@@ -109,5 +109,5 @@ export {
     BENNETT_REFLECTION,
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
-    KHARI_REFLECTION
+    KHARI_LIZ_REFLECTION
 }

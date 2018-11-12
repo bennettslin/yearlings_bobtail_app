@@ -1,20 +1,5 @@
 module.exports = [
     {
-        taskName: `Code to measure compound instances.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Audit that presences and scans largely match up.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Reverse scans that need to be reversed.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Dim theatre for songs, brighten for logues.`,
         workedHours: 0,
         neededHours: 3
@@ -35,14 +20,14 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Three-dimensionality of cutouts`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Organise prop presences and scans.`,
-        workedHours: 0,
-        neededHours: 8
     },
 
     /**
