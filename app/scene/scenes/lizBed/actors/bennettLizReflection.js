@@ -1,14 +1,11 @@
 import {
-    WAKENED_FEARFUL,
-    SEEKING_PROTECTION
-} from '../../../instanceKeys/bennett'
-
-import {
-    EATING
-} from '../../../instanceKeys/songs'
+    HARD_ON_REFLECTION,
+    MISSIONARY_REFLECTION,
+    AFTERGLOW_REFLECTION
+} from '../../../instanceKeys/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
-    [EATING]: {
+    [HARD_ON_REFLECTION]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,
@@ -16,7 +13,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 5
         }
     },
-    [WAKENED_FEARFUL]: {
+    [MISSIONARY_REFLECTION]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,
@@ -24,7 +21,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 5
         }
     },
-    [SEEKING_PROTECTION]: {
+    [AFTERGLOW_REFLECTION]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

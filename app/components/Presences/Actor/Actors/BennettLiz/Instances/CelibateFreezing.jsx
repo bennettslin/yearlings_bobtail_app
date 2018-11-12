@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const BrushedOff = ({
+const CelibateFreezing = ({
 
     className,
 
@@ -19,7 +19,7 @@ const BrushedOff = ({
         <Svg
             className={cx(
                 className,
-                'BrushedOff'
+                'CelibateFreezing'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const BrushedOff = ({
                 {...other}
             >
                 {cx(
-                    'BrushedOff'
+                    'CelibateFreezing'
                 )}
             </text>
         </Svg>
     )
 }
 
-BrushedOff.propTypes = propTypes;
+CelibateFreezing.propTypes = propTypes;
 
-export default BrushedOff
+export default CelibateFreezing

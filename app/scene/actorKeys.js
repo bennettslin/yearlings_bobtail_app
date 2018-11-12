@@ -56,6 +56,7 @@ const
     WADE = 'wade',
 
     BENNETT_REFLECTION = 'bennettReflection',
+    BENNETT_LIZ_REFLECTION = 'bennettLizReflection',
     LIZ_REFLECTION = 'lizReflection',
     KHARI_REFLECTION = 'khariReflection'
 
@@ -106,6 +107,7 @@ export {
     WADE,
 
     BENNETT_REFLECTION,
+    BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
     KHARI_REFLECTION
 }

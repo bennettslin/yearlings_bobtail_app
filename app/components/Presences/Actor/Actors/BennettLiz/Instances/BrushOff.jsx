@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Cliff = ({
+const BrushOff = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Cliff = ({
         <Svg
             className={cx(
                 className,
-                'Cliff'
+                'BrushOff'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Cliff = ({
                 {...other}
             >
                 {cx(
-                    'Cliff'
+                    'BrushOff'
                 )}
             </text>
         </Svg>
     )
 }
 
-Cliff.propTypes = propTypes;
+BrushOff.propTypes = propTypes;
 
-export default Cliff
+export default BrushOff

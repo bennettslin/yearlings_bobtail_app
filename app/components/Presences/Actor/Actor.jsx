@@ -5,7 +5,8 @@ import cx from 'classnames'
 import YoungBennett from './Actors/YoungBennett/YoungBennett'
 import PreteenBennett from './Actors/PreteenBennett/PreteenBennett'
 import Bennett from './Actors/Bennett/Bennett'
-// import BennettLiz from './Actors/BennettLiz/BennettLiz'
+import BennettLiz from './Actors/BennettLiz/BennettLiz'
+import BennettLizReflection from './Actors/BennettLizReflection/BennettLizReflection'
 import BennettsChristopherLiz from './Actors/BennettsChristopherLiz/BennettsChristopherLiz'
 import BennettStephanie from './Actors/BennettStephanie/BennettStephanie'
 import OldBennett from './Actors/OldBennett/OldBennett'
@@ -54,7 +55,8 @@ import {
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
-    // BENNETT_LIZ,
+    BENNETT_LIZ,
+    BENNETT_LIZ_REFLECTION,
     BENNETTS_CHRISTOPHER_LIZ,
     BENNETT_STEPHANIE,
     OLD_BENNETT,
@@ -104,7 +106,8 @@ const ACTORS_MAP = {
     [YOUNG_BENNETT]: YoungBennett,
     [PRETEEN_BENNETT]: PreteenBennett,
     [BENNETT]: Bennett,
-    // [BENNETT_LIZ]: BennettLiz,
+    [BENNETT_LIZ]: BennettLiz,
+    [BENNETT_LIZ_REFLECTION]: BennettLizReflection,
     [BENNETTS_CHRISTOPHER_LIZ]: BennettsChristopherLiz,
     [BENNETT_STEPHANIE]: BennettStephanie,
     [OLD_BENNETT]: OldBennett,

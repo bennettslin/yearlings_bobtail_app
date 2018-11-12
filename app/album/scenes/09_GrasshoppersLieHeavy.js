@@ -27,10 +27,10 @@ import {
 
 import {
     BENNETT,
+    BENNETT_LIZ,
     LIZ,
     NESTOR,
-    BENNETT_REFLECTION,
-    LIZ_REFLECTION
+    BENNETT_LIZ_REFLECTION
 } from '../../scene/actorKeys'
 
 import {
@@ -48,8 +48,11 @@ import {
     DATE_ENDING,
     DATE_ENDED,
     GATE_CODE,
+    RUMPLED_LINENS
+} from '../../scene/instanceKeys/songs'
+
+import {
     GINGERBREAD_PRISON,
-    RUMPLED_LINENS,
     CHEEK_UNVEILED,
     HARD_ON,
     MISSIONARY,
@@ -57,7 +60,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/bennettLiz'
 
 import {
     WAITING_ROOM_THOUGHTS
@@ -327,19 +330,12 @@ module.exports = [
         description: `Bennett's apartment is dark inside. Through a window, we see him opening the gate for Sita to pass through. She takes his arm.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'front, opening gate, silent, attentive',
                     instance: GINGERBREAD_PRISON
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'front, chatting, more comfortable',
-                        instance: GINGERBREAD_PRISON
-                    }
                 }
             },
             [FIXTURES]: {
@@ -442,19 +438,12 @@ module.exports = [
         description: `Same scene. Sita has come to get her purse, and is waking Bennett up.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'sitting, abruptly woken',
                     instance: CHEEK_UNVEILED
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'side, reaching for purse, cheeky',
-                        instance: CHEEK_UNVEILED
-                    }
                 }
             },
             [CUTOUTS]: {
@@ -481,32 +470,18 @@ module.exports = [
         description: `Bennett and Sita are both naked in bed. Sita is lying down, while Bennett hovers over her, a look of uncertainty on his face.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side, standing beside bed, unsure',
                     instance: HARD_ON
                 },
-                [BENNETT_REFLECTION]: {
+                [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection',
-                        instance: HARD_ON_REFLECTION
-                    }
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'front, sitting on bed, irreverently reassuring',
-                        instance: HARD_ON
-                    }
-                },
-                [LIZ_REFLECTION]: {
-                    reflection: {
-                        todo: true,
-                        workedHours: 3,
+                        compound: 2,
                         description: 'reflection',
                         instance: HARD_ON_REFLECTION
                     }
@@ -534,32 +509,18 @@ module.exports = [
         description: `Same scene. `,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side, about to stick it in',
                     instance: MISSIONARY
                 },
-                [BENNETT_REFLECTION]: {
+                [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection',
-                        instance: MISSIONARY_REFLECTION
-                    }
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'side, spread open',
-                        instance: MISSIONARY
-                    }
-                },
-                [LIZ_REFLECTION]: {
-                    reflection: {
-                        todo: true,
-                        workedHours: 3,
+                        compound: 2,
                         description: 'reflection',
                         instance: MISSIONARY_REFLECTION
                     }
@@ -587,32 +548,18 @@ module.exports = [
         description: `Same scene. Bennett and Sita are together in bed, having just had sex, a look that is a mixture of serenity and uncertainty on both their faces.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'lying down, warm, content, slightly worried',
                     instance: AFTERGLOW
                 },
-                [BENNETT_REFLECTION]: {
+                [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
-                        description: 'reflection',
-                        instance: AFTERGLOW_REFLECTION
-                    }
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'lying down, warm, content, slightly worried',
-                        instance: AFTERGLOW
-                    }
-                },
-                [LIZ_REFLECTION]: {
-                    reflection: {
-                        todo: true,
-                        workedHours: 3,
+                        compound: 2,
                         description: 'reflection',
                         instance: AFTERGLOW_REFLECTION
                     }

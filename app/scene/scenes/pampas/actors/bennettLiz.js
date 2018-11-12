@@ -1,6 +1,6 @@
 import {
     PAMPAS
-} from '../../../instanceKeys/songs'
+} from '../../../instanceKeys/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
     [PAMPAS]: {

@@ -1,6 +1,6 @@
 import {
     FINAL_DREAM
-} from '../../../instanceKeys/songs'
+} from '../../../instanceKeys/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
     [FINAL_DREAM]: {

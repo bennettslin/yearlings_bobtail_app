@@ -23,6 +23,7 @@ import {
 
 import {
     BENNETT,
+    BENNETT_LIZ,
     ANA,
     LIZ,
     MIRIAM_TRISTAN,
@@ -36,15 +37,13 @@ import {
 } from '../../scene/instanceKeys/ana'
 
 import {
-    BRUSHING_OFF,
-    DROPPING_MEATS,
-    DRUNK_CELIBATE
+    DROPPING_MEATS
 } from '../../scene/instanceKeys/bennett'
 
 import {
-    BRUSHED_OFF,
-    FREEZING_NAKED
-} from '../../scene/instanceKeys/liz'
+    BRUSH_OFF,
+    CELIBATE_FREEZING
+} from '../../scene/instanceKeys/bennettLiz'
 
 import { NOOGIE } from '../../scene/instanceKeys/miriamTristan'
 import { INJURED } from '../../scene/instanceKeys/nestor'
@@ -105,19 +104,12 @@ module.exports = [
         description: `Bennett is putting on his jacket to leave Sita's house. Sita is in her nightgown, begging him to stay.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'front, putting on jacket, cold, distant',
-                    instance: BRUSHING_OFF
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'side, shivering, pleading',
-                        instance: BRUSHED_OFF
-                    }
+                    instance: BRUSH_OFF
                 }
             },
             [DOORS]: {
@@ -187,19 +179,12 @@ module.exports = [
         description: `Bennett and Sita are on the couch. Bennett is drunk, with a guitar in his lap, writing a song. Sita is naked and has taken his right hand and placed it on her breast, but he is unresponsive`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'on couch, ignoring Sita, drunk',
-                    instance: DRUNK_CELIBATE
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'side, naked, making Bennett touch her breast',
-                        instance: FREEZING_NAKED
-                    }
+                    instance: CELIBATE_FREEZING
                 }
             },
             [CUTOUTS]: {

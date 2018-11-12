@@ -23,11 +23,11 @@ import {
 import {
     YOUNG_BENNETT,
     BENNETT,
+    BENNETT_LIZ,
     BENNETT_STEPHANIE,
     ANITA,
     ESTHER,
     WILLY,
-    LIZ,
     AMY_NESTOR_TOMER,
     STEPHANIE
 } from '../../scene/actorKeys'
@@ -36,16 +36,17 @@ import { OFFICER } from '../../scene/instanceKeys/amyNestorTomer'
 
 import {
     CORD_SIDE,
-    AWKWARD_CONSOLATION,
     CORD_REAR
 } from '../../scene/instanceKeys/bennett'
+
+import {
+    AWKWARD_CONSOLATION
+} from '../../scene/instanceKeys/bennettLiz'
 
 import {
     HORSING,
     DRYING_TEARS
 } from '../../scene/instanceKeys/bennettStephanie'
-
-import { RETURNING_CORD } from '../../scene/instanceKeys/liz'
 
 import {
     BENNETT_DEFIANT
@@ -127,19 +128,12 @@ module.exports = [
         description: `Bennett and Sita are at her apartment, breaking up. Sita is a wreck, turning away from Bennett as she returns the gold bracelet to him. He is trying to console her, but in a mechanical way.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side angle, disingenuously consoling',
                     instance: AWKWARD_CONSOLATION
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'side angle, returning bracelet, fighting tears',
-                        instance: RETURNING_CORD
-                    }
                 }
             },
             [BACKDROPS]: {

@@ -1,22 +1,19 @@
 import {
-    BENNETT,
+    BENNETT_LIZ,
     CATHERINE,
     MARA,
-    LIZ,
     MIRIAM
 } from '../../actorKeys'
 
-import ARRANGEMENTS_BENNETT from './actors/bennett'
+import ARRANGEMENTS_BENNETT_LIZ from './actors/bennettLiz'
 import ARRANGEMENTS_CATHERINE from './actors/catherine'
 import ARRANGEMENTS_MARA from './actors/mara'
-import ARRANGEMENTS_LIZ from './actors/liz'
 import ARRANGEMENTS_MIRIAM from './actors/miriam'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
+    [BENNETT_LIZ]: ARRANGEMENTS_BENNETT_LIZ,
     [CATHERINE]: ARRANGEMENTS_CATHERINE,
     [MARA]: ARRANGEMENTS_MARA,
-    [LIZ]: ARRANGEMENTS_LIZ,
     [MIRIAM]: ARRANGEMENTS_MIRIAM
 }
 

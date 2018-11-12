@@ -1,10 +1,11 @@
 import {
-    REMOVING_SHOES,
-    BROKEN_HEARTED
-} from '../../../instanceKeys/bennett'
+    HARD_ON,
+    MISSIONARY,
+    AFTERGLOW
+} from '../../../instanceKeys/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
-    [REMOVING_SHOES]: {
+    [HARD_ON]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,
@@ -12,7 +13,15 @@ const ARRANGEMENTS_MAP = {
             zHeight: 5
         }
     },
-    [BROKEN_HEARTED]: {
+    [MISSIONARY]: {
+        yIndex: 5,
+        arrangement: {
+            xFloat: 5.5,
+            xWidth: 1,
+            zHeight: 5
+        }
+    },
+    [AFTERGLOW]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

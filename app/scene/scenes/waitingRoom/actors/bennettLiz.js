@@ -1,9 +1,9 @@
 import {
-    FREEZING_NAKED
-} from '../../../instanceKeys/liz'
+    CHEEK_UNVEILED
+} from '../../../instanceKeys/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
-    [FREEZING_NAKED]: {
+    [CHEEK_UNVEILED]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

@@ -3942,4 +3942,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Organise actor presences and scans to have same folder structure.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

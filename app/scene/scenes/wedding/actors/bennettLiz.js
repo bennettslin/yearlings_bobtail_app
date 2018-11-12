@@ -1,12 +1,12 @@
 import {
-    CHEEK_UNVEILED
-} from '../../../instanceKeys/songs'
+    GETTING_DARK
+} from '../../../instanceKeys/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
-    [CHEEK_UNVEILED]: {
+    [GETTING_DARK]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 6,
             xWidth: 1,
             zHeight: 5
         }

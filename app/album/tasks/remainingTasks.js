@@ -1,5 +1,20 @@
 module.exports = [
     {
+        taskName: `Code to measure compound instances.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Audit that presences and scans largely match up.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Reverse scans that need to be reversed.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Dim theatre for songs, brighten for logues.`,
         workedHours: 0,
         neededHours: 3
@@ -25,7 +40,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Organise presences and scans to have same folder structure.`,
+        taskName: `Organise prop presences and scans.`,
         workedHours: 0,
         neededHours: 8
     },

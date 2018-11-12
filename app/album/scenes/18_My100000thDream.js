@@ -26,6 +26,7 @@ import {
 
 import {
     BENNETT,
+    BENNETT_LIZ,
     CATHERINE,
     MARA,
     LIZ,
@@ -39,12 +40,15 @@ import {
 
 import {
     EL_TORITO,
+    GOPI
+} from '../../scene/instanceKeys/songs'
+
+import {
     PAMPAS,
-    GOPI,
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/bennettLiz'
 
 import {
     PAMPAS_BACKDROP,
@@ -125,19 +129,12 @@ module.exports = [
         description: `Bennett and Sita are dancing on the pampas with some gopis.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'sitting cross-legged, playing recorder, content',
                     instance: PAMPAS
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'resting on Bennett, content',
-                        instance: PAMPAS
-                    }
                 },
                 [CATHERINE]: {
                     gopi: {
@@ -182,19 +179,12 @@ module.exports = [
         description: `In the background is an Indian wedding. Bennett is confused, because the bride appears to be Sita. But his Sita keeps dragging him forward, insistently.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'back angle, confusedly being rushed',
                     instance: GETTING_DARK
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'front, urging',
-                        instance: GETTING_DARK
-                    }
                 }
             },
             [CUTOUTS]: {
@@ -225,19 +215,12 @@ module.exports = [
         description: `Sita and Bennett are at the edge of a cliff. Bennett is frightened. Sita is gesturing towards the edge.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'front angle, reacting to threat',
                     instance: CLIFF
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'front angle, gesturing to grave',
-                        instance: CLIFF
-                    }
                 }
             },
             [BACKDROPS]: {
@@ -262,19 +245,12 @@ module.exports = [
         description: `The whole thing turns out to have been a dream. Bennett is in bed, old and dying. A doctor is pulling the sheet over him. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'calm, accepting of impending doom',
                     instance: FINAL_DREAM
-                },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'comforting',
-                        instance: FINAL_DREAM
-                    }
                 },
                 [AMY]: {
                     doctor: {

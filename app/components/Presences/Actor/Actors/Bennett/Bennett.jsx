@@ -24,13 +24,8 @@ import DishroomReading from './Instances/DishroomReading'
 import DishroomLancet from './Instances/DishroomLancet'
 import MopSopped from './Instances/MopSopped'
 import GateCode from './Instances/GateCode'
-import GingerbreadPrison from './Instances/GingerbreadPrison'
 import RumpledLinens from './Instances/RumpledLinens'
 import WaitingRoomAsleep from './Instances/WaitingRoomAsleep'
-import CheekUnveiled from './Instances/CheekUnveiled'
-import HardOn from './Instances/HardOn'
-import Missionary from './Instances/Missionary'
-import Afterglow from './Instances/Afterglow'
 import AbbeyRoad from './Instances/AbbeyRoad'
 import Walgreens from './Instances/Walgreens'
 import SteamTunnel from './Instances/SteamTunnel'
@@ -41,13 +36,10 @@ import Performing from './Instances/Performing'
 import Flirting from './Instances/Flirting'
 import SidelongHesitance from './Instances/SidelongHesitance'
 import RemovingShoes from './Instances/RemovingShoes'
-import BrushingOff from './Instances/BrushingOff'
 import DroppingMeats from './Instances/DroppingMeats'
-import DrunkCelibate from './Instances/DrunkCelibate'
 import Greeting from './Instances/Greeting'
 import LeavingCrumbled from './Instances/LeavingCrumbled'
 import CordSide from './Instances/CordSide'
-import AwkwardConsolation from './Instances/AwkwardConsolation'
 import CordRear from './Instances/CordRear'
 import Past from './Instances/Past'
 import Present from './Instances/Present'
@@ -61,10 +53,6 @@ import Alley from './Instances/Alley'
 import BrokenHearted from './Instances/BrokenHearted'
 import Demonstration from './Instances/Demonstration'
 import ElTorito from './Instances/ElTorito'
-import Pampas from './Instances/Pampas'
-import GettingDark from './Instances/GettingDark'
-import Cliff from './Instances/Cliff'
-import FinalDream from './Instances/FinalDream'
 
 import {
     BREAKUP_DEJECTED,
@@ -84,11 +72,8 @@ import {
     WAITING_ROOM_ASLEEP,
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
-    BRUSHING_OFF,
     DROPPING_MEATS,
-    DRUNK_CELIBATE,
     CORD_SIDE,
-    AWKWARD_CONSOLATION,
     CORD_REAR,
     REMOVING_PANTS,
     INFIRM,
@@ -109,12 +94,7 @@ import {
     DATE_ENDED,
     DISHROOM_LANCET,
     GATE_CODE,
-    GINGERBREAD_PRISON,
     RUMPLED_LINENS,
-    CHEEK_UNVEILED,
-    HARD_ON,
-    MISSIONARY,
-    AFTERGLOW,
     ABBEY_ROAD,
     WALGREENS,
     STEAM_TUNNEL,
@@ -128,11 +108,7 @@ import {
     PAST,
     PRESENT,
     FUTURE,
-    EL_TORITO,
-    PAMPAS,
-    GETTING_DARK,
-    CLIFF,
-    FINAL_DREAM
+    EL_TORITO
 } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
@@ -158,13 +134,8 @@ const INSTANCES_MAP = {
     [DISHROOM_LANCET]: DishroomLancet,
     [MOP_SOPPED]: MopSopped,
     [GATE_CODE]: GateCode,
-    [GINGERBREAD_PRISON]: GingerbreadPrison,
     [RUMPLED_LINENS]: RumpledLinens,
     [WAITING_ROOM_ASLEEP]: WaitingRoomAsleep,
-    [CHEEK_UNVEILED]: CheekUnveiled,
-    [HARD_ON]: HardOn,
-    [MISSIONARY]: Missionary,
-    [AFTERGLOW]: Afterglow,
     [ABBEY_ROAD]: AbbeyRoad,
     [WALGREENS]: Walgreens,
     [STEAM_TUNNEL]: SteamTunnel,
@@ -175,13 +146,10 @@ const INSTANCES_MAP = {
     [FLIRTING]: Flirting,
     [SIDELONG_HESITANCE]: SidelongHesitance,
     [REMOVING_SHOES]: RemovingShoes,
-    [BRUSHING_OFF]: BrushingOff,
     [DROPPING_MEATS]: DroppingMeats,
-    [DRUNK_CELIBATE]: DrunkCelibate,
     [GREETING]: Greeting,
     [LEAVING_CRUMBLED]: LeavingCrumbled,
     [CORD_SIDE]: CordSide,
-    [AWKWARD_CONSOLATION]: AwkwardConsolation,
     [CORD_REAR]: CordRear,
     [PAST]: Past,
     [PRESENT]: Present,
@@ -194,11 +162,7 @@ const INSTANCES_MAP = {
     [ALLEY]: Alley,
     [BROKEN_HEARTED]: BrokenHearted,
     [DEMONSTRATION]: Demonstration,
-    [EL_TORITO]: ElTorito,
-    [PAMPAS]: Pampas,
-    [GETTING_DARK]: GettingDark,
-    [CLIFF]: Cliff,
-    [FINAL_DREAM]: FinalDream
+    [EL_TORITO]: ElTorito
 }
 
 const propTypes = {

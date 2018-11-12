@@ -1,12 +1,12 @@
 import {
-    GETTING_DARK
-} from '../../../instanceKeys/songs'
+    GINGERBREAD_PRISON
+} from '../../../instanceKeys/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
-    [GETTING_DARK]: {
+    [GINGERBREAD_PRISON]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 9,
+            xFloat: 5.5,
             xWidth: 1,
             zHeight: 5
         }

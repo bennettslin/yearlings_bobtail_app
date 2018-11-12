@@ -1,6 +1,4 @@
 import {
-    BRUSHED_OFF,
-    RETURNING_CORD,
     PETTING_SEATED,
     PETTING_STANDING,
     SIFTING_TCHOTCHKES,
@@ -15,23 +13,7 @@ import {
 } from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [BRUSHED_OFF]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
-        }
-    },
     [LEAVING_CRUMBLED]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
-        }
-    },
-    [RETURNING_CORD]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,
