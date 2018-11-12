@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const CaressingReflection = ({
+const CaressReflection = ({
 
     className,
 
@@ -19,7 +19,7 @@ const CaressingReflection = ({
         <Svg
             className={cx(
                 className,
-                'CaressingReflection'
+                'CaressReflection'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const CaressingReflection = ({
                 {...other}
             >
                 {cx(
-                    'CaressingReflection'
+                    'CaressReflection'
                 )}
             </text>
         </Svg>
     )
 }
 
-CaressingReflection.propTypes = propTypes;
+CaressReflection.propTypes = propTypes;
 
-export default CaressingReflection
+export default CaressReflection

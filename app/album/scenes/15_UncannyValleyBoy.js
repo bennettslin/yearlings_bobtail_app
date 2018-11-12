@@ -33,7 +33,7 @@ import {
     FATHER,
     SASHA,
     LIZ,
-    KHARI,
+    KHARI_LIZ,
     MIRIAM,
     STEPHANIE
 } from '../../scene/actorKeys'
@@ -53,11 +53,10 @@ import {
     REELING
 } from '../../scene/instanceKeys/father'
 
-import { JOKING } from '../../scene/instanceKeys/khari'
+import { JOKING_LAUGHING } from '../../scene/instanceKeys/khariLiz'
 
 import {
-    PETTING_SEATED,
-    LAUGHING
+    PETTING_SEATED
 } from '../../scene/instanceKeys/liz'
 
 import {
@@ -339,19 +338,12 @@ module.exports = [
                     description: 'front angle, arms crossed, righteous',
                     instance: FUTURE
                 },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'side, amused by conversation',
-                        instance: LAUGHING
-                    }
-                },
-                [KHARI]: {
+                [KHARI_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side angle, cheerful, making a point',
-                    instance: JOKING
+                    instance: JOKING_LAUGHING
                 }
             },
             [FIXTURES]: {

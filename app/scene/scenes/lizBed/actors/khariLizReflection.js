@@ -1,9 +1,9 @@
 import {
-    CARESSING_REFLECTION
-} from '../../../instanceKeys/khari'
+    CARESS_REFLECTION
+} from '../../../instanceKeys/khariLiz'
 
 const ARRANGEMENTS_MAP = {
-    [CARESSING_REFLECTION]: {
+    [CARESS_REFLECTION]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

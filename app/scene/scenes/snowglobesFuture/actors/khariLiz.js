@@ -1,9 +1,9 @@
 import {
-    JOKING
-} from '../../../instanceKeys/khari'
+    JOKING_LAUGHING
+} from '../../../instanceKeys/khariLiz'
 
 const ARRANGEMENTS_MAP = {
-    [JOKING]: {
+    [JOKING_LAUGHING]: {
         yIndex: 2,
         arrangement: {
             xFloat: 3,

@@ -27,9 +27,6 @@ import Defending from './Instances/Defending'
 import NotHungry from './Instances/NotHungry'
 import AsleepCouch from './Instances/AsleepCouch'
 import PettingSeated from './Instances/PettingSeated'
-import Laughing from './Instances/Laughing'
-import SelflessConcern from './Instances/SelflessConcern'
-import Caressed from './Instances/Caressed'
 import ElTorito from './Instances/ElTorito'
 import Pampas from './Instances/Pampas'
 import GettingDark from './Instances/GettingDark'
@@ -47,10 +44,7 @@ import {
     OPENING_DOOR,
     DEFENDING,
     NOT_HUNGRY,
-    ASLEEP_COUCH,
-    LAUGHING,
-    SELFLESS_CONCERN,
-    CARESSED
+    ASLEEP_COUCH
 } from '../../../../../scene/instanceKeys/liz'
 
 import {
@@ -101,9 +95,6 @@ const INSTANCES_MAP = {
     [DEFENDING]: Defending,
     [NOT_HUNGRY]: NotHungry,
     [ASLEEP_COUCH]: AsleepCouch,
-    [LAUGHING]: Laughing,
-    [SELFLESS_CONCERN]: SelflessConcern,
-    [CARESSED]: Caressed,
     [EL_TORITO]: ElTorito,
     [PAMPAS]: Pampas,
     [GETTING_DARK]: GettingDark,

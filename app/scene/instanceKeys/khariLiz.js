@@ -1,20 +1,12 @@
 const
-    DOUBLE_ALBERT = 'doubleAlbert',
-    ARRIVED = 'arrived',
-    JUDGMENTAL = 'judgmental',
-    CONCERNED = 'concerned',
-    JOKING = 'joking',
-    PROTECTIVE = 'protective',
-    CARESSING = 'caressing',
-    CARESSING_REFLECTION = 'caressingReflection'
+    JOKING_LAUGHING = 'jokingLaughing',
+    PROTECTIVE_CONCERNED = 'protectiveConcerned',
+    CARESS = 'caress',
+    CARESS_REFLECTION = 'caressReflection'
 
 export {
-    DOUBLE_ALBERT,
-    ARRIVED,
-    JUDGMENTAL,
-    CONCERNED,
-    JOKING,
-    PROTECTIVE,
-    CARESSING,
-    CARESSING_REFLECTION
+    JOKING_LAUGHING,
+    PROTECTIVE_CONCERNED,
+    CARESS,
+    CARESS_REFLECTION
 }

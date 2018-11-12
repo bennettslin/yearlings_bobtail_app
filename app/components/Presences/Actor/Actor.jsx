@@ -33,6 +33,7 @@ import Howie from './Actors/Howie/Howie'
 import Tomer from './Actors/Tomer/Tomer'
 import Liz from './Actors/Liz/Liz'
 import Khari from './Actors/Khari/Khari'
+import KhariLiz from './Actors/KhariLiz/KhariLiz'
 import Miriam from './Actors/Miriam/Miriam'
 import Tristan from './Actors/Tristan/Tristan'
 import Nestor from './Actors/Nestor/Nestor'
@@ -43,7 +44,7 @@ import Stephanie from './Actors/Stephanie/Stephanie'
 import Wade from './Actors/Wade/Wade'
 import BennettReflection from './Actors/BennettReflection/BennettReflection'
 import LizReflection from './Actors/LizReflection/LizReflection'
-import KhariReflection from './Actors/KhariReflection/KhariReflection'
+import KhariLizReflection from './Actors/KhariLizReflection/KhariLizReflection'
 
 import {
     YOUNG_BENNETT,
@@ -77,6 +78,7 @@ import {
     TOMER,
     LIZ,
     KHARI,
+    KHARI_LIZ,
     MIRIAM,
     TRISTAN,
     NESTOR,
@@ -87,7 +89,7 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
-    KHARI_REFLECTION
+    KHARI_LIZ_REFLECTION
 } from '../../../scene/actorKeys'
 
 const ACTORS_MAP = {
@@ -122,6 +124,7 @@ const ACTORS_MAP = {
     [TOMER]: Tomer,
     [LIZ]: Liz,
     [KHARI]: Khari,
+    [KHARI_LIZ]: KhariLiz,
     [MIRIAM]: Miriam,
     [TRISTAN]: Tristan,
     [NESTOR]: Nestor,
@@ -132,7 +135,7 @@ const ACTORS_MAP = {
     [WADE]: Wade,
     [BENNETT_REFLECTION]: BennettReflection,
     [LIZ_REFLECTION]: LizReflection,
-    [KHARI_REFLECTION]: KhariReflection
+    [KHARI_LIZ_REFLECTION]: KhariLizReflection
 }
 
 const propTypes = {

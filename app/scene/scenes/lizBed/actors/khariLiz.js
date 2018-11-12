@@ -1,9 +1,9 @@
 import {
-    PROTECTIVE
-} from '../../../instanceKeys/khari'
+    CARESS
+} from '../../../instanceKeys/khariLiz'
 
 const ARRANGEMENTS_MAP = {
-    [PROTECTIVE]: {
+    [CARESS]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

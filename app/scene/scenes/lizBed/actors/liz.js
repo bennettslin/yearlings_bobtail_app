@@ -1,6 +1,5 @@
 import {
-    ASLEEP_REACHING,
-    CARESSED
+    ASLEEP_REACHING
 } from '../../../instanceKeys/liz'
 
 import {
@@ -35,14 +34,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [ASLEEP_REACHING]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
-        }
-    },
-    [CARESSED]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

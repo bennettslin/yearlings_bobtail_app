@@ -1,9 +1,9 @@
 import {
-    SELFLESS_CONCERN
-} from '../../../instanceKeys/liz'
+    PROTECTIVE_CONCERNED
+} from '../../../instanceKeys/khariLiz'
 
 const ARRANGEMENTS_MAP = {
-    [SELFLESS_CONCERN]: {
+    [PROTECTIVE_CONCERNED]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

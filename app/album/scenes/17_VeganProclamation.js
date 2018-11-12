@@ -26,16 +26,14 @@ import {
 
 import {
     BENNETT,
-    LIZ,
-    KHARI,
+    KHARI_LIZ,
     MIRIAM,
     TRISTAN,
     NESTOR,
     AMY,
     STEPHANIE,
     WADE,
-    LIZ_REFLECTION,
-    KHARI_REFLECTION
+    KHARI_LIZ_REFLECTION
 } from '../../scene/actorKeys'
 
 import {
@@ -47,16 +45,10 @@ import {
 } from '../../scene/instanceKeys/bennett'
 
 import {
-    PROTECTIVE,
-    CARESSING,
-    CARESSING_REFLECTION
-} from '../../scene/instanceKeys/khari'
-
-import {
-    SELFLESS_CONCERN,
-    CARESSED,
-    CARESSED_REFLECTION
-} from '../../scene/instanceKeys/liz'
+    PROTECTIVE_CONCERNED,
+    CARESS,
+    CARESS_REFLECTION
+} from '../../scene/instanceKeys/khariLiz'
 
 import { INTRODUCING } from '../../scene/instanceKeys/tristan'
 
@@ -129,19 +121,12 @@ module.exports = [
                     description: 'side, slumped over, despondent',
                     instance: CAMPUS_ASHAMED
                 },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'side angle, looking back, concerned',
-                        instance: SELFLESS_CONCERN
-                    }
-                },
-                [KHARI]: {
+                [KHARI_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'side, protective, judgmental',
-                    instance: PROTECTIVE
+                    instance: PROTECTIVE_CONCERNED
                 }
             },
             [BACKDROPS]: {
@@ -258,34 +243,20 @@ module.exports = [
                     description: 'side, on phone, hunched over, sobbing',
                     instance: BROKEN_HEARTED
                 },
-                [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'Lying in bed, on phone with Bennett',
-                        instance: CARESSED
-                    }
-                },
-                [LIZ_REFLECTION]: {
-                    reflection: {
-                        todo: true,
-                        workedHours: 3,
-                        description: 'reflection',
-                        instance: CARESSED_REFLECTION
-                    }
-                },
-                [KHARI]: {
+                [KHARI_LIZ]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'lying in bed, caressing Sita',
-                    instance: CARESSING
+                    instance: CARESS
                 },
-                [KHARI_REFLECTION]: {
+                [KHARI_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3,
+                        compound: 2,
                         description: 'reflection',
-                        instance: CARESSING_REFLECTION
+                        instance: CARESS_REFLECTION
                     }
                 }
             },

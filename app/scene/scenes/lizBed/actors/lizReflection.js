@@ -1,6 +1,5 @@
 import {
-    REACHING_REFLECTION,
-    CARESSED_REFLECTION
+    REACHING_REFLECTION
 } from '../../../instanceKeys/liz'
 
 import {
@@ -35,14 +34,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [REACHING_REFLECTION]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
-        }
-    },
-    [CARESSED_REFLECTION]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const SelflessConcern = ({
+const ProtectiveConcerned = ({
 
     className,
 
@@ -19,7 +19,7 @@ const SelflessConcern = ({
         <Svg
             className={cx(
                 className,
-                'SelflessConcern'
+                'ProtectiveConcerned'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const SelflessConcern = ({
                 {...other}
             >
                 {cx(
-                    'SelflessConcern'
+                    'ProtectiveConcerned'
                 )}
             </text>
         </Svg>
     )
 }
 
-SelflessConcern.propTypes = propTypes;
+ProtectiveConcerned.propTypes = propTypes;
 
-export default SelflessConcern
+export default ProtectiveConcerned

@@ -6,9 +6,9 @@ import DoubleAlbert from './Instances/DoubleAlbert'
 import Arrived from './Instances/Arrived'
 import Judgmental from './Instances/Judgmental'
 import Concerned from './Instances/Concerned'
-import Joking from './Instances/Joking'
-import Protective from './Instances/Protective'
-import Caressing from './Instances/Caressing'
+import Joking from '../KhariLiz/Instances/JokingLaughing'
+import Protective from '../KhariLiz/Instances/ProtectiveConcerned'
+import Caressing from '../KhariLiz/Instances/Caress'
 import Epilogue from './Instances/Epilogue'
 
 import {
@@ -16,9 +16,9 @@ import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED,
-    JOKING,
-    PROTECTIVE,
-    CARESSING
+    JOKING_LAUGHING,
+    PROTECTIVE_CONCERNED,
+    CARESS
 } from '../../../../../scene/instanceKeys/khari'
 
 import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
@@ -28,9 +28,9 @@ const INSTANCES_MAP = {
     [ARRIVED]: Arrived,
     [JUDGMENTAL]: Judgmental,
     [CONCERNED]: Concerned,
-    [JOKING]: Joking,
-    [PROTECTIVE]: Protective,
-    [CARESSING]: Caressing,
+    [JOKING_LAUGHING]: Joking,
+    [PROTECTIVE_CONCERNED]: Protective,
+    [CARESS]: Caressing,
     [EPILOGUE]: Epilogue
 }
 

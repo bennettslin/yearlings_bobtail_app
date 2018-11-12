@@ -2,36 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DoubleAlbert from './Instances/DoubleAlbert'
-import Arrived from './Instances/Arrived'
-import Judgmental from './Instances/Judgmental'
-import Concerned from './Instances/Concerned'
-import Joking from './Instances/Joking'
-import Protective from './Instances/Protective'
-import Caressing from './Instances/Caressing'
-import Epilogue from './Instances/Epilogue'
+import Joking from './Instances/JokingLaughing'
+import Protective from './Instances/ProtectiveConcerned'
+import Caressing from './Instances/Caress'
 
 import {
-    DOUBLE_ALBERT,
-    ARRIVED,
-    JUDGMENTAL,
-    CONCERNED,
-    JOKING,
-    PROTECTIVE,
-    CARESSING
-} from '../../../../../scene/instanceKeys/khari'
-
-import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
+    JOKING_LAUGHING,
+    PROTECTIVE_CONCERNED,
+    CARESS
+} from '../../../../../scene/instanceKeys/khariLiz'
 
 const INSTANCES_MAP = {
-    [DOUBLE_ALBERT]: DoubleAlbert,
-    [ARRIVED]: Arrived,
-    [JUDGMENTAL]: Judgmental,
-    [CONCERNED]: Concerned,
-    [JOKING]: Joking,
-    [PROTECTIVE]: Protective,
-    [CARESSING]: Caressing,
-    [EPILOGUE]: Epilogue
+    [JOKING_LAUGHING]: Joking,
+    [PROTECTIVE_CONCERNED]: Protective,
+    [CARESS]: Caressing
 }
 
 const propTypes = {

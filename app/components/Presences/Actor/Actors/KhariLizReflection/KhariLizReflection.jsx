@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import CaressingReflection from './Instances/CaressingReflection'
+import CaressReflection from './Instances/CaressReflection'
 
-import { CARESSING_REFLECTION } from '../../../../../scene/instanceKeys/khari'
+import { CARESS_REFLECTION } from '../../../../../scene/instanceKeys/khariLiz'
 
 const INSTANCES_MAP = {
-    [CARESSING_REFLECTION]: CaressingReflection
+    [CARESS_REFLECTION]: CaressReflection
 }
 
 const propTypes = {

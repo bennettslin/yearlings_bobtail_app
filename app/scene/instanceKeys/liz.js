@@ -10,11 +10,7 @@ const
     OPENING_DOOR = 'openingDoor',
     DEFENDING = 'defending',
     NOT_HUNGRY = 'notHungry',
-    ASLEEP_COUCH = 'asleepCouch',
-    LAUGHING = 'laughing',
-    SELFLESS_CONCERN = 'selflessConcern',
-    CARESSED = 'beingCaressed',
-    CARESSED_REFLECTION = 'caressedReflection'
+    ASLEEP_COUCH = 'asleepCouch'
 
 export {
     ASLEEP_REACHING,
@@ -28,9 +24,5 @@ export {
     OPENING_DOOR,
     DEFENDING,
     NOT_HUNGRY,
-    ASLEEP_COUCH,
-    LAUGHING,
-    SELFLESS_CONCERN,
-    CARESSED,
-    CARESSED_REFLECTION
+    ASLEEP_COUCH
 }

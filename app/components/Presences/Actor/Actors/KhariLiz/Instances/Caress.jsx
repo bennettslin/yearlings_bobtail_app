@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Protective = ({
+const Caress = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Protective = ({
         <Svg
             className={cx(
                 className,
-                'Protective'
+                'Caress'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Protective = ({
                 {...other}
             >
                 {cx(
-                    'Protective'
+                    'Caress'
                 )}
             </text>
         </Svg>
     )
 }
 
-Protective.propTypes = propTypes;
+Caress.propTypes = propTypes;
 
-export default Protective
+export default Caress
