@@ -1,10 +1,8 @@
 const
     PRINCIPAL = 'principal',
-    PUNCHING = 'punching',
-    INTRODUCING = 'introducing'
+    PUNCHING = 'punching'
 
 export {
     PRINCIPAL,
-    PUNCHING,
-    INTRODUCING
+    PUNCHING
 }

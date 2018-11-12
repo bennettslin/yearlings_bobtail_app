@@ -1,19 +1,16 @@
 import {
     BENNETT,
-    MIRIAM,
-    TRISTAN,
+    MIRIAM_TRISTAN,
     NESTOR
 } from '../../actorKeys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_MIRIAM from './actors/miriam'
-import ARRANGEMENTS_TRISTAN from './actors/tristan'
+import ARRANGEMENTS_MIRIAM_TRISTAN from './actors/miriamTristan'
 import ARRANGEMENTS_NESTOR from './actors/nestor'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: ARRANGEMENTS_BENNETT,
-    [MIRIAM]: ARRANGEMENTS_MIRIAM,
-    [TRISTAN]: ARRANGEMENTS_TRISTAN,
+    [MIRIAM_TRISTAN]: ARRANGEMENTS_MIRIAM_TRISTAN,
     [NESTOR]: ARRANGEMENTS_NESTOR
 }
 

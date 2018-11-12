@@ -25,7 +25,7 @@ import {
     BENNETT,
     ANA,
     LIZ,
-    MIRIAM,
+    MIRIAM_TRISTAN,
     TRISTAN,
     NESTOR
 } from '../../scene/actorKeys'
@@ -46,14 +46,13 @@ import {
     FREEZING_NAKED
 } from '../../scene/instanceKeys/liz'
 
+import { NOOGIE } from '../../scene/instanceKeys/miriamTristan'
 import { INJURED } from '../../scene/instanceKeys/nestor'
-
 import { PUNCHING } from '../../scene/instanceKeys/tristan'
 
 import {
     GREETING,
-    LEAVING_CRUMBLED,
-    NOOGIE
+    LEAVING_CRUMBLED
 } from '../../scene/instanceKeys/songs'
 
 import {
@@ -235,16 +234,11 @@ module.exports = [
                     description: 'side angle, sweaty, giddy',
                     instance: GREETING
                 },
-                [MIRIAM]: {
+                [MIRIAM_TRISTAN]: {
                     todo: true,
                     workedHours: 2.5,
+                    compound: 2,
                     description: 'side, greeting Bennett',
-                    instance: NOOGIE
-                },
-                [TRISTAN]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'front, playfully giving Miriam a noogie',
                     instance: NOOGIE
                 },
                 [ANA]: {

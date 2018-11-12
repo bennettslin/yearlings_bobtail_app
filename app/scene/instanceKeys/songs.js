@@ -46,7 +46,6 @@ const
     WAITING = 'waiting',
 
     // Garryowen.
-    NOOGIE = 'noogie',
     LEAVING_CRUMBLED = 'leavingCrumbled',
 
     // Golden Cord.
@@ -106,7 +105,6 @@ export {
     CARRYING,
     MINGLING,
     WAITING,
-    NOOGIE,
     LEAVING_CRUMBLED,
     YOUNG_CHILD,
     PAST,

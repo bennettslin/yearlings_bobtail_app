@@ -4,26 +4,18 @@ import cx from 'classnames'
 
 import Principal from './Instances/Principal'
 import Punching from './Instances/Punching'
-import Noogie from './Instances/Noogie'
-import Introducing from './Instances/Introducing'
 import Epilogue from './Instances/Epilogue'
 
 import {
     PRINCIPAL,
-    PUNCHING,
-    INTRODUCING
+    PUNCHING
 } from '../../../../../scene/instanceKeys/tristan'
 
-import {
-    NOOGIE,
-    EPILOGUE
-} from '../../../../../scene/instanceKeys/songs'
+import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [PRINCIPAL]: Principal,
     [PUNCHING]: Punching,
-    [NOOGIE]: Noogie,
-    [INTRODUCING]: Introducing,
     [EPILOGUE]: Epilogue
 }
 

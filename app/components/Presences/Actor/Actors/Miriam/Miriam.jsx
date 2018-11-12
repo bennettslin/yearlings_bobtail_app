@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Noogie from './Instances/Noogie'
 import InfantCurious from './Instances/InfantCurious'
 import InfantNursing from './Instances/InfantNursing'
 import Asleep from './Instances/Asleep'
@@ -12,9 +11,8 @@ import Cowgirl from './Instances/Cowgirl'
 import Blowjob from './Instances/Blowjob'
 import Tennis from './Instances/Tennis'
 import Reversing from './Instances/Reversing'
-import Greeting from './Instances/Greeting'
 import Gopi from './Instances/Gopi'
-import Epilogue from './Instances/Epilogue'
+import Epilogue from '../MiriamTristan/Instances/Greeting'
 
 import {
     INFANT_CURIOUS,
@@ -27,16 +25,13 @@ import {
 } from '../../../../../scene/instanceKeys/miriam'
 
 import {
-    NOOGIE,
     COWGIRL,
     BLOWJOB,
-    GREETING,
     GOPI,
     EPILOGUE
 } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
-    [NOOGIE]: Noogie,
     [INFANT_CURIOUS]: InfantCurious,
     [INFANT_NURSING]: InfantNursing,
     [ASLEEP]: Asleep,
@@ -46,7 +41,6 @@ const INSTANCES_MAP = {
     [BLOWJOB]: Blowjob,
     [TENNIS]: Tennis,
     [REVERSING]: Reversing,
-    [GREETING]: Greeting,
     [GOPI]: Gopi,
     [EPILOGUE]: Epilogue
 }

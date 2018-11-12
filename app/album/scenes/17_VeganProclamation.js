@@ -27,8 +27,7 @@ import {
 import {
     BENNETT,
     KHARI_LIZ,
-    MIRIAM,
-    TRISTAN,
+    MIRIAM_TRISTAN,
     NESTOR,
     AMY,
     STEPHANIE,
@@ -49,8 +48,6 @@ import {
     CARESS,
     CARESS_REFLECTION
 } from '../../scene/instanceKeys/khariLiz'
-
-import { INTRODUCING } from '../../scene/instanceKeys/tristan'
 
 import {
     GREETING,
@@ -161,17 +158,12 @@ module.exports = [
                     description: 'back, looking to side, annoyed',
                     instance: SHOW_ANNOYED
                 },
-                [MIRIAM]: {
+                [MIRIAM_TRISTAN]: {
                     todo: true,
                     workedHours: 2.5,
+                    compound: 2,
                     description: 'side, flirting',
                     instance: GREETING
-                },
-                [TRISTAN]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'front, introducing miriam',
-                    instance: INTRODUCING
                 },
                 [NESTOR]: {
                     todo: true,

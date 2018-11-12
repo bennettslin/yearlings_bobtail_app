@@ -1,12 +1,12 @@
 import {
-    INTRODUCING
-} from '../../../instanceKeys/tristan'
+    NOOGIE
+} from '../../../instanceKeys/miriamTristan'
 
 const ARRANGEMENTS_MAP = {
-    [INTRODUCING]: {
+    [NOOGIE]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 7,
             xWidth: 1,
             zHeight: 5
         }

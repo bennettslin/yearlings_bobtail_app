@@ -36,6 +36,7 @@ import Khari from './Actors/Khari/Khari'
 import KhariLiz from './Actors/KhariLiz/KhariLiz'
 import Miriam from './Actors/Miriam/Miriam'
 import MiriamStephanie from './Actors/MiriamStephanie/MiriamStephanie'
+import MiriamTristan from './Actors/MiriamTristan/MiriamTristan'
 import Tristan from './Actors/Tristan/Tristan'
 import Nestor from './Actors/Nestor/Nestor'
 import Amy from './Actors/Amy/Amy'
@@ -82,6 +83,7 @@ import {
     KHARI_LIZ,
     MIRIAM,
     MIRIAM_STEPHANIE,
+    MIRIAM_TRISTAN,
     TRISTAN,
     NESTOR,
     AMY,
@@ -129,6 +131,7 @@ const ACTORS_MAP = {
     [KHARI_LIZ]: KhariLiz,
     [MIRIAM]: Miriam,
     [MIRIAM_STEPHANIE]: MiriamStephanie,
+    [MIRIAM_TRISTAN]: MiriamTristan,
     [TRISTAN]: Tristan,
     [NESTOR]: Nestor,
     [AMY]: Amy,

@@ -1,12 +1,12 @@
 import {
-    NOOGIE
+    GREETING
 } from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
-    [NOOGIE]: {
+    [GREETING]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 7,
             xWidth: 1,
             zHeight: 5
         }
