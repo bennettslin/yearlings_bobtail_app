@@ -26,6 +26,7 @@ import Andrew from './Actors/Andrew/Andrew'
 import Catherine from './Actors/Catherine/Catherine'
 import Mara from './Actors/Mara/Mara'
 import Jacob from './Actors/Jacob/Jacob'
+import JacobMara from './Actors/JacobMara/JacobMara'
 import Ana from './Actors/Ana/Ana'
 import AnaHowie from './Actors/AnaHowie/AnaHowie'
 import Howie from './Actors/Howie/Howie'
@@ -69,6 +70,7 @@ import {
     CATHERINE,
     MARA,
     JACOB,
+    JACOB_MARA,
     ANA,
     ANA_HOWIE,
     HOWIE,
@@ -113,6 +115,7 @@ const ACTORS_MAP = {
     [CATHERINE]: Catherine,
     [MARA]: Mara,
     [JACOB]: Jacob,
+    [JACOB_MARA]: JacobMara,
     [ANA]: Ana,
     [ANA_HOWIE]: AnaHowie,
     [HOWIE]: Howie,

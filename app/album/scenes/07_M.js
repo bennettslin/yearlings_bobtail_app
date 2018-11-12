@@ -25,6 +25,7 @@ import {
     BENNETT,
     MARA,
     JACOB,
+    JACOB_MARA,
     ANA,
     HOWIE,
     TOMER,
@@ -275,16 +276,11 @@ module.exports = [
                     description: 'sitting, silently eating burger, uncomfortable',
                     instance: EATING
                 },
-                [JACOB]: {
+                [JACOB_MARA]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'sitting, eating burger, holding Mara\'s hand',
-                    instance: EATING
-                },
-                [MARA]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'sitting, chatting',
                     instance: EATING
                 },
                 [ANA]: {

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Flirting from './Instances/Flirting'
-import Eating from './Instances/Eating'
 import Carrying from './Instances/Carrying'
 import Waiting from './Instances/Waiting'
 import Gopi from './Instances/Gopi'
@@ -11,7 +10,6 @@ import Epilogue from './Instances/Epilogue'
 
 import {
     FLIRTING,
-    EATING,
     CARRYING,
     WAITING,
     GOPI,
@@ -20,7 +18,6 @@ import {
 
 const INSTANCES_MAP = {
     [FLIRTING]: Flirting,
-    [EATING]: Eating,
     [CARRYING]: Carrying,
     [WAITING]: Waiting,
     [GOPI]: Gopi,
