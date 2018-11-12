@@ -1,6 +1,6 @@
 import {
     EXASPERATED
-} from 'scene/instanceKeys/anita'
+} from '../../../instanceKeys/anita'
 
 const ARRANGEMENTS_MAP = {
     [EXASPERATED]: {

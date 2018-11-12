@@ -1,6 +1,6 @@
 import {
     SHANE_BUYING
-} from 'scene/instanceKeys/tomer'
+} from '../../../instanceKeys/tomer'
 
 const ARRANGEMENTS_MAP = {
     [SHANE_BUYING]: {

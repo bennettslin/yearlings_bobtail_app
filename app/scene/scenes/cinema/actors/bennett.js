@@ -2,7 +2,7 @@ import {
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 const ARRANGEMENTS_MAP = {
     [HOPELESSLY_CRUSHED]: {

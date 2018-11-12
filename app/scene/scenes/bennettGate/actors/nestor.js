@@ -1,6 +1,6 @@
 import {
     JOGGER
-} from 'scene/instanceKeys/nestor'
+} from '../../../instanceKeys/nestor'
 
 const ARRANGEMENTS_MAP = {
     [JOGGER]: {

@@ -1,4 +1,4 @@
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import { EPILOGUE } from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [EPILOGUE]: {

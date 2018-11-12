@@ -1,6 +1,6 @@
 import {
     GO_KARTS
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [GO_KARTS]: {

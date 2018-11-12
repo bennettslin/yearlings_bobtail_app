@@ -1,6 +1,6 @@
 import {
     FLAPPER
-} from 'scene/instanceKeys/stephanie'
+} from '../../../instanceKeys/stephanie'
 
 const ARRANGEMENTS_MAP = {
     [FLAPPER]: {

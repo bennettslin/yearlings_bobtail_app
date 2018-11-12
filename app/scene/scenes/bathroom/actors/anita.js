@@ -1,6 +1,6 @@
 import {
     CHEERING
-} from 'scene/instanceKeys/anita'
+} from '../../../instanceKeys/anita'
 
 const ARRANGEMENTS_MAP = {
     [CHEERING]: {

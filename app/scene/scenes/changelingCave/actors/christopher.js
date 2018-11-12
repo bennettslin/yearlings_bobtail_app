@@ -1,6 +1,6 @@
 import {
     REASSURING
-} from 'scene/instanceKeys/christopher'
+} from '../../../instanceKeys/christopher'
 
 const ARRANGEMENTS_MAP = {
     [REASSURING]: {

@@ -1,6 +1,6 @@
 import {
     PROTECTIVE
-} from 'scene/instanceKeys/khari'
+} from '../../../instanceKeys/khari'
 
 const ARRANGEMENTS_MAP = {
     [PROTECTIVE]: {

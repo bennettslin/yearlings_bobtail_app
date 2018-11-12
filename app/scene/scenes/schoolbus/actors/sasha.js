@@ -1,6 +1,6 @@
 import {
     CHARMED
-} from 'scene/instanceKeys/sasha'
+} from '../../../instanceKeys/sasha'
 
 const ARRANGEMENTS_MAP = {
     [CHARMED]: {

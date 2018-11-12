@@ -5,7 +5,7 @@ import {
     FEIGNING_SICK,
     ASLEEP,
     SHAKEN
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../../instanceKeys/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [ENRAGED]: {

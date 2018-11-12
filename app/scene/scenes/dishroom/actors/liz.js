@@ -1,6 +1,6 @@
 import {
     DISHROOM_LANCET
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [DISHROOM_LANCET]: {

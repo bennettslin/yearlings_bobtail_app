@@ -1,7 +1,7 @@
 import {
     ASLEEP,
     FENDING
-} from 'scene/instanceKeys/miriam'
+} from '../../../instanceKeys/miriam'
 
 const ARRANGEMENTS_MAP = {
     [ASLEEP]: {

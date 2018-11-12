@@ -1,6 +1,6 @@
 import {
     SNICKERING
-} from 'scene/instanceKeys/esther'
+} from '../../../instanceKeys/esther'
 
 const ARRANGEMENTS_MAP = {
     [SNICKERING]: {

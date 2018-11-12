@@ -1,6 +1,6 @@
 import {
     GESTURING
-} from 'scene/instanceKeys/brad'
+} from '../../../instanceKeys/brad'
 
 const ARRANGEMENTS_MAP = {
     [GESTURING]: {

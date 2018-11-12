@@ -1,6 +1,6 @@
 import {
     ALLEY
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 const ARRANGEMENTS_MAP = {
     [ALLEY]: {

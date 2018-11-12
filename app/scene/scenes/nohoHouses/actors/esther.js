@@ -1,6 +1,6 @@
 import {
     CURIOUS
-} from 'scene/instanceKeys/esther'
+} from '../../../instanceKeys/esther'
 
 const ARRANGEMENTS_MAP = {
     [CURIOUS]: {

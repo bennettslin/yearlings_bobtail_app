@@ -1,6 +1,6 @@
 import {
     FIGHTING
-} from 'scene/instanceKeys/willy'
+} from '../../../instanceKeys/willy'
 
 const ARRANGEMENTS_MAP = {
     [FIGHTING]: {

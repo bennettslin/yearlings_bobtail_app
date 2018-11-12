@@ -1,6 +1,6 @@
 import {
     TENNIS
-} from 'scene/instanceKeys/miriam'
+} from '../../../instanceKeys/miriam'
 
 const ARRANGEMENTS_MAP = {
     [TENNIS]: {

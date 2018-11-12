@@ -1,7 +1,7 @@
 import {
     SITA_HURT,
     SITA_SOBBING
-} from 'scene/instanceKeys/esther'
+} from '../../../instanceKeys/esther'
 
 const ARRANGEMENTS_MAP = {
     [SITA_HURT]: {

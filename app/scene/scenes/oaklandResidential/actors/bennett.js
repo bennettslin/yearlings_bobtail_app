@@ -1,6 +1,6 @@
 import {
     CORD_REAR
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 const ARRANGEMENTS_MAP = {
     [CORD_REAR]: {

@@ -1,6 +1,6 @@
 import {
     INJURED
-} from 'scene/instanceKeys/nestor'
+} from '../../../instanceKeys/nestor'
 
 const ARRANGEMENTS_MAP = {
     [INJURED]: {

@@ -1,6 +1,6 @@
 import {
     SELFLESS_CONCERN
-} from 'scene/instanceKeys/liz'
+} from '../../../instanceKeys/liz'
 
 const ARRANGEMENTS_MAP = {
     [SELFLESS_CONCERN]: {

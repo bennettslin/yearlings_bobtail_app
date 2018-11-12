@@ -1,10 +1,10 @@
 import {
     INFIRM
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 import {
     FINAL_DREAM
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [INFIRM]: {

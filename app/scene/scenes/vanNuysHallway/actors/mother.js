@@ -1,6 +1,6 @@
 import {
     ARGUING
-} from 'scene/instanceKeys/mother'
+} from '../../../instanceKeys/mother'
 
 const ARRANGEMENTS_MAP = {
     [ARGUING]: {

@@ -1,6 +1,6 @@
 import {
     INTRODUCING
-} from 'scene/instanceKeys/tristan'
+} from '../../../instanceKeys/tristan'
 
 const ARRANGEMENTS_MAP = {
     [INTRODUCING]: {

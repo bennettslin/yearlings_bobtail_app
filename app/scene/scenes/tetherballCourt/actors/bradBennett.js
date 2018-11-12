@@ -1,6 +1,6 @@
 import {
     TYING_TETHER
-} from 'scene/instanceKeys/bradBennett'
+} from '../../../instanceKeys/bradBennett'
 
 const ARRANGEMENTS_MAP = {
     [TYING_TETHER]: {

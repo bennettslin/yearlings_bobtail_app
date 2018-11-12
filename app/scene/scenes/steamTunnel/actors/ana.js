@@ -1,4 +1,4 @@
-import { STEAM_TUNNEL } from 'scene/instanceKeys/songs'
+import { STEAM_TUNNEL } from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [STEAM_TUNNEL]: {

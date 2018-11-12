@@ -1,6 +1,6 @@
 import {
     FUTURE
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [FUTURE]: {

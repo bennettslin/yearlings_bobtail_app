@@ -1,7 +1,7 @@
 import {
     GINGERBREAD_PRISON,
     RUMPLED_LINENS
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [GINGERBREAD_PRISON]: {

@@ -1,6 +1,6 @@
 import {
     MUSEUM
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [MUSEUM]: {

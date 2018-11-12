@@ -1,6 +1,6 @@
 import {
     NOODLING
-} from 'scene/instanceKeys/andrew'
+} from '../../../instanceKeys/andrew'
 
 const ARRANGEMENTS_MAP = {
     [NOODLING]: {

@@ -1,6 +1,6 @@
 import {
     ENCHANTED
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../../instanceKeys/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [ENCHANTED]: {

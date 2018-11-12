@@ -1,6 +1,6 @@
 import {
     DOUBLE_ALBERT
-} from 'scene/instanceKeys/khari'
+} from '../../../instanceKeys/khari'
 
 const ARRANGEMENTS_MAP = {
     [DOUBLE_ALBERT]: {

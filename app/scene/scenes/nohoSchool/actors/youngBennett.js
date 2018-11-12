@@ -1,6 +1,6 @@
 import {
     FLUSTERED
-} from 'scene/instanceKeys/youngBennett'
+} from '../../../instanceKeys/youngBennett'
 
 const ARRANGEMENTS_MAP = {
     [FLUSTERED]: {

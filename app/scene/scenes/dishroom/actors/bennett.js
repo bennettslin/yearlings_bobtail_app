@@ -1,10 +1,10 @@
 import {
     DISHROOM_READING
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 import {
     DISHROOM_LANCET
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [DISHROOM_READING]: {

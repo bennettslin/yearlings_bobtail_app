@@ -1,10 +1,10 @@
 import {
     DISTRACTED
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 import {
     GREETING
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [DISTRACTED]: {

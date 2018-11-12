@@ -1,13 +1,13 @@
 import {
     ASLEEP_REACHING,
     CARESSED
-} from 'scene/instanceKeys/liz'
+} from '../../../instanceKeys/liz'
 
 import {
     HARD_ON,
     MISSIONARY,
     AFTERGLOW
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [HARD_ON]: {

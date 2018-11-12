@@ -2,11 +2,11 @@ import {
     DRUNK_CELIBATE,
     WAKENED_FEARFUL,
     SEEKING_PROTECTION
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 import {
     EATING
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [EATING]: {

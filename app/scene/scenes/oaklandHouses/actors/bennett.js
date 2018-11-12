@@ -1,7 +1,7 @@
 import {
     DROPPING_MEATS,
     CORD_SIDE
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 const ARRANGEMENTS_MAP = {
     [DROPPING_MEATS]: {

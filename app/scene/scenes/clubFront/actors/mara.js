@@ -1,6 +1,6 @@
 import {
     FLIRTING
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [FLIRTING]: {

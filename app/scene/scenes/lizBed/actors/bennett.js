@@ -1,13 +1,13 @@
 import {
     REMOVING_SHOES,
     BROKEN_HEARTED
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 import {
     HARD_ON,
     MISSIONARY,
     AFTERGLOW
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [HARD_ON]: {

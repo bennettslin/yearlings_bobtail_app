@@ -1,7 +1,7 @@
 import {
     ACCUSATORY,
     REELING
-} from 'scene/instanceKeys/father'
+} from '../../../instanceKeys/father'
 
 const ARRANGEMENTS_MAP = {
     [ACCUSATORY]: {

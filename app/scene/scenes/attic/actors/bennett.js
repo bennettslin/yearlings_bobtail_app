@@ -1,4 +1,4 @@
-import { ATTIC } from 'scene/instanceKeys/songs'
+import { ATTIC } from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [ATTIC]: {

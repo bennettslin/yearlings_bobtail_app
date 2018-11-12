@@ -1,6 +1,6 @@
 import {
     CHEEK_UNVEILED
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [CHEEK_UNVEILED]: {

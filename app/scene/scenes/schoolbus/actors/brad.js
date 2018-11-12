@@ -1,6 +1,6 @@
 import {
     JEWISH_BOY
-} from 'scene/instanceKeys/brad'
+} from '../../../instanceKeys/brad'
 
 const ARRANGEMENTS_MAP = {
     [JEWISH_BOY]: {

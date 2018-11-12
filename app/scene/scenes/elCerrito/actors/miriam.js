@@ -1,12 +1,12 @@
 import {
     PERFUMING,
     REVERSING
-} from 'scene/instanceKeys/miriam'
+} from '../../../instanceKeys/miriam'
 
 import {
     COWGIRL,
     BLOWJOB
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [PERFUMING]: {

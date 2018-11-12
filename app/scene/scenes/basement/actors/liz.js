@@ -1,6 +1,6 @@
 import {
     FREEZING_NAKED
-} from 'scene/instanceKeys/liz'
+} from '../../../instanceKeys/liz'
 
 const ARRANGEMENTS_MAP = {
     [FREEZING_NAKED]: {

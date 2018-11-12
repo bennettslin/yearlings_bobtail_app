@@ -1,6 +1,6 @@
 import {
     STATION_WAGON
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [STATION_WAGON]: {

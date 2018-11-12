@@ -1,10 +1,10 @@
 import {
     WAITING_ROOM_ASLEEP
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 import {
     CHEEK_UNVEILED
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [WAITING_ROOM_ASLEEP]: {

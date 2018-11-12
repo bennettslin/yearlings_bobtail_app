@@ -1,6 +1,6 @@
 import {
     CHUCKLING
-} from 'scene/instanceKeys/ana'
+} from '../../../instanceKeys/ana'
 
 const ARRANGEMENTS_MAP = {
     [CHUCKLING]: {

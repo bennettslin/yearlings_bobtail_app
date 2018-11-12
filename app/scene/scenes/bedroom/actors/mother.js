@@ -1,6 +1,6 @@
 import {
     COMFORTING
-} from 'scene/instanceKeys/mother'
+} from '../../../instanceKeys/mother'
 
 const ARRANGEMENTS_MAP = {
     [COMFORTING]: {

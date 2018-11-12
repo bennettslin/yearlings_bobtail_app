@@ -1,6 +1,6 @@
 import {
     SHORE
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../../instanceKeys/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [SHORE]: {

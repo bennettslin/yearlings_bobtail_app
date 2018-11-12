@@ -1,6 +1,6 @@
 import {
     STOIC
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../../instanceKeys/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [STOIC]: {

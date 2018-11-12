@@ -1,6 +1,6 @@
 import {
     CARESSING_REFLECTION
-} from 'scene/instanceKeys/khari'
+} from '../../../instanceKeys/khari'
 
 const ARRANGEMENTS_MAP = {
     [CARESSING_REFLECTION]: {

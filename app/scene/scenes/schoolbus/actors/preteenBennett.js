@@ -1,6 +1,6 @@
 import {
     PANICKED
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../../instanceKeys/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [PANICKED]: {

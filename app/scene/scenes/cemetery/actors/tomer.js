@@ -1,4 +1,4 @@
-import { CEMETERY } from 'scene/instanceKeys/songs'
+import { CEMETERY } from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [CEMETERY]: {

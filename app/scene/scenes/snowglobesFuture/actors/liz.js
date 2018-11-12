@@ -1,6 +1,6 @@
 import {
     LAUGHING
-} from 'scene/instanceKeys/liz'
+} from '../../../instanceKeys/liz'
 
 const ARRANGEMENTS_MAP = {
     [LAUGHING]: {

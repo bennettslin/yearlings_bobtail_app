@@ -1,6 +1,6 @@
 import {
     BREAKUP_DEJECTED
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 const ARRANGEMENTS_MAP = {
     [BREAKUP_DEJECTED]: {

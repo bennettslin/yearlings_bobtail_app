@@ -1,6 +1,6 @@
 import {
     SQUEEZING
-} from 'scene/instanceKeys/amyStephanie'
+} from '../../../instanceKeys/amyStephanie'
 
 const ARRANGEMENTS_MAP = {
     [SQUEEZING]: {

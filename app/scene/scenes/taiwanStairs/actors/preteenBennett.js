@@ -1,6 +1,6 @@
 import {
     STAIRS
-} from 'scene/instanceKeys/preteenBennett'
+} from '../../../instanceKeys/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [STAIRS]: {

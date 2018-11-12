@@ -1,6 +1,6 @@
 import {
     DRYING_TEARS
-} from 'scene/instanceKeys/bennettStephanie'
+} from '../../../instanceKeys/bennettStephanie'
 
 const ARRANGEMENTS_MAP = {
     [DRYING_TEARS]: {

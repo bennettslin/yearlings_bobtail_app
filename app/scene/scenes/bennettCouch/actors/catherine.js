@@ -1,6 +1,6 @@
 import {
     QUIPPING
-} from 'scene/instanceKeys/catherine'
+} from '../../../instanceKeys/catherine'
 
 const ARRANGEMENTS_MAP = {
     [QUIPPING]: {

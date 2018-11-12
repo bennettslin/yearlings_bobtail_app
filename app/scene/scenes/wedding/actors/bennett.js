@@ -1,6 +1,6 @@
 import {
     GETTING_DARK
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [GETTING_DARK]: {

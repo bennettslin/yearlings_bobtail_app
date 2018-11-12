@@ -1,6 +1,6 @@
 import {
     PUNCHING
-} from 'scene/instanceKeys/tristan'
+} from '../../../instanceKeys/tristan'
 
 const ARRANGEMENTS_MAP = {
     [PUNCHING]: {

@@ -1,6 +1,6 @@
 import {
     MINGLING
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [MINGLING]: {

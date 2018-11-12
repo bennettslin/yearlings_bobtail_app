@@ -8,11 +8,11 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from 'scene/instanceKeys/liz'
+} from '../../../instanceKeys/liz'
 
 import {
     LEAVING_CRUMBLED
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [BRUSHED_OFF]: {

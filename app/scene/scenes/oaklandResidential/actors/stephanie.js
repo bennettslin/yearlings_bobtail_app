@@ -1,6 +1,6 @@
 import {
     BENNETT_DEFIANT
-} from 'scene/instanceKeys/stephanie'
+} from '../../../instanceKeys/stephanie'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_DEFIANT]: {

@@ -1,11 +1,11 @@
 import {
     BRUSHING_OFF,
     AWKWARD_CONSOLATION
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 import {
     LEAVING_CRUMBLED
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [BRUSHING_OFF]: {

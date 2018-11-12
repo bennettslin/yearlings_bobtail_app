@@ -1,6 +1,6 @@
 import {
     STARING
-} from 'scene/instanceKeys/christopher'
+} from '../../../instanceKeys/christopher'
 
 const ARRANGEMENTS_MAP = {
     [STARING]: {

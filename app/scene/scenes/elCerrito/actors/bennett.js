@@ -1,12 +1,12 @@
 import {
     REMOVING_PANTS,
     DISPOSING_CONDOM
-} from 'scene/instanceKeys/bennett'
+} from '../../../instanceKeys/bennett'
 
 import {
     COWGIRL,
     BLOWJOB
-} from 'scene/instanceKeys/songs'
+} from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [REMOVING_PANTS]: {

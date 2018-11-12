@@ -2,7 +2,7 @@ import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
-} from 'scene/instanceKeys/khari'
+} from '../../../instanceKeys/khari'
 
 const ARRANGEMENTS_MAP = {
     [ARRIVED]: {
