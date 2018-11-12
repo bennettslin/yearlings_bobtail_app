@@ -1,14 +1,10 @@
 const
     STOOPING = 'stooping',
     COMFORTING = 'comforting',
-    ARGUING = 'arguing',
-    CONSOLING = 'consoling',
-    SHIELDING = 'shielding'
+    ARGUING = 'arguing'
 
 export {
     STOOPING,
     COMFORTING,
-    ARGUING,
-    CONSOLING,
-    SHIELDING
+    ARGUING
 }

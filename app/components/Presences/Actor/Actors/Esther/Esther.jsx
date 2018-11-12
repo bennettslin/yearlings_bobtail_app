@@ -5,15 +5,11 @@ import cx from 'classnames'
 import Curious from './Instances/Curious'
 import Snickering from './Instances/Snickering'
 import YoungChild from './Instances/YoungChild'
-import SitaHurt from './Instances/SitaHurt'
-import SitaSobbing from './Instances/SitaSobbing'
 import Epilogue from './Instances/Epilogue'
 
 import {
     CURIOUS,
-    SNICKERING,
-    SITA_HURT,
-    SITA_SOBBING
+    SNICKERING
 } from '../../../../../scene/instanceKeys/esther'
 
 import {
@@ -25,8 +21,6 @@ const INSTANCES_MAP = {
     [CURIOUS]: Curious,
     [SNICKERING]: Snickering,
     [YOUNG_CHILD]: YoungChild,
-    [SITA_HURT]: SitaHurt,
-    [SITA_SOBBING]: SitaSobbing,
     [EPILOGUE]: Epilogue
 }
 

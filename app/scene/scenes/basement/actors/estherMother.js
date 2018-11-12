@@ -1,10 +1,10 @@
 import {
-    SITA_HURT,
-    SITA_SOBBING
-} from '../../../instanceKeys/esther'
+    HURT_CONSOLING,
+    SOBBING_SHIELDING
+} from '../../../instanceKeys/estherMother'
 
 const ARRANGEMENTS_MAP = {
-    [SITA_HURT]: {
+    [HURT_CONSOLING]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 5
         }
     },
-    [SITA_SOBBING]: {
+    [SOBBING_SHIELDING]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

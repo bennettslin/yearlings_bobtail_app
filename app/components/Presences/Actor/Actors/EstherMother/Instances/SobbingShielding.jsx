@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Shielding = ({
+const SobbingShielding = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Shielding = ({
         <Svg
             className={cx(
                 className,
-                'Shielding'
+                'SobbingShielding'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Shielding = ({
                 {...other}
             >
                 {cx(
-                    'Shielding'
+                    'SobbingShielding'
                 )}
             </text>
         </Svg>
     )
 }
 
-Shielding.propTypes = propTypes;
+SobbingShielding.propTypes = propTypes;
 
-export default Shielding
+export default SobbingShielding

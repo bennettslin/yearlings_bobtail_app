@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const SitaSobbing = ({
+const HurtConsoling = ({
 
     className,
 
@@ -19,7 +19,7 @@ const SitaSobbing = ({
         <Svg
             className={cx(
                 className,
-                'SitaSobbing'
+                'HurtConsoling'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const SitaSobbing = ({
                 {...other}
             >
                 {cx(
-                    'SitaSobbing'
+                    'HurtConsoling'
                 )}
             </text>
         </Svg>
     )
 }
 
-SitaSobbing.propTypes = propTypes;
+HurtConsoling.propTypes = propTypes;
 
-export default SitaSobbing
+export default HurtConsoling

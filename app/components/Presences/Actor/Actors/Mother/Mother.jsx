@@ -5,18 +5,14 @@ import cx from 'classnames'
 import Stooping from './Instances/Stooping'
 import Comforting from './Instances/Comforting'
 import Arguing from './Instances/Arguing'
-import Consoling from './Instances/Consoling'
 import Present from './Instances/Present'
 import Future from './Instances/Future'
-import Shielding from './Instances/Shielding'
 import Epilogue from './Instances/Epilogue'
 
 import {
     STOOPING,
     COMFORTING,
-    ARGUING,
-    CONSOLING,
-    SHIELDING
+    ARGUING
 } from '../../../../../scene/instanceKeys/mother'
 
 import {
@@ -29,10 +25,8 @@ const INSTANCES_MAP = {
     [STOOPING]: Stooping,
     [COMFORTING]: Comforting,
     [ARGUING]: Arguing,
-    [CONSOLING]: Consoling,
     [PRESENT]: Present,
     [FUTURE]: Future,
-    [SHIELDING]: Shielding,
     [EPILOGUE]: Epilogue
 }
 

@@ -1,12 +1,8 @@
 const
-    CURIOUS = 'curious',
-    SNICKERING = 'snickering',
-    SITA_HURT = 'sitaHurt',
-    SITA_SOBBING = 'sitaSobbing'
+    HURT_CONSOLING = 'hurtConsoling',
+    SOBBING_SHIELDING = 'sobbingShielding'
 
 export {
-    CURIOUS,
-    SNICKERING,
-    SITA_HURT,
-    SITA_SOBBING
+    HURT_CONSOLING,
+    SOBBING_SHIELDING
 }

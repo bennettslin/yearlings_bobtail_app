@@ -28,7 +28,7 @@ import {
 import {
     PRETEEN_BENNETT,
     BENNETT,
-    ESTHER,
+    ESTHER_MOTHER,
     MOTHER,
     FATHER,
     SASHA,
@@ -44,9 +44,9 @@ import {
 } from '../../scene/instanceKeys/bennett'
 
 import {
-    SITA_HURT,
-    SITA_SOBBING
-} from '../../scene/instanceKeys/esther'
+    HURT_CONSOLING,
+    SOBBING_SHIELDING
+} from '../../scene/instanceKeys/estherMother'
 
 import {
     ACCUSATORY,
@@ -65,11 +65,6 @@ import {
     MISCHIEVOUS,
     FENDING
 } from '../../scene/instanceKeys/miriam'
-
-import {
-    CONSOLING,
-    SHIELDING
-} from '../../scene/instanceKeys/mother'
 
 import { HUMILIATED } from '../../scene/instanceKeys/preteenBennett'
 
@@ -172,24 +167,19 @@ module.exports = [
         description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Chinese garb. His father is stern and disapproving, while his mother consoles a weeping Sita.`,
         presences: {
             [ACTORS]: {
-                [MOTHER]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'front, consoling Sita',
-                    instance: CONSOLING
-                },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side, accusatory',
                     instance: ACCUSATORY
                 },
-                [ESTHER]: {
+                [ESTHER_MOTHER]: {
                     youngSita: {
                         todo: true,
                         workedHours: 3,
+                        compound: 2,
                         description: 'side angle, sobbing',
-                        instance: SITA_HURT
+                        instance: HURT_CONSOLING
                     }
                 }
             },
@@ -405,24 +395,19 @@ module.exports = [
                     description: 'side sitting, vindictive, magical gesture',
                     instance: FENDING
                 },
-                [MOTHER]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'side angle, protecting Sita',
-                    instance: SHIELDING
-                },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, knocked over',
                     instance: REELING
                 },
-                [ESTHER]: {
+                [ESTHER_MOTHER]: {
                     youngSita: {
                         todo: true,
                         workedHours: 3,
+                        compound: 2,
                         description: 'side angle, sobbing uncontrollably',
-                        instance: SITA_SOBBING
+                        instance: SOBBING_SHIELDING
                     }
                 }
             },

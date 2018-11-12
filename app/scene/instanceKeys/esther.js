@@ -1,12 +1,8 @@
 const
     CURIOUS = 'curious',
-    SNICKERING = 'snickering',
-    SITA_HURT = 'sitaHurt',
-    SITA_SOBBING = 'sitaSobbing'
+    SNICKERING = 'snickering'
 
 export {
     CURIOUS,
-    SNICKERING,
-    SITA_HURT,
-    SITA_SOBBING
+    SNICKERING
 }
