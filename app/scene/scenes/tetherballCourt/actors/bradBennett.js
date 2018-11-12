@@ -1,9 +1,9 @@
 import {
-    TYING
-} from 'scene/instanceKeys/brad'
+    TYING_TETHER
+} from 'scene/instanceKeys/bradBennett'
 
 const ARRANGEMENTS_MAP = {
-    [TYING]: {
+    [TYING_TETHER]: {
         yIndex: 3,
         arrangement: {
             xFloat: 8,

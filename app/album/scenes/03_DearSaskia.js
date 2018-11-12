@@ -25,19 +25,22 @@ import {
     PRETEEN_BENNETT,
     SASHA,
     BRAD,
-    ANDREW
+    ANDREW,
+    BRAD_BENNETT
 } from '../../scene/actorKeys'
 
 import { FEIGNING_FEAR } from '../../scene/instanceKeys/andrew'
 
 import {
-    JEWISH_BOY,
-    TYING
+    JEWISH_BOY
 } from '../../scene/instanceKeys/brad'
 
 import {
-    PANICKED,
-    TETHERED
+    TYING_TETHER
+} from '../../scene/instanceKeys/bradBennett'
+
+import {
+    PANICKED
 } from '../../scene/instanceKeys/preteenBennett'
 
 import {
@@ -210,11 +213,12 @@ module.exports = [
         description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
         presences: {
             [ACTORS]: {
-                [PRETEEN_BENNETT]: {
+                [BRAD_BENNETT]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'tied up, greeting Sasha with nervous laughter',
-                    instance: TETHERED
+                    instance: TYING_TETHER
                 },
                 [SASHA]: {
                     todo: true,
@@ -227,12 +231,6 @@ module.exports = [
                     workedHours: 3,
                     description: 'laughing, feigning fear of Sasha',
                     instance: FEIGNING_FEAR
-                },
-                [BRAD]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'laughing, tying up Bennett',
-                    instance: TYING
                 }
             },
             [BACKDROPS]: {

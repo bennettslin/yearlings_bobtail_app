@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Tying = ({
+const TyingTether = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Tying = ({
         <Svg
             className={cx(
                 className,
-                'Tying'
+                'TyingTether'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Tying = ({
                 {...other}
             >
                 {cx(
-                    'Tying'
+                    'TyingTether'
                 )}
             </text>
         </Svg>
     )
 }
 
-Tying.propTypes = propTypes;
+TyingTether.propTypes = propTypes;
 
-export default Tying
+export default TyingTether

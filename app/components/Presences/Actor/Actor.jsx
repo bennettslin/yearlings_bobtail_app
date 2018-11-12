@@ -18,6 +18,7 @@ import Father from './Actors/Father/Father'
 import Christopher from './Actors/Christopher/Christopher'
 import Sasha from './Actors/Sasha/Sasha'
 import Brad from './Actors/Brad/Brad'
+import BradBennett from './Actors/BradBennett/BradBennett'
 import Andrew from './Actors/Andrew/Andrew'
 import Catherine from './Actors/Catherine/Catherine'
 import Mara from './Actors/Mara/Mara'
@@ -57,6 +58,7 @@ import {
     CHRISTOPHER,
     SASHA,
     BRAD,
+    BRAD_BENNETT,
     ANDREW,
     CATHERINE,
     MARA,
@@ -97,6 +99,7 @@ const ACTORS_MAP = {
     [CHRISTOPHER]: Christopher,
     [SASHA]: Sasha,
     [BRAD]: Brad,
+    [BRAD_BENNETT]: BradBennett,
     [ANDREW]: Andrew,
     [CATHERINE]: Catherine,
     [MARA]: Mara,

@@ -7,7 +7,6 @@ import Enraged from './Instances/Enraged'
 import Fearful from './Instances/Fearful'
 import Enchanted from './Instances/Enchanted'
 import Panicked from './Instances/Panicked'
-import Tethered from './Instances/Tethered'
 import Mat from './Instances/Mat'
 import Stairs from './Instances/Stairs'
 import Gate from './Instances/Gate'
@@ -32,7 +31,6 @@ import {
     FEARFUL,
     ENCHANTED,
     PANICKED,
-    TETHERED,
     MAT,
     STAIRS,
     GATE,
@@ -59,7 +57,6 @@ const INSTANCES_MAP = {
     [FEARFUL]: Fearful,
     [ENCHANTED]: Enchanted,
     [PANICKED]: Panicked,
-    [TETHERED]: Tethered,
     [MAT]: Mat,
     [STAIRS]: Stairs,
     [GATE]: Gate,

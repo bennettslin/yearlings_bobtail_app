@@ -1,19 +1,16 @@
 import {
-    PRETEEN_BENNETT,
+    BRAD_BENNETT,
     SASHA,
-    BRAD,
     ANDREW
 } from '../../actorKeys'
 
-import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
+import ARRANGEMENTS_BRAD_BENNETT from './actors/bradBennett'
 import ARRANGEMENTS_SASHA from './actors/sasha'
-import ARRANGEMENTS_BRAD from './actors/brad'
 import ARRANGEMENTS_ANDREW from './actors/andrew'
 
 const ARRANGEMENTS_ACTORS = {
-    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
+    [BRAD_BENNETT]: ARRANGEMENTS_BRAD_BENNETT,
     [SASHA]: ARRANGEMENTS_SASHA,
-    [BRAD]: ARRANGEMENTS_BRAD,
     [ANDREW]: ARRANGEMENTS_ANDREW
 }
 
