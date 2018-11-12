@@ -1,12 +1,8 @@
 const
     INDIGNANT = 'indignant',
-    MERMAID = 'mermaid',
-    POPULAR_GIRL = 'popularGirl',
-    COMFORTING = 'comforting'
+    POPULAR_GIRL = 'popularGirl'
 
 export {
     INDIGNANT,
-    MERMAID,
-    POPULAR_GIRL,
-    COMFORTING
+    POPULAR_GIRL
 }

@@ -1,14 +1,8 @@
 const
-    CHARMED = 'charmed',
-    INDIGNANT = 'indignant',
     MERMAID = 'mermaid',
-    POPULAR_GIRL = 'popularGirl',
-    COMFORTING = 'comforting'
+    COMFORTING_HUMILIATED = 'comfortingHumiliated'
 
 export {
-    CHARMED,
-    INDIGNANT,
     MERMAID,
-    POPULAR_GIRL,
-    COMFORTING
+    COMFORTING_HUMILIATED
 }

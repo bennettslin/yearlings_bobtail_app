@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Epilogue = ({
+const ComfortingHumiliated = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Epilogue = ({
         <Svg
             className={cx(
                 className,
-                'Epilogue'
+                'ComfortingHumiliated'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Epilogue = ({
                 {...other}
             >
                 {cx(
-                    'Epilogue'
+                    'ComfortingHumiliated'
                 )}
             </text>
         </Svg>
     )
 }
 
-Epilogue.propTypes = propTypes;
+ComfortingHumiliated.propTypes = propTypes;
 
-export default Epilogue
+export default ComfortingHumiliated

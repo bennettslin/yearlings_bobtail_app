@@ -8,14 +8,13 @@ import {
 } from '../../scene/sky'
 
 import {
-    PRETEEN_BENNETT,
     BENNETTS_CHRISTOPHER_LIZ,
     ANITA_BENNETT,
     ESTHER,
     WILLY,
     MOTHER,
     FATHER,
-    SASHA,
+    SASHA_BENNETT,
     BRAD,
     ANDREW,
     CATHERINE,
@@ -78,13 +77,6 @@ module.exports = [
                     description: 'standing',
                     instance: EPILOGUE
                 },
-                [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    realHeight: `4'2"`,
-                    description: 'standing',
-                    instance: EPILOGUE
-                },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3,
@@ -106,9 +98,10 @@ module.exports = [
                     description: 'standing',
                     instance: EPILOGUE
                 },
-                [SASHA]: {
+                [SASHA_BENNETT]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     realHeight: `4'1"`,
                     description: 'standing',
                     instance: EPILOGUE

@@ -1,5 +1,4 @@
 import {
-    PRETEEN_BENNETT,
     BENNETTS_CHRISTOPHER_LIZ,
     OLD_BENNETT,
     ANITA_BENNETT,
@@ -7,7 +6,7 @@ import {
     WILLY,
     MOTHER,
     FATHER,
-    SASHA,
+    SASHA_BENNETT,
     BRAD,
     ANDREW,
     CATHERINE,
@@ -25,7 +24,6 @@ import {
     WADE
 } from '../../actorKeys'
 
-import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 import ARRANGEMENTS_BENNETTS_CHRISTOPHER_LIZ from './actors/bennettsChristopherLiz'
 import ARRANGEMENTS_OLD_BENNETT from './actors/oldBennett'
 import ARRANGEMENTS_ANITA_BENNETT from './actors/anitaBennett'
@@ -33,7 +31,7 @@ import ARRANGEMENTS_ESTHER from './actors/esther'
 import ARRANGEMENTS_WILLY from './actors/willy'
 import ARRANGEMENTS_MOTHER from './actors/mother'
 import ARRANGEMENTS_FATHER from './actors/father'
-import ARRANGEMENTS_SASHA from './actors/sasha'
+import ARRANGEMENTS_SASHA_BENNETT from './actors/sashaBennett'
 import ARRANGEMENTS_BRAD from './actors/brad'
 import ARRANGEMENTS_ANDREW from './actors/andrew'
 import ARRANGEMENTS_CATHERINE from './actors/catherine'
@@ -51,7 +49,6 @@ import ARRANGEMENTS_STEPHANIE from './actors/stephanie'
 import ARRANGEMENTS_WADE from './actors/wade'
 
 const ARRANGEMENTS_ACTORS = {
-    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
     [BENNETTS_CHRISTOPHER_LIZ]: ARRANGEMENTS_BENNETTS_CHRISTOPHER_LIZ,
     [OLD_BENNETT]: ARRANGEMENTS_OLD_BENNETT,
     [ANITA_BENNETT]: ARRANGEMENTS_ANITA_BENNETT,
@@ -59,7 +56,7 @@ const ARRANGEMENTS_ACTORS = {
     [WILLY]: ARRANGEMENTS_WILLY,
     [MOTHER]: ARRANGEMENTS_MOTHER,
     [FATHER]: ARRANGEMENTS_FATHER,
-    [SASHA]: ARRANGEMENTS_SASHA,
+    [SASHA_BENNETT]: ARRANGEMENTS_SASHA_BENNETT,
     [BRAD]: ARRANGEMENTS_BRAD,
     [ANDREW]: ARRANGEMENTS_ANDREW,
     [CATHERINE]: ARRANGEMENTS_CATHERINE,

@@ -12,7 +12,6 @@ import Gate from './Instances/Gate'
 import Rickshaw from './Instances/Rickshaw'
 import Shore from './Instances/Shore'
 import Buoy from './Instances/Buoy'
-import Sinking from './Instances/Sinking'
 import OceanFloor from './Instances/OceanFloor'
 import FeigningSick from './Instances/FeigningSick'
 import Asleep from './Instances/Asleep'
@@ -20,8 +19,6 @@ import Shaken from './Instances/Shaken'
 import Stoic from './Instances/Stoic'
 import Wistful from './Instances/Wistful'
 import Sheepish from './Instances/Sheepish'
-import Humiliated from './Instances/Humiliated'
-import Epilogue from './Instances/Epilogue'
 
 import {
     CAUTIOUS,
@@ -34,18 +31,14 @@ import {
     RICKSHAW,
     SHORE,
     BUOY,
-    SINKING,
     OCEAN_FLOOR,
     FEIGNING_SICK,
     ASLEEP,
     SHAKEN,
     STOIC,
     WISTFUL,
-    SHEEPISH,
-    HUMILIATED
+    SHEEPISH
 } from '../../../../../scene/instanceKeys/preteenBennett'
-
-import { EPILOGUE } from '../../../../../scene/instanceKeys/songs'
 
 const INSTANCES_MAP = {
     [CAUTIOUS]: Cautious,
@@ -58,16 +51,13 @@ const INSTANCES_MAP = {
     [RICKSHAW]: Rickshaw,
     [SHORE]: Shore,
     [BUOY]: Buoy,
-    [SINKING]: Sinking,
     [OCEAN_FLOOR]: OceanFloor,
     [FEIGNING_SICK]: FeigningSick,
     [ASLEEP]: Asleep,
     [SHAKEN]: Shaken,
     [STOIC]: Stoic,
     [WISTFUL]: Wistful,
-    [SHEEPISH]: Sheepish,
-    [HUMILIATED]: Humiliated,
-    [EPILOGUE]: Epilogue
+    [SHEEPISH]: Sheepish
 }
 
 const propTypes = {

@@ -9,15 +9,13 @@ const
     RICKSHAW = 'rickshaw',
     SHORE = 'shore',
     BUOY = 'buoy',
-    SINKING = 'sinking',
     OCEAN_FLOOR = 'oceanFloor',
     FEIGNING_SICK = 'feigningSick',
     ASLEEP = 'asleep',
     SHAKEN = 'shaken',
     STOIC = 'stoic',
     WISTFUL = 'wistful',
-    SHEEPISH = 'sheepish',
-    HUMILIATED = 'humiliated'
+    SHEEPISH = 'sheepish'
 
 export {
     CAUTIOUS,
@@ -30,13 +28,11 @@ export {
     RICKSHAW,
     SHORE,
     BUOY,
-    SINKING,
     OCEAN_FLOOR,
     FEIGNING_SICK,
     ASLEEP,
     SHAKEN,
     STOIC,
     WISTFUL,
-    SHEEPISH,
-    HUMILIATED
+    SHEEPISH
 }

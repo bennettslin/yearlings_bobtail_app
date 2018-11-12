@@ -1,9 +1,9 @@
 import {
-    SINKING
-} from '../../../instanceKeys/preteenBennett'
+    MERMAID
+} from '../../../instanceKeys/sashaBennett'
 
 const ARRANGEMENTS_MAP = {
-    [SINKING]: {
+    [MERMAID]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

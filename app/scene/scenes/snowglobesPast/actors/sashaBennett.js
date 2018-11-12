@@ -1,12 +1,12 @@
 import {
-    COMFORTING
-} from '../../../instanceKeys/sasha'
+    COMFORTING_HUMILIATED
+} from '../../../instanceKeys/sashaBennett'
 
 const ARRANGEMENTS_MAP = {
-    [COMFORTING]: {
+    [COMFORTING_HUMILIATED]: {
         yIndex: 2,
         arrangement: {
-            xFloat: 7,
+            xFloat: 8,
             xWidth: 1,
             zHeight: 4
         }

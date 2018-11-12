@@ -28,7 +28,7 @@ import {
 
 import {
     PRETEEN_BENNETT,
-    SASHA
+    SASHA_BENNETT
 } from '../../scene/actorKeys'
 
 import {
@@ -38,11 +38,10 @@ import {
     RICKSHAW,
     SHORE,
     BUOY,
-    SINKING,
     OCEAN_FLOOR
 } from '../../scene/instanceKeys/preteenBennett'
 
-import { MERMAID } from '../../scene/instanceKeys/sasha'
+import { MERMAID } from '../../scene/instanceKeys/sashaBennett'
 
 import {
     TAIWAN_STAIRS_BACKDROP,
@@ -279,15 +278,10 @@ module.exports = [
         description: `Sasha is a mermaid, rescuing Bennett. She points down to Bennett on the ocean floor.`,
         presences: {
             [ACTORS]: {
-                [PRETEEN_BENNETT]: {
+                [SASHA_BENNETT]: {
                     todo: true,
                     workedHours: 3,
-                    description: 'hugging self',
-                    instance: SINKING
-                },
-                [SASHA]: {
-                    todo: true,
-                    workedHours: 3,
+                    compound: 2,
                     description: 'mermaid',
                     instance: MERMAID
                 }

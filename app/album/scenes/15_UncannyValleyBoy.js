@@ -26,12 +26,11 @@ import {
 } from '../../scene/sky'
 
 import {
-    PRETEEN_BENNETT,
     BENNETT,
     ESTHER_MOTHER,
     MOTHER,
     FATHER,
-    SASHA,
+    SASHA_BENNETT,
     LIZ,
     KHARI_LIZ,
     MIRIAM_BENNETT,
@@ -61,8 +60,7 @@ import {
 } from '../../scene/instanceKeys/miriamBennett'
 
 import { MISCHIEVOUS_BANJO } from '../../scene/instanceKeys/miriamStephanie'
-import { HUMILIATED } from '../../scene/instanceKeys/preteenBennett'
-import { COMFORTING } from '../../scene/instanceKeys/sasha'
+import { COMFORTING_HUMILIATED } from '../../scene/instanceKeys/sashaBennett'
 
 import { BENNETT_RECORDING } from '../../scene/instanceKeys/stephanie'
 
@@ -200,17 +198,12 @@ module.exports = [
                     description: 'side angle, gesturing to scene below',
                     instance: PAST
                 },
-                [PRETEEN_BENNETT]: {
+                [SASHA_BENNETT]: {
                     todo: true,
                     workedHours: 3,
+                    compound: 2,
                     description: 'sitting, hurt, lashing out in anger',
-                    instance: HUMILIATED
-                },
-                [SASHA]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'side angle, consoling, cautious',
-                    instance: COMFORTING
+                    instance: COMFORTING_HUMILIATED
                 }
             },
             [FIXTURES]: {
