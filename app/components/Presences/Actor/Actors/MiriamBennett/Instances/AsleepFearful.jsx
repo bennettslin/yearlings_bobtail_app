@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Fending = ({
+const AsleepFearful = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Fending = ({
         <Svg
             className={cx(
                 className,
-                'Fending'
+                'AsleepFearful'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Fending = ({
                 {...other}
             >
                 {cx(
-                    'Fending'
+                    'AsleepFearful'
                 )}
             </text>
         </Svg>
     )
 }
 
-Fending.propTypes = propTypes;
+AsleepFearful.propTypes = propTypes;
 
-export default Fending
+export default AsleepFearful

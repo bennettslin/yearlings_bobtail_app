@@ -2,56 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Noogie from './Instances/Noogie'
-import InfantCurious from './Instances/InfantCurious'
-import InfantNursing from './Instances/InfantNursing'
-import Asleep from './Instances/Asleep'
-import Mischievous from './Instances/Mischievous'
-import Fending from './Instances/Fending'
-import Perfuming from './Instances/Perfuming'
+import AsleepFearful from './Instances/AsleepFearful'
+import FendingOff from './Instances/FendingOff'
 import Cowgirl from './Instances/Cowgirl'
 import Blowjob from './Instances/Blowjob'
-import Tennis from './Instances/Tennis'
-import Reversing from './Instances/Reversing'
-import Greeting from './Instances/Greeting'
-import Gopi from './Instances/Gopi'
-import Epilogue from './Instances/Epilogue'
 
 import {
-    INFANT_CURIOUS,
-    INFANT_NURSING,
-    ASLEEP,
-    MISCHIEVOUS_BANJO,
-    FENDING,
-    PERFUMING,
-    TENNIS,
-    REVERSING
-} from '../../../../../scene/instanceKeys/miriam'
-
-import {
-    NOOGIE,
+    ASLEEP_FEARFUL,
+    FENDING_OFF,
     COWGIRL,
-    BLOWJOB,
-    GREETING,
-    GOPI,
-    EPILOGUE
-} from '../../../../../scene/instanceKeys/songs'
+    BLOWJOB
+} from '../../../../../scene/instanceKeys/miriamBennett'
 
 const INSTANCES_MAP = {
-    [NOOGIE]: Noogie,
-    [INFANT_CURIOUS]: InfantCurious,
-    [INFANT_NURSING]: InfantNursing,
-    [ASLEEP]: Asleep,
-    [MISCHIEVOUS_BANJO]: Mischievous,
-    [FENDING]: Fending,
-    [PERFUMING]: Perfuming,
+    [ASLEEP_FEARFUL]: AsleepFearful,
+    [FENDING_OFF]: FendingOff,
     [COWGIRL]: Cowgirl,
-    [BLOWJOB]: Blowjob,
-    [TENNIS]: Tennis,
-    [REVERSING]: Reversing,
-    [GREETING]: Greeting,
-    [GOPI]: Gopi,
-    [EPILOGUE]: Epilogue
+    [BLOWJOB]: Blowjob
 }
 
 const propTypes = {

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Blowjob = ({
+const FendingOff = ({
 
     className,
 
@@ -19,7 +19,7 @@ const Blowjob = ({
         <Svg
             className={cx(
                 className,
-                'Blowjob'
+                'FendingOff'
             )}
         >
             <rect
@@ -35,13 +35,13 @@ const Blowjob = ({
                 {...other}
             >
                 {cx(
-                    'Blowjob'
+                    'FendingOff'
                 )}
             </text>
         </Svg>
     )
 }
 
-Blowjob.propTypes = propTypes;
+FendingOff.propTypes = propTypes;
 
-export default Blowjob
+export default FendingOff

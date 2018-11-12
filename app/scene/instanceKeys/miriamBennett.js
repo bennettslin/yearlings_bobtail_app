@@ -1,18 +1,12 @@
 const
-    INFANT_CURIOUS = 'infantCurious',
-    INFANT_NURSING = 'infantNursing',
-    ASLEEP = 'asleep',
-    FENDING = 'fending',
-    PERFUMING = 'perfuming',
-    TENNIS = 'tennis',
-    REVERSING = 'reversing'
+    ASLEEP_FEARFUL = 'asleepFearful',
+    FENDING_OFF = 'fendingOff',
+    COWGIRL = 'cowgirl',
+    BLOWJOB = 'blowjob'
 
 export {
-    INFANT_CURIOUS,
-    INFANT_NURSING,
-    ASLEEP,
-    FENDING,
-    PERFUMING,
-    TENNIS,
-    REVERSING
+    ASLEEP_FEARFUL,
+    FENDING_OFF,
+    COWGIRL,
+    BLOWJOB
 }

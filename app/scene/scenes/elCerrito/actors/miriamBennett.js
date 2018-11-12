@@ -1,10 +1,10 @@
 import {
-    PERFUMING,
-    REVERSING
-} from '../../../instanceKeys/miriam'
+    COWGIRL,
+    BLOWJOB
+} from '../../../instanceKeys/miriamBennett'
 
 const ARRANGEMENTS_MAP = {
-    [PERFUMING]: {
+    [COWGIRL]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 5
         }
     },
-    [REVERSING]: {
+    [BLOWJOB]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

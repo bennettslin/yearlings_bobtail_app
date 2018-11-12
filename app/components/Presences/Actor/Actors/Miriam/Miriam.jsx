@@ -4,11 +4,7 @@ import cx from 'classnames'
 
 import InfantCurious from './Instances/InfantCurious'
 import InfantNursing from './Instances/InfantNursing'
-import Asleep from './Instances/Asleep'
-import Fending from './Instances/Fending'
 import Perfuming from './Instances/Perfuming'
-import Cowgirl from './Instances/Cowgirl'
-import Blowjob from './Instances/Blowjob'
 import Tennis from './Instances/Tennis'
 import Reversing from './Instances/Reversing'
 import Gopi from './Instances/Gopi'
@@ -17,16 +13,12 @@ import Epilogue from '../MiriamTristan/Instances/Greeting'
 import {
     INFANT_CURIOUS,
     INFANT_NURSING,
-    ASLEEP,
-    FENDING,
     PERFUMING,
     TENNIS,
     REVERSING
 } from '../../../../../scene/instanceKeys/miriam'
 
 import {
-    COWGIRL,
-    BLOWJOB,
     GOPI,
     EPILOGUE
 } from '../../../../../scene/instanceKeys/songs'
@@ -34,11 +26,7 @@ import {
 const INSTANCES_MAP = {
     [INFANT_CURIOUS]: InfantCurious,
     [INFANT_NURSING]: InfantNursing,
-    [ASLEEP]: Asleep,
-    [FENDING]: Fending,
     [PERFUMING]: Perfuming,
-    [COWGIRL]: Cowgirl,
-    [BLOWJOB]: Blowjob,
     [TENNIS]: Tennis,
     [REVERSING]: Reversing,
     [GOPI]: Gopi,

@@ -24,7 +24,8 @@ import {
 
 import {
     BENNETT,
-    MIRIAM
+    MIRIAM,
+    MIRIAM_BENNETT
 } from '../../scene/actorKeys'
 
 import {
@@ -42,7 +43,7 @@ import {
 import {
     COWGIRL,
     BLOWJOB
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/instanceKeys/miriamBennett'
 
 import {
     GOLDEN_GATE_BACKDROP
@@ -127,15 +128,10 @@ module.exports = [
         description: `Bennett and Miriam are having sex in a car overlooking a cliff. Miriam is on top.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'front angle, impotent, apologetic',
-                    instance: COWGIRL
-                },
-                [MIRIAM]: {
+                [MIRIAM_BENNETT]: {
                     todo: true,
                     workedHours: 2.5,
+                    compound: 2,
                     description: 'back angle, eyes closed, trying to get off',
                     instance: COWGIRL
                 }
@@ -169,15 +165,10 @@ module.exports = [
         description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. Their child is a pinhead.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'front angle, trying to get off',
-                    instance: BLOWJOB
-                },
-                [MIRIAM]: {
+                [MIRIAM_BENNETT]: {
                     todo: true,
                     workedHours: 2.5,
+                    compound: 2,
                     description: 'back angle, giving blowjob',
                     instance: BLOWJOB
                 }

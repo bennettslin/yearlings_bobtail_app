@@ -1,10 +1,10 @@
 import {
-    ASLEEP,
-    FENDING
-} from '../../../instanceKeys/miriam'
+    ASLEEP_FEARFUL,
+    FENDING_OFF
+} from '../../../instanceKeys/miriamBennett'
 
 const ARRANGEMENTS_MAP = {
-    [ASLEEP]: {
+    [ASLEEP_FEARFUL]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 5
         }
     },
-    [FENDING]: {
+    [FENDING_OFF]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

@@ -3,29 +3,8 @@ import {
     DISPOSING_CONDOM
 } from '../../../instanceKeys/bennett'
 
-import {
-    COWGIRL,
-    BLOWJOB
-} from '../../../instanceKeys/songs'
-
 const ARRANGEMENTS_MAP = {
     [REMOVING_PANTS]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
-        }
-    },
-    [COWGIRL]: {
-        yIndex: 5,
-        arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
-        }
-    },
-    [BLOWJOB]: {
         yIndex: 5,
         arrangement: {
             xFloat: 5.5,

@@ -49,14 +49,10 @@ import LeavingCrumbled from './Instances/LeavingCrumbled'
 import CordSide from './Instances/CordSide'
 import AwkwardConsolation from './Instances/AwkwardConsolation'
 import CordRear from './Instances/CordRear'
-import WakenedFearful from './Instances/WakenedFearful'
 import Past from './Instances/Past'
 import Present from './Instances/Present'
 import Future from './Instances/Future'
-import SeekingProtection from './Instances/SeekingProtection'
 import RemovingPants from './Instances/RemovingPants'
-import Cowgirl from './Instances/Cowgirl'
-import Blowjob from './Instances/Blowjob'
 import Infirm from './Instances/Infirm'
 import DisposingCondom from './Instances/DisposingCondom'
 import CampusAshamed from './Instances/CampusAshamed'
@@ -94,8 +90,6 @@ import {
     CORD_SIDE,
     AWKWARD_CONSOLATION,
     CORD_REAR,
-    WAKENED_FEARFUL,
-    SEEKING_PROTECTION,
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM,
@@ -134,8 +128,6 @@ import {
     PAST,
     PRESENT,
     FUTURE,
-    COWGIRL,
-    BLOWJOB,
     EL_TORITO,
     PAMPAS,
     GETTING_DARK,
@@ -191,14 +183,10 @@ const INSTANCES_MAP = {
     [CORD_SIDE]: CordSide,
     [AWKWARD_CONSOLATION]: AwkwardConsolation,
     [CORD_REAR]: CordRear,
-    [WAKENED_FEARFUL]: WakenedFearful,
     [PAST]: Past,
     [PRESENT]: Present,
     [FUTURE]: Future,
-    [SEEKING_PROTECTION]: SeekingProtection,
     [REMOVING_PANTS]: RemovingPants,
-    [COWGIRL]: Cowgirl,
-    [BLOWJOB]: Blowjob,
     [INFIRM]: Infirm,
     [DISPOSING_CONDOM]: DisposingCondom,
     [CAMPUS_ASHAMED]: CampusAshamed,

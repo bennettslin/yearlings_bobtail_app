@@ -34,15 +34,10 @@ import {
     SASHA,
     LIZ,
     KHARI_LIZ,
-    MIRIAM,
+    MIRIAM_BENNETT,
     MIRIAM_STEPHANIE,
     STEPHANIE
 } from '../../scene/actorKeys'
-
-import {
-    WAKENED_FEARFUL,
-    SEEKING_PROTECTION
-} from '../../scene/instanceKeys/bennett'
 
 import {
     HURT_CONSOLING,
@@ -61,9 +56,9 @@ import {
 } from '../../scene/instanceKeys/liz'
 
 import {
-    ASLEEP,
-    FENDING
-} from '../../scene/instanceKeys/miriam'
+    ASLEEP_FEARFUL,
+    FENDING_OFF
+} from '../../scene/instanceKeys/miriamBennett'
 
 import { MISCHIEVOUS_BANJO } from '../../scene/instanceKeys/miriamStephanie'
 import { HUMILIATED } from '../../scene/instanceKeys/preteenBennett'
@@ -125,17 +120,12 @@ module.exports = [
         description: `Bennett is sleeping in bed with Miriam.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'lying sitting up, arm around Miriam, scared, guilty',
-                    instance: WAKENED_FEARFUL
-                },
-                [MIRIAM]: {
+                [MIRIAM_BENNETT]: {
                     todo: true,
                     workedHours: 2.5,
+                    compound: 2,
                     description: 'side, asleep',
-                    instance: ASLEEP
+                    instance: ASLEEP_FEARFUL
                 }
             },
             [CUTOUTS]: {
@@ -365,17 +355,12 @@ module.exports = [
         description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is casting an imaginary spell to release him from their grasp. His father flinches, while his mother shields Sita from the view.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
-                    todo: true,
-                    workedHours: 3,
-                    description: 'side, seeking protection',
-                    instance: SEEKING_PROTECTION
-                },
-                [MIRIAM]: {
+                [MIRIAM_BENNETT]: {
                     todo: true,
                     workedHours: 2.5,
+                    compound: 2,
                     description: 'side sitting, vindictive, magical gesture',
-                    instance: FENDING
+                    instance: FENDING_OFF
                 },
                 [FATHER]: {
                     todo: true,

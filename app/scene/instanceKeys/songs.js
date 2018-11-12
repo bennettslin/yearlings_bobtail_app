@@ -56,10 +56,6 @@ const
     PRESENT = 'present',
     FUTURE = 'future',
 
-    // Cremated.
-    COWGIRL = 'cowgirl',
-    BLOWJOB = 'blowjob',
-
     // Vegan.
     PROTESTER = 'protester',
 
@@ -110,8 +106,6 @@ export {
     PAST,
     PRESENT,
     FUTURE,
-    COWGIRL,
-    BLOWJOB,
     PROTESTER,
     EL_TORITO,
     PAMPAS,
