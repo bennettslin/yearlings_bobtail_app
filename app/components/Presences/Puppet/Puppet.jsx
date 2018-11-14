@@ -3,20 +3,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import PuppetBennettBegin from './Puppets/PuppetBennettBegin'
-import PuppetAnitaBegin from './Puppets/PuppetAnitaBegin'
-import PuppetMotherBegin from './Puppets/PuppetMotherBegin'
-import PuppetFatherBegin from './Puppets/PuppetFatherBegin'
+import PuppetFamilyBegin from './Puppets/PuppetFamilyBegin'
 import PuppetBennettMiddle from './Puppets/PuppetBennettMiddle'
-import PuppetAnitaMiddle from './Puppets/PuppetAnitaMiddle'
-import PuppetMotherMiddle from './Puppets/PuppetMotherMiddle'
-import PuppetFatherMiddle from './Puppets/PuppetFatherMiddle'
+import PuppetFamilyMiddle from './Puppets/PuppetFamilyMiddle'
 import PuppetBennettEnd from './Puppets/PuppetBennettEnd'
-import PuppetAnitaEnd from './Puppets/PuppetAnitaEnd'
-import PuppetMotherEnd from './Puppets/PuppetMotherEnd'
-import PuppetFatherEnd from './Puppets/PuppetFatherEnd'
-import Pchelka from './Puppets/Pchelka'
-import Mushka from './Puppets/Mushka'
-import Rocket from './Puppets/Rocket'
+import PuppetFamilyEnd from './Puppets/PuppetFamilyEnd'
+import PchelkaMushkaRocket from './Puppets/PchelkaMushkaRocket'
 import Earth from './Puppets/Earth'
 import SpaceColony from './Puppets/SpaceColony'
 import OpalLap from './Puppets/OpalLap'
@@ -30,25 +22,16 @@ import GhostOdinCampus from './Puppets/GhostOdinCampus'
 import GhostOdinClub from './Puppets/GhostOdinClub'
 import GhostOdinAlley from './Puppets/GhostOdinAlley'
 import GhostOdinDemonstration from './Puppets/GhostOdinDemonstration'
-import PuppetKhari from './Puppets/PuppetKhari'
-import PuppetLiz from './Puppets/PuppetLiz'
+import PuppetKhariLiz from './Puppets/PuppetKhariLiz'
 
 import {
     PUPPET_BENNETT_BEGIN,
-    PUPPET_ANITA_BEGIN,
-    PUPPET_MOTHER_BEGIN,
-    PUPPET_FATHER_BEGIN,
+    PUPPET_FAMILY_BEGIN,
     PUPPET_BENNETT_MIDDLE,
-    PUPPET_ANITA_MIDDLE,
-    PUPPET_MOTHER_MIDDLE,
-    PUPPET_FATHER_MIDDLE,
+    PUPPET_FAMILY_MIDDLE,
     PUPPET_BENNETT_END,
-    PUPPET_ANITA_END,
-    PUPPET_MOTHER_END,
-    PUPPET_FATHER_END,
-    PCHELKA,
-    MUSHKA,
-    ROCKET,
+    PUPPET_FAMILY_END,
+    PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY,
     OPAL_LAP,
@@ -62,26 +45,17 @@ import {
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION,
-    PUPPET_KHARI,
-    PUPPET_LIZ
+    PUPPET_KHARI_LIZ
 } from 'scene/puppetKeys'
 
 const PUPPETS_MAP = {
     [PUPPET_BENNETT_BEGIN]: PuppetBennettBegin,
-    [PUPPET_ANITA_BEGIN]: PuppetAnitaBegin,
-    [PUPPET_MOTHER_BEGIN]: PuppetMotherBegin,
-    [PUPPET_FATHER_BEGIN]: PuppetFatherBegin,
+    [PUPPET_FAMILY_BEGIN]: PuppetFamilyBegin,
     [PUPPET_BENNETT_MIDDLE]: PuppetBennettMiddle,
-    [PUPPET_ANITA_MIDDLE]: PuppetAnitaMiddle,
-    [PUPPET_MOTHER_MIDDLE]: PuppetMotherMiddle,
-    [PUPPET_FATHER_MIDDLE]: PuppetFatherMiddle,
+    [PUPPET_FAMILY_MIDDLE]: PuppetFamilyMiddle,
     [PUPPET_BENNETT_END]: PuppetBennettEnd,
-    [PUPPET_ANITA_END]: PuppetAnitaEnd,
-    [PUPPET_MOTHER_END]: PuppetMotherEnd,
-    [PUPPET_FATHER_END]: PuppetFatherEnd,
-    [PCHELKA]: Pchelka,
-    [MUSHKA]: Mushka,
-    [ROCKET]: Rocket,
+    [PUPPET_FAMILY_END]: PuppetFamilyEnd,
+    [PCHELKA_MUSHKA_ROCKET]: PchelkaMushkaRocket,
     [EARTH]: Earth,
     [SPACE_COLONY]: SpaceColony,
     [OPAL_LAP]: OpalLap,
@@ -95,8 +69,7 @@ const PUPPETS_MAP = {
     [GHOST_ODIN_CLUB]: GhostOdinClub,
     [GHOST_ODIN_ALLEY]: GhostOdinAlley,
     [GHOST_ODIN_DEMONSTRATION]: GhostOdinDemonstration,
-    [PUPPET_KHARI]: PuppetKhari,
-    [PUPPET_LIZ]: PuppetLiz
+    [PUPPET_KHARI_LIZ]: PuppetKhariLiz
 }
 
 const propTypes = {

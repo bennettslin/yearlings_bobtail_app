@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const PuppetAnitaEnd = ({
+const PuppetFamilyBegin = ({
 
     className,
 
@@ -18,7 +18,7 @@ const PuppetAnitaEnd = ({
     return (
         <Svg
             className={cx(
-                'PuppetAnitaEnd',
+                'PuppetFamilyBegin',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const PuppetAnitaEnd = ({
                 {...other}
             >
                 {cx(
-                    'PuppetAnitaEnd'
+                    'PuppetFamilyBegin'
                 )}
             </text>
         </Svg>
     )
 }
 
-PuppetAnitaEnd.propTypes = propTypes;
+PuppetFamilyBegin.propTypes = propTypes;
 
-export default PuppetAnitaEnd
+export default PuppetFamilyBegin

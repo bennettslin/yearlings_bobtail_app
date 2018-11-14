@@ -88,8 +88,7 @@ import {
 } from '../../scene/panelKeys'
 
 import {
-    PUPPET_KHARI,
-    PUPPET_LIZ
+    PUPPET_KHARI_LIZ
 } from '../../scene/puppetKeys'
 
 module.exports = [
@@ -200,8 +199,7 @@ module.exports = [
                 [WEDDING_PLATFORM]: true
             },
             [PUPPETS]: {
-                [PUPPET_KHARI]: true,
-                [PUPPET_LIZ]: true
+                [PUPPET_KHARI_LIZ]: true
             }
         },
         cubes: WEDDING_KEY,

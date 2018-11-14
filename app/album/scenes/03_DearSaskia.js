@@ -75,17 +75,11 @@ import {
 
 import {
     PUPPET_BENNETT_BEGIN,
-    PUPPET_ANITA_BEGIN,
-    PUPPET_MOTHER_BEGIN,
-    PUPPET_FATHER_BEGIN,
+    PUPPET_FAMILY_BEGIN,
     PUPPET_BENNETT_MIDDLE,
-    PUPPET_ANITA_MIDDLE,
-    PUPPET_MOTHER_MIDDLE,
-    PUPPET_FATHER_MIDDLE,
+    PUPPET_FAMILY_MIDDLE,
     PUPPET_BENNETT_END,
-    PUPPET_ANITA_END,
-    PUPPET_MOTHER_END,
-    PUPPET_FATHER_END
+    PUPPET_FAMILY_END
 } from '../../scene/puppetKeys'
 
 module.exports = [
@@ -105,9 +99,7 @@ module.exports = [
             },
             [PUPPETS]: {
                 [PUPPET_BENNETT_BEGIN]: true,
-                [PUPPET_ANITA_BEGIN]: true,
-                [PUPPET_MOTHER_BEGIN]: true,
-                [PUPPET_FATHER_BEGIN]: true
+                [PUPPET_FAMILY_BEGIN]: true
             }
         },
         cubes: PUPPET_SHOW_KEY,
@@ -135,9 +127,7 @@ module.exports = [
             },
             [PUPPETS]: {
                 [PUPPET_BENNETT_MIDDLE]: true,
-                [PUPPET_ANITA_MIDDLE]: true,
-                [PUPPET_MOTHER_MIDDLE]: true,
-                [PUPPET_FATHER_MIDDLE]: true
+                [PUPPET_FAMILY_MIDDLE]: true
             }
         },
         cubes: PUPPET_SHOW_KEY,
@@ -249,9 +239,7 @@ module.exports = [
             },
             [PUPPETS]: {
                 [PUPPET_BENNETT_END]: true,
-                [PUPPET_ANITA_END]: true,
-                [PUPPET_MOTHER_END]: true,
-                [PUPPET_FATHER_END]: true
+                [PUPPET_FAMILY_END]: true
             }
         },
         cubes: PUPPET_SHOW_KEY,

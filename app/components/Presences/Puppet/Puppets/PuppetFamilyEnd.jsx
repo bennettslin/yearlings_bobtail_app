@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const PuppetKhari = ({
+const PuppetFamilyEnd = ({
 
     className,
 
@@ -18,7 +18,7 @@ const PuppetKhari = ({
     return (
         <Svg
             className={cx(
-                'PuppetKhari',
+                'PuppetFamilyEnd',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const PuppetKhari = ({
                 {...other}
             >
                 {cx(
-                    'PuppetKhari'
+                    'PuppetFamilyEnd'
                 )}
             </text>
         </Svg>
     )
 }
 
-PuppetKhari.propTypes = propTypes;
+PuppetFamilyEnd.propTypes = propTypes;
 
-export default PuppetKhari
+export default PuppetFamilyEnd

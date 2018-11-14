@@ -212,6 +212,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: 'puppetKhariLiz',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: 'taiwanStairsBackdrop',
         workedHours: 2,
         neededHours: 3

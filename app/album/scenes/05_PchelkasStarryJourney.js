@@ -121,9 +121,7 @@ import {
 } from '../../scene/panelKeys'
 
 import {
-    PCHELKA,
-    MUSHKA,
-    ROCKET,
+    PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY
 } from '../../scene/puppetKeys'
@@ -265,9 +263,7 @@ module.exports = [
                 [CAPTAIN_BED_DRAWERS]: true
             },
             [PUPPETS]: {
-                [PCHELKA]: true,
-                [MUSHKA]: true,
-                [ROCKET]: true
+                [PCHELKA_MUSHKA_ROCKET]: true
             }
         },
         cubes: BEDROOM_DOGS_KEY,

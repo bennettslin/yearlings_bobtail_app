@@ -58,15 +58,5 @@ module.exports = [
         taskName: 'puppetFatherEnd',
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: 'puppetKhari',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'puppetLiz',
-        workedHours: 0,
-        neededHours: 2
     }
 ]

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.any
 }
 
-const Pchelka = ({
+const PchelkaMushkaRocket = ({
 
     className,
 
@@ -18,7 +18,7 @@ const Pchelka = ({
     return (
         <Svg
             className={cx(
-                'Pchelka',
+                'PchelkaMushkaRocket',
                 className
             )}
         >
@@ -35,13 +35,13 @@ const Pchelka = ({
                 {...other}
             >
                 {cx(
-                    'Pchelka'
+                    'PchelkaMushkaRocket'
                 )}
             </text>
         </Svg>
     )
 }
 
-Pchelka.propTypes = propTypes;
+PchelkaMushkaRocket.propTypes = propTypes;
 
-export default Pchelka
+export default PchelkaMushkaRocket

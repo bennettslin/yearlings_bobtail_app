@@ -1,19 +1,10 @@
 import {
-    PUPPET_KHARI,
-    PUPPET_LIZ
+    PUPPET_KHARI_LIZ
 } from '../../../puppetKeys'
 
 const ARRANGEMENTS_MAP = {
-    [PUPPET_KHARI]: {
+    [PUPPET_KHARI_LIZ]: {
         yIndex: 1,
-        arrangement: {
-            xFloat: 1,
-            xWidth: 0.5,
-            zHeight: 1
-        }
-    },
-    [PUPPET_LIZ]: {
-        yIndex: 2,
         arrangement: {
             xFloat: 1,
             xWidth: 0.5,

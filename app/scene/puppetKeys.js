@@ -2,36 +2,22 @@ const
     // TODO
     PUPPET_BENNETT_BEGIN = 'puppetBennettBegin',
     // TODO
-    PUPPET_ANITA_BEGIN = 'puppetAnitaBegin',
-    // TODO
-    PUPPET_MOTHER_BEGIN = 'puppetMotherBegin',
-    // TODO
-    PUPPET_FATHER_BEGIN = 'puppetFatherBegin',
+    PUPPET_FAMILY_BEGIN = 'puppetFamilyBegin',
     // TODO
     PUPPET_BENNETT_MIDDLE = 'puppetBennettMiddle',
     // TODO
-    PUPPET_ANITA_MIDDLE = 'puppetAnitaMiddle',
-    // TODO
-    PUPPET_MOTHER_MIDDLE = 'puppetMotherMiddle',
-    // TODO
-    PUPPET_FATHER_MIDDLE = 'puppetFatherMiddle',
+    PUPPET_FAMILY_MIDDLE = 'puppetFamilyMiddle',
     // TODO
     PUPPET_BENNETT_END = 'puppetBennettEnd',
     // TODO
-    PUPPET_ANITA_END = 'puppetAnitaEnd',
-    // TODO
-    PUPPET_MOTHER_END = 'puppetMotherEnd',
-    // TODO
-    PUPPET_FATHER_END = 'puppetFatherEnd',
-    // TODO
-    PCHELKA = 'pchelka',
-    // TODO
-    MUSHKA = 'mushka',
-    // TODO
-    ROCKET = 'rocket',
-    // TODO
+    PUPPET_FAMILY_END = 'puppetFamilyEnd',
+    PUPPET_KHARI_LIZ = 'puppetKhariLiz',
+
+    // Own page. Requires editing.
+    PCHELKA_MUSHKA_ROCKET = 'pchelkaMushkaRocket',
+
+    // Together on one page.
     EARTH = 'earth',
-    // TODO
     SPACE_COLONY = 'spaceColony',
 
     // Together on one page. Requires editing.
@@ -52,29 +38,16 @@ const
     GHOST_ODIN_CAMPUS = 'ghostOdinCampus',
     GHOST_ODIN_CLUB = 'ghostOdinClub',
     GHOST_ODIN_ALLEY = 'ghostOdinAlley',
-    GHOST_ODIN_DEMONSTRATION = 'ghostOdinDemonstration',
-
-    // TODO
-    PUPPET_KHARI = 'puppetKhari',
-    // TODO
-    PUPPET_LIZ = 'puppetLiz'
+    GHOST_ODIN_DEMONSTRATION = 'ghostOdinDemonstration'
 
 export {
     PUPPET_BENNETT_BEGIN,
-    PUPPET_ANITA_BEGIN,
-    PUPPET_MOTHER_BEGIN,
-    PUPPET_FATHER_BEGIN,
+    PUPPET_FAMILY_BEGIN,
     PUPPET_BENNETT_MIDDLE,
-    PUPPET_ANITA_MIDDLE,
-    PUPPET_MOTHER_MIDDLE,
-    PUPPET_FATHER_MIDDLE,
+    PUPPET_FAMILY_MIDDLE,
     PUPPET_BENNETT_END,
-    PUPPET_ANITA_END,
-    PUPPET_MOTHER_END,
-    PUPPET_FATHER_END,
-    PCHELKA,
-    MUSHKA,
-    ROCKET,
+    PUPPET_FAMILY_END,
+    PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY,
     OPAL_LAP,
@@ -88,6 +61,5 @@ export {
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION,
-    PUPPET_KHARI,
-    PUPPET_LIZ
+    PUPPET_KHARI_LIZ
 }
