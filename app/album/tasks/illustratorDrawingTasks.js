@@ -68,6 +68,16 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: 'pchelka, mushka, and rocket',
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
+        taskName: 'earth and spaceColony',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `corkboard`,
         workedHours: 1,
         neededHours: 2
