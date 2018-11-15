@@ -1,15 +1,10 @@
 const
-    // TODO
+    // Together on one page. Requires editing.
     PUPPET_BENNETT_BEGIN = 'puppetBennettBegin',
-    // TODO
     PUPPET_FAMILY_BEGIN = 'puppetFamilyBegin',
-    // TODO
     PUPPET_BENNETT_MIDDLE = 'puppetBennettMiddle',
-    // TODO
     PUPPET_FAMILY_MIDDLE = 'puppetFamilyMiddle',
-    // TODO
     PUPPET_BENNETT_END = 'puppetBennettEnd',
-    // TODO
     PUPPET_FAMILY_END = 'puppetFamilyEnd',
     PUPPET_KHARI_LIZ = 'puppetKhariLiz',
 

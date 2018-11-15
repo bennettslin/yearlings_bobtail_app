@@ -212,6 +212,21 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: 'puppetFamilyBegin',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetFamilyMiddle',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetFamilyEnd',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: 'puppetKhariLiz',
         workedHours: 2,
         neededHours: 3
