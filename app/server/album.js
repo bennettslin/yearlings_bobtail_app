@@ -40,18 +40,17 @@ const rawAlbum = {
             require('album/tasks/remainingTasks')
 
             // Presences.
-            .concat(require('album/tasks/bubbleDrawingTasks'))
-            .concat(require('album/tasks/cutoutDrawingTasks'))
-            .concat(require('album/tasks/doorDrawingTasks'))
-            .concat(require('album/tasks/furnitureDrawingTasks'))
+            .concat(require('album/tasks/bubbleDrawingTasks')) // 12 days.
+            .concat(require('album/tasks/cutoutDrawingTasks')) // 9 days.
+            .concat(require('album/tasks/doorDrawingTasks')) // 12 days.
+            .concat(require('album/tasks/furnitureDrawingTasks')) // 8 days.
 
             // Additional work on presences.
-            .concat(require('album/tasks/fabricDrawingTasks'))
-            .concat(require('album/tasks/detailedDrawingTasks'))
+            .concat(require('album/tasks/fabricDrawingTasks')) // 2 days.
 
-            .concat(require('album/tasks/illustratorDrawingTasks'))
-            .concat(require('album/tasks/sceneTasks'))
-            .concat(require('album/tasks/svgDrawingTasks')),
+            .concat(require('album/tasks/illustratorDrawingTasks')) // 27 days.
+            .concat(require('album/tasks/sceneTasks')) // 12 days.
+            .concat(require('album/tasks/svgDrawingTasks')), // 14 days.
 
         completedTasks:
             require('album/tasks/completed/completedTasks')

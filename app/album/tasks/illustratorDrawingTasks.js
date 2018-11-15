@@ -1,7 +1,4 @@
 module.exports = [
-    /**
-     * Large painted panels
-     */
     {
         taskName: `North Hollywood houses (Didi, Willy)`,
         workedHours: 3,
@@ -111,6 +108,11 @@ module.exports = [
         taskName: `Bobtail Yearlings album`,
         workedHours: 1,
         neededHours: 2
+    },
+    {
+        taskName: `Yearlings logo on kick drum (M, Garryowen)`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: 'cinemaPoster left',

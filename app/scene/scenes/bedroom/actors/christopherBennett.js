@@ -4,11 +4,11 @@ import {
 
 const ARRANGEMENTS_MAP = {
     [BLISSFUL_GUILTY]: {
-        yIndex: 5,
+        yIndex: 4,
         arrangement: {
-            xFloat: 5.5,
-            xWidth: 1,
-            zHeight: 5
+            xFloat: 8,
+            xWidth: 4,
+            zHeight: 2
         }
     }
 }
