@@ -1,34 +1,34 @@
 # Things to bring to LA:
 
 ## Morning
-Sleep machine
+<!-- Sleep machine -->
 
 ## Get from Zillow
 
 ## Backpack
 EpiPen
 My new MacBook Pro
-Hard drive
+<!-- Hard drive -->
 USB adapter
 
 ## Toiletries bag
-Glasses
+<!-- Glasses -->
 Electric toothbrush
-Contacts
-Tweezers
-Nail clipper
-Clobetasol
-Retinol
-Flonase
+<!-- Contacts -->
+<!-- Tweezers -->
+<!-- Nail clipper -->
+<!-- Retinol -->
+<!-- Flonase -->
+<!-- Clobetasol -->
 
 ## Suitcase
 House key (always keep in suitcase)
-Toiletries bag
+<!-- Toiletries bag -->
 
 ## Things to bring next time
-Soap
-Scarf
-Straws
+<!-- Soap -->
+<!-- Scarf -->
+<!-- Straws -->
 Wacom glove
 
 ## Things I have in LA
