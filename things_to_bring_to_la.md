@@ -6,14 +6,14 @@
 ## Get from Zillow
 
 ## Backpack
-EpiPen
-My new MacBook Pro
+<!-- EpiPen -->
+<!-- My new MacBook Pro -->
 <!-- Hard drive -->
-USB adapter
+<!-- USB adapter -->
 
 ## Toiletries bag
 <!-- Glasses -->
-Electric toothbrush
+<!-- Electric toothbrush -->
 <!-- Contacts -->
 <!-- Tweezers -->
 <!-- Nail clipper -->
@@ -22,14 +22,15 @@ Electric toothbrush
 <!-- Clobetasol -->
 
 ## Suitcase
-House key (always keep in suitcase)
+<!-- House key (always keep in suitcase) -->
 <!-- Toiletries bag -->
 
 ## Things to bring next time
 <!-- Soap -->
 <!-- Scarf -->
 <!-- Straws -->
-Wacom glove
+<!-- Wacom glove -->
+<!-- Graph paper and pencils for drawings. -->
 
 ## Things I have in LA
 
