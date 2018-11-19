@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import AccessLetters from 'components/Access/Letters'
+import AccessLetters from '../../../../Access/Letters'
 
 import {
     ARROW_UP,

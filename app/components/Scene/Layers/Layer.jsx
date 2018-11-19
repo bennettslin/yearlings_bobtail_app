@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import Cubes from '../Cubes/Cubes'
-import Presences from 'components/Presences/Presences'
+import Presences from '../../Presences/Presences'
 
 class Layer extends Component {
 

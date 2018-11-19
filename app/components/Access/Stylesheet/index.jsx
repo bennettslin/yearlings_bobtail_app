@@ -1,8 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Style from 'components/Style/Style'
-import StaticStyling from 'components/Style/StaticStyling'
+import Style from '../../Style/Style'
+import StaticStyling from '../../Style/StaticStyling'
 
 import { STYLE_LOGIC_ACCESS_LETTERS } from 'constants/access'
 import {

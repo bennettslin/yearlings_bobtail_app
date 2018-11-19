@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-// import Scene from 'components/Scene/Scene'
+// import Scene from '../Scene/Scene'
 // import Proscenium from './Proscenium/Proscenium';
 
 const mapStateToProps = ({

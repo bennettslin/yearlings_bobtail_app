@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from 'components/Button'
+import Button from '../Button'
 
 import {
     SCORE_TOGGLE_KEY,

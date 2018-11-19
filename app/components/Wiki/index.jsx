@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Spinner from 'components/Spinner/Spinner'
+import Spinner from '../Spinner/Spinner'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getWikiUrl } from './helper'
 

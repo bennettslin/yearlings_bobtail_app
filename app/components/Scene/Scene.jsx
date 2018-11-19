@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import Layers from './Layers/Layers'
 import SceneSky from './SceneSky'
-import Wood from 'components/Stage/Wood'
+import Wood from '../Stage/Wood'
 
 import { getSceneObject } from 'helpers/dataHelper'
 // import { getPropsAreShallowEqual } from 'helpers/generalHelper'

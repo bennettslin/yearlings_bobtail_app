@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Svg from 'components/Svg/Svg'
+import Svg from '../../Svg'
 import WallBalcony from './WallBalcony'
 
 import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'

@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Style from 'components/Style/Style'
-import DynamicStyling from 'components/Style/DynamicStyling'
+import Style from '../../../Style/Style'
+import DynamicStyling from '../../../Style/DynamicStyling'
 
 import { getCubeCornerPercentages } from '../cubeRenderHelper'
 
@@ -15,7 +15,7 @@ import {
 import {
     getParentClassNameForSceneLogic,
     getClassNameForSlantDirection
-} from 'components/Scene/sceneHelper'
+} from '../../../Scene/sceneHelper'
 
 import {
     getChildClassNameForFaceLogic,

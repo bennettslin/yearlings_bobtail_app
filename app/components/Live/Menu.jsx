@@ -8,9 +8,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TitleToggle from 'components/Title/Toggle'
-import Audio from 'components/Audio'
-import ScoresTips from 'components/ScoresTips/ScoresTips'
+import TitleToggle from '../Title/Toggle'
+import Audio from '../Audio'
+import ScoresTips from '../ScoresTips/ScoresTips'
 
 import { getMenuMarginInOverlay } from 'helpers/responsiveHelper'
 

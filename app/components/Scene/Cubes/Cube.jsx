@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from 'components/Svg/Svg'
+import Svg from '../../Svg'
 
 import CubeFillStyle from './CubeFillStyle'
 

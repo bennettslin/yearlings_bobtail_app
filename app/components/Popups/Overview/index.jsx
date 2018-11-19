@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Overview from 'components/Overview'
-import Popup from 'components/Popup'
+import Overview from '../../Overview'
+import Popup from '../../Popup'
 import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({

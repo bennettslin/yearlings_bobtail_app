@@ -6,14 +6,14 @@ import cx from 'classnames'
 
 import { connect } from 'react-redux'
 
-import Stage from 'components/Stage/Stage'
-import Proscenium from 'components/Stage/Proscenium/Proscenium';
+import Stage from '../Stage/Stage'
+import Proscenium from '../Stage/Proscenium/Proscenium';
 
 import Wall from './Wall'
 import Ceiling from './Ceiling/Ceiling'
 import Floor from './Floor/Floor'
 
-import Scene from 'components/Scene/Scene'
+import Scene from '../Scene/Scene'
 
 import { getCentreFieldHeight } from 'helpers/stageHelper'
 

@@ -6,8 +6,8 @@ import cx from 'classnames'
 
 import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
 
-import VerseHoc from 'components/Verse/Hoc/VerseHoc';
-import Verse from 'components/Verse/Verse';
+import VerseHoc from '../../Verse/Hoc/VerseHoc';
+import Verse from '../../Verse/Verse';
 
 /*************
  * CONTAINER *

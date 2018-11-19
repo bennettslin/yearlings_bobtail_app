@@ -40,7 +40,7 @@ import {
 
 import {
     CUBE_X_AXIS_LENGTH
-} from 'components/Scene/Cubes/cubeIndexConstants'
+} from '../Scene/Cubes/cubeIndexConstants'
 
 const PRESENCE_TYPE_COMPONENTS = {
     [ACTORS]: Actor,

@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import SliderStanza from './SliderStanza'
-import StanzaHoc from 'components/Stanza/Hoc/StanzaHoc'
+import StanzaHoc from '../../Stanza/Hoc/StanzaHoc'
 
 import {
     getSongTotalTime,

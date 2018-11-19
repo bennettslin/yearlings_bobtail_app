@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import AudioBanner from './Banner'
 import AudioButtons from './Buttons'
-import TitleToggle from 'components/Title/Toggle'
+import TitleToggle from '../Title/Toggle'
 
 const mapStateToProps = ({
     responsiveStore: { isTwoRowMenu }

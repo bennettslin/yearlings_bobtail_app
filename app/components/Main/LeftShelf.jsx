@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import DotsSlideToggle from './DotsSlideToggle'
 import OverviewToggle from './OverviewToggle'
-import ScoresTips from 'components/ScoresTips/ScoresTips'
+import ScoresTips from '../ScoresTips/ScoresTips'
 
 const leftShelfPropTypes = {
     // From parent.

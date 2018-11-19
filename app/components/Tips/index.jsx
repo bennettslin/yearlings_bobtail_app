@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import TipsToggle from './Toggle'
-import Texts from 'components/Text/Texts'
+import Texts from '../Text/Texts'
 
 import { getSongTip } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

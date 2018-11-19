@@ -10,7 +10,7 @@ import LyricToggleEar from './LyricToggle/LyricToggleEar'
 import LyricToggleExpand from './LyricToggle/LyricToggleExpand'
 import LyricToggleScroll from './LyricToggle/LyricToggleScroll'
 import LyricScroll from './LyricScroll'
-import VerseBar from 'components/Verse/VerseBar/VerseBar'
+import VerseBar from '../Verse/VerseBar/VerseBar'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender }

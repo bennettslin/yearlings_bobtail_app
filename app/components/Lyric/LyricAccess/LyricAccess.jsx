@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { ALL_DOT_KEYS } from 'constants/dots'
 import { convertTrueFalseKeysToBitNumber } from 'helpers/bitHelper'
 
-import AccessLetters from 'components/Access/Letters'
+import AccessLetters from '../../Access/Letters'
 
 import {
     ARROW_LEFT,

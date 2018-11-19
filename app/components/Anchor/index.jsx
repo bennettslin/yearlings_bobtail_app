@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotSequence from 'components/Dot/Sequence/DotSequence'
+import DotSequence from '../Dot/Sequence/DotSequence'
 import Underline from './Underline'
-import AccessLetter from 'components/Access/Letter'
+import AccessLetter from '../Access/Letter'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 

@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AnchorDot from 'components/Anchor/AnchorDot'
-import AnchorText from 'components/Anchor/AnchorText'
+import AnchorDot from '../../../Anchor/AnchorDot'
+import AnchorText from '../../../Anchor/AnchorText'
 
 import AnnotationAccess from './AnnotationAccess'
 
