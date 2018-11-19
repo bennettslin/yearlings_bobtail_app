@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import ButtonIcon from 'components/Button/ButtonIcon'
+import ButtonIcon from './ButtonIcon'
 import AccessLetter from 'components/Access/Letter'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

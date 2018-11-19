@@ -6,10 +6,9 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Annotation from 'components/Annotation'
-import Popup from 'components/Popup/Popup'
-import {
-    getIsOverlayingAnnotation
-} from 'helpers/responsiveHelper'
+import Popup from 'components/Popup'
+
+import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     isLyricExpanded,

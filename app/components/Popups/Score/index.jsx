@@ -3,8 +3,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Score from 'components/Score/Score'
-import Popup from 'components/Popup/Popup'
+import Score from 'components/Score'
+import Popup from 'components/Popup'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../Button/Button'
+import Button from '../Button'
 
 import { OVERVIEW_TOGGLE_KEY } from 'constants/access'
 import { OVERVIEW_BUTTON_KEY } from 'constants/buttons'

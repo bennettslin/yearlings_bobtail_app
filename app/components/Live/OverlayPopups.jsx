@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AnnotationPopup from '../Popups/AnnotationPopup'
-import ScorePopup from '../Popups/ScorePopup'
-import TitlePopup from '../Popups/TitlePopup'
-import WikiPopup from '../Popups/WikiPopup'
+import AnnotationPopup from '../Popups/Annotation'
+import ScorePopup from '../Popups/Score'
+import TitlePopup from '../Popups/Title'
+import WikiPopup from '../Popups/Wiki'
 
 const popupOverlaidPropTypes = {
     annotationPopupHandlers: PropTypes.object.isRequired,

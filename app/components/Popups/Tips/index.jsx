@@ -3,8 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Tips from 'components/Tips/Tips'
-import Popup from 'components/Popup/Popup'
+import Tips from 'components/Tips'
+import Popup from 'components/Popup'
 import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({

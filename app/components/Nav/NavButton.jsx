@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Button from 'components/Button/Button'
+import Button from 'components/Button'
 import Thumb from './Thumb/Thumb'
 
 import { ENTER } from 'constants/access'

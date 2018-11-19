@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import cx from 'classnames'
 
 import AnnotationCards from './TempGlobalAnnotation/AnnotationCards'
-import Button from 'components/Button/Button'
+import Button from 'components/Button'
 
 import {
     getAlbum,

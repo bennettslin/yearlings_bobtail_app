@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import AudioBanner from './AudioBanner'
-import AudioButtons from './AudioButtons'
-import TitleToggle from 'components/Title/TitleToggle'
+import AudioBanner from './Banner'
+import AudioButtons from './Buttons'
+import TitleToggle from 'components/Title/Toggle'
 
 const mapStateToProps = ({
     responsiveStore: { isTwoRowMenu }

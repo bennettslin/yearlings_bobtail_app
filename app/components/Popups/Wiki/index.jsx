@@ -3,8 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Wiki from 'components/Wiki/Wiki'
-import Popup from 'components/Popup/Popup'
+import Wiki from 'components/Wiki'
+import Popup from 'components/Popup'
 
 const mapStateToProps = ({
     selectedWikiIndex

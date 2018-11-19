@@ -5,9 +5,9 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Slider from 'components/Slider/Slider'
-import AudioTimer from './AudioTimer'
-import { getSongTitle } from 'helpers/dataHelper'
+import AudioTimer from '../Timer'
 
+import { getSongTitle } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({

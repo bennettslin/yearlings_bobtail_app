@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import PopupViewButton from './PopupViewButton'
+import PopupViewButton from './Button'
 
 const popupViewPropTypes = {
     popupName: PropTypes.string.isRequired,

@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Button from '../Button/Button'
+import Button from '../Button'
 import { DOTS_SECTION_EXPAND_KEY } from 'constants/access'
 import { DOTS_SLIDE_BUTTON_KEY } from 'constants/buttons'
 

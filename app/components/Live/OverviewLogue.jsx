@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import OverviewPopup from '../Popups/OverviewPopup'
+import OverviewPopup from '../Popups/Overview'
 
 const overviewLoguePropTypes = {
     // From parent.

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import PopupView from './PopupView'
+import PopupView from './View'
 
 /*************
  * CONTAINER *

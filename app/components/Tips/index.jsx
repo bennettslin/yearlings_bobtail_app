@@ -5,9 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TipsToggle from './TipsToggle'
+import TipsToggle from './Toggle'
 import Texts from 'components/Text/Texts'
-// import Svg from 'components/Svg/Svg';
 
 import { getSongTip } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames';
 
 import Texts from 'components/Text/Texts'
-import Button from 'components/Button/Button'
+import Button from 'components/Button'
 
 import { ENTER } from 'constants/access'
 import { WORMHOLE_BUTTON_KEY } from 'constants/buttons'

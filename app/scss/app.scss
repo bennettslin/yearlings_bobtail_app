@@ -22,14 +22,15 @@
 
 @import "../components/Access/style";
 @import "../components/Annotation/style";
-@import "../components/Audio/Audio";
+@import "../components/Audio/style";
 @import "../components/Carousel/Carousel";
 @import "../components/Dot/Dot";
 @import "../components/DotsSlide/DotsSlide";
 @import "../components/Lyric/Lyric";
 @import "../components/Nav/Nav";
-@import "../components/Overview/Overview";
-@import "../components/Popup/Popup";
+@import "../components/Overview/style";
+@import "../components/Popup/style";
+@import "../components/Popups/style";
 @import "../components/Presences/Presences";
 @import "../components/Slider/Slider";
 @import "../components/Scene/Scene";
@@ -37,9 +38,9 @@
 @import "../components/Stanza/Stanzas";
 @import "../components/Theatre/Theatre";
 @import "../components/Text/TextSpan";
-@import "../components/Tips/Tips";
-@import "../components/Title/Title";
+@import "../components/Tips/style";
+@import "../components/Title/style";
 @import "../components/Verse/Verse";
 
 @import "../components/Anchor/style";
-@import "../components/Button/Button";
+@import "../components/Button/style";
