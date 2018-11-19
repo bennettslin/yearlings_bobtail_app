@@ -106,7 +106,9 @@ class Floor extends Component {
 
                             leftSeatsArray =
                                 getArrayOfCoordinatesForFactoredLengths({
-                                    minLength: stageCentreFromLeft - seatWidthOffset,
+                                    minLength:
+                                        stageCentreFromLeft
+                                        - seatWidthOffset,
                                     firstLength: seatWidth,
                                     maxCount: maxSeats,
 
@@ -116,11 +118,15 @@ class Floor extends Component {
 
                             rightSeatsArray =
                                 getArrayOfCoordinatesForFactoredLengths({
-                                    minLength: windowWidth - stageCentreFromLeft +
-                                        seatWidthOffset,
+                                    minLength:
+                                        windowWidth
+                                        - stageCentreFromLeft
+                                        + seatWidthOffset,
                                     firstLength: seatWidth,
                                     maxCount: maxSeats + (isEven ? 1 : 0),
-                                    positionOffset: stageCentreFromLeft - seatWidthOffset
+                                    positionOffset:
+                                        stageCentreFromLeft
+                                        - seatWidthOffset
                                 }),
 
                             // Combine left and right side seating.
@@ -145,12 +151,14 @@ class Floor extends Component {
                                     return (
                                         <FloorSeat
                                             key={chairIndex}
-                                            chairIndex={chairIndex}
-                                            rowIndex={rowIndex}
-                                            top={rowTop}
-                                            left={seatLeft}
-                                            width={seatWidth}
-                                            height={rowHeight}
+                                            {...{
+                                                chairIndex,
+                                                rowIndex,
+                                                top: rowTop,
+                                                left: seatLeft,
+                                                width: seatWidth,
+                                                height: rowHeight
+                                            }}
                                         />
                                     )
                                 })}

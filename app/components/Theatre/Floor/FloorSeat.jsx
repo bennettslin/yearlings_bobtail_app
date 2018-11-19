@@ -60,25 +60,40 @@ const FloorSeat = ({
             chairIndexString
         )}>
             <ellipse
-                className="FloorSeat__lit"
-                cx={ellipseCx}
-                cy={ellipseCy}
-                rx={ellipseRx}
-                ry={ellipseRy}
+                {...{
+                    className: cx(
+                        'FloorSeat__lit',
+                        'fillTransition__dimTheatre'
+                    ),
+                    cx: ellipseCx,
+                    cy: ellipseCy,
+                    rx: ellipseRx,
+                    ry: ellipseRy
+                }}
             />
             <ellipse
-                className="FloorSeat__base"
-                cx={ellipseCx + width * chairIndex * 0.0025}
-                cy={ellipseCy + height * 0.0075}
-                rx={ellipseRx}
-                ry={ellipseRy}
+                {...{
+                    className: cx(
+                        'FloorSeat__base',
+                        'fillTransition__dimTheatre'
+                    ),
+                    cx: ellipseCx + width * chairIndex * 0.0025,
+                    cy: ellipseCy + height * 0.0075,
+                    rx: ellipseRx,
+                    ry: ellipseRy
+                }}
             />
             <ellipse
-                className="FloorSeat__shaded"
-                cx={ellipseCx + width * chairIndex * 0.01}
-                cy={ellipseCy + height * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075}
-                rx={ellipseRx}
-                ry={ellipseRy}
+                {...{
+                    className: cx(
+                        'FloorSeat__shaded',
+                        'fillTransition__dimTheatre'
+                    ),
+                    cx: ellipseCx + width * chairIndex * 0.01,
+                    cy: ellipseCy + height * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075,
+                    rx: ellipseRx,
+                    ry: ellipseRy
+                }}
             />
         </g>
     )

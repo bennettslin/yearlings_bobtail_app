@@ -61,10 +61,6 @@ class Wall extends Component {
 
             wallWidth = isRight ? rightWidth : leftWidth,
 
-            wallFieldStyle = {
-                width: `${wallWidth}px`
-            },
-
             // Arbitrary values for now.
             firstColumnBalconyHeight = stageHeight,
             firstColumnBalconyWidth =
@@ -74,28 +70,36 @@ class Wall extends Component {
                 minLength: wallWidth,
                 firstLength: firstColumnBalconyWidth,
                 multiplyFactor: 1.05, // Gets taller faster with larger value.
-                overlapRatio: 0.2 // Less bunched up when closer to 0.
+                overlapRatio: 0.05 // Less bunched up when closer to 0.
             })
 
         return (
             <div
-                className={cx(
-                    'Wall',
-                    'Theatre__field',
-                    { 'Wall__right': isRight }
-                )}
-                style={wallFieldStyle}
+                {...{
+                    className: cx(
+                        'Wall',
+                        'Theatre__field',
+                        { 'Wall__right': isRight }
+                    ),
+                    style: {
+                        width: `${wallWidth}px`
+                    }
+                }}
             >
                 <Svg
-                    className={cx(
-                        'Theatre__subfield'
-                    )}
-                    viewBoxWidth={wallWidth}
-                    viewBoxHeight={windowHeight}
+                    {...{
+                        className: cx(
+                            'Theatre__subfield'
+                        ),
+                        viewBoxWidth: wallWidth,
+                        viewBoxHeight: windowHeight
+                    }}
                 >
                     {balconyColumnCoordinates.map((currentCoordinates, index) => {
-                        const { length: balconyWidth,
-                                position: xPosition } = currentCoordinates,
+                        const {
+                                length: balconyWidth,
+                                position: xPosition
+                            } = currentCoordinates,
 
                             balconyHeight = balconyWidth /
                                 BALCONY_WIDTH_TO_HEIGHT_RATIO,
@@ -107,10 +111,12 @@ class Wall extends Component {
                         return (
                             <WallBalcony
                                 key={index}
-                                top={balconyTop}
-                                left={balconyLeft}
-                                width={balconyWidth}
-                                height={balconyHeight}
+                                {...{
+                                    top: balconyTop,
+                                    left: balconyLeft,
+                                    width: balconyWidth,
+                                    height: balconyHeight
+                                }}
                             />
                         )
                     })}

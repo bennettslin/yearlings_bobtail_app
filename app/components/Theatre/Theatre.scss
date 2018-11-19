@@ -26,3 +26,7 @@
 .Theatre__subfield {
     position: relative;
 }
+
+.fillTransition__dimTheatre {
+    transition: fill $animationDuration__default;
+}
