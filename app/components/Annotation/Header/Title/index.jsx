@@ -5,7 +5,7 @@ import cx from 'classnames'
 import AnchorDot from '../../../Anchor/AnchorDot'
 import AnchorText from '../../../Anchor/AnchorText'
 
-import AnnotationAccess from './AnnotationAccess'
+import AnnotationAccess from './Access'
 
 import { IS_DOT_CARD } from 'constants/lyrics'
 

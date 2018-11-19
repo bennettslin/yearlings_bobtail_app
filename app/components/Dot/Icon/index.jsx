@@ -2,24 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AfterwordIcon from './Icons/AfterwordIcon'
-import BackstoryIcon from './Icons/BackstoryIcon'
-import NarrativeIcon from './Icons/NarrativeIcon'
-import ObservationIcon from './Icons/ObservationIcon'
-import WormholeIcon from './Icons/WormholeIcon'
-import PunIcon from './Icons/PunIcon'
-import ReferenceIcon from './Icons/ReferenceIcon'
-import SongwritingIcon from './Icons/SongwritingIcon'
+import AfterwordIcon from './Icons/Afterword'
+import BackstoryIcon from './Icons/Backstory'
+import NarrativeIcon from './Icons/Narrative'
+import ObservationIcon from './Icons/Observation'
+import PunIcon from './Icons/Pun'
+import ReferenceIcon from './Icons/Reference'
+import SongwritingIcon from './Icons/Songwriting'
+import WormholeIcon from './Icons/Wormhole'
 
 import {
     AFTERWORD,
     BACKSTORY,
     NARRATIVE,
     OBSERVATION,
-    WORMHOLE,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGWRITING,
+    WORMHOLE
 } from 'constants/dots'
 
 const DOT_ICONS_MAP = {
@@ -27,10 +27,10 @@ const DOT_ICONS_MAP = {
         [BACKSTORY]: BackstoryIcon,
         [NARRATIVE]: NarrativeIcon,
         [OBSERVATION]: ObservationIcon,
-        [WORMHOLE]: WormholeIcon,
         [PUN]: PunIcon,
         [REFERENCE]: ReferenceIcon,
-        [SONGWRITING]: SongwritingIcon
+        [SONGWRITING]: SongwritingIcon,
+        [WORMHOLE]: WormholeIcon
     }
 
 const propTypes = {

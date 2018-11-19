@@ -4,8 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AccessField from './AccessField'
-import AccessIcon from './AccessIcon'
+import AccessField from './Field'
+import AccessIcon from './Icon'
 
 import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 

@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AfterwordField from './Fields/AfterwordField'
-import BackstoryField from './Fields/BackstoryField'
-import NarrativeField from './Fields/NarrativeField'
-import ObservationField from './Fields/ObservationField'
-import WormholeField from './Fields/WormholeField'
-import PunField from './Fields/PunField'
-import ReferenceField from './Fields/ReferenceField'
-import SongwritingField from './Fields/SongwritingField'
+import AfterwordField from './Fields/Afterword'
+import BackstoryField from './Fields/Backstory'
+import NarrativeField from './Fields/Narrative'
+import ObservationField from './Fields/Observation'
+import WormholeField from './Fields/Wormhole'
+import PunField from './Fields/Pun'
+import ReferenceField from './Fields/Reference'
+import SongwritingField from './Fields/Songwriting'
 
 import {
     AFTERWORD,

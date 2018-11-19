@@ -4,8 +4,8 @@ import cx from 'classnames'
 
 import Svg from '../Svg'
 
-import DotField from './DotField'
-import DotIcon from './DotIcon'
+import DotField from './Field'
+import DotIcon from './Icon'
 
 const propTypes = {
     // From parent.

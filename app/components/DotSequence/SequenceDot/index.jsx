@@ -7,7 +7,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Dot from '../../Dot/Dot'
+import Dot from '../../Dot'
 
 const dotPropTypes = {
 
@@ -17,7 +17,7 @@ const dotPropTypes = {
     inTextAnchor: PropTypes.bool
 },
 
-DotSequenceDot = ({
+SequenceDot = ({
 
     dotKey,
     inAnnotationCard,
@@ -41,6 +41,6 @@ DotSequenceDot = ({
     />
 )
 
-DotSequenceDot.propTypes = dotPropTypes
+SequenceDot.propTypes = dotPropTypes
 
-export default DotSequenceDot
+export default SequenceDot

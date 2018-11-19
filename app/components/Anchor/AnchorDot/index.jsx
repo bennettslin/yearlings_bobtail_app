@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Anchor from '../';
-import Dot from '../../Dot/Dot';
+import Dot from '../../Dot';
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 

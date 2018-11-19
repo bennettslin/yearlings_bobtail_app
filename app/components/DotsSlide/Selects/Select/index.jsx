@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Button from '../Button'
-import Dot from '../Dot/Dot'
-import AnchorText from '../Anchor/AnchorText'
+import Button from '../../../Button'
+import Dot from '../../../Dot'
+import AnchorText from '../../../Anchor/AnchorText'
 
 import { ENTER } from 'constants/access'
 import { DOT_DESCRIPTIONS } from 'constants/dots'

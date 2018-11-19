@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 
-import DotSequenceDot from './DotSequenceDot'
+import SequenceDot from './SequenceDot'
 
 const dotBlockPropTypes = {
 
@@ -34,7 +34,7 @@ DotSequence = ({
             // Go through all dot keys in array to ensure correct order.
             return dotKeys[dotKey] && (
 
-                <DotSequenceDot {...other}
+                <SequenceDot {...other}
                     key={dotKey}
                     {...{
                         dotKey,

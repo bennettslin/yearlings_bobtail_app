@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import cx from 'classnames'
 
-import Button from '../Button'
+import Button from '../../Button'
 import {
     ARROW_LEFT,
     ARROW_RIGHT
@@ -28,18 +27,22 @@ const CarouselSelect = ({
 }) => (
     <div className="CarouselSelect">
         <Button
-            buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
-            buttonIdentifier={LEFT}
-            accessKey={ARROW_LEFT}
-            handleButtonClick={handleAnnotationPrevious}
+            {...{
+                buttonName: CAROUSEL_SELECT_BUTTON_KEY,
+                buttonIdentifier: LEFT,
+                accessKey: ARROW_LEFT,
+                handleButtonClick: handleAnnotationPrevious
+            }}
         />
         <Button
-            buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
-            buttonIdentifier={RIGHT}
-            accessKey={ARROW_RIGHT}
-            handleButtonClick={handleAnnotationNext}
+            {...{
+                buttonName: CAROUSEL_SELECT_BUTTON_KEY,
+                buttonIdentifier: RIGHT,
+                accessKey: ARROW_RIGHT,
+                handleButtonClick: handleAnnotationNext
+            }}
         />
     </div>
 )
