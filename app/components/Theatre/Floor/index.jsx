@@ -4,11 +4,11 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import Svg from '../../Svg'
-import FloorSeat from './FloorSeat'
+import FloorSeat from './Seat'
 
 import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'
 
-import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../theatreConstants'
+import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
 const mapStateToProps = ({
     renderStore: { canTheatreRender },

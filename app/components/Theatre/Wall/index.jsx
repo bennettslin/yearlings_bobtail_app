@@ -4,11 +4,11 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import Svg from '../../Svg'
-import WallBalcony from './WallBalcony'
+import WallBalcony from './Balcony'
 
 import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'
 
-import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../theatreConstants'
+import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../constants'
 
 const mapStateToProps = ({
     deviceStore: { windowHeight },

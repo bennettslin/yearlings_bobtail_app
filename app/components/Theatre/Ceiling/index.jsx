@@ -6,11 +6,11 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import Svg from '../../Svg'
-import CeilingRafter from './CeilingRafter'
+import CeilingRafter from './Rafter'
 
 import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'
 
-import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../theatreConstants'
+import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
 const mapStateToProps = ({
     renderStore: { canTheatreRender },

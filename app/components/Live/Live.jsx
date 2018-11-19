@@ -10,7 +10,7 @@ import { connect } from 'react-redux'
 
 import { updateRenderStore } from 'flux/actions/render'
 
-import Theatre from '../Theatre/Theatre'
+import Theatre from '../Theatre'
 
 import Main from '../Main/Main'
 import Menu from './Menu'

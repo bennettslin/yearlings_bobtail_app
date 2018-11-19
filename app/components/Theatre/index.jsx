@@ -6,19 +6,21 @@ import cx from 'classnames'
 
 import { connect } from 'react-redux'
 
-import Stage from '../Stage/Stage'
-import Proscenium from '../Stage/Proscenium/Proscenium';
+import Stage from '../Stage'
+import Proscenium from '../Stage/Proscenium';
 
 import Wall from './Wall'
-import Ceiling from './Ceiling/Ceiling'
-import Floor from './Floor/Floor'
+import Ceiling from './Ceiling'
+import Floor from './Floor'
 
 import Scene from '../Scene/Scene'
 
 import { getCentreFieldHeight } from 'helpers/stageHelper'
 
-import { getCeilingHeight,
-         getFloorHeight } from './theatreHelper'
+import {
+    getCeilingHeight,
+    getFloorHeight
+} from './helper'
 
 const mapStateToProps = ({
     renderStore: { canTheatreRender },
