@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import { getStaticStyleStringForIndex } from './styleHelper'
+import { getStaticStyleStringForIndex } from './helper'
 
 const propTypes = {
     indices: PropTypes.array.isRequired,
@@ -10,7 +10,7 @@ const propTypes = {
     style: PropTypes.object.isRequired
 }
 
-const StaticStyling = ({
+const StaticStylesheet = ({
 
     indices,
     parentPrefix,
@@ -33,6 +33,6 @@ const StaticStyling = ({
     </Fragment>
 )
 
-StaticStyling.propTypes = propTypes
+StaticStylesheet.propTypes = propTypes
 
-export default StaticStyling
+export default StaticStylesheet

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-class Style extends Component {
+class Stylesheet extends Component {
 
     static propTypes = {
         className: PropTypes.any,
@@ -25,7 +25,7 @@ class Style extends Component {
         return (
             <style
                 className={cx(
-                    'Style',
+                    'Stylesheet',
                     className
                 )}
             >
@@ -35,4 +35,4 @@ class Style extends Component {
     }
 }
 
-export default Style
+export default Stylesheet

@@ -1,8 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Style from '../../Style/Style'
-import DynamicStyling from '../../Style/DynamicStyling'
+import Stylesheet from '../../Stylesheet'
+import DynamicStylesheet from '../../Stylesheet/Dynamic'
 
 import { getCharStringForNumber } from 'helpers/formatHelper'
 import { getClassNameForSlantDirection } from '../sceneHelper'
@@ -27,7 +27,7 @@ const CubesZIndexStyle = () => {
     let xAxisZIndices = DEFAULT_X_AXIS_Z_INDICES
 
     return (
-        <Style
+        <Stylesheet
             className={cx(
                 'CubesZIndexStyle'
             )}
@@ -58,7 +58,7 @@ const CubesZIndexStyle = () => {
                                 + xAxisZIndices[xIndex]
 
                         return (
-                            <DynamicStyling
+                            <DynamicStylesheet
                                 key={`${xIndex}_${yIndex}`}
                                 {...{
                                     parentPrefixes: [
@@ -80,7 +80,7 @@ const CubesZIndexStyle = () => {
                     })
                 })
             })}
-        </Style>
+        </Stylesheet>
     )
 }
 

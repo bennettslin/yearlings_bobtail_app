@@ -1,8 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Style from '../../Style/Style'
-import StaticStyling from '../../Style/StaticStyling'
+import Stylesheet from '../../Stylesheet'
+import StaticStylesheet from '../../Stylesheet/Static'
 
 import { STYLE_LOGIC_ACCESS_LETTERS } from 'constants/access'
 import {
@@ -13,12 +13,12 @@ import {
 const AccessStylesheet = () => {
 
     return (
-        <Style
+        <Stylesheet
             className={cx(
                 'AccessStylesheet'
             )}
         >
-            <StaticStyling
+            <StaticStylesheet
                 {...{
                     indices: STYLE_LOGIC_ACCESS_LETTERS,
                     parentPrefix: PARENT_ACCESS_PREFIX,
@@ -28,7 +28,7 @@ const AccessStylesheet = () => {
                     }
                 }}
             />
-        </Style>
+        </Stylesheet>
     )
 }
 

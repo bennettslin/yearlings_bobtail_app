@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import { getDynamicStyleStringForIndex } from './styleHelper'
+import { getDynamicStyleStringForIndex } from './helper'
 
 const defaultProps = {
     parentPrefixes: []
@@ -13,7 +13,7 @@ const propTypes = {
     style: PropTypes.object.isRequired
 }
 
-const DynamicStyling = ({
+const DynamicStylesheet = ({
 
     parentPrefixes,
     childPrefixes,
@@ -31,7 +31,7 @@ const DynamicStyling = ({
     </Fragment>
 )
 
-DynamicStyling.defaultProps = defaultProps
-DynamicStyling.propTypes = propTypes
+DynamicStylesheet.defaultProps = defaultProps
+DynamicStylesheet.propTypes = propTypes
 
-export default DynamicStyling
+export default DynamicStylesheet

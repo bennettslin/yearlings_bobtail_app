@@ -1,8 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Style from '../Style/Style'
-import DynamicStyling from '../Style/DynamicStyling'
+import Stylesheet from '../Stylesheet'
+import DynamicStylesheet from '../Stylesheet/Dynamic'
 
 import {
     CUBE_X_AXIS_LENGTH,
@@ -12,14 +12,14 @@ import {
 const PresencesZIndexStyle = () => {
 
     return (
-        <Style
+        <Stylesheet
             className={cx(
                 'PresencesZIndexStyle'
             )}
         >
             {CUBE_Y_INDICES.map(yIndex => {
                 return (
-                    <DynamicStyling
+                    <DynamicStylesheet
                         key={yIndex}
                         {...{
                             childPrefixes: [
@@ -38,7 +38,7 @@ const PresencesZIndexStyle = () => {
                     />
                 )
             })}
-        </Style>
+        </Stylesheet>
     )
 }
 

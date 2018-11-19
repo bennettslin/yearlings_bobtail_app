@@ -2,8 +2,8 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Style from '../../Style/Style'
-import DynamicStyling from '../../Style/DynamicStyling'
+import Stylesheet from '../../Stylesheet'
+import DynamicStylesheet from '../../Stylesheet/Dynamic'
 
 import {
     getParentClassNameForSceneLogic
@@ -40,7 +40,7 @@ CubeFillStyle = ({
 
     // This component never updates because its parent never updates.
     return (
-        <Style
+        <Stylesheet
             className={cx(
                 'CubeFillStyle',
                 `CubeFillStyle__${
@@ -76,7 +76,7 @@ CubeFillStyle = ({
                     } = HSLA_MAP[hslaKey]
 
                     return (
-                        <DynamicStyling
+                        <DynamicStylesheet
                             key={hslaKey}
                             {...{
                                 parentPrefixes: [
@@ -93,7 +93,7 @@ CubeFillStyle = ({
                     )
                 })
             })}
-        </Style>
+        </Stylesheet>
     )
 }
 

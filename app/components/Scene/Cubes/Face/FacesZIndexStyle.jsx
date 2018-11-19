@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Style from '../../../Style/Style'
-import DynamicStyling from '../../../Style/DynamicStyling'
+import Stylesheet from '../../../Stylesheet'
+import DynamicStylesheet from '../../../Stylesheet/Dynamic'
 
 import { getCubeCornerPercentages } from '../cubeRenderHelper'
 
@@ -52,7 +52,7 @@ FacesZIndexStyle = ({
 
     // This component never updates because its parent never updates.
     return (
-        <Style
+        <Stylesheet
             className={cx(
                 'FacesZIndexStyle',
                 `FacesZIndexStyle__${
@@ -142,7 +142,7 @@ FacesZIndexStyle = ({
                                 <Fragment
                                     key={`${slantDirection}${zIndex}${face}`}
                                 >
-                                    <DynamicStyling
+                                    <DynamicStylesheet
                                         {...{
                                             parentPrefixes: [
                                                 slantDirectionClassName,
@@ -157,7 +157,7 @@ FacesZIndexStyle = ({
                                         }}
                                     />
                                     {negativeParentPrefix && (
-                                        <DynamicStyling
+                                        <DynamicStylesheet
                                             {...{
                                                 parentPrefixes: [
                                                     slantDirectionClassName,
@@ -179,7 +179,7 @@ FacesZIndexStyle = ({
                     })
                 })
             })}
-        </Style>
+        </Stylesheet>
     )
 }
 
