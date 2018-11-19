@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 // import cx from 'classnames'
 
-import AnnotationCards from './TempGlobalAnnotation/AnnotationCards'
-import Button from '../Button'
+import AnnotationCards from './AnnotationCards'
+import Button from '../../../Button'
 
 import {
     getAlbum,

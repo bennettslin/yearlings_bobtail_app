@@ -17,7 +17,7 @@ import Menu from './Menu'
 import OverlayPopups from './OverlayPopups'
 
 import OverviewLogue from './OverviewLogue'
-import Lyric from '../Lyric/Lyric'
+import Lyric from '../Lyric'
 
 import {
     getOrganisedHandlersFromProps

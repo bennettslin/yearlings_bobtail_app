@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import Texts from '../../Text/Texts'
+import Texts from '../../../../../Text/Texts'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 

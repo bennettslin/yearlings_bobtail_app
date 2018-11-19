@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 // import debounce from 'debounce'
 
-import Stanzas from '../Stanza/Stanzas'
+import Stanzas from '../../Stanza/Stanzas'
 
 import {
     getSongStanzaConfigs,
@@ -150,7 +150,9 @@ class LyricScroll extends Component {
                         }}
                     />
                 )}
-                <TempGlobalAnnotations />
+                {true && (
+                    <TempGlobalAnnotations />
+                )}
             </div>
         )
     }

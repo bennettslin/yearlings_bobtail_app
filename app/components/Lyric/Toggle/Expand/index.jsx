@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../../Button'
+import Button from '../../../Button'
+
 import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
 import { getIsLyricExpandable } from 'helpers/responsiveHelper'
@@ -36,7 +37,6 @@ lyricExpandTogglePropTypes = {
 },
 
 LyricToggleExpand = ({
-
     deviceIndex,
     isHeightlessLyricColumn,
     isLyricExpanded,
@@ -62,10 +62,12 @@ LyricToggleExpand = ({
         )}>
             <Button
                 isLargeSize
-                buttonName={LYRIC_EXPAND_BUTTON_KEY}
-                buttonIdentifier={isLyricExpanded}
-                accessKey={LYRIC_SECTION_EXPAND_KEY}
-                handleButtonClick={handleLyricSectionExpand}
+                {...{
+                    buttonName: LYRIC_EXPAND_BUTTON_KEY,
+                    buttonIdentifier: isLyricExpanded,
+                    accessKey: LYRIC_SECTION_EXPAND_KEY,
+                    handleButtonClick: handleLyricSectionExpand
+                }}
             />
         </div>
     )

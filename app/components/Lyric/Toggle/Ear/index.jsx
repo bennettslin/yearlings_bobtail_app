@@ -3,9 +3,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { connect } from 'react-redux'
-import Button from '../../Button'
+
+import Button from '../../../Button'
+
 import { LYRIC_COLUMN_TOGGLE_KEY } from 'constants/access'
 import { LYRIC_EAR_BUTTON_KEY } from 'constants/buttons'
 import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
@@ -28,7 +29,6 @@ const lyricEarTogglePropTypes = {
 },
 
 LyricToggleEar = ({
-
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex,
     handleLyricColumnSelect
@@ -44,10 +44,13 @@ LyricToggleEar = ({
         )}>
             <Button
                 isLargeSize
-                buttonName={LYRIC_EAR_BUTTON_KEY}
-                buttonIdentifier={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
-                accessKey={LYRIC_COLUMN_TOGGLE_KEY}
-                handleButtonClick={handleLyricColumnSelect}
+                {...{
+                    buttonName: LYRIC_EAR_BUTTON_KEY,
+                    buttonIdentifier:
+                        LYRIC_COLUMN_KEYS[selectedLyricColumnIndex],
+                    accessKey: LYRIC_COLUMN_TOGGLE_KEY,
+                    handleButtonClick: handleLyricColumnSelect,
+                }}
             />
         </div>
     )
