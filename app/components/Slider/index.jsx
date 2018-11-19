@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SliderScenes from './SliderScenes'
-import SliderStanzas from './Stanzas/SliderStanzas'
-import SliderTimes from './Times/SliderTimes'
-import SliderAccess from './SliderAccess'
+import SliderScenes from './Scenes'
+import SliderStanzas from './Stanzas'
+import SliderTimes from './Times'
+import SliderAccess from './Access'
 
 const mapStateToProps = ({
     renderStore: { canVerseRender }

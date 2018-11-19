@@ -1,8 +1,7 @@
-@import "./SliderScenes";
-@import "./Stanzas/SliderStanzas";
-@import "./Verses/SliderVerses";
-@import "./Times/SliderTimes";
-@import "./SliderAccess";
+@import "./Access/style";
+@import "./Scenes/style";
+@import "./Stanzas/style";
+@import "./Times/style";
 
 .Slider {
     height: 100%;

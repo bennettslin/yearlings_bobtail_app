@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SliderTime from './SliderTime'
+import SliderTime from './Time'
 
 import { getSongTotalTime } from 'helpers/dataHelper'
 import { getFormattedTime } from 'helpers/formatHelper'

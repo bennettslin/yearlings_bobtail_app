@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseHoc from '../../Verse/Hoc/VerseHoc'
-import SliderVerse from './SliderVerse'
+import VerseHoc from '../../../../Verse/Hoc/VerseHoc'
+import SliderVerse from './Verse'
 
 const propTypes = {
     stanzaVerseConfigs: PropTypes.array.isRequired,

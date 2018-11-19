@@ -4,9 +4,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import ScoresTips from '../ScoresTips'
 import DotsSlideToggle from './DotsSlideToggle'
 import OverviewToggle from './OverviewToggle'
-import ScoresTips from '../ScoresTips/ScoresTips'
 
 const leftShelfPropTypes = {
     // From parent.

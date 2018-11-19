@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Slider from '../../Slider/Slider'
+import Slider from '../../Slider'
 import AudioTimer from '../Timer'
 
 import { getSongTitle } from 'helpers/dataHelper'

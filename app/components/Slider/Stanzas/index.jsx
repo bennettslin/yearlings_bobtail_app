@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SliderStanza from './SliderStanza'
 import StanzaHoc from '../../Stanza/Hoc/StanzaHoc'
+import SliderStanza from './Stanza'
 
 import {
     getSongTotalTime,
