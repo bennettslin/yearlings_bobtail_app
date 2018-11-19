@@ -1,0 +1,17 @@
+.AnchorDot {
+    display: none;
+}
+
+@each $dotLetter in $dotLettersArray {
+
+    // "Root selected dot letter, child dot anchor letter."
+    .RsD#{$dotLetter} .CdA#{$dotLetter} {
+
+        display: inline-block;
+
+        // All subsequent sibling dots in dot anchor should not be displayed.
+        ~ .AnchorDot {
+            display: none;
+        }
+    }
+}

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TextAnchor from 'components/Anchor/TextAnchor/TextAnchor'
+import AnchorText from 'components/Anchor/AnchorText'
 import Texts from './Texts'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -209,7 +209,7 @@ class TextLyricAnchor extends Component {
                         wikiIndex && `wiki__${wikiIndex}`
                     )}
                 >
-                    <TextAnchor
+                    <AnchorText
                         {...{
                             text: words.map((word, index) => (
                                 <Texts {...other}

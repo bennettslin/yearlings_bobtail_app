@@ -1,0 +1,20 @@
+.AccessLetters {
+    display: flex;
+
+    z-index: $zIndex__lyricChild__topMost;
+}
+
+.AccessLetters__inAnnotation {
+
+    margin-left: $js__margin__thick * 0.5;
+    margin-bottom: $js__margin__thin * 0.5;
+
+    .RM__accessOff
+    & {
+        display: none;
+    }
+}
+
+.AccessLetters__absolute {
+    position: absolute;
+}

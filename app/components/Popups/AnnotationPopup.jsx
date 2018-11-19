@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Annotation from 'components/Annotation/Annotation'
+import Annotation from 'components/Annotation'
 import Popup from 'components/Popup/Popup'
 import {
     getIsOverlayingAnnotation

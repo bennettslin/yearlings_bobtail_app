@@ -3962,4 +3962,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Begin system to dim theatre for songs, brighten for logues.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

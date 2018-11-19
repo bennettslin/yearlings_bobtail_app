@@ -55,10 +55,14 @@ const FloorSeat = ({
             `n${chairIndex * -1}` : chairIndex
 
     return (
-        <g className={cx(
-            'FloorSeat',
-            chairIndexString
-        )}>
+        <g
+            {...{
+                className: cx(
+                    'FloorSeat',
+                    chairIndexString
+                )
+            }}
+        >
             <ellipse
                 {...{
                     className: cx(

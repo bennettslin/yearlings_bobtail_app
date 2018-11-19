@@ -1,6 +1,16 @@
 module.exports = [
     {
-        taskName: `Dim theatre for songs, brighten for logues.`,
+        taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Change all files to folders with index and style files.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Add unit testing.`,
         workedHours: 0,
         neededHours: 3
     },

@@ -1,0 +1,15 @@
+@import "./logic";
+@import "./AnchorDot/style";
+@import "./AnchorText/style";
+@import "./Underline/style";
+
+.Anchor,
+.AnchorText,
+.AnchorDot {
+    // Keep underline below.
+    position: relative;
+}
+
+.Anchor__noWrap {
+    white-space: nowrap;
+}

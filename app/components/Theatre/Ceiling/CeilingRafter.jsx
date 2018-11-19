@@ -9,7 +9,6 @@ const propTypes = {
 }
 
 const CeilingRafter = ({
-
     top,
     left,
     width,
@@ -19,11 +18,13 @@ const CeilingRafter = ({
 
     return (
         <rect
-            className="CeilingRafter"
-            x={left}
-            y={top}
-            width={width}
-            height={height}
+            {...{
+                className: 'CeilingRafter',
+                x: left,
+                y: top,
+                width: width,
+                height: height
+            }}
         />
     )
 }

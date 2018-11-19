@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DotAnchor from 'components/Anchor/DotAnchor/DotAnchor'
+import AnchorDot from 'components/Anchor/AnchorDot'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -175,7 +175,7 @@ UnitDotView = ({
                 )
             )}
         >
-            <DotAnchor {...other}
+            <AnchorDot {...other}
                 inStanza
                 stanzaDotKeys={dotKeys}
             />

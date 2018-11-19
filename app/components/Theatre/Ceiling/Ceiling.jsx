@@ -55,10 +55,6 @@ class Ceiling extends Component {
                 stageCentreFromLeft
             } = ceilingFieldCoordinates,
 
-            ceilingFieldStyle = {
-                height: `${ceilingHeight}px`
-            },
-
             // Arbitrary values for now.
             firstRowRafterWidth = stageWidth * 1.1,
             firstRowRafterHeight = firstRowRafterWidth * RAFTER_HEIGHT_TO_WIDTH_RATIO,
@@ -72,36 +68,51 @@ class Ceiling extends Component {
 
         return (
             <div
-                className={cx(
-                    'Ceiling',
-                    'Theatre__field'
-                )}
-                style={ceilingFieldStyle}
+                {...{
+                    className: cx(
+                        'Ceiling',
+                        'Theatre__field'
+                    ),
+                    style: {
+                        height: `${ceilingHeight}px`
+                    }
+                }}
             >
                 <Svg
-                    className={cx(
-                        'Theatre__subfield'
-                    )}
-                    viewBoxWidth={windowWidth}
-                    viewBoxHeight={ceilingHeight}
+                    {...{
+                        className: cx(
+                            'Theatre__subfield'
+                        ),
+                        viewBoxWidth: windowWidth,
+                        viewBoxHeight: ceilingHeight
+                    }}
                 >
                     {raftersRowCoordinates.map((currentCoordinates, index) => {
-                        const { length: rafterHeight,
-                                position: rafterBottom } = currentCoordinates,
+                        const {
+                                length: rafterHeight,
+                                position: rafterBottom
+                            } = currentCoordinates,
 
                             rafterWidth = rafterHeight /
                                 RAFTER_HEIGHT_TO_WIDTH_RATIO,
 
-                            rafterTop = ceilingHeight - rafterHeight - rafterBottom,
-                            rafterLeft = stageCentreFromLeft - rafterWidth / 2
+                            rafterTop =
+                                ceilingHeight
+                                - rafterHeight
+                                - rafterBottom,
+                            rafterLeft =
+                                stageCentreFromLeft
+                                - rafterWidth / 2
 
                         return (
                             <CeilingRafter
                                 key={index}
-                                top={rafterTop}
-                                left={rafterLeft}
-                                width={rafterWidth}
-                                height={rafterHeight}
+                                {...{
+                                    top: rafterTop,
+                                    left: rafterLeft,
+                                    width: rafterWidth,
+                                    height: rafterHeight
+                                }}
                             />
                         )
                     })}

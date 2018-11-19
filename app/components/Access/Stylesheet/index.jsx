@@ -1,0 +1,35 @@
+import React from 'react'
+import cx from 'classnames'
+
+import Style from 'components/Style/Style'
+import StaticStyling from 'components/Style/StaticStyling'
+
+import { STYLE_LOGIC_ACCESS_LETTERS } from 'constants/access'
+import {
+    PARENT_ACCESS_PREFIX,
+    CHILD_ACCESS_PREFIX
+} from 'constants/prefixes'
+
+const AccessStylesheet = () => {
+
+    return (
+        <Style
+            className={cx(
+                'AccessStylesheet'
+            )}
+        >
+            <StaticStyling
+                {...{
+                    indices: STYLE_LOGIC_ACCESS_LETTERS,
+                    parentPrefix: PARENT_ACCESS_PREFIX,
+                    childPrefix: CHILD_ACCESS_PREFIX,
+                    style: {
+                        transform: 'scale(0.9)'
+                    }
+                }}
+            />
+        </Style>
+    )
+}
+
+export default AccessStylesheet

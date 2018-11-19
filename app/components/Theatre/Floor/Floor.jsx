@@ -53,10 +53,6 @@ class Floor extends Component {
                 stageCentreFromLeft
             } = floorFieldCoordinates,
 
-            floorFieldStyle = {
-                height: `${floorHeight}px`
-            },
-
             firstRowSeatWidth = stageWidth / 9, // Arbitrary value.
             firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
@@ -76,11 +72,15 @@ class Floor extends Component {
 
         return (
             <div
-                className={cx(
-                    'Floor',
-                    'Theatre__field'
-                )}
-                style={floorFieldStyle}
+                {...{
+                    className: cx(
+                        'Floor',
+                        'Theatre__field'
+                    ),
+                    style: {
+                        height: `${floorHeight}px`
+                    }
+                }}
             >
                 <Svg
                     className={cx(

@@ -9,7 +9,6 @@ const propTypes = {
 }
 
 const WallBalcony = ({
-
     top,
     left,
     width,
@@ -19,11 +18,13 @@ const WallBalcony = ({
 
     return (
         <rect
-            className="WallBalcony"
-            x={left}
-            y={top}
-            width={width}
-            height={height}
+            {...{
+                className: 'WallBalcony',
+                x: left,
+                y: top,
+                width: width,
+                height: height
+            }}
         />
     )
 }

@@ -10,7 +10,7 @@ import cx from 'classnames'
 // import debounce from 'debounce'
 
 import KeyHandler from 'handlers/KeyHandler'
-import AccessStyle from './AccessLetter/AccessStyle'
+import AccessStylesheet from './Access/Stylesheet'
 import Admin from './Admin/Admin'
 import Live from './Live/Live'
 import AdminToggle from './admin/AdminToggle'
@@ -94,7 +94,6 @@ class Root extends Component {
 
     state = {
         sliderMousedUp: false,
-        // isVerseTrackerReset: false,
         keyName: ''
     }
 
@@ -372,7 +371,7 @@ class Root extends Component {
                 onKeyUp={this.handleKeyUpPress}
                 tabIndex="-1"
             >
-                <AccessStyle />
+                <AccessStylesheet />
 
                 {/* TODO: Only pass the events used by KeyHandler. */}
                 <KeyHandler
