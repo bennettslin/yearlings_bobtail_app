@@ -3971,5 +3971,10 @@ module.exports = [
         taskName: `Change all files to folders with index and style files.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Add pre-commit linting and pre-push testing.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
