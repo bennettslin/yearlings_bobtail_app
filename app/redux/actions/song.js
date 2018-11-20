@@ -1,5 +1,8 @@
-// Actions for song and player state.
-import { is } from './actionsHelper'
+// Actions for song state.
+import {
+    hasKey,
+    getDefinedOnlyPayload
+} from './helper'
 
 import {
     SONG_STORE,
@@ -8,37 +11,32 @@ import {
     SELECTED_ANNOTATION_INDEX
 } from 'constants/state'
 
-import { SONG_DEFAULTS } from '../defaultConstants'
+import { SONG_DEFAULTS } from '../defaultStates'
 
 import {
     setInStorage
 } from '../storageHelper'
 
-export const updateSongStore = ({
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    selectedVerseIndex,
-    selectedTime
+export const updateSongStore = (payload = SONG_DEFAULTS) => {
 
-} = SONG_DEFAULTS) => {
+    const {
+        selectedSongIndex,
+        selectedAnnotationIndex,
+        selectedVerseIndex
+    } = payload
 
-    if (is(selectedSongIndex)) {
+    if (hasKey(selectedSongIndex)) {
         setInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
     }
-    if (is(selectedVerseIndex)) {
+    if (hasKey(selectedVerseIndex)) {
         setInStorage(SELECTED_VERSE_INDEX, selectedVerseIndex)
     }
-    if (is(selectedAnnotationIndex)) {
+    if (hasKey(selectedAnnotationIndex)) {
         setInStorage(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex)
     }
 
     return {
         type: SONG_STORE,
-        payload: {
-            ...is(selectedSongIndex) && { selectedSongIndex },
-            ...is(selectedVerseIndex) && { selectedVerseIndex },
-            ...is(selectedAnnotationIndex) && { selectedAnnotationIndex },
-            ...is(selectedTime) && { selectedTime }
-        }
+        payload: getDefinedOnlyPayload(payload)
     }
 }

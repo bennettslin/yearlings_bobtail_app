@@ -1,6 +1,6 @@
 // Reducers for state based on window size.
 import { RESPONSIVE_STORE } from 'constants/state'
-import { RESPONSIVE_DEFAULTS } from '../defaultConstants'
+import { RESPONSIVE_DEFAULTS } from '../defaultStates'
 
 export const ResponsiveStoreReducer = (
     state = RESPONSIVE_DEFAULTS,

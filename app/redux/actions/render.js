@@ -1,26 +1,10 @@
 // Actions for can render state.
-import { is } from './actionsHelper'
+import { getDefinedOnlyPayload } from './helper'
 
 import { RENDER_STORE } from 'constants/state'
-import { RENDER_DEFAULTS } from '../defaultConstants'
+import { RENDER_DEFAULTS } from '../defaultStates'
 
-export const updateRenderStore = ({
-    canTheatreRender,
-    canVerseRender,
-    canMainRender,
-    canLyricRender,
-    canCarouselRender,
-    canSceneRender
-
-} = RENDER_DEFAULTS) => ({
-
+export const updateRenderStore = (payload = RENDER_DEFAULTS) => ({
     type: RENDER_STORE,
-    payload: {
-        ...is(canTheatreRender) && { canTheatreRender },
-        ...is(canVerseRender) && { canVerseRender },
-        ...is(canMainRender) && { canMainRender },
-        ...is(canLyricRender) && { canLyricRender },
-        ...is(canCarouselRender) && { canCarouselRender },
-        ...is(canSceneRender) && { canSceneRender }
-    }
+    payload: getDefinedOnlyPayload(payload)
 })

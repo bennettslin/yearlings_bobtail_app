@@ -1,6 +1,6 @@
 // Reducers for slider state.
 import { SLIDER_STORE } from 'constants/state'
-import { SLIDER_DEFAULTS } from '../defaultConstants'
+import { SLIDER_DEFAULTS } from '../defaultStates'
 
 export const SliderStoreReducer = (
     state = SLIDER_DEFAULTS,

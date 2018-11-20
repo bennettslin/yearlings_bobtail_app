@@ -1,6 +1,6 @@
 // Reducers for song and player state.
 import { SONG_STORE } from 'constants/state'
-import { SONG_DEFAULTS } from '../defaultConstants'
+import { SONG_DEFAULTS } from '../defaultStates'
 
 export const SongStoreReducer = (
     state = SONG_DEFAULTS,

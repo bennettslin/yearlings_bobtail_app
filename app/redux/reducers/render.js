@@ -1,6 +1,6 @@
 // Reducers for can render state.
 import { RENDER_STORE } from 'constants/state'
-import { RENDER_DEFAULTS } from '../defaultConstants'
+import { RENDER_DEFAULTS } from '../defaultStates'
 
 export const RenderStoreReducer = (
     state = RENDER_DEFAULTS,

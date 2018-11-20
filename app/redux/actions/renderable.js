@@ -1,20 +1,10 @@
 // Actions for renderable state.
-import { is } from './actionsHelper'
+import { getDefinedOnlyPayload } from './helper'
 
 import { RENDERABLE_STORE } from 'constants/state'
-import { RENDERABLE_DEFAULTS } from '../defaultConstants'
+import { RENDERABLE_DEFAULTS } from '../defaultStates'
 
-export const updateRenderableStore = ({
-    isSceneChangeRenderable,
-    isSongChangeRenderable,
-    isWindowResizeRenderable
-
-} = RENDERABLE_DEFAULTS) => ({
-
+export const updateRenderableStore = (payload = RENDERABLE_DEFAULTS) => ({
     type: RENDERABLE_STORE,
-    payload: {
-        ...is(isSceneChangeRenderable) && { isSceneChangeRenderable },
-        ...is(isSongChangeRenderable) && { isSongChangeRenderable },
-        ...is(isWindowResizeRenderable) && { isWindowResizeRenderable }
-    }
+    payload: getDefinedOnlyPayload(payload)
 })

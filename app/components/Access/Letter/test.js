@@ -16,7 +16,7 @@ const setup = (customProps) => {
     )
 }
 
-describe('AccessLetter', () => {
+describe('AccessLetter.', () => {
     it('renders.', () => {
         const module = setup()
 

@@ -1,6 +1,6 @@
 // Reducers for window size.
 import { DEVICE_STORE } from 'constants/state'
-import { DEVICE_DEFAULTS } from '../defaultConstants'
+import { DEVICE_DEFAULTS } from '../defaultStates'
 
 export const DeviceStoreReducer = (
     state = DEVICE_DEFAULTS,

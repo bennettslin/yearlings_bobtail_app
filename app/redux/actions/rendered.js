@@ -1,22 +1,10 @@
 // Actions for rendered state.
-import { is } from './actionsHelper'
+import { getDefinedOnlyPayload } from './helper'
 
 import { RENDERED_STORE } from 'constants/state'
-import { RENDERED_DEFAULTS } from '../defaultConstants'
+import { RENDERED_DEFAULTS } from '../defaultStates'
 
-export const updateRenderedStore = ({
-    renderedSongIndex,
-    renderedAnnotationIndex,
-    renderedVerseIndex,
-    renderedSceneIndex
-
-} = RENDERED_DEFAULTS) => ({
-
+export const updateRenderedStore = (payload = RENDERED_DEFAULTS) => ({
     type: RENDERED_STORE,
-    payload: {
-        ...is(renderedSongIndex) && { renderedSongIndex },
-        ...is(renderedAnnotationIndex) && { renderedAnnotationIndex },
-        ...is(renderedVerseIndex) && { renderedVerseIndex },
-        ...is(renderedSceneIndex) && { renderedSceneIndex }
-    }
+    payload: getDefinedOnlyPayload(payload)
 })
