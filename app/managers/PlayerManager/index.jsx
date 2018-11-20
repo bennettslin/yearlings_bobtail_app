@@ -26,7 +26,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     getCanPlayThroughsObject,
     getNextPlayerSongIndexToRender
-} from './playerManagerHelper'
+} from './helper'
 
 const mapStateToProps = ({
     isPlaying,

@@ -9,7 +9,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     getSliderRatioForClientX,
     getVerseIndexforRatio
-} from './sliderVerseManagerHelper'
+} from './helper'
 
 class SliderVerseManager extends Component {
 

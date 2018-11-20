@@ -11,7 +11,7 @@ import {
 
 import { getSongVersesCount } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-import { getVerseBarStatus } from './verseManagerHelper'
+import { getVerseBarStatus } from './helper'
 
 class VerseManager extends Component {
 

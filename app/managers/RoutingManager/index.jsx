@@ -11,7 +11,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     getValidRoutingIndicesObject,
     getPathForIndices
-} from 'helpers/routingHelper'
+} from './helper'
 
 class RoutingManager extends Component {
 

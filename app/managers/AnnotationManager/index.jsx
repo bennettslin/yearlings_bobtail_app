@@ -18,7 +18,7 @@ import {
     getAnnotationIndexForDirection,
     getAnnotationAnchorIndexForDirection,
     shouldShowAnnotationForColumn
-} from './annotationManagerHelper'
+} from './helper'
 
 class AnnotationManager extends Component {
 

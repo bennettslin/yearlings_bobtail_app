@@ -84,7 +84,6 @@ export const getClassNameForSlantDirection = (slantDirection) => {
         ''
 }
 
-
 export const getChildClassNameForCubeLogic = ({
     level,
     xIndex,
