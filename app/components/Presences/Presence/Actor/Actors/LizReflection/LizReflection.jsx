@@ -9,7 +9,7 @@ import {
 } from '../../../../../../scene/instanceKeys/liz'
 
 const INSTANCES_MAP = {
-    [REACHING_REFLECTION]: ReachingReflection,
+    [REACHING_REFLECTION]: ReachingReflection
 }
 
 const propTypes = {

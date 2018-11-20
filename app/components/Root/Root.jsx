@@ -414,7 +414,7 @@ const mapStateToProps = ({
     renderedStore: {
         renderedSongIndex,
         renderedVerseIndex,
-        renderedAnnotationIndex,
+        renderedAnnotationIndex
     },
     sliderStore: {
         isSliderTouched,

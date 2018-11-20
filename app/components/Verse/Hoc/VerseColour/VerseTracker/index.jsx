@@ -79,7 +79,7 @@ class VerseTracker extends Component {
                 verseIndex,
                 inUnit,
                 inVerseBar,
-                inSlider,
+                inSlider
             } = this.props,
 
             inLyric = inUnit || inVerseBar,

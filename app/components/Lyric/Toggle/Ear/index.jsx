@@ -49,7 +49,7 @@ LyricToggleEar = ({
                     buttonIdentifier:
                         LYRIC_COLUMN_KEYS[selectedLyricColumnIndex],
                     accessKey: LYRIC_COLUMN_TOGGLE_KEY,
-                    handleButtonClick: handleLyricColumnSelect,
+                    handleButtonClick: handleLyricColumnSelect
                 }}
             />
         </div>

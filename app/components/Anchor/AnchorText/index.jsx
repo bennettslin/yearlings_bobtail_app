@@ -51,7 +51,7 @@ AnchorText = ({
                                         isWikiAnchor
                                         {...{
                                             isAccessed,
-                                            isSelected,
+                                            isSelected
                                         }}
                                     />
                                 )}

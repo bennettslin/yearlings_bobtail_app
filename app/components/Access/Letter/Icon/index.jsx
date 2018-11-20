@@ -18,7 +18,7 @@ import {
     NAVIGATION_UP_KEY,
     NAVIGATION_RIGHT_KEY,
     NAVIGATION_DOWN_KEY
-} from 'constants/access'
+} from '../../../../constants/access'
 
 const propTypes = {
     accessKey: PropTypes.string

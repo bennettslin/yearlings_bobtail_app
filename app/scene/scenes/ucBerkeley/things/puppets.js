@@ -1,6 +1,6 @@
 import {
     GHOST_ODIN_CAMPUS,
-    GHOST_ODIN_DEMONSTRATION,
+    GHOST_ODIN_DEMONSTRATION
 } from '../../../puppetKeys'
 
 const ARRANGEMENTS_MAP = {

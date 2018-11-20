@@ -6,7 +6,7 @@ import {
     GROUND_HSLA,
     FLOOR_HSLA,
     PLATFORM_HSLA,
-    UPHOLSTERY_HSLA,
+    UPHOLSTERY_HSLA
 } from '../../hslaKeys'
 
 /**

@@ -4,7 +4,7 @@ import {
     STREET_HSLA,
     PAVEMENT_HSLA,
     GATE_HSLA,
-    WALL_HSLA,
+    WALL_HSLA
 } from '../../hslaKeys'
 
 import {

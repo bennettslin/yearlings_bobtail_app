@@ -10,7 +10,7 @@ const ARRANGEMENTS_MAP = {
             xWidth: 0.5,
             zHeight: 4
         }
-    },
+    }
 }
 
 export default ARRANGEMENTS_MAP

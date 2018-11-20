@@ -15,7 +15,7 @@ import {
 const INSTANCES_MAP = {
     [HARD_ON_REFLECTION]: HardOnReflection,
     [MISSIONARY_REFLECTION]: MissionaryReflection,
-    [AFTERGLOW_REFLECTION]: AfterglowReflection,
+    [AFTERGLOW_REFLECTION]: AfterglowReflection
 }
 
 const propTypes = {

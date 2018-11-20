@@ -71,7 +71,7 @@ import {
     LIZ_GATE_INSIDE_OPEN,
     LOADING_DOCK_DOOR,
     EL_TORITO_DOOR_LEFT,
-    EL_TORITO_DOOR_RIGHT,
+    EL_TORITO_DOOR_RIGHT
 } from 'scene/doorKeys'
 
 const DOORS_MAP = {

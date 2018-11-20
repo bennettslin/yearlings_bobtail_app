@@ -21,7 +21,7 @@ exports.devServer = ({ host, port } = {}) => ({
 
         // Capture errors in overlay.
         overlay: {
-            errors: true,
+            errors: false, // Was true.
             warnings: false
         },
 

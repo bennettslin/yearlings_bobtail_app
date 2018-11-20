@@ -1,6 +1,6 @@
 import {
     BATHING,
-    SINGING,
+    SINGING
 } from '../../../instanceKeys/youngBennett'
 
 const ARRANGEMENTS_MAP = {

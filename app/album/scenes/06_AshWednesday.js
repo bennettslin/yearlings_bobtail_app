@@ -38,7 +38,7 @@ import {
     SOLICITING_OPINION,
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
-    PIOUS,
+    PIOUS
 } from '../../scene/instanceKeys/bennett'
 
 import {

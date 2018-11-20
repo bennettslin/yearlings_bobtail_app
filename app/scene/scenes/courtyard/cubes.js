@@ -37,7 +37,7 @@ const
                 [C, C, C],
                 [A, C, D],
                 [A, C, D],
-                [C, C, D],
+                [C, C, D]
             ],
             zIndices: [
                 [f],

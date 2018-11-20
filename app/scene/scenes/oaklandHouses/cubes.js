@@ -36,7 +36,7 @@ const
                 [V],
                 [T],
                 [T],
-                [V],
+                [V]
             ],
             zIndices: [
                 [0],

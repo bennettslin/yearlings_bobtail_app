@@ -14,7 +14,7 @@ import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from 'constants/lyrics'
 const verseLinesPropTypes = {
     // From parent.
     isDoubleSpeaker: PropTypes.bool,
-    inVerseBar: PropTypes.bool,
+    inVerseBar: PropTypes.bool
 },
 
 VerseLines = ({

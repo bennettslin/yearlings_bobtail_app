@@ -810,5 +810,5 @@ module.exports = [
         taskName: `GoKart helmets`,
         workedHours: 1,
         neededHours: 1
-    },
+    }
 ]

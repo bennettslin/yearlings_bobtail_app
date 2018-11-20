@@ -63,7 +63,7 @@ class AnnotationCard extends Component {
             } = this.props,
 
             {
-                annotationIndex,
+                annotationIndex
             } = other,
 
             cardObject = getAnnotationCardObject({

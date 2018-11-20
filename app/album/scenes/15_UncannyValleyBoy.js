@@ -127,7 +127,7 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [ELLIOTT_SMITH_POSTER]: true,
+                [ELLIOTT_SMITH_POSTER]: true
             },
             [DOORS]: {
                 [BASEMENT_DOOR]: true

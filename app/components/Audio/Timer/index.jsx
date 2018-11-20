@@ -13,7 +13,7 @@ const mapStateToProps = ({
     songStore: {
         selectedSongIndex,
         selectedTime
-    },
+    }
 }) => ({
     selectedSongIndex,
     selectedTime

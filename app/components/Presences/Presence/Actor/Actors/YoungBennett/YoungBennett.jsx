@@ -12,7 +12,7 @@ import {
     PANICKED,
     FLUSTERED,
     BATHING,
-    SINGING,
+    SINGING
 } from '../../../../../../scene/instanceKeys/youngBennett'
 
 import {

@@ -263,7 +263,7 @@ module.exports = [
                 [LIZ_MATTRESS]: true,
                 [LIZ_PILLOWS]: true,
                 [LIZ_MATTRESS_REFLECTION]: true,
-                [LIZ_PILLOWS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             },
             [PUPPETS]: {
             }

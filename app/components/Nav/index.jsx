@@ -11,7 +11,7 @@ const mapStateToProps = ({
     responsiveStore: {
         isHiddenCarouselNav,
         showSingleBookColumn
-    },
+    }
 }) => ({
     isHiddenCarouselNav,
     showSingleBookColumn

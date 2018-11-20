@@ -3971,5 +3971,5 @@ module.exports = [
         taskName: `Change all files to folders with index and style files.`,
         workedHours: 10,
         neededHours: 10
-    },
+    }
 ]

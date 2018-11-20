@@ -21,7 +21,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 3,
             zOffset: 2
         }
-    },
+    }
 }
 
 export default ARRANGEMENTS_MAP

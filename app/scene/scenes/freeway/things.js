@@ -1,7 +1,7 @@
 import {
     BACKDROPS,
     CUTOUTS,
-    FIXTURES,
+    FIXTURES
 } from 'constants/scene'
 
 import ARRANGEMENTS_BACKDROPS from './things/backdrops'

@@ -38,7 +38,7 @@ AdminNavItem.propTypes = {
     // From parent.
     index: PropTypes.number,
     isToggle: PropTypes.bool,
-    hasSelectedSong: PropTypes.bool,
+    hasSelectedSong: PropTypes.bool
 }
 
 export default connect(mapStateToProps)(AdminNavItem)

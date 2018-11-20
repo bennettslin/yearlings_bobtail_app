@@ -12,12 +12,12 @@ const mapStateToProps = ({
     selectedAccessIndex,
     songStore: { selectedSongIndex },
     selectedDotsIndex,
-    accessedNavSongIndex,
+    accessedNavSongIndex
 }) => ({
     selectedAccessIndex,
     selectedSongIndex,
     selectedDotsIndex,
-    accessedNavSongIndex,
+    accessedNavSongIndex
 })
 
 class NavButtonIndexed extends Component {

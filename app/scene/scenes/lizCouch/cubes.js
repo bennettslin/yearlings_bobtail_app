@@ -46,7 +46,7 @@ const
             [C],
             [C, C, C, C, C, C, C, C, C, C, C, W],
             [C, C, C, C, C, C, C, C, C, C, C, W],
-            [C],
+            [C]
         ],
         zIndices: [
             [k],
@@ -54,7 +54,7 @@ const
             [g],
             [g, g, g, g, g, g, g, g, g, g, g, d],
             [g, g, g, g, g, g, g, g, g, g, g, d],
-            [g],
+            [g]
         ]
     },
     LIZ_COUCH_CUBES = {

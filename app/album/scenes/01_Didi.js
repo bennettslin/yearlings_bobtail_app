@@ -175,7 +175,7 @@ module.exports = [
                 [SAFEWAY_BAG]: true
             },
             [FLATS]: {
-                [NOHO_SCHOOLHOUSE]: true,
+                [NOHO_SCHOOLHOUSE]: true
             },
             [PANELS]: {
                 [ESTHER_SPEECH_PANEL]: true

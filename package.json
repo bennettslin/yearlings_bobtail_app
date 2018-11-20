@@ -1,22 +1,36 @@
 {
   "name": "yearlings_bobtail_app",
   "version": "1.0.0",
-  "description": "An interface for the Bobtail Yearling's album Yearling's Bobtail.",
+  "description": "Website for the Bobtail Yearlings album Yearling's Bobtail.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production && aws s3 sync build/ s3://yearlingsbobtail",
-    "start": "webpack-dev-server --mode development"
+    "lint": "eslint --ext js,jsx app",
+    "lint:fix": "eslint --ext js,jsx --fix app",
+    "start": "webpack-dev-server --mode development",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/bennettslin/yearlings_bobtail_app.git"
   },
-  "author": "",
+  "author": "Bobtail Yearlings",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bennettslin/yearlings_bobtail_app/issues"
   },
   "homepage": "https://github.com/bennettslin/yearlings_bobtail_app",
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/app/utils/unitTestSetup"
+    ]
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "pre-push": [
+    "test"
+  ],
   "dependencies": {
     "classnames": "^2.2.5",
     "date-fns": "^1.29.0",
@@ -49,17 +63,21 @@
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^1.0.0",
     "cssnano": "^4.0.2",
-    "enzyme": "^3.1.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.1.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
     "jsdom": "^11.2.0",
     "node-sass": "^4.9.2",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-loader": "^2.0.6",
+    "pre-commit": "^1.2.2",
+    "pre-push": "^0.1.1",
     "react-test-renderer": "^16.1.1",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^7.0.3",

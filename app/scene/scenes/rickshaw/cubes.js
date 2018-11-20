@@ -24,7 +24,7 @@ const
                 [N, N, N, N, N, N, T],
                 [N, N, N, N, T],
                 [N, N, T],
-                [N, T],
+                [N, T]
             ],
             zIndices: [
                 [0]

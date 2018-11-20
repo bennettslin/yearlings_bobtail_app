@@ -72,7 +72,7 @@ class Annotation extends Component {
             } = this.props,
             {
                 annotationIndex,
-                isSelected,
+                isSelected
             } = other,
 
             /**

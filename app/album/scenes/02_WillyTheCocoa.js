@@ -245,14 +245,14 @@ module.exports = [
                 [BEDROOM_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TINTIN_POSTER]: true,
+                [TINTIN_POSTER]: true
             },
             [FIXTURES]: {
                 [BEETHOVEN_BUST]: true,
                 [CHRISTOPHER_LETTERS]: true
             },
             [DOORS]: {
-                [BEDROOM_BLINDS_OPEN]: true,
+                [BEDROOM_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true,

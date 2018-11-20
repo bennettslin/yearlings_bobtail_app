@@ -7,7 +7,7 @@ import cx from 'classnames'
 import AccessField from './Field'
 import AccessIcon from './Icon'
 
-import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
+import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 
 const accessIconPropTypes = {
     // From parent.

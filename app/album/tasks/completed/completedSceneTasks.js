@@ -28,5 +28,5 @@ module.exports = [
         task: 'porch',
         workedHours: 1,
         neededHours: 1
-    },
+    }
 ]

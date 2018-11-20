@@ -59,7 +59,7 @@ import {
     FLIRTING,
     CARRYING,
     MINGLING,
-    WAITING,
+    WAITING
 } from '../../scene/instanceKeys/songs'
 
 import {

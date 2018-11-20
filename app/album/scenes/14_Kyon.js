@@ -228,7 +228,7 @@ module.exports = [
             },
             [BUBBLES]: {
                 [KHARI_ATTACK_SPEECH]: true,
-                [LIZ_DEFENCE_SPEECH]: true,
+                [LIZ_DEFENCE_SPEECH]: true
             },
             [DOORS]: {
                 [LIZ_BLINDS_OPEN]: true,

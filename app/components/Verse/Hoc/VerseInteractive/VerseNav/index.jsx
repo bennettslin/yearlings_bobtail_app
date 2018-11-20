@@ -40,7 +40,7 @@ class VerseNav extends Component {
 
     render() {
         const {
-                isInteractivated,
+                isInteractivated
 
             } = this.props,
 

@@ -345,7 +345,7 @@ module.exports = [
             [DOORS]: {
                 [BENNETT_BLINDS_OPEN]: true,
                 [BENNETT_GATE_SIDE_OPEN]: true,
-                [BENNETT_DOOR_INSIDE]: true,
+                [BENNETT_DOOR_INSIDE]: true
             },
             [FURNITURES]: {
                 [LIGHT_SWITCH]: true,
@@ -385,7 +385,7 @@ module.exports = [
             },
             [DOORS]: {
                 [BENNETT_BLINDS_OPEN]: true,
-                [BENNETT_DOOR_INSIDE_OPEN]: true,
+                [BENNETT_DOOR_INSIDE_OPEN]: true
             },
             [FURNITURES]: {
                 [LIGHT_SWITCH]: true,
@@ -495,7 +495,7 @@ module.exports = [
                 [LIZ_MATTRESS]: true,
                 [LIZ_PILLOWS]: true,
                 [LIZ_MATTRESS_REFLECTION]: true,
-                [LIZ_PILLOWS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,
@@ -534,7 +534,7 @@ module.exports = [
                 [LIZ_MATTRESS]: true,
                 [LIZ_PILLOWS]: true,
                 [LIZ_MATTRESS_REFLECTION]: true,
-                [LIZ_PILLOWS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,
@@ -574,7 +574,7 @@ module.exports = [
                 [LIZ_MATTRESS]: true,
                 [LIZ_PILLOWS]: true,
                 [LIZ_MATTRESS_REFLECTION]: true,
-                [LIZ_PILLOWS_REFLECTION]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,

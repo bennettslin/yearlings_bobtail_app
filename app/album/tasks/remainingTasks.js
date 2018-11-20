@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Figure out why build breaks. Code splitting?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Fix bug where popup annotation buttons are hoverable in mobile.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
         workedHours: 0,
         neededHours: 3

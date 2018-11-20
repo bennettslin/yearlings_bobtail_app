@@ -169,7 +169,7 @@ const
                 [k, k, d, d, k],
                 [k, d, k],
                 [k]
-            ],
+            ]
         },
         floor: {
             hslaColours: [

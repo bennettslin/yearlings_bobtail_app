@@ -139,7 +139,7 @@ module.exports = [
                 [BEDROOM_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [MICHAEL_JACKSON_POSTER]: true,
+                [MICHAEL_JACKSON_POSTER]: true
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
@@ -175,7 +175,7 @@ module.exports = [
                 [BEDROOM_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [MICHAEL_JACKSON_POSTER]: true,
+                [MICHAEL_JACKSON_POSTER]: true
             },
             [FIXTURES]: {
                 [CAPTAIN_BED_LAMP]: true,
@@ -210,7 +210,7 @@ module.exports = [
                 [BEDROOM_BUS_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [MICHAEL_JACKSON_POSTER]: true,
+                [MICHAEL_JACKSON_POSTER]: true
             },
             [DOORS]: {
                 [BEDROOM_BLINDS_OPEN]: true
@@ -251,7 +251,7 @@ module.exports = [
                 [DOGS_SKETCHBOOK]: true
             },
             [CUTOUTS]: {
-                [MICHAEL_JACKSON_POSTER]: true,
+                [MICHAEL_JACKSON_POSTER]: true
             },
             [DOORS]: {
                 [BEDROOM_BLINDS]: true
@@ -434,7 +434,7 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [CORKBOARD]: true,
+                [CORKBOARD]: true
             },
             [DOORS]: {
                 [PRINCIPAL_DOOR]: true

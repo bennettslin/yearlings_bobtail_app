@@ -42,7 +42,7 @@ AnnotationTitle = ({
             ...!isShadow && {
                 // This includes transition animation, so it's always applied.
                 'bgColour__annotation': true,
-                'bgColour__annotation__selected': isSelected,
+                'bgColour__annotation__selected': isSelected
             },
 
             ...isShadow && {

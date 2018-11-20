@@ -16,7 +16,7 @@ const mapStateToProps = ({
     renderStore: { canMainRender },
     renderedStore: { renderedSongIndex },
     responsiveStore: { isScoresTipsInMain },
-    selectedTipsIndex,
+    selectedTipsIndex
 }) => ({
     canMainRender,
     renderedSongIndex,

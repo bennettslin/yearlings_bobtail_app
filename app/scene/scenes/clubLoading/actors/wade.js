@@ -1,5 +1,5 @@
 import {
-    MINGLING,
+    MINGLING
 } from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
