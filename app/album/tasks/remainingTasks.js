@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Add unit tests`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
         taskName: `Figure out why build breaks. Code splitting?`,
         workedHours: 0,
         neededHours: 3
@@ -18,11 +23,6 @@ module.exports = [
         taskName: `Fix bug where overview toggle isn't hoverable in mobile. Might need lyric shown to repro.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Add unit testing.`,
-        workedHours: 0,
-        neededHours: 5
     },
     {
         taskName: `Refactor event handling! Do after unit tests are in place.`,

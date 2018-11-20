@@ -46,8 +46,10 @@ class Tips extends Component {
 
     _handleTipsToggle = (e) => {
         // Prevent toggle from firing when not shown.
-        const { selectedTipsIndex,
-                handleTipsToggle } = this.props
+        const {
+            selectedTipsIndex,
+            handleTipsToggle
+        } = this.props
 
         if (TIPS_OPTIONS[selectedTipsIndex] === SHOWN) {
             handleTipsToggle(e)
