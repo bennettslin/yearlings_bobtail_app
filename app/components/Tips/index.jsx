@@ -55,9 +55,11 @@ class Tips extends Component {
     }
 
     render() {
-        const { renderedSongIndex,
+        const {
+                renderedSongIndex,
                 selectedTipsIndex,
-                isScoresTipsInMain } = this.props,
+                isScoresTipsInMain
+            } = this.props,
 
             tipText = getSongTip(renderedSongIndex),
             isEnabled = TIPS_OPTIONS[selectedTipsIndex] === SHOWN
@@ -74,15 +76,19 @@ class Tips extends Component {
                     {isScoresTipsInMain && (
                         <div className="Tips__toggleFloatContainer">
                             <TipsToggle
-                                isEnabled={isEnabled}
-                                handleTipsToggle={this._handleTipsToggle}
+                                {...{
+                                    isEnabled,
+                                    handleTipsToggle: this._handleTipsToggle
+                                }}
                             />
                         </div>
                     )}
 
                     {tipText && (
                         <Texts
-                            text={tipText}
+                            {...{
+                                text: tipText
+                            }}
                         />
                     )}
 

@@ -86,15 +86,17 @@ class Slider extends Component {
 
         return (
             <div
-                ref={this._setSliderRef}
-                className={cx(
-                    'Slider',
-                    {
-                        'parent__shown': canVerseRender && isShown
-                    }
-                )}
-                onMouseDown={this._handleTouchDown}
-                onTouchStart={this._handleTouchDown}
+                {...{
+                    ref: this._setSliderRef,
+                    className: cx(
+                        'Slider',
+                        {
+                            'parent__shown': canVerseRender && isShown
+                        }
+                    ),
+                    onMouseDown: this._handleTouchDown,
+                    onTouchStart: this._handleTouchDown
+                }}
             >
                 <SliderTimes />
                 <SliderStanzas />

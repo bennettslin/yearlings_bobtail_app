@@ -5,9 +5,19 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Add unit testing.`,
+        taskName: `Fix bug where overview toggle isn't hoverable in mobile. Might need lyric shown to repro.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Add unit testing.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Refactor event handling! Do after unit tests are in place.`,
+        workedHours: 0,
+        neededHours: 30
     },
     {
         taskName: `Wire on puppets and others.`,

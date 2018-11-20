@@ -68,15 +68,17 @@ class Stage extends Component {
                 'position__mainColumn'
             )}>
                 <div
-                    className={cx(
-                        'Stage__aspectRatioContainer',
-                        'absoluteFullContainer'
-                    )}
-                    style={{
-                        top: `${stageTop}px`,
-                        left: `${stageLeft}px`,
-                        width: `${stageWidth}px`,
-                        height: `${stageHeight}px`
+                    {...{
+                        className: cx(
+                            'Stage__aspectRatioContainer',
+                            'absoluteFullContainer'
+                        ),
+                        style: {
+                            top: `${stageTop}px`,
+                            left: `${stageLeft}px`,
+                            width: `${stageWidth}px`,
+                            height: `${stageHeight}px`
+                        }
                     }}
                 >
                     {children}

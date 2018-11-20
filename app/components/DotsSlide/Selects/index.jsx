@@ -42,11 +42,13 @@ DotsSlideSelects = ({
 
     return (
         <div
-            className={cx(
-                'DotsSlideSelects'
-            )}
-            onClick={handleContainerClick}
-            onTouchStart={handleContainerClick}
+            {...{
+                className: cx(
+                    'DotsSlideSelects'
+                ),
+                onClick: handleContainerClick,
+                onTouchStart: handleContainerClick
+            }}
         >
             {/* TODO: Can this not be duplicated? */}
             <div
@@ -61,10 +63,12 @@ DotsSlideSelects = ({
                     return (
                         <DotsSlideSelect {...other}
                             key={firstHalfIndex}
-                            dotIndex={firstHalfIndex}
-                            dotKey={dotKey}
-                            isSelected={dotKeys[dotKey]}
-                            isAccessed={isAccessed}
+                            {...{
+                                dotIndex: firstHalfIndex,
+                                dotKey,
+                                isSelected: dotKeys[dotKey],
+                                isAccessed
+                            }}
                         />
                     )
                 })}
@@ -81,10 +85,12 @@ DotsSlideSelects = ({
                     return (
                         <DotsSlideSelect {...other}
                             key={index}
-                            dotIndex={secondHalfIndex}
-                            dotKey={dotKey}
-                            isSelected={dotKeys[dotKey]}
-                            isAccessed={isAccessed}
+                            {...{
+                                dotIndex: secondHalfIndex,
+                                dotKey,
+                                isSelected: dotKeys[dotKey],
+                                isAccessed
+                            }}
                         />
                     )
                 })}

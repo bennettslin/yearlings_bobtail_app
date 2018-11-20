@@ -71,10 +71,12 @@ class DotsSlide extends Component {
         return (
             <div className="DotsSlide">
                 <DotsSlideSelects {...other}
-                    dotKeys={selectedDotKeys}
-                    handleContainerClick={this._onContainerClick}
-                    hasInteractivatedDotText={hasInteractivatedDotText}
-                    setHasInteractivatedDotText={this._setHasInteractivatedDotText}
+                    {...{
+                        dotKeys: selectedDotKeys,
+                        handleContainerClick: this._onContainerClick,
+                        hasInteractivatedDotText: hasInteractivatedDotText,
+                        setHasInteractivatedDotText: this._setHasInteractivatedDotText
+                    }}
                 />
             </div>
         )
