@@ -11,19 +11,23 @@ import { updateResponsiveStore } from 'flux/actions/responsive'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
-    resizeWindow,
     getShowOneOfTwoLyricColumns,
-    getIsHeightlessLyricColumn,
-    getIsHiddenCarouselNav,
     getIsLyricExpandable,
-    getIsMobileWiki,
     getIsScoreExpandable,
-    getShowSingleBookColumn,
-    getShowShrunkNavIcon,
-    getIsScoresTipsInMain,
     getIsTwoRowMenu
 } from 'helpers/responsiveHelper'
-import { getStageCoordinates } from 'helpers/stageHelper'
+import {
+    getIsHeightlessLyricColumn,
+    getIsHiddenCarouselNav
+} from './helpers/hidden'
+import {
+    getShowShrunkNavIcon,
+    getShowSingleBookColumn
+} from './helpers/nav'
+import { getIsScoresTipsInMain } from './helpers/scoresTips'
+import { getIsMobileWiki } from './helpers/wiki'
+import { resizeWindow } from './helpers/window'
+import { getStageCoordinates } from './helpers/stage'
 
 class WindowManager extends Component {
 
@@ -47,7 +51,6 @@ class WindowManager extends Component {
     }
 
     componentDidMount() {
-
         // Then watch for any subsequent window resize.
         window.onresize = debounce(this._windowResize, 25)
     }
@@ -104,12 +107,55 @@ class WindowManager extends Component {
          * Deselect selected annotation if not in new shown column. Do it here,
          * before we tell Redux to update the prop.
          */
-        if (showOneOfTwoLyricColumns && !this.props.showOneOfTwoLyricColumns) {
+        if (
+            showOneOfTwoLyricColumns &&
+            !this.props.showOneOfTwoLyricColumns
+        ) {
             this.props.deselectAnnotation({
                 deviceIndex
             })
         }
 
+        this._updateDeviceStore({
+            deviceIndex,
+            windowHeight,
+            windowWidth,
+            isHeightlessLyricColumn
+        })
+
+        this._updateDeviceStore({
+            deviceIndex,
+            windowHeight,
+            windowWidth,
+            isHeightlessLyricColumn,
+            showOneOfTwoLyricColumns
+        })
+
+        /**
+         * Force collapse of lyric in state if not expandable, or if heightless
+         * lyric.
+         */
+        if (
+            !isLyricExpandable ||
+            isHeightlessLyricColumn
+        ) {
+            this.props.selectLyricExpand(false)
+        }
+
+        // Force collapse of score in state if not expandable.
+        if (!getIsScoreExpandable(deviceIndex)) {
+            this.props.selectScore(false)
+        }
+
+        return deviceIndex
+    }
+
+    _updateDeviceStore({
+        deviceIndex,
+        windowHeight,
+        windowWidth,
+        isHeightlessLyricColumn
+    }) {
         this.props.updateDeviceStore({
             deviceIndex,
             windowWidth,
@@ -121,7 +167,15 @@ class WindowManager extends Component {
                 isHeightlessLyricColumn
             })
         })
+    }
 
+    _updateResponsiveStore({
+        deviceIndex,
+        windowHeight,
+        windowWidth,
+        isHeightlessLyricColumn,
+        showOneOfTwoLyricColumns
+    }) {
         this.props.updateResponsiveStore({
             isHeightlessLyricColumn,
             showOneOfTwoLyricColumns,
@@ -151,21 +205,6 @@ class WindowManager extends Component {
                 windowWidth
             })
         })
-
-        /**
-         * Force collapse of lyric in state if not expandable, or if heightless
-         * lyric.
-         */
-        if (!isLyricExpandable || isHeightlessLyricColumn) {
-            this.props.selectLyricExpand(false)
-        }
-
-        // Force collapse of score in state if not expandable.
-        if (!getIsScoreExpandable(deviceIndex)) {
-            this.props.selectScore(false)
-        }
-
-        return deviceIndex
     }
 
     _prepareForWindowResizeUnrender() {

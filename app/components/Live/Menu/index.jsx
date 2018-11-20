@@ -12,7 +12,7 @@ import Audio from '../../Audio'
 import ScoresTips from '../../ScoresTips'
 import TitleToggle from '../../Title/Toggle'
 
-import { getMenuMarginInOverlay } from 'helpers/responsiveHelper'
+import { getMenuMarginInOverlay } from './helper'
 
 const mapStateToProps = ({
     deviceStore: { windowWidth }

@@ -12,7 +12,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     getLyricTopAlign,
     getCarouselLeftAlign
-} from 'helpers/responsiveHelper'
+} from './helper'
 
 import {
     CAROUSEL_SCROLL,
