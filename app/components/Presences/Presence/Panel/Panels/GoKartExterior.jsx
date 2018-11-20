@@ -13,7 +13,7 @@ const GoKartExterior = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GoKartExterior = ({
     )
 }
 
-GoKartExterior.propTypes = propTypes;
+GoKartExterior.propTypes = propTypes
 
 export default GoKartExterior

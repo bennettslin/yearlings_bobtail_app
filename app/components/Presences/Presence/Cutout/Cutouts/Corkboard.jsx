@@ -13,7 +13,7 @@ const Corkboard = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Corkboard = ({
     )
 }
 
-Corkboard.propTypes = propTypes;
+Corkboard.propTypes = propTypes
 
 export default Corkboard

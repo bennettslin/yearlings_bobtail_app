@@ -13,7 +13,7 @@ const MischievousBanjo = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const MischievousBanjo = ({
     )
 }
 
-MischievousBanjo.propTypes = propTypes;
+MischievousBanjo.propTypes = propTypes
 
 export default MischievousBanjo

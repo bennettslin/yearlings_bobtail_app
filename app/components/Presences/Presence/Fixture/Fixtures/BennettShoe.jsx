@@ -13,7 +13,7 @@ const BennettShoe = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettShoe = ({
     )
 }
 
-BennettShoe.propTypes = propTypes;
+BennettShoe.propTypes = propTypes
 
 export default BennettShoe

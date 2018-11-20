@@ -8,22 +8,22 @@ import OverviewPopup from '../../Popups/Overview'
 
 const propTypes = {
     // From parent.
-    overviewPopupHandlers: PropTypes.object.isRequired
-},
+        overviewPopupHandlers: PropTypes.object.isRequired
+    },
 
-OverviewLogue = ({
+    OverviewLogue = ({
 
-    overviewPopupHandlers
+        overviewPopupHandlers
 
-}) => (
-    <div className={cx(
-        'OverviewLogue',
-        'position__lyricColumn__desktop',
-        'topHeight__overlayPopups__mobile'
-    )}>
-        <OverviewPopup {...overviewPopupHandlers} />
-    </div>
-)
+    }) => (
+        <div className={cx(
+            'OverviewLogue',
+            'position__lyricColumn__desktop',
+            'topHeight__overlayPopups__mobile'
+        )}>
+            <OverviewPopup {...overviewPopupHandlers} />
+        </div>
+    )
 
 OverviewLogue.propTypes = propTypes
 

@@ -13,7 +13,7 @@ const Recyclables = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Recyclables = ({
     )
 }
 
-Recyclables.propTypes = propTypes;
+Recyclables.propTypes = propTypes
 
 export default Recyclables

@@ -13,7 +13,7 @@ const ElCerritoFar = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ElCerritoFar = ({
     )
 }
 
-ElCerritoFar.propTypes = propTypes;
+ElCerritoFar.propTypes = propTypes
 
 export default ElCerritoFar

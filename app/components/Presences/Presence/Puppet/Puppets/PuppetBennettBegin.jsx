@@ -13,7 +13,7 @@ const PuppetBennettBegin = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PuppetBennettBegin = ({
     )
 }
 
-PuppetBennettBegin.propTypes = propTypes;
+PuppetBennettBegin.propTypes = propTypes
 
 export default PuppetBennettBegin

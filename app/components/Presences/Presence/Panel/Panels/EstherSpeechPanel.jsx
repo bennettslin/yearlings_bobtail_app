@@ -13,7 +13,7 @@ const EstherSpeechPanel = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const EstherSpeechPanel = ({
     )
 }
 
-EstherSpeechPanel.propTypes = propTypes;
+EstherSpeechPanel.propTypes = propTypes
 
 export default EstherSpeechPanel

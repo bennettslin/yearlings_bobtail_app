@@ -23,41 +23,41 @@ import {
 } from 'constants/dots'
 
 const DOT_ICONS_MAP = {
-        [AFTERWORD]: AfterwordIcon,
-        [BACKSTORY]: BackstoryIcon,
-        [NARRATIVE]: NarrativeIcon,
-        [OBSERVATION]: ObservationIcon,
-        [PUN]: PunIcon,
-        [REFERENCE]: ReferenceIcon,
-        [SONGWRITING]: SongwritingIcon,
-        [WORMHOLE]: WormholeIcon
-    }
+    [AFTERWORD]: AfterwordIcon,
+    [BACKSTORY]: BackstoryIcon,
+    [NARRATIVE]: NarrativeIcon,
+    [OBSERVATION]: ObservationIcon,
+    [PUN]: PunIcon,
+    [REFERENCE]: ReferenceIcon,
+    [SONGWRITING]: SongwritingIcon,
+    [WORMHOLE]: WormholeIcon
+}
 
 const propTypes = {
     // From parent.
-    isAccessed: PropTypes.bool,
-    isSelected: PropTypes.bool,
-    isDeselected: PropTypes.bool,
-    dotKey: PropTypes.string.isRequired
-},
+        isAccessed: PropTypes.bool,
+        isSelected: PropTypes.bool,
+        isDeselected: PropTypes.bool,
+        dotKey: PropTypes.string.isRequired
+    },
 
-DotIcon = ({
+    DotIcon = ({
 
-    isAccessed,
+        isAccessed,
 
-    // Applies to selectable dots.
-    isSelected,
+        // Applies to selectable dots.
+        isSelected,
 
-    // Applies to slide dots.
-    isDeselected,
+        // Applies to slide dots.
+        isDeselected,
 
-    dotKey
+        dotKey
 
-}) => {
+    }) => {
 
-    const IconComponent = DOT_ICONS_MAP[dotKey]
+        const IconComponent = DOT_ICONS_MAP[dotKey]
 
-    return (
+        return (
             <IconComponent
                 className={cx(
                     'DotIcon',
@@ -71,8 +71,8 @@ DotIcon = ({
                     isDeselected && `DotIcon__dotsSlide__deselected`
                 )}
             />
-    )
-}
+        )
+    }
 
 DotIcon.propTypes = propTypes
 

@@ -13,7 +13,7 @@ const Tantrum = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Tantrum = ({
     )
 }
 
-Tantrum.propTypes = propTypes;
+Tantrum.propTypes = propTypes
 
 export default Tantrum

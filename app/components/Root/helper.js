@@ -7,7 +7,7 @@ export const getSingleShownLyricColumnKey = ({
 }) => {
     return showOneOfTwoLyricColumns
         && selectedLyricColumnIndex >= 0 ?
-            LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
+        LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
 }
 
 export const getShowOverlay = ({

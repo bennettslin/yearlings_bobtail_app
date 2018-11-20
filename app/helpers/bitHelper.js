@@ -62,8 +62,8 @@ export const convertBitNumberToTrueFalseKeys = ({
     for (let index = keysArray.length - 1; index >= 0; index--) {
         // Start from end.
         const key = keysArray[index],
-        powerNumber = getTwoToThePowerOfN(index),
-        isTrue = bitNumber >= powerNumber
+            powerNumber = getTwoToThePowerOfN(index),
+            isTrue = bitNumber >= powerNumber
 
         trueFalseObject[key] = isTrue
 
@@ -82,10 +82,10 @@ export const getValueInBitNumber = ({
 }) => {
     // Convert the bit number to an object whose values are true or false.
     const trueFalseObject = convertBitNumberToTrueFalseKeys({
-            keysArray,
-            keysCount,
-            bitNumber
-        })
+        keysArray,
+        keysCount,
+        bitNumber
+    })
 
     return trueFalseObject[key]
 }
@@ -99,10 +99,10 @@ export const setNewValueInBitNumber = ({
 }) => {
     // First convert the bit number to an object whose values true or false.
     const trueFalseObject = convertBitNumberToTrueFalseKeys({
-            keysArray,
-            keysCount,
-            bitNumber
-        })
+        keysArray,
+        keysCount,
+        bitNumber
+    })
 
     // Set the value in this object.
     trueFalseObject[key] = value

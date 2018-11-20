@@ -13,7 +13,7 @@ const Snacking = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Snacking = ({
     )
 }
 
-Snacking.propTypes = propTypes;
+Snacking.propTypes = propTypes
 
 export default Snacking

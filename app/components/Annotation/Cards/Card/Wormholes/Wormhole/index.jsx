@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import cx from 'classnames';
+import cx from 'classnames'
 
 import Texts from '../../../../../Texts'
 import Button from '../../../../../Button'
@@ -89,23 +89,23 @@ class AnnotationWormhole extends Component {
     render() {
 
         const {
-            isAccessed,
-            isSelected
-        } = this.props,
+                isAccessed,
+                isSelected
+            } = this.props,
 
             wormholeObject = this._getWormholeObject(),
 
             { songIndex,
-              annotationIndex,
-              verseIndex,
-              columnIndex,
+                annotationIndex,
+                verseIndex,
+                columnIndex,
 
-              // Default if no wormhole prefix.
-              wormholePrefix = 'wormhole to' } = wormholeObject,
+                // Default if no wormhole prefix.
+                wormholePrefix = 'wormhole to' } = wormholeObject,
 
-              songTitle = getSongTitle({ songIndex }),
-              verseObject = getVerseObject(songIndex, verseIndex),
-              columnKey = LYRIC_COLUMN_KEYS[columnIndex],
+            songTitle = getSongTitle({ songIndex }),
+            verseObject = getVerseObject(songIndex, verseIndex),
+            columnKey = LYRIC_COLUMN_KEYS[columnIndex],
 
             text =
                 verseObject[LYRIC] ||

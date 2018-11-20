@@ -13,7 +13,7 @@ const LizDefenceSpeech = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizDefenceSpeech = ({
     )
 }
 
-LizDefenceSpeech.propTypes = propTypes;
+LizDefenceSpeech.propTypes = propTypes
 
 export default LizDefenceSpeech

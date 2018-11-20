@@ -13,7 +13,7 @@ const WaitingRoomDoorOpen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const WaitingRoomDoorOpen = ({
     )
 }
 
-WaitingRoomDoorOpen.propTypes = propTypes;
+WaitingRoomDoorOpen.propTypes = propTypes
 
 export default WaitingRoomDoorOpen

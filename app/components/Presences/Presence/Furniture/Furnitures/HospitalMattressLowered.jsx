@@ -13,7 +13,7 @@ const HospitalMattressLowered = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const HospitalMattressLowered = ({
     )
 }
 
-HospitalMattressLowered.propTypes = propTypes;
+HospitalMattressLowered.propTypes = propTypes
 
 export default HospitalMattressLowered

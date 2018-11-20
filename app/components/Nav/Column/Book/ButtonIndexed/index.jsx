@@ -53,7 +53,7 @@ class NavButtonIndexed extends Component {
                 selectedDotsIndex,
                 accessedNavSongIndex,
 
-            ...other } = this.props,
+                ...other } = this.props,
 
             isSelected = selectedSongIndex === songIndex,
 

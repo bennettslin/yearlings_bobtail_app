@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 
 import Scene from '../Scene'
 import Stage from '../Stage'
-import Proscenium from '../Stage/Proscenium';
+import Proscenium from '../Stage/Proscenium'
 
 import Wall from './Wall'
 import Ceiling from './Ceiling'

@@ -13,86 +13,86 @@ import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from 'constants/lyrics'
 
 const verseLinesPropTypes = {
     // From parent.
-    isDoubleSpeaker: PropTypes.bool,
-    inVerseBar: PropTypes.bool
-},
+        isDoubleSpeaker: PropTypes.bool,
+        inVerseBar: PropTypes.bool
+    },
 
-VerseLines = ({
+    VerseLines = ({
 
-    isDoubleSpeaker,
+        isDoubleSpeaker,
 
-...other }) => {
+        ...other }) => {
 
-    const { inVerseBar } = other
+        const { inVerseBar } = other
 
-    return isDoubleSpeaker ? (
+        return isDoubleSpeaker ? (
 
         // Only wrap in this parent container if it's a doublespeaker line.
-        <div className={cx(
-            'VerseLines',
+            <div className={cx(
+                'VerseLines',
 
-            // Allow anchor in a verse line to know it's in a cursor verse.
-            !inVerseBar && 'sibling__verseCursor',
+                // Allow anchor in a verse line to know it's in a cursor verse.
+                !inVerseBar && 'sibling__verseCursor',
 
-            'fontSize__lyricMultipleColumns'
-        )}>
-            {LYRIC_COLUMN_KEYS.map((doublespeakerKey, index) => (
-                <VerseLinesChild {...other}
-                    key={index}
-                    doublespeakerKey={doublespeakerKey}
-                />
-            ))}
-        </div>
+                'fontSize__lyricMultipleColumns'
+            )}>
+                {LYRIC_COLUMN_KEYS.map((doublespeakerKey, index) => (
+                    <VerseLinesChild {...other}
+                        key={index}
+                        doublespeakerKey={doublespeakerKey}
+                    />
+                ))}
+            </div>
 
-    ) : (
-        <VerseLinesChild {...other} />
-    )
-},
+        ) : (
+            <VerseLinesChild {...other} />
+        )
+    },
 
-verseLinesChildPropTypes = {
+    verseLinesChildPropTypes = {
     // From parent.
-    verseObject: PropTypes.object.isRequired,
-    doublespeakerKey: PropTypes.string,
-    isTitle: PropTypes.bool
-},
+        verseObject: PropTypes.object.isRequired,
+        doublespeakerKey: PropTypes.string,
+        isTitle: PropTypes.bool
+    },
 
-VerseLinesChild = (props) => {
+    VerseLinesChild = (props) => {
 
-    const {
-            verseObject,
-            doublespeakerKey,
-            isTitle,
-            ...other
-        } = props,
+        const {
+                verseObject,
+                doublespeakerKey,
+                isTitle,
+                ...other
+            } = props,
 
-        lyricsLineProps = {
-            text:
+            lyricsLineProps = {
+                text:
                 verseObject[doublespeakerKey]
                 || verseObject[LYRIC]
                 || verseObject[CENTRE],
 
-            isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
-            isVerseEndingSpan: verseObject.isVerseEndingSpan
+                isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
+                isVerseEndingSpan: verseObject.isVerseEndingSpan
+            }
+
+        let columnKey = LYRIC
+
+        if (doublespeakerKey) {
+            columnKey = doublespeakerKey
+
+        } else if (isTitle) {
+            columnKey = TITLE
+
+        } else if (verseObject[CENTRE]) {
+            columnKey = CENTRE
         }
 
-    let columnKey = LYRIC
+        lyricsLineProps.columnKey = columnKey
 
-    if (doublespeakerKey) {
-        columnKey = doublespeakerKey
-
-    } else if (isTitle) {
-        columnKey = TITLE
-
-    } else if (verseObject[CENTRE]) {
-        columnKey = CENTRE
+        return (
+            <VerseLine {...other} {...lyricsLineProps} />
+        )
     }
-
-    lyricsLineProps.columnKey = columnKey
-
-    return (
-        <VerseLine {...other} {...lyricsLineProps} />
-    )
-}
 
 VerseLines.propTypes = verseLinesPropTypes
 

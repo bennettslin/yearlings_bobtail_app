@@ -35,7 +35,7 @@ const Anita = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -49,6 +49,6 @@ const Anita = ({
     )
 }
 
-Anita.propTypes = propTypes;
+Anita.propTypes = propTypes
 
 export default Anita

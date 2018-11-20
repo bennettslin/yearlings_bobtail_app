@@ -13,7 +13,7 @@ const ShaneBuying = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ShaneBuying = ({
     )
 }
 
-ShaneBuying.propTypes = propTypes;
+ShaneBuying.propTypes = propTypes
 
 export default ShaneBuying

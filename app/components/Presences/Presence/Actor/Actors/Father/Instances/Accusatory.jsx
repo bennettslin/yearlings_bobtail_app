@@ -13,7 +13,7 @@ const Accusatory = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Accusatory = ({
     )
 }
 
-Accusatory.propTypes = propTypes;
+Accusatory.propTypes = propTypes
 
 export default Accusatory

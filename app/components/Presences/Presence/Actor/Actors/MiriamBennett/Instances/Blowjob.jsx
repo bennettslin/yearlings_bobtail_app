@@ -13,7 +13,7 @@ const Blowjob = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Blowjob = ({
     )
 }
 
-Blowjob.propTypes = propTypes;
+Blowjob.propTypes = propTypes
 
 export default Blowjob

@@ -13,7 +13,7 @@ const Sheepish = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Sheepish = ({
     )
 }
 
-Sheepish.propTypes = propTypes;
+Sheepish.propTypes = propTypes
 
 export default Sheepish

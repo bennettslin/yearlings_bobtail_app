@@ -35,7 +35,7 @@ const Esther = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -49,6 +49,6 @@ const Esther = ({
     )
 }
 
-Esther.propTypes = propTypes;
+Esther.propTypes = propTypes
 
 export default Esther

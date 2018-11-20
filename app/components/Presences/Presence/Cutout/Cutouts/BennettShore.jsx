@@ -13,7 +13,7 @@ const BennettShore = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettShore = ({
     )
 }
 
-BennettShore.propTypes = propTypes;
+BennettShore.propTypes = propTypes
 
 export default BennettShore

@@ -13,7 +13,7 @@ const BennettMat = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettMat = ({
     )
 }
 
-BennettMat.propTypes = propTypes;
+BennettMat.propTypes = propTypes
 
 export default BennettMat

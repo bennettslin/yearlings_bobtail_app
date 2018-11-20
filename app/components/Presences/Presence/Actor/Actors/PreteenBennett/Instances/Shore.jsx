@@ -13,7 +13,7 @@ const Shore = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Shore = ({
     )
 }
 
-Shore.propTypes = propTypes;
+Shore.propTypes = propTypes
 
 export default Shore

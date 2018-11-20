@@ -117,7 +117,7 @@ const Backdrop = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const BackdropComponent = BACKDROPS_MAP[nameKey]
 
@@ -131,6 +131,6 @@ const Backdrop = ({
     )
 }
 
-Backdrop.propTypes = propTypes;
+Backdrop.propTypes = propTypes
 
 export default Backdrop

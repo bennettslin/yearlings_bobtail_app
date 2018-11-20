@@ -13,7 +13,7 @@ const Gangbanger = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Gangbanger = ({
     )
 }
 
-Gangbanger.propTypes = propTypes;
+Gangbanger.propTypes = propTypes
 
 export default Gangbanger

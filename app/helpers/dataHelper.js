@@ -314,14 +314,14 @@ export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
     }
 
     const songObject = getSongObject(songIndex),
-    { songVerseConfigs } = songObject
+        { songVerseConfigs } = songObject
 
     return songVerseConfigs[verseIndex].stanzaIndex
 }
 
 export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
     const songObject = getSongObject(songIndex),
-    { songVerseConfigs } = songObject
+        { songVerseConfigs } = songObject
 
     if (songVerseConfigs) {
         const verseConfig = songVerseConfigs[verseIndex]
@@ -342,7 +342,7 @@ export const getLastUnitDotCardIndex = (songIndex) => {
      */
 
     const songObject = getSongObject(songIndex),
-    { songStanzaConfigs } = songObject
+        { songStanzaConfigs } = songObject
 
     if (songStanzaConfigs) {
         // Get unit indices of last stanza.

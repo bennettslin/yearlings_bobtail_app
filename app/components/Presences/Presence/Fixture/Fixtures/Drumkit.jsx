@@ -13,7 +13,7 @@ const Drumkit = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Drumkit = ({
     )
 }
 
-Drumkit.propTypes = propTypes;
+Drumkit.propTypes = propTypes
 
 export default Drumkit

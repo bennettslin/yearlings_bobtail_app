@@ -13,7 +13,7 @@ const OdinMat = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OdinMat = ({
     )
 }
 
-OdinMat.propTypes = propTypes;
+OdinMat.propTypes = propTypes
 
 export default OdinMat

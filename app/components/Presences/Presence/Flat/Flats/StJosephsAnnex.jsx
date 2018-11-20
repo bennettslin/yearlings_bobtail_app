@@ -13,7 +13,7 @@ const StJosephsAnnex = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const StJosephsAnnex = ({
     )
 }
 
-StJosephsAnnex.propTypes = propTypes;
+StJosephsAnnex.propTypes = propTypes
 
 export default StJosephsAnnex

@@ -87,7 +87,7 @@ const Puppet = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const PuppetComponent = PUPPETS_MAP[nameKey]
 
@@ -101,6 +101,6 @@ const Puppet = ({
     )
 }
 
-Puppet.propTypes = propTypes;
+Puppet.propTypes = propTypes
 
 export default Puppet

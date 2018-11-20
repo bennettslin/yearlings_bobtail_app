@@ -9,32 +9,32 @@ import DotIcon from './Icon'
 
 const propTypes = {
     // From parent.
-    showFieldOnly: PropTypes.bool,
-    className: PropTypes.any
-},
+        showFieldOnly: PropTypes.bool,
+        className: PropTypes.any
+    },
 
-Dot = ({
+    Dot = ({
 
-    showFieldOnly,
-    className,
+        showFieldOnly,
+        className,
 
-...other }) => {
+        ...other }) => {
 
-    return (
-        <Svg
-            className={cx(
-                'Dot',
-                className
-            )}
-        >
-            <DotField {...other} />
+        return (
+            <Svg
+                className={cx(
+                    'Dot',
+                    className
+                )}
+            >
+                <DotField {...other} />
 
-            {!showFieldOnly && (
-                <DotIcon {...other} />
-            )}
-        </Svg>
-    )
-}
+                {!showFieldOnly && (
+                    <DotIcon {...other} />
+                )}
+            </Svg>
+        )
+    }
 
 Dot.propTypes = propTypes
 

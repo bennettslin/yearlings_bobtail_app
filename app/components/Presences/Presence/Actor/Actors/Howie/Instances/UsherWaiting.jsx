@@ -13,7 +13,7 @@ const UsherWaiting = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const UsherWaiting = ({
     )
 }
 
-UsherWaiting.propTypes = propTypes;
+UsherWaiting.propTypes = propTypes
 
 export default UsherWaiting

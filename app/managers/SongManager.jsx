@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import { updateSongStore } from 'flux/actions/song'
 
 import { CONTINUE,
-         PAUSE_AT_END,
-         AUDIO_OPTIONS } from 'constants/options'
+    PAUSE_AT_END,
+    AUDIO_OPTIONS } from 'constants/options'
 
 import {
     getSongsAndLoguesCount,
@@ -49,8 +49,8 @@ class SongManager extends Component {
          * verse, and scroll element into view, but do not access nav section.
          */
         const {
-            selectedSongIndex,
-            selectedAudioOptionIndex
+                selectedSongIndex,
+                selectedAudioOptionIndex
             } = this.props,
 
             selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]

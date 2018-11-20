@@ -13,7 +13,7 @@ const GlassRack = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GlassRack = ({
     )
 }
 
-GlassRack.propTypes = propTypes;
+GlassRack.propTypes = propTypes
 
 export default GlassRack

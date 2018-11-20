@@ -176,7 +176,7 @@ const Bennett = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -190,6 +190,6 @@ const Bennett = ({
     )
 }
 
-Bennett.propTypes = propTypes;
+Bennett.propTypes = propTypes
 
 export default Bennett

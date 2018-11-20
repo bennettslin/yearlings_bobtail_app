@@ -1,9 +1,9 @@
 import React from 'react'
 import { LyricDotStanzasRow,
-         LyricsWordCountRow,
-         AnnotationsCountRow,
-         WordsPerAnnotationRow,
-         StatRowView } from './stat-row'
+    LyricsWordCountRow,
+    AnnotationsCountRow,
+    WordsPerAnnotationRow,
+    StatRowView } from './stat-row'
 
 /*************
  * CONTAINER *

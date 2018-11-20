@@ -13,7 +13,7 @@ const EscapePodSketchbook = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const EscapePodSketchbook = ({
     )
 }
 
-EscapePodSketchbook.propTypes = propTypes;
+EscapePodSketchbook.propTypes = propTypes
 
 export default EscapePodSketchbook

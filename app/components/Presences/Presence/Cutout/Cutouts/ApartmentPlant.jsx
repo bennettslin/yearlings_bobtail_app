@@ -13,7 +13,7 @@ const ApartmentPlant = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ApartmentPlant = ({
     )
 }
 
-ApartmentPlant.propTypes = propTypes;
+ApartmentPlant.propTypes = propTypes
 
 export default ApartmentPlant

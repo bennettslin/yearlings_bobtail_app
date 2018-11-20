@@ -13,7 +13,7 @@ const BasementDoorOpen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BasementDoorOpen = ({
     )
 }
 
-BasementDoorOpen.propTypes = propTypes;
+BasementDoorOpen.propTypes = propTypes
 
 export default BasementDoorOpen

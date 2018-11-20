@@ -44,7 +44,7 @@ class ScorePopup extends Component {
                 selectedScoreIndex,
                 handleScoreToggle,
 
-            ...other } = this.props,
+                ...other } = this.props,
 
             isVisible = Boolean(selectedScoreIndex)
 

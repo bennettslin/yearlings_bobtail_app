@@ -13,7 +13,7 @@ const CaressReflection = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CaressReflection = ({
     )
 }
 
-CaressReflection.propTypes = propTypes;
+CaressReflection.propTypes = propTypes
 
 export default CaressReflection

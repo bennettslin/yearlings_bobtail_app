@@ -13,7 +13,7 @@ const Bathtub = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Bathtub = ({
     )
 }
 
-Bathtub.propTypes = propTypes;
+Bathtub.propTypes = propTypes
 
 export default Bathtub

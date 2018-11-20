@@ -13,7 +13,7 @@ const PlaygroundSlide = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PlaygroundSlide = ({
     )
 }
 
-PlaygroundSlide.propTypes = propTypes;
+PlaygroundSlide.propTypes = propTypes
 
 export default PlaygroundSlide

@@ -13,7 +13,7 @@ const ThrownFruit = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ThrownFruit = ({
     )
 }
 
-ThrownFruit.propTypes = propTypes;
+ThrownFruit.propTypes = propTypes
 
 export default ThrownFruit

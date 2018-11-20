@@ -13,7 +13,7 @@ const InverseThoughtBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const InverseThoughtBackdrop = ({
     )
 }
 
-InverseThoughtBackdrop.propTypes = propTypes;
+InverseThoughtBackdrop.propTypes = propTypes
 
 export default InverseThoughtBackdrop

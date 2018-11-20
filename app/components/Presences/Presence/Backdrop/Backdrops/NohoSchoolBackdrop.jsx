@@ -13,7 +13,7 @@ const NohoSchoolBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const NohoSchoolBackdrop = ({
     )
 }
 
-NohoSchoolBackdrop.propTypes = propTypes;
+NohoSchoolBackdrop.propTypes = propTypes
 
 export default NohoSchoolBackdrop

@@ -13,7 +13,7 @@ const PoliceAlbum = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PoliceAlbum = ({
     )
 }
 
-PoliceAlbum.propTypes = propTypes;
+PoliceAlbum.propTypes = propTypes
 
 export default PoliceAlbum

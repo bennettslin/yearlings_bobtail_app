@@ -1,20 +1,20 @@
 // Parse lyric data for build.
 
 import { ALBUM_BUILD_KEYS,
-         ANCHOR,
+    ANCHOR,
 
-         DOT_CARD,
-         TOP_SIDE_CARD,
-         BOTTOM_SIDE_CARD,
-         HAS_SIDE_CARDS,
+    DOT_CARD,
+    TOP_SIDE_CARD,
+    BOTTOM_SIDE_CARD,
+    HAS_SIDE_CARDS,
 
-         IS_DOUBLESPEAKER,
-         LEFT,
-         RIGHT,
-         LEFT_COLUMN,
-         RIGHT_COLUMN,
+    IS_DOUBLESPEAKER,
+    LEFT,
+    RIGHT,
+    LEFT_COLUMN,
+    RIGHT_COLUMN,
 
-         PROPER_NOUN } from 'constants/lyrics'
+    PROPER_NOUN } from 'constants/lyrics'
 
 /***********
  * INITIAL *
@@ -66,10 +66,10 @@ export const registerHasSideCards = (songObject) => {
     lyricUnits.forEach(unit => {
 
         const unitHasSideCards = unit.reduce((hasSideCards, verse) => {
-                return hasSideCards ||
+            return hasSideCards ||
                 Boolean(verse[TOP_SIDE_CARD]) ||
                 Boolean(verse[BOTTOM_SIDE_CARD])
-            }, false)
+        }, false)
 
         if (unitHasSideCards) {
 
@@ -169,7 +169,7 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
 export const finalRegisterStanzaTypes = (songObject) => {
 
     const { lyricUnits,
-            tempStanzaTypeCounters } = songObject
+        tempStanzaTypeCounters } = songObject
 
     lyricUnits.forEach((unitArray) => {
 
@@ -224,10 +224,10 @@ export const recurseToFindAnchors = ({
         verseTimesCounter.counter++
 
         const {
-                songStanzaConfigs,
-                tempVerseIndexCounter,
-                annotations
-            } = songObject
+            songStanzaConfigs,
+            tempVerseIndexCounter,
+            annotations
+        } = songObject
 
         // All recursed lyrics will know they're nested in verse with time.
         inVerseWithTimeIndex = tempVerseIndexCounter

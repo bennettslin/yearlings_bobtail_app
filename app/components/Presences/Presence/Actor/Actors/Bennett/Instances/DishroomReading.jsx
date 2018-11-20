@@ -13,7 +13,7 @@ const DishroomReading = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DishroomReading = ({
     )
 }
 
-DishroomReading.propTypes = propTypes;
+DishroomReading.propTypes = propTypes
 
 export default DishroomReading

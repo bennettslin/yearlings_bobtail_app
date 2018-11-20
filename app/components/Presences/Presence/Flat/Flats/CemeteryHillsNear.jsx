@@ -13,7 +13,7 @@ const CemeteryHillsNear = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CemeteryHillsNear = ({
     )
 }
 
-CemeteryHillsNear.propTypes = propTypes;
+CemeteryHillsNear.propTypes = propTypes
 
 export default CemeteryHillsNear

@@ -148,7 +148,7 @@ class TextLyricAnchor extends Component {
                 dotKeys,
                 showAccessInPopupAnnotation,
 
-            ...other } = this.props,
+                ...other } = this.props,
 
             isSelected = annotationIndex === renderedAnnotationIndex,
 

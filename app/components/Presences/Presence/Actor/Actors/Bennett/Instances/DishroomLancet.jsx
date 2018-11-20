@@ -13,7 +13,7 @@ const DishroomLancet = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DishroomLancet = ({
     )
 }
 
-DishroomLancet.propTypes = propTypes;
+DishroomLancet.propTypes = propTypes
 
 export default DishroomLancet

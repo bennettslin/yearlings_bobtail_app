@@ -13,7 +13,7 @@ const ReachingReflection = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ReachingReflection = ({
     )
 }
 
-ReachingReflection.propTypes = propTypes;
+ReachingReflection.propTypes = propTypes
 
 export default ReachingReflection

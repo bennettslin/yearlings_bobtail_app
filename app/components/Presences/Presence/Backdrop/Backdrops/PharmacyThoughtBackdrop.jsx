@@ -13,7 +13,7 @@ const PharmacyThoughtBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PharmacyThoughtBackdrop = ({
     )
 }
 
-PharmacyThoughtBackdrop.propTypes = propTypes;
+PharmacyThoughtBackdrop.propTypes = propTypes
 
 export default PharmacyThoughtBackdrop

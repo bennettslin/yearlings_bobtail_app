@@ -13,7 +13,7 @@ const Ducking = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Ducking = ({
     )
 }
 
-Ducking.propTypes = propTypes;
+Ducking.propTypes = propTypes
 
 export default Ducking

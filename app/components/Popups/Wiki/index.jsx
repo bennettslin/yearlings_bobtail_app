@@ -14,37 +14,37 @@ const mapStateToProps = ({
 
 const wikiPopupPropTypes = {
     // Through Redux.
-    selectedWikiIndex: PropTypes.number.isRequired,
+        selectedWikiIndex: PropTypes.number.isRequired,
 
-    // From parent.
-    handleWikiToggle: PropTypes.func.isRequired
-},
+        // From parent.
+        handleWikiToggle: PropTypes.func.isRequired
+    },
 
-WikiPopup = ({
+    WikiPopup = ({
     /* eslint-disable no-unused-vars */
-    dispatch,
-    /* eslint-enable no-unused-vars */
+        dispatch,
+        /* eslint-enable no-unused-vars */
 
-    selectedWikiIndex,
-    handleWikiToggle,
+        selectedWikiIndex,
+        handleWikiToggle,
 
-...other }) => {
+        ...other }) => {
 
-    const isVisible = Boolean(selectedWikiIndex)
+        const isVisible = Boolean(selectedWikiIndex)
 
-    return (
-        <Popup
-            shrinkAnimate
-            displaysInOverlay
-            isFullSize
-            isVisible={isVisible}
-            popupName="Wiki"
-            handleCloseClick={handleWikiToggle}
-        >
-            <Wiki {...other} />
-        </Popup>
-    )
-}
+        return (
+            <Popup
+                shrinkAnimate
+                displaysInOverlay
+                isFullSize
+                isVisible={isVisible}
+                popupName="Wiki"
+                handleCloseClick={handleWikiToggle}
+            >
+                <Wiki {...other} />
+            </Popup>
+        )
+    }
 
 WikiPopup.propTypes = wikiPopupPropTypes
 

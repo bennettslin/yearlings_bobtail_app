@@ -13,7 +13,7 @@ const FeigningFear = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const FeigningFear = ({
     )
 }
 
-FeigningFear.propTypes = propTypes;
+FeigningFear.propTypes = propTypes
 
 export default FeigningFear

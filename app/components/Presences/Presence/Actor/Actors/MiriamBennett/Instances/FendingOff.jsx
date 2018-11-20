@@ -13,7 +13,7 @@ const FendingOff = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const FendingOff = ({
     )
 }
 
-FendingOff.propTypes = propTypes;
+FendingOff.propTypes = propTypes
 
 export default FendingOff

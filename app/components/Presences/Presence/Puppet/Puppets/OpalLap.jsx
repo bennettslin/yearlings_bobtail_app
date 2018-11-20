@@ -13,7 +13,7 @@ const OpalLap = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OpalLap = ({
     )
 }
 
-OpalLap.propTypes = propTypes;
+OpalLap.propTypes = propTypes
 
 export default OpalLap

@@ -111,80 +111,80 @@ class DotsSlideSelect extends Component {
 
 const dotsSlideSelectViewPropTypes = {
     // From parent.
-    dotKey: PropTypes.string.isRequired,
-    isAccessed: PropTypes.bool.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    isInteractivated: PropTypes.bool.isRequired,
-    handleDotSelectClick: PropTypes.func.isRequired,
-    handleTextContainerClick: PropTypes.func.isRequired
-},
+        dotKey: PropTypes.string.isRequired,
+        isAccessed: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool.isRequired,
+        isInteractivated: PropTypes.bool.isRequired,
+        handleDotSelectClick: PropTypes.func.isRequired,
+        handleTextContainerClick: PropTypes.func.isRequired
+    },
 
-DotsSlideSelectView = ({
+    DotsSlideSelectView = ({
 
-    // From props.
-    dotKey,
-    isAccessed,
-    isSelected,
+        // From props.
+        dotKey,
+        isAccessed,
+        isSelected,
 
-    // From controller.
-    isInteractivated,
-    handleDotSelectClick,
-    handleTextContainerClick
+        // From controller.
+        isInteractivated,
+        handleDotSelectClick,
+        handleTextContainerClick
 
-}) => {
+    }) => {
 
-    return (
-        <div className="DotsSlideSelect">
-            <Button
-                buttonName="slideSelect"
-                className={cx({
+        return (
+            <div className="DotsSlideSelect">
+                <Button
+                    buttonName="slideSelect"
+                    className={cx({
                     /**
                      * This class is passed purely to let the Button know to
                      * update the Dot when it is selected, without having to
                      * inspect its children prop.
                      */
-                    'isSelected': isSelected
-                })}
-                isCustomSize
-                accessKey={ENTER}
-                showAccessIconIfAccessOn={isAccessed}
-                handleButtonClick={handleDotSelectClick}
-            >
-                <Dot
-                    {...{
-                        dotKey,
-                        isAccessed,
-                        isDeselected: !isSelected
-                    }}
-                />
+                        'isSelected': isSelected
+                    })}
+                    isCustomSize
+                    accessKey={ENTER}
+                    showAccessIconIfAccessOn={isAccessed}
+                    handleButtonClick={handleDotSelectClick}
+                >
+                    <Dot
+                        {...{
+                            dotKey,
+                            isAccessed,
+                            isDeselected: !isSelected
+                        }}
+                    />
 
-                <div className={cx(
-                    'SlideSelectDescription',
+                    <div className={cx(
+                        'SlideSelectDescription',
 
-                    isAccessed &&
+                        isAccessed &&
                         'SlideSelectDescription__accessed',
 
-                    isInteractivated &&
+                        isInteractivated &&
                         'SlideSelectDescription__interactivated',
 
-                    'absoluteFullContainer',
-                    'flexCentreContainer'
-                )}>
-                    {DOT_DESCRIPTIONS[dotKey]}
-                </div>
-            </Button>
+                        'absoluteFullContainer',
+                        'flexCentreContainer'
+                    )}>
+                        {DOT_DESCRIPTIONS[dotKey]}
+                    </div>
+                </Button>
 
-            <AnchorText
-                className="DotsSlideSelect__textAnchor"
-                omitAccessIcon
-                isAccessed={isAccessed}
-                isSelected={isInteractivated}
-                text={dotKey}
-                handleAnchorClick={handleTextContainerClick}
-            />
-        </div>
-    )
-}
+                <AnchorText
+                    className="DotsSlideSelect__textAnchor"
+                    omitAccessIcon
+                    isAccessed={isAccessed}
+                    isSelected={isInteractivated}
+                    text={dotKey}
+                    handleAnchorClick={handleTextContainerClick}
+                />
+            </div>
+        )
+    }
 
 DotsSlideSelectView.propTypes = dotsSlideSelectViewPropTypes
 

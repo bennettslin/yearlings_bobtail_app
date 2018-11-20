@@ -13,7 +13,7 @@ const Singing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Singing = ({
     )
 }
 
-Singing.propTypes = propTypes;
+Singing.propTypes = propTypes
 
 export default Singing

@@ -17,50 +17,50 @@ const mapStateToProps = ({
 
 const audioPropTypes = {
     // Through Redux.
-    isTwoRowMenu: PropTypes.bool.isRequired,
+        isTwoRowMenu: PropTypes.bool.isRequired,
 
-    // From parent.
-    verseDidRender: PropTypes.func.isRequired,
-    audioBannerHandlers: PropTypes.object.isRequired,
-    audioButtonsHandlers: PropTypes.object.isRequired,
-    titleToggleHandlers: PropTypes.object.isRequired
-},
+        // From parent.
+        verseDidRender: PropTypes.func.isRequired,
+        audioBannerHandlers: PropTypes.object.isRequired,
+        audioButtonsHandlers: PropTypes.object.isRequired,
+        titleToggleHandlers: PropTypes.object.isRequired
+    },
 
-Audio = ({
+    Audio = ({
 
-    /* eslint-disable no-unused-vars */
-    dispatch,
-    /* eslint-enable no-unused-vars */
+        /* eslint-disable no-unused-vars */
+        dispatch,
+        /* eslint-enable no-unused-vars */
 
-    isTwoRowMenu,
+        isTwoRowMenu,
 
-    verseDidRender,
-    audioBannerHandlers,
-    audioButtonsHandlers,
-    titleToggleHandlers
+        verseDidRender,
+        audioBannerHandlers,
+        audioButtonsHandlers,
+        titleToggleHandlers
 
-}) => {
+    }) => {
 
-    return (
-        <div
-            className={cx(
-                'Audio',
-                'flexAlignContainer'
-            )}
-        >
-            {isTwoRowMenu && (
-                <TitleToggle {...titleToggleHandlers}
-                    isAudioChild
+        return (
+            <div
+                className={cx(
+                    'Audio',
+                    'flexAlignContainer'
+                )}
+            >
+                {isTwoRowMenu && (
+                    <TitleToggle {...titleToggleHandlers}
+                        isAudioChild
+                    />
+                )}
+
+                <AudioBanner {...audioBannerHandlers}
+                    verseDidRender={verseDidRender}
                 />
-            )}
-
-            <AudioBanner {...audioBannerHandlers}
-                verseDidRender={verseDidRender}
-            />
-            <AudioButtons {...audioButtonsHandlers} />
-        </div>
-    )
-}
+                <AudioButtons {...audioButtonsHandlers} />
+            </div>
+        )
+    }
 
 Audio.propTypes = audioPropTypes
 

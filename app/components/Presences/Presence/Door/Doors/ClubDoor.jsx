@@ -13,7 +13,7 @@ const ClubDoor = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ClubDoor = ({
     )
 }
 
-ClubDoor.propTypes = propTypes;
+ClubDoor.propTypes = propTypes
 
 export default ClubDoor

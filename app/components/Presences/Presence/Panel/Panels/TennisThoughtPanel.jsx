@@ -13,7 +13,7 @@ const TennisThoughtPanel = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TennisThoughtPanel = ({
     )
 }
 
-TennisThoughtPanel.propTypes = propTypes;
+TennisThoughtPanel.propTypes = propTypes
 
 export default TennisThoughtPanel

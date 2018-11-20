@@ -13,7 +13,7 @@ const Gate = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Gate = ({
     )
 }
 
-Gate.propTypes = propTypes;
+Gate.propTypes = propTypes
 
 export default Gate

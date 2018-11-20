@@ -13,7 +13,7 @@ const BennettBlindsOpen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettBlindsOpen = ({
     )
 }
 
-BennettBlindsOpen.propTypes = propTypes;
+BennettBlindsOpen.propTypes = propTypes
 
 export default BennettBlindsOpen

@@ -81,7 +81,7 @@ const Panel = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const PanelComponent = PANELS_MAP[nameKey]
 
@@ -95,6 +95,6 @@ const Panel = ({
     )
 }
 
-Panel.propTypes = propTypes;
+Panel.propTypes = propTypes
 
 export default Panel

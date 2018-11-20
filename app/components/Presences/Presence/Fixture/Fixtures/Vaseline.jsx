@@ -13,7 +13,7 @@ const Vaseline = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Vaseline = ({
     )
 }
 
-Vaseline.propTypes = propTypes;
+Vaseline.propTypes = propTypes
 
 export default Vaseline

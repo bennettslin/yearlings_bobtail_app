@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import ReachingReflection from './Instances/ReachingReflection';
+import ReachingReflection from './Instances/ReachingReflection'
 
 import {
     REACHING_REFLECTION
@@ -23,7 +23,7 @@ const Liz = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -37,6 +37,6 @@ const Liz = ({
     )
 }
 
-Liz.propTypes = propTypes;
+Liz.propTypes = propTypes
 
 export default Liz

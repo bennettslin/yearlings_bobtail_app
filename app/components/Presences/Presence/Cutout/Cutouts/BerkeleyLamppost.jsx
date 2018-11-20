@@ -13,7 +13,7 @@ const BerkeleyLamppost = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BerkeleyLamppost = ({
     )
 }
 
-BerkeleyLamppost.propTypes = propTypes;
+BerkeleyLamppost.propTypes = propTypes
 
 export default BerkeleyLamppost

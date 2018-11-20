@@ -13,7 +13,7 @@ const OdinOceanFloor = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OdinOceanFloor = ({
     )
 }
 
-OdinOceanFloor.propTypes = propTypes;
+OdinOceanFloor.propTypes = propTypes
 
 export default OdinOceanFloor

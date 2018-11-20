@@ -13,7 +13,7 @@ const ShaneSpilling = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ShaneSpilling = ({
     )
 }
 
-ShaneSpilling.propTypes = propTypes;
+ShaneSpilling.propTypes = propTypes
 
 export default ShaneSpilling

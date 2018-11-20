@@ -13,7 +13,7 @@ const ResidentialMiddleRight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ResidentialMiddleRight = ({
     )
 }
 
-ResidentialMiddleRight.propTypes = propTypes;
+ResidentialMiddleRight.propTypes = propTypes
 
 export default ResidentialMiddleRight

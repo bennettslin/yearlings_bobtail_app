@@ -13,7 +13,7 @@ const Cowgirl = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Cowgirl = ({
     )
 }
 
-Cowgirl.propTypes = propTypes;
+Cowgirl.propTypes = propTypes
 
 export default Cowgirl

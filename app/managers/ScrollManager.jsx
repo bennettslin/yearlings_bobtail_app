@@ -162,7 +162,7 @@ class ScrollManager extends Component {
         if (!element) {
             const selector =
                 isNaN(index) ?
-                scrollClass : `${scrollClass}__${index}`
+                    scrollClass : `${scrollClass}__${index}`
             element = document.getElementsByClassName(selector)[0]
 
             logger.error(log, '\nScroll by selector:', scrollClass, index)
@@ -208,7 +208,7 @@ class ScrollManager extends Component {
     }
 
     _scrollElementCallback = (status) => {
-        logger.warn('scroll status:', status);
+        logger.warn('scroll status:', status)
     }
 
     render() {

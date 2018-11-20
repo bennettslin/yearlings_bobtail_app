@@ -13,7 +13,7 @@ const ArmchairLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ArmchairLeft = ({
     )
 }
 
-ArmchairLeft.propTypes = propTypes;
+ArmchairLeft.propTypes = propTypes
 
 export default ArmchairLeft

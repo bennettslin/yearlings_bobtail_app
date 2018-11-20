@@ -13,7 +13,7 @@ const BennettPillows = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettPillows = ({
     )
 }
 
-BennettPillows.propTypes = propTypes;
+BennettPillows.propTypes = propTypes
 
 export default BennettPillows

@@ -22,82 +22,82 @@ const mapStateToProps = ({
 
 const propTypes = {
     // Through Redux.
-    windowWidth: PropTypes.number.isRequired,
+        windowWidth: PropTypes.number.isRequired,
 
-    // From parent.
-    titleToggleHandlers: PropTypes.object.isRequired,
-    audioHandlers: PropTypes.object.isRequired,
-    scoresTipsHandlers: PropTypes.object.isRequired,
+        // From parent.
+        titleToggleHandlers: PropTypes.object.isRequired,
+        audioHandlers: PropTypes.object.isRequired,
+        scoresTipsHandlers: PropTypes.object.isRequired,
 
-    verseDidRender: PropTypes.func.isRequired
-},
+        verseDidRender: PropTypes.func.isRequired
+    },
 
-Menu = ({
-    windowWidth,
-    titleToggleHandlers,
-    audioHandlers,
-    scoresTipsHandlers,
-    verseDidRender
-}) => {
+    Menu = ({
+        windowWidth,
+        titleToggleHandlers,
+        audioHandlers,
+        scoresTipsHandlers,
+        verseDidRender
+    }) => {
     /**
      * This is necessary because transform animation in Safari is janky.
      */
-    const menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
+        const menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
 
-    // Prevent menu from rendering before windowWidth has been set.
-    return windowWidth && (
-        <div
-            className={cx(
-                'Menu',
-                'absoluteFullContainer'
-            )}
-        >
+        // Prevent menu from rendering before windowWidth has been set.
+        return windowWidth && (
             <div
                 className={cx(
-                    'Menu__responsive',
-                    'width__mainColumn',
+                    'Menu',
                     'absoluteFullContainer'
                 )}
-                style={{
-                    marginLeft: menuMarginInOverlay,
-                    marginRight: menuMarginInOverlay
-                }}
             >
-                <div className={cx(
-                    'MenuChild__title',
-                    'MenuChild',
-                    'widths__hiddenInOverlay'
-                )}>
-                    <div className={cx(
-                        'MenuChild__title__child',
+                <div
+                    className={cx(
+                        'Menu__responsive',
+                        'width__mainColumn',
                         'absoluteFullContainer'
+                    )}
+                    style={{
+                        marginLeft: menuMarginInOverlay,
+                        marginRight: menuMarginInOverlay
+                    }}
+                >
+                    <div className={cx(
+                        'MenuChild__title',
+                        'MenuChild',
+                        'widths__hiddenInOverlay'
                     )}>
-                        <TitleToggle {...titleToggleHandlers} />
+                        <div className={cx(
+                            'MenuChild__title__child',
+                            'absoluteFullContainer'
+                        )}>
+                            <TitleToggle {...titleToggleHandlers} />
+                        </div>
+                    </div>
+
+                    <div className={cx(
+                        'MenuChild__audio',
+                        'MenuChild'
+                    )}>
+                        <Audio {...audioHandlers}
+                            verseDidRender={verseDidRender}
+                        />
+                    </div>
+
+                    <div className={cx(
+                        'MenuChild__scoresTips',
+                        'MenuChild',
+                        'widths__hiddenInOverlay'
+                    )}>
+                        <ScoresTips {...scoresTipsHandlers}
+                            inMenu
+                        />
                     </div>
                 </div>
-
-                <div className={cx(
-                    'MenuChild__audio',
-                    'MenuChild'
-                )}>
-                    <Audio {...audioHandlers}
-                        verseDidRender={verseDidRender}
-                    />
-                </div>
-
-                <div className={cx(
-                    'MenuChild__scoresTips',
-                    'MenuChild',
-                    'widths__hiddenInOverlay'
-                )}>
-                    <ScoresTips {...scoresTipsHandlers}
-                        inMenu
-                    />
-                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 
 Menu.propTypes = propTypes
 

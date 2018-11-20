@@ -47,7 +47,7 @@ const Stephanie = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -61,6 +61,6 @@ const Stephanie = ({
     )
 }
 
-Stephanie.propTypes = propTypes;
+Stephanie.propTypes = propTypes
 
 export default Stephanie

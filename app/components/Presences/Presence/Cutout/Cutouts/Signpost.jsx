@@ -13,7 +13,7 @@ const Signpost = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Signpost = ({
     )
 }
 
-Signpost.propTypes = propTypes;
+Signpost.propTypes = propTypes
 
 export default Signpost

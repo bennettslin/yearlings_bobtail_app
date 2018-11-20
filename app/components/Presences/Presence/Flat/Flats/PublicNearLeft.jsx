@@ -13,7 +13,7 @@ const PublicNearLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PublicNearLeft = ({
     )
 }
 
-PublicNearLeft.propTypes = propTypes;
+PublicNearLeft.propTypes = propTypes
 
 export default PublicNearLeft

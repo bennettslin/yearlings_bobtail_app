@@ -13,7 +13,7 @@ const JohnnyHortonAlbum = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const JohnnyHortonAlbum = ({
     )
 }
 
-JohnnyHortonAlbum.propTypes = propTypes;
+JohnnyHortonAlbum.propTypes = propTypes
 
 export default JohnnyHortonAlbum

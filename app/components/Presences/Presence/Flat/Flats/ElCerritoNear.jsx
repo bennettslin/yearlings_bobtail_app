@@ -13,7 +13,7 @@ const ElCerritoNear = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ElCerritoNear = ({
     )
 }
 
-ElCerritoNear.propTypes = propTypes;
+ElCerritoNear.propTypes = propTypes
 
 export default ElCerritoNear

@@ -13,7 +13,7 @@ const DisposingCondom = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DisposingCondom = ({
     )
 }
 
-DisposingCondom.propTypes = propTypes;
+DisposingCondom.propTypes = propTypes
 
 export default DisposingCondom

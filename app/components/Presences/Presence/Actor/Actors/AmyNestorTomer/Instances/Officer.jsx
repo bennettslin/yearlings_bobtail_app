@@ -13,7 +13,7 @@ const Officer = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Officer = ({
     )
 }
 
-Officer.propTypes = propTypes;
+Officer.propTypes = propTypes
 
 export default Officer

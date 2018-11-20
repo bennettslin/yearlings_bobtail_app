@@ -1,7 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from 'react'
+import { shallow } from 'enzyme'
 
-import AccessLetter from './';
+import AccessLetter from './'
 
 import { ENTER } from '../../../constants/access'
 
@@ -20,6 +20,6 @@ describe('AccessLetter', () => {
     it('renders.', () => {
         const module = setup()
 
-        expect(module.exists('.AccessLetter')).toBeTruthy();
-    });
+        expect(module.exists('.AccessLetter')).toBeTruthy()
+    })
 })

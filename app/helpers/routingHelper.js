@@ -62,24 +62,24 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
 
         routingIndices = routingParamString.split('-')
 
-        routingIndices.forEach(param => {
-            const rawSongIndex = _getIndexForPrefix(param),
-                rawVerseIndex = _getIndexForPrefix(param, 'v'),
-                rawAnnotationIndex = _getIndexForPrefix(param, 'a')
+    routingIndices.forEach(param => {
+        const rawSongIndex = _getIndexForPrefix(param),
+            rawVerseIndex = _getIndexForPrefix(param, 'v'),
+            rawAnnotationIndex = _getIndexForPrefix(param, 'a')
 
-            // If it's a song index, get it.
-            if (!isNaN(rawSongIndex)) {
-                rawIndicesObject.rawSongIndex = rawSongIndex
+        // If it's a song index, get it.
+        if (!isNaN(rawSongIndex)) {
+            rawIndicesObject.rawSongIndex = rawSongIndex
 
             // If it's a verse index, get it.
-            } else if (!isNaN(rawVerseIndex)) {
-                rawIndicesObject.rawVerseIndex = rawVerseIndex
+        } else if (!isNaN(rawVerseIndex)) {
+            rawIndicesObject.rawVerseIndex = rawVerseIndex
 
             // If it's an annotation index, get it.
-            } else if (!isNaN(rawAnnotationIndex)) {
-                rawIndicesObject.rawAnnotationIndex = rawAnnotationIndex
-            }
-        })
+        } else if (!isNaN(rawAnnotationIndex)) {
+            rawIndicesObject.rawAnnotationIndex = rawAnnotationIndex
+        }
+    })
 
     /**
      * We now have an array of up to three numbers. If they exist, the first is
@@ -87,8 +87,8 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
      */
 
     const { rawSongIndex,
-            rawVerseIndex,
-            rawAnnotationIndex } = rawIndicesObject
+        rawVerseIndex,
+        rawAnnotationIndex } = rawIndicesObject
 
     // Only set routing song index if valid.
     if (_isValidSongIndex(rawSongIndex)) {
@@ -104,7 +104,7 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
                 _isValidVerseIndexForSongIndex(
                     rawSongIndex,
                     rawVerseIndex
-        )) {
+                )) {
             routingVerseIndex = rawVerseIndex
 
         } else {
@@ -122,7 +122,7 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
                 _isValidAnnotationIndexForSongIndex(
                     rawSongIndex,
                     rawAnnotationIndex
-        )) {
+                )) {
             routingAnnotationIndex = rawAnnotationIndex
 
         } else {

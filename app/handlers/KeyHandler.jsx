@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { getSongsAndLoguesCount,
-         getSongIsLogue,
-         getBookColumnIndex,
-         getWormholeLink,
-         getAnnotationObject } from 'helpers/dataHelper'
+    getSongIsLogue,
+    getBookColumnIndex,
+    getWormholeLink,
+    getAnnotationObject } from 'helpers/dataHelper'
 
 import {
     getKeyName,
@@ -17,39 +17,39 @@ import {
 } from './keyHelper'
 
 import { ARROW_LEFT,
-         ARROW_RIGHT,
-         ARROW_UP,
-         ARROW_DOWN,
-         PAGE_UP,
-         PAGE_DOWN,
-         CAPS_LOCK,
-         ENTER,
-         ESCAPE,
-         SPACE,
-         TAB,
-         AUDIO_REWIND_KEY,
-         AUDIO_FAST_FORWARD_KEY,
+    ARROW_RIGHT,
+    ARROW_UP,
+    ARROW_DOWN,
+    PAGE_UP,
+    PAGE_DOWN,
+    CAPS_LOCK,
+    ENTER,
+    ESCAPE,
+    SPACE,
+    TAB,
+    AUDIO_REWIND_KEY,
+    AUDIO_FAST_FORWARD_KEY,
 
-         ADMIN_TOGGLE_KEY,
-         AUDIO_PLAY_KEY,
-         AUDIO_OPTIONS_TOGGLE_KEY,
-         AUDIO_PREVIOUS_SONG_KEY,
-         AUDIO_NEXT_SONG_KEY,
-         CAROUSEL_TOGGLE_KEY,
-         DOTS_SECTION_EXPAND_KEY,
-         LYRIC_COLUMN_TOGGLE_KEY,
-         LYRIC_SECTION_EXPAND_KEY,
-         LYRIC_SCROLL_TOGGLE_KEY,
-         OVERVIEW_TOGGLE_KEY,
-         SCORE_TOGGLE_KEY,
-         SCENE_REWIND_KEY,
-         SCENE_FORWARD_KEY,
-         TIPS_TOGGLE_KEY,
-         TITLE_TOGGLE_KEY } from 'constants/access'
+    ADMIN_TOGGLE_KEY,
+    AUDIO_PLAY_KEY,
+    AUDIO_OPTIONS_TOGGLE_KEY,
+    AUDIO_PREVIOUS_SONG_KEY,
+    AUDIO_NEXT_SONG_KEY,
+    CAROUSEL_TOGGLE_KEY,
+    DOTS_SECTION_EXPAND_KEY,
+    LYRIC_COLUMN_TOGGLE_KEY,
+    LYRIC_SECTION_EXPAND_KEY,
+    LYRIC_SCROLL_TOGGLE_KEY,
+    OVERVIEW_TOGGLE_KEY,
+    SCORE_TOGGLE_KEY,
+    SCENE_REWIND_KEY,
+    SCENE_FORWARD_KEY,
+    TIPS_TOGGLE_KEY,
+    TITLE_TOGGLE_KEY } from 'constants/access'
 import { ALL_DOT_KEYS } from 'constants/dots'
 import { SHOWN,
-         OVERVIEW_OPTIONS,
-         TIPS_OPTIONS } from 'constants/options'
+    OVERVIEW_OPTIONS,
+    TIPS_OPTIONS } from 'constants/options'
 
 class KeyHandler extends Component {
 
@@ -305,7 +305,7 @@ class KeyHandler extends Component {
         }
 
         return { annotationIndexWasAccessed,
-                 keyWasRegistered }
+            keyWasRegistered }
     }
 
     _handleAnnotationNavigation = (e, keyName) => {
@@ -391,13 +391,13 @@ class KeyHandler extends Component {
         }
 
         return { annotationIndexWasAccessed,
-                 keyWasRegistered }
+            keyWasRegistered }
     }
 
 
     _handleDotsNavigation = (e, keyName) => {
         const { selectedAccessIndex,
-                eventHandlers } = this.props
+            eventHandlers } = this.props
 
         if (selectedAccessIndex) {
             const dotKeysCount = ALL_DOT_KEYS.length
@@ -442,8 +442,8 @@ class KeyHandler extends Component {
 
     _handleNavNavigation = (e, keyName) => {
         const { selectedAccessIndex,
-                interactivatedVerseIndex,
-                eventHandlers } = this.props
+            interactivatedVerseIndex,
+            eventHandlers } = this.props
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = true
@@ -492,7 +492,7 @@ class KeyHandler extends Component {
         }
 
         return { annotationIndexWasAccessed,
-                 keyWasRegistered }
+            keyWasRegistered }
     }
 
     _handleLyricNavigation = (e, keyName) => {

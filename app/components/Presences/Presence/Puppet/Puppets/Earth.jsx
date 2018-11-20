@@ -13,7 +13,7 @@ const Earth = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Earth = ({
     )
 }
 
-Earth.propTypes = propTypes;
+Earth.propTypes = propTypes
 
 export default Earth

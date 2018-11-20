@@ -13,7 +13,7 @@ const Future = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Future = ({
     )
 }
 
-Future.propTypes = propTypes;
+Future.propTypes = propTypes
 
 export default Future

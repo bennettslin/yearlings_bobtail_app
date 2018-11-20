@@ -14,7 +14,7 @@ const Shared = ({
 
     selectedSongIndex,
 
-...other }) => {
+    ...other }) => {
 
     const selectedSong = getSongObject(selectedSongIndex),
         tasks = getSongTasks(selectedSongIndex),
@@ -46,7 +46,7 @@ const SharedView = ({
     annotations,
     adminPluralCardsCount,
 
-...other }) => (
+    ...other }) => (
     <div className="Admin__column">
         <div className="Admin__field shared">
             <StatsSection

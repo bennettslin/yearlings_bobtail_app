@@ -19,43 +19,43 @@ const mapStateToProps = ({
 
 const tipsPopupPropTypes = {
     // Through Redux.
-    canMainRender: PropTypes.bool.isRequired,
-    renderedSongIndex: PropTypes.number.isRequired,
-    selectedTipsIndex: PropTypes.number.isRequired,
+        canMainRender: PropTypes.bool.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
 
-    // From parent.
-    handlePopupContainerClick: PropTypes.func.isRequired
-},
+        // From parent.
+        handlePopupContainerClick: PropTypes.func.isRequired
+    },
 
-TipsPopup = ({
+    TipsPopup = ({
     /* eslint-disable no-unused-vars */
-    dispatch,
-    /* eslint-enable no-unused-vars */
+        dispatch,
+        /* eslint-enable no-unused-vars */
 
-    canMainRender,
-    renderedSongIndex,
-    selectedTipsIndex,
-    handlePopupContainerClick,
+        canMainRender,
+        renderedSongIndex,
+        selectedTipsIndex,
+        handlePopupContainerClick,
 
-...other }) => {
+        ...other }) => {
 
-    const isLogue = getSongIsLogue(renderedSongIndex),
+        const isLogue = getSongIsLogue(renderedSongIndex),
 
-        isVisible = canMainRender && !isLogue && !selectedTipsIndex
+            isVisible = canMainRender && !isLogue && !selectedTipsIndex
 
-    return (
-        <Popup
-            isCardSize
-            bounceAnimate
-            hasNarrowPadding
-            popupName="Tips"
-            isVisible={isVisible}
-            handlePopupContainerClick={handlePopupContainerClick}
-        >
-            <Tips {...other} />
-        </Popup>
-    )
-}
+        return (
+            <Popup
+                isCardSize
+                bounceAnimate
+                hasNarrowPadding
+                popupName="Tips"
+                isVisible={isVisible}
+                handlePopupContainerClick={handlePopupContainerClick}
+            >
+                <Tips {...other} />
+            </Popup>
+        )
+    }
 
 TipsPopup.propTypes = tipsPopupPropTypes
 

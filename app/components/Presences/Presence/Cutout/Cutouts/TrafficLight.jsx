@@ -13,7 +13,7 @@ const TrafficLight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TrafficLight = ({
     )
 }
 
-TrafficLight.propTypes = propTypes;
+TrafficLight.propTypes = propTypes
 
 export default TrafficLight

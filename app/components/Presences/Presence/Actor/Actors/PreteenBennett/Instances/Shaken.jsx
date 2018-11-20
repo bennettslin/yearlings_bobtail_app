@@ -13,7 +13,7 @@ const Shaken = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Shaken = ({
     )
 }
 
-Shaken.propTypes = propTypes;
+Shaken.propTypes = propTypes
 
 export default Shaken

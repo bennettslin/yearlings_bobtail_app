@@ -13,7 +13,7 @@ const MissionaryReflection = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const MissionaryReflection = ({
     )
 }
 
-MissionaryReflection.propTypes = propTypes;
+MissionaryReflection.propTypes = propTypes
 
 export default MissionaryReflection

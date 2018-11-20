@@ -13,7 +13,7 @@ const Mingling = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Mingling = ({
     )
 }
 
-Mingling.propTypes = propTypes;
+Mingling.propTypes = propTypes
 
 export default Mingling

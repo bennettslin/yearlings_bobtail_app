@@ -13,7 +13,7 @@ const Pondering = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Pondering = ({
     )
 }
 
-Pondering.propTypes = propTypes;
+Pondering.propTypes = propTypes
 
 export default Pondering

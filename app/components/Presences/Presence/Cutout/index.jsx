@@ -246,7 +246,7 @@ const Cutout = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const CutoutComponent = CUTOUTS_MAP[nameKey]
 
@@ -260,6 +260,6 @@ const Cutout = ({
     )
 }
 
-Cutout.propTypes = propTypes;
+Cutout.propTypes = propTypes
 
 export default Cutout

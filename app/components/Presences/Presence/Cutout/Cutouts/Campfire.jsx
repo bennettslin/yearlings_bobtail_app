@@ -13,7 +13,7 @@ const Campfire = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Campfire = ({
     )
 }
 
-Campfire.propTypes = propTypes;
+Campfire.propTypes = propTypes
 
 export default Campfire

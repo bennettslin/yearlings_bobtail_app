@@ -13,7 +13,7 @@ const OaklandSideBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OaklandSideBackdrop = ({
     )
 }
 
-OaklandSideBackdrop.propTypes = propTypes;
+OaklandSideBackdrop.propTypes = propTypes
 
 export default OaklandSideBackdrop

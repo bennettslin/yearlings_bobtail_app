@@ -13,7 +13,7 @@ const CinemaPosterRight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CinemaPosterRight = ({
     )
 }
 
-CinemaPosterRight.propTypes = propTypes;
+CinemaPosterRight.propTypes = propTypes
 
 export default CinemaPosterRight

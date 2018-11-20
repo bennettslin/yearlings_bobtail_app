@@ -41,7 +41,7 @@ const Willy = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -55,6 +55,6 @@ const Willy = ({
     )
 }
 
-Willy.propTypes = propTypes;
+Willy.propTypes = propTypes
 
 export default Willy

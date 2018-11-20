@@ -13,7 +13,7 @@ const ShoreRickshawBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ShoreRickshawBackdrop = ({
     )
 }
 
-ShoreRickshawBackdrop.propTypes = propTypes;
+ShoreRickshawBackdrop.propTypes = propTypes
 
 export default ShoreRickshawBackdrop

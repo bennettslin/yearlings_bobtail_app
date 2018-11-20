@@ -13,7 +13,7 @@ const BancroftShrubs = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BancroftShrubs = ({
     )
 }
 
-BancroftShrubs.propTypes = propTypes;
+BancroftShrubs.propTypes = propTypes
 
 export default BancroftShrubs

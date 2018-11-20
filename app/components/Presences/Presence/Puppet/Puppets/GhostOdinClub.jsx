@@ -13,7 +13,7 @@ const GhostOdinClub = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GhostOdinClub = ({
     )
 }
 
-GhostOdinClub.propTypes = propTypes;
+GhostOdinClub.propTypes = propTypes
 
 export default GhostOdinClub

@@ -29,7 +29,7 @@ const KhariLiz = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -43,6 +43,6 @@ const KhariLiz = ({
     )
 }
 
-KhariLiz.propTypes = propTypes;
+KhariLiz.propTypes = propTypes
 
 export default KhariLiz

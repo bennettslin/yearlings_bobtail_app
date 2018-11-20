@@ -14,37 +14,37 @@ import {
 
 const anchorPropTypes = {
     // From parent.
-    className: PropTypes.any,
-    isAccessed: PropTypes.bool,
-    isSelected: PropTypes.bool,
-    isDotAnchor: PropTypes.bool,
-    isWikiTextAnchor: PropTypes.bool,
-    omitAccessIcon: PropTypes.bool,
-    sequenceDotKeys: PropTypes.object,
-    handleAnchorClick: PropTypes.func,
-    children: PropTypes.oneOfType([
-        PropTypes.array,
-        PropTypes.element
-    ])
-},
+        className: PropTypes.any,
+        isAccessed: PropTypes.bool,
+        isSelected: PropTypes.bool,
+        isDotAnchor: PropTypes.bool,
+        isWikiTextAnchor: PropTypes.bool,
+        omitAccessIcon: PropTypes.bool,
+        sequenceDotKeys: PropTypes.object,
+        handleAnchorClick: PropTypes.func,
+        children: PropTypes.oneOfType([
+            PropTypes.array,
+            PropTypes.element
+        ])
+    },
 
-Anchor = ({
+    Anchor = ({
 
-    className,
-    isAccessed,
-    isSelected,
-    isDotAnchor,
-    isWikiTextAnchor,
-    omitAccessIcon,
-    sequenceDotKeys,
+        className,
+        isAccessed,
+        isSelected,
+        isDotAnchor,
+        isWikiTextAnchor,
+        omitAccessIcon,
+        sequenceDotKeys,
 
-    handleAnchorClick,
-    children
+        handleAnchorClick,
+        children
 
-}) => {
+    }) => {
 
-    return (
-        <a className={cx(
+        return (
+            <a className={cx(
                 'Anchor',
 
                 isAccessed && !isSelected && 'Anchor__accessed',
@@ -78,41 +78,41 @@ Anchor = ({
             )}
             onClick={handleAnchorClick}
             onTouchStart={handleAnchorClick}
-        >
-            {!isWikiTextAnchor && (
-                <Underline
-                    {...{
-                        isAccessed,
-                        isSelected,
-                        isDotAnchor
-                    }}
-                />
-            )}
+            >
+                {!isWikiTextAnchor && (
+                    <Underline
+                        {...{
+                            isAccessed,
+                            isSelected,
+                            isDotAnchor
+                        }}
+                    />
+                )}
 
-            {sequenceDotKeys && (
-                <DotSequence
-                    inTextAnchor
-                    {...{
-                        isAccessed,
-                        isSelected,
-                        dotKeys: sequenceDotKeys
-                    }}
-                />
-            )}
+                {sequenceDotKeys && (
+                    <DotSequence
+                        inTextAnchor
+                        {...{
+                            isAccessed,
+                            isSelected,
+                            dotKeys: sequenceDotKeys
+                        }}
+                    />
+                )}
 
-            {children}
+                {children}
 
-            {!omitAccessIcon && (
-                <AccessLetter
-                    inTextAnchor={!isDotAnchor}
-                    inButtonOrDotAnchor={isDotAnchor}
-                    showIfAccessed={isAccessed && !isSelected}
-                    accessKey={ENTER}
-                />
-            )}
-        </a>
-    )
-}
+                {!omitAccessIcon && (
+                    <AccessLetter
+                        inTextAnchor={!isDotAnchor}
+                        inButtonOrDotAnchor={isDotAnchor}
+                        showIfAccessed={isAccessed && !isSelected}
+                        accessKey={ENTER}
+                    />
+                )}
+            </a>
+        )
+    }
 
 Anchor.propTypes = anchorPropTypes
 

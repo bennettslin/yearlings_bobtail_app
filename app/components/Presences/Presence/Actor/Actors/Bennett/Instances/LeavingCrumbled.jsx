@@ -13,7 +13,7 @@ const LeavingCrumbled = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LeavingCrumbled = ({
     )
 }
 
-LeavingCrumbled.propTypes = propTypes;
+LeavingCrumbled.propTypes = propTypes
 
 export default LeavingCrumbled

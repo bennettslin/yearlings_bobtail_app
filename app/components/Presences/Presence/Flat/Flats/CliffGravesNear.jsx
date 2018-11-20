@@ -13,7 +13,7 @@ const CliffGravesNear = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CliffGravesNear = ({
     )
 }
 
-CliffGravesNear.propTypes = propTypes;
+CliffGravesNear.propTypes = propTypes
 
 export default CliffGravesNear

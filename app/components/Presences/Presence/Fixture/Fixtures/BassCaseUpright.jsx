@@ -13,7 +13,7 @@ const BassCaseUpright = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BassCaseUpright = ({
     )
 }
 
-BassCaseUpright.propTypes = propTypes;
+BassCaseUpright.propTypes = propTypes
 
 export default BassCaseUpright

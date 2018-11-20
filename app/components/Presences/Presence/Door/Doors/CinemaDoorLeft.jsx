@@ -13,7 +13,7 @@ const CinemaDoorLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CinemaDoorLeft = ({
     )
 }
 
-CinemaDoorLeft.propTypes = propTypes;
+CinemaDoorLeft.propTypes = propTypes
 
 export default CinemaDoorLeft

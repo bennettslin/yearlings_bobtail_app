@@ -1,5 +1,5 @@
 const
-GINGERBREAD_PRISON = 'gingerbreadPrison',
+    GINGERBREAD_PRISON = 'gingerbreadPrison',
     CHEEK_UNVEILED = 'cheekUnveiled',
 
     HARD_ON = 'hardOn',

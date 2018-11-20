@@ -13,7 +13,7 @@ const PhoneCallPanel = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PhoneCallPanel = ({
     )
 }
 
-PhoneCallPanel.propTypes = propTypes;
+PhoneCallPanel.propTypes = propTypes
 
 export default PhoneCallPanel

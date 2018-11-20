@@ -13,7 +13,7 @@ const TaiwanHouseFar = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TaiwanHouseFar = ({
     )
 }
 
-TaiwanHouseFar.propTypes = propTypes;
+TaiwanHouseFar.propTypes = propTypes
 
 export default TaiwanHouseFar

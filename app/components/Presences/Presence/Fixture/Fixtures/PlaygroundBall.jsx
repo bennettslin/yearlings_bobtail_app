@@ -13,7 +13,7 @@ const PlaygroundBall = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PlaygroundBall = ({
     )
 }
 
-PlaygroundBall.propTypes = propTypes;
+PlaygroundBall.propTypes = propTypes
 
 export default PlaygroundBall

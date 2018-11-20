@@ -13,7 +13,7 @@ const Rocket = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Rocket = ({
     )
 }
 
-Rocket.propTypes = propTypes;
+Rocket.propTypes = propTypes
 
 export default Rocket

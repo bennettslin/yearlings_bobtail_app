@@ -36,61 +36,61 @@ const
     ]
 
 const propTypes = {
-    xIndex: PropTypes.number.isRequired,
-    yIndex: PropTypes.number.isRequired
-},
+        xIndex: PropTypes.number.isRequired,
+        yIndex: PropTypes.number.isRequired
+    },
 
-FaceFillStylesheet = ({
+    FaceFillStylesheet = ({
 
-    xIndex,
-    yIndex
+        xIndex,
+        yIndex
 
-}) => {
+    }) => {
 
-    // This component never updates because its parent never updates.
-    return (
-        <Stylesheet
-            className={cx(
-                'FaceFillStylesheet',
-                `FacesShadeFillStyle__${
-                    xIndex
-                }${
-                    yIndex
-                }`
-            )}
-        >
-            {CUBE_Z_INDICES.map(zIndex => {
-
-                /**
-                 * Only floor tiles below a certain zIndex are shaded.
-                 */
-                if (zIndex >= FLOOR_TILE_SHADE_Z_INDEX_MAP.length) {
-                    return null
-                }
-
-                const
-                    parentPrefix = getParentClassNameForSceneLogic({
-                        matrixName: Z_INDICES_MATRIX_NAME,
-                        level: FLOOR,
-                        xIndex,
-                        yIndex,
-                        value: zIndex
-                    }),
-
-                    childPrefix = getChildClassNameForFaceLogic({
-                        face: TILE,
-                        level: FLOOR,
-                        xIndex,
+        // This component never updates because its parent never updates.
+        return (
+            <Stylesheet
+                className={cx(
+                    'FaceFillStylesheet',
+                    `FacesShadeFillStyle__${
+                        xIndex
+                    }${
                         yIndex
-                    }),
+                    }`
+                )}
+            >
+                {CUBE_Z_INDICES.map(zIndex => {
 
                     /**
+                 * Only floor tiles below a certain zIndex are shaded.
+                 */
+                    if (zIndex >= FLOOR_TILE_SHADE_Z_INDEX_MAP.length) {
+                        return null
+                    }
+
+                    const
+                        parentPrefix = getParentClassNameForSceneLogic({
+                            matrixName: Z_INDICES_MATRIX_NAME,
+                            level: FLOOR,
+                            xIndex,
+                            yIndex,
+                            value: zIndex
+                        }),
+
+                        childPrefix = getChildClassNameForFaceLogic({
+                            face: TILE,
+                            level: FLOOR,
+                            xIndex,
+                            yIndex
+                        }),
+
+                        /**
                      * This styling needs to be set dynamically
                      * because it's dependent on zIndex.
                      */
-                    fill = FLOOR_TILE_SHADE_Z_INDEX_MAP[
-                        zIndex
-                    ]
+                        fill = FLOOR_TILE_SHADE_Z_INDEX_MAP[
+                            zIndex
+                        ]
 
                     return (
                         <DynamicStylesheet
@@ -109,10 +109,10 @@ FaceFillStylesheet = ({
                             }}
                         />
                     )
-            })}
-        </Stylesheet>
-    )
-}
+                })}
+            </Stylesheet>
+        )
+    }
 
 FaceFillStylesheet.propTypes = propTypes
 

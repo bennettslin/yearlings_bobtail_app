@@ -13,7 +13,7 @@ const CavemanBones = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CavemanBones = ({
     )
 }
 
-CavemanBones.propTypes = propTypes;
+CavemanBones.propTypes = propTypes
 
 export default CavemanBones

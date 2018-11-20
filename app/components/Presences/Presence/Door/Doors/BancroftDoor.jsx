@@ -13,7 +13,7 @@ const BancroftDoor = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BancroftDoor = ({
     )
 }
 
-BancroftDoor.propTypes = propTypes;
+BancroftDoor.propTypes = propTypes
 
 export default BancroftDoor

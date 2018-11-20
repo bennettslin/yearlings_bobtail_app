@@ -38,8 +38,8 @@ class RoutingManager extends Component {
                 getValidRoutingIndicesObject(routingParamString),
 
             { routingSongIndex,
-              routingVerseIndex,
-              routingAnnotationIndex } = routingIndicesObject
+                routingVerseIndex,
+                routingAnnotationIndex } = routingIndicesObject
 
         let selectedSongIndex = props.selectedSongIndex,
             selectedVerseIndex = props.selectedVerseIndex,
@@ -124,7 +124,7 @@ class RoutingManager extends Component {
             pathSongIndex, pathVerseIndex, pathAnnotationIndex
         )
 
-        this.props.history.replace(pathName);
+        this.props.history.replace(pathName)
     }
 
     render() {

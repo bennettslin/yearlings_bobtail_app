@@ -13,7 +13,7 @@ const PampasFar = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PampasFar = ({
     )
 }
 
-PampasFar.propTypes = propTypes;
+PampasFar.propTypes = propTypes
 
 export default PampasFar

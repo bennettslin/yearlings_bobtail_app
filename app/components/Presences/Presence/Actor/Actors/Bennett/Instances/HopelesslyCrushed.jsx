@@ -13,7 +13,7 @@ const HopelesslyCrushed = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const HopelesslyCrushed = ({
     )
 }
 
-HopelesslyCrushed.propTypes = propTypes;
+HopelesslyCrushed.propTypes = propTypes
 
 export default HopelesslyCrushed

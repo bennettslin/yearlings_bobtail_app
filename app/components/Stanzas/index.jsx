@@ -13,57 +13,57 @@ import Unit from './Unit'
 
 const propTypes = {
     // From parent.
-    songStanzaConfigs: PropTypes.array.isRequired,
-    lastUnitDotCardIndex: PropTypes.number.isRequired
-},
+        songStanzaConfigs: PropTypes.array.isRequired,
+        lastUnitDotCardIndex: PropTypes.number.isRequired
+    },
 
-Stanzas = ({
-    songStanzaConfigs,
-    lastUnitDotCardIndex,
+    Stanzas = ({
+        songStanzaConfigs,
+        lastUnitDotCardIndex,
 
-...other }) => {
+        ...other }) => {
 
-    return songStanzaConfigs.length && (
-        <div className={cx(
-            'LyricScroll'
-        )}>
+        return songStanzaConfigs.length && (
+            <div className={cx(
+                'LyricScroll'
+            )}>
 
-            {/* This is the title. */}
-            <Unit {...other}
-                {...{
-                    unitIndex: 0
-                }}
-            />
-
-            {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
-
-                const isLastStanza =
-                    stanzaIndex === songStanzaConfigs.length - 1
-
-                return (
-                    <StanzaHoc {...other}
-                        key={stanzaIndex}
-                        {...{
-                            stanzaConfig,
-                            stanzaIndex,
-                            isLastStanza,
-                            StanzaComponent: Stanza
-                        }}
-                    />
-                )
-            })}
-
-            {/* This is the last unit dot card, if there is one. */}
-            {lastUnitDotCardIndex > -1 && (
+                {/* This is the title. */}
                 <Unit {...other}
                     {...{
-                        unitIndex: lastUnitDotCardIndex
+                        unitIndex: 0
                     }}
                 />
-            )}
-        </div>
-    )
-}
+
+                {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
+
+                    const isLastStanza =
+                    stanzaIndex === songStanzaConfigs.length - 1
+
+                    return (
+                        <StanzaHoc {...other}
+                            key={stanzaIndex}
+                            {...{
+                                stanzaConfig,
+                                stanzaIndex,
+                                isLastStanza,
+                                StanzaComponent: Stanza
+                            }}
+                        />
+                    )
+                })}
+
+                {/* This is the last unit dot card, if there is one. */}
+                {lastUnitDotCardIndex > -1 && (
+                    <Unit {...other}
+                        {...{
+                            unitIndex: lastUnitDotCardIndex
+                        }}
+                    />
+                )}
+            </div>
+        )
+    }
 
 Stanzas.propTypes = propTypes
 

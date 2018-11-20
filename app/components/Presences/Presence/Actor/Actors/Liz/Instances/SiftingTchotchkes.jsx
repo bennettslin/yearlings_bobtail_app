@@ -13,7 +13,7 @@ const SiftingTchotchkes = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SiftingTchotchkes = ({
     )
 }
 
-SiftingTchotchkes.propTypes = propTypes;
+SiftingTchotchkes.propTypes = propTypes
 
 export default SiftingTchotchkes

@@ -13,7 +13,7 @@ const Noodling = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Noodling = ({
     )
 }
 
-Noodling.propTypes = propTypes;
+Noodling.propTypes = propTypes
 
 export default Noodling

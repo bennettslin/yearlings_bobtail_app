@@ -13,7 +13,7 @@ const WallSpeakerSide = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const WallSpeakerSide = ({
     )
 }
 
-WallSpeakerSide.propTypes = propTypes;
+WallSpeakerSide.propTypes = propTypes
 
 export default WallSpeakerSide

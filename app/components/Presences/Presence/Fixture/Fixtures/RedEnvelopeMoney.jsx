@@ -13,7 +13,7 @@ const RedEnvelopeMoney = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RedEnvelopeMoney = ({
     )
 }
 
-RedEnvelopeMoney.propTypes = propTypes;
+RedEnvelopeMoney.propTypes = propTypes
 
 export default RedEnvelopeMoney

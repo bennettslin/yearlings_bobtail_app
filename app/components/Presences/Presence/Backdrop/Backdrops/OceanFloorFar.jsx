@@ -13,7 +13,7 @@ const OceanFloorFar = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OceanFloorFar = ({
     )
 }
 
-OceanFloorFar.propTypes = propTypes;
+OceanFloorFar.propTypes = propTypes
 
 export default OceanFloorFar

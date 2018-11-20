@@ -73,8 +73,8 @@ class AnnotationCard extends Component {
             }),
 
             { description,
-              dotKeys = {},
-              wormholeLinks } = cardObject
+                dotKeys = {},
+                wormholeLinks } = cardObject
 
         // Add wormhole key to dot keys.
         if (wormholeLinks) {
@@ -97,76 +97,76 @@ class AnnotationCard extends Component {
 
 const annotationCardViewProptypes = {
     // From parent.
-    inCarousel: PropTypes.bool,
-    text: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array
-    ]),
-    annotationIndex: PropTypes.number.isRequired,
-    cardDotKeys: PropTypes.object.isRequired,
-    cardIndex: PropTypes.number.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    handleAnnotationWikiSelect: PropTypes.func.isRequired,
-    handleAnnotationWormholeSelect: PropTypes.func.isRequired
-},
+        inCarousel: PropTypes.bool,
+        text: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.array
+        ]),
+        annotationIndex: PropTypes.number.isRequired,
+        cardDotKeys: PropTypes.object.isRequired,
+        cardIndex: PropTypes.number.isRequired,
+        isSelected: PropTypes.bool.isRequired,
+        handleAnnotationWikiSelect: PropTypes.func.isRequired,
+        handleAnnotationWormholeSelect: PropTypes.func.isRequired
+    },
 
-AnnotationCardView = ({
+    AnnotationCardView = ({
 
-    // From props.
-    inCarousel,
-    isSelected,
-    annotationIndex,
-    handleAnnotationWikiSelect,
-    handleAnnotationWormholeSelect,
+        // From props.
+        inCarousel,
+        isSelected,
+        annotationIndex,
+        handleAnnotationWikiSelect,
+        handleAnnotationWormholeSelect,
 
-    // From controller.
-    text,
-    cardDotKeys,
-    cardIndex
+        // From controller.
+        text,
+        cardDotKeys,
+        cardIndex
 
-}) => {
+    }) => {
 
-    const isTextCard = Boolean(text),
-        isWormholeCard = cardDotKeys.wormhole,
+        const isTextCard = Boolean(text),
+            isWormholeCard = cardDotKeys.wormhole,
 
-        annotationCardChild = (
-            <div className={cx(
-                'AnnotationCard',
-                !inCarousel && 'AnnotationCard__inPopup',
-                isTextCard && 'AnnotationCard__isText',
-                isWormholeCard && 'AnnotationCard__wormhole',
-                'fontSize__verse'
-            )}>
-                {!isWormholeCard && (
-                    <DotSequence
-                        inAnnotationCard
-                        dotKeys={cardDotKeys}
-                    />
-                )}
+            annotationCardChild = (
+                <div className={cx(
+                    'AnnotationCard',
+                    !inCarousel && 'AnnotationCard__inPopup',
+                    isTextCard && 'AnnotationCard__isText',
+                    isWormholeCard && 'AnnotationCard__wormhole',
+                    'fontSize__verse'
+                )}>
+                    {!isWormholeCard && (
+                        <DotSequence
+                            inAnnotationCard
+                            dotKeys={cardDotKeys}
+                        />
+                    )}
 
-                {isTextCard ? (
-                    <Texts
-                        text={text}
-                        showAccessInPopupAnnotation={!inCarousel}
-                        /**
+                    {isTextCard ? (
+                        <Texts
+                            text={text}
+                            showAccessInPopupAnnotation={!inCarousel}
+                            /**
                          * Allow for clicking on anchor in unselected
                          * annotation in carousel.
                          */
-                        annotationIndex={annotationIndex}
-                        handleAnchorClick={handleAnnotationWikiSelect}
-                    />
-                ) : (
-                    <AnnotationWormholes
-                        {...{
-                            isSelected,
-                            cardIndex,
-                            annotationIndex,
-                            handleAnnotationWormholeSelect
-                        }}
-                    />
-                )}
-            </div>
-        )
+                            annotationIndex={annotationIndex}
+                            handleAnchorClick={handleAnnotationWikiSelect}
+                        />
+                    ) : (
+                        <AnnotationWormholes
+                            {...{
+                                isSelected,
+                                cardIndex,
+                                annotationIndex,
+                                handleAnnotationWormholeSelect
+                            }}
+                        />
+                    )}
+                </div>
+            )
 
         return inCarousel ? (
             <div className={cx(
@@ -183,7 +183,7 @@ AnnotationCardView = ({
         ) : (
             annotationCardChild
         )
-}
+    }
 
 AnnotationCardView.propTypes = annotationCardViewProptypes
 

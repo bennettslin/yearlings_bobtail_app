@@ -13,7 +13,7 @@ const Keyboard = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Keyboard = ({
     )
 }
 
-Keyboard.propTypes = propTypes;
+Keyboard.propTypes = propTypes
 
 export default Keyboard

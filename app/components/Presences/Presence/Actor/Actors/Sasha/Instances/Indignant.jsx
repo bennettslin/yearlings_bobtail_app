@@ -13,7 +13,7 @@ const Indignant = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Indignant = ({
     )
 }
 
-Indignant.propTypes = propTypes;
+Indignant.propTypes = propTypes
 
 export default Indignant

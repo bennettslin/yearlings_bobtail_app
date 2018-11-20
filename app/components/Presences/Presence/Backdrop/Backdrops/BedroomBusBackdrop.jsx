@@ -13,7 +13,7 @@ const BedroomBusBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BedroomBusBackdrop = ({
     )
 }
 
-BedroomBusBackdrop.propTypes = propTypes;
+BedroomBusBackdrop.propTypes = propTypes
 
 export default BedroomBusBackdrop

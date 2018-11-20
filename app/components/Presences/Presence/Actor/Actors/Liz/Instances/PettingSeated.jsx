@@ -13,7 +13,7 @@ const PettingSeated = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PettingSeated = ({
     )
 }
 
-PettingSeated.propTypes = propTypes;
+PettingSeated.propTypes = propTypes
 
 export default PettingSeated

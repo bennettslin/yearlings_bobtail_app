@@ -96,19 +96,19 @@ export const getVerseIndexforRatio = (
         // Now figure out which verse the touch is in.
         verseTimesIndex = findIndex(stanzaVerseConfigs, (verseTime, index) => {
 
-                // If it's the last verse, just return true.
-                if (index === stanzaVerseConfigs.length - 1) {
-                    return true
-                }
+            // If it's the last verse, just return true.
+            if (index === stanzaVerseConfigs.length - 1) {
+                return true
+            }
 
-                const verseEndRatio =
+            const verseEndRatio =
                     (stanzaVerseConfigs[index + 1].verseStartTime - stanzaStartTime) / totalStanzaTime,
 
-                    // Verse's end ratio should be greater than touch ratio.
-                    isTouchInVerse = verseEndRatio > touchInVersesRatio
+                // Verse's end ratio should be greater than touch ratio.
+                isTouchInVerse = verseEndRatio > touchInVersesRatio
 
-                return isTouchInVerse
-            }
+            return isTouchInVerse
+        }
         ),
 
         // Add stanza's first verse index with the returned verse times index.

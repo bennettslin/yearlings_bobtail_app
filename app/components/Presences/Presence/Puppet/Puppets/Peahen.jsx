@@ -13,7 +13,7 @@ const Peahen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Peahen = ({
     )
 }
 
-Peahen.propTypes = propTypes;
+Peahen.propTypes = propTypes
 
 export default Peahen

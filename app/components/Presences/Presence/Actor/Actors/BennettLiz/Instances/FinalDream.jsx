@@ -13,7 +13,7 @@ const FinalDream = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const FinalDream = ({
     )
 }
 
-FinalDream.propTypes = propTypes;
+FinalDream.propTypes = propTypes
 
 export default FinalDream

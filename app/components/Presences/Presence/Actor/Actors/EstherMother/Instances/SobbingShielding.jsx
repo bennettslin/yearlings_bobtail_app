@@ -13,7 +13,7 @@ const SobbingShielding = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SobbingShielding = ({
     )
 }
 
-SobbingShielding.propTypes = propTypes;
+SobbingShielding.propTypes = propTypes
 
 export default SobbingShielding

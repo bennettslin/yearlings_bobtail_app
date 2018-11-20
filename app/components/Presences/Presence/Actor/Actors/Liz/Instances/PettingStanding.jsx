@@ -13,7 +13,7 @@ const PettingStanding = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PettingStanding = ({
     )
 }
 
-PettingStanding.propTypes = propTypes;
+PettingStanding.propTypes = propTypes
 
 export default PettingStanding

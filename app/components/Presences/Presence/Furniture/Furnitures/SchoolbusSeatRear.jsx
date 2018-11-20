@@ -13,7 +13,7 @@ const SchoolbusSeatRear = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SchoolbusSeatRear = ({
     )
 }
 
-SchoolbusSeatRear.propTypes = propTypes;
+SchoolbusSeatRear.propTypes = propTypes
 
 export default SchoolbusSeatRear

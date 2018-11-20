@@ -23,7 +23,7 @@ const JacobMara = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -37,6 +37,6 @@ const JacobMara = ({
     )
 }
 
-JacobMara.propTypes = propTypes;
+JacobMara.propTypes = propTypes
 
 export default JacobMara

@@ -13,7 +13,7 @@ const BuddhaShrine = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BuddhaShrine = ({
     )
 }
 
-BuddhaShrine.propTypes = propTypes;
+BuddhaShrine.propTypes = propTypes
 
 export default BuddhaShrine

@@ -13,7 +13,7 @@ const CatholicPensive = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CatholicPensive = ({
     )
 }
 
-CatholicPensive.propTypes = propTypes;
+CatholicPensive.propTypes = propTypes
 
 export default CatholicPensive

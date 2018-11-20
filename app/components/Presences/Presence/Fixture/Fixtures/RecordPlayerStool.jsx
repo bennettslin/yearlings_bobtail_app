@@ -13,7 +13,7 @@ const RecordPlayerStool = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RecordPlayerStool = ({
     )
 }
 
-RecordPlayerStool.propTypes = propTypes;
+RecordPlayerStool.propTypes = propTypes
 
 export default RecordPlayerStool

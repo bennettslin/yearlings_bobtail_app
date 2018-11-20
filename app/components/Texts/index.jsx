@@ -10,32 +10,32 @@ import Text from './Text'
 
 const propTypes = {
     // From parent.
-    text: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array,
-        PropTypes.object
-    ])
-},
+        text: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.array,
+            PropTypes.object
+        ])
+    },
 
-Texts = ({
-    text: textEntity,
+    Texts = ({
+        text: textEntity,
 
-...other }) => {
+        ...other }) => {
 
-    return (Array.isArray(textEntity)) ? (
-        textEntity.map((textElement, index) => (
-            <Texts {...other}
-                key={index}
-                text={textElement}
+        return (Array.isArray(textEntity)) ? (
+            textEntity.map((textElement, index) => (
+                <Texts {...other}
+                    key={index}
+                    text={textElement}
+                />
+            ))
+
+        ) : (
+            <Text {...other}
+                text={textEntity}
             />
-        ))
-
-    ) : (
-        <Text {...other}
-            text={textEntity}
-        />
-    )
-}
+        )
+    }
 
 Texts.propTypes = propTypes
 

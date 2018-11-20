@@ -13,7 +13,7 @@ const SpaceColony = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SpaceColony = ({
     )
 }
 
-SpaceColony.propTypes = propTypes;
+SpaceColony.propTypes = propTypes
 
 export default SpaceColony

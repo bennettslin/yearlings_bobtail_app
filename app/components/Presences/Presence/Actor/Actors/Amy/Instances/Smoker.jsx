@@ -13,7 +13,7 @@ const Smoker = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Smoker = ({
     )
 }
 
-Smoker.propTypes = propTypes;
+Smoker.propTypes = propTypes
 
 export default Smoker

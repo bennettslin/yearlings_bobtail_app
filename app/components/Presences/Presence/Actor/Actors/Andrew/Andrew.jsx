@@ -33,7 +33,7 @@ const Andrew = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -47,6 +47,6 @@ const Andrew = ({
     )
 }
 
-Andrew.propTypes = propTypes;
+Andrew.propTypes = propTypes
 
 export default Andrew

@@ -13,7 +13,7 @@ const KickDrum = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const KickDrum = ({
     )
 }
 
-KickDrum.propTypes = propTypes;
+KickDrum.propTypes = propTypes
 
 export default KickDrum

@@ -13,7 +13,7 @@ const ShoreBuoyBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ShoreBuoyBackdrop = ({
     )
 }
 
-ShoreBuoyBackdrop.propTypes = propTypes;
+ShoreBuoyBackdrop.propTypes = propTypes
 
 export default ShoreBuoyBackdrop

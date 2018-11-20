@@ -18,28 +18,28 @@ const mapStateToProps = ({
 })
 
 const titleToggleDefaultProps = {
-    isAudioChild: false
-},
+        isAudioChild: false
+    },
 
-titleTogglePropTypes = {
+    titleTogglePropTypes = {
     // Through Redux.
-    isTwoRowMenu: PropTypes.bool.isRequired,
+        isTwoRowMenu: PropTypes.bool.isRequired,
 
-    // From parent.
-    isAudioChild: PropTypes.bool.isRequired,
-    handleTitleToggle: PropTypes.func.isRequired
-},
+        // From parent.
+        isAudioChild: PropTypes.bool.isRequired,
+        handleTitleToggle: PropTypes.func.isRequired
+    },
 
-TitleToggle = ({
+    TitleToggle = ({
 
-    isTwoRowMenu,
+        isTwoRowMenu,
 
-    isAudioChild,
-    handleTitleToggle
+        isAudioChild,
+        handleTitleToggle
 
-}) => {
+    }) => {
 
-    const titleButtonChild = (
+        const titleButtonChild = (
             <Button
                 buttonName={TITLE_BUTTON_KEY}
                 className={cx(
@@ -51,31 +51,31 @@ TitleToggle = ({
             />
         )
 
-    return isAudioChild === isTwoRowMenu && (
-        <div className={cx(
-            'TitleToggle',
-            { 'Audio__child': isAudioChild,
-              'TitleToggle__inAudio': isAudioChild }
-        )}>
-            {isTwoRowMenu && (
-                <AudioTimer
-                    isTitleTimer
-                />
-            )}
+        return isAudioChild === isTwoRowMenu && (
+            <div className={cx(
+                'TitleToggle',
+                { 'Audio__child': isAudioChild,
+                    'TitleToggle__inAudio': isAudioChild }
+            )}>
+                {isTwoRowMenu && (
+                    <AudioTimer
+                        isTitleTimer
+                    />
+                )}
 
-            {isTwoRowMenu ? (
-                <div className={cx(
-                    'TitleToggleButton__animatable',
-                    'absoluteFullContainer'
-                )}>
-                    {titleButtonChild}
-                </div>
-            ) : (
-                titleButtonChild
-            )}
-        </div>
-    )
-}
+                {isTwoRowMenu ? (
+                    <div className={cx(
+                        'TitleToggleButton__animatable',
+                        'absoluteFullContainer'
+                    )}>
+                        {titleButtonChild}
+                    </div>
+                ) : (
+                    titleButtonChild
+                )}
+            </div>
+        )
+    }
 
 TitleToggle.defaultProps = titleToggleDefaultProps
 TitleToggle.propTypes = titleTogglePropTypes

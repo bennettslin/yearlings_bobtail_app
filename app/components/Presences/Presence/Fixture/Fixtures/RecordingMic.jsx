@@ -13,7 +13,7 @@ const RecordingMic = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RecordingMic = ({
     )
 }
 
-RecordingMic.propTypes = propTypes;
+RecordingMic.propTypes = propTypes
 
 export default RecordingMic

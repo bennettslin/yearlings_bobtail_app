@@ -13,7 +13,7 @@ const RubiksCube = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RubiksCube = ({
     )
 }
 
-RubiksCube.propTypes = propTypes;
+RubiksCube.propTypes = propTypes
 
 export default RubiksCube

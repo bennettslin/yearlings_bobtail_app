@@ -14,7 +14,7 @@ const AdminNavRow = ({
     isSelected,
     handleNavSongSelect,
 
-...other }) => {
+    ...other }) => {
 
     const songTitle = getSongTitle({ songIndex }),
         songTasks = getSongTasks(songIndex),

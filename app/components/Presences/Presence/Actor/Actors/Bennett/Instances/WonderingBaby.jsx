@@ -13,7 +13,7 @@ const WonderingBaby = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const WonderingBaby = ({
     )
 }
 
-WonderingBaby.propTypes = propTypes;
+WonderingBaby.propTypes = propTypes
 
 export default WonderingBaby

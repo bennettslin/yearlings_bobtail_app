@@ -13,7 +13,7 @@ const Perfuming = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Perfuming = ({
     )
 }
 
-Perfuming.propTypes = propTypes;
+Perfuming.propTypes = propTypes
 
 export default Perfuming

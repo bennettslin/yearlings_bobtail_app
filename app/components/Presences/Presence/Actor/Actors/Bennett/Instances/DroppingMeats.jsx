@@ -13,7 +13,7 @@ const DroppingMeats = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DroppingMeats = ({
     )
 }
 
-DroppingMeats.propTypes = propTypes;
+DroppingMeats.propTypes = propTypes
 
 export default DroppingMeats

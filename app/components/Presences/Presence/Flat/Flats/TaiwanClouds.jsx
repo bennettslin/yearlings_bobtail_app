@@ -13,7 +13,7 @@ const TaiwanClouds = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TaiwanClouds = ({
     )
 }
 
-TaiwanClouds.propTypes = propTypes;
+TaiwanClouds.propTypes = propTypes
 
 export default TaiwanClouds

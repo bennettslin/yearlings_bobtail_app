@@ -6,54 +6,54 @@ import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 const propTypes = {
     // From parent.
-    stanzaIndex: PropTypes.number.isRequired,
-    stanzaConfig: PropTypes.shape({
-        stanzaVerseConfigs: PropTypes.array.isRequired
-    }).isRequired,
-    StanzaComponent: PropTypes.func.isRequired
-},
+        stanzaIndex: PropTypes.number.isRequired,
+        stanzaConfig: PropTypes.shape({
+            stanzaVerseConfigs: PropTypes.array.isRequired
+        }).isRequired,
+        StanzaComponent: PropTypes.func.isRequired
+    },
 
-StanzaHoc = ({
-    StanzaComponent,
+    StanzaHoc = ({
+        StanzaComponent,
 
-...other }) => {
+        ...other }) => {
 
-    const {
-            stanzaIndex,
-            stanzaConfig
-        } = other,
-        {
-            stanzaVerseConfigs
-        } = stanzaConfig,
+        const {
+                stanzaIndex,
+                stanzaConfig
+            } = other,
+            {
+                stanzaVerseConfigs
+            } = stanzaConfig,
 
-        logicSelectors = cx(
+            logicSelectors = cx(
             // "Child component stanza index."
 
-            // Aligned selector when on cursor.
-            !isNaN(stanzaIndex) &&
+                // Aligned selector when on cursor.
+                !isNaN(stanzaIndex) &&
                 `ChS${stanzaIndex}`,
 
-            /**
+                /**
              * General selector when before cursor, general
              * sibling selector when after cursor.
              */
-            !isNaN(stanzaIndex) &&
+                !isNaN(stanzaIndex) &&
                 'ChS',
 
-            // "Parent of verse index."
-            getParentOfVerseClassNamesForIndices({
-                entities: stanzaVerseConfigs
-            })
-        )
+                // "Parent of verse index."
+                getParentOfVerseClassNamesForIndices({
+                    entities: stanzaVerseConfigs
+                })
+            )
 
-    return (
-        <StanzaComponent {...other}
-            {...{
-                logicSelectors
-            }}
-        />
-    )
-}
+        return (
+            <StanzaComponent {...other}
+                {...{
+                    logicSelectors
+                }}
+            />
+        )
+    }
 
 StanzaHoc.propTypes = propTypes
 

@@ -13,7 +13,7 @@ const Cheering = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Cheering = ({
     )
 }
 
-Cheering.propTypes = propTypes;
+Cheering.propTypes = propTypes
 
 export default Cheering

@@ -13,7 +13,7 @@ const Past = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Past = ({
     )
 }
 
-Past.propTypes = propTypes;
+Past.propTypes = propTypes
 
 export default Past

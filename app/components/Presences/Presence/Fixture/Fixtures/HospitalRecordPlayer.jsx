@@ -13,7 +13,7 @@ const HospitalRecordPlayer = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const HospitalRecordPlayer = ({
     )
 }
 
-HospitalRecordPlayer.propTypes = propTypes;
+HospitalRecordPlayer.propTypes = propTypes
 
 export default HospitalRecordPlayer

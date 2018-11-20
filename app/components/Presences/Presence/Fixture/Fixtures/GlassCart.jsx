@@ -13,7 +13,7 @@ const GlassCart = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GlassCart = ({
     )
 }
 
-GlassCart.propTypes = propTypes;
+GlassCart.propTypes = propTypes
 
 export default GlassCart

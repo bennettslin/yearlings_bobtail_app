@@ -13,7 +13,7 @@ const GettingDark = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GettingDark = ({
     )
 }
 
-GettingDark.propTypes = propTypes;
+GettingDark.propTypes = propTypes
 
 export default GettingDark

@@ -143,9 +143,9 @@ class PlayerManager extends Component {
         this.setState({
             canPlayThroughsObject,
             nextPlayerToRender: getNextPlayerSongIndexToRender(
-                    selectedSongIndex,
-                    canPlayThroughsObject
-                )
+                selectedSongIndex,
+                canPlayThroughsObject
+            )
         })
     }
 
@@ -189,8 +189,8 @@ class PlayerManager extends Component {
          * to successfully play before storing play status in state.
          */
         const {
-                isPlaying: wasPlaying
-            } = this.props
+            isPlaying: wasPlaying
+        } = this.props
 
         // Pausing.
         if (!isPlaying && wasPlaying) {

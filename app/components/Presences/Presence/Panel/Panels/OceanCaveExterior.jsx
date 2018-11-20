@@ -13,7 +13,7 @@ const OceanCaveExterior = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OceanCaveExterior = ({
     )
 }
 
-OceanCaveExterior.propTypes = propTypes;
+OceanCaveExterior.propTypes = propTypes
 
 export default OceanCaveExterior

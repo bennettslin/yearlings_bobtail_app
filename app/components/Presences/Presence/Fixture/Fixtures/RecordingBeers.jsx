@@ -13,7 +13,7 @@ const RecordingBeers = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RecordingBeers = ({
     )
 }
 
-RecordingBeers.propTypes = propTypes;
+RecordingBeers.propTypes = propTypes
 
 export default RecordingBeers

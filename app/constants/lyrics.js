@@ -1,15 +1,15 @@
 const LYRIC = 'lyric',
-      LEFT = 'left',
-      CENTRE = 'centre',
-      RIGHT = 'right',
-      ITALIC = 'italic',
-      EMPHASIS = 'emphasis',
-      ANCHOR = 'anchor',
+    LEFT = 'left',
+    CENTRE = 'centre',
+    RIGHT = 'right',
+    ITALIC = 'italic',
+    EMPHASIS = 'emphasis',
+    ANCHOR = 'anchor',
 
-      SUB_CARD = 'subCard',
-      DOT_CARD = 'dotCard',
-      TOP_SIDE_CARD = 'topSideCard',
-      BOTTOM_SIDE_CARD = 'bottomSideCard'
+    SUB_CARD = 'subCard',
+    DOT_CARD = 'dotCard',
+    TOP_SIDE_CARD = 'topSideCard',
+    BOTTOM_SIDE_CARD = 'bottomSideCard'
 
 module.exports = {
 

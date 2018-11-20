@@ -13,7 +13,7 @@ const AbbeyRoad = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const AbbeyRoad = ({
     )
 }
 
-AbbeyRoad.propTypes = propTypes;
+AbbeyRoad.propTypes = propTypes
 
 export default AbbeyRoad

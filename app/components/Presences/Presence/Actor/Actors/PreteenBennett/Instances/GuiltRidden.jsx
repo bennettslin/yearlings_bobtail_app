@@ -13,7 +13,7 @@ const GuiltRidden = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GuiltRidden = ({
     )
 }
 
-GuiltRidden.propTypes = propTypes;
+GuiltRidden.propTypes = propTypes
 
 export default GuiltRidden

@@ -49,7 +49,7 @@ import NudeDrawings from './Fixtures/NudeDrawings'
 import Vaseline from './Fixtures/Vaseline'
 import LizPhone from './Fixtures/LizPhone'
 import LizPhoneReflection from './Fixtures/LizPhoneReflection'
-import BloodyTowel from './Fixtures/BloodyTowel';
+import BloodyTowel from './Fixtures/BloodyTowel'
 import Gravestone from './Fixtures/Gravestone'
 import EvianBottles from './Fixtures/EvianBottles'
 import StageMicSide from './Fixtures/StageMicSide'
@@ -59,7 +59,7 @@ import BassCaseSide from './Fixtures/BassCaseSide'
 import DrumsStacked from './Fixtures/DrumsStacked'
 import BennettShoe from './Fixtures/BennettShoe'
 import BennettShoeReflection from './Fixtures/BennettShoeReflection'
-import NasAlbum from './Fixtures/NasAlbum';
+import NasAlbum from './Fixtures/NasAlbum'
 import Tchotchkes from './Fixtures/Tchotchkes'
 import TetherballPole from './Fixtures/TetherballPole'
 import RecordingConsole from './Fixtures/RecordingConsole'
@@ -231,7 +231,7 @@ const Fixture = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const FixtureComponent = FIXTURES_MAP[nameKey]
 
@@ -245,6 +245,6 @@ const Fixture = ({
     )
 }
 
-Fixture.propTypes = propTypes;
+Fixture.propTypes = propTypes
 
 export default Fixture

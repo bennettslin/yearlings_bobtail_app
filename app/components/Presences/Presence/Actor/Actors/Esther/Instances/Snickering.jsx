@@ -13,7 +13,7 @@ const Snickering = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Snickering = ({
     )
 }
 
-Snickering.propTypes = propTypes;
+Snickering.propTypes = propTypes
 
 export default Snickering

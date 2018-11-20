@@ -13,7 +13,7 @@ const WeddingCrowd = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const WeddingCrowd = ({
     )
 }
 
-WeddingCrowd.propTypes = propTypes;
+WeddingCrowd.propTypes = propTypes
 
 export default WeddingCrowd

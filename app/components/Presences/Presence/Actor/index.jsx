@@ -11,7 +11,7 @@ import BennettsChristopherLiz from './Actors/BennettsChristopherLiz/BennettsChri
 import BennettStephanie from './Actors/BennettStephanie/BennettStephanie'
 import OldBennett from './Actors/OldBennett/OldBennett'
 import Anita from './Actors/Anita/Anita'
-import AnitaBennett from './Actors/AnitaBennett/AnitaBennett';
+import AnitaBennett from './Actors/AnitaBennett/AnitaBennett'
 import Esther from './Actors/Esther/Esther'
 import EstherMother from './Actors/EstherMother/EstherMother'
 import Willy from './Actors/Willy/Willy'
@@ -170,7 +170,7 @@ const Actor = ({
     nameKey,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const ActorComponent = ACTORS_MAP[nameKey]
 
@@ -187,6 +187,6 @@ const Actor = ({
     )
 }
 
-Actor.propTypes = propTypes;
+Actor.propTypes = propTypes
 
 export default Actor

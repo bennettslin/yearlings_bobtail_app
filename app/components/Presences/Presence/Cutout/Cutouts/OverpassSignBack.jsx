@@ -13,7 +13,7 @@ const OverpassSignBack = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OverpassSignBack = ({
     )
 }
 
-OverpassSignBack.propTypes = propTypes;
+OverpassSignBack.propTypes = propTypes
 
 export default OverpassSignBack

@@ -13,7 +13,7 @@ const UsherLooking = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const UsherLooking = ({
     )
 }
 
-UsherLooking.propTypes = propTypes;
+UsherLooking.propTypes = propTypes
 
 export default UsherLooking

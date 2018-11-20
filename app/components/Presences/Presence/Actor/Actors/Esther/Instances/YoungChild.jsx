@@ -13,7 +13,7 @@ const YoungChild = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const YoungChild = ({
     )
 }
 
-YoungChild.propTypes = propTypes;
+YoungChild.propTypes = propTypes
 
 export default YoungChild

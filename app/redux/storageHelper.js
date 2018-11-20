@@ -58,44 +58,44 @@ const _validateValueForKey = (key) => {
             isValid = isNumber && parsedValue < album.songs.length
             break
         case SELECTED_ANNOTATION_INDEX:
-            {
-                const annotations = _getValidatedStoredSong().annotations
+        {
+            const annotations = _getValidatedStoredSong().annotations
 
-                // Logues do not have annotations.
-                isValid = isNumber && annotations ?
+            // Logues do not have annotations.
+            isValid = isNumber && annotations ?
                 parsedValue <= annotations.length : parsedValue === 0
-                break
-            }
+            break
+        }
         case SELECTED_VERSE_INDEX:
-            {
-                const songVerseConfigs =
+        {
+            const songVerseConfigs =
                     _getValidatedStoredSong().songVerseConfigs
 
-                // Logues do not have songVerseConfigs.
-                isValid = isNumber && songVerseConfigs ?
-                    parsedValue < songVerseConfigs.length :
-                    parsedValue === 0
-                break
-            }
+            // Logues do not have songVerseConfigs.
+            isValid = isNumber && songVerseConfigs ?
+                parsedValue < songVerseConfigs.length :
+                parsedValue === 0
+            break
+        }
         case SELECTED_WIKI_INDEX:
-            {
-                const annotations = _getValidatedStoredSong().annotations
+        {
+            const annotations = _getValidatedStoredSong().annotations
 
-                if (annotations) {
-                    const selectedAnnotationIndex = _validateValueForKey(SELECTED_ANNOTATION_INDEX),
-                        selectedAnnotation = selectedAnnotationIndex > 0 && annotations[selectedAnnotationIndex - 1],
-                        annotationAnchors = selectedAnnotation && selectedAnnotation.annotationAnchors
+            if (annotations) {
+                const selectedAnnotationIndex = _validateValueForKey(SELECTED_ANNOTATION_INDEX),
+                    selectedAnnotation = selectedAnnotationIndex > 0 && annotations[selectedAnnotationIndex - 1],
+                    annotationAnchors = selectedAnnotation && selectedAnnotation.annotationAnchors
 
-                    // If it's a wiki, entry wil be string.
-                    isValid = isNumber && annotationAnchors && typeof annotationAnchors[parsedValue - 1] === 'string'
+                // If it's a wiki, entry wil be string.
+                isValid = isNumber && annotationAnchors && typeof annotationAnchors[parsedValue - 1] === 'string'
 
-                    // Logues do not have annotations.
-                } else {
-                    isValid = isNumber && parsedValue === 0
-                }
-                break
+                // Logues do not have annotations.
+            } else {
+                isValid = isNumber && parsedValue === 0
             }
-            // These must be less than the length of options.
+            break
+        }
+        // These must be less than the length of options.
         case SELECTED_AUDIO_OPTION_INDEX:
             isValid = isNumber && parsedValue < AUDIO_OPTIONS.length
             break
@@ -114,28 +114,28 @@ const _validateValueForKey = (key) => {
              * of dot keys.
              */
         case SELECTED_DOT_KEYS:
-            {
-                const maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length)
+        {
+            const maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length)
 
-                isValid = isNumber && parsedValue < maxBitNumber
-                break
-            }
+            isValid = isNumber && parsedValue < maxBitNumber
+            break
+        }
 
-            /**
+        /**
              * Don't show dots section if overview or tips will show.
              */
         case SELECTED_DOTS_INDEX:
-            {
-                const selectedOverviewIndex = _validateValueForKey(SELECTED_OVERVIEW_INDEX),
-                    selectedTipsIndex = _validateValueForKey(SELECTED_TIPS_INDEX),
-                    overviewWillShow = OVERVIEW_OPTIONS[selectedOverviewIndex] !== DISABLED,
-                    tipsWillShow = TIPS_OPTIONS[selectedTipsIndex] !== DISABLED
+        {
+            const selectedOverviewIndex = _validateValueForKey(SELECTED_OVERVIEW_INDEX),
+                selectedTipsIndex = _validateValueForKey(SELECTED_TIPS_INDEX),
+                overviewWillShow = OVERVIEW_OPTIONS[selectedOverviewIndex] !== DISABLED,
+                tipsWillShow = TIPS_OPTIONS[selectedTipsIndex] !== DISABLED
 
-                isValid = isNumber && parsedValue <= 1 && !overviewWillShow && !tipsWillShow
-                break
-            }
+            isValid = isNumber && parsedValue <= 1 && !overviewWillShow && !tipsWillShow
+            break
+        }
 
-            // These must be a simple 0 or 1.
+        // These must be a simple 0 or 1.
         case SELECTED_ACCESS_INDEX:
         case SELECTED_ADMIN_INDEX:
         case SELECTED_SCORE_INDEX:

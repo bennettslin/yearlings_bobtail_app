@@ -13,7 +13,7 @@ const KhariAttackSpeech = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const KhariAttackSpeech = ({
     )
 }
 
-KhariAttackSpeech.propTypes = propTypes;
+KhariAttackSpeech.propTypes = propTypes
 
 export default KhariAttackSpeech

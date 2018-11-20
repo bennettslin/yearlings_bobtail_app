@@ -13,7 +13,7 @@ const TaiwanFog = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TaiwanFog = ({
     )
 }
 
-TaiwanFog.propTypes = propTypes;
+TaiwanFog.propTypes = propTypes
 
 export default TaiwanFog

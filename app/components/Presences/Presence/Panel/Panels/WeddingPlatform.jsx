@@ -13,7 +13,7 @@ const WeddingPlatform = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const WeddingPlatform = ({
     )
 }
 
-WeddingPlatform.propTypes = propTypes;
+WeddingPlatform.propTypes = propTypes
 
 export default WeddingPlatform

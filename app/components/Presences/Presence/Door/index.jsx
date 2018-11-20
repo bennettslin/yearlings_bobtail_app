@@ -126,7 +126,7 @@ const Door = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const DoorComponent = DOORS_MAP[nameKey]
 
@@ -140,6 +140,6 @@ const Door = ({
     )
 }
 
-Door.propTypes = propTypes;
+Door.propTypes = propTypes
 
 export default Door

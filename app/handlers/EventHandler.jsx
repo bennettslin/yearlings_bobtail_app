@@ -19,7 +19,7 @@ import { REFERENCE } from 'constants/dots'
 import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
 
 import { DISABLED,
-         OVERVIEW_OPTIONS } from 'constants/options'
+    OVERVIEW_OPTIONS } from 'constants/options'
 
 import {
     CAROUSEL_SCROLL,
@@ -739,7 +739,7 @@ class EventHandler extends Component {
         this.stopPropagation(e)
 
         // If overview is open when tips is open, leave overview open.
-        const exemptOverview = !this.props.selectedTipsIndex;
+        const exemptOverview = !this.props.selectedTipsIndex
 
         this._closeSections({
             exemptLyric: true,
@@ -833,8 +833,8 @@ class EventHandler extends Component {
     }) {
 
         const { selectedScoreIndex,
-                selectedTitleIndex,
-                selectedWikiIndex } = this.props
+            selectedTitleIndex,
+            selectedWikiIndex } = this.props
 
         if (!leaveOpenPopups) {
 
@@ -981,9 +981,9 @@ class EventHandler extends Component {
     focusElementForAccess = () => {
 
         const {
-            isHeightlessLyricColumn,
-            isLyricExpanded
-        } = this.props,
+                isHeightlessLyricColumn,
+                isLyricExpanded
+            } = this.props,
 
             doFocusLyricElement =
                 this.myLyricElement &&

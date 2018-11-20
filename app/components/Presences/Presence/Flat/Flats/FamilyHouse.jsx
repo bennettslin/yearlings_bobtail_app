@@ -13,7 +13,7 @@ const FamilyHouse = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const FamilyHouse = ({
     )
 }
 
-FamilyHouse.propTypes = propTypes;
+FamilyHouse.propTypes = propTypes
 
 export default FamilyHouse

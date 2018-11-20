@@ -13,7 +13,7 @@ const Cautious = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Cautious = ({
     )
 }
 
-Cautious.propTypes = propTypes;
+Cautious.propTypes = propTypes
 
 export default Cautious

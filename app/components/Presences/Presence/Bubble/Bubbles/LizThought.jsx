@@ -13,7 +13,7 @@ const LizThought = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizThought = ({
     )
 }
 
-LizThought.propTypes = propTypes;
+LizThought.propTypes = propTypes
 
 export default LizThought

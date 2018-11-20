@@ -13,7 +13,7 @@ const VanNuysPlantsFront = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const VanNuysPlantsFront = ({
     )
 }
 
-VanNuysPlantsFront.propTypes = propTypes;
+VanNuysPlantsFront.propTypes = propTypes
 
 export default VanNuysPlantsFront

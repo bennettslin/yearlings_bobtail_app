@@ -13,7 +13,7 @@ const FireHydrant = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const FireHydrant = ({
     )
 }
 
-FireHydrant.propTypes = propTypes;
+FireHydrant.propTypes = propTypes
 
 export default FireHydrant

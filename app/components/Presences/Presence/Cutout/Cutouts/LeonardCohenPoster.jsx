@@ -13,7 +13,7 @@ const LeonardCohenPoster = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LeonardCohenPoster = ({
     )
 }
 
-LeonardCohenPoster.propTypes = propTypes;
+LeonardCohenPoster.propTypes = propTypes
 
 export default LeonardCohenPoster

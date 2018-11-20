@@ -13,7 +13,7 @@ const LizPhoneBase = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizPhoneBase = ({
     )
 }
 
-LizPhoneBase.propTypes = propTypes;
+LizPhoneBase.propTypes = propTypes
 
 export default LizPhoneBase

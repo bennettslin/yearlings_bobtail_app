@@ -1,11 +1,11 @@
 const AFTERWORD = 'afterword',
-      BACKSTORY = 'backstory',
-      NARRATIVE = 'narrative',
-      OBSERVATION = 'observation',
-      WORMHOLE = 'wormhole',
-      PUN = 'pun',
-      REFERENCE = 'reference',
-      SONGWRITING = 'songwriting'
+    BACKSTORY = 'backstory',
+    NARRATIVE = 'narrative',
+    OBSERVATION = 'observation',
+    WORMHOLE = 'wormhole',
+    PUN = 'pun',
+    REFERENCE = 'reference',
+    SONGWRITING = 'songwriting'
 
 module.exports = {
     AFTERWORD,

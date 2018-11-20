@@ -13,7 +13,7 @@ const AsleepCouch = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const AsleepCouch = ({
     )
 }
 
-AsleepCouch.propTypes = propTypes;
+AsleepCouch.propTypes = propTypes
 
 export default AsleepCouch

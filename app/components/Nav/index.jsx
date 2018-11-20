@@ -19,44 +19,44 @@ const mapStateToProps = ({
 
 const navPropTypes = {
     // Through Redux.
-    isHiddenCarouselNav: PropTypes.bool.isRequired,
-    showSingleBookColumn: PropTypes.bool.isRequired
-},
+        isHiddenCarouselNav: PropTypes.bool.isRequired,
+        showSingleBookColumn: PropTypes.bool.isRequired
+    },
 
-Nav = ({
+    Nav = ({
     /* eslint-disable no-unused-vars */
-    dispatch,
-    /* eslint-enable no-unused-vars */
+        dispatch,
+        /* eslint-enable no-unused-vars */
 
-    isHiddenCarouselNav,
-    showSingleBookColumn,
+        isHiddenCarouselNav,
+        showSingleBookColumn,
 
-...other }) => {
+        ...other }) => {
 
-    return !isHiddenCarouselNav && (
-        <div
-            className={cx(
-                'Nav',
-                showSingleBookColumn ?
-                    'Nav__showSingleBook' :
-                    'Nav__showDoubleBook',
-                'absoluteFullContainer'
-            )}
-        >
-            {/* Placeholder, has no other purpose. */}
-            <div className="CarouselNavToggle__placeholder" />
+        return !isHiddenCarouselNav && (
+            <div
+                className={cx(
+                    'Nav',
+                    showSingleBookColumn ?
+                        'Nav__showSingleBook' :
+                        'Nav__showDoubleBook',
+                    'absoluteFullContainer'
+                )}
+            >
+                {/* Placeholder, has no other purpose. */}
+                <div className="CarouselNavToggle__placeholder" />
 
-            <div className="NavColumns">
-                <NavColumn {...other}
-                    bookIndex={0}
-                />
-                <NavColumn {...other}
-                    bookIndex={1}
-                />
+                <div className="NavColumns">
+                    <NavColumn {...other}
+                        bookIndex={0}
+                    />
+                    <NavColumn {...other}
+                        bookIndex={1}
+                    />
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 
 Nav.propTypes = navPropTypes
 

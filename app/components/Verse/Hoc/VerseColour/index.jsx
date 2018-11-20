@@ -6,91 +6,91 @@ import VerseTracker from './VerseTracker'
 
 const propTypes = {
     // From parent.
-    isInteractivated: PropTypes.bool,
-    verseIndex: PropTypes.number.isRequired,
-    inUnit: PropTypes.bool,
-    inVerseBar: PropTypes.bool,
-    inSlider: PropTypes.bool
-},
+        isInteractivated: PropTypes.bool,
+        verseIndex: PropTypes.number.isRequired,
+        inUnit: PropTypes.bool,
+        inVerseBar: PropTypes.bool,
+        inSlider: PropTypes.bool
+    },
 
-VerseColour = ({
+    VerseColour = ({
 
-    isInteractivated,
+        isInteractivated,
 
-    verseIndex,
+        verseIndex,
 
-    inUnit,
-    inVerseBar,
-    inSlider
+        inUnit,
+        inVerseBar,
+        inSlider
 
-}) => {
+    }) => {
 
-    const inLyric = inUnit || inVerseBar,
-        isOdd = Boolean(verseIndex % 2)
+        const inLyric = inUnit || inVerseBar,
+            isOdd = Boolean(verseIndex % 2)
 
-    return (
-        <div
-            className={cx(
+        return (
+            <div
+                className={cx(
 
-                // "Grandchild in lyric."
-                inLyric && 'GcL',
+                    // "Grandchild in lyric."
+                    inLyric && 'GcL',
 
-                // "Grandchild in slider."
-                inSlider && 'GcS',
+                    // "Grandchild in slider."
+                    inSlider && 'GcS',
 
-                // "Grandchild interactable."
-                !inVerseBar && 'GcN',
+                    // "Grandchild interactable."
+                    !inVerseBar && 'GcN',
 
-                // "Grandchild verse colour."
-                'GcV',
+                    // "Grandchild verse colour."
+                    'GcV',
 
-                'VerseColour',
+                    'VerseColour',
 
-                inVerseBar && 'VerseColour__inVerseBar',
-                isInteractivated && 'VerseColour__interactivated',
+                    inVerseBar && 'VerseColour__inVerseBar',
+                    isInteractivated && 'VerseColour__interactivated',
 
-                'absoluteFullContainer'
-            )}
-        >
-            <VerseTracker
-                {...{
-                    verseIndex,
-                    inVerseBar,
-                    inUnit,
-                    inSlider,
-                    ...inVerseBar && {
-                        isHiddenInVerseBar: isOdd
-                    }
-                }}
-            />
-
-            {/* Allow verse bar to alternate between odd and even. */}
-            {inVerseBar && (
+                    'absoluteFullContainer'
+                )}
+            >
                 <VerseTracker
                     {...{
                         verseIndex,
                         inVerseBar,
                         inUnit,
                         inSlider,
-                        isHiddenInVerseBar: !isOdd
+                        ...inVerseBar && {
+                            isHiddenInVerseBar: isOdd
+                        }
                     }}
                 />
-            )}
 
-            {/* Even filters are just a little shadier. */}
-            {!inVerseBar && !(verseIndex % 2) && (
-                <div className={cx(
+                {/* Allow verse bar to alternate between odd and even. */}
+                {inVerseBar && (
+                    <VerseTracker
+                        {...{
+                            verseIndex,
+                            inVerseBar,
+                            inUnit,
+                            inSlider,
+                            isHiddenInVerseBar: !isOdd
+                        }}
+                    />
+                )}
 
-                    // "Grandchild even filter."
-                    'GcE',
+                {/* Even filters are just a little shadier. */}
+                {!inVerseBar && !(verseIndex % 2) && (
+                    <div className={cx(
 
-                    'colourFilter__verse__even',
-                    'absoluteFullContainer'
-                )} />
-            )}
-        </div>
-    )
-}
+                        // "Grandchild even filter."
+                        'GcE',
+
+                        'colourFilter__verse__even',
+                        'absoluteFullContainer'
+                    )} />
+                )}
+            </div>
+        )
+    }
 
 VerseColour.propTypes = propTypes
 

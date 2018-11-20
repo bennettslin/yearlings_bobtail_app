@@ -11,30 +11,30 @@ import { LYRIC_SCROLL_BUTTON_KEY } from 'constants/buttons'
 
 const lyricScrollTogglePropTypes = {
     // From parent.
-    handleLyricAutoScroll: PropTypes.func.isRequired
-},
+        handleLyricAutoScroll: PropTypes.func.isRequired
+    },
 
-LyricToggleScroll = ({
-    handleLyricAutoScroll
+    LyricToggleScroll = ({
+        handleLyricAutoScroll
 
-}) => (
-    <div className={cx(
-        'LyricToggleScroll',
-        'LyricToggle',
-        'LyricToggle__inLyric',
-        'length__buttonLarge'
-    )}>
-        <Button
-            isLargeSize
-            {...{
-                buttonName: LYRIC_SCROLL_BUTTON_KEY,
-                buttonIdentifier: 'auto',
-                accessKey: LYRIC_SCROLL_TOGGLE_KEY,
-                handleButtonClick: handleLyricAutoScroll
-            }}
-        />
-    </div>
-)
+    }) => (
+        <div className={cx(
+            'LyricToggleScroll',
+            'LyricToggle',
+            'LyricToggle__inLyric',
+            'length__buttonLarge'
+        )}>
+            <Button
+                isLargeSize
+                {...{
+                    buttonName: LYRIC_SCROLL_BUTTON_KEY,
+                    buttonIdentifier: 'auto',
+                    accessKey: LYRIC_SCROLL_TOGGLE_KEY,
+                    handleButtonClick: handleLyricAutoScroll
+                }}
+            />
+        </div>
+    )
 
 LyricToggleScroll.propTypes = lyricScrollTogglePropTypes
 

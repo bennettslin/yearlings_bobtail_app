@@ -13,7 +13,7 @@ const Punching = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Punching = ({
     )
 }
 
-Punching.propTypes = propTypes;
+Punching.propTypes = propTypes
 
 export default Punching

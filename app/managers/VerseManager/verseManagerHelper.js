@@ -33,8 +33,8 @@ export const getVerseBarStatus = ({
         isVerseBarAbove = selectedVerseRect.top < lyricSectionRect.top,
         isVerseBarBelow = selectedVerseRect.bottom > lyricSectionRect.bottom
 
-        return {
-            isVerseBarAbove,
-            isVerseBarBelow
-        }
+    return {
+        isVerseBarAbove,
+        isVerseBarBelow
+    }
 }

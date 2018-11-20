@@ -13,7 +13,7 @@ const BennettCouchLamp = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettCouchLamp = ({
     )
 }
 
-BennettCouchLamp.propTypes = propTypes;
+BennettCouchLamp.propTypes = propTypes
 
 export default BennettCouchLamp

@@ -13,7 +13,7 @@ const TrashCanFront = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TrashCanFront = ({
     )
 }
 
-TrashCanFront.propTypes = propTypes;
+TrashCanFront.propTypes = propTypes
 
 export default TrashCanFront

@@ -10,42 +10,42 @@ import SequenceDot from './SequenceDot'
 
 const dotBlockPropTypes = {
 
-    // From parent.
-    dotKeys: PropTypes.object.isRequired,
-    inAnnotationCard: PropTypes.bool,
-    inTextAnchor: PropTypes.bool
-},
+        // From parent.
+        dotKeys: PropTypes.object.isRequired,
+        inAnnotationCard: PropTypes.bool,
+        inTextAnchor: PropTypes.bool
+    },
 
-DotSequence = ({
+    DotSequence = ({
 
-    inAnnotationCard,
-    inTextAnchor,
-    dotKeys,
+        inAnnotationCard,
+        inTextAnchor,
+        dotKeys,
 
-...other }) => (
+        ...other }) => (
 
-    <div className={cx(
-        'DotSequence',
-        !inAnnotationCard && 'gradientMask__dotSequence',
-        inTextAnchor && 'DotSequence__inTextAnchor'
-    )}>
-        {ALL_DOT_KEYS.map(dotKey => {
+        <div className={cx(
+            'DotSequence',
+            !inAnnotationCard && 'gradientMask__dotSequence',
+            inTextAnchor && 'DotSequence__inTextAnchor'
+        )}>
+            {ALL_DOT_KEYS.map(dotKey => {
 
-            // Go through all dot keys in array to ensure correct order.
-            return dotKeys[dotKey] && (
+                // Go through all dot keys in array to ensure correct order.
+                return dotKeys[dotKey] && (
 
-                <SequenceDot {...other}
-                    key={dotKey}
-                    {...{
-                        dotKey,
-                        inTextAnchor,
-                        inAnnotationCard
-                    }}
-                />
-            )
-        })}
-    </div>
-)
+                    <SequenceDot {...other}
+                        key={dotKey}
+                        {...{
+                            dotKey,
+                            inTextAnchor,
+                            inAnnotationCard
+                        }}
+                    />
+                )
+            })}
+        </div>
+    )
 
 DotSequence.propTypes = dotBlockPropTypes
 

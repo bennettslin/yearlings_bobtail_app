@@ -13,7 +13,7 @@ const CrossingGuard = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CrossingGuard = ({
     )
 }
 
-CrossingGuard.propTypes = propTypes;
+CrossingGuard.propTypes = propTypes
 
 export default CrossingGuard

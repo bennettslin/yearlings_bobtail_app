@@ -13,7 +13,7 @@ const TrashCan = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TrashCan = ({
     )
 }
 
-TrashCan.propTypes = propTypes;
+TrashCan.propTypes = propTypes
 
 export default TrashCan

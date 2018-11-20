@@ -60,7 +60,7 @@ const Bubble = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const BubbleComponent = BUBBLES_MAP[nameKey]
 
@@ -74,6 +74,6 @@ const Bubble = ({
     )
 }
 
-Bubble.propTypes = propTypes;
+Bubble.propTypes = propTypes
 
 export default Bubble

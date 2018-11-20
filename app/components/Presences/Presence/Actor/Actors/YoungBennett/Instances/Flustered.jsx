@@ -13,7 +13,7 @@ const Flustered = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Flustered = ({
     )
 }
 
-Flustered.propTypes = propTypes;
+Flustered.propTypes = propTypes
 
 export default Flustered

@@ -13,7 +13,7 @@ const ElliottSmithPoster = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ElliottSmithPoster = ({
     )
 }
 
-ElliottSmithPoster.propTypes = propTypes;
+ElliottSmithPoster.propTypes = propTypes
 
 export default ElliottSmithPoster

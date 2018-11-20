@@ -13,7 +13,7 @@ const ProtectiveConcerned = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ProtectiveConcerned = ({
     )
 }
 
-ProtectiveConcerned.propTypes = propTypes;
+ProtectiveConcerned.propTypes = propTypes
 
 export default ProtectiveConcerned

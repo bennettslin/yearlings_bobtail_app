@@ -23,7 +23,7 @@ const AnaHowie = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent =
         INSTANCES_MAP[instanceKey]
@@ -38,6 +38,6 @@ const AnaHowie = ({
     )
 }
 
-AnaHowie.propTypes = propTypes;
+AnaHowie.propTypes = propTypes
 
 export default AnaHowie

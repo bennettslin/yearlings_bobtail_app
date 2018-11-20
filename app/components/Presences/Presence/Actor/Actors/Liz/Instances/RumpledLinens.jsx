@@ -13,7 +13,7 @@ const RumpledLinens = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RumpledLinens = ({
     )
 }
 
-RumpledLinens.propTypes = propTypes;
+RumpledLinens.propTypes = propTypes
 
 export default RumpledLinens

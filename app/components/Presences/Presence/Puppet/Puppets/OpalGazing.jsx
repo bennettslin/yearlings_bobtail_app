@@ -13,7 +13,7 @@ const OpalGazing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OpalGazing = ({
     )
 }
 
-OpalGazing.propTypes = propTypes;
+OpalGazing.propTypes = propTypes
 
 export default OpalGazing

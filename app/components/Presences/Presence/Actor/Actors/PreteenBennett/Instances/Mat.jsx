@@ -13,7 +13,7 @@ const Mat = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Mat = ({
     )
 }
 
-Mat.propTypes = propTypes;
+Mat.propTypes = propTypes
 
 export default Mat

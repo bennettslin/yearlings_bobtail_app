@@ -13,7 +13,7 @@ const PopularGirl = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PopularGirl = ({
     )
 }
 
-PopularGirl.propTypes = propTypes;
+PopularGirl.propTypes = propTypes
 
 export default PopularGirl

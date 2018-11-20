@@ -13,7 +13,7 @@ const GuitarCaseUpright = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GuitarCaseUpright = ({
     )
 }
 
-GuitarCaseUpright.propTypes = propTypes;
+GuitarCaseUpright.propTypes = propTypes
 
 export default GuitarCaseUpright

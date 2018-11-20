@@ -90,11 +90,11 @@ class Player extends Component {
                 this._setIntervalForTimeUpdate(currentSessionId)
                 handlePlaySelectedPlayer(true)
 
-              }).catch(error => {
+            }).catch(error => {
                 // Player failed!
                 logger.error(`Promise to play ${songIndex} failed: ${error}`)
                 handlePlaySelectedPlayer(false)
-            });
+            })
 
         } else {
             this._setIntervalForTimeUpdate(currentSessionId)
@@ -131,10 +131,10 @@ class Player extends Component {
         this._clearInterval()
 
         const intervalId = setInterval(
-                // This interval will only ever pass this session id.
-                this._tellAppCurrentTime.bind(this, currentSessionId),
-                LISTEN_INTERVAL
-            )
+            // This interval will only ever pass this session id.
+            this._tellAppCurrentTime.bind(this, currentSessionId),
+            LISTEN_INTERVAL
+        )
 
         this.setState({
             intervalId
@@ -186,49 +186,49 @@ class Player extends Component {
 
         if (showDebugStatements) {
             this.audioPlayer.addEventListener('ended', () => {
-                logger.error('ended', this.props.songIndex);
+                logger.error('ended', this.props.songIndex)
             })
             this.audioPlayer.addEventListener('pause', () => {
-                logger.error('pause', this.props.songIndex);
+                logger.error('pause', this.props.songIndex)
             })
             this.audioPlayer.addEventListener('play', () => {
-                logger.error('play', this.props.songIndex);
+                logger.error('play', this.props.songIndex)
             })
             this.audioPlayer.addEventListener('playing', () => {
-                logger.error('playing', this.props.songIndex);
+                logger.error('playing', this.props.songIndex)
             })
             this.audioPlayer.addEventListener('timeupdate', () => {
-                logger.error('timeupdate', this.props.songIndex);
+                logger.error('timeupdate', this.props.songIndex)
             })
             // Determine which times ranges have been buffered.
             this.audioPlayer.addEventListener('progress', () => {
-                logger.error('progress', this.props.songIndex);
+                logger.error('progress', this.props.songIndex)
             })
             // Seek operation has completed.
             this.audioPlayer.addEventListener('seeked', () => {
-                logger.error('seeked', this.props.songIndex);
+                logger.error('seeked', this.props.songIndex)
             })
             // Seek operation has begun.
             this.audioPlayer.addEventListener('seeking', () => {
-                logger.error('seeking', this.props.songIndex);
+                logger.error('seeking', this.props.songIndex)
             })
             // Data is not forthcoming.
             this.audioPlayer.addEventListener('stalled', () => {
-                logger.error('stalled', this.props.songIndex);
+                logger.error('stalled', this.props.songIndex)
             })
             // Download has completed.
             this.audioPlayer.addEventListener('suspend', () => {
-                logger.error('suspend', this.props.songIndex);
+                logger.error('suspend', this.props.songIndex)
             })
             // Enough data is available that the media can be played for now.
             this.audioPlayer.addEventListener('canplay', () => {
-                logger.error('canplay', this.props.songIndex);
+                logger.error('canplay', this.props.songIndex)
             })
             this.audioPlayer.addEventListener('canplaythrough', () => {
-                logger.error('canplaythrough', this.props.songIndex);
+                logger.error('canplaythrough', this.props.songIndex)
             })
             this.audioPlayer.addEventListener('waiting', () => {
-                logger.error('waiting', this.props.songIndex);
+                logger.error('waiting', this.props.songIndex)
             })
         }
     }

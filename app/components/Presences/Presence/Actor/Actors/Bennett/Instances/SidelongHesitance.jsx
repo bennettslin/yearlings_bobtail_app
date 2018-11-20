@@ -13,7 +13,7 @@ const SidelongHesitance = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SidelongHesitance = ({
     )
 }
 
-SidelongHesitance.propTypes = propTypes;
+SidelongHesitance.propTypes = propTypes
 
 export default SidelongHesitance

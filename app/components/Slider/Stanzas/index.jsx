@@ -35,8 +35,8 @@ class SliderStanzas extends Component {
 
     render() {
         const {
-            renderedSongIndex
-        } = this.props,
+                renderedSongIndex
+            } = this.props,
             songTotalTime = getSongTotalTime(renderedSongIndex),
             songStanzaConfigs = getSongStanzaConfigs(renderedSongIndex)
 

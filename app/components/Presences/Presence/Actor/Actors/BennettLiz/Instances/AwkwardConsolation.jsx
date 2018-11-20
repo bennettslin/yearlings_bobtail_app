@@ -13,7 +13,7 @@ const AwkwardConsolation = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const AwkwardConsolation = ({
     )
 }
 
-AwkwardConsolation.propTypes = propTypes;
+AwkwardConsolation.propTypes = propTypes
 
 export default AwkwardConsolation

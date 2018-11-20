@@ -23,7 +23,7 @@ const AmyNestorTomer = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -37,6 +37,6 @@ const AmyNestorTomer = ({
     )
 }
 
-AmyNestorTomer.propTypes = propTypes;
+AmyNestorTomer.propTypes = propTypes
 
 export default AmyNestorTomer

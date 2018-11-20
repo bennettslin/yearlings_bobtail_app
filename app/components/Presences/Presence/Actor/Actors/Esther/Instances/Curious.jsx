@@ -13,7 +13,7 @@ const Curious = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Curious = ({
     )
 }
 
-Curious.propTypes = propTypes;
+Curious.propTypes = propTypes
 
 export default Curious

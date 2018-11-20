@@ -13,7 +13,7 @@ const Tennis = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Tennis = ({
     )
 }
 
-Tennis.propTypes = propTypes;
+Tennis.propTypes = propTypes
 
 export default Tennis

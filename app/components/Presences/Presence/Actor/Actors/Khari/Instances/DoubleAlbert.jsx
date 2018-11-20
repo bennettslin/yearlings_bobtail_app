@@ -13,7 +13,7 @@ const DoubleAlbert = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DoubleAlbert = ({
     )
 }
 
-DoubleAlbert.propTypes = propTypes;
+DoubleAlbert.propTypes = propTypes
 
 export default DoubleAlbert

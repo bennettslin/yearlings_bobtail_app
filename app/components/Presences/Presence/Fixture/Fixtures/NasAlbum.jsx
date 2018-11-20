@@ -13,7 +13,7 @@ const NasAlbum = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const NasAlbum = ({
     )
 }
 
-NasAlbum.propTypes = propTypes;
+NasAlbum.propTypes = propTypes
 
 export default NasAlbum

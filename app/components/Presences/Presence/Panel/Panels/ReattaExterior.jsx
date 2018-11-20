@@ -13,7 +13,7 @@ const ReattaExterior = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ReattaExterior = ({
     )
 }
 
-ReattaExterior.propTypes = propTypes;
+ReattaExterior.propTypes = propTypes
 
 export default ReattaExterior

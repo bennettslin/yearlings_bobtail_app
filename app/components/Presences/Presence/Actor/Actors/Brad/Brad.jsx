@@ -30,7 +30,7 @@ const Brad = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -44,6 +44,6 @@ const Brad = ({
     )
 }
 
-Brad.propTypes = propTypes;
+Brad.propTypes = propTypes
 
 export default Brad

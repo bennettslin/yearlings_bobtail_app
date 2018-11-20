@@ -13,7 +13,7 @@ const PharmacyAisle = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PharmacyAisle = ({
     )
 }
 
-PharmacyAisle.propTypes = propTypes;
+PharmacyAisle.propTypes = propTypes
 
 export default PharmacyAisle

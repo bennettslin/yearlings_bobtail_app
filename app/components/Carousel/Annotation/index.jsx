@@ -51,7 +51,7 @@ class CarouselAnnotation extends Component {
     _handleAnnotationTitleClick = (e) => {
         if (!this.props.isSelected) {
             const { annotationIndex,
-                    handleLyricAnnotationSelect } = this.props
+                handleLyricAnnotationSelect } = this.props
 
             handleLyricAnnotationSelect(e, annotationIndex, true)
         }
@@ -98,7 +98,7 @@ class CarouselAnnotation extends Component {
             ),
 
             { columnIndex,
-              dotKeys } = annotationObject,
+                dotKeys } = annotationObject,
 
             columnKey = !isNaN(columnIndex) ? LYRIC_COLUMN_KEYS[columnIndex] : ''
 
@@ -120,52 +120,52 @@ class CarouselAnnotation extends Component {
 
 const carouselAnnotationViewPropTypes = {
     // From parent.
-    annotationIndex: PropTypes.number.isRequired,
-    annotationColumn: PropTypes.string.isRequired,
-    annotationDotKeys: PropTypes.object.isRequired,
-    handleContainerClick: PropTypes.func.isRequired,
-    setRef: PropTypes.func.isRequired
-},
+        annotationIndex: PropTypes.number.isRequired,
+        annotationColumn: PropTypes.string.isRequired,
+        annotationDotKeys: PropTypes.object.isRequired,
+        handleContainerClick: PropTypes.func.isRequired,
+        setRef: PropTypes.func.isRequired
+    },
 
-CarouselAnnotationView = ({
+    CarouselAnnotationView = ({
 
-    annotationColumn,
-    annotationDotKeys,
-    handleContainerClick,
-    setRef,
+        annotationColumn,
+        annotationDotKeys,
+        handleContainerClick,
+        setRef,
 
-...other }) => {
+        ...other }) => {
 
-    const { annotationIndex } = other
+        const { annotationIndex } = other
 
-    return (
-        <div
-            key={annotationIndex}
-            ref={setRef}
-            className={cx(
-                'CarouselAnnotation',
+        return (
+            <div
+                key={annotationIndex}
+                ref={setRef}
+                className={cx(
+                    'CarouselAnnotation',
 
-                `${CAROUSEL_SCROLL}__${annotationIndex}`,
+                    `${CAROUSEL_SCROLL}__${annotationIndex}`,
 
-                annotationColumn &&
+                    annotationColumn &&
                     `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
 
-                getPrefixedDotLetterClassNames(
-                    annotationDotKeys,
-                    // "Child carousel annotation letter."
-                    'CcA'
-                )
-            )}
-        >
-            <Annotation {...other}
-                inCarousel
-                {...{
-                    handleContainerClick
-                }}
-            />
-        </div>
-    )
-}
+                    getPrefixedDotLetterClassNames(
+                        annotationDotKeys,
+                        // "Child carousel annotation letter."
+                        'CcA'
+                    )
+                )}
+            >
+                <Annotation {...other}
+                    inCarousel
+                    {...{
+                        handleContainerClick
+                    }}
+                />
+            </div>
+        )
+    }
 
 CarouselAnnotationView.propTypes = carouselAnnotationViewPropTypes
 

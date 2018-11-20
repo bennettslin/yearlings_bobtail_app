@@ -13,7 +13,7 @@ const Stoic = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Stoic = ({
     )
 }
 
-Stoic.propTypes = propTypes;
+Stoic.propTypes = propTypes
 
 export default Stoic

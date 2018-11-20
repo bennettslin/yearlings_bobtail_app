@@ -13,7 +13,7 @@ const LizPhoneReflection = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizPhoneReflection = ({
     )
 }
 
-LizPhoneReflection.propTypes = propTypes;
+LizPhoneReflection.propTypes = propTypes
 
 export default LizPhoneReflection

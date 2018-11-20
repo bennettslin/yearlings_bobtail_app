@@ -15,11 +15,11 @@ class AnnotationCard extends Component {
 
     render() {
         const {
-                card: {
-                    description,
-                    dotKeys = {}
-                }
-            } = this.props
+            card: {
+                description,
+                dotKeys = {}
+            }
+        } = this.props
 
         return (
             <div className="TempGlobalAnnotationCard">

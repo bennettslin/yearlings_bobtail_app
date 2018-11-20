@@ -2,114 +2,114 @@
 
 const
 
-LS_WIDTH_GOLDEN_CORD = 745,
-LS_WIDTH_UNCANNY_VALLEY = 570,
+    LS_WIDTH_GOLDEN_CORD = 745,
+    LS_WIDTH_UNCANNY_VALLEY = 570,
 
-/*****************
+    /*****************
  * BUTTON VALUES *
  *****************/
 
-LS_LENGTH_ICON = 44,
-LS_LENGTH_ICON_LARGE = 54,
-LS_LENGTH_ICON_LARGE_TABLET = 50,
-LS_LENGTH_ICON_LARGE_MINI = 47,
-LS_MARGIN_THIN = 4,
-LS_MARGIN_THICK = 12,
+    LS_LENGTH_ICON = 44,
+    LS_LENGTH_ICON_LARGE = 54,
+    LS_LENGTH_ICON_LARGE_TABLET = 50,
+    LS_LENGTH_ICON_LARGE_MINI = 47,
+    LS_MARGIN_THIN = 4,
+    LS_MARGIN_THICK = 12,
 
-/**************
+    /**************
  * NAV VALUES *
  **************/
 
-// Keep for now.
-LS_MARGIN_NAV_LAST_TITLE = 0,
+    // Keep for now.
+    LS_MARGIN_NAV_LAST_TITLE = 0,
 
-LS_HEIGHT_NAV =
+    LS_HEIGHT_NAV =
     LS_LENGTH_ICON
     + LS_MARGIN_THIN * 2,
 
-LS_COUNT_GAPS_DOUBLE = 26,
-LS_COUNT_GAPS_SINGLE = 16,
+    LS_COUNT_GAPS_DOUBLE = 26,
+    LS_COUNT_GAPS_SINGLE = 16,
 
-SHRINK_ICON_DIAMETER = 36,
+    SHRINK_ICON_DIAMETER = 36,
 
-DOUBLE_COLUMN_STATIC_BREAKPOINT =
+    DOUBLE_COLUMN_STATIC_BREAKPOINT =
     LS_LENGTH_ICON * 20
     + LS_MARGIN_THIN * 10
     + LS_COUNT_GAPS_DOUBLE,
-DOUBLE_COLUMN_SHRINK_BREAKPOINT =
+    DOUBLE_COLUMN_SHRINK_BREAKPOINT =
     SHRINK_ICON_DIAMETER * 20
     + LS_MARGIN_THIN * 10
     + LS_COUNT_GAPS_DOUBLE,
-SINGLE_COLUMN_STATIC_BREAKPOINT =
+    SINGLE_COLUMN_STATIC_BREAKPOINT =
     LS_LENGTH_ICON * 11
     + LS_MARGIN_THIN * 8
     + LS_COUNT_GAPS_SINGLE,
 
-/***************
+    /***************
  * MENU VALUES *
  ***************/
 
-LS_HEIGHT_MENU = 72,
+    LS_HEIGHT_MENU = 72,
 
-LS_HEIGHT_MENU_PHONE =
+    LS_HEIGHT_MENU_PHONE =
     LS_LENGTH_ICON +
     LS_MARGIN_THIN * 2,
 
-LS_HEIGHT_AUDIO =
+    LS_HEIGHT_AUDIO =
     LS_HEIGHT_MENU
     - LS_MARGIN_THIN * 2,
 
-LS_HEIGHT_BANNER_TWO_ROW_MENU = LS_HEIGHT_AUDIO,
+    LS_HEIGHT_BANNER_TWO_ROW_MENU = LS_HEIGHT_AUDIO,
 
-LS_HEIGHT_BANNER_TWO_ROW_MENU_TRUNCATED =
+    LS_HEIGHT_BANNER_TWO_ROW_MENU_TRUNCATED =
     LS_HEIGHT_BANNER_TWO_ROW_MENU / 2,
 
-LS_TOP_OFFSET_TWO_ROW_MENU =
+    LS_TOP_OFFSET_TWO_ROW_MENU =
     LS_HEIGHT_MENU
     + LS_HEIGHT_BANNER_TWO_ROW_MENU,
 
-LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU =
+    LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU =
     LS_HEIGHT_MENU
     + LS_HEIGHT_BANNER_TWO_ROW_MENU_TRUNCATED,
 
-LS_TOP_OFFSET_TWO_ROW_MENU_PHONE =
+    LS_TOP_OFFSET_TWO_ROW_MENU_PHONE =
     LS_HEIGHT_MENU_PHONE
     + LS_HEIGHT_BANNER_TWO_ROW_MENU,
 
-LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE =
+    LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE =
     LS_HEIGHT_MENU_PHONE
     + LS_HEIGHT_BANNER_TWO_ROW_MENU_TRUNCATED,
 
-LS_MINWIDTH_CHILD_AUDIO = 720,
-LS_WIDTH_CHILD_TITLE = 120,
+    LS_MINWIDTH_CHILD_AUDIO = 720,
+    LS_WIDTH_CHILD_TITLE = 120,
 
-/****************
+    /****************
  * AUDIO VALUES *
  ****************/
 
-// Minimum laptop width prevents this from being wider.
-LS_MINWIDTH_AUDIO_BANNER = 320,
+    // Minimum laptop width prevents this from being wider.
+    LS_MINWIDTH_AUDIO_BANNER = 320,
 
-LS_MINWIDTH_AUDIO_BUTTONS_MINUS_PLAYER =
+    LS_MINWIDTH_AUDIO_BUTTONS_MINUS_PLAYER =
     LS_LENGTH_ICON * 3
     + LS_MARGIN_THIN * 2
     + LS_MARGIN_THICK,
 
-MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL =
+    MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL =
     LS_MINWIDTH_AUDIO_BANNER
     + LS_MINWIDTH_AUDIO_BUTTONS_MINUS_PLAYER
     + LS_MARGIN_THICK * 3
     + LS_MARGIN_THIN,
 
-LS_MARGIN_X_SLIDER = 3,
-LS_OVERLAP_MARGIN_X_SLIDER = 2,
+    LS_MARGIN_X_SLIDER = 3,
+    LS_OVERLAP_MARGIN_X_SLIDER = 2,
 
-/**********************
+    /**********************
  * SCORES TIPS VALUES *
  **********************/
 
-// Scores tips in main when 1688px or below.
-WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT =
+    // Scores tips in main when 1688px or below.
+    WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT =
 
     // Menu.
     LS_MINWIDTH_CHILD_AUDIO
@@ -121,8 +121,8 @@ WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT =
     + LS_MARGIN_THIN * 2
     + LS_MARGIN_THICK,
 
-// Scores tips in main when 935px or below.
-WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET =
+    // Scores tips in main when 935px or below.
+    WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET =
 
     // Menu.
     LS_MINWIDTH_CHILD_AUDIO
@@ -134,71 +134,71 @@ WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET =
     + LS_MARGIN_THIN * 2
     + LS_MARGIN_THICK,
 
-TWO_ROW_MENU_BREAKPOINT_LAPTOP =
+    TWO_ROW_MENU_BREAKPOINT_LAPTOP =
     LS_WIDTH_UNCANNY_VALLEY
     + MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL
     + LS_WIDTH_CHILD_TITLE
     + LS_MARGIN_THIN * 2
     + LS_LENGTH_ICON_LARGE,
 
-TWO_ROW_MENU_BREAKPOINT_MINI =
+    TWO_ROW_MENU_BREAKPOINT_MINI =
     MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL
     + LS_WIDTH_CHILD_TITLE
     + LS_MARGIN_THIN * 2
     + LS_LENGTH_ICON_LARGE_MINI,
 
-LS_HEIGHT_LYRIC_COLLAPSED = 0.32,
-LS_PADDING_SIDE_POPUP_CONTENT = 20,
+    LS_HEIGHT_LYRIC_COLLAPSED = 0.32,
+    LS_PADDING_SIDE_POPUP_CONTENT = 20,
 
-WIKI_SIDE_PADDING_TOTAL =
+    WIKI_SIDE_PADDING_TOTAL =
     LS_PADDING_SIDE_POPUP_CONTENT * 2
     + LS_LENGTH_ICON_LARGE * 2,
 
-/************************
+    /************************
  * DEVICE WIDTH OBJECTS *
  ************************/
 
-PHONE_CLASS = 'phone',
-LS_MINI_CLASS = 'mini',
-TABLET_CLASS = 'tablet',
-LS_LAPTOP_CLASS = 'laptop',
-MONITOR_CLASS = 'monitor',
+    PHONE_CLASS = 'phone',
+    LS_MINI_CLASS = 'mini',
+    TABLET_CLASS = 'tablet',
+    LS_LAPTOP_CLASS = 'laptop',
+    MONITOR_CLASS = 'monitor',
 
-// These max width values *must* be the same in less.
-PHONE_OBJECT = {
-    className: PHONE_CLASS,
-    maxWidth: 475
-},
-MINI_OBJECT = {
-    className: LS_MINI_CLASS,
-    maxWidth: 720,
-    singleColumnStaticBreakpoint:
+    // These max width values *must* be the same in less.
+    PHONE_OBJECT = {
+        className: PHONE_CLASS,
+        maxWidth: 475
+    },
+    MINI_OBJECT = {
+        className: LS_MINI_CLASS,
+        maxWidth: 720,
+        singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + LS_LENGTH_ICON_LARGE_MINI
     /**
      * NOTE: Mini always has scores tips section in main column, so scores tips
      * breakpoint is unnecessary.
      */
-},
-TABLET_OBJECT = {
-    className: TABLET_CLASS,
-    maxWidth: 1100,
-    doubleColumnStaticBreakpoint:
+    },
+    TABLET_OBJECT = {
+        className: TABLET_CLASS,
+        maxWidth: 1100,
+        doubleColumnStaticBreakpoint:
         DOUBLE_COLUMN_STATIC_BREAKPOINT
         + LS_LENGTH_ICON_LARGE_TABLET,
-    doubleColumnShrinkBreakpoint:
+        doubleColumnShrinkBreakpoint:
         DOUBLE_COLUMN_SHRINK_BREAKPOINT
         + LS_LENGTH_ICON_LARGE_TABLET,
-    singleColumnStaticBreakpoint:
+        singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + LS_LENGTH_ICON_LARGE_TABLET,
-    isScoresTipsInMainBreakpoint:
+        isScoresTipsInMainBreakpoint:
         WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET
-},
-LAPTOP_OBJECT = {
-    className: LS_LAPTOP_CLASS,
-    maxWidth: 1400,
-    singleColumnStaticBreakpoint:
+    },
+    LAPTOP_OBJECT = {
+        className: LS_LAPTOP_CLASS,
+        maxWidth: 1400,
+        singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + LS_MARGIN_NAV_LAST_TITLE
         + LS_WIDTH_UNCANNY_VALLEY
@@ -207,28 +207,28 @@ LAPTOP_OBJECT = {
      * NOTE: Laptop always has scores tips section in main column, so scores
      * tips breakpoint is unnecessary.
      */
-},
-MONITOR_OBJECT = {
-    className: MONITOR_CLASS,
-    doubleColumnStaticBreakpoint:
+    },
+    MONITOR_OBJECT = {
+        className: MONITOR_CLASS,
+        doubleColumnStaticBreakpoint:
         DOUBLE_COLUMN_STATIC_BREAKPOINT
         + LS_MARGIN_NAV_LAST_TITLE
         + LS_WIDTH_GOLDEN_CORD
         + LS_LENGTH_ICON_LARGE,
-    doubleColumnShrinkBreakpoint:
+        doubleColumnShrinkBreakpoint:
         DOUBLE_COLUMN_SHRINK_BREAKPOINT
         + LS_MARGIN_NAV_LAST_TITLE
         + LS_WIDTH_GOLDEN_CORD
         + LS_LENGTH_ICON_LARGE,
-    singleColumnStaticBreakpoint:
+        singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + LS_MARGIN_NAV_LAST_TITLE
         + LS_WIDTH_GOLDEN_CORD
         + LS_LENGTH_ICON_LARGE,
-    isScoresTipsInMainBreakpoint:
+        isScoresTipsInMainBreakpoint:
         WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
         + LS_WIDTH_GOLDEN_CORD
-}
+    }
 
 module.exports = {
     PHONE_CLASS,

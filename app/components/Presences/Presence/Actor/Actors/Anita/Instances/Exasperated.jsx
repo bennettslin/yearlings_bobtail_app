@@ -13,7 +13,7 @@ const Exasperated = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Exasperated = ({
     )
 }
 
-Exasperated.propTypes = propTypes;
+Exasperated.propTypes = propTypes
 
 export default Exasperated

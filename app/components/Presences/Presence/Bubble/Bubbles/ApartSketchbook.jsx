@@ -13,7 +13,7 @@ const ApartSketchbook = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ApartSketchbook = ({
     )
 }
 
-ApartSketchbook.propTypes = propTypes;
+ApartSketchbook.propTypes = propTypes
 
 export default ApartSketchbook

@@ -13,7 +13,7 @@ const Mannequin = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Mannequin = ({
     )
 }
 
-Mannequin.propTypes = propTypes;
+Mannequin.propTypes = propTypes
 
 export default Mannequin

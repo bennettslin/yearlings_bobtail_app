@@ -13,7 +13,7 @@ const CampusAshamed = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CampusAshamed = ({
     )
 }
 
-CampusAshamed.propTypes = propTypes;
+CampusAshamed.propTypes = propTypes
 
 export default CampusAshamed

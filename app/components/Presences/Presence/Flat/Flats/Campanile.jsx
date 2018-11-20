@@ -13,7 +13,7 @@ const Campanile = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Campanile = ({
     )
 }
 
-Campanile.propTypes = propTypes;
+Campanile.propTypes = propTypes
 
 export default Campanile

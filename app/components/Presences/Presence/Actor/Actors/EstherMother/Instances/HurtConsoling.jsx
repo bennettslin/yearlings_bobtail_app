@@ -13,7 +13,7 @@ const HurtConsoling = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const HurtConsoling = ({
     )
 }
 
-HurtConsoling.propTypes = propTypes;
+HurtConsoling.propTypes = propTypes
 
 export default HurtConsoling

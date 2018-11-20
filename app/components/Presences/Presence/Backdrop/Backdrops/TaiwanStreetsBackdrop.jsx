@@ -13,7 +13,7 @@ const TaiwanStreetsBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TaiwanStreetsBackdrop = ({
     )
 }
 
-TaiwanStreetsBackdrop.propTypes = propTypes;
+TaiwanStreetsBackdrop.propTypes = propTypes
 
 export default TaiwanStreetsBackdrop

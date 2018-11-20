@@ -13,7 +13,7 @@ const BurgerWrapper = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BurgerWrapper = ({
     )
 }
 
-BurgerWrapper.propTypes = propTypes;
+BurgerWrapper.propTypes = propTypes
 
 export default BurgerWrapper

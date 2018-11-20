@@ -69,14 +69,14 @@ class LogManager extends Component {
 
     logAnnotation = () => {
         const {
-            renderedSongIndex,
-            renderedAnnotationIndex
-        } = this.props,
+                renderedSongIndex,
+                renderedAnnotationIndex
+            } = this.props,
 
-        renderedAnnotationObject = getAnnotationObject(
-            renderedSongIndex,
-            renderedAnnotationIndex
-        )
+            renderedAnnotationObject = getAnnotationObject(
+                renderedSongIndex,
+                renderedAnnotationIndex
+            )
 
         return this._logObject('rendered annotation', renderedAnnotationObject)
     }

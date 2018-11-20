@@ -13,7 +13,7 @@ const CouchReading = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CouchReading = ({
     )
 }
 
-CouchReading.propTypes = propTypes;
+CouchReading.propTypes = propTypes
 
 export default CouchReading

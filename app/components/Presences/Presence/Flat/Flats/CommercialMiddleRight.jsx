@@ -13,7 +13,7 @@ const CommercialMiddleRight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CommercialMiddleRight = ({
     )
 }
 
-CommercialMiddleRight.propTypes = propTypes;
+CommercialMiddleRight.propTypes = propTypes
 
 export default CommercialMiddleRight

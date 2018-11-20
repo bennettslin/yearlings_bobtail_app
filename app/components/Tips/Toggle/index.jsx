@@ -15,32 +15,32 @@ const mapStateToProps = ({
 
 const tipsTogglePropTypes = {
     // Through Redux.
-    selectedTipsIndex: PropTypes.number.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
 
-    // From props.
-    isEnabled: PropTypes.bool.isRequired,
-    handleTipsToggle: PropTypes.func.isRequired
-},
+        // From props.
+        isEnabled: PropTypes.bool.isRequired,
+        handleTipsToggle: PropTypes.func.isRequired
+    },
 
-TipsToggle = ({
-    selectedTipsIndex,
-    isEnabled,
-    handleTipsToggle
+    TipsToggle = ({
+        selectedTipsIndex,
+        isEnabled,
+        handleTipsToggle
 
-}) => {
-    return (
-        <Button
-            isLargeSize
-            {...{
-                buttonName: TIPS_BUTTON_KEY,
-                isDisabled: !isEnabled,
-                buttonIdentifier: selectedTipsIndex,
-                accessKey: TIPS_TOGGLE_KEY,
-                handleButtonClick: handleTipsToggle
-            }}
-        />
-    )
-}
+    }) => {
+        return (
+            <Button
+                isLargeSize
+                {...{
+                    buttonName: TIPS_BUTTON_KEY,
+                    isDisabled: !isEnabled,
+                    buttonIdentifier: selectedTipsIndex,
+                    accessKey: TIPS_TOGGLE_KEY,
+                    handleButtonClick: handleTipsToggle
+                }}
+            />
+        )
+    }
 
 TipsToggle.propTypes = tipsTogglePropTypes
 

@@ -20,7 +20,7 @@ export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 export const getPrefixedDotLetterClassNames = (entity, prefix) => {
 
     if (!entity) {
-        return false;
+        return false
     }
 
     const classNamesArray =

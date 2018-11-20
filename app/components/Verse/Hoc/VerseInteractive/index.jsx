@@ -86,7 +86,7 @@ class VerseInteractive extends Component {
 
             isInteractivated = this.getIsInteractivated(this.props)
 
-            return (
+        return (
             <Fragment>
                 <VerseColour
                     {...{

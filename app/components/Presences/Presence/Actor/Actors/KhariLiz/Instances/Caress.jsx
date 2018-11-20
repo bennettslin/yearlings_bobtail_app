@@ -13,7 +13,7 @@ const Caress = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Caress = ({
     )
 }
 
-Caress.propTypes = propTypes;
+Caress.propTypes = propTypes
 
 export default Caress

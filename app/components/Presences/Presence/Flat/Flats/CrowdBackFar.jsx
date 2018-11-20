@@ -13,7 +13,7 @@ const CrowdBackFar = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CrowdBackFar = ({
     )
 }
 
-CrowdBackFar.propTypes = propTypes;
+CrowdBackFar.propTypes = propTypes
 
 export default CrowdBackFar

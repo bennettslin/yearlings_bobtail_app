@@ -13,7 +13,7 @@ const HardOnReflection = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const HardOnReflection = ({
     )
 }
 
-HardOnReflection.propTypes = propTypes;
+HardOnReflection.propTypes = propTypes
 
 export default HardOnReflection

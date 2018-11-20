@@ -13,7 +13,7 @@ const CrowdBackNear = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CrowdBackNear = ({
     )
 }
 
-CrowdBackNear.propTypes = propTypes;
+CrowdBackNear.propTypes = propTypes
 
 export default CrowdBackNear

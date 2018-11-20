@@ -13,7 +13,7 @@ const LizGateInside = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizGateInside = ({
     )
 }
 
-LizGateInside.propTypes = propTypes;
+LizGateInside.propTypes = propTypes
 
 export default LizGateInside

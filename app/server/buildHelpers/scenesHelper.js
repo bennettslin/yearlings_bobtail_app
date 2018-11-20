@@ -42,11 +42,11 @@ export const finalRegisterScenes = (songObject) => {
     songObject.songSceneConfigs = []
 
     const {
-            lyricUnits,
-            tempSceneRawIndices,
-            songVerseConfigs,
-            songSceneConfigs
-        } = songObject
+        lyricUnits,
+        tempSceneRawIndices,
+        songVerseConfigs,
+        songSceneConfigs
+    } = songObject
 
     // First, allow each scene to know its first verse index.
     tempSceneRawIndices.forEach((rawIndexObject) => {

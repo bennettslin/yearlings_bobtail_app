@@ -13,7 +13,7 @@ const UclaBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const UclaBackdrop = ({
     )
 }
 
-UclaBackdrop.propTypes = propTypes;
+UclaBackdrop.propTypes = propTypes
 
 export default UclaBackdrop

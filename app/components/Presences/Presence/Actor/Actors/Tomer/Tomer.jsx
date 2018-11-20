@@ -50,7 +50,7 @@ const Tomer = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -64,6 +64,6 @@ const Tomer = ({
     )
 }
 
-Tomer.propTypes = propTypes;
+Tomer.propTypes = propTypes
 
 export default Tomer

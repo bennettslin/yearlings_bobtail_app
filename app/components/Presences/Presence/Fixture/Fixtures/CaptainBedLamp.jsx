@@ -13,7 +13,7 @@ const CaptainBedLamp = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CaptainBedLamp = ({
     )
 }
 
-CaptainBedLamp.propTypes = propTypes;
+CaptainBedLamp.propTypes = propTypes
 
 export default CaptainBedLamp

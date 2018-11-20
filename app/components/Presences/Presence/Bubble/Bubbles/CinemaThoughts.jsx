@@ -13,7 +13,7 @@ const CinemaThoughts = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CinemaThoughts = ({
     )
 }
 
-CinemaThoughts.propTypes = propTypes;
+CinemaThoughts.propTypes = propTypes
 
 export default CinemaThoughts

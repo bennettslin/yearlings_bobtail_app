@@ -13,7 +13,7 @@ const StageLights = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const StageLights = ({
     )
 }
 
-StageLights.propTypes = propTypes;
+StageLights.propTypes = propTypes
 
 export default StageLights

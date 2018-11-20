@@ -13,7 +13,7 @@ const FridgeDrawings = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const FridgeDrawings = ({
     )
 }
 
-FridgeDrawings.propTypes = propTypes;
+FridgeDrawings.propTypes = propTypes
 
 export default FridgeDrawings

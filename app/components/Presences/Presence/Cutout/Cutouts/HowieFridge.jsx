@@ -13,7 +13,7 @@ const HowieFridge = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const HowieFridge = ({
     )
 }
 
-HowieFridge.propTypes = propTypes;
+HowieFridge.propTypes = propTypes
 
 export default HowieFridge

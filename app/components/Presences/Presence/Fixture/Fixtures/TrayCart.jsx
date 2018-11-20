@@ -13,7 +13,7 @@ const TrayCart = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TrayCart = ({
     )
 }
 
-TrayCart.propTypes = propTypes;
+TrayCart.propTypes = propTypes
 
 export default TrayCart

@@ -13,41 +13,41 @@ import {
 
 const navBookSongsPropTypes = {
     // From parent.
-    bookIndex: PropTypes.number.isRequired
-},
+        bookIndex: PropTypes.number.isRequired
+    },
 
-NavBookSongs = ({
+    NavBookSongs = ({
 
-    // From props.
-    bookIndex,
+        // From props.
+        bookIndex,
 
-...other }) => {
+        ...other }) => {
 
-    const isFirstColumn = bookIndex === 0,
+        const isFirstColumn = bookIndex === 0,
 
-        rowReverse = !isFirstColumn,
-        songsCount = getSongsAndLoguesCount(),
+            rowReverse = !isFirstColumn,
+            songsCount = getSongsAndLoguesCount(),
 
-        beginArrayIndex = getStartingIndexForBook(bookIndex),
-        endArrayIndex = isFirstColumn ? getStartingIndexForBook(bookIndex + 1) : songsCount - 1
+            beginArrayIndex = getStartingIndexForBook(bookIndex),
+            endArrayIndex = isFirstColumn ? getStartingIndexForBook(bookIndex + 1) : songsCount - 1
 
-    return (
-        <div className={cx(
-            'NavBookSongs',
-            'NavBook'
-        )}>
-            {Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
-                const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
+        return (
+            <div className={cx(
+                'NavBookSongs',
+                'NavBook'
+            )}>
+                {Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
+                    const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
                     return (
                         <NavButtonIndexed {...other}
                             key={currentIndex}
                             songIndex={songIndex}
                         />
                     )
-            })}
-        </div>
-    )
-}
+                })}
+            </div>
+        )
+    }
 
 NavBookSongs.propTypes = navBookSongsPropTypes
 

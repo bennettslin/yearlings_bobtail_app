@@ -13,7 +13,7 @@ const MerrilyDeranged = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const MerrilyDeranged = ({
     )
 }
 
-MerrilyDeranged.propTypes = propTypes;
+MerrilyDeranged.propTypes = propTypes
 
 export default MerrilyDeranged

@@ -13,7 +13,7 @@ const Television = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Television = ({
     )
 }
 
-Television.propTypes = propTypes;
+Television.propTypes = propTypes
 
 export default Television

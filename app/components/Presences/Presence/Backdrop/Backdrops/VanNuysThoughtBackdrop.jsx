@@ -13,7 +13,7 @@ const VanNuysThoughtBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const VanNuysThoughtBackdrop = ({
     )
 }
 
-VanNuysThoughtBackdrop.propTypes = propTypes;
+VanNuysThoughtBackdrop.propTypes = propTypes
 
 export default VanNuysThoughtBackdrop

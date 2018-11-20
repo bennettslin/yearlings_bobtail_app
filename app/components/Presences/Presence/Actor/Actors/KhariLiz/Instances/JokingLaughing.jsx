@@ -13,7 +13,7 @@ const JokingLaughing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const JokingLaughing = ({
     )
 }
 
-JokingLaughing.propTypes = propTypes;
+JokingLaughing.propTypes = propTypes
 
 export default JokingLaughing

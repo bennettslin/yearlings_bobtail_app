@@ -13,7 +13,7 @@ const Collecting = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Collecting = ({
     )
 }
 
-Collecting.propTypes = propTypes;
+Collecting.propTypes = propTypes
 
 export default Collecting

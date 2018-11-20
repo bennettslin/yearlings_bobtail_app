@@ -13,7 +13,7 @@ const HaircutScissors = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const HaircutScissors = ({
     )
 }
 
-HaircutScissors.propTypes = propTypes;
+HaircutScissors.propTypes = propTypes
 
 export default HaircutScissors

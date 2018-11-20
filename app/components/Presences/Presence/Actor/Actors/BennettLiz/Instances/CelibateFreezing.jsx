@@ -13,7 +13,7 @@ const CelibateFreezing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CelibateFreezing = ({
     )
 }
 
-CelibateFreezing.propTypes = propTypes;
+CelibateFreezing.propTypes = propTypes
 
 export default CelibateFreezing

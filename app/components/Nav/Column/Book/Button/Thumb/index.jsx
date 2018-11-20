@@ -11,66 +11,66 @@ import { getSongTitle } from 'helpers/dataHelper'
 
 const propTypes = {
     // From parent.
-    isAccessed: PropTypes.bool,
-    isLeftmost: PropTypes.bool,
-    isRightmost: PropTypes.bool,
-    songIndex: PropTypes.number
-},
+        isAccessed: PropTypes.bool,
+        isLeftmost: PropTypes.bool,
+        isRightmost: PropTypes.bool,
+        songIndex: PropTypes.number
+    },
 
-Thumb = ({
+    Thumb = ({
 
-    // From props.
-    isAccessed,
-    isLeftmost,
-    isRightmost,
-    songIndex
+        // From props.
+        isAccessed,
+        isLeftmost,
+        isRightmost,
+        songIndex
 
-}) => {
+    }) => {
 
-    const thumbTitle = getSongTitle({
-        songIndex,
-        showIndex: false
-    })
+        const thumbTitle = getSongTitle({
+            songIndex,
+            showIndex: false
+        })
 
-    return (
-        <div className={cx(
-            'Thumb',
-            {
-                'Thumb__isAccessed': isAccessed,
-                'Thumb__leftmost': isLeftmost,
-                'Thumb__rightmost': isRightmost,
-                'Thumb__default': !isLeftmost && !isRightmost
-            }
-        )}>
-            <Svg
-                className={cx(
-                    'ThumbImage',
-                    'absoluteFullContainer'
-                )}
-            >
-                <rect
+        return (
+            <div className={cx(
+                'Thumb',
+                {
+                    'Thumb__isAccessed': isAccessed,
+                    'Thumb__leftmost': isLeftmost,
+                    'Thumb__rightmost': isRightmost,
+                    'Thumb__default': !isLeftmost && !isRightmost
+                }
+            )}>
+                <Svg
                     className={cx(
-                        'ThumbField'
+                        'ThumbImage',
+                        'absoluteFullContainer'
                     )}
-                    {...{
-                        x: 0,
-                        y: 0,
-                        width: 100,
-                        height: 100
-                    }}
-                />
-                <ThumbIcon
-                    {...{
-                        songIndex
-                    }}
-                />
-            </Svg>
-            <div className="ThumbTitle">
-                {thumbTitle}
+                >
+                    <rect
+                        className={cx(
+                            'ThumbField'
+                        )}
+                        {...{
+                            x: 0,
+                            y: 0,
+                            width: 100,
+                            height: 100
+                        }}
+                    />
+                    <ThumbIcon
+                        {...{
+                            songIndex
+                        }}
+                    />
+                </Svg>
+                <div className="ThumbTitle">
+                    {thumbTitle}
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 
 Thumb.propTypes = propTypes
 

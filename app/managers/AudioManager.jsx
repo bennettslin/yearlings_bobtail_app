@@ -102,7 +102,7 @@ class AudioManager extends Component {
 
     selectAudioOption(
         selectedAudioOptionIndex =
-            (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length
+        (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length
     ) {
         // If no argument passed, then just toggle amongst audio options.
 

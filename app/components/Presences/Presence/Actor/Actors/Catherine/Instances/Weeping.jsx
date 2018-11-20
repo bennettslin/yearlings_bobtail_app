@@ -13,7 +13,7 @@ const Weeping = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Weeping = ({
     )
 }
 
-Weeping.propTypes = propTypes;
+Weeping.propTypes = propTypes
 
 export default Weeping

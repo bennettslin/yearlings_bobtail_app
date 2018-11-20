@@ -13,7 +13,7 @@ const GuitarCaseOpen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GuitarCaseOpen = ({
     )
 }
 
-GuitarCaseOpen.propTypes = propTypes;
+GuitarCaseOpen.propTypes = propTypes
 
 export default GuitarCaseOpen

@@ -13,7 +13,7 @@ const Gesturing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Gesturing = ({
     )
 }
 
-Gesturing.propTypes = propTypes;
+Gesturing.propTypes = propTypes
 
 export default Gesturing

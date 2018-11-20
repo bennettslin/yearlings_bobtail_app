@@ -13,7 +13,7 @@ const GarbageBag = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GarbageBag = ({
     )
 }
 
-GarbageBag.propTypes = propTypes;
+GarbageBag.propTypes = propTypes
 
 export default GarbageBag

@@ -13,7 +13,7 @@ const BennettLetters = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettLetters = ({
     )
 }
 
-BennettLetters.propTypes = propTypes;
+BennettLetters.propTypes = propTypes
 
 export default BennettLetters

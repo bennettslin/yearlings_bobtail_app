@@ -13,7 +13,7 @@ const Injured = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Injured = ({
     )
 }
 
-Injured.propTypes = propTypes;
+Injured.propTypes = propTypes
 
 export default Injured

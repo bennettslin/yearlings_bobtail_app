@@ -13,7 +13,7 @@ const CharmedSchoolbus = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CharmedSchoolbus = ({
     )
 }
 
-CharmedSchoolbus.propTypes = propTypes;
+CharmedSchoolbus.propTypes = propTypes
 
 export default CharmedSchoolbus

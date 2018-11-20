@@ -13,7 +13,7 @@ const ElTorito = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ElTorito = ({
     )
 }
 
-ElTorito.propTypes = propTypes;
+ElTorito.propTypes = propTypes
 
 export default ElTorito

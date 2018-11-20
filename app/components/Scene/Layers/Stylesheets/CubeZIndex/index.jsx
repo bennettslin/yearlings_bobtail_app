@@ -35,11 +35,11 @@ const CubeZIndexStylesheet = () => {
             {SLANT_DIRECTIONS.map(slantDirection => {
 
                 const slantDirectionClassName = getClassNameForSlantDirection(
-                            slantDirection
-                    )
+                    slantDirection
+                )
 
                 if (slantDirection === LEFT) {
-                    xAxisZIndices = SLANTED_LEFT_X_AXIS_Z_INDICES;
+                    xAxisZIndices = SLANTED_LEFT_X_AXIS_Z_INDICES
 
                 } else if (slantDirection === RIGHT) {
                     xAxisZIndices = SLANTED_RIGHT_X_AXIS_Z_INDICES

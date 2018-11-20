@@ -13,7 +13,7 @@ const SteamPipes = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SteamPipes = ({
     )
 }
 
-SteamPipes.propTypes = propTypes;
+SteamPipes.propTypes = propTypes
 
 export default SteamPipes

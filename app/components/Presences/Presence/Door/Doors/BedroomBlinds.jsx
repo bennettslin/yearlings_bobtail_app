@@ -13,7 +13,7 @@ const BedroomBlinds = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BedroomBlinds = ({
     )
 }
 
-BedroomBlinds.propTypes = propTypes;
+BedroomBlinds.propTypes = propTypes
 
 export default BedroomBlinds

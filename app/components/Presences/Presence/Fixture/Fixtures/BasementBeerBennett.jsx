@@ -13,7 +13,7 @@ const BasementBeerBennett = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BasementBeerBennett = ({
     )
 }
 
-BasementBeerBennett.propTypes = propTypes;
+BasementBeerBennett.propTypes = propTypes
 
 export default BasementBeerBennett

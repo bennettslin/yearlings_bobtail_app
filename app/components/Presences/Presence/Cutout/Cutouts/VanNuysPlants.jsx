@@ -13,7 +13,7 @@ const VanNuysPlants = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const VanNuysPlants = ({
     )
 }
 
-VanNuysPlants.propTypes = propTypes;
+VanNuysPlants.propTypes = propTypes
 
 export default VanNuysPlants

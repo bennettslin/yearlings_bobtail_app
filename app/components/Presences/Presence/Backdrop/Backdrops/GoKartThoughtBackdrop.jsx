@@ -13,7 +13,7 @@ const GoKartThoughtBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GoKartThoughtBackdrop = ({
     )
 }
 
-GoKartThoughtBackdrop.propTypes = propTypes;
+GoKartThoughtBackdrop.propTypes = propTypes
 
 export default GoKartThoughtBackdrop

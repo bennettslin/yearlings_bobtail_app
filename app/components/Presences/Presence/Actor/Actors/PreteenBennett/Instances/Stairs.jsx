@@ -13,7 +13,7 @@ const Stairs = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Stairs = ({
     )
 }
 
-Stairs.propTypes = propTypes;
+Stairs.propTypes = propTypes
 
 export default Stairs

@@ -13,7 +13,7 @@ const Cashbox = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Cashbox = ({
     )
 }
 
-Cashbox.propTypes = propTypes;
+Cashbox.propTypes = propTypes
 
 export default Cashbox

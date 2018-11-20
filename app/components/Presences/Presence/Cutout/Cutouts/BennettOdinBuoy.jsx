@@ -13,7 +13,7 @@ const BennettOdinBuoy = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettOdinBuoy = ({
     )
 }
 
-BennettOdinBuoy.propTypes = propTypes;
+BennettOdinBuoy.propTypes = propTypes
 
 export default BennettOdinBuoy

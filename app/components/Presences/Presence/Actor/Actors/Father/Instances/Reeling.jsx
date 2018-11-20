@@ -13,7 +13,7 @@ const Reeling = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Reeling = ({
     )
 }
 
-Reeling.propTypes = propTypes;
+Reeling.propTypes = propTypes
 
 export default Reeling

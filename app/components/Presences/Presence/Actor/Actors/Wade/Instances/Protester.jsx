@@ -13,7 +13,7 @@ const Protester = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Protester = ({
     )
 }
 
-Protester.propTypes = propTypes;
+Protester.propTypes = propTypes
 
 export default Protester

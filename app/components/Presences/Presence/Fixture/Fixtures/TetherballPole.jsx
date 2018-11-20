@@ -13,7 +13,7 @@ const TetherballPole = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TetherballPole = ({
     )
 }
 
-TetherballPole.propTypes = propTypes;
+TetherballPole.propTypes = propTypes
 
 export default TetherballPole

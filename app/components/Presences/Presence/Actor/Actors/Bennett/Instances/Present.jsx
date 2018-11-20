@@ -13,7 +13,7 @@ const Present = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Present = ({
     )
 }
 
-Present.propTypes = propTypes;
+Present.propTypes = propTypes
 
 export default Present

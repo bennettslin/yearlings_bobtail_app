@@ -13,7 +13,7 @@ const GoldenGateBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GoldenGateBackdrop = ({
     )
 }
 
-GoldenGateBackdrop.propTypes = propTypes;
+GoldenGateBackdrop.propTypes = propTypes
 
 export default GoldenGateBackdrop

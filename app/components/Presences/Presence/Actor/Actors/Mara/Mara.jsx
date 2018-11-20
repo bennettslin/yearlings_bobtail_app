@@ -35,7 +35,7 @@ const Mara = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -49,6 +49,6 @@ const Mara = ({
     )
 }
 
-Mara.propTypes = propTypes;
+Mara.propTypes = propTypes
 
 export default Mara

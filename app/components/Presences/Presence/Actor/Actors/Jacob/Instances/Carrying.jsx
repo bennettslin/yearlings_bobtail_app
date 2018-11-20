@@ -13,7 +13,7 @@ const Carrying = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Carrying = ({
     )
 }
 
-Carrying.propTypes = propTypes;
+Carrying.propTypes = propTypes
 
 export default Carrying

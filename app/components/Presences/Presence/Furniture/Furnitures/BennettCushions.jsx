@@ -13,7 +13,7 @@ const BennettCushions = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettCushions = ({
     )
 }
 
-BennettCushions.propTypes = propTypes;
+BennettCushions.propTypes = propTypes
 
 export default BennettCushions

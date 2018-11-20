@@ -13,7 +13,7 @@ const RemovingPants = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RemovingPants = ({
     )
 }
 
-RemovingPants.propTypes = propTypes;
+RemovingPants.propTypes = propTypes
 
 export default RemovingPants

@@ -13,7 +13,7 @@ const Enraged = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Enraged = ({
     )
 }
 
-Enraged.propTypes = propTypes;
+Enraged.propTypes = propTypes
 
 export default Enraged

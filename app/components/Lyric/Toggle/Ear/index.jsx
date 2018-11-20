@@ -21,40 +21,40 @@ const mapStateToProps = ({
 
 const lyricEarTogglePropTypes = {
     // Through Redux.
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired,
+        showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+        selectedLyricColumnIndex: PropTypes.number.isRequired,
 
-    // From parent.
-    handleLyricColumnSelect: PropTypes.func.isRequired
-},
+        // From parent.
+        handleLyricColumnSelect: PropTypes.func.isRequired
+    },
 
-LyricToggleEar = ({
-    showOneOfTwoLyricColumns,
-    selectedLyricColumnIndex,
-    handleLyricColumnSelect
+    LyricToggleEar = ({
+        showOneOfTwoLyricColumns,
+        selectedLyricColumnIndex,
+        handleLyricColumnSelect
 
-}) => {
+    }) => {
 
-    return showOneOfTwoLyricColumns && (
-        <div className={cx(
-            'LyricToggleEar',
-            'LyricToggle',
-            'LyricToggle__inLyric',
-            'length__buttonLarge'
-        )}>
-            <Button
-                isLargeSize
-                {...{
-                    buttonName: LYRIC_EAR_BUTTON_KEY,
-                    buttonIdentifier:
+        return showOneOfTwoLyricColumns && (
+            <div className={cx(
+                'LyricToggleEar',
+                'LyricToggle',
+                'LyricToggle__inLyric',
+                'length__buttonLarge'
+            )}>
+                <Button
+                    isLargeSize
+                    {...{
+                        buttonName: LYRIC_EAR_BUTTON_KEY,
+                        buttonIdentifier:
                         LYRIC_COLUMN_KEYS[selectedLyricColumnIndex],
-                    accessKey: LYRIC_COLUMN_TOGGLE_KEY,
-                    handleButtonClick: handleLyricColumnSelect
-                }}
-            />
-        </div>
-    )
-}
+                        accessKey: LYRIC_COLUMN_TOGGLE_KEY,
+                        handleButtonClick: handleLyricColumnSelect
+                    }}
+                />
+            </div>
+        )
+    }
 
 LyricToggleEar.propTypes = lyricEarTogglePropTypes
 

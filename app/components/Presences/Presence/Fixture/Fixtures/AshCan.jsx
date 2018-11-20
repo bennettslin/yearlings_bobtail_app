@@ -13,7 +13,7 @@ const AshCan = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const AshCan = ({
     )
 }
 
-AshCan.propTypes = propTypes;
+AshCan.propTypes = propTypes
 
 export default AshCan

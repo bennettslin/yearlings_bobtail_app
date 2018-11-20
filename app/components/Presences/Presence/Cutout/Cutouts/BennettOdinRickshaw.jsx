@@ -13,7 +13,7 @@ const BennettOdinRickshaw = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettOdinRickshaw = ({
     )
 }
 
-BennettOdinRickshaw.propTypes = propTypes;
+BennettOdinRickshaw.propTypes = propTypes
 
 export default BennettOdinRickshaw

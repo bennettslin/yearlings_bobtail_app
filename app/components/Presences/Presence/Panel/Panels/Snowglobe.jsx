@@ -13,7 +13,7 @@ const Snowglobe = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Snowglobe = ({
     )
 }
 
-Snowglobe.propTypes = propTypes;
+Snowglobe.propTypes = propTypes
 
 export default Snowglobe

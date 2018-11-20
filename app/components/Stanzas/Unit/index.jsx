@@ -219,9 +219,9 @@ class UnitView extends Component {
                     isTitleUnit ? 'fontSize__title' : 'fontSize__verse',
 
                     { 'Unit__hasSide': hasSide,
-                      'Unit__title': isTitleUnit,
+                        'Unit__title': isTitleUnit,
 
-                      'fontSize__lyricMultipleColumns': hasSide },
+                        'fontSize__lyricMultipleColumns': hasSide },
 
                     subsequent ?
                         'Unit__subsequent' :

@@ -13,7 +13,7 @@ const BlissfulGuilty = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BlissfulGuilty = ({
     )
 }
 
-BlissfulGuilty.propTypes = propTypes;
+BlissfulGuilty.propTypes = propTypes
 
 export default BlissfulGuilty

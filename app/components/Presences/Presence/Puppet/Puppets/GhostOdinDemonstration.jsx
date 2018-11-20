@@ -13,7 +13,7 @@ const GhostOdinDemonstration = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GhostOdinDemonstration = ({
     )
 }
 
-GhostOdinDemonstration.propTypes = propTypes;
+GhostOdinDemonstration.propTypes = propTypes
 
 export default GhostOdinDemonstration

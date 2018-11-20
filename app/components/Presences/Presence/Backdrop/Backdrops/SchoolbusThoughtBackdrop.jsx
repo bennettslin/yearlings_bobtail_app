@@ -13,7 +13,7 @@ const SchoolbusThoughtBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SchoolbusThoughtBackdrop = ({
     )
 }
 
-SchoolbusThoughtBackdrop.propTypes = propTypes;
+SchoolbusThoughtBackdrop.propTypes = propTypes
 
 export default SchoolbusThoughtBackdrop

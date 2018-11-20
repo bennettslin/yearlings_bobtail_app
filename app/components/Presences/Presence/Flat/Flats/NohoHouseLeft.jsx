@@ -13,7 +13,7 @@ const NohoHouseLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const NohoHouseLeft = ({
     )
 }
 
-NohoHouseLeft.propTypes = propTypes;
+NohoHouseLeft.propTypes = propTypes
 
 export default NohoHouseLeft

@@ -13,7 +13,7 @@ const BennettDoorInside = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettDoorInside = ({
     )
 }
 
-BennettDoorInside.propTypes = propTypes;
+BennettDoorInside.propTypes = propTypes
 
 export default BennettDoorInside

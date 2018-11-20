@@ -6,53 +6,53 @@ import Svg from '../../Svg'
 
 const propTypes = {
     // From parent.
-    isAccessed: PropTypes.bool,
-    isSelected: PropTypes.bool.isRequired,
-    isDotAnchor: PropTypes.bool,
-    isWikiAnchor: PropTypes.bool
-},
+        isAccessed: PropTypes.bool,
+        isSelected: PropTypes.bool.isRequired,
+        isDotAnchor: PropTypes.bool,
+        isWikiAnchor: PropTypes.bool
+    },
 
-Underline = ({
+    Underline = ({
 
-    isAccessed,
-    isSelected,
-    isDotAnchor,
-    isWikiAnchor
+        isAccessed,
+        isSelected,
+        isDotAnchor,
+        isWikiAnchor
 
-}) => (
-    <div
-        className={cx(
-            'Underline',
-            'gradientMask__underline',
-
-            isDotAnchor && 'Underline__isDot',
-            isWikiAnchor ?
-                'Underline__isWiki' :
-                'Underline__isNotWiki',
-
-            isAccessed && !isSelected && 'Underline__accessed',
-        )}
-    >
-        <Svg
+    }) => (
+        <div
             className={cx(
-                'Underline__bar',
-                'Underline__bar__default',
-                isSelected &&
-                    'Underline__bar__selected',
-                'absoluteFullContainer'
+                'Underline',
+                'gradientMask__underline',
+
+                isDotAnchor && 'Underline__isDot',
+                isWikiAnchor ?
+                    'Underline__isWiki' :
+                    'Underline__isNotWiki',
+
+                isAccessed && !isSelected && 'Underline__accessed',
             )}
-        />
-        <Svg
-            className={cx(
-                'Underline__bar',
-                'Underline__bar__accessed',
-                isSelected &&
+        >
+            <Svg
+                className={cx(
+                    'Underline__bar',
+                    'Underline__bar__default',
+                    isSelected &&
                     'Underline__bar__selected',
-                'absoluteFullContainer'
-            )}
-        />
-    </div>
-)
+                    'absoluteFullContainer'
+                )}
+            />
+            <Svg
+                className={cx(
+                    'Underline__bar',
+                    'Underline__bar__accessed',
+                    isSelected &&
+                    'Underline__bar__selected',
+                    'absoluteFullContainer'
+                )}
+            />
+        </div>
+    )
 
 Underline.propTypes = propTypes
 

@@ -13,7 +13,7 @@ const RoadPast = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RoadPast = ({
     )
 }
 
-RoadPast.propTypes = propTypes;
+RoadPast.propTypes = propTypes
 
 export default RoadPast

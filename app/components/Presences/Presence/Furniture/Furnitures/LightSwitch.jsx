@@ -13,7 +13,7 @@ const LightSwitch = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LightSwitch = ({
     )
 }
 
-LightSwitch.propTypes = propTypes;
+LightSwitch.propTypes = propTypes
 
 export default LightSwitch

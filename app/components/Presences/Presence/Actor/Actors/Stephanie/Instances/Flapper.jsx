@@ -13,7 +13,7 @@ const Flapper = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Flapper = ({
     )
 }
 
-Flapper.propTypes = propTypes;
+Flapper.propTypes = propTypes
 
 export default Flapper

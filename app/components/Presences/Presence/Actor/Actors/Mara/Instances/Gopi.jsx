@@ -13,7 +13,7 @@ const Gopi = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Gopi = ({
     )
 }
 
-Gopi.propTypes = propTypes;
+Gopi.propTypes = propTypes
 
 export default Gopi

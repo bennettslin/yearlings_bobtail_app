@@ -13,7 +13,7 @@ const BennettOdinDepths = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettOdinDepths = ({
     )
 }
 
-BennettOdinDepths.propTypes = propTypes;
+BennettOdinDepths.propTypes = propTypes
 
 export default BennettOdinDepths

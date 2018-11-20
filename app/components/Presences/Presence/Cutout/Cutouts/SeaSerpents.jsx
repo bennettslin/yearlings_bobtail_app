@@ -13,7 +13,7 @@ const SeaSerpents = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SeaSerpents = ({
     )
 }
 
-SeaSerpents.propTypes = propTypes;
+SeaSerpents.propTypes = propTypes
 
 export default SeaSerpents

@@ -19,58 +19,58 @@ const mapStateToProps = ({
 
 const navColumnPropTypes = {
     // Through Redux.
-    showSingleBookColumn: PropTypes.bool.isRequired,
-    shownBookColumnIndex: PropTypes.number.isRequired,
+        showSingleBookColumn: PropTypes.bool.isRequired,
+        shownBookColumnIndex: PropTypes.number.isRequired,
 
-    // From parent.
-    bookIndex: PropTypes.number.isRequired,
-    handleNavBookSelect: PropTypes.func.isRequired,
-    handleNavSongSelect: PropTypes.func.isRequired
-},
+        // From parent.
+        bookIndex: PropTypes.number.isRequired,
+        handleNavBookSelect: PropTypes.func.isRequired,
+        handleNavSongSelect: PropTypes.func.isRequired
+    },
 
-NavColumn = ({
+    NavColumn = ({
 
-    showSingleBookColumn,
-    shownBookColumnIndex,
-    bookIndex,
-    handleNavSongSelect,
-    handleNavBookSelect
+        showSingleBookColumn,
+        shownBookColumnIndex,
+        bookIndex,
+        handleNavSongSelect,
+        handleNavBookSelect
 
-}) => {
+    }) => {
 
-    const isShownColumn = !showSingleBookColumn ||
+        const isShownColumn = !showSingleBookColumn ||
         shownBookColumnIndex === bookIndex
 
-    return (
-        <div className={cx(
-            'NavColumn',
-            `NavColumn__${bookIndex ? 'right' : 'left'}`,
-            isShownColumn ?
-                'NavColumn__shown' : 'NavColumn__hidden'
-        )}>
-            {/* Nav book. */}
-            <NavBookSongs
-                {...{
-                    bookIndex,
-                    isInShownColumn: isShownColumn,
-                    handleButtonClick: handleNavSongSelect
-                }}
-            />
-
-            {/* Logue or toggle. */}
-            {isShownColumn ?
-                <NavBookLogue
-                    bookIndex={bookIndex}
-                    handleButtonClick={handleNavSongSelect}
-                /> :
-                <NavBookToggle
-                    bookIndex={bookIndex}
-                    handleButtonClick={handleNavBookSelect}
+        return (
+            <div className={cx(
+                'NavColumn',
+                `NavColumn__${bookIndex ? 'right' : 'left'}`,
+                isShownColumn ?
+                    'NavColumn__shown' : 'NavColumn__hidden'
+            )}>
+                {/* Nav book. */}
+                <NavBookSongs
+                    {...{
+                        bookIndex,
+                        isInShownColumn: isShownColumn,
+                        handleButtonClick: handleNavSongSelect
+                    }}
                 />
-            }
-        </div>
-    )
-}
+
+                {/* Logue or toggle. */}
+                {isShownColumn ?
+                    <NavBookLogue
+                        bookIndex={bookIndex}
+                        handleButtonClick={handleNavSongSelect}
+                    /> :
+                    <NavBookToggle
+                        bookIndex={bookIndex}
+                        handleButtonClick={handleNavBookSelect}
+                    />
+                }
+            </div>
+        )
+    }
 
 NavColumn.propTypes = navColumnPropTypes
 

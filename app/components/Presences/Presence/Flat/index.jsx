@@ -201,7 +201,7 @@ const Flat = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const FlatComponent = FLATS_MAP[nameKey]
 
@@ -215,6 +215,6 @@ const Flat = ({
     )
 }
 
-Flat.propTypes = propTypes;
+Flat.propTypes = propTypes
 
 export default Flat

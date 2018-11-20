@@ -45,7 +45,7 @@ const TasksBlockView = ({
                     }
                 </div>
             )
-        )}
+            )}
     </div>
 )
 

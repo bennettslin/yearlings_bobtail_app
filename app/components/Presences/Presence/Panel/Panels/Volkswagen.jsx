@@ -13,7 +13,7 @@ const Volkswagen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Volkswagen = ({
     )
 }
 
-Volkswagen.propTypes = propTypes;
+Volkswagen.propTypes = propTypes
 
 export default Volkswagen

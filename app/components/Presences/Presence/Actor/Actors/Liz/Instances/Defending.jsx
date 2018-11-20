@@ -13,7 +13,7 @@ const Defending = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Defending = ({
     )
 }
 
-Defending.propTypes = propTypes;
+Defending.propTypes = propTypes
 
 export default Defending

@@ -13,7 +13,7 @@ const OpalCouch = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OpalCouch = ({
     )
 }
 
-OpalCouch.propTypes = propTypes;
+OpalCouch.propTypes = propTypes
 
 export default OpalCouch

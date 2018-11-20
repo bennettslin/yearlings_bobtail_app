@@ -13,7 +13,7 @@ const OaklandHouseRight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OaklandHouseRight = ({
     )
 }
 
-OaklandHouseRight.propTypes = propTypes;
+OaklandHouseRight.propTypes = propTypes
 
 export default OaklandHouseRight

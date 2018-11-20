@@ -13,7 +13,7 @@ const NudeDrawings = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const NudeDrawings = ({
     )
 }
 
-NudeDrawings.propTypes = propTypes;
+NudeDrawings.propTypes = propTypes
 
 export default NudeDrawings

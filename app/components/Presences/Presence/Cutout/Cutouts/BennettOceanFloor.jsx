@@ -13,7 +13,7 @@ const BennettOceanFloor = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettOceanFloor = ({
     )
 }
 
-BennettOceanFloor.propTypes = propTypes;
+BennettOceanFloor.propTypes = propTypes
 
 export default BennettOceanFloor

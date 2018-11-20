@@ -13,7 +13,7 @@ const LizCouchThoughtBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizCouchThoughtBackdrop = ({
     )
 }
 
-LizCouchThoughtBackdrop.propTypes = propTypes;
+LizCouchThoughtBackdrop.propTypes = propTypes
 
 export default LizCouchThoughtBackdrop

@@ -13,7 +13,7 @@ const CliffTree = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CliffTree = ({
     )
 }
 
-CliffTree.propTypes = propTypes;
+CliffTree.propTypes = propTypes
 
 export default CliffTree

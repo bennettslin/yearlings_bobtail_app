@@ -13,7 +13,7 @@ const Squatting = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Squatting = ({
     )
 }
 
-Squatting.propTypes = propTypes;
+Squatting.propTypes = propTypes
 
 export default Squatting

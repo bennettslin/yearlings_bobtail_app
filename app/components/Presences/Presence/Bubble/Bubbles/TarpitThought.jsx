@@ -13,7 +13,7 @@ const TarpitThought = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TarpitThought = ({
     )
 }
 
-TarpitThought.propTypes = propTypes;
+TarpitThought.propTypes = propTypes
 
 export default TarpitThought

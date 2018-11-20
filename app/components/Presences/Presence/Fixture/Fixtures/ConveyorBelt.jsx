@@ -13,7 +13,7 @@ const ConveyorBelt = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ConveyorBelt = ({
     )
 }
 
-ConveyorBelt.propTypes = propTypes;
+ConveyorBelt.propTypes = propTypes
 
 export default ConveyorBelt

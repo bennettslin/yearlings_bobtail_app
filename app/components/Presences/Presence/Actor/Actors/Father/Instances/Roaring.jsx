@@ -13,7 +13,7 @@ const Roaring = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Roaring = ({
     )
 }
 
-Roaring.propTypes = propTypes;
+Roaring.propTypes = propTypes
 
 export default Roaring

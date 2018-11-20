@@ -13,7 +13,7 @@ const Museum = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Museum = ({
     )
 }
 
-Museum.propTypes = propTypes;
+Museum.propTypes = propTypes
 
 export default Museum

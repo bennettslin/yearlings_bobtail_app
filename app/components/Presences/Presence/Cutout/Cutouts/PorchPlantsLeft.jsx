@@ -13,7 +13,7 @@ const PorchPlantsLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PorchPlantsLeft = ({
     )
 }
 
-PorchPlantsLeft.propTypes = propTypes;
+PorchPlantsLeft.propTypes = propTypes
 
 export default PorchPlantsLeft

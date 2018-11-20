@@ -13,7 +13,7 @@ const Distracted = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Distracted = ({
     )
 }
 
-Distracted.propTypes = propTypes;
+Distracted.propTypes = propTypes
 
 export default Distracted

@@ -13,7 +13,7 @@ const Staring = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Staring = ({
     )
 }
 
-Staring.propTypes = propTypes;
+Staring.propTypes = propTypes
 
 export default Staring

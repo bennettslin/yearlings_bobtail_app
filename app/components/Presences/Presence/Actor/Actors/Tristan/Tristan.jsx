@@ -30,7 +30,7 @@ const Tristan = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -44,6 +44,6 @@ const Tristan = ({
     )
 }
 
-Tristan.propTypes = propTypes;
+Tristan.propTypes = propTypes
 
 export default Tristan

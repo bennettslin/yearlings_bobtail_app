@@ -44,7 +44,7 @@ const Amy = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -58,6 +58,6 @@ const Amy = ({
     )
 }
 
-Amy.propTypes = propTypes;
+Amy.propTypes = propTypes
 
 export default Amy

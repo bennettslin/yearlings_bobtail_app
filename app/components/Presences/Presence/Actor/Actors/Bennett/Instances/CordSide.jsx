@@ -13,7 +13,7 @@ const CordSide = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CordSide = ({
     )
 }
 
-CordSide.propTypes = propTypes;
+CordSide.propTypes = propTypes
 
 export default CordSide

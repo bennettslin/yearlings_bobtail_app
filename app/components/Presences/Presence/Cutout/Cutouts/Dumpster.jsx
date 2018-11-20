@@ -13,7 +13,7 @@ const Dumpster = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Dumpster = ({
     )
 }
 
-Dumpster.propTypes = propTypes;
+Dumpster.propTypes = propTypes
 
 export default Dumpster

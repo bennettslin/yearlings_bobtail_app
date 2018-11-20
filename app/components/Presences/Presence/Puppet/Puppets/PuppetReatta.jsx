@@ -13,7 +13,7 @@ const PuppetReatta = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PuppetReatta = ({
     )
 }
 
-PuppetReatta.propTypes = propTypes;
+PuppetReatta.propTypes = propTypes
 
 export default PuppetReatta

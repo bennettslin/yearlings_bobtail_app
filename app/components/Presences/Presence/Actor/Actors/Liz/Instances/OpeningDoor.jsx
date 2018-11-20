@@ -13,7 +13,7 @@ const OpeningDoor = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OpeningDoor = ({
     )
 }
 
-OpeningDoor.propTypes = propTypes;
+OpeningDoor.propTypes = propTypes
 
 export default OpeningDoor

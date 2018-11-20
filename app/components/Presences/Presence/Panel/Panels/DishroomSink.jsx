@@ -13,7 +13,7 @@ const DishroomSink = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DishroomSink = ({
     )
 }
 
-DishroomSink.propTypes = propTypes;
+DishroomSink.propTypes = propTypes
 
 export default DishroomSink

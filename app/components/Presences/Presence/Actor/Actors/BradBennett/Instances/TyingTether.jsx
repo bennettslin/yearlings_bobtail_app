@@ -13,7 +13,7 @@ const TyingTether = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TyingTether = ({
     )
 }
 
-TyingTether.propTypes = propTypes;
+TyingTether.propTypes = propTypes
 
 export default TyingTether

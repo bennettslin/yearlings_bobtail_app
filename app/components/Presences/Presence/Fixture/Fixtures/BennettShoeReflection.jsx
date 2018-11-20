@@ -13,7 +13,7 @@ const BennettShoeReflection = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettShoeReflection = ({
     )
 }
 
-BennettShoeReflection.propTypes = propTypes;
+BennettShoeReflection.propTypes = propTypes
 
 export default BennettShoeReflection

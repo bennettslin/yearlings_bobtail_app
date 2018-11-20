@@ -23,7 +23,7 @@ const BradSasha = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -37,6 +37,6 @@ const BradSasha = ({
     )
 }
 
-BradSasha.propTypes = propTypes;
+BradSasha.propTypes = propTypes
 
 export default BradSasha

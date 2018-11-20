@@ -13,7 +13,7 @@ const MopSopped = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const MopSopped = ({
     )
 }
 
-MopSopped.propTypes = propTypes;
+MopSopped.propTypes = propTypes
 
 export default MopSopped

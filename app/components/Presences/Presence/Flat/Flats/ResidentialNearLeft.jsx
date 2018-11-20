@@ -13,7 +13,7 @@ const ResidentialNearLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ResidentialNearLeft = ({
     )
 }
 
-ResidentialNearLeft.propTypes = propTypes;
+ResidentialNearLeft.propTypes = propTypes
 
 export default ResidentialNearLeft

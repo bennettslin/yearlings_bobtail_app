@@ -13,7 +13,7 @@ const BackpackSasha = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BackpackSasha = ({
     )
 }
 
-BackpackSasha.propTypes = propTypes;
+BackpackSasha.propTypes = propTypes
 
 export default BackpackSasha

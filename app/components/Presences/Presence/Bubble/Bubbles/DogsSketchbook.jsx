@@ -13,7 +13,7 @@ const DogsSketchbook = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DogsSketchbook = ({
     )
 }
 
-DogsSketchbook.propTypes = propTypes;
+DogsSketchbook.propTypes = propTypes
 
 export default DogsSketchbook

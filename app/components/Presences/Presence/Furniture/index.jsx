@@ -102,7 +102,7 @@ const Furniture = ({
     className,
     nameKey,
 
-...other }) => {
+    ...other }) => {
 
     const FurnitureComponent = FURNITURES_MAP[nameKey]
 
@@ -116,6 +116,6 @@ const Furniture = ({
     )
 }
 
-Furniture.propTypes = propTypes;
+Furniture.propTypes = propTypes
 
 export default Furniture

@@ -10,7 +10,7 @@ import DateEnded from './Instances/DateEnded'
 import DishroomLancet from './Instances/DishroomLancet'
 import GateCode from './Instances/GateCode'
 import RumpledLinens from './Instances/RumpledLinens'
-import AsleepReaching from './Instances/AsleepReaching';
+import AsleepReaching from './Instances/AsleepReaching'
 import LeavingCrumbled from './Instances/LeavingCrumbled'
 import PettingStanding from './Instances/PettingStanding'
 import SiftingTchotchkes from './Instances/SiftingTchotchkes'
@@ -77,7 +77,7 @@ const Liz = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -91,6 +91,6 @@ const Liz = ({
     )
 }
 
-Liz.propTypes = propTypes;
+Liz.propTypes = propTypes
 
 export default Liz

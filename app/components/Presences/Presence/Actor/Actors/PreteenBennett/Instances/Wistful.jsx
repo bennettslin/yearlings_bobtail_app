@@ -13,7 +13,7 @@ const Wistful = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Wistful = ({
     )
 }
 
-Wistful.propTypes = propTypes;
+Wistful.propTypes = propTypes
 
 export default Wistful

@@ -13,7 +13,7 @@ const TaiwanMountainRight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TaiwanMountainRight = ({
     )
 }
 
-TaiwanMountainRight.propTypes = propTypes;
+TaiwanMountainRight.propTypes = propTypes
 
 export default TaiwanMountainRight

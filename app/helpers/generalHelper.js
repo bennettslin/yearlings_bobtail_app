@@ -2,7 +2,7 @@
 
 const getPower = (base, exponent) => {
     if (exponent === 0) {
-        return 1;
+        return 1
     } else {
         return base * getPower(base, exponent - 1)
     }

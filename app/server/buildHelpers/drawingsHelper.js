@@ -139,7 +139,7 @@ export const _adminFinaliseActors = (album) => {
                         rolesTodoCount++
 
                     } else {
-                        roleObject.doneForNow = true;
+                        roleObject.doneForNow = true
                     }
                 }
             }

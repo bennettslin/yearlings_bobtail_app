@@ -13,7 +13,7 @@ const ShoreCarnival = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ShoreCarnival = ({
     )
 }
 
-ShoreCarnival.propTypes = propTypes;
+ShoreCarnival.propTypes = propTypes
 
 export default ShoreCarnival

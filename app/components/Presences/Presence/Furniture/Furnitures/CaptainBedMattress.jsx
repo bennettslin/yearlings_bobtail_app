@@ -13,7 +13,7 @@ const CaptainBedMattress = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CaptainBedMattress = ({
     )
 }
 
-CaptainBedMattress.propTypes = propTypes;
+CaptainBedMattress.propTypes = propTypes
 
 export default CaptainBedMattress

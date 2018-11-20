@@ -13,7 +13,7 @@ const BasementBeerCase = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BasementBeerCase = ({
     )
 }
 
-BasementBeerCase.propTypes = propTypes;
+BasementBeerCase.propTypes = propTypes
 
 export default BasementBeerCase

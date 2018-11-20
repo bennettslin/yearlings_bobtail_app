@@ -13,7 +13,7 @@ const Painting = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Painting = ({
     )
 }
 
-Painting.propTypes = propTypes;
+Painting.propTypes = propTypes
 
 export default Painting

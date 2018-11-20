@@ -13,7 +13,7 @@ const Quipping = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Quipping = ({
     )
 }
 
-Quipping.propTypes = propTypes;
+Quipping.propTypes = propTypes
 
 export default Quipping

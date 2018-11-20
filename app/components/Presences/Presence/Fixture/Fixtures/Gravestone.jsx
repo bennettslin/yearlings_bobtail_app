@@ -13,7 +13,7 @@ const Gravestone = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Gravestone = ({
     )
 }
 
-Gravestone.propTypes = propTypes;
+Gravestone.propTypes = propTypes
 
 export default Gravestone

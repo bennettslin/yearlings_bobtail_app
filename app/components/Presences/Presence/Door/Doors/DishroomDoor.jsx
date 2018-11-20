@@ -13,7 +13,7 @@ const DishroomDoor = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DishroomDoor = ({
     )
 }
 
-DishroomDoor.propTypes = propTypes;
+DishroomDoor.propTypes = propTypes
 
 export default DishroomDoor

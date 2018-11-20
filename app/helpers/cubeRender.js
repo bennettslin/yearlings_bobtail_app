@@ -195,7 +195,7 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
          */
         xModifier = isXOdd ? -0.5 : 0
 
-       /**
+        /**
         * Reference for even xIndex is 1 above that for previous odd xIndex.
         */
         yModifier = isXOdd ? 0 : 1

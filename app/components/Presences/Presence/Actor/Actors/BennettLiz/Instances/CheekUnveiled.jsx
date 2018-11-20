@@ -13,7 +13,7 @@ const CheekUnveiled = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CheekUnveiled = ({
     )
 }
 
-CheekUnveiled.propTypes = propTypes;
+CheekUnveiled.propTypes = propTypes
 
 export default CheekUnveiled

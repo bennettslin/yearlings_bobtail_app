@@ -13,7 +13,7 @@ const SteamTunnel = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SteamTunnel = ({
     )
 }
 
-SteamTunnel.propTypes = propTypes;
+SteamTunnel.propTypes = propTypes
 
 export default SteamTunnel

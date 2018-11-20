@@ -13,7 +13,7 @@ const ShoppingCart = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ShoppingCart = ({
     )
 }
 
-ShoppingCart.propTypes = propTypes;
+ShoppingCart.propTypes = propTypes
 
 export default ShoppingCart

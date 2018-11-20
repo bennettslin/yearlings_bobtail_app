@@ -13,7 +13,7 @@ const OpalLicking = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OpalLicking = ({
     )
 }
 
-OpalLicking.propTypes = propTypes;
+OpalLicking.propTypes = propTypes
 
 export default OpalLicking

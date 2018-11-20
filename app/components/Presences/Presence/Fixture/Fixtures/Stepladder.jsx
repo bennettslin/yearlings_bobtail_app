@@ -13,7 +13,7 @@ const Stepladder = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Stepladder = ({
     )
 }
 
-Stepladder.propTypes = propTypes;
+Stepladder.propTypes = propTypes
 
 export default Stepladder

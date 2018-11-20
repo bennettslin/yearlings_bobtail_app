@@ -13,7 +13,7 @@ const SiblingThought = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SiblingThought = ({
     )
 }
 
-SiblingThought.propTypes = propTypes;
+SiblingThought.propTypes = propTypes
 
 export default SiblingThought

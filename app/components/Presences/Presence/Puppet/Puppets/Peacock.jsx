@@ -13,7 +13,7 @@ const Peacock = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Peacock = ({
     )
 }
 
-Peacock.propTypes = propTypes;
+Peacock.propTypes = propTypes
 
 export default Peacock

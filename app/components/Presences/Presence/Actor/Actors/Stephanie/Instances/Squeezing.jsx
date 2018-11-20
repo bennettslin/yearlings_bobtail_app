@@ -13,7 +13,7 @@ const Squeezing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Squeezing = ({
     )
 }
 
-Squeezing.propTypes = propTypes;
+Squeezing.propTypes = propTypes
 
 export default Squeezing

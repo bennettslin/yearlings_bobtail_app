@@ -13,7 +13,7 @@ const GhostOdinPhone = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GhostOdinPhone = ({
     )
 }
 
-GhostOdinPhone.propTypes = propTypes;
+GhostOdinPhone.propTypes = propTypes
 
 export default GhostOdinPhone

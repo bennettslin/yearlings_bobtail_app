@@ -56,7 +56,7 @@ const BennettLiz = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -70,6 +70,6 @@ const BennettLiz = ({
     )
 }
 
-BennettLiz.propTypes = propTypes;
+BennettLiz.propTypes = propTypes
 
 export default BennettLiz

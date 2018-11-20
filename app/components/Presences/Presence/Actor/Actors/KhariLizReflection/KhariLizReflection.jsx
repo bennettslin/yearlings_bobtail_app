@@ -21,7 +21,7 @@ const Khari = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -35,6 +35,6 @@ const Khari = ({
     )
 }
 
-Khari.propTypes = propTypes;
+Khari.propTypes = propTypes
 
 export default Khari

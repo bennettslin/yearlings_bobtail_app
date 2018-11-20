@@ -141,7 +141,7 @@ class Carousel extends Component {
                 setCarouselParentRef,
                 canCarouselRender,
 
-            ...other
+                ...other
             } = this.props,
 
             {

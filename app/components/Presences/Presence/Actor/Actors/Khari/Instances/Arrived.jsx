@@ -13,7 +13,7 @@ const Arrived = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Arrived = ({
     )
 }
 
-Arrived.propTypes = propTypes;
+Arrived.propTypes = propTypes
 
 export default Arrived

@@ -35,29 +35,29 @@ const DOT_FIELDS_MAP = {
 
 const propTypes = {
     // From parent.
-    isAccessed: PropTypes.bool,
-    isSelected: PropTypes.bool,
-    isDeselected: PropTypes.bool,
-    dotKey: PropTypes.string.isRequired
-},
+        isAccessed: PropTypes.bool,
+        isSelected: PropTypes.bool,
+        isDeselected: PropTypes.bool,
+        dotKey: PropTypes.string.isRequired
+    },
 
-DotField = ({
+    DotField = ({
 
-    isAccessed,
+        isAccessed,
 
-    // Applies to selectable dots.
-    isSelected,
+        // Applies to selectable dots.
+        isSelected,
 
-    // Applies to slide dots.
-    isDeselected,
+        // Applies to slide dots.
+        isDeselected,
 
-    dotKey
+        dotKey
 
-}) => {
+    }) => {
 
-    const FieldComponent = DOT_FIELDS_MAP[dotKey]
+        const FieldComponent = DOT_FIELDS_MAP[dotKey]
 
-    return (
+        return (
             <FieldComponent
                 className={cx(
                     'DotField',
@@ -71,8 +71,8 @@ DotField = ({
                     isDeselected && `DotField__dotsSlide__deselected`
                 )}
             />
-    )
-}
+        )
+    }
 
 DotField.propTypes = propTypes
 

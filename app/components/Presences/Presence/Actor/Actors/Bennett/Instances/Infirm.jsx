@@ -13,7 +13,7 @@ const Infirm = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Infirm = ({
     )
 }
 
-Infirm.propTypes = propTypes;
+Infirm.propTypes = propTypes
 
 export default Infirm

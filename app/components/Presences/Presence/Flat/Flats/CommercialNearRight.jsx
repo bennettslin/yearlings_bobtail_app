@@ -13,7 +13,7 @@ const CommercialNearRight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CommercialNearRight = ({
     )
 }
 
-CommercialNearRight.propTypes = propTypes;
+CommercialNearRight.propTypes = propTypes
 
 export default CommercialNearRight

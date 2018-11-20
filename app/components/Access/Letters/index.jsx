@@ -4,57 +4,57 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AccessLetter from '../Letter';
+import AccessLetter from '../Letter'
 
 const accessIconsPropTypes = {
     // From parent.
-    accessIconsName: PropTypes.string,
-    inAnnotation: PropTypes.bool,
-    inLyric: PropTypes.bool,
-    inSlider: PropTypes.bool,
-    showIfAccessed: PropTypes.bool,
-    accessKeys: PropTypes.arrayOf(
-        PropTypes.string.isRequired
-    ).isRequired
-},
+        accessIconsName: PropTypes.string,
+        inAnnotation: PropTypes.bool,
+        inLyric: PropTypes.bool,
+        inSlider: PropTypes.bool,
+        showIfAccessed: PropTypes.bool,
+        accessKeys: PropTypes.arrayOf(
+            PropTypes.string.isRequired
+        ).isRequired
+    },
 
-AccessLetters = ({
+    AccessLetters = ({
 
-    accessIconsName,
-    inAnnotation,
-    inLyric,
-    inSlider,
-    showIfAccessed,
-    accessKeys
+        accessIconsName,
+        inAnnotation,
+        inLyric,
+        inSlider,
+        showIfAccessed,
+        accessKeys
 
-}) => (
-    <div className={cx(
-        'AccessLetters',
+    }) => (
+        <div className={cx(
+            'AccessLetters',
 
-        inAnnotation ?
-            'AccessLetters__inAnnotation' :
-            'AccessLetters__absolute',
+            inAnnotation ?
+                'AccessLetters__inAnnotation' :
+                'AccessLetters__absolute',
 
-        inLyric && 'AccessLetters__inLyric',
-        inSlider && 'AccessLetters__inSlider',
+            inLyric && 'AccessLetters__inLyric',
+            inSlider && 'AccessLetters__inSlider',
 
-        accessIconsName && `AccessLetters__${accessIconsName}`
-    )}>
-        {accessKeys.map(accessKey => {
+            accessIconsName && `AccessLetters__${accessIconsName}`
+        )}>
+            {accessKeys.map(accessKey => {
 
-            return (
-                <AccessLetter
-                    key={accessKey}
-                    animateStandaloneOnKeyDown
-                    {...{
-                        accessKey,
-                        showIfAccessed
-                    }}
-                />
-            )
-        })}
-    </div>
-)
+                return (
+                    <AccessLetter
+                        key={accessKey}
+                        animateStandaloneOnKeyDown
+                        {...{
+                            accessKey,
+                            showIfAccessed
+                        }}
+                    />
+                )
+            })}
+        </div>
+    )
 
 AccessLetters.propTypes = accessIconsPropTypes
 

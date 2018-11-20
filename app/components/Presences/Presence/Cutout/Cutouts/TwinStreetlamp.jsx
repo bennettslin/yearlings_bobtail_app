@@ -13,7 +13,7 @@ const TwinStreetlamp = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TwinStreetlamp = ({
     )
 }
 
-TwinStreetlamp.propTypes = propTypes;
+TwinStreetlamp.propTypes = propTypes
 
 export default TwinStreetlamp

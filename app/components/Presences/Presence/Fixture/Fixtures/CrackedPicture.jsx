@@ -13,7 +13,7 @@ const CrackedPicture = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CrackedPicture = ({
     )
 }
 
-CrackedPicture.propTypes = propTypes;
+CrackedPicture.propTypes = propTypes
 
 export default CrackedPicture

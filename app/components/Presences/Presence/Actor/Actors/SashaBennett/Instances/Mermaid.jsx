@@ -13,7 +13,7 @@ const Mermaid = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Mermaid = ({
     )
 }
 
-Mermaid.propTypes = propTypes;
+Mermaid.propTypes = propTypes
 
 export default Mermaid

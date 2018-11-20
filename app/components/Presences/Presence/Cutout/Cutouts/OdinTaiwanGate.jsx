@@ -13,7 +13,7 @@ const OdinTaiwanGate = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OdinTaiwanGate = ({
     )
 }
 
-OdinTaiwanGate.propTypes = propTypes;
+OdinTaiwanGate.propTypes = propTypes
 
 export default OdinTaiwanGate

@@ -23,7 +23,7 @@ const BennettReflection = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -37,6 +37,6 @@ const BennettReflection = ({
     )
 }
 
-BennettReflection.propTypes = propTypes;
+BennettReflection.propTypes = propTypes
 
 export default BennettReflection

@@ -13,7 +13,7 @@ const LizBlindsOpen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizBlindsOpen = ({
     )
 }
 
-LizBlindsOpen.propTypes = propTypes;
+LizBlindsOpen.propTypes = propTypes
 
 export default LizBlindsOpen

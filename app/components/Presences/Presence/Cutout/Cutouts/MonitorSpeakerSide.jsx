@@ -13,7 +13,7 @@ const MonitorSpeakerSide = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const MonitorSpeakerSide = ({
     )
 }
 
-MonitorSpeakerSide.propTypes = propTypes;
+MonitorSpeakerSide.propTypes = propTypes
 
 export default MonitorSpeakerSide

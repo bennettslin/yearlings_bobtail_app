@@ -13,7 +13,7 @@ const NotHungry = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const NotHungry = ({
     )
 }
 
-NotHungry.propTypes = propTypes;
+NotHungry.propTypes = propTypes
 
 export default NotHungry

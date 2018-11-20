@@ -13,7 +13,7 @@ const Horsing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Horsing = ({
     )
 }
 
-Horsing.propTypes = propTypes;
+Horsing.propTypes = propTypes
 
 export default Horsing

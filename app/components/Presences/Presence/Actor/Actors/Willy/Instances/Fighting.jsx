@@ -13,7 +13,7 @@ const Fighting = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Fighting = ({
     )
 }
 
-Fighting.propTypes = propTypes;
+Fighting.propTypes = propTypes
 
 export default Fighting

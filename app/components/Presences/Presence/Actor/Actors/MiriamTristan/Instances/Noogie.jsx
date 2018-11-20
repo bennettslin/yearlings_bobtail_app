@@ -13,7 +13,7 @@ const Noogie = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Noogie = ({
     )
 }
 
-Noogie.propTypes = propTypes;
+Noogie.propTypes = propTypes
 
 export default Noogie

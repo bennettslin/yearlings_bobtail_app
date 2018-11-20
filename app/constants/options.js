@@ -1,10 +1,10 @@
 
 const CONTINUE = 'continue',
-      REPEAT = 'repeat',
-      PAUSE_AT_END = 'pauseAtEnd',
-      SHOWN = 'shown',
-      HIDDEN = 'hidden',
-      DISABLED = 'disabled'
+    REPEAT = 'repeat',
+    PAUSE_AT_END = 'pauseAtEnd',
+    SHOWN = 'shown',
+    HIDDEN = 'hidden',
+    DISABLED = 'disabled'
 
 module.exports = {
 

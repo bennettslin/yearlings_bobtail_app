@@ -34,7 +34,7 @@ class PopupViewButton extends Component {
     _handleClick = (e) => {
 
         const { isPreviousButton,
-                isNextButton } = this.props
+            isNextButton } = this.props
 
         let direction
 
@@ -90,10 +90,10 @@ class PopupViewButton extends Component {
                 className={cx(
                     'PopupViewButton',
                     { 'PopupViewButton__close': isCloseButton,
-                      'PopupViewButton__previous': isPreviousButton,
-                      'PopupViewButton__next': isNextButton,
-                      'PopupViewButton__side': isPreviousButton || isNextButton,
-                      'PopupViewButton__inCardSize': inCardSize },
+                        'PopupViewButton__previous': isPreviousButton,
+                        'PopupViewButton__next': isNextButton,
+                        'PopupViewButton__side': isPreviousButton || isNextButton,
+                        'PopupViewButton__inCardSize': inCardSize },
 
                     inFullSize ?
                         'PopupViewButton__inFullSize' :

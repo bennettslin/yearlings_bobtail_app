@@ -13,7 +13,7 @@ const UcBerkeleyTree = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const UcBerkeleyTree = ({
     )
 }
 
-UcBerkeleyTree.propTypes = propTypes;
+UcBerkeleyTree.propTypes = propTypes
 
 export default UcBerkeleyTree

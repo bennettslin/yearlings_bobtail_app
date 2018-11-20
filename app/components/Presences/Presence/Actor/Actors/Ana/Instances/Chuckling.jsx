@@ -13,7 +13,7 @@ const Chuckling = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Chuckling = ({
     )
 }
 
-Chuckling.propTypes = propTypes;
+Chuckling.propTypes = propTypes
 
 export default Chuckling

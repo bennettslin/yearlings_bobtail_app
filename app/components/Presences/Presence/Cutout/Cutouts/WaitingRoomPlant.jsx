@@ -13,7 +13,7 @@ const WaitingRoomPlant = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const WaitingRoomPlant = ({
     )
 }
 
-WaitingRoomPlant.propTypes = propTypes;
+WaitingRoomPlant.propTypes = propTypes
 
 export default WaitingRoomPlant

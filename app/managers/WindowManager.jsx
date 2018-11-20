@@ -75,8 +75,8 @@ class WindowManager extends Component {
     _windowResize = (e) => {
         const { selectedSongIndex } = this.props,
             { deviceIndex,
-              windowHeight,
-              windowWidth } = resizeWindow(e ? e.target : undefined),
+                windowHeight,
+                windowWidth } = resizeWindow(e ? e.target : undefined),
 
             isLyricExpandable = getIsLyricExpandable(deviceIndex),
 
@@ -154,9 +154,9 @@ class WindowManager extends Component {
          * Force collapse of lyric in state if not expandable, or if heightless
          * lyric.
          */
-         if (!isLyricExpandable || isHeightlessLyricColumn) {
-             this.props.selectLyricExpand(false)
-         }
+        if (!isLyricExpandable || isHeightlessLyricColumn) {
+            this.props.selectLyricExpand(false)
+        }
 
         // Force collapse of score in state if not expandable.
         if (!getIsScoreExpandable(deviceIndex)) {

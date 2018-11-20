@@ -13,7 +13,7 @@ const Enchanted = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Enchanted = ({
     )
 }
 
-Enchanted.propTypes = propTypes;
+Enchanted.propTypes = propTypes
 
 export default Enchanted

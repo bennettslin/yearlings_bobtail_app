@@ -13,7 +13,7 @@ const Panicked = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Panicked = ({
     )
 }
 
-Panicked.propTypes = propTypes;
+Panicked.propTypes = propTypes
 
 export default Panicked

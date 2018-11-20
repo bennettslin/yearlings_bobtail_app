@@ -97,7 +97,7 @@ class UnitDot extends Component {
             } = this.props,
 
             { annotationIndex,
-              dotKeys } = dotStanzaObject,
+                dotKeys } = dotStanzaObject,
 
             isAccessed =
                 Boolean(selectedAccessIndex) &&
@@ -137,50 +137,50 @@ class UnitDot extends Component {
 
 const propTypes = {
     // From parent.
-    isLastUnit: PropTypes.bool.isRequired,
-    dotKeys: PropTypes.object.isRequired,
-    annotationIndex: PropTypes.number.isRequired,
-    setRef: PropTypes.func.isRequired
-},
+        isLastUnit: PropTypes.bool.isRequired,
+        dotKeys: PropTypes.object.isRequired,
+        annotationIndex: PropTypes.number.isRequired,
+        setRef: PropTypes.func.isRequired
+    },
 
-UnitDotView = ({
+    UnitDotView = ({
     // From controller.
-    dotKeys,
-    annotationIndex,
-    isLastUnit,
-    setRef,
+        dotKeys,
+        annotationIndex,
+        isLastUnit,
+        setRef,
 
-...other }) => {
+        ...other }) => {
 
-    return (
-        <div
-            key={annotationIndex}
-            ref={setRef}
-            className={cx(
-                'UnitDot',
-                'Unit__column',
+        return (
+            <div
+                key={annotationIndex}
+                ref={setRef}
+                className={cx(
+                    'UnitDot',
+                    'Unit__column',
 
-                isLastUnit && 'UnitDot__lastStanza',
+                    isLastUnit && 'UnitDot__lastStanza',
 
-                // Scroll to dot stanza block upon annotation selection.
-                annotationIndex &&
+                    // Scroll to dot stanza block upon annotation selection.
+                    annotationIndex &&
                     `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
-                // Show and hide dot stanza block in and out based on dot keys.
-                getPrefixedDotLetterClassNames(
-                    dotKeys,
-                    // "Child unit dot letter."
-                    'CuD'
-                )
-            )}
-        >
-            <AnchorDot {...other}
-                inStanza
-                stanzaDotKeys={dotKeys}
-            />
-        </div>
-    )
-}
+                    // Show and hide dot stanza block in and out based on dot keys.
+                    getPrefixedDotLetterClassNames(
+                        dotKeys,
+                        // "Child unit dot letter."
+                        'CuD'
+                    )
+                )}
+            >
+                <AnchorDot {...other}
+                    inStanza
+                    stanzaDotKeys={dotKeys}
+                />
+            </div>
+        )
+    }
 
 UnitDotView.propTypes = propTypes
 

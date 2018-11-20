@@ -13,7 +13,7 @@ const BennettDefiant = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettDefiant = ({
     )
 }
 
-BennettDefiant.propTypes = propTypes;
+BennettDefiant.propTypes = propTypes
 
 export default BennettDefiant

@@ -13,7 +13,7 @@ const Greeting = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Greeting = ({
     )
 }
 
-Greeting.propTypes = propTypes;
+Greeting.propTypes = propTypes
 
 export default Greeting

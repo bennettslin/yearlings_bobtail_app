@@ -13,7 +13,7 @@ const Stooping = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Stooping = ({
     )
 }
 
-Stooping.propTypes = propTypes;
+Stooping.propTypes = propTypes
 
 export default Stooping

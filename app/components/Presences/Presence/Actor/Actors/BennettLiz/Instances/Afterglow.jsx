@@ -13,7 +13,7 @@ const Afterglow = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Afterglow = ({
     )
 }
 
-Afterglow.propTypes = propTypes;
+Afterglow.propTypes = propTypes
 
 export default Afterglow

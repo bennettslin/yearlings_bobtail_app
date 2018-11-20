@@ -13,7 +13,7 @@ const PuppetMotherBegin = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PuppetMotherBegin = ({
     )
 }
 
-PuppetMotherBegin.propTypes = propTypes;
+PuppetMotherBegin.propTypes = propTypes
 
 export default PuppetMotherBegin

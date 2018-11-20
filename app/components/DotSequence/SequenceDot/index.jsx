@@ -11,35 +11,35 @@ import Dot from '../../Dot'
 
 const dotPropTypes = {
 
-    // From parent.
-    dotKey: PropTypes.string.isRequired,
-    inAnnotationCard: PropTypes.bool,
-    inTextAnchor: PropTypes.bool
-},
+        // From parent.
+        dotKey: PropTypes.string.isRequired,
+        inAnnotationCard: PropTypes.bool,
+        inTextAnchor: PropTypes.bool
+    },
 
-SequenceDot = ({
+    SequenceDot = ({
 
-    dotKey,
-    inAnnotationCard,
-    inTextAnchor,
+        dotKey,
+        inAnnotationCard,
+        inTextAnchor,
 
-...other }) => (
-    <Dot {...other}
-        showFieldOnly
-        className={cx(
-            'SequenceDot',
+        ...other }) => (
+        <Dot {...other}
+            showFieldOnly
+            className={cx(
+                'SequenceDot',
 
-            // "Child dot sequence letter."
-            `ChQ${dotKey[0]}`,
+                // "Child dot sequence letter."
+                `ChQ${dotKey[0]}`,
 
-            inTextAnchor && 'SequenceDot__textAnchor',
-            inAnnotationCard && 'SequenceDot__annotationCard'
-        )}
-        {...{
-            dotKey
-        }}
-    />
-)
+                inTextAnchor && 'SequenceDot__textAnchor',
+                inAnnotationCard && 'SequenceDot__annotationCard'
+            )}
+            {...{
+                dotKey
+            }}
+        />
+    )
 
 SequenceDot.propTypes = dotPropTypes
 

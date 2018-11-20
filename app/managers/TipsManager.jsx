@@ -10,9 +10,9 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 
 import { SHOWN,
-         HIDDEN,
-         DISABLED,
-         TIPS_OPTIONS } from 'constants/options'
+    HIDDEN,
+    DISABLED,
+    TIPS_OPTIONS } from 'constants/options'
 
 class TipsManager extends Component {
 

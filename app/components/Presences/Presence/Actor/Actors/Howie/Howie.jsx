@@ -50,7 +50,7 @@ const Howie = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -64,6 +64,6 @@ const Howie = ({
     )
 }
 
-Howie.propTypes = propTypes;
+Howie.propTypes = propTypes
 
 export default Howie

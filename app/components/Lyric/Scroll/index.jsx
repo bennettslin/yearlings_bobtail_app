@@ -14,7 +14,7 @@ import {
     getPropsAreShallowEqual
 } from 'helpers/generalHelper'
 
-import TempGlobalAnnotations from './TempGlobalAnnotations';
+import TempGlobalAnnotations from './TempGlobalAnnotations'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender },

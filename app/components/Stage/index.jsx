@@ -41,20 +41,20 @@ class Stage extends Component {
 
         const {
             /* eslint-disable no-unused-vars */
-            canTheatreRender,
-            dispatch,
-            /* eslint-enable no-unused-vars */
+                canTheatreRender,
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-            stageCoordinates,
-            children
-        } = this.props,
+                stageCoordinates,
+                children
+            } = this.props,
 
-        {
-            top: stageTop,
-            left: stageLeft,
-            width: stageWidth,
-            height: stageHeight
-        } = stageCoordinates
+            {
+                top: stageTop,
+                left: stageLeft,
+                width: stageWidth,
+                height: stageHeight
+            } = stageCoordinates
 
         return (
             <div className={cx(

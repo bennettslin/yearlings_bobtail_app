@@ -13,7 +13,7 @@ const PublicFarLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PublicFarLeft = ({
     )
 }
 
-PublicFarLeft.propTypes = propTypes;
+PublicFarLeft.propTypes = propTypes
 
 export default PublicFarLeft

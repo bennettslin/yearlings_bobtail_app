@@ -13,7 +13,7 @@ const OdinShore = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OdinShore = ({
     )
 }
 
-OdinShore.propTypes = propTypes;
+OdinShore.propTypes = propTypes
 
 export default OdinShore

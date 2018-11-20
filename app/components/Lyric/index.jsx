@@ -139,73 +139,73 @@ class Lyric extends Component {
 
 const lyricColumnViewPropTypes = {
     // From parent.
-    parent__shown: PropTypes.bool.isRequired,
-    handleTransition: PropTypes.func.isRequired,
+        parent__shown: PropTypes.bool.isRequired,
+        handleTransition: PropTypes.func.isRequired,
 
-    handleLyricColumnSelect: PropTypes.func.isRequired,
-    handleLyricSectionExpand: PropTypes.func.isRequired,
-    handleLyricAutoScroll: PropTypes.func.isRequired,
-    handleVerseBarSelect: PropTypes.func.isRequired,
-    handleVerseBarWheel: PropTypes.func.isRequired
-},
+        handleLyricColumnSelect: PropTypes.func.isRequired,
+        handleLyricSectionExpand: PropTypes.func.isRequired,
+        handleLyricAutoScroll: PropTypes.func.isRequired,
+        handleVerseBarSelect: PropTypes.func.isRequired,
+        handleVerseBarWheel: PropTypes.func.isRequired
+    },
 
-LyricColumnView = ({
+    LyricColumnView = ({
 
-    // From props.
-    handleLyricColumnSelect,
-    handleLyricSectionExpand,
-    handleLyricAutoScroll,
-    handleVerseBarSelect,
-    handleVerseBarWheel,
-
-    // From controller.
-    parent__shown,
-    handleTransition,
-
-...other }) => {
-
-    const verseBarProps = {
+        // From props.
+        handleLyricColumnSelect,
+        handleLyricSectionExpand,
+        handleLyricAutoScroll,
         handleVerseBarSelect,
-        handleVerseBarWheel
+        handleVerseBarWheel,
+
+        // From controller.
+        parent__shown,
+        handleTransition,
+
+        ...other }) => {
+
+        const verseBarProps = {
+            handleVerseBarSelect,
+            handleVerseBarWheel
+        }
+
+        return (
+            <div
+                className={cx(
+                    'Lyric',
+                    'position__lyricColumn__desktop',
+                    'position__lyricColumn__mobile',
+                    'gradientMask__lyricColumn__desktop',
+
+                    { 'parent__shown': parent__shown }
+                )}
+                onTransitionEnd={handleTransition}
+            >
+                <LyricScroll {...other} />
+
+                <LyricToggleEar
+                    handleLyricColumnSelect={handleLyricColumnSelect}
+                />
+
+                <LyricToggleExpand
+                    handleLyricSectionExpand={handleLyricSectionExpand}
+                />
+
+                <LyricToggleScroll
+                    handleLyricAutoScroll={handleLyricAutoScroll}
+                />
+
+                <LyricAccess />
+
+                {/* These are the only two flex children. */}
+
+                <VerseBar {...verseBarProps}
+                    isAbove
+                />
+                <VerseBar {...verseBarProps} />
+            </div>
+        )
     }
-
-    return (
-        <div
-            className={cx(
-                'Lyric',
-                'position__lyricColumn__desktop',
-                'position__lyricColumn__mobile',
-                'gradientMask__lyricColumn__desktop',
-
-                { 'parent__shown': parent__shown }
-            )}
-            onTransitionEnd={handleTransition}
-        >
-            <LyricScroll {...other} />
-
-            <LyricToggleEar
-                handleLyricColumnSelect={handleLyricColumnSelect}
-            />
-
-            <LyricToggleExpand
-                handleLyricSectionExpand={handleLyricSectionExpand}
-            />
-
-            <LyricToggleScroll
-                handleLyricAutoScroll={handleLyricAutoScroll}
-            />
-
-            <LyricAccess />
-
-            {/* These are the only two flex children. */}
-
-            <VerseBar {...verseBarProps}
-                isAbove
-            />
-            <VerseBar {...verseBarProps} />
-        </div>
-    )
-}
 
 LyricColumnView.propTypes = lyricColumnViewPropTypes
 

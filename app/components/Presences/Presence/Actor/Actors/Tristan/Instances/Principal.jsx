@@ -13,7 +13,7 @@ const Principal = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Principal = ({
     )
 }
 
-Principal.propTypes = propTypes;
+Principal.propTypes = propTypes
 
 export default Principal

@@ -13,7 +13,7 @@ const CatholicIdea = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CatholicIdea = ({
     )
 }
 
-CatholicIdea.propTypes = propTypes;
+CatholicIdea.propTypes = propTypes
 
 export default CatholicIdea

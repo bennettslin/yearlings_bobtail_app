@@ -55,7 +55,7 @@ class Overview extends Component {
     _handleOverviewToggle = (e) => {
         // Prevent toggle from firing when not shown.
         const { selectedOverviewIndex,
-                handleOverviewToggle } = this.props
+            handleOverviewToggle } = this.props
 
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
             handleOverviewToggle(e)

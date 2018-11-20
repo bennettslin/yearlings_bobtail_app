@@ -17,41 +17,41 @@ const mapStateToProps = ({
 })
 
 const overviewToggleDefaultProps = {
-    isEnabled: true
-},
+        isEnabled: true
+    },
 
-overviewTogglePropTypes = {
+    overviewTogglePropTypes = {
     // Through Redux.
-    selectedOverviewIndex: PropTypes.number.isRequired,
+        selectedOverviewIndex: PropTypes.number.isRequired,
 
-    // From props.
-    inLeftShelf: PropTypes.bool,
-    isEnabled: PropTypes.bool.isRequired,
-    handleOverviewToggle: PropTypes.func.isRequired
-},
+        // From props.
+        inLeftShelf: PropTypes.bool,
+        isEnabled: PropTypes.bool.isRequired,
+        handleOverviewToggle: PropTypes.func.isRequired
+    },
 
-OverviewToggle = ({
+    OverviewToggle = ({
 
-    inLeftShelf,
-    selectedOverviewIndex,
-    isEnabled,
-    handleOverviewToggle
+        inLeftShelf,
+        selectedOverviewIndex,
+        isEnabled,
+        handleOverviewToggle
 
-}) => (
-    <div className={cx(
-        'OverviewToggle',
-        inLeftShelf && 'LeftShelf__child'
-    )}>
-        <Button
-            isCustomSize
-            buttonName={OVERVIEW_BUTTON_KEY}
-            isDisabled={!isEnabled}
-            accessKey={OVERVIEW_TOGGLE_KEY}
-            buttonIdentifier={selectedOverviewIndex}
-            handleButtonClick={handleOverviewToggle}
-        />
-    </div>
-)
+    }) => (
+        <div className={cx(
+            'OverviewToggle',
+            inLeftShelf && 'LeftShelf__child'
+        )}>
+            <Button
+                isCustomSize
+                buttonName={OVERVIEW_BUTTON_KEY}
+                isDisabled={!isEnabled}
+                accessKey={OVERVIEW_TOGGLE_KEY}
+                buttonIdentifier={selectedOverviewIndex}
+                handleButtonClick={handleOverviewToggle}
+            />
+        </div>
+    )
 
 OverviewToggle.defaultProps = overviewToggleDefaultProps
 OverviewToggle.propTypes = overviewTogglePropTypes

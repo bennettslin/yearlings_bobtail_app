@@ -13,7 +13,7 @@ const ChristopherLetters = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ChristopherLetters = ({
     )
 }
 
-ChristopherLetters.propTypes = propTypes;
+ChristopherLetters.propTypes = propTypes
 
 export default ChristopherLetters

@@ -35,67 +35,67 @@ const mapStateToProps = ({
 })
 
 const scoresTipsDefaultProps = {
-    inMenu: false,
-    inMainRightSide: false,
-    inLeftShelf: false
-},
+        inMenu: false,
+        inMainRightSide: false,
+        inLeftShelf: false
+    },
 
-scoresTipsPropTypes = {
+    scoresTipsPropTypes = {
     // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    isScoreLoaded: PropTypes.bool.isRequired,
-    isScoresTipsInMain: PropTypes.bool.isRequired,
-    selectedTipsIndex: PropTypes.number.isRequired,
+        deviceIndex: PropTypes.number.isRequired,
+        isScoreLoaded: PropTypes.bool.isRequired,
+        isScoresTipsInMain: PropTypes.bool.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
 
-    // From parent.
-    inMenu: PropTypes.bool.isRequired,
-    inMainRightSide: PropTypes.bool.isRequired,
-    inLeftShelf: PropTypes.bool.isRequired,
-    handleScoreToggle: PropTypes.func.isRequired,
-    handleTipsToggle: PropTypes.func.isRequired
-},
+        // From parent.
+        inMenu: PropTypes.bool.isRequired,
+        inMainRightSide: PropTypes.bool.isRequired,
+        inLeftShelf: PropTypes.bool.isRequired,
+        handleScoreToggle: PropTypes.func.isRequired,
+        handleTipsToggle: PropTypes.func.isRequired
+    },
 
-ScoresTips = ({
+    ScoresTips = ({
 
-    deviceIndex,
-    isScoreLoaded,
-    isScoresTipsInMain,
-    selectedTipsIndex,
+        deviceIndex,
+        isScoreLoaded,
+        isScoresTipsInMain,
+        selectedTipsIndex,
 
-    inMenu,
-    inMainRightSide,
-    inLeftShelf,
+        inMenu,
+        inMainRightSide,
+        inLeftShelf,
 
-    handleScoreToggle,
-    handleTipsToggle
+        handleScoreToggle,
+        handleTipsToggle
 
-}) => {
-    const isDesktop = getIsDesktop(deviceIndex),
+    }) => {
+        const isDesktop = getIsDesktop(deviceIndex),
 
-        // Render if...
-        shouldRender = isScoresTipsInMain ?
+            // Render if...
+            shouldRender = isScoresTipsInMain ?
 
             // ...in main on the right in mobile.
-            (inMainRightSide && !isDesktop) ||
+                (inMainRightSide && !isDesktop) ||
 
             // ...in main on the left in dots overview on desktop.
             (inLeftShelf && isDesktop) :
 
             // ...in menu.
-            inMenu,
+                inMenu,
 
-        showScoreToggleButton = !getIsPhone(deviceIndex)
+            showScoreToggleButton = !getIsPhone(deviceIndex)
 
-    return shouldRender && (
-        <div className={cx(
-            'ScoresTips',
-            { 'ScoresTips__inMenu': inMenu,
-              'ScoresTips__inMain': inMainRightSide || inLeftShelf,
-              'ScoresTips__inMainRight': inMainRightSide,
-              'ScoresTips__inLeftShelf': inLeftShelf,
-              'LeftShelf__child': inLeftShelf }
-        )}>
-            {showScoreToggleButton &&
+        return shouldRender && (
+            <div className={cx(
+                'ScoresTips',
+                { 'ScoresTips__inMenu': inMenu,
+                    'ScoresTips__inMain': inMainRightSide || inLeftShelf,
+                    'ScoresTips__inMainRight': inMainRightSide,
+                    'ScoresTips__inLeftShelf': inLeftShelf,
+                    'LeftShelf__child': inLeftShelf }
+            )}>
+                {showScoreToggleButton &&
                 <Button
                     isLargeSize
                     buttonName={SCORES_BUTTON_KEY}
@@ -104,19 +104,19 @@ ScoresTips = ({
                     isDisabled={!isScoreLoaded}
                     handleButtonClick={handleScoreToggle}
                 />
-            }
-            {/* TODO: Shouldn't this use the tips toggle button? */}
-            <Button
-                isLargeSize
-                buttonName={TIPS_BUTTON_KEY}
-                className="ScoresTipsButton"
-                buttonIdentifier={selectedTipsIndex}
-                accessKey={TIPS_TOGGLE_KEY}
-                handleButtonClick={handleTipsToggle}
-           />
-        </div>
-    )
-}
+                }
+                {/* TODO: Shouldn't this use the tips toggle button? */}
+                <Button
+                    isLargeSize
+                    buttonName={TIPS_BUTTON_KEY}
+                    className="ScoresTipsButton"
+                    buttonIdentifier={selectedTipsIndex}
+                    accessKey={TIPS_TOGGLE_KEY}
+                    handleButtonClick={handleTipsToggle}
+                />
+            </div>
+        )
+    }
 
 ScoresTips.defaultProps = scoresTipsDefaultProps
 ScoresTips.propTypes = scoresTipsPropTypes

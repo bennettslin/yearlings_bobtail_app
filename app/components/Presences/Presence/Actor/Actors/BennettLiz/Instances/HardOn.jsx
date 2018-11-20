@@ -13,7 +13,7 @@ const HardOn = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const HardOn = ({
     )
 }
 
-HardOn.propTypes = propTypes;
+HardOn.propTypes = propTypes
 
 export default HardOn

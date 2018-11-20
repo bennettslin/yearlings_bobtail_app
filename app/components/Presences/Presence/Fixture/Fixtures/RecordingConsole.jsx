@@ -13,7 +13,7 @@ const RecordingConsole = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RecordingConsole = ({
     )
 }
 
-RecordingConsole.propTypes = propTypes;
+RecordingConsole.propTypes = propTypes
 
 export default RecordingConsole

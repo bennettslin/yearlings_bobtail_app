@@ -13,7 +13,7 @@ const TaiwanHouseNear = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TaiwanHouseNear = ({
     )
 }
 
-TaiwanHouseNear.propTypes = propTypes;
+TaiwanHouseNear.propTypes = propTypes
 
 export default TaiwanHouseNear

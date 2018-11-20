@@ -13,7 +13,7 @@ const OceanBottomMiddle = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OceanBottomMiddle = ({
     )
 }
 
-OceanBottomMiddle.propTypes = propTypes;
+OceanBottomMiddle.propTypes = propTypes
 
 export default OceanBottomMiddle

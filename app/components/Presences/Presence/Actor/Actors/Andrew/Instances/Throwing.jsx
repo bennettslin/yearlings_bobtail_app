@@ -13,7 +13,7 @@ const Throwing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Throwing = ({
     )
 }
 
-Throwing.propTypes = propTypes;
+Throwing.propTypes = propTypes
 
 export default Throwing

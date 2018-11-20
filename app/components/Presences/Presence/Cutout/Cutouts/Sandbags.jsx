@@ -13,7 +13,7 @@ const Sandbags = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Sandbags = ({
     )
 }
 
-Sandbags.propTypes = propTypes;
+Sandbags.propTypes = propTypes
 
 export default Sandbags

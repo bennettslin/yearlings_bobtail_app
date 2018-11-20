@@ -13,7 +13,7 @@ const Walgreens = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Walgreens = ({
     )
 }
 
-Walgreens.propTypes = propTypes;
+Walgreens.propTypes = propTypes
 
 export default Walgreens

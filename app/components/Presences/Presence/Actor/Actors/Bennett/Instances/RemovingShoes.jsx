@@ -13,7 +13,7 @@ const RemovingShoes = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RemovingShoes = ({
     )
 }
 
-RemovingShoes.propTypes = propTypes;
+RemovingShoes.propTypes = propTypes
 
 export default RemovingShoes

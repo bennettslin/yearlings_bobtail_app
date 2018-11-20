@@ -13,7 +13,7 @@ const Tchotchkes = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Tchotchkes = ({
     )
 }
 
-Tchotchkes.propTypes = propTypes;
+Tchotchkes.propTypes = propTypes
 
 export default Tchotchkes

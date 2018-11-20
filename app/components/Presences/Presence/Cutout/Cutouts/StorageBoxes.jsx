@@ -13,7 +13,7 @@ const StorageBoxes = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const StorageBoxes = ({
     )
 }
 
-StorageBoxes.propTypes = propTypes;
+StorageBoxes.propTypes = propTypes
 
 export default StorageBoxes

@@ -13,7 +13,7 @@ const NohoHousesBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const NohoHousesBackdrop = ({
     )
 }
 
-NohoHousesBackdrop.propTypes = propTypes;
+NohoHousesBackdrop.propTypes = propTypes
 
 export default NohoHousesBackdrop

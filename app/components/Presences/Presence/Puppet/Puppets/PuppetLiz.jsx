@@ -13,7 +13,7 @@ const PuppetLiz = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PuppetLiz = ({
     )
 }
 
-PuppetLiz.propTypes = propTypes;
+PuppetLiz.propTypes = propTypes
 
 export default PuppetLiz

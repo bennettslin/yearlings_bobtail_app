@@ -150,11 +150,11 @@ class AnnotationManager extends Component {
     }) {
         if (annotationIndex) {
             const showAnnotationForColumn = shouldShowAnnotationForColumn({
-                    selectedSongIndex,
-                    selectedLyricColumnIndex,
-                    annotationIndex,
-                    deviceIndex
-                })
+                selectedSongIndex,
+                selectedLyricColumnIndex,
+                annotationIndex,
+                deviceIndex
+            })
 
             if (!showAnnotationForColumn) {
                 this.selectAnnotation()

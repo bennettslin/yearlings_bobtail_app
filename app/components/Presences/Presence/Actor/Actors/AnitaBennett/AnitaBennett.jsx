@@ -23,7 +23,7 @@ const AnitaBennett = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -37,6 +37,6 @@ const AnitaBennett = ({
     )
 }
 
-AnitaBennett.propTypes = propTypes;
+AnitaBennett.propTypes = propTypes
 
 export default AnitaBennett

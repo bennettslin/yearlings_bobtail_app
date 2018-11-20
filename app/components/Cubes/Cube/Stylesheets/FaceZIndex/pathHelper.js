@@ -15,8 +15,8 @@ export const getPathString = (polygonPoints) => {
     })
 
     // Use the closePath command. "Z" since it's the last letter, I guess.
-    .concat('Z')
-    .join(' ')
+        .concat('Z')
+        .join(' ')
 }
 
 const _getPolygonPoint = ({ x, y }) => {

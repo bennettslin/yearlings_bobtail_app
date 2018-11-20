@@ -13,7 +13,7 @@ const DrumsStacked = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DrumsStacked = ({
     )
 }
 
-DrumsStacked.propTypes = propTypes;
+DrumsStacked.propTypes = propTypes
 
 export default DrumsStacked

@@ -13,7 +13,7 @@ const SafewayBag = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SafewayBag = ({
     )
 }
 
-SafewayBag.propTypes = propTypes;
+SafewayBag.propTypes = propTypes
 
 export default SafewayBag

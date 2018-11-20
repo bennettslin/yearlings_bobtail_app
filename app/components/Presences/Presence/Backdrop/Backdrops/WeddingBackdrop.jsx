@@ -13,7 +13,7 @@ const WeddingBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const WeddingBackdrop = ({
     )
 }
 
-WeddingBackdrop.propTypes = propTypes;
+WeddingBackdrop.propTypes = propTypes
 
 export default WeddingBackdrop

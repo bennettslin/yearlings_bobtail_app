@@ -38,7 +38,7 @@ const YoungBennett = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -52,6 +52,6 @@ const YoungBennett = ({
     )
 }
 
-YoungBennett.propTypes = propTypes;
+YoungBennett.propTypes = propTypes
 
 export default YoungBennett

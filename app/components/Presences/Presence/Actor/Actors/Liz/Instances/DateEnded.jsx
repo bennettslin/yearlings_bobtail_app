@@ -13,7 +13,7 @@ const DateEnded = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DateEnded = ({
     )
 }
 
-DateEnded.propTypes = propTypes;
+DateEnded.propTypes = propTypes
 
 export default DateEnded

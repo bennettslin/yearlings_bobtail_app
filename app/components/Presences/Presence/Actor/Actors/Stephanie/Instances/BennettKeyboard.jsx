@@ -13,7 +13,7 @@ const BennettKeyboard = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettKeyboard = ({
     )
 }
 
-BennettKeyboard.propTypes = propTypes;
+BennettKeyboard.propTypes = propTypes
 
 export default BennettKeyboard

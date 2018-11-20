@@ -35,7 +35,7 @@ const Nestor = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -49,6 +49,6 @@ const Nestor = ({
     )
 }
 
-Nestor.propTypes = propTypes;
+Nestor.propTypes = propTypes
 
 export default Nestor

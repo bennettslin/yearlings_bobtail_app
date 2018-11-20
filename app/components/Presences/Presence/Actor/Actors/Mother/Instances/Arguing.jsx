@@ -13,7 +13,7 @@ const Arguing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Arguing = ({
     )
 }
 
-Arguing.propTypes = propTypes;
+Arguing.propTypes = propTypes
 
 export default Arguing

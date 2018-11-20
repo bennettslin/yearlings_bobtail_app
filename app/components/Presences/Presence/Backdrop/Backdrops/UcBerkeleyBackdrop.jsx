@@ -13,7 +13,7 @@ const UcBerkeleyBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const UcBerkeleyBackdrop = ({
     )
 }
 
-UcBerkeleyBackdrop.propTypes = propTypes;
+UcBerkeleyBackdrop.propTypes = propTypes
 
 export default UcBerkeleyBackdrop

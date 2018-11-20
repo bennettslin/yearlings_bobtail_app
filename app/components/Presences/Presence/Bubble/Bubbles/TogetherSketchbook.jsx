@@ -13,7 +13,7 @@ const TogetherSketchbook = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TogetherSketchbook = ({
     )
 }
 
-TogetherSketchbook.propTypes = propTypes;
+TogetherSketchbook.propTypes = propTypes
 
 export default TogetherSketchbook

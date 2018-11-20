@@ -19,35 +19,35 @@ const mapStateToProps = ({
 
 const carouselTogglePropTypes = {
     // Through Redux.
-    isHiddenCarouselNav: PropTypes.bool.isRequired,
-    selectedCarouselNavIndex: PropTypes.number.isRequired,
+        isHiddenCarouselNav: PropTypes.bool.isRequired,
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
 
-    // From parent.
-    handleCarouselNavToggle: PropTypes.func.isRequired
-},
+        // From parent.
+        handleCarouselNavToggle: PropTypes.func.isRequired
+    },
 
-CarouselToggle = ({
+    CarouselToggle = ({
 
-    isHiddenCarouselNav,
-    selectedCarouselNavIndex,
-    handleCarouselNavToggle
+        isHiddenCarouselNav,
+        selectedCarouselNavIndex,
+        handleCarouselNavToggle
 
-}) => {
-    return !isHiddenCarouselNav && (
-        <div className={cx(
-            'CarouselToggle',
-            'width__leftShelf'
-        )}>
-            <Button
-                isLargeSize
-                buttonName={CAROUSEL_NAV_BUTTON_KEY}
-                buttonIdentifier={selectedCarouselNavIndex}
-                accessKey={CAROUSEL_TOGGLE_KEY}
-                handleButtonClick={handleCarouselNavToggle}
-            />
-        </div>
-    )
-}
+    }) => {
+        return !isHiddenCarouselNav && (
+            <div className={cx(
+                'CarouselToggle',
+                'width__leftShelf'
+            )}>
+                <Button
+                    isLargeSize
+                    buttonName={CAROUSEL_NAV_BUTTON_KEY}
+                    buttonIdentifier={selectedCarouselNavIndex}
+                    accessKey={CAROUSEL_TOGGLE_KEY}
+                    handleButtonClick={handleCarouselNavToggle}
+                />
+            </div>
+        )
+    }
 
 CarouselToggle.propTypes = carouselTogglePropTypes
 

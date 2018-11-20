@@ -38,7 +38,7 @@ const Wade = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -52,6 +52,6 @@ const Wade = ({
     )
 }
 
-Wade.propTypes = propTypes;
+Wade.propTypes = propTypes
 
 export default Wade

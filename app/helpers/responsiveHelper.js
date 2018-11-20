@@ -1,29 +1,29 @@
 import { HAS_SIDE_CARDS, IS_DOUBLESPEAKER } from 'constants/lyrics'
 import { PHONE_CLASS,
-         LS_MINI_CLASS,
-         TABLET_CLASS,
-         LS_LAPTOP_CLASS,
-         MONITOR_CLASS,
+    LS_MINI_CLASS,
+    TABLET_CLASS,
+    LS_LAPTOP_CLASS,
+    MONITOR_CLASS,
 
-         MINI_OBJECT,
-         DEVICE_OBJECTS,
+    MINI_OBJECT,
+    DEVICE_OBJECTS,
 
-         LS_HEIGHT_LYRIC_COLLAPSED,
-         HEIGHTLESS_LYRIC_MIN,
-         HEIGHTLESS_LYRIC_MAX,
+    LS_HEIGHT_LYRIC_COLLAPSED,
+    HEIGHTLESS_LYRIC_MIN,
+    HEIGHTLESS_LYRIC_MAX,
 
-         LS_WIDTH_GOLDEN_CORD,
-         LS_WIDTH_UNCANNY_VALLEY,
+    LS_WIDTH_GOLDEN_CORD,
+    LS_WIDTH_UNCANNY_VALLEY,
 
-         LS_HEIGHT_MENU,
-         LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE,
-         LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU,
+    LS_HEIGHT_MENU,
+    LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE,
+    LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU,
 
-         TWO_ROW_MENU_BREAKPOINT_LAPTOP,
-         TWO_ROW_MENU_BREAKPOINT_MINI,
+    TWO_ROW_MENU_BREAKPOINT_LAPTOP,
+    TWO_ROW_MENU_BREAKPOINT_MINI,
 
-         HIDDEN_NAV_MIN,
-         WIKI_SIDE_PADDING_TOTAL } from 'constants/responsive'
+    HIDDEN_NAV_MIN,
+    WIKI_SIDE_PADDING_TOTAL } from 'constants/responsive'
 
 import { getSongObject } from './dataHelper'
 
@@ -88,8 +88,8 @@ export const getShowSingleBookColumn = ({ deviceIndex, windowWidth }) => {
 
 const _getShowShrunkNavIconForDeviceObject = (windowWidth, deviceObject) => {
     const { doubleColumnStaticBreakpoint,
-            doubleColumnShrinkBreakpoint,
-            singleColumnStaticBreakpoint } = deviceObject
+        doubleColumnShrinkBreakpoint,
+        singleColumnStaticBreakpoint } = deviceObject
 
     return windowWidth < singleColumnStaticBreakpoint ||
         ((doubleColumnShrinkBreakpoint && windowWidth >= doubleColumnShrinkBreakpoint) &&
@@ -118,7 +118,7 @@ export const getIsToggleInOverview = (deviceIndex) => {
 export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
     const selectedSong = getSongObject(songIndex),
         { [HAS_SIDE_CARDS]: hasSideCards,
-          [IS_DOUBLESPEAKER]: isDoublespeaker } = selectedSong
+            [IS_DOUBLESPEAKER]: isDoublespeaker } = selectedSong
 
     // Applies to Uncanny Valley Boy.
     if (hasSideCards && !isDoublespeaker) {
@@ -142,7 +142,7 @@ export const getIsHiddenCarouselNav = ({
     deviceIndex,
     windowHeight,
     windowWidth
- }) => {
+}) => {
     // Hide carousel nav if it's a phone...
     const isHiddenCarouselNav = getIsPhone(deviceIndex) ||
 

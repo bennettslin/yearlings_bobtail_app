@@ -13,7 +13,7 @@ const TrollShadowLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TrollShadowLeft = ({
     )
 }
 
-TrollShadowLeft.propTypes = propTypes;
+TrollShadowLeft.propTypes = propTypes
 
 export default TrollShadowLeft

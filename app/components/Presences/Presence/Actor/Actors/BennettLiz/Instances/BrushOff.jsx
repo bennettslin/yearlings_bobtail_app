@@ -13,7 +13,7 @@ const BrushOff = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BrushOff = ({
     )
 }
 
-BrushOff.propTypes = propTypes;
+BrushOff.propTypes = propTypes
 
 export default BrushOff

@@ -13,7 +13,7 @@ const DishPile = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DishPile = ({
     )
 }
 
-DishPile.propTypes = propTypes;
+DishPile.propTypes = propTypes
 
 export default DishPile

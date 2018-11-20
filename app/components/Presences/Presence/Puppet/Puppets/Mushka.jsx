@@ -13,7 +13,7 @@ const Mushka = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Mushka = ({
     )
 }
 
-Mushka.propTypes = propTypes;
+Mushka.propTypes = propTypes
 
 export default Mushka

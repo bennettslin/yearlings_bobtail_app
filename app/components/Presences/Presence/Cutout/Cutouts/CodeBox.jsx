@@ -13,7 +13,7 @@ const CodeBox = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CodeBox = ({
     )
 }
 
-CodeBox.propTypes = propTypes;
+CodeBox.propTypes = propTypes
 
 export default CodeBox

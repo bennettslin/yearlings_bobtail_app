@@ -13,7 +13,7 @@ const Stalactites = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Stalactites = ({
     )
 }
 
-Stalactites.propTypes = propTypes;
+Stalactites.propTypes = propTypes
 
 export default Stalactites

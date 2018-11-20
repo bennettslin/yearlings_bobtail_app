@@ -13,7 +13,7 @@ const LizDoorOpen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizDoorOpen = ({
     )
 }
 
-LizDoorOpen.propTypes = propTypes;
+LizDoorOpen.propTypes = propTypes
 
 export default LizDoorOpen

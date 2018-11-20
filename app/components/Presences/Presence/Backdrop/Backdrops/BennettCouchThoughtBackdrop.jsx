@@ -13,7 +13,7 @@ const BennettCouchThoughtBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettCouchThoughtBackdrop = ({
     )
 }
 
-BennettCouchThoughtBackdrop.propTypes = propTypes;
+BennettCouchThoughtBackdrop.propTypes = propTypes
 
 export default BennettCouchThoughtBackdrop

@@ -13,7 +13,7 @@ const PuppetBennettEnd = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PuppetBennettEnd = ({
     )
 }
 
-PuppetBennettEnd.propTypes = propTypes;
+PuppetBennettEnd.propTypes = propTypes
 
 export default PuppetBennettEnd

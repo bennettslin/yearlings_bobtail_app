@@ -13,7 +13,7 @@ const SolicitingOpinion = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SolicitingOpinion = ({
     )
 }
 
-SolicitingOpinion.propTypes = propTypes;
+SolicitingOpinion.propTypes = propTypes
 
 export default SolicitingOpinion

@@ -13,7 +13,7 @@ const Alley = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Alley = ({
     )
 }
 
-Alley.propTypes = propTypes;
+Alley.propTypes = propTypes
 
 export default Alley

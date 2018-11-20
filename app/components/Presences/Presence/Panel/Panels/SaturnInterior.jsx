@@ -13,7 +13,7 @@ const SaturnInterior = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SaturnInterior = ({
     )
 }
 
-SaturnInterior.propTypes = propTypes;
+SaturnInterior.propTypes = propTypes
 
 export default SaturnInterior

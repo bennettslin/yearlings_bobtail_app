@@ -13,7 +13,7 @@ const ReassuringEnchanted = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ReassuringEnchanted = ({
     )
 }
 
-ReassuringEnchanted.propTypes = propTypes;
+ReassuringEnchanted.propTypes = propTypes
 
 export default ReassuringEnchanted

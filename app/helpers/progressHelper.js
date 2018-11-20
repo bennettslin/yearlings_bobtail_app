@@ -15,12 +15,12 @@ export default {
 
     hasRemainingHours(task) {
         const { workedHours,
-                neededHours,
-                subtasks } = task
+            neededHours,
+            subtasks } = task
         return workedHours < neededHours ||
             (subtasks && subtasks.reduce((hasRemainingHours, subtask) => {
                 const { workedHours,
-                        neededHours } = subtask
+                    neededHours } = subtask
                 return workedHours < neededHours || hasRemainingHours
             }, false))
     },
@@ -47,9 +47,9 @@ export default {
 
     calculateSumTask(tasks = []) {
         const sumTask = {
-                workedHours: 0,
-                neededHours: 0
-            }
+            workedHours: 0,
+            neededHours: 0
+        }
 
         if (tasks.length === 0) {
             return sumTask
@@ -70,9 +70,9 @@ export default {
 
     calculateSumAllTasks(allTasks = []) {
         const sumAllTasks = {
-                workedHours: 0,
-                neededHours: 0
-            }
+            workedHours: 0,
+            neededHours: 0
+        }
 
         return allTasks.reduce((sumAllTasks, tasks) => {
             return this._addTwoTasks(sumAllTasks, this.calculateSumTask(tasks))
@@ -112,8 +112,8 @@ export default {
     getRemainingTimeStringFromHours(hours = 0) {
         const remainingTimeObject = this._getRemainingTimeFromHours(hours),
             { months,
-              weeks,
-              days } = remainingTimeObject
+                weeks,
+                days } = remainingTimeObject
 
         if (!months && !weeks && !days) {
             return '0d'

@@ -13,7 +13,7 @@ const CaveShadows = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CaveShadows = ({
     )
 }
 
-CaveShadows.propTypes = propTypes;
+CaveShadows.propTypes = propTypes
 
 export default CaveShadows

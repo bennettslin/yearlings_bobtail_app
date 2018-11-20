@@ -13,7 +13,7 @@ const BennettRecordPlayer = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettRecordPlayer = ({
     )
 }
 
-BennettRecordPlayer.propTypes = propTypes;
+BennettRecordPlayer.propTypes = propTypes
 
 export default BennettRecordPlayer

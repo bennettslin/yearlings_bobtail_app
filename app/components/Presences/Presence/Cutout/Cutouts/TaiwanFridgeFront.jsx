@@ -13,7 +13,7 @@ const TaiwanFridgeFront = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TaiwanFridgeFront = ({
     )
 }
 
-TaiwanFridgeFront.propTypes = propTypes;
+TaiwanFridgeFront.propTypes = propTypes
 
 export default TaiwanFridgeFront

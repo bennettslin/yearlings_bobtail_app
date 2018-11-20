@@ -13,7 +13,7 @@ const IvDrip = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const IvDrip = ({
     )
 }
 
-IvDrip.propTypes = propTypes;
+IvDrip.propTypes = propTypes
 
 export default IvDrip

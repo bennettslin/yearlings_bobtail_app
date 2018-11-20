@@ -24,74 +24,74 @@ import {
 } from 'constants/scene'
 
 const propTypes = {
-    xIndex: PropTypes.number.isRequired,
-    yIndex: PropTypes.number.isRequired
-},
+        xIndex: PropTypes.number.isRequired,
+        yIndex: PropTypes.number.isRequired
+    },
 
-CubeFillStylesheet = ({
-    xIndex,
-    yIndex
+    CubeFillStylesheet = ({
+        xIndex,
+        yIndex
 
-}) => {
+    }) => {
 
-    // This component never updates because its parent never updates.
-    return (
-        <Stylesheet
-            className={cx(
-                'CubeFillStylesheet',
-                `CubeFillStyle__${
-                    xIndex
-                }${
-                    yIndex
-                }`
-            )}
-        >
-            {LEVELS.map(level => {
-
-            return HSLA_KEYS.map(hslaKey => {
-
-                const
-                    parentPrefix = getParentClassNameForSceneLogic({
-                        matrixName: HSLA_MATRIX_NAME,
-                        level,
-                        xIndex,
-                        yIndex,
-                        value: hslaKey
-                    }),
-
-                    childPrefix = getChildClassNameForCubeLogic({
-                        level,
-                        xIndex,
+        // This component never updates because its parent never updates.
+        return (
+            <Stylesheet
+                className={cx(
+                    'CubeFillStylesheet',
+                    `CubeFillStyle__${
+                        xIndex
+                    }${
                         yIndex
-                    }),
+                    }`
+                )}
+            >
+                {LEVELS.map(level => {
 
-                    {
-                        h,
-                        s,
-                        l
-                    } = HSLA_MAP[hslaKey]
+                    return HSLA_KEYS.map(hslaKey => {
 
-                    return (
-                        <DynamicStylesheet
-                            key={hslaKey}
-                            {...{
-                                parentPrefixes: [
-                                    parentPrefix
-                                ],
-                                childPrefixes: [
-                                    childPrefix
-                                ],
-                                style: {
-                                    fill: `hsla(${h}, ${s}%, ${l}%, 0.8)`
-                                }
-                            }}
-                        />
-                    )
-                })
-            })}
-        </Stylesheet>
-    )
-}
+                        const
+                            parentPrefix = getParentClassNameForSceneLogic({
+                                matrixName: HSLA_MATRIX_NAME,
+                                level,
+                                xIndex,
+                                yIndex,
+                                value: hslaKey
+                            }),
+
+                            childPrefix = getChildClassNameForCubeLogic({
+                                level,
+                                xIndex,
+                                yIndex
+                            }),
+
+                            {
+                                h,
+                                s,
+                                l
+                            } = HSLA_MAP[hslaKey]
+
+                        return (
+                            <DynamicStylesheet
+                                key={hslaKey}
+                                {...{
+                                    parentPrefixes: [
+                                        parentPrefix
+                                    ],
+                                    childPrefixes: [
+                                        childPrefix
+                                    ],
+                                    style: {
+                                        fill: `hsla(${h}, ${s}%, ${l}%, 0.8)`
+                                    }
+                                }}
+                            />
+                        )
+                    })
+                })}
+            </Stylesheet>
+        )
+    }
 
 CubeFillStylesheet.propTypes = propTypes
 

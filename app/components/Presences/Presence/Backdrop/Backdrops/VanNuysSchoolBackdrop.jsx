@@ -13,7 +13,7 @@ const VanNuysSchoolBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const VanNuysSchoolBackdrop = ({
     )
 }
 
-VanNuysSchoolBackdrop.propTypes = propTypes;
+VanNuysSchoolBackdrop.propTypes = propTypes
 
 export default VanNuysSchoolBackdrop

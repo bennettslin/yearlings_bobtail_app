@@ -11,53 +11,53 @@ import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 
 const accessIconPropTypes = {
     // From parent.
-    inTextAnchor: PropTypes.bool,
-    inButtonOrDotAnchor: PropTypes.bool,
-    showIfAccessed: PropTypes.bool,
-    animateStandaloneOnKeyDown: PropTypes.bool,
-    accessKey: PropTypes.string.isRequired
-},
+        inTextAnchor: PropTypes.bool,
+        inButtonOrDotAnchor: PropTypes.bool,
+        showIfAccessed: PropTypes.bool,
+        animateStandaloneOnKeyDown: PropTypes.bool,
+        accessKey: PropTypes.string.isRequired
+    },
 
-AccessLetter = ({
+    AccessLetter = ({
 
-    inTextAnchor,
-    inButtonOrDotAnchor,
-    showIfAccessed,
-    animateStandaloneOnKeyDown,
-    accessKey
+        inTextAnchor,
+        inButtonOrDotAnchor,
+        showIfAccessed,
+        animateStandaloneOnKeyDown,
+        accessKey
 
-}) => {
+    }) => {
 
-    return (
-        <div
-            className={cx(
-                'AccessLetter',
+        return (
+            <div
+                className={cx(
+                    'AccessLetter',
 
-                animateStandaloneOnKeyDown &&
+                    animateStandaloneOnKeyDown &&
                     `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
-                inTextAnchor && 'AccessLetter__inTextAnchor',
-                inButtonOrDotAnchor && 'AccessLetter__inButtonOrDotAnchor',
+                    inTextAnchor && 'AccessLetter__inTextAnchor',
+                    inButtonOrDotAnchor && 'AccessLetter__inButtonOrDotAnchor',
 
-                (
-                    inTextAnchor ||
+                    (
+                        inTextAnchor ||
                     inButtonOrDotAnchor
-                ) && 'AccessLetter__inInteractable',
+                    ) && 'AccessLetter__inInteractable',
 
-                showIfAccessed && 'AccessLetter__showIfAccessed',
+                    showIfAccessed && 'AccessLetter__showIfAccessed',
 
-                'flexCentreContainer'
-            )}
-        >
-            <AccessField />
-            <AccessIcon
-                {...{
-                    accessKey
-                }}
-            />
-        </div>
-    )
-}
+                    'flexCentreContainer'
+                )}
+            >
+                <AccessField />
+                <AccessIcon
+                    {...{
+                        accessKey
+                    }}
+                />
+            </div>
+        )
+    }
 
 AccessLetter.propTypes = accessIconPropTypes
 

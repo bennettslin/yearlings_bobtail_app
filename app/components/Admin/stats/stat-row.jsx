@@ -7,13 +7,13 @@ import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
  *************/
 
 const LyricDotStanzasRow = ({ adminDotStanzasCount }) => {
-     return (
-         <StatRowView
-             typeName="dot stanzas count"
-             typeCount={adminDotStanzasCount}
-         />
-     )
- }
+    return (
+        <StatRowView
+            typeName="dot stanzas count"
+            typeCount={adminDotStanzasCount}
+        />
+    )
+}
 
 const LyricsWordCountRow = ({ lyricUnits }) => {
     const lyricsWordCount = StatsHelper.getTotalWords(lyricUnits, LYRIC_TEXT_KEYS)

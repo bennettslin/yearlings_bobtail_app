@@ -13,7 +13,7 @@ const YellowTapedGrill = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const YellowTapedGrill = ({
     )
 }
 
-YellowTapedGrill.propTypes = propTypes;
+YellowTapedGrill.propTypes = propTypes
 
 export default YellowTapedGrill

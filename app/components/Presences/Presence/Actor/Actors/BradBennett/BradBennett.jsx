@@ -23,7 +23,7 @@ const BradBennett = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -37,6 +37,6 @@ const BradBennett = ({
     )
 }
 
-BradBennett.propTypes = propTypes;
+BradBennett.propTypes = propTypes
 
 export default BradBennett

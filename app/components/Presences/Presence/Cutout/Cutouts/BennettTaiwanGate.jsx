@@ -13,7 +13,7 @@ const BennettTaiwanGate = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BennettTaiwanGate = ({
     )
 }
 
-BennettTaiwanGate.propTypes = propTypes;
+BennettTaiwanGate.propTypes = propTypes
 
 export default BennettTaiwanGate

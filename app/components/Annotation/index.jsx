@@ -117,75 +117,75 @@ class Annotation extends Component {
 
 const propTypes = {
     // From parent.
-    inCarousel: PropTypes.bool,
-    isAccessed: PropTypes.bool,
-    isSelected: PropTypes.bool,
-    annotationDotKeys: PropTypes.object.isRequired,
-    annotationTitle: PropTypes.string.isRequired,
-    cardsLength: PropTypes.number.isRequired,
-    accessibleAnnotationAnchorsLength: PropTypes.number,
+        inCarousel: PropTypes.bool,
+        isAccessed: PropTypes.bool,
+        isSelected: PropTypes.bool,
+        annotationDotKeys: PropTypes.object.isRequired,
+        annotationTitle: PropTypes.string.isRequired,
+        cardsLength: PropTypes.number.isRequired,
+        accessibleAnnotationAnchorsLength: PropTypes.number,
 
-    // Absent in popup annotation.
-    handleTitleClick: PropTypes.func,
-    handleContainerClick: PropTypes.func.isRequired
-},
+        // Absent in popup annotation.
+        handleTitleClick: PropTypes.func,
+        handleContainerClick: PropTypes.func.isRequired
+    },
 
-AnnotationView = ({
+    AnnotationView = ({
 
-    // From props.
-    isAccessed,
-    annotationDotKeys,
-    annotationTitle,
-    cardsLength,
-    accessibleAnnotationAnchorsLength,
-    handleTitleClick,
-    handleContainerClick,
+        // From props.
+        isAccessed,
+        annotationDotKeys,
+        annotationTitle,
+        cardsLength,
+        accessibleAnnotationAnchorsLength,
+        handleTitleClick,
+        handleContainerClick,
 
-...other }) => {
+        ...other }) => {
 
-    const {
+        const {
             inCarousel,
             isSelected
         } = other
 
-    return (
-        <div
-            className={cx(
-                'Annotation',
+        return (
+            <div
+                className={cx(
+                    'Annotation',
 
-                'bgColour__annotation',
+                    'bgColour__annotation',
 
-                isSelected &&
+                    isSelected &&
                     'bgColour__annotation__selected',
 
-                isSelected ?
-                    'boxShadow__annotation__selected' :
-                    'boxShadow__annotation'
-            )}
-            onClick={handleContainerClick}
-            onTouchStart={handleContainerClick}
-        >
-            <AnnotationHeader
-                {...{
-                    inCarousel,
-                    isAccessed,
-                    isSelected,
-                    annotationDotKeys,
-                    annotationTitle,
-                    accessibleAnnotationAnchorsLength,
-                    handleTitleClick
-                }}
-            />
+                    isSelected ?
+                        'boxShadow__annotation__selected' :
+                        'boxShadow__annotation'
+                )}
+                onClick={handleContainerClick}
+                onTouchStart={handleContainerClick}
+            >
+                <AnnotationHeader
+                    {...{
+                        inCarousel,
+                        isAccessed,
+                        isSelected,
+                        annotationDotKeys,
+                        annotationTitle,
+                        accessibleAnnotationAnchorsLength,
+                        handleTitleClick
+                    }}
+                />
 
-            <AnnotationCards
-                {...other}
-                {...{
-                    cardsLength
-                }}
-            />
-        </div>
-    )
-}
+                <AnnotationCards
+                    {...other}
+                    {...{
+                        cardsLength
+                    }}
+                />
+            </div>
+        )
+    }
 
 AnnotationView.propTypes = propTypes
 

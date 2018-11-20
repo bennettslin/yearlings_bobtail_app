@@ -13,7 +13,7 @@ const PuppetFatherMiddle = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PuppetFatherMiddle = ({
     )
 }
 
-PuppetFatherMiddle.propTypes = propTypes;
+PuppetFatherMiddle.propTypes = propTypes
 
 export default PuppetFatherMiddle

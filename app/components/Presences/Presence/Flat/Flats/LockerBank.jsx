@@ -13,7 +13,7 @@ const LockerBank = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LockerBank = ({
     )
 }
 
-LockerBank.propTypes = propTypes;
+LockerBank.propTypes = propTypes
 
 export default LockerBank

@@ -13,7 +13,7 @@ const PushBroom = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PushBroom = ({
     )
 }
 
-PushBroom.propTypes = propTypes;
+PushBroom.propTypes = propTypes
 
 export default PushBroom

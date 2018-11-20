@@ -29,7 +29,7 @@ const MiriamTristan = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -43,6 +43,6 @@ const MiriamTristan = ({
     )
 }
 
-MiriamTristan.propTypes = propTypes;
+MiriamTristan.propTypes = propTypes
 
 export default MiriamTristan

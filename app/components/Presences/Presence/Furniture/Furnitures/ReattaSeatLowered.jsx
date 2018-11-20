@@ -13,7 +13,7 @@ const ReattaSeatLowered = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ReattaSeatLowered = ({
     )
 }
 
-ReattaSeatLowered.propTypes = propTypes;
+ReattaSeatLowered.propTypes = propTypes
 
 export default ReattaSeatLowered

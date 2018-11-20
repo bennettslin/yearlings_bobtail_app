@@ -13,7 +13,7 @@ const VanNuysSchoolhouseRight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const VanNuysSchoolhouseRight = ({
     )
 }
 
-VanNuysSchoolhouseRight.propTypes = propTypes;
+VanNuysSchoolhouseRight.propTypes = propTypes
 
 export default VanNuysSchoolhouseRight

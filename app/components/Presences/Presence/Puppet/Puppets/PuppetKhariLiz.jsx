@@ -13,7 +13,7 @@ const PuppetKhariLiz = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PuppetKhariLiz = ({
     )
 }
 
-PuppetKhariLiz.propTypes = propTypes;
+PuppetKhariLiz.propTypes = propTypes
 
 export default PuppetKhariLiz

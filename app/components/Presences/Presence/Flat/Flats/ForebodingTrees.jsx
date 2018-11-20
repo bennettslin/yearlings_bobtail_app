@@ -13,7 +13,7 @@ const ForebodingTrees = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ForebodingTrees = ({
     )
 }
 
-ForebodingTrees.propTypes = propTypes;
+ForebodingTrees.propTypes = propTypes
 
 export default ForebodingTrees

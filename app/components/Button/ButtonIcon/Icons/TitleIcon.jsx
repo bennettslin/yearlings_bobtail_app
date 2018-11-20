@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const TitleIcon = ({
     className
 }) => (
-        <rect
+    <rect
         {...{
             className,
             x: 0,

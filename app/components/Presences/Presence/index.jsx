@@ -139,6 +139,6 @@ class Presence extends Component {
     }
 }
 
-Presence.propTypes = propTypes;
+Presence.propTypes = propTypes
 
 export default Presence

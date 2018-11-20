@@ -13,7 +13,7 @@ const CatholicGuy = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CatholicGuy = ({
     )
 }
 
-CatholicGuy.propTypes = propTypes;
+CatholicGuy.propTypes = propTypes
 
 export default CatholicGuy

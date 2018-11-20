@@ -6,25 +6,25 @@ import AnnotationTitle from './Title'
 
 const propTypes = {
     // From parent.
-    inCarousel: PropTypes.bool
-},
+        inCarousel: PropTypes.bool
+    },
 
-AnnotationHeader = ({
+    AnnotationHeader = ({
 
-    inCarousel,
+        inCarousel,
 
-...other }) => (
-    <div className={cx(
-        'AnnotationHeader',
+        ...other }) => (
+        <div className={cx(
+            'AnnotationHeader',
 
-        // Annotation header needs to be hideable in carousel.
-        inCarousel && 'AnnotationHeaderAnimatable',
+            // Annotation header needs to be hideable in carousel.
+            inCarousel && 'AnnotationHeaderAnimatable',
 
-        'absoluteFullContainer'
-    )}>
-        <AnnotationTitle {...other} />
-    </div>
-)
+            'absoluteFullContainer'
+        )}>
+            <AnnotationTitle {...other} />
+        </div>
+    )
 
 AnnotationHeader.propTypes = propTypes
 

@@ -13,7 +13,7 @@ const GoKarts = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GoKarts = ({
     )
 }
 
-GoKarts.propTypes = propTypes;
+GoKarts.propTypes = propTypes
 
 export default GoKarts

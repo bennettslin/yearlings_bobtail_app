@@ -105,21 +105,21 @@ class VerseBar extends Component {
 
         const {
             /* eslint-disable no-unused-vars */
-            canLyricRender,
-            handleVerseBarSelect,
+                canLyricRender,
+                handleVerseBarSelect,
 
-            dispatch,
-            /* eslint-enable no-unused-vars */
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-            isAbove,
+                isAbove,
 
-            renderedSongIndex,
-            renderedVerseIndex,
-            sliderVerseIndex,
+                renderedSongIndex,
+                renderedVerseIndex,
+                sliderVerseIndex,
 
-            handleVerseBarWheel,
-            ...other
-        } = this.props,
+                handleVerseBarWheel,
+                ...other
+            } = this.props,
 
             verseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex :

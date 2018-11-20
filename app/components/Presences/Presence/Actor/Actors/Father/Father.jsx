@@ -44,7 +44,7 @@ const Father = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -58,6 +58,6 @@ const Father = ({
     )
 }
 
-Father.propTypes = propTypes;
+Father.propTypes = propTypes
 
 export default Father

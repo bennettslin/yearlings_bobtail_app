@@ -13,7 +13,7 @@ const GoKartSeatLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GoKartSeatLeft = ({
     )
 }
 
-GoKartSeatLeft.propTypes = propTypes;
+GoKartSeatLeft.propTypes = propTypes
 
 export default GoKartSeatLeft

@@ -13,7 +13,7 @@ const Jogger = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Jogger = ({
     )
 }
 
-Jogger.propTypes = propTypes;
+Jogger.propTypes = propTypes
 
 export default Jogger

@@ -38,7 +38,7 @@ const Catherine = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -52,6 +52,6 @@ const Catherine = ({
     )
 }
 
-Catherine.propTypes = propTypes;
+Catherine.propTypes = propTypes
 
 export default Catherine

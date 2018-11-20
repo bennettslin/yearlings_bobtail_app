@@ -13,7 +13,7 @@ const StJosephsChurch = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const StJosephsChurch = ({
     )
 }
 
-StJosephsChurch.propTypes = propTypes;
+StJosephsChurch.propTypes = propTypes
 
 export default StJosephsChurch

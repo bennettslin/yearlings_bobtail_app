@@ -13,7 +13,7 @@ const Smirking = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Smirking = ({
     )
 }
 
-Smirking.propTypes = propTypes;
+Smirking.propTypes = propTypes
 
 export default Smirking

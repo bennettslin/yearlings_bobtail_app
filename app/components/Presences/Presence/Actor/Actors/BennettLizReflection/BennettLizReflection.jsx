@@ -29,7 +29,7 @@ const BennettLizReflection = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -43,6 +43,6 @@ const BennettLizReflection = ({
     )
 }
 
-BennettLizReflection.propTypes = propTypes;
+BennettLizReflection.propTypes = propTypes
 
 export default BennettLizReflection

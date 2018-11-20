@@ -13,7 +13,7 @@ const Attic = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Attic = ({
     )
 }
 
-Attic.propTypes = propTypes;
+Attic.propTypes = propTypes
 
 export default Attic

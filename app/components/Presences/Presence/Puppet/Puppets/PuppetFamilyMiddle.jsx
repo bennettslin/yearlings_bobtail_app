@@ -13,7 +13,7 @@ const PuppetFamilyMiddle = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PuppetFamilyMiddle = ({
     )
 }
 
-PuppetFamilyMiddle.propTypes = propTypes;
+PuppetFamilyMiddle.propTypes = propTypes
 
 export default PuppetFamilyMiddle

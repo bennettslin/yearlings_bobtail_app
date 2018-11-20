@@ -13,7 +13,7 @@ const MuseumDisplay = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const MuseumDisplay = ({
     )
 }
 
-MuseumDisplay.propTypes = propTypes;
+MuseumDisplay.propTypes = propTypes
 
 export default MuseumDisplay

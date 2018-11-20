@@ -13,7 +13,7 @@ const IronGateLow = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const IronGateLow = ({
     )
 }
 
-IronGateLow.propTypes = propTypes;
+IronGateLow.propTypes = propTypes
 
 export default IronGateLow

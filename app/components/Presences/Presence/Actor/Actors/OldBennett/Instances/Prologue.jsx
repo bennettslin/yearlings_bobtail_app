@@ -13,7 +13,7 @@ const Prologue = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Prologue = ({
     )
 }
 
-Prologue.propTypes = propTypes;
+Prologue.propTypes = propTypes
 
 export default Prologue

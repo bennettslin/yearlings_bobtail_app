@@ -13,7 +13,7 @@ const StageMicFar = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const StageMicFar = ({
     )
 }
 
-StageMicFar.propTypes = propTypes;
+StageMicFar.propTypes = propTypes
 
 export default StageMicFar

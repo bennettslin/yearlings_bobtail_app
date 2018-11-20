@@ -13,7 +13,7 @@ const DispenserLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DispenserLeft = ({
     )
 }
 
-DispenserLeft.propTypes = propTypes;
+DispenserLeft.propTypes = propTypes
 
 export default DispenserLeft

@@ -44,7 +44,7 @@ const Miriam = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -58,6 +58,6 @@ const Miriam = ({
     )
 }
 
-Miriam.propTypes = propTypes;
+Miriam.propTypes = propTypes
 
 export default Miriam

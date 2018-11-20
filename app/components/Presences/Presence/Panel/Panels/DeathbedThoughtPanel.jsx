@@ -13,7 +13,7 @@ const DeathbedThoughtPanel = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const DeathbedThoughtPanel = ({
     )
 }
 
-DeathbedThoughtPanel.propTypes = propTypes;
+DeathbedThoughtPanel.propTypes = propTypes
 
 export default DeathbedThoughtPanel

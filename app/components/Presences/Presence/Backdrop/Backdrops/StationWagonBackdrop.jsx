@@ -13,7 +13,7 @@ const StationWagonBackdrop = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const StationWagonBackdrop = ({
     )
 }
 
-StationWagonBackdrop.propTypes = propTypes;
+StationWagonBackdrop.propTypes = propTypes
 
 export default StationWagonBackdrop

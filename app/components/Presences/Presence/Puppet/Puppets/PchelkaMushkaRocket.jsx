@@ -13,7 +13,7 @@ const PchelkaMushkaRocket = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const PchelkaMushkaRocket = ({
     )
 }
 
-PchelkaMushkaRocket.propTypes = propTypes;
+PchelkaMushkaRocket.propTypes = propTypes
 
 export default PchelkaMushkaRocket

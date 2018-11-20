@@ -66,7 +66,7 @@ class Verse extends Component {
         const {
             verseIndex,
             handleVerseInteractivate
-            } = this.props
+        } = this.props
 
         if (this.getIsInteractable()) {
             handleVerseInteractivate(e, verseIndex)
@@ -129,9 +129,9 @@ class Verse extends Component {
                     isDoubleSpeaker: !lyric && !centre
                 }}
                 {
-                    ...!inVerseBar && {
-                        handleAnchorClick: handleLyricAnnotationSelect
-                    }
+                ...!inVerseBar && {
+                    handleAnchorClick: handleLyricAnnotationSelect
+                }
                 }
             />
         )
@@ -143,70 +143,70 @@ class Verse extends Component {
  ****************/
 
 const verseViewDefaultProps = {
-    isInteractivated: false
-},
+        isInteractivated: false
+    },
 
-verseViewPropTypes = {
+    verseViewPropTypes = {
     // From parent.
-    logicSelectors: PropTypes.string,
-    verseIndex: PropTypes.number,
+        logicSelectors: PropTypes.string,
+        verseIndex: PropTypes.number,
 
-    inVerseBar: PropTypes.bool.isRequired,
-    isInteractable: PropTypes.bool.isRequired,
+        inVerseBar: PropTypes.bool.isRequired,
+        isInteractable: PropTypes.bool.isRequired,
 
-    handleInteractivatableClick: PropTypes.func,
-    setRef: PropTypes.func,
+        handleInteractivatableClick: PropTypes.func,
+        setRef: PropTypes.func,
 
-    children: PropTypes.any
-},
+        children: PropTypes.any
+    },
 
-VerseView = ({
+    VerseView = ({
 
-    // From controller.
-    logicSelectors,
-    verseClassName,
-    isInteractable,
+        // From controller.
+        logicSelectors,
+        verseClassName,
+        isInteractable,
 
-    handleInteractivatableClick,
-    setRef,
-    children,
+        handleInteractivatableClick,
+        setRef,
+        children,
 
-...other }) => {
+        ...other }) => {
 
-    const {
+        const {
             inVerseBar,
             verseIndex,
             isTitle
         } = other
 
-    return (
-        <div
-            key={isInteractable ? verseIndex : undefined}
-            ref={setRef}
-            className={cx(
-                logicSelectors,
-                'Verse',
+        return (
+            <div
+                key={isInteractable ? verseIndex : undefined}
+                ref={setRef}
+                className={cx(
+                    logicSelectors,
+                    'Verse',
 
-                isTitle && 'Verse__title',
-                inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
+                    isTitle && 'Verse__title',
+                    inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
-                !isNaN(verseIndex) &&
+                    !isNaN(verseIndex) &&
                     `${VERSE_SCROLL}__${verseIndex}`,
 
-                // title, even, odd, inSide.
-                verseClassName && `verse__${verseClassName}`,
-                isInteractable && 'Verse__interactable',
+                    // title, even, odd, inSide.
+                    verseClassName && `verse__${verseClassName}`,
+                    isInteractable && 'Verse__interactable',
 
-                'verseColour__hoverParent'
-            )}
-            onClick={handleInteractivatableClick}
-            onTouchStart={handleInteractivatableClick}
-        >
-            {children}
-            <VerseLines {...other} />
-        </div>
-    )
-}
+                    'verseColour__hoverParent'
+                )}
+                onClick={handleInteractivatableClick}
+                onTouchStart={handleInteractivatableClick}
+            >
+                {children}
+                <VerseLines {...other} />
+            </div>
+        )
+    }
 
 VerseView.defaultProps = verseViewDefaultProps
 VerseView.propTypes = verseViewPropTypes

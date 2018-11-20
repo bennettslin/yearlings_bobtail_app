@@ -13,7 +13,7 @@ const SchoolbusExterior = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const SchoolbusExterior = ({
     )
 }
 
-SchoolbusExterior.propTypes = propTypes;
+SchoolbusExterior.propTypes = propTypes
 
 export default SchoolbusExterior

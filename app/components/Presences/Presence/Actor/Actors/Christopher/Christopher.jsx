@@ -29,7 +29,7 @@ const Christopher = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -43,6 +43,6 @@ const Christopher = ({
     )
 }
 
-Christopher.propTypes = propTypes;
+Christopher.propTypes = propTypes
 
 export default Christopher

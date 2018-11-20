@@ -41,7 +41,7 @@ const Mother = ({
     className,
     instanceKey,
 
-...other }) => {
+    ...other }) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 
@@ -55,6 +55,6 @@ const Mother = ({
     )
 }
 
-Mother.propTypes = propTypes;
+Mother.propTypes = propTypes
 
 export default Mother

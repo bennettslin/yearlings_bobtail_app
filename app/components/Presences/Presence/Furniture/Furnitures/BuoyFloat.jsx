@@ -13,7 +13,7 @@ const BuoyFloat = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BuoyFloat = ({
     )
 }
 
-BuoyFloat.propTypes = propTypes;
+BuoyFloat.propTypes = propTypes
 
 export default BuoyFloat

@@ -13,7 +13,7 @@ const RickshawTown = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RickshawTown = ({
     )
 }
 
-RickshawTown.propTypes = propTypes;
+RickshawTown.propTypes = propTypes
 
 export default RickshawTown

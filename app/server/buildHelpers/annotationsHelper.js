@@ -186,8 +186,8 @@ export const addDestinationWormholeLinks = (albumObject) => {
 
         links.forEach((destinationLink, index) => {
             const { songIndex,
-                annotationIndex,
-                cardIndex } = destinationLink,
+                    annotationIndex,
+                    cardIndex } = destinationLink,
 
                 annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
                 cardObject = annotationObject.cards[cardIndex]
@@ -385,8 +385,8 @@ export const addDestinationWormholeIndices = (albumObject) => {
         links.forEach((destinationLink, index) => {
 
             const { songIndex,
-                annotationIndex,
-                cardIndex } = destinationLink,
+                    annotationIndex,
+                    cardIndex } = destinationLink,
 
                 annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
                 cardObject = annotationObject.cards[cardIndex]
@@ -399,8 +399,8 @@ export const addDestinationWormholeIndices = (albumObject) => {
                  */
                 destinationLink.tempSourceWormholeLinks.forEach((tempSourceLink) => {
                     const { tempSourceSongIndex,
-                        tempSourceAnnotationIndex,
-                        tempSourceWormholeIndex } = tempSourceLink,
+                            tempSourceAnnotationIndex,
+                            tempSourceWormholeIndex } = tempSourceLink,
 
                         /**
                          * This will happen only once for each source and

@@ -13,7 +13,7 @@ const LizCushions = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizCushions = ({
     )
 }
 
-LizCushions.propTypes = propTypes;
+LizCushions.propTypes = propTypes
 
 export default LizCushions

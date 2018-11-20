@@ -6,8 +6,8 @@ import cx from 'classnames'
 
 import { getParentOfVerseClassNamesForIndices } from '../../helper'
 
-import VerseHoc from '../../../Verse/Hoc';
-import Verse from '../../../Verse';
+import VerseHoc from '../../../Verse/Hoc'
+import Verse from '../../../Verse'
 
 /*************
  * CONTAINER *
@@ -70,7 +70,7 @@ class UnitCard extends Component {
             isSubCard,
             inMain,
 
-        ...other } = this.props
+            ...other } = this.props
 
         if (stanzaArray) {
 
@@ -119,77 +119,77 @@ class UnitCard extends Component {
 
 const propTypes = {
     // From parent.
-    isSubCard: PropTypes.bool.isRequired,
-    stanzaTypeIndex: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.number
-    ]),
-    stanzaArray: PropTypes.array.isRequired,
-    stanzaType: PropTypes.string.isRequired,
+        isSubCard: PropTypes.bool.isRequired,
+        stanzaTypeIndex: PropTypes.oneOfType([
+            PropTypes.bool,
+            PropTypes.number
+        ]),
+        stanzaArray: PropTypes.array.isRequired,
+        stanzaType: PropTypes.string.isRequired,
 
-    handleStanzaTabClick: PropTypes.func.isRequired
-},
+        handleStanzaTabClick: PropTypes.func.isRequired
+    },
 
-UnitCardView = ({
-    isSubCard,
-    stanzaArray,
-    stanzaTypeIndex,
-    stanzaType,
-    handleStanzaTabClick,
+    UnitCardView = ({
+        isSubCard,
+        stanzaArray,
+        stanzaTypeIndex,
+        stanzaType,
+        handleStanzaTabClick,
 
-...other }) => {
+        ...other }) => {
 
-    const isTabbed = Boolean(stanzaTypeIndex),
+        const isTabbed = Boolean(stanzaTypeIndex),
 
-        tabText = `${
-            stanzaType
-        }${
-            stanzaTypeIndex > 0 ? ` ${stanzaTypeIndex}` : ''
-        }`
+            tabText = `${
+                stanzaType
+            }${
+                stanzaTypeIndex > 0 ? ` ${stanzaTypeIndex}` : ''
+            }`
 
-    return (
-        <div className={cx(
-
-            // "Parent of verse index."
-            getParentOfVerseClassNamesForIndices({
-                entities: stanzaArray
-            }),
-
-            'UnitCard',
-            isSubCard && 'UnitCard__subCard',
-            isTabbed && 'UnitCard__tabbed'
-        )}>
-
-            {/* This is the tab's box shadow. */}
-            {isTabbed && (
-                <div
-                    className={cx(
-                        'UnitCard__tab',
-                        'UnitCard__tabShadow',
-                        'boxShadow__unitCard'
-                    )}
-                >
-                    {tabText}
-                </div>
-            )}
-
+        return (
             <div className={cx(
-                'UnitCard__sheet',
-                'boxShadow__unitCard',
-                'bgColour__unit__pattern',
-                `bgColour__stanzaType__${stanzaType}`
+
+                // "Parent of verse index."
+                getParentOfVerseClassNamesForIndices({
+                    entities: stanzaArray
+                }),
+
+                'UnitCard',
+                isSubCard && 'UnitCard__subCard',
+                isTabbed && 'UnitCard__tabbed'
             )}>
-                {stanzaArray.map((verseObject, stanzaVerseIndex) => {
-                    const {
+
+                {/* This is the tab's box shadow. */}
+                {isTabbed && (
+                    <div
+                        className={cx(
+                            'UnitCard__tab',
+                            'UnitCard__tabShadow',
+                            'boxShadow__unitCard'
+                        )}
+                    >
+                        {tabText}
+                    </div>
+                )}
+
+                <div className={cx(
+                    'UnitCard__sheet',
+                    'boxShadow__unitCard',
+                    'bgColour__unit__pattern',
+                    `bgColour__stanzaType__${stanzaType}`
+                )}>
+                    {stanzaArray.map((verseObject, stanzaVerseIndex) => {
+                        const {
                             isSideUnitMap,
                             isUnitMap,
                             verseIndex
                         } = verseObject
 
-                    /**
+                        /**
                      * Only Uncanny Valley has a side unit map.
                      */
-                    return !isSideUnitMap && !isUnitMap && (
+                        return !isSideUnitMap && !isUnitMap && (
                             <VerseHoc {...other}
                                 key={stanzaVerseIndex}
                                 inUnit
@@ -201,26 +201,26 @@ UnitCardView = ({
                             />
                         )
                     }
+                    )}
+                </div>
+
+                {/* This tab covers the sheet's box shadow. */}
+                {isTabbed && (
+                    <div
+                        className={cx(
+                            'UnitCard__tab',
+                            'UnitCard__tabTop',
+                            'bgColour__unit__pattern',
+                            `bgColour__stanzaType__${stanzaType}`
+                        )}
+                        onClick={handleStanzaTabClick}
+                    >
+                        {tabText}
+                    </div>
                 )}
             </div>
-
-            {/* This tab covers the sheet's box shadow. */}
-            {isTabbed && (
-                <div
-                    className={cx(
-                        'UnitCard__tab',
-                        'UnitCard__tabTop',
-                        'bgColour__unit__pattern',
-                        `bgColour__stanzaType__${stanzaType}`
-                    )}
-                    onClick={handleStanzaTabClick}
-                >
-                    {tabText}
-                </div>
-            )}
-        </div>
-    )
-}
+        )
+    }
 
 UnitCardView.propTypes = propTypes
 

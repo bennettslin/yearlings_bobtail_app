@@ -13,7 +13,7 @@ const AsleepReaching = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const AsleepReaching = ({
     )
 }
 
-AsleepReaching.propTypes = propTypes;
+AsleepReaching.propTypes = propTypes
 
 export default AsleepReaching

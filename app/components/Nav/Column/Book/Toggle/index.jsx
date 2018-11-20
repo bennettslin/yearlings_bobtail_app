@@ -43,7 +43,7 @@ class NavBookToggle extends Component {
                 selectedSongIndex,
                 bookIndex,
 
-            ...other } = this.props,
+                ...other } = this.props,
 
             hasSelectedSong =
                 bookIndex === getBookColumnIndex(selectedSongIndex)

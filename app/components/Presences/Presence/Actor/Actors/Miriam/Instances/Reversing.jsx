@@ -13,7 +13,7 @@ const Reversing = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Reversing = ({
     )
 }
 
-Reversing.propTypes = propTypes;
+Reversing.propTypes = propTypes
 
 export default Reversing

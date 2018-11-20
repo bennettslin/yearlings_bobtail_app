@@ -111,7 +111,7 @@ class LyricManager extends Component {
     }
 
     selectManualScroll(isManualScroll = false) {
-        this.props.setIsManualScroll(isManualScroll);
+        this.props.setIsManualScroll(isManualScroll)
     }
 
     render() {

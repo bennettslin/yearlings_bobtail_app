@@ -13,7 +13,7 @@ const Epilogue = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Epilogue = ({
     )
 }
 
-Epilogue.propTypes = propTypes;
+Epilogue.propTypes = propTypes
 
 export default Epilogue

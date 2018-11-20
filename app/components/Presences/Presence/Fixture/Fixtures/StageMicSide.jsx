@@ -13,7 +13,7 @@ const StageMicSide = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const StageMicSide = ({
     )
 }
 
-StageMicSide.propTypes = propTypes;
+StageMicSide.propTypes = propTypes
 
 export default StageMicSide

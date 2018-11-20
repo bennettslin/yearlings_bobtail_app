@@ -13,7 +13,7 @@ const MiriamCushions = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const MiriamCushions = ({
     )
 }
 
-MiriamCushions.propTypes = propTypes;
+MiriamCushions.propTypes = propTypes
 
 export default MiriamCushions

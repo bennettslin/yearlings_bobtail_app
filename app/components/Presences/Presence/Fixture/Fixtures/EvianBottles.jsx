@@ -13,7 +13,7 @@ const EvianBottles = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const EvianBottles = ({
     )
 }
 
-EvianBottles.propTypes = propTypes;
+EvianBottles.propTypes = propTypes
 
 export default EvianBottles

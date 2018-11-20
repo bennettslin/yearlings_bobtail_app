@@ -13,7 +13,7 @@ const BedroomBlindsOpen = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BedroomBlindsOpen = ({
     )
 }
 
-BedroomBlindsOpen.propTypes = propTypes;
+BedroomBlindsOpen.propTypes = propTypes
 
 export default BedroomBlindsOpen

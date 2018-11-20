@@ -13,7 +13,7 @@ const BackpackJewishBoy = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BackpackJewishBoy = ({
     )
 }
 
-BackpackJewishBoy.propTypes = propTypes;
+BackpackJewishBoy.propTypes = propTypes
 
 export default BackpackJewishBoy

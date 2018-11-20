@@ -13,7 +13,7 @@ const ProgressChartLate = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ProgressChartLate = ({
     )
 }
 
-ProgressChartLate.propTypes = propTypes;
+ProgressChartLate.propTypes = propTypes
 
 export default ProgressChartLate

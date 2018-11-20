@@ -13,7 +13,7 @@ const RoyceHall = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const RoyceHall = ({
     )
 }
 
-RoyceHall.propTypes = propTypes;
+RoyceHall.propTypes = propTypes
 
 export default RoyceHall

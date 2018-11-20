@@ -13,7 +13,7 @@ const OverpassSignFront = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const OverpassSignFront = ({
     )
 }
 
-OverpassSignFront.propTypes = propTypes;
+OverpassSignFront.propTypes = propTypes
 
 export default OverpassSignFront

@@ -13,7 +13,7 @@ const TowelRack = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TowelRack = ({
     )
 }
 
-TowelRack.propTypes = propTypes;
+TowelRack.propTypes = propTypes
 
 export default TowelRack

@@ -13,7 +13,7 @@ const CommercialFarLeft = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const CommercialFarLeft = ({
     )
 }
 
-CommercialFarLeft.propTypes = propTypes;
+CommercialFarLeft.propTypes = propTypes
 
 export default CommercialFarLeft

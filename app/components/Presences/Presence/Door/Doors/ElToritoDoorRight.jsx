@@ -13,7 +13,7 @@ const ElToritoDoorRight = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const ElToritoDoorRight = ({
     )
 }
 
-ElToritoDoorRight.propTypes = propTypes;
+ElToritoDoorRight.propTypes = propTypes
 
 export default ElToritoDoorRight

@@ -14,37 +14,37 @@ const mapStateToProps = ({
 
 const titlePopupPropTypes = {
     // Through Redux.
-    selectedTitleIndex: PropTypes.number.isRequired,
+        selectedTitleIndex: PropTypes.number.isRequired,
 
-    // From parent.
-    handleTitleToggle: PropTypes.func.isRequired,
-    handlePopupContainerClick: PropTypes.func.isRequired
-},
+        // From parent.
+        handleTitleToggle: PropTypes.func.isRequired,
+        handlePopupContainerClick: PropTypes.func.isRequired
+    },
 
-TitlePopup = ({
-    selectedTitleIndex,
-    handleTitleToggle,
-    handlePopupContainerClick
+    TitlePopup = ({
+        selectedTitleIndex,
+        handleTitleToggle,
+        handlePopupContainerClick
 
-}) => {
+    }) => {
 
-    return (
-        <Popup
-            bounceAnimate
-            displaysInOverlay
-            isCardSize
-            hasWidePadding
-            {...{
-                popupName: 'Title',
-                isVisible: Boolean(selectedTitleIndex),
-                handleCloseClick: handleTitleToggle,
-                handlePopupContainerClick
-            }}
-        >
-            <TitleSection />
-        </Popup>
-    )
-}
+        return (
+            <Popup
+                bounceAnimate
+                displaysInOverlay
+                isCardSize
+                hasWidePadding
+                {...{
+                    popupName: 'Title',
+                    isVisible: Boolean(selectedTitleIndex),
+                    handleCloseClick: handleTitleToggle,
+                    handlePopupContainerClick
+                }}
+            >
+                <TitleSection />
+            </Popup>
+        )
+    }
 
 TitlePopup.propTypes = titlePopupPropTypes
 

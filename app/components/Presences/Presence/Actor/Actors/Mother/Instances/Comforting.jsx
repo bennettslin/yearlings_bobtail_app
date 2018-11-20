@@ -13,7 +13,7 @@ const Comforting = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Comforting = ({
     )
 }
 
-Comforting.propTypes = propTypes;
+Comforting.propTypes = propTypes
 
 export default Comforting

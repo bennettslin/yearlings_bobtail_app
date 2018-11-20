@@ -13,7 +13,7 @@ const BeyonderEnvelope = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const BeyonderEnvelope = ({
     )
 }
 
-BeyonderEnvelope.propTypes = propTypes;
+BeyonderEnvelope.propTypes = propTypes
 
 export default BeyonderEnvelope

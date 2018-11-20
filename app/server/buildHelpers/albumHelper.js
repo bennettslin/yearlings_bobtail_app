@@ -185,7 +185,7 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
              * used to register the scene later.
              */
             if (verseObject.isUnitMap) {
-                verseObject.tempFirstVerseIndex = firstVerseIndex;
+                verseObject.tempFirstVerseIndex = firstVerseIndex
             }
 
             // Tell song its dot stanza count, for admin purposes.
@@ -209,7 +209,7 @@ const _initialRegisterAnnotation = ({
 }) => {
     // If just a single card, make it an array of one.
     const cards = Array.isArray(lyricObject.annotation) ?
-        lyricObject.annotation : [lyricObject.annotation],
+            lyricObject.annotation : [lyricObject.annotation],
 
         annotationIndex = songObject.annotations.length + 1,
 

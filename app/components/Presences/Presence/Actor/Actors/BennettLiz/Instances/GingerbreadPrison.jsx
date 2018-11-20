@@ -13,7 +13,7 @@ const GingerbreadPrison = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const GingerbreadPrison = ({
     )
 }
 
-GingerbreadPrison.propTypes = propTypes;
+GingerbreadPrison.propTypes = propTypes
 
 export default GingerbreadPrison

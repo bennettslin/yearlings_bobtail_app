@@ -106,7 +106,7 @@ module.exports = {
         "id-blacklist": "error",
         "id-length": "off",
         "id-match": "error",
-        "indent": "off",
+        "indent": ["error", 4, {"SwitchCase": 1}],
         "init-declarations": "off",
         "jsx-quotes": [
             "error",
@@ -277,7 +277,7 @@ module.exports = {
             "error",
             "never"
         ],
-        "semi": "off",
+        "semi": ["error", "never"],
         "semi-spacing": "error",
         "sort-imports": "off",
         "sort-keys": "off",

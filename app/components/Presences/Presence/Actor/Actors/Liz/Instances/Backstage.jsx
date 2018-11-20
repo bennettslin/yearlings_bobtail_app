@@ -13,7 +13,7 @@ const Backstage = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const Backstage = ({
     )
 }
 
-Backstage.propTypes = propTypes;
+Backstage.propTypes = propTypes
 
 export default Backstage

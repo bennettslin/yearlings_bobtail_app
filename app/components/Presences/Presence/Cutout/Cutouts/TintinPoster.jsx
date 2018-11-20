@@ -13,7 +13,7 @@ const TintinPoster = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const TintinPoster = ({
     )
 }
 
-TintinPoster.propTypes = propTypes;
+TintinPoster.propTypes = propTypes
 
 export default TintinPoster

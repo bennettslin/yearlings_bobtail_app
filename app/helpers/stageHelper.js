@@ -4,27 +4,27 @@ import {
 } from 'constants/stage'
 
 import { PHONE_CLASS,
-         LS_MINI_CLASS,
-         TABLET_CLASS,
-         LS_LAPTOP_CLASS,
-         MONITOR_CLASS,
-         DEVICE_OBJECTS,
+    LS_MINI_CLASS,
+    TABLET_CLASS,
+    LS_LAPTOP_CLASS,
+    MONITOR_CLASS,
+    DEVICE_OBJECTS,
 
-         LS_WIDTH_GOLDEN_CORD,
-         LS_WIDTH_UNCANNY_VALLEY,
+    LS_WIDTH_GOLDEN_CORD,
+    LS_WIDTH_UNCANNY_VALLEY,
 
-         LS_LENGTH_ICON,
-         LS_LENGTH_ICON_LARGE_MINI,
-         LS_LENGTH_ICON_LARGE_TABLET,
-         LS_LENGTH_ICON_LARGE,
-         LS_MARGIN_THIN,
+    LS_LENGTH_ICON,
+    LS_LENGTH_ICON_LARGE_MINI,
+    LS_LENGTH_ICON_LARGE_TABLET,
+    LS_LENGTH_ICON_LARGE,
+    LS_MARGIN_THIN,
 
-         LS_HEIGHT_LYRIC_COLLAPSED,
-         LS_HEIGHT_MENU,
-         LS_TOP_OFFSET_TWO_ROW_MENU,
-         LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
+    LS_HEIGHT_LYRIC_COLLAPSED,
+    LS_HEIGHT_MENU,
+    LS_TOP_OFFSET_TWO_ROW_MENU,
+    LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
 
-         LS_HEIGHT_NAV } from 'constants/responsive'
+    LS_HEIGHT_NAV } from 'constants/responsive'
 
 import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenCarouselNav, getIsTwoRowMenu } from './responsiveHelper'
 
@@ -134,8 +134,8 @@ export const getCentreFieldHeight = ({
     isHeightlessLyricColumn
 }) => {
     const lyricColumnHeight = getLyricColumnHeight(
-            deviceIndex, isHeightlessLyricColumn, windowHeight
-        )
+        deviceIndex, isHeightlessLyricColumn, windowHeight
+    )
 
     let menuHeight = LS_HEIGHT_MENU
 

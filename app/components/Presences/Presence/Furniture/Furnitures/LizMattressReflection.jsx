@@ -13,7 +13,7 @@ const LizMattressReflection = ({
 
     className,
 
-...other }) => {
+    ...other }) => {
 
     return (
         <Svg
@@ -42,6 +42,6 @@ const LizMattressReflection = ({
     )
 }
 
-LizMattressReflection.propTypes = propTypes;
+LizMattressReflection.propTypes = propTypes
 
 export default LizMattressReflection

@@ -10,26 +10,26 @@ import { DOTS_SLIDE_BUTTON_KEY } from 'constants/buttons'
 
 const dotsTogglePropTypes = {
     // From parent.
-    handleDotsSectionToggle: PropTypes.func.isRequired
-},
+        handleDotsSectionToggle: PropTypes.func.isRequired
+    },
 
-DotsSlideToggle = ({
+    DotsSlideToggle = ({
 
-    handleDotsSectionToggle
+        handleDotsSectionToggle
 
-}) => (
-    <div className={cx(
-        'DotsSlideToggle',
-        'LeftShelf__child'
-    )}>
-        <Button
-            isLargeSize
-            buttonName={DOTS_SLIDE_BUTTON_KEY}
-            accessKey={DOTS_SECTION_EXPAND_KEY}
-            handleButtonClick={handleDotsSectionToggle}
-        />
-    </div>
-)
+    }) => (
+        <div className={cx(
+            'DotsSlideToggle',
+            'LeftShelf__child'
+        )}>
+            <Button
+                isLargeSize
+                buttonName={DOTS_SLIDE_BUTTON_KEY}
+                accessKey={DOTS_SECTION_EXPAND_KEY}
+                handleButtonClick={handleDotsSectionToggle}
+            />
+        </div>
+    )
 
 DotsSlideToggle.propTypes = dotsTogglePropTypes
 
