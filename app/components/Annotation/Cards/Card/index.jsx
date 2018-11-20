@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotSequence from '../../../DotSequence'
-import Texts from '../../../Text/Texts'
+import Texts from '../../../Texts'
 import AnnotationWormholes from './Wormholes'
 import { WORMHOLE } from 'constants/dots'
 

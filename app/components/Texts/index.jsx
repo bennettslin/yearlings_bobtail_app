@@ -18,7 +18,6 @@ const propTypes = {
 },
 
 Texts = ({
-
     text: textEntity,
 
 ...other }) => {

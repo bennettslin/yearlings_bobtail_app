@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames';
 
-import Texts from '../../../../../Text/Texts'
+import Texts from '../../../../../Texts'
 import Button from '../../../../../Button'
 
 import { ENTER } from 'constants/access'

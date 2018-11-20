@@ -2,11 +2,11 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import TextLyricAnchor from './TextLyricAnchor'
-import Texts from './Texts'
-import TextSpan from './TextSpan'
+import TextLyricAnchor from './LyricAnchor'
+import Texts from '../'
+import TextSpan from './Span'
 
-const textPropTypes = {
+const propTypes = {
     // From parent.
     inVerseBar: PropTypes.bool,
 
@@ -17,7 +17,6 @@ const textPropTypes = {
 },
 
 Text = ({
-
     text: textEntity,
 
 ...props }) => {
@@ -128,6 +127,6 @@ Text = ({
     return null
 }
 
-Text.propTypes = textPropTypes
+Text.propTypes = propTypes
 
 export default Text
