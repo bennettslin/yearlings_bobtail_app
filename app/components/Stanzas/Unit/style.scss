@@ -1,6 +1,5 @@
-@import "./UnitCard";
-@import "./UnitDot";
-@import "./UnitDotLogic";
+@import "./Card/style";
+@import "./Dot/style";
 
 .Unit {
     display: flex;

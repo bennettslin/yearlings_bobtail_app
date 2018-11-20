@@ -9,12 +9,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import UnitCard from './UnitCard'
-import UnitDot from './UnitDot'
+
+import UnitCard from './Card'
+import UnitDot from './Dot'
+
 import { TITLE } from 'constants/lyrics'
 import { getLyricUnitArray } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
+import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender },

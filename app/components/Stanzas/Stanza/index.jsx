@@ -7,7 +7,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Unit from './Unit/Unit'
+import Unit from '../Unit'
 
 const propTypes = {
     // From parent.
@@ -19,7 +19,6 @@ const propTypes = {
 },
 
 Stanza = ({
-
     logicSelectors,
     stanzaConfig,
     isLastStanza,

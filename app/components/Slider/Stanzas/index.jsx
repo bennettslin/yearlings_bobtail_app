@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import StanzaHoc from '../../Stanza/Hoc/StanzaHoc'
+import StanzaHoc from '../../Stanzas/Hoc'
 import SliderStanza from './Stanza'
 
 import {

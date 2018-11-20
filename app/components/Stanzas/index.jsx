@@ -7,9 +7,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
-import StanzaHoc from './Hoc/StanzaHoc'
-import Unit from './Unit/Unit'
+import Unit from './Unit'
 
 const propTypes = {
     // From parent.
@@ -18,7 +18,6 @@ const propTypes = {
 },
 
 Stanzas = ({
-
     songStanzaConfigs,
     lastUnitDotCardIndex,
 

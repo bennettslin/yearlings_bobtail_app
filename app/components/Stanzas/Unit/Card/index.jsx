@@ -4,10 +4,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
+import { getParentOfVerseClassNamesForIndices } from '../../helper'
 
-import VerseHoc from '../../Verse/Hoc/VerseHoc';
-import Verse from '../../Verse/Verse';
+import VerseHoc from '../../../Verse/Hoc/VerseHoc';
+import Verse from '../../../Verse/Verse';
 
 /*************
  * CONTAINER *
@@ -131,7 +131,6 @@ const propTypes = {
 },
 
 UnitCardView = ({
-
     isSubCard,
     stanzaArray,
     stanzaTypeIndex,

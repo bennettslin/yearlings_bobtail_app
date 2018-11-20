@@ -1,7 +1,6 @@
-@import "./Unit/Unit";
-
-@import "./Stanza";
-@import "./StanzaLogic";
+@import "./logic";
+@import "./Stanza/style";
+@import "./Unit/style";
 
 $paddingY__stanzas: 20px;
 

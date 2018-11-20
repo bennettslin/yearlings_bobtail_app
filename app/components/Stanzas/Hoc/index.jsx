@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
+import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 const propTypes = {
     // From parent.
@@ -14,7 +14,6 @@ const propTypes = {
 },
 
 StanzaHoc = ({
-
     StanzaComponent,
 
 ...other }) => {
