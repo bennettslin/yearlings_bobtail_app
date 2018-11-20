@@ -4,12 +4,10 @@ import { HYPHENATED_SONG_PATHS } from 'constants/paths'
 import { getTwoDigitStringForNumber } from 'helpers/formatHelper'
 import { getArrayOfLength } from 'helpers/generalHelper'
 
-import tips from 'album/tips/tips'
-
 const rawAlbum = {
         title: `Yearling's Bobtail`,
         bookStartingIndices: [1, 10],
-        tips,
+        tips: require('album/tips/tips'),
         mp3s: getArrayOfLength(18, 1).map(index => (
             require(`assets/mp3s/${
                 getTwoDigitStringForNumber(index)
