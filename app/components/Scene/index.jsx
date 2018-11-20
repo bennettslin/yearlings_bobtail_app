@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Layers from './Layers/Layers'
-import SceneSky from './SceneSky'
+import Layers from './Layers'
+import Sky from './Sky'
 import Wood from '../Stage/Wood'
 
 import { getSceneObject } from 'helpers/dataHelper'
@@ -18,10 +18,13 @@ import {
 } from 'constants/scene'
 
 import {
-    getCubesForKey,
+    getCubesForKey
+} from './helper'
+
+import {
     getParentClassNamesForSceneLogic,
     getClassNameForSlantDirection
-} from './sceneHelper'
+} from 'helpers/className'
 
 const mapStateToProps = ({
     renderStore: {
@@ -143,7 +146,7 @@ class Scene extends Component {
                 hslaClassNames,
                 slantDirectionClassName
             )}>
-                <SceneSky
+                <Sky
                     {...{
                         skyConfig
                     }}

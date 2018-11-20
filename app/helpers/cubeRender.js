@@ -1,14 +1,14 @@
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
-} from './cubeIndexConstants'
+} from 'constants/cubeIndex'
 
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH
-} from './cubeRenderConstants'
+} from 'constants/cubeRender'
 
 import { roundPercentage } from 'helpers/generalHelper'
 
@@ -298,7 +298,7 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
     }
 }
 
-export const getHorizontalPlaneFractionsForSlantDirection = ({
+export const getHorizontalPlaneFractions = ({
     xIndex,
     yIndex,
     zIndex,
@@ -327,40 +327,5 @@ export const getHorizontalPlaneFractionsForSlantDirection = ({
         return _getHorizontalPlaneFractionsForDefault(
             xIndex, yIndex, zIndex, xOffset, adjustedZOffset
         )
-    }
-}
-
-/************
- * EXPORTED *
- ************/
-
-export const getCubeCornerPercentages = ({
-
-    xIndex,
-    yIndex,
-    zIndex,
-    isFloor,
-    slantDirection
-
-}) => {
-
-    const baseZIndex = isFloor ? 0 : CUBE_Z_AXIS_LENGTH
-
-    return {
-        // This is the top face if floor, bottom face if ceiling.
-        tile: getHorizontalPlaneFractionsForSlantDirection({
-            xIndex,
-            yIndex,
-            zIndex,
-            slantDirection
-        }),
-
-        // This is the face that is attached to the surface.
-        base: getHorizontalPlaneFractionsForSlantDirection({
-            xIndex,
-            yIndex,
-            zIndex: baseZIndex,
-            slantDirection
-        })
     }
 }

@@ -2,24 +2,21 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Stylesheet from '../../../Stylesheet'
-import DynamicStylesheet from '../../../Stylesheet/Dynamic'
+import Stylesheet from '../../../../Stylesheet'
+import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
 import {
-    getParentClassNameForSceneLogic
-} from '../../../Scene/sceneHelper'
-
-import {
+    getParentClassNameForSceneLogic,
     getChildClassNameForFaceLogic
-} from './faceHelper'
+} from 'helpers/className'
+
+import { CUBE_Z_INDICES } from 'constants/cubeIndex'
 
 import {
     FLOOR,
     TILE,
     Z_INDICES_MATRIX_NAME
 } from 'constants/scene'
-
-import { CUBE_Z_INDICES } from '../cubeIndexConstants'
 
 const
     FLOOR_TILE_SHADE_DARKER = 'rgba(25, 25, 25, 0.1)',
@@ -43,7 +40,7 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired
 },
 
-FacesShadeFillStyle = ({
+FaceFillStylesheet = ({
 
     xIndex,
     yIndex
@@ -54,7 +51,7 @@ FacesShadeFillStyle = ({
     return (
         <Stylesheet
             className={cx(
-                'FacesShadeFillStyle',
+                'FaceFillStylesheet',
                 `FacesShadeFillStyle__${
                     xIndex
                 }${
@@ -117,6 +114,6 @@ FacesShadeFillStyle = ({
     )
 }
 
-FacesShadeFillStyle.propTypes = propTypes
+FaceFillStylesheet.propTypes = propTypes
 
-export default FacesShadeFillStyle
+export default FaceFillStylesheet

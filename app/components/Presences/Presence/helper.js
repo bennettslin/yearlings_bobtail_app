@@ -1,24 +1,21 @@
-import { getValueInAbridgedMatrix } from 'helpers/generalHelper'
-
-import { getCubesForKey } from '../../Scene/sceneHelper'
-
-import {
-    getHorizontalPlaneFractionsForSlantDirection
-} from '../../Scene/Cubes/cubeRenderHelper'
+import { getCubesForKey } from '../../Scene/helper'
 
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
-} from '../../Scene/Cubes/cubeIndexConstants'
-
+} from 'constants/cubeIndex'
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES
-} from '../../Scene/Cubes/cubeRenderConstants'
-
+} from 'constants/cubeRender'
 import {
     LS_STAGE_ASPECT_RATIO
 } from 'constants/stage'
+
+import {
+    getHorizontalPlaneFractions
+} from 'helpers/cubeRender'
+import { getValueInAbridgedMatrix } from 'helpers/generalHelper'
 
 export const getPresencesForCubes = ({
 
@@ -86,7 +83,7 @@ const _getTileCentreForPresence = ({
 
         zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
 
-        tilePercentages = getHorizontalPlaneFractionsForSlantDirection({
+        tilePercentages = getHorizontalPlaneFractions({
             xIndex,
             yIndex,
             zIndex,

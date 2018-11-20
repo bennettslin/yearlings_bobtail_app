@@ -6,11 +6,10 @@ import cx from 'classnames'
 
 import Svg from '../../Svg'
 
-import CubeFillStyle from './CubeFillStyle'
-
-import FacesShadeFillStyle from './Face/FacesShadeFillStyle'
-import FacesZIndexStyle from './Face/FacesZIndexStyle'
-import Face from './Face/Face'
+import Face from './Face'
+import CubeFillStylesheet from './Stylesheets/CubeFill'
+import FaceFillStylesheet from './Stylesheets/FaceFill'
+import FaceZIndexStylesheet from './Stylesheets/FaceZIndex'
 
 import { getCharStringForNumber } from 'helpers/formatHelper'
 
@@ -44,21 +43,21 @@ const Cube = ({
                 'absoluteFullContainer'
             )}
         >
-            <CubeFillStyle
+            <CubeFillStylesheet
                 {...{
                     xIndex,
                     yIndex
                 }}
             />
 
-            <FacesZIndexStyle
+            <FaceZIndexStylesheet
                 {...{
                     xIndex,
                     yIndex
                 }}
             />
 
-            <FacesShadeFillStyle
+            <FaceFillStylesheet
                 {...{
                     xIndex,
                     yIndex

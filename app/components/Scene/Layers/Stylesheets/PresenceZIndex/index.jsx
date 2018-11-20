@@ -1,20 +1,20 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Stylesheet from '../../Stylesheet'
-import DynamicStylesheet from '../../Stylesheet/Dynamic'
+import Stylesheet from '../../../../Stylesheet'
+import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Y_INDICES
-} from '../Cubes/cubeIndexConstants'
+} from '../../../../../constants/cubeIndex'
 
-const PresencesZIndexStyle = () => {
+const PresenceZIndexStylesheet = () => {
 
     return (
         <Stylesheet
             className={cx(
-                'PresencesZIndexStyle'
+                'PresenceZIndexStylesheet'
             )}
         >
             {CUBE_Y_INDICES.map(yIndex => {
@@ -42,4 +42,4 @@ const PresencesZIndexStyle = () => {
     )
 }
 
-export default PresencesZIndexStyle
+export default PresenceZIndexStylesheet

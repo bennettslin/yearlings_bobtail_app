@@ -4,7 +4,7 @@ import {
     getArrayOfIncreasingSums
 } from 'helpers/generalHelper'
 
-import { CUBE_Y_AXIS_LENGTH } from './cubeIndexConstants'
+import { CUBE_Y_AXIS_LENGTH } from './cubeIndex'
 
 const
     _getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {

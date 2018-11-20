@@ -1,6 +1,3 @@
-import { CUBES } from 'scene/cubes'
-import { DEFAULT_STAGE_KEY } from 'scene/cubesKeys'
-
 import { getCharStringForNumber } from 'helpers/formatHelper'
 
 import {
@@ -15,25 +12,7 @@ import {
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES
-} from './Cubes/cubeIndexConstants'
-
-export const getCubesForKey = (cubesKey) => {
-
-    const defaultStageCubes = CUBES[DEFAULT_STAGE_KEY],
-        keyCubes = CUBES[cubesKey]
-
-    return {
-        ceiling: {
-            ...defaultStageCubes.ceiling,
-            ...keyCubes.ceiling
-        },
-        floor: {
-            ...defaultStageCubes.floor,
-            ...keyCubes.floor
-        },
-        slantDirection: keyCubes.slantDirection || ''
-    }
-}
+} from 'constants/cubeIndex'
 
 export const getParentClassNameForSceneLogic = ({
     matrixName,
@@ -46,7 +25,7 @@ export const getParentClassNameForSceneLogic = ({
     let formattedValue = value
 
     if (matrixName === Z_INDICES_MATRIX_NAME) {
-        // Allow zIndex to be appended dynamically by FacesZIndexStyle.
+        // Allow zIndex to be appended dynamically by FaceZIndexStylesheet.
         formattedValue = !isNaN(value) ? getCharStringForNumber(value) : ''
     }
 
@@ -103,4 +82,40 @@ export const getClassNameForSlantDirection = (slantDirection) => {
     return slantDirection ?
         `Scene__slantDirection__${slantDirection}` :
         ''
+}
+
+
+export const getChildClassNameForCubeLogic = ({
+    level,
+    xIndex,
+    yIndex
+}) => {
+
+    // "Child cube levelIndex, xIndex, yIndex."
+    return `K${
+        level[0]
+    }${
+        getCharStringForNumber(xIndex)
+    }${
+        yIndex
+    }`
+}
+
+export const getChildClassNameForFaceLogic = ({
+    level,
+    face,
+    xIndex,
+    yIndex
+}) => {
+
+    // "Child face levelIndex, faceIndex, xIndex, yIndex."
+    return `F${
+        level[0]
+    }${
+        face[0].toUpperCase()
+    }${
+        getCharStringForNumber(xIndex)
+    }${
+        yIndex
+    }`
 }

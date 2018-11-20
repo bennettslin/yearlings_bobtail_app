@@ -2,16 +2,13 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Stylesheet from '../../Stylesheet'
-import DynamicStylesheet from '../../Stylesheet/Dynamic'
+import Stylesheet from '../../../../Stylesheet'
+import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
 import {
+    getChildClassNameForCubeLogic,
     getParentClassNameForSceneLogic
-} from '../sceneHelper'
-
-import {
-    getChildClassNameForCubeLogic
-} from './cubeHelper'
+} from 'helpers/className'
 
 import {
     HSLA_MAP
@@ -31,8 +28,7 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired
 },
 
-CubeFillStyle = ({
-
+CubeFillStylesheet = ({
     xIndex,
     yIndex
 
@@ -42,7 +38,7 @@ CubeFillStyle = ({
     return (
         <Stylesheet
             className={cx(
-                'CubeFillStyle',
+                'CubeFillStylesheet',
                 `CubeFillStyle__${
                     xIndex
                 }${
@@ -97,6 +93,6 @@ CubeFillStyle = ({
     )
 }
 
-CubeFillStyle.propTypes = propTypes
+CubeFillStylesheet.propTypes = propTypes
 
-export default CubeFillStyle
+export default CubeFillStylesheet

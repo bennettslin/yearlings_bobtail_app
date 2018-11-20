@@ -19,7 +19,7 @@ const mapStateToProps = ({
     canSceneRender
 })
 
-class SceneSky extends Component {
+class Sky extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -96,5 +96,5 @@ class SceneSky extends Component {
     }
 }
 
-export default connect(mapStateToProps)(SceneSky)
+export default connect(mapStateToProps)(Sky)
 

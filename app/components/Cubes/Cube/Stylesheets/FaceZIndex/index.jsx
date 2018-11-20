@@ -2,25 +2,24 @@ import React, { Fragment } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Stylesheet from '../../../Stylesheet'
-import DynamicStylesheet from '../../../Stylesheet/Dynamic'
+import Stylesheet from '../../../../Stylesheet'
+import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
-import { getCubeCornerPercentages } from '../cubeRenderHelper'
+import {
+    getCubeCornerPercentages,
+    getSideDirection
+} from './helper'
 
 import {
     getPathString,
     getPolygonPoints
-} from './facePathHelper'
+} from './pathHelper'
 
 import {
     getParentClassNameForSceneLogic,
-    getClassNameForSlantDirection
-} from '../../../Scene/sceneHelper'
-
-import {
-    getChildClassNameForFaceLogic,
-    getSideDirection
-} from './faceHelper'
+    getClassNameForSlantDirection,
+    getChildClassNameForFaceLogic
+} from 'helpers/className'
 
 import {
     SLANT_DIRECTIONS,
@@ -36,14 +35,14 @@ import {
     k
 } from 'scene/zIndexKeys'
 
-import { CUBE_Z_INDICES } from '../cubeIndexConstants'
+import { CUBE_Z_INDICES } from 'constants/cubeIndex'
 
 const propTypes = {
     xIndex: PropTypes.number.isRequired,
     yIndex: PropTypes.number.isRequired
 },
 
-FacesZIndexStyle = ({
+FaceZIndexStylesheet = ({
 
     xIndex,
     yIndex
@@ -54,7 +53,7 @@ FacesZIndexStyle = ({
     return (
         <Stylesheet
             className={cx(
-                'FacesZIndexStyle',
+                'FaceZIndexStylesheet',
                 `FacesZIndexStyle__${
                     xIndex
                 }${
@@ -183,6 +182,6 @@ FacesZIndexStyle = ({
     )
 }
 
-FacesZIndexStyle.propTypes = propTypes
+FaceZIndexStylesheet.propTypes = propTypes
 
-export default FacesZIndexStyle
+export default FaceZIndexStylesheet

@@ -9,7 +9,7 @@ import Cube from './Cube'
 import {
     CUBE_X_INDICES,
     CUBE_Y_AXIS_LENGTH
-} from './cubeIndexConstants'
+} from 'constants/cubeIndex'
 
 class Cubes extends Component {
 
@@ -30,7 +30,6 @@ class Cubes extends Component {
         return (
             <div
                 className={cx(
-
                     `Cubes__y${
                         yIndex
                     }${

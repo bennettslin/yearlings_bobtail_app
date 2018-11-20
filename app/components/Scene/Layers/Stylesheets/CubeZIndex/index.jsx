@@ -1,11 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Stylesheet from '../../Stylesheet'
-import DynamicStylesheet from '../../Stylesheet/Dynamic'
+import Stylesheet from '../../../../Stylesheet'
+import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
+import { getClassNameForSlantDirection } from 'helpers/className'
 import { getCharStringForNumber } from 'helpers/formatHelper'
-import { getClassNameForSlantDirection } from '../sceneHelper'
 
 import {
     LEFT,
@@ -20,16 +20,16 @@ import {
     DEFAULT_X_AXIS_Z_INDICES,
     SLANTED_LEFT_X_AXIS_Z_INDICES,
     SLANTED_RIGHT_X_AXIS_Z_INDICES
-} from './cubeIndexConstants'
+} from 'constants/cubeIndex'
 
-const CubesZIndexStyle = () => {
+const CubeZIndexStylesheet = () => {
 
     let xAxisZIndices = DEFAULT_X_AXIS_Z_INDICES
 
     return (
         <Stylesheet
             className={cx(
-                'CubesZIndexStyle'
+                'CubeZIndexStylesheet'
             )}
         >
             {SLANT_DIRECTIONS.map(slantDirection => {
@@ -84,4 +84,4 @@ const CubesZIndexStyle = () => {
     )
 }
 
-export default CubesZIndexStyle
+export default CubeZIndexStylesheet
