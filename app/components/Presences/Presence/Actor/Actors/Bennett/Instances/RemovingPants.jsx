@@ -13,7 +13,8 @@ const RemovingPants = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

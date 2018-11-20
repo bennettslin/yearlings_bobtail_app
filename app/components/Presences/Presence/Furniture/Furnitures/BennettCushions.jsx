@@ -13,7 +13,8 @@ const BennettCushions = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

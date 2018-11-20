@@ -13,7 +13,8 @@ const GuitarCaseOpen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

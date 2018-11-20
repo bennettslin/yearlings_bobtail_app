@@ -13,7 +13,8 @@ const Recyclables = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

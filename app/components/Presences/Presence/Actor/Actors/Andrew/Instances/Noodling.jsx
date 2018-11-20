@@ -13,7 +13,8 @@ const Noodling = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

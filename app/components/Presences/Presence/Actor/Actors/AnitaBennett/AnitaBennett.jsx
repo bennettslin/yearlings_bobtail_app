@@ -23,7 +23,8 @@ const AnitaBennett = ({
     className,
     instanceKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 

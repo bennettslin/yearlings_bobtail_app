@@ -13,7 +13,8 @@ const GuitarCaseUpright = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

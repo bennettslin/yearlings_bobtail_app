@@ -13,7 +13,8 @@ const EscapePodSketchbook = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

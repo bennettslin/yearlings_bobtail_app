@@ -13,7 +13,8 @@ const ReattaSeatLowered = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

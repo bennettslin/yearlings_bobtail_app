@@ -13,7 +13,8 @@ const Flapper = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -81,7 +81,8 @@ const Panel = ({
     className,
     nameKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const PanelComponent = PANELS_MAP[nameKey]
 

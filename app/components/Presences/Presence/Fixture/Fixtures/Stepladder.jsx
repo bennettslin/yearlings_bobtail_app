@@ -13,7 +13,8 @@ const Stepladder = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

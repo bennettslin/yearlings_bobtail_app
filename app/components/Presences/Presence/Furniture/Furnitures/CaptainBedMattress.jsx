@@ -13,7 +13,8 @@ const CaptainBedMattress = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

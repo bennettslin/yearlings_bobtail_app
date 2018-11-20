@@ -13,7 +13,8 @@ const HardOnReflection = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

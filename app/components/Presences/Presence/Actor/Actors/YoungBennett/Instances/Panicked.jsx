@@ -13,7 +13,8 @@ const Panicked = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

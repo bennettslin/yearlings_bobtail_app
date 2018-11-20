@@ -13,7 +13,8 @@ const OdinMat = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const ValleyBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

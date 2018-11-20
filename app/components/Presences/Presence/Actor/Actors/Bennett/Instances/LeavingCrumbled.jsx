@@ -13,7 +13,8 @@ const LeavingCrumbled = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

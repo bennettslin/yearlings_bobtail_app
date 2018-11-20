@@ -13,7 +13,8 @@ const BennettCouchThoughtBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

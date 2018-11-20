@@ -13,7 +13,8 @@ const ElCerritoTree = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

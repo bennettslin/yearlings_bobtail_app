@@ -13,7 +13,8 @@ const TogetherSketchbook = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

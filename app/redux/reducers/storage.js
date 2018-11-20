@@ -1,5 +1,7 @@
 // Reducers for state persisted in user's local storage.
-import { SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX } from 'constants/state'
+import {
+    SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX
+} from 'constants/state'
 
 import { getFromStorage } from '../storageHelper'
 
@@ -56,8 +58,10 @@ export const CarouselNavIndexReducer = (state = storedCarouselNavIndex, action) 
 export const DotKeysReducer = (state = storedDotKeys, action) => {
     switch (action.type) {
         case SELECTED_DOT_KEYS: {
-            const { selectedDotKey,
-                    isSelected } = action.payload,
+            const {
+                    selectedDotKey,
+                    isSelected
+                } = action.payload,
                 // Copy state object.
                 newState = Object.assign({}, state)
             newState[selectedDotKey] = isSelected

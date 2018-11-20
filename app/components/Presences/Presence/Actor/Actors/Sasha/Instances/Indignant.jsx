@@ -13,7 +13,8 @@ const Indignant = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

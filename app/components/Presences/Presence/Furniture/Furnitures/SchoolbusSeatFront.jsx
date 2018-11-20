@@ -13,7 +13,8 @@ const SchoolbusSeatFront = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

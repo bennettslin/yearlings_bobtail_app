@@ -13,7 +13,8 @@ const BennettKeyboard = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

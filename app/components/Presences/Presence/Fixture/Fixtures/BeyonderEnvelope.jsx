@@ -13,7 +13,8 @@ const BeyonderEnvelope = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

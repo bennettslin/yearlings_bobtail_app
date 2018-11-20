@@ -13,7 +13,8 @@ const Flustered = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

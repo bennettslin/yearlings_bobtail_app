@@ -13,7 +13,8 @@ const OaklandSideBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

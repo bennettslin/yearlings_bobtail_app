@@ -20,7 +20,8 @@ const propTypes = {
     Texts = ({
         text: textEntity,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         return (Array.isArray(textEntity)) ? (
             textEntity.map((textElement, index) => (

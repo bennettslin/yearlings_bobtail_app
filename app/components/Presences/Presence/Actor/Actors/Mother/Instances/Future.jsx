@@ -13,7 +13,8 @@ const Future = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

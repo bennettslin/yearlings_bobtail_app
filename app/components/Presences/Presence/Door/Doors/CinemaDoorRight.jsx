@@ -13,7 +13,8 @@ const CinemaDoorRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

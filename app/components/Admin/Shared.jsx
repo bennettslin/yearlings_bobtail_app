@@ -4,7 +4,9 @@ import Drawing from './Drawing/drawing'
 import NotesSection from './notes/notes-section'
 import StatsSection from './stats/stats-section'
 import TasksSection from './tasks/tasks-section'
-import { getSongObject, getSongTasks } from 'helpers/dataHelper'
+import {
+    getSongObject, getSongTasks
+} from 'helpers/dataHelper'
 
 /*************
  * CONTAINER *
@@ -14,7 +16,8 @@ const Shared = ({
 
     selectedSongIndex,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const selectedSong = getSongObject(selectedSongIndex),
         tasks = getSongTasks(selectedSongIndex),
@@ -46,7 +49,8 @@ const SharedView = ({
     annotations,
     adminPluralCardsCount,
 
-    ...other }) => (
+    ...other
+}) => (
     <div className="Admin__column">
         <div className="Admin__field shared">
             <StatsSection

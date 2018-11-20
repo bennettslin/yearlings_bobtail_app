@@ -13,7 +13,8 @@ const Shore = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

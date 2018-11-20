@@ -13,7 +13,8 @@ const CommercialCentre = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

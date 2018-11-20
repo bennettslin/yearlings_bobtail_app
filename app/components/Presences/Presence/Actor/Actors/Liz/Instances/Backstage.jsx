@@ -13,7 +13,8 @@ const Backstage = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const PharmacyAisle = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

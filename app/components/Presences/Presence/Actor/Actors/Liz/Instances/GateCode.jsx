@@ -13,7 +13,8 @@ const GateCode = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

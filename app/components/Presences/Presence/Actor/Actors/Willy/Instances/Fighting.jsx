@@ -13,7 +13,8 @@ const Fighting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

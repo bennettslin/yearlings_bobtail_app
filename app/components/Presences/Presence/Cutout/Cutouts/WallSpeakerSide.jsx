@@ -13,7 +13,8 @@ const WallSpeakerSide = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

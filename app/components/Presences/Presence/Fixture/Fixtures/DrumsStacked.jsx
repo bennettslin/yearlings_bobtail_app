@@ -13,7 +13,8 @@ const DrumsStacked = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

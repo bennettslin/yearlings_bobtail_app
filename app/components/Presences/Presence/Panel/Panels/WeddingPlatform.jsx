@@ -13,7 +13,8 @@ const WeddingPlatform = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Exasperated = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

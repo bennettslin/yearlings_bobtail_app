@@ -13,7 +13,8 @@ const AwkwardConsolation = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

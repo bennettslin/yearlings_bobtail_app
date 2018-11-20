@@ -13,7 +13,8 @@ const Collecting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const LockerBank = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

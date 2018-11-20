@@ -13,7 +13,8 @@ const AsleepReaching = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

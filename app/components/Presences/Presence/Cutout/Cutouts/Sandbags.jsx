@@ -13,7 +13,8 @@ const Sandbags = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

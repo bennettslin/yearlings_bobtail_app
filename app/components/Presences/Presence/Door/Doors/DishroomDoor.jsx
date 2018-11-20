@@ -13,7 +13,8 @@ const DishroomDoor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

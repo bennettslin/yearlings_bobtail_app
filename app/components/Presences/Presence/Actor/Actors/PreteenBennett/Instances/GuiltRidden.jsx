@@ -13,7 +13,8 @@ const GuiltRidden = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

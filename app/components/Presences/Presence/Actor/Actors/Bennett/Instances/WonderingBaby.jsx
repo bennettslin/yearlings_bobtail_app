@@ -13,7 +13,8 @@ const WonderingBaby = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

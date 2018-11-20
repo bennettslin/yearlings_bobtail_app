@@ -13,7 +13,8 @@ const Fearful = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

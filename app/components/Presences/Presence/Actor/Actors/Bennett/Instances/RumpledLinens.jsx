@@ -13,7 +13,8 @@ const RumpledLinens = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

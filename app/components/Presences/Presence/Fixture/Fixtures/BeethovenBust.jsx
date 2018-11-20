@@ -13,7 +13,8 @@ const BeethovenBust = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const GhostOdinAlley = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

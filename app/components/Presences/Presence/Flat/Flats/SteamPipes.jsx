@@ -13,7 +13,8 @@ const SteamPipes = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

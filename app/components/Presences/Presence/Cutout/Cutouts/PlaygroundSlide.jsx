@@ -13,7 +13,8 @@ const PlaygroundSlide = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

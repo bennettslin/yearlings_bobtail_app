@@ -13,7 +13,8 @@ const BedroomDesk = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

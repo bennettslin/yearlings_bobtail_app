@@ -13,7 +13,8 @@ const WaitingRoomThoughts = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

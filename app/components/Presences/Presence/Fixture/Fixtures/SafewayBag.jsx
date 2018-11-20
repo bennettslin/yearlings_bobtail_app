@@ -13,7 +13,8 @@ const SafewayBag = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const YellowTapedGrill = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

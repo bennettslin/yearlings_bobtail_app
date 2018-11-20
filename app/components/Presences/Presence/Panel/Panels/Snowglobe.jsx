@@ -13,7 +13,8 @@ const Snowglobe = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

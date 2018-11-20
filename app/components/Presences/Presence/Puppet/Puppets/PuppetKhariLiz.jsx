@@ -13,7 +13,8 @@ const PuppetKhariLiz = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

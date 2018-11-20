@@ -13,7 +13,8 @@ const Roaring = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

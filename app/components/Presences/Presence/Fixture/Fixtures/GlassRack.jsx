@@ -13,7 +13,8 @@ const GlassRack = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

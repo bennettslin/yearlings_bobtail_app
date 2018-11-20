@@ -13,7 +13,8 @@ const BennettMattress = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

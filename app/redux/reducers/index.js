@@ -1,17 +1,25 @@
 import { combineReducers } from 'redux'
 // import { AlbumReducer } from './album'
-import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
+import {
+    AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer
+} from './access'
 import { IsPlayingReducer } from './audio'
 import { DeviceStoreReducer } from './device'
-import { AppMountedReducer, CanPlayThroughsReducer, IsScoreLoadedReducer } from './load'
+import {
+    AppMountedReducer, CanPlayThroughsReducer, IsScoreLoadedReducer
+} from './load'
 import { RenderableStoreReducer } from './renderable'
 import { RenderStoreReducer } from './render'
 import { RenderedStoreReducer } from './rendered'
 import { ResponsiveStoreReducer } from './responsive'
-import { CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
+import {
+    CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer
+} from './session'
 import { SliderStoreReducer } from './slider'
 import { SongStoreReducer } from './song'
-import { AccessIndexReducer, AdminIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, TipsIndexReducer, TitleIndexReducer, WikiIndexReducer } from './storage'
+import {
+    AccessIndexReducer, AdminIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, TipsIndexReducer, TitleIndexReducer, WikiIndexReducer
+} from './storage'
 
 import {
     DEVICE_STORE,

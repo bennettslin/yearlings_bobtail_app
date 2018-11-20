@@ -72,9 +72,11 @@ class AnnotationCard extends Component {
                 cardIndex
             }),
 
-            { description,
+            {
+                description,
                 dotKeys = {},
-                wormholeLinks } = cardObject
+                wormholeLinks
+            } = cardObject
 
         // Add wormhole key to dot keys.
         if (wormholeLinks) {

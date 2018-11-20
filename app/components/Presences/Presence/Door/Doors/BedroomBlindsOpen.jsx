@@ -13,7 +13,8 @@ const BedroomBlindsOpen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -3,7 +3,8 @@ import {
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
 } from 'constants/stage'
 
-import { PHONE_CLASS,
+import {
+    PHONE_CLASS,
     LS_MINI_CLASS,
     TABLET_CLASS,
     LS_LAPTOP_CLASS,
@@ -24,9 +25,12 @@ import { PHONE_CLASS,
     LS_TOP_OFFSET_TWO_ROW_MENU,
     LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
 
-    LS_HEIGHT_NAV } from 'constants/responsive'
+    LS_HEIGHT_NAV
+} from 'constants/responsive'
 
-import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenCarouselNav, getIsTwoRowMenu } from './responsiveHelper'
+import {
+    getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenCarouselNav, getIsTwoRowMenu
+} from './responsiveHelper'
 
 /*********
  * STAGE *
@@ -139,7 +143,9 @@ export const getCentreFieldHeight = ({
 
     let menuHeight = LS_HEIGHT_MENU
 
-    if (getIsTwoRowMenu({ deviceIndex, windowWidth })) {
+    if (getIsTwoRowMenu({
+        deviceIndex, windowWidth
+    })) {
 
         if (getIsPhone(deviceIndex)) {
             menuHeight = LS_TOP_OFFSET_TWO_ROW_MENU_PHONE

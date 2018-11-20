@@ -13,7 +13,8 @@ const Smoker = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

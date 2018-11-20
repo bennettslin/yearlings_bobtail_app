@@ -13,7 +13,8 @@ const Mannequin = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Past = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

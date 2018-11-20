@@ -9,7 +9,9 @@ import cx from 'classnames'
 
 import VerseLine from './Line'
 
-import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from 'constants/lyrics'
+import {
+    LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC
+} from 'constants/lyrics'
 
 const verseLinesPropTypes = {
     // From parent.
@@ -21,7 +23,8 @@ const verseLinesPropTypes = {
 
         isDoubleSpeaker,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const { inVerseBar } = other
 

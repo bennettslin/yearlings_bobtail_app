@@ -13,7 +13,8 @@ const TyingTether = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

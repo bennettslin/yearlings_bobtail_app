@@ -13,7 +13,8 @@ const Concerned = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const ThrownFruit = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

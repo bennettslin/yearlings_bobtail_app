@@ -13,7 +13,8 @@ const Reeling = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

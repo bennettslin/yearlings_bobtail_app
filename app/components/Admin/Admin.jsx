@@ -18,8 +18,10 @@ class Admin extends Component {
 
     render() {
 
-        const { handleNavSongSelect,
-                ...other } = this.props,
+        const {
+                handleNavSongSelect,
+                ...other
+            } = this.props,
 
             allTasks = getAllTaskObjects()
 

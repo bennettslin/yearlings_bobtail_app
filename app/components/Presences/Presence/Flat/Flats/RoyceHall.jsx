@@ -13,7 +13,8 @@ const RoyceHall = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

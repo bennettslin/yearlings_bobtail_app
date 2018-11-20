@@ -86,9 +86,11 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
      * the song index, second is the verse index, third is the annotation index.
      */
 
-    const { rawSongIndex,
+    const {
+        rawSongIndex,
         rawVerseIndex,
-        rawAnnotationIndex } = rawIndicesObject
+        rawAnnotationIndex
+    } = rawIndicesObject
 
     // Only set routing song index if valid.
     if (_isValidSongIndex(rawSongIndex)) {

@@ -13,7 +13,8 @@ const TaiwanMountainsBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Cheering = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const BennettRecording = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

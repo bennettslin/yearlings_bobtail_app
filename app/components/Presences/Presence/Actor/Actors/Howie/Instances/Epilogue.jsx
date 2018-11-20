@@ -13,7 +13,8 @@ const Epilogue = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

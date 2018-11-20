@@ -13,7 +13,8 @@ const AfterglowReflection = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

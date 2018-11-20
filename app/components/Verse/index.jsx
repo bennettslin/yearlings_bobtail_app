@@ -171,7 +171,8 @@ const verseViewDefaultProps = {
         setRef,
         children,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const {
             inVerseBar,

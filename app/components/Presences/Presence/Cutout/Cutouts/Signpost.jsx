@@ -13,7 +13,8 @@ const Signpost = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

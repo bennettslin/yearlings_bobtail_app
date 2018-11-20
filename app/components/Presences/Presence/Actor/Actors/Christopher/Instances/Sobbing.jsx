@@ -13,7 +13,8 @@ const Sobbing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

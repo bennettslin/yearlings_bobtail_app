@@ -13,7 +13,8 @@ const Drumkit = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

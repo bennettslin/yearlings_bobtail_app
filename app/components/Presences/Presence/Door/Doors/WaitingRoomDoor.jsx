@@ -13,7 +13,8 @@ const WaitingRoomDoor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

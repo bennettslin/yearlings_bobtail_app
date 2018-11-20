@@ -246,7 +246,8 @@ const Cutout = ({
     className,
     nameKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const CutoutComponent = CUTOUTS_MAP[nameKey]
 

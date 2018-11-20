@@ -13,7 +13,8 @@ const OceanBottomNear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

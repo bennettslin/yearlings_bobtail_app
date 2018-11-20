@@ -13,7 +13,8 @@ const Snickering = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

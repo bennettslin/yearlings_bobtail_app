@@ -13,7 +13,8 @@ const BennettDoorOutside = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

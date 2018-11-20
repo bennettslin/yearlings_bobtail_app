@@ -13,7 +13,8 @@ const Principal = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

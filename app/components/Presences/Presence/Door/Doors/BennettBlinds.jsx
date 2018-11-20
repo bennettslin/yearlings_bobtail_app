@@ -13,7 +13,8 @@ const BennettBlinds = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

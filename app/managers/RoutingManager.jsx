@@ -37,9 +37,11 @@ class RoutingManager extends Component {
             routingIndicesObject =
                 getValidRoutingIndicesObject(routingParamString),
 
-            { routingSongIndex,
+            {
+                routingSongIndex,
                 routingVerseIndex,
-                routingAnnotationIndex } = routingIndicesObject
+                routingAnnotationIndex
+            } = routingIndicesObject
 
         let selectedSongIndex = props.selectedSongIndex,
             selectedVerseIndex = props.selectedVerseIndex,

@@ -13,7 +13,8 @@ const TrashCan = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

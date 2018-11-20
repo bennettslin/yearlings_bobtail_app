@@ -13,7 +13,8 @@ const propTypes = {
 
         inCarousel,
 
-        ...other }) => (
+        ...other
+    }) => (
         <div className={cx(
             'AnnotationHeader',
 

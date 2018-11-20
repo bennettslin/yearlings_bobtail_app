@@ -13,7 +13,8 @@ const ForebodingTrees = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const ShoppingCartFull = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

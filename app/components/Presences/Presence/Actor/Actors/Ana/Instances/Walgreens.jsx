@@ -13,7 +13,8 @@ const Walgreens = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

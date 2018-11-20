@@ -13,7 +13,8 @@ const BennettOdinBuoy = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

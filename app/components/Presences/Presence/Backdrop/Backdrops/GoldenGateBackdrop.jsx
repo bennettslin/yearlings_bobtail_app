@@ -13,7 +13,8 @@ const GoldenGateBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

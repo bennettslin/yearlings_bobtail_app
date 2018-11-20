@@ -13,7 +13,8 @@ const HaircutScissors = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

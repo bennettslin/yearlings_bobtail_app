@@ -13,7 +13,8 @@ const BedroomBusBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

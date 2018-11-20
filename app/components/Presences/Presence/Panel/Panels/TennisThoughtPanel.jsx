@@ -13,7 +13,8 @@ const TennisThoughtPanel = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

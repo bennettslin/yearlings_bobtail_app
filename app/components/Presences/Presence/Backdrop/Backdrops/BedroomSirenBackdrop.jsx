@@ -13,7 +13,8 @@ const BedroomSirenBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

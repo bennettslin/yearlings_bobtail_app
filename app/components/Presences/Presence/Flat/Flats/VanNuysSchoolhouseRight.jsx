@@ -13,7 +13,8 @@ const VanNuysSchoolhouseRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

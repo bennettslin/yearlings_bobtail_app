@@ -13,7 +13,8 @@ const Shaken = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

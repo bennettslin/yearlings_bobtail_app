@@ -22,10 +22,13 @@ const propTypes = {
         inAnnotation,
         inStanza,
 
-        ...other }) => {
+        ...other
+    }) => {
 
-        const { isAccessed,
-            isSelected } = other
+        const {
+            isAccessed,
+            isSelected
+        } = other
 
         return (
             <Anchor {...other}

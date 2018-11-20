@@ -13,7 +13,8 @@ const WestBerkeleyBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const CommercialNearRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const LizPhoneBaseReflection = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

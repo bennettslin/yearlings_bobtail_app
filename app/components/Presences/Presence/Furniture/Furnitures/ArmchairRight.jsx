@@ -13,7 +13,8 @@ const ArmchairRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

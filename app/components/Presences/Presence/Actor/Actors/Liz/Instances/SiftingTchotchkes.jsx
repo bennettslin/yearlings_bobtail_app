@@ -13,7 +13,8 @@ const SiftingTchotchkes = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

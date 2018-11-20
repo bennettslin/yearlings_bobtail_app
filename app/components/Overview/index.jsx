@@ -54,8 +54,10 @@ class Overview extends Component {
 
     _handleOverviewToggle = (e) => {
         // Prevent toggle from firing when not shown.
-        const { selectedOverviewIndex,
-            handleOverviewToggle } = this.props
+        const {
+            selectedOverviewIndex,
+            handleOverviewToggle
+        } = this.props
 
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
             handleOverviewToggle(e)
@@ -63,9 +65,11 @@ class Overview extends Component {
     }
 
     render() {
-        const { deviceIndex,
+        const {
+                deviceIndex,
                 selectedOverviewIndex,
-                renderedSongIndex } = this.props,
+                renderedSongIndex
+            } = this.props,
 
             overviewText = getSongOverview(renderedSongIndex),
             isLogue = getSongIsLogue(renderedSongIndex),

@@ -13,7 +13,8 @@ const BrokenHearted = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

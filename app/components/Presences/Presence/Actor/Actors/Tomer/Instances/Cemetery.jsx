@@ -13,7 +13,8 @@ const Cemetery = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

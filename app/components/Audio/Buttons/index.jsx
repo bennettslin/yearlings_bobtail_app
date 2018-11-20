@@ -65,7 +65,8 @@ class AudioButtons extends Component {
     }
 
     render() {
-        const { selectedSongIndex,
+        const {
+                selectedSongIndex,
                 canPlayThroughs,
 
                 isPlaying,
@@ -74,7 +75,8 @@ class AudioButtons extends Component {
                 handleAudioPlay,
                 handleAudioOptionsToggle,
                 handleAudioPreviousSong,
-                handleAudioNextSong } = this.props,
+                handleAudioNextSong
+            } = this.props,
 
             isPrologue = selectedSongIndex === 0,
             songsCount = getSongsAndLoguesCount(),

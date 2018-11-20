@@ -13,7 +13,8 @@ const OdinTaiwanStairs = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

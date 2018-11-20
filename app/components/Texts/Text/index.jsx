@@ -19,10 +19,13 @@ const propTypes = {
     Text = ({
         text: textEntity,
 
-        ...props }) => {
+        ...props
+    }) => {
 
-        const { inVerseBar,
-                ...other } = props,
+        const {
+                inVerseBar,
+                ...other
+            } = props,
 
             { inWormhole } = other
 
@@ -62,17 +65,21 @@ const propTypes = {
                 )
 
             } else {
-                const { lyric,
+                const {
+                        lyric,
                         anchor,
-                        annotationIndex } = textEntity,
+                        annotationIndex
+                    } = textEntity,
 
                     showAsPlainText = lyric || inWormhole || inVerseBar,
 
                     text = lyric || anchor
 
                 if (showAsPlainText) {
-                    const { isVerseBeginningSpan,
-                            isVerseEndingSpan } = textEntity,
+                    const {
+                            isVerseBeginningSpan,
+                            isVerseEndingSpan
+                        } = textEntity,
 
                         { wormholeAnnotationIndex } = props,
 

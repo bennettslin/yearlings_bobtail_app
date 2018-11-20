@@ -13,7 +13,8 @@ const MerrilyDeranged = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

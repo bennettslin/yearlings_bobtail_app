@@ -13,7 +13,8 @@ const BennettDoorInsideOpen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

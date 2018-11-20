@@ -13,7 +13,8 @@ const TrashCanFront = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

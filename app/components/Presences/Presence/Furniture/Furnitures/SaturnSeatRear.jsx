@@ -13,7 +13,8 @@ const SaturnSeatRear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

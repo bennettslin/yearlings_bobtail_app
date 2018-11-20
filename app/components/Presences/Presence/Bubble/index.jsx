@@ -60,7 +60,8 @@ const Bubble = ({
     className,
     nameKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const BubbleComponent = BUBBLES_MAP[nameKey]
 

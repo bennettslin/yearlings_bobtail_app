@@ -13,7 +13,8 @@ const CaveShadows = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

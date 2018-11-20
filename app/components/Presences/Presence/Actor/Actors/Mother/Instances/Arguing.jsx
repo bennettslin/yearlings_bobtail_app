@@ -13,7 +13,8 @@ const Arguing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

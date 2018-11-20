@@ -13,7 +13,8 @@ const ShoesReflection = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

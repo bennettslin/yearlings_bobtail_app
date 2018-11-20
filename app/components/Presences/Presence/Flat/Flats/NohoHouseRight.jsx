@@ -13,7 +13,8 @@ const NohoHouseRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

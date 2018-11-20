@@ -13,7 +13,8 @@ const Television = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

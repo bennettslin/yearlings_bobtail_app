@@ -13,7 +13,8 @@ const TaiwanHouseFar = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

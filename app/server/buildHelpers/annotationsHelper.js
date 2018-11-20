@@ -142,9 +142,11 @@ const _addSourceWormholeLink = ({
          * be in a timed verse, and thus have a verse index. Had there been one
          * that wasn't, such as in a side stanza, this wouldn't work for it!
          */
-        { verseIndex,
+        {
+            verseIndex,
             annotationIndex,
-            columnIndex } = annotationObject,
+            columnIndex
+        } = annotationObject,
 
         wormholeLink = {
             songIndex: tempSongIndex,
@@ -185,9 +187,11 @@ export const addDestinationWormholeLinks = (albumObject) => {
         const links = albumObject.tempWormholeLinks[linkKey]
 
         links.forEach((destinationLink, index) => {
-            const { songIndex,
+            const {
+                    songIndex,
                     annotationIndex,
-                    cardIndex } = destinationLink,
+                    cardIndex
+                } = destinationLink,
 
                 annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
                 cardObject = annotationObject.cards[cardIndex]
@@ -209,8 +213,10 @@ export const addDestinationWormholeLinks = (albumObject) => {
 export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
     const { tempSongIndex } = songObject,
 
-        { description,
-            wormholeLinks } = cardObject
+        {
+            description,
+            wormholeLinks
+        } = cardObject
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
@@ -384,9 +390,11 @@ export const addDestinationWormholeIndices = (albumObject) => {
 
         links.forEach((destinationLink, index) => {
 
-            const { songIndex,
+            const {
+                    songIndex,
                     annotationIndex,
-                    cardIndex } = destinationLink,
+                    cardIndex
+                } = destinationLink,
 
                 annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
                 cardObject = annotationObject.cards[cardIndex]
@@ -398,9 +406,11 @@ export const addDestinationWormholeIndices = (albumObject) => {
                  * is because of the three "shiv" wormholes.
                  */
                 destinationLink.tempSourceWormholeLinks.forEach((tempSourceLink) => {
-                    const { tempSourceSongIndex,
+                    const {
+                            tempSourceSongIndex,
                             tempSourceAnnotationIndex,
-                            tempSourceWormholeIndex } = tempSourceLink,
+                            tempSourceWormholeIndex
+                        } = tempSourceLink,
 
                         /**
                          * This will happen only once for each source and

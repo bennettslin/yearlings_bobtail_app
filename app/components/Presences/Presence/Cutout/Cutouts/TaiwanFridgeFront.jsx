@@ -13,7 +13,8 @@ const TaiwanFridgeFront = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

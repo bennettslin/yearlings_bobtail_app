@@ -13,7 +13,8 @@ const BassCaseUpright = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

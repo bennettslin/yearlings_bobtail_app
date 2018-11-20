@@ -13,7 +13,8 @@ const LizPhone = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

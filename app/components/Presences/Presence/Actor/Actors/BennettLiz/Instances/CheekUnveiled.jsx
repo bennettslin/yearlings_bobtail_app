@@ -13,7 +13,8 @@ const CheekUnveiled = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const AtticCushions = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

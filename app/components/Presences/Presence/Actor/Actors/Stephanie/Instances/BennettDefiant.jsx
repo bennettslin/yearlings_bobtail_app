@@ -13,7 +13,8 @@ const BennettDefiant = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

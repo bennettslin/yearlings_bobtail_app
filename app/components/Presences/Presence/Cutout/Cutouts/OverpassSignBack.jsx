@@ -13,7 +13,8 @@ const OverpassSignBack = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

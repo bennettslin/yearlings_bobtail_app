@@ -13,7 +13,8 @@ const FendingOff = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

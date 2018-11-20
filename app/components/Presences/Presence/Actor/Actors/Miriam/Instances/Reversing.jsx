@@ -13,7 +13,8 @@ const Reversing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

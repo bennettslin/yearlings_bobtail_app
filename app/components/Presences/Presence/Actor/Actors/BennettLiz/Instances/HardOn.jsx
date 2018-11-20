@@ -13,7 +13,8 @@ const HardOn = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

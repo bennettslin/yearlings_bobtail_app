@@ -13,7 +13,8 @@ const ReattaInterior = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

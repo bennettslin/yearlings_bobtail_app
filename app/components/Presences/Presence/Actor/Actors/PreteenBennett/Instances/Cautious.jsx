@@ -13,7 +13,8 @@ const Cautious = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

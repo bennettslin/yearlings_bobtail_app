@@ -13,7 +13,8 @@ const ApartmentPlant = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

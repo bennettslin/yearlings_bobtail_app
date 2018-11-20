@@ -13,7 +13,8 @@ const Present = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

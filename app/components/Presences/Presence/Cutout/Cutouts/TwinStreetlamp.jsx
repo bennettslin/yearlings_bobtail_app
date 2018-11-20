@@ -13,7 +13,8 @@ const TwinStreetlamp = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

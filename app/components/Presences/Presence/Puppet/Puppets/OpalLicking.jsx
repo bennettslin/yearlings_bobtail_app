@@ -13,7 +13,8 @@ const OpalLicking = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

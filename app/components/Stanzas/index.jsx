@@ -21,7 +21,8 @@ const propTypes = {
         songStanzaConfigs,
         lastUnitDotCardIndex,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         return songStanzaConfigs.length && (
             <div className={cx(

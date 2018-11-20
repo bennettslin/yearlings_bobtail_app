@@ -13,7 +13,8 @@ const ShoreCarnival = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

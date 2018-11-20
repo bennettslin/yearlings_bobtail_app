@@ -13,7 +13,8 @@ const PettingStanding = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const TaiwanHouseNear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

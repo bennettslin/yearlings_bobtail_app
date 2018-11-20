@@ -13,7 +13,8 @@ const InfantNursing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

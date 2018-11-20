@@ -13,7 +13,8 @@ const Quipping = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

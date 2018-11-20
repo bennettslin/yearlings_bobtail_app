@@ -13,7 +13,8 @@ const RickshawTown = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const NohoSchoolhouse = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

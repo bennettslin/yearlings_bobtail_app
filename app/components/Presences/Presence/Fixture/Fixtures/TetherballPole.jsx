@@ -13,7 +13,8 @@ const TetherballPole = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

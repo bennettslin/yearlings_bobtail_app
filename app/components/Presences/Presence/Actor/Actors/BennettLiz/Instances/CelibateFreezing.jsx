@@ -13,7 +13,8 @@ const CelibateFreezing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

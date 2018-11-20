@@ -13,7 +13,8 @@ const Sheepish = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

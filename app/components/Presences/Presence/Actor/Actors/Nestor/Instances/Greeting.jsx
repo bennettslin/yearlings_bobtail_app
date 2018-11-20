@@ -13,7 +13,8 @@ const Greeting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

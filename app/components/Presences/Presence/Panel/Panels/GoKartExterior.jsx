@@ -13,7 +13,8 @@ const GoKartExterior = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

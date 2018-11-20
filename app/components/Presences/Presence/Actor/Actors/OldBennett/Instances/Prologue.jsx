@@ -13,7 +13,8 @@ const Prologue = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

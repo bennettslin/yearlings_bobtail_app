@@ -13,7 +13,8 @@ const BennettOceanFloor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

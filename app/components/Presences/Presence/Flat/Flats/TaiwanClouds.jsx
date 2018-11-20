@@ -13,7 +13,8 @@ const TaiwanClouds = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const TrafficLight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

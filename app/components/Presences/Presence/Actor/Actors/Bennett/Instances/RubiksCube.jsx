@@ -13,7 +13,8 @@ const RubiksCube = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

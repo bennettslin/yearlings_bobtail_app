@@ -13,7 +13,8 @@ const Campanile = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

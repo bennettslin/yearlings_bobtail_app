@@ -13,7 +13,8 @@ const ResidentialMiddleLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

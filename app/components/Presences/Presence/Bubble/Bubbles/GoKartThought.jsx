@@ -13,7 +13,8 @@ const GoKartThought = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

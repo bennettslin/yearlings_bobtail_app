@@ -12,11 +12,15 @@ export const setAppMounted = (appMounted = false) => ({
 
 export const setCanPlayThroughs = (canPlayThroughs = 0) => {
     // This is a bit number.
-    return { type: CAN_PLAY_THROUGHS,
-        payload: canPlayThroughs }
+    return {
+        type: CAN_PLAY_THROUGHS,
+        payload: canPlayThroughs
+    }
 }
 
 export const setIsScoreLoaded = (isScoreLoaded = false) => {
-    return { type: IS_SCORE_LOADED,
-        payload: isScoreLoaded }
+    return {
+        type: IS_SCORE_LOADED,
+        payload: isScoreLoaded
+    }
 }

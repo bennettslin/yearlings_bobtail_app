@@ -13,7 +13,8 @@ const CatholicIdea = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

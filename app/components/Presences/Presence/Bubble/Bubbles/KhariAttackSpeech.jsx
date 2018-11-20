@@ -13,7 +13,8 @@ const KhariAttackSpeech = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

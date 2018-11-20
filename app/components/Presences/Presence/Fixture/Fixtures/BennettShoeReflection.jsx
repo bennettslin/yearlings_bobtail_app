@@ -13,7 +13,8 @@ const BennettShoeReflection = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -23,7 +23,8 @@ const propTypes = {
         stanzaConfig,
         isLastStanza,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const {
             stanzaUnitIndices

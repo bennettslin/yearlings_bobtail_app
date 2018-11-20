@@ -13,7 +13,8 @@ const Bathing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

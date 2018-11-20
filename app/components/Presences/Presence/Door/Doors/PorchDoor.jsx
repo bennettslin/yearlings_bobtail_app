@@ -13,7 +13,8 @@ const PorchDoor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

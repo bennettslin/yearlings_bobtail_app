@@ -13,7 +13,8 @@ const Watching = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Earth = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

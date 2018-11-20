@@ -13,7 +13,8 @@ const Corkboard = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

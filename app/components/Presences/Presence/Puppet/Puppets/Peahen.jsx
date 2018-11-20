@@ -13,7 +13,8 @@ const Peahen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

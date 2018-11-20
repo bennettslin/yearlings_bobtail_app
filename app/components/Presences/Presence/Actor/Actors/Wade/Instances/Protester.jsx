@@ -13,7 +13,8 @@ const Protester = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

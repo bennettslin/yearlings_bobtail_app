@@ -13,7 +13,8 @@ const GoKartThoughtBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

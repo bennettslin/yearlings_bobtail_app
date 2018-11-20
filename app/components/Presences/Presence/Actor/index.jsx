@@ -170,7 +170,8 @@ const Actor = ({
     nameKey,
     instanceKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const ActorComponent = ACTORS_MAP[nameKey]
 

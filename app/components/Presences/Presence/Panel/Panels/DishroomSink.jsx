@@ -13,7 +13,8 @@ const DishroomSink = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

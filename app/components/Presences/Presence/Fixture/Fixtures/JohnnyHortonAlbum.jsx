@@ -13,7 +13,8 @@ const JohnnyHortonAlbum = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

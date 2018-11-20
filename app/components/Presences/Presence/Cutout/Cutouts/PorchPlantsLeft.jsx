@@ -13,7 +13,8 @@ const PorchPlantsLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

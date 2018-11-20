@@ -13,7 +13,8 @@ const FinalDream = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

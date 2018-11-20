@@ -13,7 +13,8 @@ const Defending = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

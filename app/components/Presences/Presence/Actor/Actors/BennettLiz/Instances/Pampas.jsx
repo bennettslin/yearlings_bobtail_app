@@ -13,7 +13,8 @@ const Pampas = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

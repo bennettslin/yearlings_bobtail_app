@@ -13,7 +13,8 @@ const VanNuysLogo = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

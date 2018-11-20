@@ -1,6 +1,8 @@
 // For dev purposes. Calculate progress completed and left to do on tasks.
 
-import { addDays, format } from 'date-fns'
+import {
+    addDays, format
+} from 'date-fns'
 
 /**
  * Assume 3 hours per weekday, and 15 hours per weekend.
@@ -14,13 +16,17 @@ const WORK_HOURS_IN_DAY = 36 / 7,
 export default {
 
     hasRemainingHours(task) {
-        const { workedHours,
+        const {
+            workedHours,
             neededHours,
-            subtasks } = task
+            subtasks
+        } = task
         return workedHours < neededHours ||
             (subtasks && subtasks.reduce((hasRemainingHours, subtask) => {
-                const { workedHours,
-                    neededHours } = subtask
+                const {
+                    workedHours,
+                    neededHours
+                } = subtask
                 return workedHours < neededHours || hasRemainingHours
             }, false))
     },
@@ -111,9 +117,11 @@ export default {
 
     getRemainingTimeStringFromHours(hours = 0) {
         const remainingTimeObject = this._getRemainingTimeFromHours(hours),
-            { months,
+            {
+                months,
                 weeks,
-                days } = remainingTimeObject
+                days
+            } = remainingTimeObject
 
         if (!months && !weeks && !days) {
             return '0d'

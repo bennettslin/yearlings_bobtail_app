@@ -13,7 +13,8 @@ const GingerbreadPrison = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

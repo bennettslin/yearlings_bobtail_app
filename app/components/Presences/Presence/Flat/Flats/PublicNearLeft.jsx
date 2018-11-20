@@ -13,7 +13,8 @@ const PublicNearLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

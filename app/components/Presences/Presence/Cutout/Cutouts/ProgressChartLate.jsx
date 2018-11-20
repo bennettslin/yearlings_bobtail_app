@@ -13,7 +13,8 @@ const ProgressChartLate = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

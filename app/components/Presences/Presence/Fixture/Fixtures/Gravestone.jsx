@@ -13,7 +13,8 @@ const Gravestone = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

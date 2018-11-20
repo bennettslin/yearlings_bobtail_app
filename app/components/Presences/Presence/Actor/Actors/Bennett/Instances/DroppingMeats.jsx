@@ -13,7 +13,8 @@ const DroppingMeats = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

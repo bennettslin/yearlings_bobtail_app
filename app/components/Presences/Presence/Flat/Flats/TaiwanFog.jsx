@@ -13,7 +13,8 @@ const TaiwanFog = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const DisposingCondom = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

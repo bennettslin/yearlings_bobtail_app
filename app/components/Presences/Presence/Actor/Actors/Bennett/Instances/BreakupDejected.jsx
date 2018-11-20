@@ -13,7 +13,8 @@ const BreakupDejected = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

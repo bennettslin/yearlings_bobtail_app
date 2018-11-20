@@ -13,7 +13,8 @@ const Waiting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

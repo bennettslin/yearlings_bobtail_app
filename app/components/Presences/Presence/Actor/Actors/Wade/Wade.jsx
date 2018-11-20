@@ -38,7 +38,8 @@ const Wade = ({
     className,
     instanceKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const InstanceComponent = INSTANCES_MAP[instanceKey]
 

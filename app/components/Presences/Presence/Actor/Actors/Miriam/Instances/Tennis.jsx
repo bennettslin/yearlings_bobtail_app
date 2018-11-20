@@ -13,7 +13,8 @@ const Tennis = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

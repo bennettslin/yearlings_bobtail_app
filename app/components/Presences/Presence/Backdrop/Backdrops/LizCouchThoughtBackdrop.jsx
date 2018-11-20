@@ -13,7 +13,8 @@ const LizCouchThoughtBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

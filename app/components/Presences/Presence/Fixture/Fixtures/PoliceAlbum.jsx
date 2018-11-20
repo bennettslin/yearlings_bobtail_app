@@ -13,7 +13,8 @@ const PoliceAlbum = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

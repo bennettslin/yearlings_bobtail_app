@@ -13,7 +13,8 @@ const BennettMat = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

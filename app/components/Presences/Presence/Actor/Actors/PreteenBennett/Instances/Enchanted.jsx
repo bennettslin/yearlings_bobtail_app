@@ -13,7 +13,8 @@ const Enchanted = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

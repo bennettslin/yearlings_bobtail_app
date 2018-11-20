@@ -13,7 +13,8 @@ const CrowdSideNear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

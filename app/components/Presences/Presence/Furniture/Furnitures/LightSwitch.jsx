@@ -13,7 +13,8 @@ const LightSwitch = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

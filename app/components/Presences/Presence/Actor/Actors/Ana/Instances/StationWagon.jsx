@@ -13,7 +13,8 @@ const StationWagon = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

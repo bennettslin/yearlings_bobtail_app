@@ -13,7 +13,8 @@ const CodeBox = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

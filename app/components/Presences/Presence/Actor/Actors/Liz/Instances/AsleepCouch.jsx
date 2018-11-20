@@ -13,7 +13,8 @@ const AsleepCouch = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

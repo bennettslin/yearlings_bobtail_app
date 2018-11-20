@@ -13,7 +13,8 @@ const BuoyFloat = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

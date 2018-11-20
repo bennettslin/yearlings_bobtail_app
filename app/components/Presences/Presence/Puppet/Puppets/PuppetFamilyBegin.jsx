@@ -13,7 +13,8 @@ const PuppetFamilyBegin = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const ClubDoor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

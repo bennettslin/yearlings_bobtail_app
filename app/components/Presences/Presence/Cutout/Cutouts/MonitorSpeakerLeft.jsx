@@ -13,7 +13,8 @@ const MonitorSpeakerLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

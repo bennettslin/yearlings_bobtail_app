@@ -13,7 +13,8 @@ const TowelRack = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

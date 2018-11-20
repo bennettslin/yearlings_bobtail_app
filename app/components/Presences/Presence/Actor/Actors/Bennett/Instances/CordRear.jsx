@@ -13,7 +13,8 @@ const CordRear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const AbbeyRoad = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

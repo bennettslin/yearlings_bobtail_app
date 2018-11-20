@@ -13,7 +13,8 @@ const CinemaThoughts = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

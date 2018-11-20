@@ -13,7 +13,8 @@ const GarbageBag = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

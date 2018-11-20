@@ -13,7 +13,8 @@ const Clipboard = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

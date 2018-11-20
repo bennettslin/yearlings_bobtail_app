@@ -13,7 +13,8 @@ const LizBlindsOpen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

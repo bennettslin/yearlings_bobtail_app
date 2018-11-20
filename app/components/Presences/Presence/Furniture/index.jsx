@@ -102,7 +102,8 @@ const Furniture = ({
     className,
     nameKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const FurnitureComponent = FURNITURES_MAP[nameKey]
 

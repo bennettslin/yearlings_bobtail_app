@@ -13,7 +13,8 @@ const Attic = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

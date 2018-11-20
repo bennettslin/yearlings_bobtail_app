@@ -13,7 +13,8 @@ const BennettOdinRickshaw = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

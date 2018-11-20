@@ -13,7 +13,8 @@ const PuppetReatta = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

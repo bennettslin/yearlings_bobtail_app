@@ -13,7 +13,8 @@ const BassCaseOpen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

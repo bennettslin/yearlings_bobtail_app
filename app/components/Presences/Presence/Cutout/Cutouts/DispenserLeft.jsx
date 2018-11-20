@@ -13,7 +13,8 @@ const DispenserLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

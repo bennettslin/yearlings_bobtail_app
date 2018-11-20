@@ -13,7 +13,8 @@ const PublicNearRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

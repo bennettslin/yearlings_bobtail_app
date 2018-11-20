@@ -13,7 +13,8 @@ const InfantCurious = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

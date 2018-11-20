@@ -13,7 +13,8 @@ const PublicFarLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const DateEnding = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

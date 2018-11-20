@@ -13,7 +13,8 @@ const Guitar = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

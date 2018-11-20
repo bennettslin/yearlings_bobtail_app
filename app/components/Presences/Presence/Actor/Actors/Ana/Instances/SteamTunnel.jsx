@@ -13,7 +13,8 @@ const SteamTunnel = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

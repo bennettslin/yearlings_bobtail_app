@@ -13,7 +13,8 @@ const OaklandHouseLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

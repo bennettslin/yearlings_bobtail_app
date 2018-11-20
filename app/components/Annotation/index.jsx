@@ -141,7 +141,8 @@ const propTypes = {
         handleTitleClick,
         handleContainerClick,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const {
             inCarousel,

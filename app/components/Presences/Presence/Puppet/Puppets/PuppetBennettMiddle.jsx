@@ -13,7 +13,8 @@ const PuppetBennettMiddle = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const DryingTears = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

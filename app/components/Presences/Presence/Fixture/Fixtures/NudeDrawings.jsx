@@ -13,7 +13,8 @@ const NudeDrawings = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const BuddhaShrine = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

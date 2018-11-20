@@ -13,7 +13,8 @@ const SolicitingOpinion = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

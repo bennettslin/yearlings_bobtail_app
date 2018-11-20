@@ -13,7 +13,8 @@ const FireHydrant = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

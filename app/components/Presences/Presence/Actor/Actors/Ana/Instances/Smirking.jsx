@@ -13,7 +13,8 @@ const Smirking = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

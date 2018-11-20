@@ -13,7 +13,8 @@ const Painting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

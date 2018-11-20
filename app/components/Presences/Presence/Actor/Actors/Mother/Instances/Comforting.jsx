@@ -13,7 +13,8 @@ const Comforting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

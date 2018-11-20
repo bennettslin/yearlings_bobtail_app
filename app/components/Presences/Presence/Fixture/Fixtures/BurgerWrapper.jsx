@@ -13,7 +13,8 @@ const BurgerWrapper = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

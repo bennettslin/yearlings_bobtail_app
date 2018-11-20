@@ -13,7 +13,8 @@ const Keyboard = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const HopelesslyCrushed = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

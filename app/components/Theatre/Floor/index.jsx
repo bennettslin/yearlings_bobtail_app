@@ -90,8 +90,10 @@ class Floor extends Component {
                     viewBoxHeight={floorHeight}
                 >
                     {seatingRowCoordinates.map((currentRowCoordinates, rowIndex) => {
-                        const { length: rowHeight,
-                                position: rowTop } = currentRowCoordinates,
+                        const {
+                                length: rowHeight,
+                                position: rowTop
+                            } = currentRowCoordinates,
 
                             seatWidth = rowHeight / SEAT_HEIGHT_TO_WIDTH_RATIO,
 
@@ -142,8 +144,10 @@ class Floor extends Component {
                             >
                                 {seatsArray.map((seat, seatIndex) => {
 
-                                    const { length: seatWidth,
-                                            position: seatLeft } = seat,
+                                    const {
+                                            length: seatWidth,
+                                            position: seatLeft
+                                        } = seat,
 
                                         chairIndex =
                                             seatIndex - centreSeatIndex

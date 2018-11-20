@@ -13,7 +13,8 @@ const ReattaExterior = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

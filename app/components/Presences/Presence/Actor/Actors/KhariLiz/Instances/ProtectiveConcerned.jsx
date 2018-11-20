@@ -13,7 +13,8 @@ const ProtectiveConcerned = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

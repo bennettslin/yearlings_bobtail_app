@@ -13,7 +13,8 @@ const ReassuringEnchanted = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

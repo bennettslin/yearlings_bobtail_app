@@ -13,7 +13,8 @@ const StageMicFar = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

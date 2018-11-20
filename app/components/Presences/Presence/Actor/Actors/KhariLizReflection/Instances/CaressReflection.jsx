@@ -13,7 +13,8 @@ const CaressReflection = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

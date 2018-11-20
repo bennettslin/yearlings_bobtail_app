@@ -13,7 +13,8 @@ const DogsSketchbook = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

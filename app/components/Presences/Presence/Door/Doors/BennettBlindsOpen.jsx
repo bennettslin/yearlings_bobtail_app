@@ -13,7 +13,8 @@ const BennettBlindsOpen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

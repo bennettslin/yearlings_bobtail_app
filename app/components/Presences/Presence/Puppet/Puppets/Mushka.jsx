@@ -13,7 +13,8 @@ const Mushka = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

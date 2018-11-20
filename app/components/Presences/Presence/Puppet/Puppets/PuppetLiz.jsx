@@ -13,7 +13,8 @@ const PuppetLiz = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

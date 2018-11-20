@@ -231,7 +231,8 @@ const Fixture = ({
     className,
     nameKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const FixtureComponent = FIXTURES_MAP[nameKey]
 

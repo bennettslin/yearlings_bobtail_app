@@ -13,7 +13,8 @@ const Dumpster = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

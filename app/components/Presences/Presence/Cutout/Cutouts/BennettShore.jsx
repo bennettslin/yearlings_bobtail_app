@@ -13,7 +13,8 @@ const BennettShore = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

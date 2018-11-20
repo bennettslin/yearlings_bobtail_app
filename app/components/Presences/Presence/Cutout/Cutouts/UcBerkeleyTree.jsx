@@ -13,7 +13,8 @@ const UcBerkeleyTree = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

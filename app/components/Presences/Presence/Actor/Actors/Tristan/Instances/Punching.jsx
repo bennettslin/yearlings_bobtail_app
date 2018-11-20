@@ -13,7 +13,8 @@ const Punching = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

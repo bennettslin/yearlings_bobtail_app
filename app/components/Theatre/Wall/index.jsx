@@ -52,7 +52,8 @@ class Wall extends Component {
                 wallFieldCoordinates
             } = this.props,
 
-            { ceilingHeight,
+            {
+                ceilingHeight,
                 wallHeight,
                 stageHeight,
                 leftWidth,

@@ -13,7 +13,8 @@ const BennettOdinDepths = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

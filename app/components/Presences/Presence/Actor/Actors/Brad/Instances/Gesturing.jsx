@@ -13,7 +13,8 @@ const Gesturing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

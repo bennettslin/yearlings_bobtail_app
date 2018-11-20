@@ -13,7 +13,8 @@ const IvDrip = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const RecordingConsole = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

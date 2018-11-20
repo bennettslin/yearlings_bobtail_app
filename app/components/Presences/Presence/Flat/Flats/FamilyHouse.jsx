@@ -13,7 +13,8 @@ const FamilyHouse = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

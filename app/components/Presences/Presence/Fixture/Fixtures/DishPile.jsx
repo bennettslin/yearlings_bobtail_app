@@ -13,7 +13,8 @@ const DishPile = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

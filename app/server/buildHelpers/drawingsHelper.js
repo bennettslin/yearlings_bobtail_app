@@ -210,8 +210,10 @@ export const _adminFinaliseActors = (album) => {
 
 export const adminRegisterDrawingTasks = (song) => {
 
-    const { actorsWorkedHours,
-        actorsNeededHours } = song
+    const {
+        actorsWorkedHours,
+        actorsNeededHours
+    } = song
 
     if (!song.tasks) {
         song.tasks = []

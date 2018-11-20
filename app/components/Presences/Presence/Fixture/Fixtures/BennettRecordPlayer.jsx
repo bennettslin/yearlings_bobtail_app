@@ -13,7 +13,8 @@ const BennettRecordPlayer = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

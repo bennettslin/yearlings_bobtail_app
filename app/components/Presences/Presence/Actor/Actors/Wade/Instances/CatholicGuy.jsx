@@ -13,7 +13,8 @@ const CatholicGuy = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const LizDefenceSpeech = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

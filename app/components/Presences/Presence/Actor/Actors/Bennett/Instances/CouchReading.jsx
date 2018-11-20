@@ -13,7 +13,8 @@ const CouchReading = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const StJosephsChurch = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

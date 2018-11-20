@@ -13,7 +13,8 @@ const ElCerritoFar = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

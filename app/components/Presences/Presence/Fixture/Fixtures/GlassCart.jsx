@@ -13,7 +13,8 @@ const GlassCart = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

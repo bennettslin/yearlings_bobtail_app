@@ -13,7 +13,8 @@ const CliffGravesNear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

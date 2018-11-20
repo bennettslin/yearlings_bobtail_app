@@ -13,7 +13,8 @@ const VanNuysSchoolBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Gopi = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

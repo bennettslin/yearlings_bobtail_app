@@ -63,8 +63,10 @@ class UnitDot extends Component {
     }
 
     _handleDotButtonClick = (e) => {
-        const { dotStanzaObject,
-                renderedAnnotationIndex } = this.props,
+        const {
+                dotStanzaObject,
+                renderedAnnotationIndex
+            } = this.props,
             { annotationIndex } = dotStanzaObject,
 
             isSelected = annotationIndex === renderedAnnotationIndex
@@ -96,8 +98,10 @@ class UnitDot extends Component {
                 isLyricExpanded
             } = this.props,
 
-            { annotationIndex,
-                dotKeys } = dotStanzaObject,
+            {
+                annotationIndex,
+                dotKeys
+            } = dotStanzaObject,
 
             isAccessed =
                 Boolean(selectedAccessIndex) &&
@@ -150,7 +154,8 @@ const propTypes = {
         isLastUnit,
         setRef,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         return (
             <div

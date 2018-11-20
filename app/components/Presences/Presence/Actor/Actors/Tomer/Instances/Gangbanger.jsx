@@ -13,7 +13,8 @@ const Gangbanger = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

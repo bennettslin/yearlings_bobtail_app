@@ -13,7 +13,8 @@ const Campfire = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

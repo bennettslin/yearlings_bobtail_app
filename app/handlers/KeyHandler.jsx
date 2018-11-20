@@ -4,11 +4,13 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { getSongsAndLoguesCount,
+import {
+    getSongsAndLoguesCount,
     getSongIsLogue,
     getBookColumnIndex,
     getWormholeLink,
-    getAnnotationObject } from 'helpers/dataHelper'
+    getAnnotationObject
+} from 'helpers/dataHelper'
 
 import {
     getKeyName,
@@ -16,7 +18,8 @@ import {
     getShouldHandleOnKeyDown
 } from './keyHelper'
 
-import { ARROW_LEFT,
+import {
+    ARROW_LEFT,
     ARROW_RIGHT,
     ARROW_UP,
     ARROW_DOWN,
@@ -45,11 +48,14 @@ import { ARROW_LEFT,
     SCENE_REWIND_KEY,
     SCENE_FORWARD_KEY,
     TIPS_TOGGLE_KEY,
-    TITLE_TOGGLE_KEY } from 'constants/access'
+    TITLE_TOGGLE_KEY
+} from 'constants/access'
 import { ALL_DOT_KEYS } from 'constants/dots'
-import { SHOWN,
+import {
+    SHOWN,
     OVERVIEW_OPTIONS,
-    TIPS_OPTIONS } from 'constants/options'
+    TIPS_OPTIONS
+} from 'constants/options'
 
 class KeyHandler extends Component {
 
@@ -242,7 +248,8 @@ class KeyHandler extends Component {
 
     _routeNavigation = (e, keyName) => {
 
-        const { isHeightlessLyricColumn,
+        const {
+                isHeightlessLyricColumn,
                 isLyricExpanded,
                 interactivatedVerseIndex,
                 selectedScoreIndex,
@@ -252,7 +259,8 @@ class KeyHandler extends Component {
                 selectedDotsIndex,
                 selectedCarouselNavIndex,
 
-                eventHandlers } = this.props,
+                eventHandlers
+            } = this.props,
 
             isLogue = getSongIsLogue(selectedSongIndex),
 
@@ -278,8 +286,10 @@ class KeyHandler extends Component {
 
             // We're in annotation.
             } else if (selectedAnnotationIndex) {
-                ({ annotationIndexWasAccessed,
-                    keyWasRegistered } = this._handleAnnotationNavigation(e, keyName))
+                ({
+                    annotationIndexWasAccessed,
+                    keyWasRegistered
+                } = this._handleAnnotationNavigation(e, keyName))
 
             // We're in dots section.
             } else if (selectedDotsIndex) {
@@ -292,8 +302,10 @@ class KeyHandler extends Component {
                 !isVerseInteractivated
             ) {
 
-                ({ annotationIndexWasAccessed,
-                    keyWasRegistered } = this._handleNavNavigation(e, keyName))
+                ({
+                    annotationIndexWasAccessed,
+                    keyWasRegistered
+                } = this._handleNavNavigation(e, keyName))
 
             // We're in lyrics section.
             } else if (!isHeightlessLyricColumn || isLyricExpanded) {
@@ -304,8 +316,10 @@ class KeyHandler extends Component {
             }
         }
 
-        return { annotationIndexWasAccessed,
-            keyWasRegistered }
+        return {
+            annotationIndexWasAccessed,
+            keyWasRegistered
+        }
     }
 
     _handleAnnotationNavigation = (e, keyName) => {
@@ -337,8 +351,10 @@ class KeyHandler extends Component {
                 break
             }
             case ENTER: {
-                const { selectedSongIndex,
-                        selectedAnnotationIndex } = props,
+                const {
+                        selectedSongIndex,
+                        selectedAnnotationIndex
+                    } = props,
 
                     annotationObject = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
 
@@ -390,14 +406,18 @@ class KeyHandler extends Component {
             this._determineVerseBarsWithParameters()
         }
 
-        return { annotationIndexWasAccessed,
-            keyWasRegistered }
+        return {
+            annotationIndexWasAccessed,
+            keyWasRegistered
+        }
     }
 
 
     _handleDotsNavigation = (e, keyName) => {
-        const { selectedAccessIndex,
-            eventHandlers } = this.props
+        const {
+            selectedAccessIndex,
+            eventHandlers
+        } = this.props
 
         if (selectedAccessIndex) {
             const dotKeysCount = ALL_DOT_KEYS.length
@@ -441,9 +461,11 @@ class KeyHandler extends Component {
     }
 
     _handleNavNavigation = (e, keyName) => {
-        const { selectedAccessIndex,
+        const {
+            selectedAccessIndex,
             interactivatedVerseIndex,
-            eventHandlers } = this.props
+            eventHandlers
+        } = this.props
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = true
@@ -491,8 +513,10 @@ class KeyHandler extends Component {
             }
         }
 
-        return { annotationIndexWasAccessed,
-            keyWasRegistered }
+        return {
+            annotationIndexWasAccessed,
+            keyWasRegistered
+        }
     }
 
     _handleLyricNavigation = (e, keyName) => {

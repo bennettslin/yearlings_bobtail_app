@@ -41,7 +41,9 @@ class SliderVerseManager extends Component {
         })
     }
 
-    touchSliderBegin({ clientRect, clientX }) {
+    touchSliderBegin({
+        clientRect, clientX
+    }) {
 
         const
             sliderLeft = clientRect.left,

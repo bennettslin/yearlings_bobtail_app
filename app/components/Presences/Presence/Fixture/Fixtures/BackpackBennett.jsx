@@ -13,7 +13,8 @@ const BackpackBennett = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

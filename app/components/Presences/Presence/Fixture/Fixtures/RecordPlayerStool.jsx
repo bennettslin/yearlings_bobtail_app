@@ -13,7 +13,8 @@ const RecordPlayerStool = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

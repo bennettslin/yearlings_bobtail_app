@@ -13,7 +13,8 @@ const OceanFloorFar = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

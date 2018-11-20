@@ -13,7 +13,8 @@ const Stalactites = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

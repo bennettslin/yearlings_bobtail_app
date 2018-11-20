@@ -13,7 +13,8 @@ const SobbingShielding = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const CommercialFarLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const CrackedPicture = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

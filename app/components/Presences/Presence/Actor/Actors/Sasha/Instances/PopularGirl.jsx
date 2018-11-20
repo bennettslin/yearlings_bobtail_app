@@ -13,7 +13,8 @@ const PopularGirl = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -162,7 +162,8 @@ const lyricColumnViewPropTypes = {
         parent__shown,
         handleTransition,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const verseBarProps = {
             handleVerseBarSelect,

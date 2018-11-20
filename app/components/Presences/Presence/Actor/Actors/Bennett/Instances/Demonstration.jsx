@@ -13,7 +13,8 @@ const Demonstration = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

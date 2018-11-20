@@ -13,7 +13,8 @@ const WaitingRoomPlant = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

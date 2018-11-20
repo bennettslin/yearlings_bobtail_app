@@ -13,7 +13,8 @@ const Carrying = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

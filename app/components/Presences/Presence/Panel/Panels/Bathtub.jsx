@@ -13,7 +13,8 @@ const Bathtub = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

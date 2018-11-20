@@ -13,7 +13,8 @@ const FridgeDrawings = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

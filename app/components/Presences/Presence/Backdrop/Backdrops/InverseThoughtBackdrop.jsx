@@ -13,7 +13,8 @@ const InverseThoughtBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

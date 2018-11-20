@@ -5,7 +5,9 @@ import {
 } from 'constants/scene'
 
 export const getPathString = (polygonPoints) => {
-    return polygonPoints.map(({ x, y }, index) => {
+    return polygonPoints.map(({
+        x, y
+    }, index) => {
 
         // First "M"oveTo, then "L"ine.
         const command = index === 0 ? 'M' : 'L'
@@ -19,7 +21,9 @@ export const getPathString = (polygonPoints) => {
         .join(' ')
 }
 
-const _getPolygonPoint = ({ x, y }) => {
+const _getPolygonPoint = ({
+    x, y
+}) => {
     const xPoint = x,
         yPoint = y
 
@@ -35,7 +39,9 @@ const _getPolygonPointsForFrontFace = ({
     isFloor
 
 }) => {
-    const { tile: tl, base: bs } = cubeCorners,
+    const {
+            tile: tl, base: bs
+        } = cubeCorners,
 
         cornerOrder = isFloor ?
             [tl.left.front, tl.right.front, bs.right.front, bs.left.front] :
@@ -72,7 +78,9 @@ const _getPolygonPointsForSideFace = ({
     isFloor
 
 }) => {
-    const { tile: tl, base: bs } = cubeCorners
+    const {
+        tile: tl, base: bs
+    } = cubeCorners
 
     // Direction is slant direction.
     let direction = slantDirection,

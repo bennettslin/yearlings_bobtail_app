@@ -1,6 +1,8 @@
 // Container for text anchor.
 
-import React, { Component, Fragment } from 'react'
+import React, {
+    Component, Fragment
+} from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -148,7 +150,8 @@ class TextLyricAnchor extends Component {
                 dotKeys,
                 showAccessInPopupAnnotation,
 
-                ...other } = this.props,
+                ...other
+            } = this.props,
 
             isSelected = annotationIndex === renderedAnnotationIndex,
 

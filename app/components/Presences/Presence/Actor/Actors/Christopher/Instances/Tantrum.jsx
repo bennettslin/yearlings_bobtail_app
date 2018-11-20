@@ -13,7 +13,8 @@ const Tantrum = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const UsherLooking = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

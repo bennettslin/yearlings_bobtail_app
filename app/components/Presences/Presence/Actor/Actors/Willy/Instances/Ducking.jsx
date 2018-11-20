@@ -13,7 +13,8 @@ const Ducking = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const OceanCaveExterior = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -87,7 +87,8 @@ const Puppet = ({
     className,
     nameKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const PuppetComponent = PUPPETS_MAP[nameKey]
 

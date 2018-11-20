@@ -13,7 +13,8 @@ const StageLights = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

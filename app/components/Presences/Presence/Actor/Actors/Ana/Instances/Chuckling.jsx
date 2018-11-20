@@ -13,7 +13,8 @@ const Chuckling = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

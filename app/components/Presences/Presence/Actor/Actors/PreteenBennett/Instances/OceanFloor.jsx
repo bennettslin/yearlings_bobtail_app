@@ -13,7 +13,8 @@ const OceanFloor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

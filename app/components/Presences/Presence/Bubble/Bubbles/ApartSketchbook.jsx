@@ -13,7 +13,8 @@ const ApartSketchbook = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

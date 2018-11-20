@@ -13,7 +13,8 @@ const CliffGravesFar = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

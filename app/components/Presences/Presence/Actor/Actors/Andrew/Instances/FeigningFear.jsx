@@ -13,7 +13,8 @@ const FeigningFear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const PuppetFamilyMiddle = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

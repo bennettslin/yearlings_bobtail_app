@@ -13,7 +13,8 @@ const PampasFar = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -6,7 +6,9 @@ import { connect } from 'react-redux'
 
 import Root from '../components/Root'
 
-import { getSongIsLogue, getAnnotationObject } from 'helpers/dataHelper'
+import {
+    getSongIsLogue, getAnnotationObject
+} from 'helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
 import { getClientX } from 'helpers/domHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -18,8 +20,10 @@ import {
 import { REFERENCE } from 'constants/dots'
 import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
 
-import { DISABLED,
-    OVERVIEW_OPTIONS } from 'constants/options'
+import {
+    DISABLED,
+    OVERVIEW_OPTIONS
+} from 'constants/options'
 
 import {
     CAROUSEL_SCROLL,
@@ -412,7 +416,9 @@ class EventHandler extends Component {
                 { scrollTop } = this.myLyricElement
 
             if (deltaY > 0) {
-                const { scrollHeight, clientHeight } = this.myLyricElement
+                const {
+                    scrollHeight, clientHeight
+                } = this.myLyricElement
 
                 if (scrollTop < scrollHeight - clientHeight) {
                     hasRoomToScroll = true
@@ -708,7 +714,9 @@ class EventHandler extends Component {
 
         if (!isNaN(clientX)) {
             this.stopPropagation(e)
-            this.props.touchSliderBegin({ clientRect, clientX })
+            this.props.touchSliderBegin({
+                clientRect, clientX
+            })
         }
 
         this.props.interactivateVerse()
@@ -832,9 +840,11 @@ class EventHandler extends Component {
 
     }) {
 
-        const { selectedScoreIndex,
+        const {
+            selectedScoreIndex,
             selectedTitleIndex,
-            selectedWikiIndex } = this.props
+            selectedWikiIndex
+        } = this.props
 
         if (!leaveOpenPopups) {
 

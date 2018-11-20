@@ -13,7 +13,8 @@ const Stoic = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

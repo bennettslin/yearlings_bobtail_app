@@ -13,7 +13,8 @@ const BloodyTowel = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

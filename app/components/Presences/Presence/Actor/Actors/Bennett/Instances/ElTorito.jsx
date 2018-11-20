@@ -13,7 +13,8 @@ const ElTorito = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

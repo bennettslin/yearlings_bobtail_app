@@ -13,7 +13,8 @@ const ElCerritoNear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

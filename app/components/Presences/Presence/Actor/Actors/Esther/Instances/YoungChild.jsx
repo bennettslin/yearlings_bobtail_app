@@ -13,7 +13,8 @@ const YoungChild = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

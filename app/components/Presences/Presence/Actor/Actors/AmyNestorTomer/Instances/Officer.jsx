@@ -13,7 +13,8 @@ const Officer = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

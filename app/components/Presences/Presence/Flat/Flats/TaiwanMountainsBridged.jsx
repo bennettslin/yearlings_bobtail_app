@@ -13,7 +13,8 @@ const TaiwanMountainsBridged = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Weeping = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

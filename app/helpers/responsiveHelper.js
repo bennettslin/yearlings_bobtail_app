@@ -1,5 +1,8 @@
-import { HAS_SIDE_CARDS, IS_DOUBLESPEAKER } from 'constants/lyrics'
-import { PHONE_CLASS,
+import {
+    HAS_SIDE_CARDS, IS_DOUBLESPEAKER
+} from 'constants/lyrics'
+import {
+    PHONE_CLASS,
     LS_MINI_CLASS,
     TABLET_CLASS,
     LS_LAPTOP_CLASS,
@@ -23,7 +26,8 @@ import { PHONE_CLASS,
     TWO_ROW_MENU_BREAKPOINT_MINI,
 
     HIDDEN_NAV_MIN,
-    WIKI_SIDE_PADDING_TOTAL } from 'constants/responsive'
+    WIKI_SIDE_PADDING_TOTAL
+} from 'constants/responsive'
 
 import { getSongObject } from './dataHelper'
 
@@ -74,7 +78,9 @@ export const getIsTabletOrMini = (deviceIndex) => {
     return _getIsTablet(deviceIndex) || _getIsMini(deviceIndex)
 }
 
-export const getShowSingleBookColumn = ({ deviceIndex, windowWidth }) => {
+export const getShowSingleBookColumn = ({
+    deviceIndex, windowWidth
+}) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
 
     if (!getIsMonitor(deviceIndex) && !_getIsTablet(deviceIndex)) {
@@ -87,16 +93,20 @@ export const getShowSingleBookColumn = ({ deviceIndex, windowWidth }) => {
 }
 
 const _getShowShrunkNavIconForDeviceObject = (windowWidth, deviceObject) => {
-    const { doubleColumnStaticBreakpoint,
+    const {
+        doubleColumnStaticBreakpoint,
         doubleColumnShrinkBreakpoint,
-        singleColumnStaticBreakpoint } = deviceObject
+        singleColumnStaticBreakpoint
+    } = deviceObject
 
     return windowWidth < singleColumnStaticBreakpoint ||
         ((doubleColumnShrinkBreakpoint && windowWidth >= doubleColumnShrinkBreakpoint) &&
         (doubleColumnStaticBreakpoint && windowWidth < doubleColumnStaticBreakpoint))
 }
 
-export const getShowShrunkNavIcon = ({ deviceIndex, windowWidth }) => {
+export const getShowShrunkNavIcon = ({
+    deviceIndex, windowWidth
+}) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex],
         isPhoneOrMini = getIsPhone(deviceIndex) || _getIsMini(deviceIndex)
 
@@ -117,8 +127,10 @@ export const getIsToggleInOverview = (deviceIndex) => {
 
 export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
     const selectedSong = getSongObject(songIndex),
-        { [HAS_SIDE_CARDS]: hasSideCards,
-            [IS_DOUBLESPEAKER]: isDoublespeaker } = selectedSong
+        {
+            [HAS_SIDE_CARDS]: hasSideCards,
+            [IS_DOUBLESPEAKER]: isDoublespeaker
+        } = selectedSong
 
     // Applies to Uncanny Valley Boy.
     if (hasSideCards && !isDoublespeaker) {
@@ -196,7 +208,9 @@ const _getIsScoresTipsInMainForDeviceObject = (windowWidth, deviceObject) => {
     return windowWidth < isScoresTipsInMainBreakpoint
 }
 
-export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
+export const getIsScoresTipsInMain = ({
+    deviceIndex, windowWidth
+}) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
 
     if (getIsMonitor(deviceIndex) || _getIsTablet(deviceIndex)) {
@@ -206,7 +220,9 @@ export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
     }
 }
 
-export const getIsTwoRowMenu = ({ deviceIndex, windowWidth }) => {
+export const getIsTwoRowMenu = ({
+    deviceIndex, windowWidth
+}) => {
 
     const isDesktop = getIsDesktop(deviceIndex),
         twoRowMenuBreakpoint = isDesktop ?
@@ -240,7 +256,9 @@ export const getLyricSectionRect = ({
          */
         top = windowHeight * (1 - LS_HEIGHT_LYRIC_COLLAPSED)
 
-    } else if (getIsTwoRowMenu({ deviceIndex, windowWidth })) {
+    } else if (getIsTwoRowMenu({
+        deviceIndex, windowWidth
+    })) {
 
         if (_getIsMini(deviceIndex)) {
             top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
@@ -260,7 +278,9 @@ export const getLyricSectionRect = ({
     }
 }
 
-export const getIsMobileWiki = ({ deviceIndex, windowWidth }) => {
+export const getIsMobileWiki = ({
+    deviceIndex, windowWidth
+}) => {
 
     // If phone or mini, show mobile wiki.
     if (getIsPhone(deviceIndex) || _getIsMini(deviceIndex)) {

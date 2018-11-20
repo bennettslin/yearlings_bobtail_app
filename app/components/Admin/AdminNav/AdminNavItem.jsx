@@ -20,7 +20,8 @@ const AdminNavItem = ({
     hasSelectedSong,
     selectedSongIndex,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const isSelected = isToggle ? hasSelectedSong : selectedSongIndex === index,
         navItemProps = {

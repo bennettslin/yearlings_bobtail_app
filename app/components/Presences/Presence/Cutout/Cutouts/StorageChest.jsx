@@ -13,7 +13,8 @@ const StorageChest = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

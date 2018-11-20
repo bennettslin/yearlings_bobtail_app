@@ -13,7 +13,8 @@ const LizDoor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

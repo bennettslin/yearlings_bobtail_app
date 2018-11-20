@@ -13,7 +13,8 @@ const HospitalMattressLowered = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

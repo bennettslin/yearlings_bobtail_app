@@ -13,7 +13,8 @@ const Puzzled = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Squeezing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

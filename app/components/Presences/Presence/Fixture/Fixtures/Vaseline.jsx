@@ -13,7 +13,8 @@ const Vaseline = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

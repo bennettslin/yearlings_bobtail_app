@@ -100,10 +100,12 @@ class Popup extends Component {
                     isFullSize && 'Popup__fullSize',
 
                     // For animation styling.
-                    { 'Popup__notInOverlay': !displaysInOverlay,
+                    {
+                        'Popup__notInOverlay': !displaysInOverlay,
 
                         'flexCentreContainer': !noFlexCentre,
-                        'absoluteFullContainer': !noAbsoluteFull },
+                        'absoluteFullContainer': !noAbsoluteFull
+                    },
 
                     className
                 )}

@@ -13,7 +13,8 @@ const TrayCart = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

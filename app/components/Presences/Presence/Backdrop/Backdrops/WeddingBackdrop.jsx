@@ -13,7 +13,8 @@ const WeddingBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

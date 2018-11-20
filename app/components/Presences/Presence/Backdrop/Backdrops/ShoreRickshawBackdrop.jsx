@@ -13,7 +13,8 @@ const ShoreRickshawBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

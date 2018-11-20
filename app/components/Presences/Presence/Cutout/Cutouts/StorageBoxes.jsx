@@ -13,7 +13,8 @@ const StorageBoxes = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

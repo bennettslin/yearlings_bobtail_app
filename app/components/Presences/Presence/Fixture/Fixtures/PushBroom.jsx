@@ -13,7 +13,8 @@ const PushBroom = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

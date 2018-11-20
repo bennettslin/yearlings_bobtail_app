@@ -13,7 +13,8 @@ const SiblingThought = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

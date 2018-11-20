@@ -13,7 +13,8 @@ const Caress = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

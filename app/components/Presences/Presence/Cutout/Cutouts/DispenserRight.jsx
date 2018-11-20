@@ -13,7 +13,8 @@ const DispenserRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

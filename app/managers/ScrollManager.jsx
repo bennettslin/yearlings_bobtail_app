@@ -86,7 +86,9 @@ class ScrollManager extends Component {
 
     _setRef(
         scrollClass,
-        { node, index }
+        {
+            node, index
+        }
     ) {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return

@@ -13,7 +13,8 @@ const DeathbedThoughtPanel = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

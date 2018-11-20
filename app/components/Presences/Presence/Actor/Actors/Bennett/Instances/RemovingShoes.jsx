@@ -13,7 +13,8 @@ const RemovingShoes = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

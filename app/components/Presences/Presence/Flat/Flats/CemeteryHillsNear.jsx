@@ -13,7 +13,8 @@ const CemeteryHillsNear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

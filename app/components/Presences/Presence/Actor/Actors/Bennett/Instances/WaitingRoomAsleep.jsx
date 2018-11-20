@@ -13,7 +13,8 @@ const WaitingRoomAsleep = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

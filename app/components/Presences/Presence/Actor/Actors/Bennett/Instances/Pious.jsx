@@ -13,7 +13,8 @@ const Pious = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const CharmedSchoolbus = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

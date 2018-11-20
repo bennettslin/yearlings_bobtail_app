@@ -53,8 +53,10 @@ class NavButton extends Component {
     }
 
     _handleButtonClick = (e) => {
-        const { handleButtonClick,
-            songIndex } = this.props
+        const {
+            handleButtonClick,
+            songIndex
+        } = this.props
 
         // Select song or logue.
         if (!isNaN(songIndex)) {

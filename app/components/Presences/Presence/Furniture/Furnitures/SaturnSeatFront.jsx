@@ -13,7 +13,8 @@ const SaturnSeatFront = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

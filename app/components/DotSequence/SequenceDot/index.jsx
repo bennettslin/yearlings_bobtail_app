@@ -23,7 +23,8 @@ const dotPropTypes = {
         inAnnotationCard,
         inTextAnchor,
 
-        ...other }) => (
+        ...other
+    }) => (
         <Dot {...other}
             showFieldOnly
             className={cx(

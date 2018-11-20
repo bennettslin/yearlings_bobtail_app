@@ -13,7 +13,8 @@ const PharmacyThoughtBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

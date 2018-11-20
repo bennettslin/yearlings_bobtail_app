@@ -13,7 +13,8 @@ const Mingling = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Cliff = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

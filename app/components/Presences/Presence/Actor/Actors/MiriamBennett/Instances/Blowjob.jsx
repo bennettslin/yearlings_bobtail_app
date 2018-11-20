@@ -13,7 +13,8 @@ const Blowjob = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

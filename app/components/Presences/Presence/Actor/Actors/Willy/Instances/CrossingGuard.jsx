@@ -13,7 +13,8 @@ const CrossingGuard = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

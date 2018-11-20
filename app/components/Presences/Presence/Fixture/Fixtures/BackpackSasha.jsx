@@ -13,7 +13,8 @@ const BackpackSasha = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

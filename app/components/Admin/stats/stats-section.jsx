@@ -1,9 +1,11 @@
 import React from 'react'
-import { LyricDotStanzasRow,
+import {
+    LyricDotStanzasRow,
     LyricsWordCountRow,
     AnnotationsCountRow,
     WordsPerAnnotationRow,
-    StatRowView } from './stat-row'
+    StatRowView
+} from './stat-row'
 
 /*************
  * CONTAINER *

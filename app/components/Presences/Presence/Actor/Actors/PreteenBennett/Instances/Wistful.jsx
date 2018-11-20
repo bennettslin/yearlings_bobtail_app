@@ -13,7 +13,8 @@ const Wistful = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

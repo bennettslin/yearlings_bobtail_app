@@ -13,7 +13,8 @@ const RoadPast = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

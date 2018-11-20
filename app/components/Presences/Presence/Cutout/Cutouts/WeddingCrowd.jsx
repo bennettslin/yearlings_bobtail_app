@@ -13,7 +13,8 @@ const WeddingCrowd = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

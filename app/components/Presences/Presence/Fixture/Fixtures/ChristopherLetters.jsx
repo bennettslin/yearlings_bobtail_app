@@ -13,7 +13,8 @@ const ChristopherLetters = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

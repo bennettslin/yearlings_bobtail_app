@@ -13,7 +13,8 @@ const NohoSchoolBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

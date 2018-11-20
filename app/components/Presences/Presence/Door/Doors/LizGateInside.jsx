@@ -13,7 +13,8 @@ const LizGateInside = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Alley = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

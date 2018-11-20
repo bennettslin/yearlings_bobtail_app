@@ -47,7 +47,8 @@ const overviewPopupPropTypes = {
         selectedTipsIndex,
         handlePopupContainerClick,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const isLogue = getSongIsLogue(renderedSongIndex),
 

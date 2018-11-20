@@ -74,9 +74,11 @@ class WindowManager extends Component {
 
     _windowResize = (e) => {
         const { selectedSongIndex } = this.props,
-            { deviceIndex,
+            {
+                deviceIndex,
                 windowHeight,
-                windowWidth } = resizeWindow(e ? e.target : undefined),
+                windowWidth
+            } = resizeWindow(e ? e.target : undefined),
 
             isLyricExpandable = getIsLyricExpandable(deviceIndex),
 

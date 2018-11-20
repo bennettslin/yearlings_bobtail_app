@@ -13,7 +13,8 @@ const Peacock = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

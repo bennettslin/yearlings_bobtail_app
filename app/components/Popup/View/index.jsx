@@ -48,10 +48,12 @@ const popupViewPropTypes = {
                 'PopupView',
                 `${popupName}PopupView`,
 
-                { 'PopupView__bounceAnimate': bounceAnimate,
+                {
+                    'PopupView__bounceAnimate': bounceAnimate,
                     'PopupView__shrinkAnimate': shrinkAnimate,
                     'PopupView__cardSize': isCardSize,
-                    'PopupView__fullSize': isFullSize }
+                    'PopupView__fullSize': isFullSize
+                }
             )}>
                 {showClose &&
                 <PopupViewButton

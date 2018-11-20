@@ -13,7 +13,8 @@ const Gate = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

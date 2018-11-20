@@ -13,7 +13,8 @@ const Distracted = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

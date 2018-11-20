@@ -13,7 +13,8 @@ const CatholicPensive = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

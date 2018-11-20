@@ -13,7 +13,8 @@ const RoadPresent = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

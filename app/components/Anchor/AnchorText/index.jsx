@@ -20,7 +20,8 @@ const textAnchorPropTypes = {
 
         text,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const {
                 isAccessed,

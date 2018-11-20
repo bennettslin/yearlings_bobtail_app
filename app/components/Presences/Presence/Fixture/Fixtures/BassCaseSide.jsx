@@ -13,7 +13,8 @@ const BassCaseSide = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

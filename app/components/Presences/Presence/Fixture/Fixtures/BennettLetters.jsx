@@ -13,7 +13,8 @@ const BennettLetters = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

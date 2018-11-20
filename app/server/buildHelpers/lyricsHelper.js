@@ -1,6 +1,7 @@
 // Parse lyric data for build.
 
-import { ALBUM_BUILD_KEYS,
+import {
+    ALBUM_BUILD_KEYS,
     ANCHOR,
 
     DOT_CARD,
@@ -14,7 +15,8 @@ import { ALBUM_BUILD_KEYS,
     LEFT_COLUMN,
     RIGHT_COLUMN,
 
-    PROPER_NOUN } from 'constants/lyrics'
+    PROPER_NOUN
+} from 'constants/lyrics'
 
 /***********
  * INITIAL *
@@ -22,7 +24,9 @@ import { ALBUM_BUILD_KEYS,
 
 export const registerTitle = (songObject) => {
 
-    const { title, lyricUnits } = songObject,
+    const {
+            title, lyricUnits
+        } = songObject,
         { annotation } = title,
         titleObject = {
 
@@ -168,8 +172,10 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
 
 export const finalRegisterStanzaTypes = (songObject) => {
 
-    const { lyricUnits,
-        tempStanzaTypeCounters } = songObject
+    const {
+        lyricUnits,
+        tempStanzaTypeCounters
+    } = songObject
 
     lyricUnits.forEach((unitArray) => {
 

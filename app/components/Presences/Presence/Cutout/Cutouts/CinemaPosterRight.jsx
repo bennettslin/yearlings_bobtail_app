@@ -13,7 +13,8 @@ const CinemaPosterRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

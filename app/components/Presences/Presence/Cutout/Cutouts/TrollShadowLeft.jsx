@@ -13,7 +13,8 @@ const TrollShadowLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

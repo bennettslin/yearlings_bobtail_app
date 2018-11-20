@@ -16,7 +16,8 @@ const navBookLoguePropTypes = {
 
         bookIndex,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const songIndex = bookIndex === 0 ? 0 : getSongsAndLoguesCount() - 1
 

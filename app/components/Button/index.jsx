@@ -87,11 +87,13 @@ class Button extends Component {
 
                     showIfAccessed && `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
-                    { 'Button__indexSelected': isIndexSelected,
+                    {
+                        'Button__indexSelected': isIndexSelected,
                         'Button__enabled': !isDisabled,
                         'Button__defaultSize': isDefaultSize,
                         'Button__smallSize': isSmallSize,
-                        'Button__largeSize': isLargeSize },
+                        'Button__largeSize': isLargeSize
+                    },
 
                     className
                 )}

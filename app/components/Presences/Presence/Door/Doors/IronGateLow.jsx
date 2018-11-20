@@ -13,7 +13,8 @@ const IronGateLow = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

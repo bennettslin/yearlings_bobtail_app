@@ -13,7 +13,8 @@ const SchoolbusThoughtBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

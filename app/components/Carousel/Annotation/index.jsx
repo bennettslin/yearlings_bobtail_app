@@ -50,8 +50,10 @@ class CarouselAnnotation extends Component {
 
     _handleAnnotationTitleClick = (e) => {
         if (!this.props.isSelected) {
-            const { annotationIndex,
-                handleLyricAnnotationSelect } = this.props
+            const {
+                annotationIndex,
+                handleLyricAnnotationSelect
+            } = this.props
 
             handleLyricAnnotationSelect(e, annotationIndex, true)
         }
@@ -97,8 +99,10 @@ class CarouselAnnotation extends Component {
                 annotationIndex
             ),
 
-            { columnIndex,
-                dotKeys } = annotationObject,
+            {
+                columnIndex,
+                dotKeys
+            } = annotationObject,
 
             columnKey = !isNaN(columnIndex) ? LYRIC_COLUMN_KEYS[columnIndex] : ''
 
@@ -134,7 +138,8 @@ const carouselAnnotationViewPropTypes = {
         handleContainerClick,
         setRef,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const { annotationIndex } = other
 

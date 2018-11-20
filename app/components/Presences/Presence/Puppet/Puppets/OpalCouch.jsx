@@ -13,7 +13,8 @@ const OpalCouch = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

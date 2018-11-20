@@ -13,7 +13,8 @@ const OceanBottomMiddle = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

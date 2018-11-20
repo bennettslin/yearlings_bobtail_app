@@ -13,7 +13,8 @@ const GettingDark = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

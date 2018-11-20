@@ -13,7 +13,8 @@ const Perfuming = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

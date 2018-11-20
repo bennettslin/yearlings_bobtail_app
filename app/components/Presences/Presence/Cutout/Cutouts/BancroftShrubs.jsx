@@ -13,7 +13,8 @@ const BancroftShrubs = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

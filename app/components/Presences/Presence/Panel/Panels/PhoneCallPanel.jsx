@@ -13,7 +13,8 @@ const PhoneCallPanel = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

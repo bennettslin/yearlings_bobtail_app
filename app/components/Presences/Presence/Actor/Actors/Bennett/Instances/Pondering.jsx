@@ -13,7 +13,8 @@ const Pondering = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

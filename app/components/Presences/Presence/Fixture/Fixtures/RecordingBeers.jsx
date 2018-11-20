@@ -13,7 +13,8 @@ const RecordingBeers = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -17,7 +17,8 @@ const AdminNavSection = ({
 
     allTasks,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
         sumAllTasks = allTasks ? ProgressHelper.calculateSumAllTasks(allTasks) : null

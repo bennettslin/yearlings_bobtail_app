@@ -13,7 +13,8 @@ const AshCan = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

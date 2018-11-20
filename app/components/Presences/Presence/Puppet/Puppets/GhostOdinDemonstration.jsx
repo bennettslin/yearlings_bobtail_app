@@ -13,7 +13,8 @@ const GhostOdinDemonstration = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

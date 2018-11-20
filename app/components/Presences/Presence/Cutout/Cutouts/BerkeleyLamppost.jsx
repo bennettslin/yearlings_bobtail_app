@@ -13,7 +13,8 @@ const BerkeleyLamppost = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

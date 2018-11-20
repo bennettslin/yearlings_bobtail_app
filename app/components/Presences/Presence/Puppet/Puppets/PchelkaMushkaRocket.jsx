@@ -13,7 +13,8 @@ const PchelkaMushkaRocket = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

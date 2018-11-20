@@ -13,7 +13,8 @@ const BrushOff = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

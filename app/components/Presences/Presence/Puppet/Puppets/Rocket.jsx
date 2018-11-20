@@ -13,7 +13,8 @@ const Rocket = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

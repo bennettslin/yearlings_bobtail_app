@@ -13,7 +13,8 @@ const LizCushions = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

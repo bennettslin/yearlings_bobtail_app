@@ -13,7 +13,8 @@ const CemeteryBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

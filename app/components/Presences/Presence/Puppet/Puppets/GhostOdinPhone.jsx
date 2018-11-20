@@ -13,7 +13,8 @@ const GhostOdinPhone = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

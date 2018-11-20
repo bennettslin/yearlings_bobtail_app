@@ -13,7 +13,8 @@ const Doctor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

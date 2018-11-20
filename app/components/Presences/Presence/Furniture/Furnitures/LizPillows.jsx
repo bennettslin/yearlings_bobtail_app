@@ -13,7 +13,8 @@ const LizPillows = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

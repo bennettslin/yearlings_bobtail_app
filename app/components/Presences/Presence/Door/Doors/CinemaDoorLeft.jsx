@@ -13,7 +13,8 @@ const CinemaDoorLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

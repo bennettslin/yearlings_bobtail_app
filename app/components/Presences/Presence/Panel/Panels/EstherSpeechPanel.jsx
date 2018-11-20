@@ -13,7 +13,8 @@ const EstherSpeechPanel = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

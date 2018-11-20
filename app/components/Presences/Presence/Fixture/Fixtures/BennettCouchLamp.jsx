@@ -13,7 +13,8 @@ const BennettCouchLamp = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

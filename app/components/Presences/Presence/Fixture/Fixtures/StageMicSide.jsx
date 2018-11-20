@@ -13,7 +13,8 @@ const StageMicSide = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

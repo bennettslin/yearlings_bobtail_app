@@ -13,7 +13,8 @@ const Volkswagen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

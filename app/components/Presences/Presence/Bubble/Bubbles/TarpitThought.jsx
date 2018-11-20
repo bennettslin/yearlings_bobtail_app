@@ -13,7 +13,8 @@ const TarpitThought = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const ComfortingHumiliated = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

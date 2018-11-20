@@ -13,7 +13,8 @@ const Curious = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

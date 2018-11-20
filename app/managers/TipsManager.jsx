@@ -9,10 +9,12 @@ import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 
-import { SHOWN,
+import {
+    SHOWN,
     HIDDEN,
     DISABLED,
-    TIPS_OPTIONS } from 'constants/options'
+    TIPS_OPTIONS
+} from 'constants/options'
 
 class TipsManager extends Component {
 

@@ -13,7 +13,8 @@ const Enraged = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

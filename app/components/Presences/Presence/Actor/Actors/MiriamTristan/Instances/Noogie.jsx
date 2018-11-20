@@ -13,7 +13,8 @@ const Noogie = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

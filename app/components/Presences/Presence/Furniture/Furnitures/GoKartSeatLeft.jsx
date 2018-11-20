@@ -13,7 +13,8 @@ const GoKartSeatLeft = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

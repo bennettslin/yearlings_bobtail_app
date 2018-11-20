@@ -18,7 +18,8 @@ const propTypes = {
         showFieldOnly,
         className,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         return (
             <Svg

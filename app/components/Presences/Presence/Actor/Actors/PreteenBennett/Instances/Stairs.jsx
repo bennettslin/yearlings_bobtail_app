@@ -13,7 +13,8 @@ const Stairs = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

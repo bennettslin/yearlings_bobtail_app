@@ -13,7 +13,8 @@ const CommercialMiddleRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

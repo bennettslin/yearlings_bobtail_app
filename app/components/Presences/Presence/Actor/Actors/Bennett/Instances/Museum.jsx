@@ -13,7 +13,8 @@ const Museum = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -23,7 +23,8 @@ const propTypes = {
         VerseComponent,
         handleLyricVerseSelect,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const hasVerseIndex = !isNaN(verseIndex)
 

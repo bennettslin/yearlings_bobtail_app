@@ -13,7 +13,8 @@ const Horsing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

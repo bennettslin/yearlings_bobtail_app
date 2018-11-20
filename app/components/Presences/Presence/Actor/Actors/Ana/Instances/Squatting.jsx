@@ -13,7 +13,8 @@ const Squatting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

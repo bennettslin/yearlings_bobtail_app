@@ -9,10 +9,12 @@ import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 
-import { SHOWN,
+import {
+    SHOWN,
     HIDDEN,
     DISABLED,
-    OVERVIEW_OPTIONS } from 'constants/options'
+    OVERVIEW_OPTIONS
+} from 'constants/options'
 
 class OverviewManager extends Component {
 

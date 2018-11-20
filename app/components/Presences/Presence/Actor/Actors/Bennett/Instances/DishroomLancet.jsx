@@ -13,7 +13,8 @@ const DishroomLancet = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -31,7 +31,8 @@ const navPropTypes = {
         isHiddenCarouselNav,
         showSingleBookColumn,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         return !isHiddenCarouselNav && (
             <div

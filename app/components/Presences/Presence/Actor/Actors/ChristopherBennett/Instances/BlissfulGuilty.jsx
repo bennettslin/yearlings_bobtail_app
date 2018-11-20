@@ -13,7 +13,8 @@ const BlissfulGuilty = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

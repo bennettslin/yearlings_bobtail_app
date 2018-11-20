@@ -34,7 +34,8 @@ const dotsSlideSelectsPropTypes = {
         dotKeys,
         handleContainerClick,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const firstHalfEnd = ALL_DOT_KEYS.length / 2,
             firstHalfArray = ALL_DOT_KEYS.slice(0, firstHalfEnd),

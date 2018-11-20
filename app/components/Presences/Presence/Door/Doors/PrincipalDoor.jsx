@@ -13,7 +13,8 @@ const PrincipalDoor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

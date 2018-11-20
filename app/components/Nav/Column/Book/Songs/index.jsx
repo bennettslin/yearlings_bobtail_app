@@ -21,7 +21,8 @@ const navBookSongsPropTypes = {
         // From props.
         bookIndex,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const isFirstColumn = bookIndex === 0,
 

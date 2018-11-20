@@ -13,7 +13,8 @@ const Judgmental = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

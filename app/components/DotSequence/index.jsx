@@ -22,7 +22,8 @@ const dotBlockPropTypes = {
         inTextAnchor,
         dotKeys,
 
-        ...other }) => (
+        ...other
+    }) => (
 
         <div className={cx(
             'DotSequence',

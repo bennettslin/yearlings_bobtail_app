@@ -13,7 +13,8 @@ const CavemanBones = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

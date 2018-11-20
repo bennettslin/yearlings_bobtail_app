@@ -5,9 +5,11 @@ import { connect } from 'react-redux'
 
 import { updateSongStore } from 'flux/actions/song'
 
-import { CONTINUE,
+import {
+    CONTINUE,
     PAUSE_AT_END,
-    AUDIO_OPTIONS } from 'constants/options'
+    AUDIO_OPTIONS
+} from 'constants/options'
 
 import {
     getSongsAndLoguesCount,

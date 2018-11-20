@@ -13,7 +13,8 @@ const BennettTaiwanGate = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Tchotchkes = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

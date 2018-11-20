@@ -13,7 +13,8 @@ const SeaSerpents = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

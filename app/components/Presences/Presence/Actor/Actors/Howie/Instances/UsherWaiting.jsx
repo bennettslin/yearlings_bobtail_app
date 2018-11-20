@@ -13,7 +13,8 @@ const UsherWaiting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

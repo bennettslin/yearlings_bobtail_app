@@ -13,7 +13,8 @@ const NotHungry = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

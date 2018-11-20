@@ -13,7 +13,8 @@ const HowieFridge = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

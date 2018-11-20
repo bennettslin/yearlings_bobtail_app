@@ -13,7 +13,8 @@ const TaiwanStairsBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

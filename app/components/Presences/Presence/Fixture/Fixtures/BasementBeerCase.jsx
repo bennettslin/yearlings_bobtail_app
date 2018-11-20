@@ -13,7 +13,8 @@ const BasementBeerCase = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

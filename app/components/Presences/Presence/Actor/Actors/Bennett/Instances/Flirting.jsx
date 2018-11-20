@@ -13,7 +13,8 @@ const Flirting = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

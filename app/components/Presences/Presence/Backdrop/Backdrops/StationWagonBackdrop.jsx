@@ -13,7 +13,8 @@ const StationWagonBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

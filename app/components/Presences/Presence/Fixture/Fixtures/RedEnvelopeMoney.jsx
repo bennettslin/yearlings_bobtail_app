@@ -13,7 +13,8 @@ const RedEnvelopeMoney = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

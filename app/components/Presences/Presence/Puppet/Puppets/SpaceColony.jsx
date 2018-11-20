@@ -13,7 +13,8 @@ const SpaceColony = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

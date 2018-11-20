@@ -13,7 +13,8 @@ const TintinPoster = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

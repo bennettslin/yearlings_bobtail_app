@@ -13,7 +13,8 @@ const SidelongHesitance = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

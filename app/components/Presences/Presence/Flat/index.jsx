@@ -201,7 +201,8 @@ const Flat = ({
     className,
     nameKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const FlatComponent = FLATS_MAP[nameKey]
 

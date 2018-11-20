@@ -13,7 +13,8 @@ const SchoolbusExterior = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

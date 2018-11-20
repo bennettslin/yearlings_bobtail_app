@@ -13,7 +13,8 @@ const CaptainBedLamp = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

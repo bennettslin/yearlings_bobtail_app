@@ -13,7 +13,8 @@ const NasAlbum = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Mat = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

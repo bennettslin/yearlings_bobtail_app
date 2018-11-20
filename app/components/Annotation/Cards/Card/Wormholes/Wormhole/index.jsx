@@ -95,13 +95,15 @@ class AnnotationWormhole extends Component {
 
             wormholeObject = this._getWormholeObject(),
 
-            { songIndex,
+            {
+                songIndex,
                 annotationIndex,
                 verseIndex,
                 columnIndex,
 
                 // Default if no wormhole prefix.
-                wormholePrefix = 'wormhole to' } = wormholeObject,
+                wormholePrefix = 'wormhole to'
+            } = wormholeObject,
 
             songTitle = getSongTitle({ songIndex }),
             verseObject = getVerseObject(songIndex, verseIndex),

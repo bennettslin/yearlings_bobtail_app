@@ -117,7 +117,8 @@ const Backdrop = ({
     className,
     nameKey,
 
-    ...other }) => {
+    ...other
+}) => {
 
     const BackdropComponent = BACKDROPS_MAP[nameKey]
 

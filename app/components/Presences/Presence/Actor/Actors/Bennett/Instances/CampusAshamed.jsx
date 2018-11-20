@@ -13,7 +13,8 @@ const CampusAshamed = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const BennettPillows = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

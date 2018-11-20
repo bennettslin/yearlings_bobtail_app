@@ -13,7 +13,8 @@ const ResidentialNearRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

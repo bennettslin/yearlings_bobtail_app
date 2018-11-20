@@ -43,7 +43,8 @@ class AudioBanner extends Component {
                 isTwoRowMenu,
                 selectedSongIndex,
 
-                ...other } = this.props,
+                ...other
+            } = this.props,
 
             songTitle = getSongTitle({
                 songIndex: selectedSongIndex

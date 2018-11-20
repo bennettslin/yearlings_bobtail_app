@@ -13,7 +13,8 @@ const MichaelJacksonPoster = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

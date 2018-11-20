@@ -13,7 +13,8 @@ const OpeningDoor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

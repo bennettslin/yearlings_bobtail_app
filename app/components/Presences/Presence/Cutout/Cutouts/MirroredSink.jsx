@@ -13,7 +13,8 @@ const MirroredSink = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

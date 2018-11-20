@@ -13,7 +13,8 @@ const MissionaryReflection = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

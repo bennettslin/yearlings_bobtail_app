@@ -13,7 +13,8 @@ const SaturnExterior = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const Stooping = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

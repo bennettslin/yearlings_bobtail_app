@@ -13,7 +13,8 @@ const CaptainBedDrawers = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

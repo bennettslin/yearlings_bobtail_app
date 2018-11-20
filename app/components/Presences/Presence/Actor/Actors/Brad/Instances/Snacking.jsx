@@ -13,7 +13,8 @@ const Snacking = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

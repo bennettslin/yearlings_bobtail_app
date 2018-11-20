@@ -13,7 +13,8 @@ const Mermaid = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const TelevisionAlbum = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

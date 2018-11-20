@@ -13,7 +13,8 @@ const MischievousBanjo = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

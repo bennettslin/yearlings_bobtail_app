@@ -13,7 +13,8 @@ const Eating = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

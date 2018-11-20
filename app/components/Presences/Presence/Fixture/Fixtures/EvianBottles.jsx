@@ -13,7 +13,8 @@ const EvianBottles = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

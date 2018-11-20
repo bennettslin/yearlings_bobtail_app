@@ -13,7 +13,8 @@ const Cowgirl = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

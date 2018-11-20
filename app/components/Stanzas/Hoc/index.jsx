@@ -16,7 +16,8 @@ const propTypes = {
     StanzaHoc = ({
         StanzaComponent,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const {
                 stanzaIndex,

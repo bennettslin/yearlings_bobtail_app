@@ -13,7 +13,8 @@ const OdinShore = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

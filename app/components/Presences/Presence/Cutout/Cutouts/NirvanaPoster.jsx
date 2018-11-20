@@ -13,7 +13,8 @@ const NirvanaPoster = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const ReachingReflection = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

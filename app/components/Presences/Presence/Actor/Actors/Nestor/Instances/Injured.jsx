@@ -13,7 +13,8 @@ const Injured = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

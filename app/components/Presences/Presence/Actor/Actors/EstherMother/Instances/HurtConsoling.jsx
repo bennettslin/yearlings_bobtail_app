@@ -13,7 +13,8 @@ const HurtConsoling = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

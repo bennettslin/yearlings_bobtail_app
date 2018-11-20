@@ -13,7 +13,8 @@ const PlaygroundBall = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const MiriamCushions = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

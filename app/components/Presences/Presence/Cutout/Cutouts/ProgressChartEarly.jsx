@@ -13,7 +13,8 @@ const ProgressChartEarly = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

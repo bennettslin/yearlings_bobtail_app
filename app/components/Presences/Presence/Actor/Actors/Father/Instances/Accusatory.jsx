@@ -13,7 +13,8 @@ const Accusatory = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

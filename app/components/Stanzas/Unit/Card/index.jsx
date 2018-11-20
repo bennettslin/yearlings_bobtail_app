@@ -70,7 +70,8 @@ class UnitCard extends Component {
             isSubCard,
             inMain,
 
-            ...other } = this.props
+            ...other
+        } = this.props
 
         if (stanzaArray) {
 
@@ -137,7 +138,8 @@ const propTypes = {
         stanzaType,
         handleStanzaTabClick,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const isTabbed = Boolean(stanzaTypeIndex),
 

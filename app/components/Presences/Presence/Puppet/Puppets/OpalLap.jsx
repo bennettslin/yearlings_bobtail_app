@@ -13,7 +13,8 @@ const OpalLap = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

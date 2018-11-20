@@ -13,7 +13,8 @@ const BennettTaiwanStairs = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

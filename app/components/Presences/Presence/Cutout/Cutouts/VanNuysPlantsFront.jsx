@@ -13,7 +13,8 @@ const VanNuysPlantsFront = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

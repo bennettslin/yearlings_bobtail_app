@@ -13,7 +13,8 @@ const LizThought = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -54,8 +54,10 @@ const titleToggleDefaultProps = {
         return isAudioChild === isTwoRowMenu && (
             <div className={cx(
                 'TitleToggle',
-                { 'Audio__child': isAudioChild,
-                    'TitleToggle__inAudio': isAudioChild }
+                {
+                    'Audio__child': isAudioChild,
+                    'TitleToggle__inAudio': isAudioChild
+                }
             )}>
                 {isTwoRowMenu && (
                     <AudioTimer

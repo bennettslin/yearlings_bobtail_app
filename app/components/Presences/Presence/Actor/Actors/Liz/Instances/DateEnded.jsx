@@ -13,7 +13,8 @@ const DateEnded = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const UcBerkeleyBackdrop = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

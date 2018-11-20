@@ -13,7 +13,8 @@ const Throwing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -89,11 +89,13 @@ const scoresTipsDefaultProps = {
         return shouldRender && (
             <div className={cx(
                 'ScoresTips',
-                { 'ScoresTips__inMenu': inMenu,
+                {
+                    'ScoresTips__inMenu': inMenu,
                     'ScoresTips__inMain': inMainRightSide || inLeftShelf,
                     'ScoresTips__inMainRight': inMainRightSide,
                     'ScoresTips__inLeftShelf': inLeftShelf,
-                    'LeftShelf__child': inLeftShelf }
+                    'LeftShelf__child': inLeftShelf
+                }
             )}>
                 {showScoreToggleButton &&
                 <Button

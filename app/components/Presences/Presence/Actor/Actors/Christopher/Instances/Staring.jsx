@@ -13,7 +13,8 @@ const Staring = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

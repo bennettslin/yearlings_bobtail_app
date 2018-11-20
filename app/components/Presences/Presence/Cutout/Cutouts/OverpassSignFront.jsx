@@ -13,7 +13,8 @@ const OverpassSignFront = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

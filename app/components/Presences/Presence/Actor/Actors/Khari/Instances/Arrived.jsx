@@ -13,7 +13,8 @@ const Arrived = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

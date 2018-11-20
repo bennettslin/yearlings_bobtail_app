@@ -28,7 +28,8 @@ const wikiPopupPropTypes = {
         selectedWikiIndex,
         handleWikiToggle,
 
-        ...other }) => {
+        ...other
+    }) => {
 
         const isVisible = Boolean(selectedWikiIndex)
 

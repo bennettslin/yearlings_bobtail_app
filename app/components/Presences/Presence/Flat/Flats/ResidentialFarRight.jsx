@@ -13,7 +13,8 @@ const ResidentialFarRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -238,7 +238,12 @@ module.exports = {
         "no-warning-comments": "off",
         "no-whitespace-before-property": "error",
         "no-with": "error",
-        "object-curly-newline": "off",
+        "object-curly-newline": [
+            "error", {
+                "minProperties": 2,
+                "consistent": true
+            }
+        ],
         "object-curly-spacing": [
             "error",
             "always"

@@ -13,7 +13,8 @@ const KickDrum = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

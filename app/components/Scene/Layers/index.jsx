@@ -1,6 +1,8 @@
 // Section to show a single slice of the scene.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, {
+    Component, Fragment as ___
+} from 'react'
 import cx from 'classnames'
 
 import Cubes from '../../Cubes'

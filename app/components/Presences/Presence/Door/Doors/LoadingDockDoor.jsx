@@ -13,7 +13,8 @@ const LizBlinds = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

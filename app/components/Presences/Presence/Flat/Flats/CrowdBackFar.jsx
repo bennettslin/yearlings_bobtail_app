@@ -13,7 +13,8 @@ const CrowdBackFar = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

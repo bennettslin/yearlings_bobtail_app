@@ -13,7 +13,8 @@ const OdinTaiwanGate = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

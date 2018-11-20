@@ -13,7 +13,8 @@ const DoubleAlbert = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

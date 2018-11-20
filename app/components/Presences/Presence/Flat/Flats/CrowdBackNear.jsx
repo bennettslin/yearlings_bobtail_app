@@ -13,7 +13,8 @@ const CrowdBackNear = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const HospitalRecordPlayer = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

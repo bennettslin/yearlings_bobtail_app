@@ -13,7 +13,8 @@ const Infirm = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

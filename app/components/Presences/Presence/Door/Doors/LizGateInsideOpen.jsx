@@ -13,7 +13,8 @@ const LizGateInsideOpen = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const ElToritoDoorRight = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const OpalGazing = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

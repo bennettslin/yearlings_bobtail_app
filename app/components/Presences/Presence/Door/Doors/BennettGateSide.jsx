@@ -13,7 +13,8 @@ const BennettGateSide = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const MopSopped = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

@@ -13,7 +13,8 @@ const BancroftDoor = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

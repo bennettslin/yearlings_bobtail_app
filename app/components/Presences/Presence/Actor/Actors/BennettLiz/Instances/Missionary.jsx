@@ -13,7 +13,8 @@ const Missionary = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

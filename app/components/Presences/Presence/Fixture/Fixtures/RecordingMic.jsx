@@ -13,7 +13,8 @@ const RecordingMic = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

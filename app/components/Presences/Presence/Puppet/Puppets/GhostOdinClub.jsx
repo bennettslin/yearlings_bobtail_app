@@ -13,7 +13,8 @@ const GhostOdinClub = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

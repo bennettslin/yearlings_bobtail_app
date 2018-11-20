@@ -13,7 +13,8 @@ const DishroomReading = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

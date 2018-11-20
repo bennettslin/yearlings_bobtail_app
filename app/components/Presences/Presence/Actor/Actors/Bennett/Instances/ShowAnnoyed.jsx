@@ -13,7 +13,8 @@ const ShowAnnoyed = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

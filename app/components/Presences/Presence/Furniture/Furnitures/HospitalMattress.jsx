@@ -13,7 +13,8 @@ const HospitalMattress = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg

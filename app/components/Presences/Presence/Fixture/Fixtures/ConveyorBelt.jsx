@@ -13,7 +13,8 @@ const ConveyorBelt = ({
 
     className,
 
-    ...other }) => {
+    ...other
+}) => {
 
     return (
         <Svg
