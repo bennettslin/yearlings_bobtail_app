@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Nav from '../Nav/Nav'
+import Nav from '../Nav'
 import Carousel from '../Carousel'
 import DotsSlide from '../DotsSlide'
 import LyricToggleExpand from '../Lyric/Toggle/Expand'

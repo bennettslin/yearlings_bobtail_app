@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NavButtonIndexed from '../NavButtonIndexed'
+import NavButtonIndexed from '../ButtonIndexed'
 import { getSongsAndLoguesCount } from 'helpers/dataHelper'
 
 const navBookLoguePropTypes = {

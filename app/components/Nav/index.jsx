@@ -4,7 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import NavColumn from './NavColumn'
+
+import NavColumn from './Column'
 
 const mapStateToProps = ({
     responsiveStore: {

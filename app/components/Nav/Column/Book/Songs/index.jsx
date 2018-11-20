@@ -4,8 +4,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NavButtonIndexed from '../NavButtonIndexed'
-import { getSongsAndLoguesCount, getStartingIndexForBook } from 'helpers/dataHelper'
+import NavButtonIndexed from '../ButtonIndexed'
+
+import {
+    getSongsAndLoguesCount,
+    getStartingIndexForBook
+} from 'helpers/dataHelper'
 
 const navBookSongsPropTypes = {
     // From parent.

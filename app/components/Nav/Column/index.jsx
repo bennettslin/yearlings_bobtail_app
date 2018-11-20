@@ -4,9 +4,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import NavBookSongs from './Book/NavBookSongs'
-import NavBookToggle from './Book/NavBookToggle'
-import NavBookLogue from './Book/NavBookLogue'
+
+import NavBookLogue from './Book/Logue'
+import NavBookSongs from './Book/Songs'
+import NavBookToggle from './Book/Toggle'
 
 const mapStateToProps = ({
     responsiveStore: { showSingleBookColumn },

@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NavButton from '../NavButton'
+import NavButton from '../Button'
+
 import { getBookColumnIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

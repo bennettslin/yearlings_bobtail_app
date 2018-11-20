@@ -3,7 +3,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import NavButton from './NavButton'
+
+import NavButton from '../Button'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
