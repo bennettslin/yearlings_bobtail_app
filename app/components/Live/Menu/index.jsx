@@ -8,9 +8,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Audio from '../Audio'
-import ScoresTips from '../ScoresTips'
-import TitleToggle from '../Title/Toggle'
+import Audio from '../../Audio'
+import ScoresTips from '../../ScoresTips'
+import TitleToggle from '../../Title/Toggle'
 
 import { getMenuMarginInOverlay } from 'helpers/responsiveHelper'
 
@@ -20,7 +20,7 @@ const mapStateToProps = ({
     windowWidth
 })
 
-const menuPropTypes = {
+const propTypes = {
     // Through Redux.
     windowWidth: PropTypes.number.isRequired,
 
@@ -99,6 +99,6 @@ Menu = ({
     )
 }
 
-Menu.propTypes = menuPropTypes
+Menu.propTypes = propTypes
 
 export default connect(mapStateToProps)(Menu)

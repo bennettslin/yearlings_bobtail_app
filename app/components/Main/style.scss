@@ -1,7 +1,7 @@
-@import "./LeftShelf";
-@import "./CarouselToggle";
-@import "./DotsSlideToggle";
-@import "./OverviewToggle";
+@import "./LeftShelf/style";
+@import "./CarouselToggle/style";
+@import "./DotsSlideToggle/style";
+@import "./OverviewToggle/style";
 
 .Main {
     flex-grow: 1;

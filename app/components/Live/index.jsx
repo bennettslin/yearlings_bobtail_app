@@ -10,18 +10,15 @@ import { connect } from 'react-redux'
 
 import { updateRenderStore } from 'flux/actions/render'
 
+import Main from '../Main'
+import Lyric from '../Lyric'
 import Theatre from '../Theatre'
 
-import Main from '../Main/Main'
 import Menu from './Menu'
 import OverlayPopups from './OverlayPopups'
-
 import OverviewLogue from './OverviewLogue'
-import Lyric from '../Lyric'
 
-import {
-    getOrganisedHandlersFromProps
-} from './liveHelper'
+import { getOrganisedHandlersFromProps } from './helper'
 
 const mapStateToProps = ({
     renderStore: {

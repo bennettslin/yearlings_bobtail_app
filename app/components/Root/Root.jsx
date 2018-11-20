@@ -10,10 +10,10 @@ import cx from 'classnames'
 // import debounce from 'debounce'
 
 import KeyHandler from 'handlers/KeyHandler'
-import AccessStylesheet from './Access/Stylesheet'
-import Admin from './Admin/Admin'
-import Live from './Live/Live'
-import AdminToggle from './admin/AdminToggle'
+import AccessStylesheet from '../Access/Stylesheet'
+import Admin from '../Admin/Admin'
+import Live from '../Live'
+import AdminToggle from '../admin/AdminToggle'
 
 import {
     SHOWN,
@@ -42,7 +42,7 @@ import {
 import {
     getShowOverlay,
     getSingleShownLyricColumnKey
-} from './rootHelper'
+} from '../rootHelper'
 
 class Root extends Component {
 

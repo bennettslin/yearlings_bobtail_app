@@ -4,11 +4,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import ScoresTips from '../ScoresTips'
-import DotsSlideToggle from './DotsSlideToggle'
-import OverviewToggle from './OverviewToggle'
+import ScoresTips from '../../ScoresTips'
+import DotsSlideToggle from '../DotsSlideToggle'
+import OverviewToggle from '../OverviewToggle'
 
-const leftShelfPropTypes = {
+const propTypes = {
     // From parent.
     className: PropTypes.any,
     isPhone: PropTypes.bool,
@@ -34,10 +34,14 @@ LeftShelf = ({
     )}>
         <OverviewToggle
             inLeftShelf
-            handleOverviewToggle={handleOverviewToggle}
+            {...{
+                handleOverviewToggle
+            }}
         />
         <DotsSlideToggle
-            handleDotsSectionToggle={handleDotsSectionToggle}
+            {...{
+                handleDotsSectionToggle
+            }}
         />
         <ScoresTips {...scoresTipsHandlers}
             inLeftShelf
@@ -45,6 +49,6 @@ LeftShelf = ({
     </div>
 )
 
-LeftShelf.propTypes = leftShelfPropTypes
+LeftShelf.propTypes = propTypes
 
 export default LeftShelf

@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Change all files to folders with index and style files.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Add unit testing.`,
         workedHours: 0,
         neededHours: 3

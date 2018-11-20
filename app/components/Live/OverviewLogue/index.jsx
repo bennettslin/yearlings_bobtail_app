@@ -4,9 +4,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import OverviewPopup from '../Popups/Overview'
+import OverviewPopup from '../../Popups/Overview'
 
-const overviewLoguePropTypes = {
+const propTypes = {
     // From parent.
     overviewPopupHandlers: PropTypes.object.isRequired
 },
@@ -25,6 +25,6 @@ OverviewLogue = ({
     </div>
 )
 
-OverviewLogue.propTypes = overviewLoguePropTypes
+OverviewLogue.propTypes = propTypes
 
 export default OverviewLogue
