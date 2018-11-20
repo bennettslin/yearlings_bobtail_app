@@ -25,15 +25,10 @@ class LogManager extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
         renderedVerseIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
-        renderedSceneIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        setRef: PropTypes.func.isRequired
+        renderedSceneIndex: PropTypes.number.isRequired
     }
 
     componentDidMount() {
-        this.props.setRef(this)
-
         this._assignDebugLogFunctions()
     }
 

@@ -336,9 +336,6 @@ class StateManager extends Component {
     _setDotsManagerRef = (node) => {
         this.dotsManager = node
     }
-    _setLogManagerRef = (node) => {
-        this.logManager = node
-    }
     _setLyricManagerRef = (node) => {
         this.lyricManager = node
     }
@@ -457,9 +454,7 @@ class StateManager extends Component {
                     setRef={this._setDotsManagerRef}
                     accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
                 />
-                <LogManager
-                    setRef={this._setLogManagerRef}
-                />
+                <LogManager />
                 <LyricManager
                     setRef={this._setLyricManagerRef}
                     deselectAnnotation={this.deselectAnnotation}

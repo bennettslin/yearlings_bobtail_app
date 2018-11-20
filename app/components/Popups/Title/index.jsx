@@ -22,23 +22,24 @@ const titlePopupPropTypes = {
 },
 
 TitlePopup = ({
-
     selectedTitleIndex,
     handleTitleToggle,
     handlePopupContainerClick
 
 }) => {
-    const isVisible = Boolean(selectedTitleIndex)
+
     return (
         <Popup
             bounceAnimate
             displaysInOverlay
             isCardSize
             hasWidePadding
-            isVisible={isVisible}
-            popupName="Title"
-            handleCloseClick={handleTitleToggle}
-            handlePopupContainerClick={handlePopupContainerClick}
+            {...{
+                popupName: 'Title',
+                isVisible: Boolean(selectedTitleIndex),
+                handleCloseClick: handleTitleToggle,
+                handlePopupContainerClick
+            }}
         >
             <TitleSection />
         </Popup>
