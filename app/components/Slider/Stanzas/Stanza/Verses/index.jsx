@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseHoc from '../../../../Verse/Hoc/VerseHoc'
+import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
 
 const propTypes = {

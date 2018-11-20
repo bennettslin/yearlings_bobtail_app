@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseColour from '../VerseColour/VerseColour'
-import VerseInteractive from '../VerseInteractive/VerseInteractive'
+import VerseColour from './VerseColour'
+import VerseInteractive from './VerseInteractive'
 
 const propTypes = {
     // From parent.

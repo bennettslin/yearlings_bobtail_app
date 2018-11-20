@@ -1,10 +1,10 @@
 // Component for a single line in a verse.
 
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import Texts from '../Texts'
+import Texts from '../../../Texts'
 import { TITLE } from 'constants/lyrics'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -92,7 +92,7 @@ class VerseLine extends Component {
          * the truncated text. Applies to Golden Cord and Uncanny Valley.
          */
         return (
-            <Fragment>
+            <___>
                 <div
                     className={cx(
                         'VerseLine',
@@ -104,9 +104,10 @@ class VerseLine extends Component {
                         !inVerseBar && 'sibling__verseCursor',
 
                         // Stanzas, left, centre, right.
-                        { [`VerseLine__${columnKey}`]: columnKey !== TITLE,
-
-                        'VerseLine__truncatable': isTruncatable }
+                        {
+                            [`VerseLine__${columnKey}`]: columnKey !== TITLE,
+                            'VerseLine__truncatable': isTruncatable
+                        }
                     )}
                 >
                     <Texts {...other}
@@ -122,7 +123,7 @@ class VerseLine extends Component {
                         {'\u2026'}
                     </div>
                 )}
-            </Fragment>
+            </___>
         )
     }
 }

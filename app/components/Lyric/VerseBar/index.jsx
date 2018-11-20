@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseHoc from '../Hoc/VerseHoc'
-import Verse from '../../Verse/Verse'
+import VerseHoc from '../../Verse/Hoc'
+import Verse from '../../Verse'
 
 import { getVerseObject } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

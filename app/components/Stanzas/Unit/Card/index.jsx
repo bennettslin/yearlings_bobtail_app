@@ -6,8 +6,8 @@ import cx from 'classnames'
 
 import { getParentOfVerseClassNamesForIndices } from '../../helper'
 
-import VerseHoc from '../../../Verse/Hoc/VerseHoc';
-import Verse from '../../../Verse/Verse';
+import VerseHoc from '../../../Verse/Hoc';
+import Verse from '../../../Verse';
 
 /*************
  * CONTAINER *

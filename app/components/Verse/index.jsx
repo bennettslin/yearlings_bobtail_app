@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import VerseLines from './VerseLines'
+import VerseLines from './Lines'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

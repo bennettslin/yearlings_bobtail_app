@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseTracker from '../VerseTracker/VerseTracker'
+import VerseTracker from './VerseTracker'
 
 const propTypes = {
     // From parent.

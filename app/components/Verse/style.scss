@@ -1,10 +1,5 @@
-@import "./VerseBar/VerseBar";
-@import "./VerseColour/VerseColour";
-@import "./VerseNav/VerseNav";
-@import "./VerseTracker/VerseTracker";
-
-@import "./VerseLine";
-@import "./VerseLines";
+@import "./Hoc/style";
+@import "./Lines/style";
 
 .Verse__inLyric {
     $border: 1px solid rgba(0, 0, 0, 0.15);

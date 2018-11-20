@@ -1,6 +1,7 @@
-@import "./VerseDefaultLogic";
-@import "./VerseSliderLogic";
-@import "./VerseCursorLogic";
+@import "./logicDefault";
+@import "./logicSlider";
+@import "./logicCursor";
+@import "./VerseTracker/style";
 
 .VerseColour {
     overflow: hidden;

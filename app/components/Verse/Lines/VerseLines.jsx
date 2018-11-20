@@ -7,7 +7,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseLine from './VerseLine'
+import VerseLine from './Line'
+
 import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from 'constants/lyrics'
 
 const verseLinesPropTypes = {
