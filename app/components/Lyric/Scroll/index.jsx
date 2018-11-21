@@ -142,7 +142,7 @@ class LyricScroll extends Component {
                 onScroll={this._handleScroll}
             >
                 {/* TODO: Undo this. */}
-                {false && (
+                {true && (
                     <Stanzas {...other}
                         {...{
                             songStanzaConfigs,
@@ -150,7 +150,7 @@ class LyricScroll extends Component {
                         }}
                     />
                 )}
-                {true && (
+                {false && (
                     <TempGlobalAnnotations />
                 )}
             </div>

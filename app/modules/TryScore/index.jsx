@@ -1,4 +1,4 @@
-// Module to toggle score. Not needed to just turn score off.
+// Module to toggle score. Not needed to just turn off.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'

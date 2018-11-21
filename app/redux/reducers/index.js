@@ -33,6 +33,8 @@ import {
 } from 'constants/state'
 
 const rootReducer = combineReducers({
+
+    // TODO: Access store.
     accessedAnnotationIndex: AccessedAnnotationIndexReducer,
     accessedAnnotationAnchorIndex: AccessedAnnotationAnchorIndexReducer,
     accessedDotIndex: AccessedDotIndexReducer,
@@ -65,6 +67,7 @@ const rootReducer = combineReducers({
     [SLIDER_STORE]: SliderReducer,
     [SONG_STORE]: SongReducer,
 
+    // TODO: Put some of these in toggle store.
     selectedAccessIndex: AccessIndexReducer,
     selectedAdminIndex: AdminIndexReducer,
     selectedAudioOptionIndex: AudioOptionIndexReducer,

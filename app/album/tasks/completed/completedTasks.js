@@ -3976,5 +3976,10 @@ module.exports = [
         taskName: `Add pre-commit linting and pre-push testing.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Refactor store.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

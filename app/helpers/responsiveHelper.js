@@ -11,12 +11,6 @@ import {
 
     DEVICE_OBJECTS,
 
-    LS_HEIGHT_LYRIC_COLLAPSED,
-
-    LS_HEIGHT_MENU,
-    LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE,
-    LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU,
-
     TWO_ROW_MENU_BREAKPOINT_LAPTOP,
     TWO_ROW_MENU_BREAKPOINT_MINI
 } from 'constants/responsive'
@@ -100,51 +94,4 @@ export const getIsTwoRowMenu = ({
             TWO_ROW_MENU_BREAKPOINT_LAPTOP : TWO_ROW_MENU_BREAKPOINT_MINI
 
     return windowWidth < twoRowMenuBreakpoint
-}
-
-export const getLyricSectionRect = ({
-
-    deviceIndex,
-    windowWidth,
-    windowHeight,
-    isLyricExpanded
-
-}) => {
-    const bottom = windowHeight
-    let top
-
-    if (getIsDesktop(deviceIndex)) {
-        /**
-         * If monitor or laptop width, then lyric section rect is simply the
-         * entire window height.
-         */
-        top = 0
-
-    } else if (!isLyricExpanded) {
-        /**
-         * If lyric is collapsed, top is always a fixed percentage of the
-         * window height.
-         */
-        top = windowHeight * (1 - LS_HEIGHT_LYRIC_COLLAPSED)
-
-    } else if (getIsTwoRowMenu({
-        deviceIndex, windowWidth
-    })) {
-
-        if (getIsMini(deviceIndex)) {
-            top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
-
-        } else {
-            top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE
-        }
-
-    } else {
-        // Lyric is expanded in tablet or mini.
-        top = LS_HEIGHT_MENU
-    }
-
-    return {
-        top,
-        bottom
-    }
 }

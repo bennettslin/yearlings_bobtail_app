@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Refactor store.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `Add unit tests`,
         workedHours: 0,
         neededHours: 8
