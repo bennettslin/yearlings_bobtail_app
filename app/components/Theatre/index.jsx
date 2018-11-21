@@ -28,7 +28,10 @@ const mapStateToProps = ({
         deviceIndex,
         windowHeight,
         windowWidth,
-        stageCoordinates
+        stageTop,
+        stageLeft,
+        stageWidth,
+        stageHeight
     }
 }) => ({
     canTheatreRender,
@@ -36,7 +39,10 @@ const mapStateToProps = ({
     deviceIndex,
     windowHeight,
     windowWidth,
-    stageCoordinates
+    stageTop,
+    stageLeft,
+    stageWidth,
+    stageHeight
 })
 
 class Theatre extends Component {
@@ -44,12 +50,10 @@ class Theatre extends Component {
     static propTypes = {
         // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
-        stageCoordinates: PropTypes.shape({
-            top: PropTypes.number.isRequired,
-            left: PropTypes.number.isRequired,
-            width: PropTypes.number.isRequired,
-            height: PropTypes.number.isRequired
-        }).isRequired,
+        stageTop: PropTypes.number.isRequired,
+        stageLeft: PropTypes.number.isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         windowHeight: PropTypes.number.isRequired,
@@ -118,18 +122,14 @@ class Theatre extends Component {
                 deviceIndex,
                 windowWidth,
                 windowHeight,
-                stageCoordinates,
+                stageTop,
+                stageLeft,
+                stageWidth,
+                stageHeight,
                 ...other
             } = this.props,
 
             { isShown } = this.state,
-
-            {
-                top: stageTop,
-                left: stageLeft,
-                width: stageWidth,
-                height: stageHeight
-            } = stageCoordinates,
 
             centreFieldHeight = getCentreFieldHeight({
                 deviceIndex,

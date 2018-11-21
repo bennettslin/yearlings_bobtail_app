@@ -6,10 +6,18 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 const mapStateToProps = ({
-    deviceStore: { stageCoordinates },
+    deviceStore: {
+        stageTop,
+        stageLeft,
+        stageWidth,
+        stageHeight
+    },
     renderStore: { canTheatreRender }
 }) => ({
-    stageCoordinates,
+    stageTop,
+    stageLeft,
+    stageWidth,
+    stageHeight,
     canTheatreRender
 })
 
@@ -18,12 +26,11 @@ class Stage extends Component {
     static propTypes = {
         // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
-        stageCoordinates: PropTypes.shape({
-            top: PropTypes.number.isRequired,
-            left: PropTypes.number.isRequired,
-            width: PropTypes.number.isRequired,
-            height: PropTypes.number.isRequired
-        }).isRequired,
+        stageTop: PropTypes.number.isRequired,
+        stageLeft: PropTypes.number.isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired,
+
         children: PropTypes.any.isRequired
     }
 
@@ -41,20 +48,16 @@ class Stage extends Component {
 
         const {
             /* eslint-disable no-unused-vars */
-                canTheatreRender,
-                dispatch,
-                /* eslint-enable no-unused-vars */
+            canTheatreRender,
+            dispatch,
+            /* eslint-enable no-unused-vars */
 
-                stageCoordinates,
-                children
-            } = this.props,
-
-            {
-                top: stageTop,
-                left: stageLeft,
-                width: stageWidth,
-                height: stageHeight
-            } = stageCoordinates
+            stageTop,
+            stageLeft,
+            stageWidth,
+            stageHeight,
+            children
+        } = this.props
 
         return (
             <div className={cx(

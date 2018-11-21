@@ -23,12 +23,10 @@ const
         deviceIndex: 0,
         windowHeight: 0,
         windowWidth: 0,
-        stageCoordinates: {
-            top: 0,
-            left: 0,
-            width: 100,
-            height: 100
-        }
+        stageTop: 0,
+        stageLeft: 0,
+        stageWidth: 100,
+        stageHeight: 100
     },
 
     RESPONSIVE_DEFAULTS = {

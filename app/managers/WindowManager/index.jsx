@@ -114,7 +114,7 @@ class WindowManager extends Component {
             deviceIndex,
             windowWidth,
             windowHeight,
-            stageCoordinates: getStageCoordinates({
+            ...getStageCoordinates({
                 deviceIndex,
                 windowWidth,
                 windowHeight,
