@@ -21,6 +21,10 @@ const
         storedVerseIndex
     ),
 
+    TOGGLE_DEFAULTS = {
+        isScoreShown: false
+    },
+
     DEVICE_DEFAULTS = {
         deviceIndex: 0,
         windowHeight: 0,
@@ -41,7 +45,9 @@ const
         isTwoRowMenu: false,
         showOneOfTwoLyricColumns: false,
         showShrunkNavIcon: false,
-        showSingleBookColumn: false
+        showSingleBookColumn: false,
+        isLyricExpandable: false,
+        isScoreShowable: true
     },
 
     RENDERABLE_DEFAULTS = {
@@ -86,6 +92,7 @@ const
     }
 
 export {
+    TOGGLE_DEFAULTS,
     DEVICE_DEFAULTS,
     RESPONSIVE_DEFAULTS,
     RENDERABLE_DEFAULTS,

@@ -3,6 +3,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import { updateToggleStore } from 'flux/actions/toggle'
+
 import Score from '../../Score'
 import Popup from '../../Popup'
 
@@ -10,21 +14,19 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     songStore: { selectedSongIndex },
-    selectedScoreIndex
+    toggleStore: { isScoreShown }
 }) => ({
     selectedSongIndex,
-    selectedScoreIndex
+    isScoreShown
 })
 
 class ScorePopup extends Component {
 
     static propTypes = {
         // Through Redux.
+        isScoreShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedScoreIndex: PropTypes.number.isRequired,
-
-        // From props.
-        handleScoreToggle: PropTypes.func.isRequired
+        updateToggleStore: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -34,28 +36,31 @@ class ScorePopup extends Component {
         })
     }
 
+    closeScore = () => {
+        this.props.updateToggleStore({
+            isScoreShown: false
+        })
+    }
+
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                selectedSongIndex,
-                dispatch,
-                /* eslint-enable no-unused-vars */
+            /* eslint-disable no-unused-vars */
+            selectedSongIndex,
+            dispatch,
+            /* eslint-enable no-unused-vars */
 
-                selectedScoreIndex,
-                handleScoreToggle,
+            isScoreShown,
 
-                ...other
-            } = this.props,
-
-            isVisible = Boolean(selectedScoreIndex)
+            ...other
+        } = this.props
 
         return (
             <Popup
                 isFullSize
                 displaysInOverlay
                 popupName="Score"
-                isVisible={isVisible}
-                handleCloseClick={handleScoreToggle}
+                isVisible={isScoreShown}
+                handleCloseClick={this.closeScore}
             >
                 <Score {...other} />
             </Popup>
@@ -63,4 +68,10 @@ class ScorePopup extends Component {
     }
 }
 
-export default connect(mapStateToProps)(ScorePopup)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateToggleStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(ScorePopup)

@@ -2,7 +2,7 @@
 import { SLIDER_STORE } from 'constants/state'
 import { SLIDER_DEFAULTS } from '../defaultStates'
 
-export const SliderStoreReducer = (
+export default (
     state = SLIDER_DEFAULTS,
     action
 ) => {

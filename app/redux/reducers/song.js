@@ -2,7 +2,7 @@
 import { SONG_STORE } from 'constants/state'
 import { SONG_DEFAULTS } from '../defaultStates'
 
-export const SongStoreReducer = (
+export default (
     state = SONG_DEFAULTS,
     action
 ) => {

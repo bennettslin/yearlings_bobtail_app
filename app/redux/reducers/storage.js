@@ -1,6 +1,6 @@
 // Reducers for state persisted in user's local storage.
 import {
-    SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX
+    SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX
 } from 'constants/state'
 
 import { getFromStorage } from '../storageHelper'
@@ -14,7 +14,6 @@ const
     storedDotsIndex = getFromStorage(SELECTED_DOTS_INDEX),
     storedLyricColumnIndex = getFromStorage(SELECTED_LYRIC_COLUMN_INDEX),
     storedOverviewIndex = getFromStorage(SELECTED_OVERVIEW_INDEX),
-    storedScoreIndex = getFromStorage(SELECTED_SCORE_INDEX),
     storedTipsIndex = getFromStorage(SELECTED_TIPS_INDEX),
     storedTitleIndex = getFromStorage(SELECTED_TITLE_INDEX),
     storedWikiIndex = getFromStorage(SELECTED_WIKI_INDEX)
@@ -93,15 +92,6 @@ export const LyricColumnIndexReducer = (state = storedLyricColumnIndex, action) 
 export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
     switch (action.type) {
         case SELECTED_OVERVIEW_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const ScoreIndexReducer = (state = storedScoreIndex, action) => {
-    switch (action.type) {
-        case SELECTED_SCORE_INDEX:
             return action.payload
         default:
             return state

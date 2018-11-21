@@ -2,7 +2,7 @@
 import { RENDER_STORE } from 'constants/state'
 import { RENDER_DEFAULTS } from '../defaultStates'
 
-export const RenderStoreReducer = (
+export default (
     state = RENDER_DEFAULTS,
     action
 ) => {

@@ -34,7 +34,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleLyricAutoScroll,
             handleLyricVerseSelect,
             handleOverviewToggle,
-            handleScoreToggle,
             handleTipsToggle,
             handleTitleToggle,
             handleVerseBarSelect,
@@ -93,13 +92,11 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
 
         scoresTipsHandlers = {
-            handleScoreToggle,
             handleTipsToggle
         },
 
         scorePopupHandlers = {
-            setScoreRef,
-            handleScoreToggle
+            setScoreRef
         },
 
         tipsPopupHandlers = {

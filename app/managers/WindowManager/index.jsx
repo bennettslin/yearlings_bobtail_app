@@ -13,7 +13,6 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     getShowOneOfTwoLyricColumns,
     getIsLyricExpandable,
-    getIsScoreExpandable,
     getIsTwoRowMenu
 } from 'helpers/responsiveHelper'
 import {
@@ -24,6 +23,7 @@ import {
     getShowShrunkNavIcon,
     getShowSingleBookColumn
 } from './helpers/nav'
+import { getIsScoreShowable } from './helpers/responsive'
 import { getIsScoresTipsInMain } from './helpers/scoresTips'
 import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
@@ -42,8 +42,7 @@ class WindowManager extends Component {
 
         // From parent.
         deselectAnnotation: PropTypes.func.isRequired,
-        selectLyricExpand: PropTypes.func.isRequired,
-        selectScore: PropTypes.func.isRequired
+        selectLyricExpand: PropTypes.func.isRequired
     }
 
     state = {
@@ -83,8 +82,6 @@ class WindowManager extends Component {
                 windowWidth
             } = resizeWindow(e ? e.target : undefined),
 
-            isLyricExpandable = getIsLyricExpandable(deviceIndex),
-
             isHeightlessLyricColumn = getIsHeightlessLyricColumn({
                 deviceIndex,
                 windowHeight,
@@ -123,7 +120,7 @@ class WindowManager extends Component {
             isHeightlessLyricColumn
         })
 
-        this._updateDeviceStore({
+        this._updateResponsiveStore({
             deviceIndex,
             windowHeight,
             windowWidth,
@@ -135,17 +132,12 @@ class WindowManager extends Component {
          * Force collapse of lyric in state if not expandable, or if heightless
          * lyric.
          */
-        if (
-            !isLyricExpandable ||
-            isHeightlessLyricColumn
-        ) {
-            this.props.selectLyricExpand(false)
-        }
-
-        // Force collapse of score in state if not expandable.
-        if (!getIsScoreExpandable(deviceIndex)) {
-            this.props.selectScore(false)
-        }
+        // if (
+        //     !isLyricExpandable ||
+        //     isHeightlessLyricColumn
+        // ) {
+        //     this.props.selectLyricExpand(false)
+        // }
 
         return deviceIndex
     }
@@ -203,7 +195,9 @@ class WindowManager extends Component {
             showSingleBookColumn: getShowSingleBookColumn({
                 deviceIndex,
                 windowWidth
-            })
+            }),
+            isScoreShowable: getIsScoreShowable(deviceIndex),
+            isLyricExpandable: getIsLyricExpandable(deviceIndex)
         })
     }
 

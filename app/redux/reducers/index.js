@@ -2,25 +2,27 @@ import { combineReducers } from 'redux'
 import {
     AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer
 } from './access'
+import ToggleReducer from './toggle'
 import { IsPlayingReducer } from './audio'
-import { DeviceStoreReducer } from './device'
+import DeviceReducer from './device'
 import {
     AppMountedReducer, CanPlayThroughsReducer, IsScoreLoadedReducer
 } from './load'
-import { RenderableStoreReducer } from './renderable'
-import { RenderStoreReducer } from './render'
-import { RenderedStoreReducer } from './rendered'
-import { ResponsiveStoreReducer } from './responsive'
+import RenderReducer from './render'
+import RenderableReducer from './renderable'
+import RenderedReducer from './rendered'
+import ResponsiveReducer from './responsive'
 import {
     CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer
 } from './session'
-import { SliderStoreReducer } from './slider'
-import { SongStoreReducer } from './song'
+import SliderReducer from './slider'
+import SongReducer from './song'
 import {
-    AccessIndexReducer, AdminIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, TipsIndexReducer, TitleIndexReducer, WikiIndexReducer
+    AccessIndexReducer, AdminIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, TipsIndexReducer, TitleIndexReducer, WikiIndexReducer
 } from './storage'
 
 import {
+    TOGGLE_STORE,
     DEVICE_STORE,
     RENDERABLE_STORE,
     RENDER_STORE,
@@ -38,17 +40,19 @@ const rootReducer = combineReducers({
 
     isPlaying: IsPlayingReducer,
 
-    [DEVICE_STORE]: DeviceStoreReducer,
+    [TOGGLE_STORE]: ToggleReducer,
+
+    [DEVICE_STORE]: DeviceReducer,
 
     appMounted: AppMountedReducer,
     canPlayThroughs: CanPlayThroughsReducer,
     isScoreLoaded: IsScoreLoadedReducer,
 
-    [RESPONSIVE_STORE]: ResponsiveStoreReducer,
+    [RESPONSIVE_STORE]: ResponsiveReducer,
 
-    [RENDERABLE_STORE]: RenderableStoreReducer,
-    [RENDER_STORE]: RenderStoreReducer,
-    [RENDERED_STORE]: RenderedStoreReducer,
+    [RENDER_STORE]: RenderReducer,
+    [RENDERABLE_STORE]: RenderableReducer,
+    [RENDERED_STORE]: RenderedReducer,
 
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,
@@ -58,8 +62,8 @@ const rootReducer = combineReducers({
     isManualScroll: IsManualScrollReducer,
     shownBookColumnIndex: ShownBookColumnIndexReducer,
 
-    [SLIDER_STORE]: SliderStoreReducer,
-    [SONG_STORE]: SongStoreReducer,
+    [SLIDER_STORE]: SliderReducer,
+    [SONG_STORE]: SongReducer,
 
     selectedAccessIndex: AccessIndexReducer,
     selectedAdminIndex: AdminIndexReducer,
@@ -69,7 +73,6 @@ const rootReducer = combineReducers({
     selectedDotsIndex: DotsIndexReducer,
     selectedLyricColumnIndex: LyricColumnIndexReducer,
     selectedOverviewIndex: OverviewIndexReducer,
-    selectedScoreIndex: ScoreIndexReducer,
     selectedTipsIndex: TipsIndexReducer,
     selectedTitleIndex: TitleIndexReducer,
     selectedWikiIndex: WikiIndexReducer

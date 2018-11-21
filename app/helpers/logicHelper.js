@@ -8,7 +8,7 @@ export const getShouldSkipHiddenStatus = ({
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedOverviewIndex,
-    selectedScoreIndex,
+    isScoreShown,
     selectedTipsIndex,
     selectedTitleIndex,
     selectedWikiIndex,
@@ -21,7 +21,7 @@ export const getShouldSkipHiddenStatus = ({
 
         isLyricExpanded ||
         selectedDotsIndex ||
-        selectedScoreIndex ||
+        isScoreShown ||
         selectedTitleIndex ||
         selectedWikiIndex ||
 

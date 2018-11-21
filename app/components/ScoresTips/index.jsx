@@ -1,10 +1,14 @@
 // Section for score and tips toggle buttons.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
+import { updateToggleStore } from 'flux/actions/toggle'
+
+import TryScore from '../../modules/TryScore'
 import Button from '../Button'
 
 import {
@@ -25,52 +29,64 @@ import {
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: { isScoresTipsInMain },
+    toggleStore: { isScoreShown },
     isScoreLoaded,
     selectedTipsIndex
 }) => ({
     deviceIndex,
     isScoresTipsInMain,
+    isScoreShown,
     isScoreLoaded,
     selectedTipsIndex
 })
 
-const scoresTipsDefaultProps = {
+class ScoresTips extends Component {
+
+    static defaultProps = {
         inMenu: false,
         inMainRightSide: false,
         inLeftShelf: false
-    },
+    }
 
-    scoresTipsPropTypes = {
+    static propTypes = {
     // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
+        isScoreShown: PropTypes.bool.isRequired,
         isScoreLoaded: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         inMenu: PropTypes.bool.isRequired,
         inMainRightSide: PropTypes.bool.isRequired,
         inLeftShelf: PropTypes.bool.isRequired,
-        handleScoreToggle: PropTypes.func.isRequired,
         handleTipsToggle: PropTypes.func.isRequired
-    },
+    }
 
-    ScoresTips = ({
+    handleScoreClick = () => {
+        this.tryToggleScore()
+    }
 
-        deviceIndex,
-        isScoreLoaded,
-        isScoresTipsInMain,
-        selectedTipsIndex,
+    getTryToggleScore = (tryToggleScore) => {
+        this.tryToggleScore = tryToggleScore
+    }
 
-        inMenu,
-        inMainRightSide,
-        inLeftShelf,
+    render() {
+        const {
+                deviceIndex,
+                isScoreLoaded,
+                isScoresTipsInMain,
+                selectedTipsIndex,
 
-        handleScoreToggle,
-        handleTipsToggle
+                inMenu,
+                inMainRightSide,
+                inLeftShelf,
 
-    }) => {
-        const isDesktop = getIsDesktop(deviceIndex),
+                handleTipsToggle
+            } = this.props,
+
+            isDesktop = getIsDesktop(deviceIndex),
 
             // Render if...
             shouldRender = isScoresTipsInMain ?
@@ -97,6 +113,11 @@ const scoresTipsDefaultProps = {
                     'LeftShelf__child': inLeftShelf
                 }
             )}>
+                <TryScore
+                    {...{
+                        setTryToggle: this.getTryToggleScore
+                    }}
+                />
                 {showScoreToggleButton &&
                 <Button
                     isLargeSize
@@ -104,7 +125,7 @@ const scoresTipsDefaultProps = {
                     className="ScoresTipsButton"
                     accessKey={SCORE_TOGGLE_KEY}
                     isDisabled={!isScoreLoaded}
-                    handleButtonClick={handleScoreToggle}
+                    handleButtonClick={this.handleScoreClick}
                 />
                 }
                 {/* TODO: Shouldn't this use the tips toggle button? */}
@@ -119,8 +140,12 @@ const scoresTipsDefaultProps = {
             </div>
         )
     }
+}
 
-ScoresTips.defaultProps = scoresTipsDefaultProps
-ScoresTips.propTypes = scoresTipsPropTypes
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateToggleStore
+    }, dispatch)
+)
 
-export default connect(mapStateToProps)(ScoresTips)
+export default connect(mapStateToProps, bindDispatchToProps)(ScoresTips)

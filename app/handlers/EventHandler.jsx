@@ -3,6 +3,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import { updateToggleStore } from 'flux/actions/toggle'
 
 import Root from '../components/Root'
 
@@ -35,11 +38,11 @@ class EventHandler extends Component {
 
     static propTypes = {
         // Through Redux.
+        isScoreShown: PropTypes.bool.isRequired,
         selectedAdminIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        selectedScoreIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
@@ -73,6 +76,13 @@ class EventHandler extends Component {
 
     componentDidUpdate(prevProps) {
 
+        const {
+                isScoreShown
+            } = this.props,
+            {
+                isScoreShown: wasScoreShown
+            } = prevProps
+
         if (
             this.props.isHeightlessLyricColumn !==
                 prevProps.isHeightlessLyricColumn ||
@@ -81,6 +91,10 @@ class EventHandler extends Component {
         ) {
             // Determine whether to add or remove focus from lyric element.
             this.focusElementForAccess()
+        }
+
+        if (isScoreShown && !wasScoreShown) {
+            this.handleScoreOn()
         }
     }
 
@@ -636,19 +650,11 @@ class EventHandler extends Component {
      * SCORE *
      *********/
 
-    handleScoreToggle = (e) => {
-        const scoreToggled = this.props.selectScore()
-        if (scoreToggled) {
-            this.stopPropagation(e)
-
-            // If score is off and we're toggling it on, then close other popups.
-            if (!this.props.selectedScoreIndex) {
-                this._closeSections({
-                    justClosePopups: true
-                })
-            }
-        }
-        return scoreToggled
+    handleScoreOn = () => {
+        this._closeSections({
+            justClosePopups: true,
+            exemptScore: true
+        })
     }
 
     /********
@@ -831,6 +837,7 @@ class EventHandler extends Component {
         exemptDots,
         exemptLyric,
         exemptOverview,
+        exemptScore,
         exemptTips,
         exemptInteractivatedVerse,
 
@@ -841,7 +848,7 @@ class EventHandler extends Component {
     }) {
 
         const {
-            selectedScoreIndex,
+            isScoreShown,
             selectedTitleIndex,
             selectedWikiIndex
         } = this.props
@@ -855,8 +862,10 @@ class EventHandler extends Component {
                     return
                 }
 
-            } else if (selectedScoreIndex) {
-                this.props.selectScore(false)
+            } else if (isScoreShown && !exemptScore) {
+                this.props.updateToggleStore({
+                    isScoreShown: false
+                })
                 if (!continuePastClosingPopups) {
                     return
                 }
@@ -1045,10 +1054,12 @@ const mapStateToProps = ({
         selectedVerseIndex,
         selectedAnnotationIndex
     },
+    toggleStore: {
+        isScoreShown
+    },
     selectedAdminIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
-    selectedScoreIndex,
     selectedTipsIndex,
     selectedTitleIndex,
     selectedWikiIndex,
@@ -1065,7 +1076,7 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
-    selectedScoreIndex,
+    isScoreShown,
     selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
@@ -1078,4 +1089,10 @@ const mapStateToProps = ({
     isSliderTouched
 })
 
-export default connect(mapStateToProps)(EventHandler)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateToggleStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(EventHandler)

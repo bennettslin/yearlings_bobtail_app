@@ -14,6 +14,8 @@ module.exports = {
     // Audio.
     IS_PLAYING: 'isPlaying',
 
+    TOGGLE_STORE: 'toggleStore',
+
     // Device.
     DEVICE_STORE: 'deviceStore',
 
@@ -63,7 +65,6 @@ module.exports = {
     SELECTED_DOTS_INDEX: 'selectedDotsIndex',
     SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
-    SELECTED_SCORE_INDEX: 'selectedScoreIndex',
     SELECTED_TIPS_INDEX: 'selectedTipsIndex',
     SELECTED_TITLE_INDEX: 'selectedTitleIndex',
     SELECTED_WIKI_INDEX: 'selectedWikiIndex'

@@ -53,10 +53,6 @@ export const getIsLyricExpandable = (deviceIndex) => {
     return !getIsDesktop(deviceIndex)
 }
 
-export const getIsScoreExpandable = (deviceIndex) => {
-    return !getIsPhone(deviceIndex)
-}
-
 export const getIsToggleInOverview = (deviceIndex) => {
     return getIsPhone(deviceIndex)
 }

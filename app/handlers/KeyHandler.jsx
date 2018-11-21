@@ -1,8 +1,16 @@
 // Component that handles all user events from keyboard.
 
-import { Component } from 'react'
+import React, {
+    Component,
+    Fragment as ___
+} from 'react'
 import PropTypes from 'prop-types'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+import { updateToggleStore } from 'flux/actions/toggle'
+
+import TryScore from '../modules/TryScore'
 
 import {
     getSongsAndLoguesCount,
@@ -70,7 +78,8 @@ class KeyHandler extends Component {
         }).isRequired,
 
         setRef: PropTypes.func.isRequired,
-        displayKeyLetter: PropTypes.func.isRequired
+        displayKeyLetter: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -252,7 +261,7 @@ class KeyHandler extends Component {
                 isHeightlessLyricColumn,
                 isLyricExpanded,
                 interactivatedVerseIndex,
-                selectedScoreIndex,
+                isScoreShown,
                 selectedWikiIndex,
                 selectedSongIndex,
                 selectedAnnotationIndex,
@@ -269,7 +278,7 @@ class KeyHandler extends Component {
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
-        if (!isLogue && !selectedScoreIndex && !selectedWikiIndex) {
+        if (!isLogue && !isScoreShown && !selectedWikiIndex) {
 
             // We're selecting the interactivated verse.
             if (isVerseInteractivated && keyName === ENTER) {
@@ -638,7 +647,7 @@ class KeyHandler extends Component {
                 keyWasRegistered = eventHandlers.handleSceneDirection(e, 1)
                 break
             case SCORE_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleScoreToggle(e)
+                keyWasRegistered = this.tryToggleScore()
                 break
             case TIPS_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleTipsToggle(e)
@@ -654,6 +663,8 @@ class KeyHandler extends Component {
                 break
         }
 
+        logger.info(keyName, 'letter key was registered:', keyWasRegistered)
+
         return {
             annotationIndexWasAccessed,
             keyWasRegistered
@@ -665,8 +676,8 @@ class KeyHandler extends Component {
             { eventHandlers } = props
 
         // Close score popup.
-        if (props.selectedScoreIndex) {
-            eventHandlers.handleScoreToggle(e)
+        if (props.isScoreShown) {
+            this.tryToggleScore(false)
 
         // Close wiki popup.
         } else if (props.selectedWikiIndex) {
@@ -697,12 +708,23 @@ class KeyHandler extends Component {
         }
     }
 
+    getTryToggleScore = (tryToggleScore) => {
+        this.tryToggleScore = tryToggleScore
+    }
+
     render() {
-        return null
+        return <___>
+            <TryScore
+                {...{
+                    setTryToggle: this.getTryToggleScore
+                }}
+            />
+        </___>
     }
 }
 
-export default connect(({
+const mapStateToProps = ({
+    toggleStore: { isScoreShown },
     responsiveStore: { isHeightlessLyricColumn },
     isLyricExpanded,
     songStore: {
@@ -716,7 +738,6 @@ export default connect(({
     selectedDotKeys,
     selectedOverviewIndex,
     selectedTipsIndex,
-    selectedScoreIndex,
     selectedWikiIndex,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
@@ -727,6 +748,7 @@ export default connect(({
     deviceIndex
 }) => ({
     isHeightlessLyricColumn,
+    isScoreShown,
     isLyricExpanded,
     selectedAccessIndex,
     selectedAnnotationIndex,
@@ -735,7 +757,6 @@ export default connect(({
     selectedDotKeys,
     selectedOverviewIndex,
     selectedTipsIndex,
-    selectedScoreIndex,
     selectedSongIndex,
     selectedVerseIndex,
     selectedWikiIndex,
@@ -746,4 +767,12 @@ export default connect(({
     interactivatedVerseIndex,
     shownBookColumnIndex,
     deviceIndex
-}))(KeyHandler)
+})
+
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateToggleStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(KeyHandler)

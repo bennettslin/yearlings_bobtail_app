@@ -12,20 +12,20 @@ import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     isLyricExpanded,
+    toggleStore: { isScoreShown },
     renderStore: { canCarouselRender },
     deviceStore: { deviceIndex },
     renderedStore: { renderedAnnotationIndex },
     selectedCarouselNavIndex,
-    selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
 }) => ({
+    isScoreShown,
     deviceIndex,
     isLyricExpanded,
     canCarouselRender,
     renderedAnnotationIndex,
     selectedCarouselNavIndex,
-    selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
 })
@@ -39,8 +39,8 @@ class AnnotationPopup extends Component {
         isLyricExpanded: PropTypes.bool.isRequired,
 
         renderedAnnotationIndex: PropTypes.number.isRequired,
+        isScoreShown: PropTypes.bool.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
-        selectedScoreIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
 
@@ -107,11 +107,11 @@ class AnnotationPopup extends Component {
                 canCarouselRender,
                 deviceIndex,
                 isLyricExpanded,
+                isScoreShown,
                 inMain,
 
                 renderedAnnotationIndex,
                 selectedCarouselNavIndex,
-                selectedScoreIndex,
                 selectedTitleIndex,
                 selectedWikiIndex,
 
@@ -149,7 +149,7 @@ class AnnotationPopup extends Component {
                         isOverlayingAnnotation
                     ) &&
 
-                    !selectedScoreIndex &&
+                    !isScoreShown &&
                     !selectedTitleIndex &&
                     !selectedWikiIndex,
 

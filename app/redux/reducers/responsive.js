@@ -2,7 +2,7 @@
 import { RESPONSIVE_STORE } from 'constants/state'
 import { RESPONSIVE_DEFAULTS } from '../defaultStates'
 
-export const ResponsiveStoreReducer = (
+export default (
     state = RESPONSIVE_DEFAULTS,
     action
 ) => {

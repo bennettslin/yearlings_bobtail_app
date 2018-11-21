@@ -25,7 +25,6 @@ class OverviewManager extends Component {
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
-        selectedScoreIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
@@ -143,7 +142,6 @@ const mapStateToProps = ({
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedOverviewIndex,
-    selectedScoreIndex,
     selectedTipsIndex,
     selectedTitleIndex,
     selectedWikiIndex
@@ -153,7 +151,6 @@ const mapStateToProps = ({
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedOverviewIndex,
-    selectedScoreIndex,
     selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,

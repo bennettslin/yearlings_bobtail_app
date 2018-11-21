@@ -42,7 +42,6 @@ export const getHandlers = (me) => {
         handleOverviewToggle: me.handleOverviewToggle,
         handleCarouselNavToggle: me.handleCarouselNavToggle,
         handleSceneDirection: me.handleSceneDirection,
-        handleScoreToggle: me.handleScoreToggle,
         handleTipsToggle: me.handleTipsToggle,
         handleTitleToggle: me.handleTitleToggle,
         handleVerseBarSelect: me.handleVerseBarSelect,

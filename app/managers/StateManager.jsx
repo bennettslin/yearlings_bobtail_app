@@ -192,14 +192,6 @@ class StateManager extends Component {
         return this.sceneManager.updateSceneIfChanged(payload)
     }
 
-    /*********
-     * SCORE *
-     *********/
-
-    selectScore = (payload) => {
-        return this.scoreManager.selectScore(payload)
-    }
-
     /**********
      * SCROLL *
      **********/
@@ -353,9 +345,6 @@ class StateManager extends Component {
     _setRenderManagerRef = (node) => {
         this.renderManager = node
     }
-    _setScoreManagerRef = (node) => {
-        this.scoreManager = node
-    }
     _setSceneManagerRef = (node) => {
         this.sceneManager = node
     }
@@ -420,7 +409,6 @@ class StateManager extends Component {
                     selectManualScroll={this.selectManualScroll}
                     selectOverview={this.selectOverview}
                     selectCarouselNav={this.selectCarouselNav}
-                    selectScore={this.selectScore}
                     selectScene={this.selectScene}
                     selectSong={this.selectSong}
                     selectTitle={this.selectTitle}
@@ -489,9 +477,7 @@ class StateManager extends Component {
                     selectVerse={this.selectVerse}
                     resetVerseBars={this.resetVerseBars}
                 />
-                <ScoreManager
-                    setRef={this._setScoreManagerRef}
-                />
+                <ScoreManager />
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
                 />
@@ -532,7 +518,6 @@ class StateManager extends Component {
                 <WindowManager
                     deselectAnnotation={this.deselectAnnotation}
                     selectLyricExpand={this.selectLyricExpand}
-                    selectScore={this.selectScore}
                 />
             </Fragment>
         )

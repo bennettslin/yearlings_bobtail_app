@@ -1,13 +1,13 @@
 // Reducers for window size.
-import { DEVICE_STORE } from 'constants/state'
-import { DEVICE_DEFAULTS } from '../defaultStates'
+import { TOGGLE_STORE } from 'constants/state'
+import { TOGGLE_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = DEVICE_DEFAULTS,
+    state = TOGGLE_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case DEVICE_STORE:
+        case TOGGLE_STORE:
             return {
                 ...state,
                 ...action.payload
