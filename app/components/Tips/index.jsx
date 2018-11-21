@@ -8,7 +8,7 @@ import cx from 'classnames'
 import TipsToggle from './Toggle'
 import Texts from '../Texts'
 
-import { getSongTip } from 'helpers/dataHelper'
+import { getSongTip } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     SHOWN, TIPS_OPTIONS

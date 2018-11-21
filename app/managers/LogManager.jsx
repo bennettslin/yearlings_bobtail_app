@@ -4,11 +4,11 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import album from 'server/album'
+
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
-    getAlbum,
-    getTempInstanceCount,
     getAnnotationObject,
     getGlobalAnnotationObject,
     getSongObject,
@@ -52,7 +52,7 @@ class LogManager extends Component {
 
     logAlbum = () => {
         const copiedAlbum = {
-            ...getAlbum()
+            ...album
         }
 
         copiedAlbum.drawings = `drawings: ${copiedAlbum.drawings.length}`
@@ -98,7 +98,7 @@ class LogManager extends Component {
     }
 
     logInstances = () => {
-        const tempInstanceCount = getTempInstanceCount()
+        const { tempInstanceCount } = album
         return this._logObject('temp instance count', tempInstanceCount)
     }
 

@@ -14,16 +14,16 @@ import Player from './Player'
 import { setNewValueInBitNumber } from 'helpers/bitHelper'
 
 import {
-    getMp3s,
     getSongsNotLoguesCount,
-    getTimeForVerseIndex,
-    getTimeRelativeToVerseIndex,
-    getNextVerseIndex
+    getTimeForVerseIndex
 } from 'helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
+    getMp3s,
+    getNextVerseIndex,
+    getTimeRelativeToVerseIndex,
     getCanPlayThroughsObject,
     getNextPlayerSongIndexToRender
 } from './helper'

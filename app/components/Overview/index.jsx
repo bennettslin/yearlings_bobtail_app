@@ -8,7 +8,7 @@ import cx from 'classnames'
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
 
-import { getSongOverview } from 'helpers/dataHelper'
+import { getSongOverview } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getIsToggleInOverview } from 'helpers/responsiveHelper'
 

@@ -14,7 +14,7 @@ import UnitCard from './Card'
 import UnitDot from './Dot'
 
 import { TITLE } from 'constants/lyrics'
-import { getLyricUnitArray } from 'helpers/dataHelper'
+import { getLyricUnitArray } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 

@@ -1,7 +1,6 @@
 import {
     getAnnotationObject,
     getVerseObject,
-    getAnnotationDotKeys,
     getAnnotationsCount
 } from 'helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
@@ -33,6 +32,18 @@ export const shouldShowAnnotationForColumn = ({
             columnIndex === selectedLyricColumnIndex
 
     return showAnnotationForColumn
+}
+
+const getAnnotationDotKeys = (
+    songIndex,
+    annotationIndex
+) => {
+    const annotation = getAnnotationObject(
+        songIndex,
+        annotationIndex
+    )
+
+    return annotation ? annotation.dotKeys : null
 }
 
 export const getAnnotationIndexForDirection = ({

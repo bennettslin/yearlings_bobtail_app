@@ -6,13 +6,9 @@ import cx from 'classnames'
 
 import Stanzas from '../../Stanzas'
 
-import {
-    getSongStanzaConfigs,
-    getLastUnitDotCardIndex
-} from 'helpers/dataHelper'
-import {
-    getPropsAreShallowEqual
-} from 'helpers/generalHelper'
+import { getSongStanzaConfigs } from 'helpers/dataHelper'
+import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getLastUnitDotCardIndex } from './helper'
 
 import TempGlobalAnnotations from './TempGlobalAnnotations'
 

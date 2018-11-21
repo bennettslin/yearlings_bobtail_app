@@ -4,8 +4,9 @@ import React, { Component } from 'react'
 import AnnotationCards from './AnnotationCards'
 import Button from '../../../Button'
 
+import album from 'server/album'
+
 import {
-    getAlbum,
     getAnnotationObject,
     getGlobalAnnotationObject
 } from 'helpers/dataHelper'
@@ -88,7 +89,7 @@ class TempGlobalAnnotations extends Component {
     componentDidMount() {
         const {
                 globalAnnotationIndices
-            } = getAlbum(),
+            } = album,
 
             annotationIndexInterval = Math.floor(
                 globalAnnotationIndices.length / 3

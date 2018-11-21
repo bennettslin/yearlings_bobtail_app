@@ -10,7 +10,7 @@ import { connect } from 'react-redux'
 
 import { updateToggleStore } from 'flux/actions/toggle'
 
-import TryScore from '../modules/TryScore'
+import TryScore from '../../modules/TryScore'
 
 import {
     getSongsAndLoguesCount,
@@ -23,7 +23,7 @@ import {
     getKeyName,
     getIsNavKey,
     getShouldHandleOnKeyDown
-} from './keyHelper'
+} from './helper'
 
 import {
     ARROW_LEFT,

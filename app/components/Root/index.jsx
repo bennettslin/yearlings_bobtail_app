@@ -11,7 +11,7 @@ import cx from 'classnames'
 
 import KeyHandler from 'handlers/KeyHandler'
 import AccessStylesheet from '../Access/Stylesheet'
-import Admin from '../Admin/Admin'
+import Admin from '../Admin'
 import Live from '../Live'
 import AdminToggle from '../admin/AdminToggle'
 
@@ -27,8 +27,6 @@ import {
 
 import { DEVICE_OBJECTS } from 'constants/responsive'
 
-import { getStanzaIndexForVerseIndex } from 'helpers/dataHelper'
-
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 
 import {
@@ -38,7 +36,8 @@ import {
 
 import {
     getShowOverlay,
-    getSingleShownLyricColumnKey
+    getSingleShownLyricColumnKey,
+    getStanzaIndexForVerseIndex
 } from './helper'
 
 class Root extends Component {

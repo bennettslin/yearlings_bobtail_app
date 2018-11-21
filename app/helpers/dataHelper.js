@@ -11,31 +11,11 @@ import { SOURCE_WORMHOLE_INDEX } from 'constants/lyrics'
  * ALBUM *
  *********/
 
-// For logging.
-export const getAlbum = () => {
-    return album
-}
-
-export const getMp3s = () => {
-    const { mp3s } = album
-    return mp3s
-}
-
-export const getStartingIndexForBook = (bookIndex) => {
-    const { bookStartingIndices } = album
-    return bookStartingIndices[bookIndex]
-}
-
 export const getBookColumnIndex = (songIndex) => {
     const { bookStartingIndices } = album
 
     // Assumes two book starting indices.
     return songIndex < bookStartingIndices[1] ? 0 : 1
-}
-
-export const getTempInstanceCount = () => {
-    const { tempInstanceCount } = album
-    return tempInstanceCount
 }
 
 // For logging.
@@ -80,16 +60,6 @@ export const getSongTitle = ({
     }
 }
 
-export const getSongScore = (songIndex) => {
-    const { scores } = album
-    return scores[songIndex - 1]
-}
-
-export const getSongOverview = (songIndex) => {
-    const song = getSongObject(songIndex)
-    return song ? song.overview : ''
-}
-
 /*********
  * TIMES *
  *********/
@@ -122,96 +92,35 @@ export const getTimeForVerseIndex = (songIndex, verseIndex) => {
     return songVerseConfigs[verseIndex].verseStartTime
 }
 
-export const getNextVerseIndex = (
-    songIndex,
-    verseIndex
-) => {
-    const songVersesCount = getSongVersesCount(songIndex)
-
-    /**
-     * If it's not the last verse, return the next verse. Otherwise, return
-     * null.
-     */
-    return verseIndex < songVersesCount - 1 ?
-        verseIndex + 1 :
-        null
-}
-
-export const getTimeRelativeToVerseIndex = (
-    songIndex,
-    verseIndex,
-    time
-) => {
-    /**
-     * Note that when time is valid, this method returns -1 if time is before
-     * verse, 1 if time is after it, and 0 if time is in it.
-     */
-
-    const songVerseConfigs = getSongVerseConfigs(songIndex),
-
-        // Verse config already knows its own start time.
-        { verseStartTime } = songVerseConfigs[verseIndex],
-
-        /**
-         * If it's the last verse, the end time is the song's total time.
-         * Otherwise, it's the start time of the next verse.
-         */
-        verseEndTime =
-            verseIndex < getSongVersesCount(songIndex) - 1 ?
-                songVerseConfigs[verseIndex + 1].verseStartTime :
-                getSongTotalTime(songIndex)
-
-    if (time < verseStartTime) {
-        return -1
-
-    } else if (time >= verseEndTime) {
-        return 1
-
-    } else {
-        return 0
-    }
-}
-
-/********
- * TIPS *
- ********/
-
-export const getSongTip = (songIndex) => {
-
-    if (songIndex < 0) {
-        return null
-    }
-
-    const isLogue = getSongIsLogue(songIndex),
-        { tips } = album
-
-    if (!isLogue) {
-        return tips[songIndex].description
-    } else {
-        return null
-    }
-}
-
 /**********
  * LYRICS *
  **********/
 
-export const getLyricUnitsCount = (songIndex) => {
+const _parseLyrics = (lyricEntity, selectedVerseIndex) => {
+    // Recurse until object with verse index is found.
 
-    if (songIndex < 0) {
-        return 0
+    // Method does not apply to logues.
+    if (lyricEntity) {
+        if (lyricEntity.verseIndex === selectedVerseIndex) {
+            return lyricEntity
+
+        } else if (Array.isArray(lyricEntity)) {
+            return lyricEntity.reduce((childSelectedLyric, childLyric) => {
+                return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
+            }, null)
+
+            // Object with verseIndex key not found, so dig into subCard.
+        } else if (lyricEntity.subCard) {
+            return _parseLyrics(lyricEntity.subCard, selectedVerseIndex)
+        }
     }
-
-    const songs = getSongObject(songIndex)
-    return songs.lyricUnits ? songs.lyricUnits.length : 0
 }
 
-export const getLyricUnitArray = (songIndex, unitIndex) => {
-    const songs = getSongObject(songIndex)
-    return songs.lyricUnits ? songs.lyricUnits[unitIndex] : []
-}
-
-export const getVerseObject = (songIndex, verseIndex, songs = album.songs) => {
+export const getVerseObject = (
+    songIndex,
+    verseIndex,
+    songs = album.songs
+) => {
 
     if (songIndex < 0) {
         return null
@@ -260,7 +169,10 @@ export const getAnnotationCardObject = ({
     return annotationObject ? annotationObject.cards[cardIndex] : null
 }
 
-export const getWormholeLink = (annotationObject, annotationAnchorIndex) => {
+export const getWormholeLink = (
+    annotationObject,
+    annotationAnchorIndex
+) => {
 
     const { cards } = annotationObject
 
@@ -283,18 +195,6 @@ export const getWormholeLink = (annotationObject, annotationAnchorIndex) => {
     }, null)
 }
 
-export const getAnnotationDotKeys = (
-    songIndex,
-    annotationIndex
-) => {
-    const annotation = getAnnotationObject(
-        songIndex,
-        annotationIndex
-    )
-
-    return annotation ? annotation.dotKeys : null
-}
-
 /**********
  * STANZA *
  **********/
@@ -306,70 +206,6 @@ export const getSongStanzaConfigs = (songIndex) => {
     return songStanzaConfigs || []
 }
 
-export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
-
-    // Return -1 if logue.
-    if (getSongIsLogue(songIndex)) {
-        return 0
-    }
-
-    const songObject = getSongObject(songIndex),
-        { songVerseConfigs } = songObject
-
-    return songVerseConfigs[verseIndex].stanzaIndex
-}
-
-export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
-    const songObject = getSongObject(songIndex),
-        { songVerseConfigs } = songObject
-
-    if (songVerseConfigs) {
-        const verseConfig = songVerseConfigs[verseIndex]
-
-        if (verseConfig) {
-            return songVerseConfigs[verseIndex].verseDuration
-        }
-    }
-
-    return 0
-}
-
-export const getLastUnitDotCardIndex = (songIndex) => {
-    /**
-     * Return an index if the last unit is a dot card. Otherwise, return -1.
-     * Note that this assumes there can only be one last unit that isn't a
-     * stanza unit.
-     */
-
-    const songObject = getSongObject(songIndex),
-        { songStanzaConfigs } = songObject
-
-    if (songStanzaConfigs) {
-        // Get unit indices of last stanza.
-        const { stanzaUnitIndices } = songStanzaConfigs[
-            songStanzaConfigs.length - 1
-        ]
-
-        if (stanzaUnitIndices) {
-            // Compare index of last unit to total units.
-            const lyricUnitsCount = getLyricUnitsCount(songIndex),
-                lastStanzaUnitIndex = stanzaUnitIndices[
-                    stanzaUnitIndices.length - 1
-                ]
-
-            /**
-             * Remember that title is technically the first unit. So we're
-             * treating this as if it were 1-based.
-             */
-            if (lastStanzaUnitIndex < lyricUnitsCount - 1) {
-                return lyricUnitsCount - 1
-            }
-        }
-    }
-
-    return -1
-}
-
 /**********
  * SCENES *
  **********/
@@ -379,35 +215,6 @@ export const getSongSceneConfigs = (songIndex) => {
         { songSceneConfigs } = songObject
 
     return songSceneConfigs || []
-}
-
-export const getVerseIndexForNextScene = (
-    songIndex,
-    verseIndex,
-    direction = 0
-) => {
-
-    // Return -1 if logue.
-    if (getSongIsLogue(songIndex)) {
-        return -1
-    }
-
-    const songSceneConfigs = getSongSceneConfigs(songIndex),
-
-        currentSceneIndex = getSceneIndexForVerseIndex(
-            songIndex,
-            verseIndex
-        ),
-
-        scenesCount = songSceneConfigs.length,
-
-        nextSceneIndex = (
-            currentSceneIndex
-            + direction
-            + scenesCount
-        ) % scenesCount
-
-    return songSceneConfigs[nextSceneIndex].firstVerseIndex
 }
 
 export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
@@ -436,15 +243,6 @@ export const getSceneObject = (
  * ADMIN *
  *********/
 
-export const getAllTaskObjects = (songs = album.songs) => {
-    const { tasks } = album,
-        allTaskObjects = songs.map(song => song.tasks)
-
-    allTaskObjects.push(tasks)
-
-    return allTaskObjects
-}
-
 export const getSongTasks = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
     return selectedSong.tasks || []
@@ -453,28 +251,4 @@ export const getSongTasks = (songIndex) => {
 export const getDrawings = () => {
     const { drawings } = album
     return drawings
-}
-
-/***********
- * HELPERS *
- ***********/
-
-const _parseLyrics = (lyricEntity, selectedVerseIndex) => {
-    // Recurse until object with verse index is found.
-
-    // Method does not apply to logues.
-    if (lyricEntity) {
-        if (lyricEntity.verseIndex === selectedVerseIndex) {
-            return lyricEntity
-
-        } else if (Array.isArray(lyricEntity)) {
-            return lyricEntity.reduce((childSelectedLyric, childLyric) => {
-                return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
-            }, null)
-
-            // Object with verseIndex key not found, so dig into subCard.
-        } else if (lyricEntity.subCard) {
-            return _parseLyrics(lyricEntity.subCard, selectedVerseIndex)
-        }
-    }
 }

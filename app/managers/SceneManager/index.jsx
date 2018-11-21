@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { updateRenderableStore } from 'flux/actions/renderable'
 
-import { getVerseIndexForNextScene } from 'helpers/dataHelper'
+import { getVerseIndexForNextScene } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 class SceneManager extends Component {

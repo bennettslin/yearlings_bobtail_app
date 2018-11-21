@@ -7,16 +7,16 @@ import { bindActionCreators } from 'redux'
 
 import { updateToggleStore } from 'flux/actions/toggle'
 
-import Root from '../components/Root'
+import Root from '../../components/Root'
 
-import { getAnnotationObject } from '../helpers/dataHelper'
+import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
 import { getClientX } from 'helpers/domHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getHandlers
-} from './eventHelper'
+} from './helper'
 
 import { REFERENCE } from 'constants/dots'
 import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
