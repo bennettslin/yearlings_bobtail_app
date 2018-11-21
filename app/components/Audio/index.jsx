@@ -22,8 +22,7 @@ const audioPropTypes = {
         // From parent.
         verseDidRender: PropTypes.func.isRequired,
         audioBannerHandlers: PropTypes.object.isRequired,
-        audioButtonsHandlers: PropTypes.object.isRequired,
-        titleToggleHandlers: PropTypes.object.isRequired
+        audioButtonsHandlers: PropTypes.object.isRequired
     },
 
     Audio = ({
@@ -36,8 +35,7 @@ const audioPropTypes = {
 
         verseDidRender,
         audioBannerHandlers,
-        audioButtonsHandlers,
-        titleToggleHandlers
+        audioButtonsHandlers
 
     }) => {
 
@@ -49,7 +47,7 @@ const audioPropTypes = {
                 )}
             >
                 {isTwoRowMenu && (
-                    <TitleToggle {...titleToggleHandlers}
+                    <TitleToggle
                         isAudioChild
                     />
                 )}

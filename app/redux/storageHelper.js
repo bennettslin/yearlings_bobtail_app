@@ -33,7 +33,6 @@ import {
     SELECTED_SCORE_INDEX,
     SELECTED_SONG_INDEX,
     SELECTED_TIPS_INDEX,
-    SELECTED_TITLE_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_WIKI_INDEX,
     WINDOW_STORAGE
@@ -140,7 +139,6 @@ const _validateValueForKey = (key) => {
         case SELECTED_ADMIN_INDEX:
         case SELECTED_SCORE_INDEX:
         case SELECTED_CAROUSEL_NAV_INDEX:
-        case SELECTED_TITLE_INDEX:
             isValid = isNumber && parsedValue <= 1
             break
 

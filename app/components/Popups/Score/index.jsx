@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-
 import { updateToggleStore } from 'flux/actions/toggle'
 
 import Score from '../../Score'
@@ -58,9 +57,11 @@ class ScorePopup extends Component {
             <Popup
                 isFullSize
                 displaysInOverlay
-                popupName="Score"
-                isVisible={isScoreShown}
-                handleCloseClick={this.closeScore}
+                {...{
+                    popupName: 'Score',
+                    isVisible: isScoreShown,
+                    handleCloseClick: this.closeScore
+                }}
             >
                 <Score {...other} />
             </Popup>

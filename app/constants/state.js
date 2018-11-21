@@ -64,6 +64,5 @@ module.exports = {
     SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_TIPS_INDEX: 'selectedTipsIndex',
-    SELECTED_TITLE_INDEX: 'selectedTitleIndex',
     SELECTED_WIKI_INDEX: 'selectedWikiIndex'
 }

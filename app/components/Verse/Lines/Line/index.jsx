@@ -1,8 +1,6 @@
 // Component for a single line in a verse.
 
-import React, {
-    Component, Fragment as ___
-} from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'

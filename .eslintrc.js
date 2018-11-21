@@ -240,7 +240,7 @@ module.exports = {
         "no-with": "error",
         "object-curly-newline": [
             "error", {
-                "minProperties": 2,
+                "minProperties": 3,
                 "consistent": true
             }
         ],

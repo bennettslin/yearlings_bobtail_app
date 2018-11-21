@@ -2,17 +2,16 @@
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
 class TryScore extends Component {
 
     static propTypes = {
         // Through Redux.
-        isScoreShowable: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
+        isScoreShowable: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
         updateToggleStore: PropTypes.func.isRequired,
@@ -52,12 +51,12 @@ class TryScore extends Component {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { isScoreShowable },
     toggleStore: { isScoreShown },
+    responsiveStore: { isScoreShowable },
     songStore: { isSelectedLogue }
 }) => ({
-    isScoreShowable,
     isScoreShown,
+    isScoreShowable,
     isSelectedLogue
 })
 

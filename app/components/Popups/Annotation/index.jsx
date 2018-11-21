@@ -13,13 +13,13 @@ import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
 const mapStateToProps = ({
     toggleStore: {
         isScoreShown,
+        isTitleShown,
         isLyricExpanded
     },
     renderStore: { canCarouselRender },
     deviceStore: { deviceIndex },
     renderedStore: { renderedAnnotationIndex },
     selectedCarouselNavIndex,
-    selectedTitleIndex,
     selectedWikiIndex
 }) => ({
     isScoreShown,
@@ -28,7 +28,7 @@ const mapStateToProps = ({
     canCarouselRender,
     renderedAnnotationIndex,
     selectedCarouselNavIndex,
-    selectedTitleIndex,
+    isTitleShown,
     selectedWikiIndex
 })
 
@@ -38,12 +38,12 @@ class AnnotationPopup extends Component {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
 
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
+        isTitleShown: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
-        selectedTitleIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -108,13 +108,13 @@ class AnnotationPopup extends Component {
 
                 canCarouselRender,
                 deviceIndex,
-                isLyricExpanded,
                 isScoreShown,
+                isTitleShown,
+                isLyricExpanded,
                 inMain,
 
                 renderedAnnotationIndex,
                 selectedCarouselNavIndex,
-                selectedTitleIndex,
                 selectedWikiIndex,
 
                 handleAnnotationPrevious,
@@ -152,7 +152,7 @@ class AnnotationPopup extends Component {
                     ) &&
 
                     !isScoreShown &&
-                    !selectedTitleIndex &&
+                    !isTitleShown &&
                     !selectedWikiIndex,
 
                 { annotationIndex } = this.state

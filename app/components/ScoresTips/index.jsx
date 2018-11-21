@@ -1,15 +1,9 @@
 // Section for score and tips toggle buttons.
 
-import React, {
-    Component,
-    Fragment as ___
-} from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-
-import { updateToggleStore } from 'flux/actions/toggle'
 
 import TryScore from '../../modules/TryScore'
 import Button from '../Button'
@@ -58,7 +52,6 @@ class ScoresTips extends Component {
         isScoreLoaded: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         inMenu: PropTypes.bool.isRequired,
@@ -145,10 +138,4 @@ class ScoresTips extends Component {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(ScoresTips)
+export default connect(mapStateToProps)(ScoresTips)

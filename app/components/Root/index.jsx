@@ -49,6 +49,7 @@ class Root extends Component {
 
         canCarouselRender: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
+        isTitleShown: PropTypes.bool.isRequired,
 
         deviceIndex: PropTypes.number.isRequired,
         isPlaying: PropTypes.bool.isRequired,
@@ -67,7 +68,6 @@ class Root extends Component {
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
-        selectedTitleIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
 
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -175,7 +175,7 @@ class Root extends Component {
                 selectedOverviewIndex,
                 isScoreShown,
                 selectedTipsIndex,
-                selectedTitleIndex,
+                isTitleShown,
                 selectedWikiIndex,
                 isPlaying,
                 isSliderTouched,
@@ -219,7 +219,7 @@ class Root extends Component {
                 isLyricExpanded,
                 renderedAnnotationIndex,
                 isScoreShown,
-                selectedTitleIndex,
+                isTitleShown,
                 selectedWikiIndex
             }),
 
@@ -400,11 +400,11 @@ const mapStateToProps = ({
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    selectedTitleIndex,
     selectedWikiIndex,
     isPlaying,
     toggleStore: {
         isScoreShown,
+        isTitleShown,
         isLyricExpanded
     },
     deviceStore: { deviceIndex },
@@ -441,7 +441,7 @@ const mapStateToProps = ({
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    selectedTitleIndex,
+    isTitleShown,
     selectedWikiIndex,
     isLyricExpanded,
     showOneOfTwoLyricColumns,

@@ -19,6 +19,8 @@ class OverviewManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        isScoreShown: PropTypes.bool.isRequired,
+        isTitleShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
@@ -27,7 +29,6 @@ class OverviewManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
-        selectedTitleIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         selectDotsExpand: PropTypes.func.isRequired,
         selectLyricExpand: PropTypes.func.isRequired,
@@ -134,7 +135,11 @@ class OverviewManager extends Component {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isLyricExpanded },
+    toggleStore: {
+        isScoreShown,
+        isTitleShown,
+        isLyricExpanded
+    },
     songStore: {
         selectedSongIndex,
         selectedAnnotationIndex,
@@ -144,9 +149,10 @@ const mapStateToProps = ({
     selectedDotsIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    selectedTitleIndex,
     selectedWikiIndex
 }) => ({
+    isScoreShown,
+    isTitleShown,
     isLyricExpanded,
     selectedAnnotationIndex,
     isSelectedLogue,
@@ -155,7 +161,6 @@ const mapStateToProps = ({
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTipsIndex,
-    selectedTitleIndex,
     selectedWikiIndex
 })
 

@@ -288,7 +288,6 @@ Live.propTypes = {
     handleScrollUponLyricRender: PropTypes.func.isRequired,
     handleScrollUponCarouselRender: PropTypes.func.isRequired,
     handleTipsToggle: PropTypes.func.isRequired,
-    handleTitleToggle: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired,
     // handleSetVerseElement: PropTypes.func.isRequired,

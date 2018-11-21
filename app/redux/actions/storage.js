@@ -5,7 +5,7 @@ import {
 } from '../storageHelper'
 
 import {
-    SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_WIKI_INDEX
+    SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_WIKI_INDEX
 } from 'constants/state'
 
 export const selectAccessIndex = (selectedAccessIndex = 0) => {
@@ -80,14 +80,6 @@ export const selectTipsIndex = (selectedTipsIndex = 0) => {
     return {
         type: SELECTED_TIPS_INDEX,
         payload: selectedTipsIndex
-    }
-}
-
-export const selectTitleIndex = (selectedTitleIndex = 0) => {
-    setInStorage(SELECTED_TITLE_INDEX, selectedTitleIndex)
-    return {
-        type: SELECTED_TITLE_INDEX,
-        payload: selectedTitleIndex
     }
 }
 

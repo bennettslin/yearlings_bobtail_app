@@ -1,32 +1,42 @@
 // Popup container for title section.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateToggleStore } from 'flux/actions/toggle'
+
 import TitleSection from '../../Title'
 import Popup from '../../Popup'
 
 const mapStateToProps = ({
-    selectedTitleIndex
+    toggleStore: { isTitleShown }
 }) => ({
-    selectedTitleIndex
+    isTitleShown
 })
 
-const titlePopupPropTypes = {
+class TitlePopup extends Component {
+
+    static propTypes = {
     // Through Redux.
-        selectedTitleIndex: PropTypes.number.isRequired,
+        isTitleShown: PropTypes.bool.isRequired,
 
         // From parent.
-        handleTitleToggle: PropTypes.func.isRequired,
         handlePopupContainerClick: PropTypes.func.isRequired
-    },
+    }
 
-    TitlePopup = ({
-        selectedTitleIndex,
-        handleTitleToggle,
-        handlePopupContainerClick
+    closeTitle = () => {
+        this.props.updateToggleStore({
+            isTitleShown: false
+        })
+    }
 
-    }) => {
+    render() {
+
+        const {
+            isTitleShown,
+            handlePopupContainerClick
+        } = this.props
 
         return (
             <Popup
@@ -36,8 +46,8 @@ const titlePopupPropTypes = {
                 hasWidePadding
                 {...{
                     popupName: 'Title',
-                    isVisible: Boolean(selectedTitleIndex),
-                    handleCloseClick: handleTitleToggle,
+                    isVisible: isTitleShown,
+                    handleCloseClick: this.closeTitle,
                     handlePopupContainerClick
                 }}
             >
@@ -45,7 +55,12 @@ const titlePopupPropTypes = {
             </Popup>
         )
     }
+}
 
-TitlePopup.propTypes = titlePopupPropTypes
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateToggleStore
+    }, dispatch)
+)
 
-export default connect(mapStateToProps)(TitlePopup)
+export default connect(mapStateToProps, bindDispatchToProps)(TitlePopup)

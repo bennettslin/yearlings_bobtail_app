@@ -37,6 +37,7 @@ class EventHandler extends Component {
     static propTypes = {
         // Through Redux.
         isScoreShown: PropTypes.bool.isRequired,
+        isTitleShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedAdminIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -45,7 +46,6 @@ class EventHandler extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
-        selectedTitleIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
@@ -74,14 +74,6 @@ class EventHandler extends Component {
     }
 
     componentDidUpdate(prevProps) {
-
-        const {
-                isScoreShown
-            } = this.props,
-            {
-                isScoreShown: wasScoreShown
-            } = prevProps
-
         if (
             this.props.isHiddenLyric !==
                 prevProps.isHiddenLyric ||
@@ -92,10 +84,37 @@ class EventHandler extends Component {
             this.focusElementForAccess()
         }
 
+        this.handleScoreOnIfNeeded(prevProps)
+        this.handleTitleOnIfNeeded(prevProps)
+    }
+
+    handleScoreOnIfNeeded = (prevProps) => {
+        const
+            { isScoreShown } = this.props,
+            { isScoreShown: wasScoreShown } = prevProps
+
         if (isScoreShown && !wasScoreShown) {
-            this.handleScoreOn()
+            this._closeSections({
+                justClosePopups: true,
+                exemptScore: true
+            })
         }
     }
+
+    handleTitleOnIfNeeded = (prevProps) => {
+        const
+            { isTitleShown } = this.props,
+            { isTitleShown: wasTitleShown } = prevProps
+
+
+        if (isTitleShown && !wasTitleShown) {
+            this._closeSections({
+                justClosePopups: true,
+                exemptTitle: true
+            })
+        }
+    }
+
 
     /**********
      * ACCESS *
@@ -645,17 +664,6 @@ class EventHandler extends Component {
         return true
     }
 
-    /*********
-     * SCORE *
-     *********/
-
-    handleScoreOn = () => {
-        this._closeSections({
-            justClosePopups: true,
-            exemptScore: true
-        })
-    }
-
     /********
      * TIPS *
      ********/
@@ -682,25 +690,6 @@ class EventHandler extends Component {
             })
         }
         return tipsToggled
-    }
-
-    /*********
-     * TITLE *
-     *********/
-
-    handleTitleToggle = (e) => {
-        const titleToggled = this.props.selectTitle()
-        if (titleToggled) {
-            this.stopPropagation(e)
-
-            // If title is off and we're toggling it on, then close other popups.
-            if (!this.props.selectedTitleIndex) {
-                this._closeSections({
-                    justClosePopups: true
-                })
-            }
-        }
-        return titleToggled
     }
 
     /*********
@@ -837,6 +826,7 @@ class EventHandler extends Component {
         exemptLyric,
         exemptOverview,
         exemptScore,
+        exemptTitle,
         exemptTips,
         exemptInteractivatedVerse,
 
@@ -848,7 +838,7 @@ class EventHandler extends Component {
 
         const {
             isScoreShown,
-            selectedTitleIndex,
+            isTitleShown,
             selectedWikiIndex
         } = this.props
 
@@ -869,8 +859,10 @@ class EventHandler extends Component {
                     return
                 }
 
-            } else if (selectedTitleIndex) {
-                this.props.selectTitle(false)
+            } else if (isTitleShown && !exemptTitle) {
+                this.props.updateToggleStore({
+                    isTitleShown: false
+                })
                 if (!continuePastClosingPopups) {
                     return
                 }
@@ -1056,13 +1048,13 @@ const mapStateToProps = ({
     },
     toggleStore: {
         isScoreShown,
+        isTitleShown,
         isLyricExpanded
     },
     selectedAdminIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
     selectedTipsIndex,
-    selectedTitleIndex,
     selectedWikiIndex,
     interactivatedVerseIndex,
     accessedAnnotationIndex,
@@ -1081,7 +1073,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     selectedSongIndex,
     selectedTipsIndex,
-    selectedTitleIndex,
+    isTitleShown,
     selectedVerseIndex,
     selectedWikiIndex,
     interactivatedVerseIndex,

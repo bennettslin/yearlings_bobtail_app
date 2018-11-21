@@ -25,7 +25,6 @@ const propTypes = {
         windowWidth: PropTypes.number.isRequired,
 
         // From parent.
-        titleToggleHandlers: PropTypes.object.isRequired,
         audioHandlers: PropTypes.object.isRequired,
         scoresTipsHandlers: PropTypes.object.isRequired,
 
@@ -34,7 +33,6 @@ const propTypes = {
 
     Menu = ({
         windowWidth,
-        titleToggleHandlers,
         audioHandlers,
         scoresTipsHandlers,
         verseDidRender
@@ -72,7 +70,7 @@ const propTypes = {
                             'MenuChild__title__child',
                             'absoluteFullContainer'
                         )}>
-                            <TitleToggle {...titleToggleHandlers} />
+                            <TitleToggle />
                         </div>
                     </div>
 

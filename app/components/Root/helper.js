@@ -19,7 +19,7 @@ export const getShowOverlay = ({
     isLyricExpanded,
     renderedAnnotationIndex,
     isScoreShown,
-    selectedTitleIndex,
+    isTitleShown,
     selectedWikiIndex
 }) => {
 
@@ -29,7 +29,7 @@ export const getShowOverlay = ({
     })
 
     return (
-        Boolean(selectedTitleIndex) ||
+        isTitleShown ||
         isScoreShown ||
         Boolean(selectedWikiIndex) ||
         (

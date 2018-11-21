@@ -1,8 +1,6 @@
 // Component to show all notes and wormholes for each annotation.
 
-import React, {
-    Component, Fragment as ___
-} from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import AnnotationCard from './Card'
 

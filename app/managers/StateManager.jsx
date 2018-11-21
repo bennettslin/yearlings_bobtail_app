@@ -30,7 +30,6 @@ import SliderVerseManager from './SliderVerseManager'
 import SongManager from './SongManager'
 import TimeVerseManager from './TimeVerseManager'
 import TipsManager from './TipsManager'
-import TitleManager from './TitleManager'
 import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
@@ -499,9 +498,6 @@ class StateManager extends Component {
                     setRef={this._setTipsManagerRef}
                     selectDotsExpand={this.selectDotsExpand}
                     selectLyricExpand={this.selectLyricExpand}
-                />
-                <TitleManager
-                    setRef={this._setTitleManagerRef}
                 />
                 <VerseManager
                     setRef={this._setVerseManagerRef}

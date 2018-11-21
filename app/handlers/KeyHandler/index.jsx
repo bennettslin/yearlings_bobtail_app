@@ -1,9 +1,6 @@
 // Component that handles all user events from keyboard.
 
-import React, {
-    Component,
-    Fragment as ___
-} from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -11,6 +8,7 @@ import { connect } from 'react-redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
 import TryScore from '../../modules/TryScore'
+import TryTitle from '../../modules/TryTitle'
 
 import {
     getSongsAndLoguesCount,
@@ -651,7 +649,7 @@ class KeyHandler extends Component {
                 keyWasRegistered = eventHandlers.handleTipsToggle(e)
                 break
             case TITLE_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleTitleToggle(e)
+                keyWasRegistered = this.tryToggleTitle()
                 break
             case DOTS_SECTION_EXPAND_KEY:
                 keyWasRegistered = eventHandlers.handleDotsSectionToggle(e)
@@ -676,6 +674,10 @@ class KeyHandler extends Component {
         // Close score popup.
         if (props.isScoreShown) {
             this.tryToggleScore(false)
+
+        // Close title popup.
+        } else if (props.isTitleShown) {
+            this.tryToggleTitle(false)
 
         // Close wiki popup.
         } else if (props.selectedWikiIndex) {
@@ -710,11 +712,18 @@ class KeyHandler extends Component {
         this.tryToggleScore = tryToggleScore
     }
 
+    setTryToggleTitle = (tryToggleTitle) => {
+        this.tryToggleTitle = tryToggleTitle
+    }
+
     render() {
         return (
             <___>
                 <TryScore
                     {...{ getTryToggleScore: this.setTryToggleScore }}
+                />
+                <TryTitle
+                    {...{ getTryToggleTitle: this.setTryToggleTitle }}
                 />
             </___>
         )
@@ -724,6 +733,7 @@ class KeyHandler extends Component {
 const mapStateToProps = ({
     toggleStore: {
         isScoreShown,
+        isTitleShown,
         isLyricExpanded
     },
     responsiveStore: { isHiddenLyric },
@@ -750,6 +760,7 @@ const mapStateToProps = ({
 }) => ({
     isHiddenLyric,
     isScoreShown,
+    isTitleShown,
     isLyricExpanded,
     selectedAccessIndex,
     selectedAnnotationIndex,

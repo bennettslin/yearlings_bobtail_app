@@ -1,10 +1,11 @@
 // Toggle button to show and hide title section.
 
-import React from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import TryTitle from '../../../modules/TryTitle'
 import AudioTimer from '../../Audio/Timer'
 import Button from '../../Button'
 
@@ -17,69 +18,78 @@ const mapStateToProps = ({
     isTwoRowMenu
 })
 
-const titleToggleDefaultProps = {
-        isAudioChild: false
-    },
+class TitleToggle extends Component {
 
-    titleTogglePropTypes = {
-    // Through Redux.
+    static defaultProps = {
+        isAudioChild: false
+    }
+
+    static propTypes = {
+        // Through Redux.
         isTwoRowMenu: PropTypes.bool.isRequired,
 
         // From parent.
-        isAudioChild: PropTypes.bool.isRequired,
-        handleTitleToggle: PropTypes.func.isRequired
-    },
-
-    TitleToggle = ({
-
-        isTwoRowMenu,
-
-        isAudioChild,
-        handleTitleToggle
-
-    }) => {
-
-        const titleButtonChild = (
-            <Button
-                buttonName={TITLE_BUTTON_KEY}
-                className={cx(
-                    { 'Button__title__timerInTitle': isTwoRowMenu }
-                )}
-                isCustomSize
-                accessKey={TITLE_TOGGLE_KEY}
-                handleButtonClick={handleTitleToggle}
-            />
-        )
-
-        return isAudioChild === isTwoRowMenu && (
-            <div className={cx(
-                'TitleToggle',
-                {
-                    'Audio__child': isAudioChild,
-                    'TitleToggle__inAudio': isAudioChild
-                }
-            )}>
-                {isTwoRowMenu && (
-                    <AudioTimer
-                        isTitleTimer
-                    />
-                )}
-
-                {isTwoRowMenu ? (
-                    <div className={cx(
-                        'TitleToggleButton__animatable',
-                        'absoluteFullContainer'
-                    )}>
-                        {titleButtonChild}
-                    </div>
-                ) : (
-                    titleButtonChild
-                )}
-            </div>
-        )
+        isAudioChild: PropTypes.bool.isRequired
     }
 
-TitleToggle.defaultProps = titleToggleDefaultProps
-TitleToggle.propTypes = titleTogglePropTypes
+    handleTitleClick = () => {
+        this.tryToggleTitle()
+    }
+
+    setTryToggleTitle = (tryToggleTitle) => {
+        this.tryToggleTitle = tryToggleTitle
+    }
+
+    render() {
+        const {
+                isTwoRowMenu,
+                isAudioChild
+            } = this.props,
+
+            titleButtonChild = (
+                <Button
+                    buttonName={TITLE_BUTTON_KEY}
+                    className={cx(
+                        { 'Button__title__timerInTitle': isTwoRowMenu }
+                    )}
+                    isCustomSize
+                    accessKey={TITLE_TOGGLE_KEY}
+                    handleButtonClick={this.handleTitleClick}
+                />
+            )
+
+        return isAudioChild === isTwoRowMenu && (
+            <___>
+                <div className={cx(
+                    'TitleToggle',
+                    {
+                        'Audio__child': isAudioChild,
+                        'TitleToggle__inAudio': isAudioChild
+                    }
+                )}>
+                    {isTwoRowMenu && (
+                        <AudioTimer
+                            isTitleTimer
+                        />
+                    )}
+
+                    {isTwoRowMenu ? (
+                        <div className={cx(
+                            'TitleToggleButton__animatable',
+                            'absoluteFullContainer'
+                        )}>
+                            {titleButtonChild}
+                        </div>
+                    ) : (
+                        titleButtonChild
+                    )}
+                </div>
+                <TryTitle
+                    {...{ getTryToggleTitle: this.setTryToggleTitle }}
+                />
+            </___>
+        )
+    }
+}
 
 export default connect(mapStateToProps)(TitleToggle)

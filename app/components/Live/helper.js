@@ -35,7 +35,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleLyricVerseSelect,
             handleOverviewToggle,
             handleTipsToggle,
-            handleTitleToggle,
             handleVerseBarSelect,
             handleVerseBarWheel,
             handleVerseInteractivate,
@@ -51,9 +50,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleAnnotationWikiSelect
         },
 
-        titleToggleHandlers = {
-            handleTitleToggle
-        },
         audioBannerHandlers = {
             handleSliderTouchBegin
         },
@@ -64,7 +60,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleAudioOptionsToggle
         },
         audioHandlers = {
-            titleToggleHandlers,
             audioBannerHandlers,
             audioButtonsHandlers
         },
@@ -105,7 +100,6 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
 
         titlePopupHandlers = {
-            handleTitleToggle,
             handlePopupContainerClick
         },
 
@@ -150,7 +144,6 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
 
         menuFieldHandlers = {
-            titleToggleHandlers,
             audioHandlers,
             scoresTipsHandlers
         }

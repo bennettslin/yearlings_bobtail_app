@@ -43,7 +43,6 @@ export const getHandlers = (me) => {
         handleCarouselNavToggle: me.handleCarouselNavToggle,
         handleSceneDirection: me.handleSceneDirection,
         handleTipsToggle: me.handleTipsToggle,
-        handleTitleToggle: me.handleTitleToggle,
         handleVerseBarSelect: me.handleVerseBarSelect,
         handleVerseBarWheel: me.handleVerseBarWheel,
         handleVerseInteractivate: me.handleVerseInteractivate,
