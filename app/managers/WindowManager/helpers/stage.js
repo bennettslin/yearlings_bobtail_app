@@ -78,7 +78,7 @@ const getStageCoordinates = ({
     deviceIndex,
     windowWidth,
     windowHeight,
-    isHeightlessLyricColumn
+    isHiddenLyric
 }) => {
 
     const isDesktop = getIsDesktop(deviceIndex),
@@ -96,14 +96,14 @@ const getStageCoordinates = ({
 
         navHeight =
             isPhone ||
-            isHeightlessLyricColumn ||
+            isHiddenLyric ||
             isHiddenCarouselNav ? 0 : LS_HEIGHT_NAV,
 
         centreFieldHeight = getCentreFieldHeight({
             deviceIndex,
             windowWidth,
             windowHeight,
-            isHeightlessLyricColumn
+            isHiddenLyric
         }) - navHeight,
 
         centreFieldRatio = centreFieldWidth / centreFieldHeight

@@ -8,22 +8,22 @@ import { updateDeviceStore } from 'flux/actions/device'
 import { updateRenderableStore } from 'flux/actions/renderable'
 import { updateResponsiveStore } from 'flux/actions/responsive'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
 import {
     getShowOneOfTwoLyricColumns,
-    getIsLyricExpandable,
     getIsTwoRowMenu
 } from 'helpers/responsiveHelper'
 import {
-    getIsHeightlessLyricColumn,
+    getIsHiddenLyric,
     getIsHiddenCarouselNav
 } from './helpers/hidden'
 import {
     getShowShrunkNavIcon,
     getShowSingleBookColumn
 } from './helpers/nav'
-import { getIsScoreShowable } from './helpers/responsive'
+import {
+    getIsLyricExpandable,
+    getIsScoreShowable
+} from './helpers/responsive'
 import { getIsScoresTipsInMain } from './helpers/scoresTips'
 import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
@@ -41,8 +41,7 @@ class WindowManager extends Component {
         updateResponsiveStore: PropTypes.func.isRequired,
 
         // From parent.
-        deselectAnnotation: PropTypes.func.isRequired,
-        selectLyricExpand: PropTypes.func.isRequired
+        deselectAnnotation: PropTypes.func.isRequired
     }
 
     state = {
@@ -52,16 +51,6 @@ class WindowManager extends Component {
     componentDidMount() {
         // Then watch for any subsequent window resize.
         window.onresize = debounce(this._windowResize, 25)
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.state,
-            nextProps: nextState
-        })
     }
 
     componentDidUpdate(prevProps) {
@@ -82,7 +71,7 @@ class WindowManager extends Component {
                 windowWidth
             } = resizeWindow(e ? e.target : undefined),
 
-            isHeightlessLyricColumn = getIsHeightlessLyricColumn({
+            isHiddenLyric = getIsHiddenLyric({
                 deviceIndex,
                 windowHeight,
                 windowWidth
@@ -117,27 +106,16 @@ class WindowManager extends Component {
             deviceIndex,
             windowHeight,
             windowWidth,
-            isHeightlessLyricColumn
+            isHiddenLyric
         })
 
         this._updateResponsiveStore({
             deviceIndex,
             windowHeight,
             windowWidth,
-            isHeightlessLyricColumn,
+            isHiddenLyric,
             showOneOfTwoLyricColumns
         })
-
-        /**
-         * Force collapse of lyric in state if not expandable, or if heightless
-         * lyric.
-         */
-        // if (
-        //     !isLyricExpandable ||
-        //     isHeightlessLyricColumn
-        // ) {
-        //     this.props.selectLyricExpand(false)
-        // }
 
         return deviceIndex
     }
@@ -146,7 +124,7 @@ class WindowManager extends Component {
         deviceIndex,
         windowHeight,
         windowWidth,
-        isHeightlessLyricColumn
+        isHiddenLyric
     }) {
         this.props.updateDeviceStore({
             deviceIndex,
@@ -156,7 +134,7 @@ class WindowManager extends Component {
                 deviceIndex,
                 windowWidth,
                 windowHeight,
-                isHeightlessLyricColumn
+                isHiddenLyric
             })
         })
     }
@@ -165,11 +143,11 @@ class WindowManager extends Component {
         deviceIndex,
         windowHeight,
         windowWidth,
-        isHeightlessLyricColumn,
+        isHiddenLyric,
         showOneOfTwoLyricColumns
     }) {
         this.props.updateResponsiveStore({
-            isHeightlessLyricColumn,
+            isHiddenLyric,
             showOneOfTwoLyricColumns,
             isHiddenCarouselNav: getIsHiddenCarouselNav({
                 deviceIndex,

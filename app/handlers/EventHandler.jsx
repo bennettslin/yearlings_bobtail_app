@@ -50,7 +50,7 @@ class EventHandler extends Component {
         selectedWikiIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        isHeightlessLyricColumn: PropTypes.bool.isRequired,
+        isHiddenLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
@@ -84,8 +84,8 @@ class EventHandler extends Component {
             } = prevProps
 
         if (
-            this.props.isHeightlessLyricColumn !==
-                prevProps.isHeightlessLyricColumn ||
+            this.props.isHiddenLyric !==
+                prevProps.isHiddenLyric ||
             this.props.isLyricExpanded !==
                 prevProps.isLyricExpanded
         ) {
@@ -1000,14 +1000,14 @@ class EventHandler extends Component {
     focusElementForAccess = () => {
 
         const {
-                isHeightlessLyricColumn,
+                isHiddenLyric,
                 isLyricExpanded
             } = this.props,
 
             doFocusLyricElement =
                 this.myLyricElement &&
                     (
-                        !isHeightlessLyricColumn ||
+                        !isHiddenLyric ||
                         isLyricExpanded
                     )
 
@@ -1048,7 +1048,7 @@ class EventHandler extends Component {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { isHeightlessLyricColumn },
+    responsiveStore: { isHiddenLyric },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -1071,7 +1071,7 @@ const mapStateToProps = ({
         isSliderTouched
     }
 }) => ({
-    isHeightlessLyricColumn,
+    isHiddenLyric,
     selectedAdminIndex,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,

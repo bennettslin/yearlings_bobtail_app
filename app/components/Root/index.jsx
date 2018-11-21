@@ -75,7 +75,7 @@ class Root extends Component {
 
         isLyricExpanded: PropTypes.bool.isRequired,
         showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-        isHeightlessLyricColumn: PropTypes.bool.isRequired,
+        isHiddenLyric: PropTypes.bool.isRequired,
         showShrunkNavIcon: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
@@ -188,7 +188,7 @@ class Root extends Component {
                 sliderVerseIndex,
                 interactivatedVerseIndex,
                 showOneOfTwoLyricColumns,
-                isHeightlessLyricColumn,
+                isHiddenLyric,
                 showShrunkNavIcon,
                 isScoresTipsInMain,
                 isTwoRowMenu,
@@ -302,7 +302,7 @@ class Root extends Component {
 
                     singleShownLyricColumnKey &&
                         `RM__${singleShownLyricColumnKey}LyricColumnOnly`,
-                    isHeightlessLyricColumn ?
+                    isHiddenLyric ?
                         'RM__lyricHeightless' : 'RM__lyricHeighted',
 
                     areVerseBarsHidden ?
@@ -422,7 +422,7 @@ const mapStateToProps = ({
         sliderVerseIndex
     },
     responsiveStore: {
-        isHeightlessLyricColumn,
+        isHiddenLyric,
         showOneOfTwoLyricColumns,
         isScoresTipsInMain,
         isTwoRowMenu,
@@ -456,7 +456,7 @@ const mapStateToProps = ({
     isSliderTouched,
     isSliderMoving,
     sliderVerseIndex,
-    isHeightlessLyricColumn,
+    isHiddenLyric,
     showShrunkNavIcon,
     isScoresTipsInMain,
     isTwoRowMenu,

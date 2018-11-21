@@ -1,13 +1,14 @@
 import {
     getIsPhone,
-    getIsMini,
-    getIsLyricExpandable
+    getIsMini
 } from '../../../helpers/responsiveHelper'
+
+import { getIsLyricExpandable } from './responsive'
 
 import {
     HIDDEN_NAV_MIN,
-    HEIGHTLESS_LYRIC_MIN,
-    HEIGHTLESS_LYRIC_MAX
+    HIDDEN_LYRIC_MIN,
+    HIDDEN_LYRIC_MAX
 } from '../../../constants/responsive'
 
 const getIsHiddenCarouselNav = ({
@@ -22,7 +23,7 @@ const getIsHiddenCarouselNav = ({
     windowHeight < HIDDEN_NAV_MIN ||
 
     // Or if it's a heightless mini.
-    (getIsMini(deviceIndex) && getIsHeightlessLyricColumn({
+    (getIsMini(deviceIndex) && getIsHiddenLyric({
         deviceIndex,
         windowHeight,
         windowWidth
@@ -31,7 +32,7 @@ const getIsHiddenCarouselNav = ({
     return isHiddenCarouselNav
 }
 
-const getIsHeightlessLyricColumn = ({
+const getIsHiddenLyric = ({
     deviceIndex,
     windowHeight,
     windowWidth
@@ -41,10 +42,10 @@ const getIsHeightlessLyricColumn = ({
     return getIsLyricExpandable(deviceIndex) &&
 
         // It is never heightless when above the max of 720...
-        windowHeight < HEIGHTLESS_LYRIC_MAX &&
+        windowHeight < HIDDEN_LYRIC_MAX &&
 
         // It is always heightless when below the min of 540...
-        (windowHeight < HEIGHTLESS_LYRIC_MIN ||
+        (windowHeight < HIDDEN_LYRIC_MIN ||
 
         // Otherwise, it is heightless when width exceeds height.
         windowWidth > windowHeight)
@@ -52,5 +53,5 @@ const getIsHeightlessLyricColumn = ({
 
 export {
     getIsHiddenCarouselNav,
-    getIsHeightlessLyricColumn
+    getIsHiddenLyric
 }

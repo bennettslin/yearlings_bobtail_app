@@ -517,7 +517,6 @@ class StateManager extends Component {
                 />
                 <WindowManager
                     deselectAnnotation={this.deselectAnnotation}
-                    selectLyricExpand={this.selectLyricExpand}
                 />
             </Fragment>
         )

@@ -23,7 +23,7 @@ import {
 
 const mapStateToProps = ({
     renderStore: { canTheatreRender },
-    responsiveStore: { isHeightlessLyricColumn },
+    responsiveStore: { isHiddenLyric },
     deviceStore: {
         deviceIndex,
         windowHeight,
@@ -32,7 +32,7 @@ const mapStateToProps = ({
     }
 }) => ({
     canTheatreRender,
-    isHeightlessLyricColumn,
+    isHiddenLyric,
     deviceIndex,
     windowHeight,
     windowWidth,
@@ -51,7 +51,7 @@ class Theatre extends Component {
             height: PropTypes.number.isRequired
         }).isRequired,
         deviceIndex: PropTypes.number.isRequired,
-        isHeightlessLyricColumn: PropTypes.bool.isRequired,
+        isHiddenLyric: PropTypes.bool.isRequired,
         windowHeight: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
 
@@ -114,7 +114,7 @@ class Theatre extends Component {
                 /* eslint-enable no-unused-vars */
 
                 canTheatreRender,
-                isHeightlessLyricColumn,
+                isHiddenLyric,
                 deviceIndex,
                 windowWidth,
                 windowHeight,
@@ -135,7 +135,7 @@ class Theatre extends Component {
                 deviceIndex,
                 windowWidth,
                 windowHeight,
-                isHeightlessLyricColumn
+                isHiddenLyric
             }),
 
             stageCentreFromLeft = stageLeft + (stageWidth / 2),
@@ -145,7 +145,7 @@ class Theatre extends Component {
                 windowHeight,
                 centreFieldHeight,
                 stageTop,
-                isHeightlessLyricColumn
+                isHiddenLyric
             }),
 
             floorHeight = getFloorHeight({
@@ -154,7 +154,7 @@ class Theatre extends Component {
                 centreFieldHeight,
                 stageHeight,
                 stageTop,
-                isHeightlessLyricColumn
+                isHiddenLyric
             }),
 
             wallHeight = windowHeight - ceilingHeight - floorHeight,

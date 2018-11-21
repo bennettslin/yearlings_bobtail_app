@@ -13,8 +13,7 @@ import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
-    getShowOneOfTwoLyricColumns,
-    getIsLyricExpandable
+    getShowOneOfTwoLyricColumns
 } from 'helpers/responsiveHelper'
 
 class LyricManager extends Component {
@@ -23,6 +22,8 @@ class LyricManager extends Component {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        isLyricExpandable: PropTypes.bool.isRequired,
+        isHiddenLyric: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
@@ -48,6 +49,28 @@ class LyricManager extends Component {
         })
     }
 
+    componentDidUpdate(prevProps) {
+        this.collapseLyricIfNeeded(prevProps)
+    }
+
+    collapseLyricIfNeeded(prevProps) {
+        const {
+                isLyricExpandable,
+                isHiddenLyric
+            } = this.props,
+            {
+                isLyricExpandable: wasLyricExpandable,
+                isHiddenLyric: wasHiddenLyric
+            } = prevProps
+
+        if (
+            (!isLyricExpandable && wasLyricExpandable) ||
+            (isHiddenLyric && !wasHiddenLyric)
+        ) {
+            this.selectLyricExpand(false)
+        }
+    }
+
     selectLyricExpand(isLyricExpanded = !this.props.isLyricExpanded) {
 
         // We shouldn't be able to expand or collapse lyric while in logue.
@@ -59,7 +82,7 @@ class LyricManager extends Component {
          * We shouldn't be able to expand lyric if it's not expandable. So
          * return false if it's already collapsed, or collapse it if not.
          */
-        if (!getIsLyricExpandable(this.props.deviceIndex)) {
+        if (!this.props.isLyricExpandable) {
 
             if (!this.props.isLyricExpanded) {
                 return false
@@ -121,6 +144,10 @@ class LyricManager extends Component {
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
+    responsiveStore: {
+        isLyricExpandable,
+        isHiddenLyric
+    },
     isLyricExpanded,
     songStore: {
         selectedSongIndex,
@@ -129,6 +156,8 @@ const mapStateToProps = ({
     selectedLyricColumnIndex
 }) => ({
     deviceIndex,
+    isLyricExpandable,
+    isHiddenLyric,
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,

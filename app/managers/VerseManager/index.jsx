@@ -21,7 +21,7 @@ class VerseManager extends Component {
         windowWidth: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        isHeightlessLyricColumn: PropTypes.bool.isRequired,
+        isHiddenLyric: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -159,8 +159,8 @@ class VerseManager extends Component {
                     windowWidth: this.props.windowWidth,
                     windowHeight: this.props.windowHeight,
                     isLyricExpanded: this.props.isLyricExpanded,
-                    isHeightlessLyricColumn:
-                        this.props.isHeightlessLyricColumn,
+                    isHiddenLyric:
+                        this.props.isHiddenLyric,
                     verseElement
                 }),
                 {
@@ -191,7 +191,7 @@ const mapStateToProps = ({
     },
     isLyricExpanded,
     interactivatedVerseIndex,
-    responsiveStore: { isHeightlessLyricColumn },
+    responsiveStore: { isHiddenLyric },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
@@ -203,7 +203,7 @@ const mapStateToProps = ({
     windowHeight,
     isLyricExpanded,
     interactivatedVerseIndex,
-    isHeightlessLyricColumn,
+    isHiddenLyric,
     selectedSongIndex,
     selectedVerseIndex,
     sliderVerseIndex

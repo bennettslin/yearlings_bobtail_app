@@ -17,11 +17,11 @@ import {
 
 export const getLyricColumnHeight = (
     deviceIndex,
-    isHeightlessLyricColumn,
+    isHiddenLyric,
     windowHeight
 ) => {
     return (
-        isHeightlessLyricColumn || getIsDesktop(deviceIndex)
+        isHiddenLyric || getIsDesktop(deviceIndex)
     ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
@@ -29,10 +29,10 @@ export const getCentreFieldHeight = ({
     deviceIndex,
     windowWidth,
     windowHeight,
-    isHeightlessLyricColumn
+    isHiddenLyric
 }) => {
     const lyricColumnHeight = getLyricColumnHeight(
-        deviceIndex, isHeightlessLyricColumn, windowHeight
+        deviceIndex, isHiddenLyric, windowHeight
     )
 
     let menuHeight = LS_HEIGHT_MENU

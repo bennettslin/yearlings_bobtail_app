@@ -9,15 +9,18 @@ import Button from '../../../Button'
 
 import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
-import { getIsLyricExpandable } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
-    responsiveStore: { isHeightlessLyricColumn },
+    responsiveStore: {
+        isHiddenLyric,
+        isLyricExpandable
+    },
     isLyricExpanded
 }) => ({
     deviceIndex,
-    isHeightlessLyricColumn,
+    isHiddenLyric,
+    isLyricExpandable,
     isLyricExpanded
 })
 
@@ -28,8 +31,9 @@ const lyricExpandToggleDefaultProps = {
     lyricExpandTogglePropTypes = {
     // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
-        isHeightlessLyricColumn: PropTypes.bool.isRequired,
+        isHiddenLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        isLyricExpandable: PropTypes.bool.isRequired,
 
         // From parent.
         inMain: PropTypes.bool.isRequired,
@@ -37,18 +41,18 @@ const lyricExpandToggleDefaultProps = {
     },
 
     LyricToggleExpand = ({
-        deviceIndex,
-        isHeightlessLyricColumn,
+        isHiddenLyric,
         isLyricExpanded,
+        isLyricExpandable,
         inMain,
         handleLyricSectionExpand
 
     }) => {
 
-        const isLyricExpandable = getIsLyricExpandable(deviceIndex),
+        const
 
             // Render button in main if lyric column is heightless.
-            shouldRender = inMain ? isHeightlessLyricColumn : true
+            shouldRender = inMain ? isHiddenLyric : true
 
         return isLyricExpandable && shouldRender && (
             <div className={cx(

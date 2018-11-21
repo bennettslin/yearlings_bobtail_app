@@ -258,7 +258,7 @@ class KeyHandler extends Component {
     _routeNavigation = (e, keyName) => {
 
         const {
-                isHeightlessLyricColumn,
+                isHiddenLyric,
                 isLyricExpanded,
                 interactivatedVerseIndex,
                 isScoreShown,
@@ -317,7 +317,7 @@ class KeyHandler extends Component {
                 } = this._handleNavNavigation(e, keyName))
 
             // We're in lyrics section.
-            } else if (!isHeightlessLyricColumn || isLyricExpanded) {
+            } else if (!isHiddenLyric || isLyricExpanded) {
                 keyWasRegistered = this._handleLyricNavigation(e, keyName)
 
                 // If key was registered, then annotation index was accessed.
@@ -725,7 +725,7 @@ class KeyHandler extends Component {
 
 const mapStateToProps = ({
     toggleStore: { isScoreShown },
-    responsiveStore: { isHeightlessLyricColumn },
+    responsiveStore: { isHiddenLyric },
     isLyricExpanded,
     songStore: {
         selectedSongIndex,
@@ -747,7 +747,7 @@ const mapStateToProps = ({
     shownBookColumnIndex,
     deviceIndex
 }) => ({
-    isHeightlessLyricColumn,
+    isHiddenLyric,
     isScoreShown,
     isLyricExpanded,
     selectedAccessIndex,

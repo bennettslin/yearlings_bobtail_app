@@ -5,11 +5,11 @@ export const getCeilingHeight = ({
     windowHeight,
     centreFieldHeight,
     stageTop,
-    isHeightlessLyricColumn
+    isHiddenLyric
 }) => {
 
     const lyricColumnHeight = getLyricColumnHeight(
-        deviceIndex, isHeightlessLyricColumn, windowHeight
+        deviceIndex, isHiddenLyric, windowHeight
     )
 
     return windowHeight - centreFieldHeight + stageTop - lyricColumnHeight
@@ -21,11 +21,11 @@ export const getFloorHeight = ({
     centreFieldHeight,
     stageHeight,
     stageTop,
-    isHeightlessLyricColumn
+    isHiddenLyric
 }) => {
 
     const lyricColumnHeight = getLyricColumnHeight(
-        deviceIndex, isHeightlessLyricColumn, windowHeight
+        deviceIndex, isHiddenLyric, windowHeight
     )
 
     return (

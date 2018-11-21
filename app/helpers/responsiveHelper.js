@@ -49,10 +49,6 @@ export const getIsTabletOrMini = (deviceIndex) => {
     return getIsTablet(deviceIndex) || getIsMini(deviceIndex)
 }
 
-export const getIsLyricExpandable = (deviceIndex) => {
-    return !getIsDesktop(deviceIndex)
-}
-
 export const getIsToggleInOverview = (deviceIndex) => {
     return getIsPhone(deviceIndex)
 }

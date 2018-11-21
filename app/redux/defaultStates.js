@@ -38,7 +38,7 @@ const
     },
 
     RESPONSIVE_DEFAULTS = {
-        isHeightlessLyricColumn: false,
+        isHiddenLyric: false,
         isHiddenCarouselNav: false,
         isMobileWiki: false,
         isScoresTipsInMain: false,
