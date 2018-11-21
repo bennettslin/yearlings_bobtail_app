@@ -24,7 +24,7 @@ class AnnotationManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
+        showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -83,6 +83,28 @@ class AnnotationManager extends Component {
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
             this.accessAnnotation()
         }
+
+        this.deselectAnnotationIfNeeded(prevProps)
+    }
+
+    deselectAnnotationIfNeeded(prevProps) {
+        const {
+                selectedLyricColumnIndex,
+                showOneOfTwoLyricColumns
+            } = this.props,
+            {
+                selectedLyricColumnIndex: prevLyricColumnIndex,
+                showOneOfTwoLyricColumns: didShowOneOfTwoLyricColumns
+            } = prevProps
+
+        if (
+            selectedLyricColumnIndex !== prevLyricColumnIndex ||
+            (
+                showOneOfTwoLyricColumns && !didShowOneOfTwoLyricColumns
+            )
+        ) {
+            this.deselectAnnotation()
+        }
     }
 
     selectAnnotation({
@@ -97,7 +119,7 @@ class AnnotationManager extends Component {
         // Called from arrow buttons in popup.
         if (direction) {
             selectedAnnotationIndex = getAnnotationIndexForDirection({
-                deviceIndex: props.deviceIndex,
+                showOneOfTwoLyricColumns: this.props.showOneOfTwoLyricColumns,
                 selectedSongIndex,
                 selectedDotKeys: props.selectedDotKeys,
                 currentAnnotationIndex: props.selectedAnnotationIndex,
@@ -145,15 +167,14 @@ class AnnotationManager extends Component {
     deselectAnnotation({
         selectedSongIndex = this.props.selectedSongIndex,
         selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
-        annotationIndex = this.props.selectedAnnotationIndex,
-        deviceIndex = this.props.deviceIndex
-    }) {
+        annotationIndex = this.props.selectedAnnotationIndex
+    } = {}) {
         if (annotationIndex) {
             const showAnnotationForColumn = shouldShowAnnotationForColumn({
                 selectedSongIndex,
                 selectedLyricColumnIndex,
                 annotationIndex,
-                deviceIndex
+                showOneOfTwoLyricColumns: this.props.showOneOfTwoLyricColumns
             })
 
             if (!showAnnotationForColumn) {
@@ -169,8 +190,6 @@ class AnnotationManager extends Component {
 
         selectedSongIndex = this.props.selectedSongIndex,
         selectedDotKeys = this.props.selectedDotKeys,
-
-        deviceIndex = this.props.deviceIndex,
         selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
 
         direction
@@ -184,7 +203,7 @@ class AnnotationManager extends Component {
                 currentAnnotationIndex: annotationIndex,
                 selectedSongIndex,
                 selectedDotKeys,
-                deviceIndex,
+                showOneOfTwoLyricColumns: this.props.showOneOfTwoLyricColumns,
                 lyricColumnIndex: selectedLyricColumnIndex,
                 direction
             })
@@ -193,7 +212,7 @@ class AnnotationManager extends Component {
                 verseIndex,
                 selectedSongIndex,
                 selectedDotKeys,
-                deviceIndex,
+                showOneOfTwoLyricColumns: this.props.showOneOfTwoLyricColumns,
                 lyricColumnIndex: selectedLyricColumnIndex,
                 direction
             })
@@ -244,7 +263,7 @@ class AnnotationManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceStore: { deviceIndex },
+    responsiveStore: { showOneOfTwoLyricColumns },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -254,7 +273,7 @@ const mapStateToProps = ({
     selectedDotKeys,
     selectedLyricColumnIndex
 }) => ({
-    deviceIndex,
+    showOneOfTwoLyricColumns,
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,

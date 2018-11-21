@@ -72,10 +72,6 @@ class StateManager extends Component {
         return this.annotationManager.selectAnnotation(payload)
     }
 
-    deselectAnnotation = (payload) => {
-        return this.annotationManager.deselectAnnotation(payload)
-    }
-
     accessAnnotation = (payload) => {
         return this.annotationManager.accessAnnotation(payload)
     }
@@ -447,7 +443,6 @@ class StateManager extends Component {
                 <LogManager />
                 <LyricManager
                     setRef={this._setLyricManagerRef}
-                    deselectAnnotation={this.deselectAnnotation}
                     accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
                 />
                 <NavManager
@@ -515,9 +510,7 @@ class StateManager extends Component {
                 <WikiManager
                     setRef={this._setWikiManagerRef}
                 />
-                <WindowManager
-                    deselectAnnotation={this.deselectAnnotation}
-                />
+                <WindowManager />
             </Fragment>
         )
     }

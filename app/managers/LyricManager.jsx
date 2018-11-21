@@ -23,7 +23,6 @@ class LyricManager extends Component {
         isLyricExpanded: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -34,7 +33,6 @@ class LyricManager extends Component {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        deselectAnnotation: PropTypes.func.isRequired,
         accessAnnotationIfCurrentInvalid: PropTypes.func.isRequired
     }
 
@@ -101,8 +99,7 @@ class LyricManager extends Component {
     selectLyricColumn({
         selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2,
         selectedSongIndex = this.props.selectedSongIndex,
-        isLogue = this.props.isSelectedLogue,
-        annotationIndex = this.props.selectedAnnotationIndex
+        isLogue = this.props.isSelectedLogue
     } = {}) {
         const { props } = this
 
@@ -116,16 +113,6 @@ class LyricManager extends Component {
         ) {
             return false
         }
-
-        /**
-         * If selected, deselect selected annotation if not in new selected
-         * column.
-         */
-        this.props.deselectAnnotation({
-            selectedSongIndex,
-            annotationIndex,
-            selectedLyricColumnIndex
-        })
 
         props.selectLyricColumnIndex(selectedLyricColumnIndex)
 
@@ -156,7 +143,6 @@ const mapStateToProps = ({
     toggleStore: { isLyricExpanded },
     songStore: {
         selectedSongIndex,
-        selectedAnnotationIndex,
         isSelectedLogue
     },
     selectedLyricColumnIndex
@@ -165,7 +151,6 @@ const mapStateToProps = ({
     isLyricExpandable,
     isHiddenLyric,
     isLyricExpanded,
-    selectedAnnotationIndex,
     selectedLyricColumnIndex,
     selectedSongIndex,
     isSelectedLogue

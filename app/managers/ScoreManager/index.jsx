@@ -1,4 +1,4 @@
-// Singleton to turn off score based on state changes.
+// Singleton to watch for non-toggle events that require turning off score.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -28,12 +28,8 @@ class ScoreManager extends Component {
 
     unloadScoreIfNeeded(prevProps) {
         const
-            {
-                selectedSongIndex
-            } = this.props,
-            {
-                selectedSongIndex: prevSongIndex
-            } = prevProps
+            { selectedSongIndex } = this.props,
+            { selectedSongIndex: prevSongIndex } = prevProps
 
         if (selectedSongIndex !== prevSongIndex) {
             this.props.setIsScoreLoaded(false)

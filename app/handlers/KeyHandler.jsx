@@ -706,18 +706,18 @@ class KeyHandler extends Component {
         }
     }
 
-    getTryToggleScore = (tryToggleScore) => {
+    setTryToggleScore = (tryToggleScore) => {
         this.tryToggleScore = tryToggleScore
     }
 
     render() {
-        return <___>
-            <TryScore
-                {...{
-                    setTryToggle: this.getTryToggleScore
-                }}
-            />
-        </___>
+        return (
+            <___>
+                <TryScore
+                    {...{ getTryToggleScore: this.setTryToggleScore }}
+                />
+            </___>
+        )
     }
 }
 

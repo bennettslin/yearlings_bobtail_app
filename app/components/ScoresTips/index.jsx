@@ -1,6 +1,9 @@
 // Section for score and tips toggle buttons.
 
-import React, { Component } from 'react'
+import React, {
+    Component,
+    Fragment as ___
+} from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -68,7 +71,7 @@ class ScoresTips extends Component {
         this.tryToggleScore()
     }
 
-    getTryToggleScore = (tryToggleScore) => {
+    setTryToggleScore = (tryToggleScore) => {
         this.tryToggleScore = tryToggleScore
     }
 
@@ -103,41 +106,41 @@ class ScoresTips extends Component {
             showScoreToggleButton = !getIsPhone(deviceIndex)
 
         return shouldRender && (
-            <div className={cx(
-                'ScoresTips',
-                {
-                    'ScoresTips__inMenu': inMenu,
-                    'ScoresTips__inMain': inMainRightSide || inLeftShelf,
-                    'ScoresTips__inMainRight': inMainRightSide,
-                    'ScoresTips__inLeftShelf': inLeftShelf,
-                    'LeftShelf__child': inLeftShelf
-                }
-            )}>
+            <___>
+                <div className={cx(
+                    'ScoresTips',
+                    {
+                        'ScoresTips__inMenu': inMenu,
+                        'ScoresTips__inMain': inMainRightSide || inLeftShelf,
+                        'ScoresTips__inMainRight': inMainRightSide,
+                        'ScoresTips__inLeftShelf': inLeftShelf,
+                        'LeftShelf__child': inLeftShelf
+                    }
+                )}>
+                    {showScoreToggleButton &&
+                    <Button
+                        isLargeSize
+                        buttonName={SCORES_BUTTON_KEY}
+                        className="ScoresTipsButton"
+                        accessKey={SCORE_TOGGLE_KEY}
+                        isDisabled={!isScoreLoaded}
+                        handleButtonClick={this.handleScoreClick}
+                    />
+                    }
+                    {/* TODO: Shouldn't this use the tips toggle button? */}
+                    <Button
+                        isLargeSize
+                        buttonName={TIPS_BUTTON_KEY}
+                        className="ScoresTipsButton"
+                        buttonIdentifier={selectedTipsIndex}
+                        accessKey={TIPS_TOGGLE_KEY}
+                        handleButtonClick={handleTipsToggle}
+                    />
+                </div>
                 <TryScore
-                    {...{
-                        setTryToggle: this.getTryToggleScore
-                    }}
+                    {...{ getTryToggleScore: this.setTryToggleScore }}
                 />
-                {showScoreToggleButton &&
-                <Button
-                    isLargeSize
-                    buttonName={SCORES_BUTTON_KEY}
-                    className="ScoresTipsButton"
-                    accessKey={SCORE_TOGGLE_KEY}
-                    isDisabled={!isScoreLoaded}
-                    handleButtonClick={this.handleScoreClick}
-                />
-                }
-                {/* TODO: Shouldn't this use the tips toggle button? */}
-                <Button
-                    isLargeSize
-                    buttonName={TIPS_BUTTON_KEY}
-                    className="ScoresTipsButton"
-                    buttonIdentifier={selectedTipsIndex}
-                    accessKey={TIPS_TOGGLE_KEY}
-                    handleButtonClick={handleTipsToggle}
-                />
-            </div>
+            </___>
         )
     }
 }

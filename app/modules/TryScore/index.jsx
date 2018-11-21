@@ -1,4 +1,4 @@
-// Module that knows rules to turn on score. Not needed to just turn off.
+// Child that knows rules to turn on score. Not needed if just turning off.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -18,15 +18,15 @@ class TryScore extends Component {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        setTryToggle: PropTypes.func.isRequired
+        getTryToggleScore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.setTryToggle(this.tryToggleScore)
+        this.props.getTryToggleScore(this.tryToggleScore)
     }
 
     tryToggleScore = (
-        // Parent is trying to set this value. Default is toggle.
+        // Just toggle unless parent specifies value.
         triedIsScoreShown = !this.props.isScoreShown
     ) => {
         // Turning off is always successful.

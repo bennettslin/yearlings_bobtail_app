@@ -33,15 +33,12 @@ class WindowManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        appMounted: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
         updateDeviceStore: PropTypes.func.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
-        updateResponsiveStore: PropTypes.func.isRequired,
-
-        // From parent.
-        deselectAnnotation: PropTypes.func.isRequired
+        updateResponsiveStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -87,19 +84,6 @@ class WindowManager extends Component {
         // Set to true the first time this is called, when app is mounted.
         } else {
             this._prepareForWindowResizeRender()
-        }
-
-        /**
-         * Deselect selected annotation if not in new shown column. Do it here,
-         * before we tell Redux to update the prop.
-         */
-        if (
-            showOneOfTwoLyricColumns &&
-            !this.props.showOneOfTwoLyricColumns
-        ) {
-            this.props.deselectAnnotation({
-                deviceIndex
-            })
         }
 
         this._updateDeviceStore({
@@ -213,12 +197,10 @@ class WindowManager extends Component {
 
 const mapStateToProps = ({
     appMounted,
-    songStore: { selectedSongIndex },
-    responsiveStore: { showOneOfTwoLyricColumns }
+    songStore: { selectedSongIndex }
 }) => ({
     appMounted,
-    selectedSongIndex,
-    showOneOfTwoLyricColumns
+    selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

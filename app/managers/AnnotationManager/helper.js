@@ -5,7 +5,6 @@ import {
     getAnnotationsCount
 } from 'helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
-import { getShowOneOfTwoLyricColumns } from 'helpers/responsiveHelper'
 
 import {
     WORMHOLE,
@@ -14,16 +13,14 @@ import {
 import { COLUMN_INDEX } from 'constants/lyrics'
 
 export const shouldShowAnnotationForColumn = ({
-
     selectedSongIndex,
     selectedLyricColumnIndex,
     annotationIndex,
-    deviceIndex
+    showOneOfTwoLyricColumns
 
 }) => {
 
-    const showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, deviceIndex),
-        annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
+    const annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
         columnIndex = annotation[COLUMN_INDEX],
 
         /**
@@ -39,8 +36,7 @@ export const shouldShowAnnotationForColumn = ({
 }
 
 export const getAnnotationIndexForDirection = ({
-    deviceIndex,
-
+    showOneOfTwoLyricColumns,
     currentAnnotationIndex = 1,
     selectedSongIndex,
     selectedDotKeys,
@@ -140,7 +136,7 @@ export const getAnnotationIndexForDirection = ({
                     selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
-                    deviceIndex
+                    showOneOfTwoLyricColumns
                 })) &&
 
                 // And if modulo...
@@ -170,11 +166,7 @@ export const getAnnotationIndexForDirection = ({
 }
 
 export const getAnnotationIndexForVerseIndex = ({
-    /**
-     * State is just needed for the deviceIndex, to determine whether one or
-     * two lyric columns are shown.
-     */
-    deviceIndex,
+    showOneOfTwoLyricColumns,
 
     // Search backwards by default.
     verseIndex,
@@ -227,7 +219,7 @@ export const getAnnotationIndexForVerseIndex = ({
                     selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
-                    deviceIndex
+                    showOneOfTwoLyricColumns
                 }),
                 doesIntersect = intersects(annotation.dotKeys, selectedDotKeys)
 
@@ -254,7 +246,7 @@ export const getAnnotationIndexForVerseIndex = ({
      * direction that we will search if this annotation index is not present.
      */
     return getAnnotationIndexForDirection({
-        deviceIndex,
+        showOneOfTwoLyricColumns,
         currentAnnotationIndex: returnIndex,
         selectedSongIndex,
         selectedDotKeys,
