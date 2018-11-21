@@ -1,4 +1,4 @@
-// Child that knows rules to turn on score. Not needed if just turning off.
+// Child that knows rules to turn on title. Not needed if just turning off.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
