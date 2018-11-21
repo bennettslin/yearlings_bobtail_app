@@ -30,10 +30,7 @@ import {
 } from 'helpers/responsiveHelper'
 
 import { getIsHiddenCarouselNav } from './hidden'
-
-import {
-    getCentreFieldHeight
-} from '../../../helpers/stageHelper'
+import { getCentreFieldHeight } from './theatre'
 
 const _getLeftShelfOverflow = (deviceIndex) => {
     let toggleButtonWidth = 0

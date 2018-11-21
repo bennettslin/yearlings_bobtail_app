@@ -12,46 +12,44 @@ import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
 const mapStateToProps = ({
     renderStore: { canTheatreRender },
-    deviceStore: { windowWidth }
+    deviceStore: {
+        windowWidth,
+        stageLeft,
+        stageWidth,
+        floorHeight
+    }
 }) => ({
     canTheatreRender,
-    windowWidth
+    windowWidth,
+    stageLeft,
+    stageWidth,
+    floorHeight
 })
 
 class Floor extends Component {
 
     static propTypes = {
+        // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
         windowWidth: PropTypes.number.isRequired,
-
-        floorFieldCoordinates: PropTypes.shape({
-            floorHeight: PropTypes.number.isRequired,
-            stageWidth: PropTypes.number.isRequired,
-            stageCentreFromLeft: PropTypes.number.isRequired
-        })
+        stageLeft: PropTypes.number.isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        floorHeight: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
         return nextProps.canTheatreRender
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         logger.warn('Floor rendered.')
-    //     }
-    // }
-
     render() {
         const {
                 windowWidth,
-                floorFieldCoordinates
+                stageLeft,
+                stageWidth,
+                floorHeight
             } = this.props,
 
-            {
-                floorHeight,
-                stageWidth,
-                stageCentreFromLeft
-            } = floorFieldCoordinates,
+            stageCentreFromLeft = stageLeft + (stageWidth / 2),
 
             firstRowSeatWidth = stageWidth / 9, // Arbitrary value.
             firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,

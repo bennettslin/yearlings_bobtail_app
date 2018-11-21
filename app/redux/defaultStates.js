@@ -26,7 +26,9 @@ const
         stageTop: 0,
         stageLeft: 0,
         stageWidth: 100,
-        stageHeight: 100
+        stageHeight: 100,
+        ceilingHeight: 0,
+        floorHeight: 0
     },
 
     RESPONSIVE_DEFAULTS = {

@@ -14,35 +14,10 @@ import Wall from './Wall'
 import Ceiling from './Ceiling'
 import Floor from './Floor'
 
-import { getCentreFieldHeight } from 'helpers/stageHelper'
-
-import {
-    getCeilingHeight,
-    getFloorHeight
-} from './helper'
-
 const mapStateToProps = ({
-    renderStore: { canTheatreRender },
-    responsiveStore: { isHiddenLyric },
-    deviceStore: {
-        deviceIndex,
-        windowHeight,
-        windowWidth,
-        stageTop,
-        stageLeft,
-        stageWidth,
-        stageHeight
-    }
+    renderStore: { canTheatreRender }
 }) => ({
-    canTheatreRender,
-    isHiddenLyric,
-    deviceIndex,
-    windowHeight,
-    windowWidth,
-    stageTop,
-    stageLeft,
-    stageWidth,
-    stageHeight
+    canTheatreRender
 })
 
 class Theatre extends Component {
@@ -50,14 +25,6 @@ class Theatre extends Component {
     static propTypes = {
         // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
-        stageTop: PropTypes.number.isRequired,
-        stageLeft: PropTypes.number.isRequired,
-        stageWidth: PropTypes.number.isRequired,
-        stageHeight: PropTypes.number.isRequired,
-        deviceIndex: PropTypes.number.isRequired,
-        isHiddenLyric: PropTypes.bool.isRequired,
-        windowHeight: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired,
 
         // From parent.
         theatreDidRender: PropTypes.func.isRequired
@@ -68,8 +35,6 @@ class Theatre extends Component {
         didRenderTimeoutId: '',
         waitForShowTimeoutId: ''
     }
-
-    // No shouldComponentUpdate necessary.
 
     componentDidUpdate(prevProps) {
         const { canTheatreRender } = this.props,
@@ -118,66 +83,10 @@ class Theatre extends Component {
                 /* eslint-enable no-unused-vars */
 
                 canTheatreRender,
-                isHiddenLyric,
-                deviceIndex,
-                windowWidth,
-                windowHeight,
-                stageTop,
-                stageLeft,
-                stageWidth,
-                stageHeight,
                 ...other
             } = this.props,
 
-            { isShown } = this.state,
-
-            centreFieldHeight = getCentreFieldHeight({
-                deviceIndex,
-                windowWidth,
-                windowHeight,
-                isHiddenLyric
-            }),
-
-            stageCentreFromLeft = stageLeft + (stageWidth / 2),
-
-            ceilingHeight = getCeilingHeight({
-                deviceIndex,
-                windowHeight,
-                centreFieldHeight,
-                stageTop,
-                isHiddenLyric
-            }),
-
-            floorHeight = getFloorHeight({
-                deviceIndex,
-                windowHeight,
-                centreFieldHeight,
-                stageHeight,
-                stageTop,
-                isHiddenLyric
-            }),
-
-            wallHeight = windowHeight - ceilingHeight - floorHeight,
-
-            ceilingFieldCoordinates = {
-                ceilingHeight,
-                stageWidth,
-                stageCentreFromLeft
-            },
-
-            wallFieldCoordinates = {
-                ceilingHeight,
-                wallHeight,
-                stageHeight,
-                leftWidth: stageLeft,
-                rightWidth: windowWidth - stageLeft - stageWidth
-            },
-
-            floorFieldCoordinates = {
-                floorHeight,
-                stageWidth,
-                stageCentreFromLeft
-            }
+            { isShown } = this.state
 
         return (
             <div className={cx(
@@ -191,24 +100,15 @@ class Theatre extends Component {
                     <Scene {...other} />
                 </Stage>
 
-                <Ceiling
-                    {...{ ceilingFieldCoordinates }}
-                />
-                <Wall
-                    {...{ wallFieldCoordinates }}
-                />
-                <Wall
-                    isRight
-                    {...{ wallFieldCoordinates }}
-                />
+                <Ceiling />
+                <Wall />
+                <Wall isRight />
 
                 <Stage>
                     <Proscenium />
                 </Stage>
 
-                <Floor
-                    {...{ floorFieldCoordinates }}
-                />
+                <Floor />
             </div>
         )
     }

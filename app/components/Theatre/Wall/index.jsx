@@ -11,56 +11,66 @@ import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/generalHelper'
 import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../constants'
 
 const mapStateToProps = ({
-    deviceStore: { windowHeight },
+    deviceStore: {
+        windowHeight,
+        windowWidth,
+        stageLeft,
+        stageWidth,
+        stageHeight,
+        ceilingHeight,
+        floorHeight
+    },
     renderStore: { canTheatreRender }
 }) => ({
     windowHeight,
+    windowWidth,
+    stageLeft,
+    stageWidth,
+    stageHeight,
+    ceilingHeight,
+    floorHeight,
     canTheatreRender
 })
 
 class Wall extends Component {
 
     static propTypes = {
+        // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
         windowHeight: PropTypes.number.isRequired,
+        windowWidth: PropTypes.number.isRequired,
+        stageLeft: PropTypes.number.isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired,
+        ceilingHeight: PropTypes.number.isRequired,
+        floorHeight: PropTypes.number.isRequired,
 
-        isRight: PropTypes.bool,
-        wallFieldCoordinates: PropTypes.shape({
-            ceilingHeight: PropTypes.number.isRequired,
-            wallHeight: PropTypes.number.isRequired,
-            stageHeight: PropTypes.number.isRequired,
-            leftWidth: PropTypes.number.isRequired,
-            rightWidth: PropTypes.number.isRequired
-        })
+        // From parent.
+        isRight: PropTypes.bool
     }
 
     shouldComponentUpdate(nextProps) {
         return nextProps.canTheatreRender
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         logger.warn('Wall rendered.')
-    //     }
-    // }
-
     render() {
 
         const {
                 isRight,
+                windowWidth,
                 windowHeight,
-                wallFieldCoordinates
+                stageLeft,
+                stageWidth,
+                stageHeight,
+                ceilingHeight,
+                floorHeight
             } = this.props,
 
-            {
-                ceilingHeight,
-                wallHeight,
-                stageHeight,
-                leftWidth,
-                rightWidth
-            } = wallFieldCoordinates,
+            leftWidth = stageLeft,
+            rightWidth = windowWidth - stageLeft - stageWidth,
 
             wallWidth = isRight ? rightWidth : leftWidth,
+            wallHeight = windowHeight - ceilingHeight - floorHeight,
 
             // Arbitrary values for now.
             firstColumnBalconyHeight = stageHeight,

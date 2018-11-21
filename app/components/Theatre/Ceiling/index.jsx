@@ -14,46 +14,44 @@ import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
 const mapStateToProps = ({
     renderStore: { canTheatreRender },
-    deviceStore: { windowWidth }
+    deviceStore: {
+        windowWidth,
+        stageLeft,
+        stageWidth,
+        ceilingHeight
+    }
 }) => ({
     canTheatreRender,
-    windowWidth
+    windowWidth,
+    stageLeft,
+    stageWidth,
+    ceilingHeight
 })
 
 class Ceiling extends Component {
 
     static propTypes = {
+        // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
         windowWidth: PropTypes.number.isRequired,
-
-        ceilingFieldCoordinates: PropTypes.shape({
-            ceilingHeight: PropTypes.number.isRequired,
-            stageWidth: PropTypes.number.isRequired,
-            stageCentreFromLeft: PropTypes.number.isRequired
-        })
+        stageLeft: PropTypes.number.isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        ceilingHeight: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
         return nextProps.canTheatreRender
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         logger.warn('Ceiling rendered.')
-    //     }
-    // }
-
     render() {
         const {
                 windowWidth,
-                ceilingFieldCoordinates
+                stageLeft,
+                stageWidth,
+                ceilingHeight
             } = this.props,
 
-            {
-                ceilingHeight,
-                stageWidth,
-                stageCentreFromLeft
-            } = ceilingFieldCoordinates,
+            stageCentreFromLeft = stageLeft + (stageWidth / 2),
 
             // Arbitrary values for now.
             firstRowRafterWidth = stageWidth * 1.1,

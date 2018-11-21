@@ -25,6 +25,7 @@ import {
     getIsScoreShowable
 } from './helpers/responsive'
 import { getIsScoresTipsInMain } from './helpers/scoresTips'
+import { getCeilingFloorHeight } from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
 import { getStageCoordinates } from './helpers/stage'
@@ -110,16 +111,39 @@ class WindowManager extends Component {
         windowWidth,
         isHiddenLyric
     }) {
-        this.props.updateDeviceStore({
-            deviceIndex,
-            windowWidth,
-            windowHeight,
-            ...getStageCoordinates({
+        const {
+                stageTop,
+                stageLeft,
+                stageWidth,
+                stageHeight
+            } = getStageCoordinates({
                 deviceIndex,
                 windowWidth,
                 windowHeight,
                 isHiddenLyric
+            }),
+            {
+                ceilingHeight,
+                floorHeight
+            } = getCeilingFloorHeight({
+                deviceIndex,
+                windowWidth,
+                windowHeight,
+                stageHeight,
+                stageTop,
+                isHiddenLyric
             })
+
+        this.props.updateDeviceStore({
+            deviceIndex,
+            windowWidth,
+            windowHeight,
+            stageTop,
+            stageLeft,
+            stageWidth,
+            stageHeight,
+            ceilingHeight,
+            floorHeight
         })
     }
 
