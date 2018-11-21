@@ -27,10 +27,7 @@ import {
 
 import { DEVICE_OBJECTS } from 'constants/responsive'
 
-import {
-    getSongIsLogue,
-    getStanzaIndexForVerseIndex
-} from 'helpers/dataHelper'
+import { getStanzaIndexForVerseIndex } from 'helpers/dataHelper'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 
@@ -62,6 +59,7 @@ class Root extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
         renderedVerseIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
+        isRenderedLogue: PropTypes.bool.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
@@ -170,6 +168,7 @@ class Root extends Component {
                 deviceIndex,
                 selectedAccessIndex,
                 renderedAnnotationIndex,
+                isRenderedLogue,
                 selectedCarouselNavIndex,
                 selectedDotKeys,
                 selectedDotsIndex,
@@ -211,8 +210,6 @@ class Root extends Component {
             isDesktop = getIsDesktop(deviceIndex),
             isTabletOrMini = getIsTabletOrMini(deviceIndex),
 
-            isLogue = getSongIsLogue(renderedSongIndex),
-
             singleShownLyricColumnKey = getSingleShownLyricColumnKey({
                 showOneOfTwoLyricColumns,
                 selectedLyricColumnIndex
@@ -231,7 +228,7 @@ class Root extends Component {
             tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
 
             isCarouselNavShowable =
-                !isLogue
+                !isRenderedLogue
                 && !showOverlay
                 && !isLyricExpanded
                 && !overviewShown
@@ -277,7 +274,7 @@ class Root extends Component {
                     selectedAccessIndex ? 'RM__accessOn' : 'RM__accessOff',
                     showOverlay ? 'RM__overlayShown' : 'RM__overlayHidden',
 
-                    isLogue ? 'RM__logue' : 'RM__song',
+                    isRenderedLogue ? 'RM__logue' : 'RM__song',
                     isPlaying ? 'RM__isPlaying' : 'RM__isPaused',
 
                     renderedAnnotationIndex ?
@@ -416,7 +413,8 @@ const mapStateToProps = ({
     renderedStore: {
         renderedSongIndex,
         renderedVerseIndex,
-        renderedAnnotationIndex
+        renderedAnnotationIndex,
+        isRenderedLogue
     },
     sliderStore: {
         isSliderTouched,
@@ -455,6 +453,7 @@ const mapStateToProps = ({
     renderedSongIndex,
     renderedVerseIndex,
     renderedAnnotationIndex,
+    isRenderedLogue,
     isSliderTouched,
     isSliderMoving,
     sliderVerseIndex,

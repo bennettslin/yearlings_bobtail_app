@@ -1,4 +1,6 @@
 // Actions for song state.
+import { getSongIsLogue } from '../../helpers/dataHelper'
+
 import {
     hasKey,
     getDefinedOnlyPayload
@@ -27,6 +29,8 @@ export const updateSongStore = (payload = SONG_DEFAULTS) => {
 
     if (hasKey(selectedSongIndex)) {
         setInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
+
+        payload.isSelectedLogue = getSongIsLogue(selectedSongIndex)
     }
     if (hasKey(selectedVerseIndex)) {
         setInStorage(SELECTED_VERSE_INDEX, selectedVerseIndex)

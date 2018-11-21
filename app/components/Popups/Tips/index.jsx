@@ -5,22 +5,21 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
-import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     renderStore: { canMainRender },
-    renderedStore: { renderedSongIndex },
+    renderedStore: { isRenderedLogue },
     selectedTipsIndex
 }) => ({
     canMainRender,
-    renderedSongIndex,
+    isRenderedLogue,
     selectedTipsIndex
 })
 
 const tipsPopupPropTypes = {
     // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
+        isRenderedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -33,16 +32,14 @@ const tipsPopupPropTypes = {
         /* eslint-enable no-unused-vars */
 
         canMainRender,
-        renderedSongIndex,
+        isRenderedLogue,
         selectedTipsIndex,
         handlePopupContainerClick,
 
         ...other
     }) => {
 
-        const isLogue = getSongIsLogue(renderedSongIndex),
-
-            isVisible = canMainRender && !isLogue && !selectedTipsIndex
+        const isVisible = canMainRender && !isRenderedLogue && !selectedTipsIndex
 
         return (
             <Popup

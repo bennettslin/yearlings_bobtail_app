@@ -8,14 +8,12 @@ import {
     AUDIO_FAST_FORWARD_KEY
 } from 'constants/access'
 
-import { getSongIsLogue } from 'helpers/dataHelper'
-
 const mapStateToProps = ({
     renderStore: { canVerseRender },
-    renderedStore: { renderedSongIndex }
+    renderedStore: { isRenderedLogue }
 }) => ({
     canVerseRender,
-    renderedSongIndex
+    isRenderedLogue
 })
 
 class SliderAccess extends Component {
@@ -23,7 +21,7 @@ class SliderAccess extends Component {
     static propTypes = {
         // From Redux.
         canVerseRender: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired
+        isRenderedLogue: PropTypes.bool.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -32,16 +30,14 @@ class SliderAccess extends Component {
 
     render() {
         const {
-                renderedSongIndex
-            } = this.props,
-
-            isLogue = getSongIsLogue(renderedSongIndex)
+            isRenderedLogue
+        } = this.props
 
         return (
             <AccessLetters
                 accessIconsName="sliderRewindForward"
                 inSlider
-                showIfAccessed={!isLogue}
+                showIfAccessed={!isRenderedLogue}
                 accessKeys={[
                     AUDIO_REWIND_KEY,
                     AUDIO_FAST_FORWARD_KEY

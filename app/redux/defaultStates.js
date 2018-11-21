@@ -61,11 +61,13 @@ const
     storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
     storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
     storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
+    isLogue = getSongIsLogue(storedSongIndex),
 
     RENDERED_DEFAULTS = {
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
         renderedVerseIndex: storedVerseIndex,
+        isRenderedLogue: isLogue,
         renderedSceneIndex: getSceneIndexForVerseIndex(
             storedSongIndex,
             storedVerseIndex
@@ -76,7 +78,7 @@ const
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,
-        isSelectedLogue: getSongIsLogue(storedSongIndex),
+        isSelectedLogue: isLogue,
         selectedTime: getTimeForVerseIndex(
             storedSongIndex,
             storedVerseIndex

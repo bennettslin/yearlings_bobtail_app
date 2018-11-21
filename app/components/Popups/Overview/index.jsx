@@ -7,17 +7,16 @@ import cx from 'classnames'
 
 import Overview from '../../Overview'
 import Popup from '../../Popup'
-import { getSongIsLogue } from 'helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedOverviewIndex,
     renderStore: { canMainRender },
-    renderedStore: { renderedSongIndex },
+    renderedStore: { isRenderedLogue },
     selectedTipsIndex
 }) => ({
     selectedOverviewIndex,
     canMainRender,
-    renderedSongIndex,
+    isRenderedLogue,
     selectedTipsIndex
 })
 
@@ -25,7 +24,7 @@ const overviewPopupPropTypes = {
     // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
+        isRenderedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -43,22 +42,21 @@ const overviewPopupPropTypes = {
         isPhone,
         canMainRender,
         selectedOverviewIndex,
-        renderedSongIndex,
+        isRenderedLogue,
         selectedTipsIndex,
         handlePopupContainerClick,
 
         ...other
     }) => {
 
-        const isLogue = getSongIsLogue(renderedSongIndex),
-
+        const
             // Only position absolute when in main and is phone.
-            noAbsoluteFull = isLogue || !isPhone
+            noAbsoluteFull = isRenderedLogue || !isPhone
 
         let isVisible
 
         // Switch between logue and song overview sections.
-        if (isLogue) {
+        if (isRenderedLogue) {
             isVisible = !inMain
         } else {
             isVisible = selectedOverviewIndex ? false : Boolean(inMain)
@@ -68,7 +66,7 @@ const overviewPopupPropTypes = {
      * Always hide overview section when title is open, or when tip is shown
      * in song. Always hide before ready to render.
      */
-        if (!canMainRender || (!isLogue && !selectedTipsIndex)) {
+        if (!canMainRender || (!isRenderedLogue && !selectedTipsIndex)) {
             isVisible = false
         }
 

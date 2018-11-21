@@ -8,10 +8,7 @@ import cx from 'classnames'
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
 
-import {
-    getSongOverview,
-    getSongIsLogue
-} from 'helpers/dataHelper'
+import { getSongOverview } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getIsToggleInOverview } from 'helpers/responsiveHelper'
 
@@ -24,12 +21,16 @@ const mapStateToProps = ({
     selectedOverviewIndex,
     deviceStore: { deviceIndex },
     renderStore: { canMainRender },
-    renderedStore: { renderedSongIndex }
+    renderedStore: {
+        renderedSongIndex,
+        isRenderedLogue
+    }
 }) => ({
     selectedOverviewIndex,
     deviceIndex,
     canMainRender,
-    renderedSongIndex
+    renderedSongIndex,
+    isRenderedLogue
 })
 
 class Overview extends Component {
@@ -40,6 +41,7 @@ class Overview extends Component {
         deviceIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
+        isRenderedLogue: PropTypes.bool.isRequired,
 
         // From parent.
         handleOverviewToggle: PropTypes.func.isRequired
@@ -68,21 +70,21 @@ class Overview extends Component {
         const {
                 deviceIndex,
                 selectedOverviewIndex,
-                renderedSongIndex
+                renderedSongIndex,
+                isRenderedLogue
             } = this.props,
 
             overviewText = getSongOverview(renderedSongIndex),
-            isLogue = getSongIsLogue(renderedSongIndex),
 
             // TODO: Revisit whether to show toggle in logue when it is heightless lyric.
             /**
              * Always show when is song in phone. Also show when is logue and is
              * heightless lyric.
              */
-            isToggleInOverview = !isLogue && getIsToggleInOverview(deviceIndex),
+            isToggleInOverview = !isRenderedLogue && getIsToggleInOverview(deviceIndex),
             isEnabled =
                 OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN &&
-                !isLogue
+                !isRenderedLogue
 
         return (
             <div className={cx(
