@@ -39,7 +39,6 @@ class EventHandler extends Component {
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        selectedAdminIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
@@ -210,16 +209,6 @@ class EventHandler extends Component {
             callback: this.props.determineVerseBars
         })
 
-        return true
-    }
-
-    /*********
-     * ADMIN *
-     *********/
-
-    handleAdminToggle = (e) => {
-        this.stopPropagation(e)
-        this.props.toggleAdmin()
         return true
     }
 
@@ -1051,7 +1040,6 @@ const mapStateToProps = ({
         isTitleShown,
         isLyricExpanded
     },
-    selectedAdminIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
     selectedTipsIndex,
@@ -1064,7 +1052,6 @@ const mapStateToProps = ({
     }
 }) => ({
     isHiddenLyric,
-    selectedAdminIndex,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     isSelectedLogue,

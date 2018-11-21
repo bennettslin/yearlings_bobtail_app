@@ -22,7 +22,6 @@ import {
 } from 'constants/options'
 import {
     SELECTED_ACCESS_INDEX,
-    SELECTED_ADMIN_INDEX,
     SELECTED_ANNOTATION_INDEX,
     SELECTED_AUDIO_OPTION_INDEX,
     SELECTED_CAROUSEL_NAV_INDEX,
@@ -136,7 +135,6 @@ const _validateValueForKey = (key) => {
 
         // These must be a simple 0 or 1.
         case SELECTED_ACCESS_INDEX:
-        case SELECTED_ADMIN_INDEX:
         case SELECTED_SCORE_INDEX:
         case SELECTED_CAROUSEL_NAV_INDEX:
             isValid = isNumber && parsedValue <= 1

@@ -14,7 +14,6 @@ import AccessManager from './AccessManager'
 import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
-import AdminManager from './AdminManager'
 import DotsManager from './DotsManager'
 import LogManager from './LogManager'
 import LyricManager from './LyricManager'
@@ -101,14 +100,6 @@ class StateManager extends Component {
 
     selectCarouselNav = (payload) => {
         return this.carouselManager.selectCarouselNav(payload)
-    }
-
-    /*********
-     * DEBUG *
-     *********/
-
-    toggleAdmin = (payload) => {
-        return this.adminManager.toggleAdmin(payload)
     }
 
     /********
@@ -319,9 +310,6 @@ class StateManager extends Component {
     _setCarouselManagerRef = (node) => {
         this.carouselManager = node
     }
-    _setAdminManagerRef = (node) => {
-        this.adminManager = node
-    }
     _setDotsManagerRef = (node) => {
         this.dotsManager = node
     }
@@ -413,7 +401,6 @@ class StateManager extends Component {
                     interactivateVerseDirection={this.interactivateVerseDirection}
                     selectWiki={this.selectWiki}
                     toggleAccess={this.toggleAccess}
-                    toggleAdmin={this.toggleAdmin}
                     togglePlay={this.togglePlay}
                 />
                 <AccessManager
@@ -431,9 +418,6 @@ class StateManager extends Component {
                     setRef={this._setCarouselManagerRef}
                     accessNavSong={this.accessNavSong}
                     selectBookColumn={this.selectBookColumn}
-                />
-                <AdminManager
-                    setRef={this._setAdminManagerRef}
                 />
                 <DotsManager
                     setRef={this._setDotsManagerRef}

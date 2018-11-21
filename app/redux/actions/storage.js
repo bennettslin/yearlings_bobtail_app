@@ -5,7 +5,7 @@ import {
 } from '../storageHelper'
 
 import {
-    SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_WIKI_INDEX
+    SELECTED_ACCESS_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_WIKI_INDEX
 } from 'constants/state'
 
 export const selectAccessIndex = (selectedAccessIndex = 0) => {
@@ -13,14 +13,6 @@ export const selectAccessIndex = (selectedAccessIndex = 0) => {
     return {
         type: SELECTED_ACCESS_INDEX,
         payload: selectedAccessIndex
-    }
-}
-
-export const selectAdminIndex = (selectedAdminIndex = 0) => {
-    setInStorage(SELECTED_ADMIN_INDEX, selectedAdminIndex)
-    return {
-        type: SELECTED_ADMIN_INDEX,
-        payload: selectedAdminIndex
     }
 }
 

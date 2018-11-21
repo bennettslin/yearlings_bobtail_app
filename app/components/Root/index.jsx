@@ -45,9 +45,9 @@ class Root extends Component {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        selectedAdminIndex: PropTypes.number.isRequired,
-
         canCarouselRender: PropTypes.bool.isRequired,
+
+        isAdminOn: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
 
@@ -163,7 +163,7 @@ class Root extends Component {
         const {
                 appMounted,
                 canCarouselRender,
-                selectedAdminIndex,
+                isAdminOn,
                 deviceIndex,
                 selectedAccessIndex,
                 renderedAnnotationIndex,
@@ -380,7 +380,7 @@ class Root extends Component {
 
                 <AdminToggle />
 
-                {Boolean(selectedAdminIndex) && (
+                {isAdminOn && (
                     <Admin {...other} />
                 )}
 
@@ -391,7 +391,6 @@ class Root extends Component {
 
 const mapStateToProps = ({
     appMounted,
-    selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,
     selectedCarouselNavIndex,
@@ -403,6 +402,7 @@ const mapStateToProps = ({
     selectedWikiIndex,
     isPlaying,
     toggleStore: {
+        isAdminOn,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
@@ -432,7 +432,7 @@ const mapStateToProps = ({
     isManualScroll
 }) => ({
     appMounted,
-    selectedAdminIndex,
+    isAdminOn,
     interactivatedVerseIndex,
     selectedAccessIndex,
     selectedCarouselNavIndex,

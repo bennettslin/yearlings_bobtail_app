@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 
 import { updateToggleStore } from 'flux/actions/toggle'
 
+import TryAdmin from '../../modules/TryAdmin'
 import TryScore from '../../modules/TryScore'
 import TryTitle from '../../modules/TryTitle'
 
@@ -598,7 +599,7 @@ class KeyHandler extends Component {
 
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleAdminToggle(e)
+                keyWasRegistered = this.tryToggleAdmin()
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleAudioOptionsToggle(e)
@@ -708,6 +709,10 @@ class KeyHandler extends Component {
         }
     }
 
+    setTryToggleAdmin = (tryToggleAdmin) => {
+        this.tryToggleAdmin = tryToggleAdmin
+    }
+
     setTryToggleScore = (tryToggleScore) => {
         this.tryToggleScore = tryToggleScore
     }
@@ -719,6 +724,9 @@ class KeyHandler extends Component {
     render() {
         return (
             <___>
+                <TryAdmin
+                    {...{ getTryToggleAdmin: this.setTryToggleAdmin }}
+                />
                 <TryScore
                     {...{ getTryToggleScore: this.setTryToggleScore }}
                 />

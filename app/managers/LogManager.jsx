@@ -6,8 +6,6 @@ import { connect } from 'react-redux'
 
 import album from 'server/album'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
 import {
     getAnnotationObject,
     getGlobalAnnotationObject,
@@ -30,13 +28,6 @@ class LogManager extends Component {
 
     componentDidMount() {
         this._assignDebugLogFunctions()
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     _assignDebugLogFunctions() {
