@@ -14,7 +14,6 @@ import TryScore from '../modules/TryScore'
 
 import {
     getSongsAndLoguesCount,
-    getSongIsLogue,
     getBookColumnIndex,
     getWormholeLink,
     getAnnotationObject
@@ -76,6 +75,7 @@ class KeyHandler extends Component {
             handleLyricVerseSelect: PropTypes.func.isRequired,
             handleAnnotationAccess: PropTypes.func.isRequired
         }).isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
 
         setRef: PropTypes.func.isRequired,
         displayKeyLetter: PropTypes.func.isRequired,
@@ -263,7 +263,7 @@ class KeyHandler extends Component {
                 interactivatedVerseIndex,
                 isScoreShown,
                 selectedWikiIndex,
-                selectedSongIndex,
+                isSelectedLogue,
                 selectedAnnotationIndex,
                 selectedDotsIndex,
                 selectedCarouselNavIndex,
@@ -271,14 +271,12 @@ class KeyHandler extends Component {
                 eventHandlers
             } = this.props,
 
-            isLogue = getSongIsLogue(selectedSongIndex),
-
             isVerseInteractivated = interactivatedVerseIndex > -1
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
-        if (!isLogue && !isScoreShown && !selectedWikiIndex) {
+        if (!isSelectedLogue && !isScoreShown && !selectedWikiIndex) {
 
             // We're selecting the interactivated verse.
             if (isVerseInteractivated && keyName === ENTER) {
@@ -732,7 +730,8 @@ const mapStateToProps = ({
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
-        selectedAnnotationIndex
+        selectedAnnotationIndex,
+        isSelectedLogue
     },
     selectedAccessIndex,
     selectedCarouselNavIndex,
@@ -754,6 +753,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     selectedAccessIndex,
     selectedAnnotationIndex,
+    isSelectedLogue,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys,

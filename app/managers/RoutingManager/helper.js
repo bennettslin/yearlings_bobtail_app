@@ -1,6 +1,5 @@
 // Helper for getting param values from routing.
 import {
-    getSongIsLogue,
     getSongObject,
     getVerseObject,
     getAnnotationObject
@@ -44,12 +43,10 @@ const _isValidAnnotationIndexForSongIndex = (songIndex, annotationIndex) => {
 }
 
 export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
-
-    const isLogue = getSongIsLogue(songIndex),
-
+    const
         // Path is something like "9-grasshoppers-lie-heavy-v20-a22.""
         newPath =
-            `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex && !isLogue ? '-v' + verseIndex : ''}${annotationIndex && !isLogue ? '-a' + annotationIndex : ''}`
+            `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex ? '-v' + verseIndex : ''}${annotationIndex ? '-a' + annotationIndex : ''}`
 
     return newPath
 }
@@ -128,7 +125,7 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
             routingAnnotationIndex = rawAnnotationIndex
 
         } else {
-            routingVerseIndex = 0
+            routingAnnotationIndex = 0
         }
 
         routingIndicesObject.routingAnnotationIndex = routingAnnotationIndex

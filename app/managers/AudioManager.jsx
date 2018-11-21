@@ -7,10 +7,7 @@ import { setIsPlaying } from 'flux/actions/audio'
 import { selectAudioOptionIndex } from 'flux/actions/storage'
 
 import { getValueInBitNumber } from 'helpers/bitHelper'
-import {
-    getSongIsLogue,
-    getSongsNotLoguesCount
-} from 'helpers/dataHelper'
+import { getSongsNotLoguesCount } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { AUDIO_OPTIONS } from 'constants/options'
@@ -23,6 +20,7 @@ class AudioManager extends Component {
         canPlayThroughs: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
 
         setIsPlaying: PropTypes.func.isRequired,
         selectAudioOptionIndex: PropTypes.func.isRequired,
@@ -45,14 +43,13 @@ class AudioManager extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        const { selectedSongIndex } = this.props
+        const
+            { isSelectedLogue } = this.props,
+            { isSelectedLogue: wasSelectedLogue } = prevProps
 
         // If selecting a logue, turn off play.
-        if (selectedSongIndex !== prevProps.selectedSongIndex) {
-
-            if (getSongIsLogue(selectedSongIndex)) {
-                this.props.setIsPlaying(false)
-            }
+        if (isSelectedLogue && !wasSelectedLogue) {
+            this.props.setIsPlaying(false)
         }
     }
 
@@ -60,17 +57,16 @@ class AudioManager extends Component {
 
         const {
                 selectedSongIndex,
+                isSelectedLogue,
                 canPlayThroughs
             } = this.props,
-
-            isLogue = getSongIsLogue(this.props.selectedSongIndex),
 
             songCanPlayThrough = getValueInBitNumber({
                 keysCount: getSongsNotLoguesCount(),
                 bitNumber: canPlayThroughs,
 
                 // If logue, select first song.
-                key: isLogue ? 1 : selectedSongIndex
+                key: isSelectedLogue ? 1 : selectedSongIndex
             })
 
         // Do not toggle play if player is not ready to play through.
@@ -78,7 +74,7 @@ class AudioManager extends Component {
             return false
         }
 
-        const isPlayingFromLogue = isLogue && isPlaying
+        const isPlayingFromLogue = isSelectedLogue && isPlaying
 
         // Select first song if play button in logue is toggled on.
         if (isPlayingFromLogue) {
@@ -119,12 +115,16 @@ const mapStateToProps = ({
     isPlaying,
     canPlayThroughs,
     selectedAudioOptionIndex,
-    songStore: { selectedSongIndex }
+    songStore: {
+        selectedSongIndex,
+        isSelectedLogue
+    }
 }) => ({
     isPlaying,
     canPlayThroughs,
     selectedAudioOptionIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    isSelectedLogue
 })
 
 const bindDispatchToProps = (dispatch) => (

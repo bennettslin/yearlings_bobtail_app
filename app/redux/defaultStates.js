@@ -1,26 +1,18 @@
 import { getFromStorage } from './storageHelper'
 
 import {
+    getSongIsLogue,
     getSceneIndexForVerseIndex,
     getTimeForVerseIndex
-} from 'helpers/dataHelper'
+} from '../helpers/dataHelper'
 
 import {
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
-    SELECTED_VERSE_INDEX,
-    SELECTED_TIME
+    SELECTED_VERSE_INDEX
 } from 'constants/state'
 
 const
-    storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
-    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
-    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
-    selectedTime = getTimeForVerseIndex(
-        storedSongIndex,
-        storedVerseIndex
-    ),
-
     TOGGLE_DEFAULTS = {
         isScoreShown: false,
         isLyricExpanded: false
@@ -66,6 +58,10 @@ const
         canSceneRender: false
     },
 
+    storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
+    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
+    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
+
     RENDERED_DEFAULTS = {
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
@@ -80,7 +76,11 @@ const
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,
-        [SELECTED_TIME]: selectedTime
+        isSelectedLogue: getSongIsLogue(storedSongIndex),
+        selectedTime: getTimeForVerseIndex(
+            storedSongIndex,
+            storedVerseIndex
+        )
     },
 
     SLIDER_DEFAULTS = {

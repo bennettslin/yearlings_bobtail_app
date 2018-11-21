@@ -8,8 +8,6 @@ import { connect } from 'react-redux'
 import { setIsScoreLoaded } from 'flux/actions/load'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-import { getSongIsLogue } from 'helpers/dataHelper'
-
 class ScoreManager extends Component {
 
     static propTypes = {
@@ -17,6 +15,7 @@ class ScoreManager extends Component {
         isScoreShowable: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
 
         setIsScoreLoaded: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
@@ -45,15 +44,15 @@ class ScoreManager extends Component {
         const
             {
                 isScoreShowable,
-                selectedSongIndex
+                isSelectedLogue
             } = this.props,
             {
                 isScoreShowable: wasScoreShowable,
-                selectedSongIndex: prevSongIndex
+                isSelectedLogue: wasSelectedLogue
             } = prevProps
 
         if (
-            (getSongIsLogue(selectedSongIndex) && !getSongIsLogue(prevSongIndex)) ||
+            (isSelectedLogue && !wasSelectedLogue) ||
             !isScoreShowable && wasScoreShowable
         ) {
             this.props.updateToggleStore({
@@ -70,11 +69,15 @@ class ScoreManager extends Component {
 const mapStateToProps = ({
     responsiveStore: { isScoreShowable },
     toggleStore: { isScoreShown },
-    songStore: { selectedSongIndex }
+    songStore: {
+        selectedSongIndex,
+        isSelectedLogue
+    }
 }) => ({
     isScoreShowable,
     isScoreShown,
-    selectedSongIndex
+    selectedSongIndex,
+    isSelectedLogue
 })
 
 const bindDispatchToProps = (dispatch) => (

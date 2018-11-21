@@ -6,8 +6,11 @@ import { connect } from 'react-redux'
 import { updateSongStore } from 'flux/actions/song'
 import { selectWikiIndex } from 'flux/actions/storage'
 
-import { getTimeForVerseIndex } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import {
+    getSongIsLogue,
+    getTimeForVerseIndex
+} from '../../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import {
     getValidRoutingIndicesObject,
     getPathForIndices
@@ -58,9 +61,10 @@ class RoutingManager extends Component {
                 selectedSongIndex,
                 selectedVerseIndex,
                 selectedAnnotationIndex,
+                isSelectedLogue: getSongIsLogue(selectedSongIndex),
                 selectedTime: getTimeForVerseIndex(
-                    routingSongIndex,
-                    routingVerseIndex
+                    selectedSongIndex,
+                    selectedVerseIndex
                 )
             })
 

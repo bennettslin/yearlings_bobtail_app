@@ -12,9 +12,10 @@ import {
 } from 'constants/options'
 
 import {
+    getSongIsLogue,
     getSongsAndLoguesCount,
     getTimeForVerseIndex
-} from 'helpers/dataHelper'
+} from '../helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -137,6 +138,7 @@ class SongManager extends Component {
             selectedSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
+            isSelectedLogue: getSongIsLogue(selectedSongIndex),
             selectedTime: getTimeForVerseIndex(
                 selectedSongIndex,
                 selectedVerseIndex

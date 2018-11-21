@@ -1,4 +1,4 @@
-// Module to toggle score. Not needed to just turn off.
+// Module that knows rules to turn on score. Not needed to just turn off.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateToggleStore } from 'flux/actions/toggle'
-import { getSongIsLogue } from 'helpers/dataHelper'
 
 class TryScore extends Component {
 
@@ -14,7 +13,7 @@ class TryScore extends Component {
         // Through Redux.
         isScoreShowable: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
 
         updateToggleStore: PropTypes.func.isRequired,
 
@@ -37,7 +36,7 @@ class TryScore extends Component {
             this.props.isScoreShowable &&
 
             // ... also must not be in logue.
-            !getSongIsLogue(this.props.selectedSongIndex)
+            !this.props.isSelectedLogue
 
         this.props.updateToggleStore({
             isScoreShown
@@ -55,11 +54,11 @@ class TryScore extends Component {
 const mapStateToProps = ({
     responsiveStore: { isScoreShowable },
     toggleStore: { isScoreShown },
-    songStore: { selectedSongIndex }
+    songStore: { isSelectedLogue }
 }) => ({
     isScoreShowable,
     isScoreShown,
-    selectedSongIndex
+    isSelectedLogue
 })
 
 const bindDispatchToProps = (dispatch) => (

@@ -10,7 +10,6 @@ import {
     selectDotsIndex
 } from 'flux/actions/storage'
 
-import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
@@ -21,7 +20,7 @@ class DotsManager extends Component {
         // Through Redux.
         selectedDotsIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
 
         accessDotIndex: PropTypes.func.isRequired,
         selectDotKey: PropTypes.func.isRequired,
@@ -62,7 +61,7 @@ class DotsManager extends Component {
         // If no argument passed, then just toggle between on and off.
 
         // Dots section cannot be changed in logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return false
         }
 
@@ -94,11 +93,11 @@ class DotsManager extends Component {
 const mapStateToProps = ({
     selectedDotsIndex,
     selectedDotKeys,
-    songStore: { selectedSongIndex }
+    songStore: { isSelectedLogue }
 }) => ({
     selectedDotsIndex,
     selectedDotKeys,
-    selectedSongIndex
+    isSelectedLogue
 })
 
 const bindDispatchToProps = (dispatch) => (

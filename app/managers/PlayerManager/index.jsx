@@ -32,13 +32,15 @@ const mapStateToProps = ({
     isPlaying,
     songStore: {
         selectedSongIndex,
-        selectedVerseIndex
+        selectedVerseIndex,
+        isSelectedLogue
     },
     canPlayThroughs
 }) => ({
     isPlaying,
     selectedSongIndex,
     selectedVerseIndex,
+    isSelectedLogue,
     canPlayThroughs
 })
 
@@ -57,6 +59,7 @@ class PlayerManager extends Component {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         setCanPlayThroughs: PropTypes.func.isRequired,
@@ -133,7 +136,8 @@ class PlayerManager extends Component {
     _updateCanPlayThroughsObject() {
         const {
                 canPlayThroughs,
-                selectedSongIndex
+                selectedSongIndex,
+                isSelectedLogue
             } = this.props,
 
             canPlayThroughsObject = getCanPlayThroughsObject(
@@ -144,6 +148,7 @@ class PlayerManager extends Component {
             canPlayThroughsObject,
             nextPlayerToRender: getNextPlayerSongIndexToRender(
                 selectedSongIndex,
+                isSelectedLogue,
                 canPlayThroughsObject
             )
         })

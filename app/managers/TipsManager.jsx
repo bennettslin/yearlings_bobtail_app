@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 
 import { selectTipsIndex } from 'flux/actions/storage'
 
-import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 
@@ -26,6 +25,7 @@ class TipsManager extends Component {
         selectedDotsIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
@@ -72,7 +72,7 @@ class TipsManager extends Component {
         justShowIfHidden
     }) {
         // We shouldn't be able to change overview if it's a logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return false
         }
 
@@ -136,7 +136,8 @@ const mapStateToProps = ({
     toggleStore: { isLyricExpanded },
     songStore: {
         selectedSongIndex,
-        selectedAnnotationIndex
+        selectedAnnotationIndex,
+        isSelectedLogue
     },
     selectedCarouselNavIndex,
     selectedDotsIndex,
@@ -147,6 +148,7 @@ const mapStateToProps = ({
 }) => ({
     isLyricExpanded,
     selectedAnnotationIndex,
+    isSelectedLogue,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedOverviewIndex,

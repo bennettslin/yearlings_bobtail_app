@@ -1,12 +1,10 @@
-import {
-    getSongIsLogue,
-    getSongsNotLoguesCount
-} from 'helpers/dataHelper'
+import { getSongsNotLoguesCount } from 'helpers/dataHelper'
 
 import { convertBitNumberToTrueFalseKeys } from 'helpers/bitHelper'
 
 export const getNextPlayerSongIndexToRender = (
     selectedSongIndex,
+    isSelectedLogue,
     canPlayThroughsObject
 ) => {
     /**
@@ -15,13 +13,12 @@ export const getNextPlayerSongIndexToRender = (
      * selected song.
      */
 
-    const songsCount = getSongsNotLoguesCount(),
-        isLogue = getSongIsLogue(selectedSongIndex)
+    const songsCount = getSongsNotLoguesCount()
 
     /**
      * If logue, set to first song. Song indices are 1-based.
      */
-    let currentSongIndex = isLogue ? 1 : selectedSongIndex,
+    let currentSongIndex = isSelectedLogue ? 1 : selectedSongIndex,
         nextPlayerSongIndex,
         counter = 0
 

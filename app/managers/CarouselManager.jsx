@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { setCarouselAnnotationIndex } from 'flux/actions/session'
 import { selectCarouselNavIndex } from 'flux/actions/storage'
 
-import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getIsPhone } from 'helpers/responsiveHelper'
 
@@ -18,6 +17,7 @@ class CarouselManager extends Component {
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
         setCarouselAnnotationIndex: PropTypes.func.isRequired,
         selectCarouselNavIndex: PropTypes.func.isRequired,
 
@@ -44,9 +44,11 @@ class CarouselManager extends Component {
         // If no argument passed, then just toggle between on and off.
 
         // We shouldn't be able to toggle carousel under these conditions.
-        if (getSongIsLogue(this.props.selectedSongIndex) ||
+        if (
+            this.props.isSelectedLogue ||
             getIsPhone(this.props.deviceIndex) ||
-            this.props.isHiddenCarouselNav) {
+            this.props.isHiddenCarouselNav
+        ) {
 
             return false
         }
@@ -92,12 +94,16 @@ class CarouselManager extends Component {
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: { isHiddenCarouselNav },
-    songStore: { selectedSongIndex },
+    songStore: {
+        selectedSongIndex,
+        isSelectedLogue
+    },
     selectedCarouselNavIndex
 }) => ({
     deviceIndex,
     isHiddenCarouselNav,
     selectedSongIndex,
+    isSelectedLogue,
     selectedCarouselNavIndex
 })
 

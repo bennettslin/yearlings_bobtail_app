@@ -54,7 +54,6 @@ module.exports = {
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
-    SELECTED_TIME: 'selectedTime',
 
     SELECTED_ACCESS_INDEX: 'selectedAccessIndex',
     SELECTED_ADMIN_INDEX: 'selectedAdminIndex',

@@ -9,7 +9,6 @@ import {
 import { selectLyricColumnIndex } from 'flux/actions/storage'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
@@ -27,6 +26,7 @@ class LyricManager extends Component {
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
 
         selectLyricColumnIndex: PropTypes.func.isRequired,
         setIsManualScroll: PropTypes.func.isRequired,
@@ -74,7 +74,7 @@ class LyricManager extends Component {
     selectLyricExpand(isLyricExpanded = !this.props.isLyricExpanded) {
 
         // We shouldn't be able to expand or collapse lyric while in logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return false
         }
 
@@ -101,6 +101,7 @@ class LyricManager extends Component {
     selectLyricColumn({
         selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2,
         selectedSongIndex = this.props.selectedSongIndex,
+        isLogue = this.props.isSelectedLogue,
         annotationIndex = this.props.selectedAnnotationIndex
     } = {}) {
         const { props } = this
@@ -110,7 +111,9 @@ class LyricManager extends Component {
          * has double columns, or if in a logue. Check for new song if called
          * from wormhole.
          */
-        if (!(getShowOneOfTwoLyricColumns(selectedSongIndex, props.deviceIndex)) || getSongIsLogue(selectedSongIndex)) {
+        if (
+            !(getShowOneOfTwoLyricColumns(selectedSongIndex, props.deviceIndex)) || isLogue
+        ) {
             return false
         }
 
@@ -153,7 +156,8 @@ const mapStateToProps = ({
     toggleStore: { isLyricExpanded },
     songStore: {
         selectedSongIndex,
-        selectedAnnotationIndex
+        selectedAnnotationIndex,
+        isSelectedLogue
     },
     selectedLyricColumnIndex
 }) => ({
@@ -163,7 +167,8 @@ const mapStateToProps = ({
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    isSelectedLogue
 })
 
 const bindDispatchToProps = (dispatch) => (

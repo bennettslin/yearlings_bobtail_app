@@ -9,9 +9,7 @@ import { updateToggleStore } from 'flux/actions/toggle'
 
 import Root from '../components/Root'
 
-import {
-    getSongIsLogue, getAnnotationObject
-} from 'helpers/dataHelper'
+import { getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
 import { getClientX } from 'helpers/domHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -45,6 +43,7 @@ class EventHandler extends Component {
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -136,7 +135,7 @@ class EventHandler extends Component {
     }
 
     handleDotAccess = (accessedDotIndex) => {
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return false
         }
 
@@ -149,7 +148,7 @@ class EventHandler extends Component {
     }
 
     handleVerseDirectionAccess = (direction) => {
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return false
         }
 
@@ -368,7 +367,7 @@ class EventHandler extends Component {
      *******/
 
     handleDotSelect = (e, dotIndex) => {
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return false
         }
 
@@ -490,7 +489,7 @@ class EventHandler extends Component {
         selectedVerseIndex,
         fromStanzaTab
     ) => {
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return false
         }
 
@@ -711,7 +710,7 @@ class EventHandler extends Component {
     handleSliderTouchBegin = (e, sliderElement) => {
 
         // Can't be handled in logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return
         }
 
@@ -930,7 +929,7 @@ class EventHandler extends Component {
 
     handleScrollUponCarouselRender = () => {
 
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return
         }
 
@@ -950,7 +949,7 @@ class EventHandler extends Component {
 
     handleScrollUponLyricRender = () => {
 
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return
         }
 
@@ -1052,7 +1051,8 @@ const mapStateToProps = ({
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
-        selectedAnnotationIndex
+        selectedAnnotationIndex,
+        isSelectedLogue
     },
     toggleStore: {
         isScoreShown,
@@ -1075,6 +1075,7 @@ const mapStateToProps = ({
     selectedAdminIndex,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
+    isSelectedLogue,
     selectedDotKeys,
     isScoreShown,
     isLyricExpanded,

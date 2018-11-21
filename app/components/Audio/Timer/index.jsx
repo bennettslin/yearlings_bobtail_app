@@ -5,17 +5,16 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getSongIsLogue } from 'helpers/dataHelper'
 import { getFormattedTime } from 'helpers/formatHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     songStore: {
-        selectedSongIndex,
+        isSelectedLogue,
         selectedTime
     }
 }) => ({
-    selectedSongIndex,
+    isSelectedLogue,
     selectedTime
 })
 
@@ -23,7 +22,7 @@ class AudioTimer extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
         selectedTime: PropTypes.number.isRequired,
 
         // From parent.
@@ -41,18 +40,16 @@ class AudioTimer extends Component {
 
         const {
                 isTitleTimer,
-                selectedSongIndex,
+                isSelectedLogue,
                 selectedTime
             } = this.props,
-
-            isLogue = getSongIsLogue(selectedSongIndex),
 
             {
                 base,
                 jiffy
             } = getFormattedTime(selectedTime, true)
 
-        return !isLogue && (
+        return !isSelectedLogue && (
 
             <div className={cx(
                 'AudioTimer',

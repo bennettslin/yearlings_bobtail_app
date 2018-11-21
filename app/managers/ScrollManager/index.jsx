@@ -3,10 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
 
-import {
-    getSongIsLogue
-} from 'helpers/dataHelper'
-
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
@@ -26,7 +22,7 @@ class ScrollManager extends Component {
         // Through Redux.
         isLyricExpanded: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
 
@@ -90,7 +86,7 @@ class ScrollManager extends Component {
             node, index
         }
     ) {
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (this.props.isSelectedLogue) {
             return
         }
 
@@ -141,7 +137,7 @@ class ScrollManager extends Component {
         callback
 
     }) {
-        if (getSongIsLogue(this.props.selectedSongIndex) || index < 0) {
+        if (this.props.isSelectedLogue || index < 0) {
             return
         }
 
@@ -225,13 +221,13 @@ const mapStateToProps = ({
         windowWidth
     },
     responsiveStore: { isHiddenCarouselNav },
-    songStore: { selectedSongIndex }
+    songStore: { isSelectedLogue }
 }) => ({
     isLyricExpanded,
     deviceIndex,
     windowWidth,
     isHiddenCarouselNav,
-    selectedSongIndex
+    isSelectedLogue
 })
 
 export default connect(mapStateToProps)(ScrollManager)
