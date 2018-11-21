@@ -15,6 +15,7 @@ import {
 const
     TOGGLE_DEFAULTS = {
         isAdminOn: false,
+        isAutoScroll: true,
         isScoreShown: false,
         isTitleShown: false,
         isLyricExpanded: false

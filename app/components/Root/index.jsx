@@ -78,7 +78,7 @@ class Root extends Component {
         isTwoRowMenu: PropTypes.bool.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
-        isManualScroll: PropTypes.bool.isRequired,
+        isAutoScroll: PropTypes.bool.isRequired,
 
         // From parent.
         eventHandlers: PropTypes.shape({
@@ -192,7 +192,7 @@ class Root extends Component {
                 isTwoRowMenu,
                 isVerseBarAbove,
                 isVerseBarBelow,
-                isManualScroll
+                isAutoScroll
             } = this.props,
 
             {
@@ -307,7 +307,7 @@ class Root extends Component {
                     {
                         'RM__verseBarAbove': isVerseBarAbove,
                         'RM__verseBarBelow': isVerseBarBelow,
-                        'RM__manualScroll': isManualScroll,
+                        'RM__manualScroll': !isAutoScroll,
                         'RM__bothLyricColumnsShown': !singleShownLyricColumnKey,
                         'RM__sliderTouched': isSliderTouched
                     },
@@ -403,6 +403,7 @@ const mapStateToProps = ({
     isPlaying,
     toggleStore: {
         isAdminOn,
+        isAutoScroll,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
@@ -428,11 +429,14 @@ const mapStateToProps = ({
         showShrunkNavIcon
     },
     isVerseBarAbove,
-    isVerseBarBelow,
-    isManualScroll
+    isVerseBarBelow
 }) => ({
     appMounted,
     isAdminOn,
+    isAutoScroll,
+    isScoreShown,
+    isTitleShown,
+    isLyricExpanded,
     interactivatedVerseIndex,
     selectedAccessIndex,
     selectedCarouselNavIndex,
@@ -441,12 +445,9 @@ const mapStateToProps = ({
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    isTitleShown,
     selectedWikiIndex,
-    isLyricExpanded,
     showOneOfTwoLyricColumns,
     isPlaying,
-    isScoreShown,
     deviceIndex,
     canCarouselRender,
     renderedSongIndex,
@@ -461,8 +462,7 @@ const mapStateToProps = ({
     isScoresTipsInMain,
     isTwoRowMenu,
     isVerseBarAbove,
-    isVerseBarBelow,
-    isManualScroll
+    isVerseBarBelow
 })
 
 export default connect(mapStateToProps)(Root)

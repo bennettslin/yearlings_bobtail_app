@@ -1,12 +1,12 @@
 // Helper for getting and setting state persisted in user's local storage.
 
+import album from 'server/album'
+
 import {
     getTwoToThePowerOfN,
     convertBitNumberToTrueFalseKeys,
     setNewValueInBitNumber
 } from 'helpers/bitHelper'
-
-import album from 'server/album'
 
 import {
     ALL_DOT_KEYS

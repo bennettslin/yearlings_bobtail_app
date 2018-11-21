@@ -130,10 +130,6 @@ class StateManager extends Component {
         return this.lyricManager.selectLyricColumn(payload)
     }
 
-    selectManualScroll = (payload) => {
-        return this.lyricManager.selectManualScroll(payload)
-    }
-
     /*******
      * NAV *
      *******/
@@ -389,7 +385,6 @@ class StateManager extends Component {
                     selectLyricExpand={this.selectLyricExpand}
                     determineVerseBars={this.determineVerseBars}
                     resetVerseBars={this.resetVerseBars}
-                    selectManualScroll={this.selectManualScroll}
                     selectOverview={this.selectOverview}
                     selectCarouselNav={this.selectCarouselNav}
                     selectScene={this.selectScene}

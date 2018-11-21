@@ -427,8 +427,10 @@ class EventHandler extends Component {
         let hasRoomToScroll = false
 
         if (setToManualScroll) {
-            // If triggered manually by keyboard, set to true.
-            this.props.selectManualScroll(true)
+            // If triggered manually by keyboard, set to false.
+            this.props.updateToggleStore({
+                isAutoScroll: false
+            })
         }
 
         // Determine whether there is room to scroll.
@@ -455,7 +457,9 @@ class EventHandler extends Component {
 
                 // Select manual scroll only if wheel moved far enough.
                 if (deltaY > 1 || deltaY < -1) {
-                    this.props.selectManualScroll(true)
+                    this.props.updateToggleStore({
+                        isAutoScroll: false
+                    })
                 }
 
             } else {
@@ -474,7 +478,9 @@ class EventHandler extends Component {
     handleLyricAutoScroll = () => {
 
         // Change back to autoScroll.
-        this.props.selectManualScroll(false)
+        this.props.updateToggleStore({
+            isAutoScroll: true
+        })
 
         // Scroll lyric as if verse bar was selected.
         this.handleVerseBarSelect()

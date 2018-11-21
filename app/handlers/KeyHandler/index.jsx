@@ -223,11 +223,11 @@ class KeyHandler extends Component {
             keyName === ARROW_DOWN ||
             keyName === ARROW_UP
         ) {
-            this._determineVerseBarsWithParameters(true)
+            this._determineVerseBarsWithParameters(false)
         }
     }
 
-    _determineVerseBarsWithParameters(isManualScroll) {
+    _determineVerseBarsWithParameters(isAutoScroll = true) {
         /**
          * Make duration long enough for Chrome, Firefox, and Safari. 150 is
          * fine for lyric page up and down, but 300 seems to be needed for
@@ -236,7 +236,7 @@ class KeyHandler extends Component {
         this.props.eventHandlers.handleLyricWheel(
             null,
             {
-                ...isManualScroll && {
+                ...!isAutoScroll && {
                     timeoutDuration: 300,
                     setToManualScroll: true
                 }

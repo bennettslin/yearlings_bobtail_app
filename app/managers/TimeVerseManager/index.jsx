@@ -19,7 +19,7 @@ class TimeVerseManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        isManualScroll: PropTypes.bool.isRequired,
+        isAutoScroll: PropTypes.bool.isRequired,
         isPlaying: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -91,7 +91,7 @@ class TimeVerseManager extends Component {
              * If manual scroll is on, selected verse may go from above
              * window view, to in it, to below it. So, determine verse bars.
              */
-            if (this.props.isManualScroll) {
+            if (!this.props.isAutoScroll) {
                 this.props.determineVerseBars()
             }
 
@@ -155,7 +155,7 @@ class TimeVerseManager extends Component {
         if (
             scrollLog ||
             (
-                !this.props.isManualScroll &&
+                this.props.isAutoScroll &&
                 isPlayerAdvancing
             )
         ) {
@@ -204,14 +204,14 @@ class TimeVerseManager extends Component {
 }
 
 const mapStateToProps = ({
-    isManualScroll,
+    toggleStore: { isAutoScroll },
     isPlaying,
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
     }
 }) => ({
-    isManualScroll,
+    isAutoScroll,
     isPlaying,
     selectedSongIndex,
     selectedVerseIndex

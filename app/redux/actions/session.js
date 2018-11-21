@@ -5,7 +5,6 @@ import {
     INTERACTIVATED_VERSE_INDEX,
     IS_VERSE_BAR_ABOVE,
     IS_VERSE_BAR_BELOW,
-    IS_MANUAL_SCROLL,
     SHOWN_BOOK_COLUMN_INDEX
 } from 'constants/state'
 
@@ -41,13 +40,6 @@ export const setIsVerseBarBelow = (isVerseBarBelow = false) => (
     {
         type: IS_VERSE_BAR_BELOW,
         payload: isVerseBarBelow
-    }
-)
-
-export const setIsManualScroll = (isManualScroll = false) => (
-    {
-        type: IS_MANUAL_SCROLL,
-        payload: isManualScroll
     }
 )
 

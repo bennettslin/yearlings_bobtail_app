@@ -3,9 +3,6 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import {
-    setIsManualScroll
-} from 'flux/actions/session'
 import { selectLyricColumnIndex } from 'flux/actions/storage'
 import { updateToggleStore } from 'flux/actions/toggle'
 
@@ -28,7 +25,6 @@ class LyricManager extends Component {
         isSelectedLogue: PropTypes.bool.isRequired,
 
         selectLyricColumnIndex: PropTypes.func.isRequired,
-        setIsManualScroll: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -125,10 +121,6 @@ class LyricManager extends Component {
         return true
     }
 
-    selectManualScroll(isManualScroll = false) {
-        this.props.setIsManualScroll(isManualScroll)
-    }
-
     render() {
         return null
     }
@@ -159,7 +151,6 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         selectLyricColumnIndex,
-        setIsManualScroll,
         updateToggleStore
     }, dispatch)
 )
