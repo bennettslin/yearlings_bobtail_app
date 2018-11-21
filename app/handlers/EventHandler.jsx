@@ -39,6 +39,7 @@ class EventHandler extends Component {
     static propTypes = {
         // Through Redux.
         isScoreShown: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         selectedAdminIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
@@ -51,7 +52,6 @@ class EventHandler extends Component {
         accessedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
 
@@ -1055,7 +1055,8 @@ const mapStateToProps = ({
         selectedAnnotationIndex
     },
     toggleStore: {
-        isScoreShown
+        isScoreShown,
+        isLyricExpanded
     },
     selectedAdminIndex,
     selectedCarouselNavIndex,
@@ -1065,7 +1066,6 @@ const mapStateToProps = ({
     selectedWikiIndex,
     interactivatedVerseIndex,
     accessedAnnotationIndex,
-    isLyricExpanded,
     sliderStore: {
         isSliderMoving,
         isSliderTouched
@@ -1077,6 +1077,7 @@ const mapStateToProps = ({
     selectedCarouselNavIndex,
     selectedDotKeys,
     isScoreShown,
+    isLyricExpanded,
     selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
@@ -1084,7 +1085,6 @@ const mapStateToProps = ({
     selectedWikiIndex,
     interactivatedVerseIndex,
     accessedAnnotationIndex,
-    isLyricExpanded,
     isSliderMoving,
     isSliderTouched
 })

@@ -11,8 +11,10 @@ import Popup from '../../Popup'
 import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    isLyricExpanded,
-    toggleStore: { isScoreShown },
+    toggleStore: {
+        isScoreShown,
+        isLyricExpanded
+    },
     renderStore: { canCarouselRender },
     deviceStore: { deviceIndex },
     renderedStore: { renderedAnnotationIndex },
@@ -21,8 +23,8 @@ const mapStateToProps = ({
     selectedWikiIndex
 }) => ({
     isScoreShown,
-    deviceIndex,
     isLyricExpanded,
+    deviceIndex,
     canCarouselRender,
     renderedAnnotationIndex,
     selectedCarouselNavIndex,

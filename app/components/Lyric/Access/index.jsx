@@ -17,15 +17,15 @@ import {
 } from 'constants/access'
 
 const mapStateToProps = ({
-    isLyricExpanded,
     renderStore: { canLyricRender },
     renderedStore: { renderedAnnotationIndex },
+    toggleStore: { isLyricExpanded },
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys
 }) => ({
-    isLyricExpanded,
     canLyricRender,
+    isLyricExpanded,
     renderedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,

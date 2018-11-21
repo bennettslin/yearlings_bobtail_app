@@ -406,9 +406,11 @@ const mapStateToProps = ({
     selectedTipsIndex,
     selectedTitleIndex,
     selectedWikiIndex,
-    isLyricExpanded,
     isPlaying,
-    toggleStore: { isScoreShown },
+    toggleStore: {
+        isScoreShown,
+        isLyricExpanded
+    },
     deviceStore: { deviceIndex },
     renderStore: { canCarouselRender },
     renderedStore: {

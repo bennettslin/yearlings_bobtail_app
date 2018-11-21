@@ -16,7 +16,7 @@ const mapStateToProps = ({
         isHiddenLyric,
         isLyricExpandable
     },
-    isLyricExpanded
+    toggleStore: { isLyricExpanded }
 }) => ({
     deviceIndex,
     isHiddenLyric,

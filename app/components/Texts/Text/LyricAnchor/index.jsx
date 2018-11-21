@@ -20,13 +20,13 @@ const mapStateToProps = ({
         renderedSongIndex,
         renderedAnnotationIndex
     },
+    toggleStore: { isLyricExpanded },
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
     selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex,
-    isLyricExpanded
+    interactivatedVerseIndex
 }) => ({
     canLyricRender,
     renderedAnnotationIndex,
@@ -34,13 +34,13 @@ const mapStateToProps = ({
     // This is just to know when to update.
     renderedSongIndex,
 
+    isLyricExpanded,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
     selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex,
-    isLyricExpanded
+    interactivatedVerseIndex
 })
 
 class TextLyricAnchor extends Component {

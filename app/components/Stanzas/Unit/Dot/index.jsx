@@ -17,19 +17,19 @@ const mapStateToProps = ({
     selectedAccessIndex,
     renderStore: { canLyricRender },
     renderedStore: { renderedAnnotationIndex },
+    toggleStore: { isLyricExpanded },
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex,
-    isLyricExpanded
+    interactivatedVerseIndex
 }) => ({
     accessedAnnotationIndex,
     selectedAccessIndex,
     canLyricRender,
+    isLyricExpanded,
     renderedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex,
-    isLyricExpanded
+    interactivatedVerseIndex
 })
 
 /*************

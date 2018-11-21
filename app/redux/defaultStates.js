@@ -22,7 +22,8 @@ const
     ),
 
     TOGGLE_DEFAULTS = {
-        isScoreShown: false
+        isScoreShown: false,
+        isLyricExpanded: false
     },
 
     DEVICE_DEFAULTS = {

@@ -134,7 +134,7 @@ class OverviewManager extends Component {
 }
 
 const mapStateToProps = ({
-    isLyricExpanded,
+    toggleStore: { isLyricExpanded },
     songStore: {
         selectedSongIndex,
         selectedAnnotationIndex

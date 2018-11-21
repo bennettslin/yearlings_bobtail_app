@@ -189,7 +189,7 @@ const mapStateToProps = ({
         windowWidth,
         windowHeight
     },
-    isLyricExpanded,
+    toggleStore: { isLyricExpanded },
     interactivatedVerseIndex,
     responsiveStore: { isHiddenLyric },
     songStore: {

@@ -18,23 +18,23 @@ const mapStateToProps = ({
         renderedAnnotationIndex
     },
     responsiveStore: { isHiddenCarouselNav },
+    toggleStore: { isLyricExpanded },
     accessedAnnotationIndex,
     selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex,
-    isLyricExpanded
+    interactivatedVerseIndex
 }) => ({
     canCarouselRender,
     renderedSongIndex,
     renderedAnnotationIndex,
     isHiddenCarouselNav,
+    isLyricExpanded,
     accessedAnnotationIndex,
     selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex,
-    isLyricExpanded
+    interactivatedVerseIndex
 })
 
 class Carousel extends Component {

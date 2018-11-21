@@ -4,10 +4,10 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import {
-    setIsLyricExpanded,
     setIsManualScroll
 } from 'flux/actions/session'
 import { selectLyricColumnIndex } from 'flux/actions/storage'
+import { updateToggleStore } from 'flux/actions/toggle'
 
 import { getSongIsLogue } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -29,8 +29,8 @@ class LyricManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
 
         selectLyricColumnIndex: PropTypes.func.isRequired,
-        setIsLyricExpanded: PropTypes.func.isRequired,
         setIsManualScroll: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -92,7 +92,9 @@ class LyricManager extends Component {
             }
         }
 
-        this.props.setIsLyricExpanded(isLyricExpanded)
+        this.props.updateToggleStore({
+            isLyricExpanded
+        })
         return true
     }
 
@@ -148,7 +150,7 @@ const mapStateToProps = ({
         isLyricExpandable,
         isHiddenLyric
     },
-    isLyricExpanded,
+    toggleStore: { isLyricExpanded },
     songStore: {
         selectedSongIndex,
         selectedAnnotationIndex
@@ -167,8 +169,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         selectLyricColumnIndex,
-        setIsLyricExpanded,
-        setIsManualScroll
+        setIsManualScroll,
+        updateToggleStore
     }, dispatch)
 )
 

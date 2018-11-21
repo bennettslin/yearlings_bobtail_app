@@ -219,7 +219,7 @@ class ScrollManager extends Component {
 }
 
 const mapStateToProps = ({
-    isLyricExpanded,
+    toggleStore: { isLyricExpanded },
     deviceStore: {
         deviceIndex,
         windowWidth

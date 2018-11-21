@@ -13,7 +13,7 @@ import RenderableReducer from './renderable'
 import RenderedReducer from './rendered'
 import ResponsiveReducer from './responsive'
 import {
-    CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer
+    CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer
 } from './session'
 import SliderReducer from './slider'
 import SongReducer from './song'
@@ -43,7 +43,6 @@ const rootReducer = combineReducers({
     isPlaying: IsPlayingReducer,
 
     [TOGGLE_STORE]: ToggleReducer,
-
     [DEVICE_STORE]: DeviceReducer,
 
     appMounted: AppMountedReducer,
@@ -58,7 +57,6 @@ const rootReducer = combineReducers({
 
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,
-    isLyricExpanded: IsLyricExpandedReducer,
     isVerseBarAbove: IsVerseBarAboveReducer,
     isVerseBarBelow: IsVerseBarBelowReducer,
     isManualScroll: IsManualScrollReducer,

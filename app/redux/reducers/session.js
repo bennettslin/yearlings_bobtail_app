@@ -2,7 +2,6 @@
 import {
     CAROUSEL_ANNOTATION_INDEX,
     INTERACTIVATED_VERSE_INDEX,
-    IS_LYRIC_EXPANDED,
     IS_VERSE_BAR_ABOVE,
     IS_VERSE_BAR_BELOW,
     IS_MANUAL_SCROLL,
@@ -30,15 +29,6 @@ export const CarouselAnnotationIndexReducer = (state = 0, action) => {
 export const InteractivatedVerseIndexReducer = (state = -1, action) => {
     switch (action.type) {
         case INTERACTIVATED_VERSE_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const IsLyricExpandedReducer = (state = false, action) => {
-    switch (action.type) {
-        case IS_LYRIC_EXPANDED:
             return action.payload
         default:
             return state

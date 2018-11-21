@@ -724,9 +724,11 @@ class KeyHandler extends Component {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isScoreShown },
+    toggleStore: {
+        isScoreShown,
+        isLyricExpanded
+    },
     responsiveStore: { isHiddenLyric },
-    isLyricExpanded,
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
