@@ -99,7 +99,7 @@ class NavNavigation extends PureComponent {
 const mapStateToProps = ({
     toggleStore: { isAccessOn },
     interactivatedVerseIndex,
-    accessedNavSongIndex,
+    accessStore: { accessedNavSongIndex },
     shownBookColumnIndex
 }) => ({
     isAccessOn,

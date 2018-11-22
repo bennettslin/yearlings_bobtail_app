@@ -83,7 +83,7 @@ class DotsSlideNavigation extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isAccessOn },
-    accessedDotIndex
+    accessStore: { accessedDotIndex }
 }) => ({
     isAccessOn,
     accessedDotIndex

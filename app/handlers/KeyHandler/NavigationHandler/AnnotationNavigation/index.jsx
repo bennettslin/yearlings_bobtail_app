@@ -142,7 +142,7 @@ class AnnotationNavigation extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isAccessOn },
-    accessedAnnotationAnchorIndex,
+    accessStore: { accessedAnnotationAnchorIndex },
     songStore: {
         selectedSongIndex,
         selectedAnnotationIndex

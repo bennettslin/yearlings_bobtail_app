@@ -24,7 +24,7 @@ const mapStateToProps = ({
         isDotsSlideShown,
         isLyricExpanded
     },
-    accessedAnnotationIndex,
+    accessStore: { accessedAnnotationIndex },
     interactivatedVerseIndex
 }) => ({
     canCarouselRender,

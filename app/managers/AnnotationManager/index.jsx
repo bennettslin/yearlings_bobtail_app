@@ -3,10 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import {
-    accessAnnotationIndex,
-    accessAnnotationAnchorIndex
-} from 'flux/access/action'
+import { updateAccessStore } from 'flux/access/action'
 
 import { updateRenderedStore } from 'flux/rendered/action'
 import { updateSongStore } from 'flux/song/action'
@@ -30,11 +27,8 @@ class AnnotationManager extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
-
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
-
-        accessAnnotationIndex: PropTypes.func.isRequired,
-        accessAnnotationAnchorIndex: PropTypes.func.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
         updateRenderedStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
@@ -59,9 +53,7 @@ class AnnotationManager extends PureComponent {
                 })
 
         // Set initial access state.
-        props.accessAnnotationAnchorIndex(
-            accessedAnnotationAnchorIndex
-        )
+        props.updateAccessStore({ accessedAnnotationAnchorIndex })
     }
 
     componentDidMount() {
@@ -137,17 +129,15 @@ class AnnotationManager extends PureComponent {
         if (selectedAnnotationIndex) {
             const { selectedDotKeys } = props
 
-            props.accessAnnotationIndex(selectedAnnotationIndex)
-
-            // App does not know new index, so pass it directly.
-            props.accessAnnotationAnchorIndex(
-                getAnnotationAnchorIndexForDirection({
+            props.updateAccessStore({
+                accessedAnnotationIndex: selectedAnnotationIndex,
+                accessedAnnotationAnchorIndex: getAnnotationAnchorIndexForDirection({
                     selectedSongIndex,
                     selectedAnnotationIndex,
                     selectedDotKeys,
                     initialAnnotationAnchorIndex
                 })
-            )
+            })
         }
 
         if (!bypassUpdateSelected) {
@@ -223,7 +213,7 @@ class AnnotationManager extends PureComponent {
             })
         }
 
-        this.props.accessAnnotationIndex(accessedAnnotationIndex)
+        this.props.updateAccessStore({ accessedAnnotationIndex })
 
         // If needed, scroll to this annotation index.
         return accessedAnnotationIndex
@@ -257,9 +247,9 @@ class AnnotationManager extends PureComponent {
                     direction
                 })
 
-        this.props.accessAnnotationAnchorIndex(
-            nextAccessedAnnotationAnchorIndex
-        )
+        this.props.updateAccessStore({
+            accessedAnnotationAnchorIndex: nextAccessedAnnotationAnchorIndex
+        })
     }
 
     render() {
@@ -275,7 +265,7 @@ const mapStateToProps = ({
         selectedVerseIndex,
         selectedAnnotationIndex
     },
-    accessedAnnotationAnchorIndex,
+    accessStore: { accessedAnnotationAnchorIndex },
     dotsStore: {
         dotsBitNumber,
         ...selectedDotKeys
@@ -295,8 +285,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessAnnotationIndex,
-        accessAnnotationAnchorIndex,
+        updateAccessStore,
         updateRenderedStore,
         updateSongStore
     }, dispatch)

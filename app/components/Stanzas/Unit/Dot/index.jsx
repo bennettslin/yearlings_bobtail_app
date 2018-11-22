@@ -13,7 +13,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
-    accessedAnnotationIndex,
+    accessStore: { accessedAnnotationIndex },
     renderStore: { canLyricRender },
     renderedStore: { renderedAnnotationIndex },
     toggleStore: {

@@ -1000,7 +1000,7 @@ const mapStateToProps = ({
     selectedTipsIndex,
     selectedWikiIndex,
     interactivatedVerseIndex,
-    accessedAnnotationIndex,
+    accessStore: { accessedAnnotationIndex },
     sliderStore: {
         isSliderMoving,
         isSliderTouched

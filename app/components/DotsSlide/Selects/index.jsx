@@ -9,7 +9,7 @@ import DotsSlideSelect from './Select'
 import { ALL_DOT_KEYS } from 'constants/dots'
 
 const mapStateToProps = ({
-    accessedDotIndex,
+    accessStore: { accessedDotIndex },
     toggleStore: { isAccessOn }
 }) => ({
     accessedDotIndex,

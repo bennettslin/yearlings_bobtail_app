@@ -12,7 +12,7 @@ const mapStateToProps = ({
     renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
     toggleStore: { isAccessOn },
-    accessedAnnotationAnchorIndex
+    accessStore: { accessedAnnotationAnchorIndex }
 }) => ({
     canCarouselRender,
     renderedSongIndex,

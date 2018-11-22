@@ -1,7 +1,5 @@
 import { combineReducers } from 'redux'
-import {
-    AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer
-} from './access/reducer'
+import AccessReducer from './access/reducer'
 import { IsPlayingReducer } from './audio/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
@@ -24,6 +22,7 @@ import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
 
 import {
+    ACCESS_STORE,
     DEVICE_STORE,
     DOTS_STORE,
     RENDER_STORE,
@@ -38,12 +37,7 @@ import {
 
 const rootReducer = combineReducers({
 
-    // TODO: Access store.
-    accessedAnnotationIndex: AccessedAnnotationIndexReducer,
-    accessedAnnotationAnchorIndex: AccessedAnnotationAnchorIndexReducer,
-    accessedDotIndex: AccessedDotIndexReducer,
-    accessedNavSongIndex: AccessedNavSongIndexReducer,
-
+    [ACCESS_STORE]: AccessReducer,
     isPlaying: IsPlayingReducer,
 
     [TOGGLE_STORE]: ToggleReducer,

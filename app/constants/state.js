@@ -4,13 +4,6 @@ module.exports = {
     // Album. Purely for debug purposes.
     ALBUM: 'album',
 
-    // Access.
-    ACCESSED_KEY_NAME: 'accessedKeyName',
-    ACCESSED_ANNOTATION_INDEX: 'accessedAnnotationIndex',
-    ACCESSED_ANNOTATION_ANCHOR_INDEX: 'accessedAnnotationAnchorIndex',
-    ACCESSED_DOT_INDEX: 'accessedDotIndex',
-    ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex',
-
     // Audio.
     IS_PLAYING: 'isPlaying',
 

@@ -1,47 +1,17 @@
-// Reducers for accessed state.
-import {
-    ACCESSED_ANNOTATION_INDEX,
-    ACCESSED_ANNOTATION_ANCHOR_INDEX,
-    ACCESSED_DOT_INDEX,
-    ACCESSED_NAV_SONG_INDEX,
-    SELECTED_SONG_INDEX
-} from 'constants/state'
+// Reducers for accessed values.
+import { ACCESS_STORE } from '../storeKeys'
+import { ACCESS_DEFAULTS } from '../defaultStates'
 
-import { getFromStorage } from '../storageHelper'
-
-const storedSongIndex = getFromStorage(SELECTED_SONG_INDEX)
-
-export const AccessedAnnotationIndexReducer = (state = 0, action) => {
+export default (
+    state = ACCESS_DEFAULTS,
+    action
+) => {
     switch (action.type) {
-        case ACCESSED_ANNOTATION_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const AccessedAnnotationAnchorIndexReducer = (state = 0, action) => {
-    switch (action.type) {
-        case ACCESSED_ANNOTATION_ANCHOR_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const AccessedDotIndexReducer = (state = 0, action) => {
-    switch (action.type) {
-        case ACCESSED_DOT_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const AccessedNavSongIndexReducer = (state = storedSongIndex, action) => {
-    switch (action.type) {
-        case ACCESSED_NAV_SONG_INDEX:
-            return action.payload
+        case ACCESS_STORE:
+            return {
+                ...state,
+                ...action.payload
+            }
         default:
             return state
     }

@@ -26,8 +26,10 @@ const mapStateToProps = ({
         isDotsSlideShown,
         isLyricExpanded
     },
-    accessedAnnotationIndex,
-    accessedAnnotationAnchorIndex,
+    accessStore: {
+        accessedAnnotationIndex,
+        accessedAnnotationAnchorIndex
+    },
     interactivatedVerseIndex
 }) => ({
     canLyricRender,

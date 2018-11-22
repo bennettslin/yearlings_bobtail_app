@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { accessNavSongIndex } from 'flux/access/action'
+import { updateAccessStore } from 'flux/access/action'
 
 import { setShownBookColumnIndex } from 'flux/session/action'
 import { getBookColumnIndex } from 'helpers/dataHelper'
@@ -18,7 +18,7 @@ class NavManager extends Component {
         isCarouselShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
 
-        accessNavSongIndex: PropTypes.func.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
         setShownBookColumnIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -75,7 +75,7 @@ class NavManager extends Component {
     }
 
     accessNavSong(accessedNavSongIndex) {
-        this.props.accessNavSongIndex(accessedNavSongIndex)
+        this.props.updateAccessStore({ accessedNavSongIndex })
     }
 
     render() {
@@ -97,7 +97,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessNavSongIndex,
+        updateAccessStore,
         setShownBookColumnIndex
     }, dispatch)
 )

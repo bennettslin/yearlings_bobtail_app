@@ -18,17 +18,6 @@ import {
     SELECTED_VERSE_INDEX
 } from 'constants/state'
 
-// import {
-//     NARRATIVE,
-//     BACKSTORY,
-//     OBSERVATION,
-//     PUN,
-//     REFERENCE,
-//     SONGWRITING,
-//     WORMHOLE,
-//     AFTERWORD
-// } from 'constants/dots'
-
 import {
     IS_ACCESS_ON,
     IS_ADMIN_ON,
@@ -36,6 +25,18 @@ import {
 } from './storeKeys'
 
 const
+    storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
+    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
+    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
+    isStoredLogue = getSongIsLogue(storedSongIndex),
+
+    ACCESS_DEFAULTS = {
+        accessedAnnotationIndex: storedAnnotationIndex,
+        accessedAnnotationAnchorIndex: 1,
+        accessedDotIndex: 0,
+        accessedNavSongIndex: storedSongIndex
+    },
+
     TOGGLE_DEFAULTS = {
         isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
         isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
@@ -68,6 +69,7 @@ const
         floorHeight: 0
     },
 
+    // All dotKeys plus dotsBitNumber.
     DOTS_DEFAULTS = getDotsFromStorage(),
 
     RESPONSIVE_DEFAULTS = {
@@ -96,11 +98,6 @@ const
         canCarouselRender: false,
         canSceneRender: false
     },
-
-    storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
-    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
-    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
-    isStoredLogue = getSongIsLogue(storedSongIndex),
 
     RENDERED_DEFAULTS = {
         renderedSongIndex: storedSongIndex,
@@ -134,6 +131,7 @@ const
     }
 
 export {
+    ACCESS_DEFAULTS,
     TOGGLE_DEFAULTS,
     TRANSIENT_DEFAULTS,
     DEVICE_DEFAULTS,

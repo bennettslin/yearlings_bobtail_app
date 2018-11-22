@@ -14,7 +14,7 @@ const mapStateToProps = ({
         isDotsSlideShown
     },
     songStore: { selectedSongIndex },
-    accessedNavSongIndex
+    accessStore: { accessedNavSongIndex }
 }) => ({
     isAccessOn,
     selectedSongIndex,

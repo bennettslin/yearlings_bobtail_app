@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { accessDotIndex } from 'flux/access/action'
+import { updateAccessStore } from 'flux/access/action'
 import { updateDotsStore } from 'flux/dots/action'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
@@ -15,7 +15,7 @@ class DotsManager extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
 
-        accessDotIndex: PropTypes.func.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
         updateDotsStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -39,7 +39,7 @@ class DotsManager extends PureComponent {
     }
 
     accessDot(accessedDotIndex) {
-        this.props.accessDotIndex(accessedDotIndex)
+        this.props.updateAccessStore({ accessedDotIndex })
     }
 
     render() {
@@ -59,7 +59,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessDotIndex,
+        updateAccessStore,
         updateDotsStore
     }, dispatch)
 )
