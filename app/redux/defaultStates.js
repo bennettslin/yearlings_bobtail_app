@@ -1,4 +1,7 @@
-import { getFromStorage } from './storageHelper'
+import {
+    getFromStorage,
+    getBoolFromStorage
+} from './storageHelper'
 
 import {
     getSongIsLogue,
@@ -12,11 +15,18 @@ import {
     SELECTED_VERSE_INDEX
 } from 'constants/state'
 
+import {
+    IS_ACCESS_ON,
+    IS_ADMIN_ON,
+    IS_CAROUSEL_SHOWN
+} from './storeKeys'
+
 const
     TOGGLE_DEFAULTS = {
-        isAccessOn: false,
-        isAdminOn: false,
+        isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
+        isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
         isAutoScroll: true,
+        isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
         isDotsSlideShown: false,
         isScoreShown: false,
         isTitleShown: false,

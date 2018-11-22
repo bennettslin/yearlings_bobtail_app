@@ -20,11 +20,11 @@ const mapStateToProps = ({
     responsiveStore: { isHiddenCarouselNav },
     toggleStore: {
         isAccessOn,
+        isCarouselShown,
         isDotsSlideShown,
         isLyricExpanded
     },
     accessedAnnotationIndex,
-    selectedCarouselNavIndex,
     interactivatedVerseIndex
 }) => ({
     canCarouselRender,
@@ -34,7 +34,7 @@ const mapStateToProps = ({
     isAccessOn,
     isLyricExpanded,
     accessedAnnotationIndex,
-    selectedCarouselNavIndex,
+    isCarouselShown,
     isDotsSlideShown,
     interactivatedVerseIndex
 })
@@ -48,9 +48,9 @@ class Carousel extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
 
@@ -133,7 +133,7 @@ class Carousel extends Component {
                 renderedAnnotationIndex,
                 accessedAnnotationIndex,
                 isAccessOn,
-                selectedCarouselNavIndex,
+                isCarouselShown,
                 isDotsSlideShown,
                 interactivatedVerseIndex,
                 isLyricExpanded,
@@ -191,7 +191,7 @@ class Carousel extends Component {
                                 !isDotsSlideShown &&
                                 interactivatedVerseIndex < 0 &&
                                 (
-                                    selectedCarouselNavIndex ||
+                                    isCarouselShown ||
                                     isLyricExpanded
                                 ) &&
                                 annotationIndex === accessedAnnotationIndex,

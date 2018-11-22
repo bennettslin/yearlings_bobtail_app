@@ -60,11 +60,11 @@ class TransientListener extends Component {
             tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
 
             isCarouselNavShowable =
-                !isRenderedLogue
-                && !isOverlayShown
-                && !isLyricExpanded
-                && !overviewShown
-                && !tipsShown
+                !isOverlayShown &&
+                !overviewShown &&
+                !tipsShown &&
+                !isRenderedLogue &&
+                !isLyricExpanded
 
         this.props.updateTransientStore({
             isOverlayShown,

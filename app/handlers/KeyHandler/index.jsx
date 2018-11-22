@@ -70,6 +70,7 @@ class KeyHandler extends Component {
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
         eventHandlers: PropTypes.shape({
@@ -266,7 +267,7 @@ class KeyHandler extends Component {
                 isSelectedLogue,
                 selectedAnnotationIndex,
                 isDotsSlideShown,
-                selectedCarouselNavIndex,
+                isCarouselShown,
 
                 eventHandlers
             } = this.props,
@@ -304,7 +305,7 @@ class KeyHandler extends Component {
 
             // We're in nav section.
             } else if (
-                !selectedCarouselNavIndex &&
+                !isCarouselShown &&
                 !isLyricExpanded &&
                 !isVerseInteractivated
             ) {
@@ -760,10 +761,11 @@ class KeyHandler extends Component {
 const mapStateToProps = ({
     toggleStore: {
         isAccessOn,
+        isCarouselShown,
         isDotsSlideShown,
+        isLyricExpanded,
         isScoreShown,
-        isTitleShown,
-        isLyricExpanded
+        isTitleShown
     },
     responsiveStore: { isHiddenLyric },
     songStore: {
@@ -772,7 +774,6 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         isSelectedLogue
     },
-    selectedCarouselNavIndex,
     selectedDotKeys,
     selectedOverviewIndex,
     selectedTipsIndex,
@@ -786,14 +787,14 @@ const mapStateToProps = ({
     deviceIndex
 }) => ({
     isAccessOn,
+    isCarouselShown,
     isDotsSlideShown,
+    isLyricExpanded,
     isScoreShown,
     isTitleShown,
-    isLyricExpanded,
     isHiddenLyric,
     selectedAnnotationIndex,
     isSelectedLogue,
-    selectedCarouselNavIndex,
     selectedDotKeys,
     selectedOverviewIndex,
     selectedTipsIndex,

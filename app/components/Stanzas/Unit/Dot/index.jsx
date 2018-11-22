@@ -18,10 +18,10 @@ const mapStateToProps = ({
     renderedStore: { renderedAnnotationIndex },
     toggleStore: {
         isAccessOn,
+        isCarouselShown,
         isDotsSlideShown,
         isLyricExpanded
     },
-    selectedCarouselNavIndex,
     interactivatedVerseIndex
 }) => ({
     accessedAnnotationIndex,
@@ -29,7 +29,7 @@ const mapStateToProps = ({
     canLyricRender,
     isLyricExpanded,
     renderedAnnotationIndex,
-    selectedCarouselNavIndex,
+    isCarouselShown,
     isDotsSlideShown,
     interactivatedVerseIndex
 })
@@ -46,9 +46,9 @@ class UnitDot extends Component {
         accessedAnnotationIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -94,7 +94,7 @@ class UnitDot extends Component {
                 renderedAnnotationIndex,
                 accessedAnnotationIndex,
                 isAccessOn,
-                selectedCarouselNavIndex,
+                isCarouselShown,
                 isDotsSlideShown,
                 interactivatedVerseIndex,
                 isLyricExpanded
@@ -115,7 +115,7 @@ class UnitDot extends Component {
                 !isDotsSlideShown &&
                 interactivatedVerseIndex < 0 &&
                 (
-                    selectedCarouselNavIndex ||
+                    isCarouselShown ||
                     isLyricExpanded
                 ) &&
                 annotationIndex === accessedAnnotationIndex,

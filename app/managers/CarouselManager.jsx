@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { setCarouselAnnotationIndex } from 'flux/actions/session'
-import { selectCarouselNavIndex } from 'flux/actions/storage'
+import { updateToggleStore } from 'flux/actions/toggle'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getIsPhone } from 'helpers/responsiveHelper'
@@ -15,11 +15,11 @@ class CarouselManager extends Component {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         setCarouselAnnotationIndex: PropTypes.func.isRequired,
-        selectCarouselNavIndex: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -38,9 +38,9 @@ class CarouselManager extends Component {
         })
     }
 
-    selectCarouselNav(
-        selectedCarouselNavValue = (this.props.selectedCarouselNavIndex + 1) % 2
-    ) {
+    selectCarouselNav = (
+        isCarouselShown = !this.props.isCarouselShown
+    ) => {
         // If no argument passed, then just toggle between on and off.
 
         // We shouldn't be able to toggle carousel under these conditions.
@@ -49,35 +49,32 @@ class CarouselManager extends Component {
             getIsPhone(this.props.deviceIndex) ||
             this.props.isHiddenCarouselNav
         ) {
-
             return false
         }
 
-        if (typeof selectedCarouselNavValue === 'boolean') {
-            selectedCarouselNavValue = selectedCarouselNavValue ? 1 : 0
-        }
-
-        this.props.selectCarouselNavIndex(selectedCarouselNavValue)
+        this.props.updateToggleStore({
+            isCarouselShown
+        })
 
         /**
          * New behaviour is that nav is expanded when carousel is hidden, and
          * vice versa.
          */
-        this._selectCarouselToggle(selectedCarouselNavValue)
-        this._selectNavExpand(selectedCarouselNavValue)
+        this._selectCarouselToggle(isCarouselShown)
+        this._selectNavExpand(isCarouselShown)
 
         return true
     }
 
-    _selectCarouselToggle(selectedCarouselNavIndex) {
-        if (!selectedCarouselNavIndex) {
+    _selectCarouselToggle(isCarouselShown) {
+        if (!isCarouselShown) {
             this.props.setCarouselAnnotationIndex(0)
         }
     }
 
-    _selectNavExpand(selectedCarouselNavIndex) {
+    _selectNavExpand(isCarouselShown) {
         // Reset accessed song index and book column upon nav expand.
-        if (!selectedCarouselNavIndex) {
+        if (!isCarouselShown) {
             this.props.accessNavSong(this.props.selectedSongIndex)
 
             this.props.selectBookColumn({
@@ -98,19 +95,19 @@ const mapStateToProps = ({
         selectedSongIndex,
         isSelectedLogue
     },
-    selectedCarouselNavIndex
+    toggleStore: { isCarouselShown }
 }) => ({
     deviceIndex,
     isHiddenCarouselNav,
     selectedSongIndex,
     isSelectedLogue,
-    selectedCarouselNavIndex
+    isCarouselShown
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setCarouselAnnotationIndex,
-        selectCarouselNavIndex
+        updateToggleStore
     }, dispatch)
 )
 

@@ -22,12 +22,12 @@ const mapStateToProps = ({
     },
     toggleStore: {
         isAccessOn,
+        isCarouselShown,
         isDotsSlideShown,
         isLyricExpanded
     },
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
-    selectedCarouselNavIndex,
     interactivatedVerseIndex
 }) => ({
     canLyricRender,
@@ -40,7 +40,7 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
     isAccessOn,
-    selectedCarouselNavIndex,
+    isCarouselShown,
     isDotsSlideShown,
     interactivatedVerseIndex
 })
@@ -56,9 +56,9 @@ class TextLyricAnchor extends Component {
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
         isAccessOn: PropTypes.bool.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         wikiIndex: PropTypes.number,
@@ -141,7 +141,7 @@ class TextLyricAnchor extends Component {
                 accessedAnnotationAnchorIndex,
 
                 isAccessOn,
-                selectedCarouselNavIndex,
+                isCarouselShown,
                 isDotsSlideShown,
                 interactivatedVerseIndex,
                 isLyricExpanded,
@@ -174,7 +174,7 @@ class TextLyricAnchor extends Component {
 
                 // Let popup annotation show anchors when carousel is hidden.
                 (
-                    Boolean(selectedCarouselNavIndex) ===
+                    Boolean(isCarouselShown) ===
                         !showAccessInPopupAnnotation ||
 
                     isLyricExpanded

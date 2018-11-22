@@ -31,12 +31,12 @@ class EventHandler extends Component {
 
     static propTypes = {
         // Through Redux.
+        isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -155,7 +155,7 @@ class EventHandler extends Component {
                 index: accessedAnnotationIndex
             })
 
-            if (this.props.selectedCarouselNavIndex) {
+            if (this.props.isCarouselShown) {
                 this.props.scrollElementIntoView({
                     log: 'Access carousel annotation.',
                     scrollClass: CAROUSEL_SCROLL,
@@ -303,7 +303,7 @@ class EventHandler extends Component {
             scrollClass: LYRIC_ANNOTATION_SCROLL,
             index: selectedAnnotationIndex
         })
-        if (this.props.selectedCarouselNavIndex) {
+        if (this.props.isCarouselShown) {
             this.props.scrollElementIntoView({
                 log: 'Select accessed carousel annotation.',
                 scrollClass: CAROUSEL_SCROLL,
@@ -358,11 +358,11 @@ class EventHandler extends Component {
      * CAROUSEL *
      ************/
 
-    handleCarouselNavToggle = (e, selectedCarouselNavIndex) => {
+    handleCarouselNavToggle = (e, isCarouselShown) => {
         this.stopPropagation(e)
 
-        const presentCarouselIndex = this.props.selectedCarouselNavIndex,
-            carouselSelected = this.props.selectCarouselNav(selectedCarouselNavIndex)
+        const presentCarouselIndex = this.props.isCarouselShown,
+            carouselSelected = this.props.selectCarouselNav(isCarouselShown)
 
         // Scroll only when expanding carousel.
         if (carouselSelected && !presentCarouselIndex) {
@@ -554,7 +554,7 @@ class EventHandler extends Component {
 
             // Scroll carousel only if not selecting from carousel.
             } else {
-                if (this.props.selectedCarouselNavIndex) {
+                if (this.props.isCarouselShown) {
                     this.props.scrollElementIntoView({
                         log: 'Lyric selected carousel annotation.',
                         scrollClass: CAROUSEL_SCROLL,
@@ -895,7 +895,7 @@ class EventHandler extends Component {
         const { selectedAnnotationIndex } = this.props
 
         // Scroll to carousel annotation if toggled on.
-        if (this.props.selectedCarouselNavIndex) {
+        if (this.props.isCarouselShown) {
 
             this.props.scrollElementIntoView({
                 log: 'Rerender selected carousel annotation.',
@@ -997,12 +997,12 @@ const mapStateToProps = ({
         isSelectedLogue
     },
     toggleStore: {
+        isCarouselShown,
         isDotsSlideShown,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
     },
-    selectedCarouselNavIndex,
     selectedDotKeys,
     selectedTipsIndex,
     selectedWikiIndex,
@@ -1015,7 +1015,7 @@ const mapStateToProps = ({
 }) => ({
     isHiddenLyric,
     selectedAnnotationIndex,
-    selectedCarouselNavIndex,
+    isCarouselShown,
     isSelectedLogue,
     selectedDotKeys,
     isDotsSlideShown,

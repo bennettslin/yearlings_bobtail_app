@@ -34,7 +34,7 @@ const
     }
 
 const propTypes = {
-    buttonIdentifier: PropTypes.number.isRequired,
+    buttonIdentifier: PropTypes.any.isRequired,
     className: PropTypes.string
 }
 

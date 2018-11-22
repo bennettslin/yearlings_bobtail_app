@@ -7,5 +7,9 @@ module.exports = {
     RENDERED_STORE: 'renderedStore',
     RESPONSIVE_STORE: 'responsiveStore',
     SLIDER_STORE: 'sliderStore',
-    SONG_STORE: 'songStore'
+    SONG_STORE: 'songStore',
+
+    IS_ACCESS_ON: 'isAccessOn',
+    IS_ADMIN_ON: 'isAdminOn',
+    IS_CAROUSEL_SHOWN: 'isCarouselShown'
 }

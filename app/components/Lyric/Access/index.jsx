@@ -20,16 +20,16 @@ const mapStateToProps = ({
     renderStore: { canLyricRender },
     renderedStore: { renderedAnnotationIndex },
     toggleStore: {
+        isCarouselShown,
         isDotsSlideShown,
         isLyricExpanded
     },
-    selectedCarouselNavIndex,
     selectedDotKeys
 }) => ({
     canLyricRender,
     isLyricExpanded,
     renderedAnnotationIndex,
-    selectedCarouselNavIndex,
+    isCarouselShown,
     isDotsSlideShown,
     selectedDotKeys
 })
@@ -41,7 +41,7 @@ class LyricAccess extends Component {
         // From Redux.
         canLyricRender: PropTypes.bool.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedDotKeys: PropTypes.object.isRequired
@@ -56,7 +56,7 @@ class LyricAccess extends Component {
         const {
                 isLyricExpanded,
                 renderedAnnotationIndex,
-                selectedCarouselNavIndex,
+                isCarouselShown,
                 isDotsSlideShown,
                 selectedDotKeys
             } = this.props,
@@ -71,7 +71,7 @@ class LyricAccess extends Component {
                 hasSelectedDots && !renderedAnnotationIndex && (
                     (
                         // Must show carousel and not have dots section open...
-                        selectedCarouselNavIndex &&
+                        isCarouselShown &&
                         !isDotsSlideShown
                     ) || (
                         // ... or else have lyric section open.

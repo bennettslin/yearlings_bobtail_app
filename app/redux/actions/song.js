@@ -1,5 +1,6 @@
 // Actions for song state.
 import { getSongIsLogue } from '../../helpers/dataHelper'
+import { setInStorage } from '../storageHelper'
 
 import {
     hasKey,
@@ -13,12 +14,7 @@ import {
 } from 'constants/state'
 
 import { SONG_STORE } from '../storeKeys'
-
 import { SONG_DEFAULTS } from '../defaultStates'
-
-import {
-    setInStorage
-} from '../storageHelper'
 
 export const updateSongStore = (payload = SONG_DEFAULTS) => {
 

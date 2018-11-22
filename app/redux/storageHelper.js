@@ -20,15 +20,16 @@ import {
     TIPS_OPTIONS
 } from 'constants/options'
 import {
+    SELECTED_SONG_INDEX,
+    SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
+    IS_CAROUSEL_SHOWN,
+
     SELECTED_AUDIO_OPTION_INDEX,
-    SELECTED_CAROUSEL_NAV_INDEX,
     SELECTED_DOT_KEYS,
     SELECTED_LYRIC_COLUMN_INDEX,
     SELECTED_OVERVIEW_INDEX,
-    SELECTED_SONG_INDEX,
     SELECTED_TIPS_INDEX,
-    SELECTED_VERSE_INDEX,
     SELECTED_WIKI_INDEX,
     WINDOW_STORAGE
 } from 'constants/state'
@@ -116,7 +117,7 @@ const _validateValueForKey = (key) => {
         }
 
         // These must be a simple 0 or 1.
-        case SELECTED_CAROUSEL_NAV_INDEX:
+        case IS_CAROUSEL_SHOWN:
             isValid = isNumber && parsedValue <= 1
             break
 
@@ -174,8 +175,26 @@ const setDotInStorage = (dotKey, isActive) => {
     setInStorage(SELECTED_DOT_KEYS, newBitNumber)
 }
 
+const getBoolFromStorage = (key) => {
+    const storedValue = WINDOW_STORAGE[key]
+    switch (storedValue) {
+        case 'true':
+            return true
+        case 'false':
+            return false
+        default:
+            return undefined
+    }
+}
+
+const setBoolInStorage = (key, value) => {
+    WINDOW_STORAGE[key] = value ? 'true' : 'false'
+}
+
 export {
     getFromStorage,
     setInStorage,
-    setDotInStorage
+    setDotInStorage,
+    getBoolFromStorage,
+    setBoolInStorage
 }

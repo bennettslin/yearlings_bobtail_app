@@ -11,16 +11,16 @@ import { CAROUSEL_NAV_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
     responsiveStore: { isHiddenCarouselNav },
-    selectedCarouselNavIndex
+    toggleStore: { isCarouselShown }
 }) => ({
     isHiddenCarouselNav,
-    selectedCarouselNavIndex
+    isCarouselShown
 })
 
 const carouselTogglePropTypes = {
     // Through Redux.
         isHiddenCarouselNav: PropTypes.bool.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
 
         // From parent.
         handleCarouselNavToggle: PropTypes.func.isRequired
@@ -29,7 +29,7 @@ const carouselTogglePropTypes = {
     CarouselToggle = ({
 
         isHiddenCarouselNav,
-        selectedCarouselNavIndex,
+        isCarouselShown,
         handleCarouselNavToggle
 
     }) => {
@@ -41,7 +41,7 @@ const carouselTogglePropTypes = {
                 <Button
                     isLargeSize
                     buttonName={CAROUSEL_NAV_BUTTON_KEY}
-                    buttonIdentifier={selectedCarouselNavIndex}
+                    buttonIdentifier={isCarouselShown}
                     accessKey={CAROUSEL_TOGGLE_KEY}
                     handleButtonClick={handleCarouselNavToggle}
                 />

@@ -64,7 +64,7 @@ class Root extends Component {
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
@@ -166,7 +166,7 @@ class Root extends Component {
                 isAccessOn,
                 renderedAnnotationIndex,
                 isRenderedLogue,
-                selectedCarouselNavIndex,
+                isCarouselShown,
                 selectedDotKeys,
                 isDotsSlideShown,
                 selectedLyricColumnIndex,
@@ -259,11 +259,11 @@ class Root extends Component {
 
                     renderedAnnotationIndex ?
                         'RM__annotationShown' : 'RM__annotationHidden',
-                    { 'RM__carouselExpanded': selectedCarouselNavIndex },
+                    { 'RM__carouselExpanded': isCarouselShown },
                     isDotsSlideShown ? 'RM__dotsShown' : 'RM__dotsHidden',
                     isLyricExpanded ?
                         'RM__lyricExpanded' : 'RM__lyricCollapsed',
-                    { 'RM__navExpanded': !selectedCarouselNavIndex },
+                    { 'RM__navExpanded': !isCarouselShown },
 
                     overviewShown && 'RM__overviewShown',
                     tipsShown && 'RM__tipsShown',
@@ -378,7 +378,6 @@ class Root extends Component {
 const mapStateToProps = ({
     appMounted,
     interactivatedVerseIndex,
-    selectedCarouselNavIndex,
     selectedDotKeys,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
@@ -388,8 +387,9 @@ const mapStateToProps = ({
         isAccessOn,
         isAdminOn,
         isAutoScroll,
-        isDotsSlideShown,
-        isLyricExpanded
+        isCarouselShown,
+        isLyricExpanded,
+        isDotsSlideShown
     },
     transientStore: {
         isOverlayShown,
@@ -421,12 +421,12 @@ const mapStateToProps = ({
     appMounted,
     isAdminOn,
     isAutoScroll,
+    isCarouselShown,
     isLyricExpanded,
     isOverlayShown,
     isCarouselNavShowable,
     interactivatedVerseIndex,
     isAccessOn,
-    selectedCarouselNavIndex,
     selectedDotKeys,
     isDotsSlideShown,
     selectedLyricColumnIndex,

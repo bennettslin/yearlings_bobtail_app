@@ -15,7 +15,7 @@ class NavManager extends Component {
         // Through Redux.
         showSingleBookColumn: PropTypes.bool.isRequired,
         shownBookColumnIndex: PropTypes.number.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
 
         accessNavSongIndex: PropTypes.func.isRequired,
@@ -53,7 +53,7 @@ class NavManager extends Component {
     selectBookColumn({
         shownBookColumnIndex = (this.props.shownBookColumnIndex + 1) % 2,
         resetToDefault,
-        selectedCarouselNavIndex = this.props.selectedCarouselNavIndex,
+        isCarouselShown = this.props.isCarouselShown,
         selectedSongIndex = this.props.selectedSongIndex
     } = {}) {
         // Either toggle or reset. Book column index is 1-based.
@@ -62,7 +62,7 @@ class NavManager extends Component {
          * We shouldn't be able to select book column if it's not a single
          * column, or if nav is collapsed, unless we are resetting to default.
          */
-        if (!resetToDefault && !(this.props.showSingleBookColumn && !selectedCarouselNavIndex)) {
+        if (!resetToDefault && !(this.props.showSingleBookColumn && !isCarouselShown)) {
             return false
         }
 
@@ -87,12 +87,12 @@ const mapStateToProps = ({
     responsiveStore: { showSingleBookColumn },
     songStore: { selectedSongIndex },
     shownBookColumnIndex,
-    selectedCarouselNavIndex
+    toggleStore: { isCarouselShown }
 }) => ({
     showSingleBookColumn,
     selectedSongIndex,
     shownBookColumnIndex,
-    selectedCarouselNavIndex
+    isCarouselShown
 })
 
 const bindDispatchToProps = (dispatch) => (

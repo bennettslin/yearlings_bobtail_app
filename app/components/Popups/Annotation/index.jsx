@@ -12,6 +12,7 @@ import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
     toggleStore: {
+        isCarouselShown,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
@@ -19,7 +20,6 @@ const mapStateToProps = ({
     renderStore: { canCarouselRender },
     deviceStore: { deviceIndex },
     renderedStore: { renderedAnnotationIndex },
-    selectedCarouselNavIndex,
     selectedWikiIndex
 }) => ({
     isScoreShown,
@@ -27,7 +27,7 @@ const mapStateToProps = ({
     deviceIndex,
     canCarouselRender,
     renderedAnnotationIndex,
-    selectedCarouselNavIndex,
+    isCarouselShown,
     isTitleShown,
     selectedWikiIndex
 })
@@ -40,10 +40,10 @@ class AnnotationPopup extends Component {
         deviceIndex: PropTypes.number.isRequired,
 
         renderedAnnotationIndex: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -61,7 +61,7 @@ class AnnotationPopup extends Component {
     componentDidUpdate(prevProps) {
         const {
             renderedAnnotationIndex,
-            selectedCarouselNavIndex
+            isCarouselShown
         } = this.props
 
         if (
@@ -73,8 +73,8 @@ class AnnotationPopup extends Component {
                 prevProps.renderedAnnotationIndex
             ) || (
                 // ... or toggling from carousel to popup...
-                !selectedCarouselNavIndex &&
-                prevProps.selectedCarouselNavIndex
+                !isCarouselShown &&
+                prevProps.isCarouselShown
             )
         ) {
             // ... then persist the popup annotation index.
@@ -85,8 +85,8 @@ class AnnotationPopup extends Component {
 
         if (
             // If toggling from popup to carousel...
-            selectedCarouselNavIndex &&
-            !prevProps.selectedCarouselNavIndex
+            isCarouselShown &&
+            !prevProps.isCarouselShown
         ) {
             /**
              * ... then still persist the popup annotation index. Originally,
@@ -114,7 +114,7 @@ class AnnotationPopup extends Component {
                 inMain,
 
                 renderedAnnotationIndex,
-                selectedCarouselNavIndex,
+                isCarouselShown,
                 selectedWikiIndex,
 
                 handleAnnotationPrevious,
@@ -147,7 +147,7 @@ class AnnotationPopup extends Component {
                      * it's a phone or lyric is expanded.
                      */
                     (
-                        !selectedCarouselNavIndex ||
+                        !isCarouselShown ||
                         isOverlayingAnnotation
                     ) &&
 
