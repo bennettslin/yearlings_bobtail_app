@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
 import TryAdmin from '../../modules/TryAdmin'
+import TryLyric from '../../modules/TryLyric'
 import TryScore from '../../modules/TryScore'
 import TryTitle from '../../modules/TryTitle'
 
@@ -626,7 +627,7 @@ class KeyHandler extends Component {
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case LYRIC_SECTION_EXPAND_KEY:
-                keyWasRegistered = eventHandlers.handleLyricSectionExpand(e)
+                keyWasRegistered = this.tryToggleLyric()
                 break
             case LYRIC_SCROLL_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleLyricAutoScroll(e)
@@ -699,6 +700,10 @@ class KeyHandler extends Component {
         } else if (props.selectedAnnotationIndex) {
             eventHandlers.handleLyricAnnotationSelect(e)
 
+        // Collapse lyric
+        } else if (props.isLyricExpanded) {
+            this.tryToggleLyric(false)
+
         // Turn access off.
         } else {
             this.props.updateToggleStore({ isAccessOn: false })
@@ -708,6 +713,10 @@ class KeyHandler extends Component {
 
     setTryToggleAdmin = (tryToggleAdmin) => {
         this.tryToggleAdmin = tryToggleAdmin
+    }
+
+    setTryToggleLyric = (tryToggleLyric) => {
+        this.tryToggleLyric = tryToggleLyric
     }
 
     setTryToggleScore = (tryToggleScore) => {
@@ -723,6 +732,9 @@ class KeyHandler extends Component {
             <___>
                 <TryAdmin
                     {...{ getTryToggleAdmin: this.setTryToggleAdmin }}
+                />
+                <TryLyric
+                    {...{ getTryToggleLyric: this.setTryToggleLyric }}
                 />
                 <TryScore
                     {...{ getTryToggleScore: this.setTryToggleScore }}

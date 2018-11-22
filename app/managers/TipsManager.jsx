@@ -31,7 +31,6 @@ class TipsManager extends Component {
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         selectDotsExpand: PropTypes.func.isRequired,
-        selectLyricExpand: PropTypes.func.isRequired,
         selectTipsIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -97,7 +96,6 @@ class TipsManager extends Component {
              */
             if (TIPS_OPTIONS[selectedTipsIndex] !== DISABLED) {
                 this.props.selectDotsExpand(false)
-                this.props.selectLyricExpand(false)
             }
 
         } else {

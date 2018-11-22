@@ -28,7 +28,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleNavSongSelect,
             handleNavBookSelect,
             handleLyricColumnSelect,
-            handleLyricSectionExpand,
             handleLyricAnnotationSelect,
             handleLyricWheel,
             handleLyricAutoScroll,
@@ -71,7 +70,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             setLyricVerseParentRef,
             handleLyricAnnotationSelect,
             handleLyricColumnSelect,
-            handleLyricSectionExpand,
             handleLyricWheel,
             handleLyricAutoScroll,
             handleLyricVerseSelect,
@@ -110,7 +108,6 @@ export const getOrganisedHandlersFromProps = (props) => {
 
         mainColumnHandlers = {
             handleCarouselNavToggle,
-            handleLyricSectionExpand,
 
             annotationPopupHandlers,
             overviewPopupHandlers,

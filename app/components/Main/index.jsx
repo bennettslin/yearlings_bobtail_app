@@ -39,7 +39,6 @@ class Main extends Component {
 
         // From parent.
         handleCarouselNavToggle: PropTypes.func.isRequired,
-        handleLyricSectionExpand: PropTypes.func.isRequired,
 
         annotationPopupHandlers: PropTypes.object.isRequired,
         carouselSectionHandlers: PropTypes.object.isRequired,
@@ -76,7 +75,6 @@ class Main extends Component {
                 deviceIndex,
 
                 handleCarouselNavToggle,
-                handleLyricSectionExpand,
 
                 annotationPopupHandlers,
                 carouselSectionHandlers,
@@ -130,7 +128,6 @@ class Main extends Component {
 
                 <LyricToggleExpand
                     inMain
-                    handleLyricSectionExpand={handleLyricSectionExpand}
                 />
 
                 <DotsSlide {...dotsSectionHandlers} />

@@ -31,7 +31,6 @@ class OverviewManager extends Component {
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         selectDotsExpand: PropTypes.func.isRequired,
-        selectLyricExpand: PropTypes.func.isRequired,
         selectOverviewIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -98,7 +97,6 @@ class OverviewManager extends Component {
              */
             if (OVERVIEW_OPTIONS[selectedOverviewIndex] !== DISABLED) {
                 this.props.selectDotsExpand(false)
-                this.props.selectLyricExpand(false)
             }
 
         } else {

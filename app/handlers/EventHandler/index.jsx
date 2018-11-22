@@ -83,11 +83,27 @@ class EventHandler extends Component {
             this.focusElementForAccess()
         }
 
+        this.handleLyricOnIfNeeded(prevProps)
         this.handleScoreOnIfNeeded(prevProps)
         this.handleTitleOnIfNeeded(prevProps)
     }
 
-    handleScoreOnIfNeeded = (prevProps) => {
+    handleLyricOnIfNeeded(prevProps) {
+        const
+            { isLyricExpanded } = this.props,
+            { isLyricExpanded: wasLyricExpanded } = prevProps
+
+        if (isLyricExpanded && !wasLyricExpanded) {
+            this._closeSections({
+                // Continue to show selected annotation in overlay.
+                exemptAnnotation: true,
+                exemptLyric: true,
+                continuePastClosingPopups: true
+            })
+        }
+    }
+
+    handleScoreOnIfNeeded(prevProps) {
         const
             { isScoreShown } = this.props,
             { isScoreShown: wasScoreShown } = prevProps
@@ -100,7 +116,7 @@ class EventHandler extends Component {
         }
     }
 
-    handleTitleOnIfNeeded = (prevProps) => {
+    handleTitleOnIfNeeded(prevProps) {
         const
             { isTitleShown } = this.props,
             { isTitleShown: wasTitleShown } = prevProps
@@ -389,23 +405,6 @@ class EventHandler extends Component {
             })
         }
         return dotsToggled
-    }
-
-    /*********
-     * LYRIC *
-     *********/
-
-    handleLyricSectionExpand = (e) => {
-        const lyricsToggled = this.props.selectLyricExpand()
-        if (lyricsToggled) {
-            this.stopPropagation(e)
-            this._closeSections({
-                exemptAnnotation: true,
-                exemptLyric: true,
-                continuePastClosingPopups: true
-            })
-        }
-        return lyricsToggled
     }
 
     handleLyricWheel = (
@@ -862,7 +861,7 @@ class EventHandler extends Component {
         }
 
         if (!exemptLyric) {
-            this.props.selectLyricExpand(false)
+            this.props.updateToggleStore({ isLyricExpanded: false })
         }
 
         if (!exemptOverview) {

@@ -278,7 +278,6 @@ Live.propTypes = {
     handleNavSongSelect: PropTypes.func.isRequired,
     handleNavBookSelect: PropTypes.func.isRequired,
     handleLyricColumnSelect: PropTypes.func.isRequired,
-    handleLyricSectionExpand: PropTypes.func.isRequired,
     handleLyricAnnotationSelect: PropTypes.func.isRequired,
     handleLyricWheel: PropTypes.func.isRequired,
     handleLyricAutoScroll: PropTypes.func.isRequired,

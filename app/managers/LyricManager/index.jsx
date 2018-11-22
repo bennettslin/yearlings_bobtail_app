@@ -1,3 +1,5 @@
+// Singleton to watch for non-toggle events that require collapsing lyric.
+
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
@@ -5,8 +7,6 @@ import { connect } from 'react-redux'
 
 import { selectLyricColumnIndex } from 'flux/actions/storage'
 import { updateToggleStore } from 'flux/actions/toggle'
-
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getShowOneOfTwoLyricColumns
@@ -19,7 +19,6 @@ class LyricManager extends Component {
         deviceIndex: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,
-        isHiddenLyric: PropTypes.bool.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -36,58 +35,27 @@ class LyricManager extends Component {
         this.props.setRef(this)
     }
 
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
-    }
-
     componentDidUpdate(prevProps) {
         this.collapseLyricIfNeeded(prevProps)
     }
 
     collapseLyricIfNeeded(prevProps) {
-        const {
+        const
+            {
                 isLyricExpandable,
-                isHiddenLyric
+                isSelectedLogue
             } = this.props,
             {
                 isLyricExpandable: wasLyricExpandable,
-                isHiddenLyric: wasHiddenLyric
+                isSelectedLogue: wasSelectedLogue
             } = prevProps
 
         if (
-            (!isLyricExpandable && wasLyricExpandable) ||
-            (isHiddenLyric && !wasHiddenLyric)
+            (isSelectedLogue && !wasSelectedLogue) ||
+            !isLyricExpandable && wasLyricExpandable
         ) {
-            this.selectLyricExpand(false)
+            this.props.updateToggleStore({ isLyricExpanded: false })
         }
-    }
-
-    selectLyricExpand(isLyricExpanded = !this.props.isLyricExpanded) {
-
-        // We shouldn't be able to expand or collapse lyric while in logue.
-        if (this.props.isSelectedLogue) {
-            return false
-        }
-
-        /**
-         * We shouldn't be able to expand lyric if it's not expandable. So
-         * return false if it's already collapsed, or collapse it if not.
-         */
-        if (!this.props.isLyricExpandable) {
-
-            if (!this.props.isLyricExpanded) {
-                return false
-
-            } else {
-                isLyricExpanded = false
-            }
-        }
-
-        this.props.updateToggleStore({ isLyricExpanded })
-        return true
     }
 
     selectLyricColumn({
@@ -126,10 +94,7 @@ class LyricManager extends Component {
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
-    responsiveStore: {
-        isLyricExpandable,
-        isHiddenLyric
-    },
+    responsiveStore: { isLyricExpandable },
     toggleStore: { isLyricExpanded },
     songStore: {
         selectedSongIndex,
@@ -139,7 +104,6 @@ const mapStateToProps = ({
 }) => ({
     deviceIndex,
     isLyricExpandable,
-    isHiddenLyric,
     isLyricExpanded,
     selectedLyricColumnIndex,
     selectedSongIndex,

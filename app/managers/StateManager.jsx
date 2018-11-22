@@ -113,10 +113,6 @@ class StateManager extends Component {
      * LYRIC *
      *********/
 
-    selectLyricExpand = (payload) => {
-        return this.lyricManager.selectLyricExpand(payload)
-    }
-
     selectLyricColumn = (payload) => {
         return this.lyricManager.selectLyricColumn(payload)
     }
@@ -370,7 +366,6 @@ class StateManager extends Component {
                     toggleDot={this.toggleDot}
                     selectDotsExpand={this.selectDotsExpand}
                     selectLyricColumn={this.selectLyricColumn}
-                    selectLyricExpand={this.selectLyricExpand}
                     determineVerseBars={this.determineVerseBars}
                     resetVerseBars={this.resetVerseBars}
                     selectOverview={this.selectOverview}
@@ -413,7 +408,6 @@ class StateManager extends Component {
                 <OverviewManager
                     setRef={this._setOverviewManagerRef}
                     selectDotsExpand={this.selectDotsExpand}
-                    selectLyricExpand={this.selectLyricExpand}
                 />
                 <PlayerManager
                     setRef={this._setPlayerManagerRef}
@@ -460,7 +454,6 @@ class StateManager extends Component {
                 <TipsManager
                     setRef={this._setTipsManagerRef}
                     selectDotsExpand={this.selectDotsExpand}
-                    selectLyricExpand={this.selectLyricExpand}
                 />
                 <VerseManager
                     setRef={this._setVerseManagerRef}

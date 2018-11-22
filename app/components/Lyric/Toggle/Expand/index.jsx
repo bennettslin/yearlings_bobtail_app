@@ -1,10 +1,11 @@
 // Button to collapse and expand lyric column in mobile widths.
 
-import React from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import TryLyric from '../../../../modules/TryLyric'
 import Button from '../../../Button'
 
 import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
@@ -24,11 +25,9 @@ const mapStateToProps = ({
     isLyricExpanded
 })
 
-const lyricExpandToggleDefaultProps = {
-        inMain: false
-    },
+class LyricToggleExpand extends Component {
 
-    lyricExpandTogglePropTypes = {
+    static propTypes = {
     // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
@@ -36,48 +35,55 @@ const lyricExpandToggleDefaultProps = {
         isLyricExpandable: PropTypes.bool.isRequired,
 
         // From parent.
-        inMain: PropTypes.bool.isRequired,
-        handleLyricSectionExpand: PropTypes.func.isRequired
-    },
+        inMain: PropTypes.bool
+    }
 
-    LyricToggleExpand = ({
-        isHiddenLyric,
-        isLyricExpanded,
-        isLyricExpandable,
-        inMain,
-        handleLyricSectionExpand
+    handleLyricClick = () => {
+        this.tryToggleLyric()
+    }
 
-    }) => {
+    setTryToggleLyric = (tryToggleLyric) => {
+        this.tryToggleLyric = tryToggleLyric
+    }
 
-        const
+    render() {
+        const {
+                isHiddenLyric,
+                isLyricExpanded,
+                isLyricExpandable,
+                inMain
+            } = this.props,
 
             // Render button in main if lyric column is heightless.
             shouldRender = inMain ? isHiddenLyric : true
 
         return isLyricExpandable && shouldRender && (
-            <div className={cx(
-                'LyricToggleExpand',
-                'LyricToggle',
-                inMain ?
-                    'LyricToggle__inMain' :
-                    'LyricToggle__inLyric',
-                { 'LyricToggleExpand__inLyric': !inMain },
-                'length__buttonLarge'
-            )}>
-                <Button
-                    isLargeSize
-                    {...{
-                        buttonName: LYRIC_EXPAND_BUTTON_KEY,
-                        buttonIdentifier: isLyricExpanded,
-                        accessKey: LYRIC_SECTION_EXPAND_KEY,
-                        handleButtonClick: handleLyricSectionExpand
-                    }}
+            <___>
+                <div className={cx(
+                    'LyricToggleExpand',
+                    'LyricToggle',
+                    inMain ?
+                        'LyricToggle__inMain' :
+                        'LyricToggle__inLyric',
+                    { 'LyricToggleExpand__inLyric': !inMain },
+                    'length__buttonLarge'
+                )}>
+                    <Button
+                        isLargeSize
+                        {...{
+                            buttonName: LYRIC_EXPAND_BUTTON_KEY,
+                            buttonIdentifier: isLyricExpanded,
+                            accessKey: LYRIC_SECTION_EXPAND_KEY,
+                            handleButtonClick: this.handleLyricClick
+                        }}
+                    />
+                </div>
+                <TryLyric
+                    {...{ getTryToggleLyric: this.setTryToggleLyric }}
                 />
-            </div>
+            </___>
         )
     }
-
-LyricToggleExpand.defaultProps = lyricExpandToggleDefaultProps
-LyricToggleExpand.propTypes = lyricExpandTogglePropTypes
+}
 
 export default connect(mapStateToProps)(LyricToggleExpand)
