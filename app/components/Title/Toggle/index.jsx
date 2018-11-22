@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TryTitle from '../../../modules/TryTitle'
+import DispatchTitle from '../../../dispatchers/DispatchTitle'
 import AudioTimer from '../../Audio/Timer'
 import Button from '../../Button'
 
@@ -84,7 +84,7 @@ class TitleToggle extends Component {
                         titleButtonChild
                     )}
                 </div>
-                <TryTitle
+                <DispatchTitle
                     {...{ getTryToggleTitle: this.setTryToggleTitle }}
                 />
             </___>

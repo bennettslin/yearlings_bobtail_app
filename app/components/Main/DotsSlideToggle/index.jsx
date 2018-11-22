@@ -4,7 +4,7 @@ import React, { Component, Fragment as ___ } from 'react'
 // import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import TryDotsSlide from '../../../modules/TryDotsSlide'
+import DispatchDotsSlide from '../../../dispatchers/DispatchDotsSlide'
 import Button from '../../Button'
 
 import { DOTS_SLIDE_TOGGLE_KEY } from 'constants/access'
@@ -36,7 +36,7 @@ class DotsSlideToggle extends Component {
                         }}
                     />
                 </div>
-                <TryDotsSlide
+                <DispatchDotsSlide
                     {...{ getTryToggleDotsSlide: this.setTryToggleDotsSlide }}
                 />
             </___>

@@ -1,4 +1,4 @@
-// Child that knows rules to toggle score. Not needed if just turning off.
+// Child that knows rules to toggle lyric. Not needed if just collapsing.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -6,41 +6,41 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-class TryScore extends Component {
+class DispatchLyric extends Component {
 
     static propTypes = {
         // Through Redux.
-        isScoreShown: PropTypes.bool.isRequired,
-        isScoreShowable: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
+        isLyricExpandable: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryToggleScore: PropTypes.func.isRequired
+        getTryToggleLyric: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryToggleScore(this.tryToggleScore)
+        this.props.getTryToggleLyric(this.tryToggleLyric)
     }
 
-    tryToggleScore = (
+    tryToggleLyric = (
         // Just toggle unless parent specifies value.
-        triedIsScoreShown = !this.props.isScoreShown
+        triedIsLyricExpanded = !this.props.isLyricExpanded
     ) => {
         // Turning off is always successful.
-        const isScoreShown = triedIsScoreShown &&
+        const isLyricExpanded = triedIsLyricExpanded &&
 
-            // If trying to turn on, score must be showable, and...
-            this.props.isScoreShowable &&
+            // If trying to turn on, lyric must be expandable, and...
+            this.props.isLyricExpandable &&
 
             // ... also must not be in logue.
             !this.props.isSelectedLogue
 
-        this.props.updateToggleStore({ isScoreShown })
+        this.props.updateToggleStore({ isLyricExpanded })
 
         // Try was successful.
-        return isScoreShown === triedIsScoreShown
+        return isLyricExpanded === triedIsLyricExpanded
     }
 
     render() {
@@ -49,12 +49,12 @@ class TryScore extends Component {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isScoreShown },
-    responsiveStore: { isScoreShowable },
+    toggleStore: { isLyricExpanded },
+    responsiveStore: { isLyricExpandable },
     songStore: { isSelectedLogue }
 }) => ({
-    isScoreShown,
-    isScoreShowable,
+    isLyricExpanded,
+    isLyricExpandable,
     isSelectedLogue
 })
 
@@ -64,4 +64,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(TryScore)
+export default connect(mapStateToProps, bindDispatchToProps)(DispatchLyric)

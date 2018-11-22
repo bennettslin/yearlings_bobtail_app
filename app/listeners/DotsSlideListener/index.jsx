@@ -1,4 +1,4 @@
-// Singleton to watch for non-toggle events that require turning off dots.
+// Singleton to listen for non-toggle events that require turning off dots.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-class DotsSlideManager extends Component {
+class DotsSlideListener extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -49,4 +49,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DotsSlideManager)
+export default connect(mapStateToProps, bindDispatchToProps)(DotsSlideListener)

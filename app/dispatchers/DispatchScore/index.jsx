@@ -1,4 +1,4 @@
-// Child that knows rules to toggle dots slide. Not needed if just turning off.
+// Child that knows rules to toggle score. Not needed if just turning off.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -6,36 +6,41 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-class TryDotsSlide extends Component {
+class DispatchScore extends Component {
 
     static propTypes = {
         // Through Redux.
-        isDotsSlideShown: PropTypes.bool.isRequired,
+        isScoreShown: PropTypes.bool.isRequired,
+        isScoreShowable: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
+
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryToggleDotsSlide: PropTypes.func.isRequired
+        getTryToggleScore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryToggleDotsSlide(this.tryToggleDotsSlide)
+        this.props.getTryToggleScore(this.tryToggleScore)
     }
 
-    tryToggleDotsSlide = (
+    tryToggleScore = (
         // Just toggle unless parent specifies value.
-        triedIsDotsSlideShown = !this.props.isDotsSlideShown
+        triedIsScoreShown = !this.props.isScoreShown
     ) => {
         // Turning off is always successful.
-        const isDotsSlideShown = triedIsDotsSlideShown &&
+        const isScoreShown = triedIsScoreShown &&
+
+            // If trying to turn on, score must be showable, and...
+            this.props.isScoreShowable &&
 
             // ... also must not be in logue.
             !this.props.isSelectedLogue
 
-        this.props.updateToggleStore({ isDotsSlideShown })
+        this.props.updateToggleStore({ isScoreShown })
 
         // Try was successful.
-        return isDotsSlideShown === triedIsDotsSlideShown
+        return isScoreShown === triedIsScoreShown
     }
 
     render() {
@@ -44,10 +49,12 @@ class TryDotsSlide extends Component {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isDotsSlideShown },
+    toggleStore: { isScoreShown },
+    responsiveStore: { isScoreShowable },
     songStore: { isSelectedLogue }
 }) => ({
-    isDotsSlideShown,
+    isScoreShown,
+    isScoreShowable,
     isSelectedLogue
 })
 
@@ -57,4 +64,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(TryDotsSlide)
+export default connect(mapStateToProps, bindDispatchToProps)(DispatchScore)

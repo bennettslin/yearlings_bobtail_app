@@ -7,11 +7,11 @@ import { connect } from 'react-redux'
 
 import { updateToggleStore } from 'flux/actions/toggle'
 
-import TryAdmin from '../../modules/TryAdmin'
-import TryDotsSlide from '../../modules/TryDotsSlide'
-import TryLyric from '../../modules/TryLyric'
-import TryScore from '../../modules/TryScore'
-import TryTitle from '../../modules/TryTitle'
+import DispatchAdmin from '../../dispatchers/DispatchAdmin'
+import DispatchDotsSlide from '../../dispatchers/DispatchDotsSlide'
+import DispatchLyric from '../../dispatchers/DispatchLyric'
+import DispatchScore from '../../dispatchers/DispatchScore'
+import DispatchTitle from '../../dispatchers/DispatchTitle'
 
 import {
     getSongsAndLoguesCount,
@@ -735,19 +735,19 @@ class KeyHandler extends Component {
     render() {
         return (
             <___>
-                <TryAdmin
+                <DispatchAdmin
                     {...{ getTryToggleAdmin: this.setTryToggleAdmin }}
                 />
-                <TryDotsSlide
+                <DispatchDotsSlide
                     {...{ getTryToggleDotsSlide: this.setTryToggleDotsSlide }}
                 />
-                <TryLyric
+                <DispatchLyric
                     {...{ getTryToggleLyric: this.setTryToggleLyric }}
                 />
-                <TryScore
+                <DispatchScore
                     {...{ getTryToggleScore: this.setTryToggleScore }}
                 />
-                <TryTitle
+                <DispatchTitle
                     {...{ getTryToggleTitle: this.setTryToggleTitle }}
                 />
             </___>

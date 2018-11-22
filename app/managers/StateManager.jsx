@@ -14,7 +14,7 @@ import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
 import DotsManager from './DotsManager'
-import DotsSlideManager from './DotsSlideManager'
+import DotsSlideListener from '../listeners/DotsSlideListener'
 import LogManager from './LogManager'
 import LyricManager from './LyricManager'
 import NavManager from './NavManager'
@@ -22,7 +22,7 @@ import OverviewManager from './OverviewManager'
 import PlayerManager from './PlayerManager'
 import RenderManager from './RenderManager'
 import RoutingManager from './RoutingManager'
-import ScoreManager from './ScoreManager'
+import ScoreListener from '../listeners/ScoreListener'
 import SceneManager from './SceneManager'
 import ScrollManager from './ScrollManager'
 import SliderVerseManager from './SliderVerseManager'
@@ -31,7 +31,7 @@ import TimeVerseManager from './TimeVerseManager'
 import TipsManager from './TipsManager'
 import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
-import WindowManager from './WindowManager'
+import WindowListener from '../listeners/WindowListener'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -392,7 +392,7 @@ class StateManager extends Component {
                 <DotsManager
                     setRef={this._setDotsManagerRef}
                 />
-                <DotsSlideManager />
+                <DotsSlideListener />
                 <LogManager />
                 <LyricManager
                     setRef={this._setLyricManagerRef}
@@ -423,7 +423,7 @@ class StateManager extends Component {
                     selectVerse={this.selectVerse}
                     resetVerseBars={this.resetVerseBars}
                 />
-                <ScoreManager />
+                <ScoreListener />
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
                 />
@@ -456,7 +456,7 @@ class StateManager extends Component {
                 <WikiManager
                     setRef={this._setWikiManagerRef}
                 />
-                <WindowManager />
+                <WindowListener />
             </Fragment>
         )
     }

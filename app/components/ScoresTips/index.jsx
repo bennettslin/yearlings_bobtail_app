@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import TryScore from '../../modules/TryScore'
+import DispatchScore from '../../dispatchers/DispatchScore'
 import Button from '../Button'
 
 import {
@@ -130,7 +130,7 @@ class ScoresTips extends Component {
                         handleButtonClick={handleTipsToggle}
                     />
                 </div>
-                <TryScore
+                <DispatchScore
                     {...{ getTryToggleScore: this.setTryToggleScore }}
                 />
             </___>

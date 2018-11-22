@@ -1,4 +1,4 @@
-// Child that knows rules to toggle lyric. Not needed if just collapsing.
+// Child that knows rules to toggle dots slide. Not needed if just turning off.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -6,41 +6,36 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-class TryLyric extends Component {
+class DispatchDotsSlide extends Component {
 
     static propTypes = {
         // Through Redux.
-        isLyricExpanded: PropTypes.bool.isRequired,
-        isLyricExpandable: PropTypes.bool.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryToggleLyric: PropTypes.func.isRequired
+        getTryToggleDotsSlide: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryToggleLyric(this.tryToggleLyric)
+        this.props.getTryToggleDotsSlide(this.tryToggleDotsSlide)
     }
 
-    tryToggleLyric = (
+    tryToggleDotsSlide = (
         // Just toggle unless parent specifies value.
-        triedIsLyricExpanded = !this.props.isLyricExpanded
+        triedIsDotsSlideShown = !this.props.isDotsSlideShown
     ) => {
         // Turning off is always successful.
-        const isLyricExpanded = triedIsLyricExpanded &&
-
-            // If trying to turn on, lyric must be expandable, and...
-            this.props.isLyricExpandable &&
+        const isDotsSlideShown = triedIsDotsSlideShown &&
 
             // ... also must not be in logue.
             !this.props.isSelectedLogue
 
-        this.props.updateToggleStore({ isLyricExpanded })
+        this.props.updateToggleStore({ isDotsSlideShown })
 
         // Try was successful.
-        return isLyricExpanded === triedIsLyricExpanded
+        return isDotsSlideShown === triedIsDotsSlideShown
     }
 
     render() {
@@ -49,12 +44,10 @@ class TryLyric extends Component {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isLyricExpanded },
-    responsiveStore: { isLyricExpandable },
+    toggleStore: { isDotsSlideShown },
     songStore: { isSelectedLogue }
 }) => ({
-    isLyricExpanded,
-    isLyricExpandable,
+    isDotsSlideShown,
     isSelectedLogue
 })
 
@@ -64,4 +57,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(TryLyric)
+export default connect(mapStateToProps, bindDispatchToProps)(DispatchDotsSlide)

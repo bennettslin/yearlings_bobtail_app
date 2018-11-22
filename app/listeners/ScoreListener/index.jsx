@@ -1,4 +1,4 @@
-// Singleton to watch for non-toggle events that require turning off score.
+// Singleton to listen for non-toggle events that require turning off score.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux'
 import { setIsScoreLoaded } from 'flux/actions/load'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-class ScoreManager extends Component {
+class ScoreListener extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -80,4 +80,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(ScoreManager)
+export default connect(mapStateToProps, bindDispatchToProps)(ScoreListener)

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TryLyric from '../../../../modules/TryLyric'
+import DispatchLyric from '../../../../dispatchers/DispatchLyric'
 import Button from '../../../Button'
 
 import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
@@ -78,7 +78,7 @@ class LyricToggleExpand extends Component {
                         }}
                     />
                 </div>
-                <TryLyric
+                <DispatchLyric
                     {...{ getTryToggleLyric: this.setTryToggleLyric }}
                 />
             </___>

@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-class TryAdmin extends Component {
+class DispatchAdmin extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -47,4 +47,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(TryAdmin)
+export default connect(mapStateToProps, bindDispatchToProps)(DispatchAdmin)
