@@ -7,11 +7,12 @@ import {
 } from './helper'
 
 import {
-    SONG_STORE,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX
 } from 'constants/state'
+
+import { SONG_STORE } from '../storeKeys'
 
 import { SONG_DEFAULTS } from '../defaultStates'
 

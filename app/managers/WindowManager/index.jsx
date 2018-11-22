@@ -8,8 +8,7 @@ import { updateRenderableStore } from 'flux/actions/renderable'
 import { updateResponsiveStore } from 'flux/actions/responsive'
 
 import {
-    getShowOneOfTwoLyricColumns,
-    getIsTwoRowMenu
+    getShowOneOfTwoLyricColumns
 } from 'helpers/responsiveHelper'
 import {
     getIsHiddenLyric,
@@ -24,7 +23,10 @@ import {
     getIsScoreShowable
 } from './helpers/responsive'
 import { getIsScoresTipsInMain } from './helpers/scoresTips'
-import { getCeilingFloorHeight } from './helpers/theatre'
+import {
+    getIsTwoRowMenu,
+    getCeilingFloorHeight
+} from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
 import { getStageCoordinates } from './helpers/stage'

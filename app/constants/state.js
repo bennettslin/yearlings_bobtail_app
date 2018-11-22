@@ -14,26 +14,9 @@ module.exports = {
     // Audio.
     IS_PLAYING: 'isPlaying',
 
-    TOGGLE_STORE: 'toggleStore',
-
-    // Device.
-    DEVICE_STORE: 'deviceStore',
-
     // Player.
     CAN_PLAY_THROUGHS: 'canPlayThroughs',
     IS_SCORE_LOADED: 'scoreLoaded',
-
-    // Renderable.
-    RENDERABLE_STORE: 'renderableStore',
-
-    // Render.
-    RENDER_STORE: 'renderStore',
-
-    // Rendered.
-    RENDERED_STORE: 'renderedStore',
-
-    // Responsive.
-    RESPONSIVE_STORE: 'responsiveStore',
 
     // Session.
     APP_MOUNTED: 'appMounted',
@@ -45,11 +28,6 @@ module.exports = {
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 
-    // Slider.
-    SLIDER_STORE: 'sliderStore',
-
-    // Storage.
-    SONG_STORE: 'songStore',
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',

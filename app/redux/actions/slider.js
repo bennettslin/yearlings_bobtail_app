@@ -1,7 +1,7 @@
 // Actions for slider state.
 import { getDefinedOnlyPayload } from './helper'
 
-import { SLIDER_STORE } from 'constants/state'
+import { SLIDER_STORE } from '../storeKeys'
 import { SLIDER_DEFAULTS } from '../defaultStates'
 
 export const updateSliderStore = (payload = SLIDER_DEFAULTS) => ({

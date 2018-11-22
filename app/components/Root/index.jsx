@@ -355,25 +355,29 @@ class Root extends Component {
                         // "Root cursored lyric verse."
                         `RlV${cursorVerseIndex}`
                 )}
-                onClick={this._handleClick}
-                onTouchStart={this._handleClick}
-                onMouseMove={handleBodyTouchMove}
-                onTouchMove={handleBodyTouchMove}
-                onMouseUp={this._handleMouseUp}
-                onMouseLeave={this._handleMouseUp}
-                onTouchEnd={this._handleMouseUp}
-                onTouchCancel={this._handleMouseUp}
-                onKeyDown={this.handleKeyDownPress}
-                onKeyUp={this.handleKeyUpPress}
-                tabIndex="-1"
+                {...{
+                    onClick: this._handleClick,
+                    onTouchStart: this._handleClick,
+                    onMouseMove: handleBodyTouchMove,
+                    onTouchMove: handleBodyTouchMove,
+                    onMouseUp: this._handleMouseUp,
+                    onMouseLeave: this._handleMouseUp,
+                    onTouchEnd: this._handleMouseUp,
+                    onTouchCancel: this._handleMouseUp,
+                    onKeyDown: this.handleKeyDownPress,
+                    onKeyUp: this.handleKeyUpPress,
+                    tabIndex: -1
+                }}
             >
                 <AccessStylesheet />
 
                 {/* TODO: Only pass the events used by KeyHandler. */}
                 <KeyHandler
-                    eventHandlers={this.props.eventHandlers}
-                    setRef={this._setKeyHandlerRef}
-                    displayKeyLetter={this.displayKeyLetter}
+                    {...{
+                        eventHandlers: this.props.eventHandlers,
+                        setRef: this._setKeyHandlerRef,
+                        displayKeyLetter: this.displayKeyLetter
+                    }}
                 />
 
                 <Live {...other} />

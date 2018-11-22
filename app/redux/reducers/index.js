@@ -3,6 +3,7 @@ import {
     AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer
 } from './access'
 import ToggleReducer from './toggle'
+import TransientReducer from './transient'
 import { IsPlayingReducer } from './audio'
 import DeviceReducer from './device'
 import {
@@ -23,6 +24,7 @@ import {
 
 import {
     TOGGLE_STORE,
+    TRANSIENT_STORE,
     DEVICE_STORE,
     RENDERABLE_STORE,
     RENDER_STORE,
@@ -30,7 +32,7 @@ import {
     RESPONSIVE_STORE,
     SONG_STORE,
     SLIDER_STORE
-} from 'constants/state'
+} from '../storeKeys'
 
 const rootReducer = combineReducers({
 
@@ -43,6 +45,7 @@ const rootReducer = combineReducers({
     isPlaying: IsPlayingReducer,
 
     [TOGGLE_STORE]: ToggleReducer,
+    [TRANSIENT_STORE]: TransientReducer,
     [DEVICE_STORE]: DeviceReducer,
 
     appMounted: AppMountedReducer,

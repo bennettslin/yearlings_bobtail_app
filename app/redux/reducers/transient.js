@@ -1,13 +1,13 @@
-// Reducers for song and player state.
-import { SONG_STORE } from '../storeKeys'
-import { SONG_DEFAULTS } from '../defaultStates'
+// Reducers for window size.
+import { TRANSIENT_STORE } from '../storeKeys'
+import { TRANSIENT_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = SONG_DEFAULTS,
+    state = TRANSIENT_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case SONG_STORE:
+        case TRANSIENT_STORE:
             return {
                 ...state,
                 ...action.payload

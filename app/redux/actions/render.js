@@ -1,7 +1,7 @@
 // Actions for can render state.
 import { getDefinedOnlyPayload } from './helper'
 
-import { RENDER_STORE } from 'constants/state'
+import { RENDER_STORE } from '../storeKeys'
 import { RENDER_DEFAULTS } from '../defaultStates'
 
 export const updateRenderStore = (payload = RENDER_DEFAULTS) => ({

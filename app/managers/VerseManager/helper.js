@@ -1,7 +1,6 @@
 import {
     getIsMini,
-    getIsDesktop,
-    getIsTwoRowMenu
+    getIsDesktop
 } from '../../helpers/responsiveHelper'
 
 import {
@@ -15,9 +14,9 @@ import {
 const _getLyricSectionRect = ({
 
     deviceIndex,
-    windowWidth,
     windowHeight,
-    isLyricExpanded
+    isLyricExpanded,
+    isTwoRowMenu
 
 }) => {
     const bottom = windowHeight
@@ -37,9 +36,7 @@ const _getLyricSectionRect = ({
          */
         top = windowHeight * (1 - LS_HEIGHT_LYRIC_COLLAPSED)
 
-    } else if (getIsTwoRowMenu({
-        deviceIndex, windowWidth
-    })) {
+    } else if (isTwoRowMenu) {
 
         if (getIsMini(deviceIndex)) {
             top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
@@ -61,10 +58,10 @@ const _getLyricSectionRect = ({
 
 export const getVerseBarStatus = ({
     deviceIndex,
-    windowWidth,
     windowHeight,
     isLyricExpanded,
     isHiddenLyric,
+    isTwoRowMenu,
     verseElement
 }) => {
 
@@ -82,9 +79,9 @@ export const getVerseBarStatus = ({
 
     const lyricSectionRect = _getLyricSectionRect({
             deviceIndex,
-            windowWidth,
             windowHeight,
-            isLyricExpanded
+            isLyricExpanded,
+            isTwoRowMenu
         }),
 
         selectedVerseRect = verseElement.getBoundingClientRect(),

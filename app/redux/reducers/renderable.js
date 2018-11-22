@@ -1,5 +1,5 @@
 // Reducers for renderable state.
-import { RENDERABLE_STORE } from 'constants/state'
+import { RENDERABLE_STORE } from '../storeKeys'
 import { RENDERABLE_DEFAULTS } from '../defaultStates'
 
 export default (

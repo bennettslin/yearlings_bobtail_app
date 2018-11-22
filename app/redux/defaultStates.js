@@ -23,6 +23,10 @@ const
         isLyricExpanded: false
     },
 
+    TRANSIENT_DEFAULTS = {
+        doShowOverlay: false
+    },
+
     DEVICE_DEFAULTS = {
         deviceIndex: 0,
         windowHeight: 0,
@@ -101,6 +105,7 @@ const
 
 export {
     TOGGLE_DEFAULTS,
+    TRANSIENT_DEFAULTS,
     DEVICE_DEFAULTS,
     RESPONSIVE_DEFAULTS,
     RENDERABLE_DEFAULTS,

@@ -1,7 +1,7 @@
 // Actions for state based on window size.
 import { getDefinedOnlyPayload } from './helper'
 
-import { RESPONSIVE_STORE } from 'constants/state'
+import { RESPONSIVE_STORE } from '../storeKeys'
 import { RESPONSIVE_DEFAULTS } from '../defaultStates'
 
 export const updateResponsiveStore = (payload = RESPONSIVE_DEFAULTS) => ({

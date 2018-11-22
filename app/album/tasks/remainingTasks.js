@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Carousel nav toggling.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Have dots store that has both bit number and keys.`,
         workedHours: 0,
         neededHours: 3

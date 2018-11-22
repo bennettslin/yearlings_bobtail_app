@@ -6,7 +6,7 @@ import {
     getDefinedOnlyPayload
 } from './helper'
 
-import { RENDERED_STORE } from 'constants/state'
+import { RENDERED_STORE } from '../storeKeys'
 import { RENDERED_DEFAULTS } from '../defaultStates'
 
 export const updateRenderedStore = (payload = RENDERED_DEFAULTS) => {

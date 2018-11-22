@@ -2,13 +2,15 @@ import {
     LS_HEIGHT_MENU,
     LS_TOP_OFFSET_TWO_ROW_MENU,
     LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
-    LS_HEIGHT_LYRIC_COLLAPSED
+    LS_HEIGHT_LYRIC_COLLAPSED,
+
+    TWO_ROW_MENU_BREAKPOINT_LAPTOP,
+    TWO_ROW_MENU_BREAKPOINT_MINI
 } from 'constants/responsive'
 
 import {
     getIsPhone,
-    getIsDesktop,
-    getIsTwoRowMenu
+    getIsDesktop
 } from 'helpers/responsiveHelper'
 
 /*********
@@ -25,6 +27,16 @@ const _getLyricColumnHeight = (
     ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
+const getIsTwoRowMenu = ({
+    deviceIndex, windowWidth
+}) => {
+
+    const isDesktop = getIsDesktop(deviceIndex),
+        twoRowMenuBreakpoint = isDesktop ?
+            TWO_ROW_MENU_BREAKPOINT_LAPTOP : TWO_ROW_MENU_BREAKPOINT_MINI
+
+    return windowWidth < twoRowMenuBreakpoint
+}
 
 const getCentreFieldHeight = ({
     deviceIndex,
@@ -92,6 +104,7 @@ const getCeilingFloorHeight = ({
 }
 
 export {
+    getIsTwoRowMenu,
     getCentreFieldHeight,
     getCeilingFloorHeight
 }

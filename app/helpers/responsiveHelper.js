@@ -8,11 +8,7 @@ import {
     TABLET_CLASS,
     LS_LAPTOP_CLASS,
     MONITOR_CLASS,
-
-    DEVICE_OBJECTS,
-
-    TWO_ROW_MENU_BREAKPOINT_LAPTOP,
-    TWO_ROW_MENU_BREAKPOINT_MINI
+    DEVICE_OBJECTS
 } from 'constants/responsive'
 
 import { getSongObject } from './dataHelper'
@@ -41,10 +37,6 @@ export const getIsMonitor = (deviceIndex) => {
 
 export const getIsTabletOrMini = (deviceIndex) => {
     return getIsTablet(deviceIndex) || getIsMini(deviceIndex)
-}
-
-export const getIsToggleInOverview = (deviceIndex) => {
-    return getIsPhone(deviceIndex)
 }
 
 export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
@@ -83,15 +75,4 @@ export const getIsOverlayingAnnotation = ({
         // Or if we are in phone.
         getIsPhone(deviceIndex)
     )
-}
-
-export const getIsTwoRowMenu = ({
-    deviceIndex, windowWidth
-}) => {
-
-    const isDesktop = getIsDesktop(deviceIndex),
-        twoRowMenuBreakpoint = isDesktop ?
-            TWO_ROW_MENU_BREAKPOINT_LAPTOP : TWO_ROW_MENU_BREAKPOINT_MINI
-
-    return windowWidth < twoRowMenuBreakpoint
 }

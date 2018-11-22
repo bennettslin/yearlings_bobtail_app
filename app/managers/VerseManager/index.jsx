@@ -18,10 +18,10 @@ class VerseManager extends Component {
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
+        isTwoRowMenu: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -156,11 +156,10 @@ class VerseManager extends Component {
 
             const verseBarStatusObject = getVerseBarStatus({
                     deviceIndex: this.props.deviceIndex,
-                    windowWidth: this.props.windowWidth,
                     windowHeight: this.props.windowHeight,
                     isLyricExpanded: this.props.isLyricExpanded,
-                    isHiddenLyric:
-                        this.props.isHiddenLyric,
+                    isHiddenLyric: this.props.isHiddenLyric,
+                    isTwoRowMenu: this.props.isTwoRowMenu,
                     verseElement
                 }),
                 {
@@ -186,12 +185,14 @@ class VerseManager extends Component {
 const mapStateToProps = ({
     deviceStore: {
         deviceIndex,
-        windowWidth,
         windowHeight
+    },
+    responsiveStore: {
+        isHiddenLyric,
+        isTwoRowMenu
     },
     toggleStore: { isLyricExpanded },
     interactivatedVerseIndex,
-    responsiveStore: { isHiddenLyric },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
@@ -199,11 +200,11 @@ const mapStateToProps = ({
     sliderStore: { sliderVerseIndex }
 }) => ({
     deviceIndex,
-    windowWidth,
     windowHeight,
     isLyricExpanded,
     interactivatedVerseIndex,
     isHiddenLyric,
+    isTwoRowMenu,
     selectedSongIndex,
     selectedVerseIndex,
     sliderVerseIndex
