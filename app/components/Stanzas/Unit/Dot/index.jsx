@@ -14,16 +14,18 @@ import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
     accessedAnnotationIndex,
-    selectedAccessIndex,
     renderStore: { canLyricRender },
     renderedStore: { renderedAnnotationIndex },
-    toggleStore: { isLyricExpanded },
+    toggleStore: {
+        isAccessOn,
+        isLyricExpanded
+    },
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex
 }) => ({
     accessedAnnotationIndex,
-    selectedAccessIndex,
+    isAccessOn,
     canLyricRender,
     isLyricExpanded,
     renderedAnnotationIndex,
@@ -43,7 +45,7 @@ class UnitDot extends Component {
         canLyricRender: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
-        selectedAccessIndex: PropTypes.number.isRequired,
+        isAccessOn: PropTypes.bool.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
@@ -91,7 +93,7 @@ class UnitDot extends Component {
                 dotStanzaObject,
                 renderedAnnotationIndex,
                 accessedAnnotationIndex,
-                selectedAccessIndex,
+                isAccessOn,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 interactivatedVerseIndex,
@@ -104,7 +106,7 @@ class UnitDot extends Component {
             } = dotStanzaObject,
 
             isAccessed =
-                Boolean(selectedAccessIndex) &&
+                isAccessOn &&
 
                 /**
                  * TODO: This conditional is repeated in Carousel,

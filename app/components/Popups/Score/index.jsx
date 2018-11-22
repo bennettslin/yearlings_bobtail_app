@@ -36,9 +36,7 @@ class ScorePopup extends Component {
     }
 
     closeScore = () => {
-        this.props.updateToggleStore({
-            isScoreShown: false
-        })
+        this.props.updateToggleStore({ isScoreShown: false })
     }
 
     render() {

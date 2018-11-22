@@ -18,9 +18,11 @@ const mapStateToProps = ({
         renderedAnnotationIndex
     },
     responsiveStore: { isHiddenCarouselNav },
-    toggleStore: { isLyricExpanded },
+    toggleStore: {
+        isAccessOn,
+        isLyricExpanded
+    },
     accessedAnnotationIndex,
-    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex
@@ -29,9 +31,9 @@ const mapStateToProps = ({
     renderedSongIndex,
     renderedAnnotationIndex,
     isHiddenCarouselNav,
+    isAccessOn,
     isLyricExpanded,
     accessedAnnotationIndex,
-    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex
@@ -46,10 +48,10 @@ class Carousel extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        isAccessOn: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
 
         // From parent.
@@ -130,7 +132,7 @@ class Carousel extends Component {
                 renderedSongIndex,
                 renderedAnnotationIndex,
                 accessedAnnotationIndex,
-                selectedAccessIndex,
+                isAccessOn,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 interactivatedVerseIndex,
@@ -179,7 +181,7 @@ class Carousel extends Component {
                         const annotationIndex = index + 1,
 
                             isAccessed =
-                                Boolean(selectedAccessIndex) &&
+                                isAccessOn &&
 
                                 /**
                                  * TODO: This conditional is repeated in

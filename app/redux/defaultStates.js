@@ -14,6 +14,7 @@ import {
 
 const
     TOGGLE_DEFAULTS = {
+        isAccessOn: false,
         isAdminOn: false,
         isAutoScroll: true,
         isScoreShown: false,

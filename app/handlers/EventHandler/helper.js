@@ -18,7 +18,6 @@ export const getHandlers = (me) => {
         handleBodyTouchMove: me.handleBodyTouchMove,
         handleBodyTouchEnd: me.handleBodyTouchEnd,
         handlePopupContainerClick: me.handlePopupContainerClick,
-        handleAccessToggle: me.handleAccessToggle,
         handleAnnotationWikiSelect: me.handleAnnotationWikiSelect,
         handleAnnotationWormholeSelect: me.handleAnnotationWormholeSelect,
         handleAnnotationPrevious: me.handleAnnotationPrevious,

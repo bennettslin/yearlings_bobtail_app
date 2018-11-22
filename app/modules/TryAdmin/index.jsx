@@ -1,4 +1,4 @@
-// Child that knows rules to turn on admin.
+// Child that knows rules to toggle admin.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -26,9 +26,7 @@ class TryAdmin extends Component {
         isAdminOn = !this.props.isAdminOn
     ) => {
         // Turning on or off is always successful.
-        this.props.updateToggleStore({
-            isAdminOn
-        })
+        this.props.updateToggleStore({ isAdminOn })
         return true
     }
 

@@ -11,12 +11,12 @@ import { getAnnotationCardWormholeLinksArray } from './helper'
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
-    selectedAccessIndex,
+    toggleStore: { isAccessOn },
     accessedAnnotationAnchorIndex
 }) => ({
     canCarouselRender,
     renderedSongIndex,
-    selectedAccessIndex,
+    isAccessOn,
     accessedAnnotationAnchorIndex
 })
 
@@ -25,7 +25,7 @@ class AnnotationWormholes extends Component {
     static propTypes = {
         // Through Redux.
         renderedSongIndex: PropTypes.number.isRequired,
-        selectedAccessIndex: PropTypes.number.isRequired,
+        isAccessOn: PropTypes.bool.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -52,7 +52,7 @@ class AnnotationWormholes extends Component {
 
                 renderedSongIndex,
                 accessedAnnotationAnchorIndex,
-                selectedAccessIndex,
+                isAccessOn,
                 ...other
             } = this.props,
 
@@ -79,7 +79,7 @@ class AnnotationWormholes extends Component {
                         [SOURCE_WORMHOLE_INDEX]: sourceWormholeIndex
                     } = wormholeObject,
 
-                    isAccessed = Boolean(selectedAccessIndex) &&
+                    isAccessed = isAccessOn &&
                         accessedAnnotationAnchorIndex === sourceWormholeIndex
 
                 return (

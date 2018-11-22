@@ -114,15 +114,6 @@ class EventHandler extends Component {
         }
     }
 
-
-    /**********
-     * ACCESS *
-     **********/
-
-    handleAccessToggle = (selectedAccessIndex) => {
-        this.props.toggleAccess(selectedAccessIndex)
-    }
-
     handleAnnotationAccess = ({
         doScroll,
         ...other
@@ -428,9 +419,7 @@ class EventHandler extends Component {
 
         if (setToManualScroll) {
             // If triggered manually by keyboard, set to false.
-            this.props.updateToggleStore({
-                isAutoScroll: false
-            })
+            this.props.updateToggleStore({ isAutoScroll: false })
         }
 
         // Determine whether there is room to scroll.
@@ -457,9 +446,7 @@ class EventHandler extends Component {
 
                 // Select manual scroll only if wheel moved far enough.
                 if (deltaY > 1 || deltaY < -1) {
-                    this.props.updateToggleStore({
-                        isAutoScroll: false
-                    })
+                    this.props.updateToggleStore({ isAutoScroll: false })
                 }
 
             } else {
@@ -478,9 +465,7 @@ class EventHandler extends Component {
     handleLyricAutoScroll = () => {
 
         // Change back to autoScroll.
-        this.props.updateToggleStore({
-            isAutoScroll: true
-        })
+        this.props.updateToggleStore({ isAutoScroll: true })
 
         // Scroll lyric as if verse bar was selected.
         this.handleVerseBarSelect()
@@ -847,17 +832,13 @@ class EventHandler extends Component {
                 }
 
             } else if (isScoreShown && !exemptScore) {
-                this.props.updateToggleStore({
-                    isScoreShown: false
-                })
+                this.props.updateToggleStore({ isScoreShown: false })
                 if (!continuePastClosingPopups) {
                     return
                 }
 
             } else if (isTitleShown && !exemptTitle) {
-                this.props.updateToggleStore({
-                    isTitleShown: false
-                })
+                this.props.updateToggleStore({ isTitleShown: false })
                 if (!continuePastClosingPopups) {
                     return
                 }
@@ -909,7 +890,7 @@ class EventHandler extends Component {
 
             // Turn access off if not from a keyboard event.
             if (type === 'click' || type === 'mousedown') {
-                this.props.toggleAccess(false)
+                this.props.updateToggleStore({ isAccessOn: false })
             }
         }
     }

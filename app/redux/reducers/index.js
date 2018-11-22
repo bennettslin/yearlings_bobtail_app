@@ -18,7 +18,7 @@ import {
 import SliderReducer from './slider'
 import SongReducer from './song'
 import {
-    AccessIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, TipsIndexReducer, WikiIndexReducer
+    AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, TipsIndexReducer, WikiIndexReducer
 } from './storage'
 
 import {
@@ -65,7 +65,6 @@ const rootReducer = combineReducers({
     [SONG_STORE]: SongReducer,
 
     // TODO: Put some of these in toggle store.
-    selectedAccessIndex: AccessIndexReducer,
     selectedAudioOptionIndex: AudioOptionIndexReducer,
     selectedCarouselNavIndex: CarouselNavIndexReducer,
     selectedDotKeys: DotKeysReducer,

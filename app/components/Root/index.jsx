@@ -47,6 +47,7 @@ class Root extends Component {
         appMounted: PropTypes.bool.isRequired,
         canCarouselRender: PropTypes.bool.isRequired,
 
+        isAccessOn: PropTypes.bool.isRequired,
         isAdminOn: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
@@ -61,7 +62,6 @@ class Root extends Component {
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
-        selectedAccessIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
@@ -165,7 +165,7 @@ class Root extends Component {
                 canCarouselRender,
                 isAdminOn,
                 deviceIndex,
-                selectedAccessIndex,
+                isAccessOn,
                 renderedAnnotationIndex,
                 isRenderedLogue,
                 selectedCarouselNavIndex,
@@ -270,7 +270,7 @@ class Root extends Component {
                         'RM__desktop' : 'RM__mobile',
                     { 'RM__mobileNotPhone': isTabletOrMini },
 
-                    selectedAccessIndex ? 'RM__accessOn' : 'RM__accessOff',
+                    isAccessOn ? 'RM__accessOn' : 'RM__accessOff',
                     showOverlay ? 'RM__overlayShown' : 'RM__overlayHidden',
 
                     isRenderedLogue ? 'RM__logue' : 'RM__song',
@@ -392,7 +392,6 @@ class Root extends Component {
 const mapStateToProps = ({
     appMounted,
     interactivatedVerseIndex,
-    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
     selectedDotsIndex,
@@ -402,6 +401,7 @@ const mapStateToProps = ({
     selectedWikiIndex,
     isPlaying,
     toggleStore: {
+        isAccessOn,
         isAdminOn,
         isAutoScroll,
         isScoreShown,
@@ -438,7 +438,7 @@ const mapStateToProps = ({
     isTitleShown,
     isLyricExpanded,
     interactivatedVerseIndex,
-    selectedAccessIndex,
+    isAccessOn,
     selectedCarouselNavIndex,
     selectedDotKeys,
     selectedDotsIndex,

@@ -69,7 +69,6 @@ class KeyHandler extends Component {
 
         eventHandlers: PropTypes.shape({
             // TODO: Specify which events are used. This isn't complete.
-            handleAccessToggle: PropTypes.func.isRequired,
             handleLyricWheel: PropTypes.func.isRequired,
             handleLyricVerseSelect: PropTypes.func.isRequired,
             handleAnnotationAccess: PropTypes.func.isRequired
@@ -90,8 +89,6 @@ class KeyHandler extends Component {
     }
 
     handleKeyDownPress = (e) => {
-        const { eventHandlers } = this.props
-
         const keyName = getKeyName(e)
 
         // Do not allow the event to propagate if it's one of these.
@@ -106,7 +103,7 @@ class KeyHandler extends Component {
          * Turn on access if any key other than escape was registered.
          */
         if (keyName !== ESCAPE) {
-            eventHandlers.handleAccessToggle(true)
+            this.props.updateToggleStore({ isAccessOn: true })
         }
 
         /**
@@ -704,7 +701,7 @@ class KeyHandler extends Component {
 
         // Turn access off.
         } else {
-            eventHandlers.handleAccessToggle(false)
+            this.props.updateToggleStore({ isAccessOn: false })
             eventHandlers.handleVerseInteractivate(e)
         }
     }

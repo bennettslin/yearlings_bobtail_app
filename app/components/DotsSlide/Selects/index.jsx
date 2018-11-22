@@ -10,15 +10,15 @@ import { ALL_DOT_KEYS } from 'constants/dots'
 
 const mapStateToProps = ({
     accessedDotIndex,
-    selectedAccessIndex
+    toggleStore: { isAccessOn }
 }) => ({
     accessedDotIndex,
-    selectedAccessIndex
+    isAccessOn
 })
 
 const dotsSlideSelectsPropTypes = {
     // Through Redux.
-        selectedAccessIndex: PropTypes.number.isRequired,
+        isAccessOn: PropTypes.bool.isRequired,
         accessedDotIndex: PropTypes.number,
 
         // From parent.
@@ -29,7 +29,7 @@ const dotsSlideSelectsPropTypes = {
     DotsSlideSelects = ({
 
         accessedDotIndex,
-        selectedAccessIndex,
+        isAccessOn,
 
         dotKeys,
         handleContainerClick,
@@ -58,8 +58,8 @@ const dotsSlideSelectsPropTypes = {
                     {firstHalfArray.map((dotKey, firstHalfIndex) => {
                         const
                             isAccessed =
-                            Boolean(selectedAccessIndex) &&
-                            accessedDotIndex === firstHalfIndex
+                                isAccessOn &&
+                                accessedDotIndex === firstHalfIndex
 
                         return (
                             <DotsSlideSelect {...other}
@@ -80,8 +80,8 @@ const dotsSlideSelectsPropTypes = {
                     {secondHalfArray.map((dotKey, index) => {
                         const secondHalfIndex = index + firstHalfEnd,
                             isAccessed =
-                            Boolean(selectedAccessIndex) &&
-                            accessedDotIndex === secondHalfIndex
+                                isAccessOn &&
+                                accessedDotIndex === secondHalfIndex
 
                         return (
                             <DotsSlideSelect {...other}

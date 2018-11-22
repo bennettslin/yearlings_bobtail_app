@@ -86,9 +86,7 @@ class LyricManager extends Component {
             }
         }
 
-        this.props.updateToggleStore({
-            isLyricExpanded
-        })
+        this.props.updateToggleStore({ isLyricExpanded })
         return true
     }
 

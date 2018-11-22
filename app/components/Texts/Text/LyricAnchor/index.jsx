@@ -20,10 +20,12 @@ const mapStateToProps = ({
         renderedSongIndex,
         renderedAnnotationIndex
     },
-    toggleStore: { isLyricExpanded },
+    toggleStore: {
+        isAccessOn,
+        isLyricExpanded
+    },
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
-    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex
@@ -37,7 +39,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
-    selectedAccessIndex,
+    isAccessOn,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex
@@ -53,11 +55,11 @@ class TextLyricAnchor extends Component {
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
-        selectedAccessIndex: PropTypes.number.isRequired,
+        isAccessOn: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
 
         wikiIndex: PropTypes.number,
         wikiAnnotationIndex: PropTypes.number,
@@ -138,7 +140,7 @@ class TextLyricAnchor extends Component {
                 accessedAnnotationIndex,
                 accessedAnnotationAnchorIndex,
 
-                selectedAccessIndex,
+                isAccessOn,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 interactivatedVerseIndex,
@@ -160,7 +162,7 @@ class TextLyricAnchor extends Component {
         let
             isAccessed =
 
-                Boolean(selectedAccessIndex) &&
+                isAccessOn &&
 
                 /**
                  * TODO: This conditional is repeated in Carousel,

@@ -10,7 +10,6 @@ import { connect } from 'react-redux'
 import { setAppMounted } from 'flux/actions/load'
 
 import EventHandler from 'handlers/EventHandler'
-import AccessManager from './AccessManager'
 import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
@@ -52,14 +51,6 @@ class StateManager extends Component {
             props: this.props,
             nextProps
         })
-    }
-
-    /**********
-     * ACCESS *
-     **********/
-
-    toggleAccess = (payload) => {
-        return this.accessManager.toggleAccess(payload)
     }
 
     /**************
@@ -294,9 +285,6 @@ class StateManager extends Component {
      * REFS *
      ********/
 
-    _setAccessManagerRef = (node) => {
-        this.accessManager = node
-    }
     _setAnnotationManagerRef = (node) => {
         this.annotationManager = node
     }
@@ -395,11 +383,7 @@ class StateManager extends Component {
                     interactivateVerse={this.interactivateVerse}
                     interactivateVerseDirection={this.interactivateVerseDirection}
                     selectWiki={this.selectWiki}
-                    toggleAccess={this.toggleAccess}
                     togglePlay={this.togglePlay}
-                />
-                <AccessManager
-                    setRef={this._setAccessManagerRef}
                 />
                 <AnnotationManager
                     setRef={this._setAnnotationManagerRef}

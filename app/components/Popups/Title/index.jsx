@@ -26,9 +26,7 @@ class TitlePopup extends Component {
     }
 
     closeTitle = () => {
-        this.props.updateToggleStore({
-            isTitleShown: false
-        })
+        this.props.updateToggleStore({ isTitleShown: false })
     }
 
     render() {

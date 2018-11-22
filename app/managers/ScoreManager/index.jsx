@@ -51,9 +51,7 @@ class ScoreManager extends Component {
             (isSelectedLogue && !wasSelectedLogue) ||
             !isScoreShowable && wasScoreShowable
         ) {
-            this.props.updateToggleStore({
-                isScoreShown: false
-            })
+            this.props.updateToggleStore({ isScoreShown: false })
         }
     }
 

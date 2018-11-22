@@ -1,4 +1,4 @@
-// Child that knows rules to turn on title. Not needed if just turning off.
+// Child that knows rules to toggle title. Not needed if just turning off.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -26,9 +26,7 @@ class TryTitle extends Component {
         isTitleShown = !this.props.isTitleShown
     ) => {
         // Turning on or off is always successful.
-        this.props.updateToggleStore({
-            isTitleShown
-        })
+        this.props.updateToggleStore({ isTitleShown })
         return true
     }
 
