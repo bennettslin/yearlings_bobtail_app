@@ -3991,5 +3991,10 @@ module.exports = [
         taskName: `Fix broken access.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Create listener for doublespeaker treatment.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

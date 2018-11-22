@@ -10,11 +10,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Refactor doublespeaker. Separate canShowDoublespeaker and isDoublespeaker.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Refactor overview and tips. Ensure they close the dots when opened from selecting a new song.`,
         workedHours: 0,
         neededHours: 3

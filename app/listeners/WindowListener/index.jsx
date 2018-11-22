@@ -10,9 +10,6 @@ import { updateRenderableStore } from 'flux/actions/renderable'
 import { updateResponsiveStore } from 'flux/actions/responsive'
 
 import {
-    getShowOneOfTwoLyricColumns
-} from 'helpers/responsiveHelper'
-import {
     getIsHiddenLyric,
     getIsHiddenCarouselNav
 } from './helpers/hidden'
@@ -64,8 +61,7 @@ class WindowListener extends Component {
     }
 
     _windowResize = (e) => {
-        const { selectedSongIndex } = this.props,
-            {
+        const {
                 deviceIndex,
                 windowHeight,
                 windowWidth
@@ -75,11 +71,7 @@ class WindowListener extends Component {
                 deviceIndex,
                 windowHeight,
                 windowWidth
-            }),
-            showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(
-                selectedSongIndex,
-                deviceIndex
-            )
+            })
 
         if (e) {
             this._prepareForWindowResizeUnrender()
@@ -100,8 +92,7 @@ class WindowListener extends Component {
             deviceIndex,
             windowHeight,
             windowWidth,
-            isHiddenLyric,
-            showOneOfTwoLyricColumns
+            isHiddenLyric
         })
 
         return deviceIndex
@@ -153,12 +144,10 @@ class WindowListener extends Component {
         deviceIndex,
         windowHeight,
         windowWidth,
-        isHiddenLyric,
-        showOneOfTwoLyricColumns
+        isHiddenLyric
     }) {
         this.props.updateResponsiveStore({
             isHiddenLyric,
-            showOneOfTwoLyricColumns,
             isHiddenCarouselNav: getIsHiddenCarouselNav({
                 deviceIndex,
                 windowHeight,

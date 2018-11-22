@@ -1,3 +1,5 @@
+// Singleton to set timeout between selected and rendered song change.
+
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
@@ -5,50 +7,27 @@ import { connect } from 'react-redux'
 
 import { updateRenderableStore } from 'flux/actions/renderable'
 import { updateRenderedStore } from 'flux/actions/rendered'
-import { updateResponsiveStore } from 'flux/actions/responsive'
 
 import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-import { getShowOneOfTwoLyricColumns } from 'helpers/responsiveHelper'
 
-class RenderManager extends Component {
+class RenderListener extends Component {
 
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        deviceIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
 
         updateRenderableStore: PropTypes.func.isRequired,
-        updateRenderedStore: PropTypes.func.isRequired,
-        updateResponsiveStore: PropTypes.func.isRequired,
-
-        // From parent.
-        setRef: PropTypes.func.isRequired
+        updateRenderedStore: PropTypes.func.isRequired
     }
 
     state = {
         songChangeTimeoutId: ''
     }
 
-    componentDidMount() {
-        this.props.setRef(this)
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.state,
-            nextProps: nextState
-        })
-    }
-
     componentDidUpdate(prevProps) {
-
         // Initialise the rendered song once app has been mounted.
         if (this.props.appMounted && !prevProps.appMounted) {
             this._prepareForSongChangeRender()
@@ -82,13 +61,11 @@ class RenderManager extends Component {
         })
     }
 
-    _prepareForSongChangeRender = (props = this.props) => {
-
-        const {
-            selectedSongIndex = this.props.selectedSongIndex,
-            selectedAnnotationIndex = this.props.selectedAnnotationIndex,
-            selectedVerseIndex = this.props.selectedVerseIndex
-        } = props
+    _prepareForSongChangeRender = ({
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedVerseIndex = this.props.selectedVerseIndex,
+        selectedAnnotationIndex = this.props.selectedAnnotationIndex
+    } = {}) => {
 
         this.props.updateRenderableStore({
             isSongChangeRenderable: true
@@ -96,22 +73,11 @@ class RenderManager extends Component {
 
         this.props.updateRenderedStore({
             renderedSongIndex: selectedSongIndex,
-            renderedAnnotationIndex: selectedAnnotationIndex,
             renderedVerseIndex: selectedVerseIndex,
+            renderedAnnotationIndex: selectedAnnotationIndex,
             renderedSceneIndex: getSceneIndexForVerseIndex(
                 selectedSongIndex,
                 selectedVerseIndex
-            )
-        })
-
-        /**
-         * Determine doublespeaker columns only when lyrics are ready to
-         * render.
-         */
-        this.props.updateResponsiveStore({
-            showOneOfTwoLyricColumns: getShowOneOfTwoLyricColumns(
-                selectedSongIndex,
-                this.props.deviceIndex
             )
         })
     }
@@ -123,7 +89,6 @@ class RenderManager extends Component {
 
 const mapStateToProps = ({
     appMounted,
-    deviceStore: { deviceIndex },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -131,7 +96,6 @@ const mapStateToProps = ({
     }
 }) => ({
     appMounted,
-    deviceIndex,
     selectedAnnotationIndex,
     selectedSongIndex,
     selectedVerseIndex
@@ -140,9 +104,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateRenderableStore,
-        updateRenderedStore,
-        updateResponsiveStore
+        updateRenderedStore
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(RenderManager)
+export default connect(mapStateToProps, bindDispatchToProps)(RenderListener)

@@ -5,10 +5,10 @@ import {
 } from '../../helpers/dataHelper'
 
 export const getSingleShownLyricColumnKey = ({
-    showOneOfTwoLyricColumns,
+    isDoublespeakerShown,
     selectedLyricColumnIndex
 }) => {
-    return showOneOfTwoLyricColumns
+    return isDoublespeakerShown
         && selectedLyricColumnIndex >= 0 ?
         LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
 }

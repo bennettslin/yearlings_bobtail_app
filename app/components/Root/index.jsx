@@ -72,7 +72,7 @@ class Root extends Component {
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
 
-        showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+        isDoublespeakerShown: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         showShrunkNavIcon: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -182,7 +182,7 @@ class Root extends Component {
                 renderedVerseIndex,
                 sliderVerseIndex,
                 interactivatedVerseIndex,
-                showOneOfTwoLyricColumns,
+                isDoublespeakerShown,
                 isHiddenLyric,
                 showShrunkNavIcon,
                 isScoresTipsInMain,
@@ -207,7 +207,7 @@ class Root extends Component {
             isTabletOrMini = getIsTabletOrMini(deviceIndex),
 
             singleShownLyricColumnKey = getSingleShownLyricColumnKey({
-                showOneOfTwoLyricColumns,
+                isDoublespeakerShown,
                 selectedLyricColumnIndex
             }),
 
@@ -395,7 +395,8 @@ const mapStateToProps = ({
     },
     transientStore: {
         isOverlayShown,
-        isCarouselNavShowable
+        isCarouselNavShowable,
+        isDoublespeakerShown
     },
     deviceStore: { deviceIndex },
     renderStore: { canCarouselRender },
@@ -412,7 +413,6 @@ const mapStateToProps = ({
     },
     responsiveStore: {
         isHiddenLyric,
-        showOneOfTwoLyricColumns,
         isScoresTipsInMain,
         isTwoRowMenu,
         showShrunkNavIcon
@@ -432,7 +432,7 @@ const mapStateToProps = ({
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    showOneOfTwoLyricColumns,
+    isDoublespeakerShown,
     isPlaying,
     deviceIndex,
     canCarouselRender,

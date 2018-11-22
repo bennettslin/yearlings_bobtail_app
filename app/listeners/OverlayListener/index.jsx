@@ -1,4 +1,4 @@
-// Singleton to listen for transient UI changes that affect no other state.
+// Singleton to listen for changes that toggle overlay and related states.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -17,7 +17,7 @@ import {
     TIPS_OPTIONS
 } from 'constants/options'
 
-class TransientListener extends Component {
+class OverlayListener extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -118,4 +118,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(TransientListener)
+export default connect(mapStateToProps, bindDispatchToProps)(OverlayListener)

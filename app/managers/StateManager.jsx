@@ -15,13 +15,14 @@ import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
 import DotsManager from './DotsManager'
 import DotsSlideListener from '../listeners/DotsSlideListener'
+import DoublespeakerListener from '../listeners/DoublespeakerListener'
 import LogManager from './LogManager'
 import LyricManager from './LyricManager'
 import NavManager from './NavManager'
-import TransientListener from '../listeners/TransientListener'
+import OverlayListener from '../listeners/OverlayListener'
 import OverviewManager from './OverviewManager'
 import PlayerManager from './PlayerManager'
-import RenderManager from './RenderManager'
+import RenderListener from '../listeners/RenderListener'
 import RoutingManager from './RoutingManager'
 import ScoreListener from '../listeners/ScoreListener'
 import SceneManager from './SceneManager'
@@ -303,9 +304,6 @@ class StateManager extends Component {
     _setPlayerManagerRef = (node) => {
         this.playerManager = node
     }
-    _setRenderManagerRef = (node) => {
-        this.renderManager = node
-    }
     _setSceneManagerRef = (node) => {
         this.sceneManager = node
     }
@@ -393,7 +391,6 @@ class StateManager extends Component {
                 <DotsManager
                     setRef={this._setDotsManagerRef}
                 />
-                <DotsSlideListener />
                 <LogManager />
                 <LyricManager
                     setRef={this._setLyricManagerRef}
@@ -402,7 +399,6 @@ class StateManager extends Component {
                 <NavManager
                     setRef={this._setNavManagerRef}
                 />
-                <TransientListener />
                 <OverviewManager
                     setRef={this._setOverviewManagerRef}
                 />
@@ -410,9 +406,6 @@ class StateManager extends Component {
                     setRef={this._setPlayerManagerRef}
                     updateTime={this.updateTime}
                     handleSongEnd={this.handleSongEnd}
-                />
-                <RenderManager
-                    setRef={this._setRenderManagerRef}
                 />
                 <RoutingManager
                     {...{
@@ -425,7 +418,6 @@ class StateManager extends Component {
                     selectVerse={this.selectVerse}
                     resetVerseBars={this.resetVerseBars}
                 />
-                <ScoreListener />
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
                 />
@@ -458,6 +450,11 @@ class StateManager extends Component {
                 <WikiManager
                     setRef={this._setWikiManagerRef}
                 />
+                <DotsSlideListener />
+                <DoublespeakerListener />
+                <OverlayListener />
+                <RenderListener />
+                <ScoreListener />
                 <WindowListener />
             </Fragment>
         )

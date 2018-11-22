@@ -8,15 +8,12 @@ import { connect } from 'react-redux'
 import { selectLyricColumnIndex } from 'flux/actions/storage'
 import { updateToggleStore } from 'flux/actions/toggle'
 
-import {
-    getShowOneOfTwoLyricColumns
-} from 'helpers/responsiveHelper'
-
 class LyricManager extends Component {
 
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
+        isDoublespeakerShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
@@ -63,20 +60,18 @@ class LyricManager extends Component {
         selectedSongIndex = this.props.selectedSongIndex,
         isLogue = this.props.isSelectedLogue
     } = {}) {
-        const { props } = this
+        const { isDoublespeakerShown } = this.props
 
         /**
          * We shouldn't be able to select lyric column if not in a song that
          * has double columns, or if in a logue. Check for new song if called
          * from wormhole.
          */
-        if (
-            !(getShowOneOfTwoLyricColumns(selectedSongIndex, props.deviceIndex)) || isLogue
-        ) {
+        if (!isDoublespeakerShown || isLogue) {
             return false
         }
 
-        props.selectLyricColumnIndex(selectedLyricColumnIndex)
+        this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
 
         // Switching lyric column might change accessed annotation index.
         this.props.accessAnnotationIfCurrentInvalid({
@@ -96,6 +91,7 @@ const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: { isLyricExpandable },
     toggleStore: { isLyricExpanded },
+    transientStore: { isDoublespeakerShown },
     songStore: {
         selectedSongIndex,
         isSelectedLogue
@@ -105,6 +101,7 @@ const mapStateToProps = ({
     deviceIndex,
     isLyricExpandable,
     isLyricExpanded,
+    isDoublespeakerShown,
     selectedLyricColumnIndex,
     selectedSongIndex,
     isSelectedLogue

@@ -37,8 +37,9 @@ const
 
     TRANSIENT_DEFAULTS = {
         isCarouselNavShowable: false,
+        isOverlayingAnnotation: false,
         isOverlayShown: false,
-        isOverlayingAnnotation: false
+        isDoublespeakerShown: false
     },
 
     DEVICE_DEFAULTS = {
@@ -59,7 +60,6 @@ const
         isMobileWiki: false,
         isScoresTipsInMain: false,
         isTwoRowMenu: false,
-        showOneOfTwoLyricColumns: false,
         showShrunkNavIcon: false,
         showSingleBookColumn: false,
         isLyricExpandable: false,

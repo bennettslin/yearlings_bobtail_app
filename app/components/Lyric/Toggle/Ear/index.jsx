@@ -12,16 +12,16 @@ import { LYRIC_EAR_BUTTON_KEY } from 'constants/buttons'
 import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
 
 const mapStateToProps = ({
-    responsiveStore: { showOneOfTwoLyricColumns },
+    transientStore: { isDoublespeakerShown },
     selectedLyricColumnIndex
 }) => ({
-    showOneOfTwoLyricColumns,
+    isDoublespeakerShown,
     selectedLyricColumnIndex
 })
 
 const lyricEarTogglePropTypes = {
     // Through Redux.
-        showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+        isDoublespeakerShown: PropTypes.bool.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -29,13 +29,13 @@ const lyricEarTogglePropTypes = {
     },
 
     LyricToggleEar = ({
-        showOneOfTwoLyricColumns,
+        isDoublespeakerShown,
         selectedLyricColumnIndex,
         handleLyricColumnSelect
 
     }) => {
 
-        return showOneOfTwoLyricColumns && (
+        return isDoublespeakerShown && (
             <div className={cx(
                 'LyricToggleEar',
                 'LyricToggle',

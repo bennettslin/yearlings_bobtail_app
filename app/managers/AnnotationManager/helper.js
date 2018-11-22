@@ -15,7 +15,7 @@ export const shouldShowAnnotationForColumn = ({
     selectedSongIndex,
     selectedLyricColumnIndex,
     annotationIndex,
-    showOneOfTwoLyricColumns
+    isDoublespeakerShown
 
 }) => {
 
@@ -27,7 +27,7 @@ export const shouldShowAnnotationForColumn = ({
          * column is given and it's the shown column.
          */
         showAnnotationForColumn =
-            !showOneOfTwoLyricColumns ||
+            !isDoublespeakerShown ||
             isNaN(columnIndex) ||
             columnIndex === selectedLyricColumnIndex
 
@@ -47,7 +47,7 @@ const getAnnotationDotKeys = (
 }
 
 export const getAnnotationIndexForDirection = ({
-    showOneOfTwoLyricColumns,
+    isDoublespeakerShown,
     currentAnnotationIndex = 1,
     selectedSongIndex,
     selectedDotKeys,
@@ -147,7 +147,7 @@ export const getAnnotationIndexForDirection = ({
                     selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
-                    showOneOfTwoLyricColumns
+                    isDoublespeakerShown
                 })) &&
 
                 // And if modulo...
@@ -177,7 +177,7 @@ export const getAnnotationIndexForDirection = ({
 }
 
 export const getAnnotationIndexForVerseIndex = ({
-    showOneOfTwoLyricColumns,
+    isDoublespeakerShown,
 
     // Search backwards by default.
     verseIndex,
@@ -230,7 +230,7 @@ export const getAnnotationIndexForVerseIndex = ({
                     selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
-                    showOneOfTwoLyricColumns
+                    isDoublespeakerShown
                 }),
                 doesIntersect = intersects(annotation.dotKeys, selectedDotKeys)
 
@@ -257,7 +257,7 @@ export const getAnnotationIndexForVerseIndex = ({
      * direction that we will search if this annotation index is not present.
      */
     return getAnnotationIndexForDirection({
-        showOneOfTwoLyricColumns,
+        isDoublespeakerShown,
         currentAnnotationIndex: returnIndex,
         selectedSongIndex,
         selectedDotKeys,

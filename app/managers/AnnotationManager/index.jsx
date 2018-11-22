@@ -25,7 +25,7 @@ class AnnotationManager extends Component {
     static propTypes = {
         // Through Redux.
         isDotsSlideShown: PropTypes.bool.isRequired,
-        showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+        isDoublespeakerShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -92,17 +92,17 @@ class AnnotationManager extends Component {
     deselectAnnotationIfNeeded(prevProps) {
         const {
                 selectedLyricColumnIndex,
-                showOneOfTwoLyricColumns
+                isDoublespeakerShown
             } = this.props,
             {
                 selectedLyricColumnIndex: prevLyricColumnIndex,
-                showOneOfTwoLyricColumns: didShowOneOfTwoLyricColumns
+                isDoublespeakerShown: wasDoublespeakerShown
             } = prevProps
 
         if (
             selectedLyricColumnIndex !== prevLyricColumnIndex ||
             (
-                showOneOfTwoLyricColumns && !didShowOneOfTwoLyricColumns
+                isDoublespeakerShown && !wasDoublespeakerShown
             )
         ) {
             this.deselectAnnotation()
@@ -135,7 +135,7 @@ class AnnotationManager extends Component {
         // Called from arrow buttons in popup.
         if (direction) {
             selectedAnnotationIndex = getAnnotationIndexForDirection({
-                showOneOfTwoLyricColumns: this.props.showOneOfTwoLyricColumns,
+                isDoublespeakerShown: this.props.isDoublespeakerShown,
                 selectedSongIndex,
                 selectedDotKeys: props.selectedDotKeys,
                 currentAnnotationIndex: props.selectedAnnotationIndex,
@@ -190,7 +190,7 @@ class AnnotationManager extends Component {
                 selectedSongIndex,
                 selectedLyricColumnIndex,
                 annotationIndex,
-                showOneOfTwoLyricColumns: this.props.showOneOfTwoLyricColumns
+                isDoublespeakerShown: this.props.isDoublespeakerShown
             })
 
             if (!showAnnotationForColumn) {
@@ -219,7 +219,7 @@ class AnnotationManager extends Component {
                 currentAnnotationIndex: annotationIndex,
                 selectedSongIndex,
                 selectedDotKeys,
-                showOneOfTwoLyricColumns: this.props.showOneOfTwoLyricColumns,
+                isDoublespeakerShown: this.props.isDoublespeakerShown,
                 lyricColumnIndex: selectedLyricColumnIndex,
                 direction
             })
@@ -228,7 +228,7 @@ class AnnotationManager extends Component {
                 verseIndex,
                 selectedSongIndex,
                 selectedDotKeys,
-                showOneOfTwoLyricColumns: this.props.showOneOfTwoLyricColumns,
+                isDoublespeakerShown: this.props.isDoublespeakerShown,
                 lyricColumnIndex: selectedLyricColumnIndex,
                 direction
             })
@@ -280,7 +280,7 @@ class AnnotationManager extends Component {
 
 const mapStateToProps = ({
     toggleStore: { isDotsSlideShown },
-    responsiveStore: { showOneOfTwoLyricColumns },
+    transientStore: { isDoublespeakerShown },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -291,7 +291,7 @@ const mapStateToProps = ({
     selectedLyricColumnIndex
 }) => ({
     isDotsSlideShown,
-    showOneOfTwoLyricColumns,
+    isDoublespeakerShown,
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,
