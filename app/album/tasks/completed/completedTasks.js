@@ -3986,5 +3986,10 @@ module.exports = [
         taskName: `Fix bug where overview toggle isn't hoverable in mobile. (Left shelf zIndex wasn't high enough.)`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix broken access.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

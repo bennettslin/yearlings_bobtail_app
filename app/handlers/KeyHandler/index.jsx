@@ -68,6 +68,9 @@ import {
 class KeyHandler extends Component {
 
     static propTypes = {
+        // Through Redux.
+        isAccessOn: PropTypes.bool.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
 
         eventHandlers: PropTypes.shape({
             // TODO: Specify which events are used. This isn't complete.
@@ -75,7 +78,6 @@ class KeyHandler extends Component {
             handleLyricVerseSelect: PropTypes.func.isRequired,
             handleAnnotationAccess: PropTypes.func.isRequired
         }).isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
 
         setRef: PropTypes.func.isRequired,
         displayKeyLetter: PropTypes.func.isRequired,
@@ -86,9 +88,9 @@ class KeyHandler extends Component {
         this.props.setRef(this)
     }
 
-    shouldComponentUpdate() {
-        return false
-    }
+    // shouldComponentUpdate() {
+    //     return false
+    // }
 
     handleKeyDownPress = (e) => {
         const keyName = getKeyName(e)
@@ -201,7 +203,7 @@ class KeyHandler extends Component {
          */
         if (
             !this.props.selectedAnnotationIndex &&
-            !this.props.selectedAccessIndex &&
+            !this.props.isAccessOn &&
             !annotationIndexWasAccessed
         ) {
 
@@ -347,7 +349,7 @@ class KeyHandler extends Component {
             case ARROW_UP:
             case ARROW_DOWN: {
                 // If not accessed on, do nothing and just turn access on.
-                if (props.selectedAccessIndex) {
+                if (props.isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
                     eventHandlers.handleAnnotationAnchorAccess(
                         direction
@@ -420,11 +422,11 @@ class KeyHandler extends Component {
 
     _handleDotsNavigation = (e, keyName) => {
         const {
-            selectedAccessIndex,
+            isAccessOn,
             eventHandlers
         } = this.props
 
-        if (selectedAccessIndex) {
+        if (isAccessOn) {
             const dotKeysCount = ALL_DOT_KEYS.length
             let { accessedDotIndex } = this.props
 
@@ -467,7 +469,7 @@ class KeyHandler extends Component {
 
     _handleNavNavigation = (e, keyName) => {
         const {
-            selectedAccessIndex,
+            isAccessOn,
             interactivatedVerseIndex,
             eventHandlers
         } = this.props
@@ -479,7 +481,7 @@ class KeyHandler extends Component {
          * If access is off, just turn it on. Also ensure there is no
          * interactivated verse.
          */
-        if (selectedAccessIndex && interactivatedVerseIndex < 0) {
+        if (isAccessOn && interactivatedVerseIndex < 0) {
             let { accessedNavSongIndex } = this.props,
                 direction
 
@@ -556,7 +558,7 @@ class KeyHandler extends Component {
          * verse.
          */
         if (
-            !props.selectedAccessIndex ||
+            !props.isAccessOn ||
             isVerseInteractivated
         ) {
             const
@@ -757,6 +759,7 @@ class KeyHandler extends Component {
 
 const mapStateToProps = ({
     toggleStore: {
+        isAccessOn,
         isDotsSlideShown,
         isScoreShown,
         isTitleShown,
@@ -769,7 +772,6 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         isSelectedLogue
     },
-    selectedAccessIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
     selectedOverviewIndex,
@@ -783,15 +785,15 @@ const mapStateToProps = ({
     shownBookColumnIndex,
     deviceIndex
 }) => ({
-    isHiddenLyric,
+    isAccessOn,
+    isDotsSlideShown,
     isScoreShown,
     isTitleShown,
     isLyricExpanded,
-    selectedAccessIndex,
+    isHiddenLyric,
     selectedAnnotationIndex,
     isSelectedLogue,
     selectedCarouselNavIndex,
-    isDotsSlideShown,
     selectedDotKeys,
     selectedOverviewIndex,
     selectedTipsIndex,

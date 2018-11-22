@@ -30,7 +30,7 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Figure out why build breaks. Code splitting?`,
+        taskName: `Get AWS credentials on personal laptop.`,
         workedHours: 0,
         neededHours: 3
     },
