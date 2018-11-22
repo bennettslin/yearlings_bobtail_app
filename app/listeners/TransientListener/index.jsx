@@ -6,7 +6,10 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateTransientStore } from 'flux/actions/transient'
 
-import { getShowOverlay } from './helper'
+import {
+    getIsOverlayingAnnotation,
+    getIsOverlayShown
+} from './helper'
 
 import {
     SHOWN,
@@ -47,7 +50,12 @@ class TransientListener extends Component {
             selectedWikiIndex
         } = this.props
 
-        const isOverlayShown = getShowOverlay({
+        const isOverlayingAnnotation = getIsOverlayingAnnotation({
+                deviceIndex,
+                isLyricExpanded
+            }),
+
+            isOverlayShown = getIsOverlayShown({
                 deviceIndex,
                 isLyricExpanded,
                 renderedAnnotationIndex,
@@ -67,6 +75,7 @@ class TransientListener extends Component {
                 !isLyricExpanded
 
         this.props.updateTransientStore({
+            isOverlayingAnnotation,
             isOverlayShown,
             isCarouselNavShowable
         })

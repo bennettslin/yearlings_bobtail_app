@@ -8,25 +8,21 @@ import cx from 'classnames'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
 
-import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
-
 const mapStateToProps = ({
     toggleStore: {
         isCarouselShown,
-        isLyricExpanded,
         isScoreShown,
         isTitleShown
     },
+    transientStore: { isOverlayingAnnotation },
     renderStore: { canCarouselRender },
-    deviceStore: { deviceIndex },
     renderedStore: { renderedAnnotationIndex },
     selectedWikiIndex
 }) => ({
     isCarouselShown,
-    isLyricExpanded,
     isScoreShown,
     isTitleShown,
-    deviceIndex,
+    isOverlayingAnnotation,
     canCarouselRender,
     renderedAnnotationIndex,
     selectedWikiIndex
@@ -37,13 +33,11 @@ class AnnotationPopup extends Component {
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
-        deviceIndex: PropTypes.number.isRequired,
-
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
+        isOverlayingAnnotation: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -103,31 +97,25 @@ class AnnotationPopup extends Component {
     render() {
         const {
             /* eslint-disable no-unused-vars */
-                dispatch,
-                /* eslint-enable no-unused-vars */
+            dispatch,
+            /* eslint-enable no-unused-vars */
 
-                canCarouselRender,
-                deviceIndex,
-                isScoreShown,
-                isTitleShown,
-                isLyricExpanded,
-                inMain,
+            canCarouselRender,
+            isScoreShown,
+            isTitleShown,
+            isOverlayingAnnotation,
+            inMain,
 
-                renderedAnnotationIndex,
-                isCarouselShown,
-                selectedWikiIndex,
+            renderedAnnotationIndex,
+            isCarouselShown,
+            selectedWikiIndex,
 
-                handleAnnotationPrevious,
-                handleAnnotationNext,
-                handlePopupContainerClick,
+            handleAnnotationPrevious,
+            handleAnnotationNext,
+            handlePopupContainerClick,
 
-                ...other
-            } = this.props,
-
-            isOverlayingAnnotation = getIsOverlayingAnnotation({
-                deviceIndex,
-                isLyricExpanded
-            })
+            ...other
+        } = this.props
 
         /**
          * Annotation popup is in main, unless lyric column is expanded or

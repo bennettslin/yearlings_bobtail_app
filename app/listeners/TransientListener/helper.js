@@ -1,6 +1,19 @@
-import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
+import { getIsPhone } from 'helpers/responsiveHelper'
 
-export const getShowOverlay = ({
+const getIsOverlayingAnnotation = ({
+    deviceIndex,
+    isLyricExpanded
+}) => {
+    return (
+        // Annotation is always in overlay if lyric is expanded...
+        isLyricExpanded ||
+
+        // Or if we are in phone.
+        getIsPhone(deviceIndex)
+    )
+}
+
+const getIsOverlayShown = ({
     deviceIndex,
     isLyricExpanded,
     renderedAnnotationIndex,
@@ -23,4 +36,9 @@ export const getShowOverlay = ({
             isOverlayingAnnotation
         )
     )
+}
+
+export {
+    getIsOverlayingAnnotation,
+    getIsOverlayShown
 }

@@ -36,8 +36,9 @@ const
     },
 
     TRANSIENT_DEFAULTS = {
+        isCarouselNavShowable: false,
         isOverlayShown: false,
-        isCarouselNavShowable: false
+        isOverlayingAnnotation: false
     },
 
     DEVICE_DEFAULTS = {
@@ -83,13 +84,13 @@ const
     storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
     storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
     storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
-    isLogue = getSongIsLogue(storedSongIndex),
+    isStoredLogue = getSongIsLogue(storedSongIndex),
 
     RENDERED_DEFAULTS = {
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
         renderedVerseIndex: storedVerseIndex,
-        isRenderedLogue: isLogue,
+        isRenderedLogue: isStoredLogue,
         renderedSceneIndex: getSceneIndexForVerseIndex(
             storedSongIndex,
             storedVerseIndex
@@ -100,7 +101,7 @@ const
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,
-        isSelectedLogue: isLogue,
+        isSelectedLogue: isStoredLogue,
         selectedTime: getTimeForVerseIndex(
             storedSongIndex,
             storedVerseIndex

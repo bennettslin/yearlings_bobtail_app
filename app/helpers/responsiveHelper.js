@@ -63,16 +63,3 @@ export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
         return false
     }
 }
-
-export const getIsOverlayingAnnotation = ({
-    deviceIndex,
-    isLyricExpanded
-}) => {
-    return (
-        // Annotation is always in overlay if lyric is expanded...
-        isLyricExpanded ||
-
-        // Or if we are in phone.
-        getIsPhone(deviceIndex)
-    )
-}
