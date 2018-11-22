@@ -4,8 +4,8 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { setIsScoreLoaded } from 'flux/actions/load'
-import { updateToggleStore } from 'flux/actions/toggle'
+import { setIsScoreLoaded } from 'flux/load/action'
+import { updateToggleStore } from 'flux/toggle/action'
 
 class ScoreListener extends Component {
 

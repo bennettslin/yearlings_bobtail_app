@@ -1,5 +1,5 @@
 // Actions for can render state.
-import { getDefinedOnlyPayload } from './helper'
+import { getDefinedOnlyPayload } from '../actionHelper'
 
 import { RENDER_STORE } from '../storeKeys'
 import { RENDER_DEFAULTS } from '../defaultStates'

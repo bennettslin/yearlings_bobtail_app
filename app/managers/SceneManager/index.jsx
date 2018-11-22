@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateRenderableStore } from 'flux/actions/renderable'
+import { updateRenderableStore } from 'flux/renderable/action'
 
 import { getVerseIndexForNextScene } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

@@ -1,26 +1,26 @@
 import { combineReducers } from 'redux'
 import {
     AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer
-} from './access'
-import ToggleReducer from './toggle'
-import TransientReducer from './transient'
-import { IsPlayingReducer } from './audio'
-import DeviceReducer from './device'
+} from './access/reducer'
+import ToggleReducer from './toggle/reducer'
+import TransientReducer from './transient/reducer'
+import { IsPlayingReducer } from './audio/reducer'
+import DeviceReducer from './device/reducer'
 import {
     AppMountedReducer, CanPlayThroughsReducer, IsScoreLoadedReducer
-} from './load'
-import RenderReducer from './render'
-import RenderableReducer from './renderable'
-import RenderedReducer from './rendered'
-import ResponsiveReducer from './responsive'
+} from './load/reducer'
+import RenderReducer from './render/reducer'
+import RenderableReducer from './renderable/reducer'
+import RenderedReducer from './rendered/reducer'
+import ResponsiveReducer from './responsive/reducer'
 import {
     CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, ShownBookColumnIndexReducer
-} from './session'
-import SliderReducer from './slider'
-import SongReducer from './song'
+} from './session/reducer'
+import SliderReducer from './slider/reducer'
+import SongReducer from './song/reducer'
 import {
     AudioOptionIndexReducer, DotKeysReducer, LyricColumnIndexReducer, OverviewIndexReducer, TipsIndexReducer, WikiIndexReducer
-} from './storage'
+} from './storage/reducer'
 
 import {
     TOGGLE_STORE,
@@ -32,7 +32,7 @@ import {
     RESPONSIVE_STORE,
     SONG_STORE,
     SLIDER_STORE
-} from '../storeKeys'
+} from './storeKeys'
 
 const rootReducer = combineReducers({
 

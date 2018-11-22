@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateSliderStore } from 'flux/actions/slider'
+import { updateSliderStore } from 'flux/slider/action'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {

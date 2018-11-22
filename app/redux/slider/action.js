@@ -1,5 +1,5 @@
 // Actions for slider state.
-import { getDefinedOnlyPayload } from './helper'
+import { getDefinedOnlyPayload } from '../actionHelper'
 
 import { SLIDER_STORE } from '../storeKeys'
 import { SLIDER_DEFAULTS } from '../defaultStates'

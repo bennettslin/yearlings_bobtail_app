@@ -4,7 +4,7 @@ import { getSongIsLogue } from '../../helpers/dataHelper'
 import {
     hasKey,
     getDefinedOnlyPayload
-} from './helper'
+} from '../actionHelper'
 
 import { RENDERED_STORE } from '../storeKeys'
 import { RENDERED_DEFAULTS } from '../defaultStates'

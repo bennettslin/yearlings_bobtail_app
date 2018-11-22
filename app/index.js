@@ -14,7 +14,7 @@ import { Provider } from 'react-redux'
 // eslint-disable-next-line
 import logger from './server/logger'
 
-import reducers from './redux/reducers'
+import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
 import StateManager from './managers/StateManager'
@@ -27,7 +27,7 @@ if (process.env.NODE_ENV !== 'production' && turnOnWDYULogging) {
 }
 
 const store = createStore(
-    reducers,
+    rootReducer,
     devToolsEnhancer()
 )
 

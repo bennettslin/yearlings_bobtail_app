@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectLyricColumnIndex } from 'flux/actions/storage'
-import { updateToggleStore } from 'flux/actions/toggle'
+import { selectLyricColumnIndex } from 'flux/storage/action'
+import { updateToggleStore } from 'flux/toggle/action'
 
 class LyricManager extends Component {
 

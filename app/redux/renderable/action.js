@@ -1,5 +1,5 @@
 // Actions for renderable state.
-import { getDefinedOnlyPayload } from './helper'
+import { getDefinedOnlyPayload } from '../actionHelper'
 
 import { RENDERABLE_STORE } from '../storeKeys'
 import { RENDERABLE_DEFAULTS } from '../defaultStates'

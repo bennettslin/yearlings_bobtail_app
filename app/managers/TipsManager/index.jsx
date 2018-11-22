@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectTipsIndex } from 'flux/actions/storage'
+import { selectTipsIndex } from 'flux/storage/action'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'

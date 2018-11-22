@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateRenderStore } from 'flux/actions/render'
+import { updateRenderStore } from 'flux/render/action'
 
 import Main from '../Main'
 import Lyric from '../Lyric'

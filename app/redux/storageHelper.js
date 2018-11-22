@@ -23,7 +23,6 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
-    IS_CAROUSEL_SHOWN,
 
     SELECTED_AUDIO_OPTION_INDEX,
     SELECTED_DOT_KEYS,
@@ -115,11 +114,6 @@ const _validateValueForKey = (key) => {
             isValid = isNumber && parsedValue < maxBitNumber
             break
         }
-
-        // These must be a simple 0 or 1.
-        case IS_CAROUSEL_SHOWN:
-            isValid = isNumber && parsedValue <= 1
-            break
 
         default:
             isValid = isNumber

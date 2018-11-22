@@ -3,7 +3,7 @@ import { setBoolInStorage } from '../storageHelper'
 import {
     hasKey,
     getDefinedOnlyPayload
-} from './helper'
+} from '../actionHelper'
 
 import {
     TOGGLE_STORE,

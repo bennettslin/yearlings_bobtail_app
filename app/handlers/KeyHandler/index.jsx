@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateToggleStore } from 'flux/actions/toggle'
+import { updateToggleStore } from 'flux/toggle/action'
 
 import DispatchAdmin from '../../dispatchers/DispatchAdmin'
 import DispatchDotsSlide from '../../dispatchers/DispatchDotsSlide'

@@ -6,8 +6,8 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { setIsPlaying } from 'flux/actions/audio'
-import { setCanPlayThroughs } from 'flux/actions/load'
+import { setIsPlaying } from 'flux/audio/action'
+import { setCanPlayThroughs } from 'flux/load/action'
 
 import Player from './Player'
 

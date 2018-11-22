@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateDeviceStore } from 'flux/actions/device'
-import { updateRenderableStore } from 'flux/actions/renderable'
-import { updateResponsiveStore } from 'flux/actions/responsive'
+import { updateDeviceStore } from 'flux/device/action'
+import { updateRenderableStore } from 'flux/renderable/action'
+import { updateResponsiveStore } from 'flux/responsive/action'
 
 import {
     getIsHiddenLyric,

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { accessDotIndex } from 'flux/actions/access'
-import { selectDotKey } from 'flux/actions/storage'
+import { accessDotIndex } from 'flux/access/action'
+import { selectDotKey } from 'flux/storage/action'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateSongStore } from 'flux/actions/song'
+import { updateSongStore } from 'flux/song/action'
 
 import {
     CONTINUE,

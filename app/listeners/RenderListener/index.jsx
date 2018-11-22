@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateRenderableStore } from 'flux/actions/renderable'
-import { updateRenderedStore } from 'flux/actions/rendered'
+import { updateRenderableStore } from 'flux/renderable/action'
+import { updateRenderedStore } from 'flux/rendered/action'
 
 import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
 

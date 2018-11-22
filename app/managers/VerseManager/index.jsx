@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setInteractivatedVerseIndex } from 'flux/actions/session'
-import { updateToggleStore } from 'flux/actions/toggle'
+import { setInteractivatedVerseIndex } from 'flux/session/action'
+import { updateToggleStore } from 'flux/toggle/action'
 
 import { getSongVersesCount } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'

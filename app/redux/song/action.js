@@ -5,7 +5,7 @@ import { setInStorage } from '../storageHelper'
 import {
     hasKey,
     getDefinedOnlyPayload
-} from './helper'
+} from '../actionHelper'
 
 import {
     SELECTED_SONG_INDEX,

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setAppMounted } from 'flux/actions/load'
+import { setAppMounted } from 'flux/load/action'
 
 import EventHandler from 'handlers/EventHandler'
 import AnnotationManager from './AnnotationManager'

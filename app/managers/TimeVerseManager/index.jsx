@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateRenderedStore } from 'flux/actions/rendered'
-import { updateSongStore } from 'flux/actions/song'
+import { updateRenderedStore } from 'flux/rendered/action'
+import { updateSongStore } from 'flux/song/action'
 
 import { VERSE_SCROLL } from 'constants/dom'
 

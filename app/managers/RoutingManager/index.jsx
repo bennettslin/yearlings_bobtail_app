@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateSongStore } from 'flux/actions/song'
-import { selectWikiIndex } from 'flux/actions/storage'
+import { updateSongStore } from 'flux/song/action'
+import { selectWikiIndex } from 'flux/storage/action'
 
 import { getTimeForVerseIndex } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'

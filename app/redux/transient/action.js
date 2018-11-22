@@ -1,5 +1,5 @@
 // Actions for transient states.
-import { getDefinedOnlyPayload } from './helper'
+import { getDefinedOnlyPayload } from '../actionHelper'
 
 import { TRANSIENT_STORE } from '../storeKeys'
 import { TRANSIENT_DEFAULTS } from '../defaultStates'

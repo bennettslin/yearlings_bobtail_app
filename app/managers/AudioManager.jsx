@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setIsPlaying } from 'flux/actions/audio'
-import { selectAudioOptionIndex } from 'flux/actions/storage'
+import { setIsPlaying } from 'flux/audio/action'
+import { selectAudioOptionIndex } from 'flux/storage/action'
 
 import { getValueInBitNumber } from 'helpers/bitHelper'
 import { getSongsNotLoguesCount } from 'helpers/dataHelper'

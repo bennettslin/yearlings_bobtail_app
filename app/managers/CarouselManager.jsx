@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setCarouselAnnotationIndex } from 'flux/actions/session'
-import { updateToggleStore } from 'flux/actions/toggle'
+import { setCarouselAnnotationIndex } from 'flux/session/action'
+import { updateToggleStore } from 'flux/toggle/action'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getIsPhone } from 'helpers/responsiveHelper'

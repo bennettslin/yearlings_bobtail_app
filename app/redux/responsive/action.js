@@ -1,5 +1,5 @@
 // Actions for state based on window size.
-import { getDefinedOnlyPayload } from './helper'
+import { getDefinedOnlyPayload } from '../actionHelper'
 
 import { RESPONSIVE_STORE } from '../storeKeys'
 import { RESPONSIVE_DEFAULTS } from '../defaultStates'

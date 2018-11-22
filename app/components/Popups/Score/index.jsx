@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateToggleStore } from 'flux/actions/toggle'
+import { updateToggleStore } from 'flux/toggle/action'
 
 import Score from '../../Score'
 import Popup from '../../Popup'

@@ -1,3 +1,5 @@
+// Keep these in a single file for clarity, at least for now.
+
 import {
     getFromStorage,
     getBoolFromStorage
