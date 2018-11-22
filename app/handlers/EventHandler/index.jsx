@@ -33,9 +33,9 @@ class EventHandler extends Component {
         // Through Redux.
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
@@ -999,9 +999,9 @@ const mapStateToProps = ({
     toggleStore: {
         isCarouselShown,
         isDotsSlideShown,
+        isLyricExpanded,
         isScoreShown,
-        isTitleShown,
-        isLyricExpanded
+        isTitleShown
     },
     selectedDotKeys,
     selectedTipsIndex,
@@ -1016,12 +1016,12 @@ const mapStateToProps = ({
     isHiddenLyric,
     selectedAnnotationIndex,
     isCarouselShown,
-    isSelectedLogue,
-    selectedDotKeys,
+    isLyricExpanded,
     isDotsSlideShown,
     isScoreShown,
     isTitleShown,
-    isLyricExpanded,
+    isSelectedLogue,
+    selectedDotKeys,
     selectedSongIndex,
     selectedTipsIndex,
     selectedVerseIndex,

@@ -3,11 +3,8 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import {
-    setInteractivatedVerseIndex,
-    setIsVerseBarAbove,
-    setIsVerseBarBelow
-} from 'flux/actions/session'
+import { setInteractivatedVerseIndex } from 'flux/actions/session'
+import { updateToggleStore } from 'flux/actions/toggle'
 
 import { getSongVersesCount } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -27,8 +24,7 @@ class VerseManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         setInteractivatedVerseIndex: PropTypes.func.isRequired,
-        setIsVerseBarAbove: PropTypes.func.isRequired,
-        setIsVerseBarBelow: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -167,14 +163,18 @@ class VerseManager extends Component {
                     isVerseBarBelow
                 } = verseBarStatusObject
 
-            this.props.setIsVerseBarAbove(isVerseBarAbove)
-            this.props.setIsVerseBarBelow(isVerseBarBelow)
+            this.props.updateToggleStore({
+                isVerseBarAbove,
+                isVerseBarBelow
+            })
         }
     }
 
     resetVerseBars() {
-        this.props.setIsVerseBarAbove(false)
-        this.props.setIsVerseBarBelow(false)
+        this.props.updateToggleStore({
+            isVerseBarAbove: false,
+            isVerseBarBelow: false
+        })
     }
 
     render() {
@@ -213,8 +213,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setInteractivatedVerseIndex,
-        setIsVerseBarAbove,
-        setIsVerseBarBelow
+        updateToggleStore
     }, dispatch)
 )
 

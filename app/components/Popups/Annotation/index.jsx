@@ -13,22 +13,22 @@ import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
 const mapStateToProps = ({
     toggleStore: {
         isCarouselShown,
+        isLyricExpanded,
         isScoreShown,
-        isTitleShown,
-        isLyricExpanded
+        isTitleShown
     },
     renderStore: { canCarouselRender },
     deviceStore: { deviceIndex },
     renderedStore: { renderedAnnotationIndex },
     selectedWikiIndex
 }) => ({
-    isScoreShown,
+    isCarouselShown,
     isLyricExpanded,
+    isScoreShown,
+    isTitleShown,
     deviceIndex,
     canCarouselRender,
     renderedAnnotationIndex,
-    isCarouselShown,
-    isTitleShown,
     selectedWikiIndex
 })
 

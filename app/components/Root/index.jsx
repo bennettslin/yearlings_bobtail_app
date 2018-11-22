@@ -52,6 +52,8 @@ class Root extends Component {
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isOverlayShown: PropTypes.bool.isRequired,
+        isVerseBarAbove: PropTypes.bool.isRequired,
+        isVerseBarBelow: PropTypes.bool.isRequired,
         isCarouselNavShowable: PropTypes.bool.isRequired,
 
         deviceIndex: PropTypes.number.isRequired,
@@ -75,8 +77,6 @@ class Root extends Component {
         showShrunkNavIcon: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
-        isVerseBarAbove: PropTypes.bool.isRequired,
-        isVerseBarBelow: PropTypes.bool.isRequired,
 
         // From parent.
         eventHandlers: PropTypes.shape({
@@ -388,8 +388,10 @@ const mapStateToProps = ({
         isAdminOn,
         isAutoScroll,
         isCarouselShown,
+        isDotsSlideShown,
         isLyricExpanded,
-        isDotsSlideShown
+        isVerseBarAbove,
+        isVerseBarBelow
     },
     transientStore: {
         isOverlayShown,
@@ -414,9 +416,7 @@ const mapStateToProps = ({
         isScoresTipsInMain,
         isTwoRowMenu,
         showShrunkNavIcon
-    },
-    isVerseBarAbove,
-    isVerseBarBelow
+    }
 }) => ({
     appMounted,
     isAdminOn,

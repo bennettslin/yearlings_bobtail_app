@@ -28,9 +28,11 @@ const
         isAutoScroll: true,
         isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
         isDotsSlideShown: false,
+        isLyricExpanded: false,
         isScoreShown: false,
         isTitleShown: false,
-        isLyricExpanded: false
+        isVerseBarAbove: false,
+        isVerseBarBelow: false
     },
 
     TRANSIENT_DEFAULTS = {

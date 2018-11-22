@@ -1,4 +1,5 @@
 module.exports = {
+    ACCESS_STORE: 'accessStore',
     TOGGLE_STORE: 'toggleStore',
     TRANSIENT_STORE: 'transientStore',
     DEVICE_STORE: 'deviceStore',

@@ -19,9 +19,9 @@ class TransientListener extends Component {
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
@@ -80,9 +80,9 @@ class TransientListener extends Component {
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
     toggleStore: {
+        isLyricExpanded,
         isScoreShown,
-        isTitleShown,
-        isLyricExpanded
+        isTitleShown
     },
     renderedStore: {
         renderedAnnotationIndex,
@@ -93,9 +93,9 @@ const mapStateToProps = ({
     selectedWikiIndex
 }) => ({
     deviceIndex,
+    isLyricExpanded,
     isScoreShown,
     isTitleShown,
-    isLyricExpanded,
     renderedAnnotationIndex,
     isRenderedLogue,
     selectedOverviewIndex,

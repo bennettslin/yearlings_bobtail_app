@@ -14,7 +14,7 @@ import RenderableReducer from './renderable'
 import RenderedReducer from './rendered'
 import ResponsiveReducer from './responsive'
 import {
-    CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer
+    CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, ShownBookColumnIndexReducer
 } from './session'
 import SliderReducer from './slider'
 import SongReducer from './song'
@@ -60,8 +60,6 @@ const rootReducer = combineReducers({
 
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,
-    isVerseBarAbove: IsVerseBarAboveReducer,
-    isVerseBarBelow: IsVerseBarBelowReducer,
     shownBookColumnIndex: ShownBookColumnIndexReducer,
 
     [SLIDER_STORE]: SliderReducer,

@@ -18,8 +18,10 @@ const mapStateToProps = ({
         renderedVerseIndex
     },
     sliderStore: { sliderVerseIndex },
-    isVerseBarAbove,
-    isVerseBarBelow
+    toggleStore: {
+        isVerseBarAbove,
+        isVerseBarBelow
+    }
 }) => ({
     canLyricRender,
     renderedSongIndex,

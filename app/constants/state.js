@@ -24,8 +24,6 @@ module.exports = {
     // For selecting a wiki anchor from an unselected carousel annotation.
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
-    IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
-    IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 
     SELECTED_SONG_INDEX: 'selectedSongIndex',

@@ -20,9 +20,9 @@ class TipsManager extends Component {
         // Through Redux.
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
@@ -125,9 +125,9 @@ const mapStateToProps = ({
     toggleStore: {
         isCarouselShown,
         isDotsSlideShown,
+        isLyricExpanded,
         isScoreShown,
-        isTitleShown,
-        isLyricExpanded
+        isTitleShown
     },
     songStore: {
         selectedSongIndex,
@@ -138,13 +138,13 @@ const mapStateToProps = ({
     selectedTipsIndex,
     selectedWikiIndex
 }) => ({
-    isScoreShown,
-    isTitleShown,
-    isLyricExpanded,
-    selectedAnnotationIndex,
-    isSelectedLogue,
     isCarouselShown,
     isDotsSlideShown,
+    isLyricExpanded,
+    isScoreShown,
+    isTitleShown,
+    selectedAnnotationIndex,
+    isSelectedLogue,
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTipsIndex,
