@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -13,7 +13,7 @@ import {
     ENTER
 } from 'constants/access'
 
-class NavNavigation extends Component {
+class NavNavigation extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -23,10 +23,7 @@ class NavNavigation extends Component {
         shownBookColumnIndex: PropTypes.number.isRequired,
 
         // From parent.
-        getTryNavigateNav: PropTypes.func.isRequired,
-        handleNavSongSelect: PropTypes.func.isRequired,
-        handleNavBookSelect: PropTypes.func.isRequired,
-        handleSongAccess: PropTypes.func.isRequired
+        getTryNavigateNav: PropTypes.func.isRequired
     }
 
     componentDidMount() {

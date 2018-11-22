@@ -1,6 +1,6 @@
 // PureComponent that handles all user events.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -12,7 +12,6 @@ import Root from '../../components/Root'
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
 import { getClientX } from 'helpers/domHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getHandlers
@@ -27,7 +26,7 @@ import {
     VERSE_SCROLL
 } from 'constants/dom'
 
-class EventHandler extends Component {
+class EventHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -57,16 +56,6 @@ class EventHandler extends Component {
     componentDidMount() {
         // Focus lyric section when app is mounted.
         this.focusElementForAccess()
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.props.selectedDotKeys,
-            nextProps: nextProps.selectedDotKeys
-        })
     }
 
     componentDidUpdate(prevProps) {

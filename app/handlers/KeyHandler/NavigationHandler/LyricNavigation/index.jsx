@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -8,7 +8,7 @@ import {
     ENTER
 } from 'constants/access'
 
-class LyricNavigation extends Component {
+class LyricNavigation extends PureComponent {
 
     static propTypes = {
         // Through Redux.

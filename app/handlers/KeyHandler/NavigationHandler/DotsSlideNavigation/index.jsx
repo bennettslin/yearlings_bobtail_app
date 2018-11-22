@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -11,7 +11,7 @@ import {
 } from 'constants/access'
 import { ALL_DOT_KEYS } from 'constants/dots'
 
-class DotsSlideNavigation extends Component {
+class DotsSlideNavigation extends PureComponent {
 
     static propTypes = {
         // Through Redux.
