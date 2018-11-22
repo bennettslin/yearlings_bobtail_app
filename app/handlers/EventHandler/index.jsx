@@ -21,11 +21,6 @@ import {
 import { REFERENCE } from 'constants/dots'
 import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
 
-// import {
-//     DISABLED,
-//     OVERVIEW_OPTIONS
-// } from 'constants/options'
-
 import {
     CAROUSEL_SCROLL,
     LYRIC_ANNOTATION_SCROLL,
@@ -36,6 +31,7 @@ class EventHandler extends Component {
 
     static propTypes = {
         // Through Redux.
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -717,12 +713,11 @@ class EventHandler extends Component {
     handleBodyClick = (e) => {
         this.stopPropagation(e)
 
-        // If overview is open when tips is open, leave overview open.
-        const exemptOverview = !this.props.selectedTipsIndex
-
         this._closeSections({
             exemptLyric: true,
-            exemptOverview
+
+            // If overview is open when tips is open, leave overview open.
+            exemptOverview: !this.props.selectedTipsIndex
         })
 
         // Return focus to lyric section so it can have scroll access.
@@ -812,7 +807,6 @@ class EventHandler extends Component {
         leaveOpenPopups
 
     }) {
-
         const {
             isScoreShown,
             isTitleShown,
@@ -945,24 +939,7 @@ class EventHandler extends Component {
         }
     }
 
-    // _closeDotsIfOverviewWillShow () {
-    //     /**
-    //      * Helper method to close the dots section when selecting new song and
-    //      * overview is not disabled.
-    //      */
-    //     const { isDotsSlideShown } = this.props
-
-    //     if (isDotsSlideShown) {
-    //         const selectedOverviewOption = OVERVIEW_OPTIONS[this.props.selectedOverviewIndex]
-
-    //         if (selectedOverviewOption !== DISABLED) {
-    //             // this.props.selectDotsExpand()
-    //         }
-    //     }
-    // }
-
     focusElementForAccess = () => {
-
         const {
                 isHiddenLyric,
                 isLyricExpanded

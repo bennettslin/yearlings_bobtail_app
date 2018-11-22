@@ -48,6 +48,8 @@ class Button extends Component {
     }
 
     _handleClick = (e) => {
+        e.stopPropagation()
+
         const { isDisabled } = this.props
 
         if (!isDisabled) {
