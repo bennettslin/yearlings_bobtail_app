@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import { updateToggleStore } from 'flux/actions/toggle'
 
 import TryAdmin from '../../modules/TryAdmin'
+import TryDotsSlide from '../../modules/TryDotsSlide'
 import TryLyric from '../../modules/TryLyric'
 import TryScore from '../../modules/TryScore'
 import TryTitle from '../../modules/TryTitle'
@@ -46,7 +47,7 @@ import {
     AUDIO_PREVIOUS_SONG_KEY,
     AUDIO_NEXT_SONG_KEY,
     CAROUSEL_TOGGLE_KEY,
-    DOTS_SECTION_EXPAND_KEY,
+    DOTS_SLIDE_TOGGLE_KEY,
     LYRIC_COLUMN_TOGGLE_KEY,
     LYRIC_SECTION_EXPAND_KEY,
     LYRIC_SCROLL_TOGGLE_KEY,
@@ -262,7 +263,7 @@ class KeyHandler extends Component {
                 selectedWikiIndex,
                 isSelectedLogue,
                 selectedAnnotationIndex,
-                selectedDotsIndex,
+                isDotsSlideShown,
                 selectedCarouselNavIndex,
 
                 eventHandlers
@@ -296,7 +297,7 @@ class KeyHandler extends Component {
                 } = this._handleAnnotationNavigation(e, keyName))
 
             // We're in dots section.
-            } else if (selectedDotsIndex) {
+            } else if (isDotsSlideShown) {
                 keyWasRegistered = this._handleDotsNavigation(e, keyName)
 
             // We're in nav section.
@@ -622,6 +623,9 @@ class KeyHandler extends Component {
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleCarouselNavToggle(e)
                 break
+            case DOTS_SLIDE_TOGGLE_KEY:
+                keyWasRegistered = this.tryToggleDotsSlide()
+                break
             case LYRIC_COLUMN_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleLyricColumnSelect(e)
                 annotationIndexWasAccessed = keyWasRegistered
@@ -649,9 +653,6 @@ class KeyHandler extends Component {
                 break
             case TITLE_TOGGLE_KEY:
                 keyWasRegistered = this.tryToggleTitle()
-                break
-            case DOTS_SECTION_EXPAND_KEY:
-                keyWasRegistered = eventHandlers.handleDotsSectionToggle(e)
                 break
             default:
                 keyWasRegistered = false
@@ -693,8 +694,8 @@ class KeyHandler extends Component {
             eventHandlers.handleOverviewToggle(e, true)
 
         // Close dots popup.
-        } else if (props.selectedDotsIndex) {
-            eventHandlers.handleDotsSectionToggle(e)
+        } else if (props.isDotsSlideShown) {
+            this.tryToggleDotsSlide(false)
 
         // Close annotation popup.
         } else if (props.selectedAnnotationIndex) {
@@ -715,6 +716,10 @@ class KeyHandler extends Component {
         this.tryToggleAdmin = tryToggleAdmin
     }
 
+    setTryToggleDotsSlide = (tryToggleDotsSlide) => {
+        this.tryToggleDotsSlide = tryToggleDotsSlide
+    }
+
     setTryToggleLyric = (tryToggleLyric) => {
         this.tryToggleLyric = tryToggleLyric
     }
@@ -733,6 +738,9 @@ class KeyHandler extends Component {
                 <TryAdmin
                     {...{ getTryToggleAdmin: this.setTryToggleAdmin }}
                 />
+                <TryDotsSlide
+                    {...{ getTryToggleDotsSlide: this.setTryToggleDotsSlide }}
+                />
                 <TryLyric
                     {...{ getTryToggleLyric: this.setTryToggleLyric }}
                 />
@@ -749,6 +757,7 @@ class KeyHandler extends Component {
 
 const mapStateToProps = ({
     toggleStore: {
+        isDotsSlideShown,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
@@ -762,7 +771,6 @@ const mapStateToProps = ({
     },
     selectedAccessIndex,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
     selectedDotKeys,
     selectedOverviewIndex,
     selectedTipsIndex,
@@ -783,7 +791,7 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     isSelectedLogue,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
+    isDotsSlideShown,
     selectedDotKeys,
     selectedOverviewIndex,
     selectedTipsIndex,

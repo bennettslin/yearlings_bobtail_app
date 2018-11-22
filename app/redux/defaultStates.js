@@ -17,6 +17,7 @@ const
         isAccessOn: false,
         isAdminOn: false,
         isAutoScroll: true,
+        isDotsSlideShown: false,
         isScoreShown: false,
         isTitleShown: false,
         isLyricExpanded: false

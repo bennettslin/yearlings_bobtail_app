@@ -11,7 +11,6 @@ import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 import {
     SHOWN,
     HIDDEN,
-    DISABLED,
     OVERVIEW_OPTIONS
 } from 'constants/options'
 
@@ -19,18 +18,17 @@ class OverviewManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
-        selectedDotsIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
-        selectDotsExpand: PropTypes.func.isRequired,
         selectOverviewIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -91,14 +89,6 @@ class OverviewManager extends Component {
                 selectedOverviewIndex = 0 // Shown.
             }
 
-            /**
-             * If overview is being shown, collapse lyric column and hide dots
-             * section.
-             */
-            if (OVERVIEW_OPTIONS[selectedOverviewIndex] !== DISABLED) {
-                this.props.selectDotsExpand(false)
-            }
-
         } else {
             /**
              * If called when something else is visible, skip hidden option and
@@ -134,6 +124,7 @@ class OverviewManager extends Component {
 
 const mapStateToProps = ({
     toggleStore: {
+        isDotsSlideShown,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
@@ -144,7 +135,6 @@ const mapStateToProps = ({
         isSelectedLogue
     },
     selectedCarouselNavIndex,
-    selectedDotsIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
     selectedWikiIndex
@@ -155,7 +145,7 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     isSelectedLogue,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
+    isDotsSlideShown,
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTipsIndex,

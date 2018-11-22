@@ -19,16 +19,18 @@ import {
 const mapStateToProps = ({
     renderStore: { canLyricRender },
     renderedStore: { renderedAnnotationIndex },
-    toggleStore: { isLyricExpanded },
+    toggleStore: {
+        isDotsSlideShown,
+        isLyricExpanded
+    },
     selectedCarouselNavIndex,
-    selectedDotsIndex,
     selectedDotKeys
 }) => ({
     canLyricRender,
     isLyricExpanded,
     renderedAnnotationIndex,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
+    isDotsSlideShown,
     selectedDotKeys
 })
 
@@ -40,7 +42,8 @@ class LyricAccess extends Component {
         canLyricRender: PropTypes.bool.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
-        selectedDotsIndex: PropTypes.number.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         selectedDotKeys: PropTypes.object.isRequired
     }
 
@@ -48,17 +51,13 @@ class LyricAccess extends Component {
         return nextProps.canLyricRender
     }
 
-    // componentDidUpdate() {
-    //     logger.warn('LyricAccess rendered.')
-    // }
-
     render() {
 
         const {
                 isLyricExpanded,
                 renderedAnnotationIndex,
                 selectedCarouselNavIndex,
-                selectedDotsIndex,
+                isDotsSlideShown,
                 selectedDotKeys
             } = this.props,
 
@@ -73,7 +72,7 @@ class LyricAccess extends Component {
                     (
                         // Must show carousel and not have dots section open...
                         selectedCarouselNavIndex &&
-                        !selectedDotsIndex
+                        !isDotsSlideShown
                     ) || (
                         // ... or else have lyric section open.
                         isLyricExpanded
@@ -82,7 +81,7 @@ class LyricAccess extends Component {
             ),
 
             showUpDown = Boolean(
-                !selectedDotsIndex &&
+                !isDotsSlideShown &&
                 !renderedAnnotationIndex
             )
 

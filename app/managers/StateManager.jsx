@@ -14,6 +14,7 @@ import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
 import DotsManager from './DotsManager'
+import DotsSlideManager from './DotsSlideManager'
 import LogManager from './LogManager'
 import LyricManager from './LyricManager'
 import NavManager from './NavManager'
@@ -99,10 +100,6 @@ class StateManager extends Component {
 
     toggleDot = (payload) => {
         return this.dotsManager.toggleDot(payload)
-    }
-
-    selectDotsExpand = (payload) => {
-        return this.dotsManager.selectDotsExpand(payload)
     }
 
     accessDot = (payload) => {
@@ -364,7 +361,6 @@ class StateManager extends Component {
                     selectAudioOption={this.selectAudioOption}
                     selectBookColumn={this.selectBookColumn}
                     toggleDot={this.toggleDot}
-                    selectDotsExpand={this.selectDotsExpand}
                     selectLyricColumn={this.selectLyricColumn}
                     determineVerseBars={this.determineVerseBars}
                     resetVerseBars={this.resetVerseBars}
@@ -395,8 +391,8 @@ class StateManager extends Component {
                 />
                 <DotsManager
                     setRef={this._setDotsManagerRef}
-                    accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
                 />
+                <DotsSlideManager />
                 <LogManager />
                 <LyricManager
                     setRef={this._setLyricManagerRef}
@@ -407,7 +403,6 @@ class StateManager extends Component {
                 />
                 <OverviewManager
                     setRef={this._setOverviewManagerRef}
-                    selectDotsExpand={this.selectDotsExpand}
                 />
                 <PlayerManager
                     setRef={this._setPlayerManagerRef}
@@ -453,7 +448,6 @@ class StateManager extends Component {
                 />
                 <TipsManager
                     setRef={this._setTipsManagerRef}
-                    selectDotsExpand={this.selectDotsExpand}
                 />
                 <VerseManager
                     setRef={this._setVerseManagerRef}

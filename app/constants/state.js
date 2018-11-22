@@ -56,7 +56,6 @@ module.exports = {
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
     SELECTED_CAROUSEL_NAV_INDEX: 'selectedCarouselNavIndex',
     SELECTED_DOT_KEYS: 'selectedDotKeys',
-    SELECTED_DOTS_INDEX: 'selectedDotsIndex',
     SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_TIPS_INDEX: 'selectedTipsIndex',

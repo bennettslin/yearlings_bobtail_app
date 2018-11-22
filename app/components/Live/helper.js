@@ -24,7 +24,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleSliderTouchBegin,
             handleCarouselNavToggle,
             handleDotSelect,
-            handleDotsSectionToggle,
             handleNavSongSelect,
             handleNavBookSelect,
             handleLyricColumnSelect,
@@ -126,7 +125,6 @@ export const getOrganisedHandlersFromProps = (props) => {
                 handleScrollUponCarouselRender
             },
             leftShelfToggleSectionHandlers: {
-                handleDotsSectionToggle,
                 handleOverviewToggle
             },
             dotsSectionHandlers: {

@@ -4,11 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { accessDotIndex } from 'flux/actions/access'
-
-import {
-    selectDotKey,
-    selectDotsIndex
-} from 'flux/actions/storage'
+import { selectDotKey } from 'flux/actions/storage'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -18,17 +14,13 @@ class DotsManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedDotsIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
 
         accessDotIndex: PropTypes.func.isRequired,
         selectDotKey: PropTypes.func.isRequired,
-        selectDotsIndex: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired,
-        accessAnnotationIfCurrentInvalid: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -55,32 +47,6 @@ class DotsManager extends Component {
         this.accessDot(selectedDotIndex)
     }
 
-    selectDotsExpand(
-        selectedDotsValue = (this.props.selectedDotsIndex + 1) % 2
-    ) {
-        // If no argument passed, then just toggle between on and off.
-
-        // Dots section cannot be changed in logue.
-        if (this.props.isSelectedLogue) {
-            return false
-        }
-
-        if (typeof selectedDotsValue === 'boolean') {
-            selectedDotsValue = selectedDotsValue ? 1 : 0
-        }
-
-        /**
-         * If closing dots section, check if accessed annotation index is now
-         * invalid, and change if so.
-         */
-        if (!selectedDotsValue) {
-            this.props.accessAnnotationIfCurrentInvalid()
-        }
-
-        this.props.selectDotsIndex(selectedDotsValue)
-        return true
-    }
-
     accessDot(accessedDotIndex) {
         this.props.accessDotIndex(accessedDotIndex)
     }
@@ -91,20 +57,15 @@ class DotsManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedDotsIndex,
-    selectedDotKeys,
-    songStore: { isSelectedLogue }
+    selectedDotKeys
 }) => ({
-    selectedDotsIndex,
-    selectedDotKeys,
-    isSelectedLogue
+    selectedDotKeys
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         accessDotIndex,
-        selectDotKey,
-        selectDotsIndex
+        selectDotKey
     }, dispatch)
 )
 

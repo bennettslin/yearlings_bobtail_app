@@ -21,10 +21,10 @@ import {
 import { REFERENCE } from 'constants/dots'
 import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
 
-import {
-    DISABLED,
-    OVERVIEW_OPTIONS
-} from 'constants/options'
+// import {
+//     DISABLED,
+//     OVERVIEW_OPTIONS
+// } from 'constants/options'
 
 import {
     CAROUSEL_SCROLL,
@@ -83,9 +83,23 @@ class EventHandler extends Component {
             this.focusElementForAccess()
         }
 
+        this.handleDotsSlideOnIfNeeded(prevProps)
         this.handleLyricOnIfNeeded(prevProps)
         this.handleScoreOnIfNeeded(prevProps)
         this.handleTitleOnIfNeeded(prevProps)
+    }
+
+    handleDotsSlideOnIfNeeded(prevProps) {
+        const
+            { isDotsSlideShown } = this.props,
+            { isDotsSlideShown: wasDotsSlideShown } = prevProps
+
+        if (isDotsSlideShown && !wasDotsSlideShown) {
+            this._closeSections({
+                exemptDots: true,
+                continuePastClosingPopups: true
+            })
+        }
     }
 
     handleLyricOnIfNeeded(prevProps) {
@@ -318,7 +332,7 @@ class EventHandler extends Component {
         const songSelected = this.props.selectSong({
             direction: -1
         })
-        this._closeDotsIfOverviewWillShow()
+        // this._closeDotsIfOverviewWillShow()
         if (songSelected) {
             this.stopPropagation(e)
         }
@@ -329,7 +343,7 @@ class EventHandler extends Component {
         const songSelected = this.props.selectSong({
             direction: 1
         })
-        this._closeDotsIfOverviewWillShow()
+        // this._closeDotsIfOverviewWillShow()
         if (songSelected) {
             this.stopPropagation(e)
         }
@@ -389,22 +403,6 @@ class EventHandler extends Component {
         this.stopPropagation(e)
         this.props.toggleDot(dotIndex)
         return true
-    }
-
-    /********
-     * DOTS *
-     ********/
-
-    handleDotsSectionToggle = (e) => {
-        const dotsToggled = this.props.selectDotsExpand()
-        if (dotsToggled) {
-            this.stopPropagation(e)
-            this._closeSections({
-                exemptDots: true,
-                continuePastClosingPopups: true
-            })
-        }
-        return dotsToggled
     }
 
     handleLyricWheel = (
@@ -623,7 +621,7 @@ class EventHandler extends Component {
 
         // Carousel annotation was clicked.
         if (closeLeftShelf) {
-            this.props.selectDotsExpand(false)
+            this.props.updateToggleStore({ isDotsSlideShown: false })
             this.props.selectOverview({
                 justHideIfShown: true
             })
@@ -857,7 +855,7 @@ class EventHandler extends Component {
         }
 
         if (!exemptDots) {
-            this.props.selectDotsExpand(false)
+            this.props.updateToggleStore({ isDotsSlideShown: false })
         }
 
         if (!exemptLyric) {
@@ -947,21 +945,21 @@ class EventHandler extends Component {
         }
     }
 
-    _closeDotsIfOverviewWillShow () {
-        /**
-         * Helper method to close the dots section when selecting new song and
-         * overview is not disabled.
-         */
-        const { selectedDotsIndex } = this.props
+    // _closeDotsIfOverviewWillShow () {
+    //     /**
+    //      * Helper method to close the dots section when selecting new song and
+    //      * overview is not disabled.
+    //      */
+    //     const { isDotsSlideShown } = this.props
 
-        if (selectedDotsIndex) {
-            const selectedOverviewOption = OVERVIEW_OPTIONS[this.props.selectedOverviewIndex]
+    //     if (isDotsSlideShown) {
+    //         const selectedOverviewOption = OVERVIEW_OPTIONS[this.props.selectedOverviewIndex]
 
-            if (selectedOverviewOption !== DISABLED) {
-                this.props.selectDotsExpand()
-            }
-        }
-    }
+    //         if (selectedOverviewOption !== DISABLED) {
+    //             // this.props.selectDotsExpand()
+    //         }
+    //     }
+    // }
 
     focusElementForAccess = () => {
 
@@ -1022,6 +1020,7 @@ const mapStateToProps = ({
         isSelectedLogue
     },
     toggleStore: {
+        isDotsSlideShown,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
@@ -1042,11 +1041,12 @@ const mapStateToProps = ({
     selectedCarouselNavIndex,
     isSelectedLogue,
     selectedDotKeys,
+    isDotsSlideShown,
     isScoreShown,
+    isTitleShown,
     isLyricExpanded,
     selectedSongIndex,
     selectedTipsIndex,
-    isTitleShown,
     selectedVerseIndex,
     selectedWikiIndex,
     interactivatedVerseIndex,

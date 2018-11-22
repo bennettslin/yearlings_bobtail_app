@@ -17,18 +17,15 @@ import {
 import {
     AUDIO_OPTIONS,
     OVERVIEW_OPTIONS,
-    TIPS_OPTIONS,
-    DISABLED
+    TIPS_OPTIONS
 } from 'constants/options'
 import {
     SELECTED_ANNOTATION_INDEX,
     SELECTED_AUDIO_OPTION_INDEX,
     SELECTED_CAROUSEL_NAV_INDEX,
     SELECTED_DOT_KEYS,
-    SELECTED_DOTS_INDEX,
     SELECTED_LYRIC_COLUMN_INDEX,
     SELECTED_OVERVIEW_INDEX,
-    SELECTED_SCORE_INDEX,
     SELECTED_SONG_INDEX,
     SELECTED_TIPS_INDEX,
     SELECTED_VERSE_INDEX,
@@ -118,22 +115,7 @@ const _validateValueForKey = (key) => {
             break
         }
 
-        /**
-             * Don't show dots section if overview or tips will show.
-             */
-        case SELECTED_DOTS_INDEX:
-        {
-            const selectedOverviewIndex = _validateValueForKey(SELECTED_OVERVIEW_INDEX),
-                selectedTipsIndex = _validateValueForKey(SELECTED_TIPS_INDEX),
-                overviewWillShow = OVERVIEW_OPTIONS[selectedOverviewIndex] !== DISABLED,
-                tipsWillShow = TIPS_OPTIONS[selectedTipsIndex] !== DISABLED
-
-            isValid = isNumber && parsedValue <= 1 && !overviewWillShow && !tipsWillShow
-            break
-        }
-
         // These must be a simple 0 or 1.
-        case SELECTED_SCORE_INDEX:
         case SELECTED_CAROUSEL_NAV_INDEX:
             isValid = isNumber && parsedValue <= 1
             break

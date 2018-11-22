@@ -22,12 +22,12 @@ const mapStateToProps = ({
     },
     toggleStore: {
         isAccessOn,
+        isDotsSlideShown,
         isLyricExpanded
     },
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
     interactivatedVerseIndex
 }) => ({
     canLyricRender,
@@ -41,7 +41,7 @@ const mapStateToProps = ({
     accessedAnnotationAnchorIndex,
     isAccessOn,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
+    isDotsSlideShown,
     interactivatedVerseIndex
 })
 
@@ -56,9 +56,9 @@ class TextLyricAnchor extends Component {
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
         isAccessOn: PropTypes.bool.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
-        selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         wikiIndex: PropTypes.number,
@@ -142,7 +142,7 @@ class TextLyricAnchor extends Component {
 
                 isAccessOn,
                 selectedCarouselNavIndex,
-                selectedDotsIndex,
+                isDotsSlideShown,
                 interactivatedVerseIndex,
                 isLyricExpanded,
 
@@ -169,7 +169,7 @@ class TextLyricAnchor extends Component {
                  * UnitDot, and TextLyricAnchor. TextLyricAnchor is a little
                  * different.
                  */
-                !selectedDotsIndex &&
+                !isDotsSlideShown &&
                 interactivatedVerseIndex < 0 &&
 
                 // Let popup annotation show anchors when carousel is hidden.

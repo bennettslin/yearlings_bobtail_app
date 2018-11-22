@@ -11,7 +11,6 @@ import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 import {
     SHOWN,
     HIDDEN,
-    DISABLED,
     TIPS_OPTIONS
 } from 'constants/options'
 
@@ -19,18 +18,17 @@ class TipsManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
-        selectedDotsIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
-        selectDotsExpand: PropTypes.func.isRequired,
         selectTipsIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -71,7 +69,7 @@ class TipsManager extends Component {
         justHideIfShown,
         justShowIfHidden
     }) {
-        // We shouldn't be able to change overview if it's a logue.
+        // We shouldn't be able to change tips if it's a logue.
         if (this.props.isSelectedLogue) {
             return false
         }
@@ -88,14 +86,6 @@ class TipsManager extends Component {
         } else if (justShowIfHidden) {
             if (TIPS_OPTIONS[selectedTipsIndex] === HIDDEN) {
                 selectedTipsIndex = 0 // Shown.
-            }
-
-            /**
-             * If tip is being shown, collapse lyric column and hide dots
-             * section.
-             */
-            if (TIPS_OPTIONS[selectedTipsIndex] !== DISABLED) {
-                this.props.selectDotsExpand(false)
             }
 
         } else {
@@ -133,6 +123,7 @@ class TipsManager extends Component {
 
 const mapStateToProps = ({
     toggleStore: {
+        isDotsSlideShown,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
@@ -143,7 +134,6 @@ const mapStateToProps = ({
         isSelectedLogue
     },
     selectedCarouselNavIndex,
-    selectedDotsIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
     selectedWikiIndex
@@ -154,7 +144,7 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     isSelectedLogue,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
+    isDotsSlideShown,
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTipsIndex,

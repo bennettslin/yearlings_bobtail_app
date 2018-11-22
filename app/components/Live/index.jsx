@@ -274,7 +274,6 @@ Live.propTypes = {
     handleSliderTouchBegin: PropTypes.func.isRequired,
     handleCarouselNavToggle: PropTypes.func.isRequired,
     handleDotSelect: PropTypes.func.isRequired,
-    handleDotsSectionToggle: PropTypes.func.isRequired,
     handleNavSongSelect: PropTypes.func.isRequired,
     handleNavBookSelect: PropTypes.func.isRequired,
     handleLyricColumnSelect: PropTypes.func.isRequired,

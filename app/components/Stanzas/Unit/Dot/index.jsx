@@ -18,10 +18,10 @@ const mapStateToProps = ({
     renderedStore: { renderedAnnotationIndex },
     toggleStore: {
         isAccessOn,
+        isDotsSlideShown,
         isLyricExpanded
     },
     selectedCarouselNavIndex,
-    selectedDotsIndex,
     interactivatedVerseIndex
 }) => ({
     accessedAnnotationIndex,
@@ -30,7 +30,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     renderedAnnotationIndex,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
+    isDotsSlideShown,
     interactivatedVerseIndex
 })
 
@@ -46,10 +46,10 @@ class UnitDot extends Component {
         accessedAnnotationIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
-        selectedCarouselNavIndex: PropTypes.number.isRequired,
-        selectedDotsIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
@@ -95,7 +95,7 @@ class UnitDot extends Component {
                 accessedAnnotationIndex,
                 isAccessOn,
                 selectedCarouselNavIndex,
-                selectedDotsIndex,
+                isDotsSlideShown,
                 interactivatedVerseIndex,
                 isLyricExpanded
             } = this.props,
@@ -112,7 +112,7 @@ class UnitDot extends Component {
                  * TODO: This conditional is repeated in Carousel,
                  * UnitDot, and TextLyricAnchor. Consolidate?
                  */
-                !selectedDotsIndex &&
+                !isDotsSlideShown &&
                 interactivatedVerseIndex < 0 &&
                 (
                     selectedCarouselNavIndex ||

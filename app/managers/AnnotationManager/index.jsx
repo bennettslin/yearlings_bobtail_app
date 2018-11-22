@@ -24,6 +24,7 @@ class AnnotationManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        isDotsSlideShown: PropTypes.bool.isRequired,
         showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -85,6 +86,7 @@ class AnnotationManager extends Component {
         }
 
         this.deselectAnnotationIfNeeded(prevProps)
+        this.accessNewAnnotationIfNeeded(prevProps)
     }
 
     deselectAnnotationIfNeeded(prevProps) {
@@ -104,6 +106,20 @@ class AnnotationManager extends Component {
             )
         ) {
             this.deselectAnnotation()
+        }
+    }
+
+    accessNewAnnotationIfNeeded(prevProps) {
+        /**
+         * If closing dots slide, check if accessed annotation index is now
+         * invalid, and change if so.
+         */
+        const
+            { isDotsSlideShown } = this.props,
+            { isDotsSlideShown: wasDotsSlideShown } = prevProps
+
+        if (!isDotsSlideShown && wasDotsSlideShown) {
+            this.accessAnnotationIfCurrentInvalid()
         }
     }
 
@@ -263,6 +279,7 @@ class AnnotationManager extends Component {
 }
 
 const mapStateToProps = ({
+    toggleStore: { isDotsSlideShown },
     responsiveStore: { showOneOfTwoLyricColumns },
     songStore: {
         selectedSongIndex,
@@ -273,6 +290,7 @@ const mapStateToProps = ({
     selectedDotKeys,
     selectedLyricColumnIndex
 }) => ({
+    isDotsSlideShown,
     showOneOfTwoLyricColumns,
     selectedSongIndex,
     selectedAnnotationIndex,

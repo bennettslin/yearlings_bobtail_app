@@ -20,11 +20,11 @@ const mapStateToProps = ({
     responsiveStore: { isHiddenCarouselNav },
     toggleStore: {
         isAccessOn,
+        isDotsSlideShown,
         isLyricExpanded
     },
     accessedAnnotationIndex,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
     interactivatedVerseIndex
 }) => ({
     canCarouselRender,
@@ -35,7 +35,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     accessedAnnotationIndex,
     selectedCarouselNavIndex,
-    selectedDotsIndex,
+    isDotsSlideShown,
     interactivatedVerseIndex
 })
 
@@ -49,9 +49,9 @@ class Carousel extends Component {
         renderedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
-        selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
 
         // From parent.
@@ -134,7 +134,7 @@ class Carousel extends Component {
                 accessedAnnotationIndex,
                 isAccessOn,
                 selectedCarouselNavIndex,
-                selectedDotsIndex,
+                isDotsSlideShown,
                 interactivatedVerseIndex,
                 isLyricExpanded,
 
@@ -188,7 +188,7 @@ class Carousel extends Component {
                                  * Carousel, UnitDot, and
                                  * TextLyricAnchor. Consolidate?
                                  */
-                                !selectedDotsIndex &&
+                                !isDotsSlideShown &&
                                 interactivatedVerseIndex < 0 &&
                                 (
                                     selectedCarouselNavIndex ||

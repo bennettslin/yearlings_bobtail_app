@@ -1,36 +1,47 @@
-// Toggle button to show and hide dots section.
+// Button to toggle dots slide.
 
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component, Fragment as ___ } from 'react'
+// import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import TryDotsSlide from '../../../modules/TryDotsSlide'
 import Button from '../../Button'
-import { DOTS_SECTION_EXPAND_KEY } from 'constants/access'
+
+import { DOTS_SLIDE_TOGGLE_KEY } from 'constants/access'
 import { DOTS_SLIDE_BUTTON_KEY } from 'constants/buttons'
 
-const dotsTogglePropTypes = {
-    // From parent.
-        handleDotsSectionToggle: PropTypes.func.isRequired
-    },
+class DotsSlideToggle extends Component {
 
-    DotsSlideToggle = ({
+    handleDotsSlideClick = () => {
+        this.tryToggleDotsSlide()
+    }
 
-        handleDotsSectionToggle
+    setTryToggleDotsSlide = (tryToggleDotsSlide) => {
+        this.tryToggleDotsSlide = tryToggleDotsSlide
+    }
 
-    }) => (
-        <div className={cx(
-            'DotsSlideToggle',
-            'LeftShelf__child'
-        )}>
-            <Button
-                isLargeSize
-                buttonName={DOTS_SLIDE_BUTTON_KEY}
-                accessKey={DOTS_SECTION_EXPAND_KEY}
-                handleButtonClick={handleDotsSectionToggle}
-            />
-        </div>
-    )
-
-DotsSlideToggle.propTypes = dotsTogglePropTypes
+    render() {
+        return (
+            <___>
+                <div className={cx(
+                    'DotsSlideToggle',
+                    'LeftShelf__child'
+                )}>
+                    <Button
+                        isLargeSize
+                        {...{
+                            buttonName: DOTS_SLIDE_BUTTON_KEY,
+                            accessKey: DOTS_SLIDE_TOGGLE_KEY,
+                            handleButtonClick: this.handleDotsSlideClick
+                        }}
+                    />
+                </div>
+                <TryDotsSlide
+                    {...{ getTryToggleDotsSlide: this.setTryToggleDotsSlide }}
+                />
+            </___>
+        )
+    }
+}
 
 export default DotsSlideToggle

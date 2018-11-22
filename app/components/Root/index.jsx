@@ -49,6 +49,9 @@ class Root extends Component {
 
         isAccessOn: PropTypes.bool.isRequired,
         isAdminOn: PropTypes.bool.isRequired,
+        isAutoScroll: PropTypes.bool.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
 
@@ -64,13 +67,11 @@ class Root extends Component {
         sliderVerseIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        selectedDotsIndex: PropTypes.number.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
 
-        isLyricExpanded: PropTypes.bool.isRequired,
         showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         showShrunkNavIcon: PropTypes.bool.isRequired,
@@ -78,7 +79,6 @@ class Root extends Component {
         isTwoRowMenu: PropTypes.bool.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
-        isAutoScroll: PropTypes.bool.isRequired,
 
         // From parent.
         eventHandlers: PropTypes.shape({
@@ -170,7 +170,7 @@ class Root extends Component {
                 isRenderedLogue,
                 selectedCarouselNavIndex,
                 selectedDotKeys,
-                selectedDotsIndex,
+                isDotsSlideShown,
                 selectedLyricColumnIndex,
                 selectedOverviewIndex,
                 isScoreShown,
@@ -279,7 +279,7 @@ class Root extends Component {
                     renderedAnnotationIndex ?
                         'RM__annotationShown' : 'RM__annotationHidden',
                     { 'RM__carouselExpanded': selectedCarouselNavIndex },
-                    selectedDotsIndex ? 'RM__dotsShown' : 'RM__dotsHidden',
+                    isDotsSlideShown ? 'RM__dotsShown' : 'RM__dotsHidden',
                     isLyricExpanded ?
                         'RM__lyricExpanded' : 'RM__lyricCollapsed',
                     { 'RM__navExpanded': !selectedCarouselNavIndex },
@@ -394,7 +394,6 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
-    selectedDotsIndex,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
@@ -404,6 +403,7 @@ const mapStateToProps = ({
         isAccessOn,
         isAdminOn,
         isAutoScroll,
+        isDotsSlideShown,
         isScoreShown,
         isTitleShown,
         isLyricExpanded
@@ -441,7 +441,7 @@ const mapStateToProps = ({
     isAccessOn,
     selectedCarouselNavIndex,
     selectedDotKeys,
-    selectedDotsIndex,
+    isDotsSlideShown,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,

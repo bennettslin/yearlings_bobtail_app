@@ -18,7 +18,7 @@ import {
 import SliderReducer from './slider'
 import SongReducer from './song'
 import {
-    AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, TipsIndexReducer, WikiIndexReducer
+    AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, LyricColumnIndexReducer, OverviewIndexReducer, TipsIndexReducer, WikiIndexReducer
 } from './storage'
 
 import {
@@ -68,7 +68,6 @@ const rootReducer = combineReducers({
     selectedAudioOptionIndex: AudioOptionIndexReducer,
     selectedCarouselNavIndex: CarouselNavIndexReducer,
     selectedDotKeys: DotKeysReducer,
-    selectedDotsIndex: DotsIndexReducer,
     selectedLyricColumnIndex: LyricColumnIndexReducer,
     selectedOverviewIndex: OverviewIndexReducer,
     selectedTipsIndex: TipsIndexReducer,

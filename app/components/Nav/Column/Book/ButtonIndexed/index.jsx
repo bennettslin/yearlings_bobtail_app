@@ -9,14 +9,16 @@ import NavButton from '../Button'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    toggleStore: { isAccessOn },
+    toggleStore: {
+        isAccessOn,
+        isDotsSlideShown
+    },
     songStore: { selectedSongIndex },
-    selectedDotsIndex,
     accessedNavSongIndex
 }) => ({
     isAccessOn,
     selectedSongIndex,
-    selectedDotsIndex,
+    isDotsSlideShown,
     accessedNavSongIndex
 })
 
@@ -26,8 +28,8 @@ class NavButtonIndexed extends Component {
         // Through Redux.
         accessedNavSongIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedDotsIndex: PropTypes.number.isRequired,
 
         // From parent.
         songIndex: PropTypes.number.isRequired
@@ -50,7 +52,7 @@ class NavButtonIndexed extends Component {
                 songIndex,
                 isAccessOn,
                 selectedSongIndex,
-                selectedDotsIndex,
+                isDotsSlideShown,
                 accessedNavSongIndex,
 
                 ...other
@@ -61,7 +63,7 @@ class NavButtonIndexed extends Component {
             // Don't show access icon if dots slide is open.
             isAccessed =
                 isAccessOn &&
-                !selectedDotsIndex &&
+                !isDotsSlideShown &&
                 accessedNavSongIndex === songIndex
 
         return (

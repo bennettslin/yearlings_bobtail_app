@@ -12,9 +12,9 @@ import { ENTER } from 'constants/access'
 import { DOT_DESCRIPTIONS } from 'constants/dots'
 
 const mapStateToProps = ({
-    selectedDotsIndex
+    toggleStore: { isDotsSlideShown }
 }) => ({
-    selectedDotsIndex
+    isDotsSlideShown
 })
 
 /*************
@@ -25,7 +25,7 @@ class DotsSlideSelect extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedDotsIndex: PropTypes.number.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
 
         // From parent.
         dotIndex: PropTypes.number.isRequired,
@@ -50,7 +50,7 @@ class DotsSlideSelect extends Component {
         if (this.state.isInteractivated) {
 
             // Also deinteractivate if dots section has been hidden.
-            if (!this.props.selectedDotsIndex ||
+            if (!this.props.isDotsSlideShown ||
                 (!this.props.hasInteractivatedDotText && prevProps.hasInteractivatedDotText)) {
 
                 this.setState({
@@ -84,7 +84,7 @@ class DotsSlideSelect extends Component {
         const {
             /* eslint-disable no-unused-vars */
             dotIndex,
-            selectedDotsIndex,
+            isDotsSlideShown,
             handleDotSelect,
             hasInteractivatedDotText,
             setHasInteractivatedDotText,
