@@ -1,22 +1,26 @@
 // Section for user to select and deselect dots.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import DotsSlideSelects from './Selects'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    selectedDotKeys
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    }
 }) => ({
+    dotsBitNumber,
     selectedDotKeys
 })
 
-class DotsSlide extends Component {
+class DotsSlide extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
@@ -25,19 +29,6 @@ class DotsSlide extends Component {
 
     state = {
         hasInteractivatedDotText: 0
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.state,
-            nextProps: nextState
-        }) || !getPropsAreShallowEqual({
-            props: this.props.selectedDotKeys,
-            nextProps: nextProps.selectedDotKeys
-        })
     }
 
     _onContainerClick = (e) => {

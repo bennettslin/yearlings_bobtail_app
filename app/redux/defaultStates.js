@@ -2,6 +2,7 @@
 
 import {
     getFromStorage,
+    getDotsFromStorage,
     getBoolFromStorage
 } from './storageHelper'
 
@@ -16,6 +17,17 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX
 } from 'constants/state'
+
+// import {
+//     NARRATIVE,
+//     BACKSTORY,
+//     OBSERVATION,
+//     PUN,
+//     REFERENCE,
+//     SONGWRITING,
+//     WORMHOLE,
+//     AFTERWORD
+// } from 'constants/dots'
 
 import {
     IS_ACCESS_ON,
@@ -55,6 +67,8 @@ const
         ceilingHeight: 0,
         floorHeight: 0
     },
+
+    DOTS_DEFAULTS = getDotsFromStorage(),
 
     RESPONSIVE_DEFAULTS = {
         isHiddenLyric: false,
@@ -123,6 +137,7 @@ export {
     TOGGLE_DEFAULTS,
     TRANSIENT_DEFAULTS,
     DEVICE_DEFAULTS,
+    DOTS_DEFAULTS,
     RESPONSIVE_DEFAULTS,
     RENDERABLE_DEFAULTS,
     RENDER_DEFAULTS,

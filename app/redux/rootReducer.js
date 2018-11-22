@@ -2,10 +2,9 @@ import { combineReducers } from 'redux'
 import {
     AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer
 } from './access/reducer'
-import ToggleReducer from './toggle/reducer'
-import TransientReducer from './transient/reducer'
 import { IsPlayingReducer } from './audio/reducer'
 import DeviceReducer from './device/reducer'
+import DotsReducer from './dots/reducer'
 import {
     AppMountedReducer, CanPlayThroughsReducer, IsScoreLoadedReducer
 } from './load/reducer'
@@ -19,19 +18,22 @@ import {
 import SliderReducer from './slider/reducer'
 import SongReducer from './song/reducer'
 import {
-    AudioOptionIndexReducer, DotKeysReducer, LyricColumnIndexReducer, OverviewIndexReducer, TipsIndexReducer, WikiIndexReducer
+    AudioOptionIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, TipsIndexReducer, WikiIndexReducer
 } from './storage/reducer'
+import ToggleReducer from './toggle/reducer'
+import TransientReducer from './transient/reducer'
 
 import {
-    TOGGLE_STORE,
-    TRANSIENT_STORE,
     DEVICE_STORE,
-    RENDERABLE_STORE,
+    DOTS_STORE,
     RENDER_STORE,
+    RENDERABLE_STORE,
     RENDERED_STORE,
     RESPONSIVE_STORE,
+    SLIDER_STORE,
     SONG_STORE,
-    SLIDER_STORE
+    TOGGLE_STORE,
+    TRANSIENT_STORE
 } from './storeKeys'
 
 const rootReducer = combineReducers({
@@ -47,6 +49,7 @@ const rootReducer = combineReducers({
     [TOGGLE_STORE]: ToggleReducer,
     [TRANSIENT_STORE]: TransientReducer,
     [DEVICE_STORE]: DeviceReducer,
+    [DOTS_STORE]: DotsReducer,
 
     appMounted: AppMountedReducer,
     canPlayThroughs: CanPlayThroughsReducer,
@@ -67,7 +70,6 @@ const rootReducer = combineReducers({
 
     // TODO: Put some of these in toggle store.
     selectedAudioOptionIndex: AudioOptionIndexReducer,
-    selectedDotKeys: DotKeysReducer,
     selectedLyricColumnIndex: LyricColumnIndexReducer,
     selectedOverviewIndex: OverviewIndexReducer,
     selectedTipsIndex: TipsIndexReducer,

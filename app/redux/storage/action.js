@@ -1,11 +1,8 @@
 // Actions for state persisted in user's local storage.
-import {
-    setInStorage,
-    setDotInStorage
-} from '../storageHelper'
+import { setInStorage } from '../storageHelper'
 
 import {
-    SELECTED_AUDIO_OPTION_INDEX, SELECTED_DOT_KEYS, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_WIKI_INDEX
+    SELECTED_AUDIO_OPTION_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_WIKI_INDEX
 } from 'constants/state'
 
 export const selectAudioOptionIndex = (selectedAudioOptionIndex = 0) => {
@@ -13,17 +10,6 @@ export const selectAudioOptionIndex = (selectedAudioOptionIndex = 0) => {
     return {
         type: SELECTED_AUDIO_OPTION_INDEX,
         payload: selectedAudioOptionIndex
-    }
-}
-
-export const selectDotKey = (selectedDotKey, isSelected = false) => {
-    setDotInStorage(selectedDotKey, isSelected)
-    return {
-        type: SELECTED_DOT_KEYS,
-        payload: {
-            selectedDotKey,
-            isSelected
-        }
     }
 }
 

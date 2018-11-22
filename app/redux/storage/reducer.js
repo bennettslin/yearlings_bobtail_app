@@ -1,13 +1,12 @@
 // Reducers for state persisted in user's local storage.
 import {
-    SELECTED_AUDIO_OPTION_INDEX, SELECTED_DOT_KEYS, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_WIKI_INDEX
+    SELECTED_AUDIO_OPTION_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_TIPS_INDEX, SELECTED_WIKI_INDEX
 } from 'constants/state'
 
 import { getFromStorage } from '../storageHelper'
 
 const
     storedAudioOptionIndex = getFromStorage(SELECTED_AUDIO_OPTION_INDEX),
-    storedDotKeys = getFromStorage(SELECTED_DOT_KEYS),
     storedLyricColumnIndex = getFromStorage(SELECTED_LYRIC_COLUMN_INDEX),
     storedOverviewIndex = getFromStorage(SELECTED_OVERVIEW_INDEX),
     storedTipsIndex = getFromStorage(SELECTED_TIPS_INDEX),
@@ -17,23 +16,6 @@ export const AudioOptionIndexReducer = (state = storedAudioOptionIndex, action) 
     switch (action.type) {
         case SELECTED_AUDIO_OPTION_INDEX:
             return action.payload
-        default:
-            return state
-    }
-}
-
-export const DotKeysReducer = (state = storedDotKeys, action) => {
-    switch (action.type) {
-        case SELECTED_DOT_KEYS: {
-            const {
-                    selectedDotKey,
-                    isSelected
-                } = action.payload,
-                // Copy state object.
-                newState = Object.assign({}, state)
-            newState[selectedDotKey] = isSelected
-            return newState
-        }
         default:
             return state
     }

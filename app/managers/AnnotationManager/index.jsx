@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -11,8 +11,6 @@ import {
 import { updateRenderedStore } from 'flux/rendered/action'
 import { updateSongStore } from 'flux/song/action'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
 import {
     getAnnotationIndexForVerseIndex,
     getAnnotationIndexForDirection,
@@ -20,7 +18,7 @@ import {
     shouldShowAnnotationForColumn
 } from './helper'
 
-class AnnotationManager extends Component {
+class AnnotationManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -29,6 +27,7 @@ class AnnotationManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
 
@@ -68,16 +67,6 @@ class AnnotationManager extends Component {
     componentDidMount() {
         this.props.setRef(this)
         this.accessAnnotation()
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.props.selectedDotKeys,
-            nextProps: nextProps.selectedDotKeys
-        })
     }
 
     componentDidUpdate(prevProps) {
@@ -287,7 +276,10 @@ const mapStateToProps = ({
         selectedAnnotationIndex
     },
     accessedAnnotationAnchorIndex,
-    selectedDotKeys,
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    },
     selectedLyricColumnIndex
 }) => ({
     isDotsSlideShown,
@@ -296,6 +288,7 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     selectedVerseIndex,
     accessedAnnotationAnchorIndex,
+    dotsBitNumber,
     selectedDotKeys,
     selectedLyricColumnIndex
 })

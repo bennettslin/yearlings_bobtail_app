@@ -1,6 +1,6 @@
-// Component that handles all user events.
+// PureComponent that handles all user events.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -27,7 +27,7 @@ import {
     VERSE_SCROLL
 } from 'constants/dom'
 
-class EventHandler extends Component {
+class EventHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -37,6 +37,7 @@ class EventHandler extends Component {
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
+        dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -1003,7 +1004,10 @@ const mapStateToProps = ({
         isScoreShown,
         isTitleShown
     },
-    selectedDotKeys,
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    },
     selectedTipsIndex,
     selectedWikiIndex,
     interactivatedVerseIndex,
@@ -1021,6 +1025,7 @@ const mapStateToProps = ({
     isScoreShown,
     isTitleShown,
     isSelectedLogue,
+    dotsBitNumber,
     selectedDotKeys,
     selectedSongIndex,
     selectedTipsIndex,

@@ -30,7 +30,6 @@ module.exports = {
     SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
-    SELECTED_DOT_KEYS: 'selectedDotKeys',
     SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_TIPS_INDEX: 'selectedTipsIndex',

@@ -13,5 +13,6 @@ module.exports = {
 
     IS_ACCESS_ON: 'isAccessOn',
     IS_ADMIN_ON: 'isAdminOn',
-    IS_CAROUSEL_SHOWN: 'isCarouselShown'
+    IS_CAROUSEL_SHOWN: 'isCarouselShown',
+    SELECTED_DOT_KEYS: 'selectedDotKeys'
 }

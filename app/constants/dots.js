@@ -5,7 +5,9 @@ const AFTERWORD = 'afterword',
     WORMHOLE = 'wormhole',
     PUN = 'pun',
     REFERENCE = 'reference',
-    SONGWRITING = 'songwriting'
+    SONGWRITING = 'songwriting',
+
+    INITIAL_DOTS_BIT_NUMBER = 7
 
 module.exports = {
     AFTERWORD,
@@ -29,17 +31,6 @@ module.exports = {
         AFTERWORD
     ],
 
-    // STYLE_LOGIC_DOT_LETTERS: [
-    //     NARRATIVE[0],
-    //     BACKSTORY[0],
-    //     OBSERVATION[0],
-    //     PUN[0],
-    //     REFERENCE[0],
-    //     SONGWRITING[0],
-    //     WORMHOLE[0],
-    //     AFTERWORD[0]
-    // ],
-
     DOT_DESCRIPTIONS: {
         [NARRATIVE]: 'the story',
         [BACKSTORY]: 'backstory description',
@@ -49,6 +40,7 @@ module.exports = {
         [SONGWRITING]: 'music description',
         [WORMHOLE]: 'wormhole description',
         [AFTERWORD]: 'after the album'
-    }
+    },
 
+    INITIAL_DOTS_BIT_NUMBER
 }

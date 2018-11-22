@@ -3,7 +3,7 @@
  * deal with as little state change as possible.
  */
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -39,7 +39,7 @@ import {
     getStanzaIndexForVerseIndex
 } from './helper'
 
-class Root extends Component {
+class Root extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -67,6 +67,7 @@ class Root extends Component {
         isRenderedLogue: PropTypes.bool.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
+        dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
@@ -378,11 +379,14 @@ class Root extends Component {
 const mapStateToProps = ({
     appMounted,
     interactivatedVerseIndex,
-    selectedDotKeys,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
     isPlaying,
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    },
     toggleStore: {
         isAccessOn,
         isAdminOn,
@@ -427,6 +431,7 @@ const mapStateToProps = ({
     isCarouselNavShowable,
     interactivatedVerseIndex,
     isAccessOn,
+    dotsBitNumber,
     selectedDotKeys,
     isDotsSlideShown,
     selectedLyricColumnIndex,

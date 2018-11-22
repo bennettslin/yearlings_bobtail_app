@@ -15,10 +15,14 @@ import { getAccessibleAnnotationAnchorsLength } from './helper'
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
-    selectedDotKeys
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    }
 }) => ({
     canCarouselRender,
     renderedSongIndex,
+    dotsBitNumber,
     selectedDotKeys
 })
 
@@ -32,6 +36,7 @@ class Annotation extends Component {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
+        dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.

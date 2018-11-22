@@ -1,23 +1,22 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { accessDotIndex } from 'flux/access/action'
-import { selectDotKey } from 'flux/storage/action'
-
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { updateDotsStore } from 'flux/dots/action'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 
-class DotsManager extends Component {
+class DotsManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
 
         accessDotIndex: PropTypes.func.isRequired,
-        selectDotKey: PropTypes.func.isRequired,
+        updateDotsStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -27,21 +26,13 @@ class DotsManager extends Component {
         this.props.setRef(this)
     }
 
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.props.selectedDotKeys,
-            nextProps: nextProps.selectedDotKeys
-        })
-    }
-
     toggleDot(selectedDotIndex) {
         const selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
             isSelected = !this.props.selectedDotKeys[selectedDotKey]
 
-        this.props.selectDotKey(selectedDotKey, isSelected)
+        this.props.updateDotsStore({
+            [selectedDotKey]: isSelected
+        })
 
         // Make most recently toggled dot the accessed dot.
         this.accessDot(selectedDotIndex)
@@ -57,15 +48,19 @@ class DotsManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedDotKeys
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    }
 }) => ({
+    dotsBitNumber,
     selectedDotKeys
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         accessDotIndex,
-        selectDotKey
+        updateDotsStore
     }, dispatch)
 )
 

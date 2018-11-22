@@ -1,6 +1,6 @@
-// Component that handles all user events from keyboard.
+// PureComponent that handles all user events from keyboard.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -65,13 +65,15 @@ import {
     TIPS_OPTIONS
 } from 'constants/options'
 
-class KeyHandler extends Component {
+class KeyHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
+        dotsBitNumber: PropTypes.number.isRequired,
+        selectedDotKeys: PropTypes.object.isRequired,
 
         eventHandlers: PropTypes.shape({
             // TODO: Specify which events are used. This isn't complete.
@@ -774,7 +776,10 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         isSelectedLogue
     },
-    selectedDotKeys,
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    },
     selectedOverviewIndex,
     selectedTipsIndex,
     selectedWikiIndex,
@@ -795,6 +800,7 @@ const mapStateToProps = ({
     isHiddenLyric,
     selectedAnnotationIndex,
     isSelectedLogue,
+    dotsBitNumber,
     selectedDotKeys,
     selectedOverviewIndex,
     selectedTipsIndex,

@@ -1,6 +1,4 @@
-import React, {
-    Component, Fragment
-} from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -24,17 +22,21 @@ const mapStateToProps = ({
         isDotsSlideShown,
         isLyricExpanded
     },
-    selectedDotKeys
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    }
 }) => ({
     canLyricRender,
     isLyricExpanded,
     renderedAnnotationIndex,
     isCarouselShown,
     isDotsSlideShown,
+    dotsBitNumber,
     selectedDotKeys
 })
 
-class LyricAccess extends Component {
+class LyricAccess extends PureComponent {
 
     static propTypes = {
 
@@ -44,6 +46,7 @@ class LyricAccess extends Component {
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired
     }
 
@@ -86,7 +89,7 @@ class LyricAccess extends Component {
             )
 
         return (
-            <Fragment>
+            <___>
                 <AccessLetters
                     accessIconsName="lyricLeftRight"
                     showIfAccessed={showLeftRight}
@@ -105,7 +108,7 @@ class LyricAccess extends Component {
                         ARROW_DOWN
                     ]}
                 />
-            </Fragment>
+            </___>
         )
     }
 }

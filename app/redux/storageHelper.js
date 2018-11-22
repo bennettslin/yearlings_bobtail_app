@@ -9,7 +9,8 @@ import {
 } from 'helpers/bitHelper'
 
 import {
-    ALL_DOT_KEYS
+    ALL_DOT_KEYS,
+    INITIAL_DOTS_BIT_NUMBER
 } from 'constants/dots'
 import {
     LYRIC_COLUMN_KEYS
@@ -25,13 +26,14 @@ import {
     SELECTED_ANNOTATION_INDEX,
 
     SELECTED_AUDIO_OPTION_INDEX,
-    SELECTED_DOT_KEYS,
     SELECTED_LYRIC_COLUMN_INDEX,
     SELECTED_OVERVIEW_INDEX,
     SELECTED_TIPS_INDEX,
     SELECTED_WIKI_INDEX,
     WINDOW_STORAGE
 } from 'constants/state'
+
+import { SELECTED_DOT_KEYS } from './storeKeys'
 
 const _getValidatedStoredSong = () => {
     const selectedSongIndex = _validateValueForKey(SELECTED_SONG_INDEX)
@@ -119,6 +121,7 @@ const _validateValueForKey = (key) => {
             isValid = isNumber
     }
 
+    // TODO: Remove dots.
     /**
      * If value is invalid, select and persist the default value of 0 for
      * all other keys but selected dot keys.
@@ -135,6 +138,7 @@ const _validateValueForKey = (key) => {
     }
 }
 
+// TODO: Remove dots.
 const getFromStorage = (key) => {
     const validatedValue = _validateValueForKey(key)
 
@@ -157,16 +161,51 @@ const setInStorage = (key, value) => {
     WINDOW_STORAGE[key] = value
 }
 
-const setDotInStorage = (dotKey, isActive) => {
+const _getValidatedDotsBitNumber = () => {
+    const
+        parsedBitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
+        isNumber = !isNaN(parsedBitNumber),
+        maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length),
+        isValid = isNumber && parsedBitNumber < maxBitNumber
+
+    if (isValid) {
+        return parsedBitNumber
+
+    } else {
+        // If invalid, reset in storage to default state.
+        setInStorage(SELECTED_DOT_KEYS, INITIAL_DOTS_BIT_NUMBER)
+        return INITIAL_DOTS_BIT_NUMBER
+    }
+}
+
+const getDotsFromStorage = () => {
+    const validatedValue = _getValidatedDotsBitNumber(),
+
+        // Get true-false object from bit number.
+        dotsBitNumber = validatedValue,
+        dotsObject = convertBitNumberToTrueFalseKeys({
+            keysArray: ALL_DOT_KEYS,
+            bitNumber: dotsBitNumber
+        })
+
+    return {
+        dotsBitNumber,
+        ...dotsObject
+    }
+}
+
+const setDotInStorage = (key, value) => {
     const bitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
         newBitNumber = setNewValueInBitNumber({
             keysArray: ALL_DOT_KEYS,
             bitNumber,
-            key: dotKey,
-            value: isActive
+            key,
+            value
         })
 
     setInStorage(SELECTED_DOT_KEYS, newBitNumber)
+
+    return newBitNumber
 }
 
 const getBoolFromStorage = (key) => {
@@ -188,7 +227,10 @@ const setBoolInStorage = (key, value) => {
 export {
     getFromStorage,
     setInStorage,
+
+    getDotsFromStorage,
     setDotInStorage,
+
     getBoolFromStorage,
     setBoolInStorage
 }

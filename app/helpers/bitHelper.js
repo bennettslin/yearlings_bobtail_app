@@ -57,7 +57,8 @@ export const convertBitNumberToTrueFalseKeys = ({
         1
     )
 
-    let trueFalseObject = {}
+    let trueFalseObject = {},
+        returnObject = {}
 
     for (let index = keysArray.length - 1; index >= 0; index--) {
         // Start from end.
@@ -71,7 +72,13 @@ export const convertBitNumberToTrueFalseKeys = ({
             bitNumber -= powerNumber
         }
     }
-    return trueFalseObject
+
+    // Ensure that the keys are in the original order.
+    keysArray.forEach(key => {
+        returnObject[key] = trueFalseObject[key]
+    })
+
+    return returnObject
 }
 
 export const getValueInBitNumber = ({
