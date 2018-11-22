@@ -39,7 +39,6 @@ class WindowListener extends Component {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-
         updateDeviceStore: PropTypes.func.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired

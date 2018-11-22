@@ -18,6 +18,7 @@ import DotsSlideListener from '../listeners/DotsSlideListener'
 import LogManager from './LogManager'
 import LyricManager from './LyricManager'
 import NavManager from './NavManager'
+import TransientListener from '../listeners/TransientListener'
 import OverviewManager from './OverviewManager'
 import PlayerManager from './PlayerManager'
 import RenderManager from './RenderManager'
@@ -401,6 +402,7 @@ class StateManager extends Component {
                 <NavManager
                     setRef={this._setNavManagerRef}
                 />
+                <TransientListener />
                 <OverviewManager
                     setRef={this._setOverviewManagerRef}
                 />

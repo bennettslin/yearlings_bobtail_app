@@ -3,7 +3,6 @@ import {
     getSongIsLogue,
     getSongObject
 } from '../../helpers/dataHelper'
-import { getIsOverlayingAnnotation } from 'helpers/responsiveHelper'
 
 export const getSingleShownLyricColumnKey = ({
     showOneOfTwoLyricColumns,
@@ -12,31 +11,6 @@ export const getSingleShownLyricColumnKey = ({
     return showOneOfTwoLyricColumns
         && selectedLyricColumnIndex >= 0 ?
         LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
-}
-
-export const getShowOverlay = ({
-    deviceIndex,
-    isLyricExpanded,
-    renderedAnnotationIndex,
-    isScoreShown,
-    isTitleShown,
-    selectedWikiIndex
-}) => {
-
-    const isOverlayingAnnotation = getIsOverlayingAnnotation({
-        deviceIndex,
-        isLyricExpanded
-    })
-
-    return (
-        isTitleShown ||
-        isScoreShown ||
-        Boolean(selectedWikiIndex) ||
-        (
-            Boolean(renderedAnnotationIndex) &&
-            isOverlayingAnnotation
-        )
-    )
 }
 
 export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {

@@ -24,7 +24,8 @@ const
     },
 
     TRANSIENT_DEFAULTS = {
-        doShowOverlay: false
+        isOverlayShown: false,
+        isCarouselNavShowable: false
     },
 
     DEVICE_DEFAULTS = {

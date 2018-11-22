@@ -12,7 +12,6 @@ class DotsSlideListener extends Component {
         // Through Redux.
         isDotsSlideShown: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-
         updateToggleStore: PropTypes.func.isRequired
     }
 

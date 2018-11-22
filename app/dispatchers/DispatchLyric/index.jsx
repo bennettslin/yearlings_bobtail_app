@@ -13,7 +13,6 @@ class DispatchLyric extends Component {
         isLyricExpanded: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.

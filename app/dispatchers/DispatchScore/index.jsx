@@ -13,7 +13,6 @@ class DispatchScore extends Component {
         isScoreShown: PropTypes.bool.isRequired,
         isScoreShowable: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.

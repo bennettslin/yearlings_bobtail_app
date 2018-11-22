@@ -35,7 +35,6 @@ import {
 } from 'helpers/responsiveHelper'
 
 import {
-    getShowOverlay,
     getSingleShownLyricColumnKey,
     getStanzaIndexForVerseIndex
 } from './helper'
@@ -52,8 +51,8 @@ class Root extends Component {
         isAutoScroll: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        isScoreShown: PropTypes.bool.isRequired,
-        isTitleShown: PropTypes.bool.isRequired,
+        isOverlayShown: PropTypes.bool.isRequired,
+        isCarouselNavShowable: PropTypes.bool.isRequired,
 
         deviceIndex: PropTypes.number.isRequired,
         isPlaying: PropTypes.bool.isRequired,
@@ -70,7 +69,6 @@ class Root extends Component {
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
 
         showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
@@ -173,14 +171,13 @@ class Root extends Component {
                 isDotsSlideShown,
                 selectedLyricColumnIndex,
                 selectedOverviewIndex,
-                isScoreShown,
                 selectedTipsIndex,
-                isTitleShown,
-                selectedWikiIndex,
                 isPlaying,
                 isSliderTouched,
                 isSliderMoving,
                 isLyricExpanded,
+                isOverlayShown,
+                isCarouselNavShowable,
                 renderedSongIndex,
                 renderedVerseIndex,
                 sliderVerseIndex,
@@ -214,24 +211,8 @@ class Root extends Component {
                 selectedLyricColumnIndex
             }),
 
-            showOverlay = getShowOverlay({
-                deviceIndex,
-                isLyricExpanded,
-                renderedAnnotationIndex,
-                isScoreShown,
-                isTitleShown,
-                selectedWikiIndex
-            }),
-
             overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
             tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
-
-            isCarouselNavShowable =
-                !isRenderedLogue
-                && !showOverlay
-                && !isLyricExpanded
-                && !overviewShown
-                && !tipsShown,
 
             areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
 
@@ -271,7 +252,7 @@ class Root extends Component {
                     { 'RM__mobileNotPhone': isTabletOrMini },
 
                     isAccessOn ? 'RM__accessOn' : 'RM__accessOff',
-                    showOverlay ? 'RM__overlayShown' : 'RM__overlayHidden',
+                    isOverlayShown ? 'RM__overlayShown' : 'RM__overlayHidden',
 
                     isRenderedLogue ? 'RM__logue' : 'RM__song',
                     isPlaying ? 'RM__isPlaying' : 'RM__isPaused',
@@ -283,8 +264,9 @@ class Root extends Component {
                     isLyricExpanded ?
                         'RM__lyricExpanded' : 'RM__lyricCollapsed',
                     { 'RM__navExpanded': !selectedCarouselNavIndex },
-                    overviewShown ? 'RM__overviewShown' : 'RM__overviewHidden',
-                    tipsShown ? 'RM__tipsShown' : 'RM__tipsHidden',
+
+                    overviewShown && 'RM__overviewShown',
+                    tipsShown && 'RM__tipsShown',
 
                     showShrunkNavIcon ?
                         'RM__navIconShrunk' : 'RM__navIconStatic',
@@ -401,16 +383,17 @@ const mapStateToProps = ({
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    selectedWikiIndex,
     isPlaying,
     toggleStore: {
         isAccessOn,
         isAdminOn,
         isAutoScroll,
         isDotsSlideShown,
-        isScoreShown,
-        isTitleShown,
         isLyricExpanded
+    },
+    transientStore: {
+        isOverlayShown,
+        isCarouselNavShowable
     },
     deviceStore: { deviceIndex },
     renderStore: { canCarouselRender },
@@ -438,9 +421,9 @@ const mapStateToProps = ({
     appMounted,
     isAdminOn,
     isAutoScroll,
-    isScoreShown,
-    isTitleShown,
     isLyricExpanded,
+    isOverlayShown,
+    isCarouselNavShowable,
     interactivatedVerseIndex,
     isAccessOn,
     selectedCarouselNavIndex,
@@ -449,7 +432,6 @@ const mapStateToProps = ({
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    selectedWikiIndex,
     showOneOfTwoLyricColumns,
     isPlaying,
     deviceIndex,

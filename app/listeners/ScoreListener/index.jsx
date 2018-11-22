@@ -15,7 +15,6 @@ class ScoreListener extends Component {
         isScoreShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-
         setIsScoreLoaded: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
