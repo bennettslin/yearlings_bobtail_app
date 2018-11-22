@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -36,7 +36,7 @@ const mapStateToProps = ({
     selectedDotKeys
 })
 
-class LyricAccess extends PureComponent {
+class LyricAccess extends Component {
 
     static propTypes = {
 

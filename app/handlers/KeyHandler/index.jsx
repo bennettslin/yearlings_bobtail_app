@@ -13,12 +13,10 @@ import DispatchLyric from '../../dispatchers/DispatchLyric'
 import DispatchScore from '../../dispatchers/DispatchScore'
 import DispatchTitle from '../../dispatchers/DispatchTitle'
 
-import {
-    getSongsAndLoguesCount,
-    getBookColumnIndex,
-    getWormholeLink,
-    getAnnotationObject
-} from 'helpers/dataHelper'
+import AnnotationNavigation from './AnnotationNavigation'
+import DotsSlideNavigation from './DotsSlideNavigation'
+import LyricNavigation from './LyricNavigation'
+import NavNavigation from './NavNavigation'
 
 import {
     getKeyName,
@@ -27,8 +25,6 @@ import {
 } from './helper'
 
 import {
-    ARROW_LEFT,
-    ARROW_RIGHT,
     ARROW_UP,
     ARROW_DOWN,
     PAGE_UP,
@@ -58,7 +54,6 @@ import {
     TIPS_TOGGLE_KEY,
     TITLE_TOGGLE_KEY
 } from 'constants/access'
-import { ALL_DOT_KEYS } from 'constants/dots'
 import {
     SHOWN,
     OVERVIEW_OPTIONS,
@@ -129,7 +124,7 @@ class KeyHandler extends PureComponent {
             keyName === PAGE_UP ||
             keyName === PAGE_DOWN
         ) {
-            this._determineVerseBarsWithParameters()
+            this.determineVerseBarsWithParameters()
         }
 
         this._handleKeyRegister({
@@ -227,11 +222,11 @@ class KeyHandler extends PureComponent {
             keyName === ARROW_DOWN ||
             keyName === ARROW_UP
         ) {
-            this._determineVerseBarsWithParameters(false)
+            this.determineVerseBarsWithParameters(false)
         }
     }
 
-    _determineVerseBarsWithParameters(isAutoScroll = true) {
+    determineVerseBarsWithParameters = (isAutoScroll = true) => {
         /**
          * Make duration long enough for Chrome, Firefox, and Safari. 150 is
          * fine for lyric page up and down, but 300 seems to be needed for
@@ -299,11 +294,11 @@ class KeyHandler extends PureComponent {
                 ({
                     annotationIndexWasAccessed,
                     keyWasRegistered
-                } = this._handleAnnotationNavigation(e, keyName))
+                } = this.tryNavigateAnnotation(e, keyName))
 
             // We're in dots section.
             } else if (isDotsSlideShown) {
-                keyWasRegistered = this._handleDotsNavigation(e, keyName)
+                keyWasRegistered = this.tryNavigateDotsSlide(e, keyName)
 
             // We're in nav section.
             } else if (
@@ -315,11 +310,11 @@ class KeyHandler extends PureComponent {
                 ({
                     annotationIndexWasAccessed,
                     keyWasRegistered
-                } = this._handleNavNavigation(e, keyName))
+                } = this.tryNavigateNav(e, keyName))
 
             // We're in lyrics section.
             } else if (!isHiddenLyric || isLyricExpanded) {
-                keyWasRegistered = this._handleLyricNavigation(e, keyName)
+                keyWasRegistered = this.tryNavigateLyric(e, keyName)
 
                 // If key was registered, then annotation index was accessed.
                 annotationIndexWasAccessed = keyWasRegistered
@@ -330,269 +325,6 @@ class KeyHandler extends PureComponent {
             annotationIndexWasAccessed,
             keyWasRegistered
         }
-    }
-
-    _handleAnnotationNavigation = (e, keyName) => {
-        const { props } = this,
-            { eventHandlers } = props
-
-        let { accessedAnnotationAnchorIndex } = props,
-            annotationIndexWasAccessed = false,
-            keyWasRegistered = true
-
-        switch (keyName) {
-            case ARROW_LEFT:
-                annotationIndexWasAccessed = true
-                eventHandlers.handleAnnotationPrevious(e)
-                break
-            case ARROW_RIGHT:
-                annotationIndexWasAccessed = true
-                eventHandlers.handleAnnotationNext(e)
-                break
-            case ARROW_UP:
-            case ARROW_DOWN: {
-                // If not accessed on, do nothing and just turn access on.
-                if (props.isAccessOn) {
-                    const direction = keyName === ARROW_UP ? -1 : 1
-                    eventHandlers.handleAnnotationAnchorAccess(
-                        direction
-                    )
-                }
-                break
-            }
-            case ENTER: {
-                const {
-                        selectedSongIndex,
-                        selectedAnnotationIndex
-                    } = props,
-
-                    annotationObject = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
-
-                // TODO: Move this logic to AnnotationManager.
-                if (accessedAnnotationAnchorIndex > 0 &&
-                    annotationObject &&
-                    annotationObject.annotationAnchors &&
-                    annotationObject.annotationAnchors.length) {
-
-                    const annotationAnchorEntity = annotationObject.annotationAnchors[accessedAnnotationAnchorIndex - 1]
-
-                    // It's a wiki anchor.
-                    if (typeof annotationAnchorEntity === 'string') {
-                        eventHandlers.handleAnnotationWikiSelect(e, accessedAnnotationAnchorIndex)
-
-                    // It's a wormhole index.
-                    } else {
-                        const
-                            wormholeLink = getWormholeLink(
-                                annotationObject,
-                                annotationAnchorEntity
-                            )
-
-                        keyWasRegistered =
-                            eventHandlers.handleAnnotationWormholeSelect(
-                                e,
-                                wormholeLink
-                            )
-
-                        /**
-                         * If song was selected, then annotation index was
-                         * accessed.
-                         */
-                        annotationIndexWasAccessed = keyWasRegistered
-                    }
-
-                } else {
-                    keyWasRegistered = false
-                }
-                break
-            }
-            default:
-                keyWasRegistered = false
-                break
-        }
-
-        // Accessing annotation might scroll lyric.
-        if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            this._determineVerseBarsWithParameters()
-        }
-
-        return {
-            annotationIndexWasAccessed,
-            keyWasRegistered
-        }
-    }
-
-
-    _handleDotsNavigation = (e, keyName) => {
-        const {
-            isAccessOn,
-            eventHandlers
-        } = this.props
-
-        if (isAccessOn) {
-            const dotKeysCount = ALL_DOT_KEYS.length
-            let { accessedDotIndex } = this.props
-
-            switch (keyName) {
-                case ARROW_LEFT:
-                    accessedDotIndex = (accessedDotIndex + (dotKeysCount - 1)) % dotKeysCount
-                    break
-                case ARROW_RIGHT:
-                    accessedDotIndex = (accessedDotIndex + 1) % dotKeysCount
-                    break
-                case ARROW_UP:
-                    if (accessedDotIndex >= dotKeysCount / 2) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2)) % dotKeysCount
-                    } else if (accessedDotIndex !== 0) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2) - 1) % dotKeysCount
-                    } else {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount - 1)) % dotKeysCount
-                    }
-                    break
-                case ARROW_DOWN:
-                    if (accessedDotIndex < dotKeysCount / 2) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2)) % dotKeysCount
-                    } else if (accessedDotIndex !== dotKeysCount - 1) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2) + 1) % dotKeysCount
-                    } else {
-                        accessedDotIndex = (accessedDotIndex + 1) % dotKeysCount
-                    }
-                    break
-                case ENTER:
-                    return eventHandlers.handleDotSelect(e, accessedDotIndex)
-                default:
-                    return false
-            }
-
-            return eventHandlers.handleDotAccess(accessedDotIndex)
-        }
-
-        return false
-    }
-
-    _handleNavNavigation = (e, keyName) => {
-        const {
-            isAccessOn,
-            interactivatedVerseIndex,
-            eventHandlers
-        } = this.props
-
-        let annotationIndexWasAccessed = false,
-            keyWasRegistered = true
-
-        /**
-         * If access is off, just turn it on. Also ensure there is no
-         * interactivated verse.
-         */
-        if (isAccessOn && interactivatedVerseIndex < 0) {
-            let { accessedNavSongIndex } = this.props,
-                direction
-
-            // Skip appropriate songs if showing single book column.
-            switch (keyName) {
-                case ARROW_LEFT:
-                    direction = -1
-                    break
-                case ARROW_RIGHT:
-                    direction = 1
-                    break
-                case ENTER:
-                    keyWasRegistered = eventHandlers.handleNavSongSelect(e, accessedNavSongIndex)
-                    /**
-                     * If song was successfully selected, then annotation index
-                     * was also accessed.
-                     */
-                    annotationIndexWasAccessed = keyWasRegistered
-                    break
-                default:
-                    keyWasRegistered = false
-            }
-
-            if (direction) {
-                const { shownBookColumnIndex } = this.props,
-                    songsCount = getSongsAndLoguesCount()
-
-                accessedNavSongIndex = (accessedNavSongIndex + songsCount + direction) % songsCount
-
-                // Select the book column that contains the accessed song index.
-                if (shownBookColumnIndex !== getBookColumnIndex(accessedNavSongIndex)) {
-                    eventHandlers.handleNavBookSelect(e)
-                }
-
-                eventHandlers.handleSongAccess(accessedNavSongIndex)
-            }
-        }
-
-        return {
-            annotationIndexWasAccessed,
-            keyWasRegistered
-        }
-    }
-
-    _handleLyricNavigation = (e, keyName) => {
-        const { props } = this,
-            {
-                interactivatedVerseIndex,
-                accessedAnnotationIndex,
-                eventHandlers
-            } = props,
-
-            isVerseInteractivated = interactivatedVerseIndex > -1
-
-        let direction
-
-        switch (keyName) {
-            case ARROW_LEFT:
-                direction = -1
-                break
-            case ARROW_RIGHT:
-                direction = 1
-                break
-            case ENTER:
-                return eventHandlers.handleLyricAnnotationSelect(
-                    e, accessedAnnotationIndex
-                )
-            default:
-                return false
-        }
-
-        /**
-         * If this key will turn on access, choose annotation based on selected
-         * verse.
-         */
-        if (
-            !props.isAccessOn ||
-            isVerseInteractivated
-        ) {
-            const
-                verseIndex = isVerseInteractivated ?
-                    interactivatedVerseIndex :
-                    props.selectedVerseIndex
-
-            eventHandlers.handleAnnotationAccess({
-                verseIndex,
-                direction,
-                doScroll: true
-            })
-
-            if (isVerseInteractivated) {
-                eventHandlers.handleVerseInteractivate()
-            }
-
-        } else {
-            eventHandlers.handleAnnotationAccess({
-                annotationIndex: accessedAnnotationIndex,
-                direction,
-                doScroll: true
-            })
-        }
-
-        // Accessing annotation might scroll lyric.
-        if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            this._determineVerseBarsWithParameters()
-        }
-
-        return true
     }
 
     _handleLetterKey = (e, keyName) => {
@@ -717,6 +449,22 @@ class KeyHandler extends PureComponent {
         }
     }
 
+    setTryNavigateAnnotation = (tryNavigateAnnotation) => {
+        this.tryNavigateAnnotation = tryNavigateAnnotation
+    }
+
+    setTryNavigateDotsSlide = (tryNavigateDotsSlide) => {
+        this.tryNavigateDotsSlide = tryNavigateDotsSlide
+    }
+
+    setTryNavigateLyric = (tryNavigateLyric) => {
+        this.tryNavigateLyric = tryNavigateLyric
+    }
+
+    setTryNavigateNav = (tryNavigateNav) => {
+        this.tryNavigateNav = tryNavigateNav
+    }
+
     setTryToggleAdmin = (tryToggleAdmin) => {
         this.tryToggleAdmin = tryToggleAdmin
     }
@@ -738,8 +486,61 @@ class KeyHandler extends PureComponent {
     }
 
     render() {
+        const {
+            eventHandlers: {
+                handleAnnotationPrevious,
+                handleAnnotationNext,
+                handleAnnotationAnchorAccess,
+                handleAnnotationWikiSelect,
+                handleAnnotationWormholeSelect,
+                handleDotAccess,
+                handleDotSelect,
+                handleLyricAnnotationSelect,
+                handleAnnotationAccess,
+                handleVerseInteractivate,
+                handleNavSongSelect,
+                handleNavBookSelect,
+                handleSongAccess
+            }
+        } = this.props
+
         return (
             <___>
+                <AnnotationNavigation
+                    {...{
+                        getTryNavigateAnnotation: this.setTryNavigateAnnotation,
+                        handleAnnotationPrevious,
+                        handleAnnotationNext,
+                        handleAnnotationAnchorAccess,
+                        handleAnnotationWikiSelect,
+                        handleAnnotationWormholeSelect,
+                        determineVerseBarsWithParameters: this.determineVerseBarsWithParameters
+                    }}
+                />
+                <DotsSlideNavigation
+                    {...{
+                        getTryNavigateDotsSlide: this.setTryNavigateDotsSlide,
+                        handleDotAccess,
+                        handleDotSelect
+                    }}
+                />
+                <LyricNavigation
+                    {...{
+                        getTryNavigateLyric: this.setTryNavigateLyric,
+                        handleLyricAnnotationSelect,
+                        handleAnnotationAccess,
+                        handleVerseInteractivate,
+                        determineVerseBarsWithParameters: this.determineVerseBarsWithParameters
+                    }}
+                />
+                <NavNavigation
+                    {...{
+                        getTryNavigateNav: this.setTryNavigateNav,
+                        handleNavSongSelect,
+                        handleNavBookSelect,
+                        handleSongAccess
+                    }}
+                />
                 <DispatchAdmin
                     {...{ getTryToggleAdmin: this.setTryToggleAdmin }}
                 />
@@ -783,12 +584,7 @@ const mapStateToProps = ({
     selectedOverviewIndex,
     selectedTipsIndex,
     selectedWikiIndex,
-    accessedAnnotationIndex,
-    accessedAnnotationAnchorIndex,
-    accessedDotIndex,
-    accessedNavSongIndex,
     interactivatedVerseIndex,
-    shownBookColumnIndex,
     deviceIndex
 }) => ({
     isAccessOn,
@@ -807,12 +603,7 @@ const mapStateToProps = ({
     selectedSongIndex,
     selectedVerseIndex,
     selectedWikiIndex,
-    accessedAnnotationIndex,
-    accessedAnnotationAnchorIndex,
-    accessedDotIndex,
-    accessedNavSongIndex,
     interactivatedVerseIndex,
-    shownBookColumnIndex,
     deviceIndex
 })
 

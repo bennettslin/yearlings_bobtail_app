@@ -1,6 +1,6 @@
 // PureComponent that handles all user events.
 
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -27,7 +27,7 @@ import {
     VERSE_SCROLL
 } from 'constants/dom'
 
-class EventHandler extends PureComponent {
+class EventHandler extends Component {
 
     static propTypes = {
         // Through Redux.
