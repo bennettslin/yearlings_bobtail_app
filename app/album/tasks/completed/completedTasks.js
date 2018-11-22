@@ -3979,7 +3979,12 @@ module.exports = [
     },
     {
         taskName: `Refactor store.`,
-        workedHours: 8,
-        neededHours: 8
+        workedHours: 18,
+        neededHours: 18
+    },
+    {
+        taskName: `Fix bug where overview toggle isn't hoverable in mobile. (Left shelf zIndex wasn't high enough.)`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

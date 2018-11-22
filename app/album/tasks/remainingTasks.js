@@ -1,5 +1,25 @@
 module.exports = [
     {
+        taskName: `Have dots store that has both bit number and keys.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Refactor doublespeaker. Separate canShowDoublespeaker and isDoublespeaker.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Refactor overview and tips. Ensure they close the dots when opened from selecting a new song.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Fix bug where playing from logue causes weird jumpiness. Same with switching between songs in general sometimes.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Add unit tests`,
         workedHours: 0,
         neededHours: 8
@@ -10,17 +30,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Fix bug where popup annotation buttons are hoverable in mobile.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Fix bug where overview toggle isn't hoverable in mobile. Might need lyric shown to repro.`,
         workedHours: 0,
         neededHours: 3
     },
