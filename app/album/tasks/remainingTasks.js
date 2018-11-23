@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Have timeout manager.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Carousel nav toggling.`,
         workedHours: 0,
         neededHours: 3

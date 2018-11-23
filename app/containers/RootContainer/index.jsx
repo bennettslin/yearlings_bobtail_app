@@ -18,12 +18,8 @@ import {
     TIPS_OPTIONS
 } from 'constants/options'
 
-import {
-    PARENT_ACCESS_PREFIX
-} from 'constants/prefixes'
-
+import { PARENT_ACCESS_PREFIX } from 'constants/prefixes'
 import { DEVICE_OBJECTS } from 'constants/responsive'
-
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 
 import {

@@ -14,7 +14,7 @@ import {
 import {
     getSongsAndLoguesCount,
     getTimeForVerseIndex
-} from '../helpers/dataHelper'
+} from '../../helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 

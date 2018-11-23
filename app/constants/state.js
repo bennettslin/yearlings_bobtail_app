@@ -1,9 +1,6 @@
 module.exports = {
     WINDOW_STORAGE: window.localStorage,
 
-    // Album. Purely for debug purposes.
-    ALBUM: 'album',
-
     // Audio.
     IS_PLAYING: 'isPlaying',
 

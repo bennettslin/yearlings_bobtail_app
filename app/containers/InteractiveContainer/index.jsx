@@ -32,17 +32,13 @@ class InteractiveContainer extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        const {
-                isSliderTouched
-            } = this.props,
-            {
-                isSliderTouched: wasSliderTouched
-            } = prevProps
+        const
+            { isSliderTouched } = this.props,
+            { isSliderTouched: wasSliderTouched } = prevProps
 
         // This prevents a click event from registering after mouseUp.
-        if (
-            !isSliderTouched && wasSliderTouched
-        ) {
+        if (!isSliderTouched && wasSliderTouched) {
+
             // Let click handler get called first, then reset state.
             setTimeout(this._resetSliderMousedUp, 0)
         }
