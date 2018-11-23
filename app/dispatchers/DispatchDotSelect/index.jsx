@@ -8,7 +8,7 @@ import { updateDotsStore } from 'flux/dots/action'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 
-class DotsManager extends PureComponent {
+class DispatchDotSelect extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -19,15 +19,16 @@ class DotsManager extends PureComponent {
         updateDotsStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired
+        getTrySelectDot: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.setRef(this)
+        this.props.getTrySelectDot(this.trySelectDot)
     }
 
-    toggleDot(selectedDotIndex) {
-        const selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
+    trySelectDot = (selectedDotIndex) => {
+        const
+            selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
             isSelected = !this.props.selectedDotKeys[selectedDotKey]
 
         this.props.updateDotsStore({
@@ -35,11 +36,8 @@ class DotsManager extends PureComponent {
         })
 
         // Make most recently toggled dot the accessed dot.
-        this.accessDot(selectedDotIndex)
-    }
-
-    accessDot(accessedDotIndex) {
-        this.props.updateAccessStore({ accessedDotIndex })
+        this.props.updateAccessStore({ accessedDotIndex: selectedDotIndex })
+        return true
     }
 
     render() {
@@ -64,4 +62,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DotsManager)
+export default connect(mapStateToProps, bindDispatchToProps)(DispatchDotSelect)

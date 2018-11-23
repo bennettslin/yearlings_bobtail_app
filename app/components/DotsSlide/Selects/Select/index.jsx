@@ -1,9 +1,10 @@
 // Button in dots section to select and deselect dot.
-import React, { Component } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import DispatchDotSelect from '../../../../dispatchers/DispatchDotSelect'
 import Button from '../../../Button'
 import Dot from '../../../Dot'
 import AnchorText from '../../../Anchor/AnchorText'
@@ -31,8 +32,7 @@ class DotsSlideSelect extends Component {
         dotIndex: PropTypes.number.isRequired,
         hasInteractivatedDotText: PropTypes.number.isRequired,
         setHasInteractivatedDotText: PropTypes.func.isRequired,
-        stopPropagation: PropTypes.func.isRequired,
-        handleDotSelect: PropTypes.func.isRequired
+        stopPropagation: PropTypes.func.isRequired
     }
 
     state = {
@@ -60,8 +60,8 @@ class DotsSlideSelect extends Component {
         }
     }
 
-    _handleDotToggleClick = (e) => {
-        this.props.handleDotSelect(e, this.props.dotIndex)
+    _handleDotToggleClick = () => {
+        this.trySelectDot(this.props.dotIndex)
     }
 
     _handleTextContainerClick = (e) => {
@@ -79,13 +79,16 @@ class DotsSlideSelect extends Component {
         this.props.setHasInteractivatedDotText(isInteractivated)
     }
 
+    setTrySelectDot = (trySelectDot) => {
+        this.trySelectDot = trySelectDot
+    }
+
     render() {
 
         const {
             /* eslint-disable no-unused-vars */
             dotIndex,
             isDotsSlideShown,
-            handleDotSelect,
             hasInteractivatedDotText,
             setHasInteractivatedDotText,
             stopPropagation,
@@ -96,11 +99,18 @@ class DotsSlideSelect extends Component {
         } = this.props
 
         return (
-            <DotsSlideSelectView {...other}
-                isInteractivated={this.state.isInteractivated}
-                handleDotSelectClick={this._handleDotToggleClick}
-                handleTextContainerClick={this._handleTextContainerClick}
-            />
+            <___>
+                <DotsSlideSelectView {...other}
+                    {...{
+                        isInteractivated: this.state.isInteractivated,
+                        handleDotSelectClick: this._handleDotToggleClick,
+                        handleTextContainerClick: this._handleTextContainerClick
+                    }}
+                />
+                <DispatchDotSelect
+                    {...{ getTrySelectDot: this.setTrySelectDot }}
+                />
+            </___>
         )
     }
 }

@@ -22,7 +22,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleAudioNextSong,
             handleSliderTouchBegin,
             handleCarouselNavToggle,
-            handleDotSelect,
             handleNavSongSelect,
             handleNavBookSelect,
             handleLyricColumnSelect,
@@ -127,7 +126,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             },
             dotsSectionHandlers: {
                 handlePopupContainerClick,
-                handleDotSelect,
                 stopPropagation
             },
             navSectionHandlers: {

@@ -3,13 +3,12 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateLoadStore } from 'flux/load/action'
 
-import EventContainer from '../../containers/EventContainer'
+import EventContainer from '../EventContainer'
 import LogHandler from 'handlers/LogHandler'
 
 import AnnotationManager from '../../managers/AnnotationManager'
 import AudioManager from '../../managers/AudioManager'
 import CarouselManager from '../../managers/CarouselManager'
-import DotsManager from '../../managers/DotsManager'
 import LyricManager from '../../managers/LyricManager'
 import NavManager from '../../managers/NavManager'
 import OverviewManager from '../../managers/OverviewManager'
@@ -33,7 +32,7 @@ import WindowListener from '../../listeners/WindowListener'
 class ListenerContainer extends PureComponent {
 
     componentDidMount() {
-        logger.warn('State manager rendered.')
+        logger.warn('Listener container rendered.')
         this.props.updateLoadStore({ appMounted: true })
     }
 
@@ -71,18 +70,6 @@ class ListenerContainer extends PureComponent {
 
     selectCarouselNav = (payload) => {
         return this.carouselManager.selectCarouselNav(payload)
-    }
-
-    /********
-     * DOTS *
-     ********/
-
-    toggleDot = (payload) => {
-        return this.dotsManager.toggleDot(payload)
-    }
-
-    accessDot = (payload) => {
-        return this.dotsManager.accessDot(payload)
     }
 
     /*********
@@ -254,9 +241,6 @@ class ListenerContainer extends PureComponent {
     _setCarouselManagerRef = (node) => {
         this.carouselManager = node
     }
-    _setDotsManagerRef = (node) => {
-        this.dotsManager = node
-    }
     _setLyricManagerRef = (node) => {
         this.lyricManager = node
     }
@@ -304,7 +288,6 @@ class ListenerContainer extends PureComponent {
                     // Event manager props.
                     accessAnnotation={this.accessAnnotation}
                     accessAnnotationAnchor={this.accessAnnotationAnchor}
-                    accessDot={this.accessDot}
                     accessNavSong={this.accessNavSong}
                     touchSliderBegin={this.touchSliderBegin}
                     touchBodyMove={this.touchBodyMove}
@@ -317,7 +300,6 @@ class ListenerContainer extends PureComponent {
                     scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
                     selectBookColumn={this.selectBookColumn}
-                    toggleDot={this.toggleDot}
                     selectLyricColumn={this.selectLyricColumn}
                     determineVerseBars={this.determineVerseBars}
                     resetVerseBars={this.resetVerseBars}
@@ -344,9 +326,6 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setCarouselManagerRef}
                     accessNavSong={this.accessNavSong}
                     selectBookColumn={this.selectBookColumn}
-                />
-                <DotsManager
-                    setRef={this._setDotsManagerRef}
                 />
                 <LogHandler />
                 <LyricManager

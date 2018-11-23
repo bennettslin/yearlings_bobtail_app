@@ -133,7 +133,6 @@ class NavigationHandler extends PureComponent {
                 handleAnnotationAnchorAccess,
                 handleAnnotationWikiSelect,
                 handleAnnotationWormholeSelect,
-                handleDotSelect,
                 handleLyricAnnotationSelect,
                 handleAnnotationAccess,
                 handleVerseInteractivate,
@@ -158,8 +157,7 @@ class NavigationHandler extends PureComponent {
                 />
                 <DotsSlideNavigation
                     {...{
-                        getTryNavigateDotsSlide: this.setTryNavigateDotsSlide,
-                        handleDotSelect
+                        getTryNavigateDotsSlide: this.setTryNavigateDotsSlide
                     }}
                 />
                 <LyricNavigation

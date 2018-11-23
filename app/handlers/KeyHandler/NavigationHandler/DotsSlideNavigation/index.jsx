@@ -1,8 +1,10 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
+
+import DispatchDotSelect from '../../../../dispatchers/DispatchDotSelect'
 
 import {
     ARROW_LEFT,
@@ -22,8 +24,7 @@ class DotsSlideNavigation extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryNavigateDotsSlide: PropTypes.func.isRequired,
-        handleDotSelect: PropTypes.func.isRequired
+        getTryNavigateDotsSlide: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -31,10 +32,7 @@ class DotsSlideNavigation extends PureComponent {
     }
 
     tryNavigateDotsSlide = (e, keyName) => {
-        const {
-            isAccessOn,
-            handleDotSelect
-        } = this.props
+        const { isAccessOn } = this.props
 
         if (isAccessOn) {
             const dotKeysCount = ALL_DOT_KEYS.length
@@ -66,7 +64,8 @@ class DotsSlideNavigation extends PureComponent {
                     }
                     break
                 case ENTER:
-                    return handleDotSelect(e, accessedDotIndex)
+                    this.trySelectDot(accessedDotIndex)
+                    return true
                 default:
                     return false
             }
@@ -78,8 +77,16 @@ class DotsSlideNavigation extends PureComponent {
         return false
     }
 
+    setTrySelectDot = (trySelectDot) => {
+        this.trySelectDot = trySelectDot
+    }
+
     render() {
-        return null
+        return (
+            <DispatchDotSelect
+                {...{ getTrySelectDot: this.setTrySelectDot }}
+            />
+        )
     }
 }
 

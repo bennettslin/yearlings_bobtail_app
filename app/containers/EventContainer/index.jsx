@@ -353,20 +353,6 @@ class EventContainer extends PureComponent {
         return carouselSelected
     }
 
-    /*******
-     * DOT *
-     *******/
-
-    handleDotSelect = (e, dotIndex) => {
-        if (this.props.isSelectedLogue) {
-            return false
-        }
-
-        this.stopPropagation(e)
-        this.props.toggleDot(dotIndex)
-        return true
-    }
-
     handleLyricWheel = (
         e,
         {
