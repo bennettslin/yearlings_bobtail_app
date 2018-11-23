@@ -38,7 +38,7 @@ $height__audioBanner__display:
         top: $js__height__menu__phone;
     }
 
-    .RM__overlayShown.RM__song
+    .RM__song.RM__overlayShown
     &,
     .RM__song.RM__lyricExpanded
     & {
@@ -58,7 +58,7 @@ $height__audioBanner__display:
         font-size: 0.85em;
     }
 
-    .RM__twoRowMenu.RM__overlayShown.RM__song
+    .RM__song.RM__twoRowMenu.RM__overlayShown
     &,
     .RM__twoRowMenu.RM__lyricExpanded
     & {

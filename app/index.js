@@ -11,13 +11,13 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 
 import { Provider } from 'react-redux'
 
-// eslint-disable-next-line
+// eslint-disable-next-line no-unused-vars
 import logger from './server/logger'
 
 import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
-import StateManager from './managers/StateManager'
+import RoutingContainer from './containers/RoutingContainer'
 
 // Why did you update?
 const turnOnWDYULogging = false
@@ -32,18 +32,24 @@ const store = createStore(
 )
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider
+        {...{ store }}
+    >
         <Router>
             <Switch>
                 <Route
                     exact
-                    path="/"
-                    component={StateManager}
+                    {...{
+                        path: '/',
+                        component: RoutingContainer
+                    }}
                 />
                 <Route
                     exact
-                    path="/:routingParamString/"
-                    component={StateManager}
+                    {...{
+                        path: '/:routingParamString/',
+                        component: RoutingContainer
+                    }}
                 />
             </Switch>
         </Router>

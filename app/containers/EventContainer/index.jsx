@@ -4,10 +4,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-
 import { updateToggleStore } from 'flux/toggle/action'
 
-import Root from '../../components/Root'
+import InteractiveContainer from '../../containers/InteractiveContainer'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
@@ -26,7 +25,7 @@ import {
     VERSE_SCROLL
 } from 'constants/dom'
 
-class EventHandler extends PureComponent {
+class EventContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -973,7 +972,11 @@ class EventHandler extends PureComponent {
 
     render() {
         return (
-            <Root eventHandlers={getHandlers(this)} />
+            <InteractiveContainer
+                {...{
+                    eventHandlers: getHandlers(this)
+                }}
+            />
         )
     }
 }
@@ -1032,4 +1035,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(EventHandler)
+export default connect(mapStateToProps, bindDispatchToProps)(EventContainer)

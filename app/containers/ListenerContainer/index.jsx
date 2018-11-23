@@ -1,48 +1,38 @@
-// State manager.
-
 import React, { Component, Fragment as ___ } from 'react'
-import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
 import { setAppMounted } from 'flux/load/action'
 
-import EventHandler from 'handlers/EventHandler'
+import EventContainer from '../../containers/EventContainer'
 import LogHandler from 'handlers/LogHandler'
 
-import AnnotationManager from './AnnotationManager'
-import AudioManager from './AudioManager'
-import CarouselManager from './CarouselManager'
-import DotsManager from './DotsManager'
-import LyricManager from './LyricManager'
-import NavManager from './NavManager'
-import OverviewManager from './OverviewManager'
-import PlayerManager from './PlayerManager'
-import RoutingManager from './RoutingManager'
-import SceneManager from './SceneManager'
-import ScrollManager from './ScrollManager'
-import SliderVerseManager from './SliderVerseManager'
-import SongManager from './SongManager'
-import TimeVerseManager from './TimeVerseManager'
-import TipsManager from './TipsManager'
-import VerseManager from './VerseManager'
-import WikiManager from './WikiManager'
+import AnnotationManager from '../../managers/AnnotationManager'
+import AudioManager from '../../managers/AudioManager'
+import CarouselManager from '../../managers/CarouselManager'
+import DotsManager from '../../managers/DotsManager'
+import LyricManager from '../../managers/LyricManager'
+import NavManager from '../../managers/NavManager'
+import OverviewManager from '../../managers/OverviewManager'
+import PlayerManager from '../../managers/PlayerManager'
+import SceneManager from '../../managers/SceneManager'
+import ScrollManager from '../../managers/ScrollManager'
+import SliderVerseManager from '../../managers/SliderVerseManager'
+import SongManager from '../../managers/SongManager'
+import TimeVerseManager from '../../managers/TimeVerseManager'
+import TipsManager from '../../managers/TipsManager'
+import VerseManager from '../../managers/VerseManager'
+import WikiManager from '../../managers/WikiManager'
 
-import DotsSlideListener from '../listeners/DotsSlideListener'
-import DoublespeakerListener from '../listeners/DoublespeakerListener'
-import OverlayListener from '../listeners/OverlayListener'
-import RenderListener from '../listeners/RenderListener'
-import ScoreListener from '../listeners/ScoreListener'
-import WindowListener from '../listeners/WindowListener'
+import DotsSlideListener from '../../listeners/DotsSlideListener'
+import DoublespeakerListener from '../../listeners/DoublespeakerListener'
+import OverlayListener from '../../listeners/OverlayListener'
+import RenderListener from '../../listeners/RenderListener'
+import ScoreListener from '../../listeners/ScoreListener'
+import WindowListener from '../../listeners/WindowListener'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-class StateManager extends Component {
-
-    static propTypes = {
-        match: PropTypes.object.isRequired,
-        history: PropTypes.object.isRequired
-    }
+class ListenerContainer extends Component {
 
     componentDidMount() {
         logger.warn('State manager rendered.')
@@ -333,15 +323,9 @@ class StateManager extends Component {
     }
 
     render() {
-
-        const {
-            match,
-            history
-        } = this.props
-
         return (
             <___>
-                <EventHandler
+                <EventContainer
                     // Event manager props.
                     accessAnnotation={this.accessAnnotation}
                     accessAnnotationAnchor={this.accessAnnotationAnchor}
@@ -407,12 +391,6 @@ class StateManager extends Component {
                     updateTime={this.updateTime}
                     handleSongEnd={this.handleSongEnd}
                 />
-                <RoutingManager
-                    {...{
-                        match,
-                        history
-                    }}
-                />
                 <SceneManager
                     setRef={this._setSceneManagerRef}
                     selectVerse={this.selectVerse}
@@ -468,4 +446,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(null, bindDispatchToProps)(StateManager)
+export default connect(null, bindDispatchToProps)(ListenerContainer)

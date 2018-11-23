@@ -51,7 +51,7 @@ $width__childTitle__phone: 80px;
         margin: 0 !important;
     }
 
-    .RM__overlayShown.RM__song
+    .RM__song.RM__overlayShown
     &.width__mainColumn {
         max-width: $js__width__mini;
     }
@@ -153,13 +153,13 @@ $width__childTitle__phone: 80px;
         min-width: 0;
     }
 
-    .RM__overlayShown.RM__song
+    .RM__song.RM__overlayShown
     & {
         max-width: 100%;
         margin-right: 0;
     }
 
-    .RM__overlayShown.RM__song:not(.RM__phone)
+    .RM__song:not(.RM__phone).RM__overlayShown
     & {
         margin-left: 0;
     }
@@ -196,7 +196,7 @@ $width__childTitle__phone: 80px;
         opacity $animationDuration__slow;
 
     // Specific selector to override access letter opacity.
-    .RM__overlayShown.RM__song
+    .RM__song.RM__overlayShown
     & {
         width: 0;
         opacity: 0;

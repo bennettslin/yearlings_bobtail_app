@@ -107,14 +107,14 @@ h1, h2, h3 {
     $fontSize__bothColumnsShown: 0.95em;
 
     // Make font sizes smaller when showing both columns.
-    .RM__bothLyricColumnsShown.RM__desktop
+    .RM__desktop.RM__bothLyricColumnsShown
     &,
-    .RM__bothLyricColumnsShown.RM__tablet
+    .RM__tablet.RM__bothLyricColumnsShown
     & {
         font-size: $fontSize__bothColumnsShown;
     }
 
-    .RM__bothLyricColumnsShown.RM__mini
+    .RM__mini.RM__bothLyricColumnsShown
     & {
         font-size:
             $fontSize__bothColumnsShown

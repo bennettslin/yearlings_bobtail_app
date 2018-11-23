@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -6,24 +6,25 @@ import { connect } from 'react-redux'
 import { updateSongStore } from 'flux/song/action'
 import { selectWikiIndex } from 'flux/storage/action'
 
+import ListenerContainer from '../ListenerContainer'
+
 import { getTimeForVerseIndex } from '../../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import {
     getValidRoutingIndicesObject,
     getPathForIndices
 } from './helper'
 
-class RoutingManager extends Component {
+class RoutingContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-
         updateSongStore: PropTypes.func.isRequired,
         selectWikiIndex: PropTypes.func.isRequired,
 
+        // From parent.
         match: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
     }
@@ -84,16 +85,6 @@ class RoutingManager extends Component {
         )
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.state,
-            nextProps: nextState
-        })
-    }
-
     componentDidUpdate(prevProps) {
         const {
                 selectedSongIndex,
@@ -130,7 +121,9 @@ class RoutingManager extends Component {
     }
 
     render() {
-        return null
+        return (
+            <ListenerContainer />
+        )
     }
 }
 
@@ -154,4 +147,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(RoutingManager)
+export default connect(mapStateToProps, bindDispatchToProps)(RoutingContainer)

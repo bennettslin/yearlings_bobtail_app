@@ -7,13 +7,10 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-// import debounce from 'debounce'
 
-import KeyHandler from 'handlers/KeyHandler'
-import AccessStylesheet from '../Access/Stylesheet'
-import Admin from '../Admin'
-import Live from '../Live'
-import AdminToggle from '../admin/AdminToggle'
+import Live from '../../components/Live'
+import Admin from '../../components/Admin'
+import AdminToggle from '../../components/admin/AdminToggle'
 
 import {
     SHOWN,
@@ -39,7 +36,7 @@ import {
     getStanzaIndexForVerseIndex
 } from './helper'
 
-class Root extends PureComponent {
+class RootContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -77,78 +74,7 @@ class Root extends PureComponent {
         isHiddenLyric: PropTypes.bool.isRequired,
         showShrunkNavIcon: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
-        isTwoRowMenu: PropTypes.bool.isRequired,
-
-        // From parent.
-        eventHandlers: PropTypes.shape({
-            handleBodyClick: PropTypes.func.isRequired,
-            handleBodyTouchMove: PropTypes.func.isRequired,
-            handleBodyTouchEnd: PropTypes.func.isRequired,
-            setRootRef: PropTypes.func.isRequired
-        })
-    }
-
-    state = {
-        sliderMousedUp: false
-    }
-
-    componentDidUpdate(prevProps) {
-        const {
-                isSliderTouched
-            } = this.props,
-            {
-                isSliderTouched: wasSliderTouched
-            } = prevProps
-
-        // This prevents a click event from registering after mouseUp.
-        if (
-            !isSliderTouched && wasSliderTouched
-        ) {
-            // Let click handler get called first, then reset state.
-            setTimeout(this._resetSliderMousedUp, 0)
-        }
-    }
-
-    _resetSliderMousedUp = () => {
-        this.setState({
-            sliderMousedUp: false
-        })
-    }
-
-    _handleMouseUp = (e) => {
-        const { handleBodyTouchEnd } = this.props.eventHandlers
-        handleBodyTouchEnd(e)
-
-        if (this.props.isSliderTouched) {
-            this.setState({
-                sliderMousedUp: true
-            })
-
-        }
-    }
-
-    _handleClick = (e) => {
-        const { handleBodyClick } = this.props.eventHandlers
-
-        /**
-         * Don't register the click event that happens after mouseUp if we're
-         * lifting up from moving the slider.
-         */
-        if (!this.state.sliderMousedUp) {
-            handleBodyClick(e)
-        }
-    }
-
-    handleKeyDownPress = (e) => {
-        this.keyHandler.handleKeyDownPress(e)
-    }
-
-    handleKeyUpPress = (e) => {
-        this.keyHandler.handleKeyUpPress(e)
-    }
-
-    _setKeyHandlerRef = (node) => {
-        this.keyHandler = node
+        isTwoRowMenu: PropTypes.bool.isRequired
     }
 
     render() {
@@ -156,9 +82,9 @@ class Root extends PureComponent {
                 appMounted,
                 accessedKey,
                 canCarouselRender,
-                isAdminOn,
                 deviceIndex,
                 isAccessOn,
+                isAdminOn,
                 renderedAnnotationIndex,
                 isRenderedLogue,
                 isCarouselShown,
@@ -184,14 +110,9 @@ class Root extends PureComponent {
                 isTwoRowMenu,
                 isVerseBarAbove,
                 isVerseBarBelow,
-                isAutoScroll
+                isAutoScroll,
+                eventHandlers
             } = this.props,
-
-            {
-                handleBodyTouchMove,
-                setRootRef,
-                ...other
-            } = this.props.eventHandlers,
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
@@ -221,9 +142,8 @@ class Root extends PureComponent {
 
         return appMounted && (
             <div
-                ref={setRootRef}
                 className={cx(
-                    'Root',
+                    'RootContainer',
 
                     accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`,
 
@@ -239,7 +159,8 @@ class Root extends PureComponent {
 
                     `RM__${deviceClassName}`,
                     isDesktop ?
-                        'RM__desktop' : 'RM__mobile',
+                        'RM__desktop' :
+                        'RM__mobile',
                     { 'RM__mobileNotPhone': isTabletOrMini },
 
                     isAccessOn ? 'RM__accessOn' : 'RM__accessOff',
@@ -328,38 +249,12 @@ class Root extends PureComponent {
                         // "Root cursored lyric verse."
                         `RlV${cursorVerseIndex}`
                 )}
-                {...{
-                    onClick: this._handleClick,
-                    onTouchStart: this._handleClick,
-                    onMouseMove: handleBodyTouchMove,
-                    onTouchMove: handleBodyTouchMove,
-                    onMouseUp: this._handleMouseUp,
-                    onMouseLeave: this._handleMouseUp,
-                    onTouchEnd: this._handleMouseUp,
-                    onTouchCancel: this._handleMouseUp,
-                    onKeyDown: this.handleKeyDownPress,
-                    onKeyUp: this.handleKeyUpPress,
-                    tabIndex: -1
-                }}
             >
-                <AccessStylesheet />
-
-                {/* TODO: Only pass the events used by KeyHandler. */}
-                <KeyHandler
-                    {...{
-                        eventHandlers: this.props.eventHandlers,
-                        setRef: this._setKeyHandlerRef
-                    }}
-                />
-
-                <Live {...other} />
-
+                <Live {...eventHandlers} />
                 <AdminToggle />
-
                 {isAdminOn && (
-                    <Admin {...other} />
+                    <Admin {...eventHandlers} />
                 )}
-
             </div>
         )
     }
@@ -414,7 +309,6 @@ const mapStateToProps = ({
 }) => ({
     appMounted,
     accessedKey,
-    isAdminOn,
     isAutoScroll,
     isCarouselShown,
     isLyricExpanded,
@@ -422,6 +316,7 @@ const mapStateToProps = ({
     isCarouselNavShowable,
     interactivatedVerseIndex,
     isAccessOn,
+    isAdminOn,
     dotsBitNumber,
     selectedDotKeys,
     isDotsSlideShown,
@@ -447,4 +342,4 @@ const mapStateToProps = ({
     isVerseBarBelow
 })
 
-export default connect(mapStateToProps)(Root)
+export default connect(mapStateToProps)(RootContainer)

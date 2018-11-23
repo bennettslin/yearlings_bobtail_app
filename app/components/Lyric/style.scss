@@ -39,7 +39,7 @@
         height: calc(100% - #{$js__height__menu});
     }
 
-    .RM__twoRowMenu.RM__song.RM__lyricExpanded
+    .RM__song.RM__twoRowMenu.RM__lyricExpanded
     & {
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
     }

@@ -3,29 +3,6 @@
 @import "./OverlayPopups/style";
 @import "./OverviewLogue/style";
 
-.Root {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    min-height: 100vh;
-
-    position: relative;
-    overflow: hidden;
-
-    font-family: PTSansNarrow, Arial;
-    font-size: 1.1em;
-
-    // Not sure why autoprefixer isn't working in this case.
-    -moz-user-select: none;
-    user-select: none;
-
-    background-color: #222;
-
-    // Keeping these together for consistency.
-    @include mixin__textAndLinkColours();
-    @include mixin__underlineColours();
-}
-
 .PopupOverlay {
     position: fixed;
     width: 100%;
