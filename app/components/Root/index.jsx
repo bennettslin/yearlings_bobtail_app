@@ -89,8 +89,7 @@ class Root extends PureComponent {
     }
 
     state = {
-        sliderMousedUp: false,
-        keyName: ''
+        sliderMousedUp: false
     }
 
     componentDidUpdate(prevProps) {
@@ -148,12 +147,6 @@ class Root extends PureComponent {
         this.keyHandler.handleKeyUpPress(e)
     }
 
-    displayKeyLetter = (keyName = '') => {
-        this.setState({
-            keyName
-        })
-    }
-
     _setKeyHandlerRef = (node) => {
         this.keyHandler = node
     }
@@ -161,6 +154,7 @@ class Root extends PureComponent {
     render() {
         const {
                 appMounted,
+                accessedKey,
                 canCarouselRender,
                 isAdminOn,
                 deviceIndex,
@@ -192,10 +186,6 @@ class Root extends PureComponent {
                 isVerseBarBelow,
                 isAutoScroll
             } = this.props,
-
-            {
-                keyName
-            } = this.state,
 
             {
                 handleBodyTouchMove,
@@ -235,7 +225,7 @@ class Root extends PureComponent {
                 className={cx(
                     'Root',
 
-                    keyName && `${PARENT_ACCESS_PREFIX}${keyName}`,
+                    accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`,
 
                     /**
                      * When transitioning between songs, explicitly reset all
@@ -358,8 +348,7 @@ class Root extends PureComponent {
                 <KeyHandler
                     {...{
                         eventHandlers: this.props.eventHandlers,
-                        setRef: this._setKeyHandlerRef,
-                        displayKeyLetter: this.displayKeyLetter
+                        setRef: this._setKeyHandlerRef
                     }}
                 />
 
@@ -378,6 +367,7 @@ class Root extends PureComponent {
 
 const mapStateToProps = ({
     appMounted,
+    accessStore: { accessedKey },
     interactivatedVerseIndex,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
@@ -423,6 +413,7 @@ const mapStateToProps = ({
     }
 }) => ({
     appMounted,
+    accessedKey,
     isAdminOn,
     isAutoScroll,
     isCarouselShown,

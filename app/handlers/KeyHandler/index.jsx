@@ -4,6 +4,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateAccessStore } from 'flux/access/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import NavigationHandler from './NavigationHandler'
@@ -31,19 +32,18 @@ class KeyHandler extends PureComponent {
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
+        // From parent.
         eventHandlers: PropTypes.shape({
             // TODO: Specify which events are used. This isn't complete.
             handleLyricWheel: PropTypes.func.isRequired,
             handleLyricVerseSelect: PropTypes.func.isRequired,
             handleAnnotationAccess: PropTypes.func.isRequired
         }).isRequired,
-
-        setRef: PropTypes.func.isRequired,
-        displayKeyLetter: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
-
     componentDidMount() {
         this.props.setRef(this)
     }
@@ -57,7 +57,7 @@ class KeyHandler extends PureComponent {
         }
 
         // Show key as registered in the UI.
-        this.props.displayKeyLetter(keyName)
+        this.props.updateAccessStore({ accessedKey: keyName })
 
         /**
          * Turn on access if any key other than escape was registered.
@@ -109,7 +109,7 @@ class KeyHandler extends PureComponent {
         }
 
         // Stop showing key as registered in the UI.
-        this.props.displayKeyLetter()
+        this.props.updateAccessStore({ accessedKey: '' })
 
         /**
          * Once key letter is removed from display, ignore all nav keys plus
@@ -264,6 +264,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateAccessStore,
         updateToggleStore
     }, dispatch)
 )

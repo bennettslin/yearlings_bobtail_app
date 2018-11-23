@@ -31,6 +31,7 @@ const
     isStoredLogue = getSongIsLogue(storedSongIndex),
 
     ACCESS_DEFAULTS = {
+        accessedKey: '',
         accessedAnnotationIndex: storedAnnotationIndex,
         accessedAnnotationAnchorIndex: 1,
         accessedDotIndex: 0,
