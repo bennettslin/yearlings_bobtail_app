@@ -1,5 +1,5 @@
 // Button to select book or song in nav section.
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -13,8 +13,6 @@ import {
     NAV_SONG_BUTTON_KEY
 } from 'constants/buttons'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
 const mapStateToProps = ({
     sessionStore: { interactivatedVerseIndex },
     songStore: { selectedAnnotationIndex }
@@ -27,7 +25,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class NavButton extends Component {
+class NavButton extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -43,13 +41,6 @@ class NavButton extends Component {
         bookIndex: PropTypes.number,
         songIndex: PropTypes.number,
         handleButtonClick: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     _handleButtonClick = (e) => {

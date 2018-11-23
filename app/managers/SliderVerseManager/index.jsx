@@ -1,17 +1,15 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
 import { updateSliderStore } from 'flux/slider/action'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import {
     getSliderRatioForClientX,
     getVerseIndexforRatio
 } from './helper'
 
-class SliderVerseManager extends Component {
+class SliderVerseManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -32,13 +30,6 @@ class SliderVerseManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     touchSliderBegin({

@@ -1,11 +1,9 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 
 import {
@@ -14,7 +12,7 @@ import {
     TIPS_OPTIONS
 } from 'constants/options'
 
-class TipsManager extends Component {
+class TipsManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -39,13 +37,6 @@ class TipsManager extends Component {
         this.props.setRef(this)
 
         this._showOrHideForNewSong()
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     componentDidUpdate(prevProps) {

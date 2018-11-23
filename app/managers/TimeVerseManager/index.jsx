@@ -1,8 +1,7 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
 import { updateRenderedStore } from 'flux/rendered/action'
 import { updateSongStore } from 'flux/song/action'
 
@@ -13,9 +12,7 @@ import {
     getTimeForVerseIndex
 } from 'helpers/dataHelper'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
-class TimeVerseManager extends Component {
+class TimeVerseManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -35,13 +32,6 @@ class TimeVerseManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     componentDidUpdate(prevProps) {

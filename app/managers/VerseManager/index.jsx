@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -7,10 +7,9 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import { getSongVersesCount } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getVerseBarStatus } from './helper'
 
-class VerseManager extends Component {
+class VerseManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -37,16 +36,6 @@ class VerseManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.state,
-            nextProps: nextState
-        })
     }
 
     componentDidUpdate(prevProps) {

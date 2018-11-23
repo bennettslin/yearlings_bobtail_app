@@ -1,12 +1,11 @@
 // Component to show the played audio time.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import { getFormattedTime } from 'helpers/formatHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     songStore: {
@@ -18,7 +17,7 @@ const mapStateToProps = ({
     selectedTime
 })
 
-class AudioTimer extends Component {
+class AudioTimer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -27,13 +26,6 @@ class AudioTimer extends Component {
 
         // From parent.
         isTitleTimer: PropTypes.bool
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

@@ -1,12 +1,11 @@
 // Webview to show Wikipedia page for reference anchor.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Spinner from '../Spinner'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getWikiUrl } from './helper'
 
 // TODO: Show that active wiki anchor is disabled.
@@ -31,7 +30,7 @@ const mapStateToProps = ({
     carouselAnnotationIndex
 })
 
-class WikiSection extends Component {
+class WikiSection extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -47,16 +46,6 @@ class WikiSection extends Component {
 
     state = {
         iframeLoading: true
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.state,
-            nextProps: nextState
-        })
     }
 
     componentDidUpdate(prevProps) {

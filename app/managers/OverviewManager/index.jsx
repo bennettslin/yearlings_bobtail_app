@@ -1,11 +1,10 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateSessionStore } from 'flux/session/action'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
 
 import {
@@ -14,7 +13,7 @@ import {
     OVERVIEW_OPTIONS
 } from 'constants/options'
 
-class OverviewManager extends Component {
+class OverviewManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -39,13 +38,6 @@ class OverviewManager extends Component {
         this.props.setRef(this)
 
         this._showOrHideForNewSong()
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     componentDidUpdate(prevProps) {

@@ -1,5 +1,5 @@
 // Component to show played song title, time played, and slider interface.
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -8,7 +8,6 @@ import Slider from '../../Slider'
 import AudioTimer from '../Timer'
 
 import { getSongTitle } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     responsiveStore: { isTwoRowMenu },
@@ -18,19 +17,12 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-class AudioBanner extends Component {
+class AudioBanner extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isTwoRowMenu: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

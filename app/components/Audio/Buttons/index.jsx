@@ -1,6 +1,6 @@
-// Component to show buttons for audio navigation.
+// PureComponent to show buttons for audio navigation.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -28,7 +28,6 @@ import {
 } from 'helpers/dataHelper'
 
 import { getValueInBitNumber } from 'helpers/bitHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     audioStore: {
@@ -44,7 +43,7 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-class AudioButtons extends Component {
+class AudioButtons extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -57,13 +56,6 @@ class AudioButtons extends Component {
         handleAudioPlay: PropTypes.func.isRequired,
         handleAudioPreviousSong: PropTypes.func.isRequired,
         handleAudioNextSong: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     handleAudioOptionClick = () => {

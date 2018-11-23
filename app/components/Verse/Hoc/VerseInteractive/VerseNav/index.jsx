@@ -2,31 +2,22 @@
  * Button that navigates to interactivated verse.
  */
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Button from '../../../../Button'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
 import { ENTER } from 'constants/access'
 import { AUDIO_NEXT_BUTTON_KEY } from 'constants/buttons'
 
-class VerseNav extends Component {
+class VerseNav extends PureComponent {
 
     static propTypes = {
         // From parent.
         verseIndex: PropTypes.number.isRequired,
         isInteractivated: PropTypes.bool.isRequired,
         handleLyricVerseSelect: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     _handleButtonClick = (e) => {

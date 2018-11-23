@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -6,9 +6,8 @@ import { updateAccessStore } from 'flux/access/action'
 import { updateSessionStore } from 'flux/session/action'
 
 import { getBookColumnIndex } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-class NavManager extends Component {
+class NavManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -26,13 +25,6 @@ class NavManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     componentDidUpdate(prevProps) {

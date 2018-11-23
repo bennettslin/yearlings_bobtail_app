@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import SliderVerses from './Verses'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
 import { LS_OVERLAP_MARGIN_X_SLIDER } from 'constants/responsive'
 
-class SliderStanza extends Component {
+class SliderStanza extends PureComponent {
 
     static propTypes = {
         logicSelectors: PropTypes.string.isRequired,
@@ -19,13 +17,6 @@ class SliderStanza extends Component {
             stanzaType: PropTypes.string.isRequired
         }).isRequired,
         songTotalTime: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

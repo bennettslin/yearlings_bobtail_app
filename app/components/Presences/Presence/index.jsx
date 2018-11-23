@@ -80,8 +80,8 @@ class Presence extends Component {
             props: this.props,
             nextProps
         }) || !getPropsAreShallowEqual({
-            props: this.props.presence,
-            nextProps: nextProps.presence
+            props: this.props.arrangement,
+            nextProps: nextProps.arrangement
         })
     }
 

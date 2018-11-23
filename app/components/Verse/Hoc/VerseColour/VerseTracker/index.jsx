@@ -48,13 +48,8 @@ class VerseTracker extends Component {
             // ... song changed...
             this.props.renderedSongIndex !== nextProps.renderedSongIndex ||
 
-            // ... or verse was selected or unselected...
-            isSelected !== willBeSelected ||
-
-            (
-                // ... or it's selected, and it toggled between play and pause.
-                isSelected && this.props.isPlaying !== nextProps.isPlaying
-            )
+            // ... or verse was selected or unselected.
+            isSelected !== willBeSelected
         )
     }
 

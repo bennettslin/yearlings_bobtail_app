@@ -1,6 +1,6 @@
 // Button in nav section to select book.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -8,7 +8,6 @@ import cx from 'classnames'
 import NavButton from '../Button'
 
 import { getBookColumnIndex } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     songStore: { selectedSongIndex }
@@ -16,7 +15,7 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-class NavBookToggle extends Component {
+class NavBookToggle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -24,13 +23,6 @@ class NavBookToggle extends Component {
 
         // From parent.
         bookIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

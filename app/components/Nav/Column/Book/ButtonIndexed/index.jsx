@@ -1,12 +1,10 @@
 // Container to show logue or song button in nav section.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import NavButton from '../Button'
-
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     toggleStore: {
@@ -22,7 +20,7 @@ const mapStateToProps = ({
     accessedNavSongIndex
 })
 
-class NavButtonIndexed extends Component {
+class NavButtonIndexed extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -33,13 +31,6 @@ class NavButtonIndexed extends Component {
 
         // From parent.
         songIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {
