@@ -31,7 +31,7 @@ $margin__dotsContainer__phone: 8px;
         margin-bottom: $margin__dotsContainer / 2;
     }
 
-    .RM__song.RM__dotsShown
+    .RM__song.RM__overlayHidden.RM__dotsShown
     & {
         opacity: 1;
         margin-left: $margin__dotsContainer;

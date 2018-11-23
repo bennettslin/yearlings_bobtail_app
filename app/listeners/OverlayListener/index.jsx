@@ -27,6 +27,7 @@ class OverlayListener extends Component {
         isTitleShown: PropTypes.bool.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
@@ -47,7 +48,8 @@ class OverlayListener extends Component {
             isTitleShown,
             selectedOverviewIndex,
             selectedTipsIndex,
-            selectedWikiIndex
+            selectedWikiIndex,
+            interactivatedVerseIndex
         } = this.props
 
         const isOverlayingAnnotation = getIsOverlayingAnnotation({
@@ -72,7 +74,8 @@ class OverlayListener extends Component {
                 !overviewShown &&
                 !tipsShown &&
                 !isRenderedLogue &&
-                !isLyricExpanded
+                !isLyricExpanded &&
+                interactivatedVerseIndex < 0
 
         this.props.updateTransientStore({
             isOverlayingAnnotation,
@@ -98,6 +101,7 @@ const mapStateToProps = ({
         isRenderedLogue
     },
     sessionStore: {
+        interactivatedVerseIndex,
         selectedOverviewIndex,
         selectedTipsIndex,
         selectedWikiIndex
@@ -109,6 +113,7 @@ const mapStateToProps = ({
     isTitleShown,
     renderedAnnotationIndex,
     isRenderedLogue,
+    interactivatedVerseIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
     selectedWikiIndex

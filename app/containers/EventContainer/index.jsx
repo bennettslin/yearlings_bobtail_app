@@ -271,6 +271,7 @@ class EventContainer extends PureComponent {
             }
         }
 
+        e.stopPropagation()
         // this.stopPropagation(e)
 
         this.props.selectAnnotation({
@@ -452,7 +453,7 @@ class EventContainer extends PureComponent {
              * Otherwise, scroll to selected verse.
              */
             index:
-                interactivatedVerseIndex > 0 ?
+                interactivatedVerseIndex > -1 ?
                     interactivatedVerseIndex :
                     selectedVerseIndex,
 

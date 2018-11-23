@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Do AWS setup on own laptop.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Separate class name parent containers.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
         taskName: `Have timeout manager.`,
         workedHours: 0,
         neededHours: 5

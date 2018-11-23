@@ -96,8 +96,6 @@ class SliderVerseManager extends PureComponent {
                 sliderRatio,
                 sliderVerseIndex
             })
-
-            // Verse bars are determined by verse manager to avoid timeout.
         }
     }
 
