@@ -16,7 +16,7 @@ import {
 
 import { WINDOW_STORAGE } from 'constants/state'
 
-class LogManager extends Component {
+class LogHandler extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -152,4 +152,4 @@ const mapStateToProps = ({
     renderedSceneIndex
 })
 
-export default connect(mapStateToProps)(LogManager)
+export default connect(mapStateToProps)(LogHandler)

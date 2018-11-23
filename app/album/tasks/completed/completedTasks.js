@@ -3634,7 +3634,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Refactor LogManager.`,
+        taskName: `Refactor LogHandler.`,
         workedHours: 1,
         neededHours: 1
     },

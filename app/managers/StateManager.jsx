@@ -1,8 +1,6 @@
 // State manager.
 
-import React, {
-    Component, Fragment
-} from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -10,21 +8,17 @@ import { connect } from 'react-redux'
 import { setAppMounted } from 'flux/load/action'
 
 import EventHandler from 'handlers/EventHandler'
+import LogHandler from 'handlers/LogHandler'
+
 import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
 import DotsManager from './DotsManager'
-import DotsSlideListener from '../listeners/DotsSlideListener'
-import DoublespeakerListener from '../listeners/DoublespeakerListener'
-import LogManager from './LogManager'
 import LyricManager from './LyricManager'
 import NavManager from './NavManager'
-import OverlayListener from '../listeners/OverlayListener'
 import OverviewManager from './OverviewManager'
 import PlayerManager from './PlayerManager'
-import RenderListener from '../listeners/RenderListener'
 import RoutingManager from './RoutingManager'
-import ScoreListener from '../listeners/ScoreListener'
 import SceneManager from './SceneManager'
 import ScrollManager from './ScrollManager'
 import SliderVerseManager from './SliderVerseManager'
@@ -33,6 +27,12 @@ import TimeVerseManager from './TimeVerseManager'
 import TipsManager from './TipsManager'
 import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
+
+import DotsSlideListener from '../listeners/DotsSlideListener'
+import DoublespeakerListener from '../listeners/DoublespeakerListener'
+import OverlayListener from '../listeners/OverlayListener'
+import RenderListener from '../listeners/RenderListener'
+import ScoreListener from '../listeners/ScoreListener'
 import WindowListener from '../listeners/WindowListener'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -340,7 +340,7 @@ class StateManager extends Component {
         } = this.props
 
         return (
-            <Fragment>
+            <___>
                 <EventHandler
                     // Event manager props.
                     accessAnnotation={this.accessAnnotation}
@@ -391,7 +391,7 @@ class StateManager extends Component {
                 <DotsManager
                     setRef={this._setDotsManagerRef}
                 />
-                <LogManager />
+                <LogHandler />
                 <LyricManager
                     setRef={this._setLyricManagerRef}
                     accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
@@ -456,7 +456,7 @@ class StateManager extends Component {
                 <RenderListener />
                 <ScoreListener />
                 <WindowListener />
-            </Fragment>
+            </___>
         )
     }
 }

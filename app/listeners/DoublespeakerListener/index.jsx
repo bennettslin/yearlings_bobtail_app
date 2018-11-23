@@ -32,9 +32,7 @@ class DoublespeakerListener extends Component {
                 songIndex: renderedSongIndex
             })
 
-        this.props.updateTransientStore({
-            isDoublespeakerShown
-        })
+        this.props.updateTransientStore({ isDoublespeakerShown })
     }
 
     render() {
