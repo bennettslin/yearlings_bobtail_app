@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -6,10 +6,9 @@ import { connect } from 'react-redux'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getIsPhone } from 'helpers/responsiveHelper'
 
-class CarouselManager extends Component {
+class CarouselManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -29,13 +28,6 @@ class CarouselManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     selectCarouselNav = (

@@ -15,7 +15,6 @@ export const getOrganisedHandlersFromProps = (props) => {
 
             handleAnnotationPrevious,
             handleAnnotationNext,
-            handleAnnotationWikiSelect,
             handleAnnotationWormholeSelect,
             handleAudioPlay,
             handleAudioPreviousSong,
@@ -34,7 +33,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleVerseBarSelect,
             handleVerseBarWheel,
             handleVerseInteractivate,
-            handleWikiToggle,
             stopPropagation
         } = props,
 
@@ -42,8 +40,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleAnnotationPrevious,
             handleAnnotationNext,
             handlePopupContainerClick,
-            handleAnnotationWormholeSelect,
-            handleAnnotationWikiSelect
+            handleAnnotationWormholeSelect
         },
 
         audioBannerHandlers = {
@@ -98,8 +95,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
 
         wikiPopupHandlers = {
-            setWikiRef,
-            handleWikiToggle
+            setWikiRef
         },
 
         mainColumnHandlers = {
@@ -116,7 +112,6 @@ export const getOrganisedHandlersFromProps = (props) => {
                 handleLyricAnnotationSelect,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
-                handleAnnotationWikiSelect,
                 handleAnnotationWormholeSelect,
                 handlePopupContainerClick,
                 handleScrollUponCarouselRender

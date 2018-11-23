@@ -1,8 +1,11 @@
 // Popup container for wiki section.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateSessionStore } from 'flux/session/action'
+
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
 
@@ -12,26 +15,33 @@ const mapStateToProps = ({
     selectedWikiIndex
 })
 
-const wikiPopupPropTypes = {
+class WikiPopup extends PureComponent {
+
+    static propTypes = {
     // Through Redux.
         selectedWikiIndex: PropTypes.number.isRequired,
+        updateSessionStore: PropTypes.func.isRequired
+    }
 
-        // From parent.
-        handleWikiToggle: PropTypes.func.isRequired
-    },
+    closeWiki = () => {
+        this.props.updateSessionStore({
+            selectedWikiIndex: 0,
+            carouselAnnotationIndex: 0
+        })
+    }
 
-    WikiPopup = ({
-    /* eslint-disable no-unused-vars */
-        dispatch,
-        /* eslint-enable no-unused-vars */
+    render() {
+        const {
+                /* eslint-disable no-unused-vars */
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-        selectedWikiIndex,
-        handleWikiToggle,
+                selectedWikiIndex,
 
-        ...other
-    }) => {
+                ...other
+            } = this.props,
 
-        const isVisible = Boolean(selectedWikiIndex)
+            isVisible = Boolean(selectedWikiIndex)
 
         return (
             <Popup
@@ -40,13 +50,18 @@ const wikiPopupPropTypes = {
                 isFullSize
                 isVisible={isVisible}
                 popupName="Wiki"
-                handleCloseClick={handleWikiToggle}
+                handleCloseClick={this.closeWiki}
             >
                 <Wiki {...other} />
             </Popup>
         )
     }
+}
 
-WikiPopup.propTypes = wikiPopupPropTypes
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateSessionStore
+    }, dispatch)
+)
 
-export default connect(mapStateToProps)(WikiPopup)
+export default connect(mapStateToProps, bindDispatchToProps)(WikiPopup)

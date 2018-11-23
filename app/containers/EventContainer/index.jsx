@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
@@ -16,7 +17,6 @@ import {
     getHandlers
 } from './helper'
 
-import { REFERENCE } from 'constants/dots'
 import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
 
 import {
@@ -47,6 +47,8 @@ class EventContainer extends PureComponent {
         isHiddenLyric: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         scrollElementIntoView: PropTypes.func.isRequired
@@ -72,6 +74,7 @@ class EventContainer extends PureComponent {
         this.handleLyricOnIfNeeded(prevProps)
         this.handleScoreOnIfNeeded(prevProps)
         this.handleTitleOnIfNeeded(prevProps)
+        this.handleWikiOnIfNeeded(prevProps)
     }
 
     handleDotsSlideOnIfNeeded(prevProps) {
@@ -125,6 +128,20 @@ class EventContainer extends PureComponent {
             this._closeSections({
                 justClosePopups: true,
                 exemptTitle: true
+            })
+        }
+    }
+
+    handleWikiOnIfNeeded(prevProps) {
+        const
+            { selectedWikiIndex } = this.props,
+            { selectedWikiIndex: prevWikiIndex } = prevProps
+
+
+        if (selectedWikiIndex && !prevWikiIndex) {
+            this._closeSections({
+                justClosePopups: true,
+                exemptWiki: true
             })
         }
     }
@@ -208,26 +225,6 @@ class EventContainer extends PureComponent {
     /**************
      * ANNOTATION *
      **************/
-
-    handleAnnotationWikiSelect = (
-        e,
-        selectedWikiIndex,
-        carouselAnnotationIndex
-    ) => {
-        const isWikiEnabled = this.props.selectedDotKeys[REFERENCE]
-
-        // Don't register click if reference dot is deselected.
-        if (!isWikiEnabled) {
-            return false
-        }
-
-        this.stopPropagation(e)
-        this.props.selectWiki({
-            selectedWikiIndex,
-            carouselAnnotationIndex
-        })
-        return true
-    }
 
     handleAnnotationWormholeSelect = (e, wormholeObject) => {
 
@@ -723,21 +720,6 @@ class EventContainer extends PureComponent {
         }
     }
 
-    /********
-     * WIKI *
-     ********/
-
-    handleWikiToggle = (e, selectedWikiIndex) => {
-        this.stopPropagation(e)
-        // If wiki is off and we're toggling it on, then close other popups.
-        if (!this.props.selectedWikiIndex) {
-            this._closeSections({
-                justClosePopups: true
-            })
-        }
-        this.props.selectWiki({ selectedWikiIndex })
-    }
-
     /***********
      * HELPERS *
      ***********/
@@ -752,6 +734,7 @@ class EventContainer extends PureComponent {
         exemptScore,
         exemptTitle,
         exemptTips,
+        exemptWiki,
         exemptInteractivatedVerse,
 
         continuePastClosingPopups,
@@ -768,8 +751,11 @@ class EventContainer extends PureComponent {
         if (!leaveOpenPopups) {
 
             // If popup is open, close it and do nothing else.
-            if (selectedWikiIndex) {
-                this.props.selectWiki()
+            if (selectedWikiIndex && !exemptWiki) {
+                this.props.updateSessionStore({
+                    selectedWikiIndex: 0,
+                    carouselAnnotationIndex: 0
+                })
                 if (!continuePastClosingPopups) {
                     return
                 }
@@ -996,6 +982,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateSessionStore,
         updateToggleStore
     }, dispatch)
 )

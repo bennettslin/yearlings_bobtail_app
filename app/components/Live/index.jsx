@@ -265,7 +265,6 @@ Live.propTypes = {
 
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,
-    handleAnnotationWikiSelect: PropTypes.func.isRequired,
     handleAnnotationWormholeSelect: PropTypes.func.isRequired,
     handleAudioPlay: PropTypes.func.isRequired,
     handleAudioPreviousSong: PropTypes.func.isRequired,
@@ -286,9 +285,7 @@ Live.propTypes = {
     handleTipsToggle: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired,
-    // handleSetVerseElement: PropTypes.func.isRequired,
     handleVerseInteractivate: PropTypes.func.isRequired,
-    handleWikiToggle: PropTypes.func.isRequired,
     stopPropagation: PropTypes.func.isRequired
 }
 

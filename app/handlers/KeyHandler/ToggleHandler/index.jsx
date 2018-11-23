@@ -2,6 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import DispatchAdmin from '../../../dispatchers/DispatchAdmin'
@@ -43,6 +44,7 @@ class ToggleHandler extends PureComponent {
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -147,7 +149,10 @@ class ToggleHandler extends PureComponent {
 
         // Close wiki popup.
         } else if (props.selectedWikiIndex) {
-            eventHandlers.handleWikiToggle(e)
+            this.props.updateSessionStore({
+                selectedWikiIndex: 0,
+                carouselAnnotationIndex: 0
+            })
 
         // Close tips popup.
         } else if (TIPS_OPTIONS[props.selectedTipsIndex] === SHOWN) {
@@ -258,6 +263,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateSessionStore,
         updateToggleStore
     }, dispatch)
 )

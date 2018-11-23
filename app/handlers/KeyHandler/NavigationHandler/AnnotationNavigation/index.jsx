@@ -1,6 +1,8 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+
+import DispatchWikiSelect from '../../../../dispatchers/DispatchWikiSelect'
 
 import {
     getWormholeLink,
@@ -29,7 +31,6 @@ class AnnotationNavigation extends PureComponent {
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
         handleAnnotationAnchorAccess: PropTypes.func.isRequired,
-        handleAnnotationWikiSelect: PropTypes.func.isRequired,
         handleAnnotationWormholeSelect: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
@@ -44,7 +45,6 @@ class AnnotationNavigation extends PureComponent {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 handleAnnotationAnchorAccess,
-                handleAnnotationWikiSelect,
                 handleAnnotationWormholeSelect,
                 determineVerseBarsWithParameters
             } = props
@@ -91,7 +91,7 @@ class AnnotationNavigation extends PureComponent {
 
                     // It's a wiki anchor.
                     if (typeof annotationAnchorEntity === 'string') {
-                        handleAnnotationWikiSelect(e, accessedAnnotationAnchorIndex)
+                        this.trySelectWiki(accessedAnnotationAnchorIndex)
 
                     // It's a wormhole index.
                     } else {
@@ -135,8 +135,16 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
+    setTrySelectWiki = (trySelectWiki) => {
+        this.trySelectWiki = trySelectWiki
+    }
+
     render() {
-        return null
+        return (
+            <DispatchWikiSelect
+                {...{ getTrySelectWiki: this.setTrySelectWiki }}
+            />
+        )
     }
 }
 

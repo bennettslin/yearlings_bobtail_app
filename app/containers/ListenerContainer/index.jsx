@@ -20,13 +20,13 @@ import SongManager from '../../managers/SongManager'
 import TimeVerseManager from '../../managers/TimeVerseManager'
 import TipsManager from '../../managers/TipsManager'
 import VerseManager from '../../managers/VerseManager'
-import WikiManager from '../../managers/WikiManager'
 
 import DotsSlideListener from '../../listeners/DotsSlideListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import OverlayListener from '../../listeners/OverlayListener'
 import RenderListener from '../../listeners/RenderListener'
 import ScoreListener from '../../listeners/ScoreListener'
+import WikiListener from '../../listeners/WikiListener'
 import WindowListener from '../../listeners/WindowListener'
 
 class ListenerContainer extends PureComponent {
@@ -221,14 +221,6 @@ class ListenerContainer extends PureComponent {
     }
 
     /********
-     * WIKI *
-     ********/
-
-    selectWiki = (payload) => {
-        return this.wikiManager.selectWiki(payload)
-    }
-
-    /********
      * REFS *
      ********/
 
@@ -277,9 +269,6 @@ class ListenerContainer extends PureComponent {
     _setVerseManagerRef = (node) => {
         this.verseManager = node
     }
-    _setWikiManagerRef = (node) => {
-        this.wikiManager = node
-    }
 
     render() {
         return (
@@ -311,7 +300,6 @@ class ListenerContainer extends PureComponent {
                     selectVerse={this.selectVerse}
                     interactivateVerse={this.interactivateVerse}
                     interactivateVerseDirection={this.interactivateVerseDirection}
-                    selectWiki={this.selectWiki}
                     togglePlay={this.togglePlay}
                 />
                 <AnnotationManager
@@ -376,14 +364,12 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setVerseManagerRef}
                     getVerseElement={this.getVerseElement}
                 />
-                <WikiManager
-                    setRef={this._setWikiManagerRef}
-                />
                 <DotsSlideListener />
                 <DoublespeakerListener />
                 <OverlayListener />
                 <RenderListener />
                 <ScoreListener />
+                <WikiListener />
                 <WindowListener />
             </___>
         )

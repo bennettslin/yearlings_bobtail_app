@@ -1,9 +1,12 @@
 // Component to show individual annotation note or all wormholes.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+
+import DispatchWikiSelect from '../../../../dispatchers/DispatchWikiSelect'
+
 import DotSequence from '../../../DotSequence'
 import Texts from '../../../Texts'
 import AnnotationWormholes from './Wormholes'
@@ -50,6 +53,21 @@ class AnnotationCard extends Component {
         return shouldComponentUpdate
     }
 
+    handleWikiSelectClick = (
+        e,
+        selectedWikiIndex,
+        carouselAnnotationIndex
+    ) => {
+        this.trySelectWiki(
+            selectedWikiIndex,
+            carouselAnnotationIndex
+        )
+    }
+
+    setTrySelectWiki = (trySelectWiki) => {
+        this.trySelectWiki = trySelectWiki
+    }
+
     render() {
         const {
                 /* eslint-disable no-unused-vars */
@@ -84,11 +102,19 @@ class AnnotationCard extends Component {
         }
 
         return (
-            <AnnotationCardView {...other}
-                text={description}
-                cardDotKeys={dotKeys}
-                cardIndex={cardIndex}
-            />
+            <___>
+                <AnnotationCardView {...other}
+                    {...{
+                        text: description,
+                        cardDotKeys: dotKeys,
+                        cardIndex,
+                        handleWikiSelectClick: this.handleWikiSelectClick
+                    }}
+                />
+                <DispatchWikiSelect
+                    {...{ getTrySelectWiki: this.setTrySelectWiki }}
+                />
+            </___>
         )
     }
 }
@@ -108,7 +134,7 @@ const annotationCardViewProptypes = {
         cardDotKeys: PropTypes.object.isRequired,
         cardIndex: PropTypes.number.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        handleAnnotationWikiSelect: PropTypes.func.isRequired,
+        handleWikiSelectClick: PropTypes.func.isRequired,
         handleAnnotationWormholeSelect: PropTypes.func.isRequired
     },
 
@@ -118,7 +144,7 @@ const annotationCardViewProptypes = {
         inCarousel,
         isSelected,
         annotationIndex,
-        handleAnnotationWikiSelect,
+        handleWikiSelectClick,
         handleAnnotationWormholeSelect,
 
         // From controller.
@@ -155,7 +181,7 @@ const annotationCardViewProptypes = {
                          * annotation in carousel.
                          */
                             annotationIndex={annotationIndex}
-                            handleAnchorClick={handleAnnotationWikiSelect}
+                            handleAnchorClick={handleWikiSelectClick}
                         />
                     ) : (
                         <AnnotationWormholes

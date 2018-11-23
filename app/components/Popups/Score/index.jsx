@@ -1,6 +1,6 @@
 // Popup container for score section.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -8,8 +8,6 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import Score from '../../Score'
 import Popup from '../../Popup'
-
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     songStore: { selectedSongIndex },
@@ -19,20 +17,13 @@ const mapStateToProps = ({
     isScoreShown
 })
 
-class ScorePopup extends Component {
+class ScorePopup extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isScoreShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         updateToggleStore: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     closeScore = () => {

@@ -1,9 +1,7 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
-
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getLyricTopAlign,
@@ -16,7 +14,7 @@ import {
     VERSE_SCROLL
 } from 'constants/dom'
 
-class ScrollManager extends Component {
+class ScrollManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -51,13 +49,6 @@ class ScrollManager extends Component {
         //         this.myVerseElements
         //     )
         // }
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     setCarouselAnnotationRef(payload) {

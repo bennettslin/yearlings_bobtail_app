@@ -131,7 +131,6 @@ class NavigationHandler extends PureComponent {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 handleAnnotationAnchorAccess,
-                handleAnnotationWikiSelect,
                 handleAnnotationWormholeSelect,
                 handleLyricAnnotationSelect,
                 handleAnnotationAccess,
@@ -150,7 +149,6 @@ class NavigationHandler extends PureComponent {
                         handleAnnotationPrevious,
                         handleAnnotationNext,
                         handleAnnotationAnchorAccess,
-                        handleAnnotationWikiSelect,
                         handleAnnotationWormholeSelect,
                         determineVerseBarsWithParameters
                     }}
