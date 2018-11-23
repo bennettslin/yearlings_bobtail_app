@@ -320,14 +320,6 @@ class EventContainer extends PureComponent {
         return songSelected
     }
 
-    handleAudioOptionsToggle = (e) => {
-        const optionSelected = this.props.selectAudioOption()
-        if (optionSelected) {
-            this.stopPropagation(e)
-        }
-        return optionSelected
-    }
-
     /************
      * CAROUSEL *
      ************/

@@ -270,7 +270,6 @@ Live.propTypes = {
     handleAudioPlay: PropTypes.func.isRequired,
     handleAudioPreviousSong: PropTypes.func.isRequired,
     handleAudioNextSong: PropTypes.func.isRequired,
-    handleAudioOptionsToggle: PropTypes.func.isRequired,
     handleSliderTouchBegin: PropTypes.func.isRequired,
     handleCarouselNavToggle: PropTypes.func.isRequired,
     handleDotSelect: PropTypes.func.isRequired,

@@ -65,10 +65,6 @@ class ListenerContainer extends PureComponent {
         return this.audioManager.togglePlay(payload)
     }
 
-    selectAudioOption = (payload) => {
-        return this.audioManager.selectAudioOption(payload)
-    }
-
     /************
      * CAROUSEL *
      ************/
@@ -320,7 +316,6 @@ class ListenerContainer extends PureComponent {
                     setCarouselParentRef={this.setCarouselParentRef}
                     scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
-                    selectAudioOption={this.selectAudioOption}
                     selectBookColumn={this.selectBookColumn}
                     toggleDot={this.toggleDot}
                     selectLyricColumn={this.selectLyricColumn}

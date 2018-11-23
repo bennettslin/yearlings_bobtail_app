@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import DispatchAdmin from '../../../dispatchers/DispatchAdmin'
+import DispatchAudioOption from '../../../dispatchers/DispatchAudioOption'
 import DispatchDotsSlide from '../../../dispatchers/DispatchDotsSlide'
 import DispatchLyric from '../../../dispatchers/DispatchLyric'
 import DispatchScore from '../../../dispatchers/DispatchScore'
@@ -66,7 +67,7 @@ class ToggleHandler extends PureComponent {
                 keyWasRegistered = this.tryToggleAdmin()
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleAudioOptionsToggle(e)
+                keyWasRegistered = this.tryToggleAudioOption()
                 break
             case AUDIO_PLAY_KEY:
                 keyWasRegistered = eventHandlers.handleAudioPlay(e)
@@ -181,6 +182,10 @@ class ToggleHandler extends PureComponent {
         this.tryToggleAdmin = tryToggleAdmin
     }
 
+    setTryToggleAudioOption = (tryToggleAudioOption) => {
+        this.tryToggleAudioOption = tryToggleAudioOption
+    }
+
     setTryToggleDotsSlide = (tryToggleDotsSlide) => {
         this.tryToggleDotsSlide = tryToggleDotsSlide
     }
@@ -202,6 +207,9 @@ class ToggleHandler extends PureComponent {
             <___>
                 <DispatchAdmin
                     {...{ getTryToggleAdmin: this.setTryToggleAdmin }}
+                />
+                <DispatchAudioOption
+                    {...{ getTryToggleAudioOption: this.setTryToggleAudioOption }}
                 />
                 <DispatchDotsSlide
                     {...{ getTryToggleDotsSlide: this.setTryToggleDotsSlide }}

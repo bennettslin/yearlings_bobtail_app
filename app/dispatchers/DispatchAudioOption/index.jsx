@@ -4,29 +4,32 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateSessionStore } from 'flux/session/action'
+
+import { AUDIO_OPTIONS } from 'constants/options'
 
 class DispatchAudioOption extends Component {
 
     static propTypes = {
         // Through Redux.
-        isAdminOn: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
+        selectedAudioOptionIndex: PropTypes.number.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryToggleAdmin: PropTypes.func.isRequired
+        getTryToggleAudioOption: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryToggleAdmin(this.tryToggleAdmin)
+        this.props.getTryToggleAudioOption(this.tryToggleAudioOption)
     }
 
-    tryToggleAdmin = (
+    tryToggleAudioOption = (
         // Just toggle unless parent specifies value.
-        isAdminOn = !this.props.isAdminOn
+        selectedAudioOptionIndex =
+        (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length
     ) => {
-        // Turning on or off is always successful.
-        this.props.updateToggleStore({ isAdminOn })
+        // If no argument passed, then just toggle amongst audio options.
+        this.props.updateSessionStore({ selectedAudioOptionIndex })
         return true
     }
 
@@ -36,14 +39,14 @@ class DispatchAudioOption extends Component {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isAdminOn }
+    sessionStore: { selectedAudioOptionIndex }
 }) => ({
-    isAdminOn
+    selectedAudioOptionIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateToggleStore
+        updateSessionStore
     }, dispatch)
 )
 

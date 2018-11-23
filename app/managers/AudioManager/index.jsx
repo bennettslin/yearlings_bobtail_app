@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -8,17 +8,13 @@ import { updateSessionStore } from 'flux/session/action'
 
 import { getValueInBitNumber } from 'helpers/bitHelper'
 import { getSongsNotLoguesCount } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-import { AUDIO_OPTIONS } from 'constants/options'
-
-class AudioManager extends Component {
+class AudioManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
-        selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
@@ -33,13 +29,6 @@ class AudioManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     componentDidUpdate(prevProps) {
@@ -96,16 +85,6 @@ class AudioManager extends Component {
         return true
     }
 
-    selectAudioOption(
-        selectedAudioOptionIndex =
-        (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length
-    ) {
-        // If no argument passed, then just toggle amongst audio options.
-
-        this.props.updateSessionStore({ selectedAudioOptionIndex })
-        return true
-    }
-
     render() {
         return null
     }
@@ -116,7 +95,6 @@ const mapStateToProps = ({
         isPlaying,
         canPlayThroughs
     },
-    sessionStore: { selectedAudioOptionIndex },
     songStore: {
         selectedSongIndex,
         isSelectedLogue
@@ -124,7 +102,6 @@ const mapStateToProps = ({
 }) => ({
     isPlaying,
     canPlayThroughs,
-    selectedAudioOptionIndex,
     selectedSongIndex,
     isSelectedLogue
 })

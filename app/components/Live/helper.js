@@ -20,7 +20,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
-            handleAudioOptionsToggle,
             handleSliderTouchBegin,
             handleCarouselNavToggle,
             handleDotSelect,
@@ -54,8 +53,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         audioButtonsHandlers = {
             handleAudioPlay,
             handleAudioPreviousSong,
-            handleAudioNextSong,
-            handleAudioOptionsToggle
+            handleAudioNextSong
         },
         audioHandlers = {
             audioBannerHandlers,
