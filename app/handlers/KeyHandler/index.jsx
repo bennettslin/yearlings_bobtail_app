@@ -1,4 +1,4 @@
-// PureComponent that handles all user events from keyboard.
+// Component that handles all user events from keyboard.
 
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'

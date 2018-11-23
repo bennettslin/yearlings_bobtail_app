@@ -8,7 +8,6 @@ export const getHandlers = (me) => {
     } = me.props
 
     return {
-        focusElementForAccess: me.focusElementForAccess,
         handleAnnotationAccess: me.handleAnnotationAccess,
         handleAnnotationAnchorAccess: me.handleAnnotationAnchorAccess,
         handleVerseDirectionAccess: me.handleVerseDirectionAccess,

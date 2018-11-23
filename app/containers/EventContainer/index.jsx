@@ -1,13 +1,13 @@
-// PureComponent that handles all user events.
+// Component that handles all user events.
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
+import CloseHandler from '../../handlers/CloseHandler'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
@@ -30,10 +30,7 @@ class EventContainer extends PureComponent {
     static propTypes = {
         // Through Redux.
         isCarouselShown: PropTypes.bool.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        isScoreShown: PropTypes.bool.isRequired,
-        isTitleShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
@@ -41,13 +38,9 @@ class EventContainer extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
-        isSliderMoving: PropTypes.bool.isRequired,
-        isSliderTouched: PropTypes.bool.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -68,81 +61,6 @@ class EventContainer extends PureComponent {
         ) {
             // Determine whether to add or remove focus from lyric element.
             this.focusElementForAccess()
-        }
-
-        this.handleDotsSlideOnIfNeeded(prevProps)
-        this.handleLyricOnIfNeeded(prevProps)
-        this.handleScoreOnIfNeeded(prevProps)
-        this.handleTitleOnIfNeeded(prevProps)
-        this.handleWikiOnIfNeeded(prevProps)
-    }
-
-    handleDotsSlideOnIfNeeded(prevProps) {
-        const
-            { isDotsSlideShown } = this.props,
-            { isDotsSlideShown: wasDotsSlideShown } = prevProps
-
-        if (isDotsSlideShown && !wasDotsSlideShown) {
-            this._closeSections({
-                exemptDots: true,
-                continuePastClosingPopups: true
-            })
-        }
-    }
-
-    handleLyricOnIfNeeded(prevProps) {
-        const
-            { isLyricExpanded } = this.props,
-            { isLyricExpanded: wasLyricExpanded } = prevProps
-
-        if (isLyricExpanded && !wasLyricExpanded) {
-            this._closeSections({
-                // Continue to show selected annotation in overlay.
-                exemptAnnotation: true,
-                exemptLyric: true,
-                continuePastClosingPopups: true
-            })
-        }
-    }
-
-    handleScoreOnIfNeeded(prevProps) {
-        const
-            { isScoreShown } = this.props,
-            { isScoreShown: wasScoreShown } = prevProps
-
-        if (isScoreShown && !wasScoreShown) {
-            this._closeSections({
-                justClosePopups: true,
-                exemptScore: true
-            })
-        }
-    }
-
-    handleTitleOnIfNeeded(prevProps) {
-        const
-            { isTitleShown } = this.props,
-            { isTitleShown: wasTitleShown } = prevProps
-
-
-        if (isTitleShown && !wasTitleShown) {
-            this._closeSections({
-                justClosePopups: true,
-                exemptTitle: true
-            })
-        }
-    }
-
-    handleWikiOnIfNeeded(prevProps) {
-        const
-            { selectedWikiIndex } = this.props,
-            { selectedWikiIndex: prevWikiIndex } = prevProps
-
-
-        if (selectedWikiIndex && !prevWikiIndex) {
-            this._closeSections({
-                justClosePopups: true,
-                exemptWiki: true
-            })
         }
     }
 
@@ -175,59 +93,11 @@ class EventContainer extends PureComponent {
         this.props.accessAnnotationAnchor(payload)
     }
 
-    handleVerseDirectionAccess = (direction) => {
-        if (this.props.isSelectedLogue) {
-            return false
-        }
-
-        const {
-                selectedVerseIndex
-            } = this.props,
-            interactivatedVerseIndex =
-            this.props.interactivateVerseDirection(direction)
-
-        if (interactivatedVerseIndex > 0) {
-            this._closeSections({
-                /**
-                 * Once verse has been interactivated through access, close nav
-                 * and force carousel so that access navigation keys do not
-                 * conflict.
-                 */
-                forceCarousel: true,
-                exemptDots: true,
-                exemptOverview: true,
-                exemptTips: true,
-                exemptInteractivatedVerse: true,
-                exemptLyric: true,
-                leaveOpenPopups: true
-            })
-        }
-
-        this.props.scrollElementIntoView({
-            log: 'Access verse direction.',
-            scrollClass: VERSE_SCROLL,
-
-            /**
-             * If interactivation remains on, scroll to interactivated verse.
-             * Otherwise, scroll to selected verse.
-             */
-            index:
-                interactivatedVerseIndex > 0 ?
-                    interactivatedVerseIndex :
-                    selectedVerseIndex,
-
-            callback: this.props.determineVerseBars
-        })
-
-        return true
-    }
-
     /**************
      * ANNOTATION *
      **************/
 
     handleAnnotationWormholeSelect = (e, wormholeObject) => {
-
         const {
             songIndex: selectedSongIndex,
             annotationIndex: selectedAnnotationIndex,
@@ -337,15 +207,6 @@ class EventContainer extends PureComponent {
                 index: annotationIndex
             })
         }
-
-        this._closeSections({
-            exemptAnnotation: true,
-            exemptDots: true,
-            exemptInteractivatedVerse: true,
-            exemptOverview: true,
-            exemptTips: true,
-            continuePastClosingPopups: true
-        })
 
         return carouselSelected
     }
@@ -483,10 +344,7 @@ class EventContainer extends PureComponent {
         }
 
         this.stopPropagation(e)
-        this._closeSections({
-            exemptAnnotation: true,
-            exemptLyric: true
-        })
+
         this.props.selectAnnotation({
             selectedAnnotationIndex
         })
@@ -549,10 +407,6 @@ class EventContainer extends PureComponent {
 
         if (overviewToggled) {
             this.stopPropagation(e)
-            this._closeSections({
-                exemptOverview: true,
-                continuePastClosingPopups: true
-            })
         }
         return overviewToggled
     }
@@ -605,11 +459,6 @@ class EventContainer extends PureComponent {
 
         if (tipsToggled) {
             this.stopPropagation(e)
-            this._closeSections({
-                exemptOverview: true,
-                exemptTips: true,
-                continuePastClosingPopups: true
-            })
         }
         return tipsToggled
     }
@@ -662,7 +511,7 @@ class EventContainer extends PureComponent {
     handleBodyClick = (e) => {
         this.stopPropagation(e)
 
-        this._closeSections({
+        this.closeSections({
             exemptLyric: true,
 
             // If overview is open when tips is open, leave overview open.
@@ -698,6 +547,36 @@ class EventContainer extends PureComponent {
         this.props.determineVerseBars()
     }
 
+    handleVerseDirectionAccess = (direction) => {
+        if (this.props.isSelectedLogue) {
+            return false
+        }
+
+        const {
+                selectedVerseIndex
+            } = this.props,
+            interactivatedVerseIndex =
+            this.props.interactivateVerseDirection(direction)
+
+        this.props.scrollElementIntoView({
+            log: 'Access verse direction.',
+            scrollClass: VERSE_SCROLL,
+
+            /**
+             * If interactivation remains on, scroll to interactivated verse.
+             * Otherwise, scroll to selected verse.
+             */
+            index:
+                interactivatedVerseIndex > 0 ?
+                    interactivatedVerseIndex :
+                    selectedVerseIndex,
+
+            callback: this.props.determineVerseBars
+        })
+
+        return true
+    }
+
     handleVerseInteractivate = (e, verseIndex) => {
         const {
             selectedVerseIndex
@@ -707,15 +586,7 @@ class EventContainer extends PureComponent {
         if (
             verseIndex !== selectedVerseIndex
         ) {
-
             this.stopPropagation(e)
-            this._closeSections({
-                exemptDots: true,
-                exemptInteractivatedVerse: true,
-                exemptLyric: true,
-                exemptOverview: true,
-                exemptTips: true
-            })
             this.props.interactivateVerse(verseIndex)
         }
     }
@@ -723,93 +594,6 @@ class EventContainer extends PureComponent {
     /***********
      * HELPERS *
      ***********/
-
-    _closeSections ({
-
-        exemptAnnotation,
-        forceCarousel,
-        exemptDots,
-        exemptLyric,
-        exemptOverview,
-        exemptScore,
-        exemptTitle,
-        exemptTips,
-        exemptWiki,
-        exemptInteractivatedVerse,
-
-        continuePastClosingPopups,
-        justClosePopups,
-        leaveOpenPopups
-
-    }) {
-        const {
-            isScoreShown,
-            isTitleShown,
-            selectedWikiIndex
-        } = this.props
-
-        if (!leaveOpenPopups) {
-
-            // If popup is open, close it and do nothing else.
-            if (selectedWikiIndex && !exemptWiki) {
-                this.props.updateSessionStore({
-                    selectedWikiIndex: 0,
-                    carouselAnnotationIndex: 0
-                })
-                if (!continuePastClosingPopups) {
-                    return
-                }
-
-            } else if (isScoreShown && !exemptScore) {
-                this.props.updateToggleStore({ isScoreShown: false })
-                if (!continuePastClosingPopups) {
-                    return
-                }
-
-            } else if (isTitleShown && !exemptTitle) {
-                this.props.updateToggleStore({ isTitleShown: false })
-                if (!continuePastClosingPopups) {
-                    return
-                }
-            }
-        }
-
-        if (justClosePopups) {
-            return
-        }
-
-        if (!exemptAnnotation) {
-            this.props.selectAnnotation()
-        }
-
-        if (forceCarousel) {
-            this.props.selectCarouselNav(true)
-        }
-
-        if (!exemptDots) {
-            this.props.updateToggleStore({ isDotsSlideShown: false })
-        }
-
-        if (!exemptLyric) {
-            this.props.updateToggleStore({ isLyricExpanded: false })
-        }
-
-        if (!exemptOverview) {
-            this.props.selectOverview({
-                justHideIfShown: true
-            })
-        }
-
-        if (!exemptTips) {
-            this.props.selectTips({
-                justHideIfShown: true
-            })
-        }
-
-        if (!exemptInteractivatedVerse) {
-            this.props.interactivateVerse()
-        }
-    }
 
     stopPropagation = (e) => {
         if (e && e.stopPropagation) {
@@ -919,13 +703,38 @@ class EventContainer extends PureComponent {
         this.myWikiElement = node
     }
 
+    setCloseSections = (closeSections) => {
+        this.closeSections = closeSections
+    }
+
     render() {
+        const {
+            selectAnnotation,
+            selectCarouselNav,
+            selectOverview,
+            selectTips,
+            interactivateVerse
+        } = this.props
+
         return (
-            <InteractiveContainer
-                {...{
-                    eventHandlers: getHandlers(this)
-                }}
-            />
+            <___>
+                <InteractiveContainer
+                    {...{
+                        eventHandlers: getHandlers(this)
+                    }}
+                />
+                <CloseHandler
+                    {...{
+                        // TODO: Eventually listener should get all these through Redux.
+                        selectAnnotation,
+                        selectCarouselNav,
+                        selectOverview,
+                        selectTips,
+                        interactivateVerse,
+                        getCloseSections: this.setCloseSections
+                    }}
+                />
+            </___>
         )
     }
 }
@@ -940,10 +749,7 @@ const mapStateToProps = ({
     },
     toggleStore: {
         isCarouselShown,
-        isDotsSlideShown,
-        isLyricExpanded,
-        isScoreShown,
-        isTitleShown
+        isLyricExpanded
     },
     dotsStore: {
         dotsBitNumber,
@@ -951,38 +757,26 @@ const mapStateToProps = ({
     },
     sessionStore: {
         selectedTipsIndex,
-        selectedWikiIndex,
         interactivatedVerseIndex
     },
-    accessStore: { accessedAnnotationIndex },
-    sliderStore: {
-        isSliderMoving,
-        isSliderTouched
-    }
+    accessStore: { accessedAnnotationIndex }
 }) => ({
     isHiddenLyric,
     selectedAnnotationIndex,
     isCarouselShown,
     isLyricExpanded,
-    isDotsSlideShown,
-    isScoreShown,
-    isTitleShown,
     isSelectedLogue,
     dotsBitNumber,
     selectedDotKeys,
     selectedSongIndex,
     selectedTipsIndex,
     selectedVerseIndex,
-    selectedWikiIndex,
     interactivatedVerseIndex,
-    accessedAnnotationIndex,
-    isSliderMoving,
-    isSliderTouched
+    accessedAnnotationIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSessionStore,
         updateToggleStore
     }, dispatch)
 )

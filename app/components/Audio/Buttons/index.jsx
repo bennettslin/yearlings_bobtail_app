@@ -1,4 +1,4 @@
-// PureComponent to show buttons for audio navigation.
+// Component to show buttons for audio navigation.
 
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'

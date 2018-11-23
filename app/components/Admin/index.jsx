@@ -12,10 +12,6 @@ import { getAllTaskObjects } from './helper'
 
 class Admin extends Component {
 
-    componentDidMount() {
-        this.props.focusElementForAccess()
-    }
-
     render() {
 
         const {
