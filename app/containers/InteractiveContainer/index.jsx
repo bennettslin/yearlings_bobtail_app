@@ -44,8 +44,7 @@ class InteractiveContainer extends PureComponent {
         selectAnnotation: PropTypes.func.isRequired,
         selectCarouselNav: PropTypes.func.isRequired,
         selectOverview: PropTypes.func.isRequired,
-        selectTips: PropTypes.func.isRequired,
-        interactivateVerse: PropTypes.func.isRequired
+        selectTips: PropTypes.func.isRequired
     }
 
     state = {
@@ -255,8 +254,7 @@ class InteractiveContainer extends PureComponent {
                 selectAnnotation,
                 selectCarouselNav,
                 selectOverview,
-                selectTips,
-                interactivateVerse
+                selectTips
             } = this.props,
 
             newEventHandlers = {
@@ -300,7 +298,6 @@ class InteractiveContainer extends PureComponent {
                         selectCarouselNav,
                         selectOverview,
                         selectTips,
-                        interactivateVerse,
                         getCloseSections: this.setCloseSections
                     }}
                 />
@@ -314,7 +311,6 @@ class InteractiveContainer extends PureComponent {
         )
     }
 }
-
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({

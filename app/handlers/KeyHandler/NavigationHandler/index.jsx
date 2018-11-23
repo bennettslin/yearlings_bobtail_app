@@ -7,9 +7,7 @@ import DotsSlideNavigation from './DotsSlideNavigation'
 import LyricNavigation from './LyricNavigation'
 import NavNavigation from './NavNavigation'
 
-import {
-    ENTER
-} from 'constants/access'
+import { ENTER } from 'constants/access'
 
 class NavigationHandler extends PureComponent {
 
@@ -134,7 +132,6 @@ class NavigationHandler extends PureComponent {
                 handleAnnotationWormholeSelect,
                 handleLyricAnnotationSelect,
                 handleAnnotationAccess,
-                handleVerseInteractivate,
                 handleNavSongSelect,
                 handleNavBookSelect
             },
@@ -163,7 +160,6 @@ class NavigationHandler extends PureComponent {
                         getTryNavigateLyric: this.setTryNavigateLyric,
                         handleLyricAnnotationSelect,
                         handleAnnotationAccess,
-                        handleVerseInteractivate,
                         determineVerseBarsWithParameters
                     }}
                 />

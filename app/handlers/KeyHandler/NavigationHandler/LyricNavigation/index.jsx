@@ -1,6 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateSessionStore } from 'flux/session/action'
 
 import {
     ARROW_LEFT,
@@ -21,7 +23,6 @@ class LyricNavigation extends PureComponent {
         getTryNavigateLyric: PropTypes.func.isRequired,
         handleLyricAnnotationSelect: PropTypes.func.isRequired,
         handleAnnotationAccess: PropTypes.func.isRequired,
-        handleVerseInteractivate: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
@@ -36,7 +37,6 @@ class LyricNavigation extends PureComponent {
                 accessedAnnotationIndex,
                 handleLyricAnnotationSelect,
                 handleAnnotationAccess,
-                handleVerseInteractivate,
                 determineVerseBarsWithParameters
             } = props,
 
@@ -79,7 +79,7 @@ class LyricNavigation extends PureComponent {
             })
 
             if (isVerseInteractivated) {
-                handleVerseInteractivate()
+                this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
             }
 
         } else {
@@ -115,4 +115,10 @@ const mapStateToProps = ({
     selectedVerseIndex
 })
 
-export default connect(mapStateToProps)(LyricNavigation)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateSessionStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(LyricNavigation)

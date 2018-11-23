@@ -6,9 +6,11 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
+import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
@@ -231,7 +233,7 @@ class EventContainer extends PureComponent {
             return false
         }
 
-        this.stopPropagation(e)
+        // this.stopPropagation(e)
         this.props.selectVerse({
             selectedVerseIndex,
             scrollLog: 'Select interactivated verse.'
@@ -241,8 +243,7 @@ class EventContainer extends PureComponent {
         this.props.resetVerseBars()
 
         // Deinteractivate after selecting.
-        this.props.interactivateVerse()
-
+        this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
         return true
     }
 
@@ -411,7 +412,7 @@ class EventContainer extends PureComponent {
             })
         }
 
-        this.props.interactivateVerse()
+        this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
     }
 
     /*********
@@ -440,7 +441,7 @@ class EventContainer extends PureComponent {
                 selectedVerseIndex
             } = this.props,
             interactivatedVerseIndex =
-            this.props.interactivateVerseDirection(direction)
+            this.dispatchInteractivatedVerse(direction)
 
         this.props.scrollElementIntoView({
             log: 'Access verse direction.',
@@ -459,20 +460,6 @@ class EventContainer extends PureComponent {
         })
 
         return true
-    }
-
-    handleVerseInteractivate = (e, verseIndex) => {
-        const {
-            selectedVerseIndex
-        } = this.props
-
-        // Do not allow click on selected verse.
-        if (
-            verseIndex !== selectedVerseIndex
-        ) {
-            // this.stopPropagation(e)
-            this.props.interactivateVerse(verseIndex)
-        }
     }
 
     /***********
@@ -539,13 +526,16 @@ class EventContainer extends PureComponent {
         this.myWikiElement = node
     }
 
+    setInteractivatedVerseDispatch = (dispatch) => {
+        this.dispatchInteractivatedVerse = dispatch
+    }
+
     render() {
         const {
             selectAnnotation,
             selectCarouselNav,
             selectOverview,
             selectTips,
-            interactivateVerse,
             determineVerseBars,
             touchBodyMove,
             touchBodyEnd
@@ -562,8 +552,12 @@ class EventContainer extends PureComponent {
                         selectAnnotation,
                         selectCarouselNav,
                         selectOverview,
-                        selectTips,
-                        interactivateVerse
+                        selectTips
+                    }}
+                />
+                <InteractivatedVerseDispatcher
+                    {...{
+                        getDirectionDispatch: this.setInteractivatedVerseDispatch
                     }}
                 />
             </___>
@@ -609,6 +603,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateSessionStore,
         updateToggleStore
     }, dispatch)
 )

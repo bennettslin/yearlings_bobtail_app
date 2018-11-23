@@ -283,7 +283,6 @@ Live.propTypes = {
     handleTipsToggle: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired,
-    handleVerseInteractivate: PropTypes.func.isRequired,
     stopPropagation: PropTypes.func.isRequired
 }
 

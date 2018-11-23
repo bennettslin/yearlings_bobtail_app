@@ -1,9 +1,10 @@
 // Container for lyric audio button and all lines of a single verse.
-import React, { Component } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
 import VerseLines from './Lines'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -41,7 +42,6 @@ class Verse extends Component {
         inMain: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func,
-        handleVerseInteractivate: PropTypes.func,
 
         setVerseRef: PropTypes.func
     }
@@ -62,14 +62,11 @@ class Verse extends Component {
     }
 
     _handleInteractivatableClick = (e) => {
-        // Allow clicks on interactable verses.
-        const {
-            verseIndex,
-            handleVerseInteractivate
-        } = this.props
+        e.stopPropagation()
 
+        // Allow clicks on interactable verses.
         if (this.getIsInteractable()) {
-            handleVerseInteractivate(e, verseIndex)
+            this.dispatchInteractivatedVerse(this.props.verseIndex)
         }
     }
 
@@ -91,12 +88,15 @@ class Verse extends Component {
         }
     }
 
+    setInteractivatedVerseDispatch = (dispatch) => {
+        this.dispatchInteractivatedVerse = dispatch
+    }
+
     render() {
         const {
                 /* eslint-disable no-unused-vars */
                 renderedSongIndex,
                 canLyricRender,
-                handleVerseInteractivate,
                 setVerseRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */
@@ -120,20 +120,25 @@ class Verse extends Component {
             isInteractable = this.getIsInteractable()
 
         return (
-            <VerseView {...other}
-                setRef={this.setVerseRef}
-                handleInteractivatableClick={this._handleInteractivatableClick}
-                {...{
-                    isTitle,
-                    isInteractable,
-                    isDoubleSpeaker: !lyric && !centre
-                }}
-                {
-                ...!inVerseBar && {
-                    handleAnchorClick: handleLyricAnnotationSelect
-                }
-                }
-            />
+            <___>
+                <VerseView {...other}
+                    {...{
+                        setRef: this.setVerseRef,
+                        isTitle,
+                        isInteractable,
+                        isDoubleSpeaker: !lyric && !centre,
+                        handleInteractivatableClick: this._handleInteractivatableClick
+                    }}
+                    {...!inVerseBar && {
+                        handleAnchorClick: handleLyricAnnotationSelect
+                    }}
+                />
+                <InteractivatedVerseDispatcher
+                    {...{
+                        getIndexDispatch: this.setInteractivatedVerseDispatch
+                    }}
+                />
+            </___>
         )
     }
 }

@@ -179,7 +179,7 @@ class ToggleHandler extends PureComponent {
         // Turn access off.
         } else {
             this.props.updateToggleStore({ isAccessOn: false })
-            eventHandlers.handleVerseInteractivate(e)
+            this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
         }
     }
 

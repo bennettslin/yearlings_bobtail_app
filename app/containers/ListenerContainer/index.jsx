@@ -204,14 +204,6 @@ class ListenerContainer extends PureComponent {
      * VERSE *
      *********/
 
-    interactivateVerse = (payload) => {
-        return this.verseManager.interactivateVerse(payload)
-    }
-
-    interactivateVerseDirection = (payload) => {
-        return this.verseManager.interactivateVerseDirection(payload)
-    }
-
     determineVerseBars = (payload) => {
         return this.verseManager.determineVerseBars(payload)
     }
@@ -298,8 +290,6 @@ class ListenerContainer extends PureComponent {
                     selectSong={this.selectSong}
                     selectTips={this.selectTips}
                     selectVerse={this.selectVerse}
-                    interactivateVerse={this.interactivateVerse}
-                    interactivateVerseDirection={this.interactivateVerseDirection}
                     togglePlay={this.togglePlay}
                 />
                 <AnnotationManager

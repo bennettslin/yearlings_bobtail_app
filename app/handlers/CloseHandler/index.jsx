@@ -36,7 +36,6 @@ class CloseHandler extends PureComponent {
         selectCarouselNav: PropTypes.func.isRequired,
         selectOverview: PropTypes.func.isRequired,
         selectTips: PropTypes.func.isRequired,
-        interactivateVerse: PropTypes.func.isRequired,
         getCloseSections: PropTypes.func.isRequired
     }
 
@@ -284,7 +283,7 @@ class CloseHandler extends PureComponent {
         }
 
         if (!exemptInteractivatedVerse) {
-            this.props.interactivateVerse()
+            this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
         }
     }
 

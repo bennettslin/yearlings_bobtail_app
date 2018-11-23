@@ -32,7 +32,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleTipsToggle,
             handleVerseBarSelect,
             handleVerseBarWheel,
-            handleVerseInteractivate,
             stopPropagation
         } = props,
 
@@ -68,7 +67,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleLyricVerseSelect,
             handleVerseBarSelect,
             handleVerseBarWheel,
-            handleVerseInteractivate,
             handleScrollUponLyricRender
         },
 

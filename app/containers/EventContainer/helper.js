@@ -30,7 +30,6 @@ export const getHandlers = (me) => {
         handleSceneDirection: me.handleSceneDirection,
         handleTipsToggle: me.handleTipsToggle,
         handleVerseBarSelect: me.handleVerseBarSelect,
-        handleVerseInteractivate: me.handleVerseInteractivate,
         handleScrollUponLyricRender: me.handleScrollUponLyricRender,
         handleScrollUponCarouselRender: me.handleScrollUponCarouselRender,
         setScoreRef: me.setScoreRef,

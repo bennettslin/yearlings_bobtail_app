@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import { getSongVersesCount } from 'helpers/dataHelper'
 import { getVerseBarStatus } from './helper'
 
 class VerseManager extends PureComponent {
@@ -18,7 +17,6 @@ class VerseManager extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
@@ -44,10 +42,10 @@ class VerseManager extends PureComponent {
             sliderVerseIndex
         } = this.props
 
-
+        // TODO: This can be moved to its own listener.
         if (selectedSongIndex !== prevProps.selectedSongIndex) {
             // Reset interactivated verse.
-            this.interactivateVerse()
+            this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
 
             // Reset verse bars.
             this.resetVerseBars()
@@ -63,45 +61,6 @@ class VerseManager extends PureComponent {
                 calledFromTimeout: false
             })
         }
-    }
-
-    interactivateVerse(interactivatedVerseIndex = -1) {
-        this.props.updateSessionStore({ interactivatedVerseIndex })
-    }
-
-    interactivateVerseDirection(direction) {
-        const {
-                selectedSongIndex,
-                selectedVerseIndex
-            } = this.props,
-            songVersesCount = getSongVersesCount(selectedSongIndex)
-
-        let {
-            interactivatedVerseIndex
-        } = this.props
-
-        // Ensure modulo.
-        if (direction === -1) {
-            direction = songVersesCount - 1
-        }
-
-        // We are turning on interactivation, so start from selected verse.
-        if (interactivatedVerseIndex === -1) {
-            interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % songVersesCount
-
-        // We already have an interactivated verse.
-        } else {
-            interactivatedVerseIndex = (interactivatedVerseIndex + direction) % songVersesCount
-        }
-
-        // If we're returning to the selected verse, turn off interactivation.
-        if (interactivatedVerseIndex === selectedVerseIndex) {
-            interactivatedVerseIndex = -1
-        }
-
-        this.props.updateSessionStore({ interactivatedVerseIndex })
-
-        return interactivatedVerseIndex
     }
 
     determineVerseBars(timeoutDuration = 10) {
@@ -181,7 +140,6 @@ const mapStateToProps = ({
         isTwoRowMenu
     },
     toggleStore: { isLyricExpanded },
-    sessionStore: { interactivatedVerseIndex },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
@@ -191,7 +149,6 @@ const mapStateToProps = ({
     deviceIndex,
     windowHeight,
     isLyricExpanded,
-    interactivatedVerseIndex,
     isHiddenLyric,
     isTwoRowMenu,
     selectedSongIndex,
