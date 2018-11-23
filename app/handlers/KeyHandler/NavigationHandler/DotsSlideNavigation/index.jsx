@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 
-import DispatchDotSelect from '../../../../dispatchers/DispatchDotSelect'
+import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
 
 import {
     ARROW_LEFT,
@@ -64,7 +64,7 @@ class DotsSlideNavigation extends PureComponent {
                     }
                     break
                 case ENTER:
-                    this.trySelectDot(accessedDotIndex)
+                    this.dispatchSelectDot(accessedDotIndex)
                     return true
                 default:
                     return false
@@ -77,14 +77,14 @@ class DotsSlideNavigation extends PureComponent {
         return false
     }
 
-    setTrySelectDot = (trySelectDot) => {
-        this.trySelectDot = trySelectDot
+    setDotSelectDispatch = (dispatchSelectDot) => {
+        this.dispatchSelectDot = dispatchSelectDot
     }
 
     render() {
         return (
-            <DispatchDotSelect
-                {...{ getTrySelectDot: this.setTrySelectDot }}
+            <DotSelectDispatcher
+                {...{ getDispatch: this.setDotSelectDispatch }}
             />
         )
     }

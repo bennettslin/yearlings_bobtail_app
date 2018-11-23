@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import DispatchScore from '../../dispatchers/DispatchScore'
+import ScoreDispatcher from '../../dispatchers/ScoreDispatcher'
 import Button from '../Button'
 
 import {
@@ -60,12 +60,12 @@ class ScoresTips extends Component {
         handleTipsToggle: PropTypes.func.isRequired
     }
 
-    handleScoreClick = () => {
-        this.tryToggleScore()
+    handleScoreButtonClick = () => {
+        this.dispatchScore()
     }
 
-    setTryToggleScore = (tryToggleScore) => {
-        this.tryToggleScore = tryToggleScore
+    setScoreDispatch = (dispatch) => {
+        this.dispatchScore = dispatch
     }
 
     render() {
@@ -117,7 +117,7 @@ class ScoresTips extends Component {
                         className="ScoresTipsButton"
                         accessKey={SCORE_TOGGLE_KEY}
                         isDisabled={!isScoreLoaded}
-                        handleButtonClick={this.handleScoreClick}
+                        handleButtonClick={this.handleScoreButtonClick}
                     />
                     }
                     {/* TODO: Shouldn't this use the tips toggle button? */}
@@ -130,8 +130,8 @@ class ScoresTips extends Component {
                         handleButtonClick={handleTipsToggle}
                     />
                 </div>
-                <DispatchScore
-                    {...{ getTryToggleScore: this.setTryToggleScore }}
+                <ScoreDispatcher
+                    {...{ getDispatch: this.setScoreDispatch }}
                 />
             </___>
         )

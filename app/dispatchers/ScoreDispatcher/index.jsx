@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class DispatchScore extends Component {
+class ScoreDispatcher extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -16,14 +16,14 @@ class DispatchScore extends Component {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryToggleScore: PropTypes.func.isRequired
+        getDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryToggleScore(this.tryToggleScore)
+        this.props.getDispatch(this.dispatchScore)
     }
 
-    tryToggleScore = (
+    dispatchScore = (
         // Just toggle unless parent specifies value.
         triedIsScoreShown = !this.props.isScoreShown
     ) => {
@@ -63,4 +63,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DispatchScore)
+export default connect(mapStateToProps, bindDispatchToProps)(ScoreDispatcher)

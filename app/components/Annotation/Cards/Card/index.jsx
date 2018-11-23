@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DispatchWikiSelect from '../../../../dispatchers/DispatchWikiSelect'
+import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 
 import DotSequence from '../../../DotSequence'
 import Texts from '../../../Texts'
@@ -58,14 +58,14 @@ class AnnotationCard extends Component {
         selectedWikiIndex,
         carouselAnnotationIndex
     ) => {
-        this.trySelectWiki(
+        this.dispatchWiki(
             selectedWikiIndex,
             carouselAnnotationIndex
         )
     }
 
-    setTrySelectWiki = (trySelectWiki) => {
-        this.trySelectWiki = trySelectWiki
+    setWikiDispatch = (dispatch) => {
+        this.dispatchWiki = dispatch
     }
 
     render() {
@@ -111,8 +111,8 @@ class AnnotationCard extends Component {
                         handleWikiSelectClick: this.handleWikiSelectClick
                     }}
                 />
-                <DispatchWikiSelect
-                    {...{ getTrySelectWiki: this.setTrySelectWiki }}
+                <WikiDispatcher
+                    {...{ getDispatch: this.setWikiDispatch }}
                 />
             </___>
         )

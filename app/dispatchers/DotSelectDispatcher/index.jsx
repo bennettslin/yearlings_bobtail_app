@@ -8,7 +8,7 @@ import { updateDotsStore } from 'flux/dots/action'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 
-class DispatchDotSelect extends PureComponent {
+class DotSelectDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -19,14 +19,14 @@ class DispatchDotSelect extends PureComponent {
         updateDotsStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTrySelectDot: PropTypes.func.isRequired
+        getDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTrySelectDot(this.trySelectDot)
+        this.props.getDispatch(this.dispatchSelectDot)
     }
 
-    trySelectDot = (selectedDotIndex) => {
+    dispatchSelectDot = (selectedDotIndex) => {
         const
             selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
             isSelected = !this.props.selectedDotKeys[selectedDotKey]
@@ -62,4 +62,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DispatchDotSelect)
+export default connect(mapStateToProps, bindDispatchToProps)(DotSelectDispatcher)

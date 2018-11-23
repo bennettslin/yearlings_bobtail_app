@@ -8,7 +8,7 @@ import { updateSessionStore } from 'flux/session/action'
 
 import { AUDIO_OPTIONS } from 'constants/options'
 
-class DispatchAudioOption extends Component {
+class AudioOptionDispatcher extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -16,14 +16,14 @@ class DispatchAudioOption extends Component {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryToggleAudioOption: PropTypes.func.isRequired
+        getDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryToggleAudioOption(this.tryToggleAudioOption)
+        this.props.getDispatch(this.dispatchAudioOption)
     }
 
-    tryToggleAudioOption = (
+    dispatchAudioOption = (
         // Just toggle unless parent specifies value.
         selectedAudioOptionIndex =
         (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length
@@ -50,4 +50,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DispatchAudioOption)
+export default connect(mapStateToProps, bindDispatchToProps)(AudioOptionDispatcher)

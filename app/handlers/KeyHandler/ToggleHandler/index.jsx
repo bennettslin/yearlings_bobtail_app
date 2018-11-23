@@ -5,12 +5,12 @@ import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import DispatchAdmin from '../../../dispatchers/DispatchAdmin'
-import DispatchAudioOption from '../../../dispatchers/DispatchAudioOption'
-import DispatchDotsSlide from '../../../dispatchers/DispatchDotsSlide'
-import DispatchLyric from '../../../dispatchers/DispatchLyric'
-import DispatchScore from '../../../dispatchers/DispatchScore'
-import DispatchTitle from '../../../dispatchers/DispatchTitle'
+import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
+import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
+import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
+import LyricExpandDispatcher from '../../../dispatchers/LyricExpandDispatcher'
+import ScoreDispatcher from '../../../dispatchers/ScoreDispatcher'
+import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 
 import {
     AUDIO_REWIND_KEY,
@@ -66,10 +66,10 @@ class ToggleHandler extends PureComponent {
 
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
-                keyWasRegistered = this.tryToggleAdmin()
+                keyWasRegistered = this.dispatchAdmin()
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                keyWasRegistered = this.tryToggleAudioOption()
+                keyWasRegistered = this.dispatchAudioOption()
                 break
             case AUDIO_PLAY_KEY:
                 keyWasRegistered = eventHandlers.handleAudioPlay(e)
@@ -92,14 +92,14 @@ class ToggleHandler extends PureComponent {
                 keyWasRegistered = eventHandlers.handleCarouselNavToggle(e)
                 break
             case DOTS_SLIDE_TOGGLE_KEY:
-                keyWasRegistered = this.tryToggleDotsSlide()
+                keyWasRegistered = this.dispatchDotsSlide()
                 break
             case LYRIC_COLUMN_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleLyricColumnSelect(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case LYRIC_SECTION_EXPAND_KEY:
-                keyWasRegistered = this.tryToggleLyric()
+                keyWasRegistered = this.dispatchLyricExpand()
                 break
             case LYRIC_SCROLL_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleLyricAutoScroll(e)
@@ -114,13 +114,13 @@ class ToggleHandler extends PureComponent {
                 keyWasRegistered = eventHandlers.handleSceneDirection(e, 1)
                 break
             case SCORE_TOGGLE_KEY:
-                keyWasRegistered = this.tryToggleScore()
+                keyWasRegistered = this.dispatchScore()
                 break
             case TIPS_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleTipsToggle(e)
                 break
             case TITLE_TOGGLE_KEY:
-                keyWasRegistered = this.tryToggleTitle()
+                keyWasRegistered = this.dispatchTitle()
                 break
             default:
                 keyWasRegistered = false
@@ -141,11 +141,11 @@ class ToggleHandler extends PureComponent {
 
         // Close score popup.
         if (props.isScoreShown) {
-            this.tryToggleScore(false)
+            this.dispatchScore(false)
 
         // Close title popup.
         } else if (props.isTitleShown) {
-            this.tryToggleTitle(false)
+            this.dispatchTitle(false)
 
         // Close wiki popup.
         } else if (props.selectedWikiIndex) {
@@ -166,7 +166,7 @@ class ToggleHandler extends PureComponent {
 
         // Close dots popup.
         } else if (props.isDotsSlideShown) {
-            this.tryToggleDotsSlide(false)
+            this.dispatchDotsSlide(false)
 
         // Close annotation popup.
         } else if (props.selectedAnnotationIndex) {
@@ -174,7 +174,7 @@ class ToggleHandler extends PureComponent {
 
         // Collapse lyric
         } else if (props.isLyricExpanded) {
-            this.tryToggleLyric(false)
+            this.dispatchLyricExpand(false)
 
         // Turn access off.
         } else {
@@ -183,50 +183,50 @@ class ToggleHandler extends PureComponent {
         }
     }
 
-    setTryToggleAdmin = (tryToggleAdmin) => {
-        this.tryToggleAdmin = tryToggleAdmin
+    setAdminDispatch = (dispatch) => {
+        this.dispatchAdmin = dispatch
     }
 
-    setTryToggleAudioOption = (tryToggleAudioOption) => {
-        this.tryToggleAudioOption = tryToggleAudioOption
+    setAudioOptionDispatch = (dispatch) => {
+        this.dispatchAudioOption = dispatch
     }
 
-    setTryToggleDotsSlide = (tryToggleDotsSlide) => {
-        this.tryToggleDotsSlide = tryToggleDotsSlide
+    setDotsSlideDispatch = (dispatch) => {
+        this.dispatchDotsSlide = dispatch
     }
 
-    setTryToggleLyric = (tryToggleLyric) => {
-        this.tryToggleLyric = tryToggleLyric
+    setLyricExpandDispatch = (dispatch) => {
+        this.dispatchLyricExpand = dispatch
     }
 
-    setTryToggleScore = (tryToggleScore) => {
-        this.tryToggleScore = tryToggleScore
+    setScoreDispatch = (dispatch) => {
+        this.dispatchScore = dispatch
     }
 
-    setTryToggleTitle = (tryToggleTitle) => {
-        this.tryToggleTitle = tryToggleTitle
+    setTitleDispatch = (dispatch) => {
+        this.dispatchTitle = dispatch
     }
 
     render() {
         return (
             <___>
-                <DispatchAdmin
-                    {...{ getTryToggleAdmin: this.setTryToggleAdmin }}
+                <AdminDispatcher
+                    {...{ getDispatch: this.setAdminDispatch }}
                 />
-                <DispatchAudioOption
-                    {...{ getTryToggleAudioOption: this.setTryToggleAudioOption }}
+                <AudioOptionDispatcher
+                    {...{ getDispatch: this.setAudioOptionDispatch }}
                 />
-                <DispatchDotsSlide
-                    {...{ getTryToggleDotsSlide: this.setTryToggleDotsSlide }}
+                <DotsSlideDispatcher
+                    {...{ getDispatch: this.setDotsSlideDispatch }}
                 />
-                <DispatchLyric
-                    {...{ getTryToggleLyric: this.setTryToggleLyric }}
+                <LyricExpandDispatcher
+                    {...{ getDispatch: this.setLyricExpandDispatch }}
                 />
-                <DispatchScore
-                    {...{ getTryToggleScore: this.setTryToggleScore }}
+                <ScoreDispatcher
+                    {...{ getDispatch: this.setScoreDispatch }}
                 />
-                <DispatchTitle
-                    {...{ getTryToggleTitle: this.setTryToggleTitle }}
+                <TitleDispatcher
+                    {...{ getDispatch: this.setTitleDispatch }}
                 />
             </___>
         )

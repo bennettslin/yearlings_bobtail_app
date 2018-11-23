@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DispatchLyric from '../../../../dispatchers/DispatchLyric'
+import LyricExpandDispatcher from '../../../../dispatchers/LyricExpandDispatcher'
 import Button from '../../../Button'
 
 import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
@@ -39,11 +39,11 @@ class LyricToggleExpand extends Component {
     }
 
     handleLyricClick = () => {
-        this.tryToggleLyric()
+        this.dispatchLyricExpand()
     }
 
-    setTryToggleLyric = (tryToggleLyric) => {
-        this.tryToggleLyric = tryToggleLyric
+    setLyricExpandDispatch = (dispatch) => {
+        this.dispatchLyricExpand = dispatch
     }
 
     render() {
@@ -78,8 +78,8 @@ class LyricToggleExpand extends Component {
                         }}
                     />
                 </div>
-                <DispatchLyric
-                    {...{ getTryToggleLyric: this.setTryToggleLyric }}
+                <LyricExpandDispatcher
+                    {...{ getDispatch: this.setLyricExpandDispatch }}
                 />
             </___>
         )

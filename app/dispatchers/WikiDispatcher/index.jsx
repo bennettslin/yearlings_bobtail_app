@@ -6,7 +6,7 @@ import { updateSessionStore } from 'flux/session/action'
 
 import { REFERENCE } from '../../constants/dots'
 
-class DispatchWikiSelect extends PureComponent {
+class WikiDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -14,14 +14,14 @@ class DispatchWikiSelect extends PureComponent {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTrySelectWiki: PropTypes.func.isRequired
+        getDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTrySelectWiki(this.trySelectWiki)
+        this.props.getDispatch(this.dispatchWiki)
     }
 
-    trySelectWiki = (
+    dispatchWiki = (
         selectedWikiIndex,
         carouselAnnotationIndex
     ) => {
@@ -58,4 +58,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DispatchWikiSelect)
+export default connect(mapStateToProps, bindDispatchToProps)(WikiDispatcher)

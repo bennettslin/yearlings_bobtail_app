@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import DispatchWikiSelect from '../../../../dispatchers/DispatchWikiSelect'
+import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 
 import {
     getWormholeLink,
@@ -135,14 +135,14 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
-    setTrySelectWiki = (trySelectWiki) => {
-        this.trySelectWiki = trySelectWiki
+    setWikiDispatch = (dispatch) => {
+        this.dispatchWiki = dispatch
     }
 
     render() {
         return (
-            <DispatchWikiSelect
-                {...{ getTrySelectWiki: this.setTrySelectWiki }}
+            <WikiDispatcher
+                {...{ getDispatch: this.setWikiDispatch }}
             />
         )
     }

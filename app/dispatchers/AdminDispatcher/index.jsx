@@ -1,4 +1,4 @@
-// Child that knows rules to toggle title. Not needed if just turning off.
+// Child that knows rules to toggle admin.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -6,27 +6,27 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class DispatchTitle extends Component {
+class AdminDispatcher extends Component {
 
     static propTypes = {
         // Through Redux.
-        isTitleShown: PropTypes.bool.isRequired,
+        isAdminOn: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryToggleTitle: PropTypes.func.isRequired
+        getDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryToggleTitle(this.tryToggleTitle)
+        this.props.getDispatch(this.dispatchAdmin)
     }
 
-    tryToggleTitle = (
+    dispatchAdmin = (
         // Just toggle unless parent specifies value.
-        isTitleShown = !this.props.isTitleShown
+        isAdminOn = !this.props.isAdminOn
     ) => {
         // Turning on or off is always successful.
-        this.props.updateToggleStore({ isTitleShown })
+        this.props.updateToggleStore({ isAdminOn })
         return true
     }
 
@@ -36,9 +36,9 @@ class DispatchTitle extends Component {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isTitleShown }
+    toggleStore: { isAdminOn }
 }) => ({
-    isTitleShown
+    isAdminOn
 })
 
 const bindDispatchToProps = (dispatch) => (
@@ -47,4 +47,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DispatchTitle)
+export default connect(mapStateToProps, bindDispatchToProps)(AdminDispatcher)

@@ -4,7 +4,7 @@ import React, { Component, Fragment as ___ } from 'react'
 // import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DispatchDotsSlide from '../../../dispatchers/DispatchDotsSlide'
+import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
 import Button from '../../Button'
 
 import { DOTS_SLIDE_TOGGLE_KEY } from 'constants/access'
@@ -12,12 +12,12 @@ import { DOTS_SLIDE_BUTTON_KEY } from 'constants/buttons'
 
 class DotsSlideToggle extends Component {
 
-    handleDotsSlideClick = () => {
-        this.tryToggleDotsSlide()
+    handleButtonClick = () => {
+        this.dispatchDotsSlide()
     }
 
-    setTryToggleDotsSlide = (tryToggleDotsSlide) => {
-        this.tryToggleDotsSlide = tryToggleDotsSlide
+    setDotsSlideDispatch = (dispatch) => {
+        this.dispatchDotsSlide = dispatch
     }
 
     render() {
@@ -32,12 +32,12 @@ class DotsSlideToggle extends Component {
                         {...{
                             buttonName: DOTS_SLIDE_BUTTON_KEY,
                             accessKey: DOTS_SLIDE_TOGGLE_KEY,
-                            handleButtonClick: this.handleDotsSlideClick
+                            handleButtonClick: this.handleButtonClick
                         }}
                     />
                 </div>
-                <DispatchDotsSlide
-                    {...{ getTryToggleDotsSlide: this.setTryToggleDotsSlide }}
+                <DotsSlideDispatcher
+                    {...{ getDispatch: this.setDotsSlideDispatch }}
                 />
             </___>
         )

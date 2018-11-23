@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DispatchTitle from '../../../dispatchers/DispatchTitle'
+import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 import AudioTimer from '../../Audio/Timer'
 import Button from '../../Button'
 
@@ -32,12 +32,12 @@ class TitleToggle extends Component {
         isAudioChild: PropTypes.bool.isRequired
     }
 
-    handleTitleClick = () => {
-        this.tryToggleTitle()
+    handleButtonClick = () => {
+        this.dispatchTitle()
     }
 
-    setTryToggleTitle = (tryToggleTitle) => {
-        this.tryToggleTitle = tryToggleTitle
+    setTitleDispatch = (dispatch) => {
+        this.dispatchTitle = dispatch
     }
 
     render() {
@@ -54,7 +54,7 @@ class TitleToggle extends Component {
                     )}
                     isCustomSize
                     accessKey={TITLE_TOGGLE_KEY}
-                    handleButtonClick={this.handleTitleClick}
+                    handleButtonClick={this.handleButtonClick}
                 />
             )
 
@@ -84,8 +84,8 @@ class TitleToggle extends Component {
                         titleButtonChild
                     )}
                 </div>
-                <DispatchTitle
-                    {...{ getTryToggleTitle: this.setTryToggleTitle }}
+                <TitleDispatcher
+                    {...{ getDispatch: this.setTitleDispatch }}
                 />
             </___>
         )

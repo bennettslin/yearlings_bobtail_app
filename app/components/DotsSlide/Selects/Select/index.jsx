@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DispatchDotSelect from '../../../../dispatchers/DispatchDotSelect'
+import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
 import Button from '../../../Button'
 import Dot from '../../../Dot'
 import AnchorText from '../../../Anchor/AnchorText'
@@ -60,8 +60,8 @@ class DotsSlideSelect extends Component {
         }
     }
 
-    _handleDotToggleClick = () => {
-        this.trySelectDot(this.props.dotIndex)
+    handleDotSelectClick = () => {
+        this.dispatchSelectDot(this.props.dotIndex)
     }
 
     _handleTextContainerClick = (e) => {
@@ -79,8 +79,8 @@ class DotsSlideSelect extends Component {
         this.props.setHasInteractivatedDotText(isInteractivated)
     }
 
-    setTrySelectDot = (trySelectDot) => {
-        this.trySelectDot = trySelectDot
+    setDotSelectDispatch = (dispatchSelectDot) => {
+        this.dispatchSelectDot = dispatchSelectDot
     }
 
     render() {
@@ -103,12 +103,12 @@ class DotsSlideSelect extends Component {
                 <DotsSlideSelectView {...other}
                     {...{
                         isInteractivated: this.state.isInteractivated,
-                        handleDotSelectClick: this._handleDotToggleClick,
+                        handleDotSelectClick: this.handleDotSelectClick,
                         handleTextContainerClick: this._handleTextContainerClick
                     }}
                 />
-                <DispatchDotSelect
-                    {...{ getTrySelectDot: this.setTrySelectDot }}
+                <DotSelectDispatcher
+                    {...{ getDispatch: this.setDotSelectDispatch }}
                 />
             </___>
         )

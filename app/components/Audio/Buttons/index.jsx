@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DispatchAudioOption from '../../../dispatchers/DispatchAudioOption'
+import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import Button from '../../Button'
 
 import {
@@ -59,11 +59,11 @@ class AudioButtons extends PureComponent {
     }
 
     handleAudioOptionClick = () => {
-        this.tryToggleAudioOption()
+        this.dispatchAudioOption()
     }
 
-    setTryToggleAudioOption = (tryToggleAudioOption) => {
-        this.tryToggleAudioOption = tryToggleAudioOption
+    setAudioOptionDispatch = (dispatch) => {
+        this.dispatchAudioOption = dispatch
     }
 
     render() {
@@ -147,8 +147,8 @@ class AudioButtons extends PureComponent {
                         />
                     </div>
                 </div>
-                <DispatchAudioOption
-                    {...{ getTryToggleAudioOption: this.setTryToggleAudioOption }}
+                <AudioOptionDispatcher
+                    {...{ getDispatch: this.setAudioOptionDispatch }}
                 />
             </___>
         )
