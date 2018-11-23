@@ -22,7 +22,7 @@ const mapStateToProps = ({
         isDotsSlideShown,
         isLyricExpanded
     },
-    interactivatedVerseIndex
+    sessionStore: { interactivatedVerseIndex }
 }) => ({
     accessedAnnotationIndex,
     isAccessOn,

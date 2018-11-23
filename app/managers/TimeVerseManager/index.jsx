@@ -28,7 +28,6 @@ class TimeVerseManager extends Component {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        updateSceneIfChanged: PropTypes.func.isRequired,
         determineVerseBars: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updateSelectedPlayer: PropTypes.func.isRequired
@@ -172,9 +171,6 @@ class TimeVerseManager extends Component {
                 selectedSongIndex,
                 selectedVerseIndex
             )
-
-            // Have scene manager check if scene changed, and handle if so.
-            this.props.updateSceneIfChanged(renderedSceneIndex)
 
             /**
              * If selecting or changing verse in same song, change index to be

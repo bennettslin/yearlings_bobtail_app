@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectTipsIndex } from 'flux/storage/action'
+import { updateSessionStore } from 'flux/session/action'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
@@ -29,7 +29,7 @@ class TipsManager extends Component {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
-        selectTipsIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -111,7 +111,7 @@ class TipsManager extends Component {
 
         // Overview options are shown, disabled, hidden.
         if (selectedTipsIndex !== this.props.selectedTipsIndex) {
-            this.props.selectTipsIndex(selectedTipsIndex)
+            this.props.updateSessionStore({ selectedTipsIndex })
         }
         return true
     }
@@ -134,9 +134,11 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         isSelectedLogue
     },
-    selectedOverviewIndex,
-    selectedTipsIndex,
-    selectedWikiIndex
+    sessionStore: {
+        selectedOverviewIndex,
+        selectedTipsIndex,
+        selectedWikiIndex
+    }
 }) => ({
     isCarouselShown,
     isDotsSlideShown,
@@ -153,7 +155,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectTipsIndex
+        updateSessionStore
     }, dispatch)
 )
 

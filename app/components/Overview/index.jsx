@@ -20,7 +20,7 @@ import {
 } from 'constants/options'
 
 const mapStateToProps = ({
-    selectedOverviewIndex,
+    sessionStore: { selectedOverviewIndex },
     deviceStore: { deviceIndex },
     renderStore: { canMainRender },
     renderedStore: {

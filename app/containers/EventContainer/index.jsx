@@ -158,19 +158,6 @@ class EventContainer extends PureComponent {
         this.props.accessAnnotationAnchor(payload)
     }
 
-    handleDotAccess = (accessedDotIndex) => {
-        if (this.props.isSelectedLogue) {
-            return false
-        }
-
-        this.props.accessDot(accessedDotIndex)
-        return true
-    }
-
-    handleSongAccess = (accessedNavSongIndex) => {
-        this.props.accessNavSong(accessedNavSongIndex)
-    }
-
     handleVerseDirectionAccess = (direction) => {
         if (this.props.isSelectedLogue) {
             return false
@@ -317,7 +304,6 @@ class EventContainer extends PureComponent {
         const songSelected = this.props.selectSong({
             direction: -1
         })
-        // this._closeDotsIfOverviewWillShow()
         if (songSelected) {
             this.stopPropagation(e)
         }
@@ -328,7 +314,6 @@ class EventContainer extends PureComponent {
         const songSelected = this.props.selectSong({
             direction: 1
         })
-        // this._closeDotsIfOverviewWillShow()
         if (songSelected) {
             this.stopPropagation(e)
         }
@@ -1000,9 +985,11 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    selectedTipsIndex,
-    selectedWikiIndex,
-    interactivatedVerseIndex,
+    sessionStore: {
+        selectedTipsIndex,
+        selectedWikiIndex,
+        interactivatedVerseIndex
+    },
     accessStore: { accessedAnnotationIndex },
     sliderStore: {
         isSliderMoving,

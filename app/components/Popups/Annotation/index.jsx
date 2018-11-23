@@ -17,7 +17,7 @@ const mapStateToProps = ({
     transientStore: { isOverlayingAnnotation },
     renderStore: { canCarouselRender },
     renderedStore: { renderedAnnotationIndex },
-    selectedWikiIndex
+    sessionStore: { selectedWikiIndex }
 }) => ({
     isCarouselShown,
     isScoreShown,

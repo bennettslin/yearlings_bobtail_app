@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectLyricColumnIndex } from 'flux/storage/action'
+import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class LyricManager extends Component {
@@ -20,7 +20,7 @@ class LyricManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
-        selectLyricColumnIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -71,7 +71,7 @@ class LyricManager extends Component {
             return false
         }
 
-        this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
+        this.props.updateSessionStore({ selectedLyricColumnIndex })
 
         // Switching lyric column might change accessed annotation index.
         this.props.accessAnnotationIfCurrentInvalid({
@@ -96,7 +96,7 @@ const mapStateToProps = ({
         selectedSongIndex,
         isSelectedLogue
     },
-    selectedLyricColumnIndex
+    sessionStore: { selectedLyricColumnIndex }
 }) => ({
     deviceIndex,
     isLyricExpandable,
@@ -109,7 +109,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectLyricColumnIndex,
+        updateSessionStore,
         updateToggleStore
     }, dispatch)
 )

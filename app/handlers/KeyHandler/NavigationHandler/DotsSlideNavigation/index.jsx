@@ -1,6 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateAccessStore } from 'flux/access/action'
 
 import {
     ARROW_LEFT,
@@ -17,10 +19,10 @@ class DotsSlideNavigation extends PureComponent {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
         accessedDotIndex: PropTypes.number.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
         getTryNavigateDotsSlide: PropTypes.func.isRequired,
-        handleDotAccess: PropTypes.func.isRequired,
         handleDotSelect: PropTypes.func.isRequired
     }
 
@@ -31,7 +33,6 @@ class DotsSlideNavigation extends PureComponent {
     tryNavigateDotsSlide = (e, keyName) => {
         const {
             isAccessOn,
-            handleDotAccess,
             handleDotSelect
         } = this.props
 
@@ -70,7 +71,8 @@ class DotsSlideNavigation extends PureComponent {
                     return false
             }
 
-            return handleDotAccess(accessedDotIndex)
+            this.props.updateAccessStore({ accessedDotIndex })
+            return true
         }
 
         return false
@@ -89,4 +91,10 @@ const mapStateToProps = ({
     accessedDotIndex
 })
 
-export default connect(mapStateToProps)(DotsSlideNavigation)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateAccessStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(DotsSlideNavigation)

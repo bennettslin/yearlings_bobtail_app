@@ -9,15 +9,17 @@ import Overview from '../../Overview'
 import Popup from '../../Popup'
 
 const mapStateToProps = ({
-    selectedOverviewIndex,
+    sessionStore: {
+        selectedOverviewIndex,
+        selectedTipsIndex
+    },
     renderStore: { canMainRender },
-    renderedStore: { isRenderedLogue },
-    selectedTipsIndex
+    renderedStore: { isRenderedLogue }
 }) => ({
     selectedOverviewIndex,
+    selectedTipsIndex,
     canMainRender,
-    isRenderedLogue,
-    selectedTipsIndex
+    isRenderedLogue
 })
 
 const overviewPopupPropTypes = {

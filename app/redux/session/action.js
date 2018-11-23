@@ -1,27 +1,13 @@
-// Actions for state of this user session.
-import {
-    CAROUSEL_ANNOTATION_INDEX,
-    INTERACTIVATED_VERSE_INDEX,
-    SHOWN_BOOK_COLUMN_INDEX
-} from 'constants/state'
+// Actions for session values.
+import { getDefinedOnlyPayload } from '../actionHelper'
 
-export const setCarouselAnnotationIndex = (carouselAnnotationIndex = 0) => (
-    {
-        type: CAROUSEL_ANNOTATION_INDEX,
-        payload: carouselAnnotationIndex
-    }
-)
+import { SESSION_STORE } from '../storeKeys'
+import { SESSION_DEFAULTS } from '../defaultStates'
 
-export const setInteractivatedVerseIndex = (interactivatedVerseIndex = -1) => (
-    {
-        type: INTERACTIVATED_VERSE_INDEX,
-        payload: interactivatedVerseIndex
-    }
-)
+export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
 
-export const setShownBookColumnIndex = (shownBookColumnIndex = -1) => (
-    {
-        type: SHOWN_BOOK_COLUMN_INDEX,
-        payload: shownBookColumnIndex
-    }
-)
+    return ({
+        type: SESSION_STORE,
+        payload: getDefinedOnlyPayload(payload)
+    })
+}

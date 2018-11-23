@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setCarouselAnnotationIndex } from 'flux/session/action'
+import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -18,7 +18,7 @@ class CarouselManager extends Component {
         isCarouselShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-        setCarouselAnnotationIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -68,7 +68,7 @@ class CarouselManager extends Component {
 
     _selectCarouselToggle(isCarouselShown) {
         if (!isCarouselShown) {
-            this.props.setCarouselAnnotationIndex(0)
+            this.props.updateSessionStore({ carouselAnnotationIndex: 0 })
         }
     }
 
@@ -106,7 +106,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setCarouselAnnotationIndex,
+        updateSessionStore,
         updateToggleStore
     }, dispatch)
 )

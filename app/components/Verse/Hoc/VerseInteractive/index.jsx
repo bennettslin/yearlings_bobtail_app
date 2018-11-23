@@ -16,7 +16,7 @@ import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender },
-    interactivatedVerseIndex
+    sessionStore: { interactivatedVerseIndex }
 }) => ({
     canLyricRender,
     interactivatedVerseIndex

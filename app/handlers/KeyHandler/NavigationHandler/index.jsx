@@ -133,14 +133,12 @@ class NavigationHandler extends PureComponent {
                 handleAnnotationAnchorAccess,
                 handleAnnotationWikiSelect,
                 handleAnnotationWormholeSelect,
-                handleDotAccess,
                 handleDotSelect,
                 handleLyricAnnotationSelect,
                 handleAnnotationAccess,
                 handleVerseInteractivate,
                 handleNavSongSelect,
-                handleNavBookSelect,
-                handleSongAccess
+                handleNavBookSelect
             },
             determineVerseBarsWithParameters
         } = this.props
@@ -161,7 +159,6 @@ class NavigationHandler extends PureComponent {
                 <DotsSlideNavigation
                     {...{
                         getTryNavigateDotsSlide: this.setTryNavigateDotsSlide,
-                        handleDotAccess,
                         handleDotSelect
                     }}
                 />
@@ -178,8 +175,7 @@ class NavigationHandler extends PureComponent {
                     {...{
                         getTryNavigateNav: this.setTryNavigateNav,
                         handleNavSongSelect,
-                        handleNavBookSelect,
-                        handleSongAccess
+                        handleNavBookSelect
                     }}
                 />
             </___>
@@ -199,8 +195,10 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         isSelectedLogue
     },
-    selectedWikiIndex,
-    interactivatedVerseIndex
+    sessionStore: {
+        interactivatedVerseIndex,
+        selectedWikiIndex
+    }
 }) => ({
     isHiddenLyric,
     isLyricExpanded,

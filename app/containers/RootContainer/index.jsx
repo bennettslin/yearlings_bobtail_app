@@ -259,10 +259,12 @@ class RootContainer extends PureComponent {
 const mapStateToProps = ({
     appMounted,
     accessStore: { accessedKey },
-    interactivatedVerseIndex,
-    selectedLyricColumnIndex,
-    selectedOverviewIndex,
-    selectedTipsIndex,
+    sessionStore: {
+        interactivatedVerseIndex,
+        selectedLyricColumnIndex,
+        selectedOverviewIndex,
+        selectedTipsIndex
+    },
     audioStore: { isPlaying },
     dotsStore: {
         dotsBitNumber,

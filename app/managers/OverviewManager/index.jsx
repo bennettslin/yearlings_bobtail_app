@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectOverviewIndex } from 'flux/storage/action'
+import { updateSessionStore } from 'flux/session/action'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 import { getShouldSkipHiddenStatus } from 'helpers/logicHelper'
@@ -29,7 +29,7 @@ class OverviewManager extends Component {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
-        selectOverviewIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -112,7 +112,7 @@ class OverviewManager extends Component {
 
         // Overview options are shown, disabled, hidden.
         if (selectedOverviewIndex !== this.props.selectedOverviewIndex) {
-            this.props.selectOverviewIndex(selectedOverviewIndex)
+            this.props.updateSessionStore({ selectedOverviewIndex })
         }
         return true
     }
@@ -135,9 +135,11 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         isSelectedLogue
     },
-    selectedOverviewIndex,
-    selectedTipsIndex,
-    selectedWikiIndex
+    sessionStore: {
+        selectedOverviewIndex,
+        selectedTipsIndex,
+        selectedWikiIndex
+    }
 }) => ({
     isLyricExpanded,
     isScoreShown,
@@ -154,7 +156,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectOverviewIndex
+        updateSessionStore
     }, dispatch)
 )
 

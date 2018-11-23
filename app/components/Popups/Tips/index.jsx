@@ -9,7 +9,7 @@ import Popup from '../../Popup'
 const mapStateToProps = ({
     renderStore: { canMainRender },
     renderedStore: { isRenderedLogue },
-    selectedTipsIndex
+    sessionStore: { selectedTipsIndex }
 }) => ({
     canMainRender,
     isRenderedLogue,

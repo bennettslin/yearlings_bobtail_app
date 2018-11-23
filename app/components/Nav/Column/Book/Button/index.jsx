@@ -16,7 +16,7 @@ import {
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    interactivatedVerseIndex,
+    sessionStore: { interactivatedVerseIndex },
     songStore: { selectedAnnotationIndex }
 }) => ({
     interactivatedVerseIndex,

@@ -30,7 +30,7 @@ const mapStateToProps = ({
         accessedAnnotationIndex,
         accessedAnnotationAnchorIndex
     },
-    interactivatedVerseIndex
+    sessionStore: { interactivatedVerseIndex }
 }) => ({
     canLyricRender,
     renderedAnnotationIndex,

@@ -7,7 +7,7 @@ import Wiki from '../../Wiki'
 import Popup from '../../Popup'
 
 const mapStateToProps = ({
-    selectedWikiIndex
+    sessionStore: { selectedWikiIndex }
 }) => ({
     selectedWikiIndex
 })

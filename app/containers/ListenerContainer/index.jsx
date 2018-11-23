@@ -137,10 +137,6 @@ class ListenerContainer extends PureComponent {
         return this.sceneManager.selectScene(payload)
     }
 
-    updateSceneIfChanged = (payload) => {
-        return this.sceneManager.updateSceneIfChanged(payload)
-    }
-
     /**********
      * SCROLL *
      **********/
@@ -395,7 +391,6 @@ class ListenerContainer extends PureComponent {
                 />
                 <TimeVerseManager
                     setRef={this._setTimeVerseManagerRef}
-                    updateSceneIfChanged={this.updateSceneIfChanged}
                     determineVerseBars={this.determineVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
                     updateSelectedPlayer={this.updateSelectedPlayer}

@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -6,9 +6,8 @@ import { connect } from 'react-redux'
 import { updateRenderableStore } from 'flux/renderable/action'
 
 import { getVerseIndexForNextScene } from './helper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-class SceneManager extends Component {
+class SceneManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -31,11 +30,8 @@ class SceneManager extends Component {
         this.props.setRef(this)
     }
 
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
+    componentDidUpdate(prevProps) {
+        this.updateSceneIfNeeded(prevProps)
     }
 
     selectScene(direction) {
@@ -63,9 +59,22 @@ class SceneManager extends Component {
         }
     }
 
-    updateSceneIfChanged(sceneIndex) {
+    updateSceneIfNeeded(prevProps) {
+        const
+            {
+                renderedSceneIndex,
+                renderedSongIndex
+            } = this.props,
+            {
+                renderedSceneIndex: prevSceneIndex,
+                renderedSongIndex: prevSongIndex
+            } = prevProps
 
-        if (sceneIndex !== this.props.renderedSceneIndex) {
+        if (
+            // Only listen for scene change within the same song.
+            renderedSongIndex === prevSongIndex &&
+            renderedSceneIndex !== prevSceneIndex
+        ) {
             this._prepareForSceneChangeUnrender()
         }
     }

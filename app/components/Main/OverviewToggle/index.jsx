@@ -11,7 +11,7 @@ import { OVERVIEW_TOGGLE_KEY } from 'constants/access'
 import { OVERVIEW_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    selectedOverviewIndex
+    sessionStore: { selectedOverviewIndex }
 }) => ({
     selectedOverviewIndex
 })

@@ -25,7 +25,7 @@ const mapStateToProps = ({
         isLyricExpanded
     },
     accessStore: { accessedAnnotationIndex },
-    interactivatedVerseIndex
+    sessionStore: { interactivatedVerseIndex }
 }) => ({
     canCarouselRender,
     renderedSongIndex,

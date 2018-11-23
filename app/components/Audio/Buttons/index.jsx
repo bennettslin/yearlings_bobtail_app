@@ -34,7 +34,7 @@ const mapStateToProps = ({
         isPlaying,
         canPlayThroughs
     },
-    selectedAudioOptionIndex,
+    sessionStore: { selectedAudioOptionIndex },
     songStore: { selectedSongIndex }
 }) => ({
     isPlaying,

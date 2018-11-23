@@ -1,11 +1,10 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
+import { updateSessionStore } from 'flux/session/action'
 
-import { setShownBookColumnIndex } from 'flux/session/action'
 import { getBookColumnIndex } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -19,7 +18,7 @@ class NavManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
 
         updateAccessStore: PropTypes.func.isRequired,
-        setShownBookColumnIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -71,7 +70,7 @@ class NavManager extends Component {
             shownBookColumnIndex = getBookColumnIndex(selectedSongIndex)
         }
 
-        this.props.setShownBookColumnIndex(shownBookColumnIndex)
+        this.props.updateSessionStore({ shownBookColumnIndex })
     }
 
     accessNavSong(accessedNavSongIndex) {
@@ -86,7 +85,7 @@ class NavManager extends Component {
 const mapStateToProps = ({
     responsiveStore: { showSingleBookColumn },
     songStore: { selectedSongIndex },
-    shownBookColumnIndex,
+    sessionStore: { shownBookColumnIndex },
     toggleStore: { isCarouselShown }
 }) => ({
     showSingleBookColumn,
@@ -98,7 +97,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAccessStore,
-        setShownBookColumnIndex
+        updateSessionStore
     }, dispatch)
 )
 

@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateAudioStore } from 'flux/audio/action'
-import { selectAudioOptionIndex } from 'flux/storage/action'
+import { updateSessionStore } from 'flux/session/action'
 
 import { getValueInBitNumber } from 'helpers/bitHelper'
 import { getSongsNotLoguesCount } from 'helpers/dataHelper'
@@ -23,7 +23,7 @@ class AudioManager extends Component {
         isSelectedLogue: PropTypes.bool.isRequired,
 
         updateAudioStore: PropTypes.func.isRequired,
-        selectAudioOptionIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -102,7 +102,7 @@ class AudioManager extends Component {
     ) {
         // If no argument passed, then just toggle amongst audio options.
 
-        this.props.selectAudioOptionIndex(selectedAudioOptionIndex)
+        this.props.updateSessionStore({ selectedAudioOptionIndex })
         return true
     }
 
@@ -116,7 +116,7 @@ const mapStateToProps = ({
         isPlaying,
         canPlayThroughs
     },
-    selectedAudioOptionIndex,
+    sessionStore: { selectedAudioOptionIndex },
     songStore: {
         selectedSongIndex,
         isSelectedLogue
@@ -132,7 +132,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAudioStore,
-        selectAudioOptionIndex
+        updateSessionStore
     }, dispatch)
 )
 

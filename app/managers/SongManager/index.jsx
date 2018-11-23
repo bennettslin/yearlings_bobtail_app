@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -16,9 +16,7 @@ import {
     getTimeForVerseIndex
 } from '../../helpers/dataHelper'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
-class SongManager extends Component {
+class SongManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -36,13 +34,6 @@ class SongManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     handleSongEnd() {
@@ -152,7 +143,7 @@ class SongManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedAudioOptionIndex,
+    sessionStore: { selectedAudioOptionIndex },
     songStore: { selectedSongIndex }
 }) => ({
     selectedAudioOptionIndex,

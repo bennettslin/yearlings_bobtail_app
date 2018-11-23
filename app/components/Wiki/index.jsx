@@ -19,8 +19,10 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         selectedSongIndex
     },
-    selectedWikiIndex,
-    carouselAnnotationIndex
+    sessionStore: {
+        selectedWikiIndex,
+        carouselAnnotationIndex
+    }
 }) => ({
     isMobileWiki,
     selectedSongIndex,

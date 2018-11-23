@@ -10,9 +10,7 @@ export const getHandlers = (me) => {
     return {
         focusElementForAccess: me.focusElementForAccess,
         handleAnnotationAccess: me.handleAnnotationAccess,
-        handleDotAccess: me.handleDotAccess,
         handleAnnotationAnchorAccess: me.handleAnnotationAnchorAccess,
-        handleSongAccess: me.handleSongAccess,
         handleVerseDirectionAccess: me.handleVerseDirectionAccess,
         handleBodyClick: me.handleBodyClick,
         handleBodyTouchMove: me.handleBodyTouchMove,

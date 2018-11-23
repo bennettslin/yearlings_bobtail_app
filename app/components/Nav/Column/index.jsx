@@ -11,7 +11,7 @@ import NavBookToggle from './Book/Toggle'
 
 const mapStateToProps = ({
     responsiveStore: { showSingleBookColumn },
-    shownBookColumnIndex
+    sessionStore: { shownBookColumnIndex }
 }) => ({
     showSingleBookColumn,
     shownBookColumnIndex

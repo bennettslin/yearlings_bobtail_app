@@ -231,9 +231,11 @@ const mapStateToProps = ({
     songStore: {
         selectedAnnotationIndex
     },
-    selectedOverviewIndex,
-    selectedTipsIndex,
-    selectedWikiIndex
+    sessionStore: {
+        selectedOverviewIndex,
+        selectedTipsIndex,
+        selectedWikiIndex
+    }
 }) => ({
     isAccessOn,
     isDotsSlideShown,

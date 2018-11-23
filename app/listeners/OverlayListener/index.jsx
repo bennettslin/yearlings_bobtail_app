@@ -97,9 +97,11 @@ const mapStateToProps = ({
         renderedAnnotationIndex,
         isRenderedLogue
     },
-    selectedOverviewIndex,
-    selectedTipsIndex,
-    selectedWikiIndex
+    sessionStore: {
+        selectedOverviewIndex,
+        selectedTipsIndex,
+        selectedWikiIndex
+    }
 }) => ({
     deviceIndex,
     isLyricExpanded,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setInteractivatedVerseIndex } from 'flux/session/action'
+import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import { getSongVersesCount } from 'helpers/dataHelper'
@@ -23,7 +23,7 @@ class VerseManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
-        setInteractivatedVerseIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -77,7 +77,7 @@ class VerseManager extends Component {
     }
 
     interactivateVerse(interactivatedVerseIndex = -1) {
-        this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
+        this.props.updateSessionStore({ interactivatedVerseIndex })
     }
 
     interactivateVerseDirection(direction) {
@@ -110,7 +110,7 @@ class VerseManager extends Component {
             interactivatedVerseIndex = -1
         }
 
-        this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
+        this.props.updateSessionStore({ interactivatedVerseIndex })
 
         return interactivatedVerseIndex
     }
@@ -192,7 +192,7 @@ const mapStateToProps = ({
         isTwoRowMenu
     },
     toggleStore: { isLyricExpanded },
-    interactivatedVerseIndex,
+    sessionStore: { interactivatedVerseIndex },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex
@@ -212,7 +212,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setInteractivatedVerseIndex,
+        updateSessionStore,
         updateToggleStore
     }, dispatch)
 )

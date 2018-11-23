@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateSongStore } from 'flux/song/action'
-import { selectWikiIndex } from 'flux/storage/action'
+import { updateSessionStore } from 'flux/session/action'
 
 import ListenerContainer from '../ListenerContainer'
 
@@ -22,7 +22,7 @@ class RoutingContainer extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         updateSongStore: PropTypes.func.isRequired,
-        selectWikiIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
         match: PropTypes.object.isRequired,
@@ -66,7 +66,7 @@ class RoutingContainer extends PureComponent {
             })
 
             // Reset wiki.
-            props.selectWikiIndex(0)
+            props.updateSessionStore({ selectedWikiIndex: 0 })
         }
 
         this.state = {
@@ -143,7 +143,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateSongStore,
-        selectWikiIndex
+        updateSessionStore
     }, dispatch)
 )
 

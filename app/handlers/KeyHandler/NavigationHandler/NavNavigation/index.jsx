@@ -1,6 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateAccessStore } from 'flux/access/action'
 
 import {
     getSongsAndLoguesCount,
@@ -21,9 +23,12 @@ class NavNavigation extends PureComponent {
         accessedNavSongIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         shownBookColumnIndex: PropTypes.number.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryNavigateNav: PropTypes.func.isRequired
+        getTryNavigateNav: PropTypes.func.isRequired,
+        handleNavSongSelect: PropTypes.func.isRequired,
+        handleNavBookSelect: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -35,8 +40,7 @@ class NavNavigation extends PureComponent {
             isAccessOn,
             interactivatedVerseIndex,
             handleNavSongSelect,
-            handleNavBookSelect,
-            handleSongAccess
+            handleNavBookSelect
         } = this.props
 
         let annotationIndexWasAccessed = false,
@@ -81,7 +85,7 @@ class NavNavigation extends PureComponent {
                     handleNavBookSelect(e)
                 }
 
-                handleSongAccess(accessedNavSongIndex)
+                this.props.updateAccessStore({ accessedNavSongIndex })
             }
         }
 
@@ -98,9 +102,11 @@ class NavNavigation extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isAccessOn },
-    interactivatedVerseIndex,
-    accessStore: { accessedNavSongIndex },
-    shownBookColumnIndex
+    sessionStore: {
+        interactivatedVerseIndex,
+        shownBookColumnIndex
+    },
+    accessStore: { accessedNavSongIndex }
 }) => ({
     isAccessOn,
     interactivatedVerseIndex,
@@ -108,4 +114,10 @@ const mapStateToProps = ({
     shownBookColumnIndex
 })
 
-export default connect(mapStateToProps)(NavNavigation)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateAccessStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(NavNavigation)

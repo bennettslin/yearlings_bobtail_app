@@ -13,7 +13,7 @@ import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
 
 const mapStateToProps = ({
     transientStore: { isDoublespeakerShown },
-    selectedLyricColumnIndex
+    sessionStore: { selectedLyricColumnIndex }
 }) => ({
     isDoublespeakerShown,
     selectedLyricColumnIndex

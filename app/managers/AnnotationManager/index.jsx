@@ -270,7 +270,7 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    selectedLyricColumnIndex
+    sessionStore: { selectedLyricColumnIndex }
 }) => ({
     isDotsSlideShown,
     isDoublespeakerShown,

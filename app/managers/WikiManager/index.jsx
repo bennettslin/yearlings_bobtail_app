@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectWikiIndex } from 'flux/storage/action'
-import { setCarouselAnnotationIndex } from 'flux/session/action'
+import { updateSessionStore } from 'flux/session/action'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
@@ -13,8 +12,7 @@ class WikiManager extends Component {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
-        selectWikiIndex: PropTypes.func.isRequired,
-        setCarouselAnnotationIndex: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired
@@ -41,8 +39,10 @@ class WikiManager extends Component {
         selectedWikiIndex = 0,
         carouselAnnotationIndex = 0
     } = {}) {
-        this.props.selectWikiIndex(selectedWikiIndex)
-        this.props.setCarouselAnnotationIndex(carouselAnnotationIndex)
+        this.props.updateSessionStore({
+            carouselAnnotationIndex,
+            selectedWikiIndex
+        })
     }
 
     render() {
@@ -58,8 +58,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectWikiIndex,
-        setCarouselAnnotationIndex
+        updateSessionStore
     }, dispatch)
 )
 
