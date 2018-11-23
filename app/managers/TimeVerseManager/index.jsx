@@ -205,7 +205,7 @@ class TimeVerseManager extends Component {
 
 const mapStateToProps = ({
     toggleStore: { isAutoScroll },
-    isPlaying,
+    audioStore: { isPlaying },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex

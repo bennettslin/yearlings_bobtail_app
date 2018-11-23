@@ -1,5 +1,8 @@
 module.exports = {
     ACCESS_STORE: 'accessStore',
+    AUDIO_STORE: 'audioStore',
+    SESSION_STORE: 'sessionStore',
+    LOAD_STORE: 'loadStore',
     TOGGLE_STORE: 'toggleStore',
     TRANSIENT_STORE: 'transientStore',
     DEVICE_STORE: 'deviceStore',

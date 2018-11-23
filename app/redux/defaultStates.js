@@ -38,6 +38,27 @@ const
         accessedNavSongIndex: storedSongIndex
     },
 
+    AUDIO_DEFAULTS = {
+        isPlaying: false,
+        canPlayThroughs: 0
+    },
+
+    LOAD_DEFAULTS = {
+        appMounted: false,
+        isScoreLoaded: false
+    },
+
+    SESSION_DEFAULTS = {
+        carouselAnnotationIndex: 0,
+        interactivatedVerseIndex: -1,
+        shownBookColumnIndex: 1,
+        selectedAudioOptionIndex: 1,
+        selectedLyricColumnIndex: 0,
+        selectedOverviewIndex: 1,
+        selectedTipsIndex: 1,
+        selectedWikiIndex: 0
+    },
+
     TOGGLE_DEFAULTS = {
         isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
         isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
@@ -133,6 +154,9 @@ const
 
 export {
     ACCESS_DEFAULTS,
+    AUDIO_DEFAULTS,
+    LOAD_DEFAULTS,
+    SESSION_DEFAULTS,
     TOGGLE_DEFAULTS,
     TRANSIENT_DEFAULTS,
     DEVICE_DEFAULTS,

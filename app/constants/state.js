@@ -1,11 +1,7 @@
 module.exports = {
     WINDOW_STORAGE: window.localStorage,
 
-    // Audio.
-    IS_PLAYING: 'isPlaying',
-
     // Player.
-    CAN_PLAY_THROUGHS: 'canPlayThroughs',
     IS_SCORE_LOADED: 'scoreLoaded',
 
     // Session.

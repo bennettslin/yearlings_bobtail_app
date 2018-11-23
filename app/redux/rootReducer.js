@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
-import { IsPlayingReducer } from './audio/reducer'
+import AudioReducer from './audio/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
 import {
-    AppMountedReducer, CanPlayThroughsReducer, IsScoreLoadedReducer
+    AppMountedReducer, IsScoreLoadedReducer
 } from './load/reducer'
 import RenderReducer from './render/reducer'
 import RenderableReducer from './renderable/reducer'
@@ -23,6 +23,7 @@ import TransientReducer from './transient/reducer'
 
 import {
     ACCESS_STORE,
+    AUDIO_STORE,
     DEVICE_STORE,
     DOTS_STORE,
     RENDER_STORE,
@@ -38,15 +39,13 @@ import {
 const rootReducer = combineReducers({
 
     [ACCESS_STORE]: AccessReducer,
-    isPlaying: IsPlayingReducer,
-
+    [AUDIO_STORE]: AudioReducer,
     [TOGGLE_STORE]: ToggleReducer,
     [TRANSIENT_STORE]: TransientReducer,
     [DEVICE_STORE]: DeviceReducer,
     [DOTS_STORE]: DotsReducer,
 
     appMounted: AppMountedReducer,
-    canPlayThroughs: CanPlayThroughsReducer,
     isScoreLoaded: IsScoreLoadedReducer,
 
     [RESPONSIVE_STORE]: ResponsiveReducer,

@@ -1,7 +1,13 @@
-// Actions for audio state.
-import { IS_PLAYING } from 'constants/state'
+// Actions for audio values.
+import { getDefinedOnlyPayload } from '../actionHelper'
 
-export const setIsPlaying = (isPlaying = false) => ({
-    type: IS_PLAYING,
-    payload: isPlaying
-})
+import { AUDIO_STORE } from '../storeKeys'
+import { AUDIO_DEFAULTS } from '../defaultStates'
+
+export const updateAudioStore = (payload = AUDIO_DEFAULTS) => {
+
+    return ({
+        type: AUDIO_STORE,
+        payload: getDefinedOnlyPayload(payload)
+    })
+}

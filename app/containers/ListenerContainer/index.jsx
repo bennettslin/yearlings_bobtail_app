@@ -1,4 +1,4 @@
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { setAppMounted } from 'flux/load/action'
@@ -30,20 +30,11 @@ import RenderListener from '../../listeners/RenderListener'
 import ScoreListener from '../../listeners/ScoreListener'
 import WindowListener from '../../listeners/WindowListener'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-
-class ListenerContainer extends Component {
+class ListenerContainer extends PureComponent {
 
     componentDidMount() {
         logger.warn('State manager rendered.')
         this.props.setAppMounted(true)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     /**************
@@ -231,14 +222,6 @@ class ListenerContainer extends Component {
     }
 
     /*********
-     * TITLE *
-     *********/
-
-    selectTitle = (payload) => {
-        return this.titleManager.selectTitle(payload)
-    }
-
-    /*********
      * VERSE *
      *********/
 
@@ -351,7 +334,6 @@ class ListenerContainer extends Component {
                     selectCarouselNav={this.selectCarouselNav}
                     selectScene={this.selectScene}
                     selectSong={this.selectSong}
-                    selectTitle={this.selectTitle}
                     selectTips={this.selectTips}
                     selectVerse={this.selectVerse}
                     interactivateVerse={this.interactivateVerse}

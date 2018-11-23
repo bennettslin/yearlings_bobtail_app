@@ -263,7 +263,7 @@ const mapStateToProps = ({
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    isPlaying,
+    audioStore: { isPlaying },
     dotsStore: {
         dotsBitNumber,
         ...selectedDotKeys

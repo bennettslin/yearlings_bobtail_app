@@ -6,8 +6,7 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { setIsPlaying } from 'flux/audio/action'
-import { setCanPlayThroughs } from 'flux/load/action'
+import { updateAudioStore } from 'flux/audio/action'
 
 import Player from './Player'
 
@@ -29,13 +28,15 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
-    isPlaying,
+    audioStore: {
+        isPlaying,
+        canPlayThroughs
+    },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
         isSelectedLogue
-    },
-    canPlayThroughs
+    }
 }) => ({
     isPlaying,
     selectedSongIndex,
@@ -62,8 +63,7 @@ class PlayerManager extends Component {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
-        setCanPlayThroughs: PropTypes.func.isRequired,
-        setIsPlaying: PropTypes.func.isRequired,
+        updateAudioStore: PropTypes.func.isRequired,
 
         // From parent.
         updateTime: PropTypes.func.isRequired,
@@ -182,7 +182,7 @@ class PlayerManager extends Component {
                 value: true
             })
 
-        this.props.setCanPlayThroughs(newBitNumber)
+        this.props.updateAudioStore({ canPlayThroughs: newBitNumber })
     }
 
     toggleSelectedPlayer({
@@ -201,7 +201,7 @@ class PlayerManager extends Component {
         if (!isPlaying && wasPlaying) {
 
             // Play is being toggled off, so set in store right away.
-            this.props.setIsPlaying(false)
+            this.props.updateAudioStore({ isPlaying: false })
 
             return this.getPlayerRef(selectedSongIndex).handleEndPlaying(
 
@@ -287,7 +287,7 @@ class PlayerManager extends Component {
          * it was able to play. If selected song was changed, set in store
          * whether newly selected player was able to play.
          */
-        this.props.setIsPlaying(success)
+        this.props.updateAudioStore({ isPlaying: success })
     }
 
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
@@ -423,7 +423,6 @@ class PlayerManager extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canPlayThroughs,
-                setCanPlayThroughs,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -464,8 +463,7 @@ class PlayerManager extends Component {
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setCanPlayThroughs,
-        setIsPlaying
+        updateAudioStore
     }, dispatch)
 )
 

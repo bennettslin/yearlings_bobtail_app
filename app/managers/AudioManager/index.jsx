@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setIsPlaying } from 'flux/audio/action'
+import { updateAudioStore } from 'flux/audio/action'
 import { selectAudioOptionIndex } from 'flux/storage/action'
 
 import { getValueInBitNumber } from 'helpers/bitHelper'
@@ -22,7 +22,7 @@ class AudioManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
-        setIsPlaying: PropTypes.func.isRequired,
+        updateAudioStore: PropTypes.func.isRequired,
         selectAudioOptionIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -49,7 +49,7 @@ class AudioManager extends Component {
 
         // If selecting a logue, turn off play.
         if (isSelectedLogue && !wasSelectedLogue) {
-            this.props.setIsPlaying(false)
+            this.props.updateAudioStore({ isPlaying: false })
         }
     }
 
@@ -112,8 +112,10 @@ class AudioManager extends Component {
 }
 
 const mapStateToProps = ({
-    isPlaying,
-    canPlayThroughs,
+    audioStore: {
+        isPlaying,
+        canPlayThroughs
+    },
     selectedAudioOptionIndex,
     songStore: {
         selectedSongIndex,
@@ -129,7 +131,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setIsPlaying,
+        updateAudioStore,
         selectAudioOptionIndex
     }, dispatch)
 )

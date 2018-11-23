@@ -30,8 +30,10 @@ import { getValueInBitNumber } from 'helpers/bitHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 const mapStateToProps = ({
-    isPlaying,
-    canPlayThroughs,
+    audioStore: {
+        isPlaying,
+        canPlayThroughs
+    },
     selectedAudioOptionIndex,
     songStore: { selectedSongIndex }
 }) => ({
