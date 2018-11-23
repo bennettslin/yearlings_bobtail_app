@@ -21,6 +21,7 @@ import TimeVerseManager from '../../managers/TimeVerseManager'
 import TipsManager from '../../managers/TipsManager'
 import VerseManager from '../../managers/VerseManager'
 
+import CarouselListener from '../../listeners/CarouselListener'
 import DotsSlideListener from '../../listeners/DotsSlideListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import OverlayListener from '../../listeners/OverlayListener'
@@ -354,6 +355,7 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setVerseManagerRef}
                     getVerseElement={this.getVerseElement}
                 />
+                <CarouselListener />
                 <DotsSlideListener />
                 <DoublespeakerListener />
                 <OverlayListener />
