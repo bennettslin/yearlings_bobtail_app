@@ -26,7 +26,7 @@ const propTypes = {
 
         return songStanzaConfigs.length && (
             <div className={cx(
-                'LyricScroll'
+                'Stanzas'
             )}>
 
                 {/* This is the title. */}

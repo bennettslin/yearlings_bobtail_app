@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 // Component that handles all user events.
 
 import React, { PureComponent, Fragment as ___ } from 'react'
@@ -7,15 +9,11 @@ import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
-import CloseHandler from '../../handlers/CloseHandler'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
 import { getClientX } from 'helpers/domHelper'
-
-import {
-    getHandlers
-} from './helper'
+import { getHandlers } from './helper'
 
 import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
 
@@ -45,23 +43,6 @@ class EventContainer extends PureComponent {
 
         // From parent.
         scrollElementIntoView: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        // Focus lyric section when app is mounted.
-        this.focusElementForAccess()
-    }
-
-    componentDidUpdate(prevProps) {
-        if (
-            this.props.isHiddenLyric !==
-                prevProps.isHiddenLyric ||
-            this.props.isLyricExpanded !==
-                prevProps.isLyricExpanded
-        ) {
-            // Determine whether to add or remove focus from lyric element.
-            this.focusElementForAccess()
-        }
     }
 
     handleAnnotationAccess = ({
@@ -114,7 +95,7 @@ class EventContainer extends PureComponent {
         })
 
         if (songSelected) {
-            this.stopPropagation(e)
+            // this.stopPropagation(e)
 
             if (!isNaN(selectedLyricColumnIndex)) {
                 this.props.selectLyricColumn({
@@ -137,7 +118,7 @@ class EventContainer extends PureComponent {
     }
 
     _handleAccessedAnnotationSelect(e, direction) {
-        this.stopPropagation(e)
+        // this.stopPropagation(e)
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction
         })
@@ -162,7 +143,7 @@ class EventContainer extends PureComponent {
     handleAudioPlay = (e) => {
         const playToggled = this.props.togglePlay()
         if (playToggled) {
-            this.stopPropagation(e)
+            // this.stopPropagation(e)
         }
         return playToggled
     }
@@ -172,7 +153,7 @@ class EventContainer extends PureComponent {
             direction: -1
         })
         if (songSelected) {
-            this.stopPropagation(e)
+            // this.stopPropagation(e)
         }
         return songSelected
     }
@@ -182,7 +163,7 @@ class EventContainer extends PureComponent {
             direction: 1
         })
         if (songSelected) {
-            this.stopPropagation(e)
+            // this.stopPropagation(e)
         }
         return songSelected
     }
@@ -192,7 +173,7 @@ class EventContainer extends PureComponent {
      ************/
 
     handleCarouselNavToggle = (e, isCarouselShown) => {
-        this.stopPropagation(e)
+        // this.stopPropagation(e)
 
         const presentCarouselIndex = this.props.isCarouselShown,
             carouselSelected = this.props.selectCarouselNav(isCarouselShown)
@@ -211,60 +192,6 @@ class EventContainer extends PureComponent {
         return carouselSelected
     }
 
-    handleLyricWheel = (
-        e,
-        {
-            timeoutDuration,
-            setToManualScroll = false
-        } = {}
-    ) => {
-        let hasRoomToScroll = false
-
-        if (setToManualScroll) {
-            // If triggered manually by keyboard, set to false.
-            this.props.updateToggleStore({ isAutoScroll: false })
-        }
-
-        // Determine whether there is room to scroll.
-        if (e) {
-            const { deltaY = 0 } = e,
-                { scrollTop } = this.myLyricElement
-
-            if (deltaY > 0) {
-                const {
-                    scrollHeight, clientHeight
-                } = this.myLyricElement
-
-                if (scrollTop < scrollHeight - clientHeight) {
-                    hasRoomToScroll = true
-                }
-
-            } else if (deltaY < 0) {
-                if (scrollTop) {
-                    hasRoomToScroll = true
-                }
-            }
-
-            if (hasRoomToScroll) {
-
-                // Select manual scroll only if wheel moved far enough.
-                if (deltaY > 1 || deltaY < -1) {
-                    this.props.updateToggleStore({ isAutoScroll: false })
-                }
-
-            } else {
-
-                // If no room to scroll, don't bother to send event.
-                e.preventDefault()
-            }
-        }
-
-        // Determine verse bars if scrolled, or if triggered manually.
-        if (hasRoomToScroll || !e) {
-            this.props.determineVerseBars(timeoutDuration)
-        }
-    }
-
     handleLyricAutoScroll = () => {
 
         // Change back to autoScroll.
@@ -277,7 +204,7 @@ class EventContainer extends PureComponent {
     handleLyricColumnSelect = (e) => {
         const columnSelected = this.props.selectLyricColumn()
         if (columnSelected) {
-            this.stopPropagation(e)
+            // this.stopPropagation(e)
         }
         return columnSelected
     }
@@ -343,7 +270,7 @@ class EventContainer extends PureComponent {
             }
         }
 
-        this.stopPropagation(e)
+        // this.stopPropagation(e)
 
         this.props.selectAnnotation({
             selectedAnnotationIndex
@@ -379,14 +306,14 @@ class EventContainer extends PureComponent {
      *******/
 
     handleNavSongSelect = (e, selectedSongIndex) => {
-        this.stopPropagation(e)
+        // this.stopPropagation(e)
         return this.props.selectSong({
             selectedSongIndex
         })
     }
 
     handleNavBookSelect = (e) => {
-        this.stopPropagation(e)
+        // this.stopPropagation(e)
         this.props.selectBookColumn()
     }
 
@@ -435,7 +362,7 @@ class EventContainer extends PureComponent {
      *********/
 
     handleSceneDirection = (e, direction) => {
-        this.stopPropagation(e)
+        // this.stopPropagation(e)
         this.props.selectScene(direction)
         return true
     }
@@ -458,7 +385,7 @@ class EventContainer extends PureComponent {
             })
 
         if (tipsToggled) {
-            this.stopPropagation(e)
+            // this.stopPropagation(e)
         }
         return tipsToggled
     }
@@ -478,49 +405,13 @@ class EventContainer extends PureComponent {
             clientRect = sliderElement.getBoundingClientRect()
 
         if (!isNaN(clientX)) {
-            this.stopPropagation(e)
+            // this.stopPropagation(e)
             this.props.touchSliderBegin({
                 clientRect, clientX
             })
         }
 
         this.props.interactivateVerse()
-    }
-
-    handleBodyTouchMove = (e) => {
-        const clientX = getClientX(e)
-
-        if (!isNaN(clientX)) {
-            this.stopPropagation(e)
-            this.props.touchBodyMove(clientX)
-        }
-    }
-
-    handleBodyTouchEnd = (e) => {
-        e.preventDefault()
-        this.stopPropagation(e)
-        this.props.touchBodyEnd()
-
-        /**
-         * Prevent slider from locking up and not registering a touch move. Not
-         * sure just yet if this really does the trick.
-         */
-        this.focusElementForAccess()
-    }
-
-    handleBodyClick = (e) => {
-        this.stopPropagation(e)
-
-        this.closeSections({
-            exemptLyric: true,
-
-            // If overview is open when tips is open, leave overview open.
-            exemptOverview: !this.props.selectedTipsIndex
-        })
-
-        // Return focus to lyric section so it can have scroll access.
-        // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        this.focusElementForAccess()
     }
 
     /*********
@@ -538,13 +429,6 @@ class EventContainer extends PureComponent {
         })
 
         this.props.resetVerseBars()
-    }
-
-    handleVerseBarWheel = (e) => {
-        const { deltaY } = e.nativeEvent
-        this.myLyricElement.scrollTop += deltaY
-
-        this.props.determineVerseBars()
     }
 
     handleVerseDirectionAccess = (direction) => {
@@ -586,7 +470,7 @@ class EventContainer extends PureComponent {
         if (
             verseIndex !== selectedVerseIndex
         ) {
-            this.stopPropagation(e)
+            // this.stopPropagation(e)
             this.props.interactivateVerse(verseIndex)
         }
     }
@@ -595,21 +479,7 @@ class EventContainer extends PureComponent {
      * HELPERS *
      ***********/
 
-    stopPropagation = (e) => {
-        if (e && e.stopPropagation) {
-            e.stopPropagation()
-
-            const { type } = e
-
-            // Turn access off if not from a keyboard event.
-            if (type === 'click' || type === 'mousedown') {
-                this.props.updateToggleStore({ isAccessOn: false })
-            }
-        }
-    }
-
     handleScrollUponCarouselRender = () => {
-
         if (this.props.isSelectedLogue) {
             return
         }
@@ -661,40 +531,6 @@ class EventContainer extends PureComponent {
         }
     }
 
-    focusElementForAccess = () => {
-        const {
-                isHiddenLyric,
-                isLyricExpanded
-            } = this.props,
-
-            doFocusLyricElement =
-                this.myLyricElement &&
-                    (
-                        !isHiddenLyric ||
-                        isLyricExpanded
-                    )
-
-        let focusedElement = doFocusLyricElement ?
-            this.myLyricElement :
-            this.myRootElement
-
-        if (focusedElement) {
-            logger.warn(`Focus: ${doFocusLyricElement ? 'Lyric' : 'Root'}`)
-            focusedElement.focus()
-        }
-    }
-
-    setLyricRef = (node) => {
-        this.myLyricElement = node
-
-        // Add or remove focus.
-        this.focusElementForAccess()
-    }
-
-    setRootRef = (node) => {
-        this.myRootElement = node
-    }
-
     setScoreRef = (node) => {
         this.myScoreElement = node
     }
@@ -703,35 +539,31 @@ class EventContainer extends PureComponent {
         this.myWikiElement = node
     }
 
-    setCloseSections = (closeSections) => {
-        this.closeSections = closeSections
-    }
-
     render() {
         const {
             selectAnnotation,
             selectCarouselNav,
             selectOverview,
             selectTips,
-            interactivateVerse
+            interactivateVerse,
+            determineVerseBars,
+            touchBodyMove,
+            touchBodyEnd
         } = this.props
 
         return (
             <___>
                 <InteractiveContainer
                     {...{
-                        eventHandlers: getHandlers(this)
-                    }}
-                />
-                <CloseHandler
-                    {...{
-                        // TODO: Eventually listener should get all these through Redux.
+                        eventHandlers: getHandlers(this),
+                        determineVerseBars,
+                        touchBodyMove,
+                        touchBodyEnd,
                         selectAnnotation,
                         selectCarouselNav,
                         selectOverview,
                         selectTips,
-                        interactivateVerse,
-                        getCloseSections: this.setCloseSections
+                        interactivateVerse
                     }}
                 />
             </___>
