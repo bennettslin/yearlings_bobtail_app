@@ -1,12 +1,6 @@
 module.exports = {
     WINDOW_STORAGE: window.localStorage,
 
-    // Player.
-    IS_SCORE_LOADED: 'scoreLoaded',
-
-    // Session.
-    APP_MOUNTED: 'appMounted',
-
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',

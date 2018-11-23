@@ -4,7 +4,7 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { setIsScoreLoaded } from 'flux/load/action'
+import { updateLoadStore } from 'flux/load/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class ScoreListener extends Component {
@@ -15,7 +15,7 @@ class ScoreListener extends Component {
         isScoreShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-        setIsScoreLoaded: PropTypes.func.isRequired,
+        updateLoadStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
@@ -30,7 +30,7 @@ class ScoreListener extends Component {
             { selectedSongIndex: prevSongIndex } = prevProps
 
         if (selectedSongIndex !== prevSongIndex) {
-            this.props.setIsScoreLoaded(false)
+            this.props.updateLoadStore({ isScoreLoaded: false })
         }
     }
 
@@ -74,7 +74,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setIsScoreLoaded,
+        updateLoadStore,
         updateToggleStore
     }, dispatch)
 )

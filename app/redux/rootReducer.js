@@ -3,9 +3,7 @@ import AccessReducer from './access/reducer'
 import AudioReducer from './audio/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
-import {
-    AppMountedReducer, IsScoreLoadedReducer
-} from './load/reducer'
+import LoadReducer from './load/reducer'
 import RenderReducer from './render/reducer'
 import RenderableReducer from './renderable/reducer'
 import RenderedReducer from './rendered/reducer'
@@ -21,6 +19,7 @@ import {
     AUDIO_STORE,
     DEVICE_STORE,
     DOTS_STORE,
+    LOAD_STORE,
     RENDER_STORE,
     RENDERABLE_STORE,
     RENDERED_STORE,
@@ -33,15 +32,14 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
-
     [ACCESS_STORE]: AccessReducer,
     [AUDIO_STORE]: AudioReducer,
     [TOGGLE_STORE]: ToggleReducer,
     [TRANSIENT_STORE]: TransientReducer,
     [DEVICE_STORE]: DeviceReducer,
     [DOTS_STORE]: DotsReducer,
-    appMounted: AppMountedReducer,
-    isScoreLoaded: IsScoreLoadedReducer,
+    [DOTS_STORE]: DotsReducer,
+    [LOAD_STORE]: LoadReducer,
     [RENDER_STORE]: RenderReducer,
     [RENDERABLE_STORE]: RenderableReducer,
     [RENDERED_STORE]: RenderedReducer,

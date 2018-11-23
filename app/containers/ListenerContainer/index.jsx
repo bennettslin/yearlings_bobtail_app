@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { setAppMounted } from 'flux/load/action'
+import { updateLoadStore } from 'flux/load/action'
 
 import EventContainer from '../../containers/EventContainer'
 import LogHandler from 'handlers/LogHandler'
@@ -34,7 +34,7 @@ class ListenerContainer extends PureComponent {
 
     componentDidMount() {
         logger.warn('State manager rendered.')
-        this.props.setAppMounted(true)
+        this.props.updateLoadStore({ appMounted: true })
     }
 
     /**************
@@ -419,7 +419,7 @@ class ListenerContainer extends PureComponent {
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setAppMounted
+        updateLoadStore
     }, dispatch)
 )
 

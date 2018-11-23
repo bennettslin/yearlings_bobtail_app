@@ -257,7 +257,7 @@ class RootContainer extends PureComponent {
 }
 
 const mapStateToProps = ({
-    appMounted,
+    loadStore: { appMounted },
     accessStore: { accessedKey },
     sessionStore: {
         interactivatedVerseIndex,

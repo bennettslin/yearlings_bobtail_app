@@ -1,22 +1,17 @@
-// Reducers for player state.
-import {
-    APP_MOUNTED,
-    IS_SCORE_LOADED
-} from 'constants/state'
+// Reducers for audio values.
+import { LOAD_STORE } from '../storeKeys'
+import { LOAD_DEFAULTS } from '../defaultStates'
 
-export const AppMountedReducer = (state = false, action) => {
+export default (
+    state = LOAD_DEFAULTS,
+    action
+) => {
     switch (action.type) {
-        case APP_MOUNTED:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const IsScoreLoadedReducer = (state = false, action) => {
-    switch (action.type) {
-        case IS_SCORE_LOADED:
-            return action.payload
+        case LOAD_STORE:
+            return {
+                ...state,
+                ...action.payload
+            }
         default:
             return state
     }

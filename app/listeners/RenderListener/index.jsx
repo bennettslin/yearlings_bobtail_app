@@ -88,7 +88,7 @@ class RenderListener extends Component {
 }
 
 const mapStateToProps = ({
-    appMounted,
+    loadStore: { appMounted },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,

@@ -137,7 +137,7 @@ class InteractiveContainer extends PureComponent {
 }
 
 const mapStateToProps = ({
-    appMounted,
+    loadStore: { appMounted },
     sliderStore: { isSliderTouched }
 }) => ({
     appMounted,

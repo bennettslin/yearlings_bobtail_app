@@ -27,7 +27,7 @@ const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: { isScoresTipsInMain },
     toggleStore: { isScoreShown },
-    isScoreLoaded,
+    loadStore: { isScoreLoaded },
     sessionStore: { selectedTipsIndex }
 }) => ({
     deviceIndex,

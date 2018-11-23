@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { setIsScoreLoaded } from 'flux/load/action'
+import { updateLoadStore } from 'flux/load/action'
 import { getSongScore } from './helper'
 
 const mapStateToProps = ({
@@ -26,7 +26,7 @@ class Score extends Component {
     }
 
     onIframeLoad = () => {
-        this.props.setIsScoreLoaded(true)
+        this.props.updateLoadStore({ isScoreLoaded: true })
     }
 
     _setIframeRef = (node) => {
@@ -61,7 +61,7 @@ class Score extends Component {
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setIsScoreLoaded
+        updateLoadStore
     }, dispatch)
 )
 
