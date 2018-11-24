@@ -108,16 +108,16 @@ h1, h2, h3 {
 
     // Make font sizes smaller when showing both columns.
     .DW__desktop
-    .RM__bothLyricColumnsShown
+    .RM__bothEarColumnsShown
     &,
     .DW__tablet
-    .RM__bothLyricColumnsShown
+    .RM__bothEarColumnsShown
     & {
         font-size: $fontSize__bothColumnsShown;
     }
 
     .DW__mini
-    .RM__bothLyricColumnsShown
+    .RM__bothEarColumnsShown
     & {
         font-size:
             $fontSize__bothColumnsShown

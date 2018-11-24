@@ -42,15 +42,15 @@
     }
 
     // If both columns show, have a single gutter between them.
-    .RM__bothLyricColumnsShown
+    .RM__bothEarColumnsShown
     &:not(:first-child) {
         margin-left: $field-padding;
     }
 }
 
-.RM__leftLyricColumnOnly
+.RM__leftEarColumnOnly
 .VerseLine__right,
-.RM__rightLyricColumnOnly
+.RM__rightEarColumnOnly
 .VerseLine__left {
     width: 0;
     padding: 0;
@@ -62,7 +62,7 @@
     position: relative;
     display: none;
 
-    .RM__rightLyricColumnOnly
+    .RM__rightEarColumnOnly
     & {
         display: block;
         z-index: $zIndex__cursorVerse;
@@ -71,7 +71,7 @@
 
 .VerseLine__truncatable {
 
-    .RM__rightLyricColumnOnly
+    .RM__rightEarColumnOnly
     & {
         display: none;
     }

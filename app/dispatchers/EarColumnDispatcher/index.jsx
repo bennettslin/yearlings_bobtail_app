@@ -8,12 +8,12 @@ import { connect } from 'react-redux'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class LyricEarDispatcher extends PureComponent {
+class EarColumnDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDoublespeakerShown: PropTypes.bool.isRequired,
-        earIndex: PropTypes.number.isRequired,
+        isEarShown: PropTypes.bool.isRequired,
+        earColumnIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
         updateSessionStore: PropTypes.func.isRequired,
@@ -24,14 +24,14 @@ class LyricEarDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchEar = this.dispatchEar
+        this.props.getDispatch.dispatchEarColumn = this.dispatchEarColumn
     }
 
-    dispatchEar = ({
-        earIndex = (this.props.earIndex + 1) % 2
+    dispatchEarColumn = ({
+        earColumnIndex = (this.props.earColumnIndex + 1) % 2
     } = {}) => {
         const {
-            isDoublespeakerShown,
+            isEarShown,
             isSelectedLogue
         } = this.props
 
@@ -40,11 +40,11 @@ class LyricEarDispatcher extends PureComponent {
          * has double columns, or if in a logue. Check for new song if called
          * from wormhole.
          */
-        if (!isDoublespeakerShown || isSelectedLogue) {
+        if (!isEarShown || isSelectedLogue) {
             return false
         }
 
-        this.props.updateSessionStore({ earIndex })
+        this.props.updateSessionStore({ earColumnIndex })
         return true
     }
 
@@ -54,12 +54,12 @@ class LyricEarDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    transientStore: { isDoublespeakerShown },
+    transientStore: { isEarShown },
     songStore: { isSelectedLogue },
-    sessionStore: { earIndex }
+    sessionStore: { earColumnIndex }
 }) => ({
-    isDoublespeakerShown,
-    earIndex,
+    isEarShown,
+    earColumnIndex,
     isSelectedLogue
 })
 
@@ -70,4 +70,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(LyricEarDispatcher)
+export default connect(mapStateToProps, bindDispatchToProps)(EarColumnDispatcher)

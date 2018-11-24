@@ -12,7 +12,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
 import CarouselDispatcher from '../../dispatchers/CarouselDispatcher'
-import LyricEarDispatcher from '../../dispatchers/LyricEarDispatcher'
+import EarColumnDispatcher from '../../dispatchers/EarColumnDispatcher'
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
@@ -88,7 +88,7 @@ class EventContainer extends PureComponent {
             songIndex: selectedSongIndex,
             annotationIndex: selectedAnnotationIndex,
             verseIndex: selectedVerseIndex,
-            columnIndex: earIndex,
+            columnIndex: earColumnIndex,
             [DESTINATION_WORMHOLE_INDEX]: destinationWormholeIndex
         } = wormholeObject
 
@@ -101,8 +101,8 @@ class EventContainer extends PureComponent {
 
         if (songSelected) {
             // TODO: This can be set in a listener.
-            if (!isNaN(earIndex)) {
-                this.dispatchEar({ earIndex })
+            if (!isNaN(earColumnIndex)) {
+                this.dispatchEarColumn({ earColumnIndex })
             }
         }
 
@@ -477,7 +477,7 @@ class EventContainer extends PureComponent {
                     }}
                 />
                 <CarouselDispatcher {...{ getDispatch: this }} />
-                <LyricEarDispatcher {...{ getDispatch: this }} />
+                <EarColumnDispatcher {...{ getDispatch: this }} />
                 <InteractivatedVerseDispatcher
                     {...{ getDirectionDispatch: this }}
                 />

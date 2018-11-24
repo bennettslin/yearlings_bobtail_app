@@ -190,7 +190,7 @@ class Live extends Component {
     render() {
         const {
             annotationPopupHandlers,
-            lyricColumnHandlers,
+            earColumnHandlers,
             mainColumnHandlers,
             menuFieldHandlers,
             overviewPopupHandlers,
@@ -217,7 +217,7 @@ class Live extends Component {
                     overviewPopupHandlers={overviewPopupHandlers}
                 />
 
-                <Lyric {...lyricColumnHandlers}
+                <Lyric {...earColumnHandlers}
                     lyricDidRender={this.lyricDidRender}
                 />
 

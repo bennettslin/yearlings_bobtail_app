@@ -15,7 +15,7 @@ import { PARENT_ACCESS_PREFIX } from 'constants/prefixes'
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 
 import {
-    getSingleShownLyricColumnKey,
+    getSingleShownEarColumnKey,
     getStanzaIndexForVerseIndex
 } from '../helper'
 
@@ -46,11 +46,11 @@ class RemainderWrapper extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        earIndex: PropTypes.number.isRequired,
+        earColumnIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
 
-        isDoublespeakerShown: PropTypes.bool.isRequired,
+        isEarShown: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         showShrunkNavIcon: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -70,7 +70,7 @@ class RemainderWrapper extends PureComponent {
                 isCarouselShown,
                 selectedDotKeys,
                 isDotsSlideShown,
-                earIndex,
+                earColumnIndex,
                 selectedOverviewIndex,
                 selectedTipsIndex,
                 isPlaying,
@@ -83,7 +83,7 @@ class RemainderWrapper extends PureComponent {
                 renderedVerseIndex,
                 sliderVerseIndex,
                 interactivatedVerseIndex,
-                isDoublespeakerShown,
+                isEarShown,
                 isHiddenLyric,
                 showShrunkNavIcon,
                 isScoresTipsInMain,
@@ -94,9 +94,9 @@ class RemainderWrapper extends PureComponent {
                 children
             } = this.props,
 
-            singleShownLyricColumnKey = getSingleShownLyricColumnKey({
-                isDoublespeakerShown,
-                earIndex
+            singleShownEarColumnKey = getSingleShownEarColumnKey({
+                isEarShown,
+                earColumnIndex
             }),
 
             overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
@@ -159,8 +159,8 @@ class RemainderWrapper extends PureComponent {
                         isTwoRowMenu ?
                             'RM__twoRowMenu' : 'RM__oneRowMenu',
 
-                        singleShownLyricColumnKey &&
-                            `RM__${singleShownLyricColumnKey}LyricColumnOnly`,
+                        singleShownEarColumnKey &&
+                            `RM__${singleShownEarColumnKey}EarColumnOnly`,
                         isHiddenLyric ?
                             'RM__lyricHeightless' : 'RM__lyricHeighted',
 
@@ -171,7 +171,7 @@ class RemainderWrapper extends PureComponent {
                             'RM__verseBarAbove': isVerseBarAbove,
                             'RM__verseBarBelow': isVerseBarBelow,
                             'RM__manualScroll': !isAutoScroll,
-                            'RM__bothLyricColumnsShown': !singleShownLyricColumnKey,
+                            'RM__bothEarColumnsShown': !singleShownEarColumnKey,
                             'RM__sliderTouched': isSliderTouched
                         },
 
@@ -230,7 +230,7 @@ const mapStateToProps = ({
     accessStore: { accessedKey },
     sessionStore: {
         interactivatedVerseIndex,
-        earIndex,
+        earColumnIndex,
         selectedOverviewIndex,
         selectedTipsIndex
     },
@@ -251,7 +251,7 @@ const mapStateToProps = ({
     transientStore: {
         isOverlayShown,
         isCarouselNavShowable,
-        isDoublespeakerShown
+        isEarShown
     },
     renderStore: { canCarouselRender },
     renderedStore: {
@@ -283,10 +283,10 @@ const mapStateToProps = ({
     dotsBitNumber,
     selectedDotKeys,
     isDotsSlideShown,
-    earIndex,
+    earColumnIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
-    isDoublespeakerShown,
+    isEarShown,
     isPlaying,
     canCarouselRender,
     renderedSongIndex,

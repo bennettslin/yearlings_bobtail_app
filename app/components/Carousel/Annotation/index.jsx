@@ -139,7 +139,7 @@ const carouselAnnotationViewPropTypes = {
                     `${CAROUSEL_SCROLL}__${annotationIndex}`,
 
                     annotationColumn &&
-                    `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
+                    `CarouselAnnotation__inEarColumn__${annotationColumn}`,
 
                     getPrefixedDotLetterClassNames(
                         annotationDotKeys,

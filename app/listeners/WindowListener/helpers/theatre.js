@@ -17,7 +17,7 @@ import {
  * STAGE *
  *********/
 
-const _getLyricColumnHeight = (
+const _getEarColumnHeight = (
     deviceIndex,
     isHiddenLyric,
     windowHeight
@@ -44,7 +44,7 @@ const getCentreFieldHeight = ({
     windowHeight,
     isHiddenLyric
 }) => {
-    const lyricColumnHeight = _getLyricColumnHeight(
+    const earColumnHeight = _getEarColumnHeight(
         deviceIndex, isHiddenLyric, windowHeight
     )
 
@@ -62,7 +62,7 @@ const getCentreFieldHeight = ({
         }
     }
 
-    return windowHeight - menuHeight - lyricColumnHeight
+    return windowHeight - menuHeight - earColumnHeight
 }
 
 const getCeilingFloorHeight = ({
@@ -75,7 +75,7 @@ const getCeilingFloorHeight = ({
 }) => {
 
     const
-        lyricColumnHeight = _getLyricColumnHeight(
+        earColumnHeight = _getEarColumnHeight(
             deviceIndex, isHiddenLyric, windowHeight
         ),
         centreFieldHeight = getCentreFieldHeight({
@@ -89,13 +89,13 @@ const getCeilingFloorHeight = ({
             windowHeight
             - centreFieldHeight
             + stageTop
-            - lyricColumnHeight,
+            - earColumnHeight,
 
         floorHeight =
             centreFieldHeight
             - stageTop
             - stageHeight * 0.9 // Overlap part of stage scene.
-            + lyricColumnHeight
+            + earColumnHeight
 
     return {
         ceilingHeight: Number(ceilingHeight.toFixed(2)),

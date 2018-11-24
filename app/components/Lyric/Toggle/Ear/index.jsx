@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import LyricEarDispatcher from '../../../../dispatchers/LyricEarDispatcher'
+import EarColumnDispatcher from '../../../../dispatchers/EarColumnDispatcher'
 import Button from '../../../Button'
 
 import { LYRIC_COLUMN_TOGGLE_KEY } from 'constants/access'
@@ -13,32 +13,32 @@ import { LYRIC_EAR_BUTTON_KEY } from 'constants/buttons'
 import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
 
 const mapStateToProps = ({
-    transientStore: { isDoublespeakerShown },
-    sessionStore: { earIndex }
+    transientStore: { isEarShown },
+    sessionStore: { earColumnIndex }
 }) => ({
-    isDoublespeakerShown,
-    earIndex
+    isEarShown,
+    earColumnIndex
 })
 
 class LyricToggleEar extends PureComponent {
 
     static propTypes = {
     // Through Redux.
-        isDoublespeakerShown: PropTypes.bool.isRequired,
-        earIndex: PropTypes.number.isRequired
+        isEarShown: PropTypes.bool.isRequired,
+        earColumnIndex: PropTypes.number.isRequired
     }
 
     handleDoublespeakerClick = () => {
-        this.dispatchEar()
+        this.dispatchEarColumn()
     }
 
     render() {
         const {
-            isDoublespeakerShown,
-            earIndex
+            isEarShown,
+            earColumnIndex
         } = this.props
 
-        return isDoublespeakerShown && (
+        return isEarShown && (
             <div className={cx(
                 'LyricToggleEar',
                 'LyricToggle',
@@ -50,12 +50,12 @@ class LyricToggleEar extends PureComponent {
                     {...{
                         buttonName: LYRIC_EAR_BUTTON_KEY,
                         buttonIdentifier:
-                        LYRIC_COLUMN_KEYS[earIndex],
+                        LYRIC_COLUMN_KEYS[earColumnIndex],
                         accessKey: LYRIC_COLUMN_TOGGLE_KEY,
                         handleButtonClick: this.handleDoublespeakerClick
                     }}
                 />
-                <LyricEarDispatcher {...{ getDispatch: this }} />
+                <EarColumnDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }

@@ -13,9 +13,9 @@ import { COLUMN_INDEX } from 'constants/lyrics'
 
 export const shouldShowAnnotationForColumn = ({
     selectedSongIndex,
-    earIndex,
+    earColumnIndex,
     annotationIndex,
-    isDoublespeakerShown
+    isEarShown
 
 }) => {
 
@@ -27,9 +27,9 @@ export const shouldShowAnnotationForColumn = ({
          * column is given and it's the shown column.
          */
         showAnnotationForColumn =
-            !isDoublespeakerShown ||
+            !isEarShown ||
             isNaN(columnIndex) ||
-            columnIndex === earIndex
+            columnIndex === earColumnIndex
 
     return showAnnotationForColumn
 }
@@ -47,11 +47,11 @@ const getAnnotationDotKeys = (
 }
 
 export const getAnnotationIndexForDirection = ({
-    isDoublespeakerShown,
+    isEarShown,
     currentAnnotationIndex = 1,
     selectedSongIndex,
     selectedDotKeys,
-    lyricColumnIndex,
+    earColumnIndex,
 
     direction,
 
@@ -145,9 +145,9 @@ export const getAnnotationIndexForDirection = ({
                 // Or if this annotation isn't in the shown column...
                 !shouldShowAnnotationForColumn({
                     selectedSongIndex,
-                    earIndex: lyricColumnIndex,
+                    earColumnIndex: earColumnIndex,
                     annotationIndex: returnIndex,
-                    isDoublespeakerShown
+                    isEarShown
                 })) &&
 
                 // And if modulo...
@@ -177,13 +177,13 @@ export const getAnnotationIndexForDirection = ({
 }
 
 export const getAnnotationIndexForVerseIndex = ({
-    isDoublespeakerShown,
+    isEarShown,
 
     // Search backwards by default.
     verseIndex,
     selectedSongIndex,
     selectedDotKeys,
-    lyricColumnIndex,
+    earColumnIndex,
 
     direction = -1
 }) => {
@@ -228,9 +228,9 @@ export const getAnnotationIndexForVerseIndex = ({
             const annotation = getAnnotationObject(selectedSongIndex, returnIndex),
                 showAnnotationForColumn = shouldShowAnnotationForColumn({
                     selectedSongIndex,
-                    earIndex: lyricColumnIndex,
+                    earColumnIndex: earColumnIndex,
                     annotationIndex: returnIndex,
-                    isDoublespeakerShown
+                    isEarShown
                 }),
                 doesIntersect = intersects(annotation.dotKeys, selectedDotKeys)
 
@@ -257,11 +257,11 @@ export const getAnnotationIndexForVerseIndex = ({
      * direction that we will search if this annotation index is not present.
      */
     return getAnnotationIndexForDirection({
-        isDoublespeakerShown,
+        isEarShown,
         currentAnnotationIndex: returnIndex,
         selectedSongIndex,
         selectedDotKeys,
-        lyricColumnIndex,
+        earColumnIndex,
         specifiedDirection: direction
     })
 }

@@ -44,7 +44,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             audioButtonsHandlers
         },
 
-        lyricColumnHandlers = {
+        earColumnHandlers = {
             setLyricRef,
             setLyricAnnotationRef,
             setVerseRef,
@@ -110,7 +110,7 @@ export const getOrganisedHandlersFromProps = (props) => {
 
     return {
         annotationPopupHandlers,
-        lyricColumnHandlers,
+        earColumnHandlers,
         mainColumnHandlers,
         menuFieldHandlers,
         overviewPopupHandlers,

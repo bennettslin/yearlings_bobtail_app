@@ -57,7 +57,7 @@
     justify-content: space-between;
 
     // Rules to show or hide stanzas when only one lyric column is shown.
-    .RM__leftLyricColumnOnly
+    .RM__leftEarColumnOnly
     & {
         // Hide side stanzas when only left lyric column is shown.
         display: none;

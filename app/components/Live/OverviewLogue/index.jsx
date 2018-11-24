@@ -18,7 +18,7 @@ const propTypes = {
     }) => (
         <div className={cx(
             'OverviewLogue',
-            'position__lyricColumn__desktop',
+            'position__earColumn__desktop',
             'topHeight__overlayPopups__mobile'
         )}>
             <OverviewPopup {...overviewPopupHandlers} />

@@ -131,7 +131,7 @@ class LyricScroll extends Component {
                     'absoluteFullContainer',
 
                     // This gradient does not obscure the lyric toggle buttons.
-                    'gradientMask__lyricColumn__mobileCollapsed'
+                    'gradientMask__earColumn__mobileCollapsed'
                 )}
                 tabIndex="-1"
                 onWheel={this._handleWheel}

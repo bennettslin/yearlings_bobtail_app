@@ -4,13 +4,13 @@ import {
     getSongObject
 } from '../../helpers/dataHelper'
 
-export const getSingleShownLyricColumnKey = ({
-    isDoublespeakerShown,
-    earIndex
+export const getSingleShownEarColumnKey = ({
+    isEarShown,
+    earColumnIndex
 }) => {
-    return isDoublespeakerShown
-        && earIndex >= 0 ?
-        LYRIC_COLUMN_KEYS[earIndex % 2] : ''
+    return isEarShown
+        && earColumnIndex >= 0 ?
+        LYRIC_COLUMN_KEYS[earColumnIndex % 2] : ''
 }
 
 export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {

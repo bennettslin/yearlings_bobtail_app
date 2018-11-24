@@ -27,12 +27,12 @@ class DoublespeakerListener extends PureComponent {
                 deviceIndex,
                 renderedSongIndex
             } = this.props,
-            isDoublespeakerShown = getIsDoublespeakerShown({
+            isEarShown = getIsDoublespeakerShown({
                 deviceIndex,
                 songIndex: renderedSongIndex
             })
 
-        this.props.updateTransientStore({ isDoublespeakerShown })
+        this.props.updateTransientStore({ isEarShown })
     }
 
     render() {

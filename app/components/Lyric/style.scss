@@ -31,7 +31,7 @@
          * This fixes the issue of being unable to scroll between stanzas. But
          * set only in song, otherwise lyric column in logue will cover nav.
          */
-        z-index: $zIndex__lyricColumn;
+        z-index: $zIndex__earColumn;
     }
 
     .DW__mobile
@@ -66,7 +66,7 @@
 }
 
 // Used by Lyric and OverviewLogue.
-.position__lyricColumn__desktop {
+.position__earColumn__desktop {
 
     .DW__desktop
     & {
@@ -82,7 +82,7 @@
 }
 
 // Used by Lyric only.
-.position__lyricColumn__mobile {
+.position__earColumn__mobile {
 
     .DW__mobile
     & {
@@ -93,7 +93,7 @@
     }
 }
 
-.gradientMask__lyricColumn__desktop {
+.gradientMask__earColumn__desktop {
 
     $gradient__lyric__desktop: linear-gradient(
         0deg,

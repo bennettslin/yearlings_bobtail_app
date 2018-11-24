@@ -123,7 +123,7 @@ class Lyric extends Component {
             parent__shown = canLyricRender && isShown
 
         return (hasMounted || canLyricRender) && (
-            <LyricColumnView {...other}
+            <EarColumnView {...other}
                 parent__shown={parent__shown}
                 handleTransition={this._handleTransition}
                 isTransitioningHeight={this.state.isTransitioningHeight}
@@ -137,7 +137,7 @@ class Lyric extends Component {
  * PRESENTATION *
  ****************/
 
-const lyricColumnViewPropTypes = {
+const earColumnViewPropTypes = {
     // From parent.
         parent__shown: PropTypes.bool.isRequired,
         handleTransition: PropTypes.func.isRequired,
@@ -147,7 +147,7 @@ const lyricColumnViewPropTypes = {
         handleVerseBarWheel: PropTypes.func.isRequired
     },
 
-    LyricColumnView = ({
+    EarColumnView = ({
 
         // From props.
         handleLyricAutoScroll,
@@ -170,9 +170,9 @@ const lyricColumnViewPropTypes = {
             <div
                 className={cx(
                     'Lyric',
-                    'position__lyricColumn__desktop',
-                    'position__lyricColumn__mobile',
-                    'gradientMask__lyricColumn__desktop',
+                    'position__earColumn__desktop',
+                    'position__earColumn__mobile',
+                    'gradientMask__earColumn__desktop',
 
                     { 'parent__shown': parent__shown }
                 )}
@@ -199,6 +199,6 @@ const lyricColumnViewPropTypes = {
         )
     }
 
-LyricColumnView.propTypes = lyricColumnViewPropTypes
+EarColumnView.propTypes = earColumnViewPropTypes
 
 export default connect(mapStateToProps)(Lyric)

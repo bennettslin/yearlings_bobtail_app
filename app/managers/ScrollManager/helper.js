@@ -33,12 +33,12 @@ const getCarouselLeftAlign = (
 
     } else {
         const
-            lyricColumnWidth =
+            earColumnWidth =
                 getIsMonitor(deviceIndex) ?
                     LS_WIDTH_GOLDEN_CORD :
                     LS_WIDTH_UNCANNY_VALLEY,
 
-            centreFieldWidth = windowWidth - lyricColumnWidth,
+            centreFieldWidth = windowWidth - earColumnWidth,
 
             // Percentage. It would be 0.5 if not for the lyric column.
             left = (centreFieldWidth * 0.5) / windowWidth

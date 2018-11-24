@@ -54,7 +54,7 @@ const
         shownNavBookIndex: 1,
         selectedAudioOptionIndex:
             getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
-        earIndex: 0,
+        earColumnIndex: 0,
         selectedOverviewIndex: 1,
         selectedTipsIndex: 1,
         selectedWikiIndex: 0,
@@ -78,7 +78,7 @@ const
         isCarouselNavShowable: false,
         isOverlayingAnnotation: false,
         isOverlayShown: false,
-        isDoublespeakerShown: false
+        isEarShown: false
     },
 
     DEVICE_DEFAULTS = {

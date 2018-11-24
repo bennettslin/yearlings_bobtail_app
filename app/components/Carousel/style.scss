@@ -158,6 +158,6 @@
     .RM__carouselNavShowable.RM__carouselExpanded.RM__annotationShown
     & {
         // When carousel annotation is selected, switch z-index with lyric.
-        z-index: $zIndex__lyricColumn;
+        z-index: $zIndex__earColumn;
     }
 }
