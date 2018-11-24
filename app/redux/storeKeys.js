@@ -17,5 +17,15 @@ module.exports = {
     IS_ACCESS_ON: 'isAccessOn',
     IS_ADMIN_ON: 'isAdminOn',
     IS_CAROUSEL_SHOWN: 'isCarouselShown',
-    SELECTED_DOT_KEYS: 'selectedDotKeys'
+    SELECTED_DOT_KEYS: 'selectedDotKeys',
+
+    SELECTED_SONG_INDEX: 'selectedSongIndex',
+    SELECTED_VERSE_INDEX: 'selectedVerseIndex',
+    SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
+
+    SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
+    SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
+    SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
+    SELECTED_TIPS_INDEX: 'selectedTipsIndex',
+    SELECTED_WIKI_INDEX: 'selectedWikiIndex'
 }

@@ -1,18 +1,30 @@
 // Actions for session values.
-import { getDefinedOnlyPayload } from '../actionHelper'
+import { setIndexInStorage } from '../storageHelper'
 
-import { SESSION_STORE } from '../storeKeys'
+import {
+    hasKey,
+    getDefinedOnlyPayload
+} from '../actionHelper'
+
+import {
+    SESSION_STORE,
+    SELECTED_AUDIO_OPTION_INDEX
+} from '../storeKeys'
 import { SESSION_DEFAULTS } from '../defaultStates'
 
 export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
 
-
     const {
+        selectedAudioOptionIndex,
         selectedWikiIndex
     } = payload
 
+    if (hasKey(selectedAudioOptionIndex)) {
+        setIndexInStorage(SELECTED_AUDIO_OPTION_INDEX, selectedAudioOptionIndex)
+    }
+
+    // If wiki is being reset, also reset related state.
     if (selectedWikiIndex === 0) {
-        // If wiki is reset, also reset related state.
         payload.carouselAnnotationIndex = 0
         payload.selectedWikiUrl = ''
     }

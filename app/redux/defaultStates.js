@@ -1,7 +1,7 @@
 // Keep these in a single file for clarity, at least for now.
 
 import {
-    getFromStorage,
+    getIndexFromStorage,
     getDotsFromStorage,
     getBoolFromStorage
 } from './storageHelper'
@@ -13,21 +13,21 @@ import {
 } from '../helpers/dataHelper'
 
 import {
-    SELECTED_ANNOTATION_INDEX,
-    SELECTED_SONG_INDEX,
-    SELECTED_VERSE_INDEX
-} from 'constants/state'
-
-import {
     IS_ACCESS_ON,
     IS_ADMIN_ON,
-    IS_CAROUSEL_SHOWN
+    IS_CAROUSEL_SHOWN,
+
+    SELECTED_ANNOTATION_INDEX,
+    SELECTED_SONG_INDEX,
+    SELECTED_VERSE_INDEX,
+
+    SELECTED_AUDIO_OPTION_INDEX
 } from './storeKeys'
 
 const
-    storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
-    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
-    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX),
+    storedAnnotationIndex = getIndexFromStorage(SELECTED_ANNOTATION_INDEX),
+    storedSongIndex = getIndexFromStorage(SELECTED_SONG_INDEX),
+    storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
     isStoredLogue = getSongIsLogue(storedSongIndex),
 
     ACCESS_DEFAULTS = {
@@ -52,7 +52,8 @@ const
         carouselAnnotationIndex: 0,
         interactivatedVerseIndex: -1,
         shownBookColumnIndex: 1,
-        selectedAudioOptionIndex: 1,
+        selectedAudioOptionIndex:
+            getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
         selectedLyricColumnIndex: 0,
         selectedOverviewIndex: 1,
         selectedTipsIndex: 1,

@@ -1,6 +1,6 @@
 // Actions for song state.
 import { getSongIsLogue } from '../../helpers/dataHelper'
-import { setInStorage } from '../storageHelper'
+import { setIndexInStorage } from '../storageHelper'
 
 import {
     hasKey,
@@ -8,12 +8,11 @@ import {
 } from '../actionHelper'
 
 import {
+    SONG_STORE,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX
-} from 'constants/state'
-
-import { SONG_STORE } from '../storeKeys'
+} from '../storeKeys'
 import { SONG_DEFAULTS } from '../defaultStates'
 
 export const updateSongStore = (payload = SONG_DEFAULTS) => {
@@ -25,15 +24,15 @@ export const updateSongStore = (payload = SONG_DEFAULTS) => {
     } = payload
 
     if (hasKey(selectedSongIndex)) {
-        setInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
+        setIndexInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
 
         payload.isSelectedLogue = getSongIsLogue(selectedSongIndex)
     }
     if (hasKey(selectedVerseIndex)) {
-        setInStorage(SELECTED_VERSE_INDEX, selectedVerseIndex)
+        setIndexInStorage(SELECTED_VERSE_INDEX, selectedVerseIndex)
     }
     if (hasKey(selectedAnnotationIndex)) {
-        setInStorage(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex)
+        setIndexInStorage(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex)
     }
 
     return {
