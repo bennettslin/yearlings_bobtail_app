@@ -8,7 +8,7 @@ import { updateAccessStore } from 'flux/access/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import { getBookColumnIndex } from 'helpers/dataHelper'
+import { getNavBookIndex } from 'helpers/dataHelper'
 
 class CarouselNavListener extends PureComponent {
 
@@ -47,12 +47,12 @@ class CarouselNavListener extends PureComponent {
         if (!isCarouselShown && wasCarouselShown) {
             const
                 { selectedSongIndex } = this.props,
-                shownBookColumnIndex = getBookColumnIndex(selectedSongIndex)
+                shownNavBookIndex = getNavBookIndex(selectedSongIndex)
 
             this.props.updateAccessStore({
                 accessedNavSongIndex: selectedSongIndex
             })
-            this.props.updateSessionStore({ shownBookColumnIndex })
+            this.props.updateSessionStore({ shownNavBookIndex })
         }
     }
 

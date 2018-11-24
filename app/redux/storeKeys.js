@@ -26,6 +26,5 @@ module.exports = {
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
     SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
-    SELECTED_TIPS_INDEX: 'selectedTipsIndex',
-    SELECTED_WIKI_INDEX: 'selectedWikiIndex'
+    SELECTED_TIPS_INDEX: 'selectedTipsIndex'
 }

@@ -11,7 +11,7 @@ import { SOURCE_WORMHOLE_INDEX } from 'constants/lyrics'
  * ALBUM *
  *********/
 
-export const getBookColumnIndex = (songIndex) => {
+export const getNavBookIndex = (songIndex) => {
     const { bookStartingIndices } = album
 
     // Assumes two book starting indices.

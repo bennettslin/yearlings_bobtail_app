@@ -8,7 +8,7 @@ import NavDispatcher from '../../../../dispatchers/NavDispatcher'
 
 import {
     getSongsAndLoguesCount,
-    getBookColumnIndex
+    getNavBookIndex
 } from 'helpers/dataHelper'
 
 import {
@@ -24,7 +24,7 @@ class NavNavigation extends PureComponent {
         isAccessOn: PropTypes.bool.isRequired,
         accessedNavSongIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        shownBookColumnIndex: PropTypes.number.isRequired,
+        shownNavBookIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -75,7 +75,7 @@ class NavNavigation extends PureComponent {
             }
 
             if (direction) {
-                const { shownBookColumnIndex } = this.props,
+                const { shownNavBookIndex } = this.props,
                     songsCount = getSongsAndLoguesCount()
 
                 accessedNavSongIndex = (
@@ -84,7 +84,7 @@ class NavNavigation extends PureComponent {
 
                 // Select the book column that contains the accessed song index.
                 if (
-                    shownBookColumnIndex !== getBookColumnIndex(accessedNavSongIndex)
+                    shownNavBookIndex !== getNavBookIndex(accessedNavSongIndex)
                 ) {
                     this.dispatchNavBook()
                 }
@@ -110,14 +110,14 @@ const mapStateToProps = ({
     toggleStore: { isAccessOn },
     sessionStore: {
         interactivatedVerseIndex,
-        shownBookColumnIndex
+        shownNavBookIndex
     },
     accessStore: { accessedNavSongIndex }
 }) => ({
     isAccessOn,
     interactivatedVerseIndex,
     accessedNavSongIndex,
-    shownBookColumnIndex
+    shownNavBookIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

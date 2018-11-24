@@ -15,7 +15,7 @@ import {
 } from './helpers/hidden'
 import {
     getShowShrunkNavIcon,
-    getShowSingleBookColumn
+    getShowSingleNavBook
 } from './helpers/nav'
 import {
     getIsLyricExpandable,
@@ -169,7 +169,7 @@ class WindowListener extends PureComponent {
                 deviceIndex,
                 windowWidth
             }),
-            showSingleBookColumn: getShowSingleBookColumn({
+            showSingleNavBook: getShowSingleNavBook({
                 deviceIndex,
                 windowWidth
             }),

@@ -9,8 +9,8 @@ class NavDispatcher extends PureComponent {
     static propTypes = {
         // Through Redux.
         isCarouselShown: PropTypes.bool.isRequired,
-        showSingleBookColumn: PropTypes.bool.isRequired,
-        shownBookColumnIndex: PropTypes.number.isRequired,
+        showSingleNavBook: PropTypes.bool.isRequired,
+        shownNavBookIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -24,23 +24,23 @@ class NavDispatcher extends PureComponent {
     dispatchNavBook = () => {
         const {
             isCarouselShown,
-            showSingleBookColumn
+            showSingleNavBook
         } = this.props
 
         /**
          * We shouldn't be able to select book column if it's not a single
          * column, or if nav is collapsed.
          */
-        if (!showSingleBookColumn || isCarouselShown) {
+        if (!showSingleNavBook || isCarouselShown) {
             return false
         }
 
-        const { shownBookColumnIndex: prevBookColumnIndex } = this.props,
+        const { shownNavBookIndex: prevNavBookIndex } = this.props,
 
             // Always just a simple toggle.
-            shownBookColumnIndex = (prevBookColumnIndex + 1) % 2
+            shownNavBookIndex = (prevNavBookIndex + 1) % 2
 
-        this.props.updateSessionStore({ shownBookColumnIndex })
+        this.props.updateSessionStore({ shownNavBookIndex })
         return true
     }
 
@@ -51,11 +51,11 @@ class NavDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isCarouselShown },
-    responsiveStore: { showSingleBookColumn },
-    sessionStore: { shownBookColumnIndex }
+    responsiveStore: { showSingleNavBook },
+    sessionStore: { shownNavBookIndex }
 }) => ({
-    showSingleBookColumn,
-    shownBookColumnIndex,
+    showSingleNavBook,
+    shownNavBookIndex,
     isCarouselShown
 })
 

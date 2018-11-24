@@ -51,7 +51,7 @@ const
     SESSION_DEFAULTS = {
         carouselAnnotationIndex: 0,
         interactivatedVerseIndex: -1,
-        shownBookColumnIndex: 1,
+        shownNavBookIndex: 1,
         selectedAudioOptionIndex:
             getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
         selectedLyricColumnIndex: 0,
@@ -103,7 +103,7 @@ const
         isScoresTipsInMain: false,
         isTwoRowMenu: false,
         showShrunkNavIcon: false,
-        showSingleBookColumn: false,
+        showSingleNavBook: false,
         isLyricExpandable: false,
         isScoreShowable: true
     },

@@ -10,17 +10,17 @@ import NavColumn from './Column'
 const mapStateToProps = ({
     responsiveStore: {
         isHiddenCarouselNav,
-        showSingleBookColumn
+        showSingleNavBook
     }
 }) => ({
     isHiddenCarouselNav,
-    showSingleBookColumn
+    showSingleNavBook
 })
 
 const navPropTypes = {
     // Through Redux.
         isHiddenCarouselNav: PropTypes.bool.isRequired,
-        showSingleBookColumn: PropTypes.bool.isRequired
+        showSingleNavBook: PropTypes.bool.isRequired
     },
 
     Nav = ({
@@ -29,7 +29,7 @@ const navPropTypes = {
         /* eslint-enable no-unused-vars */
 
         isHiddenCarouselNav,
-        showSingleBookColumn,
+        showSingleNavBook,
 
         ...other
     }) => {
@@ -38,7 +38,7 @@ const navPropTypes = {
             <div
                 className={cx(
                     'Nav',
-                    showSingleBookColumn ?
+                    showSingleNavBook ?
                         'Nav__showSingleBook' :
                         'Nav__showDoubleBook',
                     'absoluteFullContainer'

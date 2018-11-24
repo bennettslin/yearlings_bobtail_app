@@ -11,19 +11,19 @@ import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
 
 const mapStateToProps = ({
-    responsiveStore: { showSingleBookColumn },
-    sessionStore: { shownBookColumnIndex }
+    responsiveStore: { showSingleNavBook },
+    sessionStore: { shownNavBookIndex }
 }) => ({
-    showSingleBookColumn,
-    shownBookColumnIndex
+    showSingleNavBook,
+    shownNavBookIndex
 })
 
 class NavColumn extends Component {
 
     static propTypes = {
         // Through Redux.
-        showSingleBookColumn: PropTypes.bool.isRequired,
-        shownBookColumnIndex: PropTypes.number.isRequired,
+        showSingleNavBook: PropTypes.bool.isRequired,
+        shownNavBookIndex: PropTypes.number.isRequired,
 
         // From parent.
         bookIndex: PropTypes.number.isRequired,
@@ -36,15 +36,15 @@ class NavColumn extends Component {
 
     render() {
         const {
-                showSingleBookColumn,
-                shownBookColumnIndex,
+                showSingleNavBook,
+                shownNavBookIndex,
                 bookIndex,
                 handleNavSongSelect
             } = this.props,
 
             isShownColumn =
-                !showSingleBookColumn ||
-                shownBookColumnIndex === bookIndex
+                !showSingleNavBook ||
+                shownNavBookIndex === bookIndex
 
         return (
             <div className={cx(

@@ -37,7 +37,7 @@ const getShowShrunkNavIcon = ({
     )
 }
 
-const getShowSingleBookColumn = ({
+const getShowSingleNavBook = ({
     deviceIndex, windowWidth
 }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
@@ -53,5 +53,5 @@ const getShowSingleBookColumn = ({
 
 export {
     getShowShrunkNavIcon,
-    getShowSingleBookColumn
+    getShowSingleNavBook
 }
