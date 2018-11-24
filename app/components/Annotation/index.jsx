@@ -179,8 +179,10 @@ const propTypes = {
                         'boxShadow__annotation__selected' :
                         'boxShadow__annotation'
                 )}
-                onClick={handleContainerClick}
-                onTouchStart={handleContainerClick}
+                {...{
+                    onClick: handleContainerClick,
+                    onTouchStart: handleContainerClick
+                }}
             >
                 <AnnotationHeader
                     {...{

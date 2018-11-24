@@ -64,10 +64,9 @@ class Verse extends Component {
     }
 
     _handleInteractivatableClick = (e) => {
-        this.dispatchStopPropagation(e)
-
         // Allow clicks on interactable verses.
         if (this.getIsInteractable()) {
+            this.dispatchStopPropagation(e)
             this.dispatchInteractivatedVerseIndex(this.props.verseIndex)
         }
     }

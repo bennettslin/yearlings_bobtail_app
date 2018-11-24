@@ -97,8 +97,10 @@ const popupViewPropTypes = {
                         (hasNarrowPadding || hasWidePadding) &&
                         'boxShadow__popupView'
                     )}
-                    onClick={handleContainerClick}
-                    onTouchStart={handleContainerClick}
+                    {...{
+                        onClick: handleContainerClick,
+                        onTouchStart: handleContainerClick
+                    }}
                 >
                     {children}
                 </div>

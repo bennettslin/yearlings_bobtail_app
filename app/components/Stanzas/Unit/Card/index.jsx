@@ -215,7 +215,9 @@ const propTypes = {
                             'bgColour__unit__pattern',
                             `bgColour__stanzaType__${stanzaType}`
                         )}
-                        onClick={handleStanzaTabClick}
+                        {...{
+                            onClick: handleStanzaTabClick
+                        }}
                     >
                         {tabText}
                     </div>

@@ -140,9 +140,11 @@ class VerseBar extends Component {
                         'VerseBar__above' :
                         'VerseBar__below'
                 )}
-                onWheel={handleVerseBarWheel}
-                onClick={this._handleVerseBarSelect}
-                onTouchStart={this._handleVerseBarSelect}
+                {...{
+                    onWheel: handleVerseBarWheel,
+                    onClick: this._handleVerseBarSelect,
+                    onTouchStart: this._handleVerseBarSelect
+                }}
             >
                 <div
                     className={cx(
