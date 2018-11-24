@@ -176,7 +176,6 @@ class CloseListener extends PureComponent {
             { isTitleShown } = this.props,
             { isTitleShown: wasTitleShown } = prevProps
 
-
         if (isTitleShown && !wasTitleShown) {
             this.closeSections({
                 justClosePopups: true,
@@ -189,7 +188,6 @@ class CloseListener extends PureComponent {
         const
             { selectedWikiIndex } = this.props,
             { selectedWikiIndex: prevWikiIndex } = prevProps
-
 
         if (selectedWikiIndex && !prevWikiIndex) {
             this.closeSections({
@@ -228,8 +226,7 @@ class CloseListener extends PureComponent {
         exemptInteractivatedVerse,
 
         continuePastClosingPopups,
-        justClosePopups,
-        leaveOpenPopups
+        justClosePopups
 
     }) => {
         const {
@@ -238,26 +235,23 @@ class CloseListener extends PureComponent {
             selectedWikiIndex
         } = this.props
 
-        if (!leaveOpenPopups) {
+        // If popup is open, close it and do nothing else.
+        if (selectedWikiIndex && !exemptWiki) {
+            this.props.updateSessionStore({ selectedWikiIndex: 0 })
+            if (!continuePastClosingPopups) {
+                return
+            }
 
-            // If popup is open, close it and do nothing else.
-            if (selectedWikiIndex && !exemptWiki) {
-                this.props.updateSessionStore({ selectedWikiIndex: 0 })
-                if (!continuePastClosingPopups) {
-                    return
-                }
+        } else if (isScoreShown && !exemptScore) {
+            this.props.updateToggleStore({ isScoreShown: false })
+            if (!continuePastClosingPopups) {
+                return
+            }
 
-            } else if (isScoreShown && !exemptScore) {
-                this.props.updateToggleStore({ isScoreShown: false })
-                if (!continuePastClosingPopups) {
-                    return
-                }
-
-            } else if (isTitleShown && !exemptTitle) {
-                this.props.updateToggleStore({ isTitleShown: false })
-                if (!continuePastClosingPopups) {
-                    return
-                }
+        } else if (isTitleShown && !exemptTitle) {
+            this.props.updateToggleStore({ isTitleShown: false })
+            if (!continuePastClosingPopups) {
+                return
             }
         }
 
