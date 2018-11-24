@@ -49,20 +49,18 @@ class SceneListener extends PureComponent {
             renderedSongIndex === prevSongIndex &&
             renderedSceneIndex !== prevSceneIndex
         ) {
-            this._prepareForSceneChangeUnrender()
+            this._prepareForSceneChange()
         }
     }
 
-    _prepareForSceneChangeUnrender() {
-
-        // This only gets toggled for a scene change within the same song.
+    _prepareForSceneChange() {
         this.props.updateRenderableStore({ isSceneChangeRenderable: false })
 
         // Clear previous timeout.
         clearTimeout(this.state.sceneChangeTimeoutId)
 
         const sceneChangeTimeoutId = setTimeout(
-            this._prepareForSceneChangeRender, 200
+            this._resolveSceneChange, 200
         )
 
         this.setState({
@@ -70,7 +68,7 @@ class SceneListener extends PureComponent {
         })
     }
 
-    _prepareForSceneChangeRender = () => {
+    _resolveSceneChange = () => {
         this.props.updateRenderableStore({ isSceneChangeRenderable: true })
     }
 
