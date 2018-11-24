@@ -1,6 +1,6 @@
 // Webview to show song score.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -15,7 +15,7 @@ const mapStateToProps = ({
     renderedSongIndex
 })
 
-class Score extends Component {
+class Score extends PureComponent {
 
     static propTypes = {
         // Through Redux.

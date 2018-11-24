@@ -1,6 +1,6 @@
 // Section to show all song annotations in a carousel layout.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -39,7 +39,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex
 })
 
-class Carousel extends Component {
+class Carousel extends PureComponent {
 
     static propTypes = {
         // Through Redux.

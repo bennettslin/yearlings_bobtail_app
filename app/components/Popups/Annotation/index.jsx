@@ -1,6 +1,6 @@
 // Popup container for individual annotation section.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -28,7 +28,7 @@ const mapStateToProps = ({
     selectedWikiIndex
 })
 
-class AnnotationPopup extends Component {
+class AnnotationPopup extends PureComponent {
 
     static propTypes = {
         // Through Redux.

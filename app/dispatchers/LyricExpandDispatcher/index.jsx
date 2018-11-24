@@ -1,12 +1,12 @@
 // Child that knows rules to toggle lyric. Not needed if just collapsing.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class LyricExpandDispatcher extends Component {
+class LyricExpandDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.

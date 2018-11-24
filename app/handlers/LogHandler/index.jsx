@@ -1,6 +1,6 @@
 // For dev purposes. Log object info.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -16,7 +16,7 @@ import {
 
 import { WINDOW_STORAGE } from 'constants/state'
 
-class LogHandler extends Component {
+class LogHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.

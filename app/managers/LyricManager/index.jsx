@@ -1,6 +1,6 @@
 // Singleton to watch for non-toggle events that require collapsing lyric.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class LyricManager extends Component {
+class LyricManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.

@@ -1,6 +1,6 @@
 // Child that knows rules to toggle admin.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -8,7 +8,7 @@ import { updateSessionStore } from 'flux/session/action'
 
 import { getSongVersesCount } from 'helpers/dataHelper'
 
-class InteractivatedVerseDispatcher extends Component {
+class InteractivatedVerseDispatcher extends PureComponent {
 
     static defaultProps = {
         getIndexDispatch: {},

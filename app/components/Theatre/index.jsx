@@ -1,6 +1,6 @@
 // Section to show the stage illustrations.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -20,7 +20,7 @@ const mapStateToProps = ({
     canTheatreRender
 })
 
-class Theatre extends Component {
+class Theatre extends PureComponent {
 
     static propTypes = {
         // Through Redux.

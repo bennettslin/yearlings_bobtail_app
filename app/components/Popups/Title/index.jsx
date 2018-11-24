@@ -1,6 +1,6 @@
 // Popup container for title section.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -15,7 +15,7 @@ const mapStateToProps = ({
     isTitleShown
 })
 
-class TitlePopup extends Component {
+class TitlePopup extends PureComponent {
 
     static propTypes = {
     // Through Redux.
