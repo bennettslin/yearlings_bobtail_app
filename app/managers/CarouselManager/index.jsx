@@ -22,7 +22,6 @@ class CarouselManager extends PureComponent {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        accessNavSong: PropTypes.func.isRequired,
         selectBookColumn: PropTypes.func.isRequired
     }
 
@@ -44,9 +43,7 @@ class CarouselManager extends PureComponent {
             return false
         }
 
-        this.props.updateToggleStore({
-            isCarouselShown
-        })
+        this.props.updateToggleStore({ isCarouselShown })
 
         /**
          * New behaviour is that nav is expanded when carousel is hidden, and
@@ -67,8 +64,6 @@ class CarouselManager extends PureComponent {
     _selectNavExpand(isCarouselShown) {
         // Reset accessed song index and book column upon nav expand.
         if (!isCarouselShown) {
-            this.props.accessNavSong(this.props.selectedSongIndex)
-
             this.props.selectBookColumn({
                 resetToDefault: true
             })

@@ -1,9 +1,10 @@
-// Singleton to listen for non-toggle events that require turning off carousel.
+// Singleton to listen for non-toggle events related to carousel closing.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateAccessStore } from 'flux/access/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class CarouselListener extends PureComponent {
@@ -11,11 +12,15 @@ class CarouselListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         dotsBitNumber: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
         this.closeCarouselIfNeeded(prevProps)
+        this.handleNavExpandIfNeeded(prevProps)
     }
 
     closeCarouselIfNeeded(prevProps) {
@@ -23,8 +28,26 @@ class CarouselListener extends PureComponent {
             { dotsBitNumber } = this.props,
             { dotsBitNumber: prevDotsBitNumber } = prevProps
 
+        // If there are no selected dots, there can be no carousel annotations.
         if (!dotsBitNumber && prevDotsBitNumber) {
             this.props.updateToggleStore({ isCarouselShown: false })
+        }
+    }
+
+    handleNavExpandIfNeeded(prevProps) {
+        const
+            { isCarouselShown } = this.props,
+            { isCarouselShown: wasCarouselShown } = prevProps
+
+        // Prepare nav if collapsing carousel.
+        if (!isCarouselShown && wasCarouselShown) {
+            const { selectedSongIndex } = this.props
+
+            this.props.updateAccessStore({
+                accessedNavSongIndex: selectedSongIndex
+            })
+
+            // TODO: Also reset book column.
         }
     }
 
@@ -34,13 +57,18 @@ class CarouselListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    dotsStore: { dotsBitNumber }
+    dotsStore: { dotsBitNumber },
+    songStore: { selectedSongIndex },
+    toggleStore: { isCarouselShown }
 }) => ({
-    dotsBitNumber
+    dotsBitNumber,
+    selectedSongIndex,
+    isCarouselShown
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateAccessStore,
         updateToggleStore
     }, dispatch)
 )

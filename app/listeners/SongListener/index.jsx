@@ -4,6 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateAccessStore } from 'flux/access/action'
 import { updateLoadStore } from 'flux/load/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
@@ -13,8 +14,10 @@ class SongListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
-        updateSessionStore: PropTypes.func.isRequired
+        updateSessionStore: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -27,6 +30,9 @@ class SongListener extends PureComponent {
             { selectedSongIndex: prevSongIndex } = prevProps
 
         if (selectedSongIndex !== prevSongIndex) {
+            this.props.updateAccessStore({
+                accessedNavSongIndex: selectedSongIndex
+            })
             this.props.updateLoadStore({ isScoreLoaded: false })
             this.props.updateSessionStore({
                 interactivatedVerseIndex: -1,
@@ -52,6 +58,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateAccessStore,
         updateLoadStore,
         updateSessionStore,
         updateToggleStore

@@ -91,10 +91,6 @@ class ListenerContainer extends PureComponent {
         return this.navManager.selectBookColumn(payload)
     }
 
-    accessNavSong = (payload) => {
-        return this.navManager.accessNavSong(payload)
-    }
-
     /************
      * OVERVIEW *
      ************/
@@ -249,7 +245,6 @@ class ListenerContainer extends PureComponent {
                     // Event manager props.
                     accessAnnotation={this.accessAnnotation}
                     accessAnnotationAnchor={this.accessAnnotationAnchor}
-                    accessNavSong={this.accessNavSong}
                     setCarouselAnnotationRef={this.setCarouselAnnotationRef}
                     setLyricAnnotationRef={this.setLyricAnnotationRef}
                     setVerseRef={this.setVerseRef}
@@ -278,7 +273,6 @@ class ListenerContainer extends PureComponent {
                 />
                 <CarouselManager
                     setRef={this._setCarouselManagerRef}
-                    accessNavSong={this.accessNavSong}
                     selectBookColumn={this.selectBookColumn}
                 />
                 <LogHandler />

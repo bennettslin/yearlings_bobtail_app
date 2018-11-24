@@ -31,7 +31,6 @@ class NavManager extends PureComponent {
         const { selectedSongIndex } = this.props
 
         if (selectedSongIndex !== prevProps.selectedSongIndex) {
-            this.accessNavSong(selectedSongIndex)
 
             // Nav will update book column right away.
             this.selectBookColumn({
@@ -63,10 +62,6 @@ class NavManager extends PureComponent {
         }
 
         this.props.updateSessionStore({ shownBookColumnIndex })
-    }
-
-    accessNavSong(accessedNavSongIndex) {
-        this.props.updateAccessStore({ accessedNavSongIndex })
     }
 
     render() {
