@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 
 // TODO: Eventually get rid of this file. Everything it handles should be in dispatchers or listeners.
 // Component that handles all user events.
@@ -33,7 +32,6 @@ class EventContainer extends PureComponent {
     static propTypes = {
         // Through Redux.
         isCarouselShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
@@ -43,7 +41,6 @@ class EventContainer extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        isHiddenLyric: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -139,19 +136,19 @@ class EventContainer extends PureComponent {
      * AUDIO *
      *********/
 
-    handleAudioPlay = (e) => {
+    handleAudioPlay = () => {
         const playToggled = this.props.togglePlay()
         return playToggled
     }
 
-    handleAudioPreviousSong = (e) => {
+    handleAudioPreviousSong = () => {
         const songSelected = this.props.selectSong({
             direction: -1
         })
         return songSelected
     }
 
-    handleAudioNextSong = (e) => {
+    handleAudioNextSong = () => {
         const songSelected = this.props.selectSong({
             direction: 1
         })
@@ -488,16 +485,11 @@ class EventContainer extends PureComponent {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { isHiddenLyric },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex,
         isSelectedLogue
-    },
-    toggleStore: {
-        isCarouselShown,
-        isLyricExpanded
     },
     dotsStore: {
         dotsBitNumber,
@@ -509,10 +501,7 @@ const mapStateToProps = ({
     },
     accessStore: { accessedAnnotationIndex }
 }) => ({
-    isHiddenLyric,
     selectedAnnotationIndex,
-    isCarouselShown,
-    isLyricExpanded,
     isSelectedLogue,
     dotsBitNumber,
     selectedDotKeys,

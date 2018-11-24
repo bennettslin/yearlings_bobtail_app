@@ -13,6 +13,7 @@ import {
     TIPS_OPTIONS
 } from '../../constants/options'
 
+// TODO: Eventually, this should just be a listener.
 class CloseHandler extends PureComponent {
 
     static propTypes = {

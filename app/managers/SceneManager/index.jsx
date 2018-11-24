@@ -32,38 +32,10 @@ class SceneManager extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this.updateSceneIfNeeded(prevProps)
+        this._updateSceneIfNeeded(prevProps)
     }
 
-    selectScene(direction) {
-        const {
-            selectedSongIndex,
-            selectedVerseIndex
-        } = this.props
-
-        const nextVerseIndex = getVerseIndexForNextScene(
-            selectedSongIndex, selectedVerseIndex, direction
-        )
-
-        if (nextVerseIndex > -1) {
-            this.props.selectVerse({
-                selectedVerseIndex: nextVerseIndex,
-                scrollLog: 'Manual scene changed.'
-            })
-
-            /**
-             * Verse bars always get reset. This behaviour can be a little
-             * janky, but it doesn't matter since this won't get called in
-             * production.
-             */
-            this.props.updateToggleStore({
-                isVerseBarAbove: false,
-                isVerseBarBelow: false
-            })
-        }
-    }
-
-    updateSceneIfNeeded(prevProps) {
+    _updateSceneIfNeeded(prevProps) {
         const
             {
                 renderedSceneIndex,
@@ -107,6 +79,34 @@ class SceneManager extends PureComponent {
         this.props.updateRenderableStore({
             isSceneChangeRenderable: true
         })
+    }
+
+    selectScene(direction) {
+        const {
+            selectedSongIndex,
+            selectedVerseIndex
+        } = this.props
+
+        const nextVerseIndex = getVerseIndexForNextScene(
+            selectedSongIndex, selectedVerseIndex, direction
+        )
+
+        if (nextVerseIndex > -1) {
+            this.props.selectVerse({
+                selectedVerseIndex: nextVerseIndex,
+                scrollLog: 'Manual scene changed.'
+            })
+
+            /**
+             * Verse bars always get reset. This behaviour can be a little
+             * janky, but it doesn't matter since this won't get called in
+             * production.
+             */
+            this.props.updateToggleStore({
+                isVerseBarAbove: false,
+                isVerseBarBelow: false
+            })
+        }
     }
 
     render() {
