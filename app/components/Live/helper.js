@@ -9,7 +9,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             setLyricVerseParentRef,
             setCarouselParentRef,
 
-            handlePopupContainerClick,
             handleScrollUponLyricRender,
             handleScrollUponCarouselRender,
 
@@ -31,14 +30,12 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleOverviewToggle,
             handleTipsToggle,
             handleVerseBarSelect,
-            handleVerseBarWheel,
-            stopPropagation
+            handleVerseBarWheel
         } = props,
 
         annotationPopupHandlers = {
             handleAnnotationPrevious,
             handleAnnotationNext,
-            handlePopupContainerClick,
             handleAnnotationWormholeSelect
         },
 
@@ -71,8 +68,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
 
         overviewPopupHandlers = {
-            handleOverviewToggle,
-            handlePopupContainerClick
+            handleOverviewToggle
         },
 
         scoresTipsHandlers = {
@@ -84,12 +80,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
 
         tipsPopupHandlers = {
-            handleTipsToggle,
-            handlePopupContainerClick
-        },
-
-        titlePopupHandlers = {
-            handlePopupContainerClick
+            handleTipsToggle
         },
 
         wikiPopupHandlers = {
@@ -111,15 +102,10 @@ export const getOrganisedHandlersFromProps = (props) => {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 handleAnnotationWormholeSelect,
-                handlePopupContainerClick,
                 handleScrollUponCarouselRender
             },
             leftShelfToggleSectionHandlers: {
                 handleOverviewToggle
-            },
-            dotsSectionHandlers: {
-                handlePopupContainerClick,
-                stopPropagation
             },
             navSectionHandlers: {
                 handleNavSongSelect,
@@ -139,7 +125,6 @@ export const getOrganisedHandlersFromProps = (props) => {
         menuFieldHandlers,
         overviewPopupHandlers,
         scorePopupHandlers,
-        titlePopupHandlers,
         wikiPopupHandlers
     }
 }

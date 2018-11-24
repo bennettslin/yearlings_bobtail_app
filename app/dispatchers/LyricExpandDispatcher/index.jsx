@@ -16,11 +16,11 @@ class LyricExpandDispatcher extends Component {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.func.isRequired
+        getDispatch: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch(this.dispatchLyricExpand)
+        this.props.getDispatch.dispatchLyricExpand = this.dispatchLyricExpand
     }
 
     dispatchLyricExpand = (

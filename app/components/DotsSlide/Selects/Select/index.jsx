@@ -31,8 +31,7 @@ class DotsSlideSelect extends Component {
         // From parent.
         dotIndex: PropTypes.number.isRequired,
         hasInteractivatedDotText: PropTypes.number.isRequired,
-        setHasInteractivatedDotText: PropTypes.func.isRequired,
-        stopPropagation: PropTypes.func.isRequired
+        setHasInteractivatedDotText: PropTypes.func.isRequired
     }
 
     state = {
@@ -64,23 +63,14 @@ class DotsSlideSelect extends Component {
         this.dispatchSelectDot(this.props.dotIndex)
     }
 
-    _handleTextContainerClick = (e) => {
+    _handleTextContainerClick = () => {
         const isInteractivated = !this.state.isInteractivated
-
-        e.stopPropagation()
 
         this.setState({
             isInteractivated
         })
 
-        // Tell event manager to turn off access.
-        this.props.stopPropagation(e)
-
         this.props.setHasInteractivatedDotText(isInteractivated)
-    }
-
-    setDotSelectDispatch = (dispatchSelectDot) => {
-        this.dispatchSelectDot = dispatchSelectDot
     }
 
     render() {
@@ -91,7 +81,6 @@ class DotsSlideSelect extends Component {
             isDotsSlideShown,
             hasInteractivatedDotText,
             setHasInteractivatedDotText,
-            stopPropagation,
             dispatch,
             /* eslint-enable no-unused-vars */
 
@@ -107,9 +96,7 @@ class DotsSlideSelect extends Component {
                         handleTextContainerClick: this._handleTextContainerClick
                     }}
                 />
-                <DotSelectDispatcher
-                    {...{ getDispatch: this.setDotSelectDispatch }}
-                />
+                <DotSelectDispatcher {...{ getDispatch: this }} />
             </___>
         )
     }

@@ -11,6 +11,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
+import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
@@ -97,8 +98,6 @@ class EventContainer extends PureComponent {
         })
 
         if (songSelected) {
-            // this.stopPropagation(e)
-
             if (!isNaN(selectedLyricColumnIndex)) {
                 this.props.selectLyricColumn({
                     selectedLyricColumnIndex,
@@ -120,7 +119,6 @@ class EventContainer extends PureComponent {
     }
 
     _handleAccessedAnnotationSelect(e, direction) {
-        // this.stopPropagation(e)
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction
         })
@@ -144,9 +142,6 @@ class EventContainer extends PureComponent {
 
     handleAudioPlay = (e) => {
         const playToggled = this.props.togglePlay()
-        if (playToggled) {
-            // this.stopPropagation(e)
-        }
         return playToggled
     }
 
@@ -154,9 +149,6 @@ class EventContainer extends PureComponent {
         const songSelected = this.props.selectSong({
             direction: -1
         })
-        if (songSelected) {
-            // this.stopPropagation(e)
-        }
         return songSelected
     }
 
@@ -164,9 +156,6 @@ class EventContainer extends PureComponent {
         const songSelected = this.props.selectSong({
             direction: 1
         })
-        if (songSelected) {
-            // this.stopPropagation(e)
-        }
         return songSelected
     }
 
@@ -175,8 +164,6 @@ class EventContainer extends PureComponent {
      ************/
 
     handleCarouselNavToggle = (e, isCarouselShown) => {
-        // this.stopPropagation(e)
-
         const presentCarouselIndex = this.props.isCarouselShown,
             carouselSelected = this.props.selectCarouselNav(isCarouselShown)
 
@@ -205,9 +192,6 @@ class EventContainer extends PureComponent {
 
     handleLyricColumnSelect = (e) => {
         const columnSelected = this.props.selectLyricColumn()
-        if (columnSelected) {
-            // this.stopPropagation(e)
-        }
         return columnSelected
     }
 
@@ -233,7 +217,6 @@ class EventContainer extends PureComponent {
             return false
         }
 
-        // this.stopPropagation(e)
         this.props.selectVerse({
             selectedVerseIndex,
             scrollLog: 'Select interactivated verse.'
@@ -271,9 +254,6 @@ class EventContainer extends PureComponent {
             }
         }
 
-        e.stopPropagation()
-        // this.stopPropagation(e)
-
         this.props.selectAnnotation({
             selectedAnnotationIndex
         })
@@ -308,14 +288,12 @@ class EventContainer extends PureComponent {
      *******/
 
     handleNavSongSelect = (e, selectedSongIndex) => {
-        // this.stopPropagation(e)
         return this.props.selectSong({
             selectedSongIndex
         })
     }
 
     handleNavBookSelect = (e) => {
-        // this.stopPropagation(e)
         this.props.selectBookColumn()
     }
 
@@ -334,29 +312,7 @@ class EventContainer extends PureComponent {
                 justHideIfShown
             })
 
-        if (overviewToggled) {
-            this.stopPropagation(e)
-        }
         return overviewToggled
-    }
-
-    /*********
-     * POPUP *
-     *********/
-
-    handlePopupContainerClick = (e, closeLeftShelf) => {
-        this.stopPropagation(e)
-
-        // Carousel annotation was clicked.
-        if (closeLeftShelf) {
-            this.props.updateToggleStore({ isDotsSlideShown: false })
-            this.props.selectOverview({
-                justHideIfShown: true
-            })
-            this.props.selectTips({
-                justHideIfShown: true
-            })
-        }
     }
 
     /*********
@@ -364,7 +320,6 @@ class EventContainer extends PureComponent {
      *********/
 
     handleSceneDirection = (e, direction) => {
-        // this.stopPropagation(e)
         this.props.selectScene(direction)
         return true
     }
@@ -385,10 +340,6 @@ class EventContainer extends PureComponent {
                 clickToggle,
                 justHideIfShown
             })
-
-        if (tipsToggled) {
-            // this.stopPropagation(e)
-        }
         return tipsToggled
     }
 
@@ -407,7 +358,6 @@ class EventContainer extends PureComponent {
             clientRect = sliderElement.getBoundingClientRect()
 
         if (!isNaN(clientX)) {
-            // this.stopPropagation(e)
             this.props.touchSliderBegin({
                 clientRect, clientX
             })
@@ -442,7 +392,7 @@ class EventContainer extends PureComponent {
                 selectedVerseIndex
             } = this.props,
             interactivatedVerseIndex =
-            this.dispatchInteractivatedVerse(direction)
+            this.dispatchInteractivatedVerseDirection(direction)
 
         this.props.scrollElementIntoView({
             log: 'Access verse direction.',
@@ -527,10 +477,6 @@ class EventContainer extends PureComponent {
         this.myWikiElement = node
     }
 
-    setInteractivatedVerseDispatch = (dispatch) => {
-        this.dispatchInteractivatedVerse = dispatch
-    }
-
     render() {
         const {
             selectAnnotation,
@@ -557,10 +503,9 @@ class EventContainer extends PureComponent {
                     }}
                 />
                 <InteractivatedVerseDispatcher
-                    {...{
-                        getDirectionDispatch: this.setInteractivatedVerseDispatch
-                    }}
+                    {...{ getDirectionDispatch: this }}
                 />
+                <StopPropagationDispatcher {...{ getDispatch: this }} />
             </___>
         )
     }

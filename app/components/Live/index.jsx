@@ -196,7 +196,6 @@ class Live extends Component {
             overviewPopupHandlers,
             scorePopupHandlers,
             theatreHandlers,
-            titlePopupHandlers,
             wikiPopupHandlers
         } = getOrganisedHandlersFromProps(this.props)
 
@@ -224,7 +223,6 @@ class Live extends Component {
 
                 <OverlayPopups
                     annotationPopupHandlers={annotationPopupHandlers}
-                    titlePopupHandlers={titlePopupHandlers}
                     scorePopupHandlers={scorePopupHandlers}
                     wikiPopupHandlers={wikiPopupHandlers}
                 />
@@ -277,13 +275,11 @@ Live.propTypes = {
     handleLyricAutoScroll: PropTypes.func.isRequired,
     handleLyricVerseSelect: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
-    handlePopupContainerClick: PropTypes.func.isRequired,
     handleScrollUponLyricRender: PropTypes.func.isRequired,
     handleScrollUponCarouselRender: PropTypes.func.isRequired,
     handleTipsToggle: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
-    handleVerseBarWheel: PropTypes.func.isRequired,
-    stopPropagation: PropTypes.func.isRequired
+    handleVerseBarWheel: PropTypes.func.isRequired
 }
 
 const bindDispatchToProps = (dispatch) => (

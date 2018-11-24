@@ -1,6 +1,6 @@
 // Button to collapse and expand lyric column in mobile widths.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -42,10 +42,6 @@ class LyricToggleExpand extends Component {
         this.dispatchLyricExpand()
     }
 
-    setLyricExpandDispatch = (dispatch) => {
-        this.dispatchLyricExpand = dispatch
-    }
-
     render() {
         const {
                 isHiddenLyric,
@@ -58,30 +54,26 @@ class LyricToggleExpand extends Component {
             shouldRender = inMain ? isHiddenLyric : true
 
         return isLyricExpandable && shouldRender && (
-            <___>
-                <div className={cx(
-                    'LyricToggleExpand',
-                    'LyricToggle',
-                    inMain ?
-                        'LyricToggle__inMain' :
-                        'LyricToggle__inLyric',
-                    { 'LyricToggleExpand__inLyric': !inMain },
-                    'length__buttonLarge'
-                )}>
-                    <Button
-                        isLargeSize
-                        {...{
-                            buttonName: LYRIC_EXPAND_BUTTON_KEY,
-                            buttonIdentifier: isLyricExpanded,
-                            accessKey: LYRIC_SECTION_EXPAND_KEY,
-                            handleButtonClick: this.handleLyricClick
-                        }}
-                    />
-                </div>
-                <LyricExpandDispatcher
-                    {...{ getDispatch: this.setLyricExpandDispatch }}
+            <div className={cx(
+                'LyricToggleExpand',
+                'LyricToggle',
+                inMain ?
+                    'LyricToggle__inMain' :
+                    'LyricToggle__inLyric',
+                { 'LyricToggleExpand__inLyric': !inMain },
+                'length__buttonLarge'
+            )}>
+                <Button
+                    isLargeSize
+                    {...{
+                        buttonName: LYRIC_EXPAND_BUTTON_KEY,
+                        buttonIdentifier: isLyricExpanded,
+                        accessKey: LYRIC_SECTION_EXPAND_KEY,
+                        handleButtonClick: this.handleLyricClick
+                    }}
                 />
-            </___>
+                <LyricExpandDispatcher {...{ getDispatch: this }} />
+            </div>
         )
     }
 }

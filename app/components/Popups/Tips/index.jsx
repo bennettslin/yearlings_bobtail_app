@@ -20,10 +20,7 @@ const tipsPopupPropTypes = {
     // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        handlePopupContainerClick: PropTypes.func.isRequired
+        selectedTipsIndex: PropTypes.number.isRequired
     },
 
     TipsPopup = ({
@@ -34,7 +31,6 @@ const tipsPopupPropTypes = {
         canMainRender,
         isRenderedLogue,
         selectedTipsIndex,
-        handlePopupContainerClick,
 
         ...other
     }) => {
@@ -48,7 +44,6 @@ const tipsPopupPropTypes = {
                 hasNarrowPadding
                 popupName="Tips"
                 isVisible={isVisible}
-                handlePopupContainerClick={handlePopupContainerClick}
             >
                 <Tips {...other} />
             </Popup>

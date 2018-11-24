@@ -11,8 +11,8 @@ import { getSongVersesCount } from 'helpers/dataHelper'
 class InteractivatedVerseDispatcher extends Component {
 
     static defaultProps = {
-        getIndexDispatch: () => {},
-        getDirectionDispatch: () => {}
+        getIndexDispatch: {},
+        getDirectionDispatch: {}
     }
 
     static propTypes = {
@@ -23,20 +23,20 @@ class InteractivatedVerseDispatcher extends Component {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getIndexDispatch: PropTypes.func.isRequired,
-        getDirectionDispatch: PropTypes.func.isRequired
+        getIndexDispatch: PropTypes.object.isRequired,
+        getDirectionDispatch: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getIndexDispatch(this.dispatchWithIndex)
-        this.props.getDirectionDispatch(this.dispatchWithDirection)
+        this.props.getIndexDispatch.dispatchInteractivatedVerseIndex = this.dispatchInteractivatedVerseIndex
+        this.props.getDirectionDispatch.dispatchInteractivatedVerseDirection = this.dispatchInteractivatedVerseDirection
     }
 
-    dispatchWithIndex = (interactivatedVerseIndex = -1) => {
+    dispatchInteractivatedVerseIndex = (interactivatedVerseIndex = -1) => {
         this.props.updateSessionStore({ interactivatedVerseIndex })
     }
 
-    dispatchWithDirection = (direction) => {
+    dispatchInteractivatedVerseDirection = (direction) => {
         const {
                 selectedSongIndex,
                 selectedVerseIndex

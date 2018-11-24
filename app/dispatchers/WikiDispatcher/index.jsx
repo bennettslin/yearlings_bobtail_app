@@ -14,11 +14,11 @@ class WikiDispatcher extends PureComponent {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.func.isRequired
+        getDispatch: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch(this.dispatchWiki)
+        this.props.getDispatch.dispatchWiki = this.dispatchWiki
     }
 
     dispatchWiki = (

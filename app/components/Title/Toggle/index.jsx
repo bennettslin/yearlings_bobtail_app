@@ -1,6 +1,6 @@
 // Toggle button to show and hide title section.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -36,10 +36,6 @@ class TitleToggle extends Component {
         this.dispatchTitle()
     }
 
-    setTitleDispatch = (dispatch) => {
-        this.dispatchTitle = dispatch
-    }
-
     render() {
         const {
                 isTwoRowMenu,
@@ -59,35 +55,31 @@ class TitleToggle extends Component {
             )
 
         return isAudioChild === isTwoRowMenu && (
-            <___>
-                <div className={cx(
-                    'TitleToggle',
-                    {
-                        'Audio__child': isAudioChild,
-                        'TitleToggle__inAudio': isAudioChild
-                    }
-                )}>
-                    {isTwoRowMenu && (
-                        <AudioTimer
-                            isTitleTimer
-                        />
-                    )}
+            <div className={cx(
+                'TitleToggle',
+                {
+                    'Audio__child': isAudioChild,
+                    'TitleToggle__inAudio': isAudioChild
+                }
+            )}>
+                {isTwoRowMenu && (
+                    <AudioTimer
+                        isTitleTimer
+                    />
+                )}
 
-                    {isTwoRowMenu ? (
-                        <div className={cx(
-                            'TitleToggleButton__animatable',
-                            'absoluteFullContainer'
-                        )}>
-                            {titleButtonChild}
-                        </div>
-                    ) : (
-                        titleButtonChild
-                    )}
-                </div>
-                <TitleDispatcher
-                    {...{ getDispatch: this.setTitleDispatch }}
-                />
-            </___>
+                {isTwoRowMenu ? (
+                    <div className={cx(
+                        'TitleToggleButton__animatable',
+                        'absoluteFullContainer'
+                    )}>
+                        {titleButtonChild}
+                    </div>
+                ) : (
+                    titleButtonChild
+                )}
+                <TitleDispatcher {...{ getDispatch: this }} />
+            </div>
         )
     }
 }

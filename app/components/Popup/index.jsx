@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+
 import PopupView from './View'
 
 /*************
@@ -20,8 +22,7 @@ class Popup extends Component {
         displaysInOverlay: PropTypes.bool,
         handleCloseClick: PropTypes.func,
         handlePreviousClick: PropTypes.func,
-        handleNextClick: PropTypes.func,
-        handlePopupContainerClick: PropTypes.func
+        handleNextClick: PropTypes.func
     }
 
     state = {
@@ -57,16 +58,16 @@ class Popup extends Component {
         }
     }
 
-    _handlePopupContainerClick = (e) => {
+    handleContainerClick = (e) => {
         if (this.state.isDisplayed) {
-            this.props.handlePopupContainerClick(e)
+            this.dispatchStopPropagation(e)
         }
     }
 
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                handlePopupContainerClick,
+                handleContainerClick,
                 /* eslint-enable no-unused-vars */
 
                 className,
@@ -117,9 +118,10 @@ class Popup extends Component {
                         displaysInOverlay: displaysInOverlay || isFullSize,
                         handlePreviousClick,
                         handleNextClick,
-                        handleContainerClick: this._handlePopupContainerClick
+                        handleContainerClick: this.handleContainerClick
                     }}
                 />
+                <StopPropagationDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }

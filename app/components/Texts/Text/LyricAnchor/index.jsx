@@ -91,7 +91,6 @@ class TextLyricAnchor extends Component {
     }
 
     _handleAnchorClick = (e) => {
-        e.stopPropagation()
         const {
                 renderedAnnotationIndex,
                 annotationIndex,

@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
+import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+
 import VerseLines from './Lines'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -62,11 +64,11 @@ class Verse extends Component {
     }
 
     _handleInteractivatableClick = (e) => {
-        e.stopPropagation()
+        this.dispatchStopPropagation(e)
 
         // Allow clicks on interactable verses.
         if (this.getIsInteractable()) {
-            this.dispatchInteractivatedVerse(this.props.verseIndex)
+            this.dispatchInteractivatedVerseIndex(this.props.verseIndex)
         }
     }
 
@@ -86,10 +88,6 @@ class Verse extends Component {
                 index: this.props.verseIndex
             })
         }
-    }
-
-    setInteractivatedVerseDispatch = (dispatch) => {
-        this.dispatchInteractivatedVerse = dispatch
     }
 
     render() {
@@ -134,10 +132,9 @@ class Verse extends Component {
                     }}
                 />
                 <InteractivatedVerseDispatcher
-                    {...{
-                        getIndexDispatch: this.setInteractivatedVerseDispatch
-                    }}
+                    {...{ getIndexDispatch: this }}
                 />
+                <StopPropagationDispatcher {...{ getDispatch: this }} />
             </___>
         )
     }
@@ -205,8 +202,10 @@ const verseViewDefaultProps = {
 
                     'verseColour__hoverParent'
                 )}
-                onClick={handleInteractivatableClick}
-                onTouchStart={handleInteractivatableClick}
+                {...{
+                    onClick: handleInteractivatableClick,
+                    onTouchStart: handleInteractivatableClick
+                }}
             >
                 {children}
                 <VerseLines {...other} />

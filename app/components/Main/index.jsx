@@ -43,7 +43,6 @@ class Main extends Component {
         annotationPopupHandlers: PropTypes.object.isRequired,
         carouselSectionHandlers: PropTypes.object.isRequired,
         leftShelfToggleSectionHandlers: PropTypes.object.isRequired,
-        dotsSectionHandlers: PropTypes.object.isRequired,
         navSectionHandlers: PropTypes.object.isRequired,
         overviewPopupHandlers: PropTypes.object.isRequired,
         tipsPopupHandlers: PropTypes.object.isRequired,
@@ -79,7 +78,6 @@ class Main extends Component {
                 annotationPopupHandlers,
                 carouselSectionHandlers,
                 leftShelfToggleSectionHandlers,
-                dotsSectionHandlers,
                 navSectionHandlers,
                 overviewPopupHandlers,
                 scoresTipsHandlers,
@@ -130,7 +128,7 @@ class Main extends Component {
                     inMain
                 />
 
-                <DotsSlide {...dotsSectionHandlers} />
+                <DotsSlide />
 
                 <ScoresTips {...scoresTipsHandlers}
                     inMainRightSide

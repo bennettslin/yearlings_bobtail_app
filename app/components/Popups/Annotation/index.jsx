@@ -43,8 +43,7 @@ class AnnotationPopup extends Component {
         // From parent.
         inMain: PropTypes.bool,
         handleAnnotationPrevious: PropTypes.func.isRequired,
-        handleAnnotationNext: PropTypes.func.isRequired,
-        handlePopupContainerClick: PropTypes.func.isRequired
+        handleAnnotationNext: PropTypes.func.isRequired
     }
 
     state = {
@@ -112,7 +111,6 @@ class AnnotationPopup extends Component {
 
             handleAnnotationPrevious,
             handleAnnotationNext,
-            handlePopupContainerClick,
 
             ...other
         } = this.props
@@ -162,16 +160,14 @@ class AnnotationPopup extends Component {
                         noAbsoluteFull: inMain,
                         displaysInOverlay: isOverlayingAnnotation,
                         handleNextClick: handleAnnotationNext,
-                        handlePreviousClick: handleAnnotationPrevious,
-                        handlePopupContainerClick
+                        handlePreviousClick: handleAnnotationPrevious
                     }}
                 >
                     <Annotation {...other}
                         isAccessed
                         isSelected
                         {...{
-                            annotationIndex,
-                            handleContainerClick: handlePopupContainerClick
+                            annotationIndex
                         }}
 
                     />

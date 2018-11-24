@@ -19,10 +19,7 @@ class TitlePopup extends Component {
 
     static propTypes = {
     // Through Redux.
-        isTitleShown: PropTypes.bool.isRequired,
-
-        // From parent.
-        handlePopupContainerClick: PropTypes.func.isRequired
+        isTitleShown: PropTypes.bool.isRequired
     }
 
     closeTitle = () => {
@@ -32,8 +29,7 @@ class TitlePopup extends Component {
     render() {
 
         const {
-            isTitleShown,
-            handlePopupContainerClick
+            isTitleShown
         } = this.props
 
         return (
@@ -45,8 +41,7 @@ class TitlePopup extends Component {
                 {...{
                     popupName: 'Title',
                     isVisible: isTitleShown,
-                    handleCloseClick: this.closeTitle,
-                    handlePopupContainerClick
+                    handleCloseClick: this.closeTitle
                 }}
             >
                 <TitleSection />

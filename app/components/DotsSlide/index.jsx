@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import DotsSlideSelects from './Selects'
 
 const mapStateToProps = ({
@@ -21,18 +22,15 @@ class DotsSlide extends PureComponent {
     static propTypes = {
         // Through Redux.
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
-
-        // From parent.
-        handlePopupContainerClick: PropTypes.func.isRequired
+        selectedDotKeys: PropTypes.object.isRequired
     }
 
     state = {
         hasInteractivatedDotText: 0
     }
 
-    _onContainerClick = (e) => {
-        this.props.handlePopupContainerClick(e)
+    handleContainerClick = (e) => {
+        this.dispatchStopPropagation(e)
 
         this.setState({
             hasInteractivatedDotText: 0
@@ -50,7 +48,6 @@ class DotsSlide extends PureComponent {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                handlePopupContainerClick,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -64,11 +61,12 @@ class DotsSlide extends PureComponent {
                 <DotsSlideSelects {...other}
                     {...{
                         dotKeys: selectedDotKeys,
-                        handleContainerClick: this._onContainerClick,
+                        handleContainerClick: this.handleContainerClick,
                         hasInteractivatedDotText: hasInteractivatedDotText,
                         setHasInteractivatedDotText: this._setHasInteractivatedDotText
                     }}
                 />
+                <StopPropagationDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }

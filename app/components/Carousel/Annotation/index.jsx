@@ -59,16 +59,6 @@ class CarouselAnnotation extends Component {
         }
     }
 
-    _handleAnnotationContainerClick = (e) => {
-        /**
-         * Ensure that clicking on a selected carousel annotation will not
-         * deselect it.
-         */
-        if (this.props.isSelected) {
-            this.props.handlePopupContainerClick(e, true)
-        }
-    }
-
     setCarouselAnnotationRef = (node) => {
         this.props.setCarouselAnnotationRef({
             node,
@@ -82,7 +72,6 @@ class CarouselAnnotation extends Component {
                 /* eslint-disable no-unused-vars */
                 canCarouselRender,
                 handleLyricAnnotationSelect,
-                handlePopupContainerClick,
                 setCarouselAnnotationRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */
@@ -112,7 +101,6 @@ class CarouselAnnotation extends Component {
                 annotationColumn={columnKey}
                 annotationDotKeys={dotKeys}
                 handleTitleClick={this._handleAnnotationTitleClick}
-                handleContainerClick={this._handleAnnotationContainerClick}
             />
         )
     }
@@ -127,7 +115,6 @@ const carouselAnnotationViewPropTypes = {
         annotationIndex: PropTypes.number.isRequired,
         annotationColumn: PropTypes.string.isRequired,
         annotationDotKeys: PropTypes.object.isRequired,
-        handleContainerClick: PropTypes.func.isRequired,
         setRef: PropTypes.func.isRequired
     },
 
@@ -135,7 +122,6 @@ const carouselAnnotationViewPropTypes = {
 
         annotationColumn,
         annotationDotKeys,
-        handleContainerClick,
         setRef,
 
         ...other
@@ -164,9 +150,6 @@ const carouselAnnotationViewPropTypes = {
             >
                 <Annotation {...other}
                     inCarousel
-                    {...{
-                        handleContainerClick
-                    }}
                 />
             </div>
         )

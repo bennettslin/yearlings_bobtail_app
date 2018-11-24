@@ -77,15 +77,9 @@ class DotsSlideNavigation extends PureComponent {
         return false
     }
 
-    setDotSelectDispatch = (dispatchSelectDot) => {
-        this.dispatchSelectDot = dispatchSelectDot
-    }
-
     render() {
         return (
-            <DotSelectDispatcher
-                {...{ getDispatch: this.setDotSelectDispatch }}
-            />
+            <DotSelectDispatcher {...{ getDispatch: this }} />
         )
     }
 }

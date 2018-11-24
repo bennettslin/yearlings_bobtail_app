@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+
 import ButtonIcon from './ButtonIcon'
 import AccessLetter from '../Access/Letter'
 
@@ -48,7 +50,7 @@ class Button extends Component {
     }
 
     _handleClick = (e) => {
-        e.stopPropagation()
+        this.dispatchStopPropagation(e)
 
         const { isDisabled } = this.props
 
@@ -75,32 +77,29 @@ class Button extends Component {
             } = this.props,
 
             isDefaultSize = !isLargeSize && !isSmallSize && !isCustomSize,
-
             showIfAccessed = showAccessIconIfAccessOn && !isDisabled
 
         return (
             <div
-                className={cx(
-                    'Button',
-                    `Button__${buttonName}`,
-                    isPopupButton && 'Button__popup',
-
-                    isCustomSize && `Button__${buttonName}Size`,
-
-                    showIfAccessed && `${CHILD_ACCESS_PREFIX}${accessKey}`,
-
-                    {
-                        'Button__indexSelected': isIndexSelected,
-                        'Button__enabled': !isDisabled,
-                        'Button__defaultSize': isDefaultSize,
-                        'Button__smallSize': isSmallSize,
-                        'Button__largeSize': isLargeSize
-                    },
-
-                    className
-                )}
-                onClick={this._handleClick}
-                onTouchStart={this._handleClick}
+                {...{
+                    className: cx(
+                        'Button',
+                        `Button__${buttonName}`,
+                        isPopupButton && 'Button__popup',
+                        isCustomSize && `Button__${buttonName}Size`,
+                        showIfAccessed && `${CHILD_ACCESS_PREFIX}${accessKey}`,
+                        {
+                            'Button__indexSelected': isIndexSelected,
+                            'Button__enabled': !isDisabled,
+                            'Button__defaultSize': isDefaultSize,
+                            'Button__smallSize': isSmallSize,
+                            'Button__largeSize': isLargeSize
+                        },
+                        className
+                    ),
+                    onClick: this._handleClick,
+                    onTouchStart: this._handleClick
+                }}
             >
                 <div className={cx(
                     'ButtonAnimatable',
@@ -128,6 +127,7 @@ class Button extends Component {
                         />
                     )}
                 </div>
+                <StopPropagationDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }

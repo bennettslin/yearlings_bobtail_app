@@ -1,6 +1,6 @@
 // Section for score and tips toggle buttons.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -64,10 +64,6 @@ class ScoresTips extends Component {
         this.dispatchScore()
     }
 
-    setScoreDispatch = (dispatch) => {
-        this.dispatchScore = dispatch
-    }
-
     render() {
         const {
                 deviceIndex,
@@ -99,41 +95,37 @@ class ScoresTips extends Component {
             showScoreToggleButton = !getIsPhone(deviceIndex)
 
         return shouldRender && (
-            <___>
-                <div className={cx(
-                    'ScoresTips',
-                    {
-                        'ScoresTips__inMenu': inMenu,
-                        'ScoresTips__inMain': inMainRightSide || inLeftShelf,
-                        'ScoresTips__inMainRight': inMainRightSide,
-                        'ScoresTips__inLeftShelf': inLeftShelf,
-                        'LeftShelf__child': inLeftShelf
-                    }
-                )}>
-                    {showScoreToggleButton &&
-                    <Button
-                        isLargeSize
-                        buttonName={SCORES_BUTTON_KEY}
-                        className="ScoresTipsButton"
-                        accessKey={SCORE_TOGGLE_KEY}
-                        isDisabled={!isScoreLoaded}
-                        handleButtonClick={this.handleScoreButtonClick}
-                    />
-                    }
-                    {/* TODO: Shouldn't this use the tips toggle button? */}
-                    <Button
-                        isLargeSize
-                        buttonName={TIPS_BUTTON_KEY}
-                        className="ScoresTipsButton"
-                        buttonIdentifier={selectedTipsIndex}
-                        accessKey={TIPS_TOGGLE_KEY}
-                        handleButtonClick={handleTipsToggle}
-                    />
-                </div>
-                <ScoreDispatcher
-                    {...{ getDispatch: this.setScoreDispatch }}
+            <div className={cx(
+                'ScoresTips',
+                {
+                    'ScoresTips__inMenu': inMenu,
+                    'ScoresTips__inMain': inMainRightSide || inLeftShelf,
+                    'ScoresTips__inMainRight': inMainRightSide,
+                    'ScoresTips__inLeftShelf': inLeftShelf,
+                    'LeftShelf__child': inLeftShelf
+                }
+            )}>
+                {showScoreToggleButton &&
+                <Button
+                    isLargeSize
+                    buttonName={SCORES_BUTTON_KEY}
+                    className="ScoresTipsButton"
+                    accessKey={SCORE_TOGGLE_KEY}
+                    isDisabled={!isScoreLoaded}
+                    handleButtonClick={this.handleScoreButtonClick}
                 />
-            </___>
+                }
+                {/* TODO: Shouldn't this use the tips toggle button? */}
+                <Button
+                    isLargeSize
+                    buttonName={TIPS_BUTTON_KEY}
+                    className="ScoresTipsButton"
+                    buttonIdentifier={selectedTipsIndex}
+                    accessKey={TIPS_TOGGLE_KEY}
+                    handleButtonClick={handleTipsToggle}
+                />
+                <ScoreDispatcher {...{ getDispatch: this }} />
+            </div>
         )
     }
 }

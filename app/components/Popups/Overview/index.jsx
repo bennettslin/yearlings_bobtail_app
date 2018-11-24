@@ -31,8 +31,7 @@ const overviewPopupPropTypes = {
 
         // From parent.
         inMain: PropTypes.bool,
-        isPhone: PropTypes.bool,
-        handlePopupContainerClick: PropTypes.func.isRequired
+        isPhone: PropTypes.bool
     },
 
     OverviewPopup = ({
@@ -46,7 +45,6 @@ const overviewPopupPropTypes = {
         selectedOverviewIndex,
         isRenderedLogue,
         selectedTipsIndex,
-        handlePopupContainerClick,
 
         ...other
     }) => {
@@ -83,7 +81,6 @@ const overviewPopupPropTypes = {
                 isVisible={isVisible}
                 noFlexCentre={inMain}
                 noAbsoluteFull={noAbsoluteFull}
-                handlePopupContainerClick={handlePopupContainerClick}
             >
                 <Overview {...other} />
             </Popup>

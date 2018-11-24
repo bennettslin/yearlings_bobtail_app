@@ -1,6 +1,6 @@
 // Component to show buttons for audio navigation.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -62,10 +62,6 @@ class AudioButtons extends PureComponent {
         this.dispatchAudioOption()
     }
 
-    setAudioOptionDispatch = (dispatch) => {
-        this.dispatchAudioOption = dispatch
-    }
-
     render() {
         const {
                 selectedSongIndex,
@@ -90,67 +86,63 @@ class AudioButtons extends PureComponent {
             })
 
         return (
-            <___>
+            <div className={cx(
+                'AudioButtons',
+                'Audio__child',
+                'flexAlignContainer'
+            )}>
                 <div className={cx(
-                    'AudioButtons',
-                    'Audio__child',
+                    'AudioButtons__childPlayer',
+                    'AudioButtons__child',
                     'flexAlignContainer'
                 )}>
-                    <div className={cx(
-                        'AudioButtons__childPlayer',
-                        'AudioButtons__child',
-                        'flexAlignContainer'
-                    )}>
-                        {/* Previous button. */}
-                        <Button
-                            buttonName={AUDIO_NEXT_BUTTON_KEY}
-                            className="AudioButton"
-                            buttonIdentifier={isPrologue}
-                            accessKey={AUDIO_PREVIOUS_SONG_KEY}
-                            isDisabled={isPrologue}
-                            handleButtonClick={handleAudioPreviousSong}
-                        />
+                    {/* Previous button. */}
+                    <Button
+                        buttonName={AUDIO_NEXT_BUTTON_KEY}
+                        className="AudioButton"
+                        buttonIdentifier={isPrologue}
+                        accessKey={AUDIO_PREVIOUS_SONG_KEY}
+                        isDisabled={isPrologue}
+                        handleButtonClick={handleAudioPreviousSong}
+                    />
 
-                        {/* Play button. */}
-                        <Button
-                            isLargeSize
-                            buttonName={AUDIO_PLAY_BUTTON_KEY}
-                            className="AudioButton"
-                            buttonIdentifier={isPlaying}
-                            accessKey={AUDIO_PLAY_KEY}
-                            isDisabled={!songCanPlayThrough}
-                            handleButtonClick={handleAudioPlay}
-                        />
+                    {/* Play button. */}
+                    <Button
+                        isLargeSize
+                        buttonName={AUDIO_PLAY_BUTTON_KEY}
+                        className="AudioButton"
+                        buttonIdentifier={isPlaying}
+                        accessKey={AUDIO_PLAY_KEY}
+                        isDisabled={!songCanPlayThrough}
+                        handleButtonClick={handleAudioPlay}
+                    />
 
-                        {/* Next button. */}
-                        <Button
-                            buttonName={AUDIO_PREVIOUS_BUTTON_KEY}
-                            className="AudioButton"
-                            buttonIdentifier={isEpilogue}
-                            accessKey={AUDIO_NEXT_SONG_KEY}
-                            isDisabled={isEpilogue}
-                            handleButtonClick={handleAudioNextSong}
-                        />
-                    </div>
-
-                    <div className={cx(
-                        'AudioButtons__childOption',
-                        'AudioButtons__child',
-                        'flexAlignContainer'
-                    )}>
-                        <Button
-                            buttonName={AUDIO_OPTIONS_BUTTON_KEY}
-                            className="AudioButton"
-                            buttonIdentifier={selectedAudioOptionIndex}
-                            accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
-                            handleButtonClick={this.handleAudioOptionClick}
-                        />
-                    </div>
+                    {/* Next button. */}
+                    <Button
+                        buttonName={AUDIO_PREVIOUS_BUTTON_KEY}
+                        className="AudioButton"
+                        buttonIdentifier={isEpilogue}
+                        accessKey={AUDIO_NEXT_SONG_KEY}
+                        isDisabled={isEpilogue}
+                        handleButtonClick={handleAudioNextSong}
+                    />
                 </div>
-                <AudioOptionDispatcher
-                    {...{ getDispatch: this.setAudioOptionDispatch }}
-                />
-            </___>
+
+                <div className={cx(
+                    'AudioButtons__childOption',
+                    'AudioButtons__child',
+                    'flexAlignContainer'
+                )}>
+                    <Button
+                        buttonName={AUDIO_OPTIONS_BUTTON_KEY}
+                        className="AudioButton"
+                        buttonIdentifier={selectedAudioOptionIndex}
+                        accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
+                        handleButtonClick={this.handleAudioOptionClick}
+                    />
+                </div>
+                <AudioOptionDispatcher {...{ getDispatch: this }} />
+            </div>
         )
     }
 }

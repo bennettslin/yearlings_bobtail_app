@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
+import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import RootContainer from '../RootContainer'
 import CloseHandler from '../../handlers/CloseHandler'
 import KeyHandler from 'handlers/KeyHandler'
@@ -19,12 +20,14 @@ const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
     sliderStore: { isSliderTouched },
-    toggleStore: { isLyricExpanded }
+    toggleStore: { isLyricExpanded },
+    sessionStore: { selectedTipsIndex }
 }) => ({
     appMounted,
     isHiddenLyric,
     isSliderTouched,
-    isLyricExpanded
+    isLyricExpanded,
+    selectedTipsIndex
 })
 
 class InteractiveContainer extends PureComponent {
@@ -35,6 +38,7 @@ class InteractiveContainer extends PureComponent {
         isHiddenLyric: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
 
         // TODO: Get rid of these eventually.
         // From parent.
@@ -85,13 +89,14 @@ class InteractiveContainer extends PureComponent {
         })
     }
 
-    _handleClick = (e) => {
+    _handleBodyClick = (e) => {
+        this.dispatchStopPropagation(e)
+
         /**
          * Don't register the click event that happens after mouseUp if we're
          * lifting up from moving the slider.
          */
         if (!this.state.sliderMousedUp) {
-            this.stopPropagation(e)
 
             this.closeSections({
                 exemptLyric: true,
@@ -110,14 +115,13 @@ class InteractiveContainer extends PureComponent {
         const clientX = getClientX(e)
 
         if (!isNaN(clientX)) {
-            this.stopPropagation(e)
             this.props.touchBodyMove(clientX)
         }
     }
 
     _handleMouseUp = (e) => {
         e.preventDefault()
-        this.stopPropagation(e)
+
         this.props.touchBodyEnd()
 
         /**
@@ -218,19 +222,6 @@ class InteractiveContainer extends PureComponent {
         }
     }
 
-    stopPropagation = (e) => {
-        if (e && e.stopPropagation) {
-            e.stopPropagation()
-
-            const { type } = e
-
-            // Turn access off if not from a keyboard event.
-            if (type === 'click' || type === 'mousedown') {
-                this.props.updateToggleStore({ isAccessOn: false })
-            }
-        }
-    }
-
     setLyricRef = (node) => {
         this.myLyricElement = node
 
@@ -260,7 +251,6 @@ class InteractiveContainer extends PureComponent {
             newEventHandlers = {
                 ...eventHandlers,
                 setLyricRef: this.setLyricRef,
-                stopPropagation: this.stopPropagation,
                 handleLyricWheel: this.handleLyricWheel,
                 handleVerseBarWheel: this.handleVerseBarWheel
             }
@@ -270,8 +260,8 @@ class InteractiveContainer extends PureComponent {
                 ref={this._setRootElement}
                 {...{
                     className: 'InteractiveContainer',
-                    onClick: this._handleClick,
-                    onTouchStart: this._handleClick,
+                    onClick: this._handleBodyClick,
+                    onTouchStart: this._handleBodyClick,
                     onMouseMove: this._handleMove,
                     onTouchMove: this._handleMove,
                     onMouseUp: this._handleMouseUp,
@@ -307,6 +297,7 @@ class InteractiveContainer extends PureComponent {
                         eventHandlers: newEventHandlers
                     }}
                 />
+                <StopPropagationDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }

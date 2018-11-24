@@ -1,10 +1,11 @@
 // Section to show title and all notes and wormholes for each annotation.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import AnnotationCards from './Cards'
 import AnnotationHeader from './Header'
 
@@ -64,6 +65,12 @@ class Annotation extends Component {
         return shouldComponentUpdate
     }
 
+    handleContainerClick = (e) => {
+        if (this.props.isSelected) {
+            this.dispatchStopPropagation(e)
+        }
+    }
+
     render() {
         const {
                 /* eslint-disable no-unused-vars */
@@ -92,26 +99,30 @@ class Annotation extends Component {
 
         // If it's in popup, annotation object won't always exist.
         return Boolean(annotationObject) && (
-            <AnnotationView {...other}
-                {...{
-                    annotationObject,
-                    annotationDotKeys: annotationObject.dotKeys,
-                    annotationTitle: annotationObject.title,
-                    cardsLength: annotationObject.cards.length
-                }}
-                {...isSelected && {
-                    /**
-                     * We will only determine this value for a selected
-                     * annotation.
-                     */
-                    accessibleAnnotationAnchorsLength:
-                        getAccessibleAnnotationAnchorsLength({
-                            songIndex: renderedSongIndex,
-                            annotationIndex,
-                            dotKeys: selectedDotKeys
-                        })
-                }}
-            />
+            <___>
+                <AnnotationView {...other}
+                    {...{
+                        annotationObject,
+                        annotationDotKeys: annotationObject.dotKeys,
+                        annotationTitle: annotationObject.title,
+                        cardsLength: annotationObject.cards.length,
+                        handleContainerClick: this.handleContainerClick
+                    }}
+                    {...isSelected && {
+                        /**
+                         * We will only determine this value for a selected
+                         * annotation.
+                         */
+                        accessibleAnnotationAnchorsLength:
+                            getAccessibleAnnotationAnchorsLength({
+                                songIndex: renderedSongIndex,
+                                annotationIndex,
+                                dotKeys: selectedDotKeys
+                            })
+                    }}
+                />
+                <StopPropagationDispatcher {...{ getDispatch: this }} />
+            </___>
         )
     }
 }

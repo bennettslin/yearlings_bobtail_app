@@ -11,7 +11,6 @@ export const getHandlers = (me) => {
         handleAnnotationAccess: me.handleAnnotationAccess,
         handleAnnotationAnchorAccess: me.handleAnnotationAnchorAccess,
         handleVerseDirectionAccess: me.handleVerseDirectionAccess,
-        handlePopupContainerClick: me.handlePopupContainerClick,
         handleAnnotationWormholeSelect: me.handleAnnotationWormholeSelect,
         handleAnnotationPrevious: me.handleAnnotationPrevious,
         handleAnnotationNext: me.handleAnnotationNext,

@@ -9,7 +9,6 @@ import WikiPopup from '../../Popups/Wiki'
 
 const propTypes = {
     annotationPopupHandlers: PropTypes.object.isRequired,
-    titlePopupHandlers: PropTypes.object.isRequired,
     scorePopupHandlers: PropTypes.object.isRequired,
     wikiPopupHandlers: PropTypes.object.isRequired
 }
@@ -17,7 +16,6 @@ const propTypes = {
 const OverlayPopups = ({
 
     annotationPopupHandlers,
-    titlePopupHandlers,
     scorePopupHandlers,
     wikiPopupHandlers
 
@@ -30,7 +28,7 @@ const OverlayPopups = ({
         'absoluteFullContainer'
     )}>
         <AnnotationPopup {...annotationPopupHandlers} />
-        <TitlePopup {...titlePopupHandlers} />
+        <TitlePopup />
         <ScorePopup {...scorePopupHandlers} />
         <WikiPopup {...wikiPopupHandlers} />
     </div>

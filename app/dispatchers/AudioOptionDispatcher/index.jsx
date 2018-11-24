@@ -16,11 +16,11 @@ class AudioOptionDispatcher extends Component {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.func.isRequired
+        getDispatch: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch(this.dispatchAudioOption)
+        this.props.getDispatch.dispatchAudioOption = this.dispatchAudioOption
     }
 
     dispatchAudioOption = (

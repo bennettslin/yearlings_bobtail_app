@@ -183,51 +183,15 @@ class ToggleHandler extends PureComponent {
         }
     }
 
-    setAdminDispatch = (dispatch) => {
-        this.dispatchAdmin = dispatch
-    }
-
-    setAudioOptionDispatch = (dispatch) => {
-        this.dispatchAudioOption = dispatch
-    }
-
-    setDotsSlideDispatch = (dispatch) => {
-        this.dispatchDotsSlide = dispatch
-    }
-
-    setLyricExpandDispatch = (dispatch) => {
-        this.dispatchLyricExpand = dispatch
-    }
-
-    setScoreDispatch = (dispatch) => {
-        this.dispatchScore = dispatch
-    }
-
-    setTitleDispatch = (dispatch) => {
-        this.dispatchTitle = dispatch
-    }
-
     render() {
         return (
             <___>
-                <AdminDispatcher
-                    {...{ getDispatch: this.setAdminDispatch }}
-                />
-                <AudioOptionDispatcher
-                    {...{ getDispatch: this.setAudioOptionDispatch }}
-                />
-                <DotsSlideDispatcher
-                    {...{ getDispatch: this.setDotsSlideDispatch }}
-                />
-                <LyricExpandDispatcher
-                    {...{ getDispatch: this.setLyricExpandDispatch }}
-                />
-                <ScoreDispatcher
-                    {...{ getDispatch: this.setScoreDispatch }}
-                />
-                <TitleDispatcher
-                    {...{ getDispatch: this.setTitleDispatch }}
-                />
+                <AdminDispatcher {...{ getDispatch: this }} />
+                <AudioOptionDispatcher {...{ getDispatch: this }} />
+                <DotsSlideDispatcher {...{ getDispatch: this }} />
+                <LyricExpandDispatcher {...{ getDispatch: this }} />
+                <ScoreDispatcher {...{ getDispatch: this }} />
+                <TitleDispatcher {...{ getDispatch: this }} />
             </___>
         )
     }

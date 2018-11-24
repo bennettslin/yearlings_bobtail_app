@@ -135,15 +135,9 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
-    setWikiDispatch = (dispatch) => {
-        this.dispatchWiki = dispatch
-    }
-
     render() {
         return (
-            <WikiDispatcher
-                {...{ getDispatch: this.setWikiDispatch }}
-            />
+            <WikiDispatcher {...{ getDispatch: this }} />
         )
     }
 }

@@ -64,10 +64,6 @@ class AnnotationCard extends Component {
         )
     }
 
-    setWikiDispatch = (dispatch) => {
-        this.dispatchWiki = dispatch
-    }
-
     render() {
         const {
                 /* eslint-disable no-unused-vars */
@@ -111,9 +107,7 @@ class AnnotationCard extends Component {
                         handleWikiSelectClick: this.handleWikiSelectClick
                     }}
                 />
-                <WikiDispatcher
-                    {...{ getDispatch: this.setWikiDispatch }}
-                />
+                <WikiDispatcher {...{ getDispatch: this }} />
             </___>
         )
     }
