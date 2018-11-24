@@ -9,17 +9,19 @@
     // This just needs to be higher than the popup container.
     z-index: $zIndex__adminToggle;
 
-    .RM__mobile
+    .DW__mobile
     & {
         padding: $js__margin__thick;
     }
 
-    .RM__mobile.RM__lyricHeighted
+    .DW__mobile
+    .RM__lyricHeighted
     & {
         flex-direction: column-reverse;
     }
 
-    .RM__mobile.RM__lyricHeightless
+    .DW__mobile
+    .RM__lyricHeightless
     & {
         flex-direction: column;
     }

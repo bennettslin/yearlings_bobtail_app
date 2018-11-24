@@ -28,7 +28,3 @@ export const getIsTablet = (deviceIndex) => {
 export const getIsMonitor = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MONITOR_CLASS
 }
-
-export const getIsTabletOrMini = (deviceIndex) => {
-    return getIsTablet(deviceIndex) || getIsMini(deviceIndex)
-}

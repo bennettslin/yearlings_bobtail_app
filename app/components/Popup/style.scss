@@ -6,7 +6,7 @@
 }
 
 .Popup__fullSize {
-    .RM__mobile:not(.RM__tablet)
+    .DW__mobileNotTablet
     & {
         /**
          * In mini and phone, anchor full size popups to bottom to make room

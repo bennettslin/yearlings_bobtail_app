@@ -48,13 +48,13 @@ $height___overviewToggle__phone:
      */
      z-index: $zIndex__carouselNavButton;
 
-    .RM__mobileNotPhone
+    .DW__mobileNotPhone
     & {
         flex-direction: column-reverse;
     }
 
     // Widths for all other devices are set by "width__leftShelf" class.
-    .RM__desktop
+    .DW__desktop
     & {
         width: $width__overviewToggle;
     }
@@ -70,9 +70,11 @@ $height___overviewToggle__phone:
     &,
     .RM__annotationShown.RM__navExpanded
     &,
-    .RM__mobile.RM__lyricExpanded
+    .DW__mobile
+    .RM__lyricExpanded
     &,
-    .RM__phone.RM__overviewShown
+    .DW__phone
+    .RM__overviewShown
     & {
         opacity: 0;
         margin-left: -$width__overviewToggle;
@@ -85,7 +87,7 @@ $height___overviewToggle__phone:
         margin-bottom: $js__margin__thick;
     }
 
-    .RM__mobileNotPhone
+    .DW__mobileNotPhone
     &:not(:last-child) {
         margin-top: $js__margin__thick;
         margin-bottom: 0;
@@ -94,22 +96,22 @@ $height___overviewToggle__phone:
 
 .width__leftShelf {
 
-    .RM__laptop
+    .DW__laptop
     & {
         width: $width__overviewToggle__laptop;
     }
 
-    .RM__tablet
+    .DW__tablet
     & {
         width: $width__overviewToggle__tablet;
     }
 
-    .RM__mini
+    .DW__mini
     & {
         width: $width__overviewToggle__mini;
     }
 
-    .RM__phone
+    .DW__phone
     & {
         width: $width___overviewToggle__phone;
     }

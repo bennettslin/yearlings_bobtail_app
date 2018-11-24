@@ -11,7 +11,7 @@ $width__childTitle__phone: 80px;
 .Menu {
     height: $js__height__menu;
 
-    .RM__phone
+    .DW__phone
     & {
         height: $js__height__menu__phone;
     }
@@ -96,9 +96,9 @@ $width__childTitle__phone: 80px;
     // Applies to monitor and tablet.
     margin: 0 $margin__menuChild;
 
-    .RM__laptop
+    .DW__laptop
     &,
-    .RM__mini
+    .DW__mini
     & {
         margin: 0 $js__margin__thin;
     }
@@ -120,12 +120,13 @@ $width__childTitle__phone: 80px;
             + $js__margin__thin;
     }
 
-    .RM__mobile
+    .DW__mobile
     & {
         justify-content: flex-end;
     }
 
-    .RM__tablet.RM__scoresTipsMain
+    .DW__tablet
+    .RM__scoresTipsMain
     & {
         min-width:
         $js__minWidth__audioBanner
@@ -135,7 +136,7 @@ $width__childTitle__phone: 80px;
         + $js__margin__thin;
     }
 
-    .RM__mini
+    .DW__mini
     & {
         min-width:
         $js__minWidth__audioButtons__minusPlayer
@@ -159,7 +160,8 @@ $width__childTitle__phone: 80px;
         margin-right: 0;
     }
 
-    .RM__song:not(.RM__phone).RM__overlayShown
+    .DW__notPhone
+    .RM__song.RM__overlayShown
     & {
         margin-left: 0;
     }
@@ -178,12 +180,12 @@ $width__childTitle__phone: 80px;
 
     min-width: $width__childScoresTips;
 
-    .RM__tablet
+    .DW__tablet
     & {
         min-width: $width__childScoresTips__tablet;
     }
 
-    .RM__mini
+    .DW__mini
     & {
         min-width: $width__childScoresTips__mini;
     }

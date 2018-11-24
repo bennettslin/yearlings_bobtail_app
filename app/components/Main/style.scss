@@ -10,7 +10,7 @@
 .Main__flexContainer {
     display: flex;
 
-    .RM__mobileNotPhone
+    .DW__mobileNotPhone
     & {
         align-items: flex-end;
     }
@@ -28,30 +28,34 @@
         top: $js__topOffset__twoRowMenu;
     }
 
-    .RM__mobile.RM__lyricHeighted
+    .DW__mobile
+    .RM__lyricHeighted
     & {
         height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__height__menu});
     }
 
-    .RM__mini.RM__twoRowMenu
+    .DW__mini
+    .RM__twoRowMenu
     & {
         height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu});
     }
 
-    .RM__laptop.RM__twoRowMenu
+    .DW__laptop
+    .RM__twoRowMenu
     &,
     .RM__lyricHeightless.RM__twoRowMenu
     & {
         height: calc(100% - #{$js__topOffset__twoRowMenu});
     }
 
-    .RM__phone
+    .DW__phone
     & {
         top: $js__topOffset__twoRowMenu__phone;
         height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu__phone});
     }
 
-    .RM__phone.RM__lyricHeightless
+    .DW__phone
+    .RM__lyricHeightless
     & {
         height: calc(100% - #{$js__topOffset__twoRowMenu__phone});
     }
@@ -60,17 +64,17 @@
 .width__mainColumn {
     width: 100%;
 
-    .RM__monitor
+    .DW__monitor
     & {
         max-width: calc(100% - #{$js__width__goldenCord});
     }
 
-    .RM__laptop
+    .DW__laptop
     & {
         max-width: calc(100% - #{$js__width__uncannyValley});
     }
 
-    .RM__mobile
+    .DW__mobile
     & {
         max-width: 100%;
     }

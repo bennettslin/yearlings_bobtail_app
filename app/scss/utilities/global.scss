@@ -77,12 +77,12 @@ h1, h2, h3 {
 .fontSize__title {
     font-size: $fontSize__title;
 
-    .RM__mini
+    .DW__mini
     & {
         font-size: $fontSize__title__mini;
     }
 
-    .RM__phone
+    .DW__phone
     & {
         font-size: $fontSize__title__phone;
     }
@@ -91,12 +91,12 @@ h1, h2, h3 {
 .fontSize__verse {
     font-size: $fontSize__verse;
 
-    .RM__mini
+    .DW__mini
     & {
         font-size: $fontSize__verse__mini;
     }
 
-    .RM__phone
+    .DW__phone
     & {
         font-size: $fontSize__verse__phone;
     }
@@ -107,14 +107,17 @@ h1, h2, h3 {
     $fontSize__bothColumnsShown: 0.95em;
 
     // Make font sizes smaller when showing both columns.
-    .RM__desktop.RM__bothLyricColumnsShown
+    .DW__desktop
+    .RM__bothLyricColumnsShown
     &,
-    .RM__tablet.RM__bothLyricColumnsShown
+    .DW__tablet
+    .RM__bothLyricColumnsShown
     & {
         font-size: $fontSize__bothColumnsShown;
     }
 
-    .RM__mini.RM__bothLyricColumnsShown
+    .DW__mini
+    .RM__bothLyricColumnsShown
     & {
         font-size:
             $fontSize__bothColumnsShown

@@ -22,7 +22,7 @@ $margin__dotsContainer__phone: 8px;
     box-shadow: $boxShadow__dotsContainer;
     background-color: $bgColour__afterSelected;
 
-    .RM__mobileNotPhone
+    .DW__mobileNotPhone
     & {
         top: auto;
         bottom: 0;
@@ -38,7 +38,8 @@ $margin__dotsContainer__phone: 8px;
         transform: translateX(0);
     }
 
-    .RM__mobile:not(.RM__tablet).RM__dotsShown
+    .DW__mobileNotTablet
+    .RM__dotsShown
     & {
         margin-left: $margin__dotsContainer__phone;
     }

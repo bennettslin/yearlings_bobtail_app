@@ -10,7 +10,7 @@
 
     opacity: 0;
 
-    .RM__desktop
+    .DW__desktop
     & {
         transition:
             bottom $animationDuration__default,
@@ -25,7 +25,7 @@
         margin-right: $margin__scrollbar;
     }
 
-    .RM__mobileNotPhone
+    .DW__mobileNotPhone
     & {
         transition:
             top $animationDuration__default,
@@ -41,12 +41,14 @@
         opacity: 1;
     }
 
-    .RM__desktop.RM__song.RM__annotationShown.RM__carouselExpanded
+    .DW__desktop
+    .RM__song.RM__annotationShown.RM__carouselExpanded
     & {
         bottom: 0;
     }
 
-    .RM__mobileNotPhone.RM__song.RM__annotationShown.RM__carouselExpanded
+    .DW__mobileNotPhone
+    .RM__song.RM__annotationShown.RM__carouselExpanded
     & {
         top: 0;
     }

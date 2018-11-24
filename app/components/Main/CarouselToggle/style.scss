@@ -17,18 +17,19 @@
                 box-shadow $animationDuration__default;
 
     // Widths for all other devices are set by "width__leftShelf" class.
-    .RM__desktop
+    .DW__desktop
     & {
         width: $width__overviewToggle__laptop;
     }
 
-    .RM__desktop.RM__carouselExpanded
+    .DW__desktop
+    .RM__carouselExpanded
     & {
         bottom: $margin__scrollbar;
         // border-radius: 0 $borderRadius__nav $borderRadius__nav 0;
     }
 
-    .RM__mobile
+    .DW__mobile
     & {
         top: 0;
         bottom: auto;

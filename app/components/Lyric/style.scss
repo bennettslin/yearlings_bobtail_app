@@ -34,7 +34,8 @@
         z-index: $zIndex__lyricColumn;
     }
 
-    .RM__mobile.RM__song.RM__lyricExpanded
+    .DW__mobile
+    .RM__song.RM__lyricExpanded
     & {
         height: calc(100% - #{$js__height__menu});
     }
@@ -44,12 +45,14 @@
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
     }
 
-    .RM__phone.RM__song.RM__lyricExpanded
+    .DW__phone
+    .RM__song.RM__lyricExpanded
     & {
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
     }
 
-    .RM__mobile.RM__lyricHeightless
+    .DW__mobile
+    .RM__lyricHeightless
     & {
         height: 0;
     }
@@ -65,14 +68,14 @@
 // Used by Lyric and OverviewLogue.
 .position__lyricColumn__desktop {
 
-    .RM__desktop
+    .DW__desktop
     & {
         width: $js__width__goldenCord;
         height: 100%;
         right: 0;
     }
 
-    .RM__laptop
+    .DW__laptop
     & {
         width: $js__width__uncannyValley;
     }
@@ -81,7 +84,7 @@
 // Used by Lyric only.
 .position__lyricColumn__mobile {
 
-    .RM__mobile
+    .DW__mobile
     & {
 
         height: $js__height__lyricCollapsed;
@@ -99,7 +102,8 @@
         black $height__chivalry * 1.1,
         black
     );
-    .RM__desktop.RM__carouselNavShowable.RM__carouselExpanded.RM__annotationShown
+    .DW__desktop
+    .RM__carouselNavShowable.RM__carouselExpanded.RM__annotationShown
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: $gradient__lyric__desktop;

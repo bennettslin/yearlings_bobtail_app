@@ -12,20 +12,20 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__close {
 
-    .RM__desktop
+    .DW__desktop
     & {
         // Top left corner.
         top: -$js__length__iconLarge * $offset__popupButton;
         left: -$js__length__iconLarge * $offset__popupButton;
     }
-    .RM__tablet
+    .DW__tablet
     & {
         // Top left corner.
         top: -$js__length__iconLarge__tablet * $offset__popupButton;
         left: -$js__length__iconLarge__tablet * $offset__popupButton;
     }
 
-    .RM__mini
+    .DW__mini
     & {
 
         // Top left corner.
@@ -33,7 +33,7 @@ $offset__popupButton: 0.75;
         left: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .RM__phone
+    .DW__phone
     & {
 
         &.PopupViewButton__inCardSize {
@@ -43,9 +43,9 @@ $offset__popupButton: 0.75;
         }
     }
 
-    .RM__mini
+    .DW__mini
     &,
-    .RM__phone
+    .DW__phone
     & {
         &.PopupViewButton__inFullSize {
             left: 10%;
@@ -55,48 +55,48 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__side {
 
-    .RM__desktop
+    .DW__desktop
     & {
         // Buttons on top so they don't shift regardless of content height.
         top: -$js__length__iconLarge * $offset__popupButton;
     }
 
-    .RM__tablet
+    .DW__tablet
     &.PopupViewButton__notInOverlay {
         // Buttons on bottom so they don't shift regardless of content height.
         bottom: -$js__length__iconLarge__tablet * $offset__popupButton;
     }
 
-    .RM__mini
+    .DW__mini
     &.PopupViewButton__notInOverlay {
         bottom: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .RM__phone
+    .DW__phone
     & {
         bottom: -$js__length__icon * $offset__popupButton;
     }
 
     // Using calc here because transform messes with z-indices.
-    .RM__desktop
+    .DW__desktop
     &.PopupViewButton__inFullSize {
         top: calc(50% - #{$js__length__iconLarge} * 0.5);
     }
 
-    .RM__desktop
+    .DW__desktop
     &.PopupViewButton__notInFullSize {
         top: $js__padding__popupContent__wide;
     }
 
-    .RM__tablet
+    .DW__tablet
     &.PopupViewButton__inFullSize,
 
-    .RM__tablet
+    .DW__tablet
     &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
         top: calc(50% - #{$js__length__iconLarge__tablet} * 0.5);
     }
 
-    .RM__mini
+    .DW__mini
     &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
         top: calc(50% - #{$js__length__iconLarge__mini} * 0.5);
     }
@@ -104,31 +104,31 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__previous {
 
-    .RM__desktop
+    .DW__desktop
     & {
         left: -$js__length__iconLarge * $offset__popupButton;
     }
 
-    .RM__tablet
+    .DW__tablet
     & {
         left: -$js__length__iconLarge__tablet * $offset__popupButton;
     }
 
-    .RM__mini
+    .DW__mini
     & {
         left: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .RM__phone
+    .DW__phone
     &,
-    .RM__mobile
+    .DW__mobile
     &.PopupViewButton__notInOverlay {
         left: 10%;
     }
 
-    .RM__mini
+    .DW__mini
     &,
-    .RM__phone
+    .DW__phone
     & {
         &.PopupViewButton__inFullSize {
             left: auto;
@@ -139,24 +139,24 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__next {
 
-    .RM__desktop
+    .DW__desktop
     & {
         right: -$js__length__iconLarge * $offset__popupButton;
     }
 
-    .RM__tablet
+    .DW__tablet
     & {
         right: -$js__length__iconLarge__tablet * $offset__popupButton;
     }
 
-    .RM__mini
+    .DW__mini
     & {
         right: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .RM__phone
+    .DW__phone
     &,
-    .RM__mobile
+    .DW__mobile
     &.PopupViewButton__notInOverlay {
         right: 10%;
     }
@@ -165,9 +165,9 @@ $offset__popupButton: 0.75;
      * Keeping this as a separate style. They are currently the same, but this
      * might change.
      */
-    .RM__mini
+    .DW__mini
     &,
-    .RM__phone
+    .DW__phone
     & {
         &.PopupViewButton__inFullSize {
             right: 10%;
@@ -177,12 +177,12 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__inFullSize {
 
-    .RM__mini
+    .DW__mini
     & {
         top: -$js__length__iconLarge__mini + $js__margin__thick;
     }
 
-    .RM__phone
+    .DW__phone
     & {
         top: -$js__length__icon + $js__margin__thick;
     }

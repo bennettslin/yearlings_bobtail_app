@@ -9,7 +9,7 @@
     height: $js__height__nav;
     opacity: 0;
 
-    .RM__desktop
+    .DW__desktop
     & {
         transition:
             bottom $animationDuration__default,
@@ -18,7 +18,7 @@
         bottom: -$js__height__nav;
     }
 
-    .RM__mobileNotPhone
+    .DW__mobileNotPhone
     & {
         transition:
             top $animationDuration__default,
@@ -27,7 +27,8 @@
         top: -$js__height__nav;
     }
 
-    .RM__mobile.RM__twoRowMenu
+    .DW__mobile
+    .RM__twoRowMenu
     & {
         top: -$js__height__nav - $js__height__banner__twoRowMenu__truncated;
     }
@@ -37,7 +38,7 @@
     right: 0;
     margin-right: $js__margin__navLastTitle;
 
-    .RM__mobileNotPhone
+    .DW__mobileNotPhone
     & {
         margin-right: 0;
     }
@@ -50,13 +51,15 @@
         opacity: 1;
     }
 
-    &.RM__mobileNotPhone {
+    .DW__mobileNotPhone
+    & {
         .NavColumn {
             top: 0;
         }
     }
 
-    &.RM__desktop {
+    .DW__desktop
+    & {
         .NavColumn {
             bottom: 0;
         }

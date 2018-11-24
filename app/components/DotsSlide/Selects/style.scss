@@ -7,7 +7,7 @@
 
     padding: $js__margin__thick;
 
-    .RM__mobile:not(.RM__tablet)
+    .DW__mobileNotTablet
     & {
         padding: $js__margin__thin;
     }

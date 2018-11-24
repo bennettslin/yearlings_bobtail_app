@@ -11,7 +11,7 @@
 
     opacity: 0;
 
-    .RM__desktop
+    .DW__desktop
     & {
         bottom: -100%;
 
@@ -23,7 +23,7 @@
             opacity $animationDuration__fast;
     }
 
-    .RM__mobileNotPhone
+    .DW__mobileNotPhone
     & {
         top: -100%;
         height: 100%;
@@ -33,12 +33,14 @@
             opacity $animationDuration__fast;
     }
 
-    .RM__desktop.RM__carouselNavShowable.RM__carouselExpanded
+    .DW__desktop
+    .RM__carouselNavShowable.RM__carouselExpanded
     & {
         bottom: 0;
     }
 
-    .RM__mobileNotPhone.RM__carouselNavShowable.RM__carouselExpanded
+    .DW__mobileNotPhone
+    .RM__carouselNavShowable.RM__carouselExpanded
     & {
         top: 0;
     }
@@ -53,17 +55,17 @@
     overflow-x: scroll;
     height: 100%;
 
-    .RM__desktop
+    .DW__desktop
     & {
         padding-left: $width__overviewToggle__laptop;
     }
 
-    .RM__tablet
+    .DW__tablet
     & {
         padding-left: $width__overviewToggle__tablet;
     }
 
-    .RM__mini
+    .DW__mini
     & {
         padding-left: $width__overviewToggle__mini;
     }
@@ -76,13 +78,13 @@
         content: '';
     }
 
-    .RM__monitor
+    .DW__monitor
     &:after {
         padding-right:
             $js__width__goldenCord;
     }
 
-    .RM__laptop
+    .DW__laptop
     &:after {
         padding-right:
             $js__width__uncannyValley;
@@ -100,12 +102,12 @@
         $js__length__iconLarge__mini * 2
         + $js__margin__thin * 3;
 
-    .RM__tablet
+    .DW__tablet
     &:after {
         padding-right: $width__carouselSelect__tablet;
     }
 
-    .RM__mini
+    .DW__mini
     &:after {
         padding-right: $width__carouselSelect__mini;
     }
@@ -125,7 +127,8 @@
             black $js__width__goldenCord * 1.1,
             black
         );
-    .RM__monitor.RM__annotationHidden
+    .DW__monitor
+    .RM__annotationHidden
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: $gradient__carousel__monitor;
@@ -143,14 +146,16 @@
             black $js__width__uncannyValley * 1.1,
             black
         );
-    .RM__laptop.RM__annotationHidden
+    .DW__laptop
+    .RM__annotationHidden
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: $gradient__carousel__laptop;
         mask-image: $gradient__carousel__laptop;
     }
 
-    .RM__desktop.RM__carouselNavShowable.RM__carouselExpanded.RM__annotationShown
+    .DW__desktop
+    .RM__carouselNavShowable.RM__carouselExpanded.RM__annotationShown
     & {
         // When carousel annotation is selected, switch z-index with lyric.
         z-index: $zIndex__lyricColumn;

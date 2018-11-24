@@ -4,7 +4,7 @@
     position: absolute;
     right: 0;
 
-    .RM__desktop
+    .DW__desktop
     & {
         top: 0;
 
@@ -14,7 +14,7 @@
             + $js__margin__thick;
     }
 
-    .RM__mobile
+    .DW__mobile
     & {
         bottom: 0;
         margin-right: $js__margin__thick;

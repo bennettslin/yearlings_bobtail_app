@@ -25,13 +25,13 @@ $length__thumb: 100px;
     // Needed to prevent button hovering and selecting wonkiness.
     z-index: $zIndex__negative;
 
-    .RM__desktop
+    .DW__desktop
     & {
         bottom: 100%;
         margin-bottom: $js__margin__thick;
     }
 
-    .RM__mobile
+    .DW__mobile
     & {
         top: 100%;
         margin-top: $js__margin__thick;
