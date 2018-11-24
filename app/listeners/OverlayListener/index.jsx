@@ -35,10 +35,10 @@ class OverlayListener extends PureComponent {
     }
 
     componentDidUpdate() {
-        this.determineOverlayAndCarouselNav()
+        this._determineOverlayAndCarouselNav()
     }
 
-    determineOverlayAndCarouselNav() {
+    _determineOverlayAndCarouselNav() {
         const {
             deviceIndex,
             isLyricExpanded,

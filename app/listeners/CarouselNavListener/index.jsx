@@ -23,11 +23,11 @@ class CarouselNavListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this.closeCarouselIfNeeded(prevProps)
-        this.handleNavExpandIfNeeded(prevProps)
+        this._closeCarouselIfNeeded(prevProps)
+        this._handleNavExpandIfNeeded(prevProps)
     }
 
-    closeCarouselIfNeeded(prevProps) {
+    _closeCarouselIfNeeded(prevProps) {
         const
             { dotsBitNumber } = this.props,
             { dotsBitNumber: prevDotsBitNumber } = prevProps
@@ -38,7 +38,7 @@ class CarouselNavListener extends PureComponent {
         }
     }
 
-    handleNavExpandIfNeeded(prevProps) {
+    _handleNavExpandIfNeeded(prevProps) {
         const
             { isCarouselShown } = this.props,
             { isCarouselShown: wasCarouselShown } = prevProps

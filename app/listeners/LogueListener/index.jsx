@@ -16,10 +16,10 @@ class LogueListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this.handleLogueIfNeeded(prevProps)
+        this._handleLogueIfNeeded(prevProps)
     }
 
-    handleLogueIfNeeded(prevProps) {
+    _handleLogueIfNeeded(prevProps) {
         const
             { isSelectedLogue } = this.props,
             { isSelectedLogue: wasSelectedLogue } = prevProps

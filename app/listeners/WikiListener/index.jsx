@@ -22,10 +22,10 @@ class WikiListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this.setWikiUrlIfNeeded(prevProps)
+        this._setWikiUrlIfNeeded(prevProps)
     }
 
-    setWikiUrlIfNeeded(prevProps) {
+    _setWikiUrlIfNeeded(prevProps) {
         const
             {
                 selectedWikiIndex,

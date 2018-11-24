@@ -18,10 +18,10 @@ class DoublespeakerListener extends PureComponent {
     }
 
     componentDidUpdate() {
-        this.determineIsDoublespeakerShown()
+        this._determineIsDoublespeakerShown()
     }
 
-    determineIsDoublespeakerShown() {
+    _determineIsDoublespeakerShown() {
         const
             {
                 deviceIndex,

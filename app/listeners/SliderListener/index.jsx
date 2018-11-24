@@ -15,10 +15,10 @@ class SliderListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this.handleSliderTouchIfNeeded(prevProps)
+        this._handleSliderTouchIfNeeded(prevProps)
     }
 
-    handleSliderTouchIfNeeded(prevProps) {
+    _handleSliderTouchIfNeeded(prevProps) {
         const
             { isSliderTouched } = this.props,
             { isSliderTouched: wasSliderTouched } = prevProps

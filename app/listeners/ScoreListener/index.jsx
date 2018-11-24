@@ -16,10 +16,10 @@ class ScoreListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this.closeScoreIfNeeded(prevProps)
+        this._closeScoreIfNeeded(prevProps)
     }
 
-    closeScoreIfNeeded(prevProps) {
+    _closeScoreIfNeeded(prevProps) {
         const
             {
                 isScoreShowable,

@@ -16,10 +16,10 @@ class LyricExpandListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this.collapseLyricIfNeeded(prevProps)
+        this._collapseLyricIfNeeded(prevProps)
     }
 
-    collapseLyricIfNeeded(prevProps) {
+    _collapseLyricIfNeeded(prevProps) {
         const
             {
                 isLyricExpandable,
