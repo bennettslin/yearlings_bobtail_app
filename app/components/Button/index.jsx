@@ -121,8 +121,10 @@ class Button extends Component {
                     {accessKey && (
                         <AccessLetter
                             inButtonOrDotAnchor
-                            showIfAccessed={showIfAccessed}
-                            accessKey={accessKey}
+                            {...{
+                                showIfAccessed,
+                                accessKey
+                            }}
                         />
                     )}
                 </div>
