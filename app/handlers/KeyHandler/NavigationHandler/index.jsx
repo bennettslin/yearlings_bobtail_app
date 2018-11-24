@@ -24,32 +24,17 @@ class NavigationHandler extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
 
         // From parent.
+        getHandle: PropTypes.object.isRequired,
         eventHandlers: PropTypes.object.isRequired,
         accessAnnotationWithoutDirection: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryNavigation(this.tryNavigation)
+        this.props.getHandle.handleNavigation = this.handleNavigation
     }
 
-    setTryNavigateAnnotation = (tryNavigateAnnotation) => {
-        this.tryNavigateAnnotation = tryNavigateAnnotation
-    }
-
-    setTryNavigateDotsSlide = (tryNavigateDotsSlide) => {
-        this.tryNavigateDotsSlide = tryNavigateDotsSlide
-    }
-
-    setTryNavigateLyric = (tryNavigateLyric) => {
-        this.tryNavigateLyric = tryNavigateLyric
-    }
-
-    setTryNavigateNav = (tryNavigateNav) => {
-        this.tryNavigateNav = tryNavigateNav
-    }
-
-    tryNavigation = (e, keyName) => {
+    handleNavigation = (e, keyName) => {
 
         const {
                 isHiddenLyric,
@@ -90,11 +75,11 @@ class NavigationHandler extends PureComponent {
                 ({
                     annotationIndexWasAccessed,
                     keyWasRegistered
-                } = this.tryNavigateAnnotation(e, keyName))
+                } = this.navigateAnnotation(e, keyName))
 
             // We're in dots section.
             } else if (isDotsSlideShown) {
-                keyWasRegistered = this.tryNavigateDotsSlide(e, keyName)
+                keyWasRegistered = this.navigateDotsSlide(e, keyName)
 
             // We're in nav section.
             } else if (
@@ -106,11 +91,11 @@ class NavigationHandler extends PureComponent {
                 ({
                     annotationIndexWasAccessed,
                     keyWasRegistered
-                } = this.tryNavigateNav(e, keyName))
+                } = this.navigateNav(e, keyName))
 
             // We're in lyrics section.
             } else if (!isHiddenLyric || isLyricExpanded) {
-                keyWasRegistered = this.tryNavigateLyric(e, keyName)
+                keyWasRegistered = this.navigateLyric(e, keyName)
 
                 // If key was registered, then annotation index was accessed.
                 annotationIndexWasAccessed = keyWasRegistered
@@ -141,7 +126,7 @@ class NavigationHandler extends PureComponent {
             <___>
                 <AnnotationNavigation
                     {...{
-                        getTryNavigateAnnotation: this.setTryNavigateAnnotation,
+                        getNavigation: this,
                         handleAnnotationPrevious,
                         handleAnnotationNext,
                         handleAnnotationAnchorAccess,
@@ -149,14 +134,10 @@ class NavigationHandler extends PureComponent {
                         determineVerseBarsWithParameters
                     }}
                 />
-                <DotsSlideNavigation
-                    {...{
-                        getTryNavigateDotsSlide: this.setTryNavigateDotsSlide
-                    }}
-                />
+                <DotsSlideNavigation {...{ getNavigation: this }} />
                 <LyricNavigation
                     {...{
-                        getTryNavigateLyric: this.setTryNavigateLyric,
+                        getNavigation: this,
                         handleLyricAnnotationSelect,
                         handleAnnotationAccess,
                         determineVerseBarsWithParameters
@@ -164,7 +145,7 @@ class NavigationHandler extends PureComponent {
                 />
                 <NavNavigation
                     {...{
-                        getTryNavigateNav: this.setTryNavigateNav,
+                        getNavigation: this,
                         handleNavSongSelect
                     }}
                 />

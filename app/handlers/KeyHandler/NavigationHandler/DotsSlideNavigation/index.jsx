@@ -24,14 +24,14 @@ class DotsSlideNavigation extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryNavigateDotsSlide: PropTypes.func.isRequired
+        getNavigation: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryNavigateDotsSlide(this.tryNavigateDotsSlide)
+        this.props.getNavigation.navigateDotsSlide = this.navigateDotsSlide
     }
 
-    tryNavigateDotsSlide = (e, keyName) => {
+    navigateDotsSlide = (e, keyName) => {
         const { isAccessOn } = this.props
 
         if (isAccessOn) {

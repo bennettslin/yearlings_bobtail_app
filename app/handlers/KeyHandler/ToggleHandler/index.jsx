@@ -48,17 +48,17 @@ class ToggleHandler extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryLetterKey: PropTypes.func.isRequired,
-        getTryEscape: PropTypes.func.isRequired,
+        getLetterHandle: PropTypes.object.isRequired,
+        getEscapeHandle: PropTypes.object.isRequired,
         eventHandlers: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryLetterKey(this.tryLetterKey)
-        this.props.getTryEscape(this.tryEscape)
+        this.props.getLetterHandle.handleLetter = this.handleLetter
+        this.props.getEscapeHandle.handleEscape = this.handleEscape
     }
 
-    tryLetterKey = (e, keyName) => {
+    handleLetter = (e, keyName) => {
         const { eventHandlers } = this.props
 
         let annotationIndexWasAccessed = false,
@@ -135,7 +135,7 @@ class ToggleHandler extends PureComponent {
         }
     }
 
-    tryEscape = (e) => {
+    handleEscape = (e) => {
         const { props } = this,
             { eventHandlers } = props
 

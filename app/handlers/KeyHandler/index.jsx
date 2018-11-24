@@ -121,7 +121,7 @@ class KeyHandler extends PureComponent {
 
         // Handle escape key.
         if (keyName === ESCAPE) {
-            this.tryEscape(e)
+            this.handleEscape(e)
 
         } else {
 
@@ -150,8 +150,8 @@ class KeyHandler extends PureComponent {
             keyWasRegistered
 
         } = getIsNavKey(keyName) ?
-            this.tryNavigation(e, keyName) :
-            this.tryLetterKey(e, keyName)
+            this.handleNavigation(e, keyName) :
+            this.handleLetter(e, keyName)
 
         /**
          * If just now turning on access, also access annotation index,
@@ -211,24 +211,12 @@ class KeyHandler extends PureComponent {
         })
     }
 
-    setTryNavigation = (tryNavigation) => {
-        this.tryNavigation = tryNavigation
-    }
-
-    setTryLetterKey = (tryLetterKey) => {
-        this.tryLetterKey = tryLetterKey
-    }
-
-    setTryEscape = (tryEscape) => {
-        this.tryEscape = tryEscape
-    }
-
     render() {
         return (
             <___>
                 <NavigationHandler
                     {...{
-                        getTryNavigation: this.setTryNavigation,
+                        getHandle: this,
                         accessAnnotationWithoutDirection: this.accessAnnotationWithoutDirection,
 
                         // TODO: Eventually get rid of eventHandlers object!
@@ -238,8 +226,8 @@ class KeyHandler extends PureComponent {
                 />
                 <ToggleHandler
                     {...{
-                        getTryLetterKey: this.setTryLetterKey,
-                        getTryEscape: this.setTryEscape,
+                        getLetterHandle: this,
+                        getEscapeHandle: this,
 
                         // TODO: Eventually get rid of eventHandlers object!
                         eventHandlers: this.props.eventHandlers

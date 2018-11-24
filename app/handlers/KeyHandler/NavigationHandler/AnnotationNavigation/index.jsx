@@ -27,7 +27,7 @@ class AnnotationNavigation extends PureComponent {
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        getTryNavigateAnnotation: PropTypes.func.isRequired,
+        getNavigation: PropTypes.object.isRequired,
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
         handleAnnotationAnchorAccess: PropTypes.func.isRequired,
@@ -36,10 +36,10 @@ class AnnotationNavigation extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getTryNavigateAnnotation(this.tryNavigateAnnotation)
+        this.props.getNavigation.navigateAnnotation = this.navigateAnnotation
     }
 
-    tryNavigateAnnotation = (e, keyName) => {
+    navigateAnnotation = (e, keyName) => {
         const { props } = this,
             {
                 handleAnnotationPrevious,

@@ -28,19 +28,15 @@ class NavNavigation extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        getTryNavigateNav: PropTypes.func.isRequired,
+        getNavigation: PropTypes.object.isRequired,
         handleNavSongSelect: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTryNavigateNav(this.tryNavigateNav)
+        this.props.getNavigation.navigateNav = this.navigateNav
     }
 
-    handleNavBookClick = () => {
-        this.dispatchNavBook()
-    }
-
-    tryNavigateNav = (e, keyName) => {
+    navigateNav = (e, keyName) => {
         const {
             isAccessOn,
             interactivatedVerseIndex,
