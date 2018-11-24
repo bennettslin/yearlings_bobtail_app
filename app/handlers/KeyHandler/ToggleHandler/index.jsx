@@ -10,6 +10,7 @@ import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
 import LyricExpandDispatcher from '../../../dispatchers/LyricExpandDispatcher'
+import SceneDispatcher from '../../../dispatchers/SceneDispatcher'
 import ScoreDispatcher from '../../../dispatchers/ScoreDispatcher'
 import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 
@@ -51,6 +52,7 @@ class ToggleHandler extends PureComponent {
         // From parent.
         getLetterHandle: PropTypes.object.isRequired,
         getEscapeHandle: PropTypes.object.isRequired,
+        selectVerse: PropTypes.func.isRequired,
         eventHandlers: PropTypes.object.isRequired
     }
 
@@ -60,7 +62,10 @@ class ToggleHandler extends PureComponent {
     }
 
     handleLetter = (e, keyName) => {
-        const { eventHandlers } = this.props
+        const {
+            eventHandlers,
+            selectVerse
+        } = this.props
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered
@@ -109,10 +114,10 @@ class ToggleHandler extends PureComponent {
                 keyWasRegistered = eventHandlers.handleOverviewToggle(e)
                 break
             case SCENE_REWIND_KEY:
-                keyWasRegistered = eventHandlers.handleSceneDirection(e, -1)
+                keyWasRegistered = this.dispatchScene(-1, selectVerse)
                 break
             case SCENE_FORWARD_KEY:
-                keyWasRegistered = eventHandlers.handleSceneDirection(e, 1)
+                keyWasRegistered = this.dispatchScene(1, selectVerse)
                 break
             case SCORE_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchScore()
@@ -189,6 +194,7 @@ class ToggleHandler extends PureComponent {
                 <DotsSlideDispatcher {...{ getDispatch: this }} />
                 <EarColumnDispatcher {...{ getDispatch: this }} />
                 <LyricExpandDispatcher {...{ getDispatch: this }} />
+                <SceneDispatcher {...{ getDispatch: this }} />
                 <ScoreDispatcher {...{ getDispatch: this }} />
                 <TitleDispatcher {...{ getDispatch: this }} />
             </___>

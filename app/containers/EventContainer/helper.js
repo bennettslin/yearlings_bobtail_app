@@ -23,7 +23,6 @@ export const getHandlers = (me) => {
         handleNavSongSelect: me.handleNavSongSelect,
         handleOverviewToggle: me.handleOverviewToggle,
         handleCarouselNavToggle: me.handleCarouselNavToggle,
-        handleSceneDirection: me.handleSceneDirection,
         handleTipsToggle: me.handleTipsToggle,
         handleVerseBarSelect: me.handleVerseBarSelect,
         handleScrollUponLyricRender: me.handleScrollUponLyricRender,

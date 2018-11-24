@@ -255,7 +255,8 @@ class InteractiveContainer extends PureComponent {
                 eventHandlers,
                 selectAnnotation,
                 selectOverview,
-                selectTips
+                selectTips,
+                selectVerse
             } = this.props,
 
             newEventHandlers = {
@@ -288,7 +289,8 @@ class InteractiveContainer extends PureComponent {
                     {...{
                         // TODO: Eventually get rid of eventHandlers object.
                         eventHandlers: newEventHandlers,
-                        setRef: this.setKeyHandler
+                        setRef: this.setKeyHandler,
+                        selectVerse
                     }}
                 />
                 <CloseHandler

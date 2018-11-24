@@ -10,7 +10,6 @@ import AnnotationManager from '../../managers/AnnotationManager'
 import AudioManager from '../../managers/AudioManager'
 import OverviewManager from '../../managers/OverviewManager'
 import PlayerManager from '../../managers/PlayerManager'
-import SceneManager from '../../managers/SceneManager'
 import ScrollManager from '../../managers/ScrollManager'
 import SongManager from '../../managers/SongManager'
 import TimeVerseManager from '../../managers/TimeVerseManager'
@@ -23,6 +22,7 @@ import LogueListener from '../../listeners/LogueListener'
 import LyricExpandListener from '../../listeners/LyricExpandListener'
 import OverlayListener from '../../listeners/OverlayListener'
 import RenderListener from '../../listeners/RenderListener'
+import SceneListener from '../../listeners/SceneListener'
 import ScoreListener from '../../listeners/ScoreListener'
 import SliderListener from '../../listeners/SliderListener'
 import SongListener from '../../listeners/SongListener'
@@ -78,14 +78,6 @@ class ListenerContainer extends PureComponent {
 
     updateSelectedPlayer = (payload) => {
         return this.playerManager.updateSelectedPlayer(payload)
-    }
-
-    /*********
-     * SCENE *
-     *********/
-
-    selectScene = (payload) => {
-        return this.sceneManager.selectScene(payload)
     }
 
     /**********
@@ -179,9 +171,6 @@ class ListenerContainer extends PureComponent {
     _setPlayerManagerRef = (node) => {
         this.playerManager = node
     }
-    _setSceneManagerRef = (node) => {
-        this.sceneManager = node
-    }
     _setScrollManagerRef = (node) => {
         this.scrollManager = node
     }
@@ -217,7 +206,6 @@ class ListenerContainer extends PureComponent {
                     selectAnnotation={this.selectAnnotation}
                     determineVerseBars={this.determineVerseBars}
                     selectOverview={this.selectOverview}
-                    selectScene={this.selectScene}
                     selectSong={this.selectSong}
                     selectTips={this.selectTips}
                     selectVerse={this.selectVerse}
@@ -238,10 +226,6 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setPlayerManagerRef}
                     updateTime={this.updateTime}
                     handleSongEnd={this.handleSongEnd}
-                />
-                <SceneManager
-                    setRef={this._setSceneManagerRef}
-                    selectVerse={this.selectVerse}
                 />
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
@@ -273,6 +257,7 @@ class ListenerContainer extends PureComponent {
                 <LogueListener />
                 <OverlayListener />
                 <RenderListener />
+                <SceneListener />
                 <ScoreListener />
                 <SliderListener />
                 <SongListener />

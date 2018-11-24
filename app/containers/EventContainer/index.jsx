@@ -310,15 +310,6 @@ class EventContainer extends PureComponent {
         return overviewToggled
     }
 
-    /*********
-     * SCENE *
-     *********/
-
-    handleSceneDirection = (e, direction) => {
-        this.props.selectScene(direction)
-        return true
-    }
-
     /********
      * TIPS *
      ********/
@@ -485,6 +476,7 @@ class EventContainer extends PureComponent {
 }
 
 const mapStateToProps = ({
+    toggleStore: { isCarouselShown },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -501,6 +493,7 @@ const mapStateToProps = ({
     },
     accessStore: { accessedAnnotationIndex }
 }) => ({
+    isCarouselShown,
     selectedAnnotationIndex,
     isSelectedLogue,
     dotsBitNumber,

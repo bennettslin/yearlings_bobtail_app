@@ -212,6 +212,10 @@ class KeyHandler extends PureComponent {
     }
 
     render() {
+        const {
+            selectVerse
+        } = this.props
+
         return (
             <___>
                 <NavigationHandler
@@ -230,7 +234,8 @@ class KeyHandler extends PureComponent {
                         getEscapeHandle: this,
 
                         // TODO: Eventually get rid of eventHandlers object!
-                        eventHandlers: this.props.eventHandlers
+                        eventHandlers: this.props.eventHandlers,
+                        selectVerse
                     }}
                 />
             </___>
