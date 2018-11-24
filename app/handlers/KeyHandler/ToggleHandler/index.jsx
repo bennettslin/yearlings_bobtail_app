@@ -8,6 +8,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
+import LyricEarDispatcher from '../../../dispatchers/LyricEarDispatcher'
 import LyricExpandDispatcher from '../../../dispatchers/LyricExpandDispatcher'
 import ScoreDispatcher from '../../../dispatchers/ScoreDispatcher'
 import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
@@ -95,7 +96,7 @@ class ToggleHandler extends PureComponent {
                 keyWasRegistered = this.dispatchDotsSlide()
                 break
             case LYRIC_COLUMN_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleLyricColumnSelect(e)
+                keyWasRegistered = this.dispatchEar()
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case LYRIC_SECTION_EXPAND_KEY:
@@ -186,6 +187,7 @@ class ToggleHandler extends PureComponent {
                 <AdminDispatcher {...{ getDispatch: this }} />
                 <AudioOptionDispatcher {...{ getDispatch: this }} />
                 <DotsSlideDispatcher {...{ getDispatch: this }} />
+                <LyricEarDispatcher {...{ getDispatch: this }} />
                 <LyricExpandDispatcher {...{ getDispatch: this }} />
                 <ScoreDispatcher {...{ getDispatch: this }} />
                 <TitleDispatcher {...{ getDispatch: this }} />

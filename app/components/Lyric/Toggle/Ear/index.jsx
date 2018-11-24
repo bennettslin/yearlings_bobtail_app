@@ -1,10 +1,11 @@
 // Button to toggle between left and right columns.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
+import LyricEarDispatcher from '../../../../dispatchers/LyricEarDispatcher'
 import Button from '../../../Button'
 
 import { LYRIC_COLUMN_TOGGLE_KEY } from 'constants/access'
@@ -13,27 +14,29 @@ import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
 
 const mapStateToProps = ({
     transientStore: { isDoublespeakerShown },
-    sessionStore: { selectedLyricColumnIndex }
+    sessionStore: { earIndex }
 }) => ({
     isDoublespeakerShown,
-    selectedLyricColumnIndex
+    earIndex
 })
 
-const lyricEarTogglePropTypes = {
+class LyricToggleEar extends PureComponent {
+
+    static propTypes = {
     // Through Redux.
         isDoublespeakerShown: PropTypes.bool.isRequired,
-        selectedLyricColumnIndex: PropTypes.number.isRequired,
+        earIndex: PropTypes.number.isRequired
+    }
 
-        // From parent.
-        handleLyricColumnSelect: PropTypes.func.isRequired
-    },
+    handleDoublespeakerClick = () => {
+        this.dispatchEar()
+    }
 
-    LyricToggleEar = ({
-        isDoublespeakerShown,
-        selectedLyricColumnIndex,
-        handleLyricColumnSelect
-
-    }) => {
+    render() {
+        const {
+            isDoublespeakerShown,
+            earIndex
+        } = this.props
 
         return isDoublespeakerShown && (
             <div className={cx(
@@ -47,15 +50,15 @@ const lyricEarTogglePropTypes = {
                     {...{
                         buttonName: LYRIC_EAR_BUTTON_KEY,
                         buttonIdentifier:
-                        LYRIC_COLUMN_KEYS[selectedLyricColumnIndex],
+                        LYRIC_COLUMN_KEYS[earIndex],
                         accessKey: LYRIC_COLUMN_TOGGLE_KEY,
-                        handleButtonClick: handleLyricColumnSelect
+                        handleButtonClick: this.handleDoublespeakerClick
                     }}
                 />
+                <LyricEarDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }
-
-LyricToggleEar.propTypes = lyricEarTogglePropTypes
+}
 
 export default connect(mapStateToProps)(LyricToggleEar)

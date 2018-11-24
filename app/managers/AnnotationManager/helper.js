@@ -13,7 +13,7 @@ import { COLUMN_INDEX } from 'constants/lyrics'
 
 export const shouldShowAnnotationForColumn = ({
     selectedSongIndex,
-    selectedLyricColumnIndex,
+    earIndex,
     annotationIndex,
     isDoublespeakerShown
 
@@ -29,7 +29,7 @@ export const shouldShowAnnotationForColumn = ({
         showAnnotationForColumn =
             !isDoublespeakerShown ||
             isNaN(columnIndex) ||
-            columnIndex === selectedLyricColumnIndex
+            columnIndex === earIndex
 
     return showAnnotationForColumn
 }
@@ -145,7 +145,7 @@ export const getAnnotationIndexForDirection = ({
                 // Or if this annotation isn't in the shown column...
                 !shouldShowAnnotationForColumn({
                     selectedSongIndex,
-                    selectedLyricColumnIndex: lyricColumnIndex,
+                    earIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
                     isDoublespeakerShown
                 })) &&
@@ -228,7 +228,7 @@ export const getAnnotationIndexForVerseIndex = ({
             const annotation = getAnnotationObject(selectedSongIndex, returnIndex),
                 showAnnotationForColumn = shouldShowAnnotationForColumn({
                     selectedSongIndex,
-                    selectedLyricColumnIndex: lyricColumnIndex,
+                    earIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
                     isDoublespeakerShown
                 }),

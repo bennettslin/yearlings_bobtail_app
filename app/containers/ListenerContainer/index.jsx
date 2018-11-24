@@ -8,7 +8,6 @@ import LogHandler from 'handlers/LogHandler'
 
 import AnnotationManager from '../../managers/AnnotationManager'
 import AudioManager from '../../managers/AudioManager'
-import LyricManager from '../../managers/LyricManager'
 import OverviewManager from '../../managers/OverviewManager'
 import PlayerManager from '../../managers/PlayerManager'
 import SceneManager from '../../managers/SceneManager'
@@ -53,24 +52,12 @@ class ListenerContainer extends PureComponent {
         return this.annotationManager.accessAnnotationAnchor(payload)
     }
 
-    accessAnnotationIfCurrentInvalid = (payload) => {
-        return this.annotationManager.accessAnnotationIfCurrentInvalid(payload)
-    }
-
     /*********
      * AUDIO *
      *********/
 
     togglePlay = (payload) => {
         return this.audioManager.togglePlay(payload)
-    }
-
-    /*********
-     * LYRIC *
-     *********/
-
-    selectLyricColumn = (payload) => {
-        return this.lyricManager.selectLyricColumn(payload)
     }
 
     /************
@@ -228,7 +215,6 @@ class ListenerContainer extends PureComponent {
                     setCarouselParentRef={this.setCarouselParentRef}
                     scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
-                    selectLyricColumn={this.selectLyricColumn}
                     determineVerseBars={this.determineVerseBars}
                     selectOverview={this.selectOverview}
                     selectScene={this.selectScene}
@@ -244,11 +230,6 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setAudioManagerRef}
                     selectSong={this.selectSong}
                     toggleSelectedPlayer={this.toggleSelectedPlayer}
-                />
-                <LogHandler />
-                <LyricManager
-                    setRef={this._setLyricManagerRef}
-                    accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
                 />
                 <OverviewManager
                     setRef={this._setOverviewManagerRef}
@@ -285,6 +266,7 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setVerseManagerRef}
                     getVerseElement={this.getVerseElement}
                 />
+                <LogHandler />
                 <CarouselNavListener />
                 <DoublespeakerListener />
                 <LyricExpandListener />

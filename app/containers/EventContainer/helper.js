@@ -17,7 +17,6 @@ export const getHandlers = (me) => {
         handleAudioPlay: me.handleAudioPlay,
         handleAudioPreviousSong: me.handleAudioPreviousSong,
         handleAudioNextSong: me.handleAudioNextSong,
-        handleLyricColumnSelect: me.handleLyricColumnSelect,
         handleLyricVerseSelect: me.handleLyricVerseSelect,
         handleLyricAnnotationSelect: me.handleLyricAnnotationSelect,
         handleLyricAutoScroll: me.handleLyricAutoScroll,

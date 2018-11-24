@@ -46,7 +46,7 @@ class RemainderWrapper extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        selectedLyricColumnIndex: PropTypes.number.isRequired,
+        earIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
 
@@ -70,7 +70,7 @@ class RemainderWrapper extends PureComponent {
                 isCarouselShown,
                 selectedDotKeys,
                 isDotsSlideShown,
-                selectedLyricColumnIndex,
+                earIndex,
                 selectedOverviewIndex,
                 selectedTipsIndex,
                 isPlaying,
@@ -96,7 +96,7 @@ class RemainderWrapper extends PureComponent {
 
             singleShownLyricColumnKey = getSingleShownLyricColumnKey({
                 isDoublespeakerShown,
-                selectedLyricColumnIndex
+                earIndex
             }),
 
             overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
@@ -230,7 +230,7 @@ const mapStateToProps = ({
     accessStore: { accessedKey },
     sessionStore: {
         interactivatedVerseIndex,
-        selectedLyricColumnIndex,
+        earIndex,
         selectedOverviewIndex,
         selectedTipsIndex
     },
@@ -283,7 +283,7 @@ const mapStateToProps = ({
     dotsBitNumber,
     selectedDotKeys,
     isDotsSlideShown,
-    selectedLyricColumnIndex,
+    earIndex,
     selectedOverviewIndex,
     selectedTipsIndex,
     isDoublespeakerShown,

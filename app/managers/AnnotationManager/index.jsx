@@ -26,7 +26,7 @@ class AnnotationManager extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        selectedLyricColumnIndex: PropTypes.number.isRequired,
+        earIndex: PropTypes.number.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         updateRenderedStore: PropTypes.func.isRequired,
@@ -72,19 +72,17 @@ class AnnotationManager extends PureComponent {
 
     deselectAnnotationIfNeeded(prevProps) {
         const {
-                selectedLyricColumnIndex,
+                earIndex,
                 isDoublespeakerShown
             } = this.props,
             {
-                selectedLyricColumnIndex: prevLyricColumnIndex,
+                earIndex: prevLyricColumnIndex,
                 isDoublespeakerShown: wasDoublespeakerShown
             } = prevProps
 
         if (
-            selectedLyricColumnIndex !== prevLyricColumnIndex ||
-            (
-                isDoublespeakerShown && !wasDoublespeakerShown
-            )
+            earIndex !== prevLyricColumnIndex ||
+            (isDoublespeakerShown && !wasDoublespeakerShown)
         ) {
             this.deselectAnnotation()
         }
@@ -96,11 +94,20 @@ class AnnotationManager extends PureComponent {
          * invalid, and change if so.
          */
         const
-            { isDotsSlideShown } = this.props,
-            { isDotsSlideShown: wasDotsSlideShown } = prevProps
+            {
+                isDotsSlideShown,
+                earIndex
+            } = this.props,
+            {
+                isDotsSlideShown: wasDotsSlideShown,
+                earIndex: prevLyricColumnIndex
+            } = prevProps
 
-        if (!isDotsSlideShown && wasDotsSlideShown) {
-            this.accessAnnotationIfCurrentInvalid()
+        if (
+            (!isDotsSlideShown && wasDotsSlideShown) ||
+            earIndex !== prevLyricColumnIndex
+        ) {
+            this.accessAnnotation()
         }
     }
 
@@ -120,7 +127,7 @@ class AnnotationManager extends PureComponent {
                 selectedSongIndex,
                 selectedDotKeys: props.selectedDotKeys,
                 currentAnnotationIndex: props.selectedAnnotationIndex,
-                lyricColumnIndex: props.selectedLyricColumnIndex,
+                lyricColumnIndex: props.earIndex,
                 direction
             })
         }
@@ -161,13 +168,13 @@ class AnnotationManager extends PureComponent {
 
     deselectAnnotation({
         selectedSongIndex = this.props.selectedSongIndex,
-        selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
+        earIndex = this.props.earIndex,
         annotationIndex = this.props.selectedAnnotationIndex
     } = {}) {
         if (annotationIndex) {
             const showAnnotationForColumn = shouldShowAnnotationForColumn({
                 selectedSongIndex,
-                selectedLyricColumnIndex,
+                earIndex,
                 annotationIndex,
                 isDoublespeakerShown: this.props.isDoublespeakerShown
             })
@@ -185,7 +192,7 @@ class AnnotationManager extends PureComponent {
 
         selectedSongIndex = this.props.selectedSongIndex,
         selectedDotKeys = this.props.selectedDotKeys,
-        selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
+        earIndex = this.props.earIndex,
 
         direction
 
@@ -199,7 +206,7 @@ class AnnotationManager extends PureComponent {
                 selectedSongIndex,
                 selectedDotKeys,
                 isDoublespeakerShown: this.props.isDoublespeakerShown,
-                lyricColumnIndex: selectedLyricColumnIndex,
+                lyricColumnIndex: earIndex,
                 direction
             })
         } else {
@@ -208,7 +215,7 @@ class AnnotationManager extends PureComponent {
                 selectedSongIndex,
                 selectedDotKeys,
                 isDoublespeakerShown: this.props.isDoublespeakerShown,
-                lyricColumnIndex: selectedLyricColumnIndex,
+                lyricColumnIndex: earIndex,
                 direction
             })
         }
@@ -217,16 +224,6 @@ class AnnotationManager extends PureComponent {
 
         // If needed, scroll to this annotation index.
         return accessedAnnotationIndex
-    }
-
-    accessAnnotationIfCurrentInvalid({
-        selectedSongIndex,
-        selectedLyricColumnIndex
-    } = {}) {
-        this.accessAnnotation({
-            selectedSongIndex,
-            selectedLyricColumnIndex
-        })
     }
 
     accessAnnotationAnchor(direction) {
@@ -270,7 +267,7 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    sessionStore: { selectedLyricColumnIndex }
+    sessionStore: { earIndex }
 }) => ({
     isDotsSlideShown,
     isDoublespeakerShown,
@@ -280,7 +277,7 @@ const mapStateToProps = ({
     accessedAnnotationAnchorIndex,
     dotsBitNumber,
     selectedDotKeys,
-    selectedLyricColumnIndex
+    earIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 
+// TODO: Eventually get rid of this file. Everything it handles should be in dispatchers or listeners.
 // Component that handles all user events.
 
 import React, { PureComponent, Fragment as ___ } from 'react'
@@ -11,6 +12,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
 import CarouselDispatcher from '../../dispatchers/CarouselDispatcher'
+import LyricEarDispatcher from '../../dispatchers/LyricEarDispatcher'
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
@@ -86,7 +88,7 @@ class EventContainer extends PureComponent {
             songIndex: selectedSongIndex,
             annotationIndex: selectedAnnotationIndex,
             verseIndex: selectedVerseIndex,
-            columnIndex: selectedLyricColumnIndex,
+            columnIndex: earIndex,
             [DESTINATION_WORMHOLE_INDEX]: destinationWormholeIndex
         } = wormholeObject
 
@@ -98,12 +100,9 @@ class EventContainer extends PureComponent {
         })
 
         if (songSelected) {
-            if (!isNaN(selectedLyricColumnIndex)) {
-                this.props.selectLyricColumn({
-                    selectedLyricColumnIndex,
-                    selectedSongIndex,
-                    annotationIndex: selectedAnnotationIndex
-                })
+            // TODO: This can be set in a listener.
+            if (!isNaN(earIndex)) {
+                this.dispatchEar({ earIndex })
             }
         }
 
@@ -193,11 +192,6 @@ class EventContainer extends PureComponent {
 
         // Scroll lyric as if verse bar was selected.
         this.handleVerseBarSelect()
-    }
-
-    handleLyricColumnSelect = (e) => {
-        const columnSelected = this.props.selectLyricColumn()
-        return columnSelected
     }
 
     /**********
@@ -483,6 +477,7 @@ class EventContainer extends PureComponent {
                     }}
                 />
                 <CarouselDispatcher {...{ getDispatch: this }} />
+                <LyricEarDispatcher {...{ getDispatch: this }} />
                 <InteractivatedVerseDispatcher
                     {...{ getDirectionDispatch: this }}
                 />

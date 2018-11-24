@@ -54,7 +54,7 @@ const
         shownNavBookIndex: 1,
         selectedAudioOptionIndex:
             getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
-        selectedLyricColumnIndex: 0,
+        earIndex: 0,
         selectedOverviewIndex: 1,
         selectedTipsIndex: 1,
         selectedWikiIndex: 0,

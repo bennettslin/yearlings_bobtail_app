@@ -6,11 +6,11 @@ import {
 
 export const getSingleShownLyricColumnKey = ({
     isDoublespeakerShown,
-    selectedLyricColumnIndex
+    earIndex
 }) => {
     return isDoublespeakerShown
-        && selectedLyricColumnIndex >= 0 ?
-        LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
+        && earIndex >= 0 ?
+        LYRIC_COLUMN_KEYS[earIndex % 2] : ''
 }
 
 export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
