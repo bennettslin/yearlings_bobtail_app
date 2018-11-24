@@ -149,10 +149,7 @@ class ToggleHandler extends PureComponent {
 
         // Close wiki popup.
         } else if (props.selectedWikiIndex) {
-            this.props.updateSessionStore({
-                selectedWikiIndex: 0,
-                carouselAnnotationIndex: 0
-            })
+            this.props.updateSessionStore({ selectedWikiIndex: 0 })
 
         // Close tips popup.
         } else if (TIPS_OPTIONS[props.selectedTipsIndex] === SHOWN) {

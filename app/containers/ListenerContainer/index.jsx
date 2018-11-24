@@ -27,7 +27,7 @@ import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import OverlayListener from '../../listeners/OverlayListener'
 import RenderListener from '../../listeners/RenderListener'
 import ScoreListener from '../../listeners/ScoreListener'
-import WikiListener from '../../listeners/WikiListener'
+import SongListener from '../../listeners/SongListener'
 import WindowListener from '../../listeners/WindowListener'
 
 class ListenerContainer extends PureComponent {
@@ -361,7 +361,7 @@ class ListenerContainer extends PureComponent {
                 <OverlayListener />
                 <RenderListener />
                 <ScoreListener />
-                <WikiListener />
+                <SongListener />
                 <WindowListener />
             </___>
         )

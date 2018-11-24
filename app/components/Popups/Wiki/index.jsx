@@ -24,10 +24,7 @@ class WikiPopup extends PureComponent {
     }
 
     closeWiki = () => {
-        this.props.updateSessionStore({
-            selectedWikiIndex: 0,
-            carouselAnnotationIndex: 0
-        })
+        this.props.updateSessionStore({ selectedWikiIndex: 0 })
     }
 
     render() {

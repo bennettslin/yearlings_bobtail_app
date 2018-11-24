@@ -228,10 +228,7 @@ class CloseHandler extends PureComponent {
 
             // If popup is open, close it and do nothing else.
             if (selectedWikiIndex && !exemptWiki) {
-                this.props.updateSessionStore({
-                    selectedWikiIndex: 0,
-                    carouselAnnotationIndex: 0
-                })
+                this.props.updateSessionStore({ selectedWikiIndex: 0 })
                 if (!continuePastClosingPopups) {
                     return
                 }
