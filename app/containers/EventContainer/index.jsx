@@ -15,7 +15,6 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
-import { getClientX } from 'helpers/domHelper'
 import { getHandlers } from './helper'
 
 import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
@@ -344,29 +343,6 @@ class EventContainer extends PureComponent {
     }
 
     /*********
-     * TOUCH *
-     *********/
-
-    handleSliderTouchBegin = (e, sliderElement) => {
-
-        // Can't be handled in logue.
-        if (this.props.isSelectedLogue) {
-            return
-        }
-
-        const clientX = getClientX(e),
-            clientRect = sliderElement.getBoundingClientRect()
-
-        if (!isNaN(clientX)) {
-            this.props.touchSliderBegin({
-                clientRect, clientX
-            })
-        }
-
-        this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
-    }
-
-    /*********
      * VERSE *
      *********/
 
@@ -484,8 +460,8 @@ class EventContainer extends PureComponent {
             selectOverview,
             selectTips,
             determineVerseBars,
-            touchBodyMove,
-            touchBodyEnd
+            selectVerse,
+            resetVerseBars
         } = this.props
 
         return (
@@ -494,12 +470,12 @@ class EventContainer extends PureComponent {
                     {...{
                         eventHandlers: getHandlers(this),
                         determineVerseBars,
-                        touchBodyMove,
-                        touchBodyEnd,
                         selectAnnotation,
                         selectCarouselNav,
                         selectOverview,
-                        selectTips
+                        selectTips,
+                        selectVerse,
+                        resetVerseBars
                     }}
                 />
                 <InteractivatedVerseDispatcher

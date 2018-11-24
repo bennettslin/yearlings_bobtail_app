@@ -21,7 +21,6 @@ const audioPropTypes = {
 
         // From parent.
         verseDidRender: PropTypes.func.isRequired,
-        audioBannerHandlers: PropTypes.object.isRequired,
         audioButtonsHandlers: PropTypes.object.isRequired
     },
 
@@ -34,7 +33,6 @@ const audioPropTypes = {
         isTwoRowMenu,
 
         verseDidRender,
-        audioBannerHandlers,
         audioButtonsHandlers
 
     }) => {
@@ -52,8 +50,10 @@ const audioPropTypes = {
                     />
                 )}
 
-                <AudioBanner {...audioBannerHandlers}
-                    verseDidRender={verseDidRender}
+                <AudioBanner
+                    {...{
+                        verseDidRender: verseDidRender
+                    }}
                 />
                 <AudioButtons {...audioButtonsHandlers} />
             </div>

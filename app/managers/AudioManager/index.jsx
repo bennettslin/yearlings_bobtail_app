@@ -31,17 +31,6 @@ class AudioManager extends PureComponent {
         this.props.setRef(this)
     }
 
-    componentDidUpdate(prevProps) {
-        const
-            { isSelectedLogue } = this.props,
-            { isSelectedLogue: wasSelectedLogue } = prevProps
-
-        // If selecting a logue, turn off play.
-        if (isSelectedLogue && !wasSelectedLogue) {
-            this.props.updateAudioStore({ isPlaying: false })
-        }
-    }
-
     togglePlay(isPlaying = !this.props.isPlaying) {
 
         const {

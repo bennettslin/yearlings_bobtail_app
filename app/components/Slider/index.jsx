@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import SliderScenes from './Scenes'
 import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
@@ -23,7 +24,6 @@ class Slider extends Component {
         canVerseRender: PropTypes.bool.isRequired,
 
         // From parent.
-        handleSliderTouchBegin: PropTypes.func.isRequired,
         verseDidRender: PropTypes.func.isRequired
     }
 
@@ -73,7 +73,7 @@ class Slider extends Component {
     }
 
     _handleTouchDown = (e) => {
-        this.props.handleSliderTouchBegin(e, this.slider)
+        this.dispatchTouchBegin(e, this.slider)
     }
 
     _setSliderRef = (node) => {
@@ -102,6 +102,7 @@ class Slider extends Component {
                 <SliderStanzas />
                 <SliderScenes />
                 <SliderAccess />
+                <SliderTouchDispatcher {...{ getBeginDispatch: this }} />
             </div>
         )
     }

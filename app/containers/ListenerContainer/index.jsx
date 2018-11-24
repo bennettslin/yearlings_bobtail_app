@@ -15,18 +15,18 @@ import OverviewManager from '../../managers/OverviewManager'
 import PlayerManager from '../../managers/PlayerManager'
 import SceneManager from '../../managers/SceneManager'
 import ScrollManager from '../../managers/ScrollManager'
-import SliderVerseManager from '../../managers/SliderVerseManager'
 import SongManager from '../../managers/SongManager'
 import TimeVerseManager from '../../managers/TimeVerseManager'
 import TipsManager from '../../managers/TipsManager'
 import VerseManager from '../../managers/VerseManager'
 
 import CarouselListener from '../../listeners/CarouselListener'
-import DotsSlideListener from '../../listeners/DotsSlideListener'
+import LogueListener from '../../listeners/LogueListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import OverlayListener from '../../listeners/OverlayListener'
 import RenderListener from '../../listeners/RenderListener'
 import ScoreListener from '../../listeners/ScoreListener'
+import SliderListener from '../../listeners/SliderListener'
 import SongListener from '../../listeners/SongListener'
 import WindowListener from '../../listeners/WindowListener'
 
@@ -153,22 +153,6 @@ class ListenerContainer extends PureComponent {
         return this.scrollManager.getVerseElement(payload)
     }
 
-    /****************
-     * SLIDER/VERSE *
-     ****************/
-
-    touchSliderBegin = (payload) => {
-        return this.sliderVerseManager.touchSliderBegin(payload)
-    }
-
-    touchBodyMove = (payload) => {
-        return this.sliderVerseManager.touchBodyMove(payload)
-    }
-
-    touchBodyEnd = () => {
-        return this.sliderVerseManager.touchBodyEnd()
-    }
-
     /********
      * SONG *
      ********/
@@ -244,9 +228,6 @@ class ListenerContainer extends PureComponent {
     _setScrollManagerRef = (node) => {
         this.scrollManager = node
     }
-    _setSliderVerseManagerRef = (node) => {
-        this.sliderVerseManager = node
-    }
     _setSongManagerRef = (node) => {
         this.songManager = node
     }
@@ -271,9 +252,6 @@ class ListenerContainer extends PureComponent {
                     accessAnnotation={this.accessAnnotation}
                     accessAnnotationAnchor={this.accessAnnotationAnchor}
                     accessNavSong={this.accessNavSong}
-                    touchSliderBegin={this.touchSliderBegin}
-                    touchBodyMove={this.touchBodyMove}
-                    touchBodyEnd={this.touchBodyEnd}
                     setCarouselAnnotationRef={this.setCarouselAnnotationRef}
                     setLyricAnnotationRef={this.setLyricAnnotationRef}
                     setVerseRef={this.setVerseRef}
@@ -330,11 +308,6 @@ class ListenerContainer extends PureComponent {
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
                 />
-                <SliderVerseManager
-                    setRef={this._setSliderVerseManagerRef}
-                    selectVerse={this.selectVerse}
-                    resetVerseBars={this.resetVerseBars}
-                />
                 <SongManager
                     setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
@@ -356,11 +329,12 @@ class ListenerContainer extends PureComponent {
                     getVerseElement={this.getVerseElement}
                 />
                 <CarouselListener />
-                <DotsSlideListener />
+                <LogueListener />
                 <DoublespeakerListener />
                 <OverlayListener />
                 <RenderListener />
                 <ScoreListener />
+                <SliderListener />
                 <SongListener />
                 <WindowListener />
             </___>

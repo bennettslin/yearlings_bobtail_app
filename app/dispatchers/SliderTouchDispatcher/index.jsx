@@ -4,12 +4,20 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSliderStore } from 'flux/slider/action'
 
+import { getClientX } from 'helpers/domHelper'
+
 import {
     getSliderRatioForClientX,
     getVerseIndexforRatio
 } from './helper'
 
-class SliderVerseManager extends PureComponent {
+class SliderTouchDispatcher extends PureComponent {
+
+    static defaultProps = {
+        getBeginDispatch: {},
+        getMoveDispatch: {},
+        getEndDispatch: {}
+    }
 
     static propTypes = {
         // Through Redux.
@@ -18,29 +26,54 @@ class SliderVerseManager extends PureComponent {
         sliderLeft: PropTypes.number.isRequired,
         sliderWidth: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-
+        selectedVerseIndex: PropTypes.number.isRequired,
         updateSliderStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired,
-        selectVerse: PropTypes.func.isRequired,
-        resetVerseBars: PropTypes.func.isRequired
+        getBeginDispatch: PropTypes.object.isRequired,
+        getMoveDispatch: PropTypes.object.isRequired,
+        getEndDispatch: PropTypes.object.isRequired
+        // selectVerse: PropTypes.func.isRequired,
+        // resetVerseBars: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.setRef(this)
+        this.props.getBeginDispatch.dispatchTouchBegin = this.dispatchTouchBegin
+        this.props.getMoveDispatch.dispatchTouchMove = this.dispatchTouchMove
+        this.props.getEndDispatch.dispatchTouchEnd = this.dispatchTouchEnd
     }
 
-    touchSliderBegin({
-        clientRect, clientX
-    }) {
+    // TODO: These can easily just be a single method.
+    dispatchTouchBegin = (e, sliderElement) => {
+        // Can't be handled in logue.
+        if (this.props.isSelectedLogue) {
+            return
+        }
 
+        const clientX = getClientX(e),
+            clientRect = sliderElement.getBoundingClientRect()
+
+        if (!isNaN(clientX)) {
+            this._touchSliderBegin(
+                clientRect,
+                clientX
+            )
+        }
+    }
+    _touchSliderBegin = (
+        {
+            left: sliderLeft,
+            width: sliderWidth
+        },
+        clientX
+    ) => {
         const
-            sliderLeft = clientRect.left,
-            sliderWidth = clientRect.width,
             sliderRatio = getSliderRatioForClientX(
-                clientX, sliderLeft, sliderWidth
+                clientX,
+                sliderLeft,
+                sliderWidth
             ),
 
             sliderVerseIndex = getVerseIndexforRatio(
@@ -74,8 +107,15 @@ class SliderVerseManager extends PureComponent {
         }
     }
 
-    touchBodyMove(clientX) {
+    // TODO: These can easily just be a single method.
+    dispatchTouchMove = (e) => {
+        const clientX = getClientX(e)
 
+        if (!isNaN(clientX)) {
+            this._touchBodyMove(clientX)
+        }
+    }
+    _touchBodyMove = (clientX) => {
         if (this.props.isSliderTouched) {
             const {
                     sliderLeft,
@@ -99,25 +139,15 @@ class SliderVerseManager extends PureComponent {
         }
     }
 
-    touchBodyEnd() {
-
+    dispatchTouchEnd = (selectVerseIndex) => {
         if (this.props.isSliderTouched) {
-
             const {
                 selectedVerseIndex,
                 sliderVerseIndex
             } = this.props
 
             if (sliderVerseIndex !== selectedVerseIndex) {
-
-                // Selected verse is wherever touch ended on slider.
-                this.props.selectVerse({
-                    selectedVerseIndex: this.props.sliderVerseIndex,
-                    scrollLog: 'Slider touch body end.'
-                })
-
-                // Verse bars always get reset.
-                this.props.resetVerseBars()
+                selectVerseIndex(sliderVerseIndex)
             }
 
             // Reset slider state.
@@ -139,6 +169,7 @@ const mapStateToProps = ({
         sliderVerseIndex
     },
     songStore: {
+        isSelectedLogue,
         selectedSongIndex,
         selectedVerseIndex
     }
@@ -148,6 +179,7 @@ const mapStateToProps = ({
     sliderLeft,
     sliderWidth,
     sliderVerseIndex,
+    isSelectedLogue,
     selectedSongIndex,
     selectedVerseIndex
 })
@@ -158,4 +190,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(SliderVerseManager)
+export default connect(mapStateToProps, bindDispatchToProps)(SliderTouchDispatcher)

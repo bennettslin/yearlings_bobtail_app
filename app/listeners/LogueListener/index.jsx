@@ -1,30 +1,31 @@
-// Singleton to listen for non-toggle events that require turning off dots.
+// Singleton to listen for change from song to logue.
 
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateAudioStore } from 'flux/audio/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class DotsSlideListener extends Component {
+class LogueListener extends Component {
 
     static propTypes = {
         // Through Redux.
-        isDotsSlideShown: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
-        this.closeDotsSlideIfNeeded(prevProps)
+        this.handleLogueIfNeeded(prevProps)
     }
 
-    closeDotsSlideIfNeeded(prevProps) {
+    handleLogueIfNeeded(prevProps) {
         const
             { isSelectedLogue } = this.props,
             { isSelectedLogue: wasSelectedLogue } = prevProps
 
         if (isSelectedLogue && !wasSelectedLogue) {
+            this.props.updateAudioStore({ isPlaying: false })
             this.props.updateToggleStore({ isDotsSlideShown: false })
         }
     }
@@ -35,17 +36,16 @@ class DotsSlideListener extends Component {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isDotsSlideShown },
     songStore: { isSelectedLogue }
 }) => ({
-    isDotsSlideShown,
     isSelectedLogue
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateAudioStore,
         updateToggleStore
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DotsSlideListener)
+export default connect(mapStateToProps, bindDispatchToProps)(LogueListener)
