@@ -5,9 +5,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
+import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class CarouselListener extends PureComponent {
+import { getBookColumnIndex } from 'helpers/dataHelper'
+
+class CarouselNavListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -15,6 +18,7 @@ class CarouselListener extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
@@ -41,13 +45,14 @@ class CarouselListener extends PureComponent {
 
         // Prepare nav if collapsing carousel.
         if (!isCarouselShown && wasCarouselShown) {
-            const { selectedSongIndex } = this.props
+            const
+                { selectedSongIndex } = this.props,
+                shownBookColumnIndex = getBookColumnIndex(selectedSongIndex)
 
             this.props.updateAccessStore({
                 accessedNavSongIndex: selectedSongIndex
             })
-
-            // TODO: Also reset book column.
+            this.props.updateSessionStore({ shownBookColumnIndex })
         }
     }
 
@@ -69,8 +74,9 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAccessStore,
+        updateSessionStore,
         updateToggleStore
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(CarouselListener)
+export default connect(mapStateToProps, bindDispatchToProps)(CarouselNavListener)

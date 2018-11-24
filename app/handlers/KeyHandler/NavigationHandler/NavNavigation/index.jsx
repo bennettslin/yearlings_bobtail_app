@@ -1,8 +1,10 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
+
+import NavDispatcher from '../../../../dispatchers/NavDispatcher'
 
 import {
     getSongsAndLoguesCount,
@@ -27,20 +29,22 @@ class NavNavigation extends PureComponent {
 
         // From parent.
         getTryNavigateNav: PropTypes.func.isRequired,
-        handleNavSongSelect: PropTypes.func.isRequired,
-        toggleNavBook: PropTypes.func.isRequired
+        handleNavSongSelect: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         this.props.getTryNavigateNav(this.tryNavigateNav)
     }
 
+    handleNavBookClick = () => {
+        this.dispatchNavBook()
+    }
+
     tryNavigateNav = (e, keyName) => {
         const {
             isAccessOn,
             interactivatedVerseIndex,
-            handleNavSongSelect,
-            toggleNavBook
+            handleNavSongSelect
         } = this.props
 
         let annotationIndexWasAccessed = false,
@@ -78,11 +82,15 @@ class NavNavigation extends PureComponent {
                 const { shownBookColumnIndex } = this.props,
                     songsCount = getSongsAndLoguesCount()
 
-                accessedNavSongIndex = (accessedNavSongIndex + songsCount + direction) % songsCount
+                accessedNavSongIndex = (
+                    accessedNavSongIndex + songsCount + direction
+                ) % songsCount
 
                 // Select the book column that contains the accessed song index.
-                if (shownBookColumnIndex !== getBookColumnIndex(accessedNavSongIndex)) {
-                    toggleNavBook(e)
+                if (
+                    shownBookColumnIndex !== getBookColumnIndex(accessedNavSongIndex)
+                ) {
+                    this.dispatchNavBook()
                 }
 
                 this.props.updateAccessStore({ accessedNavSongIndex })
@@ -96,7 +104,9 @@ class NavNavigation extends PureComponent {
     }
 
     render() {
-        return null
+        return (
+            <NavDispatcher {...{ getDispatch: this }} />
+        )
     }
 }
 

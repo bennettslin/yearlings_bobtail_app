@@ -267,7 +267,6 @@ Live.propTypes = {
     handleAudioNextSong: PropTypes.func.isRequired,
     handleCarouselNavToggle: PropTypes.func.isRequired,
     handleNavSongSelect: PropTypes.func.isRequired,
-    toggleNavBook: PropTypes.func.isRequired,
     handleLyricColumnSelect: PropTypes.func.isRequired,
     handleLyricAnnotationSelect: PropTypes.func.isRequired,
     handleLyricWheel: PropTypes.func.isRequired,

@@ -1,10 +1,11 @@
 // Container for book, logue, and toggle buttons for each book.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import NavDispatcher from '../../../dispatchers/NavDispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
@@ -17,36 +18,41 @@ const mapStateToProps = ({
     shownBookColumnIndex
 })
 
-const navColumnPropTypes = {
-    // Through Redux.
+class NavColumn extends Component {
+
+    static propTypes = {
+        // Through Redux.
         showSingleBookColumn: PropTypes.bool.isRequired,
         shownBookColumnIndex: PropTypes.number.isRequired,
 
         // From parent.
         bookIndex: PropTypes.number.isRequired,
-        toggleNavBook: PropTypes.func.isRequired,
         handleNavSongSelect: PropTypes.func.isRequired
-    },
+    }
 
-    NavColumn = ({
+    handleNavBookClick = () => {
+        this.dispatchNavBook()
+    }
 
-        showSingleBookColumn,
-        shownBookColumnIndex,
-        bookIndex,
-        handleNavSongSelect,
-        toggleNavBook
+    render() {
+        const {
+                showSingleBookColumn,
+                shownBookColumnIndex,
+                bookIndex,
+                handleNavSongSelect
+            } = this.props,
 
-    }) => {
-
-        const isShownColumn = !showSingleBookColumn ||
-        shownBookColumnIndex === bookIndex
+            isShownColumn =
+                !showSingleBookColumn ||
+                shownBookColumnIndex === bookIndex
 
         return (
             <div className={cx(
                 'NavColumn',
                 `NavColumn__${bookIndex ? 'right' : 'left'}`,
                 isShownColumn ?
-                    'NavColumn__shown' : 'NavColumn__hidden'
+                    'NavColumn__shown' :
+                    'NavColumn__hidden'
             )}>
                 {/* Nav book. */}
                 <NavBookSongs
@@ -60,18 +66,22 @@ const navColumnPropTypes = {
                 {/* Logue or toggle. */}
                 {isShownColumn ?
                     <NavBookLogue
-                        bookIndex={bookIndex}
-                        handleButtonClick={handleNavSongSelect}
+                        {...{
+                            bookIndex: bookIndex,
+                            handleButtonClick: handleNavSongSelect
+                        }}
                     /> :
                     <NavBookToggle
-                        bookIndex={bookIndex}
-                        handleButtonClick={toggleNavBook}
+                        {...{
+                            bookIndex: bookIndex,
+                            handleButtonClick: this.handleNavBookClick
+                        }}
                     />
                 }
+                <NavDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }
-
-NavColumn.propTypes = navColumnPropTypes
+}
 
 export default connect(mapStateToProps)(NavColumn)

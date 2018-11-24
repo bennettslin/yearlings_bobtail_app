@@ -295,10 +295,6 @@ class EventContainer extends PureComponent {
         })
     }
 
-    toggleNavBook = (e) => {
-        this.props.toggleNavBook()
-    }
-
     /************
      * OVERVIEW *
      ************/

@@ -10,7 +10,6 @@ import AnnotationManager from '../../managers/AnnotationManager'
 import AudioManager from '../../managers/AudioManager'
 import CarouselManager from '../../managers/CarouselManager'
 import LyricManager from '../../managers/LyricManager'
-import NavManager from '../../managers/NavManager'
 import OverviewManager from '../../managers/OverviewManager'
 import PlayerManager from '../../managers/PlayerManager'
 import SceneManager from '../../managers/SceneManager'
@@ -20,7 +19,7 @@ import TimeVerseManager from '../../managers/TimeVerseManager'
 import TipsManager from '../../managers/TipsManager'
 import VerseManager from '../../managers/VerseManager'
 
-import CarouselListener from '../../listeners/CarouselListener'
+import CarouselNavListener from '../../listeners/CarouselNavListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import LogueListener from '../../listeners/LogueListener'
 import LyricExpandListener from '../../listeners/LyricExpandListener'
@@ -81,14 +80,6 @@ class ListenerContainer extends PureComponent {
 
     selectLyricColumn = (payload) => {
         return this.lyricManager.selectLyricColumn(payload)
-    }
-
-    /*******
-     * NAV *
-     *******/
-
-    toggleNavBook = (payload) => {
-        return this.navManager.toggleNavBook(payload)
     }
 
     /************
@@ -207,9 +198,6 @@ class ListenerContainer extends PureComponent {
     _setLyricManagerRef = (node) => {
         this.lyricManager = node
     }
-    _setNavManagerRef = (node) => {
-        this.navManager = node
-    }
     _setOverviewManagerRef = (node) => {
         this.overviewManager = node
     }
@@ -252,7 +240,6 @@ class ListenerContainer extends PureComponent {
                     setCarouselParentRef={this.setCarouselParentRef}
                     scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
-                    toggleNavBook={this.toggleNavBook}
                     selectLyricColumn={this.selectLyricColumn}
                     determineVerseBars={this.determineVerseBars}
                     selectOverview={this.selectOverview}
@@ -273,15 +260,11 @@ class ListenerContainer extends PureComponent {
                 />
                 <CarouselManager
                     setRef={this._setCarouselManagerRef}
-                    toggleNavBook={this.toggleNavBook}
                 />
                 <LogHandler />
                 <LyricManager
                     setRef={this._setLyricManagerRef}
                     accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
-                />
-                <NavManager
-                    setRef={this._setNavManagerRef}
                 />
                 <OverviewManager
                     setRef={this._setOverviewManagerRef}
@@ -318,7 +301,7 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setVerseManagerRef}
                     getVerseElement={this.getVerseElement}
                 />
-                <CarouselListener />
+                <CarouselNavListener />
                 <DoublespeakerListener />
                 <LyricExpandListener />
                 <LogueListener />

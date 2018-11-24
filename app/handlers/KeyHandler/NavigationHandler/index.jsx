@@ -132,8 +132,7 @@ class NavigationHandler extends PureComponent {
                 handleAnnotationWormholeSelect,
                 handleLyricAnnotationSelect,
                 handleAnnotationAccess,
-                handleNavSongSelect,
-                toggleNavBook
+                handleNavSongSelect
             },
             determineVerseBarsWithParameters
         } = this.props
@@ -166,8 +165,7 @@ class NavigationHandler extends PureComponent {
                 <NavNavigation
                     {...{
                         getTryNavigateNav: this.setTryNavigateNav,
-                        handleNavSongSelect,
-                        toggleNavBook
+                        handleNavSongSelect
                     }}
                 />
             </___>

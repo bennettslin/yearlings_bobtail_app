@@ -9,6 +9,8 @@ import { updateLoadStore } from 'flux/load/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
+import { getBookColumnIndex } from 'helpers/dataHelper'
+
 class SongListener extends PureComponent {
 
     static propTypes = {
@@ -30,13 +32,16 @@ class SongListener extends PureComponent {
             { selectedSongIndex: prevSongIndex } = prevProps
 
         if (selectedSongIndex !== prevSongIndex) {
+            const shownBookColumnIndex = getBookColumnIndex(selectedSongIndex)
+
             this.props.updateAccessStore({
                 accessedNavSongIndex: selectedSongIndex
             })
             this.props.updateLoadStore({ isScoreLoaded: false })
             this.props.updateSessionStore({
                 interactivatedVerseIndex: -1,
-                selectedWikiIndex: 0
+                selectedWikiIndex: 0,
+                shownBookColumnIndex
             })
             this.props.updateToggleStore({
                 isVerseBarAbove: false,
