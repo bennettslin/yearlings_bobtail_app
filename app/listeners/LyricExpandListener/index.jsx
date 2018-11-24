@@ -6,35 +6,35 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class ScoreListener extends PureComponent {
+class LyricExpandListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isScoreShowable: PropTypes.bool.isRequired,
+        isLyricExpandable: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
-        this.closeScoreIfNeeded(prevProps)
+        this.collapseLyricIfNeeded(prevProps)
     }
 
-    closeScoreIfNeeded(prevProps) {
+    collapseLyricIfNeeded(prevProps) {
         const
             {
-                isScoreShowable,
+                isLyricExpandable,
                 isSelectedLogue
             } = this.props,
             {
-                isScoreShowable: wasScoreShowable,
+                isLyricExpandable: wasLyricExpandable,
                 isSelectedLogue: wasSelectedLogue
             } = prevProps
 
         if (
             (isSelectedLogue && !wasSelectedLogue) ||
-            (!isScoreShowable && wasScoreShowable)
+            (!isLyricExpandable && wasLyricExpandable)
         ) {
-            this.props.updateToggleStore({ isScoreShown: false })
+            this.props.updateToggleStore({ isLyricExpanded: false })
         }
     }
 
@@ -44,10 +44,10 @@ class ScoreListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { isScoreShowable },
+    responsiveStore: { isLyricExpandable },
     songStore: { isSelectedLogue }
 }) => ({
-    isScoreShowable,
+    isLyricExpandable,
     isSelectedLogue
 })
 
@@ -57,4 +57,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(ScoreListener)
+export default connect(mapStateToProps, bindDispatchToProps)(LyricExpandListener)

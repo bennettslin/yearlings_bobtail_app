@@ -1,6 +1,6 @@
 // Manager for audio players.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
@@ -16,8 +16,6 @@ import {
     getSongsNotLoguesCount,
     getTimeForVerseIndex
 } from 'helpers/dataHelper'
-
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     getMp3s,
@@ -54,7 +52,7 @@ const LOGUE_DUMMY_PLAYER = {
     /* eslint-enable no-empty-function */
 }
 
-class PlayerManager extends Component {
+class PlayerManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -110,16 +108,6 @@ class PlayerManager extends Component {
     componentDidMount() {
         this.props.setRef(this)
         this._updateCanPlayThroughsObject()
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.state,
-            nextProps: nextState
-        })
     }
 
     componentDidUpdate(prevProps) {

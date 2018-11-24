@@ -32,29 +32,6 @@ class LyricManager extends Component {
         this.props.setRef(this)
     }
 
-    componentDidUpdate(prevProps) {
-        this.collapseLyricIfNeeded(prevProps)
-    }
-
-    collapseLyricIfNeeded(prevProps) {
-        const
-            {
-                isLyricExpandable,
-                isSelectedLogue
-            } = this.props,
-            {
-                isLyricExpandable: wasLyricExpandable,
-                isSelectedLogue: wasSelectedLogue
-            } = prevProps
-
-        if (
-            (isSelectedLogue && !wasSelectedLogue) ||
-            !isLyricExpandable && wasLyricExpandable
-        ) {
-            this.props.updateToggleStore({ isLyricExpanded: false })
-        }
-    }
-
     selectLyricColumn({
         selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2,
         selectedSongIndex = this.props.selectedSongIndex,

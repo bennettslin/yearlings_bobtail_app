@@ -21,8 +21,9 @@ import TipsManager from '../../managers/TipsManager'
 import VerseManager from '../../managers/VerseManager'
 
 import CarouselListener from '../../listeners/CarouselListener'
-import LogueListener from '../../listeners/LogueListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
+import LogueListener from '../../listeners/LogueListener'
+import LyricExpandListener from '../../listeners/LyricExpandListener'
 import OverlayListener from '../../listeners/OverlayListener'
 import RenderListener from '../../listeners/RenderListener'
 import ScoreListener from '../../listeners/ScoreListener'
@@ -330,8 +331,9 @@ class ListenerContainer extends PureComponent {
                     getVerseElement={this.getVerseElement}
                 />
                 <CarouselListener />
-                <LogueListener />
                 <DoublespeakerListener />
+                <LyricExpandListener />
+                <LogueListener />
                 <OverlayListener />
                 <RenderListener />
                 <ScoreListener />
