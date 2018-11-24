@@ -1,6 +1,6 @@
 // Singleton to listen for changes that toggle doublespeaker treatment.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -8,7 +8,7 @@ import { updateTransientStore } from 'flux/transient/action'
 
 import { getIsDoublespeakerShown } from './helper'
 
-class DoublespeakerListener extends Component {
+class DoublespeakerListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.

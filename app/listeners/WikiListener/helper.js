@@ -1,7 +1,6 @@
 import { getAnnotationObject } from 'helpers/dataHelper'
 
 export const getWikiUrl = ({
-
     selectedSongIndex,
     selectedWikiIndex,
     selectedAnnotationIndex,
@@ -36,6 +35,6 @@ export const getWikiUrl = ({
         return fullPath
 
     } else {
-        return null
+        return ''
     }
 }

@@ -27,7 +27,10 @@ class SongListener extends PureComponent {
 
         if (selectedSongIndex !== prevSongIndex) {
             this.props.updateLoadStore({ isScoreLoaded: false })
-            this.props.updateSessionStore({ selectedWikiIndex: 0 })
+            this.props.updateSessionStore({
+                interactivatedVerseIndex: -1,
+                selectedWikiIndex: 0
+            })
         }
     }
 

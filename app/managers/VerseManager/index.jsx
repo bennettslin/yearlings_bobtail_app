@@ -44,9 +44,6 @@ class VerseManager extends PureComponent {
 
         // TODO: This can be moved to its own listener.
         if (selectedSongIndex !== prevProps.selectedSongIndex) {
-            // Reset interactivated verse.
-            this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
-
             // Reset verse bars.
             this.resetVerseBars()
         }

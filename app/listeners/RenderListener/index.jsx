@@ -1,6 +1,6 @@
 // Singleton to set timeout between selected and rendered song change.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -10,7 +10,7 @@ import { updateRenderedStore } from 'flux/rendered/action'
 
 import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
 
-class RenderListener extends Component {
+class RenderListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.

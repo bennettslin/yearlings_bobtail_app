@@ -1,13 +1,13 @@
 // Singleton to listen for change from song to logue.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class LogueListener extends Component {
+class LogueListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.

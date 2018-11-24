@@ -1,12 +1,12 @@
 // Singleton to listen for non-toggle events that require turning off score.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class ScoreListener extends Component {
+class ScoreListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.

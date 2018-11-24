@@ -56,7 +56,8 @@ const
         selectedLyricColumnIndex: 0,
         selectedOverviewIndex: 1,
         selectedTipsIndex: 1,
-        selectedWikiIndex: 0
+        selectedWikiIndex: 0,
+        selectedWikiUrl: ''
     },
 
     TOGGLE_DEFAULTS = {

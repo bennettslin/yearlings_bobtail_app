@@ -6,39 +6,22 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Spinner from '../Spinner'
-import { getWikiUrl } from './helper'
 
 // TODO: Show that active wiki anchor is disabled.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
 // TODO: If loading time is too long, show page with a "There was a problem connecting to Wikipedia. Try again?"
 
 const mapStateToProps = ({
-    responsiveStore: { isMobileWiki },
-    songStore: {
-        selectedAnnotationIndex,
-        selectedSongIndex
-    },
-    sessionStore: {
-        selectedWikiIndex,
-        carouselAnnotationIndex
-    }
+    sessionStore: { selectedWikiUrl }
 }) => ({
-    isMobileWiki,
-    selectedSongIndex,
-    selectedWikiIndex,
-    selectedAnnotationIndex,
-    carouselAnnotationIndex
+    selectedWikiUrl
 })
 
 class WikiSection extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        carouselAnnotationIndex: PropTypes.number.isRequired,
-        isMobileWiki: PropTypes.bool.isRequired,
+        selectedWikiUrl: PropTypes.string.isRequired,
 
         // From parent.
         setWikiRef: PropTypes.func.isRequired
@@ -71,10 +54,9 @@ class WikiSection extends PureComponent {
     }
 
     render() {
-        const { iframeLoading } = this.state,
-
-            // Use all props passed through Redux.
-            selectedWikiUrl = getWikiUrl(this.props)
+        const
+            { selectedWikiUrl } = this.props,
+            { iframeLoading } = this.state
 
         return (
             <div className={cx(

@@ -1,6 +1,6 @@
 // Singleton to listen for window resize event.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
@@ -30,7 +30,7 @@ import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
 import { getStageCoordinates } from './helpers/stage'
 
-class WindowListener extends Component {
+class WindowListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.

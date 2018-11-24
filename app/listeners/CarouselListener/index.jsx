@@ -1,12 +1,12 @@
 // Singleton to listen for non-toggle events that require turning off carousel.
 
-import { Component } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class CarouselListener extends Component {
+class CarouselListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.

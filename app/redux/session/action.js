@@ -12,10 +12,10 @@ export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
     } = payload
 
     if (selectedWikiIndex === 0) {
-        // If wiki is being reset, also reset carousel annotation.
+        // If wiki is reset, also reset related state.
         payload.carouselAnnotationIndex = 0
+        payload.selectedWikiUrl = ''
     }
-
 
     return ({
         type: SESSION_STORE,
