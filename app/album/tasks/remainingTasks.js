@@ -7,22 +7,12 @@ module.exports = [
     {
         taskName: `Separate class name parent containers.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 5
     },
     {
         taskName: `Have timeout manager.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Carousel nav toggling.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Have dots store that has both bit number and keys.`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Refactor overview and tips. Ensure they close the dots when opened from selecting a new song.`,

@@ -3979,8 +3979,8 @@ module.exports = [
     },
     {
         taskName: `General refactor of store and event handling.`,
-        workedHours: 28,
-        neededHours: 28
+        workedHours: 38,
+        neededHours: 38
     },
     {
         taskName: `Fix bug where overview toggle isn't hoverable in mobile. (Left shelf zIndex wasn't high enough.)`,
