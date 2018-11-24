@@ -33,7 +33,6 @@ class CloseHandler extends PureComponent {
         // From parent.
         // TODO: Eventually call these through Redux.
         selectAnnotation: PropTypes.func.isRequired,
-        selectCarouselNav: PropTypes.func.isRequired,
         selectOverview: PropTypes.func.isRequired,
         selectTips: PropTypes.func.isRequired,
         getCloseSections: PropTypes.func.isRequired
@@ -203,7 +202,6 @@ class CloseHandler extends PureComponent {
     // TODO: Refactor, as this is kind of confusing.
     closeSections = ({
         exemptAnnotation,
-        forceCarousel,
         exemptDots,
         exemptLyric,
         exemptOverview,
@@ -253,10 +251,6 @@ class CloseHandler extends PureComponent {
 
         if (!exemptAnnotation) {
             this.props.selectAnnotation()
-        }
-
-        if (forceCarousel) {
-            this.props.selectCarouselNav(true)
         }
 
         if (!exemptDots) {

@@ -8,7 +8,6 @@ import LogHandler from 'handlers/LogHandler'
 
 import AnnotationManager from '../../managers/AnnotationManager'
 import AudioManager from '../../managers/AudioManager'
-import CarouselManager from '../../managers/CarouselManager'
 import LyricManager from '../../managers/LyricManager'
 import OverviewManager from '../../managers/OverviewManager'
 import PlayerManager from '../../managers/PlayerManager'
@@ -64,14 +63,6 @@ class ListenerContainer extends PureComponent {
 
     togglePlay = (payload) => {
         return this.audioManager.togglePlay(payload)
-    }
-
-    /************
-     * CAROUSEL *
-     ************/
-
-    selectCarouselNav = (payload) => {
-        return this.carouselManager.selectCarouselNav(payload)
     }
 
     /*********
@@ -192,9 +183,6 @@ class ListenerContainer extends PureComponent {
     _setAudioManagerRef = (node) => {
         this.audioManager = node
     }
-    _setCarouselManagerRef = (node) => {
-        this.carouselManager = node
-    }
     _setLyricManagerRef = (node) => {
         this.lyricManager = node
     }
@@ -243,7 +231,6 @@ class ListenerContainer extends PureComponent {
                     selectLyricColumn={this.selectLyricColumn}
                     determineVerseBars={this.determineVerseBars}
                     selectOverview={this.selectOverview}
-                    selectCarouselNav={this.selectCarouselNav}
                     selectScene={this.selectScene}
                     selectSong={this.selectSong}
                     selectTips={this.selectTips}
@@ -257,9 +244,6 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setAudioManagerRef}
                     selectSong={this.selectSong}
                     toggleSelectedPlayer={this.toggleSelectedPlayer}
-                />
-                <CarouselManager
-                    setRef={this._setCarouselManagerRef}
                 />
                 <LogHandler />
                 <LyricManager

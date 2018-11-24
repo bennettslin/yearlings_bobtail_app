@@ -1,40 +1,36 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
-
 import { getIsPhone } from 'helpers/responsiveHelper'
 
-class CarouselManager extends PureComponent {
+class CarouselDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired
+        getDispatch: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.setRef(this)
+        this.props.getDispatch.dispatchCarousel = this.dispatchCarousel
     }
 
-    selectCarouselNav = (
+    dispatchCarousel = (
+        // If no argument passed, then just toggle by default.
         isCarouselShown = !this.props.isCarouselShown
     ) => {
-        // If no argument passed, then just toggle between on and off.
-
-        // We shouldn't be able to toggle carousel under these conditions.
+        // We shouldn't be able to toggle the carousel under these conditions.
         if (
-            this.props.isSelectedLogue ||
             getIsPhone(this.props.deviceIndex) ||
+            this.props.isSelectedLogue ||
             this.props.isHiddenCarouselNav
         ) {
             return false
@@ -52,15 +48,11 @@ class CarouselManager extends PureComponent {
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: { isHiddenCarouselNav },
-    songStore: {
-        selectedSongIndex,
-        isSelectedLogue
-    },
+    songStore: { isSelectedLogue },
     toggleStore: { isCarouselShown }
 }) => ({
     deviceIndex,
     isHiddenCarouselNav,
-    selectedSongIndex,
     isSelectedLogue,
     isCarouselShown
 })
@@ -71,4 +63,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(CarouselManager)
+export default connect(mapStateToProps, bindDispatchToProps)(CarouselDispatcher)

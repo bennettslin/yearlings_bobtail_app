@@ -10,6 +10,7 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
+import CarouselDispatcher from '../../dispatchers/CarouselDispatcher'
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
@@ -163,13 +164,18 @@ class EventContainer extends PureComponent {
      ************/
 
     handleCarouselNavToggle = (e, isCarouselShown) => {
-        const presentCarouselIndex = this.props.isCarouselShown,
-            carouselSelected = this.props.selectCarouselNav(isCarouselShown)
+        const
+            { isCarouselShown: presentIsCarouselShown } = this.props,
+            carouselSelected = this.dispatchCarousel(isCarouselShown)
 
         // Scroll only when expanding carousel.
-        if (carouselSelected && !presentCarouselIndex) {
+        if (carouselSelected && !presentIsCarouselShown) {
             const { selectedAnnotationIndex } = this.props,
-                annotationIndex = selectedAnnotationIndex ? selectedAnnotationIndex : this.props.accessedAnnotationIndex
+                annotationIndex =
+                    selectedAnnotationIndex ?
+                        selectedAnnotationIndex :
+                        this.props.accessedAnnotationIndex
+
             this.props.scrollElementIntoView({
                 log: 'Nav toggled carousel annotation.',
                 scrollClass: CAROUSEL_SCROLL,
@@ -458,7 +464,6 @@ class EventContainer extends PureComponent {
     render() {
         const {
             selectAnnotation,
-            selectCarouselNav,
             selectOverview,
             selectTips,
             determineVerseBars,
@@ -472,12 +477,12 @@ class EventContainer extends PureComponent {
                         eventHandlers: getHandlers(this),
                         determineVerseBars,
                         selectAnnotation,
-                        selectCarouselNav,
                         selectOverview,
                         selectTips,
                         selectVerse
                     }}
                 />
+                <CarouselDispatcher {...{ getDispatch: this }} />
                 <InteractivatedVerseDispatcher
                     {...{ getDirectionDispatch: this }}
                 />
