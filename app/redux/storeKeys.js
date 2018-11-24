@@ -1,4 +1,5 @@
 module.exports = {
+    EVENT_STORE: 'eventStore',
     ACCESS_STORE: 'accessStore',
     AUDIO_STORE: 'audioStore',
     SESSION_STORE: 'sessionStore',

@@ -3,6 +3,7 @@ import AccessReducer from './access/reducer'
 import AudioReducer from './audio/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
+import EventReducer from './event/reducer'
 import LoadReducer from './load/reducer'
 import RenderReducer from './render/reducer'
 import RenderableReducer from './renderable/reducer'
@@ -19,6 +20,7 @@ import {
     AUDIO_STORE,
     DEVICE_STORE,
     DOTS_STORE,
+    EVENT_STORE,
     LOAD_STORE,
     RENDER_STORE,
     RENDERABLE_STORE,
@@ -38,7 +40,7 @@ const rootReducer = combineReducers({
     [TRANSIENT_STORE]: TransientReducer,
     [DEVICE_STORE]: DeviceReducer,
     [DOTS_STORE]: DotsReducer,
-    [DOTS_STORE]: DotsReducer,
+    [EVENT_STORE]: EventReducer,
     [LOAD_STORE]: LoadReducer,
     [RENDER_STORE]: RenderReducer,
     [RENDERABLE_STORE]: RenderableReducer,

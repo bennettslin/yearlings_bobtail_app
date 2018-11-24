@@ -30,6 +30,10 @@ const
     storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
     isStoredLogue = getSongIsLogue(storedSongIndex),
 
+    EVENT_DEFAULTS = {
+        bodyClicked: false
+    },
+
     ACCESS_DEFAULTS = {
         accessedKey: '',
         accessedAnnotationIndex: storedAnnotationIndex,
@@ -155,6 +159,7 @@ const
     }
 
 export {
+    EVENT_DEFAULTS,
     ACCESS_DEFAULTS,
     AUDIO_DEFAULTS,
     LOAD_DEFAULTS,

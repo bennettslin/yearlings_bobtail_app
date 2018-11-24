@@ -6,12 +6,13 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateEventStore } from 'flux/event/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import RootContainer from '../RootContainer'
-import CloseHandler from '../../handlers/CloseHandler'
+import CloseListener from '../../handlers/CloseListener'
 import KeyHandler from 'handlers/KeyHandler'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
@@ -38,6 +39,8 @@ class InteractiveContainer extends PureComponent {
         isSliderTouched: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
+        updateEventStore: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // TODO: Get rid of these eventually.
         // From parent.
@@ -93,13 +96,7 @@ class InteractiveContainer extends PureComponent {
          * lifting up from moving the slider.
          */
         if (!this.state.sliderMousedUp) {
-
-            this.closeSections({
-                exemptLyric: true,
-
-                // If overview is open when tips is open, leave overview open.
-                exemptOverview: !this.props.selectedTipsIndex
-            })
+            this.props.updateEventStore({ bodyClicked: true })
 
             // Return focus to lyric section so it can have scroll access.
             // FIXME: Blind users will use tab to change focus. Will they find this annoying?
@@ -245,10 +242,6 @@ class InteractiveContainer extends PureComponent {
     _setRootElement = node => this.myRootElement = node
     setKeyHandler = node => this.keyHandler = node
 
-    setCloseSections = (closeSections) => {
-        this.closeSections = closeSections
-    }
-
     render() {
         const {
                 appMounted,
@@ -293,13 +286,12 @@ class InteractiveContainer extends PureComponent {
                         selectVerse
                     }}
                 />
-                <CloseHandler
+                <CloseListener
                     {...{
                         // TODO: Eventually listener should get all these through Redux.
                         selectAnnotation,
                         selectOverview,
-                        selectTips,
-                        getCloseSections: this.setCloseSections
+                        selectTips
                     }}
                 />
                 <RootContainer
@@ -322,6 +314,7 @@ class InteractiveContainer extends PureComponent {
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateEventStore,
         updateToggleStore
     }, dispatch)
 )

@@ -1,9 +1,10 @@
-// Dispatcher and listener for closing multiple sections.
+// Listener for closing multiple sections.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateEventStore } from 'flux/event/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -13,11 +14,11 @@ import {
     TIPS_OPTIONS
 } from '../../constants/options'
 
-// TODO: Eventually, this should just be a listener.
-class CloseHandler extends PureComponent {
+class CloseListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        bodyClicked: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -28,6 +29,7 @@ class CloseHandler extends PureComponent {
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        updateEventStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
@@ -35,15 +37,11 @@ class CloseHandler extends PureComponent {
         // TODO: Eventually call these through Redux.
         selectAnnotation: PropTypes.func.isRequired,
         selectOverview: PropTypes.func.isRequired,
-        selectTips: PropTypes.func.isRequired,
-        getCloseSections: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getCloseSections(this.closeSections)
+        selectTips: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
+        this._handleBodyClick(prevProps)
         this._handleAnnotationSelect(prevProps)
         this._handleCarouselNavToggle(prevProps)
         this._handleDotsSlideOpen(prevProps)
@@ -54,6 +52,23 @@ class CloseHandler extends PureComponent {
         this._handleTitleOpen(prevProps)
         this._handleWikiSelect(prevProps)
         this._handleVerseInteractivate(prevProps)
+    }
+
+    _handleBodyClick(prevProps) {
+        const
+            { bodyClicked } = this.props,
+            { bodyClicked: prevBodyClicked } = prevProps
+
+        if (bodyClicked && !prevBodyClicked) {
+            this.closeSections({
+                exemptLyric: true,
+
+                // If overview is open when tips is open, leave overview open.
+                exemptOverview: !this.props.selectedTipsIndex
+            })
+
+            this.props.updateEventStore({ bodyClicked: false })
+        }
     }
 
     _handleAnnotationSelect(prevProps) {
@@ -285,6 +300,9 @@ class CloseHandler extends PureComponent {
 }
 
 const mapStateToProps = ({
+    eventStore: {
+        bodyClicked
+    },
     songStore: {
         selectedAnnotationIndex
     },
@@ -302,6 +320,7 @@ const mapStateToProps = ({
         interactivatedVerseIndex
     }
 }) => ({
+    bodyClicked,
     selectedAnnotationIndex,
     isCarouselShown,
     isDotsSlideShown,
@@ -316,9 +335,10 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateEventStore,
         updateSessionStore,
         updateToggleStore
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(CloseHandler)
+export default connect(mapStateToProps, bindDispatchToProps)(CloseListener)
