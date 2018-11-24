@@ -144,7 +144,10 @@ class InteractiveContainer extends PureComponent {
         })
 
         // Verse bars always get reset.
-        this.props.resetVerseBars()
+        this.props.updateToggleStore({
+            isVerseBarAbove: false,
+            isVerseBarBelow: false
+        })
     }
 
     focusElementForAccess = () => {

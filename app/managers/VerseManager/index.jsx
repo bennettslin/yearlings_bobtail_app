@@ -17,7 +17,6 @@ class VerseManager extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
@@ -38,15 +37,8 @@ class VerseManager extends PureComponent {
 
     componentDidUpdate(prevProps) {
         const {
-            selectedSongIndex,
             sliderVerseIndex
         } = this.props
-
-        // TODO: This can be moved to its own listener.
-        if (selectedSongIndex !== prevProps.selectedSongIndex) {
-            // Reset verse bars.
-            this.resetVerseBars()
-        }
 
         if (
             // Determine verse bars here while we are sliding.
@@ -115,13 +107,6 @@ class VerseManager extends PureComponent {
         }
     }
 
-    resetVerseBars() {
-        this.props.updateToggleStore({
-            isVerseBarAbove: false,
-            isVerseBarBelow: false
-        })
-    }
-
     render() {
         return null
     }
@@ -138,7 +123,6 @@ const mapStateToProps = ({
     },
     toggleStore: { isLyricExpanded },
     songStore: {
-        selectedSongIndex,
         selectedVerseIndex
     },
     sliderStore: { sliderVerseIndex }
@@ -148,7 +132,6 @@ const mapStateToProps = ({
     isLyricExpanded,
     isHiddenLyric,
     isTwoRowMenu,
-    selectedSongIndex,
     selectedVerseIndex,
     sliderVerseIndex
 })

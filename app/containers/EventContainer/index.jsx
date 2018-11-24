@@ -222,7 +222,10 @@ class EventContainer extends PureComponent {
         })
 
         // Verse bars always get reset.
-        this.props.resetVerseBars()
+        this.props.updateToggleStore({
+            isVerseBarAbove: false,
+            isVerseBarBelow: false
+        })
 
         // Deinteractivate after selecting.
         this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
@@ -356,7 +359,10 @@ class EventContainer extends PureComponent {
             index: selectedVerseIndex
         })
 
-        this.props.resetVerseBars()
+        this.props.updateToggleStore({
+            isVerseBarAbove: false,
+            isVerseBarBelow: false
+        })
     }
 
     handleVerseDirectionAccess = (direction) => {
@@ -460,8 +466,7 @@ class EventContainer extends PureComponent {
             selectOverview,
             selectTips,
             determineVerseBars,
-            selectVerse,
-            resetVerseBars
+            selectVerse
         } = this.props
 
         return (
@@ -474,8 +479,7 @@ class EventContainer extends PureComponent {
                         selectCarouselNav,
                         selectOverview,
                         selectTips,
-                        selectVerse,
-                        resetVerseBars
+                        selectVerse
                     }}
                 />
                 <InteractivatedVerseDispatcher

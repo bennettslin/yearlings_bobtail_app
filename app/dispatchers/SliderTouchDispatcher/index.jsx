@@ -35,8 +35,6 @@ class SliderTouchDispatcher extends PureComponent {
         getBeginDispatch: PropTypes.object.isRequired,
         getMoveDispatch: PropTypes.object.isRequired,
         getEndDispatch: PropTypes.object.isRequired
-        // selectVerse: PropTypes.func.isRequired,
-        // resetVerseBars: PropTypes.func.isRequired
     }
 
     componentDidMount() {

@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateRenderableStore } from 'flux/renderable/action'
+import { updateToggleStore } from 'flux/toggle/action'
 
 import { getVerseIndexForNextScene } from './helper'
 
@@ -15,11 +16,11 @@ class SceneManager extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        selectVerse: PropTypes.func.isRequired,
-        resetVerseBars: PropTypes.func.isRequired
+        selectVerse: PropTypes.func.isRequired
     }
 
     state = {
@@ -55,7 +56,10 @@ class SceneManager extends PureComponent {
              * janky, but it doesn't matter since this won't get called in
              * production.
              */
-            this.props.resetVerseBars()
+            this.props.updateToggleStore({
+                isVerseBarAbove: false,
+                isVerseBarBelow: false
+            })
         }
     }
 
@@ -126,7 +130,8 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateRenderableStore
+        updateRenderableStore,
+        updateToggleStore
     }, dispatch)
 )
 

@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateLoadStore } from 'flux/load/action'
 import { updateSessionStore } from 'flux/session/action'
+import { updateToggleStore } from 'flux/toggle/action'
 
 class SongListener extends PureComponent {
 
@@ -31,6 +32,10 @@ class SongListener extends PureComponent {
                 interactivatedVerseIndex: -1,
                 selectedWikiIndex: 0
             })
+            this.props.updateToggleStore({
+                isVerseBarAbove: false,
+                isVerseBarBelow: false
+            })
         }
     }
 
@@ -48,7 +53,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateLoadStore,
-        updateSessionStore
+        updateSessionStore,
+        updateToggleStore
     }, dispatch)
 )
 

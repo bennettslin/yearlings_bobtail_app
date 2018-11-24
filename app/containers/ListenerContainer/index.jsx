@@ -195,10 +195,6 @@ class ListenerContainer extends PureComponent {
         return this.verseManager.determineVerseBars(payload)
     }
 
-    resetVerseBars = () => {
-        return this.verseManager.resetVerseBars()
-    }
-
     /********
      * REFS *
      ********/
@@ -264,7 +260,6 @@ class ListenerContainer extends PureComponent {
                     selectBookColumn={this.selectBookColumn}
                     selectLyricColumn={this.selectLyricColumn}
                     determineVerseBars={this.determineVerseBars}
-                    resetVerseBars={this.resetVerseBars}
                     selectOverview={this.selectOverview}
                     selectCarouselNav={this.selectCarouselNav}
                     selectScene={this.selectScene}
@@ -305,7 +300,6 @@ class ListenerContainer extends PureComponent {
                 <SceneManager
                     setRef={this._setSceneManagerRef}
                     selectVerse={this.selectVerse}
-                    resetVerseBars={this.resetVerseBars}
                 />
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
