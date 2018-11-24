@@ -295,8 +295,8 @@ class EventContainer extends PureComponent {
         })
     }
 
-    handleNavBookSelect = (e) => {
-        this.props.selectBookColumn()
+    toggleNavBook = (e) => {
+        this.props.toggleNavBook()
     }
 
     /************

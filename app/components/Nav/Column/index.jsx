@@ -24,7 +24,7 @@ const navColumnPropTypes = {
 
         // From parent.
         bookIndex: PropTypes.number.isRequired,
-        handleNavBookSelect: PropTypes.func.isRequired,
+        toggleNavBook: PropTypes.func.isRequired,
         handleNavSongSelect: PropTypes.func.isRequired
     },
 
@@ -34,7 +34,7 @@ const navColumnPropTypes = {
         shownBookColumnIndex,
         bookIndex,
         handleNavSongSelect,
-        handleNavBookSelect
+        toggleNavBook
 
     }) => {
 
@@ -65,7 +65,7 @@ const navColumnPropTypes = {
                     /> :
                     <NavBookToggle
                         bookIndex={bookIndex}
-                        handleButtonClick={handleNavBookSelect}
+                        handleButtonClick={toggleNavBook}
                     />
                 }
             </div>

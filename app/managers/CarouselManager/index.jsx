@@ -22,7 +22,7 @@ class CarouselManager extends PureComponent {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        selectBookColumn: PropTypes.func.isRequired
+        toggleNavBook: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -64,7 +64,7 @@ class CarouselManager extends PureComponent {
     _selectNavExpand(isCarouselShown) {
         // Reset accessed song index and book column upon nav expand.
         if (!isCarouselShown) {
-            this.props.selectBookColumn({
+            this.props.toggleNavBook({
                 resetToDefault: true
             })
         }

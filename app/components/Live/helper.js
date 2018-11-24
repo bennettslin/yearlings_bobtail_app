@@ -20,7 +20,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleAudioNextSong,
             handleCarouselNavToggle,
             handleNavSongSelect,
-            handleNavBookSelect,
+            toggleNavBook,
             handleLyricColumnSelect,
             handleLyricAnnotationSelect,
             handleLyricWheel,
@@ -103,7 +103,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             },
             navSectionHandlers: {
                 handleNavSongSelect,
-                handleNavBookSelect
+                toggleNavBook
             }
         },
 

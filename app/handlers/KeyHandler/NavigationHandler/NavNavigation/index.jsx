@@ -28,7 +28,7 @@ class NavNavigation extends PureComponent {
         // From parent.
         getTryNavigateNav: PropTypes.func.isRequired,
         handleNavSongSelect: PropTypes.func.isRequired,
-        handleNavBookSelect: PropTypes.func.isRequired
+        toggleNavBook: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -40,7 +40,7 @@ class NavNavigation extends PureComponent {
             isAccessOn,
             interactivatedVerseIndex,
             handleNavSongSelect,
-            handleNavBookSelect
+            toggleNavBook
         } = this.props
 
         let annotationIndexWasAccessed = false,
@@ -82,7 +82,7 @@ class NavNavigation extends PureComponent {
 
                 // Select the book column that contains the accessed song index.
                 if (shownBookColumnIndex !== getBookColumnIndex(accessedNavSongIndex)) {
-                    handleNavBookSelect(e)
+                    toggleNavBook(e)
                 }
 
                 this.props.updateAccessStore({ accessedNavSongIndex })

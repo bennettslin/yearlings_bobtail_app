@@ -33,14 +33,14 @@ class NavManager extends PureComponent {
         if (selectedSongIndex !== prevProps.selectedSongIndex) {
 
             // Nav will update book column right away.
-            this.selectBookColumn({
+            this.toggleNavBook({
                 resetToDefault: true,
                 selectedSongIndex
             })
         }
     }
 
-    selectBookColumn({
+    toggleNavBook({
         shownBookColumnIndex = (this.props.shownBookColumnIndex + 1) % 2,
         resetToDefault,
         isCarouselShown = this.props.isCarouselShown,

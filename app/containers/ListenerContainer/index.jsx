@@ -87,8 +87,8 @@ class ListenerContainer extends PureComponent {
      * NAV *
      *******/
 
-    selectBookColumn = (payload) => {
-        return this.navManager.selectBookColumn(payload)
+    toggleNavBook = (payload) => {
+        return this.navManager.toggleNavBook(payload)
     }
 
     /************
@@ -252,7 +252,7 @@ class ListenerContainer extends PureComponent {
                     setCarouselParentRef={this.setCarouselParentRef}
                     scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
-                    selectBookColumn={this.selectBookColumn}
+                    toggleNavBook={this.toggleNavBook}
                     selectLyricColumn={this.selectLyricColumn}
                     determineVerseBars={this.determineVerseBars}
                     selectOverview={this.selectOverview}
@@ -273,7 +273,7 @@ class ListenerContainer extends PureComponent {
                 />
                 <CarouselManager
                     setRef={this._setCarouselManagerRef}
-                    selectBookColumn={this.selectBookColumn}
+                    toggleNavBook={this.toggleNavBook}
                 />
                 <LogHandler />
                 <LyricManager
