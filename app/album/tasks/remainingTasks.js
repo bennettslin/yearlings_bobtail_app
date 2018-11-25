@@ -2,6 +2,11 @@ module.exports = [
 
     /** Quick fixes, hopefully. */
     {
+        taskName: `Accessed annotation and interactivated verse should stay in sync when navigating and switching between the two.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,
         workedHours: 0,
         neededHours: 2
