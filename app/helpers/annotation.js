@@ -273,7 +273,10 @@ export const getWikiWormholeIndexForDirection = ({
     initialWikiWormholeIndex = 1,
     direction
 }) => {
-    const annotation = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
+    const annotation = getAnnotationObject(
+        selectedSongIndex,
+        selectedAnnotationIndex
+    )
 
     if (annotation && annotation.wikiWormholes) {
 
@@ -285,9 +288,6 @@ export const getWikiWormholeIndexForDirection = ({
 
         // Consider each anchor index only once.
         while (counter < wikiWormholesCount) {
-            const typeofWikiWormhole =
-                typeof wikiWormholes[returnIndex - 1]
-
             // If no direction given, start at first index...
             if (isNaN(direction)) {
                 direction = 0
@@ -297,30 +297,31 @@ export const getWikiWormholeIndexForDirection = ({
                 direction = 1
             }
 
-            // Remember that annotations are 1-based.
-            returnIndex = (returnIndex + wikiWormholesCount + direction - 1) % wikiWormholesCount + 1
+            returnIndex =
+                (returnIndex + wikiWormholesCount + direction) %
+                wikiWormholesCount
 
             /**
              * It's valid if it's a wiki anchor and reference dot is selected,
-             * or it's a wormhole index and wormhole dot is selected.
+             * or it's a wormhole index and wormhole dot is selected. Remember
+             * that wiki wormholes are 1-based.
              */
+            const isWiki = typeof wikiWormholes[returnIndex - 1] === 'string'
             if (
-                (
-                    typeofWikiWormhole === 'string' &&
-                    selectedDotKeys[REFERENCE]
-                ) || (
-                    typeofWikiWormhole === 'number' &&
-                    selectedDotKeys[WORMHOLE]
-                )
+                (isWiki && selectedDotKeys[REFERENCE]) ||
+                (!isWiki && selectedDotKeys[WORMHOLE])
             ) {
-
-                return returnIndex
+                /**
+                 * Since wiki wormholes are 1-based, if it's a zero, return the
+                 * last one.
+                 */
+                return returnIndex ? returnIndex : wikiWormholesCount
             }
 
             counter++
         }
     }
 
-    // There are no valid anchor indices to return.
+    // There are no valid anchor indices to return. This shouldn't happen.
     return -1
 }
