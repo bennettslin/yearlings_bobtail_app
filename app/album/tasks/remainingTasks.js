@@ -1,4 +1,52 @@
 module.exports = [
+
+    /** Quick fixes, hopefully. */
+    {
+        taskName: `Fix bug where go-kart presences have duplicate keys.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Remove possibility to have non-wiki urls.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Remove prologue and epilogue thumbs.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Dispatch some dispatchers and listeners that use the same logic. Only for non-critical UI changes.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Rethink whether to hide carousel upon interactivating verse. Dots are not hidden.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Disallow selecting nav when there no dots. (Do after consolidating dispatchers and listeners?)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Refactor overview and tips. Default to hiding, only disable when clicking toggle. Ensure they close the dots when opened from selecting a new song.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Persist in storage audio option, ear column, overview, and tops. Do after overview and tips refactor.`,
+        workedHours: 0,
+        neededHours: 2
+    },
     {
         taskName: `Do AWS setup on own laptop.`,
         workedHours: 0,
@@ -13,11 +61,6 @@ module.exports = [
         taskName: `Have timeout manager.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Refactor overview and tips. Ensure they close the dots when opened from selecting a new song.`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Fix bug where playing from logue causes weird jumpiness. Same with switching between songs in general sometimes.`,
@@ -35,12 +78,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Refactor event handling! Do after unit tests are in place.`,
+        taskName: `Refactor event handling!`,
         workedHours: 0,
         neededHours: 30
     },

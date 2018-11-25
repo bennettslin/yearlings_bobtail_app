@@ -30,7 +30,7 @@ import {
     SELECTED_ANNOTATION_INDEX,
 
     SELECTED_AUDIO_OPTION_INDEX,
-    SELECTED_LYRIC_COLUMN_INDEX,
+    SELECTED_EAR_COLUMN_INDEX,
     SELECTED_OVERVIEW_INDEX,
     SELECTED_TIPS_INDEX
 } from './storeKeys'
@@ -77,7 +77,7 @@ const _validateIndexForKey = (key) => {
         case SELECTED_AUDIO_OPTION_INDEX:
             isValid = isNumber && parsedValue < AUDIO_OPTIONS.length
             break
-        case SELECTED_LYRIC_COLUMN_INDEX:
+        case SELECTED_EAR_COLUMN_INDEX:
             isValid = isNumber && parsedValue < LYRIC_COLUMN_KEYS.length
             break
         case SELECTED_OVERVIEW_INDEX:

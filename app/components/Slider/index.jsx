@@ -73,11 +73,11 @@ class Slider extends PureComponent {
     }
 
     _handleTouchDown = (e) => {
-        this.dispatchTouchBegin(e, this.slider)
+        this.dispatchTouchBegin(e, this.sliderElement)
     }
 
-    _setSliderRef = (node) => {
-        this.slider = node
+    _getSliderElement = (node) => {
+        this.sliderElement = node
     }
 
     render() {
@@ -87,7 +87,7 @@ class Slider extends PureComponent {
         return (
             <div
                 {...{
-                    ref: this._setSliderRef,
+                    ref: this._getSliderElement,
                     className: cx(
                         'Slider',
                         {
