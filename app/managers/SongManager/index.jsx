@@ -27,7 +27,6 @@ class SongManager extends PureComponent {
         // From parent.
         setRef: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
-        selectAnnotation: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
         updateSelectedPlayer: PropTypes.func.isRequired
     }
@@ -77,8 +76,8 @@ class SongManager extends PureComponent {
         selectedSongIndex = 0,
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,
-        direction,
-        destinationWormholeIndex
+        direction
+        // destinationWormholeIndex
     }) {
         const { props } = this
 
@@ -108,15 +107,6 @@ class SongManager extends PureComponent {
                 selectedVerseIndex
             })
         }
-
-        props.selectAnnotation({
-            selectedSongIndex,
-            selectedAnnotationIndex,
-
-            // If from wormhole, access destination wormhole index.
-            initialWikiWormholeIndex: destinationWormholeIndex,
-            bypassUpdateSelected: true
-        })
 
         props.selectVerse({
             selectedSongIndex,

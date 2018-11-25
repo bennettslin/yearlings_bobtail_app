@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
 import { updateSessionStore } from 'flux/session/action'
+import { updateSongStore } from 'flux/song/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import {
@@ -31,11 +32,10 @@ class CloseListener extends PureComponent {
         interactivatedVerseIndex: PropTypes.number.isRequired,
         updateEventStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
+        updateSongStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        // TODO: Eventually call these through Redux.
-        selectAnnotation: PropTypes.func.isRequired,
         selectOverview: PropTypes.func.isRequired,
         selectTips: PropTypes.func.isRequired
     }
@@ -260,7 +260,7 @@ class CloseListener extends PureComponent {
         }
 
         if (!exemptAnnotation) {
-            this.props.selectAnnotation()
+            this.props.updateSongStore({ selectedAnnotationIndex: 0 })
         }
 
         if (!exemptDots) {
@@ -331,6 +331,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateEventStore,
         updateSessionStore,
+        updateSongStore,
         updateToggleStore
     }, dispatch)
 )

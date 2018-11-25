@@ -2,6 +2,11 @@ module.exports = [
 
     /** Quick fixes, hopefully. */
     {
+        taskName: `Selecting new song from scratch should access first annotation.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Accessed annotation and interactivated verse should stay in sync when navigating and switching between the two.`,
         workedHours: 0,
         neededHours: 3
@@ -32,9 +37,9 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Dispatch some dispatchers and listeners that use the same logic. Only for non-critical UI changes.`,
+        taskName: `Group together some dispatchers and listeners that use the same logic. Only for non-critical UI changes.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
     {
         taskName: `Rethink whether to hide carousel upon interactivating verse. Dots are not hidden.`,
@@ -96,6 +101,11 @@ module.exports = [
         taskName: `Refactor event handling!`,
         workedHours: 0,
         neededHours: 30
+    },
+    {
+        taskName: `Manual testing`,
+        workedHours: 0,
+        neededHours: 20
     },
     {
         taskName: `Wire on puppets and others.`,

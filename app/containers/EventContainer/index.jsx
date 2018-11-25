@@ -10,6 +10,7 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
+import AnnotationDispatcher from '../../dispatchers/AnnotationDispatcher'
 import AnnotationAccessDispatcher from '../../dispatchers/AnnotationAccessDispatcher'
 import CarouselDispatcher from '../../dispatchers/CarouselDispatcher'
 import EarColumnDispatcher from '../../dispatchers/EarColumnDispatcher'
@@ -116,9 +117,9 @@ class EventContainer extends PureComponent {
     }
 
     _handleAccessedAnnotationSelect(e, direction) {
-        const selectedAnnotationIndex = this.props.selectAnnotation({
-            direction
-        })
+        const selectedAnnotationIndex =
+            this.dispatchAnnotation({ direction })
+
         this.props.scrollElementIntoView({
             log: 'Select accessed lyric annotation.',
             scrollClass: LYRIC_ANNOTATION_SCROLL,
@@ -138,8 +139,7 @@ class EventContainer extends PureComponent {
      *********/
 
     handleAudioPlay = () => {
-        const playToggled = this.props.togglePlay()
-        return playToggled
+        return this.props.togglePlay()
     }
 
     handleAudioPreviousSong = () => {
@@ -254,9 +254,7 @@ class EventContainer extends PureComponent {
             }
         }
 
-        this.props.selectAnnotation({
-            selectedAnnotationIndex
-        })
+        this.dispatchAnnotation({ selectedAnnotationIndex })
 
         if (selectedAnnotationIndex) {
 
@@ -422,7 +420,6 @@ class EventContainer extends PureComponent {
 
     render() {
         const {
-            selectAnnotation,
             selectOverview,
             selectTips,
             determineVerseBars,
@@ -435,12 +432,12 @@ class EventContainer extends PureComponent {
                     {...{
                         eventHandlers: getHandlers(this),
                         determineVerseBars,
-                        selectAnnotation,
                         selectOverview,
                         selectTips,
                         selectVerse
                     }}
                 />
+                <AnnotationDispatcher {...{ getDispatch: this }} />
                 <AnnotationAccessDispatcher {...{ getDispatch: this }} />
                 <CarouselDispatcher {...{ getDispatch: this }} />
                 <EarColumnDispatcher {...{ getDispatch: this }} />

@@ -6,7 +6,6 @@ import { updateLoadStore } from 'flux/load/action'
 import EventContainer from '../EventContainer'
 import LogHandler from 'handlers/LogHandler'
 
-import AnnotationManager from '../../managers/AnnotationManager'
 import AudioManager from '../../managers/AudioManager'
 import OverviewManager from '../../managers/OverviewManager'
 import PlayerManager from '../../managers/PlayerManager'
@@ -16,6 +15,9 @@ import TimeVerseManager from '../../managers/TimeVerseManager'
 import TipsManager from '../../managers/TipsManager'
 import VerseManager from '../../managers/VerseManager'
 
+import RenderedListener from '../../listeners/RenderedListener'
+import AnnotationListener from '../../listeners/AnnotationListener'
+import AnnotationAccessListener from '../../listeners/AnnotationAccessListener'
 import CarouselNavListener from '../../listeners/CarouselNavListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import LogueListener from '../../listeners/LogueListener'
@@ -27,6 +29,7 @@ import ScoreListener from '../../listeners/ScoreListener'
 import SliderListener from '../../listeners/SliderListener'
 import SongListener from '../../listeners/SongListener'
 import WikiListener from '../../listeners/WikiListener'
+import WikiWormholeListener from '../../listeners/WikiWormholeListener'
 import WindowListener from '../../listeners/WindowListener'
 
 class ListenerContainer extends PureComponent {
@@ -34,14 +37,6 @@ class ListenerContainer extends PureComponent {
     componentDidMount() {
         logger.warn('Listener container rendered.')
         this.props.updateLoadStore({ appMounted: true })
-    }
-
-    /**************
-     * ANNOTATION *
-     **************/
-
-    selectAnnotation = (payload) => {
-        return this.annotationManager.selectAnnotation(payload)
     }
 
     /*********
@@ -148,9 +143,6 @@ class ListenerContainer extends PureComponent {
      * REFS *
      ********/
 
-    _setAnnotationManagerRef = (node) => {
-        this.annotationManager = node
-    }
     _setAudioManagerRef = (node) => {
         this.audioManager = node
     }
@@ -193,16 +185,12 @@ class ListenerContainer extends PureComponent {
                     setLyricVerseParentRef={this.setLyricVerseParentRef}
                     setCarouselParentRef={this.setCarouselParentRef}
                     scrollElementIntoView={this.scrollElementIntoView}
-                    selectAnnotation={this.selectAnnotation}
                     determineVerseBars={this.determineVerseBars}
                     selectOverview={this.selectOverview}
                     selectSong={this.selectSong}
                     selectTips={this.selectTips}
                     selectVerse={this.selectVerse}
                     togglePlay={this.togglePlay}
-                />
-                <AnnotationManager
-                    setRef={this._setAnnotationManagerRef}
                 />
                 <AudioManager
                     setRef={this._setAudioManagerRef}
@@ -223,7 +211,6 @@ class ListenerContainer extends PureComponent {
                 <SongManager
                     setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
-                    selectAnnotation={this.selectAnnotation}
                     selectVerse={this.selectVerse}
                     updateSelectedPlayer={this.updateSelectedPlayer}
                 />
@@ -241,6 +228,9 @@ class ListenerContainer extends PureComponent {
                     getVerseElement={this.getVerseElement}
                 />
                 <LogHandler />
+                <RenderedListener />
+                <AnnotationListener />
+                <AnnotationAccessListener />
                 <CarouselNavListener />
                 <DoublespeakerListener />
                 <LyricExpandListener />
@@ -252,6 +242,7 @@ class ListenerContainer extends PureComponent {
                 <SliderListener />
                 <SongListener />
                 <WikiListener />
+                <WikiWormholeListener />
                 <WindowListener />
             </___>
         )

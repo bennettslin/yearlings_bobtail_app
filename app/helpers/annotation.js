@@ -13,13 +13,15 @@ import { COLUMN_INDEX } from 'constants/lyrics'
 
 export const shouldShowAnnotationForColumn = ({
     selectedSongIndex,
+    selectedAnnotationIndex,
     earColumnIndex,
-    annotationIndex,
     isEarShown
-
 }) => {
 
-    const annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
+    const annotation = getAnnotationObject(
+            selectedSongIndex,
+            selectedAnnotationIndex
+        ),
         columnIndex = annotation[COLUMN_INDEX],
 
         /**
@@ -145,8 +147,8 @@ export const getAnnotationIndexForDirection = ({
                 // Or if this annotation isn't in the shown column...
                 !shouldShowAnnotationForColumn({
                     selectedSongIndex,
-                    earColumnIndex: earColumnIndex,
-                    annotationIndex: returnIndex,
+                    selectedAnnotationIndex: returnIndex,
+                    earColumnIndex,
                     isEarShown
                 })) &&
 
@@ -228,8 +230,8 @@ export const getAnnotationIndexForVerseIndex = ({
             const annotation = getAnnotationObject(selectedSongIndex, returnIndex),
                 showAnnotationForColumn = shouldShowAnnotationForColumn({
                     selectedSongIndex,
-                    earColumnIndex: earColumnIndex,
-                    annotationIndex: returnIndex,
+                    selectedAnnotationIndex: returnIndex,
+                    earColumnIndex,
                     isEarShown
                 }),
                 doesIntersect = intersects(annotation.dotKeys, selectedDotKeys)
@@ -322,6 +324,6 @@ export const getWikiWormholeIndexForDirection = ({
         }
     }
 
-    // There are no valid anchor indices to return. This shouldn't happen.
+    // There are no valid anchor indices to return.
     return -1
 }

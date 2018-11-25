@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
+import { updateSongStore } from 'flux/song/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
@@ -47,6 +48,7 @@ class ToggleHandler extends PureComponent {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
+        updateSongStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -173,7 +175,7 @@ class ToggleHandler extends PureComponent {
 
         // Close annotation popup.
         } else if (props.selectedAnnotationIndex) {
-            eventHandlers.handleLyricAnnotationSelect(e)
+            this.props.updateSongStore({ selectedAnnotationIndex: 0 })
 
         // Collapse lyric
         } else if (props.isLyricExpanded) {
@@ -233,6 +235,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateSessionStore,
+        updateSongStore,
         updateToggleStore
     }, dispatch)
 )

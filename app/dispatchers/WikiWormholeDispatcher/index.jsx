@@ -33,8 +33,13 @@ class WikiWormholeDispatcher extends PureComponent {
                 selectedSongIndex,
                 selectedAnnotationIndex,
                 selectedDotKeys,
-                accessedWikiWormholeIndex: initialWikiWormholeIndex
+                accessedWikiWormholeIndex: defaultWikiWormholeIndex
             } = this.props,
+
+            initialWikiWormholeIndex =
+                defaultWikiWormholeIndex > -1 ?
+                    defaultWikiWormholeIndex :
+                    1,
 
             accessedWikiWormholeIndex =
                 getWikiWormholeIndexForDirection({
