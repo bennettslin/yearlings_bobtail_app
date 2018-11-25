@@ -193,7 +193,6 @@ class Live extends Component {
             lyricHandlers,
             mainColumnHandlers,
             menuFieldHandlers,
-            overviewPopupHandlers,
             theatreHandlers
         } = getOrganisedHandlersFromProps(this.props)
 
@@ -205,24 +204,17 @@ class Live extends Component {
                     sceneDidRender={this.sceneDidRender}
                     theatreDidRender={this.theatreDidRender}
                 />
-
                 <Main {...mainColumnHandlers}
                     mainDidRender={this.mainDidRender}
                     carouselDidRender={this.carouselDidRender}
                 />
-
-                <OverviewLogue
-                    overviewPopupHandlers={overviewPopupHandlers}
-                />
-
+                <OverviewLogue />
                 <Lyric {...lyricHandlers}
                     lyricDidRender={this.lyricDidRender}
                 />
-
                 <OverlayPopups
                     annotationPopupHandlers={annotationPopupHandlers}
                 />
-
                 <Menu {...menuFieldHandlers}
                     verseDidRender={this.verseDidRender}
                 />
@@ -265,7 +257,6 @@ Live.propTypes = {
     handleLyricWheel: PropTypes.func.isRequired,
     handleLyricAutoScroll: PropTypes.func.isRequired,
     handleLyricVerseSelect: PropTypes.func.isRequired,
-    handleOverviewToggle: PropTypes.func.isRequired,
     handleScrollUponLyricRender: PropTypes.func.isRequired,
     handleScrollUponCarouselRender: PropTypes.func.isRequired,
     handleTipsToggle: PropTypes.func.isRequired,

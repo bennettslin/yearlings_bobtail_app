@@ -12,7 +12,7 @@ import { ENTER } from 'constants/access'
 import { WORMHOLE_BUTTON_KEY } from 'constants/buttons'
 
 import {
-    LYRIC_COLUMN_KEYS,
+    EAR_COLUMN_KEYS,
     LYRIC,
     CENTRE
 } from 'constants/lyrics'
@@ -107,7 +107,7 @@ class AnnotationWormhole extends Component {
 
             songTitle = getSongTitle({ songIndex }),
             verseObject = getVerseObject(songIndex, verseIndex),
-            columnKey = LYRIC_COLUMN_KEYS[columnIndex],
+            columnKey = EAR_COLUMN_KEYS[columnIndex],
 
             text =
                 verseObject[LYRIC] ||

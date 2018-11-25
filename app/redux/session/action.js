@@ -1,5 +1,5 @@
 // Actions for session values.
-import { setIndexInStorage } from '../storageHelper'
+import { setInStorage } from '../storageHelper'
 
 import {
     hasKey,
@@ -8,7 +8,8 @@ import {
 
 import {
     SESSION_STORE,
-    SELECTED_AUDIO_OPTION_INDEX
+    SELECTED_AUDIO_OPTION_INDEX,
+    SELECTED_OVERVIEW_OPTION
 } from '../storeKeys'
 import { SESSION_DEFAULTS } from '../defaultStates'
 
@@ -16,11 +17,16 @@ export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
 
     const {
         selectedAudioOptionIndex,
+        selectedOverviewOption,
         selectedWikiIndex
     } = payload
 
     if (hasKey(selectedAudioOptionIndex)) {
-        setIndexInStorage(SELECTED_AUDIO_OPTION_INDEX, selectedAudioOptionIndex)
+        setInStorage(SELECTED_AUDIO_OPTION_INDEX, selectedAudioOptionIndex)
+    }
+
+    if (hasKey(selectedOverviewOption)) {
+        setInStorage(SELECTED_OVERVIEW_OPTION, selectedOverviewOption)
     }
 
     // If wiki is being reset, also reset related state.

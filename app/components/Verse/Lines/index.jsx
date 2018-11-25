@@ -10,7 +10,7 @@ import cx from 'classnames'
 import VerseLine from './Line'
 
 import {
-    LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC
+    EAR_COLUMN_KEYS, TITLE, CENTRE, LYRIC
 } from 'constants/lyrics'
 
 const verseLinesPropTypes = {
@@ -39,7 +39,7 @@ const verseLinesPropTypes = {
 
                 'fontSize__lyricMultipleColumns'
             )}>
-                {LYRIC_COLUMN_KEYS.map((doublespeakerKey, index) => (
+                {EAR_COLUMN_KEYS.map((doublespeakerKey, index) => (
                     <VerseLinesChild {...other}
                         key={index}
                         doublespeakerKey={doublespeakerKey}

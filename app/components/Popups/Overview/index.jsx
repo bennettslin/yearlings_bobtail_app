@@ -8,15 +8,17 @@ import cx from 'classnames'
 import Overview from '../../Overview'
 import Popup from '../../Popup'
 
+import { SHOWN } from 'constants/options'
+
 const mapStateToProps = ({
     sessionStore: {
-        selectedOverviewIndex,
+        selectedOverviewOption,
         selectedTipsIndex
     },
     renderStore: { canMainRender },
     renderedStore: { isRenderedLogue }
 }) => ({
-    selectedOverviewIndex,
+    selectedOverviewOption,
     selectedTipsIndex,
     canMainRender,
     isRenderedLogue
@@ -25,7 +27,7 @@ const mapStateToProps = ({
 const overviewPopupPropTypes = {
     // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
-        selectedOverviewIndex: PropTypes.number.isRequired,
+        selectedOverviewOption: PropTypes.string.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
 
@@ -42,7 +44,7 @@ const overviewPopupPropTypes = {
         inMain,
         isPhone,
         canMainRender,
-        selectedOverviewIndex,
+        selectedOverviewOption,
         isRenderedLogue,
         selectedTipsIndex,
 
@@ -59,7 +61,10 @@ const overviewPopupPropTypes = {
         if (isRenderedLogue) {
             isVisible = !inMain
         } else {
-            isVisible = selectedOverviewIndex ? false : Boolean(inMain)
+            isVisible =
+                selectedOverviewOption !== SHOWN ?
+                    false :
+                    Boolean(inMain)
         }
 
         /**

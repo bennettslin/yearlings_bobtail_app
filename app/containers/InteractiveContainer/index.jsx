@@ -45,7 +45,6 @@ class InteractiveContainer extends PureComponent {
         // TODO: Get rid of these eventually.
         // From parent.
         determineVerseBars: PropTypes.func.isRequired,
-        selectOverview: PropTypes.func.isRequired,
         selectTips: PropTypes.func.isRequired
     }
 
@@ -245,7 +244,6 @@ class InteractiveContainer extends PureComponent {
         const {
                 appMounted,
                 eventHandlers,
-                selectOverview,
                 selectTips,
                 selectVerse
             } = this.props,
@@ -287,7 +285,6 @@ class InteractiveContainer extends PureComponent {
                 <CloseListener
                     {...{
                         // TODO: Eventually listener should get all these through Redux.
-                        selectOverview,
                         selectTips
                     }}
                 />

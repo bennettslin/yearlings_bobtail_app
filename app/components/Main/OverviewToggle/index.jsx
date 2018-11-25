@@ -1,59 +1,69 @@
 // Toggle button to show, hide, and disable overview section.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
 import Button from '../../Button'
 
 import { OVERVIEW_TOGGLE_KEY } from 'constants/access'
 import { OVERVIEW_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    sessionStore: { selectedOverviewIndex }
+    sessionStore: { selectedOverviewOption }
 }) => ({
-    selectedOverviewIndex
+    selectedOverviewOption
 })
 
-const overviewToggleDefaultProps = {
-        isEnabled: true
-    },
+class OverviewToggle extends PureComponent {
 
-    overviewTogglePropTypes = {
-    // Through Redux.
-        selectedOverviewIndex: PropTypes.number.isRequired,
+    static defaultProps = {
+        isEnabled: true
+    }
+
+    static propTypes = {
+        // Through Redux.
+        selectedOverviewOption: PropTypes.string.isRequired,
 
         // From props.
         inLeftShelf: PropTypes.bool,
-        isEnabled: PropTypes.bool.isRequired,
-        handleOverviewToggle: PropTypes.func.isRequired
-    },
+        isEnabled: PropTypes.bool.isRequired
+    }
 
-    OverviewToggle = ({
+    handleOverviewClick = () => {
+        if (this.props.isEnabled) {
+            this.dispatchOverview({ isToggled: true })
+        }
+    }
 
-        inLeftShelf,
-        selectedOverviewIndex,
-        isEnabled,
-        handleOverviewToggle
+    render() {
+        const {
+            inLeftShelf,
+            selectedOverviewOption,
+            isEnabled
+        } = this.props
 
-    }) => (
-        <div className={cx(
-            'OverviewToggle',
-            inLeftShelf && 'LeftShelf__child'
-        )}>
-            <Button
-                isCustomSize
-                buttonName={OVERVIEW_BUTTON_KEY}
-                isDisabled={!isEnabled}
-                accessKey={OVERVIEW_TOGGLE_KEY}
-                buttonIdentifier={selectedOverviewIndex}
-                handleButtonClick={handleOverviewToggle}
-            />
-        </div>
-    )
-
-OverviewToggle.defaultProps = overviewToggleDefaultProps
-OverviewToggle.propTypes = overviewTogglePropTypes
+        return (
+            <div className={cx(
+                'OverviewToggle',
+                inLeftShelf && 'LeftShelf__child'
+            )}>
+                <Button
+                    isCustomSize
+                    {...{
+                        buttonName: OVERVIEW_BUTTON_KEY,
+                        isDisabled: !isEnabled,
+                        accessKey: OVERVIEW_TOGGLE_KEY,
+                        buttonIdentifier: selectedOverviewOption,
+                        handleButtonClick: this.handleOverviewClick
+                    }}
+                />
+                <OverviewDispatcher {...{ getDispatch: this }} />
+            </div>
+        )
+    }
+}
 
 export default connect(mapStateToProps)(OverviewToggle)

@@ -98,7 +98,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Refactor event handling!`,
+        taskName: `Refactor event handling! Include consolidating as much as possible in store.`,
         workedHours: 0,
         neededHours: 30
     },

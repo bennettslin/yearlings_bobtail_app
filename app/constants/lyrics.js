@@ -98,7 +98,7 @@ module.exports = {
         CENTRE
     ],
 
-    LYRIC_COLUMN_KEYS: [
+    EAR_COLUMN_KEYS: [
         LEFT,
         RIGHT
     ],

@@ -14,13 +14,10 @@ import {
 } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-import {
-    SHOWN,
-    OVERVIEW_OPTIONS
-} from 'constants/options'
+import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
-    sessionStore: { selectedOverviewIndex },
+    sessionStore: { selectedOverviewOption },
     deviceStore: { deviceIndex },
     renderStore: { canMainRender },
     renderedStore: {
@@ -28,7 +25,7 @@ const mapStateToProps = ({
         isRenderedLogue
     }
 }) => ({
-    selectedOverviewIndex,
+    selectedOverviewOption,
     deviceIndex,
     canMainRender,
     renderedSongIndex,
@@ -41,12 +38,9 @@ class Overview extends Component {
         // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
-        selectedOverviewIndex: PropTypes.number.isRequired,
+        selectedOverviewOption: PropTypes.string.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
-        isRenderedLogue: PropTypes.bool.isRequired,
-
-        // From parent.
-        handleOverviewToggle: PropTypes.func.isRequired
+        isRenderedLogue: PropTypes.bool.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -56,22 +50,10 @@ class Overview extends Component {
         })
     }
 
-    _handleOverviewToggle = (e) => {
-        // Prevent toggle from firing when not shown.
-        const {
-            selectedOverviewIndex,
-            handleOverviewToggle
-        } = this.props
-
-        if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
-            handleOverviewToggle(e)
-        }
-    }
-
     render() {
         const {
                 deviceIndex,
-                selectedOverviewIndex,
+                selectedOverviewOption,
                 renderedSongIndex,
                 isRenderedLogue
             } = this.props,
@@ -84,9 +66,7 @@ class Overview extends Component {
              * heightless lyric.
              */
             isToggleInOverview = !isRenderedLogue && getIsToggleInOverview(deviceIndex),
-            isEnabled =
-                OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN &&
-                !isRenderedLogue
+            isEnabled = selectedOverviewOption === SHOWN && !isRenderedLogue
 
         return (
             <div className={cx(
@@ -95,10 +75,7 @@ class Overview extends Component {
             )}>
                 {isToggleInOverview &&
                     <div className="Overview__toggleFloatContainer">
-                        <OverviewToggle
-                            isEnabled={isEnabled}
-                            handleOverviewToggle={this._handleOverviewToggle}
-                        />
+                        <OverviewToggle {...{ isEnabled }} />
                     </div>
                 }
                 <Texts

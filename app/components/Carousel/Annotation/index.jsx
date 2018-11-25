@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Annotation from '../../Annotation'
 import { CAROUSEL_SCROLL } from 'constants/dom'
-import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
+import { EAR_COLUMN_KEYS } from 'constants/lyrics'
 import { getAnnotationObject } from 'helpers/dataHelper'
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
@@ -93,7 +93,7 @@ class CarouselAnnotation extends Component {
                 dotKeys
             } = annotationObject,
 
-            columnKey = !isNaN(columnIndex) ? LYRIC_COLUMN_KEYS[columnIndex] : ''
+            columnKey = !isNaN(columnIndex) ? EAR_COLUMN_KEYS[columnIndex] : ''
 
         return (
             <CarouselAnnotationView {...other}

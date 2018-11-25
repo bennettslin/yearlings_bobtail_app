@@ -5,8 +5,7 @@ import PropTypes from 'prop-types'
 import {
     SHOWN,
     HIDDEN,
-    DISABLED,
-    OVERVIEW_OPTIONS
+    DISABLED
 } from 'constants/options'
 
 const
@@ -38,13 +37,12 @@ const
     DISABLED_ICON = ({
         className
     }) => (
-        <rect
+        <path
             {...{
                 className,
                 x: 0,
                 y: 0,
-                width: 100,
-                height: 100
+                d: 'M 50,0 L 100,50 L 50,100 L0,50 Z'
             }}
         />
     ),
@@ -55,17 +53,17 @@ const
     }
 
 const propTypes = {
-    buttonIdentifier: PropTypes.number.isRequired
+    buttonIdentifier: PropTypes.string.isRequired
 }
 
 const OverviewIcon = ({
 
-    buttonIdentifier: overviewIndex,
+    buttonIdentifier: overviewOption,
     className
 
 }) => {
     const
-        overviewOptionKey = OVERVIEW_OPTIONS[overviewIndex],
+        overviewOptionKey = overviewOption,
         IconComponent = OVERVIEW_MAP[overviewOptionKey]
 
     return (

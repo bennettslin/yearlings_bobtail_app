@@ -291,24 +291,6 @@ class EventContainer extends PureComponent {
         })
     }
 
-    /************
-     * OVERVIEW *
-     ************/
-
-    handleOverviewToggle = (e, justHideIfShown) => {
-        /**
-         * If from click, alternate between shown and disabled. If from keydown,
-         * cycle through all three options.
-         */
-        const clickToggle = e.type === 'click',
-            overviewToggled = this.props.selectOverview({
-                clickToggle,
-                justHideIfShown
-            })
-
-        return overviewToggled
-    }
-
     /********
      * TIPS *
      ********/
@@ -420,7 +402,6 @@ class EventContainer extends PureComponent {
 
     render() {
         const {
-            selectOverview,
             selectTips,
             determineVerseBars,
             selectVerse
@@ -432,7 +413,6 @@ class EventContainer extends PureComponent {
                     {...{
                         eventHandlers: getHandlers(this),
                         determineVerseBars,
-                        selectOverview,
                         selectTips,
                         selectVerse
                     }}

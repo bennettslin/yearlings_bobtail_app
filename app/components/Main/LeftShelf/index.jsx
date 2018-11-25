@@ -12,7 +12,6 @@ const propTypes = {
     // From parent.
         className: PropTypes.any,
         isPhone: PropTypes.bool,
-        handleOverviewToggle: PropTypes.func.isRequired,
         scoresTipsHandlers: PropTypes.object.isRequired
     },
 
@@ -20,7 +19,6 @@ const propTypes = {
 
         className,
         isPhone,
-        handleOverviewToggle,
         scoresTipsHandlers
 
     }) => (
@@ -30,12 +28,7 @@ const propTypes = {
             isPhone && 'absoluteFullContainer',
             className
         )}>
-            <OverviewToggle
-                inLeftShelf
-                {...{
-                    handleOverviewToggle
-                }}
-            />
+            <OverviewToggle inLeftShelf />
             <DotsSlideToggle />
             <ScoresTips {...scoresTipsHandlers}
                 inLeftShelf

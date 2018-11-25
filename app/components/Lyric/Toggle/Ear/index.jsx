@@ -10,7 +10,7 @@ import Button from '../../../Button'
 
 import { LYRIC_COLUMN_TOGGLE_KEY } from 'constants/access'
 import { LYRIC_EAR_BUTTON_KEY } from 'constants/buttons'
-import { LYRIC_COLUMN_KEYS } from 'constants/lyrics'
+import { EAR_COLUMN_KEYS } from 'constants/lyrics'
 
 const mapStateToProps = ({
     transientStore: { isEarShown },
@@ -50,7 +50,7 @@ class LyricToggleEar extends PureComponent {
                     {...{
                         buttonName: LYRIC_EAR_BUTTON_KEY,
                         buttonIdentifier:
-                        LYRIC_COLUMN_KEYS[earColumnIndex],
+                        EAR_COLUMN_KEYS[earColumnIndex],
                         accessKey: LYRIC_COLUMN_TOGGLE_KEY,
                         handleButtonClick: this.handleDoublespeakerClick
                     }}

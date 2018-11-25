@@ -22,7 +22,6 @@ class TipsManager extends PureComponent {
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        selectedOverviewIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
@@ -126,7 +125,6 @@ const mapStateToProps = ({
         isSelectedLogue
     },
     sessionStore: {
-        selectedOverviewIndex,
         selectedTipsIndex,
         selectedWikiIndex
     }
@@ -138,7 +136,6 @@ const mapStateToProps = ({
     isTitleShown,
     selectedAnnotationIndex,
     isSelectedLogue,
-    selectedOverviewIndex,
     selectedSongIndex,
     selectedTipsIndex,
     selectedWikiIndex

@@ -1,4 +1,7 @@
-// Listener for closing multiple sections.
+/**
+ * Listener for closing multiple sections. Because the logic is so similar for
+ * each section, it is better for dev clarity to keep them together.
+ */
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -11,7 +14,8 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import {
     SHOWN,
-    OVERVIEW_OPTIONS,
+    HIDDEN,
+    DISABLED,
     TIPS_OPTIONS
 } from '../../constants/options'
 
@@ -26,7 +30,7 @@ class CloseListener extends PureComponent {
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        selectedOverviewIndex: PropTypes.number.isRequired,
+        selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
@@ -36,7 +40,6 @@ class CloseListener extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        selectOverview: PropTypes.func.isRequired,
         selectTips: PropTypes.func.isRequired
     }
 
@@ -64,7 +67,8 @@ class CloseListener extends PureComponent {
                 exemptLyric: true,
 
                 // If overview is open when tips is open, leave overview open.
-                exemptOverview: !this.props.selectedTipsIndex
+                // exemptOverview: !this.props.selectedTipsIndex
+                exemptOverview: this.props.selectedOverviewOption === DISABLED // TODO: Figure this out.
             })
 
             this.props.updateEventStore({ bodyClicked: false })
@@ -129,10 +133,10 @@ class CloseListener extends PureComponent {
 
     _handleOverviewShown(prevProps) {
         const
-            { selectedOverviewIndex } = this.props,
-            { selectedOverviewIndex: prevOverviewIndex } = prevProps,
-            isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
-            wasOverviewShown = OVERVIEW_OPTIONS[prevOverviewIndex] === SHOWN
+            { selectedOverviewOption } = this.props,
+            { selectedOverviewOption: prevOverviewOption } = prevProps,
+            isOverviewShown = selectedOverviewOption === SHOWN,
+            wasOverviewShown = prevOverviewOption === SHOWN
 
         if (isOverviewShown && !wasOverviewShown) {
             this.closeSections({
@@ -232,6 +236,7 @@ class CloseListener extends PureComponent {
         const {
             isScoreShown,
             isTitleShown,
+            selectedOverviewOption,
             selectedWikiIndex
         } = this.props
 
@@ -272,9 +277,12 @@ class CloseListener extends PureComponent {
         }
 
         if (!exemptOverview) {
-            this.props.selectOverview({
-                justHideIfShown: true
-            })
+            // Just hide overview when opening other sections.
+            if (selectedOverviewOption === SHOWN) {
+                this.props.updateSessionStore({
+                    selectedOverviewOption: HIDDEN
+                })
+            }
         }
 
         if (!exemptTips) {
@@ -308,7 +316,7 @@ const mapStateToProps = ({
         isTitleShown
     },
     sessionStore: {
-        selectedOverviewIndex,
+        selectedOverviewOption,
         selectedTipsIndex,
         selectedWikiIndex,
         interactivatedVerseIndex
@@ -321,7 +329,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     isScoreShown,
     isTitleShown,
-    selectedOverviewIndex,
+    selectedOverviewOption,
     selectedTipsIndex,
     selectedWikiIndex,
     interactivatedVerseIndex

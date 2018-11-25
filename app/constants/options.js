@@ -1,5 +1,6 @@
 
-const CONTINUE = 'continue',
+const
+    CONTINUE = 'continue',
     REPEAT = 'repeat',
     PAUSE_AT_END = 'pauseAtEnd',
     SHOWN = 'shown',
@@ -21,13 +22,6 @@ module.exports = {
     SHOWN,
     HIDDEN,
     DISABLED,
-
-    // Order matters!
-    OVERVIEW_OPTIONS: [
-        SHOWN,
-        DISABLED,
-        HIDDEN
-    ],
 
     TIPS_OPTIONS: [
         SHOWN,

@@ -3,8 +3,11 @@
 import {
     getIndexFromStorage,
     getDotsFromStorage,
-    getBoolFromStorage
+    getBoolFromStorage,
+    getStringOptionFromStorage
 } from './storageHelper'
+
+import { SHOWN } from 'constants/options'
 
 import {
     getSongIsLogue,
@@ -21,7 +24,8 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
 
-    SELECTED_AUDIO_OPTION_INDEX
+    SELECTED_AUDIO_OPTION_INDEX,
+    SELECTED_OVERVIEW_OPTION
 } from './storeKeys'
 
 const
@@ -59,7 +63,8 @@ const
         selectedAudioOptionIndex:
             getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
         earColumnIndex: 0,
-        selectedOverviewIndex: 1,
+        selectedOverviewOption:
+            getStringOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
         selectedTipsIndex: 1,
         selectedWikiIndex: 0,
         selectedWikiUrl: ''

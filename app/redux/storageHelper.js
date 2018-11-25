@@ -12,12 +12,12 @@ import {
     ALL_DOT_KEYS,
     INITIAL_DOTS_BIT_NUMBER
 } from 'constants/dots'
+import { EAR_COLUMN_KEYS } from 'constants/lyrics'
 import {
-    LYRIC_COLUMN_KEYS
-} from 'constants/lyrics'
-import {
+    SHOWN,
+    HIDDEN,
+    DISABLED,
     AUDIO_OPTIONS,
-    OVERVIEW_OPTIONS,
     TIPS_OPTIONS
 } from 'constants/options'
 import { WINDOW_STORAGE } from 'constants/state'
@@ -31,7 +31,6 @@ import {
 
     SELECTED_AUDIO_OPTION_INDEX,
     SELECTED_EAR_COLUMN_INDEX,
-    SELECTED_OVERVIEW_INDEX,
     SELECTED_TIPS_INDEX
 } from './storeKeys'
 
@@ -78,10 +77,7 @@ const _validateIndexForKey = (key) => {
             isValid = isNumber && parsedValue < AUDIO_OPTIONS.length
             break
         case SELECTED_EAR_COLUMN_INDEX:
-            isValid = isNumber && parsedValue < LYRIC_COLUMN_KEYS.length
-            break
-        case SELECTED_OVERVIEW_INDEX:
-            isValid = isNumber && parsedValue < OVERVIEW_OPTIONS.length
+            isValid = isNumber && parsedValue < EAR_COLUMN_KEYS.length
             break
         case SELECTED_TIPS_INDEX:
             isValid = isNumber && parsedValue < TIPS_OPTIONS.length
@@ -96,7 +92,7 @@ const _validateIndexForKey = (key) => {
      */
     if (!isValid) {
         const defaultValue = 0
-        setIndexInStorage(key, defaultValue)
+        setInStorage(key, defaultValue)
         return defaultValue
 
     } else {
@@ -108,7 +104,7 @@ const getIndexFromStorage = (key) => {
     return _validateIndexForKey(key)
 }
 
-const setIndexInStorage = (key, value) => {
+const setInStorage = (key, value) => {
     WINDOW_STORAGE[key] = value
 }
 
@@ -124,7 +120,7 @@ const _getValidatedDotsBitNumber = () => {
 
     } else {
         // If invalid, reset in storage to default state.
-        setIndexInStorage(SELECTED_DOT_KEYS, INITIAL_DOTS_BIT_NUMBER)
+        setInStorage(SELECTED_DOT_KEYS, INITIAL_DOTS_BIT_NUMBER)
         return INITIAL_DOTS_BIT_NUMBER
     }
 }
@@ -154,7 +150,7 @@ const setDotInStorage = (key, value) => {
             value
         })
 
-    setIndexInStorage(SELECTED_DOT_KEYS, newBitNumber)
+    setInStorage(SELECTED_DOT_KEYS, newBitNumber)
 
     return newBitNumber
 }
@@ -175,13 +171,29 @@ const setBoolInStorage = (key, value) => {
     WINDOW_STORAGE[key] = value ? 'true' : 'false'
 }
 
+const getStringOptionFromStorage = (key) => {
+    const storedValue = WINDOW_STORAGE[key]
+
+    if (
+        storedValue === SHOWN ||
+        storedValue === HIDDEN ||
+        storedValue === DISABLED
+    ) {
+        return storedValue
+    } else {
+        return undefined
+    }
+}
+
 export {
     getIndexFromStorage,
-    setIndexInStorage,
+    setInStorage,
 
     getDotsFromStorage,
     setDotInStorage,
 
     getBoolFromStorage,
-    setBoolInStorage
+    setBoolInStorage,
+
+    getStringOptionFromStorage
 }

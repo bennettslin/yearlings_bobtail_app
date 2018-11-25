@@ -11,6 +11,7 @@ import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
 import LyricExpandDispatcher from '../../../dispatchers/LyricExpandDispatcher'
+import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
 import SceneDispatcher from '../../../dispatchers/SceneDispatcher'
 import ScoreDispatcher from '../../../dispatchers/ScoreDispatcher'
 import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
@@ -38,7 +39,7 @@ import {
 } from 'constants/access'
 import {
     SHOWN,
-    OVERVIEW_OPTIONS,
+    HIDDEN,
     TIPS_OPTIONS
 } from 'constants/options'
 
@@ -47,6 +48,14 @@ class ToggleHandler extends PureComponent {
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
+        isScoreShown: PropTypes.bool.isRequired,
+        isTitleShown: PropTypes.bool.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+        selectedOverviewOption: PropTypes.string.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedWikiIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
@@ -113,7 +122,7 @@ class ToggleHandler extends PureComponent {
                 keyWasRegistered = eventHandlers.handleLyricAutoScroll(e)
                 break
             case OVERVIEW_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleOverviewToggle(e)
+                keyWasRegistered = this.dispatchOverview()
                 break
             case SCENE_REWIND_KEY:
                 keyWasRegistered = this.dispatchScene(-1, selectVerse)
@@ -165,9 +174,8 @@ class ToggleHandler extends PureComponent {
             eventHandlers.handleTipsToggle(e, true)
 
         // Close overview popup.
-        } else if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] === SHOWN) {
-            // Just hide if shown.
-            eventHandlers.handleOverviewToggle(e, true)
+        } else if (props.selectedOverviewOption === SHOWN) {
+            this.dispatchOverview({ overviewOption: HIDDEN })
 
         // Close dots popup.
         } else if (props.isDotsSlideShown) {
@@ -196,6 +204,7 @@ class ToggleHandler extends PureComponent {
                 <DotsSlideDispatcher {...{ getDispatch: this }} />
                 <EarColumnDispatcher {...{ getDispatch: this }} />
                 <LyricExpandDispatcher {...{ getDispatch: this }} />
+                <OverviewDispatcher {...{ getDispatch: this }} />
                 <SceneDispatcher {...{ getDispatch: this }} />
                 <ScoreDispatcher {...{ getDispatch: this }} />
                 <TitleDispatcher {...{ getDispatch: this }} />
@@ -216,7 +225,7 @@ const mapStateToProps = ({
         selectedAnnotationIndex
     },
     sessionStore: {
-        selectedOverviewIndex,
+        selectedOverviewOption,
         selectedTipsIndex,
         selectedWikiIndex
     }
@@ -227,7 +236,7 @@ const mapStateToProps = ({
     isScoreShown,
     isTitleShown,
     selectedAnnotationIndex,
-    selectedOverviewIndex,
+    selectedOverviewOption,
     selectedTipsIndex,
     selectedWikiIndex
 })

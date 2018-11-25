@@ -44,7 +44,6 @@ class Main extends Component {
         carouselSectionHandlers: PropTypes.object.isRequired,
         leftShelfToggleSectionHandlers: PropTypes.object.isRequired,
         navSectionHandlers: PropTypes.object.isRequired,
-        overviewPopupHandlers: PropTypes.object.isRequired,
         tipsPopupHandlers: PropTypes.object.isRequired,
         scoresTipsHandlers: PropTypes.object.isRequired,
 
@@ -72,14 +71,11 @@ class Main extends Component {
     render() {
         const {
                 deviceIndex,
-
                 handleCarouselNavToggle,
-
                 annotationPopupHandlers,
                 carouselSectionHandlers,
                 leftShelfToggleSectionHandlers,
                 navSectionHandlers,
-                overviewPopupHandlers,
                 scoresTipsHandlers,
                 tipsPopupHandlers,
 
@@ -118,9 +114,11 @@ class Main extends Component {
                         scoresTipsHandlers={scoresTipsHandlers}
                     />
 
-                    <OverviewPopup {...overviewPopupHandlers}
+                    <OverviewPopup
                         inMain
-                        isPhone={isPhone}
+                        {...{
+                            isPhone
+                        }}
                     />
                 </div>
 

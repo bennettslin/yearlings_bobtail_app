@@ -7,7 +7,6 @@ import cx from 'classnames'
 
 import {
     SHOWN,
-    OVERVIEW_OPTIONS,
     TIPS_OPTIONS
 } from 'constants/options'
 
@@ -47,7 +46,7 @@ class RemainderWrapper extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
-        selectedOverviewIndex: PropTypes.number.isRequired,
+        selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
 
         isEarShown: PropTypes.bool.isRequired,
@@ -71,7 +70,7 @@ class RemainderWrapper extends PureComponent {
                 selectedDotKeys,
                 isDotsSlideShown,
                 earColumnIndex,
-                selectedOverviewIndex,
+                selectedOverviewOption,
                 selectedTipsIndex,
                 isPlaying,
                 isSliderTouched,
@@ -99,7 +98,7 @@ class RemainderWrapper extends PureComponent {
                 earColumnIndex
             }),
 
-            overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
+            overviewShown = selectedOverviewOption === SHOWN,
             tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
 
             areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
@@ -232,7 +231,7 @@ const mapStateToProps = ({
     sessionStore: {
         interactivatedVerseIndex,
         earColumnIndex,
-        selectedOverviewIndex,
+        selectedOverviewOption,
         selectedTipsIndex
     },
     audioStore: { isPlaying },
@@ -285,7 +284,7 @@ const mapStateToProps = ({
     selectedDotKeys,
     isDotsSlideShown,
     earColumnIndex,
-    selectedOverviewIndex,
+    selectedOverviewOption,
     selectedTipsIndex,
     isEarShown,
     isPlaying,
