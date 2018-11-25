@@ -2,6 +2,16 @@ module.exports = [
 
     /** Quick fixes, hopefully. */
     {
+        taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Fix bug where go-kart presences have duplicate keys.`,
         workedHours: 0,
         neededHours: 2

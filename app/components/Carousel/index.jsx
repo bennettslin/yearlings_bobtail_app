@@ -202,9 +202,11 @@ class Carousel extends PureComponent {
                         return (
                             <CarouselAnnotation {...other}
                                 key={index}
-                                annotationIndex={annotationIndex}
-                                isAccessed={isAccessed}
-                                isSelected={isSelected}
+                                {...{
+                                    annotationIndex,
+                                    isAccessed,
+                                    isSelected
+                                }}
                             />
                         )
                     })}
@@ -212,8 +214,10 @@ class Carousel extends PureComponent {
                 </div>
 
                 <CarouselSelect
-                    handleAnnotationPrevious={handleAnnotationPrevious}
-                    handleAnnotationNext={handleAnnotationNext}
+                    {...{
+                        handleAnnotationPrevious,
+                        handleAnnotationNext
+                    }}
                 />
             </div>
         )

@@ -120,6 +120,7 @@ class RemainderWrapper extends PureComponent {
             <div
                 {...{
                     className: cx(
+                        'RemainderWrapper',
                         accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`,
 
                         /**

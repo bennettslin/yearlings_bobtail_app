@@ -28,10 +28,12 @@
  * Override if hidden by single lyric column. Using specific selectors to
  * override styles for mini width as well.
  */
-.Root.RM__rightEarColumnOnly
-    .CarouselAnnotation__inEarColumn__left,
-.Root.RM__leftEarColumnOnly
-    .CarouselAnnotation__inEarColumn__right {
+.DeviceWrapper
+.RM__rightEarColumnOnly
+.CarouselAnnotation__inEarColumn__left,
+.DeviceWrapper
+.RM__leftEarColumnOnly
+.CarouselAnnotation__inEarColumn__right {
 
     min-width: 0;
     opacity: 0;
