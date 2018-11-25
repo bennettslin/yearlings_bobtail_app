@@ -12,8 +12,7 @@ import {
 } from './helper'
 
 import {
-    SHOWN,
-    TIPS_OPTIONS
+    SHOWN
 } from 'constants/options'
 
 class OverlayListener extends PureComponent {
@@ -28,7 +27,7 @@ class OverlayListener extends PureComponent {
         isRenderedLogue: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedTipsOption: PropTypes.string.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         updateTransientStore: PropTypes.func.isRequired
     }
@@ -46,7 +45,7 @@ class OverlayListener extends PureComponent {
             isScoreShown,
             isTitleShown,
             selectedOverviewOption,
-            selectedTipsIndex,
+            selectedTipsOption,
             selectedWikiIndex,
             interactivatedVerseIndex
         } = this.props
@@ -66,7 +65,7 @@ class OverlayListener extends PureComponent {
             }),
 
             overviewShown = selectedOverviewOption === SHOWN,
-            tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
+            tipsShown = selectedTipsOption === SHOWN,
 
             isCarouselNavShowable =
                 !isOverlayShown &&
@@ -102,7 +101,7 @@ const mapStateToProps = ({
     sessionStore: {
         interactivatedVerseIndex,
         selectedOverviewOption,
-        selectedTipsIndex,
+        selectedTipsOption,
         selectedWikiIndex
     }
 }) => ({
@@ -114,7 +113,7 @@ const mapStateToProps = ({
     isRenderedLogue,
     interactivatedVerseIndex,
     selectedOverviewOption,
-    selectedTipsIndex,
+    selectedTipsOption,
     selectedWikiIndex
 })
 

@@ -12,6 +12,7 @@ import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
 import LyricExpandDispatcher from '../../../dispatchers/LyricExpandDispatcher'
 import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
+import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
 import SceneDispatcher from '../../../dispatchers/SceneDispatcher'
 import ScoreDispatcher from '../../../dispatchers/ScoreDispatcher'
 import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
@@ -39,8 +40,7 @@ import {
 } from 'constants/access'
 import {
     SHOWN,
-    HIDDEN,
-    TIPS_OPTIONS
+    HIDDEN
 } from 'constants/options'
 
 class ToggleHandler extends PureComponent {
@@ -54,7 +54,7 @@ class ToggleHandler extends PureComponent {
         isTitleShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedTipsOption: PropTypes.string.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
@@ -134,7 +134,7 @@ class ToggleHandler extends PureComponent {
                 keyWasRegistered = this.dispatchScore()
                 break
             case TIPS_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleTipsToggle(e)
+                keyWasRegistered = this.dispatchTips()
                 break
             case TITLE_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchTitle()
@@ -152,41 +152,38 @@ class ToggleHandler extends PureComponent {
         }
     }
 
-    handleEscape = (e) => {
-        const { props } = this,
-            { eventHandlers } = props
+    handleEscape = () => {
 
         // Close score popup.
-        if (props.isScoreShown) {
+        if (this.props.isScoreShown) {
             this.dispatchScore(false)
 
         // Close title popup.
-        } else if (props.isTitleShown) {
+        } else if (this.props.isTitleShown) {
             this.dispatchTitle(false)
 
         // Close wiki popup.
-        } else if (props.selectedWikiIndex) {
+        } else if (this.props.selectedWikiIndex) {
             this.props.updateSessionStore({ selectedWikiIndex: 0 })
 
         // Close tips popup.
-        } else if (TIPS_OPTIONS[props.selectedTipsIndex] === SHOWN) {
-            // Just hide if shown.
-            eventHandlers.handleTipsToggle(e, true)
+        } else if (this.props.selectedTipsOption === SHOWN) {
+            this.dispatchTips({ tipsOption: HIDDEN })
 
         // Close overview popup.
-        } else if (props.selectedOverviewOption === SHOWN) {
+        } else if (this.props.selectedOverviewOption === SHOWN) {
             this.dispatchOverview({ overviewOption: HIDDEN })
 
         // Close dots popup.
-        } else if (props.isDotsSlideShown) {
+        } else if (this.props.isDotsSlideShown) {
             this.dispatchDotsSlide(false)
 
         // Close annotation popup.
-        } else if (props.selectedAnnotationIndex) {
+        } else if (this.props.selectedAnnotationIndex) {
             this.props.updateSongStore({ selectedAnnotationIndex: 0 })
 
         // Collapse lyric
-        } else if (props.isLyricExpanded) {
+        } else if (this.props.isLyricExpanded) {
             this.dispatchLyricExpand(false)
 
         // Turn access off.
@@ -205,6 +202,7 @@ class ToggleHandler extends PureComponent {
                 <EarColumnDispatcher {...{ getDispatch: this }} />
                 <LyricExpandDispatcher {...{ getDispatch: this }} />
                 <OverviewDispatcher {...{ getDispatch: this }} />
+                <TipsDispatcher {...{ getDispatch: this }} />
                 <SceneDispatcher {...{ getDispatch: this }} />
                 <ScoreDispatcher {...{ getDispatch: this }} />
                 <TitleDispatcher {...{ getDispatch: this }} />
@@ -226,7 +224,7 @@ const mapStateToProps = ({
     },
     sessionStore: {
         selectedOverviewOption,
-        selectedTipsIndex,
+        selectedTipsOption,
         selectedWikiIndex
     }
 }) => ({
@@ -237,7 +235,7 @@ const mapStateToProps = ({
     isTitleShown,
     selectedAnnotationIndex,
     selectedOverviewOption,
-    selectedTipsIndex,
+    selectedTipsOption,
     selectedWikiIndex
 })
 

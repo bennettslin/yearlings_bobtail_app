@@ -17,8 +17,7 @@ import {
     SHOWN,
     HIDDEN,
     DISABLED,
-    AUDIO_OPTIONS,
-    TIPS_OPTIONS
+    AUDIO_OPTIONS
 } from 'constants/options'
 import { WINDOW_STORAGE } from 'constants/state'
 
@@ -30,8 +29,7 @@ import {
     SELECTED_ANNOTATION_INDEX,
 
     SELECTED_AUDIO_OPTION_INDEX,
-    SELECTED_EAR_COLUMN_INDEX,
-    SELECTED_TIPS_INDEX
+    SELECTED_EAR_COLUMN_INDEX
 } from './storeKeys'
 
 const _getValidatedStoredSong = () => {
@@ -78,9 +76,6 @@ const _validateIndexForKey = (key) => {
             break
         case SELECTED_EAR_COLUMN_INDEX:
             isValid = isNumber && parsedValue < EAR_COLUMN_KEYS.length
-            break
-        case SELECTED_TIPS_INDEX:
-            isValid = isNumber && parsedValue < TIPS_OPTIONS.length
             break
 
         default:

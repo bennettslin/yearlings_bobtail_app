@@ -14,9 +14,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import {
     SHOWN,
-    HIDDEN,
-    DISABLED,
-    TIPS_OPTIONS
+    HIDDEN
 } from '../../constants/options'
 
 class CloseListener extends PureComponent {
@@ -31,16 +29,13 @@ class CloseListener extends PureComponent {
         isTitleShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedTipsOption: PropTypes.string.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         updateEventStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
-
-        // From parent.
-        selectTips: PropTypes.func.isRequired
+        updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -51,10 +46,10 @@ class CloseListener extends PureComponent {
         this._handleLyricExpand(prevProps)
         this._handleOverviewShown(prevProps)
         this._handleTipsShown(prevProps)
+        this._handleVerseInteractivate(prevProps)
         this._handleScoreOpen(prevProps)
         this._handleTitleOpen(prevProps)
         this._handleWikiSelect(prevProps)
-        this._handleVerseInteractivate(prevProps)
     }
 
     _handleBodyClick(prevProps) {
@@ -66,9 +61,9 @@ class CloseListener extends PureComponent {
             this.closeSections({
                 exemptLyric: true,
 
-                // If overview is open when tips is open, leave overview open.
-                // exemptOverview: !this.props.selectedTipsIndex
-                exemptOverview: this.props.selectedOverviewOption === DISABLED // TODO: Figure this out.
+                // If clicking to dismiss tips, leave overview shown.
+                exemptOverview: this.props.selectedTipsOption === SHOWN
+
             })
 
             this.props.updateEventStore({ bodyClicked: false })
@@ -81,7 +76,8 @@ class CloseListener extends PureComponent {
             { selectedAnnotationIndex: prevAnnotationIndex } = prevProps
 
         if (selectedAnnotationIndex && !prevAnnotationIndex) {
-            this.closeSections({
+            this.closeOverlayPopups()
+            this.closeMainSections({
                 exemptAnnotation: true,
                 exemptLyric: true
             })
@@ -94,11 +90,11 @@ class CloseListener extends PureComponent {
             { isCarouselShown: wasCarouselShown } = prevProps
 
         if (isCarouselShown !== wasCarouselShown) {
-            this.closeSections({
+            this.closeOverlayPopups()
+            this.closeMainSections({
                 exemptAnnotation: true,
                 exemptDots: true,
-                exemptInteractivatedVerse: true,
-                continuePastClosingPopups: true
+                exemptInteractivatedVerse: true
             })
         }
     }
@@ -109,9 +105,9 @@ class CloseListener extends PureComponent {
             { isDotsSlideShown: wasDotsSlideShown } = prevProps
 
         if (isDotsSlideShown && !wasDotsSlideShown) {
-            this.closeSections({
-                exemptDots: true,
-                continuePastClosingPopups: true
+            this.closeOverlayPopups()
+            this.closeMainSections({
+                exemptDots: true
             })
         }
     }
@@ -122,11 +118,11 @@ class CloseListener extends PureComponent {
             { isLyricExpanded: wasLyricExpanded } = prevProps
 
         if (isLyricExpanded && !wasLyricExpanded) {
-            this.closeSections({
+            this.closeOverlayPopups()
+            this.closeMainSections({
                 // Continue to show selected annotation in overlay.
                 exemptAnnotation: true,
-                exemptLyric: true,
-                continuePastClosingPopups: true
+                exemptLyric: true
             })
         }
     }
@@ -139,64 +135,23 @@ class CloseListener extends PureComponent {
             wasOverviewShown = prevOverviewOption === SHOWN
 
         if (isOverviewShown && !wasOverviewShown) {
-            this.closeSections({
-                exemptOverview: true,
-                continuePastClosingPopups: true
+            this.closeMainSections({
+                exemptOverview: true
             })
         }
     }
 
     _handleTipsShown(prevProps) {
         const
-            { selectedTipsIndex } = this.props,
-            { selectedTipsIndex: prevTipsIndex } = prevProps,
-            isTipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
-            wasTipsShown = TIPS_OPTIONS[prevTipsIndex] === SHOWN
+            { selectedTipsOption } = this.props,
+            { selectedTipsOption: prevTipsOption } = prevProps,
+            isTipsShown = selectedTipsOption === SHOWN,
+            wasTipsShown = prevTipsOption === SHOWN
 
         if (isTipsShown && !wasTipsShown) {
-            this.closeSections({
+            this.closeMainSections({
                 exemptOverview: true,
-                exemptTips: true,
-                continuePastClosingPopups: true
-            })
-        }
-    }
-
-    _handleScoreOpen(prevProps) {
-        const
-            { isScoreShown } = this.props,
-            { isScoreShown: wasScoreShown } = prevProps
-
-        if (isScoreShown && !wasScoreShown) {
-            this.closeSections({
-                justClosePopups: true,
-                exemptScore: true
-            })
-        }
-    }
-
-    _handleTitleOpen(prevProps) {
-        const
-            { isTitleShown } = this.props,
-            { isTitleShown: wasTitleShown } = prevProps
-
-        if (isTitleShown && !wasTitleShown) {
-            this.closeSections({
-                justClosePopups: true,
-                exemptTitle: true
-            })
-        }
-    }
-
-    _handleWikiSelect(prevProps) {
-        const
-            { selectedWikiIndex } = this.props,
-            { selectedWikiIndex: prevWikiIndex } = prevProps
-
-        if (selectedWikiIndex && !prevWikiIndex) {
-            this.closeSections({
-                justClosePopups: true,
-                exemptWiki: true
+                exemptTips: true
             })
         }
     }
@@ -207,13 +162,118 @@ class CloseListener extends PureComponent {
             { interactivatedVerseIndex: prevVerseIndex } = prevProps
 
         if (interactivatedVerseIndex > -1 && prevVerseIndex === -1) {
-            this.closeSections({
+            this.closeOverlayPopups()
+            this.closeMainSections({
                 exemptInteractivatedVerse: true,
                 exemptDots: true,
                 exemptLyric: true,
                 exemptOverview: true,
                 exemptTips: true
             })
+        }
+    }
+
+    _handleScoreOpen(prevProps) {
+        const
+            { isScoreShown } = this.props,
+            { isScoreShown: wasScoreShown } = prevProps
+
+        if (isScoreShown && !wasScoreShown) {
+            this.closeOverlayPopups({ exemptScore: true })
+            this.closeMainSections()
+        }
+    }
+
+    _handleTitleOpen(prevProps) {
+        const
+            { isTitleShown } = this.props,
+            { isTitleShown: wasTitleShown } = prevProps
+
+        if (isTitleShown && !wasTitleShown) {
+            this.closeOverlayPopups({ exemptTitle: true })
+            this.closeMainSections()
+        }
+    }
+
+    _handleWikiSelect(prevProps) {
+        const
+            { selectedWikiIndex } = this.props,
+            { selectedWikiIndex: prevWikiIndex } = prevProps
+
+        if (selectedWikiIndex && !prevWikiIndex) {
+            this.closeOverlayPopups({ exemptWiki: true })
+            this.closeMainSections()
+        }
+    }
+
+    closeOverlayPopups({
+        exemptScore,
+        exemptTitle,
+        exemptWiki
+    } = {}) {
+        const {
+            isScoreShown,
+            isTitleShown,
+            selectedWikiIndex
+        } = this.props
+
+        // If popup is open, close it and do nothing else.
+        if (selectedWikiIndex && !exemptWiki) {
+            this.props.updateSessionStore({ selectedWikiIndex: 0 })
+
+        } else if (isScoreShown && !exemptScore) {
+            this.props.updateToggleStore({ isScoreShown: false })
+
+        } else if (isTitleShown && !exemptTitle) {
+            this.props.updateToggleStore({ isTitleShown: false })
+        }
+    }
+
+    closeMainSections({
+        exemptAnnotation,
+        exemptDots,
+        exemptLyric,
+        exemptOverview,
+        exemptTips,
+        exemptInteractivatedVerse
+    } = {}) {
+        const {
+            selectedOverviewOption,
+            selectedTipsOption
+        } = this.props
+
+        if (!exemptAnnotation) {
+            this.props.updateSongStore({ selectedAnnotationIndex: 0 })
+        }
+
+        if (!exemptDots) {
+            this.props.updateToggleStore({ isDotsSlideShown: false })
+        }
+
+        if (!exemptLyric) {
+            this.props.updateToggleStore({ isLyricExpanded: false })
+        }
+
+        if (!exemptOverview) {
+            // Just hide overview when opening other sections.
+            if (selectedOverviewOption === SHOWN) {
+                this.props.updateSessionStore({
+                    selectedOverviewOption: HIDDEN
+                })
+            }
+        }
+
+        if (!exemptTips) {
+            // Just hide tips when opening other sections.
+            if (selectedTipsOption === SHOWN) {
+                this.props.updateSessionStore({
+                    selectedTipsOption: HIDDEN
+                })
+            }
+        }
+
+        if (!exemptInteractivatedVerse) {
+            this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
         }
     }
 
@@ -237,6 +297,7 @@ class CloseListener extends PureComponent {
             isScoreShown,
             isTitleShown,
             selectedOverviewOption,
+            selectedTipsOption,
             selectedWikiIndex
         } = this.props
 
@@ -286,9 +347,12 @@ class CloseListener extends PureComponent {
         }
 
         if (!exemptTips) {
-            this.props.selectTips({
-                justHideIfShown: true
-            })
+            // Just hide tips when opening other sections.
+            if (selectedTipsOption === SHOWN) {
+                this.props.updateSessionStore({
+                    selectedTipsOption: HIDDEN
+                })
+            }
         }
 
         if (!exemptInteractivatedVerse) {
@@ -317,7 +381,7 @@ const mapStateToProps = ({
     },
     sessionStore: {
         selectedOverviewOption,
-        selectedTipsIndex,
+        selectedTipsOption,
         selectedWikiIndex,
         interactivatedVerseIndex
     }
@@ -330,7 +394,7 @@ const mapStateToProps = ({
     isScoreShown,
     isTitleShown,
     selectedOverviewOption,
-    selectedTipsIndex,
+    selectedTipsOption,
     selectedWikiIndex,
     interactivatedVerseIndex
 })

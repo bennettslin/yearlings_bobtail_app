@@ -6,46 +6,47 @@ import { connect } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
 
+import { SHOWN } from 'constants/options'
+
 const mapStateToProps = ({
     renderStore: { canMainRender },
     renderedStore: { isRenderedLogue },
-    sessionStore: { selectedTipsIndex }
+    sessionStore: { selectedTipsOption }
 }) => ({
     canMainRender,
     isRenderedLogue,
-    selectedTipsIndex
+    selectedTipsOption
 })
 
 const tipsPopupPropTypes = {
     // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired
+        selectedTipsOption: PropTypes.string.isRequired
     },
 
     TipsPopup = ({
-    /* eslint-disable no-unused-vars */
-        dispatch,
-        /* eslint-enable no-unused-vars */
-
         canMainRender,
         isRenderedLogue,
-        selectedTipsIndex,
-
-        ...other
+        selectedTipsOption
     }) => {
 
-        const isVisible = canMainRender && !isRenderedLogue && !selectedTipsIndex
+        const isVisible =
+            canMainRender &&
+            !isRenderedLogue &&
+            selectedTipsOption === SHOWN
 
         return (
             <Popup
                 isCardSize
                 bounceAnimate
                 hasNarrowPadding
-                popupName="Tips"
-                isVisible={isVisible}
+                {...{
+                    popupName: 'Tips',
+                    isVisible
+                }}
             >
-                <Tips {...other} />
+                <Tips />
             </Popup>
         )
     }

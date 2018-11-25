@@ -10,20 +10,15 @@ import Texts from '../Texts'
 
 import { getSongTip } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-import {
-    SHOWN, TIPS_OPTIONS
-} from 'constants/options'
 
 const mapStateToProps = ({
     renderStore: { canMainRender },
     renderedStore: { renderedSongIndex },
-    responsiveStore: { isScoresTipsInMain },
-    sessionStore: { selectedTipsIndex }
+    responsiveStore: { isScoresTipsInMain }
 }) => ({
     canMainRender,
     renderedSongIndex,
-    isScoresTipsInMain,
-    selectedTipsIndex
+    isScoresTipsInMain
 })
 
 class Tips extends Component {
@@ -32,11 +27,7 @@ class Tips extends Component {
         // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
-        isScoresTipsInMain: PropTypes.bool.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        handleTipsToggle: PropTypes.func.isRequired
+        isScoresTipsInMain: PropTypes.bool.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -46,27 +37,13 @@ class Tips extends Component {
         })
     }
 
-    _handleTipsToggle = (e) => {
-        // Prevent toggle from firing when not shown.
-        const {
-            selectedTipsIndex,
-            handleTipsToggle
-        } = this.props
-
-        if (TIPS_OPTIONS[selectedTipsIndex] === SHOWN) {
-            handleTipsToggle(e)
-        }
-    }
-
     render() {
         const {
                 renderedSongIndex,
-                selectedTipsIndex,
                 isScoresTipsInMain
             } = this.props,
 
-            tipText = getSongTip(renderedSongIndex),
-            isEnabled = TIPS_OPTIONS[selectedTipsIndex] === SHOWN
+            tipText = getSongTip(renderedSongIndex)
 
         return (
             <div className={cx(
@@ -76,15 +53,9 @@ class Tips extends Component {
                     'Tips__textContainer',
                     'fontSize__verse'
                 )}>
-
                     {isScoresTipsInMain && (
                         <div className="Tips__toggleFloatContainer">
-                            <TipsToggle
-                                {...{
-                                    isEnabled,
-                                    handleTipsToggle: this._handleTipsToggle
-                                }}
-                            />
+                            <TipsToggle />
                         </div>
                     )}
 
@@ -95,7 +66,6 @@ class Tips extends Component {
                             }}
                         />
                     )}
-
                 </div>
 
                 <div className="Tips__imageContainer">

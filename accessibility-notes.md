@@ -161,7 +161,7 @@
     * "s" to access songs section
     * "p" to toggle "isPlaying"
     * "o" to toggle "audioOptionIndex"
-    * "t" to toggle "selectedTipsIndex"
+    * "t" to toggle "selectedTipsOption"
     * "z" to toggle "selectedOverviewOption"
     * "x" to expand lyric section
     * "m" to toggle admin field. This won't be possible live, of course.

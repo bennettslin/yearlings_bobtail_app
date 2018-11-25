@@ -10,13 +10,13 @@ import {
     HIDDEN
 } from 'constants/options'
 
-class OverviewListener extends PureComponent {
+class TipsListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedOverviewOption: PropTypes.string.isRequired,
+        selectedTipsOption: PropTypes.string.isRequired,
         updateSessionStore: PropTypes.func.isRequired
     }
 
@@ -28,20 +28,16 @@ class OverviewListener extends PureComponent {
         if (selectedSongIndex !== prevSongIndex) {
             const {
                 isSelectedLogue,
-                selectedOverviewOption
+                selectedTipsOption
             } = this.props
 
-            // If just hidden, show overview when now in new song.
-            if (!isSelectedLogue && selectedOverviewOption === HIDDEN) {
-                this.props.updateSessionStore({
-                    selectedOverviewOption: SHOWN
-                })
+            // If just hidden, show tips for new song.
+            if (!isSelectedLogue && selectedTipsOption === HIDDEN) {
+                this.props.updateSessionStore({ selectedTipsOption: SHOWN })
 
             // If shown, hide when now in logue.
-            } else if (isSelectedLogue && selectedOverviewOption === SHOWN) {
-                this.props.updateSessionStore({
-                    selectedOverviewOption: HIDDEN
-                })
+            } else if (isSelectedLogue && selectedTipsOption === SHOWN) {
+                this.props.updateSessionStore({ selectedTipsOption: HIDDEN })
             }
         }
     }
@@ -56,10 +52,10 @@ const mapStateToProps = ({
         isSelectedLogue,
         selectedSongIndex
     },
-    sessionStore: { selectedOverviewOption }
+    sessionStore: { selectedTipsOption }
 }) => ({
     isSelectedLogue,
-    selectedOverviewOption,
+    selectedTipsOption,
     selectedSongIndex
 })
 
@@ -69,4 +65,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(OverviewListener)
+export default connect(mapStateToProps, bindDispatchToProps)(TipsListener)

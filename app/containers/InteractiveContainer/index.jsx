@@ -20,14 +20,12 @@ const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
     sliderStore: { isSliderTouched },
-    toggleStore: { isLyricExpanded },
-    sessionStore: { selectedTipsIndex }
+    toggleStore: { isLyricExpanded }
 }) => ({
     appMounted,
     isHiddenLyric,
     isSliderTouched,
-    isLyricExpanded,
-    selectedTipsIndex
+    isLyricExpanded
 })
 
 class InteractiveContainer extends PureComponent {
@@ -38,14 +36,12 @@ class InteractiveContainer extends PureComponent {
         isHiddenLyric: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
         updateEventStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // TODO: Get rid of these eventually.
         // From parent.
-        determineVerseBars: PropTypes.func.isRequired,
-        selectTips: PropTypes.func.isRequired
+        determineVerseBars: PropTypes.func.isRequired
     }
 
     state = {
@@ -244,7 +240,6 @@ class InteractiveContainer extends PureComponent {
         const {
                 appMounted,
                 eventHandlers,
-                selectTips,
                 selectVerse
             } = this.props,
 
@@ -282,12 +277,7 @@ class InteractiveContainer extends PureComponent {
                         selectVerse
                     }}
                 />
-                <CloseListener
-                    {...{
-                        // TODO: Eventually listener should get all these through Redux.
-                        selectTips
-                    }}
-                />
+                <CloseListener />
                 <RootContainer
                     {...{
                         // TODO: Eventually get rid of eventHandlers object.

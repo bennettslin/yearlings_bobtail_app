@@ -5,10 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import {
-    SHOWN,
-    TIPS_OPTIONS
-} from 'constants/options'
+import { SHOWN } from 'constants/options'
 
 import { PARENT_ACCESS_PREFIX } from 'constants/prefixes'
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
@@ -47,7 +44,7 @@ class RemainderWrapper extends PureComponent {
         selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedTipsOption: PropTypes.string.isRequired,
 
         isEarShown: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
@@ -71,7 +68,7 @@ class RemainderWrapper extends PureComponent {
                 isDotsSlideShown,
                 earColumnIndex,
                 selectedOverviewOption,
-                selectedTipsIndex,
+                selectedTipsOption,
                 isPlaying,
                 isSliderTouched,
                 isSliderMoving,
@@ -99,7 +96,7 @@ class RemainderWrapper extends PureComponent {
             }),
 
             overviewShown = selectedOverviewOption === SHOWN,
-            tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
+            tipsShown = selectedTipsOption === SHOWN,
 
             areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
 
@@ -232,7 +229,7 @@ const mapStateToProps = ({
         interactivatedVerseIndex,
         earColumnIndex,
         selectedOverviewOption,
-        selectedTipsIndex
+        selectedTipsOption
     },
     audioStore: { isPlaying },
     dotsStore: {
@@ -285,7 +282,7 @@ const mapStateToProps = ({
     isDotsSlideShown,
     earColumnIndex,
     selectedOverviewOption,
-    selectedTipsIndex,
+    selectedTipsOption,
     isEarShown,
     isPlaying,
     canCarouselRender,

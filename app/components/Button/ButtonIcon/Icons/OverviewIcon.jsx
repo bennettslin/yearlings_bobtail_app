@@ -58,12 +58,11 @@ const propTypes = {
 
 const OverviewIcon = ({
 
-    buttonIdentifier: overviewOption,
+    buttonIdentifier: overviewOptionKey,
     className
 
 }) => {
     const
-        overviewOptionKey = overviewOption,
         IconComponent = OVERVIEW_MAP[overviewOptionKey]
 
     return (

@@ -26,7 +26,6 @@ const propTypes = {
 
         // From parent.
         audioHandlers: PropTypes.object.isRequired,
-        scoresTipsHandlers: PropTypes.object.isRequired,
 
         verseDidRender: PropTypes.func.isRequired
     },
@@ -34,7 +33,6 @@ const propTypes = {
     Menu = ({
         windowWidth,
         audioHandlers,
-        scoresTipsHandlers,
         verseDidRender
     }) => {
     /**
@@ -88,9 +86,7 @@ const propTypes = {
                         'MenuChild',
                         'widths__hiddenInOverlay'
                     )}>
-                        <ScoresTips {...scoresTipsHandlers}
-                            inMenu
-                        />
+                        <ScoresTips inMenu />
                     </div>
                 </div>
             </div>

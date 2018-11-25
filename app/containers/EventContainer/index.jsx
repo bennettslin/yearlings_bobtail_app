@@ -39,7 +39,6 @@ class EventContainer extends PureComponent {
         selectedDotKeys: PropTypes.object.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
@@ -291,25 +290,6 @@ class EventContainer extends PureComponent {
         })
     }
 
-    /********
-     * TIPS *
-     ********/
-
-    handleTipsToggle = (e, justHideIfShown) => {
-        // Duplicated from handleOverviewToggle.
-
-        /**
-         * If from click, alternate between shown and disabled. If from keydown,
-         * cycle through all three options.
-         */
-        const clickToggle = e.type === 'click',
-            tipsToggled = this.props.selectTips({
-                clickToggle,
-                justHideIfShown
-            })
-        return tipsToggled
-    }
-
     /*********
      * VERSE *
      *********/
@@ -402,7 +382,6 @@ class EventContainer extends PureComponent {
 
     render() {
         const {
-            selectTips,
             determineVerseBars,
             selectVerse
         } = this.props
@@ -413,7 +392,6 @@ class EventContainer extends PureComponent {
                     {...{
                         eventHandlers: getHandlers(this),
                         determineVerseBars,
-                        selectTips,
                         selectVerse
                     }}
                 />
@@ -440,10 +418,7 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    sessionStore: {
-        selectedTipsIndex,
-        interactivatedVerseIndex
-    },
+    sessionStore: { interactivatedVerseIndex },
     accessStore: { accessedAnnotationIndex }
 }) => ({
     isCarouselShown,
@@ -452,7 +427,6 @@ const mapStateToProps = ({
     dotsBitNumber,
     selectedDotKeys,
     selectedSongIndex,
-    selectedTipsIndex,
     selectedVerseIndex,
     interactivatedVerseIndex,
     accessedAnnotationIndex

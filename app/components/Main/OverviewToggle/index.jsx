@@ -12,28 +12,26 @@ import { OVERVIEW_TOGGLE_KEY } from 'constants/access'
 import { OVERVIEW_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
+    renderedStore: { isRenderedLogue },
     sessionStore: { selectedOverviewOption }
 }) => ({
+    isRenderedLogue,
     selectedOverviewOption
 })
 
 class OverviewToggle extends PureComponent {
 
-    static defaultProps = {
-        isEnabled: true
-    }
-
     static propTypes = {
         // Through Redux.
+        isRenderedLogue: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
 
         // From props.
-        inLeftShelf: PropTypes.bool,
-        isEnabled: PropTypes.bool.isRequired
+        inLeftShelf: PropTypes.bool
     }
 
     handleOverviewClick = () => {
-        if (this.props.isEnabled) {
+        if (!this.props.isRenderedLogue) {
             this.dispatchOverview({ isToggled: true })
         }
     }
@@ -41,8 +39,8 @@ class OverviewToggle extends PureComponent {
     render() {
         const {
             inLeftShelf,
-            selectedOverviewOption,
-            isEnabled
+            isRenderedLogue,
+            selectedOverviewOption
         } = this.props
 
         return (
@@ -54,7 +52,7 @@ class OverviewToggle extends PureComponent {
                     isCustomSize
                     {...{
                         buttonName: OVERVIEW_BUTTON_KEY,
-                        isDisabled: !isEnabled,
+                        isDisabled: isRenderedLogue,
                         accessKey: OVERVIEW_TOGGLE_KEY,
                         buttonIdentifier: selectedOverviewOption,
                         handleButtonClick: this.handleOverviewClick

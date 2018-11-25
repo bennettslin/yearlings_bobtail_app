@@ -14,10 +14,7 @@ import {
 } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
-import { SHOWN } from 'constants/options'
-
 const mapStateToProps = ({
-    sessionStore: { selectedOverviewOption },
     deviceStore: { deviceIndex },
     renderStore: { canMainRender },
     renderedStore: {
@@ -25,7 +22,6 @@ const mapStateToProps = ({
         isRenderedLogue
     }
 }) => ({
-    selectedOverviewOption,
     deviceIndex,
     canMainRender,
     renderedSongIndex,
@@ -38,7 +34,6 @@ class Overview extends Component {
         // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
-        selectedOverviewOption: PropTypes.string.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired
     }
@@ -53,7 +48,6 @@ class Overview extends Component {
     render() {
         const {
                 deviceIndex,
-                selectedOverviewOption,
                 renderedSongIndex,
                 isRenderedLogue
             } = this.props,
@@ -65,8 +59,9 @@ class Overview extends Component {
              * Always show when is song in phone. Also show when is logue and is
              * heightless lyric.
              */
-            isToggleInOverview = !isRenderedLogue && getIsToggleInOverview(deviceIndex),
-            isEnabled = selectedOverviewOption === SHOWN && !isRenderedLogue
+            isToggleInOverview =
+                !isRenderedLogue &&
+                getIsToggleInOverview(deviceIndex)
 
         return (
             <div className={cx(
@@ -75,7 +70,7 @@ class Overview extends Component {
             )}>
                 {isToggleInOverview &&
                     <div className="Overview__toggleFloatContainer">
-                        <OverviewToggle {...{ isEnabled }} />
+                        <OverviewToggle />
                     </div>
                 }
                 <Texts

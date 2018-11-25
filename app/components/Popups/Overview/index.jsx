@@ -13,13 +13,13 @@ import { SHOWN } from 'constants/options'
 const mapStateToProps = ({
     sessionStore: {
         selectedOverviewOption,
-        selectedTipsIndex
+        selectedTipsOption
     },
     renderStore: { canMainRender },
     renderedStore: { isRenderedLogue }
 }) => ({
     selectedOverviewOption,
-    selectedTipsIndex,
+    selectedTipsOption,
     canMainRender,
     isRenderedLogue
 })
@@ -29,7 +29,7 @@ const overviewPopupPropTypes = {
         canMainRender: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedTipsOption: PropTypes.string.isRequired,
 
         // From parent.
         inMain: PropTypes.bool,
@@ -37,20 +37,13 @@ const overviewPopupPropTypes = {
     },
 
     OverviewPopup = ({
-    /* eslint-disable no-unused-vars */
-        dispatch,
-        /* eslint-enable no-unused-vars */
-
         inMain,
         isPhone,
         canMainRender,
         selectedOverviewOption,
         isRenderedLogue,
-        selectedTipsIndex,
-
-        ...other
+        selectedTipsOption
     }) => {
-
         const
             // Only position absolute when in main and is phone.
             noAbsoluteFull = isRenderedLogue || !isPhone
@@ -60,18 +53,23 @@ const overviewPopupPropTypes = {
         // Switch between logue and song overview sections.
         if (isRenderedLogue) {
             isVisible = !inMain
+
         } else {
             isVisible =
-                selectedOverviewOption !== SHOWN ?
-                    false :
-                    Boolean(inMain)
+                selectedOverviewOption === SHOWN && Boolean(inMain)
         }
 
         /**
      * Always hide overview section when title is open, or when tip is shown
      * in song. Always hide before ready to render.
      */
-        if (!canMainRender || (!isRenderedLogue && !selectedTipsIndex)) {
+        if (
+            !canMainRender ||
+            (
+                !isRenderedLogue &&
+                selectedTipsOption === SHOWN
+            )
+        ) {
             isVisible = false
         }
 
@@ -79,15 +77,17 @@ const overviewPopupPropTypes = {
             <Popup
                 bounceAnimate
                 hasNarrowPadding
-                popupName="Overview"
-                className={cx(
-                    inMain && 'OverviewPopup__inMain'
-                )}
-                isVisible={isVisible}
-                noFlexCentre={inMain}
-                noAbsoluteFull={noAbsoluteFull}
+                {...{
+                    popupName: 'Overview',
+                    className: cx(
+                        inMain && 'OverviewPopup__inMain'
+                    ),
+                    isVisible,
+                    noFlexCentre: inMain,
+                    noAbsoluteFull
+                }}
             >
-                <Overview {...other} />
+                <Overview />
             </Popup>
         )
     }

@@ -5,8 +5,7 @@ import PropTypes from 'prop-types'
 import {
     SHOWN,
     HIDDEN,
-    DISABLED,
-    TIPS_OPTIONS
+    DISABLED
 } from 'constants/options'
 
 const
@@ -38,13 +37,12 @@ const
     DISABLED_ICON = ({
         className
     }) => (
-        <rect
+        <path
             {...{
                 className,
                 x: 0,
                 y: 0,
-                width: 100,
-                height: 100
+                d: 'M 50,0 L 100,50 L 50,100 L0,50 Z'
             }}
         />
     ),
@@ -55,18 +53,16 @@ const
     }
 
 const propTypes = {
-    buttonIdentifier: PropTypes.number.isRequired
+    buttonIdentifier: PropTypes.string.isRequired
 }
 
 const TipsIcon = ({
 
-    buttonIdentifier: tipsIndex,
+    buttonIdentifier: tipsOptionKey,
     className
 
 }) => {
-    const
-        tipsOptionKey = TIPS_OPTIONS[tipsIndex],
-        IconComponent = TIPS_MAP[tipsOptionKey]
+    const IconComponent = TIPS_MAP[tipsOptionKey]
 
     return (
         <IconComponent

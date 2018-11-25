@@ -25,7 +25,8 @@ import {
     SELECTED_VERSE_INDEX,
 
     SELECTED_AUDIO_OPTION_INDEX,
-    SELECTED_OVERVIEW_OPTION
+    SELECTED_OVERVIEW_OPTION,
+    SELECTED_TIPS_OPTION
 } from './storeKeys'
 
 const
@@ -65,7 +66,8 @@ const
         earColumnIndex: 0,
         selectedOverviewOption:
             getStringOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
-        selectedTipsIndex: 1,
+        selectedTipsOption:
+            getStringOptionFromStorage(SELECTED_TIPS_OPTION) || SHOWN,
         selectedWikiIndex: 0,
         selectedWikiUrl: ''
     },

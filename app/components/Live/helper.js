@@ -22,7 +22,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleLyricWheel,
             handleLyricAutoScroll,
             handleLyricVerseSelect,
-            handleTipsToggle,
             handleVerseBarSelect,
             handleVerseBarWheel
         } = props,
@@ -55,21 +54,9 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleScrollUponLyricRender
         },
 
-        scoresTipsHandlers = {
-            handleTipsToggle
-        },
-
-        tipsPopupHandlers = {
-            handleTipsToggle
-        },
-
         mainColumnHandlers = {
             handleCarouselNavToggle,
-
             annotationPopupHandlers,
-            scoresTipsHandlers,
-            tipsPopupHandlers,
-
             carouselSectionHandlers: {
                 setCarouselAnnotationRef,
                 setCarouselParentRef,
@@ -79,16 +66,13 @@ export const getOrganisedHandlersFromProps = (props) => {
                 handleAnnotationWormholeSelect,
                 handleScrollUponCarouselRender
             },
-            leftShelfToggleSectionHandlers: {
-            },
             navSectionHandlers: {
                 handleNavSongSelect
             }
         },
 
         menuFieldHandlers = {
-            audioHandlers,
-            scoresTipsHandlers
+            audioHandlers
         }
 
     return {

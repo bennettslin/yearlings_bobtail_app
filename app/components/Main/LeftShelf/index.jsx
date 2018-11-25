@@ -11,16 +11,12 @@ import OverviewToggle from '../OverviewToggle'
 const propTypes = {
     // From parent.
         className: PropTypes.any,
-        isPhone: PropTypes.bool,
-        scoresTipsHandlers: PropTypes.object.isRequired
+        isPhone: PropTypes.bool
     },
 
     LeftShelf = ({
-
         className,
-        isPhone,
-        scoresTipsHandlers
-
+        isPhone
     }) => (
         <div className={cx(
             'LeftShelf',
@@ -30,9 +26,7 @@ const propTypes = {
         )}>
             <OverviewToggle inLeftShelf />
             <DotsSlideToggle />
-            <ScoresTips {...scoresTipsHandlers}
-                inLeftShelf
-            />
+            <ScoresTips inLeftShelf />
         </div>
     )
 

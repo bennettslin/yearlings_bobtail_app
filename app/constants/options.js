@@ -21,11 +21,5 @@ module.exports = {
 
     SHOWN,
     HIDDEN,
-    DISABLED,
-
-    TIPS_OPTIONS: [
-        SHOWN,
-        DISABLED,
-        HIDDEN
-    ]
+    DISABLED
 }

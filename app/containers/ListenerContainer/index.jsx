@@ -11,10 +11,10 @@ import PlayerManager from '../../managers/PlayerManager'
 import ScrollManager from '../../managers/ScrollManager'
 import SongManager from '../../managers/SongManager'
 import TimeVerseManager from '../../managers/TimeVerseManager'
-import TipsManager from '../../managers/TipsManager'
 import VerseManager from '../../managers/VerseManager'
 
 import OverviewListener from '../../handlers/OverviewHandler/Listener'
+import TipsListener from '../../handlers/TipsHandler/Listener'
 
 import RenderedListener from '../../listeners/RenderedListener'
 import AnnotationListener from '../../listeners/AnnotationListener'
@@ -116,14 +116,6 @@ class ListenerContainer extends PureComponent {
         return this.timeVerseManager.selectVerse(payload)
     }
 
-    /********
-     * TIPS *
-     ********/
-
-    selectTips = (payload) => {
-        return this.tipsManager.selectTips(payload)
-    }
-
     /*********
      * VERSE *
      *********/
@@ -154,9 +146,6 @@ class ListenerContainer extends PureComponent {
     _setTimeVerseManagerRef = (node) => {
         this.timeVerseManager = node
     }
-    _setTipsManagerRef = (node) => {
-        this.tipsManager = node
-    }
     _setTitleManagerRef = (node) => {
         this.titleManager = node
     }
@@ -177,7 +166,6 @@ class ListenerContainer extends PureComponent {
                     scrollElementIntoView={this.scrollElementIntoView}
                     determineVerseBars={this.determineVerseBars}
                     selectSong={this.selectSong}
-                    selectTips={this.selectTips}
                     selectVerse={this.selectVerse}
                     togglePlay={this.togglePlay}
                 />
@@ -206,15 +194,13 @@ class ListenerContainer extends PureComponent {
                     scrollElementIntoView={this.scrollElementIntoView}
                     updateSelectedPlayer={this.updateSelectedPlayer}
                 />
-                <TipsManager
-                    setRef={this._setTipsManagerRef}
-                />
                 <VerseManager
                     setRef={this._setVerseManagerRef}
                     getVerseElement={this.getVerseElement}
                 />
                 <LogHandler />
                 <OverviewListener />
+                <TipsListener />
                 <RenderedListener />
                 <AnnotationListener />
                 <AnnotationAccessListener />

@@ -42,10 +42,7 @@ class Main extends Component {
 
         annotationPopupHandlers: PropTypes.object.isRequired,
         carouselSectionHandlers: PropTypes.object.isRequired,
-        leftShelfToggleSectionHandlers: PropTypes.object.isRequired,
         navSectionHandlers: PropTypes.object.isRequired,
-        tipsPopupHandlers: PropTypes.object.isRequired,
-        scoresTipsHandlers: PropTypes.object.isRequired,
 
         mainDidRender: PropTypes.func.isRequired,
         carouselDidRender: PropTypes.func.isRequired
@@ -74,13 +71,8 @@ class Main extends Component {
                 handleCarouselNavToggle,
                 annotationPopupHandlers,
                 carouselSectionHandlers,
-                leftShelfToggleSectionHandlers,
                 navSectionHandlers,
-                scoresTipsHandlers,
-                tipsPopupHandlers,
-
                 carouselDidRender
-
             } = this.props,
 
             /**
@@ -98,42 +90,24 @@ class Main extends Component {
                 <AnnotationPopup {...annotationPopupHandlers}
                     inMain
                 />
-
                 <Nav {...navSectionHandlers} />
-
                 <Carousel {...carouselSectionHandlers}
                     carouselDidRender={carouselDidRender}
                 />
-
                 <div className={cx(
                     'Main__flexContainer',
                     'absoluteFullContainer'
                 )}>
-                    <LeftShelf {...leftShelfToggleSectionHandlers}
-                        isPhone={isPhone}
-                        scoresTipsHandlers={scoresTipsHandlers}
-                    />
-
+                    <LeftShelf {...{ isPhone }} />
                     <OverviewPopup
                         inMain
-                        {...{
-                            isPhone
-                        }}
+                        {...{ isPhone }}
                     />
                 </div>
-
-                <LyricToggleExpand
-                    inMain
-                />
-
+                <LyricToggleExpand inMain />
                 <DotsSlide />
-
-                <ScoresTips {...scoresTipsHandlers}
-                    inMainRightSide
-                />
-
-                <TipsPopup {...tipsPopupHandlers} />
-
+                <ScoresTips inMainRightSide />
+                <TipsPopup />
                 <CarouselToggle
                     handleCarouselNavToggle={handleCarouselNavToggle}
                 />

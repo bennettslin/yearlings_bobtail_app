@@ -1,47 +1,56 @@
 // Toggle button to show, hide, and disable tips section.
 
-import React from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+
+import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
 import Button from '../../Button'
+
 import { TIPS_TOGGLE_KEY } from 'constants/access'
 import { TIPS_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    sessionStore: { selectedTipsIndex }
+    sessionStore: { selectedTipsOption }
 }) => ({
-    selectedTipsIndex
+    selectedTipsOption
 })
 
-const tipsTogglePropTypes = {
+class TipsToggle extends PureComponent {
+
+    static propTypes = {
     // Through Redux.
-        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedTipsOption: PropTypes.string.isRequired,
 
-        // From props.
-        isEnabled: PropTypes.bool.isRequired,
-        handleTipsToggle: PropTypes.func.isRequired
-    },
-
-    TipsToggle = ({
-        selectedTipsIndex,
-        isEnabled,
-        handleTipsToggle
-
-    }) => {
-        return (
-            <Button
-                isLargeSize
-                {...{
-                    buttonName: TIPS_BUTTON_KEY,
-                    isDisabled: !isEnabled,
-                    buttonIdentifier: selectedTipsIndex,
-                    accessKey: TIPS_TOGGLE_KEY,
-                    handleButtonClick: handleTipsToggle
-                }}
-            />
-        )
+        // From parent.
+        className: PropTypes.any
     }
 
-TipsToggle.propTypes = tipsTogglePropTypes
+    handleTipsClick = () => {
+        this.dispatchTips({ isToggled: true })
+    }
 
+    render() {
+        const {
+            selectedTipsOption,
+            className
+        } = this.props
+
+        return (
+            <___>
+                <Button
+                    isLargeSize
+                    {...{
+                        className,
+                        buttonName: TIPS_BUTTON_KEY,
+                        buttonIdentifier: selectedTipsOption,
+                        accessKey: TIPS_TOGGLE_KEY,
+                        handleButtonClick: this.handleTipsClick
+                    }}
+                />
+                <TipsDispatcher {...{ getDispatch: this }} />
+            </___>
+        )
+    }
+}
 export default connect(mapStateToProps)(TipsToggle)

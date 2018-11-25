@@ -6,17 +6,11 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import ScoreDispatcher from '../../dispatchers/ScoreDispatcher'
+import TipsToggle from '../Tips/Toggle'
 import Button from '../Button'
 
-import {
-    SCORE_TOGGLE_KEY,
-    TIPS_TOGGLE_KEY
-} from 'constants/access'
-
-import {
-    SCORES_BUTTON_KEY,
-    TIPS_BUTTON_KEY
-} from 'constants/buttons'
+import { SCORE_TOGGLE_KEY } from 'constants/access'
+import { SCORES_BUTTON_KEY } from 'constants/buttons'
 
 import {
     getIsDesktop,
@@ -27,14 +21,12 @@ const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: { isScoresTipsInMain },
     toggleStore: { isScoreShown },
-    loadStore: { isScoreLoaded },
-    sessionStore: { selectedTipsIndex }
+    loadStore: { isScoreLoaded }
 }) => ({
     deviceIndex,
     isScoresTipsInMain,
     isScoreShown,
-    isScoreLoaded,
-    selectedTipsIndex
+    isScoreLoaded
 })
 
 class ScoresTips extends Component {
@@ -51,13 +43,11 @@ class ScoresTips extends Component {
         isScoreShown: PropTypes.bool.isRequired,
         isScoreLoaded: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
 
         // From parent.
         inMenu: PropTypes.bool.isRequired,
         inMainRightSide: PropTypes.bool.isRequired,
-        inLeftShelf: PropTypes.bool.isRequired,
-        handleTipsToggle: PropTypes.func.isRequired
+        inLeftShelf: PropTypes.bool.isRequired
     }
 
     handleScoreButtonClick = () => {
@@ -69,27 +59,26 @@ class ScoresTips extends Component {
                 deviceIndex,
                 isScoreLoaded,
                 isScoresTipsInMain,
-                selectedTipsIndex,
 
                 inMenu,
                 inMainRightSide,
-                inLeftShelf,
-
-                handleTipsToggle
+                inLeftShelf
             } = this.props,
 
             isDesktop = getIsDesktop(deviceIndex),
 
-            // Render if...
+            // Render if scores tips is...
             shouldRender = isScoresTipsInMain ?
 
-            // ...in main on the right in mobile.
-                (inMainRightSide && !isDesktop) ||
+                (
+                    // ...in main on the right in mobile.
+                    (inMainRightSide && !isDesktop) ||
 
-            // ...in main on the left in dots overview on desktop.
-            (inLeftShelf && isDesktop) :
+                    // ...in main on the left in dots overview on desktop.
+                    (inLeftShelf && isDesktop)
+                ) :
 
-            // ...in menu.
+            // ...otherwise, render in menu.
                 inMenu,
 
             showScoreToggleButton = !getIsPhone(deviceIndex)
@@ -108,22 +97,16 @@ class ScoresTips extends Component {
                 {showScoreToggleButton &&
                 <Button
                     isLargeSize
-                    buttonName={SCORES_BUTTON_KEY}
-                    className="ScoresTipsButton"
-                    accessKey={SCORE_TOGGLE_KEY}
-                    isDisabled={!isScoreLoaded}
-                    handleButtonClick={this.handleScoreButtonClick}
+                    {...{
+                        buttonName: SCORES_BUTTON_KEY,
+                        className: 'ScoresTipsButton',
+                        accessKey: SCORE_TOGGLE_KEY,
+                        isDisabled: !isScoreLoaded,
+                        handleButtonClick: this.handleScoreButtonClick
+                    }}
                 />
                 }
-                {/* TODO: Shouldn't this use the tips toggle button? */}
-                <Button
-                    isLargeSize
-                    buttonName={TIPS_BUTTON_KEY}
-                    className="ScoresTipsButton"
-                    buttonIdentifier={selectedTipsIndex}
-                    accessKey={TIPS_TOGGLE_KEY}
-                    handleButtonClick={handleTipsToggle}
-                />
+                <TipsToggle {...{ className: 'ScoresTipsButton' }} />
                 <ScoreDispatcher {...{ getDispatch: this }} />
             </div>
         )

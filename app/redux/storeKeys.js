@@ -27,5 +27,5 @@ module.exports = {
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
     SELECTED_EAR_COLUMN_INDEX: 'earColumnIndex',
     SELECTED_OVERVIEW_OPTION: 'selectedOverviewOption',
-    SELECTED_TIPS_INDEX: 'selectedTipsIndex'
+    SELECTED_TIPS_OPTION: 'selectedTipsOption'
 }
