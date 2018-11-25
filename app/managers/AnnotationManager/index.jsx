@@ -1,19 +1,19 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateAccessStore } from 'flux/access/action'
-
 import { updateRenderedStore } from 'flux/rendered/action'
 import { updateSongStore } from 'flux/song/action'
 
+import AnnotationAccessDispatcher from '../../dispatchers/AnnotationAccessDispatcher'
+
 import {
-    getAnnotationIndexForVerseIndex,
     getAnnotationIndexForDirection,
     getAnnotationAnchorIndexForDirection,
     shouldShowAnnotationForColumn
-} from './helper'
+} from '../../helpers/annotation'
 
 class AnnotationManager extends PureComponent {
 
@@ -24,6 +24,7 @@ class AnnotationManager extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
@@ -58,16 +59,17 @@ class AnnotationManager extends PureComponent {
 
     componentDidMount() {
         this.props.setRef(this)
-        this.accessAnnotation()
+        this.dispatchAccessedAnnotation()
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
-            this.accessAnnotation()
+            this.dispatchAccessedAnnotation()
         }
 
         this.deselectAnnotationIfNeeded(prevProps)
         this.accessNewAnnotationIfNeeded(prevProps)
+        this.accessAnnotationForInteractivatedVerseIfNeeded(prevProps)
     }
 
     deselectAnnotationIfNeeded(prevProps) {
@@ -107,7 +109,30 @@ class AnnotationManager extends PureComponent {
             (!isDotsSlideShown && wasDotsSlideShown) ||
             earColumnIndex !== prevEarColumnIndex
         ) {
-            this.accessAnnotation()
+            this.dispatchAccessedAnnotation()
+        }
+    }
+
+    accessAnnotationForInteractivatedVerseIfNeeded(prevProps) {
+        const
+            { interactivatedVerseIndex } = this.props,
+            { interactivatedVerseIndex: prevVerseIndex } = prevProps
+
+        let newAccessedVerseIndex
+
+        // If interactivated verse changed...
+        if (interactivatedVerseIndex !== prevVerseIndex) {
+
+            // ... if verse is still interactivated, access its annotation...
+            if (interactivatedVerseIndex > -1) {
+                newAccessedVerseIndex = interactivatedVerseIndex
+
+            // ... otherwise, access annotation of newly selected verse.
+            } else {
+                newAccessedVerseIndex = this.props.selectedVerseIndex
+            }
+
+            this.dispatchAccessedAnnotation({ verseIndex: newAccessedVerseIndex })
         }
     }
 
@@ -185,47 +210,6 @@ class AnnotationManager extends PureComponent {
         }
     }
 
-    accessAnnotation({
-
-        annotationIndex,
-        verseIndex = this.props.selectedVerseIndex,
-
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedDotKeys = this.props.selectedDotKeys,
-        earColumnIndex = this.props.earColumnIndex,
-
-        direction
-
-    } = {}) {
-
-        let accessedAnnotationIndex = 0
-
-        if (annotationIndex) {
-            accessedAnnotationIndex = getAnnotationIndexForDirection({
-                currentAnnotationIndex: annotationIndex,
-                selectedSongIndex,
-                selectedDotKeys,
-                isEarShown: this.props.isEarShown,
-                earColumnIndex: earColumnIndex,
-                direction
-            })
-        } else {
-            accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                verseIndex,
-                selectedSongIndex,
-                selectedDotKeys,
-                isEarShown: this.props.isEarShown,
-                earColumnIndex: earColumnIndex,
-                direction
-            })
-        }
-
-        this.props.updateAccessStore({ accessedAnnotationIndex })
-
-        // If needed, scroll to this annotation index.
-        return accessedAnnotationIndex
-    }
-
     accessAnnotationAnchor(direction) {
         const {
                 selectedSongIndex,
@@ -250,7 +234,9 @@ class AnnotationManager extends PureComponent {
     }
 
     render() {
-        return null
+        return (
+            <AnnotationAccessDispatcher {...{ getDispatch: this }} />
+        )
     }
 }
 
@@ -267,7 +253,10 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    sessionStore: { earColumnIndex }
+    sessionStore: {
+        earColumnIndex,
+        interactivatedVerseIndex
+    }
 }) => ({
     isDotsSlideShown,
     isEarShown,
@@ -277,7 +266,8 @@ const mapStateToProps = ({
     accessedAnnotationAnchorIndex,
     dotsBitNumber,
     selectedDotKeys,
-    earColumnIndex
+    earColumnIndex,
+    interactivatedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

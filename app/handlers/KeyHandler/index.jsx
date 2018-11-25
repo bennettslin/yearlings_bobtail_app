@@ -163,9 +163,9 @@ class KeyHandler extends PureComponent {
             !annotationIndexWasAccessed
         ) {
 
-            this.accessAnnotationWithoutDirection(
-                this.props.selectedVerseIndex
-            )
+            this.props.eventHandlers.handleAnnotationAccess({
+                verseIndex: this.props.selectedVerseIndex
+            })
         }
 
         // Prevent default for registered key.
@@ -201,16 +201,6 @@ class KeyHandler extends PureComponent {
         )
     }
 
-    accessAnnotationWithoutDirection = (verseIndex) => {
-        /**
-         * Helper method to be called when access is turned on, or when
-         * interactivated verse is selected.
-         */
-        this.props.eventHandlers.handleAnnotationAccess({
-            verseIndex
-        })
-    }
-
     render() {
         const {
             selectVerse
@@ -221,7 +211,6 @@ class KeyHandler extends PureComponent {
                 <NavigationHandler
                     {...{
                         getHandle: this,
-                        accessAnnotationWithoutDirection: this.accessAnnotationWithoutDirection,
 
                         // TODO: Eventually get rid of eventHandlers object!
                         eventHandlers: this.props.eventHandlers,

@@ -144,8 +144,7 @@ class TimeVerseManager extends PureComponent {
         if (
             scrollLog ||
             (
-                this.props.isAutoScroll &&
-                isPlayerAdvancing
+                this.props.isAutoScroll && isPlayerAdvancing
             )
         ) {
             this.props.scrollElementIntoView({

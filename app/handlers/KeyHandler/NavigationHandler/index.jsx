@@ -26,7 +26,6 @@ class NavigationHandler extends PureComponent {
         // From parent.
         getHandle: PropTypes.object.isRequired,
         eventHandlers: PropTypes.object.isRequired,
-        accessAnnotationWithoutDirection: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
@@ -65,9 +64,6 @@ class NavigationHandler extends PureComponent {
                         e, interactivatedVerseIndex
                     )
 
-                this.props.accessAnnotationWithoutDirection(
-                    interactivatedVerseIndex
-                )
                 annotationIndexWasAccessed = true
 
             // We're in annotation.

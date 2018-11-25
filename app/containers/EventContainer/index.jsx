@@ -10,6 +10,7 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
+import AnnotationAccessDispatcher from '../../dispatchers/AnnotationAccessDispatcher'
 import CarouselDispatcher from '../../dispatchers/CarouselDispatcher'
 import EarColumnDispatcher from '../../dispatchers/EarColumnDispatcher'
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
@@ -51,9 +52,7 @@ class EventContainer extends PureComponent {
         doScroll,
         ...other
     }) => {
-        const accessedAnnotationIndex = this.props.accessAnnotation(
-            other
-        )
+        const accessedAnnotationIndex = this.dispatchAccessedAnnotation(other)
 
         if (accessedAnnotationIndex && doScroll) {
             this.props.scrollElementIntoView({
@@ -408,31 +407,15 @@ class EventContainer extends PureComponent {
             return
         }
 
-        const { selectedAnnotationIndex } = this.props
+        const { selectedVerseIndex } = this.props
 
-        // If a wormhole was selected, there will be an annotation index.
-        if (selectedAnnotationIndex) {
-
-            this.props.scrollElementIntoView({
-                log: 'Rerender selected lyric annotation.',
-                scrollClass: LYRIC_ANNOTATION_SCROLL,
-                index: selectedAnnotationIndex,
-                time: 0,
-                callback: this.props.determineVerseBars
-            })
-
-        // Otherwise, scroll to given verse index.
-        } else {
-            const { selectedVerseIndex } = this.props
-
-            this.props.scrollElementIntoView({
-                log: 'Rerender selected verse.',
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
-                time: 0,
-                callback: this.props.determineVerseBars
-            })
-        }
+        this.props.scrollElementIntoView({
+            log: 'Rerender selected verse.',
+            scrollClass: VERSE_SCROLL,
+            index: selectedVerseIndex,
+            time: 0,
+            callback: this.props.determineVerseBars
+        })
     }
 
     setScoreRef = (node) => {
@@ -464,6 +447,7 @@ class EventContainer extends PureComponent {
                         selectVerse
                     }}
                 />
+                <AnnotationAccessDispatcher {...{ getDispatch: this }} />
                 <CarouselDispatcher {...{ getDispatch: this }} />
                 <EarColumnDispatcher {...{ getDispatch: this }} />
                 <InteractivatedVerseDispatcher
