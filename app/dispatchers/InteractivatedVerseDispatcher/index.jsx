@@ -10,11 +10,6 @@ import { getSongVersesCount } from 'helpers/dataHelper'
 
 class InteractivatedVerseDispatcher extends PureComponent {
 
-    static defaultProps = {
-        getIndexDispatch: {},
-        getDirectionDispatch: {}
-    }
-
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
@@ -23,13 +18,12 @@ class InteractivatedVerseDispatcher extends PureComponent {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getIndexDispatch: PropTypes.object.isRequired,
-        getDirectionDispatch: PropTypes.object.isRequired
+        getDispatch: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getIndexDispatch.dispatchInteractivatedVerseIndex = this.dispatchInteractivatedVerseIndex
-        this.props.getDirectionDispatch.dispatchInteractivatedVerseDirection = this.dispatchInteractivatedVerseDirection
+        this.props.getDispatch.dispatchInteractivatedVerseIndex = this.dispatchInteractivatedVerseIndex
+        this.props.getDispatch.dispatchInteractivatedVerseDirection = this.dispatchInteractivatedVerseDirection
     }
 
     dispatchInteractivatedVerseIndex = (interactivatedVerseIndex = -1) => {

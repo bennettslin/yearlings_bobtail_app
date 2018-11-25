@@ -297,12 +297,7 @@ class InteractiveContainer extends PureComponent {
                         eventHandlers: newEventHandlers
                     }}
                 />
-                <SliderTouchDispatcher
-                    {...{
-                        getMoveDispatch: this,
-                        getEndDispatch: this
-                    }}
-                />
+                <SliderTouchDispatcher {...{ getDispatch: this }} />
                 <StopPropagationDispatcher {...{ getDispatch: this }} />
             </div>
         )

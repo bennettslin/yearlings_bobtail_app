@@ -441,9 +441,7 @@ class EventContainer extends PureComponent {
                 <AnnotationAccessDispatcher {...{ getDispatch: this }} />
                 <CarouselDispatcher {...{ getDispatch: this }} />
                 <EarColumnDispatcher {...{ getDispatch: this }} />
-                <InteractivatedVerseDispatcher
-                    {...{ getDirectionDispatch: this }}
-                />
+                <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
                 <StopPropagationDispatcher {...{ getDispatch: this }} />
             </___>
         )

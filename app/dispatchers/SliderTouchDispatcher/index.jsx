@@ -13,12 +13,6 @@ import {
 
 class SliderTouchDispatcher extends PureComponent {
 
-    static defaultProps = {
-        getBeginDispatch: {},
-        getMoveDispatch: {},
-        getEndDispatch: {}
-    }
-
     static propTypes = {
         // Through Redux.
         isSliderTouched: PropTypes.bool.isRequired,
@@ -32,15 +26,13 @@ class SliderTouchDispatcher extends PureComponent {
         updateSliderStore: PropTypes.func.isRequired,
 
         // From parent.
-        getBeginDispatch: PropTypes.object.isRequired,
-        getMoveDispatch: PropTypes.object.isRequired,
-        getEndDispatch: PropTypes.object.isRequired
+        getDispatch: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getBeginDispatch.dispatchTouchBegin = this.dispatchTouchBegin
-        this.props.getMoveDispatch.dispatchTouchMove = this.dispatchTouchMove
-        this.props.getEndDispatch.dispatchTouchEnd = this.dispatchTouchEnd
+        this.props.getDispatch.dispatchTouchBegin = this.dispatchTouchBegin
+        this.props.getDispatch.dispatchTouchMove = this.dispatchTouchMove
+        this.props.getDispatch.dispatchTouchEnd = this.dispatchTouchEnd
     }
 
     // TODO: These can easily just be a single method.

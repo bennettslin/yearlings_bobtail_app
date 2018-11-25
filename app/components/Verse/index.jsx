@@ -130,9 +130,7 @@ class Verse extends Component {
                         handleAnchorClick: handleLyricAnnotationSelect
                     }}
                 />
-                <InteractivatedVerseDispatcher
-                    {...{ getIndexDispatch: this }}
-                />
+                <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
                 <StopPropagationDispatcher {...{ getDispatch: this }} />
             </___>
         )
