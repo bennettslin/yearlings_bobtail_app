@@ -351,7 +351,7 @@ const _finalRegisterAnnotation = ({
 
     const annotationObject = songObject.annotations[songObject.tempFinalAnnotationIndex]
 
-    annotationObject.tempAnnotationAnchorIndex = 1
+    annotationObject.tempWikiWormholeIndex = 1
 
     let cards = annotationObject.cards
 
@@ -362,5 +362,5 @@ const _finalRegisterAnnotation = ({
     songObject.tempFinalAnnotationIndex++
 
     // Clean up.
-    delete annotationObject.tempAnnotationAnchorIndex
+    delete annotationObject.tempWikiWormholeIndex
 }

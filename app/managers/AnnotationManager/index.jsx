@@ -11,7 +11,7 @@ import AnnotationAccessDispatcher from '../../dispatchers/AnnotationAccessDispat
 
 import {
     getAnnotationIndexForDirection,
-    getAnnotationAnchorIndexForDirection,
+    getWikiWormholeIndexForDirection,
     shouldShowAnnotationForColumn
 } from '../../helpers/annotation'
 
@@ -28,7 +28,7 @@ class AnnotationManager extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
-        accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+        accessedWikiWormholeIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         updateRenderedStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
@@ -46,15 +46,15 @@ class AnnotationManager extends PureComponent {
                 selectedDotKeys
             } = props,
 
-            accessedAnnotationAnchorIndex =
-                getAnnotationAnchorIndexForDirection({
+            accessedWikiWormholeIndex =
+                getWikiWormholeIndexForDirection({
                     selectedSongIndex,
                     selectedAnnotationIndex,
                     selectedDotKeys
                 })
 
         // Set initial access state.
-        props.updateAccessStore({ accessedAnnotationAnchorIndex })
+        props.updateAccessStore({ accessedWikiWormholeIndex })
     }
 
     componentDidMount() {
@@ -139,7 +139,7 @@ class AnnotationManager extends PureComponent {
     selectAnnotation({
         selectedAnnotationIndex = 0,
         selectedSongIndex = this.props.selectedSongIndex,
-        initialAnnotationAnchorIndex = 1,
+        initialWikiWormholeIndex = 1,
         direction,
         bypassUpdateSelected
     } = {}) {
@@ -163,11 +163,11 @@ class AnnotationManager extends PureComponent {
 
             props.updateAccessStore({
                 accessedAnnotationIndex: selectedAnnotationIndex,
-                accessedAnnotationAnchorIndex: getAnnotationAnchorIndexForDirection({
+                accessedWikiWormholeIndex: getWikiWormholeIndexForDirection({
                     selectedSongIndex,
                     selectedAnnotationIndex,
                     selectedDotKeys,
-                    initialAnnotationAnchorIndex
+                    initialWikiWormholeIndex
                 })
             })
         }
@@ -210,26 +210,26 @@ class AnnotationManager extends PureComponent {
         }
     }
 
-    accessAnnotationAnchor(direction) {
+    accessWikiWormhole(direction) {
         const {
                 selectedSongIndex,
                 selectedAnnotationIndex,
                 selectedDotKeys,
-                accessedAnnotationAnchorIndex
+                accessedWikiWormholeIndex
             } = this.props,
 
-            nextAccessedAnnotationAnchorIndex =
-                getAnnotationAnchorIndexForDirection({
+            nextAccessedWikiWormholeIndex =
+                getWikiWormholeIndexForDirection({
                     selectedSongIndex,
                     selectedAnnotationIndex,
                     selectedDotKeys,
-                    initialAnnotationAnchorIndex:
-                        accessedAnnotationAnchorIndex,
+                    initialWikiWormholeIndex:
+                        accessedWikiWormholeIndex,
                     direction
                 })
 
         this.props.updateAccessStore({
-            accessedAnnotationAnchorIndex: nextAccessedAnnotationAnchorIndex
+            accessedWikiWormholeIndex: nextAccessedWikiWormholeIndex
         })
     }
 
@@ -248,7 +248,7 @@ const mapStateToProps = ({
         selectedVerseIndex,
         selectedAnnotationIndex
     },
-    accessStore: { accessedAnnotationAnchorIndex },
+    accessStore: { accessedWikiWormholeIndex },
     dotsStore: {
         dotsBitNumber,
         ...selectedDotKeys
@@ -263,7 +263,7 @@ const mapStateToProps = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,
-    accessedAnnotationAnchorIndex,
+    accessedWikiWormholeIndex,
     dotsBitNumber,
     selectedDotKeys,
     earColumnIndex,

@@ -17,7 +17,7 @@ export const getWikiUrl = ({
                 selectedSongIndex, annotationIndex
             ),
 
-            partialPath = annotation.annotationAnchors[selectedWikiIndex - 1]
+            partialPath = annotation.wikiWormholes[selectedWikiIndex - 1]
 
         let fullPath
 

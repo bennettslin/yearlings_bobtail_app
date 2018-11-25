@@ -266,27 +266,27 @@ export const getAnnotationIndexForVerseIndex = ({
     })
 }
 
-export const getAnnotationAnchorIndexForDirection = ({
+export const getWikiWormholeIndexForDirection = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedDotKeys,
-    initialAnnotationAnchorIndex = 1,
+    initialWikiWormholeIndex = 1,
     direction
 }) => {
     const annotation = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
 
-    if (annotation && annotation.annotationAnchors) {
+    if (annotation && annotation.wikiWormholes) {
 
-        const { annotationAnchors } = annotation,
-            annotationAnchorsCount = annotationAnchors.length
+        const { wikiWormholes } = annotation,
+            wikiWormholesCount = wikiWormholes.length
 
-        let returnIndex = initialAnnotationAnchorIndex,
+        let returnIndex = initialWikiWormholeIndex,
             counter = 0
 
         // Consider each anchor index only once.
-        while (counter < annotationAnchorsCount) {
-            const typeofAnnotationAnchor =
-                typeof annotationAnchors[returnIndex - 1]
+        while (counter < wikiWormholesCount) {
+            const typeofWikiWormhole =
+                typeof wikiWormholes[returnIndex - 1]
 
             // If no direction given, start at first index...
             if (isNaN(direction)) {
@@ -298,7 +298,7 @@ export const getAnnotationAnchorIndexForDirection = ({
             }
 
             // Remember that annotations are 1-based.
-            returnIndex = (returnIndex + annotationAnchorsCount + direction - 1) % annotationAnchorsCount + 1
+            returnIndex = (returnIndex + wikiWormholesCount + direction - 1) % wikiWormholesCount + 1
 
             /**
              * It's valid if it's a wiki anchor and reference dot is selected,
@@ -306,10 +306,10 @@ export const getAnnotationAnchorIndexForDirection = ({
              */
             if (
                 (
-                    typeofAnnotationAnchor === 'string' &&
+                    typeofWikiWormhole === 'string' &&
                     selectedDotKeys[REFERENCE]
                 ) || (
-                    typeofAnnotationAnchor === 'number' &&
+                    typeofWikiWormhole === 'number' &&
                     selectedDotKeys[WORMHOLE]
                 )
             ) {

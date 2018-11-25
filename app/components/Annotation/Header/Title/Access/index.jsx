@@ -14,17 +14,17 @@ class AnnotationAccess extends Component {
 
         // From parent.
         isSelected: PropTypes.bool.isRequired,
-        accessibleAnnotationAnchorsLength: PropTypes.number
+        accessibleWikiWormholesLength: PropTypes.number
     }
 
     render() {
 
         const {
                 isSelected,
-                accessibleAnnotationAnchorsLength
+                accessibleWikiWormholesLength
             } = this.props,
 
-            showUpDown = isSelected && accessibleAnnotationAnchorsLength > 1
+            showUpDown = isSelected && accessibleWikiWormholesLength > 1
 
         return showUpDown && (
             <AccessLetters

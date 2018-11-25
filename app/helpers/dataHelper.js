@@ -171,7 +171,7 @@ export const getAnnotationCardObject = ({
 
 export const getWormholeLink = (
     annotationObject,
-    annotationAnchorIndex
+    wikiWormholeIndex
 ) => {
 
     const { cards } = annotationObject
@@ -183,7 +183,7 @@ export const getWormholeLink = (
         if (wormholeLinks) {
             // Loop through wormhole links until we find the wormhole index we want.
             foundCardObject = wormholeLinks.reduce((foundWormholeLink, wormholeLink) => {
-                if (wormholeLink[SOURCE_WORMHOLE_INDEX] === annotationAnchorIndex) {
+                if (wormholeLink[SOURCE_WORMHOLE_INDEX] === wikiWormholeIndex) {
                     foundWormholeLink = wormholeLink
                 }
 

@@ -28,7 +28,7 @@ const mapStateToProps = ({
     },
     accessStore: {
         accessedAnnotationIndex,
-        accessedAnnotationAnchorIndex
+        accessedWikiWormholeIndex
     },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
@@ -40,7 +40,7 @@ const mapStateToProps = ({
 
     isLyricExpanded,
     accessedAnnotationIndex,
-    accessedAnnotationAnchorIndex,
+    accessedWikiWormholeIndex,
     isAccessOn,
     isCarouselShown,
     isDotsSlideShown,
@@ -55,7 +55,7 @@ class TextLyricAnchor extends Component {
         renderedAnnotationIndex: PropTypes.number.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+        accessedWikiWormholeIndex: PropTypes.number.isRequired,
 
         isAccessOn: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
@@ -139,7 +139,7 @@ class TextLyricAnchor extends Component {
                 annotationIndex,
                 renderedAnnotationIndex,
                 accessedAnnotationIndex,
-                accessedAnnotationAnchorIndex,
+                accessedWikiWormholeIndex,
 
                 isAccessOn,
                 isCarouselShown,
@@ -191,7 +191,7 @@ class TextLyricAnchor extends Component {
                     // Check that we're in the annotation that's selected.
                     renderedAnnotationIndex === wikiAnnotationIndex &&
 
-                    accessedAnnotationAnchorIndex === wikiIndex
+                    accessedWikiWormholeIndex === wikiIndex
 
             } else {
                 isAccessed =

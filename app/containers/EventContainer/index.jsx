@@ -71,8 +71,8 @@ class EventContainer extends PureComponent {
         }
     }
 
-    accessAnnotationAnchor = (payload) => {
-        this.props.accessAnnotationAnchor(payload)
+    accessWikiWormhole = (payload) => {
+        this.props.accessWikiWormhole(payload)
     }
 
     /**************

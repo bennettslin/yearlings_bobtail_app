@@ -225,19 +225,19 @@ export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
 
     if (wormholeLinks) {
         wormholeLinks.forEach(link => {
-            const { tempAnnotationAnchorIndex } = annotationObject
+            const { tempWikiWormholeIndex } = annotationObject
 
             // Access will loop through this array.
-            if (!annotationObject.annotationAnchors) {
-                annotationObject.annotationAnchors = []
+            if (!annotationObject.wikiWormholes) {
+                annotationObject.wikiWormholes = []
             }
-            annotationObject.annotationAnchors.push(tempAnnotationAnchorIndex)
+            annotationObject.wikiWormholes.push(tempWikiWormholeIndex)
 
             // Allow each wormhole to know its source wormhole index.
             if (!annotationObject.tempSourceWormholeIndices) {
                 annotationObject.tempSourceWormholeIndices = []
             }
-            annotationObject.tempSourceWormholeIndices.push(tempAnnotationAnchorIndex)
+            annotationObject.tempSourceWormholeIndices.push(tempWikiWormholeIndex)
 
             // Temporarily, also allow wormhole to know its source annotations.
             if (!link.tempSourceWormholeLinks) {
@@ -246,10 +246,10 @@ export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
             link.tempSourceWormholeLinks.push({
                 tempSourceSongIndex: tempSongIndex,
                 tempSourceAnnotationIndex: annotationObject.annotationIndex,
-                tempSourceWormholeIndex: tempAnnotationAnchorIndex
+                tempSourceWormholeIndex: tempWikiWormholeIndex
             })
 
-            annotationObject.tempAnnotationAnchorIndex++
+            annotationObject.tempWikiWormholeIndex++
         })
     }
 }
@@ -276,13 +276,13 @@ const _finalParseWiki = (annotationObject, entity) => {
                 entity.wikiAnnotationIndex = annotationObject.annotationIndex
 
                 // Popup anchor index is either for wormhole or wiki.
-                entity[WIKI_INDEX] = annotationObject.tempAnnotationAnchorIndex
-                annotationObject.tempAnnotationAnchorIndex++
+                entity[WIKI_INDEX] = annotationObject.tempWikiWormholeIndex
+                annotationObject.tempWikiWormholeIndex++
 
-                if (!annotationObject.annotationAnchors) {
-                    annotationObject.annotationAnchors = []
+                if (!annotationObject.wikiWormholes) {
+                    annotationObject.wikiWormholes = []
                 }
-                annotationObject.annotationAnchors.push(entity[WIKI])
+                annotationObject.wikiWormholes.push(entity[WIKI])
 
                 delete entity[WIKI]
             }

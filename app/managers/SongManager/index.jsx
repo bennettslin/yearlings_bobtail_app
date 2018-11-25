@@ -114,7 +114,7 @@ class SongManager extends PureComponent {
             selectedAnnotationIndex,
 
             // If from wormhole, access destination wormhole index.
-            initialAnnotationAnchorIndex: destinationWormholeIndex,
+            initialWikiWormholeIndex: destinationWormholeIndex,
             bypassUpdateSelected: true
         })
 

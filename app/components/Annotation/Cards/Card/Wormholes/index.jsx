@@ -12,12 +12,12 @@ const mapStateToProps = ({
     renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
     toggleStore: { isAccessOn },
-    accessStore: { accessedAnnotationAnchorIndex }
+    accessStore: { accessedWikiWormholeIndex }
 }) => ({
     canCarouselRender,
     renderedSongIndex,
     isAccessOn,
-    accessedAnnotationAnchorIndex
+    accessedWikiWormholeIndex
 })
 
 class AnnotationWormholes extends Component {
@@ -26,7 +26,7 @@ class AnnotationWormholes extends Component {
         // Through Redux.
         renderedSongIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
-        accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+        accessedWikiWormholeIndex: PropTypes.number.isRequired,
 
         // From parent.
         annotationIndex: PropTypes.number.isRequired,
@@ -51,7 +51,7 @@ class AnnotationWormholes extends Component {
                 /* eslint-enable no-unused-vars */
 
                 renderedSongIndex,
-                accessedAnnotationAnchorIndex,
+                accessedWikiWormholeIndex,
                 isAccessOn,
                 ...other
             } = this.props,
@@ -80,7 +80,7 @@ class AnnotationWormholes extends Component {
                     } = wormholeObject,
 
                     isAccessed = isAccessOn &&
-                        accessedAnnotationAnchorIndex === sourceWormholeIndex
+                        accessedWikiWormholeIndex === sourceWormholeIndex
 
                 return (
                     <AnnotationWormhole {...other}

@@ -5,7 +5,7 @@ import {
 
 import { getAnnotationObject } from 'helpers/dataHelper'
 
-export const getAccessibleAnnotationAnchorsLength = ({
+export const getAccessibleWikiWormholesLength = ({
     songIndex,
     annotationIndex,
     dotKeys
@@ -15,21 +15,21 @@ export const getAccessibleAnnotationAnchorsLength = ({
             songIndex,
             annotationIndex
         ),
-        { annotationAnchors } = annotation
+        { wikiWormholes } = annotation
 
-    if (annotationAnchors) {
-        return annotationAnchors.reduce((sum, annotationAnchor) => {
-            const typeofAnnotationAnchor = typeof annotationAnchor
+    if (wikiWormholes) {
+        return wikiWormholes.reduce((sum, wikiWormhole) => {
+            const typeofWikiWormhole = typeof wikiWormhole
 
             return (
                 (
                     // It's a wiki anchor, and reference dot is selected.
-                    typeofAnnotationAnchor === 'string' &&
+                    typeofWikiWormhole === 'string' &&
                     dotKeys[REFERENCE]
 
                 ) || (
                     // It's a wormhole index, and wormhole dot is selected.
-                    typeofAnnotationAnchor === 'number' &&
+                    typeofWikiWormhole === 'number' &&
                     dotKeys[WORMHOLE]
                 )
             ) ? sum + 1 : sum

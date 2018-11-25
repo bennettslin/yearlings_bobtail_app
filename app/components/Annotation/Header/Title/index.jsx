@@ -16,7 +16,7 @@ const annotationTitlePropTypes = {
         isSelected: PropTypes.bool.isRequired,
         annotationDotKeys: PropTypes.object.isRequired,
         annotationTitle: PropTypes.string.isRequired,
-        accessibleAnnotationAnchorsLength: PropTypes.number,
+        accessibleWikiWormholesLength: PropTypes.number,
         handleTitleClick: PropTypes.func
     },
 
@@ -29,7 +29,7 @@ const annotationTitlePropTypes = {
         isAccessed,
         annotationDotKeys,
         annotationTitle,
-        accessibleAnnotationAnchorsLength,
+        accessibleWikiWormholesLength,
         handleTitleClick
 
     }) => (
@@ -77,7 +77,7 @@ const annotationTitlePropTypes = {
             <AnnotationAccess
                 {...{
                     isSelected,
-                    accessibleAnnotationAnchorsLength
+                    accessibleWikiWormholesLength
                 }}
             />
         </div>

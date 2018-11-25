@@ -48,8 +48,8 @@ class ListenerContainer extends PureComponent {
         return this.annotationManager.accessAnnotation(payload)
     }
 
-    accessAnnotationAnchor = (payload) => {
-        return this.annotationManager.accessAnnotationAnchor(payload)
+    accessWikiWormhole = (payload) => {
+        return this.annotationManager.accessWikiWormhole(payload)
     }
 
     /*********
@@ -196,7 +196,7 @@ class ListenerContainer extends PureComponent {
                 <EventContainer
                     // Event manager props.
                     accessAnnotation={this.accessAnnotation}
-                    accessAnnotationAnchor={this.accessAnnotationAnchor}
+                    accessWikiWormhole={this.accessWikiWormhole}
                     setCarouselAnnotationRef={this.setCarouselAnnotationRef}
                     setLyricAnnotationRef={this.setLyricAnnotationRef}
                     setVerseRef={this.setVerseRef}

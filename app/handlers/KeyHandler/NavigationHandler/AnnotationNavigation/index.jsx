@@ -22,7 +22,7 @@ class AnnotationNavigation extends PureComponent {
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
-        accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+        accessedWikiWormholeIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
@@ -30,7 +30,7 @@ class AnnotationNavigation extends PureComponent {
         getNavigation: PropTypes.object.isRequired,
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
-        accessAnnotationAnchor: PropTypes.func.isRequired,
+        accessWikiWormhole: PropTypes.func.isRequired,
         handleAnnotationWormholeSelect: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
@@ -44,12 +44,12 @@ class AnnotationNavigation extends PureComponent {
             {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
-                accessAnnotationAnchor,
+                accessWikiWormhole,
                 handleAnnotationWormholeSelect,
                 determineVerseBarsWithParameters
             } = props
 
-        let { accessedAnnotationAnchorIndex } = props,
+        let { accessedWikiWormholeIndex } = props,
             annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
@@ -67,7 +67,7 @@ class AnnotationNavigation extends PureComponent {
                 // If not accessed on, do nothing and just turn access on.
                 if (props.isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    accessAnnotationAnchor(
+                    accessWikiWormhole(
                         direction
                     )
                 }
@@ -82,23 +82,23 @@ class AnnotationNavigation extends PureComponent {
                     annotationObject = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
 
                 // TODO: Move this logic to AnnotationManager.
-                if (accessedAnnotationAnchorIndex > 0 &&
+                if (accessedWikiWormholeIndex > 0 &&
                     annotationObject &&
-                    annotationObject.annotationAnchors &&
-                    annotationObject.annotationAnchors.length) {
+                    annotationObject.wikiWormholes &&
+                    annotationObject.wikiWormholes.length) {
 
-                    const annotationAnchorEntity = annotationObject.annotationAnchors[accessedAnnotationAnchorIndex - 1]
+                    const wikiWormholeEntity = annotationObject.wikiWormholes[accessedWikiWormholeIndex - 1]
 
                     // It's a wiki anchor.
-                    if (typeof annotationAnchorEntity === 'string') {
-                        this.dispatchWiki(accessedAnnotationAnchorIndex)
+                    if (typeof wikiWormholeEntity === 'string') {
+                        this.dispatchWiki(accessedWikiWormholeIndex)
 
                     // It's a wormhole index.
                     } else {
                         const
                             wormholeLink = getWormholeLink(
                                 annotationObject,
-                                annotationAnchorEntity
+                                wikiWormholeEntity
                             )
 
                         keyWasRegistered =
@@ -144,14 +144,14 @@ class AnnotationNavigation extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isAccessOn },
-    accessStore: { accessedAnnotationAnchorIndex },
+    accessStore: { accessedWikiWormholeIndex },
     songStore: {
         selectedSongIndex,
         selectedAnnotationIndex
     }
 }) => ({
     isAccessOn,
-    accessedAnnotationAnchorIndex,
+    accessedWikiWormholeIndex,
     selectedSongIndex,
     selectedAnnotationIndex
 })

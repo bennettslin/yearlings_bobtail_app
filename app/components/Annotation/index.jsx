@@ -11,7 +11,7 @@ import AnnotationHeader from './Header'
 
 import { getAnnotationObject } from 'helpers/dataHelper'
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-import { getAccessibleAnnotationAnchorsLength } from './helper'
+import { getAccessibleWikiWormholesLength } from './helper'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
@@ -113,8 +113,8 @@ class Annotation extends Component {
                          * We will only determine this value for a selected
                          * annotation.
                          */
-                        accessibleAnnotationAnchorsLength:
-                            getAccessibleAnnotationAnchorsLength({
+                        accessibleWikiWormholesLength:
+                            getAccessibleWikiWormholesLength({
                                 songIndex: renderedSongIndex,
                                 annotationIndex,
                                 dotKeys: selectedDotKeys
@@ -139,7 +139,7 @@ const propTypes = {
         annotationDotKeys: PropTypes.object.isRequired,
         annotationTitle: PropTypes.string.isRequired,
         cardsLength: PropTypes.number.isRequired,
-        accessibleAnnotationAnchorsLength: PropTypes.number,
+        accessibleWikiWormholesLength: PropTypes.number,
 
         // Absent in popup annotation.
         handleTitleClick: PropTypes.func,
@@ -153,7 +153,7 @@ const propTypes = {
         annotationDotKeys,
         annotationTitle,
         cardsLength,
-        accessibleAnnotationAnchorsLength,
+        accessibleWikiWormholesLength,
         handleTitleClick,
         handleContainerClick,
 
@@ -191,7 +191,7 @@ const propTypes = {
                         isSelected,
                         annotationDotKeys,
                         annotationTitle,
-                        accessibleAnnotationAnchorsLength,
+                        accessibleWikiWormholesLength,
                         handleTitleClick
                     }}
                 />
