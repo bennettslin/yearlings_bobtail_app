@@ -71,7 +71,7 @@ class EventContainer extends PureComponent {
         }
     }
 
-    handleAnnotationAnchorAccess = (payload) => {
+    accessAnnotationAnchor = (payload) => {
         this.props.accessAnnotationAnchor(payload)
     }
 

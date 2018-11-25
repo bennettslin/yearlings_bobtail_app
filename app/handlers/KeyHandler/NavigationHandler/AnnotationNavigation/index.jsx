@@ -30,7 +30,7 @@ class AnnotationNavigation extends PureComponent {
         getNavigation: PropTypes.object.isRequired,
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
-        handleAnnotationAnchorAccess: PropTypes.func.isRequired,
+        accessAnnotationAnchor: PropTypes.func.isRequired,
         handleAnnotationWormholeSelect: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
@@ -44,7 +44,7 @@ class AnnotationNavigation extends PureComponent {
             {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
-                handleAnnotationAnchorAccess,
+                accessAnnotationAnchor,
                 handleAnnotationWormholeSelect,
                 determineVerseBarsWithParameters
             } = props
@@ -67,7 +67,7 @@ class AnnotationNavigation extends PureComponent {
                 // If not accessed on, do nothing and just turn access on.
                 if (props.isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    handleAnnotationAnchorAccess(
+                    accessAnnotationAnchor(
                         direction
                     )
                 }
@@ -91,7 +91,7 @@ class AnnotationNavigation extends PureComponent {
 
                     // It's a wiki anchor.
                     if (typeof annotationAnchorEntity === 'string') {
-                        this.trySelectWiki(accessedAnnotationAnchorIndex)
+                        this.dispatchWiki(accessedAnnotationAnchorIndex)
 
                     // It's a wormhole index.
                     } else {

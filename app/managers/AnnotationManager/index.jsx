@@ -86,7 +86,7 @@ class AnnotationManager extends PureComponent {
             earColumnIndex !== prevEarColumnIndex ||
             (isEarShown && !wasDoublespeakerShown)
         ) {
-            this.deselectAnnotation()
+            this._deselectAnnotation()
         }
     }
 
@@ -191,7 +191,7 @@ class AnnotationManager extends PureComponent {
         return selectedAnnotationIndex
     }
 
-    deselectAnnotation({
+    _deselectAnnotation({
         selectedSongIndex = this.props.selectedSongIndex,
         earColumnIndex = this.props.earColumnIndex,
         annotationIndex = this.props.selectedAnnotationIndex

@@ -9,7 +9,7 @@ export const getHandlers = (me) => {
 
     return {
         handleAnnotationAccess: me.handleAnnotationAccess,
-        handleAnnotationAnchorAccess: me.handleAnnotationAnchorAccess,
+        accessAnnotationAnchor: me.accessAnnotationAnchor,
         handleVerseDirectionAccess: me.handleVerseDirectionAccess,
         handleAnnotationWormholeSelect: me.handleAnnotationWormholeSelect,
         handleAnnotationPrevious: me.handleAnnotationPrevious,

@@ -109,7 +109,7 @@ class NavigationHandler extends PureComponent {
             eventHandlers: {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
-                handleAnnotationAnchorAccess,
+                accessAnnotationAnchor,
                 handleAnnotationWormholeSelect,
                 handleLyricAnnotationSelect,
                 handleAnnotationAccess,
@@ -125,7 +125,7 @@ class NavigationHandler extends PureComponent {
                         getNavigation: this,
                         handleAnnotationPrevious,
                         handleAnnotationNext,
-                        handleAnnotationAnchorAccess,
+                        accessAnnotationAnchor,
                         handleAnnotationWormholeSelect,
                         determineVerseBarsWithParameters
                     }}
