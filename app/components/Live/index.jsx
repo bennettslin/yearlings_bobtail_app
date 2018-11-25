@@ -190,13 +190,11 @@ class Live extends Component {
     render() {
         const {
             annotationPopupHandlers,
-            earColumnHandlers,
+            lyricHandlers,
             mainColumnHandlers,
             menuFieldHandlers,
             overviewPopupHandlers,
-            scorePopupHandlers,
-            theatreHandlers,
-            wikiPopupHandlers
+            theatreHandlers
         } = getOrganisedHandlersFromProps(this.props)
 
         return (
@@ -217,14 +215,12 @@ class Live extends Component {
                     overviewPopupHandlers={overviewPopupHandlers}
                 />
 
-                <Lyric {...earColumnHandlers}
+                <Lyric {...lyricHandlers}
                     lyricDidRender={this.lyricDidRender}
                 />
 
                 <OverlayPopups
                     annotationPopupHandlers={annotationPopupHandlers}
-                    scorePopupHandlers={scorePopupHandlers}
-                    wikiPopupHandlers={wikiPopupHandlers}
                 />
 
                 <Menu {...menuFieldHandlers}
@@ -251,8 +247,6 @@ Live.propTypes = {
 
     // From parent.
     setLyricRef: PropTypes.func.isRequired,
-    setScoreRef: PropTypes.func.isRequired,
-    setWikiRef: PropTypes.func.isRequired,
     setCarouselAnnotationRef: PropTypes.func.isRequired,
     setLyricAnnotationRef: PropTypes.func.isRequired,
     setVerseRef: PropTypes.func.isRequired,

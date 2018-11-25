@@ -1,8 +1,6 @@
 export const getOrganisedHandlersFromProps = (props) => {
     const {
             setLyricRef,
-            setScoreRef,
-            setWikiRef,
             setCarouselAnnotationRef,
             setLyricAnnotationRef,
             setVerseRef,
@@ -44,7 +42,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             audioButtonsHandlers
         },
 
-        earColumnHandlers = {
+        lyricHandlers = {
             setLyricRef,
             setLyricAnnotationRef,
             setVerseRef,
@@ -66,16 +64,8 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleTipsToggle
         },
 
-        scorePopupHandlers = {
-            setScoreRef
-        },
-
         tipsPopupHandlers = {
             handleTipsToggle
-        },
-
-        wikiPopupHandlers = {
-            setWikiRef
         },
 
         mainColumnHandlers = {
@@ -110,11 +100,9 @@ export const getOrganisedHandlersFromProps = (props) => {
 
     return {
         annotationPopupHandlers,
-        earColumnHandlers,
+        lyricHandlers,
         mainColumnHandlers,
         menuFieldHandlers,
-        overviewPopupHandlers,
-        scorePopupHandlers,
-        wikiPopupHandlers
+        overviewPopupHandlers
     }
 }

@@ -8,16 +8,12 @@ import TitlePopup from '../../Popups/Title'
 import WikiPopup from '../../Popups/Wiki'
 
 const propTypes = {
-    annotationPopupHandlers: PropTypes.object.isRequired,
-    scorePopupHandlers: PropTypes.object.isRequired,
-    wikiPopupHandlers: PropTypes.object.isRequired
+    annotationPopupHandlers: PropTypes.object.isRequired
 }
 
 const OverlayPopups = ({
 
-    annotationPopupHandlers,
-    scorePopupHandlers,
-    wikiPopupHandlers
+    annotationPopupHandlers
 
 }) => (
     <div className={cx(
@@ -29,8 +25,8 @@ const OverlayPopups = ({
     )}>
         <AnnotationPopup {...annotationPopupHandlers} />
         <TitlePopup />
-        <ScorePopup {...scorePopupHandlers} />
-        <WikiPopup {...wikiPopupHandlers} />
+        <ScorePopup />
+        <WikiPopup />
     </div>
 )
 

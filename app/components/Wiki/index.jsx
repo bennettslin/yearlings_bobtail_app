@@ -21,10 +21,7 @@ class WikiSection extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        selectedWikiUrl: PropTypes.string.isRequired,
-
-        // From parent.
-        setWikiRef: PropTypes.func.isRequired
+        selectedWikiUrl: PropTypes.string.isRequired
     }
 
     state = {
@@ -73,7 +70,6 @@ class WikiSection extends PureComponent {
                     </div>
                 }
                 <iframe
-                    ref={this.props.setWikiRef}
                     className={cx(
                         'iframeContainer__iframe',
                         { 'iframeLoading': iframeLoading }

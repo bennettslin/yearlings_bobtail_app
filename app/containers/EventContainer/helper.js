@@ -9,7 +9,6 @@ export const getHandlers = (me) => {
 
     return {
         handleAnnotationAccess: me.handleAnnotationAccess,
-        accessWikiWormhole: me.accessWikiWormhole,
         handleVerseDirectionAccess: me.handleVerseDirectionAccess,
         handleAnnotationWormholeSelect: me.handleAnnotationWormholeSelect,
         handleAnnotationPrevious: me.handleAnnotationPrevious,
@@ -27,8 +26,6 @@ export const getHandlers = (me) => {
         handleVerseBarSelect: me.handleVerseBarSelect,
         handleScrollUponLyricRender: me.handleScrollUponLyricRender,
         handleScrollUponCarouselRender: me.handleScrollUponCarouselRender,
-        setScoreRef: me.setScoreRef,
-        setWikiRef: me.setWikiRef,
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,

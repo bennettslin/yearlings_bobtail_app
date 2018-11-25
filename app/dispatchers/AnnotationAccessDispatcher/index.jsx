@@ -20,6 +20,7 @@ class AnnotationAccessDispatcher extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
+        isEarShown: PropTypes.bool.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -31,13 +32,16 @@ class AnnotationAccessDispatcher extends PureComponent {
     }
 
     dispatchAccessedAnnotation = ({
-        annotationIndex,
         direction,
-        selectedSongIndex = this.props.selectedSongIndex,
-        verseIndex = this.props.selectedVerseIndex,
-        selectedDotKeys = this.props.selectedDotKeys,
-        earColumnIndex = this.props.earColumnIndex
+        annotationIndex,
+        verseIndex = this.props.selectedVerseIndex
     } = {}) => {
+        const {
+            selectedSongIndex,
+            selectedDotKeys,
+            earColumnIndex,
+            isEarShown
+        } = this.props
 
         let accessedAnnotationIndex = 0
 
@@ -46,8 +50,8 @@ class AnnotationAccessDispatcher extends PureComponent {
                 currentAnnotationIndex: annotationIndex,
                 selectedSongIndex,
                 selectedDotKeys,
-                isEarShown: this.props.isEarShown,
-                earColumnIndex: earColumnIndex,
+                earColumnIndex,
+                isEarShown,
                 direction
             })
         } else {
@@ -55,8 +59,8 @@ class AnnotationAccessDispatcher extends PureComponent {
                 verseIndex,
                 selectedSongIndex,
                 selectedDotKeys,
-                isEarShown: this.props.isEarShown,
-                earColumnIndex: earColumnIndex,
+                earColumnIndex,
+                isEarShown,
                 direction
             })
         }
@@ -81,13 +85,15 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    sessionStore: { earColumnIndex }
+    sessionStore: { earColumnIndex },
+    transientStore: { isEarShown }
 }) => ({
     selectedSongIndex,
     selectedVerseIndex,
     dotsBitNumber,
     selectedDotKeys,
-    earColumnIndex
+    earColumnIndex,
+    isEarShown
 })
 
 const bindDispatchToProps = (dispatch) => (

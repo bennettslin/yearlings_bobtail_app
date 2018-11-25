@@ -50,9 +50,15 @@ class EventContainer extends PureComponent {
 
     handleAnnotationAccess = ({
         doScroll,
-        ...other
+        annotationIndex,
+        verseIndex,
+        direction
     }) => {
-        const accessedAnnotationIndex = this.dispatchAccessedAnnotation(other)
+        const accessedAnnotationIndex = this.dispatchAccessedAnnotation({
+            annotationIndex,
+            verseIndex,
+            direction
+        })
 
         if (accessedAnnotationIndex && doScroll) {
             this.props.scrollElementIntoView({
@@ -69,10 +75,6 @@ class EventContainer extends PureComponent {
                 })
             }
         }
-    }
-
-    accessWikiWormhole = (payload) => {
-        this.props.accessWikiWormhole(payload)
     }
 
     /**************
@@ -416,14 +418,6 @@ class EventContainer extends PureComponent {
             time: 0,
             callback: this.props.determineVerseBars
         })
-    }
-
-    setScoreRef = (node) => {
-        this.myScoreElement = node
-    }
-
-    setWikiRef = (node) => {
-        this.myWikiElement = node
     }
 
     render() {

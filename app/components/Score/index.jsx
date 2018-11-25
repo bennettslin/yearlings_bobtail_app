@@ -19,10 +19,7 @@ class Score extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        setScoreRef: PropTypes.func.isRequired
+        renderedSongIndex: PropTypes.number.isRequired
     }
 
     onIframeLoad = () => {
@@ -39,7 +36,6 @@ class Score extends PureComponent {
 
         return (
             <div
-                ref={this.props.setScoreRef}
                 className={cx(
                     'Score',
                     'iframeContainer'

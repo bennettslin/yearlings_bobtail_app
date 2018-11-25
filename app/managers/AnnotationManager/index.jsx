@@ -132,7 +132,9 @@ class AnnotationManager extends PureComponent {
                 newAccessedVerseIndex = this.props.selectedVerseIndex
             }
 
-            this.dispatchAccessedAnnotation({ verseIndex: newAccessedVerseIndex })
+            this.dispatchAccessedAnnotation({
+                verseIndex: newAccessedVerseIndex
+            })
         }
     }
 
@@ -208,29 +210,6 @@ class AnnotationManager extends PureComponent {
                 this.selectAnnotation()
             }
         }
-    }
-
-    accessWikiWormhole(direction) {
-        const {
-                selectedSongIndex,
-                selectedAnnotationIndex,
-                selectedDotKeys,
-                accessedWikiWormholeIndex
-            } = this.props,
-
-            nextAccessedWikiWormholeIndex =
-                getWikiWormholeIndexForDirection({
-                    selectedSongIndex,
-                    selectedAnnotationIndex,
-                    selectedDotKeys,
-                    initialWikiWormholeIndex:
-                        accessedWikiWormholeIndex,
-                    direction
-                })
-
-        this.props.updateAccessStore({
-            accessedWikiWormholeIndex: nextAccessedWikiWormholeIndex
-        })
     }
 
     render() {

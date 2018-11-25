@@ -1,8 +1,9 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
+import WikiWormholeDispatcher from '../../../../dispatchers/WikiWormholeDispatcher'
 
 import {
     getWormholeLink,
@@ -30,7 +31,6 @@ class AnnotationNavigation extends PureComponent {
         getNavigation: PropTypes.object.isRequired,
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
-        accessWikiWormhole: PropTypes.func.isRequired,
         handleAnnotationWormholeSelect: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
@@ -44,7 +44,6 @@ class AnnotationNavigation extends PureComponent {
             {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
-                accessWikiWormhole,
                 handleAnnotationWormholeSelect,
                 determineVerseBarsWithParameters
             } = props
@@ -67,9 +66,7 @@ class AnnotationNavigation extends PureComponent {
                 // If not accessed on, do nothing and just turn access on.
                 if (props.isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    accessWikiWormhole(
-                        direction
-                    )
+                    this.dispatchAccessedWikiWormhole(direction)
                 }
                 break
             }
@@ -137,7 +134,10 @@ class AnnotationNavigation extends PureComponent {
 
     render() {
         return (
-            <WikiDispatcher {...{ getDispatch: this }} />
+            <___>
+                <WikiDispatcher {...{ getDispatch: this }} />
+                <WikiWormholeDispatcher {...{ getDispatch: this }} />
+            </___>
         )
     }
 }
