@@ -12,7 +12,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import RootContainer from '../RootContainer'
-import CloseListener from '../../handlers/CloseListener'
+import CloseListener from '../../listeners/CloseListener'
 import KeyHandler from 'handlers/KeyHandler'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
