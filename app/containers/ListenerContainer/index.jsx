@@ -9,12 +9,12 @@ import LogManager from '../../managers/LogManager'
 import AudioManager from '../../managers/AudioManager'
 import PlayerManager from '../../managers/PlayerManager'
 import ScrollManager from '../../managers/ScrollManager'
-import SongManager from '../../managers/SongManager'
-import TimeVerseManager from '../../managers/TimeVerseManager'
-import VerseManager from '../../managers/VerseManager'
+import VerseBarManager from '../../managers/VerseBarManager'
 
 import OverviewListener from '../../handlers/OverviewHandler/Listener'
 import TipsListener from '../../handlers/TipsHandler/Listener'
+import SongHandler from '../../handlers/SongHandler'
+import TimeVerseHandler from '../../handlers/TimeVerseHandler'
 
 import RenderedListener from '../../listeners/RenderedListener'
 import AnnotationListener from '../../listeners/AnnotationListener'
@@ -182,21 +182,21 @@ class ListenerContainer extends PureComponent {
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
                 />
-                <SongManager
+                <VerseBarManager
+                    setRef={this._setVerseManagerRef}
+                    getVerseElement={this.getVerseElement}
+                />
+                <SongHandler
                     setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
                     selectVerse={this.selectVerse}
                     updateSelectedPlayer={this.updateSelectedPlayer}
                 />
-                <TimeVerseManager
+                <TimeVerseHandler
                     setRef={this._setTimeVerseManagerRef}
                     determineVerseBars={this.determineVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
                     updateSelectedPlayer={this.updateSelectedPlayer}
-                />
-                <VerseManager
-                    setRef={this._setVerseManagerRef}
-                    getVerseElement={this.getVerseElement}
                 />
                 <LogManager />
                 <OverviewListener />

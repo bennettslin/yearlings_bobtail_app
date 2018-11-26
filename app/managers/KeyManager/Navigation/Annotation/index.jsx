@@ -29,8 +29,7 @@ class AnnotationNavigation extends PureComponent {
 
         // From parent.
         getNavigation: PropTypes.object.isRequired,
-        handleAnnotationPrevious: PropTypes.func.isRequired,
-        handleAnnotationNext: PropTypes.func.isRequired,
+        handleAnnotationSelect: PropTypes.func.isRequired,
         handleAnnotationWormholeSelect: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
@@ -42,8 +41,7 @@ class AnnotationNavigation extends PureComponent {
     navigateAnnotation = (e, keyName) => {
         const { props } = this,
             {
-                handleAnnotationPrevious,
-                handleAnnotationNext,
+                handleAnnotationSelect,
                 handleAnnotationWormholeSelect,
                 determineVerseBarsWithParameters
             } = props
@@ -55,11 +53,11 @@ class AnnotationNavigation extends PureComponent {
         switch (keyName) {
             case ARROW_LEFT:
                 annotationIndexWasAccessed = true
-                handleAnnotationPrevious(e)
+                handleAnnotationSelect(e, -1)
                 break
             case ARROW_RIGHT:
                 annotationIndexWasAccessed = true
-                handleAnnotationNext(e)
+                handleAnnotationSelect(e, 1)
                 break
             case ARROW_UP:
             case ARROW_DOWN: {

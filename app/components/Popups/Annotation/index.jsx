@@ -42,8 +42,7 @@ class AnnotationPopup extends PureComponent {
 
         // From parent.
         inMain: PropTypes.bool,
-        handleAnnotationPrevious: PropTypes.func.isRequired,
-        handleAnnotationNext: PropTypes.func.isRequired
+        handleAnnotationSelect: PropTypes.func.isRequired
     }
 
     state = {
@@ -93,9 +92,18 @@ class AnnotationPopup extends PureComponent {
         }
     }
 
+    _handleAnnotationPrevious = (e) => {
+        this.props.handleAnnotationSelect(e, -1)
+    }
+
+    _handleAnnotationNext = (e) => {
+        this.props.handleAnnotationSelect(e, 1)
+    }
+
     render() {
         const {
             /* eslint-disable no-unused-vars */
+            handleAnnotationSelect,
             dispatch,
             /* eslint-enable no-unused-vars */
 
@@ -108,10 +116,6 @@ class AnnotationPopup extends PureComponent {
             renderedAnnotationIndex,
             isCarouselShown,
             selectedWikiIndex,
-
-            handleAnnotationPrevious,
-            handleAnnotationNext,
-
             ...other
         } = this.props
 
@@ -159,8 +163,8 @@ class AnnotationPopup extends PureComponent {
                         isVisible,
                         noAbsoluteFull: inMain,
                         displaysInOverlay: isOverlayingAnnotation,
-                        handleNextClick: handleAnnotationNext,
-                        handlePreviousClick: handleAnnotationPrevious
+                        handlePreviousClick: this._handleAnnotationPrevious,
+                        handleNextClick: this._handleAnnotationNext
                     }}
                 >
                     <Annotation {...other}

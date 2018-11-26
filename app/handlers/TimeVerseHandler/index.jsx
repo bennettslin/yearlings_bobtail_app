@@ -12,7 +12,7 @@ import {
     getTimeForVerseIndex
 } from 'helpers/dataHelper'
 
-class TimeVerseManager extends PureComponent {
+class TimeVerseHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -209,4 +209,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(TimeVerseManager)
+export default connect(mapStateToProps, bindDispatchToProps)(TimeVerseHandler)

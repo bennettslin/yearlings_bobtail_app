@@ -8,7 +8,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import { getVerseBarStatus } from './helper'
 
-class VerseManager extends PureComponent {
+class VerseBarManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -143,4 +143,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(VerseManager)
+export default connect(mapStateToProps, bindDispatchToProps)(VerseBarManager)

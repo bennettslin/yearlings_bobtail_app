@@ -10,8 +10,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleScrollUponLyricRender,
             handleScrollUponCarouselRender,
 
-            handleAnnotationPrevious,
-            handleAnnotationNext,
+            handleAnnotationSelect,
             handleAnnotationWormholeSelect,
             handleAudioPlay,
             handleAudioPreviousSong,
@@ -27,8 +26,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         } = props,
 
         annotationPopupHandlers = {
-            handleAnnotationPrevious,
-            handleAnnotationNext,
+            handleAnnotationSelect,
             handleAnnotationWormholeSelect
         },
         audioButtonsHandlers = {
@@ -61,8 +59,7 @@ export const getOrganisedHandlersFromProps = (props) => {
                 setCarouselAnnotationRef,
                 setCarouselParentRef,
                 handleLyricAnnotationSelect,
-                handleAnnotationPrevious,
-                handleAnnotationNext,
+                handleAnnotationSelect,
                 handleAnnotationWormholeSelect,
                 handleScrollUponCarouselRender
             },

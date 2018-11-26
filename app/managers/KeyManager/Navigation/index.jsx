@@ -107,8 +107,7 @@ class NavigationManager extends PureComponent {
     render() {
         const {
             eventHandlers: {
-                handleAnnotationPrevious,
-                handleAnnotationNext,
+                handleAnnotationSelect,
                 handleAnnotationWormholeSelect,
                 handleLyricAnnotationSelect,
                 handleAnnotationAccess,
@@ -122,8 +121,7 @@ class NavigationManager extends PureComponent {
                 <AnnotationNavigation
                     {...{
                         getNavigation: this,
-                        handleAnnotationPrevious,
-                        handleAnnotationNext,
+                        handleAnnotationSelect,
                         handleAnnotationWormholeSelect,
                         determineVerseBarsWithParameters
                     }}

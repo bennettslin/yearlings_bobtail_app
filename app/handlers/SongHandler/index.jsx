@@ -16,7 +16,7 @@ import {
     getTimeForVerseIndex
 } from '../../helpers/dataHelper'
 
-class SongManager extends PureComponent {
+class SongHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -146,4 +146,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(SongManager)
+export default connect(mapStateToProps, bindDispatchToProps)(SongHandler)

@@ -107,17 +107,8 @@ class EventContainer extends PureComponent {
         return songSelected
     }
 
-    handleAnnotationPrevious = (e) => {
-        this._handleAccessedAnnotationSelect(e, -1)
-    }
-
-    handleAnnotationNext = (e) => {
-        this._handleAccessedAnnotationSelect(e, 1)
-    }
-
-    _handleAccessedAnnotationSelect(e, direction) {
-        const selectedAnnotationIndex =
-            this.dispatchAnnotation({ direction })
+    handleAnnotationSelect = (e, direction) => {
+        const selectedAnnotationIndex = this.dispatchAnnotation({ direction })
 
         this.props.scrollElementIntoView({
             log: 'Select accessed lyric annotation.',

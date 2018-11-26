@@ -245,8 +245,7 @@ Live.propTypes = {
     setLyricVerseParentRef: PropTypes.func.isRequired,
     setCarouselParentRef: PropTypes.func.isRequired,
 
-    handleAnnotationPrevious: PropTypes.func.isRequired,
-    handleAnnotationNext: PropTypes.func.isRequired,
+    handleAnnotationSelect: PropTypes.func.isRequired,
     handleAnnotationWormholeSelect: PropTypes.func.isRequired,
     handleAudioPlay: PropTypes.func.isRequired,
     handleAudioPreviousSong: PropTypes.func.isRequired,

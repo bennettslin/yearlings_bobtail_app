@@ -56,8 +56,7 @@ class Carousel extends PureComponent {
 
         // From parent.
         handleScrollUponCarouselRender: PropTypes.func.isRequired,
-        handleAnnotationPrevious: PropTypes.func.isRequired,
-        handleAnnotationNext: PropTypes.func.isRequired,
+        handleAnnotationSelect: PropTypes.func.isRequired,
 
         carouselDidRender: PropTypes.func.isRequired,
         setCarouselParentRef: PropTypes.func.isRequired
@@ -138,8 +137,7 @@ class Carousel extends PureComponent {
                 interactivatedVerseIndex,
                 isLyricExpanded,
 
-                handleAnnotationPrevious,
-                handleAnnotationNext,
+                handleAnnotationSelect,
                 setCarouselParentRef,
                 canCarouselRender,
 
@@ -215,8 +213,7 @@ class Carousel extends PureComponent {
 
                 <CarouselSelect
                     {...{
-                        handleAnnotationPrevious,
-                        handleAnnotationNext
+                        handleAnnotationSelect
                     }}
                 />
             </div>
