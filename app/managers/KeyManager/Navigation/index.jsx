@@ -2,14 +2,14 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import AnnotationNavigation from './AnnotationNavigation'
-import DotsSlideNavigation from './DotsSlideNavigation'
-import LyricNavigation from './LyricNavigation'
-import NavNavigation from './NavNavigation'
+import AnnotationNavigation from './Annotation'
+import DotsSlideNavigation from './DotsSlide'
+import LyricNavigation from './Lyric'
+import NavNavigation from './Nav'
 
 import { ENTER } from 'constants/access'
 
-class NavigationHandler extends PureComponent {
+class NavigationManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -175,4 +175,4 @@ const mapStateToProps = ({
     isDotsSlideShown,
     isCarouselShown
 })
-export default connect(mapStateToProps)(NavigationHandler)
+export default connect(mapStateToProps)(NavigationManager)

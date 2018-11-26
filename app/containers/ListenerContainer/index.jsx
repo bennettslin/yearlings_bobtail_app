@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { updateLoadStore } from 'flux/load/action'
 
 import EventContainer from '../EventContainer'
-import LogHandler from 'handlers/LogHandler'
+import LogManager from '../../managers/LogManager'
 
 import AudioManager from '../../managers/AudioManager'
 import PlayerManager from '../../managers/PlayerManager'
@@ -198,7 +198,7 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setVerseManagerRef}
                     getVerseElement={this.getVerseElement}
                 />
-                <LogHandler />
+                <LogManager />
                 <OverviewListener />
                 <TipsListener />
                 <RenderedListener />

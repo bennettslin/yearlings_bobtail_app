@@ -57,7 +57,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Persist in storage audio option, ear column, overview, and tops. Do after overview and tips refactor.`,
+        taskName: `Persist in storage audio option, ear column, overview, and tips. Do after overview and tips refactor.`,
         workedHours: 0,
         neededHours: 2
     },

@@ -43,7 +43,7 @@ import {
     HIDDEN
 } from 'constants/options'
 
-class ToggleHandler extends PureComponent {
+class LetterManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -245,4 +245,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(ToggleHandler)
+export default connect(mapStateToProps, bindDispatchToProps)(LetterManager)

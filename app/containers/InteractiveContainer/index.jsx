@@ -13,7 +13,7 @@ import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import RootContainer from '../RootContainer'
 import CloseListener from '../../listeners/CloseListener'
-import KeyHandler from 'handlers/KeyHandler'
+import KeyManager from '../../managers/KeyManager'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
 const mapStateToProps = ({
@@ -269,7 +269,7 @@ class InteractiveContainer extends PureComponent {
                 }}
             >
                 <AccessStylesheet />
-                <KeyHandler
+                <KeyManager
                     {...{
                         // TODO: Eventually get rid of eventHandlers object.
                         eventHandlers: newEventHandlers,

@@ -52,7 +52,7 @@ Title (/)
 Verse (/)
 Wiki (/)
 
-KeyHandler
+KeyManager
 ListenerContainer
 Root
 EventContainer

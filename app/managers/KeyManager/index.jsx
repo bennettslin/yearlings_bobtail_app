@@ -7,8 +7,8 @@ import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import NavigationHandler from './NavigationHandler'
-import ToggleHandler from './ToggleHandler'
+import NavigationManager from './Navigation'
+import LetterManager from './Letter'
 
 import {
     getKeyName,
@@ -27,7 +27,7 @@ import {
     TAB
 } from 'constants/access'
 
-class KeyHandler extends PureComponent {
+class KeyManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -208,7 +208,7 @@ class KeyHandler extends PureComponent {
 
         return (
             <___>
-                <NavigationHandler
+                <NavigationManager
                     {...{
                         getHandle: this,
 
@@ -217,7 +217,7 @@ class KeyHandler extends PureComponent {
                         determineVerseBarsWithParameters: this.determineVerseBarsWithParameters
                     }}
                 />
-                <ToggleHandler
+                <LetterManager
                     {...{
                         getLetterHandle: this,
                         getEscapeHandle: this,
@@ -251,4 +251,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(KeyHandler)
+export default connect(mapStateToProps, bindDispatchToProps)(KeyManager)
