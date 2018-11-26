@@ -1,4 +1,4 @@
-// Singleton to listen for changes that toggle overlay and related states.
+// Singleton to listen for changes that affect presentation of main sections.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -11,15 +11,14 @@ import {
     getIsOverlayShown
 } from './helper'
 
-import {
-    SHOWN
-} from 'constants/options'
+import { SHOWN } from 'constants/options'
 
-class OverlayListener extends PureComponent {
+class MainListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
@@ -39,6 +38,7 @@ class OverlayListener extends PureComponent {
     _determineOverlayAndCarouselNav() {
         const {
             deviceIndex,
+            isDotsSlideShown,
             isLyricExpanded,
             renderedAnnotationIndex,
             isRenderedLogue,
@@ -73,12 +73,30 @@ class OverlayListener extends PureComponent {
                 !tipsShown &&
                 !isRenderedLogue &&
                 !isLyricExpanded &&
-                interactivatedVerseIndex < 0
+                interactivatedVerseIndex < 0,
+
+
+            initialToggleConditions =
+                Boolean(renderedAnnotationIndex) ||
+                isDotsSlideShown ||
+                isOverlayShown ||
+                isLyricExpanded ||
+                interactivatedVerseIndex > -1,
+
+            // Toggle overview immediately under these conditions.
+            toggleShowsOverviewImmediately =
+                tipsShown || initialToggleConditions,
+
+            // Toggle tips immediately under these conditions.
+            toggleShowsTipsImmediately =
+                (!tipsShown && overviewShown) || initialToggleConditions
 
         this.props.updateTransientStore({
             isOverlayingAnnotation,
             isOverlayShown,
-            isCarouselNavShowable
+            isCarouselNavShowable,
+            toggleShowsOverviewImmediately,
+            toggleShowsTipsImmediately
         })
     }
 
@@ -90,6 +108,7 @@ class OverlayListener extends PureComponent {
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
     toggleStore: {
+        isDotsSlideShown,
         isLyricExpanded,
         isScoreShown,
         isTitleShown
@@ -100,12 +119,15 @@ const mapStateToProps = ({
     },
     sessionStore: {
         interactivatedVerseIndex,
-        selectedOverviewOption,
-        selectedTipsOption,
         selectedWikiIndex
+    },
+    optionStore: {
+        selectedOverviewOption,
+        selectedTipsOption
     }
 }) => ({
     deviceIndex,
+    isDotsSlideShown,
     isLyricExpanded,
     isScoreShown,
     isTitleShown,
@@ -123,4 +145,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(OverlayListener)
+export default connect(mapStateToProps, bindDispatchToProps)(MainListener)

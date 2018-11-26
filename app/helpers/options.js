@@ -6,11 +6,16 @@ import {
 
 const getNextOption = ({
     isToggled,
+    toggleShows,
     prevOption,
     nextOption
 }) => {
+
+    if (toggleShows) {
+        return SHOWN
+
     // If custom overview option is passed, set it.
-    if (nextOption) {
+    } else if (nextOption) {
         return nextOption
 
     // Otherwise, rotate through options.

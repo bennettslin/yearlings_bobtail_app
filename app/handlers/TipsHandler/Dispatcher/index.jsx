@@ -2,7 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateSessionStore } from 'flux/session/action'
+import { updateOptionStore } from 'flux/option/action'
 
 import { getNextOption } from '../../../helpers/options'
 
@@ -12,7 +12,8 @@ class TipsDispatcher extends PureComponent {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
+        toggleShowsTipsImmediately: PropTypes.bool.isRequired,
+        updateOptionStore: PropTypes.func.isRequired,
 
         // From parent.
         getDispatch: PropTypes.object.isRequired
@@ -27,7 +28,10 @@ class TipsDispatcher extends PureComponent {
         tipsOption
     } = {}) => {
 
-        const { isSelectedLogue } = this.props
+        const {
+            isSelectedLogue,
+            toggleShowsTipsImmediately
+        } = this.props
 
         // Don't allow toggling if in logue.
         if (isSelectedLogue) {
@@ -36,11 +40,12 @@ class TipsDispatcher extends PureComponent {
 
         const selectedTipsOption = getNextOption({
             isToggled,
+            toggleShows: toggleShowsTipsImmediately,
             prevOption: this.props.selectedTipsOption,
             nextOption: tipsOption
         })
 
-        this.props.updateSessionStore({ selectedTipsOption })
+        this.props.updateOptionStore({ selectedTipsOption })
         return true
     }
 
@@ -51,15 +56,17 @@ class TipsDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     songStore: { isSelectedLogue },
-    sessionStore: { selectedTipsOption }
+    optionStore: { selectedTipsOption },
+    transientStore: { toggleShowsTipsImmediately }
 }) => ({
     isSelectedLogue,
-    selectedTipsOption
+    selectedTipsOption,
+    toggleShowsTipsImmediately
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSessionStore
+        updateOptionStore
     }, dispatch)
 )
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateSessionStore } from 'flux/session/action'
+import { updateOptionStore } from 'flux/option/action'
 
 import {
     SHOWN,
@@ -17,10 +17,18 @@ class OverviewListener extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
-        updateSessionStore: PropTypes.func.isRequired
+        updateOptionStore: PropTypes.func.isRequired
+    }
+
+    componentDidMount() {
+        this._handleSongChange()
     }
 
     componentDidUpdate(prevProps) {
+        this._handleSongChange(prevProps)
+    }
+
+    _handleSongChange(prevProps = {}) {
         const
             { selectedSongIndex } = this.props,
             { selectedSongIndex: prevSongIndex } = prevProps
@@ -33,13 +41,14 @@ class OverviewListener extends PureComponent {
 
             // If just hidden, show overview when now in new song.
             if (!isSelectedLogue && selectedOverviewOption === HIDDEN) {
-                this.props.updateSessionStore({
-                    selectedOverviewOption: SHOWN
+                this.props.updateOptionStore({
+                    selectedOverviewOption: SHOWN,
+                    isSongShownOverview: true
                 })
 
             // If shown, hide when now in logue.
             } else if (isSelectedLogue && selectedOverviewOption === SHOWN) {
-                this.props.updateSessionStore({
+                this.props.updateOptionStore({
                     selectedOverviewOption: HIDDEN
                 })
             }
@@ -56,7 +65,9 @@ const mapStateToProps = ({
         isSelectedLogue,
         selectedSongIndex
     },
-    sessionStore: { selectedOverviewOption }
+    optionStore: {
+        selectedOverviewOption
+    }
 }) => ({
     isSelectedLogue,
     selectedOverviewOption,
@@ -65,7 +76,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSessionStore
+        updateOptionStore
     }, dispatch)
 )
 

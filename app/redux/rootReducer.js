@@ -5,6 +5,7 @@ import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
 import EventReducer from './event/reducer'
 import LoadReducer from './load/reducer'
+import OptionReducer from './option/reducer'
 import RenderReducer from './render/reducer'
 import RenderableReducer from './renderable/reducer'
 import RenderedReducer from './rendered/reducer'
@@ -22,6 +23,7 @@ import {
     DOTS_STORE,
     EVENT_STORE,
     LOAD_STORE,
+    OPTION_STORE,
     RENDER_STORE,
     RENDERABLE_STORE,
     RENDERED_STORE,
@@ -42,6 +44,7 @@ const rootReducer = combineReducers({
     [DOTS_STORE]: DotsReducer,
     [EVENT_STORE]: EventReducer,
     [LOAD_STORE]: LoadReducer,
+    [OPTION_STORE]: OptionReducer,
     [RENDER_STORE]: RenderReducer,
     [RENDERABLE_STORE]: RenderableReducer,
     [RENDERED_STORE]: RenderedReducer,

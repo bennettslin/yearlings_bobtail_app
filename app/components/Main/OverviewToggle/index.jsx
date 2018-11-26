@@ -13,7 +13,7 @@ import { OVERVIEW_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
     renderedStore: { isRenderedLogue },
-    sessionStore: { selectedOverviewOption }
+    optionStore: { selectedOverviewOption }
 }) => ({
     isRenderedLogue,
     selectedOverviewOption

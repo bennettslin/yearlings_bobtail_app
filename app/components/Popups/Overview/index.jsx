@@ -11,7 +11,7 @@ import Popup from '../../Popup'
 import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
-    sessionStore: {
+    optionStore: {
         selectedOverviewOption,
         selectedTipsOption
     },

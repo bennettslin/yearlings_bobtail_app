@@ -8,6 +8,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
+import { updateOptionStore } from 'flux/option/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateToggleStore } from 'flux/toggle/action'
@@ -30,12 +31,21 @@ class CloseListener extends PureComponent {
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
+        isSongShownOverview: PropTypes.bool.isRequired,
+        isSongShownTips: PropTypes.bool.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         updateEventStore: PropTypes.func.isRequired,
+        updateOptionStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
+    }
+
+    componentDidMount() {
+        this._handleOverviewShown()
+        this._handleTipsShown()
     }
 
     componentDidUpdate(prevProps) {
@@ -58,13 +68,16 @@ class CloseListener extends PureComponent {
             { bodyClicked: prevBodyClicked } = prevProps
 
         if (bodyClicked && !prevBodyClicked) {
-            this.closeSections({
-                exemptLyric: true,
 
-                // If clicking to dismiss tips, leave overview shown.
-                exemptOverview: this.props.selectedTipsOption === SHOWN
+            // If no overlay popup was closed, continue to close main sections.
+            if (!this.closeOverlayPopups()) {
+                this.closeMainSections({
+                    exemptLyric: true,
 
-            })
+                    // If clicking to dismiss tips, leave overview shown.
+                    exemptOverview: this.props.selectedTipsOption === SHOWN
+                })
+            }
 
             this.props.updateEventStore({ bodyClicked: false })
         }
@@ -122,37 +135,61 @@ class CloseListener extends PureComponent {
             this.closeMainSections({
                 // Continue to show selected annotation in overlay.
                 exemptAnnotation: true,
-                exemptLyric: true
+                exemptLyric: true,
+                exemptInteractivatedVerse: true
             })
         }
     }
 
-    _handleOverviewShown(prevProps) {
+    _handleOverviewShown(prevProps = {}) {
         const
             { selectedOverviewOption } = this.props,
             { selectedOverviewOption: prevOverviewOption } = prevProps,
             isOverviewShown = selectedOverviewOption === SHOWN,
             wasOverviewShown = prevOverviewOption === SHOWN
 
-        if (isOverviewShown && !wasOverviewShown) {
-            this.closeMainSections({
-                exemptOverview: true
-            })
+        if (isOverviewShown) {
+            const { isSongShownOverview } = this.props
+
+            // Cheesy way to ignore when overview is shown from song change.
+            if (isSongShownOverview) {
+                this.props.updateOptionStore({ isSongShownOverview: false })
+            }
+
+            if (!wasOverviewShown) {
+                this.closeOverlayPopups()
+                this.closeMainSections({
+                    exemptOverview: true,
+                    ...isSongShownOverview && {
+                        exemptTips: true
+                    }
+                })
+            }
         }
     }
 
-    _handleTipsShown(prevProps) {
+    _handleTipsShown(prevProps = {}) {
         const
             { selectedTipsOption } = this.props,
             { selectedTipsOption: prevTipsOption } = prevProps,
             isTipsShown = selectedTipsOption === SHOWN,
             wasTipsShown = prevTipsOption === SHOWN
 
-        if (isTipsShown && !wasTipsShown) {
-            this.closeMainSections({
-                exemptOverview: true,
-                exemptTips: true
-            })
+        if (isTipsShown) {
+            const { isSongShownTips } = this.props
+
+            // Cheesy way to ignore when tips is shown from song change.
+            if (isSongShownTips) {
+                this.props.updateOptionStore({ isSongShownTips: false })
+            }
+
+            if (!wasTipsShown) {
+                this.closeOverlayPopups()
+                this.closeMainSections({
+                    exemptTips: true,
+                    exemptOverview: true
+                })
+            }
         }
     }
 
@@ -226,7 +263,12 @@ class CloseListener extends PureComponent {
 
         } else if (isTitleShown && !exemptTitle) {
             this.props.updateToggleStore({ isTitleShown: false })
+
+        } else {
+            return false
         }
+
+        return true
     }
 
     closeMainSections({
@@ -257,7 +299,7 @@ class CloseListener extends PureComponent {
         if (!exemptOverview) {
             // Just hide overview when opening other sections.
             if (selectedOverviewOption === SHOWN) {
-                this.props.updateSessionStore({
+                this.props.updateOptionStore({
                     selectedOverviewOption: HIDDEN
                 })
             }
@@ -266,90 +308,7 @@ class CloseListener extends PureComponent {
         if (!exemptTips) {
             // Just hide tips when opening other sections.
             if (selectedTipsOption === SHOWN) {
-                this.props.updateSessionStore({
-                    selectedTipsOption: HIDDEN
-                })
-            }
-        }
-
-        if (!exemptInteractivatedVerse) {
-            this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
-        }
-    }
-
-    // TODO: Refactor, as this is kind of confusing.
-    closeSections = ({
-        exemptAnnotation,
-        exemptDots,
-        exemptLyric,
-        exemptOverview,
-        exemptScore,
-        exemptTitle,
-        exemptTips,
-        exemptWiki,
-        exemptInteractivatedVerse,
-
-        continuePastClosingPopups,
-        justClosePopups
-
-    }) => {
-        const {
-            isScoreShown,
-            isTitleShown,
-            selectedOverviewOption,
-            selectedTipsOption,
-            selectedWikiIndex
-        } = this.props
-
-        // If popup is open, close it and do nothing else.
-        if (selectedWikiIndex && !exemptWiki) {
-            this.props.updateSessionStore({ selectedWikiIndex: 0 })
-            if (!continuePastClosingPopups) {
-                return
-            }
-
-        } else if (isScoreShown && !exemptScore) {
-            this.props.updateToggleStore({ isScoreShown: false })
-            if (!continuePastClosingPopups) {
-                return
-            }
-
-        } else if (isTitleShown && !exemptTitle) {
-            this.props.updateToggleStore({ isTitleShown: false })
-            if (!continuePastClosingPopups) {
-                return
-            }
-        }
-
-        if (justClosePopups) {
-            return
-        }
-
-        if (!exemptAnnotation) {
-            this.props.updateSongStore({ selectedAnnotationIndex: 0 })
-        }
-
-        if (!exemptDots) {
-            this.props.updateToggleStore({ isDotsSlideShown: false })
-        }
-
-        if (!exemptLyric) {
-            this.props.updateToggleStore({ isLyricExpanded: false })
-        }
-
-        if (!exemptOverview) {
-            // Just hide overview when opening other sections.
-            if (selectedOverviewOption === SHOWN) {
-                this.props.updateSessionStore({
-                    selectedOverviewOption: HIDDEN
-                })
-            }
-        }
-
-        if (!exemptTips) {
-            // Just hide tips when opening other sections.
-            if (selectedTipsOption === SHOWN) {
-                this.props.updateSessionStore({
+                this.props.updateOptionStore({
                     selectedTipsOption: HIDDEN
                 })
             }
@@ -369,8 +328,15 @@ const mapStateToProps = ({
     eventStore: {
         bodyClicked
     },
+    optionStore: {
+        selectedOverviewOption,
+        selectedTipsOption,
+        isSongShownOverview,
+        isSongShownTips
+    },
     songStore: {
-        selectedAnnotationIndex
+        selectedAnnotationIndex,
+        selectedSongIndex
     },
     toggleStore: {
         isCarouselShown,
@@ -380,8 +346,6 @@ const mapStateToProps = ({
         isTitleShown
     },
     sessionStore: {
-        selectedOverviewOption,
-        selectedTipsOption,
         selectedWikiIndex,
         interactivatedVerseIndex
     }
@@ -395,6 +359,9 @@ const mapStateToProps = ({
     isTitleShown,
     selectedOverviewOption,
     selectedTipsOption,
+    isSongShownOverview,
+    isSongShownTips,
+    selectedSongIndex,
     selectedWikiIndex,
     interactivatedVerseIndex
 })
@@ -402,6 +369,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateEventStore,
+        updateOptionStore,
         updateSessionStore,
         updateSongStore,
         updateToggleStore

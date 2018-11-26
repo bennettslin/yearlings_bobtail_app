@@ -4,7 +4,7 @@ import {
     getIndexFromStorage,
     getDotsFromStorage,
     getBoolFromStorage,
-    getStringOptionFromStorage
+    getOptionFromStorage
 } from './storageHelper'
 
 import { SHOWN } from 'constants/options'
@@ -64,10 +64,6 @@ const
         selectedAudioOptionIndex:
             getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
         earColumnIndex: 0,
-        selectedOverviewOption:
-            getStringOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
-        selectedTipsOption:
-            getStringOptionFromStorage(SELECTED_TIPS_OPTION) || SHOWN,
         selectedWikiIndex: 0,
         selectedWikiUrl: ''
     },
@@ -89,7 +85,9 @@ const
         isCarouselNavShowable: false,
         isOverlayingAnnotation: false,
         isOverlayShown: false,
-        isEarShown: false
+        isEarShown: false,
+        toggleShowsOverviewImmediately: false,
+        toggleShowsTipsImmediately: false
     },
 
     DEVICE_DEFAULTS = {
@@ -106,6 +104,16 @@ const
 
     // All dotKeys plus dotsBitNumber.
     DOTS_DEFAULTS = getDotsFromStorage(),
+
+    OPTION_DEFAULTS = {
+        selectedOverviewOption:
+            getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
+        selectedTipsOption:
+            getOptionFromStorage(SELECTED_TIPS_OPTION) || SHOWN,
+        isForcedShownOverview: false,
+        isSongShownOverview: false,
+        isSongShownTips: false
+    },
 
     RESPONSIVE_DEFAULTS = {
         isHiddenLyric: false,
@@ -175,6 +183,7 @@ export {
     TRANSIENT_DEFAULTS,
     DEVICE_DEFAULTS,
     DOTS_DEFAULTS,
+    OPTION_DEFAULTS,
     RESPONSIVE_DEFAULTS,
     RENDERABLE_DEFAULTS,
     RENDER_DEFAULTS,

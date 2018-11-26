@@ -11,7 +11,7 @@ import { TIPS_TOGGLE_KEY } from 'constants/access'
 import { TIPS_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    sessionStore: { selectedTipsOption }
+    optionStore: { selectedTipsOption }
 }) => ({
     selectedTipsOption
 })

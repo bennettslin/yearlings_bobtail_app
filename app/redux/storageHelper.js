@@ -166,7 +166,7 @@ const setBoolInStorage = (key, value) => {
     WINDOW_STORAGE[key] = value ? 'true' : 'false'
 }
 
-const getStringOptionFromStorage = (key) => {
+const getOptionFromStorage = (key) => {
     const storedValue = WINDOW_STORAGE[key]
 
     if (
@@ -180,6 +180,18 @@ const getStringOptionFromStorage = (key) => {
     }
 }
 
+const setOptionInStorage = (key, value) => {
+    /**
+     * Always start page with all the options hidden, because mounting calls
+     * the same methods as if the song changed.
+     */
+    if (value === SHOWN) {
+        value = HIDDEN
+    }
+
+    WINDOW_STORAGE[key] = value
+}
+
 export {
     getIndexFromStorage,
     setInStorage,
@@ -190,5 +202,6 @@ export {
     getBoolFromStorage,
     setBoolInStorage,
 
-    getStringOptionFromStorage
+    getOptionFromStorage,
+    setOptionInStorage
 }

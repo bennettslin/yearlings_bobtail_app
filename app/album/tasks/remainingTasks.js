@@ -56,12 +56,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-
-    {
-        taskName: `Refactor overview and tips. Default to hiding, only disable when clicking toggle. Ensure they close the dots when opened from selecting a new song.`,
-        workedHours: 0,
-        neededHours: 5
-    },
     {
         taskName: `Persist in storage audio option, ear column, overview, and tops. Do after overview and tips refactor.`,
         workedHours: 0,

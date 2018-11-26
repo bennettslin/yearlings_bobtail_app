@@ -23,7 +23,7 @@ import CarouselNavListener from '../../listeners/CarouselNavListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import LogueListener from '../../listeners/LogueListener'
 import LyricExpandListener from '../../listeners/LyricExpandListener'
-import OverlayListener from '../../listeners/OverlayListener'
+import MainListener from '../../listeners/MainListener'
 import RenderListener from '../../listeners/RenderListener'
 import SceneListener from '../../listeners/SceneListener'
 import ScoreListener from '../../listeners/ScoreListener'
@@ -208,7 +208,7 @@ class ListenerContainer extends PureComponent {
                 <DoublespeakerListener />
                 <LyricExpandListener />
                 <LogueListener />
-                <OverlayListener />
+                <MainListener />
                 <RenderListener />
                 <SceneListener />
                 <ScoreListener />

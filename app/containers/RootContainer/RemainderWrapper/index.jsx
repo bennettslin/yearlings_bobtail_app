@@ -227,9 +227,7 @@ const mapStateToProps = ({
     accessStore: { accessedKey },
     sessionStore: {
         interactivatedVerseIndex,
-        earColumnIndex,
-        selectedOverviewOption,
-        selectedTipsOption
+        earColumnIndex
     },
     audioStore: { isPlaying },
     dotsStore: {
@@ -267,6 +265,10 @@ const mapStateToProps = ({
         isScoresTipsInMain,
         isTwoRowMenu,
         showShrunkNavIcon
+    },
+    optionStore: {
+        selectedOverviewOption,
+        selectedTipsOption
     }
 }) => ({
     accessedKey,

@@ -8,6 +8,7 @@ module.exports = {
     TRANSIENT_STORE: 'transientStore',
     DEVICE_STORE: 'deviceStore',
     DOTS_STORE: 'dotsStore',
+    OPTION_STORE: 'optionStore',
     RENDER_STORE: 'renderStore',
     RENDERABLE_STORE: 'renderableStore',
     RENDERED_STORE: 'renderedStore',

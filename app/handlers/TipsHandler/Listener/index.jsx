@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateSessionStore } from 'flux/session/action'
+import { updateOptionStore } from 'flux/option/action'
 
 import {
     SHOWN,
@@ -17,10 +17,20 @@ class TipsListener extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
-        updateSessionStore: PropTypes.func.isRequired
+        isForcedShownOverview: PropTypes.bool.isRequired,
+        updateOptionStore: PropTypes.func.isRequired
+    }
+
+    componentDidMount() {
+        this._handleSongChange()
     }
 
     componentDidUpdate(prevProps) {
+        this._handleSongChange(prevProps)
+        this._handleForcedOverview(prevProps)
+    }
+
+    _handleSongChange(prevProps = {}) {
         const
             { selectedSongIndex } = this.props,
             { selectedSongIndex: prevSongIndex } = prevProps
@@ -33,12 +43,36 @@ class TipsListener extends PureComponent {
 
             // If just hidden, show tips for new song.
             if (!isSelectedLogue && selectedTipsOption === HIDDEN) {
-                this.props.updateSessionStore({ selectedTipsOption: SHOWN })
+                this.props.updateOptionStore({
+                    selectedTipsOption: SHOWN,
+                    isSongShownTips: true
+                })
 
             // If shown, hide when now in logue.
             } else if (isSelectedLogue && selectedTipsOption === SHOWN) {
-                this.props.updateSessionStore({ selectedTipsOption: HIDDEN })
+                this.props.updateOptionStore({
+                    selectedTipsOption: HIDDEN
+                })
             }
+        }
+    }
+
+    _handleForcedOverview(prevProps) {
+        const
+            {
+                isForcedShownOverview,
+                selectedTipsOption
+            } = this.props,
+            { isForcedShownOverview: wasForcedShownOverview } = prevProps
+
+        if (
+            selectedTipsOption === SHOWN &&
+            isForcedShownOverview && !wasForcedShownOverview
+        ) {
+            this.props.updateOptionStore({
+                selectedTipsOption: HIDDEN,
+                isForcedShownOverview: false
+            })
         }
     }
 
@@ -52,16 +86,20 @@ const mapStateToProps = ({
         isSelectedLogue,
         selectedSongIndex
     },
-    sessionStore: { selectedTipsOption }
+    optionStore: {
+        selectedTipsOption,
+        isForcedShownOverview
+    }
 }) => ({
     isSelectedLogue,
     selectedTipsOption,
+    isForcedShownOverview,
     selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSessionStore
+        updateOptionStore
     }, dispatch)
 )
 

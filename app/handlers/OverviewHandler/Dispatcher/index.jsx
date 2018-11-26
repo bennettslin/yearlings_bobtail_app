@@ -2,9 +2,11 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateSessionStore } from 'flux/session/action'
+import { updateOptionStore } from 'flux/option/action'
 
 import { getNextOption } from '../../../helpers/options'
+
+import { SHOWN } from 'constants/options'
 
 class OverviewDispatcher extends PureComponent {
 
@@ -12,7 +14,9 @@ class OverviewDispatcher extends PureComponent {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
+        selectedTipsOption: PropTypes.string.isRequired,
+        toggleShowsOverviewImmediately: PropTypes.bool.isRequired,
+        updateOptionStore: PropTypes.func.isRequired,
 
         // From parent.
         getDispatch: PropTypes.object.isRequired
@@ -27,7 +31,12 @@ class OverviewDispatcher extends PureComponent {
         overviewOption
     } = {}) => {
 
-        const { isSelectedLogue } = this.props
+        const {
+            isSelectedLogue,
+            toggleShowsOverviewImmediately,
+            selectedOverviewOption: prevOverviewOption,
+            selectedTipsOption
+        } = this.props
 
         // Don't allow toggling if in logue.
         if (isSelectedLogue) {
@@ -35,12 +44,27 @@ class OverviewDispatcher extends PureComponent {
         }
 
         const selectedOverviewOption = getNextOption({
-            isToggled,
-            prevOption: this.props.selectedOverviewOption,
-            nextOption: overviewOption
-        })
+                isToggled,
+                toggleShows: toggleShowsOverviewImmediately,
+                prevOption: this.props.selectedOverviewOption,
+                nextOption: overviewOption
+            }),
 
-        this.props.updateSessionStore({ selectedOverviewOption })
+            /**
+             * If both overview and tips are shown, user may try to show the
+             * overview by pressing key. This is the only way to handle it.
+             */
+            bothOverviewAndTipsShown =
+                selectedOverviewOption === SHOWN &&
+                prevOverviewOption === SHOWN &&
+                selectedTipsOption === SHOWN
+
+        this.props.updateOptionStore({
+            selectedOverviewOption,
+            ...bothOverviewAndTipsShown && {
+                isForcedShownOverview: true
+            }
+        })
         return true
     }
 
@@ -51,15 +75,21 @@ class OverviewDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     songStore: { isSelectedLogue },
-    sessionStore: { selectedOverviewOption }
+    optionStore: {
+        selectedOverviewOption,
+        selectedTipsOption
+    },
+    transientStore: { toggleShowsOverviewImmediately }
 }) => ({
     isSelectedLogue,
-    selectedOverviewOption
+    selectedOverviewOption,
+    selectedTipsOption,
+    toggleShowsOverviewImmediately
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSessionStore
+        updateOptionStore
     }, dispatch)
 )
 

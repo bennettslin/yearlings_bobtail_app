@@ -11,7 +11,7 @@ import { SHOWN } from 'constants/options'
 const mapStateToProps = ({
     renderStore: { canMainRender },
     renderedStore: { isRenderedLogue },
-    sessionStore: { selectedTipsOption }
+    optionStore: { selectedTipsOption }
 }) => ({
     canMainRender,
     isRenderedLogue,

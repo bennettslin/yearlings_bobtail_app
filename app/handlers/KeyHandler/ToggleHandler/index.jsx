@@ -219,14 +219,12 @@ const mapStateToProps = ({
         isScoreShown,
         isTitleShown
     },
-    songStore: {
-        selectedAnnotationIndex
-    },
-    sessionStore: {
+    optionStore: {
         selectedOverviewOption,
-        selectedTipsOption,
-        selectedWikiIndex
-    }
+        selectedTipsOption
+    },
+    songStore: { selectedAnnotationIndex },
+    sessionStore: { selectedWikiIndex }
 }) => ({
     isAccessOn,
     isDotsSlideShown,

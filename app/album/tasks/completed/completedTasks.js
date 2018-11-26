@@ -3996,5 +3996,10 @@ module.exports = [
         taskName: `Create listener for doublespeaker treatment.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Refactor overview and tips. Default to hiding, only disable when clicking toggle. Ensure they close the dots when opened from selecting a new song.`,
+        workedHours: 7,
+        neededHours: 7
     }
 ]
