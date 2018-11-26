@@ -1,15 +1,10 @@
 module.exports = [
 
-    /** Quick fixes, hopefully. */
+    // Access stuff.
     {
         taskName: `Selecting new song from scratch should access first annotation.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Put Live's rendered logic in store. Then fix the bug where event handler tries to scroll carousel and lyric before its elements are set.`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Selecting song from wormhole should set access to wiki wormhole.`,
@@ -21,18 +16,39 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+
+    // Render stuff.
+    {
+        taskName: `Put Live's rendered logic in store. Then fix the bug where event handler tries to scroll carousel and lyric before its elements are set.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Fix bug where playing from logue causes weird jumpiness. Same with switching between songs in general sometimes.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    // Scrolling stuff.
+    {
+        taskName: `Have event manager and scroll manager handle all scrolling through listeners.`,
+        workedHours: 0,
+        neededHours: 10
+    },
     {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,
         workedHours: 0,
         neededHours: 2
     },
+
+    // Quick bug fixes?
     {
-        taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store.`,
+        taskName: `Switching ear columns doesn't deselect popup annotation. Also make sure that loading page with ear column annotation works.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
-        taskName: `Fix bug where go-kart presences have duplicate keys.`,
+        taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -42,22 +58,12 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Remove prologue and epilogue thumbs.`,
+        taskName: `Do not show thumb for selected nav song, but still allow it to be selectable.`,
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: `Group together some dispatchers and listeners that use the same logic. Only for non-critical UI changes.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Rethink whether to hide carousel upon interactivating verse. Dots are not hidden.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Disallow selecting nav when there no dots. (Do after consolidating dispatchers and listeners?)`,
+        taskName: `Rethink whether to hide carousel upon interactivating verse. Dots are not hidden, after all.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -67,50 +73,41 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Persist in storage audio option, ear column, overview, and tips. Do after overview and tips refactor.`,
+        taskName: `Persist in storage audio option, ear column.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
+
+    // More refactoring...
     {
-        taskName: `Do AWS setup on own laptop.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Separate class name parent containers.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Have timeout manager.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Fix bug where playing from logue causes weird jumpiness. Same with switching between songs in general sometimes.`,
+        taskName: `Group together some dispatchers and listeners that use the same logic. Only for non-critical UI changes.`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Add unit tests`,
+        taskName: `Disallow selecting nav when there no dots. (Do after consolidating dispatchers and listeners?)`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 2
+    },
+
+    {
+        taskName: `Separate class name parent containers.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Get AWS credentials on personal laptop.`,
         workedHours: 0,
         neededHours: 3
     },
+
+    // Major refactors.
     {
-        taskName: `Refactor event handling! Include consolidating as much as possible in store.`,
+        taskName: `Refactor song and audio managers so that everything other than player stuff is handled through listeners.`,
         workedHours: 0,
-        neededHours: 30
+        neededHours: 10
     },
-    {
-        taskName: `Manual testing`,
-        workedHours: 0,
-        neededHours: 20
-    },
+
     {
         taskName: `Wire on puppets and others.`,
         workedHours: 0,
@@ -282,7 +279,12 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Allow cutouts and fixtures to persist across scenes. Probably needs React CSS transition group.`,
+        taskName: `Fix bug where go-kart presences have duplicate keys. Do this in conjunction with persisting presences across scenes.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Allow cutouts and fixtures to persist across scenes. Either needs React CSS transition group, or just have same keys?`,
         workedHours: 0,
         neededHours: 8
     },
@@ -300,6 +302,18 @@ module.exports = [
         taskName: `Allow presences to specify zIndex. Position presences in slanted cubes.`,
         workedHours: 0,
         neededHours: 5
+    },
+
+    // Testing down the line.
+    {
+        taskName: `Manual testing`,
+        workedHours: 0,
+        neededHours: 20
+    },
+    {
+        taskName: `Add unit tests`,
+        workedHours: 0,
+        neededHours: 8
     },
 
     /**
