@@ -13,7 +13,10 @@ import VerseBarManager from '../../managers/VerseBarManager'
 
 import OverviewListener from '../../handlers/OverviewHandler/Listener'
 import TipsListener from '../../handlers/TipsHandler/Listener'
-import SongHandler from '../../handlers/SongHandler'
+
+// TODO: Eventually remove this one.
+import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
+import SongListener from '../../handlers/SongHandler/Listener'
 import TimeVerseHandler from '../../handlers/TimeVerseHandler'
 
 import RenderedListener from '../../listeners/RenderedListener'
@@ -28,7 +31,6 @@ import RenderListener from '../../listeners/RenderListener'
 import SceneListener from '../../listeners/SceneListener'
 import ScoreListener from '../../listeners/ScoreListener'
 import SliderListener from '../../listeners/SliderListener'
-import SongListener from '../../listeners/SongListener'
 import WikiListener from '../../listeners/WikiListener'
 import WikiWormholeListener from '../../listeners/WikiWormholeListener'
 import WindowListener from '../../listeners/WindowListener'
@@ -186,7 +188,7 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setVerseManagerRef}
                     getVerseElement={this.getVerseElement}
                 />
-                <SongHandler
+                <SongDispatcher
                     setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
                     selectVerse={this.selectVerse}

@@ -14,9 +14,14 @@ import {
 import {
     getSongsAndLoguesCount,
     getTimeForVerseIndex
-} from '../../helpers/dataHelper'
+} from '../../../helpers/dataHelper'
 
-class SongHandler extends PureComponent {
+class SongDispatcher extends PureComponent {
+
+    // TODO: Eventually get rid of this.
+    static defaultProps = {
+        getDispatch: {}
+    }
 
     static propTypes = {
         // Through Redux.
@@ -28,14 +33,19 @@ class SongHandler extends PureComponent {
         setRef: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
-        updateSelectedPlayer: PropTypes.func.isRequired
+        updateSelectedPlayer: PropTypes.func.isRequired,
+
+        // From parent.
+        getDispatch: PropTypes.object.isRequired
     }
 
     componentDidMount() {
         this.props.setRef(this)
+        this.props.getDispatch.handleSongEnd = this.handleSongEnd
+        this.props.getDispatch.selectSong = this.selectSong
     }
 
-    handleSongEnd() {
+    handleSongEnd = () => {
         /**
          * When selecting next song through audio player, reset annotation and
          * verse, and scroll element into view, but do not access nav section.
@@ -72,13 +82,13 @@ class SongHandler extends PureComponent {
         }
     }
 
-    selectSong({
+    selectSong = ({
         selectedSongIndex = 0,
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,
         direction
         // destinationWormholeIndex
-    }) {
+    }) => {
         const { props } = this
 
         // Called from audio section's previous or next buttons.
@@ -146,4 +156,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(SongHandler)
+export default connect(mapStateToProps, bindDispatchToProps)(SongDispatcher)
