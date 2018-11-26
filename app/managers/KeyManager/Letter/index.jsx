@@ -89,7 +89,7 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.dispatchAudioOption()
                 break
             case AUDIO_PLAY_KEY:
-                keyWasRegistered = eventHandlers.handleAudioPlay(e)
+                keyWasRegistered = eventHandlers.togglePlay(e)
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
                 keyWasRegistered = eventHandlers.handleAudioPreviousSong(e)

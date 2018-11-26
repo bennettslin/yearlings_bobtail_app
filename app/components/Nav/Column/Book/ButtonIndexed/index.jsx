@@ -59,9 +59,11 @@ class NavButtonIndexed extends PureComponent {
 
         return (
             <NavButton {...other}
-                songIndex={songIndex}
-                isSelected={isSelected}
-                isAccessed={isAccessed}
+                {...{
+                    songIndex,
+                    isSelected,
+                    isAccessed
+                }}
             />
         )
     }

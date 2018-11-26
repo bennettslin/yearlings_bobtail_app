@@ -247,7 +247,7 @@ Live.propTypes = {
 
     handleAnnotationSelect: PropTypes.func.isRequired,
     handleAnnotationWormholeSelect: PropTypes.func.isRequired,
-    handleAudioPlay: PropTypes.func.isRequired,
+    togglePlay: PropTypes.func.isRequired,
     handleAudioPreviousSong: PropTypes.func.isRequired,
     handleAudioNextSong: PropTypes.func.isRequired,
     handleCarouselNavToggle: PropTypes.func.isRequired,

@@ -30,16 +30,21 @@ class NavColumn extends Component {
         handleNavSongSelect: PropTypes.func.isRequired
     }
 
-    handleNavBookClick = () => {
+    _handleNavBookClick = () => {
         this.dispatchNavBook()
+    }
+
+    _handleNavSongSelect = (songIndex) => {
+        this.props.handleNavSongSelect({
+            selectedSongIndex: songIndex
+        })
     }
 
     render() {
         const {
                 showSingleNavBook,
                 shownNavBookIndex,
-                bookIndex,
-                handleNavSongSelect
+                bookIndex
             } = this.props,
 
             isShownColumn =
@@ -59,7 +64,7 @@ class NavColumn extends Component {
                     {...{
                         bookIndex,
                         isInShownColumn: isShownColumn,
-                        handleButtonClick: handleNavSongSelect
+                        handleButtonClick: this._handleNavSongSelect
                     }}
                 />
 
@@ -68,13 +73,13 @@ class NavColumn extends Component {
                     <NavBookLogue
                         {...{
                             bookIndex: bookIndex,
-                            handleButtonClick: handleNavSongSelect
+                            handleButtonClick: this._handleNavSongSelect
                         }}
                     /> :
                     <NavBookToggle
                         {...{
                             bookIndex: bookIndex,
-                            handleButtonClick: this.handleNavBookClick
+                            handleButtonClick: this._handleNavBookClick
                         }}
                     />
                 }

@@ -128,7 +128,7 @@ class EventContainer extends PureComponent {
      * AUDIO *
      *********/
 
-    handleAudioPlay = () => {
+    togglePlay = () => {
         return this.props.togglePlay()
     }
 
@@ -275,7 +275,9 @@ class EventContainer extends PureComponent {
      * NAV *
      *******/
 
-    handleNavSongSelect = (e, selectedSongIndex) => {
+    handleNavSongSelect = ({
+        selectedSongIndex
+    }) => {
         return this.props.selectSong({
             selectedSongIndex
         })

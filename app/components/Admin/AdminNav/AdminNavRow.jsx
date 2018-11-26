@@ -22,7 +22,9 @@ const AdminNavRow = ({
     const songTitle = getSongTitle({ songIndex }),
         songTasks = getSongTasks(songIndex),
         sumTask = ProgressHelper.calculateSumTask(songTasks),
-        onClick = e => handleNavSongSelect(e, songIndex)
+        onClick = () => handleNavSongSelect({
+            selectedSongIndex: songIndex
+        })
 
     return (
         <AdminNavRowView {...other}

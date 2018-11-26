@@ -63,7 +63,9 @@ class NavNavigation extends PureComponent {
                     direction = 1
                     break
                 case ENTER:
-                    keyWasRegistered = handleNavSongSelect(e, accessedNavSongIndex)
+                    keyWasRegistered = handleNavSongSelect({
+                        selectedSongIndex: accessedNavSongIndex
+                    })
                     /**
                      * If song was successfully selected, then annotation index
                      * was also accessed.

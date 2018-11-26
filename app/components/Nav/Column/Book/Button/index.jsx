@@ -43,7 +43,7 @@ class NavButton extends PureComponent {
         handleButtonClick: PropTypes.func.isRequired
     }
 
-    _handleButtonClick = (e) => {
+    _handleButtonClick = () => {
         const {
             handleButtonClick,
             songIndex
@@ -51,11 +51,11 @@ class NavButton extends PureComponent {
 
         // Select song or logue.
         if (!isNaN(songIndex)) {
-            handleButtonClick(e, songIndex)
+            handleButtonClick(songIndex)
 
         // Select book column.
         } else {
-            handleButtonClick(e)
+            handleButtonClick()
         }
     }
 
@@ -102,20 +102,22 @@ class NavButton extends PureComponent {
                         buttonName: isBook ?
                             NAV_BOOK_BUTTON_KEY :
                             NAV_SONG_BUTTON_KEY,
-                        buttonIdentifier
+                        buttonIdentifier,
+                        isDisabled: !isEnabled,
+                        isIndexSelected: isSelected,
+                        showAccessIconIfAccessOn: isAccessed && isNavigable,
+                        accessKey: isToggle ? '' : ENTER,
+                        handleButtonClick: this._handleButtonClick
                     }}
-                    isDisabled={!isEnabled}
-                    isIndexSelected={isSelected}
-                    showAccessIconIfAccessOn={isAccessed && isNavigable}
-                    accessKey={isToggle ? '' : ENTER}
-                    handleButtonClick={this._handleButtonClick}
                 >
                     {!isBook && (
                         <Thumb
-                            isAccessed={isAccessed && isNavigable}
-                            isLeftmost={isLeftmost}
-                            isRightmost={isRightmost}
-                            songIndex={songIndex}
+                            {...{
+                                isAccessed: isAccessed && isNavigable,
+                                isLeftmost,
+                                isRightmost,
+                                songIndex
+                            }}
                         />
                     )}
                 </Button>
