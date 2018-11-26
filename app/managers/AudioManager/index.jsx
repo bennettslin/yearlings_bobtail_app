@@ -31,7 +31,7 @@ class AudioManager extends PureComponent {
         this.props.setRef(this)
     }
 
-    togglePlay(isPlaying = !this.props.isPlaying) {
+    togglePlay = (isPlaying = !this.props.isPlaying) => {
 
         const {
                 selectedSongIndex,

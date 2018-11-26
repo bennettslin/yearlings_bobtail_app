@@ -58,8 +58,12 @@ class AudioButtons extends PureComponent {
         handleAudioNextSong: PropTypes.func.isRequired
     }
 
-    handleAudioOptionClick = () => {
+    _handleAudioOptionClick = () => {
         this.dispatchAudioOption()
+    }
+
+    _handlePlayClick = () => {
+        this.props.togglePlay()
     }
 
     render() {
@@ -70,7 +74,6 @@ class AudioButtons extends PureComponent {
                 isPlaying,
                 selectedAudioOptionIndex,
 
-                togglePlay,
                 handleAudioPreviousSong,
                 handleAudioNextSong
             } = this.props,
@@ -114,7 +117,7 @@ class AudioButtons extends PureComponent {
                         buttonIdentifier={isPlaying}
                         accessKey={AUDIO_PLAY_KEY}
                         isDisabled={!songCanPlayThrough}
-                        handleButtonClick={togglePlay}
+                        handleButtonClick={this._handlePlayClick}
                     />
 
                     {/* Next button. */}
@@ -138,7 +141,7 @@ class AudioButtons extends PureComponent {
                         className="AudioButton"
                         buttonIdentifier={selectedAudioOptionIndex}
                         accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
-                        handleButtonClick={this.handleAudioOptionClick}
+                        handleButtonClick={this._handleAudioOptionClick}
                     />
                 </div>
                 <AudioOptionDispatcher {...{ getDispatch: this }} />

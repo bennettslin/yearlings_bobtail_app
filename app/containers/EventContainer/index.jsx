@@ -128,10 +128,6 @@ class EventContainer extends PureComponent {
      * AUDIO *
      *********/
 
-    togglePlay = () => {
-        return this.props.togglePlay()
-    }
-
     handleAudioPreviousSong = () => {
         const songSelected = this.props.selectSong({
             direction: -1

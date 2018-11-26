@@ -12,7 +12,7 @@ export const getHandlers = (me) => {
         handleVerseDirectionAccess: me.handleVerseDirectionAccess,
         handleAnnotationWormholeSelect: me.handleAnnotationWormholeSelect,
         handleAnnotationSelect: me.handleAnnotationSelect,
-        togglePlay: me.togglePlay,
+        togglePlay: me.props.togglePlay,
         handleAudioPreviousSong: me.handleAudioPreviousSong,
         handleAudioNextSong: me.handleAudioNextSong,
         handleLyricVerseSelect: me.handleLyricVerseSelect,
