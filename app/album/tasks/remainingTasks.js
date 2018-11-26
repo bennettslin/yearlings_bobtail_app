@@ -7,6 +7,16 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Put Live's rendered logic in store. Then fix the bug where event handler tries to scroll carousel and lyric before its elements are set.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Selecting song from wormhole should set access to wiki wormhole.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Accessed annotation and interactivated verse should stay in sync when navigating and switching between the two.`,
         workedHours: 0,
         neededHours: 3

@@ -29,7 +29,6 @@ class Lyric extends Component {
         canLyricRender: PropTypes.bool.isRequired,
 
         // From parent.
-        handleScrollUponLyricRender: PropTypes.func.isRequired,
         lyricDidRender: PropTypes.func.isRequired
     }
 
@@ -71,8 +70,6 @@ class Lyric extends Component {
                 ...!hasMounted && { hasMounted: true }
             })
 
-            this.props.handleScrollUponLyricRender()
-
         } else if (couldRender && !canLyricRender) {
 
             this.setState({
@@ -105,7 +102,6 @@ class Lyric extends Component {
 
         const {
                 /* eslint-disable no-unused-vars */
-                handleScrollUponLyricRender,
                 lyricDidRender,
                 dispatch,
                 /* eslint-enable no-unused-vars */

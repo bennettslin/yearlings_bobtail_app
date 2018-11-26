@@ -55,7 +55,6 @@ class Carousel extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
 
         // From parent.
-        handleScrollUponCarouselRender: PropTypes.func.isRequired,
         handleAnnotationSelect: PropTypes.func.isRequired,
 
         carouselDidRender: PropTypes.func.isRequired,
@@ -103,8 +102,6 @@ class Carousel extends PureComponent {
                 ...!hasMounted && { hasMounted: true }
             })
 
-            this.props.handleScrollUponCarouselRender()
-
         } else if (couldRender && !canCarouselRender) {
 
             this.setState({
@@ -122,7 +119,6 @@ class Carousel extends PureComponent {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                handleScrollUponCarouselRender,
                 carouselDidRender,
                 dispatch,
                 /* eslint-enable no-unused-vars */

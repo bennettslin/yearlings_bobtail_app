@@ -108,10 +108,9 @@ class NavigationManager extends PureComponent {
         const {
             eventHandlers: {
                 handleAnnotationSelect,
-                handleAnnotationWormholeSelect,
+                selectSong,
                 handleLyricAnnotationSelect,
-                handleAnnotationAccess,
-                selectSong
+                handleAnnotationAccess
             },
             determineVerseBarsWithParameters
         } = this.props
@@ -122,7 +121,7 @@ class NavigationManager extends PureComponent {
                     {...{
                         getNavigation: this,
                         handleAnnotationSelect,
-                        handleAnnotationWormholeSelect,
+                        selectSong,
                         determineVerseBarsWithParameters
                     }}
                 />

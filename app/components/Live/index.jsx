@@ -246,16 +246,13 @@ Live.propTypes = {
     setCarouselParentRef: PropTypes.func.isRequired,
 
     handleAnnotationSelect: PropTypes.func.isRequired,
-    handleAnnotationWormholeSelect: PropTypes.func.isRequired,
-    togglePlay: PropTypes.func.isRequired,
     selectSong: PropTypes.func.isRequired,
+    togglePlay: PropTypes.func.isRequired,
     handleCarouselNavToggle: PropTypes.func.isRequired,
     handleLyricAnnotationSelect: PropTypes.func.isRequired,
     handleLyricWheel: PropTypes.func.isRequired,
     handleLyricAutoScroll: PropTypes.func.isRequired,
     handleLyricVerseSelect: PropTypes.func.isRequired,
-    handleScrollUponLyricRender: PropTypes.func.isRequired,
-    handleScrollUponCarouselRender: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired
 }

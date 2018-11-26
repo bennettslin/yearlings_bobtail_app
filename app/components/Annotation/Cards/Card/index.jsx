@@ -129,7 +129,7 @@ const annotationCardViewProptypes = {
         cardIndex: PropTypes.number.isRequired,
         isSelected: PropTypes.bool.isRequired,
         handleWikiSelectClick: PropTypes.func.isRequired,
-        handleAnnotationWormholeSelect: PropTypes.func.isRequired
+        selectSong: PropTypes.func.isRequired
     },
 
     AnnotationCardView = ({
@@ -139,7 +139,7 @@ const annotationCardViewProptypes = {
         isSelected,
         annotationIndex,
         handleWikiSelectClick,
-        handleAnnotationWormholeSelect,
+        selectSong,
 
         // From controller.
         text,
@@ -183,7 +183,7 @@ const annotationCardViewProptypes = {
                                 isSelected,
                                 cardIndex,
                                 annotationIndex,
-                                handleAnnotationWormholeSelect
+                                selectSong
                             }}
                         />
                     )}

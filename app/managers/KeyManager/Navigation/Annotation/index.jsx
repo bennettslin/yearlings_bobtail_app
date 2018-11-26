@@ -32,7 +32,7 @@ class AnnotationNavigation extends PureComponent {
         // From parent.
         getNavigation: PropTypes.object.isRequired,
         handleAnnotationSelect: PropTypes.func.isRequired,
-        handleAnnotationWormholeSelect: PropTypes.func.isRequired,
+        selectSong: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
@@ -44,7 +44,7 @@ class AnnotationNavigation extends PureComponent {
         const { props } = this,
             {
                 handleAnnotationSelect,
-                handleAnnotationWormholeSelect,
+                selectSong,
                 determineVerseBarsWithParameters
             } = props
 
@@ -99,7 +99,7 @@ class AnnotationNavigation extends PureComponent {
                             )
 
                         keyWasRegistered =
-                            handleAnnotationWormholeSelect(
+                            selectSong(
                                 getWormholeObject(wormholeLink)
                             )
 

@@ -10,7 +10,6 @@ export const getHandlers = (me) => {
     return {
         handleAnnotationAccess: me.handleAnnotationAccess,
         handleVerseDirectionAccess: me.handleVerseDirectionAccess,
-        handleAnnotationWormholeSelect: me.handleAnnotationWormholeSelect,
         handleAnnotationSelect: me.handleAnnotationSelect,
         togglePlay: me.props.togglePlay,
         selectSong: me.props.selectSong,
@@ -19,8 +18,6 @@ export const getHandlers = (me) => {
         handleLyricAutoScroll: me.handleLyricAutoScroll,
         handleCarouselNavToggle: me.handleCarouselNavToggle,
         handleVerseBarSelect: me.handleVerseBarSelect,
-        handleScrollUponLyricRender: me.handleScrollUponLyricRender,
-        handleScrollUponCarouselRender: me.handleScrollUponCarouselRender,
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,

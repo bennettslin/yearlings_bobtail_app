@@ -49,7 +49,7 @@ class AnnotationWormhole extends Component {
         wormholeLinkIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        handleAnnotationWormholeSelect: PropTypes.func.isRequired
+        selectSong: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -69,7 +69,7 @@ class AnnotationWormhole extends Component {
     _handleWormholeClick = () => {
         const wormholeLink = this._getWormholeLink()
 
-        this.props.handleAnnotationWormholeSelect(
+        this.props.selectSong(
             getWormholeObject(wormholeLink)
         )
     }
