@@ -27,7 +27,7 @@ class NavColumn extends Component {
 
         // From parent.
         bookIndex: PropTypes.number.isRequired,
-        handleNavSongSelect: PropTypes.func.isRequired
+        selectSong: PropTypes.func.isRequired
     }
 
     _handleNavBookClick = () => {
@@ -35,7 +35,7 @@ class NavColumn extends Component {
     }
 
     _handleNavSongSelect = (songIndex) => {
-        this.props.handleNavSongSelect({
+        this.props.selectSong({
             selectedSongIndex: songIndex
         })
     }

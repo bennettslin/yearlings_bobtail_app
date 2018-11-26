@@ -43,7 +43,7 @@ const AdminNavSectionView = ({
 
     // From props.
     selectedSongIndex,
-    handleNavSongSelect,
+    selectSong,
 
     // From controller.
     sumAllTasks,
@@ -53,7 +53,7 @@ const AdminNavSectionView = ({
     const navItemProps = {
         selectedSongIndex,
         maxTotalNeededHours,
-        handleNavSongSelect
+        selectSong
     }
 
     return (
@@ -93,7 +93,7 @@ AdminNavSectionView.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    handleNavSongSelect: PropTypes.func.isRequired,
+    selectSong: PropTypes.func.isRequired,
     sumAllTasks: PropTypes.object.isRequired,
     maxTotalNeededHours: PropTypes.number.isRequired
 }

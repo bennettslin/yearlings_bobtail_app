@@ -92,11 +92,15 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = eventHandlers.togglePlay()
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
-                keyWasRegistered = eventHandlers.handleAudioPreviousSong(e)
+                keyWasRegistered = eventHandlers.selectSong({
+                    direction: -1
+                })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_NEXT_SONG_KEY:
-                keyWasRegistered = eventHandlers.handleAudioNextSong(e)
+                keyWasRegistered = eventHandlers.selectSong({
+                    direction: 1
+                })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_REWIND_KEY:

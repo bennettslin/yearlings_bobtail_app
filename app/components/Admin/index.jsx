@@ -15,7 +15,7 @@ class Admin extends Component {
     render() {
 
         const {
-                handleNavSongSelect,
+                selectSong,
                 ...other
             } = this.props,
 
@@ -31,7 +31,7 @@ class Admin extends Component {
                     <div className="Admin__field album">
                         <AdminNavSection
                             allTasks={allTasks}
-                            handleNavSongSelect={handleNavSongSelect}
+                            selectSong={selectSong}
                         />
                     </div>
                     <Shared {...other} />

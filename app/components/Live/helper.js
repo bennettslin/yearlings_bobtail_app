@@ -13,10 +13,8 @@ export const getOrganisedHandlersFromProps = (props) => {
             handleAnnotationSelect,
             handleAnnotationWormholeSelect,
             togglePlay,
-            handleAudioPreviousSong,
-            handleAudioNextSong,
+            selectSong,
             handleCarouselNavToggle,
-            handleNavSongSelect,
             handleLyricAnnotationSelect,
             handleLyricWheel,
             handleLyricAutoScroll,
@@ -31,8 +29,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
         audioButtonsHandlers = {
             togglePlay,
-            handleAudioPreviousSong,
-            handleAudioNextSong
+            selectSong
         },
         audioHandlers = {
             audioButtonsHandlers
@@ -64,7 +61,7 @@ export const getOrganisedHandlersFromProps = (props) => {
                 handleScrollUponCarouselRender
             },
             navSectionHandlers: {
-                handleNavSongSelect
+                selectSong
             }
         },
 

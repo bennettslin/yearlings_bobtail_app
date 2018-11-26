@@ -54,8 +54,7 @@ class AudioButtons extends PureComponent {
 
         // From parent.
         togglePlay: PropTypes.func.isRequired,
-        handleAudioPreviousSong: PropTypes.func.isRequired,
-        handleAudioNextSong: PropTypes.func.isRequired
+        selectSong: PropTypes.func.isRequired
     }
 
     _handleAudioOptionClick = () => {
@@ -66,16 +65,25 @@ class AudioButtons extends PureComponent {
         this.props.togglePlay()
     }
 
+    _handlePreviousClick = () => {
+        this.props.selectSong({
+            direction: -1
+        })
+    }
+
+    _handleNextClick = () => {
+        this.props.selectSong({
+            direction: 1
+        })
+    }
+
     render() {
         const {
                 selectedSongIndex,
                 canPlayThroughs,
 
                 isPlaying,
-                selectedAudioOptionIndex,
-
-                handleAudioPreviousSong,
-                handleAudioNextSong
+                selectedAudioOptionIndex
             } = this.props,
 
             isPrologue = selectedSongIndex === 0,
@@ -106,7 +114,7 @@ class AudioButtons extends PureComponent {
                         buttonIdentifier={isPrologue}
                         accessKey={AUDIO_PREVIOUS_SONG_KEY}
                         isDisabled={isPrologue}
-                        handleButtonClick={handleAudioPreviousSong}
+                        handleButtonClick={this._handlePreviousClick}
                     />
 
                     {/* Play button. */}
@@ -127,7 +135,7 @@ class AudioButtons extends PureComponent {
                         buttonIdentifier={isEpilogue}
                         accessKey={AUDIO_NEXT_SONG_KEY}
                         isDisabled={isEpilogue}
-                        handleButtonClick={handleAudioNextSong}
+                        handleButtonClick={this._handleNextClick}
                     />
                 </div>
 

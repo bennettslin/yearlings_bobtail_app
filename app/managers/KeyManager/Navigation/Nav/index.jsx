@@ -29,7 +29,7 @@ class NavNavigation extends PureComponent {
 
         // From parent.
         getNavigation: PropTypes.object.isRequired,
-        handleNavSongSelect: PropTypes.func.isRequired
+        selectSong: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -40,7 +40,7 @@ class NavNavigation extends PureComponent {
         const {
             isAccessOn,
             interactivatedVerseIndex,
-            handleNavSongSelect
+            selectSong
         } = this.props
 
         let annotationIndexWasAccessed = false,
@@ -63,7 +63,7 @@ class NavNavigation extends PureComponent {
                     direction = 1
                     break
                 case ENTER:
-                    keyWasRegistered = handleNavSongSelect({
+                    keyWasRegistered = selectSong({
                         selectedSongIndex: accessedNavSongIndex
                     })
                     /**

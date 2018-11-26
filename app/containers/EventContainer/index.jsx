@@ -124,24 +124,6 @@ class EventContainer extends PureComponent {
         }
     }
 
-    /*********
-     * AUDIO *
-     *********/
-
-    handleAudioPreviousSong = () => {
-        const songSelected = this.props.selectSong({
-            direction: -1
-        })
-        return songSelected
-    }
-
-    handleAudioNextSong = () => {
-        const songSelected = this.props.selectSong({
-            direction: 1
-        })
-        return songSelected
-    }
-
     /************
      * CAROUSEL *
      ************/
@@ -265,18 +247,6 @@ class EventContainer extends PureComponent {
         }
 
         return true
-    }
-
-    /*******
-     * NAV *
-     *******/
-
-    handleNavSongSelect = ({
-        selectedSongIndex
-    }) => {
-        return this.props.selectSong({
-            selectedSongIndex
-        })
     }
 
     /*********

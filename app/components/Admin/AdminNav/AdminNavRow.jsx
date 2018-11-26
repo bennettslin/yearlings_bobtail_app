@@ -14,7 +14,7 @@ const AdminNavRow = ({
 
     songIndex,
     isSelected,
-    handleNavSongSelect,
+    selectSong,
 
     ...other
 }) => {
@@ -22,7 +22,7 @@ const AdminNavRow = ({
     const songTitle = getSongTitle({ songIndex }),
         songTasks = getSongTasks(songIndex),
         sumTask = ProgressHelper.calculateSumTask(songTasks),
-        onClick = () => handleNavSongSelect({
+        onClick = () => selectSong({
             selectedSongIndex: songIndex
         })
 
@@ -39,7 +39,7 @@ const AdminNavRow = ({
 AdminNavRow.propTypes = {
     songIndex: PropTypes.number.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    handleNavSongSelect: PropTypes.func.isRequired
+    selectSong: PropTypes.func.isRequired
 }
 
 /****************
