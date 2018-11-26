@@ -13,7 +13,6 @@ import InteractiveContainer from '../../containers/InteractiveContainer'
 import AnnotationDispatcher from '../../dispatchers/AnnotationDispatcher'
 import AnnotationAccessDispatcher from '../../dispatchers/AnnotationAccessDispatcher'
 import CarouselDispatcher from '../../dispatchers/CarouselDispatcher'
-import EarColumnDispatcher from '../../dispatchers/EarColumnDispatcher'
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
@@ -21,7 +20,7 @@ import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
 import { getHandlers } from './helper'
 
-import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
+// import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
 
 import {
     CAROUSEL_SCROLL,
@@ -81,30 +80,8 @@ class EventContainer extends PureComponent {
      * ANNOTATION *
      **************/
 
-    handleAnnotationWormholeSelect = (e, wormholeObject) => {
-        const {
-            songIndex: selectedSongIndex,
-            annotationIndex: selectedAnnotationIndex,
-            verseIndex: selectedVerseIndex,
-            columnIndex: earColumnIndex,
-            [DESTINATION_WORMHOLE_INDEX]: destinationWormholeIndex
-        } = wormholeObject
-
-        const songSelected = this.props.selectSong({
-            selectedSongIndex,
-            selectedAnnotationIndex,
-            selectedVerseIndex,
-            destinationWormholeIndex
-        })
-
-        if (songSelected) {
-            // TODO: This can be set in a listener.
-            if (!isNaN(earColumnIndex)) {
-                this.dispatchEarColumn({ earColumnIndex })
-            }
-        }
-
-        return songSelected
+    handleAnnotationWormholeSelect = (wormholeObject) => {
+        return this.props.selectSong(wormholeObject)
     }
 
     handleAnnotationSelect = (e, direction) => {
@@ -357,7 +334,6 @@ class EventContainer extends PureComponent {
                 <AnnotationDispatcher {...{ getDispatch: this }} />
                 <AnnotationAccessDispatcher {...{ getDispatch: this }} />
                 <CarouselDispatcher {...{ getDispatch: this }} />
-                <EarColumnDispatcher {...{ getDispatch: this }} />
                 <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
                 <StopPropagationDispatcher {...{ getDispatch: this }} />
             </___>

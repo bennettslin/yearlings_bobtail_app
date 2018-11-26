@@ -10,6 +10,8 @@ import {
     getAnnotationObject
 } from 'helpers/dataHelper'
 
+import { getWormholeObject } from '../../../../helpers/wormhole'
+
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -98,8 +100,7 @@ class AnnotationNavigation extends PureComponent {
 
                         keyWasRegistered =
                             handleAnnotationWormholeSelect(
-                                e,
-                                wormholeLink
+                                getWormholeObject(wormholeLink)
                             )
 
                         /**

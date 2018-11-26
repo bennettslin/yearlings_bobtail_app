@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
+import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
 
 import {
@@ -27,6 +28,7 @@ class SongDispatcher extends PureComponent {
         // Through Redux.
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -86,8 +88,8 @@ class SongDispatcher extends PureComponent {
         selectedSongIndex = 0,
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,
+        earColumnIndex,
         direction
-        // destinationWormholeIndex
     }) => {
         const { props } = this
 
@@ -134,6 +136,10 @@ class SongDispatcher extends PureComponent {
             )
         })
 
+        if (!isNaN(earColumnIndex)) {
+            this.props.updateSessionStore({ earColumnIndex })
+        }
+
         return true
     }
 
@@ -152,6 +158,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateSessionStore,
         updateSongStore
     }, dispatch)
 )

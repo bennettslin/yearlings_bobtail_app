@@ -24,6 +24,8 @@ import {
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
+import { getWormholeObject } from '../../../../../../helpers/wormhole'
+
 import { getAnnotationCardWormholeObject } from './helper'
 
 const mapStateToProps = ({
@@ -64,13 +66,15 @@ class AnnotationWormhole extends Component {
         return shouldComponentUpdate
     }
 
-    _handleWormholeClick = (e) => {
-        const wormholeObject = this._getWormholeObject()
+    _handleWormholeClick = () => {
+        const wormholeLink = this._getWormholeLink()
 
-        this.props.handleAnnotationWormholeSelect(e, wormholeObject)
+        this.props.handleAnnotationWormholeSelect(
+            getWormholeObject(wormholeLink)
+        )
     }
 
-    _getWormholeObject() {
+    _getWormholeLink() {
         const {
             renderedSongIndex,
             annotationIndex,
@@ -93,7 +97,7 @@ class AnnotationWormhole extends Component {
                 isSelected
             } = this.props,
 
-            wormholeObject = this._getWormholeObject(),
+            wormholeLink = this._getWormholeLink(),
 
             {
                 songIndex,
@@ -103,7 +107,7 @@ class AnnotationWormhole extends Component {
 
                 // Default if no wormhole prefix.
                 wormholePrefix = 'wormhole to'
-            } = wormholeObject,
+            } = wormholeLink,
 
             songTitle = getSongTitle({ songIndex }),
             verseObject = getVerseObject(songIndex, verseIndex),

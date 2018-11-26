@@ -8,7 +8,7 @@ import DotField from './Field'
 import DotIcon from './Icon'
 
 const propTypes = {
-    // From parent.
+        // From parent.
         showFieldOnly: PropTypes.bool,
         className: PropTypes.any
     },
