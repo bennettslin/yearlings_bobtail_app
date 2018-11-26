@@ -3,15 +3,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import ScoresTips from '../../ScoresTips'
 import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
 
+const mapStateToProps = ({
+    deviceStore: { isPhone }
+}) => ({
+    isPhone
+})
+
 const propTypes = {
-    // From parent.
-        className: PropTypes.any,
-        isPhone: PropTypes.bool
+        // Through Redux.
+        isPhone: PropTypes.bool.isRequired,
+
+        // From parent.
+        className: PropTypes.any
     },
 
     LeftShelf = ({
@@ -32,4 +41,4 @@ const propTypes = {
 
 LeftShelf.propTypes = propTypes
 
-export default LeftShelf
+export default connect(mapStateToProps)(LeftShelf)

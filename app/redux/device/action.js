@@ -1,10 +1,28 @@
 // Actions for window size.
-import { getDefinedOnlyPayload } from '../actionHelper'
+import {
+    hasKey,
+    getDefinedOnlyPayload
+} from '../actionHelper'
 
 import { DEVICE_STORE } from '../storeKeys'
 import { DEVICE_DEFAULTS } from '../defaultStates'
 
-export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => ({
-    type: DEVICE_STORE,
-    payload: getDefinedOnlyPayload(payload)
-})
+import {
+    getIsDesktop,
+    getIsPhone
+} from '../../helpers/responsiveHelper'
+
+export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => {
+
+    const { deviceIndex } = payload
+
+    if (hasKey(deviceIndex)) {
+        payload.isDesktop = getIsDesktop(deviceIndex)
+        payload.isPhone = getIsPhone(deviceIndex)
+    }
+
+    return ({
+        type: DEVICE_STORE,
+        payload: getDefinedOnlyPayload(payload)
+    })
+}

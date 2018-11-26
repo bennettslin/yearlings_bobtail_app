@@ -92,6 +92,8 @@ const
 
     DEVICE_DEFAULTS = {
         deviceIndex: 0,
+        isPhone: false,
+        isDesktop: false,
         windowHeight: 0,
         windowWidth: 0,
         stageTop: 0,

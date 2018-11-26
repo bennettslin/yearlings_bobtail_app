@@ -7,17 +7,15 @@ import cx from 'classnames'
 
 import { DEVICE_OBJECTS } from 'constants/responsive'
 
-import {
-    getIsPhone,
-    getIsTablet,
-    getIsDesktop
-} from 'helpers/responsiveHelper'
+import { getIsTablet } from 'helpers/responsiveHelper'
 
 class DeviceWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
+        isPhone: PropTypes.bool.isRequired,
+        isDesktop: PropTypes.bool.isRequired,
 
         // From parent.
         children: PropTypes.any.isRequired
@@ -27,13 +25,13 @@ class DeviceWrapper extends PureComponent {
         const
             {
                 deviceIndex,
+                isPhone,
+                isDesktop,
                 children
             } = this.props,
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
-            isDesktop = getIsDesktop(deviceIndex),
             isMobile = !isDesktop,
-            isTablet = getIsTablet(deviceIndex),
-            isPhone = getIsPhone(deviceIndex)
+            isTablet = getIsTablet(deviceIndex)
 
         return (
             <div
@@ -60,9 +58,15 @@ class DeviceWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    deviceStore: { deviceIndex }
+    deviceStore: {
+        deviceIndex,
+        isPhone,
+        isDesktop
+    }
 }) => ({
-    deviceIndex
+    deviceIndex,
+    isPhone,
+    isDesktop
 })
 
 export default connect(mapStateToProps)(DeviceWrapper)

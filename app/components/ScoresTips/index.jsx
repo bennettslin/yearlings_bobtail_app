@@ -12,18 +12,17 @@ import Button from '../Button'
 import { SCORE_TOGGLE_KEY } from 'constants/access'
 import { SCORES_BUTTON_KEY } from 'constants/buttons'
 
-import {
-    getIsDesktop,
-    getIsPhone
-} from 'helpers/responsiveHelper'
-
 const mapStateToProps = ({
-    deviceStore: { deviceIndex },
+    deviceStore: {
+        isDesktop,
+        isPhone
+    },
     responsiveStore: { isScoresTipsInMain },
     toggleStore: { isScoreShown },
     loadStore: { isScoreLoaded }
 }) => ({
-    deviceIndex,
+    isDesktop,
+    isPhone,
     isScoresTipsInMain,
     isScoreShown,
     isScoreLoaded
@@ -39,7 +38,8 @@ class ScoresTips extends Component {
 
     static propTypes = {
     // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
+        isDesktop: PropTypes.bool.isRequired,
+        isPhone: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isScoreLoaded: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -56,7 +56,8 @@ class ScoresTips extends Component {
 
     render() {
         const {
-                deviceIndex,
+                isDesktop,
+                isPhone,
                 isScoreLoaded,
                 isScoresTipsInMain,
 
@@ -64,8 +65,6 @@ class ScoresTips extends Component {
                 inMainRightSide,
                 inLeftShelf
             } = this.props,
-
-            isDesktop = getIsDesktop(deviceIndex),
 
             // Render if scores tips is...
             shouldRender = isScoresTipsInMain ?
@@ -81,7 +80,7 @@ class ScoresTips extends Component {
             // ...otherwise, render in menu.
                 inMenu,
 
-            showScoreToggleButton = !getIsPhone(deviceIndex)
+            showScoreToggleButton = !isPhone
 
         return shouldRender && (
             <div className={cx(

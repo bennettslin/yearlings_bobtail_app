@@ -11,6 +11,7 @@ import Popup from '../../Popup'
 import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
+    deviceStore: { isPhone },
     optionStore: {
         selectedOverviewOption,
         selectedTipsOption
@@ -18,6 +19,7 @@ const mapStateToProps = ({
     renderStore: { canMainRender },
     renderedStore: { isRenderedLogue }
 }) => ({
+    isPhone,
     selectedOverviewOption,
     selectedTipsOption,
     canMainRender,
@@ -27,13 +29,13 @@ const mapStateToProps = ({
 const overviewPopupPropTypes = {
     // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
+        isPhone: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
 
         // From parent.
-        inMain: PropTypes.bool,
-        isPhone: PropTypes.bool
+        inMain: PropTypes.bool
     },
 
     OverviewPopup = ({

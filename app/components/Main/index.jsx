@@ -20,13 +20,10 @@ import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
 import { getPropsAreShallowEqual } from 'helpers/generalHelper'
-import { getIsPhone } from 'helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceStore: { deviceIndex },
     renderStore: { canMainRender }
 }) => ({
-    deviceIndex,
     canMainRender
 })
 
@@ -35,7 +32,6 @@ class Main extends Component {
     static propTypes = {
         // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
-        deviceIndex: PropTypes.number.isRequired,
 
         // From parent.
         handleCarouselNavToggle: PropTypes.func.isRequired,
@@ -67,18 +63,16 @@ class Main extends Component {
 
     render() {
         const {
-                deviceIndex,
-                handleCarouselNavToggle,
-                annotationPopupHandlers,
-                carouselSectionHandlers,
-                navSectionHandlers,
-                carouselDidRender
-            } = this.props,
+            handleCarouselNavToggle,
+            annotationPopupHandlers,
+            carouselSectionHandlers,
+            navSectionHandlers,
+            carouselDidRender
+        } = this.props
 
-            /**
-             * In phone, flex container's children have absolute position.
-             */
-            isPhone = getIsPhone(deviceIndex)
+        /**
+         * In phone, flex container's children have absolute position.
+         */
 
         return (
             <div className={cx(
@@ -98,11 +92,8 @@ class Main extends Component {
                     'Main__flexContainer',
                     'absoluteFullContainer'
                 )}>
-                    <LeftShelf {...{ isPhone }} />
-                    <OverviewPopup
-                        inMain
-                        {...{ isPhone }}
-                    />
+                    <LeftShelf />
+                    <OverviewPopup inMain />
                 </div>
                 <LyricToggleExpand inMain />
                 <DotsSlide />
