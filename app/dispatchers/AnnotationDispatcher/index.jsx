@@ -69,7 +69,7 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    sessionStore: { earColumnIndex }
+    songStore: { earColumnIndex }
 }) => ({
     isEarShown,
     selectedSongIndex,

@@ -225,10 +225,8 @@ class RemainderWrapper extends PureComponent {
 
 const mapStateToProps = ({
     accessStore: { accessedKey },
-    sessionStore: {
-        interactivatedVerseIndex,
-        earColumnIndex
-    },
+    sessionStore: { interactivatedVerseIndex },
+    songStore: { earColumnIndex },
     audioStore: { isPlaying },
     dotsStore: {
         dotsBitNumber,

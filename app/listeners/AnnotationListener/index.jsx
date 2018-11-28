@@ -68,11 +68,9 @@ class AnnotationListener extends PureComponent {
 const mapStateToProps = ({
     toggleStore: { isDotsSlideShown },
     transientStore: { isEarShown },
-    sessionStore: {
-        earColumnIndex,
-        interactivatedVerseIndex
-    },
+    sessionStore: { interactivatedVerseIndex },
     songStore: {
+        earColumnIndex,
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex

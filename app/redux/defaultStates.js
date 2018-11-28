@@ -63,7 +63,6 @@ const
         shownNavBookIndex: 1,
         selectedAudioOptionIndex:
             getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
-        earColumnIndex: 0,
         selectedWikiIndex: 0,
         selectedWikiUrl: ''
     },
@@ -156,6 +155,7 @@ const
     },
 
     SONG_DEFAULTS = {
+        earColumnIndex: 0,
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,

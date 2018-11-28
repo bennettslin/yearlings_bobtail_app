@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateSessionStore } from 'flux/session/action'
+import { updateSongStore } from 'flux/song/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class EarColumnDispatcher extends PureComponent {
@@ -16,7 +16,7 @@ class EarColumnDispatcher extends PureComponent {
         earColumnIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
-        updateSessionStore: PropTypes.func.isRequired,
+        updateSongStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -43,7 +43,7 @@ class EarColumnDispatcher extends PureComponent {
             return false
         }
 
-        this.props.updateSessionStore({ earColumnIndex })
+        this.props.updateSongStore({ earColumnIndex })
         return true
     }
 
@@ -54,8 +54,10 @@ class EarColumnDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     transientStore: { isEarShown },
-    songStore: { isSelectedLogue },
-    sessionStore: { earColumnIndex }
+    songStore: {
+        isSelectedLogue,
+        earColumnIndex
+    }
 }) => ({
     isEarShown,
     earColumnIndex,
@@ -64,7 +66,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSessionStore,
+        updateSongStore,
         updateToggleStore
     }, dispatch)
 )

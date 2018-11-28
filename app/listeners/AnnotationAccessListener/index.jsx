@@ -96,11 +96,9 @@ class AnnotationAccessListener extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isDotsSlideShown },
-    sessionStore: {
-        earColumnIndex,
-        interactivatedVerseIndex
-    },
+    sessionStore: { interactivatedVerseIndex },
     songStore: {
+        earColumnIndex,
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex
