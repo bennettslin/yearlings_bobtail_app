@@ -12,7 +12,6 @@ import {
     ALL_DOT_KEYS,
     INITIAL_DOTS_BIT_NUMBER
 } from 'constants/dots'
-import { EAR_COLUMN_KEYS } from 'constants/lyrics'
 import {
     SHOWN,
     HIDDEN,
@@ -28,8 +27,7 @@ import {
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
 
-    SELECTED_AUDIO_OPTION_INDEX,
-    SELECTED_EAR_COLUMN_INDEX
+    SELECTED_AUDIO_OPTION_INDEX
 } from './storeKeys'
 
 const _getValidatedStoredSong = () => {
@@ -73,9 +71,6 @@ const _validateIndexForKey = (key) => {
         // These must be less than the length of options.
         case SELECTED_AUDIO_OPTION_INDEX:
             isValid = isNumber && parsedValue < AUDIO_OPTIONS.length
-            break
-        case SELECTED_EAR_COLUMN_INDEX:
-            isValid = isNumber && parsedValue < EAR_COLUMN_KEYS.length
             break
 
         default:

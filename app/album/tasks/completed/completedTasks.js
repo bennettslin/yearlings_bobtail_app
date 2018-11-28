@@ -4001,5 +4001,10 @@ module.exports = [
         taskName: `Refactor overview and tips. Default to hiding, only disable when clicking toggle. Ensure they close the dots when opened from selecting a new song.`,
         workedHours: 7,
         neededHours: 7
+    },
+    {
+        taskName: `Switching ear columns doesn't deselect popup annotation. Also make sure that loading page with ear column annotation works.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

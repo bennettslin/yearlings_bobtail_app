@@ -1,5 +1,6 @@
 import {
     getAnnotationObject,
+    getEarColumnForAnnotation,
     getVerseObject,
     getAnnotationsCount
 } from 'helpers/dataHelper'
@@ -9,7 +10,6 @@ import {
     WORMHOLE,
     REFERENCE
 } from 'constants/dots'
-import { COLUMN_INDEX } from 'constants/lyrics'
 
 export const shouldShowAnnotationForColumn = ({
     selectedSongIndex,
@@ -18,11 +18,10 @@ export const shouldShowAnnotationForColumn = ({
     isEarShown
 }) => {
 
-    const annotation = getAnnotationObject(
+    const columnIndex = getEarColumnForAnnotation(
             selectedSongIndex,
             selectedAnnotationIndex
         ),
-        columnIndex = annotation[COLUMN_INDEX],
 
         /**
          * Show annotation if both columns are shown, no column is given, or

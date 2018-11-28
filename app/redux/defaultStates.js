@@ -12,7 +12,8 @@ import { SHOWN } from 'constants/options'
 import {
     getSongIsLogue,
     getSceneIndexForVerseIndex,
-    getTimeForVerseIndex
+    getTimeForVerseIndex,
+    getEarColumnForAnnotation
 } from '../helpers/dataHelper'
 
 import {
@@ -34,6 +35,10 @@ const
     storedSongIndex = getIndexFromStorage(SELECTED_SONG_INDEX),
     storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
     isStoredLogue = getSongIsLogue(storedSongIndex),
+    earColumnIndex = getEarColumnForAnnotation(
+        storedSongIndex,
+        storedAnnotationIndex
+    ),
 
     EVENT_DEFAULTS = {
         bodyClicked: false
@@ -155,7 +160,7 @@ const
     },
 
     SONG_DEFAULTS = {
-        earColumnIndex: 0,
+        earColumnIndex,
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,

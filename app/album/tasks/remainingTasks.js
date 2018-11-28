@@ -43,11 +43,6 @@ module.exports = [
 
     // Quick bug fixes?
     {
-        taskName: `Switching ear columns doesn't deselect popup annotation. Also make sure that loading page with ear column annotation works.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store.`,
         workedHours: 0,
         neededHours: 2
@@ -71,11 +66,6 @@ module.exports = [
         taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Persist in storage audio option, ear column.`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     // More refactoring...

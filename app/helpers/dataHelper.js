@@ -5,7 +5,10 @@
  */
 
 import album from 'server/album'
-import { SOURCE_WORMHOLE_INDEX } from 'constants/lyrics'
+import {
+    COLUMN_INDEX,
+    SOURCE_WORMHOLE_INDEX
+} from 'constants/lyrics'
 
 /*********
  * ALBUM *
@@ -153,6 +156,23 @@ export const getAnnotationObject = (
 ) => {
     const { annotations } = getSongObject(songIndex, songs)
     return annotations ? annotations[annotationIndex - 1] : null
+}
+
+export const getEarColumnForAnnotation = (
+    songIndex,
+    annotationIndex,
+    songs
+) => {
+    const annotation = getAnnotationObject(
+        songIndex,
+        annotationIndex,
+        songs
+    )
+
+    // Default to left if it's not explicitly right.
+    return annotation ?
+        annotation[COLUMN_INDEX] :
+        0
 }
 
 export const getAnnotationCardObject = ({
