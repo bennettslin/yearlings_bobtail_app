@@ -50,13 +50,7 @@ module.exports = {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
-                        description: [
-                            `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age. This sample is courtesy of the`,
-                            {
-                                anchor: `Cornell Lab of Ornithology.`,
-                                wiki: `http://www.birds.cornell.edu/`
-                            }
-                        ],
+                        description: `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                             [SONGWRITING]: true

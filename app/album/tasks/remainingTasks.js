@@ -7,11 +7,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Selecting song from wormhole should set access to wiki wormhole.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Accessed annotation and interactivated verse should stay in sync when navigating and switching between the two.`,
         workedHours: 0,
         neededHours: 3
@@ -44,11 +39,6 @@ module.exports = [
     // Quick bug fixes?
     {
         taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Remove possibility to have non-wiki urls.`,
         workedHours: 0,
         neededHours: 2
     },

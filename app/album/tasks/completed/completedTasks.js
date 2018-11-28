@@ -4011,5 +4011,15 @@ module.exports = [
         taskName: `Group together some dispatchers and listeners that use the same logic. Only for non-critical UI changes.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Remove possibility to have non-wiki urls.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Selecting song from wormhole should set access to wiki wormhole.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

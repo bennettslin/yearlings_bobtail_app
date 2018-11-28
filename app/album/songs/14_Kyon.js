@@ -722,11 +722,6 @@ module.exports = {
                             `The cry of a peafowl always sounded to me like they're pleading`,
                             {
                                 italic: `"kyon?"`
-                            },
-                            `So I included a sample here, kindly provided to me by`,
-                            {
-                                anchor: 'Vijay Cavale.',
-                                wiki: `http://www.indiabirds.com/`
                             }
                         ],
                         dotKeys: {

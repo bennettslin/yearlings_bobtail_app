@@ -273,6 +273,7 @@ export const getWikiWormholeIndexForDirection = ({
     selectedDotKeys,
     initialWikiWormholeIndex = 1,
     direction
+
 }) => {
     const annotation = getAnnotationObject(
         selectedSongIndex,

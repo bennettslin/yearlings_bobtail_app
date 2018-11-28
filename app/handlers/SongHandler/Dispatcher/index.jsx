@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
+import { updateAccessStore } from 'flux/access/action'
 import { updateSongStore } from 'flux/song/action'
 
 import {
@@ -27,6 +28,7 @@ class SongDispatcher extends PureComponent {
         // Through Redux.
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -87,6 +89,7 @@ class SongDispatcher extends PureComponent {
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,
         earColumnIndex,
+        destinationWormholeIndex,
         direction
     }) => {
         const { props } = this
@@ -124,6 +127,11 @@ class SongDispatcher extends PureComponent {
             bypassUpdateSelected: true
         })
 
+        // TODO: Can this be done declaratively?
+        props.updateAccessStore({
+            accessedWikiWormholeIndex: destinationWormholeIndex
+        })
+
         props.updateSongStore({
             ...!isNaN(earColumnIndex) && {
                 earColumnIndex
@@ -155,6 +163,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateAccessStore,
         updateSongStore
     }, dispatch)
 )

@@ -20,8 +20,6 @@ import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
 import { getHandlers } from './helper'
 
-// import { DESTINATION_WORMHOLE_INDEX } from 'constants/lyrics'
-
 import {
     CAROUSEL_SCROLL,
     LYRIC_ANNOTATION_SCROLL,
