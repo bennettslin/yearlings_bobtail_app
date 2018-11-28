@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
-import { REFERENCE } from '../../constants/dots'
+import { REFERENCE } from '../../../constants/dots'
 
 class WikiDispatcher extends PureComponent {
 

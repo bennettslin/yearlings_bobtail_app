@@ -2,7 +2,7 @@ import {
     getSongIsLogue,
     getSongSceneConfigs,
     getSceneIndexForVerseIndex
-} from '../../helpers/dataHelper'
+} from '../../../helpers/dataHelper'
 
 export const getVerseIndexForNextScene = (
     songIndex,

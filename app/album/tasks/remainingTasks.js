@@ -70,11 +70,6 @@ module.exports = [
 
     // More refactoring...
     {
-        taskName: `Group together some dispatchers and listeners that use the same logic. Only for non-critical UI changes.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Disallow selecting nav when there no dots. (Do after consolidating dispatchers and listeners?)`,
         workedHours: 0,
         neededHours: 2

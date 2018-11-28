@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class LyricExpandDispatcher extends PureComponent {
+class LyricDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -63,4 +63,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(LyricExpandDispatcher)
+export default connect(mapStateToProps, bindDispatchToProps)(LyricDispatcher)

@@ -2,8 +2,8 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
-import WikiWormholeDispatcher from '../../../../dispatchers/WikiWormholeDispatcher'
+import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
+import WikiWormholeDispatcher from '../../../../handlers/WikiWormholeHandler/Dispatcher'
 
 import {
     getWormholeLink,

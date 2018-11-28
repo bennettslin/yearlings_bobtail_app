@@ -160,7 +160,7 @@ const
     },
 
     SONG_DEFAULTS = {
-        earColumnIndex,
+        earColumnIndex: earColumnIndex || 0,
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,

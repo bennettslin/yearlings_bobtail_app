@@ -9,7 +9,7 @@ import { updateAccessStore } from 'flux/access/action'
 import {
     getAnnotationIndexForVerseIndex,
     getAnnotationIndexForDirection
-} from '../../helpers/annotation'
+} from '../../../helpers/annotation'
 
 class AnnotationAccessDispatcher extends PureComponent {
 

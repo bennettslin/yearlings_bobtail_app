@@ -14,25 +14,26 @@ import VerseBarManager from '../../managers/VerseBarManager'
 import OverviewListener from '../../handlers/OverviewHandler/Listener'
 import TipsListener from '../../handlers/TipsHandler/Listener'
 
+import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
+import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
+import CarouselListener from '../../handlers/CarouselHandler/Listener'
+import LyricListener from '../../handlers/LyricHandler/Listener'
+import SceneListener from '../../handlers/SceneHandler/Listener'
+import ScoreListener from '../../handlers/ScoreHandler/Listener'
+import WikiListener from '../../handlers/WikiHandler/Listener'
+import WikiWormholeListener from '../../handlers/WikiWormholeHandler/Listener'
+
 // TODO: Eventually remove this one.
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 import SongListener from '../../handlers/SongHandler/Listener'
 import TimeVerseHandler from '../../handlers/TimeVerseHandler'
 
 import RenderedListener from '../../listeners/RenderedListener'
-import AnnotationListener from '../../listeners/AnnotationListener'
-import AnnotationAccessListener from '../../listeners/AnnotationAccessListener'
-import CarouselNavListener from '../../listeners/CarouselNavListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import LogueListener from '../../listeners/LogueListener'
-import LyricExpandListener from '../../listeners/LyricExpandListener'
 import MainListener from '../../listeners/MainListener'
 import RenderListener from '../../listeners/RenderListener'
-import SceneListener from '../../listeners/SceneListener'
-import ScoreListener from '../../listeners/ScoreListener'
 import SliderListener from '../../listeners/SliderListener'
-import WikiListener from '../../listeners/WikiListener'
-import WikiWormholeListener from '../../listeners/WikiWormholeListener'
 import WindowListener from '../../listeners/WindowListener'
 
 class ListenerContainer extends PureComponent {
@@ -206,9 +207,9 @@ class ListenerContainer extends PureComponent {
                 <RenderedListener />
                 <AnnotationListener />
                 <AnnotationAccessListener />
-                <CarouselNavListener />
+                <CarouselListener />
                 <DoublespeakerListener />
-                <LyricExpandListener />
+                <LyricListener />
                 <LogueListener />
                 <MainListener />
                 <RenderListener />

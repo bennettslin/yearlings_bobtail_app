@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { updateSongStore } from 'flux/song/action'
 
-import { getAnnotationIndexForDirection } from '../../helpers/annotation'
+import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 
 class AnnotationDispatcher extends PureComponent {
 

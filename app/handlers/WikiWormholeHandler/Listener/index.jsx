@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import WikiWormholeDispatcher from '../../dispatchers/WikiWormholeDispatcher'
+import WikiWormholeDispatcher from '../Dispatcher'
 
 class WikiWormholeListener extends PureComponent {
 

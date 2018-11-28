@@ -10,11 +10,11 @@ import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
-import LyricExpandDispatcher from '../../../dispatchers/LyricExpandDispatcher'
+import LyricDispatcher from '../../../handlers/LyricHandler/Dispatcher'
 import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
 import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
-import SceneDispatcher from '../../../dispatchers/SceneDispatcher'
-import ScoreDispatcher from '../../../dispatchers/ScoreDispatcher'
+import SceneDispatcher from '../../../handlers/SceneHandler/Dispatcher'
+import ScoreDispatcher from '../../../handlers/ScoreHandler/Dispatcher'
 import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 
 import {
@@ -204,7 +204,7 @@ class LetterManager extends PureComponent {
                 <AudioOptionDispatcher {...{ getDispatch: this }} />
                 <DotsSlideDispatcher {...{ getDispatch: this }} />
                 <EarColumnDispatcher {...{ getDispatch: this }} />
-                <LyricExpandDispatcher {...{ getDispatch: this }} />
+                <LyricDispatcher {...{ getDispatch: this }} />
                 <OverviewDispatcher {...{ getDispatch: this }} />
                 <TipsDispatcher {...{ getDispatch: this }} />
                 <SceneDispatcher {...{ getDispatch: this }} />

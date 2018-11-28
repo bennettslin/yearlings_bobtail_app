@@ -10,7 +10,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import { getNavBookIndex } from 'helpers/dataHelper'
 
-class CarouselNavListener extends PureComponent {
+class CarouselListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -79,4 +79,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(CarouselNavListener)
+export default connect(mapStateToProps, bindDispatchToProps)(CarouselListener)

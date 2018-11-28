@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 
-import { getWikiWormholeIndexForDirection } from '../../helpers/annotation'
+import { getWikiWormholeIndexForDirection } from '../../../helpers/annotation'
 
 class WikiWormholeDispatcher extends PureComponent {
 

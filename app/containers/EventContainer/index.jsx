@@ -10,9 +10,9 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
-import AnnotationDispatcher from '../../dispatchers/AnnotationDispatcher'
-import AnnotationAccessDispatcher from '../../dispatchers/AnnotationAccessDispatcher'
-import CarouselDispatcher from '../../dispatchers/CarouselDispatcher'
+import AnnotationDispatcher from '../../handlers/AnnotationHandler/Dispatcher'
+import AnnotationAccessDispatcher from '../../handlers/AnnotationAccessHandler/Dispatcher'
+import CarouselDispatcher from '../../handlers/CarouselHandler/Dispatcher'
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 

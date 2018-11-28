@@ -4006,5 +4006,10 @@ module.exports = [
         taskName: `Switching ear columns doesn't deselect popup annotation. Also make sure that loading page with ear column annotation works.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Group together some dispatchers and listeners that use the same logic. Only for non-critical UI changes.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

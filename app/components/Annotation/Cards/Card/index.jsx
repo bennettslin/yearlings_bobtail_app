@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
+import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 
 import DotSequence from '../../../DotSequence'
 import Texts from '../../../Texts'

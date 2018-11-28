@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import AnnotationAccessDispatcher from '../../dispatchers/AnnotationAccessDispatcher'
+import AnnotationAccessDispatcher from '../Dispatcher'
 
 class AnnotationAccessListener extends PureComponent {
 

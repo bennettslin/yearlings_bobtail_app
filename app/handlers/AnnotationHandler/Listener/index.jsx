@@ -4,9 +4,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import AnnotationDispatcher from '../../dispatchers/AnnotationDispatcher'
+import AnnotationDispatcher from '../Dispatcher'
 
-import { shouldShowAnnotationForColumn } from '../../helpers/annotation'
+import { shouldShowAnnotationForColumn } from '../../../helpers/annotation'
 
 class AnnotationListener extends PureComponent {
 

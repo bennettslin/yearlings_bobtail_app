@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import LyricExpandDispatcher from '../../../../dispatchers/LyricExpandDispatcher'
+import LyricDispatcher from '../../../../handlers/LyricHandler/Dispatcher'
 import Button from '../../../Button'
 
 import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
@@ -72,7 +72,7 @@ class LyricToggleExpand extends PureComponent {
                         handleButtonClick: this.handleLyricClick
                     }}
                 />
-                <LyricExpandDispatcher {...{ getDispatch: this }} />
+                <LyricDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }
