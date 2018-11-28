@@ -74,22 +74,6 @@ class AnnotationPopup extends PureComponent {
                 annotationIndex: renderedAnnotationIndex
             })
         }
-
-        if (
-            // If toggling from popup to carousel...
-            isCarouselShown &&
-            !prevProps.isCarouselShown
-        ) {
-            /**
-             * ... then still persist the popup annotation index. Originally,
-             * it was reset. But this messed up the transition. Maybe revisit
-             * this at some point, as these conditionals might not be needed at
-             * all.
-             */
-            this.setState({
-                annotationIndex: renderedAnnotationIndex
-            })
-        }
     }
 
     _handleAnnotationPrevious = (e) => {

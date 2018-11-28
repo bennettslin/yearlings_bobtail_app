@@ -13,6 +13,7 @@ class AnnotationListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isDotsSlideShown: PropTypes.bool.isRequired,
+        isEarShown: PropTypes.bool.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -52,7 +53,7 @@ class AnnotationListener extends PureComponent {
             })
 
             if (!showAnnotationForColumn) {
-                this.dispatchAnnotation()
+                this.dispatchAnnotation({ selectedAnnotationIndex: 0 })
             }
         }
     }
@@ -66,6 +67,7 @@ class AnnotationListener extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isDotsSlideShown },
+    transientStore: { isEarShown },
     sessionStore: {
         earColumnIndex,
         interactivatedVerseIndex
@@ -77,6 +79,7 @@ const mapStateToProps = ({
     }
 }) => ({
     isDotsSlideShown,
+    isEarShown,
     earColumnIndex,
     interactivatedVerseIndex,
     selectedSongIndex,
