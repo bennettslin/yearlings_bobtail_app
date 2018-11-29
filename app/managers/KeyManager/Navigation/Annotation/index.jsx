@@ -79,7 +79,7 @@ class AnnotationNavigation extends PureComponent {
                     annotationObject = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
 
                 // TODO: Move this logic to AnnotationManager.
-                if (accessedWikiWormholeIndex > 0 &&
+                if (accessedWikiWormholeIndex &&
                     annotationObject &&
                     annotationObject.wikiWormholes &&
                     annotationObject.wikiWormholes.length) {

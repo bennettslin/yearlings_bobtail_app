@@ -46,7 +46,7 @@ const
 
     ACCESS_DEFAULTS = {
         accessedKey: '',
-        accessedAnnotationIndex: storedAnnotationIndex,
+        accessedAnnotationIndex: storedAnnotationIndex || 1,
         accessedWikiWormholeIndex: 1,
         accessedDotIndex: 0,
         accessedNavSongIndex: storedSongIndex

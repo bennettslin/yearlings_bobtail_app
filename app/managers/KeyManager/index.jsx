@@ -146,27 +146,12 @@ class KeyManager extends PureComponent {
         }
 
         const {
-            annotationIndexWasAccessed,
+            // annotationIndexWasAccessed,
             keyWasRegistered
 
         } = getIsNavKey(keyName) ?
             this.handleNavigation(e, keyName) :
             this.handleLetter(e, keyName)
-
-        /**
-         * If just now turning on access, also access annotation index,
-         * unless we've already done so.
-         */
-        if (
-            !this.props.selectedAnnotationIndex &&
-            !this.props.isAccessOn &&
-            !annotationIndexWasAccessed
-        ) {
-
-            this.props.eventHandlers.handleAnnotationAccess({
-                verseIndex: this.props.selectedVerseIndex
-            })
-        }
 
         // Prevent default for registered key.
         if (keyWasRegistered) {

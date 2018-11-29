@@ -2,11 +2,6 @@ module.exports = [
 
     // Access stuff.
     {
-        taskName: `Selecting new song from scratch should access first annotation.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Accessed annotation and interactivated verse should stay in sync when navigating and switching between the two.`,
         workedHours: 0,
         neededHours: 3

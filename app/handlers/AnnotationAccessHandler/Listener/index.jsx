@@ -10,16 +10,11 @@ class AnnotationAccessListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDotsSlideShown: PropTypes.bool.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired
-    }
-
-    componentDidMount() {
-        this.dispatchAccessedAnnotation()
     }
 
     componentDidUpdate(prevProps) {
@@ -30,32 +25,29 @@ class AnnotationAccessListener extends PureComponent {
 
     _accessDefaultAnnotation(prevProps) {
         const
-            {
-                isDotsSlideShown,
-                earColumnIndex,
-                selectedSongIndex
-            } = this.props,
-            {
-                isDotsSlideShown: wasDotsSlideShown,
-                earColumnIndex: prevEarColumnIndex,
-                selectedSongIndex: prevSongIndex
-            } = prevProps
+            { earColumnIndex } = this.props,
+            { earColumnIndex: prevEarColumnIndex } = prevProps
 
-        if (
-            (!isDotsSlideShown && wasDotsSlideShown) ||
-            earColumnIndex !== prevEarColumnIndex ||
-            selectedSongIndex !== prevSongIndex
-        ) {
+        if (earColumnIndex !== prevEarColumnIndex) {
             this.dispatchAccessedAnnotation()
         }
     }
 
     _accessSelectedAnnotation(prevProps) {
         const
-            { selectedAnnotationIndex } = this.props,
-            { selectedAnnotationIndex: prevAnnotationIndex } = prevProps
+            {
+                selectedSongIndex,
+                selectedAnnotationIndex
+            } = this.props,
+            {
+                selectedSongIndex: prevSongIndex,
+                selectedAnnotationIndex: prevAnnotationIndex
+            } = prevProps
 
-        if (selectedAnnotationIndex !== prevAnnotationIndex) {
+        if (
+            selectedSongIndex === prevSongIndex &&
+            selectedAnnotationIndex !== prevAnnotationIndex
+        ) {
             this.dispatchAccessedAnnotation({
                 annotationIndex: selectedAnnotationIndex
             })
@@ -95,7 +87,6 @@ class AnnotationAccessListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isDotsSlideShown },
     sessionStore: { interactivatedVerseIndex },
     songStore: {
         earColumnIndex,
@@ -104,7 +95,6 @@ const mapStateToProps = ({
         selectedAnnotationIndex
     }
 }) => ({
-    isDotsSlideShown,
     earColumnIndex,
     interactivatedVerseIndex,
     selectedSongIndex,

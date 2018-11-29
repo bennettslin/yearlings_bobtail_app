@@ -125,13 +125,15 @@ class UnitDot extends Component {
 
         return (
             <UnitDotView
-                setRef={this.setLyricAnnotationRef}
-                dotKeys={dotKeys}
-                isSelected={isSelected}
-                isAccessed={isAccessed}
-                isLastUnit={isLastUnit}
-                annotationIndex={annotationIndex}
-                handleAnchorClick={this._handleDotButtonClick}
+                {...{
+                    setRef: this.setLyricAnnotationRef,
+                    dotKeys,
+                    isSelected,
+                    isAccessed,
+                    isLastUnit,
+                    annotationIndex,
+                    handleAnchorClick: this._handleDotButtonClick
+                }}
             />
         )
     }

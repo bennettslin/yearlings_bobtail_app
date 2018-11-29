@@ -195,12 +195,6 @@ class RemainderWrapper extends PureComponent {
                         `RcS${cursorStanzaIndex}`,
 
                         isSliderMoving ?
-                            // "Root slider stanza index."
-                            `RsS${cursorStanzaIndex}` :
-                            // "Root default stanza index."
-                            `RdS${cursorStanzaIndex}`,
-
-                        isSliderMoving ?
                             // "Root slider verse index."
                             `RsV${sliderVerseIndex}` :
                             // "Root default verse index."

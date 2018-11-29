@@ -92,11 +92,11 @@ class SongDispatcher extends PureComponent {
         destinationWormholeIndex,
         direction
     }) => {
-        const { props } = this
+        const isWormholeSelected = Boolean(destinationWormholeIndex)
 
         // Called from audio section's previous or next buttons.
         if (direction) {
-            selectedSongIndex = props.selectedSongIndex + direction
+            selectedSongIndex = this.props.selectedSongIndex + direction
 
             if (
                 selectedSongIndex < 0 ||
@@ -115,24 +115,19 @@ class SongDispatcher extends PureComponent {
              * This is the only place where selected player will be updated
              * based on a new song.
              */
-            props.updateSelectedPlayer({
+            this.props.updateSelectedPlayer({
                 selectedSongIndex,
                 selectedVerseIndex
             })
         }
 
-        props.selectVerse({
+        this.props.selectVerse({
             selectedSongIndex,
             selectedVerseIndex,
             bypassUpdateSelected: true
         })
 
-        // TODO: Can this be done declaratively?
-        props.updateAccessStore({
-            accessedWikiWormholeIndex: destinationWormholeIndex
-        })
-
-        props.updateSongStore({
+        this.props.updateSongStore({
             ...!isNaN(earColumnIndex) && {
                 earColumnIndex
             },
@@ -143,6 +138,16 @@ class SongDispatcher extends PureComponent {
                 selectedSongIndex,
                 selectedVerseIndex
             )
+        })
+
+        this.props.updateAccessStore({
+            accessedAnnotationIndex:
+                isWormholeSelected ?
+                    selectedAnnotationIndex :
+                    1,
+            ...isWormholeSelected && {
+                accessedWikiWormholeIndex: destinationWormholeIndex
+            }
         })
 
         return true

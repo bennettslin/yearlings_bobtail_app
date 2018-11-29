@@ -66,7 +66,6 @@ export const getAnnotationIndexForDirection = ({
      * - when annotation index is selected, has direction.
      * - from getAnnotationIndexForVerseIndex.
      */
-
     const annotationsCount = getAnnotationsCount(selectedSongIndex),
 
         // If a direction is given for this method, it has modulo.
@@ -195,7 +194,6 @@ export const getAnnotationIndexForVerseIndex = ({
      * - when any key is pressed and turns on access.
      * - when lyric column is switched.
      */
-
     const verse = getVerseObject(selectedSongIndex, verseIndex),
         annotationsCount = getAnnotationsCount(selectedSongIndex)
 
@@ -325,5 +323,5 @@ export const getWikiWormholeIndexForDirection = ({
     }
 
     // There are no valid anchor indices to return.
-    return -1
+    return 0
 }

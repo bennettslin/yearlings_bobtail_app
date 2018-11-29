@@ -4026,5 +4026,10 @@ module.exports = [
         taskName: `Disallow selecting nav when there no dots. (Do after consolidating dispatchers and listeners?)`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Selecting new song from scratch should access first annotation.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -217,7 +217,7 @@ class CloseListener extends PureComponent {
 
         if (isScoreShown && !wasScoreShown) {
             this.closeOverlayPopups({ exemptScore: true })
-            this.closeMainSections()
+            this.closeMainSections({ exemptAnnotation: true })
         }
     }
 
@@ -228,7 +228,7 @@ class CloseListener extends PureComponent {
 
         if (isTitleShown && !wasTitleShown) {
             this.closeOverlayPopups({ exemptTitle: true })
-            this.closeMainSections()
+            this.closeMainSections({ exemptAnnotation: true })
         }
     }
 
@@ -239,7 +239,7 @@ class CloseListener extends PureComponent {
 
         if (selectedWikiIndex && !prevWikiIndex) {
             this.closeOverlayPopups({ exemptWiki: true })
-            this.closeMainSections()
+            this.closeMainSections({ exemptAnnotation: true })
         }
     }
 

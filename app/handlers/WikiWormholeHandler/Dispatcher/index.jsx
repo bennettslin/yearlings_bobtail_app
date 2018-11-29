@@ -37,7 +37,7 @@ class WikiWormholeDispatcher extends PureComponent {
             } = this.props,
 
             initialWikiWormholeIndex =
-                defaultWikiWormholeIndex > -1 ?
+                defaultWikiWormholeIndex ?
                     defaultWikiWormholeIndex :
                     1,
 

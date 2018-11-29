@@ -43,7 +43,7 @@ class AnnotationAccessDispatcher extends PureComponent {
             isEarShown
         } = this.props
 
-        let accessedAnnotationIndex = 0
+        let accessedAnnotationIndex
 
         if (annotationIndex) {
             accessedAnnotationIndex = getAnnotationIndexForDirection({
