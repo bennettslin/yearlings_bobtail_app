@@ -4021,5 +4021,10 @@ module.exports = [
         taskName: `Selecting song from wormhole should set access to wiki wormhole.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Disallow selecting nav when there no dots. (Do after consolidating dispatchers and listeners?)`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

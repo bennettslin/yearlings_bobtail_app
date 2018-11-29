@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
-import { getIsPhone } from 'helpers/responsiveHelper'
 
 class CarouselDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
+        isPhone: PropTypes.bool.isRequired,
+        dotsBitNumber: PropTypes.number.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -29,7 +29,8 @@ class CarouselDispatcher extends PureComponent {
     ) => {
         // We shouldn't be able to toggle the carousel under these conditions.
         if (
-            getIsPhone(this.props.deviceIndex) ||
+            this.props.isPhone ||
+            !this.props.dotsBitNumber ||
             this.props.isSelectedLogue ||
             this.props.isHiddenCarouselNav
         ) {
@@ -46,12 +47,14 @@ class CarouselDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    deviceStore: { deviceIndex },
+    deviceStore: { isPhone },
+    dotsStore: { dotsBitNumber },
     responsiveStore: { isHiddenCarouselNav },
     songStore: { isSelectedLogue },
     toggleStore: { isCarouselShown }
 }) => ({
-    deviceIndex,
+    isPhone,
+    dotsBitNumber,
     isHiddenCarouselNav,
     isSelectedLogue,
     isCarouselShown

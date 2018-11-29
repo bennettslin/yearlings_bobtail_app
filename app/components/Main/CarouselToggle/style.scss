@@ -37,6 +37,8 @@
     }
 
     .RM__carouselNavUnshowable
+    &,
+    .RM__noSelectedDots
     & {
         margin-left: -$width__overviewToggle__laptop;
     }

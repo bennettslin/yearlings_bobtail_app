@@ -64,6 +64,7 @@ class RemainderWrapper extends PureComponent {
                 renderedAnnotationIndex,
                 isRenderedLogue,
                 isCarouselShown,
+                dotsBitNumber,
                 selectedDotKeys,
                 isDotsSlideShown,
                 earColumnIndex,
@@ -171,6 +172,8 @@ class RemainderWrapper extends PureComponent {
                             'RM__bothEarColumnsShown': !singleShownEarColumnKey,
                             'RM__sliderTouched': isSliderTouched
                         },
+
+                        !dotsBitNumber && 'RM__noSelectedDots',
 
                         getPrefixedDotLetterClassNames(
                             selectedDotKeys,

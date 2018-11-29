@@ -60,12 +60,6 @@ module.exports = [
 
     // More refactoring...
     {
-        taskName: `Disallow selecting nav when there no dots. (Do after consolidating dispatchers and listeners?)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Separate class name parent containers.`,
         workedHours: 0,
         neededHours: 2
