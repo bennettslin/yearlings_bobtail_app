@@ -12,6 +12,7 @@ class LogueListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
+        updateAudioStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 

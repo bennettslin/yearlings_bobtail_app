@@ -33,8 +33,8 @@ module.exports = [
 
     // Quick bug fixes?
     {
-        taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store.`,
-        workedHours: 0,
+        taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store. Use isPopupAnnotationVisible flag.`,
+        workedHours: 1,
         neededHours: 2
     },
 

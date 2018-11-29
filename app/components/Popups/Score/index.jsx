@@ -10,10 +10,8 @@ import Score from '../../Score'
 import Popup from '../../Popup'
 
 const mapStateToProps = ({
-    songStore: { selectedSongIndex },
     toggleStore: { isScoreShown }
 }) => ({
-    selectedSongIndex,
     isScoreShown
 })
 
@@ -22,7 +20,6 @@ class ScorePopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         isScoreShown: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
@@ -31,28 +28,17 @@ class ScorePopup extends PureComponent {
     }
 
     render() {
-        const {
-            /* eslint-disable no-unused-vars */
-            selectedSongIndex,
-            dispatch,
-            /* eslint-enable no-unused-vars */
-
-            isScoreShown,
-
-            ...other
-        } = this.props
-
         return (
             <Popup
                 isFullSize
                 displaysInOverlay
                 {...{
                     popupName: 'Score',
-                    isVisible: isScoreShown,
+                    isVisible: this.props.isScoreShown,
                     handleCloseClick: this.closeScore
                 }}
             >
-                <Score {...other} />
+                <Score />
             </Popup>
         )
     }

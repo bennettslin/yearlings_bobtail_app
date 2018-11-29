@@ -19,7 +19,8 @@ class TitlePopup extends PureComponent {
 
     static propTypes = {
     // Through Redux.
-        isTitleShown: PropTypes.bool.isRequired
+        isTitleShown: PropTypes.bool.isRequired,
+        updateToggleStore: PropTypes.func.isRequired
     }
 
     closeTitle = () => {
@@ -27,11 +28,6 @@ class TitlePopup extends PureComponent {
     }
 
     render() {
-
-        const {
-            isTitleShown
-        } = this.props
-
         return (
             <Popup
                 bounceAnimate
@@ -40,7 +36,7 @@ class TitlePopup extends PureComponent {
                 hasWidePadding
                 {...{
                     popupName: 'Title',
-                    isVisible: isTitleShown,
+                    isVisible: this.props.isTitleShown,
                     handleCloseClick: this.closeTitle
                 }}
             >

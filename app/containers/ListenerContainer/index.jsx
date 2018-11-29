@@ -28,6 +28,7 @@ import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 import SongListener from '../../handlers/SongHandler/Listener'
 import TimeVerseHandler from '../../handlers/TimeVerseHandler'
 
+import PopupAnnotationListener from '../../listeners/PopupAnnotationListener'
 import RenderedListener from '../../listeners/RenderedListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import LogueListener from '../../listeners/LogueListener'
@@ -212,6 +213,7 @@ class ListenerContainer extends PureComponent {
                 <LyricListener />
                 <LogueListener />
                 <MainListener />
+                <PopupAnnotationListener />
                 <RenderListener />
                 <SceneListener />
                 <ScoreListener />

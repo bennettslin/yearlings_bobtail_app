@@ -28,28 +28,16 @@ class WikiPopup extends PureComponent {
     }
 
     render() {
-        const {
-                /* eslint-disable no-unused-vars */
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
-                selectedWikiIndex,
-
-                ...other
-            } = this.props,
-
-            isVisible = Boolean(selectedWikiIndex)
-
         return (
             <Popup
                 shrinkAnimate
                 displaysInOverlay
                 isFullSize
-                isVisible={isVisible}
+                isVisible={Boolean(this.props.selectedWikiIndex)}
                 popupName="Wiki"
                 handleCloseClick={this.closeWiki}
             >
-                <Wiki {...other} />
+                <Wiki />
             </Popup>
         )
     }

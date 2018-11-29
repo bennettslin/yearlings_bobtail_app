@@ -90,6 +90,8 @@ const
         isOverlayingAnnotation: false,
         isOverlayShown: false,
         isEarShown: false,
+        isPopupAnnotationVisible: false,
+        popupAnnotationIndex: storedAnnotationIndex,
         toggleShowsOverviewImmediately: false,
         toggleShowsTipsImmediately: false
     },
