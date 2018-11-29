@@ -12,6 +12,7 @@ import { getSongTitle } from 'helpers/dataHelper'
 const propTypes = {
     // From parent.
         isAccessed: PropTypes.bool,
+        isSelected: PropTypes.bool,
         isLeftmost: PropTypes.bool,
         isRightmost: PropTypes.bool,
         songIndex: PropTypes.number
@@ -21,6 +22,7 @@ const propTypes = {
 
         // From props.
         isAccessed,
+        isSelected,
         isLeftmost,
         isRightmost,
         songIndex
@@ -37,6 +39,7 @@ const propTypes = {
                 'Thumb',
                 {
                     'Thumb__isAccessed': isAccessed,
+                    'Thumb__canShow': !isSelected,
                     'Thumb__leftmost': isLeftmost,
                     'Thumb__rightmost': isRightmost,
                     'Thumb__default': !isLeftmost && !isRightmost

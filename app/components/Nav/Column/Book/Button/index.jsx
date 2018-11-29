@@ -125,6 +125,7 @@ class NavButton extends PureComponent {
                         <Thumb
                             {...{
                                 isAccessed: isAccessed && isNavigable,
+                                isSelected,
                                 isLeftmost,
                                 isRightmost,
                                 songIndex

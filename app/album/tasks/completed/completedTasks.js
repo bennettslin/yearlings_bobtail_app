@@ -4036,5 +4036,10 @@ module.exports = [
         taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Do not show thumb for selected nav song, but still allow it to be selectable.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

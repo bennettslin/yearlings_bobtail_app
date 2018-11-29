@@ -36,7 +36,9 @@ $length__thumb: 100px;
         top: 100%;
         margin-top: $js__margin__thick;
     }
+}
 
+.Thumb__canShow {
     .RM__accessOn.RM__carouselNavShowable.RM__navExpanded
     &.Thumb__isAccessed,
 

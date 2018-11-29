@@ -38,11 +38,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Do not show thumb for selected nav song, but still allow it to be selectable.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Rethink whether to hide carousel upon interactivating verse. Dots are not hidden, after all.`,
         workedHours: 0,
         neededHours: 2
