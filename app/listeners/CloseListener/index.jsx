@@ -106,8 +106,7 @@ class CloseListener extends PureComponent {
             this.closeOverlayPopups()
             this.closeMainSections({
                 exemptAnnotation: true,
-                exemptDots: true,
-                exemptInteractivatedVerse: true
+                exemptDots: true
             })
         }
     }
@@ -202,7 +201,6 @@ class CloseListener extends PureComponent {
             this.closeOverlayPopups()
             this.closeMainSections({
                 exemptInteractivatedVerse: true,
-                exemptDots: true,
                 exemptLyric: true,
                 exemptOverview: true,
                 exemptTips: true

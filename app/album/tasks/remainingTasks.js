@@ -37,11 +37,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Rethink whether to hide carousel upon interactivating verse. Dots are not hidden, after all.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     // More refactoring...
     {
