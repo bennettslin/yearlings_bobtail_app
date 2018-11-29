@@ -14,10 +14,10 @@ import {
 } from 'constants/buttons'
 
 const mapStateToProps = ({
-    sessionStore: { interactivatedVerseIndex },
+    transientStore: { isCarouselNavShowable },
     songStore: { selectedAnnotationIndex }
 }) => ({
-    interactivatedVerseIndex,
+    isCarouselNavShowable,
     selectedAnnotationIndex
 })
 
@@ -29,7 +29,7 @@ class NavButton extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        isCarouselNavShowable: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
         // From parents.
@@ -45,17 +45,20 @@ class NavButton extends PureComponent {
 
     _handleButtonClick = () => {
         const {
-            handleButtonClick,
-            songIndex
+            isCarouselNavShowable,
+            songIndex,
+            handleButtonClick
         } = this.props
 
-        // Select song or logue.
-        if (!isNaN(songIndex)) {
-            handleButtonClick(songIndex)
+        if (isCarouselNavShowable) {
+            // Select song or logue.
+            if (!isNaN(songIndex)) {
+                handleButtonClick(songIndex)
 
-        // Select book column.
-        } else {
-            handleButtonClick()
+            // Select book column.
+            } else {
+                handleButtonClick()
+            }
         }
     }
 
@@ -70,7 +73,7 @@ class NavButton extends PureComponent {
                 isSelected,
                 isInShownColumn,
                 isToggle,
-                interactivatedVerseIndex,
+                isCarouselNavShowable,
                 selectedAnnotationIndex,
                 bookIndex,
                 songIndex
@@ -84,11 +87,17 @@ class NavButton extends PureComponent {
             isLeftmost = bookIndex === 0 || songIndex === 0,
             isRightmost = bookIndex === 1 || songIndex === 19,
 
-            isEnabled = isInShownColumn || isLeftmost || isRightmost,
+            isEnabled =
+                isCarouselNavShowable &&
+                (
+                    isInShownColumn ||
+                    isLeftmost ||
+                    isRightmost
+                ),
 
             isNavigable =
                 !isToggle
-                && interactivatedVerseIndex < 0
+                && isCarouselNavShowable
                 && !selectedAnnotationIndex
 
         return (
@@ -105,7 +114,9 @@ class NavButton extends PureComponent {
                         buttonIdentifier,
                         isDisabled: !isEnabled,
                         isIndexSelected: isSelected,
-                        showAccessIconIfAccessOn: isAccessed && isNavigable,
+                        showAccessIconIfAccessOn:
+                            isAccessed &&
+                            isNavigable,
                         accessKey: isToggle ? '' : ENTER,
                         handleButtonClick: this._handleButtonClick
                     }}

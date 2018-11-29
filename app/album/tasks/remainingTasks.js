@@ -47,11 +47,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     // More refactoring...
     {

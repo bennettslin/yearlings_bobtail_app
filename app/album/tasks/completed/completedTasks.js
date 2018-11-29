@@ -4031,5 +4031,10 @@ module.exports = [
         taskName: `Selecting new song from scratch should access first annotation.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix bug where nav thumb is hoverable when overview and others are shown.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
