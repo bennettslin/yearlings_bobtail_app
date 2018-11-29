@@ -25,12 +25,6 @@
       "<rootDir>/app/utils/unitTestSetup"
     ]
   },
-  "pre-commit": [
-    "lint"
-  ],
-  "pre-push": [
-    "test"
-  ],
   "dependencies": {
     "classnames": "^2.2.5",
     "date-fns": "^1.29.0",

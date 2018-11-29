@@ -168,14 +168,17 @@ const annotationCardViewProptypes = {
 
                     {isTextCard ? (
                         <Texts
-                            text={text}
-                            showAccessInPopupAnnotation={!inCarousel}
-                            /**
-                         * Allow for clicking on anchor in unselected
-                         * annotation in carousel.
-                         */
-                            annotationIndex={annotationIndex}
-                            handleAnchorClick={handleWikiSelectClick}
+                            {...{
+                                text,
+                                annotationIndex,
+
+                                /**
+                                 * Allow for clicking on anchor in unselected
+                                 * annotation in carousel.
+                                 */
+                                showAccessInPopupAnnotation: !inCarousel,
+                                handleAnchorClick: handleWikiSelectClick
+                            }}
                         />
                     ) : (
                         <AnnotationWormholes
