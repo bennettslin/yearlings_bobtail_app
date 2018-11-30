@@ -10,6 +10,7 @@ import cx from 'classnames'
 
 import DeviceWrapper from './DeviceWrapper'
 import RemainderWrapper from './RemainderWrapper'
+import LogicWrapper from './LogicWrapper'
 import Live from '../../components/Live'
 import Admin from '../../components/Admin'
 import AdminToggle from '../../components/admin/AdminToggle'
@@ -40,11 +41,13 @@ class RootContainer extends PureComponent {
             >
                 <DeviceWrapper>
                     <RemainderWrapper>
-                        <Live {...eventHandlers} />
-                        <AdminToggle />
-                        {isAdminOn && (
-                            <Admin {...eventHandlers} />
-                        )}
+                        <LogicWrapper>
+                            <Live {...eventHandlers} />
+                            <AdminToggle />
+                            {isAdminOn && (
+                                <Admin {...eventHandlers} />
+                            )}
+                        </LogicWrapper>
                     </RemainderWrapper>
                 </DeviceWrapper>
             </div>

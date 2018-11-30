@@ -17,6 +17,8 @@ import TipsListener from '../../handlers/TipsHandler/Listener'
 import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
 import CarouselListener from '../../handlers/CarouselHandler/Listener'
+import DidRenderListener from '../../listeners/DidRenderListener'
+import LiveListener from '../../listeners/LiveListener'
 import LyricListener from '../../handlers/LyricHandler/Listener'
 import SceneListener from '../../handlers/SceneHandler/Listener'
 import ScoreListener from '../../handlers/ScoreHandler/Listener'
@@ -210,8 +212,10 @@ class ListenerContainer extends PureComponent {
                 <AnnotationAccessListener />
                 <CarouselListener />
                 <DoublespeakerListener />
-                <LyricListener />
+                <DidRenderListener />
+                <LiveListener />
                 <LogueListener />
+                <LyricListener />
                 <MainListener />
                 <PopupAnnotationListener />
                 <RenderListener />

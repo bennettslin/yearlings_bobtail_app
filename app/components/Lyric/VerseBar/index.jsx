@@ -114,6 +114,8 @@ class VerseBar extends Component {
                 /* eslint-enable no-unused-vars */
 
                 isAbove,
+                isVerseBarAbove,
+                isVerseBarBelow,
 
                 renderedSongIndex,
                 renderedVerseIndex,
@@ -138,7 +140,13 @@ class VerseBar extends Component {
 
                     isAbove ?
                         'VerseBar__above' :
-                        'VerseBar__below'
+                        'VerseBar__below',
+
+                    {
+                        'VerseBar__shown':
+                            (isAbove && isVerseBarAbove) ||
+                            (!isAbove && isVerseBarBelow)
+                    }
                 )}
                 {...{
                     onWheel: handleVerseBarWheel,

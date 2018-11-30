@@ -2,8 +2,10 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateRenderStore } from 'flux/render/action'
 
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
@@ -27,9 +29,7 @@ class Lyric extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-
-        // From parent.
-        lyricDidRender: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -53,7 +53,7 @@ class Lyric extends Component {
             const
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
-                    this.props.lyricDidRender, 100
+                    this._lyricDidRender, 100
                 ),
                 // Set timeout to prevent children transitions before render.
                 waitForShowTimeoutId = setTimeout(
@@ -76,6 +76,10 @@ class Lyric extends Component {
                 isShown: false
             })
         }
+    }
+
+    _lyricDidRender = () => {
+        this.props.updateRenderStore({ didLyricRender: true })
     }
 
     _waitForShowBeforeRender = () => {
@@ -102,7 +106,6 @@ class Lyric extends Component {
 
         const {
                 /* eslint-disable no-unused-vars */
-                lyricDidRender,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -197,4 +200,10 @@ const earColumnViewPropTypes = {
 
 EarColumnView.propTypes = earColumnViewPropTypes
 
-export default connect(mapStateToProps)(Lyric)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateRenderStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Lyric)

@@ -2,15 +2,16 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateRenderStore } from 'flux/render/action'
 
 import Layers from './Layers'
 import Sky from './Sky'
 import Wood from '../Stage/Wood'
 
 import { getSceneObject } from 'helpers/dataHelper'
-// import { getPropsAreShallowEqual } from 'helpers/generalHelper'
 
 import {
     Z_INDICES_MATRIX_NAME,
@@ -47,9 +48,7 @@ class Scene extends Component {
         canSceneRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         renderedSceneIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        sceneDidRender: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -57,10 +56,6 @@ class Scene extends Component {
         didRenderTimeoutId: '',
         waitForShowTimeoutId: ''
     }
-
-    // shouldComponentUpdate(nextProps) {
-    //     return nextProps.canSceneRender
-    // }
 
     componentDidUpdate(prevProps) {
         const { canSceneRender } = this.props,
@@ -75,7 +70,7 @@ class Scene extends Component {
             const
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
-                    this.props.sceneDidRender, 200
+                    this._sceneDidRender, 200
                 ),
                 // Set timeout to prevent children transitions before render.
                 waitForShowTimeoutId = setTimeout(
@@ -93,6 +88,10 @@ class Scene extends Component {
                 isShown: false
             })
         }
+    }
+
+    _sceneDidRender = () => {
+        this.props.updateRenderStore({ didSceneRender: true })
     }
 
     _waitForShowBeforeRender = () => {
@@ -160,4 +159,10 @@ class Scene extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Scene)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateRenderStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Scene)

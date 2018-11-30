@@ -2,8 +2,10 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateRenderStore } from 'flux/render/action'
 
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import SliderScenes from './Scenes'
@@ -22,9 +24,7 @@ class Slider extends PureComponent {
     static propTypes = {
         // Through Redux.
         canVerseRender: PropTypes.bool.isRequired,
-
-        // From parent.
-        verseDidRender: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -46,7 +46,7 @@ class Slider extends PureComponent {
             const
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
-                    this.props.verseDidRender, 100
+                    this._verseDidRender, 100
                 ),
                 // Set timeout to prevent children transitions before render.
                 waitForShowTimeoutId = setTimeout(
@@ -64,6 +64,10 @@ class Slider extends PureComponent {
                 isShown: false
             })
         }
+    }
+
+    _verseDidRender = () => {
+        this.props.updateRenderStore({ didVerseRender: true })
     }
 
     _waitForShowBeforeRender = () => {
@@ -108,4 +112,10 @@ class Slider extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(Slider)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateRenderStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Slider)

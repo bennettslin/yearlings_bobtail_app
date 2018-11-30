@@ -2,8 +2,10 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateRenderStore } from 'flux/render/action'
 
 import CarouselAnnotation from './Annotation'
 import CarouselSelect from './Select'
@@ -53,11 +55,10 @@ class Carousel extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
         handleAnnotationSelect: PropTypes.func.isRequired,
-
-        carouselDidRender: PropTypes.func.isRequired,
         setCarouselParentRef: PropTypes.func.isRequired
     }
 
@@ -83,7 +84,7 @@ class Carousel extends PureComponent {
             const
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
-                    this.props.carouselDidRender, 100
+                    this._carouselDidRender, 100
                 ),
                 // Set timeout to prevent children transitions before render.
                 waitForShowTimeoutId = setTimeout(
@@ -110,6 +111,10 @@ class Carousel extends PureComponent {
         }
     }
 
+    _carouselDidRender = () => {
+        this.props.updateRenderStore({ didCarouselRender: true })
+    }
+
     _waitForShowBeforeRender = () => {
         this.setState({
             isShown: true
@@ -119,7 +124,6 @@ class Carousel extends PureComponent {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                carouselDidRender,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -217,4 +221,10 @@ class Carousel extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(Carousel)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateRenderStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Carousel)

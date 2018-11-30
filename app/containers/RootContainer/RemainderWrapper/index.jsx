@@ -6,14 +6,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { SHOWN } from 'constants/options'
-
 import { PARENT_ACCESS_PREFIX } from 'constants/prefixes'
-import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
 
-import {
-    getSingleShownEarColumnKey,
-    getStanzaIndexForVerseIndex
-} from '../helper'
+import { getSingleShownEarColumnKey } from '../helper'
 
 class RemainderWrapper extends PureComponent {
 
@@ -21,6 +16,7 @@ class RemainderWrapper extends PureComponent {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
 
+        accessedKey: PropTypes.string.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
         isAutoScroll: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
@@ -34,14 +30,10 @@ class RemainderWrapper extends PureComponent {
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedVerseIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
-        sliderVerseIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -65,7 +57,6 @@ class RemainderWrapper extends PureComponent {
                 isRenderedLogue,
                 isCarouselShown,
                 dotsBitNumber,
-                selectedDotKeys,
                 isDotsSlideShown,
                 earColumnIndex,
                 selectedOverviewOption,
@@ -76,9 +67,6 @@ class RemainderWrapper extends PureComponent {
                 isLyricExpanded,
                 isOverlayShown,
                 isCarouselNavShowable,
-                renderedSongIndex,
-                renderedVerseIndex,
-                sliderVerseIndex,
                 interactivatedVerseIndex,
                 isEarShown,
                 isHiddenLyric,
@@ -99,19 +87,7 @@ class RemainderWrapper extends PureComponent {
             overviewShown = selectedOverviewOption === SHOWN,
             tipsShown = selectedTipsOption === SHOWN,
 
-            areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
-
-            /**
-             * If slider touched, compare stanza to slider verse. Otherwise,
-             * compare it to selected verse.
-             */
-            cursorVerseIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex :
-                renderedVerseIndex,
-
-            cursorStanzaIndex = getStanzaIndexForVerseIndex(
-                renderedSongIndex, cursorVerseIndex
-            )
+            areVerseBarsShown = isVerseBarAbove || isVerseBarBelow
 
         return (
             <div
@@ -162,24 +138,15 @@ class RemainderWrapper extends PureComponent {
                         isHiddenLyric ?
                             'RM__lyricHeightless' : 'RM__lyricHeighted',
 
-                        areVerseBarsHidden ?
-                            'RM__verseBarHidden' : 'RM__verseBarShown',
+                        areVerseBarsShown && 'RM__verseBarShown',
 
                         {
-                            'RM__verseBarAbove': isVerseBarAbove,
-                            'RM__verseBarBelow': isVerseBarBelow,
                             'RM__manualScroll': !isAutoScroll,
                             'RM__bothEarColumnsShown': !singleShownEarColumnKey,
                             'RM__sliderTouched': isSliderTouched
                         },
 
                         !dotsBitNumber && 'RM__noSelectedDots',
-
-                        getPrefixedDotLetterClassNames(
-                            selectedDotKeys,
-                            // "Root selected dot letter."
-                            'RsD'
-                        ),
 
                         // Relevant to verse index classes.
                         isSliderMoving ? 'RM__sliderMoving' : 'RM__sliderNotMoving',
@@ -189,28 +156,7 @@ class RemainderWrapper extends PureComponent {
 
                         // Make it easier to override this selector.
                         !isSliderMoving && interactivatedVerseIndex < 0 &&
-                            'RM__verseCanHover',
-
-                        // "Root cursored stanza index."
-                        `RcS${cursorStanzaIndex}`,
-
-                        isSliderMoving ?
-                            // "Root slider verse index."
-                            `RsV${sliderVerseIndex}` :
-                            // "Root default verse index."
-                            `RdV${renderedVerseIndex}`,
-
-                        isPlaying &&
-                            // "Root playing verse index."
-                            `RpV${renderedVerseIndex}`,
-
-                        interactivatedVerseIndex < 0 &&
-                            // "Root non-interactivated verse index."
-                            `RnV${cursorVerseIndex}`,
-
-                        areVerseBarsHidden && interactivatedVerseIndex < 0 &&
-                            // "Root cursored lyric verse."
-                            `RlV${cursorVerseIndex}`
+                            'RM__verseCanHover'
                     )
                 }}
             >
@@ -225,10 +171,7 @@ const mapStateToProps = ({
     sessionStore: { interactivatedVerseIndex },
     songStore: { earColumnIndex },
     audioStore: { isPlaying },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    },
+    dotsStore: { dotsBitNumber },
     toggleStore: {
         isAccessOn,
         isAutoScroll,
@@ -245,15 +188,12 @@ const mapStateToProps = ({
     },
     renderStore: { canCarouselRender },
     renderedStore: {
-        renderedSongIndex,
-        renderedVerseIndex,
         renderedAnnotationIndex,
         isRenderedLogue
     },
     sliderStore: {
         isSliderTouched,
-        isSliderMoving,
-        sliderVerseIndex
+        isSliderMoving
     },
     responsiveStore: {
         isHiddenLyric,
@@ -275,7 +215,6 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     isAccessOn,
     dotsBitNumber,
-    selectedDotKeys,
     isDotsSlideShown,
     earColumnIndex,
     selectedOverviewOption,
@@ -283,13 +222,10 @@ const mapStateToProps = ({
     isEarShown,
     isPlaying,
     canCarouselRender,
-    renderedSongIndex,
-    renderedVerseIndex,
     renderedAnnotationIndex,
     isRenderedLogue,
     isSliderTouched,
     isSliderMoving,
-    sliderVerseIndex,
     isHiddenLyric,
     showShrunkNavIcon,
     isScoresTipsInMain,

@@ -20,7 +20,6 @@ const audioPropTypes = {
         isTwoRowMenu: PropTypes.bool.isRequired,
 
         // From parent.
-        verseDidRender: PropTypes.func.isRequired,
         audioButtonsHandlers: PropTypes.object.isRequired
     },
 
@@ -31,8 +30,6 @@ const audioPropTypes = {
         /* eslint-enable no-unused-vars */
 
         isTwoRowMenu,
-
-        verseDidRender,
         audioButtonsHandlers
 
     }) => {
@@ -45,16 +42,10 @@ const audioPropTypes = {
                 )}
             >
                 {isTwoRowMenu && (
-                    <TitleToggle
-                        isAudioChild
-                    />
+                    <TitleToggle isAudioChild />
                 )}
 
-                <AudioBanner
-                    {...{
-                        verseDidRender: verseDidRender
-                    }}
-                />
+                <AudioBanner />
                 <AudioButtons {...audioButtonsHandlers} />
             </div>
         )

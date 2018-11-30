@@ -147,7 +147,14 @@ const
         canVerseRender: false,
         canLyricRender: false,
         canCarouselRender: false,
-        canSceneRender: false
+        canSceneRender: false,
+
+        didTheatreRender: false,
+        didMainRender: false,
+        didVerseRender: false,
+        didLyricRender: false,
+        didCarouselRender: false,
+        didSceneRender: false
     },
 
     RENDERED_DEFAULTS = {

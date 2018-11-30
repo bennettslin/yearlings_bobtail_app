@@ -5,8 +5,10 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateRenderStore } from 'flux/render/action'
 
 import CarouselToggle from './CarouselToggle'
 import LeftShelf from './LeftShelf'
@@ -32,16 +34,14 @@ class Main extends Component {
     static propTypes = {
         // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
+        updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
         handleCarouselNavToggle: PropTypes.func.isRequired,
 
         annotationPopupHandlers: PropTypes.object.isRequired,
         carouselSectionHandlers: PropTypes.object.isRequired,
-        navSectionHandlers: PropTypes.object.isRequired,
-
-        mainDidRender: PropTypes.func.isRequired,
-        carouselDidRender: PropTypes.func.isRequired
+        navSectionHandlers: PropTypes.object.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -56,9 +56,13 @@ class Main extends Component {
             logger.warn('Main rendered.')
 
             setTimeout(
-                this.props.mainDidRender, 0
+                this._mainDidRender, 0
             )
         }
+    }
+
+    _mainDidRender = () => {
+        this.props.updateRenderStore({ didMainRender: true })
     }
 
     render() {
@@ -66,8 +70,7 @@ class Main extends Component {
             handleCarouselNavToggle,
             annotationPopupHandlers,
             carouselSectionHandlers,
-            navSectionHandlers,
-            carouselDidRender
+            navSectionHandlers
         } = this.props
 
         /**
@@ -85,9 +88,7 @@ class Main extends Component {
                     inMain
                 />
                 <Nav {...navSectionHandlers} />
-                <Carousel {...carouselSectionHandlers}
-                    carouselDidRender={carouselDidRender}
-                />
+                <Carousel {...carouselSectionHandlers} />
                 <div className={cx(
                     'Main__flexContainer',
                     'absoluteFullContainer'
@@ -107,4 +108,10 @@ class Main extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Main)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateRenderStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Main)

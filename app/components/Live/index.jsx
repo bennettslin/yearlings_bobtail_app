@@ -3,14 +3,8 @@
  * should not update.
  */
 
-import React, {
-    Component, Fragment
-} from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-
-import { updateRenderStore } from 'flux/render/action'
 
 import Main from '../Main'
 import Lyric from '../Lyric'
@@ -22,169 +16,27 @@ import OverviewLogue from './OverviewLogue'
 
 import { getOrganisedHandlersFromProps } from './helper'
 
-const mapStateToProps = ({
-    renderStore: {
-        canVerseRender,
-        canMainRender,
-        canTheatreRender,
-        canCarouselRender
-    },
-    renderableStore: {
-        isSceneChangeRenderable,
-        isSongChangeRenderable,
-        isWindowResizeRenderable
-    }
-}) => ({
-    canVerseRender,
-    canMainRender,
-    canTheatreRender,
-    canCarouselRender,
-    isSceneChangeRenderable,
-    isSongChangeRenderable,
-    isWindowResizeRenderable
-})
-
 class Live extends Component {
 
-    componentDidMount() {
-        this.unrenderedTime = Date.now()
-    }
+    static propTypes = {
+        // From parent.
+        setLyricRef: PropTypes.func.isRequired,
+        setCarouselAnnotationRef: PropTypes.func.isRequired,
+        setLyricAnnotationRef: PropTypes.func.isRequired,
+        setVerseRef: PropTypes.func.isRequired,
+        setLyricVerseParentRef: PropTypes.func.isRequired,
+        setCarouselParentRef: PropTypes.func.isRequired,
 
-    componentDidUpdate(prevProps) {
-        const {
-                isSceneChangeRenderable,
-                isSongChangeRenderable,
-                isWindowResizeRenderable
-            } = this.props,
-
-            {
-                isSceneChangeRenderable: wasSceneChangeRenderable,
-                isSongChangeRenderable: wasSongChangeRenderable,
-                isWindowResizeRenderable: wasWindowResizeRenderable
-            } = prevProps
-
-        // Is unrenderable after window resize.
-        if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
-            this.unrenderedTime = Date.now()
-
-            logger.warn('Live unrenderable from window resize.')
-            this.props.updateRenderStore({
-                canTheatreRender: false
-            })
-
-        /**
-         * Is renderable after window resize timeout. Also called upon initial
-         * render.
-         */
-        } else if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
-            logger.warn(`Live renderable after window resize, took ${
-                ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-            } seconds.`)
-
-            this.props.updateRenderStore({
-                canTheatreRender: true
-            })
-        }
-
-        // Is unrenderable after song change.
-        if (!isSongChangeRenderable && wasSongChangeRenderable) {
-            this.unrenderedTime = Date.now()
-
-            logger.warn('Live unrenderable from song change.')
-            this.props.updateRenderStore({
-                canVerseRender: false,
-                canSceneRender: false,
-                canMainRender: false,
-                canLyricRender: false,
-                canCarouselRender: false
-            })
-
-        // Is renderable after song change timeout.
-        } else if (isSongChangeRenderable && !wasSongChangeRenderable) {
-
-            // Don't call this upon initial render.
-            if (this.props.canTheatreRender) {
-                logger.warn(`Live renderable after song change, took ${
-                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-                } seconds.`)
-
-                this.props.updateRenderStore({
-                    canVerseRender: true
-                })
-            }
-        }
-
-        // Is unrenderable after scene change within same song.
-        if (!isSceneChangeRenderable && wasSceneChangeRenderable) {
-            this.unrenderedTime = Date.now()
-
-            logger.warn('Live unrenderable from scene change.')
-            this.props.updateRenderStore({
-                canSceneRender: false
-            })
-
-        // Is renderable after scene change timeout.
-        } else if (isSceneChangeRenderable && !wasSceneChangeRenderable) {
-
-            // Don't call this upon initial render.
-            if (this.props.canTheatreRender) {
-                logger.warn(`Live renderable after scene change, took ${
-                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-                } seconds.`)
-
-                this.props.updateRenderStore({
-                    canSceneRender: true
-                })
-            }
-        }
-    }
-
-    theatreDidRender = () => {
-        /**
-         * If theatre is rendering for the first time upon load, verse will not
-         * be rendered. If it is being rendered again after window resize,
-         * verse will be rendered. Not the most elegant way to handle this...
-         */
-        if (!this.props.canVerseRender) {
-            this.props.updateRenderStore({
-                canVerseRender: true
-            })
-        }
-    }
-
-    verseDidRender = () => {
-        this.props.updateRenderStore({
-            canSceneRender: true
-        })
-    }
-
-    sceneDidRender = () => {
-        /**
-         * If scene is rendering for the first time upon load, main will not
-         * be rendered. If it is being rendered again after scene change, main
-         * will be rendered. Again, not the most elegant way to handle this...
-         */
-        if (!this.props.canMainRender) {
-            this.props.updateRenderStore({
-                canMainRender: true
-            })
-        }
-    }
-
-    mainDidRender = () => {
-        this.props.updateRenderStore({
-            canLyricRender: true
-        })
-    }
-
-    lyricDidRender = () => {
-        this.props.updateRenderStore({
-            canCarouselRender: true
-        })
-    }
-
-    carouselDidRender = () => {
-        logger.warn('Live rendered.')
+        handleAnnotationSelect: PropTypes.func.isRequired,
+        selectSong: PropTypes.func.isRequired,
+        togglePlay: PropTypes.func.isRequired,
+        handleCarouselNavToggle: PropTypes.func.isRequired,
+        handleLyricAnnotationSelect: PropTypes.func.isRequired,
+        handleLyricWheel: PropTypes.func.isRequired,
+        handleLyricAutoScroll: PropTypes.func.isRequired,
+        handleLyricVerseSelect: PropTypes.func.isRequired,
+        handleVerseBarSelect: PropTypes.func.isRequired,
+        handleVerseBarWheel: PropTypes.func.isRequired
     }
 
     render() {
@@ -197,70 +49,23 @@ class Live extends Component {
         } = getOrganisedHandlersFromProps(this.props)
 
         return (
-            <Fragment>
+            <___>
                 <div className="PopupOverlay" />
 
-                <Theatre {...theatreHandlers}
-                    sceneDidRender={this.sceneDidRender}
-                    theatreDidRender={this.theatreDidRender}
-                />
-                <Main {...mainColumnHandlers}
-                    mainDidRender={this.mainDidRender}
-                    carouselDidRender={this.carouselDidRender}
-                />
+                <Theatre {...theatreHandlers} />
+                <Main {...mainColumnHandlers} />
                 <OverviewLogue />
-                <Lyric {...lyricHandlers}
-                    lyricDidRender={this.lyricDidRender}
-                />
+                <Lyric {...lyricHandlers} />
                 <OverlayPopups
                     annotationPopupHandlers={annotationPopupHandlers}
                 />
-                <Menu {...menuFieldHandlers}
-                    verseDidRender={this.verseDidRender}
-                />
+                <Menu {...menuFieldHandlers} />
 
                 {/* Prevent popup interaction when slider is touched. */}
                 <div className="TouchOverlay" />
-            </Fragment>
+            </___>
         )
     }
 }
 
-Live.propTypes = {
-    // Through Redux.
-    canVerseRender: PropTypes.bool.isRequired,
-    canMainRender: PropTypes.bool.isRequired,
-    canTheatreRender: PropTypes.bool.isRequired,
-    canCarouselRender: PropTypes.bool.isRequired,
-    isSongChangeRenderable: PropTypes.bool.isRequired,
-    isSceneChangeRenderable: PropTypes.bool.isRequired,
-    isWindowResizeRenderable: PropTypes.bool.isRequired,
-    updateRenderStore: PropTypes.func.isRequired,
-
-    // From parent.
-    setLyricRef: PropTypes.func.isRequired,
-    setCarouselAnnotationRef: PropTypes.func.isRequired,
-    setLyricAnnotationRef: PropTypes.func.isRequired,
-    setVerseRef: PropTypes.func.isRequired,
-    setLyricVerseParentRef: PropTypes.func.isRequired,
-    setCarouselParentRef: PropTypes.func.isRequired,
-
-    handleAnnotationSelect: PropTypes.func.isRequired,
-    selectSong: PropTypes.func.isRequired,
-    togglePlay: PropTypes.func.isRequired,
-    handleCarouselNavToggle: PropTypes.func.isRequired,
-    handleLyricAnnotationSelect: PropTypes.func.isRequired,
-    handleLyricWheel: PropTypes.func.isRequired,
-    handleLyricAutoScroll: PropTypes.func.isRequired,
-    handleLyricVerseSelect: PropTypes.func.isRequired,
-    handleVerseBarSelect: PropTypes.func.isRequired,
-    handleVerseBarWheel: PropTypes.func.isRequired
-}
-
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Live)
+export default Live

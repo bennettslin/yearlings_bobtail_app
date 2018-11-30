@@ -3,8 +3,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateRenderStore } from 'flux/render/action'
 
 import Scene from '../Scene'
 import Stage from '../Stage'
@@ -25,9 +26,7 @@ class Theatre extends PureComponent {
     static propTypes = {
         // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
-
-        // From parent.
-        theatreDidRender: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -49,7 +48,7 @@ class Theatre extends PureComponent {
             const
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
-                    this.props.theatreDidRender, 100
+                    this._theatreDidRender, 100
                 ),
                 // Set timeout to prevent children transitions before render.
                 waitForShowTimeoutId = setTimeout(
@@ -69,6 +68,10 @@ class Theatre extends PureComponent {
         }
     }
 
+    _theatreDidRender = () => {
+        this.props.updateRenderStore({ didTheatreRender: true })
+    }
+
     _waitForShowBeforeRender = () => {
         this.setState({
             isShown: true
@@ -78,7 +81,6 @@ class Theatre extends PureComponent {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                theatreDidRender,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -114,4 +116,10 @@ class Theatre extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(Theatre)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateRenderStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Theatre)

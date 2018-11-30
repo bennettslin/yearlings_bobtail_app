@@ -25,15 +25,12 @@ const propTypes = {
         windowWidth: PropTypes.number.isRequired,
 
         // From parent.
-        audioHandlers: PropTypes.object.isRequired,
-
-        verseDidRender: PropTypes.func.isRequired
+        audioHandlers: PropTypes.object.isRequired
     },
 
     Menu = ({
         windowWidth,
-        audioHandlers,
-        verseDidRender
+        audioHandlers
     }) => {
     /**
      * This is necessary because transform animation in Safari is janky.
@@ -76,9 +73,7 @@ const propTypes = {
                         'MenuChild__audio',
                         'MenuChild'
                     )}>
-                        <Audio {...audioHandlers}
-                            verseDidRender={verseDidRender}
-                        />
+                        <Audio {...audioHandlers} />
                     </div>
 
                     <div className={cx(

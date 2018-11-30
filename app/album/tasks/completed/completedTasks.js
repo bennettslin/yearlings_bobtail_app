@@ -4046,5 +4046,10 @@ module.exports = [
         taskName: `Rethink whether to hide carousel upon interactivating verse. Dots are not hidden, after all. Resolved by hiding both carousel and dots slide.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Put Live's rendered logic in store.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

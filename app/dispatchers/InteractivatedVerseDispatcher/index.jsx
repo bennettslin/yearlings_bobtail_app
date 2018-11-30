@@ -35,6 +35,7 @@ class InteractivatedVerseDispatcher extends PureComponent {
                 selectedSongIndex,
                 selectedVerseIndex
             } = this.props,
+
             songVersesCount = getSongVersesCount(selectedSongIndex)
 
         let { interactivatedVerseIndex } = this.props

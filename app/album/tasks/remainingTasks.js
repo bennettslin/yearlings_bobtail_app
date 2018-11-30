@@ -1,18 +1,5 @@
 module.exports = [
-
-    // Access stuff.
-    {
-        taskName: `Accessed annotation and interactivated verse should stay in sync when navigating and switching between the two.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     // Render stuff.
-    {
-        taskName: `Put Live's rendered logic in store. Then fix the bug where event handler tries to scroll carousel and lyric before its elements are set.`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `Fix bug where playing from logue causes weird jumpiness. Same with switching between songs in general sometimes.`,
         workedHours: 0,
@@ -24,6 +11,11 @@ module.exports = [
         taskName: `Have event manager and scroll manager handle all scrolling through listeners.`,
         workedHours: 0,
         neededHours: 10
+    },
+    {
+        taskName: `Fix the bug where event handler tries to scroll carousel and lyric before its elements are set.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,
