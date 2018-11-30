@@ -121,25 +121,6 @@ class InteractiveContainer extends PureComponent {
         }
     }
 
-    /**
-     * TODO: This isn't the best way to handle this. Ideally, we would select
-     * the verse by listening to changes in the slider verse index upon touch
-     * end.
-     */
-    selectVerseIndex = (selectedVerseIndex) => {
-        // Selected verse is wherever touch ended on slider.
-        this.props.selectVerse({
-            selectedVerseIndex,
-            scrollLog: 'Slider touch body end.'
-        })
-
-        // Verse bars always get reset.
-        this.props.updateToggleStore({
-            isVerseBarAbove: false,
-            isVerseBarBelow: false
-        })
-    }
-
     focusElementForAccess = () => {
         const {
                 isHiddenLyric,
@@ -161,6 +142,25 @@ class InteractiveContainer extends PureComponent {
             logger.warn(`Focus: ${doFocusLyricElement ? 'Lyric' : 'Root'}`)
             focusedElement.focus()
         }
+    }
+
+    /**
+     * TODO: This isn't the best way to handle this. Ideally, we would select
+     * the verse by listening to changes in the slider verse index upon touch
+     * end.
+     */
+    selectVerseIndex = (selectedVerseIndex) => {
+        // Selected verse is wherever touch ended on slider.
+        this.props.selectVerse({
+            selectedVerseIndex,
+            scrollLog: 'Slider touch body end.'
+        })
+
+        // Verse bars always get reset.
+        this.props.updateToggleStore({
+            isVerseBarAbove: false,
+            isVerseBarBelow: false
+        })
     }
 
     handleVerseBarWheel = (e) => {

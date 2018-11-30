@@ -17,7 +17,7 @@ export const getHandlers = (me) => {
         handleLyricAnnotationSelect: me.handleLyricAnnotationSelect,
         handleLyricAutoScroll: me.handleLyricAutoScroll,
         handleCarouselNavToggle: me.handleCarouselNavToggle,
-        handleVerseBarSelect: me.handleVerseBarSelect,
+        handleScrollToSelectedVerse: me.handleScrollToSelectedVerse,
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,

@@ -142,7 +142,7 @@ const earColumnViewPropTypes = {
         handleTransition: PropTypes.func.isRequired,
 
         handleLyricAutoScroll: PropTypes.func.isRequired,
-        handleVerseBarSelect: PropTypes.func.isRequired,
+        handleScrollToSelectedVerse: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
     },
 
@@ -150,7 +150,7 @@ const earColumnViewPropTypes = {
 
         // From props.
         handleLyricAutoScroll,
-        handleVerseBarSelect,
+        handleScrollToSelectedVerse,
         handleVerseBarWheel,
 
         // From controller.
@@ -161,7 +161,7 @@ const earColumnViewPropTypes = {
     }) => {
 
         const verseBarProps = {
-            handleVerseBarSelect,
+            handleScrollToSelectedVerse,
             handleVerseBarWheel
         }
 

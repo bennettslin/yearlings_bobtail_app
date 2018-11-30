@@ -1,5 +1,5 @@
 
-// TODO: Eventually get rid of this file. Everything it handles should be in dispatchers or listeners.
+// TODO: Eventually turn this file into just a scroll listener.
 // Component that handles all user events.
 
 import React, { PureComponent, Fragment as ___ } from 'react'
@@ -185,7 +185,7 @@ class EventContainer extends PureComponent {
         this.props.updateToggleStore({ isAutoScroll: true })
 
         // Scroll lyric as if verse bar was selected.
-        this.handleVerseBarSelect()
+        this.handleScrollToSelectedVerse()
     }
 
     /**********
@@ -282,7 +282,7 @@ class EventContainer extends PureComponent {
      *********/
 
     // This is also triggered by toggling on auto scroll.
-    handleVerseBarSelect = () => {
+    handleScrollToSelectedVerse = () => {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props
         this.props.scrollElementIntoView({

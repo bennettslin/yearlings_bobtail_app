@@ -48,7 +48,7 @@ class VerseBar extends Component {
 
         // From parent.
         isAbove: PropTypes.bool.isRequired,
-        handleVerseBarSelect: PropTypes.func.isRequired,
+        handleScrollToSelectedVerse: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
     }
 
@@ -99,7 +99,7 @@ class VerseBar extends Component {
             (isAbove && isVerseBarAbove) ||
             (isBelow && isVerseBarBelow)
         ) {
-            this.props.handleVerseBarSelect()
+            this.props.handleScrollToSelectedVerse()
         }
     }
 
@@ -108,7 +108,7 @@ class VerseBar extends Component {
         const {
             /* eslint-disable no-unused-vars */
                 canLyricRender,
-                handleVerseBarSelect,
+                handleScrollToSelectedVerse,
 
                 dispatch,
                 /* eslint-enable no-unused-vars */
