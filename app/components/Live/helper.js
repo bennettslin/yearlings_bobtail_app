@@ -9,7 +9,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             selectSong,
             togglePlay,
             handleLyricWheel,
-            handleLyricVerseSelect,
+            handleVerseSelect,
             handleVerseBarWheel
         } = props,
 
@@ -30,7 +30,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             setVerseRef,
             setLyricParentRef,
             handleLyricWheel,
-            handleLyricVerseSelect,
+            handleVerseSelect,
             handleVerseBarWheel
         },
 

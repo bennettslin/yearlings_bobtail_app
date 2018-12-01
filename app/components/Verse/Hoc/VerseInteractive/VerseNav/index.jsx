@@ -17,16 +17,16 @@ class VerseNav extends PureComponent {
         // From parent.
         verseIndex: PropTypes.number.isRequired,
         isInteractivated: PropTypes.bool.isRequired,
-        handleLyricVerseSelect: PropTypes.func.isRequired
+        handleVerseSelect: PropTypes.func.isRequired
     }
 
     _handleButtonClick = (e) => {
         const {
             verseIndex,
-            handleLyricVerseSelect
+            handleVerseSelect
         } = this.props
 
-        handleLyricVerseSelect(e, verseIndex)
+        handleVerseSelect(e, verseIndex)
     }
 
     render() {

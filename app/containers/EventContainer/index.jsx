@@ -33,7 +33,7 @@ class EventContainer extends PureComponent {
      * VERSE *
      *********/
 
-    handleLyricVerseSelect = (
+    handleVerseSelect = (
         e,
         selectedVerseIndex,
         fromStanzaTab
@@ -69,7 +69,7 @@ class EventContainer extends PureComponent {
 
     render() {
         const {
-            determineVerseBars,
+            dispatchVerseBarsTimeout,
             selectVerse
         } = this.props
 
@@ -78,7 +78,7 @@ class EventContainer extends PureComponent {
                 <InteractiveContainer
                     {...{
                         eventHandlers: getHandlers(this),
-                        determineVerseBars,
+                        dispatchVerseBarsTimeout,
                         selectVerse
                     }}
                 />

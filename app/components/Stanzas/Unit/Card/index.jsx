@@ -34,20 +34,20 @@ class UnitCard extends Component {
         inMain: PropTypes.bool.isRequired,
         isSubCard: PropTypes.bool.isRequired,
 
-        handleLyricVerseSelect: PropTypes.func.isRequired
+        handleVerseSelect: PropTypes.func.isRequired
     }
 
     // No shouldComponentUpdate necessary.
 
     handleStanzaTabClick = (e) => {
         const {
-                handleLyricVerseSelect,
+                handleVerseSelect,
                 stanzaArray
             } = this.props,
 
             { verseIndex } = stanzaArray[0]
 
-        handleLyricVerseSelect(
+        handleVerseSelect(
             e,
             verseIndex,
             true

@@ -40,7 +40,7 @@ class ScrollManager extends PureComponent {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        determineVerseBars: PropTypes.func.isRequired
+        dispatchVerseBarsTimeout: PropTypes.func.isRequired
     }
 
     myCarouselAnnotationElements = {}
@@ -173,7 +173,7 @@ class ScrollManager extends PureComponent {
                 time,
                 align,
                 validTarget
-            }, doDetermineVerseBars ? this.props.determineVerseBars : null)
+            }, doDetermineVerseBars ? this.props.dispatchVerseBarsTimeout : null)
         }
     }
 

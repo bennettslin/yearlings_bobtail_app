@@ -48,7 +48,7 @@ class InteractiveContainer extends PureComponent {
 
         // TODO: Get rid of these eventually.
         // From parent.
-        determineVerseBars: PropTypes.func.isRequired
+        dispatchVerseBarsTimeout: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -165,7 +165,7 @@ class InteractiveContainer extends PureComponent {
         const { deltaY } = e.nativeEvent
         this.myLyricElement.scrollTop += deltaY
 
-        this.props.determineVerseBars()
+        this.props.dispatchVerseBarsTimeout()
     }
 
     handleLyricWheel = (
@@ -218,7 +218,7 @@ class InteractiveContainer extends PureComponent {
 
         // Determine verse bars if scrolled, or if triggered manually.
         if (hasRoomToScroll || !e) {
-            this.props.determineVerseBars(timeoutDuration)
+            this.props.dispatchVerseBarsTimeout(timeoutDuration)
         }
     }
 

@@ -36,35 +36,39 @@ class VerseBarManager extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        const {
-            sliderVerseIndex
-        } = this.props
+        this._determineVerseBarsFromSlider(prevProps)
+    }
+
+    _determineVerseBarsFromSlider(prevProps) {
+        const
+            { sliderVerseIndex } = this.props,
+            { sliderVerseIndex: prevVerseIndex } = prevProps
 
         if (
             // Determine verse bars here while we are sliding.
             sliderVerseIndex > -1 &&
-            sliderVerseIndex !== prevProps.sliderVerseIndex
+            sliderVerseIndex !== prevVerseIndex
         ) {
-            this._determineVerseBars({
+            this.dispatchVerseBars({
                 verseIndex: sliderVerseIndex,
                 calledFromTimeout: false
             })
         }
     }
 
-    determineVerseBars(timeoutDuration = 10) {
+    dispatchVerseBarsTimeout(timeoutDuration = 10) {
         /**
          * It seems to help to both make the call immediately, and then set a
          * timeout for it. For now, I don't think there's any performance hit.
          */
-        this._determineVerseBars({
+        this.dispatchVerseBars({
             calledFromTimeout: false
         })
 
         clearTimeout(this.state.verseBarsTimeoutId)
 
         const verseBarsTimeoutId = setTimeout(
-            this._determineVerseBars,
+            this.dispatchVerseBars,
             timeoutDuration
         )
 
@@ -73,7 +77,7 @@ class VerseBarManager extends PureComponent {
         })
     }
 
-    _determineVerseBars = ({
+    dispatchVerseBars = ({
         calledFromTimeout = true,
         verseIndex = this.props.selectedVerseIndex
     } = {}) => {

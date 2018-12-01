@@ -14,14 +14,14 @@ const propTypes = {
         inVerseBar: PropTypes.bool,
         inSlider: PropTypes.bool,
 
-        handleLyricVerseSelect: PropTypes.func
+        handleVerseSelect: PropTypes.func
     },
 
     VerseHoc = ({
 
         verseIndex,
         VerseComponent,
-        handleLyricVerseSelect,
+        handleVerseSelect,
 
         ...other
     }) => {
@@ -72,7 +72,7 @@ const propTypes = {
                             verseIndex,
                             inUnit,
                             inSlider,
-                            handleLyricVerseSelect
+                            handleVerseSelect
                         }}
                     />
                 )}

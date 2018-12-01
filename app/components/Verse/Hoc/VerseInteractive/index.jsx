@@ -34,7 +34,7 @@ class VerseInteractive extends Component {
         inSlider: PropTypes.bool,
         inUnit: PropTypes.bool,
 
-        handleLyricVerseSelect: PropTypes.func
+        handleVerseSelect: PropTypes.func
     }
 
     shouldComponentUpdate(nextProps) {

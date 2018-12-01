@@ -39,7 +39,7 @@ class KeyManager extends PureComponent {
         eventHandlers: PropTypes.shape({
             // TODO: Specify which events are used. This isn't complete.
             handleLyricWheel: PropTypes.func.isRequired,
-            handleLyricVerseSelect: PropTypes.func.isRequired
+            handleVerseSelect: PropTypes.func.isRequired
         }).isRequired,
         setRef: PropTypes.func.isRequired
     }

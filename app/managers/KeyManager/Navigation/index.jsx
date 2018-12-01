@@ -60,7 +60,7 @@ class NavigationManager extends PureComponent {
             if (isVerseInteractivated && keyName === ENTER) {
 
                 keyWasRegistered =
-                    eventHandlers.handleLyricVerseSelect(
+                    eventHandlers.handleVerseSelect(
                         e, interactivatedVerseIndex
                     )
 

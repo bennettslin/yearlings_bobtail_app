@@ -20,7 +20,7 @@ class TimeVerseHandler extends PureComponent {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        determineVerseBars: PropTypes.func.isRequired,
+        dispatchVerseBarsTimeout: PropTypes.func.isRequired,
         updateSelectedPlayer: PropTypes.func.isRequired
     }
 
@@ -50,7 +50,7 @@ class TimeVerseHandler extends PureComponent {
              * window view, to in it, to below it. So, determine verse bars.
              */
             if (!this.props.isAutoScroll) {
-                this.props.determineVerseBars()
+                this.props.dispatchVerseBarsTimeout()
             }
 
             this._selectTimeAndVerse({

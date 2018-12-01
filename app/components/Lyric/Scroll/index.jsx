@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-// import debounce from 'debounce'
 
 import Stanzas from '../../Stanzas'
 
@@ -39,11 +38,6 @@ class LyricScroll extends Component {
         setLyricParentRef: PropTypes.func.isRequired
     }
 
-    // Handle only once every 10ms at most.
-    // _handleDebouncedWheel = debounce(
-    //     this._handleDebouncedWheel, 10
-    // )
-
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
@@ -74,24 +68,10 @@ class LyricScroll extends Component {
     }
 
     _handleWheel = (e) => {
-        // console.error('on wheel', e)
-        this._handleDebouncedWheel(e)
-    }
-
-    _handleScroll = () => {
-        // console.error('on scroll', this.lyricRef.scrollTop, e)
-        // this._handleDebouncedWheel(e)
-    }
-
-    // NOTE: No longer using debounce. We'll keep as it is for now, though.
-    _handleDebouncedWheel(e) {
         this.props.handleLyricWheel(e)
     }
 
     setLyricRef = (node) => {
-        // For internal reference.
-        // this.lyricRef = node
-
         // For keyboard events.
         this.props.setLyricRef(node)
 
@@ -135,7 +115,6 @@ class LyricScroll extends Component {
                 )}
                 tabIndex="-1"
                 onWheel={this._handleWheel}
-                onScroll={this._handleScroll}
             >
                 {/* TODO: Undo this. */}
                 {true && (
