@@ -11,6 +11,7 @@ import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import CarouselDispatcher from '../../../handlers/CarouselHandler/Dispatcher'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
+import InteractivatedVerseDispatcher from '../../../dispatchers/InteractivatedVerseDispatcher'
 import LyricDispatcher from '../../../handlers/LyricHandler/Dispatcher'
 import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
 import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
@@ -106,10 +107,10 @@ class LetterManager extends PureComponent {
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_REWIND_KEY:
-                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(-1)
+                keyWasRegistered = this.dispatchInteractivatedVerseDirection(-1)
                 break
             case AUDIO_FAST_FORWARD_KEY:
-                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
+                keyWasRegistered = this.dispatchInteractivatedVerseDirection(1)
                 break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchCarousel()
@@ -207,6 +208,7 @@ class LetterManager extends PureComponent {
                 <CarouselDispatcher {...{ getDispatch: this }} />
                 <DotsSlideDispatcher {...{ getDispatch: this }} />
                 <EarColumnDispatcher {...{ getDispatch: this }} />
+                <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
                 <LyricDispatcher {...{ getDispatch: this }} />
                 <OverviewDispatcher {...{ getDispatch: this }} />
                 <TipsDispatcher {...{ getDispatch: this }} />

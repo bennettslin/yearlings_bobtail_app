@@ -13,9 +13,6 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
 import AnnotationDispatcher from '../../handlers/AnnotationHandler/Dispatcher'
-import AnnotationAccessDispatcher from '../../handlers/AnnotationAccessHandler/Dispatcher'
-import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
-import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
@@ -32,7 +29,6 @@ class EventContainer extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        accessedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         updateScrollCarouselStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
@@ -150,35 +146,6 @@ class EventContainer extends PureComponent {
         return true
     }
 
-    handleVerseDirectionAccess = (direction) => {
-        if (this.props.isSelectedLogue) {
-            return false
-        }
-
-        const
-            { selectedVerseIndex } = this.props,
-            interactivatedVerseIndex =
-            this.dispatchInteractivatedVerseDirection(direction)
-
-        this.props.updateScrollLyricStore({
-            scrollLyricLog: 'Access verse direction.',
-            doScrollLyricByVerse: true,
-
-            /**
-             * If interactivation remains on, scroll to interactivated verse.
-             * Otherwise, scroll to selected verse.
-             */
-            scrollLyricIndex:
-                interactivatedVerseIndex > -1 ?
-                    interactivatedVerseIndex :
-                    selectedVerseIndex,
-
-            doDetermineVerseBars: true
-        })
-
-        return true
-    }
-
     render() {
         const {
             determineVerseBars,
@@ -195,9 +162,6 @@ class EventContainer extends PureComponent {
                     }}
                 />
                 <AnnotationDispatcher {...{ getDispatch: this }} />
-                <AnnotationAccessDispatcher {...{ getDispatch: this }} />
-                <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
-                <StopPropagationDispatcher {...{ getDispatch: this }} />
             </___>
         )
     }
@@ -215,8 +179,7 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    sessionStore: { interactivatedVerseIndex },
-    accessStore: { accessedAnnotationIndex }
+    sessionStore: { interactivatedVerseIndex }
 }) => ({
     isCarouselShown,
     selectedAnnotationIndex,
@@ -225,8 +188,7 @@ const mapStateToProps = ({
     selectedDotKeys,
     selectedSongIndex,
     selectedVerseIndex,
-    interactivatedVerseIndex,
-    accessedAnnotationIndex
+    interactivatedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

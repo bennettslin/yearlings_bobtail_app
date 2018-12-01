@@ -4,6 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 
 import { getSongVersesCount } from 'helpers/dataHelper'
@@ -12,9 +13,11 @@ class InteractivatedVerseDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -31,6 +34,10 @@ class InteractivatedVerseDispatcher extends PureComponent {
     }
 
     dispatchInteractivatedVerseDirection = (direction) => {
+        if (this.props.isSelectedLogue) {
+            return false
+        }
+
         const {
                 selectedSongIndex,
                 selectedVerseIndex
@@ -63,7 +70,29 @@ class InteractivatedVerseDispatcher extends PureComponent {
 
         this.props.updateSessionStore({ interactivatedVerseIndex })
 
-        return interactivatedVerseIndex
+        this._scrollToInteractivatedVerse(interactivatedVerseIndex)
+
+        return true
+    }
+
+    _scrollToInteractivatedVerse(interactivatedVerseIndex) {
+        const { selectedVerseIndex } = this.props
+
+        this.props.updateScrollLyricStore({
+            scrollLyricLog: 'Access verse direction.',
+            doScrollLyricByVerse: true,
+
+            /**
+             * If interactivation remains on, scroll to interactivated verse.
+             * Otherwise, scroll to selected verse.
+             */
+            scrollLyricIndex:
+                interactivatedVerseIndex > -1 ?
+                    interactivatedVerseIndex :
+                    selectedVerseIndex,
+
+            doDetermineVerseBars: true
+        })
     }
 
     render() {
@@ -73,6 +102,7 @@ class InteractivatedVerseDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     songStore: {
+        isSelectedLogue,
         selectedSongIndex,
         selectedVerseIndex
     },
@@ -80,6 +110,7 @@ const mapStateToProps = ({
         interactivatedVerseIndex
     }
 }) => ({
+    isSelectedLogue,
     selectedSongIndex,
     selectedVerseIndex,
     interactivatedVerseIndex
@@ -87,6 +118,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateScrollLyricStore,
         updateSessionStore
     }, dispatch)
 )

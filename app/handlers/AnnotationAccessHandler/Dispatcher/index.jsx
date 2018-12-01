@@ -68,7 +68,8 @@ class AnnotationAccessDispatcher extends PureComponent {
 
         this.props.updateAccessStore({ accessedAnnotationIndex })
 
-        if (accessedAnnotationIndex) {
+        // Only scroll if accessed with a direction.
+        if (direction && accessedAnnotationIndex) {
             this.props.updateScrollLyricStore({
                 scrollLyricLog: 'Access lyric annotation.',
                 scrollLyricIndex: accessedAnnotationIndex
