@@ -11,32 +11,30 @@ import PlayerManager from '../../managers/PlayerManager'
 import ScrollManager from '../../managers/ScrollManager'
 import VerseBarManager from '../../managers/VerseBarManager'
 
-import OverviewListener from '../../handlers/OverviewHandler/Listener'
-import TipsListener from '../../handlers/TipsHandler/Listener'
+// TODO: Eventually remove this one.
+import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
+import TimeVerseHandler from '../../handlers/TimeVerseHandler'
 
 import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
 import CarouselListener from '../../handlers/CarouselHandler/Listener'
 import DidRenderListener from '../../listeners/DidRenderListener'
+import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import LiveListener from '../../listeners/LiveListener'
+import LogueListener from '../../listeners/LogueListener'
 import LyricListener from '../../handlers/LyricHandler/Listener'
+import MainListener from '../../listeners/MainListener'
+import OverviewListener from '../../handlers/OverviewHandler/Listener'
+import PopupAnnotationListener from '../../listeners/PopupAnnotationListener'
+import RenderListener from '../../listeners/RenderListener'
+import RenderedListener from '../../listeners/RenderedListener'
 import SceneListener from '../../handlers/SceneHandler/Listener'
 import ScoreListener from '../../handlers/ScoreHandler/Listener'
+import SongListener from '../../handlers/SongHandler/Listener'
+import SliderListener from '../../listeners/SliderListener'
+import TipsListener from '../../handlers/TipsHandler/Listener'
 import WikiListener from '../../handlers/WikiHandler/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormholeHandler/Listener'
-
-// TODO: Eventually remove this one.
-import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
-import SongListener from '../../handlers/SongHandler/Listener'
-import TimeVerseHandler from '../../handlers/TimeVerseHandler'
-
-import PopupAnnotationListener from '../../listeners/PopupAnnotationListener'
-import RenderedListener from '../../listeners/RenderedListener'
-import DoublespeakerListener from '../../listeners/DoublespeakerListener'
-import LogueListener from '../../listeners/LogueListener'
-import MainListener from '../../listeners/MainListener'
-import RenderListener from '../../listeners/RenderListener'
-import SliderListener from '../../listeners/SliderListener'
 import WindowListener from '../../listeners/WindowListener'
 
 class ListenerContainer extends PureComponent {
@@ -205,24 +203,25 @@ class ListenerContainer extends PureComponent {
                     updateSelectedPlayer={this.updateSelectedPlayer}
                 />
                 <LogManager />
-                <OverviewListener />
-                <TipsListener />
-                <RenderedListener />
+
                 <AnnotationListener />
                 <AnnotationAccessListener />
                 <CarouselListener />
-                <DoublespeakerListener />
                 <DidRenderListener />
+                <DoublespeakerListener />
                 <LiveListener />
                 <LogueListener />
                 <LyricListener />
                 <MainListener />
+                <OverviewListener />
                 <PopupAnnotationListener />
                 <RenderListener />
+                <RenderedListener />
                 <SceneListener />
                 <ScoreListener />
                 <SliderListener />
                 <SongListener />
+                <TipsListener />
                 <WikiListener />
                 <WikiWormholeListener />
                 <WindowListener />

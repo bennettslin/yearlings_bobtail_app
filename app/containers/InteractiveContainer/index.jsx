@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
+import { updateSliderStore } from 'flux/slider/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
@@ -19,12 +20,16 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
-    sliderStore: { isSliderTouched },
+    sliderStore: {
+        isSliderTouched,
+        didSliderJustMouseUp
+    },
     toggleStore: { isLyricExpanded }
 }) => ({
     appMounted,
     isHiddenLyric,
     isSliderTouched,
+    didSliderJustMouseUp,
     isLyricExpanded
 })
 
@@ -35,17 +40,15 @@ class InteractiveContainer extends PureComponent {
         appMounted: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
+        didSliderJustMouseUp: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         updateEventStore: PropTypes.func.isRequired,
+        updateSliderStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // TODO: Get rid of these eventually.
         // From parent.
         determineVerseBars: PropTypes.func.isRequired
-    }
-
-    state = {
-        sliderMousedUp: false
     }
 
     componentDidMount() {
@@ -77,9 +80,7 @@ class InteractiveContainer extends PureComponent {
     }
 
     _resetSliderMousedUp = () => {
-        this.setState({
-            sliderMousedUp: false
-        })
+        this.props.updateSliderStore({ didSliderJustMouseUp: false })
     }
 
     _handleBodyClick = (e) => {
@@ -89,7 +90,7 @@ class InteractiveContainer extends PureComponent {
          * Don't register the click event that happens after mouseUp if we're
          * lifting up from moving the slider.
          */
-        if (!this.state.sliderMousedUp) {
+        if (!this.props.didSliderJustMouseUp) {
             this.props.updateEventStore({ bodyClicked: true })
 
             // Return focus to lyric section so it can have scroll access.
@@ -114,10 +115,7 @@ class InteractiveContainer extends PureComponent {
         this.focusElementForAccess()
 
         if (this.props.isSliderTouched) {
-            this.setState({
-                sliderMousedUp: true
-            })
-
+            this.props.updateSliderStore({ didSliderJustMouseUp: true })
         }
     }
 
@@ -294,6 +292,7 @@ class InteractiveContainer extends PureComponent {
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateEventStore,
+        updateSliderStore,
         updateToggleStore
     }, dispatch)
 )
