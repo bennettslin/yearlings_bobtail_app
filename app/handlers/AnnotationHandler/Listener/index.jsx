@@ -53,7 +53,7 @@ class AnnotationListener extends PureComponent {
             })
 
             if (!showAnnotationForColumn) {
-                this.dispatchAnnotation({ selectedAnnotationIndex: 0 })
+                this.dispatchAnnotationIndex(0)
             }
         }
     }

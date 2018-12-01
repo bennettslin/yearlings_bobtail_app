@@ -1,4 +1,4 @@
-// Child that knows rules to toggle admin.
+// Child that knows rules to stop propagation.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'

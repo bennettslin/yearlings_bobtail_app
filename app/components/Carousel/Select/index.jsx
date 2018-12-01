@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
+import AnnotationDispatcher from '../../../handlers/AnnotationHandler/Dispatcher'
 import Button from '../../Button'
 
 import {
@@ -17,16 +18,12 @@ import { CAROUSEL_SELECT_BUTTON_KEY } from 'constants/buttons'
 
 class CarouselSelect extends PureComponent {
 
-    static propTypes = {
-        handleAnnotationDirectionSelect: PropTypes.func.isRequired
+    _handleAnnotationPrevious = () => {
+        this.dispatchAnnotationDirection(-1)
     }
 
-    _handleAnnotationPrevious = (e) => {
-        this.props.handleAnnotationDirectionSelect(e, -1)
-    }
-
-    _handleAnnotationNext = (e) => {
-        this.props.handleAnnotationDirectionSelect(e, 1)
+    _handleAnnotationNext = () => {
+        this.dispatchAnnotationDirection(1)
     }
 
     render() {
@@ -50,6 +47,7 @@ class CarouselSelect extends PureComponent {
                         handleButtonClick: this._handleAnnotationNext
                     }}
                 />
+                <AnnotationDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }

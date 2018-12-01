@@ -44,21 +44,6 @@ class EventContainer extends PureComponent {
      * ANNOTATION *
      **************/
 
-    handleAnnotationDirectionSelect = (e, direction) => {
-        const selectedAnnotationIndex = this.dispatchAnnotation({ direction })
-
-        this.props.updateScrollLyricStore({
-            scrollLyricLog: 'Select accessed lyric annotation.',
-            scrollLyricIndex: selectedAnnotationIndex
-        })
-        if (this.props.isCarouselShown) {
-            this.props.updateScrollCarouselStore({
-                scrollCarouselLog: 'Select accessed carousel annotation.',
-                scrollCarouselIndex: selectedAnnotationIndex
-            })
-        }
-    }
-
     handleAnnotationIndexSelect = (
         e,
         selectedAnnotationIndex,
@@ -83,7 +68,7 @@ class EventContainer extends PureComponent {
             }
         }
 
-        this.dispatchAnnotation({ selectedAnnotationIndex })
+        this.dispatchAnnotationIndex(selectedAnnotationIndex)
 
         if (selectedAnnotationIndex) {
 

@@ -13,7 +13,6 @@ class RenderListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
         didCarouselRender: PropTypes.bool.isRequired,
         didLyricRender: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -32,7 +31,6 @@ class RenderListener extends PureComponent {
         const
             {
                 isSelectedLogue,
-                isCarouselShown,
                 didCarouselRender
             } = this.props,
             { didCarouselRender: couldCarouselRender } = prevProps
@@ -40,7 +38,6 @@ class RenderListener extends PureComponent {
         // TODO: This now scrolls, but maybe do with no animation.
         if (
             !isSelectedLogue
-            && isCarouselShown
             && didCarouselRender
             && !couldCarouselRender
         ) {
@@ -94,13 +91,11 @@ const mapStateToProps = ({
     renderStore: {
         didCarouselRender,
         didLyricRender
-    },
-    toggleStore: { isCarouselShown }
+    }
 }) => ({
     isSelectedLogue,
     didCarouselRender,
     didLyricRender,
-    isCarouselShown,
     selectedVerseIndex,
     selectedAnnotationIndex
 })

@@ -2,6 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormholeHandler/Dispatcher'
 
@@ -31,7 +32,6 @@ class AnnotationNavigation extends PureComponent {
 
         // From parent.
         getNavigation: PropTypes.object.isRequired,
-        handleAnnotationDirectionSelect: PropTypes.func.isRequired,
         selectSong: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
@@ -43,7 +43,6 @@ class AnnotationNavigation extends PureComponent {
     navigateAnnotation = (e, keyName) => {
         const { props } = this,
             {
-                handleAnnotationDirectionSelect,
                 selectSong,
                 determineVerseBarsWithParameters
             } = props
@@ -55,11 +54,11 @@ class AnnotationNavigation extends PureComponent {
         switch (keyName) {
             case ARROW_LEFT:
                 annotationIndexWasAccessed = true
-                handleAnnotationDirectionSelect(e, -1)
+                this.dispatchAnnotationDirection(-1)
                 break
             case ARROW_RIGHT:
                 annotationIndexWasAccessed = true
-                handleAnnotationDirectionSelect(e, 1)
+                this.dispatchAnnotationDirection(1)
                 break
             case ARROW_UP:
             case ARROW_DOWN: {
@@ -134,6 +133,7 @@ class AnnotationNavigation extends PureComponent {
     render() {
         return (
             <___>
+                <AnnotationDispatcher {...{ getDispatch: this }} />
                 <WikiDispatcher {...{ getDispatch: this }} />
                 <WikiWormholeDispatcher {...{ getDispatch: this }} />
             </___>

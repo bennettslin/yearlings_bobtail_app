@@ -29,6 +29,7 @@ class ScrollManager extends PureComponent {
         scrollLyricIndex: PropTypes.number.isRequired,
         doScrollLyricImmediately: PropTypes.bool.isRequired,
         doDetermineVerseBars: PropTypes.bool.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -57,22 +58,29 @@ class ScrollManager extends PureComponent {
 
     _scrollCarousel(prevProps) {
         const
-            { scrollCarouselLog } = this.props,
+            {
+                isCarouselShown,
+                scrollCarouselLog
+            } = this.props,
             { scrollCarouselLog: prevCarouselLog } = prevProps
 
         if (scrollCarouselLog && !prevCarouselLog) {
-            const {
-                scrollCarouselLog,
-                scrollCarouselIndex,
-                doScrollCarouselImmediately
-            } = this.props
 
-            this._scrollElementIntoView({
-                log: scrollCarouselLog,
-                scrollClass: CAROUSEL_SCROLL,
-                index: scrollCarouselIndex,
-                doScrollImmediately: doScrollCarouselImmediately
-            })
+            // Only scroll if carousel is shown.
+            if (isCarouselShown) {
+                const {
+                    scrollCarouselLog,
+                    scrollCarouselIndex,
+                    doScrollCarouselImmediately
+                } = this.props
+
+                this._scrollElementIntoView({
+                    log: scrollCarouselLog,
+                    scrollClass: CAROUSEL_SCROLL,
+                    index: scrollCarouselIndex,
+                    doScrollImmediately: doScrollCarouselImmediately
+                })
+            }
 
             this.props.updateScrollCarouselStore()
         }
@@ -273,7 +281,10 @@ const mapStateToProps = ({
         doScrollLyricImmediately,
         doDetermineVerseBars
     },
-    toggleStore: { isLyricExpanded },
+    toggleStore: {
+        isCarouselShown,
+        isLyricExpanded
+    },
     deviceStore: {
         deviceIndex,
         windowWidth
@@ -289,6 +300,7 @@ const mapStateToProps = ({
     scrollLyricIndex,
     doScrollLyricImmediately,
     doDetermineVerseBars,
+    isCarouselShown,
     isLyricExpanded,
     deviceIndex,
     windowWidth,

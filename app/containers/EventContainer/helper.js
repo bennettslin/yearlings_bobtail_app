@@ -12,7 +12,6 @@ export const getHandlers = (me) => {
         selectSong: me.props.selectSong,
         handleLyricVerseSelect: me.handleLyricVerseSelect,
         handleAnnotationIndexSelect: me.handleAnnotationIndexSelect,
-        handleAnnotationDirectionSelect: me.handleAnnotationDirectionSelect,
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,

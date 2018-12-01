@@ -6,8 +6,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             setVerseRef,
             setLyricParentRef,
             setCarouselParentRef,
-
-            handleAnnotationDirectionSelect,
             selectSong,
             togglePlay,
             handleAnnotationIndexSelect,
@@ -17,7 +15,6 @@ export const getOrganisedHandlersFromProps = (props) => {
         } = props,
 
         annotationPopupHandlers = {
-            handleAnnotationDirectionSelect,
             selectSong
         },
         audioButtonsHandlers = {
@@ -45,7 +42,6 @@ export const getOrganisedHandlersFromProps = (props) => {
                 setCarouselAnnotationRef,
                 setCarouselParentRef,
                 handleAnnotationIndexSelect,
-                handleAnnotationDirectionSelect,
                 selectSong
             },
             navSectionHandlers: {

@@ -17,7 +17,7 @@ const popupViewPropTypes = {
         handlePreviousClick: PropTypes.func,
         handleNextClick: PropTypes.func,
         handleContainerClick: PropTypes.func.isRequired,
-        children: PropTypes.element.isRequired
+        children: PropTypes.any.isRequired
     },
 
     PopupView = ({

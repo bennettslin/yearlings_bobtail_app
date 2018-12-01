@@ -22,7 +22,6 @@ class AnnotationAccessDispatcher extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
         isEarShown: PropTypes.bool.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         updateScrollCarouselStore: PropTypes.func.isRequired,
@@ -74,12 +73,10 @@ class AnnotationAccessDispatcher extends PureComponent {
                 scrollLyricLog: 'Access lyric annotation.',
                 scrollLyricIndex: accessedAnnotationIndex
             })
-            if (this.props.isCarouselShown) {
-                this.props.updateScrollCarouselStore({
-                    scrollCarouselLog: 'Access carousel annotation.',
-                    scrollCarouselIndex: accessedAnnotationIndex
-                })
-            }
+            this.props.updateScrollCarouselStore({
+                scrollCarouselLog: 'Access carousel annotation.',
+                scrollCarouselIndex: accessedAnnotationIndex
+            })
         }
 
         return accessedAnnotationIndex
@@ -100,7 +97,6 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    toggleStore: { isCarouselShown },
     transientStore: { isEarShown }
 }) => ({
     selectedSongIndex,
@@ -108,7 +104,6 @@ const mapStateToProps = ({
     dotsBitNumber,
     selectedDotKeys,
     earColumnIndex,
-    isCarouselShown,
     isEarShown
 })
 

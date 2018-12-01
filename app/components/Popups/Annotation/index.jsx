@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import AnnotationDispatcher from '../../../handlers/AnnotationHandler/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
 
@@ -29,22 +30,20 @@ class AnnotationPopup extends PureComponent {
         popupAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        inMain: PropTypes.bool,
-        handleAnnotationDirectionSelect: PropTypes.func.isRequired
+        inMain: PropTypes.bool
     }
 
-    _handleAnnotationPrevious = (e) => {
-        this.props.handleAnnotationDirectionSelect(e, -1)
+    _handleAnnotationPrevious = () => {
+        this.dispatchAnnotationDirection(-1)
     }
 
-    _handleAnnotationNext = (e) => {
-        this.props.handleAnnotationDirectionSelect(e, 1)
+    _handleAnnotationNext = () => {
+        this.dispatchAnnotationDirection(1)
     }
 
     render() {
         const {
             /* eslint-disable no-unused-vars */
-            handleAnnotationDirectionSelect,
             dispatch,
             /* eslint-enable no-unused-vars */
 
@@ -80,6 +79,7 @@ class AnnotationPopup extends PureComponent {
                     isSelected
                     {...{ annotationIndex: popupAnnotationIndex }}
                 />
+                <AnnotationDispatcher {...{ getDispatch: this }} />
             </Popup>
         )
     }

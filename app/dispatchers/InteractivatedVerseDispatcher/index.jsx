@@ -1,4 +1,4 @@
-// Child that knows rules to toggle admin.
+// Child that knows rules to select interactivated verse.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 
-import { getSongVersesCount } from 'helpers/dataHelper'
+import { getInteractivatedVerseForDirection } from './helper'
 
 class InteractivatedVerseDispatcher extends PureComponent {
 
@@ -40,43 +40,18 @@ class InteractivatedVerseDispatcher extends PureComponent {
 
         const {
                 selectedSongIndex,
-                selectedVerseIndex
+                selectedVerseIndex,
+                interactivatedVerseIndex: currentInteractivatedVerseIndex
             } = this.props,
 
-            songVersesCount = getSongVersesCount(selectedSongIndex)
-
-        let { interactivatedVerseIndex } = this.props
-
-        // Ensure modulo.
-        if (direction === -1) {
-            direction = songVersesCount - 1
-        }
-
-        // We are turning on interactivation, so start from selected verse.
-        if (interactivatedVerseIndex === -1) {
-            interactivatedVerseIndex =
-                (selectedVerseIndex + direction) % songVersesCount
-
-        // We already have an interactivated verse.
-        } else {
-            interactivatedVerseIndex =
-                (interactivatedVerseIndex + direction) % songVersesCount
-        }
-
-        // If we're returning to the selected verse, turn off interactivation.
-        if (interactivatedVerseIndex === selectedVerseIndex) {
-            interactivatedVerseIndex = -1
-        }
+            interactivatedVerseIndex = getInteractivatedVerseForDirection({
+                selectedSongIndex,
+                selectedVerseIndex,
+                currentInteractivatedVerseIndex,
+                direction
+            })
 
         this.props.updateSessionStore({ interactivatedVerseIndex })
-
-        this._scrollToInteractivatedVerse(interactivatedVerseIndex)
-
-        return true
-    }
-
-    _scrollToInteractivatedVerse(interactivatedVerseIndex) {
-        const { selectedVerseIndex } = this.props
 
         this.props.updateScrollLyricStore({
             scrollLyricLog: 'Access verse direction.',
@@ -93,6 +68,8 @@ class InteractivatedVerseDispatcher extends PureComponent {
 
             doDetermineVerseBars: true
         })
+
+        return true
     }
 
     render() {

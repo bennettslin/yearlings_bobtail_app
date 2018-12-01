@@ -1,8 +1,9 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
+import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
+import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
 
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
@@ -17,6 +18,8 @@ class AnnotationDispatcher extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
+        updateScrollCarouselStore: PropTypes.func.isRequired,
+        updateScrollLyricStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -24,33 +27,46 @@ class AnnotationDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchAnnotation = this.dispatchAnnotation
+        this.props.getDispatch.dispatchAnnotationIndex = this.dispatchAnnotationIndex
+        this.props.getDispatch.dispatchAnnotationDirection = this.dispatchAnnotationDirection
     }
 
-    dispatchAnnotation = ({
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedAnnotationIndex = this.props.selectedAnnotationIndex,
-        direction
-    } = {}) => {
-        const {
-            selectedDotKeys,
-            earColumnIndex,
-            isEarShown
-        } = this.props
+    dispatchAnnotationIndex = (selectedAnnotationIndex) => {
+        this.props.updateSongStore({ selectedAnnotationIndex })
+    }
 
-        // Called from arrow buttons in popup.
-        if (direction) {
+    dispatchAnnotationDirection = (direction) => {
+        const {
+                selectedSongIndex,
+                selectedAnnotationIndex: currentAnnotationIndex,
+                selectedDotKeys,
+                earColumnIndex,
+                isEarShown
+            } = this.props,
+
+            // Called from arrow buttons in popup.
             selectedAnnotationIndex = getAnnotationIndexForDirection({
                 isEarShown,
                 selectedSongIndex,
                 selectedDotKeys,
-                currentAnnotationIndex: selectedAnnotationIndex,
+                currentAnnotationIndex,
                 earColumnIndex,
                 direction
             })
-        }
 
         this.props.updateSongStore({ selectedAnnotationIndex })
+
+        if (selectedAnnotationIndex) {
+            this.props.updateScrollLyricStore({
+                scrollLyricLog: 'Select accessed lyric annotation.',
+                scrollLyricIndex: selectedAnnotationIndex
+            })
+            this.props.updateScrollCarouselStore({
+                scrollCarouselLog: 'Select accessed carousel annotation.',
+                scrollCarouselIndex: selectedAnnotationIndex
+            })
+        }
+
         return selectedAnnotationIndex
     }
 
@@ -81,6 +97,8 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateScrollCarouselStore,
+        updateScrollLyricStore,
         updateSongStore
     }, dispatch)
 )
