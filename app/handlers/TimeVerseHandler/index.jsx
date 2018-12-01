@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux'
 import { updateRenderedStore } from 'flux/rendered/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
+import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import { getTimeForVerseIndex } from 'helpers/dataHelper'
 
@@ -17,10 +18,10 @@ class TimeVerseHandler extends PureComponent {
         updateRenderedStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
+        updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        dispatchVerseBarsTimeout: PropTypes.func.isRequired,
         updateSelectedPlayer: PropTypes.func.isRequired
     }
 
@@ -50,7 +51,7 @@ class TimeVerseHandler extends PureComponent {
              * window view, to in it, to below it. So, determine verse bars.
              */
             if (!this.props.isAutoScroll) {
-                this.props.dispatchVerseBarsTimeout()
+                this.props.updateVerseBarsStore({ doDetermineVerseBars: true })
             }
 
             this._selectTimeAndVerse({
@@ -154,7 +155,8 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateRenderedStore,
         updateScrollLyricStore,
-        updateSongStore
+        updateSongStore,
+        updateVerseBarsStore
     }, dispatch)
 )
 

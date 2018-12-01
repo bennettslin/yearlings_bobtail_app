@@ -44,6 +44,11 @@ const
         bodyClicked: false
     },
 
+    VERSE_BARS_DEFAULTS = {
+        doDetermineVerseBars: false,
+        verseBarsTimeout: 0
+    },
+
     ACCESS_DEFAULTS = {
         accessedKey: '',
         accessedAnnotationIndex: storedAnnotationIndex || 1,
@@ -205,6 +210,7 @@ const
 
 export {
     EVENT_DEFAULTS,
+    VERSE_BARS_DEFAULTS,
     ACCESS_DEFAULTS,
     AUDIO_DEFAULTS,
     LOAD_DEFAULTS,

@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import {
     getLyricTopAlign,
@@ -37,10 +38,10 @@ class ScrollManager extends PureComponent {
         windowWidth: PropTypes.number.isRequired,
         updateScrollCarouselStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
+        updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired,
-        dispatchVerseBarsTimeout: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     myCarouselAnnotationElements = {}
@@ -173,8 +174,12 @@ class ScrollManager extends PureComponent {
                 time,
                 align,
                 validTarget
-            }, doDetermineVerseBars ? this.props.dispatchVerseBarsTimeout : null)
+            }, doDetermineVerseBars ? this._determineVerseBars : null)
         }
+    }
+
+    _determineVerseBars = () => {
+        this.props.updateVerseBarsStore({ doDetermineVerseBars: true })
     }
 
     _getValidTarget(scrollClass) {
@@ -311,7 +316,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateScrollCarouselStore,
-        updateScrollLyricStore
+        updateScrollLyricStore,
+        updateVerseBarsStore
     }, dispatch)
 )
 

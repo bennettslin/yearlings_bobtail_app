@@ -9,6 +9,7 @@ import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
 import { updateSliderStore } from 'flux/slider/action'
 import { updateToggleStore } from 'flux/toggle/action'
+import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
@@ -45,10 +46,7 @@ class InteractiveContainer extends PureComponent {
         updateEventStore: PropTypes.func.isRequired,
         updateSliderStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
-
-        // TODO: Get rid of these eventually.
-        // From parent.
-        dispatchVerseBarsTimeout: PropTypes.func.isRequired
+        updateVerseBarsStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -165,22 +163,14 @@ class InteractiveContainer extends PureComponent {
         const { deltaY } = e.nativeEvent
         this.myLyricElement.scrollTop += deltaY
 
-        this.props.dispatchVerseBarsTimeout()
+        this.props.updateVerseBarsStore({ doDetermineVerseBars: true })
     }
 
     handleLyricWheel = (
         e,
-        {
-            timeoutDuration,
-            setToManualScroll = false
-        } = {}
+        { timeoutDuration } = {}
     ) => {
         let hasRoomToScroll = false
-
-        if (setToManualScroll) {
-            // If triggered manually by keyboard, set to false.
-            this.props.updateToggleStore({ isAutoScroll: false })
-        }
 
         // Determine whether there is room to scroll.
         if (e) {
@@ -189,7 +179,8 @@ class InteractiveContainer extends PureComponent {
 
             if (deltaY > 0) {
                 const {
-                    scrollHeight, clientHeight
+                    scrollHeight,
+                    clientHeight
                 } = this.myLyricElement
 
                 if (scrollTop < scrollHeight - clientHeight) {
@@ -218,7 +209,10 @@ class InteractiveContainer extends PureComponent {
 
         // Determine verse bars if scrolled, or if triggered manually.
         if (hasRoomToScroll || !e) {
-            this.props.dispatchVerseBarsTimeout(timeoutDuration)
+            this.props.updateVerseBarsStore({
+                doDetermineVerseBars: true,
+                verseBarsTimeout: timeoutDuration
+            })
         }
     }
 
@@ -293,7 +287,8 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateEventStore,
         updateSliderStore,
-        updateToggleStore
+        updateToggleStore,
+        updateVerseBarsStore
     }, dispatch)
 )
 

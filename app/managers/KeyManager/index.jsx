@@ -178,11 +178,12 @@ class KeyManager extends PureComponent {
             null,
             {
                 ...!isAutoScroll && {
-                    timeoutDuration: 300,
-                    setToManualScroll: true
+                    timeoutDuration: 300
                 }
             }
         )
+
+        this.props.updateToggleStore({ isAutoScroll: false })
     }
 
     render() {

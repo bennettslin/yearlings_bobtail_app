@@ -118,14 +118,6 @@ class ListenerContainer extends PureComponent {
         return this.timeVerseManager.selectVerse(payload)
     }
 
-    /*********
-     * VERSE *
-     *********/
-
-    dispatchVerseBarsTimeout = (payload) => {
-        return this.verseManager.dispatchVerseBarsTimeout(payload)
-    }
-
     /********
      * REFS *
      ********/
@@ -165,7 +157,6 @@ class ListenerContainer extends PureComponent {
                     setVerseRef={this.setVerseRef}
                     setLyricParentRef={this.setLyricParentRef}
                     setCarouselParentRef={this.setCarouselParentRef}
-                    dispatchVerseBarsTimeout={this.dispatchVerseBarsTimeout}
                     selectSong={this.selectSong}
                     selectVerse={this.selectVerse}
                     togglePlay={this.togglePlay}
@@ -182,7 +173,6 @@ class ListenerContainer extends PureComponent {
                 />
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
-                    dispatchVerseBarsTimeout={this.dispatchVerseBarsTimeout}
                 />
                 <VerseBarManager
                     setRef={this._setVerseManagerRef}
@@ -196,7 +186,6 @@ class ListenerContainer extends PureComponent {
                 />
                 <TimeVerseHandler
                     setRef={this._setTimeVerseManagerRef}
-                    dispatchVerseBarsTimeout={this.dispatchVerseBarsTimeout}
                     updateSelectedPlayer={this.updateSelectedPlayer}
                 />
                 <LogManager />

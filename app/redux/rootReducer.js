@@ -17,6 +17,7 @@ import SliderReducer from './slider/reducer'
 import SongReducer from './song/reducer'
 import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
+import VerseBarsReducer from './verseBars/reducer'
 
 import {
     ACCESS_STORE,
@@ -36,10 +37,12 @@ import {
     SLIDER_STORE,
     SONG_STORE,
     TOGGLE_STORE,
-    TRANSIENT_STORE
+    TRANSIENT_STORE,
+    VERSE_BARS_STORE
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [VERSE_BARS_STORE]: VerseBarsReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
     [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SONG_STORE]: SongReducer,

@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
+import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import { getVerseBarStatus } from './helper'
 
@@ -12,6 +13,8 @@ class VerseBarManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        doDetermineVerseBars: PropTypes.bool.isRequired,
+        verseBarsTimeout: PropTypes.number.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -21,6 +24,7 @@ class VerseBarManager extends PureComponent {
         sliderVerseIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
+        updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -36,7 +40,21 @@ class VerseBarManager extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
+        this._determineVerseBarsFromDispatch(prevProps)
         this._determineVerseBarsFromSlider(prevProps)
+    }
+
+    _determineVerseBarsFromDispatch(prevProps) {
+        const
+            { doDetermineVerseBars } = this.props,
+            { doDetermineVerseBars: didDetermineVerseBars } = prevProps
+
+        if (doDetermineVerseBars && !didDetermineVerseBars) {
+            const { verseBarsTimeout } = this.props
+            this._dispatchVerseBarsTimeout(verseBarsTimeout)
+
+            this.props.updateVerseBarsStore()
+        }
     }
 
     _determineVerseBarsFromSlider(prevProps) {
@@ -49,26 +67,26 @@ class VerseBarManager extends PureComponent {
             sliderVerseIndex > -1 &&
             sliderVerseIndex !== prevVerseIndex
         ) {
-            this.dispatchVerseBars({
+            this._dispatchVerseBars({
                 verseIndex: sliderVerseIndex,
                 calledFromTimeout: false
             })
         }
     }
 
-    dispatchVerseBarsTimeout(timeoutDuration = 10) {
+    _dispatchVerseBarsTimeout(timeoutDuration = 10) {
         /**
          * It seems to help to both make the call immediately, and then set a
          * timeout for it. For now, I don't think there's any performance hit.
          */
-        this.dispatchVerseBars({
+        this._dispatchVerseBars({
             calledFromTimeout: false
         })
 
         clearTimeout(this.state.verseBarsTimeoutId)
 
         const verseBarsTimeoutId = setTimeout(
-            this.dispatchVerseBars,
+            this._dispatchVerseBars,
             timeoutDuration
         )
 
@@ -77,7 +95,7 @@ class VerseBarManager extends PureComponent {
         })
     }
 
-    dispatchVerseBars = ({
+    _dispatchVerseBars = ({
         calledFromTimeout = true,
         verseIndex = this.props.selectedVerseIndex
     } = {}) => {
@@ -117,6 +135,10 @@ class VerseBarManager extends PureComponent {
 }
 
 const mapStateToProps = ({
+    verseBarsStore: {
+        doDetermineVerseBars,
+        verseBarsTimeout
+    },
     deviceStore: {
         deviceIndex,
         windowHeight
@@ -131,6 +153,8 @@ const mapStateToProps = ({
     },
     sliderStore: { sliderVerseIndex }
 }) => ({
+    doDetermineVerseBars,
+    verseBarsTimeout,
     deviceIndex,
     windowHeight,
     isLyricExpanded,
@@ -143,7 +167,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateSessionStore,
-        updateToggleStore
+        updateToggleStore,
+        updateVerseBarsStore
     }, dispatch)
 )
 

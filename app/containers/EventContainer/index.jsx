@@ -69,7 +69,6 @@ class EventContainer extends PureComponent {
 
     render() {
         const {
-            dispatchVerseBarsTimeout,
             selectVerse
         } = this.props
 
@@ -78,7 +77,6 @@ class EventContainer extends PureComponent {
                 <InteractiveContainer
                     {...{
                         eventHandlers: getHandlers(this),
-                        dispatchVerseBarsTimeout,
                         selectVerse
                     }}
                 />
