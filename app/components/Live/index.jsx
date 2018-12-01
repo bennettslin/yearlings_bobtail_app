@@ -33,9 +33,8 @@ class Live extends Component {
         handleCarouselNavToggle: PropTypes.func.isRequired,
         handleLyricAnnotationSelect: PropTypes.func.isRequired,
         handleLyricWheel: PropTypes.func.isRequired,
-        handleLyricAutoScroll: PropTypes.func.isRequired,
-        handleLyricVerseSelect: PropTypes.func.isRequired,
         handleScrollToSelectedVerse: PropTypes.func.isRequired,
+        handleLyricVerseSelect: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
     }
 

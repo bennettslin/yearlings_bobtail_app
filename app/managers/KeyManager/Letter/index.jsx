@@ -123,7 +123,7 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.dispatchLyricExpand()
                 break
             case LYRIC_SCROLL_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleLyricAutoScroll(e)
+                keyWasRegistered = eventHandlers.handleScrollToSelectedVerse(true)
                 break
             case OVERVIEW_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchOverview()

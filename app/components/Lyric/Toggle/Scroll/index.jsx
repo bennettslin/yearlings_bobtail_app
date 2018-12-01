@@ -1,6 +1,6 @@
 // Button to toggle between left and right columns.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -9,33 +9,37 @@ import Button from '../../../Button'
 import { LYRIC_SCROLL_TOGGLE_KEY } from 'constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from 'constants/buttons'
 
-const lyricScrollTogglePropTypes = {
-    // From parent.
-        handleLyricAutoScroll: PropTypes.func.isRequired
-    },
+class LyricToggleScroll extends PureComponent {
 
-    LyricToggleScroll = ({
-        handleLyricAutoScroll
+    static propTypes = {
+        // From parent.
+        handleScrollToSelectedVerse: PropTypes.func.isRequired
+    }
 
-    }) => (
-        <div className={cx(
-            'LyricToggleScroll',
-            'LyricToggle',
-            'LyricToggle__inLyric',
-            'length__buttonLarge'
-        )}>
-            <Button
-                isLargeSize
-                {...{
-                    buttonName: LYRIC_SCROLL_BUTTON_KEY,
-                    buttonIdentifier: 'auto',
-                    accessKey: LYRIC_SCROLL_TOGGLE_KEY,
-                    handleButtonClick: handleLyricAutoScroll
-                }}
-            />
-        </div>
-    )
+    _handleScrollClick = () => {
+        this.props.handleScrollToSelectedVerse(true)
+    }
 
-LyricToggleScroll.propTypes = lyricScrollTogglePropTypes
+    render() {
+        return (
+            <div className={cx(
+                'LyricToggleScroll',
+                'LyricToggle',
+                'LyricToggle__inLyric',
+                'length__buttonLarge'
+            )}>
+                <Button
+                    isLargeSize
+                    {...{
+                        buttonName: LYRIC_SCROLL_BUTTON_KEY,
+                        buttonIdentifier: 'auto',
+                        accessKey: LYRIC_SCROLL_TOGGLE_KEY,
+                        handleButtonClick: this._handleScrollClick
+                    }}
+                />
+            </div>
+        )
+    }
+}
 
 export default LyricToggleScroll

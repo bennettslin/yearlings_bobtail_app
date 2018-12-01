@@ -169,15 +169,6 @@ class EventContainer extends PureComponent {
         return carouselSelected
     }
 
-    handleLyricAutoScroll = () => {
-
-        // Change back to autoScroll.
-        this.props.updateToggleStore({ isAutoScroll: true })
-
-        // Scroll lyric as if verse bar was selected.
-        this.handleScrollToSelectedVerse()
-    }
-
     /**********
      * LYRICS *
      **********/
@@ -270,7 +261,7 @@ class EventContainer extends PureComponent {
      *********/
 
     // This is also triggered by toggling on auto scroll.
-    handleScrollToSelectedVerse = () => {
+    handleScrollToSelectedVerse = (isAutoScroll) => {
 
         const { selectedVerseIndex } = this.props
         this.props.updateScrollLyricStore({
@@ -281,7 +272,8 @@ class EventContainer extends PureComponent {
 
         this.props.updateToggleStore({
             isVerseBarAbove: false,
-            isVerseBarBelow: false
+            isVerseBarBelow: false,
+            ...isAutoScroll && { isAutoScroll }
         })
     }
 
