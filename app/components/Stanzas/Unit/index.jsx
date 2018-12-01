@@ -156,7 +156,7 @@ class UnitView extends Component {
         isDotOnly: PropTypes.bool.isRequired,
         isSideBottomOnly: PropTypes.bool.isRequired,
 
-        handleAnnotationDirectSelect: PropTypes.func.isRequired,
+        handleAnnotationIndexSelect: PropTypes.func.isRequired,
         setLyricAnnotationRef: PropTypes.func.isRequired
     }
 
@@ -200,7 +200,7 @@ class UnitView extends Component {
 
             {
                 subsequent,
-                handleAnnotationDirectSelect,
+                handleAnnotationIndexSelect,
                 setLyricAnnotationRef
             } = other
 
@@ -274,7 +274,7 @@ class UnitView extends Component {
                         dotStanzaObject={dotCard}
                         {...{
                             setLyricAnnotationRef,
-                            handleAnnotationDirectSelect
+                            handleAnnotationIndexSelect
                         }}
                     />
                 }

@@ -9,7 +9,7 @@ module.exports = [
     // Scrolling stuff.
     {
         taskName: `Have event manager and scroll manager handle all scrolling through listeners.`,
-        workedHours: 0,
+        workedHours: 5,
         neededHours: 10
     },
     {

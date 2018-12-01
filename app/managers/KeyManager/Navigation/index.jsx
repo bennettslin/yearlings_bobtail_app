@@ -109,7 +109,7 @@ class NavigationManager extends PureComponent {
             eventHandlers: {
                 handleAnnotationDirectionSelect,
                 selectSong,
-                handleAnnotationDirectSelect
+                handleAnnotationIndexSelect
             },
             determineVerseBarsWithParameters
         } = this.props
@@ -128,7 +128,7 @@ class NavigationManager extends PureComponent {
                 <LyricNavigation
                     {...{
                         getNavigation: this,
-                        handleAnnotationDirectSelect,
+                        handleAnnotationIndexSelect,
                         determineVerseBarsWithParameters
                     }}
                 />

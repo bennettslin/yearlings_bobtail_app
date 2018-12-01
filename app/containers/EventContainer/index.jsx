@@ -59,7 +59,7 @@ class EventContainer extends PureComponent {
         }
     }
 
-    handleAnnotationDirectSelect = (
+    handleAnnotationIndexSelect = (
         e,
         selectedAnnotationIndex,
         fromCarousel

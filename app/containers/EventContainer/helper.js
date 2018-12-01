@@ -8,11 +8,11 @@ export const getHandlers = (me) => {
     } = me.props
 
     return {
-        handleAnnotationDirectionSelect: me.handleAnnotationDirectionSelect,
         togglePlay: me.props.togglePlay,
         selectSong: me.props.selectSong,
         handleLyricVerseSelect: me.handleLyricVerseSelect,
-        handleAnnotationDirectSelect: me.handleAnnotationDirectSelect,
+        handleAnnotationIndexSelect: me.handleAnnotationIndexSelect,
+        handleAnnotationDirectionSelect: me.handleAnnotationDirectionSelect,
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,

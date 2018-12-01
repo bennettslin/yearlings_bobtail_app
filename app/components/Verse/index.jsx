@@ -43,7 +43,7 @@ class Verse extends Component {
 
         inMain: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
-        handleAnnotationDirectSelect: PropTypes.func,
+        handleAnnotationIndexSelect: PropTypes.func,
 
         setVerseRef: PropTypes.func
     }
@@ -98,7 +98,7 @@ class Verse extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                handleAnnotationDirectSelect,
+                handleAnnotationIndexSelect,
 
                 ...other
             } = this.props,
@@ -127,7 +127,7 @@ class Verse extends Component {
                         handleInteractivatableClick: this._handleInteractivatableClick
                     }}
                     {...!inVerseBar && {
-                        handleAnchorClick: handleAnnotationDirectSelect
+                        handleAnchorClick: handleAnnotationIndexSelect
                     }}
                 />
                 <InteractivatedVerseDispatcher {...{ getDispatch: this }} />

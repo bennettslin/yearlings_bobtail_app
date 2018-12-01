@@ -23,7 +23,7 @@ class LyricNavigation extends PureComponent {
 
         // From parent.
         getNavigation: PropTypes.object.isRequired,
-        handleAnnotationDirectSelect: PropTypes.func.isRequired,
+        handleAnnotationIndexSelect: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
@@ -36,7 +36,7 @@ class LyricNavigation extends PureComponent {
             {
                 interactivatedVerseIndex,
                 accessedAnnotationIndex,
-                handleAnnotationDirectSelect,
+                handleAnnotationIndexSelect,
                 determineVerseBarsWithParameters
             } = props,
 
@@ -52,7 +52,7 @@ class LyricNavigation extends PureComponent {
                 direction = 1
                 break
             case ENTER:
-                return handleAnnotationDirectSelect(
+                return handleAnnotationIndexSelect(
                     e, accessedAnnotationIndex
                 )
             default:
