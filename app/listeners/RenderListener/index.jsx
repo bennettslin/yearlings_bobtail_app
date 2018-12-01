@@ -61,11 +61,12 @@ class RenderListener extends PureComponent {
         })
     }
 
-    _prepareForSongChangeRender = ({
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedVerseIndex = this.props.selectedVerseIndex,
-        selectedAnnotationIndex = this.props.selectedAnnotationIndex
-    } = {}) => {
+    _prepareForSongChangeRender = () => {
+        const {
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        } = this.props
 
         this.props.updateRenderableStore({
             isSongChangeRenderable: true

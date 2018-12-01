@@ -3,60 +3,29 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderedStore } from 'flux/rendered/action'
+import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
 
-import { VERSE_SCROLL } from 'constants/dom'
-
-import {
-    getSceneIndexForVerseIndex,
-    getTimeForVerseIndex
-} from 'helpers/dataHelper'
+import { getTimeForVerseIndex } from 'helpers/dataHelper'
 
 class TimeVerseHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isAutoScroll: PropTypes.bool.isRequired,
-        isPlaying: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
         updateRenderedStore: PropTypes.func.isRequired,
+        updateScrollLyricStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
         determineVerseBars: PropTypes.func.isRequired,
-        scrollElementIntoView: PropTypes.func.isRequired,
         updateSelectedPlayer: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         this.props.setRef(this)
-    }
-
-    componentDidUpdate(prevProps) {
-
-        if (!this.props.isPlaying && prevProps.isPlaying) {
-
-            // If just now paused, reset time to start of selected verse.
-            this._resetTimeUponPause()
-        }
-    }
-
-    _resetTimeUponPause() {
-        const {
-                selectedSongIndex,
-                selectedVerseIndex
-            } = this.props,
-
-            selectedTime = getTimeForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
-
-        this.props.updateSongStore({
-            selectedTime
-        })
     }
 
     updateTime({
@@ -147,29 +116,14 @@ class TimeVerseHandler extends PureComponent {
                 this.props.isAutoScroll && isPlayerAdvancing
             )
         ) {
-            this.props.scrollElementIntoView({
-                log: scrollLog || 'Player autoscroll.',
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex
+            this.props.updateScrollLyricStore({
+                scrollLyricLog: scrollLog || 'Player autoscroll.',
+                doScrollLyricByVerse: true,
+                scrollLyricIndex: selectedVerseIndex
             })
         }
 
         if (selectedSongIndex === this.props.selectedSongIndex) {
-
-            const renderedSceneIndex = getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
-
-            /**
-             * If selecting or changing verse in same song, change index to be
-             * rendered right away.
-             */
-            this.props.updateRenderedStore({
-                renderedVerseIndex: selectedVerseIndex,
-                renderedSceneIndex
-            })
-
             /**
              * This is the only place where selected player will be updated
              * based on a new verse index for the same song.
@@ -190,21 +144,16 @@ class TimeVerseHandler extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isAutoScroll },
-    audioStore: { isPlaying },
-    songStore: {
-        selectedSongIndex,
-        selectedVerseIndex
-    }
+    songStore: { selectedSongIndex }
 }) => ({
     isAutoScroll,
-    isPlaying,
-    selectedSongIndex,
-    selectedVerseIndex
+    selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateRenderedStore,
+        updateScrollLyricStore,
         updateSongStore
     }, dispatch)
 )

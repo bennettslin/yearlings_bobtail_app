@@ -188,6 +188,19 @@ const
         sliderRatio: 0,
         sliderWidth: 0,
         sliderVerseIndex: -1
+    },
+
+    SCROLL_CAROUSEL_DEFAULTS = {
+        scrollCarouselLog: '',
+        scrollCarouselIndex: 0,
+        doScrollCarouselImmediately: false
+    },
+    SCROLL_LYRIC_DEFAULTS = {
+        scrollLyricLog: '',
+        doScrollLyricByVerse: false,
+        scrollLyricIndex: 0,
+        doScrollLyricImmediately: false,
+        doDetermineVerseBars: false
     }
 
 export {
@@ -206,5 +219,7 @@ export {
     RENDER_DEFAULTS,
     RENDERED_DEFAULTS,
     SONG_DEFAULTS,
-    SLIDER_DEFAULTS
+    SLIDER_DEFAULTS,
+    SCROLL_CAROUSEL_DEFAULTS,
+    SCROLL_LYRIC_DEFAULTS
 }

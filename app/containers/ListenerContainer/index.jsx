@@ -17,6 +17,7 @@ import TimeVerseHandler from '../../handlers/TimeVerseHandler'
 
 import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
+import AudioListener from '../../listeners/AudioListener'
 import CarouselListener from '../../handlers/CarouselHandler/Listener'
 import DidRenderListener from '../../listeners/DidRenderListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
@@ -86,10 +87,6 @@ class ListenerContainer extends PureComponent {
 
     setCarouselParentRef = (payload) => {
         return this.scrollManager.setCarouselParentRef(payload)
-    }
-
-    scrollElementIntoView = (payload) => {
-        return this.scrollManager.scrollElementIntoView(payload)
     }
 
     getVerseElement = (payload) => {
@@ -167,7 +164,6 @@ class ListenerContainer extends PureComponent {
                     setVerseRef={this.setVerseRef}
                     setLyricVerseParentRef={this.setLyricVerseParentRef}
                     setCarouselParentRef={this.setCarouselParentRef}
-                    scrollElementIntoView={this.scrollElementIntoView}
                     determineVerseBars={this.determineVerseBars}
                     selectSong={this.selectSong}
                     selectVerse={this.selectVerse}
@@ -185,6 +181,7 @@ class ListenerContainer extends PureComponent {
                 />
                 <ScrollManager
                     setRef={this._setScrollManagerRef}
+                    determineVerseBars={this.determineVerseBars}
                 />
                 <VerseBarManager
                     setRef={this._setVerseManagerRef}
@@ -199,13 +196,13 @@ class ListenerContainer extends PureComponent {
                 <TimeVerseHandler
                     setRef={this._setTimeVerseManagerRef}
                     determineVerseBars={this.determineVerseBars}
-                    scrollElementIntoView={this.scrollElementIntoView}
                     updateSelectedPlayer={this.updateSelectedPlayer}
                 />
                 <LogManager />
 
                 <AnnotationListener />
                 <AnnotationAccessListener />
+                <AudioListener />
                 <CarouselListener />
                 <DidRenderListener />
                 <DoublespeakerListener />

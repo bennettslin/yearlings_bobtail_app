@@ -10,6 +10,8 @@ import RenderReducer from './render/reducer'
 import RenderableReducer from './renderable/reducer'
 import RenderedReducer from './rendered/reducer'
 import ResponsiveReducer from './responsive/reducer'
+import ScrollCarouselReducer from './scrollCarousel/reducer'
+import ScrollLyricReducer from './scrollLyric/reducer'
 import SessionReducer from './session/reducer'
 import SliderReducer from './slider/reducer'
 import SongReducer from './song/reducer'
@@ -28,6 +30,8 @@ import {
     RENDERABLE_STORE,
     RENDERED_STORE,
     RESPONSIVE_STORE,
+    SCROLL_CAROUSEL_STORE,
+    SCROLL_LYRIC_STORE,
     SESSION_STORE,
     SLIDER_STORE,
     SONG_STORE,
@@ -36,6 +40,8 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
+    [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SONG_STORE]: SongReducer,
     [ACCESS_STORE]: AccessReducer,
     [AUDIO_STORE]: AudioReducer,

@@ -6,20 +6,24 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderedStore } from 'flux/rendered/action'
 
+import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
+
 class RenderedListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         updateRenderedStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
-        this._handleAnnotationChangeIfNeeded(prevProps)
+        this._handleAnnotationSelect(prevProps)
+        this._handleVerseSelect(prevProps)
     }
 
-    _handleAnnotationChangeIfNeeded(prevProps) {
+    _handleAnnotationSelect(prevProps) {
         const
             {
                 selectedSongIndex,
@@ -44,6 +48,39 @@ class RenderedListener extends PureComponent {
         }
     }
 
+    _handleVerseSelect(prevProps) {
+        const
+            {
+                selectedSongIndex,
+                selectedVerseIndex
+            } = this.props,
+            {
+                selectedSongIndex: prevSongIndex,
+                selectedVerseIndex: prevVerseIndex
+            } = prevProps
+
+        /**
+         * If verse changed within the same song, change index to be rendered
+         * right away.
+         */
+        if (
+            selectedSongIndex === prevSongIndex &&
+            selectedVerseIndex !== prevVerseIndex
+        ) {
+            /**
+             * If selecting or changing verse in same song, change index to be
+             * rendered right away.
+             */
+            this.props.updateRenderedStore({
+                renderedVerseIndex: selectedVerseIndex,
+                renderedSceneIndex: getSceneIndexForVerseIndex(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                )
+            })
+        }
+    }
+
     render() {
         return null
     }
@@ -52,10 +89,12 @@ class RenderedListener extends PureComponent {
 const mapStateToProps = ({
     songStore: {
         selectedSongIndex,
+        selectedVerseIndex,
         selectedAnnotationIndex
     }
 }) => ({
     selectedSongIndex,
+    selectedVerseIndex,
     selectedAnnotationIndex
 })
 

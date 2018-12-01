@@ -13,6 +13,8 @@ module.exports = {
     RENDERABLE_STORE: 'renderableStore',
     RENDERED_STORE: 'renderedStore',
     RESPONSIVE_STORE: 'responsiveStore',
+    SCROLL_CAROUSEL_STORE: 'scrollCarouselStore',
+    SCROLL_LYRIC_STORE: 'scrollLyricStore',
     SLIDER_STORE: 'sliderStore',
     SONG_STORE: 'songStore',
 

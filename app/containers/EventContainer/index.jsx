@@ -6,6 +6,8 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
+import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -20,18 +22,12 @@ import { getAnnotationObject } from '../../helpers/dataHelper'
 import { intersects } from 'helpers/dotHelper'
 import { getHandlers } from './helper'
 
-import {
-    CAROUSEL_SCROLL,
-    LYRIC_ANNOTATION_SCROLL,
-    VERSE_SCROLL
-} from 'constants/dom'
-
 class EventContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
-        canLyricRender: PropTypes.bool.isRequired,
+        didCarouselRender: PropTypes.bool.isRequired,
+        didLyricRender: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
@@ -41,10 +37,10 @@ class EventContainer extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
-
-        // From parent.
-        scrollElementIntoView: PropTypes.func.isRequired
+        updateScrollCarouselStore: PropTypes.func.isRequired,
+        updateScrollLyricStore: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -56,21 +52,20 @@ class EventContainer extends PureComponent {
         const
             {
                 isSelectedLogue,
-                canCarouselRender
+                didCarouselRender
             } = this.props,
-            { canCarouselRender: couldCarouselRender } = prevProps
+            { didCarouselRender: couldCarouselRender } = prevProps
 
-        // TODO: This doesn't take care of the first time when page is loaded with annotation selected.
-        if (!isSelectedLogue && canCarouselRender && !couldCarouselRender) {
+        // TODO: This now scrolls, but maybe do with no animation.
+        if (!isSelectedLogue && didCarouselRender && !couldCarouselRender) {
             const { selectedAnnotationIndex } = this.props
 
             // Scroll to carousel annotation if toggled on.
             if (this.props.isCarouselShown) {
-                this.props.scrollElementIntoView({
-                    log: 'Rerender selected carousel annotation.',
-                    scrollClass: CAROUSEL_SCROLL,
-                    index: selectedAnnotationIndex || 1,
-                    time: 0
+                this.props.updateScrollCarouselStore({
+                    scrollCarouselLog: 'Rerender selected carousel annotation.',
+                    scrollCarouselIndex: selectedAnnotationIndex || 1,
+                    doScrollCarouselImmediately: true
                 })
             }
         }
@@ -80,20 +75,20 @@ class EventContainer extends PureComponent {
         const
             {
                 isSelectedLogue,
-                canLyricRender
+                didLyricRender
             } = this.props,
-            { canLyricRender: couldRender } = prevProps
+            { didLyricRender: couldRender } = prevProps
 
-        // TODO: This doesn't take care of the first time when page is loaded.
-        if (!isSelectedLogue && canLyricRender && !couldRender) {
+        // TODO: This now scrolls, but maybe do with no animation.
+        if (!isSelectedLogue && didLyricRender && !couldRender) {
             const { selectedVerseIndex } = this.props
 
-            this.props.scrollElementIntoView({
-                log: 'Rerender selected verse.',
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
-                time: 0,
-                callback: this.props.determineVerseBars
+            this.props.updateScrollLyricStore({
+                scrollLyricLog: 'Rerender selected verse.',
+                doScrollLyricByVerse: true,
+                scrollLyricIndex: selectedVerseIndex,
+                doScrollLyricImmediately: true,
+                doDetermineVerseBars: true
             })
         }
     }
@@ -111,17 +106,15 @@ class EventContainer extends PureComponent {
         })
 
         if (accessedAnnotationIndex && doScroll) {
-            this.props.scrollElementIntoView({
-                log: 'Access lyric annotation.',
-                scrollClass: LYRIC_ANNOTATION_SCROLL,
-                index: accessedAnnotationIndex
+            this.props.updateScrollLyricStore({
+                scrollLyricLog: 'Access lyric annotation.',
+                scrollLyricIndex: accessedAnnotationIndex
             })
 
             if (this.props.isCarouselShown) {
-                this.props.scrollElementIntoView({
-                    log: 'Access carousel annotation.',
-                    scrollClass: CAROUSEL_SCROLL,
-                    index: accessedAnnotationIndex
+                this.props.updateScrollCarouselStore({
+                    scrollCarouselLog: 'Access carousel annotation.',
+                    scrollCarouselIndex: accessedAnnotationIndex
                 })
             }
         }
@@ -138,16 +131,14 @@ class EventContainer extends PureComponent {
     handleAnnotationSelect = (e, direction) => {
         const selectedAnnotationIndex = this.dispatchAnnotation({ direction })
 
-        this.props.scrollElementIntoView({
-            log: 'Select accessed lyric annotation.',
-            scrollClass: LYRIC_ANNOTATION_SCROLL,
-            index: selectedAnnotationIndex
+        this.props.updateScrollLyricStore({
+            scrollLyricLog: 'Select accessed lyric annotation.',
+            scrollLyricIndex: selectedAnnotationIndex
         })
         if (this.props.isCarouselShown) {
-            this.props.scrollElementIntoView({
-                log: 'Select accessed carousel annotation.',
-                scrollClass: CAROUSEL_SCROLL,
-                index: selectedAnnotationIndex
+            this.props.updateScrollCarouselStore({
+                scrollCarouselLog: 'Select accessed carousel annotation.',
+                scrollCarouselIndex: selectedAnnotationIndex
             })
         }
     }
@@ -169,10 +160,9 @@ class EventContainer extends PureComponent {
                         selectedAnnotationIndex :
                         this.props.accessedAnnotationIndex
 
-            this.props.scrollElementIntoView({
-                log: 'Nav toggled carousel annotation.',
-                scrollClass: CAROUSEL_SCROLL,
-                index: annotationIndex
+            this.props.updateScrollCarouselStore({
+                scrollCarouselLog: 'Nav toggled carousel annotation.',
+                scrollCarouselIndex: annotationIndex
             })
         }
 
@@ -256,19 +246,17 @@ class EventContainer extends PureComponent {
 
             // Scroll lyric column only if selecting from carousel.
             if (fromCarousel) {
-                this.props.scrollElementIntoView({
-                    log: 'Carousel selected lyric annotation.',
-                    scrollClass: LYRIC_ANNOTATION_SCROLL,
-                    index: selectedAnnotationIndex
+                this.props.updateScrollLyricStore({
+                    scrollLyricLog: 'Carousel selected lyric annotation.',
+                    scrollLyricIndex: selectedAnnotationIndex
                 })
 
             // Scroll carousel only if not selecting from carousel.
             } else {
                 if (this.props.isCarouselShown) {
-                    this.props.scrollElementIntoView({
-                        log: 'Lyric selected carousel annotation.',
-                        scrollClass: CAROUSEL_SCROLL,
-                        index: selectedAnnotationIndex
+                    this.props.updateScrollCarouselStore({
+                        scrollCarouselLog: 'Lyric selected carousel annotation.',
+                        scrollCarouselIndex: selectedAnnotationIndex
                     })
                 }
             }
@@ -283,12 +271,12 @@ class EventContainer extends PureComponent {
 
     // This is also triggered by toggling on auto scroll.
     handleScrollToSelectedVerse = () => {
-        // No need to know event, since we are just scrolling.
+
         const { selectedVerseIndex } = this.props
-        this.props.scrollElementIntoView({
-            log: 'Verse bar selected verse.',
-            scrollClass: VERSE_SCROLL,
-            index: selectedVerseIndex
+        this.props.updateScrollLyricStore({
+            scrollLyricLog: 'Scroll back to selected verse.',
+            doScrollLyricByVerse: true,
+            scrollLyricIndex: selectedVerseIndex
         })
 
         this.props.updateToggleStore({
@@ -308,20 +296,20 @@ class EventContainer extends PureComponent {
             interactivatedVerseIndex =
             this.dispatchInteractivatedVerseDirection(direction)
 
-        this.props.scrollElementIntoView({
-            log: 'Access verse direction.',
-            scrollClass: VERSE_SCROLL,
+        this.props.updateScrollLyricStore({
+            scrollLyricLog: 'Access verse direction.',
+            doScrollLyricByVerse: true,
 
             /**
              * If interactivation remains on, scroll to interactivated verse.
              * Otherwise, scroll to selected verse.
              */
-            index:
+            scrollLyricIndex:
                 interactivatedVerseIndex > -1 ?
                     interactivatedVerseIndex :
                     selectedVerseIndex,
 
-            callback: this.props.determineVerseBars
+            doDetermineVerseBars: true
         })
 
         return true
@@ -354,8 +342,8 @@ class EventContainer extends PureComponent {
 
 const mapStateToProps = ({
     renderStore: {
-        canCarouselRender,
-        canLyricRender
+        didCarouselRender,
+        didLyricRender
     },
     toggleStore: { isCarouselShown },
     songStore: {
@@ -371,8 +359,8 @@ const mapStateToProps = ({
     sessionStore: { interactivatedVerseIndex },
     accessStore: { accessedAnnotationIndex }
 }) => ({
-    canCarouselRender,
-    canLyricRender,
+    didCarouselRender,
+    didLyricRender,
     isCarouselShown,
     selectedAnnotationIndex,
     isSelectedLogue,
@@ -386,6 +374,8 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateScrollCarouselStore,
+        updateScrollLyricStore,
         updateSessionStore,
         updateToggleStore
     }, dispatch)
