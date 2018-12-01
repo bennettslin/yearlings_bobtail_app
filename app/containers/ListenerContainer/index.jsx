@@ -82,8 +82,8 @@ class ListenerContainer extends PureComponent {
         return this.scrollManager.setVerseRef(payload)
     }
 
-    setLyricVerseParentRef = (payload) => {
-        return this.scrollManager.setLyricVerseParentRef(payload)
+    setLyricParentRef = (payload) => {
+        return this.scrollManager.setLyricParentRef(payload)
     }
 
     setCarouselParentRef = (payload) => {
@@ -163,7 +163,7 @@ class ListenerContainer extends PureComponent {
                     setCarouselAnnotationRef={this.setCarouselAnnotationRef}
                     setLyricAnnotationRef={this.setLyricAnnotationRef}
                     setVerseRef={this.setVerseRef}
-                    setLyricVerseParentRef={this.setLyricVerseParentRef}
+                    setLyricParentRef={this.setLyricParentRef}
                     setCarouselParentRef={this.setCarouselParentRef}
                     determineVerseBars={this.determineVerseBars}
                     selectSong={this.selectSong}

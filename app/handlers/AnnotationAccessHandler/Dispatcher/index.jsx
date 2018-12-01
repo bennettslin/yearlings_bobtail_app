@@ -37,9 +37,9 @@ class AnnotationAccessDispatcher extends PureComponent {
     }
 
     dispatchAccessedAnnotation = ({
-        direction,
+        verseIndex = this.props.selectedVerseIndex,
         annotationIndex,
-        verseIndex = this.props.selectedVerseIndex
+        direction
     } = {}) => {
 
         const {

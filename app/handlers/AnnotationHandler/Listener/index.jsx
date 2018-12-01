@@ -22,10 +22,10 @@ class AnnotationListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._deselectAnnotation(prevProps)
+        this._deselectAnnotationForEar(prevProps)
     }
 
-    _deselectAnnotation(prevProps) {
+    _deselectAnnotationForEar(prevProps) {
         const {
                 selectedAnnotationIndex,
                 earColumnIndex,

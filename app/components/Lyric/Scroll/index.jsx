@@ -36,7 +36,7 @@ class LyricScroll extends Component {
         completeHeightTransition: PropTypes.func.isRequired,
         handleLyricWheel: PropTypes.func.isRequired,
         setLyricRef: PropTypes.func.isRequired,
-        setLyricVerseParentRef: PropTypes.func.isRequired
+        setLyricParentRef: PropTypes.func.isRequired
     }
 
     // Handle only once every 10ms at most.
@@ -96,7 +96,7 @@ class LyricScroll extends Component {
         this.props.setLyricRef(node)
 
         // For scrolling.
-        this.props.setLyricVerseParentRef(node)
+        this.props.setLyricParentRef(node)
     }
 
     render() {
@@ -107,7 +107,7 @@ class LyricScroll extends Component {
                 completeHeightTransition,
                 handleLyricWheel,
                 setLyricRef,
-                setLyricVerseParentRef,
+                setLyricParentRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 

@@ -3,7 +3,7 @@ export const getHandlers = (me) => {
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,
-        setLyricVerseParentRef,
+        setLyricParentRef,
         setCarouselParentRef
     } = me.props
 
@@ -16,7 +16,7 @@ export const getHandlers = (me) => {
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,
-        setLyricVerseParentRef,
+        setLyricParentRef,
         setCarouselParentRef
     }
 }

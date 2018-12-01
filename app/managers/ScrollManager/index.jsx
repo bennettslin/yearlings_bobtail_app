@@ -209,7 +209,7 @@ class ScrollManager extends PureComponent {
     _getScrollParent(scrollClass) {
         return scrollClass === CAROUSEL_SCROLL ?
             this.carouselParentElement :
-            this.lyricVerseParentElement
+            this.lyricParentElement
     }
 
     getVerseElement(verseIndex) {
@@ -228,8 +228,8 @@ class ScrollManager extends PureComponent {
         this._setRef(VERSE_SCROLL, payload)
     }
 
-    setLyricVerseParentRef(node) {
-        this.lyricVerseParentElement = node
+    setLyricParentRef(node) {
+        this.lyricParentElement = node
     }
 
     setCarouselParentRef(node) {

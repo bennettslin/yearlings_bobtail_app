@@ -24,7 +24,7 @@ class Live extends Component {
         setCarouselAnnotationRef: PropTypes.func.isRequired,
         setLyricAnnotationRef: PropTypes.func.isRequired,
         setVerseRef: PropTypes.func.isRequired,
-        setLyricVerseParentRef: PropTypes.func.isRequired,
+        setLyricParentRef: PropTypes.func.isRequired,
         setCarouselParentRef: PropTypes.func.isRequired,
 
         handleAnnotationDirectionSelect: PropTypes.func.isRequired,
