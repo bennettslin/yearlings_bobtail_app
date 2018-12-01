@@ -6,8 +6,6 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -20,16 +18,9 @@ class EventContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isCarouselShown: PropTypes.bool.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        updateScrollCarouselStore: PropTypes.func.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
@@ -98,33 +89,19 @@ class EventContainer extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isCarouselShown },
     songStore: {
-        selectedSongIndex,
         selectedVerseIndex,
-        selectedAnnotationIndex,
         isSelectedLogue
-    },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
     },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
-    isCarouselShown,
-    selectedAnnotationIndex,
     isSelectedLogue,
-    dotsBitNumber,
-    selectedDotKeys,
-    selectedSongIndex,
     selectedVerseIndex,
     interactivatedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateScrollCarouselStore,
-        updateScrollLyricStore,
         updateSessionStore,
         updateToggleStore
     }, dispatch)
