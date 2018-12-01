@@ -1,11 +1,9 @@
 // Component to show individual annotation note or all wormholes.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 
 import DotSequence from '../../../DotSequence'
 import Texts from '../../../Texts'
@@ -53,17 +51,6 @@ class AnnotationCard extends Component {
         return shouldComponentUpdate
     }
 
-    handleWikiSelectClick = (
-        e,
-        selectedWikiIndex,
-        carouselAnnotationIndex
-    ) => {
-        this.dispatchWiki(
-            selectedWikiIndex,
-            carouselAnnotationIndex
-        )
-    }
-
     render() {
         const {
                 /* eslint-disable no-unused-vars */
@@ -98,17 +85,13 @@ class AnnotationCard extends Component {
         }
 
         return (
-            <___>
-                <AnnotationCardView {...other}
-                    {...{
-                        text: description,
-                        cardDotKeys: dotKeys,
-                        cardIndex,
-                        handleWikiSelectClick: this.handleWikiSelectClick
-                    }}
-                />
-                <WikiDispatcher {...{ getDispatch: this }} />
-            </___>
+            <AnnotationCardView {...other}
+                {...{
+                    text: description,
+                    cardDotKeys: dotKeys,
+                    cardIndex
+                }}
+            />
         )
     }
 }
@@ -128,7 +111,6 @@ const annotationCardViewProptypes = {
         cardDotKeys: PropTypes.object.isRequired,
         cardIndex: PropTypes.number.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        handleWikiSelectClick: PropTypes.func.isRequired,
         selectSong: PropTypes.func.isRequired
     },
 
@@ -138,7 +120,6 @@ const annotationCardViewProptypes = {
         inCarousel,
         isSelected,
         annotationIndex,
-        handleWikiSelectClick,
         selectSong,
 
         // From controller.
@@ -176,8 +157,7 @@ const annotationCardViewProptypes = {
                                  * Allow for clicking on anchor in unselected
                                  * annotation in carousel.
                                  */
-                                showAccessInPopupAnnotation: !inCarousel,
-                                handleAnchorClick: handleWikiSelectClick
+                                showAccessInPopupAnnotation: !inCarousel
                             }}
                         />
                     ) : (

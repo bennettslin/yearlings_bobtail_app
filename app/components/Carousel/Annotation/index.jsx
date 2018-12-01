@@ -1,10 +1,13 @@
 // Container to show single annotation in carousel.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+
+import AnnotationDispatcher from '../../../handlers/AnnotationHandler/Dispatcher'
 import Annotation from '../../Annotation'
+
 import { CAROUSEL_SCROLL } from 'constants/dom'
 import { EAR_COLUMN_KEYS } from 'constants/lyrics'
 import { getAnnotationObject } from 'helpers/dataHelper'
@@ -34,7 +37,6 @@ class CarouselAnnotation extends Component {
         annotationIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        handleAnnotationIndexSelect: PropTypes.func.isRequired,
         setCarouselAnnotationRef: PropTypes.func.isRequired
     }
 
@@ -48,14 +50,14 @@ class CarouselAnnotation extends Component {
         })
     }
 
-    _handleAnnotationTitleClick = (e) => {
+    _handleAnnotationTitleClick = () => {
         if (!this.props.isSelected) {
-            const {
-                annotationIndex,
-                handleAnnotationIndexSelect
-            } = this.props
+            const { annotationIndex } = this.props
 
-            handleAnnotationIndexSelect(e, annotationIndex, true)
+            this.dispatchAnnotationIndex({
+                selectedAnnotationIndex: annotationIndex,
+                fromCarousel: true
+            })
         }
     }
 
@@ -71,7 +73,6 @@ class CarouselAnnotation extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canCarouselRender,
-                handleAnnotationIndexSelect,
                 setCarouselAnnotationRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */
@@ -96,12 +97,17 @@ class CarouselAnnotation extends Component {
             columnKey = !isNaN(columnIndex) ? EAR_COLUMN_KEYS[columnIndex] : ''
 
         return (
-            <CarouselAnnotationView {...other}
-                setRef={this.setCarouselAnnotationRef}
-                annotationColumn={columnKey}
-                annotationDotKeys={dotKeys}
-                handleTitleClick={this._handleAnnotationTitleClick}
-            />
+            <___>
+                <CarouselAnnotationView {...other}
+                    {...{
+                        setRef: this.setCarouselAnnotationRef,
+                        annotationColumn: columnKey,
+                        annotationDotKeys: dotKeys,
+                        handleTitleClick: this._handleAnnotationTitleClick
+                    }}
+                />
+                <AnnotationDispatcher {...{ getDispatch: this }} />
+            </___>
         )
     }
 }

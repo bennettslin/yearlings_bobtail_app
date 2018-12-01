@@ -1,12 +1,12 @@
 // Container for text anchor.
 
-import React, {
-    Component, Fragment
-} from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
+import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import AnchorText from '../../../Anchor/AnchorText'
 import Texts from '../../'
 
@@ -90,7 +90,7 @@ class TextLyricAnchor extends Component {
         })
     }
 
-    _handleAnchorClick = (e) => {
+    _handleAnchorClick = () => {
         const {
                 renderedAnnotationIndex,
                 annotationIndex,
@@ -98,19 +98,22 @@ class TextLyricAnchor extends Component {
                 wikiAnnotationIndex
             } = this.props,
 
-            isSelected = annotationIndex === renderedAnnotationIndex,
-
-            /**
-             * If it's an annotation, then the argument passed to the
-             * click handler is the annotation index. Otherwise, it's a
-             * reference, and the argument is a url string.
-             */
-            anchorIndex = annotationIndex || wikiIndex
+            isSelected = annotationIndex === renderedAnnotationIndex
 
         if (!isSelected) {
-            this.props.handleAnchorClick(
-                e, anchorIndex, wikiAnnotationIndex
-            )
+
+            if (wikiIndex) {
+                this.dispatchWiki(
+                    wikiIndex,
+                    wikiAnnotationIndex
+                )
+            }
+
+            if (annotationIndex) {
+                this.dispatchAnnotationIndex({
+                    selectedAnnotationIndex: annotationIndex
+                })
+            }
         }
     }
 
@@ -202,7 +205,7 @@ class TextLyricAnchor extends Component {
         const words = isWikiTextAnchor ? text.split(' ') : [text]
 
         return (
-            <Fragment>
+            <___>
                 {/* This space will not show if it starts the verse line. */}
                 {' '}
                 <span
@@ -234,7 +237,9 @@ class TextLyricAnchor extends Component {
                         }}
                     />
                 </span>
-            </Fragment>
+                <AnnotationDispatcher {...{ getDispatch: this }} />
+                <WikiDispatcher {...{ getDispatch: this }} />
+            </___>
         )
     }
 }

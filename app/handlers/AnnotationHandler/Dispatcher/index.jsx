@@ -31,8 +31,50 @@ class AnnotationDispatcher extends PureComponent {
         this.props.getDispatch.dispatchAnnotationDirection = this.dispatchAnnotationDirection
     }
 
-    dispatchAnnotationIndex = (selectedAnnotationIndex) => {
+    dispatchAnnotationIndex = ({
+        selectedAnnotationIndex,
+        fromCarousel
+    }) => {
+
+        // TODO: Write these checks into dispatch?
+        /**
+         * FIXME: This check is only necessary when clicking an annotation, to
+         * ensure that it is not shown as text. Maybe bypass if done through
+         * access?
+         */
+        // Do nothing if no dots are selected, as no annotation can be selected.
+        // if (selectedAnnotationIndex < 0) {
+        //     return false
+        // }
+
+        // // If selecting an annotation, make sure that its dots intersect.
+        // if (selectedAnnotationIndex) {
+        //     const annotation = getAnnotationObject(this.props.selectedSongIndex, selectedAnnotationIndex)
+
+        //     if (!intersects(annotation.dotKeys, this.props.selectedDotKeys)) {
+        //         return false
+        //     }
+        // }
+
         this.props.updateSongStore({ selectedAnnotationIndex })
+
+        if (selectedAnnotationIndex) {
+
+            // If selecting from carousel, scroll lyric.
+            if (fromCarousel) {
+                this.props.updateScrollLyricStore({
+                    scrollLyricLog: 'Carousel selected lyric annotation.',
+                    scrollLyricIndex: selectedAnnotationIndex
+                })
+
+            // If selecting from lyric, scroll carousel.
+            } else {
+                this.props.updateScrollCarouselStore({
+                    scrollCarouselLog: 'Lyric selected carousel annotation.',
+                    scrollCarouselIndex: selectedAnnotationIndex
+                })
+            }
+        }
     }
 
     dispatchAnnotationDirection = (direction) => {

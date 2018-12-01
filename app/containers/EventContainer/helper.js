@@ -11,7 +11,6 @@ export const getHandlers = (me) => {
         togglePlay: me.props.togglePlay,
         selectSong: me.props.selectSong,
         handleLyricVerseSelect: me.handleLyricVerseSelect,
-        handleAnnotationIndexSelect: me.handleAnnotationIndexSelect,
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
         setVerseRef,

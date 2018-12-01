@@ -1,9 +1,10 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
+import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccessHandler/Dispatcher'
 
 import {
@@ -23,7 +24,6 @@ class LyricNavigation extends PureComponent {
 
         // From parent.
         getNavigation: PropTypes.object.isRequired,
-        handleAnnotationIndexSelect: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
@@ -36,7 +36,6 @@ class LyricNavigation extends PureComponent {
             {
                 interactivatedVerseIndex,
                 accessedAnnotationIndex,
-                handleAnnotationIndexSelect,
                 determineVerseBarsWithParameters
             } = props,
 
@@ -52,9 +51,9 @@ class LyricNavigation extends PureComponent {
                 direction = 1
                 break
             case ENTER:
-                return handleAnnotationIndexSelect(
-                    e, accessedAnnotationIndex
-                )
+                return this.dispatchAnnotationIndex({
+                    selectedAnnotationIndex: accessedAnnotationIndex
+                })
             default:
                 return false
         }
@@ -98,7 +97,10 @@ class LyricNavigation extends PureComponent {
 
     render() {
         return (
-            <AnnotationAccessDispatcher {...{ getDispatch: this }} />
+            <___>
+                <AnnotationDispatcher {...{ getDispatch: this }} />
+                <AnnotationAccessDispatcher {...{ getDispatch: this }} />
+            </___>
         )
     }
 }

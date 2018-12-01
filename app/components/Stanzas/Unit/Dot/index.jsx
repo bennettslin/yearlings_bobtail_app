@@ -1,10 +1,11 @@
 // Component to show single dot anchor as its own stanza.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import AnchorDot from '../../../Anchor/AnchorDot'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
@@ -53,7 +54,6 @@ class UnitDot extends Component {
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
-        handleAnnotationIndexSelect: PropTypes.func.isRequired,
         setLyricAnnotationRef: PropTypes.func.isRequired
     }
 
@@ -64,7 +64,7 @@ class UnitDot extends Component {
         })
     }
 
-    _handleDotButtonClick = (e) => {
+    _handleDotButtonClick = () => {
         const {
                 dotStanzaObject,
                 renderedAnnotationIndex
@@ -74,7 +74,9 @@ class UnitDot extends Component {
             isSelected = annotationIndex === renderedAnnotationIndex
 
         if (!isSelected) {
-            this.props.handleAnnotationIndexSelect(e, annotationIndex)
+            this.dispatchAnnotationIndex({
+                selectedAnnotationIndex: annotationIndex
+            })
         }
     }
 
@@ -124,17 +126,20 @@ class UnitDot extends Component {
                 annotationIndex === renderedAnnotationIndex
 
         return (
-            <UnitDotView
-                {...{
-                    setRef: this.setLyricAnnotationRef,
-                    dotKeys,
-                    isSelected,
-                    isAccessed,
-                    isLastUnit,
-                    annotationIndex,
-                    handleAnchorClick: this._handleDotButtonClick
-                }}
-            />
+            <___>
+                <UnitDotView
+                    {...{
+                        setRef: this.setLyricAnnotationRef,
+                        dotKeys,
+                        isSelected,
+                        isAccessed,
+                        isLastUnit,
+                        annotationIndex,
+                        handleAnchorClick: this._handleDotButtonClick
+                    }}
+                />
+                <AnnotationDispatcher {...{ getDispatch: this }} />
+            </___>
         )
     }
 }

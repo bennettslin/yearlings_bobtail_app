@@ -24,6 +24,7 @@ class AnnotationWormholes extends Component {
 
     static propTypes = {
         // Through Redux.
+        canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
@@ -85,8 +86,10 @@ class AnnotationWormholes extends Component {
                 return (
                     <AnnotationWormhole {...other}
                         key={wormholeLinkIndex}
-                        wormholeLinkIndex={wormholeLinkIndex}
-                        isAccessed={isAccessed}
+                        {...{
+                            wormholeLinkIndex,
+                            isAccessed
+                        }}
                     />
                 )
             })

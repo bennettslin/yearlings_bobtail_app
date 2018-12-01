@@ -8,7 +8,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             setCarouselParentRef,
             selectSong,
             togglePlay,
-            handleAnnotationIndexSelect,
             handleLyricWheel,
             handleLyricVerseSelect,
             handleVerseBarWheel
@@ -30,7 +29,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             setLyricAnnotationRef,
             setVerseRef,
             setLyricParentRef,
-            handleAnnotationIndexSelect,
             handleLyricWheel,
             handleLyricVerseSelect,
             handleVerseBarWheel
@@ -41,7 +39,6 @@ export const getOrganisedHandlersFromProps = (props) => {
             carouselSectionHandlers: {
                 setCarouselAnnotationRef,
                 setCarouselParentRef,
-                handleAnnotationIndexSelect,
                 selectSong
             },
             navSectionHandlers: {

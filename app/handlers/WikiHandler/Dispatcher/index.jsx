@@ -10,7 +10,7 @@ class WikiDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isWikiSelected: PropTypes.bool.isRequired,
+        isWikiDotSelected: PropTypes.bool.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -25,10 +25,10 @@ class WikiDispatcher extends PureComponent {
         selectedWikiIndex,
         carouselAnnotationIndex
     ) => {
-        const { isWikiSelected } = this.props
+        const { isWikiDotSelected } = this.props
 
         // Don't register click if reference dot is deselected.
-        if (!isWikiSelected) {
+        if (!isWikiDotSelected) {
             return false
         }
 
@@ -46,10 +46,10 @@ class WikiDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     dotsStore: {
-        [REFERENCE]: isWikiSelected
+        [REFERENCE]: isWikiDotSelected
     }
 }) => ({
-    isWikiSelected
+    isWikiDotSelected
 })
 
 const bindDispatchToProps = (dispatch) => (

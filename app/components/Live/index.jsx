@@ -29,7 +29,6 @@ class Live extends Component {
 
         selectSong: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
-        handleAnnotationIndexSelect: PropTypes.func.isRequired,
         handleLyricWheel: PropTypes.func.isRequired,
         handleLyricVerseSelect: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired

@@ -14,8 +14,8 @@ import { updateToggleStore } from 'flux/toggle/action'
 import InteractiveContainer from '../../containers/InteractiveContainer'
 import AnnotationDispatcher from '../../handlers/AnnotationHandler/Dispatcher'
 
-import { getAnnotationObject } from '../../helpers/dataHelper'
-import { intersects } from 'helpers/dotHelper'
+// import { getAnnotationObject } from '../../helpers/dataHelper'
+// import { intersects } from 'helpers/dotHelper'
 import { getHandlers } from './helper'
 
 class EventContainer extends PureComponent {
@@ -38,59 +38,6 @@ class EventContainer extends PureComponent {
 
     selectSong = (wormholeObject) => {
         return this.props.selectSong(wormholeObject)
-    }
-
-    /**************
-     * ANNOTATION *
-     **************/
-
-    handleAnnotationIndexSelect = (
-        e,
-        selectedAnnotationIndex,
-        fromCarousel
-    ) => {
-        /**
-         * FIXME: This check is only necessary when clicking an annotation, to
-         * ensure that it is not shown as text. Maybe bypass if done through
-         * access?
-         */
-        // Do nothing if no dots are selected, as no annotation can be selected.
-        if (selectedAnnotationIndex < 0) {
-            return false
-        }
-
-        // If selecting an annotation, make sure that its dots intersect.
-        if (selectedAnnotationIndex) {
-            const annotation = getAnnotationObject(this.props.selectedSongIndex, selectedAnnotationIndex)
-
-            if (!intersects(annotation.dotKeys, this.props.selectedDotKeys)) {
-                return false
-            }
-        }
-
-        this.dispatchAnnotationIndex(selectedAnnotationIndex)
-
-        if (selectedAnnotationIndex) {
-
-            // Scroll lyric column only if selecting from carousel.
-            if (fromCarousel) {
-                this.props.updateScrollLyricStore({
-                    scrollLyricLog: 'Carousel selected lyric annotation.',
-                    scrollLyricIndex: selectedAnnotationIndex
-                })
-
-            // Scroll carousel only if not selecting from carousel.
-            } else {
-                if (this.props.isCarouselShown) {
-                    this.props.updateScrollCarouselStore({
-                        scrollCarouselLog: 'Lyric selected carousel annotation.',
-                        scrollCarouselIndex: selectedAnnotationIndex
-                    })
-                }
-            }
-        }
-
-        return true
     }
 
     /*********

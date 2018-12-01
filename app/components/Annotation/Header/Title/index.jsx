@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -9,8 +9,10 @@ import AnnotationAccess from './Access'
 
 import { IS_DOT_CARD } from 'constants/lyrics'
 
-const annotationTitlePropTypes = {
-    // From parent.
+class AnnotationTitle extends PureComponent {
+
+    static propTypes = {
+        // From parent.
         isShadow: PropTypes.bool,
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool.isRequired,
@@ -18,71 +20,72 @@ const annotationTitlePropTypes = {
         annotationTitle: PropTypes.string.isRequired,
         accessibleWikiWormholesLength: PropTypes.number,
         handleTitleClick: PropTypes.func
-    },
+    }
 
-    AnnotationTitle = ({
+    render() {
+        const {
+            // TODO: Make sure this is necessary.
+            isShadow,
 
-        // TODO: Make sure this is necessary.
-        isShadow,
+            isSelected,
+            isAccessed,
+            annotationDotKeys,
+            annotationTitle,
+            accessibleWikiWormholesLength,
+            handleTitleClick
+        } = this.props
 
-        isSelected,
-        isAccessed,
-        annotationDotKeys,
-        annotationTitle,
-        accessibleWikiWormholesLength,
-        handleTitleClick
+        return (
+            <div className={cx(
+                'AnnotationTitle',
 
-    }) => (
-        <div className={cx(
-            'AnnotationTitle',
+                isShadow && 'AnnotationTitle__shadow',
 
-            isShadow && 'AnnotationTitle__shadow',
+                {
+                    ...!isShadow && {
+                    // This includes transition animation, so it's always applied.
+                        'bgColour__annotation': true,
+                        'bgColour__annotation__selected': isSelected
+                    },
 
-            {
-                ...!isShadow && {
-                // This includes transition animation, so it's always applied.
-                    'bgColour__annotation': true,
-                    'bgColour__annotation__selected': isSelected
+                    ...isShadow && {
+                        'boxShadow__annotation': !isSelected,
+                        'boxShadow__annotation__selected': isSelected
+                    }
                 },
 
-                ...isShadow && {
-                    'boxShadow__annotation': !isSelected,
-                    'boxShadow__annotation__selected': isSelected
-                }
-            },
-
-            'fontSize__title'
-        )}>
-            {annotationTitle === IS_DOT_CARD ? (
-                <AnchorDot
-                    inAnnotation
+                'fontSize__title'
+            )}>
+                {annotationTitle === IS_DOT_CARD ? (
+                    <AnchorDot
+                        inAnnotation
+                        {...{
+                            isSelected,
+                            isAccessed,
+                            stanzaDotKeys: annotationDotKeys,
+                            handleAnchorClick: handleTitleClick
+                        }}
+                    />
+                ) : (
+                    <AnchorText
+                        {...{
+                            isSelected,
+                            isAccessed,
+                            text: `\u201c${annotationTitle}\u201d`,
+                            sequenceDotKeys: annotationDotKeys,
+                            handleAnchorClick: handleTitleClick
+                        }}
+                    />
+                )}
+                <AnnotationAccess
                     {...{
                         isSelected,
-                        isAccessed,
-                        stanzaDotKeys: annotationDotKeys,
-                        handleAnchorClick: handleTitleClick
+                        accessibleWikiWormholesLength
                     }}
                 />
-            ) : (
-                <AnchorText
-                    {...{
-                        isSelected,
-                        isAccessed,
-                        text: `\u201c${annotationTitle}\u201d`,
-                        sequenceDotKeys: annotationDotKeys,
-                        handleAnchorClick: handleTitleClick
-                    }}
-                />
-            )}
-            <AnnotationAccess
-                {...{
-                    isSelected,
-                    accessibleWikiWormholesLength
-                }}
-            />
-        </div>
-    )
-
-AnnotationTitle.propTypes = annotationTitlePropTypes
+            </div>
+        )
+    }
+}
 
 export default AnnotationTitle

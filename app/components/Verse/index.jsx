@@ -43,7 +43,6 @@ class Verse extends Component {
 
         inMain: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
-        handleAnnotationIndexSelect: PropTypes.func,
 
         setVerseRef: PropTypes.func
     }
@@ -98,15 +97,10 @@ class Verse extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                handleAnnotationIndexSelect,
-
                 ...other
             } = this.props,
 
-            {
-                inVerseBar,
-                verseObject
-            } = other,
+            { verseObject } = other,
 
             {
                 lyric,
@@ -125,9 +119,6 @@ class Verse extends Component {
                         isInteractable,
                         isDoubleSpeaker: !lyric && !centre,
                         handleInteractivatableClick: this._handleInteractivatableClick
-                    }}
-                    {...!inVerseBar && {
-                        handleAnchorClick: handleAnnotationIndexSelect
                     }}
                 />
                 <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
