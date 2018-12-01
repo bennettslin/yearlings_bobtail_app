@@ -2,6 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class CarouselDispatcher extends PureComponent {
@@ -12,7 +13,10 @@ class CarouselDispatcher extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
+        accessedAnnotationIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
+        updateScrollCarouselStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -38,6 +42,24 @@ class CarouselDispatcher extends PureComponent {
         }
 
         this.props.updateToggleStore({ isCarouselShown })
+
+        // If showing carousel, scroll to selected or accessed annotation.
+        if (isCarouselShown) {
+            const {
+                    selectedAnnotationIndex,
+                    accessedAnnotationIndex
+                } = this.props,
+
+                annotationIndex =
+                    selectedAnnotationIndex ||
+                    accessedAnnotationIndex
+
+            this.props.updateScrollCarouselStore({
+                scrollCarouselLog: 'Nav toggled carousel annotation.',
+                scrollCarouselIndex: annotationIndex
+            })
+        }
+
         return true
     }
 
@@ -50,18 +72,25 @@ const mapStateToProps = ({
     deviceStore: { isPhone },
     dotsStore: { dotsBitNumber },
     responsiveStore: { isHiddenCarouselNav },
-    songStore: { isSelectedLogue },
+    accessStore: { accessedAnnotationIndex },
+    songStore: {
+        selectedAnnotationIndex,
+        isSelectedLogue
+    },
     toggleStore: { isCarouselShown }
 }) => ({
     isPhone,
     dotsBitNumber,
     isHiddenCarouselNav,
+    accessedAnnotationIndex,
+    selectedAnnotationIndex,
     isSelectedLogue,
     isCarouselShown
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateScrollCarouselStore,
         updateToggleStore
     }, dispatch)
 )

@@ -1,8 +1,10 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
+
+import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccessHandler/Dispatcher'
 
 import {
     ARROW_LEFT,
@@ -22,7 +24,6 @@ class LyricNavigation extends PureComponent {
         // From parent.
         getNavigation: PropTypes.object.isRequired,
         handleLyricAnnotationSelect: PropTypes.func.isRequired,
-        handleAnnotationAccess: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
@@ -36,7 +37,6 @@ class LyricNavigation extends PureComponent {
                 interactivatedVerseIndex,
                 accessedAnnotationIndex,
                 handleLyricAnnotationSelect,
-                handleAnnotationAccess,
                 determineVerseBarsWithParameters
             } = props,
 
@@ -72,10 +72,9 @@ class LyricNavigation extends PureComponent {
                     interactivatedVerseIndex :
                     props.selectedVerseIndex
 
-            handleAnnotationAccess({
+            this.dispatchAccessedAnnotation({
                 verseIndex,
-                direction,
-                doScroll: true
+                direction
             })
 
             if (isVerseInteractivated) {
@@ -83,10 +82,9 @@ class LyricNavigation extends PureComponent {
             }
 
         } else {
-            handleAnnotationAccess({
+            this.dispatchAccessedAnnotation({
                 annotationIndex: accessedAnnotationIndex,
-                direction,
-                doScroll: true
+                direction
             })
         }
 
@@ -99,7 +97,9 @@ class LyricNavigation extends PureComponent {
     }
 
     render() {
-        return null
+        return (
+            <AnnotationAccessDispatcher {...{ getDispatch: this }} />
+        )
     }
 }
 

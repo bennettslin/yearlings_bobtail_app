@@ -27,7 +27,7 @@ import LyricListener from '../../handlers/LyricHandler/Listener'
 import MainListener from '../../listeners/MainListener'
 import OverviewListener from '../../handlers/OverviewHandler/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotationListener'
-import RenderListener from '../../listeners/RenderListener'
+import RenderedSongListener from '../../listeners/RenderedSongListener'
 import RenderedListener from '../../listeners/RenderedListener'
 import SceneListener from '../../handlers/SceneHandler/Listener'
 import ScoreListener from '../../handlers/ScoreHandler/Listener'
@@ -212,7 +212,7 @@ class ListenerContainer extends PureComponent {
                 <MainListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
-                <RenderListener />
+                <RenderedSongListener />
                 <RenderedListener />
                 <SceneListener />
                 <ScoreListener />

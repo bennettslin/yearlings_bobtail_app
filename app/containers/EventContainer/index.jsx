@@ -14,7 +14,6 @@ import { updateToggleStore } from 'flux/toggle/action'
 import InteractiveContainer from '../../containers/InteractiveContainer'
 import AnnotationDispatcher from '../../handlers/AnnotationHandler/Dispatcher'
 import AnnotationAccessDispatcher from '../../handlers/AnnotationAccessHandler/Dispatcher'
-import CarouselDispatcher from '../../handlers/CarouselHandler/Dispatcher'
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
@@ -93,40 +92,13 @@ class EventContainer extends PureComponent {
         }
     }
 
-    handleAnnotationAccess = ({
-        doScroll,
-        annotationIndex,
-        verseIndex,
-        direction
-    }) => {
-        const accessedAnnotationIndex = this.dispatchAccessedAnnotation({
-            annotationIndex,
-            verseIndex,
-            direction
-        })
-
-        if (accessedAnnotationIndex && doScroll) {
-            this.props.updateScrollLyricStore({
-                scrollLyricLog: 'Access lyric annotation.',
-                scrollLyricIndex: accessedAnnotationIndex
-            })
-
-            if (this.props.isCarouselShown) {
-                this.props.updateScrollCarouselStore({
-                    scrollCarouselLog: 'Access carousel annotation.',
-                    scrollCarouselIndex: accessedAnnotationIndex
-                })
-            }
-        }
+    selectSong = (wormholeObject) => {
+        return this.props.selectSong(wormholeObject)
     }
 
     /**************
      * ANNOTATION *
      **************/
-
-    selectSong = (wormholeObject) => {
-        return this.props.selectSong(wormholeObject)
-    }
 
     handleAnnotationSelect = (e, direction) => {
         const selectedAnnotationIndex = this.dispatchAnnotation({ direction })
@@ -141,70 +113,6 @@ class EventContainer extends PureComponent {
                 scrollCarouselIndex: selectedAnnotationIndex
             })
         }
-    }
-
-    /************
-     * CAROUSEL *
-     ************/
-
-    handleCarouselNavToggle = (e, isCarouselShown) => {
-        const
-            { isCarouselShown: presentIsCarouselShown } = this.props,
-            carouselSelected = this.dispatchCarousel(isCarouselShown)
-
-        // Scroll only when expanding carousel.
-        if (carouselSelected && !presentIsCarouselShown) {
-            const { selectedAnnotationIndex } = this.props,
-                annotationIndex =
-                    selectedAnnotationIndex ?
-                        selectedAnnotationIndex :
-                        this.props.accessedAnnotationIndex
-
-            this.props.updateScrollCarouselStore({
-                scrollCarouselLog: 'Nav toggled carousel annotation.',
-                scrollCarouselIndex: annotationIndex
-            })
-        }
-
-        return carouselSelected
-    }
-
-    /**********
-     * LYRICS *
-     **********/
-
-    handleLyricVerseSelect = (
-        e,
-        selectedVerseIndex,
-        fromStanzaTab
-    ) => {
-        if (this.props.isSelectedLogue) {
-            return false
-        }
-
-        if (
-            !fromStanzaTab &&
-
-            // The UI should prevent this, but just in case.
-            selectedVerseIndex !== this.props.interactivatedVerseIndex
-        ) {
-            return false
-        }
-
-        this.props.selectVerse({
-            selectedVerseIndex,
-            scrollLog: 'Select interactivated verse.'
-        })
-
-        // Verse bars always get reset.
-        this.props.updateToggleStore({
-            isVerseBarAbove: false,
-            isVerseBarBelow: false
-        })
-
-        // Deinteractivate after selecting.
-        this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
-        return true
     }
 
     handleLyricAnnotationSelect = (
@@ -259,6 +167,40 @@ class EventContainer extends PureComponent {
     /*********
      * VERSE *
      *********/
+
+    handleLyricVerseSelect = (
+        e,
+        selectedVerseIndex,
+        fromStanzaTab
+    ) => {
+        if (this.props.isSelectedLogue) {
+            return false
+        }
+
+        if (
+            !fromStanzaTab &&
+
+            // The UI should prevent this, but just in case.
+            selectedVerseIndex !== this.props.interactivatedVerseIndex
+        ) {
+            return false
+        }
+
+        this.props.selectVerse({
+            selectedVerseIndex,
+            scrollLog: 'Select interactivated verse.'
+        })
+
+        // Verse bars always get reset.
+        this.props.updateToggleStore({
+            isVerseBarAbove: false,
+            isVerseBarBelow: false
+        })
+
+        // Deinteractivate after selecting.
+        this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
+        return true
+    }
 
     // This is also triggered by toggling on auto scroll.
     handleScrollToSelectedVerse = (isAutoScroll) => {
@@ -324,7 +266,6 @@ class EventContainer extends PureComponent {
                 />
                 <AnnotationDispatcher {...{ getDispatch: this }} />
                 <AnnotationAccessDispatcher {...{ getDispatch: this }} />
-                <CarouselDispatcher {...{ getDispatch: this }} />
                 <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
                 <StopPropagationDispatcher {...{ getDispatch: this }} />
             </___>

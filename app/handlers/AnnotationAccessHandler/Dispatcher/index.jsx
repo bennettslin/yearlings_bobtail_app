@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
+import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
+import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 
 import {
     getAnnotationIndexForVerseIndex,
@@ -20,8 +22,11 @@ class AnnotationAccessDispatcher extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isEarShown: PropTypes.bool.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
+        updateScrollCarouselStore: PropTypes.func.isRequired,
+        updateScrollLyricStore: PropTypes.func.isRequired,
 
         // From parent.
         getDispatch: PropTypes.object.isRequired
@@ -36,38 +41,46 @@ class AnnotationAccessDispatcher extends PureComponent {
         annotationIndex,
         verseIndex = this.props.selectedVerseIndex
     } = {}) => {
+
         const {
-            selectedSongIndex,
-            selectedDotKeys,
-            earColumnIndex,
-            isEarShown
-        } = this.props
-
-        let accessedAnnotationIndex
-
-        if (annotationIndex) {
-            accessedAnnotationIndex = getAnnotationIndexForDirection({
-                currentAnnotationIndex: annotationIndex,
                 selectedSongIndex,
                 selectedDotKeys,
                 earColumnIndex,
-                isEarShown,
-                direction
-            })
-        } else {
-            accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                verseIndex,
-                selectedSongIndex,
-                selectedDotKeys,
-                earColumnIndex,
-                isEarShown,
-                direction
-            })
-        }
+                isEarShown
+            } = this.props,
+
+            accessedAnnotationIndex =
+                annotationIndex ? getAnnotationIndexForDirection({
+                    currentAnnotationIndex: annotationIndex,
+                    selectedSongIndex,
+                    selectedDotKeys,
+                    earColumnIndex,
+                    isEarShown,
+                    direction
+                }) : getAnnotationIndexForVerseIndex({
+                    verseIndex,
+                    selectedSongIndex,
+                    selectedDotKeys,
+                    earColumnIndex,
+                    isEarShown,
+                    direction
+                })
 
         this.props.updateAccessStore({ accessedAnnotationIndex })
 
-        // If needed, scroll to this annotation index.
+        if (accessedAnnotationIndex) {
+            this.props.updateScrollLyricStore({
+                scrollLyricLog: 'Access lyric annotation.',
+                scrollLyricIndex: accessedAnnotationIndex
+            })
+            if (this.props.isCarouselShown) {
+                this.props.updateScrollCarouselStore({
+                    scrollCarouselLog: 'Access carousel annotation.',
+                    scrollCarouselIndex: accessedAnnotationIndex
+                })
+            }
+        }
+
         return accessedAnnotationIndex
     }
 
@@ -86,6 +99,7 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
+    toggleStore: { isCarouselShown },
     transientStore: { isEarShown }
 }) => ({
     selectedSongIndex,
@@ -93,12 +107,15 @@ const mapStateToProps = ({
     dotsBitNumber,
     selectedDotKeys,
     earColumnIndex,
+    isCarouselShown,
     isEarShown
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateAccessStore
+        updateAccessStore,
+        updateScrollCarouselStore,
+        updateScrollLyricStore
     }, dispatch)
 )
 

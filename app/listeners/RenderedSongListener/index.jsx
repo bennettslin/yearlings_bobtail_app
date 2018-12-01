@@ -10,7 +10,7 @@ import { updateRenderedStore } from 'flux/rendered/action'
 
 import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
 
-class RenderListener extends PureComponent {
+class RenderedSongListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -109,4 +109,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(RenderListener)
+export default connect(mapStateToProps, bindDispatchToProps)(RenderedSongListener)

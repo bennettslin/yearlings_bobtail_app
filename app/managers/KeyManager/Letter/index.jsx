@@ -8,6 +8,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
+import CarouselDispatcher from '../../../handlers/CarouselHandler/Dispatcher'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
 import LyricDispatcher from '../../../handlers/LyricHandler/Dispatcher'
@@ -110,7 +111,7 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
                 break
             case CAROUSEL_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleCarouselNavToggle(e)
+                keyWasRegistered = this.dispatchCarousel()
                 break
             case DOTS_SLIDE_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchDotsSlide()
@@ -202,6 +203,7 @@ class LetterManager extends PureComponent {
             <___>
                 <AdminDispatcher {...{ getDispatch: this }} />
                 <AudioOptionDispatcher {...{ getDispatch: this }} />
+                <CarouselDispatcher {...{ getDispatch: this }} />
                 <DotsSlideDispatcher {...{ getDispatch: this }} />
                 <EarColumnDispatcher {...{ getDispatch: this }} />
                 <LyricDispatcher {...{ getDispatch: this }} />

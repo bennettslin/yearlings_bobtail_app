@@ -37,8 +37,6 @@ class Main extends Component {
         updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
-        handleCarouselNavToggle: PropTypes.func.isRequired,
-
         annotationPopupHandlers: PropTypes.object.isRequired,
         carouselSectionHandlers: PropTypes.object.isRequired,
         navSectionHandlers: PropTypes.object.isRequired
@@ -67,7 +65,6 @@ class Main extends Component {
 
     render() {
         const {
-            handleCarouselNavToggle,
             annotationPopupHandlers,
             carouselSectionHandlers,
             navSectionHandlers
@@ -100,9 +97,7 @@ class Main extends Component {
                 <DotsSlide />
                 <ScoresTips inMainRightSide />
                 <TipsPopup />
-                <CarouselToggle
-                    handleCarouselNavToggle={handleCarouselNavToggle}
-                />
+                <CarouselToggle />
             </div>
         )
     }
