@@ -14,8 +14,6 @@ import { updateToggleStore } from 'flux/toggle/action'
 import InteractiveContainer from '../../containers/InteractiveContainer'
 import AnnotationDispatcher from '../../handlers/AnnotationHandler/Dispatcher'
 
-// import { getAnnotationObject } from '../../helpers/dataHelper'
-// import { intersects } from 'helpers/dotHelper'
 import { getHandlers } from './helper'
 
 class EventContainer extends PureComponent {

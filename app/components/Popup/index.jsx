@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -10,10 +10,10 @@ import PopupView from './View'
  * CONTAINER *
  *************/
 
-class Popup extends Component {
+class Popup extends PureComponent {
 
     static propTypes = {
-        className: PropTypes.any,
+        className: PropTypes.string,
         popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
         isFullSize: PropTypes.bool,

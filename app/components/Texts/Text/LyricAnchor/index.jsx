@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
+import StopPropagationDispatcher from '../../../../dispatchers/StopPropagationDispatcher'
 import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import AnchorText from '../../../Anchor/AnchorText'
 import Texts from '../../'
@@ -90,7 +91,7 @@ class TextLyricAnchor extends Component {
         })
     }
 
-    _handleAnchorClick = () => {
+    _handleAnchorClick = (e) => {
         const {
                 renderedAnnotationIndex,
                 annotationIndex,
@@ -110,9 +111,17 @@ class TextLyricAnchor extends Component {
             }
 
             if (annotationIndex) {
-                this.dispatchAnnotationIndex({
+                if (this.dispatchAnnotationIndex({
                     selectedAnnotationIndex: annotationIndex
-                })
+                })) {
+                    /**
+                     * The text lyric anchor itself does not know if it cannot
+                     * be selected due to no dots selected. So if the dispatch
+                     * was successful, it will stop propagation. Otherwise, it
+                     * will behave as if plain text was clicked.
+                     */
+                    this.dispatchStopPropagation(e)
+                }
             }
         }
     }
@@ -230,6 +239,7 @@ class TextLyricAnchor extends Component {
                                 />
                             )),
                             sequenceDotKeys: dotKeys,
+                            doBypassStopPropagation: !isWikiTextAnchor,
                             isWikiTextAnchor,
                             isAccessed,
                             isSelected,
@@ -238,6 +248,7 @@ class TextLyricAnchor extends Component {
                     />
                 </span>
                 <AnnotationDispatcher {...{ getDispatch: this }} />
+                <StopPropagationDispatcher {...{ getDispatch: this }} />
                 <WikiDispatcher {...{ getDispatch: this }} />
             </___>
         )

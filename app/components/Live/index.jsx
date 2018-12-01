@@ -1,9 +1,9 @@
 /**
- * Component that routes event handlers to their components. Knows no state, so
+ * PureComponent that routes event handlers to their components. Knows no state, so
  * should not update.
  */
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 
 import Main from '../Main'
@@ -16,7 +16,7 @@ import OverviewLogue from './OverviewLogue'
 
 import { getOrganisedHandlersFromProps } from './helper'
 
-class Live extends Component {
+class Live extends PureComponent {
 
     static propTypes = {
         // From parent.

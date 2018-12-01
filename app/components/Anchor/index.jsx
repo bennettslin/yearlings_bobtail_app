@@ -23,6 +23,7 @@ class Anchor extends Component {
         isDotAnchor: PropTypes.bool,
         isWikiTextAnchor: PropTypes.bool,
         omitAccessIcon: PropTypes.bool,
+        doBypassStopPropagation: PropTypes.bool,
         sequenceDotKeys: PropTypes.object,
         handleAnchorClick: PropTypes.func,
         children: PropTypes.oneOfType([
@@ -32,12 +33,17 @@ class Anchor extends Component {
     }
 
     _handleClick = (e) => {
-        this.dispatchStopPropagation(e)
-
-        const { isDisabled } = this.props
-
-        if (!isDisabled) {
+        if (!this.props.isDisabled) {
             this.props.handleAnchorClick(e)
+
+            /**
+             * Do not stop propagation here if asked by parent. This allows,
+             * for example, the text lyric anchor to allow propagation to
+             * continue if none of its dots are selected.
+             */
+            if (!this.props.doBypassStopPropagation) {
+                this.dispatchStopPropagation(e)
+            }
         }
     }
 

@@ -143,9 +143,11 @@ const dotsSlideSelectViewPropTypes = {
                         'isSelected': isSelected
                     })}
                     isCustomSize
-                    accessKey={ENTER}
-                    showAccessIconIfAccessOn={isAccessed}
-                    handleButtonClick={handleDotSelectClick}
+                    {...{
+                        accessKey: ENTER,
+                        showAccessIconIfAccessOn: isAccessed,
+                        handleButtonClick: handleDotSelectClick
+                    }}
                 >
                     <Dot
                         {...{
@@ -174,10 +176,12 @@ const dotsSlideSelectViewPropTypes = {
                 <AnchorText
                     className="DotsSlideSelect__textAnchor"
                     omitAccessIcon
-                    isAccessed={isAccessed}
-                    isSelected={isInteractivated}
-                    text={dotKey}
-                    handleAnchorClick={handleTextContainerClick}
+                    {...{
+                        isAccessed,
+                        isSelected: isInteractivated,
+                        text: dotKey,
+                        handleAnchorClick: handleTextContainerClick
+                    }}
                 />
             </div>
         )

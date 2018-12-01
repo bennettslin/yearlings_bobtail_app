@@ -6,6 +6,8 @@ import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
 
+import { intersects } from '../../../helpers/dotHelper'
+import { getAnnotationObject } from '../../../helpers/dataHelper'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 
 class AnnotationDispatcher extends PureComponent {
@@ -36,25 +38,22 @@ class AnnotationDispatcher extends PureComponent {
         fromCarousel
     }) => {
 
-        // TODO: Write these checks into dispatch?
-        /**
-         * FIXME: This check is only necessary when clicking an annotation, to
-         * ensure that it is not shown as text. Maybe bypass if done through
-         * access?
-         */
-        // Do nothing if no dots are selected, as no annotation can be selected.
-        // if (selectedAnnotationIndex < 0) {
-        //     return false
-        // }
+        const {
+            selectedSongIndex,
+            selectedDotKeys
+        } = this.props
 
-        // // If selecting an annotation, make sure that its dots intersect.
-        // if (selectedAnnotationIndex) {
-        //     const annotation = getAnnotationObject(this.props.selectedSongIndex, selectedAnnotationIndex)
+        // If selecting an annotation, make sure that its dots intersect.
+        if (selectedAnnotationIndex) {
+            const annotation = getAnnotationObject(
+                selectedSongIndex,
+                selectedAnnotationIndex
+            )
 
-        //     if (!intersects(annotation.dotKeys, this.props.selectedDotKeys)) {
-        //         return false
-        //     }
-        // }
+            if (!intersects(annotation.dotKeys, selectedDotKeys)) {
+                return false
+            }
+        }
 
         this.props.updateSongStore({ selectedAnnotationIndex })
 
@@ -75,6 +74,9 @@ class AnnotationDispatcher extends PureComponent {
                 })
             }
         }
+
+        // Tell text lyric anchor to stop propagation if successfully selected.
+        return Boolean(selectedAnnotationIndex)
     }
 
     dispatchAnnotationDirection = (direction) => {
