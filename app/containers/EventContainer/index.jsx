@@ -48,7 +48,7 @@ class EventContainer extends PureComponent {
      * ANNOTATION *
      **************/
 
-    handleAnnotationSelect = (e, direction) => {
+    handleAnnotationDirectionSelect = (e, direction) => {
         const selectedAnnotationIndex = this.dispatchAnnotation({ direction })
 
         this.props.updateScrollLyricStore({
@@ -63,7 +63,7 @@ class EventContainer extends PureComponent {
         }
     }
 
-    handleLyricAnnotationSelect = (
+    handleAnnotationDirectSelect = (
         e,
         selectedAnnotationIndex,
         fromCarousel
@@ -150,31 +150,13 @@ class EventContainer extends PureComponent {
         return true
     }
 
-    // This is also triggered by toggling on auto scroll.
-    handleScrollToSelectedVerse = (isAutoScroll) => {
-
-        const { selectedVerseIndex } = this.props
-        this.props.updateScrollLyricStore({
-            scrollLyricLog: 'Scroll back to selected verse.',
-            doScrollLyricByVerse: true,
-            scrollLyricIndex: selectedVerseIndex
-        })
-
-        this.props.updateToggleStore({
-            isVerseBarAbove: false,
-            isVerseBarBelow: false,
-            ...isAutoScroll && { isAutoScroll }
-        })
-    }
-
     handleVerseDirectionAccess = (direction) => {
         if (this.props.isSelectedLogue) {
             return false
         }
 
-        const {
-                selectedVerseIndex
-            } = this.props,
+        const
+            { selectedVerseIndex } = this.props,
             interactivatedVerseIndex =
             this.dispatchInteractivatedVerseDirection(direction)
 

@@ -18,15 +18,15 @@ import { CAROUSEL_SELECT_BUTTON_KEY } from 'constants/buttons'
 class CarouselSelect extends PureComponent {
 
     static propTypes = {
-        handleAnnotationSelect: PropTypes.func.isRequired
+        handleAnnotationDirectionSelect: PropTypes.func.isRequired
     }
 
     _handleAnnotationPrevious = (e) => {
-        this.props.handleAnnotationSelect(e, -1)
+        this.props.handleAnnotationDirectionSelect(e, -1)
     }
 
     _handleAnnotationNext = (e) => {
-        this.props.handleAnnotationSelect(e, 1)
+        this.props.handleAnnotationDirectionSelect(e, 1)
     }
 
     render() {

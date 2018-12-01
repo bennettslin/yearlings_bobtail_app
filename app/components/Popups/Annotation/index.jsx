@@ -30,21 +30,21 @@ class AnnotationPopup extends PureComponent {
 
         // From parent.
         inMain: PropTypes.bool,
-        handleAnnotationSelect: PropTypes.func.isRequired
+        handleAnnotationDirectionSelect: PropTypes.func.isRequired
     }
 
     _handleAnnotationPrevious = (e) => {
-        this.props.handleAnnotationSelect(e, -1)
+        this.props.handleAnnotationDirectionSelect(e, -1)
     }
 
     _handleAnnotationNext = (e) => {
-        this.props.handleAnnotationSelect(e, 1)
+        this.props.handleAnnotationDirectionSelect(e, 1)
     }
 
     render() {
         const {
             /* eslint-disable no-unused-vars */
-            handleAnnotationSelect,
+            handleAnnotationDirectionSelect,
             dispatch,
             /* eslint-enable no-unused-vars */
 

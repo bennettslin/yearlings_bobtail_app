@@ -107,9 +107,9 @@ class NavigationManager extends PureComponent {
     render() {
         const {
             eventHandlers: {
-                handleAnnotationSelect,
+                handleAnnotationDirectionSelect,
                 selectSong,
-                handleLyricAnnotationSelect
+                handleAnnotationDirectSelect
             },
             determineVerseBarsWithParameters
         } = this.props
@@ -119,7 +119,7 @@ class NavigationManager extends PureComponent {
                 <AnnotationNavigation
                     {...{
                         getNavigation: this,
-                        handleAnnotationSelect,
+                        handleAnnotationDirectionSelect,
                         selectSong,
                         determineVerseBarsWithParameters
                     }}
@@ -128,7 +128,7 @@ class NavigationManager extends PureComponent {
                 <LyricNavigation
                     {...{
                         getNavigation: this,
-                        handleLyricAnnotationSelect,
+                        handleAnnotationDirectSelect,
                         determineVerseBarsWithParameters
                     }}
                 />

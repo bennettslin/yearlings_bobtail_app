@@ -34,7 +34,7 @@ class CarouselAnnotation extends Component {
         annotationIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        handleLyricAnnotationSelect: PropTypes.func.isRequired,
+        handleAnnotationDirectSelect: PropTypes.func.isRequired,
         setCarouselAnnotationRef: PropTypes.func.isRequired
     }
 
@@ -52,10 +52,10 @@ class CarouselAnnotation extends Component {
         if (!this.props.isSelected) {
             const {
                 annotationIndex,
-                handleLyricAnnotationSelect
+                handleAnnotationDirectSelect
             } = this.props
 
-            handleLyricAnnotationSelect(e, annotationIndex, true)
+            handleAnnotationDirectSelect(e, annotationIndex, true)
         }
     }
 
@@ -71,7 +71,7 @@ class CarouselAnnotation extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canCarouselRender,
-                handleLyricAnnotationSelect,
+                handleAnnotationDirectSelect,
                 setCarouselAnnotationRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */

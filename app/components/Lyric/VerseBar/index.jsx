@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 
@@ -48,7 +49,6 @@ class VerseBar extends Component {
 
         // From parent.
         isAbove: PropTypes.bool.isRequired,
-        handleScrollToSelectedVerse: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
     }
 
@@ -99,7 +99,7 @@ class VerseBar extends Component {
             (isAbove && isVerseBarAbove) ||
             (isBelow && isVerseBarBelow)
         ) {
-            this.props.handleScrollToSelectedVerse()
+            this.dispatchScrollVerse()
         }
     }
 
@@ -108,8 +108,6 @@ class VerseBar extends Component {
         const {
             /* eslint-disable no-unused-vars */
                 canLyricRender,
-                handleScrollToSelectedVerse,
-
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -171,6 +169,7 @@ class VerseBar extends Component {
                         }}
                     />
                 </div>
+                <ScrollVerseDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }

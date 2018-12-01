@@ -53,7 +53,7 @@ class UnitDot extends Component {
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
-        handleLyricAnnotationSelect: PropTypes.func.isRequired,
+        handleAnnotationDirectSelect: PropTypes.func.isRequired,
         setLyricAnnotationRef: PropTypes.func.isRequired
     }
 
@@ -74,7 +74,7 @@ class UnitDot extends Component {
             isSelected = annotationIndex === renderedAnnotationIndex
 
         if (!isSelected) {
-            this.props.handleLyricAnnotationSelect(e, annotationIndex)
+            this.props.handleAnnotationDirectSelect(e, annotationIndex)
         }
     }
 

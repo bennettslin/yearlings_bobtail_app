@@ -16,6 +16,7 @@ import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
 import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
 import SceneDispatcher from '../../../handlers/SceneHandler/Dispatcher'
 import ScoreDispatcher from '../../../handlers/ScoreHandler/Dispatcher'
+import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 
 import {
@@ -124,7 +125,7 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.dispatchLyricExpand()
                 break
             case LYRIC_SCROLL_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleScrollToSelectedVerse(true)
+                keyWasRegistered = this.dispatchScrollVerse(true)
                 break
             case OVERVIEW_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchOverview()
@@ -211,6 +212,7 @@ class LetterManager extends PureComponent {
                 <TipsDispatcher {...{ getDispatch: this }} />
                 <SceneDispatcher {...{ getDispatch: this }} />
                 <ScoreDispatcher {...{ getDispatch: this }} />
+                <ScrollVerseDispatcher {...{ getDispatch: this }} />
                 <TitleDispatcher {...{ getDispatch: this }} />
             </___>
         )

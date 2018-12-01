@@ -27,12 +27,11 @@ class Live extends Component {
         setLyricVerseParentRef: PropTypes.func.isRequired,
         setCarouselParentRef: PropTypes.func.isRequired,
 
-        handleAnnotationSelect: PropTypes.func.isRequired,
+        handleAnnotationDirectionSelect: PropTypes.func.isRequired,
         selectSong: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
-        handleLyricAnnotationSelect: PropTypes.func.isRequired,
+        handleAnnotationDirectSelect: PropTypes.func.isRequired,
         handleLyricWheel: PropTypes.func.isRequired,
-        handleScrollToSelectedVerse: PropTypes.func.isRequired,
         handleLyricVerseSelect: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
     }

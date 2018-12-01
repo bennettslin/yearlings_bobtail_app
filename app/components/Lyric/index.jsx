@@ -141,14 +141,12 @@ const earColumnViewPropTypes = {
         parent__shown: PropTypes.bool.isRequired,
         handleTransition: PropTypes.func.isRequired,
 
-        handleScrollToSelectedVerse: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
     },
 
     EarColumnView = ({
 
         // From props.
-        handleScrollToSelectedVerse,
         handleVerseBarWheel,
 
         // From controller.
@@ -159,7 +157,6 @@ const earColumnViewPropTypes = {
     }) => {
 
         const verseBarProps = {
-            handleScrollToSelectedVerse,
             handleVerseBarWheel
         }
 
@@ -179,10 +176,7 @@ const earColumnViewPropTypes = {
 
                 <LyricToggleEar />
                 <LyricToggleExpand />
-
-                <LyricToggleScroll
-                    handleScrollToSelectedVerse={handleScrollToSelectedVerse}
-                />
+                <LyricToggleScroll />
 
                 <LyricAccess />
 
