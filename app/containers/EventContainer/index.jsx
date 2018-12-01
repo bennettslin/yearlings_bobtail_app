@@ -69,6 +69,7 @@ class EventContainer extends PureComponent {
 
     render() {
         const {
+            selectSong,
             selectVerse
         } = this.props
 
@@ -77,6 +78,7 @@ class EventContainer extends PureComponent {
                 <InteractiveContainer
                     {...{
                         eventHandlers: getHandlers(this),
+                        selectSong,
                         selectVerse
                     }}
                 />

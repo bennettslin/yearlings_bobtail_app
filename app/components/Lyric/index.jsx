@@ -1,12 +1,13 @@
 // Container for lyric section.
 
-import React, { Component } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
+import LyricWheelDispatcher from '../../dispatchers/LyricWheelDispatcher'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggleEar from './Toggle/Ear'
@@ -24,7 +25,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class Lyric extends Component {
+class Lyric extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -102,6 +103,16 @@ class Lyric extends Component {
         })
     }
 
+    _handleVerseBarWheel = (e) => {
+        this.dispatchVerseBarWheel(e, this.myLyricElement)
+    }
+
+    setLyricRef = (node) => {
+        this.myLyricElement = node
+
+        this.props.setLyricRef(node)
+    }
+
     render() {
 
         const {
@@ -116,18 +127,26 @@ class Lyric extends Component {
 
             {
                 hasMounted,
-                isShown
+                isShown,
+                isTransitioningHeight
             } = this.state,
 
-            parent__shown = canLyricRender && isShown
+            isParentShown = canLyricRender && isShown
 
         return (hasMounted || canLyricRender) && (
-            <EarColumnView {...other}
-                parent__shown={parent__shown}
-                handleTransition={this._handleTransition}
-                isTransitioningHeight={this.state.isTransitioningHeight}
-                completeHeightTransition={this.completeHeightTransition}
-            />
+            <___>
+                <LyricView {...other}
+                    {...{
+                        isParentShown,
+                        handleTransition: this._handleTransition,
+                        isTransitioningHeight,
+                        completeHeightTransition: this.completeHeightTransition,
+                        handleVerseBarWheel: this._handleVerseBarWheel,
+                        setLyricRef: this.setLyricRef
+                    }}
+                />
+                <LyricWheelDispatcher {...{ getDispatch: this }} />
+            </___>
         )
     }
 }
@@ -136,29 +155,24 @@ class Lyric extends Component {
  * PRESENTATION *
  ****************/
 
-const earColumnViewPropTypes = {
+const lyricViewPropTypes = {
     // From parent.
-        parent__shown: PropTypes.bool.isRequired,
+        isParentShown: PropTypes.bool.isRequired,
         handleTransition: PropTypes.func.isRequired,
-
         handleVerseBarWheel: PropTypes.func.isRequired
     },
 
-    EarColumnView = ({
+    LyricView = ({
 
         // From props.
         handleVerseBarWheel,
 
         // From controller.
-        parent__shown,
+        isParentShown,
         handleTransition,
 
         ...other
     }) => {
-
-        const verseBarProps = {
-            handleVerseBarWheel
-        }
 
         return (
             <div
@@ -168,7 +182,7 @@ const earColumnViewPropTypes = {
                     'position__earColumn__mobile',
                     'gradientMask__earColumn__desktop',
 
-                    { 'parent__shown': parent__shown }
+                    { 'parent__shown': isParentShown }
                 )}
                 onTransitionEnd={handleTransition}
             >
@@ -181,16 +195,16 @@ const earColumnViewPropTypes = {
                 <LyricAccess />
 
                 {/* These are the only two flex children. */}
-
-                <VerseBar {...verseBarProps}
+                <VerseBar
                     isAbove
+                    {...{ handleVerseBarWheel }}
                 />
-                <VerseBar {...verseBarProps} />
+                <VerseBar {...{ handleVerseBarWheel }} />
             </div>
         )
     }
 
-EarColumnView.propTypes = earColumnViewPropTypes
+LyricView.propTypes = lyricViewPropTypes
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({

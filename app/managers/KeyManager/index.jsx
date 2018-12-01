@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateToggleStore } from 'flux/toggle/action'
+import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
@@ -34,11 +35,11 @@ class KeyManager extends PureComponent {
         isAccessOn: PropTypes.bool.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
+        updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
         eventHandlers: PropTypes.shape({
             // TODO: Specify which events are used. This isn't complete.
-            handleLyricWheel: PropTypes.func.isRequired,
             handleVerseSelect: PropTypes.func.isRequired
         }).isRequired,
         setRef: PropTypes.func.isRequired
@@ -174,20 +175,19 @@ class KeyManager extends PureComponent {
          * fine for lyric page up and down, but 300 seems to be needed for
          * navigating between annotations.
          */
-        this.props.eventHandlers.handleLyricWheel(
-            null,
-            {
-                ...!isAutoScroll && {
-                    timeoutDuration: 300
-                }
+        this.props.updateVerseBarsStore({
+            doDetermineVerseBars: true,
+            ...isAutoScroll && {
+                verseBarsTimeout: 300
             }
-        )
+        })
 
         this.props.updateToggleStore({ isAutoScroll: false })
     }
 
     render() {
         const {
+            selectSong,
             selectVerse
         } = this.props
 
@@ -198,6 +198,7 @@ class KeyManager extends PureComponent {
                         getHandle: this,
 
                         // TODO: Eventually get rid of eventHandlers object!
+                        selectSong,
                         eventHandlers: this.props.eventHandlers,
                         determineVerseBarsWithParameters: this.determineVerseBarsWithParameters
                     }}
@@ -208,6 +209,7 @@ class KeyManager extends PureComponent {
                         getEscapeHandle: this,
 
                         // TODO: Eventually get rid of eventHandlers object!
+                        selectSong,
                         eventHandlers: this.props.eventHandlers,
                         selectVerse
                     }}
@@ -232,7 +234,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAccessStore,
-        updateToggleStore
+        updateToggleStore,
+        updateVerseBarsStore
     }, dispatch)
 )
 

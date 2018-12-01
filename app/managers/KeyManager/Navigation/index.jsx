@@ -106,9 +106,7 @@ class NavigationManager extends PureComponent {
 
     render() {
         const {
-            eventHandlers: {
-                selectSong
-            },
+            selectSong,
             determineVerseBarsWithParameters
         } = this.props
 

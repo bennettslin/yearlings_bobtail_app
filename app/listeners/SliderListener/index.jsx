@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
+import { updateSliderStore } from 'flux/slider/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class SliderListener extends PureComponent {
@@ -13,14 +14,15 @@ class SliderListener extends PureComponent {
         // Through Redux.
         isSliderTouched: PropTypes.bool.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
+        updateSliderStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
-        this._handleSliderTouchIfNeeded(prevProps)
+        this._checkSliderTouched(prevProps)
     }
 
-    _handleSliderTouchIfNeeded(prevProps) {
+    _checkSliderTouched(prevProps) {
         const
             { isSliderTouched } = this.props,
             { isSliderTouched: wasSliderTouched } = prevProps
@@ -29,6 +31,17 @@ class SliderListener extends PureComponent {
             this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
             this.props.updateToggleStore({ isAccessOn: false })
         }
+
+        // This prevents a click event from registering after mouseUp.
+        if (!isSliderTouched && wasSliderTouched) {
+
+            // Let click handler get called first, then reset state.
+            setTimeout(this._resetSliderMousedUp, 0)
+        }
+    }
+
+    _resetSliderMousedUp = () => {
+        this.props.updateSliderStore({ didSliderJustMouseUp: false })
     }
 
     render() {
@@ -37,9 +50,7 @@ class SliderListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    sliderStore: {
-        isSliderTouched
-    }
+    sliderStore: { isSliderTouched }
 }) => ({
     isSliderTouched
 })
@@ -48,6 +59,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateSessionStore,
+        updateSliderStore,
         updateToggleStore
     }, dispatch)
 )

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
 
 import { getSongStanzaConfigs } from 'helpers/dataHelper'
@@ -33,7 +34,6 @@ class LyricScroll extends Component {
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,
-        handleLyricWheel: PropTypes.func.isRequired,
         setLyricRef: PropTypes.func.isRequired,
         setLyricParentRef: PropTypes.func.isRequired
     }
@@ -68,10 +68,12 @@ class LyricScroll extends Component {
     }
 
     _handleWheel = (e) => {
-        this.props.handleLyricWheel(e)
+        this.dispatchLyricWheel(e, this.myLyricElement)
     }
 
     setLyricRef = (node) => {
+        this.myLyricElement = node
+
         // For keyboard events.
         this.props.setLyricRef(node)
 
@@ -85,7 +87,6 @@ class LyricScroll extends Component {
                 canLyricRender,
                 isTransitioningHeight,
                 completeHeightTransition,
-                handleLyricWheel,
                 setLyricRef,
                 setLyricParentRef,
                 dispatch,
@@ -128,6 +129,7 @@ class LyricScroll extends Component {
                 {false && (
                     <TempGlobalAnnotations />
                 )}
+                <LyricWheelDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }

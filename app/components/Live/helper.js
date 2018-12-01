@@ -8,9 +8,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             setCarouselParentRef,
             selectSong,
             togglePlay,
-            handleLyricWheel,
-            handleVerseSelect,
-            handleVerseBarWheel
+            handleVerseSelect
         } = props,
 
         annotationPopupHandlers = {
@@ -29,9 +27,7 @@ export const getOrganisedHandlersFromProps = (props) => {
             setLyricAnnotationRef,
             setVerseRef,
             setLyricParentRef,
-            handleLyricWheel,
-            handleVerseSelect,
-            handleVerseBarWheel
+            handleVerseSelect
         },
 
         mainColumnHandlers = {

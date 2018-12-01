@@ -9,8 +9,8 @@ import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
 import { updateSliderStore } from 'flux/slider/action'
 import { updateToggleStore } from 'flux/toggle/action'
-import { updateVerseBarsStore } from 'flux/verseBars/action'
 
+import LyricWheelDispatcher from '../../dispatchers/LyricWheelDispatcher'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import RootContainer from '../RootContainer'
@@ -45,40 +45,36 @@ class InteractiveContainer extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         updateEventStore: PropTypes.func.isRequired,
         updateSliderStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
-        updateVerseBarsStore: PropTypes.func.isRequired
+        updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         // Focus lyric section when app is mounted.
-        this.focusElementForAccess()
+        this._focusElementForAccess()
     }
 
     componentDidUpdate(prevProps) {
-        const
-            { isSliderTouched } = this.props,
-            { isSliderTouched: wasSliderTouched } = prevProps
-
-        // This prevents a click event from registering after mouseUp.
-        if (!isSliderTouched && wasSliderTouched) {
-
-            // Let click handler get called first, then reset state.
-            setTimeout(this._resetSliderMousedUp, 0)
-        }
-
-        if (
-            this.props.isHiddenLyric !==
-                prevProps.isHiddenLyric ||
-            this.props.isLyricExpanded !==
-                prevProps.isLyricExpanded
-        ) {
-            // Determine whether to add or remove focus from lyric element.
-            this.focusElementForAccess()
-        }
+        this._checkLyricUnshown(prevProps)
     }
 
-    _resetSliderMousedUp = () => {
-        this.props.updateSliderStore({ didSliderJustMouseUp: false })
+    _checkLyricUnshown(prevProps) {
+        const
+            {
+                isHiddenLyric,
+                isLyricExpanded
+            } = this.props,
+            {
+                isHiddenLyric: wasHiddenLyric,
+                isLyricExpanded: wasLyricExpanded
+            } = prevProps
+
+        if (
+            isHiddenLyric !== wasHiddenLyric ||
+            isLyricExpanded !== wasLyricExpanded
+        ) {
+            // Determine whether to add or remove focus from lyric element.
+            this._focusElementForAccess()
+        }
     }
 
     _handleBodyClick = (e) => {
@@ -93,7 +89,7 @@ class InteractiveContainer extends PureComponent {
 
             // Return focus to lyric section so it can have scroll access.
             // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-            this.focusElementForAccess()
+            this._focusElementForAccess()
         }
     }
 
@@ -110,14 +106,14 @@ class InteractiveContainer extends PureComponent {
          * Prevent slider from locking up and not registering a touch move. Not
          * sure just yet if this really does the trick.
          */
-        this.focusElementForAccess()
+        this._focusElementForAccess()
 
         if (this.props.isSliderTouched) {
             this.props.updateSliderStore({ didSliderJustMouseUp: true })
         }
     }
 
-    focusElementForAccess = () => {
+    _focusElementForAccess = () => {
         const {
                 isHiddenLyric,
                 isLyricExpanded
@@ -140,6 +136,13 @@ class InteractiveContainer extends PureComponent {
         }
     }
 
+    setLyricRef = (node) => {
+        this.myLyricElement = node
+
+        // Add or remove focus.
+        this._focusElementForAccess()
+    }
+
     /**
      * TODO: This isn't the best way to handle this. Ideally, we would select
      * the verse by listening to changes in the slider verse index upon touch
@@ -159,70 +162,6 @@ class InteractiveContainer extends PureComponent {
         })
     }
 
-    handleVerseBarWheel = (e) => {
-        const { deltaY } = e.nativeEvent
-        this.myLyricElement.scrollTop += deltaY
-
-        this.props.updateVerseBarsStore({ doDetermineVerseBars: true })
-    }
-
-    handleLyricWheel = (
-        e,
-        { timeoutDuration } = {}
-    ) => {
-        let hasRoomToScroll = false
-
-        // Determine whether there is room to scroll.
-        if (e) {
-            const { deltaY = 0 } = e,
-                { scrollTop } = this.myLyricElement
-
-            if (deltaY > 0) {
-                const {
-                    scrollHeight,
-                    clientHeight
-                } = this.myLyricElement
-
-                if (scrollTop < scrollHeight - clientHeight) {
-                    hasRoomToScroll = true
-                }
-
-            } else if (deltaY < 0) {
-                if (scrollTop) {
-                    hasRoomToScroll = true
-                }
-            }
-
-            if (hasRoomToScroll) {
-
-                // Select manual scroll only if wheel moved far enough.
-                if (deltaY > 1 || deltaY < -1) {
-                    this.props.updateToggleStore({ isAutoScroll: false })
-                }
-
-            } else {
-
-                // If no room to scroll, don't bother to send event.
-                e.preventDefault()
-            }
-        }
-
-        // Determine verse bars if scrolled, or if triggered manually.
-        if (hasRoomToScroll || !e) {
-            this.props.updateVerseBarsStore({
-                doDetermineVerseBars: true,
-                verseBarsTimeout: timeoutDuration
-            })
-        }
-    }
-
-    setLyricRef = (node) => {
-        this.myLyricElement = node
-
-        // Add or remove focus.
-        this.focusElementForAccess()
-    }
-
     handleKeyDownPress = e => this.keyHandler.handleKeyDownPress(e)
     handleKeyUpPress = e => this.keyHandler.handleKeyUpPress(e)
     _setRootElement = node => this.myRootElement = node
@@ -232,14 +171,13 @@ class InteractiveContainer extends PureComponent {
         const {
                 appMounted,
                 eventHandlers,
+                selectSong,
                 selectVerse
             } = this.props,
 
             newEventHandlers = {
                 ...eventHandlers,
-                setLyricRef: this.setLyricRef,
-                handleLyricWheel: this.handleLyricWheel,
-                handleVerseBarWheel: this.handleVerseBarWheel
+                setLyricRef: this.setLyricRef
             }
 
         return appMounted && (
@@ -266,6 +204,7 @@ class InteractiveContainer extends PureComponent {
                         // TODO: Eventually get rid of eventHandlers object.
                         eventHandlers: newEventHandlers,
                         setRef: this.setKeyHandler,
+                        selectSong,
                         selectVerse
                     }}
                 />
@@ -276,6 +215,7 @@ class InteractiveContainer extends PureComponent {
                         eventHandlers: newEventHandlers
                     }}
                 />
+                <LyricWheelDispatcher {...{ getDispatch: this }} />
                 <SliderTouchDispatcher {...{ getDispatch: this }} />
                 <StopPropagationDispatcher {...{ getDispatch: this }} />
             </div>
@@ -287,8 +227,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateEventStore,
         updateSliderStore,
-        updateToggleStore,
-        updateVerseBarsStore
+        updateToggleStore
     }, dispatch)
 )
 

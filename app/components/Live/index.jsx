@@ -29,9 +29,7 @@ class Live extends PureComponent {
 
         selectSong: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
-        handleLyricWheel: PropTypes.func.isRequired,
-        handleVerseSelect: PropTypes.func.isRequired,
-        handleVerseBarWheel: PropTypes.func.isRequired
+        handleVerseSelect: PropTypes.func.isRequired
     }
 
     render() {
