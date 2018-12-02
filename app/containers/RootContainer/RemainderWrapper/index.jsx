@@ -22,8 +22,6 @@ class RemainderWrapper extends PureComponent {
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isOverlayShown: PropTypes.bool.isRequired,
-        isVerseBarAbove: PropTypes.bool.isRequired,
-        isVerseBarBelow: PropTypes.bool.isRequired,
         isCarouselNavShowable: PropTypes.bool.isRequired,
 
         isPlaying: PropTypes.bool.isRequired,
@@ -73,8 +71,6 @@ class RemainderWrapper extends PureComponent {
                 showShrunkNavIcon,
                 isScoresTipsInMain,
                 isTwoRowMenu,
-                isVerseBarAbove,
-                isVerseBarBelow,
                 isAutoScroll,
                 children
             } = this.props,
@@ -85,9 +81,7 @@ class RemainderWrapper extends PureComponent {
             }),
 
             overviewShown = selectedOverviewOption === SHOWN,
-            tipsShown = selectedTipsOption === SHOWN,
-
-            areVerseBarsShown = isVerseBarAbove || isVerseBarBelow
+            tipsShown = selectedTipsOption === SHOWN
 
         return (
             <div
@@ -138,8 +132,6 @@ class RemainderWrapper extends PureComponent {
                         isHiddenLyric ?
                             'RM__lyricHeightless' : 'RM__lyricHeighted',
 
-                        areVerseBarsShown && 'RM__verseBarShown',
-
                         {
                             'RM__manualScroll': !isAutoScroll,
                             'RM__bothEarColumnsShown': !singleShownEarColumnKey,
@@ -177,9 +169,7 @@ const mapStateToProps = ({
         isAutoScroll,
         isCarouselShown,
         isDotsSlideShown,
-        isLyricExpanded,
-        isVerseBarAbove,
-        isVerseBarBelow
+        isLyricExpanded
     },
     transientStore: {
         isOverlayShown,
@@ -229,9 +219,7 @@ const mapStateToProps = ({
     isHiddenLyric,
     showShrunkNavIcon,
     isScoresTipsInMain,
-    isTwoRowMenu,
-    isVerseBarAbove,
-    isVerseBarBelow
+    isTwoRowMenu
 })
 
 export default connect(mapStateToProps)(RemainderWrapper)
