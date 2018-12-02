@@ -62,10 +62,6 @@ class ListenerContainer extends PureComponent {
         return this.playerManager.toggleSelectedPlayer(payload)
     }
 
-    updateSelectedPlayer = (payload) => {
-        return this.playerManager.updateSelectedPlayer(payload)
-    }
-
     /**********
      * SCROLL *
      **********/
@@ -177,11 +173,9 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
                     selectVerse={this.selectVerse}
-                    updateSelectedPlayer={this.updateSelectedPlayer}
                 />
                 <TimeVerseHandler
                     setRef={this._setTimeVerseManagerRef}
-                    updateSelectedPlayer={this.updateSelectedPlayer}
                 />
                 <LogManager />
 

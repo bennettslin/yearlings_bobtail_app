@@ -2,6 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updatePlayerStore } from 'flux/player/action'
 import { updateRenderedStore } from 'flux/rendered/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
@@ -15,14 +16,14 @@ class TimeVerseHandler extends PureComponent {
         // Through Redux.
         isAutoScroll: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        updatePlayerStore: PropTypes.func.isRequired,
         updateRenderedStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired,
-        updateSelectedPlayer: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -84,9 +85,9 @@ class TimeVerseHandler extends PureComponent {
              * This is the only place where selected player will be updated
              * based on a new verse index for the same song.
              */
-            this.props.updateSelectedPlayer({
-                selectedSongIndex,
-                selectedVerseIndex
+            this.props.updatePlayerStore({
+                playerSongIndex: selectedSongIndex,
+                playerVerseIndex: selectedVerseIndex
             })
         }
     }
@@ -106,6 +107,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updatePlayerStore,
         updateRenderedStore,
         updateScrollLyricStore,
         updateSongStore,

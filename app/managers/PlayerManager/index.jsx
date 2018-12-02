@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { updateAudioStore } from 'flux/audio/action'
+import { updatePlayerStore } from 'flux/player/action'
 import { updateSongStore } from 'flux/song/action'
 
 import PlayerTimeVerseDispatcher from '../../dispatchers/PlayerTimeVerseDispatcher'
@@ -32,6 +33,10 @@ const mapStateToProps = ({
         isPlaying,
         canPlayThroughs
     },
+    playerStore: {
+        playerSongIndex,
+        playerVerseIndex
+    },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -39,6 +44,8 @@ const mapStateToProps = ({
     }
 }) => ({
     isPlaying,
+    playerSongIndex,
+    playerVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
     isSelectedLogue,
@@ -57,11 +64,14 @@ class PlayerManager extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
+        playerSongIndex: PropTypes.number.isRequired,
+        playerVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
+        updatePlayerStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -119,6 +129,8 @@ class PlayerManager extends PureComponent {
         if (this.props.canPlayThroughs !== prevProps.canPlayThroughs) {
             this._updateCanPlayThroughsObject()
         }
+
+        this._checkPlayerChange(prevProps)
     }
 
     _updateCanPlayThroughsObject() {
@@ -142,9 +154,32 @@ class PlayerManager extends PureComponent {
         })
     }
 
-    updateSelectedPlayer({
-        selectedSongIndex: nextSongIndex,
-        selectedVerseIndex: nextVerseIndex
+    _checkPlayerChange(prevProps) {
+        const {
+                playerSongIndex,
+                playerVerseIndex
+            } = this.props,
+            {
+                playerSongIndex: prevSongIndex,
+                playerVerseIndex: prevVerseIndex
+            } = prevProps
+
+        if (
+            (playerSongIndex > -1 && playerSongIndex !== prevSongIndex) ||
+            (playerVerseIndex > -1 && playerVerseIndex !== prevVerseIndex)
+        ) {
+            this._changeSelectedPlayer({
+                nextSongIndex: playerSongIndex,
+                nextVerseIndex: playerVerseIndex
+            })
+
+            this.props.updatePlayerStore()
+        }
+    }
+
+    _changeSelectedPlayer({
+        nextSongIndex,
+        nextVerseIndex
     }) {
         /**
          * If user manually changes song or verse, player manager will update
@@ -452,6 +487,7 @@ class PlayerManager extends PureComponent {
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAudioStore,
+        updatePlayerStore,
         updateSongStore
     }, dispatch)
 )

@@ -6,6 +6,7 @@ import DotsReducer from './dots/reducer'
 import EventReducer from './event/reducer'
 import LoadReducer from './load/reducer'
 import OptionReducer from './option/reducer'
+import PlayerReducer from './player/reducer'
 import RenderReducer from './render/reducer'
 import RenderableReducer from './renderable/reducer'
 import RenderedReducer from './rendered/reducer'
@@ -27,6 +28,7 @@ import {
     EVENT_STORE,
     LOAD_STORE,
     OPTION_STORE,
+    PLAYER_STORE,
     RENDER_STORE,
     RENDERABLE_STORE,
     RENDERED_STORE,
@@ -43,6 +45,7 @@ import {
 
 const rootReducer = combineReducers({
     [VERSE_BARS_STORE]: VerseBarsReducer,
+    [PLAYER_STORE]: PlayerReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
     [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SONG_STORE]: SongReducer,

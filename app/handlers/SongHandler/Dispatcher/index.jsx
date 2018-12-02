@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateAccessStore } from 'flux/access/action'
+import { updatePlayerStore } from 'flux/player/action'
 import { updateSongStore } from 'flux/song/action'
 
 import {
@@ -29,13 +30,13 @@ class SongDispatcher extends PureComponent {
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
+        updatePlayerStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
-        updateSelectedPlayer: PropTypes.func.isRequired,
 
         // From parent.
         getDispatch: PropTypes.object.isRequired
@@ -115,9 +116,9 @@ class SongDispatcher extends PureComponent {
              * This is the only place where selected player will be updated
              * based on a new song.
              */
-            this.props.updateSelectedPlayer({
-                selectedSongIndex,
-                selectedVerseIndex
+            this.props.updatePlayerStore({
+                playerSongIndex: selectedSongIndex,
+                playerVerseIndex: selectedVerseIndex
             })
         }
 
@@ -169,6 +170,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAccessStore,
+        updatePlayerStore,
         updateSongStore
     }, dispatch)
 )

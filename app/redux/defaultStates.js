@@ -40,6 +40,11 @@ const
         storedAnnotationIndex
     ),
 
+    PLAYER_DEFAULTS = {
+        playerSongIndex: -1,
+        playerVerseIndex: -1
+    },
+
     EVENT_DEFAULTS = {
         bodyClicked: false
     },
@@ -210,6 +215,7 @@ const
 
 export {
     EVENT_DEFAULTS,
+    PLAYER_DEFAULTS,
     VERSE_BARS_DEFAULTS,
     ACCESS_DEFAULTS,
     AUDIO_DEFAULTS,
