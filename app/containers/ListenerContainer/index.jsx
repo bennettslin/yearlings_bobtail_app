@@ -110,10 +110,6 @@ class ListenerContainer extends PureComponent {
      * TIME/VERSE *
      **************/
 
-    updateTime = (payload) => {
-        return this.timeVerseManager.updateTime(payload)
-    }
-
     selectVerse = (payload) => {
         return this.timeVerseManager.selectVerse(payload)
     }
@@ -168,7 +164,6 @@ class ListenerContainer extends PureComponent {
                 />
                 <PlayerManager
                     setRef={this._setPlayerManagerRef}
-                    updateTime={this.updateTime}
                     handleSongEnd={this.handleSongEnd}
                 />
                 <ScrollManager

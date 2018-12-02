@@ -7,7 +7,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { updateAudioStore } from 'flux/audio/action'
+import { updateSongStore } from 'flux/song/action'
 
+import PlayerTimeVerseDispatcher from '../../dispatchers/PlayerTimeVerseDispatcher'
 import Player from './Player'
 
 import { setNewValueInBitNumber } from 'helpers/bitHelper'
@@ -45,11 +47,9 @@ const mapStateToProps = ({
 
 // Kind of silly, but easiest approach for now.
 const LOGUE_DUMMY_PLAYER = {
-    /* eslint-disable no-empty-function */
     handleBeginPlaying: () => {},
     handleEndPlaying: () => {},
     setCurrentTime: () => {}
-    /* eslint-enable no-empty-function */
 }
 
 class PlayerManager extends PureComponent {
@@ -62,9 +62,9 @@ class PlayerManager extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
+        updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
-        updateTime: PropTypes.func.isRequired,
         handleSongEnd: PropTypes.func.isRequired,
         setRef: PropTypes.func.isRequired
     }
@@ -342,16 +342,15 @@ class PlayerManager extends PureComponent {
             ) === 0
         }
 
-        /**
-         * If current time is in selected or next verse, update selected time.
-         * Also select next verse if needed.
-         */
-        if (isTimeInSelectedVerse || isTimeInNextVerse) {
-            this.props.updateTime({
+        // If current time is in selected verse, just update selected time.
+        if (isTimeInSelectedVerse) {
+            this.props.updateSongStore({ selectedTime: currentTime })
+
+        // Otherwise, update verse and time.
+        } else if (isTimeInNextVerse) {
+            this.dispatchTimeVerse({
                 currentTime,
-                ...isTimeInNextVerse && {
-                    nextVerseIndex
-                }
+                nextVerseIndex
             })
 
         } else {
@@ -443,6 +442,7 @@ class PlayerManager extends PureComponent {
                         />
                     )
                 })}
+                <PlayerTimeVerseDispatcher {...{ getDispatch: this }} />
             </div>
         )
     }
@@ -451,7 +451,8 @@ class PlayerManager extends PureComponent {
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateAudioStore
+        updateAudioStore,
+        updateSongStore
     }, dispatch)
 )
 
