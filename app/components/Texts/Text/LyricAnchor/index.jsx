@@ -247,9 +247,9 @@ class TextLyricAnchor extends Component {
                         }}
                     />
                 </span>
-                <AnnotationDispatcher {...{ getDispatch: this }} />
-                <StopPropagationDispatcher {...{ getDispatch: this }} />
-                <WikiDispatcher {...{ getDispatch: this }} />
+                <AnnotationDispatcher {...{ parentThis: this }} />
+                <StopPropagationDispatcher {...{ parentThis: this }} />
+                <WikiDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

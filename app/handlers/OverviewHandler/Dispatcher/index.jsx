@@ -19,11 +19,11 @@ class OverviewDispatcher extends PureComponent {
         updateOptionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchOverview = this.dispatchOverview
+        this.props.parentThis.dispatchOverview = this.dispatchOverview
     }
 
     dispatchOverview = ({

@@ -20,11 +20,11 @@ class EarColumnDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchEarColumn = this.dispatchEarColumn
+        this.props.parentThis.dispatchEarColumn = this.dispatchEarColumn
     }
 
     dispatchEarColumn = ({

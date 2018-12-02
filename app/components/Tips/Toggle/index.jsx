@@ -48,7 +48,7 @@ class TipsToggle extends PureComponent {
                         handleButtonClick: this.handleTipsClick
                     }}
                 />
-                <TipsDispatcher {...{ getDispatch: this }} />
+                <TipsDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

@@ -124,7 +124,7 @@ class Button extends Component {
                         />
                     )}
                 </div>
-                <StopPropagationDispatcher {...{ getDispatch: this }} />
+                <StopPropagationDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

@@ -72,7 +72,7 @@ class LyricToggleExpand extends PureComponent {
                         handleButtonClick: this.handleLyricClick
                     }}
                 />
-                <LyricDispatcher {...{ getDispatch: this }} />
+                <LyricDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

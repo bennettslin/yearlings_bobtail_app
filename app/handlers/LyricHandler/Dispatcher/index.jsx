@@ -16,11 +16,11 @@ class LyricDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchLyricExpand = this.dispatchLyricExpand
+        this.props.parentThis.dispatchLyricExpand = this.dispatchLyricExpand
     }
 
     dispatchLyricExpand = (

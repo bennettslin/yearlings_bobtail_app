@@ -20,11 +20,11 @@ class CarouselDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchCarousel = this.dispatchCarousel
+        this.props.parentThis.dispatchCarousel = this.dispatchCarousel
     }
 
     dispatchCarousel = (

@@ -50,7 +50,7 @@ class CarouselToggle extends Component {
                         handleButtonClick: this.handleButtonClick
                     }}
                 />
-                <CarouselDispatcher {...{ getDispatch: this }} />
+                <CarouselDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

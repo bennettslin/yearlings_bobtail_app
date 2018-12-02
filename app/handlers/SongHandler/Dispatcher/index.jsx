@@ -22,7 +22,7 @@ class SongDispatcher extends PureComponent {
 
     // TODO: Eventually get rid of this.
     static defaultProps = {
-        getDispatch: {}
+        parentThis: {}
     }
 
     static propTypes = {
@@ -38,13 +38,13 @@ class SongDispatcher extends PureComponent {
         togglePlay: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
         this.props.setRef(this)
-        this.props.getDispatch.handleSongEnd = this.handleSongEnd
-        this.props.getDispatch.selectSong = this.selectSong
+        this.props.parentThis.handleSongEnd = this.handleSongEnd
+        this.props.parentThis.selectSong = this.selectSong
     }
 
     handleSongEnd = () => {

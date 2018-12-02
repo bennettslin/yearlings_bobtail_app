@@ -18,11 +18,11 @@ class SceneDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchScene = this.dispatchScene
+        this.props.parentThis.dispatchScene = this.dispatchScene
     }
 
     dispatchScene = (direction) => {
@@ -47,7 +47,7 @@ class SceneDispatcher extends PureComponent {
 
     render() {
         return (
-            <VerseDispatcher {...{ getDispatch: this }} />
+            <VerseDispatcher {...{ parentThis: this }} />
         )
     }
 }

@@ -106,7 +106,7 @@ class Slider extends PureComponent {
                 <SliderStanzas />
                 <SliderScenes />
                 <SliderAccess />
-                <SliderTouchDispatcher {...{ getDispatch: this }} />
+                <SliderTouchDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

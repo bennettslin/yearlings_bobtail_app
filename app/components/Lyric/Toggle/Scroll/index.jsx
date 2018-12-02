@@ -33,7 +33,7 @@ class LyricToggleScroll extends PureComponent {
                         handleButtonClick: this._handleScrollClick
                     }}
                 />
-                <ScrollVerseDispatcher {...{ getDispatch: this }} />
+                <ScrollVerseDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

@@ -55,7 +55,7 @@ class LyricToggleEar extends PureComponent {
                         handleButtonClick: this.handleDoublespeakerClick
                     }}
                 />
-                <EarColumnDispatcher {...{ getDispatch: this }} />
+                <EarColumnDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

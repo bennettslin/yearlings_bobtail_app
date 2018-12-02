@@ -58,7 +58,7 @@ class OverviewToggle extends PureComponent {
                         handleButtonClick: this.handleOverviewClick
                     }}
                 />
-                <OverviewDispatcher {...{ getDispatch: this }} />
+                <OverviewDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

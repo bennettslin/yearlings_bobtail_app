@@ -138,7 +138,7 @@ class UnitDot extends Component {
                         handleAnchorClick: this._handleDotButtonClick
                     }}
                 />
-                <AnnotationDispatcher {...{ getDispatch: this }} />
+                <AnnotationDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

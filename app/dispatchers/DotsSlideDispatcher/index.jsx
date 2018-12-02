@@ -15,11 +15,11 @@ class DotsSlideDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchDotsSlide = this.dispatchDotsSlide
+        this.props.parentThis.dispatchDotsSlide = this.dispatchDotsSlide
     }
 
     dispatchDotsSlide = (

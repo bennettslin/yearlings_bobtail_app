@@ -13,11 +13,11 @@ class StopPropagationDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchStopPropagation = this.dispatchStopPropagation
+        this.props.parentThis.dispatchStopPropagation = this.dispatchStopPropagation
     }
 
     dispatchStopPropagation = (e) => {

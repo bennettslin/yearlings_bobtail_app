@@ -78,7 +78,7 @@ class TitleToggle extends PureComponent {
                 ) : (
                     titleButtonChild
                 )}
-                <TitleDispatcher {...{ getDispatch: this }} />
+                <TitleDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

@@ -22,11 +22,11 @@ class VerseDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchVerse = this.dispatchVerse
+        this.props.parentThis.dispatchVerse = this.dispatchVerse
     }
 
     dispatchVerse = ({

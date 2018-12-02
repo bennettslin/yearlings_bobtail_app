@@ -118,7 +118,8 @@ class LyricScroll extends Component {
 
         return songStanzaConfigs.length && (
             <___>
-                <ScrollLyricListener {...{ getRefs: this }} />
+                <LyricWheelDispatcher {...{ parentThis: this }} />
+                <ScrollLyricListener {...{ parentThis: this }} />
                 <VerseBarListener {...{ getVerseElement: this._getVerseElement }} />
                 <div
                     ref={this._setLyricParentForAll}
@@ -146,7 +147,6 @@ class LyricScroll extends Component {
                     {false && (
                         <TempGlobalAnnotations />
                     )}
-                    <LyricWheelDispatcher {...{ getDispatch: this }} />
                 </div>
             </___>
         )

@@ -15,12 +15,12 @@ class LyricWheelDispatcher extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchLyricWheel = this.dispatchLyricWheel
-        this.props.getDispatch.dispatchVerseBarWheel = this.dispatchVerseBarWheel
+        this.props.parentThis.dispatchLyricWheel = this.dispatchLyricWheel
+        this.props.parentThis.dispatchVerseBarWheel = this.dispatchVerseBarWheel
     }
 
     dispatchLyricWheel = (

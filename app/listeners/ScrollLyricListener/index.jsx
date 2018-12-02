@@ -31,16 +31,16 @@ class ScrollLyricListener extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     carouselAnnotationElements = {}
 
     componentDidMount() {
-        this.props.getRefs.setVerse = this.setVerse
-        this.props.getRefs.setLyricAnnotation = this.setLyricAnnotation
-        this.props.getRefs.setLyricParent = this.setLyricParent
-        this.props.getRefs.getVerseElement = this.getVerseElement
+        this.props.parentThis.setVerse = this.setVerse
+        this.props.parentThis.setLyricAnnotation = this.setLyricAnnotation
+        this.props.parentThis.setLyricParent = this.setLyricParent
+        this.props.parentThis.getVerseElement = this.getVerseElement
     }
 
     verseElements = {}

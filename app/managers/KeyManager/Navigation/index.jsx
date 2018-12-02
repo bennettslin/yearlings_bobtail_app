@@ -130,7 +130,7 @@ class NavigationManager extends PureComponent {
                         selectSong
                     }}
                 />
-                <VerseDispatcher {...{ getDispatch: this }} />
+                <VerseDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

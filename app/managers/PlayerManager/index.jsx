@@ -477,7 +477,7 @@ class PlayerManager extends PureComponent {
                         />
                     )
                 })}
-                <PlayerTimeVerseDispatcher {...{ getDispatch: this }} />
+                <PlayerTimeVerseDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

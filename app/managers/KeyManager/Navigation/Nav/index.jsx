@@ -103,7 +103,7 @@ class NavNavigation extends PureComponent {
 
     render() {
         return (
-            <NavDispatcher {...{ getDispatch: this }} />
+            <NavDispatcher {...{ parentThis: this }} />
         )
     }
 }

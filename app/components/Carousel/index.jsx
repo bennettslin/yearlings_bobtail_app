@@ -171,7 +171,7 @@ class Carousel extends PureComponent {
                     { 'parent__shown': canCarouselRender && isShown }
                 )}
             >
-                <ScrollCarouselListener {...{ getRefs: this }} />
+                <ScrollCarouselListener {...{ parentThis: this }} />
                 <div
                     ref={this._setCarouselParent}
                     className="Carousel__scroll"

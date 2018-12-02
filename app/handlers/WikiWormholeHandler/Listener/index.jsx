@@ -47,7 +47,7 @@ class WikiWormholeListener extends PureComponent {
 
     render() {
         return (
-            <WikiWormholeDispatcher {...{ getDispatch: this }} />
+            <WikiWormholeDispatcher {...{ parentThis: this }} />
         )
     }
 }

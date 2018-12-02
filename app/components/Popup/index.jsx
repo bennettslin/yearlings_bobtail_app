@@ -121,7 +121,7 @@ class Popup extends PureComponent {
                         handleContainerClick: this.handleContainerClick
                     }}
                 />
-                <StopPropagationDispatcher {...{ getDispatch: this }} />
+                <StopPropagationDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

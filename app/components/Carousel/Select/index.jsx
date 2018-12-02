@@ -47,7 +47,7 @@ class CarouselSelect extends PureComponent {
                         handleButtonClick: this._handleAnnotationNext
                     }}
                 />
-                <AnnotationDispatcher {...{ getDispatch: this }} />
+                <AnnotationDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

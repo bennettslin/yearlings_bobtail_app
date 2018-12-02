@@ -106,7 +106,7 @@ class CarouselAnnotation extends Component {
                         handleTitleClick: this._handleAnnotationTitleClick
                     }}
                 />
-                <AnnotationDispatcher {...{ getDispatch: this }} />
+                <AnnotationDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

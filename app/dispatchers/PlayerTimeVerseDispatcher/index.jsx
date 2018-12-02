@@ -19,11 +19,11 @@ class PlayerTimeVerseDispatcher extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchPlayerTimeVerse = this.dispatchPlayerTimeVerse
+        this.props.parentThis.dispatchPlayerTimeVerse = this.dispatchPlayerTimeVerse
     }
 
     dispatchPlayerTimeVerse = ({

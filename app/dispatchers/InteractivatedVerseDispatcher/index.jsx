@@ -21,12 +21,12 @@ class InteractivatedVerseDispatcher extends PureComponent {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchInteractivatedVerseIndex = this.dispatchInteractivatedVerseIndex
-        this.props.getDispatch.dispatchInteractivatedVerseDirection = this.dispatchInteractivatedVerseDirection
+        this.props.parentThis.dispatchInteractivatedVerseIndex = this.dispatchInteractivatedVerseIndex
+        this.props.parentThis.dispatchInteractivatedVerseDirection = this.dispatchInteractivatedVerseDirection
     }
 
     dispatchInteractivatedVerseIndex = (interactivatedVerseIndex = -1) => {

@@ -60,7 +60,7 @@ class AnnotationListener extends PureComponent {
 
     render() {
         return (
-            <AnnotationDispatcher {...{ getDispatch: this }} />
+            <AnnotationDispatcher {...{ parentThis: this }} />
         )
     }
 }

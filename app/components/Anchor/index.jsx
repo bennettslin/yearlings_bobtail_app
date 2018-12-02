@@ -132,7 +132,7 @@ class Anchor extends Component {
                         }}
                     />
                 )}
-                <StopPropagationDispatcher {...{ getDispatch: this }} />
+                <StopPropagationDispatcher {...{ parentThis: this }} />
             </a>
         )
     }

@@ -83,7 +83,7 @@ class NavColumn extends PureComponent {
                         }}
                     />
                 }
-                <NavDispatcher {...{ getDispatch: this }} />
+                <NavDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

@@ -169,7 +169,7 @@ class VerseBar extends Component {
                         }}
                     />
                 </div>
-                <ScrollVerseDispatcher {...{ getDispatch: this }} />
+                <ScrollVerseDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

@@ -16,11 +16,11 @@ class ScrollVerseDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchScrollVerse = this.dispatchScrollVerse
+        this.props.parentThis.dispatchScrollVerse = this.dispatchScrollVerse
     }
 
     dispatchScrollVerse = (isAutoScroll) => {

@@ -66,7 +66,7 @@ class DotsSlide extends PureComponent {
                         setHasInteractivatedDotText: this._setHasInteractivatedDotText
                     }}
                 />
-                <StopPropagationDispatcher {...{ getDispatch: this }} />
+                <StopPropagationDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

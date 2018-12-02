@@ -152,7 +152,7 @@ class AudioButtons extends PureComponent {
                         handleButtonClick={this._handleAudioOptionClick}
                     />
                 </div>
-                <AudioOptionDispatcher {...{ getDispatch: this }} />
+                <AudioOptionDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

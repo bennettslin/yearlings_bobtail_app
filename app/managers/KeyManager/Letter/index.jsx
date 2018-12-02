@@ -201,19 +201,19 @@ class LetterManager extends PureComponent {
     render() {
         return (
             <___>
-                <AdminDispatcher {...{ getDispatch: this }} />
-                <AudioOptionDispatcher {...{ getDispatch: this }} />
-                <CarouselDispatcher {...{ getDispatch: this }} />
-                <DotsSlideDispatcher {...{ getDispatch: this }} />
-                <EarColumnDispatcher {...{ getDispatch: this }} />
-                <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
-                <LyricDispatcher {...{ getDispatch: this }} />
-                <OverviewDispatcher {...{ getDispatch: this }} />
-                <TipsDispatcher {...{ getDispatch: this }} />
-                <SceneDispatcher {...{ getDispatch: this }} />
-                <ScoreDispatcher {...{ getDispatch: this }} />
-                <ScrollVerseDispatcher {...{ getDispatch: this }} />
-                <TitleDispatcher {...{ getDispatch: this }} />
+                <AdminDispatcher {...{ parentThis: this }} />
+                <AudioOptionDispatcher {...{ parentThis: this }} />
+                <CarouselDispatcher {...{ parentThis: this }} />
+                <DotsSlideDispatcher {...{ parentThis: this }} />
+                <EarColumnDispatcher {...{ parentThis: this }} />
+                <InteractivatedVerseDispatcher {...{ parentThis: this }} />
+                <LyricDispatcher {...{ parentThis: this }} />
+                <OverviewDispatcher {...{ parentThis: this }} />
+                <TipsDispatcher {...{ parentThis: this }} />
+                <SceneDispatcher {...{ parentThis: this }} />
+                <ScoreDispatcher {...{ parentThis: this }} />
+                <ScrollVerseDispatcher {...{ parentThis: this }} />
+                <TitleDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

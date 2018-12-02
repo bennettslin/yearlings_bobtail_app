@@ -79,7 +79,7 @@ class AnnotationPopup extends PureComponent {
                     isSelected
                     {...{ annotationIndex: popupAnnotationIndex }}
                 />
-                <AnnotationDispatcher {...{ getDispatch: this }} />
+                <AnnotationDispatcher {...{ parentThis: this }} />
             </Popup>
         )
     }

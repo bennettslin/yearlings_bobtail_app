@@ -26,14 +26,14 @@ class ScrollListener extends PureComponent {
         updateScrollCarouselStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     carouselAnnotationElements = {}
 
     componentDidMount() {
-        this.props.getRefs.setCarouselAnnotation = this.setCarouselAnnotation
-        this.props.getRefs.setCarouselParent = this.setCarouselParent
+        this.props.parentThis.setCarouselAnnotation = this.setCarouselAnnotation
+        this.props.parentThis.setCarouselParent = this.setCarouselParent
     }
 
     componentDidUpdate(prevProps) {

@@ -106,7 +106,7 @@ class ScoresTips extends Component {
                 />
                 }
                 <TipsToggle {...{ className: 'ScoresTipsButton' }} />
-                <ScoreDispatcher {...{ getDispatch: this }} />
+                <ScoreDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

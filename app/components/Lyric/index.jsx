@@ -157,8 +157,8 @@ class Lyric extends PureComponent {
                         setLyricRef: this.setLyricRef
                     }}
                 />
-                <VerseDispatcher {...{ getDispatch: this }} />
-                <LyricWheelDispatcher {...{ getDispatch: this }} />
+                <VerseDispatcher {...{ parentThis: this }} />
+                <LyricWheelDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

@@ -121,8 +121,8 @@ class Verse extends Component {
                         handleInteractivatableClick: this._handleInteractivatableClick
                     }}
                 />
-                <InteractivatedVerseDispatcher {...{ getDispatch: this }} />
-                <StopPropagationDispatcher {...{ getDispatch: this }} />
+                <InteractivatedVerseDispatcher {...{ parentThis: this }} />
+                <StopPropagationDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

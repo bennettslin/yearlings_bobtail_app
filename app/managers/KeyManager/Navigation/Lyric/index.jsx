@@ -98,8 +98,8 @@ class LyricNavigation extends PureComponent {
     render() {
         return (
             <___>
-                <AnnotationDispatcher {...{ getDispatch: this }} />
-                <AnnotationAccessDispatcher {...{ getDispatch: this }} />
+                <AnnotationDispatcher {...{ parentThis: this }} />
+                <AnnotationAccessDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

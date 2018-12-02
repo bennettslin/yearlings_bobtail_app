@@ -96,7 +96,7 @@ class DotsSlideSelect extends Component {
                         handleTextContainerClick: this._handleTextContainerClick
                     }}
                 />
-                <DotSelectDispatcher {...{ getDispatch: this }} />
+                <DotSelectDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

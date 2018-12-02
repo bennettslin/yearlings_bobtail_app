@@ -28,13 +28,13 @@ class SliderTouchDispatcher extends PureComponent {
         updateSliderStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchTouchBegin = this.dispatchTouchBegin
-        this.props.getDispatch.dispatchTouchMove = this.dispatchTouchMove
-        this.props.getDispatch.dispatchTouchEnd = this.dispatchTouchEnd
+        this.props.parentThis.dispatchTouchBegin = this.dispatchTouchBegin
+        this.props.parentThis.dispatchTouchMove = this.dispatchTouchMove
+        this.props.parentThis.dispatchTouchEnd = this.dispatchTouchEnd
     }
 
     // TODO: These can easily just be a single method.
@@ -154,7 +154,7 @@ class SliderTouchDispatcher extends PureComponent {
 
     render() {
         return (
-            <VerseDispatcher {...{ getDispatch: this }} />
+            <VerseDispatcher {...{ parentThis: this }} />
         )
     }
 }

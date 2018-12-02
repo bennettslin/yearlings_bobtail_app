@@ -14,11 +14,11 @@ class TitleDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchTitle = this.dispatchTitle
+        this.props.parentThis.dispatchTitle = this.dispatchTitle
     }
 
     dispatchTitle = (

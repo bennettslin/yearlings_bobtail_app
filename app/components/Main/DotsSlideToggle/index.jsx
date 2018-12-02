@@ -30,7 +30,7 @@ class DotsSlideToggle extends Component {
                         handleButtonClick: this.handleButtonClick
                     }}
                 />
-                <DotsSlideDispatcher {...{ getDispatch: this }} />
+                <DotsSlideDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

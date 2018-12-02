@@ -121,7 +121,7 @@ class Annotation extends Component {
                             })
                     }}
                 />
-                <StopPropagationDispatcher {...{ getDispatch: this }} />
+                <StopPropagationDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

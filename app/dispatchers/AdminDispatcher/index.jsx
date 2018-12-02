@@ -14,11 +14,11 @@ class AdminDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getDispatch: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchAdmin = this.dispatchAdmin
+        this.props.parentThis.dispatchAdmin = this.dispatchAdmin
     }
 
     dispatchAdmin = (

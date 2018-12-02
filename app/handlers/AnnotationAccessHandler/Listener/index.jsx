@@ -81,7 +81,7 @@ class AnnotationAccessListener extends PureComponent {
 
     render() {
         return (
-            <AnnotationAccessDispatcher {...{ getDispatch: this }} />
+            <AnnotationAccessDispatcher {...{ parentThis: this }} />
         )
     }
 }

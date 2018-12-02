@@ -133,9 +133,9 @@ class AnnotationNavigation extends PureComponent {
     render() {
         return (
             <___>
-                <AnnotationDispatcher {...{ getDispatch: this }} />
-                <WikiDispatcher {...{ getDispatch: this }} />
-                <WikiWormholeDispatcher {...{ getDispatch: this }} />
+                <AnnotationDispatcher {...{ parentThis: this }} />
+                <WikiDispatcher {...{ parentThis: this }} />
+                <WikiWormholeDispatcher {...{ parentThis: this }} />
             </___>
         )
     }
