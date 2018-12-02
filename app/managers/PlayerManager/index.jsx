@@ -142,6 +142,36 @@ class PlayerManager extends PureComponent {
         })
     }
 
+    updateSelectedPlayer({
+        selectedSongIndex: nextSongIndex,
+        selectedVerseIndex: nextVerseIndex
+    }) {
+        /**
+         * If user manually changes song or verse, player manager will update
+         * the player. This allows the player not to have to watch for these
+         * changes itself, which is needed because it can't tell the difference
+         * between manual and automatic verse changes.
+         */
+
+        // Increment session id right away.
+        this.sessionState.currentSessionId++
+
+        clearTimeout(this.playerState.nextSelectedTimeoutId)
+
+        const nextSelectedTimeoutId = setTimeout(
+            this._handleSelectPlayer,
+            200
+        )
+
+        this.playerState = {
+            nextSelectedTimeoutId,
+
+            // Store next song and verse in component state for callback.
+            nextSongIndex,
+            nextVerseIndex
+        }
+    }
+
     _playerShouldRender(playerSongIndex) {
         const {
             canPlayThroughsObject,
@@ -200,36 +230,6 @@ class PlayerManager extends PureComponent {
         // Playing.
         } else if (isPlaying && !wasPlaying) {
             return this.askPlayerToBeginPlaying(selectedSongIndex)
-        }
-    }
-
-    updateSelectedPlayer({
-        selectedSongIndex: nextSongIndex,
-        selectedVerseIndex: nextVerseIndex
-    }) {
-        /**
-         * If user manually changes song or verse, player manager will update
-         * the player. This allows the player not to have to watch for these
-         * changes itself, which is needed because it can't tell the difference
-         * between manual and automatic verse changes.
-         */
-
-        // Increment session id right away.
-        this.sessionState.currentSessionId++
-
-        clearTimeout(this.playerState.nextSelectedTimeoutId)
-
-        const nextSelectedTimeoutId = setTimeout(
-            this._handleSelectPlayer,
-            200
-        )
-
-        this.playerState = {
-            nextSelectedTimeoutId,
-
-            // Store next song and verse in component state for callback.
-            nextSongIndex,
-            nextVerseIndex
         }
     }
 
