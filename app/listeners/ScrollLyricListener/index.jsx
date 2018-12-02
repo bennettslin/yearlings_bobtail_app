@@ -37,8 +37,8 @@ class ScrollLyricListener extends PureComponent {
     carouselAnnotationElements = {}
 
     componentDidMount() {
-        this.props.parentThis.setVerse = this.setVerse
-        this.props.parentThis.setLyricAnnotation = this.setLyricAnnotation
+        this.props.parentThis.setVerseElement = this.setVerseElement
+        this.props.parentThis.setLyricAnnotationElement = this.setLyricAnnotationElement
         this.props.parentThis.setLyricParent = this.setLyricParent
         this.props.parentThis.getVerseElement = this.getVerseElement
     }
@@ -107,7 +107,7 @@ class ScrollLyricListener extends PureComponent {
         return this.verseElements[verseIndex]
     }
 
-    setVerse = ({ node, index }) => {
+    setVerseElement = ({ node, index }) => {
         if (!this.props.isSelectedLogue) {
             setChildElement({
                 node,
@@ -117,7 +117,7 @@ class ScrollLyricListener extends PureComponent {
         }
     }
 
-    setLyricAnnotation = ({ node, index }) => {
+    setLyricAnnotationElement = ({ node, index }) => {
         if (!this.props.isSelectedLogue) {
             setChildElement({
                 node,

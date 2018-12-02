@@ -122,8 +122,8 @@ class Carousel extends PureComponent {
         return this.setCarouselParent(node)
     }
 
-    _setCarouselAnnotation = (payload) => {
-        return this.setCarouselAnnotation(payload)
+    _setCarouselAnnotationElement = (payload) => {
+        return this.setCarouselAnnotationElement(payload)
     }
 
     render() {
@@ -207,7 +207,7 @@ class Carousel extends PureComponent {
                                     annotationIndex,
                                     isAccessed,
                                     isSelected,
-                                    setCarouselAnnotation: this._setCarouselAnnotation
+                                    setCarouselAnnotationElement: this._setCarouselAnnotationElement
                                 }}
                             />
                         )

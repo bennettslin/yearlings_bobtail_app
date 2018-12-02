@@ -156,7 +156,7 @@ class UnitView extends Component {
         isDotOnly: PropTypes.bool.isRequired,
         isSideBottomOnly: PropTypes.bool.isRequired,
 
-        setLyricAnnotation: PropTypes.func.isRequired
+        setLyricAnnotationElement: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -199,7 +199,7 @@ class UnitView extends Component {
 
             {
                 subsequent,
-                setLyricAnnotation
+                setLyricAnnotationElement
             } = other
 
         return (
@@ -271,7 +271,7 @@ class UnitView extends Component {
                         isLastUnit={isDotOnly && isLastUnit}
                         dotStanzaObject={dotCard}
                         {...{
-                            setLyricAnnotation
+                            setLyricAnnotationElement
                         }}
                     />
                 }

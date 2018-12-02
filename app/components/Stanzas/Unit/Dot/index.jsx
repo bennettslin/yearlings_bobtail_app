@@ -54,7 +54,7 @@ class UnitDot extends Component {
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
-        setLyricAnnotation: PropTypes.func.isRequired
+        setLyricAnnotationElement: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -80,8 +80,8 @@ class UnitDot extends Component {
         }
     }
 
-    setLyricAnnotation = (node) => {
-        this.props.setLyricAnnotation({
+    setLyricAnnotationElement = (node) => {
+        this.props.setLyricAnnotationElement({
             node,
             index: this.props.dotStanzaObject.annotationIndex
         })
@@ -129,7 +129,7 @@ class UnitDot extends Component {
             <___>
                 <UnitDotView
                     {...{
-                        setRef: this.setLyricAnnotation,
+                        setRef: this.setLyricAnnotationElement,
                         dotKeys,
                         isSelected,
                         isAccessed,

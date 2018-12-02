@@ -115,19 +115,21 @@ class Lyric extends PureComponent {
     }
 
     _handleVerseBarWheel = (e) => {
-        this.dispatchVerseBarWheel(e, this.myLyricElement)
+        this.dispatchVerseBarWheel(e, this.lyricElement)
     }
 
-    setLyricRef = (node) => {
-        this.myLyricElement = node
+    setLyricElement = (node) => {
+        // For verse wheel.
+        this.lyricElement = node
 
-        this.props.setLyricRef(node)
+        this.props.setLyricFocusElement(node)
     }
 
     render() {
 
         const {
                 /* eslint-disable no-unused-vars */
+                setLyricFocusElement,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -154,7 +156,7 @@ class Lyric extends PureComponent {
                         completeHeightTransition: this.completeHeightTransition,
                         handleVerseBarWheel: this._handleVerseBarWheel,
                         handleVerseSelect: this._handleVerseSelect,
-                        setLyricRef: this.setLyricRef
+                        setLyricElement: this.setLyricElement
                     }}
                 />
                 <VerseDispatcher {...{ parentThis: this }} />

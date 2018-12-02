@@ -116,15 +116,15 @@ class InteractiveContainer extends PureComponent {
             } = this.props,
 
             doFocusLyricElement =
-                this.myLyricElement &&
+                this.lyricElement &&
                     (
                         !isHiddenLyric ||
                         isLyricExpanded
                     )
 
         let focusedElement = doFocusLyricElement ?
-            this.myLyricElement :
-            this.myRootElement
+            this.lyricElement :
+            this.rootElement
 
         if (focusedElement) {
             logger.warn(`Focus: ${doFocusLyricElement ? 'Lyric' : 'Root'}`)
@@ -132,8 +132,8 @@ class InteractiveContainer extends PureComponent {
         }
     }
 
-    setLyricRef = (node) => {
-        this.myLyricElement = node
+    setLyricFocusElement = (node) => {
+        this.lyricElement = node
 
         // Add or remove focus.
         this._focusElementForAccess()
@@ -141,7 +141,7 @@ class InteractiveContainer extends PureComponent {
 
     handleKeyDownPress = e => this.keyHandler.handleKeyDownPress(e)
     handleKeyUpPress = e => this.keyHandler.handleKeyUpPress(e)
-    _setRootElement = node => this.myRootElement = node
+    _setRootElement = node => this.rootElement = node
     setKeyHandler = node => this.keyHandler = node
 
     render() {
@@ -153,7 +153,7 @@ class InteractiveContainer extends PureComponent {
 
             newEventHandlers = {
                 ...eventHandlers,
-                setLyricRef: this.setLyricRef
+                setLyricFocusElement: this.setLyricFocusElement
             }
 
         return appMounted && (

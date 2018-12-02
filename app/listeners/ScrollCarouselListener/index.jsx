@@ -32,7 +32,7 @@ class ScrollListener extends PureComponent {
     carouselAnnotationElements = {}
 
     componentDidMount() {
-        this.props.parentThis.setCarouselAnnotation = this.setCarouselAnnotation
+        this.props.parentThis.setCarouselAnnotationElement = this.setCarouselAnnotationElement
         this.props.parentThis.setCarouselParent = this.setCarouselParent
     }
 
@@ -80,7 +80,7 @@ class ScrollListener extends PureComponent {
         }
     }
 
-    setCarouselAnnotation = ({ node, index }) => {
+    setCarouselAnnotationElement = ({ node, index }) => {
         if (!this.props.isSelectedLogue) {
             setChildElement({
                 node,

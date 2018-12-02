@@ -1,6 +1,6 @@
 export const getOrganisedHandlersFromProps = (props) => {
     const {
-            setLyricRef,
+            setLyricFocusElement,
             selectSong,
             togglePlay
         } = props,
@@ -17,7 +17,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
 
         lyricHandlers = {
-            setLyricRef
+            setLyricFocusElement
         },
 
         mainColumnHandlers = {

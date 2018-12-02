@@ -36,7 +36,7 @@ class LyricScroll extends Component {
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,
-        setLyricRef: PropTypes.func.isRequired
+        setLyricElement: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -69,28 +69,30 @@ class LyricScroll extends Component {
     }
 
     _handleWheel = (e) => {
-        this.dispatchLyricWheel(e, this.myLyricElement)
+        this.dispatchLyricWheel(e, this.lyricElement)
     }
 
-    _setLyricParentForAll = (node) => {
-        this.myLyricElement = node
+    _setLyricElement = (node) => {
+        // For lyric wheel.
+        this.lyricElement = node
 
-        // For focus.
-        this.props.setLyricRef(node)
+        // For focus and verse wheel.
+        this.props.setLyricElement(node)
 
         // For scrolling.
         return this.setLyricParent(node)
     }
 
-    _setVerse = (payload) => {
-        return this.setVerse(payload)
+    _setVerseElement = (payload) => {
+        return this.setVerseElement(payload)
     }
 
-    _setLyricAnnotation = (payload) => {
-        return this.setLyricAnnotation(payload)
+    _setLyricAnnotationElement = (payload) => {
+        return this.setLyricAnnotationElement(payload)
     }
 
     _getVerseElement = (verseIndex) => {
+        // Verse elements are stored in scroll lyric listener.
         return this.getVerseElement(verseIndex)
     }
 
@@ -100,7 +102,7 @@ class LyricScroll extends Component {
                 canLyricRender,
                 isTransitioningHeight,
                 completeHeightTransition,
-                setLyricRef,
+                setLyricElement,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -118,11 +120,12 @@ class LyricScroll extends Component {
 
         return songStanzaConfigs.length && (
             <___>
-                <LyricWheelDispatcher {...{ parentThis: this }} />
                 <ScrollLyricListener {...{ parentThis: this }} />
-                <VerseBarListener {...{ getVerseElement: this._getVerseElement }} />
+                <VerseBarListener
+                    {...{ getVerseElement: this._getVerseElement }}
+                />
                 <div
-                    ref={this._setLyricParentForAll}
+                    ref={this._setLyricElement}
                     className={cx(
                         'LyricScroll',
                         'absoluteFullContainer',
@@ -139,8 +142,8 @@ class LyricScroll extends Component {
                             {...{
                                 songStanzaConfigs,
                                 lastUnitDotCardIndex,
-                                setLyricAnnotation: this._setLyricAnnotation,
-                                setVerseRef: this._setVerse
+                                setLyricAnnotationElement: this._setLyricAnnotationElement,
+                                setVerseRef: this._setVerseElement
                             }}
                         />
                     )}
@@ -148,6 +151,7 @@ class LyricScroll extends Component {
                         <TempGlobalAnnotations />
                     )}
                 </div>
+                <LyricWheelDispatcher {...{ parentThis: this }} />
             </___>
         )
     }
