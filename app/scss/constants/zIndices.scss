@@ -26,10 +26,10 @@ $zIndex__leftShelf: $zIndex__annotation + 1;
 $zIndex__centreFieldChild: $zIndex__leftShelf + 1;
 
 // Lyrics should be higher than anything in centre field.
-$zIndex__earColumn: $zIndex__centreFieldChild + 1;
+$zIndex__lyricColumn: $zIndex__centreFieldChild + 1;
 
 // Cursor verse is above all other verses.
-$zIndex__cursorVerse: $zIndex__earColumn + 1;
+$zIndex__cursorVerse: $zIndex__lyricColumn + 1;
 
 /**
  * For verse audio button to stay on top of next verse, and text span to stay

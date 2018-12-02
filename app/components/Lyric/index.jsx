@@ -193,9 +193,9 @@ const lyricViewPropTypes = {
             <div
                 className={cx(
                     'Lyric',
-                    'position__earColumn__desktop',
-                    'position__earColumn__mobile',
-                    'gradientMask__earColumn__desktop',
+                    'position__lyricColumn__desktop',
+                    'position__lyricColumn__mobile',
+                    'gradientMask__lyricColumn__desktop',
 
                     { 'parent__shown': isParentShown }
                 )}

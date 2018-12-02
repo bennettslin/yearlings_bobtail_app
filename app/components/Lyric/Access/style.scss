@@ -1,20 +1,20 @@
 // .LyricAccess {
 //     position: absolute;
-//     right: $margin__earColumn__accessIcons;
-//     bottom: $margin__earColumn__accessIcons;
+//     right: $margin__lyricColumn__accessIcons;
+//     bottom: $margin__lyricColumn__accessIcons;
 
 //     display: flex;
 //     flex-direction: column-reverse;
 // }
 
 .AccessLetters__inLyric {
-    bottom: $margin__earColumn__accessIcons;
+    bottom: $margin__lyricColumn__accessIcons;
 }
 
 .AccessLetters__lyricLeftRight {
-    left: $margin__earColumn__accessIcons;
+    left: $margin__lyricColumn__accessIcons;
 }
 
 .AccessLetters__lyricUpDown {
-    right: $margin__earColumn__accessIcons;
+    right: $margin__lyricColumn__accessIcons;
 }
