@@ -8,16 +8,6 @@ module.exports = [
 
     // Scrolling stuff.
     {
-        taskName: `Have event manager and scroll manager handle all scrolling through listeners.`,
-        workedHours: 5,
-        neededHours: 10
-    },
-    {
-        taskName: `Fix the bug where event handler tries to scroll carousel and lyric before its elements are set.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,
         workedHours: 0,
         neededHours: 2

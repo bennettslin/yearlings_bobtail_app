@@ -66,10 +66,6 @@ class Popup extends PureComponent {
 
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                handleContainerClick,
-                /* eslint-enable no-unused-vars */
-
                 className,
                 popupName,
                 isVisible,

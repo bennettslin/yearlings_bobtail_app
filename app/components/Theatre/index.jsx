@@ -81,11 +81,11 @@ class Theatre extends PureComponent {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
+                updateRenderStore,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                canTheatreRender,
-                ...other
+                canTheatreRender
             } = this.props,
 
             { isShown } = this.state
@@ -99,7 +99,7 @@ class Theatre extends PureComponent {
 
                 {/* Scene is behind theatre due to presence transitions. */}
                 <Stage>
-                    <Scene {...other} />
+                    <Scene />
                 </Stage>
 
                 <Ceiling />

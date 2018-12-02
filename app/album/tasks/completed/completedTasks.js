@@ -4051,5 +4051,15 @@ module.exports = [
         taskName: `Put Live's rendered logic in store.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Fix the bug where event handler tries to scroll carousel and lyric before its elements are set. Good enough for now.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Scroll handling and verse bar determining refactor.`,
+        workedHours: 16,
+        neededHours: 16
     }
 ]

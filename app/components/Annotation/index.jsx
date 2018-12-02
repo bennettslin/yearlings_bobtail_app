@@ -75,6 +75,8 @@ class Annotation extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canCarouselRender,
+                dotsBitNumber,
+                updateRenderStore,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 

@@ -31,15 +31,14 @@ class Live extends PureComponent {
             annotationPopupHandlers,
             lyricHandlers,
             mainColumnHandlers,
-            menuFieldHandlers,
-            theatreHandlers
+            menuFieldHandlers
         } = getOrganisedHandlersFromProps(this.props)
 
         return (
             <___>
                 <div className="PopupOverlay" />
 
-                <Theatre {...theatreHandlers} />
+                <Theatre />
                 <Main {...mainColumnHandlers} />
                 <OverviewLogue />
                 <Lyric {...lyricHandlers} />
