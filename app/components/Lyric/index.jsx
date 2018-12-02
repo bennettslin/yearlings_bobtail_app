@@ -8,7 +8,6 @@ import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
 import VerseDispatcher from '../../dispatchers/VerseDispatcher'
-import LyricWheelDispatcher from '../../dispatchers/LyricWheelDispatcher'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggleEar from './Toggle/Ear'
@@ -115,21 +114,13 @@ class Lyric extends PureComponent {
     }
 
     _handleVerseBarWheel = (e) => {
-        this.dispatchVerseBarWheel(e, this.lyricElement)
-    }
-
-    setLyricElement = (node) => {
-        // For verse wheel.
-        this.lyricElement = node
-
-        this.props.setLyricFocusElement(node)
+        this.handleVerseBarWheel(e)
     }
 
     render() {
 
         const {
                 /* eslint-disable no-unused-vars */
-                setLyricFocusElement,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -156,11 +147,10 @@ class Lyric extends PureComponent {
                         completeHeightTransition: this.completeHeightTransition,
                         handleVerseBarWheel: this._handleVerseBarWheel,
                         handleVerseSelect: this._handleVerseSelect,
-                        setLyricElement: this.setLyricElement
+                        parentThis: this
                     }}
                 />
                 <VerseDispatcher {...{ parentThis: this }} />
-                <LyricWheelDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

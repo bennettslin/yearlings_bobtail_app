@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import ScrollLyricListener from '../../../listeners/ScrollLyricListener'
-import VerseBarListener from '../../../listeners/VerseBarListener'
+import VerseBarHandler from '../../../handlers/VerseBarHandler'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
 
@@ -36,7 +36,12 @@ class LyricScroll extends Component {
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,
-        setLyricElement: PropTypes.func.isRequired
+        setLyricFocusElement: PropTypes.func.isRequired,
+        parentThis: PropTypes.object.isRequired
+    }
+
+    componentDidMount() {
+        this.props.parentThis.handleVerseBarWheel = this.handleVerseBarWheel
     }
 
     shouldComponentUpdate(nextProps) {
@@ -68,16 +73,12 @@ class LyricScroll extends Component {
         }
     }
 
-    _handleWheel = (e) => {
-        this.dispatchLyricWheel(e, this.lyricElement)
-    }
-
     _setLyricElement = (node) => {
-        // For lyric wheel.
+        // For lyric and verse bar wheel.
         this.lyricElement = node
 
-        // For focus and verse wheel.
-        this.props.setLyricElement(node)
+        // For focus.
+        this.props.setLyricFocusElement(node)
 
         // For scrolling.
         return this.setLyricParent(node)
@@ -92,8 +93,24 @@ class LyricScroll extends Component {
     }
 
     _getVerseElement = (verseIndex) => {
-        // Verse elements are stored in scroll lyric listener.
+        /**
+         * Allow verse bar handler to access verse elements stored in scroll
+         * lyric listener.
+         */
         return this.getVerseElement(verseIndex)
+    }
+
+    _dispatchVerseBarsTimeout = () => {
+        // Allow lyric wheel dispatcher to call verse bar handler.
+        this.dispatchVerseBarsTimeout()
+    }
+
+    handleVerseBarWheel = (e) => {
+        this.dispatchVerseBarWheel(e, this.lyricElement)
+    }
+
+    _handleWheel = (e) => {
+        this.dispatchLyricWheel(e, this.lyricElement)
     }
 
     render() {
@@ -121,8 +138,11 @@ class LyricScroll extends Component {
         return songStanzaConfigs.length && (
             <___>
                 <ScrollLyricListener {...{ parentThis: this }} />
-                <VerseBarListener
-                    {...{ getVerseElement: this._getVerseElement }}
+                <VerseBarHandler
+                    {...{
+                        parentThis: this,
+                        getVerseElement: this._getVerseElement
+                    }}
                 />
                 <div
                     ref={this._setLyricElement}
@@ -151,7 +171,12 @@ class LyricScroll extends Component {
                         <TempGlobalAnnotations />
                     )}
                 </div>
-                <LyricWheelDispatcher {...{ parentThis: this }} />
+                <LyricWheelDispatcher
+                    {...{
+                        parentThis: this,
+                        dispatchVerseBarsTimeout: this._dispatchVerseBarsTimeout
+                    }}
+                />
             </___>
         )
     }

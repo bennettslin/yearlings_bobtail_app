@@ -9,12 +9,7 @@ import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import { getVerseBarStatus } from './helper'
 
-class VerseBarListener extends PureComponent {
-
-    // TODO: Eventually get rid of this.
-    static defaultProps = {
-        getVerseElement: () => {}
-    }
+class VerseBarHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -25,6 +20,8 @@ class VerseBarListener extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
+        isVerseBarAbove: PropTypes.bool.isRequired,
+        isVerseBarBelow: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
@@ -32,11 +29,17 @@ class VerseBarListener extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
+        parentThis: PropTypes.object.isRequired,
         getVerseElement: PropTypes.func.isRequired
     }
 
     state = {
         verseBarsTimeoutId: ''
+    }
+
+    componentDidMount() {
+        // Allow wheels to dispatch directly.
+        this.props.parentThis.dispatchVerseBarsTimeout = this.dispatchVerseBarsTimeout
     }
 
     componentDidUpdate(prevProps) {
@@ -51,7 +54,7 @@ class VerseBarListener extends PureComponent {
 
         if (doDetermineVerseBars && !didDetermineVerseBars) {
             const { verseBarsTimeout } = this.props
-            this._dispatchVerseBarsTimeout(verseBarsTimeout)
+            this.dispatchVerseBarsTimeout(verseBarsTimeout)
 
             this.props.updateVerseBarsStore()
         }
@@ -68,20 +71,17 @@ class VerseBarListener extends PureComponent {
             sliderVerseIndex !== prevVerseIndex
         ) {
             this._dispatchVerseBars({
-                verseIndex: sliderVerseIndex,
-                calledFromTimeout: false
+                verseIndex: sliderVerseIndex
             })
         }
     }
 
-    _dispatchVerseBarsTimeout(timeoutDuration = 10) {
+    dispatchVerseBarsTimeout = (timeoutDuration = 10) => {
         /**
          * It seems to help to both make the call immediately, and then set a
          * timeout for it. For now, I don't think there's any performance hit.
          */
-        this._dispatchVerseBars({
-            calledFromTimeout: false
-        })
+        this._dispatchVerseBars()
 
         clearTimeout(this.state.verseBarsTimeoutId)
 
@@ -96,13 +96,8 @@ class VerseBarListener extends PureComponent {
     }
 
     _dispatchVerseBars = ({
-        calledFromTimeout = true,
         verseIndex = this.props.selectedVerseIndex
     } = {}) => {
-
-        if (calledFromTimeout) {
-            logger.warn('Determining verse bars after timeout.')
-        }
 
         const verseElement = this.props.getVerseElement(verseIndex)
 
@@ -120,12 +115,19 @@ class VerseBarListener extends PureComponent {
                 {
                     isVerseBarAbove,
                     isVerseBarBelow
-                } = verseBarStatusObject
+                } = verseBarStatusObject,
+                {
+                    isVerseBarAbove: wasVerseBarAbove,
+                    isVerseBarBelow: wasVerseBarBelow
+                } = this.props
 
-            this.props.updateToggleStore({
-                isVerseBarAbove,
-                isVerseBarBelow
-            })
+            // To improve performance, only set in Redux if needed.
+            if (isVerseBarAbove !== wasVerseBarAbove) {
+                this.props.updateToggleStore({ isVerseBarAbove })
+            }
+            if (isVerseBarBelow !== wasVerseBarBelow) {
+                this.props.updateToggleStore({ isVerseBarBelow })
+            }
         }
     }
 
@@ -147,7 +149,11 @@ const mapStateToProps = ({
         isHiddenLyric,
         isTwoRowMenu
     },
-    toggleStore: { isLyricExpanded },
+    toggleStore: {
+        isLyricExpanded,
+        isVerseBarAbove,
+        isVerseBarBelow
+    },
     songStore: {
         selectedVerseIndex
     },
@@ -158,6 +164,8 @@ const mapStateToProps = ({
     deviceIndex,
     windowHeight,
     isLyricExpanded,
+    isVerseBarAbove,
+    isVerseBarBelow,
     isHiddenLyric,
     isTwoRowMenu,
     selectedVerseIndex,
@@ -172,4 +180,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(VerseBarListener)
+export default connect(mapStateToProps, bindDispatchToProps)(VerseBarHandler)

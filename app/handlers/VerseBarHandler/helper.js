@@ -12,12 +12,10 @@ import {
 } from 'constants/responsive'
 
 const _getLyricSectionRect = ({
-
     deviceIndex,
     windowHeight,
     isLyricExpanded,
     isTwoRowMenu
-
 }) => {
     const bottom = windowHeight
     let top

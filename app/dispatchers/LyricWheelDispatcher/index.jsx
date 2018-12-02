@@ -5,17 +5,17 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
-import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 class LyricWheelDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isAutoScroll: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
-        updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired,
+        dispatchVerseBarsTimeout: PropTypes.func
     }
 
     componentDidMount() {
@@ -23,9 +23,7 @@ class LyricWheelDispatcher extends PureComponent {
         this.props.parentThis.dispatchVerseBarWheel = this.dispatchVerseBarWheel
     }
 
-    dispatchLyricWheel = (
-        e, lyricElement, { timeoutDuration } = {}
-    ) => {
+    dispatchLyricWheel = (e, lyricElement) => {
         let hasRoomToScroll = false
 
         // Determine whether there is room to scroll.
@@ -50,11 +48,17 @@ class LyricWheelDispatcher extends PureComponent {
             }
 
             if (hasRoomToScroll) {
+                if (
+                    // To improve performance, only set in Redux if needed.
+                    this.props.isAutoScroll &&
 
-                // Select manual scroll only if wheel moved far enough.
-                if (deltaY > 1 || deltaY < -1) {
+                    // Select manual scroll only if wheel moved far enough.
+                    (deltaY > 1 || deltaY < -1)
+                ) {
                     this.props.updateToggleStore({ isAutoScroll: false })
                 }
+
+                this.props.dispatchVerseBarsTimeout()
 
             } else {
 
@@ -62,21 +66,13 @@ class LyricWheelDispatcher extends PureComponent {
                 e.preventDefault()
             }
         }
-
-        // Determine verse bars if scrolled, or if triggered manually.
-        if (hasRoomToScroll || !e) {
-            this.props.updateVerseBarsStore({
-                doDetermineVerseBars: true,
-                verseBarsTimeout: timeoutDuration
-            })
-        }
     }
 
     dispatchVerseBarWheel = (e, lyricElement) => {
         const { deltaY } = e.nativeEvent
         lyricElement.scrollTop += deltaY
 
-        this.props.updateVerseBarsStore({ doDetermineVerseBars: true })
+        this.props.dispatchVerseBarsTimeout()
     }
 
     render() {
@@ -84,12 +80,15 @@ class LyricWheelDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = null
+const mapStateToProps = ({
+    toggleStore: { isAutoScroll }
+}) => ({
+    isAutoScroll
+})
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateToggleStore,
-        updateVerseBarsStore
+        updateToggleStore
     }, dispatch)
 )
 
