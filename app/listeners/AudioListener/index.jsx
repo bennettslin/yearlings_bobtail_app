@@ -49,7 +49,7 @@ class AudioListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    audioStore: { isPlaying },
+    playerStore: { isPlaying },
     sliderStore: { isSliderTouched },
     songStore: {
         selectedSongIndex,

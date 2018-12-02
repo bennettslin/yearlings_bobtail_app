@@ -31,10 +31,8 @@ import {
 import { getValueInBitNumber } from 'helpers/bit'
 
 const mapStateToProps = ({
-    audioStore: {
-        isPlaying,
-        canPlayThroughs
-    },
+    audioStore: { canPlayThroughs },
+    playerStore: { isPlaying },
     sessionStore: { selectedAudioOptionIndex },
     songStore: { selectedSongIndex }
 }) => ({

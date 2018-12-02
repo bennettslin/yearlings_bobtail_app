@@ -49,7 +49,6 @@ const
     },
 
     AUDIO_DEFAULTS = {
-        isPlaying: false,
         canPlayThroughs: 0
     },
 
@@ -86,6 +85,7 @@ const
     },
 
     PLAYER_DEFAULTS = {
+        isPlaying: false,
         queuedPlayerSongIndex: -1,
         queuedPlayerVerseIndex: -1
     },

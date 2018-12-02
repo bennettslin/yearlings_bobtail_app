@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateAudioStore } from 'flux/audio/action'
+import { updatePlayerStore } from 'flux/player/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class LogueListener extends PureComponent {
@@ -12,7 +12,7 @@ class LogueListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
-        updateAudioStore: PropTypes.func.isRequired,
+        updatePlayerStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
@@ -26,7 +26,7 @@ class LogueListener extends PureComponent {
             { isSelectedLogue: wasSelectedLogue } = prevProps
 
         if (isSelectedLogue && !wasSelectedLogue) {
-            this.props.updateAudioStore({ isPlaying: false })
+            this.props.updatePlayerStore({ isPlaying: false })
             this.props.updateToggleStore({ isDotsSlideShown: false })
         }
     }
@@ -44,7 +44,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateAudioStore,
+        updatePlayerStore,
         updateToggleStore
     }, dispatch)
 )

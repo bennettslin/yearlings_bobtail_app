@@ -7,7 +7,10 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { updateAudioStore } from 'flux/audio/action'
-import { resetPlayerQueue } from 'flux/player/action'
+import {
+    updatePlayerStore,
+    resetPlayerQueue
+} from 'flux/player/action'
 import { updateSongStore } from 'flux/song/action'
 
 import PlayerTimeVerseDispatcher from '../../dispatchers/PlayerTimeVerseDispatcher'
@@ -29,10 +32,8 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
-    audioStore: {
-        isPlaying,
-        canPlayThroughs
-    },
+    audioStore: { canPlayThroughs },
+    playerStore: { isPlaying },
     playerStore: {
         queuedPlayerSongIndex,
         queuedPlayerVerseIndex
@@ -71,6 +72,7 @@ class PlayerManager extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
+        updatePlayerStore: PropTypes.func.isRequired,
         resetPlayerQueue: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
@@ -254,7 +256,7 @@ class PlayerManager extends PureComponent {
         if (!isPlaying && wasPlaying) {
 
             // Play is being toggled off, so set in store right away.
-            this.props.updateAudioStore({ isPlaying: false })
+            this.props.updatePlayerStore({ isPlaying: false })
 
             return this.getPlayerRef(selectedSongIndex).handleEndPlaying(
 
@@ -310,7 +312,7 @@ class PlayerManager extends PureComponent {
          * it was able to play. If selected song was changed, set in store
          * whether newly selected player was able to play.
          */
-        this.props.updateAudioStore({ isPlaying: success })
+        this.props.updatePlayerStore({ isPlaying: success })
     }
 
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
@@ -480,6 +482,7 @@ class PlayerManager extends PureComponent {
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAudioStore,
+        updatePlayerStore,
         resetPlayerQueue,
         updateSongStore
     }, dispatch)
