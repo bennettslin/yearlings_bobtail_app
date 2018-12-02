@@ -64,9 +64,7 @@ class InteractivatedVerseDispatcher extends PureComponent {
             scrollLyricIndex:
                 interactivatedVerseIndex > -1 ?
                     interactivatedVerseIndex :
-                    selectedVerseIndex,
-
-            doDetermineVerseBars: true
+                    selectedVerseIndex
         })
 
         return true

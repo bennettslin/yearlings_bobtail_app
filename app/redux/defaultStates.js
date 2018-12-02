@@ -208,8 +208,7 @@ const
         scrollLyricLog: '',
         doScrollLyricByVerse: false,
         scrollLyricIndex: 0,
-        doScrollLyricImmediately: false,
-        doDetermineVerseBars: false
+        doScrollLyricImmediately: false
     }
 
 export {

@@ -23,7 +23,6 @@ class ScrollLyricListener extends PureComponent {
         doScrollLyricByVerse: PropTypes.bool.isRequired,
         scrollLyricIndex: PropTypes.number.isRequired,
         doScrollLyricImmediately: PropTypes.bool.isRequired,
-        doDetermineVerseBars: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -61,7 +60,6 @@ class ScrollLyricListener extends PureComponent {
                     doScrollLyricByVerse,
                     scrollLyricIndex,
                     doScrollLyricImmediately,
-                    doDetermineVerseBars,
                     deviceIndex,
                     isLyricExpanded,
                     isSelectedLogue
@@ -81,9 +79,7 @@ class ScrollLyricListener extends PureComponent {
                 deviceIndex,
                 isLyricExpanded,
                 isSelectedLogue,
-                ...doDetermineVerseBars && {
-                    callback: this._determineVerseBars
-                }
+                callback: this._determineVerseBars
             })
 
             this.props.updateScrollLyricStore()
@@ -141,8 +137,7 @@ const mapStateToProps = ({
         scrollLyricLog,
         doScrollLyricByVerse,
         scrollLyricIndex,
-        doScrollLyricImmediately,
-        doDetermineVerseBars
+        doScrollLyricImmediately
     },
     toggleStore: {
         isLyricExpanded
@@ -156,7 +151,6 @@ const mapStateToProps = ({
     doScrollLyricByVerse,
     scrollLyricIndex,
     doScrollLyricImmediately,
-    doDetermineVerseBars,
     isLyricExpanded,
     deviceIndex,
     isSelectedLogue

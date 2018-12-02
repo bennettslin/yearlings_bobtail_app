@@ -72,8 +72,7 @@ class RenderListener extends PureComponent {
                 scrollLyricLog: 'Rerender selected verse.',
                 doScrollLyricByVerse: true,
                 scrollLyricIndex: selectedVerseIndex,
-                doScrollLyricImmediately: true,
-                doDetermineVerseBars: true
+                doScrollLyricImmediately: true
             })
         }
     }
