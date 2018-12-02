@@ -58,8 +58,8 @@ class SongDispatcher extends PureComponent {
         }
 
         this.props.updatePlayerStore({
-            playerSongIndex: selectedSongIndex,
-            playerVerseIndex: selectedVerseIndex
+            queuedPlayerSongIndex: selectedSongIndex,
+            queuedPlayerVerseIndex: selectedVerseIndex
         })
 
         this.props.updateSongStore({

@@ -62,15 +62,15 @@ class AnnotationDispatcher extends PureComponent {
             // If selecting from carousel, scroll lyric.
             if (fromCarousel) {
                 this.props.updateScrollLyricStore({
-                    scrollLyricLog: 'Carousel selected lyric annotation.',
-                    scrollLyricIndex: selectedAnnotationIndex
+                    queuedScrollLyricLog: 'Carousel selected lyric annotation.',
+                    queuedScrollLyricIndex: selectedAnnotationIndex
                 })
 
             // If selecting from lyric, scroll carousel.
             } else {
                 this.props.updateScrollCarouselStore({
-                    scrollCarouselLog: 'Lyric selected carousel annotation.',
-                    scrollCarouselIndex: selectedAnnotationIndex
+                    queuedScrollCarouselLog: 'Lyric selected carousel annotation.',
+                    queuedScrollCarouselIndex: selectedAnnotationIndex
                 })
             }
         }
@@ -102,12 +102,12 @@ class AnnotationDispatcher extends PureComponent {
 
         if (selectedAnnotationIndex) {
             this.props.updateScrollLyricStore({
-                scrollLyricLog: 'Select accessed lyric annotation.',
-                scrollLyricIndex: selectedAnnotationIndex
+                queuedScrollLyricLog: 'Select accessed lyric annotation.',
+                queuedScrollLyricIndex: selectedAnnotationIndex
             })
             this.props.updateScrollCarouselStore({
-                scrollCarouselLog: 'Select accessed carousel annotation.',
-                scrollCarouselIndex: selectedAnnotationIndex
+                queuedScrollCarouselLog: 'Select accessed carousel annotation.',
+                queuedScrollCarouselIndex: selectedAnnotationIndex
             })
         }
 

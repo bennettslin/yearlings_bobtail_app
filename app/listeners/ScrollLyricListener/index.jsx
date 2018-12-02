@@ -19,10 +19,10 @@ class ScrollLyricListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        scrollLyricLog: PropTypes.string.isRequired,
-        doScrollLyricByVerse: PropTypes.bool.isRequired,
-        scrollLyricIndex: PropTypes.number.isRequired,
-        doScrollLyricImmediately: PropTypes.bool.isRequired,
+        queuedScrollLyricLog: PropTypes.string.isRequired,
+        queuedScrollLyricByVerse: PropTypes.bool.isRequired,
+        queuedScrollLyricIndex: PropTypes.number.isRequired,
+        queuedScrollLyricImmediately: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -51,31 +51,31 @@ class ScrollLyricListener extends PureComponent {
 
     _scrollLyric(prevProps) {
         const
-            { scrollLyricLog } = this.props,
-            { scrollLyricLog: prevLyricLog } = prevProps
+            { queuedScrollLyricLog } = this.props,
+            { queuedScrollLyricLog: prevLyricLog } = prevProps
 
-        if (scrollLyricLog && !prevLyricLog) {
+        if (queuedScrollLyricLog && !prevLyricLog) {
             const {
-                    scrollLyricLog,
-                    doScrollLyricByVerse,
-                    scrollLyricIndex,
-                    doScrollLyricImmediately,
+                    queuedScrollLyricLog,
+                    queuedScrollLyricByVerse,
+                    queuedScrollLyricIndex,
+                    queuedScrollLyricImmediately,
                     deviceIndex,
                     isLyricExpanded,
                     isSelectedLogue
                 } = this.props,
 
-                scrollClass = doScrollLyricByVerse ?
+                scrollClass = queuedScrollLyricByVerse ?
                     VERSE_SCROLL :
                     LYRIC_ANNOTATION_SCROLL
 
             scrollElementIntoView({
-                log: scrollLyricLog,
+                log: queuedScrollLyricLog,
                 scrollClass,
                 scrollParent: this.lyricParentElement,
                 scrollChildren: this._getScrollElementsArray(scrollClass),
-                index: scrollLyricIndex,
-                doScrollImmediately: doScrollLyricImmediately,
+                index: queuedScrollLyricIndex,
+                doScrollImmediately: queuedScrollLyricImmediately,
                 deviceIndex,
                 isLyricExpanded,
                 isSelectedLogue,
@@ -96,7 +96,7 @@ class ScrollLyricListener extends PureComponent {
     }
 
     _determineVerseBars = () => {
-        this.props.updateVerseBarsStore({ doDetermineVerseBars: true })
+        this.props.updateVerseBarsStore({ queuedDetermineVerseBars: true })
     }
 
     getVerseElement = (verseIndex) => {
@@ -134,10 +134,10 @@ class ScrollLyricListener extends PureComponent {
 
 const mapStateToProps = ({
     scrollLyricStore: {
-        scrollLyricLog,
-        doScrollLyricByVerse,
-        scrollLyricIndex,
-        doScrollLyricImmediately
+        queuedScrollLyricLog,
+        queuedScrollLyricByVerse,
+        queuedScrollLyricIndex,
+        queuedScrollLyricImmediately
     },
     toggleStore: {
         isLyricExpanded
@@ -147,10 +147,10 @@ const mapStateToProps = ({
     },
     songStore: { isSelectedLogue }
 }) => ({
-    scrollLyricLog,
-    doScrollLyricByVerse,
-    scrollLyricIndex,
-    doScrollLyricImmediately,
+    queuedScrollLyricLog,
+    queuedScrollLyricByVerse,
+    queuedScrollLyricIndex,
+    queuedScrollLyricImmediately,
     isLyricExpanded,
     deviceIndex,
     isSelectedLogue

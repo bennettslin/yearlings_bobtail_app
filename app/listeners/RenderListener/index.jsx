@@ -45,9 +45,9 @@ class RenderListener extends PureComponent {
 
             // Scroll to carousel annotation if toggled on.
             this.props.updateScrollCarouselStore({
-                scrollCarouselLog: 'Rerender selected carousel annotation.',
-                scrollCarouselIndex: selectedAnnotationIndex || 1,
-                doScrollCarouselImmediately: true
+                queuedScrollCarouselLog: 'Rerender selected carousel annotation.',
+                queuedScrollCarouselIndex: selectedAnnotationIndex || 1,
+                queuedScrollCarouselImmediately: true
             })
         }
     }
@@ -69,10 +69,10 @@ class RenderListener extends PureComponent {
             const { selectedVerseIndex } = this.props
 
             this.props.updateScrollLyricStore({
-                scrollLyricLog: 'Rerender selected verse.',
-                doScrollLyricByVerse: true,
-                scrollLyricIndex: selectedVerseIndex,
-                doScrollLyricImmediately: true
+                queuedScrollLyricLog: 'Rerender selected verse.',
+                queuedScrollLyricByVerse: true,
+                queuedScrollLyricIndex: selectedVerseIndex,
+                queuedScrollLyricImmediately: true
             })
         }
     }

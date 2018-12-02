@@ -55,8 +55,8 @@ class CarouselDispatcher extends PureComponent {
                     accessedAnnotationIndex
 
             this.props.updateScrollCarouselStore({
-                scrollCarouselLog: 'Nav toggled carousel annotation.',
-                scrollCarouselIndex: annotationIndex
+                queuedScrollCarouselLog: 'Nav toggled carousel annotation.',
+                queuedScrollCarouselIndex: annotationIndex
             })
         }
 

@@ -174,9 +174,9 @@ class KeyManager extends PureComponent {
          * navigating between annotations.
          */
         this.props.updateVerseBarsStore({
-            doDetermineVerseBars: true,
+            queuedDetermineVerseBars: true,
             ...isAutoScroll && {
-                verseBarsTimeout: 300
+                queuedVerseBarsTimeout: 300
             }
         })
 

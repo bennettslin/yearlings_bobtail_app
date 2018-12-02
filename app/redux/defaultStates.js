@@ -86,8 +86,8 @@ const
     },
 
     PLAYER_DEFAULTS = {
-        playerSongIndex: -1,
-        playerVerseIndex: -1
+        queuedPlayerSongIndex: -1,
+        queuedPlayerVerseIndex: -1
     },
 
     RENDER_DEFAULTS = {
@@ -136,16 +136,16 @@ const
     },
 
     SCROLL_CAROUSEL_DEFAULTS = {
-        scrollCarouselLog: '',
-        scrollCarouselIndex: 0,
-        doScrollCarouselImmediately: false
+        queuedScrollCarouselLog: '',
+        queuedScrollCarouselIndex: 0,
+        queuedScrollCarouselImmediately: false
     },
 
     SCROLL_LYRIC_DEFAULTS = {
-        scrollLyricLog: '',
-        doScrollLyricByVerse: false,
-        scrollLyricIndex: 0,
-        doScrollLyricImmediately: false
+        queuedScrollLyricLog: '',
+        queuedScrollLyricByVerse: false,
+        queuedScrollLyricIndex: 0,
+        queuedScrollLyricImmediately: false
     },
 
     SESSION_DEFAULTS = {
@@ -204,8 +204,8 @@ const
     },
 
     VERSE_BARS_DEFAULTS = {
-        doDetermineVerseBars: false,
-        verseBarsTimeout: 0
+        queuedDetermineVerseBars: false,
+        queuedVerseBarsTimeout: 0
     }
 
 export {

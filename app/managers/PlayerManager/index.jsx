@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { updateAudioStore } from 'flux/audio/action'
-import { updatePlayerStore } from 'flux/player/action'
+import { resetPlayerQueue } from 'flux/player/action'
 import { updateSongStore } from 'flux/song/action'
 
 import PlayerTimeVerseDispatcher from '../../dispatchers/PlayerTimeVerseDispatcher'
@@ -34,8 +34,8 @@ const mapStateToProps = ({
         canPlayThroughs
     },
     playerStore: {
-        playerSongIndex,
-        playerVerseIndex
+        queuedPlayerSongIndex,
+        queuedPlayerVerseIndex
     },
     songStore: {
         selectedSongIndex,
@@ -44,8 +44,8 @@ const mapStateToProps = ({
     }
 }) => ({
     isPlaying,
-    playerSongIndex,
-    playerVerseIndex,
+    queuedPlayerSongIndex,
+    queuedPlayerVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
     isSelectedLogue,
@@ -64,14 +64,14 @@ class PlayerManager extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
-        playerSongIndex: PropTypes.number.isRequired,
-        playerVerseIndex: PropTypes.number.isRequired,
+        queuedPlayerSongIndex: PropTypes.number.isRequired,
+        queuedPlayerVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
-        updatePlayerStore: PropTypes.func.isRequired,
+        resetPlayerQueue: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -156,24 +156,24 @@ class PlayerManager extends PureComponent {
 
     _checkPlayerChange(prevProps) {
         const {
-                playerSongIndex,
-                playerVerseIndex
+                queuedPlayerSongIndex,
+                queuedPlayerVerseIndex
             } = this.props,
             {
-                playerSongIndex: prevSongIndex,
-                playerVerseIndex: prevVerseIndex
+                queuedPlayerSongIndex: prevSongIndex,
+                queuedPlayerVerseIndex: prevVerseIndex
             } = prevProps
 
         if (
-            (playerSongIndex > -1 && playerSongIndex !== prevSongIndex) ||
-            (playerVerseIndex > -1 && playerVerseIndex !== prevVerseIndex)
+            (queuedPlayerSongIndex > -1 && queuedPlayerSongIndex !== prevSongIndex) ||
+            (queuedPlayerVerseIndex > -1 && queuedPlayerVerseIndex !== prevVerseIndex)
         ) {
             this._changeSelectedPlayer({
-                nextSongIndex: playerSongIndex,
-                nextVerseIndex: playerVerseIndex
+                nextSongIndex: queuedPlayerSongIndex,
+                nextVerseIndex: queuedPlayerVerseIndex
             })
 
-            this.props.updatePlayerStore()
+            this.props.resetPlayerQueue()
         }
     }
 
@@ -207,7 +207,7 @@ class PlayerManager extends PureComponent {
         }
     }
 
-    _playerShouldRender(playerSongIndex) {
+    _playerShouldRender(queuedPlayerSongIndex) {
         const {
             canPlayThroughsObject,
             nextPlayerToRender
@@ -215,14 +215,14 @@ class PlayerManager extends PureComponent {
 
         return (
             // Render player if it has already passed canPlayThrough...
-            canPlayThroughsObject[playerSongIndex] ||
+            canPlayThroughsObject[queuedPlayerSongIndex] ||
 
             // Or if it is next in the queue to be rendered.
-            playerSongIndex === nextPlayerToRender
+            queuedPlayerSongIndex === nextPlayerToRender
         )
     }
 
-    setPlayerCanPlayThrough = (playerSongIndex) => {
+    setPlayerCanPlayThrough = (queuedPlayerSongIndex) => {
         const {
                 canPlayThroughs
             } = this.props,
@@ -231,7 +231,7 @@ class PlayerManager extends PureComponent {
             newBitNumber = setNewValueInBitNumber({
                 keysCount: getSongsNotLoguesCount(),
                 bitNumber: canPlayThroughs,
-                key: playerSongIndex,
+                key: queuedPlayerSongIndex,
                 value: true
             })
 
@@ -290,8 +290,8 @@ class PlayerManager extends PureComponent {
         }
     }
 
-    askPlayerToBeginPlaying(playerSongIndex) {
-        const playerRef = this.getPlayerRef(playerSongIndex)
+    askPlayerToBeginPlaying(queuedPlayerSongIndex) {
+        const playerRef = this.getPlayerRef(queuedPlayerSongIndex)
 
         return playerRef.handleBeginPlaying(
             this.sessionState.currentSessionId,
@@ -480,7 +480,7 @@ class PlayerManager extends PureComponent {
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAudioStore,
-        updatePlayerStore,
+        resetPlayerQueue,
         updateSongStore
     }, dispatch)
 )

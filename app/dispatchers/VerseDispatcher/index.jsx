@@ -37,8 +37,8 @@ class VerseDispatcher extends PureComponent {
         const { selectedSongIndex } = this.props
 
         this.props.updatePlayerStore({
-            playerSongIndex: selectedSongIndex,
-            playerVerseIndex: selectedVerseIndex
+            queuedPlayerSongIndex: selectedSongIndex,
+            queuedPlayerVerseIndex: selectedVerseIndex
         })
 
         this.props.updateSongStore({
@@ -59,9 +59,9 @@ class VerseDispatcher extends PureComponent {
         })
 
         this.props.updateScrollLyricStore({
-            scrollLyricLog: scrollLog,
-            doScrollLyricByVerse: true,
-            scrollLyricIndex: selectedVerseIndex
+            queuedScrollLyricLog: scrollLog,
+            queuedScrollLyricByVerse: true,
+            queuedScrollLyricIndex: selectedVerseIndex
         })
     }
 

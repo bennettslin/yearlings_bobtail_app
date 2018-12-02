@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
-import { updateVerseBarsStore } from 'flux/verseBars/action'
+import { resetVerseBarsQueue } from 'flux/verseBars/action'
 
 import { getVerseBarStatus } from './helper'
 
@@ -13,8 +13,8 @@ class VerseBarHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        doDetermineVerseBars: PropTypes.bool.isRequired,
-        verseBarsTimeout: PropTypes.number.isRequired,
+        queuedDetermineVerseBars: PropTypes.bool.isRequired,
+        queuedVerseBarsTimeout: PropTypes.number.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -26,7 +26,7 @@ class VerseBarHandler extends PureComponent {
         sliderVerseIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
-        updateVerseBarsStore: PropTypes.func.isRequired,
+        resetVerseBarsQueue: PropTypes.func.isRequired,
 
         // From parent.
         parentThis: PropTypes.object.isRequired,
@@ -49,14 +49,14 @@ class VerseBarHandler extends PureComponent {
 
     _determineVerseBarsFromDispatch(prevProps) {
         const
-            { doDetermineVerseBars } = this.props,
-            { doDetermineVerseBars: didDetermineVerseBars } = prevProps
+            { queuedDetermineVerseBars } = this.props,
+            { queuedDetermineVerseBars: didDetermineVerseBars } = prevProps
 
-        if (doDetermineVerseBars && !didDetermineVerseBars) {
-            const { verseBarsTimeout } = this.props
-            this.dispatchVerseBarsTimeout(verseBarsTimeout)
+        if (queuedDetermineVerseBars && !didDetermineVerseBars) {
+            const { queuedVerseBarsTimeout } = this.props
+            this.dispatchVerseBarsTimeout(queuedVerseBarsTimeout)
 
-            this.props.updateVerseBarsStore()
+            this.props.resetVerseBarsQueue()
         }
     }
 
@@ -138,8 +138,8 @@ class VerseBarHandler extends PureComponent {
 
 const mapStateToProps = ({
     verseBarsStore: {
-        doDetermineVerseBars,
-        verseBarsTimeout
+        queuedDetermineVerseBars,
+        queuedVerseBarsTimeout
     },
     deviceStore: {
         deviceIndex,
@@ -159,8 +159,8 @@ const mapStateToProps = ({
     },
     sliderStore: { sliderVerseIndex }
 }) => ({
-    doDetermineVerseBars,
-    verseBarsTimeout,
+    queuedDetermineVerseBars,
+    queuedVerseBarsTimeout,
     deviceIndex,
     windowHeight,
     isLyricExpanded,
@@ -176,7 +176,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateSessionStore,
         updateToggleStore,
-        updateVerseBarsStore
+        resetVerseBarsQueue
     }, dispatch)
 )
 

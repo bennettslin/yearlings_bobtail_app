@@ -27,9 +27,9 @@ class ScrollVerseDispatcher extends PureComponent {
         const { selectedVerseIndex } = this.props
 
         this.props.updateScrollLyricStore({
-            scrollLyricLog: 'Scroll back to selected verse.',
-            doScrollLyricByVerse: true,
-            scrollLyricIndex: selectedVerseIndex
+            queuedScrollLyricLog: 'Scroll back to selected verse.',
+            queuedScrollLyricByVerse: true,
+            queuedScrollLyricIndex: selectedVerseIndex
         })
 
         this.props.updateToggleStore({
