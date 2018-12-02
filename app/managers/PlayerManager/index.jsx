@@ -383,7 +383,7 @@ class PlayerManager extends PureComponent {
 
         // Otherwise, update verse and time.
         } else if (isTimeInNextVerse) {
-            this.dispatchTimeVerse({
+            this.dispatchPlayerTimeVerse({
                 currentTime,
                 nextVerseIndex
             })

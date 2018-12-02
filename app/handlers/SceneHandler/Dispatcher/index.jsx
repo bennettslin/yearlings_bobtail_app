@@ -1,9 +1,11 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateToggleStore } from 'flux/toggle/action'
+
+import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 
 import { getVerseIndexForNextScene } from './helper'
 
@@ -23,12 +25,7 @@ class SceneDispatcher extends PureComponent {
         this.props.getDispatch.dispatchScene = this.dispatchScene
     }
 
-    dispatchScene = (
-        direction,
-
-        // TODO: Eventually get rid of this callback!
-        selectVerse
-    ) => {
+    dispatchScene = (direction) => {
         const {
             selectedSongIndex,
             selectedVerseIndex
@@ -41,25 +38,17 @@ class SceneDispatcher extends PureComponent {
         )
 
         if (nextVerseIndex > -1) {
-            selectVerse({
+            this.dispatchVerse({
                 selectedVerseIndex: nextVerseIndex,
                 scrollLog: 'Manual scene changed.'
-            })
-
-            /**
-             * Verse bars always get reset. This behaviour can be a little
-             * janky, but it doesn't matter since this won't get called in
-             * production.
-             */
-            this.props.updateToggleStore({
-                isVerseBarAbove: false,
-                isVerseBarBelow: false
             })
         }
     }
 
     render() {
-        return null
+        return (
+            <VerseDispatcher {...{ getDispatch: this }} />
+        )
     }
 }
 

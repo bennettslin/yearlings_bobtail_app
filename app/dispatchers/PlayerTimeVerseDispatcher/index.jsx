@@ -23,10 +23,10 @@ class PlayerTimeVerseDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getDispatch.dispatchTimeVerse = this.dispatchTimeVerse
+        this.props.getDispatch.dispatchPlayerTimeVerse = this.dispatchPlayerTimeVerse
     }
 
-    dispatchTimeVerse = ({
+    dispatchPlayerTimeVerse = ({
         currentTime,
         nextVerseIndex
     }) => {

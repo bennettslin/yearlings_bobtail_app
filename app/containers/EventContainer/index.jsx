@@ -7,10 +7,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
-import { updateToggleStore } from 'flux/toggle/action'
 
 import InteractiveContainer from '../../containers/InteractiveContainer'
-import AnnotationDispatcher from '../../handlers/AnnotationHandler/Dispatcher'
+import VerseDispatcher from '../../dispatchers/VerseDispatcher'
 
 import { getHandlers } from './helper'
 
@@ -21,8 +20,7 @@ class EventContainer extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        updateSessionStore: PropTypes.func.isRequired
     }
 
     selectSong = (wormholeObject) => {
@@ -51,15 +49,9 @@ class EventContainer extends PureComponent {
             return false
         }
 
-        this.props.selectVerse({
+        this.dispatchVerse({
             selectedVerseIndex,
             scrollLog: 'Select interactivated verse.'
-        })
-
-        // Verse bars always get reset.
-        this.props.updateToggleStore({
-            isVerseBarAbove: false,
-            isVerseBarBelow: false
         })
 
         // Deinteractivate after selecting.
@@ -69,8 +61,7 @@ class EventContainer extends PureComponent {
 
     render() {
         const {
-            selectSong,
-            selectVerse
+            selectSong
         } = this.props
 
         return (
@@ -78,11 +69,10 @@ class EventContainer extends PureComponent {
                 <InteractiveContainer
                     {...{
                         eventHandlers: getHandlers(this),
-                        selectSong,
-                        selectVerse
+                        selectSong
                     }}
                 />
-                <AnnotationDispatcher {...{ getDispatch: this }} />
+                <VerseDispatcher {...{ getDispatch: this }} />
             </___>
         )
     }
@@ -102,8 +92,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSessionStore,
-        updateToggleStore
+        updateSessionStore
     }, dispatch)
 )
 

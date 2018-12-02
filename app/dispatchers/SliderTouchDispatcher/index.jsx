@@ -1,8 +1,10 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSliderStore } from 'flux/slider/action'
+
+import VerseDispatcher from '../VerseDispatcher'
 
 import { getClientX } from 'helpers/domHelper'
 
@@ -129,7 +131,7 @@ class SliderTouchDispatcher extends PureComponent {
         }
     }
 
-    dispatchTouchEnd = (selectVerseIndex) => {
+    dispatchTouchEnd = () => {
         if (this.props.isSliderTouched) {
             const {
                 selectedVerseIndex,
@@ -137,7 +139,12 @@ class SliderTouchDispatcher extends PureComponent {
             } = this.props
 
             if (sliderVerseIndex !== selectedVerseIndex) {
-                selectVerseIndex(sliderVerseIndex)
+
+                // Selected verse is wherever touch ended on slider.
+                this.dispatchVerse({
+                    selectedVerseIndex: sliderVerseIndex,
+                    scrollLog: 'Slider touch body end.'
+                })
             }
 
             // Reset slider state.
@@ -146,7 +153,9 @@ class SliderTouchDispatcher extends PureComponent {
     }
 
     render() {
-        return null
+        return (
+            <VerseDispatcher {...{ getDispatch: this }} />
+        )
     }
 }
 

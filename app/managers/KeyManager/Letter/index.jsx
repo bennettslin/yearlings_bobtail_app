@@ -66,7 +66,6 @@ class LetterManager extends PureComponent {
         // From parent.
         getLetterHandle: PropTypes.object.isRequired,
         getEscapeHandle: PropTypes.object.isRequired,
-        selectVerse: PropTypes.func.isRequired,
         eventHandlers: PropTypes.object.isRequired
     }
 
@@ -77,8 +76,7 @@ class LetterManager extends PureComponent {
 
     handleLetter = (e, keyName) => {
         const {
-            eventHandlers,
-            selectVerse
+            eventHandlers
         } = this.props
 
         let annotationIndexWasAccessed = false,
@@ -132,10 +130,10 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.dispatchOverview()
                 break
             case SCENE_REWIND_KEY:
-                keyWasRegistered = this.dispatchScene(-1, selectVerse)
+                keyWasRegistered = this.dispatchScene(-1)
                 break
             case SCENE_FORWARD_KEY:
-                keyWasRegistered = this.dispatchScene(1, selectVerse)
+                keyWasRegistered = this.dispatchScene(1)
                 break
             case SCORE_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchScore()

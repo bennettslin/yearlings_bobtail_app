@@ -36,7 +36,6 @@ class SongDispatcher extends PureComponent {
         // From parent.
         setRef: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
-        selectVerse: PropTypes.func.isRequired,
 
         // From parent.
         getDispatch: PropTypes.object.isRequired
@@ -107,25 +106,9 @@ class SongDispatcher extends PureComponent {
             }
         }
 
-        /**
-         * This check needs to be made first, before selected song is updated
-         * in Redux.
-         */
-        if (selectedSongIndex !== this.props.selectedSongIndex) {
-            /**
-             * This is the only place where selected player will be updated
-             * based on a new song.
-             */
-            this.props.updatePlayerStore({
-                playerSongIndex: selectedSongIndex,
-                playerVerseIndex: selectedVerseIndex
-            })
-        }
-
-        this.props.selectVerse({
-            selectedSongIndex,
-            selectedVerseIndex,
-            bypassUpdateSelected: true
+        this.props.updatePlayerStore({
+            playerSongIndex: selectedSongIndex,
+            playerVerseIndex: selectedVerseIndex
         })
 
         this.props.updateSongStore({

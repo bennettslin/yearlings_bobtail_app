@@ -13,7 +13,6 @@ import VerseBarManager from '../../managers/VerseBarManager'
 
 // TODO: Eventually remove this one.
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
-import TimeVerseHandler from '../../handlers/TimeVerseHandler'
 
 import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
@@ -102,14 +101,6 @@ class ListenerContainer extends PureComponent {
         return this.songManager.selectSong(payload)
     }
 
-    /**************
-     * TIME/VERSE *
-     **************/
-
-    selectVerse = (payload) => {
-        return this.timeVerseManager.selectVerse(payload)
-    }
-
     /********
      * REFS *
      ********/
@@ -129,9 +120,6 @@ class ListenerContainer extends PureComponent {
     _setSongManagerRef = (node) => {
         this.songManager = node
     }
-    _setTimeVerseManagerRef = (node) => {
-        this.timeVerseManager = node
-    }
     _setTitleManagerRef = (node) => {
         this.titleManager = node
     }
@@ -150,7 +138,6 @@ class ListenerContainer extends PureComponent {
                     setLyricParentRef={this.setLyricParentRef}
                     setCarouselParentRef={this.setCarouselParentRef}
                     selectSong={this.selectSong}
-                    selectVerse={this.selectVerse}
                     togglePlay={this.togglePlay}
                 />
                 <AudioManager
@@ -172,13 +159,8 @@ class ListenerContainer extends PureComponent {
                 <SongDispatcher
                     setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
-                    selectVerse={this.selectVerse}
-                />
-                <TimeVerseHandler
-                    setRef={this._setTimeVerseManagerRef}
                 />
                 <LogManager />
-
                 <AnnotationListener />
                 <AnnotationAccessListener />
                 <AudioListener />

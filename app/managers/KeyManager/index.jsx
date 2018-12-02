@@ -187,8 +187,7 @@ class KeyManager extends PureComponent {
 
     render() {
         const {
-            selectSong,
-            selectVerse
+            selectSong
         } = this.props
 
         return (
@@ -210,8 +209,7 @@ class KeyManager extends PureComponent {
 
                         // TODO: Eventually get rid of eventHandlers object!
                         selectSong,
-                        eventHandlers: this.props.eventHandlers,
-                        selectVerse
+                        eventHandlers: this.props.eventHandlers
                     }}
                 />
             </___>

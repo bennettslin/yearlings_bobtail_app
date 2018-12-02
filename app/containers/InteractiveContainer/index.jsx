@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
 import { updateSliderStore } from 'flux/slider/action'
-import { updateToggleStore } from 'flux/toggle/action'
 
 import LyricWheelDispatcher from '../../dispatchers/LyricWheelDispatcher'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
@@ -44,8 +43,7 @@ class InteractiveContainer extends PureComponent {
         didSliderJustMouseUp: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         updateEventStore: PropTypes.func.isRequired,
-        updateSliderStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        updateSliderStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -100,7 +98,7 @@ class InteractiveContainer extends PureComponent {
     _handleTouchEnd = (e) => {
         e.preventDefault()
 
-        this.dispatchTouchEnd(this.selectVerseIndex)
+        this.dispatchTouchEnd()
 
         /**
          * Prevent slider from locking up and not registering a touch move. Not
@@ -143,25 +141,6 @@ class InteractiveContainer extends PureComponent {
         this._focusElementForAccess()
     }
 
-    /**
-     * TODO: This isn't the best way to handle this. Ideally, we would select
-     * the verse by listening to changes in the slider verse index upon touch
-     * end.
-     */
-    selectVerseIndex = (selectedVerseIndex) => {
-        // Selected verse is wherever touch ended on slider.
-        this.props.selectVerse({
-            selectedVerseIndex,
-            scrollLog: 'Slider touch body end.'
-        })
-
-        // Verse bars always get reset.
-        this.props.updateToggleStore({
-            isVerseBarAbove: false,
-            isVerseBarBelow: false
-        })
-    }
-
     handleKeyDownPress = e => this.keyHandler.handleKeyDownPress(e)
     handleKeyUpPress = e => this.keyHandler.handleKeyUpPress(e)
     _setRootElement = node => this.myRootElement = node
@@ -171,8 +150,7 @@ class InteractiveContainer extends PureComponent {
         const {
                 appMounted,
                 eventHandlers,
-                selectSong,
-                selectVerse
+                selectSong
             } = this.props,
 
             newEventHandlers = {
@@ -204,8 +182,7 @@ class InteractiveContainer extends PureComponent {
                         // TODO: Eventually get rid of eventHandlers object.
                         eventHandlers: newEventHandlers,
                         setRef: this.setKeyHandler,
-                        selectSong,
-                        selectVerse
+                        selectSong
                     }}
                 />
                 <CloseListener />
@@ -226,8 +203,7 @@ class InteractiveContainer extends PureComponent {
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateEventStore,
-        updateSliderStore,
-        updateToggleStore
+        updateSliderStore
     }, dispatch)
 )
 
