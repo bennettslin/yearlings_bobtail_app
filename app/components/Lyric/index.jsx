@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
+import VerseDispatcher from '../../dispatchers/VerseDispatcher'
 import LyricWheelDispatcher from '../../dispatchers/LyricWheelDispatcher'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
@@ -103,6 +104,16 @@ class Lyric extends PureComponent {
         })
     }
 
+    _handleVerseSelect = ({
+        selectedVerseIndex,
+        scrollLog
+    }) => {
+        this.dispatchVerse({
+            selectedVerseIndex,
+            scrollLog
+        })
+    }
+
     _handleVerseBarWheel = (e) => {
         this.dispatchVerseBarWheel(e, this.myLyricElement)
     }
@@ -142,9 +153,11 @@ class Lyric extends PureComponent {
                         isTransitioningHeight,
                         completeHeightTransition: this.completeHeightTransition,
                         handleVerseBarWheel: this._handleVerseBarWheel,
+                        handleVerseSelect: this._handleVerseSelect,
                         setLyricRef: this.setLyricRef
                     }}
                 />
+                <VerseDispatcher {...{ getDispatch: this }} />
                 <LyricWheelDispatcher {...{ getDispatch: this }} />
             </___>
         )

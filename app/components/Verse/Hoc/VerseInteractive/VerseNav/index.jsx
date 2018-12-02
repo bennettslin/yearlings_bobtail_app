@@ -20,13 +20,16 @@ class VerseNav extends PureComponent {
         handleVerseSelect: PropTypes.func.isRequired
     }
 
-    _handleButtonClick = (e) => {
+    _handleButtonClick = () => {
         const {
             verseIndex,
             handleVerseSelect
         } = this.props
 
-        handleVerseSelect(e, verseIndex)
+        handleVerseSelect({
+            selectedVerseIndex: verseIndex,
+            scrollLog: 'Select interactivated verse.'
+        })
     }
 
     render() {

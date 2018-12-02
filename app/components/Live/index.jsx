@@ -1,5 +1,5 @@
 /**
- * PureComponent that routes event handlers to their components. Knows no state, so
+ * Component that routes event handlers to their components. Knows no state, so
  * should not update.
  */
 
@@ -28,8 +28,7 @@ class Live extends PureComponent {
         setCarouselParentRef: PropTypes.func.isRequired,
 
         selectSong: PropTypes.func.isRequired,
-        togglePlay: PropTypes.func.isRequired,
-        handleVerseSelect: PropTypes.func.isRequired
+        togglePlay: PropTypes.func.isRequired
     }
 
     render() {

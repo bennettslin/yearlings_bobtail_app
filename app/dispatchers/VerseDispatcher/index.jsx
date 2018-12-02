@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updatePlayerStore } from 'flux/player/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -16,6 +17,7 @@ class VerseDispatcher extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         updatePlayerStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
@@ -47,6 +49,9 @@ class VerseDispatcher extends PureComponent {
             )
         })
 
+        // Ensure that no verse is interactivated.
+        this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
+
         // Verse bars always get reset.
         this.props.updateToggleStore({
             isVerseBarAbove: false,
@@ -75,6 +80,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updatePlayerStore,
         updateScrollLyricStore,
+        updateSessionStore,
         updateSongStore,
         updateToggleStore
     }, dispatch)

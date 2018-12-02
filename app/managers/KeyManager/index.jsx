@@ -38,10 +38,7 @@ class KeyManager extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        eventHandlers: PropTypes.shape({
-            // TODO: Specify which events are used. This isn't complete.
-            handleVerseSelect: PropTypes.func.isRequired
-        }).isRequired,
+        eventHandlers: PropTypes.object.isRequired,
         setRef: PropTypes.func.isRequired
     }
     componentDidMount() {
@@ -198,7 +195,6 @@ class KeyManager extends PureComponent {
 
                         // TODO: Eventually get rid of eventHandlers object!
                         selectSong,
-                        eventHandlers: this.props.eventHandlers,
                         determineVerseBarsWithParameters: this.determineVerseBarsWithParameters
                     }}
                 />

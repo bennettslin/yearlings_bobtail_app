@@ -39,7 +39,7 @@ class UnitCard extends Component {
 
     // No shouldComponentUpdate necessary.
 
-    handleStanzaTabClick = (e) => {
+    handleStanzaTabClick = () => {
         const {
                 handleVerseSelect,
                 stanzaArray
@@ -47,11 +47,10 @@ class UnitCard extends Component {
 
             { verseIndex } = stanzaArray[0]
 
-        handleVerseSelect(
-            e,
-            verseIndex,
-            true
-        )
+        handleVerseSelect({
+            selectedVerseIndex: verseIndex,
+            scrollLog: 'Stanza tab selected verse.'
+        })
     }
 
     render() {

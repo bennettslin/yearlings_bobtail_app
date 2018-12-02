@@ -2,6 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
@@ -25,7 +26,6 @@ class NavigationManager extends PureComponent {
 
         // From parent.
         getHandle: PropTypes.object.isRequired,
-        eventHandlers: PropTypes.object.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
@@ -44,9 +44,7 @@ class NavigationManager extends PureComponent {
                 isSelectedLogue,
                 selectedAnnotationIndex,
                 isDotsSlideShown,
-                isCarouselShown,
-
-                eventHandlers
+                isCarouselShown
             } = this.props,
 
             isVerseInteractivated = interactivatedVerseIndex > -1
@@ -59,10 +57,10 @@ class NavigationManager extends PureComponent {
             // We're selecting the interactivated verse.
             if (isVerseInteractivated && keyName === ENTER) {
 
-                keyWasRegistered =
-                    eventHandlers.handleVerseSelect(
-                        e, interactivatedVerseIndex
-                    )
+                keyWasRegistered = this.dispatchVerse({
+                    selectedVerseIndex: interactivatedVerseIndex,
+                    scrollLog: 'Access selected interactivated verse.'
+                })
 
                 annotationIndexWasAccessed = true
 
@@ -132,6 +130,7 @@ class NavigationManager extends PureComponent {
                         selectSong
                     }}
                 />
+                <VerseDispatcher {...{ getDispatch: this }} />
             </___>
         )
     }
