@@ -25,12 +25,12 @@ class NavigationManager extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
 
         // From parent.
-        getHandle: PropTypes.object.isRequired,
+        parentThis: PropTypes.object.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getHandle.handleNavigation = this.handleNavigation
+        this.props.parentThis.handleNavigation = this.handleNavigation
     }
 
     handleNavigation = (e, keyName) => {

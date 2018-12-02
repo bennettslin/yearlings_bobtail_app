@@ -21,11 +21,6 @@ class Live extends PureComponent {
     static propTypes = {
         // From parent.
         setLyricRef: PropTypes.func.isRequired,
-        setCarouselAnnotationRef: PropTypes.func.isRequired,
-        setLyricAnnotationRef: PropTypes.func.isRequired,
-        setVerseRef: PropTypes.func.isRequired,
-        setLyricParentRef: PropTypes.func.isRequired,
-        setCarouselParentRef: PropTypes.func.isRequired,
 
         selectSong: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired

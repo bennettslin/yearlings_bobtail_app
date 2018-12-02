@@ -9,11 +9,9 @@ import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
 import { updateSliderStore } from 'flux/slider/action'
 
-import LyricWheelDispatcher from '../../dispatchers/LyricWheelDispatcher'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import RootContainer from '../RootContainer'
-import CloseListener from '../../listeners/CloseListener'
 import KeyManager from '../../managers/KeyManager'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
@@ -185,14 +183,12 @@ class InteractiveContainer extends PureComponent {
                         selectSong
                     }}
                 />
-                <CloseListener />
                 <RootContainer
                     {...{
                         // TODO: Eventually get rid of eventHandlers object.
                         eventHandlers: newEventHandlers
                     }}
                 />
-                <LyricWheelDispatcher {...{ getDispatch: this }} />
                 <SliderTouchDispatcher {...{ getDispatch: this }} />
                 <StopPropagationDispatcher {...{ getDispatch: this }} />
             </div>

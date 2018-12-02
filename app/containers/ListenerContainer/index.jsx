@@ -1,3 +1,5 @@
+// These listeners take in no props from parent, so can live anywhere.
+
 import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -8,8 +10,6 @@ import LogManager from '../../managers/LogManager'
 
 import AudioManager from '../../managers/AudioManager'
 import PlayerManager from '../../managers/PlayerManager'
-import ScrollManager from '../../managers/ScrollManager'
-import VerseBarManager from '../../managers/VerseBarManager'
 
 // TODO: Eventually remove this one.
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
@@ -18,6 +18,7 @@ import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
 import AudioListener from '../../listeners/AudioListener'
 import CarouselListener from '../../handlers/CarouselHandler/Listener'
+import CloseListener from '../../listeners/CloseListener'
 import DidRenderListener from '../../listeners/DidRenderListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import LiveListener from '../../listeners/LiveListener'
@@ -61,34 +62,6 @@ class ListenerContainer extends PureComponent {
         return this.playerManager.toggleSelectedPlayer(payload)
     }
 
-    /**********
-     * SCROLL *
-     **********/
-
-    setCarouselAnnotationRef = (payload) => {
-        return this.scrollManager.setCarouselAnnotationRef(payload)
-    }
-
-    setLyricAnnotationRef = (payload) => {
-        return this.scrollManager.setLyricAnnotationRef(payload)
-    }
-
-    setVerseRef = (payload) => {
-        return this.scrollManager.setVerseRef(payload)
-    }
-
-    setLyricParentRef = (payload) => {
-        return this.scrollManager.setLyricParentRef(payload)
-    }
-
-    setCarouselParentRef = (payload) => {
-        return this.scrollManager.setCarouselParentRef(payload)
-    }
-
-    getVerseElement = (payload) => {
-        return this.scrollManager.getVerseElement(payload)
-    }
-
     /********
      * SONG *
      ********/
@@ -108,23 +81,11 @@ class ListenerContainer extends PureComponent {
     _setAudioManagerRef = (node) => {
         this.audioManager = node
     }
-    _setLyricManagerRef = (node) => {
-        this.lyricManager = node
-    }
     _setPlayerManagerRef = (node) => {
         this.playerManager = node
     }
-    _setScrollManagerRef = (node) => {
-        this.scrollManager = node
-    }
     _setSongManagerRef = (node) => {
         this.songManager = node
-    }
-    _setTitleManagerRef = (node) => {
-        this.titleManager = node
-    }
-    _setVerseManagerRef = (node) => {
-        this.verseManager = node
     }
 
     render() {
@@ -132,11 +93,6 @@ class ListenerContainer extends PureComponent {
             <___>
                 <EventContainer
                     // Event manager props.
-                    setCarouselAnnotationRef={this.setCarouselAnnotationRef}
-                    setLyricAnnotationRef={this.setLyricAnnotationRef}
-                    setVerseRef={this.setVerseRef}
-                    setLyricParentRef={this.setLyricParentRef}
-                    setCarouselParentRef={this.setCarouselParentRef}
                     selectSong={this.selectSong}
                     togglePlay={this.togglePlay}
                 />
@@ -149,13 +105,6 @@ class ListenerContainer extends PureComponent {
                     setRef={this._setPlayerManagerRef}
                     handleSongEnd={this.handleSongEnd}
                 />
-                <ScrollManager
-                    setRef={this._setScrollManagerRef}
-                />
-                <VerseBarManager
-                    setRef={this._setVerseManagerRef}
-                    getVerseElement={this.getVerseElement}
-                />
                 <SongDispatcher
                     setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
@@ -165,6 +114,7 @@ class ListenerContainer extends PureComponent {
                 <AnnotationAccessListener />
                 <AudioListener />
                 <CarouselListener />
+                <CloseListener />
                 <DidRenderListener />
                 <DoublespeakerListener />
                 <LiveListener />

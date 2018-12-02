@@ -191,7 +191,7 @@ class KeyManager extends PureComponent {
             <___>
                 <NavigationManager
                     {...{
-                        getHandle: this,
+                        parentThis: this,
 
                         // TODO: Eventually get rid of eventHandlers object!
                         selectSong,

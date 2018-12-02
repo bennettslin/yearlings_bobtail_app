@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import ScrollLyricListener from '../../../listeners/ScrollLyricListener'
+import VerseBarListener from '../../../listeners/VerseBarListener'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
 
@@ -34,8 +36,7 @@ class LyricScroll extends Component {
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,
-        setLyricRef: PropTypes.func.isRequired,
-        setLyricParentRef: PropTypes.func.isRequired
+        setLyricRef: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -71,14 +72,26 @@ class LyricScroll extends Component {
         this.dispatchLyricWheel(e, this.myLyricElement)
     }
 
-    setLyricRef = (node) => {
+    _setLyricParentForAll = (node) => {
         this.myLyricElement = node
 
-        // For keyboard events.
+        // For focus.
         this.props.setLyricRef(node)
 
         // For scrolling.
-        this.props.setLyricParentRef(node)
+        return this.setLyricParent(node)
+    }
+
+    _setVerse = (payload) => {
+        return this.setVerse(payload)
+    }
+
+    _setLyricAnnotation = (payload) => {
+        return this.setLyricAnnotation(payload)
+    }
+
+    _getVerseElement = (verseIndex) => {
+        return this.getVerseElement(verseIndex)
     }
 
     render() {
@@ -88,7 +101,6 @@ class LyricScroll extends Component {
                 isTransitioningHeight,
                 completeHeightTransition,
                 setLyricRef,
-                setLyricParentRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -105,32 +117,38 @@ class LyricScroll extends Component {
             )
 
         return songStanzaConfigs.length && (
-            <div
-                ref={this.setLyricRef}
-                className={cx(
-                    'LyricScroll',
-                    'absoluteFullContainer',
+            <___>
+                <ScrollLyricListener {...{ getRefs: this }} />
+                <VerseBarListener {...{ getVerseElement: this._getVerseElement }} />
+                <div
+                    ref={this._setLyricParentForAll}
+                    className={cx(
+                        'LyricScroll',
+                        'absoluteFullContainer',
 
-                    // This gradient does not obscure the lyric toggle buttons.
-                    'gradientMask__earColumn__mobileCollapsed'
-                )}
-                tabIndex="-1"
-                onWheel={this._handleWheel}
-            >
-                {/* TODO: Undo this. */}
-                {true && (
-                    <Stanzas {...other}
-                        {...{
-                            songStanzaConfigs,
-                            lastUnitDotCardIndex
-                        }}
-                    />
-                )}
-                {false && (
-                    <TempGlobalAnnotations />
-                )}
-                <LyricWheelDispatcher {...{ getDispatch: this }} />
-            </div>
+                        // This gradient does not obscure the lyric toggle buttons.
+                        'gradientMask__earColumn__mobileCollapsed'
+                    )}
+                    tabIndex="-1"
+                    onWheel={this._handleWheel}
+                >
+                    {/* TODO: Undo this. */}
+                    {true && (
+                        <Stanzas {...other}
+                            {...{
+                                songStanzaConfigs,
+                                lastUnitDotCardIndex,
+                                setLyricAnnotation: this._setLyricAnnotation,
+                                setVerseRef: this._setVerse
+                            }}
+                        />
+                    )}
+                    {false && (
+                        <TempGlobalAnnotations />
+                    )}
+                    <LyricWheelDispatcher {...{ getDispatch: this }} />
+                </div>
+            </___>
         )
     }
 }

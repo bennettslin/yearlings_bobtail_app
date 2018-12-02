@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
+import ScrollCarouselListener from '../../listeners/ScrollCarouselListener'
 import CarouselAnnotation from './Annotation'
 import CarouselSelect from './Select'
 
@@ -55,10 +56,7 @@ class Carousel extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired,
-
-        // From parent.
-        setCarouselParentRef: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -120,6 +118,14 @@ class Carousel extends PureComponent {
         })
     }
 
+    _setCarouselParent = (node) => {
+        return this.setCarouselParent(node)
+    }
+
+    _setCarouselAnnotation = (payload) => {
+        return this.setCarouselAnnotation(payload)
+    }
+
     render() {
         const {
                 /* eslint-disable no-unused-vars */
@@ -135,8 +141,6 @@ class Carousel extends PureComponent {
                 isDotsSlideShown,
                 interactivatedVerseIndex,
                 isLyricExpanded,
-
-                setCarouselParentRef,
                 canCarouselRender,
 
                 ...other
@@ -167,8 +171,9 @@ class Carousel extends PureComponent {
                     { 'parent__shown': canCarouselRender && isShown }
                 )}
             >
+                <ScrollCarouselListener {...{ getRefs: this }} />
                 <div
-                    ref={setCarouselParentRef}
+                    ref={this._setCarouselParent}
                     className="Carousel__scroll"
                 >
 
@@ -201,7 +206,8 @@ class Carousel extends PureComponent {
                                 {...{
                                     annotationIndex,
                                     isAccessed,
-                                    isSelected
+                                    isSelected,
+                                    setCarouselAnnotation: this._setCarouselAnnotation
                                 }}
                             />
                         )

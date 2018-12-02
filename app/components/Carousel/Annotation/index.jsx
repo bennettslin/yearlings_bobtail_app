@@ -37,7 +37,7 @@ class CarouselAnnotation extends Component {
         annotationIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        setCarouselAnnotationRef: PropTypes.func.isRequired
+        setCarouselAnnotation: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -61,8 +61,8 @@ class CarouselAnnotation extends Component {
         }
     }
 
-    setCarouselAnnotationRef = (node) => {
-        this.props.setCarouselAnnotationRef({
+    setCarouselAnnotation = (node) => {
+        this.props.setCarouselAnnotation({
             node,
             index: this.props.annotationIndex
         })
@@ -73,7 +73,7 @@ class CarouselAnnotation extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canCarouselRender,
-                setCarouselAnnotationRef,
+                setCarouselAnnotation,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -100,7 +100,7 @@ class CarouselAnnotation extends Component {
             <___>
                 <CarouselAnnotationView {...other}
                     {...{
-                        setRef: this.setCarouselAnnotationRef,
+                        setRef: this.setCarouselAnnotation,
                         annotationColumn: columnKey,
                         annotationDotKeys: dotKeys,
                         handleTitleClick: this._handleAnnotationTitleClick

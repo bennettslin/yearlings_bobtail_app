@@ -1,7 +1,7 @@
 import {
     getIsMini,
     getIsDesktop
-} from '../../helpers/responsiveHelper'
+} from 'helpers/responsiveHelper'
 
 import {
     LS_HEIGHT_LYRIC_COLLAPSED,

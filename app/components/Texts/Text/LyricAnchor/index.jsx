@@ -81,7 +81,7 @@ class TextLyricAnchor extends Component {
 
         ]).isRequired,
         dotKeys: PropTypes.object,
-        setLyricAnnotationRef: PropTypes.func
+        setLyricAnnotation: PropTypes.func
     }
 
     shouldComponentUpdate(nextProps) {
@@ -126,11 +126,11 @@ class TextLyricAnchor extends Component {
         }
     }
 
-    setLyricAnnotationRef = (node) => {
+    setLyricAnnotation = (node) => {
 
         // This method is only passed down by stanza, not carousel annotation.
-        if (this.props.setLyricAnnotationRef) {
-            this.props.setLyricAnnotationRef({
+        if (this.props.setLyricAnnotation) {
+            this.props.setLyricAnnotation({
                 node,
                 index: this.props.annotationIndex
             })
@@ -144,7 +144,7 @@ class TextLyricAnchor extends Component {
                 canLyricRender,
                 renderedSongIndex,
                 handleAnchorClick,
-                setLyricAnnotationRef,
+                setLyricAnnotation,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -219,7 +219,7 @@ class TextLyricAnchor extends Component {
                 {' '}
                 <span
                     key={annotationIndex}
-                    ref={this.setLyricAnnotationRef}
+                    ref={this.setLyricAnnotation}
                     className={cx(
                         annotationIndex &&
                             `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,

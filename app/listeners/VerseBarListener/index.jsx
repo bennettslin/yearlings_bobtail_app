@@ -9,7 +9,12 @@ import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import { getVerseBarStatus } from './helper'
 
-class VerseBarManager extends PureComponent {
+class VerseBarListener extends PureComponent {
+
+    // TODO: Eventually get rid of this.
+    static defaultProps = {
+        getVerseElement: () => {}
+    }
 
     static propTypes = {
         // Through Redux.
@@ -27,16 +32,11 @@ class VerseBarManager extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired,
         getVerseElement: PropTypes.func.isRequired
     }
 
     state = {
         verseBarsTimeoutId: ''
-    }
-
-    componentDidMount() {
-        this.props.setRef(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -172,4 +172,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(VerseBarManager)
+export default connect(mapStateToProps, bindDispatchToProps)(VerseBarListener)

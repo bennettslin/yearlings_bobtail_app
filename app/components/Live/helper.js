@@ -1,11 +1,6 @@
 export const getOrganisedHandlersFromProps = (props) => {
     const {
             setLyricRef,
-            setCarouselAnnotationRef,
-            setLyricAnnotationRef,
-            setVerseRef,
-            setLyricParentRef,
-            setCarouselParentRef,
             selectSong,
             togglePlay
         } = props,
@@ -22,17 +17,12 @@ export const getOrganisedHandlersFromProps = (props) => {
         },
 
         lyricHandlers = {
-            setLyricRef,
-            setLyricAnnotationRef,
-            setVerseRef,
-            setLyricParentRef
+            setLyricRef
         },
 
         mainColumnHandlers = {
             annotationPopupHandlers,
             carouselSectionHandlers: {
-                setCarouselAnnotationRef,
-                setCarouselParentRef,
                 selectSong
             },
             navSectionHandlers: {

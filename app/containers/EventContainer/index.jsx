@@ -16,18 +16,13 @@ class EventContainer extends PureComponent {
         // Through Redux.
     }
 
-    selectSong = (wormholeObject) => {
-        return this.props.selectSong(wormholeObject)
+    selectSong = (payload) => {
+        return this.props.selectSong(payload)
     }
 
     render() {
 
         const {
-            setCarouselAnnotationRef,
-            setLyricAnnotationRef,
-            setVerseRef,
-            setLyricParentRef,
-            setCarouselParentRef,
             selectSong,
             togglePlay
         } = this.props
@@ -36,11 +31,6 @@ class EventContainer extends PureComponent {
             <InteractiveContainer
                 {...{
                     eventHandlers: {
-                        setCarouselAnnotationRef,
-                        setLyricAnnotationRef,
-                        setVerseRef,
-                        setLyricParentRef,
-                        setCarouselParentRef,
                         selectSong,
                         togglePlay
                     },
