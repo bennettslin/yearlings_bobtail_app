@@ -1,5 +1,5 @@
 // Actions for song state.
-import { getSongIsLogue } from '../../helpers/dataHelper'
+import { getSongIsLogue } from '../../helpers/data'
 import { setInStorage } from '../storageHelper'
 
 import {

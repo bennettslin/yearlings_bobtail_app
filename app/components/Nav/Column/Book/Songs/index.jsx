@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import NavButtonIndexed from '../ButtonIndexed'
 
-import { getSongsAndLoguesCount } from 'helpers/dataHelper'
+import { getSongsAndLoguesCount } from 'helpers/data'
 import { getStartingIndexForBook } from './helper'
 
 const navBookSongsPropTypes = {

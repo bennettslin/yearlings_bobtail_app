@@ -8,7 +8,7 @@ import { updateSessionStore } from 'flux/session/action'
 
 import ListenerContainer from '../ListenerContainer'
 
-import { getTimeForVerseIndex } from '../../helpers/dataHelper'
+import { getTimeForVerseIndex } from '../../helpers/data'
 import {
     getValidRoutingIndicesObject,
     getPathForIndices

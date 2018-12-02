@@ -2,7 +2,7 @@
 
 import keys from 'lodash.keys'
 
-import { getAnnotationObject } from 'helpers/dataHelper'
+import { getAnnotationObject } from 'helpers/data'
 
 import {
     WORMHOLE,

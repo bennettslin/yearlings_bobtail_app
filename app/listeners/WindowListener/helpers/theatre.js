@@ -11,7 +11,7 @@ import {
 import {
     getIsPhone,
     getIsDesktop
-} from 'helpers/responsiveHelper'
+} from 'helpers/responsive'
 
 /*********
  * STAGE *

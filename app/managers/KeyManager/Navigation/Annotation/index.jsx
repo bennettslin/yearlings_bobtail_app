@@ -9,7 +9,7 @@ import WikiWormholeDispatcher from '../../../../handlers/WikiWormholeHandler/Dis
 import {
     getWormholeLink,
     getAnnotationObject
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
 import { getWormholeObject } from '../../../../helpers/wormhole'
 

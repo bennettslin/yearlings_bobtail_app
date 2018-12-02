@@ -1,7 +1,7 @@
 import {
     getIsTablet,
     getIsMonitor
-} from '../../../helpers/responsiveHelper'
+} from '../../../helpers/responsive'
 
 import { DEVICE_OBJECTS } from '../../../constants/responsive'
 

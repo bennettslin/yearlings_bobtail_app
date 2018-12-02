@@ -8,7 +8,7 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import { getTimeForVerseIndex } from 'helpers/dataHelper'
+import { getTimeForVerseIndex } from 'helpers/data'
 
 class VerseDispatcher extends PureComponent {
 

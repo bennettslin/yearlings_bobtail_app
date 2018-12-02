@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import { updateRenderableStore } from 'flux/renderable/action'
 import { updateRenderedStore } from 'flux/rendered/action'
 
-import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
+import { getSceneIndexForVerseIndex } from 'helpers/data'
 
 class RenderedSongListener extends PureComponent {
 

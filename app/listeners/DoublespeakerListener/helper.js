@@ -2,12 +2,12 @@ import {
     HAS_SIDE_CARDS,
     IS_DOUBLESPEAKER
 } from '../../constants/lyrics'
-import { getSongObject } from '../../helpers/dataHelper'
+import { getSongObject } from '../../helpers/data'
 import {
     getIsPhone,
     getIsTablet,
     getIsMonitor
-} from '../../helpers/responsiveHelper'
+} from '../../helpers/responsive'
 
 const getIsDoublespeakerShown = ({
     deviceIndex,

@@ -11,7 +11,7 @@ import CubeFillStylesheet from './Stylesheets/CubeFill'
 import FaceFillStylesheet from './Stylesheets/FaceFill'
 import FaceZIndexStylesheet from './Stylesheets/FaceZIndex'
 
-import { getCharStringForNumber } from 'helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/format'
 
 import {
     FACES

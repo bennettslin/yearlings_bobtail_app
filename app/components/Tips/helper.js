@@ -1,5 +1,5 @@
 import album from 'server/album'
-import { getSongIsLogue } from '../../helpers/dataHelper'
+import { getSongIsLogue } from '../../helpers/data'
 
 export const getSongTip = (songIndex) => {
 

@@ -3,8 +3,8 @@ import {
     getEarColumnForAnnotation,
     getVerseObject,
     getAnnotationsCount
-} from 'helpers/dataHelper'
-import { intersects } from 'helpers/dotHelper'
+} from 'helpers/data'
+import { intersects } from 'helpers/dot'
 
 import {
     WORMHOLE,

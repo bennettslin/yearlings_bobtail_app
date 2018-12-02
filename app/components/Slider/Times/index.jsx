@@ -7,8 +7,8 @@ import cx from 'classnames'
 
 import SliderTime from './Time'
 
-import { getSongTotalTime } from 'helpers/dataHelper'
-import { getFormattedTime } from 'helpers/formatHelper'
+import { getSongTotalTime } from 'helpers/data'
+import { getFormattedTime } from 'helpers/format'
 
 const mapStateToProps = ({
     renderStore: { canVerseRender },

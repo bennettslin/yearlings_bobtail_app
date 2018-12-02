@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
+import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { getStanzaIndexForVerseIndex } from '../helper'
 
 class LogicWrapper extends PureComponent {

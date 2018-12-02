@@ -8,7 +8,7 @@ import { updateAccessStore } from 'flux/access/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import { getNavBookIndex } from 'helpers/dataHelper'
+import { getNavBookIndex } from 'helpers/data'
 
 class CarouselListener extends PureComponent {
 

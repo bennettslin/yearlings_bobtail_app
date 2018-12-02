@@ -6,7 +6,7 @@ import { updateSliderStore } from 'flux/slider/action'
 
 import VerseDispatcher from '../VerseDispatcher'
 
-import { getClientX } from 'helpers/domHelper'
+import { getClientX } from 'helpers/dom'
 
 import {
     getSliderRatioForClientX,

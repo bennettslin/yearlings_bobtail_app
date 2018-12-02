@@ -5,7 +5,7 @@ import cx from 'classnames'
 
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../progress/ProgressFooter'
-import ProgressHelper from 'helpers/progressHelper'
+import ProgressHelper from '../progressHelper'
 import album from 'server/album'
 const { songs } = album
 

@@ -18,7 +18,7 @@ import Furniture from './Furniture'
 import Panel from './Panel'
 import Puppet from './Puppet'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 import {
     getNearestXIndex,

@@ -20,9 +20,9 @@ import {
 import {
     getSongTitle,
     getVerseObject
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { getWormholeObject } from '../../../../../../helpers/wormhole'
 

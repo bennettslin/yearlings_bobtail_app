@@ -3,7 +3,7 @@ import {
     getIsMini,
     getIsTablet,
     getIsMonitor
-} from '../../../helpers/responsiveHelper'
+} from '../../../helpers/responsive'
 
 import {
     DEVICE_OBJECTS,

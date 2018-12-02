@@ -10,7 +10,7 @@ import { DEVICE_DEFAULTS } from '../defaultStates'
 import {
     getIsDesktop,
     getIsPhone
-} from '../../helpers/responsiveHelper'
+} from '../../helpers/responsive'
 
 export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => {
 

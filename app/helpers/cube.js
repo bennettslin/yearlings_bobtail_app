@@ -10,7 +10,7 @@ import {
     SLANTED_TILE_X_UNITS_LENGTH
 } from 'constants/cubeRender'
 
-import { roundPercentage } from 'helpers/generalHelper'
+import { roundPercentage } from 'helpers/general'
 
 /***************
  * COORDINATES *

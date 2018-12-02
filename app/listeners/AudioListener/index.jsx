@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSongStore } from 'flux/song/action'
 
-import { getTimeForVerseIndex } from 'helpers/dataHelper'
+import { getTimeForVerseIndex } from 'helpers/data'
 
 class AudioListener extends PureComponent {
 

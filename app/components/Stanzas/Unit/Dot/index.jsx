@@ -8,8 +8,8 @@ import cx from 'classnames'
 import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import AnchorDot from '../../../Anchor/AnchorDot'
 
-import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 

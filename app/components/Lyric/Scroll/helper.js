@@ -1,4 +1,4 @@
-import { getSongObject } from '../../../helpers/dataHelper'
+import { getSongObject } from '../../../helpers/data'
 
 const _getLyricUnitsCount = (songIndex) => {
 

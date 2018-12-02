@@ -25,9 +25,9 @@ import {
 import {
     getSongsAndLoguesCount,
     getSongsNotLoguesCount
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
-import { getValueInBitNumber } from 'helpers/bitHelper'
+import { getValueInBitNumber } from 'helpers/bit'
 
 const mapStateToProps = ({
     audioStore: {

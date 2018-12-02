@@ -9,7 +9,7 @@ import { updateLoadStore } from 'flux/load/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import { getNavBookIndex } from 'helpers/dataHelper'
+import { getNavBookIndex } from 'helpers/data'
 
 class SongListener extends PureComponent {
 

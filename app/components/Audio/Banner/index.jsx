@@ -7,7 +7,7 @@ import cx from 'classnames'
 import Slider from '../../Slider'
 import AudioTimer from '../Timer'
 
-import { getSongTitle } from 'helpers/dataHelper'
+import { getSongTitle } from 'helpers/data'
 
 const mapStateToProps = ({
     responsiveStore: { isTwoRowMenu },

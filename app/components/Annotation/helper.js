@@ -3,7 +3,7 @@ import {
     REFERENCE
 } from 'constants/dots'
 
-import { getAnnotationObject } from 'helpers/dataHelper'
+import { getAnnotationObject } from 'helpers/data'
 
 export const getAccessibleWikiWormholesLength = ({
     songIndex,

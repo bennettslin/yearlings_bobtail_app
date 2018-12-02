@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderedStore } from 'flux/rendered/action'
 
-import { getSceneIndexForVerseIndex } from 'helpers/dataHelper'
+import { getSceneIndexForVerseIndex } from 'helpers/data'
 
 class RenderedListener extends PureComponent {
 

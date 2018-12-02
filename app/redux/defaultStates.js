@@ -14,7 +14,7 @@ import {
     getSceneIndexForVerseIndex,
     getTimeForVerseIndex,
     getEarColumnForAnnotation
-} from '../helpers/dataHelper'
+} from '../helpers/data'
 
 import {
     IS_ACCESS_ON,

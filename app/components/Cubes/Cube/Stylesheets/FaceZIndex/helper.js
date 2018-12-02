@@ -8,7 +8,7 @@ import {
     RIGHT
 } from 'constants/scene'
 
-import { getHorizontalPlaneFractions } from 'helpers/cubeRender'
+import { getHorizontalPlaneFractions } from 'helpers/cube'
 
 const midXIndex = CUBE_X_AXIS_LENGTH / 2
 

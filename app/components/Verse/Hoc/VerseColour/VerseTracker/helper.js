@@ -1,4 +1,4 @@
-import { getSongObject } from '../../../../../helpers/dataHelper'
+import { getSongObject } from '../../../../../helpers/data'
 
 export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
     const songObject = getSongObject(songIndex),

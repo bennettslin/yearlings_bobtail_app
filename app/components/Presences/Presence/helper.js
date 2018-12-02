@@ -14,8 +14,8 @@ import {
 
 import {
     getHorizontalPlaneFractions
-} from 'helpers/cubeRender'
-import { getValueInAbridgedMatrix } from 'helpers/generalHelper'
+} from 'helpers/cube'
+import { getValueInAbridgedMatrix } from 'helpers/general'
 
 export const getPresencesForCubes = ({
 

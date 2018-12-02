@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getFormattedTime } from 'helpers/formatHelper'
+import { getFormattedTime } from 'helpers/format'
 
 const mapStateToProps = ({
     songStore: {

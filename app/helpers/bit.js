@@ -1,7 +1,7 @@
 // Methods to switch between a bit number and a true false object.
 import keys from 'lodash.keys'
 
-import { getArrayOfLength } from './generalHelper'
+import { getArrayOfLength } from './general'
 
 export const getTwoToThePowerOfN = (exponent, number = 2) => {
     /**

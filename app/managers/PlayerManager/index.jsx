@@ -13,12 +13,12 @@ import { updateSongStore } from 'flux/song/action'
 import PlayerTimeVerseDispatcher from '../../dispatchers/PlayerTimeVerseDispatcher'
 import Player from './Player'
 
-import { setNewValueInBitNumber } from 'helpers/bitHelper'
+import { setNewValueInBitNumber } from 'helpers/bit'
 
 import {
     getSongsNotLoguesCount,
     getTimeForVerseIndex
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
 import {
     getMp3s,

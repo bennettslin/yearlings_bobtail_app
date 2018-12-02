@@ -9,7 +9,7 @@ import TipsToggle from './Toggle'
 import Texts from '../Texts'
 
 import { getSongTip } from './helper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canMainRender },

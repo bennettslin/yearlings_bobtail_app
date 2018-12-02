@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
 import { SOURCE_WORMHOLE_INDEX } from 'constants/lyrics'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 import { getAnnotationCardWormholeLinksArray } from './helper'
 
 const mapStateToProps = ({

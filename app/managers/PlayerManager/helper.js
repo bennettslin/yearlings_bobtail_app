@@ -5,8 +5,8 @@ import {
     getSongsNotLoguesCount,
     getSongVerseConfigs,
     getSongTotalTime
-} from 'helpers/dataHelper'
-import { convertBitNumberToTrueFalseKeys } from 'helpers/bitHelper'
+} from 'helpers/data'
+import { convertBitNumberToTrueFalseKeys } from 'helpers/bit'
 
 export const getMp3s = () => {
     const { mp3s } = album

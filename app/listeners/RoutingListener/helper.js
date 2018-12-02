@@ -3,7 +3,7 @@ import {
     getSongObject,
     getVerseObject,
     getAnnotationObject
-} from '../../helpers/dataHelper'
+} from '../../helpers/data'
 
 import { HYPHENATED_SONG_PATHS } from '../../constants/paths'
 

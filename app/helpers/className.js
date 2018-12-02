@@ -1,8 +1,8 @@
-import { getCharStringForNumber } from 'helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/format'
 
 import {
     getValueInAbridgedMatrix
-} from 'helpers/generalHelper'
+} from 'helpers/general'
 
 import {
     LEVELS,

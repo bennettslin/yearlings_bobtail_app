@@ -1,7 +1,7 @@
 import {
     getIsPhone,
     getIsMini
-} from '../../../helpers/responsiveHelper'
+} from '../../../helpers/responsive'
 
 import { WIKI_SIDE_PADDING_TOTAL } from '../../../constants/responsive'
 

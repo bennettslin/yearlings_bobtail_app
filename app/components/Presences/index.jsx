@@ -12,7 +12,7 @@ import cx from 'classnames'
 
 import Presence from './Presence'
 
-import { getSceneObject } from 'helpers/dataHelper'
+import { getSceneObject } from 'helpers/data'
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },

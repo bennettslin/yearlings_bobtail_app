@@ -11,7 +11,7 @@ import SliderStanza from './Stanza'
 import {
     getSongTotalTime,
     getSongStanzaConfigs
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
 const mapStateToProps = ({
     renderStore: { canVerseRender },

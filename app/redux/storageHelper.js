@@ -6,7 +6,7 @@ import {
     getTwoToThePowerOfN,
     convertBitNumberToTrueFalseKeys,
     setNewValueInBitNumber
-} from 'helpers/bitHelper'
+} from 'helpers/bit'
 
 import {
     ALL_DOT_KEYS,

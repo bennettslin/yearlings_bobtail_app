@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import { DEVICE_OBJECTS } from 'constants/responsive'
 
-import { getIsTablet } from 'helpers/responsiveHelper'
+import { getIsTablet } from 'helpers/responsive'
 
 class DeviceWrapper extends PureComponent {
 

@@ -3,7 +3,7 @@ import scrollIntoView from 'scroll-into-view'
 import {
     getIsDesktop,
     getIsMonitor
-} from './responsiveHelper'
+} from './responsive'
 
 import {
     LS_WIDTH_GOLDEN_CORD,

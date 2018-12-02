@@ -10,9 +10,9 @@ import Annotation from '../../Annotation'
 
 import { CAROUSEL_SCROLL } from 'constants/dom'
 import { EAR_COLUMN_KEYS } from 'constants/lyrics'
-import { getAnnotationObject } from 'helpers/dataHelper'
-import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getAnnotationObject } from 'helpers/data'
+import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },

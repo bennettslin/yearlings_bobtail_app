@@ -7,7 +7,7 @@ import cx from 'classnames'
 import {
     getFormattedLyricSpanText,
     getFormattedEndingVerseSpanText
-} from 'helpers/formatHelper'
+} from 'helpers/format'
 
 const defaultProps = {
         isVerseLyric: false

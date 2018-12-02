@@ -11,7 +11,7 @@ import Layers from './Layers'
 import Sky from './Sky'
 import Wood from '../Stage/Wood'
 
-import { getSceneObject } from 'helpers/dataHelper'
+import { getSceneObject } from 'helpers/data'
 
 import {
     Z_INDICES_MATRIX_NAME,

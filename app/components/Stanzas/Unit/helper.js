@@ -1,4 +1,4 @@
-import { getSongObject } from '../../../helpers/dataHelper'
+import { getSongObject } from '../../../helpers/data'
 
 export const getLyricUnitArray = (songIndex, unitIndex) => {
     const songs = getSongObject(songIndex)

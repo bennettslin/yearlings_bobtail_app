@@ -11,7 +11,7 @@ import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import AnchorText from '../../../Anchor/AnchorText'
 import Texts from '../../'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 

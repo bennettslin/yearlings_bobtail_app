@@ -11,8 +11,8 @@ import ScrollCarouselListener from '../../listeners/ScrollCarouselListener'
 import CarouselAnnotation from './Annotation'
 import CarouselSelect from './Select'
 
-import { getAnnotationsCount } from 'helpers/dataHelper'
-import { getArrayOfLength } from 'helpers/generalHelper'
+import { getAnnotationsCount } from 'helpers/data'
+import { getArrayOfLength } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },

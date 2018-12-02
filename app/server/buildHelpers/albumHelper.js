@@ -30,9 +30,9 @@ import {
     finalRegisterPresenceYIndices
 } from './scenesHelper'
 
-import { getSongIsLogue } from 'helpers/dataHelper'
+import { getSongIsLogue } from 'helpers/data'
 
-import { getFormattedAnnotationTitle } from 'helpers/formatHelper'
+import { getFormattedAnnotationTitle } from 'helpers/format'
 
 import {
     LEFT,

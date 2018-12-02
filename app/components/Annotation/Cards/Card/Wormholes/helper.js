@@ -1,4 +1,4 @@
-import { getAnnotationCardObject } from 'helpers/dataHelper'
+import { getAnnotationCardObject } from 'helpers/data'
 
 export const getAnnotationCardWormholeLinksArray = ({
     songIndex,

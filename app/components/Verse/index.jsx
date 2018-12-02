@@ -9,7 +9,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 
 import VerseLines from './Lines'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { VERSE_SCROLL } from 'constants/dom'
 

@@ -8,8 +8,8 @@ import VerseBarListener from '../../../listeners/VerseBarListener'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
 
-import { getSongStanzaConfigs } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getSongStanzaConfigs } from 'helpers/data'
+import { getPropsAreShallowEqual } from 'helpers/general'
 import { getLastUnitDotCardIndex } from './helper'
 
 import TempGlobalAnnotations from './TempGlobalAnnotations'

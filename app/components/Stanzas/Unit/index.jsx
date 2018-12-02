@@ -15,7 +15,7 @@ import UnitDot from './Dot'
 
 import { TITLE } from 'constants/lyrics'
 import { getLyricUnitArray } from './helper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 const mapStateToProps = ({

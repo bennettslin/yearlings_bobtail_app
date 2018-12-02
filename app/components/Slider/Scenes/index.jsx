@@ -8,7 +8,7 @@ import cx from 'classnames'
 import {
     getSongSceneConfigs,
     getSongTotalTime
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
 const mapStateToProps = ({
     renderStore: { canVerseRender },

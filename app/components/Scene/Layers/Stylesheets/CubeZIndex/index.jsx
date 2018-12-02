@@ -5,7 +5,7 @@ import Stylesheet from '../../../../Stylesheet'
 import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
 import { getClassNameForSlantDirection } from 'helpers/className'
-import { getCharStringForNumber } from 'helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/format'
 
 import {
     LEFT,

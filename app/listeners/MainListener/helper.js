@@ -1,4 +1,4 @@
-import { getIsPhone } from 'helpers/responsiveHelper'
+import { getIsPhone } from 'helpers/responsive'
 
 const getIsOverlayingAnnotation = ({
     deviceIndex,

@@ -9,7 +9,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 import ButtonIcon from './ButtonIcon'
 import AccessLetter from '../Access/Letter'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 

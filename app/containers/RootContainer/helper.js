@@ -2,7 +2,7 @@ import { EAR_COLUMN_KEYS } from 'constants/lyrics'
 import {
     getSongIsLogue,
     getSongObject
-} from '../../helpers/dataHelper'
+} from '../../helpers/data'
 
 export const getSingleShownEarColumnKey = ({
     isEarShown,

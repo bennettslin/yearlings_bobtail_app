@@ -16,7 +16,7 @@ import {
 import {
     getSongsAndLoguesCount,
     getTimeForVerseIndex
-} from '../../../helpers/dataHelper'
+} from '../../../helpers/data'
 
 class SongDispatcher extends PureComponent {
 

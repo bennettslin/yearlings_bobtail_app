@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import NavButton from '../Button'
 
-import { getNavBookIndex } from 'helpers/dataHelper'
+import { getNavBookIndex } from 'helpers/data'
 
 const mapStateToProps = ({
     songStore: { selectedSongIndex }

@@ -1,7 +1,7 @@
 import {
     getIsPhone,
     getIsMini
-} from '../../../helpers/responsiveHelper'
+} from '../../../helpers/responsive'
 
 import { getIsLyricExpandable } from './responsive'
 

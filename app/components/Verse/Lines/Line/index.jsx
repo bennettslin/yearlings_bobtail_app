@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../../../Texts'
 import { TITLE } from 'constants/lyrics'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender },

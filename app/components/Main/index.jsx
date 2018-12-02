@@ -21,7 +21,7 @@ import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canMainRender }

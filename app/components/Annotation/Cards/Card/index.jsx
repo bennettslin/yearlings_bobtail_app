@@ -10,9 +10,9 @@ import Texts from '../../../Texts'
 import AnnotationWormholes from './Wormholes'
 import { WORMHOLE } from 'constants/dots'
 
-import { getAnnotationCardObject } from 'helpers/dataHelper'
-import { getPrefixedDotLetterClassNames } from 'helpers/dotHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getAnnotationCardObject } from 'helpers/data'
+import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },

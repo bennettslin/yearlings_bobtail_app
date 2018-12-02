@@ -6,8 +6,8 @@ import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
 
-import { intersects } from '../../../helpers/dotHelper'
-import { getAnnotationObject } from '../../../helpers/dataHelper'
+import { intersects } from '../../../helpers/dot'
+import { getAnnotationObject } from '../../../helpers/data'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 
 class AnnotationDispatcher extends PureComponent {

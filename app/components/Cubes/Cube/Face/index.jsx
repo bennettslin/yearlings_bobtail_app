@@ -7,7 +7,7 @@ import {
     getChildClassNameForFaceLogic
 } from 'helpers/className'
 
-import { getCharStringForNumber } from 'helpers/formatHelper'
+import { getCharStringForNumber } from 'helpers/format'
 
 import {
     FLOOR,

@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateSessionStore } from 'flux/session/action'
 
-import { getValueInBitNumber } from 'helpers/bitHelper'
-import { getSongsNotLoguesCount } from 'helpers/dataHelper'
+import { getValueInBitNumber } from 'helpers/bit'
+import { getSongsNotLoguesCount } from 'helpers/data'
 
 class AudioManager extends PureComponent {
 

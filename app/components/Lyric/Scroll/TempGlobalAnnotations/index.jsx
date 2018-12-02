@@ -9,7 +9,7 @@ import album from 'server/album'
 import {
     getAnnotationObject,
     getGlobalAnnotationObject
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
 const TempGlobalAnnotationsCounter = ({
     counter,

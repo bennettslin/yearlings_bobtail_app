@@ -1,5 +1,5 @@
 // Actions for rendered state.
-import { getSongIsLogue } from '../../helpers/dataHelper'
+import { getSongIsLogue } from '../../helpers/data'
 
 import {
     hasKey,

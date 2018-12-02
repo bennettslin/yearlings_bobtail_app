@@ -12,7 +12,7 @@ import {
     getSongObject,
     getSceneObject,
     getDrawings
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
 import { WINDOW_STORAGE } from 'constants/state'
 

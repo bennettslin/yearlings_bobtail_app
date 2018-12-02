@@ -9,7 +9,7 @@ import NavDispatcher from '../../../../dispatchers/NavDispatcher'
 import {
     getSongsAndLoguesCount,
     getNavBookIndex
-} from 'helpers/dataHelper'
+} from 'helpers/data'
 
 import {
     ARROW_LEFT,

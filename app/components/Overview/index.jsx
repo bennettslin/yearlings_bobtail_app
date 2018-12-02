@@ -12,7 +12,7 @@ import {
     getSongOverview,
     getIsToggleInOverview
 } from './helper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },

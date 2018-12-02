@@ -9,8 +9,8 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 import AnnotationCards from './Cards'
 import AnnotationHeader from './Header'
 
-import { getAnnotationObject } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getAnnotationObject } from 'helpers/data'
+import { getPropsAreShallowEqual } from 'helpers/general'
 import { getAccessibleWikiWormholesLength } from './helper'
 
 const mapStateToProps = ({

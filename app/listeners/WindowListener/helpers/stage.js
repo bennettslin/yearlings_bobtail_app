@@ -27,7 +27,7 @@ import {
     getIsDesktop,
     getIsPhone,
     getIsMonitor
-} from 'helpers/responsiveHelper'
+} from 'helpers/responsive'
 
 import { getIsHiddenCarouselNav } from './hidden'
 import { getCentreFieldHeight } from './theatre'

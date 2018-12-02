@@ -9,8 +9,8 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 
-import { getVerseObject } from 'helpers/dataHelper'
-import { getPropsAreShallowEqual } from 'helpers/generalHelper'
+import { getVerseObject } from 'helpers/data'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender },

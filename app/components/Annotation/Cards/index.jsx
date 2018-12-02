@@ -4,7 +4,7 @@ import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import AnnotationCard from './Card'
 
-import { getArrayOfLength } from 'helpers/generalHelper'
+import { getArrayOfLength } from 'helpers/general'
 
 class AnnotationCards extends Component {
 
