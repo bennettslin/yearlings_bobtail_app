@@ -6,9 +6,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateEventStore } from 'flux/event/action'
 import { updateSliderStore } from 'flux/slider/action'
 
+import CloseHandler from '../../handlers/CloseHandler'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import RootContainer from '../RootContainer'
@@ -37,7 +37,6 @@ class FocusContainer extends PureComponent {
         isHiddenLyric: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        updateEventStore: PropTypes.func.isRequired,
         updateSliderStore: PropTypes.func.isRequired
     }
 
@@ -80,9 +79,8 @@ class FocusContainer extends PureComponent {
         this.dispatchStopPropagation(e)
 
         this.dispatchTouchEnd()
+        this.closeForBodyClick()
         this._focusElementForAccess()
-
-        this.props.updateEventStore({ bodyClicked: true })
     }
 
     _focusElementForAccess = () => {
@@ -146,6 +144,7 @@ class FocusContainer extends PureComponent {
                     tabIndex: -1
                 }}
             >
+                <CloseHandler {...{ parentThis: this }} />
                 <AccessStylesheet />
                 <KeyManager
                     {...{
@@ -169,7 +168,6 @@ class FocusContainer extends PureComponent {
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateEventStore,
         updateSliderStore
     }, dispatch)
 )

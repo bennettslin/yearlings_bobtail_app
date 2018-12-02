@@ -3,7 +3,6 @@ module.exports = {
     AUDIO_STORE: 'audioStore',
     DEVICE_STORE: 'deviceStore',
     DOTS_STORE: 'dotsStore',
-    EVENT_STORE: 'eventStore',
     LOAD_STORE: 'loadStore',
     OPTION_STORE: 'optionStore',
     PLAYER_STORE: 'playerStore',

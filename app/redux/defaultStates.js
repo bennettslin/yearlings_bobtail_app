@@ -70,10 +70,6 @@ const
     // All dotKeys plus dotsBitNumber.
     DOTS_DEFAULTS = getDotsFromStorage(),
 
-    EVENT_DEFAULTS = {
-        bodyClicked: false
-    },
-
     LOAD_DEFAULTS = {
         appMounted: false,
         isScoreLoaded: false
@@ -217,7 +213,6 @@ export {
     AUDIO_DEFAULTS,
     DEVICE_DEFAULTS,
     DOTS_DEFAULTS,
-    EVENT_DEFAULTS,
     LOAD_DEFAULTS,
     OPTION_DEFAULTS,
     PLAYER_DEFAULTS,

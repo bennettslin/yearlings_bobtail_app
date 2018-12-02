@@ -3,7 +3,6 @@ import AccessReducer from './access/reducer'
 import AudioReducer from './audio/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
-import EventReducer from './event/reducer'
 import LoadReducer from './load/reducer'
 import OptionReducer from './option/reducer'
 import PlayerReducer from './player/reducer'
@@ -25,7 +24,6 @@ import {
     AUDIO_STORE,
     DEVICE_STORE,
     DOTS_STORE,
-    EVENT_STORE,
     LOAD_STORE,
     OPTION_STORE,
     PLAYER_STORE,
@@ -64,7 +62,6 @@ const rootReducer = combineReducers({
     [RENDERABLE_STORE]: RenderableReducer,
 
     // Queued event stores.
-    [EVENT_STORE]: EventReducer,
     [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
     [VERSE_BARS_STORE]: VerseBarsReducer,

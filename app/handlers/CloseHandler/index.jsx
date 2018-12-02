@@ -1,5 +1,5 @@
 /**
- * Listener for closing multiple sections. Because the logic is so similar for
+ * Handler for closing multiple sections. Because the logic is so similar for
  * each section, it is better for dev clarity to keep them together.
  */
 
@@ -7,7 +7,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateEventStore } from 'flux/event/action'
 import { updateOptionStore } from 'flux/option/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
@@ -18,11 +17,10 @@ import {
     HIDDEN
 } from '../../constants/options'
 
-class CloseListener extends PureComponent {
+class CloseHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        bodyClicked: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -36,20 +34,22 @@ class CloseListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        updateEventStore: PropTypes.func.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        updateToggleStore: PropTypes.func.isRequired,
+
+        // From parent.
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
+        this.props.parentThis.closeForBodyClick = this.closeForBodyClick
         this._handleOverviewShown()
         this._handleTipsShown()
     }
 
     componentDidUpdate(prevProps) {
-        this._handleBodyClick(prevProps)
         this._handleAnnotationSelect(prevProps)
         this._handleCarouselNavToggle(prevProps)
         this._handleDotsSlideOpen(prevProps)
@@ -62,24 +62,14 @@ class CloseListener extends PureComponent {
         this._handleWikiSelect(prevProps)
     }
 
-    _handleBodyClick(prevProps) {
-        const
-            { bodyClicked } = this.props,
-            { bodyClicked: prevBodyClicked } = prevProps
+    closeForBodyClick = () => {
+        if (!this.closeOverlayPopups()) {
+            this.closeMainSections({
+                exemptLyric: true,
 
-        if (bodyClicked && !prevBodyClicked) {
-
-            // If no overlay popup was closed, continue to close main sections.
-            if (!this.closeOverlayPopups()) {
-                this.closeMainSections({
-                    exemptLyric: true,
-
-                    // If clicking to dismiss tips, leave overview shown.
-                    exemptOverview: this.props.selectedTipsOption === SHOWN
-                })
-            }
-
-            this.props.updateEventStore({ bodyClicked: false })
+                // If clicking to dismiss tips, leave overview shown.
+                exemptOverview: this.props.selectedTipsOption === SHOWN
+            })
         }
     }
 
@@ -323,9 +313,6 @@ class CloseListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    eventStore: {
-        bodyClicked
-    },
     optionStore: {
         selectedOverviewOption,
         selectedTipsOption,
@@ -348,7 +335,6 @@ const mapStateToProps = ({
         interactivatedVerseIndex
     }
 }) => ({
-    bodyClicked,
     selectedAnnotationIndex,
     isCarouselShown,
     isDotsSlideShown,
@@ -366,7 +352,6 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateEventStore,
         updateOptionStore,
         updateSessionStore,
         updateSongStore,
@@ -374,4 +359,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(CloseListener)
+export default connect(mapStateToProps, bindDispatchToProps)(CloseHandler)
