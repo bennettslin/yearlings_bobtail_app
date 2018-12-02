@@ -19,15 +19,13 @@ const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
     sliderStore: {
-        isSliderTouched,
-        didSliderJustMouseUp
+        isSliderTouched
     },
     toggleStore: { isLyricExpanded }
 }) => ({
     appMounted,
     isHiddenLyric,
     isSliderTouched,
-    didSliderJustMouseUp,
     isLyricExpanded
 })
 
@@ -38,7 +36,6 @@ class FocusContainer extends PureComponent {
         appMounted: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
-        didSliderJustMouseUp: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         updateEventStore: PropTypes.func.isRequired,
         updateSliderStore: PropTypes.func.isRequired
@@ -54,8 +51,7 @@ class FocusContainer extends PureComponent {
     }
 
     _checkLyricUnshown(prevProps) {
-        const
-            {
+        const {
                 isHiddenLyric,
                 isLyricExpanded
             } = this.props,
@@ -73,43 +69,20 @@ class FocusContainer extends PureComponent {
         }
     }
 
-    _handleBodyClick = (e) => {
-        this.dispatchStopPropagation(e)
-
-        /**
-         * Don't register the click event that happens after mouseUp if we're
-         * lifting up from moving the slider.
-         */
-        if (!this.props.didSliderJustMouseUp) {
-            this.props.updateEventStore({ bodyClicked: true })
-
-            // Return focus to lyric section so it can have scroll access.
-            // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-            this._focusElementForAccess()
-        }
-
-        console.error('handle body click')
-    }
-
     _handleTouchMove = (e) => {
         this.dispatchTouchMove(e)
     }
 
     _handleTouchEnd = (e) => {
+        // This method handles both body clicks and slider touch ends.
+
         e.preventDefault()
-        console.error('handle touch end')
+        this.dispatchStopPropagation(e)
 
         this.dispatchTouchEnd()
-
-        /**
-         * Prevent slider from locking up and not registering a touch move. Not
-         * sure just yet if this really does the trick.
-         */
         this._focusElementForAccess()
 
-        if (this.props.isSliderTouched) {
-            this.props.updateSliderStore({ didSliderJustMouseUp: true })
-        }
+        this.props.updateEventStore({ bodyClicked: true })
     }
 
     _focusElementForAccess = () => {
@@ -163,8 +136,6 @@ class FocusContainer extends PureComponent {
                 ref={this._setRootElement}
                 {...{
                     className: 'FocusContainer',
-                    onClick: this._handleBodyClick,
-                    onTouchStart: this._handleBodyClick,
                     onMouseMove: this._handleTouchMove,
                     onTouchMove: this._handleTouchMove,
                     onMouseUp: this._handleTouchEnd,

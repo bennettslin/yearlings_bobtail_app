@@ -31,17 +31,6 @@ class SliderListener extends PureComponent {
             this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
             this.props.updateToggleStore({ isAccessOn: false })
         }
-
-        // This prevents a click event from registering after mouseUp.
-        if (!isSliderTouched && wasSliderTouched) {
-
-            // Let click handler get called first, then reset state.
-            setTimeout(this._resetSliderMousedUp, 0)
-        }
-    }
-
-    _resetSliderMousedUp = () => {
-        this.props.updateSliderStore({ didSliderJustMouseUp: false })
     }
 
     render() {

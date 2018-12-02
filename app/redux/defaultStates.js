@@ -193,7 +193,6 @@ const
     SLIDER_DEFAULTS = {
         isSliderMoving: false,
         isSliderTouched: false,
-        didSliderJustMouseUp: false,
         sliderLeft: 0,
         sliderRatio: 0,
         sliderWidth: 0,
