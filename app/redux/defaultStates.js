@@ -40,20 +40,6 @@ const
         storedAnnotationIndex
     ),
 
-    PLAYER_DEFAULTS = {
-        playerSongIndex: -1,
-        playerVerseIndex: -1
-    },
-
-    EVENT_DEFAULTS = {
-        bodyClicked: false
-    },
-
-    VERSE_BARS_DEFAULTS = {
-        doDetermineVerseBars: false,
-        verseBarsTimeout: 0
-    },
-
     ACCESS_DEFAULTS = {
         accessedKey: '',
         accessedAnnotationIndex: storedAnnotationIndex || 1,
@@ -67,9 +53,103 @@ const
         canPlayThroughs: 0
     },
 
+    DEVICE_DEFAULTS = {
+        deviceIndex: 0,
+        isPhone: false,
+        isDesktop: false,
+        windowHeight: 0,
+        windowWidth: 0,
+        stageTop: 0,
+        stageLeft: 0,
+        stageWidth: 100,
+        stageHeight: 100,
+        ceilingHeight: 0,
+        floorHeight: 0
+    },
+
+    // All dotKeys plus dotsBitNumber.
+    DOTS_DEFAULTS = getDotsFromStorage(),
+
+    EVENT_DEFAULTS = {
+        bodyClicked: false
+    },
+
     LOAD_DEFAULTS = {
         appMounted: false,
         isScoreLoaded: false
+    },
+
+    OPTION_DEFAULTS = {
+        selectedOverviewOption:
+            getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
+        selectedTipsOption:
+            getOptionFromStorage(SELECTED_TIPS_OPTION) || SHOWN,
+        isForcedShownOverview: false,
+        isSongShownOverview: false,
+        isSongShownTips: false
+    },
+
+    PLAYER_DEFAULTS = {
+        playerSongIndex: -1,
+        playerVerseIndex: -1
+    },
+
+    RENDER_DEFAULTS = {
+        canTheatreRender: false,
+        canMainRender: false,
+        canVerseRender: false,
+        canLyricRender: false,
+        canCarouselRender: false,
+        canSceneRender: false,
+
+        didTheatreRender: false,
+        didMainRender: false,
+        didVerseRender: false,
+        didLyricRender: false,
+        didCarouselRender: false,
+        didSceneRender: false
+    },
+
+    RENDERABLE_DEFAULTS = {
+        isSceneChangeRenderable: true,
+        isSongChangeRenderable: false,
+        isWindowResizeRenderable: false
+    },
+
+    RENDERED_DEFAULTS = {
+        renderedSongIndex: storedSongIndex,
+        renderedAnnotationIndex: storedAnnotationIndex,
+        renderedVerseIndex: storedVerseIndex,
+        isRenderedLogue: isStoredLogue,
+        renderedSceneIndex: getSceneIndexForVerseIndex(
+            storedSongIndex,
+            storedVerseIndex
+        )
+    },
+
+    RESPONSIVE_DEFAULTS = {
+        isHiddenLyric: false,
+        isHiddenCarouselNav: false,
+        isMobileWiki: false,
+        isScoresTipsInMain: false,
+        isTwoRowMenu: false,
+        showShrunkNavIcon: false,
+        showSingleNavBook: false,
+        isLyricExpandable: false,
+        isScoreShowable: true
+    },
+
+    SCROLL_CAROUSEL_DEFAULTS = {
+        scrollCarouselLog: '',
+        scrollCarouselIndex: 0,
+        doScrollCarouselImmediately: false
+    },
+
+    SCROLL_LYRIC_DEFAULTS = {
+        scrollLyricLog: '',
+        doScrollLyricByVerse: false,
+        scrollLyricIndex: 0,
+        doScrollLyricImmediately: false
     },
 
     SESSION_DEFAULTS = {
@@ -80,6 +160,27 @@ const
             getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
         selectedWikiIndex: 0,
         selectedWikiUrl: ''
+    },
+
+    SLIDER_DEFAULTS = {
+        isSliderMoving: false,
+        isSliderTouched: false,
+        sliderLeft: 0,
+        sliderRatio: 0,
+        sliderWidth: 0,
+        sliderVerseIndex: -1
+    },
+
+    SONG_DEFAULTS = {
+        earColumnIndex: earColumnIndex || 0,
+        [SELECTED_SONG_INDEX]: storedSongIndex,
+        [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
+        [SELECTED_VERSE_INDEX]: storedVerseIndex,
+        isSelectedLogue: isStoredLogue,
+        selectedTime: getTimeForVerseIndex(
+            storedSongIndex,
+            storedVerseIndex
+        )
     },
 
     TOGGLE_DEFAULTS = {
@@ -106,130 +207,30 @@ const
         toggleShowsTipsImmediately: false
     },
 
-    DEVICE_DEFAULTS = {
-        deviceIndex: 0,
-        isPhone: false,
-        isDesktop: false,
-        windowHeight: 0,
-        windowWidth: 0,
-        stageTop: 0,
-        stageLeft: 0,
-        stageWidth: 100,
-        stageHeight: 100,
-        ceilingHeight: 0,
-        floorHeight: 0
-    },
-
-    // All dotKeys plus dotsBitNumber.
-    DOTS_DEFAULTS = getDotsFromStorage(),
-
-    OPTION_DEFAULTS = {
-        selectedOverviewOption:
-            getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
-        selectedTipsOption:
-            getOptionFromStorage(SELECTED_TIPS_OPTION) || SHOWN,
-        isForcedShownOverview: false,
-        isSongShownOverview: false,
-        isSongShownTips: false
-    },
-
-    RESPONSIVE_DEFAULTS = {
-        isHiddenLyric: false,
-        isHiddenCarouselNav: false,
-        isMobileWiki: false,
-        isScoresTipsInMain: false,
-        isTwoRowMenu: false,
-        showShrunkNavIcon: false,
-        showSingleNavBook: false,
-        isLyricExpandable: false,
-        isScoreShowable: true
-    },
-
-    RENDERABLE_DEFAULTS = {
-        isSceneChangeRenderable: true,
-        isSongChangeRenderable: false,
-        isWindowResizeRenderable: false
-    },
-
-    RENDER_DEFAULTS = {
-        canTheatreRender: false,
-        canMainRender: false,
-        canVerseRender: false,
-        canLyricRender: false,
-        canCarouselRender: false,
-        canSceneRender: false,
-
-        didTheatreRender: false,
-        didMainRender: false,
-        didVerseRender: false,
-        didLyricRender: false,
-        didCarouselRender: false,
-        didSceneRender: false
-    },
-
-    RENDERED_DEFAULTS = {
-        renderedSongIndex: storedSongIndex,
-        renderedAnnotationIndex: storedAnnotationIndex,
-        renderedVerseIndex: storedVerseIndex,
-        isRenderedLogue: isStoredLogue,
-        renderedSceneIndex: getSceneIndexForVerseIndex(
-            storedSongIndex,
-            storedVerseIndex
-        )
-    },
-
-    SONG_DEFAULTS = {
-        earColumnIndex: earColumnIndex || 0,
-        [SELECTED_SONG_INDEX]: storedSongIndex,
-        [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
-        [SELECTED_VERSE_INDEX]: storedVerseIndex,
-        isSelectedLogue: isStoredLogue,
-        selectedTime: getTimeForVerseIndex(
-            storedSongIndex,
-            storedVerseIndex
-        )
-    },
-
-    SLIDER_DEFAULTS = {
-        isSliderMoving: false,
-        isSliderTouched: false,
-        sliderLeft: 0,
-        sliderRatio: 0,
-        sliderWidth: 0,
-        sliderVerseIndex: -1
-    },
-
-    SCROLL_CAROUSEL_DEFAULTS = {
-        scrollCarouselLog: '',
-        scrollCarouselIndex: 0,
-        doScrollCarouselImmediately: false
-    },
-    SCROLL_LYRIC_DEFAULTS = {
-        scrollLyricLog: '',
-        doScrollLyricByVerse: false,
-        scrollLyricIndex: 0,
-        doScrollLyricImmediately: false
+    VERSE_BARS_DEFAULTS = {
+        doDetermineVerseBars: false,
+        verseBarsTimeout: 0
     }
 
 export {
-    EVENT_DEFAULTS,
-    PLAYER_DEFAULTS,
-    VERSE_BARS_DEFAULTS,
     ACCESS_DEFAULTS,
     AUDIO_DEFAULTS,
-    LOAD_DEFAULTS,
-    SESSION_DEFAULTS,
-    TOGGLE_DEFAULTS,
-    TRANSIENT_DEFAULTS,
     DEVICE_DEFAULTS,
     DOTS_DEFAULTS,
+    EVENT_DEFAULTS,
+    LOAD_DEFAULTS,
     OPTION_DEFAULTS,
-    RESPONSIVE_DEFAULTS,
-    RENDERABLE_DEFAULTS,
+    PLAYER_DEFAULTS,
     RENDER_DEFAULTS,
+    RENDERABLE_DEFAULTS,
     RENDERED_DEFAULTS,
-    SONG_DEFAULTS,
-    SLIDER_DEFAULTS,
+    RESPONSIVE_DEFAULTS,
     SCROLL_CAROUSEL_DEFAULTS,
-    SCROLL_LYRIC_DEFAULTS
+    SCROLL_LYRIC_DEFAULTS,
+    SESSION_DEFAULTS,
+    SLIDER_DEFAULTS,
+    SONG_DEFAULTS,
+    TOGGLE_DEFAULTS,
+    TRANSIENT_DEFAULTS,
+    VERSE_BARS_DEFAULTS
 }

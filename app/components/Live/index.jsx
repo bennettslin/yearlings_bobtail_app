@@ -21,16 +21,12 @@ class Live extends PureComponent {
     static propTypes = {
         // From parent.
         setLyricFocusElement: PropTypes.func.isRequired,
-
-        selectSong: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired
     }
 
     render() {
         const {
-            annotationPopupHandlers,
             lyricHandlers,
-            mainColumnHandlers,
             menuFieldHandlers
         } = getOrganisedHandlersFromProps(this.props)
 
@@ -39,12 +35,10 @@ class Live extends PureComponent {
                 <div className="PopupOverlay" />
 
                 <Theatre />
-                <Main {...mainColumnHandlers} />
+                <Main />
                 <OverviewLogue />
                 <Lyric {...lyricHandlers} />
-                <OverlayPopups
-                    annotationPopupHandlers={annotationPopupHandlers}
-                />
+                <OverlayPopups />
                 <Menu {...menuFieldHandlers} />
 
                 {/* Prevent popup interaction when slider is touched. */}

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import SongDispatcher from '../../../../../../handlers/SongHandler/Dispatcher'
 import Texts from '../../../../../Texts'
 import Button from '../../../../../Button'
 
@@ -48,8 +49,7 @@ class AnnotationWormhole extends Component {
         cardIndex: PropTypes.number.isRequired,
         wormholeLinkIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        selectSong: PropTypes.func.isRequired
+        isSelected: PropTypes.bool.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -67,11 +67,17 @@ class AnnotationWormhole extends Component {
     }
 
     _handleWormholeClick = () => {
-        const wormholeLink = this._getWormholeLink()
-
-        this.props.selectSong(
-            getWormholeObject(wormholeLink)
-        )
+        /**
+         * Dispatches:
+         * {
+         *     selectedSongIndex,
+         *     selectedAnnotationIndex,
+         *     selectedVerseIndex,
+         *     earColumnIndex,
+         *     destinationWormholeIndex
+         * }
+         */
+        this.dispatchSong(getWormholeObject(this._getWormholeLink()))
     }
 
     _getWormholeLink() {
@@ -124,7 +130,6 @@ class AnnotationWormhole extends Component {
                     'AnnotationWormhole'
                 )}
             >
-
                 {/* Wrap button so it won't get squished if text wraps. */}
                 <div className="AnnotationWormhole__button">
                     <Button
@@ -150,6 +155,7 @@ class AnnotationWormhole extends Component {
                         <span>{'\u201d'}</span>
                     </div>
                 </div>
+                <SongDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

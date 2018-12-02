@@ -122,8 +122,7 @@ class FocusContainer extends PureComponent {
     render() {
         const {
                 appMounted,
-                eventHandlers,
-                selectSong
+                eventHandlers
             } = this.props,
 
             newEventHandlers = {
@@ -152,8 +151,7 @@ class FocusContainer extends PureComponent {
                     {...{
                         // TODO: Eventually get rid of eventHandlers object.
                         eventHandlers: newEventHandlers,
-                        parentThis: this,
-                        selectSong
+                        parentThis: this
                     }}
                 />
                 <RootContainer

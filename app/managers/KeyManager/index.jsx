@@ -184,10 +184,6 @@ class KeyManager extends PureComponent {
     }
 
     render() {
-        const {
-            selectSong
-        } = this.props
-
         return (
             <___>
                 <NavigationManager
@@ -195,7 +191,6 @@ class KeyManager extends PureComponent {
                         parentThis: this,
 
                         // TODO: Eventually get rid of eventHandlers object!
-                        selectSong,
                         determineVerseBarsWithParameters: this.determineVerseBarsWithParameters
                     }}
                 />
@@ -205,7 +200,6 @@ class KeyManager extends PureComponent {
                         getEscapeHandle: this,
 
                         // TODO: Eventually get rid of eventHandlers object!
-                        selectSong,
                         eventHandlers: this.props.eventHandlers
                     }}
                 />

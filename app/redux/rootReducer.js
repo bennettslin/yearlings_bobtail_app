@@ -44,10 +44,6 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
-    [VERSE_BARS_STORE]: VerseBarsReducer,
-    [PLAYER_STORE]: PlayerReducer,
-    [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
-    [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SONG_STORE]: SongReducer,
     [ACCESS_STORE]: AccessReducer,
     [AUDIO_STORE]: AudioReducer,
@@ -63,7 +59,13 @@ const rootReducer = combineReducers({
     [RENDERED_STORE]: RenderedReducer,
     [RESPONSIVE_STORE]: ResponsiveReducer,
     [SESSION_STORE]: SessionReducer,
-    [SLIDER_STORE]: SliderReducer
+    [SLIDER_STORE]: SliderReducer,
+
+    // Promised event stores.
+    [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
+    [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
+    [VERSE_BARS_STORE]: VerseBarsReducer,
+    [PLAYER_STORE]: PlayerReducer
 })
 
 export default rootReducer

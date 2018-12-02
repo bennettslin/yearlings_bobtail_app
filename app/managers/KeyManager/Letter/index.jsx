@@ -18,6 +18,7 @@ import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
 import SceneDispatcher from '../../../handlers/SceneHandler/Dispatcher'
 import ScoreDispatcher from '../../../handlers/ScoreHandler/Dispatcher'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
+import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 
 import {
@@ -93,15 +94,11 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = eventHandlers.togglePlay()
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
-                keyWasRegistered = eventHandlers.selectSong({
-                    direction: -1
-                })
+                keyWasRegistered = this.dispatchSong({ direction: -1 })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_NEXT_SONG_KEY:
-                keyWasRegistered = eventHandlers.selectSong({
-                    direction: 1
-                })
+                keyWasRegistered = this.dispatchSong({ direction: 1 })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_REWIND_KEY:
@@ -213,6 +210,7 @@ class LetterManager extends PureComponent {
                 <SceneDispatcher {...{ parentThis: this }} />
                 <ScoreDispatcher {...{ parentThis: this }} />
                 <ScrollVerseDispatcher {...{ parentThis: this }} />
+                <SongDispatcher {...{ parentThis: this }} />
                 <TitleDispatcher {...{ parentThis: this }} />
             </___>
         )

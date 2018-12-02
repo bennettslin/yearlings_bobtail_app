@@ -34,12 +34,7 @@ class Main extends Component {
     static propTypes = {
         // Through Redux.
         canMainRender: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired,
-
-        // From parent.
-        annotationPopupHandlers: PropTypes.object.isRequired,
-        carouselSectionHandlers: PropTypes.object.isRequired,
-        navSectionHandlers: PropTypes.object.isRequired
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -64,11 +59,6 @@ class Main extends Component {
     }
 
     render() {
-        const {
-            annotationPopupHandlers,
-            carouselSectionHandlers,
-            navSectionHandlers
-        } = this.props
 
         /**
          * In phone, flex container's children have absolute position.
@@ -81,11 +71,9 @@ class Main extends Component {
                 'width__mainColumn'
             )}>
 
-                <AnnotationPopup {...annotationPopupHandlers}
-                    inMain
-                />
-                <Nav {...navSectionHandlers} />
-                <Carousel {...carouselSectionHandlers} />
+                <AnnotationPopup inMain />
+                <Nav />
+                <Carousel />
                 <div className={cx(
                     'Main__flexContainer',
                     'absoluteFullContainer'

@@ -1,10 +1,11 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 
 import NavDispatcher from '../../../../dispatchers/NavDispatcher'
+import SongDispatcher from '../../../../handlers/SongHandler/Dispatcher'
 
 import {
     getSongsAndLoguesCount,
@@ -28,8 +29,7 @@ class NavNavigation extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        getNavigation: PropTypes.object.isRequired,
-        selectSong: PropTypes.func.isRequired
+        getNavigation: PropTypes.object.isRequired
     }
 
     componentDidMount() {
@@ -39,8 +39,7 @@ class NavNavigation extends PureComponent {
     navigateNav = (e, keyName) => {
         const {
             isAccessOn,
-            interactivatedVerseIndex,
-            selectSong
+            interactivatedVerseIndex
         } = this.props
 
         let annotationIndexWasAccessed = false,
@@ -63,7 +62,7 @@ class NavNavigation extends PureComponent {
                     direction = 1
                     break
                 case ENTER:
-                    keyWasRegistered = selectSong({
+                    keyWasRegistered = this.dispatchSong({
                         selectedSongIndex: accessedNavSongIndex
                     })
                     /**
@@ -103,7 +102,10 @@ class NavNavigation extends PureComponent {
 
     render() {
         return (
-            <NavDispatcher {...{ parentThis: this }} />
+            <___>
+                <NavDispatcher {...{ parentThis: this }} />
+                <SongDispatcher {...{ parentThis: this }} />
+            </___>
         )
     }
 }

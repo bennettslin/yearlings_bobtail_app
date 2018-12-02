@@ -1,45 +1,55 @@
-import React from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
+
+import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 import ProgressBar from '../progress/ProgressBar'
 import ProgressHelper from '../progressHelper'
+
 import {
-    getSongTitle, getSongTasks
+    getSongTitle,
+    getSongTasks
 } from 'helpers/data'
 
 /*************
  * CONTAINER *
  *************/
 
-const AdminNavRow = ({
+class AdminNavRow extends PureComponent {
 
-    songIndex,
-    isSelected,
-    selectSong,
+    static propTypes = {
+        songIndex: PropTypes.number.isRequired,
+        isSelected: PropTypes.bool.isRequired
+    }
 
-    ...other
-}) => {
+    _handleSongClick = () => {
+        this.dispatchSong({ selectedSongIndex: this.props.songIndex })
+    }
 
-    const songTitle = getSongTitle({ songIndex }),
-        songTasks = getSongTasks(songIndex),
-        sumTask = ProgressHelper.calculateSumTask(songTasks),
-        onClick = () => selectSong({
-            selectedSongIndex: songIndex
-        })
+    render() {
+        const {
 
-    return (
-        <AdminNavRowView {...other}
-            isSelected={isSelected}
-            songTitle={songTitle}
-            sumTask={sumTask}
-            onClick={onClick}
-        />
-    )
-}
+                songIndex,
+                isSelected,
 
-AdminNavRow.propTypes = {
-    songIndex: PropTypes.number.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    selectSong: PropTypes.func.isRequired
+                ...other
+            } = this.props,
+
+            songTitle = getSongTitle({ songIndex }),
+            songTasks = getSongTasks(songIndex),
+            sumTask = ProgressHelper.calculateSumTask(songTasks)
+
+        return (
+            <___>
+                <AdminNavRowView {...other}
+                    isSelected={isSelected}
+                    songTitle={songTitle}
+                    sumTask={sumTask}
+                    onClick={this._handleSongClick}
+                />
+                <SongDispatcher {...{ parentThis: this }} />
+            </___>
+        )
+    }
 }
 
 /****************

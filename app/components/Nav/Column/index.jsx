@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import NavDispatcher from '../../../dispatchers/NavDispatcher'
+import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
@@ -26,8 +27,7 @@ class NavColumn extends PureComponent {
         shownNavBookIndex: PropTypes.number.isRequired,
 
         // From parent.
-        bookIndex: PropTypes.number.isRequired,
-        selectSong: PropTypes.func.isRequired
+        bookIndex: PropTypes.number.isRequired
     }
 
     _handleNavBookClick = () => {
@@ -35,9 +35,7 @@ class NavColumn extends PureComponent {
     }
 
     _handleNavSongSelect = (songIndex) => {
-        this.props.selectSong({
-            selectedSongIndex: songIndex
-        })
+        this.dispatchSong({ selectedSongIndex: songIndex })
     }
 
     render() {
@@ -84,6 +82,7 @@ class NavColumn extends PureComponent {
                     />
                 }
                 <NavDispatcher {...{ parentThis: this }} />
+                <SongDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

@@ -104,7 +104,6 @@ class NavigationManager extends PureComponent {
 
     render() {
         const {
-            selectSong,
             determineVerseBarsWithParameters
         } = this.props
 
@@ -113,7 +112,6 @@ class NavigationManager extends PureComponent {
                 <AnnotationNavigation
                     {...{
                         getNavigation: this,
-                        selectSong,
                         determineVerseBarsWithParameters
                     }}
                 />
@@ -126,8 +124,7 @@ class NavigationManager extends PureComponent {
                 />
                 <NavNavigation
                     {...{
-                        getNavigation: this,
-                        selectSong
+                        getNavigation: this
                     }}
                 />
                 <VerseDispatcher {...{ parentThis: this }} />

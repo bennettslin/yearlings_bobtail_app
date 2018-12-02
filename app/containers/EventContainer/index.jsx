@@ -16,14 +16,9 @@ class EventContainer extends PureComponent {
         // Through Redux.
     }
 
-    selectSong = (payload) => {
-        return this.props.selectSong(payload)
-    }
-
     render() {
 
         const {
-            selectSong,
             togglePlay
         } = this.props
 
@@ -31,10 +26,8 @@ class EventContainer extends PureComponent {
             <FocusContainer
                 {...{
                     eventHandlers: {
-                        selectSong,
                         togglePlay
-                    },
-                    selectSong
+                    }
                 }}
             />
         )

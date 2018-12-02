@@ -110,8 +110,7 @@ const annotationCardViewProptypes = {
         annotationIndex: PropTypes.number.isRequired,
         cardDotKeys: PropTypes.object.isRequired,
         cardIndex: PropTypes.number.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        selectSong: PropTypes.func.isRequired
+        isSelected: PropTypes.bool.isRequired
     },
 
     AnnotationCardView = ({
@@ -120,7 +119,6 @@ const annotationCardViewProptypes = {
         inCarousel,
         isSelected,
         annotationIndex,
-        selectSong,
 
         // From controller.
         text,
@@ -165,8 +163,7 @@ const annotationCardViewProptypes = {
                             {...{
                                 isSelected,
                                 cardIndex,
-                                annotationIndex,
-                                selectSong
+                                annotationIndex
                             }}
                         />
                     )}

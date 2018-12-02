@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
+import SongDispatcher from '../../../../handlers/SongHandler/Dispatcher'
 import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormholeHandler/Dispatcher'
 
@@ -32,7 +33,6 @@ class AnnotationNavigation extends PureComponent {
 
         // From parent.
         getNavigation: PropTypes.object.isRequired,
-        selectSong: PropTypes.func.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
@@ -43,7 +43,6 @@ class AnnotationNavigation extends PureComponent {
     navigateAnnotation = (e, keyName) => {
         const { props } = this,
             {
-                selectSong,
                 determineVerseBarsWithParameters
             } = props
 
@@ -97,10 +96,18 @@ class AnnotationNavigation extends PureComponent {
                                 wikiWormholeEntity
                             )
 
+                        /**
+                         * Dispatches:
+                         * {
+                         *     selectedSongIndex,
+                         *     selectedAnnotationIndex,
+                         *     selectedVerseIndex,
+                         *     earColumnIndex,
+                         *     destinationWormholeIndex
+                         * }
+                         */
                         keyWasRegistered =
-                            selectSong(
-                                getWormholeObject(wormholeLink)
-                            )
+                            this.dispatchSong(getWormholeObject(wormholeLink))
 
                         /**
                          * If song was selected, then annotation index was
@@ -134,6 +141,7 @@ class AnnotationNavigation extends PureComponent {
         return (
             <___>
                 <AnnotationDispatcher {...{ parentThis: this }} />
+                <SongDispatcher {...{ parentThis: this }} />
                 <WikiDispatcher {...{ parentThis: this }} />
                 <WikiWormholeDispatcher {...{ parentThis: this }} />
             </___>

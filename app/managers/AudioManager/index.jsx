@@ -1,10 +1,12 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateAudioStore } from 'flux/audio/action'
 import { updateSessionStore } from 'flux/session/action'
+
+import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 
 import { getValueInBitNumber } from 'helpers/bit'
 import { getSongsNotLoguesCount } from 'helpers/data'
@@ -23,7 +25,6 @@ class AudioManager extends PureComponent {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        selectSong: PropTypes.func.isRequired,
         toggleSelectedPlayer: PropTypes.func.isRequired
     }
 
@@ -56,7 +57,7 @@ class AudioManager extends PureComponent {
 
         // Select first song if play button in logue is toggled on.
         if (isPlayingFromLogue) {
-            this.props.selectSong({
+            this.dispatchSong({
                 selectedSongIndex: 1
             })
         }
@@ -75,7 +76,9 @@ class AudioManager extends PureComponent {
     }
 
     render() {
-        return null
+        return (
+            <SongDispatcher {...{ parentThis: this }} />
+        )
     }
 }
 

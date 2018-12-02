@@ -12,7 +12,7 @@ import AudioManager from '../../managers/AudioManager'
 import PlayerManager from '../../managers/PlayerManager'
 
 // TODO: Eventually remove this one.
-import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
+import SongManager from '../../managers/SongManager'
 
 import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
@@ -70,10 +70,6 @@ class ListenerContainer extends PureComponent {
         return this.songManager.handleSongEnd()
     }
 
-    selectSong = (payload) => {
-        return this.songManager.selectSong(payload)
-    }
-
     /********
      * REFS *
      ********/
@@ -93,19 +89,17 @@ class ListenerContainer extends PureComponent {
             <___>
                 <EventContainer
                     // Event manager props.
-                    selectSong={this.selectSong}
                     togglePlay={this.togglePlay}
                 />
                 <AudioManager
                     setRef={this._setAudioManagerRef}
-                    selectSong={this.selectSong}
                     toggleSelectedPlayer={this.toggleSelectedPlayer}
                 />
                 <PlayerManager
                     setRef={this._setPlayerManagerRef}
                     handleSongEnd={this.handleSongEnd}
                 />
-                <SongDispatcher
+                <SongManager
                     setRef={this._setSongManagerRef}
                     togglePlay={this.togglePlay}
                 />

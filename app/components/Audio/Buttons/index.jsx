@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
+import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 import Button from '../../Button'
 
 import {
@@ -53,8 +54,7 @@ class AudioButtons extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        togglePlay: PropTypes.func.isRequired,
-        selectSong: PropTypes.func.isRequired
+        togglePlay: PropTypes.func.isRequired
     }
 
     _handleAudioOptionClick = () => {
@@ -66,15 +66,11 @@ class AudioButtons extends PureComponent {
     }
 
     _handlePreviousClick = () => {
-        this.props.selectSong({
-            direction: -1
-        })
+        this.dispatchSong({ direction: -1 })
     }
 
     _handleNextClick = () => {
-        this.props.selectSong({
-            direction: 1
-        })
+        this.dispatchSong({ direction: 1 })
     }
 
     render() {
@@ -153,6 +149,7 @@ class AudioButtons extends PureComponent {
                     />
                 </div>
                 <AudioOptionDispatcher {...{ parentThis: this }} />
+                <SongDispatcher {...{ parentThis: this }} />
             </div>
         )
     }

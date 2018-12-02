@@ -442,14 +442,7 @@ class PlayerManager extends PureComponent {
 
     render() {
 
-        const {
-                /* eslint-disable no-unused-vars */
-                canPlayThroughs,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
-                selectedSongIndex
-            } = this.props,
+        const { selectedSongIndex } = this.props,
 
             mp3s = getMp3s()
 
