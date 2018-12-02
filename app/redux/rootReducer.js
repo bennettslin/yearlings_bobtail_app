@@ -45,23 +45,26 @@ import {
 
 const rootReducer = combineReducers({
     [SONG_STORE]: SongReducer,
+    [RENDERED_STORE]: RenderedReducer,
     [ACCESS_STORE]: AccessReducer,
+    [SESSION_STORE]: SessionReducer,
     [AUDIO_STORE]: AudioReducer,
+
+    [DEVICE_STORE]: DeviceReducer,
+    [RESPONSIVE_STORE]: ResponsiveReducer,
+
     [TOGGLE_STORE]: ToggleReducer,
     [TRANSIENT_STORE]: TransientReducer,
-    [DEVICE_STORE]: DeviceReducer,
-    [DOTS_STORE]: DotsReducer,
-    [EVENT_STORE]: EventReducer,
-    [LOAD_STORE]: LoadReducer,
     [OPTION_STORE]: OptionReducer,
-    [RENDER_STORE]: RenderReducer,
-    [RENDERABLE_STORE]: RenderableReducer,
-    [RENDERED_STORE]: RenderedReducer,
-    [RESPONSIVE_STORE]: ResponsiveReducer,
-    [SESSION_STORE]: SessionReducer,
+    [DOTS_STORE]: DotsReducer,
     [SLIDER_STORE]: SliderReducer,
 
-    // Promised event stores.
+    [LOAD_STORE]: LoadReducer,
+    [RENDER_STORE]: RenderReducer,
+    [RENDERABLE_STORE]: RenderableReducer,
+
+    // Queued event stores.
+    [EVENT_STORE]: EventReducer,
     [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
     [VERSE_BARS_STORE]: VerseBarsReducer,

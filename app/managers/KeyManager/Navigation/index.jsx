@@ -111,20 +111,20 @@ class NavigationManager extends PureComponent {
             <___>
                 <AnnotationNavigation
                     {...{
-                        getNavigation: this,
+                        parentThis: this,
                         determineVerseBarsWithParameters
                     }}
                 />
-                <DotsSlideNavigation {...{ getNavigation: this }} />
+                <DotsSlideNavigation {...{ parentThis: this }} />
                 <LyricNavigation
                     {...{
-                        getNavigation: this,
+                        parentThis: this,
                         determineVerseBarsWithParameters
                     }}
                 />
                 <NavNavigation
                     {...{
-                        getNavigation: this
+                        parentThis: this
                     }}
                 />
                 <VerseDispatcher {...{ parentThis: this }} />

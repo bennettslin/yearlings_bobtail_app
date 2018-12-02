@@ -11,16 +11,12 @@ export const getOrganisedHandlersFromProps = (props) => {
             audioButtonsHandlers
         },
 
-        lyricHandlers = {
-            setLyricFocusElement
-        },
-
         menuFieldHandlers = {
             audioHandlers
         }
 
     return {
-        lyricHandlers,
+        setLyricFocusElement,
         menuFieldHandlers
     }
 }

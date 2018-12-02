@@ -23,12 +23,12 @@ class LyricNavigation extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        getNavigation: PropTypes.object.isRequired,
+        parentThis: PropTypes.object.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getNavigation.navigateLyric = this.navigateLyric
+        this.props.parentThis.navigateLyric = this.navigateLyric
     }
 
     navigateLyric = (e, keyName) => {

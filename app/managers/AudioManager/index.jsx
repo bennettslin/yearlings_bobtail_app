@@ -11,12 +11,19 @@ import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 import { getValueInBitNumber } from 'helpers/bit'
 import { getSongsNotLoguesCount } from 'helpers/data'
 
+import {
+    CONTINUE,
+    PAUSE_AT_END,
+    AUDIO_OPTIONS
+} from 'constants/options'
+
 class AudioManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
+        selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
@@ -75,6 +82,43 @@ class AudioManager extends PureComponent {
         return true
     }
 
+    handleSongEnd = () => {
+        /**
+         * When selecting next song through audio player, reset annotation and
+         * verse, and scroll element into view, but do not access nav section.
+         */
+        const {
+                selectedSongIndex,
+                selectedAudioOptionIndex
+            } = this.props,
+
+            selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]
+
+        // If option is to pause at end, stop play.
+        if (selectedAudioOption === PAUSE_AT_END) {
+            this.togglePlay()
+
+            // Just select first verse of current song.
+            this.dispatchSong({
+                selectedSongIndex,
+                selectedVerseIndex: 0
+            })
+
+        } else {
+
+            /**
+             * If option is to continue, advance to next song. Otherwise, stay
+             * on same song, and start at beginning. (True evaluates to 1, false 0.)
+             */
+            const nextSongIndex = selectedSongIndex
+                + (selectedAudioOption === CONTINUE)
+
+            this.dispatchSong({
+                selectedSongIndex: nextSongIndex
+            })
+        }
+    }
+
     render() {
         return (
             <SongDispatcher {...{ parentThis: this }} />
@@ -87,6 +131,7 @@ const mapStateToProps = ({
         isPlaying,
         canPlayThroughs
     },
+    sessionStore: { selectedAudioOptionIndex },
     songStore: {
         selectedSongIndex,
         isSelectedLogue
@@ -94,6 +139,7 @@ const mapStateToProps = ({
 }) => ({
     isPlaying,
     canPlayThroughs,
+    selectedAudioOptionIndex,
     selectedSongIndex,
     isSelectedLogue
 })

@@ -11,9 +11,6 @@ import LogManager from '../../managers/LogManager'
 import AudioManager from '../../managers/AudioManager'
 import PlayerManager from '../../managers/PlayerManager'
 
-// TODO: Eventually remove this one.
-import SongManager from '../../managers/SongManager'
-
 import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
 import AudioListener from '../../listeners/AudioListener'
@@ -67,7 +64,7 @@ class ListenerContainer extends PureComponent {
      ********/
 
     handleSongEnd = () => {
-        return this.songManager.handleSongEnd()
+        return this.audioManager.handleSongEnd()
     }
 
     /********
@@ -79,9 +76,6 @@ class ListenerContainer extends PureComponent {
     }
     _setPlayerManagerRef = (node) => {
         this.playerManager = node
-    }
-    _setSongManagerRef = (node) => {
-        this.songManager = node
     }
 
     render() {
@@ -98,10 +92,6 @@ class ListenerContainer extends PureComponent {
                 <PlayerManager
                     setRef={this._setPlayerManagerRef}
                     handleSongEnd={this.handleSongEnd}
-                />
-                <SongManager
-                    setRef={this._setSongManagerRef}
-                    togglePlay={this.togglePlay}
                 />
                 <LogManager />
                 <AnnotationListener />

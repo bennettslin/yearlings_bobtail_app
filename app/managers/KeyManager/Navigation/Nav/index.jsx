@@ -29,11 +29,11 @@ class NavNavigation extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        getNavigation: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getNavigation.navigateNav = this.navigateNav
+        this.props.parentThis.navigateNav = this.navigateNav
     }
 
     navigateNav = (e, keyName) => {

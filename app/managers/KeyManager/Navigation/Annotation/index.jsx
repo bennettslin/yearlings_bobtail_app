@@ -32,12 +32,12 @@ class AnnotationNavigation extends PureComponent {
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        getNavigation: PropTypes.object.isRequired,
+        parentThis: PropTypes.object.isRequired,
         determineVerseBarsWithParameters: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getNavigation.navigateAnnotation = this.navigateAnnotation
+        this.props.parentThis.navigateAnnotation = this.navigateAnnotation
     }
 
     navigateAnnotation = (e, keyName) => {

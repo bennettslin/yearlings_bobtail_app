@@ -26,7 +26,7 @@ class Live extends PureComponent {
 
     render() {
         const {
-            lyricHandlers,
+            setLyricFocusElement,
             menuFieldHandlers
         } = getOrganisedHandlersFromProps(this.props)
 
@@ -37,7 +37,7 @@ class Live extends PureComponent {
                 <Theatre />
                 <Main />
                 <OverviewLogue />
-                <Lyric {...lyricHandlers} />
+                <Lyric {...{ setLyricFocusElement }} />
                 <OverlayPopups />
                 <Menu {...menuFieldHandlers} />
 

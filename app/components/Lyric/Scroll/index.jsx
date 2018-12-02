@@ -68,7 +68,7 @@ class LyricScroll extends Component {
              * We are calling this because collapsing and expanding the lyric
              * section may change the verse bar status.
              */
-            this._handleWheel()
+            this.dispatchVerseBarsTimeout()
             this.props.completeHeightTransition()
         }
     }
