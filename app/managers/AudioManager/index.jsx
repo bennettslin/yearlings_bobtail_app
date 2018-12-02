@@ -1,14 +1,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
+import { bindActionCreators } from 'redux'
+import { updatePlayerStore } from 'flux/player/action'
 import { updateSessionStore } from 'flux/session/action'
 
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
-
-import { getValueInBitNumber } from 'helpers/bit'
-import { getSongsNotLoguesCount } from 'helpers/data'
 
 import {
     CONTINUE,
@@ -21,51 +18,47 @@ class AudioManager extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
+        queuedTogglePlay: PropTypes.bool.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-
+        updatePlayerStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired,
+        parentThis: PropTypes.object.isRequired,
         toggleSelectedPlayer: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.setRef(this)
+        this.props.parentThis.handleSongEnd = this.handleSongEnd
     }
 
-    togglePlay = (isPlaying = !this.props.isPlaying) => {
+    componentDidUpdate(prevProps) {
+        this._checkTogglePlay(prevProps)
+    }
 
+    _checkTogglePlay(prevProps) {
+        const
+            { queuedTogglePlay } = this.props,
+            { queuedTogglePlay: prevTogglePlay } = prevProps
+
+        if (queuedTogglePlay && !prevTogglePlay) {
+            this._togglePlay()
+
+            this.props.updatePlayerStore({ queuedTogglePlay: false })
+        }
+    }
+
+    _togglePlay() {
         const {
-                selectedSongIndex,
-                isSelectedLogue,
-                canPlayThroughs
+                isPlaying: wasPlaying,
+                isSelectedLogue
             } = this.props,
 
-            songCanPlayThrough = getValueInBitNumber({
-                keysCount: getSongsNotLoguesCount(),
-                bitNumber: canPlayThroughs,
-
-                // If logue, select first song.
-                key: isSelectedLogue ? 1 : selectedSongIndex
-            })
-
-        // Do not toggle play if player is not ready to play through.
-        if (!songCanPlayThrough) {
-            return false
-        }
-
-        const isPlayingFromLogue = isSelectedLogue && isPlaying
-
-        // Select first song if play button in logue is toggled on.
-        if (isPlayingFromLogue) {
-            this.dispatchSong({
-                selectedSongIndex: 1
-            })
-        }
+            isPlaying = !wasPlaying,
+            isPlayingFromLogue = isSelectedLogue && isPlaying
 
         // Player manager will decide whether to set isPlaying in store.
         this.props.toggleSelectedPlayer({
@@ -94,7 +87,7 @@ class AudioManager extends PureComponent {
 
         // If option is to pause at end, stop play.
         if (selectedAudioOption === PAUSE_AT_END) {
-            this.togglePlay()
+            this._togglePlay()
 
             // Just select first verse of current song.
             this.dispatchSong({
@@ -126,7 +119,10 @@ class AudioManager extends PureComponent {
 
 const mapStateToProps = ({
     audioStore: { canPlayThroughs },
-    playerStore: { isPlaying },
+    playerStore: {
+        isPlaying,
+        queuedTogglePlay
+    },
     sessionStore: { selectedAudioOptionIndex },
     songStore: {
         selectedSongIndex,
@@ -134,6 +130,7 @@ const mapStateToProps = ({
     }
 }) => ({
     isPlaying,
+    queuedTogglePlay,
     canPlayThroughs,
     selectedAudioOptionIndex,
     selectedSongIndex,
@@ -142,6 +139,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updatePlayerStore,
         updateSessionStore
     }, dispatch)
 )

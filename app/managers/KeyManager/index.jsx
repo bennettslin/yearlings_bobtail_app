@@ -38,7 +38,6 @@ class KeyManager extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        eventHandlers: PropTypes.object.isRequired,
         parentThis: PropTypes.object.isRequired
     }
     componentDidMount() {
@@ -189,20 +188,11 @@ class KeyManager extends PureComponent {
                 <NavigationManager
                     {...{
                         parentThis: this,
-
-                        // TODO: Eventually get rid of eventHandlers object!
-                        determineVerseBarsWithParameters: this.determineVerseBarsWithParameters
+                        determineVerseBarsWithParameters:
+                            this.determineVerseBarsWithParameters
                     }}
                 />
-                <LetterManager
-                    {...{
-                        getLetterHandle: this,
-                        getEscapeHandle: this,
-
-                        // TODO: Eventually get rid of eventHandlers object!
-                        eventHandlers: this.props.eventHandlers
-                    }}
-                />
+                <LetterManager {...{ parentThis: this }} />
             </___>
         )
     }

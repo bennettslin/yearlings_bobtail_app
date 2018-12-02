@@ -14,6 +14,7 @@ import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
 import InteractivatedVerseDispatcher from '../../../dispatchers/InteractivatedVerseDispatcher'
 import LyricDispatcher from '../../../handlers/LyricHandler/Dispatcher'
 import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
+import PlayDispatcher from '../../../dispatchers/PlayDispatcher'
 import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
 import SceneDispatcher from '../../../handlers/SceneHandler/Dispatcher'
 import ScoreDispatcher from '../../../handlers/ScoreHandler/Dispatcher'
@@ -65,21 +66,15 @@ class LetterManager extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        getLetterHandle: PropTypes.object.isRequired,
-        getEscapeHandle: PropTypes.object.isRequired,
-        eventHandlers: PropTypes.object.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
-        this.props.getLetterHandle.handleLetter = this.handleLetter
-        this.props.getEscapeHandle.handleEscape = this.handleEscape
+        this.props.parentThis.handleLetter = this.handleLetter
+        this.props.parentThis.handleEscape = this.handleEscape
     }
 
     handleLetter = (e, keyName) => {
-        const {
-            eventHandlers
-        } = this.props
-
         let annotationIndexWasAccessed = false,
             keyWasRegistered
 
@@ -91,7 +86,7 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.dispatchAudioOption()
                 break
             case AUDIO_PLAY_KEY:
-                keyWasRegistered = eventHandlers.togglePlay()
+                keyWasRegistered = this.dispatchPlay()
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
                 keyWasRegistered = this.dispatchSong({ direction: -1 })
@@ -206,6 +201,7 @@ class LetterManager extends PureComponent {
                 <InteractivatedVerseDispatcher {...{ parentThis: this }} />
                 <LyricDispatcher {...{ parentThis: this }} />
                 <OverviewDispatcher {...{ parentThis: this }} />
+                <PlayDispatcher {...{ parentThis: this }} />
                 <TipsDispatcher {...{ parentThis: this }} />
                 <SceneDispatcher {...{ parentThis: this }} />
                 <ScoreDispatcher {...{ parentThis: this }} />

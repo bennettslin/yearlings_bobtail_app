@@ -118,15 +118,7 @@ class FocusContainer extends PureComponent {
     _handleKeyUpPress = e => this.handleKeyUpPress(e)
 
     render() {
-        const {
-                appMounted,
-                eventHandlers
-            } = this.props,
-
-            newEventHandlers = {
-                ...eventHandlers,
-                setLyricFocusElement: this.setLyricFocusElement
-            }
+        const { appMounted } = this.props
 
         return appMounted && (
             <div
@@ -146,18 +138,9 @@ class FocusContainer extends PureComponent {
             >
                 <CloseHandler {...{ parentThis: this }} />
                 <AccessStylesheet />
-                <KeyManager
-                    {...{
-                        // TODO: Eventually get rid of eventHandlers object.
-                        eventHandlers: newEventHandlers,
-                        parentThis: this
-                    }}
-                />
+                <KeyManager {...{ parentThis: this }} />
                 <RootContainer
-                    {...{
-                        // TODO: Eventually get rid of eventHandlers object.
-                        eventHandlers: newEventHandlers
-                    }}
+                    {...{ setLyricFocusElement: this.setLyricFocusElement }}
                 />
                 <SliderTouchDispatcher {...{ parentThis: this }} />
                 <StopPropagationDispatcher {...{ parentThis: this }} />

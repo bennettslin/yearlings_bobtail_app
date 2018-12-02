@@ -77,8 +77,8 @@ class PlayerManager extends PureComponent {
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
-        handleSongEnd: PropTypes.func.isRequired,
-        setRef: PropTypes.func.isRequired
+        parentThis: PropTypes.object.isRequired,
+        handleSongEnd: PropTypes.func.isRequired
     }
 
     state = {
@@ -118,7 +118,7 @@ class PlayerManager extends PureComponent {
     players = {}
 
     componentDidMount() {
-        this.props.setRef(this)
+        this.props.parentThis.toggleSelectedPlayer = this.toggleSelectedPlayer
         this._updateCanPlayThroughsObject()
     }
 
@@ -240,10 +240,10 @@ class PlayerManager extends PureComponent {
         this.props.updateAudioStore({ canPlayThroughs: newBitNumber })
     }
 
-    toggleSelectedPlayer({
+    toggleSelectedPlayer = ({
         isPlaying,
         selectedSongIndex = this.props.selectedSongIndex
-    }) {
+    }) => {
         /**
          * If play is being toggled on, ensure that selected player was able
          * to successfully play before storing play status in state.

@@ -23,14 +23,14 @@ class RootContainer extends PureComponent {
         isAdminOn: PropTypes.bool.isRequired,
 
         // From parent.
-        eventHandlers: PropTypes.object.isRequired
+        setLyricFocusElement: PropTypes.func.isRequired
     }
 
     render() {
         const {
             appMounted,
             isAdminOn,
-            eventHandlers
+            setLyricFocusElement
         } = this.props
 
         return appMounted && (
@@ -42,10 +42,10 @@ class RootContainer extends PureComponent {
                 <DeviceWrapper>
                     <RemainderWrapper>
                         <LogicWrapper>
-                            <Live {...eventHandlers} />
+                            <Live {...{ setLyricFocusElement }} />
                             <AdminToggle />
                             {isAdminOn && (
-                                <Admin {...eventHandlers} />
+                                <Admin />
                             )}
                         </LogicWrapper>
                     </RemainderWrapper>

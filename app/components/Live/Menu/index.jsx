@@ -22,16 +22,10 @@ const mapStateToProps = ({
 
 const propTypes = {
     // Through Redux.
-        windowWidth: PropTypes.number.isRequired,
-
-        // From parent.
-        audioHandlers: PropTypes.object.isRequired
+        windowWidth: PropTypes.number.isRequired
     },
 
-    Menu = ({
-        windowWidth,
-        audioHandlers
-    }) => {
+    Menu = ({ windowWidth }) => {
     /**
      * This is necessary because transform animation in Safari is janky.
      */
@@ -73,7 +67,7 @@ const propTypes = {
                         'MenuChild__audio',
                         'MenuChild'
                     )}>
-                        <Audio {...audioHandlers} />
+                        <Audio />
                     </div>
 
                     <div className={cx(

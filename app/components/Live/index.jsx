@@ -14,21 +14,15 @@ import Menu from './Menu'
 import OverlayPopups from './OverlayPopups'
 import OverviewLogue from './OverviewLogue'
 
-import { getOrganisedHandlersFromProps } from './helper'
-
 class Live extends PureComponent {
 
     static propTypes = {
         // From parent.
-        setLyricFocusElement: PropTypes.func.isRequired,
-        togglePlay: PropTypes.func.isRequired
+        setLyricFocusElement: PropTypes.func.isRequired
     }
 
     render() {
-        const {
-            setLyricFocusElement,
-            menuFieldHandlers
-        } = getOrganisedHandlersFromProps(this.props)
+        const { setLyricFocusElement } = this.props
 
         return (
             <___>
@@ -39,7 +33,7 @@ class Live extends PureComponent {
                 <OverviewLogue />
                 <Lyric {...{ setLyricFocusElement }} />
                 <OverlayPopups />
-                <Menu {...menuFieldHandlers} />
+                <Menu />
 
                 {/* Prevent popup interaction when slider is touched. */}
                 <div className="TouchOverlay" />

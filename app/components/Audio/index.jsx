@@ -17,22 +17,10 @@ const mapStateToProps = ({
 
 const audioPropTypes = {
     // Through Redux.
-        isTwoRowMenu: PropTypes.bool.isRequired,
-
-        // From parent.
-        audioButtonsHandlers: PropTypes.object.isRequired
+        isTwoRowMenu: PropTypes.bool.isRequired
     },
 
-    Audio = ({
-
-        /* eslint-disable no-unused-vars */
-        dispatch,
-        /* eslint-enable no-unused-vars */
-
-        isTwoRowMenu,
-        audioButtonsHandlers
-
-    }) => {
+    Audio = ({ isTwoRowMenu }) => {
 
         return (
             <div
@@ -46,7 +34,7 @@ const audioPropTypes = {
                 )}
 
                 <AudioBanner />
-                <AudioButtons {...audioButtonsHandlers} />
+                <AudioButtons />
             </div>
         )
     }

@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateLoadStore } from 'flux/load/action'
 
-import EventContainer from '../EventContainer'
 import LogManager from '../../managers/LogManager'
 
 import AudioManager from '../../managers/AudioManager'
@@ -35,6 +34,8 @@ import WikiListener from '../../handlers/WikiHandler/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormholeHandler/Listener'
 import WindowListener from '../../listeners/WindowListener'
 
+import FocusContainer from '../FocusContainer'
+
 class ListenerContainer extends PureComponent {
 
     componentDidMount() {
@@ -42,55 +43,36 @@ class ListenerContainer extends PureComponent {
         this.props.updateLoadStore({ appMounted: true })
     }
 
-    /*********
-     * AUDIO *
-     *********/
-
-    togglePlay = (payload) => {
-        return this.audioManager.togglePlay(payload)
-    }
-
     /***********
      * PLAYERS *
      ***********/
 
-    toggleSelectedPlayer = (payload) => {
-        return this.playerManager.toggleSelectedPlayer(payload)
+    _toggleSelectedPlayer = (payload) => {
+        return this.toggleSelectedPlayer(payload)
     }
 
     /********
      * SONG *
      ********/
 
-    handleSongEnd = () => {
+    _handleSongEnd = () => {
         return this.audioManager.handleSongEnd()
-    }
-
-    /********
-     * REFS *
-     ********/
-
-    _setAudioManagerRef = (node) => {
-        this.audioManager = node
-    }
-    _setPlayerManagerRef = (node) => {
-        this.playerManager = node
     }
 
     render() {
         return (
             <___>
-                <EventContainer
-                    // Event manager props.
-                    togglePlay={this.togglePlay}
-                />
                 <AudioManager
-                    setRef={this._setAudioManagerRef}
-                    toggleSelectedPlayer={this.toggleSelectedPlayer}
+                    {...{
+                        parentThis: this,
+                        toggleSelectedPlayer: this._toggleSelectedPlayer
+                    }}
                 />
                 <PlayerManager
-                    setRef={this._setPlayerManagerRef}
-                    handleSongEnd={this.handleSongEnd}
+                    {...{
+                        parentThis: this,
+                        handleSongEnd: this._handleSongEnd
+                    }}
                 />
                 <LogManager />
                 <AnnotationListener />
@@ -116,6 +98,8 @@ class ListenerContainer extends PureComponent {
                 <WikiListener />
                 <WikiWormholeListener />
                 <WindowListener />
+
+                <FocusContainer />
             </___>
         )
     }
