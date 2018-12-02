@@ -101,34 +101,35 @@ class SliderTouchDispatcher extends PureComponent {
 
     // TODO: These can easily just be a single method.
     dispatchTouchMove = (e) => {
-        const clientX = getClientX(e)
+        if (this.props.isSliderTouched) {
 
-        if (!isNaN(clientX)) {
-            this._touchBodyMove(clientX)
+            const clientX = getClientX(e)
+
+            if (!isNaN(clientX)) {
+                this._touchBodyMove(clientX)
+            }
         }
     }
     _touchBodyMove = (clientX) => {
-        if (this.props.isSliderTouched) {
-            const {
-                    sliderLeft,
-                    sliderWidth
-                } = this.props,
-                sliderRatio = getSliderRatioForClientX(
-                    clientX, sliderLeft, sliderWidth
-                ),
+        const {
+                sliderLeft,
+                sliderWidth
+            } = this.props,
+            sliderRatio = getSliderRatioForClientX(
+                clientX, sliderLeft, sliderWidth
+            ),
 
-                sliderVerseIndex = getVerseIndexforRatio(
-                    this.props.selectedSongIndex,
-                    sliderRatio,
-                    sliderWidth
-                )
-
-            this.props.updateSliderStore({
-                isSliderMoving: true,
+            sliderVerseIndex = getVerseIndexforRatio(
+                this.props.selectedSongIndex,
                 sliderRatio,
-                sliderVerseIndex
-            })
-        }
+                sliderWidth
+            )
+
+        this.props.updateSliderStore({
+            isSliderMoving: true,
+            sliderRatio,
+            sliderVerseIndex
+        })
     }
 
     dispatchTouchEnd = () => {

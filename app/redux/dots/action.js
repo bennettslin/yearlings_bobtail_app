@@ -6,7 +6,6 @@ import { DOTS_STORE } from '../storeKeys'
 import { DOTS_DEFAULTS } from '../defaultStates'
 
 export const updateDotsStore = (payload = DOTS_DEFAULTS) => {
-
     for (const dotKey in payload) {
         payload.dotsBitNumber = setDotInStorage(dotKey, payload[dotKey])
     }

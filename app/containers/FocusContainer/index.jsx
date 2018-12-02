@@ -87,6 +87,8 @@ class FocusContainer extends PureComponent {
             // FIXME: Blind users will use tab to change focus. Will they find this annoying?
             this._focusElementForAccess()
         }
+
+        console.error('handle body click')
     }
 
     _handleTouchMove = (e) => {
@@ -95,6 +97,7 @@ class FocusContainer extends PureComponent {
 
     _handleTouchEnd = (e) => {
         e.preventDefault()
+        console.error('handle touch end')
 
         this.dispatchTouchEnd()
 
