@@ -30,8 +30,10 @@ class Admin extends Component {
                 <div className="Admin__column">
                     <div className="Admin__field album">
                         <AdminNavSection
-                            allTasks={allTasks}
-                            selectSong={selectSong}
+                            {...{
+                                allTasks,
+                                selectSong
+                            }}
                         />
                     </div>
                     <Shared {...other} />
