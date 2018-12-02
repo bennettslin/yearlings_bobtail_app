@@ -14,6 +14,16 @@ const updateVerseBarsStore = (
     })
 }
 
+const resetVerseBars = () => {
+    return ({
+        type: VERSE_BARS_STORE,
+        payload: {
+            isVerseBarAbove: false,
+            isVerseBarBelow: false
+        }
+    })
+}
+
 const resetVerseBarsQueue = () => {
     return ({
         type: VERSE_BARS_STORE,
@@ -26,5 +36,6 @@ const resetVerseBarsQueue = () => {
 
 export {
     updateVerseBarsStore,
+    resetVerseBars,
     resetVerseBarsQueue
 }

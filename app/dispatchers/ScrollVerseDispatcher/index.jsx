@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateToggleStore } from 'flux/toggle/action'
+import { resetVerseBars } from 'flux/verseBars/action'
 
 class ScrollVerseDispatcher extends PureComponent {
 
@@ -13,6 +14,7 @@ class ScrollVerseDispatcher extends PureComponent {
         // Through Redux.
         selectedVerseIndex: PropTypes.number.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
+        resetVerseBars: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -32,9 +34,8 @@ class ScrollVerseDispatcher extends PureComponent {
             queuedScrollLyricIndex: selectedVerseIndex
         })
 
+        this.props.resetVerseBars()
         this.props.updateToggleStore({
-            isVerseBarAbove: false,
-            isVerseBarBelow: false,
             ...isAutoScroll && { isAutoScroll }
         })
     }
@@ -53,7 +54,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateScrollLyricStore,
-        updateToggleStore
+        updateToggleStore,
+        resetVerseBars
     }, dispatch)
 )
 

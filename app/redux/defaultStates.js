@@ -187,9 +187,7 @@ const
         isDotsSlideShown: false,
         isLyricExpanded: false,
         isScoreShown: false,
-        isTitleShown: false,
-        isVerseBarAbove: false,
-        isVerseBarBelow: false
+        isTitleShown: false
     },
 
     TRANSIENT_DEFAULTS = {
@@ -204,6 +202,8 @@ const
     },
 
     VERSE_BARS_DEFAULTS = {
+        isVerseBarAbove: false,
+        isVerseBarBelow: false,
         queuedDetermineVerseBars: false,
         queuedVerseBarsTimeout: 0
     }

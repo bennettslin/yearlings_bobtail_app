@@ -19,7 +19,7 @@ const mapStateToProps = ({
         renderedVerseIndex
     },
     sliderStore: { sliderVerseIndex },
-    toggleStore: {
+    verseBarsStore: {
         isVerseBarAbove,
         isVerseBarBelow
     }

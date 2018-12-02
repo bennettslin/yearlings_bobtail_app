@@ -6,7 +6,7 @@ import { updatePlayerStore } from 'flux/player/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { resetVerseBars } from 'flux/verseBars/action'
 
 import { getTimeForVerseIndex } from 'helpers/data'
 
@@ -19,7 +19,7 @@ class VerseDispatcher extends PureComponent {
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
+        resetVerseBars: PropTypes.func.isRequired,
 
         // From parent.
         parentThis: PropTypes.object.isRequired
@@ -53,10 +53,7 @@ class VerseDispatcher extends PureComponent {
         this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
 
         // Verse bars always get reset.
-        this.props.updateToggleStore({
-            isVerseBarAbove: false,
-            isVerseBarBelow: false
-        })
+        this.props.resetVerseBars()
 
         this.props.updateScrollLyricStore({
             queuedScrollLyricLog: scrollLog,
@@ -82,7 +79,7 @@ const bindDispatchToProps = (dispatch) => (
         updateScrollLyricStore,
         updateSessionStore,
         updateSongStore,
-        updateToggleStore
+        resetVerseBars
     }, dispatch)
 )
 

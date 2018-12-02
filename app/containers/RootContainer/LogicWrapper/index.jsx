@@ -105,7 +105,7 @@ const mapStateToProps = ({
         dotsBitNumber,
         ...selectedDotKeys
     },
-    toggleStore: {
+    verseBarsStore: {
         isVerseBarAbove,
         isVerseBarBelow
     },

@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateLoadStore } from 'flux/load/action'
 import { updateSessionStore } from 'flux/session/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { resetVerseBars } from 'flux/verseBars/action'
 
 import { getNavBookIndex } from 'helpers/data'
 
@@ -19,7 +19,7 @@ class SongListener extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        resetVerseBars: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -43,10 +43,7 @@ class SongListener extends PureComponent {
                 selectedWikiIndex: 0,
                 shownNavBookIndex
             })
-            this.props.updateToggleStore({
-                isVerseBarAbove: false,
-                isVerseBarBelow: false
-            })
+            this.props.resetVerseBars()
         }
     }
 
@@ -66,7 +63,7 @@ const bindDispatchToProps = (dispatch) => (
         updateAccessStore,
         updateLoadStore,
         updateSessionStore,
-        updateToggleStore
+        resetVerseBars
     }, dispatch)
 )
 

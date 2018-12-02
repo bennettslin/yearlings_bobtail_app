@@ -4,8 +4,10 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateSessionStore } from 'flux/session/action'
-import { updateToggleStore } from 'flux/toggle/action'
-import { resetVerseBarsQueue } from 'flux/verseBars/action'
+import {
+    updateVerseBarsStore,
+    resetVerseBarsQueue
+} from 'flux/verseBars/action'
 
 import { getVerseBarStatus } from './helper'
 
@@ -25,7 +27,7 @@ class VerseBarHandler extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
+        updateVerseBarsStore: PropTypes.func.isRequired,
         resetVerseBarsQueue: PropTypes.func.isRequired,
 
         // From parent.
@@ -123,10 +125,10 @@ class VerseBarHandler extends PureComponent {
 
             // To improve performance, only set in Redux if needed.
             if (isVerseBarAbove !== wasVerseBarAbove) {
-                this.props.updateToggleStore({ isVerseBarAbove })
+                this.props.updateVerseBarsStore({ isVerseBarAbove })
             }
             if (isVerseBarBelow !== wasVerseBarBelow) {
-                this.props.updateToggleStore({ isVerseBarBelow })
+                this.props.updateVerseBarsStore({ isVerseBarBelow })
             }
         }
     }
@@ -149,8 +151,8 @@ const mapStateToProps = ({
         isHiddenLyric,
         isTwoRowMenu
     },
-    toggleStore: {
-        isLyricExpanded,
+    toggleStore: { isLyricExpanded },
+    verseBarsStore: {
         isVerseBarAbove,
         isVerseBarBelow
     },
@@ -175,7 +177,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateSessionStore,
-        updateToggleStore,
+        updateVerseBarsStore,
         resetVerseBarsQueue
     }, dispatch)
 )
