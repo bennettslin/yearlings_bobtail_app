@@ -39,10 +39,11 @@ class KeyManager extends PureComponent {
 
         // From parent.
         eventHandlers: PropTypes.object.isRequired,
-        setRef: PropTypes.func.isRequired
+        parentThis: PropTypes.object.isRequired
     }
     componentDidMount() {
-        this.props.setRef(this)
+        this.props.parentThis.handleKeyDownPress = this.handleKeyDownPress
+        this.props.parentThis.handleKeyUpPress = this.handleKeyUpPress
     }
 
     handleKeyDownPress = (e) => {

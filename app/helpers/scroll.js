@@ -70,6 +70,7 @@ const _getValidTarget = (scrollParent) => {
     }
 }
 
+// TODO: Maybe just split into two helpers, one for each scroll listener?
 const scrollElementIntoView = ({
     isCarousel,
     log = '',

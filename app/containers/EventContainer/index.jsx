@@ -7,7 +7,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import InteractiveContainer from '../../containers/InteractiveContainer'
+import FocusContainer from '../../containers/FocusContainer'
 
 
 class EventContainer extends PureComponent {
@@ -28,7 +28,7 @@ class EventContainer extends PureComponent {
         } = this.props
 
         return (
-            <InteractiveContainer
+            <FocusContainer
                 {...{
                     eventHandlers: {
                         selectSong,

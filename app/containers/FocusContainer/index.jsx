@@ -31,7 +31,7 @@ const mapStateToProps = ({
     isLyricExpanded
 })
 
-class InteractiveContainer extends PureComponent {
+class FocusContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -139,10 +139,9 @@ class InteractiveContainer extends PureComponent {
         this._focusElementForAccess()
     }
 
-    handleKeyDownPress = e => this.keyHandler.handleKeyDownPress(e)
-    handleKeyUpPress = e => this.keyHandler.handleKeyUpPress(e)
     _setRootElement = node => this.rootElement = node
-    setKeyHandler = node => this.keyHandler = node
+    _handleKeyDownPress = e => this.handleKeyDownPress(e)
+    _handleKeyUpPress = e => this.handleKeyUpPress(e)
 
     render() {
         const {
@@ -160,7 +159,7 @@ class InteractiveContainer extends PureComponent {
             <div
                 ref={this._setRootElement}
                 {...{
-                    className: 'InteractiveContainer',
+                    className: 'FocusContainer',
                     onClick: this._handleBodyClick,
                     onTouchStart: this._handleBodyClick,
                     onMouseMove: this._handleTouchMove,
@@ -169,8 +168,8 @@ class InteractiveContainer extends PureComponent {
                     onMouseLeave: this._handleTouchEnd,
                     onTouchEnd: this._handleTouchEnd,
                     onTouchCancel: this._handleTouchEnd,
-                    onKeyDown: this.handleKeyDownPress,
-                    onKeyUp: this.handleKeyUpPress,
+                    onKeyDown: this._handleKeyDownPress,
+                    onKeyUp: this._handleKeyUpPress,
                     tabIndex: -1
                 }}
             >
@@ -179,7 +178,7 @@ class InteractiveContainer extends PureComponent {
                     {...{
                         // TODO: Eventually get rid of eventHandlers object.
                         eventHandlers: newEventHandlers,
-                        setRef: this.setKeyHandler,
+                        parentThis: this,
                         selectSong
                     }}
                 />
@@ -203,4 +202,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(InteractiveContainer)
+export default connect(mapStateToProps, bindDispatchToProps)(FocusContainer)
