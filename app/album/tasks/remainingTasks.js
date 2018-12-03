@@ -1,4 +1,21 @@
 module.exports = [
+    // New refactor tasks.
+    {
+        taskName: `Figure out autoScroll behaviour when navigating in keyManager. Figure out what to do with determineVerseBars with parameters.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Consolidate annotation helpers.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Dispatch song and dispatch annotation just listen for queued events.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     // Render stuff.
     {
         taskName: `Fix bug where playing from logue causes weird jumpiness. Same with switching between songs in general sometimes.`,

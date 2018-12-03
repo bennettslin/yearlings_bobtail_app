@@ -35,7 +35,7 @@ export const shouldShowAnnotationForColumn = ({
     return showAnnotationForColumn
 }
 
-const getAnnotationDotKeys = (
+const _getAnnotationDotKeys = (
     songIndex,
     annotationIndex
 ) => {
@@ -133,7 +133,7 @@ export const getAnnotationIndexForDirection = ({
             }
 
             // Check that this annotation is enabled, given selected dot keys.
-            doesIntersect = intersects(getAnnotationDotKeys(
+            doesIntersect = intersects(_getAnnotationDotKeys(
                 selectedSongIndex,
                 returnIndex
             ), selectedDotKeys)
