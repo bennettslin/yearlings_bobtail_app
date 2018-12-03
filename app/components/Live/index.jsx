@@ -1,8 +1,3 @@
-/**
- * Component that routes event handlers to their components. Knows no state, so
- * should not update.
- */
-
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 
@@ -13,6 +8,8 @@ import Theatre from '../Theatre'
 import Menu from './Menu'
 import OverlayPopups from './OverlayPopups'
 import OverviewLogue from './OverviewLogue'
+import PopupOverlay from './PopupOverlay'
+import TouchOverlay from './TouchOverlay'
 
 class Live extends PureComponent {
 
@@ -26,17 +23,14 @@ class Live extends PureComponent {
 
         return (
             <___>
-                <div className="PopupOverlay" />
-
+                <PopupOverlay />
                 <Theatre />
                 <Main />
                 <OverviewLogue />
                 <Lyric {...{ setLyricFocusElement }} />
                 <OverlayPopups />
                 <Menu />
-
-                {/* Prevent popup interaction when slider is touched. */}
-                <div className="TouchOverlay" />
+                <TouchOverlay />
             </___>
         )
     }

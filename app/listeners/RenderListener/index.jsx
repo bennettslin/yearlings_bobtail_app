@@ -1,109 +1,145 @@
-// Singleton to listen for song change.
+// Singleton to listen for change from song to logue.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateRenderedStore } from 'flux/rendered/action'
-import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import { updateRenderStore } from 'flux/render/action'
 
 class RenderListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSelectedLogue: PropTypes.bool.isRequired,
-        didCarouselRender: PropTypes.bool.isRequired,
-        didLyricRender: PropTypes.bool.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        updateRenderedStore: PropTypes.func.isRequired,
-        updateScrollCarouselStore: PropTypes.func.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired
+        canTheatreRender: PropTypes.bool.isRequired,
+        isSongChangeRenderable: PropTypes.bool.isRequired,
+        isSceneChangeRenderable: PropTypes.bool.isRequired,
+        isWindowResizeRenderable: PropTypes.bool.isRequired,
+        updateRenderStore: PropTypes.func.isRequired
+    }
+
+    componentDidMount() {
+        this.unrenderedTime = Date.now()
     }
 
     componentDidUpdate(prevProps) {
-        this._handleScrollUponCarouselRender(prevProps)
-        this._handleScrollUponLyricRender(prevProps)
-    }
-
-    _handleScrollUponCarouselRender = (prevProps) => {
-        const
-            {
-                isSelectedLogue,
-                didCarouselRender
+        const {
+                isSceneChangeRenderable,
+                isSongChangeRenderable,
+                isWindowResizeRenderable
             } = this.props,
-            { didCarouselRender: couldCarouselRender } = prevProps
 
-        // TODO: This now scrolls, but maybe do with no animation.
-        if (
-            !isSelectedLogue
-            && didCarouselRender
-            && !couldCarouselRender
-        ) {
-            const { selectedAnnotationIndex } = this.props
+            {
+                isSceneChangeRenderable: wasSceneChangeRenderable,
+                isSongChangeRenderable: wasSongChangeRenderable,
+                isWindowResizeRenderable: wasWindowResizeRenderable
+            } = prevProps
 
-            // Scroll to carousel annotation if toggled on.
-            this.props.updateScrollCarouselStore({
-                queuedScrollCarouselLog: 'Rerender selected carousel annotation.',
-                queuedScrollCarouselIndex: selectedAnnotationIndex || 1,
-                queuedScrollCarouselImmediately: true
+        // Is unrenderable after window resize.
+        if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
+            this.unrenderedTime = Date.now()
+
+            logger.warn('Live unrenderable from window resize.')
+            this.props.updateRenderStore({
+                canTheatreRender: false
             })
+
+        /**
+         * Is renderable after window resize timeout. Also called upon initial
+         * render.
+         */
+        } else if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
+            logger.warn(`Live renderable after window resize, took ${
+                ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+            } seconds.`)
+
+            this.props.updateRenderStore({
+                canTheatreRender: true
+            })
+        }
+
+        // Is unrenderable after song change.
+        if (!isSongChangeRenderable && wasSongChangeRenderable) {
+            this.unrenderedTime = Date.now()
+
+            logger.warn('Live unrenderable from song change.')
+            this.props.updateRenderStore({
+                canVerseRender: false,
+                didVerseRender: false,
+                canSceneRender: false,
+                didSceneRender: false,
+                canMainRender: false,
+                didMainRender: false,
+                canLyricRender: false,
+                didLyricRender: false,
+                canCarouselRender: false,
+                didCarouselRender: false
+            })
+
+        // Is renderable after song change timeout.
+        } else if (isSongChangeRenderable && !wasSongChangeRenderable) {
+
+            // Don't call this upon initial render.
+            if (this.props.canTheatreRender) {
+                logger.warn(`Live renderable after song change, took ${
+                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+                } seconds.`)
+
+                this.props.updateRenderStore({
+                    canVerseRender: true
+                })
+            }
+        }
+
+        // Is unrenderable after scene change within same song.
+        if (!isSceneChangeRenderable && wasSceneChangeRenderable) {
+            this.unrenderedTime = Date.now()
+
+            logger.warn('Live unrenderable from scene change.')
+            this.props.updateRenderStore({
+                canSceneRender: false,
+                didSceneRender: false
+            })
+
+        // Is renderable after scene change timeout.
+        } else if (isSceneChangeRenderable && !wasSceneChangeRenderable) {
+
+            // Don't call this upon initial render.
+            if (this.props.canTheatreRender) {
+                logger.warn(`Live renderable after scene change, took ${
+                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+                } seconds.`)
+
+                this.props.updateRenderStore({
+                    canSceneRender: true
+                })
+            }
         }
     }
 
-    _handleScrollUponLyricRender = (prevProps) => {
-        const
-            {
-                isSelectedLogue,
-                didLyricRender
-            } = this.props,
-            { didLyricRender: couldRender } = prevProps
-
-        // TODO: This now scrolls, but maybe do with no animation.
-        if (
-            !isSelectedLogue
-            && didLyricRender
-            && !couldRender
-        ) {
-            const { selectedVerseIndex } = this.props
-
-            this.props.updateScrollLyricStore({
-                queuedScrollLyricLog: 'Rerender selected verse.',
-                queuedScrollLyricByVerse: true,
-                queuedScrollLyricIndex: selectedVerseIndex,
-                queuedScrollLyricImmediately: true
-            })
-        }
-    }
     render() {
         return null
     }
 }
 
 const mapStateToProps = ({
-    songStore: {
-        isSelectedLogue,
-        selectedVerseIndex,
-        selectedAnnotationIndex
-    },
     renderStore: {
-        didCarouselRender,
-        didLyricRender
+        canTheatreRender
+    },
+    renderableStore: {
+        isSceneChangeRenderable,
+        isSongChangeRenderable,
+        isWindowResizeRenderable
     }
 }) => ({
-    isSelectedLogue,
-    didCarouselRender,
-    didLyricRender,
-    selectedVerseIndex,
-    selectedAnnotationIndex
+    canTheatreRender,
+    isSceneChangeRenderable,
+    isSongChangeRenderable,
+    isWindowResizeRenderable
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateRenderedStore,
-        updateScrollCarouselStore,
-        updateScrollLyricStore
+        updateRenderStore
     }, dispatch)
 )
 
