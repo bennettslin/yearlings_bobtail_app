@@ -8,11 +8,11 @@ import cx from 'classnames'
 import DotSequence from '../../../DotSequence'
 import Texts from '../../../Texts'
 import AnnotationWormholes from './Wormholes'
-import { WORMHOLE } from 'constants/dots'
 
-import { getAnnotationCardObject } from 'helpers/data'
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { getPropsAreShallowEqual } from 'helpers/general'
+
+import { getAnnotationCardData } from './helper'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
@@ -34,6 +34,8 @@ class AnnotationCard extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
+        inCarousel: PropTypes.bool,
+        isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired
     }
@@ -42,10 +44,7 @@ class AnnotationCard extends Component {
         const shouldComponentUpdate =
             nextProps.canCarouselRender && !getPropsAreShallowEqual({
                 props: this.props,
-                nextProps,
-                alwaysBypassCheck: {
-                    cardIndex: true
-                }
+                nextProps
             })
 
         return shouldComponentUpdate
@@ -53,82 +52,24 @@ class AnnotationCard extends Component {
 
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                canCarouselRender,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
                 renderedSongIndex,
-                cardIndex,
-                ...other
+                annotationIndex,
+                inCarousel,
+                isSelected,
+                cardIndex
             } = this.props,
 
             {
-                annotationIndex
-            } = other,
+                text,
+                dotKeys,
+                isTextCard,
+                isWormholeCard
 
-            cardObject = getAnnotationCardObject({
+            } = getAnnotationCardData({
                 songIndex: renderedSongIndex,
                 annotationIndex,
                 cardIndex
             }),
-
-            {
-                description,
-                dotKeys = {},
-                wormholeLinks
-            } = cardObject
-
-        // Add wormhole key to dot keys.
-        if (wormholeLinks) {
-            dotKeys[WORMHOLE] = true
-        }
-
-        return (
-            <AnnotationCardView {...other}
-                {...{
-                    text: description,
-                    cardDotKeys: dotKeys,
-                    cardIndex
-                }}
-            />
-        )
-    }
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const annotationCardViewProptypes = {
-    // From parent.
-        inCarousel: PropTypes.bool,
-        text: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.array
-        ]),
-        annotationIndex: PropTypes.number.isRequired,
-        cardDotKeys: PropTypes.object.isRequired,
-        cardIndex: PropTypes.number.isRequired,
-        isSelected: PropTypes.bool.isRequired
-    },
-
-    AnnotationCardView = ({
-
-        // From props.
-        inCarousel,
-        isSelected,
-        annotationIndex,
-
-        // From controller.
-        text,
-        cardDotKeys,
-        cardIndex
-
-    }) => {
-
-        const isTextCard = Boolean(text),
-            isWormholeCard = cardDotKeys.wormhole,
 
             annotationCardChild = (
                 <div className={cx(
@@ -141,7 +82,7 @@ const annotationCardViewProptypes = {
                     {!isWormholeCard && (
                         <DotSequence
                             inAnnotationCard
-                            dotKeys={cardDotKeys}
+                            {...{ dotKeys: dotKeys }}
                         />
                     )}
 
@@ -174,7 +115,7 @@ const annotationCardViewProptypes = {
             <div className={cx(
                 'AnnotationCardAnimatable',
                 getPrefixedDotLetterClassNames(
-                    cardDotKeys,
+                    dotKeys,
                     // "Child annotation card letter."
                     'CaC'
                 )
@@ -186,7 +127,6 @@ const annotationCardViewProptypes = {
             annotationCardChild
         )
     }
-
-AnnotationCardView.propTypes = annotationCardViewProptypes
+}
 
 export default connect(mapStateToProps)(AnnotationCard)

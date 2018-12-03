@@ -104,7 +104,6 @@ class Annotation extends Component {
             <___>
                 <AnnotationView {...other}
                     {...{
-                        annotationObject,
                         annotationDotKeys: annotationObject.dotKeys,
                         annotationTitle: annotationObject.title,
                         cardsLength: annotationObject.cards.length,
