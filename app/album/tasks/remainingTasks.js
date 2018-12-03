@@ -6,11 +6,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Consolidate annotation helpers.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Dispatch song and dispatch annotation just listen for queued events.`,
         workedHours: 0,
         neededHours: 2

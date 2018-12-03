@@ -8,10 +8,8 @@ import { updateAccessStore } from 'flux/access/action'
 import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 
-import {
-    getAnnotationIndexForVerseIndex,
-    getAnnotationIndexForDirection
-} from '../../../helpers/annotation'
+import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
+import { getAnnotationIndexForVerseIndex } from './helper'
 
 class AnnotationAccessDispatcher extends PureComponent {
 
@@ -50,6 +48,8 @@ class AnnotationAccessDispatcher extends PureComponent {
 
             accessedAnnotationIndex =
                 annotationIndex ?
+
+                    // If given an annotation index, start from there.
                     getAnnotationIndexForDirection({
                         currentAnnotationIndex: annotationIndex,
                         selectedSongIndex,
@@ -57,6 +57,12 @@ class AnnotationAccessDispatcher extends PureComponent {
                         earColumnIndex,
                         isEarShown,
                         direction
+
+                    /**
+                     * Otherwise, start from the selected verse, and grab the
+                     * first valid annotation index if going left, or the last
+                     * if going right.
+                     */
                     }) : getAnnotationIndexForVerseIndex({
                         verseIndex,
                         selectedSongIndex,

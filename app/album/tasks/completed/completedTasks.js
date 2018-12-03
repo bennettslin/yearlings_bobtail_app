@@ -4071,5 +4071,10 @@ module.exports = [
         taskName: `Refactor annotation components.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Refactor annotation and wormhole helpers.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
