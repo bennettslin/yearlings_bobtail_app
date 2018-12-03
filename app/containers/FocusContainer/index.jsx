@@ -38,10 +38,14 @@ class FocusContainer extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._checkLyricUnshown(prevProps)
+        this._checkLyricChange(prevProps)
     }
 
-    _checkLyricUnshown(prevProps) {
+    _checkLyricChange(prevProps) {
+        /**
+         * Determine whether to add or remove focus from lyric element,
+         * depending on whether it is now shown or hidden.
+         */
         const {
                 isHiddenLyric,
                 isLyricExpanded
@@ -55,7 +59,6 @@ class FocusContainer extends PureComponent {
             isHiddenLyric !== wasHiddenLyric ||
             isLyricExpanded !== wasLyricExpanded
         ) {
-            // Determine whether to add or remove focus from lyric element.
             this._focusElementForAccess()
         }
     }
@@ -64,14 +67,14 @@ class FocusContainer extends PureComponent {
         this.dispatchTouchMove(e)
     }
 
-    _handleTouchEnd = (e) => {
-        // This method handles both body clicks and slider touch ends.
-
-        e.preventDefault()
-        this.dispatchStopPropagation(e)
-
+    _handleTouchEnd = () => {
         this.dispatchTouchEnd()
+    }
+
+    _handleBodyClick = (e) => {
+        this.dispatchStopPropagation(e)
         this.closeForBodyClick()
+
         this._focusElementForAccess()
     }
 
@@ -117,6 +120,8 @@ class FocusContainer extends PureComponent {
                 ref={this._setRootElement}
                 {...{
                     className: 'FocusContainer',
+                    onClick: this._handleBodyClick,
+                    onTouchStart: this._handleBodyClick,
                     onMouseMove: this._handleTouchMove,
                     onTouchMove: this._handleTouchMove,
                     onMouseUp: this._handleTouchEnd,
