@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 import { updatePlayerStore } from 'flux/player/action'
 import { updateSessionStore } from 'flux/session/action'
 
-import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
+import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 
 import {
     CONTINUE,

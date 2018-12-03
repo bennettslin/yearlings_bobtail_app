@@ -13,7 +13,7 @@ import {
 } from 'flux/player/action'
 import { updateSongStore } from 'flux/song/action'
 
-import PlayerTimeVerseDispatcher from '../../dispatchers/PlayerTimeVerseDispatcher'
+import PlayerTimeVerseDispatcher from '../../../dispatchers/PlayerTimeVerseDispatcher'
 import Player from './Player'
 
 import { setNewValueInBitNumber } from 'helpers/bit'
