@@ -5,10 +5,7 @@
  */
 
 import album from 'server/album'
-import {
-    COLUMN_INDEX,
-    SOURCE_WORMHOLE_INDEX
-} from 'constants/lyrics'
+import { COLUMN_INDEX } from 'constants/lyrics'
 
 /*********
  * ALBUM *
@@ -203,7 +200,7 @@ export const getWormholeLink = (
         if (wormholeLinks) {
             // Loop through wormhole links until we find the wormhole index we want.
             foundCardObject = wormholeLinks.reduce((foundWormholeLink, wormholeLink) => {
-                if (wormholeLink[SOURCE_WORMHOLE_INDEX] === wikiWormholeIndex) {
+                if (wormholeLink.sourceWormholeIndex === wikiWormholeIndex) {
                     foundWormholeLink = wormholeLink
                 }
 

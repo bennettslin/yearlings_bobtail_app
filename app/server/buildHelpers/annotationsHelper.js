@@ -16,8 +16,6 @@ import {
     ITALIC,
     WIKI_INDEX,
     WORMHOLE_SEARCH_KEYS,
-    DESTINATION_WORMHOLE_INDEX,
-    SOURCE_WORMHOLE_INDEX,
     IS_VERSE_BEGINNING_SPAN,
     IS_VERSE_ENDING_SPAN
 } from 'constants/lyrics'
@@ -421,8 +419,8 @@ export const addDestinationWormholeIndices = (albumObject) => {
 
                     if (linksMatch) {
                         // Exchange knowledge of source and destination indices.
-                        sourceLink[DESTINATION_WORMHOLE_INDEX] = tempSourceWormholeIndex
-                        sourceLink[SOURCE_WORMHOLE_INDEX] = annotationObject.tempSourceWormholeIndices.shift()
+                        sourceLink.destinationWormholeIndex = tempSourceWormholeIndex
+                        sourceLink.sourceWormholeIndex = annotationObject.tempSourceWormholeIndices.shift()
                     }
                 })
 

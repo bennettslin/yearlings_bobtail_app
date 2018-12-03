@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SongDispatcher from '../../../../../../handlers/SongHandler/Dispatcher'
-import Texts from '../../../../../Texts'
-import Button from '../../../../../Button'
+import SongDispatcher from '../../../../../handlers/SongHandler/Dispatcher'
+import Texts from '../../../../Texts'
+import Button from '../../../../Button'
 
 import { ENTER } from 'constants/access'
 import { WORMHOLE_BUTTON_KEY } from 'constants/buttons'
@@ -23,9 +23,8 @@ import {
     getVerseObject
 } from 'helpers/data'
 
+import { getWormholeObject } from '../../../../../helpers/wormhole'
 import { getPropsAreShallowEqual } from 'helpers/general'
-
-import { getWormholeObject } from '../../../../../../helpers/wormhole'
 
 import { getAnnotationCardWormholeObject } from './helper'
 
@@ -45,38 +44,24 @@ class AnnotationWormhole extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
+        isAccessed: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired,
-        wormholeLinkIndex: PropTypes.number.isRequired,
-        isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired
+        wormholeLinkIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
         const shouldComponentUpdate =
             nextProps.canCarouselRender && !getPropsAreShallowEqual({
                 props: this.props,
-                nextProps,
-                alwaysBypassCheck: {
-                    cardIndex: true,
-                    wormholeLinkIndex: true
-                }
+                nextProps
             })
 
         return shouldComponentUpdate
     }
 
     _handleWormholeClick = () => {
-        /**
-         * Dispatches:
-         * {
-         *     selectedSongIndex,
-         *     selectedAnnotationIndex,
-         *     selectedVerseIndex,
-         *     earColumnIndex,
-         *     destinationWormholeIndex
-         * }
-         */
         this.dispatchSong(getWormholeObject(this._getWormholeLink()))
     }
 
@@ -97,7 +82,6 @@ class AnnotationWormhole extends Component {
     }
 
     render() {
-
         const {
                 isAccessed,
                 isSelected
@@ -133,10 +117,12 @@ class AnnotationWormhole extends Component {
                 {/* Wrap button so it won't get squished if text wraps. */}
                 <div className="AnnotationWormhole__button">
                     <Button
-                        buttonName={WORMHOLE_BUTTON_KEY}
-                        showAccessIconIfAccessOn={isAccessed && isSelected}
-                        accessKey={ENTER}
-                        handleButtonClick={this._handleWormholeClick}
+                        {...{
+                            accessKey: ENTER,
+                            buttonName: WORMHOLE_BUTTON_KEY,
+                            showAccessIconIfAccessOn: isAccessed && isSelected,
+                            handleButtonClick: this._handleWormholeClick
+                        }}
                     />
                 </div>
 
@@ -149,8 +135,10 @@ class AnnotationWormhole extends Component {
                         <span>{'\u201c'}</span>
                         <Texts
                             inWormhole
-                            text={text}
-                            wormholeAnnotationIndex={annotationIndex}
+                            {...{
+                                text,
+                                wormholeAnnotationIndex: annotationIndex
+                            }}
                         />
                         <span>{'\u201d'}</span>
                     </div>

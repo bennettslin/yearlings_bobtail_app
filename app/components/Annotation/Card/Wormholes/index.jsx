@@ -4,19 +4,16 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
-import { SOURCE_WORMHOLE_INDEX } from 'constants/lyrics'
 import { getPropsAreShallowEqual } from 'helpers/general'
 import { getAnnotationCardWormholeLinksArray } from './helper'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
-    toggleStore: { isAccessOn },
     accessStore: { accessedWikiWormholeIndex }
 }) => ({
     canCarouselRender,
     renderedSongIndex,
-    isAccessOn,
     accessedWikiWormholeIndex
 })
 
@@ -26,10 +23,10 @@ class AnnotationWormholes extends Component {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
-        isAccessOn: PropTypes.bool.isRequired,
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
 
         // From parent.
+        isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired
     }
@@ -46,21 +43,12 @@ class AnnotationWormholes extends Component {
 
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                canCarouselRender,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
                 renderedSongIndex,
                 accessedWikiWormholeIndex,
-                isAccessOn,
-                ...other
-            } = this.props,
-
-            {
+                isSelected,
                 annotationIndex,
                 cardIndex
-            } = other,
+            } = this.props,
 
             wormholeLinksArray = getAnnotationCardWormholeLinksArray({
                 songIndex: renderedSongIndex,
@@ -68,32 +56,29 @@ class AnnotationWormholes extends Component {
                 cardIndex
             })
 
-        return Boolean(wormholeLinksArray) && (
-            wormholeLinksArray.map((wormholeObject, wormholeLinkIndex) => {
+        return wormholeLinksArray.map((wormholeObject, wormholeLinkIndex) => {
+            /**
+             * The wormholeLinkIndex is solely to fetch the wormhole object
+             * from the data helper when there are two wormholes in the same
+             * annotation. This happens only once, with "shiv."
+             */
+            const
+                { sourceWormholeIndex } = wormholeObject,
+                isAccessed = accessedWikiWormholeIndex === sourceWormholeIndex
 
-                /**
-                 * The wormholeLinkIndex is solely to fetch the wormhole object
-                 * from the data helper when there are two wormholes in the
-                 * same annotation. This happens only once, with "shiv."
-                 */
-                const {
-                        [SOURCE_WORMHOLE_INDEX]: sourceWormholeIndex
-                    } = wormholeObject,
-
-                    isAccessed = isAccessOn &&
-                        accessedWikiWormholeIndex === sourceWormholeIndex
-
-                return (
-                    <AnnotationWormhole {...other}
-                        key={wormholeLinkIndex}
-                        {...{
-                            wormholeLinkIndex,
-                            isAccessed
-                        }}
-                    />
-                )
-            })
-        )
+            return (
+                <AnnotationWormhole
+                    key={wormholeLinkIndex}
+                    {...{
+                        wormholeLinkIndex,
+                        isAccessed,
+                        isSelected,
+                        annotationIndex,
+                        cardIndex
+                    }}
+                />
+            )
+        })
     }
 }
 

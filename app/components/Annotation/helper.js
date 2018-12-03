@@ -1,41 +1,18 @@
-import {
-    WORMHOLE,
-    REFERENCE
-} from 'constants/dots'
-
 import { getAnnotationObject } from 'helpers/data'
 
-export const getAccessibleWikiWormholesLength = ({
+const getAnnotationCardsLength = ({
     songIndex,
-    annotationIndex,
-    dotKeys
+    annotationIndex
 }) => {
 
-    const annotation = getAnnotationObject(
-            songIndex,
-            annotationIndex
-        ),
-        { wikiWormholes } = annotation
+    const { cards } = getAnnotationObject(
+        songIndex,
+        annotationIndex
+    ) || {}
 
-    if (wikiWormholes) {
-        return wikiWormholes.reduce((sum, wikiWormhole) => {
-            const typeofWikiWormhole = typeof wikiWormhole
+    return cards ? cards.length : 0
+}
 
-            return (
-                (
-                    // It's a wiki anchor, and reference dot is selected.
-                    typeofWikiWormhole === 'string' &&
-                    dotKeys[REFERENCE]
-
-                ) || (
-                    // It's a wormhole index, and wormhole dot is selected.
-                    typeofWikiWormhole === 'number' &&
-                    dotKeys[WORMHOLE]
-                )
-            ) ? sum + 1 : sum
-        }, 0)
-
-    } else {
-        return 0
-    }
+export {
+    getAnnotationCardsLength
 }

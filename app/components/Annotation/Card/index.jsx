@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotSequence from '../../../DotSequence'
-import Texts from '../../../Texts'
+import DotSequence from '../../DotSequence'
+import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
@@ -41,13 +41,10 @@ class AnnotationCard extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const shouldComponentUpdate =
-            nextProps.canCarouselRender && !getPropsAreShallowEqual({
-                props: this.props,
-                nextProps
-            })
-
-        return shouldComponentUpdate
+        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {
@@ -82,7 +79,7 @@ class AnnotationCard extends Component {
                     {!isWormholeCard && (
                         <DotSequence
                             inAnnotationCard
-                            {...{ dotKeys: dotKeys }}
+                            {...{ dotKeys }}
                         />
                     )}
 
@@ -103,8 +100,8 @@ class AnnotationCard extends Component {
                         <AnnotationWormholes
                             {...{
                                 isSelected,
-                                cardIndex,
-                                annotationIndex
+                                annotationIndex,
+                                cardIndex
                             }}
                         />
                     )}

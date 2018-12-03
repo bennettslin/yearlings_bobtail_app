@@ -4061,5 +4061,15 @@ module.exports = [
         taskName: `Scroll handling and verse bar determining refactor.`,
         workedHours: 16,
         neededHours: 16
+    },
+    {
+        taskName: `Refactor song and audio managers.`,
+        workedHours: 10,
+        neededHours: 10
+    },
+    {
+        taskName: `Refactor annotation components.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

@@ -34,12 +34,6 @@ module.exports = [
 
     // Major refactors.
     {
-        taskName: `Refactor song and audio managers so that everything other than player stuff is handled through listeners.`,
-        workedHours: 0,
-        neededHours: 10
-    },
-
-    {
         taskName: `Wire on puppets and others.`,
         workedHours: 0,
         neededHours: 4

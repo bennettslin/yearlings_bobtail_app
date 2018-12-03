@@ -6,30 +6,23 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
-import AnnotationCards from './Cards'
 import AnnotationHeader from './Header'
+import AnnotationTitle from './Title'
+import AnnotationCard from './Card'
 
-import { getAnnotationObject } from 'helpers/data'
-import { getPropsAreShallowEqual } from 'helpers/general'
-import { getAccessibleWikiWormholesLength } from './helper'
+import {
+    getPropsAreShallowEqual,
+    getArrayOfLength
+} from 'helpers/general'
+import { getAnnotationCardsLength } from './helper'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
-    renderedStore: { renderedSongIndex },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    }
+    renderedStore: { renderedSongIndex }
 }) => ({
     canCarouselRender,
-    renderedSongIndex,
-    dotsBitNumber,
-    selectedDotKeys
+    renderedSongIndex
 })
-
-/*************
- * CONTAINER *
- *************/
 
 class Annotation extends Component {
 
@@ -37,12 +30,12 @@ class Annotation extends Component {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
-        annotationIndex: PropTypes.number.isRequired,
-        isSelected: PropTypes.bool
+        inCarousel: PropTypes.bool,
+        isAccessed: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool.isRequired,
+        annotationIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -53,19 +46,12 @@ class Annotation extends Component {
                 alwaysBypassCheck: {
                     inCarousel: true
                 }
-
-            // Only selected annotation needs to care about dot keys.
-            }) || (
-                nextProps.isSelected && !getPropsAreShallowEqual({
-                    props: this.props.selectedDotKeys,
-                    nextProps: nextProps.selectedDotKeys
-                })
-            )
+            })
 
         return shouldComponentUpdate
     }
 
-    handleContainerClick = (e) => {
+    _handleContainerClick = (e) => {
         if (this.props.isSelected) {
             this.dispatchStopPropagation(e)
         }
@@ -73,140 +59,64 @@ class Annotation extends Component {
 
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                canCarouselRender,
-                dotsBitNumber,
-                updateRenderStore,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
-                renderedSongIndex,
-                selectedDotKeys,
-                ...other
-            } = this.props,
-            {
-                annotationIndex,
-                isSelected
-            } = other,
-
-            /**
-             * If in carousel, get annotation index from parent. Otherwise,
-             * fetch popup annotation indices from store and get it from data
-             * helper.
-             */
-            annotationObject = getAnnotationObject(
+                inCarousel,
+                isAccessed,
+                isSelected,
                 renderedSongIndex,
                 annotationIndex
-            )
+            } = this.props,
 
-        // If it's in popup, annotation object won't always exist.
-        return Boolean(annotationObject) && (
+            cardsLength = getAnnotationCardsLength({
+                songIndex: renderedSongIndex,
+                annotationIndex
+            })
+
+        // If in popup, annotation won't always exist.
+        return Boolean(cardsLength) && (
             <___>
-                <AnnotationView {...other}
+                <div
                     {...{
-                        annotationDotKeys: annotationObject.dotKeys,
-                        annotationTitle: annotationObject.title,
-                        cardsLength: annotationObject.cards.length,
-                        handleContainerClick: this.handleContainerClick
+                        className: cx(
+                            'Annotation',
+                            'bgColour__annotation',
+                            isSelected && 'bgColour__annotation__selected',
+                            isSelected ?
+                                'boxShadow__annotation__selected' :
+                                'boxShadow__annotation'
+                        ),
+                        onClick: this._handleContainerClick,
+                        onTouchStart: this._handleContainerClick
                     }}
-                    {...isSelected && {
-                        /**
-                         * We will only determine this value for a selected
-                         * annotation.
-                         */
-                        accessibleWikiWormholesLength:
-                            getAccessibleWikiWormholesLength({
-                                songIndex: renderedSongIndex,
+                >
+                    <AnnotationHeader
+                        {...{ inCarousel }}
+                    >
+                        <AnnotationTitle
+                            {...{
+                                isAccessed,
+                                isSelected,
+                                annotationIndex
+                            }}
+                        />
+                    </AnnotationHeader>
+
+                    {getArrayOfLength(cardsLength).map(cardIndex => (
+                        <AnnotationCard
+                            key={cardIndex}
+                            {...{
+                                inCarousel,
+                                isSelected,
                                 annotationIndex,
-                                dotKeys: selectedDotKeys
-                            })
-                    }}
-                />
+                                cardIndex
+                            }}
+                        />
+                    ))}
+
+                </div>
                 <StopPropagationDispatcher {...{ parentThis: this }} />
             </___>
         )
     }
 }
-
-/****************
- * PRESENTATION *
- ****************/
-
-const propTypes = {
-    // From parent.
-        inCarousel: PropTypes.bool,
-        isAccessed: PropTypes.bool,
-        isSelected: PropTypes.bool,
-        annotationDotKeys: PropTypes.object.isRequired,
-        annotationTitle: PropTypes.string.isRequired,
-        cardsLength: PropTypes.number.isRequired,
-        accessibleWikiWormholesLength: PropTypes.number,
-
-        // Absent in popup annotation.
-        handleTitleClick: PropTypes.func,
-        handleContainerClick: PropTypes.func.isRequired
-    },
-
-    AnnotationView = ({
-
-        // From props.
-        isAccessed,
-        annotationDotKeys,
-        annotationTitle,
-        cardsLength,
-        accessibleWikiWormholesLength,
-        handleTitleClick,
-        handleContainerClick,
-
-        ...other
-    }) => {
-
-        const {
-            inCarousel,
-            isSelected
-        } = other
-
-        return (
-            <div
-                className={cx(
-                    'Annotation',
-
-                    'bgColour__annotation',
-
-                    isSelected &&
-                    'bgColour__annotation__selected',
-
-                    isSelected ?
-                        'boxShadow__annotation__selected' :
-                        'boxShadow__annotation'
-                )}
-                {...{
-                    onClick: handleContainerClick,
-                    onTouchStart: handleContainerClick
-                }}
-            >
-                <AnnotationHeader
-                    {...{
-                        inCarousel,
-                        isAccessed,
-                        isSelected,
-                        annotationDotKeys,
-                        annotationTitle,
-                        accessibleWikiWormholesLength,
-                        handleTitleClick
-                    }}
-                />
-
-                <AnnotationCards
-                    {...other}
-                    {...{
-                        cardsLength
-                    }}
-                />
-            </div>
-        )
-    }
-
-AnnotationView.propTypes = propTypes
 
 export default connect(mapStateToProps)(Annotation)

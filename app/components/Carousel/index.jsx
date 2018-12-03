@@ -128,10 +128,6 @@ class Carousel extends PureComponent {
 
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
                 isHiddenCarouselNav,
                 renderedSongIndex,
                 renderedAnnotationIndex,
@@ -141,9 +137,7 @@ class Carousel extends PureComponent {
                 isDotsSlideShown,
                 interactivatedVerseIndex,
                 isLyricExpanded,
-                canCarouselRender,
-
-                ...other
+                canCarouselRender
             } = this.props,
 
             {
@@ -201,7 +195,7 @@ class Carousel extends PureComponent {
                                 annotationIndex === renderedAnnotationIndex
 
                         return (
-                            <CarouselAnnotation {...other}
+                            <CarouselAnnotation
                                 key={index}
                                 {...{
                                     annotationIndex,

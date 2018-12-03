@@ -2,18 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AnnotationTitle from './Title'
-
 const propTypes = {
-    // From parent.
-        inCarousel: PropTypes.bool
+        // From parent.
+        inCarousel: PropTypes.bool,
+        children: PropTypes.any.isRequired
     },
 
     AnnotationHeader = ({
-
         inCarousel,
+        children
 
-        ...other
     }) => (
         <div className={cx(
             'AnnotationHeader',
@@ -23,7 +21,7 @@ const propTypes = {
 
             'absoluteFullContainer'
         )}>
-            <AnnotationTitle {...other} />
+            {children}
         </div>
     )
 

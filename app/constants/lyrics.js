@@ -32,8 +32,6 @@ module.exports = {
     RIGHT_COLUMN: 'rightColumn',
 
     WIKI_INDEX: 'wikiIndex',
-    DESTINATION_WORMHOLE_INDEX: 'destinationWormholeIndex',
-    SOURCE_WORMHOLE_INDEX: 'sourceWormholeIndex',
 
     IS_DOT_CARD: 'isDotCard',
     HAS_SIDE_CARDS: 'hasSideCards',
