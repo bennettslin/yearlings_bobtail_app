@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
-import { updateSliderStore } from 'flux/slider/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class SliderListener extends PureComponent {
@@ -14,7 +13,6 @@ class SliderListener extends PureComponent {
         // Through Redux.
         isSliderTouched: PropTypes.bool.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
-        updateSliderStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
@@ -48,7 +46,6 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateSessionStore,
-        updateSliderStore,
         updateToggleStore
     }, dispatch)
 )

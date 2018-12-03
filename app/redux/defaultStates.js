@@ -163,9 +163,9 @@ const
         isSliderMoving: false,
         isSliderTouched: false,
         sliderLeft: 0,
-        sliderRatio: 0,
         sliderWidth: 0,
-        sliderVerseIndex: -1
+        sliderVerseIndex: -1,
+        sliderTime: 0
     },
 
     SONG_DEFAULTS = {

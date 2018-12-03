@@ -6,6 +6,7 @@ import { updateSliderStore } from 'flux/slider/action'
 
 import VerseDispatcher from '../VerseDispatcher'
 
+import { getTimeForVerseIndex } from 'helpers/data'
 import { getClientX } from 'helpers/dom'
 
 import {
@@ -61,7 +62,10 @@ class SliderTouchDispatcher extends PureComponent {
         },
         clientX
     ) => {
-        const
+        const {
+                selectedSongIndex,
+                selectedVerseIndex
+            } = this.props,
             sliderRatio = getSliderRatioForClientX(
                 clientX,
                 sliderLeft,
@@ -69,20 +73,23 @@ class SliderTouchDispatcher extends PureComponent {
             ),
 
             sliderVerseIndex = getVerseIndexforRatio(
-                this.props.selectedSongIndex,
+                selectedSongIndex,
                 sliderRatio,
                 sliderWidth
             )
 
         // Don't allow selected verse to be selected again.
-        if (sliderVerseIndex !== this.props.selectedVerseIndex) {
+        if (sliderVerseIndex !== selectedVerseIndex) {
 
             this.props.updateSliderStore({
                 isSliderTouched: true,
                 sliderLeft,
-                sliderRatio,
                 sliderWidth,
-                sliderVerseIndex
+                sliderVerseIndex,
+                sliderTime: getTimeForVerseIndex(
+                    selectedSongIndex,
+                    sliderVerseIndex
+                )
             })
 
             /**
@@ -113,23 +120,33 @@ class SliderTouchDispatcher extends PureComponent {
     _touchBodyMove = (clientX) => {
         const {
                 sliderLeft,
-                sliderWidth
+                sliderWidth,
+                sliderVerseIndex: prevVerseIndex,
+                selectedSongIndex
             } = this.props,
             sliderRatio = getSliderRatioForClientX(
                 clientX, sliderLeft, sliderWidth
             ),
 
             sliderVerseIndex = getVerseIndexforRatio(
-                this.props.selectedSongIndex,
+                selectedSongIndex,
                 sliderRatio,
                 sliderWidth
             )
 
-        this.props.updateSliderStore({
-            isSliderMoving: true,
-            sliderRatio,
-            sliderVerseIndex
-        })
+        // For better performance, only set in Redux upon actual change.
+        if (!this.props.isSliderMoving) {
+            this.props.updateSliderStore({ isSliderMoving: true })
+        }
+        if (sliderVerseIndex !== prevVerseIndex) {
+            this.props.updateSliderStore({
+                sliderVerseIndex,
+                sliderTime: getTimeForVerseIndex(
+                    selectedSongIndex,
+                    sliderVerseIndex
+                )
+            })
+        }
     }
 
     dispatchTouchEnd = () => {

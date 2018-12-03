@@ -12,22 +12,12 @@ import { getFormattedTime } from 'helpers/format'
 
 const mapStateToProps = ({
     renderStore: { canVerseRender },
-    renderedStore: {
-        renderedSongIndex
-    },
-    songStore: {
-        selectedTime
-    },
-    sliderStore: {
-        isSliderTouched,
-        sliderRatio
-    }
+    renderedStore: { renderedSongIndex },
+    sliderStore: { sliderTime }
 }) => ({
     canVerseRender,
     renderedSongIndex,
-    selectedTime,
-    isSliderTouched,
-    sliderRatio
+    sliderTime
 })
 
 class SliderTimes extends Component {
@@ -36,9 +26,7 @@ class SliderTimes extends Component {
         // Through Redux.
         canVerseRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
-        selectedTime: PropTypes.number.isRequired,
-        isSliderTouched: PropTypes.bool.isRequired,
-        sliderRatio: PropTypes.number.isRequired
+        sliderTime: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -49,21 +37,10 @@ class SliderTimes extends Component {
 
         const {
                 renderedSongIndex,
-                selectedTime,
-                isSliderTouched,
-                sliderRatio
+                sliderTime: spentTime
             } = this.props,
 
-            totalTime = getSongTotalTime(renderedSongIndex),
-
-            workingRatio = isSliderTouched ?
-                sliderRatio : (selectedTime / totalTime),
-
-            spentTime =
-                getFormattedTime(workingRatio * totalTime),
-
-            remainTime =
-            `\u2013${getFormattedTime((1 - workingRatio) * totalTime)}`
+            remainTime = getSongTotalTime(renderedSongIndex) - spentTime
 
         return (
             <div className={cx(
@@ -73,11 +50,11 @@ class SliderTimes extends Component {
 
                 <SliderTime
                     isSpent
-                    time={spentTime}
+                    time={getFormattedTime(spentTime)}
                 />
 
                 <SliderTime
-                    time={remainTime}
+                    time={`\u2013${getFormattedTime(remainTime)}`}
                 />
             </div>
         )

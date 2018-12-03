@@ -5,8 +5,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { updateSliderStore } from 'flux/slider/action'
 
 import CloseHandler from '../../handlers/CloseHandler'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
@@ -18,14 +16,10 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
-    sliderStore: {
-        isSliderTouched
-    },
     toggleStore: { isLyricExpanded }
 }) => ({
     appMounted,
     isHiddenLyric,
-    isSliderTouched,
     isLyricExpanded
 })
 
@@ -35,9 +29,7 @@ class FocusContainer extends PureComponent {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
-        isSliderTouched: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        updateSliderStore: PropTypes.func.isRequired
+        isLyricExpanded: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
@@ -149,10 +141,4 @@ class FocusContainer extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSliderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(FocusContainer)
+export default connect(mapStateToProps)(FocusContainer)
