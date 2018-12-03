@@ -13,7 +13,7 @@ import {
     getSongIsLogue,
     getSceneIndexForVerseIndex,
     getTimeForVerseIndex,
-    getEarColumnForAnnotation
+    getAnnotationColumnIndex
 } from '../helpers/data'
 
 import {
@@ -35,7 +35,7 @@ const
     storedSongIndex = getIndexFromStorage(SELECTED_SONG_INDEX),
     storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
     isStoredLogue = getSongIsLogue(storedSongIndex),
-    earColumnIndex = getEarColumnForAnnotation(
+    earColumnIndex = getAnnotationColumnIndex(
         storedSongIndex,
         storedAnnotationIndex
     ),

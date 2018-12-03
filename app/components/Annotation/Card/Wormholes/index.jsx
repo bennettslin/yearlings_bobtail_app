@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
 import { getPropsAreShallowEqual } from 'helpers/general'
-import { getAnnotationCardWormholeLinksArray } from './helper'
+import { getCardWormholeLinksArray } from 'helpers/wormhole'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
@@ -50,7 +50,7 @@ class AnnotationWormholes extends Component {
                 cardIndex
             } = this.props,
 
-            wormholeLinksArray = getAnnotationCardWormholeLinksArray({
+            wormholeLinksArray = getCardWormholeLinksArray({
                 songIndex: renderedSongIndex,
                 annotationIndex,
                 cardIndex

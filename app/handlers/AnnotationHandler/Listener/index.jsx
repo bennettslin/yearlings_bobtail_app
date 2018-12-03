@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import AnnotationDispatcher from '../Dispatcher'
 
-import { shouldShowAnnotationForColumn } from '../../../helpers/annotation'
+import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 
 class AnnotationListener extends PureComponent {
 
@@ -45,7 +45,7 @@ class AnnotationListener extends PureComponent {
         ) {
             const { selectedSongIndex } = this.props
 
-            const showAnnotationForColumn = shouldShowAnnotationForColumn({
+            const showAnnotationForColumn = getShowAnnotationForColumn({
                 selectedSongIndex,
                 selectedAnnotationIndex,
                 earColumnIndex,

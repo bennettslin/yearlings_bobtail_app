@@ -155,7 +155,7 @@ export const getAnnotationObject = (
     return annotations ? annotations[annotationIndex - 1] : null
 }
 
-export const getEarColumnForAnnotation = (
+export const getAnnotationColumnIndex = (
     songIndex,
     annotationIndex,
     songs
@@ -184,32 +184,6 @@ export const getAnnotationCardObject = ({
     )
 
     return annotationObject ? annotationObject.cards[cardIndex] : null
-}
-
-export const getWormholeLink = (
-    annotationObject,
-    wikiWormholeIndex
-) => {
-
-    const { cards } = annotationObject
-
-    // Loop through cards until we find the wormhole card.
-    return cards.reduce((foundCardObject, cardObject) => {
-        const { wormholeLinks } = cardObject
-
-        if (wormholeLinks) {
-            // Loop through wormhole links until we find the wormhole index we want.
-            foundCardObject = wormholeLinks.reduce((foundWormholeLink, wormholeLink) => {
-                if (wormholeLink.sourceWormholeIndex === wikiWormholeIndex) {
-                    foundWormholeLink = wormholeLink
-                }
-
-                return foundWormholeLink
-            }, null)
-        }
-
-        return foundCardObject
-    }, null)
 }
 
 /**********

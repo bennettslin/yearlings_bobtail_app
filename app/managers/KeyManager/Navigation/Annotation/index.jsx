@@ -8,11 +8,9 @@ import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormholeHandler/Dispatcher'
 
 import {
-    getWormholeLink,
-    getAnnotationObject
-} from 'helpers/data'
-
-import { getWormholeObject } from '../../../../helpers/wormhole'
+    getWikiWormholeEntity,
+    getWormholeLinkFromIndex
+} from './helper'
 
 import {
     ARROW_LEFT,
@@ -74,15 +72,13 @@ class AnnotationNavigation extends PureComponent {
                         selectedAnnotationIndex
                     } = props,
 
-                    annotationObject = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
+                    wikiWormholeEntity = getWikiWormholeEntity({
+                        songIndex: selectedSongIndex,
+                        annotationIndex: selectedAnnotationIndex,
+                        accessedIndex: accessedWikiWormholeIndex
+                    })
 
-                // TODO: Move this logic to AnnotationManager.
-                if (accessedWikiWormholeIndex &&
-                    annotationObject &&
-                    annotationObject.wikiWormholes &&
-                    annotationObject.wikiWormholes.length) {
-
-                    const wikiWormholeEntity = annotationObject.wikiWormholes[accessedWikiWormholeIndex - 1]
+                if (accessedWikiWormholeIndex && wikiWormholeEntity) {
 
                     // It's a wiki anchor.
                     if (typeof wikiWormholeEntity === 'string') {
@@ -91,23 +87,14 @@ class AnnotationNavigation extends PureComponent {
                     // It's a wormhole index.
                     } else {
                         const
-                            wormholeLink = getWormholeLink(
-                                annotationObject,
-                                wikiWormholeEntity
-                            )
+                            wormholeLink = getWormholeLinkFromIndex({
+                                songIndex: selectedSongIndex,
+                                annotationIndex: selectedAnnotationIndex,
+                                wikiWormholeIndex: wikiWormholeEntity
+                            })
 
-                        /**
-                         * Dispatches:
-                         * {
-                         *     selectedSongIndex,
-                         *     selectedAnnotationIndex,
-                         *     selectedVerseIndex,
-                         *     earColumnIndex,
-                         *     destinationWormholeIndex
-                         * }
-                         */
                         keyWasRegistered =
-                            this.dispatchSong(getWormholeObject(wormholeLink))
+                            this.dispatchSong(wormholeLink)
 
                         /**
                          * If song was selected, then annotation index was

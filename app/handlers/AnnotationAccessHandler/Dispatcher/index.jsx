@@ -49,21 +49,22 @@ class AnnotationAccessDispatcher extends PureComponent {
             } = this.props,
 
             accessedAnnotationIndex =
-                annotationIndex ? getAnnotationIndexForDirection({
-                    currentAnnotationIndex: annotationIndex,
-                    selectedSongIndex,
-                    selectedDotKeys,
-                    earColumnIndex,
-                    isEarShown,
-                    direction
-                }) : getAnnotationIndexForVerseIndex({
-                    verseIndex,
-                    selectedSongIndex,
-                    selectedDotKeys,
-                    earColumnIndex,
-                    isEarShown,
-                    direction
-                })
+                annotationIndex ?
+                    getAnnotationIndexForDirection({
+                        currentAnnotationIndex: annotationIndex,
+                        selectedSongIndex,
+                        selectedDotKeys,
+                        earColumnIndex,
+                        isEarShown,
+                        direction
+                    }) : getAnnotationIndexForVerseIndex({
+                        verseIndex,
+                        selectedSongIndex,
+                        selectedDotKeys,
+                        earColumnIndex,
+                        isEarShown,
+                        direction
+                    })
 
         this.props.updateAccessStore({ accessedAnnotationIndex })
 

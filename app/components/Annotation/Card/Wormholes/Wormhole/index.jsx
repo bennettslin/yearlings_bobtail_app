@@ -23,10 +23,9 @@ import {
     getVerseObject
 } from 'helpers/data'
 
-import { getWormholeObject } from '../../../../../helpers/wormhole'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
-import { getAnnotationCardWormholeObject } from './helper'
+import { getCardWormholeLink } from './helper'
 
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
@@ -61,10 +60,6 @@ class AnnotationWormhole extends Component {
         return shouldComponentUpdate
     }
 
-    _handleWormholeClick = () => {
-        this.dispatchSong(getWormholeObject(this._getWormholeLink()))
-    }
-
     _getWormholeLink() {
         const {
             renderedSongIndex,
@@ -73,12 +68,16 @@ class AnnotationWormhole extends Component {
             wormholeLinkIndex
         } = this.props
 
-        return getAnnotationCardWormholeObject({
+        return getCardWormholeLink({
             songIndex: renderedSongIndex,
             annotationIndex,
             cardIndex,
             wormholeLinkIndex
         })
+    }
+
+    _handleWormholeClick = () => {
+        this.dispatchSong(this._getWormholeLink())
     }
 
     render() {
@@ -90,10 +89,10 @@ class AnnotationWormhole extends Component {
             wormholeLink = this._getWormholeLink(),
 
             {
-                songIndex,
-                annotationIndex,
-                verseIndex,
-                columnIndex,
+                selectedSongIndex: songIndex,
+                selectedAnnotationIndex: annotationIndex,
+                selectedVerseIndex: verseIndex,
+                earColumnIndex: columnIndex,
 
                 // Default if no wormhole prefix.
                 wormholePrefix = 'wormhole to'

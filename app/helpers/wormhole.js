@@ -1,10 +1,13 @@
-export const getWormholeObject = (wormholeLink) => {
+import { getAnnotationCardObject } from 'helpers/data'
+
+const parseWormholeLinkForDispatch = (wormholeLink) => {
     const {
         songIndex: selectedSongIndex,
         annotationIndex: selectedAnnotationIndex,
         verseIndex: selectedVerseIndex,
         columnIndex: earColumnIndex,
-        destinationWormholeIndex
+        destinationWormholeIndex,
+        wormholePrefix
     } = wormholeLink
 
     return {
@@ -12,6 +15,27 @@ export const getWormholeObject = (wormholeLink) => {
         selectedAnnotationIndex,
         selectedVerseIndex,
         earColumnIndex,
-        destinationWormholeIndex
+        destinationWormholeIndex,
+        wormholePrefix
     }
+}
+
+const getCardWormholeLinksArray = ({
+    songIndex,
+    annotationIndex,
+    cardIndex
+}) => {
+    // Called by annotation wormholes block component.
+    const cardObject = getAnnotationCardObject({
+        songIndex,
+        annotationIndex,
+        cardIndex
+    })
+
+    return cardObject ? cardObject.wormholeLinks : null
+}
+
+export {
+    parseWormholeLinkForDispatch,
+    getCardWormholeLinksArray
 }
