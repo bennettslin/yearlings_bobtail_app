@@ -169,7 +169,6 @@ const propTypes = {
         return (
             <div
                 key={annotationIndex}
-                ref={setRef}
                 className={cx(
                     'UnitDot',
                     'Unit__column',
@@ -188,10 +187,13 @@ const propTypes = {
                     )
                 )}
             >
-                <AnchorDot {...other}
-                    inStanza
-                    stanzaDotKeys={dotKeys}
-                />
+                {/* Scroll to unit dot at bottom, not unit middle. */}
+                <div ref={setRef}>
+                    <AnchorDot {...other}
+                        inStanza
+                        stanzaDotKeys={dotKeys}
+                    />
+                </div>
             </div>
         )
     }
