@@ -42,7 +42,8 @@ class PlayerTimeVerseDispatcher extends PureComponent {
             this.props.updateScrollLyricStore({
                 queuedScrollLyricLog: 'Player autoScroll.',
                 queuedScrollLyricByVerse: true,
-                queuedScrollLyricIndex: nextVerseIndex
+                queuedScrollLyricIndex: nextVerseIndex,
+                queuedScrollLyricFromAutoScroll: true
             })
 
         /**

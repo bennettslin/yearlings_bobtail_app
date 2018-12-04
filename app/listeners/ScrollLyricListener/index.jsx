@@ -22,9 +22,12 @@ class ScrollLyricListener extends PureComponent {
         queuedScrollLyricLog: PropTypes.string.isRequired,
         queuedScrollLyricByVerse: PropTypes.bool.isRequired,
         queuedScrollLyricIndex: PropTypes.number.isRequired,
-        queuedScrollLyricImmediately: PropTypes.bool.isRequired,
+        queuedScrollLyricFromRender: PropTypes.bool.isRequired,
+        queuedScrollLyricFromAutoScroll: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
+        isAutoScroll: PropTypes.bool.isRequired,
+        isPlaying: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
@@ -51,36 +54,53 @@ class ScrollLyricListener extends PureComponent {
 
     _scrollLyric(prevProps) {
         const
-            { queuedScrollLyricLog } = this.props,
+            {
+                isPlaying,
+                queuedScrollLyricLog,
+                queuedScrollLyricFromAutoScroll,
+                isAutoScroll
+            } = this.props,
             { queuedScrollLyricLog: prevLyricLog } = prevProps
 
         if (queuedScrollLyricLog && !prevLyricLog) {
-            const {
-                    queuedScrollLyricLog,
-                    queuedScrollLyricByVerse,
-                    queuedScrollLyricIndex,
-                    queuedScrollLyricImmediately,
+
+            if (
+                // If paused, always scroll.
+                !isPlaying ||
+
+                /**
+                 * If autoScroll is on, only scroll from autoScroll, or else if
+                 * autoScroll is off, scroll from everything but autoScroll.
+                 */
+                queuedScrollLyricFromAutoScroll === isAutoScroll
+            ) {
+                const {
+                        queuedScrollLyricLog,
+                        queuedScrollLyricByVerse,
+                        queuedScrollLyricIndex,
+                        queuedScrollLyricFromRender,
+                        deviceIndex,
+                        isLyricExpanded,
+                        isSelectedLogue
+                    } = this.props,
+
+                    scrollClass = queuedScrollLyricByVerse ?
+                        VERSE_SCROLL :
+                        LYRIC_ANNOTATION_SCROLL
+
+                scrollElementIntoView({
+                    log: queuedScrollLyricLog,
+                    scrollClass,
+                    scrollParent: this.lyricParentElement,
+                    scrollChildren: this._getScrollElementsArray(scrollClass),
+                    index: queuedScrollLyricIndex,
+                    doScrollImmediately: queuedScrollLyricFromRender,
                     deviceIndex,
                     isLyricExpanded,
-                    isSelectedLogue
-                } = this.props,
-
-                scrollClass = queuedScrollLyricByVerse ?
-                    VERSE_SCROLL :
-                    LYRIC_ANNOTATION_SCROLL
-
-            scrollElementIntoView({
-                log: queuedScrollLyricLog,
-                scrollClass,
-                scrollParent: this.lyricParentElement,
-                scrollChildren: this._getScrollElementsArray(scrollClass),
-                index: queuedScrollLyricIndex,
-                doScrollImmediately: queuedScrollLyricImmediately,
-                deviceIndex,
-                isLyricExpanded,
-                isSelectedLogue,
-                callback: this._determineVerseBars
-            })
+                    isSelectedLogue,
+                    callback: this._determineVerseBars
+                })
+            }
 
             this.props.updateScrollLyricStore()
         }
@@ -137,9 +157,12 @@ const mapStateToProps = ({
         queuedScrollLyricLog,
         queuedScrollLyricByVerse,
         queuedScrollLyricIndex,
-        queuedScrollLyricImmediately
+        queuedScrollLyricFromRender,
+        queuedScrollLyricFromAutoScroll
     },
+    playerStore: { isPlaying },
     toggleStore: {
+        isAutoScroll,
         isLyricExpanded
     },
     deviceStore: {
@@ -150,7 +173,10 @@ const mapStateToProps = ({
     queuedScrollLyricLog,
     queuedScrollLyricByVerse,
     queuedScrollLyricIndex,
-    queuedScrollLyricImmediately,
+    queuedScrollLyricFromRender,
+    queuedScrollLyricFromAutoScroll,
+    isPlaying,
+    isAutoScroll,
     isLyricExpanded,
     deviceIndex,
     isSelectedLogue

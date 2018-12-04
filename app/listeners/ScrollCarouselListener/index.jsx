@@ -17,7 +17,7 @@ class ScrollListener extends PureComponent {
         // Through Redux.
         queuedScrollCarouselLog: PropTypes.string.isRequired,
         queuedScrollCarouselIndex: PropTypes.number.isRequired,
-        queuedScrollCarouselImmediately: PropTypes.bool.isRequired,
+        queuedScrollCarouselFromRender: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -56,7 +56,7 @@ class ScrollListener extends PureComponent {
                 const {
                     queuedScrollCarouselLog,
                     queuedScrollCarouselIndex,
-                    queuedScrollCarouselImmediately,
+                    queuedScrollCarouselFromRender,
                     deviceIndex,
                     windowWidth,
                     isSelectedLogue
@@ -69,7 +69,7 @@ class ScrollListener extends PureComponent {
                     scrollParent: this.carouselParentElement,
                     scrollChildren: this.carouselAnnotationElements,
                     index: queuedScrollCarouselIndex,
-                    doScrollImmediately: queuedScrollCarouselImmediately,
+                    doScrollImmediately: queuedScrollCarouselFromRender,
                     deviceIndex,
                     windowWidth,
                     isSelectedLogue
@@ -103,7 +103,7 @@ const mapStateToProps = ({
     scrollCarouselStore: {
         queuedScrollCarouselLog,
         queuedScrollCarouselIndex,
-        queuedScrollCarouselImmediately
+        queuedScrollCarouselFromRender
     },
     toggleStore: { isCarouselShown },
     deviceStore: {
@@ -115,7 +115,7 @@ const mapStateToProps = ({
 }) => ({
     queuedScrollCarouselLog,
     queuedScrollCarouselIndex,
-    queuedScrollCarouselImmediately,
+    queuedScrollCarouselFromRender,
     isCarouselShown,
     deviceIndex,
     windowWidth,

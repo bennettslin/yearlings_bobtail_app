@@ -47,7 +47,7 @@ class ScrollRenderListener extends PureComponent {
             this.props.updateScrollCarouselStore({
                 queuedScrollCarouselLog: 'Rerender selected carousel annotation.',
                 queuedScrollCarouselIndex: selectedAnnotationIndex || 1,
-                queuedScrollCarouselImmediately: true
+                queuedScrollCarouselFromRender: true
             })
         }
     }
@@ -72,7 +72,7 @@ class ScrollRenderListener extends PureComponent {
                 queuedScrollLyricLog: 'Rerender selected verse.',
                 queuedScrollLyricByVerse: true,
                 queuedScrollLyricIndex: selectedVerseIndex,
-                queuedScrollLyricImmediately: true
+                queuedScrollLyricFromRender: true
             })
         }
     }

@@ -6,9 +6,9 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Figure out autoScroll behaviour when navigating in keyManager. Figure out what to do with determineVerseBars with parameters.`,
-        workedHours: 0,
-        neededHours: 2
+        taskName: `Figure out autoScroll behaviour when navigating in keyManager. Currently it's not quite right. Need to consider each case separately, whether to do for autoScroll or not..`,
+        workedHours: 1,
+        neededHours: 3
     },
 
     // Render stuff.

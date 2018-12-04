@@ -148,14 +148,15 @@ const
     SCROLL_CAROUSEL_DEFAULTS = {
         queuedScrollCarouselLog: '',
         queuedScrollCarouselIndex: 0,
-        queuedScrollCarouselImmediately: false
+        queuedScrollCarouselFromRender: false
     },
 
     SCROLL_LYRIC_DEFAULTS = {
         queuedScrollLyricLog: '',
         queuedScrollLyricByVerse: false,
         queuedScrollLyricIndex: 0,
-        queuedScrollLyricImmediately: false
+        queuedScrollLyricFromRender: false,
+        queuedScrollLyricFromAutoScroll: false
     },
 
     SESSION_DEFAULTS = {
