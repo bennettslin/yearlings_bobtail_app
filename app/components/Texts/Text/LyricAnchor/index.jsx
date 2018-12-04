@@ -2,8 +2,8 @@
 
 import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagationDispatcher'
@@ -111,6 +111,11 @@ class TextLyricAnchor extends Component {
             }
 
             if (annotationIndex) {
+                /**
+                 * Because we have to check to stop propagation here, we will
+                 * continue to dispatch annotation index directly, rather than
+                 * sending a queued event to do so.
+                 */
                 if (this.dispatchAnnotationIndex({
                     selectedAnnotationIndex: annotationIndex
                 })) {

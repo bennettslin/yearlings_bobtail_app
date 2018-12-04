@@ -34,9 +34,9 @@ class AnnotationDispatcher extends PureComponent {
     }
 
     dispatchAnnotationIndex = ({
-        selectedAnnotationIndex,
+        selectedAnnotationIndex = 0,
         fromCarousel
-    }) => {
+    } = {}) => {
 
         const {
             selectedSongIndex,

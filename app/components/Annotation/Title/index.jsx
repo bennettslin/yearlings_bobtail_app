@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateSongQueueStore } from 'flux/songQueue/action'
 
-import AnnotationDispatcher from '../../../handlers/AnnotationHandler/Dispatcher'
 import AnchorDot from '../../Anchor/AnchorDot'
 import AnchorText from '../../Anchor/AnchorText'
 import AnnotationAccess from './Access'
@@ -35,6 +36,7 @@ class AnnotationTitle extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
+        updateSongQueueStore: PropTypes.func.isRequired,
 
         // From parent.
         isShadow: PropTypes.bool,
@@ -54,9 +56,9 @@ class AnnotationTitle extends Component {
         if (!this.props.isSelected) {
             const { annotationIndex } = this.props
 
-            this.dispatchAnnotationIndex({
-                selectedAnnotationIndex: annotationIndex,
-                fromCarousel: true
+            this.props.updateSongQueueStore({
+                queuedAnnotationIndex: annotationIndex,
+                queuedFromCarousel: true
             })
         }
     }
@@ -129,10 +131,15 @@ class AnnotationTitle extends Component {
                     />
                 )}
                 <AnnotationAccess {...{ showUpDown }} />
-                <AnnotationDispatcher {...{ parentThis: this }} />
             </div>
         )
     }
 }
 
-export default connect(mapStateToProps)(AnnotationTitle)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateSongQueueStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(AnnotationTitle)

@@ -1,11 +1,12 @@
 // Component to show single dot anchor as its own stanza.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateSongQueueStore } from 'flux/songQueue/action'
 
-import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import AnchorDot from '../../../Anchor/AnchorDot'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
@@ -51,6 +52,7 @@ class UnitDot extends Component {
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        updateSongQueueStore: PropTypes.func.isRequired,
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
@@ -74,8 +76,8 @@ class UnitDot extends Component {
             isSelected = annotationIndex === renderedAnnotationIndex
 
         if (!isSelected) {
-            this.dispatchAnnotationIndex({
-                selectedAnnotationIndex: annotationIndex
+            this.props.updateSongQueueStore({
+                queuedAnnotationIndex: annotationIndex
             })
         }
     }
@@ -126,20 +128,17 @@ class UnitDot extends Component {
                 annotationIndex === renderedAnnotationIndex
 
         return (
-            <___>
-                <UnitDotView
-                    {...{
-                        setRef: this.setLyricAnnotationElement,
-                        dotKeys,
-                        isSelected,
-                        isAccessed,
-                        isLastUnit,
-                        annotationIndex,
-                        handleAnchorClick: this._handleDotButtonClick
-                    }}
-                />
-                <AnnotationDispatcher {...{ parentThis: this }} />
-            </___>
+            <UnitDotView
+                {...{
+                    setRef: this.setLyricAnnotationElement,
+                    dotKeys,
+                    isSelected,
+                    isAccessed,
+                    isLastUnit,
+                    annotationIndex,
+                    handleAnchorClick: this._handleDotButtonClick
+                }}
+            />
         )
     }
 }
@@ -200,4 +199,10 @@ const propTypes = {
 
 UnitDotView.propTypes = propTypes
 
-export default connect(mapStateToProps)(UnitDot)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateSongQueueStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(UnitDot)

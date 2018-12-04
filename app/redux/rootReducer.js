@@ -15,6 +15,7 @@ import ScrollLyricReducer from './scrollLyric/reducer'
 import SessionReducer from './session/reducer'
 import SliderReducer from './slider/reducer'
 import SongReducer from './song/reducer'
+import SongQueueReducer from './songQueue/reducer'
 import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
 import VerseBarsReducer from './verseBars/reducer'
@@ -36,6 +37,7 @@ import {
     SESSION_STORE,
     SLIDER_STORE,
     SONG_STORE,
+    SONG_QUEUE_STORE,
     TOGGLE_STORE,
     TRANSIENT_STORE,
     VERSE_BARS_STORE
@@ -43,6 +45,7 @@ import {
 
 const rootReducer = combineReducers({
     [SONG_STORE]: SongReducer,
+    [SONG_QUEUE_STORE]: SongQueueReducer,
     [RENDERED_STORE]: RenderedReducer,
     [ACCESS_STORE]: AccessReducer,
     [SESSION_STORE]: SessionReducer,

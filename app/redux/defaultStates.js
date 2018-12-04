@@ -180,6 +180,11 @@ const
         )
     },
 
+    SONG_QUEUE_DEFAULTS = {
+        queuedAnnotationIndex: 0,
+        queuedFromCarousel: false
+    },
+
     TOGGLE_DEFAULTS = {
         isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
         isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
@@ -226,6 +231,7 @@ export {
     SESSION_DEFAULTS,
     SLIDER_DEFAULTS,
     SONG_DEFAULTS,
+    SONG_QUEUE_DEFAULTS,
     TOGGLE_DEFAULTS,
     TRANSIENT_DEFAULTS,
     VERSE_BARS_DEFAULTS

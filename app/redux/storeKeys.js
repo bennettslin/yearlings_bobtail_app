@@ -15,6 +15,7 @@ module.exports = {
     SESSION_STORE: 'sessionStore',
     SLIDER_STORE: 'sliderStore',
     SONG_STORE: 'songStore',
+    SONG_QUEUE_STORE: 'songQueueStore',
     TOGGLE_STORE: 'toggleStore',
     TRANSIENT_STORE: 'transientStore',
     VERSE_BARS_STORE: 'verseBarsStore',
