@@ -1,12 +1,12 @@
 module.exports = [
     // New refactor tasks.
     {
-        taskName: `Figure out autoScroll behaviour when navigating in keyManager. Figure out what to do with determineVerseBars with parameters.`,
+        taskName: `Get rid of doors and windows.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
-        taskName: `Dispatch song and dispatch annotation just listen for queued events.`,
+        taskName: `Figure out autoScroll behaviour when navigating in keyManager. Figure out what to do with determineVerseBars with parameters.`,
         workedHours: 0,
         neededHours: 2
     },

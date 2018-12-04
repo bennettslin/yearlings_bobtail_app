@@ -4076,5 +4076,15 @@ module.exports = [
         taskName: `Refactor annotation and wormhole helpers.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Allow some, but not all, compoents to send a queued event for annotation, rather than direct dispatch. No need to do for songs.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Fix bug where stopping propagation was not returning focus to lyric.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

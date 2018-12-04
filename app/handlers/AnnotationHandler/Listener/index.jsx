@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateSongQueueStore } from 'flux/songQueue/action'
+import { updateAnnotationStore } from 'flux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
 
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
@@ -21,8 +21,8 @@ class AnnotationListener extends PureComponent {
         selectedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         queuedAnnotationIndex: PropTypes.number.isRequired,
-        queuedFromCarousel: PropTypes.bool.isRequired,
-        updateSongQueueStore: PropTypes.func.isRequired
+        queuedAnnotationFromCarousel: PropTypes.bool.isRequired,
+        updateAnnotationStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -33,7 +33,7 @@ class AnnotationListener extends PureComponent {
     _checkAnnotation(prevProps) {
         const {
                 queuedAnnotationIndex,
-                queuedFromCarousel
+                queuedAnnotationFromCarousel
             } = this.props,
             { queuedAnnotationIndex: prevAnnotationIndex } = prevProps
 
@@ -41,12 +41,12 @@ class AnnotationListener extends PureComponent {
 
             this.dispatchAnnotationIndex({
                 selectedAnnotationIndex: queuedAnnotationIndex,
-                fromCarousel: queuedFromCarousel
+                fromCarousel: queuedAnnotationFromCarousel
             })
 
-            this.props.updateSongQueueStore({
+            this.props.updateAnnotationStore({
                 queuedAnnotationIndex: 0,
-                queuedFromCarousel: false
+                queuedAnnotationFromCarousel: false
             })
         }
     }
@@ -101,9 +101,9 @@ const mapStateToProps = ({
         selectedVerseIndex,
         selectedAnnotationIndex
     },
-    songQueueStore: {
+    annotationStore: {
         queuedAnnotationIndex,
-        queuedFromCarousel
+        queuedAnnotationFromCarousel
     }
 }) => ({
     isDotsSlideShown,
@@ -114,12 +114,12 @@ const mapStateToProps = ({
     selectedVerseIndex,
     selectedAnnotationIndex,
     queuedAnnotationIndex,
-    queuedFromCarousel
+    queuedAnnotationFromCarousel
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSongQueueStore
+        updateAnnotationStore
     }, dispatch)
 )
 

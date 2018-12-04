@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateSongQueueStore } from 'flux/songQueue/action'
+import { updateAnnotationStore } from 'flux/annotation/action'
 
 import AnchorDot from '../../Anchor/AnchorDot'
 import AnchorText from '../../Anchor/AnchorText'
@@ -36,7 +36,7 @@ class AnnotationTitle extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        updateSongQueueStore: PropTypes.func.isRequired,
+        updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
         isShadow: PropTypes.bool,
@@ -56,9 +56,9 @@ class AnnotationTitle extends Component {
         if (!this.props.isSelected) {
             const { annotationIndex } = this.props
 
-            this.props.updateSongQueueStore({
+            this.props.updateAnnotationStore({
                 queuedAnnotationIndex: annotationIndex,
-                queuedFromCarousel: true
+                queuedAnnotationFromCarousel: true
             })
         }
     }
@@ -138,7 +138,7 @@ class AnnotationTitle extends Component {
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSongQueueStore
+        updateAnnotationStore
     }, dispatch)
 )
 

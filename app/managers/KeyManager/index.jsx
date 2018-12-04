@@ -97,10 +97,7 @@ class KeyManager extends PureComponent {
         if (
             !keyName ||
             keyName === TAB ||
-            keyName === CAPS_LOCK ||
-            keyName === SPACE ||
-            keyName === PAGE_UP ||
-            keyName === PAGE_DOWN
+            keyName === CAPS_LOCK
         ) {
             return false
         }
@@ -159,14 +156,17 @@ class KeyManager extends PureComponent {
          * turn off autoScroll and determine verse bars.
          */
         } else if (
+            keyName === ARROW_UP ||
             keyName === ARROW_DOWN ||
-            keyName === ARROW_UP
+            keyName === SPACE ||
+            keyName === PAGE_UP ||
+            keyName === PAGE_DOWN
         ) {
-            this.determineVerseBarsWithParameters(false)
+            this.determineVerseBarsWithParameters()
         }
     }
 
-    determineVerseBarsWithParameters = (isAutoScroll = true) => {
+    determineVerseBarsWithParameters = () => {
         /**
          * Make duration long enough for Chrome, Firefox, and Safari. 150 is
          * fine for lyric page up and down, but 300 seems to be needed for
@@ -174,24 +174,15 @@ class KeyManager extends PureComponent {
          */
         this.props.updateVerseBarsStore({
             queuedDetermineVerseBars: true,
-            ...isAutoScroll && {
-                queuedVerseBarsTimeout: 300
-            }
+            queuedVerseBarsTimeout: 150
         })
-
         this.props.updateToggleStore({ isAutoScroll: false })
     }
 
     render() {
         return (
             <___>
-                <NavigationManager
-                    {...{
-                        parentThis: this,
-                        determineVerseBarsWithParameters:
-                            this.determineVerseBarsWithParameters
-                    }}
-                />
+                <NavigationManager {...{ parentThis: this }} />
                 <LetterManager {...{ parentThis: this }} />
             </___>
         )

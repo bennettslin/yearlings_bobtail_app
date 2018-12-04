@@ -25,8 +25,7 @@ class NavigationManager extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired,
-        determineVerseBarsWithParameters: PropTypes.func.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
@@ -103,30 +102,13 @@ class NavigationManager extends PureComponent {
     }
 
     render() {
-        const {
-            determineVerseBarsWithParameters
-        } = this.props
 
         return (
             <___>
-                <AnnotationNavigation
-                    {...{
-                        parentThis: this,
-                        determineVerseBarsWithParameters
-                    }}
-                />
+                <AnnotationNavigation {...{ parentThis: this }} />
                 <DotsSlideNavigation {...{ parentThis: this }} />
-                <LyricNavigation
-                    {...{
-                        parentThis: this,
-                        determineVerseBarsWithParameters
-                    }}
-                />
-                <NavNavigation
-                    {...{
-                        parentThis: this
-                    }}
-                />
+                <LyricNavigation {...{ parentThis: this }} />
+                <NavNavigation {...{ parentThis: this }} />
                 <VerseDispatcher {...{ parentThis: this }} />
             </___>
         )

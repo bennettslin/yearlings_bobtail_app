@@ -5,6 +5,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { updateEventStore } from 'flux/event/action'
 
 import CloseHandler from '../../handlers/CloseHandler'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
@@ -16,11 +18,13 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
-    toggleStore: { isLyricExpanded }
+    toggleStore: { isLyricExpanded },
+    eventStore: { queuedFocus }
 }) => ({
     appMounted,
     isHiddenLyric,
-    isLyricExpanded
+    isLyricExpanded,
+    queuedFocus
 })
 
 class FocusContainer extends PureComponent {
@@ -29,7 +33,9 @@ class FocusContainer extends PureComponent {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired
+        isLyricExpanded: PropTypes.bool.isRequired,
+        queuedFocus: PropTypes.bool.isRequired,
+        updateEventStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -38,7 +44,20 @@ class FocusContainer extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
+        this._checkFocus(prevProps)
         this._checkLyricChange(prevProps)
+    }
+
+    _checkFocus(prevProps) {
+        const
+            { queuedFocus } = this.props,
+            { queuedFocus: prevFocus } = prevProps
+
+        if (queuedFocus && !prevFocus) {
+            this._focusElementForAccess()
+
+            this.props.updateEventStore({ queuedFocus: false })
+        }
     }
 
     _checkLyricChange(prevProps) {
@@ -146,4 +165,10 @@ class FocusContainer extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(FocusContainer)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        updateEventStore
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(FocusContainer)

@@ -4,12 +4,14 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateEventStore } from 'flux/event/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class StopPropagationDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        updateEventStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -31,6 +33,8 @@ class StopPropagationDispatcher extends PureComponent {
 
             if (e.stopPropagation) {
                 e.stopPropagation()
+
+                this.props.updateEventStore({ queuedFocus: true })
             }
         }
     }
@@ -44,6 +48,7 @@ const mapStateToProps = null
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateEventStore,
         updateToggleStore
     }, dispatch)
 )

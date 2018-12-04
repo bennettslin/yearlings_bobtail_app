@@ -71,10 +71,8 @@ class DotsSlideNavigation extends PureComponent {
             }
 
             this.props.updateAccessStore({ accessedDotIndex })
-            return true
         }
-
-        return false
+        return true
     }
 
     render() {

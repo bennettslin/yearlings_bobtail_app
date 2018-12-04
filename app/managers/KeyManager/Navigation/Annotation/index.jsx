@@ -30,8 +30,7 @@ class AnnotationNavigation extends PureComponent {
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired,
-        determineVerseBarsWithParameters: PropTypes.func.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
@@ -39,10 +38,7 @@ class AnnotationNavigation extends PureComponent {
     }
 
     navigateAnnotation = (e, keyName) => {
-        const { props } = this,
-            {
-                determineVerseBarsWithParameters
-            } = props
+        const { props } = this
 
         let { accessedWikiWormholeIndex } = props,
             annotationIndexWasAccessed = false,
@@ -111,11 +107,6 @@ class AnnotationNavigation extends PureComponent {
             default:
                 keyWasRegistered = false
                 break
-        }
-
-        // Accessing annotation might scroll lyric.
-        if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            determineVerseBarsWithParameters()
         }
 
         return {

@@ -1,8 +1,10 @@
 module.exports = {
     ACCESS_STORE: 'accessStore',
+    ANNOTATION_STORE: 'annotationStore',
     AUDIO_STORE: 'audioStore',
     DEVICE_STORE: 'deviceStore',
     DOTS_STORE: 'dotsStore',
+    EVENT_STORE: 'eventStore',
     LOAD_STORE: 'loadStore',
     OPTION_STORE: 'optionStore',
     PLAYER_STORE: 'playerStore',
@@ -15,7 +17,6 @@ module.exports = {
     SESSION_STORE: 'sessionStore',
     SLIDER_STORE: 'sliderStore',
     SONG_STORE: 'songStore',
-    SONG_QUEUE_STORE: 'songQueueStore',
     TOGGLE_STORE: 'toggleStore',
     TRANSIENT_STORE: 'transientStore',
     VERSE_BARS_STORE: 'verseBarsStore',

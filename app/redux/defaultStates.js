@@ -48,6 +48,11 @@ const
         accessedNavSongIndex: storedSongIndex
     },
 
+    ANNOTATION_DEFAULTS = {
+        queuedAnnotationIndex: 0,
+        queuedAnnotationFromCarousel: false
+    },
+
     AUDIO_DEFAULTS = {
         canPlayThroughs: 0
     },
@@ -68,6 +73,10 @@ const
 
     // All dotKeys plus dotsBitNumber.
     DOTS_DEFAULTS = getDotsFromStorage(),
+
+    EVENT_DEFAULTS = {
+        queuedFocus: false
+    },
 
     LOAD_DEFAULTS = {
         appMounted: false,
@@ -180,11 +189,6 @@ const
         )
     },
 
-    SONG_QUEUE_DEFAULTS = {
-        queuedAnnotationIndex: 0,
-        queuedFromCarousel: false
-    },
-
     TOGGLE_DEFAULTS = {
         isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
         isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
@@ -216,9 +220,11 @@ const
 
 export {
     ACCESS_DEFAULTS,
+    ANNOTATION_DEFAULTS,
     AUDIO_DEFAULTS,
     DEVICE_DEFAULTS,
     DOTS_DEFAULTS,
+    EVENT_DEFAULTS,
     LOAD_DEFAULTS,
     OPTION_DEFAULTS,
     PLAYER_DEFAULTS,
@@ -231,7 +237,6 @@ export {
     SESSION_DEFAULTS,
     SLIDER_DEFAULTS,
     SONG_DEFAULTS,
-    SONG_QUEUE_DEFAULTS,
     TOGGLE_DEFAULTS,
     TRANSIENT_DEFAULTS,
     VERSE_BARS_DEFAULTS

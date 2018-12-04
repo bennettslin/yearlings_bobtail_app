@@ -23,8 +23,7 @@ class LyricNavigation extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired,
-        determineVerseBarsWithParameters: PropTypes.func.isRequired
+        parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
@@ -35,8 +34,7 @@ class LyricNavigation extends PureComponent {
         const { props } = this,
             {
                 interactivatedVerseIndex,
-                accessedAnnotationIndex,
-                determineVerseBarsWithParameters
+                accessedAnnotationIndex
             } = props,
 
             isVerseInteractivated = interactivatedVerseIndex > -1
@@ -85,11 +83,6 @@ class LyricNavigation extends PureComponent {
                 annotationIndex: accessedAnnotationIndex,
                 direction
             })
-        }
-
-        // Accessing annotation might scroll lyric.
-        if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            determineVerseBarsWithParameters()
         }
 
         return true

@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
+import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
+import EventReducer from './event/reducer'
 import LoadReducer from './load/reducer'
 import OptionReducer from './option/reducer'
 import PlayerReducer from './player/reducer'
@@ -15,16 +17,17 @@ import ScrollLyricReducer from './scrollLyric/reducer'
 import SessionReducer from './session/reducer'
 import SliderReducer from './slider/reducer'
 import SongReducer from './song/reducer'
-import SongQueueReducer from './songQueue/reducer'
 import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
 import VerseBarsReducer from './verseBars/reducer'
 
 import {
     ACCESS_STORE,
+    ANNOTATION_STORE,
     AUDIO_STORE,
     DEVICE_STORE,
     DOTS_STORE,
+    EVENT_STORE,
     LOAD_STORE,
     OPTION_STORE,
     PLAYER_STORE,
@@ -37,7 +40,6 @@ import {
     SESSION_STORE,
     SLIDER_STORE,
     SONG_STORE,
-    SONG_QUEUE_STORE,
     TOGGLE_STORE,
     TRANSIENT_STORE,
     VERSE_BARS_STORE
@@ -45,7 +47,6 @@ import {
 
 const rootReducer = combineReducers({
     [SONG_STORE]: SongReducer,
-    [SONG_QUEUE_STORE]: SongQueueReducer,
     [RENDERED_STORE]: RenderedReducer,
     [ACCESS_STORE]: AccessReducer,
     [SESSION_STORE]: SessionReducer,
@@ -65,6 +66,8 @@ const rootReducer = combineReducers({
     [RENDERABLE_STORE]: RenderableReducer,
 
     // Queued event stores.
+    [ANNOTATION_STORE]: AnnotationReducer,
+    [EVENT_STORE]: EventReducer,
     [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
     [VERSE_BARS_STORE]: VerseBarsReducer,

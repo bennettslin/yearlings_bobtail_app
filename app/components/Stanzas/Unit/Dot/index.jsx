@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateSongQueueStore } from 'flux/songQueue/action'
+import { updateAnnotationStore } from 'flux/annotation/action'
 
 import AnchorDot from '../../../Anchor/AnchorDot'
 
@@ -52,7 +52,7 @@ class UnitDot extends Component {
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        updateSongQueueStore: PropTypes.func.isRequired,
+        updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
@@ -76,7 +76,7 @@ class UnitDot extends Component {
             isSelected = annotationIndex === renderedAnnotationIndex
 
         if (!isSelected) {
-            this.props.updateSongQueueStore({
+            this.props.updateAnnotationStore({
                 queuedAnnotationIndex: annotationIndex
             })
         }
@@ -201,7 +201,7 @@ UnitDotView.propTypes = propTypes
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSongQueueStore
+        updateAnnotationStore
     }, dispatch)
 )
 
