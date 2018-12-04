@@ -22,8 +22,10 @@ class ScrollLyricListener extends PureComponent {
         queuedScrollLyricLog: PropTypes.string.isRequired,
         queuedScrollLyricByVerse: PropTypes.bool.isRequired,
         queuedScrollLyricIndex: PropTypes.number.isRequired,
+        queuedScrollLyricAlways: PropTypes.bool.isRequired,
         queuedScrollLyricFromRender: PropTypes.bool.isRequired,
         queuedScrollLyricFromAutoScroll: PropTypes.bool.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         isAutoScroll: PropTypes.bool.isRequired,
@@ -57,6 +59,7 @@ class ScrollLyricListener extends PureComponent {
             {
                 isPlaying,
                 queuedScrollLyricLog,
+                queuedScrollLyricAlways,
                 queuedScrollLyricFromAutoScroll,
                 isAutoScroll
             } = this.props,
@@ -68,9 +71,12 @@ class ScrollLyricListener extends PureComponent {
                 // If paused, always scroll.
                 !isPlaying ||
 
+                // If selecting a new verse, always scroll.
+                queuedScrollLyricAlways ||
+
                 /**
                  * If autoScroll is on, only scroll from autoScroll, or else if
-                 * autoScroll is off, scroll from everything but autoScroll.
+                 * autoScroll is off, scroll from everything *but* autoScroll.
                  */
                 queuedScrollLyricFromAutoScroll === isAutoScroll
             ) {
@@ -81,19 +87,29 @@ class ScrollLyricListener extends PureComponent {
                         queuedScrollLyricFromRender,
                         deviceIndex,
                         isLyricExpanded,
+                        selectedVerseIndex,
                         isSelectedLogue
                     } = this.props,
 
                     scrollClass = queuedScrollLyricByVerse ?
                         VERSE_SCROLL :
-                        LYRIC_ANNOTATION_SCROLL
+                        LYRIC_ANNOTATION_SCROLL,
+
+                    /**
+                     * If no verse index given, default to selected verse.
+                     * If scrolling to annotation, index is always given.
+                     */
+                    index =
+                        queuedScrollLyricIndex === -1 ?
+                            selectedVerseIndex :
+                            queuedScrollLyricIndex
 
                 scrollElementIntoView({
                     log: queuedScrollLyricLog,
                     scrollClass,
                     scrollParent: this.lyricParentElement,
                     scrollChildren: this._getScrollElementsArray(scrollClass),
-                    index: queuedScrollLyricIndex,
+                    index,
                     doScrollImmediately: queuedScrollLyricFromRender,
                     deviceIndex,
                     isLyricExpanded,
@@ -157,8 +173,13 @@ const mapStateToProps = ({
         queuedScrollLyricLog,
         queuedScrollLyricByVerse,
         queuedScrollLyricIndex,
+        queuedScrollLyricAlways,
         queuedScrollLyricFromRender,
         queuedScrollLyricFromAutoScroll
+    },
+    songStore: {
+        selectedVerseIndex,
+        isSelectedLogue
     },
     playerStore: { isPlaying },
     toggleStore: {
@@ -167,19 +188,20 @@ const mapStateToProps = ({
     },
     deviceStore: {
         deviceIndex
-    },
-    songStore: { isSelectedLogue }
+    }
 }) => ({
     queuedScrollLyricLog,
     queuedScrollLyricByVerse,
     queuedScrollLyricIndex,
+    queuedScrollLyricAlways,
     queuedScrollLyricFromRender,
     queuedScrollLyricFromAutoScroll,
+    selectedVerseIndex,
+    isSelectedLogue,
     isPlaying,
     isAutoScroll,
     isLyricExpanded,
-    deviceIndex,
-    isSelectedLogue
+    deviceIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

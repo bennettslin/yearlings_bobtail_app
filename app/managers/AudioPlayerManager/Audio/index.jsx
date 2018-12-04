@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updatePlayerStore } from 'flux/player/action'
+import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 
 import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
@@ -24,6 +25,7 @@ class AudioManager extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         updatePlayerStore: PropTypes.func.isRequired,
+        updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -69,6 +71,14 @@ class AudioManager extends PureComponent {
                 selectedSongIndex: 1
             }
         })
+
+        if (isPlaying) {
+            this.props.updateScrollLyricStore({
+                queuedScrollLyricLog: 'Toggle isPlaying auto scroll.',
+                queuedScrollLyricByVerse: true,
+                queuedScrollLyricAlways: true
+            })
+        }
 
         return true
     }
@@ -140,6 +150,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updatePlayerStore,
+        updateScrollLyricStore,
         updateSessionStore
     }, dispatch)
 )

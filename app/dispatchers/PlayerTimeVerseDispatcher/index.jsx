@@ -40,7 +40,7 @@ class PlayerTimeVerseDispatcher extends PureComponent {
         // If autoScroll is on, scroll to selected verse.
         if (this.props.isAutoScroll) {
             this.props.updateScrollLyricStore({
-                queuedScrollLyricLog: 'Player autoScroll.',
+                queuedScrollLyricLog: 'Player auto scroll.',
                 queuedScrollLyricByVerse: true,
                 queuedScrollLyricIndex: nextVerseIndex,
                 queuedScrollLyricFromAutoScroll: true

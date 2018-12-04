@@ -12,7 +12,6 @@ class ScrollVerseDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        selectedVerseIndex: PropTypes.number.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
@@ -26,12 +25,11 @@ class ScrollVerseDispatcher extends PureComponent {
     }
 
     dispatchScrollVerse = (isAutoScroll) => {
-        const { selectedVerseIndex } = this.props
 
         this.props.updateScrollLyricStore({
-            queuedScrollLyricLog: 'Scroll back to selected verse.',
+            queuedScrollLyricLog: 'VerseBar click or toggle autoScroll back to selected verse.',
             queuedScrollLyricByVerse: true,
-            queuedScrollLyricIndex: selectedVerseIndex
+            queuedScrollLyricAlways: true
         })
 
         this.props.resetVerseBars()
@@ -45,11 +43,7 @@ class ScrollVerseDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    songStore: { selectedVerseIndex }
-}) => ({
-    selectedVerseIndex
-})
+const mapStateToProps = null
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({

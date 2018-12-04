@@ -160,11 +160,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Add auto scroll to lyric column that toggles on with button, and toggles off with manual scroll.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Selecting last carousel annotation in Odin, and then toggling lyric column, makes carousel needlessly scroll.`,
         workedHours: 0,
         neededHours: 2

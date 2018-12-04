@@ -4086,5 +4086,10 @@ module.exports = [
         taskName: `Fix bug where stopping propagation was not returning focus to lyric.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Figure out autoScroll behaviour. Always scroll when selecting verse. Default to selected verse index when none given.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

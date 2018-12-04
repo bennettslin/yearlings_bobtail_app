@@ -154,7 +154,8 @@ const
     SCROLL_LYRIC_DEFAULTS = {
         queuedScrollLyricLog: '',
         queuedScrollLyricByVerse: false,
-        queuedScrollLyricIndex: 0,
+        queuedScrollLyricIndex: -1,
+        queuedScrollLyricAlways: false,
         queuedScrollLyricFromRender: false,
         queuedScrollLyricFromAutoScroll: false
     },

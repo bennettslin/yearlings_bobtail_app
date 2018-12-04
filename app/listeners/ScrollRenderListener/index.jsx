@@ -15,7 +15,6 @@ class ScrollRenderListener extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         didCarouselRender: PropTypes.bool.isRequired,
         didLyricRender: PropTypes.bool.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         updateRenderedStore: PropTypes.func.isRequired,
         updateScrollCarouselStore: PropTypes.func.isRequired,
@@ -66,12 +65,9 @@ class ScrollRenderListener extends PureComponent {
             && didLyricRender
             && !couldRender
         ) {
-            const { selectedVerseIndex } = this.props
-
             this.props.updateScrollLyricStore({
                 queuedScrollLyricLog: 'Rerender selected verse.',
                 queuedScrollLyricByVerse: true,
-                queuedScrollLyricIndex: selectedVerseIndex,
                 queuedScrollLyricFromRender: true
             })
         }
@@ -84,7 +80,6 @@ class ScrollRenderListener extends PureComponent {
 const mapStateToProps = ({
     songStore: {
         isSelectedLogue,
-        selectedVerseIndex,
         selectedAnnotationIndex
     },
     renderStore: {
@@ -95,7 +90,6 @@ const mapStateToProps = ({
     isSelectedLogue,
     didCarouselRender,
     didLyricRender,
-    selectedVerseIndex,
     selectedAnnotationIndex
 })
 

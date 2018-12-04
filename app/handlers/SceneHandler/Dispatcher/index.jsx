@@ -39,7 +39,7 @@ class SceneDispatcher extends PureComponent {
 
         this.dispatchVerse({
             selectedVerseIndex: nextVerseIndex,
-            scrollLog: 'Manual scene changed.'
+            scrollLog: 'Manual scene selected verse.'
         })
 
         return true

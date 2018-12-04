@@ -58,7 +58,8 @@ class VerseDispatcher extends PureComponent {
         this.props.updateScrollLyricStore({
             queuedScrollLyricLog: scrollLog,
             queuedScrollLyricByVerse: true,
-            queuedScrollLyricIndex: selectedVerseIndex
+            queuedScrollLyricIndex: selectedVerseIndex,
+            queuedScrollLyricAlways: true
         })
     }
 
