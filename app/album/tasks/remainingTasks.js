@@ -20,19 +20,7 @@ module.exports = [
         neededHours: 2
     },
 
-    // Quick bug fixes?
-    {
-        taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store. Use isPopupAnnotationVisible flag.`,
-        workedHours: 1,
-        neededHours: 2
-    },
-
     // More refactoring...
-    {
-        taskName: `Separate class name parent containers.`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `Get AWS credentials on personal laptop.`,
         workedHours: 0,
@@ -56,7 +44,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Three-dimensionality of cutouts`,
+        taskName: `Three-dimensionality of cutouts.`,
         workedHours: 0,
         neededHours: 3
     },

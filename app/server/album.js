@@ -42,7 +42,6 @@ const rawAlbum = {
             // Presences.
                 .concat(require('album/tasks/bubbleDrawingTasks')) // 12 days.
                 .concat(require('album/tasks/cutoutDrawingTasks')) // 9 days.
-                .concat(require('album/tasks/doorDrawingTasks')) // 12 days.
                 .concat(require('album/tasks/furnitureDrawingTasks')) // 8 days.
 
             // Additional work on presences.

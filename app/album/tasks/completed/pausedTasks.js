@@ -242,5 +242,15 @@ module.exports = [
         taskName: `Accessed annotation and interactivated verse should stay in sync when navigating and switching between the two. I think I'm fine with not doing this. Either will always just start from selected verse.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store. Use isPopupAnnotationVisible flag.`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Separate class name parent containers.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]
