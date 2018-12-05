@@ -1,7 +1,7 @@
 module.exports = [
     // New refactor tasks.
     {
-        taskName: `Get rid of doors and windows.`,
+        taskName: `Get rid of doors and window components, and change scenes accordingly.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -62,15 +62,6 @@ module.exports = [
     },
 
     /**
-     * Important bugs to fix.
-     */
-    {
-        taskName: `Accessing annotation does not seem to determine verse bars when going from top of lyric all the way to the bottom, or vice versa. This might involve generally rethinking how to do determine verse bars after a scroll.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    /**
      * Mobile bugs. (Might be able to quickly get through now that deployment
      * is worked out.)
      */
@@ -124,6 +115,11 @@ module.exports = [
         taskName: `Make nav books svgs.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `There are still gaps in slider bars.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     /**
@@ -195,6 +191,11 @@ module.exports = [
         taskName: `Fix bug where go-kart presences have duplicate keys. Do this in conjunction with persisting presences across scenes.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Change render order so that scenes come last after lyric and carousel?`,
+        workedHours: 0,
+        neededHours: 5
     },
     {
         taskName: `Allow cutouts and fixtures to persist across scenes. Either needs React CSS transition group, or just have same keys?`,

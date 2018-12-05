@@ -4078,7 +4078,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Allow some, but not all, compoents to send a queued event for annotation, rather than direct dispatch. No need to do for songs.`,
+        taskName: `Allow some, but not all, components to send a queued event for annotation, rather than direct dispatch. No need to do for songs.`,
         workedHours: 2,
         neededHours: 2
     },
