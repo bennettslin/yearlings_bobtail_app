@@ -46,6 +46,7 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [PLAYER_STORE]: PlayerReducer,
     [SONG_STORE]: SongReducer,
     [RENDERED_STORE]: RenderedReducer,
     [ACCESS_STORE]: AccessReducer,
@@ -70,8 +71,7 @@ const rootReducer = combineReducers({
     [EVENT_STORE]: EventReducer,
     [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
-    [VERSE_BARS_STORE]: VerseBarsReducer,
-    [PLAYER_STORE]: PlayerReducer
+    [VERSE_BARS_STORE]: VerseBarsReducer
 })
 
 export default rootReducer

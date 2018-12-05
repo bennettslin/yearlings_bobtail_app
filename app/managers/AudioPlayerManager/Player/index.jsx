@@ -35,6 +35,7 @@ const mapStateToProps = ({
     audioStore: { canPlayThroughs },
     playerStore: { isPlaying },
     playerStore: {
+        queuedPlayingFromLogue,
         queuedPlayerSongIndex,
         queuedPlayerVerseIndex
     },
@@ -45,6 +46,7 @@ const mapStateToProps = ({
     }
 }) => ({
     isPlaying,
+    queuedPlayingFromLogue,
     queuedPlayerSongIndex,
     queuedPlayerVerseIndex,
     selectedSongIndex,
@@ -65,6 +67,7 @@ class PlayerManager extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
+        queuedPlayingFromLogue: PropTypes.bool.isRequired,
         queuedPlayerSongIndex: PropTypes.number.isRequired,
         queuedPlayerVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
@@ -158,6 +161,7 @@ class PlayerManager extends PureComponent {
 
     _checkPlayerChange(prevProps) {
         const {
+                queuedPlayingFromLogue,
                 queuedPlayerSongIndex,
                 queuedPlayerVerseIndex
             } = this.props,
@@ -171,6 +175,7 @@ class PlayerManager extends PureComponent {
             (queuedPlayerVerseIndex > -1 && queuedPlayerVerseIndex !== prevVerseIndex)
         ) {
             this._changeSelectedPlayer({
+                isPlayingFromLogue: queuedPlayingFromLogue,
                 nextSongIndex: queuedPlayerSongIndex,
                 nextVerseIndex: queuedPlayerVerseIndex
             })
@@ -180,6 +185,7 @@ class PlayerManager extends PureComponent {
     }
 
     _changeSelectedPlayer({
+        isPlayingFromLogue,
         nextSongIndex,
         nextVerseIndex
     }) {
@@ -205,7 +211,8 @@ class PlayerManager extends PureComponent {
 
             // Store next song and verse in component state for callback.
             nextSongIndex,
-            nextVerseIndex
+            nextVerseIndex,
+            isPlayingFromLogue
         }
     }
 
@@ -272,6 +279,7 @@ class PlayerManager extends PureComponent {
 
     _handleSelectPlayer = () => {
         const {
+                isPlayingFromLogue,
                 nextSongIndex,
                 nextVerseIndex
             } = this.playerState,
@@ -284,7 +292,8 @@ class PlayerManager extends PureComponent {
         // Update selected player's current time.
         this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
 
-        if (this.props.isPlaying) {
+        // If playing from logue, begin playing only once player is selected.
+        if (this.props.isPlaying || isPlayingFromLogue) {
             /**
              * If already playing, begin playing newly selected player.
              */

@@ -4091,5 +4091,10 @@ module.exports = [
         taskName: `Figure out autoScroll behaviour. Always scroll when selecting verse. Default to selected verse index when none given.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Fix bug where playing from logue causes weird jumpiness.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

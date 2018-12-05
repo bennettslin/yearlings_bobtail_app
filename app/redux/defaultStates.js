@@ -96,6 +96,7 @@ const
     PLAYER_DEFAULTS = {
         isPlaying: false,
         queuedTogglePlay: false,
+        queuedPlayingFromLogue: false,
         queuedPlayerSongIndex: -1,
         queuedPlayerVerseIndex: -1
     },

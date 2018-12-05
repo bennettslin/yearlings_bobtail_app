@@ -36,6 +36,7 @@ class SongDispatcher extends PureComponent {
     }
 
     dispatchSong = ({
+        isPlayingFromLogue,
         selectedSongIndex = 0,
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,
@@ -58,6 +59,7 @@ class SongDispatcher extends PureComponent {
         }
 
         this.props.updatePlayerStore({
+            queuedPlayingFromLogue: isPlayingFromLogue,
             queuedPlayerSongIndex: selectedSongIndex,
             queuedPlayerVerseIndex: selectedVerseIndex
         })

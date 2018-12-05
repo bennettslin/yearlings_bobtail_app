@@ -6,13 +6,6 @@ module.exports = [
         neededHours: 3
     },
 
-    // Render stuff.
-    {
-        taskName: `Fix bug where playing from logue causes weird jumpiness. Same with switching between songs in general sometimes.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     // Scrolling stuff.
     {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,

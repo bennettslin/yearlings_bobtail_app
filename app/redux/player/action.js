@@ -18,6 +18,7 @@ const resetPlayerQueue = () => {
     return ({
         type: PLAYER_STORE,
         payload: {
+            queuedPlayingFromLogue: false,
             queuedPlayerSongIndex: -1,
             queuedPlayerVerseIndex: -1
         }

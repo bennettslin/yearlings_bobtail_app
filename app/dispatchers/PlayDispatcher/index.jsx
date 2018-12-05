@@ -51,12 +51,20 @@ class PlayDispatcher extends PureComponent {
 
         const isPlayingFromLogue = isSelectedLogue && isPlaying
 
-        // Select first song if play button in logue is toggled on.
+        /**
+         * Select first song if play button in logue is toggled on. In order
+         * to keep player and song in sync, only dispatch song, and let song
+         * handler send queued event to toggle play.
+         */
         if (isPlayingFromLogue) {
-            this.dispatchSong({ selectedSongIndex: 1 })
-        }
+            this.dispatchSong({
+                isPlayingFromLogue: true,
+                selectedSongIndex: 1
+            })
 
-        this.props.updatePlayerStore({ queuedTogglePlay: true })
+        } else {
+            this.props.updatePlayerStore({ queuedTogglePlay: true })
+        }
 
         return true
     }

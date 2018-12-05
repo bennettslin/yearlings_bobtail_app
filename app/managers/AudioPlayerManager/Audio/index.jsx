@@ -23,7 +23,6 @@ class AudioManager extends PureComponent {
         canPlayThroughs: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
         updatePlayerStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
@@ -54,23 +53,10 @@ class AudioManager extends PureComponent {
     }
 
     _togglePlay() {
-        const {
-                isPlaying: wasPlaying,
-                isSelectedLogue
-            } = this.props,
-
-            isPlaying = !wasPlaying,
-            isPlayingFromLogue = isSelectedLogue && isPlaying
+        const isPlaying = !this.props.isPlaying
 
         // Player manager will decide whether to set isPlaying in store.
-        this.props.toggleSelectedPlayer({
-            isPlaying,
-
-            // Tell player to play the first song if from logue.
-            ...isPlayingFromLogue && {
-                selectedSongIndex: 1
-            }
-        })
+        this.props.toggleSelectedPlayer({ isPlaying })
 
         if (isPlaying) {
             this.props.updateScrollLyricStore({
@@ -134,17 +120,13 @@ const mapStateToProps = ({
         queuedTogglePlay
     },
     sessionStore: { selectedAudioOptionIndex },
-    songStore: {
-        selectedSongIndex,
-        isSelectedLogue
-    }
+    songStore: { selectedSongIndex }
 }) => ({
     isPlaying,
     queuedTogglePlay,
     canPlayThroughs,
     selectedAudioOptionIndex,
-    selectedSongIndex,
-    isSelectedLogue
+    selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
