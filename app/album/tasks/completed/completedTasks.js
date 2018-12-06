@@ -4096,5 +4096,10 @@ module.exports = [
         taskName: `Fix bug where playing from logue causes weird jumpiness.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Finalise UI of carousel annotations. Annotation tabs have box shadows.`,
+        workedHours: 11,
+        neededHours: 11
     }
 ]

@@ -99,6 +99,7 @@ class Annotation extends Component {
                             className: cx(
                                 'Annotation__cardField',
                                 'bgColour__annotation',
+                                'bgColour__annotation__pattern',
                                 isSelected && 'bgColour__annotation__selected',
                                 isSelected ?
                                     'boxShadow__annotation__selected' :

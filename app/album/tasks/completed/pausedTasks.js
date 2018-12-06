@@ -252,5 +252,10 @@ module.exports = [
         taskName: `Separate class name parent containers.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Halo for cubes.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

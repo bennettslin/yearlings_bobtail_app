@@ -32,11 +32,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Halo for cubes.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Three-dimensionality of cutouts.`,
         workedHours: 0,
         neededHours: 3
@@ -150,9 +145,9 @@ module.exports = [
      * Final UI.
      */
     {
-        taskName: `Finalise UI of carousel annotations. Make the navigation panels a similar style, whatever that means? Annotation tabs have box shadows?`,
-        workedHours: 9,
-        neededHours: 10
+        taskName: `Make patterns for carousel annotation background consistent, then call it done.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     {
@@ -174,7 +169,7 @@ module.exports = [
     },
 
     {
-        taskName: `Finalise text styling of different dot annotations.`,
+        taskName: `Finalise text styling of different annotation cards.`,
         workedHours: 0,
         neededHours: 5
     },

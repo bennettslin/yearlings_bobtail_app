@@ -33,3 +33,44 @@
 .bgColour__annotation__selected {
     background-color: #ffd;
 }
+
+.bgColour__annotation__pattern {
+    $degrees: 60deg;
+    $lightShade: rgba(255, 255, 255, 0.125);
+    $darkShade: rgba(0, 0, 0, 0.033);
+    $height: 32px;
+    $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
+
+    background-image:
+    repeating-linear-gradient(
+        180 - $degrees,
+        $lightShade,
+        $lightShade 1px,
+        transparent 1px,
+        transparent $height / 2
+    ),
+    repeating-linear-gradient(
+        $degrees,
+        $lightShade,
+        $lightShade 1px,
+        transparent 1px,
+        transparent $height / 2
+    ),
+    linear-gradient(
+        $degrees,
+        $darkShade 25%,
+        transparent 25%,
+        transparent 75%,
+        $darkShade 75%,
+        $darkShade
+    ),
+    linear-gradient(
+        180 - $degrees,
+        $darkShade 25%,
+        transparent 25%,
+        transparent 75%,
+        $darkShade 75%,
+        $darkShade
+    );
+    background-size: $width $height;
+}

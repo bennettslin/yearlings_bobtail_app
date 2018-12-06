@@ -104,6 +104,7 @@ class AnnotationTitle extends Component {
                      * applied.
                      */
                         'bgColour__annotation': true,
+                        'bgColour__annotation__pattern': true,
                         'bgColour__annotation__selected': isSelected
                     },
 
