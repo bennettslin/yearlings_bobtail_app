@@ -140,7 +140,6 @@ class KeyManager extends PureComponent {
         }
 
         const {
-            // annotationIndexWasAccessed,
             keyWasRegistered
 
         } = getIsNavKey(keyName) ?

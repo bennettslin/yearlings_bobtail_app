@@ -9,7 +9,10 @@
     flex-direction: column;
 
     padding: $js__padding__popupContent__wide;
-    border-radius: $borderRadius__wide;
+}
+
+.Annotation__cardField {
+    border-radius: $borderRadius__narrow;
 }
 
 .boxShadow__annotation {
@@ -30,6 +33,3 @@
 .bgColour__annotation__selected {
     background-color: #ffd;
 }
-
-// TODO:
-// https://css-tricks.com/almanac/properties/b/box-shadow/

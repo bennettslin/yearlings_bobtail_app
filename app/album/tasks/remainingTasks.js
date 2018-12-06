@@ -188,11 +188,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Fix bug where go-kart presences have duplicate keys. Do this in conjunction with persisting presences across scenes.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Change render order so that scenes come last after lyric and carousel?`,
         workedHours: 0,
         neededHours: 5
@@ -211,6 +206,11 @@ module.exports = [
         taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        taskName: `Fix bug where go-kart presences have duplicate keys. Do this in conjunction with persisting presences across scenes.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Allow presences to specify zIndex. Position presences in slanted cubes.`,

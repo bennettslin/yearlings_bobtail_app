@@ -5,8 +5,9 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAnnotationStore } from 'flux/annotation/action'
 
-import AnchorDot from '../../Anchor/AnchorDot'
-import AnchorText from '../../Anchor/AnchorText'
+import AnnotationTitleDot from './TitleDot'
+import AnnotationTitleText from './TitleText'
+
 import AnnotationAccess from './Access'
 
 import { getPropsAreShallowEqual } from 'helpers/general'
@@ -30,6 +31,10 @@ const mapStateToProps = ({
 
 class AnnotationTitle extends Component {
 
+    static defaultProps = {
+        isShadow: false
+    }
+
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
@@ -39,7 +44,7 @@ class AnnotationTitle extends Component {
         updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
-        isShadow: PropTypes.bool,
+        isShadow: PropTypes.bool.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired
@@ -65,9 +70,7 @@ class AnnotationTitle extends Component {
 
     render() {
         const {
-            // TODO: Make sure this is necessary.
                 isShadow,
-
                 isAccessed,
                 isSelected,
                 renderedSongIndex,
@@ -96,7 +99,10 @@ class AnnotationTitle extends Component {
 
                 {
                     ...!isShadow && {
-                    // This includes transition animation, so it's always applied.
+                    /**
+                     * This includes transition animation, so it's always
+                     * applied.
+                     */
                         'bgColour__annotation': true,
                         'bgColour__annotation__selected': isSelected
                     },
@@ -110,9 +116,9 @@ class AnnotationTitle extends Component {
                 'fontSize__title'
             )}>
                 {title === IS_DOT_CARD ? (
-                    <AnchorDot
-                        inAnnotation
+                    <AnnotationTitleDot
                         {...{
+                            isShadow,
                             isAccessed,
                             isSelected,
                             stanzaDotKeys: dotKeys,
@@ -120,8 +126,9 @@ class AnnotationTitle extends Component {
                         }}
                     />
                 ) : (
-                    <AnchorText
+                    <AnnotationTitleText
                         {...{
+                            isShadow,
                             isAccessed,
                             isSelected,
                             text: `\u201c${title}\u201d`,
@@ -130,7 +137,9 @@ class AnnotationTitle extends Component {
                         }}
                     />
                 )}
-                <AnnotationAccess {...{ showUpDown }} />
+                {!isShadow && (
+                    <AnnotationAccess {...{ showUpDown }} />
+                )}
             </div>
         )
     }

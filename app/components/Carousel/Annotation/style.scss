@@ -8,6 +8,11 @@
 
     min-width: 0;
 
+    .DW__desktop
+    & {
+        padding-bottom: $js__margin__thick;
+    }
+
     .DW__mobileNotPhone
     & {
         flex-direction: column;
@@ -18,7 +23,8 @@
          */
         padding-top:
             $height__annotationTitle
-            - $js__padding__popupContent__wide;
+            - $js__padding__popupContent__wide
+            + $js__margin__thin * 2;
     }
 
     .parent__shown

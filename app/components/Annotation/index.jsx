@@ -77,20 +77,38 @@ class Annotation extends Component {
                 <div
                     {...{
                         className: cx(
-                            'Annotation',
-                            'bgColour__annotation',
-                            isSelected && 'bgColour__annotation__selected',
-                            isSelected ?
-                                'boxShadow__annotation__selected' :
-                                'boxShadow__annotation'
+                            'Annotation'
                         ),
                         onClick: this._handleContainerClick,
                         onTouchStart: this._handleContainerClick
                     }}
                 >
-                    <AnnotationHeader
-                        {...{ inCarousel }}
-                    >
+                    <AnnotationHeader {...{ inCarousel }}>
+                        <AnnotationTitle
+                            isShadow
+                            {...{
+                                isAccessed,
+                                isSelected,
+                                annotationIndex
+                            }}
+                        />
+                    </AnnotationHeader>
+
+                    <div
+                        {...{
+                            className: cx(
+                                'Annotation__cardField',
+                                'bgColour__annotation',
+                                isSelected && 'bgColour__annotation__selected',
+                                isSelected ?
+                                    'boxShadow__annotation__selected' :
+                                    'boxShadow__annotation',
+                                'absoluteFullContainer'
+                            )
+                        }}
+                    />
+
+                    <AnnotationHeader {...{ inCarousel }}>
                         <AnnotationTitle
                             {...{
                                 isAccessed,
