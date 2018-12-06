@@ -13,6 +13,7 @@ class SceneDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
@@ -26,6 +27,10 @@ class SceneDispatcher extends PureComponent {
     }
 
     dispatchScene = (direction) => {
+        if (this.props.isSelectedLogue) {
+            return false
+        }
+
         const {
             selectedSongIndex,
             selectedVerseIndex
@@ -54,10 +59,12 @@ class SceneDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     songStore: {
+        isSelectedLogue,
         selectedSongIndex,
         selectedVerseIndex
     }
 }) => ({
+    isSelectedLogue,
     selectedSongIndex,
     selectedVerseIndex
 })
