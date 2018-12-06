@@ -25,6 +25,8 @@
     width: $width__annotationCard;
     max-width: $width__annotationCard;
 
+    border-radius: $borderRadius__narrow;
+
     .DW__mini
     & {
         // Multiplier is .9, just like for lyric text in mini.

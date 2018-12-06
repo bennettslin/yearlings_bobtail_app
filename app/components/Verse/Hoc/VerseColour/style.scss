@@ -5,6 +5,11 @@
 
 .VerseColour {
     overflow: hidden;
+
+    .RM__sliderNotMoving
+    & {
+        transition: background-color $animationDuration__fast;
+    }
 }
 
 .VerseColour__interactivated {

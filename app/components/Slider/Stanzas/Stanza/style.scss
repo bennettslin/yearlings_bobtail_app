@@ -2,8 +2,8 @@
 
 $js__marginX__slider: 3px;
 $js__overlap__marginX__slider: 2px;
-$height__sliderStanzaTab: 4px;
-$width__sliderStanzaTab: 10px;
+$height__sliderStanzaTab: 5px;
+$width__sliderStanzaTab: 15px;
 
 .SliderStanza {
     position: absolute;
@@ -63,11 +63,26 @@ $width__sliderStanzaTab: 10px;
 
 .bgColour__sliderStanza__pattern {
     $degrees: 60deg;
-    $darkShade: rgba(0, 0, 0, 0.1);
-    $height: $height__sliderStanzaTab;
+    $lightShade: rgba(255, 255, 255, 0.125);
+    $darkShade: rgba(0, 0, 0, 0.2);
+    $height: $height__sliderStanzaTab * 3;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:
+    repeating-linear-gradient(
+        180 - $degrees,
+        $lightShade,
+        $lightShade 1px,
+        transparent 1px,
+        transparent $height / 2
+    ),
+    repeating-linear-gradient(
+        $degrees,
+        $lightShade,
+        $lightShade 1px,
+        transparent 1px,
+        transparent $height / 2
+    ),
     linear-gradient(
         $degrees,
         $darkShade 25%,
@@ -85,4 +100,8 @@ $width__sliderStanzaTab: 10px;
         $darkShade
     );
     background-size: $width $height;
+}
+
+.bgColour__sliderStanza__pattern__reverse {
+    background-position: bottom left;
 }

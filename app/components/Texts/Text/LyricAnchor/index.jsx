@@ -64,11 +64,11 @@ class TextLyricAnchor extends Component {
         isLyricExpanded: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
+        // From parent.
         wikiIndex: PropTypes.number,
         wikiAnnotationIndex: PropTypes.number,
         annotationIndex: PropTypes.number,
 
-        // From parent.
         showAccessInPopupAnnotation: PropTypes.bool,
         text: PropTypes.oneOfType([
             PropTypes.string,

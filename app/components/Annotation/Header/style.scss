@@ -4,10 +4,7 @@
     left: 0;
     width: 100%;
 
-    top:
-        $js__padding__popupContent__wide
-        - $height__annotationTitle;
-
+    top: -$height__annotationTitle;
     height: $height__annotationTitle;
 
     /**

@@ -78,10 +78,7 @@ class SliderStanza extends PureComponent {
                 className={cx(
                     logicSelectors,
                     'SliderStanza',
-
-                    `SliderStanza__${stanzaType}`,
-                    'bgColour__sliderStanza__pattern',
-                    `bgColour__stanzaType__${stanzaType}`
+                    `SliderStanza__${stanzaType}`
                 )}
                 style={stanzaStyle}
             >
@@ -113,6 +110,7 @@ class SliderStanza extends PureComponent {
                     'SliderStanza__tab',
                     'SliderStanza__tabTop',
                     'bgColour__sliderStanza__pattern',
+                    'bgColour__sliderStanza__pattern__reverse',
                     `bgColour__stanzaType__${stanzaType}`
                 )}/>
             </div>

@@ -4101,5 +4101,10 @@ module.exports = [
         taskName: `Finalise UI of carousel annotations. Annotation tabs have box shadows.`,
         workedHours: 11,
         neededHours: 11
+    },
+    {
+        taskName: `Reverse argyle patterns for tabs and headers.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

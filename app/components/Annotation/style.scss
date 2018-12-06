@@ -38,7 +38,7 @@
     $degrees: 60deg;
     $lightShade: rgba(255, 255, 255, 0.125);
     $darkShade: rgba(0, 0, 0, 0.033);
-    $height: 32px;
+    $height: $height__annotationTitle * 1.8;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:
@@ -73,4 +73,9 @@
         $darkShade
     );
     background-size: $width $height;
+    background-position: top center;
+}
+
+.bgColour__annotation__pattern__reverse {
+    background-position: bottom center;
 }

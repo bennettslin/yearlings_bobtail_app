@@ -3,9 +3,6 @@
 .AnnotationTitle {
     text-align: center;
 
-    display: flex;
-    align-items: flex-end;
-
     border-top-left-radius: $borderRadius__wide;
     border-top-right-radius: $borderRadius__wide;
 
@@ -15,8 +12,12 @@
     }
 
     padding:
-        0
-        $js__padding__popupContent__wide;
+        $js__margin__thick
+        $js__padding__popupContent__wide
+        0;
+}
 
-    margin-bottom: $js__margin__thin;
+.AnnotationTitle__dot {
+    // Dots have a different padding top.
+    padding-top: $js__margin__thin;
 }

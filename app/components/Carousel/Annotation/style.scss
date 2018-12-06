@@ -18,12 +18,11 @@
         flex-direction: column;
 
         /**
-         * This allows the annotation title to extend beyond the annotation
-         * margin. It's an unofficial figure for now.
+         * Allow room for the annotation title. Then add additional padding to
+         * accommodate box shadow.
          */
         padding-top:
             $height__annotationTitle
-            - $js__padding__popupContent__wide
             + $js__margin__thin * 2;
     }
 

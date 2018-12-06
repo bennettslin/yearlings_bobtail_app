@@ -89,14 +89,15 @@ class AnnotationTitle extends Component {
                 selectedDotKeys
             }),
 
-            showUpDown = isSelected && accessibleWikiWormholesLength > 1
+            showUpDown = isSelected && accessibleWikiWormholesLength > 1,
+
+            isDot = title === IS_DOT_CARD
 
         return (
             <div className={cx(
                 'AnnotationTitle',
 
                 isShadow && 'AnnotationTitle__shadow',
-
                 {
                     ...!isShadow && {
                     /**
@@ -105,18 +106,21 @@ class AnnotationTitle extends Component {
                      */
                         'bgColour__annotation': true,
                         'bgColour__annotation__pattern': true,
+                        'bgColour__annotation__pattern__reverse': true,
                         'bgColour__annotation__selected': isSelected
                     },
 
                     ...isShadow && {
                         'boxShadow__annotation': !isSelected,
                         'boxShadow__annotation__selected': isSelected
-                    }
+                    },
+
+                    'AnnotationTitle__dot': isDot
                 },
 
                 'fontSize__title'
             )}>
-                {title === IS_DOT_CARD ? (
+                {isDot ? (
                     <AnnotationTitleDot
                         {...{
                             isShadow,
