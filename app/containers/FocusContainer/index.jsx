@@ -18,12 +18,18 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
-    toggleStore: { isLyricExpanded },
+    toggleStore: {
+        isLyricExpanded,
+        isScoreShown
+    },
+    sessionStore: { selectedWikiIndex },
     eventStore: { queuedFocus }
 }) => ({
     appMounted,
     isHiddenLyric,
     isLyricExpanded,
+    isScoreShown,
+    selectedWikiIndex,
     queuedFocus
 })
 
@@ -34,9 +40,13 @@ class FocusContainer extends PureComponent {
         appMounted: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        isScoreShown: PropTypes.bool.isRequired,
+        selectedWikiIndex: PropTypes.number.isRequired,
         queuedFocus: PropTypes.bool.isRequired,
         updateEventStore: PropTypes.func.isRequired
     }
+
+    state = { isSliderTouchEnding: false }
 
     componentDidMount() {
         // Focus lyric section when app is mounted.
@@ -46,6 +56,8 @@ class FocusContainer extends PureComponent {
     componentDidUpdate(prevProps) {
         this._checkFocus(prevProps)
         this._checkLyricChange(prevProps)
+        this._checkScoreChange(prevProps)
+        this._checkWikiChange(prevProps)
     }
 
     _checkFocus(prevProps) {
@@ -82,48 +94,112 @@ class FocusContainer extends PureComponent {
         }
     }
 
+    _checkScoreChange(prevProps) {
+        const
+            { isScoreShown } = this.props,
+            { isScoreShown: wasScoreShown } = prevProps
+
+        if (isScoreShown !== wasScoreShown) {
+            this._focusElementForAccess()
+        }
+    }
+
+    _checkWikiChange(prevProps) {
+        const
+            { selectedWikiIndex } = this.props,
+            { selectedWikiIndex: prevWikiIndex } = prevProps
+
+        if (Boolean(selectedWikiIndex) !== Boolean(prevWikiIndex)) {
+            this._focusElementForAccess()
+        }
+    }
+
+    _focusElementForAccess = () => {
+        const {
+            isScoreShown,
+            selectedWikiIndex,
+            isHiddenLyric,
+            isLyricExpanded
+        } = this.props
+
+        let focusedElement,
+            focusedElementString
+
+        if (isScoreShown && this.scoreElement) {
+            focusedElement = this.scoreElement
+            focusedElementString = 'Score'
+
+        } else if (selectedWikiIndex && this.wikiElement) {
+            focusedElement = this.wikiElement
+            focusedElementString = 'Wiki'
+
+        } else if (
+            (
+                !isHiddenLyric || isLyricExpanded
+            ) &&
+            this.lyricElement
+        ) {
+            focusedElement = this.lyricElement
+            focusedElementString = 'Lyric'
+
+        } else {
+            focusedElement = this.rootElement
+            focusedElementString = 'Root'
+        }
+
+        if (focusedElement) {
+            logger.warn(`Focus: ${focusedElementString}`)
+            focusedElement.focus()
+        }
+    }
+
     _handleTouchMove = (e) => {
         this.dispatchTouchMove(e)
     }
 
     _handleTouchEnd = () => {
-        this.dispatchTouchEnd()
+
+        const isSliderTouchEnding = this.dispatchTouchEnd()
+
+        if (isSliderTouchEnding) {
+            /**
+             * Ignore body click event that gets triggered after touch end on
+             * slider, to prevent it from closing out of overlay.
+             */
+            setTimeout(
+                this._resetTouchEndState, 200
+            )
+
+            this.setState({ isSliderTouchEnding: true })
+        }
+    }
+
+    _resetTouchEndState = () => {
+        this.setState({ isSliderTouchEnding: false })
     }
 
     _handleBodyClick = (e) => {
         this.dispatchStopPropagation(e)
-        this.closeForBodyClick()
+
+        if (!this.state.isSliderTouchEnding) {
+            this.closeForBodyClick()
+        }
 
         this._focusElementForAccess()
     }
 
-    _focusElementForAccess = () => {
-        const {
-                isHiddenLyric,
-                isLyricExpanded
-            } = this.props,
-
-            doFocusLyricElement =
-                this.lyricElement &&
-                    (
-                        !isHiddenLyric ||
-                        isLyricExpanded
-                    )
-
-        let focusedElement = doFocusLyricElement ?
-            this.lyricElement :
-            this.rootElement
-
-        if (focusedElement) {
-            logger.warn(`Focus: ${doFocusLyricElement ? 'Lyric' : 'Root'}`)
-            focusedElement.focus()
-        }
-    }
-
     setLyricFocusElement = (node) => {
         this.lyricElement = node
+        this._focusElementForAccess()
+    }
 
-        // Add or remove focus.
+    setScoreFocusElement = (node) => {
+        this.scoreElement = node
+        this._focusElementForAccess()
+    }
+
+    setWikiFocusElement = (node) => {
+        this.wikiElement = node
         this._focusElementForAccess()
     }
 
@@ -136,8 +212,9 @@ class FocusContainer extends PureComponent {
 
         return appMounted && (
             <div
-                ref={this._setRootElement}
                 {...{
+                    ref: this._setRootElement,
+                    tabIndex: -1,
                     className: 'FocusContainer',
                     onClick: this._handleBodyClick,
                     onTouchStart: this._handleBodyClick,
@@ -148,15 +225,19 @@ class FocusContainer extends PureComponent {
                     onTouchEnd: this._handleTouchEnd,
                     onTouchCancel: this._handleTouchEnd,
                     onKeyDown: this._handleKeyDownPress,
-                    onKeyUp: this._handleKeyUpPress,
-                    tabIndex: -1
+                    onKeyUp: this._handleKeyUpPress
                 }}
             >
                 <CloseHandler {...{ parentThis: this }} />
                 <AccessStylesheet />
                 <KeyManager {...{ parentThis: this }} />
                 <RootContainer
-                    {...{ setLyricFocusElement: this.setLyricFocusElement }}
+                    {...{
+                        setLyricFocusElement: this.setLyricFocusElement,
+                        setScoreFocusElement: this.setScoreFocusElement,
+                        setWikiFocusElement: this.setWikiFocusElement
+
+                    }}
                 />
                 <SliderTouchDispatcher {...{ parentThis: this }} />
                 <StopPropagationDispatcher {...{ parentThis: this }} />

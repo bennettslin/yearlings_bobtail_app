@@ -15,11 +15,17 @@ class Live extends PureComponent {
 
     static propTypes = {
         // From parent.
-        setLyricFocusElement: PropTypes.func.isRequired
+        setLyricFocusElement: PropTypes.func.isRequired,
+        setScoreFocusElement: PropTypes.func.isRequired,
+        setWikiFocusElement: PropTypes.func.isRequired
     }
 
     render() {
-        const { setLyricFocusElement } = this.props
+        const {
+            setLyricFocusElement,
+            setScoreFocusElement,
+            setWikiFocusElement
+        } = this.props
 
         return (
             <___>
@@ -28,7 +34,12 @@ class Live extends PureComponent {
                 <Main />
                 <OverviewLogue />
                 <Lyric {...{ setLyricFocusElement }} />
-                <OverlayPopups />
+                <OverlayPopups
+                    {...{
+                        setScoreFocusElement,
+                        setWikiFocusElement
+                    }}
+                />
                 <Menu />
                 <TouchOverlay />
             </___>

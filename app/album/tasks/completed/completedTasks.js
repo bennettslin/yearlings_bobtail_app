@@ -4111,5 +4111,10 @@ module.exports = [
         taskName: `Get rid of doors and window components, and change scenes accordingly.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Fix issue with touch end closing out of overlay.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

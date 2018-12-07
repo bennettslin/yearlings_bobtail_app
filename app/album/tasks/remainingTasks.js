@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Fix issue with touch end closing out of overlay.`,
+        taskName: `Fix issue with scroll and wiki focus.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `Fix with audio timer lagging during scroll.`,

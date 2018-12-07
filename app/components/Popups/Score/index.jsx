@@ -20,7 +20,10 @@ class ScorePopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         isScoreShown: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        updateToggleStore: PropTypes.func.isRequired,
+
+        // From parent.
+        setScoreFocusElement: PropTypes.func.isRequired
     }
 
     closeScore = () => {
@@ -28,17 +31,22 @@ class ScorePopup extends PureComponent {
     }
 
     render() {
+        const {
+            isScoreShown,
+            setScoreFocusElement
+        } = this.props
+
         return (
             <Popup
                 isFullSize
                 displaysInOverlay
                 {...{
                     popupName: 'Score',
-                    isVisible: this.props.isScoreShown,
+                    isVisible: isScoreShown,
                     handleCloseClick: this.closeScore
                 }}
             >
-                <Score />
+                <Score {...{ setScoreFocusElement }} />
             </Popup>
         )
     }

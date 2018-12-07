@@ -18,9 +18,12 @@ const mapStateToProps = ({
 class WikiPopup extends PureComponent {
 
     static propTypes = {
-    // Through Redux.
+        // Through Redux.
         selectedWikiIndex: PropTypes.number.isRequired,
-        updateSessionStore: PropTypes.func.isRequired
+        updateSessionStore: PropTypes.func.isRequired,
+
+        // From parent.
+        setWikiFocusElement: PropTypes.func.isRequired
     }
 
     closeWiki = () => {
@@ -28,16 +31,21 @@ class WikiPopup extends PureComponent {
     }
 
     render() {
+        const {
+            selectedWikiIndex,
+            setWikiFocusElement
+        } = this.props
+
         return (
             <Popup
                 shrinkAnimate
                 displaysInOverlay
                 isFullSize
-                isVisible={Boolean(this.props.selectedWikiIndex)}
+                isVisible={Boolean(selectedWikiIndex)}
                 popupName="Wiki"
                 handleCloseClick={this.closeWiki}
             >
-                <Wiki />
+                <Wiki {...{ setWikiFocusElement }} />
             </Popup>
         )
     }

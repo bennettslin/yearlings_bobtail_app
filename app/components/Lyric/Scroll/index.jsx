@@ -145,16 +145,21 @@ class LyricScroll extends Component {
                     }}
                 />
                 <div
-                    ref={this._setLyricElement}
-                    className={cx(
-                        'LyricScroll',
-                        'absoluteFullContainer',
+                    {...{
+                        ref: this._setLyricElement,
+                        tabIndex: -1,
+                        className: cx(
+                            'LyricScroll',
+                            'absoluteFullContainer',
 
-                        // This gradient does not obscure the lyric toggle buttons.
-                        'gradientMask__lyricColumn__mobileCollapsed'
-                    )}
-                    tabIndex="-1"
-                    onWheel={this._handleWheel}
+                            /**
+                             * This gradient does not obscure the lyric toggle
+                             * buttons.
+                             */
+                            'gradientMask__lyricColumn__mobileCollapsed'
+                        ),
+                        onWheel: this._handleWheel
+                    }}
                 >
                     {/* TODO: Undo this. */}
                     {true && (

@@ -167,7 +167,10 @@ class SliderTouchDispatcher extends PureComponent {
 
             // Reset slider state.
             this.props.updateSliderStore()
+            return true
         }
+
+        return false
     }
 
     render() {

@@ -21,7 +21,10 @@ class WikiSection extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        selectedWikiUrl: PropTypes.string.isRequired
+        selectedWikiUrl: PropTypes.string.isRequired,
+
+        // From parent.
+        setWikiFocusElement: PropTypes.func.isRequired
     }
 
     state = {
@@ -52,30 +55,45 @@ class WikiSection extends PureComponent {
 
     render() {
         const
-            { selectedWikiUrl } = this.props,
+            {
+                selectedWikiUrl,
+                setWikiFocusElement
+            } = this.props,
             { iframeLoading } = this.state
 
         return (
-            <div className={cx(
-                'Wiki',
-                'iframeContainer'
-            )}>
+            <div
+                {...{
+                    ref: setWikiFocusElement,
+                    tabIndex: -1,
+                    className: cx(
+                        'Wiki',
+                        'iframeContainer'
+                    )
+                }}
+            >
                 {iframeLoading &&
-                    <div className={cx(
-                        'iframeContainer__spinner',
-                        'absoluteFullContainer',
-                        'flexCentreContainer'
-                    )}>
+                    <div
+                        {...{
+                            className: cx(
+                                'iframeContainer__spinner',
+                                'absoluteFullContainer',
+                                'flexCentreContainer'
+                            )
+                        }}
+                    >
                         <Spinner />
                     </div>
                 }
                 <iframe
-                    className={cx(
-                        'iframeContainer__iframe',
-                        { 'iframeLoading': iframeLoading }
-                    )}
-                    src={selectedWikiUrl}
-                    onLoad={this.onIframeLoad}
+                    {...{
+                        className: cx(
+                            'iframeContainer__iframe',
+                            { 'iframeLoading': iframeLoading }
+                        ),
+                        src: selectedWikiUrl,
+                        onLoad: this.onIframeLoad
+                    }}
                 />
             </div>
         )
