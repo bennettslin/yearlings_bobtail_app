@@ -5,7 +5,8 @@ import {
     LAWN_HSLA,
     CEILING_HSLA,
     PLATFORM_HSLA,
-    WALL_HSLA
+    WALL_HSLA,
+    DOOR_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -19,36 +20,37 @@ const
     L = LAWN_HSLA,
     C = CEILING_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
     P = PLATFORM_HSLA,
 
     PORCH_CUBES = {
         ceiling: {
             hslaColours: [
-                [C, C, C, C, C, W, W, C],
+                [C, C, C, C, C, W, W, W, C],
                 [C],
-                [D, C, C, C, C, C, C, C, C, C, C, D]
+                [D, D, C, C, C, C, C, C, C, C, C, D]
             ],
             zIndices: [
-                [f, f, f, f, f, e, e, f],
+                [f, f, f, f, f, e, e, e, f],
                 [f],
-                [k, f, f, f, f, f, f, f, f, f, f, k]
+                [k, k, f, f, f, f, f, f, f, f, f, k]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [L, L, P, P, P, P, P, P, P, P, L],
-                [L, L, P, P, P, P, P, P, P, P, L],
-                [L, L, P, P, P, P, P, P, P, P, L],
-                [L, L, W, P, P, P, P, P, P, W, L],
+                [W, W, W, W, W, E, E, E, W],
+                [L, L, L, P, P, P, P, P, P, P, L],
+                [L, L, L, P, P, P, P, P, P, P, L],
+                [L, L, L, P, P, P, P, P, P, P, L],
+                [L, L, L, W, P, P, P, P, P, W, L],
                 [L]
             ],
             zIndices: [
-                [f, f, f, f, f, 3, 3, f, f, f],
-                [1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [1, 1, f, 2, 2, 2, 2, 2, 2, f, 1],
+                [f, f, f, f, f, e, e, e, f, f],
+                [1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1, 1, 1, f, 2, 2, 2, 2, 2, f, 1],
                 [1]
             ]
         }

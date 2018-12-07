@@ -18,6 +18,7 @@ const
     CEILING_HSLA = 'ceiling',
     FLOOR_HSLA = 'floor',
     WALL_HSLA = 'wall',
+    DOOR_HSLA = 'door',
 
     PLATFORM_HSLA = 'platform',
     FURNITURE_HSLA = 'furniture',
@@ -41,6 +42,7 @@ const
         CEILING_HSLA,
         FLOOR_HSLA,
         WALL_HSLA,
+        DOOR_HSLA,
         PLATFORM_HSLA,
         FURNITURE_HSLA,
         UPHOLSTERY_HSLA,
@@ -66,6 +68,7 @@ export {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    DOOR_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,

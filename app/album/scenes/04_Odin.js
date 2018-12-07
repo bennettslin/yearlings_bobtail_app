@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -86,11 +85,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    IRON_GATE_LOW,
-    IRON_GATE
-} from '../../scene/doorKeys'
-
-import {
     BUOY_FLOAT
 } from '../../scene/furnitureKeys'
 
@@ -146,9 +140,6 @@ module.exports = [
             [CUTOUTS]: {
                 [BENNETT_TAIWAN_GATE]: true,
                 [ODIN_TAIWAN_GATE]: true
-            },
-            [DOORS]: {
-                [IRON_GATE_LOW]: true
             }
         },
         cubes: TAIWAN_STAIRS_KEY,
@@ -174,9 +165,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [BENNETT_ODIN_RICKSHAW]: true
-            },
-            [DOORS]: {
-                [IRON_GATE]: true
             },
             [FLATS]: {
                 [TAIWAN_HOUSE_FAR]: true,

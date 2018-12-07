@@ -9,7 +9,8 @@ import {
     PAVEMENT_HSLA,
     GATE_HSLA,
     CEILING_HSLA,
-    WALL_HSLA
+    WALL_HSLA,
+    DOOR_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -29,6 +30,7 @@ const
     A = GATE_HSLA,
     C = CEILING_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
 
     LIZ_GATE_CUBES = {
         ceiling: {
@@ -82,14 +84,14 @@ const
                 [T],
                 [W, W, W, W, W, W, W, W, A, V, V, T],
                 [V, V, V, V, V, V, V, V, A, V, V, T],
-                [A, A, V, V, V, A, A, A, A, V, V, T],
+                [A, A, E, E, E, A, A, A, A, V, V, T],
                 [V, V, V, V, V, V, V, V, V, V, V, T]
             ],
             zIndices: [
                 [0],
                 [f, 6, 6, 6, 6, 6, f, f, 7, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 0],
-                [7, 7, 1, 1, 1, 7, 7, 7, 7, 1, 1, 0],
+                [7, 7, 6, 6, 6, 7, 7, 7, 7, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }

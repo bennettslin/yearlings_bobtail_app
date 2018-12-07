@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES,
     PANELS,
     PUPPETS
@@ -75,11 +74,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    EL_TORITO_DOOR_LEFT,
-    EL_TORITO_DOOR_RIGHT
-} from '../../scene/doorKeys'
-
-import {
     HOSPITAL_MATTRESS_LOWERED
 } from '../../scene/furnitureKeys'
 
@@ -111,10 +105,6 @@ module.exports = [
                         instance: EL_TORITO
                     }
                 }
-            },
-            [DOORS]: {
-                [EL_TORITO_DOOR_LEFT]: true,
-                [EL_TORITO_DOOR_RIGHT]: true
             }
         },
         cubes: EL_TORITO_KEY,

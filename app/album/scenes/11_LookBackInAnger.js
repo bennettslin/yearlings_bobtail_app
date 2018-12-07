@@ -3,7 +3,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES
 } from 'constants/scene'
 
@@ -88,10 +87,6 @@ import {
     CROWD_SIDE_FAR,
     CROWD_SIDE_NEAR
 } from '../../scene/flatKeys'
-
-import {
-    CLUB_DOOR
-} from '../../scene/doorKeys'
 
 import {
     LIZ_MATTRESS,
@@ -246,9 +241,6 @@ module.exports = [
             [FIXTURES]: {
                 [BASS_CASE_SIDE]: true,
                 [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_CLUB
-            },
-            [DOORS]: {
-                [CLUB_DOOR]: true
             }
         },
         cubes: CLUB_LOADING,

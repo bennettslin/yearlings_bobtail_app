@@ -81,10 +81,7 @@ import {
 
 import {
     LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS,
-    LIZ_DOOR,
-    LIZ_GATE_INSIDE,
-    BASEMENT_DOOR
+    ARRANGEMENT_LIZ_BLINDS
 } from '../../scene/doorKeys'
 
 import {
@@ -113,9 +110,7 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
@@ -189,9 +184,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [ELLIOTT_SMITH_POSTER]: true
-            },
-            [DOORS]: {
-                [BASEMENT_DOOR]: true
             },
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
@@ -271,9 +263,7 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS

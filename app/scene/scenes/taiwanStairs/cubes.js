@@ -7,6 +7,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    DOOR_HSLA,
     PLATFORM_HSLA
 } from '../../hslaKeys'
 
@@ -23,6 +24,7 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
     P = PLATFORM_HSLA,
 
     TAIWAN_STAIRS_CUBES = {
@@ -45,14 +47,14 @@ const
         floor: {
             hslaColours: [
                 [A],
-                [A, A, A, V, V, V, A],
+                [A, A, A, E, E, E, A],
                 [V],
                 [W],
                 [W, W, P, P, P, P, P, P, F, F, W]
             ],
             zIndices: [
                 [0],
-                [6, 6, 6, 1, 1, 1, 6],
+                [6, 6, 6, 6, 6, 6, 6],
                 [6, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6],
                 [g, g, g, 5, 5, 5, 5, g],
                 [g, g, 0, 0, 1, 2, 3, 4, 5, 5, g],

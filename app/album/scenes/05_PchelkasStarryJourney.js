@@ -107,8 +107,7 @@ import {
 
 import {
     BEDROOM_BLINDS,
-    BEDROOM_BLINDS_OPEN,
-    PRINCIPAL_DOOR
+    BEDROOM_BLINDS_OPEN
 } from '../../scene/doorKeys'
 
 import {
@@ -435,9 +434,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [CORKBOARD]: true
-            },
-            [DOORS]: {
-                [PRINCIPAL_DOOR]: true
             }
         },
         cubes: VAN_NUYS_HALLWAY_KEY,

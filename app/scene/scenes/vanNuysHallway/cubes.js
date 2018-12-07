@@ -4,6 +4,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    DOOR_HSLA,
     SEAT_HSLA
 } from '../../hslaKeys'
 
@@ -16,6 +17,7 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
     S = SEAT_HSLA,
 
     VAN_NUYS_HALLWAY_CUBES = {
@@ -40,7 +42,7 @@ const
                 [W],
                 [W, F, F, F, F, F, F, F, F, F, F, W],
                 [W, F, F, F, F, F, F, F, F, F, F, W],
-                [W, W, F, F, F, W, W, W, W, W, W, W],
+                [W, W, E, E, E, W, W, W, W, W, W, W],
                 [W, F, F, F, F, F, S, S, S, F, F, W],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
@@ -48,7 +50,7 @@ const
                 [g],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, g, 1, 1, 1, g, g, g, g, g, g, g],
+                [g, g, 7, 7, 7, g, g, g, g, g, g, g],
                 [g, 1, 1, 1, 1, 1, 4, 4, 4, 1, 1, g],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]

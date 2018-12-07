@@ -4,6 +4,7 @@ import {
     DEFAULT_HSLA,
     PAVEMENT_HSLA,
     WALL_HSLA,
+    DOOR_HSLA,
     PLATFORM_HSLA
 } from '../../hslaKeys'
 
@@ -17,6 +18,7 @@ const
     D = DEFAULT_HSLA,
     V = PAVEMENT_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
     P = PLATFORM_HSLA,
 
     ALLEY_CUBES = {
@@ -35,13 +37,13 @@ const
         floor: {
             hslaColours: [
                 [W],
-                [W],
+                [W, E, E, E, E, E, W],
                 [P, P, P, P, P, P, P, V],
                 [V]
             ],
             zIndices: [
                 [g],
-                [g, 4, 4, 4, 4, 4, g],
+                [g, e, e, e, e, e, g],
                 [4, 4, 4, 4, 4, 4, 4, 1],
                 [1]
             ]

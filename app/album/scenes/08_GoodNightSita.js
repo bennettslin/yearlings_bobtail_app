@@ -71,9 +71,7 @@ import {
 import {
     LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS_STREET,
-    LIZ_GATE_OUTSIDE,
-    LIZ_GATE_OUTSIDE_OPEN
+    ARRANGEMENT_LIZ_BLINDS_STREET
 } from '../../scene/doorKeys'
 
 import {
@@ -109,8 +107,7 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
-                [LIZ_GATE_OUTSIDE]: true
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS
             }
         },
         cubes: LIZ_GATE_KEY,
@@ -269,8 +266,7 @@ module.exports = [
                 [TRAFFIC_LIGHT]: true
             },
             [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET,
-                [LIZ_GATE_OUTSIDE_OPEN]: true
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET
             }
         },
         cubes: LIZ_GATE_STREET_KEY,

@@ -9,7 +9,9 @@ import {
 
 import {
     LIZ_COUCH_KEY,
+    LIZ_COUCH_OPEN_KEY,
     LIZ_COUCH_SEAT_KEY,
+    LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY
 } from '../../scene/cubesKeys'
 
@@ -46,11 +48,7 @@ import {
 } from '../../scene/bubbleKeys'
 
 import {
-    LIZ_BLINDS_OPEN,
-    LIZ_DOOR,
-    LIZ_DOOR_OPEN,
-    LIZ_GATE_INSIDE,
-    LIZ_GATE_INSIDE_OPEN
+    LIZ_BLINDS_OPEN
 } from '../../scene/doorKeys'
 
 import {
@@ -87,9 +85,7 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
@@ -119,9 +115,7 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
@@ -151,9 +145,7 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS_OPEN]: true
             },
             [FIXTURES]: {
                 [TCHOTCHKES]: true
@@ -192,15 +184,13 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR_OPEN]: true
+                [LIZ_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             }
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_OPEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -231,9 +221,7 @@ module.exports = [
                 [LIZ_DEFENCE_SPEECH]: true
             },
             [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
@@ -269,15 +257,13 @@ module.exports = [
                 [LIZ_THOUGHT]: true
             },
             [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true,
-                [LIZ_GATE_INSIDE_OPEN]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             }
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_GATE_OPEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -298,9 +284,7 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
@@ -320,9 +304,7 @@ module.exports = [
         description: `Same scene. Peacocks.`,
         presences: {
             [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true,
-                [LIZ_DOOR]: true
+                [LIZ_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS

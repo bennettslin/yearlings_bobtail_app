@@ -3,7 +3,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -91,10 +90,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    BASEMENT_DOOR
-} from '../../scene/doorKeys'
-
-import {
     BENNETT_MATTRESS,
     BENNETT_PILLOWS,
     LIZ_CUSHIONS,
@@ -128,9 +123,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [ELLIOTT_SMITH_POSTER]: true
-            },
-            [DOORS]: {
-                [BASEMENT_DOOR]: true
             },
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT

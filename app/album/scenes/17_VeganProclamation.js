@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES,
     PANELS,
     PUPPETS
@@ -82,11 +81,6 @@ import {
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR
 } from '../../scene/flatKeys'
-
-import {
-    BANCROFT_DOOR,
-    LOADING_DOCK_DOOR
-} from '../../scene/doorKeys'
 
 import {
     LIZ_MATTRESS,
@@ -211,9 +205,6 @@ module.exports = [
             [FIXTURES]: {
                 [BURGER_WRAPPER]: true
             },
-            [DOORS]: {
-                [LOADING_DOCK_DOOR]: true
-            },
             [PUPPETS]: {
                 [GHOST_ODIN_ALLEY]: true
             }
@@ -318,9 +309,6 @@ module.exports = [
             },
             [FIXTURES]: {
                 [ASH_CAN]: true
-            },
-            [DOORS]: {
-                [BANCROFT_DOOR]: true
             },
             [PUPPETS]: {
                 [GHOST_ODIN_DEMONSTRATION]: true

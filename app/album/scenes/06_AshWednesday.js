@@ -83,10 +83,7 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    BENNETT_BLINDS,
-    BENNETT_DOOR_OUTSIDE,
-    BENNETT_GATE_SIDE,
-    BANCROFT_DOOR
+    BENNETT_BLINDS
 } from '../../scene/doorKeys'
 
 import {
@@ -116,9 +113,7 @@ module.exports = [
                 [RECYCLABLES]: true
             },
             [DOORS]: {
-                [BENNETT_BLINDS]: true,
-                [BENNETT_DOOR_OUTSIDE]: true,
-                [BENNETT_GATE_SIDE]: true
+                [BENNETT_BLINDS]: true
             }
         },
         cubes: COURTYARD_KEY,
@@ -233,9 +228,6 @@ module.exports = [
             },
             [FIXTURES]: {
                 [ASH_CAN]: true
-            },
-            [DOORS]: {
-                [BANCROFT_DOOR]: true
             }
         },
         cubes: BANCROFT_LIBRARY_KEY,

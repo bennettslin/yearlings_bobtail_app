@@ -4,8 +4,7 @@ import {
     BUBBLES,
     CUTOUTS,
     FIXTURES,
-    FLATS,
-    DOORS
+    FLATS
 } from 'constants/scene'
 
 import {
@@ -112,12 +111,6 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
 } from '../../scene/flatKeys'
-
-import {
-    BASEMENT_DOOR_OPEN,
-    CINEMA_DOOR_LEFT,
-    CINEMA_DOOR_RIGHT
-} from '../../scene/doorKeys'
 
 module.exports = [
     {
@@ -297,9 +290,6 @@ module.exports = [
                 [BASEMENT_BEER_CASE]: true,
                 [BASEMENT_BEER_MARA]: true,
                 [BASEMENT_BEER_BENNETT]: true
-            },
-            [DOORS]: {
-                [BASEMENT_DOOR_OPEN]: true
             }
         },
         cubes: BASEMENT_KEY,
@@ -331,10 +321,6 @@ module.exports = [
             [CUTOUTS]: {
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: true
-            },
-            [DOORS]: {
-                [CINEMA_DOOR_LEFT]: true,
-                [CINEMA_DOOR_RIGHT]: true
             }
         },
         cubes: CINEMA_KEY,
@@ -374,10 +360,6 @@ module.exports = [
             [CUTOUTS]: {
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: true
-            },
-            [DOORS]: {
-                [CINEMA_DOOR_LEFT]: true,
-                [CINEMA_DOOR_RIGHT]: true
             }
         },
         cubes: CINEMA_KEY,

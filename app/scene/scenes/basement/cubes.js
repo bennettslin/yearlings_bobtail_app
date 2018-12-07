@@ -10,6 +10,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    DOOR_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
@@ -28,12 +29,13 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
     P = PLATFORM_HSLA,
     R = FURNITURE_HSLA,
     U = UPHOLSTERY_HSLA,
     S = SEAT_HSLA,
 
-    DEFAULT_CEILING = {
+    ceiling = {
         hslaColours: [
             [D],
             [C, W, W, C],
@@ -47,7 +49,7 @@ const
     },
 
     BASEMENT_CUBES = {
-        ceiling: DEFAULT_CEILING,
+        ceiling,
         floor: {
             hslaColours: [
                 [G],
@@ -68,11 +70,11 @@ const
         }
     },
     BASEMENT_BED_CUBES = {
-        ceiling: DEFAULT_CEILING,
+        ceiling,
         floor: {
             hslaColours: [
                 [G],
-                [W, G, G, W],
+                [W, E, E, W],
                 [W, P, P, P, P, P, P, P, P, P, P, W],
                 [W, P, P, R, R, U, U, U, U, U, U, W],
                 [W, P, P, F, F, U, U, U, U, U, U, W],
@@ -80,7 +82,7 @@ const
             ],
             zIndices: [
                 [4],
-                [f, 4, 4, f],
+                [f, c, c, f],
                 [f, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, f],
                 [f, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, f],
                 [f, 2, 2, 0, 0, 3, 3, 3, 3, 3, 4, f],

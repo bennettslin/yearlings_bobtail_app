@@ -106,7 +106,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    PORCH_DOOR,
     BEDROOM_BLINDS_OPEN
 } from '../../scene/doorKeys'
 
@@ -203,9 +202,6 @@ module.exports = [
             [CUTOUTS]: {
                 [PORCH_PLANTS_LEFT]: true,
                 [PORCH_PLANTS_RIGHT]: true
-            },
-            [DOORS]: {
-                [PORCH_DOOR]: true
             },
             [FIXTURES]: {
                 [HAIRCUT_SCISSORS]: true

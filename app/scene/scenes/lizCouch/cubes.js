@@ -1,6 +1,8 @@
 import {
     LIZ_COUCH_KEY,
+    LIZ_COUCH_OPEN_KEY,
     LIZ_COUCH_SEAT_KEY,
+    LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY,
     LIZ_COUCH_THOUGHT_KEY
 } from '../../cubesKeys'
@@ -13,6 +15,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    DOOR_HSLA,
     UPHOLSTERY_HSLA,
     SEAT_HSLA
 } from '../../hslaKeys'
@@ -36,10 +39,11 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
     U = UPHOLSTERY_HSLA,
     S = SEAT_HSLA,
 
-    DEFAULT_CEILING = {
+    ceiling = {
         hslaColours: [
             [D],
             [C, C, C, C, W, W, W, W, W, C],
@@ -58,10 +62,31 @@ const
         ]
     },
     LIZ_COUCH_CUBES = {
-        ceiling: DEFAULT_CEILING,
+        ceiling,
         floor: {
             hslaColours: [
-                [A, A, A, A, A, V, V, V, A],
+                [A, A, A, A, A, E, E, E, A],
+                [W, W, W, W, W, W, W, W, W, W],
+                [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, F, F, F, F, F, F, F, E],
+                [W, U, U, U, F, F, F, F, F, F, F, E],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
+            ],
+            zIndices: [
+                [7, 7, 7, 7, 7, 6, 6, 6, 7],
+                [g, g, g, g, 6, 6, 6, 6, 6, g],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, g],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, d],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, d],
+                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+            ]
+        }
+    },
+    LIZ_COUCH_OPEN_CUBES = {
+        ceiling,
+        floor: {
+            hslaColours: [
+                [A, A, A, A, A, E, E, E, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
                 [W, U, U, U, F],
@@ -69,7 +94,7 @@ const
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
-                [7, 7, 7, 7, 7, 1, 1, 1, 7],
+                [7, 7, 7, 7, 7, 6, 6, 6, 7],
                 [g, g, g, g, 6, 6, 6, 6, 6, g],
                 [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, g],
                 [g, 7, 3, 3, 1],
@@ -79,43 +104,64 @@ const
         }
     },
     LIZ_COUCH_SEAT_CUBES = {
-        ceiling: DEFAULT_CEILING,
+        ceiling,
+        floor: {
+            hslaColours: [
+                [A, A, A, A, A, E, E, E, A],
+                [W, W, W, W, W, W, W, W, W, W],
+                [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, F, F, F, F, F, S, F, E],
+                [W, U, U, U, F, F, F, F, F, F, F, E],
+                [W, F, F, F, F, F, F, F, F, F, F, W]
+            ],
+            zIndices: [
+                [7, 7, 7, 7, 7, 6, 6, 6, 7],
+                [g, g, g, g, 6, 6, 6, 6, 6, g],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, g],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 3, 1, d],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, d],
+                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+            ]
+        }
+    },
+    LIZ_COUCH_GATE_OPEN_CUBES = {
+        ceiling,
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, F, F, F, F, F, S, F],
-                [W, U, U, U, F],
+                [W, U, U, U, F, F, F, F, F, F, F, E],
+                [W, U, U, U, F, F, F, F, F, F, F, E],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
                 [g, g, g, g, 6, 6, 6, 6, 6, g],
                 [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 7, 3, 3, 1, 1, 1, 1, 1, 3, 1],
-                [g, 7, 3, 3, 1],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, d],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, d],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
     },
     LIZ_COUCH_PEAFOWL_CUBES = {
-        ceiling: DEFAULT_CEILING,
+        ceiling,
         floor: {
             hslaColours: [
-                [A, A, A, A, A, V, V, V, A],
+                [A, A, A, A, A, E, E, E, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, F],
-                [W, U, U, U, F],
+                [W, U, U, U, F, F, F, F, F, F, F, E],
+                [W, U, U, U, F, F, F, F, F, F, F, E],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
-                [7, 7, 7, 7, 7, 1, 1, 1, 7],
+                [7, 7, 7, 7, 7, 6, 6, 6, 7],
                 [g, g, g, g, 6, 6, 6, 6, 6, g],
                 [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 7, 3, 3, 1],
-                [g, 7, 3, 3, 1],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, d],
+                [g, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, d],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
@@ -143,7 +189,9 @@ const
 
     CUBES = {
         [LIZ_COUCH_KEY]: LIZ_COUCH_CUBES,
+        [LIZ_COUCH_OPEN_KEY]: LIZ_COUCH_OPEN_CUBES,
         [LIZ_COUCH_SEAT_KEY]: LIZ_COUCH_SEAT_CUBES,
+        [LIZ_COUCH_GATE_OPEN_KEY]: LIZ_COUCH_GATE_OPEN_CUBES,
         [LIZ_COUCH_PEAFOWL_KEY]: LIZ_COUCH_PEAFOWL_CUBES,
         [LIZ_COUCH_THOUGHT_KEY]: LIZ_COUCH_THOUGHT_CUBES
     }

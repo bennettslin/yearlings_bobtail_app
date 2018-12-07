@@ -9,7 +9,8 @@ import {
     PAVEMENT_HSLA,
     CEILING_HSLA,
     FLOOR_HSLA,
-    WALL_HSLA
+    WALL_HSLA,
+    DOOR_HSLA
 } from '../../hslaKeys'
 
 import {
@@ -25,6 +26,7 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
 
     CINEMA_CUBES = {
         ceiling: {
@@ -42,14 +44,14 @@ const
         floor: {
             hslaColours: [
                 [T],
-                [W, W, W, F, F, F, F, F, F, W],
+                [W, W, W, E, E, E, E, E, E, W],
                 [W, W, W, F, F, F, F, F, F, W],
                 [W, W, W, F, F, F, F, F, F, W],
                 [V]
             ],
             zIndices: [
                 [0],
-                [f, f, f, 1, 1, 1, 1, 1, 1, f],
+                [f, f, f, e, e, e, e, e, e, f],
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
                 [f, f, f, 1, 1, 1, 1, 1, 1, f],
                 [1]

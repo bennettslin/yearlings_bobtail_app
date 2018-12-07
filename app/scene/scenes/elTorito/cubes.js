@@ -6,6 +6,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    DOOR_HSLA,
     PLATFORM_HSLA
 } from '../../hslaKeys'
 
@@ -22,6 +23,7 @@ const
     C = CEILING_HSLA,
     F = FLOOR_HSLA,
     W = WALL_HSLA,
+    E = DOOR_HSLA,
     P = PLATFORM_HSLA,
 
     EL_TORITO_CUBES = {
@@ -47,7 +49,7 @@ const
             hslaColours: [
                 [W],
                 [F],
-                [W, W, W, F, F, F, F, F, F, W],
+                [W, W, W, E, E, E, F, F, F, W],
                 [V, V, V, P, P, P, P, P, P, V],
                 [V, W, V, V, V, V, V, V, V, V, W, V],
                 [V]
@@ -55,7 +57,7 @@ const
             zIndices: [
                 [g],
                 [2],
-                [f, f, f, 2, 2, 2, 2, 2, 2, f],
+                [f, f, f, e, e, e, 2, 2, 2, f],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1, f, 1, 1, 1, 1, 1, 1, 1, 1, f, 1],
                 [1]

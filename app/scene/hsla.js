@@ -14,6 +14,7 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
+    DOOR_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
@@ -149,6 +150,15 @@ const
     },
 
     /**
+     * E.
+     */
+    DOOR = {
+        h: 330,
+        s: 70,
+        l: 75
+    },
+
+    /**
      * P.
      */
     PLATFORM = {
@@ -210,6 +220,7 @@ const
         [CEILING_HSLA]: CEILING,
         [FLOOR_HSLA]: FLOOR,
         [WALL_HSLA]: WALL,
+        [DOOR_HSLA]: DOOR,
 
         [PLATFORM_HSLA]: PLATFORM,
         [FURNITURE_HSLA]: FURNITURE,

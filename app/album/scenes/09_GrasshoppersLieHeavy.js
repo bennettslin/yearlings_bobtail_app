@@ -11,7 +11,9 @@ import {
 import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,
+    BENNETT_BED_OPEN_KEY,
     WAITING_ROOM_KEY,
+    WAITING_ROOM_OPEN_KEY,
     LIZ_BED_OPEN_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
@@ -89,19 +91,10 @@ import {
 } from '../../scene/fixtureKeys'
 
 import {
-    DISHROOM_DOOR,
     LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS,
     ARRANGEMENT_LIZ_BLINDS_STREET,
-    LIZ_GATE_OUTSIDE,
-    LIZ_GATE_OUTSIDE_OPEN,
-    BENNETT_GATE_FRONT,
-    BENNETT_BLINDS_OPEN,
-    BENNETT_GATE_SIDE_OPEN,
-    BENNETT_DOOR_INSIDE,
-    BENNETT_DOOR_INSIDE_OPEN,
-    WAITING_ROOM_DOOR,
-    WAITING_ROOM_DOOR_OPEN
+    BENNETT_BLINDS_OPEN
 } from '../../scene/doorKeys'
 
 import {
@@ -143,9 +136,6 @@ module.exports = [
                 [GLASS_RACK]: true,
                 [DISH_PILE]: true
             },
-            [DOORS]: {
-                [DISHROOM_DOOR]: true
-            },
             [PANELS]: {
                 [DISHROOM_SINK]: true
             }
@@ -183,9 +173,6 @@ module.exports = [
                 [GLASS_RACK]: true,
                 [DISH_PILE]: true
             },
-            [DOORS]: {
-                [DISHROOM_DOOR]: true
-            },
             [PANELS]: {
                 [DISHROOM_SINK]: true
             }
@@ -215,8 +202,7 @@ module.exports = [
                 }
             },
             [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS,
-                [LIZ_GATE_OUTSIDE]: true
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS
             }
         },
         cubes: LIZ_GATE_KEY,
@@ -248,8 +234,7 @@ module.exports = [
                 [TRAFFIC_LIGHT]: true
             },
             [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET,
-                [LIZ_GATE_OUTSIDE_OPEN]: true
+                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET
             }
         },
         sky: {
@@ -280,9 +265,6 @@ module.exports = [
             [CUTOUTS]: {
                 [APARTMENT_PLANT]: true,
                 [CODE_BOX]: true
-            },
-            [DOORS]: {
-                [BENNETT_GATE_FRONT]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -314,9 +296,6 @@ module.exports = [
             [CUTOUTS]: {
                 [APARTMENT_PLANT]: true,
                 [CODE_BOX]: true
-            },
-            [DOORS]: {
-                [BENNETT_GATE_FRONT]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -343,9 +322,7 @@ module.exports = [
                 [VASELINE]: true
             },
             [DOORS]: {
-                [BENNETT_BLINDS_OPEN]: true,
-                [BENNETT_GATE_SIDE_OPEN]: true,
-                [BENNETT_DOOR_INSIDE]: true
+                [BENNETT_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIGHT_SWITCH]: true,
@@ -384,8 +361,7 @@ module.exports = [
                 [VASELINE]: true
             },
             [DOORS]: {
-                [BENNETT_BLINDS_OPEN]: true,
-                [BENNETT_DOOR_INSIDE_OPEN]: true
+                [BENNETT_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIGHT_SWITCH]: true,
@@ -393,7 +369,7 @@ module.exports = [
                 [BENNETT_PILLOWS]: true
             }
         },
-        cubes: BENNETT_BED_KEY,
+        cubes: BENNETT_BED_OPEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -418,9 +394,6 @@ module.exports = [
                 [CLIPBOARD]: true,
                 [PAINTING]: true,
                 [WAITING_ROOM_PLANT]: true
-            },
-            [DOORS]: {
-                [WAITING_ROOM_DOOR]: true
             },
             [FURNITURES]: {
                 [ARMCHAIR_LEFT]: true,
@@ -451,15 +424,12 @@ module.exports = [
                 [PAINTING]: true,
                 [WAITING_ROOM_PLANT]: true
             },
-            [DOORS]: {
-                [WAITING_ROOM_DOOR_OPEN]: true
-            },
             [FURNITURES]: {
                 [ARMCHAIR_LEFT]: true,
                 [ARMCHAIR_RIGHT]: true
             }
         },
-        cubes: WAITING_ROOM_KEY,
+        cubes: WAITING_ROOM_OPEN_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
