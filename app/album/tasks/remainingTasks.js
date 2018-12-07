@@ -1,4 +1,15 @@
 module.exports = [
+    {
+        taskName: `Fix issue with touch end closing out of overlay.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Fix with audio timer lagging during scroll.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
     // New refactor tasks.
     {
         taskName: `Get rid of doors and window components, and change scenes accordingly.`,
@@ -36,20 +47,10 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     /**
      * Player stuff.
      */
-    {
-        taskName: `Audit of player refactor work.`,
-        workedHours: 0,
-        neededHours: 1
-    },
     {
         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
         workedHours: 0,
@@ -57,18 +58,22 @@ module.exports = [
     },
 
     /**
-     * Mobile bugs. (Might be able to quickly get through now that deployment
-     * is worked out.)
+     * Mobile bugs.
      */
     {
-        taskName: `Audit of mobile bugs.`,
+        taskName: `Overview logue is hidden but touch findable in song.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 3
     },
     {
-        taskName: `Bug where audio banner in actual mobile phone has weird position. (Is this still a bug?)`,
+        taskName: `Touch events need to be handled better.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
+    },
+    {
+        taskName: `Window size shouldn't readjust if just height.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `iOS scrolling isn't smooth.`,
@@ -187,6 +192,11 @@ module.exports = [
         neededHours: 8
     },
     {
+        taskName: `Fix bug where go-kart presences have duplicate keys. Do this in conjunction with persisting presences across scenes.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Presence transition order.`,
         workedHours: 0,
         neededHours: 8
@@ -195,11 +205,6 @@ module.exports = [
         taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Fix bug where go-kart presences have duplicate keys. Do this in conjunction with persisting presences across scenes.`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Allow presences to specify zIndex. Position presences in slanted cubes.`,

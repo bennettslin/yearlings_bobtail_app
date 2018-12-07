@@ -7,11 +7,15 @@ $height__audioBanner__display:
     min-width: $js__minWidth__audioBanner;
     line-height: 1em;
 
-    border: 4px solid #040;
-    border-radius: $borderRadius__wide;
+    border-radius: $borderRadius__narrow;
 
     overflow: hidden;
     box-sizing: border-box;
+
+    box-shadow: $boxShadow__annotation;
+
+    color: #ffe;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 
     background-color: #8b8;
 
