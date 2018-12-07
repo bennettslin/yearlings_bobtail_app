@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -80,11 +79,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS
-} from '../../scene/doorKeys'
-
-import {
     LIZ_CUSHIONS,
     ARRANGEMENT_LIZ_CUSHIONS,
     BENNETT_MATTRESS,
@@ -108,9 +102,6 @@ module.exports = [
                     description: 'front, putting on jacket, cold, distant',
                     instance: BRUSH_OFF
                 }
-            },
-            [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
@@ -261,9 +252,6 @@ module.exports = [
                         instance: LEAVING_CRUMBLED
                     }
                 }
-            },
-            [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS

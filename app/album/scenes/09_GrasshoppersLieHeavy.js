@@ -3,7 +3,6 @@ import {
     BUBBLES,
     CUTOUTS,
     FIXTURES,
-    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -89,13 +88,6 @@ import {
     LIZ_PHONE_REFLECTION,
     BLOODY_TOWEL
 } from '../../scene/fixtureKeys'
-
-import {
-    LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS,
-    ARRANGEMENT_LIZ_BLINDS_STREET,
-    BENNETT_BLINDS_OPEN
-} from '../../scene/doorKeys'
 
 import {
     LIGHT_SWITCH,
@@ -200,9 +192,6 @@ module.exports = [
                         instance: DATE_ENDING
                     }
                 }
-            },
-            [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS
             }
         },
         cubes: LIZ_GATE_KEY,
@@ -232,9 +221,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [TRAFFIC_LIGHT]: true
-            },
-            [DOORS]: {
-                [LIZ_BLINDS]: ARRANGEMENT_LIZ_BLINDS_STREET
             }
         },
         sky: {
@@ -321,9 +307,6 @@ module.exports = [
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
             },
-            [DOORS]: {
-                [BENNETT_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [LIGHT_SWITCH]: true,
                 [BENNETT_MATTRESS]: true,
@@ -359,9 +342,6 @@ module.exports = [
             [FIXTURES]: {
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
-            },
-            [DOORS]: {
-                [BENNETT_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [LIGHT_SWITCH]: true,

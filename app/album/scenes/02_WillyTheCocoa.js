@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES,
     PANELS
 } from 'constants/scene'
@@ -104,10 +103,6 @@ import {
     FAMILY_HOUSE,
     CAVE_SHADOWS
 } from '../../scene/flatKeys'
-
-import {
-    BEDROOM_BLINDS_OPEN
-} from '../../scene/doorKeys'
 
 import {
     BEDROOM_DESK,
@@ -247,9 +242,6 @@ module.exports = [
                 [BEETHOVEN_BUST]: true,
                 [CHRISTOPHER_LETTERS]: true
             },
-            [DOORS]: {
-                [BEDROOM_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_MATTRESS]: true
@@ -336,9 +328,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [TINTIN_POSTER]: true
-            },
-            [DOORS]: {
-                [BEDROOM_BLINDS_OPEN]: true
             },
             [FIXTURES]: {
                 [BEETHOVEN_BUST]: true

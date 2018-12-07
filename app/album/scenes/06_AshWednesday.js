@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES
 } from 'constants/scene'
 
@@ -83,10 +82,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    BENNETT_BLINDS
-} from '../../scene/doorKeys'
-
-import {
     BENNETT_CUSHIONS
 } from '../../scene/furnitureKeys'
 
@@ -111,9 +106,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [RECYCLABLES]: true
-            },
-            [DOORS]: {
-                [BENNETT_BLINDS]: true
             }
         },
         cubes: COURTYARD_KEY,

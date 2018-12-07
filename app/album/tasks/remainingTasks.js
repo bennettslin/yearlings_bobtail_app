@@ -10,13 +10,6 @@ module.exports = [
         neededHours: 5
     },
 
-    // New refactor tasks.
-    {
-        taskName: `Get rid of doors and window components, and change scenes accordingly.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     // Scrolling stuff.
     {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,

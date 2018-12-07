@@ -5,7 +5,6 @@ import {
     PAVEMENT_HSLA,
     GATE_HSLA,
     CEILING_HSLA,
-    FLOOR_HSLA,
     WALL_HSLA,
     DOOR_HSLA
 } from '../../hslaKeys'
@@ -27,7 +26,6 @@ const
     V = PAVEMENT_HSLA,
     A = GATE_HSLA,
     C = CEILING_HSLA,
-    F = FLOOR_HSLA,
     W = WALL_HSLA,
     E = DOOR_HSLA,
 
@@ -52,7 +50,7 @@ const
         },
         floor: {
             hslaColours: [
-                [F],
+                [W],
                 [W, W, W, W, W, W, W, E, E, E, W],
                 [A, V],
                 [E, V],
@@ -60,7 +58,7 @@ const
                 [A, V]
             ],
             zIndices: [
-                [f, 1],
+                [f],
                 [f, f, 6, 6, 6, 6, f, d, d, d, f],
                 [f, 1],
                 [d, 1],

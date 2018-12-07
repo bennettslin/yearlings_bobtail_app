@@ -4106,5 +4106,10 @@ module.exports = [
         taskName: `Reverse argyle patterns for tabs and headers.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Get rid of doors and window components, and change scenes accordingly.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

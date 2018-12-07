@@ -49,14 +49,14 @@ const
         },
         floor: {
             hslaColours: [
-                [T],
+                [W, W, W, W, W, W, W, W, W, W, W, A],
                 [W, W, W, W, W, W, W, W, W, W, W, A],
                 [V, V, V, V, V, V, V, V, V, V, V, A],
                 [A, A, A, A, A, V, V, V, A],
                 [V]
             ],
             zIndices: [
-                [0],
+                [f, f, f, f, f, f, f, f, f, f, f, 7],
                 [f, f, f, f, 6, 6, 6, 6, 6, f, f, 7],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7],
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
@@ -81,14 +81,14 @@ const
         },
         floor: {
             hslaColours: [
-                [T],
+                [W, W, W, W, W, W, W, W, A, V, V, T],
                 [W, W, W, W, W, W, W, W, A, V, V, T],
                 [V, V, V, V, V, V, V, V, A, V, V, T],
                 [A, A, E, E, E, A, A, A, A, V, V, T],
                 [V, V, V, V, V, V, V, V, V, V, V, T]
             ],
             zIndices: [
-                [0],
+                [f, f, f, f, f, f, f, f, 7, 1, 1, 0],
                 [f, 6, 6, 6, 6, 6, f, f, 7, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 0],
                 [7, 7, 6, 6, 6, 7, 7, 7, 7, 1, 1, 0],

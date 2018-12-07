@@ -1,7 +1,6 @@
 import {
     ACTORS,
     BUBBLES,
-    DOORS,
     FIXTURES,
     FURNITURES,
     PUPPETS
@@ -48,10 +47,6 @@ import {
 } from '../../scene/bubbleKeys'
 
 import {
-    LIZ_BLINDS_OPEN
-} from '../../scene/doorKeys'
-
-import {
     TCHOTCHKES
 } from '../../scene/fixtureKeys'
 
@@ -84,9 +79,6 @@ module.exports = [
                     }
                 }
             },
-            [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
@@ -114,9 +106,6 @@ module.exports = [
                     }
                 }
             },
-            [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
@@ -143,9 +132,6 @@ module.exports = [
                         instance: SIFTING_TCHOTCHKES
                     }
                 }
-            },
-            [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true
             },
             [FIXTURES]: {
                 [TCHOTCHKES]: true
@@ -183,9 +169,6 @@ module.exports = [
                     instance: ARRIVED
                 }
             },
-            [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             }
@@ -220,9 +203,6 @@ module.exports = [
                 [KHARI_ATTACK_SPEECH]: true,
                 [LIZ_DEFENCE_SPEECH]: true
             },
-            [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             }
@@ -256,9 +236,6 @@ module.exports = [
             [BUBBLES]: {
                 [LIZ_THOUGHT]: true
             },
-            [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             }
@@ -283,9 +260,6 @@ module.exports = [
                     }
                 }
             },
-            [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
@@ -303,9 +277,6 @@ module.exports = [
         unitIndex: 12,
         description: `Same scene. Peacocks.`,
         presences: {
-            [DOORS]: {
-                [LIZ_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },

@@ -5,7 +5,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    DOORS,
     FURNITURES,
     PANELS,
     PUPPETS
@@ -106,11 +105,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    BEDROOM_BLINDS,
-    BEDROOM_BLINDS_OPEN
-} from '../../scene/doorKeys'
-
-import {
     BEDROOM_DESK,
     CAPTAIN_BED_MATTRESS
 } from '../../scene/furnitureKeys'
@@ -139,9 +133,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [MICHAEL_JACKSON_POSTER]: true
-            },
-            [DOORS]: {
-                [BEDROOM_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true,
@@ -180,9 +171,6 @@ module.exports = [
                 [CAPTAIN_BED_LAMP]: true,
                 [BENNETT_LETTERS]: true
             },
-            [DOORS]: {
-                [BEDROOM_BLINDS_OPEN]: true
-            },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true
             }
@@ -210,9 +198,6 @@ module.exports = [
             },
             [CUTOUTS]: {
                 [MICHAEL_JACKSON_POSTER]: true
-            },
-            [DOORS]: {
-                [BEDROOM_BLINDS_OPEN]: true
             },
             [FIXTURES]: {
                 [RED_ENVELOPE_MONEY]: true
@@ -252,9 +237,6 @@ module.exports = [
             [CUTOUTS]: {
                 [MICHAEL_JACKSON_POSTER]: true
             },
-            [DOORS]: {
-                [BEDROOM_BLINDS]: true
-            },
             [FURNITURES]: {
                 [CAPTAIN_BED_MATTRESS]: true
             },
@@ -285,9 +267,6 @@ module.exports = [
             },
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
-            },
-            [DOORS]: {
-                [BEDROOM_BLINDS_OPEN]: true
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true
