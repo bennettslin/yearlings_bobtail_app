@@ -29,10 +29,6 @@ class Score extends PureComponent {
         this.props.updateLoadStore({ isScoreLoaded: true })
     }
 
-    _setIframeRef = (node) => {
-        this.iframe = node
-    }
-
     render() {
         const {
                 renderedSongIndex,
@@ -43,8 +39,6 @@ class Score extends PureComponent {
         return (
             <div
                 {...{
-                    ref: setScoreFocusElement,
-                    tabIndex: 1,
                     className: cx(
                         'Score',
                         'iframeContainer'
@@ -53,8 +47,8 @@ class Score extends PureComponent {
             >
                 <iframe
                     {...{
-                        ref: this._setIframeRef,
-                        tabIndex: 2,
+                        ref: setScoreFocusElement,
+                        tabIndex: -1,
                         className: 'iframeContainer__iframe',
                         src: score,
                         onLoad: this.onIframeLoad

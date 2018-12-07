@@ -64,8 +64,6 @@ class WikiSection extends PureComponent {
         return (
             <div
                 {...{
-                    ref: setWikiFocusElement,
-                    tabIndex: -1,
                     className: cx(
                         'Wiki',
                         'iframeContainer'
@@ -87,6 +85,8 @@ class WikiSection extends PureComponent {
                 }
                 <iframe
                     {...{
+                        ref: setWikiFocusElement,
+                        tabIndex: -1,
                         className: cx(
                             'iframeContainer__iframe',
                             { 'iframeLoading': iframeLoading }
