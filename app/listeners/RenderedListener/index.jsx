@@ -4,6 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateRenderableStore } from 'flux/renderable/action'
 import { updateRenderedStore } from 'flux/rendered/action'
 
 import { getSceneIndexForVerseIndex } from 'helpers/data'
@@ -15,15 +16,71 @@ class RenderedListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
+        updateRenderableStore: PropTypes.func.isRequired,
         updateRenderedStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
-        this._handleAnnotationSelect(prevProps)
-        this._handleVerseSelect(prevProps)
+        this._prepareForSongChangeUnrender(prevProps)
+        this._checkAnnotationSelect(prevProps)
+        this._checkVerseSelect(prevProps)
     }
 
-    _handleAnnotationSelect(prevProps) {
+    state = {
+        songChangeTimeoutId: ''
+    }
+
+    _prepareForSongChangeUnrender(prevProps) {
+        const
+            { selectedSongIndex } = this.props,
+            { selectedSongIndex: prevSongIndex } = prevProps
+
+        if (selectedSongIndex !== prevSongIndex) {
+            this.props.updateRenderableStore({
+                isSongChangeRenderable: false
+            })
+
+            // Clear previous timeout.
+            clearTimeout(this.state.songChangeTimeoutId)
+
+            /**
+             * Render is synchronous, so wait a bit after selecting new song
+             * before rendering the most performance intensive components. This
+             * allows songs between selections to skip rendering.
+             */
+            const songChangeTimeoutId = setTimeout(
+                this._prepareForSongChangeRender, 200
+            )
+
+            this.setState({
+                songChangeTimeoutId
+            })
+        }
+    }
+
+    _prepareForSongChangeRender = () => {
+        const {
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        } = this.props
+
+        this.props.updateRenderableStore({
+            isSongChangeRenderable: true
+        })
+
+        this.props.updateRenderedStore({
+            renderedSongIndex: selectedSongIndex,
+            renderedVerseIndex: selectedVerseIndex,
+            renderedAnnotationIndex: selectedAnnotationIndex,
+            renderedSceneIndex: getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
+        })
+    }
+
+    _checkAnnotationSelect(prevProps) {
         const
             {
                 selectedSongIndex,
@@ -48,7 +105,7 @@ class RenderedListener extends PureComponent {
         }
     }
 
-    _handleVerseSelect(prevProps) {
+    _checkVerseSelect(prevProps) {
         const
             {
                 selectedSongIndex,
@@ -100,6 +157,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateRenderableStore,
         updateRenderedStore
     }, dispatch)
 )

@@ -120,7 +120,7 @@ const
 
     RENDERABLE_DEFAULTS = {
         isSceneChangeRenderable: true,
-        isSongChangeRenderable: false,
+        isSongChangeRenderable: true,
         isWindowResizeRenderable: false
     },
 
