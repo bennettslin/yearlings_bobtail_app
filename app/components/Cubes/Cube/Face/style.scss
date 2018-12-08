@@ -2,7 +2,8 @@
 .Face__path {
     transition:
         stroke $animationDuration__slower,
-        d $animationDuration__slower;
+        d $animationDuration__slower,
+        fill $animationDuration__slower;
 }
 
 .Face__shade {

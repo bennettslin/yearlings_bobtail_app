@@ -172,7 +172,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Presence transition order.`,
+        taskName: `Presence and cubes transition order.`,
         workedHours: 0,
         neededHours: 8
     },
