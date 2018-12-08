@@ -11,47 +11,23 @@ class RenderListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         didTheatreRender: PropTypes.bool.isRequired,
-        canVerseRender: PropTypes.bool.isRequired,
-        didVerseRender: PropTypes.bool.isRequired,
         didSceneRender: PropTypes.bool.isRequired,
         didLyricRender: PropTypes.bool.isRequired,
-        didCarouselRender: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
         this._checkTheatreDidRender(prevProps)
-        this._checkVerseDidRender(prevProps)
         this._checkSceneDidRender(prevProps)
         this._checkLyricDidRender(prevProps)
     }
 
     _checkTheatreDidRender(prevProps) {
-        /**
-         * If theatre is rendering for the first time upon load, verse will not
-         * be rendered. If it is being rendered again after window resize,
-         * verse will be rendered. Not the most elegant way to handle this...
-         */
         const
-            {
-                canVerseRender,
-                didTheatreRender
-            } = this.props,
+            { didTheatreRender } = this.props,
             { didTheatreRender: hadTheatreRendered } = prevProps
 
-        if (!canVerseRender && didTheatreRender && !hadTheatreRendered) {
-            this.props.updateRenderStore({
-                canVerseRender: true
-            })
-        }
-    }
-
-    _checkVerseDidRender(prevProps) {
-        const
-            { didVerseRender } = this.props,
-            { didVerseRender: hadVerseRendered } = prevProps
-
-        if (didVerseRender && !hadVerseRendered) {
+        if (didTheatreRender && !hadTheatreRendered) {
             this.props.updateRenderStore({
                 canSceneRender: true
             })
@@ -59,19 +35,11 @@ class RenderListener extends PureComponent {
     }
 
     _checkSceneDidRender(prevProps) {
-        /**
-         * If scene is rendering for the first time upon load, lyric will not
-         * be rendered. If it is being rendered again after scene change, lyric
-         * will be rendered. Again, not the most elegant way to handle this...
-         */
         const
-            {
-                canLyricRender,
-                didSceneRender
-            } = this.props,
+            { didSceneRender } = this.props,
             { didSceneRender: hadSceneRendered } = prevProps
 
-        if (!canLyricRender && didSceneRender && !hadSceneRendered) {
+        if (didSceneRender && !hadSceneRendered) {
             this.props.updateRenderStore({
                 canLyricRender: true
             })
@@ -98,19 +66,13 @@ class RenderListener extends PureComponent {
 const mapStateToProps = ({
     renderStore: {
         didTheatreRender,
-        canVerseRender,
-        didVerseRender,
         didSceneRender,
-        didLyricRender,
-        didCarouselRender
+        didLyricRender
     }
 }) => ({
     didTheatreRender,
-    canVerseRender,
-    didVerseRender,
     didSceneRender,
-    didLyricRender,
-    didCarouselRender
+    didLyricRender
 })
 
 const bindDispatchToProps = (dispatch) => (

@@ -71,8 +71,6 @@ class RenderableListener extends PureComponent {
 
             logger.warn('Unrenderable from song change.')
             this.props.updateRenderStore({
-                canVerseRender: false,
-                didVerseRender: false,
                 canSceneRender: false,
                 didSceneRender: false,
                 canLyricRender: false,
@@ -91,7 +89,7 @@ class RenderableListener extends PureComponent {
                 } seconds.`)
 
                 this.props.updateRenderStore({
-                    canVerseRender: true
+                    canSceneRender: true
                 })
             }
         }

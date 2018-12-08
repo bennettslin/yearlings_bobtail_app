@@ -9,10 +9,10 @@ import {
 } from 'constants/access'
 
 const mapStateToProps = ({
-    renderStore: { canVerseRender },
+    renderStore: { canLyricRender },
     renderedStore: { isRenderedLogue }
 }) => ({
-    canVerseRender,
+    canLyricRender,
     isRenderedLogue
 })
 
@@ -20,12 +20,12 @@ class SliderAccess extends Component {
 
     static propTypes = {
         // From Redux.
-        canVerseRender: PropTypes.bool.isRequired,
+        canLyricRender: PropTypes.bool.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canVerseRender
+        return nextProps.canLyricRender
     }
 
     render() {

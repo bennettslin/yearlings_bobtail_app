@@ -53,6 +53,14 @@ const
         queuedAnnotationFromCarousel: false
     },
 
+    AUDIO_DEFAULTS = {
+        isPlaying: false,
+        queuedTogglePlay: false,
+        queuedPlayFromLogue: false,
+        queuedPlaySongIndex: -1,
+        queuedPlayVerseIndex: -1
+    },
+
     DEVICE_DEFAULTS = {
         deviceIndex: 0,
         isPhone: false,
@@ -94,23 +102,13 @@ const
         nextPlayerToRender: -1
     },
 
-    AUDIO_DEFAULTS = {
-        isPlaying: false,
-        queuedTogglePlay: false,
-        queuedPlayFromLogue: false,
-        queuedPlaySongIndex: -1,
-        queuedPlayVerseIndex: -1
-    },
-
     RENDER_DEFAULTS = {
         canTheatreRender: false,
-        canVerseRender: false,
         canLyricRender: false,
         canCarouselRender: false,
         canSceneRender: false,
 
         didTheatreRender: false,
-        didVerseRender: false,
         didLyricRender: false,
         didCarouselRender: false,
         didSceneRender: false
@@ -180,7 +178,6 @@ const
     },
 
     SONG_DEFAULTS = {
-        earColumnIndex: earColumnIndex || 0,
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,
@@ -188,7 +185,8 @@ const
         selectedTime: getTimeForVerseIndex(
             storedSongIndex,
             storedVerseIndex
-        )
+        ),
+        earColumnIndex: earColumnIndex || 0
     },
 
     TOGGLE_DEFAULTS = {
@@ -223,13 +221,13 @@ const
 export {
     ACCESS_DEFAULTS,
     ANNOTATION_DEFAULTS,
+    AUDIO_DEFAULTS,
     DEVICE_DEFAULTS,
     DOTS_DEFAULTS,
     EVENT_DEFAULTS,
     LOAD_DEFAULTS,
     OPTION_DEFAULTS,
     PLAYERS_DEFAULTS,
-    AUDIO_DEFAULTS,
     RENDER_DEFAULTS,
     RENDERABLE_DEFAULTS,
     RENDERED_DEFAULTS,

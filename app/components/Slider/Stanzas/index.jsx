@@ -14,10 +14,10 @@ import {
 } from 'helpers/data'
 
 const mapStateToProps = ({
-    renderStore: { canVerseRender },
+    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canVerseRender,
+    canLyricRender,
     renderedSongIndex
 })
 
@@ -25,12 +25,12 @@ class SliderStanzas extends Component {
 
     static propTypes = {
         // Through Redux.
-        canVerseRender: PropTypes.bool.isRequired,
+        canLyricRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canVerseRender
+        return nextProps.canLyricRender
     }
 
     render() {

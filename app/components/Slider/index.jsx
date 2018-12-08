@@ -1,11 +1,9 @@
-// Component to manually change played time and verse.
+// Component to touch change played time and verse.
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { updateRenderStore } from 'flux/render/action'
 
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import SliderScenes from './Scenes'
@@ -14,66 +12,16 @@ import SliderTimes from './Times'
 import SliderAccess from './Access'
 
 const mapStateToProps = ({
-    renderStore: { canVerseRender }
+    renderStore: { didLyricRender }
 }) => ({
-    canVerseRender
+    didLyricRender
 })
 
 class Slider extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canVerseRender: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
-    }
-
-    state = {
-        isShown: false,
-        didRenderTimeoutId: '',
-        waitForShowTimeoutId: ''
-    }
-
-    componentDidUpdate(prevProps) {
-        const { canVerseRender } = this.props,
-            { canVerseRender: couldRender } = prevProps
-
-        if (canVerseRender && !couldRender) {
-            logger.warn('Slider rendered.')
-
-            clearTimeout(this.state.didRenderTimeoutId)
-            clearTimeout(this.state.waitForShowTimeoutId)
-
-            const
-                // Wait for parent transition before continuing render sequence.
-                didRenderTimeoutId = setTimeout(
-                    this._verseDidRender, 100
-                ),
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                )
-
-            this.setState({
-                didRenderTimeoutId,
-                waitForShowTimeoutId
-            })
-
-        } else if (couldRender && !canVerseRender) {
-
-            this.setState({
-                isShown: false
-            })
-        }
-    }
-
-    _verseDidRender = () => {
-        this.props.updateRenderStore({ didVerseRender: true })
-    }
-
-    _waitForShowBeforeRender = () => {
-        this.setState({
-            isShown: true
-        })
+        didLyricRender: PropTypes.bool.isRequired
     }
 
     _handleTouchDown = (e) => {
@@ -85,8 +33,7 @@ class Slider extends PureComponent {
     }
 
     render() {
-        const { canVerseRender } = this.props,
-            { isShown } = this.state
+        const { didLyricRender } = this.props
 
         return (
             <div
@@ -95,7 +42,7 @@ class Slider extends PureComponent {
                     className: cx(
                         'Slider',
                         {
-                            'parent__shown': canVerseRender && isShown
+                            'parent__shown': didLyricRender
                         }
                     ),
                     onMouseDown: this._handleTouchDown,
@@ -112,10 +59,4 @@ class Slider extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Slider)
+export default connect(mapStateToProps)(Slider)

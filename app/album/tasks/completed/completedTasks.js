@@ -4126,5 +4126,10 @@ module.exports = [
         taskName: `Fix audio timer lagging during scroll. General audio and player manager refactors.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Some renderable refactoring.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
