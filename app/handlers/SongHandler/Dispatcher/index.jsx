@@ -10,7 +10,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateAccessStore } from 'flux/access/action'
-import { updatePlayingStore } from 'flux/playing/action'
+import { updateAudioStore } from 'flux/audio/action'
 import { updateSongStore } from 'flux/song/action'
 
 import {
@@ -24,7 +24,7 @@ class SongDispatcher extends PureComponent {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
-        updatePlayingStore: PropTypes.func.isRequired,
+        updateAudioStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -58,7 +58,7 @@ class SongDispatcher extends PureComponent {
             }
         }
 
-        this.props.updatePlayingStore({
+        this.props.updateAudioStore({
             queuedPlayFromLogue: isPlayFromLogue,
             queuedPlaySongIndex: selectedSongIndex,
             queuedPlayVerseIndex: selectedVerseIndex
@@ -102,7 +102,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAccessStore,
-        updatePlayingStore,
+        updateAudioStore,
         updateSongStore
     }, dispatch)
 )

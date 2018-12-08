@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { updatePlayingStore } from 'flux/playing/action'
+import { updateAudioStore } from 'flux/audio/action'
 import { updateSongStore } from 'flux/song/action'
 
 import PlayerDispatcher from './Dispatcher'
@@ -27,7 +27,7 @@ const mapStateToProps = ({
         nextPlayerToRender,
         ...playersCanPlayThrough
     },
-    playingStore: { isPlaying },
+    audioStore: { isPlaying },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -59,7 +59,7 @@ class PlayerManager extends PureComponent {
         selectedTime: PropTypes.number.isRequired,
         nextPlayerToRender: PropTypes.number.isRequired,
         playersCanPlayThrough: PropTypes.object.isRequired,
-        updatePlayingStore: PropTypes.func.isRequired,
+        updateAudioStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -109,7 +109,7 @@ class PlayerManager extends PureComponent {
         if (!isPlaying && wasPlaying) {
 
             // Play is being toggled off, so set in store right away.
-            this.props.updatePlayingStore({ isPlaying: false })
+            this.props.updateAudioStore({ isPlaying: false })
 
             return this.getPlayerRef(selectedSongIndex).handleEndPlaying(
 
@@ -160,7 +160,7 @@ class PlayerManager extends PureComponent {
          * it was able to play. If selected song was changed, set in store
          * whether newly selected player was able to play.
          */
-        this.props.updatePlayingStore({ isPlaying: success })
+        this.props.updateAudioStore({ isPlaying: success })
     }
 
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
@@ -323,7 +323,7 @@ class PlayerManager extends PureComponent {
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updatePlayingStore,
+        updateAudioStore,
         updateSongStore
     }, dispatch)
 )

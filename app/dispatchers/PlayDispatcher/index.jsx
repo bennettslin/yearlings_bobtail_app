@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updatePlayingStore } from 'flux/playing/action'
+import { updateAudioStore } from 'flux/audio/action'
 
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 
@@ -19,7 +19,7 @@ class PlayDispatcher extends PureComponent {
         playersBitNumber: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-        updatePlayingStore: PropTypes.func.isRequired,
+        updateAudioStore: PropTypes.func.isRequired,
 
         // From parent.
         parentThis: PropTypes.object.isRequired
@@ -63,7 +63,7 @@ class PlayDispatcher extends PureComponent {
             })
 
         } else {
-            this.props.updatePlayingStore({ queuedTogglePlay: true })
+            this.props.updateAudioStore({ queuedTogglePlay: true })
         }
 
         return true
@@ -78,7 +78,7 @@ class PlayDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     playersStore: { playersBitNumber },
-    playingStore: { isPlaying },
+    audioStore: { isPlaying },
     songStore: {
         selectedSongIndex,
         isSelectedLogue
@@ -92,7 +92,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updatePlayingStore
+        updateAudioStore
     }, dispatch)
 )
 

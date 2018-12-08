@@ -7,7 +7,7 @@ module.exports = {
     LOAD_STORE: 'loadStore',
     OPTION_STORE: 'optionStore',
     PLAYERS_STORE: 'playersStore',
-    PLAYING_STORE: 'playingStore',
+    AUDIO_STORE: 'audioStore',
     RENDER_STORE: 'renderStore',
     RENDERABLE_STORE: 'renderableStore',
     RENDERED_STORE: 'renderedStore',

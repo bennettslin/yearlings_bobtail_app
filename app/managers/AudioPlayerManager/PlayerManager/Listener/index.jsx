@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updatePlayersStore } from 'flux/players/action'
-import { resetPlayingQueue } from 'flux/playing/action'
+import { resetAudioQueue } from 'flux/audio/action'
 
 import { getNextPlayerIndexToRender } from './helper'
 
@@ -21,7 +21,7 @@ class PlayerListener extends PureComponent {
         queuedPlaySongIndex: PropTypes.number.isRequired,
         queuedPlayVerseIndex: PropTypes.number.isRequired,
         updatePlayersStore: PropTypes.func.isRequired,
-        resetPlayingQueue: PropTypes.func.isRequired,
+        resetAudioQueue: PropTypes.func.isRequired,
 
         // From parent.
         handleSelectPlayer: PropTypes.func.isRequired
@@ -62,7 +62,7 @@ class PlayerListener extends PureComponent {
                 nextVerseIndex: queuedPlayVerseIndex
             })
 
-            this.props.resetPlayingQueue()
+            this.props.resetAudioQueue()
         }
     }
 
@@ -102,7 +102,7 @@ const mapStateToProps = ({
         selectedSongIndex,
         isSelectedLogue
     },
-    playingStore: {
+    audioStore: {
         queuedPlayFromLogue,
         queuedPlaySongIndex,
         queuedPlayVerseIndex
@@ -120,7 +120,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updatePlayersStore,
-        resetPlayingQueue
+        resetAudioQueue
     }, dispatch)
 )
 

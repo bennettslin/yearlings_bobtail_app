@@ -100,7 +100,7 @@ class LogicWrapper extends PureComponent {
 
 const mapStateToProps = ({
     sessionStore: { interactivatedVerseIndex },
-    playingStore: { isPlaying },
+    audioStore: { isPlaying },
     dotsStore: {
         dotsBitNumber,
         ...selectedDotKeys

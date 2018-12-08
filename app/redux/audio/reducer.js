@@ -1,13 +1,13 @@
 // Reducers for audio updates.
-import { PLAYING_STORE } from '../storeKeys'
-import { PLAYING_DEFAULTS } from '../defaultStates'
+import { AUDIO_STORE } from '../storeKeys'
+import { AUDIO_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = PLAYING_DEFAULTS,
+    state = AUDIO_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case PLAYING_STORE:
+        case AUDIO_STORE:
             return {
                 ...state,
                 ...action.payload

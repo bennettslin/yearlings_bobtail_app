@@ -1,22 +1,22 @@
 // Actions for audio updates.
 import { getDefinedOnlyPayload } from '../actionHelper'
 
-import { PLAYING_STORE } from '../storeKeys'
-import { PLAYING_DEFAULTS } from '../defaultStates'
+import { AUDIO_STORE } from '../storeKeys'
+import { AUDIO_DEFAULTS } from '../defaultStates'
 
-const updatePlayingStore = (
-    payload = PLAYING_DEFAULTS
+const updateAudioStore = (
+    payload = AUDIO_DEFAULTS
 
 ) => {
     return ({
-        type: PLAYING_STORE,
+        type: AUDIO_STORE,
         payload: getDefinedOnlyPayload(payload)
     })
 }
 
-const resetPlayingQueue = () => {
+const resetAudioQueue = () => {
     return ({
-        type: PLAYING_STORE,
+        type: AUDIO_STORE,
         payload: {
             queuedPlayFromLogue: false,
             queuedPlaySongIndex: -1,
@@ -26,6 +26,6 @@ const resetPlayingQueue = () => {
 }
 
 export {
-    updatePlayingStore,
-    resetPlayingQueue
+    updateAudioStore,
+    resetAudioQueue
 }

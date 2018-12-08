@@ -94,7 +94,7 @@ const
         nextPlayerToRender: -1
     },
 
-    PLAYING_DEFAULTS = {
+    AUDIO_DEFAULTS = {
         isPlaying: false,
         queuedTogglePlay: false,
         queuedPlayFromLogue: false,
@@ -231,7 +231,7 @@ export {
     LOAD_DEFAULTS,
     OPTION_DEFAULTS,
     PLAYERS_DEFAULTS,
-    PLAYING_DEFAULTS,
+    AUDIO_DEFAULTS,
     RENDER_DEFAULTS,
     RENDERABLE_DEFAULTS,
     RENDERED_DEFAULTS,

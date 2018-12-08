@@ -2,7 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updatePlayingStore } from 'flux/playing/action'
+import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
@@ -15,7 +15,7 @@ class VerseDispatcher extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
-        updatePlayingStore: PropTypes.func.isRequired,
+        updateAudioStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
@@ -36,7 +36,7 @@ class VerseDispatcher extends PureComponent {
 
         const { selectedSongIndex } = this.props
 
-        this.props.updatePlayingStore({
+        this.props.updateAudioStore({
             queuedPlaySongIndex: selectedSongIndex,
             queuedPlayVerseIndex: selectedVerseIndex
         })
@@ -76,7 +76,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updatePlayingStore,
+        updateAudioStore,
         updateScrollLyricStore,
         updateSessionStore,
         updateSongStore,
