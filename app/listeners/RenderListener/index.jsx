@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
-class DidRenderListener extends PureComponent {
+class RenderListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -119,4 +119,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(DidRenderListener)
+export default connect(mapStateToProps, bindDispatchToProps)(RenderListener)

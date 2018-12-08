@@ -7,7 +7,7 @@ import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
 import AudioListener from '../../listeners/AudioListener'
 import CarouselListener from '../../handlers/CarouselHandler/Listener'
-import DidRenderListener from '../../listeners/DidRenderListener'
+import RenderListener from '../../listeners/RenderListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
 import RenderableListener from '../../listeners/RenderableListener'
 import LogueListener from '../../listeners/LogueListener'
@@ -45,7 +45,7 @@ class ListenerContainer extends PureComponent {
                 <AnnotationAccessListener />
                 <AudioListener />
                 <CarouselListener />
-                <DidRenderListener />
+                <RenderListener />
                 <DoublespeakerListener />
                 <RenderableListener />
                 <LogueListener />
