@@ -1,10 +1,10 @@
 // Hidden component to wrap an audio DOM element.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 
-class Player extends Component {
+class Player extends PureComponent {
 
     static propTypes = {
         // From parent.
@@ -43,11 +43,6 @@ class Player extends Component {
             'ended',
             this._handleEndedEvent
         )
-    }
-
-    shouldComponentUpdate(nextProps) {
-        // Player only ever updates when it changes selected status.
-        return nextProps.isSelected !== this.props.isSelected
     }
 
     componentDidUpdate() {

@@ -210,13 +210,11 @@ class PlayerManager extends PureComponent {
     }
 
     askPlayerToBeginPlaying(songIndex) {
-        const playerRef = this.getPlayerRef(songIndex)
-
         /**
          * Play is being toggled on, so don't set in store right away.
          * Pass callback and wait for successful return.
          */
-        return playerRef.handleBeginPlaying()
+        return this.getPlayerRef(songIndex).handleBeginPlaying()
     }
 
     setSelectedPlayerIsPlaying = (success) => {
@@ -313,7 +311,7 @@ class PlayerManager extends PureComponent {
              */
             if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
                 logger.info('Updated time will end player.')
-                this.updatePlayerEnded()
+                this.props.handleSongEnd()
 
             /**
              * Something weird has happened, so we'll reset the player. This
@@ -333,10 +331,6 @@ class PlayerManager extends PureComponent {
         }
     }
 
-    updatePlayerEnded = () => {
-        this.props.handleSongEnd()
-    }
-
     getPlayerRef(songIndex) {
         return this.players[songIndex] || LOGUE_DUMMY_PLAYER
     }
@@ -350,9 +344,7 @@ class PlayerManager extends PureComponent {
     }
 
     render() {
-
         const { selectedSongIndex } = this.props,
-
             mp3s = getMp3s()
 
         return (
@@ -374,7 +366,7 @@ class PlayerManager extends PureComponent {
                                 songIndex,
                                 isSelected: songIndex === selectedSongIndex,
                                 updateCurrentTime: this.updatePlayerTime,
-                                updateEnded: this.updatePlayerEnded,
+                                updateEnded: this.props.handleSongEnd,
                                 setPlayerRef: this.setPlayerRef,
                                 setPlayerCanPlayThrough:
                                     this.setPlayerCanPlayThrough,
