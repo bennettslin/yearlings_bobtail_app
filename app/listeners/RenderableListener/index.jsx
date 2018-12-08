@@ -1,4 +1,4 @@
-// Singleton to listen for change from song to logue.
+// Singleton to listen for changes that reset render flow.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -22,15 +22,15 @@ class RenderableListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        const {
-                isSceneChangeRenderable,
-                isSongChangeRenderable,
-                isWindowResizeRenderable
-            } = this.props,
+        this._checkWindowResize(prevProps)
+        this._checkSongChange(prevProps)
+        this._checkSceneChange(prevProps)
+    }
 
+    _checkWindowResize(prevProps) {
+        const
+            { isWindowResizeRenderable } = this.props,
             {
-                isSceneChangeRenderable: wasSceneChangeRenderable,
-                isSongChangeRenderable: wasSongChangeRenderable,
                 isWindowResizeRenderable: wasWindowResizeRenderable
             } = prevProps
 
@@ -38,7 +38,7 @@ class RenderableListener extends PureComponent {
         if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
             this.unrenderedTime = Date.now()
 
-            logger.warn('Live unrenderable from window resize.')
+            logger.warn('Unrenderable from window resize.')
             this.props.updateRenderStore({
                 canTheatreRender: false
             })
@@ -48,7 +48,7 @@ class RenderableListener extends PureComponent {
          * render.
          */
         } else if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
-            logger.warn(`Live renderable after window resize, took ${
+            logger.warn(`Renderable after window resize, took ${
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
             } seconds.`)
 
@@ -56,12 +56,20 @@ class RenderableListener extends PureComponent {
                 canTheatreRender: true
             })
         }
+    }
+
+    _checkSongChange(prevProps) {
+        const
+            { isSongChangeRenderable } = this.props,
+            {
+                isSongChangeRenderable: wasSongChangeRenderable
+            } = prevProps
 
         // Is unrenderable after song change.
         if (!isSongChangeRenderable && wasSongChangeRenderable) {
             this.unrenderedTime = Date.now()
 
-            logger.warn('Live unrenderable from song change.')
+            logger.warn('Unrenderable from song change.')
             this.props.updateRenderStore({
                 canVerseRender: false,
                 didVerseRender: false,
@@ -78,7 +86,7 @@ class RenderableListener extends PureComponent {
 
             // Don't call this upon initial render.
             if (this.props.canTheatreRender) {
-                logger.warn(`Live renderable after song change, took ${
+                logger.warn(`Renderable after song change, took ${
                     ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
                 } seconds.`)
 
@@ -87,12 +95,20 @@ class RenderableListener extends PureComponent {
                 })
             }
         }
+    }
+
+    _checkSceneChange(prevProps) {
+        const
+            { isSceneChangeRenderable } = this.props,
+            {
+                isSceneChangeRenderable: wasSceneChangeRenderable
+            } = prevProps
 
         // Is unrenderable after scene change within same song.
         if (!isSceneChangeRenderable && wasSceneChangeRenderable) {
             this.unrenderedTime = Date.now()
 
-            logger.warn('Live unrenderable from scene change.')
+            logger.warn('Unrenderable from scene change.')
             this.props.updateRenderStore({
                 canSceneRender: false,
                 didSceneRender: false
@@ -103,7 +119,7 @@ class RenderableListener extends PureComponent {
 
             // Don't call this upon initial render.
             if (this.props.canTheatreRender) {
-                logger.warn(`Live renderable after scene change, took ${
+                logger.warn(`Renderable after scene change, took ${
                     ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
                 } seconds.`)
 
