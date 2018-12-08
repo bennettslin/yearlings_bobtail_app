@@ -9,7 +9,7 @@ import { updateSongStore } from 'flux/song/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 
-class PlayerTimeVerseDispatcher extends PureComponent {
+class TimeVerseDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -23,10 +23,10 @@ class PlayerTimeVerseDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchPlayerTimeVerse = this.dispatchPlayerTimeVerse
+        this.props.parentThis.dispatchTimeVerse = this.dispatchTimeVerse
     }
 
-    dispatchPlayerTimeVerse = ({
+    dispatchTimeVerse = ({
         currentTime,
         nextVerseIndex
     }) => {
@@ -74,4 +74,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(PlayerTimeVerseDispatcher)
+export default connect(mapStateToProps, bindDispatchToProps)(TimeVerseDispatcher)
