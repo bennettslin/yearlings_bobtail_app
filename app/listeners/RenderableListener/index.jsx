@@ -67,8 +67,6 @@ class RenderableListener extends PureComponent {
                 didVerseRender: false,
                 canSceneRender: false,
                 didSceneRender: false,
-                canMainRender: false,
-                didMainRender: false,
                 canLyricRender: false,
                 didLyricRender: false,
                 canCarouselRender: false,

@@ -16,19 +16,16 @@ const mapStateToProps = ({
         selectedOverviewOption,
         selectedTipsOption
     },
-    renderStore: { canMainRender },
     renderedStore: { isRenderedLogue }
 }) => ({
     isPhone,
     selectedOverviewOption,
     selectedTipsOption,
-    canMainRender,
     isRenderedLogue
 })
 
 const overviewPopupPropTypes = {
     // Through Redux.
-        canMainRender: PropTypes.bool.isRequired,
         isPhone: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
@@ -41,7 +38,6 @@ const overviewPopupPropTypes = {
     OverviewPopup = ({
         inMain,
         isPhone,
-        canMainRender,
         selectedOverviewOption,
         isRenderedLogue,
         selectedTipsOption
@@ -66,11 +62,8 @@ const overviewPopupPropTypes = {
      * in song. Always hide before ready to render.
      */
         if (
-            !canMainRender ||
-            (
-                !isRenderedLogue &&
-                selectedTipsOption === SHOWN
-            )
+            !isRenderedLogue &&
+            selectedTipsOption === SHOWN
         ) {
             isVisible = false
         }

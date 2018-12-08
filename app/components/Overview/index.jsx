@@ -1,6 +1,6 @@
 // Section to show song overview.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -12,37 +12,26 @@ import {
     getSongOverview,
     getIsToggleInOverview
 } from './helper'
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
-    renderStore: { canMainRender },
     renderedStore: {
         renderedSongIndex,
         isRenderedLogue
     }
 }) => ({
     deviceIndex,
-    canMainRender,
     renderedSongIndex,
     isRenderedLogue
 })
 
-class Overview extends Component {
+class Overview extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canMainRender: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canMainRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

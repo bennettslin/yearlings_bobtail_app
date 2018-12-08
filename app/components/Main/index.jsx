@@ -3,12 +3,8 @@
  * should not update.
  */
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { updateRenderStore } from 'flux/render/action'
 
 import CarouselToggle from './CarouselToggle'
 import LeftShelf from './LeftShelf'
@@ -21,42 +17,7 @@ import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
-import { getPropsAreShallowEqual } from 'helpers/general'
-
-const mapStateToProps = ({
-    renderStore: { canMainRender }
-}) => ({
-    canMainRender
-})
-
-class Main extends Component {
-
-    static propTypes = {
-        // Through Redux.
-        canMainRender: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canMainRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
-    }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.canMainRender && !prevProps.canMainRender) {
-            logger.warn('Main rendered.')
-
-            setTimeout(
-                this._mainDidRender, 0
-            )
-        }
-    }
-
-    _mainDidRender = () => {
-        this.props.updateRenderStore({ didMainRender: true })
-    }
+class Main extends PureComponent {
 
     render() {
 
@@ -91,10 +52,4 @@ class Main extends Component {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Main)
+export default Main

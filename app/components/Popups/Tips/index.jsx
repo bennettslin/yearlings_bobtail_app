@@ -9,30 +9,25 @@ import Popup from '../../Popup'
 import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
-    renderStore: { canMainRender },
     renderedStore: { isRenderedLogue },
     optionStore: { selectedTipsOption }
 }) => ({
-    canMainRender,
     isRenderedLogue,
     selectedTipsOption
 })
 
 const tipsPopupPropTypes = {
     // Through Redux.
-        canMainRender: PropTypes.bool.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired
     },
 
     TipsPopup = ({
-        canMainRender,
         isRenderedLogue,
         selectedTipsOption
     }) => {
 
         const isVisible =
-            canMainRender &&
             !isRenderedLogue &&
             selectedTipsOption === SHOWN
 

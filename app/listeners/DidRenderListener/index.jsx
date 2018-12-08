@@ -14,8 +14,6 @@ class DidRenderListener extends PureComponent {
         canVerseRender: PropTypes.bool.isRequired,
         didVerseRender: PropTypes.bool.isRequired,
         didSceneRender: PropTypes.bool.isRequired,
-        canMainRender: PropTypes.bool.isRequired,
-        didMainRender: PropTypes.bool.isRequired,
         didLyricRender: PropTypes.bool.isRequired,
         didCarouselRender: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
@@ -25,7 +23,6 @@ class DidRenderListener extends PureComponent {
         this._checkTheatreDidRender(prevProps)
         this._checkVerseDidRender(prevProps)
         this._checkSceneDidRender(prevProps)
-        this._checkMainDidRender(prevProps)
         this._checkLyricDidRender(prevProps)
         this._checkCarouselDidRender()
     }
@@ -64,30 +61,18 @@ class DidRenderListener extends PureComponent {
 
     _checkSceneDidRender(prevProps) {
         /**
-         * If scene is rendering for the first time upon load, main will not
-         * be rendered. If it is being rendered again after scene change, main
+         * If scene is rendering for the first time upon load, lyric will not
+         * be rendered. If it is being rendered again after scene change, lyric
          * will be rendered. Again, not the most elegant way to handle this...
          */
         const
             {
-                canMainRender,
+                canLyricRender,
                 didSceneRender
             } = this.props,
             { didSceneRender: hadSceneRendered } = prevProps
 
-        if (!canMainRender && didSceneRender && !hadSceneRendered) {
-            this.props.updateRenderStore({
-                canMainRender: true
-            })
-        }
-    }
-
-    _checkMainDidRender(prevProps) {
-        const
-            { didMainRender } = this.props,
-            { didMainRender: hadMainRendered } = prevProps
-
-        if (didMainRender && !hadMainRendered) {
+        if (!canLyricRender && didSceneRender && !hadSceneRendered) {
             this.props.updateRenderStore({
                 canLyricRender: true
             })
@@ -121,8 +106,6 @@ const mapStateToProps = ({
         canVerseRender,
         didVerseRender,
         didSceneRender,
-        canMainRender,
-        didMainRender,
         didLyricRender,
         didCarouselRender
     }
@@ -131,8 +114,6 @@ const mapStateToProps = ({
     canVerseRender,
     didVerseRender,
     didSceneRender,
-    canMainRender,
-    didMainRender,
     didLyricRender,
     didCarouselRender
 })
