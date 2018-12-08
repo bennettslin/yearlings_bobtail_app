@@ -6,6 +6,11 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
+import {
+    THEATRE,
+    getNextKeyToRender
+} from '../../helpers/render'
+
 class RenderableListener extends PureComponent {
 
     static propTypes = {
@@ -81,8 +86,11 @@ class RenderableListener extends PureComponent {
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
             } seconds.`)
 
+            const nextKey = getNextKeyToRender({
+                currentKey: THEATRE
+            })
             this.props.updateRenderStore({
-                canSceneRender: true
+                [nextKey]: true
             })
         }
     }

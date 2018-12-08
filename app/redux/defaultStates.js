@@ -104,14 +104,14 @@ const
 
     RENDER_DEFAULTS = {
         canTheatreRender: false,
+        canSceneRender: false,
         canLyricRender: false,
         canCarouselRender: false,
-        canSceneRender: false,
 
         didTheatreRender: false,
+        didSceneRender: false,
         didLyricRender: false,
-        didCarouselRender: false,
-        didSceneRender: false
+        didCarouselRender: false
     },
 
     RENDERABLE_DEFAULTS = {

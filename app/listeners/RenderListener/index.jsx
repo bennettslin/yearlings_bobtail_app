@@ -6,6 +6,14 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
+import {
+    THEATRE,
+    SCENE,
+    LYRIC,
+    CAROUSEL,
+    getNextKeyToRender
+} from '../../helpers/render'
+
 class RenderListener extends PureComponent {
 
     static propTypes = {
@@ -13,6 +21,7 @@ class RenderListener extends PureComponent {
         didTheatreRender: PropTypes.bool.isRequired,
         didSceneRender: PropTypes.bool.isRequired,
         didLyricRender: PropTypes.bool.isRequired,
+        didCarouselRender: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
@@ -20,6 +29,7 @@ class RenderListener extends PureComponent {
         this._checkTheatreDidRender(prevProps)
         this._checkSceneDidRender(prevProps)
         this._checkLyricDidRender(prevProps)
+        this._checkCarouselDidRender(prevProps)
     }
 
     _checkTheatreDidRender(prevProps) {
@@ -28,9 +38,12 @@ class RenderListener extends PureComponent {
             { didTheatreRender: hadTheatreRendered } = prevProps
 
         if (didTheatreRender && !hadTheatreRendered) {
-            this.props.updateRenderStore({
-                canSceneRender: true
-            })
+            const nextKey = getNextKeyToRender({ currentKey: THEATRE })
+            if (nextKey) {
+                this.props.updateRenderStore({
+                    [nextKey]: true
+                })
+            }
         }
     }
 
@@ -40,9 +53,12 @@ class RenderListener extends PureComponent {
             { didSceneRender: hadSceneRendered } = prevProps
 
         if (didSceneRender && !hadSceneRendered) {
-            this.props.updateRenderStore({
-                canLyricRender: true
-            })
+            const nextKey = getNextKeyToRender({ currentKey: SCENE })
+            if (nextKey) {
+                this.props.updateRenderStore({
+                    [nextKey]: true
+                })
+            }
         }
     }
 
@@ -52,9 +68,27 @@ class RenderListener extends PureComponent {
             { didLyricRender: hadLyricRendered } = prevProps
 
         if (didLyricRender && !hadLyricRendered) {
-            this.props.updateRenderStore({
-                canCarouselRender: true
-            })
+            const nextKey = getNextKeyToRender({ currentKey: LYRIC })
+            if (nextKey) {
+                this.props.updateRenderStore({
+                    [nextKey]: true
+                })
+            }
+        }
+    }
+
+    _checkCarouselDidRender(prevProps) {
+        const
+            { didCarouselRender } = this.props,
+            { didCarouselRender: hadCarouselRendered } = prevProps
+
+        if (didCarouselRender && !hadCarouselRendered) {
+            const nextKey = getNextKeyToRender({ currentKey: CAROUSEL })
+            if (nextKey) {
+                this.props.updateRenderStore({
+                    [nextKey]: true
+                })
+            }
         }
     }
 
@@ -67,12 +101,14 @@ const mapStateToProps = ({
     renderStore: {
         didTheatreRender,
         didSceneRender,
-        didLyricRender
+        didLyricRender,
+        didCarouselRender
     }
 }) => ({
     didTheatreRender,
     didSceneRender,
-    didLyricRender
+    didLyricRender,
+    didCarouselRender
 })
 
 const bindDispatchToProps = (dispatch) => (
