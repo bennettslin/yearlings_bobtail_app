@@ -191,7 +191,7 @@ class WindowListener extends PureComponent {
          * rendering the most performance intensive components.
          */
         const windowResizeTimeoutId = setTimeout(
-            this._prepareForWindowResizeRender, 200
+            this._prepareForWindowResizeRender, 500
         )
 
         this.setState({

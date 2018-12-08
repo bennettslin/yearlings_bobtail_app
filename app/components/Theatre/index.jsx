@@ -16,9 +16,13 @@ import Ceiling from './Ceiling'
 import Floor from './Floor'
 
 const mapStateToProps = ({
-    renderStore: { canTheatreRender }
+    renderStore: {
+        canTheatreRender,
+        didTheatreRender
+    }
 }) => ({
-    canTheatreRender
+    canTheatreRender,
+    didTheatreRender
 })
 
 class Theatre extends PureComponent {
@@ -26,6 +30,7 @@ class Theatre extends PureComponent {
     static propTypes = {
         // Through Redux.
         canTheatreRender: PropTypes.bool.isRequired,
+        didTheatreRender: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
@@ -79,22 +84,15 @@ class Theatre extends PureComponent {
     }
 
     render() {
-        const {
-                /* eslint-disable no-unused-vars */
-                updateRenderStore,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
-                canTheatreRender
-            } = this.props,
-
+        const
+            { didTheatreRender } = this.props,
             { isShown } = this.state
 
         return (
             <div className={cx(
                 'Theatre',
                 'absoluteFullContainer',
-                { 'parent__shown': canTheatreRender && isShown }
+                { 'parent__shown': didTheatreRender && isShown }
             )}>
 
                 {/* Scene is behind theatre due to presence transitions. */}

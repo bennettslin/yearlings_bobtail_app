@@ -38,20 +38,9 @@ class Stage extends Component {
         return nextProps.canTheatreRender
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         logger.warn('Stage rendered.')
-    //     }
-    // }
-
     render() {
 
         const {
-            /* eslint-disable no-unused-vars */
-            canTheatreRender,
-            dispatch,
-            /* eslint-enable no-unused-vars */
-
             stageTop,
             stageLeft,
             stageWidth,
