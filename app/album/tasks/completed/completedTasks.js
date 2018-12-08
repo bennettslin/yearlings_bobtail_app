@@ -4116,5 +4116,10 @@ module.exports = [
         taskName: `Fix issue with touch end closing out of overlay.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix issue with scroll and wiki focus.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

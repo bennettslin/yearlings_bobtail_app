@@ -63,9 +63,7 @@ class TitleToggle extends PureComponent {
                 }
             )}>
                 {isTwoRowMenu && (
-                    <AudioTimer
-                        isTitleTimer
-                    />
+                    <AudioTimer isTitleTimer />
                 )}
 
                 {isTwoRowMenu ? (

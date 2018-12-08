@@ -18,18 +18,18 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
+    // sessionStore: { selectedWikiIndex },
     toggleStore: {
-        isLyricExpanded,
-        isScoreShown
+        // isScoreShown,
+        isLyricExpanded
     },
-    sessionStore: { selectedWikiIndex },
     eventStore: { queuedFocus }
 }) => ({
     appMounted,
     isHiddenLyric,
+    // selectedWikiIndex,
+    // isScoreShown,
     isLyricExpanded,
-    isScoreShown,
-    selectedWikiIndex,
     queuedFocus
 })
 
@@ -40,8 +40,8 @@ class FocusContainer extends PureComponent {
         appMounted: PropTypes.bool.isRequired,
         isHiddenLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        isScoreShown: PropTypes.bool.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
+        // selectedWikiIndex: PropTypes.number.isRequired,
+        // isScoreShown: PropTypes.bool.isRequired,
         queuedFocus: PropTypes.bool.isRequired,
         updateEventStore: PropTypes.func.isRequired
     }
@@ -56,8 +56,8 @@ class FocusContainer extends PureComponent {
     componentDidUpdate(prevProps) {
         this._checkFocus(prevProps)
         this._checkLyricChange(prevProps)
-        this._checkScoreChange(prevProps)
-        this._checkWikiChange(prevProps)
+        // this._checkScoreChange(prevProps)
+        // this._checkWikiChange(prevProps)
     }
 
     _checkFocus(prevProps) {
@@ -94,30 +94,30 @@ class FocusContainer extends PureComponent {
         }
     }
 
-    _checkScoreChange(prevProps) {
-        const
-            { isScoreShown } = this.props,
-            { isScoreShown: wasScoreShown } = prevProps
+    // _checkScoreChange(prevProps) {
+    //     const
+    //         { isScoreShown } = this.props,
+    //         { isScoreShown: wasScoreShown } = prevProps
 
-        if (isScoreShown !== wasScoreShown) {
-            this._focusElementForAccess()
-        }
-    }
+    //     if (isScoreShown !== wasScoreShown) {
+    //         this._focusElementForAccess()
+    //     }
+    // }
 
-    _checkWikiChange(prevProps) {
-        const
-            { selectedWikiIndex } = this.props,
-            { selectedWikiIndex: prevWikiIndex } = prevProps
+    // _checkWikiChange(prevProps) {
+    //     const
+    //         { selectedWikiIndex } = this.props,
+    //         { selectedWikiIndex: prevWikiIndex } = prevProps
 
-        if (Boolean(selectedWikiIndex) !== Boolean(prevWikiIndex)) {
-            this._focusElementForAccess()
-        }
-    }
+    //     if (Boolean(selectedWikiIndex) !== Boolean(prevWikiIndex)) {
+    //         this._focusElementForAccess()
+    //     }
+    // }
 
     _focusElementForAccess = () => {
         const {
-            isScoreShown,
-            selectedWikiIndex,
+            // isScoreShown,
+            // selectedWikiIndex,
             isHiddenLyric,
             isLyricExpanded
         } = this.props
@@ -125,15 +125,20 @@ class FocusContainer extends PureComponent {
         let focusedElement,
             focusedElementString
 
-        if (isScoreShown && this.scoreElement) {
-            focusedElement = this.scoreElement
-            focusedElementString = 'Score'
+        /**
+         * TODO: Consider whether we want to focus the score and wiki elements.
+         */
+        // if (isScoreShown && this.scoreElement) {
+        //     focusedElement = this.scoreElement
+        //     focusedElementString = 'Score'
 
-        } else if (selectedWikiIndex && this.wikiElement) {
-            focusedElement = this.wikiElement
-            focusedElementString = 'Wiki'
+        // } else if (selectedWikiIndex && this.wikiElement) {
+        //     focusedElement = this.wikiElement
+        //     focusedElementString = 'Wiki'
 
-        } else if (
+        // } else
+
+        if (
             (
                 !isHiddenLyric || isLyricExpanded
             ) &&
