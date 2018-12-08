@@ -42,6 +42,7 @@ const mapStateToProps = ({
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
+        selectedTime,
         isSelectedLogue
     }
 }) => ({
@@ -51,6 +52,7 @@ const mapStateToProps = ({
     queuedPlayerVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
+    selectedTime,
     isSelectedLogue,
     canPlayThroughs
 })
@@ -73,6 +75,7 @@ class PlayerManager extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        selectedTime: PropTypes.number.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
         updatePlayerStore: PropTypes.func.isRequired,
@@ -96,25 +99,6 @@ class PlayerManager extends PureComponent {
 
         // At any given time, only one player is being newly rendered.
         nextPlayerToRender: -1
-    }
-
-    playerState = {
-        /**
-         * We will use this object to pass values when selecting the player
-         * in the timeout callback, because we don't want to deal with the
-         * uncertainty of when setState gets executed.
-         */
-
-        // Unique identifier for clearing setInterval.
-        nextSelectedTimeoutId: ''
-    }
-
-    sessionState = {
-        /**
-         * This lets us reject a call to update time that is no longer
-         * applicable upon manual selection of a new song or verse.
-         */
-        currentSessionId: 0
     }
 
     // Initialise player refs.
@@ -174,7 +158,7 @@ class PlayerManager extends PureComponent {
             (queuedPlayerSongIndex > -1 && queuedPlayerSongIndex !== prevSongIndex) ||
             (queuedPlayerVerseIndex > -1 && queuedPlayerVerseIndex !== prevVerseIndex)
         ) {
-            this._changeSelectedPlayer({
+            this._handleSelectPlayer({
                 isPlayingFromLogue: queuedPlayingFromLogue,
                 nextSongIndex: queuedPlayerSongIndex,
                 nextVerseIndex: queuedPlayerVerseIndex
@@ -184,39 +168,7 @@ class PlayerManager extends PureComponent {
         }
     }
 
-    _changeSelectedPlayer({
-        isPlayingFromLogue,
-        nextSongIndex,
-        nextVerseIndex
-    }) {
-        /**
-         * If user manually changes song or verse, player manager will update
-         * the player. This allows the player not to have to watch for these
-         * changes itself, which is needed because it can't tell the difference
-         * between manual and automatic verse changes.
-         */
-
-        // Increment session id right away.
-        this.sessionState.currentSessionId++
-
-        clearTimeout(this.playerState.nextSelectedTimeoutId)
-
-        const nextSelectedTimeoutId = setTimeout(
-            this._handleSelectPlayer,
-            200
-        )
-
-        this.playerState = {
-            nextSelectedTimeoutId,
-
-            // Store next song and verse in component state for callback.
-            nextSongIndex,
-            nextVerseIndex,
-            isPlayingFromLogue
-        }
-    }
-
-    _playerShouldRender(queuedPlayerSongIndex) {
+    _playerShouldRender(songIndex) {
         const {
             canPlayThroughsObject,
             nextPlayerToRender
@@ -224,17 +176,15 @@ class PlayerManager extends PureComponent {
 
         return (
             // Render player if it has already passed canPlayThrough...
-            canPlayThroughsObject[queuedPlayerSongIndex] ||
+            canPlayThroughsObject[songIndex] ||
 
             // Or if it is next in the queue to be rendered.
-            queuedPlayerSongIndex === nextPlayerToRender
+            songIndex === nextPlayerToRender
         )
     }
 
     setPlayerCanPlayThrough = (queuedPlayerSongIndex) => {
-        const {
-                canPlayThroughs
-            } = this.props,
+        const { canPlayThroughs } = this.props,
 
             // Convert to bit number before setting in Redux.
             newBitNumber = setNewValueInBitNumber({
@@ -277,17 +227,16 @@ class PlayerManager extends PureComponent {
         }
     }
 
-    _handleSelectPlayer = () => {
-        const {
-                isPlayingFromLogue,
-                nextSongIndex,
-                nextVerseIndex
-            } = this.playerState,
+    _handleSelectPlayer = ({
+        isPlayingFromLogue,
+        nextSongIndex,
+        nextVerseIndex
 
-            nextCurrentTime = getTimeForVerseIndex(
-                nextSongIndex,
-                nextVerseIndex
-            )
+    }) => {
+        const nextCurrentTime = getTimeForVerseIndex(
+            nextSongIndex,
+            nextVerseIndex
+        )
 
         // Update selected player's current time.
         this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
@@ -304,18 +253,14 @@ class PlayerManager extends PureComponent {
     askPlayerToBeginPlaying(queuedPlayerSongIndex) {
         const playerRef = this.getPlayerRef(queuedPlayerSongIndex)
 
-        return playerRef.handleBeginPlaying(
-            this.sessionState.currentSessionId,
-
-            /**
-             * Play is being toggled on, so don't set in store right away.
-             * Pass callback and wait for successful return.
-             */
-            this.handlePlaySelectedPlayer
-        )
+        /**
+         * Play is being toggled on, so don't set in store right away.
+         * Pass callback and wait for successful return.
+         */
+        return playerRef.handleBeginPlaying()
     }
 
-    handlePlaySelectedPlayer = (success) => {
+    setSelectedPlayerIsPlaying = (success) => {
         /**
          * If currently selected player is being toggled on, set in store that
          * it was able to play. If selected song was changed, set in store
@@ -341,21 +286,24 @@ class PlayerManager extends PureComponent {
             ) : 0
     }
 
-    updatePlayerTime = (
-        currentSessionId,
-        currentTime
-    ) => {
+    updatePlayerTime = ({
+        currentTime,
+        currentSongIndex
+    }) => {
 
-        /**
-         * Ignore calls from previous sessions that haven't yet cleared out
-         * their intervals.
-         */
-        if (currentSessionId !== this.sessionState.currentSessionId) {
+        const {
+            selectedSongIndex,
+            selectedTime
+        } = this.props
+
+        if (
+            currentTime === selectedTime ||
+            currentSongIndex !== selectedSongIndex
+        ) {
             return
         }
 
         const {
-                selectedSongIndex,
                 selectedVerseIndex
             } = this.props,
 
@@ -406,7 +354,7 @@ class PlayerManager extends PureComponent {
              */
             if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
                 logger.info('Updated time will end player.')
-                this.updatePlayerEnded(currentSessionId)
+                this.updatePlayerEnded()
 
             /**
              * Something weird has happened, so we'll reset the player. This
@@ -426,16 +374,7 @@ class PlayerManager extends PureComponent {
         }
     }
 
-    updatePlayerEnded = (currentSessionId) => {
-
-        /**
-         * Ignore calls from previous sessions that haven't yet cleared out
-         * their intervals.
-         */
-        if (currentSessionId !== this.sessionState.currentSessionId) {
-            return
-        }
-
+    updatePlayerEnded = () => {
         this.props.handleSongEnd()
     }
 
@@ -476,7 +415,9 @@ class PlayerManager extends PureComponent {
                                 updateEnded: this.updatePlayerEnded,
                                 setPlayerRef: this.setPlayerRef,
                                 setPlayerCanPlayThrough:
-                                    this.setPlayerCanPlayThrough
+                                    this.setPlayerCanPlayThrough,
+                                setSelectedPlayerIsPlaying:
+                                    this.setSelectedPlayerIsPlaying
                             }}
                         />
                     )

@@ -2,8 +2,8 @@
 
 import React, { PureComponent, Fragment as ___ } from 'react'
 
-import AudioManager from './Audio'
-import PlayerManager from './Player'
+import AudioManager from './AudioManager'
+import PlayerManager from './PlayerManager'
 
 class AudioPlayerManager extends PureComponent {
 

@@ -4,8 +4,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 
-const LISTEN_INTERVAL = 150
-
 class Player extends Component {
 
     static propTypes = {
@@ -15,17 +13,9 @@ class Player extends Component {
         isSelected: PropTypes.bool.isRequired,
         updateCurrentTime: PropTypes.func.isRequired,
         updateEnded: PropTypes.func.isRequired,
+        setPlayerRef: PropTypes.func.isRequired,
         setPlayerCanPlayThrough: PropTypes.func.isRequired,
-        setPlayerRef: PropTypes.func.isRequired
-    }
-
-    state = {
-        // Unique identifier for clearing setInterval.
-        intervalId: ''
-    }
-
-    sessionState = {
-        currentSessionId: -1
+        setSelectedPlayerIsPlaying: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -42,6 +32,13 @@ class Player extends Component {
             this._handleSuspendEvent
         )
 
+        // Tell app the current player time.
+        this.audioPlayer.addEventListener(
+            'timeupdate',
+            this._handleTimeUpdateEvent
+        )
+
+        // Tell app the player has ended.
         this.audioPlayer.addEventListener(
             'ended',
             this._handleEndedEvent
@@ -65,15 +62,33 @@ class Player extends Component {
         this.props.setPlayerCanPlayThrough(this.props.songIndex)
     }
 
+    _handleTimeUpdateEvent = () => {
+        const {
+            currentTime,
+            paused
+        } = this.audioPlayer
+
+        if (!paused) {
+            const { songIndex } = this.props
+
+            this.props.updateCurrentTime({
+                currentTime,
+                currentSongIndex: songIndex
+            })
+        }
+    }
+
+    _handleEndedEvent = () => {
+        logger.info(`Player for ${this.props.songIndex} ended itself.`)
+        this.props.updateEnded()
+    }
+
     setCurrentTime(currentTime = 0) {
         // Can be called by player manager.
         this.audioPlayer.currentTime = currentTime
     }
 
-    handleBeginPlaying(
-        currentSessionId,
-        handlePlaySelectedPlayer
-    ) {
+    handleBeginPlaying() {
         // Only called by player manager.
         const { songIndex } = this.props,
             playPromise = this.audioPlayer.play()
@@ -86,19 +101,15 @@ class Player extends Component {
 
             playPromise.then(() => {
                 logger.info(`Promise to play ${songIndex} succeeded.`)
-
-                this._setIntervalForTimeUpdate(currentSessionId)
-                handlePlaySelectedPlayer(true)
+                this.props.setSelectedPlayerIsPlaying(true)
 
             }).catch(error => {
-                // Player failed!
                 logger.error(`Promise to play ${songIndex} failed: ${error}`)
-                handlePlaySelectedPlayer(false)
+                this.props.setSelectedPlayerIsPlaying(false)
             })
 
         } else {
-            this._setIntervalForTimeUpdate(currentSessionId)
-            handlePlaySelectedPlayer(true)
+            this.props.setSelectedPlayerIsPlaying(true)
         }
     }
 
@@ -123,62 +134,6 @@ class Player extends Component {
         }
     }
 
-    _setIntervalForTimeUpdate(currentSessionId) {
-
-        // This is the only place that current session id is set.
-        this.sessionState.currentSessionId = currentSessionId
-
-        this._clearInterval()
-
-        const intervalId = setInterval(
-            // This interval will only ever pass this session id.
-            this._tellAppCurrentTime.bind(this, currentSessionId),
-            LISTEN_INTERVAL
-        )
-
-        this.setState({
-            intervalId
-        })
-    }
-
-    _tellAppCurrentTime = (currentSessionId) => {
-        const {
-            currentTime,
-            paused
-        } = this.audioPlayer
-
-        if (paused) {
-            // Once the player is paused, prevent further time updates.
-            this._clearInterval()
-
-        } else {
-            /**
-             * This is the only place that current session id is returned to
-             * player manager for a currently playing player.
-             */
-            this.props.updateCurrentTime(
-                currentSessionId,
-                currentTime
-            )
-        }
-    }
-
-    _handleEndedEvent = () => {
-        logger.info(`Player for ${this.props.songIndex} ended itself.`)
-
-        this._clearInterval()
-
-        this.props.updateEnded(this.sessionState.currentSessionId)
-    }
-
-    _clearInterval() {
-        clearInterval(this.state.intervalId)
-
-        this.setState({
-            intervalId: ''
-        })
-    }
-
     _listenForDebugStatements(onlyIfSelected) {
 
         const showDebugStatements =
@@ -196,9 +151,6 @@ class Player extends Component {
             })
             this.audioPlayer.addEventListener('playing', () => {
                 logger.error('playing', this.props.songIndex)
-            })
-            this.audioPlayer.addEventListener('timeupdate', () => {
-                logger.error('timeupdate', this.props.songIndex)
             })
             // Determine which times ranges have been buffered.
             this.audioPlayer.addEventListener('progress', () => {
