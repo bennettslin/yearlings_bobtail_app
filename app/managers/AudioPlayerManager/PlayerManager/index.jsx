@@ -23,7 +23,7 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
-    audioStore: {
+    playersStore: {
         nextPlayerToRender,
         ...playersCanPlayThrough
     },

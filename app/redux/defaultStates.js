@@ -53,11 +53,6 @@ const
         queuedAnnotationFromCarousel: false
     },
 
-    AUDIO_DEFAULTS = {
-        playersBitNumber: 0,
-        nextPlayerToRender: -1
-    },
-
     DEVICE_DEFAULTS = {
         deviceIndex: 0,
         isPhone: false,
@@ -92,6 +87,11 @@ const
         isForcedShownOverview: false,
         isSongShownOverview: false,
         isSongShownTips: false
+    },
+
+    PLAYERS_DEFAULTS = {
+        playersBitNumber: 0,
+        nextPlayerToRender: -1
     },
 
     PLAYING_DEFAULTS = {
@@ -225,12 +225,12 @@ const
 export {
     ACCESS_DEFAULTS,
     ANNOTATION_DEFAULTS,
-    AUDIO_DEFAULTS,
     DEVICE_DEFAULTS,
     DOTS_DEFAULTS,
     EVENT_DEFAULTS,
     LOAD_DEFAULTS,
     OPTION_DEFAULTS,
+    PLAYERS_DEFAULTS,
     PLAYING_DEFAULTS,
     RENDER_DEFAULTS,
     RENDERABLE_DEFAULTS,

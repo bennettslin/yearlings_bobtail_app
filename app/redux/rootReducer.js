@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
 import AnnotationReducer from './annotation/reducer'
-import AudioReducer from './audio/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
 import EventReducer from './event/reducer'
 import LoadReducer from './load/reducer'
 import OptionReducer from './option/reducer'
+import PlayersReducer from './players/reducer'
 import PlayingReducer from './playing/reducer'
 import RenderReducer from './render/reducer'
 import RenderableReducer from './renderable/reducer'
@@ -24,12 +24,12 @@ import VerseBarsReducer from './verseBars/reducer'
 import {
     ACCESS_STORE,
     ANNOTATION_STORE,
-    AUDIO_STORE,
     DEVICE_STORE,
     DOTS_STORE,
     EVENT_STORE,
     LOAD_STORE,
     OPTION_STORE,
+    PLAYERS_STORE,
     PLAYING_STORE,
     RENDER_STORE,
     RENDERABLE_STORE,
@@ -51,7 +51,7 @@ const rootReducer = combineReducers({
     [RENDERED_STORE]: RenderedReducer,
     [ACCESS_STORE]: AccessReducer,
     [SESSION_STORE]: SessionReducer,
-    [AUDIO_STORE]: AudioReducer,
+    [PLAYERS_STORE]: PlayersReducer,
 
     [DEVICE_STORE]: DeviceReducer,
     [RESPONSIVE_STORE]: ResponsiveReducer,

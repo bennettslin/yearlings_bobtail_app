@@ -2,7 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateAudioStore } from 'flux/audio/action'
+import { updatePlayersStore } from 'flux/players/action'
 
 import { setNewValueInBitNumber } from 'helpers/bit'
 import { getSongsNotLoguesCount } from 'helpers/data'
@@ -12,7 +12,7 @@ class PlayerDispatcher extends PureComponent {
     static propTypes = {
         // Through Redux.
         playersBitNumber: PropTypes.number.isRequired,
-        updateAudioStore: PropTypes.func.isRequired,
+        updatePlayersStore: PropTypes.func.isRequired,
 
         // From parent.
         parentThis: PropTypes.object.isRequired
@@ -33,7 +33,7 @@ class PlayerDispatcher extends PureComponent {
                 value: true
             })
 
-        this.props.updateAudioStore({
+        this.props.updatePlayersStore({
             playersBitNumber: newBitNumber,
             [songIndex]: true
         })
@@ -45,14 +45,14 @@ class PlayerDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    audioStore: { playersBitNumber }
+    playersStore: { playersBitNumber }
 }) => ({
     playersBitNumber
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateAudioStore
+        updatePlayersStore
     }, dispatch)
 )
 

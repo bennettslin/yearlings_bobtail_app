@@ -1,13 +1,13 @@
-// Reducers for audio values.
-import { AUDIO_STORE } from '../storeKeys'
-import { AUDIO_DEFAULTS } from '../defaultStates'
+// Reducers for players values.
+import { PLAYERS_STORE } from '../storeKeys'
+import { PLAYERS_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = AUDIO_DEFAULTS,
+    state = PLAYERS_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case AUDIO_STORE:
+        case PLAYERS_STORE:
             return {
                 ...state,
                 ...action.payload

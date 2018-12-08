@@ -1,4 +1,4 @@
-// Reducers for player updates.
+// Reducers for audio updates.
 import { PLAYING_STORE } from '../storeKeys'
 import { PLAYING_DEFAULTS } from '../defaultStates'
 

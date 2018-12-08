@@ -1,12 +1,12 @@
 module.exports = {
     ACCESS_STORE: 'accessStore',
     ANNOTATION_STORE: 'annotationStore',
-    AUDIO_STORE: 'audioStore',
     DEVICE_STORE: 'deviceStore',
     DOTS_STORE: 'dotsStore',
     EVENT_STORE: 'eventStore',
     LOAD_STORE: 'loadStore',
     OPTION_STORE: 'optionStore',
+    PLAYERS_STORE: 'playersStore',
     PLAYING_STORE: 'playingStore',
     RENDER_STORE: 'renderStore',
     RENDERABLE_STORE: 'renderableStore',

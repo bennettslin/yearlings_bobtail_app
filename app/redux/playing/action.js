@@ -1,4 +1,4 @@
-// Actions for player updates.
+// Actions for audio updates.
 import { getDefinedOnlyPayload } from '../actionHelper'
 
 import { PLAYING_STORE } from '../storeKeys'

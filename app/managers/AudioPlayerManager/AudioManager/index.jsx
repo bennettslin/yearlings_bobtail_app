@@ -114,7 +114,7 @@ class AudioManager extends PureComponent {
 }
 
 const mapStateToProps = ({
-    audioStore: { playersBitNumber },
+    playersStore: { playersBitNumber },
     playingStore: {
         isPlaying,
         queuedTogglePlay
