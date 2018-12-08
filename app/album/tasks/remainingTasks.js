@@ -6,13 +6,6 @@ module.exports = [
         neededHours: 2
     },
 
-    // More refactoring...
-    {
-        taskName: `Get AWS credentials on personal laptop.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     // Major refactors.
     {
         taskName: `Wire on puppets and others.`,

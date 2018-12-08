@@ -30,7 +30,10 @@ class Lyric extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired,
+
+        // From parent.
+        setLyricFocusElement: PropTypes.func.isRequired
     }
 
     state = {
@@ -120,13 +123,8 @@ class Lyric extends PureComponent {
     render() {
 
         const {
-                /* eslint-disable no-unused-vars */
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
                 canLyricRender,
-
-                ...other
+                setLyricFocusElement
             } = this.props,
 
             {
@@ -139,7 +137,7 @@ class Lyric extends PureComponent {
 
         return (hasMounted || canLyricRender) && (
             <___>
-                <LyricView {...other}
+                <LyricView
                     {...{
                         isParentShown,
                         handleTransition: this._handleTransition,
@@ -147,7 +145,8 @@ class Lyric extends PureComponent {
                         completeHeightTransition: this.completeHeightTransition,
                         handleVerseBarWheel: this._handleVerseBarWheel,
                         handleVerseSelect: this._handleVerseSelect,
-                        parentThis: this
+                        parentThis: this,
+                        setLyricFocusElement
                     }}
                 />
                 <VerseDispatcher {...{ parentThis: this }} />

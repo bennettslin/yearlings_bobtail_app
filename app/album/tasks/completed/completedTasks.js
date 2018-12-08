@@ -4131,5 +4131,10 @@ module.exports = [
         taskName: `Some renderable refactoring.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Get AWS credentials on personal laptop.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

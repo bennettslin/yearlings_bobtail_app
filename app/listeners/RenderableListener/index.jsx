@@ -10,7 +10,6 @@ class RenderableListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
         isSongChangeRenderable: PropTypes.bool.isRequired,
         isSceneChangeRenderable: PropTypes.bool.isRequired,
         isWindowResizeRenderable: PropTypes.bool.isRequired,
@@ -30,9 +29,7 @@ class RenderableListener extends PureComponent {
     _checkWindowResize(prevProps) {
         const
             { isWindowResizeRenderable } = this.props,
-            {
-                isWindowResizeRenderable: wasWindowResizeRenderable
-            } = prevProps
+            { isWindowResizeRenderable: wasWindowResizeRenderable } = prevProps
 
         // Is unrenderable after window resize.
         if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
@@ -40,7 +37,8 @@ class RenderableListener extends PureComponent {
 
             logger.warn('Unrenderable from window resize.')
             this.props.updateRenderStore({
-                canTheatreRender: false
+                canTheatreRender: false,
+                didTheatreRender: false
             })
 
         /**
@@ -61,9 +59,7 @@ class RenderableListener extends PureComponent {
     _checkSongChange(prevProps) {
         const
             { isSongChangeRenderable } = this.props,
-            {
-                isSongChangeRenderable: wasSongChangeRenderable
-            } = prevProps
+            { isSongChangeRenderable: wasSongChangeRenderable } = prevProps
 
         // Is unrenderable after song change.
         if (!isSongChangeRenderable && wasSongChangeRenderable) {
@@ -81,26 +77,20 @@ class RenderableListener extends PureComponent {
 
         // Is renderable after song change timeout.
         } else if (isSongChangeRenderable && !wasSongChangeRenderable) {
+            logger.warn(`Renderable after song change, took ${
+                ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+            } seconds.`)
 
-            // Don't call this upon initial render.
-            if (this.props.canTheatreRender) {
-                logger.warn(`Renderable after song change, took ${
-                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-                } seconds.`)
-
-                this.props.updateRenderStore({
-                    canSceneRender: true
-                })
-            }
+            this.props.updateRenderStore({
+                canSceneRender: true
+            })
         }
     }
 
     _checkSceneChange(prevProps) {
         const
             { isSceneChangeRenderable } = this.props,
-            {
-                isSceneChangeRenderable: wasSceneChangeRenderable
-            } = prevProps
+            { isSceneChangeRenderable: wasSceneChangeRenderable } = prevProps
 
         // Is unrenderable after scene change within same song.
         if (!isSceneChangeRenderable && wasSceneChangeRenderable) {
@@ -114,17 +104,13 @@ class RenderableListener extends PureComponent {
 
         // Is renderable after scene change timeout.
         } else if (isSceneChangeRenderable && !wasSceneChangeRenderable) {
+            logger.warn(`Renderable after scene change, took ${
+                ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+            } seconds.`)
 
-            // Don't call this upon initial render.
-            if (this.props.canTheatreRender) {
-                logger.warn(`Renderable after scene change, took ${
-                    ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-                } seconds.`)
-
-                this.props.updateRenderStore({
-                    canSceneRender: true
-                })
-            }
+            this.props.updateRenderStore({
+                canSceneRender: true
+            })
         }
     }
 
@@ -134,16 +120,12 @@ class RenderableListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    renderStore: {
-        canTheatreRender
-    },
     renderableStore: {
         isSceneChangeRenderable,
         isSongChangeRenderable,
         isWindowResizeRenderable
     }
 }) => ({
-    canTheatreRender,
     isSceneChangeRenderable,
     isSongChangeRenderable,
     isWindowResizeRenderable
