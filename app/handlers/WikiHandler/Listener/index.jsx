@@ -4,7 +4,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateAudioStore } from 'flux/audio/action'
 import { updateSessionStore } from 'flux/session/action'
 
 import { getWikiUrl } from './helper'
@@ -83,7 +82,6 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateAudioStore,
         updateSessionStore
     }, dispatch)
 )

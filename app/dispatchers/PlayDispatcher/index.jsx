@@ -16,7 +16,7 @@ class PlayDispatcher extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
-        canPlayThroughs: PropTypes.number.isRequired,
+        playersBitNumber: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         updatePlayerStore: PropTypes.func.isRequired,
@@ -33,12 +33,12 @@ class PlayDispatcher extends PureComponent {
         const {
                 selectedSongIndex,
                 isSelectedLogue,
-                canPlayThroughs
+                playersBitNumber
             } = this.props,
 
             songCanPlayThrough = getValueInBitNumber({
                 keysCount: getSongsNotLoguesCount(),
-                bitNumber: canPlayThroughs,
+                bitNumber: playersBitNumber,
 
                 // If logue, select first song.
                 key: isSelectedLogue ? 1 : selectedSongIndex
@@ -77,7 +77,7 @@ class PlayDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    audioStore: { canPlayThroughs },
+    audioStore: { playersBitNumber },
     playerStore: { isPlaying },
     songStore: {
         selectedSongIndex,
@@ -85,7 +85,7 @@ const mapStateToProps = ({
     }
 }) => ({
     isPlaying,
-    canPlayThroughs,
+    playersBitNumber,
     selectedSongIndex,
     isSelectedLogue
 })

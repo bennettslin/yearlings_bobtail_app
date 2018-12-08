@@ -32,13 +32,13 @@ import {
 import { getValueInBitNumber } from 'helpers/bit'
 
 const mapStateToProps = ({
-    audioStore: { canPlayThroughs },
+    audioStore: { playersBitNumber },
     playerStore: { isPlaying },
     sessionStore: { selectedAudioOptionIndex },
     songStore: { selectedSongIndex }
 }) => ({
     isPlaying,
-    canPlayThroughs,
+    playersBitNumber,
     selectedAudioOptionIndex,
     selectedSongIndex
 })
@@ -48,7 +48,7 @@ class AudioButtons extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
-        canPlayThroughs: PropTypes.number.isRequired,
+        playersBitNumber: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired
     }
@@ -72,7 +72,7 @@ class AudioButtons extends PureComponent {
     render() {
         const {
                 selectedSongIndex,
-                canPlayThroughs,
+                playersBitNumber,
 
                 isPlaying,
                 selectedAudioOptionIndex
@@ -84,7 +84,7 @@ class AudioButtons extends PureComponent {
 
             songCanPlayThrough = getValueInBitNumber({
                 keysCount: getSongsNotLoguesCount(),
-                bitNumber: canPlayThroughs,
+                bitNumber: playersBitNumber,
                 key: (isPrologue || isEpilogue) ? 1 : selectedSongIndex
             })
 

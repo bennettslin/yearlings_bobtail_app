@@ -54,7 +54,8 @@ const
     },
 
     AUDIO_DEFAULTS = {
-        canPlayThroughs: 0
+        playersBitNumber: 0,
+        nextPlayerToRender: -1
     },
 
     DEVICE_DEFAULTS = {

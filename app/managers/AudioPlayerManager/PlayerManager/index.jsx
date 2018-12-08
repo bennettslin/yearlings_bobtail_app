@@ -6,45 +6,40 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { updateAudioStore } from 'flux/audio/action'
 import { updatePlayerStore } from 'flux/player/action'
 import { updateSongStore } from 'flux/song/action'
 
+import PlayerDispatcher from './Dispatcher'
 import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 
-import { setNewValueInBitNumber } from 'helpers/bit'
-
-import {
-    getSongsNotLoguesCount,
-    getTimeForVerseIndex
-} from 'helpers/data'
+import { getTimeForVerseIndex } from 'helpers/data'
 
 import {
     getMp3s,
     getNextVerseIndex,
-    getTimeRelativeToVerseIndex,
-    getCanPlayThroughsObject,
-    getNextPlayerSongIndexToRender
+    getTimeRelativeToVerseIndex
 } from './helper'
 
 const mapStateToProps = ({
-    audioStore: { canPlayThroughs },
+    audioStore: {
+        nextPlayerToRender,
+        ...playersCanPlayThrough
+    },
     playerStore: { isPlaying },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
-        selectedTime,
-        isSelectedLogue
+        selectedTime
     }
 }) => ({
     isPlaying,
     selectedSongIndex,
     selectedVerseIndex,
     selectedTime,
-    isSelectedLogue,
-    canPlayThroughs
+    nextPlayerToRender,
+    playersCanPlayThrough
 })
 
 // Kind of silly, but easiest approach for now.
@@ -60,11 +55,10 @@ class PlayerManager extends PureComponent {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
-        canPlayThroughs: PropTypes.number.isRequired,
-        updateAudioStore: PropTypes.func.isRequired,
+        nextPlayerToRender: PropTypes.number.isRequired,
+        playersCanPlayThrough: PropTypes.object.isRequired,
         updatePlayerStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
@@ -73,69 +67,22 @@ class PlayerManager extends PureComponent {
         handleSongEnd: PropTypes.func.isRequired
     }
 
-    state = {
-        /**
-         * This object is converted from the bit number fetched through
-         * Redux. We will store it so that we don't have to convert it
-         * every single time.
-         */
-        canPlayThroughsObject: getCanPlayThroughsObject(
-            this.props.canPlayThroughs
-        ),
-
-        // At any given time, only one player is being newly rendered.
-        nextPlayerToRender: -1
-    }
-
     // Initialise player refs.
     players = {}
 
     componentDidMount() {
         this.props.parentThis.toggleSelectedPlayer = this.toggleSelectedPlayer
-        this._updateCanPlayThroughsObject()
-    }
-
-    componentDidUpdate(prevProps) {
-        /**
-         * If the bit number has changed, convert it and store the updated
-         * object that keeps track of each player's canPlayThrough status, then
-         * calculate which player is next in line to be newly rendered.
-         */
-        if (this.props.canPlayThroughs !== prevProps.canPlayThroughs) {
-            this._updateCanPlayThroughsObject()
-        }
-    }
-
-    _updateCanPlayThroughsObject() {
-        const {
-                canPlayThroughs,
-                selectedSongIndex,
-                isSelectedLogue
-            } = this.props,
-
-            canPlayThroughsObject = getCanPlayThroughsObject(
-                canPlayThroughs
-            )
-
-        this.setState({
-            canPlayThroughsObject,
-            nextPlayerToRender: getNextPlayerSongIndexToRender(
-                selectedSongIndex,
-                isSelectedLogue,
-                canPlayThroughsObject
-            )
-        })
     }
 
     _playerShouldRender(songIndex) {
         const {
-            canPlayThroughsObject,
+            playersCanPlayThrough,
             nextPlayerToRender
-        } = this.state
+        } = this.props
 
         return (
             // Render player if it has already passed canPlayThrough...
-            canPlayThroughsObject[songIndex] ||
+            playersCanPlayThrough[songIndex] ||
 
             // Or if it is next in the queue to be rendered.
             songIndex === nextPlayerToRender
@@ -143,17 +90,7 @@ class PlayerManager extends PureComponent {
     }
 
     setPlayerCanPlayThrough = (songIndex) => {
-        const { canPlayThroughs } = this.props,
-
-            // Convert to bit number before setting in Redux.
-            newBitNumber = setNewValueInBitNumber({
-                keysCount: getSongsNotLoguesCount(),
-                bitNumber: canPlayThroughs,
-                key: songIndex,
-                value: true
-            })
-
-        this.props.updateAudioStore({ canPlayThroughs: newBitNumber })
+        this.dispatchPlayerCanPlayThrough(songIndex)
     }
 
     toggleSelectedPlayer = ({
@@ -376,6 +313,7 @@ class PlayerManager extends PureComponent {
                         />
                     )
                 })}
+                <PlayerDispatcher {...{ parentThis: this }} />
                 <TimeVerseDispatcher {...{ parentThis: this }} />
             </div>
         )
@@ -385,7 +323,6 @@ class PlayerManager extends PureComponent {
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateAudioStore,
         updatePlayerStore,
         updateSongStore
     }, dispatch)

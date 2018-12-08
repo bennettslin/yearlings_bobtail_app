@@ -20,7 +20,7 @@ class AudioManager extends PureComponent {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         queuedTogglePlay: PropTypes.bool.isRequired,
-        canPlayThroughs: PropTypes.number.isRequired,
+        playersBitNumber: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         updatePlayerStore: PropTypes.func.isRequired,
@@ -114,7 +114,7 @@ class AudioManager extends PureComponent {
 }
 
 const mapStateToProps = ({
-    audioStore: { canPlayThroughs },
+    audioStore: { playersBitNumber },
     playerStore: {
         isPlaying,
         queuedTogglePlay
@@ -124,7 +124,7 @@ const mapStateToProps = ({
 }) => ({
     isPlaying,
     queuedTogglePlay,
-    canPlayThroughs,
+    playersBitNumber,
     selectedAudioOptionIndex,
     selectedSongIndex
 })
