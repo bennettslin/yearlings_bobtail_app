@@ -164,7 +164,7 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Change render order so that scenes come last after lyric and carousel?`,
+        taskName: `Change render order so that scenes come last after lyric and carousel? Allow this to be switched around to experiment.`,
         workedHours: 0,
         neededHours: 5
     },
@@ -199,11 +199,6 @@ module.exports = [
         taskName: `Manual testing`,
         workedHours: 0,
         neededHours: 20
-    },
-    {
-        taskName: `Add unit tests`,
-        workedHours: 0,
-        neededHours: 8
     },
 
     /**
