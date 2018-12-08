@@ -1,6 +1,6 @@
 // Stage elements that change based on the scene.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -29,7 +29,8 @@ import {
 
 const mapStateToProps = ({
     renderStore: {
-        canSceneRender
+        canSceneRender,
+        didSceneRender
     },
     renderedStore: {
         renderedSongIndex,
@@ -37,56 +38,38 @@ const mapStateToProps = ({
     }
 }) => ({
     canSceneRender,
+    didSceneRender,
     renderedSongIndex,
     renderedSceneIndex
 })
 
-class Scene extends Component {
+class Scene extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
+        didSceneRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         renderedSceneIndex: PropTypes.number.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
-    state = {
-        isShown: false,
-        didRenderTimeoutId: '',
-        waitForShowTimeoutId: ''
-    }
+    state = { didRenderTimeoutId: '' }
 
     componentDidUpdate(prevProps) {
-        const { canSceneRender } = this.props,
+        const
+            { canSceneRender } = this.props,
             { canSceneRender: couldRender } = prevProps
 
         if (canSceneRender && !couldRender) {
-            logger.warn('Scene rendered.')
-
             clearTimeout(this.state.didRenderTimeoutId)
-            clearTimeout(this.state.waitForShowTimeoutId)
 
-            const
-                // Wait for parent transition before continuing render sequence.
-                didRenderTimeoutId = setTimeout(
-                    this._sceneDidRender, 200
-                ),
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                )
+            // Wait for parent transition before continuing render sequence.
+            const didRenderTimeoutId = setTimeout(
+                this._sceneDidRender, 300
+            )
 
-            this.setState({
-                didRenderTimeoutId,
-                waitForShowTimeoutId
-            })
-
-        } else if (couldRender && !canSceneRender) {
-
-            this.setState({
-                isShown: false
-            })
+            this.setState({ didRenderTimeoutId })
         }
     }
 
@@ -94,20 +77,12 @@ class Scene extends Component {
         this.props.updateRenderStore({ didSceneRender: true })
     }
 
-    _waitForShowBeforeRender = () => {
-        this.setState({
-            isShown: true
-        })
-    }
-
     render() {
         const {
                 renderedSongIndex,
                 renderedSceneIndex,
-                canSceneRender
+                didSceneRender
             } = this.props,
-
-            { isShown } = this.state,
 
             sceneObject = getSceneObject(
                 renderedSongIndex,
@@ -139,17 +114,13 @@ class Scene extends Component {
         return (
             <div className={cx(
                 'Scene',
-                { 'Scene__shown': canSceneRender && isShown },
+                { 'Scene__shown': didSceneRender },
 
                 zIndexClassNames,
                 hslaClassNames,
                 slantDirectionClassName
             )}>
-                <Sky
-                    {...{
-                        skyConfig
-                    }}
-                />
+                <Sky {...{ skyConfig }} />
 
                 {/* Wood is in front of sky, but behind presences and cubes. */}
                 <Wood />

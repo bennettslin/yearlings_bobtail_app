@@ -1,8 +1,8 @@
 // TODO: Stagger this.
 .Face__path {
     transition:
-        stroke $animationDuration__default,
-        d $animationDuration__default;
+        stroke $animationDuration__slower,
+        d $animationDuration__slower;
 }
 
 .Face__shade {

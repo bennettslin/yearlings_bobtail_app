@@ -15,7 +15,10 @@ import { getAnnotationsCount } from 'helpers/data'
 import { getArrayOfLength } from 'helpers/general'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
+    renderStore: {
+        canCarouselRender,
+        didCarouselRender
+    },
     renderedStore: {
         renderedSongIndex,
         renderedAnnotationIndex
@@ -31,6 +34,7 @@ const mapStateToProps = ({
     sessionStore: { interactivatedVerseIndex }
 }) => ({
     canCarouselRender,
+    didCarouselRender,
     renderedSongIndex,
     renderedAnnotationIndex,
     isHiddenCarouselNav,
@@ -47,6 +51,7 @@ class Carousel extends PureComponent {
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
+        didCarouselRender: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
@@ -59,63 +64,27 @@ class Carousel extends PureComponent {
         updateRenderStore: PropTypes.func.isRequired
     }
 
-    state = {
-        hasMounted: false,
-        isShown: false,
-        didRenderTimeoutId: '',
-        waitForShowTimeoutId: ''
-    }
-
-    // No shouldComponentUpdate necessary.
+    state = { didRenderTimeoutId: '' }
 
     componentDidUpdate(prevProps) {
-        const { canCarouselRender } = this.props,
+        const
+            { canCarouselRender } = this.props,
             { canCarouselRender: couldRender } = prevProps
 
         if (canCarouselRender && !couldRender) {
-            logger.warn('Carousel rendered.')
-
             clearTimeout(this.state.didRenderTimeoutId)
-            clearTimeout(this.state.waitForShowTimeoutId)
 
-            const
-                // Wait for parent transition before continuing render sequence.
-                didRenderTimeoutId = setTimeout(
-                    this._carouselDidRender, 100
-                ),
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                ),
+            // Wait for parent transition before continuing render sequence.
+            const didRenderTimeoutId = setTimeout(
+                this._carouselDidRender, 100
+            )
 
-                {
-                    hasMounted
-                } = this.state
-
-            this.setState({
-                didRenderTimeoutId,
-                waitForShowTimeoutId,
-
-                // Register that component has mounted.
-                ...!hasMounted && { hasMounted: true }
-            })
-
-        } else if (couldRender && !canCarouselRender) {
-
-            this.setState({
-                isShown: false
-            })
+            this.setState({ didRenderTimeoutId })
         }
     }
 
     _carouselDidRender = () => {
         this.props.updateRenderStore({ didCarouselRender: true })
-    }
-
-    _waitForShowBeforeRender = () => {
-        this.setState({
-            isShown: true
-        })
     }
 
     _setCarouselParent = (node) => {
@@ -128,22 +97,17 @@ class Carousel extends PureComponent {
 
     render() {
         const {
-                isHiddenCarouselNav,
-                renderedSongIndex,
-                renderedAnnotationIndex,
-                accessedAnnotationIndex,
-                isAccessOn,
-                isCarouselShown,
-                isDotsSlideShown,
-                interactivatedVerseIndex,
-                isLyricExpanded,
-                canCarouselRender
-            } = this.props,
-
-            {
-                hasMounted,
-                isShown
-            } = this.state
+            isHiddenCarouselNav,
+            renderedSongIndex,
+            renderedAnnotationIndex,
+            accessedAnnotationIndex,
+            isAccessOn,
+            isCarouselShown,
+            isDotsSlideShown,
+            interactivatedVerseIndex,
+            isLyricExpanded,
+            didCarouselRender
+        } = this.props
 
         if (isHiddenCarouselNav) {
             return null
@@ -157,12 +121,12 @@ class Carousel extends PureComponent {
              */
             annotationsIndices = getArrayOfLength(annotationsCount)
 
-        return (hasMounted || canCarouselRender) && (
+        return (
             <div
                 className={cx(
                     'Carousel',
                     'gradientMask__carousel__desktop',
-                    { 'parent__shown': canCarouselRender && isShown }
+                    { 'parent__shown': didCarouselRender }
                 )}
             >
                 <ScrollCarouselListener {...{ parentThis: this }} />
@@ -170,7 +134,6 @@ class Carousel extends PureComponent {
                     ref={this._setCarouselParent}
                     className="Carousel__scroll"
                 >
-
                     {annotationsIndices.map(index => {
 
                         const annotationIndex = index + 1,
@@ -208,7 +171,6 @@ class Carousel extends PureComponent {
                     })}
 
                 </div>
-
                 <CarouselSelect />
             </div>
         )

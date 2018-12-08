@@ -1,6 +1,6 @@
 // Section to show the stage illustrations.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -13,7 +13,6 @@ import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/general'
 import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
 const mapStateToProps = ({
-    renderStore: { canTheatreRender },
     deviceStore: {
         windowWidth,
         stageLeft,
@@ -21,26 +20,20 @@ const mapStateToProps = ({
         ceilingHeight
     }
 }) => ({
-    canTheatreRender,
     windowWidth,
     stageLeft,
     stageWidth,
     ceilingHeight
 })
 
-class Ceiling extends Component {
+class Ceiling extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
         windowWidth: PropTypes.number.isRequired,
         stageLeft: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
         ceilingHeight: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canTheatreRender
     }
 
     render() {

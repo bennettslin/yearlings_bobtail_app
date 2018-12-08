@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -19,8 +19,7 @@ const mapStateToProps = ({
         stageHeight,
         ceilingHeight,
         floorHeight
-    },
-    renderStore: { canTheatreRender }
+    }
 }) => ({
     windowHeight,
     windowWidth,
@@ -28,15 +27,13 @@ const mapStateToProps = ({
     stageWidth,
     stageHeight,
     ceilingHeight,
-    floorHeight,
-    canTheatreRender
+    floorHeight
 })
 
-class Wall extends Component {
+class Wall extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
         windowHeight: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
         stageLeft: PropTypes.number.isRequired,
@@ -47,10 +44,6 @@ class Wall extends Component {
 
         // From parent.
         isRight: PropTypes.bool
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canTheatreRender
     }
 
     render() {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -11,7 +11,6 @@ import { getArrayOfCoordinatesForFactoredLengths } from 'helpers/general'
 import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
 const mapStateToProps = ({
-    renderStore: { canTheatreRender },
     deviceStore: {
         windowWidth,
         stageLeft,
@@ -19,26 +18,20 @@ const mapStateToProps = ({
         floorHeight
     }
 }) => ({
-    canTheatreRender,
     windowWidth,
     stageLeft,
     stageWidth,
     floorHeight
 })
 
-class Floor extends Component {
+class Floor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
         windowWidth: PropTypes.number.isRequired,
         stageLeft: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
         floorHeight: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canTheatreRender
     }
 
     render() {

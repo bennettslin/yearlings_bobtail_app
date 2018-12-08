@@ -34,42 +34,22 @@ class Theatre extends PureComponent {
         updateRenderStore: PropTypes.func.isRequired
     }
 
-    state = {
-        isShown: false,
-        didRenderTimeoutId: '',
-        waitForShowTimeoutId: ''
-    }
+    state = { didRenderTimeoutId: '' }
 
     componentDidUpdate(prevProps) {
-        const { canTheatreRender } = this.props,
+        const
+            { canTheatreRender } = this.props,
             { canTheatreRender: couldRender } = prevProps
 
         if (canTheatreRender && !couldRender) {
-            logger.warn('Theatre rendered.')
-
             clearTimeout(this.state.didRenderTimeoutId)
-            clearTimeout(this.state.waitForShowTimeoutId)
 
-            const
-                // Wait for parent transition before continuing render sequence.
-                didRenderTimeoutId = setTimeout(
-                    this._theatreDidRender, 100
-                ),
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                )
+            // Wait for parent transition before continuing render sequence.
+            const didRenderTimeoutId = setTimeout(
+                this._theatreDidRender, 100
+            )
 
-            this.setState({
-                didRenderTimeoutId,
-                waitForShowTimeoutId
-            })
-
-        } else if (couldRender && !canTheatreRender) {
-
-            this.setState({
-                isShown: false
-            })
+            this.setState({ didRenderTimeoutId })
         }
     }
 
@@ -77,22 +57,14 @@ class Theatre extends PureComponent {
         this.props.updateRenderStore({ didTheatreRender: true })
     }
 
-    _waitForShowBeforeRender = () => {
-        this.setState({
-            isShown: true
-        })
-    }
-
     render() {
-        const
-            { didTheatreRender } = this.props,
-            { isShown } = this.state
+        const { didTheatreRender } = this.props
 
         return (
             <div className={cx(
                 'Theatre',
                 'absoluteFullContainer',
-                { 'parent__shown': didTheatreRender && isShown }
+                { 'parent__shown': didTheatreRender }
             )}>
 
                 {/* Scene is behind theatre due to presence transitions. */}

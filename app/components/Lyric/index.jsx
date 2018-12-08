@@ -16,9 +16,13 @@ import LyricToggleScroll from './Toggle/Scroll'
 import VerseBar from './VerseBar'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender }
+    renderStore: {
+        canLyricRender,
+        didLyricRender
+    }
 }) => ({
-    canLyricRender
+    canLyricRender,
+    didLyricRender
 })
 
 /*************
@@ -30,6 +34,7 @@ class Lyric extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
+        didLyricRender: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -37,48 +42,24 @@ class Lyric extends PureComponent {
     }
 
     state = {
-        hasMounted: false,
-        isShown: false,
         isTransitioningHeight: false,
-        didRenderTimeoutId: '',
-        waitForShowTimeoutId: ''
+        didRenderTimeoutId: ''
     }
 
     componentDidUpdate(prevProps) {
-        const { canLyricRender } = this.props,
+        const
+            { canLyricRender } = this.props,
             { canLyricRender: couldRender } = prevProps
 
         if (canLyricRender && !couldRender) {
-            logger.warn('Lyric rendered.')
-
             clearTimeout(this.state.didRenderTimeoutId)
-            clearTimeout(this.state.waitForShowTimeoutId)
 
-            const
-                // Wait for parent transition before continuing render sequence.
-                didRenderTimeoutId = setTimeout(
-                    this._lyricDidRender, 100
-                ),
-                // Set timeout to prevent children transitions before render.
-                waitForShowTimeoutId = setTimeout(
-                    this._waitForShowBeforeRender, 50
-                ),
+            // Wait for parent transition before continuing render sequence.
+            const didRenderTimeoutId = setTimeout(
+                this._lyricDidRender, 100
+            )
 
-                { hasMounted } = this.state
-
-            this.setState({
-                didRenderTimeoutId,
-                waitForShowTimeoutId,
-
-                // Register that component has mounted.
-                ...!hasMounted && { hasMounted: true }
-            })
-
-        } else if (couldRender && !canLyricRender) {
-
-            this.setState({
-                isShown: false
-            })
+            this.setState({ didRenderTimeoutId })
         }
     }
 
@@ -86,24 +67,14 @@ class Lyric extends PureComponent {
         this.props.updateRenderStore({ didLyricRender: true })
     }
 
-    _waitForShowBeforeRender = () => {
-        this.setState({
-            isShown: true
-        })
-    }
-
     _handleTransition = (e) => {
         if (e.propertyName === 'height') {
-            this.setState({
-                isTransitioningHeight: true
-            })
+            this.setState({ isTransitioningHeight: true })
         }
     }
 
     completeHeightTransition = () => {
-        this.setState({
-            isTransitioningHeight: false
-        })
+        this.setState({ isTransitioningHeight: false })
     }
 
     _handleVerseSelect = ({
@@ -123,92 +94,60 @@ class Lyric extends PureComponent {
     render() {
 
         const {
-                canLyricRender,
+                didLyricRender,
                 setLyricFocusElement
             } = this.props,
 
-            {
-                hasMounted,
-                isShown,
-                isTransitioningHeight
-            } = this.state,
+            { isTransitioningHeight } = this.state
 
-            isParentShown = canLyricRender && isShown
-
-        return (hasMounted || canLyricRender) && (
+        return (
             <___>
-                <LyricView
+                <div
                     {...{
-                        isParentShown,
-                        handleTransition: this._handleTransition,
-                        isTransitioningHeight,
-                        completeHeightTransition: this.completeHeightTransition,
-                        handleVerseBarWheel: this._handleVerseBarWheel,
-                        handleVerseSelect: this._handleVerseSelect,
-                        parentThis: this,
-                        setLyricFocusElement
+                        className: cx(
+                            'Lyric',
+                            'position__lyricColumn__desktop',
+                            'position__lyricColumn__mobile',
+                            'gradientMask__lyricColumn__desktop',
+
+                            { 'parent__shown': didLyricRender }
+                        ),
+                        onTransitionEnd: this._handleTransition
                     }}
-                />
+                >
+                    <LyricScroll
+                        {...{
+                            isTransitioningHeight,
+                            completeHeightTransition:
+                                this.completeHeightTransition,
+                            handleVerseSelect: this._handleVerseSelect,
+                            setLyricFocusElement,
+                            parentThis: this
+                        }}
+                    />
+                    <LyricToggleEar />
+                    <LyricToggleExpand />
+                    <LyricToggleScroll />
+                    <LyricAccess />
+
+                    {/* These are the only two flex children. */}
+                    <VerseBar
+                        isAbove
+                        {...{
+                            handleVerseBarWheel: this._handleVerseBarWheel
+                        }}
+                    />
+                    <VerseBar
+                        {...{
+                            handleVerseBarWheel: this._handleVerseBarWheel
+                        }}
+                    />
+                </div>
                 <VerseDispatcher {...{ parentThis: this }} />
             </___>
         )
     }
 }
-
-/****************
- * PRESENTATION *
- ****************/
-
-const lyricViewPropTypes = {
-    // From parent.
-        isParentShown: PropTypes.bool.isRequired,
-        handleTransition: PropTypes.func.isRequired,
-        handleVerseBarWheel: PropTypes.func.isRequired
-    },
-
-    LyricView = ({
-
-        // From props.
-        handleVerseBarWheel,
-
-        // From controller.
-        isParentShown,
-        handleTransition,
-
-        ...other
-    }) => {
-
-        return (
-            <div
-                className={cx(
-                    'Lyric',
-                    'position__lyricColumn__desktop',
-                    'position__lyricColumn__mobile',
-                    'gradientMask__lyricColumn__desktop',
-
-                    { 'parent__shown': isParentShown }
-                )}
-                onTransitionEnd={handleTransition}
-            >
-                <LyricScroll {...other} />
-
-                <LyricToggleEar />
-                <LyricToggleExpand />
-                <LyricToggleScroll />
-
-                <LyricAccess />
-
-                {/* These are the only two flex children. */}
-                <VerseBar
-                    isAbove
-                    {...{ handleVerseBarWheel }}
-                />
-                <VerseBar {...{ handleVerseBarWheel }} />
-            </div>
-        )
-    }
-
-LyricView.propTypes = lyricViewPropTypes
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({

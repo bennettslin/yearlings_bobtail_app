@@ -38,6 +38,8 @@ class RenderListener extends PureComponent {
             { didTheatreRender: hadTheatreRendered } = prevProps
 
         if (didTheatreRender && !hadTheatreRendered) {
+            logger.warn('Theatre did render.')
+
             const nextKey = getNextKeyToRender({ currentKey: THEATRE })
             if (nextKey) {
                 this.props.updateRenderStore({
@@ -53,6 +55,8 @@ class RenderListener extends PureComponent {
             { didSceneRender: hadSceneRendered } = prevProps
 
         if (didSceneRender && !hadSceneRendered) {
+            logger.warn('Scene did render.')
+
             const nextKey = getNextKeyToRender({ currentKey: SCENE })
             if (nextKey) {
                 this.props.updateRenderStore({
@@ -68,6 +72,8 @@ class RenderListener extends PureComponent {
             { didLyricRender: hadLyricRendered } = prevProps
 
         if (didLyricRender && !hadLyricRendered) {
+            logger.warn('Lyric did render.')
+
             const nextKey = getNextKeyToRender({ currentKey: LYRIC })
             if (nextKey) {
                 this.props.updateRenderStore({
@@ -83,6 +89,8 @@ class RenderListener extends PureComponent {
             { didCarouselRender: hadCarouselRendered } = prevProps
 
         if (didCarouselRender && !hadCarouselRendered) {
+            logger.warn('Carousel did render.')
+
             const nextKey = getNextKeyToRender({ currentKey: CAROUSEL })
             if (nextKey) {
                 this.props.updateRenderStore({

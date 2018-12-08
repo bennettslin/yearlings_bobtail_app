@@ -1,6 +1,6 @@
 // Section to show the stage illustrations.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -11,31 +11,24 @@ const mapStateToProps = ({
         stageLeft,
         stageWidth,
         stageHeight
-    },
-    renderStore: { canTheatreRender }
+    }
 }) => ({
     stageTop,
     stageLeft,
     stageWidth,
-    stageHeight,
-    canTheatreRender
+    stageHeight
 })
 
-class Stage extends Component {
+class Stage extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
         stageTop: PropTypes.number.isRequired,
         stageLeft: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
         stageHeight: PropTypes.number.isRequired,
 
         children: PropTypes.any.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canTheatreRender
     }
 
     render() {
