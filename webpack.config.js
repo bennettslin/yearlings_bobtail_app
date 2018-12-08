@@ -91,7 +91,7 @@ const webpack = require('webpack'),
         parts.minifyStyles({
             options: {
                 discardComments: {
-                    removeAll: true,
+                    removeAll: true
                 },
                 // Avoid potentially unsafe transformations.
                 safe: true
