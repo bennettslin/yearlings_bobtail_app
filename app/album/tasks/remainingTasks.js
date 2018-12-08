@@ -1,10 +1,4 @@
 module.exports = [
-    {
-        taskName: `Fix with audio timer lagging during scroll.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
     // Scrolling stuff.
     {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,

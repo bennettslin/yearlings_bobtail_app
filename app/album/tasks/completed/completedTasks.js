@@ -4121,5 +4121,10 @@ module.exports = [
         taskName: `Fix issue with scroll and wiki focus.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix audio timer lagging during scroll. General audio and player manager refactors.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]
