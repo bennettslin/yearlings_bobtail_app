@@ -36,10 +36,7 @@ class AudioTimer extends PureComponent {
                 selectedTime
             } = this.props,
 
-            {
-                base,
-                jiffy
-            } = getFormattedTime(selectedTime, true)
+            baseTime = getFormattedTime(selectedTime)
 
         return !isSelectedLogue && (
 
@@ -56,10 +53,7 @@ class AudioTimer extends PureComponent {
                 <div className="AudioTimer__child">
 
                     <span className="AudioTimer__base">
-                        {base}
-                    </span>
-                    <span className="AudioTimer__jiffy">
-                        {jiffy}
+                        {baseTime}
                     </span>
                 </div>
             </div>

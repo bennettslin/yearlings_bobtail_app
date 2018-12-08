@@ -2,7 +2,7 @@
 
 import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
 
-export const getFormattedTime = (time, withJiffy) => {
+export const getFormattedTime = (time) => {
     if (time === -1) {
         time = 0
     }
@@ -12,19 +12,7 @@ export const getFormattedTime = (time, withJiffy) => {
         secondsZeroTen = seconds < 10 ? '0' : '',
         baseTime = `${minutes}:${secondsZeroTen}${seconds}`
 
-    // If including jiffy, return an object.
-    if (withJiffy) {
-        const jiffy = Math.floor((time * 10) % 10)
-
-        return {
-            base: baseTime,
-            jiffy: `.${jiffy}`
-        }
-
-    // Otherwise return a string.
-    } else {
-        return baseTime
-    }
+    return baseTime
 }
 
 // Parses text in anchor tag into annotation header.

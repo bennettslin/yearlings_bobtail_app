@@ -15,19 +15,6 @@ $fontSize__audioTimer__titleTimer: 1.6em;
     }
 }
 
-.AudioTimer__jiffy {
-    font-size:
-        $fontSize__audioTimer
-        * $multiplier__audioTimer__jiffy;
-
-    .AudioTimer__titleTimer
-    & {
-        font-size:
-            $fontSize__audioTimer__titleTimer
-            * $multiplier__audioTimer__jiffy;
-    }
-}
-
 .AudioTimer__titleTimer {
 
     transition: opacity $animationDuration__default;
