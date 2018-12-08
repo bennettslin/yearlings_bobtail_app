@@ -62,9 +62,9 @@ const _getValidTarget = (scrollParent) => {
     return (element) => {
         const isParent = element === parentElement
 
-        if (isParent) {
-            logger.info('Scroll parent:', element)
-        }
+        // if (isParent) {
+        //     logger.info('Scroll parent:', element)
+        // }
 
         return isParent
     }

@@ -57,8 +57,6 @@ class LyricScroll extends Component {
      */
 
     componentDidUpdate(prevProps) {
-        logger.warn('LyricScroll rendered.')
-
         if (
             this.props.isTransitioningHeight &&
             !prevProps.isTransitioningHeight

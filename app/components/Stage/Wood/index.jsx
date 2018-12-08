@@ -3,42 +3,16 @@
  * But renders with Theatre, not Scene.
  */
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
 import cx from 'classnames'
 
-const mapStateToProps = ({
-    renderStore: { canTheatreRender }
-}) => ({
-    canTheatreRender
-})
+const Wood = () => (
+    <div
+        className={cx(
+            'Wood',
+            'absoluteFullContainer'
+        )}
+    />
+)
 
-class Wood extends Component {
-
-    static propTypes = {
-        canTheatreRender: PropTypes.bool.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canTheatreRender
-    }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-            logger.warn('Wood rendered.')
-        }
-    }
-
-    render() {
-        return (
-            <div
-                className={cx(
-                    'Wood',
-                    'absoluteFullContainer'
-                )}
-            />
-        )
-    }
-}
-export default connect(mapStateToProps)(Wood)
+export default Wood

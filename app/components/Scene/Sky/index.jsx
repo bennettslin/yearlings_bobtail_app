@@ -36,12 +36,6 @@ class Sky extends Component {
         return nextProps.canSceneRender
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.canSceneRender && !prevProps.canSceneRender) {
-            logger.warn('Sky rendered.')
-        }
-    }
-
     render() {
         const {
                 skyConfig

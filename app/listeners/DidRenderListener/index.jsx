@@ -24,7 +24,6 @@ class DidRenderListener extends PureComponent {
         this._checkVerseDidRender(prevProps)
         this._checkSceneDidRender(prevProps)
         this._checkLyricDidRender(prevProps)
-        this._checkCarouselDidRender()
     }
 
     _checkTheatreDidRender(prevProps) {
@@ -89,10 +88,6 @@ class DidRenderListener extends PureComponent {
                 canCarouselRender: true
             })
         }
-    }
-
-    _checkCarouselDidRender() {
-        logger.warn('Live rendered.')
     }
 
     render() {
