@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAudioStore } from 'flux/audio/action'
-import { resetPlayerQueue } from 'flux/player/action'
+import { resetPlayingQueue } from 'flux/playing/action'
 
 import { getNextPlayerIndexToRender } from './helper'
 
@@ -17,11 +17,11 @@ class PlayerListener extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         playersBitNumber: PropTypes.number.isRequired,
         playersCanPlayThrough: PropTypes.object.isRequired,
-        queuedPlayingFromLogue: PropTypes.bool.isRequired,
-        queuedPlayerSongIndex: PropTypes.number.isRequired,
-        queuedPlayerVerseIndex: PropTypes.number.isRequired,
+        queuedPlayFromLogue: PropTypes.bool.isRequired,
+        queuedPlaySongIndex: PropTypes.number.isRequired,
+        queuedPlayVerseIndex: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
-        resetPlayerQueue: PropTypes.func.isRequired,
+        resetPlayingQueue: PropTypes.func.isRequired,
 
         // From parent.
         handleSelectPlayer: PropTypes.func.isRequired
@@ -38,31 +38,31 @@ class PlayerListener extends PureComponent {
 
     _checkPlayerChange(prevProps) {
         const {
-                queuedPlayingFromLogue,
-                queuedPlayerSongIndex,
-                queuedPlayerVerseIndex
+                queuedPlayFromLogue,
+                queuedPlaySongIndex,
+                queuedPlayVerseIndex
             } = this.props,
             {
-                queuedPlayerSongIndex: prevSongIndex,
-                queuedPlayerVerseIndex: prevVerseIndex
+                queuedPlaySongIndex: prevSongIndex,
+                queuedPlayVerseIndex: prevVerseIndex
             } = prevProps
 
         if (
             (
-                queuedPlayerSongIndex > -1 &&
-                queuedPlayerSongIndex !== prevSongIndex
+                queuedPlaySongIndex > -1 &&
+                queuedPlaySongIndex !== prevSongIndex
             ) || (
-                queuedPlayerVerseIndex > -1 &&
-                queuedPlayerVerseIndex !== prevVerseIndex
+                queuedPlayVerseIndex > -1 &&
+                queuedPlayVerseIndex !== prevVerseIndex
             )
         ) {
             this.props.handleSelectPlayer({
-                isPlayingFromLogue: queuedPlayingFromLogue,
-                nextSongIndex: queuedPlayerSongIndex,
-                nextVerseIndex: queuedPlayerVerseIndex
+                isPlayFromLogue: queuedPlayFromLogue,
+                nextSongIndex: queuedPlaySongIndex,
+                nextVerseIndex: queuedPlayVerseIndex
             })
 
-            this.props.resetPlayerQueue()
+            this.props.resetPlayingQueue()
         }
     }
 
@@ -102,25 +102,25 @@ const mapStateToProps = ({
         selectedSongIndex,
         isSelectedLogue
     },
-    playerStore: {
-        queuedPlayingFromLogue,
-        queuedPlayerSongIndex,
-        queuedPlayerVerseIndex
+    playingStore: {
+        queuedPlayFromLogue,
+        queuedPlaySongIndex,
+        queuedPlayVerseIndex
     }
 }) => ({
     playersBitNumber,
     playersCanPlayThrough,
     selectedSongIndex,
     isSelectedLogue,
-    queuedPlayingFromLogue,
-    queuedPlayerSongIndex,
-    queuedPlayerVerseIndex
+    queuedPlayFromLogue,
+    queuedPlaySongIndex,
+    queuedPlayVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAudioStore,
-        resetPlayerQueue
+        resetPlayingQueue
     }, dispatch)
 )
 

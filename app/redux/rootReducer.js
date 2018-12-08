@@ -7,7 +7,7 @@ import DotsReducer from './dots/reducer'
 import EventReducer from './event/reducer'
 import LoadReducer from './load/reducer'
 import OptionReducer from './option/reducer'
-import PlayerReducer from './player/reducer'
+import PlayingReducer from './playing/reducer'
 import RenderReducer from './render/reducer'
 import RenderableReducer from './renderable/reducer'
 import RenderedReducer from './rendered/reducer'
@@ -30,7 +30,7 @@ import {
     EVENT_STORE,
     LOAD_STORE,
     OPTION_STORE,
-    PLAYER_STORE,
+    PLAYING_STORE,
     RENDER_STORE,
     RENDERABLE_STORE,
     RENDERED_STORE,
@@ -46,7 +46,7 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
-    [PLAYER_STORE]: PlayerReducer,
+    [PLAYING_STORE]: PlayingReducer,
     [SONG_STORE]: SongReducer,
     [RENDERED_STORE]: RenderedReducer,
     [ACCESS_STORE]: AccessReducer,

@@ -181,7 +181,7 @@ const mapStateToProps = ({
         selectedVerseIndex,
         isSelectedLogue
     },
-    playerStore: { isPlaying },
+    playingStore: { isPlaying },
     toggleStore: {
         isAutoScroll,
         isLyricExpanded

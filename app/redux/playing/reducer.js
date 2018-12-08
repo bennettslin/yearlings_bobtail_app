@@ -1,13 +1,13 @@
 // Reducers for player updates.
-import { PLAYER_STORE } from '../storeKeys'
-import { PLAYER_DEFAULTS } from '../defaultStates'
+import { PLAYING_STORE } from '../storeKeys'
+import { PLAYING_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = PLAYER_DEFAULTS,
+    state = PLAYING_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case PLAYER_STORE:
+        case PLAYING_STORE:
             return {
                 ...state,
                 ...action.payload

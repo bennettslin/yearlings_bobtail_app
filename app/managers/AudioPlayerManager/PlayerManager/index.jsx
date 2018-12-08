@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { updatePlayerStore } from 'flux/player/action'
+import { updatePlayingStore } from 'flux/playing/action'
 import { updateSongStore } from 'flux/song/action'
 
 import PlayerDispatcher from './Dispatcher'
@@ -27,7 +27,7 @@ const mapStateToProps = ({
         nextPlayerToRender,
         ...playersCanPlayThrough
     },
-    playerStore: { isPlaying },
+    playingStore: { isPlaying },
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
@@ -59,7 +59,7 @@ class PlayerManager extends PureComponent {
         selectedTime: PropTypes.number.isRequired,
         nextPlayerToRender: PropTypes.number.isRequired,
         playersCanPlayThrough: PropTypes.object.isRequired,
-        updatePlayerStore: PropTypes.func.isRequired,
+        updatePlayingStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -109,7 +109,7 @@ class PlayerManager extends PureComponent {
         if (!isPlaying && wasPlaying) {
 
             // Play is being toggled off, so set in store right away.
-            this.props.updatePlayerStore({ isPlaying: false })
+            this.props.updatePlayingStore({ isPlaying: false })
 
             return this.getPlayerRef(selectedSongIndex).handleEndPlaying(
 
@@ -124,7 +124,7 @@ class PlayerManager extends PureComponent {
     }
 
     handleSelectPlayer = ({
-        isPlayingFromLogue,
+        isPlayFromLogue,
         nextSongIndex,
         nextVerseIndex
 
@@ -138,7 +138,7 @@ class PlayerManager extends PureComponent {
         this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
 
         // If playing from logue, begin playing only once player is selected.
-        if (this.props.isPlaying || isPlayingFromLogue) {
+        if (this.props.isPlaying || isPlayFromLogue) {
             /**
              * If already playing, begin playing newly selected player.
              */
@@ -160,7 +160,7 @@ class PlayerManager extends PureComponent {
          * it was able to play. If selected song was changed, set in store
          * whether newly selected player was able to play.
          */
-        this.props.updatePlayerStore({ isPlaying: success })
+        this.props.updatePlayingStore({ isPlaying: success })
     }
 
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
@@ -323,7 +323,7 @@ class PlayerManager extends PureComponent {
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updatePlayerStore,
+        updatePlayingStore,
         updateSongStore
     }, dispatch)
 )

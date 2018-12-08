@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updatePlayerStore } from 'flux/player/action'
+import { updatePlayingStore } from 'flux/playing/action'
 
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 
@@ -19,7 +19,7 @@ class PlayDispatcher extends PureComponent {
         playersBitNumber: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-        updatePlayerStore: PropTypes.func.isRequired,
+        updatePlayingStore: PropTypes.func.isRequired,
 
         // From parent.
         parentThis: PropTypes.object.isRequired
@@ -49,21 +49,21 @@ class PlayDispatcher extends PureComponent {
             return false
         }
 
-        const isPlayingFromLogue = isSelectedLogue && isPlaying
+        const isPlayFromLogue = isSelectedLogue && isPlaying
 
         /**
          * Select first song if play button in logue is toggled on. In order
          * to keep player and song in sync, only dispatch song, and let song
          * handler send queued event to toggle play.
          */
-        if (isPlayingFromLogue) {
+        if (isPlayFromLogue) {
             this.dispatchSong({
-                isPlayingFromLogue: true,
+                isPlayFromLogue: true,
                 selectedSongIndex: 1
             })
 
         } else {
-            this.props.updatePlayerStore({ queuedTogglePlay: true })
+            this.props.updatePlayingStore({ queuedTogglePlay: true })
         }
 
         return true
@@ -78,7 +78,7 @@ class PlayDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     audioStore: { playersBitNumber },
-    playerStore: { isPlaying },
+    playingStore: { isPlaying },
     songStore: {
         selectedSongIndex,
         isSelectedLogue
@@ -92,7 +92,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updatePlayerStore
+        updatePlayingStore
     }, dispatch)
 )
 

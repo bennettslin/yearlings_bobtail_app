@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updatePlayerStore } from 'flux/player/action'
+import { updatePlayingStore } from 'flux/playing/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 
@@ -23,7 +23,7 @@ class AudioManager extends PureComponent {
         playersBitNumber: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        updatePlayerStore: PropTypes.func.isRequired,
+        updatePlayingStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
@@ -48,7 +48,7 @@ class AudioManager extends PureComponent {
         if (queuedTogglePlay && !prevTogglePlay) {
             this._togglePlay()
 
-            this.props.updatePlayerStore({ queuedTogglePlay: false })
+            this.props.updatePlayingStore({ queuedTogglePlay: false })
         }
     }
 
@@ -115,7 +115,7 @@ class AudioManager extends PureComponent {
 
 const mapStateToProps = ({
     audioStore: { playersBitNumber },
-    playerStore: {
+    playingStore: {
         isPlaying,
         queuedTogglePlay
     },
@@ -131,7 +131,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updatePlayerStore,
+        updatePlayingStore,
         updateScrollLyricStore,
         updateSessionStore
     }, dispatch)

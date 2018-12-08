@@ -94,12 +94,12 @@ const
         isSongShownTips: false
     },
 
-    PLAYER_DEFAULTS = {
+    PLAYING_DEFAULTS = {
         isPlaying: false,
         queuedTogglePlay: false,
-        queuedPlayingFromLogue: false,
-        queuedPlayerSongIndex: -1,
-        queuedPlayerVerseIndex: -1
+        queuedPlayFromLogue: false,
+        queuedPlaySongIndex: -1,
+        queuedPlayVerseIndex: -1
     },
 
     RENDER_DEFAULTS = {
@@ -231,7 +231,7 @@ export {
     EVENT_DEFAULTS,
     LOAD_DEFAULTS,
     OPTION_DEFAULTS,
-    PLAYER_DEFAULTS,
+    PLAYING_DEFAULTS,
     RENDER_DEFAULTS,
     RENDERABLE_DEFAULTS,
     RENDERED_DEFAULTS,

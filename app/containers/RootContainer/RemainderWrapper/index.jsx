@@ -162,7 +162,7 @@ const mapStateToProps = ({
     accessStore: { accessedKey },
     sessionStore: { interactivatedVerseIndex },
     songStore: { earColumnIndex },
-    playerStore: { isPlaying },
+    playingStore: { isPlaying },
     dotsStore: { dotsBitNumber },
     toggleStore: {
         isAccessOn,
