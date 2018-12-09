@@ -10,6 +10,7 @@ import AnnotationTitleText from './TitleText'
 
 import AnnotationAccess from './Access'
 
+import { getDotKeysFromBitNumber } from 'helpers/dot'
 import { getPropsAreShallowEqual } from 'helpers/general'
 import { IS_DOT_CARD } from 'constants/lyrics'
 
@@ -18,15 +19,11 @@ import { getAnnotationTitleData } from './helper'
 const mapStateToProps = ({
     renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    }
+    dotsStore: { dotsBitNumber }
 }) => ({
     canCarouselRender,
     renderedSongIndex,
-    dotsBitNumber,
-    selectedDotKeys
+    dotsBitNumber
 })
 
 class AnnotationTitle extends Component {
@@ -40,7 +37,6 @@ class AnnotationTitle extends Component {
         canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
         updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -75,8 +71,10 @@ class AnnotationTitle extends Component {
                 isSelected,
                 renderedSongIndex,
                 annotationIndex,
-                selectedDotKeys
+                dotsBitNumber
             } = this.props,
+
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
             {
                 dotKeys,

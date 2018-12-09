@@ -5,7 +5,10 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import {
+    getDotKeysFromBitNumber,
+    getPrefixedDotLetterClassNames
+} from 'helpers/dot'
 import { getStanzaIndexForVerseIndex } from '../helper'
 
 class LogicWrapper extends PureComponent {
@@ -23,7 +26,6 @@ class LogicWrapper extends PureComponent {
         renderedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
         children: PropTypes.any.isRequired
@@ -31,7 +33,7 @@ class LogicWrapper extends PureComponent {
 
     render() {
         const {
-                selectedDotKeys,
+                dotsBitNumber,
                 isPlaying,
                 isSliderMoving,
                 renderedSongIndex,
@@ -42,6 +44,8 @@ class LogicWrapper extends PureComponent {
                 isVerseBarBelow,
                 children
             } = this.props,
+
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
             areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
 
@@ -101,10 +105,7 @@ class LogicWrapper extends PureComponent {
 const mapStateToProps = ({
     sessionStore: { interactivatedVerseIndex },
     audioStore: { isPlaying },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    },
+    dotsStore: { dotsBitNumber },
     verseBarsStore: {
         isVerseBarAbove,
         isVerseBarBelow
@@ -120,7 +121,6 @@ const mapStateToProps = ({
 }) => ({
     interactivatedVerseIndex,
     dotsBitNumber,
-    selectedDotKeys,
     isPlaying,
     renderedSongIndex,
     renderedVerseIndex,

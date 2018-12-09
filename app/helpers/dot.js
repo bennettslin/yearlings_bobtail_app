@@ -2,6 +2,9 @@
 import keys from 'lodash.keys'
 import pickBy from 'lodash.pickby'
 
+import { getObjectFromBitNumber } from './bit'
+import { ALL_DOT_KEYS } from '../constants/dots'
+
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 
     const presentKeysArray = keys(presentKeys)
@@ -15,6 +18,13 @@ export const intersects = (presentKeys = {}, selectedKeys = {}) => {
             return intersects || selectedKeys[presentKey]
         }, false)
     }
+}
+
+export const getDotKeysFromBitNumber = (bitNumber) => {
+    return getObjectFromBitNumber({
+        keysArray: ALL_DOT_KEYS,
+        bitNumber
+    })
 }
 
 export const getPrefixedDotLetterClassNames = (entity, prefix) => {

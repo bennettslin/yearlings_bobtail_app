@@ -42,7 +42,7 @@ export const convertTrueFalseKeysToBitNumber = ({
     }, 0)
 }
 
-export const convertBitNumberToTrueFalseKeys = ({
+export const getObjectFromBitNumber = ({
     keysArray,
     keysCount = 0,
     bitNumber
@@ -88,7 +88,7 @@ export const getValueInBitNumber = ({
     key
 }) => {
     // Convert the bit number to an object whose values are true or false.
-    const trueFalseObject = convertBitNumberToTrueFalseKeys({
+    const trueFalseObject = getObjectFromBitNumber({
         keysArray,
         keysCount,
         bitNumber
@@ -105,7 +105,7 @@ export const setNewValueInBitNumber = ({
     value
 }) => {
     // First convert the bit number to an object whose values true or false.
-    const trueFalseObject = convertBitNumberToTrueFalseKeys({
+    const trueFalseObject = getObjectFromBitNumber({
         keysArray,
         keysCount,
         bitNumber

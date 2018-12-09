@@ -9,6 +9,7 @@ import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
+import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { getAnnotationIndexForVerseIndex } from './helper'
 
 class AnnotationAccessDispatcher extends PureComponent {
@@ -18,7 +19,6 @@ class AnnotationAccessDispatcher extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
         isEarShown: PropTypes.bool.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
@@ -41,10 +41,11 @@ class AnnotationAccessDispatcher extends PureComponent {
 
         const {
                 selectedSongIndex,
-                selectedDotKeys,
+                dotsBitNumber,
                 earColumnIndex,
                 isEarShown
             } = this.props,
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
             accessedAnnotationIndex =
                 annotationIndex ?
@@ -100,16 +101,12 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedVerseIndex
     },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    },
+    dotsStore: { dotsBitNumber },
     transientStore: { isEarShown }
 }) => ({
     selectedSongIndex,
     selectedVerseIndex,
     dotsBitNumber,
-    selectedDotKeys,
     earColumnIndex,
     isEarShown
 })

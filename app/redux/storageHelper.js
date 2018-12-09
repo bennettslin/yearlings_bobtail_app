@@ -4,7 +4,7 @@ import album from 'server/album'
 
 import {
     getTwoToThePowerOfN,
-    convertBitNumberToTrueFalseKeys,
+    getObjectFromBitNumber,
     setNewValueInBitNumber
 } from 'helpers/bit'
 
@@ -120,7 +120,7 @@ const getDotsFromStorage = () => {
 
         // Get true-false object from bit number.
         dotsBitNumber = validatedValue,
-        dotsObject = convertBitNumberToTrueFalseKeys({
+        dotsObject = getObjectFromBitNumber({
             keysArray: ALL_DOT_KEYS,
             bitNumber: dotsBitNumber
         })

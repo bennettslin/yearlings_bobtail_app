@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateDotsStore } from 'flux/dots/action'
 
+import { getDotKeysFromBitNumber } from 'helpers/dot'
+
 import { ALL_DOT_KEYS } from 'constants/dots'
 
 class DotSelectDispatcher extends PureComponent {
@@ -13,8 +15,6 @@ class DotSelectDispatcher extends PureComponent {
     static propTypes = {
         // Through Redux.
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
-
         updateAccessStore: PropTypes.func.isRequired,
         updateDotsStore: PropTypes.func.isRequired,
 
@@ -27,9 +27,10 @@ class DotSelectDispatcher extends PureComponent {
     }
 
     dispatchSelectDot = (selectedDotIndex) => {
-        const
+        const { dotsBitNumber } = this.props,
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
             selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
-            isSelected = !this.props.selectedDotKeys[selectedDotKey]
+            isSelected = !selectedDotKeys[selectedDotKey]
 
         this.props.updateDotsStore({
             [selectedDotKey]: isSelected
@@ -46,13 +47,9 @@ class DotSelectDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    }
+    dotsStore: { dotsBitNumber }
 }) => ({
-    dotsBitNumber,
-    selectedDotKeys
+    dotsBitNumber
 })
 
 const bindDispatchToProps = (dispatch) => (

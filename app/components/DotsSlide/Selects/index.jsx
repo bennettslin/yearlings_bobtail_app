@@ -6,20 +6,18 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import DotsSlideSelect from './Select'
+
+import { getDotKeysFromBitNumber } from 'helpers/dot'
 import { ALL_DOT_KEYS } from 'constants/dots'
 
 const mapStateToProps = ({
     accessStore: { accessedDotIndex },
     toggleStore: { isAccessOn },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    }
+    dotsStore: { dotsBitNumber }
 }) => ({
     accessedDotIndex,
     isAccessOn,
-    dotsBitNumber,
-    selectedDotKeys
+    dotsBitNumber
 })
 
 class DotsSlideSelects extends PureComponent {
@@ -29,7 +27,6 @@ class DotsSlideSelects extends PureComponent {
         isAccessOn: PropTypes.bool.isRequired,
         accessedDotIndex: PropTypes.number,
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
         handleContainerClick: PropTypes.func.isRequired
@@ -39,10 +36,12 @@ class DotsSlideSelects extends PureComponent {
         const {
                 isAccessOn,
                 accessedDotIndex,
-                selectedDotKeys,
+                dotsBitNumber,
                 handleContainerClick,
                 ...other
             } = this.props,
+
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
             firstHalfEnd = ALL_DOT_KEYS.length / 2,
             firstHalfArray = ALL_DOT_KEYS.slice(0, firstHalfEnd),

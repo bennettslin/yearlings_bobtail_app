@@ -6,7 +6,10 @@ import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
 
-import { intersects } from '../../../helpers/dot'
+import {
+    intersects,
+    getDotKeysFromBitNumber
+} from '../../../helpers/dot'
 import { getAnnotationObject } from '../../../helpers/data'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 
@@ -18,7 +21,6 @@ class AnnotationDispatcher extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
         updateScrollCarouselStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
@@ -39,9 +41,10 @@ class AnnotationDispatcher extends PureComponent {
     } = {}) => {
 
         const {
-            selectedSongIndex,
-            selectedDotKeys
-        } = this.props
+                selectedSongIndex,
+                dotsBitNumber
+            } = this.props,
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber)
 
         // If selecting an annotation, make sure that its dots intersect.
         if (selectedAnnotationIndex) {
@@ -83,10 +86,11 @@ class AnnotationDispatcher extends PureComponent {
         const {
                 selectedSongIndex,
                 selectedAnnotationIndex: currentAnnotationIndex,
-                selectedDotKeys,
+                dotsBitNumber,
                 earColumnIndex,
                 isEarShown
             } = this.props,
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
             // Called from arrow buttons in popup.
             selectedAnnotationIndex = getAnnotationIndexForDirection({
@@ -125,17 +129,13 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedAnnotationIndex
     },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    },
+    dotsStore: { dotsBitNumber },
     songStore: { earColumnIndex }
 }) => ({
     isEarShown,
     selectedSongIndex,
     selectedAnnotationIndex,
     dotsBitNumber,
-    selectedDotKeys,
     earColumnIndex
 })
 

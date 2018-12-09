@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 import { convertTrueFalseKeysToBitNumber } from 'helpers/bit'
+import { getDotKeysFromBitNumber } from 'helpers/dot'
 
 import AccessLetters from '../../Access/Letters'
 
@@ -22,18 +23,14 @@ const mapStateToProps = ({
         isDotsSlideShown,
         isLyricExpanded
     },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    }
+    dotsStore: { dotsBitNumber }
 }) => ({
     canLyricRender,
     isLyricExpanded,
     renderedAnnotationIndex,
     isCarouselShown,
     isDotsSlideShown,
-    dotsBitNumber,
-    selectedDotKeys
+    dotsBitNumber
 })
 
 class LyricAccess extends Component {
@@ -46,8 +43,7 @@ class LyricAccess extends Component {
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired
+        dotsBitNumber: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -61,8 +57,10 @@ class LyricAccess extends Component {
                 renderedAnnotationIndex,
                 isCarouselShown,
                 isDotsSlideShown,
-                selectedDotKeys
+                dotsBitNumber
             } = this.props,
+
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
             hasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
                 keysArray: ALL_DOT_KEYS,

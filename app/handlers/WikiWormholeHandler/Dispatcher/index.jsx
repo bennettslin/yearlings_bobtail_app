@@ -8,6 +8,8 @@ import { updateAccessStore } from 'flux/access/action'
 
 import { getWikiWormholeIndexForDirection } from './helper'
 
+import { getDotKeysFromBitNumber } from 'helpers/dot'
+
 class WikiWormholeDispatcher extends PureComponent {
 
     static propTypes = {
@@ -15,7 +17,6 @@ class WikiWormholeDispatcher extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
 
@@ -32,9 +33,10 @@ class WikiWormholeDispatcher extends PureComponent {
         const {
                 selectedSongIndex,
                 selectedAnnotationIndex,
-                selectedDotKeys,
+                dotsBitNumber,
                 accessedWikiWormholeIndex: defaultWikiWormholeIndex
             } = this.props,
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
             initialWikiWormholeIndex =
                 defaultWikiWormholeIndex ?
@@ -64,16 +66,12 @@ const mapStateToProps = ({
         selectedAnnotationIndex
     },
     accessStore: { accessedWikiWormholeIndex },
-    dotsStore: {
-        dotsBitNumber,
-        ...selectedDotKeys
-    }
+    dotsStore: { dotsBitNumber }
 }) => ({
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedWikiWormholeIndex,
-    dotsBitNumber,
-    selectedDotKeys
+    dotsBitNumber
 })
 
 const bindDispatchToProps = (dispatch) => (
