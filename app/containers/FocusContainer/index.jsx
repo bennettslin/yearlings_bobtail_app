@@ -15,8 +15,6 @@ import RootContainer from '../RootContainer'
 import KeyManager from '../../managers/KeyManager'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
-import { FOCUS_STYLE } from '../../constants/log'
-
 const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
@@ -155,7 +153,7 @@ class FocusContainer extends PureComponent {
         }
 
         if (focusedElement) {
-            logger.info(`%cFocus on ${focusedElementString}.`, FOCUS_STYLE)
+            logFocus(`Focus on ${focusedElementString}.`)
             focusedElement.focus()
         }
     }

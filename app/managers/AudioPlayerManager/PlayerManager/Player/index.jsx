@@ -4,11 +4,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 
-import {
-    PLAYER_STYLE,
-    ERROR_STYLE
-} from '../../../../constants/log'
-
 class Player extends PureComponent {
 
     static propTypes = {
@@ -53,7 +48,6 @@ class Player extends PureComponent {
     componentDidUpdate() {
         // Tell recently unselected player to stop playing.
         if (!this.props.isSelected) {
-            // logger.info(`Player ${this.props.songIndex} was unselected.`)
             this.handleEndPlaying()
         }
     }
@@ -79,7 +73,7 @@ class Player extends PureComponent {
     }
 
     _handleEndedEvent = () => {
-        logger.info(`%cPlayer for ${this.props.songIndex} ended itself.`, PLAYER_STYLE)
+        logPlayer(`Player for ${this.props.songIndex} ended itself.`)
         this.props.updateEnded()
     }
 
@@ -100,11 +94,11 @@ class Player extends PureComponent {
         if (typeof playPromise !== 'undefined') {
 
             playPromise.then(() => {
-                logger.info(`%cPromise to play ${songIndex} succeeded.`, PLAYER_STYLE)
+                logPlayer(`Promise to play ${songIndex} succeeded.`)
                 this.props.setSelectedPlayerIsPlaying(true)
 
             }).catch(error => {
-                logger.error(`%cPromise to play ${songIndex} failed: ${error}`, ERROR_STYLE)
+                logError(`Promise to play ${songIndex} failed: ${error}`)
                 this.props.setSelectedPlayerIsPlaying(false)
             })
 
@@ -122,7 +116,7 @@ class Player extends PureComponent {
          * make sure the player is actually playing before pausing it.
          */
         if (!this.audioPlayer.paused) {
-            logger.info(`%cPlayer ${this.props.songIndex} ended playing.`, PLAYER_STYLE)
+            logPlayer(`Player ${this.props.songIndex} ended playing.`)
 
             this.audioPlayer.pause()
 
@@ -141,46 +135,46 @@ class Player extends PureComponent {
 
         if (showDebugStatements) {
             this.audioPlayer.addEventListener('ended', () => {
-                logger.error('ended', this.props.songIndex)
+                logPlayer('ended')
             })
             this.audioPlayer.addEventListener('pause', () => {
-                logger.error('pause', this.props.songIndex)
+                logPlayer('pause')
             })
             this.audioPlayer.addEventListener('play', () => {
-                logger.error('play', this.props.songIndex)
+                logPlayer('play')
             })
             this.audioPlayer.addEventListener('playing', () => {
-                logger.error('playing', this.props.songIndex)
+                logPlayer('playing')
             })
             // Determine which times ranges have been buffered.
             this.audioPlayer.addEventListener('progress', () => {
-                logger.error('progress', this.props.songIndex)
+                logPlayer('progress')
             })
             // Seek operation has completed.
             this.audioPlayer.addEventListener('seeked', () => {
-                logger.error('seeked', this.props.songIndex)
+                logPlayer('seeked')
             })
             // Seek operation has begun.
             this.audioPlayer.addEventListener('seeking', () => {
-                logger.error('seeking', this.props.songIndex)
+                logPlayer('seeking')
             })
             // Data is not forthcoming.
             this.audioPlayer.addEventListener('stalled', () => {
-                logger.error('stalled', this.props.songIndex)
+                logPlayer('stalled')
             })
             // Download has completed.
             this.audioPlayer.addEventListener('suspend', () => {
-                logger.error('suspend', this.props.songIndex)
+                logPlayer('suspend')
             })
             // Enough data is available that the media can be played for now.
             this.audioPlayer.addEventListener('canplay', () => {
-                logger.error('canplay', this.props.songIndex)
+                logPlayer('canplay')
             })
             this.audioPlayer.addEventListener('canplaythrough', () => {
-                logger.error('canplaythrough', this.props.songIndex)
+                logPlayer('canplaythrough')
             })
             this.audioPlayer.addEventListener('waiting', () => {
-                logger.error('waiting', this.props.songIndex)
+                logPlayer('waiting')
             })
         }
     }

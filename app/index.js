@@ -11,6 +11,7 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 
 import { Provider } from 'react-redux'
 
+// Import this here to make it available.
 // eslint-disable-next-line no-unused-vars
 import logger from './server/logger'
 

@@ -14,8 +14,6 @@ import {
     getNextKeyToRender
 } from '../../helpers/render'
 
-import { RENDER_STYLE } from '../../constants/log'
-
 class RenderDidListener extends PureComponent {
 
     static propTypes = {
@@ -40,7 +38,7 @@ class RenderDidListener extends PureComponent {
             { didTheatreRender: hadTheatreRendered } = prevProps
 
         if (didTheatreRender && !hadTheatreRendered) {
-            logger.info('%cTheatre did render.', RENDER_STYLE)
+            logRender('Theatre did render.')
 
             const nextKey = getNextKeyToRender({ currentKey: THEATRE })
             if (nextKey) {
@@ -57,7 +55,7 @@ class RenderDidListener extends PureComponent {
             { didSceneRender: hadSceneRendered } = prevProps
 
         if (didSceneRender && !hadSceneRendered) {
-            logger.info('%cScene did render.', RENDER_STYLE)
+            logRender('Scene did render.')
 
             const nextKey = getNextKeyToRender({ currentKey: SCENE })
             if (nextKey) {
@@ -74,7 +72,7 @@ class RenderDidListener extends PureComponent {
             { didLyricRender: hadLyricRendered } = prevProps
 
         if (didLyricRender && !hadLyricRendered) {
-            logger.info('%cLyric did render.', RENDER_STYLE)
+            logRender('Lyric did render.')
 
             const nextKey = getNextKeyToRender({ currentKey: LYRIC })
             if (nextKey) {
@@ -91,7 +89,7 @@ class RenderDidListener extends PureComponent {
             { didCarouselRender: hadCarouselRendered } = prevProps
 
         if (didCarouselRender && !hadCarouselRendered) {
-            logger.info('%cCarousel did render.', RENDER_STYLE)
+            logRender('Carousel did render.')
 
             const nextKey = getNextKeyToRender({ currentKey: CAROUSEL })
             if (nextKey) {

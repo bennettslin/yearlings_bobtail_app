@@ -17,11 +17,6 @@ import Player from './Player'
 import { getTimeForVerseIndex } from 'helpers/data'
 
 import {
-    PLAYER_STYLE,
-    ERROR_STYLE
-} from '../../../constants/log'
-
-import {
     getMp3s,
     getNextVerseIndex,
     getTimeRelativeToVerseIndex
@@ -252,7 +247,7 @@ class PlayerManager extends PureComponent {
              * we have reached the end of the song.
              */
             if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
-                logger.info('%cUpdated time will end player.', PLAYER_STYLE)
+                logPlayer('Updated time will end player.')
                 this.props.handleSongEnd()
 
             /**
@@ -260,7 +255,7 @@ class PlayerManager extends PureComponent {
              * should never get called, so fix the code if it does!
              */
             } else {
-                logger.error(`%cTime ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`, ERROR_STYLE)
+                logError(`Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`)
             }
 
             /**

@@ -22,7 +22,15 @@ module.exports = {
     ],
     "globals": {
         "expect": true,
-        "logger": true,
+        "logAccess": true,
+        "logEvent": true,
+        "logFocus": true,
+        "logParse": true,
+        "logPlayer": true,
+        "logRender": true,
+        "logRenderable": true,
+        "logScroll": true,
+        "logError": true,
         "process": true
     },
     "parser": "babel-eslint",

@@ -43,7 +43,6 @@ import {
     TIPS_TOGGLE_KEY,
     TITLE_TOGGLE_KEY
 } from 'constants/access'
-import { ACCESS_STYLE } from 'constants/log'
 import {
     SHOWN,
     HIDDEN
@@ -142,7 +141,7 @@ class LetterManager extends PureComponent {
                 break
         }
 
-        logger.info(`%cKey "${keyName}" was ${keyWasRegistered ? '' : 'not '}registered.`, ACCESS_STYLE)
+        logAccess(`Key "${keyName}" was ${keyWasRegistered ? '' : 'not '}registered.`)
 
         return {
             annotationIndexWasAccessed,
