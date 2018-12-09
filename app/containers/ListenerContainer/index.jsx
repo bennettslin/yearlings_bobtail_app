@@ -34,7 +34,6 @@ import FocusContainer from '../FocusContainer'
 class ListenerContainer extends PureComponent {
 
     componentDidMount() {
-        logger.warn('Listener container rendered.')
         this.props.updateLoadStore({ appMounted: true })
     }
 

@@ -10,6 +10,11 @@ import {
     LS_WIDTH_UNCANNY_VALLEY
 } from '../constants/responsive'
 
+import {
+    SCROLL_STYLE,
+    ERROR_STYLE
+} from '../constants/log'
+
 const _getLyricTopAlign = (deviceIndex, isLyricExpanded) => {
 
     // If in desktop or lyric column is expanded, set closer to top.
@@ -105,11 +110,11 @@ const scrollElementIntoView = ({
                 scrollClass : `${scrollClass}__${index}`
         element = document.getElementsByClassName(selector)[0]
 
-        logger.error(log, '\nScroll by selector:', scrollClass, index)
+        logger.error(`%c${log}\nScroll by selector: ${scrollClass} ${index}`, ERROR_STYLE)
     }
 
     if (element) {
-        logger.info(log, '\nScroll by ref:', scrollClass, index, '\nWith time:', time)
+        logger.info(`%c${log}\nScroll by ref: ${scrollClass} ${index}, time: ${time}`, SCROLL_STYLE)
 
         const
             align = isCarousel ?

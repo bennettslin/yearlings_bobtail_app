@@ -4,6 +4,11 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 
+import {
+    PLAYER_STYLE,
+    ERROR_STYLE
+} from '../../../../constants/log'
+
 class Player extends PureComponent {
 
     static propTypes = {
@@ -74,7 +79,7 @@ class Player extends PureComponent {
     }
 
     _handleEndedEvent = () => {
-        logger.info(`Player for ${this.props.songIndex} ended itself.`)
+        logger.info(`%cPlayer for ${this.props.songIndex} ended itself.`, PLAYER_STYLE)
         this.props.updateEnded()
     }
 
@@ -95,11 +100,11 @@ class Player extends PureComponent {
         if (typeof playPromise !== 'undefined') {
 
             playPromise.then(() => {
-                logger.info(`Promise to play ${songIndex} succeeded.`)
+                logger.info(`%cPromise to play ${songIndex} succeeded.`, PLAYER_STYLE)
                 this.props.setSelectedPlayerIsPlaying(true)
 
             }).catch(error => {
-                logger.error(`Promise to play ${songIndex} failed: ${error}`)
+                logger.error(`%cPromise to play ${songIndex} failed: ${error}`, ERROR_STYLE)
                 this.props.setSelectedPlayerIsPlaying(false)
             })
 
@@ -117,7 +122,7 @@ class Player extends PureComponent {
          * make sure the player is actually playing before pausing it.
          */
         if (!this.audioPlayer.paused) {
-            logger.info(`Player ${this.props.songIndex} ended playing.`)
+            logger.info(`%cPlayer ${this.props.songIndex} ended playing.`, PLAYER_STYLE)
 
             this.audioPlayer.pause()
 

@@ -34,6 +34,8 @@ import { getSongIsLogue } from 'helpers/data'
 
 import { getFormattedAnnotationTitle } from 'helpers/format'
 
+import { PARSE_STYLE } from 'constants/log'
+
 import {
     LEFT,
     RIGHT,
@@ -45,7 +47,7 @@ import {
 } from 'constants/lyrics'
 
 export const parseAlbumData = (albumObject) => {
-    logger.warn('Begin parse album data.')
+    logger.info('%cBegin parse album data.', PARSE_STYLE)
 
     // Initialise album.
     albumObject.tempWormholeLinks = {}
@@ -68,7 +70,7 @@ export const parseAlbumData = (albumObject) => {
     // After preparation.
     addDestinationWormholeIndices(albumObject)
 
-    logger.warn('End parse album data.')
+    logger.info('%cEnd parse album data.', PARSE_STYLE)
 
     return albumObject
 }

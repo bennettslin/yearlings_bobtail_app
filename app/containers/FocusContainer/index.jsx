@@ -15,6 +15,8 @@ import RootContainer from '../RootContainer'
 import KeyManager from '../../managers/KeyManager'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
+import { FOCUS_STYLE } from '../../constants/log'
+
 const mapStateToProps = ({
     loadStore: { appMounted },
     responsiveStore: { isHiddenLyric },
@@ -145,15 +147,15 @@ class FocusContainer extends PureComponent {
             this.lyricElement
         ) {
             focusedElement = this.lyricElement
-            focusedElementString = 'Lyric'
+            focusedElementString = 'lyric'
 
         } else {
             focusedElement = this.rootElement
-            focusedElementString = 'Root'
+            focusedElementString = 'root'
         }
 
         if (focusedElement) {
-            logger.warn(`Focus: ${focusedElementString}`)
+            logger.info(`%cFocus on ${focusedElementString}.`, FOCUS_STYLE)
             focusedElement.focus()
         }
     }

@@ -4136,5 +4136,15 @@ module.exports = [
         taskName: `Get AWS credentials on personal laptop.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Begin colour logging.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix bug with players being selected and unselected in quick succession.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

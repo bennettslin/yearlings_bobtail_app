@@ -6,12 +6,6 @@ module.exports = [
         neededHours: 2
     },
 
-    {
-        taskName: `Players are broken when switching between songs.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     // Major refactors.
     {
         taskName: `Wire on puppets and others.`,

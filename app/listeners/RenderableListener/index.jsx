@@ -11,6 +11,8 @@ import {
     getNextKeyToRender
 } from '../../helpers/render'
 
+import { RENDERABLE_STYLE } from '../../constants/log'
+
 class RenderableListener extends PureComponent {
 
     static propTypes = {
@@ -40,7 +42,7 @@ class RenderableListener extends PureComponent {
         if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
             this.unrenderedTime = Date.now()
 
-            logger.warn('Unrenderable from window resize.')
+            logger.info('%cUnrenderable from window resize.', RENDERABLE_STYLE)
             this.props.updateRenderStore({
                 canTheatreRender: false,
                 didTheatreRender: false
@@ -51,9 +53,9 @@ class RenderableListener extends PureComponent {
          * render.
          */
         } else if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
-            logger.warn(`Renderable after window resize, took ${
+            logger.info(`%cRenderable after window resize, took ${
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-            } seconds.`)
+            } seconds.`, RENDERABLE_STYLE)
 
             this.props.updateRenderStore({
                 canTheatreRender: true
@@ -70,7 +72,7 @@ class RenderableListener extends PureComponent {
         if (!isSongChangeRenderable && wasSongChangeRenderable) {
             this.unrenderedTime = Date.now()
 
-            logger.warn('Unrenderable from song change.')
+            logger.info('%cUnrenderable from song change.', RENDERABLE_STYLE)
             this.props.updateRenderStore({
                 canSceneRender: false,
                 didSceneRender: false,
@@ -82,9 +84,9 @@ class RenderableListener extends PureComponent {
 
         // Is renderable after song change timeout.
         } else if (isSongChangeRenderable && !wasSongChangeRenderable) {
-            logger.warn(`Renderable after song change, took ${
+            logger.info(`%cRenderable after song change, took ${
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-            } seconds.`)
+            } seconds.`, RENDERABLE_STYLE)
 
             const nextKey = getNextKeyToRender({
                 currentKey: THEATRE
@@ -104,7 +106,7 @@ class RenderableListener extends PureComponent {
         if (!isSceneChangeRenderable && wasSceneChangeRenderable) {
             this.unrenderedTime = Date.now()
 
-            logger.warn('Unrenderable from scene change.')
+            logger.info('%cUnrenderable from scene change.', RENDERABLE_STYLE)
             this.props.updateRenderStore({
                 canSceneRender: false,
                 didSceneRender: false
@@ -112,9 +114,9 @@ class RenderableListener extends PureComponent {
 
         // Is renderable after scene change timeout.
         } else if (isSceneChangeRenderable && !wasSceneChangeRenderable) {
-            logger.warn(`Renderable after scene change, took ${
+            logger.info(`%cRenderable after scene change, took ${
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-            } seconds.`)
+            } seconds.`, RENDERABLE_STYLE)
 
             this.props.updateRenderStore({
                 canSceneRender: true
