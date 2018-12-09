@@ -55,16 +55,12 @@ class PopupViewButton extends Component {
     render() {
 
         const {
-            // eslint-disable-next-line no-unused-vars
-            handlePopupButtonClick,
-
             isCloseButton,
             isPreviousButton,
             isNextButton,
             inFullSize,
             inCardSize,
             displaysInOverlay
-
         } = this.props
 
         let buttonIdentifier,
@@ -122,17 +118,20 @@ class PopupViewButton extends Component {
                         'boxShadow__popupView'
                     )}
                 />
+
                 <Button
                     isLargeSize
                     isPopupButton
-                    buttonName={buttonName}
-                    className={cx(
-                        'Button__popup',
-                        'Button__popupNotShadow'
-                    )}
-                    buttonIdentifier={buttonIdentifier}
-                    accessKey={accessKey}
-                    handleButtonClick={this._handleClick}
+                    {...{
+                        className: cx(
+                            'Button__popup',
+                            'Button__popupNotShadow'
+                        ),
+                        buttonName,
+                        buttonIdentifier,
+                        accessKey,
+                        handleButtonClick: this._handleClick
+                    }}
                 />
             </div>
         )

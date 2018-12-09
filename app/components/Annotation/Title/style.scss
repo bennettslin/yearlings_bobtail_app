@@ -3,6 +3,9 @@
 .AnnotationTitle {
     text-align: center;
 
+    display: flex;
+    align-items: flex-start;
+
     border-top-left-radius: $borderRadius__wide;
     border-top-right-radius: $borderRadius__wide;
 

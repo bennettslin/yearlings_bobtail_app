@@ -12,6 +12,7 @@ const accessIconsPropTypes = {
         inAnnotation: PropTypes.bool,
         inLyric: PropTypes.bool,
         inSlider: PropTypes.bool,
+        isShadow: PropTypes.bool,
         showIfAccessed: PropTypes.bool,
         accessKeys: PropTypes.arrayOf(
             PropTypes.string.isRequired
@@ -24,6 +25,7 @@ const accessIconsPropTypes = {
         inAnnotation,
         inLyric,
         inSlider,
+        isShadow,
         showIfAccessed,
         accessKeys
 
@@ -48,6 +50,7 @@ const accessIconsPropTypes = {
                         animateStandaloneOnKeyDown
                         {...{
                             accessKey,
+                            isShadow,
                             showIfAccessed
                         }}
                     />

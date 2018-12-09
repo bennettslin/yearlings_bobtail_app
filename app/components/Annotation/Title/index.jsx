@@ -140,9 +140,10 @@ class AnnotationTitle extends Component {
                         }}
                     />
                 )}
-                {!isShadow && (
-                    <AnnotationAccess {...{ showUpDown }} />
-                )}
+                <AnnotationAccess {...{
+                    isShadow,
+                    showUpDown
+                }} />
             </div>
         )
     }

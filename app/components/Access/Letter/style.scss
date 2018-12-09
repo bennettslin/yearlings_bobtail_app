@@ -15,8 +15,9 @@
 }
 
 .AccessLetter__showIfAccessed {
+
     .RM__accessOn
-    & {
+    &.AccessLetter__isNotShadow {
         opacity: 1;
         z-index: $zIndex__lyricChild__topMost;
     }

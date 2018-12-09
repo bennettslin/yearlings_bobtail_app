@@ -13,6 +13,7 @@ const accessIconPropTypes = {
     // From parent.
         inTextAnchor: PropTypes.bool,
         inButtonOrDotAnchor: PropTypes.bool,
+        isShadow: PropTypes.bool,
         showIfAccessed: PropTypes.bool,
         animateStandaloneOnKeyDown: PropTypes.bool,
         accessKey: PropTypes.string.isRequired
@@ -22,6 +23,7 @@ const accessIconPropTypes = {
 
         inTextAnchor,
         inButtonOrDotAnchor,
+        isShadow,
         showIfAccessed,
         animateStandaloneOnKeyDown,
         accessKey
@@ -32,6 +34,8 @@ const accessIconPropTypes = {
             <div
                 className={cx(
                     'AccessLetter',
+
+                    !isShadow && 'AccessLetter__isNotShadow',
 
                     animateStandaloneOnKeyDown &&
                     `${CHILD_ACCESS_PREFIX}${accessKey}`,

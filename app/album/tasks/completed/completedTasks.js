@@ -4156,5 +4156,10 @@ module.exports = [
         taskName: `Allow selected verse to activate slider touch, given probable user expectation for such behaviour.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix issue with annotation title access letters not positioning correctly.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
