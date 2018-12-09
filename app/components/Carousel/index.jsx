@@ -4,8 +4,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { updateRenderStore } from 'flux/render/action'
 
 import ScrollCarouselListener from '../../listeners/ScrollCarouselListener'
 import CarouselAnnotation from './Annotation'
@@ -15,10 +13,7 @@ import { getAnnotationsCount } from 'helpers/data'
 import { getArrayOfLength } from 'helpers/general'
 
 const mapStateToProps = ({
-    renderStore: {
-        canCarouselRender,
-        didCarouselRender
-    },
+    renderStore: { didCarouselRender },
     renderedStore: {
         renderedSongIndex,
         renderedAnnotationIndex
@@ -33,7 +28,6 @@ const mapStateToProps = ({
     accessStore: { accessedAnnotationIndex },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
-    canCarouselRender,
     didCarouselRender,
     renderedSongIndex,
     renderedAnnotationIndex,
@@ -50,7 +44,6 @@ class Carousel extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
         didCarouselRender: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
@@ -60,31 +53,7 @@ class Carousel extends PureComponent {
         isAccessOn: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
-    }
-
-    state = { didRenderTimeoutId: '' }
-
-    componentDidUpdate(prevProps) {
-        const
-            { canCarouselRender } = this.props,
-            { canCarouselRender: couldRender } = prevProps
-
-        if (canCarouselRender && !couldRender) {
-            clearTimeout(this.state.didRenderTimeoutId)
-
-            // Wait for parent transition before continuing render sequence.
-            const didRenderTimeoutId = setTimeout(
-                this._carouselDidRender, 100
-            )
-
-            this.setState({ didRenderTimeoutId })
-        }
-    }
-
-    _carouselDidRender = () => {
-        this.props.updateRenderStore({ didCarouselRender: true })
+        isLyricExpanded: PropTypes.bool.isRequired
     }
 
     _setCarouselParent = (node) => {
@@ -177,10 +146,4 @@ class Carousel extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Carousel)
+export default connect(mapStateToProps)(Carousel)

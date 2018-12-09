@@ -16,12 +16,8 @@ import Ceiling from './Ceiling'
 import Floor from './Floor'
 
 const mapStateToProps = ({
-    renderStore: {
-        canTheatreRender,
-        didTheatreRender
-    }
+    renderStore: { didTheatreRender }
 }) => ({
-    canTheatreRender,
     didTheatreRender
 })
 
@@ -29,32 +25,8 @@ class Theatre extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
         didTheatreRender: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
-    }
-
-    state = { didRenderTimeoutId: '' }
-
-    componentDidUpdate(prevProps) {
-        const
-            { canTheatreRender } = this.props,
-            { canTheatreRender: couldRender } = prevProps
-
-        if (canTheatreRender && !couldRender) {
-            clearTimeout(this.state.didRenderTimeoutId)
-
-            // Wait for parent transition before continuing render sequence.
-            const didRenderTimeoutId = setTimeout(
-                this._theatreDidRender, 100
-            )
-
-            this.setState({ didRenderTimeoutId })
-        }
-    }
-
-    _theatreDidRender = () => {
-        this.props.updateRenderStore({ didTheatreRender: true })
     }
 
     render() {

@@ -16,7 +16,7 @@ import {
 
 import { RENDER_STYLE } from '../../constants/log'
 
-class RenderListener extends PureComponent {
+class RenderDidListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -127,4 +127,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(RenderListener)
+export default connect(mapStateToProps, bindDispatchToProps)(RenderDidListener)

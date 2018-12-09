@@ -3,23 +3,24 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateLoadStore } from 'flux/load/action'
 
-import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
+import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
 import AudioListener from '../../listeners/AudioListener'
 import CarouselListener from '../../handlers/CarouselHandler/Listener'
-import RenderListener from '../../listeners/RenderListener'
 import DoublespeakerListener from '../../listeners/DoublespeakerListener'
-import RenderableListener from '../../listeners/RenderableListener'
 import LogueListener from '../../listeners/LogueListener'
 import LyricListener from '../../handlers/LyricHandler/Listener'
 import MainListener from '../../listeners/MainListener'
 import OverviewListener from '../../handlers/OverviewHandler/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotationListener'
-import ScrollRenderListener from '../../listeners/ScrollRenderListener'
+import RenderableListener from '../../listeners/RenderableListener'
+import RenderCanListener from '../../listeners/RenderCanListener'
+import RenderDidListener from '../../listeners/RenderDidListener'
 import RenderedListener from '../../listeners/RenderedListener'
 import SceneListener from '../../handlers/SceneHandler/Listener'
 import ScoreListener from '../../handlers/ScoreHandler/Listener'
 import SongListener from '../../handlers/SongHandler/Listener'
+import ScrollRenderListener from '../../listeners/ScrollRenderListener'
 import SliderListener from '../../listeners/SliderListener'
 import TipsListener from '../../handlers/TipsHandler/Listener'
 import WikiListener from '../../handlers/WikiHandler/Listener'
@@ -40,22 +41,23 @@ class ListenerContainer extends PureComponent {
     render() {
         return (
             <___>
-                <AnnotationListener />
                 <AnnotationAccessListener />
+                <AnnotationListener />
                 <AudioListener />
                 <CarouselListener />
-                <RenderListener />
                 <DoublespeakerListener />
-                <RenderableListener />
                 <LogueListener />
                 <LyricListener />
                 <MainListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
-                <ScrollRenderListener />
+                <RenderableListener />
+                <RenderCanListener />
+                <RenderDidListener />
                 <RenderedListener />
                 <SceneListener />
                 <ScoreListener />
+                <ScrollRenderListener />
                 <SliderListener />
                 <SongListener />
                 <TipsListener />

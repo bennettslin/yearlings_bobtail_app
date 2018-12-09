@@ -16,12 +16,8 @@ import LyricToggleScroll from './Toggle/Scroll'
 import VerseBar from './VerseBar'
 
 const mapStateToProps = ({
-    renderStore: {
-        canLyricRender,
-        didLyricRender
-    }
+    renderStore: { didLyricRender }
 }) => ({
-    canLyricRender,
     didLyricRender
 })
 
@@ -33,7 +29,6 @@ class Lyric extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         didLyricRender: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
 
@@ -42,29 +37,7 @@ class Lyric extends PureComponent {
     }
 
     state = {
-        isTransitioningHeight: false,
-        didRenderTimeoutId: ''
-    }
-
-    componentDidUpdate(prevProps) {
-        const
-            { canLyricRender } = this.props,
-            { canLyricRender: couldRender } = prevProps
-
-        if (canLyricRender && !couldRender) {
-            clearTimeout(this.state.didRenderTimeoutId)
-
-            // Wait for parent transition before continuing render sequence.
-            const didRenderTimeoutId = setTimeout(
-                this._lyricDidRender, 100
-            )
-
-            this.setState({ didRenderTimeoutId })
-        }
-    }
-
-    _lyricDidRender = () => {
-        this.props.updateRenderStore({ didLyricRender: true })
+        isTransitioningHeight: false
     }
 
     _handleTransition = (e) => {
