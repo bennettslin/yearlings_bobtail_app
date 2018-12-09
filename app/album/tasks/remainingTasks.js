@@ -35,6 +35,7 @@ module.exports = [
     /**
      * Mobile bugs.
      */
+    // https://wesbos.com/localhost-mobile-device-testing/
     {
         taskName: `Overview logue is hidden but touch findable in song.`,
         workedHours: 0,

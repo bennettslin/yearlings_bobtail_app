@@ -62,10 +62,7 @@ class SliderTouchDispatcher extends PureComponent {
         },
         clientX
     ) => {
-        const {
-                selectedSongIndex,
-                selectedVerseIndex
-            } = this.props,
+        const { selectedSongIndex } = this.props,
             sliderRatio = getSliderRatioForClientX(
                 clientX,
                 sliderLeft,
@@ -78,32 +75,28 @@ class SliderTouchDispatcher extends PureComponent {
                 sliderWidth
             )
 
-        // Don't allow selected verse to be selected again.
-        if (sliderVerseIndex !== selectedVerseIndex) {
+        this.props.updateSliderStore({
+            isSliderTouched: true,
+            sliderLeft,
+            sliderWidth,
+            sliderVerseIndex,
+            sliderTime: getTimeForVerseIndex(
+                selectedSongIndex,
+                sliderVerseIndex
+            )
+        })
 
-            this.props.updateSliderStore({
-                isSliderTouched: true,
-                sliderLeft,
-                sliderWidth,
-                sliderVerseIndex,
-                sliderTime: getTimeForVerseIndex(
-                    selectedSongIndex,
-                    sliderVerseIndex
-                )
-            })
-
-            /**
-             * If the move doesn't happen for a while, we recognise that it is
-             * moving anyway for styling purposes.
-             */
-            setTimeout(() => {
-                if (this.props.isSliderTouched && !this.props.isSliderMoving) {
-                    this.props.updateSliderStore({
-                        isSliderMoving: true
-                    })
-                }
-            }, 125)
-        }
+        /**
+         * If the move doesn't happen for a while, we recognise that it is
+         * moving anyway for styling purposes.
+         */
+        setTimeout(() => {
+            if (this.props.isSliderTouched && !this.props.isSliderMoving) {
+                this.props.updateSliderStore({
+                    isSliderMoving: true
+                })
+            }
+        }, 125)
     }
 
     // TODO: These can easily just be a single method.

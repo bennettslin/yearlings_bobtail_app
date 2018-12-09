@@ -4151,5 +4151,10 @@ module.exports = [
         taskName: `General performance refactoring.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Allow selected verse to activate slider touch, given probable user expectation for such behaviour.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
