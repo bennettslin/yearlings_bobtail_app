@@ -17,6 +17,8 @@ class PlayerListener extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         playersBitNumber: PropTypes.number.isRequired,
         playersCanPlayThrough: PropTypes.object.isRequired,
+        renderedSongIndex: PropTypes.number.isRequired,
+        renderedVerseIndex: PropTypes.number.isRequired,
         queuedPlayFromLogue: PropTypes.bool.isRequired,
         queuedPlaySongIndex: PropTypes.number.isRequired,
         queuedPlayVerseIndex: PropTypes.number.isRequired,
@@ -36,26 +38,23 @@ class PlayerListener extends PureComponent {
         this._updateNextPlayerToRender(prevProps)
     }
 
-    _checkPlayerChange(prevProps) {
+    _checkPlayerChange() {
         const {
-                queuedPlayFromLogue,
-                queuedPlaySongIndex,
-                queuedPlayVerseIndex
-            } = this.props,
-            {
-                queuedPlaySongIndex: prevSongIndex,
-                queuedPlayVerseIndex: prevVerseIndex
-            } = prevProps
+            renderedSongIndex,
+            renderedVerseIndex,
+            queuedPlayFromLogue,
+            queuedPlaySongIndex,
+            queuedPlayVerseIndex
+        } = this.props
 
         if (
-            (
-                queuedPlaySongIndex > -1 &&
-                queuedPlaySongIndex !== prevSongIndex
-            ) || (
-                queuedPlayVerseIndex > -1 &&
-                queuedPlayVerseIndex !== prevVerseIndex
-            )
+            renderedSongIndex === queuedPlaySongIndex &&
+            renderedVerseIndex === queuedPlayVerseIndex
         ) {
+            /**
+             * Wait for song to render, in case the user is cycling through
+             * songs in quick succession.
+             */
             this.props.handleSelectPlayer({
                 isPlayFromLogue: queuedPlayFromLogue,
                 nextSongIndex: queuedPlaySongIndex,
@@ -102,6 +101,10 @@ const mapStateToProps = ({
         selectedSongIndex,
         isSelectedLogue
     },
+    renderedStore: {
+        renderedSongIndex,
+        renderedVerseIndex
+    },
     audioStore: {
         queuedPlayFromLogue,
         queuedPlaySongIndex,
@@ -112,6 +115,8 @@ const mapStateToProps = ({
     playersCanPlayThrough,
     selectedSongIndex,
     isSelectedLogue,
+    renderedSongIndex,
+    renderedVerseIndex,
     queuedPlayFromLogue,
     queuedPlaySongIndex,
     queuedPlayVerseIndex

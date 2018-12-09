@@ -48,7 +48,7 @@ class Player extends PureComponent {
     componentDidUpdate() {
         // Tell recently unselected player to stop playing.
         if (!this.props.isSelected) {
-            logger.info(`Player ${this.props.songIndex} was unselected.`)
+            // logger.info(`Player ${this.props.songIndex} was unselected.`)
             this.handleEndPlaying()
         }
     }

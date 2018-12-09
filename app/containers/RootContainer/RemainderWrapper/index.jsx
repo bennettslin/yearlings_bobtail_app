@@ -14,7 +14,7 @@ class RemainderWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
+        canLyricRender: PropTypes.bool.isRequired,
 
         accessedKey: PropTypes.string.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
@@ -49,7 +49,7 @@ class RemainderWrapper extends PureComponent {
     render() {
         const {
                 accessedKey,
-                canCarouselRender,
+                canLyricRender,
                 isAccessOn,
                 renderedAnnotationIndex,
                 isRenderedLogue,
@@ -91,13 +91,10 @@ class RemainderWrapper extends PureComponent {
                         accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`,
 
                         /**
-                         * When transitioning between songs, explicitly reset all
-                         * verse trackers. This current approach is brittle, since
-                         * it depends on checking that the carousel can render,
-                         * which is after when the slider and lyric can render,
-                         * which is where the verse trackers are.
+                         * When transitioning between songs, explicitly reset
+                         * all verse trackers.
                          */
-                        canCarouselRender ?
+                        canLyricRender ?
                             'RM__canTrackVerse' : 'RM__cannotTrackVerse',
 
                         isAccessOn ? 'RM__accessOn' : 'RM__accessOff',
@@ -176,7 +173,7 @@ const mapStateToProps = ({
         isCarouselNavShowable,
         isEarShown
     },
-    renderStore: { canCarouselRender },
+    renderStore: { canLyricRender },
     renderedStore: {
         renderedAnnotationIndex,
         isRenderedLogue
@@ -211,7 +208,7 @@ const mapStateToProps = ({
     selectedTipsOption,
     isEarShown,
     isPlaying,
-    canCarouselRender,
+    canLyricRender,
     renderedAnnotationIndex,
     isRenderedLogue,
     isSliderTouched,

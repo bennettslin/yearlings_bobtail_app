@@ -14,17 +14,13 @@ const propTypes = {
     },
 
     VerseColour = ({
-
         isInteractivated,
-
         verseIndex,
-
         inUnit,
         inVerseBar,
         inSlider
 
     }) => {
-
         const inLyric = inUnit || inVerseBar,
             isOdd = Boolean(verseIndex % 2)
 
