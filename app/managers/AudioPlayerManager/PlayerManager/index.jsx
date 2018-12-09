@@ -15,12 +15,12 @@ import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 
 import { getTimeForVerseIndex } from 'helpers/data'
+import { getPlayersCanPlayThroughFromBitNumber } from 'helpers/player'
 
 import {
     getMp3s,
     getNextVerseIndex,
-    getTimeRelativeToVerseIndex,
-    getPlayersCanPlayThroughFromBitNumber
+    getTimeRelativeToVerseIndex
 } from './helper'
 
 const mapStateToProps = ({

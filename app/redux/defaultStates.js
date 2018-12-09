@@ -75,7 +75,11 @@ const
         floorHeight: 0
     },
 
-    // All dotKeys plus dotsBitNumber.
+    /**
+     * All dotKeys plus dotsBitNumber. Components only ever retrieve the bit
+     * number. The individual dots are never used, just visible in the store
+     * for dev clarity.
+     */
     DOTS_DEFAULTS = getDotsFromStorage(),
 
     EVENT_DEFAULTS = {
@@ -97,7 +101,10 @@ const
         isSongShownTips: false
     },
 
-    // Plus each individual song index.
+    /**
+     * Plus each individual player. Only the bit number is retrieved by the
+     * components. The individual players are just stored for dev clarity.
+     */
     PLAYERS_DEFAULTS = {
         playersBitNumber: 0,
         nextPlayerToRender: -1

@@ -24,12 +24,8 @@ import {
     AUDIO_PREVIOUS_BUTTON_KEY
 } from 'constants/buttons'
 
-import {
-    getSongsAndLoguesCount,
-    getSongsNotLoguesCount
-} from 'helpers/data'
-
-import { getValueInBitNumber } from 'helpers/bit'
+import { getSongsAndLoguesCount } from 'helpers/data'
+import { getPlayerCanPlayThrough } from 'helpers/player'
 
 const mapStateToProps = ({
     playersStore: { playersBitNumber },
@@ -82,10 +78,9 @@ class AudioButtons extends PureComponent {
             songsCount = getSongsAndLoguesCount(),
             isEpilogue = selectedSongIndex === songsCount - 1,
 
-            songCanPlayThrough = getValueInBitNumber({
-                keysCount: getSongsNotLoguesCount(),
-                bitNumber: playersBitNumber,
-                key: (isPrologue || isEpilogue) ? 1 : selectedSongIndex
+            playerCanPlayThrough = getPlayerCanPlayThrough({
+                songIndex: selectedSongIndex,
+                playersBitNumber
             })
 
         return (
@@ -116,7 +111,7 @@ class AudioButtons extends PureComponent {
                         className="AudioButton"
                         buttonIdentifier={isPlaying}
                         accessKey={AUDIO_PLAY_KEY}
-                        isDisabled={!songCanPlayThrough}
+                        isDisabled={!playerCanPlayThrough}
                         handleButtonClick={this._handlePlayClick}
                     />
 

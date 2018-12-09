@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateSessionStore } from 'flux/session/action'
 
 import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 
@@ -20,12 +19,10 @@ class AudioManager extends PureComponent {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         queuedTogglePlay: PropTypes.bool.isRequired,
-        playersBitNumber: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
         parentThis: PropTypes.object.isRequired,
@@ -114,7 +111,6 @@ class AudioManager extends PureComponent {
 }
 
 const mapStateToProps = ({
-    playersStore: { playersBitNumber },
     audioStore: {
         isPlaying,
         queuedTogglePlay
@@ -124,7 +120,6 @@ const mapStateToProps = ({
 }) => ({
     isPlaying,
     queuedTogglePlay,
-    playersBitNumber,
     selectedAudioOptionIndex,
     selectedSongIndex
 })
@@ -132,8 +127,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateAudioStore,
-        updateScrollLyricStore,
-        updateSessionStore
+        updateScrollLyricStore
     }, dispatch)
 )
 

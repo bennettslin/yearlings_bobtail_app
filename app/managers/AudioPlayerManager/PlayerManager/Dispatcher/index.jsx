@@ -6,6 +6,7 @@ import { updatePlayersStore } from 'flux/players/action'
 
 import { setNewValueInBitNumber } from 'helpers/bit'
 import { getSongsNotLoguesCount } from 'helpers/data'
+import { getStoreKeyForPlayer } from 'helpers/player'
 
 class PlayerDispatcher extends PureComponent {
 
@@ -31,11 +32,13 @@ class PlayerDispatcher extends PureComponent {
                 bitNumber: playersBitNumber,
                 key: songIndex,
                 value: true
-            })
+            }),
+
+            storeKeyForPlayer = getStoreKeyForPlayer(songIndex)
 
         this.props.updatePlayersStore({
             playersBitNumber: newBitNumber,
-            [songIndex]: true
+            [storeKeyForPlayer]: true
         })
     }
 

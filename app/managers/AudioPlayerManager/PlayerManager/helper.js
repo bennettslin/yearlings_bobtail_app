@@ -1,20 +1,10 @@
 import album from 'server/album'
 
 import {
-    getSongsNotLoguesCount,
     getSongVersesCount,
     getSongVerseConfigs,
     getSongTotalTime
 } from 'helpers/data'
-import { getObjectFromBitNumber } from 'helpers/bit'
-import { getArrayOfLength } from 'helpers/general'
-
-export const getPlayersCanPlayThroughFromBitNumber = (bitNumber) => {
-    return getObjectFromBitNumber({
-        keysArray: getArrayOfLength(getSongsNotLoguesCount(), 1),
-        bitNumber
-    })
-}
 
 export const getMp3s = () => {
     const { mp3s } = album

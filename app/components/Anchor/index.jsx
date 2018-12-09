@@ -9,9 +9,7 @@ import AccessLetter from '../Access/Letter'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 
-import {
-    ENTER
-} from 'constants/access'
+import { ENTER } from 'constants/access'
 
 class Anchor extends Component {
 

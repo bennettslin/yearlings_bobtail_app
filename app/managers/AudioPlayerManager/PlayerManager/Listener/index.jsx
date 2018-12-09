@@ -7,8 +7,8 @@ import { bindActionCreators } from 'redux'
 import { updatePlayersStore } from 'flux/players/action'
 import { resetAudioQueue } from 'flux/audio/action'
 
+import { getPlayersCanPlayThroughFromBitNumber } from 'helpers/player'
 import { getNextPlayerIndexToRender } from './helper'
-import { getPlayersCanPlayThroughFromBitNumber } from '../helper'
 
 class PlayerListener extends PureComponent {
 

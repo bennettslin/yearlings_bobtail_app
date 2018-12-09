@@ -8,8 +8,7 @@ import { updateAudioStore } from 'flux/audio/action'
 
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 
-import { getValueInBitNumber } from 'helpers/bit'
-import { getSongsNotLoguesCount } from 'helpers/data'
+import { getPlayerCanPlayThrough } from 'helpers/player'
 
 class PlayDispatcher extends PureComponent {
 
@@ -36,16 +35,13 @@ class PlayDispatcher extends PureComponent {
                 playersBitNumber
             } = this.props,
 
-            songCanPlayThrough = getValueInBitNumber({
-                keysCount: getSongsNotLoguesCount(),
-                bitNumber: playersBitNumber,
-
-                // If logue, select first song.
-                key: isSelectedLogue ? 1 : selectedSongIndex
+            playerCanPlayThrough = getPlayerCanPlayThrough({
+                songIndex: selectedSongIndex,
+                playersBitNumber
             })
 
         // Do not toggle play if player is not ready to play through.
-        if (!songCanPlayThrough) {
+        if (!playerCanPlayThrough) {
             return false
         }
 
