@@ -30,10 +30,9 @@ class VerseInteractive extends Component {
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        verseIndex: PropTypes.number.isRequired,
         inSlider: PropTypes.bool,
         inUnit: PropTypes.bool,
-
+        verseIndex: PropTypes.number.isRequired,
         handleVerseSelect: PropTypes.func
     }
 
@@ -73,17 +72,10 @@ class VerseInteractive extends Component {
 
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                canLyricRender,
-                interactivatedVerseIndex,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
-                verseIndex,
                 inSlider,
                 inUnit,
-
-                ...other
+                verseIndex,
+                handleVerseSelect
             } = this.props,
 
             isInteractivated = this.getIsInteractivated(this.props)
@@ -100,10 +92,11 @@ class VerseInteractive extends Component {
                 />
                 {!inSlider && (
                     <VerseNav
-                        {...other}
+
                         {...{
                             verseIndex,
-                            isInteractivated
+                            isInteractivated,
+                            handleVerseSelect
                         }}
                     />
                 )}

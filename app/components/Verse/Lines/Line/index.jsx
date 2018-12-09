@@ -62,11 +62,6 @@ class VerseLine extends Component {
         })
     }
 
-    /**
-     * NOTE: There is still some lingering weirdness with calculating width,
-     * but only in Chrome and Safari, it seems.
-     */
-
     render() {
         const {
                 /* eslint-disable no-unused-vars */

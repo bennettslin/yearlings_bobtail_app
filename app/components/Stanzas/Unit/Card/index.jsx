@@ -37,8 +37,6 @@ class UnitCard extends Component {
         handleVerseSelect: PropTypes.func.isRequired
     }
 
-    // No shouldComponentUpdate necessary.
-
     handleStanzaTabClick = () => {
         const {
                 handleVerseSelect,

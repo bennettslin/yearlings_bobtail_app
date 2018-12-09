@@ -1,6 +1,6 @@
 // Section for user to navigate between songs.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -17,22 +17,19 @@ const mapStateToProps = ({
     showSingleNavBook
 })
 
-const navPropTypes = {
-    // Through Redux.
+class Nav extends PureComponent {
+
+    static propTypes = {
+        // Through Redux.
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         showSingleNavBook: PropTypes.bool.isRequired
-    },
+    }
 
-    Nav = ({
-    /* eslint-disable no-unused-vars */
-        dispatch,
-        /* eslint-enable no-unused-vars */
-
-        isHiddenCarouselNav,
-        showSingleNavBook,
-
-        ...other
-    }) => {
+    render() {
+        const {
+            isHiddenCarouselNav,
+            showSingleNavBook
+        } = this.props
 
         return !isHiddenCarouselNav && (
             <div
@@ -48,17 +45,16 @@ const navPropTypes = {
                 <div className="CarouselNavToggle__placeholder" />
 
                 <div className="NavColumns">
-                    <NavColumn {...other}
+                    <NavColumn
                         bookIndex={0}
                     />
-                    <NavColumn {...other}
+                    <NavColumn
                         bookIndex={1}
                     />
                 </div>
             </div>
         )
     }
-
-Nav.propTypes = navPropTypes
+}
 
 export default connect(mapStateToProps)(Nav)

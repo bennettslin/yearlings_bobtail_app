@@ -64,11 +64,6 @@ class NavButton extends PureComponent {
 
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                handleButtonClick,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
                 isAccessed,
                 isSelected,
                 isInShownColumn,

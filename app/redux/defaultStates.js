@@ -97,6 +97,7 @@ const
         isSongShownTips: false
     },
 
+    // Plus each individual song index.
     PLAYERS_DEFAULTS = {
         playersBitNumber: 0,
         nextPlayerToRender: -1
@@ -124,11 +125,7 @@ const
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
         renderedVerseIndex: storedVerseIndex,
-        isRenderedLogue: isStoredLogue,
-        renderedSceneIndex: getSceneIndexForVerseIndex(
-            storedSongIndex,
-            storedVerseIndex
-        )
+        isRenderedLogue: isStoredLogue
     },
 
     RESPONSIVE_DEFAULTS = {
@@ -141,6 +138,13 @@ const
         showSingleNavBook: false,
         isLyricExpandable: false,
         isScoreShowable: true
+    },
+
+    SCENE_DEFAULTS = {
+        currentSceneIndex: getSceneIndexForVerseIndex(
+            storedSongIndex,
+            storedVerseIndex
+        )
     },
 
     SCROLL_CAROUSEL_DEFAULTS = {
@@ -232,6 +236,7 @@ export {
     RENDERABLE_DEFAULTS,
     RENDERED_DEFAULTS,
     RESPONSIVE_DEFAULTS,
+    SCENE_DEFAULTS,
     SCROLL_CAROUSEL_DEFAULTS,
     SCROLL_LYRIC_DEFAULTS,
     SESSION_DEFAULTS,

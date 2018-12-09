@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderableStore } from 'flux/renderable/action'
 import { updateRenderedStore } from 'flux/rendered/action'
+import { updateSceneStore } from 'flux/scene/action'
 
 import { getSceneIndexForVerseIndex } from 'helpers/data'
 
@@ -17,7 +18,8 @@ class RenderedListener extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
-        updateRenderedStore: PropTypes.func.isRequired
+        updateRenderedStore: PropTypes.func.isRequired,
+        updateSceneStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -72,8 +74,11 @@ class RenderedListener extends PureComponent {
         this.props.updateRenderedStore({
             renderedSongIndex: selectedSongIndex,
             renderedVerseIndex: selectedVerseIndex,
-            renderedAnnotationIndex: selectedAnnotationIndex,
-            renderedSceneIndex: getSceneIndexForVerseIndex(
+            renderedAnnotationIndex: selectedAnnotationIndex
+        })
+
+        this.props.updateSceneStore({
+            currentSceneIndex: getSceneIndexForVerseIndex(
                 selectedSongIndex,
                 selectedVerseIndex
             )
@@ -129,8 +134,11 @@ class RenderedListener extends PureComponent {
              * rendered right away.
              */
             this.props.updateRenderedStore({
-                renderedVerseIndex: selectedVerseIndex,
-                renderedSceneIndex: getSceneIndexForVerseIndex(
+                renderedVerseIndex: selectedVerseIndex
+            })
+
+            this.props.updateSceneStore({
+                currentSceneIndex: getSceneIndexForVerseIndex(
                     selectedSongIndex,
                     selectedVerseIndex
                 )
@@ -158,7 +166,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         updateRenderableStore,
-        updateRenderedStore
+        updateRenderedStore,
+        updateSceneStore
     }, dispatch)
 )
 

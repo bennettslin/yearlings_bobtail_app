@@ -22,20 +22,16 @@ class NavBookToggle extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        bookIndex: PropTypes.number.isRequired
+        bookIndex: PropTypes.number.isRequired,
+        handleButtonClick: PropTypes.func.isRequired
     }
 
     render() {
 
         const {
-                /* eslint-disable no-unused-vars */
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
                 selectedSongIndex,
                 bookIndex,
-
-                ...other
+                handleButtonClick
             } = this.props,
 
             hasSelectedSong =
@@ -46,10 +42,13 @@ class NavBookToggle extends PureComponent {
                 'NavBookToggle',
                 'NavBook'
             )}>
-                <NavButton {...other}
+                <NavButton
                     isToggle
-                    isSelected={hasSelectedSong}
-                    bookIndex={bookIndex}
+                    {...{
+                        isSelected: hasSelectedSong,
+                        bookIndex,
+                        handleButtonClick
+                    }}
                 />
             </div>
         )

@@ -7,20 +7,18 @@ import { bindActionCreators } from 'redux'
 import { updateRenderableStore } from 'flux/renderable/action'
 
 const mapStateToProps = ({
-    renderedStore: {
-        renderedSceneIndex,
-        renderedSongIndex
-    }
+    renderedStore: { renderedSongIndex },
+    sceneStore: { currentSceneIndex }
 }) => ({
-    renderedSceneIndex,
-    renderedSongIndex
+    renderedSongIndex,
+    currentSceneIndex
 })
 
 class SceneListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSceneIndex: PropTypes.number.isRequired,
+        currentSceneIndex: PropTypes.number.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         updateRenderableStore: PropTypes.func.isRequired
     }
@@ -36,18 +34,18 @@ class SceneListener extends PureComponent {
     _updateSceneIfNeeded(prevProps) {
         const
             {
-                renderedSceneIndex,
+                currentSceneIndex,
                 renderedSongIndex
             } = this.props,
             {
-                renderedSceneIndex: prevSceneIndex,
+                currentSceneIndex: prevSceneIndex,
                 renderedSongIndex: prevSongIndex
             } = prevProps
 
         if (
             // Only listen for scene change within the same song.
             renderedSongIndex === prevSongIndex &&
-            renderedSceneIndex !== prevSceneIndex
+            currentSceneIndex !== prevSceneIndex
         ) {
             this._prepareForSceneChange()
         }

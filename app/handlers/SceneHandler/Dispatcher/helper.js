@@ -17,7 +17,7 @@ export const getVerseIndexForNextScene = (
 
     const songSceneConfigs = getSongSceneConfigs(songIndex),
 
-        currentSceneIndex = getSceneIndexForVerseIndex(
+        sceneIndex = getSceneIndexForVerseIndex(
             songIndex,
             verseIndex
         ),
@@ -25,7 +25,7 @@ export const getVerseIndexForNextScene = (
         scenesCount = songSceneConfigs.length,
 
         nextSceneIndex = (
-            currentSceneIndex
+            sceneIndex
             + direction
             + scenesCount
         ) % scenesCount

@@ -1,5 +1,5 @@
 // Button in dots section to select and deselect dot.
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -22,7 +22,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class DotsSlideSelect extends Component {
+class DotsSlideSelect extends PureComponent {
 
     static propTypes = {
         // Through Redux.

@@ -43,15 +43,10 @@ class AnnotationPopup extends PureComponent {
 
     render() {
         const {
-            /* eslint-disable no-unused-vars */
-            dispatch,
-            /* eslint-enable no-unused-vars */
-
             isOverlayingAnnotation,
             isPopupAnnotationVisible,
             popupAnnotationIndex,
-            inMain,
-            ...other
+            inMain
         } = this.props
 
         /**
@@ -74,7 +69,7 @@ class AnnotationPopup extends PureComponent {
                     handleNextClick: this._handleAnnotationNext
                 }}
             >
-                <Annotation {...other}
+                <Annotation
                     isAccessed
                     isSelected
                     {...{ annotationIndex: popupAnnotationIndex }}

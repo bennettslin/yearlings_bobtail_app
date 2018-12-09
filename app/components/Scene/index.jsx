@@ -32,15 +32,13 @@ const mapStateToProps = ({
         canSceneRender,
         didSceneRender
     },
-    renderedStore: {
-        renderedSongIndex,
-        renderedSceneIndex
-    }
+    renderedStore: { renderedSongIndex },
+    sceneStore: { currentSceneIndex }
 }) => ({
     canSceneRender,
     didSceneRender,
     renderedSongIndex,
-    renderedSceneIndex
+    currentSceneIndex
 })
 
 class Scene extends PureComponent {
@@ -50,7 +48,7 @@ class Scene extends PureComponent {
         canSceneRender: PropTypes.bool.isRequired,
         didSceneRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
-        renderedSceneIndex: PropTypes.number.isRequired,
+        currentSceneIndex: PropTypes.number.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
@@ -80,13 +78,13 @@ class Scene extends PureComponent {
     render() {
         const {
                 renderedSongIndex,
-                renderedSceneIndex,
+                currentSceneIndex,
                 didSceneRender
             } = this.props,
 
             sceneObject = getSceneObject(
                 renderedSongIndex,
-                renderedSceneIndex
+                currentSceneIndex
             ),
 
             {

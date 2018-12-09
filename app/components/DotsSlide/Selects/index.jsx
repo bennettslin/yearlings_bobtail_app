@@ -1,6 +1,6 @@
 // Container to show multiple dot toggles in dots section.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -10,34 +10,41 @@ import { ALL_DOT_KEYS } from 'constants/dots'
 
 const mapStateToProps = ({
     accessStore: { accessedDotIndex },
-    toggleStore: { isAccessOn }
+    toggleStore: { isAccessOn },
+    dotsStore: {
+        dotsBitNumber,
+        ...selectedDotKeys
+    }
 }) => ({
     accessedDotIndex,
-    isAccessOn
+    isAccessOn,
+    dotsBitNumber,
+    selectedDotKeys
 })
 
-const dotsSlideSelectsPropTypes = {
+class DotsSlideSelects extends PureComponent {
+
+    static propTypes = {
     // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
         accessedDotIndex: PropTypes.number,
+        dotsBitNumber: PropTypes.number.isRequired,
+        selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
-        dotKeys: PropTypes.object.isRequired,
         handleContainerClick: PropTypes.func.isRequired
-    },
+    }
 
-    DotsSlideSelects = ({
+    render() {
+        const {
+                isAccessOn,
+                accessedDotIndex,
+                selectedDotKeys,
+                handleContainerClick,
+                ...other
+            } = this.props,
 
-        accessedDotIndex,
-        isAccessOn,
-
-        dotKeys,
-        handleContainerClick,
-
-        ...other
-    }) => {
-
-        const firstHalfEnd = ALL_DOT_KEYS.length / 2,
+            firstHalfEnd = ALL_DOT_KEYS.length / 2,
             firstHalfArray = ALL_DOT_KEYS.slice(0, firstHalfEnd),
             secondHalfArray = ALL_DOT_KEYS.slice(firstHalfEnd)
 
@@ -67,7 +74,7 @@ const dotsSlideSelectsPropTypes = {
                                 {...{
                                     dotIndex: firstHalfIndex,
                                     dotKey,
-                                    isSelected: dotKeys[dotKey],
+                                    isSelected: selectedDotKeys[dotKey],
                                     isAccessed
                                 }}
                             />
@@ -89,7 +96,7 @@ const dotsSlideSelectsPropTypes = {
                                 {...{
                                     dotIndex: secondHalfIndex,
                                     dotKey,
-                                    isSelected: dotKeys[dotKey],
+                                    isSelected: selectedDotKeys[dotKey],
                                     isAccessed
                                 }}
                             />
@@ -99,6 +106,6 @@ const dotsSlideSelectsPropTypes = {
             </div>
         )
     }
+}
 
-DotsSlideSelects.propTypes = dotsSlideSelectsPropTypes
 export default connect(mapStateToProps)(DotsSlideSelects)
