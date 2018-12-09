@@ -163,6 +163,7 @@ const
     },
 
     {
+        cubes: sceneCubesKey,
         sky: {
             time: sceneTime = TIME_ANYTIME,
             season: sceneSeason = SEASON_INDOOR
@@ -170,6 +171,7 @@ const
     } = sceneObject,
 
     SCENE_DEFAULTS = {
+        sceneCubesKey,
         sceneTime,
         sceneSeason
     },
