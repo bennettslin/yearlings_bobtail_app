@@ -1,3 +1,5 @@
+import { DEFAULT_STAGE_KEY } from 'scene/cubesKeys'
+
 import CUBES_DEFAULT_STAGE from 'scene/scenes/defaultStage/cubes'
 import CUBES_LOGUE from 'scene/scenes/logue/cubes'
 import CUBES_NOHO_HOUSES from 'scene/scenes/nohoHouses/cubes'
@@ -128,6 +130,25 @@ const CUBES = {
     ...CUBES_DEATHBED
 }
 
+const getCubesForKey = (cubesKey) => {
+
+    const defaultStageCubes = CUBES[DEFAULT_STAGE_KEY],
+        keyCubes = CUBES[cubesKey]
+
+    return {
+        ceiling: {
+            ...defaultStageCubes.ceiling,
+            ...keyCubes.ceiling
+        },
+        floor: {
+            ...defaultStageCubes.floor,
+            ...keyCubes.floor
+        },
+        slantDirection: keyCubes.slantDirection || ''
+    }
+}
+
 export {
-    CUBES
+    CUBES,
+    getCubesForKey
 }

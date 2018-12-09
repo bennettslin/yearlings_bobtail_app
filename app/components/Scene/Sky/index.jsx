@@ -8,15 +8,21 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import { getSceneObject } from 'helpers/data'
+
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
 } from 'scene/sky'
 
 const mapStateToProps = ({
-    renderStore: { canSceneRender }
+    renderStore: { canSceneRender },
+    renderedStore: { renderedSongIndex },
+    sceneStore: { currentSceneIndex }
 }) => ({
-    canSceneRender
+    canSceneRender,
+    renderedSongIndex,
+    currentSceneIndex
 })
 
 class Sky extends Component {
@@ -24,12 +30,8 @@ class Sky extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
-
-        // From parent.
-        skyConfig: PropTypes.shape({
-            timeKey: PropTypes.string,
-            seasonKey: PropTypes.string
-        }).isRequired
+        renderedSongIndex: PropTypes.number.isRequired,
+        currentSceneIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -38,9 +40,16 @@ class Sky extends Component {
 
     render() {
         const {
-                skyConfig
+                renderedSongIndex,
+                currentSceneIndex
             } = this.props,
 
+            sceneObject = getSceneObject(
+                renderedSongIndex,
+                currentSceneIndex
+            ),
+
+            { sky: skyConfig } = sceneObject,
             {
                 time = TIME_ANYTIME,
                 season = SEASON_INDOOR

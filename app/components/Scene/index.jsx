@@ -7,38 +7,19 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
+import SceneWrapper from './Wrapper'
 import Layers from './Layers'
 import Sky from './Sky'
 import Wood from '../Stage/Wood'
-
-import { getSceneObject } from 'helpers/data'
-
-import {
-    Z_INDICES_MATRIX_NAME,
-    HSLA_MATRIX_NAME
-} from 'constants/scene'
-
-import {
-    getCubesForKey
-} from './helper'
-
-import {
-    getParentClassNamesForSceneLogic,
-    getClassNameForSlantDirection
-} from 'helpers/className'
 
 const mapStateToProps = ({
     renderStore: {
         canSceneRender,
         didSceneRender
-    },
-    renderedStore: { renderedSongIndex },
-    sceneStore: { currentSceneIndex }
+    }
 }) => ({
     canSceneRender,
-    didSceneRender,
-    renderedSongIndex,
-    currentSceneIndex
+    didSceneRender
 })
 
 class Scene extends PureComponent {
@@ -47,8 +28,6 @@ class Scene extends PureComponent {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
         didSceneRender: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        currentSceneIndex: PropTypes.number.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
@@ -76,53 +55,18 @@ class Scene extends PureComponent {
     }
 
     render() {
-        const {
-                renderedSongIndex,
-                currentSceneIndex,
-                didSceneRender
-            } = this.props,
-
-            sceneObject = getSceneObject(
-                renderedSongIndex,
-                currentSceneIndex
-            ),
-
-            {
-                sky: skyConfig,
-                cubes: cubesKey
-            } = sceneObject,
-
-            cubes = getCubesForKey(cubesKey),
-
-            zIndexClassNames = getParentClassNamesForSceneLogic(
-                cubes,
-                Z_INDICES_MATRIX_NAME
-            ),
-            hslaClassNames = getParentClassNamesForSceneLogic(
-                cubes,
-                HSLA_MATRIX_NAME
-            ),
-
-            { slantDirection } = cubes,
-
-            slantDirectionClassName = getClassNameForSlantDirection(
-                slantDirection
-            )
+        const { didSceneRender } = this.props
 
         return (
             <div className={cx(
                 'Scene',
-                { 'Scene__shown': didSceneRender },
-
-                zIndexClassNames,
-                hslaClassNames,
-                slantDirectionClassName
+                { 'Scene__shown': didSceneRender }
             )}>
-                <Sky {...{ skyConfig }} />
-
-                {/* Wood is in front of sky, but behind presences and cubes. */}
-                <Wood />
-                <Layers />
+                <SceneWrapper>
+                    <Sky />
+                    <Wood />
+                    <Layers />
+                </SceneWrapper>
             </div>
         )
     }

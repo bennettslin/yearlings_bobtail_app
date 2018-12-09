@@ -1,4 +1,4 @@
-import { getCubesForKey } from '../../Scene/helper'
+import { getCubesForKey } from '../../../scene/cubes'
 
 import {
     CUBE_X_AXIS_LENGTH,

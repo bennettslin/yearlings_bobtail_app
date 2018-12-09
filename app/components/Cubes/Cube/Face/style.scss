@@ -1,9 +1,9 @@
 // TODO: Stagger this.
 .Face__path {
     transition:
-        stroke $animationDuration__slower,
-        d $animationDuration__slower,
-        fill $animationDuration__slower;
+        stroke $animationDuration__scene,
+        d $animationDuration__scene,
+        fill $animationDuration__scene;
 }
 
 .Face__shade {
