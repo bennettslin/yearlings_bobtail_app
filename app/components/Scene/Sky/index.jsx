@@ -1,31 +1,22 @@
-/**
- * The stage sky. Renders with Theatre, not Scene, because it has no overhead,
- * and the stage lookes weird without it.
- */
+// The scene sky.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getSceneObject } from 'helpers/data'
 import { getPropsAreShallowEqual } from 'helpers/general'
-
-import {
-    TIME_ANYTIME,
-    SEASON_INDOOR
-} from 'scene/sky'
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },
-    renderedStore: {
-        renderedSongIndex,
-        renderedSceneIndex
+    sceneStore: {
+        sceneTime,
+        sceneSeason
     }
 }) => ({
     canSceneRender,
-    renderedSongIndex,
-    renderedSceneIndex
+    sceneTime,
+    sceneSeason
 })
 
 class Sky extends Component {
@@ -33,8 +24,8 @@ class Sky extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedSceneIndex: PropTypes.number.isRequired
+        sceneTime: PropTypes.string.isRequired,
+        sceneSeason: PropTypes.string.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -46,20 +37,9 @@ class Sky extends Component {
 
     render() {
         const {
-                renderedSongIndex,
-                renderedSceneIndex
-            } = this.props,
-
-            sceneObject = getSceneObject(
-                renderedSongIndex,
-                renderedSceneIndex
-            ),
-
-            { sky: skyConfig } = sceneObject,
-            {
-                time = TIME_ANYTIME,
-                season = SEASON_INDOOR
-            } = skyConfig
+            sceneTime,
+            sceneSeason
+        } = this.props
 
         return (
             <div className={cx(
@@ -69,7 +49,7 @@ class Sky extends Component {
                 <div
                     className={cx(
                         'Season',
-                        `Season__${season}`,
+                        `Season__${sceneSeason}`,
                         'Sky__filter',
                         'absoluteFullContainer'
                     )}
@@ -77,7 +57,7 @@ class Sky extends Component {
                 <div
                     className={cx(
                         'TimeOfDay',
-                        `TimeOfDay__${time}`,
+                        `TimeOfDay__${sceneTime}`,
                         'Sky__filter',
                         'absoluteFullContainer'
                     )}

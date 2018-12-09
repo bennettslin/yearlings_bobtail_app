@@ -158,11 +158,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Change render order so that scenes come last after lyric and carousel? Allow this to be switched around to experiment.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Allow cutouts and fixtures to persist across scenes. Either needs React CSS transition group, or just have same keys?`,
         workedHours: 0,
         neededHours: 8

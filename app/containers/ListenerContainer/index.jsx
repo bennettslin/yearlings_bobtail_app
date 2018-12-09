@@ -13,6 +13,7 @@ import LyricListener from '../../handlers/LyricHandler/Listener'
 import MainListener from '../../listeners/MainListener'
 import OverviewListener from '../../handlers/OverviewHandler/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotationListener'
+import PresenceListener from '../../listeners/PresenceListener'
 import RenderableListener from '../../listeners/RenderableListener'
 import RenderCanListener from '../../listeners/RenderCanListener'
 import RenderDidListener from '../../listeners/RenderDidListener'
@@ -51,6 +52,7 @@ class ListenerContainer extends PureComponent {
                 <MainListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
+                <PresenceListener />
                 <RenderableListener />
                 <RenderCanListener />
                 <RenderDidListener />

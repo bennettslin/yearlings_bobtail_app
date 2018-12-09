@@ -10,8 +10,14 @@ import {
 import { SHOWN } from 'constants/options'
 
 import {
+    TIME_ANYTIME,
+    SEASON_INDOOR
+} from 'scene/sky'
+
+import {
     getSongIsLogue,
     getSceneIndexForVerseIndex,
+    getSceneObject,
     getTimeForVerseIndex,
     getAnnotationColumnIndex
 } from '../helpers/data'
@@ -38,6 +44,14 @@ const
     earColumnIndex = getAnnotationColumnIndex(
         storedSongIndex,
         storedAnnotationIndex
+    ),
+    sceneIndex = getSceneIndexForVerseIndex(
+        storedSongIndex,
+        storedVerseIndex
+    ),
+    sceneObject = getSceneObject(
+        storedSongIndex,
+        sceneIndex
     ),
 
     ACCESS_DEFAULTS = {
@@ -132,10 +146,7 @@ const
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
         renderedVerseIndex: storedVerseIndex,
-        renderedSceneIndex: getSceneIndexForVerseIndex(
-            storedSongIndex,
-            storedVerseIndex
-        ),
+        renderedSceneIndex: sceneIndex,
         isRenderedLogue: isStoredLogue
     },
 
@@ -151,8 +162,16 @@ const
         isScoreShowable: true
     },
 
-    SCENE_DEFAULTS = {
+    {
+        sky: {
+            time: sceneTime = TIME_ANYTIME,
+            season: sceneSeason = SEASON_INDOOR
+        }
+    } = sceneObject,
 
+    SCENE_DEFAULTS = {
+        sceneTime,
+        sceneSeason
     },
 
     SCROLL_CAROUSEL_DEFAULTS = {

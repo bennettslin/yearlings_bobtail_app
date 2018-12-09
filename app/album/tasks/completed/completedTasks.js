@@ -4148,7 +4148,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `General performance refactoring.`,
+        taskName: `Change render order so that scenes come last after lyric and carousel? Allow this to be switched around to experiment. Also general performance refactoring.`,
         workedHours: 5,
         neededHours: 5
     },
