@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import AccessLetters from '../../Access/Letters'
+
+import { getPropsAreShallowEqual } from 'helpers/general'
+
 import {
     AUDIO_REWIND_KEY,
     AUDIO_FAST_FORWARD_KEY
@@ -25,7 +28,10 @@ class SliderAccess extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {

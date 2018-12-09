@@ -8,6 +8,8 @@ import { getDotKeysFromBitNumber } from 'helpers/dot'
 
 import AccessLetters from '../../Access/Letters'
 
+import { getPropsAreShallowEqual } from 'helpers/general'
+
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -47,7 +49,10 @@ class LyricAccess extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {

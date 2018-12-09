@@ -8,6 +8,7 @@ import { updatePlayersStore } from 'flux/players/action'
 import { resetAudioQueue } from 'flux/audio/action'
 
 import { getNextPlayerIndexToRender } from './helper'
+import { getPlayersCanPlayThroughFromBitNumber } from '../helper'
 
 class PlayerListener extends PureComponent {
 
@@ -16,7 +17,6 @@ class PlayerListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         playersBitNumber: PropTypes.number.isRequired,
-        playersCanPlayThrough: PropTypes.object.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         renderedVerseIndex: PropTypes.number.isRequired,
         queuedPlayFromLogue: PropTypes.bool.isRequired,
@@ -72,10 +72,14 @@ class PlayerListener extends PureComponent {
 
         if (playersBitNumber !== prevBitNumber) {
             const {
-                selectedSongIndex,
-                isSelectedLogue,
-                playersCanPlayThrough
-            } = this.props
+                    selectedSongIndex,
+                    isSelectedLogue,
+                    playersBitNumber
+                } = this.props,
+
+                playersCanPlayThrough = getPlayersCanPlayThroughFromBitNumber(
+                    playersBitNumber
+                )
 
             this.props.updatePlayersStore({
                 nextPlayerToRender: getNextPlayerIndexToRender(
@@ -93,10 +97,7 @@ class PlayerListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    playersStore: {
-        playersBitNumber,
-        ...playersCanPlayThrough
-    },
+    playersStore: { playersBitNumber },
     songStore: {
         selectedSongIndex,
         isSelectedLogue
@@ -112,7 +113,6 @@ const mapStateToProps = ({
     }
 }) => ({
     playersBitNumber,
-    playersCanPlayThrough,
     selectedSongIndex,
     isSelectedLogue,
     renderedSongIndex,

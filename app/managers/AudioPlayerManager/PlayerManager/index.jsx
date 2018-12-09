@@ -19,13 +19,14 @@ import { getTimeForVerseIndex } from 'helpers/data'
 import {
     getMp3s,
     getNextVerseIndex,
-    getTimeRelativeToVerseIndex
+    getTimeRelativeToVerseIndex,
+    getPlayersCanPlayThroughFromBitNumber
 } from './helper'
 
 const mapStateToProps = ({
     playersStore: {
-        nextPlayerToRender,
-        ...playersCanPlayThrough
+        playersBitNumber,
+        nextPlayerToRender
     },
     audioStore: { isPlaying },
     songStore: {
@@ -38,8 +39,8 @@ const mapStateToProps = ({
     selectedSongIndex,
     selectedVerseIndex,
     selectedTime,
-    nextPlayerToRender,
-    playersCanPlayThrough
+    playersBitNumber,
+    nextPlayerToRender
 })
 
 // Kind of silly, but easiest approach for now.
@@ -57,8 +58,8 @@ class PlayerManager extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
+        playersBitNumber: PropTypes.number.isRequired,
         nextPlayerToRender: PropTypes.number.isRequired,
-        playersCanPlayThrough: PropTypes.object.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
 
@@ -76,9 +77,12 @@ class PlayerManager extends PureComponent {
 
     _playerShouldRender(songIndex) {
         const {
-            playersCanPlayThrough,
-            nextPlayerToRender
-        } = this.props
+                playersBitNumber,
+                nextPlayerToRender
+            } = this.props,
+            playersCanPlayThrough = getPlayersCanPlayThroughFromBitNumber(
+                playersBitNumber
+            )
 
         return (
             // Render player if it has already passed canPlayThrough...

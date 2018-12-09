@@ -4146,5 +4146,10 @@ module.exports = [
         taskName: `Fix bug with players being selected and unselected in quick succession.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `General performance refactoring.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

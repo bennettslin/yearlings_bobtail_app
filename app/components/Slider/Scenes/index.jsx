@@ -9,6 +9,7 @@ import {
     getSongSceneConfigs,
     getSongTotalTime
 } from 'helpers/data'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender },
@@ -27,7 +28,10 @@ class SliderScenes extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {

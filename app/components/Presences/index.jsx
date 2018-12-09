@@ -13,6 +13,7 @@ import cx from 'classnames'
 import Presence from './Presence'
 
 import { getSceneObject } from 'helpers/data'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },
@@ -39,8 +40,10 @@ class Presences extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        // Ensure that presences are not unmounted while scene cannot render.
-        return nextProps.canSceneRender
+        return nextProps.canSceneRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {

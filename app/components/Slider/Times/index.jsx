@@ -9,6 +9,7 @@ import SliderTime from './Time'
 
 import { getSongTotalTime } from 'helpers/data'
 import { getFormattedTime } from 'helpers/format'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender },
@@ -30,7 +31,10 @@ class SliderTimes extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {

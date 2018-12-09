@@ -6,6 +6,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import { getSceneObject } from 'helpers/data'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 import {
     Z_INDICES_MATRIX_NAME,
@@ -44,7 +45,10 @@ class SceneWrapper extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender
+        return nextProps.canSceneRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {

@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import { getSceneObject } from 'helpers/data'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 import {
     TIME_ANYTIME,
@@ -37,7 +38,10 @@ class Sky extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender
+        return nextProps.canSceneRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {
