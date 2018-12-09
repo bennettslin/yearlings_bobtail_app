@@ -17,12 +17,14 @@ import {
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },
-    renderedStore: { renderedSongIndex },
-    sceneStore: { currentSceneIndex }
+    renderedStore: {
+        renderedSongIndex,
+        renderedSceneIndex
+    }
 }) => ({
     canSceneRender,
     renderedSongIndex,
-    currentSceneIndex
+    renderedSceneIndex
 })
 
 class Sky extends Component {
@@ -31,7 +33,7 @@ class Sky extends Component {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
-        currentSceneIndex: PropTypes.number.isRequired
+        renderedSceneIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -41,12 +43,12 @@ class Sky extends Component {
     render() {
         const {
                 renderedSongIndex,
-                currentSceneIndex
+                renderedSceneIndex
             } = this.props,
 
             sceneObject = getSceneObject(
                 renderedSongIndex,
-                currentSceneIndex
+                renderedSceneIndex
             ),
 
             { sky: skyConfig } = sceneObject,

@@ -21,12 +21,14 @@ import {
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },
-    renderedStore: { renderedSongIndex },
-    sceneStore: { currentSceneIndex }
+    renderedStore: {
+        renderedSongIndex,
+        renderedSceneIndex
+    }
 }) => ({
     canSceneRender,
     renderedSongIndex,
-    currentSceneIndex
+    renderedSceneIndex
 })
 
 class SceneWrapper extends Component {
@@ -35,7 +37,7 @@ class SceneWrapper extends Component {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
-        currentSceneIndex: PropTypes.number.isRequired,
+        renderedSceneIndex: PropTypes.number.isRequired,
 
         // From parent.
         children: PropTypes.any.isRequired
@@ -48,13 +50,13 @@ class SceneWrapper extends Component {
     render() {
         const {
                 renderedSongIndex,
-                currentSceneIndex,
+                renderedSceneIndex,
                 children
             } = this.props,
 
             sceneObject = getSceneObject(
                 renderedSongIndex,
-                currentSceneIndex
+                renderedSceneIndex
             ),
 
             { cubes: cubesKey } = sceneObject,

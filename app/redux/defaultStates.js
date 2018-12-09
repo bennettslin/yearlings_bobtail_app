@@ -125,6 +125,10 @@ const
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
         renderedVerseIndex: storedVerseIndex,
+        renderedSceneIndex: getSceneIndexForVerseIndex(
+            storedSongIndex,
+            storedVerseIndex
+        ),
         isRenderedLogue: isStoredLogue
     },
 
@@ -141,10 +145,7 @@ const
     },
 
     SCENE_DEFAULTS = {
-        currentSceneIndex: getSceneIndexForVerseIndex(
-            storedSongIndex,
-            storedVerseIndex
-        )
+
     },
 
     SCROLL_CAROUSEL_DEFAULTS = {

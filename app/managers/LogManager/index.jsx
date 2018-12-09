@@ -23,7 +23,7 @@ class LogManager extends PureComponent {
         renderedSongIndex: PropTypes.number.isRequired,
         renderedVerseIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
-        currentSceneIndex: PropTypes.number.isRequired
+        renderedSceneIndex: PropTypes.number.isRequired
     }
 
     componentDidMount() {
@@ -96,11 +96,11 @@ class LogManager extends PureComponent {
     logScene = () => {
         const {
                 renderedSongIndex,
-                currentSceneIndex
+                renderedSceneIndex
             } = this.props,
             renderableScene = getSceneObject(
                 renderedSongIndex,
-                currentSceneIndex
+                renderedSceneIndex
             )
 
         return this._logObject('renderable scene', renderableScene)
@@ -142,14 +142,14 @@ const mapStateToProps = ({
     renderedStore: {
         renderedSongIndex,
         renderedVerseIndex,
-        renderedAnnotationIndex
-    },
-    sceneStore: { currentSceneIndex }
+        renderedAnnotationIndex,
+        renderedSceneIndex
+    }
 }) => ({
     renderedSongIndex,
     renderedVerseIndex,
     renderedAnnotationIndex,
-    currentSceneIndex
+    renderedSceneIndex
 })
 
 export default connect(mapStateToProps)(LogManager)
