@@ -121,21 +121,23 @@ const _addPresenceToSceneLayer = ({
     value
 
 }) => {
-    const { yIndex } = arrangementObject
+    const
+        { yIndex } = arrangementObject,
+        layerKey = `layer${yIndex}`
 
     // Initialise this layer if necessary.
-    if (!layers[yIndex]) {
-        layers[yIndex] = {}
+    if (!layers[layerKey]) {
+        layers[layerKey] = {}
     }
 
     // Initialise presenceType for this layer if necessary.
-    if (!layers[yIndex][presenceType]) {
-        layers[yIndex][presenceType] = {}
+    if (!layers[layerKey][presenceType]) {
+        layers[layerKey][presenceType] = {}
     }
 
     // Just add if this instance doesn't already exist.
-    if (!layers[yIndex][presenceType][presenceName]) {
-        layers[yIndex][presenceType][presenceName] = value
+    if (!layers[layerKey][presenceType][presenceName]) {
+        layers[layerKey][presenceType][presenceName] = value
 
     /**
      * If another instance of this presence for this layer already exists, then
@@ -144,11 +146,11 @@ const _addPresenceToSceneLayer = ({
      * If there were more, this wouldn't work.
      */
     } else {
-        layers[yIndex][presenceType][presenceName] = {
-            [layers[yIndex][presenceType][presenceName]]: true
+        layers[layerKey][presenceType][presenceName] = {
+            [layers[layerKey][presenceType][presenceName]]: true
         }
 
-        layers[yIndex][presenceType][presenceName][value] = true
+        layers[layerKey][presenceType][presenceName][value] = true
     }
 }
 

@@ -159,8 +159,8 @@ module.exports = [
     },
     {
         taskName: `Allow cutouts and fixtures to persist across scenes. Either needs React CSS transition group, or just have same keys?`,
-        workedHours: 0,
-        neededHours: 8
+        workedHours: 5,
+        neededHours: 10
     },
     {
         taskName: `Fix bug where go-kart presences have duplicate keys. Do this in conjunction with persisting presences across scenes.`,
@@ -183,19 +183,16 @@ module.exports = [
         neededHours: 5
     },
 
-    // Testing down the line.
-    {
-        taskName: `Manual testing`,
-        workedHours: 0,
-        neededHours: 20
-    },
-
     /**
-     * Absolute final.
+     * Final before release.
      */
     {
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,
         neededHours: 3
     }
+
+    /**
+     * Unit tests and manual testing after release!
+     */
 ]

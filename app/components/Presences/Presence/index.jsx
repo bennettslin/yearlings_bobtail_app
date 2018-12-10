@@ -7,7 +7,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Actor from './Actor'
 import Backdrop from './Backdrop'
 import Bubble from './Bubble'
 import Cutout from './Cutout'
@@ -41,7 +40,7 @@ import {
 } from '../../../constants/cubeIndex'
 
 const PRESENCE_TYPE_COMPONENTS = {
-    [ACTORS]: Actor,
+    [ACTORS]: () => null,
     [BACKDROPS]: Backdrop,
     [BUBBLES]: Bubble,
     [CUTOUTS]: Cutout,

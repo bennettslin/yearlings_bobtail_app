@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import keys from 'lodash.keys'
+import { connect } from 'react-redux'
 
 import YoungBennett from './Actors/YoungBennett/YoungBennett'
 import PreteenBennett from './Actors/PreteenBennett/PreteenBennett'
@@ -50,6 +52,11 @@ import Wade from './Actors/Wade/Wade'
 import BennettReflection from './Actors/BennettReflection/BennettReflection'
 import LizReflection from './Actors/LizReflection/LizReflection'
 import KhariLizReflection from './Actors/KhariLizReflection/KhariLizReflection'
+
+import { getPropsAreShallowEqual } from 'helpers/general'
+import { getPresenceXYWidthAndHeight } from '../../Presence/helper'
+
+import ARRANGEMENTS_ACTORS from 'scene/actors'
 
 import {
     YOUNG_BENNETT,
@@ -153,41 +160,129 @@ const ACTORS_MAP = {
     [KHARI_LIZ_REFLECTION]: KhariLizReflection
 }
 
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    nameKey: PropTypes.string.isRequired,
-    instanceKey: PropTypes.string.isRequired,
-    x: PropTypes.string.isRequired,
-    y: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired
+const mapStateToProps = ({
+    renderStore: { canSceneRender },
+    sceneStore: { sceneCubesKey }
+}) => ({
+    canSceneRender,
+    sceneCubesKey
+})
+
+class ActorLayer extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        canSceneRender: PropTypes.bool.isRequired,
+        sceneCubesKey: PropTypes.string.isRequired,
+
+        // From parent.
+        [YOUNG_BENNETT]: PropTypes.string,
+        [PRETEEN_BENNETT]: PropTypes.string,
+        [BENNETT]: PropTypes.string,
+        [BENNETT_LIZ]: PropTypes.string,
+        [BENNETT_LIZ_REFLECTION]: PropTypes.string,
+        [BENNETTS_CHRISTOPHER_LIZ]: PropTypes.string,
+        [BENNETT_STEPHANIE]: PropTypes.string,
+        [OLD_BENNETT]: PropTypes.string,
+        [ANITA]: PropTypes.string,
+        [ANITA_BENNETT]: PropTypes.string,
+        [ESTHER]: PropTypes.string,
+        [ESTHER_MOTHER]: PropTypes.string,
+        [WILLY]: PropTypes.string,
+        [MOTHER]: PropTypes.string,
+        [FATHER]: PropTypes.string,
+        [CHRISTOPHER]: PropTypes.string,
+        [CHRISTOPHER_BENNETT]: PropTypes.string,
+        [SASHA]: PropTypes.string,
+        [SASHA_BENNETT]: PropTypes.string,
+        [BRAD]: PropTypes.string,
+        [BRAD_BENNETT]: PropTypes.string,
+        [BRAD_SASHA]: PropTypes.string,
+        [ANDREW]: PropTypes.string,
+        [CATHERINE]: PropTypes.string,
+        [MARA]: PropTypes.string,
+        [JACOB]: PropTypes.string,
+        [JACOB_MARA]: PropTypes.string,
+        [ANA]: PropTypes.string,
+        [ANA_HOWIE]: PropTypes.string,
+        [HOWIE]: PropTypes.string,
+        [TOMER]: PropTypes.string,
+        [LIZ]: PropTypes.string,
+        [KHARI]: PropTypes.string,
+        [KHARI_LIZ]: PropTypes.string,
+        [MIRIAM]: PropTypes.string,
+        [MIRIAM_BENNETT]: PropTypes.string,
+        [MIRIAM_STEPHANIE]: PropTypes.string,
+        [MIRIAM_TRISTAN]: PropTypes.string,
+        [TRISTAN]: PropTypes.string,
+        [NESTOR]: PropTypes.string,
+        [AMY]: PropTypes.string,
+        [AMY_STEPHANIE]: PropTypes.string,
+        [AMY_NESTOR_TOMER]: PropTypes.string,
+        [STEPHANIE]: PropTypes.string,
+        [WADE]: PropTypes.string,
+        [BENNETT_REFLECTION]: PropTypes.string,
+        [LIZ_REFLECTION]: PropTypes.string,
+        [KHARI_LIZ_REFLECTION]: PropTypes.string
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSceneRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
+
+    render() {
+        const { sceneCubesKey: cubesKey } = this.props
+
+        return (
+            <___>
+                {keys(ACTORS_MAP).map(actorKey => {
+                    const { [actorKey]: instanceKey } = this.props
+
+                    if (instanceKey) {
+                        const ActorComponent = ACTORS_MAP[actorKey],
+                            {
+                                yIndex,
+                                arrangement: {
+                                    xFloat,
+                                    zOffset,
+                                    xWidth,
+                                    zHeight
+                                }
+                            } = ARRANGEMENTS_ACTORS[actorKey][instanceKey],
+
+                            xYWidthAndHeight = getPresenceXYWidthAndHeight({
+                                cubesKey,
+                                yIndex,
+                                xFloat,
+                                zOffset,
+                                xWidth,
+                                zHeight
+                            })
+
+                        return (
+                            <ActorComponent
+                                key={actorKey}
+                                {...{
+                                    className: cx(
+                                        'Actor',
+                                        'absoluteFullContainer'
+                                    ),
+                                    instanceKey,
+                                    ...xYWidthAndHeight
+                                }}
+                            />
+                        )
+
+                    } else {
+                        return null
+                    }
+                })}
+            </___>
+        )
+    }
 }
 
-const Actor = ({
-
-    className,
-    nameKey,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const ActorComponent = ACTORS_MAP[nameKey]
-
-    return (
-        <ActorComponent {...other}
-            className={cx(
-                'Actor',
-                className
-            )}
-            {...{
-                instanceKey
-            }}
-        />
-    )
-}
-
-Actor.propTypes = propTypes
-
-export default Actor
+export default connect(mapStateToProps)(ActorLayer)

@@ -5,6 +5,8 @@ import cx from 'classnames'
 
 import Cubes from '../../Cubes'
 import Presences from '../../Presences'
+import PresenceLayers from '../../Presences/PresenceLayers'
+
 import CubeZIndexStylesheet from './Stylesheets/CubeZIndex'
 import PresenceZIndexStylesheet from './Stylesheets/PresenceZIndex'
 
@@ -24,14 +26,19 @@ class Layers extends Component {
                 <CubeZIndexStylesheet />
                 <PresenceZIndexStylesheet />
 
-                {CUBE_Y_INDICES.map(yIndex => (
-                    <___
-                        key={yIndex}
-                    >
-                        <Cubes {...{ yIndex }} />
-                        <Presences {...{ yIndex }} />
-                    </___>
-                ))}
+                {CUBE_Y_INDICES.map(yIndex => {
+                    const PresenceLayer = PresenceLayers[yIndex]
+
+                    return (
+                        <___
+                            key={yIndex}
+                        >
+                            <Cubes {...{ yIndex }} />
+                            <Presences {...{ yIndex }} />
+                            <PresenceLayer />
+                        </___>
+                    )
+                })}
             </div>
         )
     }

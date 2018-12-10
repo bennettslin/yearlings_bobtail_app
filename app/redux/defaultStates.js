@@ -164,20 +164,25 @@ const
 
     {
         cubes: sceneCubesKey,
-        layers: sceneLayers,
-        presenceYIndices,
         sky: {
             time: sceneTime = TIME_ANYTIME,
             season: sceneSeason = SEASON_INDOOR
-        }
+        },
+        layers: scenePresenceLayers,
+        presenceYIndices
     } = sceneObject,
 
     SCENE_DEFAULTS = {
         sceneCubesKey,
-        sceneLayers,
-        presenceYIndices,
         sceneTime,
-        sceneSeason
+        sceneSeason,
+
+        /**
+         * Stored only for dev clarity. Components will retrieve these layers
+         * through indices to avoid unnecessary updates.
+         */
+        scenePresenceLayers,
+        presenceYIndices
     },
 
     SCROLL_CAROUSEL_DEFAULTS = {
