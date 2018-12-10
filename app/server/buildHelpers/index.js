@@ -6,13 +6,13 @@ import {
     finalPrepareCard,
     addDestinationWormholeIndices,
     addDestinationWormholeFormats
-} from './annotationsHelper'
+} from './annotations'
 
 import {
     adminGatherDrawings,
     adminFinaliseDrawings,
     adminRegisterDrawingTasks
-} from './drawingsHelper'
+} from './drawings'
 
 import {
     recurseToFindAnchors,
@@ -22,13 +22,13 @@ import {
     registerIsDoublespeaker,
     registerAdminDotStanzas,
     finalRegisterStanzaTypes
-} from './lyricsHelper'
+} from './lyrics'
 
 import {
     initialRegisterScenes,
     finalRegisterScenes,
     finalRegisterPresenceYIndices
-} from './scenesHelper'
+} from './scenes'
 
 import { getSongIsLogue } from 'helpers/data'
 
