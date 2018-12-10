@@ -113,25 +113,66 @@ export const finalRegisterScenes = (songObject) => {
     })
 }
 
+const _addPresenceToSceneLayer = ({
+    arrangementObject,
+    layers,
+    presenceType,
+    presenceName,
+    value
+
+}) => {
+    const { yIndex } = arrangementObject
+
+    // Initialise this layer if necessary.
+    if (!layers[yIndex]) {
+        layers[yIndex] = {}
+    }
+
+    // Initialise presenceType for this layer if necessary.
+    if (!layers[yIndex][presenceType]) {
+        layers[yIndex][presenceType] = {}
+    }
+
+    // Just add if this instance doesn't already exist.
+    if (!layers[yIndex][presenceType][presenceName]) {
+        layers[yIndex][presenceType][presenceName] = value
+
+    /**
+     * If another instance of this presence for this layer already exists, then
+     * make it an object of instances instead. This only happens with go-karts
+     * right now, of which there are only two in the same layer, so it's fine.
+     * If there were more, this wouldn't work.
+     */
+    } else {
+        layers[yIndex][presenceType][presenceName] = {
+            [layers[yIndex][presenceType][presenceName]]: true
+        }
+
+        layers[yIndex][presenceType][presenceName][value] = true
+    }
+}
+
 export const finalRegisterPresenceYIndices = (
     album,
     songIndex
+
 ) => {
     const scenes = album.scenes[songIndex]
 
     scenes.forEach(scene => {
 
-        const {
-            presences
-        } = scene
+        const
+            { presences } = scene,
+            layers = {}
 
         // Create the presenceYIndices object for each scene.
+        // TODO: Eventually get rid of this one.
         scene.presenceYIndices = {}
 
         // Iterate through actors, cutouts, fixtures.
         keys(presences).forEach(presenceType => {
 
-            // Iterate through presences.
+            // Iterate through presences for each presenceType.
             keys(presences[presenceType]).forEach(presenceName => {
 
                 const
@@ -153,31 +194,65 @@ export const finalRegisterPresenceYIndices = (
                         instance = characterPresence.instance
                     }
 
-                    arrangementObjects.push(
+                    const arrangementObject =
                         ARRANGEMENTS_ACTORS[presenceName][instance]
+
+                    arrangementObjects.push(
+                        // An object with yIndex and arrangement matrix.
+                        arrangementObject
                     )
 
                     // Can be deleted.
                     album.tempInstanceCount++
 
+                    _addPresenceToSceneLayer({
+                        arrangementObject,
+                        layers,
+                        presenceType,
+                        presenceName,
+                        value: instance
+                    })
+
                 // Cutout, fixture, flat, furniture.
                 } else {
+                    let arrangementObject
 
                     // This presence has only one arrangement.
                     if (presenceValue === true) {
-                        arrangementObjects.push(
+                        arrangementObject =
                             ARRANGEMENTS_THINGS[presenceType][presenceName]
+                        arrangementObjects.push(
+                            arrangementObject
                         )
+
+                        _addPresenceToSceneLayer({
+                            arrangementObject,
+                            layers,
+                            presenceType,
+                            presenceName,
+                            value: presenceValue
+                        })
 
                     /**
                      * This presence has multiple arrangements in a single
-                     * scene (at present, this applies to twin streetlamp).
+                     * layer. (Go-karts, twin streetlamps, and snowglobes.)
                      */
                     } else if (Array.isArray(presenceValue)) {
+
                         presenceValue.forEach(arrangement => {
-                            arrangementObjects.push(
+                            arrangementObject =
                                 ARRANGEMENTS_THINGS[presenceType][presenceName][arrangement]
+                            arrangementObjects.push(
+                                arrangementObject
                             )
+
+                            _addPresenceToSceneLayer({
+                                arrangementObject,
+                                layers,
+                                presenceType,
+                                presenceName,
+                                value: arrangement
+                            })
                         })
 
                     /**
@@ -185,9 +260,20 @@ export const finalRegisterPresenceYIndices = (
                      * per scene.
                      */
                     } else {
-                        arrangementObjects.push(
+                        arrangementObject =
                             ARRANGEMENTS_THINGS[presenceType][presenceName][presenceValue]
+
+                        arrangementObjects.push(
+                            arrangementObject
                         )
+
+                        _addPresenceToSceneLayer({
+                            arrangementObject,
+                            layers,
+                            presenceType,
+                            presenceName,
+                            value: presenceValue
+                        })
                     }
                 }
 
@@ -201,33 +287,28 @@ export const finalRegisterPresenceYIndices = (
                     } = arrangementObject
 
                     /**
-                     * TODO: Eventually, all presences should have a yIndex. For
-                     * now, we will check if they don't. Placeholders have negative
-                     * yIndex.
+                     * If this is the first presence for that yIndex,
+                     * initialise the yIndex array.
                      */
-                    if (!isNaN(yIndex) && yIndex > -1) {
-                        /**
-                         * If this is the first presence for that yIndex,
-                         * initialise the yIndex array.
-                         */
-                        if (!scene.presenceYIndices[yIndex]) {
-                            scene.presenceYIndices[yIndex] = []
-                        }
-
-                        /**
-                         * Add presence to the scene's presenceYIndices object
-                         * under that yIndex.
-                         */
-                        scene.presenceYIndices[yIndex].push({
-                            type: presenceType,
-                            name: presenceName,
-                            instance,
-                            arrangement
-                        })
+                    if (!scene.presenceYIndices[yIndex]) {
+                        scene.presenceYIndices[yIndex] = []
                     }
+
+                    /**
+                     * Add presence to the scene's presenceYIndices object
+                     * under that yIndex.
+                     */
+                    scene.presenceYIndices[yIndex].push({
+                        type: presenceType,
+                        name: presenceName,
+                        instance,
+                        arrangement
+                    })
                 })
             })
         })
+
+        scene.layers = layers
 
         // Scene no longer needs the presences object.
         delete scene.presences

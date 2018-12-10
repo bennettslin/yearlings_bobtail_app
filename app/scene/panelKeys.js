@@ -18,8 +18,8 @@ const
     OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior',
 
     // Together on one page.
-    GO_KART_EXTERIOR = 'goKartExteriorLeft',
-    SNOWGLOBE = 'snowglobeTetherball',
+    GO_KART_EXTERIOR = 'goKartExterior',
+    SNOWGLOBE = 'snowglobe',
 
     // With dishroom fixtures.
     DISHROOM_SINK = 'dishroomSink',

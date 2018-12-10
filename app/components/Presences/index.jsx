@@ -4,27 +4,24 @@
  */
 
 import React, { Component } from 'react'
-// eslint-disable-next-line
-import { CSSTransitionGroup } from 'react-transition-group'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Presence from './Presence'
 
-import { getSceneObject } from 'helpers/data'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },
-    renderedStore: {
-        renderedSongIndex,
-        renderedSceneIndex
+    sceneStore: {
+        sceneCubesKey,
+        presenceYIndices
     }
 }) => ({
     canSceneRender,
-    renderedSongIndex,
-    renderedSceneIndex
+    sceneCubesKey,
+    presenceYIndices
 })
 
 class Presences extends Component {
@@ -32,8 +29,8 @@ class Presences extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedSceneIndex: PropTypes.number.isRequired,
+        sceneCubesKey: PropTypes.string.isRequired,
+        presenceYIndices: PropTypes.any.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired
@@ -49,19 +46,9 @@ class Presences extends Component {
     render() {
         const {
                 yIndex,
-                renderedSongIndex,
-                renderedSceneIndex
-            } = this.props,
-
-            sceneObject = getSceneObject(
-                renderedSongIndex,
-                renderedSceneIndex
-            ),
-
-            {
-                cubes: cubesKey,
+                sceneCubesKey: cubesKey,
                 presenceYIndices
-            } = sceneObject,
+            } = this.props,
 
             presences = presenceYIndices[yIndex]
 
