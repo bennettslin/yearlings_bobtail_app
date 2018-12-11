@@ -100,7 +100,7 @@ import {
     KHARI_LIZ_REFLECTION
 } from 'scene/actorKeys'
 
-const presencePropTypes = {
+const propTypes = {
     [YOUNG_BENNETT]: PropTypes.string,
     [PRETEEN_BENNETT]: PropTypes.string,
     [BENNETT]: PropTypes.string,
@@ -151,7 +151,7 @@ const presencePropTypes = {
     [KHARI_LIZ_REFLECTION]: PropTypes.string
 }
 
-export { presencePropTypes }
+export { propTypes }
 
 export default {
     [YOUNG_BENNETT]: YoungBennett,

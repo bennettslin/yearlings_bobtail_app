@@ -5,6 +5,7 @@ import cx from 'classnames'
 
 import ActorLayer from './Actor'
 import BackdropLayer from './Backdrop'
+import BubbleLayer from './Bubble'
 
 import { getSceneObject } from 'helpers/data'
 import { getPropsAreShallowEqual } from 'helpers/general'
@@ -61,7 +62,8 @@ class PresenceLayer extends Component {
         if (scenePresenceLayer) {
             const {
                 actors,
-                backdrops
+                backdrops,
+                bubbles
             } = scenePresenceLayer
 
             return (
@@ -78,6 +80,7 @@ class PresenceLayer extends Component {
                 >
                     <ActorLayer {...actors} />
                     <BackdropLayer {...backdrops} />
+                    <BubbleLayer {...bubbles} />
                 </div>
             )
 

@@ -1,6 +1,4 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
 import TogetherSketchbook from './Bubbles/TogetherSketchbook'
 import ApartSketchbook from './Bubbles/ApartSketchbook'
@@ -30,7 +28,24 @@ import {
     LIZ_THOUGHT
 } from 'scene/bubbleKeys'
 
-const BUBBLES_MAP = {
+const propTypes = {
+    [TOGETHER_SKETCHBOOK]: PropTypes.bool,
+    [APART_SKETCHBOOK]: PropTypes.bool,
+    [DOGS_SKETCHBOOK]: PropTypes.bool,
+    [ESCAPE_POD_SKETCHBOOK]: PropTypes.bool,
+    [CINEMA_THOUGHTS]: PropTypes.bool,
+    [GO_KART_THOUGHT]: PropTypes.bool,
+    [WAITING_ROOM_THOUGHTS]: PropTypes.bool,
+    [TARPIT_THOUGHT]: PropTypes.bool,
+    [SIBLING_THOUGHT]: PropTypes.bool,
+    [KHARI_ATTACK_SPEECH]: PropTypes.bool,
+    [LIZ_DEFENCE_SPEECH]: PropTypes.bool,
+    [LIZ_THOUGHT]: PropTypes.bool
+}
+
+export { propTypes }
+
+export default {
     [TOGETHER_SKETCHBOOK]: TogetherSketchbook,
     [APART_SKETCHBOOK]: ApartSketchbook,
     [DOGS_SKETCHBOOK]: DogsSketchbook,
@@ -44,37 +59,3 @@ const BUBBLES_MAP = {
     [LIZ_DEFENCE_SPEECH]: LizDefenceSpeech,
     [LIZ_THOUGHT]: LizThought
 }
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    nameKey: PropTypes.string.isRequired,
-    x: PropTypes.string.isRequired,
-    y: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired
-}
-
-const Bubble = ({
-
-    className,
-    nameKey,
-
-    ...other
-}) => {
-
-    const BubbleComponent = BUBBLES_MAP[nameKey]
-
-    return (
-        <BubbleComponent {...other}
-            className={cx(
-                'Bubble',
-                className
-            )}
-        />
-    )
-}
-
-Bubble.propTypes = propTypes
-
-export default Bubble

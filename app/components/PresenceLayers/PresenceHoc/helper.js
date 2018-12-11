@@ -1,22 +1,38 @@
 import actorsMap from '../Actor/presenceMap'
 import backdropsMap from '../Backdrop/presenceMap'
+import bubblesMap from '../Bubble/presenceMap'
 
 import ARRANGEMENTS_ACTORS from 'scene/actors'
 import ARRANGEMENTS_THINGS from 'scene/things'
 
 import {
     ACTORS,
-    BACKDROPS
+    BACKDROPS,
+    BUBBLES,
+    CUTOUTS,
+    FIXTURES,
+    FLATS,
+    FURNITURES,
+    PANELS,
+    PUPPETS
 } from 'constants/scene'
 
 const PRESENCE_CLASS_NAME_MAP = {
     [ACTORS]: 'Actor',
-    [BACKDROPS]: 'Backdrop'
+    [BACKDROPS]: 'Backdrop',
+    [BUBBLES]: 'Bubble',
+    [CUTOUTS]: 'Cutout',
+    [FIXTURES]: 'Fixture',
+    [FLATS]: 'Flat',
+    [FURNITURES]: 'Furniture',
+    [PANELS]: 'Panel',
+    [PUPPETS]: 'Puppet'
 }
 
 const PRESENCE_TYPE_MAP = {
     [ACTORS]: actorsMap,
-    [BACKDROPS]: backdropsMap
+    [BACKDROPS]: backdropsMap,
+    [BUBBLES]: bubblesMap
 }
 
 const getClassNameForPresenceType = (presenceType) => {

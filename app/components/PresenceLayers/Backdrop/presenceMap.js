@@ -66,7 +66,7 @@ import {
     INVERSE_THOUGHT_BACKDROP
 } from 'scene/backdropKeys'
 
-const presencePropTypes = {
+const propTypes = {
     [NOHO_HOUSES_BACKDROP]: PropTypes.bool,
     [NOHO_SCHOOL_BACKDROP]: PropTypes.bool,
     [VALLEY_BACKDROP]: PropTypes.bool,
@@ -100,7 +100,7 @@ const presencePropTypes = {
     [INVERSE_THOUGHT_BACKDROP]: PropTypes.bool
 }
 
-export { presencePropTypes }
+export { propTypes }
 
 export default {
     [NOHO_HOUSES_BACKDROP]: NohoHousesBackdrop,

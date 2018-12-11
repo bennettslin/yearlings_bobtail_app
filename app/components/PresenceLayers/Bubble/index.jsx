@@ -2,17 +2,17 @@ import React from 'react'
 import { propTypes } from './presenceMap'
 
 import PresenceLayer from '../PresenceLayer'
-import { BACKDROPS } from 'constants/scene'
+import { BUBBLES } from 'constants/scene'
 
-const BackdropLayer = (props) => {
+const BubbleLayer = (props) => {
     return (
         <PresenceLayer
             {...props}
-            {...{ presenceType: BACKDROPS }}
+            {...{ presenceType: BUBBLES }}
         />
     )
 }
 
-BackdropLayer.propTypes = propTypes
+BubbleLayer.propTypes = propTypes
 
-export default BackdropLayer
+export default BubbleLayer

@@ -1,63 +1,18 @@
-import React, { Component, Fragment as ___ } from 'react'
-import PropTypes from 'prop-types'
-import keys from 'lodash.keys'
-import { connect } from 'react-redux'
+import React from 'react'
+import { propTypes } from './presenceMap'
 
-import PresenceHoc from '../PresenceHoc'
-import { getPropsAreShallowEqual } from 'helpers/general'
-import presenceMap, { presencePropTypes } from './presenceMap'
+import PresenceLayer from '../PresenceLayer'
 import { ACTORS } from 'constants/scene'
 
-const mapStateToProps = ({
-    renderStore: { canSceneRender },
-    sceneStore: { sceneCubesKey }
-}) => ({
-    canSceneRender,
-    sceneCubesKey
-})
-
-class ActorLayer extends Component {
-
-    static propTypes = {
-        // Through Redux.
-        canSceneRender: PropTypes.bool.isRequired,
-        sceneCubesKey: PropTypes.string.isRequired,
-
-        // From parent.
-        ...presencePropTypes
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
-    }
-
-    render() {
-        // Pass this from parent so individual presences don't need Redux.
-        const { sceneCubesKey: cubesKey } = this.props
-
-        return (
-            <___>
-                {keys(presenceMap).map(presenceKey => {
-                    const { [presenceKey]: presenceValue } = this.props
-
-                    return (
-                        <PresenceHoc
-                            key={presenceKey}
-                            {...{
-                                cubesKey,
-                                presenceType: ACTORS,
-                                presenceKey,
-                                presenceValue
-                            }}
-                        />
-                    )
-                })}
-            </___>
-        )
-    }
+const ActorLayer = (props) => {
+    return (
+        <PresenceLayer
+            {...props}
+            {...{ presenceType: ACTORS }}
+        />
+    )
 }
 
-export default connect(mapStateToProps)(ActorLayer)
+ActorLayer.propTypes = propTypes
+
+export default ActorLayer
