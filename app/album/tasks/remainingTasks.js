@@ -37,6 +37,11 @@ module.exports = [
      */
     // https://wesbos.com/localhost-mobile-device-testing/
     {
+        taskName: `Figure out why I can't connect mobile locally.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Overview logue is hidden but touch findable in song.`,
         workedHours: 0,
         neededHours: 3
@@ -156,6 +161,11 @@ module.exports = [
         taskName: `Finalise loading page. Use image of Mara.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Get rid of all string arrangements.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `CSS transition group for presences, since they now cut in and out.`,
