@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Presence from './Presence'
+import Presence from '../Presence'
 
 import { getPropsAreShallowEqual } from 'helpers/general'
 
