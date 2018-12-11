@@ -81,12 +81,8 @@ class PresenceLayer extends Component {
             return (
                 <div
                     className={cx(
-                        'PresenceLayer',
-
-                        // TODO: This is only for zIndex, for now. Change stylesheet to get eventually.
+                        'Presences',
                         `Presences__y${yIndex}`,
-
-                        `PresenceLayer__${yIndex}`,
                         'absoluteFullContainer'
                     )}
                 >

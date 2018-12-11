@@ -4,7 +4,7 @@ import keys from 'lodash.keys'
 import { connect } from 'react-redux'
 
 import PresenceHoc from '../PresenceHoc'
-import { getMapForPresenceType } from '../PresenceHoc/helper'
+import { getMapForPresenceType } from '../helper'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({

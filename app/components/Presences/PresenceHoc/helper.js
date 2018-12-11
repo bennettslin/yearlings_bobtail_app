@@ -17,7 +17,7 @@ import { getValueInAbridgedMatrix } from 'helpers/general'
 
 import { getCubesForKey } from 'scene/cubes'
 
-export const getNearestXIndex = (xFloat) => {
+const _getNearestXIndex = (xFloat) => {
     let xIndex
 
     /**
@@ -53,7 +53,7 @@ const _getTileCentreForPresence = ({
             slantDirection = ''
         } = getCubesForKey(cubesKey),
 
-        xIndex = getNearestXIndex(xFloat),
+        xIndex = _getNearestXIndex(xFloat),
 
         xOffset = xFloat - xIndex,
 

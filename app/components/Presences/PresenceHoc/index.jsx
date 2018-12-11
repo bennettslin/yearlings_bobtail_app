@@ -6,10 +6,9 @@ import {
     getClassNameForPresenceType,
     getMapForPresenceType,
     getArrangementForPresenceType
-} from './helper'
+} from '../helper'
 
-// TODO: Move this to hoc helper?
-import { getPresenceXYWidthAndHeight } from '../helper'
+import { getPresenceXYWidthAndHeight } from './helper'
 
 import { ACTORS } from 'constants/scene'
 
