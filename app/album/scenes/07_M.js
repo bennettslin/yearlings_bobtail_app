@@ -87,8 +87,7 @@ import {
 } from '../../scene/cutoutKeys'
 
 import {
-    BENNETT_RECORD_PLAYER,
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
+    BENNETT_RECORD_PLAYER_COUCH,
     BENNETT_COUCH_LAMP,
     TELEVISION_ALBUM,
     KEYBOARD,
@@ -128,7 +127,7 @@ module.exports = [
                 [LEONARD_COHEN_POSTER]: true
             },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
+                [BENNETT_RECORD_PLAYER_COUCH]: true,
                 [BENNETT_COUCH_LAMP]: true
             }
         },
@@ -155,7 +154,7 @@ module.exports = [
             },
             [FIXTURES]: {
                 [TELEVISION_ALBUM]: true,
-                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
+                [BENNETT_RECORD_PLAYER_COUCH]: true,
                 [BENNETT_COUCH_LAMP]: true
             }
         },
@@ -189,7 +188,7 @@ module.exports = [
                 [PROGRESS_CHART_LATE]: true
             },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
+                [BENNETT_RECORD_PLAYER_COUCH]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [KEYBOARD]: true
             }

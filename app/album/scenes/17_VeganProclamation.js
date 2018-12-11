@@ -60,9 +60,8 @@ import {
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE,
-    ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
-    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT,
+    UC_BERKELEY_TREE_LEFT,
+    UC_BERKELEY_TREE_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT,
     DUMPSTER
@@ -126,7 +125,7 @@ module.exports = [
             [CUTOUTS]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
-                [UC_BERKELEY_TREE]: ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
+                [UC_BERKELEY_TREE_RIGHT]: true
             },
             [FLATS]: {
                 [CAMPANILE]: true
@@ -305,7 +304,7 @@ module.exports = [
                 [UC_BERKELEY_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [UC_BERKELEY_TREE]: ARRANGEMENT_UC_BERKELEY_TREE_LEFT
+                [UC_BERKELEY_TREE_LEFT]: true
             },
             [FIXTURES]: {
                 [ASH_CAN]: true

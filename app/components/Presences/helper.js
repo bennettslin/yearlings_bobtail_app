@@ -61,15 +61,9 @@ const getArrangementForPresenceType = ({
     presenceValue
 
 }) => {
-    if (presenceType === ACTORS) {
-        return ARRANGEMENTS_ACTORS[presenceKey][presenceValue]
-
-    } else if (presenceValue === true) {
-        return ARRANGEMENTS_THINGS[presenceType][presenceKey]
-
-    } else if (typeof presenceValue === 'string') {
-        return ARRANGEMENTS_THINGS[presenceType][presenceKey][presenceValue]
-    }
+    return presenceType === ACTORS ?
+        ARRANGEMENTS_ACTORS[presenceKey][presenceValue] :
+        ARRANGEMENTS_THINGS[presenceType][presenceKey]
 }
 
 export {

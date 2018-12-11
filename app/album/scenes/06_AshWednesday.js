@@ -62,15 +62,13 @@ import {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE,
-    ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
-    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
+    UC_BERKELEY_TREE_LEFT,
+    UC_BERKELEY_TREE_RIGHT
 } from '../../scene/cutoutKeys'
 
 import {
     POLICE_ALBUM,
-    BENNETT_RECORD_PLAYER,
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
+    BENNETT_RECORD_PLAYER_COUCH,
     BENNETT_COUCH_LAMP,
     ASH_CAN
 } from '../../scene/fixtureKeys'
@@ -140,7 +138,7 @@ module.exports = [
             },
             [FIXTURES]: {
                 [POLICE_ALBUM]: true,
-                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
+                [BENNETT_RECORD_PLAYER_COUCH]: true,
                 [BENNETT_COUCH_LAMP]: true
             },
             [FURNITURES]: {
@@ -216,7 +214,7 @@ module.exports = [
                 [UC_BERKELEY_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [UC_BERKELEY_TREE]: ARRANGEMENT_UC_BERKELEY_TREE_LEFT
+                [UC_BERKELEY_TREE_LEFT]: true
             },
             [FIXTURES]: {
                 [ASH_CAN]: true
@@ -252,7 +250,7 @@ module.exports = [
             [CUTOUTS]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
-                [UC_BERKELEY_TREE]: ARRANGEMENT_UC_BERKELEY_TREE_RIGHT
+                [UC_BERKELEY_TREE_RIGHT]: true
             },
             [FLATS]: {
                 [CAMPANILE]: true

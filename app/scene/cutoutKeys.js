@@ -102,7 +102,8 @@ const
 
     // With ucBerkeley backdrop and flat.
     BANCROFT_SHRUBS = 'bancroftShrubs',
-    UC_BERKELEY_TREE = 'ucBerkeleyTree',
+    UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft',
+    UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight',
 
     // With nude drawing, vaseline, and bloody towel fixtures. Requires editing.
     PROGRESS_CHART_EARLY = 'progressChartEarly',
@@ -113,8 +114,10 @@ const
     MONITOR_SPEAKER_RIGHT = 'monitorSpeakerRight',
     WALL_SPEAKER_LEFT = 'wallSpeakerLeft',
     WALL_SPEAKER_RIGHT = 'wallSpeakerRight',
-    MONITOR_SPEAKER_SIDE = 'monitorSpeakerSide',
-    WALL_SPEAKER_SIDE = 'wallSpeakerSide',
+    MONITOR_SIDE_CROWD = 'monitorSideCrowd',
+    MONITOR_SIDE_STAGE = 'monitorSideStage',
+    WALL_SPEAKER_SIDE_CROWD = 'wallSpeakerSideCrowd',
+    WALL_SPEAKER_SIDE_STAGE = 'wallSpeakerSideStage',
 
     // Own page. Requires editing.
     CINEMA_POSTER_LEFT = 'cinemaPosterLeft',
@@ -143,14 +146,7 @@ const
     DUMPSTER = 'dumpster',
 
     // With wedding backdrop, wedding platform panel, and foreboding trees flat.
-    WEDDING_CROWD = 'weddingCrowd',
-
-    ARRANGEMENT_UC_BERKELEY_TREE_LEFT = 'arrangementUcBerkeleyTreeLeft',
-    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT = 'arrangementUcBerkeleyTreeRight',
-    ARRANGEMENT_MONITOR_SIDE_CROWD = 'arrangementMonitorSideCrowd',
-    ARRANGEMENT_MONITOR_SIDE_STAGE = 'arrangementMonitorSideStage',
-    ARRANGEMENT_WALL_SIDE_CROWD = 'arrangementWallSideCrowd',
-    ARRANGEMENT_WALL_SIDE_STAGE = 'arrangementWallSideStage'
+    WEDDING_CROWD = 'weddingCrowd'
 
 export {
     FIRE_HYDRANT,
@@ -197,7 +193,8 @@ export {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE,
+    UC_BERKELEY_TREE_LEFT,
+    UC_BERKELEY_TREE_RIGHT,
     LEONARD_COHEN_POSTER,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
@@ -220,8 +217,10 @@ export {
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION,
-    MONITOR_SPEAKER_SIDE,
-    WALL_SPEAKER_SIDE,
+    MONITOR_SIDE_CROWD,
+    MONITOR_SIDE_STAGE,
+    WALL_SPEAKER_SIDE_CROWD,
+    WALL_SPEAKER_SIDE_STAGE,
     TWIN_STREETLAMP_FAR,
     TWIN_STREETLAMP_MIDDLE,
     TWIN_STREETLAMP_NEAR,
@@ -230,12 +229,5 @@ export {
     DUMPSTER,
     WEDDING_CROWD,
     CLIFF_TREE,
-    IV_DRIP,
-
-    ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
-    ARRANGEMENT_UC_BERKELEY_TREE_RIGHT,
-    ARRANGEMENT_MONITOR_SIDE_CROWD,
-    ARRANGEMENT_MONITOR_SIDE_STAGE,
-    ARRANGEMENT_WALL_SIDE_CROWD,
-    ARRANGEMENT_WALL_SIDE_STAGE
+    IV_DRIP
 }

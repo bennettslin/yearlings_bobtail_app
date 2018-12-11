@@ -55,9 +55,9 @@ const addPresenceToSceneLayerByType = ({
 }) => {
     const presenceValue = presences[presenceType][presenceName]
 
-    /**
-     * This presence is an actor.
-     */
+    let arrangementObject,
+        value
+
     if (presenceType === ACTORS) {
         let { instance } = presenceValue
 
@@ -70,37 +70,24 @@ const addPresenceToSceneLayerByType = ({
             instance = presenceValue[characterName].instance
         }
 
-        const arrangementObject =
-            ARRANGEMENTS_ACTORS[presenceName][instance]
-
-        _addPresenceToSceneLayer({
-            arrangementObject,
-            layers,
-            presenceType,
-            presenceName,
-            value: instance
-        })
+        arrangementObject = ARRANGEMENTS_ACTORS[presenceName][instance]
+        value = instance
 
         // Can be deleted.
         album.tempInstanceCount++
 
     } else {
-        const arrangementObject = presenceValue === true ?
-
-            // This presence has only one arrangement.
-            ARRANGEMENTS_THINGS[presenceType][presenceName] :
-
-            // This presence has multiple arrangements, but only one per scene.
-            ARRANGEMENTS_THINGS[presenceType][presenceName][presenceValue]
-
-        _addPresenceToSceneLayer({
-            arrangementObject,
-            layers,
-            presenceType,
-            presenceName,
-            value: presenceValue
-        })
+        arrangementObject = ARRANGEMENTS_THINGS[presenceType][presenceName]
+        value = presenceValue
     }
+
+    _addPresenceToSceneLayer({
+        arrangementObject,
+        layers,
+        presenceType,
+        presenceName,
+        value
+    })
 }
 
 export {

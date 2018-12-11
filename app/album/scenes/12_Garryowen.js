@@ -68,8 +68,7 @@ import {
 import {
     GUITAR,
     DRUMKIT,
-    BENNETT_RECORD_PLAYER,
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
+    BENNETT_RECORD_PLAYER_BASEMENT,
     NAS_ALBUM
 } from '../../scene/fixtureKeys'
 
@@ -176,7 +175,7 @@ module.exports = [
                 [ELLIOTT_SMITH_POSTER]: true
             },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
+                [BENNETT_RECORD_PLAYER_BASEMENT]: true,
                 [NAS_ALBUM]: true
             },
             [FURNITURES]: {

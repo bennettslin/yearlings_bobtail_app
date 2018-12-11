@@ -74,8 +74,7 @@ import {
 } from '../../scene/cutoutKeys'
 
 import {
-    BENNETT_RECORD_PLAYER,
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
+    BENNETT_RECORD_PLAYER_BASEMENT,
     TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_CONSOLE,
@@ -123,7 +122,7 @@ module.exports = [
                 [ELLIOTT_SMITH_POSTER]: true
             },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT
+                [BENNETT_RECORD_PLAYER_BASEMENT]: true
             },
             [FURNITURES]: {
                 [BENNETT_MATTRESS]: true,
@@ -158,7 +157,7 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT
+                [BENNETT_RECORD_PLAYER_BASEMENT]: true
             },
             [FURNITURES]: {
                 [BENNETT_MATTRESS]: true,
@@ -358,7 +357,7 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER]: ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
+                [BENNETT_RECORD_PLAYER_BASEMENT]: true,
                 [CRACKED_PICTURE]: true
             },
             [FURNITURES]: {

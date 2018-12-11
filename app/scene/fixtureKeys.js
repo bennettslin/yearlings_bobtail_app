@@ -50,7 +50,8 @@ const
     THROWN_FRUIT = 'thrownFruit',
 
     // Together on one page.
-    BENNETT_RECORD_PLAYER = 'bennettRecordPlayer',
+    BENNETT_RECORD_PLAYER_COUCH = 'bennettRecordPlayerCouch',
+    BENNETT_RECORD_PLAYER_BASEMENT = 'bennettRecordPlayerBasement',
     HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
 
     // With solicitingOpinion Bennett.
@@ -152,10 +153,7 @@ const
 
     // With caressed Liz and caressing KhariReflection.
     LIZ_PHONE_BASE = 'lizPhoneBase',
-    LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection',
-
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH = 'arrangementBennettRecordPlayerCouch',
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT = 'arrangementBennettRecordPlayerBasement'
+    LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection'
 
 export {
     PLAYGROUND_BALL,
@@ -178,7 +176,8 @@ export {
     BEYONDER_ENVELOPE,
     THROWN_FRUIT,
     POLICE_ALBUM,
-    BENNETT_RECORD_PLAYER,
+    BENNETT_RECORD_PLAYER_COUCH,
+    BENNETT_RECORD_PLAYER_BASEMENT,
     BENNETT_COUCH_LAMP,
     ASH_CAN,
     TELEVISION_ALBUM,
@@ -228,8 +227,5 @@ export {
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
-    HOSPITAL_RECORD_PLAYER,
-
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT
+    HOSPITAL_RECORD_PLAYER
 }

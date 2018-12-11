@@ -62,12 +62,10 @@ import {
 } from '../../scene/instanceKeys/songs'
 
 import {
-    MONITOR_SPEAKER_SIDE,
-    ARRANGEMENT_MONITOR_SIDE_CROWD,
-    ARRANGEMENT_MONITOR_SIDE_STAGE,
-    WALL_SPEAKER_SIDE,
-    ARRANGEMENT_WALL_SIDE_CROWD,
-    ARRANGEMENT_WALL_SIDE_STAGE
+    MONITOR_SIDE_CROWD,
+    MONITOR_SIDE_STAGE,
+    WALL_SPEAKER_SIDE_CROWD,
+    WALL_SPEAKER_SIDE_STAGE
 } from '../../scene/cutoutKeys'
 
 import {
@@ -135,8 +133,8 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [MONITOR_SPEAKER_SIDE]: ARRANGEMENT_MONITOR_SIDE_CROWD,
-                [WALL_SPEAKER_SIDE]: ARRANGEMENT_WALL_SIDE_CROWD
+                [MONITOR_SIDE_CROWD]: true,
+                [WALL_SPEAKER_SIDE_CROWD]: true
             },
             [FLATS]: {
                 [CROWD_SIDE_FAR]: true,
@@ -180,8 +178,8 @@ module.exports = [
                 }
             },
             [CUTOUTS]: {
-                [MONITOR_SPEAKER_SIDE]: ARRANGEMENT_MONITOR_SIDE_STAGE,
-                [WALL_SPEAKER_SIDE]: ARRANGEMENT_WALL_SIDE_STAGE
+                [MONITOR_SIDE_STAGE]: true,
+                [WALL_SPEAKER_SIDE_STAGE]: true
             },
             [FIXTURES]: {
                 [STAGE_MIC_SIDE]: true,

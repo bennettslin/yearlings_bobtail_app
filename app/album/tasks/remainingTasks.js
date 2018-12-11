@@ -160,14 +160,9 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Get rid of all string arrangements.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `CSS transition group for presences, since they now cut in and out. Use transition groups for popups as well?`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 8
     },
     {
         taskName: `Presence and cubes transition order.`,

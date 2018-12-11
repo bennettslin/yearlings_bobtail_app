@@ -4171,5 +4171,10 @@ module.exports = [
         taskName: `There are still gaps in slider bars.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Get rid of all string arrangements.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
