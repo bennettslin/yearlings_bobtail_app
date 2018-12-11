@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import ActorLayer from './Actor'
+import BackdropLayer from './Backdrop'
 
 import { getSceneObject } from 'helpers/data'
 import { getPropsAreShallowEqual } from 'helpers/general'
@@ -59,7 +60,8 @@ class PresenceLayer extends Component {
 
         if (scenePresenceLayer) {
             const {
-                actors
+                actors,
+                backdrops
             } = scenePresenceLayer
 
             return (
@@ -75,6 +77,7 @@ class PresenceLayer extends Component {
                     )}
                 >
                     <ActorLayer {...actors} />
+                    <BackdropLayer {...backdrops} />
                 </div>
             )
 
