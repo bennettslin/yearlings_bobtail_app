@@ -1,6 +1,4 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
 import FireHydrant from './Cutouts/FireHydrant'
 import PlaygroundSlide from './Cutouts/PlaygroundSlide'
@@ -154,7 +152,86 @@ import {
     IV_DRIP
 } from 'scene/cutoutKeys'
 
-const CUTOUTS_MAP = {
+const propTypes = {
+    [FIRE_HYDRANT]: PropTypes.bool,
+    [PLAYGROUND_SLIDE]: PropTypes.bool,
+    [MIRRORED_SINK]: PropTypes.bool,
+    [TOWEL_RACK]: PropTypes.bool,
+    [OVERPASS_SIGN_FRONT]: PropTypes.bool,
+    [OVERPASS_SIGN_BACK]: PropTypes.bool,
+    [PORCH_PLANTS_LEFT]: PropTypes.bool,
+    [PORCH_PLANTS_RIGHT]: PropTypes.bool,
+    [TINTIN_POSTER]: PropTypes.bool,
+    [TROLL_SHADOW_LEFT]: PropTypes.bool,
+    [TROLL_SHADOW_RIGHT]: PropTypes.bool,
+    [CAMPFIRE]: PropTypes.bool,
+    [STALACTITES]: PropTypes.bool,
+    [BUDDHA_SHRINE]: PropTypes.bool,
+    [TAIWAN_FRIDGE_FRONT]: PropTypes.bool,
+    [BENNETT_TAIWAN_STAIRS]: PropTypes.bool,
+    [ODIN_TAIWAN_STAIRS]: PropTypes.bool,
+    [BENNETT_TAIWAN_GATE]: PropTypes.bool,
+    [ODIN_TAIWAN_GATE]: PropTypes.bool,
+    [BENNETT_ODIN_RICKSHAW]: PropTypes.bool,
+    [BENNETT_SHORE]: PropTypes.bool,
+    [ODIN_SHORE]: PropTypes.bool,
+    [BENNETT_ODIN_BUOY]: PropTypes.bool,
+    [YELLOW_TAPED_GRILL]: PropTypes.bool,
+    [BENNETT_ODIN_DEPTHS]: PropTypes.bool,
+    [SEA_SERPENTS]: PropTypes.bool,
+    [BENNETT_OCEAN_FLOOR]: PropTypes.bool,
+    [ODIN_OCEAN_FLOOR]: PropTypes.bool,
+    [BENNETT_MAT]: PropTypes.bool,
+    [ODIN_MAT]: PropTypes.bool,
+    [MICHAEL_JACKSON_POSTER]: PropTypes.bool,
+    [TRASH_CAN]: PropTypes.bool,
+    [VAN_NUYS_PLANTS]: PropTypes.bool,
+    [VAN_NUYS_LOGO]: PropTypes.bool,
+    [CORKBOARD]: PropTypes.bool,
+    [RECYCLABLES]: PropTypes.bool,
+    [NIRVANA_POSTER]: PropTypes.bool,
+    [DISPENSER_LEFT]: PropTypes.bool,
+    [DISPENSER_RIGHT]: PropTypes.bool,
+    [BERKELEY_LAMPPOST]: PropTypes.bool,
+    [SIGNPOST]: PropTypes.bool,
+    [BANCROFT_SHRUBS]: PropTypes.bool,
+    [UC_BERKELEY_TREE]: PropTypes.bool,
+    [LEONARD_COHEN_POSTER]: PropTypes.bool,
+    [PROGRESS_CHART_EARLY]: PropTypes.bool,
+    [PROGRESS_CHART_LATE]: PropTypes.bool,
+    [MONITOR_SPEAKER_LEFT]: PropTypes.bool,
+    [MONITOR_SPEAKER_RIGHT]: PropTypes.bool,
+    [WALL_SPEAKER_LEFT]: PropTypes.bool,
+    [WALL_SPEAKER_RIGHT]: PropTypes.bool,
+    [CINEMA_POSTER_LEFT]: PropTypes.bool,
+    [CINEMA_POSTER_RIGHT]: PropTypes.bool,
+    [CINEMA_POSTER_RIGHT_NORMAL]: PropTypes.bool,
+    [SANDBAGS]: PropTypes.bool,
+    [STAGE_LIGHTS]: PropTypes.bool,
+    [TRAFFIC_LIGHT]: PropTypes.bool,
+    [APARTMENT_PLANT]: PropTypes.bool,
+    [CODE_BOX]: PropTypes.bool,
+    [CLIPBOARD]: PropTypes.bool,
+    [PAINTING]: PropTypes.bool,
+    [WAITING_ROOM_PLANT]: PropTypes.bool,
+    [STORAGE_BOXES]: PropTypes.bool,
+    [STORAGE_CHEST]: PropTypes.bool,
+    [HOWIE_FRIDGE]: PropTypes.bool,
+    [TELEVISION]: PropTypes.bool,
+    [MONITOR_SPEAKER_SIDE]: PropTypes.bool,
+    [WALL_SPEAKER_SIDE]: PropTypes.bool,
+    [TWIN_STREETLAMP]: PropTypes.bool,
+    [ELLIOTT_SMITH_POSTER]: PropTypes.bool,
+    [EL_CERRITO_TREE]: PropTypes.bool,
+    [DUMPSTER]: PropTypes.bool,
+    [WEDDING_CROWD]: PropTypes.bool,
+    [CLIFF_TREE]: PropTypes.bool,
+    [IV_DRIP]: PropTypes.bool
+}
+
+export { propTypes }
+
+export default {
     [FIRE_HYDRANT]: FireHydrant,
     [PLAYGROUND_SLIDE]: PlaygroundSlide,
     [MIRRORED_SINK]: MirroredSink,
@@ -231,36 +308,3 @@ const CUTOUTS_MAP = {
     [IV_DRIP]: IvDrip
 }
 
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    nameKey: PropTypes.string.isRequired,
-    x: PropTypes.string.isRequired,
-    y: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired
-}
-
-const Cutout = ({
-
-    className,
-    nameKey,
-
-    ...other
-}) => {
-
-    const CutoutComponent = CUTOUTS_MAP[nameKey]
-
-    return (
-        <CutoutComponent {...other}
-            className={cx(
-                'Cutout',
-                className
-            )}
-        />
-    )
-}
-
-Cutout.propTypes = propTypes
-
-export default Cutout
