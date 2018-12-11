@@ -123,57 +123,18 @@ export const finalRegisterPresenceYIndices = (
             { presences } = scene,
             layers = {}
 
-        // Create the presenceYIndices object for each scene.
-        // TODO: Eventually get rid of this one.
-        scene.presenceYIndices = {}
-
         // Iterate through actors, cutouts, fixtures.
         keys(presences).forEach(presenceType => {
 
             // Iterate through presences for each presenceType.
             keys(presences[presenceType]).forEach(presenceName => {
 
-                // TODO: Delete this.
-                const arrangementObjects = []
-
                 addPresenceToSceneLayerByType({
-                    arrangementObjects,
                     presences,
                     presenceType,
                     presenceName,
                     layers,
                     album
-                })
-
-                // TODO: Delete all of this.
-                const { instance } = presences[presenceType][presenceName]
-                arrangementObjects.forEach(arrangementObject => {
-                    const {
-                        /**
-                         * Determine the yIndex of each presence.
-                         */
-                        yIndex,
-                        arrangement
-                    } = arrangementObject
-
-                    /**
-                     * If this is the first presence for that yIndex,
-                     * initialise the yIndex array.
-                     */
-                    if (!scene.presenceYIndices[yIndex]) {
-                        scene.presenceYIndices[yIndex] = []
-                    }
-
-                    /**
-                     * Add presence to the scene's presenceYIndices object
-                     * under that yIndex.
-                     */
-                    scene.presenceYIndices[yIndex].push({
-                        type: presenceType,
-                        name: presenceName,
-                        instance,
-                        arrangement
-                    })
                 })
             })
         })

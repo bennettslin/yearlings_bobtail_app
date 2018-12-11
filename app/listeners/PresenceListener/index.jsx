@@ -55,7 +55,6 @@ class PresenceListener extends PureComponent {
         const {
             cubes: sceneCubesKey,
             layers: scenePresenceLayers,
-            presenceYIndices,
             sky: {
                 time: sceneTime = TIME_ANYTIME,
                 season: sceneSeason = SEASON_INDOOR
@@ -65,7 +64,6 @@ class PresenceListener extends PureComponent {
         this.props.updateSceneStore({
             sceneCubesKey,
             scenePresenceLayers,
-            presenceYIndices,
             sceneTime,
             sceneSeason
         })

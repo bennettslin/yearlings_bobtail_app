@@ -168,8 +168,7 @@ const
             time: sceneTime = TIME_ANYTIME,
             season: sceneSeason = SEASON_INDOOR
         },
-        layers: scenePresenceLayers,
-        presenceYIndices
+        layers: scenePresenceLayers
     } = sceneObject,
 
     SCENE_DEFAULTS = {
@@ -181,8 +180,7 @@ const
          * Stored only for dev clarity. Components will retrieve these layers
          * through indices to avoid unnecessary updates.
          */
-        scenePresenceLayers,
-        presenceYIndices
+        scenePresenceLayers
     },
 
     SCROLL_CAROUSEL_DEFAULTS = {

@@ -158,14 +158,9 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Allow cutouts and fixtures to persist across scenes. Either needs React CSS transition group, or just have same keys?`,
-        workedHours: 5,
-        neededHours: 10
-    },
-    {
-        taskName: `Fix bug where go-kart presences have duplicate keys. Do this in conjunction with persisting presences across scenes.`,
+        taskName: `CSS transition group for presences, since they now cut in and out.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
         taskName: `Presence and cubes transition order.`,

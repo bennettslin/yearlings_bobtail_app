@@ -6,7 +6,6 @@ import ARRANGEMENTS_THINGS from 'scene/things'
 import { ACTORS } from 'constants/scene'
 
 const _addPresenceToSceneLayer = ({
-    arrangementObjects,
     arrangementObject,
     layers,
     presenceType,
@@ -14,12 +13,6 @@ const _addPresenceToSceneLayer = ({
     value
 
 }) => {
-
-    // TODO: Eventually delete this code.
-    arrangementObjects.push(
-        arrangementObject
-    )
-
     const
         { yIndex } = arrangementObject,
         layerKey = `layer${yIndex}`
@@ -54,7 +47,6 @@ const _addPresenceToSceneLayer = ({
 }
 
 const addPresenceToSceneLayerByType = ({
-    arrangementObjects,
     presences,
     presenceType,
     presenceName,
@@ -82,7 +74,6 @@ const addPresenceToSceneLayerByType = ({
             ARRANGEMENTS_ACTORS[presenceName][instance]
 
         _addPresenceToSceneLayer({
-            arrangementObjects,
             arrangementObject,
             layers,
             presenceType,
@@ -103,7 +94,6 @@ const addPresenceToSceneLayerByType = ({
                 ARRANGEMENTS_THINGS[presenceType][presenceName][arrangementKey]
 
             _addPresenceToSceneLayer({
-                arrangementObjects,
                 arrangementObject,
                 layers,
                 presenceType,
@@ -122,7 +112,6 @@ const addPresenceToSceneLayerByType = ({
             ARRANGEMENTS_THINGS[presenceType][presenceName][presenceValue]
 
         _addPresenceToSceneLayer({
-            arrangementObjects,
             arrangementObject,
             layers,
             presenceType,

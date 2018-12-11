@@ -4161,5 +4161,10 @@ module.exports = [
         taskName: `Fix issue with annotation title access letters not positioning correctly.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow cutouts and fixtures to persist across scenes. Also fix bug where go-kart presences have duplicate keys.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]
