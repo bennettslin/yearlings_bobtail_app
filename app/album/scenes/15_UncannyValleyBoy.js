@@ -93,8 +93,7 @@ import {
     BENNETT_MATTRESS,
     BENNETT_PILLOWS,
     LIZ_CUSHIONS,
-    ARRANGEMENT_LIZ_CUSHIONS,
-    ARRANGEMENT_LIZ_CUSHIONS_THOUGHT,
+    LIZ_CUSHIONS_THOUGHT,
     MIRIAM_CUSHIONS
 } from '../../scene/furnitureKeys'
 
@@ -255,7 +254,7 @@ module.exports = [
                 [ROAD_PRESENT]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS_THOUGHT,
+                [LIZ_CUSHIONS_THOUGHT]: true,
                 [MIRIAM_CUSHIONS]: true
             },
             [PANELS]: {
@@ -317,7 +316,7 @@ module.exports = [
                 [ROAD_FUTURE]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [SNOWGLOBE_LIZ_KHARI]: true,

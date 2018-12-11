@@ -80,7 +80,6 @@ import {
 
 import {
     LIZ_CUSHIONS,
-    ARRANGEMENT_LIZ_CUSHIONS,
     BENNETT_MATTRESS,
     BENNETT_PILLOWS
 } from '../../scene/furnitureKeys'
@@ -104,7 +103,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -254,7 +253,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

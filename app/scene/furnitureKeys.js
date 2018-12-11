@@ -49,6 +49,7 @@ const
 
     // TODO
     LIZ_CUSHIONS = 'lizCushions',
+    LIZ_CUSHIONS_THOUGHT = 'lizCushionsThought',
 
     // TODO
     MIRIAM_CUSHIONS = 'miriamCushions',
@@ -59,10 +60,7 @@ const
 
     // TODO
     HOSPITAL_MATTRESS = 'hospitalMattress',
-    HOSPITAL_MATTRESS_LOWERED = 'hospitalMattressLowered',
-
-    ARRANGEMENT_LIZ_CUSHIONS = 'arrangementLizCushions',
-    ARRANGEMENT_LIZ_CUSHIONS_THOUGHT = 'arrangementLizCushionsThought'
+    HOSPITAL_MATTRESS_LOWERED = 'hospitalMattressLowered'
 
 export {
     BEDROOM_DESK,
@@ -86,11 +84,10 @@ export {
     SATURN_SEAT_REAR,
     ATTIC_CUSHIONS,
     LIZ_CUSHIONS,
+    LIZ_CUSHIONS_THOUGHT,
     MIRIAM_CUSHIONS,
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
     HOSPITAL_MATTRESS,
-    HOSPITAL_MATTRESS_LOWERED,
-    ARRANGEMENT_LIZ_CUSHIONS,
-    ARRANGEMENT_LIZ_CUSHIONS_THOUGHT
+    HOSPITAL_MATTRESS_LOWERED
 }

@@ -51,8 +51,7 @@ import {
 } from '../../scene/fixtureKeys'
 
 import {
-    LIZ_CUSHIONS,
-    ARRANGEMENT_LIZ_CUSHIONS
+    LIZ_CUSHIONS
 } from '../../scene/furnitureKeys'
 
 import {
@@ -80,7 +79,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [OPAL_LAP]: true
@@ -107,7 +106,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [OPAL_LICKING]: true
@@ -137,7 +136,7 @@ module.exports = [
                 [TCHOTCHKES]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [OPAL_COUCH]: true
@@ -170,7 +169,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_OPEN_KEY,
@@ -204,7 +203,7 @@ module.exports = [
                 [LIZ_DEFENCE_SPEECH]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,
@@ -237,7 +236,7 @@ module.exports = [
                 [LIZ_THOUGHT]: true
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             }
         },
         cubes: LIZ_COUCH_GATE_OPEN_KEY,
@@ -261,7 +260,7 @@ module.exports = [
                 }
             },
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [OPAL_GAZING]: true
@@ -278,7 +277,7 @@ module.exports = [
         description: `Same scene. Peacocks.`,
         presences: {
             [FURNITURES]: {
-                [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
+                [LIZ_CUSHIONS]: true
             },
             [PUPPETS]: {
                 [PEAHEN]: true,
