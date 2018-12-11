@@ -73,9 +73,8 @@ import {
 } from '../../scene/furnitureKeys'
 
 import {
-    GO_KART_EXTERIOR,
-    ARRANGEMENT_GO_KART_LEFT,
-    ARRANGEMENT_GO_KART_RIGHT
+    GO_KART_LEFT_EXTERIOR,
+    GO_KART_RIGHT_EXTERIOR
 } from '../../scene/panelKeys'
 
 module.exports = [
@@ -217,10 +216,8 @@ module.exports = [
                 [GO_KART_SEAT_RIGHT]: true
             },
             [PANELS]: {
-                [GO_KART_EXTERIOR]: [
-                    ARRANGEMENT_GO_KART_LEFT,
-                    ARRANGEMENT_GO_KART_RIGHT
-                ]
+                [GO_KART_LEFT_EXTERIOR]: true,
+                [GO_KART_RIGHT_EXTERIOR]: true
             }
         },
         cubes: GO_KARTS_KEY,

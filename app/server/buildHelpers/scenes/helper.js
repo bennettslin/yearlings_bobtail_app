@@ -94,11 +94,10 @@ const addPresenceToSceneLayerByType = ({
         album.tempInstanceCount++
 
     /**
-     * This presence has multiple arrangements in a single layer. (Go-karts,
-     * twin streetlamps, and snowglobes.)
+     * This presence has multiple arrangements in a single layer. (Twin
+     * streetlamps, and snowglobes.)
      */
     } else if (Array.isArray(presenceValue)) {
-
         presenceValue.forEach(arrangementKey => {
             const arrangementObject =
                 ARRANGEMENTS_THINGS[presenceType][presenceName][arrangementKey]

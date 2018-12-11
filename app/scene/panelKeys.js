@@ -18,7 +18,8 @@ const
     OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior',
 
     // Together on one page.
-    GO_KART_EXTERIOR = 'goKartExterior',
+    GO_KART_LEFT_EXTERIOR = 'goKartExteriorLeft',
+    GO_KART_RIGHT_EXTERIOR = 'goKartExteriorRight',
     SNOWGLOBE = 'snowglobe',
 
     // With dishroom fixtures.
@@ -44,8 +45,6 @@ const
     // With wedding backdrop, wedding crowd cutout, and foreboding trees flat.
     WEDDING_PLATFORM = 'weddingPlatform',
 
-    ARRANGEMENT_GO_KART_LEFT = 'arrangementGoKartLeft',
-    ARRANGEMENT_GO_KART_RIGHT = 'arrangementGoKartRight',
     ARRANGEMENT_SNOWGLOBE_TETHERBALL = 'arrangementSnowglobeTetherball',
     ARRANGEMENT_SNOWGLOBE_LIZ_ALONE = 'arrangementSnowglobeLizAlone',
     ARRANGEMENT_SNOWGLOBE_BENNETT_MIRIAM = 'arrangementSnowglobeBennettMiriam',
@@ -60,7 +59,8 @@ export {
     SCHOOLBUS_EXTERIOR,
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
-    GO_KART_EXTERIOR,
+    GO_KART_LEFT_EXTERIOR,
+    GO_KART_RIGHT_EXTERIOR,
     DISHROOM_SINK,
     SATURN_INTERIOR,
     SATURN_EXTERIOR,
@@ -72,8 +72,6 @@ export {
     TENNIS_THOUGHT_PANEL,
     PHONE_CALL_PANEL,
     WEDDING_PLATFORM,
-    ARRANGEMENT_GO_KART_LEFT,
-    ARRANGEMENT_GO_KART_RIGHT,
     ARRANGEMENT_SNOWGLOBE_TETHERBALL,
     ARRANGEMENT_SNOWGLOBE_LIZ_ALONE,
     ARRANGEMENT_SNOWGLOBE_BENNETT_MIRIAM,
