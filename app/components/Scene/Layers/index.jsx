@@ -5,7 +5,7 @@ import cx from 'classnames'
 
 import Cubes from '../../Cubes'
 import Presences from '../../Presences'
-import PresenceLayers from '../../Presences/PresenceLayers'
+import PresenceLayers from '../../PresenceLayers'
 
 import CubeZIndexStylesheet from './Stylesheets/CubeZIndex'
 import PresenceZIndexStylesheet from './Stylesheets/PresenceZIndex'
