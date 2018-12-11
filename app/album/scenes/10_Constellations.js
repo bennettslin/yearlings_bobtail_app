@@ -65,8 +65,7 @@ import {
 } from '../../scene/cutoutKeys'
 
 import {
-    PUSH_BROOM,
-    ARRANGEMENT_PUSH_BROOM_TUNNEL,
+    PUSH_BROOM_TUNNEL,
     GRAVESTONE,
     EVIAN_BOTTLES
 } from '../../scene/fixtureKeys'
@@ -207,7 +206,7 @@ module.exports = [
                 }
             },
             [FIXTURES]: {
-                [PUSH_BROOM]: ARRANGEMENT_PUSH_BROOM_TUNNEL
+                [PUSH_BROOM_TUNNEL]: true
             },
             [FLATS]: {
                 [STEAM_PIPES]: true

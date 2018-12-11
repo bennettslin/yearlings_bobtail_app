@@ -1,28 +1,25 @@
 import {
-    PUSH_BROOM,
-    ARRANGEMENT_PUSH_BROOM_BACKSTAGE,
-    ARRANGEMENT_PUSH_BROOM_TUNNEL,
+    PUSH_BROOM_BACKSTAGE,
+    PUSH_BROOM_TUNNEL,
     STEPLADDER,
     MANNEQUIN
 } from '../../../fixtureKeys'
 
 const ARRANGEMENTS_MAP = {
-    [PUSH_BROOM]: {
-        [ARRANGEMENT_PUSH_BROOM_BACKSTAGE]: {
-            yIndex: 2,
-            arrangement: {
-                xFloat: 6.5,
-                xWidth: 1,
-                zHeight: 3
-            }
-        },
-        [ARRANGEMENT_PUSH_BROOM_TUNNEL]: {
-            yIndex: 2,
-            arrangement: {
-                xFloat: 4,
-                xWidth: 1,
-                zHeight: 3
-            }
+    [PUSH_BROOM_BACKSTAGE]: {
+        yIndex: 2,
+        arrangement: {
+            xFloat: 6.5,
+            xWidth: 1,
+            zHeight: 3
+        }
+    },
+    [PUSH_BROOM_TUNNEL]: {
+        yIndex: 2,
+        arrangement: {
+            xFloat: 4,
+            xWidth: 1,
+            zHeight: 3
         }
     },
     [STEPLADDER]: {

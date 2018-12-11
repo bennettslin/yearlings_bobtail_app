@@ -96,8 +96,7 @@ import {
     GUITAR,
     BASS_CASE_OPEN,
     DRUMKIT,
-    DRUMS_STACKED,
-    ARRANGEMENT_DRUMS_STACKED_BASEMENT,
+    DRUMS_STACKED_BASEMENT,
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
     BASEMENT_BEER_CASE,
@@ -286,7 +285,7 @@ module.exports = [
             [FIXTURES]: {
                 [BASS_CASE_UPRIGHT]: true,
                 [GUITAR_CASE_UPRIGHT]: true,
-                [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_BASEMENT,
+                [DRUMS_STACKED_BASEMENT]: true,
                 [BASEMENT_BEER_CASE]: true,
                 [BASEMENT_BEER_MARA]: true,
                 [BASEMENT_BEER_BENNETT]: true

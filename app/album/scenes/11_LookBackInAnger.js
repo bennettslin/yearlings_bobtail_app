@@ -75,8 +75,7 @@ import {
     KICK_DRUM,
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
-    DRUMS_STACKED,
-    ARRANGEMENT_DRUMS_STACKED_CLUB,
+    DRUMS_STACKED_CLUB,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
@@ -240,7 +239,7 @@ module.exports = [
             },
             [FIXTURES]: {
                 [BASS_CASE_SIDE]: true,
-                [DRUMS_STACKED]: ARRANGEMENT_DRUMS_STACKED_CLUB
+                [DRUMS_STACKED_CLUB]: true
             }
         },
         cubes: CLUB_LOADING,

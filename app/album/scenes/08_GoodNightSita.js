@@ -57,8 +57,7 @@ import {
 
 import {
     CAVEMAN_BONES,
-    PUSH_BROOM,
-    ARRANGEMENT_PUSH_BROOM_BACKSTAGE,
+    PUSH_BROOM_BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
 } from '../../scene/fixtureKeys'
@@ -177,7 +176,7 @@ module.exports = [
                 [STAGE_LIGHTS]: true
             },
             [FIXTURES]: {
-                [PUSH_BROOM]: ARRANGEMENT_PUSH_BROOM_BACKSTAGE,
+                [PUSH_BROOM_BACKSTAGE]: true,
                 [STEPLADDER]: true,
                 [MANNEQUIN]: true
             }

@@ -89,7 +89,8 @@ const
     CAVEMAN_BONES = 'cavemanBones',
 
     // Together on one page.
-    PUSH_BROOM = 'pushBroom',
+    PUSH_BROOM_BACKSTAGE = 'pushBroomBackstage',
+    PUSH_BROOM_TUNNEL = 'pushBroomTunnel',
     STEPLADDER = 'stepladder',
     MANNEQUIN = 'mannequin',
 
@@ -123,7 +124,8 @@ const
     KICK_DRUM = 'kickDrum',
 
     // With flirting Jacob.
-    DRUMS_STACKED = 'drumsStacked',
+    DRUMS_STACKED_BASEMENT = 'drumsStackedBasement',
+    DRUMS_STACKED_CLUB = 'drumsStackedClub',
 
     // With removingShoes Bennett.
     BENNETT_SHOE = 'bennettShoe',
@@ -153,11 +155,7 @@ const
     LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection',
 
     ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH = 'arrangementBennettRecordPlayerCouch',
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT = 'arrangementBennettRecordPlayerBasement',
-    ARRANGEMENT_PUSH_BROOM_BACKSTAGE = 'arrangementPushBroomBackstage',
-    ARRANGEMENT_PUSH_BROOM_TUNNEL = 'arrangementPushBroomTunnel',
-    ARRANGEMENT_DRUMS_STACKED_BASEMENT = 'arrangementDrumsStackedBasement',
-    ARRANGEMENT_DRUMS_STACKED_CLUB = 'arrangementDrumsStackedClub'
+    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT = 'arrangementBennettRecordPlayerBasement'
 
 export {
     PLAYGROUND_BALL,
@@ -195,7 +193,8 @@ export {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT,
     CAVEMAN_BONES,
-    PUSH_BROOM,
+    PUSH_BROOM_BACKSTAGE,
+    PUSH_BROOM_TUNNEL,
     STEPLADDER,
     MANNEQUIN,
     CONVEYOR_BELT,
@@ -214,7 +213,8 @@ export {
     KICK_DRUM,
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
-    DRUMS_STACKED,
+    DRUMS_STACKED_BASEMENT,
+    DRUMS_STACKED_CLUB,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
     NAS_ALBUM,
@@ -231,9 +231,5 @@ export {
     HOSPITAL_RECORD_PLAYER,
 
     ARRANGEMENT_BENNETT_RECORD_PLAYER_COUCH,
-    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT,
-    ARRANGEMENT_PUSH_BROOM_BACKSTAGE,
-    ARRANGEMENT_PUSH_BROOM_TUNNEL,
-    ARRANGEMENT_DRUMS_STACKED_BASEMENT,
-    ARRANGEMENT_DRUMS_STACKED_CLUB
+    ARRANGEMENT_BENNETT_RECORD_PLAYER_BASEMENT
 }
