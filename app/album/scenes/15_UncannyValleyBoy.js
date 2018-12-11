@@ -99,12 +99,11 @@ import {
 } from '../../scene/furnitureKeys'
 
 import {
-    SNOWGLOBE,
-    ARRANGEMENT_SNOWGLOBE_TETHERBALL,
-    ARRANGEMENT_SNOWGLOBE_LIZ_ALONE,
-    ARRANGEMENT_SNOWGLOBE_BENNETT_MIRIAM,
-    ARRANGEMENT_SNOWGLOBE_LIZ_KHARI,
-    ARRANGEMENT_SNOWGLOBE_BENNETT_ALONE
+    SNOWGLOBE_TETHERBALL,
+    SNOWGLOBE_LIZ_ALONE,
+    SNOWGLOBE_BENNETT_MIRIAM,
+    SNOWGLOBE_LIZ_KHARI,
+    SNOWGLOBE_BENNETT_ALONE
 } from '../../scene/panelKeys'
 
 module.exports = [
@@ -205,7 +204,7 @@ module.exports = [
                 [ROAD_PAST]: true
             },
             [PANELS]: {
-                [SNOWGLOBE]: ARRANGEMENT_SNOWGLOBE_TETHERBALL
+                [SNOWGLOBE_TETHERBALL]: true
             }
         },
         cubes: SNOWGLOBES_PAST_KEY,
@@ -260,10 +259,8 @@ module.exports = [
                 [MIRIAM_CUSHIONS]: true
             },
             [PANELS]: {
-                [SNOWGLOBE]: [
-                    ARRANGEMENT_SNOWGLOBE_LIZ_ALONE,
-                    ARRANGEMENT_SNOWGLOBE_BENNETT_MIRIAM
-                ]
+                [SNOWGLOBE_LIZ_ALONE]: true,
+                [SNOWGLOBE_BENNETT_MIRIAM]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
@@ -323,10 +320,8 @@ module.exports = [
                 [LIZ_CUSHIONS]: ARRANGEMENT_LIZ_CUSHIONS
             },
             [PANELS]: {
-                [SNOWGLOBE]: [
-                    ARRANGEMENT_SNOWGLOBE_LIZ_KHARI,
-                    ARRANGEMENT_SNOWGLOBE_BENNETT_ALONE
-                ]
+                [SNOWGLOBE_LIZ_KHARI]: true,
+                [SNOWGLOBE_BENNETT_ALONE]: true
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,

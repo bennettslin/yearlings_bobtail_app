@@ -63,10 +63,9 @@ import {
 } from '../../scene/backdropKeys'
 
 import {
-    TWIN_STREETLAMP,
-    ARRANGEMENT_TWIN_STREETLAMP_FAR,
-    ARRANGEMENT_TWIN_STREETLAMP_MIDDLE,
-    ARRANGEMENT_TWIN_STREETLAMP_NEAR
+    TWIN_STREETLAMP_FAR,
+    TWIN_STREETLAMP_MIDDLE,
+    TWIN_STREETLAMP_NEAR
 } from '../../scene/cutoutKeys'
 
 import {
@@ -173,11 +172,9 @@ module.exports = [
                 [OAKLAND_FRONT_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TWIN_STREETLAMP]: [
-                    ARRANGEMENT_TWIN_STREETLAMP_FAR,
-                    ARRANGEMENT_TWIN_STREETLAMP_MIDDLE,
-                    ARRANGEMENT_TWIN_STREETLAMP_NEAR
-                ]
+                [TWIN_STREETLAMP_FAR]: true,
+                [TWIN_STREETLAMP_MIDDLE]: true,
+                [TWIN_STREETLAMP_NEAR]: true
             },
             [FLATS]: {
                 [RESIDENTIAL_FAR_LEFT]: true,

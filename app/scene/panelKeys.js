@@ -20,7 +20,11 @@ const
     // Together on one page.
     GO_KART_LEFT_EXTERIOR = 'goKartExteriorLeft',
     GO_KART_RIGHT_EXTERIOR = 'goKartExteriorRight',
-    SNOWGLOBE = 'snowglobe',
+    SNOWGLOBE_TETHERBALL = 'snowglobeTetherball',
+    SNOWGLOBE_LIZ_ALONE = 'snowglobeLizAlone',
+    SNOWGLOBE_BENNETT_MIRIAM = 'snowglobeBennettMiriam',
+    SNOWGLOBE_LIZ_KHARI = 'snowglobeLizKhari',
+    SNOWGLOBE_BENNETT_ALONE = 'snowglobeBennettAlone',
 
     // With dishroom fixtures.
     DISHROOM_SINK = 'dishroomSink',
@@ -43,13 +47,7 @@ const
     TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel',
 
     // With wedding backdrop, wedding crowd cutout, and foreboding trees flat.
-    WEDDING_PLATFORM = 'weddingPlatform',
-
-    ARRANGEMENT_SNOWGLOBE_TETHERBALL = 'arrangementSnowglobeTetherball',
-    ARRANGEMENT_SNOWGLOBE_LIZ_ALONE = 'arrangementSnowglobeLizAlone',
-    ARRANGEMENT_SNOWGLOBE_BENNETT_MIRIAM = 'arrangementSnowglobeBennettMiriam',
-    ARRANGEMENT_SNOWGLOBE_LIZ_KHARI = 'arrangementSnowglobeLizKhari',
-    ARRANGEMENT_SNOWGLOBE_BENNETT_ALONE = 'arrangementSnowglobeBennettAlone'
+    WEDDING_PLATFORM = 'weddingPlatform'
 
 export {
     ESTHER_SPEECH_PANEL,
@@ -65,16 +63,15 @@ export {
     SATURN_INTERIOR,
     SATURN_EXTERIOR,
     VOLKSWAGEN,
-    SNOWGLOBE,
+    SNOWGLOBE_TETHERBALL,
+    SNOWGLOBE_LIZ_ALONE,
+    SNOWGLOBE_BENNETT_MIRIAM,
+    SNOWGLOBE_LIZ_KHARI,
+    SNOWGLOBE_BENNETT_ALONE,
     REATTA_INTERIOR,
     REATTA_EXTERIOR,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
     PHONE_CALL_PANEL,
-    WEDDING_PLATFORM,
-    ARRANGEMENT_SNOWGLOBE_TETHERBALL,
-    ARRANGEMENT_SNOWGLOBE_LIZ_ALONE,
-    ARRANGEMENT_SNOWGLOBE_BENNETT_MIRIAM,
-    ARRANGEMENT_SNOWGLOBE_LIZ_KHARI,
-    ARRANGEMENT_SNOWGLOBE_BENNETT_ALONE
+    WEDDING_PLATFORM
 }

@@ -2,7 +2,9 @@ const
     // Together on one page. Requires editing.
     FIRE_HYDRANT = 'fireHydrant',
     BERKELEY_LAMPPOST = 'berkeleyLamppost',
-    TWIN_STREETLAMP = 'twinStreetlamp',
+    TWIN_STREETLAMP_FAR = 'twinStreetlampFar',
+    TWIN_STREETLAMP_MIDDLE = 'twinStreetlampMiddle',
+    TWIN_STREETLAMP_NEAR = 'twinStreetlampNear',
     TRAFFIC_LIGHT = 'trafficLight',
 
     // With nohoSchool backdrop and flat.
@@ -150,10 +152,7 @@ const
     ARRANGEMENT_MONITOR_SIDE_CROWD = 'arrangementMonitorSideCrowd',
     ARRANGEMENT_MONITOR_SIDE_STAGE = 'arrangementMonitorSideStage',
     ARRANGEMENT_WALL_SIDE_CROWD = 'arrangementWallSideCrowd',
-    ARRANGEMENT_WALL_SIDE_STAGE = 'arrangementWallSideStage',
-    ARRANGEMENT_TWIN_STREETLAMP_FAR = 'arrangementTwinStreetlampFar',
-    ARRANGEMENT_TWIN_STREETLAMP_MIDDLE = 'arrangementTwinStreetlampMiddle',
-    ARRANGEMENT_TWIN_STREETLAMP_NEAR = 'arrangementTwinStreetlampNear'
+    ARRANGEMENT_WALL_SIDE_STAGE = 'arrangementWallSideStage'
 
 export {
     FIRE_HYDRANT,
@@ -223,7 +222,9 @@ export {
     TELEVISION,
     MONITOR_SPEAKER_SIDE,
     WALL_SPEAKER_SIDE,
-    TWIN_STREETLAMP,
+    TWIN_STREETLAMP_FAR,
+    TWIN_STREETLAMP_MIDDLE,
+    TWIN_STREETLAMP_NEAR,
     ELLIOTT_SMITH_POSTER,
     EL_CERRITO_TREE,
     DUMPSTER,
@@ -240,8 +241,5 @@ export {
     ARRANGEMENT_MONITOR_SIDE_CROWD,
     ARRANGEMENT_MONITOR_SIDE_STAGE,
     ARRANGEMENT_WALL_SIDE_CROWD,
-    ARRANGEMENT_WALL_SIDE_STAGE,
-    ARRANGEMENT_TWIN_STREETLAMP_FAR,
-    ARRANGEMENT_TWIN_STREETLAMP_MIDDLE,
-    ARRANGEMENT_TWIN_STREETLAMP_NEAR
+    ARRANGEMENT_WALL_SIDE_STAGE
 }
