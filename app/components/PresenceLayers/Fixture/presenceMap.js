@@ -1,6 +1,4 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
 import PlaygroundBall from './Fixtures/PlaygroundBall'
 import SafewayBag from './Fixtures/SafewayBag'
@@ -144,7 +142,81 @@ import {
     HOSPITAL_RECORD_PLAYER
 } from 'scene/fixtureKeys'
 
-const FIXTURES_MAP = {
+const propTypes = {
+    [PLAYGROUND_BALL]: PropTypes.bool,
+    [SAFEWAY_BAG]: PropTypes.bool,
+    [RECORD_PLAYER_STOOL]: PropTypes.bool,
+    [JOHNNY_HORTON_ALBUM]: PropTypes.bool,
+    [SHOPPING_CART]: PropTypes.bool,
+    [HAIRCUT_SCISSORS]: PropTypes.bool,
+    [BEETHOVEN_BUST]: PropTypes.bool,
+    [CHRISTOPHER_LETTERS]: PropTypes.bool,
+    [GARBAGE_BAG]: PropTypes.bool,
+    [SHOPPING_CART_FULL]: PropTypes.bool,
+    [BACKPACK_BENNETT]: PropTypes.bool,
+    [BACKPACK_SASHA]: PropTypes.bool,
+    [BACKPACK_JEWISH_BOY]: PropTypes.bool,
+    [FRIDGE_DRAWINGS]: PropTypes.bool,
+    [CAPTAIN_BED_LAMP]: PropTypes.bool,
+    [RED_ENVELOPE_MONEY]: PropTypes.bool,
+    [BEYONDER_ENVELOPE]: PropTypes.bool,
+    [BENNETT_LETTERS]: PropTypes.bool,
+    [THROWN_FRUIT]: PropTypes.bool,
+    [POLICE_ALBUM]: PropTypes.bool,
+    [BENNETT_RECORD_PLAYER]: PropTypes.string,
+    [BENNETT_COUCH_LAMP]: PropTypes.bool,
+    [ASH_CAN]: PropTypes.bool,
+    [TELEVISION_ALBUM]: PropTypes.bool,
+    [KEYBOARD]: PropTypes.bool,
+    [CASH_BOX]: PropTypes.bool,
+    [GUITAR]: PropTypes.bool,
+    [STAGE_MIC_SIDE]: PropTypes.bool,
+    [BASS_CASE_OPEN]: PropTypes.bool,
+    [DRUMKIT]: PropTypes.bool,
+    [BASS_CASE_UPRIGHT]: PropTypes.bool,
+    [GUITAR_CASE_UPRIGHT]: PropTypes.bool,
+    [BASEMENT_BEER_CASE]: PropTypes.bool,
+    [BASEMENT_BEER_MARA]: PropTypes.bool,
+    [BASEMENT_BEER_BENNETT]: PropTypes.bool,
+    [CAVEMAN_BONES]: PropTypes.bool,
+    [PUSH_BROOM]: PropTypes.string,
+    [STEPLADDER]: PropTypes.bool,
+    [MANNEQUIN]: PropTypes.bool,
+    [CONVEYOR_BELT]: PropTypes.bool,
+    [GLASS_CART]: PropTypes.bool,
+    [TRAY_CART]: PropTypes.bool,
+    [GLASS_RACK]: PropTypes.bool,
+    [DISH_PILE]: PropTypes.bool,
+    [NUDE_DRAWINGS]: PropTypes.bool,
+    [VASELINE]: PropTypes.bool,
+    [LIZ_PHONE]: PropTypes.bool,
+    [LIZ_PHONE_REFLECTION]: PropTypes.bool,
+    [BLOODY_TOWEL]: PropTypes.bool,
+    [GRAVESTONE]: PropTypes.bool,
+    [EVIAN_BOTTLES]: PropTypes.bool,
+    [KICK_DRUM]: PropTypes.bool,
+    [GUITAR_CASE_OPEN]: PropTypes.bool,
+    [BASS_CASE_SIDE]: PropTypes.bool,
+    [DRUMS_STACKED]: PropTypes.string,
+    [BENNETT_SHOE]: PropTypes.bool,
+    [BENNETT_SHOE_REFLECTION]: PropTypes.bool,
+    [NAS_ALBUM]: PropTypes.bool,
+    [TCHOTCHKES]: PropTypes.bool,
+    [TETHERBALL_POLE]: PropTypes.bool,
+    [RECORDING_MIC]: PropTypes.bool,
+    [RECORDING_CONSOLE]: PropTypes.bool,
+    [RECORDING_BEERS]: PropTypes.bool,
+    [CRACKED_PICTURE]: PropTypes.bool,
+    [STAGE_MIC_FAR]: PropTypes.bool,
+    [BURGER_WRAPPER]: PropTypes.bool,
+    [LIZ_PHONE_BASE]: PropTypes.bool,
+    [LIZ_PHONE_BASE_REFLECTION]: PropTypes.bool,
+    [HOSPITAL_RECORD_PLAYER]: PropTypes.bool
+}
+
+export { propTypes }
+
+export default {
     [PLAYGROUND_BALL]: PlaygroundBall,
     [SAFEWAY_BAG]: SafewayBag,
     [RECORD_PLAYER_STOOL]: RecordPlayerStool,
@@ -215,37 +287,3 @@ const FIXTURES_MAP = {
     [LIZ_PHONE_BASE_REFLECTION]: LizPhoneBaseReflection,
     [HOSPITAL_RECORD_PLAYER]: HospitalRecordPlayer
 }
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    nameKey: PropTypes.string.isRequired,
-    x: PropTypes.string.isRequired,
-    y: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired
-}
-
-const Fixture = ({
-
-    className,
-    nameKey,
-
-    ...other
-}) => {
-
-    const FixtureComponent = FIXTURES_MAP[nameKey]
-
-    return (
-        <FixtureComponent {...other}
-            className={cx(
-                'Fixture',
-                className
-            )}
-        />
-    )
-}
-
-Fixture.propTypes = propTypes
-
-export default Fixture

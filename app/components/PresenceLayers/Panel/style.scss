@@ -1,0 +1,31 @@
+.Panel__temporaryRect {
+    fill: rgba(250, 150, 200, 0.25);
+    vector-effect: non-scaling-stroke;
+    stroke-width: 1px;
+    stroke: #444;
+}
+
+.Panel {
+    transition: opacity $animationDuration__default;
+    opacity: 0;
+
+    .Scene__shown
+    & {
+        opacity: 1;
+    }
+}.Puppet__temporaryRect {
+    fill: rgba(250, 200, 250, 0.25);
+    vector-effect: non-scaling-stroke;
+    stroke-width: 1px;
+    stroke: #444;
+}
+
+.Puppet {
+    transition: opacity $animationDuration__default;
+    opacity: 0;
+
+    .Scene__shown
+    & {
+        opacity: 1;
+    }
+}

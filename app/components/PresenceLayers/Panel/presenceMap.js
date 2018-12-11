@@ -1,6 +1,4 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
 import EstherSpeechPanel from './Panels/EstherSpeechPanel'
 import Bathtub from './Panels/Bathtub'
@@ -44,7 +42,33 @@ import {
     WEDDING_PLATFORM
 } from 'scene/panelKeys'
 
-const PANELS_MAP = {
+const propTypes = {
+    [ESTHER_SPEECH_PANEL]: PropTypes.bool,
+    [BATHTUB]: PropTypes.bool,
+    [CAPTAIN_BED_DRAWERS]: PropTypes.bool,
+    [SCHOOLBUS_INTERIOR]: PropTypes.bool,
+    [SCHOOLBUS_EXTERIOR]: PropTypes.bool,
+    [OCEAN_CAVE_INTERIOR]: PropTypes.bool,
+    [OCEAN_CAVE_EXTERIOR]: PropTypes.bool,
+    [GO_KART_EXTERIOR]: PropTypes.arrayOf(
+        PropTypes.string
+    ),
+    [DISHROOM_SINK]: PropTypes.bool,
+    [SATURN_INTERIOR]: PropTypes.bool,
+    [SATURN_EXTERIOR]: PropTypes.bool,
+    [VOLKSWAGEN]: PropTypes.bool,
+    [SNOWGLOBE]: PropTypes.string,
+    [REATTA_INTERIOR]: PropTypes.bool,
+    [REATTA_EXTERIOR]: PropTypes.bool,
+    [PHONE_CALL_PANEL]: PropTypes.bool,
+    [DEATHBED_THOUGHT_PANEL]: PropTypes.bool,
+    [TENNIS_THOUGHT_PANEL]: PropTypes.bool,
+    [WEDDING_PLATFORM]: PropTypes.bool
+}
+
+export { propTypes }
+
+export default {
     [ESTHER_SPEECH_PANEL]: EstherSpeechPanel,
     [BATHTUB]: Bathtub,
     [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers,
@@ -65,37 +89,3 @@ const PANELS_MAP = {
     [TENNIS_THOUGHT_PANEL]: TennisThoughtPanel,
     [WEDDING_PLATFORM]: WeddingPlatform
 }
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    nameKey: PropTypes.string.isRequired,
-    x: PropTypes.string.isRequired,
-    y: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired
-}
-
-const Panel = ({
-
-    className,
-    nameKey,
-
-    ...other
-}) => {
-
-    const PanelComponent = PANELS_MAP[nameKey]
-
-    return (
-        <PanelComponent {...other}
-            className={cx(
-                'Panel',
-                className
-            )}
-        />
-    )
-}
-
-Panel.propTypes = propTypes
-
-export default Panel

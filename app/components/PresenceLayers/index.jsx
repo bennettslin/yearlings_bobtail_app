@@ -6,6 +6,12 @@ import cx from 'classnames'
 import ActorLayer from './Actor'
 import BackdropLayer from './Backdrop'
 import BubbleLayer from './Bubble'
+import CutoutLayer from './Cutout'
+import FixtureLayer from './Fixture'
+import FlatLayer from './Flat'
+import FurnitureLayer from './Furniture'
+import PanelLayer from './Panel'
+import PuppetLayer from './Puppet'
 
 import { getSceneObject } from 'helpers/data'
 import { getPropsAreShallowEqual } from 'helpers/general'
@@ -63,7 +69,13 @@ class PresenceLayer extends Component {
             const {
                 actors,
                 backdrops,
-                bubbles
+                bubbles,
+                cutouts,
+                fixtures,
+                flats,
+                furnitures,
+                panels,
+                puppets
             } = scenePresenceLayer
 
             return (
@@ -81,6 +93,12 @@ class PresenceLayer extends Component {
                     <ActorLayer {...actors} />
                     <BackdropLayer {...backdrops} />
                     <BubbleLayer {...bubbles} />
+                    <CutoutLayer {...cutouts} />
+                    <FixtureLayer {...fixtures} />
+                    <FlatLayer {...flats} />
+                    <FurnitureLayer {...furnitures} />
+                    <PanelLayer {...panels} />
+                    <PuppetLayer {...puppets} />
                 </div>
             )
 

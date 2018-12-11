@@ -1,11 +1,11 @@
-.Panel__temporaryRect {
-    fill: rgba(250, 150, 200, 0.25);
+.Bubble__temporaryRect {
+    fill: rgba(150, 250, 200, 0.25);
     vector-effect: non-scaling-stroke;
     stroke-width: 1px;
     stroke: #444;
 }
 
-.Panel {
+.Bubble {
     transition: opacity $animationDuration__default;
     opacity: 0;
 

@@ -1,6 +1,4 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
 import BedroomDesk from './Furnitures/BedroomDesk'
 import CaptainBedMattress from './Furnitures/CaptainBedMattress'
@@ -58,7 +56,38 @@ import {
     HOSPITAL_MATTRESS_LOWERED
 } from 'scene/furnitureKeys'
 
-const FURNITURES_MAP = {
+const propTypes = {
+    [BEDROOM_DESK]: PropTypes.bool,
+    [CAPTAIN_BED_MATTRESS]: PropTypes.bool,
+    [SCHOOLBUS_SEAT_FRONT]: PropTypes.bool,
+    [SCHOOLBUS_SEAT_REAR]: PropTypes.bool,
+    [BUOY_FLOAT]: PropTypes.bool,
+    [BENNETT_CUSHIONS]: PropTypes.bool,
+    [GO_KART_SEAT_LEFT]: PropTypes.bool,
+    [GO_KART_SEAT_RIGHT]: PropTypes.bool,
+    [LIGHT_SWITCH]: PropTypes.bool,
+    [BENNETT_MATTRESS]: PropTypes.bool,
+    [BENNETT_PILLOWS]: PropTypes.bool,
+    [ARMCHAIR_LEFT]: PropTypes.bool,
+    [ARMCHAIR_RIGHT]: PropTypes.bool,
+    [LIZ_MATTRESS]: PropTypes.bool,
+    [LIZ_PILLOWS]: PropTypes.bool,
+    [LIZ_MATTRESS_REFLECTION]: PropTypes.bool,
+    [LIZ_PILLOWS_REFLECTION]: PropTypes.bool,
+    [SATURN_SEAT_FRONT]: PropTypes.bool,
+    [SATURN_SEAT_REAR]: PropTypes.bool,
+    [ATTIC_CUSHIONS]: PropTypes.bool,
+    [LIZ_CUSHIONS]: PropTypes.string,
+    [MIRIAM_CUSHIONS]: PropTypes.bool,
+    [REATTA_SEAT]: PropTypes.bool,
+    [REATTA_SEAT_LOWERED]: PropTypes.bool,
+    [HOSPITAL_MATTRESS]: PropTypes.bool,
+    [HOSPITAL_MATTRESS_LOWERED]: PropTypes.bool
+}
+
+export { propTypes }
+
+export default {
     [BEDROOM_DESK]: BedroomDesk,
     [CAPTAIN_BED_MATTRESS]: CaptainBedMattress,
     [SCHOOLBUS_SEAT_FRONT]: SchoolbusSeatFront,
@@ -86,37 +115,3 @@ const FURNITURES_MAP = {
     [HOSPITAL_MATTRESS]: HospitalMattress,
     [HOSPITAL_MATTRESS_LOWERED]: HospitalMattressLowered
 }
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    nameKey: PropTypes.string.isRequired,
-    x: PropTypes.string.isRequired,
-    y: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired
-}
-
-const Furniture = ({
-
-    className,
-    nameKey,
-
-    ...other
-}) => {
-
-    const FurnitureComponent = FURNITURES_MAP[nameKey]
-
-    return (
-        <FurnitureComponent {...other}
-            className={cx(
-                'Furniture',
-                className
-            )}
-        />
-    )
-}
-
-Furniture.propTypes = propTypes
-
-export default Furniture
