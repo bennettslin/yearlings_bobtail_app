@@ -262,5 +262,10 @@ module.exports = [
         taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Allow presences to specify zIndex. Position presences in slanted cubes. (I'm going to assume that without window blinds, this is no longer necessary.)`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

@@ -1,4 +1,11 @@
 module.exports = [
+    // TODO: Do today.
+    {
+        taskName: `Tips content`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
     // Scrolling stuff.
     {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,
@@ -97,11 +104,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `There are still gaps in slider bars.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     /**
      * Content.
@@ -120,11 +122,6 @@ module.exports = [
         taskName: `Title section content.`,
         workedHours: 1,
         neededHours: 3
-    },
-    {
-        taskName: `Tips content`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     /**
@@ -168,7 +165,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `CSS transition group for presences, since they now cut in and out.`,
+        taskName: `CSS transition group for presences, since they now cut in and out. Use transition groups for popups as well?`,
         workedHours: 0,
         neededHours: 3
     },
@@ -181,11 +178,6 @@ module.exports = [
         taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Allow presences to specify zIndex. Position presences in slanted cubes.`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     /**

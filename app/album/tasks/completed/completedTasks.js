@@ -4166,5 +4166,10 @@ module.exports = [
         taskName: `Allow cutouts and fixtures to persist across scenes. Also fix bug where go-kart presences have duplicate keys.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `There are still gaps in slider bars.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

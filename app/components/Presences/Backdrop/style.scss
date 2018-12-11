@@ -5,12 +5,12 @@
     stroke: #444;
 }
 
-.Backdrop {
-    transition: opacity $animationDuration__default;
-    opacity: 0;
+// .Backdrop {
+//     transition: opacity $animationDuration__default;
+//     opacity: 0;
 
-    .Scene__shown
-    & {
-        opacity: 1;
-    }
-}
+//     .Scene__shown
+//     & {
+//         opacity: 1;
+//     }
+// }

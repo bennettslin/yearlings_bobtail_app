@@ -23,7 +23,6 @@ const SliderVerses = ({
             'SliderVerses'
         )}>
             {stanzaVerseConfigs.map((verseObject, index) => {
-
                 /**
                  * Slider verses are not concerned with their times
                  * respective to the song's total time. They only know
@@ -35,7 +34,10 @@ const SliderVerses = ({
                         verseDuration
                     } = verseObject,
 
-                    relativeStartTime = verseStartTime - stanzaStartTime
+                    relativeStartTime = verseStartTime - stanzaStartTime,
+
+                    isLastVerseOfStanza =
+                        index === stanzaVerseConfigs.length - 1
 
                 return (
                     <VerseHoc
@@ -43,6 +45,7 @@ const SliderVerses = ({
                         inSlider
                         {...{
                             verseIndex: stanzaFirstVerseIndex + index,
+                            isLastVerseOfStanza,
                             relativeStartTime,
                             verseDuration,
                             stanzaDuration,

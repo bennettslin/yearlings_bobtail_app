@@ -32,7 +32,7 @@ import BennettMat from './Cutouts/BennettMat'
 import OdinMat from './Cutouts/OdinMat'
 import MichaelJacksonPoster from './Cutouts/MichaelJacksonPoster'
 import TrashCan from './Cutouts/TrashCan'
-import VanNuysPlants from './Cutouts/VanNuysPlants'
+import VanNuysPlant from './Cutouts/VanNuysPlant'
 import VanNuysLogo from './Cutouts/VanNuysLogo'
 import Corkboard from './Cutouts/Corkboard'
 import Recyclables from './Cutouts/Recyclables'
@@ -107,8 +107,10 @@ import {
     BENNETT_MAT,
     ODIN_MAT,
     MICHAEL_JACKSON_POSTER,
-    TRASH_CAN,
-    VAN_NUYS_PLANTS,
+    TRASH_CAN_LOCKERS,
+    TRASH_CAN_QUAD,
+    VAN_NUYS_PLANT_LOCKERS,
+    VAN_NUYS_PLANT_QUAD,
     VAN_NUYS_LOGO,
     CORKBOARD,
     RECYCLABLES,
@@ -186,8 +188,10 @@ const propTypes = {
     [BENNETT_MAT]: PropTypes.bool,
     [ODIN_MAT]: PropTypes.bool,
     [MICHAEL_JACKSON_POSTER]: PropTypes.bool,
-    [TRASH_CAN]: PropTypes.string,
-    [VAN_NUYS_PLANTS]: PropTypes.string,
+    [TRASH_CAN_LOCKERS]: PropTypes.bool,
+    [TRASH_CAN_QUAD]: PropTypes.bool,
+    [VAN_NUYS_PLANT_LOCKERS]: PropTypes.bool,
+    [VAN_NUYS_PLANT_QUAD]: PropTypes.bool,
     [VAN_NUYS_LOGO]: PropTypes.bool,
     [CORKBOARD]: PropTypes.bool,
     [RECYCLABLES]: PropTypes.bool,
@@ -267,8 +271,10 @@ export default {
     [BENNETT_MAT]: BennettMat,
     [ODIN_MAT]: OdinMat,
     [MICHAEL_JACKSON_POSTER]: MichaelJacksonPoster,
-    [TRASH_CAN]: TrashCan,
-    [VAN_NUYS_PLANTS]: VanNuysPlants,
+    [TRASH_CAN_LOCKERS]: TrashCan,
+    [TRASH_CAN_QUAD]: TrashCan,
+    [VAN_NUYS_PLANT_LOCKERS]: VanNuysPlant,
+    [VAN_NUYS_PLANT_QUAD]: VanNuysPlant,
     [VAN_NUYS_LOGO]: VanNuysLogo,
     [CORKBOARD]: Corkboard,
     [RECYCLABLES]: Recyclables,

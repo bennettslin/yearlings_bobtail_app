@@ -83,8 +83,10 @@ const
     CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal',
 
     // Together on one page.
-    TRASH_CAN = 'trashCan',
-    VAN_NUYS_PLANTS = 'vanNuysPlants',
+    TRASH_CAN_LOCKERS = 'trashCanLockers',
+    TRASH_CAN_QUAD = 'trashCanQuad',
+    VAN_NUYS_PLANT_LOCKERS = 'vanNuysPlantLockers',
+    VAN_NUYS_PLANT_QUAD = 'vanNuysPlantQuad',
     VAN_NUYS_LOGO = 'vanNuysLogo',
 
     // Together on one page.
@@ -143,10 +145,6 @@ const
     // With wedding backdrop, wedding platform panel, and foreboding trees flat.
     WEDDING_CROWD = 'weddingCrowd',
 
-    ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS = 'arrangementVanNuysPlantLockers',
-    ARRANGEMENT_VAN_NUYS_PLANT_QUAD = 'arrangementVanNuysPlantQuad',
-    ARRANGEMENT_TRASH_CAN_LOCKERS = 'arrangementTrashCanLockers',
-    ARRANGEMENT_TRASH_CAN_QUAD = 'arrangementTrashCanQuad',
     ARRANGEMENT_UC_BERKELEY_TREE_LEFT = 'arrangementUcBerkeleyTreeLeft',
     ARRANGEMENT_UC_BERKELEY_TREE_RIGHT = 'arrangementUcBerkeleyTreeRight',
     ARRANGEMENT_MONITOR_SIDE_CROWD = 'arrangementMonitorSideCrowd',
@@ -186,8 +184,10 @@ export {
     BENNETT_MAT,
     ODIN_MAT,
     MICHAEL_JACKSON_POSTER,
-    TRASH_CAN,
-    VAN_NUYS_PLANTS,
+    TRASH_CAN_LOCKERS,
+    TRASH_CAN_QUAD,
+    VAN_NUYS_PLANT_LOCKERS,
+    VAN_NUYS_PLANT_QUAD,
     VAN_NUYS_LOGO,
     CORKBOARD,
     RECYCLABLES,
@@ -232,10 +232,6 @@ export {
     CLIFF_TREE,
     IV_DRIP,
 
-    ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS,
-    ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
-    ARRANGEMENT_TRASH_CAN_LOCKERS,
-    ARRANGEMENT_TRASH_CAN_QUAD,
     ARRANGEMENT_UC_BERKELEY_TREE_LEFT,
     ARRANGEMENT_UC_BERKELEY_TREE_RIGHT,
     ARRANGEMENT_MONITOR_SIDE_CROWD,

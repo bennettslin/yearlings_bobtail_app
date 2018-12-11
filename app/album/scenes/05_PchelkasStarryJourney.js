@@ -82,12 +82,10 @@ import {
 
 import {
     MICHAEL_JACKSON_POSTER,
-    TRASH_CAN,
-    ARRANGEMENT_TRASH_CAN_LOCKERS,
-    ARRANGEMENT_TRASH_CAN_QUAD,
-    VAN_NUYS_PLANTS,
-    ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS,
-    ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
+    TRASH_CAN_LOCKERS,
+    TRASH_CAN_QUAD,
+    VAN_NUYS_PLANT_LOCKERS,
+    VAN_NUYS_PLANT_QUAD,
     VAN_NUYS_LOGO,
     CORKBOARD
 } from '../../scene/cutoutKeys'
@@ -313,8 +311,8 @@ module.exports = [
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [TRASH_CAN]: ARRANGEMENT_TRASH_CAN_LOCKERS,
-                [VAN_NUYS_PLANTS]: ARRANGEMENT_VAN_NUYS_PLANT_LOCKERS
+                [TRASH_CAN_LOCKERS]: true,
+                [VAN_NUYS_PLANT_LOCKERS]: true
             },
             [FIXTURES]: {
                 [THROWN_FRUIT]: true
@@ -368,8 +366,8 @@ module.exports = [
                 [ESCAPE_POD_SKETCHBOOK]: true
             },
             [CUTOUTS]: {
-                [TRASH_CAN]: ARRANGEMENT_TRASH_CAN_QUAD,
-                [VAN_NUYS_PLANTS]: ARRANGEMENT_VAN_NUYS_PLANT_QUAD,
+                [TRASH_CAN_QUAD]: true,
+                [VAN_NUYS_PLANT_QUAD]: true,
                 [VAN_NUYS_LOGO]: true
             }
         },

@@ -22,6 +22,7 @@ class SliderVerse extends Component {
         // From parent.
         logicSelectors: PropTypes.string.isRequired,
         verseIndex: PropTypes.number.isRequired,
+        isLastVerseOfStanza: PropTypes.bool.isRequired,
         relativeStartTime: PropTypes.number.isRequired,
         verseDuration: PropTypes.number.isRequired,
         stanzaDuration: PropTypes.number.isRequired,
@@ -43,6 +44,7 @@ class SliderVerse extends Component {
                 verseDuration,
                 stanzaDuration,
                 verseIndex,
+                isLastVerseOfStanza,
                 children
             } = this.props,
 
@@ -58,9 +60,15 @@ class SliderVerse extends Component {
                 verseDuration / stanzaDuration * 100
             ),
 
+            /**
+             * Prevent weird gaps depending on screen width. Not needed for the
+             * last verse in each stanza.
+             */
+            bleedMargin = isLastVerseOfStanza ? 0 : 1,
+
             verseStyle = {
                 left: `${verseLeft}%`,
-                width: `${verseWidth}%`
+                width: `${verseWidth + bleedMargin}%`
             }
 
         return (
