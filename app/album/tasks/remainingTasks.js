@@ -42,12 +42,6 @@ module.exports = [
     /**
      * Mobile bugs.
      */
-    // https://wesbos.com/localhost-mobile-device-testing/
-    {
-        taskName: `Figure out why I can't connect mobile locally.`,
-        workedHours: 0,
-        neededHours: 3
-    },
     {
         taskName: `Overview logue is hidden but touch findable in song.`,
         workedHours: 0,

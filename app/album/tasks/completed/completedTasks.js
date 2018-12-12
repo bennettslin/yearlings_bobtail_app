@@ -4176,5 +4176,10 @@ module.exports = [
         taskName: `Get rid of all string arrangements.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Figure out why I can't connect mobile locally. Solution: use localtunnel. https://localtunnel.github.io/www/`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
