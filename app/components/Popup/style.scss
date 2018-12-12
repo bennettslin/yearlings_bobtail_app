@@ -17,6 +17,7 @@
 }
 
 .Popup__visible {
+    z-index: $zIndex__popupOverlayContent;
     transition: opacity $animationDuration__slow;
     opacity: 1;
 }
@@ -25,15 +26,7 @@
 
 .RM__overlayShown
 .Popup__notInOverlay {
+    z-index: $zIndex__popupContainer;
     transition: opacity $animationDuration__fast;
     opacity: 0;
-}
-
-.Popup__undisplayedZIndex {
-    z-index: $zIndex__popupContainer;
-}
-
-.Popup__displayedZIndex {
-    // Allows the popup to prevent a click inside from closing it.
-    z-index: $zIndex__popupOverlayContent;
 }
