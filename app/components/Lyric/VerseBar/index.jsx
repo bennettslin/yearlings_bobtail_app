@@ -53,31 +53,9 @@ class VerseBar extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const {
-                isVerseBarAbove,
-                isVerseBarBelow
-            } = this.props,
-            {
-                isVerseBarAbove: willBeVerseBarAbove,
-                isVerseBarBelow: willBeVerseBarBelow
-            } = nextProps
-
-        if (
-            // No point in updating if it remains unshown.
-            !isVerseBarAbove &&
-            !isVerseBarBelow &&
-            !willBeVerseBarAbove &&
-            !willBeVerseBarBelow
-        ) {
-            return false
-        }
-
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                isAbove: true
-            }
+            nextProps
         })
     }
 

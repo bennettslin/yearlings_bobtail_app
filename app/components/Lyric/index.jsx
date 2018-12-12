@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
 import Transition from 'react-transition-group/Transition'
+import VerseBarHandler from '../../handlers/VerseBarHandler'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggleEar from './Toggle/Ear'
@@ -39,8 +40,16 @@ class Lyric extends PureComponent {
         setLyricFocusElement: PropTypes.func.isRequired
     }
 
+    determineVerseBars = () => {
+        this.dispatchVerseBarsTimeout()
+    }
+
     _handleVerseBarWheel = (e) => {
         this.handleVerseBarWheel(e)
+    }
+
+    _getVerseElement = (verseIndex) => {
+        return this.getVerseElement(verseIndex)
     }
 
     render() {
@@ -73,8 +82,15 @@ class Lyric extends PureComponent {
                             )
                         }}
                     >
+                        <VerseBarHandler
+                            {...{
+                                parentThis: this,
+                                getVerseElement: this._getVerseElement
+                            }}
+                        />
                         <LyricScroll
                             {...{
+                                determineVerseBars: this.determineVerseBars,
                                 setLyricFocusElement,
                                 parentThis: this
                             }}

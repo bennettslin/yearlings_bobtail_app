@@ -15,7 +15,7 @@ class LyricWheelDispatcher extends PureComponent {
 
         // From parent.
         parentThis: PropTypes.object.isRequired,
-        dispatchVerseBarsTimeout: PropTypes.func
+        determineVerseBars: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -58,7 +58,7 @@ class LyricWheelDispatcher extends PureComponent {
                     this.props.updateToggleStore({ isAutoScroll: false })
                 }
 
-                this.props.dispatchVerseBarsTimeout()
+                this.props.determineVerseBars()
 
             } else {
 
@@ -72,7 +72,7 @@ class LyricWheelDispatcher extends PureComponent {
         const { deltaY } = e.nativeEvent
         lyricElement.scrollTop += deltaY
 
-        this.props.dispatchVerseBarsTimeout()
+        this.props.determineVerseBars()
     }
 
     render() {
