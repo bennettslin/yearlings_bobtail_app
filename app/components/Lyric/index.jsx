@@ -8,7 +8,6 @@ import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
 import Transition from 'react-transition-group/Transition'
-import VerseDispatcher from '../../dispatchers/VerseDispatcher'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggleEar from './Toggle/Ear'
@@ -40,16 +39,6 @@ class Lyric extends PureComponent {
         setLyricFocusElement: PropTypes.func.isRequired
     }
 
-    _handleVerseSelect = ({
-        selectedVerseIndex,
-        scrollLog
-    }) => {
-        this.dispatchVerse({
-            selectedVerseIndex,
-            scrollLog
-        })
-    }
-
     _handleVerseBarWheel = (e) => {
         this.handleVerseBarWheel(e)
     }
@@ -67,8 +56,8 @@ class Lyric extends PureComponent {
                     {...{
                         in: isLyricExpanded,
                         timeout: 200,
-                        onEntered: this.handleLyricHeightTransition,
-                        onExited: this.handleLyricHeightTransition
+                        onEntered: this.determineVerseBars,
+                        onExited: this.determineVerseBars
                     }}
                 >
                     <div
@@ -86,7 +75,6 @@ class Lyric extends PureComponent {
                     >
                         <LyricScroll
                             {...{
-                                handleVerseSelect: this._handleVerseSelect,
                                 setLyricFocusElement,
                                 parentThis: this
                             }}
@@ -110,7 +98,6 @@ class Lyric extends PureComponent {
                         />
                     </div>
                 </Transition>
-                <VerseDispatcher {...{ parentThis: this }} />
             </___>
         )
     }

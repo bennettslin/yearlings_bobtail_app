@@ -40,7 +40,7 @@ class LyricScroll extends Component {
 
     componentDidMount() {
         this.props.parentThis.handleVerseBarWheel = this.handleVerseBarWheel
-        this.props.parentThis.handleLyricHeightTransition = this.handleLyricHeightTransition
+        this.props.parentThis.determineVerseBars = this.determineVerseBars
     }
 
     shouldComponentUpdate(nextProps) {
@@ -77,12 +77,7 @@ class LyricScroll extends Component {
         return this.getVerseElement(verseIndex)
     }
 
-    _dispatchVerseBarsTimeout = () => {
-        // Allow lyric wheel dispatcher to call verse bar handler.
-        this.dispatchVerseBarsTimeout()
-    }
-
-    handleLyricHeightTransition = () => {
+    determineVerseBars = () => {
         this.dispatchVerseBarsTimeout()
     }
 
@@ -98,7 +93,8 @@ class LyricScroll extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canLyricRender,
-                setLyricElement,
+                setLyricFocusElement,
+                parentThis,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -158,7 +154,7 @@ class LyricScroll extends Component {
                 <LyricWheelDispatcher
                     {...{
                         parentThis: this,
-                        dispatchVerseBarsTimeout: this._dispatchVerseBarsTimeout
+                        dispatchVerseBarsTimeout: this.determineVerseBars
                     }}
                 />
             </___>

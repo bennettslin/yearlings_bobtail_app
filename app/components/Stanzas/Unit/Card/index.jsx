@@ -34,7 +34,7 @@ class UnitCard extends Component {
         inMain: PropTypes.bool.isRequired,
         isSubCard: PropTypes.bool.isRequired,
 
-        handleVerseSelect: PropTypes.func.isRequired
+        handleVerseSelect: PropTypes.func
     }
 
     handleStanzaTabClick = () => {

@@ -7,6 +7,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import VerseDispatcher from '../../dispatchers/VerseDispatcher'
 import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
 import Unit from './Unit'
@@ -16,7 +17,18 @@ class Stanzas extends PureComponent {
     static propTypes = {
         // From parent.
         songStanzaConfigs: PropTypes.array.isRequired,
-        lastUnitDotCardIndex: PropTypes.number.isRequired
+        lastUnitDotCardIndex: PropTypes.number.isRequired,
+        setLyricAnnotationElement: PropTypes.func.isRequired
+    }
+
+    _handleVerseSelect = ({
+        selectedVerseIndex,
+        scrollLog
+    }) => {
+        this.dispatchVerse({
+            selectedVerseIndex,
+            scrollLog
+        })
     }
 
     render() {
@@ -33,9 +45,7 @@ class Stanzas extends PureComponent {
 
                 {/* This is the title. */}
                 <Unit {...other}
-                    {...{
-                        unitIndex: 0
-                    }}
+                    {...{ unitIndex: 0 }}
                 />
 
                 {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
@@ -47,6 +57,7 @@ class Stanzas extends PureComponent {
                         <StanzaHoc {...other}
                             key={stanzaIndex}
                             {...{
+                                handleVerseSelect: this._handleVerseSelect,
                                 stanzaConfig,
                                 stanzaIndex,
                                 isLastStanza,
@@ -64,6 +75,7 @@ class Stanzas extends PureComponent {
                         }}
                     />
                 )}
+                <VerseDispatcher {...{ parentThis: this }} />
             </div>
         )
     }
