@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Transition from 'react-transition-group/Transition'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
@@ -60,52 +61,40 @@ class VerseBar extends Component {
     }
 
     _handleVerseBarSelect = () => {
+        if (this.getIsShown()) {
+            this.dispatchScrollVerse()
+        }
+    }
+
+    getIsShown() {
         const {
                 isAbove,
                 isVerseBarAbove,
                 isVerseBarBelow
             } = this.props,
-
             isBelow = !isAbove
 
-        /**
-         * Prevent verse bar from being clicked if it's not shown, just as a
-         * precaution. Shouldn't be interactive anyway, now that it has a
-         * negative z-index.
-         */
-        if (
-            (isAbove && isVerseBarAbove) ||
-            (isBelow && isVerseBarBelow)
-        ) {
-            this.dispatchScrollVerse()
-        }
+        return (isAbove && isVerseBarAbove) || (isBelow && isVerseBarBelow)
     }
 
     render() {
 
         const {
-            /* eslint-disable no-unused-vars */
-                canLyricRender,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
                 isAbove,
-                isVerseBarAbove,
-                isVerseBarBelow,
-
                 renderedSongIndex,
                 renderedVerseIndex,
                 sliderVerseIndex,
 
-                handleVerseBarWheel,
-                ...other
+                handleVerseBarWheel
             } = this.props,
 
             verseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex :
                 renderedVerseIndex,
 
-            verseObject = getVerseObject(renderedSongIndex, verseIndex)
+            verseObject = getVerseObject(renderedSongIndex, verseIndex),
+
+            isShown = this.getIsShown()
 
         // Logue will not have verse object.
         return Boolean(verseObject) && (
@@ -119,9 +108,7 @@ class VerseBar extends Component {
                         'VerseBar__below',
 
                     {
-                        'VerseBar__shown':
-                            (isAbove && isVerseBarAbove) ||
-                            (!isAbove && isVerseBarBelow)
+                        'VerseBar__shown': isShown
                     }
                 )}
                 {...{
@@ -138,14 +125,23 @@ class VerseBar extends Component {
                             'VerseBar__animatable__below'
                     )}
                 >
-                    <VerseHoc {...other}
-                        inVerseBar
+                    <Transition
+                        mountOnEnter
+                        unmountOnExit
                         {...{
-                            verseIndex,
-                            verseObject,
-                            VerseComponent: Verse
+                            in: isShown,
+                            timeout: 200
                         }}
-                    />
+                    >
+                        <VerseHoc
+                            inVerseBar
+                            {...{
+                                verseIndex,
+                                verseObject,
+                                VerseComponent: Verse
+                            }}
+                        />
+                    </Transition>
                 </div>
                 <ScrollVerseDispatcher {...{ parentThis: this }} />
             </div>

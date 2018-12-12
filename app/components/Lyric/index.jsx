@@ -4,8 +4,6 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { updateRenderStore } from 'flux/render/action'
 
 import Transition from 'react-transition-group/Transition'
 import VerseBarHandler from '../../handlers/VerseBarHandler'
@@ -34,7 +32,6 @@ class Lyric extends PureComponent {
         // Through Redux.
         didLyricRender: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
         setLyricFocusElement: PropTypes.func.isRequired
@@ -119,10 +116,4 @@ class Lyric extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Lyric)
+export default connect(mapStateToProps)(Lyric)
