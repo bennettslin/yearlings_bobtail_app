@@ -3,7 +3,7 @@
  * optional index, such as Verse 1 or Bridge.
  */
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -11,18 +11,20 @@ import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
 import Unit from './Unit'
 
-const propTypes = {
-    // From parent.
+class Stanzas extends PureComponent {
+
+    static propTypes = {
+        // From parent.
         songStanzaConfigs: PropTypes.array.isRequired,
         lastUnitDotCardIndex: PropTypes.number.isRequired
-    },
+    }
 
-    Stanzas = ({
-        songStanzaConfigs,
-        lastUnitDotCardIndex,
-
-        ...other
-    }) => {
+    render() {
+        const {
+            songStanzaConfigs,
+            lastUnitDotCardIndex,
+            ...other
+        } = this.props
 
         return songStanzaConfigs.length && (
             <div className={cx(
@@ -65,7 +67,6 @@ const propTypes = {
             </div>
         )
     }
-
-Stanzas.propTypes = propTypes
+}
 
 export default Stanzas

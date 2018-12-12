@@ -36,23 +36,6 @@
     }
 
     .DW__mobile
-    .RM__song.RM__lyricExpanded
-    & {
-        height: calc(100% - #{$js__height__menu});
-    }
-
-    .RM__song.RM__twoRowMenu.RM__lyricExpanded
-    & {
-        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
-    }
-
-    .DW__phone
-    .RM__song.RM__lyricExpanded
-    & {
-        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
-    }
-
-    .DW__mobile
     .RM__lyricHeightless
     & {
         height: 0;
@@ -63,6 +46,26 @@
     .RM__song
     &.parent__shown {
         opacity: 1;
+    }
+}
+
+.Lyric__expanded {
+
+    .DW__mobile
+    .RM__song
+    & {
+        height: calc(100% - #{$js__height__menu});
+    }
+
+    .RM__song.RM__twoRowMenu
+    & {
+        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
+    }
+
+    .DW__phone
+    .RM__song
+    & {
+        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
     }
 }
 

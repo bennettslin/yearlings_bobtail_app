@@ -34,14 +34,13 @@ class LyricScroll extends Component {
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        isTransitioningHeight: PropTypes.bool.isRequired,
-        completeHeightTransition: PropTypes.func.isRequired,
         setLyricFocusElement: PropTypes.func.isRequired,
         parentThis: PropTypes.object.isRequired
     }
 
     componentDidMount() {
         this.props.parentThis.handleVerseBarWheel = this.handleVerseBarWheel
+        this.props.parentThis.handleLyricHeightTransition = this.handleLyricHeightTransition
     }
 
     shouldComponentUpdate(nextProps) {
@@ -49,26 +48,6 @@ class LyricScroll extends Component {
             props: this.props,
             nextProps
         })
-    }
-
-    /**
-     * Not necessary to check shouldComponentUpdate, since the changed props
-     * upon which to update are a subset of those in lyric column.
-     */
-
-    componentDidUpdate(prevProps) {
-        if (
-            this.props.isTransitioningHeight &&
-            !prevProps.isTransitioningHeight
-        ) {
-
-            /**
-             * We are calling this because collapsing and expanding the lyric
-             * section may change the verse bar status.
-             */
-            this.dispatchVerseBarsTimeout()
-            this.props.completeHeightTransition()
-        }
     }
 
     _setLyricElement = (node) => {
@@ -103,6 +82,10 @@ class LyricScroll extends Component {
         this.dispatchVerseBarsTimeout()
     }
 
+    handleLyricHeightTransition = () => {
+        this.dispatchVerseBarsTimeout()
+    }
+
     handleVerseBarWheel = (e) => {
         this.dispatchVerseBarWheel(e, this.lyricElement)
     }
@@ -115,8 +98,6 @@ class LyricScroll extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canLyricRender,
-                isTransitioningHeight,
-                completeHeightTransition,
                 setLyricElement,
                 dispatch,
                 /* eslint-enable no-unused-vars */

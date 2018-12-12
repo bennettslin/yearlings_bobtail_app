@@ -154,8 +154,8 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `CSS transition group for presences, since they now cut in and out. Use transition groups for popups as well?`,
-        workedHours: 0,
+        taskName: `CSS transition group for presences, since they now cut in and out. Use transition groups for popups as well.`,
+        workedHours: 5,
         neededHours: 8
     },
     {

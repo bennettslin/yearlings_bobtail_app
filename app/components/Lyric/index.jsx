@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
+import Transition from 'react-transition-group/Transition'
 import VerseDispatcher from '../../dispatchers/VerseDispatcher'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
@@ -16,9 +17,11 @@ import LyricToggleScroll from './Toggle/Scroll'
 import VerseBar from './VerseBar'
 
 const mapStateToProps = ({
-    renderStore: { didLyricRender }
+    renderStore: { didLyricRender },
+    toggleStore: { isLyricExpanded }
 }) => ({
-    didLyricRender
+    didLyricRender,
+    isLyricExpanded
 })
 
 /*************
@@ -30,24 +33,11 @@ class Lyric extends PureComponent {
     static propTypes = {
         // Through Redux.
         didLyricRender: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
         setLyricFocusElement: PropTypes.func.isRequired
-    }
-
-    state = {
-        isTransitioningHeight: false
-    }
-
-    _handleTransition = (e) => {
-        if (e.propertyName === 'height') {
-            this.setState({ isTransitioningHeight: true })
-        }
-    }
-
-    completeHeightTransition = () => {
-        this.setState({ isTransitioningHeight: false })
     }
 
     _handleVerseSelect = ({
@@ -65,57 +55,61 @@ class Lyric extends PureComponent {
     }
 
     render() {
-
         const {
-                didLyricRender,
-                setLyricFocusElement
-            } = this.props,
-
-            { isTransitioningHeight } = this.state
+            didLyricRender,
+            isLyricExpanded,
+            setLyricFocusElement
+        } = this.props
 
         return (
             <___>
-                <div
+                <Transition
                     {...{
-                        className: cx(
-                            'Lyric',
-                            'position__lyricColumn__desktop',
-                            'position__lyricColumn__mobile',
-                            'gradientMask__lyricColumn__desktop',
-
-                            { 'parent__shown': didLyricRender }
-                        ),
-                        onTransitionEnd: this._handleTransition
+                        in: isLyricExpanded,
+                        timeout: 200,
+                        onEntered: this.handleLyricHeightTransition,
+                        onExited: this.handleLyricHeightTransition
                     }}
                 >
-                    <LyricScroll
+                    <div
                         {...{
-                            isTransitioningHeight,
-                            completeHeightTransition:
-                                this.completeHeightTransition,
-                            handleVerseSelect: this._handleVerseSelect,
-                            setLyricFocusElement,
-                            parentThis: this
-                        }}
-                    />
-                    <LyricToggleEar />
-                    <LyricToggleExpand />
-                    <LyricToggleScroll />
-                    <LyricAccess />
+                            className: cx(
+                                'Lyric',
+                                isLyricExpanded && 'Lyric__expanded',
+                                'position__lyricColumn__desktop',
+                                'position__lyricColumn__mobile',
+                                'gradientMask__lyricColumn__desktop',
 
-                    {/* These are the only two flex children. */}
-                    <VerseBar
-                        isAbove
-                        {...{
-                            handleVerseBarWheel: this._handleVerseBarWheel
+                                { 'parent__shown': didLyricRender }
+                            )
                         }}
-                    />
-                    <VerseBar
-                        {...{
-                            handleVerseBarWheel: this._handleVerseBarWheel
-                        }}
-                    />
-                </div>
+                    >
+                        <LyricScroll
+                            {...{
+                                handleVerseSelect: this._handleVerseSelect,
+                                setLyricFocusElement,
+                                parentThis: this
+                            }}
+                        />
+                        <LyricToggleEar />
+                        <LyricToggleExpand />
+                        <LyricToggleScroll />
+                        <LyricAccess />
+
+                        {/* These are the only two flex children. */}
+                        <VerseBar
+                            isAbove
+                            {...{
+                                handleVerseBarWheel: this._handleVerseBarWheel
+                            }}
+                        />
+                        <VerseBar
+                            {...{
+                                handleVerseBarWheel: this._handleVerseBarWheel
+                            }}
+                        />
+                    </div>
+                </Transition>
                 <VerseDispatcher {...{ parentThis: this }} />
             </___>
         )
