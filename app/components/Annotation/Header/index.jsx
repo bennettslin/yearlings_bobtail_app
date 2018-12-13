@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -8,7 +8,7 @@ const propTypes = {
         children: PropTypes.any.isRequired
     },
 
-    AnnotationHeader = ({
+    AnnotationHeader = memo(({
         inCarousel,
         children
 
@@ -23,7 +23,7 @@ const propTypes = {
         )}>
             {children}
         </div>
-    )
+    ))
 
 AnnotationHeader.propTypes = propTypes
 

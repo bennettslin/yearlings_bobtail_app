@@ -1,5 +1,7 @@
 // Container for lyric audio button and all lines of a single verse.
-import React, { Component, Fragment as ___ } from 'react'
+import React, {
+    memo, Component, Fragment as ___
+} from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -150,7 +152,7 @@ const verseViewDefaultProps = {
         children: PropTypes.any
     },
 
-    VerseView = ({
+    VerseView = memo(({
 
         // From controller.
         logicSelectors,
@@ -199,7 +201,7 @@ const verseViewDefaultProps = {
                 <VerseLines {...other} />
             </div>
         )
-    }
+    })
 
 VerseView.defaultProps = verseViewDefaultProps
 VerseView.propTypes = verseViewPropTypes

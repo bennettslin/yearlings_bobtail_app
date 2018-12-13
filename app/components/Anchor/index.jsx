@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -11,7 +11,7 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 
 import { ENTER } from 'constants/access'
 
-class Anchor extends Component {
+class Anchor extends PureComponent {
 
     static propTypes = {
         // From parent.

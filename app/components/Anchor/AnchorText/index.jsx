@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { memo, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -16,7 +16,7 @@ const textAnchorPropTypes = {
         ]).isRequired
     },
 
-    AnchorText = ({
+    AnchorText = memo(({
 
         text,
 
@@ -98,7 +98,7 @@ const textAnchorPropTypes = {
                 </span>
             </Anchor>
         )
-    }
+    })
 
 AnchorText.propTypes = textAnchorPropTypes
 

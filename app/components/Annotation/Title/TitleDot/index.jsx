@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -6,7 +6,7 @@ import AnchorDot from '../../../Anchor/AnchorDot'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 
-class AnnotationTitleDot extends Component {
+class AnnotationTitleDot extends PureComponent {
 
     static defaultProps = {
         isShadow: false

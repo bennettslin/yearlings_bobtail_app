@@ -21,7 +21,7 @@ import './scss/app.scss'
 import RoutingContainer from './containers/RoutingContainer'
 
 // Why did you update?
-const turnOnWDYULogging = false
+const turnOnWDYULogging = true
 if (process.env.NODE_ENV !== 'production' && turnOnWDYULogging) {
     const { whyDidYouUpdate } = require('why-did-you-update')
     whyDidYouUpdate(React)

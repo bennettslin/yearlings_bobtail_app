@@ -1,6 +1,6 @@
 // Component to show single dot anchor as its own stanza.
 
-import React, { Component } from 'react'
+import React, { memo, Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -155,7 +155,7 @@ const propTypes = {
         setRef: PropTypes.func.isRequired
     },
 
-    UnitDotView = ({
+    UnitDotView = memo(({
     // From controller.
         dotKeys,
         annotationIndex,
@@ -195,7 +195,7 @@ const propTypes = {
                 </div>
             </div>
         )
-    }
+    })
 
 UnitDotView.propTypes = propTypes
 
