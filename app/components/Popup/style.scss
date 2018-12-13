@@ -3,6 +3,10 @@
 // Styles for showing popup or not.
 .Popup {
     flex-direction: column-reverse;
+
+    z-index: $zIndex__popupContainer;
+    transition: opacity $animationDuration__fast;
+    opacity: 0;
 }
 
 .Popup__fullSize {
@@ -22,11 +26,9 @@
     opacity: 1;
 }
 
-.Popup__invisible,
+// .Popup__invisible,
 
-.RM__overlayShown
-.Popup__notInOverlay {
-    z-index: $zIndex__popupContainer;
-    transition: opacity $animationDuration__fast;
-    opacity: 0;
-}
+// .RM__overlayShown
+// .Popup__notInOverlay {
+
+// }

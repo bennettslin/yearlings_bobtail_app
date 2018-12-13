@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Transition from 'react-transition-group/Transition'
+import { CSSTransition } from 'react-transition-group'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
@@ -47,51 +47,48 @@ class Popup extends PureComponent {
             { isFullSize } = other
 
         return (
-            <Transition
+            <CSSTransition
                 {...{
                     in: isVisible,
+                    classNames: {
+                        enterDone: 'Popup__visible'
+                    },
                     timeout: {
                         enter: 0,
                         exit: 150
                     }
                 }}
             >
-                {(state) => (
-                    <div
-                        className={cx(
-                            'Popup',
-                            `${popupName}Popup`,
+                <div
+                    className={cx(
+                        'Popup',
+                        `${popupName}Popup`,
 
-                            state === 'entered' ?
-                                'Popup__visible' :
-                                'Popup__invisible',
+                        isFullSize && 'Popup__fullSize',
 
-                            isFullSize && 'Popup__fullSize',
+                        // For animation styling.
+                        {
+                            'Popup__notInOverlay': !displaysInOverlay,
+                            'flexCentreContainer': !noFlexCentre,
+                            'absoluteFullContainer': !noAbsoluteFull
+                        },
 
-                            // For animation styling.
-                            {
-                                'Popup__notInOverlay': !displaysInOverlay,
-                                'flexCentreContainer': !noFlexCentre,
-                                'absoluteFullContainer': !noAbsoluteFull
-                            },
-
-                            className
-                        )}
-                    >
-                        <PopupView {...other}
-                            {...{
-                                popupName,
-                                displaysInOverlay:
-                                    displaysInOverlay || isFullSize,
-                                handlePreviousClick,
-                                handleNextClick,
-                                handleContainerClick: this.handleContainerClick
-                            }}
-                        />
-                        <StopPropagationDispatcher {...{ parentThis: this }} />
-                    </div>
-                )}
-            </Transition>
+                        className
+                    )}
+                >
+                    <PopupView {...other}
+                        {...{
+                            popupName,
+                            displaysInOverlay:
+                                displaysInOverlay || isFullSize,
+                            handlePreviousClick,
+                            handleNextClick,
+                            handleContainerClick: this.handleContainerClick
+                        }}
+                    />
+                    <StopPropagationDispatcher {...{ parentThis: this }} />
+                </div>
+            </CSSTransition>
         )
     }
 }
