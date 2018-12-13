@@ -12,9 +12,9 @@ const _getDifference = () => {
 const _getStyles = (styles = {}) => {
         const finalStyles = {
                 color: '#888',
-                padding: '8px',
+                padding: '12px 8px',
+                border: '1px solid #bbb',
                 borderRadius: '4px',
-                background: '#efe',
                 fontSize: '1em',
                 ...styles
             },

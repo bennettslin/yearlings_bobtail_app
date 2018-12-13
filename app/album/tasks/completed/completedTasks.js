@@ -4181,5 +4181,10 @@ module.exports = [
         taskName: `Figure out why I can't connect mobile locally. Solution: use localtunnel. https://localtunnel.github.io/www/`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Logger work. Compare against global time.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
