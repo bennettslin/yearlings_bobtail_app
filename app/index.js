@@ -13,7 +13,7 @@ import { Provider } from 'react-redux'
 
 // Import this here to make it available.
 // eslint-disable-next-line no-unused-vars
-import logger from './server/logger'
+import logger from './utils/logger'
 
 import rootReducer from './redux/rootReducer'
 

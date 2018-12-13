@@ -104,7 +104,8 @@ const scrollElementIntoView = ({
     }
 
     if (element) {
-        logScroll(`${log}\nScroll by ref: ${scrollClass} ${index}, in ${time}`)
+        // logScroll(`${log}\nScroll by ref: ${scrollClass} ${index}, in ${time}`)
+        logScroll(log)
 
         const
             align = isCarousel ?
