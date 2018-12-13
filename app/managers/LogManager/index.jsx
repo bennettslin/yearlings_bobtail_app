@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import album from 'server/album'
+import album from 'album'
 
 import {
     getAnnotationObject,

@@ -1,4 +1,4 @@
-import album from 'server/album'
+import album from 'album'
 
 import {
     getSongVersesCount,

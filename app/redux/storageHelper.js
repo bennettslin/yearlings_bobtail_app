@@ -1,6 +1,6 @@
 // Helper for getting and setting state persisted in user's local storage.
 
-import album from 'server/album'
+import album from 'album'
 
 import {
     getTwoToThePowerOfN,

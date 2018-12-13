@@ -1,4 +1,4 @@
-import { parseAlbumData } from './buildHelpers'
+import { parseAlbumData } from './helpers'
 
 import { HYPHENATED_SONG_PATHS } from 'constants/paths'
 import { getTwoDigitStringForNumber } from 'helpers/format'

@@ -4,7 +4,7 @@
  * created.
  */
 
-import album from 'server/album'
+import album from 'album'
 import { COLUMN_INDEX } from 'constants/lyrics'
 
 /*********

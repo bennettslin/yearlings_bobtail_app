@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import AnnotationCards from './AnnotationCards'
 import Button from '../../../Button'
 
-import album from 'server/album'
+import album from 'album'
 
 import {
     getAnnotationObject,
