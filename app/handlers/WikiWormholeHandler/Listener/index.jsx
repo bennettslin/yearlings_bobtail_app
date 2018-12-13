@@ -45,9 +45,13 @@ class WikiWormholeListener extends PureComponent {
         }
     }
 
+    _setDispatchAccessedWikiWormhole = (dispatchAccessedWikiWormhole) => {
+        this.dispatchAccessedWikiWormhole = dispatchAccessedWikiWormhole
+    }
+
     render() {
         return (
-            <WikiWormholeDispatcher {...{ parentThis: this }} />
+            <WikiWormholeDispatcher {...{ setDispatch: this._setDispatchAccessedWikiWormhole }} />
         )
     }
 }

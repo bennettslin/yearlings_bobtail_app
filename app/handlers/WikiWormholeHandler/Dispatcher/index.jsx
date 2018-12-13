@@ -21,12 +21,11 @@ class WikiWormholeDispatcher extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        setDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchAccessedWikiWormhole =
-            this.dispatchAccessedWikiWormhole
+        this.props.setDispatch(this.dispatchAccessedWikiWormhole)
     }
 
     dispatchAccessedWikiWormhole = (direction) => {

@@ -115,13 +115,17 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
+    _setDispatchAccessedWikiWormhole = (dispatchAccessedWikiWormhole) => {
+        this.dispatchAccessedWikiWormhole = dispatchAccessedWikiWormhole
+    }
+
     render() {
         return (
             <___>
                 <AnnotationDispatcher {...{ parentThis: this }} />
                 <SongDispatcher {...{ parentThis: this }} />
                 <WikiDispatcher {...{ parentThis: this }} />
-                <WikiWormholeDispatcher {...{ parentThis: this }} />
+                <WikiWormholeDispatcher {...{ setDispatch: this._setDispatchAccessedWikiWormhole }} />
             </___>
         )
     }
