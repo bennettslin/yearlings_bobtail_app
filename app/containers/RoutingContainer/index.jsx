@@ -77,6 +77,8 @@ class RoutingContainer extends PureComponent {
     }
 
     componentDidMount() {
+        logMount('RoutingContainer')
+
         // If routing changed what was in store, set the new path name.
         this.replacePath(
             this.state.selectedSongIndex,

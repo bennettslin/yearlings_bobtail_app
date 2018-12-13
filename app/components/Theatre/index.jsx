@@ -29,6 +29,10 @@ class Theatre extends PureComponent {
         updateRenderStore: PropTypes.func.isRequired
     }
 
+    componentDidMount() {
+        logMount('Theatre')
+    }
+
     render() {
         const { didTheatreRender } = this.props
 

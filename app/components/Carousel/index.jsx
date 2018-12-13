@@ -56,6 +56,10 @@ class Carousel extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired
     }
 
+    componentDidMount() {
+        logMount('Carousel')
+    }
+
     _setCarouselParent = (node) => {
         return this.setCarouselParent(node)
     }

@@ -19,6 +19,10 @@ import ScoresTips from '../ScoresTips'
 
 class Main extends PureComponent {
 
+    componentDidMount() {
+        logMount('Main')
+    }
+
     render() {
 
         /**

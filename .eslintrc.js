@@ -25,6 +25,7 @@ module.exports = {
         "logAccess": true,
         "logEvent": true,
         "logFocus": true,
+        "logMount": true,
         "logParse": true,
         "logPlayer": true,
         "logRender": true,

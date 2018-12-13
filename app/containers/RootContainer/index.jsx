@@ -28,6 +28,10 @@ class RootContainer extends PureComponent {
         setWikiFocusElement: PropTypes.func.isRequired
     }
 
+    componentDidMount() {
+        logMount('RootContainer')
+    }
+
     render() {
         const {
             appMounted,

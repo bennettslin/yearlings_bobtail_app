@@ -5,6 +5,7 @@ const logger = pino(),
     ACCESS_STYLE = 'background: #666; color: #bbf; padding: 4px;',
     EVENT_STYLE = 'background: #666; color: #bbf; padding: 4px;',
     FOCUS_STYLE = 'background: #666; color: #bbf; padding: 4px;',
+    MOUNT_STYLE = 'background: #666; color: #bbf; padding: 4px;',
     PARSE_STYLE = 'background: #666; color: #bbf; padding: 4px;',
     PLAYER_STYLE = 'background: #666; color: #bbf; padding: 4px;',
     RENDER_STYLE = 'background: #666; color: #bbf; padding: 4px;',
@@ -23,6 +24,9 @@ const logger = pino(),
     },
     logFocus = (log) => {
         logInfo(log, FOCUS_STYLE)
+    },
+    logMount = (log) => {
+        logInfo(log, MOUNT_STYLE)
     },
     logParse = (log) => {
         logInfo(log, PARSE_STYLE)
@@ -54,6 +58,7 @@ const logger = pino(),
 global.logAccess = logAccess
 global.logEvent = logEvent
 global.logFocus = logFocus
+global.logMount = logMount
 global.logParse = logParse
 global.logPlayer = logPlayer
 global.logRender = logRender

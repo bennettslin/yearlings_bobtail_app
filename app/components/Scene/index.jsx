@@ -23,6 +23,10 @@ class Scene extends PureComponent {
         didSceneRender: PropTypes.bool.isRequired
     }
 
+    componentDidMount() {
+        logMount('Scene')
+    }
+
     render() {
         const { didSceneRender } = this.props
 

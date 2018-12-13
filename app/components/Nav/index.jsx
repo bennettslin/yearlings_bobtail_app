@@ -25,6 +25,10 @@ class Nav extends PureComponent {
         showSingleNavBook: PropTypes.bool.isRequired
     }
 
+    componentDidMount() {
+        logMount('Nav')
+    }
+
     render() {
         const {
             isHiddenCarouselNav,
