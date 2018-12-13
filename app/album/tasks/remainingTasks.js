@@ -6,6 +6,30 @@ module.exports = [
         neededHours: 5
     },
 
+    {
+        taskName: `Allow some popups to unmount.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Unmount annotations and verses so no need to watch for render.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Be smarter about rendering too many annotation dispatchers.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Logger work. Compare against global time.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
     // Scrolling stuff.
     {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,

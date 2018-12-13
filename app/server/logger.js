@@ -43,12 +43,13 @@ const logger = pino(),
         logger.error(`%c${log}`, ERROR_STYLE)
     }
 
-if (process.env.NODE_ENV === 'production') {
-    logger.trace = () => {}
-    logger.debug = () => {}
-    logger.info = () => {}
-    logger.warn = () => {}
-}
+// TODO: Show in production for now.
+// if (process.env.NODE_ENV === 'production') {
+//     logger.trace = () => {}
+//     logger.debug = () => {}
+//     logger.info = () => {}
+//     logger.warn = () => {}
+// }
 
 global.logAccess = logAccess
 global.logEvent = logEvent

@@ -1,6 +1,6 @@
 // Toggle button to show and hide carousel section.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -18,7 +18,7 @@ const mapStateToProps = ({
     isCarouselShown
 })
 
-class CarouselToggle extends Component {
+class CarouselToggle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
