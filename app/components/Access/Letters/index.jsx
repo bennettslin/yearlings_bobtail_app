@@ -6,8 +6,8 @@ import cx from 'classnames'
 
 import AccessLetter from '../Letter'
 
-const accessIconsPropTypes = {
-    // From parent.
+const propTypes = {
+        // From parent.
         accessIconsName: PropTypes.string,
         inAnnotation: PropTypes.bool,
         inLyric: PropTypes.bool,
@@ -59,6 +59,6 @@ const accessIconsPropTypes = {
         </div>
     ))
 
-AccessLetters.propTypes = accessIconsPropTypes
+AccessLetters.propTypes = propTypes
 
 export default AccessLetters

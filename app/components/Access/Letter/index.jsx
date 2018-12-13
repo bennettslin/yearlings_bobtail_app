@@ -9,8 +9,8 @@ import AccessIcon from './Icon'
 
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 
-const accessIconPropTypes = {
-    // From parent.
+const propTypes = {
+        // From parent.
         inTextAnchor: PropTypes.bool,
         inButtonOrDotAnchor: PropTypes.bool,
         isShadow: PropTypes.bool,
@@ -63,6 +63,6 @@ const accessIconPropTypes = {
         )
     })
 
-AccessLetter.propTypes = accessIconPropTypes
+AccessLetter.propTypes = propTypes
 
 export default AccessLetter

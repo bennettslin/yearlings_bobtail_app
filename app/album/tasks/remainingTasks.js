@@ -155,11 +155,11 @@ module.exports = [
     },
     {
         taskName: `CSS transition group for presences, since they now cut in and out. Use transition groups for popups as well.`,
-        workedHours: 5,
-        neededHours: 8
+        workedHours: 8,
+        neededHours: 12
     },
     {
-        taskName: `Presence and cubes transition order.`,
+        taskName: `Presence and cubes transition order. Make sure changes between songs are smooth, animation wise.`,
         workedHours: 0,
         neededHours: 8
     },
