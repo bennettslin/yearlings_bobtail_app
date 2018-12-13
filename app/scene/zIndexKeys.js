@@ -8,7 +8,7 @@ const
     g = 16,
 
     // For not showing any ceiling pixels.
-    k = 20,
+    k = 17,
 
     LEFT = 'left',
     RIGHT = 'right'

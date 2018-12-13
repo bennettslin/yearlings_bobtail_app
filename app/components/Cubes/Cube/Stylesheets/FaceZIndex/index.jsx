@@ -26,7 +26,7 @@ import {
     LEVELS,
     FLOOR,
     FACES,
-    TILE,
+    // TILE,
     Z_INDICES_MATRIX_NAME
 } from 'constants/scene'
 
@@ -94,15 +94,18 @@ const propTypes = {
                                     value: zIndex
                                 }),
                                 isBaseCeiling = zIndex === g,
-                                isNegativeCeiling = zIndex === k,
+
+                                // TODO: Don't do this for now. If this is better, just delete completely.
+                                // isNegativeCeiling = zIndex === k,
 
                                 /**
                              * Ceiling front and side faces will never descend
                              * beyond base. So if it's the negative zIndex,
                              * only set path styling for tile faces.
                              */
-                                facesArray = isNegativeCeiling ?
-                                    [TILE] : FACES,
+                                // facesArray = isNegativeCeiling ?
+                                //     [TILE] : FACES,
+                                facesArray = FACES,
 
                                 /**
                              * Then, when it's the base zIndex, include the
