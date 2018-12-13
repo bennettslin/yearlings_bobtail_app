@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -10,7 +10,7 @@ const propTypes = {
     stanzaDuration: PropTypes.number.isRequired
 }
 
-const SliderVerses = ({
+const SliderVerses = memo(({
     stanzaVerseConfigs,
     stanzaDuration
 }) => {
@@ -56,7 +56,7 @@ const SliderVerses = ({
             })}
         </div>
     )
-}
+})
 
 SliderVerses.propTypes = propTypes
 

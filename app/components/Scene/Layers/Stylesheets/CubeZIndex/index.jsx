@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 
 import Stylesheet from '../../../../Stylesheet'
@@ -22,7 +22,7 @@ import {
     SLANTED_RIGHT_X_AXIS_Z_INDICES
 } from 'constants/cubeIndex'
 
-const CubeZIndexStylesheet = () => {
+const CubeZIndexStylesheet = memo(() => {
 
     let xAxisZIndices = DEFAULT_X_AXIS_Z_INDICES
 
@@ -82,6 +82,6 @@ const CubeZIndexStylesheet = () => {
             })}
         </Stylesheet>
     )
-}
+})
 
 export default CubeZIndexStylesheet

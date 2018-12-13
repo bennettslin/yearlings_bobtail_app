@@ -3,7 +3,7 @@
  * optional index, such as Verse 1 or Bridge.
  */
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -18,7 +18,7 @@ const propTypes = {
         }).isRequired
     },
 
-    Stanza = ({
+    Stanza = memo(({
         logicSelectors,
         stanzaConfig,
         isLastStanza,
@@ -54,7 +54,7 @@ const propTypes = {
                 })}
             </div>
         )
-    }
+    })
 
 Stanza.propTypes = propTypes
 

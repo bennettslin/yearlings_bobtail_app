@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -13,7 +13,7 @@ const propTypes = {
         inSlider: PropTypes.bool
     },
 
-    VerseColour = ({
+    VerseColour = memo(({
         isInteractivated,
         verseIndex,
         inUnit,
@@ -86,7 +86,7 @@ const propTypes = {
                 )}
             </div>
         )
-    }
+    })
 
 VerseColour.propTypes = propTypes
 

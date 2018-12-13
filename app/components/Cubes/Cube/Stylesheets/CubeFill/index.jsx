@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
@@ -28,7 +28,7 @@ const propTypes = {
         yIndex: PropTypes.number.isRequired
     },
 
-    CubeFillStylesheet = ({
+    CubeFillStylesheet = memo(({
         xIndex,
         yIndex
 
@@ -91,7 +91,7 @@ const propTypes = {
                 })}
             </Stylesheet>
         )
-    }
+    })
 
 CubeFillStylesheet.propTypes = propTypes
 

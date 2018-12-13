@@ -1,6 +1,6 @@
 // A single pair of ceiling and floor cubes.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -24,7 +24,7 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired
 }
 
-const Cube = ({
+const Cube = memo(({
     xIndex,
     yIndex
 }) => {
@@ -76,7 +76,7 @@ const Cube = ({
             ))}
         </Svg>
     )
-}
+})
 
 Cube.propTypes = propTypes
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -17,7 +17,7 @@ const propTypes = {
         handleVerseSelect: PropTypes.func
     },
 
-    VerseHoc = ({
+    VerseHoc = memo(({
 
         verseIndex,
         VerseComponent,
@@ -78,7 +78,7 @@ const propTypes = {
                 )}
             </VerseComponent>
         )
-    }
+    })
 
 VerseHoc.propTypes = propTypes
 

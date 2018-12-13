@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
@@ -38,7 +38,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const AudioNextIcon = ({
+const AudioNextIcon = memo(({
 
     buttonIdentifier: isLogue,
     className
@@ -53,7 +53,7 @@ const AudioNextIcon = ({
             }}
         />
     )
-}
+})
 
 AudioNextIcon.propTypes = propTypes
 

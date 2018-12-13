@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -51,7 +51,7 @@ const propTypes = {
     songIndex: PropTypes.number.isRequired
 }
 
-const ThumbIcon = ({
+const ThumbIcon = memo(({
 
     songIndex
 
@@ -66,7 +66,7 @@ const ThumbIcon = ({
             )}
         />
     )
-}
+})
 
 ThumbIcon.propTypes = propTypes
 

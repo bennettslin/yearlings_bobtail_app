@@ -3,7 +3,7 @@
  * whether its dot key is selected.
  */
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -17,7 +17,7 @@ const dotPropTypes = {
         inTextAnchor: PropTypes.bool
     },
 
-    SequenceDot = ({
+    SequenceDot = memo(({
 
         dotKey,
         inAnnotationCard,
@@ -40,7 +40,7 @@ const dotPropTypes = {
                 dotKey
             }}
         />
-    )
+    ))
 
 SequenceDot.propTypes = dotPropTypes
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -20,7 +20,7 @@ const popupViewPropTypes = {
         children: PropTypes.any.isRequired
     },
 
-    PopupView = ({
+    PopupView = memo(({
 
         popupName,
         displaysInOverlay,
@@ -106,7 +106,7 @@ const popupViewPropTypes = {
                 </div>
             </div>
         )
-    }
+    })
 
 PopupView.propTypes = popupViewPropTypes
 

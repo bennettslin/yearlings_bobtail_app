@@ -3,7 +3,7 @@
  * needed.
  */
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -19,7 +19,7 @@ const verseLinesPropTypes = {
         inVerseBar: PropTypes.bool
     },
 
-    VerseLines = ({
+    VerseLines = memo(({
 
         isDoubleSpeaker,
 
@@ -50,7 +50,7 @@ const verseLinesPropTypes = {
         ) : (
             <VerseLinesChild {...other} />
         )
-    },
+    }),
 
     verseLinesChildPropTypes = {
     // From parent.
@@ -59,7 +59,7 @@ const verseLinesPropTypes = {
         isTitle: PropTypes.bool
     },
 
-    VerseLinesChild = (props) => {
+    VerseLinesChild = memo((props) => {
 
         const {
                 verseObject,
@@ -95,7 +95,7 @@ const verseLinesPropTypes = {
         return (
             <VerseLine {...other} {...lyricsLineProps} />
         )
-    }
+    })
 
 VerseLines.propTypes = verseLinesPropTypes
 

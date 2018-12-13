@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -16,7 +16,7 @@ const propTypes = {
         stanzaDotKeys: PropTypes.object.isRequired
     },
 
-    AnchorDot = ({
+    AnchorDot = memo(({
 
         stanzaDotKeys,
         inAnnotation,
@@ -58,7 +58,7 @@ const propTypes = {
                 ))}
             </Anchor>
         )
-    }
+    })
 
 AnchorDot.propTypes = propTypes
 

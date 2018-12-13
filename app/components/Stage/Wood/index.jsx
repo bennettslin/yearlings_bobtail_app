@@ -3,16 +3,16 @@
  * But renders with Theatre, not Scene.
  */
 
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 
-const Wood = () => (
+const Wood = memo(() => (
     <div
         className={cx(
             'Wood',
             'absoluteFullContainer'
         )}
     />
-)
+))
 
 export default Wood

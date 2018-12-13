@@ -1,6 +1,6 @@
 // Container for all song buttons in a book.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -14,7 +14,7 @@ const navBookSongsPropTypes = {
         bookIndex: PropTypes.number.isRequired
     },
 
-    NavBookSongs = ({
+    NavBookSongs = memo(({
 
         // From props.
         bookIndex,
@@ -46,7 +46,7 @@ const navBookSongsPropTypes = {
                 })}
             </div>
         )
-    }
+    })
 
 NavBookSongs.propTypes = navBookSongsPropTypes
 

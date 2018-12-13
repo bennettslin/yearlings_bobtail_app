@@ -3,7 +3,7 @@
  * state, so should not update.
  */
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -20,16 +20,20 @@ const mapStateToProps = ({
     windowWidth
 })
 
-const propTypes = {
-    // Through Redux.
-        windowWidth: PropTypes.number.isRequired
-    },
+class Menu extends PureComponent {
 
-    Menu = ({ windowWidth }) => {
-    /**
-     * This is necessary because transform animation in Safari is janky.
-     */
-        const menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
+    static propTypes = {
+        // Through Redux.
+        windowWidth: PropTypes.number.isRequired
+    }
+
+    render() {
+        const
+            { windowWidth } = this.props,
+            /**
+             * This is necessary because transform animation in Safari is janky.
+             */
+            menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
 
         // Prevent menu from rendering before windowWidth has been set.
         return windowWidth && (
@@ -81,7 +85,6 @@ const propTypes = {
             </div>
         )
     }
-
-Menu.propTypes = propTypes
+}
 
 export default connect(mapStateToProps)(Menu)

@@ -1,6 +1,6 @@
 // Container to show multiple access icons in sequence.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -19,7 +19,7 @@ const accessIconPropTypes = {
         accessKey: PropTypes.string.isRequired
     },
 
-    AccessLetter = ({
+    AccessLetter = memo(({
 
         inTextAnchor,
         inButtonOrDotAnchor,
@@ -61,7 +61,7 @@ const accessIconPropTypes = {
                 />
             </div>
         )
-    }
+    })
 
 AccessLetter.propTypes = accessIconPropTypes
 

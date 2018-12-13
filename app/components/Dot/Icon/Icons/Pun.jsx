@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const PunIcon = ({
+const PunIcon = memo(({
 
     className
 
@@ -15,7 +15,7 @@ const PunIcon = ({
             r: 25
         }}
     />
-)
+))
 
 const propTypes = {
     className: PropTypes.string

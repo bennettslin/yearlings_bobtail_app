@@ -1,6 +1,6 @@
 // Component to iterate through array of text.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import Text from './Text'
 
@@ -17,7 +17,7 @@ const propTypes = {
         ])
     },
 
-    Texts = ({
+    Texts = memo(({
         text: textEntity,
 
         ...other
@@ -36,7 +36,7 @@ const propTypes = {
                 text={textEntity}
             />
         )
-    }
+    })
 
 Texts.propTypes = propTypes
 

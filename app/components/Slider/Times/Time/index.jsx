@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -7,7 +7,7 @@ const sliderTimePropTypes = {
         time: PropTypes.string.isRequired
     },
 
-    SliderTime = ({
+    SliderTime = memo(({
 
         isSpent,
         time
@@ -21,7 +21,7 @@ const sliderTimePropTypes = {
         )}>
             {time}
         </div>
-    )
+    ))
 
 SliderTime.propTypes = sliderTimePropTypes
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -22,7 +22,7 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired
 }
 
-const Face = ({
+const Face = memo(({
 
     face,
     xIndex,
@@ -105,7 +105,7 @@ const Face = ({
             />
         </g>
     )
-}
+})
 
 Face.propTypes = propTypes
 

@@ -1,6 +1,6 @@
 // Section for dots and overview toggle buttons.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -15,30 +15,35 @@ const mapStateToProps = ({
     isPhone
 })
 
-const propTypes = {
+class LeftShelf extends PureComponent {
+
+    static propTypes = {
         // Through Redux.
         isPhone: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.any
-    },
+    }
 
-    LeftShelf = ({
-        className,
-        isPhone
-    }) => (
-        <div className={cx(
-            'LeftShelf',
-            'width__leftShelf',
-            isPhone && 'absoluteFullContainer',
-            className
-        )}>
-            <OverviewToggle inLeftShelf />
-            <DotsSlideToggle />
-            <ScoresTips inLeftShelf />
-        </div>
-    )
+    render() {
+        const {
+            className,
+            isPhone
+        } = this.props
 
-LeftShelf.propTypes = propTypes
+        return (
+            <div className={cx(
+                'LeftShelf',
+                'width__leftShelf',
+                isPhone && 'absoluteFullContainer',
+                className
+            )}>
+                <OverviewToggle inLeftShelf />
+                <DotsSlideToggle />
+                <ScoresTips inLeftShelf />
+            </div>
+        )
+    }
+}
 
 export default connect(mapStateToProps)(LeftShelf)

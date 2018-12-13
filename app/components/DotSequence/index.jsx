@@ -1,6 +1,6 @@
 // Container to show multiple dots in sequence.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -16,7 +16,7 @@ const dotBlockPropTypes = {
         inTextAnchor: PropTypes.bool
     },
 
-    DotSequence = ({
+    DotSequence = memo(({
 
         inAnnotationCard,
         inTextAnchor,
@@ -46,7 +46,7 @@ const dotBlockPropTypes = {
                 )
             })}
         </div>
-    )
+    ))
 
 DotSequence.propTypes = dotBlockPropTypes
 

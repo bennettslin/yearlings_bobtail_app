@@ -1,6 +1,6 @@
 // Component to wrap text span in appropriate parent element.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import TextLyricAnchor from './LyricAnchor'
 import Texts from '../'
@@ -16,7 +16,7 @@ const propTypes = {
         ])
     },
 
-    Text = ({
+    Text = memo(({
         text: textEntity,
 
         ...props
@@ -132,7 +132,7 @@ const propTypes = {
 
         // Wormholes don't have a text description, so return null.
         return null
-    }
+    })
 
 Text.propTypes = propTypes
 

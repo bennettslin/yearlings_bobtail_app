@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -79,7 +79,7 @@ const propTypes = {
     buttonIdentifier: PropTypes.any
 }
 
-const ButtonIcon = ({
+const ButtonIcon = memo(({
 
     showAsDisabled,
     buttonName,
@@ -115,7 +115,7 @@ const ButtonIcon = ({
             </Svg>
         </div>
     )
-}
+})
 
 ButtonIcon.propTypes = propTypes
 

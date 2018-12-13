@@ -1,6 +1,6 @@
 // Component for a single span of text.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -26,7 +26,7 @@ const defaultProps = {
         isTextAnchor: PropTypes.bool
     },
 
-    TextSpan = ({
+    TextSpan = memo(({
 
         text,
         isVerseLyric,
@@ -81,7 +81,7 @@ const defaultProps = {
                 {formattedText}
             </Tag>
         )
-    }
+    })
 
 TextSpan.defaultProps = defaultProps
 TextSpan.propTypes = propTypes

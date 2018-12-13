@@ -1,6 +1,6 @@
 // Button in nav section to select logue.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -12,7 +12,7 @@ const navBookLoguePropTypes = {
         bookIndex: PropTypes.number.isRequired
     },
 
-    NavBookLogue = ({
+    NavBookLogue = memo(({
 
         bookIndex,
 
@@ -31,7 +31,7 @@ const navBookLoguePropTypes = {
                 />
             </div>
         )
-    }
+    })
 
 NavBookLogue.propTypes = navBookLoguePropTypes
 

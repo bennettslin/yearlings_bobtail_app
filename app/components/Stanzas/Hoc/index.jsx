@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -13,7 +13,7 @@ const propTypes = {
         StanzaComponent: PropTypes.func.isRequired
     },
 
-    StanzaHoc = ({
+    StanzaHoc = memo(({
         StanzaComponent,
 
         ...other
@@ -54,7 +54,7 @@ const propTypes = {
                 }}
             />
         )
-    }
+    })
 
 StanzaHoc.propTypes = propTypes
 

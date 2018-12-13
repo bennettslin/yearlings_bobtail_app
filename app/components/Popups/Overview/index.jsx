@@ -1,6 +1,6 @@
 // Popup container for overview section.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -24,8 +24,10 @@ const mapStateToProps = ({
     isRenderedLogue
 })
 
-const overviewPopupPropTypes = {
-    // Through Redux.
+class OverviewPopup extends PureComponent {
+
+    static propTypes = {
+        // Through Redux.
         isPhone: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
@@ -33,16 +35,18 @@ const overviewPopupPropTypes = {
 
         // From parent.
         inMain: PropTypes.bool
-    },
+    }
 
-    OverviewPopup = ({
-        inMain,
-        isPhone,
-        selectedOverviewOption,
-        isRenderedLogue,
-        selectedTipsOption
-    }) => {
+    render() {
         const
+            {
+                inMain,
+                isPhone,
+                selectedOverviewOption,
+                isRenderedLogue,
+                selectedTipsOption
+            } = this.props,
+
             // Only position absolute when in main and is phone.
             noAbsoluteFull = isRenderedLogue || !isPhone
 
@@ -86,7 +90,6 @@ const overviewPopupPropTypes = {
             </Popup>
         )
     }
-
-OverviewPopup.propTypes = overviewPopupPropTypes
+}
 
 export default connect(mapStateToProps)(OverviewPopup)

@@ -1,6 +1,6 @@
 // Container to show a single character representing an access key.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -24,7 +24,7 @@ const propTypes = {
         accessKey: PropTypes.string
     },
 
-    AccessIcon = ({
+    AccessIcon = memo(({
 
         accessKey
 
@@ -78,7 +78,7 @@ const propTypes = {
                 </text>
             </Svg>
         )
-    }
+    })
 
 AccessIcon.propTypes = propTypes
 

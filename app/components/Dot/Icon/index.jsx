@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -41,7 +41,7 @@ const propTypes = {
         dotKey: PropTypes.string.isRequired
     },
 
-    DotIcon = ({
+    DotIcon = memo(({
 
         isAccessed,
 
@@ -72,7 +72,7 @@ const propTypes = {
                 )}
             />
         )
-    }
+    })
 
 DotIcon.propTypes = propTypes
 

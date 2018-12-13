@@ -1,11 +1,11 @@
 // Container to outline of a key on a keyboard, shared by all access icons.
 
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 
 import Svg from '../../../Svg'
 
-const AccessField = () => {
+const AccessField = memo(() => {
 
     return (
         <Svg
@@ -26,6 +26,6 @@ const AccessField = () => {
             />
         </Svg>
     )
-}
+})
 
 export default AccessField

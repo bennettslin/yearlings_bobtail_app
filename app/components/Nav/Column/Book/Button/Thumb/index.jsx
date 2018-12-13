@@ -1,6 +1,6 @@
 // Container for image above each button.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -18,7 +18,7 @@ const propTypes = {
         songIndex: PropTypes.number
     },
 
-    Thumb = ({
+    Thumb = memo(({
 
         // From props.
         isAccessed,
@@ -73,7 +73,7 @@ const propTypes = {
                 </div>
             </div>
         )
-    }
+    })
 
 Thumb.propTypes = propTypes
 

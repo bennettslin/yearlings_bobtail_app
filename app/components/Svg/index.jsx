@@ -1,6 +1,6 @@
 // Component to safely render an svg by ensuring that all values are valid.
 
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
 const defaultProps = {
@@ -15,7 +15,7 @@ const propTypes = {
     children: PropTypes.node
 }
 
-const Svg = ({
+const Svg = memo(({
 
     className,
     viewBoxWidth,
@@ -48,7 +48,7 @@ const Svg = ({
             {children}
         </svg>
     )
-}
+})
 
 Svg.defaultProps = defaultProps
 Svg.propTypes = propTypes

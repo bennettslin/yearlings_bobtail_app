@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -12,7 +12,7 @@ const propTypes = {
         isWikiAnchor: PropTypes.bool
     },
 
-    Underline = ({
+    Underline = memo(({
 
         isAccessed,
         isSelected,
@@ -52,7 +52,7 @@ const propTypes = {
                 )}
             />
         </div>
-    )
+    ))
 
 Underline.propTypes = propTypes
 

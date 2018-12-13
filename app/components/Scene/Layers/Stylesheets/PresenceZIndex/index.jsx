@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 
 import Stylesheet from '../../../../Stylesheet'
@@ -9,7 +9,7 @@ import {
     CUBE_Y_INDICES
 } from '../../../../../constants/cubeIndex'
 
-const PresenceZIndexStylesheet = () => {
+const PresenceZIndexStylesheet = memo(() => {
 
     return (
         <Stylesheet
@@ -40,6 +40,6 @@ const PresenceZIndexStylesheet = () => {
             })}
         </Stylesheet>
     )
-}
+})
 
 export default PresenceZIndexStylesheet

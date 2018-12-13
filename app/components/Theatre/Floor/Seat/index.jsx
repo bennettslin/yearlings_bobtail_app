@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -22,7 +22,7 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
-const FloorSeat = ({
+const FloorSeat = memo(({
 
     chairIndex,
     rowIndex,
@@ -101,7 +101,7 @@ const FloorSeat = ({
             />
         </g>
     )
-}
+})
 
 FloorSeat.propTypes = propTypes
 

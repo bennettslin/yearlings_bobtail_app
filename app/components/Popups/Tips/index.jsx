@@ -1,6 +1,6 @@
 // Popup container for title section.
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Tips from '../../Tips'
@@ -16,20 +16,24 @@ const mapStateToProps = ({
     selectedTipsOption
 })
 
-const tipsPopupPropTypes = {
-    // Through Redux.
+class TipsPopup extends PureComponent {
+
+    static propTypes = {
+        // Through Redux.
         isRenderedLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired
-    },
+    }
 
-    TipsPopup = ({
-        isRenderedLogue,
-        selectedTipsOption
-    }) => {
+    render() {
+        const
+            {
+                isRenderedLogue,
+                selectedTipsOption
+            } = this.props,
 
-        const isVisible =
-            !isRenderedLogue &&
-            selectedTipsOption === SHOWN
+            isVisible =
+                !isRenderedLogue &&
+                selectedTipsOption === SHOWN
 
         return (
             <Popup
@@ -45,7 +49,6 @@ const tipsPopupPropTypes = {
             </Popup>
         )
     }
-
-TipsPopup.propTypes = tipsPopupPropTypes
+}
 
 export default connect(mapStateToProps)(TipsPopup)

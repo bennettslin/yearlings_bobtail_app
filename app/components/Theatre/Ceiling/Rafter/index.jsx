@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
 const propTypes = {
@@ -8,7 +8,7 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
-const CeilingRafter = ({
+const CeilingRafter = memo(({
     top,
     left,
     width,
@@ -27,7 +27,7 @@ const CeilingRafter = ({
             }}
         />
     )
-}
+})
 
 CeilingRafter.propTypes = propTypes
 

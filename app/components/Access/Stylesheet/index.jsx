@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 
 import Stylesheet from '../../Stylesheet'
@@ -10,7 +10,7 @@ import {
     CHILD_ACCESS_PREFIX
 } from 'constants/prefixes'
 
-const AccessStylesheet = () => {
+const AccessStylesheet = memo(() => {
 
     return (
         <Stylesheet
@@ -30,6 +30,6 @@ const AccessStylesheet = () => {
             />
         </Stylesheet>
     )
-}
+})
 
 export default AccessStylesheet

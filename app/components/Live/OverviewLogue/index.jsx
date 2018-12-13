@@ -1,11 +1,11 @@
 // Section for dots and overview toggle buttons.
 
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 
 import OverviewPopup from '../../Popups/Overview'
 
-const OverviewLogue = () => (
+const OverviewLogue = memo(() => (
     <div className={cx(
         'OverviewLogue',
         'position__lyricColumn__desktop',
@@ -13,6 +13,6 @@ const OverviewLogue = () => (
     )}>
         <OverviewPopup />
     </div>
-)
+))
 
 export default OverviewLogue
