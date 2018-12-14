@@ -19,11 +19,13 @@ class TimeVerseDispatcher extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        setDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchTimeVerse = this.dispatchTimeVerse
+        this.props.setDispatch({
+            timeVerse: this.dispatchTimeVerse
+        })
     }
 
     dispatchTimeVerse = ({

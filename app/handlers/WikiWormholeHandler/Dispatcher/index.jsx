@@ -25,7 +25,9 @@ class WikiWormholeDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.setDispatch(this.dispatchAccessedWikiWormhole)
+        this.props.setDispatch({
+            accessedWikiWormhole: this.dispatchAccessedWikiWormhole
+        })
     }
 
     dispatchAccessedWikiWormhole = (direction) => {

@@ -47,6 +47,7 @@ import {
     SHOWN,
     HIDDEN
 } from 'constants/options'
+import { populateDispatch } from '../../../helpers/dispatch'
 
 class LetterManager extends PureComponent {
 
@@ -80,10 +81,10 @@ class LetterManager extends PureComponent {
 
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchAdmin()
+                keyWasRegistered = this.dispatch.admin()
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchAudioOption()
+                keyWasRegistered = this.dispatch.audioOption()
                 break
             case AUDIO_PLAY_KEY:
                 keyWasRegistered = this.dispatchPlay()
@@ -190,11 +191,15 @@ class LetterManager extends PureComponent {
         }
     }
 
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
+    }
+
     render() {
         return (
             <___>
-                <AdminDispatcher {...{ parentThis: this }} />
-                <AudioOptionDispatcher {...{ parentThis: this }} />
+                <AdminDispatcher {...{ setDispatch: this._setDispatch }} />
+                <AudioOptionDispatcher {...{ setDispatch: this._setDispatch }} />
                 <CarouselDispatcher {...{ parentThis: this }} />
                 <DotsSlideDispatcher {...{ parentThis: this }} />
                 <EarColumnDispatcher {...{ parentThis: this }} />

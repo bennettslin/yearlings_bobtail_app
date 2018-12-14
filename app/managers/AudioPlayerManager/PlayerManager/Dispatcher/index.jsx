@@ -16,11 +16,13 @@ class PlayerDispatcher extends PureComponent {
         updatePlayersStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        setDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchPlayerCanPlayThrough = this.dispatchPlayerCanPlayThrough
+        this.props.setDispatch({
+            playerCanPlayThrough: this.dispatchPlayerCanPlayThrough
+        })
     }
 
     dispatchPlayerCanPlayThrough = (songIndex) => {

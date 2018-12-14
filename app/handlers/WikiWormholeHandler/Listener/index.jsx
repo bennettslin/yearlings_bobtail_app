@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 
 import WikiWormholeDispatcher from '../Dispatcher'
 
+import { populateDispatch } from 'helpers/dispatch'
+
 class WikiWormholeListener extends PureComponent {
 
     static propTypes = {
@@ -15,7 +17,7 @@ class WikiWormholeListener extends PureComponent {
     }
 
     componentDidMount() {
-        this.dispatchAccessedWikiWormhole()
+        this.dispatch.accessedWikiWormhole()
     }
 
     componentDidUpdate(prevProps) {
@@ -41,17 +43,17 @@ class WikiWormholeListener extends PureComponent {
             selectedSongIndex !== prevSongIndex ||
             selectedAnnotationIndex !== prevAnnotationIndex
         ) {
-            this.dispatchAccessedWikiWormhole()
+            this.dispatch.accessedWikiWormhole()
         }
     }
 
-    _setDispatchAccessedWikiWormhole = (dispatchAccessedWikiWormhole) => {
-        this.dispatchAccessedWikiWormhole = dispatchAccessedWikiWormhole
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
     }
 
     render() {
         return (
-            <WikiWormholeDispatcher {...{ setDispatch: this._setDispatchAccessedWikiWormhole }} />
+            <WikiWormholeDispatcher {...{ setDispatch: this._setDispatch }} />
         )
     }
 }

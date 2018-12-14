@@ -7,6 +7,8 @@ import SongDispatcher from '../../../../handlers/SongHandler/Dispatcher'
 import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormholeHandler/Dispatcher'
 
+import { populateDispatch } from 'helpers/dispatch'
+
 import {
     getWikiWormholeEntity,
     getWormholeLinkFromIndex
@@ -58,7 +60,7 @@ class AnnotationNavigation extends PureComponent {
                 // If not accessed on, do nothing and just turn access on.
                 if (props.isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    this.dispatchAccessedWikiWormhole(direction)
+                    this.dispatch.accessedWikiWormhole(direction)
                 }
                 break
             }
@@ -78,7 +80,7 @@ class AnnotationNavigation extends PureComponent {
 
                     // It's a wiki anchor.
                     if (typeof wikiWormholeEntity === 'string') {
-                        this.dispatchWiki(accessedWikiWormholeIndex)
+                        this.dispatch.wiki(accessedWikiWormholeIndex)
 
                     // It's a wormhole index.
                     } else {
@@ -115,8 +117,8 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
-    _setDispatchAccessedWikiWormhole = (dispatchAccessedWikiWormhole) => {
-        this.dispatchAccessedWikiWormhole = dispatchAccessedWikiWormhole
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
     }
 
     render() {
@@ -124,8 +126,8 @@ class AnnotationNavigation extends PureComponent {
             <___>
                 <AnnotationDispatcher {...{ parentThis: this }} />
                 <SongDispatcher {...{ parentThis: this }} />
-                <WikiDispatcher {...{ parentThis: this }} />
-                <WikiWormholeDispatcher {...{ setDispatch: this._setDispatchAccessedWikiWormhole }} />
+                <WikiDispatcher {...{ setDispatch: this._setDispatch }} />
+                <WikiWormholeDispatcher {...{ setDispatch: this._setDispatch }} />
             </___>
         )
     }

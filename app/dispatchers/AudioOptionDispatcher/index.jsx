@@ -16,11 +16,13 @@ class AudioOptionDispatcher extends PureComponent {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        setDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchAudioOption = this.dispatchAudioOption
+        this.props.setDispatch({
+            audioOption: this.dispatchAudioOption
+        })
     }
 
     dispatchAudioOption = (

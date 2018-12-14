@@ -15,6 +15,7 @@ import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 
 import { getTimeForVerseIndex } from 'helpers/data'
+import { populateDispatch } from 'helpers/dispatch'
 import { getPlayersCanPlayThroughFromBitNumber } from 'helpers/player'
 
 import {
@@ -94,7 +95,7 @@ class PlayerManager extends PureComponent {
     }
 
     setPlayerCanPlayThrough = (songIndex) => {
-        this.dispatchPlayerCanPlayThrough(songIndex)
+        this.dispatch.playerCanPlayThrough(songIndex)
     }
 
     toggleSelectedPlayer = ({
@@ -240,7 +241,7 @@ class PlayerManager extends PureComponent {
 
         // Otherwise, update verse and time.
         } else if (isTimeInNextVerse) {
-            this.dispatchTimeVerse({
+            this.dispatch.timeVerse({
                 currentTime,
                 nextVerseIndex
             })
@@ -284,6 +285,10 @@ class PlayerManager extends PureComponent {
         )
     }
 
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
+    }
+
     render() {
         const { selectedSongIndex } = this.props,
             mp3s = getMp3s()
@@ -317,8 +322,8 @@ class PlayerManager extends PureComponent {
                         />
                     )
                 })}
-                <PlayerDispatcher {...{ parentThis: this }} />
-                <TimeVerseDispatcher {...{ parentThis: this }} />
+                <PlayerDispatcher {...{ setDispatch: this._setDispatch }} />
+                <TimeVerseDispatcher {...{ setDispatch: this._setDispatch }} />
             </div>
         )
     }
