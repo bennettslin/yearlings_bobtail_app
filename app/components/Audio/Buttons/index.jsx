@@ -51,7 +51,7 @@ class AudioButtons extends PureComponent {
     }
 
     _handleAudioOptionClick = () => {
-        this.dispatch.audioOption()
+        this.dispatchAudioOption()
     }
 
     _handlePlayClick = () => {
@@ -101,33 +101,39 @@ class AudioButtons extends PureComponent {
                 )}>
                     {/* Previous button. */}
                     <Button
-                        buttonName={AUDIO_NEXT_BUTTON_KEY}
-                        className="AudioButton"
-                        buttonIdentifier={isPrologue}
-                        accessKey={AUDIO_PREVIOUS_SONG_KEY}
-                        isDisabled={isPrologue}
-                        handleButtonClick={this._handlePreviousClick}
+                        {...{
+                            buttonName: AUDIO_NEXT_BUTTON_KEY,
+                            className: 'AudioButton',
+                            buttonIdentifier: isPrologue,
+                            accessKey: AUDIO_PREVIOUS_SONG_KEY,
+                            isDisabled: isPrologue,
+                            handleButtonClick: this._handlePreviousClick
+                        }}
                     />
 
                     {/* Play button. */}
                     <Button
                         isLargeSize
-                        buttonName={AUDIO_PLAY_BUTTON_KEY}
-                        className="AudioButton"
-                        buttonIdentifier={isPlaying}
-                        accessKey={AUDIO_PLAY_KEY}
-                        isDisabled={!playerCanPlayThrough}
-                        handleButtonClick={this._handlePlayClick}
+                        {...{
+                            buttonName: AUDIO_PLAY_BUTTON_KEY,
+                            className: 'AudioButton',
+                            buttonIdentifier: isPlaying,
+                            accessKey: AUDIO_PLAY_KEY,
+                            isDisabled: !playerCanPlayThrough,
+                            handleButtonClick: this._handlePlayClick
+                        }}
                     />
 
                     {/* Next button. */}
                     <Button
-                        buttonName={AUDIO_PREVIOUS_BUTTON_KEY}
-                        className="AudioButton"
-                        buttonIdentifier={isEpilogue}
-                        accessKey={AUDIO_NEXT_SONG_KEY}
-                        isDisabled={isEpilogue}
-                        handleButtonClick={this._handleNextClick}
+                        {...{
+                            buttonName: AUDIO_PREVIOUS_BUTTON_KEY,
+                            className: 'AudioButton',
+                            buttonIdentifier: isEpilogue,
+                            accessKey: AUDIO_NEXT_SONG_KEY,
+                            isDisabled: isEpilogue,
+                            handleButtonClick: this._handleNextClick
+                        }}
                     />
                 </div>
 
@@ -137,16 +143,18 @@ class AudioButtons extends PureComponent {
                     'flexAlignContainer'
                 )}>
                     <Button
-                        buttonName={AUDIO_OPTIONS_BUTTON_KEY}
-                        className="AudioButton"
-                        buttonIdentifier={selectedAudioOptionIndex}
-                        accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
-                        handleButtonClick={this._handleAudioOptionClick}
+                        {...{
+                            buttonName: AUDIO_OPTIONS_BUTTON_KEY,
+                            className: 'AudioButton',
+                            buttonIdentifier: selectedAudioOptionIndex,
+                            accessKey: AUDIO_OPTIONS_TOGGLE_KEY,
+                            handleButtonClick: this._handleAudioOptionClick
+                        }}
                     />
                 </div>
                 <AudioOptionDispatcher {...{ setDispatch: this._setDispatch }} />
-                <PlayDispatcher {...{ parentThis: this }} />
-                <SongDispatcher {...{ parentThis: this }} />
+                <PlayDispatcher {...{ setDispatch: this._setDispatch }} />
+                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
             </div>
         )
     }

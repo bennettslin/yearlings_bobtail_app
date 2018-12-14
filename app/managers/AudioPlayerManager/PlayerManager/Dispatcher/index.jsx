@@ -21,7 +21,7 @@ class PlayerDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.setDispatch({
-            playerCanPlayThrough: this.dispatchPlayerCanPlayThrough
+            dispatchPlayerCanPlayThrough: this.dispatchPlayerCanPlayThrough
         })
     }
 

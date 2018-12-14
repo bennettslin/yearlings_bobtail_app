@@ -95,7 +95,7 @@ class PlayerManager extends PureComponent {
     }
 
     setPlayerCanPlayThrough = (songIndex) => {
-        this.dispatch.playerCanPlayThrough(songIndex)
+        this.dispatchPlayerCanPlayThrough(songIndex)
     }
 
     toggleSelectedPlayer = ({
@@ -241,7 +241,7 @@ class PlayerManager extends PureComponent {
 
         // Otherwise, update verse and time.
         } else if (isTimeInNextVerse) {
-            this.dispatch.timeVerse({
+            this.dispatchTimeVerse({
                 currentTime,
                 nextVerseIndex
             })

@@ -8,6 +8,7 @@ import { updateAudioStore } from 'flux/audio/action'
 
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 
+import { populateDispatch } from 'helpers/dispatch'
 import { getPropsAreShallowEqual } from 'helpers/general'
 import { getPlayerCanPlayThrough } from 'helpers/player'
 
@@ -22,7 +23,13 @@ class PlayDispatcher extends Component {
         updateAudioStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        setDispatch: PropTypes.func.isRequired
+    }
+
+    componentDidMount() {
+        this.props.setDispatch({
+            dispatchPlay: this.dispatchPlay
+        })
     }
 
     shouldComponentUpdate(nextProps) {
@@ -30,10 +37,6 @@ class PlayDispatcher extends Component {
             props: this.props,
             nextProps
         })
-    }
-
-    componentDidMount() {
-        this.props.parentThis.dispatchPlay = this.dispatchPlay
     }
 
     dispatchPlay = (isPlaying = !this.props.isPlaying) => {
@@ -73,9 +76,13 @@ class PlayDispatcher extends Component {
         return true
     }
 
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
+    }
+
     render() {
         return (
-            <SongDispatcher {...{ parentThis: this }} />
+            <SongDispatcher {...{ setDispatch: this._setDispatch }} />
         )
     }
 }

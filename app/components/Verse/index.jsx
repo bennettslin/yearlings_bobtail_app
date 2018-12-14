@@ -11,6 +11,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 
 import VerseLines from './Lines'
 
+import { populateDispatch } from 'helpers/dispatch'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { VERSE_SCROLL } from 'constants/dom'
@@ -90,6 +91,10 @@ class Verse extends Component {
         }
     }
 
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
+    }
+
     render() {
         const {
                 /* eslint-disable no-unused-vars */
@@ -124,7 +129,7 @@ class Verse extends Component {
                     }}
                 />
                 <InteractivatedVerseDispatcher {...{ parentThis: this }} />
-                <StopPropagationDispatcher {...{ parentThis: this }} />
+                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
             </___>
         )
     }

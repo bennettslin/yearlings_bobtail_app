@@ -7,6 +7,8 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 
 import PopupView from './View'
 
+import { populateDispatch } from 'helpers/dispatch'
+
 /*************
  * CONTAINER *
  *************/
@@ -28,6 +30,10 @@ class Popup extends PureComponent {
 
     handleContainerClick = (e) => {
         this.dispatchStopPropagation(e)
+    }
+
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
     }
 
     render() {
@@ -86,7 +92,7 @@ class Popup extends PureComponent {
                             handleContainerClick: this.handleContainerClick
                         }}
                     />
-                    <StopPropagationDispatcher {...{ parentThis: this }} />
+                    <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
                 </div>
             </CSSTransition>
         )

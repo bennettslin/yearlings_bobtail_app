@@ -11,9 +11,12 @@ import { updateEventStore } from 'flux/event/action'
 import CloseHandler from '../../handlers/CloseHandler'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+
 import RootContainer from '../RootContainer'
 import KeyManager from '../../managers/KeyManager'
 import AccessStylesheet from '../../components/Access/Stylesheet'
+
+import { populateDispatch } from 'helpers/dispatch'
 
 const mapStateToProps = ({
     loadStore: { appMounted },
@@ -214,6 +217,10 @@ class FocusContainer extends PureComponent {
     _handleKeyDownPress = e => this.handleKeyDownPress(e)
     _handleKeyUpPress = e => this.handleKeyUpPress(e)
 
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
+    }
+
     render() {
         const { appMounted } = this.props
 
@@ -247,7 +254,7 @@ class FocusContainer extends PureComponent {
                     }}
                 />
                 <SliderTouchDispatcher {...{ parentThis: this }} />
-                <StopPropagationDispatcher {...{ parentThis: this }} />
+                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
             </div>
         )
     }

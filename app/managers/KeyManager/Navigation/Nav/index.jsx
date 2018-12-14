@@ -11,6 +11,7 @@ import {
     getSongsAndLoguesCount,
     getNavBookIndex
 } from 'helpers/data'
+import { populateDispatch } from 'helpers/dispatch'
 
 import {
     ARROW_LEFT,
@@ -100,11 +101,15 @@ class NavNavigation extends PureComponent {
         }
     }
 
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
+    }
+
     render() {
         return (
             <___>
                 <NavDispatcher {...{ parentThis: this }} />
-                <SongDispatcher {...{ parentThis: this }} />
+                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
             </___>
         )
     }

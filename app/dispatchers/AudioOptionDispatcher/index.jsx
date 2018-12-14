@@ -21,7 +21,7 @@ class AudioOptionDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.setDispatch({
-            audioOption: this.dispatchAudioOption
+            dispatchAudioOption: this.dispatchAudioOption
         })
     }
 

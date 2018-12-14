@@ -10,6 +10,7 @@ import AnnotationHeader from './Header'
 import AnnotationTitle from './Title'
 import AnnotationCard from './Card'
 
+import { populateDispatch } from 'helpers/dispatch'
 import {
     getPropsAreShallowEqual,
     getArrayOfLength
@@ -55,6 +56,10 @@ class Annotation extends Component {
         if (this.props.isSelected) {
             this.dispatchStopPropagation(e)
         }
+    }
+
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
     }
 
     render() {
@@ -132,7 +137,7 @@ class Annotation extends Component {
                     ))}
 
                 </div>
-                <StopPropagationDispatcher {...{ parentThis: this }} />
+                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
             </___>
         )
     }

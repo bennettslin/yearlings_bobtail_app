@@ -8,6 +8,7 @@ import Underline from './Underline'
 import AccessLetter from '../Access/Letter'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import { populateDispatch } from 'helpers/dispatch'
 
 import { ENTER } from 'constants/access'
 
@@ -43,6 +44,10 @@ class Anchor extends PureComponent {
                 this.dispatchStopPropagation(e)
             }
         }
+    }
+
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
     }
 
     render() {
@@ -130,7 +135,7 @@ class Anchor extends PureComponent {
                         }}
                     />
                 )}
-                <StopPropagationDispatcher {...{ parentThis: this }} />
+                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
             </a>
         )
     }

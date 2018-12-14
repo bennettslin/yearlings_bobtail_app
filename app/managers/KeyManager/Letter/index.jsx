@@ -81,10 +81,10 @@ class LetterManager extends PureComponent {
 
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
-                keyWasRegistered = this.dispatch.admin()
+                keyWasRegistered = this.dispatchAdmin()
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                keyWasRegistered = this.dispatch.audioOption()
+                keyWasRegistered = this.dispatchAudioOption()
                 break
             case AUDIO_PLAY_KEY:
                 keyWasRegistered = this.dispatchPlay()
@@ -200,18 +200,18 @@ class LetterManager extends PureComponent {
             <___>
                 <AdminDispatcher {...{ setDispatch: this._setDispatch }} />
                 <AudioOptionDispatcher {...{ setDispatch: this._setDispatch }} />
-                <CarouselDispatcher {...{ parentThis: this }} />
+                <CarouselDispatcher {...{ setDispatch: this._setDispatch }} />
                 <DotsSlideDispatcher {...{ parentThis: this }} />
                 <EarColumnDispatcher {...{ parentThis: this }} />
                 <InteractivatedVerseDispatcher {...{ parentThis: this }} />
                 <LyricDispatcher {...{ parentThis: this }} />
                 <OverviewDispatcher {...{ parentThis: this }} />
-                <PlayDispatcher {...{ parentThis: this }} />
+                <PlayDispatcher {...{ setDispatch: this._setDispatch }} />
                 <TipsDispatcher {...{ parentThis: this }} />
                 <SceneDispatcher {...{ parentThis: this }} />
                 <ScoreDispatcher {...{ parentThis: this }} />
                 <ScrollVerseDispatcher {...{ parentThis: this }} />
-                <SongDispatcher {...{ parentThis: this }} />
+                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
                 <TitleDispatcher {...{ parentThis: this }} />
             </___>
         )

@@ -10,6 +10,8 @@ import Button from '../../Button'
 import { CAROUSEL_TOGGLE_KEY } from 'constants/access'
 import { CAROUSEL_NAV_BUTTON_KEY } from 'constants/buttons'
 
+import { populateDispatch } from '../../../helpers/dispatch'
+
 const mapStateToProps = ({
     responsiveStore: { isHiddenCarouselNav },
     toggleStore: { isCarouselShown }
@@ -28,6 +30,10 @@ class CarouselToggle extends PureComponent {
 
     handleButtonClick = () => {
         this.dispatchCarousel()
+    }
+
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
     }
 
     render() {
@@ -50,7 +56,7 @@ class CarouselToggle extends PureComponent {
                         handleButtonClick: this.handleButtonClick
                     }}
                 />
-                <CarouselDispatcher {...{ parentThis: this }} />
+                <CarouselDispatcher {...{ setDispatch: this._setDispatch }} />
             </div>
         )
     }

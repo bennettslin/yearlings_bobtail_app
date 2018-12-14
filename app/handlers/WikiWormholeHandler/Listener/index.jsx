@@ -17,7 +17,7 @@ class WikiWormholeListener extends PureComponent {
     }
 
     componentDidMount() {
-        this.dispatch.accessedWikiWormhole()
+        this.dispatchAccessedWikiWormhole()
     }
 
     componentDidUpdate(prevProps) {
@@ -43,7 +43,7 @@ class WikiWormholeListener extends PureComponent {
             selectedSongIndex !== prevSongIndex ||
             selectedAnnotationIndex !== prevAnnotationIndex
         ) {
-            this.dispatch.accessedWikiWormhole()
+            this.dispatchAccessedWikiWormhole()
         }
     }
 

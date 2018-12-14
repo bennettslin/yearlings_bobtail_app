@@ -105,7 +105,7 @@ class TextLyricAnchor extends Component {
         if (!isSelected) {
 
             if (wikiIndex) {
-                this.dispatch.wiki(
+                this.dispatchWiki(
                     wikiIndex,
                     wikiAnnotationIndex
                 )
@@ -258,7 +258,7 @@ class TextLyricAnchor extends Component {
                     />
                 </span>
                 <AnnotationDispatcher {...{ parentThis: this }} />
-                <StopPropagationDispatcher {...{ parentThis: this }} />
+                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
                 <WikiDispatcher {...{ setDispatch: this._setDispatch }} />
             </___>
         )

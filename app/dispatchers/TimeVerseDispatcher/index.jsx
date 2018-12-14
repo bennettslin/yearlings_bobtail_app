@@ -24,7 +24,7 @@ class TimeVerseDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.setDispatch({
-            timeVerse: this.dispatchTimeVerse
+            dispatchTimeVerse: this.dispatchTimeVerse
         })
     }
 

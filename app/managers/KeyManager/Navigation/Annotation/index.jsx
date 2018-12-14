@@ -60,7 +60,7 @@ class AnnotationNavigation extends PureComponent {
                 // If not accessed on, do nothing and just turn access on.
                 if (props.isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    this.dispatch.accessedWikiWormhole(direction)
+                    this.dispatchAccessedWikiWormhole(direction)
                 }
                 break
             }
@@ -80,7 +80,7 @@ class AnnotationNavigation extends PureComponent {
 
                     // It's a wiki anchor.
                     if (typeof wikiWormholeEntity === 'string') {
-                        this.dispatch.wiki(accessedWikiWormholeIndex)
+                        this.dispatchWiki(accessedWikiWormholeIndex)
 
                     // It's a wormhole index.
                     } else {
@@ -125,7 +125,7 @@ class AnnotationNavigation extends PureComponent {
         return (
             <___>
                 <AnnotationDispatcher {...{ parentThis: this }} />
-                <SongDispatcher {...{ parentThis: this }} />
+                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
                 <WikiDispatcher {...{ setDispatch: this._setDispatch }} />
                 <WikiWormholeDispatcher {...{ setDispatch: this._setDispatch }} />
             </___>

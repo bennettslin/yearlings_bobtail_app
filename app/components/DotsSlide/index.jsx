@@ -5,6 +5,8 @@ import React, { PureComponent } from 'react'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import DotsSlideSelects from './Selects'
 
+import { populateDispatch } from 'helpers/dispatch'
+
 class DotsSlide extends PureComponent {
 
     state = {
@@ -29,6 +31,10 @@ class DotsSlide extends PureComponent {
         })
     }
 
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
+    }
+
     render() {
         const { hasInteractivatedDotText } = this.state
 
@@ -41,7 +47,7 @@ class DotsSlide extends PureComponent {
                         setHasInteractivatedDotText: this._setHasInteractivatedDotText
                     }}
                 />
-                <StopPropagationDispatcher {...{ parentThis: this }} />
+                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
             </div>
         )
     }

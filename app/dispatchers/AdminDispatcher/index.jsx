@@ -19,7 +19,7 @@ class AdminDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.setDispatch({
-            admin: this.dispatchAdmin
+            dispatchAdmin: this.dispatchAdmin
         })
     }
 

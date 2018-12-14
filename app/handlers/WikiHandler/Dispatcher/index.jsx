@@ -19,7 +19,7 @@ class WikiDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.setDispatch({
-            wiki: this.dispatchWiki
+            dispatchWiki: this.dispatchWiki
         })
     }
 

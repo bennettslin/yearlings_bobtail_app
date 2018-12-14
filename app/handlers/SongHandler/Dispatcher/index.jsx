@@ -28,11 +28,13 @@ class SongDispatcher extends PureComponent {
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        setDispatch: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchSong = this.dispatchSong
+        this.props.setDispatch({
+            dispatchSong: this.dispatchSong
+        })
     }
 
     dispatchSong = ({

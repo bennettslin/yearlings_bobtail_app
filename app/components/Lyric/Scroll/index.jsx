@@ -85,6 +85,18 @@ class LyricScroll extends Component {
         this.dispatchLyricWheel(e, this.lyricElement)
     }
 
+    _setElements = ({
+        setVerseElement,
+        setLyricAnnotationElement,
+        setLyricParent,
+        getVerseElement
+    }) => {
+        this.setVerseElement = setVerseElement
+        this.setLyricAnnotationElement = setLyricAnnotationElement
+        this.setLyricParent = setLyricParent
+        this.getVerseElement = getVerseElement
+    }
+
     render() {
         const {
                 /* eslint-disable no-unused-vars */
@@ -108,7 +120,7 @@ class LyricScroll extends Component {
 
         return songStanzaConfigs.length && (
             <___>
-                <ScrollLyricListener {...{ parentThis: this }} />
+                <ScrollLyricListener {...{ setElements: this._setElements }} />
                 <div
                     {...{
                         ref: this._setLyricElement,

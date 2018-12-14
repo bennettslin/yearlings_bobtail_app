@@ -6,6 +6,7 @@ import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 
 import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
+import { populateDispatch } from 'helpers/dispatch'
 
 import {
     CONTINUE,
@@ -103,9 +104,13 @@ class AudioManager extends PureComponent {
         }
     }
 
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
+    }
+
     render() {
         return (
-            <SongDispatcher {...{ parentThis: this }} />
+            <SongDispatcher {...{ setDispatch: this._setDispatch }} />
         )
     }
 }
