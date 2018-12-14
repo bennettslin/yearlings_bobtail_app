@@ -8,6 +8,7 @@ import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
 
 import { getSongStanzaConfigs } from 'helpers/data'
+import { populateDispatch } from 'helpers/dispatch'
 import { getPropsAreShallowEqual } from 'helpers/general'
 import { getLastUnitDotCardIndex } from './helper'
 
@@ -85,16 +86,8 @@ class LyricScroll extends Component {
         this.dispatchLyricWheel(e, this.lyricElement)
     }
 
-    _setElements = ({
-        setVerseElement,
-        setLyricAnnotationElement,
-        setLyricParent,
-        getVerseElement
-    }) => {
-        this.setVerseElement = setVerseElement
-        this.setLyricAnnotationElement = setLyricAnnotationElement
-        this.setLyricParent = setLyricParent
-        this.getVerseElement = getVerseElement
+    _setElements = (payload) => {
+        populateDispatch(this, payload)
     }
 
     render() {

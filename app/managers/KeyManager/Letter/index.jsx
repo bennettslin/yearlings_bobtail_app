@@ -209,7 +209,7 @@ class LetterManager extends PureComponent {
                 <PlayDispatcher {...{ setDispatch: this._setDispatch }} />
                 <TipsDispatcher {...{ parentThis: this }} />
                 <SceneDispatcher {...{ parentThis: this }} />
-                <ScoreDispatcher {...{ parentThis: this }} />
+                <ScoreDispatcher {...{ setDispatch: this._setDispatch }} />
                 <ScrollVerseDispatcher {...{ parentThis: this }} />
                 <SongDispatcher {...{ setDispatch: this._setDispatch }} />
                 <TitleDispatcher {...{ parentThis: this }} />

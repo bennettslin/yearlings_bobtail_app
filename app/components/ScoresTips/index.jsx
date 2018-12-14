@@ -9,6 +9,8 @@ import ScoreDispatcher from '../../handlers/ScoreHandler/Dispatcher'
 import TipsToggle from '../Tips/Toggle'
 import Button from '../Button'
 
+import { populateDispatch } from 'helpers/dispatch'
+
 import { SCORE_TOGGLE_KEY } from 'constants/access'
 import { SCORES_BUTTON_KEY } from 'constants/buttons'
 
@@ -52,6 +54,10 @@ class ScoresTips extends Component {
 
     handleScoreButtonClick = () => {
         this.dispatchScore()
+    }
+
+    _setDispatch = (payload) => {
+        populateDispatch(this, payload)
     }
 
     render() {
@@ -106,7 +112,7 @@ class ScoresTips extends Component {
                 />
                 }
                 <TipsToggle {...{ className: 'ScoresTipsButton' }} />
-                <ScoreDispatcher {...{ parentThis: this }} />
+                <ScoreDispatcher {...{ setDispatch: this._setDispatch }} />
             </div>
         )
     }
