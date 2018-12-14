@@ -21,7 +21,6 @@ class LogManager extends PureComponent {
     static propTypes = {
         // Through Redux.
         renderedSongIndex: PropTypes.number.isRequired,
-        renderedVerseIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         renderedSceneIndex: PropTypes.number.isRequired
     }
@@ -141,13 +140,11 @@ class LogManager extends PureComponent {
 const mapStateToProps = ({
     renderedStore: {
         renderedSongIndex,
-        renderedVerseIndex,
         renderedAnnotationIndex,
         renderedSceneIndex
     }
 }) => ({
     renderedSongIndex,
-    renderedVerseIndex,
     renderedAnnotationIndex,
     renderedSceneIndex
 })

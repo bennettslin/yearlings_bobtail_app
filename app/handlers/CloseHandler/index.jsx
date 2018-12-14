@@ -31,7 +31,6 @@ class CloseHandler extends PureComponent {
         selectedTipsOption: PropTypes.string.isRequired,
         isSongShownOverview: PropTypes.bool.isRequired,
         isSongShownTips: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
@@ -321,10 +320,7 @@ const mapStateToProps = ({
         isSongShownOverview,
         isSongShownTips
     },
-    songStore: {
-        selectedAnnotationIndex,
-        selectedSongIndex
-    },
+    songStore: { selectedAnnotationIndex },
     toggleStore: {
         isCarouselShown,
         isDotsSlideShown,
@@ -347,7 +343,6 @@ const mapStateToProps = ({
     selectedTipsOption,
     isSongShownOverview,
     isSongShownTips,
-    selectedSongIndex,
     selectedWikiIndex,
     interactivatedVerseIndex
 })

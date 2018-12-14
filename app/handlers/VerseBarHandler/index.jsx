@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { updateSessionStore } from 'flux/session/action'
 import {
     updateVerseBarsStore,
     resetVerseBarsQueue
@@ -26,7 +25,6 @@ class VerseBarHandler extends PureComponent {
         isVerseBarBelow: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
         resetVerseBarsQueue: PropTypes.func.isRequired,
 
@@ -178,7 +176,6 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSessionStore,
         updateVerseBarsStore,
         resetVerseBarsQueue
     }, dispatch)

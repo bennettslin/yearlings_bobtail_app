@@ -4,8 +4,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { updateRenderStore } from 'flux/render/action'
 
 import Scene from '../Scene'
 import Stage from '../Stage'
@@ -25,8 +23,7 @@ class Theatre extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        didTheatreRender: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
+        didTheatreRender: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
@@ -62,10 +59,4 @@ class Theatre extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Theatre)
+export default connect(mapStateToProps)(Theatre)

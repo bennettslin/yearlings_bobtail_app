@@ -35,7 +35,6 @@ class WindowListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
         updateDeviceStore: PropTypes.func.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired
@@ -211,11 +210,9 @@ class WindowListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
-    songStore: { selectedSongIndex }
+    loadStore: { appMounted }
 }) => ({
-    appMounted,
-    selectedSongIndex
+    appMounted
 })
 
 const bindDispatchToProps = (dispatch) => (

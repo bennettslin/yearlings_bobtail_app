@@ -4,7 +4,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { updateRenderedStore } from 'flux/rendered/action'
 import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 
@@ -16,7 +15,6 @@ class ScrollRenderListener extends PureComponent {
         didCarouselRender: PropTypes.bool.isRequired,
         didLyricRender: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        updateRenderedStore: PropTypes.func.isRequired,
         updateScrollCarouselStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired
     }
@@ -95,7 +93,6 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateRenderedStore,
         updateScrollCarouselStore,
         updateScrollLyricStore
     }, dispatch)

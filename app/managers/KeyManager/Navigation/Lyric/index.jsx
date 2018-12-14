@@ -23,6 +23,7 @@ class LyricNavigation extends PureComponent {
         interactivatedVerseIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired

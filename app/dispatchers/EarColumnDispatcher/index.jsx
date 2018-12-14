@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateSongStore } from 'flux/song/action'
-import { updateToggleStore } from 'flux/toggle/action'
 
 class EarColumnDispatcher extends PureComponent {
 
@@ -17,7 +16,6 @@ class EarColumnDispatcher extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
 
         updateSongStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -68,8 +66,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        updateSongStore,
-        updateToggleStore
+        updateSongStore
     }, dispatch)
 )
 
