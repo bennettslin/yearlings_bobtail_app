@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from 'react'
+import React, { memo, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -40,7 +40,7 @@ const textAnchorPropTypes = {
                 )}>
                     {words.map((word, index) => {
                         return (
-                            <Fragment
+                            <___
                                 key={index}
                             >
                                 {Boolean(index) && ' '}
@@ -92,7 +92,7 @@ const textAnchorPropTypes = {
                                         {word}
                                     </span>
                                 </span>
-                            </Fragment>
+                            </___>
                         )
                     })}
                 </span>

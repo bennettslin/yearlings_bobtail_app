@@ -32,7 +32,7 @@ const
     }),
     PresenceLayers = {}
 
-class PresenceLayer extends Component {
+class Presences extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -106,7 +106,7 @@ class PresenceLayer extends Component {
 
 CUBE_Y_INDICES.forEach(yIndex => {
     PresenceLayers[yIndex] =
-        connect(getMapStateToProps(yIndex))(PresenceLayer)
+        connect(getMapStateToProps(yIndex))(Presences)
 })
 
 export default PresenceLayers
