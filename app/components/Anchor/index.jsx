@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -8,15 +8,16 @@ import Underline from './Underline'
 import AccessLetter from '../Access/Letter'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import { getPropsAreShallowEqual } from 'helpers/general'
 import { populateRefs } from 'helpers/ref'
 
 import { ENTER } from 'constants/access'
 
-class Anchor extends PureComponent {
+class Anchor extends Component {
 
     static propTypes = {
         // From parent.
-        className: PropTypes.any,
+        className: PropTypes.string,
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool,
         isDotAnchor: PropTypes.bool,
@@ -29,6 +30,13 @@ class Anchor extends PureComponent {
             PropTypes.array,
             PropTypes.element
         ])
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     _handleClick = (e) => {
