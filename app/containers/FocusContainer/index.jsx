@@ -16,7 +16,7 @@ import RootContainer from '../RootContainer'
 import KeyManager from '../../managers/KeyManager'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     loadStore: { appMounted },
@@ -217,8 +217,8 @@ class FocusContainer extends PureComponent {
     _handleKeyDownPress = e => this.handleKeyDownPress(e)
     _handleKeyUpPress = e => this.handleKeyUpPress(e)
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -242,9 +242,9 @@ class FocusContainer extends PureComponent {
                     onKeyUp: this._handleKeyUpPress
                 }}
             >
-                <CloseHandler {...{ parentThis: this }} />
+                <CloseHandler {...{ getRefs: this._getRefs }} />
                 <AccessStylesheet />
-                <KeyManager {...{ parentThis: this }} />
+                <KeyManager {...{ getRefs: this._getRefs }} />
                 <RootContainer
                     {...{
                         setLyricFocusElement: this.setLyricFocusElement,
@@ -253,8 +253,8 @@ class FocusContainer extends PureComponent {
 
                     }}
                 />
-                <SliderTouchDispatcher {...{ parentThis: this }} />
-                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
+                <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

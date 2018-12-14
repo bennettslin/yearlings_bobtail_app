@@ -11,7 +11,7 @@ import {
 
 import { CAROUSEL_SCROLL } from 'constants/dom'
 
-class ScrollListener extends PureComponent {
+class ScrollCarouselListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -26,14 +26,16 @@ class ScrollListener extends PureComponent {
         updateScrollCarouselStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     carouselAnnotationElements = {}
 
     componentDidMount() {
-        this.props.parentThis.setCarouselAnnotationElement = this.setCarouselAnnotationElement
-        this.props.parentThis.setCarouselParent = this.setCarouselParent
+        this.props.getRefs({
+            setCarouselAnnotationElement: this.setCarouselAnnotationElement,
+            setCarouselParent: this.setCarouselParent
+        })
     }
 
     componentDidUpdate(prevProps) {
@@ -129,4 +131,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(ScrollListener)
+export default connect(mapStateToProps, bindDispatchToProps)(ScrollCarouselListener)

@@ -22,7 +22,7 @@ import {
     getSongTitle,
     getVerseObject
 } from 'helpers/data'
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 import { getPropsAreShallowEqual } from 'helpers/general'
 
@@ -81,8 +81,8 @@ class AnnotationWormhole extends Component {
         this.dispatchSong(this._getWormholeLink())
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -147,7 +147,7 @@ class AnnotationWormhole extends Component {
                         <span>{'\u201d'}</span>
                     </div>
                 </div>
-                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
+                <SongDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

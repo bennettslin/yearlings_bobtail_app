@@ -9,7 +9,7 @@ import {
     getSongTitle,
     getSongTasks
 } from 'helpers/data'
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 /*************
  * CONTAINER *
@@ -26,8 +26,8 @@ class AdminNavRow extends PureComponent {
         this.dispatchSong({ selectedSongIndex: this.props.songIndex })
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -51,7 +51,7 @@ class AdminNavRow extends PureComponent {
                     sumTask={sumTask}
                     onClick={this._handleSongClick}
                 />
-                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
+                <SongDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

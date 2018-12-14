@@ -15,7 +15,7 @@ import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 
 import { getTimeForVerseIndex } from 'helpers/data'
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 import { getPlayersCanPlayThroughFromBitNumber } from 'helpers/player'
 
 import {
@@ -65,7 +65,7 @@ class PlayerManager extends PureComponent {
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired,
+        getRefs: PropTypes.func.isRequired,
         handleSongEnd: PropTypes.func.isRequired
     }
 
@@ -73,7 +73,9 @@ class PlayerManager extends PureComponent {
     players = {}
 
     componentDidMount() {
-        this.props.parentThis.toggleSelectedPlayer = this.toggleSelectedPlayer
+        this.props.getRefs({
+            toggleSelectedPlayer: this.toggleSelectedPlayer
+        })
     }
 
     _playerShouldRender(songIndex) {
@@ -285,8 +287,8 @@ class PlayerManager extends PureComponent {
         )
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -322,8 +324,8 @@ class PlayerManager extends PureComponent {
                         />
                     )
                 })}
-                <PlayerDispatcher {...{ setDispatch: this._setDispatch }} />
-                <TimeVerseDispatcher {...{ setDispatch: this._setDispatch }} />
+                <PlayerDispatcher {...{ getRefs: this._getRefs }} />
+                <TimeVerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

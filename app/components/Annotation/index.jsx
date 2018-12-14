@@ -10,7 +10,7 @@ import AnnotationHeader from './Header'
 import AnnotationTitle from './Title'
 import AnnotationCard from './Card'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 import {
     getPropsAreShallowEqual,
     getArrayOfLength
@@ -58,8 +58,8 @@ class Annotation extends Component {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -137,7 +137,7 @@ class Annotation extends Component {
                     ))}
 
                 </div>
-                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

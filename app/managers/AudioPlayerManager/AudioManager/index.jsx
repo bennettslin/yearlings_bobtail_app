@@ -6,7 +6,7 @@ import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 
 import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 import {
     CONTINUE,
@@ -26,12 +26,14 @@ class AudioManager extends PureComponent {
         updateScrollLyricStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired,
+        getRefs: PropTypes.func.isRequired,
         toggleSelectedPlayer: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.handleSongEnd = this.handleSongEnd
+        this.props.getRefs({
+            handleSongEnd: this.handleSongEnd
+        })
     }
 
     componentDidUpdate(prevProps) {
@@ -104,13 +106,13 @@ class AudioManager extends PureComponent {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
         return (
-            <SongDispatcher {...{ setDispatch: this._setDispatch }} />
+            <SongDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }

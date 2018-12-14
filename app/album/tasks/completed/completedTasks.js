@@ -4186,5 +4186,10 @@ module.exports = [
         taskName: `Logger work. Compare against global time.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Get rid of parentThis.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

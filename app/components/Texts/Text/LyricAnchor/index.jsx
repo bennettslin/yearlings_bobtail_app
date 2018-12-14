@@ -11,7 +11,7 @@ import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import AnchorText from '../../../Anchor/AnchorText'
 import Texts from '../../'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
@@ -143,8 +143,8 @@ class TextLyricAnchor extends Component {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -257,9 +257,9 @@ class TextLyricAnchor extends Component {
                         }}
                     />
                 </span>
-                <AnnotationDispatcher {...{ parentThis: this }} />
-                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
-                <WikiDispatcher {...{ setDispatch: this._setDispatch }} />
+                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <WikiDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

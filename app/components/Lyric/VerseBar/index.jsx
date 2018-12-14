@@ -12,6 +12,7 @@ import Verse from '../../Verse'
 
 import { getVerseObject } from 'helpers/data'
 import { getPropsAreShallowEqual } from 'helpers/general'
+import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     renderStore: { canLyricRender },
@@ -75,6 +76,10 @@ class VerseBar extends Component {
             isBelow = !isAbove
 
         return (isAbove && isVerseBarAbove) || (isBelow && isVerseBarBelow)
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -143,7 +148,7 @@ class VerseBar extends Component {
                         />
                     </Transition>
                 </div>
-                <ScrollVerseDispatcher {...{ parentThis: this }} />
+                <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

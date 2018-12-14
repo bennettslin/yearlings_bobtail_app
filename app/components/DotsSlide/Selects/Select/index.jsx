@@ -9,6 +9,8 @@ import Button from '../../../Button'
 import Dot from '../../../Dot'
 import AnchorText from '../../../Anchor/AnchorText'
 
+import { populateRefs } from 'helpers/ref'
+
 import { ENTER } from 'constants/access'
 import { DOT_DESCRIPTIONS } from 'constants/dots'
 
@@ -73,6 +75,10 @@ class DotsSlideSelect extends PureComponent {
         this.props.setHasInteractivatedDotText(isInteractivated)
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
 
         const {
@@ -96,7 +102,7 @@ class DotsSlideSelect extends PureComponent {
                         handleTextContainerClick: this._handleTextContainerClick
                     }}
                 />
-                <DotSelectDispatcher {...{ parentThis: this }} />
+                <DotSelectDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

@@ -25,7 +25,7 @@ import {
 } from 'constants/buttons'
 
 import { getSongsAndLoguesCount } from 'helpers/data'
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 import { getPlayerCanPlayThrough } from 'helpers/player'
 
 const mapStateToProps = ({
@@ -66,8 +66,8 @@ class AudioButtons extends PureComponent {
         this.dispatchSong({ direction: 1 })
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -152,9 +152,9 @@ class AudioButtons extends PureComponent {
                         }}
                     />
                 </div>
-                <AudioOptionDispatcher {...{ setDispatch: this._setDispatch }} />
-                <PlayDispatcher {...{ setDispatch: this._setDispatch }} />
-                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
+                <AudioOptionDispatcher {...{ getRefs: this._getRefs }} />
+                <PlayDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

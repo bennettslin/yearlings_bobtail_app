@@ -5,6 +5,8 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import AudioManager from './AudioManager'
 import PlayerManager from './PlayerManager'
 
+import { populateRefs } from 'helpers/ref'
+
 class AudioPlayerManager extends PureComponent {
 
     _toggleSelectedPlayer = (payload) => {
@@ -15,18 +17,22 @@ class AudioPlayerManager extends PureComponent {
         return this.handleSongEnd()
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
             <___>
                 <AudioManager
                     {...{
-                        parentThis: this,
+                        getRefs: this._getRefs,
                         toggleSelectedPlayer: this._toggleSelectedPlayer
                     }}
                 />
                 <PlayerManager
                     {...{
-                        parentThis: this,
+                        getRefs: this._getRefs,
                         handleSongEnd: this._handleSongEnd
                     }}
                 />

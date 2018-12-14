@@ -16,11 +16,13 @@ class TipsDispatcher extends PureComponent {
         updateOptionStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchTips = this.dispatchTips
+        this.props.getRefs({
+            dispatchTips: this.dispatchTips
+        })
     }
 
     dispatchTips = ({

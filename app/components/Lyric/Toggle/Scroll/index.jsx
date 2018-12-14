@@ -7,6 +7,8 @@ import cx from 'classnames'
 import ScrollVerseDispatcher from '../../../../dispatchers/ScrollVerseDispatcher'
 import Button from '../../../Button'
 
+import { populateRefs } from 'helpers/ref'
+
 import { LYRIC_SCROLL_TOGGLE_KEY } from 'constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from 'constants/buttons'
 
@@ -14,6 +16,10 @@ class LyricToggleScroll extends PureComponent {
 
     _handleScrollClick = () => {
         this.dispatchScrollVerse(true)
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -33,7 +39,7 @@ class LyricToggleScroll extends PureComponent {
                         handleButtonClick: this._handleScrollClick
                     }}
                 />
-                <ScrollVerseDispatcher {...{ parentThis: this }} />
+                <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

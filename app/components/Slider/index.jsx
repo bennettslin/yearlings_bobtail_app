@@ -11,6 +11,8 @@ import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
 import SliderAccess from './Access'
 
+import { populateRefs } from 'helpers/ref'
+
 const mapStateToProps = ({
     renderStore: { didLyricRender }
 }) => ({
@@ -30,6 +32,10 @@ class Slider extends PureComponent {
 
     _getSliderElement = (node) => {
         this.sliderElement = node
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -53,7 +59,7 @@ class Slider extends PureComponent {
                 <SliderStanzas />
                 <SliderScenes />
                 <SliderAccess />
-                <SliderTouchDispatcher {...{ parentThis: this }} />
+                <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

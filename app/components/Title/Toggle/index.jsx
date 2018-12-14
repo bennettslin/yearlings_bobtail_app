@@ -9,6 +9,8 @@ import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 import AudioTimer from '../../Audio/Timer'
 import Button from '../../Button'
 
+import { populateRefs } from 'helpers/ref'
+
 import { TITLE_TOGGLE_KEY } from 'constants/access'
 import { TITLE_BUTTON_KEY } from 'constants/buttons'
 
@@ -34,6 +36,10 @@ class TitleToggle extends PureComponent {
 
     handleButtonClick = () => {
         this.dispatchTitle()
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -76,7 +82,7 @@ class TitleToggle extends PureComponent {
                 ) : (
                     titleButtonChild
                 )}
-                <TitleDispatcher {...{ parentThis: this }} />
+                <TitleDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

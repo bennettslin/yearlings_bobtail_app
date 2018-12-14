@@ -26,11 +26,13 @@ class AnnotationAccessDispatcher extends PureComponent {
         updateScrollLyricStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchAccessedAnnotation = this.dispatchAccessedAnnotation
+        this.props.getRefs({
+            dispatchAccessedAnnotation: this.dispatchAccessedAnnotation
+        })
     }
 
     dispatchAccessedAnnotation = ({

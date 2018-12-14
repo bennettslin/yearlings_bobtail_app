@@ -8,6 +8,8 @@ import cx from 'classnames'
 import LyricDispatcher from '../../../../handlers/LyricHandler/Dispatcher'
 import Button from '../../../Button'
 
+import { populateRefs } from 'helpers/ref'
+
 import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
 
@@ -42,6 +44,10 @@ class LyricToggleExpand extends PureComponent {
         this.dispatchLyricExpand()
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         const {
                 isHiddenLyric,
@@ -72,7 +78,7 @@ class LyricToggleExpand extends PureComponent {
                         handleButtonClick: this.handleLyricClick
                     }}
                 />
-                <LyricDispatcher {...{ parentThis: this }} />
+                <LyricDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

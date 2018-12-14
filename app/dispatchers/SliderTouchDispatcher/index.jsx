@@ -8,6 +8,7 @@ import VerseDispatcher from '../VerseDispatcher'
 
 import { getTimeForVerseIndex } from 'helpers/data'
 import { getClientX } from 'helpers/dom'
+import { populateRefs } from 'helpers/ref'
 
 import {
     getSliderRatioForClientX,
@@ -29,13 +30,15 @@ class SliderTouchDispatcher extends PureComponent {
         updateSliderStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchTouchBegin = this.dispatchTouchBegin
-        this.props.parentThis.dispatchTouchMove = this.dispatchTouchMove
-        this.props.parentThis.dispatchTouchEnd = this.dispatchTouchEnd
+        this.props.getRefs({
+            dispatchTouchBegin: this.dispatchTouchBegin,
+            dispatchTouchMove: this.dispatchTouchMove,
+            dispatchTouchEnd: this.dispatchTouchEnd
+        })
     }
 
     // TODO: These can easily just be a single method.
@@ -166,9 +169,13 @@ class SliderTouchDispatcher extends PureComponent {
         return false
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
-            <VerseDispatcher {...{ parentThis: this }} />
+            <VerseDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }

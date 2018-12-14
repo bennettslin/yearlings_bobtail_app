@@ -7,6 +7,8 @@ import { updateSessionStore } from 'flux/session/action'
 import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccessHandler/Dispatcher'
 
+import { populateRefs } from 'helpers/ref'
+
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -23,11 +25,13 @@ class LyricNavigation extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.navigateLyric = this.navigateLyric
+        this.props.getRefs({
+            navigateLyric: this.navigateLyric
+        })
     }
 
     navigateLyric = (e, keyName) => {
@@ -88,11 +92,15 @@ class LyricNavigation extends PureComponent {
         return true
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
             <___>
-                <AnnotationDispatcher {...{ parentThis: this }} />
-                <AnnotationAccessDispatcher {...{ parentThis: this }} />
+                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <AnnotationAccessDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

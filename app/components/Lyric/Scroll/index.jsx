@@ -8,7 +8,7 @@ import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
 
 import { getSongStanzaConfigs } from 'helpers/data'
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 import { getPropsAreShallowEqual } from 'helpers/general'
 import { getLastUnitDotCardIndex } from './helper'
 
@@ -36,12 +36,14 @@ class LyricScroll extends Component {
         // From parent.
         determineVerseBars: PropTypes.func.isRequired,
         setLyricFocusElement: PropTypes.func.isRequired,
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.handleVerseBarWheel = this.handleVerseBarWheel
-        this.props.parentThis.getVerseElement = this.getVerseElement
+        this.props.getRefs({
+            handleVerseBarWheel: this.handleVerseBarWheel,
+            getVerseElement: this.getVerseElement
+        })
     }
 
     shouldComponentUpdate(nextProps) {
@@ -86,8 +88,8 @@ class LyricScroll extends Component {
         this.dispatchLyricWheel(e, this.lyricElement)
     }
 
-    _setElements = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -95,7 +97,7 @@ class LyricScroll extends Component {
                 /* eslint-disable no-unused-vars */
                 canLyricRender,
                 setLyricFocusElement,
-                parentThis,
+                getRefs,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -113,7 +115,7 @@ class LyricScroll extends Component {
 
         return songStanzaConfigs.length && (
             <___>
-                <ScrollLyricListener {...{ setElements: this._setElements }} />
+                <ScrollLyricListener {...{ getRefs: this._getRefs }} />
                 <div
                     {...{
                         ref: this._setLyricElement,
@@ -148,7 +150,7 @@ class LyricScroll extends Component {
                 </div>
                 <LyricWheelDispatcher
                     {...{
-                        parentThis: this,
+                        getRefs: this._getRefs,
                         determineVerseBars: this.props.determineVerseBars
                     }}
                 />

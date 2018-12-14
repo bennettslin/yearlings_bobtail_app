@@ -19,11 +19,13 @@ class DotSelectDispatcher extends PureComponent {
         updateDotsStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchSelectDot = this.dispatchSelectDot
+        this.props.getRefs({
+            dispatchSelectDot: this.dispatchSelectDot
+        })
     }
 
     dispatchSelectDot = (selectedDotIndex) => {

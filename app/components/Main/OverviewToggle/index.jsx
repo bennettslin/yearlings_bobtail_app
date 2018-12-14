@@ -8,6 +8,8 @@ import cx from 'classnames'
 import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
 import Button from '../../Button'
 
+import { populateRefs } from 'helpers/ref'
+
 import { OVERVIEW_TOGGLE_KEY } from 'constants/access'
 import { OVERVIEW_BUTTON_KEY } from 'constants/buttons'
 
@@ -36,6 +38,10 @@ class OverviewToggle extends PureComponent {
         }
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         const {
             inLeftShelf,
@@ -58,7 +64,7 @@ class OverviewToggle extends PureComponent {
                         handleButtonClick: this.handleOverviewClick
                     }}
                 />
-                <OverviewDispatcher {...{ parentThis: this }} />
+                <OverviewDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 
 import AnnotationAccessDispatcher from '../Dispatcher'
 
+import { populateRefs } from 'helpers/ref'
+
 class AnnotationAccessListener extends PureComponent {
 
     static propTypes = {
@@ -79,9 +81,13 @@ class AnnotationAccessListener extends PureComponent {
         }
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
-            <AnnotationAccessDispatcher {...{ parentThis: this }} />
+            <AnnotationAccessDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }

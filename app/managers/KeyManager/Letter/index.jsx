@@ -22,6 +22,8 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 
+import { populateRefs } from '../../../helpers/ref'
+
 import {
     AUDIO_REWIND_KEY,
     AUDIO_FAST_FORWARD_KEY,
@@ -47,7 +49,6 @@ import {
     SHOWN,
     HIDDEN
 } from 'constants/options'
-import { populateDispatch } from '../../../helpers/dispatch'
 
 class LetterManager extends PureComponent {
 
@@ -67,12 +68,14 @@ class LetterManager extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.handleLetter = this.handleLetter
-        this.props.parentThis.handleEscape = this.handleEscape
+        this.props.getRefs({
+            handleLetter: this.handleLetter,
+            handleEscape: this.handleEscape
+        })
     }
 
     handleLetter = (e, keyName) => {
@@ -191,28 +194,28 @@ class LetterManager extends PureComponent {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
         return (
             <___>
-                <AdminDispatcher {...{ setDispatch: this._setDispatch }} />
-                <AudioOptionDispatcher {...{ setDispatch: this._setDispatch }} />
-                <CarouselDispatcher {...{ setDispatch: this._setDispatch }} />
-                <DotsSlideDispatcher {...{ parentThis: this }} />
-                <EarColumnDispatcher {...{ parentThis: this }} />
-                <InteractivatedVerseDispatcher {...{ parentThis: this }} />
-                <LyricDispatcher {...{ parentThis: this }} />
-                <OverviewDispatcher {...{ parentThis: this }} />
-                <PlayDispatcher {...{ setDispatch: this._setDispatch }} />
-                <TipsDispatcher {...{ parentThis: this }} />
-                <SceneDispatcher {...{ parentThis: this }} />
-                <ScoreDispatcher {...{ setDispatch: this._setDispatch }} />
-                <ScrollVerseDispatcher {...{ parentThis: this }} />
-                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
-                <TitleDispatcher {...{ parentThis: this }} />
+                <AdminDispatcher {...{ getRefs: this._getRefs }} />
+                <AudioOptionDispatcher {...{ getRefs: this._getRefs }} />
+                <CarouselDispatcher {...{ getRefs: this._getRefs }} />
+                <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
+                <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
+                <InteractivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <LyricDispatcher {...{ getRefs: this._getRefs }} />
+                <OverviewDispatcher {...{ getRefs: this._getRefs }} />
+                <PlayDispatcher {...{ getRefs: this._getRefs }} />
+                <SceneDispatcher {...{ getRefs: this._getRefs }} />
+                <ScoreDispatcher {...{ getRefs: this._getRefs }} />
+                <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ getRefs: this._getRefs }} />
+                <TipsDispatcher {...{ getRefs: this._getRefs }} />
+                <TitleDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

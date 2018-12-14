@@ -7,6 +7,8 @@ import { updateToggleStore } from 'flux/toggle/action'
 
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 
+import { populateRefs } from 'helpers/ref'
+
 import { getVerseIndexForNextScene } from './helper'
 
 class SceneDispatcher extends PureComponent {
@@ -19,11 +21,13 @@ class SceneDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchScene = this.dispatchScene
+        this.props.getRefs({
+            dispatchScene: this.dispatchScene
+        })
     }
 
     dispatchScene = (direction) => {
@@ -50,9 +54,13 @@ class SceneDispatcher extends PureComponent {
         return true
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
-            <VerseDispatcher {...{ parentThis: this }} />
+            <VerseDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }

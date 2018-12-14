@@ -7,6 +7,8 @@ import { connect } from 'react-redux'
 import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
 import Button from '../../Button'
 
+import { populateRefs } from 'helpers/ref'
+
 import { TIPS_TOGGLE_KEY } from 'constants/access'
 import { TIPS_BUTTON_KEY } from 'constants/buttons'
 
@@ -30,6 +32,10 @@ class TipsToggle extends PureComponent {
         this.dispatchTips({ isToggled: true })
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         const {
             selectedTipsOption,
@@ -48,7 +54,7 @@ class TipsToggle extends PureComponent {
                         handleButtonClick: this.handleTipsClick
                     }}
                 />
-                <TipsDispatcher {...{ parentThis: this }} />
+                <TipsDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

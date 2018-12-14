@@ -11,7 +11,7 @@ import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     responsiveStore: { showSingleNavBook },
@@ -40,8 +40,8 @@ class NavColumn extends PureComponent {
         this.dispatchSong({ selectedSongIndex: songIndex })
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -87,8 +87,8 @@ class NavColumn extends PureComponent {
                         }}
                     />
                 }
-                <NavDispatcher {...{ parentThis: this }} />
-                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
+                <NavDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

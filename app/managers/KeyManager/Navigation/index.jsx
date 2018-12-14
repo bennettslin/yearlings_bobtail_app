@@ -8,6 +8,8 @@ import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
 import NavNavigation from './Nav'
 
+import { populateRefs } from 'helpers/ref'
+
 import { ENTER } from 'constants/access'
 
 class NavigationManager extends PureComponent {
@@ -25,11 +27,13 @@ class NavigationManager extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.handleNavigation = this.handleNavigation
+        this.props.getRefs({
+            handleNavigation: this.handleNavigation
+        })
     }
 
     handleNavigation = (e, keyName) => {
@@ -101,15 +105,18 @@ class NavigationManager extends PureComponent {
         }
     }
 
-    render() {
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
 
+    render() {
         return (
             <___>
-                <AnnotationNavigation {...{ parentThis: this }} />
-                <DotsSlideNavigation {...{ parentThis: this }} />
-                <LyricNavigation {...{ parentThis: this }} />
-                <NavNavigation {...{ parentThis: this }} />
-                <VerseDispatcher {...{ parentThis: this }} />
+                <AnnotationNavigation {...{ getRefs: this._getRefs }} />
+                <DotsSlideNavigation {...{ getRefs: this._getRefs }} />
+                <LyricNavigation {...{ getRefs: this._getRefs }} />
+                <NavNavigation {...{ getRefs: this._getRefs }} />
+                <VerseDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

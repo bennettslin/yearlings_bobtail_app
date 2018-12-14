@@ -8,7 +8,6 @@ import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
 
-
 class TimeVerseDispatcher extends PureComponent {
 
     static propTypes = {
@@ -19,11 +18,11 @@ class TimeVerseDispatcher extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        setDispatch: PropTypes.func.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.setDispatch({
+        this.props.getRefs({
             dispatchTimeVerse: this.dispatchTimeVerse
         })
     }

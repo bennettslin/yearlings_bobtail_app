@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import DotsSlideSelects from './Selects'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 class DotsSlide extends PureComponent {
 
@@ -31,8 +31,8 @@ class DotsSlide extends PureComponent {
         })
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -47,7 +47,7 @@ class DotsSlide extends PureComponent {
                         setHasInteractivatedDotText: this._setHasInteractivatedDotText
                     }}
                 />
-                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

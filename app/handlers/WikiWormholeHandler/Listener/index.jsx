@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import WikiWormholeDispatcher from '../Dispatcher'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 class WikiWormholeListener extends PureComponent {
 
@@ -47,13 +47,13 @@ class WikiWormholeListener extends PureComponent {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
         return (
-            <WikiWormholeDispatcher {...{ setDispatch: this._setDispatch }} />
+            <WikiWormholeDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }

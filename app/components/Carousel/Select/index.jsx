@@ -4,6 +4,8 @@ import React, { PureComponent } from 'react'
 import AnnotationDispatcher from '../../../handlers/AnnotationHandler/Dispatcher'
 import Button from '../../Button'
 
+import { populateRefs } from 'helpers/ref'
+
 import {
     ARROW_LEFT,
     ARROW_RIGHT
@@ -24,6 +26,10 @@ class CarouselSelect extends PureComponent {
 
     _handleAnnotationNext = () => {
         this.dispatchAnnotationDirection(1)
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -47,7 +53,7 @@ class CarouselSelect extends PureComponent {
                         handleButtonClick: this._handleAnnotationNext
                     }}
                 />
-                <AnnotationDispatcher {...{ parentThis: this }} />
+                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

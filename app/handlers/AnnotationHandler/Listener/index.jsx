@@ -8,6 +8,7 @@ import { updateAnnotationStore } from 'flux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
 
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
+import { populateRefs } from 'helpers/ref'
 
 class AnnotationListener extends PureComponent {
 
@@ -84,9 +85,13 @@ class AnnotationListener extends PureComponent {
         }
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
-            <AnnotationDispatcher {...{ parentThis: this }} />
+            <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }

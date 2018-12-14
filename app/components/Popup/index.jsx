@@ -7,7 +7,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 
 import PopupView from './View'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 /*************
  * CONTAINER *
@@ -19,6 +19,7 @@ class Popup extends PureComponent {
         className: PropTypes.string,
         popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
+        doUnmount: PropTypes.bool,
         isFullSize: PropTypes.bool,
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,
@@ -32,8 +33,8 @@ class Popup extends PureComponent {
         this.dispatchStopPropagation(e)
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -41,6 +42,7 @@ class Popup extends PureComponent {
                 className,
                 popupName,
                 isVisible,
+                doUnmount,
                 noFlexCentre,
                 noAbsoluteFull,
                 displaysInOverlay,
@@ -62,7 +64,9 @@ class Popup extends PureComponent {
                     timeout: {
                         enter: 0,
                         exit: 150
-                    }
+                    },
+                    mountOnEnter: doUnmount,
+                    unmountOnExit: doUnmount
                 }}
             >
                 <div
@@ -92,7 +96,7 @@ class Popup extends PureComponent {
                             handleContainerClick: this.handleContainerClick
                         }}
                     />
-                    <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
+                    <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
                 </div>
             </CSSTransition>
         )

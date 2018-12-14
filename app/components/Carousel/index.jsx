@@ -11,6 +11,7 @@ import CarouselSelect from './Select'
 
 import { getAnnotationsCount } from 'helpers/data'
 import { getArrayOfLength } from 'helpers/general'
+import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     renderStore: { didCarouselRender },
@@ -68,6 +69,10 @@ class Carousel extends PureComponent {
         return this.setCarouselAnnotationElement(payload)
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         const {
             isHiddenCarouselNav,
@@ -102,7 +107,7 @@ class Carousel extends PureComponent {
                     { 'parent__shown': didCarouselRender }
                 )}
             >
-                <ScrollCarouselListener {...{ parentThis: this }} />
+                <ScrollCarouselListener {...{ getRefs: this._getRefs }} />
                 <div
                     ref={this._setCarouselParent}
                     className="Carousel__scroll"

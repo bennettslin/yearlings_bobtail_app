@@ -12,6 +12,8 @@ import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
 import Unit from './Unit'
 
+import { populateRefs } from 'helpers/ref'
+
 class Stanzas extends PureComponent {
 
     static propTypes = {
@@ -29,6 +31,10 @@ class Stanzas extends PureComponent {
             selectedVerseIndex,
             scrollLog
         })
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -75,7 +81,7 @@ class Stanzas extends PureComponent {
                         }}
                     />
                 )}
-                <VerseDispatcher {...{ parentThis: this }} />
+                <VerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

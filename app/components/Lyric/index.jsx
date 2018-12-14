@@ -14,6 +14,8 @@ import LyricToggleExpand from './Toggle/Expand'
 import LyricToggleScroll from './Toggle/Scroll'
 import VerseBar from './VerseBar'
 
+import { populateRefs } from 'helpers/ref'
+
 const mapStateToProps = ({
     renderStore: { didLyricRender },
     toggleStore: { isLyricExpanded }
@@ -49,6 +51,10 @@ class Lyric extends PureComponent {
         return this.getVerseElement(verseIndex)
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         const {
             didLyricRender,
@@ -81,15 +87,15 @@ class Lyric extends PureComponent {
                     >
                         <VerseBarHandler
                             {...{
-                                parentThis: this,
+                                getRefs: this._getRefs,
                                 getVerseElement: this._getVerseElement
                             }}
                         />
                         <LyricScroll
                             {...{
+                                getRefs: this._getRefs,
                                 determineVerseBars: this.determineVerseBars,
-                                setLyricFocusElement,
-                                parentThis: this
+                                setLyricFocusElement
                             }}
                         />
                         <LyricToggleEar />

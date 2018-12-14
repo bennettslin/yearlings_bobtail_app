@@ -6,6 +6,8 @@ import { updateAccessStore } from 'flux/access/action'
 
 import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
 
+import { populateRefs } from 'helpers/ref'
+
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -24,11 +26,13 @@ class DotsSlideNavigation extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.navigateDotsSlide = this.navigateDotsSlide
+        this.props.getRefs({
+            navigateDotsSlide: this.navigateDotsSlide
+        })
     }
 
     navigateDotsSlide = (e, keyName) => {
@@ -75,9 +79,13 @@ class DotsSlideNavigation extends PureComponent {
         return true
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
-            <DotSelectDispatcher {...{ parentThis: this }} />
+            <DotSelectDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }

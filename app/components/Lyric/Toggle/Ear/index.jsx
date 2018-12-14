@@ -8,6 +8,8 @@ import { connect } from 'react-redux'
 import EarColumnDispatcher from '../../../../dispatchers/EarColumnDispatcher'
 import Button from '../../../Button'
 
+import { populateRefs } from 'helpers/ref'
+
 import { LYRIC_COLUMN_TOGGLE_KEY } from 'constants/access'
 import { LYRIC_EAR_BUTTON_KEY } from 'constants/buttons'
 import { EAR_COLUMN_KEYS } from 'constants/lyrics'
@@ -30,6 +32,10 @@ class LyricToggleEar extends PureComponent {
 
     handleDoublespeakerClick = () => {
         this.dispatchEarColumn()
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -55,7 +61,7 @@ class LyricToggleEar extends PureComponent {
                         handleButtonClick: this.handleDoublespeakerClick
                     }}
                 />
-                <EarColumnDispatcher {...{ parentThis: this }} />
+                <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

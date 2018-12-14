@@ -14,11 +14,13 @@ class NavDispatcher extends PureComponent {
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchNavBook = this.dispatchNavBook
+        this.props.getRefs({
+            dispatchNavBook: this.dispatchNavBook
+        })
     }
 
     dispatchNavBook = () => {

@@ -27,12 +27,14 @@ class AnnotationDispatcher extends PureComponent {
         updateSongStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.dispatchAnnotationIndex = this.dispatchAnnotationIndex
-        this.props.parentThis.dispatchAnnotationDirection = this.dispatchAnnotationDirection
+        this.props.getRefs({
+            dispatchAnnotationIndex: this.dispatchAnnotationIndex,
+            dispatchAnnotationDirection: this.dispatchAnnotationDirection
+        })
     }
 
     dispatchAnnotationIndex = ({

@@ -7,7 +7,7 @@ import SongDispatcher from '../../../../handlers/SongHandler/Dispatcher'
 import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormholeHandler/Dispatcher'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 import {
     getWikiWormholeEntity,
@@ -32,11 +32,13 @@ class AnnotationNavigation extends PureComponent {
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.navigateAnnotation = this.navigateAnnotation
+        this.props.getRefs({
+            navigateAnnotation: this.navigateAnnotation
+        })
     }
 
     navigateAnnotation = (e, keyName) => {
@@ -117,17 +119,17 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
         return (
             <___>
-                <AnnotationDispatcher {...{ parentThis: this }} />
-                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
-                <WikiDispatcher {...{ setDispatch: this._setDispatch }} />
-                <WikiWormholeDispatcher {...{ setDispatch: this._setDispatch }} />
+                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ getRefs: this._getRefs }} />
+                <WikiDispatcher {...{ getRefs: this._getRefs }} />
+                <WikiWormholeDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

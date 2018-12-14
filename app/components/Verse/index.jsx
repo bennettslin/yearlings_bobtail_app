@@ -11,7 +11,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 
 import VerseLines from './Lines'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { VERSE_SCROLL } from 'constants/dom'
@@ -91,8 +91,8 @@ class Verse extends Component {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -128,8 +128,8 @@ class Verse extends Component {
                         handleInteractivatableClick: this._handleInteractivatableClick
                     }}
                 />
-                <InteractivatedVerseDispatcher {...{ parentThis: this }} />
-                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
+                <InteractivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

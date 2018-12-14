@@ -40,11 +40,13 @@ class CloseHandler extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.closeForBodyClick = this.closeForBodyClick
+        this.props.getRefs({
+            closeForBodyClick: this.closeForBodyClick
+        })
         this._handleOverviewShown()
         this._handleTipsShown()
     }

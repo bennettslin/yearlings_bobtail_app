@@ -11,7 +11,7 @@ import {
     getSongsAndLoguesCount,
     getNavBookIndex
 } from 'helpers/data'
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 
 import {
     ARROW_LEFT,
@@ -30,11 +30,13 @@ class NavNavigation extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.parentThis.navigateNav = this.navigateNav
+        this.props.getRefs({
+            navigateNav: this.navigateNav
+        })
     }
 
     navigateNav = (e, keyName) => {
@@ -101,15 +103,15 @@ class NavNavigation extends PureComponent {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
         return (
             <___>
-                <NavDispatcher {...{ parentThis: this }} />
-                <SongDispatcher {...{ setDispatch: this._setDispatch }} />
+                <NavDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

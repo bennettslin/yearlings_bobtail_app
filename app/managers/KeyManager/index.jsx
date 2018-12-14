@@ -11,6 +11,8 @@ import { updateVerseBarsStore } from 'flux/verseBars/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
 
+import { populateRefs } from 'helpers/ref'
+
 import {
     getKeyName,
     getIsNavKey,
@@ -38,11 +40,14 @@ class KeyManager extends PureComponent {
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired
+        getRefs: PropTypes.func.isRequired
     }
+
     componentDidMount() {
-        this.props.parentThis.handleKeyDownPress = this.handleKeyDownPress
-        this.props.parentThis.handleKeyUpPress = this.handleKeyUpPress
+        this.props.getRefs({
+            handleKeyDownPress: this.handleKeyDownPress,
+            handleKeyUpPress: this.handleKeyUpPress
+        })
     }
 
     handleKeyDownPress = (e) => {
@@ -178,11 +183,15 @@ class KeyManager extends PureComponent {
         this.props.updateToggleStore({ isAutoScroll: false })
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
             <___>
-                <NavigationManager {...{ parentThis: this }} />
-                <LetterManager {...{ parentThis: this }} />
+                <NavigationManager {...{ getRefs: this._getRefs }} />
+                <LetterManager {...{ getRefs: this._getRefs }} />
             </___>
         )
     }

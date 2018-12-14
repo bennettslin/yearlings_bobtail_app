@@ -9,7 +9,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 import ButtonIcon from './ButtonIcon'
 import AccessLetter from '../Access/Letter'
 
-import { populateDispatch } from 'helpers/dispatch'
+import { populateRefs } from 'helpers/ref'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
@@ -57,8 +57,8 @@ class Button extends Component {
         }
     }
 
-    _setDispatch = (payload) => {
-        populateDispatch(this, payload)
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
@@ -129,7 +129,7 @@ class Button extends Component {
                         />
                     )}
                 </div>
-                <StopPropagationDispatcher {...{ setDispatch: this._setDispatch }} />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

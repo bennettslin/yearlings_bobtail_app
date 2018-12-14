@@ -16,11 +16,11 @@ class ScoreDispatcher extends PureComponent {
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
-        setDispatch: PropTypes.func.isRequired
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.setDispatch({
+        this.props.getRefs({
             dispatchScore: this.dispatchScore
         })
     }

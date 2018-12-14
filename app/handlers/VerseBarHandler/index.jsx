@@ -31,7 +31,7 @@ class VerseBarHandler extends PureComponent {
         resetVerseBarsQueue: PropTypes.func.isRequired,
 
         // From parent.
-        parentThis: PropTypes.object.isRequired,
+        getRefs: PropTypes.func.isRequired,
         getVerseElement: PropTypes.func.isRequired
     }
 
@@ -41,7 +41,9 @@ class VerseBarHandler extends PureComponent {
 
     componentDidMount() {
         // Allow wheels to dispatch directly.
-        this.props.parentThis.dispatchVerseBarsTimeout = this.dispatchVerseBarsTimeout
+        this.props.getRefs({
+            dispatchVerseBarsTimeout: this.dispatchVerseBarsTimeout
+        })
     }
 
     componentDidUpdate(prevProps) {
