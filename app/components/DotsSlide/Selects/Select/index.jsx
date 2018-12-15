@@ -42,11 +42,6 @@ class DotsSlideSelect extends PureComponent {
         isInteractivated: false
     }
 
-    /**
-     * Not necessary to check shouldComponentUpdate, since the changed props
-     * upon which to update are a subset of those in dots section.
-     */
-
     componentDidUpdate(prevProps) {
 
         // Prevent infinite loop.

@@ -4196,5 +4196,10 @@ module.exports = [
         taskName: `Allow some popups to unmount.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Unmount annotations and verses so no need to watch for render. Put slider under transition, but don't unmount.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]
