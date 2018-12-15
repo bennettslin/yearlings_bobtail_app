@@ -10,8 +10,7 @@ const propTypes = {
         isShadow: PropTypes.bool.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        annotationIndex: PropTypes.number.isRequired,
-        children: PropTypes.any.isRequired
+        annotationIndex: PropTypes.number.isRequired
     },
 
     AnnotationHeader = memo(({

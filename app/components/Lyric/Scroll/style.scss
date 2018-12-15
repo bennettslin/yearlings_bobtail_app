@@ -9,4 +9,14 @@
     &:focus {
         outline: none;
     }
+
+    opacity: 0;
+    transition: opacity $animationDuration__default;
+}
+
+.LyricScroll__visible {
+    .RM__song
+    & {
+        opacity: 1;
+    }
 }

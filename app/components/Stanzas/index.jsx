@@ -6,20 +6,30 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import VerseDispatcher from '../../dispatchers/VerseDispatcher'
 import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
 import Unit from './Unit'
 
+import { getSongStanzaConfigs } from 'helpers/data'
 import { populateRefs } from 'helpers/ref'
+import { getLastUnitDotCardIndex } from './helper'
+
+const mapStateToProps = ({
+    renderedStore: { renderedSongIndex }
+}) => ({
+    renderedSongIndex
+})
 
 class Stanzas extends PureComponent {
 
     static propTypes = {
+        // Through Redux.
+        renderedSongIndex: PropTypes.number.isRequired,
+
         // From parent.
-        songStanzaConfigs: PropTypes.array.isRequired,
-        lastUnitDotCardIndex: PropTypes.number.isRequired,
         setLyricAnnotationElement: PropTypes.func.isRequired
     }
 
@@ -39,10 +49,17 @@ class Stanzas extends PureComponent {
 
     render() {
         const {
-            songStanzaConfigs,
-            lastUnitDotCardIndex,
-            ...other
-        } = this.props
+                renderedSongIndex,
+                ...other
+            } = this.props,
+
+            songStanzaConfigs = getSongStanzaConfigs(
+                renderedSongIndex
+            ),
+
+            lastUnitDotCardIndex = getLastUnitDotCardIndex(
+                renderedSongIndex
+            )
 
         return songStanzaConfigs.length && (
             <div className={cx(
@@ -87,4 +104,4 @@ class Stanzas extends PureComponent {
     }
 }
 
-export default Stanzas
+export default connect(mapStateToProps)(Stanzas)

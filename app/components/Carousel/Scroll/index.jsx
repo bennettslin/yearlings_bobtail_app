@@ -2,7 +2,6 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-// import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import { CSSTransition } from 'react-transition-group'
@@ -78,8 +77,9 @@ class CarouselScroll extends PureComponent {
         const annotationsCount = getAnnotationsCount(renderedSongIndex),
 
             /**
-             * Dynamically create array of just indices. CarouselScroll annotation
-             * will fetch annotation object directly from data helper.
+             * Dynamically create array of just indices. CarouselScroll
+             * annotation will fetch annotation object directly from data
+             * helper.
              */
             annotationsIndices = getArrayOfLength(annotationsCount)
 

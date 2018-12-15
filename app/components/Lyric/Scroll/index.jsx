@@ -1,16 +1,14 @@
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import { CSSTransition } from 'react-transition-group'
 import ScrollLyricListener from '../../../listeners/ScrollLyricListener'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
 
-import { getSongStanzaConfigs } from 'helpers/data'
 import { populateRefs } from 'helpers/ref'
-import { getPropsAreShallowEqual } from 'helpers/general'
-import { getLastUnitDotCardIndex } from './helper'
 
 import TempGlobalAnnotations from './TempGlobalAnnotations'
 
@@ -26,7 +24,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class LyricScroll extends Component {
+class LyricScroll extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -43,13 +41,6 @@ class LyricScroll extends Component {
         this.props.getRefs({
             handleVerseBarWheel: this.handleVerseBarWheel,
             getVerseElement: this.getVerseElement
-        })
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
         })
     }
 
@@ -94,60 +85,60 @@ class LyricScroll extends Component {
 
     render() {
         const {
-                /* eslint-disable no-unused-vars */
-                canLyricRender,
-                setLyricFocusElement,
-                getRefs,
-                dispatch,
-                /* eslint-enable no-unused-vars */
+            canLyricRender,
+            determineVerseBars
+        } = this.props
 
-                renderedSongIndex,
-                ...other
-            } = this.props,
-
-            songStanzaConfigs = getSongStanzaConfigs(
-                renderedSongIndex
-            ),
-
-            lastUnitDotCardIndex = getLastUnitDotCardIndex(
-                renderedSongIndex
-            )
-
-        return songStanzaConfigs.length && (
+        return (
             <___>
                 <ScrollLyricListener {...{ getRefs: this._getRefs }} />
-                <div
+                <CSSTransition
+                    mountOnEnter
+                    unmountOnExit
                     {...{
-                        ref: this._setLyricElement,
-                        tabIndex: -1,
-                        className: cx(
-                            'LyricScroll',
-                            'absoluteFullContainer',
-
-                            /**
-                             * This gradient does not obscure the lyric toggle
-                             * buttons.
-                             */
-                            'gradientMask__lyricColumn__mobileCollapsed'
-                        ),
-                        onWheel: this._handleWheel
+                        in: canLyricRender,
+                        timeout: {
+                            enter: 0,
+                            exit: 200
+                        },
+                        classNames: {
+                            enterDone: 'LyricScroll__visible'
+                        }
                     }}
                 >
-                    {/* TODO: Undo this. */}
-                    {true && (
-                        <Stanzas {...other}
-                            {...{
-                                songStanzaConfigs,
-                                lastUnitDotCardIndex,
-                                setLyricAnnotationElement: this._setLyricAnnotationElement,
-                                setVerseRef: this._setVerseElement
-                            }}
-                        />
-                    )}
-                    {false && (
-                        <TempGlobalAnnotations />
-                    )}
-                </div>
+                    <div
+                        {...{
+                            ref: this._setLyricElement,
+                            tabIndex: -1,
+                            className: cx(
+                                'LyricScroll',
+                                'absoluteFullContainer',
+
+                                /**
+                                 * This gradient does not obscure the lyric
+                                 * toggle buttons.
+                                 */
+                                'gradientMask__lyricColumn__mobileCollapsed'
+                            ),
+                            onWheel: this._handleWheel
+                        }}
+                    >
+                        {/* TODO: Undo this. */}
+                        {true && (
+                            <Stanzas
+                                {...{
+                                    setLyricAnnotationElement:
+                                        this._setLyricAnnotationElement,
+                                    setVerseRef: this._setVerseElement,
+                                    determineVerseBars
+                                }}
+                            />
+                        )}
+                        {false && (
+                            <TempGlobalAnnotations />
+                        )}
+                    </div>
+                </CSSTransition>
                 <LyricWheelDispatcher
                     {...{
                         getRefs: this._getRefs,
