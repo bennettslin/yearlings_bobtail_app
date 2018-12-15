@@ -17,9 +17,7 @@ const textAnchorPropTypes = {
     },
 
     AnchorText = memo(({
-
         text,
-
         ...other
     }) => {
 

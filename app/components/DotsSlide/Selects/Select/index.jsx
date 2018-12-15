@@ -7,7 +7,7 @@ import cx from 'classnames'
 import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
 import Button from '../../../Button'
 import Dot from '../../../Dot'
-import AnchorText from '../../../Anchor/AnchorText'
+import Anchor from '../../../Anchor/newIndex'
 
 import { populateRefs } from 'helpers/ref'
 
@@ -179,9 +179,7 @@ const dotsSlideSelectViewPropTypes = {
                     </div>
                 </Button>
 
-                <AnchorText
-                    className="DotsSlideSelect__textAnchor"
-                    omitAccessIcon
+                <Anchor
                     {...{
                         isAccessed,
                         isSelected: isInteractivated,

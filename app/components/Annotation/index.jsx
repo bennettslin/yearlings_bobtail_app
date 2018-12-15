@@ -7,7 +7,6 @@ import cx from 'classnames'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 import AnnotationHeader from './Header'
-import AnnotationTitle from './Title'
 import AnnotationCard from './Card'
 
 import { populateRefs } from 'helpers/ref'
@@ -88,16 +87,15 @@ class Annotation extends Component {
                         onTouchStart: this._handleContainerClick
                     }}
                 >
-                    <AnnotationHeader {...{ inCarousel }}>
-                        <AnnotationTitle
-                            isShadow
-                            {...{
-                                isAccessed,
-                                isSelected,
-                                annotationIndex
-                            }}
-                        />
-                    </AnnotationHeader>
+                    <AnnotationHeader
+                        isShadow
+                        {...{
+                            inCarousel,
+                            isAccessed,
+                            isSelected,
+                            annotationIndex
+                        }}
+                    />
 
                     <div
                         {...{
@@ -114,15 +112,14 @@ class Annotation extends Component {
                         }}
                     />
 
-                    <AnnotationHeader {...{ inCarousel }}>
-                        <AnnotationTitle
-                            {...{
-                                isAccessed,
-                                isSelected,
-                                annotationIndex
-                            }}
-                        />
-                    </AnnotationHeader>
+                    <AnnotationHeader
+                        {...{
+                            inCarousel,
+                            isAccessed,
+                            isSelected,
+                            annotationIndex
+                        }}
+                    />
 
                     {getArrayOfLength(cardsLength).map(cardIndex => (
                         <AnnotationCard

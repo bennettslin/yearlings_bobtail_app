@@ -1,7 +1,22 @@
 @import "./logic";
 
-.DotAnchor__selectable {
+.AnchorDot {
+    .AnnotationTitle
+    & {
+        bottom: -$length__iconSmall * 0.1;
+        width: $length__iconSmall;
+        height: $length__iconSmall;
+    }
 
+    .UnitDot
+    & {
+        bottom: -$length__iconSmaller * 0.1;
+        width: $length__iconSmaller;
+        height: $length__iconSmaller;
+    }
+}
+
+.DotAnchor__selectable {
     .Anchor__selectable:hover
     & {
         animation: bounceHover $animationDuration__slow;
@@ -15,16 +30,4 @@
     & {
         transform: scale(0.9);
     }
-}
-
-.DotAnchor__inAnnotation {
-    bottom: -$length__iconSmall * 0.1;
-    width: $length__iconSmall;
-    height: $length__iconSmall;
-}
-
-.DotAnchor__inStanza {
-    bottom: -$length__iconSmaller * 0.1;
-    width: $length__iconSmaller;
-    height: $length__iconSmaller;
 }

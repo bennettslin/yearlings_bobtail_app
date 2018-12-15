@@ -21,6 +21,19 @@ $length__dotsSlideSelect__tablet:
     }
 }
 
+.Anchor {
+    .DotsSlideSelect
+    & {
+        padding-top: 5px;
+        font-size: 0.75em;
+
+        .DW__phone
+        & {
+            padding-top: 0;
+        }
+    }
+}
+
 .Button__slideSelectSize {
 
     width: $length__dotsSlideSelect;
@@ -48,16 +61,6 @@ $length__dotsSlideSelect__tablet:
 
     &.SlideSelectDescription__accessed {
         opacity: 1;
-    }
-}
-
-.DotsSlideSelect__textAnchor {
-    padding-top: 5px;
-    font-size: 0.75em;
-
-    .DW__phone
-    & {
-        padding-top: 0;
     }
 }
 

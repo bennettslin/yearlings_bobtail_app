@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AnchorDot from '../../../Anchor/AnchorDot'
+import Anchor from '../../../Anchor/newIndex'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 
@@ -34,7 +34,6 @@ class AnnotationTitleDot extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'DotAnchor__inAnnotation',
                         getPrefixedDotLetterClassNames(
                             stanzaDotKeys,
 
@@ -45,8 +44,7 @@ class AnnotationTitleDot extends PureComponent {
                 }}
             />
         ) : (
-            <AnchorDot
-                inAnnotation
+            <Anchor
                 {...{
                     isAccessed,
                     isSelected,

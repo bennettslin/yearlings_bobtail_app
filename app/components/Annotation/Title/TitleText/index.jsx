@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AnchorText from '../../../Anchor/AnchorText'
+import Anchor from '../../../Anchor/newIndex'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 
@@ -48,7 +48,7 @@ class AnnotationTitleText extends PureComponent {
                 {text}
             </div>
         ) : (
-            <AnchorText
+            <Anchor
                 {...{
                     isAccessed,
                     isSelected,

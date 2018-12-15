@@ -1,0 +1,45 @@
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
+
+import Dot from '../../Dot'
+
+import { ALL_DOT_KEYS } from 'constants/dots'
+
+const propTypes = {
+    // From parent.
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    stanzaDotKeys: PropTypes.object.isRequired
+}
+
+const AnchorDot = memo(({
+    isAccessed,
+    isSelected,
+    stanzaDotKeys
+
+}) => (
+    ALL_DOT_KEYS.map(dotKey => stanzaDotKeys[dotKey] && (
+        <Dot
+            key={dotKey}
+            {...{
+                className: cx(
+                    'AnchorDot',
+
+                    isAccessed && !isSelected && 'DotAnchor__accessed',
+                    !isSelected  && 'DotAnchor__selectable',
+
+                    // "Child dot anchor letter."
+                    `CdA${dotKey[0]}`
+                ),
+                dotKey,
+                isAccessed,
+                isSelected
+            }}
+        />
+    ))
+))
+
+AnchorDot.propTypes = propTypes
+
+export default AnchorDot

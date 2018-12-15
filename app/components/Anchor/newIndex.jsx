@@ -6,6 +6,9 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 import DotSequence from '../DotSequence'
 import Underline from './Underline'
 
+import AnchorDot from './AnchorDot/newIndex'
+import AnchorText from './AnchorText/newIndex'
+
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 // import { getPropsAreShallowEqual } from 'helpers/general'
 import { populateRefs } from 'helpers/ref'
@@ -16,11 +19,16 @@ class Anchor extends PureComponent {
         // From parent.
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool,
-        isDotAnchor: PropTypes.bool,
-        isWikiTextAnchor: PropTypes.bool,
         doBypassStopPropagation: PropTypes.bool,
         sequenceDotKeys: PropTypes.object,
-        handleAnchorClick: PropTypes.func
+        isWikiTextAnchor: PropTypes.bool,
+        stanzaDotKeys: PropTypes.object,
+        text: PropTypes.any,
+        handleAnchorClick: PropTypes.func,
+        children: PropTypes.oneOfType([
+            PropTypes.array,
+            PropTypes.element
+        ])
     }
 
     // shouldComponentUpdate(nextProps) {
@@ -52,12 +60,15 @@ class Anchor extends PureComponent {
     render() {
 
         const {
-            isAccessed,
-            isSelected,
-            isDotAnchor,
-            isWikiTextAnchor,
-            sequenceDotKeys
-        } = this.props
+                isAccessed,
+                isSelected,
+                sequenceDotKeys,
+                stanzaDotKeys,
+                isWikiTextAnchor,
+                text
+            } = this.props,
+
+            isDotAnchor = Boolean(stanzaDotKeys)
 
         return (
             <a
@@ -110,6 +121,27 @@ class Anchor extends PureComponent {
                             isAccessed,
                             isSelected,
                             dotKeys: sequenceDotKeys
+                        }}
+                    />
+                )}
+
+                {isDotAnchor && (
+                    <AnchorDot
+                        {...{
+                            isAccessed,
+                            isSelected,
+                            stanzaDotKeys
+                        }}
+                    />
+                )}
+
+                {Boolean(text) && (
+                    <AnchorText
+                        {...{
+                            isAccessed,
+                            isSelected,
+                            isWikiTextAnchor,
+                            text
                         }}
                     />
                 )}

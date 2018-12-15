@@ -6,7 +6,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from 'flux/annotation/action'
 
-import AnchorDot from '../../../Anchor/AnchorDot'
+import Anchor from '../../../Anchor/newIndex'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { getPropsAreShallowEqual } from 'helpers/general'
@@ -155,12 +155,11 @@ const propTypes = {
     },
 
     UnitDotView = memo(({
-    // From controller.
+        // From controller.
         dotKeys,
         annotationIndex,
         isLastUnit,
         setRef,
-
         ...other
     }) => {
 
@@ -187,9 +186,11 @@ const propTypes = {
             >
                 {/* Scroll to unit dot at bottom, not unit middle. */}
                 <div ref={setRef}>
-                    <AnchorDot {...other}
-                        inStanza
-                        stanzaDotKeys={dotKeys}
+                    <Anchor
+                        {...other}
+                        {...{
+                            stanzaDotKeys: dotKeys
+                        }}
                     />
                 </div>
             </div>

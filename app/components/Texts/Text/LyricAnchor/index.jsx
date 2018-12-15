@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagationDispatcher'
 import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
-import AnchorText from '../../../Anchor/AnchorText'
+import Anchor from '../../../Anchor/newIndex'
 import Texts from '../../'
 
 import { populateRefs } from 'helpers/ref'
@@ -237,8 +237,11 @@ class TextLyricAnchor extends Component {
                         wikiIndex && `wiki__${wikiIndex}`
                     )}
                 >
-                    <AnchorText
+                    <Anchor
                         {...{
+                            isAccessed,
+                            isSelected,
+                            isWikiTextAnchor,
                             text: words.map((word, index) => (
                                 <Texts {...other}
                                     key={index}
@@ -250,9 +253,6 @@ class TextLyricAnchor extends Component {
                             )),
                             sequenceDotKeys: dotKeys,
                             doBypassStopPropagation: !isWikiTextAnchor,
-                            isWikiTextAnchor,
-                            isAccessed,
-                            isSelected,
                             handleAnchorClick: this._handleAnchorClick
                         }}
                     />

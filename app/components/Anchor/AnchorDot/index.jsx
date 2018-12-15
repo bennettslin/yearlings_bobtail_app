@@ -11,17 +11,11 @@ const propTypes = {
     // From parent.
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool,
-        inAnnotation: PropTypes.bool,
-        inStanza: PropTypes.bool,
         stanzaDotKeys: PropTypes.object.isRequired
     },
 
     AnchorDot = memo(({
-
         stanzaDotKeys,
-        inAnnotation,
-        inStanza,
-
         ...other
     }) => {
 
@@ -43,9 +37,6 @@ const propTypes = {
 
                                 isAccessed && !isSelected && 'DotAnchor__accessed',
                                 !isSelected  && 'DotAnchor__selectable',
-
-                                inAnnotation && 'DotAnchor__inAnnotation',
-                                inStanza && 'DotAnchor__inStanza',
 
                                 // "Child dot anchor letter."
                                 `CdA${dotKey[0]}`
