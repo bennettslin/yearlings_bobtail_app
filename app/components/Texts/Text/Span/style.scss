@@ -4,10 +4,5 @@
 
     z-index: $zIndex__verseChild__topMost;
 
-    .parent__shown
-    & {
-        transition:
-            // color $animationDuration__default,
-            text-shadow $animationDuration__default;
-    }
+    transition: text-shadow $animationDuration__default;
 }

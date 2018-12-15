@@ -14,15 +14,12 @@
 
     opacity: 0;
 
-    .parent__shown
-    & {
-        transition:
-            opacity $animationDuration__default,
-            max-width $animationDuration__default,
-            max-height $animationDuration__default,
-            margin-top $animationDuration__default,
-            margin-left $animationDuration__default;
-    }
+    transition:
+        opacity $animationDuration__default,
+        max-width $animationDuration__default,
+        max-height $animationDuration__default,
+        margin-top $animationDuration__default,
+        margin-left $animationDuration__default;
 }
 
 .UnitDot__lastStanza {

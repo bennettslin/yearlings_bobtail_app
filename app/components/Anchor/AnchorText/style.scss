@@ -12,10 +12,7 @@
     direction: ltr;
     visibility: hidden;
 
-    .parent__shown
-    & {
-        transition: color $animationDuration__fast;
-    }
+    transition: color $animationDuration__fast;
 
     // "Root accessed letter Enter, child accessed letter Enter."
     .PaLEnter

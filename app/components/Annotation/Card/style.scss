@@ -7,12 +7,9 @@
     opacity: 0;
     overflow: hidden;
 
-    .parent__shown
-    & {
-        transition:
-            max-height $animationDuration__default,
-            opacity $animationDuration__default;
-    }
+    transition:
+        max-height $animationDuration__default,
+        opacity $animationDuration__default;
 }
 
 .AnnotationCard {

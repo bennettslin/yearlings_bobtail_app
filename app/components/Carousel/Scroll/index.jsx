@@ -91,7 +91,7 @@ class CarouselScroll extends PureComponent {
                     in: canCarouselRender,
                     timeout: {
                         enter: 0,
-                        exit: 150
+                        exit: 200
                     },
                     classNames: {
                         enterDone: 'CarouselScroll__visible'

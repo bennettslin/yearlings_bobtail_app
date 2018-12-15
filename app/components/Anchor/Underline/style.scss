@@ -45,12 +45,9 @@
 .Underline__bar {
     visibility: hidden;
 
-    .parent__shown
-    & {
-        transition:
-            opacity $animationDuration__default,
-            background-color $animationDuration__default;
-    }
+    transition:
+        opacity $animationDuration__default,
+        background-color $animationDuration__default;
 
     // "Root accessed letter Enter, child accessed letter Enter."
     .PaLEnter

@@ -5,16 +5,16 @@
 
 .Slider {
     height: 100%;
-    opacity: 0;
 
-    transition: opacity $animationDuration__default;
+    opacity: 0;
+    transition: opacity $animationDuration__fast;
 
     .RM__song
     & {
         cursor: pointer;
     }
+}
 
-    &.parent__shown {
-        opacity: 1;
-    }
+.Slider__visible {
+    opacity: 1;
 }

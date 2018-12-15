@@ -4191,5 +4191,10 @@ module.exports = [
         taskName: `Get rid of parentThis.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Allow some popups to unmount.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

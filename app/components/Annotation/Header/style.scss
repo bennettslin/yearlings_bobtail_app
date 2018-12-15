@@ -14,12 +14,9 @@
     display: flex;
     justify-content: center;
 
-    .parent__shown
-    & {
-        transition:
-            height $animationDuration__default,
-            opacity $animationDuration__default;
-    }
+    transition:
+        height $animationDuration__default,
+        opacity $animationDuration__default;
 }
 
 .AnnotationHeaderAnimatable {

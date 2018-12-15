@@ -10,14 +10,10 @@ $width__sliderStanzaTab: 15px;
 
     // Default height when not cursored.
     height: 50%;
+    transition: height $animationDuration__default;
 
     bottom: 0;
     border-top-right-radius: $borderRadius__narrow;
-
-    .parent__shown
-    & {
-        transition: height $animationDuration__default;
-    }
 }
 
 .SliderStanza__tab {

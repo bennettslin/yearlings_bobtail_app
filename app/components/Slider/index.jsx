@@ -1,10 +1,10 @@
 // Component to touch change played time and verse.
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import { connect } from 'react-redux'
 
+import { CSSTransition } from 'react-transition-group'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import SliderScenes from './Scenes'
 import SliderStanzas from './Stanzas'
@@ -14,16 +14,16 @@ import SliderAccess from './Access'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    renderStore: { didLyricRender }
+    renderStore: { canLyricRender }
 }) => ({
-    didLyricRender
+    canLyricRender
 })
 
 class Slider extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        didLyricRender: PropTypes.bool.isRequired
+        canLyricRender: PropTypes.bool.isRequired
     }
 
     _handleTouchDown = (e) => {
@@ -39,28 +39,38 @@ class Slider extends PureComponent {
     }
 
     render() {
-        const { didLyricRender } = this.props
+        const { canLyricRender } = this.props
 
         return (
-            <div
-                {...{
-                    ref: this._getSliderElement,
-                    className: cx(
-                        'Slider',
-                        {
-                            'parent__shown': didLyricRender
+            <___>
+                <CSSTransition
+                    {...{
+                        in: canLyricRender,
+                        timeout: {
+                            enter: 0,
+                            exit: 200
+                        },
+                        classNames: {
+                            enterDone: 'Slider__visible'
                         }
-                    ),
-                    onMouseDown: this._handleTouchDown,
-                    onTouchStart: this._handleTouchDown
-                }}
-            >
-                <SliderTimes />
-                <SliderStanzas />
-                <SliderScenes />
-                <SliderAccess />
+                    }}
+                >
+                    <div
+                        {...{
+                            ref: this._getSliderElement,
+                            className: 'Slider',
+                            onMouseDown: this._handleTouchDown,
+                            onTouchStart: this._handleTouchDown
+                        }}
+                    >
+                        <SliderTimes />
+                        <SliderStanzas />
+                        <SliderScenes />
+                        <SliderAccess />
+                    </div>
+                </CSSTransition>
                 <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
-            </div>
+            </___>
         )
     }
 }
