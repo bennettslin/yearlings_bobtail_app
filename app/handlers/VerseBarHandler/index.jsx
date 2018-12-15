@@ -1,6 +1,5 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import {
@@ -174,11 +173,10 @@ const mapStateToProps = ({
     sliderVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateVerseBarsStore,
         resetVerseBarsQueue
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(VerseBarHandler)
+    }
+)(VerseBarHandler)

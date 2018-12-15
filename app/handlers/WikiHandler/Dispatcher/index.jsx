@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
 import { REFERENCE } from '../../../constants/dots'
@@ -54,10 +53,7 @@ const mapStateToProps = ({
     isWikiDotSelected
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSessionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(WikiDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateSessionStore }
+)(WikiDispatcher)

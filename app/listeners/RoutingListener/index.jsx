@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateSongStore } from 'flux/song/action'
@@ -139,12 +138,10 @@ const mapStateToProps = ({
     selectedAnnotationIndex
 })
 
-// Bind Redux action creators to component props.
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateSongStore,
         updateSessionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(RoutingListener)
+    }
+)(RoutingListener)

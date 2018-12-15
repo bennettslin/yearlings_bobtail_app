@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 
 import { getWikiWormholeIndexForDirection } from './helper'
@@ -75,10 +74,7 @@ const mapStateToProps = ({
     dotsBitNumber
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateAccessStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(WikiWormholeDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateAccessStore }
+)(WikiWormholeDispatcher)

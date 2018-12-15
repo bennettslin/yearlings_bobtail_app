@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateOptionStore } from 'flux/option/action'
 
 import { getNextOption } from '../../../helpers/options'
@@ -66,10 +65,7 @@ const mapStateToProps = ({
     toggleShowsTipsImmediately
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateOptionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(TipsDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateOptionStore }
+)(TipsDispatcher)

@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateTransientStore } from 'flux/transient/action'
 
 import {
@@ -139,10 +138,7 @@ const mapStateToProps = ({
     selectedWikiIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateTransientStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(MainListener)
+export default connect(
+    mapStateToProps,
+    { updateTransientStore }
+)(MainListener)

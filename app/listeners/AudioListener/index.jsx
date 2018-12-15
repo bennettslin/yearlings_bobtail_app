@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSongStore } from 'flux/song/action'
 
 import { getTimeForVerseIndex } from 'helpers/data'
@@ -62,11 +61,7 @@ const mapStateToProps = ({
     selectedVerseIndex
 })
 
-
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSongStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(AudioListener)
+export default connect(
+    mapStateToProps,
+    { updateSongStore }
+)(AudioListener)

@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
 import { getWikiUrl } from './helper'
@@ -80,10 +79,7 @@ const mapStateToProps = ({
     carouselAnnotationIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSessionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(WikiListener)
+export default connect(
+    mapStateToProps,
+    { updateSessionStore }
+)(WikiListener)

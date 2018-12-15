@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateRenderableStore } from 'flux/renderable/action'
 import { updateRenderedStore } from 'flux/rendered/action'
 
@@ -155,11 +154,10 @@ const mapStateToProps = ({
     selectedAnnotationIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateRenderableStore,
         updateRenderedStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(RenderedListener)
+    }
+)(RenderedListener)
