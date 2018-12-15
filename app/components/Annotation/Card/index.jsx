@@ -1,6 +1,6 @@
-// Component to show individual annotation note or all wormholes.
+// PureComponent to show individual annotation note or all wormholes.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -10,15 +10,12 @@ import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { getAnnotationCardData } from './helper'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canCarouselRender,
     renderedSongIndex
 })
 
@@ -26,11 +23,10 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class AnnotationCard extends Component {
+class AnnotationCard extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -38,13 +34,6 @@ class AnnotationCard extends Component {
         isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

@@ -1,27 +1,23 @@
 // Component to show all wormholes for each annotation.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
-import { getPropsAreShallowEqual } from 'helpers/general'
 import { getCardWormholeLinksArray } from 'helpers/wormhole'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
     accessStore: { accessedWikiWormholeIndex }
 }) => ({
-    canCarouselRender,
     renderedSongIndex,
     accessedWikiWormholeIndex
 })
 
-class AnnotationWormholes extends Component {
+class AnnotationWormholes extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
 
@@ -29,16 +25,6 @@ class AnnotationWormholes extends Component {
         isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                cardIndex: true
-            }
-        })
     }
 
     render() {

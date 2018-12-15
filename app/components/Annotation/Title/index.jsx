@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -10,22 +10,19 @@ import AnnotationTitleText from './TitleText'
 import AnnotationAccess from './Access'
 
 import { getDotKeysFromBitNumber } from 'helpers/dot'
-import { getPropsAreShallowEqual } from 'helpers/general'
 import { IS_DOT_CARD } from 'constants/lyrics'
 
 import { getAnnotationTitleData } from './helper'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex },
     dotsStore: { dotsBitNumber }
 }) => ({
-    canCarouselRender,
     renderedSongIndex,
     dotsBitNumber
 })
 
-class AnnotationTitle extends Component {
+class AnnotationTitle extends PureComponent {
 
     static defaultProps = {
         isShadow: false
@@ -33,7 +30,6 @@ class AnnotationTitle extends Component {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         updateAnnotationStore: PropTypes.func.isRequired,
@@ -43,13 +39,6 @@ class AnnotationTitle extends Component {
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     _handleTitleClick = () => {

@@ -13,10 +13,8 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { getCarouselAnnotationData } from './helper'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canCarouselRender,
     renderedSongIndex
 })
 
@@ -24,7 +22,6 @@ class CarouselAnnotation extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.

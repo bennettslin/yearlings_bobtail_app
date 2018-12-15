@@ -85,10 +85,17 @@ class CarouselScroll extends PureComponent {
 
         return (
             <CSSTransition
+                mountOnEnter
+                unmountOnExit
                 {...{
                     in: canCarouselRender,
-                    timeout: 200,
-                    classNames: 'CarouselScroll__visible'
+                    timeout: {
+                        enter: 0,
+                        exit: 150
+                    },
+                    classNames: {
+                        enterDone: 'CarouselScroll__visible'
+                    }
                 }}
             >
                 <div

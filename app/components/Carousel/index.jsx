@@ -12,10 +12,8 @@ import CarouselSelect from './Select'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    renderStore: { didCarouselRender },
     responsiveStore: { isHiddenCarouselNav }
 }) => ({
-    didCarouselRender,
     isHiddenCarouselNav
 })
 
@@ -23,7 +21,6 @@ class Carousel extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        didCarouselRender: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired
     }
 
@@ -44,17 +41,13 @@ class Carousel extends PureComponent {
     }
 
     render() {
-        const {
-            isHiddenCarouselNav,
-            didCarouselRender
-        } = this.props
+        const { isHiddenCarouselNav } = this.props
 
         return !isHiddenCarouselNav && (
             <div
                 className={cx(
                     'Carousel',
-                    'gradientMask__carousel__desktop',
-                    { 'parent__shown': didCarouselRender }
+                    'gradientMask__carousel__desktop'
                 )}
             >
                 <ScrollCarouselListener {...{ getRefs: this._getRefs }} />

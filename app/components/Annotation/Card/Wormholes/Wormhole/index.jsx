@@ -1,6 +1,6 @@
 // Component to show individual wormhole in wormholes block.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -24,23 +24,18 @@ import {
 } from 'helpers/data'
 import { populateRefs } from 'helpers/ref'
 
-import { getPropsAreShallowEqual } from 'helpers/general'
-
 import { getCardWormholeLink } from './helper'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canCarouselRender,
     renderedSongIndex
 })
 
-class AnnotationWormhole extends Component {
+class AnnotationWormhole extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -49,16 +44,6 @@ class AnnotationWormhole extends Component {
         annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired,
         wormholeLinkIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        const shouldComponentUpdate =
-            nextProps.canCarouselRender && !getPropsAreShallowEqual({
-                props: this.props,
-                nextProps
-            })
-
-        return shouldComponentUpdate
     }
 
     _getWormholeLink() {

@@ -1,6 +1,6 @@
 // Section to show title and all notes and wormholes for each annotation.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -10,25 +10,19 @@ import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 
 import { populateRefs } from 'helpers/ref'
-import {
-    getPropsAreShallowEqual,
-    getArrayOfLength
-} from 'helpers/general'
+import { getArrayOfLength } from 'helpers/general'
 import { getAnnotationCardsLength } from './helper'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canCarouselRender,
     renderedSongIndex
 })
 
-class Annotation extends Component {
+class Annotation extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -36,19 +30,6 @@ class Annotation extends Component {
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        const shouldComponentUpdate =
-            nextProps.canCarouselRender && !getPropsAreShallowEqual({
-                props: this.props,
-                nextProps,
-                alwaysBypassCheck: {
-                    inCarousel: true
-                }
-            })
-
-        return shouldComponentUpdate
     }
 
     _handleContainerClick = (e) => {
