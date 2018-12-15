@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateRenderableStore } from 'flux/renderable/action'
 
 const mapStateToProps = ({
@@ -77,10 +76,7 @@ class SceneListener extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderableStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(SceneListener)
+export default connect(
+    mapStateToProps,
+    { updateRenderableStore }
+)(SceneListener)

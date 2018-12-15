@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
@@ -71,12 +70,11 @@ const mapStateToProps = ({
     isCarouselShown
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateAccessStore,
         updateSessionStore,
         updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(CarouselListener)
+    }
+)(CarouselListener)

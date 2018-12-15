@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -90,11 +89,10 @@ const mapStateToProps = ({
     isCarouselShown
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateScrollCarouselStore,
         updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(CarouselDispatcher)
+    }
+)(CarouselDispatcher)

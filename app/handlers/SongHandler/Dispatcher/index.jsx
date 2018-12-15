@@ -6,7 +6,6 @@
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateAccessStore } from 'flux/access/action'
@@ -101,12 +100,11 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateAccessStore,
         updateAudioStore,
         updateSongStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(SongDispatcher)
+    }
+)(SongDispatcher)

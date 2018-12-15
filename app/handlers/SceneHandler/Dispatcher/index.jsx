@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateToggleStore } from 'flux/toggle/action'
@@ -77,10 +76,7 @@ const mapStateToProps = ({
     selectedVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(SceneDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateToggleStore }
+)(SceneDispatcher)
