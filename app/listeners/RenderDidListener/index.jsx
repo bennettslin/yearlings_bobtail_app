@@ -10,7 +10,7 @@ import {
     SCENE,
     LYRIC,
     CAROUSEL,
-    getNextKeyToRender
+    getNextKeyCanRender
 } from '../../helpers/render'
 
 class RenderDidListener extends PureComponent {
@@ -39,7 +39,7 @@ class RenderDidListener extends PureComponent {
         if (didTheatreRender && !hadTheatreRendered) {
             logRender('Theatre did render.')
 
-            const nextKey = getNextKeyToRender({ currentKey: THEATRE })
+            const nextKey = getNextKeyCanRender({ currentKey: THEATRE })
             if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true
@@ -56,7 +56,7 @@ class RenderDidListener extends PureComponent {
         if (didSceneRender && !hadSceneRendered) {
             logRender('Scene did render.')
 
-            const nextKey = getNextKeyToRender({ currentKey: SCENE })
+            const nextKey = getNextKeyCanRender({ currentKey: SCENE })
             if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true
@@ -73,7 +73,7 @@ class RenderDidListener extends PureComponent {
         if (didLyricRender && !hadLyricRendered) {
             logRender('Lyric did render.')
 
-            const nextKey = getNextKeyToRender({ currentKey: LYRIC })
+            const nextKey = getNextKeyCanRender({ currentKey: LYRIC })
             if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true
@@ -90,7 +90,7 @@ class RenderDidListener extends PureComponent {
         if (didCarouselRender && !hadCarouselRendered) {
             logRender('Carousel did render.')
 
-            const nextKey = getNextKeyToRender({ currentKey: CAROUSEL })
+            const nextKey = getNextKeyCanRender({ currentKey: CAROUSEL })
             if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true

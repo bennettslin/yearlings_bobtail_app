@@ -24,7 +24,6 @@ class AnnotationAccess extends PureComponent {
 
         return showUpDown && (
             <AccessLetters
-                inAnnotation
                 {...{
                     accessIconsName: 'annotationUpDown',
                     isShadow,

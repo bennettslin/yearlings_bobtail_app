@@ -3,7 +3,7 @@
  * is changed.
  */
 
-import React, { PureComponent, Fragment } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -51,7 +51,7 @@ class VerseInteractive extends PureComponent {
             isInteractivated = this.getIsInteractivated(this.props)
 
         return (
-            <Fragment>
+            <___>
                 <VerseColour
                     {...{
                         inSlider,
@@ -70,7 +70,7 @@ class VerseInteractive extends PureComponent {
                         }}
                     />
                 )}
-            </Fragment>
+            </___>
         )
     }
 }

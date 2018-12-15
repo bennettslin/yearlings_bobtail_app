@@ -18,7 +18,7 @@ const
         SCENE
     ]
 
-const getNextKeyToRender = ({
+const getNextKeyCanRender = ({
     order = THEATRE_SCENE_LYRIC_CAROUSEL_ORDER,
     currentKey
 
@@ -46,5 +46,5 @@ export {
     THEATRE_SCENE_LYRIC_CAROUSEL_ORDER,
     THEATRE_LYRIC_CAROUSEL_SCENE_ORDER,
 
-    getNextKeyToRender
+    getNextKeyCanRender
 }

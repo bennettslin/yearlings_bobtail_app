@@ -1,14 +1,8 @@
-// .LyricAccess {
-//     position: absolute;
-//     right: $margin__lyricColumn__accessIcons;
-//     bottom: $margin__lyricColumn__accessIcons;
-
-//     display: flex;
-//     flex-direction: column-reverse;
-// }
-
-.AccessLetters__inLyric {
-    bottom: $margin__lyricColumn__accessIcons;
+.AccessLetters {
+    .Lyric
+    & {
+        bottom: $margin__lyricColumn__accessIcons;
+    }
 }
 
 .AccessLetters__lyricLeftRight {

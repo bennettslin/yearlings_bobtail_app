@@ -7,7 +7,7 @@ import { updateRenderStore } from 'flux/render/action'
 
 import {
     THEATRE,
-    getNextKeyToRender
+    getNextKeyCanRender
 } from '../../helpers/render'
 
 class RenderableListener extends PureComponent {
@@ -85,7 +85,7 @@ class RenderableListener extends PureComponent {
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
             } seconds.`)
 
-            const nextKey = getNextKeyToRender({
+            const nextKey = getNextKeyCanRender({
                 currentKey: THEATRE
             })
             this.props.updateRenderStore({

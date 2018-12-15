@@ -1,11 +1,15 @@
 $margin__audioBanner__accessIcons: 3px;
 
-.AccessLetters__inSlider {
-    bottom: $margin__audioBanner__accessIcons;
+.AccessLetters {
+    .Slider
+    & {
+        bottom: $margin__audioBanner__accessIcons;
 
-    z-index: $zIndex__negative;
+        z-index: $zIndex__negative;
+    }
 
     .RM__accessOn
+    .Slider
     & {
         z-index: $zIndex__menuField;
     }

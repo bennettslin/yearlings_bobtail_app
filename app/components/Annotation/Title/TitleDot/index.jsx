@@ -34,6 +34,7 @@ class AnnotationTitleDot extends PureComponent {
             <div
                 {...{
                     className: cx(
+                        'AnchorDot',
                         getPrefixedDotLetterClassNames(
                             stanzaDotKeys,
 

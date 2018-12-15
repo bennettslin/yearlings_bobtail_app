@@ -30,7 +30,6 @@ class SliderAccess extends PureComponent {
         return (
             <AccessLetters
                 accessIconsName="sliderRewindForward"
-                inSlider
                 showIfAccessed={!isRenderedLogue}
                 accessKeys={[
                     AUDIO_REWIND_KEY,

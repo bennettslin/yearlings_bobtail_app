@@ -61,7 +61,10 @@ class LyricAccess extends PureComponent {
             })),
 
             showLeftRight = Boolean(
-                // Must have at least one selected dot, and no selected annotation.
+                /**
+                 * Must have at least one selected dot, and no selected
+                 * annotation.
+                 */
                 hasSelectedDots && !renderedAnnotationIndex && (
                     (
                         // Must show carousel and not have dots section open...
@@ -84,7 +87,6 @@ class LyricAccess extends PureComponent {
                 <AccessLetters
                     accessIconsName="lyricLeftRight"
                     showIfAccessed={showLeftRight}
-                    inLyric
                     accessKeys={[
                         ARROW_LEFT,
                         ARROW_RIGHT
@@ -93,7 +95,6 @@ class LyricAccess extends PureComponent {
                 <AccessLetters
                     accessIconsName="lyricUpDown"
                     showIfAccessed={showUpDown}
-                    inLyric
                     accessKeys={[
                         ARROW_UP,
                         ARROW_DOWN

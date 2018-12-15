@@ -9,9 +9,6 @@ import AccessLetter from '../Letter'
 const propTypes = {
         // From parent.
         accessIconsName: PropTypes.string,
-        inAnnotation: PropTypes.bool,
-        inLyric: PropTypes.bool,
-        inSlider: PropTypes.bool,
         isShadow: PropTypes.bool,
         showIfAccessed: PropTypes.bool,
         accessKeys: PropTypes.arrayOf(
@@ -20,11 +17,7 @@ const propTypes = {
     },
 
     AccessLetters = memo(({
-
         accessIconsName,
-        inAnnotation,
-        inLyric,
-        inSlider,
         isShadow,
         showIfAccessed,
         accessKeys
@@ -32,14 +25,6 @@ const propTypes = {
     }) => (
         <div className={cx(
             'AccessLetters',
-
-            inAnnotation ?
-                'AccessLetters__inAnnotation' :
-                'AccessLetters__absolute',
-
-            inLyric && 'AccessLetters__inLyric',
-            inSlider && 'AccessLetters__inSlider',
-
             accessIconsName && `AccessLetters__${accessIconsName}`
         )}>
             {accessKeys.map(accessKey => {
