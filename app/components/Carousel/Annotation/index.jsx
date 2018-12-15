@@ -1,6 +1,6 @@
 // Container to show single annotation in carousel.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -9,7 +9,6 @@ import Annotation from '../../Annotation'
 
 import { CAROUSEL_SCROLL } from 'constants/dom'
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { getCarouselAnnotationData } from './helper'
 
@@ -21,7 +20,7 @@ const mapStateToProps = ({
     renderedSongIndex
 })
 
-class CarouselAnnotation extends Component {
+class CarouselAnnotation extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -33,13 +32,6 @@ class CarouselAnnotation extends Component {
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         setCarouselAnnotationElement: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     setCarouselAnnotationElement = (node) => {

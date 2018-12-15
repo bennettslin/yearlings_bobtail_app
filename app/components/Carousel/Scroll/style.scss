@@ -1,0 +1,62 @@
+.CarouselScroll {
+    display: flex;
+    overflow-x: scroll;
+    height: 100%;
+
+    .DW__desktop
+    & {
+        padding-left: $width__overviewToggle__laptop;
+    }
+
+    .DW__tablet
+    & {
+        padding-left: $width__overviewToggle__tablet;
+    }
+
+    .DW__mini
+    & {
+        padding-left: $width__overviewToggle__mini;
+    }
+
+    /**
+     * I'm baffled why padding-right can't just be applied to the scroll parent
+     * itself here, the way padding-left can. But whatever, this works.
+     */
+    &:after {
+        content: '';
+    }
+
+    .DW__monitor
+    &:after {
+        padding-right:
+            $js__width__goldenCord;
+    }
+
+    .DW__laptop
+    &:after {
+        padding-right:
+            $js__width__uncannyValley;
+    }
+
+    /**
+    * These constants are used only to determine carousel right side margin in
+    * mobile. The carousel select itself does not use them.
+    */
+    $width__carouselSelect__tablet:
+        $js__length__iconLarge__tablet * 2
+        + $js__margin__thin * 3;
+
+    $width__carouselSelect__mini:
+        $js__length__iconLarge__mini * 2
+        + $js__margin__thin * 3;
+
+    .DW__tablet
+    &:after {
+        padding-right: $width__carouselSelect__tablet;
+    }
+
+    .DW__mini
+    &:after {
+        padding-right: $width__carouselSelect__mini;
+    }
+}

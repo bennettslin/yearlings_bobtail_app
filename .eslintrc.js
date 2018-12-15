@@ -285,7 +285,7 @@ module.exports = {
             'as-needed'
         ],
         "react/prop-types": 'off',
-        "react/no-unused-prop-types": 'off',
+        "react/no-unused-prop-types": 'error',
         "require-await": 'error',
         "require-jsdoc": 'error',
         "rest-spread-spacing": [

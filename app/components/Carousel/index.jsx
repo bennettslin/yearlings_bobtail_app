@@ -6,39 +6,17 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import ScrollCarouselListener from '../../listeners/ScrollCarouselListener'
-import CarouselAnnotation from './Annotation'
+import CarouselScroll from './Scroll'
 import CarouselSelect from './Select'
 
-import { getAnnotationsCount } from 'helpers/data'
-import { getArrayOfLength } from 'helpers/general'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     renderStore: { didCarouselRender },
-    renderedStore: {
-        renderedSongIndex,
-        renderedAnnotationIndex
-    },
-    responsiveStore: { isHiddenCarouselNav },
-    toggleStore: {
-        isAccessOn,
-        isCarouselShown,
-        isDotsSlideShown,
-        isLyricExpanded
-    },
-    accessStore: { accessedAnnotationIndex },
-    sessionStore: { interactivatedVerseIndex }
+    responsiveStore: { isHiddenCarouselNav }
 }) => ({
     didCarouselRender,
-    renderedSongIndex,
-    renderedAnnotationIndex,
-    isHiddenCarouselNav,
-    isAccessOn,
-    isLyricExpanded,
-    accessedAnnotationIndex,
-    isCarouselShown,
-    isDotsSlideShown,
-    interactivatedVerseIndex
+    isHiddenCarouselNav
 })
 
 class Carousel extends PureComponent {
@@ -46,15 +24,7 @@ class Carousel extends PureComponent {
     static propTypes = {
         // Through Redux.
         didCarouselRender: PropTypes.bool.isRequired,
-        isHiddenCarouselNav: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedAnnotationIndex: PropTypes.number.isRequired,
-        accessedAnnotationIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
-        isAccessOn: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired
+        isHiddenCarouselNav: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
@@ -76,30 +46,10 @@ class Carousel extends PureComponent {
     render() {
         const {
             isHiddenCarouselNav,
-            renderedSongIndex,
-            renderedAnnotationIndex,
-            accessedAnnotationIndex,
-            isAccessOn,
-            isCarouselShown,
-            isDotsSlideShown,
-            interactivatedVerseIndex,
-            isLyricExpanded,
             didCarouselRender
         } = this.props
 
-        if (isHiddenCarouselNav) {
-            return null
-        }
-
-        const annotationsCount = getAnnotationsCount(renderedSongIndex),
-
-            /**
-             * Dynamically create array of just indices. Carousel annotation
-             * will fetch annotation object directly from data helper.
-             */
-            annotationsIndices = getArrayOfLength(annotationsCount)
-
-        return (
+        return !isHiddenCarouselNav && (
             <div
                 className={cx(
                     'Carousel',
@@ -108,47 +58,14 @@ class Carousel extends PureComponent {
                 )}
             >
                 <ScrollCarouselListener {...{ getRefs: this._getRefs }} />
-                <div
-                    ref={this._setCarouselParent}
-                    className="Carousel__scroll"
-                >
-                    {annotationsIndices.map(index => {
-
-                        const annotationIndex = index + 1,
-
-                            isAccessed =
-                                isAccessOn &&
-
-                                /**
-                                 * TODO: This conditional is repeated in
-                                 * Carousel, UnitDot, and
-                                 * TextLyricAnchor. Consolidate?
-                                 */
-                                !isDotsSlideShown &&
-                                interactivatedVerseIndex < 0 &&
-                                (
-                                    isCarouselShown ||
-                                    isLyricExpanded
-                                ) &&
-                                annotationIndex === accessedAnnotationIndex,
-
-                            isSelected =
-                                annotationIndex === renderedAnnotationIndex
-
-                        return (
-                            <CarouselAnnotation
-                                key={index}
-                                {...{
-                                    annotationIndex,
-                                    isAccessed,
-                                    isSelected,
-                                    setCarouselAnnotationElement: this._setCarouselAnnotationElement
-                                }}
-                            />
-                        )
-                    })}
-
-                </div>
+                <CarouselScroll
+                    {...{
+                        setCarouselParent:
+                            this._setCarouselParent,
+                        setCarouselAnnotationElement:
+                            this._setCarouselAnnotationElement
+                    }}
+                />
                 <CarouselSelect />
             </div>
         )
