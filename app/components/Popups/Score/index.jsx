@@ -3,7 +3,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import Score from '../../Score'
@@ -52,10 +51,7 @@ class ScorePopup extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(ScorePopup)
+export default connect(
+    mapStateToProps,
+    { updateToggleStore }
+)(ScorePopup)

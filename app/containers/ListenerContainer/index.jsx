@@ -1,6 +1,5 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateLoadStore } from 'flux/load/action'
 
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
@@ -78,11 +77,7 @@ class ListenerContainer extends PureComponent {
     }
 }
 
-// Bind Redux action creators to component props.
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateLoadStore
-    }, dispatch)
-)
-
-export default connect(null, bindDispatchToProps)(ListenerContainer)
+export default connect(
+    null,
+    { updateLoadStore }
+)(ListenerContainer)

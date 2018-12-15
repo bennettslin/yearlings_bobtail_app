@@ -3,7 +3,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
 import Wiki from '../../Wiki'
@@ -51,10 +50,7 @@ class WikiPopup extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSessionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(WikiPopup)
+export default connect(
+    mapStateToProps,
+    { updateSessionStore }
+)(WikiPopup)

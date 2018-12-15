@@ -4,7 +4,6 @@ import React, { memo, Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAnnotationStore } from 'flux/annotation/action'
 
 import AnchorDot from '../../../Anchor/AnchorDot'
@@ -199,10 +198,7 @@ const propTypes = {
 
 UnitDotView.propTypes = propTypes
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateAnnotationStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(UnitDot)
+export default connect(
+    mapStateToProps,
+    { updateAnnotationStore }
+)(UnitDot)

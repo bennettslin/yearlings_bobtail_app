@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
 import {
@@ -119,10 +118,7 @@ const mapStateToProps = ({
     didCarouselRender
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(RenderDidListener)
+export default connect(
+    mapStateToProps,
+    { updateRenderStore }
+)(RenderDidListener)

@@ -6,7 +6,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateOptionStore } from 'flux/option/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
@@ -347,13 +346,12 @@ const mapStateToProps = ({
     interactivatedVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateOptionStore,
         updateSessionStore,
         updateSongStore,
         updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(CloseHandler)
+    }
+)(CloseHandler)

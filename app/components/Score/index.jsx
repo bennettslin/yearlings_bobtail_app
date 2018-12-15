@@ -3,10 +3,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { updateLoadStore } from 'flux/load/action'
+
 import { getSongScore } from './helper'
 
 const mapStateToProps = ({
@@ -59,11 +58,7 @@ class Score extends PureComponent {
     }
 }
 
-// Bind Redux action creators to component props.
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateLoadStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Score)
+export default connect(
+    mapStateToProps,
+    { updateLoadStore }
+)(Score)

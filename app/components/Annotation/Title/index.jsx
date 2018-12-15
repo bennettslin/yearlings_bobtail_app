@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAnnotationStore } from 'flux/annotation/action'
 
 import AnnotationTitleDot from './TitleDot'
@@ -149,10 +148,7 @@ class AnnotationTitle extends Component {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateAnnotationStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(AnnotationTitle)
+export default connect(
+    mapStateToProps,
+    { updateAnnotationStore }
+)(AnnotationTitle)

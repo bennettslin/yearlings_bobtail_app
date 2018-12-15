@@ -1,8 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
 import { updateOptionStore } from 'flux/option/action'
 
 import {
@@ -74,10 +72,7 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateOptionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(OverviewListener)
+export default connect(
+    mapStateToProps,
+    { updateOptionStore }
+)(OverviewListener)

@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateTransientStore } from 'flux/transient/action'
 
 const mapStateToProps = ({
@@ -110,10 +109,7 @@ class PopupAnnotationListener extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateTransientStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(PopupAnnotationListener)
+export default connect(
+    mapStateToProps,
+    { updateTransientStore }
+)(PopupAnnotationListener)

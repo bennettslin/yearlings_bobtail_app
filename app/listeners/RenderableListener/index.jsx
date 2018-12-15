@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateRenderStore } from 'flux/render/action'
 
 import {
@@ -139,10 +138,7 @@ const mapStateToProps = ({
     isWindowResizeRenderable
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateRenderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(RenderableListener)
+export default connect(
+    mapStateToProps,
+    { updateRenderStore }
+)(RenderableListener)

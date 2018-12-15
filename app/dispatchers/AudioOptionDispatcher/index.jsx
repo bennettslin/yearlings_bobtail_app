@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
 import { AUDIO_OPTIONS } from 'constants/options'
@@ -46,10 +45,7 @@ const mapStateToProps = ({
     selectedAudioOptionIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSessionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(AudioOptionDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateSessionStore }
+)(AudioOptionDispatcher)

@@ -5,7 +5,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
 
 import CloseHandler from '../../handlers/CloseHandler'
@@ -260,10 +259,7 @@ class FocusContainer extends PureComponent {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateEventStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(FocusContainer)
+export default connect(
+    mapStateToProps,
+    { updateEventStore }
+)(FocusContainer)

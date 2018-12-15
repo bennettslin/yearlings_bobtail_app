@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSceneStore } from 'flux/scene/action'
 
 import { getSceneObject } from 'helpers/data'
@@ -84,11 +83,7 @@ const mapStateToProps = ({
     renderedSceneIndex
 })
 
-
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSceneStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(PresenceListener)
+export default connect(
+    mapStateToProps,
+    { updateSceneStore }
+)(PresenceListener)

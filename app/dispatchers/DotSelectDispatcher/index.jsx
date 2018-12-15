@@ -1,8 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
 import { updateAccessStore } from 'flux/access/action'
 import { updateDotsStore } from 'flux/dots/action'
 
@@ -54,11 +52,10 @@ const mapStateToProps = ({
     dotsBitNumber
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateAccessStore,
         updateDotsStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(DotSelectDispatcher)
+    }
+)(DotSelectDispatcher)
