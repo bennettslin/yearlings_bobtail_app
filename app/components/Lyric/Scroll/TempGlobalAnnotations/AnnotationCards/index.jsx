@@ -1,10 +1,10 @@
 // Component to show all notes and wormholes for each annotation.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import AnnotationCard from './AnnotationCard'
 
-class AnnotationCards extends Component {
+class AnnotationCards extends PureComponent {
 
     static propTypes = {
         // From parent.

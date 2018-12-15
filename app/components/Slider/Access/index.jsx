@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import AccessLetters from '../../Access/Letters'
-
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 import {
     AUDIO_REWIND_KEY,
@@ -12,26 +10,16 @@ import {
 } from 'constants/access'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     renderedStore: { isRenderedLogue }
 }) => ({
-    canLyricRender,
     isRenderedLogue
 })
 
-class SliderAccess extends Component {
+class SliderAccess extends PureComponent {
 
     static propTypes = {
         // From Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

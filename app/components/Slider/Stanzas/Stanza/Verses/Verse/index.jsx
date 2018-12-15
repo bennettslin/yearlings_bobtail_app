@@ -1,24 +1,12 @@
 // Static field that shows the song scenes in the slider. Probably admin only.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getPropsAreShallowEqual } from 'helpers/general'
-
-const mapStateToProps = ({
-    renderStore: { canLyricRender }
-}) => ({
-    canLyricRender
-})
-
-class SliderVerse extends Component {
+class SliderVerse extends PureComponent {
 
     static propTypes = {
-        // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
-
         // From parent.
         logicSelectors: PropTypes.string.isRequired,
         verseIndex: PropTypes.number.isRequired,
@@ -27,13 +15,6 @@ class SliderVerse extends Component {
         verseDuration: PropTypes.number.isRequired,
         stanzaDuration: PropTypes.number.isRequired,
         children: PropTypes.any.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {
@@ -92,4 +73,4 @@ class SliderVerse extends Component {
     }
 }
 
-export default connect(mapStateToProps)(SliderVerse)
+export default SliderVerse

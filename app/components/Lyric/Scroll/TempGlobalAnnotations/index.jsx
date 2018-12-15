@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 // import cx from 'classnames'
 
 import AnnotationCards from './AnnotationCards'
@@ -76,7 +76,7 @@ const TempGlobalAnnotation = ({
     )
 }
 
-class TempGlobalAnnotations extends Component {
+class TempGlobalAnnotations extends PureComponent {
 
     // static propTypes = {}
 

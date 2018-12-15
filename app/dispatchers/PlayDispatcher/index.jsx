@@ -1,6 +1,6 @@
 // Child that knows rules to toggle admin.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAudioStore } from 'flux/audio/action'
@@ -8,10 +8,9 @@ import { updateAudioStore } from 'flux/audio/action'
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
-import { getPropsAreShallowEqual } from 'helpers/general'
 import { getPlayerCanPlayThrough } from 'helpers/player'
 
-class PlayDispatcher extends Component {
+class PlayDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -28,13 +27,6 @@ class PlayDispatcher extends Component {
     componentDidMount() {
         this.props.getRefs({
             dispatchPlay: this.dispatchPlay
-        })
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
         })
     }
 

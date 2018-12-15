@@ -1,4 +1,4 @@
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -8,8 +8,6 @@ import { getDotKeysFromBitNumber } from 'helpers/dot'
 
 import AccessLetters from '../../Access/Letters'
 
-import { getPropsAreShallowEqual } from 'helpers/general'
-
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -18,7 +16,6 @@ import {
 } from 'constants/access'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     renderedStore: { renderedAnnotationIndex },
     toggleStore: {
         isCarouselShown,
@@ -27,7 +24,6 @@ const mapStateToProps = ({
     },
     dotsStore: { dotsBitNumber }
 }) => ({
-    canLyricRender,
     isLyricExpanded,
     renderedAnnotationIndex,
     isCarouselShown,
@@ -35,24 +31,16 @@ const mapStateToProps = ({
     dotsBitNumber
 })
 
-class LyricAccess extends Component {
+class LyricAccess extends PureComponent {
 
     static propTypes = {
 
         // From Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

@@ -1,6 +1,6 @@
 // Component to show individual box of verses.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -13,7 +13,7 @@ import Verse from '../../../Verse'
  * CONTAINER *
  *************/
 
-class UnitCard extends Component {
+class UnitCard extends PureComponent {
 
     static defaultProps = {
         inMain: false,

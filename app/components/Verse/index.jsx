@@ -1,6 +1,6 @@
 // Container for lyric audio button and all lines of a single verse.
 import React, {
-    memo, Component, Fragment as ___
+    memo, PureComponent, Fragment as ___
 } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -12,15 +12,12 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatch
 import VerseLines from './Lines'
 
 import { populateRefs } from 'helpers/ref'
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { VERSE_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canLyricRender,
     renderedSongIndex
 })
 
@@ -28,7 +25,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class Verse extends Component {
+class Verse extends PureComponent {
 
     static defaultProps = {
         inMain: true,
@@ -37,7 +34,6 @@ class Verse extends Component {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -48,21 +44,6 @@ class Verse extends Component {
         inVerseBar: PropTypes.bool.isRequired,
 
         setVerseRef: PropTypes.func
-    }
-
-    shouldComponentUpdate(nextProps) {
-        const shouldComponentUpdate = nextProps.canLyricRender &&
-            !getPropsAreShallowEqual({
-                props: this.props,
-                nextProps,
-                alwaysBypassCheck: {
-                    inMain: true,
-                    isTruncatable: true,
-                    inVerseBar: true
-                }
-            })
-
-        return shouldComponentUpdate
     }
 
     _handleInteractivatableClick = (e) => {
@@ -99,7 +80,6 @@ class Verse extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 renderedSongIndex,
-                canLyricRender,
                 setVerseRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */

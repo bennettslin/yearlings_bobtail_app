@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import cx from 'classnames'
 
 import Shared from './Shared'
@@ -10,7 +10,7 @@ import { getAllTaskObjects } from './helper'
  * CONTAINER *
  *************/
 
-class Admin extends Component {
+class Admin extends PureComponent {
 
     render() {
 

@@ -5,7 +5,7 @@
  * or the last dot card.
  */
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -15,14 +15,11 @@ import UnitDot from './Dot'
 
 import { TITLE } from 'constants/lyrics'
 import { getLyricUnitArray } from './helper'
-import { getPropsAreShallowEqual } from 'helpers/general'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canLyricRender,
     renderedSongIndex
 })
 
@@ -30,31 +27,19 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class Unit extends Component {
+class Unit extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         unitIndex: PropTypes.number.isRequired
     }
 
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                isLastUnit: true
-            }
-        })
-    }
-
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                canLyricRender,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -125,7 +110,7 @@ class Unit extends Component {
  * PRESENTATION *
  ****************/
 
-class UnitView extends Component {
+class UnitView extends PureComponent {
 
     static defaultProps = {
         subsequent: false,
@@ -157,16 +142,6 @@ class UnitView extends Component {
         isSideBottomOnly: PropTypes.bool.isRequired,
 
         setLyricAnnotationElement: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                isLastUnit: true
-            }
-        })
     }
 
     render() {

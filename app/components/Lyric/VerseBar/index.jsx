@@ -1,6 +1,6 @@
 // Component to show selected verse when scrolled outside visible window.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -11,11 +11,9 @@ import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 
 import { getVerseObject } from 'helpers/data'
-import { getPropsAreShallowEqual } from 'helpers/general'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     renderedStore: {
         renderedSongIndex,
         renderedVerseIndex
@@ -26,7 +24,6 @@ const mapStateToProps = ({
         isVerseBarBelow
     }
 }) => ({
-    canLyricRender,
     renderedSongIndex,
     renderedVerseIndex,
     sliderVerseIndex,
@@ -34,7 +31,7 @@ const mapStateToProps = ({
     isVerseBarBelow
 })
 
-class VerseBar extends Component {
+class VerseBar extends PureComponent {
 
     static defaultProps = {
         isAbove: false
@@ -42,7 +39,6 @@ class VerseBar extends Component {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         renderedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
@@ -52,13 +48,6 @@ class VerseBar extends Component {
         // From parent.
         isAbove: PropTypes.bool.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     _handleVerseBarSelect = () => {

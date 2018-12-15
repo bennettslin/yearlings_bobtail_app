@@ -1,6 +1,6 @@
 // Text displays to indicate time spent and remaining.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -9,32 +9,21 @@ import SliderTime from './Time'
 
 import { getSongTotalTime } from 'helpers/data'
 import { getFormattedTime } from 'helpers/format'
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex },
     sliderStore: { sliderTime }
 }) => ({
-    canLyricRender,
     renderedSongIndex,
     sliderTime
 })
 
-class SliderTimes extends Component {
+class SliderTimes extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         sliderTime: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

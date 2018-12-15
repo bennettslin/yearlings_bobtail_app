@@ -1,13 +1,13 @@
 // Component to show individual annotation note or all wormholes.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 import Texts from '../../../../../Texts'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 
-class AnnotationCard extends Component {
+class AnnotationCard extends PureComponent {
 
     static propTypes = {
         card: PropTypes.any.isRequired

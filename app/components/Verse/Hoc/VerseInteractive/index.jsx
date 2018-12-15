@@ -3,30 +3,23 @@
  * is changed.
  */
 
-import React, {
-    Component, Fragment
-} from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import VerseNav from './VerseNav'
 import VerseColour from '../VerseColour'
 
-import { getPropsAreShallowEqual } from 'helpers/general'
-
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
-    canLyricRender,
     interactivatedVerseIndex
 })
 
-class VerseInteractive extends Component {
+class VerseInteractive extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -34,29 +27,6 @@ class VerseInteractive extends Component {
         inUnit: PropTypes.bool,
         verseIndex: PropTypes.number.isRequired,
         handleVerseSelect: PropTypes.func
-    }
-
-    shouldComponentUpdate(nextProps) {
-        const
-            isInteractivatedVerse = this.getIsInteractivated(
-                this.props
-            ),
-            willBeInteractivatedVerse = this.getIsInteractivated(
-                nextProps
-            )
-
-        if (
-            // Don't update if it remains not interactivated.
-            !isInteractivatedVerse &&
-            !willBeInteractivatedVerse
-        ) {
-            return false
-        }
-
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     getIsInteractivated(props) {

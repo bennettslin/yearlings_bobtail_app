@@ -1,6 +1,6 @@
 // Section for score and tips toggle buttons.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -30,7 +30,7 @@ const mapStateToProps = ({
     isScoreLoaded
 })
 
-class ScoresTips extends Component {
+class ScoresTips extends PureComponent {
 
     static defaultProps = {
         inMenu: false,

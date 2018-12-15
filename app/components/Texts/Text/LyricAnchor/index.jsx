@@ -1,6 +1,6 @@
 // Container for text anchor.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -12,12 +12,10 @@ import Anchor from '../../../Anchor'
 import Texts from '../../'
 
 import { populateRefs } from 'helpers/ref'
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     renderedStore: {
         renderedSongIndex,
         renderedAnnotationIndex
@@ -34,7 +32,6 @@ const mapStateToProps = ({
     },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
-    canLyricRender,
     renderedAnnotationIndex,
 
     // This is just to know when to update.
@@ -49,11 +46,10 @@ const mapStateToProps = ({
     interactivatedVerseIndex
 })
 
-class TextLyricAnchor extends Component {
+class TextLyricAnchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
@@ -83,13 +79,6 @@ class TextLyricAnchor extends Component {
         ]).isRequired,
         dotKeys: PropTypes.object,
         setLyricAnnotationElement: PropTypes.func
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     _handleAnchorClick = (e) => {
@@ -151,7 +140,6 @@ class TextLyricAnchor extends Component {
 
         const {
                 /* eslint-disable no-unused-vars */
-                canLyricRender,
                 renderedSongIndex,
                 handleAnchorClick,
                 setLyricAnnotationElement,

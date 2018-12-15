@@ -1,22 +1,19 @@
 // Component for a single line in a verse.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../../../Texts'
 import { TITLE } from 'constants/lyrics'
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
-    canLyricRender,
     renderedSongIndex
 })
 
-class VerseLine extends Component {
+class VerseLine extends PureComponent {
 
     static defaultProps = {
         inVerseBar: false,
@@ -25,7 +22,6 @@ class VerseLine extends Component {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -43,29 +39,9 @@ class VerseLine extends Component {
         columnKey: PropTypes.string.isRequired
     }
 
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                isTruncatable: true,
-                inVerseBar: true,
-                isVerseBeginningSpan: true,
-                isVerseEndingSpan: true,
-                columnKey: true,
-                text: true
-            },
-            checkIsShallowEqual: {
-                verseIndex: true
-            },
-            onlyOnCondition: nextProps.inVerseBar
-        })
-    }
-
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                canLyricRender,
                 renderedSongIndex,
                 verseIndex,
                 dispatch,

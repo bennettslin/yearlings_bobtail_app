@@ -1,6 +1,6 @@
 // Component to show single dot anchor as its own stanza.
 
-import React, { memo, Component } from 'react'
+import React, { memo, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -9,13 +9,11 @@ import { updateAnnotationStore } from 'flux/annotation/action'
 import Anchor from '../../../Anchor'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
 
 const mapStateToProps = ({
     accessStore: { accessedAnnotationIndex },
-    renderStore: { canLyricRender },
     renderedStore: { renderedAnnotationIndex },
     toggleStore: {
         isAccessOn,
@@ -27,7 +25,6 @@ const mapStateToProps = ({
 }) => ({
     accessedAnnotationIndex,
     isAccessOn,
-    canLyricRender,
     isLyricExpanded,
     renderedAnnotationIndex,
     isCarouselShown,
@@ -39,11 +36,10 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class UnitDot extends Component {
+class UnitDot extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
@@ -56,13 +52,6 @@ class UnitDot extends Component {
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
         setLyricAnnotationElement: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     _handleDotButtonClick = () => {
