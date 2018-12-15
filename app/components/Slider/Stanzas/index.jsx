@@ -36,7 +36,7 @@ class SliderStanzas extends PureComponent {
         return (
             <div className={cx(
                 'SliderStanzas',
-                'absoluteFullContainer'
+                'abF'
             )}>
                 {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
 

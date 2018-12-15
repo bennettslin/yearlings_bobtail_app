@@ -48,7 +48,7 @@ const propTypes = {
                 <Svg
                     className={cx(
                         'ThumbImage',
-                        'absoluteFullContainer'
+                        'abF'
                     )}
                 >
                     <rect

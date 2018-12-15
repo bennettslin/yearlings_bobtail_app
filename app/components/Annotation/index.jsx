@@ -88,7 +88,7 @@ class Annotation extends PureComponent {
                                 isSelected ?
                                     'boxShadow__annotation__selected' :
                                     'boxShadow__annotation',
-                                'absoluteFullContainer'
+                                'abF'
                             )
                         }}
                     />

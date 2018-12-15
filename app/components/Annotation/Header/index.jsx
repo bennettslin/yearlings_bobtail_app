@@ -27,7 +27,7 @@ const propTypes = {
             // Annotation header needs to be hideable in carousel.
             inCarousel && 'AnnotationHeaderAnimatable',
 
-            'absoluteFullContainer'
+            'abF'
         )}>
             <AnnotationTitle
                 {...{

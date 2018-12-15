@@ -59,7 +59,7 @@ class Main extends PureComponent {
                 <Carousel />
                 <div className={cx(
                     'Main__flexContainer',
-                    'absoluteFullContainer'
+                    'abF'
                 )}>
                     <LeftShelf />
                     <OverviewPopup inMain />

@@ -109,7 +109,7 @@ class LyricScroll extends PureComponent {
                             tabIndex: -1,
                             className: cx(
                                 'LyricScroll',
-                                'absoluteFullContainer',
+                                'abF',
 
                                 /**
                                  * This gradient does not obscure the lyric

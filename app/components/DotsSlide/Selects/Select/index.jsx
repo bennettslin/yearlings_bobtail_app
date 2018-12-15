@@ -169,7 +169,7 @@ const dotsSlideSelectViewPropTypes = {
                         isInteractivated &&
                         'SlideSelectDescription__interactivated',
 
-                        'absoluteFullContainer',
+                        'abF',
                         'flexCentreContainer'
                     )}>
                         {DOT_DESCRIPTIONS[dotKey]}

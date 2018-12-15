@@ -36,7 +36,7 @@ class Theatre extends PureComponent {
         return (
             <div className={cx(
                 'Theatre',
-                'absoluteFullContainer',
+                'abF',
                 { 'parent__shown': didTheatreRender }
             )}>
 

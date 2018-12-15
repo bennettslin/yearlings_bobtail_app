@@ -47,7 +47,7 @@ class DeviceWrapper extends PureComponent {
                             'DW__mobileNotPhone': isMobile && !isPhone,
                             'DW__mobileNotTablet': isMobile && !isTablet
                         },
-                        'absoluteFullContainer'
+                        'abF'
                     )
                 }}
             >

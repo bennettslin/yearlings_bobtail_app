@@ -64,7 +64,7 @@ const AnchorText = memo(({
                             'TextAnchor__linkText__selected',
 
                             'textShadow__text',
-                            'absoluteFullContainer'
+                            'abF'
                         )}>
                             {word}
                         </span>
@@ -78,7 +78,7 @@ const AnchorText = memo(({
                             'TextAnchor__linkText__selected',
 
                             'textShadow__text',
-                            'absoluteFullContainer'
+                            'abF'
                         )}>
                             {word}
                         </span>

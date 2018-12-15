@@ -6,10 +6,7 @@ import cx from 'classnames'
 
 import Cube from './Cube'
 
-import {
-    CUBE_X_INDICES,
-    CUBE_Y_AXIS_LENGTH
-} from 'constants/cubeIndex'
+import { CUBE_X_INDICES } from 'constants/cubeIndex'
 
 class Cubes extends Component {
 
@@ -30,15 +27,9 @@ class Cubes extends Component {
         return (
             <div
                 className={cx(
-                    `Cubes__y${
-                        yIndex
-                    }${
-                        yIndex === 0 ? '__back' : ''
-                    }${
-                        yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''
-                    }`,
-
-                    'absoluteFullContainer'
+                    'Cubes',
+                    `y${yIndex}`,
+                    'abF'
                 )}
             >
                 {CUBE_X_INDICES.map(xIndex => (

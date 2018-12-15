@@ -75,7 +75,7 @@ class WikiSection extends PureComponent {
                         {...{
                             className: cx(
                                 'iframeContainer__spinner',
-                                'absoluteFullContainer',
+                                'abF',
                                 'flexCentreContainer'
                             )
                         }}

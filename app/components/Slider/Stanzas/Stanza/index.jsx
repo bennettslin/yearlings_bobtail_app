@@ -94,7 +94,7 @@ class SliderStanza extends PureComponent {
                     'boxShadow__sliderStanza',
                     'bgColour__sliderStanza__pattern',
                     `bgColour__stanzaType__${stanzaType}`,
-                    'absoluteFullContainer'
+                    'abF'
                 )}>
                     <SliderVerses
                         {...{

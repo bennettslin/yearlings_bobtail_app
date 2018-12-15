@@ -56,7 +56,7 @@ class Stage extends PureComponent {
                     {...{
                         className: cx(
                             'Stage__aspectRatioContainer',
-                            'absoluteFullContainer'
+                            'abF'
                         ),
                         style: {
                             top: `${stageTop}px`,

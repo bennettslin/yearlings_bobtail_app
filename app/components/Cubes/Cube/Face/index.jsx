@@ -11,8 +11,7 @@ import { getCharStringForNumber } from 'helpers/format'
 
 import {
     FLOOR,
-    CEILING,
-    TILE
+    CEILING
 } from 'constants/scene'
 
 const propTypes = {
@@ -64,43 +63,43 @@ const Face = memo(({
     return (
         <g className={cx(
             'Face',
+            face,
 
             // Used just to find in the DOM.
-            `Face__${faceInitial}${xCharIndex}${yIndex}`
+            `${faceInitial}${xCharIndex}${yIndex}`
         )}>
 
             <path
                 className={cx(
+                    'FacePath',
+                    'ceiling',
                     ceilingFaceClassName,
-                    ceilingCubeClassName,
-                    'Face__path'
+                    ceilingCubeClassName
                 )}
             />
             <path
                 className={cx(
-                    floorFaceClassName,
-                    floorCubeClassName,
-                    'Face__path'
+                    'FacePath',
+                    'ceiling',
+                    ceilingFaceClassName,
+                    'shade'
                 )}
             />
 
-            {/* Single path for the overlying shade. */}
             <path
                 className={cx(
-                    ceilingFaceClassName,
-                    'Face__path',
-                    'Face__shade',
-                    `Face__shade__${face}`,
-                    face === TILE && 'Face__shade__ceilingTile'
+                    'FacePath',
+                    'floor',
+                    floorFaceClassName,
+                    floorCubeClassName
                 )}
             />
             <path
                 className={cx(
+                    'FacePath',
+                    'floor',
                     floorFaceClassName,
-                    'Face__path',
-                    'Face__shade',
-                    `Face__shade__${face}`,
-                    face === TILE && 'Face__shade__floorTile'
+                    'shade'
                 )}
             />
         </g>

@@ -10,7 +10,7 @@ const Wood = memo(() => (
     <div
         className={cx(
             'Wood',
-            'absoluteFullContainer'
+            'abF'
         )}
     />
 ))

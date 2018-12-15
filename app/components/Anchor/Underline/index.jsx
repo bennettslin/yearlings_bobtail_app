@@ -39,7 +39,7 @@ const propTypes = {
                     'Underline__bar__default',
                     isSelected &&
                     'Underline__bar__selected',
-                    'absoluteFullContainer'
+                    'abF'
                 )}
             />
             <Svg
@@ -48,7 +48,7 @@ const propTypes = {
                     'Underline__bar__accessed',
                     isSelected &&
                     'Underline__bar__selected',
-                    'absoluteFullContainer'
+                    'abF'
                 )}
             />
         </div>

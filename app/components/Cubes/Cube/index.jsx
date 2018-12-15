@@ -7,9 +7,9 @@ import cx from 'classnames'
 import Svg from '../../Svg'
 
 import Face from './Face'
-import CubeFillStylesheet from './Stylesheets/CubeFill'
-import FaceFillStylesheet from './Stylesheets/FaceFill'
-import FaceZIndexStylesheet from './Stylesheets/FaceZIndex'
+import CubeColourStylesheet from './Stylesheets/CubeColour'
+import FaceShadeStylesheet from './Stylesheets/FaceShade'
+import FacePathsStylesheet from './Stylesheets/FacePaths'
 
 import { getCharStringForNumber } from 'helpers/format'
 
@@ -37,32 +37,21 @@ const Cube = memo(({
         // Individual cubes need to be svgs in order to have a stacking order.
         <Svg
             className={cx(
-                // This class is used to determine face shading.
-                `Cube__x${xCharIndex}`,
-                `Cube__x${xCharIndex}y${yIndex}`,
-                'absoluteFullContainer'
+                'Cube',
+
+                /**
+                 * These classes are used to determine cube zIndex and face
+                 * shading.
+                 */
+                `y${yIndex}`,
+                `x${xCharIndex}`,
+
+                'abF'
             )}
         >
-            <CubeFillStylesheet
-                {...{
-                    xIndex,
-                    yIndex
-                }}
-            />
-
-            <FaceZIndexStylesheet
-                {...{
-                    xIndex,
-                    yIndex
-                }}
-            />
-
-            <FaceFillStylesheet
-                {...{
-                    xIndex,
-                    yIndex
-                }}
-            />
+            <CubeColourStylesheet {...{ xIndex, yIndex }} />
+            <FaceShadeStylesheet {...{ xIndex, yIndex }} />
+            <FacePathsStylesheet {...{ xIndex, yIndex }} />
 
             {FACES.map(face => (
                 <Face

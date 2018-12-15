@@ -10,7 +10,7 @@ const AccessField = memo(() => {
     return (
         <Svg
             className={cx(
-                'absoluteFullContainer'
+                'abF'
             )}
         >
             <rect

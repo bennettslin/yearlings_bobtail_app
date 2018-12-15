@@ -1,107 +1,107 @@
-// TODO: Stagger this.
-.Face__path {
+.FacePath {
     transition:
         stroke $animationDuration__scene,
         d $animationDuration__scene,
         fill $animationDuration__scene;
-}
 
-.Face__shade {
-    // For now, we'll have a stroke on the shade face.
+    &.shade {
+        // For now, we'll have a stroke on the shade face.
+        stroke: rgba(225, 225, 175, 0.05);
+        stroke-width: 1px;
 
-    // This allows the stroke width to stay constant.
-    vector-effect: non-scaling-stroke;
-    stroke-width: 1px;
-    // stroke: rgba(225, 225, 175, 0.5);
-    stroke: rgba(225, 225, 175, 0.05);
-}
+        // This allows the stroke width to stay constant.
+        vector-effect: non-scaling-stroke;
 
-.Face__shade__ceilingTile {
-    fill: rgba(25, 25, 25, 0.45);
-}
+        .Face.tile
+        & {
+            &.ceiling {
+                fill: rgba(25, 25, 25, 0.45);
+            }
 
-.Face__shade__floorTile {
+            &.floor {
+                // Default.
+                fill: transparent;
 
-    // Default.
-    fill: transparent;
+                // Dynamic floor tile shading lives in CubeFacesStyle.
+            }
+        }
 
-    // Dynamic floor tile shading lives in CubeFacesStyle.
-}
+        .Face.side
+        & {
+            .Cube.x5
+            &,
+            .Cube.x6
+            & {
+                fill: rgba(25, 25, 25, 0.1);
+            }
 
-.Face__shade__side {
+            .Cube.x4
+            &,
+            .Cube.x7
+            & {
+                fill: rgba(25, 25, 25, 0.125);
+            }
 
-    .Cube__x5
-    &,
-    .Cube__x6
-    & {
-        fill: rgba(25, 25, 25, 0.1);
-    }
+            .Cube.x3
+            &,
+            .Cube.x8
+            & {
+                fill: rgba(25, 25, 25, 0.15);
+            }
 
-    .Cube__x4
-    &,
-    .Cube__x7
-    & {
-        fill: rgba(25, 25, 25, 0.125);
-    }
+            .Cube.x2
+            &,
+            .Cube.x9
+            & {
+                fill: rgba(25, 25, 25, 0.175);
+            }
 
-    .Cube__x3
-    &,
-    .Cube__x8
-    & {
-        fill: rgba(25, 25, 25, 0.15);
-    }
+            .Cube.x1
+            &,
+            .Cube.xa
+            & {
+                fill: rgba(25, 25, 25, 0.2);
+            }
 
-    .Cube__x2
-    &,
-    .Cube__x9
-    & {
-        fill: rgba(25, 25, 25, 0.175);
-    }
+            .Cube.x0
+            &,
+            .Cube.xb
+            & {
+                fill: rgba(25, 25, 25, 0.225);
+            }
+        }
 
-    .Cube__x1
-    &,
-    .Cube__xa
-    & {
-        fill: rgba(25, 25, 25, 0.2);
-    }
+        .Face.front
+        & {
+            .Cubes.y0
+            & {
+                fill: rgba(25, 25, 25, 0.2);
+            }
 
-    .Cube__x0
-    &,
-    .Cube__xb
-    & {
-        fill: rgba(25, 25, 25, 0.225);
-    }
-}
+            .Cubes.y1
+            & {
+                fill: rgba(25, 25, 25, 0.225);
+            }
 
-.Face__shade__front {
+            .Cubes.y2
+            & {
+                fill: rgba(25, 25, 25, 0.25);
+            }
 
-    .Cubes__y0__back
-    & {
-        fill: rgba(25, 25, 25, 0.2);
-    }
+            .Cubes.y3
+            & {
+                fill: rgba(25, 25, 25, 0.3);
+            }
 
-    .Cubes__y1
-    & {
-        fill: rgba(25, 25, 25, 0.225);
-    }
+            .Cubes.y4
+            & {
+                fill: rgba(25, 25, 25, 0.35);
+            }
 
-    .Cubes__y2
-    & {
-        fill: rgba(25, 25, 25, 0.25);
-    }
-
-    .Cubes__y3
-    & {
-        fill: rgba(25, 25, 25, 0.3);
-    }
-
-    .Cubes__y4
-    & {
-        fill: rgba(25, 25, 25, 0.35);
-    }
-
-    .Cubes__y5__front
-    & {
-        fill: rgba(25, 25, 25, 0.4);
+            .Cubes.y5
+            & {
+                fill: rgba(25, 25, 25, 0.4);
+            }
+        }
     }
 }

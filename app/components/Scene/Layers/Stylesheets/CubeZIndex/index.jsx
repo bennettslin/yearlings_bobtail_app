@@ -65,10 +65,10 @@ const CubeZIndexStylesheet = memo(() => {
                                         slantDirectionClassName
                                     ],
                                     childPrefixes: [
-                                        `Cube__x${
-                                            xCharIndex
-                                        }y${
+                                        `Cube.y${
                                             yIndex
+                                        }.x${
+                                            xCharIndex
                                         }`
                                     ],
                                     style: {

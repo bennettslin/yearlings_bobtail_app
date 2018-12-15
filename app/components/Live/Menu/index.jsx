@@ -40,14 +40,14 @@ class Menu extends PureComponent {
             <div
                 className={cx(
                     'Menu',
-                    'absoluteFullContainer'
+                    'abF'
                 )}
             >
                 <div
                     className={cx(
                         'Menu__responsive',
                         'width__mainColumn',
-                        'absoluteFullContainer'
+                        'abF'
                     )}
                     style={{
                         marginLeft: menuMarginInOverlay,
@@ -61,7 +61,7 @@ class Menu extends PureComponent {
                     )}>
                         <div className={cx(
                             'MenuChild__title__child',
-                            'absoluteFullContainer'
+                            'abF'
                         )}>
                             <TitleToggle />
                         </div>

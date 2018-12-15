@@ -42,7 +42,7 @@ class Nav extends PureComponent {
                     showSingleNavBook ?
                         'Nav__showSingleBook' :
                         'Nav__showDoubleBook',
-                    'absoluteFullContainer'
+                    'abF'
                 )}
             >
                 {/* Placeholder, has no other purpose. */}

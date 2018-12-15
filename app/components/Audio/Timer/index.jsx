@@ -45,7 +45,7 @@ class AudioTimer extends PureComponent {
 
                 {
                     'AudioTimer__titleTimer': isTitleTimer,
-                    'absoluteFullContainer': isTitleTimer
+                    'abF': isTitleTimer
                 },
 
                 'flexCentreContainer'

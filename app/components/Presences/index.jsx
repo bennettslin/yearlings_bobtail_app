@@ -82,8 +82,8 @@ class Presences extends Component {
                 <div
                     className={cx(
                         'Presences',
-                        `Presences__y${yIndex}`,
-                        'absoluteFullContainer'
+                        `y${yIndex}`,
+                        'abF'
                     )}
                 >
                     <ActorLayer {...actors} />

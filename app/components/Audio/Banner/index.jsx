@@ -45,7 +45,7 @@ class AudioBanner extends PureComponent {
         return (
             <div className={cx(
                 'AudioBanner',
-                'absoluteFullContainer',
+                'abF',
 
                 isTwoRowMenu ?
                     'AudioBanner__belowMenu' :
@@ -54,7 +54,7 @@ class AudioBanner extends PureComponent {
 
                 <div className={cx(
                     'AudioBannerDisplay',
-                    'absoluteFullContainer',
+                    'abF',
                     'flexAlignContainer'
                 )}>
                     {songTitle}

@@ -29,7 +29,11 @@
     display: none;
 }
 
-.absoluteFullContainer {
+/**
+ * "Absolute full." Shortening, at least for now, because it's annoying to see
+ * it everywhere.
+ */
+.abF {
     position: absolute;
     top: 0;
     left: 0;

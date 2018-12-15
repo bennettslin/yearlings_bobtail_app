@@ -63,7 +63,7 @@ class SliderVerse extends PureComponent {
                     `SliderVerse__${verseIndex}`,
 
                     'verseColour__hoverParent',
-                    'absoluteFullContainer'
+                    'abF'
                 )}
                 style={verseStyle}
             >

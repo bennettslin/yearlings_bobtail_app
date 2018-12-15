@@ -99,7 +99,7 @@ class Button extends Component {
                 <div className={cx(
                     'ButtonAnimatable',
                     isPopupButton && 'ButtonAnimatable__popup',
-                    'absoluteFullContainer'
+                    'abF'
                 )}>
 
                     <ButtonIcon

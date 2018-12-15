@@ -93,13 +93,13 @@ const ButtonIcon = memo(({
         <div
             className={cx(
                 'ButtonIcon',
-                'absoluteFullContainer',
+                'abF',
                 'flexCentreContainer'
             )}
         >
             <Svg
                 className={cx(
-                    'absoluteFullContainer'
+                    'abF'
                 )}
             >
                 <IconComponent

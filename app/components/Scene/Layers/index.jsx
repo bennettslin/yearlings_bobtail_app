@@ -19,7 +19,7 @@ class Layers extends Component {
             <div
                 className={cx(
                     'Layers',
-                    'absoluteFullContainer'
+                    'abF'
                 )}
             >
                 <CubeZIndexStylesheet />

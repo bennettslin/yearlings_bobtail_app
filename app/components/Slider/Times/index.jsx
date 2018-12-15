@@ -38,7 +38,7 @@ class SliderTimes extends PureComponent {
         return (
             <div className={cx(
                 'SliderTimes',
-                'absoluteFullContainer'
+                'abF'
             )}>
 
                 <SliderTime

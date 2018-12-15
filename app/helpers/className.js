@@ -25,7 +25,7 @@ export const getParentClassNameForSceneLogic = ({
     let formattedValue = value
 
     if (matrixName === Z_INDICES_MATRIX_NAME) {
-        // Allow zIndex to be appended dynamically by FaceZIndexStylesheet.
+        // Allow zIndex to be appended dynamically by FacePathsStylesheet.
         formattedValue = !isNaN(value) ? getCharStringForNumber(value) : ''
     }
 

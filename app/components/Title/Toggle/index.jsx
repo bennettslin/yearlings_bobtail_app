@@ -75,7 +75,7 @@ class TitleToggle extends PureComponent {
                 {isTwoRowMenu ? (
                     <div className={cx(
                         'TitleToggleButton__animatable',
-                        'absoluteFullContainer'
+                        'abF'
                     )}>
                         {titleButtonChild}
                     </div>

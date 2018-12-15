@@ -28,7 +28,7 @@ const propTypes = {
         yIndex: PropTypes.number.isRequired
     },
 
-    CubeFillStylesheet = memo(({
+    CubeColourStylesheet = memo(({
         xIndex,
         yIndex
 
@@ -38,12 +38,11 @@ const propTypes = {
         return (
             <Stylesheet
                 className={cx(
-                    'CubeFillStylesheet',
-                    `CubeFillStyle__${
-                        xIndex
-                    }${
-                        yIndex
-                    }`
+                    'CubeColourStylesheet',
+
+                    // Just for dev clarity.
+                    `y${yIndex}`,
+                    `x${xIndex}`
                 )}
             >
                 {LEVELS.map(level => {
@@ -93,6 +92,6 @@ const propTypes = {
         )
     })
 
-CubeFillStylesheet.propTypes = propTypes
+CubeColourStylesheet.propTypes = propTypes
 
-export default CubeFillStylesheet
+export default CubeColourStylesheet

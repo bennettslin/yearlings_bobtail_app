@@ -44,14 +44,14 @@ class Sky extends Component {
         return (
             <div className={cx(
                 'Sky',
-                'absoluteFullContainer'
+                'abF'
             )}>
                 <div
                     className={cx(
                         'Season',
                         `Season__${sceneSeason}`,
                         'Sky__filter',
-                        'absoluteFullContainer'
+                        'abF'
                     )}
                 />
                 <div
@@ -59,7 +59,7 @@ class Sky extends Component {
                         'TimeOfDay',
                         `TimeOfDay__${sceneTime}`,
                         'Sky__filter',
-                        'absoluteFullContainer'
+                        'abF'
                     )}
                 />
                 {/* Not going to do this work for now. */}

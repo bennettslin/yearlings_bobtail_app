@@ -28,7 +28,7 @@ class OverlayPopups extends PureComponent {
                 'topHeight__overlayPopups',
                 'topHeight__overlayPopups__desktop',
                 'topHeight__overlayPopups__mobile',
-                'absoluteFullContainer'
+                'abF'
             )}>
                 <AnnotationPopup />
                 <TitlePopup />

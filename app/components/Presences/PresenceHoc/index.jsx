@@ -69,7 +69,7 @@ class PresenceHoc extends PureComponent {
                     {...{
                         className: cx(
                             getClassNameForPresenceType(presenceType),
-                            'absoluteFullContainer'
+                            'abF'
                         ),
                         ...presenceType === ACTORS && {
                             instanceKey: presenceValue

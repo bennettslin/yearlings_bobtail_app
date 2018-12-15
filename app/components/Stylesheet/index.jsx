@@ -25,7 +25,6 @@ class Stylesheet extends Component {
         return (
             <style
                 className={cx(
-                    'Stylesheet',
                     className
                 )}
             >

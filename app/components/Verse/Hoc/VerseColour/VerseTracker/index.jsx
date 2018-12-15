@@ -106,7 +106,7 @@ class VerseTracker extends Component {
                     inLyric &&
                         'VerseTracker__inLyric',
 
-                    'absoluteFullContainer'
+                    'abF'
                 )}
                 style={{
                     transition: `${transitionStyle} ${verseDuration}s linear`

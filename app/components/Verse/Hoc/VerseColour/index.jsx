@@ -45,7 +45,7 @@ const propTypes = {
                     inVerseBar && 'VerseColour__inVerseBar',
                     isInteractivated && 'VerseColour__interactivated',
 
-                    'absoluteFullContainer'
+                    'abF'
                 )}
             >
                 <VerseTracker
@@ -81,7 +81,7 @@ const propTypes = {
                         'GcE',
 
                         'colourFilter__verse__even',
-                        'absoluteFullContainer'
+                        'abF'
                     )} />
                 )}
             </div>

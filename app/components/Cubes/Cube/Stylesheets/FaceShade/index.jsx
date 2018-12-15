@@ -40,8 +40,7 @@ const propTypes = {
         yIndex: PropTypes.number.isRequired
     },
 
-    FaceFillStylesheet = memo(({
-
+    FaceShadeStylesheet = memo(({
         xIndex,
         yIndex
 
@@ -51,19 +50,18 @@ const propTypes = {
         return (
             <Stylesheet
                 className={cx(
-                    'FaceFillStylesheet',
-                    `FacesShadeFillStyle__${
-                        xIndex
-                    }${
-                        yIndex
-                    }`
+                    'FaceShadeStylesheet',
+
+                    // Just for dev clarity.
+                    `y${yIndex}`,
+                    `x${xIndex}`
                 )}
             >
                 {CUBE_Z_INDICES.map(zIndex => {
 
                     /**
-                 * Only floor tiles below a certain zIndex are shaded.
-                 */
+                     * Only floor tiles below a certain zIndex are shaded.
+                     */
                     if (zIndex >= FLOOR_TILE_SHADE_Z_INDEX_MAP.length) {
                         return null
                     }
@@ -114,6 +112,6 @@ const propTypes = {
         )
     })
 
-FaceFillStylesheet.propTypes = propTypes
+FaceShadeStylesheet.propTypes = propTypes
 
-export default FaceFillStylesheet
+export default FaceShadeStylesheet

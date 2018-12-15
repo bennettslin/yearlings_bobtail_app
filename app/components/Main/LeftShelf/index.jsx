@@ -35,7 +35,7 @@ class LeftShelf extends PureComponent {
             <div className={cx(
                 'LeftShelf',
                 'width__leftShelf',
-                isPhone && 'absoluteFullContainer',
+                isPhone && 'abF',
                 className
             )}>
                 <OverviewToggle inLeftShelf />
