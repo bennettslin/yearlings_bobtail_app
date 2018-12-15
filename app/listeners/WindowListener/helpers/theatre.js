@@ -19,11 +19,11 @@ import {
 
 const _getEarColumnHeight = (
     deviceIndex,
-    isHiddenLyric,
+    isHeightlessLyric,
     windowHeight
 ) => {
     return (
-        isHiddenLyric || getIsDesktop(deviceIndex)
+        isHeightlessLyric || getIsDesktop(deviceIndex)
     ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
@@ -42,10 +42,10 @@ const getCentreFieldHeight = ({
     deviceIndex,
     windowWidth,
     windowHeight,
-    isHiddenLyric
+    isHeightlessLyric
 }) => {
     const earColumnHeight = _getEarColumnHeight(
-        deviceIndex, isHiddenLyric, windowHeight
+        deviceIndex, isHeightlessLyric, windowHeight
     )
 
     let menuHeight = LS_HEIGHT_MENU
@@ -71,18 +71,18 @@ const getCeilingFloorHeight = ({
     windowHeight,
     stageHeight,
     stageTop,
-    isHiddenLyric
+    isHeightlessLyric
 }) => {
 
     const
         earColumnHeight = _getEarColumnHeight(
-            deviceIndex, isHiddenLyric, windowHeight
+            deviceIndex, isHeightlessLyric, windowHeight
         ),
         centreFieldHeight = getCentreFieldHeight({
             deviceIndex,
             windowWidth,
             windowHeight,
-            isHiddenLyric
+            isHeightlessLyric
         }),
 
         ceilingHeight =

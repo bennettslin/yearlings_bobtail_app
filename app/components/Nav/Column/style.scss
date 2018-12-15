@@ -12,8 +12,8 @@
     .DW__desktop
     & {
         transition:
-            bottom $animationDuration__default,
-            opacity $animationDuration__default;
+            bottom $animationDuration__fast,
+            opacity $animationDuration__fast;
 
         bottom: -$js__height__nav;
     }
@@ -21,8 +21,8 @@
     .DW__mobileNotPhone
     & {
         transition:
-            top $animationDuration__default,
-            opacity $animationDuration__default;
+            top $animationDuration__fast,
+            opacity $animationDuration__fast;
 
         top: -$js__height__nav;
     }
@@ -45,7 +45,8 @@
 }
 
 // Hide both carousel and nav in logues.
-.RM__carouselNavShowable.RM__navExpanded {
+.RM__carouselNavShowable.RM__navExpanded
+.Main__visible {
 
     .NavColumn {
         opacity: 1;

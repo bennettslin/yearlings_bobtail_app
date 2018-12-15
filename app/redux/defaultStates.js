@@ -151,8 +151,8 @@ const
     },
 
     RESPONSIVE_DEFAULTS = {
-        isHiddenLyric: false,
-        isHiddenCarouselNav: false,
+        isHeightlessLyric: false,
+        isUnrenderableCarouselNav: false,
         isMobileWiki: false,
         isScoresTipsInMain: false,
         isTwoRowMenu: false,

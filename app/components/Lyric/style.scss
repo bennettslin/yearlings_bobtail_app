@@ -7,7 +7,10 @@
     position: absolute;
     box-sizing: border-box;
 
-    transition: height $animationDuration__default;
+    opacity: 0;
+    transition:
+        opacity $animationDuration__fast,
+        height $animationDuration__default;
 
     // Keeps elements inside window!
     overflow: hidden;
@@ -38,6 +41,10 @@
     & {
         height: 0;
     }
+}
+
+.Lyric__visible {
+    opacity: 1;
 }
 
 .Lyric__expanded {

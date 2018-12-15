@@ -1,8 +1,8 @@
 // Component to show selected verse when scrolled outside visible window.
 
 import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Transition from 'react-transition-group/Transition'

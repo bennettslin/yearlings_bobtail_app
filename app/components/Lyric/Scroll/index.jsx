@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { CSSTransition } from 'react-transition-group'
+import { Transition } from 'react-transition-group'
 import ScrollLyricListener from '../../../listeners/ScrollLyricListener'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
@@ -92,7 +92,7 @@ class LyricScroll extends PureComponent {
         return (
             <___>
                 <ScrollLyricListener {...{ getRefs: this._getRefs }} />
-                <CSSTransition
+                <Transition
                     mountOnEnter
                     unmountOnExit
                     {...{
@@ -100,9 +100,6 @@ class LyricScroll extends PureComponent {
                         timeout: {
                             enter: 0,
                             exit: 200
-                        },
-                        classNames: {
-                            enterDone: 'LyricScroll__visible'
                         }
                     }}
                 >
@@ -138,7 +135,7 @@ class LyricScroll extends PureComponent {
                             <TempGlobalAnnotations />
                         )}
                     </div>
-                </CSSTransition>
+                </Transition>
                 <LyricWheelDispatcher
                     {...{
                         getRefs: this._getRefs,

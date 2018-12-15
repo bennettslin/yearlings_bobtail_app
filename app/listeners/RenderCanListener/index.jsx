@@ -57,7 +57,7 @@ class RenderCanListener extends PureComponent {
 
             // Wait for parent transition before continuing render sequence.
             const didSceneRenderTimeoutId = setTimeout(
-                this._setDidSceneRender, 500
+                this._setDidSceneRender, 1000
             )
 
             this.setState({ didSceneRenderTimeoutId })
@@ -74,7 +74,7 @@ class RenderCanListener extends PureComponent {
 
             // Wait for parent transition before continuing render sequence.
             const didLyricRenderTimeoutId = setTimeout(
-                this._lyricDidRender, 100
+                this._lyricDidRender, 200
             )
 
             this.setState({ didLyricRenderTimeoutId })
@@ -91,7 +91,7 @@ class RenderCanListener extends PureComponent {
 
             // Wait for parent transition before continuing render sequence.
             const didCarouselRenderTimeoutId = setTimeout(
-                this._carouselDidRender, 100
+                this._carouselDidRender, 200
             )
 
             this.setState({ didCarouselRenderTimeoutId })

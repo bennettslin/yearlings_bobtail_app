@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { CSSTransition } from 'react-transition-group'
+import { Transition } from 'react-transition-group'
 import CarouselAnnotation from '../Annotation'
 
 import { getAnnotationsCount } from 'helpers/data'
@@ -84,7 +84,7 @@ class CarouselScroll extends PureComponent {
             annotationsIndices = getArrayOfLength(annotationsCount)
 
         return (
-            <CSSTransition
+            <Transition
                 mountOnEnter
                 unmountOnExit
                 {...{
@@ -92,9 +92,6 @@ class CarouselScroll extends PureComponent {
                     timeout: {
                         enter: 0,
                         exit: 200
-                    },
-                    classNames: {
-                        enterDone: 'CarouselScroll__visible'
                     }
                 }}
             >
@@ -138,7 +135,7 @@ class CarouselScroll extends PureComponent {
                         )
                     })}
                 </div>
-            </CSSTransition>
+            </Transition>
         )
     }
 }

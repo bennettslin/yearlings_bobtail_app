@@ -19,7 +19,7 @@ import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     loadStore: { appMounted },
-    responsiveStore: { isHiddenLyric },
+    responsiveStore: { isHeightlessLyric },
     // sessionStore: { selectedWikiIndex },
     toggleStore: {
         // isScoreShown,
@@ -28,7 +28,7 @@ const mapStateToProps = ({
     eventStore: { queuedFocus }
 }) => ({
     appMounted,
-    isHiddenLyric,
+    isHeightlessLyric,
     // selectedWikiIndex,
     // isScoreShown,
     isLyricExpanded,
@@ -40,7 +40,7 @@ class FocusContainer extends PureComponent {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        isHiddenLyric: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         // selectedWikiIndex: PropTypes.number.isRequired,
         // isScoreShown: PropTypes.bool.isRequired,
@@ -82,16 +82,16 @@ class FocusContainer extends PureComponent {
          * depending on whether it is now shown or hidden.
          */
         const {
-                isHiddenLyric,
+                isHeightlessLyric,
                 isLyricExpanded
             } = this.props,
             {
-                isHiddenLyric: wasHiddenLyric,
+                isHeightlessLyric: wasHeightlessLyric,
                 isLyricExpanded: wasLyricExpanded
             } = prevProps
 
         if (
-            isHiddenLyric !== wasHiddenLyric ||
+            isHeightlessLyric !== wasHeightlessLyric ||
             isLyricExpanded !== wasLyricExpanded
         ) {
             this._focusElementForAccess()
@@ -122,7 +122,7 @@ class FocusContainer extends PureComponent {
         const {
             // isScoreShown,
             // selectedWikiIndex,
-            isHiddenLyric,
+            isHeightlessLyric,
             isLyricExpanded
         } = this.props
 
@@ -144,7 +144,7 @@ class FocusContainer extends PureComponent {
 
         if (
             (
-                !isHiddenLyric || isLyricExpanded
+                !isHeightlessLyric || isLyricExpanded
             ) &&
             this.lyricElement
         ) {

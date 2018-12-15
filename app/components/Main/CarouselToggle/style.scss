@@ -11,10 +11,10 @@
     justify-content: center;
     z-index: $zIndex__carouselNavButton;
 
-    transition: margin $animationDuration__default,
-                bottom $animationDuration__default,
-                // border-radius $animationDuration__default,
-                box-shadow $animationDuration__default;
+    transition: margin $animationDuration__fast,
+                bottom $animationDuration__fast,
+                // border-radius $animationDuration__fast,
+                box-shadow $animationDuration__fast;
 
     // Widths for all other devices are set by "width__leftShelf" class.
     .DW__desktop
@@ -39,6 +39,8 @@
     .RM__carouselNavUnshowable
     &,
     .RM__noSelectedDots
+    &,
+    .Main__invisible
     & {
         margin-left: -$width__overviewToggle__laptop;
     }

@@ -58,7 +58,7 @@ export const getVerseBarStatus = ({
     deviceIndex,
     windowHeight,
     isLyricExpanded,
-    isHiddenLyric,
+    isHeightlessLyric,
     isTwoRowMenu,
     verseElement
 }) => {
@@ -68,7 +68,7 @@ export const getVerseBarStatus = ({
     }
 
     // If lyric is collapsed and heightless, verse bars should never show.
-    if (isHiddenLyric && !isLyricExpanded) {
+    if (isHeightlessLyric && !isLyricExpanded) {
         return {
             isVerseBarAbove: false,
             isVerseBarBelow: false

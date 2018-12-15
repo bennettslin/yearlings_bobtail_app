@@ -17,8 +17,10 @@ import VerseBar from './VerseBar'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
+    renderStore: { canLyricRender },
     toggleStore: { isLyricExpanded }
 }) => ({
+    canLyricRender,
     isLyricExpanded
 })
 
@@ -30,6 +32,7 @@ class Lyric extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
 
         // From parent.
@@ -54,6 +57,7 @@ class Lyric extends PureComponent {
 
     render() {
         const {
+            canLyricRender,
             isLyricExpanded,
             setLyricFocusElement
         } = this.props
@@ -72,6 +76,7 @@ class Lyric extends PureComponent {
                         {...{
                             className: cx(
                                 'Lyric',
+                                canLyricRender && 'Lyric__visible',
                                 isLyricExpanded && 'Lyric__expanded',
                                 'position__lyricColumn__desktop',
                                 'position__lyricColumn__mobile',

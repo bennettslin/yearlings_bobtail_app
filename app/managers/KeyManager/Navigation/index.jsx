@@ -16,7 +16,7 @@ class NavigationManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isHiddenLyric: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
@@ -39,7 +39,7 @@ class NavigationManager extends PureComponent {
     handleNavigation = (e, keyName) => {
 
         const {
-                isHiddenLyric,
+                isHeightlessLyric,
                 isLyricExpanded,
                 interactivatedVerseIndex,
                 isScoreShown,
@@ -91,7 +91,7 @@ class NavigationManager extends PureComponent {
                 } = this.navigateNav(e, keyName))
 
             // We're in lyrics section.
-            } else if (!isHiddenLyric || isLyricExpanded) {
+            } else if (!isHeightlessLyric || isLyricExpanded) {
                 keyWasRegistered = this.navigateLyric(e, keyName)
 
                 // If key was registered, then annotation index was accessed.
@@ -129,7 +129,7 @@ const mapStateToProps = ({
         isLyricExpanded,
         isScoreShown
     },
-    responsiveStore: { isHiddenLyric },
+    responsiveStore: { isHeightlessLyric },
     songStore: {
         selectedAnnotationIndex,
         isSelectedLogue
@@ -139,7 +139,7 @@ const mapStateToProps = ({
         selectedWikiIndex
     }
 }) => ({
-    isHiddenLyric,
+    isHeightlessLyric,
     isLyricExpanded,
     interactivatedVerseIndex,
     isScoreShown,

@@ -37,7 +37,7 @@ class RemainderWrapper extends PureComponent {
         selectedTipsOption: PropTypes.string.isRequired,
 
         isEarShown: PropTypes.bool.isRequired,
-        isHiddenLyric: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         showShrunkNavIcon: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
@@ -67,7 +67,7 @@ class RemainderWrapper extends PureComponent {
                 isCarouselNavShowable,
                 interactivatedVerseIndex,
                 isEarShown,
-                isHiddenLyric,
+                isHeightlessLyric,
                 showShrunkNavIcon,
                 isScoresTipsInMain,
                 isTwoRowMenu,
@@ -126,7 +126,7 @@ class RemainderWrapper extends PureComponent {
 
                         singleShownEarColumnKey &&
                             `RM__${singleShownEarColumnKey}EarColumnOnly`,
-                        isHiddenLyric ?
+                        isHeightlessLyric ?
                             'RM__lyricHeightless' : 'RM__lyricHeighted',
 
                         {
@@ -183,7 +183,7 @@ const mapStateToProps = ({
         isSliderMoving
     },
     responsiveStore: {
-        isHiddenLyric,
+        isHeightlessLyric,
         isScoresTipsInMain,
         isTwoRowMenu,
         showShrunkNavIcon
@@ -213,7 +213,7 @@ const mapStateToProps = ({
     isRenderedLogue,
     isSliderTouched,
     isSliderMoving,
-    isHiddenLyric,
+    isHeightlessLyric,
     showShrunkNavIcon,
     isScoresTipsInMain,
     isTwoRowMenu

@@ -6,33 +6,33 @@ import {
 import { getIsLyricExpandable } from './responsive'
 
 import {
-    HIDDEN_NAV_MIN,
-    HIDDEN_LYRIC_MIN,
-    HIDDEN_LYRIC_MAX
+    UNRENDERABLE_NAV_MIN,
+    HEIGHTLESS_LYRIC_MIN,
+    HEIGHTLESS_LYRIC_MAX
 } from '../../../constants/responsive'
 
-const getIsHiddenCarouselNav = ({
+const getIsUnrenderableCarouselNav = ({
     deviceIndex,
     windowHeight,
     windowWidth
 }) => {
-    // Hide carousel nav if it's a phone...
-    const isHiddenCarouselNav = getIsPhone(deviceIndex) ||
+    // Don't render carousel nav if it's a phone...
+    const isUnrenderableCarouselNav = getIsPhone(deviceIndex) ||
 
     // If the height is below a minimum...
-    windowHeight < HIDDEN_NAV_MIN ||
+    windowHeight < UNRENDERABLE_NAV_MIN ||
 
     // Or if it's a heightless mini.
-    (getIsMini(deviceIndex) && getIsHiddenLyric({
+    (getIsMini(deviceIndex) && getIsHeightlessLyric({
         deviceIndex,
         windowHeight,
         windowWidth
     }))
 
-    return isHiddenCarouselNav
+    return isUnrenderableCarouselNav
 }
 
-const getIsHiddenLyric = ({
+const getIsHeightlessLyric = ({
     deviceIndex,
     windowHeight,
     windowWidth
@@ -42,16 +42,16 @@ const getIsHiddenLyric = ({
     return getIsLyricExpandable(deviceIndex) &&
 
         // It is never heightless when above the max of 720...
-        windowHeight < HIDDEN_LYRIC_MAX &&
+        windowHeight < HEIGHTLESS_LYRIC_MAX &&
 
         // It is always heightless when below the min of 540...
-        (windowHeight < HIDDEN_LYRIC_MIN ||
+        (windowHeight < HEIGHTLESS_LYRIC_MIN ||
 
         // Otherwise, it is heightless when width exceeds height.
         windowWidth > windowHeight)
 }
 
 export {
-    getIsHiddenCarouselNav,
-    getIsHiddenLyric
+    getIsUnrenderableCarouselNav,
+    getIsHeightlessLyric
 }

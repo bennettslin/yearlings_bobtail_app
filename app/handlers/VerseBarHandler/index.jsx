@@ -18,7 +18,7 @@ class VerseBarHandler extends PureComponent {
         deviceIndex: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        isHiddenLyric: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
@@ -109,7 +109,7 @@ class VerseBarHandler extends PureComponent {
                     deviceIndex: this.props.deviceIndex,
                     windowHeight: this.props.windowHeight,
                     isLyricExpanded: this.props.isLyricExpanded,
-                    isHiddenLyric: this.props.isHiddenLyric,
+                    isHeightlessLyric: this.props.isHeightlessLyric,
                     isTwoRowMenu: this.props.isTwoRowMenu,
                     verseElement
                 }),
@@ -147,7 +147,7 @@ const mapStateToProps = ({
         windowHeight
     },
     responsiveStore: {
-        isHiddenLyric,
+        isHeightlessLyric,
         isTwoRowMenu
     },
     toggleStore: { isLyricExpanded },
@@ -167,7 +167,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     isVerseBarAbove,
     isVerseBarBelow,
-    isHiddenLyric,
+    isHeightlessLyric,
     isTwoRowMenu,
     selectedVerseIndex,
     sliderVerseIndex

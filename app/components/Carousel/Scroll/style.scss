@@ -3,9 +3,6 @@
     overflow-x: scroll;
     height: 100%;
 
-    opacity: 0;
-    transition: opacity $animationDuration__fast;
-
     .DW__desktop
     & {
         padding-left: $width__overviewToggle__laptop;
@@ -62,8 +59,4 @@
     &:after {
         padding-right: $width__carouselSelect__mini;
     }
-}
-
-.CarouselScroll__visible {
-    opacity: 1;
 }

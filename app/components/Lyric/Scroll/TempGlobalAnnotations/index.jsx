@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-// import cx from 'classnames'
 
 import AnnotationCards from './AnnotationCards'
 import Button from '../../../Button'

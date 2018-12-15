@@ -16,13 +16,13 @@ import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
 const mapStateToProps = ({
     deviceStore: { deviceIndex },
     responsiveStore: {
-        isHiddenLyric,
+        isHeightlessLyric,
         isLyricExpandable
     },
     toggleStore: { isLyricExpanded }
 }) => ({
     deviceIndex,
-    isHiddenLyric,
+    isHeightlessLyric,
     isLyricExpandable,
     isLyricExpanded
 })
@@ -32,7 +32,7 @@ class LyricToggleExpand extends PureComponent {
     static propTypes = {
     // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
-        isHiddenLyric: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,
 
@@ -50,14 +50,14 @@ class LyricToggleExpand extends PureComponent {
 
     render() {
         const {
-                isHiddenLyric,
+                isHeightlessLyric,
                 isLyricExpanded,
                 isLyricExpandable,
                 inMain
             } = this.props,
 
             // Render button in main if lyric column is heightless.
-            shouldRender = inMain ? isHiddenLyric : true
+            shouldRender = inMain ? isHeightlessLyric : true
 
         return isLyricExpandable && shouldRender && (
             <div className={cx(

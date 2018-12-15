@@ -9,8 +9,8 @@ import { updateRenderableStore } from 'flux/renderable/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
 
 import {
-    getIsHiddenLyric,
-    getIsHiddenCarouselNav
+    getIsHeightlessLyric,
+    getIsUnrenderableCarouselNav
 } from './helpers/hidden'
 import {
     getShowShrunkNavIcon,
@@ -65,7 +65,7 @@ class WindowListener extends PureComponent {
                 windowWidth
             } = resizeWindow(e ? e.target : undefined),
 
-            isHiddenLyric = getIsHiddenLyric({
+            isHeightlessLyric = getIsHeightlessLyric({
                 deviceIndex,
                 windowHeight,
                 windowWidth
@@ -83,14 +83,14 @@ class WindowListener extends PureComponent {
             deviceIndex,
             windowHeight,
             windowWidth,
-            isHiddenLyric
+            isHeightlessLyric
         })
 
         this._updateResponsiveStore({
             deviceIndex,
             windowHeight,
             windowWidth,
-            isHiddenLyric
+            isHeightlessLyric
         })
 
         return deviceIndex
@@ -100,7 +100,7 @@ class WindowListener extends PureComponent {
         deviceIndex,
         windowHeight,
         windowWidth,
-        isHiddenLyric
+        isHeightlessLyric
     }) {
         const {
                 stageTop,
@@ -111,7 +111,7 @@ class WindowListener extends PureComponent {
                 deviceIndex,
                 windowWidth,
                 windowHeight,
-                isHiddenLyric
+                isHeightlessLyric
             }),
             {
                 ceilingHeight,
@@ -122,7 +122,7 @@ class WindowListener extends PureComponent {
                 windowHeight,
                 stageHeight,
                 stageTop,
-                isHiddenLyric
+                isHeightlessLyric
             })
 
         this.props.updateDeviceStore({
@@ -142,11 +142,11 @@ class WindowListener extends PureComponent {
         deviceIndex,
         windowHeight,
         windowWidth,
-        isHiddenLyric
+        isHeightlessLyric
     }) {
         this.props.updateResponsiveStore({
-            isHiddenLyric,
-            isHiddenCarouselNav: getIsHiddenCarouselNav({
+            isHeightlessLyric,
+            isUnrenderableCarouselNav: getIsUnrenderableCarouselNav({
                 deviceIndex,
                 windowHeight,
                 windowWidth

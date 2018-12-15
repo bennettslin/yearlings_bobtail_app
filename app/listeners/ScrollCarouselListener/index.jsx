@@ -18,7 +18,7 @@ class ScrollCarouselListener extends PureComponent {
         queuedScrollCarouselIndex: PropTypes.number.isRequired,
         queuedScrollCarouselFromRender: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
-        isHiddenCarouselNav: PropTypes.bool.isRequired,
+        isUnrenderableCarouselNav: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
@@ -49,11 +49,11 @@ class ScrollCarouselListener extends PureComponent {
         if (queuedScrollCarouselLog && !prevCarouselLog) {
             const {
                 isCarouselShown,
-                isHiddenCarouselNav
+                isUnrenderableCarouselNav
             } = this.props
 
-            // Only scroll if carousel is shown.
-            if (isCarouselShown && !isHiddenCarouselNav) {
+            // Only scroll if carousel is renderable.
+            if (isCarouselShown && !isUnrenderableCarouselNav) {
                 const {
                     queuedScrollCarouselLog,
                     queuedScrollCarouselIndex,
@@ -111,7 +111,7 @@ const mapStateToProps = ({
         deviceIndex,
         windowWidth
     },
-    responsiveStore: { isHiddenCarouselNav },
+    responsiveStore: { isUnrenderableCarouselNav },
     songStore: { isSelectedLogue }
 }) => ({
     queuedScrollCarouselLog,
@@ -120,7 +120,7 @@ const mapStateToProps = ({
     isCarouselShown,
     deviceIndex,
     windowWidth,
-    isHiddenCarouselNav,
+    isUnrenderableCarouselNav,
     isSelectedLogue
 })
 

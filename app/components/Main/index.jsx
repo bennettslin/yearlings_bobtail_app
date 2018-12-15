@@ -4,7 +4,9 @@
  */
 
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import CarouselToggle from './CarouselToggle'
 import LeftShelf from './LeftShelf'
@@ -17,21 +19,37 @@ import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
+const mapStateToProps = ({
+    renderStore: { canCarouselRender }
+}) => ({
+    canCarouselRender
+})
+
 class Main extends PureComponent {
+
+    static propTypes = {
+        // Through Redux.
+        canCarouselRender: PropTypes.bool.isRequired
+    }
 
     componentDidMount() {
         logMount('Main')
     }
 
     render() {
+        const { canCarouselRender } = this.props
 
         /**
          * In phone, flex container's children have absolute position.
          */
-
         return (
             <div className={cx(
                 'Main',
+
+                canCarouselRender ?
+                    'Main__visible' :
+                    'Main__invisible',
+
                 'position__mainColumn',
                 'width__mainColumn'
             )}>
@@ -56,4 +74,4 @@ class Main extends PureComponent {
     }
 }
 
-export default Main
+export default connect(mapStateToProps)(Main)

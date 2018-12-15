@@ -7,6 +7,8 @@
     left: 0;
     width: 100vw;
 
+    opacity: 0;
+
     // Allows the lyric to scroll when carousel has higher z-index.
     z-index: $zIndex__annotation;
 
@@ -17,7 +19,9 @@
         height: $height__chivalry;
         padding-bottom: $js__margin__thin;
 
-        transition: bottom $animationDuration__default;
+        transition:
+            opacity $animationDuration__fast,
+            bottom $animationDuration__fast;
     }
 
     .DW__mobileNotPhone
@@ -25,17 +29,27 @@
         top: -100%;
         height: 100%;
 
-        transition: top $animationDuration__default;
+        transition:
+            opacity $animationDuration__fast,
+            top $animationDuration__fast;
+    }
+
+    .RM__carouselNavShowable.RM__carouselExpanded
+    .Main__visible
+    & {
+        opacity: 1;
     }
 
     .DW__desktop
     .RM__carouselNavShowable.RM__carouselExpanded
+    .Main__visible
     & {
         bottom: 0;
     }
 
     .DW__mobileNotPhone
     .RM__carouselNavShowable.RM__carouselExpanded
+    .Main__visible
     & {
         top: 0;
     }

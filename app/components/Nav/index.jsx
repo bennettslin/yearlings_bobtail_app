@@ -9,11 +9,11 @@ import NavColumn from './Column'
 
 const mapStateToProps = ({
     responsiveStore: {
-        isHiddenCarouselNav,
+        isUnrenderableCarouselNav,
         showSingleNavBook
     }
 }) => ({
-    isHiddenCarouselNav,
+    isUnrenderableCarouselNav,
     showSingleNavBook
 })
 
@@ -21,7 +21,7 @@ class Nav extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isHiddenCarouselNav: PropTypes.bool.isRequired,
+        isUnrenderableCarouselNav: PropTypes.bool.isRequired,
         showSingleNavBook: PropTypes.bool.isRequired
     }
 
@@ -31,11 +31,11 @@ class Nav extends PureComponent {
 
     render() {
         const {
-            isHiddenCarouselNav,
+            isUnrenderableCarouselNav,
             showSingleNavBook
         } = this.props
 
-        return !isHiddenCarouselNav && (
+        return !isUnrenderableCarouselNav && (
             <div
                 className={cx(
                     'Nav',
