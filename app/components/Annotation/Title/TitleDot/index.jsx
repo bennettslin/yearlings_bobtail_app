@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Anchor from '../../../Anchor/newIndex'
+import Anchor from '../../../Anchor'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 

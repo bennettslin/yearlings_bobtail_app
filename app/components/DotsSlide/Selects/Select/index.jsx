@@ -1,5 +1,7 @@
 // Button in dots section to select and deselect dot.
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, {
+    memo, PureComponent, Fragment as ___
+} from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -7,7 +9,7 @@ import cx from 'classnames'
 import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
 import Button from '../../../Button'
 import Dot from '../../../Dot'
-import Anchor from '../../../Anchor/newIndex'
+import Anchor from '../../../Anchor'
 
 import { populateRefs } from 'helpers/ref'
 
@@ -122,7 +124,7 @@ const dotsSlideSelectViewPropTypes = {
         handleTextContainerClick: PropTypes.func.isRequired
     },
 
-    DotsSlideSelectView = ({
+    DotsSlideSelectView = memo(({
 
         // From props.
         dotKey,
@@ -189,7 +191,7 @@ const dotsSlideSelectViewPropTypes = {
                 />
             </div>
         )
-    }
+    })
 
 DotsSlideSelectView.propTypes = dotsSlideSelectViewPropTypes
 

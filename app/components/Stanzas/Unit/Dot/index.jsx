@@ -6,7 +6,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from 'flux/annotation/action'
 
-import Anchor from '../../../Anchor/newIndex'
+import Anchor from '../../../Anchor'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { getPropsAreShallowEqual } from 'helpers/general'

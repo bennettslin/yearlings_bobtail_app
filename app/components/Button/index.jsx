@@ -39,14 +39,7 @@ class Button extends Component {
     shouldComponentUpdate(nextProps) {
         return !getPropsAreShallowEqual({
             props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                isCustomSize: true,
-                isSmallSize: true,
-                isLargeSize: true,
-                isPopupButton: true,
-                accessKey: true
-            }
+            nextProps
         })
     }
 

@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagationDispatcher'
 import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
-import Anchor from '../../../Anchor/newIndex'
+import Anchor from '../../../Anchor'
 import Texts from '../../'
 
 import { populateRefs } from 'helpers/ref'
