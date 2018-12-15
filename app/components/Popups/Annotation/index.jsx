@@ -51,7 +51,7 @@ class AnnotationPopup extends PureComponent {
         const {
             isOverlayingAnnotation,
             isPopupAnnotationVisible,
-            popupAnnotationIndex,
+            popupAnnotationIndex: annotationIndex,
             inMain
         } = this.props
 
@@ -78,7 +78,7 @@ class AnnotationPopup extends PureComponent {
                 <Annotation
                     isAccessed
                     isSelected
-                    {...{ annotationIndex: popupAnnotationIndex }}
+                    {...{ annotationIndex }}
                 />
                 <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
             </Popup>
