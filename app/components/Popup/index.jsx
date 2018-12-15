@@ -16,7 +16,6 @@ import { populateRefs } from 'helpers/ref'
 class Popup extends PureComponent {
 
     static propTypes = {
-        className: PropTypes.string,
         popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
         doUnmount: PropTypes.bool,
@@ -39,7 +38,6 @@ class Popup extends PureComponent {
 
     render() {
         const {
-                className,
                 popupName,
                 isVisible,
                 doUnmount,
@@ -81,9 +79,7 @@ class Popup extends PureComponent {
                             'Popup__notInOverlay': !displaysInOverlay,
                             'flexCentreContainer': !noFlexCentre,
                             'absoluteFullContainer': !noAbsoluteFull
-                        },
-
-                        className
+                        }
                     )}
                 >
                     <PopupView {...other}

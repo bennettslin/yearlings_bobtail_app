@@ -3,26 +3,27 @@
  * not positioned absolute.
  */
 
-.OverviewPopup__inMain {
-
-    margin-top: $js__margin__thin;
-    margin-left: $js__margin__thick;
-
-    .DW__mobileNotPhone
+.OverviewPopup {
+    .Main
     & {
-        margin-top: 0;
-        margin-right: $js__margin__thin;
-        margin-bottom: $margin__scrollbar;
-    }
+        margin-top: $js__margin__thin;
+        margin-left: $js__margin__thick;
 
-    .DW__phone
-    & {
-        margin: 0;
+        .DW__mobileNotPhone
+        & {
+            margin-top: 0;
+            margin-right: $js__margin__thin;
+            margin-bottom: $margin__scrollbar;
+        }
+
+        .DW__phone
+        & {
+            margin: 0;
+        }
     }
 }
 
 .OverviewPopupView {
-
     // Needed to prevent closing upon popup click.
     z-index: $zIndex__centreFieldChild;
 

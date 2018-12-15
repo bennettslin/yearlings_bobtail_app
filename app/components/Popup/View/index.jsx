@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import PopupViewButton from './Button'
 
-const popupViewPropTypes = {
+const propTypes = {
         popupName: PropTypes.string.isRequired,
         displaysInOverlay: PropTypes.bool,
         bounceAnimate: PropTypes.bool,
@@ -37,17 +37,10 @@ const popupViewPropTypes = {
         children
 
     }) => {
-
-        const
-            showClose = Boolean(handleCloseClick),
-            showPrevious = Boolean(handlePreviousClick),
-            showNext = Boolean(handleNextClick)
-
         return (
             <div className={cx(
                 'PopupView',
                 `${popupName}PopupView`,
-
                 {
                     'PopupView__bounceAnimate': bounceAnimate,
                     'PopupView__shrinkAnimate': shrinkAnimate,
@@ -55,33 +48,39 @@ const popupViewPropTypes = {
                     'PopupView__fullSize': isFullSize
                 }
             )}>
-                {showClose &&
-                <PopupViewButton
-                    isCloseButton
-                    inFullSize={isFullSize}
-                    inCardSize={isCardSize}
-                    displaysInOverlay={displaysInOverlay}
-                    handlePopupButtonClick={handleCloseClick}
-                />
-                }
-                {showPrevious &&
-                <PopupViewButton
-                    isPreviousButton
-                    inFullSize={isFullSize}
-                    inCardSize={isCardSize}
-                    displaysInOverlay={displaysInOverlay}
-                    handlePopupButtonClick={handlePreviousClick}
-                />
-                }
-                {showNext &&
-                <PopupViewButton
-                    isNextButton
-                    inFullSize={isFullSize}
-                    inCardSize={isCardSize}
-                    displaysInOverlay={displaysInOverlay}
-                    handlePopupButtonClick={handleNextClick}
-                />
-                }
+                {Boolean(handleCloseClick) && (
+                    <PopupViewButton
+                        isCloseButton
+                        {...{
+                            inFullSize: isFullSize,
+                            inCardSize: isCardSize,
+                            displaysInOverlay,
+                            handlePopupButtonClick: handleCloseClick
+                        }}
+                    />
+                )}
+                {Boolean(handlePreviousClick) && (
+                    <PopupViewButton
+                        isPreviousButton
+                        {...{
+                            inFullSize: isFullSize,
+                            inCardSize: isCardSize,
+                            displaysInOverlay,
+                            handlePopupButtonClick: handlePreviousClick
+                        }}
+                    />
+                )}
+                {Boolean(handleNextClick) && (
+                    <PopupViewButton
+                        isNextButton
+                        {...{
+                            inFullSize: isFullSize,
+                            inCardSize: isCardSize,
+                            displaysInOverlay,
+                            handlePopupButtonClick: handleNextClick
+                        }}
+                    />
+                )}
                 <div
                     className={cx(
                         'PopupViewContent',
@@ -108,6 +107,6 @@ const popupViewPropTypes = {
         )
     })
 
-PopupView.propTypes = popupViewPropTypes
+PopupView.propTypes = propTypes
 
 export default PopupView

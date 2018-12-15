@@ -3,7 +3,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import cx from 'classnames'
 
 import Overview from '../../Overview'
 import Popup from '../../Popup'
@@ -12,6 +11,7 @@ import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
     deviceStore: { isPhone },
+    renderStore: { canCarouselRender },
     optionStore: {
         selectedOverviewOption,
         selectedTipsOption
@@ -19,6 +19,7 @@ const mapStateToProps = ({
     renderedStore: { isRenderedLogue }
 }) => ({
     isPhone,
+    canCarouselRender,
     selectedOverviewOption,
     selectedTipsOption,
     isRenderedLogue
@@ -29,6 +30,7 @@ class OverviewPopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPhone: PropTypes.bool.isRequired,
+        canCarouselRender: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -42,35 +44,25 @@ class OverviewPopup extends PureComponent {
             {
                 inMain,
                 isPhone,
+                canCarouselRender,
                 selectedOverviewOption,
                 isRenderedLogue,
                 selectedTipsOption
             } = this.props,
 
-            // Only position absolute when in main and is phone.
-            noAbsoluteFull = isRenderedLogue || !isPhone
+            // Switch between logue and song overview sections.
+            isVisibleBasedOnSong = isRenderedLogue ?
+                !inMain :
 
-        let isVisible
+                /**
+                 * Always hide overview section when title is open, or when tip
+                 * is shown in song.
+                 */
+                Boolean(inMain) &&
+                selectedTipsOption !== SHOWN &&
+                selectedOverviewOption === SHOWN,
 
-        // Switch between logue and song overview sections.
-        if (isRenderedLogue) {
-            isVisible = !inMain
-
-        } else {
-            isVisible =
-                selectedOverviewOption === SHOWN && Boolean(inMain)
-        }
-
-        /**
-     * Always hide overview section when title is open, or when tip is shown
-     * in song. Always hide before ready to render.
-     */
-        if (
-            !isRenderedLogue &&
-            selectedTipsOption === SHOWN
-        ) {
-            isVisible = false
-        }
+            isVisible = canCarouselRender && isVisibleBasedOnSong
 
         return (
             <Popup
@@ -78,12 +70,11 @@ class OverviewPopup extends PureComponent {
                 hasNarrowPadding
                 {...{
                     popupName: 'Overview',
-                    className: cx(
-                        inMain && 'OverviewPopup__inMain'
-                    ),
                     isVisible,
                     noFlexCentre: inMain,
-                    noAbsoluteFull
+
+                    // Only position absolute when in main and is phone.
+                    noAbsoluteFull: isRenderedLogue || !isPhone
                 }}
             >
                 <Overview />

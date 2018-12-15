@@ -3,7 +3,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import cx from 'classnames'
 
 import AnnotationDispatcher from '../../../handlers/AnnotationHandler/Dispatcher'
 import Annotation from '../../Annotation'
@@ -61,9 +60,6 @@ class AnnotationPopup extends PureComponent {
          */
         return Boolean(inMain) !== isOverlayingAnnotation && (
             <Popup
-                className={cx(
-                    inMain && 'AnnotationPopup__inMain'
-                )}
                 showArrows
                 bounceAnimate
                 {...{
