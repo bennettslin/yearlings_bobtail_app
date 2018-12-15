@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateToggleStore } from 'flux/toggle/action'
 import { resetVerseBars } from 'flux/verseBars/action'
@@ -47,12 +46,11 @@ class ScrollVerseDispatcher extends PureComponent {
 
 const mapStateToProps = null
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateScrollLyricStore,
         updateToggleStore,
         resetVerseBars
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(ScrollVerseDispatcher)
+    }
+)(ScrollVerseDispatcher)

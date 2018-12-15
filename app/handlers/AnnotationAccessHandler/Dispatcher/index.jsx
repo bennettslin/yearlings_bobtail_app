@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
@@ -113,12 +112,11 @@ const mapStateToProps = ({
     isEarShown
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateAccessStore,
         updateScrollCarouselStore,
         updateScrollLyricStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(AnnotationAccessDispatcher)
+    }
+)(AnnotationAccessDispatcher)

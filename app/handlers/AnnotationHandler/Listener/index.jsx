@@ -3,7 +3,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAnnotationStore } from 'flux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
 
@@ -122,10 +121,7 @@ const mapStateToProps = ({
     queuedAnnotationFromCarousel
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateAnnotationStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(AnnotationListener)
+export default connect(
+    mapStateToProps,
+    { updateAnnotationStore }
+)(AnnotationListener)

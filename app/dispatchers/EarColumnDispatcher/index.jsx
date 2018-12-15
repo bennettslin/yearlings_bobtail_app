@@ -2,7 +2,6 @@
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { updateSongStore } from 'flux/song/action'
@@ -64,10 +63,7 @@ const mapStateToProps = ({
     isSelectedLogue
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSongStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(EarColumnDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateSongStore }
+)(EarColumnDispatcher)

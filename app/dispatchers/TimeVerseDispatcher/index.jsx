@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
@@ -67,12 +66,11 @@ const mapStateToProps = ({
     isAutoScroll
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateScrollLyricStore,
         updateSongStore,
         updateVerseBarsStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(TimeVerseDispatcher)
+    }
+)(TimeVerseDispatcher)

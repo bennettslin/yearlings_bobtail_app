@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateEventStore } from 'flux/event/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -48,11 +47,10 @@ class StopPropagationDispatcher extends PureComponent {
 
 const mapStateToProps = null
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateEventStore,
         updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(StopPropagationDispatcher)
+    }
+)(StopPropagationDispatcher)

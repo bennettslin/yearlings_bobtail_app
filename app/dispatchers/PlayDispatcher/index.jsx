@@ -3,7 +3,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAudioStore } from 'flux/audio/action'
 
 import SongDispatcher from '../../handlers/SongHandler/Dispatcher'
@@ -101,10 +100,7 @@ const mapStateToProps = ({
     isSelectedLogue
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateAudioStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(PlayDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateAudioStore }
+)(PlayDispatcher)

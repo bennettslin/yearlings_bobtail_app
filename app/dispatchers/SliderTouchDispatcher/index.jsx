@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSliderStore } from 'flux/slider/action'
 
 import VerseDispatcher from '../VerseDispatcher'
@@ -204,10 +203,7 @@ const mapStateToProps = ({
     selectedVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSliderStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(SliderTouchDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateSliderStore }
+)(SliderTouchDispatcher)

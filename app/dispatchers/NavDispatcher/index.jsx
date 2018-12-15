@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
 class NavDispatcher extends PureComponent {
@@ -61,10 +60,7 @@ const mapStateToProps = ({
     isCarouselShown
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSessionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(NavDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateSessionStore }
+)(NavDispatcher)

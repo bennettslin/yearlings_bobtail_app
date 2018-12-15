@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class TitleDispatcher extends PureComponent {
@@ -43,10 +42,7 @@ const mapStateToProps = ({
     isTitleShown
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(TitleDispatcher)
+export default connect(
+    mapStateToProps,
+    { updateToggleStore }
+)(TitleDispatcher)

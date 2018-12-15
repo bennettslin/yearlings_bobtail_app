@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
@@ -76,14 +75,13 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateAudioStore,
         updateScrollLyricStore,
         updateSessionStore,
         updateSongStore,
         resetVerseBars
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(VerseDispatcher)
+    }
+)(VerseDispatcher)
