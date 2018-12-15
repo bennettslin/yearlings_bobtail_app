@@ -1,7 +1,6 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 
 import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
@@ -119,10 +118,7 @@ const mapStateToProps = ({
     selectedVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateSessionStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(LyricNavigation)
+export default connect(
+    mapStateToProps,
+    { updateSessionStore }
+)(LyricNavigation)

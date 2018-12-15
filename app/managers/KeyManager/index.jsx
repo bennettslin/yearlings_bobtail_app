@@ -3,7 +3,6 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateToggleStore } from 'flux/toggle/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
@@ -209,12 +208,11 @@ const mapStateToProps = ({
     selectedVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateAccessStore,
         updateToggleStore,
         updateVerseBarsStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(KeyManager)
+    }
+)(KeyManager)

@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updatePlayersStore } from 'flux/players/action'
 import { resetAudioQueue } from 'flux/audio/action'
 
@@ -122,11 +121,10 @@ const mapStateToProps = ({
     queuedPlayVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updatePlayersStore,
         resetAudioQueue
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(PlayerListener)
+    }
+)(PlayerListener)

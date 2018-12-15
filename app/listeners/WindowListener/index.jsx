@@ -4,7 +4,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateDeviceStore } from 'flux/device/action'
 import { updateRenderableStore } from 'flux/renderable/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
@@ -215,12 +214,11 @@ const mapStateToProps = ({
     appMounted
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateDeviceStore,
         updateResponsiveStore,
         updateRenderableStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(WindowListener)
+    }
+)(WindowListener)

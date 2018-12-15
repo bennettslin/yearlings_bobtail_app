@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updatePlayersStore } from 'flux/players/action'
 
 import { setNewValueInBitNumber } from 'helpers/bit'
@@ -55,10 +54,7 @@ const mapStateToProps = ({
     playersBitNumber
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updatePlayersStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(PlayerDispatcher)
+export default connect(
+    mapStateToProps,
+    { updatePlayersStore }
+)(PlayerDispatcher)

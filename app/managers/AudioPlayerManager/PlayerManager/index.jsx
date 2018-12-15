@@ -2,7 +2,6 @@
 
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -331,12 +330,10 @@ class PlayerManager extends PureComponent {
     }
 }
 
-// Bind Redux action creators to component props.
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateAudioStore,
         updateSongStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(PlayerManager)
+    }
+)(PlayerManager)

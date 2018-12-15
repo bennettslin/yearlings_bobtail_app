@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 
@@ -131,11 +130,10 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateAudioStore,
         updateScrollLyricStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(AudioManager)
+    }
+)(AudioManager)

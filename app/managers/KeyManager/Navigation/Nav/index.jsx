@@ -1,7 +1,6 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateAccessStore } from 'flux/access/action'
 
 import NavDispatcher from '../../../../dispatchers/NavDispatcher'
@@ -131,10 +130,7 @@ const mapStateToProps = ({
     shownNavBookIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        updateAccessStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(NavNavigation)
+export default connect(
+    mapStateToProps,
+    { updateAccessStore }
+)(NavNavigation)

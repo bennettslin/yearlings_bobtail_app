@@ -1,7 +1,6 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateToggleStore } from 'flux/toggle/action'
@@ -247,12 +246,11 @@ const mapStateToProps = ({
     selectedWikiIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
+export default connect(
+    mapStateToProps,
+    {
         updateSessionStore,
         updateSongStore,
         updateToggleStore
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(LetterManager)
+    }
+)(LetterManager)
