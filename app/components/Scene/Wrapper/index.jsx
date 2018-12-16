@@ -5,17 +5,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-
-import {
-    Z_INDICES_MATRIX_NAME,
-    HSLA_MATRIX_NAME
-} from 'constants/scene'
-
 import { getCubesForKey } from '../../../scene/cubes'
-
 import { getClassNameForSlantDirection } from 'helpers/className'
 import { getParentClassNamesForSceneLogic } from './helper'
 import { getPropsAreShallowEqual } from 'helpers/general'
+
+import { HSLA_MATRIX_NAME } from 'constants/scene'
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },
@@ -52,11 +47,6 @@ class SceneWrapper extends Component {
             cubes = getCubesForKey(sceneCubesKey),
             { slantDirection } = cubes,
 
-            zIndexClassNames = getParentClassNamesForSceneLogic(
-                cubes,
-                Z_INDICES_MATRIX_NAME
-            ),
-
             hslaClassNames = getParentClassNamesForSceneLogic(
                 cubes,
                 HSLA_MATRIX_NAME
@@ -71,7 +61,6 @@ class SceneWrapper extends Component {
                 {...{
                     className: cx(
                         'SceneWrapper',
-                        zIndexClassNames,
                         hslaClassNames,
                         slantDirectionClassName
                     )

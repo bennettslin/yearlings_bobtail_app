@@ -10,85 +10,66 @@ import {
 
 import { getCharStringForNumber } from 'helpers/format'
 
-import {
-    FLOOR,
-    CEILING
-} from 'constants/scene'
-
 const propTypes = {
     // From parent.
-    face: PropTypes.string.isRequired,
-    xIndex: PropTypes.number.isRequired,
+    slantDirection: PropTypes.string.isRequired,
+    level: PropTypes.string.isRequired,
     yIndex: PropTypes.number.isRequired,
-    ceilingZIndex: PropTypes.number.isRequired,
-    floorZIndex: PropTypes.number.isRequired,
-    slantDirection: PropTypes.string.isRequired
+    xIndex: PropTypes.number.isRequired,
+    zIndex: PropTypes.number.isRequired,
+    face: PropTypes.string.isRequired
 }
 
 const Face = memo(({
-    face,
-    xIndex,
+    slantDirection,
+    level,
     yIndex,
-    ceilingZIndex,
-    floorZIndex,
-    slantDirection
+    xIndex,
+    zIndex,
+    face
 }) => {
 
     const
-        ceilingFaceClassName = getChildClassNameForFace({
+        faceClassName = getChildClassNameForFace({
             face,
-            level: CEILING,
+            level,
             xIndex,
             yIndex
         }),
 
-        floorFaceClassName = getChildClassNameForFace({
-            face,
-            level: FLOOR,
+        cubeClassName = getChildClassNameForCube({
+            level,
             xIndex,
             yIndex
         }),
 
-        ceilingCubeClassName = getChildClassNameForCube({
-            level: CEILING,
-            xIndex,
-            yIndex
-        }),
+        xCharIndex = getCharStringForNumber(xIndex)
 
-        floorCubeClassName = getChildClassNameForCube({
-            level: FLOOR,
-            xIndex,
-            yIndex
-        }),
-
-        xCharIndex = getCharStringForNumber(xIndex),
-        faceInitial = face[0].toUpperCase()
-
-    // This component never updates because its parent never updates.
     return (
         <g className={cx(
             'Face',
-            face,
-
-            // Used just to find in the DOM.
-            `${faceInitial}${yIndex}${xCharIndex}`
+            level,
+            `y${yIndex}`,
+            `x${xCharIndex}`,
+            `z${zIndex}`,
+            face
         )}>
 
             <path
                 {...{
                     className: cx(
                         'Square',
-                        'ceiling',
+                        level,
                         face,
-                        ceilingFaceClassName,
-                        ceilingCubeClassName
+                        faceClassName,
+                        cubeClassName
                     ),
                     d: getFacePath({
                         slantDirection,
-                        level: CEILING,
+                        level,
                         yIndex,
                         xIndex,
-                        zIndex: ceilingZIndex,
+                        zIndex,
                         face
                     })
                 }}
@@ -97,56 +78,17 @@ const Face = memo(({
                 {...{
                     className: cx(
                         'Square',
-                        'ceiling',
+                        'shade',
+                        level,
                         face,
-                        ceilingFaceClassName,
-                        'shade'
+                        faceClassName
                     ),
                     d: getFacePath({
                         slantDirection,
-                        level: CEILING,
+                        level,
                         yIndex,
                         xIndex,
-                        zIndex: ceilingZIndex,
-                        face
-                    })
-                }}
-            />
-
-            <path
-                {...{
-                    className: cx(
-                        'Square',
-                        'floor',
-                        face,
-                        floorFaceClassName,
-                        floorCubeClassName
-                    ),
-                    d: getFacePath({
-                        slantDirection,
-                        level: FLOOR,
-                        yIndex,
-                        xIndex,
-                        zIndex: floorZIndex,
-                        face
-                    })
-                }}
-            />
-            <path
-                {...{
-                    className: cx(
-                        'Square',
-                        'floor',
-                        face,
-                        floorFaceClassName,
-                        'shade'
-                    ),
-                    d: getFacePath({
-                        slantDirection,
-                        level: FLOOR,
-                        yIndex,
-                        xIndex,
-                        zIndex: floorZIndex,
+                        zIndex,
                         face
                     })
                 }}

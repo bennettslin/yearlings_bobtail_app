@@ -21,7 +21,33 @@
                 // Default.
                 fill: transparent;
 
-                // Dynamic floor tile shading lives in CubeFacesStyle.
+                .Face.z0
+                &,
+                .Face.z1
+                & {
+                    fill: rgba(25, 25, 25, 0.1);
+                }
+
+                .Face.z2
+                &,
+                .Face.z3
+                & {
+                    fill: rgba(25, 25, 25, 0.075);
+                }
+
+                .Face.z4
+                &,
+                .Face.z5
+                & {
+                    fill: rgba(25, 25, 25, 0.05);
+                }
+
+                .Face.z6
+                &,
+                .Face.z7
+                & {
+                    fill: rgba(25, 25, 25, 0.025);
+                }
             }
         }
 

@@ -6,8 +6,6 @@ import cx from 'classnames'
 
 import CubeConfig from './Cube'
 import CubeColourStylesheet from './Stylesheets/CubeColour'
-import FloorTileShadeStylesheet from './Stylesheets/FloorTileShade'
-// import FacePathsStylesheet from './Stylesheets/FacePaths'
 
 import { CUBE_X_INDICES } from 'constants/cubeIndex'
 
@@ -41,8 +39,6 @@ class Cubes extends Component {
                             key={`${xIndex}_${yIndex}`}
                         >
                             <CubeColourStylesheet {...{ xIndex, yIndex }} />
-                            <FloorTileShadeStylesheet {...{ xIndex, yIndex }} />
-                            {/* <FacePathsStylesheet {...{ xIndex, yIndex }} /> */}
                             <Cube
                                 {...{
                                     xIndex,

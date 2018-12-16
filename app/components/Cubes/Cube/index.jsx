@@ -11,7 +11,11 @@ import Face from './Face'
 import { getCharStringForNumber } from 'helpers/format'
 import { getValueInAbridgedMatrix } from 'helpers/general'
 
-import { FACES } from 'constants/scene'
+import {
+    FACES,
+    CEILING,
+    FLOOR
+} from 'constants/scene'
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES
@@ -90,12 +94,25 @@ class Cube extends PureComponent {
                     <Face
                         key={face}
                         {...{
-                            face,
-                            xIndex,
+                            slantDirection,
+                            level: CEILING,
                             yIndex,
-                            ceilingZIndex,
-                            floorZIndex,
-                            slantDirection
+                            xIndex,
+                            zIndex: ceilingZIndex,
+                            face
+                        }}
+                    />
+                ))}
+                {FACES.map(face => (
+                    <Face
+                        key={face}
+                        {...{
+                            slantDirection,
+                            level: FLOOR,
+                            yIndex,
+                            xIndex,
+                            zIndex: floorZIndex,
+                            face
                         }}
                     />
                 ))}

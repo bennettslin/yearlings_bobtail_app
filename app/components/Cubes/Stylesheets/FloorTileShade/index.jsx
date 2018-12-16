@@ -1,3 +1,5 @@
+// TODO: No longer used. Consider whether to keep this component.
+
 import React, { memo } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'

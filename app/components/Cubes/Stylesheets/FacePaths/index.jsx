@@ -1,4 +1,4 @@
-// TODO: Consider whether to keep this component.
+// TODO: No longer used. Consider whether to keep this component.
 
 import React from 'react'
 import cx from 'classnames'
