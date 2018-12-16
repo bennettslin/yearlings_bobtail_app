@@ -1,51 +1,83 @@
 // Check out Peoria Symphony Orchestra.
-import {
-    getExponentFactorialSum,
-    getArrayOfIncreasingSums
-} from 'helpers/general'
-
 import { CUBE_Y_AXIS_LENGTH } from './cubeIndex'
 
-const
-    _getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {
-        const
-            /**
-             * yPercentageUnit =
-             * base * base * base * base * base +
-             * base * base * base * base +
-             * base * base * base +
-             * base * base +
-             * base +
-             * 1
-             */
-            yPercentageUnit = getExponentFactorialSum(base, exponent - 1),
-
-            unit = STAGE_Y_PERCENTAGE / yPercentageUnit,
-            /**
-             * yHeight0 = unit * base * base * base * base * base,
-             * yHeight1 = unit * base * base * base * base,
-             * yHeight2 = unit * base * base * base,
-             * yHeight3 = unit * base * base,
-             * yHeight4 = unit * base,
-             * yHeight5 = unit,
-
-             * tileYPercentages = [
-             * 0,
-             * yHeight0,
-             * yHeight0 + yHeight1,
-             * yHeight0 + yHeight1 + yHeight2,
-             * yHeight0 + yHeight1 + yHeight2 + yHeight3,
-             * yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4,
-             * yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4 + yHeight5
-             * ]
-             */
-
-            tileYPercentages = getArrayOfIncreasingSums(
-                base, exponent - 1, unit
-            )
-
-        return tileYPercentages
+const _getPower = (base, exponent) => {
+    if (exponent === 0) {
+        return 1
+    } else {
+        return base * _getPower(base, exponent - 1)
     }
+}
+
+const _getExponentFactorialSum = (base, exponent) => {
+    let sum = 0
+
+    while (exponent > -1) {
+        sum += _getPower(base, exponent)
+        exponent--
+    }
+
+    return sum
+}
+
+const _getArrayOfIncreasingSums = (base, exponent, constant) => {
+    const arrayOfIncreasingSums = [0]
+
+    let mutableExponent = exponent,
+        currentSum = 0
+
+    while (mutableExponent > -1) {
+        const currentPower = _getPower(base, mutableExponent) * constant
+
+        currentSum += currentPower
+
+        arrayOfIncreasingSums.push(currentSum)
+
+        mutableExponent--
+    }
+
+    return arrayOfIncreasingSums
+}
+
+const _getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {
+    const
+        /**
+         * yPercentageUnit =
+         * base * base * base * base * base +
+         * base * base * base * base +
+         * base * base * base +
+         * base * base +
+         * base +
+         * 1
+         */
+        yPercentageUnit = _getExponentFactorialSum(base, exponent - 1),
+
+        unit = STAGE_Y_PERCENTAGE / yPercentageUnit,
+        /**
+         * yHeight0 = unit * base * base * base * base * base,
+         * yHeight1 = unit * base * base * base * base,
+         * yHeight2 = unit * base * base * base,
+         * yHeight3 = unit * base * base,
+         * yHeight4 = unit * base,
+         * yHeight5 = unit,
+
+            * tileYPercentages = [
+            * 0,
+            * yHeight0,
+            * yHeight0 + yHeight1,
+            * yHeight0 + yHeight1 + yHeight2,
+            * yHeight0 + yHeight1 + yHeight2 + yHeight3,
+            * yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4,
+            * yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4 + yHeight5
+            * ]
+            */
+
+        tileYPercentages = _getArrayOfIncreasingSums(
+            base, exponent - 1, unit
+        )
+
+    return tileYPercentages
+}
 
 /**
  * Number to multiply one number to get the next, such that after six times,

@@ -5,10 +5,8 @@ import PropTypes from 'prop-types'
 import Stylesheet from '../../../../Stylesheet'
 import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
-import {
-    getChildClassNameForCubeLogic,
-    getParentClassNameForSceneLogic
-} from 'helpers/className'
+import { getParentClassNameForSceneLogic } from 'helpers/className'
+import { getChildClassNameForCubeLogic } from '../../helper'
 
 import {
     HSLA_MAP

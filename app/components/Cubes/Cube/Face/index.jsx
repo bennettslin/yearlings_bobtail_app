@@ -5,7 +5,7 @@ import cx from 'classnames'
 import {
     getChildClassNameForCubeLogic,
     getChildClassNameForFaceLogic
-} from 'helpers/className'
+} from '../helper'
 
 import { getCharStringForNumber } from 'helpers/format'
 
@@ -66,12 +66,12 @@ const Face = memo(({
             face,
 
             // Used just to find in the DOM.
-            `${faceInitial}${xCharIndex}${yIndex}`
+            `${faceInitial}${yIndex}${xCharIndex}`
         )}>
 
             <path
                 className={cx(
-                    'FacePath',
+                    'Square',
                     'ceiling',
                     ceilingFaceClassName,
                     ceilingCubeClassName
@@ -79,7 +79,7 @@ const Face = memo(({
             />
             <path
                 className={cx(
-                    'FacePath',
+                    'Square',
                     'ceiling',
                     ceilingFaceClassName,
                     'shade'
@@ -88,7 +88,7 @@ const Face = memo(({
 
             <path
                 className={cx(
-                    'FacePath',
+                    'Square',
                     'floor',
                     floorFaceClassName,
                     floorCubeClassName
@@ -96,7 +96,7 @@ const Face = memo(({
             />
             <path
                 className={cx(
-                    'FacePath',
+                    'Square',
                     'floor',
                     floorFaceClassName,
                     'shade'

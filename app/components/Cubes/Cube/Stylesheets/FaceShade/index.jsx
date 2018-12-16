@@ -5,10 +5,8 @@ import PropTypes from 'prop-types'
 import Stylesheet from '../../../../Stylesheet'
 import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
-import {
-    getParentClassNameForSceneLogic,
-    getChildClassNameForFaceLogic
-} from 'helpers/className'
+import { getParentClassNameForSceneLogic } from 'helpers/className'
+import { getChildClassNameForFaceLogic } from '../../helper'
 
 import { CUBE_Z_INDICES } from 'constants/cubeIndex'
 

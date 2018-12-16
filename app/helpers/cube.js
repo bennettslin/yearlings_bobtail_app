@@ -10,11 +10,13 @@ import {
     SLANTED_TILE_X_UNITS_LENGTH
 } from 'constants/cubeRender'
 
-import { roundPercentage } from 'helpers/general'
-
 /***************
  * COORDINATES *
  ***************/
+
+const _roundPercentage = (rawPercentage) => {
+    return Math.round(rawPercentage * 100) / 100
+}
 
 const _getXPercentage = (
 
@@ -60,7 +62,7 @@ const _getXPercentage = (
     }
 
     return (
-        roundPercentage(100 - rawXPercentage)
+        _roundPercentage(100 - rawXPercentage)
         * multiplier
         + addend
     )
@@ -94,7 +96,7 @@ const _getYPercentage = (
         multiplier = isSlanted ? 1.025 : 1
 
     return (
-        roundPercentage(100 - rawYPercentage)
+        _roundPercentage(100 - rawYPercentage)
         * multiplier
         + addend
     )

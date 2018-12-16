@@ -17,9 +17,10 @@ import {
 
 import {
     getParentClassNameForSceneLogic,
-    getClassNameForSlantDirection,
-    getChildClassNameForFaceLogic
+    getClassNameForSlantDirection
 } from 'helpers/className'
+
+import { getChildClassNameForFaceLogic } from '../../helper'
 
 import {
     SLANT_DIRECTIONS,

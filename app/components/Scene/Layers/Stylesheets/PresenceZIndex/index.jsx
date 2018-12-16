@@ -23,7 +23,7 @@ const PresenceZIndexStylesheet = memo(() => {
                         key={yIndex}
                         {...{
                             childPrefixes: [
-                                `Presences__y${
+                                `Presences.y${
                                     yIndex
                                 }`
                             ],

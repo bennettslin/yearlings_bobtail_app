@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import { getPropsAreShallowEqual } from 'helpers/general'
 
 import {
     Z_INDICES_MATRIX_NAME,
@@ -14,10 +13,9 @@ import {
 
 import { getCubesForKey } from '../../../scene/cubes'
 
-import {
-    getParentClassNamesForSceneLogic,
-    getClassNameForSlantDirection
-} from 'helpers/className'
+import { getClassNameForSlantDirection } from 'helpers/className'
+import { getParentClassNamesForSceneLogic } from './helper'
+import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },

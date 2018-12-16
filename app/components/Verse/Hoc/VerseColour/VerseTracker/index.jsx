@@ -6,8 +6,6 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import { getVerseDurationForVerseIndex } from './helper'
-// import { getPropsAreShallowEqual } from 'helpers/general'
-// import { getSelectedChildSelector } from './verseTrackerHelper'
 
 const mapStateToProps = ({
     renderedStore: {
