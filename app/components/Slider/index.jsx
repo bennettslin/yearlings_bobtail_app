@@ -1,10 +1,10 @@
 // Component to touch change played time and verse.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import { CSSTransition } from 'react-transition-group'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import SliderScenes from './Scenes'
 import SliderStanzas from './Stanzas'
@@ -14,8 +14,10 @@ import SliderAccess from './Access'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
+    loadStore: { appMounted },
     renderStore: { canLyricRender }
 }) => ({
+    appMounted,
     canLyricRender
 })
 
@@ -23,6 +25,7 @@ class Slider extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        appMounted: PropTypes.bool.isRequired,
         canLyricRender: PropTypes.bool.isRequired
     }
 
@@ -39,38 +42,29 @@ class Slider extends PureComponent {
     }
 
     render() {
-        const { canLyricRender } = this.props
+        const {
+            appMounted,
+            canLyricRender
+        } = this.props
 
-        return (
-            <___>
-                <CSSTransition
-                    {...{
-                        in: canLyricRender,
-                        timeout: {
-                            enter: 0,
-                            exit: 200
-                        },
-                        classNames: {
-                            enterDone: 'Slider__visible'
-                        }
-                    }}
-                >
-                    <div
-                        {...{
-                            ref: this._getSliderElement,
-                            className: 'Slider',
-                            onMouseDown: this._handleTouchDown,
-                            onTouchStart: this._handleTouchDown
-                        }}
-                    >
-                        <SliderTimes />
-                        <SliderStanzas />
-                        <SliderScenes />
-                        <SliderAccess />
-                    </div>
-                </CSSTransition>
+        return appMounted && (
+            <div
+                {...{
+                    ref: this._getSliderElement,
+                    className: cx(
+                        'Slider',
+                        canLyricRender && 'Slider__visible'
+                    ),
+                    onMouseDown: this._handleTouchDown,
+                    onTouchStart: this._handleTouchDown
+                }}
+            >
+                <SliderTimes />
+                <SliderStanzas />
+                <SliderScenes />
+                <SliderAccess />
                 <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </div>
         )
     }
 }

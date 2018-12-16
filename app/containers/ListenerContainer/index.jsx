@@ -1,6 +1,4 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
-import { connect } from 'react-redux'
-import { updateLoadStore } from 'flux/load/action'
 
 import AnnotationAccessListener from '../../handlers/AnnotationAccessHandler/Listener'
 import AnnotationListener from '../../handlers/AnnotationHandler/Listener'
@@ -36,9 +34,6 @@ class ListenerContainer extends PureComponent {
 
     componentDidMount() {
         logMount('ListenerContainer')
-
-        // TODO: Is this still necessary?
-        this.props.updateLoadStore({ appMounted: true })
     }
 
     render() {
@@ -78,7 +73,4 @@ class ListenerContainer extends PureComponent {
     }
 }
 
-export default connect(
-    null,
-    { updateLoadStore }
-)(ListenerContainer)
+export default ListenerContainer

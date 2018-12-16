@@ -3,6 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateLoadStore } from 'flux/load/action'
 import { updateRenderStore } from 'flux/render/action'
 
 import {
@@ -17,18 +18,33 @@ class RenderDidListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        appMounted: PropTypes.bool.isRequired,
         didTheatreRender: PropTypes.bool.isRequired,
         didSceneRender: PropTypes.bool.isRequired,
         didLyricRender: PropTypes.bool.isRequired,
         didCarouselRender: PropTypes.bool.isRequired,
+        updateLoadStore: PropTypes.func.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
+        this._checkAppMounted(prevProps)
         this._checkTheatreDidRender(prevProps)
         this._checkSceneDidRender(prevProps)
         this._checkLyricDidRender(prevProps)
         this._checkCarouselDidRender(prevProps)
+    }
+
+    _checkAppMounted(prevProps) {
+        const
+            { appMounted } = this.props,
+            { appMounted: hadAppMounted } = prevProps
+
+        if (appMounted && !hadAppMounted) {
+            logRender('App mounted.')
+
+            this._renderAfterTheatre()
+        }
     }
 
     _checkTheatreDidRender(prevProps) {
@@ -39,12 +55,30 @@ class RenderDidListener extends PureComponent {
         if (didTheatreRender && !hadTheatreRendered) {
             logRender('Theatre did render.')
 
-            const nextKey = getNextKeyCanRender({ currentKey: THEATRE })
-            if (nextKey) {
-                this.props.updateRenderStore({
-                    [nextKey]: true
-                })
+            if (!this.props.appMounted) {
+                /**
+                 * Allow theatre to be visible before others render. This
+                 * isn't always the case when the timeout duration is shorter,
+                 * for some reason.
+                 */
+                setTimeout(this._mountApp, 0)
+
+            } else {
+                this._renderAfterTheatre()
             }
+        }
+    }
+
+    _mountApp = () => {
+        this.props.updateLoadStore({ appMounted: true })
+    }
+
+    _renderAfterTheatre = () => {
+        const nextKey = getNextKeyCanRender({ currentKey: THEATRE })
+        if (nextKey) {
+            this.props.updateRenderStore({
+                [nextKey]: true
+            })
         }
     }
 
@@ -105,6 +139,7 @@ class RenderDidListener extends PureComponent {
 }
 
 const mapStateToProps = ({
+    loadStore: { appMounted },
     renderStore: {
         didTheatreRender,
         didSceneRender,
@@ -112,6 +147,7 @@ const mapStateToProps = ({
         didCarouselRender
     }
 }) => ({
+    appMounted,
     didTheatreRender,
     didSceneRender,
     didLyricRender,
@@ -120,5 +156,8 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { updateRenderStore }
+    {
+        updateLoadStore,
+        updateRenderStore
+    }
 )(RenderDidListener)
