@@ -9,6 +9,8 @@ import {
 
 import { SHOWN } from 'constants/options'
 
+import { getCubesForKey } from 'scene/cubes'
+
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
@@ -170,6 +172,7 @@ const
         },
         layers: scenePresenceLayers
     } = sceneObject,
+    sceneCubes = getCubesForKey(sceneCubesKey),
 
     SCENE_DEFAULTS = {
         sceneCubesKey,
@@ -180,7 +183,8 @@ const
          * Stored only for dev clarity. Components will retrieve these layers
          * through indices to avoid unnecessary updates.
          */
-        scenePresenceLayers
+        scenePresenceLayers,
+        sceneCubes
     },
 
     SCROLL_CAROUSEL_DEFAULTS = {
