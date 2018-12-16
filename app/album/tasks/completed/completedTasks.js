@@ -4211,5 +4211,10 @@ module.exports = [
         taskName: `Use transition groups for popups, lyric, and carousel.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `CSS transition group for presences, since they now cut in and out.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

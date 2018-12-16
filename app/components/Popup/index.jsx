@@ -61,7 +61,7 @@ class Popup extends PureComponent {
                     },
                     timeout: {
                         enter: 0,
-                        exit: 150
+                        exit: 200
                     },
                     mountOnEnter: doUnmount,
                     unmountOnExit: doUnmount

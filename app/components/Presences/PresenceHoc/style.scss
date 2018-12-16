@@ -1,0 +1,9 @@
+.Presence {
+    opacity: 0;
+    transition:
+        opacity $animationDuration__fast;
+}
+
+.Presence__visible {
+    opacity: 1;
+}

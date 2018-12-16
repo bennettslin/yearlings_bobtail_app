@@ -16,6 +16,7 @@ export const updateSceneStore = (payload = SCENE_DEFAULTS) => {
     } = payload
 
     if (hasKey(sceneCubesKey)) {
+        // TODO: This stores hsla as well. Is that necessary?
         payload.sceneCubes = getCubesForKey(sceneCubesKey)
     }
 

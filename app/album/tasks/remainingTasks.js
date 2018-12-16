@@ -160,11 +160,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `CSS transition group for presences, since they now cut in and out..`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
         taskName: `Presence and cubes transition order. Make sure changes between songs are smooth, animation wise.`,
         workedHours: 0,
         neededHours: 8
