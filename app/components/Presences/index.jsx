@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import ActorLayer from './Actor'
 import BackdropLayer from './Backdrop'
@@ -105,8 +105,7 @@ class Presences extends Component {
 }
 
 CUBE_Y_INDICES.forEach(yIndex => {
-    PresencesConfig[yIndex] =
-        connect(getMapStateToProps(yIndex))(Presences)
+    PresencesConfig[yIndex] = connect(getMapStateToProps(yIndex))(Presences)
 })
 
 export default PresencesConfig

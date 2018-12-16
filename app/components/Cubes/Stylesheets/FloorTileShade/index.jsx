@@ -2,8 +2,8 @@ import React, { memo } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Stylesheet from '../../../../Stylesheet'
-import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
+import Stylesheet from '../../../Stylesheet'
+import DynamicStylesheet from '../../../Stylesheet/Dynamic'
 
 import { getParentClassNameForScene } from 'helpers/className'
 import { getChildClassNameForFace } from '../../helper'
@@ -38,7 +38,7 @@ const propTypes = {
         yIndex: PropTypes.number.isRequired
     },
 
-    FaceShadeStylesheet = memo(({
+    FloorTileShadeStylesheet = memo(({
         xIndex,
         yIndex
 
@@ -48,7 +48,7 @@ const propTypes = {
         return (
             <Stylesheet
                 className={cx(
-                    'FaceShadeStylesheet',
+                    'FloorTileShadeStylesheet',
 
                     // Just for dev clarity.
                     `y${yIndex}`,
@@ -97,7 +97,7 @@ const propTypes = {
                                 ],
                                 childPrefixes: [
                                     childPrefix,
-                                    'Face__shade__floorTile'
+                                    'Square.shade.floor.tile'
                                 ],
                                 style: {
                                     fill
@@ -110,6 +110,6 @@ const propTypes = {
         )
     })
 
-FaceShadeStylesheet.propTypes = propTypes
+FloorTileShadeStylesheet.propTypes = propTypes
 
-export default FaceShadeStylesheet
+export default FloorTileShadeStylesheet

@@ -2,8 +2,8 @@ import React, { memo } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Stylesheet from '../../../../Stylesheet'
-import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
+import Stylesheet from '../../../Stylesheet'
+import DynamicStylesheet from '../../../Stylesheet/Dynamic'
 
 import { getParentClassNameForScene } from 'helpers/className'
 import { getChildClassNameForCube } from '../../helper'

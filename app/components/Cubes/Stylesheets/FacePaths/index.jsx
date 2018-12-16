@@ -1,11 +1,13 @@
+// TODO: Consider whether to keep this component.
+
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Stylesheet from '../../../../Stylesheet'
-import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
+import Stylesheet from '../../../Stylesheet'
+import DynamicStylesheet from '../../../Stylesheet/Dynamic'
 
-import { getFacePath } from '../../../../../faces'
+import { getFacePath } from '../../../../faces'
 
 import {
     getParentClassNameForScene,

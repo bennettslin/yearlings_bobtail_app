@@ -2,10 +2,11 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import { getFacePath } from '../../../../faces'
 import {
     getChildClassNameForCube,
     getChildClassNameForFace
-} from '../helper'
+} from '../../helper'
 
 import { getCharStringForNumber } from 'helpers/format'
 
@@ -18,15 +19,19 @@ const propTypes = {
     // From parent.
     face: PropTypes.string.isRequired,
     xIndex: PropTypes.number.isRequired,
-    yIndex: PropTypes.number.isRequired
+    yIndex: PropTypes.number.isRequired,
+    ceilingZIndex: PropTypes.number.isRequired,
+    floorZIndex: PropTypes.number.isRequired,
+    slantDirection: PropTypes.string.isRequired
 }
 
 const Face = memo(({
-
     face,
     xIndex,
-    yIndex
-
+    yIndex,
+    ceilingZIndex,
+    floorZIndex,
+    slantDirection
 }) => {
 
     const
@@ -70,37 +75,81 @@ const Face = memo(({
         )}>
 
             <path
-                className={cx(
-                    'Square',
-                    'ceiling',
-                    ceilingFaceClassName,
-                    ceilingCubeClassName
-                )}
+                {...{
+                    className: cx(
+                        'Square',
+                        'ceiling',
+                        face,
+                        ceilingFaceClassName,
+                        ceilingCubeClassName
+                    ),
+                    d: getFacePath({
+                        slantDirection,
+                        level: CEILING,
+                        yIndex,
+                        xIndex,
+                        zIndex: ceilingZIndex,
+                        face
+                    })
+                }}
             />
             <path
-                className={cx(
-                    'Square',
-                    'ceiling',
-                    ceilingFaceClassName,
-                    'shade'
-                )}
+                {...{
+                    className: cx(
+                        'Square',
+                        'ceiling',
+                        face,
+                        ceilingFaceClassName,
+                        'shade'
+                    ),
+                    d: getFacePath({
+                        slantDirection,
+                        level: CEILING,
+                        yIndex,
+                        xIndex,
+                        zIndex: ceilingZIndex,
+                        face
+                    })
+                }}
             />
 
             <path
-                className={cx(
-                    'Square',
-                    'floor',
-                    floorFaceClassName,
-                    floorCubeClassName
-                )}
+                {...{
+                    className: cx(
+                        'Square',
+                        'floor',
+                        face,
+                        floorFaceClassName,
+                        floorCubeClassName
+                    ),
+                    d: getFacePath({
+                        slantDirection,
+                        level: FLOOR,
+                        yIndex,
+                        xIndex,
+                        zIndex: floorZIndex,
+                        face
+                    })
+                }}
             />
             <path
-                className={cx(
-                    'Square',
-                    'floor',
-                    floorFaceClassName,
-                    'shade'
-                )}
+                {...{
+                    className: cx(
+                        'Square',
+                        'floor',
+                        face,
+                        floorFaceClassName,
+                        'shade'
+                    ),
+                    d: getFacePath({
+                        slantDirection,
+                        level: FLOOR,
+                        yIndex,
+                        xIndex,
+                        zIndex: floorZIndex,
+                        face
+                    })
+                }}
             />
         </g>
     )

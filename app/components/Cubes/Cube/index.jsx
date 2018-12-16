@@ -1,72 +1,114 @@
 // A single pair of ceiling and floor cubes.
 
-import React, { memo } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import Svg from '../../Svg'
-
 import Face from './Face'
-import CubeColourStylesheet from './Stylesheets/CubeColour'
-import FaceShadeStylesheet from './Stylesheets/FaceShade'
-import FacePathsStylesheet from './Stylesheets/FacePaths'
 
 import { getCharStringForNumber } from 'helpers/format'
+import { getValueInAbridgedMatrix } from 'helpers/general'
 
+import { FACES } from 'constants/scene'
 import {
-    FACES
-} from 'constants/scene'
+    CUBE_X_INDICES,
+    CUBE_Y_INDICES
+} from 'constants/cubeIndex'
 
-const propTypes = {
+const
+    getMapStateToProps = (yIndex, xIndex) => ({
+        sceneStore: {
+            sceneCubes: {
+                ceiling: {
+                    zIndices: ceilingZIndices
+                },
+                floor: {
+                    zIndices: floorZIndices
+                },
+                slantDirection
+            }
+        }
+    }) => {
+        const
+            ceilingZIndex =
+                getValueInAbridgedMatrix(ceilingZIndices, xIndex, yIndex),
+            floorZIndex =
+                getValueInAbridgedMatrix(floorZIndices, xIndex, yIndex)
 
-    // From parent.
-    xIndex: PropTypes.number.isRequired,
-    yIndex: PropTypes.number.isRequired
+        return {
+            ceilingZIndex,
+            floorZIndex,
+            slantDirection
+        }
+    },
+    CubeConfig = {}
+
+class Cube extends PureComponent {
+
+    static propTypes = {
+        // Through Redux.
+        ceilingZIndex: PropTypes.number.isRequired,
+        floorZIndex: PropTypes.number.isRequired,
+        slantDirection: PropTypes.string.isRequired,
+
+        // From parent.
+        xIndex: PropTypes.number.isRequired,
+        yIndex: PropTypes.number.isRequired
+    }
+
+    render() {
+        const
+            {
+                xIndex,
+                yIndex,
+                ceilingZIndex,
+                floorZIndex,
+                slantDirection
+            } = this.props,
+            xCharIndex = getCharStringForNumber(xIndex)
+
+        return (
+
+            // Individual cubes need to be svgs in order to have a stacking order.
+            <Svg
+                className={cx(
+                    'Cube',
+
+                    /**
+                     * These classes are used to determine cube zIndex and face
+                     * shading.
+                     */
+                    `y${yIndex}`,
+                    `x${xCharIndex}`,
+
+                    'abF'
+                )}
+            >
+                {FACES.map(face => (
+                    <Face
+                        key={face}
+                        {...{
+                            face,
+                            xIndex,
+                            yIndex,
+                            ceilingZIndex,
+                            floorZIndex,
+                            slantDirection
+                        }}
+                    />
+                ))}
+            </Svg>
+        )
+    }
 }
 
-const Cube = memo(({
-    xIndex,
-    yIndex
-}) => {
-
-    const xCharIndex = getCharStringForNumber(xIndex)
-
-    // This component never updates because its parent never updates.
-    return (
-
-        // Individual cubes need to be svgs in order to have a stacking order.
-        <Svg
-            className={cx(
-                'Cube',
-
-                /**
-                 * These classes are used to determine cube zIndex and face
-                 * shading.
-                 */
-                `y${yIndex}`,
-                `x${xCharIndex}`,
-
-                'abF'
-            )}
-        >
-            <CubeColourStylesheet {...{ xIndex, yIndex }} />
-            <FaceShadeStylesheet {...{ xIndex, yIndex }} />
-            <FacePathsStylesheet {...{ xIndex, yIndex }} />
-
-            {FACES.map(face => (
-                <Face
-                    key={face}
-                    {...{
-                        face,
-                        xIndex,
-                        yIndex
-                    }}
-                />
-            ))}
-        </Svg>
-    )
+CUBE_Y_INDICES.forEach(yIndex => {
+    CubeConfig[yIndex] = {}
+    CUBE_X_INDICES.forEach(xIndex => {
+        CubeConfig[yIndex][xIndex] = connect(getMapStateToProps(yIndex, xIndex))(Cube)
+    })
 })
 
-Cube.propTypes = propTypes
-
-export default Cube
+export default CubeConfig

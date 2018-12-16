@@ -1,10 +1,13 @@
 // A single row of cubes.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Cube from './Cube'
+import CubeConfig from './Cube'
+import CubeColourStylesheet from './Stylesheets/CubeColour'
+import FloorTileShadeStylesheet from './Stylesheets/FloorTileShade'
+// import FacePathsStylesheet from './Stylesheets/FacePaths'
 
 import { CUBE_X_INDICES } from 'constants/cubeIndex'
 
@@ -20,9 +23,7 @@ class Cubes extends Component {
     }
 
     render() {
-        const {
-            yIndex
-        } = this.props
+        const { yIndex } = this.props
 
         return (
             <div
@@ -32,15 +33,25 @@ class Cubes extends Component {
                     'abF'
                 )}
             >
-                {CUBE_X_INDICES.map(xIndex => (
-                    <Cube
-                        key={`${xIndex}_${yIndex}`}
-                        {...{
-                            xIndex,
-                            yIndex
-                        }}
-                    />
-                ))}
+                {CUBE_X_INDICES.map(xIndex => {
+                    const Cube = CubeConfig[yIndex][xIndex]
+
+                    return (
+                        <___
+                            key={`${xIndex}_${yIndex}`}
+                        >
+                            <CubeColourStylesheet {...{ xIndex, yIndex }} />
+                            <FloorTileShadeStylesheet {...{ xIndex, yIndex }} />
+                            {/* <FacePathsStylesheet {...{ xIndex, yIndex }} /> */}
+                            <Cube
+                                {...{
+                                    xIndex,
+                                    yIndex
+                                }}
+                            />
+                        </___>
+                    )
+                })}
             </div>
         )
     }
