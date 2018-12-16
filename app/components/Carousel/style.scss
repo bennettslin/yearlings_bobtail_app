@@ -2,6 +2,8 @@
 @import "./Scroll/style";
 @import "./Select/style";
 
+$height__carouselHidden: $height__chivalry * 0.25;
+
 .Carousel {
     position: absolute;
     left: 0;
@@ -9,12 +11,9 @@
 
     opacity: 0;
 
-    // Allows the lyric to scroll when carousel has higher z-index.
-    z-index: $zIndex__annotation;
-
     .DW__desktop
     & {
-        bottom: -100%;
+        bottom: -$height__carouselHidden;
 
         height: $height__chivalry;
         padding-bottom: $js__margin__thin;
@@ -26,7 +25,7 @@
 
     .DW__mobileNotPhone
     & {
-        top: -100%;
+        top: -$height__carouselHidden;
         height: 100%;
 
         transition:
@@ -38,6 +37,9 @@
     .Main__visible
     & {
         opacity: 1;
+
+        // Allows the lyric to scroll when carousel has higher z-index.
+        z-index: $zIndex__annotation;
     }
 
     .DW__desktop
