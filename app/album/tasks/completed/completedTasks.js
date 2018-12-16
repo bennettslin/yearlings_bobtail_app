@@ -4201,5 +4201,15 @@ module.exports = [
         taskName: `Unmount annotations and verses so no need to watch for render. Put slider under transition, but don't unmount.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Cubes don't render in Firefox or Safari, because they don't accept d as a CSS attribute.`,
+        workedHours: 10,
+        neededHours: 10
+    },
+    {
+        taskName: `Use transition groups for popups, lyric, and carousel.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]
