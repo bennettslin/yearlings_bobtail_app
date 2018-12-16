@@ -15,7 +15,7 @@ const mapStateToProps = ({
     sceneCubesKey
 })
 
-class PresenceLayer extends Component {
+class LayerHoc extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -62,4 +62,4 @@ class PresenceLayer extends Component {
     }
 }
 
-export default connect(mapStateToProps)(PresenceLayer)
+export default connect(mapStateToProps)(LayerHoc)
