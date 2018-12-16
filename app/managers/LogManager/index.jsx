@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 
 import album from 'album'
 
+import FACE_PATHS from '../../faces'
+
 import {
     getAnnotationObject,
     getGlobalAnnotationObject,
@@ -32,12 +34,15 @@ class LogManager extends PureComponent {
     _assignDebugLogFunctions() {
         global.a = this.logAlbum
         global.d = this.logDrawings
+        global.f = this.logFacePaths
         global.g = this.logGlobalAnnotation
         global.n = this.logAnnotation
         global.i = this.logInstances
         global.z = this.logScene
         global.s = this.logSong
         global.t = this.logStorage
+
+        global.FACE_PATHS = FACE_PATHS
     }
 
     logAlbum = () => {
@@ -79,6 +84,10 @@ class LogManager extends PureComponent {
         copiedDrawings.actors = `actors: ${copiedDrawings.actors.length}`
 
         return this._logObject('admin drawings', copiedDrawings)
+    }
+
+    logFacePaths = () => {
+        return this._logObject('face paths', FACE_PATHS)
     }
 
     logGlobalAnnotation = (globalIndex) => {
