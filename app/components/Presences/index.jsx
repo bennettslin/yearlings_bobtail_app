@@ -30,7 +30,7 @@ const
         renderedSceneIndex,
         yIndex
     }),
-    PresenceLayers = {}
+    PresencesConfig = {}
 
 class Presences extends Component {
 
@@ -105,8 +105,8 @@ class Presences extends Component {
 }
 
 CUBE_Y_INDICES.forEach(yIndex => {
-    PresenceLayers[yIndex] =
+    PresencesConfig[yIndex] =
         connect(getMapStateToProps(yIndex))(Presences)
 })
 
-export default PresenceLayers
+export default PresencesConfig

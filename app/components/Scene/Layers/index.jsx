@@ -4,7 +4,7 @@ import React, { Component, Fragment as ___ } from 'react'
 import cx from 'classnames'
 
 import Cubes from '../../Cubes'
-import Presences from '../../Presences'
+import PresencesConfig from '../../Presences'
 
 import CubeZIndexStylesheet from './Stylesheets/CubeZIndex'
 import PresenceZIndexStylesheet from './Stylesheets/PresenceZIndex'
@@ -26,14 +26,14 @@ class Layers extends Component {
                 <PresenceZIndexStylesheet />
 
                 {CUBE_Y_INDICES.map(yIndex => {
-                    const PresencesLayer = Presences[yIndex]
+                    const Presences = PresencesConfig[yIndex]
 
                     return (
                         <___
                             key={yIndex}
                         >
                             <Cubes {...{ yIndex }} />
-                            <PresencesLayer />
+                            <Presences />
                         </___>
                     )
                 })}
