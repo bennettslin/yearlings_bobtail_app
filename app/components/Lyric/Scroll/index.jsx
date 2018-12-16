@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import { Transition } from 'react-transition-group'
-import ScrollLyricListener from '../../../listeners/ScrollLyricListener'
+import ScrollLyricListener from '../../../listeners/ScrollListener/Lyric'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
 

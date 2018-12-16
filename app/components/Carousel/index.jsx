@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import ScrollCarouselListener from '../../listeners/ScrollCarouselListener'
+import ScrollCarouselListener from '../../listeners/ScrollListener/Carousel'
 import CarouselScroll from './Scroll'
 import CarouselSelect from './Select'
 

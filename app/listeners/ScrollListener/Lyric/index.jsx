@@ -7,12 +7,12 @@ import { updateVerseBarsStore } from 'flux/verseBars/action'
 import {
     scrollElementIntoView,
     setChildElement
-} from 'helpers/scroll'
+} from '../helper'
 
 import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
-} from 'constants/dom'
+} from 'constants/scroll'
 
 class ScrollLyricListener extends PureComponent {
 

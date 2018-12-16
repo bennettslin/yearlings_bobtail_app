@@ -33,7 +33,6 @@ class WindowListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         updateDeviceStore: PropTypes.func.isRequired,
         updateRenderableStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired
@@ -44,14 +43,11 @@ class WindowListener extends PureComponent {
     }
 
     componentDidMount() {
+        // Set store values based on window size.
+        this._windowResize()
+
         // Then watch for any subsequent window resize.
         window.onresize = debounce(this._windowResize, 25)
-    }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.appMounted && !prevProps.appMounted) {
-            this._windowResize()
-        }
     }
 
     componentWillUnmount() {
@@ -189,7 +185,7 @@ class WindowListener extends PureComponent {
          * rendering the most performance intensive components.
          */
         const windowResizeTimeoutId = setTimeout(
-            this._prepareForWindowResizeRender, 400
+            this._prepareForWindowResizeRender, 500
         )
 
         this.setState({
@@ -208,11 +204,7 @@ class WindowListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    loadStore: { appMounted }
-}) => ({
-    appMounted
-})
+const mapStateToProps = null
 
 export default connect(
     mapStateToProps,

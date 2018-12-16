@@ -6,9 +6,9 @@ import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import {
     scrollElementIntoView,
     setChildElement
-} from 'helpers/scroll'
+} from '../helper'
 
-import { CAROUSEL_SCROLL } from 'constants/dom'
+import { CAROUSEL_SCROLL } from 'constants/scroll'
 
 class ScrollCarouselListener extends PureComponent {
 

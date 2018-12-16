@@ -13,7 +13,7 @@ import VerseLines from './Lines'
 
 import { populateRefs } from 'helpers/ref'
 
-import { VERSE_SCROLL } from 'constants/dom'
+import { VERSE_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
     renderedStore: { renderedSongIndex }

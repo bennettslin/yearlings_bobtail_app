@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import Annotation from '../../Annotation'
 
-import { CAROUSEL_SCROLL } from 'constants/dom'
+import { CAROUSEL_SCROLL } from 'constants/scroll'
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 
 import { getCarouselAnnotationData } from './helper'

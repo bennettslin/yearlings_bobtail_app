@@ -3,12 +3,12 @@ import scrollIntoView from 'scroll-into-view'
 import {
     getIsDesktop,
     getIsMonitor
-} from './responsive'
+} from 'helpers/responsive'
 
 import {
     LS_WIDTH_GOLDEN_CORD,
     LS_WIDTH_UNCANNY_VALLEY
-} from '../constants/responsive'
+} from 'constants/responsive'
 
 const _getLyricTopAlign = (deviceIndex, isLyricExpanded) => {
 

@@ -18,7 +18,6 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
     responsiveStore: { isHeightlessLyric },
     // sessionStore: { selectedWikiIndex },
     toggleStore: {
@@ -27,7 +26,6 @@ const mapStateToProps = ({
     },
     eventStore: { queuedFocus }
 }) => ({
-    appMounted,
     isHeightlessLyric,
     // selectedWikiIndex,
     // isScoreShown,
@@ -39,7 +37,6 @@ class FocusContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         // selectedWikiIndex: PropTypes.number.isRequired,
@@ -221,9 +218,7 @@ class FocusContainer extends PureComponent {
     }
 
     render() {
-        const { appMounted } = this.props
-
-        return appMounted && (
+        return (
             <div
                 {...{
                     ref: this._setRootElement,

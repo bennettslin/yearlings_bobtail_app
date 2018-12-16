@@ -10,7 +10,7 @@ import Anchor from '../../../Anchor'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 
-import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
+import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
     accessStore: { accessedAnnotationIndex },

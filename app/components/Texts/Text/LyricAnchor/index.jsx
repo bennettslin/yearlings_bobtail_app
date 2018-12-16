@@ -13,7 +13,7 @@ import Texts from '../../'
 
 import { populateRefs } from 'helpers/ref'
 
-import { LYRIC_ANNOTATION_SCROLL } from 'constants/dom'
+import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
     renderedStore: {

@@ -19,7 +19,6 @@ class RootContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         isAdminOn: PropTypes.bool.isRequired,
 
         // From parent.
@@ -34,14 +33,13 @@ class RootContainer extends PureComponent {
 
     render() {
         const {
-            appMounted,
             isAdminOn,
             setLyricFocusElement,
             setScoreFocusElement,
             setWikiFocusElement
         } = this.props
 
-        return appMounted && (
+        return (
             <div
                 className={cx(
                     'RootContainer'
@@ -70,10 +68,8 @@ class RootContainer extends PureComponent {
 }
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
     toggleStore: { isAdminOn }
 }) => ({
-    appMounted,
     isAdminOn
 })
 
