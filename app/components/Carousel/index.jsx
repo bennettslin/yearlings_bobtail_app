@@ -12,10 +12,8 @@ import CarouselSelect from './Select'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
     responsiveStore: { isUnrenderableCarouselNav }
 }) => ({
-    appMounted,
     isUnrenderableCarouselNav
 })
 
@@ -23,7 +21,6 @@ class Carousel extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         isUnrenderableCarouselNav: PropTypes.bool.isRequired
     }
 
@@ -44,12 +41,9 @@ class Carousel extends PureComponent {
     }
 
     render() {
-        const {
-            appMounted,
-            isUnrenderableCarouselNav
-        } = this.props
+        const { isUnrenderableCarouselNav } = this.props
 
-        return appMounted && !isUnrenderableCarouselNav && (
+        return !isUnrenderableCarouselNav && (
             <div
                 className={cx(
                     'Carousel',

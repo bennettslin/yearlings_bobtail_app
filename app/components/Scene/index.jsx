@@ -11,10 +11,8 @@ import Sky from './Sky'
 import Wood from '../Stage/Wood'
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
     renderStore: { didSceneRender }
 }) => ({
-    appMounted,
     didSceneRender
 })
 
@@ -22,7 +20,6 @@ class Scene extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         didSceneRender: PropTypes.bool.isRequired
     }
 
@@ -31,12 +28,9 @@ class Scene extends PureComponent {
     }
 
     render() {
-        const {
-            appMounted,
-            didSceneRender
-        } = this.props
+        const { didSceneRender } = this.props
 
-        return appMounted && (
+        return (
             <div className={cx(
                 'Scene',
                 { 'Scene__shown': didSceneRender }

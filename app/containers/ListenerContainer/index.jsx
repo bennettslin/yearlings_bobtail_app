@@ -37,6 +37,7 @@ class ListenerContainer extends PureComponent {
     componentDidMount() {
         logMount('ListenerContainer')
 
+        // TODO: Is this still necessary?
         this.props.updateLoadStore({ appMounted: true })
     }
 
