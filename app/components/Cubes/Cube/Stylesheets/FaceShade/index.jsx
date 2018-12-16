@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import Stylesheet from '../../../../Stylesheet'
 import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
-import { getParentClassNameForSceneLogic } from 'helpers/className'
-import { getChildClassNameForFaceLogic } from '../../helper'
+import { getParentClassNameForScene } from 'helpers/className'
+import { getChildClassNameForFace } from '../../helper'
 
 import { CUBE_Z_INDICES } from 'constants/cubeIndex'
 
@@ -65,7 +65,7 @@ const propTypes = {
                     }
 
                     const
-                        parentPrefix = getParentClassNameForSceneLogic({
+                        parentPrefix = getParentClassNameForScene({
                             matrixName: Z_INDICES_MATRIX_NAME,
                             level: FLOOR,
                             xIndex,
@@ -73,7 +73,7 @@ const propTypes = {
                             value: zIndex
                         }),
 
-                        childPrefix = getChildClassNameForFaceLogic({
+                        childPrefix = getChildClassNameForFace({
                             face: TILE,
                             level: FLOOR,
                             xIndex,

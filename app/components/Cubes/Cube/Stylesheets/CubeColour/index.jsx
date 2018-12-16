@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import Stylesheet from '../../../../Stylesheet'
 import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
-import { getParentClassNameForSceneLogic } from 'helpers/className'
-import { getChildClassNameForCubeLogic } from '../../helper'
+import { getParentClassNameForScene } from 'helpers/className'
+import { getChildClassNameForCube } from '../../helper'
 
 import {
     HSLA_MAP
@@ -48,7 +48,7 @@ const propTypes = {
                     return HSLA_KEYS.map(hslaKey => {
 
                         const
-                            parentPrefix = getParentClassNameForSceneLogic({
+                            parentPrefix = getParentClassNameForScene({
                                 matrixName: HSLA_MATRIX_NAME,
                                 level,
                                 xIndex,
@@ -56,7 +56,7 @@ const propTypes = {
                                 value: hslaKey
                             }),
 
-                            childPrefix = getChildClassNameForCubeLogic({
+                            childPrefix = getChildClassNameForCube({
                                 level,
                                 xIndex,
                                 yIndex

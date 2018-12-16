@@ -1,7 +1,7 @@
 import { getCharStringForNumber } from 'helpers/format'
 import { Z_INDICES_MATRIX_NAME } from 'constants/scene'
 
-export const getParentClassNameForSceneLogic = ({
+export const getParentClassNameForScene = ({
     matrixName,
     level,
     xIndex,

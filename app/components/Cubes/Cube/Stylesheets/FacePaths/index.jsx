@@ -5,27 +5,18 @@ import PropTypes from 'prop-types'
 import Stylesheet from '../../../../Stylesheet'
 import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
 
-import {
-    getCubeCornerPercentages,
-    getSideDirection
-} from './helper'
+import { getFacePath } from '../../../../../faces'
 
 import {
-    getPathString,
-    getPolygonPoints
-} from './pathHelper'
-
-import {
-    getParentClassNameForSceneLogic,
+    getParentClassNameForScene,
     getClassNameForSlantDirection
 } from 'helpers/className'
 
-import { getChildClassNameForFaceLogic } from '../../helper'
+import { getChildClassNameForFace } from '../../helper'
 
 import {
     SLANT_DIRECTIONS,
     LEVELS,
-    FLOOR,
     FACES,
     Z_INDICES_MATRIX_NAME
 } from 'constants/scene'
@@ -55,31 +46,16 @@ const propTypes = {
                 )}
             >
                 {SLANT_DIRECTIONS.map(slantDirection => {
-
                     const
-                        sideDirection = getSideDirection({
-                            xIndex,
-                            slantDirection
-                        }),
                         slantDirectionClassName = getClassNameForSlantDirection(
                             slantDirection
                         )
 
                     return LEVELS.map(level => {
 
-                        const isFloor = level === FLOOR
-
                         return CUBE_Z_INDICES.map(zIndex => {
-
                             const
-                                cubeCorners = getCubeCornerPercentages({
-                                    xIndex,
-                                    yIndex,
-                                    zIndex,
-                                    isFloor,
-                                    slantDirection
-                                }),
-                                parentPrefix = getParentClassNameForSceneLogic({
+                                parentPrefix = getParentClassNameForScene({
                                     matrixName: Z_INDICES_MATRIX_NAME,
                                     level,
                                     xIndex,
@@ -88,22 +64,21 @@ const propTypes = {
                                 })
 
                             return FACES.map(face => {
-
                                 const
-                                    polygonPoints = getPolygonPoints({
-                                        face,
-                                        isFloor,
-                                        sideDirection,
-                                        slantDirection,
-                                        cubeCorners
-                                    }),
-                                    childPrefix = getChildClassNameForFaceLogic({
+                                    childPrefix = getChildClassNameForFace({
                                         face,
                                         level,
                                         xIndex,
                                         yIndex
                                     }),
-                                    pathString = getPathString(polygonPoints)
+                                    pathString = getFacePath({
+                                        slantDirection,
+                                        level,
+                                        yIndex,
+                                        xIndex,
+                                        zIndex,
+                                        face
+                                    })
 
                                 return (
                                     <DynamicStylesheet

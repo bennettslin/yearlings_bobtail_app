@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import {
-    getChildClassNameForCubeLogic,
-    getChildClassNameForFaceLogic
+    getChildClassNameForCube,
+    getChildClassNameForFace
 } from '../helper'
 
 import { getCharStringForNumber } from 'helpers/format'
@@ -30,27 +30,27 @@ const Face = memo(({
 }) => {
 
     const
-        ceilingFaceClassName = getChildClassNameForFaceLogic({
+        ceilingFaceClassName = getChildClassNameForFace({
             face,
             level: CEILING,
             xIndex,
             yIndex
         }),
 
-        floorFaceClassName = getChildClassNameForFaceLogic({
+        floorFaceClassName = getChildClassNameForFace({
             face,
             level: FLOOR,
             xIndex,
             yIndex
         }),
 
-        ceilingCubeClassName = getChildClassNameForCubeLogic({
+        ceilingCubeClassName = getChildClassNameForCube({
             level: CEILING,
             xIndex,
             yIndex
         }),
 
-        floorCubeClassName = getChildClassNameForCubeLogic({
+        floorCubeClassName = getChildClassNameForCube({
             level: FLOOR,
             xIndex,
             yIndex

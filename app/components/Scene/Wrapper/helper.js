@@ -1,4 +1,4 @@
-import { getParentClassNameForSceneLogic } from 'helpers/className'
+import { getParentClassNameForScene } from 'helpers/className'
 import { getValueInAbridgedMatrix } from 'helpers/general'
 
 import { LEVELS } from 'constants/scene'
@@ -28,7 +28,7 @@ export const getParentClassNamesForSceneLogic = (
                     yIndex
                 )
 
-                return getParentClassNameForSceneLogic({
+                return getParentClassNameForScene({
                     matrixName,
                     level,
                     xIndex,

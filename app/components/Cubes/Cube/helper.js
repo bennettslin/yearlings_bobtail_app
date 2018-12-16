@@ -1,6 +1,6 @@
 import { getCharStringForNumber } from 'helpers/format'
 
-export const getChildClassNameForCubeLogic = ({
+export const getChildClassNameForCube = ({
     level,
     xIndex,
     yIndex
@@ -16,7 +16,7 @@ export const getChildClassNameForCubeLogic = ({
     }`
 }
 
-export const getChildClassNameForFaceLogic = ({
+export const getChildClassNameForFace = ({
     level,
     face,
     xIndex,

@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import album from 'album'
 
-import FACE_PATHS from '../../faces'
+import { FACE_PATHS } from '../../faces'
 
 import {
     getAnnotationObject,

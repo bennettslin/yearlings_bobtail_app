@@ -1,12 +1,10 @@
 import {
+    getSideDirection,
     getCubeCornerPercentages,
-    getSideDirection
+    getPathString
 } from './helper'
 
-import {
-    getPathString,
-    getPolygonPoints
-} from './pathHelper'
+import { getPolygonPoints } from './pathHelper'
 
 import {
     SLANT_DIRECTIONS,
@@ -79,4 +77,19 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
     })
 })
 
-export default FACE_PATHS
+const getFacePath = ({
+    slantDirection,
+    level,
+    yIndex,
+    xIndex,
+    zIndex,
+    face
+}) => {
+    const slantDirectionKey = slantDirection || 'default'
+    return FACE_PATHS[slantDirectionKey][level][yIndex][xIndex][zIndex][face]
+}
+
+export {
+    FACE_PATHS,
+    getFacePath
+}
