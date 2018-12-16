@@ -19,7 +19,7 @@ const
     ]
 
 const getNextKeyCanRender = ({
-    order = THEATRE_SCENE_LYRIC_CAROUSEL_ORDER,
+    order = THEATRE_LYRIC_CAROUSEL_SCENE_ORDER,
     currentKey
 
 }) => {

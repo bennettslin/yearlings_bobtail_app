@@ -103,6 +103,7 @@ const
     },
 
     LOAD_DEFAULTS = {
+        appMounted: false,
         isScoreLoaded: false
     },
 
