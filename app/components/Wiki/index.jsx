@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Spinner from '../Spinner'
+import Spinner from 'modules/Spinner'
 
 // TODO: Show that active wiki anchor is disabled.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/

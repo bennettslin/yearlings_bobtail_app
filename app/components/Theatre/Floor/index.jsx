@@ -52,10 +52,10 @@ class Floor extends PureComponent {
                 firstLength: firstRowSeatHeight,
 
                 // Gets wider faster with larger value.
-                multiplyFactor: 1.275,
+                multiplyFactor: 1.5,
 
                 // Beginning values are closer together with larger value.
-                bunchFactor: 1.55,
+                bunchFactor: 1.5,
 
                 // Values are closer together in general when closer to 1.
                 overlapRatio: 0.9925

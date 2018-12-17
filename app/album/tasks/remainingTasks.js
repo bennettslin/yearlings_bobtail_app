@@ -158,6 +158,36 @@ module.exports = [
         workedHours: 0,
         neededHours: 8
     },
+    {
+        taskName: `Cubes mount with Theatre in beginning, to convey curtains. Sky is dark. Curtains raise when ready.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `During song transitions, cubes reset to base level. All presences exit. Sky resets to base level as well.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `During scene transitions, actors exit. Things persist if they can, otherwise exit as well. Cubes and sky do not reset to base level, but transition directly to next scene.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Cube animation and lyric scrolling are both smooth with scene and song transitions.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Lyric and carousel rendering are still smooth with song transitions.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Try out Vivus animations.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     /**
      * Final before release.

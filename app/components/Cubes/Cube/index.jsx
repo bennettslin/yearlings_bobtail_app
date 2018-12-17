@@ -107,14 +107,8 @@ class Cube extends Component {
                 {...{
                     className: cx(
                         'Cube',
-
-                        /**
-                         * These classes are used to determine cube zIndex and face
-                         * shading.
-                         */
                         `y${yIndex}`,
                         `x${xCharIndex}`,
-
                         'abF'
                     ),
                     style: {
