@@ -4,7 +4,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from '../../../../../Svg'
+import Svg from 'modules/Svg'
 import ThumbIcon from './Icon'
 
 import { getSongTitle } from 'helpers/data'

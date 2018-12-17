@@ -3,7 +3,7 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 
-import Svg from '../../../Svg'
+import Svg from 'modules/Svg'
 
 const AccessField = memo(() => {
 

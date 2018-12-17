@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 
-import Stylesheet from '../../Stylesheet'
-import StaticStylesheet from '../../Stylesheet/Static'
+import Stylesheet from 'modules/Stylesheet'
+import StaticStylesheet from 'modules/Stylesheet/Static'
 
 import { STYLE_LOGIC_ACCESS_LETTERS } from 'constants/access'
 import {

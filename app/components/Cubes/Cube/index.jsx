@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Svg from '../../Svg'
+import Svg from 'modules/Svg'
 import Face from './Face'
 
 import { getCharStringForNumber } from 'helpers/format'
@@ -14,7 +14,7 @@ import {
     getValueInAbridgedMatrix
 } from 'helpers/general'
 
-import { getCubeZIndexStyle } from '../../../faces'
+import { getCubeZIndexStyle } from './helpers'
 
 import {
     FACES,

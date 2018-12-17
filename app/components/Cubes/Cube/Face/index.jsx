@@ -5,7 +5,7 @@ import cx from 'classnames'
 import {
     getCubeColour,
     getFacePath
-} from '../../../../faces'
+} from '../helpers'
 
 import { getCharStringForNumber } from 'helpers/format'
 

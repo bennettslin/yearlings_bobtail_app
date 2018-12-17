@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from '../../Svg'
+import Svg from 'modules/Svg'
 
 import AudioNextIcon from './Icons/AudioNextIcon'
 import AudioOptionsIcon from './Icons/AudioOptionsIcon'

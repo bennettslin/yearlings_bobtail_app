@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from '../Svg'
+import Svg from 'modules/Svg'
 
 import DotField from './Field'
 import DotIcon from './Icon'
