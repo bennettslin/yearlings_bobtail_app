@@ -7,7 +7,10 @@ import { updateSessionStore } from 'flux/session/action'
 
 import ListenerContainer from '../ListenerContainer'
 
-import { getTimeForVerseIndex } from '../../helpers/data'
+import {
+    getSceneIndexForVerseIndex,
+    getTimeForVerseIndex
+} from '../../helpers/data'
 import {
     getValidRoutingIndicesObject,
     getPathForIndices
@@ -58,6 +61,10 @@ class RoutingListener extends PureComponent {
                 selectedSongIndex,
                 selectedVerseIndex,
                 selectedAnnotationIndex,
+                selectedSceneIndex: getSceneIndexForVerseIndex(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                ),
                 selectedTime: getTimeForVerseIndex(
                     selectedSongIndex,
                     selectedVerseIndex

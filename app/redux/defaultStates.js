@@ -226,6 +226,7 @@ const
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,
+        selectedSceneIndex: sceneIndex,
         isSelectedLogue: isStoredLogue,
         selectedTime: getTimeForVerseIndex(
             storedSongIndex,

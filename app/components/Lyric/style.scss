@@ -44,7 +44,10 @@
 }
 
 .Lyric__visible {
-    opacity: 1;
+    .RM__song
+    & {
+        opacity: 1;
+    }
 }
 
 .Lyric__expanded {

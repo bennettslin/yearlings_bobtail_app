@@ -7,11 +7,14 @@ import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
 
+import { getSceneIndexForVerseIndex } from 'helpers/data'
+
 class TimeVerseDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isAutoScroll: PropTypes.bool.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSongStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
@@ -32,8 +35,14 @@ class TimeVerseDispatcher extends PureComponent {
     }) => {
         // This is only ever called by the player.
 
+        const { selectedSongIndex } = this.props
+
         this.props.updateSongStore({
             selectedVerseIndex: nextVerseIndex,
+            selectedSceneIndex: getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                nextVerseIndex
+            ),
             selectedTime: currentTime
         })
 
@@ -61,9 +70,11 @@ class TimeVerseDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isAutoScroll }
+    toggleStore: { isAutoScroll },
+    songStore: { selectedSongIndex }
 }) => ({
-    isAutoScroll
+    isAutoScroll,
+    selectedSongIndex
 })
 
 export default connect(

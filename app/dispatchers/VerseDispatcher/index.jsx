@@ -7,7 +7,10 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
 import { resetVerseBars } from 'flux/verseBars/action'
 
-import { getTimeForVerseIndex } from 'helpers/data'
+import {
+    getSceneIndexForVerseIndex,
+    getTimeForVerseIndex
+} from 'helpers/data'
 
 class VerseDispatcher extends PureComponent {
 
@@ -44,6 +47,10 @@ class VerseDispatcher extends PureComponent {
 
         this.props.updateSongStore({
             selectedVerseIndex,
+            selectedSceneIndex: getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            ),
             selectedTime: getTimeForVerseIndex(
                 selectedSongIndex,
                 selectedVerseIndex

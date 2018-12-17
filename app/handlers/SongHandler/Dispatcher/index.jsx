@@ -13,6 +13,7 @@ import { updateAudioStore } from 'flux/audio/action'
 import { updateSongStore } from 'flux/song/action'
 
 import {
+    getSceneIndexForVerseIndex,
     getSongsAndLoguesCount,
     getTimeForVerseIndex
 } from '../../../helpers/data'
@@ -69,6 +70,10 @@ class SongDispatcher extends PureComponent {
             selectedSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
+            selectedSceneIndex: getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            ),
             selectedTime: getTimeForVerseIndex(
                 selectedSongIndex,
                 selectedVerseIndex

@@ -9,21 +9,21 @@ import RenderableDispatcher from '../../../handlers/RenderableHandler/Dispatcher
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    renderedStore: {
-        renderedSongIndex,
-        renderedSceneIndex
+    songStore: {
+        selectedSongIndex,
+        selectedSceneIndex
     }
 }) => ({
-    renderedSongIndex,
-    renderedSceneIndex
+    selectedSongIndex,
+    selectedSceneIndex
 })
 
 class SceneListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSceneIndex: PropTypes.number.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired
+        selectedSceneIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -33,18 +33,18 @@ class SceneListener extends PureComponent {
     _updateSceneIfNeeded(prevProps) {
         const
             {
-                renderedSceneIndex,
-                renderedSongIndex
+                selectedSceneIndex,
+                selectedSongIndex
             } = this.props,
             {
-                renderedSceneIndex: prevSceneIndex,
-                renderedSongIndex: prevSongIndex
+                selectedSceneIndex: prevSceneIndex,
+                selectedSongIndex: prevSongIndex
             } = prevProps
 
         if (
             // Only listen for scene change within the same song.
-            renderedSongIndex === prevSongIndex &&
-            renderedSceneIndex !== prevSceneIndex
+            selectedSongIndex === prevSongIndex &&
+            selectedSceneIndex !== prevSceneIndex
         ) {
             this.dispatchSceneChangeUnrenderable()
         }

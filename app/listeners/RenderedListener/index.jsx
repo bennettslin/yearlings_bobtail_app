@@ -8,7 +8,6 @@ import { updateRenderedStore } from 'flux/rendered/action'
 import RenderableDispatcher from '../../handlers/RenderableHandler/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
-import { getSceneIndexForVerseIndex } from 'helpers/data'
 
 class RenderedListener extends PureComponent {
 
@@ -17,6 +16,7 @@ class RenderedListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
+        selectedSceneIndex: PropTypes.number.isRequired,
         updateRenderedStore: PropTypes.func.isRequired
     }
 
@@ -42,17 +42,15 @@ class RenderedListener extends PureComponent {
         const {
             selectedSongIndex,
             selectedVerseIndex,
-            selectedAnnotationIndex
+            selectedAnnotationIndex,
+            selectedSceneIndex
         } = this.props
 
         this.props.updateRenderedStore({
             renderedSongIndex: selectedSongIndex,
             renderedVerseIndex: selectedVerseIndex,
             renderedAnnotationIndex: selectedAnnotationIndex,
-            renderedSceneIndex: getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
+            renderedSceneIndex: selectedSceneIndex
         })
     }
 
@@ -104,12 +102,11 @@ class RenderedListener extends PureComponent {
              * If selecting or changing verse in same song, change index to be
              * rendered right away.
              */
+            const { selectedSceneIndex } = this.props
+
             this.props.updateRenderedStore({
                 renderedVerseIndex: selectedVerseIndex,
-                renderedSceneIndex: getSceneIndexForVerseIndex(
-                    selectedSongIndex,
-                    selectedVerseIndex
-                )
+                renderedSceneIndex: selectedSceneIndex
             })
         }
     }
@@ -129,12 +126,14 @@ const mapStateToProps = ({
     songStore: {
         selectedSongIndex,
         selectedVerseIndex,
-        selectedAnnotationIndex
+        selectedAnnotationIndex,
+        selectedSceneIndex
     }
 }) => ({
     selectedSongIndex,
     selectedVerseIndex,
-    selectedAnnotationIndex
+    selectedAnnotationIndex,
+    selectedSceneIndex
 })
 
 export default connect(
