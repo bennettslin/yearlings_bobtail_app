@@ -6,12 +6,6 @@ module.exports = [
         neededHours: 5
     },
 
-    {
-        taskName: `Be smarter about rendering too many annotation dispatchers.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
     // Scrolling stuff.
     {
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,
@@ -160,7 +154,7 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Presence and cubes transition order. Make sure changes between songs are smooth, animation wise.`,
+        taskName: `Continue to work on Presence and Cubes transition order. Make sure changes between songs are smooth, animation wise.`,
         workedHours: 0,
         neededHours: 8
     },

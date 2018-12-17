@@ -267,5 +267,10 @@ module.exports = [
         taskName: `Allow presences to specify zIndex. Position presences in slanted cubes. (I'm going to assume that without window blinds, this is no longer necessary.)`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Be smarter about rendering too many annotation dispatchers. (Won't do, at least for now, as this doesn't seem to affect performance.)`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

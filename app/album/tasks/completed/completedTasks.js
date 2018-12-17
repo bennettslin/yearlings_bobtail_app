@@ -4216,5 +4216,10 @@ module.exports = [
         taskName: `CSS transition group for presences, since they now cut in and out.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Work on Presence and cubes transition order.`,
+        workedHours: 9,
+        neededHours: 9
     }
 ]
