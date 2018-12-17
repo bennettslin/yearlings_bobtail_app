@@ -1,13 +1,13 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 
-import Stylesheet from '../../../../Stylesheet'
-import DynamicStylesheet from '../../../../Stylesheet/Dynamic'
+import Stylesheet from '../../../Stylesheet'
+import DynamicStylesheet from '../../../Stylesheet/Dynamic'
 
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Y_INDICES
-} from '../../../../../constants/cubeIndex'
+} from '../../../../constants/cubeIndex'
 
 const PresenceZIndexStylesheet = memo(() => {
 

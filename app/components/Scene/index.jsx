@@ -5,25 +5,21 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import SceneWrapper from './Wrapper'
 import Layers from './Layers'
 import Sky from './Sky'
 import Wood from '../Stage/Wood'
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
-    renderStore: { didSceneRender }
+    loadStore: { appMounted }
 }) => ({
-    appMounted,
-    didSceneRender
+    appMounted
 })
 
 class Scene extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
-        didSceneRender: PropTypes.bool.isRequired
+        appMounted: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
@@ -31,23 +27,17 @@ class Scene extends PureComponent {
     }
 
     render() {
-        const {
-            appMounted,
-            didSceneRender
-        } = this.props
+        const { appMounted } = this.props
 
         return (
             <div className={cx(
-                'Scene',
-                { 'Scene__shown': didSceneRender }
+                'Scene'
             )}>
-                <SceneWrapper>
-                    <Sky />
-                    <Wood />
-                    {appMounted && (
-                        <Layers />
-                    )}
-                </SceneWrapper>
+                <Sky />
+                <Wood />
+                {appMounted && (
+                    <Layers />
+                )}
             </div>
         )
     }

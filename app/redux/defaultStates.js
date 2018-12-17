@@ -173,7 +173,6 @@ const
         layers: scenePresenceLayers
     } = sceneObject,
 
-    // TODO: This stores hsla as well. Is that necessary?
     sceneCubes = getCubesForKey(sceneCubesKey),
 
     SCENE_DEFAULTS = {

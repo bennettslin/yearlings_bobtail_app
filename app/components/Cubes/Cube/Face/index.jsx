@@ -6,10 +6,6 @@ import {
     getCubeColour,
     getFacePath
 } from '../../../../faces'
-import {
-    getChildClassNameForCube,
-    getChildClassNameForFace
-} from '../../helper'
 
 import { getCharStringForNumber } from 'helpers/format'
 
@@ -34,21 +30,7 @@ const Face = memo(({
     hslaColourKey
 }) => {
 
-    const
-        faceClassName = getChildClassNameForFace({
-            face,
-            level,
-            xIndex,
-            yIndex
-        }),
-
-        cubeClassName = getChildClassNameForCube({
-            level,
-            xIndex,
-            yIndex
-        }),
-
-        xCharIndex = getCharStringForNumber(xIndex)
+    const xCharIndex = getCharStringForNumber(xIndex)
 
     return (
         <g className={cx(
@@ -65,9 +47,7 @@ const Face = memo(({
                     className: cx(
                         'Square',
                         level,
-                        face,
-                        faceClassName,
-                        cubeClassName
+                        face
                     ),
                     d: getFacePath({
                         slantDirection,
@@ -86,8 +66,7 @@ const Face = memo(({
                         'Square',
                         'shade',
                         level,
-                        face,
-                        faceClassName
+                        face
                     ),
                     d: getFacePath({
                         slantDirection,

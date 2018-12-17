@@ -14,6 +14,8 @@ import {
     getValueInAbridgedMatrix
 } from 'helpers/general'
 
+import { getCubeZIndexStyle } from '../../../faces'
+
 import {
     FACES,
     CEILING,
@@ -102,18 +104,28 @@ class Cube extends Component {
 
             // Individual cubes need to be svgs in order to have a stacking order.
             <Svg
-                className={cx(
-                    'Cube',
+                {...{
+                    className: cx(
+                        'Cube',
 
-                    /**
-                     * These classes are used to determine cube zIndex and face
-                     * shading.
-                     */
-                    `y${yIndex}`,
-                    `x${xCharIndex}`,
+                        /**
+                         * These classes are used to determine cube zIndex and face
+                         * shading.
+                         */
+                        `y${yIndex}`,
+                        `x${xCharIndex}`,
 
-                    'abF'
-                )}
+                        'abF'
+                    ),
+                    style: {
+                        zIndex: getCubeZIndexStyle({
+                            slantDirection,
+                            yIndex,
+                            xIndex
+                        })
+                    }
+                }}
+
             >
                 {FACES.map(face => (
                     <Face

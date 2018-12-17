@@ -10,6 +10,7 @@ const defaultProps = {
 
 const propTypes = {
     className: PropTypes.any,
+    style: PropTypes.object,
     viewBoxWidth: PropTypes.number,
     viewBoxHeight: PropTypes.number,
     children: PropTypes.node
@@ -18,6 +19,7 @@ const propTypes = {
 const Svg = memo(({
 
     className,
+    style,
     viewBoxWidth,
     viewBoxHeight,
     children
@@ -42,7 +44,8 @@ const Svg = memo(({
                     viewBox: `0 0 ${safeViewBoxWidth} ${safeViewBoxHeight}`
                 },
                 xmlns: 'http://www.w3.org/2000/svg',
-                preserveAspectRatio: 'none'
+                preserveAspectRatio: 'none',
+                style
             }}
         >
             {children}

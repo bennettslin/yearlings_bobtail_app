@@ -31,10 +31,3 @@ export const getParentClassNameForScene = ({
         formattedValue
     }`
 }
-
-export const getClassNameForSlantDirection = (slantDirection) => {
-
-    return slantDirection ?
-        `Scene__slantDirection__${slantDirection}` :
-        ''
-}

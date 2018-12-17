@@ -19,7 +19,6 @@ const _roundPercentage = (rawPercentage) => {
 }
 
 const _getXPercentage = (
-
     xCornerIndex,
     yCornerIndex,
     slantDirection,
@@ -69,7 +68,6 @@ const _getXPercentage = (
 }
 
 const _getYPercentage = (
-
     yCornerIndex,
     zIndex,
     slantDirection
@@ -103,7 +101,6 @@ const _getYPercentage = (
 }
 
 const _getXYPercentages = (
-
     /**
      * When default, this is an interval from 0 to 12. There are twelve cube
      * columns.
