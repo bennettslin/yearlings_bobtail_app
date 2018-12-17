@@ -1,13 +1,15 @@
 // Singleton to listen for window resize event.
 
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
 import { updateDeviceStore } from 'flux/device/action'
-import { updateRenderableStore } from 'flux/renderable/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
 
+import RenderableDispatcher from '../../handlers/RenderableHandler/Dispatcher'
+
+import { populateRefs } from 'helpers/ref'
 import {
     getIsHeightlessLyric,
     getIsUnrenderableCarouselNav
@@ -34,12 +36,7 @@ class WindowListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         updateDeviceStore: PropTypes.func.isRequired,
-        updateRenderableStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired
-    }
-
-    state = {
-        windowResizeTimeoutId: ''
     }
 
     componentDidMount() {
@@ -47,7 +44,7 @@ class WindowListener extends PureComponent {
         this._windowResize()
 
         // Then watch for any subsequent window resize.
-        window.onresize = debounce(this._windowResize, 25)
+        window.onresize = debounce(this._windowResize, 100)
     }
 
     componentWillUnmount() {
@@ -67,14 +64,6 @@ class WindowListener extends PureComponent {
                 windowWidth
             })
 
-        if (e) {
-            this._prepareForWindowResizeUnrender()
-
-        // Set to true the first time this is called, when app is mounted.
-        } else {
-            this._prepareForWindowResizeRender()
-        }
-
         this._updateDeviceStore({
             deviceIndex,
             windowHeight,
@@ -89,7 +78,7 @@ class WindowListener extends PureComponent {
             isHeightlessLyric
         })
 
-        return deviceIndex
+        this.dispatchWindowResizeUnrenderable()
     }
 
     _updateDeviceStore({
@@ -172,35 +161,14 @@ class WindowListener extends PureComponent {
         })
     }
 
-    _prepareForWindowResizeUnrender() {
-        this.props.updateRenderableStore({
-            isWindowResizeRenderable: false
-        })
-
-        // Clear previous timeout.
-        clearTimeout(this.state.windowResizeTimeoutId)
-
-        /**
-         * Render is synchronous, so wait a bit after resizing window before
-         * rendering the most performance intensive components.
-         */
-        const windowResizeTimeoutId = setTimeout(
-            this._prepareForWindowResizeRender, 500
-        )
-
-        this.setState({
-            windowResizeTimeoutId
-        })
-    }
-
-    _prepareForWindowResizeRender = () => {
-        this.props.updateRenderableStore({
-            isWindowResizeRenderable: true
-        })
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
-        return null
+        return (
+            <RenderableDispatcher {...{ getRefs: this._getRefs }} />
+        )
     }
 }
 
@@ -210,7 +178,6 @@ export default connect(
     mapStateToProps,
     {
         updateDeviceStore,
-        updateResponsiveStore,
-        updateRenderableStore
+        updateResponsiveStore
     }
 )(WindowListener)

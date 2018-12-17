@@ -1,9 +1,12 @@
 // Singleton to listen for non-toggle events that require turning off score.
 
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateRenderableStore } from 'flux/renderable/action'
+
+import RenderableDispatcher from '../../../handlers/RenderableHandler/Dispatcher'
+
+import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     renderedStore: {
@@ -20,12 +23,7 @@ class SceneListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         renderedSceneIndex: PropTypes.number.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        updateRenderableStore: PropTypes.func.isRequired
-    }
-
-    state = {
-        sceneChangeTimeoutId: ''
+        renderedSongIndex: PropTypes.number.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -48,35 +46,19 @@ class SceneListener extends PureComponent {
             renderedSongIndex === prevSongIndex &&
             renderedSceneIndex !== prevSceneIndex
         ) {
-            this._prepareForSceneChange()
+            this.dispatchSceneChangeUnrenderable()
         }
     }
 
-    _prepareForSceneChange() {
-        this.props.updateRenderableStore({ isSceneChangeRenderable: false })
-
-        // Clear previous timeout.
-        clearTimeout(this.state.sceneChangeTimeoutId)
-
-        const sceneChangeTimeoutId = setTimeout(
-            this._resolveSceneChange, 200
-        )
-
-        this.setState({
-            sceneChangeTimeoutId
-        })
-    }
-
-    _resolveSceneChange = () => {
-        this.props.updateRenderableStore({ isSceneChangeRenderable: true })
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
-        return null
+        return (
+            <RenderableDispatcher {...{ getRefs: this._getRefs }} />
+        )
     }
 }
 
-export default connect(
-    mapStateToProps,
-    { updateRenderableStore }
-)(SceneListener)
+export default connect(mapStateToProps)(SceneListener)

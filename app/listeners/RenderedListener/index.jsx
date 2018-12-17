@@ -1,11 +1,13 @@
 // Singleton to listen for song change.
 
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateRenderableStore } from 'flux/renderable/action'
 import { updateRenderedStore } from 'flux/rendered/action'
 
+import RenderableDispatcher from '../../handlers/RenderableHandler/Dispatcher'
+
+import { populateRefs } from 'helpers/ref'
 import { getSceneIndexForVerseIndex } from 'helpers/data'
 
 class RenderedListener extends PureComponent {
@@ -15,7 +17,6 @@ class RenderedListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        updateRenderableStore: PropTypes.func.isRequired,
         updateRenderedStore: PropTypes.func.isRequired
     }
 
@@ -25,35 +26,15 @@ class RenderedListener extends PureComponent {
         this._checkVerseSelect(prevProps)
     }
 
-    state = {
-        songChangeTimeoutId: ''
-    }
-
     _prepareForSongChangeUnrender(prevProps) {
         const
             { selectedSongIndex } = this.props,
             { selectedSongIndex: prevSongIndex } = prevProps
 
         if (selectedSongIndex !== prevSongIndex) {
-            this.props.updateRenderableStore({
-                isSongChangeRenderable: false
-            })
-
-            // Clear previous timeout.
-            clearTimeout(this.state.songChangeTimeoutId)
-
-            /**
-             * Render is synchronous, so wait a bit after selecting new song
-             * before rendering the most performance intensive components. This
-             * allows songs between selections to skip rendering.
-             */
-            const songChangeTimeoutId = setTimeout(
-                this._prepareForSongChangeRender, 200
+            this.dispatchSongChangeUnrenderable(
+                this._prepareForSongChangeRender
             )
-
-            this.setState({
-                songChangeTimeoutId
-            })
         }
     }
 
@@ -63,10 +44,6 @@ class RenderedListener extends PureComponent {
             selectedVerseIndex,
             selectedAnnotationIndex
         } = this.props
-
-        this.props.updateRenderableStore({
-            isSongChangeRenderable: true
-        })
 
         this.props.updateRenderedStore({
             renderedSongIndex: selectedSongIndex,
@@ -137,8 +114,14 @@ class RenderedListener extends PureComponent {
         }
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
-        return null
+        return (
+            <RenderableDispatcher {...{ getRefs: this._getRefs }} />
+        )
     }
 }
 
@@ -157,7 +140,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateRenderableStore,
         updateRenderedStore
     }
 )(RenderedListener)
