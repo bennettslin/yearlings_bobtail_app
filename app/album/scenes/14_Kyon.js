@@ -63,7 +63,7 @@ import {
     PEACOCK
 } from '../../scene/puppetKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Sita is sitting on the couch in her living room, petting a cat.`,

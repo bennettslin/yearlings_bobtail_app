@@ -80,7 +80,7 @@ import {
     PUPPET_REATTA
 } from '../../scene/puppetKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett and Miriam are sitting in her car.`,

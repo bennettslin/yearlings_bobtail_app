@@ -87,7 +87,7 @@ import {
     VOLKSWAGEN
 } from '../../scene/panelKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett is putting on his jacket to leave Sita's house. Sita is in her nightgown, begging him to stay.`,

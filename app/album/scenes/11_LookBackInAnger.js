@@ -92,7 +92,7 @@ import {
     LIZ_PILLOWS_REFLECTION
 } from '../../scene/furnitureKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and making her way through the crowd.`,

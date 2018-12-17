@@ -88,7 +88,7 @@ import {
     SATURN_INTERIOR
 } from '../../scene/panelKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Abbey Road`,

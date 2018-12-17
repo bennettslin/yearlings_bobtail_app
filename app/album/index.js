@@ -1,5 +1,7 @@
 import { parseAlbumData } from './helpers'
-
+import scenes from '../album/scenes'
+import songs from '../album/songs'
+import tips from '../album/tips'
 import { HYPHENATED_SONG_PATHS } from 'constants/paths'
 import { getTwoDigitStringForNumber } from 'helpers/format'
 import { getArrayOfLength } from 'helpers/general'
@@ -7,7 +9,7 @@ import { getArrayOfLength } from 'helpers/general'
 const rawAlbum = {
         title: `Yearling's Bobtail`,
         bookStartingIndices: [1, 10],
-        tips: require('album/tips/tips'),
+        tips,
         mp3s: getArrayOfLength(18, 1).map(index => (
             require(`assets/mp3s/${
                 getTwoDigitStringForNumber(index)
@@ -22,20 +24,8 @@ const rawAlbum = {
                 HYPHENATED_SONG_PATHS[index]
             }.pdf`)
         )),
-        scenes: getArrayOfLength(20).map(index => (
-            require(`album/scenes/${
-                getTwoDigitStringForNumber(index)
-            }_${
-                HYPHENATED_SONG_PATHS[index]
-            }`)
-        )),
-        songs: getArrayOfLength(20).map(index => (
-            require(`album/songs/${
-                getTwoDigitStringForNumber(index)
-            }_${
-                HYPHENATED_SONG_PATHS[index]
-            }`)
-        )),
+        scenes,
+        songs,
         remainingTasks:
             require('album/tasks/remainingTasks')
 

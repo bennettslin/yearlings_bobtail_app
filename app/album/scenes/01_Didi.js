@@ -77,7 +77,7 @@ import {
     BATHTUB
 } from '../../scene/panelKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `North Hollywood houses.`,

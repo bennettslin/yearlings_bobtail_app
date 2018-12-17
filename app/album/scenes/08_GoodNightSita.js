@@ -76,7 +76,7 @@ import {
     GO_KART_RIGHT_EXTERIOR
 } from '../../scene/panelKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett and Sita are standing outside her gate at night. In a thought bubble, he is reaching out to Sita, who is reaching back.`,

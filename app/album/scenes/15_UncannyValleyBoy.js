@@ -104,7 +104,7 @@ import {
     SNOWGLOBE_BENNETT_ALONE
 } from '../../scene/panelKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett is sleeping in bed with Miriam.`,

@@ -110,7 +110,7 @@ import {
     COMMERCIAL_NEAR_RIGHT
 } from '../../scene/flatKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett's room`,

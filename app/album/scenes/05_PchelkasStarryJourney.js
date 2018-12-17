@@ -121,7 +121,7 @@ import {
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
  * song list order on the album.
  */
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,

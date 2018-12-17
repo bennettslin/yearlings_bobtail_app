@@ -82,7 +82,7 @@ import {
     PUPPET_FAMILY_END
 } from '../../scene/puppetKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,

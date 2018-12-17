@@ -108,7 +108,7 @@ import {
 /**
  * All of these scenes repeat twice.
  */
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett is in a cafeteria dishroom, reading a novel while dishes gradually pile up. He eyes a lancing device on a tray.`,

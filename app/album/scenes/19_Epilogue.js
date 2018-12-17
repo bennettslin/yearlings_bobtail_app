@@ -34,7 +34,7 @@ import {
 
 import { EPILOGUE } from '../../scene/instanceKeys/songs'
 
-module.exports = [
+export default [
     {
         verseIndex: 0,
         description: `Everyone is standing at the end of the play. We are all really just actors.`,

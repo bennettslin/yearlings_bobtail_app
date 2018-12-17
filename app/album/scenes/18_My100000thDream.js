@@ -85,7 +85,7 @@ import {
     PUPPET_KHARI_LIZ
 } from '../../scene/puppetKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett runs into Sita, who happens to be walking out of an El Torito restaurant, having finished her shift.`,

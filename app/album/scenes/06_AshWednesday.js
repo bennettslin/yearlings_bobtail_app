@@ -83,7 +83,7 @@ import {
     BENNETT_CUSHIONS
 } from '../../scene/furnitureKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett is standing outside his doorway at night, drenched in rain. Catherine is getting into a taxicab.`,

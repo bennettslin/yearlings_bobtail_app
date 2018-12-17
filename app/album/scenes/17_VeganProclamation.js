@@ -99,7 +99,7 @@ import {
     GHOST_ODIN_DEMONSTRATION
 } from '../../scene/puppetKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,

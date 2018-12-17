@@ -113,7 +113,7 @@ import {
     CAPTAIN_BED_DRAWERS
 } from '../../scene/panelKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: ``,

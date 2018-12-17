@@ -11,7 +11,7 @@ import { OLD_BENNETT } from '../../scene/actorKeys'
 
 import { PROLOGUE } from '../../scene/instanceKeys/songs'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Old Bennett is standing onstage, addressing the audience.`,

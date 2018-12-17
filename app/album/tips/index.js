@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     1: {
         description: `Didi Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset.`
     },

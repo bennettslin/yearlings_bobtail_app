@@ -94,7 +94,7 @@ import {
     LIZ_CUSHIONS_THOUGHT
 } from '../../scene/furnitureKeys'
 
-module.exports = [
+export default [
     {
         unitIndex: 1,
         description: `Bennett is walking down street.`,
