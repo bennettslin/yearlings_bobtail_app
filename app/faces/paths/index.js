@@ -11,13 +11,13 @@ import {
     LEVELS,
     FLOOR,
     FACES
-} from '../constants/scene'
+} from 'constants/scene'
 
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES,
     CUBE_Z_INDICES
-} from '../constants/cubeIndex'
+} from 'constants/cubeIndex'
 
 const FACE_PATHS = {}
 
@@ -89,7 +89,4 @@ const getFacePath = ({
     return FACE_PATHS[slantDirectionKey][level][yIndex][xIndex][zIndex][face]
 }
 
-export {
-    FACE_PATHS,
-    getFacePath
-}
+export { getFacePath }

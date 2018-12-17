@@ -1,6 +1,6 @@
 // A single pair of ceiling and floor cubes.
 
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -9,7 +9,10 @@ import Svg from '../../Svg'
 import Face from './Face'
 
 import { getCharStringForNumber } from 'helpers/format'
-import { getValueInAbridgedMatrix } from 'helpers/general'
+import {
+    getPropsAreShallowEqual,
+    getValueInAbridgedMatrix
+} from 'helpers/general'
 
 import {
     FACES,
@@ -23,12 +26,15 @@ import {
 
 const
     getMapStateToProps = (yIndex, xIndex) => ({
+        renderStore: { canSceneRender },
         sceneStore: {
             sceneCubes: {
                 ceiling: {
+                    hslaColours: ceilingHslaColours,
                     zIndices: ceilingZIndices
                 },
                 floor: {
+                    hslaColours: floorHslaColours,
                     zIndices: floorZIndices
                 },
                 slantDirection
@@ -36,12 +42,19 @@ const
         }
     }) => {
         const
+            ceilingHslaColourKey =
+                getValueInAbridgedMatrix(ceilingHslaColours, xIndex, yIndex),
+            floorHslaColourKey =
+                getValueInAbridgedMatrix(floorHslaColours, xIndex, yIndex),
             ceilingZIndex =
                 getValueInAbridgedMatrix(ceilingZIndices, xIndex, yIndex),
             floorZIndex =
                 getValueInAbridgedMatrix(floorZIndices, xIndex, yIndex)
 
         return {
+            canSceneRender,
+            ceilingHslaColourKey,
+            floorHslaColourKey,
             ceilingZIndex,
             floorZIndex,
             slantDirection
@@ -49,10 +62,13 @@ const
     },
     CubeConfig = {}
 
-class Cube extends PureComponent {
+class Cube extends Component {
 
     static propTypes = {
         // Through Redux.
+        canSceneRender: PropTypes.bool.isRequired,
+        ceilingHslaColourKey: PropTypes.string.isRequired,
+        floorHslaColourKey: PropTypes.string.isRequired,
         ceilingZIndex: PropTypes.number.isRequired,
         floorZIndex: PropTypes.number.isRequired,
         slantDirection: PropTypes.string.isRequired,
@@ -62,11 +78,20 @@ class Cube extends PureComponent {
         yIndex: PropTypes.number.isRequired
     }
 
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSceneRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
+
     render() {
         const
             {
                 xIndex,
                 yIndex,
+                ceilingHslaColourKey,
+                floorHslaColourKey,
                 ceilingZIndex,
                 floorZIndex,
                 slantDirection
@@ -98,6 +123,7 @@ class Cube extends PureComponent {
                             level: CEILING,
                             yIndex,
                             xIndex,
+                            hslaColourKey: ceilingHslaColourKey,
                             zIndex: ceilingZIndex,
                             face
                         }}
@@ -111,6 +137,7 @@ class Cube extends PureComponent {
                             level: FLOOR,
                             yIndex,
                             xIndex,
+                            hslaColourKey: floorHslaColourKey,
                             zIndex: floorZIndex,
                             face
                         }}

@@ -5,8 +5,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import CubeConfig from './Cube'
-import CubeColourStylesheet from './Stylesheets/CubeColour'
-
 import { CUBE_X_INDICES } from 'constants/cubeIndex'
 
 class Cubes extends Component {
@@ -38,7 +36,6 @@ class Cubes extends Component {
                         <___
                             key={`${xIndex}_${yIndex}`}
                         >
-                            <CubeColourStylesheet {...{ xIndex, yIndex }} />
                             <Cube
                                 {...{
                                     xIndex,

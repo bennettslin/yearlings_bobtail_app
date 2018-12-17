@@ -2,7 +2,10 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getFacePath } from '../../../../faces'
+import {
+    getCubeColour,
+    getFacePath
+} from '../../../../faces'
 import {
     getChildClassNameForCube,
     getChildClassNameForFace
@@ -17,7 +20,8 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired,
     xIndex: PropTypes.number.isRequired,
     zIndex: PropTypes.number.isRequired,
-    face: PropTypes.string.isRequired
+    face: PropTypes.string.isRequired,
+    hslaColourKey: PropTypes.string.isRequired
 }
 
 const Face = memo(({
@@ -26,7 +30,8 @@ const Face = memo(({
     yIndex,
     xIndex,
     zIndex,
-    face
+    face,
+    hslaColourKey
 }) => {
 
     const
@@ -71,7 +76,8 @@ const Face = memo(({
                         xIndex,
                         zIndex,
                         face
-                    })
+                    }),
+                    fill: getCubeColour(hslaColourKey)
                 }}
             />
             <path
