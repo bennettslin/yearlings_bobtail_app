@@ -54,7 +54,6 @@
     .RM__sliderMoving
     & {
         @include mixin__textAndLinkColours($light: true);
-        @include mixin__underlineColours($light: true);
     }
 }
 

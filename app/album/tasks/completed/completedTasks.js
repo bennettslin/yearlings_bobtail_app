@@ -4226,5 +4226,10 @@ module.exports = [
         taskName: `Add curtain compoents.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Some initial colouring changes.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

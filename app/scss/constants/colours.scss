@@ -41,20 +41,20 @@ $bgColour__selectedUnderline__dark: #b80;
 $bgColour__selectedUnderline__light: #fb0;
 
 // Default underline colours.
-$bgColour__underline__dark: #844;
-$bgColour__underlineHover__dark: #b77;
-$bgColour__underlineActive__dark: #eaa;
+$bgColour__underline__dark: #b77;
+$bgColour__underlineHover__dark: #eaa;
+$bgColour__underlineActive__dark: #fcc;
 
-$bgColour__underline__light: #fbb;
-$bgColour__underlineHover__light: #b88;
-$bgColour__underlineActive__light: #844;
+$bgColour__underline__light: #b88;
+$bgColour__underlineHover__light: #844;
+$bgColour__underlineActive__light: #422;
 
 // Accessed underline colours.
-$bgColour__accessedUnderline__dark: #486;
-$bgColour__accessedUnderlineHover__dark: #6a8;
+$bgColour__accessedUnderline__dark: #6a8;
+$bgColour__accessedUnderlineHover__dark: #8ca;
 
-$bgColour__accessedUnderline__light: #bfd;
-$bgColour__accessedUnderlineHover__light: #aec;
+$bgColour__accessedUnderline__light: #aec;
+$bgColour__accessedUnderlineHover__light: #8ca;
 
 /**
  * Having accessed link active colour be the same in light and dark allows us
@@ -101,17 +101,27 @@ $bgColour__annotationWormhole: #fff4f4;
 // Song stanza colours.
 $bgColour__stanzaType__title:hsl(0, 0, 40);
 
-$bgColour__stanzaType__verse:hsl(0, 40, 40);
-$bgColour__stanzaType__prechorus:hsl(120, 40, 40);
-$bgColour__stanzaType__chorus:hsl(240, 40, 40);
-$bgColour__stanzaType__postchorus:hsl(60, 40, 40);
-$bgColour__stanzaType__bridge:hsl(180, 40, 40);
-$bgColour__stanzaType__refrain:hsl(300, 40, 40);
-$bgColour__stanzaType__coda:hsl(30, 40, 40);
-$bgColour__stanzaType__instrumental:hsl(150, 40, 40);
-$bgColour__stanzaType__rhyme:hsl(270, 40, 40);
-$bgColour__stanzaType__backing:hsl(90, 40, 40);
-$bgColour__stanzaType__response:hsl(210, 40, 40);
-
-// Just to see what it is.
-$last__hue: hsl(330, 40, 40);
+$bgColour__stanzaType__verse:
+    hsl(240, 40, 40);
+$bgColour__stanzaType__prechorus:
+    hsl(60, 40, 40);
+$bgColour__stanzaType__chorus:
+    hsl(180, 40, 40);
+$bgColour__stanzaType__postchorus:
+    hsl(300, 40, 40);
+$bgColour__stanzaType__bridge:
+    hsl(30, 40, 40);
+$bgColour__stanzaType__refrain:
+    hsl(150, 40, 40);
+$bgColour__stanzaType__coda:
+    hsl(270, 40, 40);
+$bgColour__stanzaType__instrumental:
+    hsl(90, 40, 40);
+$bgColour__stanzaType__rhyme:
+    hsl(210, 40, 40);
+$bgColour__stanzaType__backing:
+    hsl(330, 40, 40);
+$bgColour__stanzaType__response:
+    hsl(120, 40, 40);
+$bgColor__remainingHue:
+    hsl(0, 40, 40);

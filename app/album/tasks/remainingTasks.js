@@ -6,11 +6,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Some initial colouring changes.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Begin colouring for actors.`,
         workedHours: 0,
         neededHours: 3
@@ -21,7 +16,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Make task calculation better for performance reasons. Only calculate when admin is mounted.`,
+        taskName: `Make task calculation better for performance reasons. Only calculate when admin is mounted. Do after Vicki audit. On plane, maybe.`,
         workedHours: 0,
         neededHours: 2
     },
