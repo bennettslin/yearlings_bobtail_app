@@ -98,5 +98,10 @@ module.exports = [
         taskName: 'hospitalMattress',
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Curtains`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

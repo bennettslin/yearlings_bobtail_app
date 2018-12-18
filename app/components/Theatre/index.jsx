@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 
 import Scene from '../Scene'
 import Stage from '../Stage'
+import Curtains from '../Stage/Curtains'
 import Proscenium from '../Stage/Proscenium'
 
 import Wall from './Wall'
@@ -37,7 +38,9 @@ class Theatre extends PureComponent {
             <div className={cx(
                 'Theatre',
                 'abF',
-                { 'parent__shown': didTheatreRender }
+                {
+                    'Theatre__shown': didTheatreRender
+                }
             )}>
 
                 {/* Scene is behind theatre due to presence transitions. */}
@@ -50,6 +53,7 @@ class Theatre extends PureComponent {
                 <Wall isRight />
 
                 <Stage>
+                    <Curtains />
                     <Proscenium />
                 </Stage>
 

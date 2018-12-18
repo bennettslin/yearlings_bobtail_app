@@ -60,7 +60,7 @@ class RenderableDispatcher extends PureComponent {
          * Wait for song selection to finish.
          */
         const songChangeTimeoutId = setTimeout(
-            this._dispatchSongChangeRenderable.bind(this, callback), 200
+            this._dispatchSongChangeRenderable.bind(this, callback), 500
         )
 
         this.setState({

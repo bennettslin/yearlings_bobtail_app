@@ -10,8 +10,9 @@ $zIndex__theatre: 0;
  * a left cube overlaps a right one, and vice versa.
  */
 
-// The theatre floor then sits above the scene cubes.
-$zIndex__theatreFloor: 72;
+// The theatre front elements then sits above the scene cubes.
+$zIndex__curtains: 72;
+$zIndex__theatreFloor: $zIndex__curtains + 1;
 
 $zIndex__popupContainer: $zIndex__theatreFloor + 1;
 

@@ -1,0 +1,41 @@
+.Curtains {
+    overflow: hidden;
+    z-index: $zIndex__curtains;
+}
+
+.Curtains__child {
+    position: absolute;
+    top: 0;
+    background-color: rgba(125, 50, 50, 0.9);
+}
+
+.Curtains__side {
+    width: 50%;
+    height: 100%
+}
+
+.Curtains__left {
+    left: 0;
+    transition: left $animationDuration__default;
+
+    .Curtains__parted
+    & {
+        left: -45%;
+    }
+}
+
+.Curtains__right {
+    right: 0;
+    transition: right $animationDuration__default;
+
+    .Curtains__parted
+    & {
+        right: -45%;
+    }
+}
+
+.Curtains__top {
+    left: 0;
+    width: 100%;
+    height: 5%;
+}

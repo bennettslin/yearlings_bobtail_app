@@ -159,9 +159,9 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Cubes mount with Theatre in beginning, to convey curtains. Sky is dark. Curtains raise when ready.`,
+        taskName: `When app mounts, curtains part when ready.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 2
     },
     {
         taskName: `During song transitions, cubes reset to base level. All presences exit. Sky resets to base level as well.`,

@@ -4221,5 +4221,10 @@ module.exports = [
         taskName: `Work on Presence and cubes transition order.`,
         workedHours: 9,
         neededHours: 9
+    },
+    {
+        taskName: `Add curtain compoents.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

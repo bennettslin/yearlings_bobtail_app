@@ -1,10 +1,10 @@
 // Section to show the stage proscenium.
 
-import React, { Fragment } from 'react'
+import React, { Fragment as ___ } from 'react'
 import cx from 'classnames'
 
 const Proscenium = () => (
-    <Fragment>
+    <___>
         {/* Layout is all handled in css. */}
         <div className={cx(
             'Proscenium__top',
@@ -26,7 +26,7 @@ const Proscenium = () => (
             'Proscenium__horizontal',
             'Proscenium__child'
         )} />
-    </Fragment>
+    </___>
 )
 
 export default Proscenium
