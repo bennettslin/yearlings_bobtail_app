@@ -1,201 +1,110 @@
-const
-    DEFAULT_STAGE_KEY = 'defaultStage',
-    LOGUE_KEY = 'logue',
+export const DEFAULT_STAGE_KEY = 'defaultStage'
+export const CURTAINS_KEY = 'curtains'
+export const LOGUE_KEY = 'logue'
 
-    NOHO_HOUSES_KEY = 'nohoHouses',
-    NOHO_SCHOOL_KEY = 'nohoSchool',
-    BATHROOM_KEY = 'bathroom',
-    BATHROOM_OPEN_KEY = 'familyBathroomOpen',
+export const NOHO_HOUSES_KEY = 'nohoHouses'
+export const NOHO_SCHOOL_KEY = 'nohoSchool'
+export const BATHROOM_KEY = 'bathroom'
+export const BATHROOM_OPEN_KEY = 'familyBathroomOpen'
 
-    FREEWAY_KEY = 'freeway',
-    PORCH_KEY = 'porch',
-    CHANGELING_CAVE_KEY = 'changelingCave',
+export const FREEWAY_KEY = 'freeway'
+export const PORCH_KEY = 'porch'
+export const CHANGELING_CAVE_KEY = 'changelingCave'
 
-    PUPPET_SHOW_KEY = 'puppetShow',
-    SCHOOLBUS_KEY = 'schoolbus',
-    TETHERBALL_COURT_KEY = 'tetherballCourt',
+export const PUPPET_SHOW_KEY = 'puppetShow'
+export const SCHOOLBUS_KEY = 'schoolbus'
+export const TETHERBALL_COURT_KEY = 'tetherballCourt'
 
-    TAIWAN_ROOM_KEY = 'taiwanRoom',
-    TAIWAN_STAIRS_KEY = 'taiwanStairs',
-    TAIWAN_GATE_KEY = 'taiwanGate',
-    RICKSHAW_KEY = 'rickshaw',
-    SHORE_KEY = 'shore',
-    BUOY_KEY = 'buoy',
-    OCEAN_DEPTHS_KEY = 'oceanDepths',
-    OCEAN_FLOOR_KEY = 'oceanFloor',
+export const TAIWAN_ROOM_KEY = 'taiwanRoom'
+export const TAIWAN_STAIRS_KEY = 'taiwanStairs'
+export const TAIWAN_GATE_KEY = 'taiwanGate'
+export const RICKSHAW_KEY = 'rickshaw'
+export const SHORE_KEY = 'shore'
+export const BUOY_KEY = 'buoy'
+export const OCEAN_DEPTHS_KEY = 'oceanDepths'
+export const OCEAN_FLOOR_KEY = 'oceanFloor'
 
-    BEDROOM_KEY = 'bedroom',
-    BEDROOM_STOOL_KEY = 'bedroomStool',
-    BEDROOM_OPEN_KEY = 'bedroomOpen',
-    BEDROOM_DOGS_KEY = 'bedroomDogs',
-    BEDROOM_SPACE_KEY = 'bedroomSpace',
+export const BEDROOM_KEY = 'bedroom'
+export const BEDROOM_STOOL_KEY = 'bedroomStool'
+export const BEDROOM_OPEN_KEY = 'bedroomOpen'
+export const BEDROOM_DOGS_KEY = 'bedroomDogs'
+export const BEDROOM_SPACE_KEY = 'bedroomSpace'
 
-    VAN_NUYS_LOCKERS_KEY = 'vanNuysLockers',
-    VAN_NUYS_QUAD_KEY = 'vanNuysQuad',
-    VAN_NUYS_HALLWAY_KEY = 'vanNuysHallway',
+export const VAN_NUYS_LOCKERS_KEY = 'vanNuysLockers'
+export const VAN_NUYS_QUAD_KEY = 'vanNuysQuad'
+export const VAN_NUYS_HALLWAY_KEY = 'vanNuysHallway'
 
-    CATHOLIC_CHURCH_KEY = 'catholicChurch',
-    BANCROFT_LIBRARY_KEY = 'bancroftLibrary',
-    CAMPANILE_KEY = 'campanile',
+export const CATHOLIC_CHURCH_KEY = 'catholicChurch'
+export const BANCROFT_LIBRARY_KEY = 'bancroftLibrary'
+export const CAMPANILE_KEY = 'campanile'
 
-    CINEMA_KEY = 'cinema',
-    CINEMA_STREET_KEY = 'cinemaStreet',
+export const CINEMA_KEY = 'cinema'
+export const CINEMA_STREET_KEY = 'cinemaStreet'
 
-    BASEMENT_KEY = 'basement',
-    BASEMENT_BED_KEY = 'basementBed',
-    BASEMENT_MAGIC_KEY = 'basementMagic',
+export const BASEMENT_KEY = 'basement'
+export const BASEMENT_BED_KEY = 'basementBed'
+export const BASEMENT_MAGIC_KEY = 'basementMagic'
 
-    MUSEUM_KEY = 'museum',
-    BACKSTAGE_KEY = 'backstage',
-    GO_KARTS_KEY = 'goKarts',
+export const MUSEUM_KEY = 'museum'
+export const BACKSTAGE_KEY = 'backstage'
+export const GO_KARTS_KEY = 'goKarts'
 
-    DISHROOM_KEY = 'dishroom',
-    WAITING_ROOM_KEY = 'waitingRoom',
-    WAITING_ROOM_OPEN_KEY = 'waitingRoomOpen',
+export const DISHROOM_KEY = 'dishroom'
+export const WAITING_ROOM_KEY = 'waitingRoom'
+export const WAITING_ROOM_OPEN_KEY = 'waitingRoomOpen'
 
-    CLUB_FRONT_KEY = 'clubFront',
-    CLUB_FAR_KEY = 'clubFrontFar',
-    CLUB_SIDE_CROWD_KEY = 'clubSideCrowd',
-    CLUB_SIDE_STAGE_KEY = 'clubSideStage',
-    CLUB_LOADING = 'clubLoading',
+export const CLUB_FRONT_KEY = 'clubFront'
+export const CLUB_FAR_KEY = 'clubFrontFar'
+export const CLUB_SIDE_CROWD_KEY = 'clubSideCrowd'
+export const CLUB_SIDE_STAGE_KEY = 'clubSideStage'
+export const CLUB_LOADING = 'clubLoading'
 
-    BENNETT_BED_KEY = 'bennettBed',
-    BENNETT_BED_OPEN_KEY = 'bennettBedOpen',
-    BENNETT_COUCH_KEY = 'bennettCouch',
-    BENNETT_COUCH_THOUGHT_KEY = 'bennettCouchThought',
-    COURTYARD_KEY = 'courtyard',
-    BENNETT_GATE_KEY = 'bennettGate',
+export const BENNETT_BED_KEY = 'bennettBed'
+export const BENNETT_BED_OPEN_KEY = 'bennettBedOpen'
+export const BENNETT_COUCH_KEY = 'bennettCouch'
+export const BENNETT_COUCH_THOUGHT_KEY = 'bennettCouchThought'
+export const COURTYARD_KEY = 'courtyard'
+export const BENNETT_GATE_KEY = 'bennettGate'
 
-    LIZ_BED_KEY = 'lizBed',
-    LIZ_BED_OPEN_KEY = 'lizBedOpen',
-    LIZ_BED_OPEN_PHONE_KEY = 'lizBedOpenPhone',
+export const LIZ_BED_KEY = 'lizBed'
+export const LIZ_BED_OPEN_KEY = 'lizBedOpen'
+export const LIZ_BED_OPEN_PHONE_KEY = 'lizBedOpenPhone'
 
-    LIZ_COUCH_KEY = 'lizCouch',
-    LIZ_COUCH_OPEN_KEY = 'lizCouchOpen',
-    LIZ_COUCH_SEAT_KEY = 'lizCouchSeat',
-    LIZ_COUCH_GATE_OPEN_KEY = 'lizCouchGateOpen',
-    LIZ_COUCH_PEAFOWL_KEY = 'lizCouchPeafowl',
-    LIZ_COUCH_THOUGHT_KEY = 'lizCouchThought',
-    LIZ_GATE_KEY = 'lizGate',
-    LIZ_GATE_STREET_KEY = 'lizGateStreet',
+export const LIZ_COUCH_KEY = 'lizCouch'
+export const LIZ_COUCH_OPEN_KEY = 'lizCouchOpen'
+export const LIZ_COUCH_SEAT_KEY = 'lizCouchSeat'
+export const LIZ_COUCH_GATE_OPEN_KEY = 'lizCouchGateOpen'
+export const LIZ_COUCH_PEAFOWL_KEY = 'lizCouchPeafowl'
+export const LIZ_COUCH_THOUGHT_KEY = 'lizCouchThought'
+export const LIZ_GATE_KEY = 'lizGate'
+export const LIZ_GATE_STREET_KEY = 'lizGateStreet'
 
-    ROYCE_HALL_KEY = 'royceHall',
-    WALGREENS_KEY = 'walgreens',
-    STEAM_TUNNEL_KEY = 'steamTunnel',
-    CEMETERY_KEY = 'cemetery',
-    STATION_WAGON_KEY = 'stationWagon',
-    ATTIC_KEY = 'attic',
+export const ROYCE_HALL_KEY = 'royceHall'
+export const WALGREENS_KEY = 'walgreens'
+export const STEAM_TUNNEL_KEY = 'steamTunnel'
+export const CEMETERY_KEY = 'cemetery'
+export const STATION_WAGON_KEY = 'stationWagon'
+export const ATTIC_KEY = 'attic'
 
-    OAKLAND_HOUSES_KEY = 'oaklandHouses',
-    OAKLAND_VOLKSWAGEN_KEY = 'oaklandVolkswagen',
-    OAKLAND_RESIDENTIAL_KEY = 'oaklandResidential',
-    OAKLAND_COMMERCIAL_KEY = 'oaklandCommercial',
-    OAKLAND_PUBLIC_KEY = 'oaklandPublic',
+export const OAKLAND_HOUSES_KEY = 'oaklandHouses'
+export const OAKLAND_VOLKSWAGEN_KEY = 'oaklandVolkswagen'
+export const OAKLAND_RESIDENTIAL_KEY = 'oaklandResidential'
+export const OAKLAND_COMMERCIAL_KEY = 'oaklandCommercial'
+export const OAKLAND_PUBLIC_KEY = 'oaklandPublic'
 
-    SNOWGLOBES_PAST_KEY = 'snowglobesPast',
-    SNOWGLOBES_PRESENT_KEY = 'snowglobesPresent',
-    SNOWGLOBES_FUTURE_KEY = 'snowglobesFuture',
+export const SNOWGLOBES_PAST_KEY = 'snowglobesPast'
+export const SNOWGLOBES_PRESENT_KEY = 'snowglobesPresent'
+export const SNOWGLOBES_FUTURE_KEY = 'snowglobesFuture'
 
-    EL_CERRITO_KEY = 'elCerrito',
-    EL_CERRITO_CAR_KEY = 'elCerritoCar',
-    EL_CERRITO_DEATHBED_KEY = 'elCerritoDeathbed',
-    EL_CERRITO_TENNIS_KEY = 'elCerritoTennis',
+export const EL_CERRITO_KEY = 'elCerrito'
+export const EL_CERRITO_CAR_KEY = 'elCerritoCar'
+export const EL_CERRITO_DEATHBED_KEY = 'elCerritoDeathbed'
+export const EL_CERRITO_TENNIS_KEY = 'elCerritoTennis'
 
-    ALLEY_KEY = 'alley',
+export const ALLEY_KEY = 'alley'
 
-    EL_TORITO_KEY = 'elTorito',
-    PAMPAS_KEY = 'pampas',
-    WEDDING_KEY = 'wedding',
-    CLIFF_KEY = 'cliff',
-    CLIFF_DEATHBED_KEY = 'cliffDeathbed'
-
-export {
-    DEFAULT_STAGE_KEY,
-    LOGUE_KEY,
-    NOHO_HOUSES_KEY,
-    NOHO_SCHOOL_KEY,
-    BATHROOM_KEY,
-    BATHROOM_OPEN_KEY,
-    FREEWAY_KEY,
-    PORCH_KEY,
-    CHANGELING_CAVE_KEY,
-    PUPPET_SHOW_KEY,
-    SCHOOLBUS_KEY,
-    TETHERBALL_COURT_KEY,
-    TAIWAN_ROOM_KEY,
-    TAIWAN_STAIRS_KEY,
-    TAIWAN_GATE_KEY,
-    RICKSHAW_KEY,
-    SHORE_KEY,
-    BUOY_KEY,
-    OCEAN_DEPTHS_KEY,
-    OCEAN_FLOOR_KEY,
-    BEDROOM_KEY,
-    BEDROOM_STOOL_KEY,
-    BEDROOM_OPEN_KEY,
-    BEDROOM_DOGS_KEY,
-    BEDROOM_SPACE_KEY,
-    VAN_NUYS_LOCKERS_KEY,
-    VAN_NUYS_QUAD_KEY,
-    VAN_NUYS_HALLWAY_KEY,
-    CATHOLIC_CHURCH_KEY,
-    BANCROFT_LIBRARY_KEY,
-    CAMPANILE_KEY,
-    CINEMA_KEY,
-    CINEMA_STREET_KEY,
-    BASEMENT_KEY,
-    BASEMENT_BED_KEY,
-    BASEMENT_MAGIC_KEY,
-    MUSEUM_KEY,
-    BACKSTAGE_KEY,
-    GO_KARTS_KEY,
-    DISHROOM_KEY,
-    WAITING_ROOM_KEY,
-    WAITING_ROOM_OPEN_KEY,
-    CLUB_FRONT_KEY,
-    CLUB_FAR_KEY,
-    CLUB_SIDE_CROWD_KEY,
-    CLUB_SIDE_STAGE_KEY,
-    CLUB_LOADING,
-    BENNETT_BED_KEY,
-    BENNETT_BED_OPEN_KEY,
-    BENNETT_COUCH_KEY,
-    BENNETT_COUCH_THOUGHT_KEY,
-    COURTYARD_KEY,
-    BENNETT_GATE_KEY,
-    LIZ_BED_KEY,
-    LIZ_BED_OPEN_KEY,
-    LIZ_BED_OPEN_PHONE_KEY,
-    LIZ_COUCH_KEY,
-    LIZ_COUCH_OPEN_KEY,
-    LIZ_COUCH_SEAT_KEY,
-    LIZ_COUCH_GATE_OPEN_KEY,
-    LIZ_COUCH_PEAFOWL_KEY,
-    LIZ_COUCH_THOUGHT_KEY,
-    LIZ_GATE_KEY,
-    LIZ_GATE_STREET_KEY,
-    ROYCE_HALL_KEY,
-    WALGREENS_KEY,
-    STEAM_TUNNEL_KEY,
-    CEMETERY_KEY,
-    STATION_WAGON_KEY,
-    ATTIC_KEY,
-    OAKLAND_HOUSES_KEY,
-    OAKLAND_VOLKSWAGEN_KEY,
-    OAKLAND_RESIDENTIAL_KEY,
-    OAKLAND_COMMERCIAL_KEY,
-    OAKLAND_PUBLIC_KEY,
-    SNOWGLOBES_PAST_KEY,
-    SNOWGLOBES_PRESENT_KEY,
-    SNOWGLOBES_FUTURE_KEY,
-    EL_CERRITO_KEY,
-    EL_CERRITO_CAR_KEY,
-    EL_CERRITO_DEATHBED_KEY,
-    EL_CERRITO_TENNIS_KEY,
-    ALLEY_KEY,
-    EL_TORITO_KEY,
-    PAMPAS_KEY,
-    WEDDING_KEY,
-    CLIFF_KEY,
-    CLIFF_DEATHBED_KEY
-}
+export const EL_TORITO_KEY = 'elTorito'
+export const PAMPAS_KEY = 'pampas'
+export const WEDDING_KEY = 'wedding'
+export const CLIFF_KEY = 'cliff'
+export const CLIFF_DEATHBED_KEY = 'cliffDeathbed'
