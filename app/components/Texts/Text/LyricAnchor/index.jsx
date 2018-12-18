@@ -66,7 +66,7 @@ class TextLyricAnchor extends PureComponent {
         wikiAnnotationIndex: PropTypes.number,
         annotationIndex: PropTypes.number,
 
-        showAccessInPopupAnnotation: PropTypes.bool,
+        inPopupAnnotation: PropTypes.bool,
         text: PropTypes.oneOfType([
             PropTypes.string,
 
@@ -161,7 +161,7 @@ class TextLyricAnchor extends PureComponent {
                 wikiAnnotationIndex,
                 text,
                 dotKeys,
-                showAccessInPopupAnnotation,
+                inPopupAnnotation,
 
                 ...other
             } = this.props,
@@ -186,7 +186,7 @@ class TextLyricAnchor extends PureComponent {
                 // Let popup annotation show anchors when carousel is hidden.
                 (
                     Boolean(isCarouselShown) ===
-                        !showAccessInPopupAnnotation ||
+                        !inPopupAnnotation ||
 
                     isLyricExpanded
                 )

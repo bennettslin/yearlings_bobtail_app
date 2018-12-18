@@ -126,8 +126,7 @@ class LyricScroll extends PureComponent {
                                 {...{
                                     setLyricAnnotationElement:
                                         this._setLyricAnnotationElement,
-                                    setVerseRef: this._setVerseElement,
-                                    determineVerseBars
+                                    setVerseRef: this._setVerseElement
                                 }}
                             />
                         )}
@@ -139,7 +138,7 @@ class LyricScroll extends PureComponent {
                 <LyricWheelDispatcher
                     {...{
                         getRefs: this._getRefs,
-                        determineVerseBars: this.props.determineVerseBars
+                        determineVerseBars
                     }}
                 />
             </___>

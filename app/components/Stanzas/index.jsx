@@ -30,7 +30,8 @@ class Stanzas extends PureComponent {
         renderedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        setLyricAnnotationElement: PropTypes.func.isRequired
+        setLyricAnnotationElement: PropTypes.func.isRequired,
+        setVerseRef: PropTypes.func.isRequired
     }
 
     _handleVerseSelect = ({
@@ -50,7 +51,8 @@ class Stanzas extends PureComponent {
     render() {
         const {
                 renderedSongIndex,
-                ...other
+                setLyricAnnotationElement,
+                setVerseRef
             } = this.props,
 
             songStanzaConfigs = getSongStanzaConfigs(
@@ -67,8 +69,11 @@ class Stanzas extends PureComponent {
             )}>
 
                 {/* This is the title. */}
-                <Unit {...other}
-                    {...{ unitIndex: 0 }}
+                <Unit
+                    {...{
+                        unitIndex: 0,
+                        setLyricAnnotationElement
+                    }}
                 />
 
                 {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
@@ -77,14 +82,16 @@ class Stanzas extends PureComponent {
                     stanzaIndex === songStanzaConfigs.length - 1
 
                     return (
-                        <StanzaHoc {...other}
+                        <StanzaHoc
                             key={stanzaIndex}
                             {...{
-                                handleVerseSelect: this._handleVerseSelect,
                                 stanzaConfig,
                                 stanzaIndex,
                                 isLastStanza,
-                                StanzaComponent: Stanza
+                                StanzaComponent: Stanza,
+                                handleVerseSelect: this._handleVerseSelect,
+                                setLyricAnnotationElement,
+                                setVerseRef
                             }}
                         />
                     )
@@ -92,9 +99,10 @@ class Stanzas extends PureComponent {
 
                 {/* This is the last unit dot card, if there is one. */}
                 {lastUnitDotCardIndex > -1 && (
-                    <Unit {...other}
+                    <Unit
                         {...{
-                            unitIndex: lastUnitDotCardIndex
+                            unitIndex: lastUnitDotCardIndex,
+                            setLyricAnnotationElement
                         }}
                     />
                 )}

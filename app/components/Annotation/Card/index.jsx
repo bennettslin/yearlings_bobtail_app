@@ -82,7 +82,7 @@ class AnnotationCard extends PureComponent {
                                  * Allow for clicking on anchor in unselected
                                  * annotation in carousel.
                                  */
-                                showAccessInPopupAnnotation: !inCarousel
+                                inPopupAnnotation: !inCarousel
                             }}
                         />
                     ) : (
