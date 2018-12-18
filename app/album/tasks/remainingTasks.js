@@ -1,9 +1,29 @@
 module.exports = [
     // TODO: Do today.
     {
-        taskName: `Tips content`,
+        taskName: `Prepare questions for Vicki audit.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 3
+    },
+    {
+        taskName: `Some initial colouring changes.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Begin colouring for actors.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Be smarter about rendering too many annotation dispatchers. Instead, interactivate verse if verse is not selectable. Do after Vicki audit.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Make task calculation better for performance reasons. Only calculate when admin is mounted.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     // Scrolling stuff.
@@ -117,6 +137,11 @@ module.exports = [
         workedHours: 1,
         neededHours: 3
     },
+    {
+        taskName: `Tips content`,
+        workedHours: 0,
+        neededHours: 5
+    },
 
     /**
      * Final UI.
@@ -152,6 +177,11 @@ module.exports = [
         taskName: `Finalise loading page. Use image of Mara.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `See if heavy data stuff can be loaded server side.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Continue to work on Presence and Cubes transition order. Make sure changes between songs are smooth, animation wise.`,
