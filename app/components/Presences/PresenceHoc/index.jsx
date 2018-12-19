@@ -1,18 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
-import { CSSTransition } from 'react-transition-group'
-
-import {
-    getClassNameForPresenceType,
-    getMapForPresenceType,
-    getArrangementForPresenceType
-} from '../helper'
-
-import { getPresenceXYWidthAndHeight } from './helper'
-
-import { ACTORS } from 'constants/scene'
+import PresenceHocTransition from './Transition'
 
 class PresenceHoc extends PureComponent {
 
@@ -32,9 +21,7 @@ class PresenceHoc extends PureComponent {
         dynamicPresenceValue: null,
 
         // This one prevents component from breaking while transitioning out.
-        persistedPresenceValue: null,
-
-        xYWidthAndHeight: null
+        persistedPresenceValue: null
     }
 
     componentDidMount() {
@@ -52,99 +39,46 @@ class PresenceHoc extends PureComponent {
     }
 
     _getRenderedState(props) {
-        const {
-            cubesKey,
-            presenceType,
-            presenceKey,
-            presenceValue
-        } = props
+        const { presenceValue } = props
 
         if (!presenceValue) {
             return { dynamicPresenceValue: null }
         }
 
-        const arrangement = getArrangementForPresenceType({
-                presenceType,
-                presenceKey,
-                presenceValue
-            }),
-            {
-                yIndex,
-                arrangement: {
-                    xFloat,
-                    zOffset,
-                    xWidth,
-                    zHeight
-                }
-            } = arrangement,
-            xYWidthAndHeight = getPresenceXYWidthAndHeight({
-                cubesKey,
-                yIndex,
-                xFloat,
-                zOffset,
-                xWidth,
-                zHeight
-            })
-
         return {
             dynamicPresenceValue: presenceValue,
-            persistedPresenceValue: presenceValue,
-            xYWidthAndHeight
+            persistedPresenceValue: presenceValue
         }
     }
 
     _resetRenderedState = () => {
         this.setState({
-            persistedPresenceValue: null,
-            xYWidthAndHeight: null
+            persistedPresenceValue: null
         })
     }
 
     render() {
         const {
+                cubesKey,
                 presenceType,
                 presenceKey
             } = this.props,
             {
                 dynamicPresenceValue,
-                persistedPresenceValue,
-                xYWidthAndHeight
+                persistedPresenceValue
             } = this.state
 
-        const
-            presencesMap = getMapForPresenceType(presenceType),
-            PresenceComponent = presencesMap[presenceKey]
-
         return (
-            <CSSTransition
-                mountOnEnter
-                unmountOnExit
+            <PresenceHocTransition
                 {...{
-                    in: Boolean(dynamicPresenceValue),
-                    timeout: {
-                        enter: 0,
-                        exit: 200
-                    },
-                    classNames: {
-                        enterDone: 'Presence__visible'
-                    },
-                    onExited: this._resetRenderedState
+                    cubesKey,
+                    presenceType,
+                    presenceKey,
+                    dynamicPresenceValue,
+                    persistedPresenceValue,
+                    resetRenderedState: this._resetRenderedState
                 }}
-            >
-                <PresenceComponent
-                    {...{
-                        className: cx(
-                            'Presence',
-                            getClassNameForPresenceType(presenceType),
-                            'abF'
-                        ),
-                        ...presenceType === ACTORS && {
-                            instanceKey: persistedPresenceValue || ''
-                        },
-                        ...xYWidthAndHeight
-                    }}
-                />
-            </CSSTransition>
+            />
         )
     }
 }
