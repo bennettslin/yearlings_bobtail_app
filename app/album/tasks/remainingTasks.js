@@ -11,11 +11,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Be smarter about rendering too many annotation dispatchers. Instead, interactivate verse if verse is not selectable. Do after Vicki audit.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Make task calculation better for performance reasons. Only calculate when admin is mounted. Do after Vicki audit. On plane, maybe.`,
         workedHours: 0,
         neededHours: 2

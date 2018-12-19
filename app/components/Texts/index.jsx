@@ -19,21 +19,23 @@ const propTypes = {
 
     Texts = memo(({
         text: textEntity,
-
         ...other
     }) => {
-
         return (Array.isArray(textEntity)) ? (
-            textEntity.map((textElement, index) => (
+            textEntity.map((textEntry, index) => (
                 <Texts {...other}
                     key={index}
-                    text={textElement}
+                    {...{
+                        text: textEntry
+                    }}
                 />
             ))
 
         ) : (
             <Text {...other}
-                text={textEntity}
+                {...{
+                    text: textEntity
+                }}
             />
         )
     })

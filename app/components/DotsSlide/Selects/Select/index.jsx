@@ -148,7 +148,7 @@ const dotsSlideSelectViewPropTypes = {
                     isCustomSize
                     {...{
                         accessKey: ENTER,
-                        showAccessIconIfAccessOn: isAccessed,
+                        canShowAccessIcon: isAccessed,
                         handleButtonClick: handleDotSelectClick
                     }}
                 >

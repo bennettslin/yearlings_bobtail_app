@@ -66,7 +66,8 @@ const
 
     ANNOTATION_DEFAULTS = {
         queuedAnnotationIndex: 0,
-        queuedAnnotationFromCarousel: false
+        queuedAnnotationFromCarousel: false,
+        queuedAnnotationFromLyricVerse: false
     },
 
     AUDIO_DEFAULTS = {

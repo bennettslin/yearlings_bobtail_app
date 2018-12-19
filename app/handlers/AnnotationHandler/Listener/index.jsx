@@ -1,13 +1,15 @@
 // Singleton to listen for song change.
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAnnotationStore } from 'flux/annotation/action'
+import { resetAnnotationQueue } from 'flux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
+import InteractivatedVerseDispatcher from '../../../dispatchers/InteractivatedVerseDispatcher'
 
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
-import { populateRefs } from 'helpers/ref'
+import { getVerseIndexForAnnotationIndex } from '../../../helpers/data'
+import { populateRefs } from '../../../helpers/ref'
 
 class AnnotationListener extends PureComponent {
 
@@ -22,7 +24,8 @@ class AnnotationListener extends PureComponent {
         interactivatedVerseIndex: PropTypes.number.isRequired,
         queuedAnnotationIndex: PropTypes.number.isRequired,
         queuedAnnotationFromCarousel: PropTypes.bool.isRequired,
-        updateAnnotationStore: PropTypes.func.isRequired
+        queuedAnnotationFromLyricVerse: PropTypes.bool.isRequired,
+        resetAnnotationQueue: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -32,22 +35,37 @@ class AnnotationListener extends PureComponent {
 
     _checkAnnotation(prevProps) {
         const {
-                queuedAnnotationIndex,
-                queuedAnnotationFromCarousel
+                queuedAnnotationIndex
             } = this.props,
             { queuedAnnotationIndex: prevAnnotationIndex } = prevProps
 
         if (queuedAnnotationIndex && !prevAnnotationIndex) {
 
-            this.dispatchAnnotationIndex({
-                selectedAnnotationIndex: queuedAnnotationIndex,
-                fromCarousel: queuedAnnotationFromCarousel
-            })
+            const {
+                    queuedAnnotationFromCarousel,
+                    queuedAnnotationFromLyricVerse
+                } = this.props,
 
-            this.props.updateAnnotationStore({
-                queuedAnnotationIndex: 0,
-                queuedAnnotationFromCarousel: false
-            })
+                canDispatchAnnotation = this.dispatchAnnotationIndex({
+                    selectedAnnotationIndex: queuedAnnotationIndex,
+                    fromCarousel: queuedAnnotationFromCarousel
+                })
+
+            /**
+             * If annotation in lyric verse was clicked, and annotation is not
+             * selectable, interactive underlying verse instead.
+             */
+            if (queuedAnnotationFromLyricVerse && !canDispatchAnnotation) {
+                const { selectedSongIndex } = this.props
+                this.dispatchInteractivatedVerseIndex(
+                    getVerseIndexForAnnotationIndex(
+                        selectedSongIndex,
+                        queuedAnnotationIndex
+                    )
+                )
+            }
+
+            this.props.resetAnnotationQueue()
         }
     }
 
@@ -90,7 +108,10 @@ class AnnotationListener extends PureComponent {
 
     render() {
         return (
-            <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+            <___>
+                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <InteractivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
+            </___>
         )
     }
 }
@@ -107,7 +128,8 @@ const mapStateToProps = ({
     },
     annotationStore: {
         queuedAnnotationIndex,
-        queuedAnnotationFromCarousel
+        queuedAnnotationFromCarousel,
+        queuedAnnotationFromLyricVerse
     }
 }) => ({
     isDotsSlideShown,
@@ -118,10 +140,11 @@ const mapStateToProps = ({
     selectedVerseIndex,
     selectedAnnotationIndex,
     queuedAnnotationIndex,
-    queuedAnnotationFromCarousel
+    queuedAnnotationFromCarousel,
+    queuedAnnotationFromLyricVerse
 })
 
 export default connect(
     mapStateToProps,
-    { updateAnnotationStore }
+    { resetAnnotationQueue }
 )(AnnotationListener)

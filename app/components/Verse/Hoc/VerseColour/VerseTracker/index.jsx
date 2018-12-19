@@ -91,23 +91,25 @@ class VerseTracker extends Component {
 
         return (
             <div
-                className={cx(
-                    'VerseTracker',
+                {...{
+                    className: cx(
+                        'VerseTracker',
 
-                    isSelected ?
-                        'VerseTracker__selected' :
-                        'VerseTracker__unselected',
+                        isSelected ?
+                            'VerseTracker__selected' :
+                            'VerseTracker__unselected',
 
-                    inSlider &&
-                        'VerseTracker__inSlider',
+                        inSlider &&
+                            'VerseTracker__inSlider',
 
-                    inLyric &&
-                        'VerseTracker__inLyric',
+                        inLyric &&
+                            'VerseTracker__inLyric',
 
-                    'abF'
-                )}
-                style={{
-                    transition: `${transitionStyle} ${verseDuration}s linear`
+                        'abF'
+                    ),
+                    style: {
+                        transition: `${transitionStyle} ${verseDuration}s linear`
+                    }
                 }}
             />
         )

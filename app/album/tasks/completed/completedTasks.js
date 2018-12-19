@@ -4231,5 +4231,10 @@ module.exports = [
         taskName: `Some initial colouring changes.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Be smarter about rendering too many annotation dispatchers. Instead, interactivate verse if verse is not selectable.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

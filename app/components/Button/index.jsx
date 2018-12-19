@@ -17,7 +17,7 @@ import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 class Button extends Component {
 
     static defaultProps = {
-        showAccessIconIfAccessOn: true
+        canShowAccessIcon: true
     }
 
     static propTypes = {
@@ -31,7 +31,7 @@ class Button extends Component {
         isPopupButton: PropTypes.bool,
         buttonIdentifier: PropTypes.any,
         accessKey: PropTypes.string,
-        showAccessIconIfAccessOn: PropTypes.bool.isRequired,
+        canShowAccessIcon: PropTypes.bool.isRequired,
         handleButtonClick: PropTypes.func.isRequired,
         children: PropTypes.any
     }
@@ -65,14 +65,14 @@ class Button extends Component {
                 isLargeSize,
                 isDisabled,
                 isPopupButton,
-                showAccessIconIfAccessOn,
+                canShowAccessIcon,
                 buttonIdentifier,
                 accessKey,
                 children
             } = this.props,
 
             isDefaultSize = !isLargeSize && !isSmallSize && !isCustomSize,
-            showIfAccessed = showAccessIconIfAccessOn && !isDisabled
+            showIfAccessed = canShowAccessIcon && !isDisabled
 
         return (
             <div

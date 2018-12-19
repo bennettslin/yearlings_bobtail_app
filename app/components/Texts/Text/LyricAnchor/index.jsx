@@ -4,9 +4,8 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
+import { updateAnnotationStore } from 'flux/annotation/action'
 
-import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
-import StopPropagationDispatcher from '../../../../dispatchers/StopPropagationDispatcher'
 import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
 import Anchor from '../../../Anchor'
 import Texts from '../../'
@@ -60,6 +59,7 @@ class TextLyricAnchor extends PureComponent {
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
         wikiIndex: PropTypes.number,
@@ -81,7 +81,7 @@ class TextLyricAnchor extends PureComponent {
         setLyricAnnotationElement: PropTypes.func
     }
 
-    _handleAnchorClick = (e) => {
+    _handleAnchorClick = () => {
         const {
                 renderedAnnotationIndex,
                 annotationIndex,
@@ -101,22 +101,10 @@ class TextLyricAnchor extends PureComponent {
             }
 
             if (annotationIndex) {
-                /**
-                 * Because we have to check to stop propagation here, we will
-                 * continue to dispatch annotation index directly, rather than
-                 * sending a queued event to do so.
-                 */
-                if (this.dispatchAnnotationIndex({
-                    selectedAnnotationIndex: annotationIndex
-                })) {
-                    /**
-                     * The text lyric anchor itself does not know if it cannot
-                     * be selected due to no dots selected. So if the dispatch
-                     * was successful, it will stop propagation. Otherwise, it
-                     * will behave as if plain text was clicked.
-                     */
-                    this.dispatchStopPropagation(e)
-                }
+                this.props.updateAnnotationStore({
+                    queuedAnnotationIndex: annotationIndex,
+                    queuedAnnotationFromLyricVerse: true
+                })
             }
         }
     }
@@ -240,17 +228,19 @@ class TextLyricAnchor extends PureComponent {
                                 />
                             )),
                             sequenceDotKeys: dotKeys,
-                            doBypassStopPropagation: !isWikiTextAnchor,
                             handleAnchorClick: this._handleAnchorClick
                         }}
                     />
                 </span>
-                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
-                <WikiDispatcher {...{ getRefs: this._getRefs }} />
+                {isWikiTextAnchor && (
+                    <WikiDispatcher {...{ getRefs: this._getRefs }} />
+                )}
             </___>
         )
     }
 }
 
-export default connect(mapStateToProps)(TextLyricAnchor)
+export default connect(
+    mapStateToProps,
+    { updateAnnotationStore }
+)(TextLyricAnchor)

@@ -11,3 +11,11 @@ export const updateAnnotationStore = (payload = ANNOTATION_DEFAULTS) => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
+
+export const resetAnnotationQueue = () => {
+
+    return ({
+        type: ANNOTATION_STORE,
+        payload: ANNOTATION_DEFAULTS
+    })
+}

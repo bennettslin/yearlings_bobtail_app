@@ -53,12 +53,14 @@ class VerseNav extends PureComponent {
             )}>
                 <Button
                     isSmallSize
-                    buttonName={AUDIO_NEXT_BUTTON_KEY}
-                    accessKey={ENTER}
-                    showAccessIconIfAccessOn={isEnabled}
-                    isDisabled={!isEnabled}
-                    buttonIdentifier={false}
-                    handleButtonClick={this._handleButtonClick}
+                    {...{
+                        buttonName: AUDIO_NEXT_BUTTON_KEY,
+                        accessKey: ENTER,
+                        canShowAccessIcon: isEnabled,
+                        isDisabled: !isEnabled,
+                        buttonIdentifier: false,
+                        handleButtonClick: this._handleButtonClick
+                    }}
                 />
             </div>
         )

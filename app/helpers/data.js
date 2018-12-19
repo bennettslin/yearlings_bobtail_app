@@ -155,6 +155,18 @@ export const getAnnotationObject = (
     return annotations ? annotations[annotationIndex - 1] : null
 }
 
+export const getVerseIndexForAnnotationIndex = (
+    songIndex,
+    annotationIndex
+) => {
+    const annotationObject = getAnnotationObject(
+        songIndex,
+        annotationIndex
+    )
+
+    return annotationObject ? annotationObject.verseIndex : -1
+}
+
 export const getAnnotationColumnIndex = (
     songIndex,
     annotationIndex,

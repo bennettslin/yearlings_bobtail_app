@@ -109,7 +109,7 @@ class NavButton extends PureComponent {
                         buttonIdentifier,
                         isDisabled: !isEnabled,
                         isIndexSelected: isSelected,
-                        showAccessIconIfAccessOn:
+                        canShowAccessIcon:
                             isAccessed &&
                             isNavigable,
                         accessKey: isToggle ? '' : ENTER,
