@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import ActorLayer from './Actor'
+import ActorLayers from './Actors'
 import BackdropLayer from './Backdrop'
 import BubbleLayer from './Bubble'
 import CutoutLayer from './Cutout'
@@ -65,6 +65,7 @@ class Presences extends Component {
 
             scenePresenceLayer = scenePresenceLayers[`layer${yIndex}`]
 
+        // If this layer has no presences, just don't render it at all.
         if (scenePresenceLayer) {
             const {
                 actors,
@@ -80,13 +81,14 @@ class Presences extends Component {
 
             return (
                 <div
-                    className={cx(
-                        'Presences',
-                        `y${yIndex}`,
-                        'abF'
-                    )}
+                    {...{
+                        className: cx(
+                            'Presences',
+                            `y${yIndex}`,
+                            'abF'
+                        )
+                    }}
                 >
-                    <ActorLayer {...actors} />
                     <BackdropLayer {...backdrops} />
                     <BubbleLayer {...bubbles} />
                     <CutoutLayer {...cutouts} />
@@ -95,6 +97,9 @@ class Presences extends Component {
                     <FurnitureLayer {...furnitures} />
                     <PanelLayer {...panels} />
                     <PuppetLayer {...puppets} />
+
+                    {/* Each individual actor has its own layer. */}
+                    <ActorLayers {...actors} />
                 </div>
             )
 
