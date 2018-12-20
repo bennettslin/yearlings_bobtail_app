@@ -1,60 +1,35 @@
-const
-    // Together on one page. Requires editing.
-    PUPPET_BENNETT_BEGIN = 'puppetBennettBegin',
-    PUPPET_FAMILY_BEGIN = 'puppetFamilyBegin',
-    PUPPET_BENNETT_MIDDLE = 'puppetBennettMiddle',
-    PUPPET_FAMILY_MIDDLE = 'puppetFamilyMiddle',
-    PUPPET_BENNETT_END = 'puppetBennettEnd',
-    PUPPET_FAMILY_END = 'puppetFamilyEnd',
-    PUPPET_KHARI_LIZ = 'puppetKhariLiz',
+// Together on one page. Requires editing.
+export const PUPPET_BENNETT_BEGIN = 'puppetBennettBegin'
+export const PUPPET_FAMILY_BEGIN = 'puppetFamilyBegin'
+export const PUPPET_BENNETT_MIDDLE = 'puppetBennettMiddle'
+export const PUPPET_FAMILY_MIDDLE = 'puppetFamilyMiddle'
+export const PUPPET_BENNETT_END = 'puppetBennettEnd'
+export const PUPPET_FAMILY_END = 'puppetFamilyEnd'
+export const PUPPET_KHARI_LIZ = 'puppetKhariLiz'
 
-    // Own page. Requires editing.
-    PCHELKA_MUSHKA_ROCKET = 'pchelkaMushkaRocket',
+// Own page. Requires editing.
+export const PCHELKA_MUSHKA_ROCKET = 'pchelkaMushkaRocket'
 
-    // Together on one page.
-    EARTH = 'earth',
-    SPACE_COLONY = 'spaceColony',
+// Together on one page.
+export const EARTH = 'earth'
+export const SPACE_COLONY = 'spaceColony'
 
-    // Together on one page. Requires editing.
-    OPAL_LAP = 'opalLap',
-    OPAL_GAZING = 'opalGazing',
-    OPAL_COUCH = 'opalCouch',
-    OPAL_LICKING = 'opalLicking',
+// Together on one page. Requires editing.
+export const OPAL_LAP = 'opalLap'
+export const OPAL_GAZING = 'opalGazing'
+export const OPAL_COUCH = 'opalCouch'
+export const OPAL_LICKING = 'opalLicking'
 
-    // Own page.
-    PEAHEN = 'peahen',
-    // Own page.
-    PEACOCK = 'peacock',
+// Own page.
+export const PEAHEN = 'peahen'
+// Own page.
+export const PEACOCK = 'peacock'
 
-    // With goldenGate backdrop.
-    PUPPET_REATTA = 'puppetReatta',
+// With goldenGate backdrop.
+export const PUPPET_REATTA = 'puppetReatta'
 
-    // Together on one page.
-    GHOST_ODIN_CAMPUS = 'ghostOdinCampus',
-    GHOST_ODIN_CLUB = 'ghostOdinClub',
-    GHOST_ODIN_ALLEY = 'ghostOdinAlley',
-    GHOST_ODIN_DEMONSTRATION = 'ghostOdinDemonstration'
-
-export {
-    PUPPET_BENNETT_BEGIN,
-    PUPPET_FAMILY_BEGIN,
-    PUPPET_BENNETT_MIDDLE,
-    PUPPET_FAMILY_MIDDLE,
-    PUPPET_BENNETT_END,
-    PUPPET_FAMILY_END,
-    PCHELKA_MUSHKA_ROCKET,
-    EARTH,
-    SPACE_COLONY,
-    OPAL_LAP,
-    OPAL_GAZING,
-    OPAL_COUCH,
-    OPAL_LICKING,
-    PEAHEN,
-    PEACOCK,
-    PUPPET_REATTA,
-    GHOST_ODIN_CAMPUS,
-    GHOST_ODIN_CLUB,
-    GHOST_ODIN_ALLEY,
-    GHOST_ODIN_DEMONSTRATION,
-    PUPPET_KHARI_LIZ
-}
+// Together on one page.
+export const GHOST_ODIN_CAMPUS = 'ghostOdinCampus'
+export const GHOST_ODIN_CLUB = 'ghostOdinClub'
+export const GHOST_ODIN_ALLEY = 'ghostOdinAlley'
+export const GHOST_ODIN_DEMONSTRATION = 'ghostOdinDemonstration'

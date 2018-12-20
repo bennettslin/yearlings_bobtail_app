@@ -3,7 +3,7 @@ import { SHORE_KEY } from '../../cubesKeys'
 import {
     SAND_HSLA,
     OCEAN_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     RIGHT

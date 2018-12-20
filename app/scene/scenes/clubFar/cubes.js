@@ -7,7 +7,7 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     g

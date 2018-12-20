@@ -5,7 +5,7 @@ import {
 import {
     SAND_HSLA,
     STREET_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     LEFT

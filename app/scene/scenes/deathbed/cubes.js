@@ -12,7 +12,7 @@ import {
     PLATFORM_HSLA,
     UPHOLSTERY_HSLA,
     FURNITURE_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     // g,

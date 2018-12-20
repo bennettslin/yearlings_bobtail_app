@@ -2,7 +2,7 @@ import { BUOY_KEY } from '../../cubesKeys'
 
 import {
     OCEAN_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     a,

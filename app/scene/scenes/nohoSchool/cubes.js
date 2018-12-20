@@ -4,7 +4,7 @@ import {
     PAVEMENT_HSLA,
     FLOOR_HSLA,
     SEAT_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 const
     V = PAVEMENT_HSLA,

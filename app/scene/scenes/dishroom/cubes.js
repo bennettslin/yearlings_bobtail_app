@@ -7,7 +7,7 @@ import {
     DOOR_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     b,

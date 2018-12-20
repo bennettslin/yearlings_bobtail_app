@@ -7,7 +7,7 @@ import {
     FLOOR_HSLA,
     PLATFORM_HSLA,
     UPHOLSTERY_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 /**
  * Couch should match in lizCouch.

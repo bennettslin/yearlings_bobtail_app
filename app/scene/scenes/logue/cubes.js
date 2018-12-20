@@ -3,7 +3,7 @@ import { LOGUE_KEY } from '../../cubesKeys'
 import {
     STAGE_FLOOR_HSLA,
     STAGE_PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 const
     G = STAGE_FLOOR_HSLA,

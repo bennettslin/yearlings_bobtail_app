@@ -5,7 +5,7 @@ import {
     PAVEMENT_HSLA,
     GATE_HSLA,
     WALL_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     d,

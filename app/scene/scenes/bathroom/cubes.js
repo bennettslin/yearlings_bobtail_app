@@ -9,7 +9,7 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     FURNITURE_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     f

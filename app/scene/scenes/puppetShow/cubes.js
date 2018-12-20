@@ -3,7 +3,7 @@ import { PUPPET_SHOW_KEY } from '../../cubesKeys'
 import {
     GROUND_HSLA,
     PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 const
     G = GROUND_HSLA,

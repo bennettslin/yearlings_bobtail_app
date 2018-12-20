@@ -4,7 +4,7 @@ import {
     GROUND_HSLA,
     HILL_HSLA,
     HILL_DARKER_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     LEFT

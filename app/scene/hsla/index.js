@@ -20,7 +20,7 @@ import {
     UPHOLSTERY_HSLA,
     SEAT_HSLA,
     OCEAN_HSLA
-} from './hslaKeys'
+} from './keys'
 
 const
     /**
@@ -229,6 +229,4 @@ const
         [OCEAN_HSLA]: OCEAN
     }
 
-export {
-    HSLA_MAP
-}
+export default HSLA_MAP

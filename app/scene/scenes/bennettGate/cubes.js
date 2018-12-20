@@ -6,7 +6,7 @@ import {
     GATE_HSLA,
     CEILING_HSLA,
     DOOR_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     d,

@@ -3,7 +3,7 @@ import { WALGREENS_KEY } from '../../cubesKeys'
 import {
     GROUND_HSLA,
     FLOOR_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 const
     G = GROUND_HSLA,

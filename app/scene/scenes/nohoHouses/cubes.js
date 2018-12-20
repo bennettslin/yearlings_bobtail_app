@@ -3,7 +3,7 @@ import { NOHO_HOUSES_KEY } from '../../cubesKeys'
 import {
     LAWN_HSLA,
     PAVEMENT_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 const
     V = PAVEMENT_HSLA,

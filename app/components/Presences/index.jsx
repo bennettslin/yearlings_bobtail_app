@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import ActorLayers from './Actors'
+import ActorLayers from './Actor'
 import BackdropLayer from './Backdrop'
 import BubbleLayer from './Bubble'
 import CutoutLayer from './Cutout'

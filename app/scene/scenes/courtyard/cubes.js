@@ -7,7 +7,7 @@ import {
     CEILING_HSLA,
     WALL_HSLA,
     DOOR_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     d,

@@ -2,7 +2,7 @@ import { OCEAN_FLOOR_KEY } from '../../cubesKeys'
 
 import {
     SAND_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     RIGHT

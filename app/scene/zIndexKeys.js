@@ -1,27 +1,13 @@
-const
-    a = 10,
-    b = 11,
-    c = 12,
-    d = 13,
-    e = 14,
-    f = 15,
-    g = 16,
+export const a = 10
+export const b = 11
+export const c = 12
+export const d = 13
+export const e = 14
+export const f = 15
+export const g = 16
 
-    // For not showing any ceiling pixels.
-    k = 17,
+// For not showing any ceiling pixels.
+export const k = 17
 
-    LEFT = 'left',
-    RIGHT = 'right'
-
-export {
-    a,
-    b,
-    c,
-    d,
-    e,
-    f,
-    g,
-    k,
-    LEFT,
-    RIGHT
-}
+export const LEFT = 'left'
+export const RIGHT = 'right'

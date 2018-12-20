@@ -7,7 +7,7 @@ import {
     GROUND_HSLA,
     PAVEMENT_HSLA,
     STREET_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 const
     G = GROUND_HSLA,

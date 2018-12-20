@@ -1,10 +1,8 @@
-import {
-    HSLA_MAP
-} from 'scene/hsla'
+import HSLA_MAP from 'scene/hsla'
 
 import {
     HSLA_KEYS
-} from 'scene/hslaKeys'
+} from 'scene/hsla/keys'
 
 const CUBE_COLOURS = {}
 

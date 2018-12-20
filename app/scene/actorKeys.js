@@ -1,113 +1,59 @@
 // Keep actor instances in separate folder, under each actor.
+export const YOUNG_BENNETT = 'youngBennett'
+export const PRETEEN_BENNETT = 'preteenBennett'
+export const BENNETT = 'bennett'
+export const BENNETT_LIZ = 'bennettLiz'
+export const BENNETT_STEPHANIE = 'bennettStephanie'
+export const BENNETTS_CHRISTOPHER_LIZ = 'bennettsChristopherLiz'
+export const OLD_BENNETT = 'oldBennett'
 
-const
-    YOUNG_BENNETT = 'youngBennett',
-    PRETEEN_BENNETT = 'preteenBennett',
-    BENNETT = 'bennett',
-    BENNETT_LIZ = 'bennettLiz',
-    BENNETT_STEPHANIE = 'bennettStephanie',
-    BENNETTS_CHRISTOPHER_LIZ = 'bennettsChristopherLiz',
-    OLD_BENNETT = 'oldBennett',
+export const ANITA = 'anita'
+export const ANITA_BENNETT = 'anitaBennett'
+export const ESTHER = 'esther'
+export const ESTHER_MOTHER = 'estherMother'
 
-    ANITA = 'anita',
-    ANITA_BENNETT = 'anitaBennett',
-    ESTHER = 'esther',
-    ESTHER_MOTHER = 'estherMother',
+export const WILLY = 'willy'
+export const MOTHER = 'mother'
+export const FATHER = 'father'
+export const CHRISTOPHER = 'christopher'
+export const CHRISTOPHER_BENNETT = 'christopherBennett'
 
-    WILLY = 'willy',
-    MOTHER = 'mother',
-    FATHER = 'father',
-    CHRISTOPHER = 'christopher',
-    CHRISTOPHER_BENNETT = 'christopherBennett',
+export const SASHA = 'sasha'
+export const SASHA_BENNETT = 'sashaBennett'
+export const BRAD = 'brad'
+export const BRAD_BENNETT = 'bradBennett'
+export const BRAD_SASHA = 'bradSasha'
+export const ANDREW = 'andrew'
 
-    SASHA = 'sasha',
-    SASHA_BENNETT = 'sashaBennett',
-    BRAD = 'brad',
-    BRAD_BENNETT = 'bradBennett',
-    BRAD_SASHA = 'bradSasha',
-    ANDREW = 'andrew',
+export const CATHERINE = 'catherine'
 
-    CATHERINE = 'catherine',
+export const MARA = 'mara'
+export const JACOB = 'jacob'
+export const JACOB_MARA = 'jacobMara'
+export const ANA = 'ana'
+export const ANA_HOWIE = 'anaHowie'
 
-    MARA = 'mara',
-    JACOB = 'jacob',
-    JACOB_MARA = 'jacobMara',
-    ANA = 'ana',
-    ANA_HOWIE = 'anaHowie',
+export const HOWIE = 'howie'
+export const TOMER = 'tomer'
 
-    HOWIE = 'howie',
-    TOMER = 'tomer',
+export const LIZ = 'liz'
+export const KHARI = 'khari'
+export const KHARI_LIZ = 'khariLiz'
 
-    LIZ = 'liz',
-    KHARI = 'khari',
-    KHARI_LIZ = 'khariLiz',
+export const MIRIAM = 'miriam'
+export const MIRIAM_BENNETT = 'miriamBennett'
+export const MIRIAM_STEPHANIE = 'miriamStephanie'
+export const MIRIAM_TRISTAN = 'miriamTristan'
+export const TRISTAN = 'tristan'
+export const NESTOR = 'nestor'
 
-    MIRIAM = 'miriam',
-    MIRIAM_BENNETT = 'miriamBennett',
-    MIRIAM_STEPHANIE = 'miriamStephanie',
-    MIRIAM_TRISTAN = 'miriamTristan',
-    TRISTAN = 'tristan',
-    NESTOR = 'nestor',
+export const AMY = 'amy'
+export const AMY_STEPHANIE = 'amyStephanie'
+export const AMY_NESTOR_TOMER = 'amyNestorTomer'
+export const STEPHANIE = 'stephanie'
+export const WADE = 'wade'
 
-    AMY = 'amy',
-    AMY_STEPHANIE = 'amyStephanie',
-    AMY_NESTOR_TOMER = 'amyNestorTomer',
-    STEPHANIE = 'stephanie',
-    WADE = 'wade',
-
-    BENNETT_REFLECTION = 'bennettReflection',
-    BENNETT_LIZ_REFLECTION = 'bennettLizReflection',
-    LIZ_REFLECTION = 'lizReflection',
-    KHARI_LIZ_REFLECTION = 'khariLizReflection'
-
-export {
-    YOUNG_BENNETT,
-    PRETEEN_BENNETT,
-    BENNETT,
-    BENNETT_LIZ,
-    BENNETT_STEPHANIE,
-    BENNETTS_CHRISTOPHER_LIZ,
-    OLD_BENNETT,
-    ANITA,
-    ANITA_BENNETT,
-    ESTHER,
-    ESTHER_MOTHER,
-    WILLY,
-    MOTHER,
-    FATHER,
-    CHRISTOPHER,
-    CHRISTOPHER_BENNETT,
-    SASHA,
-    SASHA_BENNETT,
-    BRAD,
-    BRAD_BENNETT,
-    BRAD_SASHA,
-    ANDREW,
-    CATHERINE,
-    MARA,
-    JACOB,
-    JACOB_MARA,
-    ANA,
-    ANA_HOWIE,
-    HOWIE,
-    TOMER,
-    LIZ,
-    KHARI,
-    KHARI_LIZ,
-    MIRIAM,
-    MIRIAM_BENNETT,
-    MIRIAM_STEPHANIE,
-    MIRIAM_TRISTAN,
-    TRISTAN,
-    NESTOR,
-    AMY,
-    AMY_STEPHANIE,
-    AMY_NESTOR_TOMER,
-    STEPHANIE,
-    WADE,
-
-    BENNETT_REFLECTION,
-    BENNETT_LIZ_REFLECTION,
-    LIZ_REFLECTION,
-    KHARI_LIZ_REFLECTION
-}
+export const BENNETT_REFLECTION = 'bennettReflection'
+export const BENNETT_LIZ_REFLECTION = 'bennettLizReflection'
+export const LIZ_REFLECTION = 'lizReflection'
+export const KHARI_LIZ_REFLECTION = 'khariLizReflection'

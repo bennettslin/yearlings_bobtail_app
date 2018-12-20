@@ -15,7 +15,7 @@ import {
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
     SEAT_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     c,

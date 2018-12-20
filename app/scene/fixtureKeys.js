@@ -1,231 +1,155 @@
-const
-    // With concerned Anita.
-    PLAYGROUND_BALL = 'playgroundBall',
+// With concerned Anita.
+export const PLAYGROUND_BALL = 'playgroundBall'
 
-    // With flustered YoungBennett.
-    SAFEWAY_BAG = 'safewayBag',
+// With flustered YoungBennett.
+export const SAFEWAY_BAG = 'safewayBag'
 
-    // With singing YoungBennett. Requires editing.
-    RECORD_PLAYER_STOOL = 'recordPlayerStool',
+// With singing YoungBennett. Requires editing.
+export const RECORD_PLAYER_STOOL = 'recordPlayerStool'
 
-    // Together on one page. Requires editing.
-    JOHNNY_HORTON_ALBUM = 'johnnyHortonAlbum',
-    BEETHOVEN_BUST = 'beethovenBust',
-    POLICE_ALBUM = 'policeAlbum',
-    TELEVISION_ALBUM = 'televisionAlbum',
-    NAS_ALBUM = 'nasAlbum',
+// Together on one page. Requires editing.
+export const JOHNNY_HORTON_ALBUM = 'johnnyHortonAlbum'
+export const BEETHOVEN_BUST = 'beethovenBust'
+export const POLICE_ALBUM = 'policeAlbum'
+export const TELEVISION_ALBUM = 'televisionAlbum'
+export const NAS_ALBUM = 'nasAlbum'
 
-    // Together on one page. Requires editing.
-    SHOPPING_CART = 'shoppingCart',
-    GARBAGE_BAG = 'garbageBag',
-    SHOPPING_CART_FULL = 'shoppingCartFull',
+// Together on one page. Requires editing.
+export const SHOPPING_CART = 'shoppingCart'
+export const GARBAGE_BAG = 'garbageBag'
+export const SHOPPING_CART_FULL = 'shoppingCartFull'
 
-    // With stooping Mother.
-    HAIRCUT_SCISSORS = 'haircutScissors',
+// With stooping Mother.
+export const HAIRCUT_SCISSORS = 'haircutScissors'
 
-    // Scissors with sobbing Christopher, letters with enraged preteenBennett. Requires editing.
-    CHRISTOPHER_LETTERS = 'christopherLetters',
+// Scissors with sobbing Christopher, letters with enraged preteenBennett. Requires editing.
+export const CHRISTOPHER_LETTERS = 'christopherLetters'
 
-    // With panicked PreteenBennett.
-    BACKPACK_BENNETT = 'backpackBennett',
+// With panicked PreteenBennett.
+export const BACKPACK_BENNETT = 'backpackBennett'
 
-    // With charmed Sasha and jewishBoy Brad.
-    BACKPACK_SASHA = 'backpackSasha',
-    BACKPACK_JEWISH_BOY = 'backpackJewishBoy',
+// With charmed Sasha and jewishBoy Brad.
+export const BACKPACK_SASHA = 'backpackSasha'
+export const BACKPACK_JEWISH_BOY = 'backpackJewishBoy'
 
-    // With attic and Howie fridge cutouts, accidentally. Requires editing.
-    FRIDGE_DRAWINGS = 'fridgeDrawings',
+// With attic and Howie fridge cutouts, accidentally. Requires editing.
+export const FRIDGE_DRAWINGS = 'fridgeDrawings'
 
-    // With guiltRidden PreteenBennett and blissful Christopher. Requires editing.
-    BENNETT_LETTERS = 'bennettLetters',
-    CAPTAIN_BED_LAMP = 'captainBedLamp',
+// With guiltRidden PreteenBennett and blissful Christopher. Requires editing.
+export const BENNETT_LETTERS = 'bennettLetters'
+export const CAPTAIN_BED_LAMP = 'captainBedLamp'
 
-    // With feigningSick PreteenBennett. Requires editing.
-    RED_ENVELOPE_MONEY = 'redEnvelopeMoney',
+// With feigningSick PreteenBennett. Requires editing.
+export const RED_ENVELOPE_MONEY = 'redEnvelopeMoney'
 
-    // With shaken PreteenBennett.
-    BEYONDER_ENVELOPE = 'beyonderEnvelope',
+// With shaken PreteenBennett.
+export const BEYONDER_ENVELOPE = 'beyonderEnvelope'
 
-    // With stoic PreteenBennett. Requires editing.
-    THROWN_FRUIT = 'thrownFruit',
+// With stoic PreteenBennett. Requires editing.
+export const THROWN_FRUIT = 'thrownFruit'
 
-    // Together on one page.
-    BENNETT_RECORD_PLAYER_COUCH = 'bennettRecordPlayerCouch',
-    BENNETT_RECORD_PLAYER_BASEMENT = 'bennettRecordPlayerBasement',
-    HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer',
+// Together on one page.
+export const BENNETT_RECORD_PLAYER_COUCH = 'bennettRecordPlayerCouch'
+export const BENNETT_RECORD_PLAYER_BASEMENT = 'bennettRecordPlayerBasement'
+export const HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer'
 
-    // With solicitingOpinion Bennett.
-    BENNETT_COUCH_LAMP = 'bennettCouchLamp',
+// With solicitingOpinion Bennett.
+export const BENNETT_COUCH_LAMP = 'bennettCouchLamp'
 
-    // With smoker Amy.
-    ASH_CAN = 'ashCan',
+// With smoker Amy.
+export const ASH_CAN = 'ashCan'
 
-    // With bennettKeyboard Stephanie.
-    KEYBOARD = 'keyboard',
+// With bennettKeyboard Stephanie.
+export const KEYBOARD = 'keyboard'
 
-    // With distracted Bennett.
-    CASH_BOX = 'cashBox',
+// With distracted Bennett.
+export const CASH_BOX = 'cashBox'
 
-    // With flirting Bennett.
-    GUITAR = 'guitar',
+// With flirting Bennett.
+export const GUITAR = 'guitar'
 
-    // Together on one page.
-    BASS_CASE_OPEN = 'bassCaseOpen',
-    BASS_CASE_UPRIGHT = 'bassCaseUpright',
-    BASS_CASE_SIDE = 'bassCaseSide',
+// Together on one page.
+export const BASS_CASE_OPEN = 'bassCaseOpen'
+export const BASS_CASE_UPRIGHT = 'bassCaseUpright'
+export const BASS_CASE_SIDE = 'bassCaseSide'
 
-    // Throne, cymbal stands, and drums on three pages. Requires editing.
-    DRUMKIT = 'drumKit',
+// Throne, cymbal stands, and drums on three pages. Requires editing.
+export const DRUMKIT = 'drumKit'
 
-    // Together on one page.
-    GUITAR_CASE_UPRIGHT = 'guitarCaseUpright',
-    GUITAR_CASE_OPEN = 'guitarCaseOpen',
+// Together on one page.
+export const GUITAR_CASE_UPRIGHT = 'guitarCaseUpright'
+export const GUITAR_CASE_OPEN = 'guitarCaseOpen'
 
-    // With eating Bennett. Requires editing.
-    BASEMENT_BEER_CASE = 'basementBeerCase',
-    BASEMENT_BEER_MARA = 'basementBeerMara',
-    BASEMENT_BEER_BENNETT = 'basementBeerBennett',
+// With eating Bennett. Requires editing.
+export const BASEMENT_BEER_CASE = 'basementBeerCase'
+export const BASEMENT_BEER_MARA = 'basementBeerMara'
+export const BASEMENT_BEER_BENNETT = 'basementBeerBennett'
 
-    // Own page.
-    CAVEMAN_BONES = 'cavemanBones',
+// Own page.
+export const CAVEMAN_BONES = 'cavemanBones'
 
-    // Together on one page.
-    PUSH_BROOM_BACKSTAGE = 'pushBroomBackstage',
-    PUSH_BROOM_TUNNEL = 'pushBroomTunnel',
-    STEPLADDER = 'stepladder',
-    MANNEQUIN = 'mannequin',
+// Together on one page.
+export const PUSH_BROOM_BACKSTAGE = 'pushBroomBackstage'
+export const PUSH_BROOM_TUNNEL = 'pushBroomTunnel'
+export const STEPLADDER = 'stepladder'
+export const MANNEQUIN = 'mannequin'
 
-    // Together on one page. Requires editing.
-    CONVEYOR_BELT = 'conveyorBelt',
-    GLASS_CART = 'glassCart',
-    TRAY_CART = 'trayCart',
-    GLASS_RACK = 'glassRack',
-    DISH_PILE = 'dishPile',
+// Together on one page. Requires editing.
+export const CONVEYOR_BELT = 'conveyorBelt'
+export const GLASS_CART = 'glassCart'
+export const TRAY_CART = 'trayCart'
+export const GLASS_RACK = 'glassRack'
+export const DISH_PILE = 'dishPile'
 
-    // With progress chart cutouts. Requires editing.
-    NUDE_DRAWINGS = 'nudeDrawings',
-    VASELINE = 'vaseline',
-    BLOODY_TOWEL = 'bloodyTowel',
+// With progress chart cutouts. Requires editing.
+export const NUDE_DRAWINGS = 'nudeDrawings'
+export const VASELINE = 'vaseline'
+export const BLOODY_TOWEL = 'bloodyTowel'
 
-    // With caressed Liz.
-    LIZ_PHONE = 'lizPhone',
-    LIZ_PHONE_REFLECTION = 'lizPhoneReflection',
+// With caressed Liz.
+export const LIZ_PHONE = 'lizPhone'
+export const LIZ_PHONE_REFLECTION = 'lizPhoneReflection'
 
-    // With cemetery Tomer. Requires editing.
-    GRAVESTONE = 'gravestone',
+// With cemetery Tomer. Requires editing.
+export const GRAVESTONE = 'gravestone'
 
-    // With saturn panel. Requires editing.
-    EVIAN_BOTTLES = 'evianBottles',
+// With saturn panel. Requires editing.
+export const EVIAN_BOTTLES = 'evianBottles'
 
-    // With performing Bennett. Requires editing.
-    STAGE_MIC_SIDE = 'stageMicSide',
-    STAGE_MIC_FAR = 'stageMicFar',
+// With performing Bennett. Requires editing.
+export const STAGE_MIC_SIDE = 'stageMicSide'
+export const STAGE_MIC_FAR = 'stageMicFar'
 
-    // With waiting Mara.
-    KICK_DRUM = 'kickDrum',
+// With waiting Mara.
+export const KICK_DRUM = 'kickDrum'
 
-    // With flirting Jacob.
-    DRUMS_STACKED_BASEMENT = 'drumsStackedBasement',
-    DRUMS_STACKED_CLUB = 'drumsStackedClub',
+// With flirting Jacob.
+export const DRUMS_STACKED_BASEMENT = 'drumsStackedBasement'
+export const DRUMS_STACKED_CLUB = 'drumsStackedClub'
 
-    // With removingShoes Bennett.
-    BENNETT_SHOE = 'bennettShoe',
-    BENNETT_SHOE_REFLECTION = 'bennettShoeReflection',
+// With removingShoes Bennett.
+export const BENNETT_SHOE = 'bennettShoe'
+export const BENNETT_SHOE_REFLECTION = 'bennettShoeReflection'
 
-    // With siftingTchotchkes Liz. Requires editing.
-    TCHOTCHKES = 'tchotchkes',
+// With siftingTchotchkes Liz. Requires editing.
+export const TCHOTCHKES = 'tchotchkes'
 
-    // With comforting Sasha and humiliated PreteenBennett.
-    TETHERBALL_POLE = 'tetherballPole',
+// With comforting Sasha and humiliated PreteenBennett.
+export const TETHERBALL_POLE = 'tetherballPole'
 
-    // With cymbal stand fixtures.
-    RECORDING_MIC = 'recordingMic',
+// With cymbal stand fixtures.
+export const RECORDING_MIC = 'recordingMic'
 
-    // With bennettRecording Stephanie. Requires editing.
-    RECORDING_CONSOLE = 'recordingConsole',
-    RECORDING_BEERS = 'recordingBeers',
+// With bennettRecording Stephanie. Requires editing.
+export const RECORDING_CONSOLE = 'recordingConsole'
+export const RECORDING_BEERS = 'recordingBeers'
 
-    // With sitaSobbing Esther and shielding Mother. Requires editing.
-    CRACKED_PICTURE = 'crackedPicture',
+// With sitaSobbing Esther and shielding Mother. Requires editing.
+export const CRACKED_PICTURE = 'crackedPicture'
 
-    // With alley Bennett.
-    BURGER_WRAPPER = 'burgerWrapper',
+// With alley Bennett.
+export const BURGER_WRAPPER = 'burgerWrapper'
 
-    // With caressed Liz and caressing KhariReflection.
-    LIZ_PHONE_BASE = 'lizPhoneBase',
-    LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection'
-
-export {
-    PLAYGROUND_BALL,
-    SAFEWAY_BAG,
-    RECORD_PLAYER_STOOL,
-    JOHNNY_HORTON_ALBUM,
-    SHOPPING_CART,
-    HAIRCUT_SCISSORS,
-    BEETHOVEN_BUST,
-    CHRISTOPHER_LETTERS,
-    GARBAGE_BAG,
-    SHOPPING_CART_FULL,
-    BACKPACK_BENNETT,
-    BACKPACK_SASHA,
-    BACKPACK_JEWISH_BOY,
-    FRIDGE_DRAWINGS,
-    BENNETT_LETTERS,
-    CAPTAIN_BED_LAMP,
-    RED_ENVELOPE_MONEY,
-    BEYONDER_ENVELOPE,
-    THROWN_FRUIT,
-    POLICE_ALBUM,
-    BENNETT_RECORD_PLAYER_COUCH,
-    BENNETT_RECORD_PLAYER_BASEMENT,
-    BENNETT_COUCH_LAMP,
-    ASH_CAN,
-    TELEVISION_ALBUM,
-    KEYBOARD,
-    CASH_BOX,
-    GUITAR,
-    BASS_CASE_OPEN,
-    DRUMKIT,
-    GUITAR_CASE_UPRIGHT,
-    BASS_CASE_UPRIGHT,
-    BASEMENT_BEER_CASE,
-    BASEMENT_BEER_MARA,
-    BASEMENT_BEER_BENNETT,
-    CAVEMAN_BONES,
-    PUSH_BROOM_BACKSTAGE,
-    PUSH_BROOM_TUNNEL,
-    STEPLADDER,
-    MANNEQUIN,
-    CONVEYOR_BELT,
-    GLASS_CART,
-    TRAY_CART,
-    GLASS_RACK,
-    DISH_PILE,
-    NUDE_DRAWINGS,
-    VASELINE,
-    LIZ_PHONE,
-    LIZ_PHONE_REFLECTION,
-    BLOODY_TOWEL,
-    GRAVESTONE,
-    EVIAN_BOTTLES,
-    STAGE_MIC_SIDE,
-    KICK_DRUM,
-    GUITAR_CASE_OPEN,
-    BASS_CASE_SIDE,
-    DRUMS_STACKED_BASEMENT,
-    DRUMS_STACKED_CLUB,
-    BENNETT_SHOE,
-    BENNETT_SHOE_REFLECTION,
-    NAS_ALBUM,
-    TCHOTCHKES,
-    TETHERBALL_POLE,
-    RECORDING_MIC,
-    RECORDING_CONSOLE,
-    RECORDING_BEERS,
-    CRACKED_PICTURE,
-    STAGE_MIC_FAR,
-    BURGER_WRAPPER,
-    LIZ_PHONE_BASE,
-    LIZ_PHONE_BASE_REFLECTION,
-    HOSPITAL_RECORD_PLAYER
-}
+// With caressed Liz and caressing KhariReflection.
+export const LIZ_PHONE_BASE = 'lizPhoneBase'
+export const LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection'

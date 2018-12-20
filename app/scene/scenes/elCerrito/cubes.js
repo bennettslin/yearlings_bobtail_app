@@ -10,7 +10,7 @@ import {
     STREET_HSLA,
     PLATFORM_HSLA,
     SEAT_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 import {
     RIGHT
 } from '../../zIndexKeys'

@@ -5,7 +5,7 @@ import {
     HILL_HSLA,
     HILL_DARKER_HSLA,
     PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     RIGHT

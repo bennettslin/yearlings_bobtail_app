@@ -2,7 +2,7 @@ import { DEFAULT_STAGE_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA
-} from '../../hslaKeys'
+} from '../../hsla/keys'
 
 import {
     k
