@@ -1,7 +1,7 @@
 import keys from 'lodash.keys'
 
-import ARRANGEMENTS_ACTORS from 'scene/actors'
-import ARRANGEMENTS_THINGS from 'scene/things'
+import ALL_ARRANGEMENTS_ACTORS from 'scene/actors'
+import ALL_ARRANGEMENTS_THINGS from 'scene/things'
 
 import { ACTORS } from 'constants/scene'
 
@@ -70,14 +70,14 @@ const addPresenceToSceneLayerByType = ({
             instance = presenceValue[characterName].instance
         }
 
-        arrangementObject = ARRANGEMENTS_ACTORS[presenceName][instance]
+        arrangementObject = ALL_ARRANGEMENTS_ACTORS[presenceName][instance]
         value = instance
 
         // Can be deleted.
         album.tempInstanceCount++
 
     } else {
-        arrangementObject = ARRANGEMENTS_THINGS[presenceType][presenceName]
+        arrangementObject = ALL_ARRANGEMENTS_THINGS[presenceType][presenceName]
         value = presenceValue
     }
 

@@ -1,53 +1,37 @@
-const
-    LEFT = 'left',
-    RIGHT = 'right',
-
-    TILE = 'tile',
-    SIDE = 'side',
-    FRONT = 'front',
-
-    CEILING = 'ceiling',
-    FLOOR = 'floor',
-
-    Z_INDICES_MATRIX_NAME = 'zIndices',
-    HSLA_MATRIX_NAME = 'hslaColours',
-
-    ACTORS = 'actors',
-    BACKDROPS = 'backdrops',
-    BUBBLES = 'bubbles',
-    CUTOUTS = 'cutouts',
-    FIXTURES = 'fixtures',
-    FLATS = 'flats',
-    FURNITURES = 'furnitures',
-    PANELS = 'panels',
-    PUPPETS = 'puppets'
-
-module.exports = {
-
+export const LEFT = 'left'
+export const RIGHT = 'right'
+export const SLANT_DIRECTIONS = [
+    '',
     LEFT,
-    RIGHT,
-    SLANT_DIRECTIONS: [
-        '',
-        LEFT,
-        RIGHT
-    ],
+    RIGHT
+]
 
+export const CEILING = 'ceiling'
+export const FLOOR = 'floor'
+export const LEVELS = [
     CEILING,
-    FLOOR,
-    LEVELS: [
-        CEILING,
-        FLOOR
-    ],
+    FLOOR
+]
 
+export const TILE = 'tile'
+export const SIDE = 'side'
+export const FRONT = 'front'
+export const FACES = [
     TILE,
     SIDE,
-    FRONT,
-    FACES: [
-        TILE,
-        SIDE,
-        FRONT
-    ],
+    FRONT
+]
 
+export const ACTORS = 'actors'
+export const BACKDROPS = 'backdrops'
+export const BUBBLES = 'bubbles'
+export const CUTOUTS = 'cutouts'
+export const FIXTURES = 'fixtures'
+export const FLATS = 'flats'
+export const FURNITURES = 'furnitures'
+export const PANELS = 'panels'
+export const PUPPETS = 'puppets'
+export const PRESENCE_TYPES = [
     ACTORS,
     BACKDROPS,
     BUBBLES,
@@ -56,19 +40,5 @@ module.exports = {
     FLATS,
     FURNITURES,
     PANELS,
-    PUPPETS,
-    PRESENCE_TYPES: [
-        ACTORS,
-        BACKDROPS,
-        BUBBLES,
-        CUTOUTS,
-        FIXTURES,
-        FLATS,
-        FURNITURES,
-        PANELS,
-        PUPPETS
-    ],
-
-    Z_INDICES_MATRIX_NAME,
-    HSLA_MATRIX_NAME
-}
+    PUPPETS
+]

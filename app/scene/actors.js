@@ -2,7 +2,7 @@ import keys from 'lodash.keys'
 
 /**
  * Organising actor instances by scene just makes it easier to tweak the
- * arrangements of all the various presences within the same scene together.
+ * allArrangements of all the various presences within the same scene together.
  * They are actually compiled into a single object used for lookup by the
  * components, which do not distinguish by scene.
  */
@@ -132,17 +132,17 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_DEATHBED
 ]
 
-const ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((arrangements, arrangement) => {
-    const actorKeys = keys(arrangement)
+const ALL_ARRANGEMENTS_ACTORS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
+    const actorKeys = keys(arrangements)
 
     actorKeys.forEach(actorKey => {
-        arrangements[actorKey] = {
-            ...arrangements[actorKey],
-            ...arrangement[actorKey]
+        allArrangements[actorKey] = {
+            ...allArrangements[actorKey],
+            ...arrangements[actorKey]
         }
     })
 
-    return arrangements
+    return allArrangements
 }, {})
 
-export default ARRANGEMENTS
+export default ALL_ARRANGEMENTS_ACTORS

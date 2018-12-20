@@ -6,12 +6,12 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     SEAT_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     d,
     g
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     C = CEILING_HSLA,

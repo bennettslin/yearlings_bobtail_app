@@ -7,14 +7,14 @@ import {
     CEILING_HSLA,
     WALL_HSLA,
     DOOR_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     d,
     e,
     f,
     k
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 /**
  * Blinds and door should match in bennettBed.

@@ -9,11 +9,11 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     FURNITURE_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     f
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     G = GROUND_HSLA,

@@ -4,7 +4,7 @@ import {
     DEFAULT_HSLA,
     STREET_HSLA,
     PAVEMENT_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 const
     D = DEFAULT_HSLA,

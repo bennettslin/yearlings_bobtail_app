@@ -6,11 +6,11 @@ import {
     GROUND_HSLA,
     HILL_HSLA,
     HILL_DARKER_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     RIGHT
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     G = GROUND_HSLA,

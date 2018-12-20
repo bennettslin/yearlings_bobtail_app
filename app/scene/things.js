@@ -124,17 +124,17 @@ const SCENE_ARRANGEMENTS = [
     THINGS_DEATHBED
 ]
 
-const ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((arrangements, arrangement) => {
-    const thingKeys = keys(arrangement)
+const ALL_ARRANGEMENTS_THINGS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
+    const thingKeys = keys(arrangements)
 
     thingKeys.forEach(thingKey => {
-        arrangements[thingKey] = {
-            ...arrangements[thingKey],
-            ...arrangement[thingKey]
+        allArrangements[thingKey] = {
+            ...allArrangements[thingKey],
+            ...arrangements[thingKey]
         }
     })
 
-    return arrangements
+    return allArrangements
 }, {})
 
-export default ARRANGEMENTS
+export default ALL_ARRANGEMENTS_THINGS

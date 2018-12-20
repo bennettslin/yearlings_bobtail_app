@@ -11,13 +11,13 @@ import {
     CEILING_HSLA,
     WALL_HSLA,
     DOOR_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     d,
     f,
     k
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 /**
  * Blinds and gate should match in lizCouch.

@@ -5,12 +5,12 @@ import {
     PAVEMENT_HSLA,
     GATE_HSLA,
     WALL_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     d,
     g
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     T = STREET_HSLA,

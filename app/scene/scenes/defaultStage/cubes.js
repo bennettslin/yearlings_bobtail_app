@@ -2,11 +2,11 @@ import { DEFAULT_STAGE_KEY } from '../../cubesKeys'
 
 import {
     DEFAULT_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     k
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     D = DEFAULT_HSLA,

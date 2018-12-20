@@ -3,7 +3,7 @@ import { OCEAN_DEPTHS_KEY } from '../../cubesKeys'
 import {
     OCEAN_HSLA,
     SAND_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     a,
@@ -15,7 +15,7 @@ import {
     g,
     k,
     RIGHT
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     // Default.

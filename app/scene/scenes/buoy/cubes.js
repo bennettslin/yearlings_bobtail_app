@@ -2,7 +2,7 @@ import { BUOY_KEY } from '../../cubesKeys'
 
 import {
     OCEAN_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     a,
@@ -14,7 +14,7 @@ import {
     g,
     k,
     RIGHT
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     // Default.

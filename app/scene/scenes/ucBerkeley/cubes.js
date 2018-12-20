@@ -11,13 +11,13 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     PLATFORM_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     f,
     g,
     k
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     D = DEFAULT_HSLA,

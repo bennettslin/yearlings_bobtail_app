@@ -10,10 +10,10 @@ import {
     STREET_HSLA,
     PLATFORM_HSLA,
     SEAT_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 import {
     RIGHT
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     G = GROUND_HSLA,

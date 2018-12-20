@@ -12,12 +12,12 @@ import {
     PLATFORM_HSLA,
     UPHOLSTERY_HSLA,
     FURNITURE_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     // g,
     RIGHT
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     G = GROUND_HSLA,

@@ -7,12 +7,12 @@ import {
     CEILING_HSLA,
     WALL_HSLA,
     PLATFORM_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     f,
     k
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     D = DEFAULT_HSLA,

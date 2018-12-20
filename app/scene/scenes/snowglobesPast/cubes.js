@@ -4,7 +4,7 @@ import {
     GROUND_HSLA,
     FLOOR_HSLA,
     PLATFORM_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 const
     G = GROUND_HSLA,

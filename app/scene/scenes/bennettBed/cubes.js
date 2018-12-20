@@ -11,13 +11,13 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     UPHOLSTERY_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     d,
     g,
     k
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 /**
  * Blinds and door should match in courtyard.

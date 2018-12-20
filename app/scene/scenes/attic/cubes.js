@@ -7,14 +7,14 @@ import {
     PLATFORM_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     c,
     e,
     f,
     g
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     C = CEILING_HSLA,

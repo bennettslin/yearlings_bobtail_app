@@ -6,7 +6,7 @@ import {
     GATE_HSLA,
     CEILING_HSLA,
     DOOR_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     d,
@@ -14,7 +14,7 @@ import {
     f,
     g,
     k
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 /**
  * Gate should match in courtyard.

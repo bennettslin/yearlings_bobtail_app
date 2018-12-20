@@ -5,11 +5,11 @@ import {
 import {
     SAND_HSLA,
     STREET_HSLA
-} from '../../hsla/keys'
+} from '../hslaKeys'
 
 import {
     LEFT
-} from '../../zIndexKeys'
+} from '../zIndexKeys'
 
 const
     N = SAND_HSLA,

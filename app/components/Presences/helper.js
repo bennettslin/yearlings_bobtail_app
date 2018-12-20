@@ -8,8 +8,8 @@ import furnituresMap from './Furniture/presenceMap'
 import panelsMap from './Panel/presenceMap'
 import puppetsMap from './Puppet/presenceMap'
 
-import ARRANGEMENTS_ACTORS from 'scene/actors'
-import ARRANGEMENTS_THINGS from 'scene/things'
+import ALL_ARRANGEMENTS_ACTORS from 'scene/actors'
+import ALL_ARRANGEMENTS_THINGS from 'scene/things'
 
 import {
     ACTORS,
@@ -62,8 +62,8 @@ const getArrangementForPresenceType = ({
 
 }) => {
     return presenceType === ACTORS ?
-        ARRANGEMENTS_ACTORS[presenceKey][presenceValue] :
-        ARRANGEMENTS_THINGS[presenceType][presenceKey]
+        ALL_ARRANGEMENTS_ACTORS[presenceKey][presenceValue] :
+        ALL_ARRANGEMENTS_THINGS[presenceType][presenceKey]
 }
 
 export {
