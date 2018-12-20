@@ -1,19 +1,8 @@
 module.exports = [
-    // TODO: Do today.
     {
-        taskName: `Prepare questions for Vicki audit.`,
+        taskName: `Transitions work.`,
         workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Begin colouring for actors.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Make task calculation better for performance reasons. Only calculate when admin is mounted. Do after Vicki audit. On plane, maybe.`,
-        workedHours: 0,
-        neededHours: 2
+        neededHours: 24
     },
 
     // Scrolling stuff.
@@ -169,41 +158,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `See if heavy data stuff can be loaded server side.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Continue to work on Presence and Cubes transition order. Make sure changes between songs are smooth, animation wise.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `When app mounts, curtains part when ready.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `During song transitions, cubes reset to base level. All presences exit. Sky resets to base level as well.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `During scene transitions, actors exit. Things persist if they can, otherwise exit as well. Cubes and sky do not reset to base level, but transition directly to next scene.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Cube animation and lyric scrolling are both smooth with scene and song transitions.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Lyric and carousel rendering are still smooth with song transitions.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Try out Vivus animations.`,
         workedHours: 0,
         neededHours: 3
@@ -219,6 +173,6 @@ module.exports = [
     }
 
     /**
-     * Unit tests and manual testing after release!
+     * Unit tests and manual testing after release.
      */
 ]

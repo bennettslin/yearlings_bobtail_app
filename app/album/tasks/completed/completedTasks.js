@@ -4236,5 +4236,10 @@ module.exports = [
         taskName: `Be smarter about rendering too many annotation dispatchers. Instead, interactivate verse if verse is not selectable.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `See if heavy data stuff can be loaded server side. I would like to see this get done, but it's going to take way, way more than I have.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

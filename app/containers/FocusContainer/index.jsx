@@ -190,8 +190,6 @@ class FocusContainer extends PureComponent {
         if (!this.state.isSliderTouchEnding) {
             this.closeForBodyClick()
         }
-
-        this._focusElementForAccess()
     }
 
     setLyricFocusElement = (node) => {
