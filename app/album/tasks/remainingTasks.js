@@ -4,6 +4,16 @@ module.exports = [
         workedHours: 0,
         neededHours: 24
     },
+    {
+        taskName: `Each actor instance will need to be rendered separately.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Redo how presences are structure. Store info in a config?`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     // Scrolling stuff.
     {
@@ -94,6 +104,11 @@ module.exports = [
     },
     {
         taskName: `Make nav books svgs.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Align annotation title access letters.`,
         workedHours: 0,
         neededHours: 1
     },
