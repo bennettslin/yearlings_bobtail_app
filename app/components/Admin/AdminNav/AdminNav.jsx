@@ -6,8 +6,8 @@ import cx from 'classnames'
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../progress/ProgressFooter'
 import ProgressHelper from '../progressHelper'
-import album from 'album'
-const { songs } = album
+
+import { getSongsArray } from './helper'
 
 /*************
  * CONTAINER *
@@ -20,7 +20,7 @@ const AdminNavSection = ({
     ...other
 }) => {
 
-    const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
+    const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(getSongsArray()),
         sumAllTasks = allTasks ? ProgressHelper.calculateSumAllTasks(allTasks) : null
 
     return (
@@ -68,7 +68,7 @@ const AdminNavSectionView = ({
                 </div>
             </div>
             <div className="admin-block">
-                {songs.map((song, index) => {
+                {getSongsArray().map((song, index) => {
                     return (
                         <AdminNavItem {...navItemProps}
                             key={index}
