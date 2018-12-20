@@ -74,11 +74,13 @@ class Floor extends PureComponent {
                 }}
             >
                 <Svg
-                    className={cx(
-                        'Theatre__subfield'
-                    )}
-                    viewBoxWidth={windowWidth}
-                    viewBoxHeight={floorHeight}
+                    {...{
+                        className: cx(
+                            'Theatre__subfield'
+                        ),
+                        viewBoxWidth: windowWidth,
+                        viewBoxHeight: floorHeight
+                    }}
                 >
                     {seatingRowCoordinates.map((currentRowCoordinates, rowIndex) => {
                         const {
@@ -89,9 +91,9 @@ class Floor extends PureComponent {
                             seatWidth = rowHeight / SEAT_HEIGHT_TO_WIDTH_RATIO,
 
                             /**
-                             * If row is even, have centre seat by offsetting right
-                             * side with one more half seat, and left side with one
-                             * less.
+                             * If row is even, have centre seat by offsetting
+                             * right side with one more half seat, and left
+                             * side with one less.
                              */
                             isEven = rowIndex % 2 === 0,
                             seatWidthOffset = isEven ? seatWidth / 2 : 0,
