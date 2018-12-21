@@ -9,7 +9,6 @@
 <!-- EpiPen -->
 My new MacBook Pro
 <!-- Hard drive and cable -->
-<!-- USB-C adapter -->
 
 ## Toiletries bag
 <!-- Glasses -->
@@ -19,20 +18,24 @@ My new MacBook Pro
 <!-- Nail clipper -->
 <!-- Retinol -->
 <!-- Flonase -->
-<!-- Clobetasol -->
+<!-- Clobetasol (leave in LA) -->
 
 ## Suitcase
 <!-- House key (always keep in suitcase) -->
 <!-- Toiletries bag -->
 
 ## Things to bring next time
-Sharpie
-<!-- Graph paper and pencils for drawings. -->
+<!-- Sharpie -->
+<!-- Docking station, power cord, UCB-C connector -->
+New monitor cable
+<!-- Another phone cable -->
+<!-- Two new Zillow shirts (One worn) -->
+<!-- Some old underwear -->
+Ibuprofen
 
 ## Things I have in LA
-
 MacBook charger
-Monitor cable
+Old monitor cable
 Ergonomic keyboard
 Magic trackpad and cushion
 Phone cable
