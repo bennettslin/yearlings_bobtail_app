@@ -13,7 +13,6 @@ import RemainderWrapper from './RemainderWrapper'
 import LogicWrapper from './LogicWrapper'
 import Live from '../../components/Live'
 import Admin from '../../components/Admin'
-import AdminToggle from '../../components/admin/AdminToggle'
 
 class RootContainer extends PureComponent {
 
@@ -55,7 +54,6 @@ class RootContainer extends PureComponent {
                                     setWikiFocusElement
                                 }}
                             />
-                            <AdminToggle />
                             {isAdminOn && (
                                 <Admin />
                             )}

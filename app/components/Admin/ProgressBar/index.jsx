@@ -2,7 +2,8 @@ import React from 'react'
 import { getBarWidthStyle } from './helper'
 
 const ProgressBar = ({
-    sumTask, maxTotalNeededHours
+    sumTask,
+    maxTotalNeededHours
 }) => {
 
     const {

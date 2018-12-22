@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Drawing from '../Drawing'
-import NotesSection from '../notes/notes-section'
-import StatsSection from '../stats/stats-section'
-import TasksSection from '../tasks/tasks-section'
+import NotesSection from './notes/notes-section'
+import StatsSection from './stats/stats-section'
+import TasksSection from './tasks/tasks-section'
 import { getSongObject } from 'helpers/data'
 import { getSongTasks } from '../helper'
 
@@ -38,9 +38,6 @@ const Shared = ({
  ****************/
 
 const SharedView = ({
-
-    // From props.
-
     // From controller.
     tasks,
     adminDotStanzasCount,

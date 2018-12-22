@@ -3,8 +3,7 @@ import { getArrayOfLength } from 'helpers/general'
 
 import {
     adminGatherDrawings,
-    _adminFinaliseActors,
-    adminRegisterDrawingTasks
+    _adminFinaliseActors
 } from './helper'
 
 const
@@ -16,9 +15,5 @@ songIndicesArray.forEach(songIndex => {
 })
 
 _adminFinaliseActors(drawings)
-
-songIndicesArray.forEach(songIndex => {
-    adminRegisterDrawingTasks(drawings, songIndex)
-})
 
 export default drawings

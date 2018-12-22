@@ -1,18 +1,6 @@
 import React from 'react'
 
-/*************
- * CONTAINER *
- *************/
-
 const NotesSection = () => (
-    <NotesSectionView />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
-const NotesSectionView = () => (
     <div className="notes-section">
         <h2>scrap notes</h2>
         <ul>

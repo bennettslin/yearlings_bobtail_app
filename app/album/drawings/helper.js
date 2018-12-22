@@ -81,6 +81,9 @@ export const adminGatherDrawings = (drawings, songIndex) => {
                 }
             })
         }
+
+        // No longer needed.
+        delete scene.presences
     })
 }
 
@@ -203,30 +206,4 @@ export const _adminFinaliseActors = (drawings) => {
     drawings.actors = actors
     drawings.actorsTodoCount = actorsTodoCount
     drawings.actorsTotalCount = actorsTotalCount
-}
-
-export const adminRegisterDrawingTasks = (drawings, songIndex) => {
-    const
-        song = drawings.songs[songIndex],
-        {
-            actorsWorkedHours,
-            actorsNeededHours
-        } = song
-
-    if (!song.tasks) {
-        song.tasks = []
-    }
-
-    if (actorsNeededHours) {
-        song.tasks.push({
-            taskName: 'Drawings of actors',
-            workedHours: actorsWorkedHours,
-            neededHours: actorsNeededHours
-        })
-    }
-
-    delete song.actorsTodoCount
-    delete song.actorsTotalCount
-    delete song.actorsWorkedHours
-    delete song.actorsNeededHours
 }

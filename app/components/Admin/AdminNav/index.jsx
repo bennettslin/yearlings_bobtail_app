@@ -5,10 +5,12 @@ import cx from 'classnames'
 
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../ProgressFooter'
-import ProgressHelper from '../progressHelper'
+import { getSumOfTasks } from '../helper'
 
 import { getSongsAndLoguesCount } from 'helpers/data'
 import { getArrayOfLength } from 'helpers/general'
+
+import { getMaxTotalNeededHoursFromSongs } from './helper'
 
 const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
@@ -22,8 +24,8 @@ const AdminNavSection = ({
 }) => {
 
     const
-        maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(),
-        sumAllTasks = allTasks ? ProgressHelper.getSumOfTasks(allTasks) : null,
+        maxTotalNeededHours = getMaxTotalNeededHoursFromSongs(),
+        sumAllTasks = allTasks ? getSumOfTasks(allTasks) : null,
 
         navItemProps = {
             selectedSongIndex,

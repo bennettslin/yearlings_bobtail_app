@@ -7,19 +7,7 @@ import {
     StatRowView
 } from './stat-row'
 
-/*************
- * CONTAINER *
- *************/
-
-const StatsSection = (props) => (
-    <StatsSectionView {...props} />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
-const StatsSectionView = ({
+const StatsSection = ({
 
     // From props.
     adminDotStanzasCount,

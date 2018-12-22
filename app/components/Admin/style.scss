@@ -1,6 +1,6 @@
 @import "./AdminNav/style";
 @import "./progress";
-@import "./tasks";
+@import "./Shared/style";
 @import "./Drawing/style";
 
 $section-colour: rgba(255, 255, 255, 0.5);
@@ -70,16 +70,4 @@ $drawing-field-colour: #eed;
     margin: $field-padding 0;
     background-color: $section-colour;
     box-shadow: $boxShadow__admin;
-}
-
-.AdminToggle {
-    z-index: $zIndex__popupOverlay;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    padding: 5px;
-    color: #484;
-    background-color: rgba(225, 225, 225, 0.8);
 }

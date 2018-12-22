@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 
 import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 import ProgressBar from '../ProgressBar'
-import ProgressHelper from '../progressHelper'
 
 import { getSongTitle } from 'helpers/data'
 import { populateRefs } from 'helpers/ref'
-import { getSongTasks } from '../helper'
+import {
+    getSongTasks,
+    getSumOfTasks
+} from '../helper'
 
 /*************
  * CONTAINER *
@@ -38,8 +40,8 @@ class AdminNavRow extends PureComponent {
             } = this.props,
 
             songTitle = getSongTitle({ songIndex }),
-            songTasks = getSongTasks(songIndex),
-            sumTask = ProgressHelper.getSumOfTasks(songTasks)
+            allSongTasks = getSongTasks(songIndex),
+            sumTask = getSumOfTasks(allSongTasks)
 
         return (
             <___>
@@ -73,8 +75,10 @@ const AdminNavRowView = ({
 }) => (
     <div className={`row primary-row${isSelected ? ' selected' : ''}`}>
         <ProgressBar
-            sumTask={sumTask}
-            maxTotalNeededHours={maxTotalNeededHours}
+            {...{
+                sumTask,
+                maxTotalNeededHours
+            }}
         />
         <div className="text-cell-wrapper">
             <a

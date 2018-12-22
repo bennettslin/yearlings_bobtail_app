@@ -1,6 +1,6 @@
 import React from 'react'
 import TaskRow from './task-row'
-import ProgressHelper from '../progressHelper'
+import { hasRemainingHours } from './helper'
 
 /*************
  * CONTAINER *
@@ -25,7 +25,7 @@ const TasksBlockView = ({
 
     <div className={isSubtask ? 'subtask-block' : 'task-block'}>
         {tasks
-            .filter(task => ProgressHelper.hasRemainingHours(task))
+            .filter(task => hasRemainingHours(task))
             .map((task, taskIndex) => (
                 <div
                     key={taskIndex}
