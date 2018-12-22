@@ -1,12 +1,12 @@
 import tasks from 'album/tasks'
-import allSongTasks from 'album/tasks/songs'
+import albumTasks from 'album/tasks/songs'
 
 export const getAllTasks = () => (
     tasks
 )
 
 export const getSongTasks = (songIndex) => (
-    allSongTasks[songIndex]
+    albumTasks[songIndex]
 )
 
 export const getSumOfTasks = (tasks = []) => {

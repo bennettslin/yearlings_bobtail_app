@@ -32,7 +32,6 @@ class LogManager extends PureComponent {
         global.a = this.logAlbum
         global.g = this.logGlobalAnnotation
         global.n = this.logAnnotation
-        global.i = this.logInstances
         global.z = this.logScene
         global.s = this.logSong
         global.t = this.logStorage
@@ -72,11 +71,6 @@ class LogManager extends PureComponent {
         return this._logObject(
             'global annotation', getGlobalAnnotationObject(globalIndex)
         )
-    }
-
-    logInstances = () => {
-        const { tempInstanceCount } = album
-        return this._logObject('temp instance count', tempInstanceCount)
     }
 
     logScene = () => {

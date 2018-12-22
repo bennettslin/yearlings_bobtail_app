@@ -27,31 +27,14 @@ const _addPresenceToSceneLayer = ({
         layers[layerKey][presenceType] = {}
     }
 
-    // Just add if this instance doesn't already exist.
-    if (!layers[layerKey][presenceType][presenceName]) {
-        layers[layerKey][presenceType][presenceName] = value
-
-    /**
-     * If another instance of this presence for this layer already exists, then
-     * make it an object of instances instead. This only happens with go-karts
-     * right now, of which there are only two in the same layer, so it's fine.
-     * If there were more, this wouldn't work.
-     */
-    } else {
-        layers[layerKey][presenceType][presenceName] = {
-            [layers[layerKey][presenceType][presenceName]]: true
-        }
-
-        layers[layerKey][presenceType][presenceName][value] = true
-    }
+    layers[layerKey][presenceType][presenceName] = value
 }
 
 const addPresenceToSceneLayerByType = ({
     presences,
     presenceType,
     presenceName,
-    layers,
-    album
+    layers
 }) => {
     const presenceValue = presences[presenceType][presenceName]
 
@@ -72,9 +55,6 @@ const addPresenceToSceneLayerByType = ({
 
         arrangementObject = ALL_ARRANGEMENTS_ACTORS[presenceName][instance]
         value = instance
-
-        // Can be deleted.
-        album.tempInstanceCount++
 
     } else {
         arrangementObject = ALL_ARRANGEMENTS_THINGS[presenceType][presenceName]

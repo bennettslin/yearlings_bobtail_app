@@ -1,6 +1,6 @@
 import drawings from 'album/drawings'
 
-export const addSongDrawingTasksToSongTasks = (songTasksArray) => {
+export const addDrawingTasksToSongTasks = (songTasksArray) => {
 
     songTasksArray.forEach((songTasks, songIndex) => {
         const

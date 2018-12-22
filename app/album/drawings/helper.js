@@ -1,11 +1,11 @@
-import album from 'album'
 import keys from 'lodash.keys'
+import albumScenes from 'album/scenes'
 
 import { ACTORS } from 'constants/scene'
 
 export const initialiseDrawings = (drawings, songIndex) => {
 
-    const scenes = album.scenes[songIndex]
+    const scenes = albumScenes[songIndex]
 
     scenes.forEach((scene, sceneIndex) => {
 

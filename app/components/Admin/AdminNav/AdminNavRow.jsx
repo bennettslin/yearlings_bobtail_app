@@ -40,8 +40,8 @@ class AdminNavRow extends PureComponent {
             } = this.props,
 
             songTitle = getSongTitle({ songIndex }),
-            allSongTasks = getSongTasks(songIndex),
-            sumTask = getSumOfTasks(allSongTasks)
+            albumTasks = getSongTasks(songIndex),
+            sumTask = getSumOfTasks(albumTasks)
 
         return (
             <___>

@@ -1,6 +1,7 @@
 // Parse scene data for build.
 
 import keys from 'lodash.keys'
+import albumScenes from 'album/scenes'
 
 import { addPresenceToSceneLayerByType } from './helper'
 
@@ -13,7 +14,7 @@ export const initialRegisterScenes = (
     songObject,
     songIndex
 ) => {
-    const scenes = album.scenes[songIndex]
+    const scenes = albumScenes[songIndex]
 
     songObject.tempSceneRawIndices = []
 
@@ -77,6 +78,8 @@ export const finalRegisterScenes = (songObject) => {
         }
     })
 
+    delete songObject.tempSceneRawIndices
+
     // Then, allow each verse to know its scene index.
     songSceneConfigs.forEach((sceneConfig, sceneIndex) => {
         const { firstVerseIndex } = sceneConfig
@@ -115,7 +118,7 @@ export const finalRegisterPresenceYIndices = (
     songIndex
 
 ) => {
-    const scenes = album.scenes[songIndex]
+    const scenes = albumScenes[songIndex]
 
     scenes.forEach(scene => {
 
@@ -133,8 +136,7 @@ export const finalRegisterPresenceYIndices = (
                     presences,
                     presenceType,
                     presenceName,
-                    layers,
-                    album
+                    layers
                 })
             })
         })

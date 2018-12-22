@@ -5,6 +5,7 @@
  */
 
 import album from 'album'
+import albumScenes from 'album/scenes'
 import { COLUMN_INDEX } from 'constants/lyrics'
 
 /*********
@@ -235,7 +236,7 @@ export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
 export const getSceneObject = (
     songIndex,
     sceneIndex = 0,
-    scenes = album.scenes
+    scenes = albumScenes
 ) => {
     const sceneObject = scenes[songIndex]
 

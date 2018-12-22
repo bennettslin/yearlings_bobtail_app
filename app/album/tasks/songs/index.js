@@ -19,9 +19,9 @@ import tasks_17 from './17_VeganProclamation'
 import tasks_18 from './18_My100000thDream'
 import tasks_19 from './19_Epilogue'
 
-import { addSongDrawingTasksToSongTasks } from './helper'
+import { addDrawingTasksToSongTasks } from './helper'
 
-const allSongTasks = [
+const songTasks = [
     tasks_00,
     tasks_01,
     tasks_02,
@@ -44,30 +44,6 @@ const allSongTasks = [
     tasks_19
 ]
 
-// Add drawing tasks for each song.
-addSongDrawingTasksToSongTasks(allSongTasks)
+addDrawingTasksToSongTasks(songTasks)
 
-export const combinedSongTasks = [
-    ...tasks_00,
-    ...tasks_01,
-    ...tasks_02,
-    ...tasks_03,
-    ...tasks_04,
-    ...tasks_05,
-    ...tasks_06,
-    ...tasks_07,
-    ...tasks_08,
-    ...tasks_09,
-    ...tasks_10,
-    ...tasks_11,
-    ...tasks_12,
-    ...tasks_13,
-    ...tasks_14,
-    ...tasks_15,
-    ...tasks_16,
-    ...tasks_17,
-    ...tasks_18,
-    ...tasks_19
-]
-
-export default allSongTasks
+export default songTasks
