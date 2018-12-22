@@ -1,6 +1,6 @@
 import React from 'react'
 import TasksBlock from './tasks-block'
-import ProgressFooter from '../progress/ProgressFooter'
+import ProgressFooter from '../ProgressFooter'
 import ProgressHelper from '../progressHelper'
 
 /*************
@@ -12,7 +12,7 @@ const TasksSection = (props) => {
     const { tasks } = props,
 
         maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromTasks(tasks),
-        sumTask = ProgressHelper.calculateSumTask(tasks)
+        sumTask = ProgressHelper.getSumOfTasks(tasks)
 
     return (
         <TasksSectionView {...props}

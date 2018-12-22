@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 import Shared from './Shared'
 
-import AdminNavSection from './AdminNav/AdminNav'
+import AdminNavSection from './AdminNav'
 import { getAllTasks } from './helper'
 
 /*************

@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 
 import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
-import ProgressBar from '../progress/ProgressBar'
+import ProgressBar from '../ProgressBar'
 import ProgressHelper from '../progressHelper'
 
 import { getSongTitle } from 'helpers/data'
@@ -39,7 +39,7 @@ class AdminNavRow extends PureComponent {
 
             songTitle = getSongTitle({ songIndex }),
             songTasks = getSongTasks(songIndex),
-            sumTask = ProgressHelper.calculateSumTask(songTasks)
+            sumTask = ProgressHelper.getSumOfTasks(songTasks)
 
         return (
             <___>

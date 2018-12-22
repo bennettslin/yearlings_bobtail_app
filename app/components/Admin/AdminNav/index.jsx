@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import AdminNavItem from './AdminNavItem'
-import ProgressFooter from '../progress/ProgressFooter'
+import ProgressFooter from '../ProgressFooter'
 import ProgressHelper from '../progressHelper'
 
 import { getSongsAndLoguesCount } from 'helpers/data'
@@ -23,7 +23,7 @@ const AdminNavSection = ({
 
     const
         maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(),
-        sumAllTasks = allTasks ? ProgressHelper.calculateSumAllTasks(allTasks) : null,
+        sumAllTasks = allTasks ? ProgressHelper.getSumOfTasks(allTasks) : null,
 
         navItemProps = {
             selectedSongIndex,
