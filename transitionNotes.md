@@ -13,10 +13,12 @@ Setup *must* wait for breakdown to finish before starting.
 * Curtains part. Carousel, lyric, and slider animate in.
 
 # Window resize
-As part of this work, hard-code some seating values.
 
 * Breakdown:
     * Theatre animates out.
+
+* Timeout:
+    * Wait for window to finish resizing.
 
 * Mount:
     * Theatre updates to next data.
@@ -30,20 +32,28 @@ As part of this work, hard-code some seating values.
     * If slider was touched, lyric and slider animate to default state.
     * Lyric scrolls, verse bars determined.
 
+* Timeout:
+    * If necessary, wait for scenes to finish selecting..
+
 * Setup:
     * Only after lyric finishes scrolling, previous presences animate out.
     * Only after presences animate away, cubes shift.
     * Next presences animate in.
 
 # Song change
-As part of this work, make sure that actor instances render.
 
 * Breakdown:
     * Curtains close. Carousel, lyric, and slider animate out.
 
+* Timeout:
+    * Wait for songs to finish selecting.
+
 * Mount:
     * Carousel, lyric, slider update to next data.
-    * Cubes and presences update to next data. They do *not* animate in.
+    * Cubes update to blank state. They do not animate.
+    * Presences unmount. They do not animate.
 
 * Setup:
     * Curtains part. Carousel, lyric, and slider animate in.
+    * Only after, cubes shift.
+    * Presences animate in.

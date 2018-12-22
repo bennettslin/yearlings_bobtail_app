@@ -10,7 +10,17 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Redo how presences are structure. Store info in a config?`,
+        taskName: `Redo how presences are structured. Store info in a config?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Refactor and separate album data.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Try out Vivus animations.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -171,11 +181,6 @@ module.exports = [
         taskName: `Finalise loading page. Use image of Mara.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Try out Vivus animations.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     /**
