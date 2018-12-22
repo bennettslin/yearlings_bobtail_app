@@ -1,5 +1,5 @@
 // Parse drawing data for build.
-
+import album from 'album'
 import keys from 'lodash.keys'
 
 import {
@@ -12,13 +12,11 @@ import {
  * point.
  */
 
-export const adminGatherDrawings = (album, songIndex) => {
+export const adminGatherDrawings = (drawings, songIndex) => {
 
     const
         drawingTypes = PRESENCE_TYPES,
         scenes = album.scenes[songIndex]
-
-    album._drawings = album._drawings || {}
 
     scenes.forEach((scene, sceneIndex) => {
 
@@ -26,9 +24,9 @@ export const adminGatherDrawings = (album, songIndex) => {
 
             drawingTypes.forEach(drawingType => {
 
-                // Initialise object for actors, cutouts, fixtures.
-                if (!album._drawings[drawingType]) {
-                    album._drawings[drawingType] = {}
+                // Initialise object for each presence type.
+                if (!drawings[drawingType]) {
+                    drawings[drawingType] = {}
                 }
 
                 const typePresences = scene.presences[drawingType]
@@ -41,8 +39,8 @@ export const adminGatherDrawings = (album, songIndex) => {
                     }
 
                     // Initialise array for each actor, cutout, fixture.
-                    if (!album._drawings[drawingType][name]) {
-                        album._drawings[drawingType][name] = []
+                    if (!drawings[drawingType][name]) {
+                        drawings[drawingType][name] = []
                     }
 
                     if (drawingType === ACTORS) {
@@ -73,12 +71,12 @@ export const adminGatherDrawings = (album, songIndex) => {
 
                         // Don't count duplicate instances.
                         if (!descriptionEntity.duplicate) {
-                            album._drawings[drawingType][name].push(presenceObject)
+                            drawings[drawingType][name].push(presenceObject)
                         }
 
                     } else {
                         presenceObject.descriptionEntity = typePresences[name]
-                        album._drawings[drawingType][name].push(presenceObject)
+                        drawings[drawingType][name].push(presenceObject)
                     }
                 }
             })
@@ -86,23 +84,15 @@ export const adminGatherDrawings = (album, songIndex) => {
     })
 }
 
-export const adminFinaliseDrawings = (album) => {
-    _adminFinaliseActors(album)
-
-    album.drawings = album._drawings
-    delete album._drawings
-}
-
-const _adminFinaliseActors = (album) => {
+export const _adminFinaliseActors = (drawings) => {
 
     // Turn actors object into array for easier frontend parsing.
-    const { _drawings } = album,
-        actors = []
+    const actors = []
     let actorsTotalCount = 0,
         actorsTodoCount = 0
 
-    keys(_drawings.actors).forEach(actor => {
-        const roles = _drawings.actors[actor],
+    keys(drawings.actors).forEach(actor => {
+        const roles = drawings.actors[actor],
             rolesTotalCount = roles.length,
             characters = {}
 
@@ -151,16 +141,23 @@ const _adminFinaliseActors = (album) => {
 
             characters[role.character].push(roleObject)
 
+            if (!drawings.songs) {
+                drawings.songs = {}
+            }
+            if (!drawings.songs[songIndex]) {
+                drawings.songs[songIndex] = {}
+            }
+
             // Let song know its individual todos.
-            if (isNaN(album.songs[songIndex].actorsTodoCount)) {
-                album.songs[songIndex].actorsTodoCount = 0
-                album.songs[songIndex].actorsTotalCount = 0
+            if (isNaN(drawings.songs[songIndex].actorsTodoCount)) {
+                drawings.songs[songIndex].actorsTodoCount = 0
+                drawings.songs[songIndex].actorsTotalCount = 0
             }
-            if (isNaN(album.songs[songIndex].actorsWorkedHours)) {
-                album.songs[songIndex].actorsWorkedHours = 0
+            if (isNaN(drawings.songs[songIndex].actorsWorkedHours)) {
+                drawings.songs[songIndex].actorsWorkedHours = 0
             }
-            if (isNaN(album.songs[songIndex].actorsNeededHours)) {
-                album.songs[songIndex].actorsNeededHours = 0
+            if (isNaN(drawings.songs[songIndex].actorsNeededHours)) {
+                drawings.songs[songIndex].actorsNeededHours = 0
             }
 
             if (roleObject.todo) {
@@ -171,25 +168,25 @@ const _adminFinaliseActors = (album) => {
 
                 if (subtasks && subtasks.length) {
                     subtasks.forEach(subtask => {
-                        album.songs[songIndex].actorsWorkedHours += subtask.workedHours
+                        drawings.songs[songIndex].actorsWorkedHours += subtask.workedHours
 
-                        album.songs[songIndex].actorsNeededHours += subtask.neededHours
+                        drawings.songs[songIndex].actorsNeededHours += subtask.neededHours
                     })
                 }
 
-                album.songs[songIndex].actorsTodoCount++
+                drawings.songs[songIndex].actorsTodoCount++
 
-                album.songs[songIndex].actorsWorkedHours += (
+                drawings.songs[songIndex].actorsWorkedHours += (
                     descriptionEntity.workedHours || 0
                 ) * compoundValue
 
                 // Assume 5 hours per drawing.
-                album.songs[songIndex].actorsNeededHours += (
+                drawings.songs[songIndex].actorsNeededHours += (
                     descriptionEntity.neededHours || 5
                 ) * compoundValue
 
             }
-            album.songs[songIndex].actorsTotalCount++
+            drawings.songs[songIndex].actorsTotalCount++
         })
 
         actorsTodoCount += rolesTodoCount
@@ -203,17 +200,18 @@ const _adminFinaliseActors = (album) => {
         })
     })
 
-    _drawings.actors = actors
-    _drawings.actorsTodoCount = actorsTodoCount
-    _drawings.actorsTotalCount = actorsTotalCount
+    drawings.actors = actors
+    drawings.actorsTodoCount = actorsTodoCount
+    drawings.actorsTotalCount = actorsTotalCount
 }
 
-export const adminRegisterDrawingTasks = (song) => {
-
-    const {
-        actorsWorkedHours,
-        actorsNeededHours
-    } = song
+export const adminRegisterDrawingTasks = (drawings, songIndex) => {
+    const
+        song = drawings.songs[songIndex],
+        {
+            actorsWorkedHours,
+            actorsNeededHours
+        } = song
 
     if (!song.tasks) {
         song.tasks = []

@@ -9,12 +9,6 @@ import {
 } from './annotations'
 
 import {
-    adminGatherDrawings,
-    adminFinaliseDrawings,
-    adminRegisterDrawingTasks
-} from './drawings'
-
-import {
     recurseToFindAnchors,
     registerTitle,
     registerHasSideCards,
@@ -57,8 +51,6 @@ export const parseAlbumData = (albumObject) => {
     // In-between preparation.
     addDestinationWormholeLinks(albumObject)
 
-    adminFinaliseDrawings(albumObject)
-
     // Finap preparation.
     _finalPrepareAlbum(albumObject)
 
@@ -79,8 +71,6 @@ const _initialPrepareAlbum = (albumObject) => {
     albumObject.songs.forEach((songObject, songIndex) => {
 
         songObject.songIndex = songIndex
-
-        adminGatherDrawings(albumObject, songIndex)
 
         // This collects the unit index for each scene.
         initialRegisterScenes(albumObject, songObject, songIndex)
@@ -303,8 +293,6 @@ const _finalPrepareAlbum = (albumObject) => {
         }
 
         finalRegisterPresenceYIndices(albumObject, songIndex)
-
-        adminRegisterDrawingTasks(songObject)
 
         // Not needed after song scenes are registered.
         delete songObject.tempSceneRawIndices

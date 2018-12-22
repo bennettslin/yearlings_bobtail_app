@@ -5,11 +5,9 @@ import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 import ProgressBar from '../progress/ProgressBar'
 import ProgressHelper from '../progressHelper'
 
-import {
-    getSongTitle,
-    getSongTasks
-} from 'helpers/data'
+import { getSongTitle } from 'helpers/data'
 import { populateRefs } from 'helpers/ref'
+import { getSongTasks } from '../helper'
 
 /*************
  * CONTAINER *

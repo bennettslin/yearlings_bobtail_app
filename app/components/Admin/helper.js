@@ -1,10 +1,10 @@
-import album from 'album'
 import tasks from 'album/tasks'
+import songTasks from 'album/tasks/songs'
 
-export const getAllTaskObjects = (songs = album.songs) => {
-    const allTaskObjects = songs.map(song => song.tasks)
+export const getAllTasks = () => (
+    tasks
+)
 
-    allTaskObjects.push(tasks)
-
-    return allTaskObjects
-}
+export const getSongTasks = (songIndex) => (
+    songTasks[songIndex]
+)

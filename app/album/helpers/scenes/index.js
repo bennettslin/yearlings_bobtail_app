@@ -142,6 +142,6 @@ export const finalRegisterPresenceYIndices = (
         scene.layers = layers
 
         // Scene no longer needs the presences object.
-        delete scene.presences
+        // delete scene.presences
     })
 }

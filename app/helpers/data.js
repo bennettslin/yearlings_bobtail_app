@@ -241,17 +241,3 @@ export const getSceneObject = (
 
     return sceneObject[sceneIndex] || null
 }
-
-/*********
- * ADMIN *
- *********/
-
-export const getSongTasks = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.tasks || []
-}
-
-export const getDrawings = () => {
-    const { drawings } = album
-    return drawings
-}

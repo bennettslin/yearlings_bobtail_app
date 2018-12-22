@@ -4,11 +4,11 @@ import {
     addDays, format
 } from 'date-fns'
 
-/**
- * Assume 3 hours per weekday, and 15 hours per weekend.
- * So each week is 30 hours, so on average each day is
- * 4.3 hours.
- */
+import drawings from 'album/drawings'
+
+import { getSongsAndLoguesCount } from 'helpers/data'
+import { getArrayOfLength } from 'helpers/general'
+
 const WORK_HOURS_IN_DAY = 36 / 7,
     DAYS_IN_WEEK = 7,
     DAYS_IN_MONTH = 365 / 12
@@ -31,8 +31,13 @@ export default {
             }, false))
     },
 
-    getMaxTotalNeededHoursFromSongs(songs = []) {
-        return songs.reduce((maxTotalNeededHours, song) => {
+    getMaxTotalNeededHoursFromSongs() {
+        const { songs } = drawings,
+            songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
+
+        return songIndicesArray.reduce((maxTotalNeededHours, songIndex) => {
+            const song = songs[songIndex]
+
             const totalNeededHours = this.calculateSumTask(song.tasks).neededHours
             return Math.max(totalNeededHours, maxTotalNeededHours)
         }, 0)
@@ -74,15 +79,31 @@ export default {
         }
     },
 
-    calculateSumAllTasks(allTasks = []) {
-        const sumAllTasks = {
+    calculateSumAllTasks(tasks = []) {
+        const sumTasks = {
             workedHours: 0,
             neededHours: 0
         }
 
-        return allTasks.reduce((sumAllTasks, tasks) => {
-            return this._addTwoTasks(sumAllTasks, this.calculateSumTask(tasks))
-        }, sumAllTasks)
+        tasks.forEach(task => {
+            this._addTaskToSum(sumTasks, task)
+            if (Array.isArray(task.subtasks)) {
+                task.subtasks.forEach(subtask => {
+                    this._addTaskToSum(sumTasks, subtask)
+                })
+            }
+        })
+
+        return sumTasks
+    },
+
+    _addTaskToSum(sumTasks, task) {
+        if (!isNaN(task.workedHours)) {
+            sumTasks.workedHours += task.workedHours
+        }
+        if (!isNaN(task.neededHours)) {
+            sumTasks.neededHours += task.neededHours
+        }
     },
 
     _addTwoTasks(task1 = {}, task2 = {}) {

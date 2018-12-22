@@ -7,52 +7,28 @@ import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../progress/ProgressFooter'
 import ProgressHelper from '../progressHelper'
 
-import { getSongsArray } from './helper'
+import { getSongsAndLoguesCount } from 'helpers/data'
+import { getArrayOfLength } from 'helpers/general'
+
+const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
 /*************
  * CONTAINER *
  *************/
 
 const AdminNavSection = ({
-
-    allTasks,
-
-    ...other
-}) => {
-
-    const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(getSongsArray()),
-        sumAllTasks = allTasks ? ProgressHelper.calculateSumAllTasks(allTasks) : null
-
-    return (
-        <AdminNavSectionView {...other}
-            sumAllTasks={sumAllTasks}
-            maxTotalNeededHours={maxTotalNeededHours}
-        />
-    )
-}
-
-AdminNavSection.propTypes = {
-    allTasks: PropTypes.array
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const AdminNavSectionView = ({
-
-    // From props.
     selectedSongIndex,
-
-    // From controller.
-    sumAllTasks,
-    maxTotalNeededHours
-
+    allTasks
 }) => {
-    const navItemProps = {
-        selectedSongIndex,
-        maxTotalNeededHours
-    }
+
+    const
+        maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(),
+        sumAllTasks = allTasks ? ProgressHelper.calculateSumAllTasks(allTasks) : null,
+
+        navItemProps = {
+            selectedSongIndex,
+            maxTotalNeededHours
+        }
 
     return (
         <div
@@ -68,11 +44,11 @@ const AdminNavSectionView = ({
                 </div>
             </div>
             <div className="admin-block">
-                {getSongsArray().map((song, index) => {
+                {songIndicesArray.map(songIndex => {
                     return (
                         <AdminNavItem {...navItemProps}
-                            key={index}
-                            index={index}
+                            key={songIndex}
+                            index={songIndex}
                         />
                     )
                 })}
@@ -86,17 +62,18 @@ const AdminNavSectionView = ({
     )
 }
 
-AdminNavSectionView.propTypes = {
+AdminNavSection.propTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    sumAllTasks: PropTypes.object.isRequired,
-    maxTotalNeededHours: PropTypes.number.isRequired
+    allTasks: PropTypes.array
 }
 
-export default connect(({
+const mapStateToProps = ({
     songStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
-}))(AdminNavSection)
+})
+
+export default connect(mapStateToProps)(AdminNavSection)

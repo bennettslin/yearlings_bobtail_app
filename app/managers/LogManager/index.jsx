@@ -10,8 +10,7 @@ import {
     getAnnotationObject,
     getGlobalAnnotationObject,
     getSongObject,
-    getSceneObject,
-    getDrawings
+    getSceneObject
 } from 'helpers/data'
 
 import { WINDOW_STORAGE } from 'constants/state'
@@ -31,7 +30,6 @@ class LogManager extends PureComponent {
 
     _assignDebugLogFunctions() {
         global.a = this.logAlbum
-        global.d = this.logDrawings
         global.g = this.logGlobalAnnotation
         global.n = this.logAnnotation
         global.i = this.logInstances
@@ -68,16 +66,6 @@ class LogManager extends PureComponent {
             )
 
         return this._logObject('rendered annotation', renderedAnnotationObject)
-    }
-
-    logDrawings = () => {
-        const copiedDrawings = {
-            ...getDrawings()
-        }
-
-        copiedDrawings.actors = `actors: ${copiedDrawings.actors.length}`
-
-        return this._logObject('admin drawings', copiedDrawings)
     }
 
     logGlobalAnnotation = (globalIndex) => {

@@ -2,7 +2,7 @@ import React from 'react'
 
 import DrawingSection from './DrawingSection'
 
-import { getDrawings } from 'helpers/data'
+import { getDrawings } from './helper'
 
 const Drawing = () => {
 
