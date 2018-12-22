@@ -93,7 +93,7 @@ export const adminFinaliseDrawings = (album) => {
     delete album._drawings
 }
 
-export const _adminFinaliseActors = (album) => {
+const _adminFinaliseActors = (album) => {
 
     // Turn actors object into array for easier frontend parsing.
     const { _drawings } = album,
