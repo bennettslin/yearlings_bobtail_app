@@ -2,8 +2,8 @@ import { getSongsAndLoguesCount } from 'helpers/data'
 import { getArrayOfLength } from 'helpers/general'
 
 import {
-    adminGatherDrawings,
-    _adminFinaliseActors
+    initialiseDrawings,
+    addActorTasksToSongDrawingTasks
 } from './helper'
 
 const
@@ -11,9 +11,9 @@ const
     songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
 songIndicesArray.forEach(songIndex => {
-    adminGatherDrawings(drawings, songIndex)
+    initialiseDrawings(drawings, songIndex)
 })
 
-_adminFinaliseActors(drawings)
+addActorTasksToSongDrawingTasks(drawings)
 
 export default drawings

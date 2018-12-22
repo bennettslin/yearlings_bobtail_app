@@ -1,85 +1,64 @@
-// Parse drawing data for build.
 import album from 'album'
 import keys from 'lodash.keys'
 
-import {
-    ACTORS,
-    PRESENCE_TYPES
-} from 'constants/scene'
+import { ACTORS } from 'constants/scene'
 
-/**
- * FIXME: These are a mess, but this is only for admin. Will be deleted at some
- * point.
- */
+export const initialiseDrawings = (drawings, songIndex) => {
 
-export const adminGatherDrawings = (drawings, songIndex) => {
-
-    const
-        drawingTypes = PRESENCE_TYPES,
-        scenes = album.scenes[songIndex]
+    const scenes = album.scenes[songIndex]
 
     scenes.forEach((scene, sceneIndex) => {
 
         if (scene.presences) {
 
-            drawingTypes.forEach(drawingType => {
+            // Initialise object for each presence type.
+            if (!drawings[ACTORS]) {
+                drawings[ACTORS] = {}
+            }
 
-                // Initialise object for each presence type.
-                if (!drawings[drawingType]) {
-                    drawings[drawingType] = {}
+            const typePresences = scene.presences[ACTORS]
+
+            for (const name in typePresences) {
+
+                const presenceObject = {
+                    songIndex,
+                    sceneIndex
                 }
 
-                const typePresences = scene.presences[drawingType]
-
-                for (const name in typePresences) {
-
-                    const presenceObject = {
-                        songIndex,
-                        sceneIndex
-                    }
-
-                    // Initialise array for each actor, cutout, fixture.
-                    if (!drawings[drawingType][name]) {
-                        drawings[drawingType][name] = []
-                    }
-
-                    if (drawingType === ACTORS) {
-
-                        /**
-                         * The nesting is different if the actor is playing
-                         * an alternate character in this scene, rather than
-                         * themselves.
-                         */
-                        const
-                            characterEntity = typePresences[name],
-
-                            isAlternate =
-                                keys(characterEntity).length === 1,
-
-                            characterName =
-                                isAlternate ?
-                                    keys(characterEntity)[0] :
-                                    name,
-
-                            descriptionEntity =
-                                isAlternate ?
-                                    characterEntity[characterName] :
-                                    characterEntity
-
-                        presenceObject.character = characterName
-                        presenceObject.descriptionEntity = descriptionEntity
-
-                        // Don't count duplicate instances.
-                        if (!descriptionEntity.duplicate) {
-                            drawings[drawingType][name].push(presenceObject)
-                        }
-
-                    } else {
-                        presenceObject.descriptionEntity = typePresences[name]
-                        drawings[drawingType][name].push(presenceObject)
-                    }
+                // Initialise array for each actor, cutout, fixture.
+                if (!drawings[ACTORS][name]) {
+                    drawings[ACTORS][name] = []
                 }
-            })
+
+                /**
+                 * The nesting is different if the actor is playing
+                 * an alternate character in this scene, rather than
+                 * themselves.
+                 */
+                const
+                    characterEntity = typePresences[name],
+
+                    isAlternate =
+                        keys(characterEntity).length === 1,
+
+                    characterName =
+                        isAlternate ?
+                            keys(characterEntity)[0] :
+                            name,
+
+                    descriptionEntity =
+                        isAlternate ?
+                            characterEntity[characterName] :
+                            characterEntity
+
+                presenceObject.character = characterName
+                presenceObject.descriptionEntity = descriptionEntity
+
+                // Don't count duplicate instances.
+                if (!descriptionEntity.duplicate) {
+                    drawings[ACTORS][name].push(presenceObject)
+                }
+            }
         }
 
         // No longer needed.
@@ -87,7 +66,7 @@ export const adminGatherDrawings = (drawings, songIndex) => {
     })
 }
 
-export const _adminFinaliseActors = (drawings) => {
+export const addActorTasksToSongDrawingTasks = (drawings) => {
 
     // Turn actors object into array for easier frontend parsing.
     const actors = []
@@ -144,23 +123,23 @@ export const _adminFinaliseActors = (drawings) => {
 
             characters[role.character].push(roleObject)
 
-            if (!drawings.songs) {
-                drawings.songs = {}
+            if (!drawings.songTasks) {
+                drawings.songTasks = {}
             }
-            if (!drawings.songs[songIndex]) {
-                drawings.songs[songIndex] = {}
+            if (!drawings.songTasks[songIndex]) {
+                drawings.songTasks[songIndex] = {}
             }
 
             // Let song know its individual todos.
-            if (isNaN(drawings.songs[songIndex].actorsTodoCount)) {
-                drawings.songs[songIndex].actorsTodoCount = 0
-                drawings.songs[songIndex].actorsTotalCount = 0
+            if (isNaN(drawings.songTasks[songIndex].actorsTodoCount)) {
+                drawings.songTasks[songIndex].actorsTodoCount = 0
+                drawings.songTasks[songIndex].actorsTotalCount = 0
             }
-            if (isNaN(drawings.songs[songIndex].actorsWorkedHours)) {
-                drawings.songs[songIndex].actorsWorkedHours = 0
+            if (isNaN(drawings.songTasks[songIndex].actorsWorkedHours)) {
+                drawings.songTasks[songIndex].actorsWorkedHours = 0
             }
-            if (isNaN(drawings.songs[songIndex].actorsNeededHours)) {
-                drawings.songs[songIndex].actorsNeededHours = 0
+            if (isNaN(drawings.songTasks[songIndex].actorsNeededHours)) {
+                drawings.songTasks[songIndex].actorsNeededHours = 0
             }
 
             if (roleObject.todo) {
@@ -171,25 +150,25 @@ export const _adminFinaliseActors = (drawings) => {
 
                 if (subtasks && subtasks.length) {
                     subtasks.forEach(subtask => {
-                        drawings.songs[songIndex].actorsWorkedHours += subtask.workedHours
+                        drawings.songTasks[songIndex].actorsWorkedHours += subtask.workedHours
 
-                        drawings.songs[songIndex].actorsNeededHours += subtask.neededHours
+                        drawings.songTasks[songIndex].actorsNeededHours += subtask.neededHours
                     })
                 }
 
-                drawings.songs[songIndex].actorsTodoCount++
+                drawings.songTasks[songIndex].actorsTodoCount++
 
-                drawings.songs[songIndex].actorsWorkedHours += (
+                drawings.songTasks[songIndex].actorsWorkedHours += (
                     descriptionEntity.workedHours || 0
                 ) * compoundValue
 
                 // Assume 5 hours per drawing.
-                drawings.songs[songIndex].actorsNeededHours += (
+                drawings.songTasks[songIndex].actorsNeededHours += (
                     descriptionEntity.neededHours || 5
                 ) * compoundValue
 
             }
-            drawings.songs[songIndex].actorsTotalCount++
+            drawings.songTasks[songIndex].actorsTotalCount++
         })
 
         actorsTodoCount += rolesTodoCount

@@ -19,7 +19,7 @@ import Scene_17 from './17_VeganProclamation'
 import Scene_18 from './18_My100000thDream'
 import Scene_19 from './19_Epilogue'
 
-export default [
+const allScenes = [
     Scene_00,
     Scene_01,
     Scene_02,
@@ -41,3 +41,5 @@ export default [
     Scene_18,
     Scene_19
 ]
+
+export default allScenes

@@ -1,14 +1,14 @@
 import drawings from 'album/drawings'
 
-export const addDrawingTasksToSongTasks = (songTasksArray) => {
+export const addSongDrawingTasksToSongTasks = (songTasksArray) => {
 
     songTasksArray.forEach((songTasks, songIndex) => {
         const
-            drawingTasks = drawings.songs[songIndex],
+            songDrawingTasks = drawings.songTasks[songIndex],
             {
                 actorsWorkedHours,
                 actorsNeededHours
-            } = drawingTasks
+            } = songDrawingTasks
 
         if (actorsNeededHours) {
             songTasks.push({
@@ -18,7 +18,7 @@ export const addDrawingTasksToSongTasks = (songTasksArray) => {
             })
         }
 
-        delete drawingTasks.actorsWorkedHours
-        delete drawingTasks.actorsNeededHours
+        delete songDrawingTasks.actorsWorkedHours
+        delete songDrawingTasks.actorsNeededHours
     })
 }
