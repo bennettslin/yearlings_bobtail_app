@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         taskName: `animate swapping of left and right lyric stanzas.`,
         workedHours: 0,

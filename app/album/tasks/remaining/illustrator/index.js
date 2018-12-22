@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         taskName: `North Hollywood houses (Didi, Willy)`,
         workedHours: 3,

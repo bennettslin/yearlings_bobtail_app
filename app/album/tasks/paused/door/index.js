@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         taskName: 'porchDoor',
         workedHours: 0,

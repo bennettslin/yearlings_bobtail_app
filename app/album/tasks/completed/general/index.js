@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         taskName: `refactor to get album objects`,
         workedHours: 3,

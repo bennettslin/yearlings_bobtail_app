@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         taskName: 'togetherSketchbook',
         workedHours: 0,

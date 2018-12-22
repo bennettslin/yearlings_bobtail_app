@@ -1,4 +1,4 @@
-import album from 'album'
+import mp3s from 'assets/mp3s'
 
 import {
     getSongVersesCount,
@@ -6,10 +6,9 @@ import {
     getSongTotalTime
 } from 'helpers/data'
 
-export const getMp3s = () => {
-    const { mp3s } = album
-    return mp3s
-}
+export const getMp3s = () => (
+    mp3s
+)
 
 export const getNextVerseIndex = (
     songIndex,

@@ -6,11 +6,10 @@ export const getPropsAreShallowEqual = ({
 }) => {
     for (const key in props) {
 
-        // Do check if...
-        const type = typeof props[key]
+        const typeOfProp = typeof props[key]
 
         // Exclude functions, objects, and arrays.
-        if (type !== 'function' && type !== 'object') {
+        if (typeOfProp !== 'function' && typeOfProp !== 'object') {
 
             // If there is a single mismatch, return false.
             if (props[key] !== nextProps[key]) {
@@ -23,16 +22,14 @@ export const getPropsAreShallowEqual = ({
 }
 
 export const getArrayOfLength = (
-
     length,
     indexBase = 0
-
-) => {
-    return Array.from(
+) => (
+    Array.from(
         { length },
         (nothing, i) => i + indexBase
     )
-}
+)
 
 export const getValueInAbridgedMatrix = (matrix, xIndex, yIndex) => {
     // Assume that matrix is an array of arrays.

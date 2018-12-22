@@ -164,7 +164,3 @@ export const getCharStringForNumber = (myNumber) => {
     // 10 is a, 11 is b, and so forth.
     return myNumber < 10 ? myNumber : String.fromCharCode(myNumber + 87)
 }
-
-export const getTwoDigitStringForNumber = (myNumber) => {
-    return myNumber < 10 ? `0${myNumber}` : myNumber
-}

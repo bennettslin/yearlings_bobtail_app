@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         task: 'logue',
         workedHours: 1,

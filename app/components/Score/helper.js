@@ -1,6 +1,5 @@
-import album from 'album'
+import scoresArray from 'assets/scores'
 
 export const getSongScore = (songIndex) => {
-    const { scores } = album
-    return scores[songIndex - 1]
+    return scoresArray[songIndex - 1]
 }

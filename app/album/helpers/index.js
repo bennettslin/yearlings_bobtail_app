@@ -51,9 +51,6 @@ export const parseAlbumData = (albumObject) => {
     albumObject.tempWormholeLinks = {}
     albumObject.globalAnnotationIndices = []
 
-    // Combine completed and remaining tasks.
-    _mergeAlbumTasks(albumObject)
-
     // Initial preparation.
     _initialPrepareAlbum(albumObject)
 
@@ -71,18 +68,6 @@ export const parseAlbumData = (albumObject) => {
     logParse('End parse album data.')
 
     return albumObject
-}
-
-const _mergeAlbumTasks = (albumObject) => {
-    const {
-        remainingTasks,
-        completedTasks
-    } = albumObject
-
-    albumObject.tasks = remainingTasks.concat(completedTasks)
-
-    delete albumObject.remainingTasks
-    delete albumObject.completedTasks
 }
 
 /***********

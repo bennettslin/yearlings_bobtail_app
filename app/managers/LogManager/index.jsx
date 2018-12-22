@@ -50,7 +50,6 @@ class LogManager extends PureComponent {
         copiedAlbum.scenes = `scenes: ${copiedAlbum.scenes.length}`
         copiedAlbum.scores = `scores: ${copiedAlbum.scores.length}`
         copiedAlbum.songs = `songs: ${copiedAlbum.songs.length}`
-        copiedAlbum.tasks = `tasks: ${copiedAlbum.tasks.length}`
         copiedAlbum.tips = `tips: ${copiedAlbum.tips.length}`
         copiedAlbum.globalAnnotationIndices = `globalAnnotationIndices: ${copiedAlbum.globalAnnotationIndices.length}`
 
@@ -117,7 +116,6 @@ class LogManager extends PureComponent {
         copiedSong.songStanzaConfigs = `songStanzaConfigs: ${copiedSong.songStanzaConfigs.length}`
         copiedSong.songVerseConfigs = `songVerseConfigs: ${copiedSong.songVerseConfigs.length}`
         copiedSong.songSceneConfigs = `songSceneConfigs: ${copiedSong.songSceneConfigs.length}`
-        copiedSong.tasks = `tasks: ${copiedSong.tasks.length}`
 
         return this._logObject('renderable song', copiedSong)
     }

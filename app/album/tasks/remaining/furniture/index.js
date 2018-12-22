@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         taskName: `captainBedDrawers (technically a panel)`,
         workedHours: 0,

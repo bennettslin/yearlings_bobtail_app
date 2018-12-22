@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         taskName: `Bennett's blanket (Odin)`,
         workedHours: 0,

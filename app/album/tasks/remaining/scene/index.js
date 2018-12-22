@@ -14,7 +14,7 @@
  * Couches are 1 cube high (with cushion making up rest of height).
  */
 
-module.exports = [
+export default [
     {
         task: 'logue',
         workedHours: 0,
