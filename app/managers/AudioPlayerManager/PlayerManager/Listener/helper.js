@@ -1,4 +1,4 @@
-import { getSongsNotLoguesCount } from 'helpers/data'
+import { getSongsNotLoguesCount } from 'album/api/songs'
 
 const getNextPlayerIndexToRender = (
     selectedSongIndex,

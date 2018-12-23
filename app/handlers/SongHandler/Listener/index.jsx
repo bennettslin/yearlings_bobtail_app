@@ -8,7 +8,7 @@ import { updateLoadStore } from 'flux/load/action'
 import { updateSessionStore } from 'flux/session/action'
 import { resetVerseBars } from 'flux/verseBars/action'
 
-import { getNavBookIndex } from 'helpers/data'
+import { getBookForSongIndex } from 'album/api/songs'
 
 class SongListener extends PureComponent {
 
@@ -31,7 +31,7 @@ class SongListener extends PureComponent {
             { selectedSongIndex: prevSongIndex } = prevProps
 
         if (selectedSongIndex !== prevSongIndex) {
-            const shownNavBookIndex = getNavBookIndex(selectedSongIndex)
+            const shownNavBookIndex = getBookForSongIndex(selectedSongIndex)
 
             this.props.updateAccessStore({
                 accessedNavSongIndex: selectedSongIndex

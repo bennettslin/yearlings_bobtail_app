@@ -1,7 +1,7 @@
 import {
     getSongsAndLoguesCount,
     getSongsNotLoguesCount
-} from 'helpers/data'
+} from 'album/api/songs'
 import {
     getObjectFromBitNumber,
     getValueInBitNumber

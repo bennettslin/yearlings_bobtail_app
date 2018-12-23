@@ -9,9 +9,9 @@ import album from 'album'
 import {
     getAnnotationObject,
     getGlobalAnnotationObject,
-    getSongObject,
     getSceneObject
 } from 'helpers/data'
+import { getSongObject } from 'album/api/songs'
 
 import { WINDOW_STORAGE } from 'constants/state'
 
@@ -42,12 +42,7 @@ class LogManager extends PureComponent {
             ...album
         }
 
-        copiedAlbum.drawings = `drawings: ${copiedAlbum.drawings.length}`
-        copiedAlbum.mp3s = `mp3s: ${copiedAlbum.mp3s.length}`
-        copiedAlbum.scenes = `scenes: ${copiedAlbum.scenes.length}`
-        copiedAlbum.scores = `scores: ${copiedAlbum.scores.length}`
         copiedAlbum.songs = `songs: ${copiedAlbum.songs.length}`
-        copiedAlbum.tips = `tips: ${copiedAlbum.tips.length}`
         copiedAlbum.globalAnnotationIndices = `globalAnnotationIndices: ${copiedAlbum.globalAnnotationIndices.length}`
 
         return this._logObject('album', copiedAlbum)

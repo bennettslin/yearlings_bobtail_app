@@ -1,17 +1,13 @@
-import album from 'album'
-import { getSongIsLogue } from '../../helpers/data'
+import albumTips from 'album/tips'
+import { getSongIsLogue } from 'album/api/songs'
 
 export const getSongTip = (songIndex) => {
 
-    if (songIndex < 0) {
-        return null
-    }
-
-    const isLogue = getSongIsLogue(songIndex),
-        { tips } = album
+    const isLogue = getSongIsLogue(songIndex)
 
     if (!isLogue) {
-        return tips[songIndex].description
+        return albumTips[songIndex].description
+
     } else {
         return null
     }

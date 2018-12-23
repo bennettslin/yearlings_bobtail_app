@@ -7,7 +7,7 @@ import { updateAccessStore } from 'flux/access/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import { getNavBookIndex } from 'helpers/data'
+import { getBookForSongIndex } from 'album/api/songs'
 
 class CarouselListener extends PureComponent {
 
@@ -46,7 +46,7 @@ class CarouselListener extends PureComponent {
         if (!isCarouselShown && wasCarouselShown) {
             const
                 { selectedSongIndex } = this.props,
-                shownNavBookIndex = getNavBookIndex(selectedSongIndex)
+                shownNavBookIndex = getBookForSongIndex(selectedSongIndex)
 
             this.props.updateAccessStore({
                 accessedNavSongIndex: selectedSongIndex

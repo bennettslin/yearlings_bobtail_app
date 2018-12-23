@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import NavButton from '../Button'
 
-import { getNavBookIndex } from 'helpers/data'
+import { getBookForSongIndex } from 'album/api/songs'
 
 const mapStateToProps = ({
     songStore: { selectedSongIndex }
@@ -35,7 +35,7 @@ class NavBookToggle extends PureComponent {
             } = this.props,
 
             hasSelectedSong =
-                bookIndex === getNavBookIndex(selectedSongIndex)
+                bookIndex === getBookForSongIndex(selectedSongIndex)
 
         return (
             <div className={cx(

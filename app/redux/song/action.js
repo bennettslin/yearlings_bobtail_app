@@ -1,5 +1,5 @@
 // Actions for song state.
-import { getSongIsLogue } from '../../helpers/data'
+import { getSongIsLogue } from 'album/api/songs'
 import { setInStorage } from '../storageHelper'
 
 import {

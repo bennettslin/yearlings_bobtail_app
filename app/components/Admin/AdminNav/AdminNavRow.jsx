@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
 import ProgressBar from '../ProgressBar'
 
-import { getSongTitle } from 'helpers/data'
+import { getSongTitle } from 'album/api/songs'
 import { populateRefs } from 'helpers/ref'
 import {
     getSongTasks,

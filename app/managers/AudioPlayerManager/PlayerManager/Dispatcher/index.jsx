@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updatePlayersStore } from 'flux/players/action'
 
+import { getSongsNotLoguesCount } from 'album/api/songs'
 import { setNewValueInBitNumber } from 'helpers/bit'
-import { getSongsNotLoguesCount } from 'helpers/data'
 import { getStoreKeyForPlayer } from 'helpers/player'
 
 class PlayerDispatcher extends PureComponent {

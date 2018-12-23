@@ -17,12 +17,16 @@ import {
 } from 'scene/sky'
 
 import {
-    getSongIsLogue,
     getSceneIndexForVerseIndex,
     getSceneObject,
     getTimeForVerseIndex,
     getAnnotationColumnIndex
 } from '../helpers/data'
+
+import {
+    getSongIsLogue,
+    getBookForSongIndex
+} from 'album/api/songs'
 
 import {
     IS_ACCESS_ON,
@@ -207,7 +211,7 @@ const
     SESSION_DEFAULTS = {
         carouselAnnotationIndex: 0,
         interactivatedVerseIndex: -1,
-        shownNavBookIndex: 1,
+        shownNavBookIndex: getBookForSongIndex(storedSongIndex),
         selectedAudioOptionIndex:
             getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
         selectedWikiIndex: 0,

@@ -8,8 +8,8 @@ import SongDispatcher from '../../../../handlers/SongHandler/Dispatcher'
 
 import {
     getSongsAndLoguesCount,
-    getNavBookIndex
-} from 'helpers/data'
+    getBookForSongIndex
+} from 'album/api/songs'
 import { populateRefs } from 'helpers/ref'
 
 import {
@@ -87,7 +87,7 @@ class NavNavigation extends PureComponent {
 
                 // Select the book column that contains the accessed song index.
                 if (
-                    shownNavBookIndex !== getNavBookIndex(accessedNavSongIndex)
+                    shownNavBookIndex !== getBookForSongIndex(accessedNavSongIndex)
                 ) {
                     this.dispatchNavBook()
                 }

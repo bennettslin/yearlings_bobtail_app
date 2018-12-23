@@ -2,7 +2,7 @@ import {
     HAS_SIDE_CARDS,
     IS_DOUBLESPEAKER
 } from '../../constants/lyrics'
-import { getSongObject } from '../../helpers/data'
+import { getSongObject } from 'album/api/songs'
 import {
     getIsPhone,
     getIsTablet,

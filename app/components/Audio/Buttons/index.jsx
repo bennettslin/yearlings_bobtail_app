@@ -24,7 +24,7 @@ import {
     AUDIO_PREVIOUS_BUTTON_KEY
 } from 'constants/buttons'
 
-import { getSongsAndLoguesCount } from 'helpers/data'
+import { getSongsAndLoguesCount } from 'album/api/songs'
 import { populateRefs } from 'helpers/ref'
 import { getPlayerCanPlayThrough } from 'helpers/player'
 

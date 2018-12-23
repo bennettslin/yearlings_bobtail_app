@@ -1,8 +1,9 @@
 import {
-    getSongIsLogue,
     getSongSceneConfigs,
     getSceneIndexForVerseIndex
 } from '../../../helpers/data'
+
+import { getSongIsLogue } from 'album/api/songs'
 
 export const getVerseIndexForNextScene = (
     songIndex,

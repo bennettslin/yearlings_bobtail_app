@@ -23,7 +23,7 @@ import {
     finalRegisterScenes
 } from './scenes'
 
-import { getSongIsLogue } from 'helpers/data'
+import { getSongIsLogue } from 'album/api/songs'
 
 import { getFormattedAnnotationTitle } from 'helpers/format'
 

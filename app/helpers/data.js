@@ -8,57 +8,19 @@ import album from 'album'
 import albumScenes from 'album/scenes'
 import { COLUMN_INDEX } from 'constants/lyrics'
 
+import {
+    getSongObject,
+    getSongIsLogue
+} from 'album/api/songs'
+
 /*********
  * ALBUM *
  *********/
-
-export const getNavBookIndex = (songIndex) => {
-    const { bookStartingIndices } = album
-
-    // Assumes two book starting indices.
-    return songIndex < bookStartingIndices[1] ? 0 : 1
-}
 
 // For logging.
 export const getGlobalAnnotationObject = (globalIndex) => {
     const { globalAnnotationIndices } = album
     return globalAnnotationIndices[globalIndex]
-}
-
-/*********
- * SONGS *
- *********/
-
-export const getSongsAndLoguesCount = (songs = album.songs) => {
-    return songs.length
-}
-
-export const getSongsNotLoguesCount = (songs = album.songs) => {
-    return songs.length - 2
-}
-
-export const getSongObject = (songIndex, songs = album.songs) => {
-    return songs[songIndex] || null
-}
-
-export const getSongIsLogue = (songIndex, songs = album.songs) => {
-    return songIndex === 0 || songIndex === songs.length - 1
-}
-
-export const getSongTitle = ({
-    songIndex,
-    songs = album.songs,
-    showIndex = true
-}) => {
-    const song = getSongObject(songIndex, songs)
-
-    if (!song) {
-        return undefined
-
-    } else {
-        const isLogue = getSongIsLogue(songIndex, songs)
-        return `${showIndex && !isLogue ? songIndex + '. ' : ''}${song.title}`
-    }
 }
 
 /*********

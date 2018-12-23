@@ -7,7 +7,7 @@ import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../ProgressFooter'
 import { getSumOfTasks } from '../helper'
 
-import { getSongsAndLoguesCount } from 'helpers/data'
+import { getSongsAndLoguesCount } from 'album/api/songs'
 import { getArrayOfLength } from 'helpers/general'
 
 import { getMaxTotalNeededHoursFromSongs } from './helper'

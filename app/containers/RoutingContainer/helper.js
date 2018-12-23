@@ -1,6 +1,6 @@
 // Helper for getting param values from routing.
+import { getSongObject } from 'album/api/songs'
 import {
-    getSongObject,
     getVerseObject,
     getAnnotationObject
 } from '../../helpers/data'

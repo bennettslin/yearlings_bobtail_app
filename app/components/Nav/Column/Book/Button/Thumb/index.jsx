@@ -7,7 +7,7 @@ import cx from 'classnames'
 import Svg from 'modules/Svg'
 import ThumbIcon from './Icon'
 
-import { getSongTitle } from 'helpers/data'
+import { getSongTitle } from 'album/api/songs'
 
 const propTypes = {
     // From parent.

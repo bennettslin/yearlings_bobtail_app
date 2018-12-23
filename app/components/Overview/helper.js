@@ -1,4 +1,4 @@
-import { getSongObject } from '../../helpers/data'
+import { getSongObject } from 'album/api/songs'
 import { getIsPhone } from '../../helpers/responsive'
 
 export const getSongOverview = (songIndex) => {

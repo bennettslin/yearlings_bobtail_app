@@ -1,4 +1,4 @@
-import { getSongsAndLoguesCount } from 'helpers/data'
+import { getSongsAndLoguesCount } from 'album/api/songs'
 import { getArrayOfLength } from 'helpers/general'
 
 import {

@@ -4,7 +4,7 @@ import Drawing from '../Drawing'
 import NotesSection from './notes/notes-section'
 import StatsSection from './stats/stats-section'
 import TasksSection from './tasks/tasks-section'
-import { getSongObject } from 'helpers/data'
+import { getSongObject } from 'album/api/songs'
 import { getSongTasks } from '../helper'
 
 /*************
