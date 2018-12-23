@@ -29,15 +29,8 @@ export default {
         }
     },
     lyricUnits: [
-        [
-            {
-                time: 0,
-                centre: {
-                    italic: `(recorders)`
-                }
-            },
-            {
-                isUnitMap: true,
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -50,51 +43,18 @@ export default {
                     }
                 },
                 stanzaType: INTRO
-            }
-        ],
-        [
-            {
-                time: 13,
-                lyric: `My hundred thousandth dream, I bumped into my Sita.`
             },
-            {
-                time: 19,
-                lyric: `Silent for a while, we searched our eyes,`
-            },
-            {
-                time: 23,
-                lyric: `then we smiled and like old times,`
-            },
-            {
-                time: 27,
-                lyric: [
-                    `I took her shoulder as we drove from`,
-                    {
-                        anchor: `El Torito.`,
-                        properNoun: true,
-                        annotation: {
-                            description: [
-                                `Sita worked as a hostess at`,
-                                {
-                                    anchor: `El Torito,`,
-                                    wiki: `El_Torito`
-                                },
-                                `a Mexican chain restaurant. I would often pick her up when her shift was over, as I seem to be doing now in my dream.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
-                            }
-                        }
+            lyricUnit: [
+                {
+                    time: 0,
+                    centre: {
+                        italic: `(recorders)`
                     }
-                ]
-            },
-            {
-                time: 34,
-                lyric: `I said never again we'll slave our whole lives away!`
-            },
-            {
-                isUnitMap: true,
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -105,43 +65,52 @@ export default {
                     }
                 },
                 stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 43,
-                lyric: `As pretty as the rainbow, Sita! Sita!`
             },
-            {
-                time: 49,
-                lyric: [
-                    `Did I`,
-                    {
-                        anchor: `ever live another life?`,
-                        annotation: {
-                            description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. As far as I know, Sita and I have always been together. Of course, according to the Hindu faith, I might also have lived another life quite literally, in a past incarnation.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+            lyricUnit: [
+                {
+                    time: 13,
+                    lyric: `My hundred thousandth dream, I bumped into my Sita.`
+                },
+                {
+                    time: 19,
+                    lyric: `Silent for a while, we searched our eyes,`
+                },
+                {
+                    time: 23,
+                    lyric: `then we smiled and like old times,`
+                },
+                {
+                    time: 27,
+                    lyric: [
+                        `I took her shoulder as we drove from`,
+                        {
+                            anchor: `El Torito.`,
+                            properNoun: true,
+                            annotation: {
+                                description: [
+                                    `Sita worked as a hostess at`,
+                                    {
+                                        anchor: `El Torito,`,
+                                        wiki: `El_Torito`
+                                    },
+                                    `a Mexican chain restaurant. I would often pick her up when her shift was over, as I seem to be doing now in my dream.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                }
                             }
                         }
-                    }
-                ]
-            },
-            {
-                time: 56,
-                lyric: `As precious as a summer, Sita! Sita!`
-            },
-            {
-                time: 63,
-                lyric: `Did I ever live another life?`
-            },
-            {
-                time: 70,
-                lyric: `And were you mine?`
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 34,
+                    lyric: `I said never again we'll slave our whole lives away!`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -152,74 +121,44 @@ export default {
                     }
                 },
                 stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 74,
-                lyric: `My hundred thousandth dream, I kissed my señorita,`
             },
-            {
-                time: 80,
-                lyric: [
-                    `on the`,
-                    {
-                        anchor: `Pampas`,
-                        properNoun: true,
-                        annotation: [
-                            {
-                                description: [
-                                    `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the`,
-                                    {
-                                        anchor: `Pampas,`,
-                                        wiki: `Pampas`
-                                    },
-                                    `the grassy lowlands spanning the southeastern end of South America.`
-                                ],
+            lyricUnit: [
+                {
+                    time: 43,
+                    lyric: `As pretty as the rainbow, Sita! Sita!`
+                },
+                {
+                    time: 49,
+                    lyric: [
+                        `Did I`,
+                        {
+                            anchor: `ever live another life?`,
+                            annotation: {
+                                description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. As far as I know, Sita and I have always been together. Of course, according to the Hindu faith, I might also have lived another life quite literally, in a past incarnation.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
                                 }
-                            },
-                            {
-                                wormhole: `pampas`
-                            }
-                        ]
-                    },
-                    `where the`,
-                    {
-                        anchor: `gopis`,
-                        annotation: {
-                            description: [
-                                `In Hindu mythology, the`,
-                                {
-                                    anchor: `gopis`,
-                                    wiki: `Gopi`
-                                },
-                                `are cow herdesses who are devotees of the god Krishna. I watched a lot of Bollywood movies with Sita, and now my dream is slowly turning into one, as the gopis sing and dance in the background.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
                             }
                         }
-                    },
-                    `played,`
-                ]
-            },
-            {
-                time: 84,
-                lyric: `and the seasons glide away.`
-            },
-            {
-                time: 89,
-                lyric: `I can't remember how or when my heart was Sita's.`
-            },
-            {
-                time: 94,
-                lyric: `We were young, so sure of life, never knowing time unkind!`
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 56,
+                    lyric: `As precious as a summer, Sita! Sita!`
+                },
+                {
+                    time: 63,
+                    lyric: `Did I ever live another life?`
+                },
+                {
+                    time: 70,
+                    lyric: `And were you mine?`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -230,31 +169,75 @@ export default {
                     }
                 },
                 stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 103,
-                lyric: `I spent a lifetime waiting, Sita! Sita!`
             },
-            {
-                time: 110,
-                lyric: `Did I ever live another life?`
-            },
-            {
-                time: 117,
-                lyric: `We blow the wind in whistles, Sita! Sita!`
-            },
-            {
-                time: 124,
-                lyric: `Did I ever live another life?`
-            },
-            {
-                time: 131,
-                lyric: `When you were mine?`
-            },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 74,
+                    lyric: `My hundred thousandth dream, I kissed my señorita,`
+                },
+                {
+                    time: 80,
+                    lyric: [
+                        `on the`,
+                        {
+                            anchor: `Pampas`,
+                            properNoun: true,
+                            annotation: [
+                                {
+                                    description: [
+                                        `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the`,
+                                        {
+                                            anchor: `Pampas,`,
+                                            wiki: `Pampas`
+                                        },
+                                        `the grassy lowlands spanning the southeastern end of South America.`
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
+                                {
+                                    wormhole: `pampas`
+                                }
+                            ]
+                        },
+                        `where the`,
+                        {
+                            anchor: `gopis`,
+                            annotation: {
+                                description: [
+                                    `In Hindu mythology, the`,
+                                    {
+                                        anchor: `gopis`,
+                                        wiki: `Gopi`
+                                    },
+                                    `are cow herdesses who are devotees of the god Krishna. I watched a lot of Bollywood movies with Sita, and now my dream is slowly turning into one, as the gopis sing and dance in the background.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        },
+                        `played,`
+                    ]
+                },
+                {
+                    time: 84,
+                    lyric: `and the seasons glide away.`
+                },
+                {
+                    time: 89,
+                    lyric: `I can't remember how or when my heart was Sita's.`
+                },
+                {
+                    time: 94,
+                    lyric: `We were young, so sure of life, never knowing time unkind!`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -265,17 +248,32 @@ export default {
                     }
                 },
                 stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 135,
-                centre: {
-                    italic: `(Sita's theme)`
-                }
             },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 103,
+                    lyric: `I spent a lifetime waiting, Sita! Sita!`
+                },
+                {
+                    time: 110,
+                    lyric: `Did I ever live another life?`
+                },
+                {
+                    time: 117,
+                    lyric: `We blow the wind in whistles, Sita! Sita!`
+                },
+                {
+                    time: 124,
+                    lyric: `Did I ever live another life?`
+                },
+                {
+                    time: 131,
+                    lyric: `When you were mine?`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -286,74 +284,32 @@ export default {
                     }
                 },
                 stanzaType: SOLO
-            }
-        ],
-        [
-            {
-                time: 149,
-                centre: {
-                    italic: `(Sita's theme)`
-                }
             },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 135,
+                    centre: {
+                        italic: `(Sita's theme)`
+                    }
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: SOLO,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 163,
-                lyric: [
-                    `My hundred thousandth dream, on the`,
-                    {
-                        anchor: `cliffs of El Cerrito,`,
-                        annotation: {
-                            description: [
-                                `The city of`,
-                                {
-                                    anchor: `El Cerrito`,
-                                    wiki: `El_Cerrito,_California`
-                                },
-                                `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In our happier days, it was one of Sita's habitual choices for a weekend outing.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
+            },
+            lyricUnit: [
+                {
+                    time: 149,
+                    centre: {
+                        italic: `(Sita's theme)`
                     }
-                ]
-            },
-            {
-                time: 169,
-                lyric: `she says now it's dark and getting late,`
-            },
-            {
-                time: 174,
-                lyric: `but we'll always have today.`
-            },
-            {
-                time: 178,
-                lyric: [
-                    `Why does my`,
-                    {
-                        anchor: `last thought`,
-                        annotation: {
-                            description: `As Sita's ominous tone suddenly wrenches me from my bliss, I realise that I'm in a dream, and moreover, that it may be my last.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
-                    },
-                    `in this world belong to Sita?`
-                ]
-            },
-            {
-                time: 183,
-                lyric: `Now the light spills warm and bright… gently fills these eyes…`
-            },
-            {
-                isUnitMap: true,
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -364,63 +320,62 @@ export default {
                     }
                 },
                 stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 192,
-                lyric: [
-                    `She'll always`,
-                    {
-                        anchor: `come to take me,`,
-                        annotation: [
-                            {
-                                description: `I now understand that Sita, being my most cherished memory, was always going to be the one chosen by my subconscious to help ease my fears as I exit from this world.`,
+            },
+            lyricUnit: [
+                {
+                    time: 163,
+                    lyric: [
+                        `My hundred thousandth dream, on the`,
+                        {
+                            anchor: `cliffs of El Cerrito,`,
+                            annotation: {
+                                description: [
+                                    `The city of`,
+                                    {
+                                        anchor: `El Cerrito`,
+                                        wiki: `El_Cerrito,_California`
+                                    },
+                                    `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In our happier days, it was one of Sita's habitual choices for a weekend outing.`
+                                ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true
+                                    [BACKSTORY]: true
                                 }
-                            },
-                            {
-                                wormhole: {
-                                    wormholeKey: `dreams_of_whom`,
-                                    wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX
-                                }
-                            }
-                        ]
-                    },
-                    `Sita! Sita!`
-                ]
-            },
-            {
-                time: 199,
-                lyric: `Will I ever live another life?`
-            },
-            {
-                time: 206,
-                lyric: `Real or imaginary, Sita! Sita!`
-            },
-            {
-                time: 213,
-                lyric: `Will I ever live another life?`
-            },
-            {
-                time: 220,
-                lyric: [
-                    {
-                        anchor: `When you'll be mine?`,
-                        annotation: {
-                            description: `If this is only a dream, then the person I'm holding onto is not really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world, then, I hold onto the possibility that I may find her again in the next.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
                             }
                         }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 169,
+                    lyric: `she says now it's dark and getting late,`
+                },
+                {
+                    time: 174,
+                    lyric: `but we'll always have today.`
+                },
+                {
+                    time: 178,
+                    lyric: [
+                        `Why does my`,
+                        {
+                            anchor: `last thought`,
+                            annotation: {
+                                description: `As Sita's ominous tone suddenly wrenches me from my bliss, I realise that I'm in a dream, and moreover, that it may be my last.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        },
+                        `in this world belong to Sita?`
+                    ]
+                },
+                {
+                    time: 183,
+                    lyric: `Now the light spills warm and bright… gently fills these eyes…`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -431,17 +386,64 @@ export default {
                     }
                 },
                 stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 223,
-                centre: {
-                    italic: `(Bennett's theme)`
-                }
             },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 192,
+                    lyric: [
+                        `She'll always`,
+                        {
+                            anchor: `come to take me,`,
+                            annotation: [
+                                {
+                                    description: `I now understand that Sita, being my most cherished memory, was always going to be the one chosen by my subconscious to help ease my fears as I exit from this world.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `dreams_of_whom`,
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX
+                                    }
+                                }
+                            ]
+                        },
+                        `Sita! Sita!`
+                    ]
+                },
+                {
+                    time: 199,
+                    lyric: `Will I ever live another life?`
+                },
+                {
+                    time: 206,
+                    lyric: `Real or imaginary, Sita! Sita!`
+                },
+                {
+                    time: 213,
+                    lyric: `Will I ever live another life?`
+                },
+                {
+                    time: 220,
+                    lyric: [
+                        {
+                            anchor: `When you'll be mine?`,
+                            annotation: {
+                                description: `If this is only a dream, then the person I'm holding onto is not really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world, then, I hold onto the possibility that I may find her again in the next.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -452,11 +454,18 @@ export default {
                     }
                 },
                 stanzaType: OUTRO
-            }
-        ],
-        [
-            {
-                isUnitMap: true,
+            },
+            lyricUnit: [
+                {
+                    time: 223,
+                    centre: {
+                        italic: `(Bennett's theme)`
+                    }
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -467,6 +476,6 @@ export default {
                     }
                 }
             }
-        ]
+        }
     ]
 }

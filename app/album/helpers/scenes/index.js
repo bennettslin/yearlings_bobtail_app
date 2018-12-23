@@ -52,17 +52,21 @@ export const finalRegisterScenes = (songObject) => {
 
         // Either scene is identified by a unit index...
         if (isUnitIndex) {
-            const unitArray = lyricUnits[rawIndex],
-                unitMapObject = unitArray[unitArray.length - 1],
-                unitFirstVerseIndex = unitMapObject.tempFirstVerseIndex,
-                unitFirstVerseTime = unitArray[0].time
+            const
+                unit = lyricUnits[rawIndex],
+                {
+                    unitMap,
+                    lyricUnit
+                } = unit,
+                unitFirstVerseIndex = unitMap.tempFirstVerseIndex,
+                unitFirstVerseTime = lyricUnit[0].time
 
             songSceneConfigs.push({
                 firstVerseIndex: unitFirstVerseIndex,
                 adminSceneStartTime: unitFirstVerseTime
             })
 
-            delete unitMapObject.tempFirstVerseIndex
+            delete unitMap.tempFirstVerseIndex
 
         // ... or else scene is identified by a verse index.
         } else {

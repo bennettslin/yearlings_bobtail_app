@@ -52,7 +52,8 @@ class AnnotationWormholes extends PureComponent {
                 { sourceWormholeIndex } = wormholeObject,
                 isAccessed = accessedWikiWormholeIndex === sourceWormholeIndex
 
-            return (
+            // TODO
+            return false && (
                 <AnnotationWormhole
                     key={wormholeLinkIndex}
                     {...{

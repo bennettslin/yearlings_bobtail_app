@@ -59,22 +59,25 @@ export const getTimeForVerseIndex = (songIndex, verseIndex) => {
  * LYRICS *
  **********/
 
-const _parseLyrics = (lyricEntity, selectedVerseIndex) => {
+const _parseLyrics = (lyricEntity, verseIndex) => {
     // Recurse until object with verse index is found.
 
     // Method does not apply to logues.
     if (lyricEntity) {
-        if (lyricEntity.verseIndex === selectedVerseIndex) {
-            return lyricEntity
+        if (Array.isArray(lyricEntity)) {
+            return lyricEntity.reduce((childSelectedLyric, childLyric) => (
+                childSelectedLyric || _parseLyrics(childLyric, verseIndex)
+            ), null)
 
-        } else if (Array.isArray(lyricEntity)) {
-            return lyricEntity.reduce((childSelectedLyric, childLyric) => {
-                return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
-            }, null)
+        } else if (lyricEntity.lyricUnit) {
+            return _parseLyrics(lyricEntity.lyricUnit, verseIndex)
+
+        } else if (lyricEntity.verseIndex === verseIndex) {
+            return lyricEntity
 
             // Object with verseIndex key not found, so dig into subCard.
         } else if (lyricEntity.subCard) {
-            return _parseLyrics(lyricEntity.subCard, selectedVerseIndex)
+            return _parseLyrics(lyricEntity.subCard, verseIndex)
         }
     }
 }
@@ -84,11 +87,6 @@ export const getVerseObject = (
     verseIndex,
     songs = album.songs
 ) => {
-
-    if (songIndex < 0) {
-        return null
-    }
-
     const { lyricUnits } = getSongObject(songIndex, songs)
     return _parseLyrics(lyricUnits, verseIndex)
 }

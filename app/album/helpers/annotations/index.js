@@ -398,7 +398,7 @@ export const addDestinationWormholeIndices = (albumObject) => {
                 cardObject = annotationObject.cards[cardIndex]
 
             cardObject.wormholeLinks = links.filter((sourceLink, thisIndex) => {
-
+                console.error('destinationLink', destinationLink)
                 /**
                  * Add destination wormhole indices. This is as complicated as it
                  * is because of the three "shiv" wormholes.

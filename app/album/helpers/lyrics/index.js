@@ -5,8 +5,6 @@ import {
     ANCHOR,
 
     DOT_CARD,
-    TOP_SIDE_CARD,
-    BOTTOM_SIDE_CARD,
     HAS_SIDE_CARDS,
 
     IS_DOUBLESPEAKER,
@@ -69,24 +67,10 @@ export const registerHasSideCards = (songObject) => {
 
     lyricUnits.forEach(unit => {
 
-        const unitHasSideCards = unit.reduce((hasSideCards, verse) => {
-            return hasSideCards ||
-                Boolean(verse[TOP_SIDE_CARD]) ||
-                Boolean(verse[BOTTOM_SIDE_CARD])
-        }, false)
-
-        if (unitHasSideCards) {
-
-            // Let app know which column to hide if single column is shown.
-            unit.forEach(verse => {
-                if (verse[TOP_SIDE_CARD] || verse[BOTTOM_SIDE_CARD]) {
-                    verse[RIGHT_COLUMN] = true
-
-                } else {
-                    verse[LEFT_COLUMN] = true
-                }
-            })
-        }
+        const { unitMap } = unit,
+            unitHasSideCards = Boolean(
+                unitMap.topSideCard || unitMap.bottomSideCard
+            )
 
         songHasSideCards = unitHasSideCards || songHasSideCards
     })
@@ -106,16 +90,18 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
          */
         songStanzaConfigs = []
 
-    lyricUnits.forEach(unitArray => {
+    lyricUnits.forEach(unit => {
+        const {
+            unitMap,
+            lyricUnit
+        } = unit
 
-        const unitMapObject = unitArray[unitArray.length - 1]
+        if (unitMap.stanzaType) {
 
-        if (unitMapObject.isUnitMap && unitMapObject.stanzaType) {
-
-            const { stanzaType } = unitMapObject
+            const { stanzaType } = unitMap
 
             // If it's not a subsequent unit, establish new index.
-            if (!unitMapObject.subsequent) {
+            if (!unitMap.subsequent) {
 
                 /**
                  * This will let audio slider know the relative width of
@@ -127,7 +113,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                          * Initialise with just the start time, because at this
                          * point we still don't know the verse index.
                          */
-                        verseStartTime: unitArray[0].time
+                        verseStartTime: lyricUnit[0].time
                     }],
                     stanzaType,
                     stanzaUnitIndices: []
@@ -139,10 +125,10 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
             }
 
             // Tell unit and subsequent units their stanza index.
-            unitMapObject.stanzaIndex = songStanzaConfigs.length - 1
+            unitMap.stanzaIndex = songStanzaConfigs.length - 1
 
             // Tell unit its stanza type index.
-            unitMapObject.stanzaTypeIndex = tempStanzaTypeCounters[stanzaType]
+            unitMap.stanzaTypeIndex = tempStanzaTypeCounters[stanzaType]
         }
     })
 
@@ -177,17 +163,17 @@ export const finalRegisterStanzaTypes = (songObject) => {
         tempStanzaTypeCounters
     } = songObject
 
-    lyricUnits.forEach((unitArray) => {
+    lyricUnits.forEach(unit => {
 
-        const unitMapObject = unitArray[unitArray.length - 1]
+        const { unitMap } = unit
 
-        if (unitMapObject.isUnitMap && unitMapObject.stanzaType) {
+        if (unitMap.stanzaType) {
 
-            const { stanzaType } = unitMapObject
+            const { stanzaType } = unitMap
 
             // Don't show stanzaTypeIndex if it's the only one of its kind.
             if (tempStanzaTypeCounters[stanzaType] === 1) {
-                unitMapObject.stanzaTypeIndex = -1
+                unitMap.stanzaTypeIndex = -1
             }
         }
     })

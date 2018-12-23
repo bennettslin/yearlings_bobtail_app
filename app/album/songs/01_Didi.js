@@ -23,36 +23,34 @@ import {
 export default {
     totalTime: 177,
     overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
-    title: {
-        anchor: 'Didi (弟弟)',
-        annotation: {
-            description: [
-                `In Chinese,`,
-                {
-                    italic: `didi`
-                },
-                `means "little brother." While my family is from`,
-                {
-                    anchor: `Taiwan,`,
-                    wiki: `Taiwan`
-                },
-                `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we spoke at home thus included a healthy sprinkle of Chinese words.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true
-            }
-        }
-    },
+    title: 'Didi (弟弟)',
     lyricUnits: [
-        [
-            {
-                time: 0,
-                centre: {
-                    italic: `(Bennett's theme)`
+        {
+            unitMap: {
+                dotCard: {
+                    anchor: IS_DOT_CARD,
+                    annotation: {
+                        description: [
+                            `In Chinese,`,
+                            {
+                                italic: `didi`
+                            },
+                            `means "little brother." While my family is from`,
+                            {
+                                anchor: `Taiwan,`,
+                                wiki: `Taiwan`
+                            },
+                            `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we spoke at home thus included a healthy sprinkle of Chinese words.`
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true
+                        }
+                    }
                 }
-            },
-            {
-                isUnitMap: true,
+            }
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -71,58 +69,31 @@ export default {
                     }
                 },
                 stanzaType: INTRO
-            }
-        ],
-        [
-            {
-                time: 11,
-                centre: {
-                    italic: `(whistles)`
-                }
             },
-            {
-                isUnitMap: true,
-                stanzaType: REFRAIN
-            }
-        ],
-        [
-            {
-                time: 17,
-                lyric: `Didi left the house this morning`
-            },
-            {
-                time: 22,
-                lyric: [
-                    `wondering to himself, who would`,
-                    {
-                        anchor: `tie his shoes?`,
-                        annotation: [
-                            {
-                                description: `Being left-handed, I struggled as a child to learn the proper way to tie shoelaces, where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            },
-                            {
-                                wormhole: {
-                                    wormholeKey: `shoelaces`,
-                                    wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX
-                                }
-                            }
-                        ]
+            lyricUnit: [
+                {
+                    time: 0,
+                    centre: {
+                        italic: `(Bennett's theme)`
                     }
-                ]
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: REFRAIN
             },
-            {
-                time: 28,
-                lyric: `And he left alone because he`
-            },
-            {
-                time: 34,
-                lyric: `had to finish up all his orange juice.`
-            },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 11,
+                    centre: {
+                        italic: `(whistles)`
+                    }
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -141,61 +112,73 @@ export default {
                     }
                 },
                 stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 40,
-                lyric: [
-                    `Didi, you've been following, I`,
-                    {
-                        anchor: `didn't want you here.`,
-                        annotation: {
-                            description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I always panicked when this happened.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    }
-                ]
             },
-            {
-                time: 46,
-                lyric: `Didi, couldn't you find another sister to be near?`
-            },
-            {
-                isUnitMap: true,
-                stanzaType: PRECHORUS
-            }
-        ],
-        [
-            {
-                time: 52,
-                lyric: [
-                    `Cause I get sick of hearing,`,
-                    {
-                        anchor: `"Zeizei,`,
-                        annotation: {
-                            description: [
+            lyricUnit: [
+                {
+                    time: 17,
+                    lyric: `Didi left the house this morning`
+                },
+                {
+                    time: 22,
+                    lyric: [
+                        `wondering to himself, who would`,
+                        {
+                            anchor: `tie his shoes?`,
+                            annotation: [
                                 {
-                                    italic: `Zeizei`
+                                    description: `Being left-handed, I struggled as a child to learn the proper way to tie shoelaces, where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
                                 },
-                                `means "big sister" in Chinese.`
-                            ],
-                            dotKeys: {
-                                [REFERENCE]: true
+                                {
+                                    wormhole: {
+                                        wormholeKey: `shoelaces`,
+                                        wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    time: 28,
+                    lyric: `And he left alone because he`
+                },
+                {
+                    time: 34,
+                    lyric: `had to finish up all his orange juice.`
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: PRECHORUS
+            },
+            lyricUnit: [
+                {
+                    time: 40,
+                    lyric: [
+                        `Didi, you've been following, I`,
+                        {
+                            anchor: `didn't want you here.`,
+                            annotation: {
+                                description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I always panicked when this happened.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
                         }
-                    },
-                    `let Didi play with you…"`
-                ]
-            },
-            {
-                time: 57,
-                lyric: `And I tire of saying, "My Didi wants to come too."`
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 46,
+                    lyric: `Didi, couldn't you find another sister to be near?`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -213,87 +196,94 @@ export default {
                     }
                 },
                 stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 63,
-                lyric: [
-                    `Didi`,
-                    {
-                        anchor: `made an "accident"`,
-                        annotation: {
-                            description: `After I soil my pants, the nurse places them in a shopping bag for me to carry home, and fits me into an abandoned pair of overalls.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
-                    },
-                    `in class,`
-                ]
             },
-            {
-                time: 68,
-                lyric: `so the nurse sent him home, snickered the recess crowd.`
-            },
-            {
-                time: 74,
-                lyric: [
-                    `They saw him crying beside a`,
-                    {
-                        anchor: `Safeway paper bag,`,
-                        properNoun: true,
-                        annotation: [
-                            {
+            lyricUnit: [
+                {
+                    time: 52,
+                    lyric: [
+                        `Cause I get sick of hearing,`,
+                        {
+                            anchor: `"Zeizei,`,
+                            annotation: {
                                 description: [
                                     {
-                                        anchor: `Safeway`,
-                                        wiki: `Safeway_Inc.`
+                                        italic: `Zeizei`
                                     },
-                                    `is a supermarket chain located in the western and central United States.`
-                                ]
-                            },
-                            {
-                                wormhole: {
-                                    wormholeKey: `safeway_paper_bag`
+                                    `means "big sister" in Chinese.`
+                                ],
+                                dotKeys: {
+                                    [REFERENCE]: true
                                 }
                             }
-                        ]
-                    }
-                ]
-            },
-            {
-                time: 80,
-                lyric: `decked in overalls from the lost and found.`
-            },
-            {
-                isUnitMap: true,
+                        },
+                        `let Didi play with you…"`
+                    ]
+                },
+                {
+                    time: 57,
+                    lyric: `And I tire of saying, "My Didi wants to come too."`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 85,
-                lyric: [
-                    `Didi, you've`,
-                    {
-                        anchor: `been in the bath`,
-                        annotation: {
-                            description: `After coming home, I soak in the bathtub until well into the evening.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+            },
+            lyricUnit: [
+                {
+                    time: 63,
+                    lyric: [
+                        `Didi`,
+                        {
+                            anchor: `made an "accident"`,
+                            annotation: {
+                                description: `After I soil my pants, the nurse places them in a shopping bag for me to carry home, and fits me into an abandoned pair of overalls.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             }
+                        },
+                        `in class,`
+                    ]
+                },
+                {
+                    time: 68,
+                    lyric: `so the nurse sent him home, snickered the recess crowd.`
+                },
+                {
+                    time: 74,
+                    lyric: [
+                        `They saw him crying beside a`,
+                        {
+                            anchor: `Safeway paper bag,`,
+                            properNoun: true,
+                            annotation: [
+                                {
+                                    description: [
+                                        {
+                                            anchor: `Safeway`,
+                                            wiki: `Safeway_Inc.`
+                                        },
+                                        `is a supermarket chain located in the western and central United States.`
+                                    ]
+                                },
+                                {
+                                    wormhole: {
+                                        wormholeKey: `safeway_paper_bag`
+                                    }
+                                }
+                            ]
                         }
-                    },
-                    `all this time.`
-                ]
-            },
-            {
-                time: 91,
-                lyric: `Didi, come out, you can't soak there all night.`
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 80,
+                    lyric: `decked in overalls from the lost and found.`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: PRECHORUS,
                 subCardType: RESPONSE,
                 subCard: [
@@ -304,83 +294,70 @@ export default {
                         }
                     }
                 ]
-            }
-        ],
-        [
-            {
-                time: 100,
-                lyric: `Didi, someday you will be a hero`
             },
-            {
-                time: 103,
-                lyric: `in the movies, fighting those`
-            },
-            {
-                time: 106,
-                lyric: [
-                    {
-                        anchor: `crooked thieves`,
-                        annotation: {
-                            description: ``,
-                            wormhole: `crooked_thieves`
-                        }
-                    },
-                    `with your`,
-                    {
-                        anchor: `sheriff's badge and gun…`,
-                        annotation: {
-                            description: `After China stripped Taiwan of international recognition, a bootleg industry emerged to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records and watching old Westerns.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [REFERENCE]: true
+            lyricUnit: [
+                {
+                    time: 85,
+                    lyric: [
+                        `Didi, you've`,
+                        {
+                            anchor: `been in the bath`,
+                            annotation: {
+                                description: `After coming home, I soak in the bathtub until well into the evening.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             }
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                        },
+                        `all this time.`
+                    ]
+                },
+                {
+                    time: 91,
+                    lyric: `Didi, come out, you can't soak there all night.`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: BRIDGE
-            }
-        ],
-        [
-            {
-                time: 112,
-                lyric: `Didi, one day you will be a picture`
             },
-            {
-                time: 115,
-                lyric: [
-                    `taped to all the`,
-                    {
-                        anchor: `girls' mirrors.`,
-                        annotation: {
-                            description: `My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
+            lyricUnit: [
+                {
+                    time: 100,
+                    lyric: `Didi, someday you will be a hero`
+                },
+                {
+                    time: 103,
+                    lyric: `in the movies, fighting those`
+                },
+                {
+                    time: 106,
+                    lyric: [
+                        {
+                            anchor: `crooked thieves`,
+                            annotation: {
+                                description: ``,
+                                wormhole: `crooked_thieves`
+                            }
+                        },
+                        `with your`,
+                        {
+                            anchor: `sheriff's badge and gun…`,
+                            annotation: {
+                                description: `After China stripped Taiwan of international recognition, a bootleg industry emerged to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records and watching old Westerns.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [REFERENCE]: true
+                                }
                             }
                         }
-                    }
-                ]
-            },
-            {
-                time: 117,
-                lyric: `They'll say, who now could have ever figured`
-            },
-            {
-                time: 120,
-                lyric: [
-                    `you'd`,
-                    {
-                        anchor: `finally become someone?`,
-                        annotation: {
-                            wormhole: `finally_become_someone`
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -392,59 +369,90 @@ export default {
                 },
                 stanzaType: BRIDGE,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 123,
-                centre: {
-                    italic: `(whistles)`
+            },
+            lyricUnit: [
+                {
+                    time: 112,
+                    lyric: `Didi, one day you will be a picture`
+                },
+                {
+                    time: 115,
+                    lyric: [
+                        `taped to all the`,
+                        {
+                            anchor: `girls' mirrors.`,
+                            annotation: {
+                                description: `My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    time: 117,
+                    lyric: `They'll say, who now could have ever figured`
+                },
+                {
+                    time: 120,
+                    lyric: [
+                        `you'd`,
+                        {
+                            anchor: `finally become someone?`,
+                            annotation: {
+                                wormhole: `finally_become_someone`
+                            }
+                        }
+                    ]
                 }
-            },
-            {
-                isUnitMap: true,
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: REFRAIN
-            }
-        ],
-        [
-            {
-                time: 129,
-                lyric: `Didi dear, I'm sorry that I yelled at you that way.`
             },
-            {
-                time: 135,
-                lyric: `Didi dear, I know today just wasn't your day.`
-            },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 123,
+                    centre: {
+                        italic: `(whistles)`
+                    }
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: PRECHORUS
-            }
-        ],
-        [
-            {
-                time: 141,
-                lyric: `And now I think all I want is my Didi well by tomorrow,`
             },
-            {
-                time: 146,
-                lyric: `and there are things I hope my Didi will never know.`
-            },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 129,
+                    lyric: `Didi dear, I'm sorry that I yelled at you that way.`
+                },
+                {
+                    time: 135,
+                    lyric: `Didi dear, I know today just wasn't your day.`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 152,
-                lyric: `Yes, and now I think all I want is my Didi well by tomorrow,`
             },
-            {
-                time: 158,
-                lyric: `and there are things I hope Didi will never have to know.`
-            },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 141,
+                    lyric: `And now I think all I want is my Didi well by tomorrow,`
+                },
+                {
+                    time: 146,
+                    lyric: `and there are things I hope my Didi will never know.`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -463,23 +471,33 @@ export default {
                 },
                 stanzaType: CHORUS,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 163,
-                centre: {
-                    italic: `(fade out)`
-                }
             },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 152,
+                    lyric: `Yes, and now I think all I want is my Didi well by tomorrow,`
+                },
+                {
+                    time: 158,
+                    lyric: `and there are things I hope Didi will never have to know.`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: OUTRO
-            }
-        ],
-        [
-            {
-                isUnitMap: true,
+            },
+            lyricUnit: [
+                {
+                    time: 163,
+                    centre: {
+                        italic: `(fade out)`
+                    }
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -506,6 +524,6 @@ export default {
                     }
                 }
             }
-        ]
+        }
     ]
 }

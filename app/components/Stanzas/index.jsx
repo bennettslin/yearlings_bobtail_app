@@ -69,12 +69,12 @@ class Stanzas extends PureComponent {
             )}>
 
                 {/* This is the title. */}
-                <Unit
+                {/* <Unit
                     {...{
                         unitIndex: 0,
                         setLyricAnnotationElement
                     }}
-                />
+                /> */}
 
                 {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
 

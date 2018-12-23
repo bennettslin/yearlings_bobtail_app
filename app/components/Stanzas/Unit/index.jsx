@@ -14,7 +14,7 @@ import UnitCard from './Card'
 import UnitDot from './Dot'
 
 import { TITLE } from 'constants/lyrics'
-import { getLyricUnitArray } from './helper'
+import { getUnit } from './helper'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 const mapStateToProps = ({
@@ -50,9 +50,11 @@ class Unit extends PureComponent {
             // Pass to lyric stanza view so it knows to update.
             { renderedSongIndex } = other,
 
-            unitArray = getLyricUnitArray(renderedSongIndex, unitIndex),
-
-            unitMapObject = unitArray[unitArray.length - 1],
+            unit = getUnit(renderedSongIndex, unitIndex),
+            {
+                lyricUnit,
+                unitMap
+            } = unit,
 
             {
                 stanzaIndex,
@@ -66,16 +68,17 @@ class Unit extends PureComponent {
                 subCard,
                 topSideCard,
                 bottomSideCard
-            } = unitMapObject,
+            } = unitMap,
 
             // This exists solely for "Maranatha."
             topSideSubCard = topSideCard ?
                 topSideCard[topSideCard.length - 1].subCard : null,
 
-            isTitleUnit = unitIndex === 0,
+            // isTitleUnit = unitIndex === 0,
+            isTitleUnit = false,
 
             hasSide = Boolean(topSideCard || bottomSideCard),
-            isDotOnly = Boolean(dotCard) && unitArray.length === 1,
+            isDotOnly = Boolean(dotCard) && !lyricUnit,
             isSideBottomOnly = !topSideCard && Boolean(bottomSideCard)
 
         return (
@@ -86,7 +89,7 @@ class Unit extends PureComponent {
 
                     stanzaIndex,
                     stanzaTypeIndex,
-                    unitArray,
+                    lyricUnit,
                     subCardType,
                     sideCardType,
                     sideSubCardType,
@@ -129,7 +132,7 @@ class UnitView extends PureComponent {
         isTitleUnit: PropTypes.bool.isRequired,
         isLastUnit: PropTypes.bool.isRequired,
 
-        unitArray: PropTypes.array.isRequired,
+        lyricUnit: PropTypes.array.isRequired,
         dotCard: PropTypes.object,
         subCard: PropTypes.array,
         topSideCard: PropTypes.array,
@@ -151,7 +154,7 @@ class UnitView extends PureComponent {
                 /* eslint-enable no-unused-vars */
 
                 // From props.
-                unitArray,
+                lyricUnit,
 
                 // From controller.
                 unitIndex,
@@ -182,7 +185,7 @@ class UnitView extends PureComponent {
                 className={cx(
                     // "Parent of verse index."
                     getParentOfVerseClassNamesForIndices({
-                        entities: unitArray
+                        entities: lyricUnit
                     }),
 
                     'Unit',
@@ -211,7 +214,7 @@ class UnitView extends PureComponent {
                     )}>
                         <UnitCard {...other}
                             inMain
-                            stanzaArray={unitArray}
+                            stanzaArray={lyricUnit}
                             isTruncatable={hasSide}
                         />
                         <UnitCard {...other}

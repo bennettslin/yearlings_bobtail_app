@@ -1,6 +1,7 @@
 import { getSongObject } from 'album/api/songs'
 
-export const getLyricUnitArray = (songIndex, unitIndex) => {
+export const getUnit = (songIndex, unitIndex) => {
     const songs = getSongObject(songIndex)
+
     return songs.lyricUnits ? songs.lyricUnits[unitIndex] : []
 }

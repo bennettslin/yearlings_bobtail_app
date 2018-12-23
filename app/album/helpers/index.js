@@ -4,13 +4,13 @@ import {
     registerCards,
     addDestinationWormholeLinks,
     finalPrepareCard,
-    addDestinationWormholeIndices,
+    // addDestinationWormholeIndices,
     addDestinationWormholeFormats
 } from './annotations'
 
 import {
     recurseToFindAnchors,
-    registerTitle,
+    // registerTitle,
     registerHasSideCards,
     initialRegisterStanzaTypes,
     registerIsDoublespeaker,
@@ -54,7 +54,7 @@ export const parseAlbumData = (albumObject) => {
     _finalPrepareAlbum(albumObject)
 
     // After preparation.
-    addDestinationWormholeIndices(albumObject)
+    // addDestinationWormholeIndices(albumObject)
 
     logParse('End parse album data.')
 
@@ -80,7 +80,7 @@ const _initialPrepareAlbum = (albumObject) => {
             songObject.tempSongIndex = songIndex
 
             // Add title object to lyrics array.
-            registerTitle(songObject)
+            // registerTitle(songObject)
 
             /**
              * Let app know that song has side stanzas. Only applies to "On a
@@ -119,52 +119,56 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     // Allow easy access to verse metadata, without having to traverse lyrics.
     songObject.songVerseConfigs = []
 
-    lyricUnits.forEach((unitArray, unitIndex) => {
+    lyricUnits.forEach((unit, unitIndex) => {
+        const {
+            unitMap,
+            lyricUnit
+        } = unit
 
         // Let unit know all the verse indices that it contains.
         let firstVerseIndex
 
-        unitArray.forEach(verseObject => {
+        if (lyricUnit) {
+            lyricUnit.forEach(verseObject => {
 
-            // Tell song it is a doublespeaker song.
-            registerIsDoublespeaker(songObject, verseObject)
+                // Tell song it is a doublespeaker song.
+                registerIsDoublespeaker(songObject, verseObject)
 
-            /**
-             * Recurse until each anchor is found. Initially, we will also
-             * register each verse with time.
-             */
-            recurseToFindAnchors({
-                // Tell each stanza the units that it owns.
-                unitIndex,
+                /**
+                 * Recurse until each anchor is found. Initially, we will also
+                 * register each verse with time.
+                 */
+                recurseToFindAnchors({
+                    // Tell each stanza the units that it owns.
+                    unitIndex,
 
-                // Pass this to register each verse time.
-                verseTimesCounter,
+                    // Pass this to register each verse time.
+                    verseTimesCounter,
 
-                albumObject,
-                songObject,
-                verseObject,
-                callbackFunction: _initialRegisterAnnotation
-            })
+                    albumObject,
+                    songObject,
+                    verseObject,
+                    callbackFunction: _initialRegisterAnnotation
+                })
 
-            if (!isNaN(verseObject.verseIndex)) {
+                if (!isNaN(verseObject.verseIndex)) {
 
-                // Set first verse index once.
-                if (isNaN(firstVerseIndex)) {
-                    firstVerseIndex = verseObject.verseIndex
+                    // Set first verse index once.
+                    if (isNaN(firstVerseIndex)) {
+                        firstVerseIndex = verseObject.verseIndex
+                    }
                 }
-            }
 
-            /**
-             * If this is the unit map, add temp first verse index. This is
-             * used to register the scene later.
-             */
-            if (verseObject.isUnitMap) {
-                verseObject.tempFirstVerseIndex = firstVerseIndex
-            }
+                /**
+                 * If this is the unit map, add temp first verse index. This is
+                 * used to register the scene later.
+                 */
+                unitMap.tempFirstVerseIndex = firstVerseIndex
 
-            // Tell song its dot stanza count, for admin purposes.
-            registerAdminDotStanzas(songObject, verseObject)
-        })
+                // Tell song its dot stanza count, for admin purposes.
+                registerAdminDotStanzas(songObject, verseObject)
+            })
+        }
     })
 
     // Clean up.
@@ -294,17 +298,21 @@ const _finalPrepareAlbum = (albumObject) => {
 const _finalPrepareLyrics = (songObject) => {
     const { lyricUnits } = songObject
 
-    lyricUnits.forEach(unitArray => {
+    lyricUnits.forEach(unit => {
 
-        unitArray.forEach(verseObject => {
+        const { lyricUnit } = unit
 
-            // Recurse until each anchor is found.
-            recurseToFindAnchors({
-                songObject,
-                verseObject,
-                callbackFunction: _finalRegisterAnnotation
+        if (lyricUnit) {
+            lyricUnit.forEach(verseObject => {
+
+                // Recurse until each anchor is found.
+                recurseToFindAnchors({
+                    songObject,
+                    verseObject,
+                    callbackFunction: _finalRegisterAnnotation
+                })
             })
-        })
+        }
     })
 }
 

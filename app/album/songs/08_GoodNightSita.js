@@ -27,13 +27,8 @@ export default {
         }
     },
     lyricUnits: [
-        [
-            {
-                time: 0,
-                lyric: `"Good night," she says`
-            },
-            {
-                isUnitMap: true,
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -51,51 +46,16 @@ export default {
                     }
                 },
                 stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 3,
-                lyric: [
-                    `or`,
-                    {
-                        anchor: `should I should you`,
-                        annotation: {
-                            description: `At this point, I'm too flustered to form complete thoughts, let alone complete sentences.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
-                    },
-                    `refuse`
-                ]
             },
-            {
-                time: 5,
-                lyric: `by a gutter gurgling then we'll choose`
-            },
-            {
-                time: 7,
-                lyric: `either never live yet live on or to`
-            },
-            {
-                time: 9,
-                lyric: [
-                    `love first`,
-                    {
-                        anchor: `without once knowing love`,
-                        annotation: {
-                            description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision to me. If everyone thought this way, then no one could ever be in a relationship, just like no one would ever find a job if every hiring manager insisted on seeing previous work experience.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 0,
+                    lyric: `"Good night," she says`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -107,524 +67,531 @@ export default {
                 },
                 stanzaType: VERSES,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 11,
-                lyric: `when cesspit dead ends for further speech`
             },
-            {
-                time: 12,
-                lyric: `are these stuttered sentences we speak`
-            },
-            {
-                time: 14,
-                lyric: [
-                    `for this kid wearing no`,
-                    {
-                        anchor: `decoder ring`,
-                        annotation: {
-                            description: [
-                                `A`,
-                                {
-                                    anchor: `secret decoder ring`,
-                                    wiki: `Secret_decoder_ring`
-                                },
-                                `was a toy purchased through mail that allowed children to decipher encrypted messages. It would have been handy to have on a date, since I was constantly trying to tease out hidden meanings in the most basic exchanges.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                time: 16,
-                lyric: [
-                    {
-                        anchor: `Dutch courage`,
-                        properNoun: true,
-                        annotation: [
-                            {
-                                description: [
-                                    `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
-                                    {
-                                        anchor: `Dutch courage`,
-                                        wiki: `Dutch_courage`
-                                    },
-                                    `refers to misplaced confidence gained from alcohol.`
-                                ]
-                            },
-                            {
-                                description: `Having an older friend who faithfully plied me with cheap twelve-packs, I had earlier downed a couple of cans, as I was wont to do before every date.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        ]
-                    },
-                    `wimped out to`,
-                    {
-                        anchor: `going Dutch`,
-                        annotation: [
-                            {
-                                description: [
-                                    `To`,
-                                    {
-                                        anchor: `go Dutch`,
-                                        wiki: `Going_Dutch`
-                                    },
-                                    `means to split the cost of a meal, since stinginess was another intrinsic failing ascribed to the Dutch.`
-                                ]
-                            },
-                            {
-                                description: `Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
-                stanzaType: VERSES,
-                subsequent: true
-            }
-        ],
-        [
-            {
-                time: 18,
-                lyric: `but even no sponge`
-            },
-            {
-                time: 20,
-                lyric: [
-                    {
-                        anchor: `nor a barnacle`,
-                        annotation: [
-                            {
-                                description: [
-                                    {
-                                        anchor: `"Nora Barnacle"`,
-                                        wiki: `Nora_Barnacle`
-                                    },
-                                    `was the wife of James Joyce and the inspiration for his character Molly Bloom, whose interior monologue in`,
-                                    {
-                                        italic: `Ulysses`
-                                    },
-                                    `in turn served as my inspiration for this song.`
-                                ],
-                                dotKeys: {
-                                    [PUN]: true
-                                }
-                            },
-                            {
-                                wormhole: `barnacle`
-                            }
-                        ]
-                    },
-                    `minds`
-                ]
-            },
-            {
-                time: 22,
-                lyric: {
-                    anchor: `swept in unchartable tides`,
-                    annotation: [
+            lyricUnit: [
+                {
+                    time: 3,
+                    lyric: [
+                        `or`,
                         {
-                            description: `Stencilled above many storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean."`,
-                            dotKeys: {
-                                [REFERENCE]: true
+                            anchor: `should I should you`,
+                            annotation: {
+                                description: `At this point, I'm too flustered to form complete thoughts, let alone complete sentences.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             }
                         },
+                        `refuse`
+                    ]
+                },
+                {
+                    time: 5,
+                    lyric: `by a gutter gurgling then we'll choose`
+                },
+                {
+                    time: 7,
+                    lyric: `either never live yet live on or to`
+                },
+                {
+                    time: 9,
+                    lyric: [
+                        `love first`,
                         {
-                            description: `The constant peril of being steered in directions for which I'm ill-prepared has kept me on edge throughout this date, as usual. But a nearby storm drain reminds me that many things, including sponge and barnacle larvae, are regularly carried by the current to unknown regions, and they don't sweat it.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                            anchor: `without once knowing love`,
+                            annotation: {
+                                description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision to me. If everyone thought this way, then no one could ever be in a relationship, just like no one would ever find a job if every hiring manager insisted on seeing previous work experience.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
                     ]
                 }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: VERSES,
+                subsequent: true
             },
-            {
-                time: 24,
-                lyric: [
-                    `they just`,
-                    {
-                        anchor: `always know to pry`,
-                        annotation: {
-                            description: `After all, none of my friends sweat the risk of being seen as a "sponge" either. Confident that they're just as much there to be won over, they show curiosity by pressing their date for details, the way a starfish will pry open an oyster resting on the seafloor.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                time: 26,
-                lyric: [
-                    `for the`,
-                    {
-                        anchor: `innermost matryoshka's`,
-                        annotation: [
-                            {
+            lyricUnit: [
+                {
+                    time: 11,
+                    lyric: `when cesspit dead ends for further speech`
+                },
+                {
+                    time: 12,
+                    lyric: `are these stuttered sentences we speak`
+                },
+                {
+                    time: 14,
+                    lyric: [
+                        `for this kid wearing no`,
+                        {
+                            anchor: `decoder ring`,
+                            annotation: {
                                 description: [
-                                    `On our first date, I took Sita to a natural history museum with many ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
+                                    `A`,
                                     {
-                                        anchor: `matryoshkas,`,
-                                        wiki: `Matryoshka_doll`
+                                        anchor: `secret decoder ring`,
+                                        wiki: `Secret_decoder_ring`
                                     },
-                                    `which nest one inside another.`
+                                    `was a toy purchased through mail that allowed children to decipher encrypted messages. It would have been handy to have on a date, since I was constantly trying to tease out hidden meanings in the most basic exchanges.`
                                 ],
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            },
-                            {
-                                description: `Mistakes made with one woman still offered lessons to apply towards the next, so each date felt like prying open one nesting doll to get to another, with the ultimate hope of reaching the last one that doesn't turn out hollow.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
                             }
-                        ]
-                    }
-                ]
-            },
-            {
-                time: 28,
-                lyric: `heart of gold inside`
-            },
-            {
-                isUnitMap: true,
-                stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 29,
-                lyric: [
-                    `till then`,
-                    {
-                        anchor: `crack up another doll`,
-                        annotation: {
-                            description: `A friend once advised me that if I can keep a woman "cracking up" at my jokes all night, then I'll always be golden. Not being very funny, I settled on some weird combination of clever quips and goofy postures.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [PUN]: true
-                            }
                         }
-                    }
-                ]
+                    ]
+                },
+                {
+                    time: 16,
+                    lyric: [
+                        {
+                            anchor: `Dutch courage`,
+                            properNoun: true,
+                            annotation: [
+                                {
+                                    description: [
+                                        `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
+                                        {
+                                            anchor: `Dutch courage`,
+                                            wiki: `Dutch_courage`
+                                        },
+                                        `refers to misplaced confidence gained from alcohol.`
+                                    ]
+                                },
+                                {
+                                    description: `Having an older friend who faithfully plied me with cheap twelve-packs, I had earlier downed a couple of cans, as I was wont to do before every date.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                }
+                            ]
+                        },
+                        `wimped out to`,
+                        {
+                            anchor: `going Dutch`,
+                            annotation: [
+                                {
+                                    description: [
+                                        `To`,
+                                        {
+                                            anchor: `go Dutch`,
+                                            wiki: `Going_Dutch`
+                                        },
+                                        `means to split the cost of a meal, since stinginess was another intrinsic failing ascribed to the Dutch.`
+                                    ]
+                                },
+                                {
+                                    description: `Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: CHORUS
             },
-            {
-                time: 32,
-                lyric: [
-                    `to find the`,
-                    {
-                        anchor: `chrysalis unchristened`,
+            lyricUnit: [
+                {
+                    time: 18,
+                    lyric: `but even no sponge`
+                },
+                {
+                    time: 20,
+                    lyric: [
+                        {
+                            anchor: `nor a barnacle`,
+                            annotation: [
+                                {
+                                    description: [
+                                        {
+                                            anchor: `"Nora Barnacle"`,
+                                            wiki: `Nora_Barnacle`
+                                        },
+                                        `was the wife of James Joyce and the inspiration for his character Molly Bloom, whose interior monologue in`,
+                                        {
+                                            italic: `Ulysses`
+                                        },
+                                        `in turn served as my inspiration for this song.`
+                                    ],
+                                    dotKeys: {
+                                        [PUN]: true
+                                    }
+                                },
+                                {
+                                    wormhole: `barnacle`
+                                }
+                            ]
+                        },
+                        `minds`
+                    ]
+                },
+                {
+                    time: 22,
+                    lyric: {
+                        anchor: `swept in unchartable tides`,
                         annotation: [
                             {
-                                description: [
-                                    `As we glided past a display on the lifecycle of butterflies, it occurred to me that what I sought was a`,
-                                    {
-                                        anchor: `chrysalis.`,
-                                        wiki: `Pupa`
-                                    },
-                                    `That is, a rare specimen of woman unworldly enough not to be turned off by my own lack of experience. Unfortunately, every other low-status male had the same idea.`
-                                ],
+                                description: `Stencilled above many storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean."`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: `The constant peril of being steered in directions for which I'm ill-prepared has kept me on edge throughout this date, as usual. But a nearby storm drain reminds me that many things, including sponge and barnacle larvae, are regularly carried by the current to unknown regions, and they don't sweat it.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
                         ]
-                    },
-                    `to all`
-                ]
-            },
-            {
-                time: 36,
-                lyric: [
-                    `who'd buy this`,
-                    {
-                        anchor: `aping jaw`,
-                        annotation: {
-                            description: [
-                                `We paused for a minute to learn about`,
-                                {
-                                    anchor: `Piltdown Man,`,
-                                    wiki: `Piltdown_Man`
-                                },
-                                `a paleontological hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human. I was a comparable fraud, as the things that came out of my mouth were meant to inflate the perceived volume of my head.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
-                            }
-                        }
-                    },
-                    `fixed to his skull`
-                ]
-            },
-            {
-                time: 40,
-                lyric: `swaggering down these barren exhibit halls`
-            },
-            {
-                isUnitMap: true,
-                stanzaType: POSTCHORUS
-            }
-        ],
-        [
-            {
-                time: 45,
-                lyric: `but totems so revered`
-            },
-            {
-                time: 47,
-                lyric: [
-                    `when`,
-                    {
-                        anchor: `defined by ambrosia beers`,
-                        annotation: [
-                            {
-                                description: [
-                                    {
-                                        anchor: `Ambrosia`,
-                                        wiki: `Ambrosia`
-                                    },
-                                    `was the food of the Greek gods, just as beer made me feel omnipotent.`
-                                ],
+                    }
+                },
+                {
+                    time: 24,
+                    lyric: [
+                        `they just`,
+                        {
+                            anchor: `always know to pry`,
+                            annotation: {
+                                description: `After all, none of my friends sweat the risk of being seen as a "sponge" either. Confident that they're just as much there to be won over, they show curiosity by pressing their date for details, the way a starfish will pry open an oyster resting on the seafloor.`,
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
-                            },
-                            {
-                                description: [
-                                    `American author`,
-                                    {
-                                        anchor: `"Ambrose Bierce"`,
-                                        wiki: `Ambrose_Bierce`
-                                    },
-                                    `wrote a collection of satirical definitions called`,
-                                    {
-                                        italic: `The Devil's Dictionary.`
-                                    },
-                                    `My sense of humour at the time was a naive approximation of his brand of cynical wit.`
-                                ],
+                            }
+                        }
+                    ]
+                },
+                {
+                    time: 26,
+                    lyric: [
+                        `for the`,
+                        {
+                            anchor: `innermost matryoshka's`,
+                            annotation: [
+                                {
+                                    description: [
+                                        `On our first date, I took Sita to a natural history museum with many ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
+                                        {
+                                            anchor: `matryoshkas,`,
+                                            wiki: `Matryoshka_doll`
+                                        },
+                                        `which nest one inside another.`
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
+                                {
+                                    description: `Mistakes made with one woman still offered lessons to apply towards the next, so each date felt like prying open one nesting doll to get to another, with the ultimate hope of reaching the last one that doesn't turn out hollow.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    time: 28,
+                    lyric: `heart of gold inside`
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: POSTCHORUS
+            },
+            lyricUnit: [
+                {
+                    time: 29,
+                    lyric: [
+                        `till then`,
+                        {
+                            anchor: `crack up another doll`,
+                            annotation: {
+                                description: `A friend once advised me that if I can keep a woman "cracking up" at my jokes all night, then I'll always be golden. Not being very funny, I settled on some weird combination of clever quips and goofy postures.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
                                 }
                             }
-                        ]
-                    }
-                ]
-            },
-            {
-                time: 48,
-                lyric: [
-                    `in time are seen with`,
-                    {
-                        anchor: `a focus grown clear`,
-                        annotation: {
-                            description: `A few hours into a date, my buzz would wear off, and I would realise that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a totem pole carved from a stack of stumps rather than a single trunk.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
-                            }
                         }
-                    }
-                ]
-            },
-            {
-                time: 50,
-                lyric: `and slowly the story erodes`
-            },
-            {
-                isUnitMap: true,
-                stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 52,
-                lyric: [
-                    {
-                        anchor: `pidgin palaver`,
-                        annotation: [
-                            {
+                    ]
+                },
+                {
+                    time: 32,
+                    lyric: [
+                        `to find the`,
+                        {
+                            anchor: `chrysalis unchristened`,
+                            annotation: [
+                                {
+                                    description: [
+                                        `As we glided past a display on the lifecycle of butterflies, it occurred to me that what I sought was a`,
+                                        {
+                                            anchor: `chrysalis.`,
+                                            wiki: `Pupa`
+                                        },
+                                        `That is, a rare specimen of woman unworldly enough not to be turned off by my own lack of experience. Unfortunately, every other low-status male had the same idea.`
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true
+                                    }
+                                }
+                            ]
+                        },
+                        `to all`
+                    ]
+                },
+                {
+                    time: 36,
+                    lyric: [
+                        `who'd buy this`,
+                        {
+                            anchor: `aping jaw`,
+                            annotation: {
                                 description: [
-                                    `Stopping to rest our feet in a gallery devoted to Native American history, we learned about the development of`,
+                                    `We paused for a minute to learn about`,
                                     {
-                                        anchor: `pidgins,`,
-                                        wiki: `Pidgin`
+                                        anchor: `Piltdown Man,`,
+                                        wiki: `Piltdown_Man`
                                     },
-                                    `or impromptu languages intended solely to facilitate trade between colonists and natives. Such exchanges were necessarily peppered with overt expressions of goodwill to make up for inevitable miscommunication, which also aptly describes my first date conversations with Sita.`
+                                    `a paleontological hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human. I was a comparable fraud, as the things that came out of my mouth were meant to inflate the perceived volume of my head.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
-                        ]
-                    },
-                    `exchanged`
-                ]
+                        },
+                        `fixed to his skull`
+                    ]
+                },
+                {
+                    time: 40,
+                    lyric: `swaggering down these barren exhibit halls`
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: VERSES
             },
-            {
-                time: 54,
-                lyric: `can only transfer good faith`
-            },
-            {
-                time: 56,
-                lyric: [
-                    `hyped up like some`,
-                    {
-                        anchor: `disastrous play`,
-                        annotation: {
-                            description: `On our second date, Sita invited me to see her friend perform in a play, which I ended up hating. In retrospect, it probably wasn't bad. My impression of the night was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+            lyricUnit: [
+                {
+                    time: 45,
+                    lyric: `but totems so revered`
+                },
+                {
+                    time: 47,
+                    lyric: [
+                        `when`,
+                        {
+                            anchor: `defined by ambrosia beers`,
+                            annotation: [
+                                {
+                                    description: [
+                                        {
+                                            anchor: `Ambrosia`,
+                                            wiki: `Ambrosia`
+                                        },
+                                        `was the food of the Greek gods, just as beer made me feel omnipotent.`
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    description: [
+                                        `American author`,
+                                        {
+                                            anchor: `"Ambrose Bierce"`,
+                                            wiki: `Ambrose_Bierce`
+                                        },
+                                        `wrote a collection of satirical definitions called`,
+                                        {
+                                            italic: `The Devil's Dictionary.`
+                                        },
+                                        `My sense of humour at the time was a naive approximation of his brand of cynical wit.`
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [PUN]: true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    time: 48,
+                    lyric: [
+                        `in time are seen with`,
+                        {
+                            anchor: `a focus grown clear`,
+                            annotation: {
+                                description: `A few hours into a date, my buzz would wear off, and I would realise that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a totem pole carved from a stack of stumps rather than a single trunk.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
-                    }
-                ]
-            },
-            {
-                time: 58,
-                lyric: [
-                    `that starts with a`,
-                    {
-                        anchor: `lone ringing phone`,
-                        annotation: {
-                            description: `The play began with the theatre going pitch black. As the audience fell to a hush, a phone started ringing, and it wasn't immediately clear that the sound came from the stage.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 50,
+                    lyric: `and slowly the story erodes`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: VERSES,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 60,
-                lyric: `but even so`
             },
-            {
-                time: 62,
-                lyric: `just that it ever rang at all`
-            },
-            {
-                time: 64,
-                lyric: [
-                    `for if the`,
-                    {
-                        anchor: `tactic is to stall`,
-                        annotation: {
-                            description: `I was advised by friends to wait three days before calling a woman back, and yet it was always agony when she invariably did the same.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                time: 66,
-                lyric: `you're just ecstatic she called`
-            },
-            {
-                time: 68,
-                lyric: [
-                    `what this`,
-                    {
-                        anchor: `understudy sought`,
-                        annotation: {
-                            description: [
-                                `Dating as a low-status male felt comparable to being an`,
+            lyricUnit: [
+                {
+                    time: 52,
+                    lyric: [
+                        {
+                            anchor: `pidgin palaver`,
+                            annotation: [
                                 {
-                                    anchor: `understudy,`,
-                                    wiki: `Understudy`
-                                },
-                                `a performer in theatre who serves as a replacement on short notice, as I undertook all of the same preparation yet was rewarded with almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                                    description: [
+                                        `Stopping to rest our feet in a gallery devoted to Native American history, we learned about the development of`,
+                                        {
+                                            anchor: `pidgins,`,
+                                            wiki: `Pidgin`
+                                        },
+                                        `or impromptu languages intended solely to facilitate trade between colonists and natives. Such exchanges were necessarily peppered with overt expressions of goodwill to make up for inevitable miscommunication, which also aptly describes my first date conversations with Sita.`
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true
+                                    }
+                                }
+                            ]
+                        },
+                        `exchanged`
+                    ]
+                },
+                {
+                    time: 54,
+                    lyric: `can only transfer good faith`
+                },
+                {
+                    time: 56,
+                    lyric: [
+                        `hyped up like some`,
+                        {
+                            anchor: `disastrous play`,
+                            annotation: {
+                                description: `On our second date, Sita invited me to see her friend perform in a play, which I ended up hating. In retrospect, it probably wasn't bad. My impression of the night was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
-                    },
-                    `from his number`
-                ]
-            },
-            {
-                time: 70,
-                lyric: `strutting on the wall`
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 58,
+                    lyric: [
+                        `that starts with a`,
+                        {
+                            anchor: `lone ringing phone`,
+                            annotation: {
+                                description: `The play began with the theatre going pitch black. As the audience fell to a hush, a phone started ringing, and it wasn't immediately clear that the sound came from the stage.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 71,
-                lyric: `we whine when first we got shunned`
             },
-            {
-                time: 73,
-                lyric: [
-                    `then wise up and`,
-                    {
-                        anchor: `learn to shotgun`,
-                        annotation: {
-                            description: `I had come to adopt the shotgun approach to dating, which involves hitting on anyone at any moment, and works because math works. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+            lyricUnit: [
+                {
+                    time: 60,
+                    lyric: `but even so`
+                },
+                {
+                    time: 62,
+                    lyric: `just that it ever rang at all`
+                },
+                {
+                    time: 64,
+                    lyric: [
+                        `for if the`,
+                        {
+                            anchor: `tactic is to stall`,
+                            annotation: {
+                                description: `I was advised by friends to wait three days before calling a woman back, and yet it was always agony when she invariably did the same.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
-                    }
-                ]
-            },
-            {
-                time: 75,
-                lyric: `last show's set still propped up`
-            },
-            {
-                time: 77,
-                lyric: [
-                    `so we'll`,
-                    {
-                        anchor: `breeze through our parts`,
-                        annotation: {
-                            description: `With every witty remark I made that got a good response, I would be sure to use it again on the next woman I dated, much like an actor reprising a role. In turn, the notion that this was all just an act helped lessen the sting of rejection.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                    ]
+                },
+                {
+                    time: 66,
+                    lyric: `you're just ecstatic she called`
+                },
+                {
+                    time: 68,
+                    lyric: [
+                        `what this`,
+                        {
+                            anchor: `understudy sought`,
+                            annotation: {
+                                description: [
+                                    `Dating as a low-status male felt comparable to being an`,
+                                    {
+                                        anchor: `understudy,`,
+                                        wiki: `Understudy`
+                                    },
+                                    `a performer in theatre who serves as a replacement on short notice, as I undertook all of the same preparation yet was rewarded with almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                        },
+                        `from his number`
+                    ]
+                },
+                {
+                    time: 70,
+                    lyric: `strutting on the wall`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -642,221 +609,213 @@ export default {
                     }
                 },
                 stanzaType: POSTCHORUS
-            }
-        ],
-        [
-            {
-                time: 79,
-                lyric: [
-                    `though each`,
-                    {
-                        anchor: `kind new ultimatum`,
-                        annotation: {
-                            description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home alone.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+            },
+            lyricUnit: [
+                {
+                    time: 71,
+                    lyric: `we whine when first we got shunned`
+                },
+                {
+                    time: 73,
+                    lyric: [
+                        `then wise up and`,
+                        {
+                            anchor: `learn to shotgun`,
+                            annotation: {
+                                description: `I had come to adopt the shotgun approach to dating, which involves hitting on anyone at any moment, and works because math works. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
-                    }
-                ]
-            },
-            {
-                time: 81,
-                lyric: `to his tribe left old and jaded`
-            },
-            {
-                time: 83,
-                lyric: `the boy brave who cultivated`
-            },
-            {
-                time: 84,
-                lyric: [
-                    `brave`,
-                    {
-                        anchor: `rejection into art`,
-                        annotation: {
-                            description: [
-                                `I learned to accept rejection by treating it as subject matter for new songs. But it then logically follows that a life filled with rejection can`,
-                                {
-                                    emphasis: `itself`
-                                },
-                                `be a work of art.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                    ]
+                },
+                {
+                    time: 75,
+                    lyric: `last show's set still propped up`
+                },
+                {
+                    time: 77,
+                    lyric: [
+                        `so we'll`,
+                        {
+                            anchor: `breeze through our parts`,
+                            annotation: {
+                                description: `With every witty remark I made that got a good response, I would be sure to use it again on the next woman I dated, much like an actor reprising a role. In turn, the notion that this was all just an act helped lessen the sting of rejection.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: POSTCHORUS,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 86,
-                lyric: [
-                    `but`,
-                    {
-                        anchor: `died unfinished`,
-                        annotation: {
-                            description: `Of course, there is no guarantee that such a work can ever be seen to completion, since the ready procurement of its raw materials lies beyond the artist's control.`,
-                            dotKeys: {
-                                [OBSERVATION]: true
+            },
+            lyricUnit: [
+                {
+                    time: 79,
+                    lyric: [
+                        `though each`,
+                        {
+                            anchor: `kind new ultimatum`,
+                            annotation: {
+                                description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home alone.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
-                    },
-                    `alas`
-                ]
-            },
-            {
-                time: 88,
-                lyric: `hotlines get busy just as`
-            },
-            {
-                time: 90,
-                lyric: `thoughts slide to slitting wrists that`
-            },
-            {
-                time: 92,
-                lyric: [
-                    `hint of`,
-                    {
-                        anchor: `sampler cologne`,
-                        annotation: {
-                            description: `I kept a pile of scented strips torn from cologne advertisements in old magazines, and would rub several on my wrists right before a date.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+                    ]
+                },
+                {
+                    time: 81,
+                    lyric: `to his tribe left old and jaded`
+                },
+                {
+                    time: 83,
+                    lyric: `the boy brave who cultivated`
+                },
+                {
+                    time: 84,
+                    lyric: [
+                        `brave`,
+                        {
+                            anchor: `rejection into art`,
+                            annotation: {
+                                description: [
+                                    `I learned to accept rejection by treating it as subject matter for new songs. But it then logically follows that a life filled with rejection can`,
+                                    {
+                                        emphasis: `itself`
+                                    },
+                                    `be a work of art.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 94,
-                lyric: `and a lass sniffing out these rote charms`
             },
-            {
-                time: 96,
-                lyric: [
-                    `always rides in`,
-                    {
-                        anchor: `single go-karts`,
-                        annotation: {
-                            description: `On this most recent date with Sita, we visited a go-kart raceway. They had twin go-karts available that were intended to seat a parent and child side by side. I asked Sita if she wanted to ride one together. She politely declined.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+            lyricUnit: [
+                {
+                    time: 86,
+                    lyric: [
+                        `but`,
+                        {
+                            anchor: `died unfinished`,
+                            annotation: {
+                                description: `Of course, there is no guarantee that such a work can ever be seen to completion, since the ready procurement of its raw materials lies beyond the artist's control.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
-                    }
-                ]
-            },
-            {
-                time: 98,
-                lyric: [
-                    `as we wind an`,
-                    {
-                        anchor: `endless flowchart`,
-                        annotation: {
-                            description: `One fantasy of mine was to preemptively map out and memorise all the possible ways a dinner conversation might unfold. By picking the optimal thing to say for each turn, I could then nudge the course of the evening towards my desired outcome.`,
-                            dotKeys: {
-                                [OBSERVATION]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                time: 99,
-                // TODO: Cycle of rejection becomes infinite loop.
-                lyric: [
-                    `with every given`,
-                    {
-                        anchor: `answer a no`,
-                        annotation: {
-                            description: `Of course, if my date is just as determined to end the evening on a purely friendly note,
-
-                            . If my date's responses
-                            , and all of them lead back to starting over from the beginning, then I'll be doomed to spend the evening circling through an infinite loop of polite rejection.`,
-                            dotKeys: {
-                                [OBSERVATION]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
-                stanzaType: VERSES,
-                subsequent: true
-            }
-        ],
-        [
-            {
-                time: 101,
-                lyric: [
-                    `and her`,
-                    {
-                        anchor: `veggie wishbone's short end`,
-                        annotation: [
-                            {
-                                description: `Afterwards, Sita took me to a vegetarian restaurant, where I ordered a dish that resembled a portion of chicken, down to its sesame-stick wishbone. When we cracked the wishbone, Sita got the longer end. Needless to say, my wish was not granted.`,
+                        },
+                        `alas`
+                    ]
+                },
+                {
+                    time: 88,
+                    lyric: `hotlines get busy just as`
+                },
+                {
+                    time: 90,
+                    lyric: `thoughts slide to slitting wrists that`
+                },
+                {
+                    time: 92,
+                    lyric: [
+                        `hint of`,
+                        {
+                            anchor: `sampler cologne`,
+                            annotation: {
+                                description: `I kept a pile of scented strips torn from cologne advertisements in old magazines, and would rub several on my wrists right before a date.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
-                            },
-                            {
-                                wormhole: `veggie_wishbone`
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                time: 103,
-                lyric: `in these clutching fingers of steel`
-            },
-            {
-                time: 105,
-                lyric: `too untrusting to ever unpeel`
-            },
-            {
-                time: 107,
-                lyric: [
-                    `from a`,
-                    {
-                        anchor: `dummy steering wheel`,
-                        annotation: {
-                            description: `The twin go-karts had a second steering wheel on the passenger side, which served no purpose other than a child's imagination. Similarly, while I knew that whatever feeling of control I had on a date was an illusion, there was too much at stake for me to let go and embrace spontaneity.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
                             }
                         }
-                    }
-                ]
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: VERSES,
+                subsequent: true
             },
-            {
-                time: 109,
-                lyric: `settled for hugging only curbs`
-            },
-            {
-                time: 111,
-                lyric: `and having only tires squeal`
-            },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 94,
+                    lyric: `and a lass sniffing out these rote charms`
+                },
+                {
+                    time: 96,
+                    lyric: [
+                        `always rides in`,
+                        {
+                            anchor: `single go-karts`,
+                            annotation: {
+                                description: `On this most recent date with Sita, we visited a go-kart raceway. They had twin go-karts available that were intended to seat a parent and child side by side. I asked Sita if she wanted to ride one together. She politely declined.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    time: 98,
+                    lyric: [
+                        `as we wind an`,
+                        {
+                            anchor: `endless flowchart`,
+                            annotation: {
+                                description: `One fantasy of mine was to preemptively map out and memorise all the possible ways a dinner conversation might unfold. By picking the optimal thing to say for each turn, I could then nudge the course of the evening towards my desired outcome.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    time: 99,
+                    // TODO: Cycle of rejection becomes infinite loop.
+                    lyric: [
+                        `with every given`,
+                        {
+                            anchor: `answer a no`,
+                            annotation: {
+                                description: `Of course, if my date is just as determined to end the evening on a purely friendly note,
+
+                                . If my date's responses
+                                , and all of them lead back to starting over from the beginning, then I'll be doomed to spend the evening circling through an infinite loop of polite rejection.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -875,74 +834,108 @@ export default {
                     }
                 },
                 stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 113,
-                lyric: `when boys who mope`
             },
-            {
-                time: 114,
-                lyric: `know the beauty of simply limping away blind`
-            },
-            {
-                time: 116,
-                lyric: [
-                    `as the`,
-                    {
-                        anchor: `chirping crosswalks`,
-                        annotation: {
-                            description: `As we stand on the sidewalk outside Sita's house, a mechanical cuckoo sound is heard in the distance, informing the visually impaired that the street is now safe to cross.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
+            lyricUnit: [
+                {
+                    time: 101,
+                    lyric: [
+                        `and her`,
+                        {
+                            anchor: `veggie wishbone's short end`,
+                            annotation: [
+                                {
+                                    description: `Afterwards, Sita took me to a vegetarian restaurant, where I ordered a dish that resembled a portion of chicken, down to its sesame-stick wishbone. When we cracked the wishbone, Sita got the longer end. Needless to say, my wish was not granted.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
+                                {
+                                    wormhole: `veggie_wishbone`
+                                }
+                            ]
                         }
-                    },
-                    `guide`
-                ]
-            },
-            {
-                time: 118,
-                lyric: `where willows softly conspire`
-            },
-            {
-                time: 120,
-                lyric: `when boys who cope`
-            },
-            {
-                time: 121,
-                lyric: `only risk invites denied`
-            },
-            {
-                isUnitMap: true,
-                stanzaType: CHORUS,
-                subsequent: true
-            }
-        ],
-        [
-            {
-                time: 123,
-                lyric: {
-                    anchor: `I sigh, "Good night."`,
-                    annotation: [
+                    ]
+                },
+                {
+                    time: 103,
+                    lyric: `in these clutching fingers of steel`
+                },
+                {
+                    time: 105,
+                    lyric: `too untrusting to ever unpeel`
+                },
+                {
+                    time: 107,
+                    lyric: [
+                        `from a`,
                         {
-                            description: `Flustered panic takes over, and once again all my feelings go unmentioned.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        },
-                        {
-                            description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
+                            anchor: `dummy steering wheel`,
+                            annotation: {
+                                description: `The twin go-karts had a second steering wheel on the passenger side, which served no purpose other than a child's imagination. Similarly, while I knew that whatever feeling of control I had on a date was an illusion, there was too much at stake for me to let go and embrace spontaneity.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
                     ]
+                },
+                {
+                    time: 109,
+                    lyric: `settled for hugging only curbs`
+                },
+                {
+                    time: 111,
+                    lyric: `and having only tires squeal`
                 }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: CHORUS,
+                subsequent: true
             },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 113,
+                    lyric: `when boys who mope`
+                },
+                {
+                    time: 114,
+                    lyric: `know the beauty of simply limping away blind`
+                },
+                {
+                    time: 116,
+                    lyric: [
+                        `as the`,
+                        {
+                            anchor: `chirping crosswalks`,
+                            annotation: {
+                                description: `As we stand on the sidewalk outside Sita's house, a mechanical cuckoo sound is heard in the distance, informing the visually impaired that the street is now safe to cross.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        },
+                        `guide`
+                    ]
+                },
+                {
+                    time: 118,
+                    lyric: `where willows softly conspire`
+                },
+                {
+                    time: 120,
+                    lyric: `when boys who cope`
+                },
+                {
+                    time: 121,
+                    lyric: `only risk invites denied`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -961,7 +954,29 @@ export default {
                 },
                 stanzaType: CHORUS,
                 subsequent: true
-            }
-        ]
+            },
+            lyricUnit: [
+                {
+                    time: 123,
+                    lyric: {
+                        anchor: `I sigh, "Good night."`,
+                        annotation: [
+                            {
+                                description: `Flustered panic takes over, and once again all my feelings go unmentioned.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
     ]
 }

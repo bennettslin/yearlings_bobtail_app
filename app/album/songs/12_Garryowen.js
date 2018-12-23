@@ -38,15 +38,8 @@ export default {
         }
     },
     lyricUnits: [
-        [
-            {
-                time: 0,
-                centre: {
-                    italic: `(Garry's theme)`
-                }
-            },
-            {
-                isUnitMap: true,
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -68,298 +61,248 @@ export default {
                     }
                 },
                 stanzaType: INTRO
-            }
-        ],
-        [
-            {
-                time: 17,
-                lyric: `Brushed her off tonight, to swipe meats and wine`
             },
-            {
-                time: 20,
-                lyric: [
-                    `with your`,
-                    {
-                        anchor: `crew of chefs and thieves.`,
-                        annotation: [
-                            {
-                                description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then prepare whatever was brought back into a meal for all to share. I was always in the thieving half.`,
+            lyricUnit: [
+                {
+                    time: 0,
+                    centre: {
+                        italic: `(Garry's theme)`
+                    }
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: VERSES
+            },
+            lyricUnit: [
+                {
+                    time: 17,
+                    lyric: `Brushed her off tonight, to swipe meats and wine`
+                },
+                {
+                    time: 20,
+                    lyric: [
+                        `with your`,
+                        {
+                            anchor: `crew of chefs and thieves.`,
+                            annotation: [
+                                {
+                                    description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then prepare whatever was brought back into a meal for all to share. I was always in the thieving half.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
+                                },
+                                {
+                                    wormhole: `crooked_thieves`
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    time: 22,
+                    lyric: [
+                        `Tonight the`,
+                        {
+                            anchor: `rubber off,`,
+                            annotation: {
+                                description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I preferred sex without a condom, she would suggest going without it as a way to coax any small kindness out of me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
-                            },
-                            {
-                                wormhole: `crooked_thieves`
                             }
-                        ]
-                    }
-                ]
-            },
-            {
-                time: 22,
-                lyric: [
-                    `Tonight the`,
-                    {
-                        anchor: `rubber off,`,
-                        annotation: {
-                            description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I preferred sex without a condom, she would suggest going without it as a way to coax any small kindness out of me.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        },
+                        `she offered as a thought,`
+                    ]
+                },
+                {
+                    time: 25,
+                    lyric: [
+                        `if you would`,
+                        {
+                            anchor: `opt for bed not street.`,
+                            annotation: {
+                                description: `To save money after my lease ended, I put my stuff in storage and alternated between sleeping with Sita and crashing in the basement of the punk house. This gave me the regular comfort of Sita's bed while ensuring that she never held too much leverage over me.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
                         }
-                    },
-                    `she offered as a thought,`
-                ]
-            },
-            {
-                time: 25,
-                lyric: [
-                    `if you would`,
-                    {
-                        anchor: `opt for bed not street.`,
-                        annotation: {
-                            description: `To save money after my lease ended, I put my stuff in storage and alternated between sleeping with Sita and crashing in the basement of the punk house. This gave me the regular comfort of Sita's bed while ensuring that she never held too much leverage over me.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
-                stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 28,
-                lyric: [
-                    `Well`,
-                    {
-                        anchor: `you're not me, Garryowen.`,
-                        annotation: {
-                            description: `A running gag amongst my friends was to address me as Garry when I was drunk, since my disjointed rambling and oafish stunts made me an altogether different person.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    },
-                    `Oh no, and`
-                ]
-            },
-            {
-                time: 33,
-                lyric: [
-                    {
-                        anchor: `I can't speak`,
-                        annotation: {
-                            description: `But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into drunken aggression and misdemeanours.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
-                            }
-                        }
-                    },
-                    `for this life you've chosen.`
-                ]
-            },
-            {
-                isUnitMap: true,
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: REFRAIN
-            }
-        ],
-        [
-            {
-                time: 39,
-                lyric: [
-                    `Drunk pissed punks tryst,`,
-                    {
-                        anchor: `bustin' cars with fists,`,
-                        annotation: {
-                            description: `One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he incited, Tristan started punching car windows, then challenged us to see who could break the glass first. I didn't win.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    }
-                ]
             },
-            {
-                time: 42,
-                lyric: [
-                    `the`,
-                    {
-                        anchor: `littlest fuss will incite`,
-                        annotation: [
-                            {
-                                description: `Tristan would lash out in a spastic fury while blacking out, yet be perfectly collected by next morning. I came to see that his chaotic outbursts were in fact meticulously controlled, giving him a strange inner peace, and so I sought to indulge my drunken temper in the same manner.`,
+            lyricUnit: [
+                {
+                    time: 28,
+                    lyric: [
+                        `Well`,
+                        {
+                            anchor: `you're not me, Garryowen.`,
+                            annotation: {
+                                description: `A running gag amongst my friends was to address me as Garry when I was drunk, since my disjointed rambling and oafish stunts made me an altogether different person.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        },
+                        `Oh no, and`
+                    ]
+                },
+                {
+                    time: 33,
+                    lyric: [
+                        {
+                            anchor: `I can't speak`,
+                            annotation: {
+                                description: `But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into drunken aggression and misdemeanours.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
-                            },
-                            {
-                                wormhole: `lidless_vaseline_sits`
                             }
-                        ]
-                    },
-                    `your rage.`
-                ]
-            },
-            {
-                time: 44,
-                lyric: [
-                    `In you come, piss drunk, smug in`,
-                    {
-                        anchor: `smegma crust,`,
-                        annotation: [
-                            {
-                                description: [
-                                    {
-                                        anchor: `Smegma`,
-                                        wiki: `Smegma`
-                                    },
-                                    `is the smelly gunk that builds up on unwashed genitals.`
-                                ]
-                            },
-                            {
-                                description: `My personal hygiene would be put on hold for days while I crashed at the punk house. But once back at Sita's, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                time: 47,
-                lyric: [
-                    `since`,
-                    {
-                        anchor: `hummers aren't love,`,
-                        annotation: [
-                            {
-                                description: `A hummer is a blowjob.`,
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
-                            },
-                            {
-                                description: `Once when Sita protested that we couldn't have sex until after I washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn't count as real sex in her view.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        ]
-                    },
-                    `or so`,
-                    {
-                        anchor: `she's claimed…`,
-                        annotation: {
-                            description: `Throughout our budding friendship, Sita neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                        },
+                        `for this life you've chosen.`
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: VERSES
-            }
-        ],
-        [
-            {
-                time: 50,
-                lyric: `Well see, Garryowen, now no one,`
             },
-            {
-                time: 56,
-                lyric: [
-                    {
-                        anchor: `buys your grief`,
-                        annotation: {
-                            description: `My worlds collided when a neighbourhood kid who liked my band found out that I had vandalised his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
+            lyricUnit: [
+                {
+                    time: 39,
+                    lyric: [
+                        `Drunk pissed punks tryst,`,
+                        {
+                            anchor: `bustin' cars with fists,`,
+                            annotation: {
+                                description: `One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he incited, Tristan started punching car windows, then challenged us to see who could break the glass first. I didn't win.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
                         }
-                    },
-                    `as the boy unchosen.`
-                ]
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 42,
+                    lyric: [
+                        `the`,
+                        {
+                            anchor: `littlest fuss will incite`,
+                            annotation: [
+                                {
+                                    description: `Tristan would lash out in a spastic fury while blacking out, yet be perfectly collected by next morning. I came to see that his chaotic outbursts were in fact meticulously controlled, giving him a strange inner peace, and so I sought to indulge my drunken temper in the same manner.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    wormhole: `lidless_vaseline_sits`
+                                }
+                            ]
+                        },
+                        `your rage.`
+                    ]
+                },
+                {
+                    time: 44,
+                    lyric: [
+                        `In you come, piss drunk, smug in`,
+                        {
+                            anchor: `smegma crust,`,
+                            annotation: [
+                                {
+                                    description: [
+                                        {
+                                            anchor: `Smegma`,
+                                            wiki: `Smegma`
+                                        },
+                                        `is the smelly gunk that builds up on unwashed genitals.`
+                                    ]
+                                },
+                                {
+                                    description: `My personal hygiene would be put on hold for days while I crashed at the punk house. But once back at Sita's, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    time: 47,
+                    lyric: [
+                        `since`,
+                        {
+                            anchor: `hummers aren't love,`,
+                            annotation: [
+                                {
+                                    description: `A hummer is a blowjob.`,
+                                    dotKeys: {
+                                        [REFERENCE]: true
+                                    }
+                                },
+                                {
+                                    description: `Once when Sita protested that we couldn't have sex until after I washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn't count as real sex in her view.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
+                                }
+                            ]
+                        },
+                        `or so`,
+                        {
+                            anchor: `she's claimed…`,
+                            annotation: {
+                                description: `Throughout our budding friendship, Sita neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: REFRAIN
-            }
-        ],
-        [
-            {
-                time: 61,
-                lyric: [
-                    `So the`,
-                    {
-                        anchor: `celibate you'll play,`,
-                        annotation: {
-                            description: `I gladly drank to excess, as it made me impotent and thus impervious to Sita's advances. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my old self again. So, win-win all around.`,
-                            dotKeys: {
-                                [OBSERVATION]: true
-                            }
-                        }
-                    },
-                    `self-medicated,`
-                ]
             },
-            {
-                time: 64,
-                lyric: `stewing in hatred for the world.`
-            },
-            {
-                time: 67,
-                lyric: [
-                    {
-                        anchor: `Slammed in the well,`,
-                        annotation: {
-                            description: `Of course, using alcohol as a spiritual cleanser isn't sustainable in the long term. Vomiting into a toilet and staring at my reflection in the water soon became a regular occurrence.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
-                            }
-                        }
-                    },
-                    `you'll glimpse yourself`
-                ]
-            },
-            {
-                time: 70,
-                lyric: [
-                    `with`,
-                    {
-                        anchor: `choler turned up,`,
-                        annotation: [
-                            {
-                                description: `In Hippocratic medicine, choler, or yellow bile, is the humour that induces aggression.`,
+            lyricUnit: [
+                {
+                    time: 50,
+                    lyric: `Well see, Garryowen, now no one,`
+                },
+                {
+                    time: 56,
+                    lyric: [
+                        {
+                            anchor: `buys your grief`,
+                            annotation: {
+                                description: `My worlds collided when a neighbourhood kid who liked my band found out that I had vandalised his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
                                 dotKeys: {
-                                    [REFERENCE]: true
-                                }
-                            },
-                            {
-                                description: `Just like I wouldn't have recognised myself with an "upturned collar," the angry drunk returning my gaze didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [PUN]: true
+                                    [BACKSTORY]: true
                                 }
                             }
-                        ]
-                    },
-                    `cringing in shame.`
-                ]
-            },
-            {
-                isUnitMap: true,
+                        },
+                        `as the boy unchosen.`
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -371,59 +314,73 @@ export default {
                     }
                 },
                 stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 73,
-                lyric: [
-                    `As`,
-                    {
-                        anchor: `claws you built from scratches,`,
-                        annotation: {
-                            description: `A cat scratches to keep its claws sharp, just like I had sharpened my emotional defences to guard against a lifetime of scratches.`,
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [REFERENCE]: true
-                            }
-                        }
-                    },
-                    `with your bilious malice,`
-                ]
             },
-            {
-                time: 75,
-                lyric: [
-                    `fill up a package strapped to your`,
-                    {
-                        anchor: `scapegirl,`,
-                        annotation: {
-                            description: [
-                                `In Biblical times, a community would absolve itself of its sins by symbolically placing them on a`,
+            lyricUnit: [
+                {
+                    time: 61,
+                    lyric: [
+                        `So the`,
+                        {
+                            anchor: `celibate you'll play,`,
+                            annotation: {
+                                description: `I gladly drank to excess, as it made me impotent and thus impervious to Sita's advances. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my old self again. So, win-win all around.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `self-medicated,`
+                    ]
+                },
+                {
+                    time: 64,
+                    lyric: `stewing in hatred for the world.`
+                },
+                {
+                    time: 67,
+                    lyric: [
+                        {
+                            anchor: `Slammed in the well,`,
+                            annotation: {
+                                description: `Of course, using alcohol as a spiritual cleanser isn't sustainable in the long term. Vomiting into a toilet and staring at my reflection in the water soon became a regular occurrence.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `you'll glimpse yourself`
+                    ]
+                },
+                {
+                    time: 70,
+                    lyric: [
+                        `with`,
+                        {
+                            anchor: `choler turned up,`,
+                            annotation: [
                                 {
-                                    anchor: `goat`,
-                                    wiki: `Scapegoat`
+                                    description: `In Hippocratic medicine, choler, or yellow bile, is the humour that induces aggression.`,
+                                    dotKeys: {
+                                        [REFERENCE]: true
+                                    }
                                 },
-                                `that was then banished into the desert. For me, banishing Sita from my life would serve a similar purpose. As long as she was around to cast judgment on my hypocrisy, I would have to own up to my mistakes, rather than run away from them.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [PUN]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                time: 78,
-                lyric: `You'll slap her down, and push her out,`
-            },
-            {
-                time: 81,
-                lyric: `a crumpled castaway!`
-            },
-            {
-                isUnitMap: true,
+                                {
+                                    description: `Just like I wouldn't have recognised myself with an "upturned collar," the angry drunk returning my gaze didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [PUN]: true
+                                    }
+                                }
+                            ]
+                        },
+                        `cringing in shame.`
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -435,68 +392,100 @@ export default {
                 },
                 stanzaType: CHORUS,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 84,
-                centre: {
-                    italic: `(bagpipes)`
+            },
+            lyricUnit: [
+                {
+                    time: 73,
+                    lyric: [
+                        `As`,
+                        {
+                            anchor: `claws you built from scratches,`,
+                            annotation: {
+                                description: `A cat scratches to keep its claws sharp, just like I had sharpened my emotional defences to guard against a lifetime of scratches.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
+                                }
+                            }
+                        },
+                        `with your bilious malice,`
+                    ]
+                },
+                {
+                    time: 75,
+                    lyric: [
+                        `fill up a package strapped to your`,
+                        {
+                            anchor: `scapegirl,`,
+                            annotation: {
+                                description: [
+                                    `In Biblical times, a community would absolve itself of its sins by symbolically placing them on a`,
+                                    {
+                                        anchor: `goat`,
+                                        wiki: `Scapegoat`
+                                    },
+                                    `that was then banished into the desert. For me, banishing Sita from my life would serve a similar purpose. As long as she was around to cast judgment on my hypocrisy, I would have to own up to my mistakes, rather than run away from them.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    time: 78,
+                    lyric: `You'll slap her down, and push her out,`
+                },
+                {
+                    time: 81,
+                    lyric: `a crumpled castaway!`
                 }
-            },
-            {
-                isUnitMap: true,
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: SOLO
-            }
-        ],
-        [
-            {
-                time: 93,
-                lyric: `Your rabid wit unleashed, Garryowen, to no end,`
             },
-            {
-                time: 100,
-                lyric: [
-                    `you'd`,
-                    {
-                        anchor: `make her strip bare`,
-                        annotation: {
-                            description: `Sita learned early on that however occupied I might be in the moment, she could always lure me away for some lovemaking by hovering naked over me and feigning to shiver from the cold. But in time, I grew tired of this brazen appeal to both my primal and protective instincts, and found myself enjoying the cruelty of leaving her to shiver indefinitely.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    },
-                    `just to watch her freeze.`
-                ]
-            },
-            {
-                isUnitMap: true,
-                stanzaType: REFRAIN
-            }
-        ],
-        [
-            {
-                time: 106,
-                lyric: [
-                    `You won't always`,
-                    {
-                        anchor: `have her for your pet.`,
-                        annotation: {
-                            description: `Despite everything, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both. And so I kept putting it off, even as putting it off just made things worse.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
+            lyricUnit: [
+                {
+                    time: 84,
+                    centre: {
+                        italic: `(bagpipes)`
                     }
-                ]
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: REFRAIN
             },
-            {
-                time: 111,
-                lyric: `Someday she won't be there; someday yet!`
-            },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 93,
+                    lyric: `Your rabid wit unleashed, Garryowen, to no end,`
+                },
+                {
+                    time: 100,
+                    lyric: [
+                        `you'd`,
+                        {
+                            anchor: `make her strip bare`,
+                            annotation: {
+                                description: `Sita learned early on that however occupied I might be in the moment, she could always lure me away for some lovemaking by hovering naked over me and feigning to shiver from the cold. But in time, I grew tired of this brazen appeal to both my primal and protective instincts, and found myself enjoying the cruelty of leaving her to shiver indefinitely.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        },
+                        `just to watch her freeze.`
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -514,136 +503,95 @@ export default {
                     }
                 },
                 stanzaType: BRIDGE
-            }
-        ],
-        [
-            {
-                time: 116,
-                lyric: [
-                    {
-                        anchor: `Final trip on a tanker,`,
-                        annotation: [
-                            {
-                                description: `A tanker is a marine vessel that transports crude oil, but also a drinking spree.`,
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
-                            },
-                            {
-                                description: `As part of my plan to start afresh, I made many attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But after finally mustering the courage to break up with Sita, I really did go for a long stretch without alcohol. My new reality was jarring enough by itself, after all.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        ]
-                    },
-                    `you'll`,
-                    {
-                        anchor: `drop your anchor`,
-                        annotation: {
-                            description: `Having mentally attached Sita to every last one of my grievances for so long, all I could feel after the breakup was an eerie serenity, as I could finally drop my "anger." I was no longer resentful, and that was tantamount to feeling happy.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [PUN]: true
-                            }
-                        }
-                    }
-                ]
             },
-            {
-                time: 120,
-                lyric: `to which you've chained her; she'll sink into`
-            },
-            {
-                time: 123,
-                lyric: `the briny end. Now that you're cleansed,`
-            },
-            {
-                time: 126,
-                lyric: [
-                    `aren't you the`,
-                    {
-                        anchor: `faltering dear?`,
-                        annotation: {
-                            description: `With my slate wiped clean, I took pains to affect an endearingly awkward persona, right down to the posture and stammer. I'd been switching social identities for so long that I knew the initial feeling of being a phony would be fleeting. There was an extra layer of hypocrisy this time around, however, which did bother me.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
-                stanzaType: CHORUS
-            }
-        ],
-        [
-            {
-                time: 128,
-                lyric: [
-                    `They told her, "Never help a`,
-                    {
-                        anchor: `self-abuser`,
-                        annotation: [
-                            {
-                                description: `I had an intermittent habit of cutting myself to deal with emotional distress. Early in our friendship, Sita took a keen interest in my scars, which I interpreted as morbid fascination with my troubled past. In time, I came to see that she was just empathising with a fellow depressive, whose coping mechanisms were curiously different from her own.`,
+            lyricUnit: [
+                {
+                    time: 106,
+                    lyric: [
+                        `You won't always`,
+                        {
+                            anchor: `have her for your pet.`,
+                            annotation: {
+                                description: `Despite everything, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both. And so I kept putting it off, even as putting it off just made things worse.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
                             }
-                            /**
-                             * NOTE: This obscures the greater point of self-harm,
-                             * so I'm leaving it out for now.
-                             */
-                            /**
-                            {
-                                description: [
-                                    `While the term "self-abuse" can refer to literal`,
-                                    {
-                                        anchor: `self-harm,`,
-                                        wiki: `Self-harm`
-                                    },
-                                    `it's also used in religious circles to describe masturbation. Towards the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`
-                                ],
+                        }
+                    ]
+                },
+                {
+                    time: 111,
+                    lyric: `Someday she won't be there; someday yet!`
+                }
+            ]
+        },
+        {
+            unitMap: {
+                stanzaType: CHORUS
+            },
+            lyricUnit: [
+                {
+                    time: 116,
+                    lyric: [
+                        {
+                            anchor: `Final trip on a tanker,`,
+                            annotation: [
+                                {
+                                    description: `A tanker is a marine vessel that transports crude oil, but also a drinking spree.`,
+                                    dotKeys: {
+                                        [REFERENCE]: true
+                                    }
+                                },
+                                {
+                                    description: `As part of my plan to start afresh, I made many attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But after finally mustering the courage to break up with Sita, I really did go for a long stretch without alcohol. My new reality was jarring enough by itself, after all.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [PUN]: true
+                                    }
+                                }
+                            ]
+                        },
+                        `you'll`,
+                        {
+                            anchor: `drop your anchor`,
+                            annotation: {
+                                description: `Having mentally attached Sita to every last one of my grievances for so long, all I could feel after the breakup was an eerie serenity, as I could finally drop my "anger." I was no longer resentful, and that was tantamount to feeling happy.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
                                 }
                             }
-                            **/
-                        ]
-                    }
-                ]
-            },
-            {
-                time: 131,
-                lyric: [
-                    [
-                        `see himself`,
+                        }
+                    ]
+                },
+                {
+                    time: 120,
+                    lyric: `to which you've chained her; she'll sink into`
+                },
+                {
+                    time: 123,
+                    lyric: `the briny end. Now that you're cleansed,`
+                },
+                {
+                    time: 126,
+                    lyric: [
+                        `aren't you the`,
                         {
-                            anchor: `as well in you."`,
+                            anchor: `faltering dear?`,
                             annotation: {
-                                description: `But my capacity to injure myself also meant that I would have few compunctions about harming anyone close to me. And harm Sita I did.`,
+                                description: `With my slate wiped clean, I took pains to affect an endearingly awkward persona, right down to the posture and stammer. I'd been switching social identities for so long that I knew the initial feeling of being a phony would be fleeting. There was an extra layer of hypocrisy this time around, however, which did bother me.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
                     ]
-                ]
-            },
-            {
-                time: 134,
-                lyric: `You'd smite your kitten good, galled that smitten`
-            },
-            {
-                time: 137,
-                lyric: `she would opt just not to hear!`
-            },
-            {
-                isUnitMap: true,
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -655,71 +603,137 @@ export default {
                 },
                 stanzaType: CHORUS,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 139,
-                lyric: [
-                    {
-                        anchor: `Toora-loora-li.`,
-                        annotation: {
-                            description: `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variations of it are prevalent in Irish drinking songs and lullabies.`,
-                            dotKeys: {
-                                [REFERENCE]: true
-                            }
-                        }
-                    },
-                    `Garryowen, who owes no one,`
-                ]
             },
-            {
-                time: 145,
-                lyric: [
-                    `becomes someone's`,
-                    {
-                        anchor: `last-ditch alibi.`,
-                        annotation: {
-                            description: `Even as my friends and I were clearly joking to say that it was Garry, and not me, who had committed this or that act of vandalism, on some level I accepted it as the truth. And now, it also wasn't me who had slowly sapped Sita's confidence over the years, leaving her a crumbled wreck. It must have been Garry. I wasn't there.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
-                            }
+            lyricUnit: [
+                {
+                    time: 128,
+                    lyric: [
+                        `They told her, "Never help a`,
+                        {
+                            anchor: `self-abuser`,
+                            annotation: [
+                                {
+                                    description: `I had an intermittent habit of cutting myself to deal with emotional distress. Early in our friendship, Sita took a keen interest in my scars, which I interpreted as morbid fascination with my troubled past. In time, I came to see that she was just empathising with a fellow depressive, whose coping mechanisms were curiously different from her own.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
+                                }
+                                /**
+                                 * NOTE: This obscures the greater point of self-harm,
+                                 * so I'm leaving it out for now.
+                                 */
+                                /**
+                                {
+                                    description: [
+                                        `While the term "self-abuse" can refer to literal`,
+                                        {
+                                            anchor: `self-harm,`,
+                                            wiki: `Self-harm`
+                                        },
+                                        `it's also used in religious circles to describe masturbation. Towards the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [PUN]: true
+                                    }
+                                }
+                                **/
+                            ]
                         }
-                    }
-                ]
-            },
-            {
-                isUnitMap: true,
+                    ]
+                },
+                {
+                    time: 131,
+                    lyric: [
+                        [
+                            `see himself`,
+                            {
+                                anchor: `as well in you."`,
+                                annotation: {
+                                    description: `But my capacity to injure myself also meant that I would have few compunctions about harming anyone close to me. And harm Sita I did.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
+                                }
+                            }
+                        ]
+                    ]
+                },
+                {
+                    time: 134,
+                    lyric: `You'd smite your kitten good, galled that smitten`
+                },
+                {
+                    time: 137,
+                    lyric: `she would opt just not to hear!`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: REFRAIN
-            }
-        ],
-        [
-            {
-                time: 150,
-                lyric: `You're a purer lie…`
             },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 139,
+                    lyric: [
+                        {
+                            anchor: `Toora-loora-li.`,
+                            annotation: {
+                                description: `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variations of it are prevalent in Irish drinking songs and lullabies.`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            }
+                        },
+                        `Garryowen, who owes no one,`
+                    ]
+                },
+                {
+                    time: 145,
+                    lyric: [
+                        `becomes someone's`,
+                        {
+                            anchor: `last-ditch alibi.`,
+                            annotation: {
+                                description: `Even as my friends and I were clearly joking to say that it was Garry, and not me, who had committed this or that act of vandalism, on some level I accepted it as the truth. And now, it also wasn't me who had slowly sapped Sita's confidence over the years, leaving her a crumbled wreck. It must have been Garry. I wasn't there.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: REFRAIN,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                time: 162,
-                centre: {
-                    italic: `(Garry's theme)`
-                }
             },
-            {
-                isUnitMap: true,
+            lyricUnit: [
+                {
+                    time: 150,
+                    lyric: `You're a purer lie…`
+                }
+            ]
+        },
+        {
+            unitMap: {
                 stanzaType: OUTRO
-            }
-        ],
-        [
-            {
-                isUnitMap: true,
+            },
+            lyricUnit: [
+                {
+                    time: 162,
+                    centre: {
+                        italic: `(Garry's theme)`
+                    }
+                }
+            ]
+        },
+        {
+            unitMap: {
                 dotCard: {
                     anchor: IS_DOT_CARD,
                     annotation: {
@@ -742,6 +756,6 @@ export default {
                     }
                 }
             }
-        ]
+        }
     ]
 }
