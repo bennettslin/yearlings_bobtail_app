@@ -4,7 +4,7 @@ import {
     registerCards,
     addDestinationWormholeLinks,
     finalPrepareCard,
-    // addDestinationWormholeIndices,
+    addDestinationWormholeIndices,
     addDestinationWormholeFormats
 } from './annotations'
 
@@ -54,7 +54,7 @@ export const parseAlbumData = (albumObject) => {
     _finalPrepareAlbum(albumObject)
 
     // After preparation.
-    // addDestinationWormholeIndices(albumObject)
+    addDestinationWormholeIndices(albumObject)
 
     logParse('End parse album data.')
 
@@ -159,16 +159,27 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
                     }
                 }
 
-                /**
-                 * If this is the unit map, add temp first verse index. This is
-                 * used to register the scene later.
-                 */
-                unitMap.tempFirstVerseIndex = firstVerseIndex
-
                 // Tell song its dot stanza count, for admin purposes.
                 registerAdminDotStanzas(songObject, verseObject)
             })
         }
+
+        // TODO: This is just to grab things in unitMap for now. Refactor eventually.
+        recurseToFindAnchors({
+            // Tell each stanza the units that it owns.
+            unitIndex,
+
+            // Pass this to register each verse time.
+            verseTimesCounter,
+
+            albumObject,
+            songObject,
+            verseObject: unitMap,
+            callbackFunction: _initialRegisterAnnotation
+        })
+
+        // Add temp first verse index. This is used to register the scene.
+        unitMap.tempFirstVerseIndex = firstVerseIndex
     })
 
     // Clean up.
@@ -300,7 +311,10 @@ const _finalPrepareLyrics = (songObject) => {
 
     lyricUnits.forEach(unit => {
 
-        const { lyricUnit } = unit
+        const {
+            unitMap,
+            lyricUnit
+        } = unit
 
         if (lyricUnit) {
             lyricUnit.forEach(verseObject => {
@@ -313,6 +327,13 @@ const _finalPrepareLyrics = (songObject) => {
                 })
             })
         }
+
+        // TODO: Eventually remove.
+        recurseToFindAnchors({
+            songObject,
+            verseObject: unitMap,
+            callbackFunction: _finalRegisterAnnotation
+        })
     })
 }
 

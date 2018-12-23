@@ -70,7 +70,10 @@ const _parseLyrics = (lyricEntity, verseIndex) => {
             ), null)
 
         } else if (lyricEntity.lyricUnit) {
-            return _parseLyrics(lyricEntity.lyricUnit, verseIndex)
+            return (
+                _parseLyrics(lyricEntity.lyricUnit, verseIndex) ||
+                _parseLyrics(lyricEntity.unitMap, verseIndex)
+            )
 
         } else if (lyricEntity.verseIndex === verseIndex) {
             return lyricEntity
