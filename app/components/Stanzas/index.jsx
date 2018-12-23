@@ -5,7 +5,6 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import VerseDispatcher from '../../dispatchers/VerseDispatcher'
@@ -64,17 +63,17 @@ class Stanzas extends PureComponent {
             )
 
         return songStanzaConfigs.length && (
-            <div className={cx(
-                'Stanzas'
-            )}>
+            <div
+                {...{ className: 'Stanzas' }}
+            >
 
-                {/* This is the title. */}
-                {/* <Unit
+                {/* This is first unit dot card. There always is one. */}
+                <Unit
                     {...{
                         unitIndex: 0,
                         setLyricAnnotationElement
                     }}
-                /> */}
+                />
 
                 {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
 
