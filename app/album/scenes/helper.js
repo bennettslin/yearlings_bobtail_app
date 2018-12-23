@@ -30,7 +30,7 @@ const _addPresenceToSceneLayer = ({
     layers[layerKey][presenceType][presenceName] = value
 }
 
-const addPresenceToSceneLayerByType = ({
+const _addPresenceToSceneLayerByType = ({
     presences,
     presenceType,
     presenceName,
@@ -70,6 +70,30 @@ const addPresenceToSceneLayerByType = ({
     })
 }
 
-export {
-    addPresenceToSceneLayerByType
+export const addLayersToScenes = (albumScenes) => {
+    albumScenes.forEach(songScenes => {
+        songScenes.forEach(scene => {
+            const
+                { presences } = scene,
+                layers = {}
+
+            // Iterate through actors, cutouts, fixtures.
+            keys(presences).forEach(presenceType => {
+
+                // Iterate through presences for each presenceType.
+                keys(presences[presenceType]).forEach(presenceName => {
+
+                    _addPresenceToSceneLayerByType({
+                        presences,
+                        presenceType,
+                        presenceName,
+                        layers
+                    })
+                })
+            })
+
+            scene.layers = layers
+        })
+    })
 }
+

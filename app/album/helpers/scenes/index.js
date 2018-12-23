@@ -1,16 +1,12 @@
 // Parse scene data for build.
 
-import keys from 'lodash.keys'
 import albumScenes from 'album/scenes'
-
-import { addPresenceToSceneLayerByType } from './helper'
 
 /**
  * FIXME: These are a mess.
  */
 
 export const initialRegisterScenes = (
-    album,
     songObject,
     songIndex
 ) => {
@@ -110,37 +106,5 @@ export const finalRegisterScenes = (songObject) => {
             songVerseConfigs[currentVerseIndex].sceneIndex = sceneIndex
             currentVerseIndex++
         }
-    })
-}
-
-export const finalRegisterPresenceYIndices = (
-    album,
-    songIndex
-
-) => {
-    const scenes = albumScenes[songIndex]
-
-    scenes.forEach(scene => {
-
-        const
-            { presences } = scene,
-            layers = {}
-
-        // Iterate through actors, cutouts, fixtures.
-        keys(presences).forEach(presenceType => {
-
-            // Iterate through presences for each presenceType.
-            keys(presences[presenceType]).forEach(presenceName => {
-
-                addPresenceToSceneLayerByType({
-                    presences,
-                    presenceType,
-                    presenceName,
-                    layers
-                })
-            })
-        })
-
-        scene.layers = layers
     })
 }

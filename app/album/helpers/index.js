@@ -20,8 +20,7 @@ import {
 
 import {
     initialRegisterScenes,
-    finalRegisterScenes,
-    finalRegisterPresenceYIndices
+    finalRegisterScenes
 } from './scenes'
 
 import { getSongIsLogue } from 'helpers/data'
@@ -73,7 +72,7 @@ const _initialPrepareAlbum = (albumObject) => {
         songObject.songIndex = songIndex
 
         // This collects the unit index for each scene.
-        initialRegisterScenes(albumObject, songObject, songIndex)
+        initialRegisterScenes(songObject, songIndex)
 
         if (!getSongIsLogue(songIndex, albumObject.songs)) {
 
@@ -289,8 +288,6 @@ const _finalPrepareAlbum = (albumObject) => {
             delete songObject.tempFinalAnnotationIndex
             delete songObject.tempSongIndex
         }
-
-        finalRegisterPresenceYIndices(albumObject, songIndex)
     })
 }
 
