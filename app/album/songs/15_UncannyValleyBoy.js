@@ -22,26 +22,31 @@ import {
 } from 'constants/lyrics'
 
 export default {
+    title: 'Uncanny Valley Boy',
     totalTime: 204,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I had a master plan to follow, and wasn't about to change my ways.`,
-    title: {
-        anchor: `Uncanny Valley Boy`,
-        annotation: {
-            description: [
-                `The`,
-                {
-                    anchor: `uncanny valley`,
-                    wiki: `Uncanny_valley`
-                },
-                `is a theory that human replicas become more repulsive to us as they grow further lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando "Valley boy" now elicited a similar revulsion.`
-            ],
-            dotKeys: {
-                [OBSERVATION]: true,
-                [PUN]: true
-            }
-        }
-    },
     lyricUnits: [
+        {
+            unitMap: {
+                dotCard: {
+                    anchor: IS_DOT_CARD,
+                    annotation: {
+                        description: [
+                            `The`,
+                            {
+                                anchor: `uncanny valley`,
+                                wiki: `Uncanny_valley`
+                            },
+                            `is a theory that human replicas become more repulsive to us as they grow further lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando "Valley boy" now elicited a similar revulsion.`
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [PUN]: true
+                        }
+                    }
+                }
+            }
+        },
         {
             unitMap: {
                 dotCard: {

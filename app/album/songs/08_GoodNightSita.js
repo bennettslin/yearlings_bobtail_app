@@ -15,18 +15,23 @@ import {
 } from 'constants/lyrics'
 
 export default {
+    title: 'Good Night, Sita',
     totalTime: 131,
     overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
-    title: {
-        anchor: `Good Night, Sita`,
-        annotation: {
-            description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
-            dotKeys: {
-                [NARRATIVE]: true
-            }
-        }
-    },
     lyricUnits: [
+        {
+            unitMap: {
+                dotCard: {
+                    anchor: IS_DOT_CARD,
+                    annotation: {
+                        description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
+                        dotKeys: {
+                            [NARRATIVE]: true
+                        }
+                    }
+                }
+            }
+        },
         {
             unitMap: {
                 dotCard: {

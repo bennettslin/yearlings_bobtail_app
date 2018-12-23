@@ -18,24 +18,29 @@ import {
 } from 'constants/lyrics'
 
 export default {
+    title: 'Kyon? (क्यों?)',
     totalTime: 225,
     overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But sifting through my remorse, I was baffled by why Sita so willingly endured my cruelty. I tried hard to understand her psyche, and eventually came to see just how thoroughly she had tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
-    title: {
-        anchor: `Kyon? (क्यों?)`,
-        annotation: {
-            description: [
-                {
-                    italic: `Kyon`
-                },
-                `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true,
-                [REFERENCE]: true
-            }
-        }
-    },
     lyricUnits: [
+        {
+            unitMap: {
+                dotCard: {
+                    anchor: IS_DOT_CARD,
+                    annotation: {
+                        description: [
+                            {
+                                italic: `Kyon`
+                            },
+                            `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [REFERENCE]: true
+                        }
+                    }
+                }
+            }
+        },
         {
             unitMap: {
                 dotCard: {

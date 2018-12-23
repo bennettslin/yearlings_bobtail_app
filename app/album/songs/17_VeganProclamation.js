@@ -19,27 +19,31 @@ import {
 } from 'constants/lyrics'
 
 export default {
+    title: 'Vegan Proclamation',
     totalTime: 241,
     overview: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, and I really didn't like myself. And I had no idea how to become a good person again.`,
-
-    title: {
-        anchor: `Vegan Proclamation`,
-        annotation: {
-            description: [
-                `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
-                {
-                    anchor: `vegan.`,
-                    wiki: `Veganism`
-                },
-                `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true,
-                [OBSERVATION]: true
-            }
-        }
-    },
     lyricUnits: [
+        {
+            unitMap: {
+                dotCard: {
+                    anchor: IS_DOT_CARD,
+                    annotation: {
+                        description: [
+                            `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
+                            {
+                                anchor: `vegan.`,
+                                wiki: `Veganism`
+                            },
+                            `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [OBSERVATION]: true
+                        }
+                    }
+                }
+            }
+        },
         {
             unitMap: {
                 dotCard: {

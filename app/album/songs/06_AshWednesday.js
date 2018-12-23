@@ -16,21 +16,26 @@ import {
 } from 'constants/lyrics'
 
 export default {
+    title: 'Ash Wednesday',
     totalTime: 163,
     overview: `In college, I met my first girlfriend. Catherine was a nice Catholic girl and former valedictorian, who didn't think much of my nonexistent reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
-    title: {
-        anchor: `Ash Wednesday`,
-        annotation: {
-            description: [
-                {
-                    anchor: `Ash Wednesday`,
-                    wiki: `Ash_Wednesday`
-                },
-                `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
-            ]
-        }
-    },
     lyricUnits: [
+        {
+            unitMap: {
+                dotCard: {
+                    anchor: IS_DOT_CARD,
+                    annotation: {
+                        description: [
+                            {
+                                anchor: `Ash Wednesday`,
+                                wiki: `Ash_Wednesday`
+                            },
+                            `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
+                        ]
+                    }
+                }
+            }
+        },
         {
             unitMap: {
                 dotCard: {

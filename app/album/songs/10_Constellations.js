@@ -22,34 +22,38 @@ import {
 } from 'constants/lyrics'
 
 export default {
+    title: 'Constellations!',
     totalTime: 180,
     overview: `One night, I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
-    title: {
-        anchor: `Constellations!`,
-        keepEndCharacter: true,
-        annotation: {
-            description: [
-                `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
-                {
-                    italic: {
-                        anchor: `The Basketball Diaries,`,
-                        wiki: `The_Basketball_Diaries`
-                    }
-                },
-                `and was soon hooked. The best part about it is the`,
-                {
-                    anchor: `closed-eye hallucinations,`,
-                    wiki: `Closed-eye_hallucination`
-                },
-                `which are vivid images that seem to be projected onto the backdrop of your eyelids. If they ever get too intense, you simply open your eyes, and they instantly vanish. At the time, I called them "constellations."`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true,
-                [OBSERVATION]: true
-            }
-        }
-    },
     lyricUnits: [
+        {
+            unitMap: {
+                dotCard: {
+                    anchor: IS_DOT_CARD,
+                    annotation: {
+                        description: [
+                            `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
+                            {
+                                italic: {
+                                    anchor: `The Basketball Diaries,`,
+                                    wiki: `The_Basketball_Diaries`
+                                }
+                            },
+                            `and was soon hooked. The best part about it is the`,
+                            {
+                                anchor: `closed-eye hallucinations,`,
+                                wiki: `Closed-eye_hallucination`
+                            },
+                            `which are vivid images that seem to be projected onto the backdrop of your eyelids. If they ever get too intense, you simply open your eyes, and they instantly vanish. At the time, I called them "constellations."`
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [OBSERVATION]: true
+                        }
+                    }
+                }
+            }
+        },
         {
             unitMap: {
                 stanzaType: REFRAIN

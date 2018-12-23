@@ -20,18 +20,23 @@ import {
 } from 'constants/lyrics'
 
 export default {
+    title: 'Willy the Cocoa',
     totalTime: 207,
     overview: `Willy the Cocoa was a mentally disabled man who wandered our neighbourhood collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
-    title: {
-        anchor: 'Willy the Cocoa',
-        annotation: {
-            description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
-            dotKeys: {
-                [BACKSTORY]: true
-            }
-        }
-    },
     lyricUnits: [
+        {
+            unitMap: {
+                dotCard: {
+                    anchor: IS_DOT_CARD,
+                    annotation: {
+                        description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
+                        dotKeys: {
+                            [BACKSTORY]: true
+                        }
+                    }
+                }
+            }
+        },
         {
             unitMap: {
                 dotCard: {
