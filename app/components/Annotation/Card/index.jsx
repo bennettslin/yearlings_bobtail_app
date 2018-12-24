@@ -11,7 +11,7 @@ import AnnotationWormholes from './Wormholes'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 
-import { getAnnotationCardData } from './helper'
+import { getAnnotationCard } from './helper'
 
 const mapStateToProps = ({
     renderedStore: { renderedSongIndex }
@@ -51,7 +51,7 @@ class AnnotationCard extends PureComponent {
                 isTextCard,
                 isWormholeCard
 
-            } = getAnnotationCardData({
+            } = getAnnotationCard({
                 songIndex: renderedSongIndex,
                 annotationIndex,
                 cardIndex

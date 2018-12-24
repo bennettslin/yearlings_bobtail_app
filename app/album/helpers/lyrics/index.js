@@ -19,7 +19,7 @@ export const recurseToFindAnnotations = ({
     verse,
     lyricEntity = verse,
     textKey,
-    callbackFunction
+    annotationCallback
 
 }) => {
 
@@ -50,14 +50,14 @@ export const recurseToFindAnnotations = ({
                 verse,
                 lyricEntity: childEntity,
                 textKey,
-                callbackFunction
+                annotationCallback
             })
         })
 
     } else if (typeof lyricEntity === 'object') {
 
         if (lyricEntity[ANCHOR]) {
-            callbackFunction({
+            annotationCallback({
                 rootVerseIndex,
                 album,
                 song,
@@ -76,7 +76,7 @@ export const recurseToFindAnnotations = ({
                         verse,
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || childKey),
-                        callbackFunction
+                        annotationCallback
                     })
                 }
             })

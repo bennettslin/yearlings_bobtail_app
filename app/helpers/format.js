@@ -16,7 +16,12 @@ export const getFormattedTime = (time) => {
 }
 
 // Parses text in anchor tag into annotation header.
-export const getFormattedAnnotationTitle = (anchor, properNoun, keepEndCharacter) => {
+export const getFormattedAnnotationTitle = ({
+    anchor,
+    properNoun,
+    keepEndCharacter
+
+}) => {
     /**
      * Get annotation title from anchor text. Convert from object if
      * necessary, and also uncapitalise if not a proper noun.

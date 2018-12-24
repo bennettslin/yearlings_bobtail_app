@@ -19,7 +19,6 @@ import { getFormattedAnnotationTitle } from 'helpers/format'
 import {
     LEFT,
     RIGHT,
-    ANCHOR,
     COLUMN_INDEX,
     PROPER_NOUN
 } from 'constants/lyrics'
@@ -97,7 +96,7 @@ const _addAnnotationsToSongs = (album, song) => {
                 album,
                 song,
                 verse,
-                callbackFunction: _registerAnnotation
+                annotationCallback: _registerAnnotation
             })
 
             // Tell song its dot stanza count, for admin purposes.
@@ -122,7 +121,10 @@ const _registerAnnotation = ({
         /**
          * Annotation will either have an array of cards or just a single card.
          */
-        cards = lyricAnnotation.cards || [lyricAnnotation.card],
+        cards =
+            lyricAnnotation.cards ||
+            [lyricAnnotation.card],
+
         annotationIndex = song.annotations.length + 1,
 
         // Create new annotation object to be known by song.
@@ -158,11 +160,7 @@ const _registerAnnotation = ({
     }
 
     // Add formatted title to annotation.
-    annotation.title = getFormattedAnnotationTitle(
-        lyricAnnotation[ANCHOR],
-        lyricAnnotation[PROPER_NOUN],
-        lyricAnnotation.keepEndCharacter
-    )
+    annotation.title = getFormattedAnnotationTitle(lyricAnnotation)
 
     // Let annotation know if it's in a doublespeaker column.
     if (textKey === LEFT) {

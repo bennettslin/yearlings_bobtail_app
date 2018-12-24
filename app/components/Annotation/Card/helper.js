@@ -1,7 +1,7 @@
 import { getAnnotationCardObject } from 'helpers/data'
 import { WORMHOLE } from 'constants/dots'
 
-const getAnnotationCardData = ({
+const getAnnotationCard = ({
     songIndex,
     annotationIndex,
     cardIndex
@@ -35,5 +35,5 @@ const getAnnotationCardData = ({
 }
 
 export {
-    getAnnotationCardData
+    getAnnotationCard
 }
