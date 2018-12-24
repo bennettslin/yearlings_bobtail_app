@@ -2,7 +2,7 @@
 
 import {
     _registerAnnotation,
-    _finalPrepareAnnotations
+    _addWikiWormholeIndices
 } from './annotations'
 
 import {
@@ -28,7 +28,7 @@ export const parseAlbumData = (album) => {
     addDestinationWormholeLinks(album)
 
     // Final preparation.
-    _finalPrepareAnnotations(album)
+    _addWikiWormholeIndices(album)
 
     // After preparation.
     addDestinationWormholeIndices(album)
@@ -58,9 +58,6 @@ const _addAnnotationsToSongs = (album, song) => {
 
     const { lyricUnits } = song
 
-    // This tells me how many annotations have multiple cards.
-    song.adminPluralCardsCount = 0
-
     song.annotations = []
     song.mostRecentVerseIndex = 0
 
@@ -76,10 +73,7 @@ const _addAnnotationsToSongs = (album, song) => {
             ]
 
         lyricUnitAndUnitMap.forEach(verse => {
-            /**
-             * Recurse until each anchor is found. Initially, we will also
-             * register each verse with time.
-             */
+
             recurseToFindAnnotations({
                 album,
                 song,

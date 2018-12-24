@@ -28,7 +28,10 @@ import {
     addSceneConfigs,
     addSceneIndicesToVerseConfigs
 } from './helpers/scene'
-import { addDotUnitsCount } from './helpers/admin'
+import {
+    addDotUnitsCount,
+    addPluralCardsCount
+} from './helpers/admin'
 
 const albumSongs = [
     Song_00,
@@ -70,6 +73,7 @@ albumSongs.forEach(song => {
     addSceneIndicesToVerseConfigs(song)
 
     addDotUnitsCount(song)
+    addPluralCardsCount(song)
 })
 
 logParse('End adding metadata to songs.')

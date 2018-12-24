@@ -37,11 +37,6 @@ export const _registerAnnotation = ({
         annotation = {},
         dotKeys = {}
 
-    // For admin purposes, add to count of annotations with plural cards.
-    if (lyricAnnotation.cards) {
-        song.adminPluralCardsCount++
-    }
-
     // Tell verse object its annotation anchors.
     if (!verse.verseAnnotationIndices) {
         verse.verseAnnotationIndices = []
@@ -117,14 +112,11 @@ export const _registerAnnotation = ({
  * FINAL *
  *********/
 
-export const _finalPrepareAnnotations = (album) => {
+export const _addWikiWormholeIndices = (album) => {
 
     album.songs.forEach((song) => {
 
         if (!song.logue) {
-
-            // Initialise song.
-            song.tempFinalAnnotationIndex = 0
 
             /**
              * Add wiki and wormhole indices. These can only be determined
@@ -133,13 +125,11 @@ export const _finalPrepareAnnotations = (album) => {
             song.annotations.forEach(annotation => {
                 annotation.tempWikiWormholeIndex = 1
 
-                let cards = annotation.cards
+                const { cards } = annotation
 
-                cards.forEach(cardObject => {
-                    finalPrepareCard(song, annotation, cardObject)
+                cards.forEach(card => {
+                    finalPrepareCard(song, annotation, card)
                 })
-
-                song.tempFinalAnnotationIndex++
 
                 // Clean up.
                 delete annotation.tempWikiWormholeIndex
@@ -147,9 +137,6 @@ export const _finalPrepareAnnotations = (album) => {
 
             // For each verse in a wormhole, tell wormhole how to format it.
             addDestinationWormholeFormats(song.lyricUnits)
-
-            // Clean up.
-            // delete song.tempFinalAnnotationIndex
         }
     })
 }
