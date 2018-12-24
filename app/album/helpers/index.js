@@ -39,7 +39,7 @@ export const parseAlbumData = (albumObject) => {
     addDestinationWormholeLinks(albumObject)
 
     // Final preparation.
-    _finalPrepareAlbum(albumObject)
+    _finalPrepareAnnotations(albumObject)
 
     // After preparation.
     addDestinationWormholeIndices(albumObject)
@@ -60,12 +60,12 @@ const _initialPrepareAlbum = (albumObject) => {
         if (!songObject.logue) {
 
             // Parse lyrics.
-            _initialPrepareLyrics(albumObject, songObject)
+            _addAnnotationsToSongs(albumObject, songObject)
         }
     })
 }
 
-const _initialPrepareLyrics = (albumObject, songObject) => {
+const _addAnnotationsToSongs = (albumObject, songObject) => {
 
     const { lyricUnits } = songObject,
         verseTimesCounter = { counter: 0 }
@@ -77,49 +77,41 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     songObject.adminPluralCardsCount = 0
 
     songObject.annotations = []
-    songObject.tempVerseIndexCounter = 0
+    songObject.mostRecentVerseIndex = 0
 
     lyricUnits.forEach(unit => {
         const {
-            unitMap,
-            lyricUnit
-        } = unit
+                unitMap,
+                lyricUnit
+            } = unit,
 
-        if (lyricUnit) {
-            lyricUnit.forEach(verseObject => {
-                /**
-                 * Recurse until each anchor is found. Initially, we will also
-                 * register each verse with time.
-                 */
-                recurseToFindAnchors({
-                    // Pass this to register each verse time.
-                    verseTimesCounter,
+            lyricUnitAndUnitMap = [
+                ...lyricUnit || [],
+                unitMap
+            ]
 
-                    albumObject,
-                    songObject,
-                    verseObject,
-                    callbackFunction: _initialRegisterAnnotation
-                })
+        lyricUnitAndUnitMap.forEach(verseObject => {
+            /**
+             * Recurse until each anchor is found. Initially, we will also
+             * register each verse with time.
+             */
+            recurseToFindAnchors({
+                // Pass this to register each verse time.
+                verseTimesCounter,
 
-                // Tell song its dot stanza count, for admin purposes.
-                registerAdminDotStanzas(songObject, verseObject)
+                albumObject,
+                songObject,
+                verseObject,
+                callbackFunction: _initialRegisterAnnotation
             })
-        }
 
-        // TODO: This is just to grab things in unitMap for now. Refactor eventually.
-        recurseToFindAnchors({
-            // Pass this to register each verse time.
-            verseTimesCounter,
-
-            albumObject,
-            songObject,
-            verseObject: unitMap,
-            callbackFunction: _initialRegisterAnnotation
+            // Tell song its dot stanza count, for admin purposes.
+            registerAdminDotStanzas(songObject, verseObject)
         })
     })
 
     // Clean up.
-    delete songObject.tempVerseIndexCounter
+    delete songObject.mostRecentVerseIndex
 }
 
 const _initialRegisterAnnotation = ({
@@ -133,8 +125,7 @@ const _initialRegisterAnnotation = ({
 
 }) => {
     // If just a single card, make it an array of one.
-    const cards = Array.isArray(lyricObject.annotation) ?
-            lyricObject.annotation : [lyricObject.annotation],
+    const cards = Array.isArray(lyricObject.annotation) ? lyricObject.annotation : [lyricObject.annotation],
 
         annotationIndex = songObject.annotations.length + 1,
 
@@ -156,7 +147,7 @@ const _initialRegisterAnnotation = ({
 
         // Otherwise, tell it the most recent verse index. For title, this is 0.
     } else {
-        annotationObject.mostRecentVerseIndex = songObject.tempVerseIndexCounter
+        annotationObject.mostRecentVerseIndex = songObject.mostRecentVerseIndex
     }
 
     // Add formatted title to annotation.
@@ -209,7 +200,7 @@ const _initialRegisterAnnotation = ({
  * FINAL *
  *********/
 
-const _finalPrepareAlbum = (albumObject) => {
+const _finalPrepareAnnotations = (albumObject) => {
 
     albumObject.songs.forEach((songObject) => {
 
@@ -219,68 +210,29 @@ const _finalPrepareAlbum = (albumObject) => {
             songObject.tempFinalAnnotationIndex = 0
 
             /**
-             * Add wiki and wormhole indices. These can only be determined after
-             * collecting wormhole links from the entire album.
+             * Add wiki and wormhole indices. These can only be determined
+             * after collecting wormhole links from the entire album.
              */
-            _finalPrepareLyrics(songObject)
+            songObject.annotations.forEach(annotationObject => {
+                annotationObject.tempWikiWormholeIndex = 1
+
+                let cards = annotationObject.cards
+
+                cards.forEach(cardObject => {
+                    finalPrepareCard(songObject, annotationObject, cardObject)
+                })
+
+                songObject.tempFinalAnnotationIndex++
+
+                // Clean up.
+                delete annotationObject.tempWikiWormholeIndex
+            })
 
             // For each verse in a wormhole, tell wormhole how to format it.
             addDestinationWormholeFormats(songObject.lyricUnits)
 
             // Clean up.
-            delete songObject.tempFinalAnnotationIndex
+            // delete songObject.tempFinalAnnotationIndex
         }
     })
-}
-
-const _finalPrepareLyrics = (songObject) => {
-    const { lyricUnits } = songObject
-
-    lyricUnits.forEach(unit => {
-
-        const {
-            unitMap,
-            lyricUnit
-        } = unit
-
-        if (lyricUnit) {
-            lyricUnit.forEach(verseObject => {
-
-                // Recurse until each anchor is found.
-                recurseToFindAnchors({
-                    songObject,
-                    verseObject,
-                    callbackFunction: _finalRegisterAnnotation
-                })
-            })
-        }
-
-        // TODO: Eventually remove.
-        recurseToFindAnchors({
-            songObject,
-            verseObject: unitMap,
-            callbackFunction: _finalRegisterAnnotation
-        })
-    })
-}
-
-const _finalRegisterAnnotation = ({
-    songObject
-
-}) => {
-
-    const annotationObject = songObject.annotations[songObject.tempFinalAnnotationIndex]
-
-    annotationObject.tempWikiWormholeIndex = 1
-
-    let cards = annotationObject.cards
-
-    cards.forEach(cardObject => {
-        finalPrepareCard(songObject, annotationObject, cardObject)
-    })
-
-    songObject.tempFinalAnnotationIndex++
-
-    // Clean up.
-    delete annotationObject.tempWikiWormholeIndex
 }

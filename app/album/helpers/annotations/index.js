@@ -40,17 +40,19 @@ export const registerCards = ({
         songObject.adminPluralCardsCount++
     }
 
-    cards.forEach((cardObject, cardIndex) => {
+    cards.forEach((card, cardIndex) => {
 
-        _initialPrepareCard(cardObject, annotationDotKeys)
-        _addAllDotKeysToAnnotation(cardObject, annotationDotKeys)
+        _addWikiDotKeyToCard(card)
+
+        // This needs to come after adding wiki dot key to card.
+        _addCardDotKeysToAnnotation(card, annotationDotKeys)
 
         if (_addSourceWormholeLink({
 
             albumObject,
             songObject,
             annotationObject,
-            cardObject,
+            card,
             cardIndex,
             dotKeys: annotationDotKeys
 
@@ -60,51 +62,48 @@ export const registerCards = ({
     })
 }
 
-const _initialPrepareCard = (cardObject, dotKeys) => {
-    const { description } = cardObject
+const _addWikiDotKeyToCard = (card) => {
+    const { description } = card
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
-        const hasWiki = _getHasWiki(description)
+        const hasWiki = _getHasWikiAnchor(description)
 
         // Add wiki anchor index to each anchor with wiki.
         if (hasWiki) {
             /**
-             * Cards with only wormholes or references wont initially have an
+             * Cards with only wormholes or references won't initially have an
              * object of dot keys.
              */
-            cardObject.dotKeys = cardObject.dotKeys || {}
+            card.dotKeys = card.dotKeys || {}
 
             // If card has a wiki link, add 'reference' key to dot keys.
-            cardObject.dotKeys[REFERENCE] = true
-            dotKeys[REFERENCE] = true
+            card.dotKeys[REFERENCE] = true
         }
     }
 }
 
-const _getHasWiki = (descriptionEntity) => {
-
+const _getHasWikiAnchor = (descriptionEntity) => {
     if (!descriptionEntity || typeof descriptionEntity !== 'object') {
         return false
 
     } else if (Array.isArray(descriptionEntity)) {
-        return descriptionEntity.reduce((keyFound, childEntity) => {
-            return keyFound || _getHasWiki(childEntity)
-        }, false)
+        return descriptionEntity.find(childEntity => (
+            _getHasWikiAnchor(childEntity)
+        ))
 
     } else {
-        return keys(descriptionEntity).reduce((keyFound, currentKey) => {
+        return keys(descriptionEntity).find(currentKey => {
             const hasWiki = Boolean(descriptionEntity[WIKI])
-
-            return keyFound || hasWiki || _getHasWiki(descriptionEntity[currentKey])
-        }, false)
+            return hasWiki || _getHasWikiAnchor(descriptionEntity[currentKey])
+        })
     }
 }
 
-const _addAllDotKeysToAnnotation = (cardObject, annotationDotKeys) => {
+const _addCardDotKeysToAnnotation = (card, annotationDotKeys) => {
     // Add dot keys to both song and annotation card.
-    if (cardObject.dotKeys) {
-        keys(cardObject.dotKeys).forEach(dotKey => {
+    if (card.dotKeys) {
+        keys(card.dotKeys).forEach(dotKey => {
             annotationDotKeys[dotKey] = true
         })
     }
@@ -115,13 +114,13 @@ const _addSourceWormholeLink = ({
     albumObject,
     songObject,
     annotationObject,
-    cardObject,
+    card,
     cardIndex = 0,
     dotKeys
 
 }) => {
     // Add wormhole link to annotation card.
-    const { wormhole } = cardObject
+    const { wormhole } = card
 
     if (!wormhole) {
         return false
@@ -167,7 +166,7 @@ const _addSourceWormholeLink = ({
     dotKeys[WORMHOLE] = true
 
     // Clean up card unit.
-    delete cardObject.wormhole
+    delete card.wormhole
 
     return true
 }
@@ -192,9 +191,9 @@ export const addDestinationWormholeLinks = (albumObject) => {
                 } = destinationLink,
 
                 annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
-                cardObject = annotationObject.cards[cardIndex]
+                card = annotationObject.cards[cardIndex]
 
-            cardObject.wormholeLinks = links.filter((sourceLink, thisIndex) => {
+            card.wormholeLinks = links.filter((sourceLink, thisIndex) => {
 
                 // Don't add link to its own wormhole.
                 return index !== thisIndex
@@ -208,13 +207,13 @@ export const addDestinationWormholeLinks = (albumObject) => {
  * FINAL *
  *********/
 
-export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
+export const finalPrepareCard = (songObject, annotationObject, card) => {
     const { songIndex } = songObject,
 
         {
             description,
             wormholeLinks
-        } = cardObject
+        } = card
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
@@ -395,9 +394,9 @@ export const addDestinationWormholeIndices = (albumObject) => {
                 } = destinationLink,
 
                 annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
-                cardObject = annotationObject.cards[cardIndex]
+                card = annotationObject.cards[cardIndex]
 
-            cardObject.wormholeLinks = links.filter((sourceLink, thisIndex) => {
+            card.wormholeLinks = links.filter((sourceLink, thisIndex) => {
                 /**
                  * Add destination wormhole indices. This is as complicated as
                  * it is because of the three "shiv" wormholes.

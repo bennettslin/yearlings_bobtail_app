@@ -34,23 +34,23 @@ export const recurseToFindAnchors = ({
      * Only register lyric objects associated with a song time. This is
      * typically the verse object itself, but sometimes it's a sub stanza.
      */
-    if (verseTimesCounter && !isNaN(time)) {
+    if (!isNaN(time)) {
 
         // For future recursion.
         verseTimesCounter.counter++
 
         const {
-            tempVerseIndexCounter,
+            mostRecentVerseIndex,
             annotations
         } = songObject
 
         // All recursed lyrics will know they're nested in verse with time.
-        inVerseWithTimeIndex = tempVerseIndexCounter
+        inVerseWithTimeIndex = mostRecentVerseIndex
 
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = annotations.length
 
-        songObject.tempVerseIndexCounter++
+        songObject.mostRecentVerseIndex++
     }
 
     // Recurse until object with anchor key is found.
