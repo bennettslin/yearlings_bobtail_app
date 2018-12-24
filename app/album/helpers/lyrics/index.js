@@ -73,6 +73,7 @@ export const recurseToFindAnchors = ({
     } else if (typeof lyricEntity === 'object') {
 
         if (lyricEntity[ANCHOR]) {
+            console.error('lyricEntity', lyricEntity, textKey)
             callbackFunction({
                 inVerseWithTimeIndex,
                 albumObject,

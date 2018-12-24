@@ -18,8 +18,8 @@ import {
     CENTRE
 } from 'constants/lyrics'
 
-import { getVerseObject } from 'helpers/data'
 import { getSongTitle } from 'album/api/songs'
+import { getVerseObject } from 'album/api/verses'
 import { populateRefs } from 'helpers/ref'
 
 import { getCardWormholeLink } from './helper'

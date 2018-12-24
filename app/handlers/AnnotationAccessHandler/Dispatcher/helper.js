@@ -1,8 +1,8 @@
 import {
     getAnnotationObject,
-    getVerseObject,
     getAnnotationsCount
 } from 'helpers/data'
+import { getVerseObject } from 'album/api/verses'
 import {
     getShowAnnotationForColumn,
     getAnnotationIndexForDirection

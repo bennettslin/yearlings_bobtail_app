@@ -38,7 +38,7 @@ export const parseAlbumData = (albumObject) => {
     // In-between preparation.
     addDestinationWormholeLinks(albumObject)
 
-    // Finap preparation.
+    // Final preparation.
     _finalPrepareAlbum(albumObject)
 
     // After preparation.

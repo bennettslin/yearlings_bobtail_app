@@ -10,7 +10,7 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 
-import { getVerseObject } from 'helpers/data'
+import { getVerseObject } from 'album/api/verses'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({

@@ -1,4 +1,4 @@
-import { getAllTimedVerses } from './helper'
+import { getAllTimedVerses } from 'album/api/verses'
 
 const _addIndexToVerseObject = (verse, verseIndexCounter) => {
     verse.verseIndex = verseIndexCounter
