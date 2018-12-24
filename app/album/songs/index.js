@@ -69,7 +69,6 @@ albumSongs.forEach(song => {
     addSceneIndicesToVerseConfigs(song)
 })
 
-
 logParse('End adding metadata to songs.')
 
 export default albumSongs

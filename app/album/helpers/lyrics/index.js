@@ -13,37 +13,27 @@ export const registerAdminDotStanzas = (song, verse) => {
 }
 
 export const recurseToFindAnnotations = ({
-
-    inVerseWithTimeIndex = -1,
+    rootVerseIndex = -1,
     album,
     song,
     verse,
     lyricEntity = verse,
     textKey,
-    callbackFunction,
-    verseTimesCounter
+    callbackFunction
 
 }) => {
 
     const { verseIndex } = lyricEntity
 
     /**
-     * Only register lyric objects associated with a song time. This is
-     * typically the verse object itself, but sometimes it's a sub stanza.
+     * Let subsequent recursions know that we are in a timed verse.
      */
     if (!isNaN(verseIndex)) {
+        const { annotations } = song
 
-        // For future recursion.
-        verseTimesCounter.counter++
+        rootVerseIndex = verseIndex
 
-        const {
-            annotations
-        } = song
-
-        // All recursed lyrics will know they're nested in verse with time.
-        inVerseWithTimeIndex = verseIndex
-
-        // Add most recent annotation index.
+        // Add latest annotation index.
         lyricEntity.lastAnnotationIndex = annotations.length
 
         song.mostRecentVerseIndex = verseIndex
@@ -54,44 +44,39 @@ export const recurseToFindAnnotations = ({
 
         lyricEntity.forEach(childEntity => {
             recurseToFindAnnotations({
-                inVerseWithTimeIndex,
+                rootVerseIndex,
                 album,
                 song,
                 verse,
                 lyricEntity: childEntity,
                 textKey,
-                callbackFunction,
-                verseTimesCounter
+                callbackFunction
             })
         })
 
     } else if (typeof lyricEntity === 'object') {
 
         if (lyricEntity[ANCHOR]) {
-
             callbackFunction({
-                inVerseWithTimeIndex,
+                rootVerseIndex,
                 album,
                 song,
                 verse,
-                rawAnnotation: lyricEntity,
+                lyricAnnotation: lyricEntity,
                 textKey
             })
 
         } else {
             ALBUM_BUILD_KEYS.forEach(childKey => {
-
                 if (lyricEntity[childKey]) {
-
                     recurseToFindAnnotations({
-                        inVerseWithTimeIndex,
+                        rootVerseIndex,
                         album,
                         song,
                         verse,
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || childKey),
-                        callbackFunction,
-                        verseTimesCounter
+                        callbackFunction
                     })
                 }
             })

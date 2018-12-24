@@ -66,8 +66,7 @@ const _initialPrepareAlbum = (album) => {
 
 const _addAnnotationsToSongs = (album, song) => {
 
-    const { lyricUnits } = song,
-        verseTimesCounter = { counter: 0 }
+    const { lyricUnits } = song
 
     // This tells me how many dot stanzas this song has.
     song.adminDotStanzasCount = 0
@@ -95,9 +94,6 @@ const _addAnnotationsToSongs = (album, song) => {
              * register each verse with time.
              */
             recurseToFindAnnotations({
-                // Pass this to register each verse time.
-                verseTimesCounter,
-
                 album,
                 song,
                 verse,
@@ -114,11 +110,11 @@ const _addAnnotationsToSongs = (album, song) => {
 }
 
 const _registerAnnotation = ({
-    inVerseWithTimeIndex = -1,
+    rootVerseIndex = -1,
     album,
     song,
     verse,
-    rawAnnotation,
+    lyricAnnotation,
     textKey
 
 }) => {
@@ -126,7 +122,7 @@ const _registerAnnotation = ({
         /**
          * Annotation will either have an array of cards or just a single card.
          */
-        cards = rawAnnotation.cards || [rawAnnotation.card],
+        cards = lyricAnnotation.cards || [lyricAnnotation.card],
         annotationIndex = song.annotations.length + 1,
 
         // Create new annotation object to be known by song.
@@ -134,7 +130,7 @@ const _registerAnnotation = ({
         dotKeys = {}
 
     // For admin purposes, add to count of annotations with plural cards.
-    if (rawAnnotation.cards) {
+    if (lyricAnnotation.cards) {
         song.adminPluralCardsCount++
     }
 
@@ -147,11 +143,11 @@ const _registerAnnotation = ({
 
     // Tell annotation and anchored lyric the index. 1-based index.
     annotation.annotationIndex = annotationIndex
-    rawAnnotation.annotationIndex = annotationIndex
+    lyricAnnotation.annotationIndex = annotationIndex
 
     // If in a verse with time, tell annotation its verse index.
-    if (inVerseWithTimeIndex > -1) {
-        annotation.verseIndex = inVerseWithTimeIndex
+    if (rootVerseIndex > -1) {
+        annotation.verseIndex = rootVerseIndex
 
     /**
      * Otherwise, tell it the most recent verse index. For first dot stanza,
@@ -163,9 +159,9 @@ const _registerAnnotation = ({
 
     // Add formatted title to annotation.
     annotation.title = getFormattedAnnotationTitle(
-        rawAnnotation[ANCHOR],
-        rawAnnotation[PROPER_NOUN],
-        rawAnnotation.keepEndCharacter
+        lyricAnnotation[ANCHOR],
+        lyricAnnotation[PROPER_NOUN],
+        lyricAnnotation.keepEndCharacter
     )
 
     // Let annotation know if it's in a doublespeaker column.
@@ -201,16 +197,16 @@ const _registerAnnotation = ({
     // Let annotation object know its cards.
     annotation.cards = cards
 
-    // Add dot keys to both anchored lyric and annotation.
+    // Add dot keys to both lyric annotation and annotation object.
     annotation.dotKeys = dotKeys
-    rawAnnotation.dotKeys = dotKeys
+    lyricAnnotation.dotKeys = dotKeys
 
     // Add annotation object to annotations array.
     song.annotations.push(annotation)
 
     // Clean up lyric object.
-    delete rawAnnotation[PROPER_NOUN]
-    delete rawAnnotation.annotation
+    delete lyricAnnotation[PROPER_NOUN]
+    delete lyricAnnotation.annotation
 }
 
 /*********
