@@ -25,29 +25,28 @@ export const recurseToFindAnnotations = ({
 
 }) => {
 
-    const { time } = lyricEntity
+    const { verseIndex } = lyricEntity
 
     /**
      * Only register lyric objects associated with a song time. This is
      * typically the verse object itself, but sometimes it's a sub stanza.
      */
-    if (!isNaN(time)) {
+    if (!isNaN(verseIndex)) {
 
         // For future recursion.
         verseTimesCounter.counter++
 
         const {
-            mostRecentVerseIndex,
             annotations
         } = song
 
         // All recursed lyrics will know they're nested in verse with time.
-        inVerseWithTimeIndex = mostRecentVerseIndex
+        inVerseWithTimeIndex = verseIndex
 
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = annotations.length
 
-        song.mostRecentVerseIndex++
+        song.mostRecentVerseIndex = verseIndex
     }
 
     // Recurse until object with anchor key is found.
