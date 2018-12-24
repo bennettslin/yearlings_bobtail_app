@@ -23,7 +23,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
                         dotKeys: {
                             [NARRATIVE]: true
@@ -36,7 +36,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `In the final chapter of James Joyce's`,
                             {
@@ -63,7 +63,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
                         dotKeys: {
                             [SONGWRITING]: true
@@ -80,7 +80,7 @@ export default {
                         `or`,
                         {
                             anchor: `should I should you`,
-                            annotation: {
+                            card: {
                                 description: `At this point, I'm too flustered to form complete thoughts, let alone complete sentences.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -104,7 +104,7 @@ export default {
                         `love first`,
                         {
                             anchor: `without once knowing love`,
-                            annotation: {
+                            card: {
                                 description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision to me. If everyone thought this way, then no one could ever be in a relationship, just like no one would ever find a job if every hiring manager insisted on seeing previous work experience.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -136,7 +136,7 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `A`,
                                     {
@@ -158,7 +158,7 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
@@ -180,7 +180,7 @@ export default {
                         `wimped out to`,
                         {
                             anchor: `going Dutch`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `To`,
@@ -217,7 +217,7 @@ export default {
                     lyric: [
                         {
                             anchor: `nor a barnacle`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -246,7 +246,7 @@ export default {
                     time: 22,
                     lyric: {
                         anchor: `swept in unchartable tides`,
-                        annotation: [
+                        cards: [
                             {
                                 description: `Stencilled above many storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean."`,
                                 dotKeys: {
@@ -269,7 +269,7 @@ export default {
                         `they just`,
                         {
                             anchor: `always know to pry`,
-                            annotation: {
+                            card: {
                                 description: `After all, none of my friends sweat the risk of being seen as a "sponge" either. Confident that they're just as much there to be won over, they show curiosity by pressing their date for details, the way a starfish will pry open an oyster resting on the seafloor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -285,7 +285,7 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka's`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `On our first date, I took Sita to a natural history museum with many ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
@@ -326,7 +326,7 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
-                            annotation: {
+                            card: {
                                 description: `A friend once advised me that if I can keep a woman "cracking up" at my jokes all night, then I'll always be golden. Not being very funny, I settled on some weird combination of clever quips and goofy postures.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -342,7 +342,7 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `As we glided past a display on the lifecycle of butterflies, it occurred to me that what I sought was a`,
@@ -368,7 +368,7 @@ export default {
                         `who'd buy this`,
                         {
                             anchor: `aping jaw`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `We paused for a minute to learn about`,
                                     {
@@ -407,7 +407,7 @@ export default {
                         `when`,
                         {
                             anchor: `defined by ambrosia beers`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -448,7 +448,7 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            annotation: {
+                            card: {
                                 description: `A few hours into a date, my buzz would wear off, and I would realise that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a totem pole carved from a stack of stumps rather than a single trunk.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -475,7 +475,7 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Stopping to rest our feet in a gallery devoted to Native American history, we learned about the development of`,
@@ -505,7 +505,7 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            annotation: {
+                            card: {
                                 description: `On our second date, Sita invited me to see her friend perform in a play, which I ended up hating. In retrospect, it probably wasn't bad. My impression of the night was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -521,7 +521,7 @@ export default {
                         `that starts with a`,
                         {
                             anchor: `lone ringing phone`,
-                            annotation: {
+                            card: {
                                 description: `The play began with the theatre going pitch black. As the audience fell to a hush, a phone started ringing, and it wasn't immediately clear that the sound came from the stage.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -551,7 +551,7 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            annotation: {
+                            card: {
                                 description: `I was advised by friends to wait three days before calling a woman back, and yet it was always agony when she invariably did the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -571,7 +571,7 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Dating as a low-status male felt comparable to being an`,
                                     {
@@ -599,7 +599,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `The band Television are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
                             {
@@ -626,7 +626,7 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            annotation: {
+                            card: {
                                 description: `I had come to adopt the shotgun approach to dating, which involves hitting on anyone at any moment, and works because math works. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -646,7 +646,7 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            annotation: {
+                            card: {
                                 description: `With every witty remark I made that got a good response, I would be sure to use it again on the next woman I dated, much like an actor reprising a role. In turn, the notion that this was all just an act helped lessen the sting of rejection.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -670,7 +670,7 @@ export default {
                         `though each`,
                         {
                             anchor: `kind new ultimatum`,
-                            annotation: {
+                            card: {
                                 description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home alone.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -694,7 +694,7 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `I learned to accept rejection by treating it as subject matter for new songs. But it then logically follows that a life filled with rejection can`,
                                     {
@@ -723,7 +723,7 @@ export default {
                         `but`,
                         {
                             anchor: `died unfinished`,
-                            annotation: {
+                            card: {
                                 description: `Of course, there is no guarantee that such a work can ever be seen to completion, since the ready procurement of its raw materials lies beyond the artist's control.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -747,7 +747,7 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            annotation: {
+                            card: {
                                 description: `I kept a pile of scented strips torn from cologne advertisements in old magazines, and would rub several on my wrists right before a date.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -774,7 +774,7 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
-                            annotation: {
+                            card: {
                                 description: `On this most recent date with Sita, we visited a go-kart raceway. They had twin go-karts available that were intended to seat a parent and child side by side. I asked Sita if she wanted to ride one together. She politely declined.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -789,7 +789,7 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
-                            annotation: {
+                            card: {
                                 description: `One fantasy of mine was to preemptively map out and memorise all the possible ways a dinner conversation might unfold. By picking the optimal thing to say for each turn, I could then nudge the course of the evening towards my desired outcome.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -805,7 +805,7 @@ export default {
                         `with every given`,
                         {
                             anchor: `answer a no`,
-                            annotation: {
+                            card: {
                                 description: `Of course, if my date is just as determined to end the evening on a purely friendly note,
 
                                 . If my date's responses
@@ -823,7 +823,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `Children's albums from the 70s are a treasure trove of musical wisdom, including the soundtrack for`,
                             {
@@ -847,7 +847,7 @@ export default {
                         `and her`,
                         {
                             anchor: `veggie wishbone's short end`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `Afterwards, Sita took me to a vegetarian restaurant, where I ordered a dish that resembled a portion of chicken, down to its sesame-stick wishbone. When we cracked the wishbone, Sita got the longer end. Needless to say, my wish was not granted.`,
                                     dotKeys: {
@@ -875,7 +875,7 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            annotation: {
+                            card: {
                                 description: `The twin go-karts had a second steering wheel on the passenger side, which served no purpose other than a child's imagination. Similarly, while I knew that whatever feeling of control I had on a date was an illusion, there was too much at stake for me to let go and embrace spontaneity.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -915,7 +915,7 @@ export default {
                         `as the`,
                         {
                             anchor: `chirping crosswalks`,
-                            annotation: {
+                            card: {
                                 description: `As we stand on the sidewalk outside Sita's house, a mechanical cuckoo sound is heard in the distance, informing the visually impaired that the street is now safe to cross.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -943,7 +943,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `Ambrose Bierce also wrote the short story`,
                             {
@@ -965,7 +965,7 @@ export default {
                     time: 123,
                     lyric: {
                         anchor: `I sigh, "Good night."`,
-                        annotation: [
+                        cards: [
                             {
                                 description: `Flustered panic takes over, and once again all my feelings go unmentioned.`,
                                 dotKeys: {

@@ -28,7 +28,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
                         dotKeys: {
                             [BACKSTORY]: true
@@ -41,7 +41,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `In the past, the developmentally disabled were often thought to be`,
                             {
@@ -75,7 +75,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `The chord progression here zigzags between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending pattern at the cadence of each line.`
                         ],
@@ -97,7 +97,7 @@ export default {
                         `the`,
                         {
                             anchor: `valley somersaults`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `I grew up in the`,
                                     {
@@ -120,7 +120,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Hydrants burst`,
-                            annotation: {
+                            card: {
                                 description: `To keep cool during the summer, kids would sometimes crack open a fire hydrant, to the dismay of city officials. The water often failed to drain, forming stagnant pools and posing a health hazard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -130,7 +130,7 @@ export default {
                         `as early worms work this`,
                         {
                             anchor: `dying coyote's jaw.`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic.`,
                                     dotKeys: {
@@ -161,7 +161,7 @@ export default {
                             italic: [
                                 {
                                     anchor: `Chilled cola's free`,
-                                    annotation: {
+                                    card: {
                                         description: `Willy eagerly awaits the complimentary soft drink that is part of his reimbursement at the recycling center.`,
                                         dotKeys: {
                                             [NARRATIVE]: true
@@ -181,7 +181,7 @@ export default {
                         `Swill pop poured from`,
                         {
                             anchor: `wayside bottle,`,
-                            annotation: {
+                            card: {
                                 description: `Willy begins his daily rounds by filling his shopping cart with recyclables found littered along the sidewalks.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -196,7 +196,7 @@ export default {
                         `his`,
                         {
                             anchor: `pinhead in its shadow`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Willy had`,
@@ -235,7 +235,7 @@ export default {
                         `licking lips`,
                         {
                             anchor: `he ends his stroll.`,
-                            annotation: {
+                            card: {
                                 description: `In most legends, changelings wittingly participate in the deceit and take pains to hide their true form. And so, preparing to drop off his recyclables where he'll rejoin the company of others, Willy "ends as troll."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -252,7 +252,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: `In some legends, trolls inadvertently reveal their true identity by using some tool in a wrong manner, so I figured they would also have a peculiar way of playing instruments. As such, I muted the lead guitar and mandolin while throwing in a slew of legato slides.`,
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -274,7 +274,7 @@ export default {
                         `for`,
                         {
                             anchor: `our tins and our jars`,
-                            annotation: {
+                            card: {
                                 description: `Some households would help Willy by leaving out their discarded recyclables for him to collect.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -290,7 +290,7 @@ export default {
                         `Saluting Mummy doing some`,
                         {
                             anchor: `haircutting to the sun`,
-                            annotation: {
+                            card: {
                                 description: `Or else, to the "son." My mother is cutting my brother's hair on the front lawn, since the cleanup afterwards will be easier.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -306,7 +306,7 @@ export default {
                         `when`,
                         {
                             anchor: `suddenly baby shrieks…`,
-                            annotation: {
+                            card: {
                                 description: `My brother, the baby of our family, was typically calm and quiet in demeanour. However, when made to do things he didn't enjoy or understand, such as sitting through a haircut, he could erupt in a frenzied outburst.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -321,7 +321,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: `Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`,
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -338,7 +338,7 @@ export default {
                         `As`,
                         {
                             anchor: `gap-toothed coma`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `My brother's facial expression is blank, right up until the moment he is ruffled by my mother's "gap-toothed comb."`,
                                     dotKeys: {
@@ -357,7 +357,7 @@ export default {
                         `launching`,
                         {
                             anchor: `pair of seizures`,
-                            annotation: {
+                            card: {
                                 description: `My mother also wields a pair of "scissors."`,
                                 dotKeys: {
                                     [PUN]: true
@@ -377,7 +377,7 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers,`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `Given my brother's distaste for haircuts, Willy jokingly predicts that he will sport an unshaven look as an adult.`,
                                     dotKeys: {
@@ -401,7 +401,7 @@ export default {
                         `he croaks, stroking`,
                         {
                             anchor: `creepers on his cheek,`,
-                            annotation: {
+                            card: {
                                 description: `But it should come as no surprise if Willy is immune to whatever enchantment disguises my brother's true form, since Willy is possibly a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -416,7 +416,7 @@ export default {
                         `And three years howling is the`,
                         {
                             anchor: `longest cowlick`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `Being acquainted with my family over the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`,
                                     dotKeys: {
@@ -449,7 +449,7 @@ export default {
                         {
                             anchor: `X-ray spec'd,`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Back then, the back pages of comic books were filled with ads for novelty items such as`,
                                     {
@@ -466,7 +466,7 @@ export default {
                         `enraged at`,
                         {
                             anchor: `pages clawed,`,
-                            annotation: {
+                            card: {
                                 description: `My brother enjoyed cutting shapes of alphabet letters out of paper, an activity encouraged by my parents since it was creative and kept him occupied. Unfortunately, if I left a comic book lying on the floor, he might easily mistake it for an old magazine from his scrap pile.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -482,7 +482,7 @@ export default {
                         `a`,
                         {
                             anchor: `kick slams`,
-                            annotation: {
+                            card: {
                                 description: `There were times I was so angry at my brother that I laid down some serious hurt. He never fought back.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -492,7 +492,7 @@ export default {
                         `the`,
                         {
                             anchor: `bearded baby`,
-                            annotation: {
+                            card: {
                                 description: `It would have been the height of irony if my brother were actually centuries old, as it frustrated me that I always had to engage with him at a level far below his actual age.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -509,7 +509,7 @@ export default {
                         `with his tummy clenched, muffling`,
                         {
                             anchor: `baffled sobs.`,
-                            annotation: {
+                            card: {
                                 description: `The hardest thing about having hurt my brother is that I could never really apologise, since he could never truly comprehend that I was sorry. I suppose that for him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -528,7 +528,7 @@ export default {
                         `You'd learn him good, when`,
                         {
                             anchor: `smarts he could've took`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't any different. It didn't seem far-fetched to suppose that cognitive skills are a fixed supply in a mother's womb, and that I had selfishly taken my brother's share.`,
                                     dotKeys: {
@@ -579,7 +579,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Killcrop`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a primary concern of past times, when children unable to work for their keep could lead to a farmer's ruin.`
                                 ],
@@ -596,7 +596,7 @@ export default {
                     lyric: [
                         {
                             anchor: `soused loafers`,
-                            annotation: {
+                            card: {
                                 description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangbangers idling nearby. "Soused loafers" here refers to these drunken layabouts, as well as to their drenched shoes.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -612,7 +612,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Hit this witch`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `A switch is a flexible rod used for punishment. It was believed that beating a changeling would provoke it to reveal its true nature and return the stolen child, and past cases of such abuse leading to death have been recorded. So if Willy is a changeling, then it seems predestined for him to meet a violent end.`,
                                     dotKeys: {
@@ -643,7 +643,7 @@ export default {
                                 `Shelled skull has freed`,
                                 {
                                     anchor: `unsalvaged soul…`,
-                                    annotation: [
+                                    cards: [
                                         {
                                             description: `Religious doctrine in the past often sanctioned the abuse of disabled children by giving assurance that they were devoid of souls. But I came to a different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.`,
                                             dotKeys: {
@@ -672,7 +672,7 @@ export default {
                         `a`,
                         {
                             anchor: `sack-spilled glass`,
-                            annotation: {
+                            card: {
                                 description: `Eager for a fight, the gangbangers start pushing Willy around. Amidst the commotion, his shopping cart is upturned, spilling empty beer bottles onto the ground.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -682,7 +682,7 @@ export default {
                         `swung sounds the`,
                         {
                             anchor: `past-noon toll.`,
-                            annotation: {
+                            card: {
                                 description: `One gangbanger grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighbourhood, like the ring of a town bell.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -707,7 +707,7 @@ export default {
                         {
                             anchor: `Willy's stalkless bulb.`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: `The "stalkless bulb" here refers to Willy's brain, which has just been severed from its spine, as well as to a dormant plant ready to be set in the ground.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -723,7 +723,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `I played the electric guitar riff here with both a slide and the whammy bar, which is another nonsensical thing that I could picture trolls doing.`
                         ],
@@ -742,7 +742,7 @@ export default {
                         `Oh, and August was the`,
                         {
                             anchor: `sawdust month`,
-                            annotation: {
+                            card: {
                                 description: `Later in this "saddest" month when Willy was killed, I am helping my mother in our backyard garden as we spread the leftover sawdust from my father's carpentry.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -758,7 +758,7 @@ export default {
                         `that saw this`,
                         {
                             anchor: `mulch soften asphodel.`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `We are planting`,
                                     {
@@ -780,7 +780,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Baby bluebonnets`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `The`,
                                     {
@@ -805,7 +805,7 @@ export default {
                         `lay`,
                         {
                             anchor: `forgotten amongst the mail.`,
-                            annotation: {
+                            card: {
                                 description: `Having recently assaulted my brother in anger over a shredded comic book, I am now indifferent to the latest release from my monthly subscription.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -827,7 +827,7 @@ export default {
                         `But`,
                         {
                             anchor: `how marbleless,`,
-                            annotation: {
+                            card: {
                                 description: `Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise with my brother's autism, would remark on how blissful it must be to go through life without all of one's "marbles," so to speak.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -844,7 +844,7 @@ export default {
                         `being ever stuck in`,
                         {
                             anchor: `imp-runt age of mind!`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -874,7 +874,7 @@ export default {
                         `Are you sick?`,
                         {
                             anchor: `I am seven,`,
-                            annotation: {
+                            card: {
                                 description: `My brother learned to answer the question of how old he was when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he is "six."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -911,7 +911,7 @@ export default {
                         `Such`,
                         {
                             anchor: `heavy fears,`,
-                            annotation: {
+                            card: {
                                 description: `On the night of Willy's murder, I wake up screaming in fear of my mortality. My mother rushes to my bedside to comfort me.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -927,7 +927,7 @@ export default {
                         `for a cub`,
                         {
                             anchor: `not yet Webelos!`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `My mother was a`,
@@ -957,7 +957,7 @@ export default {
                         `Son,`,
                         {
                             anchor: `seventy years`,
-                            annotation: {
+                            card: {
                                 description: `In keeping with her Buddhist faith, my mother tells me not to worry, since I'm not going to die for a long while. She then assures me that when my time finally does come in another seventy years or so, I will have long made peace with death.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -981,7 +981,7 @@ export default {
                         `In time, with`,
                         {
                             anchor: `needle done,`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `My mother suggests that my life will be a patchwork onto which I continually sew new experiences. In turn, the insights gained from these experiences may then inform and enrich my art.`,
                                     dotKeys: {
@@ -996,7 +996,7 @@ export default {
                         `you'll write this`,
                         {
                             anchor: `book of yours.`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
                                     {
@@ -1034,7 +1034,7 @@ export default {
                                 },
                                 `'s cover`
                             ],
-                            annotation: {
+                            card: {
                                 description: [
                                     `My favourite word as a child was "bobtail." I think I was just so proud of myself when I realised that the line "bells on bobtail ring" from the song`,
                                     {

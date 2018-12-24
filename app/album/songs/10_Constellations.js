@@ -30,7 +30,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
                             {
@@ -71,7 +71,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `I never got past the first fifty pages of`,
                             {
@@ -97,7 +97,7 @@ export default {
                     lyric: [
                         {
                             anchor: `reverends, paused`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -125,7 +125,7 @@ export default {
                         },
                         {
                             anchor: `stiff in tandem.`,
-                            annotation: {
+                            card: {
                                 description: `Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -140,7 +140,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Heavin' some, Ana`,
-                            annotation: {
+                            card: {
                                 description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll probably want to retch. Within a moment, though, your lungs will shrivel away, and you'll be peacefully breathing through gills underwater.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -151,7 +151,7 @@ export default {
                         },
                         {
                             anchor: `whispures a low sigh, bein'…`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the historical role played by psychedelic drugs that textbooks naturally failed to mention. One theory is that`,
                                     {
@@ -179,7 +179,7 @@ export default {
                         `of`,
                         {
                             anchor: `de exempt,`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -210,7 +210,7 @@ export default {
                         },
                         {
                             anchor: `exit us`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `As the Book of`,
                                     {
@@ -229,7 +229,7 @@ export default {
                         {
                             anchor: `Viking den…`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Like the`,
@@ -275,7 +275,7 @@ export default {
                         {
                             anchor: `Walkyriens:`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Backtrack to earlier that night. We have arrived at a`,
@@ -310,7 +310,7 @@ export default {
                             // NOTE: I changed from 'Walhall.'
                             anchor: `Wal-hall o'`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `The Valkyries would bring the dead heroes to`,
@@ -336,7 +336,7 @@ export default {
                         },
                         {
                             anchor: `mead-Tussin!`,
-                            annotation: {
+                            card: {
                                 description: [
                                     {
                                         anchor: `Mead`,
@@ -357,7 +357,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Quouffs uppraissed,`,
-                            annotation: {
+                            card: {
                                 description: `Not all bottles of Robitussin will get you high. The ones to avoid are those that contain guaifenesin, which just reduces congestion. So we "upraise" our "quaffs" to "appraise" them specifically for the medicinal property that keeps "coughs suppressed."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -369,7 +369,7 @@ export default {
                         `this`,
                         {
                             anchor: `boundless Kalevalley ends.`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `The`,
@@ -407,7 +407,7 @@ export default {
                         {
                             anchor: `Finnugreec tongue`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `The Finnish language belongs in the`,
@@ -439,7 +439,7 @@ export default {
                         {
                             anchor: `Lapps are highmen.`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `The`,
@@ -467,7 +467,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `The Police's`,
                             {
@@ -493,7 +493,7 @@ export default {
                         {
                             anchor: `Makeyars mygrate,`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `Cut back to the present scene. Howie and Tomer promise to "make yours my grate," as they share their knowledge of the hidden grate that leads down to the steam tunnels.`,
                                     dotKeys: {
@@ -519,7 +519,7 @@ export default {
                         `from`,
                         {
                             anchor: `among ol'`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `The Magyars share genetic ancestry with the`,
                                     {
@@ -535,7 +535,7 @@ export default {
                         },
                         {
                             anchor: `psealed off drains.`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Back in the day, the Robitussin we took also contained`,
@@ -573,7 +573,7 @@ export default {
                         `Then`,
                         {
                             anchor: `down the steppes`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `As we rush down the earthen "steps" leading into the steam tunnels, I imagine us as 13th-century Mongol horsemen sweeping down from the Asian`,
@@ -602,7 +602,7 @@ export default {
                         {
                             anchor: `Drinkhis Khan, once Toomujin,`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     {
                                         anchor: `"Genghis Khan,"`,
@@ -618,7 +618,7 @@ export default {
                         `has`,
                         {
                             anchor: `slain the teeto-Tatars!`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Genghis Khan was able to unite the Mongols by defeating the`,
@@ -648,7 +648,7 @@ export default {
                         {
                             anchor: `Tomer-layin' the seed,`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -673,7 +673,7 @@ export default {
                         {
                             anchor: `Howie led the feat`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `Oblivious to the lingering stiffness of his limbs, Howie is walking as if his "feet" are made of "lead."`,
                                     dotKeys: {
@@ -699,7 +699,7 @@ export default {
                         `of`,
                         {
                             anchor: `avatars…`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `In Hinduism, an`,
                                     {
@@ -731,7 +731,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `Sita introduced me to`,
                             {
@@ -762,7 +762,7 @@ export default {
                         {
                             anchor: `Indus-trail sewerce,`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `As we wind through "industrial sewers" pretending to be Mughal invaders, I explain the problem with the`,
                                     {
@@ -779,7 +779,7 @@ export default {
                         },
                         {
                             anchor: `questurns Indo Hairapins:`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Our "quest turns into hairpins" as Howie and Tomer guide us around some rather sharp turns. All the while, I blather on about "questions" surrounding the`,
                                     {
@@ -807,7 +807,7 @@ export default {
                         {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `In the Iranian language of "Farsi,"`,
                                     {
@@ -849,7 +849,7 @@ export default {
                         {
                             anchor: `Sensegreat devas'dayshone?`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Moreover, in "Sanskrit," the ancient Indian language,`,
                                     {
@@ -880,7 +880,7 @@ export default {
                     lyric: [
                         {
                             anchor: `To soma up,`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `In the Vedas,`,
                                     {
@@ -898,7 +898,7 @@ export default {
                         },
                         {
                             anchor: `our-youn' invedas`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Although the`,
                                     {
@@ -915,7 +915,7 @@ export default {
                         },
                         {
                             anchor: `unsolft quarry rest…`,
-                            annotation: {
+                            card: {
                                 description: `"Our young invaders" have now arrived at a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches. Pausing for a breather, on this "soft quarry" we rest.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -938,7 +938,7 @@ export default {
                         {
                             anchor: `Ourevian battles spent,`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Spent from the "Arabian battles" that ended with their conquest by the`,
@@ -970,7 +970,7 @@ export default {
                         },
                         {
                             anchor: `a'duct Uighuress.`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `The Mongols would slaughter the men and seize the women of the populations they conquered. This fate was no doubt met by the`,
                                     {
@@ -992,7 +992,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Are Melee tapirs`,
-                            annotation: {
+                            card: {
                                 description: `"Our melee tapers the discourse." Scavenging materials to make swords and shields, we could only brandish them with playful menace within the narrow corridors of the steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1002,7 +1002,7 @@ export default {
                         },
                         {
                             anchor: `the dusc-horse yet…?`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the`,
                                     {
@@ -1033,7 +1033,7 @@ export default {
                         {
                             anchor: `Khlmair city Ingcar Wet,`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -1063,7 +1063,7 @@ export default {
                         `to war:`,
                         {
                             anchor: `scimitary of'fence!`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Our next plan of attack is to visit the grave of Howie and Tomer's high school buddy Adam. And so, rested and energised, we renew our`,
                                     {
@@ -1086,7 +1086,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `On my solo Robitussin trips, I would mentally search for metaphysical truths while playing video games on my old`,
                             {
@@ -1109,7 +1109,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Pour sod, fourfeit tundr's`,
-                            annotation: {
+                            card: {
                                 description: `In the car, Howie and Tomer swap tales from their high school days, bemoaning the "poor sod" who had sod poured on him from "four feet under."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1120,7 +1120,7 @@ export default {
                         {
                             anchor: `Siburial plains…`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra's`,
                                     {
@@ -1141,7 +1141,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Upridge o' lawn`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `We park the car and head up "a ridge of lawn."`,
                                     dotKeys: {
@@ -1167,7 +1167,7 @@ export default {
                         `trod on by`,
                         {
                             anchor: `forc'd nations`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `"Forced" to leave their Asian homelands due to scarcity of resources, these groups are now known to Canada as the`,
                                     {
@@ -1189,7 +1189,7 @@ export default {
                         `But`,
                         {
                             anchor: `past a cross Bearing Straight,`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `We venture "past a cross, bearing straight," just as those before us had "passed across the`,
                                     {
@@ -1210,7 +1210,7 @@ export default {
                     lyric: [
                         {
                             anchor: `herows— ourauras left—`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Other indigenous peoples, such as the`,
@@ -1243,7 +1243,7 @@ export default {
                         {
                             anchor: `Audamn's grave.`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: `We sigh in relief to have quickly spotted "Adam's" grave from amongst a sea of identical headstones, just as the indigenous Americans, upon discovering a more bountiful land, perished their fears of an encroaching "autumn."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1273,7 +1273,7 @@ export default {
                     lyric: [
                         {
                             anchor: `I'll sail this sea,`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Standing in front of Adam's headstone under the predawn sky, I'm overcome with a profound sense of clarity and purpose, and I renew my determination to finish`,
                                     {
@@ -1312,7 +1312,7 @@ export default {
                         lyric: {
                             italic: {
                                 anchor: `sunk in tarpid lies!`,
-                                annotation: [
+                                cards: [
                                     {
                                         description: [
                                             {
@@ -1347,7 +1347,7 @@ export default {
                         `The`,
                         {
                             anchor: `mistodawn,`,
-                            annotation: {
+                            card: {
                                 description: `The "mist of dawn" breaks, and we drive back to Howie's place. My newfound clarity proves short-lived as I lean back and shut my eyes to gaze at constellations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1357,7 +1357,7 @@ export default {
                         },
                         {
                             anchor: `ha'nt'd by sobre-trooth tiedgirl`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Encountering the vision of a`,
                                     {
@@ -1393,7 +1393,7 @@ export default {
                                 {
                                     anchor: `Lowkey and Freyed!`,
                                     properNoun: true,
-                                    annotation: {
+                                    card: {
                                         description: [
                                             `As my better self observes me in my "low-key and fried" state, I see a constellation of my brother as`,
                                             {
@@ -1428,7 +1428,7 @@ export default {
                         {
                             anchor: `Hollowscene`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `The`,
@@ -1453,7 +1453,7 @@ export default {
                         },
                         {
                             anchor: `broughtour ancister`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `In the epic vision playing out in my mind, the mastodon becomes a spirit animal of our Inuit tribe, as we have "brought our ancestral`,
                                     {
@@ -1470,7 +1470,7 @@ export default {
                         },
                         {
                             anchor: `toughtim rite…`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. This degrading sight, against the familiar backdrop of Los Angeles, reminds me that in having scuttled off to the Bay Area, I am shirking my responsibility to care for our autistic brother, unlike my sister, who still lives close to our parents. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`
                                 ],
@@ -1497,7 +1497,7 @@ export default {
                             // NOTE: I changed from "Nunavutter."
                             anchor: `Noworse and Nunavetter`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `My friends and I have now followed the Inuit all the way to`,
                                     {
@@ -1523,7 +1523,7 @@ export default {
                             {
                                 anchor: `Leif as the Red's son`,
                                 properNoun: true,
-                                annotation: [
+                                cards: [
                                     {
                                         description: [
                                             `The Norse explorer`,
@@ -1558,7 +1558,7 @@ export default {
                         `How old are`,
                         {
                             anchor: `these mummeries`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `A`,
@@ -1586,7 +1586,7 @@ export default {
                         `I have`,
                         {
                             anchor: `left to mine?`,
-                            annotation: {
+                            card: {
                                 description: `At the peak of my dissociation, I "mine" through my "memories," unable to separate the collective memories of the world from those that are "mine" alone.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1602,7 +1602,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,
                             {
@@ -1626,7 +1626,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Pullar switch,`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -1650,7 +1650,7 @@ export default {
                         },
                         {
                             anchor: `in-som'umiak`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Sensing disaster afoot, our brave tribe flees to safety "in some`,
                                     {
@@ -1667,7 +1667,7 @@ export default {
                         },
                         {
                             anchor: `skims through channels`,
-                            annotation: {
+                            card: {
                                 description: `Being an "insomniac," I skim through channels that are "snow-blitzed" due to the television's poor reception.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1691,7 +1691,7 @@ export default {
                         `Then pounds`,
                         {
                             anchor: `arrhythmetic heart,`,
-                            annotation: {
+                            card: {
                                 description: [
                                     {
                                         anchor: `Arrhythmia,`,
@@ -1713,7 +1713,7 @@ export default {
                         {
                             anchor: `Enguished buzzereds`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `In the historical narrative still playing in my head, the`,
                                     {
@@ -1730,7 +1730,7 @@ export default {
                         },
                         {
                             anchor: `come unsated`,
-                            annotation: {
+                            card: {
                                 description: `Howie had opted for a large bottle of Robitussin, thinking the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he guzzles cup after cup of water to quench his parched innards.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1742,7 +1742,7 @@ export default {
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     {
                                         anchor: `Rumspringa`,
@@ -1769,7 +1769,7 @@ export default {
                     lyric: [
                         {
                             anchor: `In mouth Deseret,`,
-                            annotation: {
+                            card: {
                                 description: [
                                     {
                                         anchor: `Deseret`,
@@ -1790,7 +1790,7 @@ export default {
                         },
                         {
                             anchor: `black Letter-Day`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" that I sense ahead will be just another ordinary day.`,
                                     dotKeys: {
@@ -1803,7 +1803,7 @@ export default {
                         },
                         {
                             anchor: `Sensed ahead…`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `"Black Latter-Day Saints to head." While the Mormon Church originally did not allow its`,
@@ -1822,7 +1822,7 @@ export default {
                         },
                         {
                             anchor: `"Rejoyce!" bellow the`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but early-morning televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, just like each person's does over a lifetime. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                     dotKeys: {

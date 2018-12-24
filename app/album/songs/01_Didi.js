@@ -29,7 +29,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `In Chinese,`,
                             {
@@ -53,7 +53,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
                             {
@@ -96,7 +96,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             {
                                 italic: {
@@ -124,7 +124,7 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes?`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `Being left-handed, I struggled as a child to learn the proper way to tie shoelaces, where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
                                     dotKeys: {
@@ -162,7 +162,7 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here.`,
-                            annotation: {
+                            card: {
                                 description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I always panicked when this happened.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -181,7 +181,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `The nonstop modulations between the`,
                             {
@@ -204,7 +204,7 @@ export default {
                         `Cause I get sick of hearing,`,
                         {
                             anchor: `"Zeizei,`,
-                            annotation: {
+                            card: {
                                 description: [
                                     {
                                         italic: `Zeizei`
@@ -236,7 +236,7 @@ export default {
                         `Didi`,
                         {
                             anchor: `made an "accident"`,
-                            annotation: {
+                            card: {
                                 description: `After I soil my pants, the nurse places them in a shopping bag for me to carry home, and fits me into an abandoned pair of overalls.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -257,7 +257,7 @@ export default {
                         {
                             anchor: `Safeway paper bag,`,
                             properNoun: true,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         {
@@ -302,7 +302,7 @@ export default {
                         `Didi, you've`,
                         {
                             anchor: `been in the bath`,
-                            annotation: {
+                            card: {
                                 description: `After coming home, I soak in the bathtub until well into the evening.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -336,7 +336,7 @@ export default {
                     lyric: [
                         {
                             anchor: `crooked thieves`,
-                            annotation: {
+                            card: {
                                 description: ``,
                                 wormhole: `crooked_thieves`
                             }
@@ -344,7 +344,7 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun…`,
-                            annotation: {
+                            card: {
                                 description: `After China stripped Taiwan of international recognition, a bootleg industry emerged to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records and watching old Westerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -360,7 +360,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
                         dotKeys: {
                             [SONGWRITING]: true
@@ -381,7 +381,7 @@ export default {
                         `taped to all the`,
                         {
                             anchor: `girls' mirrors.`,
-                            annotation: {
+                            card: {
                                 description: `My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -400,7 +400,7 @@ export default {
                         `you'd`,
                         {
                             anchor: `finally become someone?`,
-                            annotation: {
+                            card: {
                                 wormhole: `finally_become_someone`
                             }
                         }
@@ -455,7 +455,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `The song ends in G\u2011flat major, the remaining major triad belonging to the`,
                             {
@@ -500,7 +500,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,
                             {

@@ -24,7 +24,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             {
                                 anchor: `Ash Wednesday`,
@@ -40,7 +40,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `For a song about two people who couldn't be any more different, I juxtaposed`,
                             {
@@ -68,7 +68,7 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Walt Whitman wrote his elegy`,
                                     {
@@ -85,7 +85,7 @@ export default {
                         `our`,
                         {
                             anchor: `futile trip`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `I headed for the`,
                                     {
@@ -108,7 +108,7 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced:`,
-                            annotation: {
+                            card: {
                                 description: `My relationship with Catherine began much in the same way as my friendship with Sasha had a decade earlier. That is, I latched onto the first cute person to show me any small kindness in a new environment, then tried to make myself indispensable in countless small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -119,7 +119,7 @@ export default {
                         `in my`,
                         {
                             anchor: `bookless room,`,
-                            annotation: {
+                            card: {
                                 description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said, only partly in jest.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -134,7 +134,7 @@ export default {
                         {
                             anchor: `Ulysses' tomb,`,
                             properNoun: true,
-                            annotation: {
+                            card: {
                                 description: [
                                     `A reference to the classic "Who's buried in`,
                                     {
@@ -162,7 +162,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `The shrieking whistles, which remind me of`,
                             {
@@ -186,7 +186,7 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's,`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `Like those with`,
@@ -215,7 +215,7 @@ export default {
                         `the`,
                         {
                             anchor: `last day she rose`,
-                            annotation: {
+                            card: {
                                 description: `Jesus rose as well on the third day.`,
                                 dotKeys: {
                                     [REFERENCE]: true
@@ -225,7 +225,7 @@ export default {
                         `up and left, hers the`,
                         {
                             anchor: `sole assent…`,
-                            annotation: {
+                            card: {
                                 description: `Catherine wanted to break up; I didn't. And as the one believer between us, only she was to feel an "ascent."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -257,7 +257,7 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride,`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: [
                                         `A`,
@@ -292,7 +292,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the`,
                             {
@@ -314,7 +314,7 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion,`,
-                            annotation: {
+                            card: {
                                 description: `After committing to be a better lyricist, I would often ask Catherine for an honest critique. In this imagined scenario that's perfectly telling of our relationship, she puts down the James Joyce novel that she's reading to compliment my attempt at writing a clever verse.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -330,7 +330,7 @@ export default {
                     lyric: [
                         {
                             anchor: `"My, what wit, man,"`,
-                            annotation: {
+                            card: {
                                 description: `Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -340,7 +340,7 @@ export default {
                         },
                         {
                             anchor: `putting down her Joyce,`,
-                            annotation: {
+                            card: {
                                 description: `After all, referencing a poet typically studied by middle schoolers is hardly an artistic feat. And so Catherine is also figuratively "putting me down," for naively daring to become the James Joyce of lyricists.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -357,7 +357,7 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. The idea began to congeal in my head that I could do for rock music what`,
                                     {
@@ -396,7 +396,7 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains?`,
-                            annotation: {
+                            card: {
                                 description: `Catherine didn't value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realise that if I wanted to keep dating those so very unlike me, then I couldn't have any real weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -419,7 +419,7 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta,`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `The`,
                                     {
@@ -447,7 +447,7 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
                                     {
@@ -464,7 +464,7 @@ export default {
                         },
                         {
                             anchor: `unknown to roam,`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam.`,
                                     dotKeys: {
@@ -489,7 +489,7 @@ export default {
                         `my`,
                         {
                             anchor: `girl in glasses`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `The critic`,
                                     {
@@ -505,7 +505,7 @@ export default {
                         },
                         {
                             anchor: `went clear—`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Having decided to win Catherine back by reading more books, I began with those we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's earlier novel`,
                                     {
@@ -521,7 +521,7 @@ export default {
                         },
                         {
                             anchor: `my Tekakwitha—`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `The story of`,
                                     {
@@ -548,7 +548,7 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode.`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured after a raid upon her village. Dorothy Parker was a member of the`,
                                     {
@@ -567,7 +567,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps between the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
                         dotKeys: {
                             [SONGWRITING]: true
@@ -583,7 +583,7 @@ export default {
                         `Well yes, I`,
                         {
                             anchor: `faked this "X,"`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X.`,
                                     dotKeys: {
@@ -617,7 +617,7 @@ export default {
                         `Well no, I know it's wrong, but I did`,
                         {
                             anchor: `burn my palms,`,
-                            annotation: {
+                            card: {
                                 description: [
                                     `The ash used comes from burning the palm branches that were blessed on the previous year's`,
                                     {
@@ -647,7 +647,7 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe…`,
                                     properNoun: true,
-                                    annotation: {
+                                    card: {
                                         description: [
                                             {
                                                 anchor: `Henry IV`,
@@ -670,7 +670,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
                             {
@@ -697,7 +697,7 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born,`,
-                            annotation: {
+                            card: {
                                 description: `It always confused me why the Catholic Church should extend its pro-life stance to the unborn of other faiths, since this means trading an aborted fetus's certainty of going to heaven for a living child's likelihood of going to hell.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -712,7 +712,7 @@ export default {
                         `a`,
                         {
                             anchor: `spark zips through my head`,
-                            annotation: {
+                            card: {
                                 wormhole: `spark_zips`
                             }
                         },
@@ -729,7 +729,7 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask.`,
-                            annotation: {
+                            card: {
                                 description: `At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. So I always preferred a negative outcome to no outcome at all, which then made it hard to deny that everything I did was just a stage act.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -745,7 +745,7 @@ export default {
             unitMap: {
                 dotUnit: {
                     anchor: IS_DOT_UNIT,
-                    annotation: {
+                    card: {
                         description: [
                             `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza corresponded with their`,
                             {
@@ -772,7 +772,7 @@ export default {
                         `in`,
                         {
                             anchor: `spreading mole`,
-                            annotation: [
+                            cards: [
                                 {
                                     description: `By day's end, the ash was pretty smudged.`,
                                     dotKeys: {

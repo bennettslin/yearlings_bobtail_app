@@ -123,12 +123,11 @@ const _registerAnnotation = ({
     textKey
 
 }) => {
-    // If just a single card, make it an array of one.
-    const cards =
-        Array.isArray(lyricObject.annotation) ?
-            lyricObject.annotation :
-            [lyricObject.annotation],
-
+    const
+        /**
+         * Annotation will either have an array of cards or just a single card.
+         */
+        cards = lyricObject.cards || [lyricObject.card],
         annotationIndex = songObject.annotations.length + 1,
 
         // Create new annotation object to be known by song.
