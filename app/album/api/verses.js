@@ -18,9 +18,13 @@ export const getVerseObject = (
 ) => {
     const { lyricUnits } = getSongObject(songIndex)
 
-    return lyricUnits.reduce((foundVerse, unit) => (
-        foundVerse || getAllTimedVerses(unit).find(verse => (
-            verse.verseIndex === verseIndex
-        ))
-    ), false)
+    if (lyricUnits) {
+        return lyricUnits.reduce((foundVerse, unit) => (
+            foundVerse || getAllTimedVerses(unit).find(verse => (
+                verse.verseIndex === verseIndex
+            ))
+        ), false)
+    } else {
+        return null
+    }
 }

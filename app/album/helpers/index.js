@@ -24,59 +24,59 @@ import {
     PROPER_NOUN
 } from 'constants/lyrics'
 
-export const parseAlbumData = (albumObject) => {
+export const parseAlbumData = (album) => {
     logParse('Begin parse album data.')
 
     // Initialise album.
-    albumObject.tempWormholeLinks = {}
-    albumObject.globalAnnotationIndices = []
+    album.tempWormholeLinks = {}
+    album.globalAnnotationIndices = []
 
     // Initial preparation.
-    _initialPrepareAlbum(albumObject)
+    _initialPrepareAlbum(album)
 
     // In-between preparation.
-    addDestinationWormholeLinks(albumObject)
+    addDestinationWormholeLinks(album)
 
     // Final preparation.
-    _finalPrepareAnnotations(albumObject)
+    _finalPrepareAnnotations(album)
 
     // After preparation.
-    addDestinationWormholeIndices(albumObject)
+    addDestinationWormholeIndices(album)
 
     logParse('End parse album data.')
 
-    return albumObject
+    return album
 }
 
 /***********
  * INITIAL *
  ***********/
 
-const _initialPrepareAlbum = (albumObject) => {
+const _initialPrepareAlbum = (album) => {
 
-    albumObject.songs.forEach((songObject) => {
+    album.songs.forEach((song) => {
 
-        if (!songObject.logue) {
+        if (!song.logue) {
 
             // Parse lyrics.
-            _addAnnotationsToSongs(albumObject, songObject)
+            _addAnnotationsToSongs(album, song)
         }
     })
 }
 
-const _addAnnotationsToSongs = (albumObject, songObject) => {
+const _addAnnotationsToSongs = (album, song) => {
 
-    const { lyricUnits } = songObject,
+    const { lyricUnits } = song,
         verseTimesCounter = { counter: 0 }
 
     // This tells me how many dot stanzas this song has.
-    songObject.adminDotStanzasCount = 0
+    song.adminDotStanzasCount = 0
 
     // This tells me how many annotations have multiple cards.
-    songObject.adminPluralCardsCount = 0
+    song.adminPluralCardsCount = 0
 
-    songObject.annotations = []
-    songObject.mostRecentVerseIndex = 0
+    song.annotations = []
+    song.mostRecentVerseIndex = 0
 
     lyricUnits.forEach(unit => {
         const {
@@ -89,7 +89,7 @@ const _addAnnotationsToSongs = (albumObject, songObject) => {
                 unitMap
             ]
 
-        lyricUnitAndUnitMap.forEach(verseObject => {
+        lyricUnitAndUnitMap.forEach(verse => {
             /**
              * Recurse until each anchor is found. Initially, we will also
              * register each verse with time.
@@ -98,28 +98,27 @@ const _addAnnotationsToSongs = (albumObject, songObject) => {
                 // Pass this to register each verse time.
                 verseTimesCounter,
 
-                albumObject,
-                songObject,
-                verseObject,
+                album,
+                song,
+                verse,
                 callbackFunction: _registerAnnotation
             })
 
             // Tell song its dot stanza count, for admin purposes.
-            registerAdminDotStanzas(songObject, verseObject)
+            registerAdminDotStanzas(song, verse)
         })
     })
 
     // Clean up.
-    delete songObject.mostRecentVerseIndex
+    delete song.mostRecentVerseIndex
 }
 
 const _registerAnnotation = ({
-
     inVerseWithTimeIndex = -1,
-    albumObject,
-    songObject,
-    verseObject,
-    lyricObject,
+    album,
+    song,
+    verse,
+    rawAnnotation,
     textKey
 
 }) => {
@@ -127,125 +126,130 @@ const _registerAnnotation = ({
         /**
          * Annotation will either have an array of cards or just a single card.
          */
-        cards = lyricObject.cards || [lyricObject.card],
-        annotationIndex = songObject.annotations.length + 1,
+        cards = rawAnnotation.cards || [rawAnnotation.card],
+        annotationIndex = song.annotations.length + 1,
 
         // Create new annotation object to be known by song.
-        annotationObject = {},
+        annotation = {},
         dotKeys = {}
 
-    // Tell verse object its annotation anchors.
-    if (!verseObject.verseAnnotationIndices) {
-        verseObject.verseAnnotationIndices = []
+    // For admin purposes, add to count of annotations with plural cards.
+    if (rawAnnotation.cards) {
+        song.adminPluralCardsCount++
     }
 
-    verseObject.verseAnnotationIndices.push(annotationIndex)
+    // Tell verse object its annotation anchors.
+    if (!verse.verseAnnotationIndices) {
+        verse.verseAnnotationIndices = []
+    }
+
+    verse.verseAnnotationIndices.push(annotationIndex)
 
     // Tell annotation and anchored lyric the index. 1-based index.
-    annotationObject.annotationIndex = annotationIndex
-    lyricObject.annotationIndex = annotationIndex
+    annotation.annotationIndex = annotationIndex
+    rawAnnotation.annotationIndex = annotationIndex
 
     // If in a verse with time, tell annotation its verse index.
     if (inVerseWithTimeIndex > -1) {
-        annotationObject.verseIndex = inVerseWithTimeIndex
+        annotation.verseIndex = inVerseWithTimeIndex
 
     /**
      * Otherwise, tell it the most recent verse index. For first dot stanza,
      * this is 0.
      */
     } else {
-        annotationObject.mostRecentVerseIndex = songObject.mostRecentVerseIndex
+        annotation.mostRecentVerseIndex = song.mostRecentVerseIndex
     }
 
     // Add formatted title to annotation.
-    annotationObject.title = getFormattedAnnotationTitle(
-        lyricObject[ANCHOR],
-        lyricObject[PROPER_NOUN],
-        lyricObject.keepEndCharacter
+    annotation.title = getFormattedAnnotationTitle(
+        rawAnnotation[ANCHOR],
+        rawAnnotation[PROPER_NOUN],
+        rawAnnotation.keepEndCharacter
     )
 
     // Let annotation know if it's in a doublespeaker column.
     if (textKey === LEFT) {
-        annotationObject[COLUMN_INDEX] = 0
+        annotation[COLUMN_INDEX] = 0
 
     } else if (textKey === RIGHT) {
-        annotationObject[COLUMN_INDEX] = 1
+        annotation[COLUMN_INDEX] = 1
     }
 
     registerCardsDotKeys({
-        songObject,
+        song,
         cards,
         dotKeys
     })
 
     registerCardsWormholes({
-        albumObject,
-        songObject,
-        verseObject,
-        annotationObject,
+        album,
+        song,
+        verse,
+        annotation,
         cards,
         dotKeys
     })
 
     // Let annotation object know its global index.
-    annotationObject.globalIndex = albumObject.globalAnnotationIndices.length
-    albumObject.globalAnnotationIndices.push({
-        songIndex: songObject.songIndex,
+    annotation.globalIndex = album.globalAnnotationIndices.length
+    album.globalAnnotationIndices.push({
+        songIndex: song.songIndex,
         annotationIndex
     })
 
     // Let annotation object know its cards.
-    annotationObject.cards = cards
+    annotation.cards = cards
 
     // Add dot keys to both anchored lyric and annotation.
-    annotationObject.dotKeys = dotKeys
-    lyricObject.dotKeys = dotKeys
+    annotation.dotKeys = dotKeys
+    rawAnnotation.dotKeys = dotKeys
 
     // Add annotation object to annotations array.
-    songObject.annotations.push(annotationObject)
+    song.annotations.push(annotation)
 
     // Clean up lyric object.
-    delete lyricObject[PROPER_NOUN]
-    delete lyricObject.annotation
+    delete rawAnnotation[PROPER_NOUN]
+    delete rawAnnotation.annotation
 }
 
 /*********
  * FINAL *
  *********/
 
-const _finalPrepareAnnotations = (albumObject) => {
+const _finalPrepareAnnotations = (album) => {
 
-    albumObject.songs.forEach((songObject) => {
+    album.songs.forEach((song) => {
 
-        if (!songObject.logue) {
+        if (!song.logue) {
 
             // Initialise song.
-            songObject.tempFinalAnnotationIndex = 0
+            song.tempFinalAnnotationIndex = 0
 
             /**
              * Add wiki and wormhole indices. These can only be determined
              * after collecting wormhole links from the entire album.
              */
-            songObject.annotations.forEach(annotationObject => {
-                annotationObject.tempWikiWormholeIndex = 1
+            song.annotations.forEach(annotation => {
+                annotation.tempWikiWormholeIndex = 1
 
-                let cards = annotationObject.cards
+                let cards = annotation.cards
 
                 cards.forEach(cardObject => {
-                    finalPrepareCard(songObject, annotationObject, cardObject)
+                    finalPrepareCard(song, annotation, cardObject)
                 })
 
-                songObject.tempFinalAnnotationIndex++
+                song.tempFinalAnnotationIndex++
 
                 // Clean up.
-                delete annotationObject.tempWikiWormholeIndex
+                delete annotation.tempWikiWormholeIndex
             })
 
             // For each verse in a wormhole, tell wormhole how to format it.
-            addDestinationWormholeFormats(songObject.lyricUnits)
+            addDestinationWormholeFormats(song.lyricUnits)
 
             // Clean up.
-            // delete songObject.tempFinalAnnotationIndex
+            // delete song.tempFinalAnnotationIndex
         }
     })
 }

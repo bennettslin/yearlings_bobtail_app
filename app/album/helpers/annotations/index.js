@@ -25,17 +25,10 @@ import {
  ***********/
 
 export const registerCardsDotKeys = ({
-    songObject,
     cards,
     dotKeys
 
 }) => {
-
-    // For admin purposes, add to count of annotations with plural cards.
-    if (cards.length > 1) {
-        songObject.adminPluralCardsCount++
-    }
-
     cards.forEach((card) => {
 
         _addWikiDotKeyToCard(card)
@@ -46,10 +39,10 @@ export const registerCardsDotKeys = ({
 }
 
 export const registerCardsWormholes = ({
-    albumObject,
-    songObject,
-    verseObject,
-    annotationObject,
+    album,
+    song,
+    verse,
+    annotation,
     cards,
     dotKeys
 
@@ -57,16 +50,15 @@ export const registerCardsWormholes = ({
     cards.forEach((card, cardIndex) => {
 
         if (_addSourceWormholeLink({
-
-            albumObject,
-            songObject,
-            annotationObject,
+            album,
+            song,
+            annotation,
             card,
             cardIndex,
             dotKeys
 
         })) {
-            verseObject.tempVerseHasWormhole = true
+            verse.tempVerseHasWormhole = true
         }
     })
 }
@@ -120,9 +112,9 @@ const _addCardDotKeysToAnnotation = (card, dotKeys) => {
 
 const _addSourceWormholeLink = ({
 
-    albumObject,
-    songObject,
-    annotationObject,
+    album,
+    song,
+    annotation,
     card,
     cardIndex = 0,
     dotKeys
@@ -141,7 +133,7 @@ const _addSourceWormholeLink = ({
      */
     const wormholeKey = wormhole.wormholeKey || wormhole,
         { wormholePrefix } = wormhole,
-        { songIndex } = songObject,
+        { songIndex } = song,
 
         /**
          * NOTE: I wrote this code with the assumption that every wormhole would
@@ -152,7 +144,7 @@ const _addSourceWormholeLink = ({
             verseIndex,
             annotationIndex,
             columnIndex
-        } = annotationObject,
+        } = annotation,
 
         wormholeLink = {
             songIndex,
@@ -164,12 +156,12 @@ const _addSourceWormholeLink = ({
         }
 
     // If first wormhole link, initialise array.
-    if (!albumObject.tempWormholeLinks[wormholeKey]) {
-        albumObject.tempWormholeLinks[wormholeKey] = []
+    if (!album.tempWormholeLinks[wormholeKey]) {
+        album.tempWormholeLinks[wormholeKey] = []
     }
 
     // Add wormhole link to wormhole links array.
-    albumObject.tempWormholeLinks[wormholeKey].push(wormholeLink)
+    album.tempWormholeLinks[wormholeKey].push(wormholeLink)
 
     // Add wormhole to dot keys.
     dotKeys[WORMHOLE] = true
@@ -184,13 +176,13 @@ const _addSourceWormholeLink = ({
  * BETWEEN *
  ***********/
 
-export const addDestinationWormholeLinks = (albumObject) => {
+export const addDestinationWormholeLinks = (album) => {
     /**
      * For each annotation with a wormhole, add an array of links to all
      * other wormholes.
      */
-    for (const linkKey in albumObject.tempWormholeLinks) {
-        const links = albumObject.tempWormholeLinks[linkKey]
+    for (const linkKey in album.tempWormholeLinks) {
+        const links = album.tempWormholeLinks[linkKey]
 
         links.forEach((destinationLink, index) => {
             const {
@@ -199,8 +191,8 @@ export const addDestinationWormholeLinks = (albumObject) => {
                     cardIndex
                 } = destinationLink,
 
-                annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
-                card = annotationObject.cards[cardIndex]
+                annotation = getAnnotationObject(songIndex, annotationIndex, album.songs),
+                card = annotation.cards[cardIndex]
 
             card.wormholeLinks = links.filter((sourceLink, thisIndex) => {
 
@@ -216,8 +208,8 @@ export const addDestinationWormholeLinks = (albumObject) => {
  * FINAL *
  *********/
 
-export const finalPrepareCard = (songObject, annotationObject, card) => {
-    const { songIndex } = songObject,
+export const finalPrepareCard = (song, annotation, card) => {
+    const { songIndex } = song,
 
         {
             description,
@@ -226,24 +218,24 @@ export const finalPrepareCard = (songObject, annotationObject, card) => {
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
-        _finalParseWiki(annotationObject, description)
+        _finalParseWiki(annotation, description)
     }
 
     if (wormholeLinks) {
         wormholeLinks.forEach(link => {
-            const { tempWikiWormholeIndex } = annotationObject
+            const { tempWikiWormholeIndex } = annotation
 
             // Access will loop through this array.
-            if (!annotationObject.wikiWormholes) {
-                annotationObject.wikiWormholes = []
+            if (!annotation.wikiWormholes) {
+                annotation.wikiWormholes = []
             }
-            annotationObject.wikiWormholes.push(tempWikiWormholeIndex)
+            annotation.wikiWormholes.push(tempWikiWormholeIndex)
 
             // Allow each wormhole to know its source wormhole index.
-            if (!annotationObject.tempSourceWormholeIndices) {
-                annotationObject.tempSourceWormholeIndices = []
+            if (!annotation.tempSourceWormholeIndices) {
+                annotation.tempSourceWormholeIndices = []
             }
-            annotationObject.tempSourceWormholeIndices.push(tempWikiWormholeIndex)
+            annotation.tempSourceWormholeIndices.push(tempWikiWormholeIndex)
 
             // Temporarily, also allow wormhole to know its source annotations.
             if (!link.tempSourceWormholeLinks) {
@@ -251,16 +243,16 @@ export const finalPrepareCard = (songObject, annotationObject, card) => {
             }
             link.tempSourceWormholeLinks.push({
                 tempSourceSongIndex: songIndex,
-                tempSourceAnnotationIndex: annotationObject.annotationIndex,
+                tempSourceAnnotationIndex: annotation.annotationIndex,
                 tempSourceWormholeIndex: tempWikiWormholeIndex
             })
 
-            annotationObject.tempWikiWormholeIndex++
+            annotation.tempWikiWormholeIndex++
         })
     }
 }
 
-const _finalParseWiki = (annotationObject, entity) => {
+const _finalParseWiki = (annotation, entity) => {
 
     // Add the wiki index.
     if (!entity || typeof entity !== 'object') {
@@ -269,7 +261,7 @@ const _finalParseWiki = (annotationObject, entity) => {
     } else if (Array.isArray(entity)) {
         return entity.reduce((keyFound, element) => {
             // Reversing order so that index gets added if needed.
-            return _finalParseWiki(annotationObject, element) || keyFound
+            return _finalParseWiki(annotation, element) || keyFound
         }, false)
 
     } else {
@@ -279,21 +271,21 @@ const _finalParseWiki = (annotationObject, entity) => {
             if (!entity[WIKI_INDEX] && typeof entity[WIKI] === 'string') {
 
                 // Let annotation anchor know its annotation.
-                entity.wikiAnnotationIndex = annotationObject.annotationIndex
+                entity.wikiAnnotationIndex = annotation.annotationIndex
 
                 // Popup anchor index is either for wormhole or wiki.
-                entity[WIKI_INDEX] = annotationObject.tempWikiWormholeIndex
-                annotationObject.tempWikiWormholeIndex++
+                entity[WIKI_INDEX] = annotation.tempWikiWormholeIndex
+                annotation.tempWikiWormholeIndex++
 
-                if (!annotationObject.wikiWormholes) {
-                    annotationObject.wikiWormholes = []
+                if (!annotation.wikiWormholes) {
+                    annotation.wikiWormholes = []
                 }
-                annotationObject.wikiWormholes.push(entity[WIKI])
+                annotation.wikiWormholes.push(entity[WIKI])
 
                 delete entity[WIKI]
             }
 
-            return keyFound || hasWiki || _finalParseWiki(annotationObject, entity[currentKey])
+            return keyFound || hasWiki || _finalParseWiki(annotation, entity[currentKey])
         }, false)
     }
 }
@@ -388,11 +380,11 @@ const _addWormholeFormat = (lyricEntity, verseObjectKey) => {
     }
 }
 
-export const addDestinationWormholeIndices = (albumObject) => {
+export const addDestinationWormholeIndices = (album) => {
     // Now that each wormhole knows its source index, get destination indices.
 
-    for (const linkKey in albumObject.tempWormholeLinks) {
-        const links = albumObject.tempWormholeLinks[linkKey]
+    for (const linkKey in album.tempWormholeLinks) {
+        const links = album.tempWormholeLinks[linkKey]
 
         links.forEach((destinationLink, index) => {
 
@@ -402,8 +394,8 @@ export const addDestinationWormholeIndices = (albumObject) => {
                     cardIndex
                 } = destinationLink,
 
-                annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
-                card = annotationObject.cards[cardIndex]
+                annotation = getAnnotationObject(songIndex, annotationIndex, album.songs),
+                card = annotation.cards[cardIndex]
 
             card.wormholeLinks = links.filter((sourceLink, thisIndex) => {
                 /**
@@ -427,7 +419,7 @@ export const addDestinationWormholeIndices = (albumObject) => {
                     if (linksMatch) {
                         // Exchange knowledge of source and destination indices.
                         sourceLink.destinationWormholeIndex = tempSourceWormholeIndex
-                        sourceLink.sourceWormholeIndex = annotationObject.tempSourceWormholeIndices.shift()
+                        sourceLink.sourceWormholeIndex = annotation.tempSourceWormholeIndices.shift()
                     }
                 })
 
@@ -447,10 +439,10 @@ export const addDestinationWormholeIndices = (albumObject) => {
             })
 
             // Clean up.
-            delete annotationObject.tempSourceWormholeIndices
+            delete annotation.tempSourceWormholeIndices
         })
     }
 
     // Clean up.
-    delete albumObject.tempWormholeLinks
+    delete album.tempWormholeLinks
 }

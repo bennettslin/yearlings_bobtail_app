@@ -4,21 +4,21 @@ import {
     DOT_CARD
 } from 'constants/lyrics'
 
-export const registerAdminDotStanzas = (songObject, verseObject) => {
+export const registerAdminDotStanzas = (song, verse) => {
 
     // For admin purposes.
-    if (verseObject[DOT_CARD]) {
-        songObject.adminDotStanzasCount++
+    if (verse[DOT_CARD]) {
+        song.adminDotStanzasCount++
     }
 }
 
 export const recurseToFindAnnotations = ({
 
     inVerseWithTimeIndex = -1,
-    albumObject,
-    songObject,
-    verseObject,
-    lyricEntity = verseObject,
+    album,
+    song,
+    verse,
+    lyricEntity = verse,
     textKey,
     callbackFunction,
     verseTimesCounter
@@ -39,7 +39,7 @@ export const recurseToFindAnnotations = ({
         const {
             mostRecentVerseIndex,
             annotations
-        } = songObject
+        } = song
 
         // All recursed lyrics will know they're nested in verse with time.
         inVerseWithTimeIndex = mostRecentVerseIndex
@@ -47,7 +47,7 @@ export const recurseToFindAnnotations = ({
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = annotations.length
 
-        songObject.mostRecentVerseIndex++
+        song.mostRecentVerseIndex++
     }
 
     // Recurse until object with anchor key is found.
@@ -56,9 +56,9 @@ export const recurseToFindAnnotations = ({
         lyricEntity.forEach(childEntity => {
             recurseToFindAnnotations({
                 inVerseWithTimeIndex,
-                albumObject,
-                songObject,
-                verseObject,
+                album,
+                song,
+                verse,
                 lyricEntity: childEntity,
                 textKey,
                 callbackFunction,
@@ -72,10 +72,10 @@ export const recurseToFindAnnotations = ({
 
             callbackFunction({
                 inVerseWithTimeIndex,
-                albumObject,
-                songObject,
-                verseObject,
-                lyricObject: lyricEntity,
+                album,
+                song,
+                verse,
+                rawAnnotation: lyricEntity,
                 textKey
             })
 
@@ -86,9 +86,9 @@ export const recurseToFindAnnotations = ({
 
                     recurseToFindAnnotations({
                         inVerseWithTimeIndex,
-                        albumObject,
-                        songObject,
-                        verseObject,
+                        album,
+                        song,
+                        verse,
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || childKey),
                         callbackFunction,
