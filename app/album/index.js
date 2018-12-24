@@ -1,11 +1,10 @@
 import { parseAlbumData } from './helpers'
 import songs from '../album/songs'
 
-const rawAlbum = {
-        songs
-    },
+import { addGlobalAnnotationIndices } from './helpers/admin'
 
-    // Restructure raw data to be usable by app.
-    album = parseAlbumData(rawAlbum)
+const album = parseAlbumData({ songs })
+
+addGlobalAnnotationIndices(album)
 
 export default album

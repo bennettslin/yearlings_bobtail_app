@@ -10,16 +10,13 @@ import {
     addDestinationWormholeIndices
 } from './annotations/helper'
 
-import {
-    recurseToFindAnnotations
-} from './lyrics'
+import { recurseToFindAnnotations } from './lyrics'
 
 export const parseAlbumData = (album) => {
     logParse('Begin parse album data.')
 
     // Initialise album.
     album.tempWormholeLinks = {}
-    album.globalAnnotationIndices = []
 
     // Initial preparation.
     _initialPrepareAnnotations(album)

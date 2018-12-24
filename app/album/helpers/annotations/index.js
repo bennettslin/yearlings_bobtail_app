@@ -86,13 +86,6 @@ export const _registerAnnotation = ({
         dotKeys
     })
 
-    // Let annotation object know its global index.
-    annotation.globalIndex = album.globalAnnotationIndices.length
-    album.globalAnnotationIndices.push({
-        songIndex: song.songIndex,
-        annotationIndex
-    })
-
     // Let annotation object know its cards.
     annotation.cards = cards
 
