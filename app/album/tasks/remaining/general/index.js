@@ -16,8 +16,8 @@ export default [
     },
     {
         taskName: `Refactor and separate album data.`,
-        workedHours: 0,
-        neededHours: 8
+        workedHours: 20,
+        neededHours: 30
     },
     {
         taskName: `Try out Vivus animations.`,
