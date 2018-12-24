@@ -20,7 +20,7 @@ import Song_18 from './18_My100000thDream'
 import Song_19 from './19_Epilogue'
 
 import { addSongIndicesToSongs } from './helpers/song'
-import { addVerseIndicesToSongs } from './helpers/verse'
+import { addVerseIndicesAndConfigsToSongs } from './helpers/verse'
 import { addHasSideCardStatusToSongs } from './helpers/unit'
 import { addStanzaTypesToSongs } from './helpers/stanzaType'
 import { addStanzaConfigsToSongs } from './helpers/stanzaConfig'
@@ -48,10 +48,16 @@ const albumSongs = [
     Song_19
 ]
 
+logParse('Begin adding metadata to songs.')
+
 addSongIndicesToSongs(albumSongs)
-addVerseIndicesToSongs(albumSongs)
+addVerseIndicesAndConfigsToSongs(albumSongs)
 addHasSideCardStatusToSongs(albumSongs)
 addStanzaTypesToSongs(albumSongs)
+
+// This needs to come after adding verse configs.
 addStanzaConfigsToSongs(albumSongs)
+
+logParse('End adding metadata to songs.')
 
 export default albumSongs

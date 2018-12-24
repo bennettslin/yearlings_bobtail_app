@@ -1,29 +1,56 @@
-export const addVerseIndicesToSongs = (albumSongs) => {
+import { getAllTimedVerses } from './helper'
+
+const _addIndexToVerseObject = (verse, verseIndexCounter) => {
+    verse.verseIndex = verseIndexCounter
+}
+
+const _getVerseConfig = (verse) => {
+    const { time } = verse
+    return { verseStartTime: time }
+}
+
+const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
+
+    verseConfigs.forEach((verseConfig, verseIndex) => {
+        const { verseStartTime } = verseConfig
+        let nextTime
+
+        // It is followed by another verse.
+        if (verseIndex < verseConfigs.length - 1) {
+            nextTime = verseConfigs[verseIndex + 1].verseStartTime
+
+        // It is the last verse.
+        } else {
+            nextTime = totalTime
+        }
+
+        verseConfig.verseDuration = nextTime - verseStartTime
+    })
+}
+
+export const addVerseIndicesAndConfigsToSongs = (albumSongs) => {
 
     albumSongs.forEach(song => {
-        const { lyricUnits } = song
+        const
+            { lyricUnits } = song,
+            verseConfigs = []
 
         if (lyricUnits) {
             let verseIndexCounter = 0
 
             lyricUnits.forEach(unit => {
-                const {
-                    lyricUnit,
-                    unitMap: { subCard }
-                } = unit
+                getAllTimedVerses(unit).forEach(verse => {
 
-                if (lyricUnit) {
-                    lyricUnit.forEach(verseObject => {
-                        verseObject.verseIndex = verseIndexCounter
-                        verseIndexCounter++
-                    })
-                }
-
-                if (subCard) {
-                    subCard[0].verseIndex = verseIndexCounter
+                    _addIndexToVerseObject(verse, verseIndexCounter)
                     verseIndexCounter++
-                }
+
+                    verseConfigs.push(_getVerseConfig(verse))
+                })
             })
         }
+
+        _addDurationsToVerseConfigs(verseConfigs, song)
+
+        song.songVerseConfigs = verseConfigs
     })
 }

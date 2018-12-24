@@ -63,8 +63,6 @@ module.exports = {
 
     // This is the order by which annotations will be assigned.
     ALBUM_BUILD_KEYS: [
-        'unitMap',
-        'lyricUnit',
         LYRIC,
         LEFT,
         CENTRE,

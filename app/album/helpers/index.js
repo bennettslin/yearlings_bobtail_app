@@ -91,9 +91,6 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     songObject.annotations = []
     songObject.tempVerseIndexCounter = 0
 
-    // Allow easy access to verse metadata, without having to traverse lyrics.
-    songObject.songVerseConfigs = []
-
     lyricUnits.forEach(unit => {
         const {
             unitMap,

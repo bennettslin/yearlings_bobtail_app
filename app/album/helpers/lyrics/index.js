@@ -63,46 +63,6 @@ export const recurseToFindAnchors = ({
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = annotations.length
 
-        // FIXME: Eventually should not need this.
-        if (
-            songObject.songVerseConfigs.length > 0 &&
-            time <=
-                songObject.songVerseConfigs[
-                    songObject.songVerseConfigs.length - 1
-                ].verseStartTime
-        ) {
-            /**
-             * Throw an exception if next time is not later than previous time.
-             * This should, of course, never happen.
-             */
-            // eslint-disable-next-line no-throw-literal
-            throw 'Verse time can never be earlier or same as previous one!'
-        }
-
-        /**
-         * This repeats some code. Overwrite the verseDuration of the previous
-         * verse config.
-         */
-        if (songObject.songVerseConfigs.length > 0) {
-            const previousVerseConfig = songObject.songVerseConfigs[
-                songObject.songVerseConfigs.length - 1
-            ]
-
-            previousVerseConfig.verseDuration =
-                time - previousVerseConfig.verseStartTime
-        }
-
-        songObject.songVerseConfigs.push({
-            stanzaIndex,
-            verseStartTime: time,
-
-            /**
-             * This repeats some code. This is only accurate for the last
-             * verse, and gets overwritten otherwise.
-             */
-            verseDuration: songObject.totalTime - time
-        })
-
         songObject.tempVerseIndexCounter++
     }
 
