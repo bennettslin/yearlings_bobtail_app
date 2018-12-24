@@ -87,7 +87,10 @@ class AnnotationWormhole extends PureComponent {
             } = wormholeLink,
 
             songTitle = getSongTitle({ songIndex }),
-            verseObject = getVerseObject(songIndex, verseIndex),
+
+            verseObject = getVerseObject(songIndex, verseIndex)
+
+        const
             columnKey = EAR_COLUMN_KEYS[columnIndex],
 
             text =
