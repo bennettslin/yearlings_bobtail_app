@@ -10,12 +10,7 @@ import {
 
 import {
     recurseToFindAnchors,
-    // registerTitle,
-    registerHasSideCards,
-    initialRegisterStanzaTypes,
-    registerIsDoublespeaker,
-    registerAdminDotStanzas,
-    finalRegisterStanzaTypes
+    registerAdminDotStanzas
 } from './lyrics'
 
 import {
@@ -69,8 +64,6 @@ const _initialPrepareAlbum = (albumObject) => {
 
     albumObject.songs.forEach((songObject, songIndex) => {
 
-        songObject.songIndex = songIndex
-
         // This collects the unit index for each scene.
         initialRegisterScenes(songObject, songIndex)
 
@@ -78,21 +71,6 @@ const _initialPrepareAlbum = (albumObject) => {
 
             // Initialise song.
             songObject.tempSongIndex = songIndex
-
-            // Add title object to lyrics array.
-            // registerTitle(songObject)
-
-            /**
-             * Let app know that song has side stanzas. Only applies to "On a
-             * Golden Cord" and "Uncanny Valley Boy."
-             */
-            registerHasSideCards(songObject)
-
-            /**
-             * Associate a type and index for each stanza, like verse, chorus,
-             * and so forth.
-             */
-            initialRegisterStanzaTypes(albumObject, songObject)
 
             // Parse lyrics.
             _initialPrepareLyrics(albumObject, songObject)
@@ -130,10 +108,6 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
 
         if (lyricUnit) {
             lyricUnit.forEach(verseObject => {
-
-                // Tell song it is a doublespeaker song.
-                registerIsDoublespeaker(songObject, verseObject)
-
                 /**
                  * Recurse until each anchor is found. Initially, we will also
                  * register each verse with time.
@@ -281,12 +255,6 @@ const _finalPrepareAlbum = (albumObject) => {
 
             // Initialise song.
             songObject.tempFinalAnnotationIndex = 0
-
-            /**
-             * If stanza is the only one of its kind, don't show its index. For
-             * example, Bridge instead of Bridge 1.
-             */
-            finalRegisterStanzaTypes(songObject)
 
             /**
              * Add wiki and wormhole indices. These can only be determined after

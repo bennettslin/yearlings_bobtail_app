@@ -19,7 +19,12 @@ import Song_17 from './17_VeganProclamation'
 import Song_18 from './18_My100000thDream'
 import Song_19 from './19_Epilogue'
 
-export default [
+import { addSongIndicesToSongs } from './helpers/song'
+import { addVerseIndicesToSongs } from './helpers/verse'
+import { addHasSideCardStatusToSongs } from './helpers/unit'
+import { addStanzaConfigsAndTypes } from './helpers/stanza'
+
+const albumSongs = [
     Song_00,
     Song_01,
     Song_02,
@@ -41,3 +46,10 @@ export default [
     Song_18,
     Song_19
 ]
+
+addSongIndicesToSongs(albumSongs)
+addVerseIndicesToSongs(albumSongs)
+addHasSideCardStatusToSongs(albumSongs)
+addStanzaConfigsAndTypes(albumSongs)
+
+export default albumSongs

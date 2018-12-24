@@ -3,146 +3,10 @@
 import {
     ALBUM_BUILD_KEYS,
     ANCHOR,
-
     DOT_CARD,
-    HAS_SIDE_CARDS,
-
-    IS_DOUBLESPEAKER,
-    LEFT,
-    RIGHT,
     LEFT_COLUMN,
-    RIGHT_COLUMN,
-
-    PROPER_NOUN
+    RIGHT_COLUMN
 } from 'constants/lyrics'
-
-/***********
- * INITIAL *
- ***********/
-
-export const registerTitle = (songObject) => {
-
-    const {
-            title, lyricUnits
-        } = songObject,
-        { annotation } = title,
-        titleObject = {
-
-            // Set title time to -1.
-            lyric: title,
-            isTitle: true
-        }
-
-    // Capitalise song title in annotation title.
-    if (annotation) {
-        title[PROPER_NOUN] = true
-    }
-
-    /**
-     * If first unit contains a lone dot stanza, append title to unit. (This is
-     * now never the case.)
-     */
-    if (lyricUnits[0][lyricUnits[0].length - 1].isUnitMap && lyricUnits[0].length === 1) {
-        lyricUnits[0].unshift(titleObject)
-
-    // Otherwise, create a new first unit that just contains the title.
-    } else {
-        lyricUnits.unshift([titleObject])
-    }
-
-    /**
-     * Now that title object is pushed into lyrics, replace it in song object
-     * with just text. (Don't confuse anchor key with string prototype anchor
-     * method!)
-     */
-    if (typeof title[ANCHOR] !== 'function') {
-        songObject.title = title[ANCHOR]
-    }
-}
-
-export const registerHasSideCards = (songObject) => {
-
-    const { lyricUnits } = songObject
-    let songHasSideCards = false
-
-    lyricUnits.forEach(unit => {
-
-        const { unitMap } = unit,
-            unitHasSideCards = Boolean(
-                unitMap.topSideCard || unitMap.bottomSideCard
-            )
-
-        songHasSideCards = unitHasSideCards || songHasSideCards
-    })
-
-    // Tell song it has side stanzas, so ear button can be shown if needed.
-    songObject[HAS_SIDE_CARDS] = songHasSideCards
-}
-
-export const initialRegisterStanzaTypes = (albumObject, songObject) => {
-
-    const { lyricUnits } = songObject,
-        tempStanzaTypeCounters = {},
-
-        /**
-         * This allows easy access to stanza metadata, without having to
-         * traverse lyrics.
-         */
-        songStanzaConfigs = []
-
-    lyricUnits.forEach(unit => {
-        const {
-            unitMap,
-            lyricUnit
-        } = unit
-
-        if (unitMap.stanzaType) {
-
-            const { stanzaType } = unitMap
-
-            // If it's not a subsequent unit, establish new index.
-            if (!unitMap.subsequent) {
-
-                /**
-                 * This will let audio slider know the relative width of
-                 * each unit, based on its time length.
-                 */
-                songStanzaConfigs.push({
-                    stanzaVerseConfigs: [{
-                        /**
-                         * Initialise with just the start time, because at this
-                         * point we still don't know the verse index.
-                         */
-                        verseStartTime: lyricUnit[0].time
-                    }],
-                    stanzaType,
-                    stanzaUnitIndices: []
-                })
-
-                tempStanzaTypeCounters[stanzaType] = (
-                    tempStanzaTypeCounters[stanzaType] || 0
-                ) + 1
-            }
-
-            // Tell unit and subsequent units their stanza index.
-            unitMap.stanzaIndex = songStanzaConfigs.length - 1
-
-            // Tell unit its stanza type index.
-            unitMap.stanzaTypeIndex = tempStanzaTypeCounters[stanzaType]
-        }
-    })
-
-    songObject.songStanzaConfigs = songStanzaConfigs
-    songObject.tempStanzaTypeCounters = tempStanzaTypeCounters
-}
-
-export const registerIsDoublespeaker = (songObject, verseObject) => {
-
-    // It's a doublespeaker song if it has "left" or "right" keys.
-    if (verseObject[LEFT] || verseObject[RIGHT]) {
-        songObject[IS_DOUBLESPEAKER] = true
-    }
-}
 
 export const registerAdminDotStanzas = (songObject, verseObject) => {
 
@@ -155,32 +19,6 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
 /*********
  * FINAL *
  *********/
-
-export const finalRegisterStanzaTypes = (songObject) => {
-
-    const {
-        lyricUnits,
-        tempStanzaTypeCounters
-    } = songObject
-
-    lyricUnits.forEach(unit => {
-
-        const { unitMap } = unit
-
-        if (unitMap.stanzaType) {
-
-            const { stanzaType } = unitMap
-
-            // Don't show stanzaTypeIndex if it's the only one of its kind.
-            if (tempStanzaTypeCounters[stanzaType] === 1) {
-                unitMap.stanzaTypeIndex = -1
-            }
-        }
-    })
-
-    // Not needed after each unit is told its index.
-    delete songObject.tempStanzaTypeCounters
-}
 
 /***********
  * HELPERS *
@@ -223,9 +61,6 @@ export const recurseToFindAnchors = ({
 
         // All recursed lyrics will know they're nested in verse with time.
         inVerseWithTimeIndex = tempVerseIndexCounter
-
-        // Add index to verse object.
-        lyricEntity.verseIndex = tempVerseIndexCounter
 
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = annotations.length
