@@ -1,4 +1,4 @@
-export const addSongIndicesToSongs = (albumSongs) => {
+export const addSongIndices = (albumSongs) => {
 
     albumSongs.forEach((song, songIndex) => {
         song.songIndex = songIndex

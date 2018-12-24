@@ -19,15 +19,16 @@ import Song_17 from './17_VeganProclamation'
 import Song_18 from './18_My100000thDream'
 import Song_19 from './19_Epilogue'
 
-import { addSongIndicesToSongs } from './helpers/song'
-import { addVerseIndicesAndConfigsToSongs } from './helpers/verse'
-import { addHasSideCardStatusToSongs } from './helpers/unit'
-import { addStanzaTypesToSongs } from './helpers/stanzaType'
-import { addStanzaConfigsToSongs } from './helpers/stanzaConfig'
+import { addSongIndices } from './helpers/song'
+import { addVerseIndicesAndConfigs } from './helpers/verse'
+import { addHasSideCardStatus } from './helpers/unit'
+import { addStanzaTypes } from './helpers/stanzaType'
+import { addStanzaConfigs } from './helpers/stanzaConfig'
 import {
-    addSceneConfigsToSongs,
+    addSceneConfigs,
     addSceneIndicesToVerseConfigs
 } from './helpers/scene'
+import { addDotUnitsCount } from './helpers/admin'
 
 const albumSongs = [
     Song_00,
@@ -54,19 +55,21 @@ const albumSongs = [
 
 logParse('Begin adding metadata to songs.')
 
-addSongIndicesToSongs(albumSongs)
+addSongIndices(albumSongs)
 
 albumSongs.forEach(song => {
-    addVerseIndicesAndConfigsToSongs(song)
-    addHasSideCardStatusToSongs(song)
-    addStanzaTypesToSongs(song)
+    addVerseIndicesAndConfigs(song)
+    addHasSideCardStatus(song)
+    addStanzaTypes(song)
 
     // This needs to come after verse configs.
-    addStanzaConfigsToSongs(song)
-    addSceneConfigsToSongs(song)
+    addStanzaConfigs(song)
+    addSceneConfigs(song)
 
     // This needs to come after verse configs and scene configs.
     addSceneIndicesToVerseConfigs(song)
+
+    addDotUnitsCount(song)
 })
 
 logParse('End adding metadata to songs.')

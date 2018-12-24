@@ -28,7 +28,7 @@ const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
     })
 }
 
-export const addVerseIndicesAndConfigsToSongs = (song) => {
+export const addVerseIndicesAndConfigs = (song) => {
 
     const
         { lyricUnits } = song,

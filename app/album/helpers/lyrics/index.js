@@ -1,16 +1,7 @@
 import {
     ALBUM_BUILD_KEYS,
-    ANCHOR,
-    DOT_CARD
+    ANCHOR
 } from 'constants/lyrics'
-
-export const registerAdminDotStanzas = (song, verse) => {
-
-    // For admin purposes.
-    if (verse[DOT_CARD]) {
-        song.adminDotStanzasCount++
-    }
-}
 
 export const recurseToFindAnnotations = ({
     rootVerseIndex = -1,

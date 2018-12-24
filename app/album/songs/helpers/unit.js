@@ -2,7 +2,7 @@ import {
     HAS_SIDE_CARDS
 } from 'constants/lyrics'
 
-export const addHasSideCardStatusToSongs = (song) => {
+export const addHasSideCardStatus = (song) => {
     /**
      * Let app know that song has side stanzas. Only applies to "On a Golden
      * Cord" and "Uncanny Valley Boy."

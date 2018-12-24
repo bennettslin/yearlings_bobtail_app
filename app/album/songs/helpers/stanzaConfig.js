@@ -116,7 +116,7 @@ const _addVerseDurationsToStanzaConfigs = (
     })
 }
 
-export const addStanzaConfigsToSongs = (song) => {
+export const addStanzaConfigs = (song) => {
     /**
      * These configs let the audio slider know the relative width of each unit
      * based on its time length.

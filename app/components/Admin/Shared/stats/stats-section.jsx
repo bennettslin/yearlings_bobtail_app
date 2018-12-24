@@ -10,7 +10,7 @@ import {
 const StatsSection = ({
 
     // From props.
-    adminDotStanzasCount,
+    adminDotUnitsCount,
     lyricUnits,
     annotations,
     adminPluralCardsCount
@@ -19,7 +19,7 @@ const StatsSection = ({
     <div className="stats-section">
         <h2>stats</h2>
         <div className="row">
-            <LyricDotStanzasRow adminDotStanzasCount={adminDotStanzasCount} />
+            <LyricDotStanzasRow adminDotUnitsCount={adminDotUnitsCount} />
             <LyricsWordCountRow lyricUnits={lyricUnits} />
             <AnnotationsCountRow annotations={annotations} />
             <WordsPerAnnotationRow annotations={annotations} />

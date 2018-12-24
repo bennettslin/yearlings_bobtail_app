@@ -1,4 +1,4 @@
-export const addStanzaTypesToSongs = (song) => {
+export const addStanzaTypes = (song) => {
     /**
      * Associate a type and index for each stanza, like verse, chorus, and so
      * forth.

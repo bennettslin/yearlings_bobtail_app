@@ -7,7 +7,7 @@ const LYRIC = 'lyric',
     ANCHOR = 'anchor',
 
     SUB_CARD = 'subCard',
-    DOT_CARD = 'dotUnit',
+    DOT_UNIT = 'dotUnit',
     TOP_SIDE_CARD = 'topSideCard',
     BOTTOM_SIDE_CARD = 'bottomSideCard'
 
@@ -23,7 +23,7 @@ module.exports = {
     WIKI: 'wiki',
 
     SUB_CARD,
-    DOT_CARD,
+    DOT_UNIT,
     TOP_SIDE_CARD,
     BOTTOM_SIDE_CARD,
 
@@ -69,7 +69,7 @@ module.exports = {
         SUB_CARD,
         TOP_SIDE_CARD,
         BOTTOM_SIDE_CARD,
-        DOT_CARD
+        DOT_UNIT
     ],
 
     /**

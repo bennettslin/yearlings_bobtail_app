@@ -1,6 +1,6 @@
 import albumScenes from 'album/scenes'
 
-export const addSceneConfigsToSongs = (song) => {
+export const addSceneConfigs = (song) => {
 
     const {
         songIndex,
