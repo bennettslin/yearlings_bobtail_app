@@ -132,7 +132,7 @@ class UnitView extends PureComponent {
         isTitleUnit: PropTypes.bool.isRequired,
         isLastUnit: PropTypes.bool.isRequired,
 
-        lyricUnit: PropTypes.array.isRequired,
+        lyricUnit: PropTypes.array,
         dotCard: PropTypes.object,
         subCard: PropTypes.array,
         topSideCard: PropTypes.array,
@@ -184,7 +184,7 @@ class UnitView extends PureComponent {
             <div
                 className={cx(
                     // "Parent of verse index."
-                    getParentOfVerseClassNamesForIndices({
+                    lyricUnit && getParentOfVerseClassNamesForIndices({
                         entities: lyricUnit
                     }),
 
