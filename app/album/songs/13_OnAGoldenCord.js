@@ -15,7 +15,7 @@ import {
     BACKING,
     INTRO,
     OUTRO,
-    IS_DOT_CARD,
+    IS_DOT_UNIT,
     IS_DOUBLESPEAKER
 } from 'constants/lyrics'
 
@@ -27,8 +27,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, like John Keats's`,
@@ -47,8 +47,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age.`,
                         dotKeys: {
@@ -70,8 +70,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `This song evokes the country style of my childhood hero`,
@@ -141,8 +141,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `I tuned the lead guitar in a way that allowed each note to be plucked as a`,
@@ -216,8 +216,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
@@ -1028,8 +1028,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `What surprised me most upon the album's release was that no one who reviewed it was willing to venture an opinion on doublespeaker rhyme. The consensus seemed to be that all new inventions will prove their mettle within the existing paradigm of live performance. But it's not just that doublespeaker rhyme flailed under this constraint— by necessity, openness to invention means allowing it to operate within its own paradigm. And so I came to see that indie rock, despite its reputation, is really a conservative movement at heart.`,
                         dotKeys: {

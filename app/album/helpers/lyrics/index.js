@@ -1,9 +1,7 @@
 import {
     ALBUM_BUILD_KEYS,
     ANCHOR,
-    DOT_CARD,
-    LEFT_COLUMN,
-    RIGHT_COLUMN
+    DOT_CARD
 } from 'constants/lyrics'
 
 export const registerAdminDotStanzas = (songObject, verseObject) => {
@@ -86,18 +84,13 @@ export const recurseToFindAnchors = ({
 
                 if (lyricEntity[childKey]) {
 
-                    // TODO: Not sure what this is doing exactly...
-                    let sideStanzaTextKey =
-                        (lyricEntity[LEFT_COLUMN] && LEFT_COLUMN) ||
-                        (lyricEntity[RIGHT_COLUMN] && RIGHT_COLUMN)
-
                     recurseToFindAnchors({
                         inVerseWithTimeIndex,
                         albumObject,
                         songObject,
                         verseObject,
                         lyricEntity: lyricEntity[childKey],
-                        textKey: (textKey || sideStanzaTextKey || childKey),
+                        textKey: (textKey || childKey),
                         callbackFunction,
                         verseTimesCounter
                     })

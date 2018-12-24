@@ -21,8 +21,6 @@ import {
     RIGHT,
     ANCHOR,
     COLUMN_INDEX,
-    LEFT_COLUMN,
-    RIGHT_COLUMN,
     PROPER_NOUN
 } from 'constants/lyrics'
 

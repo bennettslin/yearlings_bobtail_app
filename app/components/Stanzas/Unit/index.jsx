@@ -64,7 +64,7 @@ class Unit extends PureComponent {
                 sideCardType,
                 sideSubCardType,
                 subsequent,
-                dotCard,
+                dotUnit,
                 subCard,
                 topSideCard,
                 bottomSideCard
@@ -78,7 +78,7 @@ class Unit extends PureComponent {
             isTitleUnit = false,
 
             hasSide = Boolean(topSideCard || bottomSideCard),
-            isDotOnly = Boolean(dotCard) && !lyricUnit,
+            isDotOnly = Boolean(dotUnit) && !lyricUnit,
             isSideBottomOnly = !topSideCard && Boolean(bottomSideCard)
 
         return (
@@ -94,7 +94,7 @@ class Unit extends PureComponent {
                     sideCardType,
                     sideSubCardType,
                     subsequent,
-                    dotCard,
+                    dotUnit,
                     subCard,
                     topSideCard,
                     bottomSideCard,
@@ -133,7 +133,7 @@ class UnitView extends PureComponent {
         isLastUnit: PropTypes.bool.isRequired,
 
         lyricUnit: PropTypes.array,
-        dotCard: PropTypes.object,
+        dotUnit: PropTypes.object,
         subCard: PropTypes.array,
         topSideCard: PropTypes.array,
         bottomSideCard: PropTypes.array,
@@ -162,7 +162,7 @@ class UnitView extends PureComponent {
                 isTitleUnit,
                 isLastUnit,
 
-                dotCard,
+                dotUnit,
                 subCard,
                 topSideCard,
                 bottomSideCard,
@@ -244,10 +244,10 @@ class UnitView extends PureComponent {
                         />
                     </div>
                 }
-                {dotCard &&
+                {dotUnit &&
                     <UnitDot
                         isLastUnit={isDotOnly && isLastUnit}
-                        dotStanzaObject={dotCard}
+                        dotStanzaObject={dotUnit}
                         {...{
                             setLyricAnnotationElement
                         }}

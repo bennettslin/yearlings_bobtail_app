@@ -7,7 +7,7 @@ const LYRIC = 'lyric',
     ANCHOR = 'anchor',
 
     SUB_CARD = 'subCard',
-    DOT_CARD = 'dotCard',
+    DOT_CARD = 'dotUnit',
     TOP_SIDE_CARD = 'topSideCard',
     BOTTOM_SIDE_CARD = 'bottomSideCard'
 
@@ -28,12 +28,9 @@ module.exports = {
     BOTTOM_SIDE_CARD,
 
     COLUMN_INDEX: 'columnIndex',
-    LEFT_COLUMN: 'leftColumn',
-    RIGHT_COLUMN: 'rightColumn',
-
     WIKI_INDEX: 'wikiIndex',
 
-    IS_DOT_CARD: 'isDotCard',
+    IS_DOT_UNIT: 'isDotUnit',
     HAS_SIDE_CARDS: 'hasSideCards',
     IS_DOUBLESPEAKER: 'isDoublespeaker',
     IS_VERSE_BEGINNING_SPAN: 'isVerseBeginningSpan',

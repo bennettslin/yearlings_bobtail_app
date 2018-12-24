@@ -17,7 +17,7 @@ import {
     SOLO,
     OUTRO,
     FLASHBACK_TO_WORMHOLE_PREFIX,
-    IS_DOT_CARD,
+    IS_DOT_UNIT,
     IS_DOUBLESPEAKER
 } from 'constants/lyrics'
 
@@ -29,8 +29,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicised into the name of the`,
@@ -60,8 +60,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. So I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic split screen.`,
                         dotKeys: {
@@ -366,8 +366,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                         dotKeys: {
@@ -622,8 +622,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The drums were the one instrument for which I had to score parts that were far more advanced than my own abilities. So when it came time to record, I tried many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
                         dotKeys: {
@@ -873,8 +873,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `Recording vocals in doublespeaker rhyme turned out to be trickier than I had assumed. The lines rarely lined up naturally, because even when speaking in rhythm, we tend to shorten or lengthen our syllables based on the relative strength of consonants, the spaces between words, and so on. I ended up improvising a system of`,
@@ -1519,8 +1519,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I studied Hebrew and undertook a yearlong course required for conversion to Judaism. We didn't last long enough for me to stand before the rabbinical court, however, which would have been the final step. So, I'm still not Jewish.`

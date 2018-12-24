@@ -79,7 +79,7 @@ class UnitDot extends PureComponent {
 
     render() {
 
-        // FIXME: Ideal to get dotCard object from indices.
+        // FIXME: Ideal to get dotUnit object from indices.
         const {
                 isLastUnit,
                 dotStanzaObject,

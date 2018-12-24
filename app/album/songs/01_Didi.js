@@ -17,7 +17,7 @@ import {
     OUTRO,
     REFRAIN,
     FLASHBACK_TO_WORMHOLE_PREFIX,
-    IS_DOT_CARD
+    IS_DOT_UNIT
 } from 'constants/lyrics'
 
 export default {
@@ -27,8 +27,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `In Chinese,`,
@@ -51,8 +51,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
@@ -94,8 +94,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             {
@@ -179,8 +179,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `The nonstop modulations between the`,
@@ -358,8 +358,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
                         dotKeys: {
@@ -453,8 +453,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `The song ends in G\u2011flat major, the remaining major triad belonging to the`,
@@ -498,8 +498,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,

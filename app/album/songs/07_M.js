@@ -12,7 +12,7 @@ import {
     INTRO,
     RESPONSE,
     OUTRO,
-    IS_DOT_CARD
+    IS_DOT_UNIT
 } from 'constants/lyrics'
 
 export default {
@@ -22,8 +22,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. Deep down, I probably knew that I wasn't fooling anyone.`,
                         dotKeys: {
@@ -35,8 +35,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `This song is a carryover from back when the band was still just The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
                         dotKeys: {
@@ -152,8 +152,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`
@@ -259,8 +259,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `I learned to play banjo by reading`,
@@ -311,8 +311,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `Obviously, Jacob was a far better drummer than I am. To match his tempo, I had to record at a lower tape speed.`,
                         dotKeys: {

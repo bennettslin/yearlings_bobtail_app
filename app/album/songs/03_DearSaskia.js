@@ -13,7 +13,7 @@ import {
     PRECHORUS,
     CHORUS,
     REFRAIN,
-    IS_DOT_CARD
+    IS_DOT_UNIT
 } from 'constants/lyrics'
 
 export default {
@@ -23,8 +23,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `Sasha's given name was actually Saskia, but because this was difficult for other children to pronounce, she had gone by the nickname of Sasha her entire life.`,
                         dotKeys: {
@@ -36,8 +36,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `As a teenager, I tried to figure out how`,
@@ -76,8 +76,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `I wanted the vocals to sound sickly here, which worked out well, since I was guaranteed to catch an awful cold at some point during the five years that I worked on this album.`,
                         dotKeys: {
@@ -229,8 +229,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `I matched the passive-aggressiveness of the lyrics with woodwind screeches and scratch tones on bowed guitars.`,
                         dotKeys: {
@@ -510,8 +510,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `When I first began to write songs, I noticed that every other aspiring songwriter would figure out their chords upfront, then fit any feasible melody to go on top. But my theory was that the Beatles wrote the melody and chords together, allowing their music to unfold organically. I was always trying to write the next "Martha My Dear," which may be evident here.`,
                         dotKeys: {
@@ -674,8 +674,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `Confused by the lack of interest in the album's release, I distilled my approach to writing songs into a lesson plan called`,

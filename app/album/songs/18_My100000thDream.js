@@ -13,7 +13,7 @@ import {
     SOLO,
     OUTRO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
-    IS_DOT_CARD
+    IS_DOT_UNIT
 } from 'constants/lyrics'
 
 export default {
@@ -23,8 +23,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `I once read that we typically dream four times per night. Over a lifetime, that's about 100,000 dreams. This song, then, is about the very last dream I'll ever dream.`,
                         dotKeys: {
@@ -36,8 +36,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `This song is another Yearlings carryover, and was the favourite amongst my friends. I suppose it's telling that when Sita and I were still together, the one song I wrote for her was about the regret I would feel as an old man at having lost her. During the years when I was trying hard to be good again, I kept digging further back into my past to figure out where things went wrong. And so this last song of the album revisits the sonic textures of all the others in reverse, starting here with the piano from "Vegan Proclamation."`,
                         dotKeys: {
@@ -60,8 +60,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `Next come the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
                         dotKeys: {
@@ -116,8 +116,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The pulsating organ and slide mandolin from "Kyon?" make a reappearance here, along with the tremolo banjo and rubato recorders from "Uncanny Valley Boy."`,
                         dotKeys: {
@@ -164,8 +164,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `Here, we hear the plucked mandolin and tin whistle from "Garryowen," and the high-pitched synths and recorder from "Look Back in Anger."`,
                         dotKeys: {
@@ -243,8 +243,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The second chorus brings back the electric sitar and 8-bit synth from "Constellations," along with the carillon and wah-wah pedal from "Good Night, Sita."`,
                         dotKeys: {
@@ -279,8 +279,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The chord progression here, which I call Sita's theme, first appeared during the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
                         dotKeys: {
@@ -315,8 +315,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The third verse revisits the bowed guitars ending on scratch tones first heard in "Dear Saskia," along with the four-note motif that I call Sasha's theme. These are then followed by the shrieking whistles and pitch-shifted instruments from "Ash Wednesday."`,
                         dotKeys: {
@@ -381,8 +381,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The electric mandolin and saturated tape effect from "Odin" return in the third and final chorus, as well as the legato slides on muted instruments from "Willy the Cocoa."`,
                         dotKeys: {
@@ -449,8 +449,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `And so the final song of the album ends, with the same autoharp and glockenspiel that opened "Didi."`,
                         dotKeys: {
@@ -471,8 +471,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `After the album failed in every possible way, I moved to New York City to start a new life. There I met Liz, my next girlfriend, with whom things ended no less painfully. So I was faced with a dilemma when making this website. I wanted to be faithful to how fresh these wounds were for me at the time, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events here as a stage play, and then to draw the Sita character as an Indian version of Liz. The result looks like neither, which hopefully comes as a relief to both.`,
                         dotKeys: {

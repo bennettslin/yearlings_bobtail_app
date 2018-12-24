@@ -11,7 +11,7 @@ import {
     VERSES,
     CHORUS,
     POSTCHORUS,
-    IS_DOT_CARD
+    IS_DOT_UNIT
 } from 'constants/lyrics'
 
 export default {
@@ -21,8 +21,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
                         dotKeys: {
@@ -34,8 +34,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `In the final chapter of James Joyce's`,
@@ -61,8 +61,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
                         dotKeys: {
@@ -597,8 +597,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `The band Television are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
@@ -821,8 +821,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `Children's albums from the 70s are a treasure trove of musical wisdom, including the soundtrack for`,
@@ -941,8 +941,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `Ambrose Bierce also wrote the short story`,

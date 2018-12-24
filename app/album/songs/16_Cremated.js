@@ -12,7 +12,7 @@ import {
     BRIDGE,
     INTRO,
     REFRAIN,
-    IS_DOT_CARD,
+    IS_DOT_UNIT,
     IS_DOUBLESPEAKER
 } from 'constants/lyrics'
 
@@ -24,8 +24,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                         dotKeys: {
@@ -38,8 +38,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
@@ -75,8 +75,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `A`,
@@ -105,8 +105,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
                         dotKeys: {
@@ -598,8 +598,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         // NOTE: Change in recording? Connect to Uncanny Valley?
                         description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,

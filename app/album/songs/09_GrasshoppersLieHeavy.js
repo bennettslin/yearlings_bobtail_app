@@ -15,7 +15,7 @@ import {
     BRIDGE,
     CODA,
     OUTRO,
-    IS_DOT_CARD,
+    IS_DOT_UNIT,
     IS_DOUBLESPEAKER
 } from 'constants/lyrics'
 
@@ -27,8 +27,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: [
                         {
                             description: [
@@ -61,8 +61,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `Just as`,
@@ -111,8 +111,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `I wanted the music to sound sentimental with a few rough edges, so channelling`,
@@ -762,8 +762,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `The highlight of Nirvana's`,
@@ -1062,8 +1062,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
                         dotKeys: {
@@ -1267,8 +1267,8 @@ export default {
         },
         {
             unitMap: {
-                dotCard: {
-                    anchor: IS_DOT_CARD,
+                dotUnit: {
+                    anchor: IS_DOT_UNIT,
                     annotation: {
                         description: [
                             `The French expression`,

@@ -10,7 +10,7 @@ import AnnotationTitleText from './TitleText'
 import AnnotationAccess from './Access'
 
 import { getDotKeysFromBitNumber } from 'helpers/dot'
-import { IS_DOT_CARD } from 'constants/lyrics'
+import { IS_DOT_UNIT } from 'constants/lyrics'
 
 import { getAnnotationTitleData } from './helper'
 
@@ -77,7 +77,7 @@ class AnnotationTitle extends PureComponent {
 
             showUpDown = isSelected && accessibleWikiWormholesLength > 1,
 
-            isDot = title === IS_DOT_CARD
+            isDot = title === IS_DOT_UNIT
 
         return (
             <div className={cx(
