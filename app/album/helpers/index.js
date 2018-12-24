@@ -13,13 +13,6 @@ import {
     registerAdminDotStanzas
 } from './lyrics'
 
-import {
-    initialRegisterScenes,
-    finalRegisterScenes
-} from './scenes'
-
-import { getSongIsLogue } from 'album/api/songs'
-
 import { getFormattedAnnotationTitle } from 'helpers/format'
 
 import {
@@ -62,12 +55,9 @@ export const parseAlbumData = (albumObject) => {
 
 const _initialPrepareAlbum = (albumObject) => {
 
-    albumObject.songs.forEach((songObject, songIndex) => {
+    albumObject.songs.forEach((songObject) => {
 
-        // This collects the unit index for each scene.
-        initialRegisterScenes(songObject, songIndex)
-
-        if (!getSongIsLogue(songIndex, albumObject.songs)) {
+        if (!songObject.logue) {
 
             // Parse lyrics.
             _initialPrepareLyrics(albumObject, songObject)
@@ -79,8 +69,6 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
 
     const { lyricUnits } = songObject,
         verseTimesCounter = { counter: 0 }
-
-    // Initialise song.
 
     // This tells me how many dot stanzas this song has.
     songObject.adminDotStanzasCount = 0
@@ -96,9 +84,6 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
             unitMap,
             lyricUnit
         } = unit
-
-        // Let unit know all the verse indices that it contains.
-        let firstVerseIndex
 
         if (lyricUnit) {
             lyricUnit.forEach(verseObject => {
@@ -116,14 +101,6 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
                     callbackFunction: _initialRegisterAnnotation
                 })
 
-                if (!isNaN(verseObject.verseIndex)) {
-
-                    // Set first verse index once.
-                    if (isNaN(firstVerseIndex)) {
-                        firstVerseIndex = verseObject.verseIndex
-                    }
-                }
-
                 // Tell song its dot stanza count, for admin purposes.
                 registerAdminDotStanzas(songObject, verseObject)
             })
@@ -139,9 +116,6 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
             verseObject: unitMap,
             callbackFunction: _initialRegisterAnnotation
         })
-
-        // Add temp first verse index. This is used to register the scene.
-        unitMap.tempFirstVerseIndex = firstVerseIndex
     })
 
     // Clean up.
@@ -237,9 +211,9 @@ const _initialRegisterAnnotation = ({
 
 const _finalPrepareAlbum = (albumObject) => {
 
-    albumObject.songs.forEach((songObject, songIndex) => {
+    albumObject.songs.forEach((songObject) => {
 
-        if (!getSongIsLogue(songIndex, albumObject.songs)) {
+        if (!songObject.logue) {
 
             // Initialise song.
             songObject.tempFinalAnnotationIndex = 0
@@ -249,8 +223,6 @@ const _finalPrepareAlbum = (albumObject) => {
              * collecting wormhole links from the entire album.
              */
             _finalPrepareLyrics(songObject)
-
-            finalRegisterScenes(songObject)
 
             // For each verse in a wormhole, tell wormhole how to format it.
             addDestinationWormholeFormats(songObject.lyricUnits)
@@ -293,7 +265,6 @@ const _finalPrepareLyrics = (songObject) => {
 }
 
 const _finalRegisterAnnotation = ({
-
     songObject
 
 }) => {

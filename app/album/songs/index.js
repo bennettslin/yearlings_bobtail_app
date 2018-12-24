@@ -24,6 +24,10 @@ import { addVerseIndicesAndConfigsToSongs } from './helpers/verse'
 import { addHasSideCardStatusToSongs } from './helpers/unit'
 import { addStanzaTypesToSongs } from './helpers/stanzaType'
 import { addStanzaConfigsToSongs } from './helpers/stanzaConfig'
+import {
+    addSceneConfigsToSongs,
+    addSceneIndicesToVerseConfigs
+} from './helpers/scene'
 
 const albumSongs = [
     Song_00,
@@ -55,8 +59,12 @@ addVerseIndicesAndConfigsToSongs(albumSongs)
 addHasSideCardStatusToSongs(albumSongs)
 addStanzaTypesToSongs(albumSongs)
 
-// This needs to come after adding verse configs.
+// This needs to come after verse configs.
 addStanzaConfigsToSongs(albumSongs)
+addSceneConfigsToSongs(albumSongs)
+
+// This needs to come after verse configs and scene configs.
+addSceneIndicesToVerseConfigs(albumSongs)
 
 logParse('End adding metadata to songs.')
 

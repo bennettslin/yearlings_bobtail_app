@@ -32,10 +32,10 @@ class SliderScenes extends PureComponent {
             <div className="SliderScenes">
                 {songSceneConfigs.map((sceneConfig, sceneIndex) => {
 
-                    const { adminSceneStartTime: sceneTime } = sceneConfig,
+                    const { sceneStartTime } = sceneConfig,
 
                         sceneWidth =
-                        (totalTime - sceneTime) / totalTime * 100,
+                        (totalTime - sceneStartTime) / totalTime * 100,
 
                         sceneStyle = {
                             width: `${sceneWidth}%`

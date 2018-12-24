@@ -1,5 +1,3 @@
-// Parse lyric data for build.
-
 import {
     ALBUM_BUILD_KEYS,
     ANCHOR,
@@ -16,17 +14,6 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
     }
 }
 
-/*********
- * FINAL *
- *********/
-
-/***********
- * HELPERS *
- ***********/
-
-/**
- * This method is way overloaded.
- */
 export const recurseToFindAnchors = ({
 
     inVerseWithTimeIndex = -1,

@@ -14,7 +14,7 @@ export const getSongObject = (songIndex, songs = album.songs) => {
 }
 
 export const getSongIsLogue = (songIndex, songs = album.songs) => {
-    return songIndex === 0 || songIndex === songs.length - 1
+    return Boolean(songs[songIndex].logue)
 }
 
 export const getSongTitle = ({
