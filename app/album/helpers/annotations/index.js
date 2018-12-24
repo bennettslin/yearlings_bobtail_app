@@ -1,8 +1,6 @@
 import {
     registerCardsDotKeys,
-    registerCardsWormholes,
-    finalPrepareCard,
-    addDestinationWormholeFormats
+    registerCardsWormholes
 } from './helper'
 
 import { getFormattedAnnotationTitle } from 'helpers/format'
@@ -99,37 +97,4 @@ export const _registerAnnotation = ({
     // Clean up lyric object.
     delete lyricAnnotation[PROPER_NOUN]
     delete lyricAnnotation.annotation
-}
-
-/*********
- * FINAL *
- *********/
-
-export const _addWikiWormholeIndices = (album) => {
-
-    album.songs.forEach((song) => {
-
-        if (!song.logue) {
-
-            /**
-             * Add wiki and wormhole indices. These can only be determined
-             * after collecting wormhole links from the entire album.
-             */
-            song.annotations.forEach(annotation => {
-                annotation.tempWikiWormholeIndex = 1
-
-                const { cards } = annotation
-
-                cards.forEach(card => {
-                    finalPrepareCard(song, annotation, card)
-                })
-
-                // Clean up.
-                delete annotation.tempWikiWormholeIndex
-            })
-
-            // For each verse in a wormhole, tell wormhole how to format it.
-            addDestinationWormholeFormats(song.lyricUnits)
-        }
-    })
 }

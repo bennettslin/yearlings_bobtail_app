@@ -1,14 +1,8 @@
 // Parse album data for build.
 
 import {
-    _registerAnnotation,
-    _addWikiWormholeIndices
+    _registerAnnotation
 } from './annotations'
-
-import {
-    addDestinationWormholeLinks,
-    addDestinationWormholeIndices
-} from './annotations/helper'
 
 import { recurseToFindAnnotations } from './lyrics'
 
@@ -20,15 +14,6 @@ export const parseAlbumData = (album) => {
 
     // Initial preparation.
     _initialPrepareAnnotations(album)
-
-    // In-between preparation.
-    addDestinationWormholeLinks(album)
-
-    // Final preparation.
-    _addWikiWormholeIndices(album)
-
-    // After preparation.
-    addDestinationWormholeIndices(album)
 
     logParse('End parse album data.')
 
