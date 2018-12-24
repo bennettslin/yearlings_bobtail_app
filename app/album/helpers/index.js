@@ -10,7 +10,7 @@ import {
 } from './annotations'
 
 import {
-    recurseToFindAnchors,
+    recurseToFindAnnotations,
     registerAdminDotStanzas
 } from './lyrics'
 
@@ -94,14 +94,14 @@ const _addAnnotationsToSongs = (albumObject, songObject) => {
              * Recurse until each anchor is found. Initially, we will also
              * register each verse with time.
              */
-            recurseToFindAnchors({
+            recurseToFindAnnotations({
                 // Pass this to register each verse time.
                 verseTimesCounter,
 
                 albumObject,
                 songObject,
                 verseObject,
-                callbackFunction: _initialRegisterAnnotation
+                callbackFunction: _registerAnnotation
             })
 
             // Tell song its dot stanza count, for admin purposes.
@@ -113,7 +113,7 @@ const _addAnnotationsToSongs = (albumObject, songObject) => {
     delete songObject.mostRecentVerseIndex
 }
 
-const _initialRegisterAnnotation = ({
+const _registerAnnotation = ({
 
     inVerseWithTimeIndex = -1,
     albumObject,

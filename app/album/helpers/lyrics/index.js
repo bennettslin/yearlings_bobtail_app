@@ -12,7 +12,7 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
     }
 }
 
-export const recurseToFindAnchors = ({
+export const recurseToFindAnnotations = ({
 
     inVerseWithTimeIndex = -1,
     albumObject,
@@ -54,7 +54,7 @@ export const recurseToFindAnchors = ({
     if (Array.isArray(lyricEntity)) {
 
         lyricEntity.forEach(childEntity => {
-            recurseToFindAnchors({
+            recurseToFindAnnotations({
                 inVerseWithTimeIndex,
                 albumObject,
                 songObject,
@@ -84,7 +84,7 @@ export const recurseToFindAnchors = ({
 
                 if (lyricEntity[childKey]) {
 
-                    recurseToFindAnchors({
+                    recurseToFindAnnotations({
                         inVerseWithTimeIndex,
                         albumObject,
                         songObject,
