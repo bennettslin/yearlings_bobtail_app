@@ -55,16 +55,20 @@ const albumSongs = [
 logParse('Begin adding metadata to songs.')
 
 addSongIndicesToSongs(albumSongs)
-addVerseIndicesAndConfigsToSongs(albumSongs)
-addHasSideCardStatusToSongs(albumSongs)
-addStanzaTypesToSongs(albumSongs)
 
-// This needs to come after verse configs.
-addStanzaConfigsToSongs(albumSongs)
-addSceneConfigsToSongs(albumSongs)
+albumSongs.forEach(song => {
+    addVerseIndicesAndConfigsToSongs(song)
+    addHasSideCardStatusToSongs(song)
+    addStanzaTypesToSongs(song)
 
-// This needs to come after verse configs and scene configs.
-addSceneIndicesToVerseConfigs(albumSongs)
+    // This needs to come after verse configs.
+    addStanzaConfigsToSongs(song)
+    addSceneConfigsToSongs(song)
+
+    // This needs to come after verse configs and scene configs.
+    addSceneIndicesToVerseConfigs(song)
+})
+
 
 logParse('End adding metadata to songs.')
 

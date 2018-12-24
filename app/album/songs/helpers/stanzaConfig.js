@@ -36,8 +36,8 @@ const _getInitialStanzaConfigs = (lyricUnits, song) => {
 
         if (stanzaType) {
             /**
-             * If it's the first unit of this stanza type, initialise
-             * the config. Otherwise, fetch it.
+             * If it's the first unit of this stanza type, initialise the
+             * config. Otherwise, fetch it.
              */
             const stanzaConfig = subsequent ?
                 stanzaConfigs[stanzaConfigs.length - 1] :
@@ -116,23 +116,20 @@ const _addVerseDurationsToStanzaConfigs = (
     })
 }
 
-export const addStanzaConfigsToSongs = (albumSongs) => {
+export const addStanzaConfigsToSongs = (song) => {
     /**
      * These configs let the audio slider know the relative width of each unit
      * based on its time length.
      */
+    const { lyricUnits } = song
 
-    albumSongs.forEach(song => {
-        const { lyricUnits } = song
+    if (lyricUnits) {
+        // Initialise the stanza configs.
+        const stanzaConfigs = _getInitialStanzaConfigs(lyricUnits, song)
 
-        if (lyricUnits) {
-            // Initialise the stanza configs.
-            const stanzaConfigs = _getInitialStanzaConfigs(lyricUnits, song)
+        // Add verse durations.
+        _addVerseDurationsToStanzaConfigs(stanzaConfigs, song)
 
-            // Add verse durations.
-            _addVerseDurationsToStanzaConfigs(stanzaConfigs, song)
-
-            song.songStanzaConfigs = stanzaConfigs
-        }
-    })
+        song.songStanzaConfigs = stanzaConfigs
+    }
 }

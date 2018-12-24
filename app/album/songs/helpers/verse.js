@@ -28,29 +28,27 @@ const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
     })
 }
 
-export const addVerseIndicesAndConfigsToSongs = (albumSongs) => {
+export const addVerseIndicesAndConfigsToSongs = (song) => {
 
-    albumSongs.forEach(song => {
-        const
-            { lyricUnits } = song,
-            verseConfigs = []
+    const
+        { lyricUnits } = song,
+        verseConfigs = []
 
-        if (lyricUnits) {
-            let verseIndexCounter = 0
+    if (lyricUnits) {
+        let verseIndexCounter = 0
 
-            lyricUnits.forEach(unit => {
-                getAllTimedVerses(unit).forEach(verse => {
+        lyricUnits.forEach(unit => {
+            getAllTimedVerses(unit).forEach(verse => {
 
-                    _addIndexToVerseObject(verse, verseIndexCounter)
-                    verseIndexCounter++
+                _addIndexToVerseObject(verse, verseIndexCounter)
+                verseIndexCounter++
 
-                    verseConfigs.push(_getVerseConfig(verse))
-                })
+                verseConfigs.push(_getVerseConfig(verse))
             })
-        }
+        })
+    }
 
-        _addDurationsToVerseConfigs(verseConfigs, song)
+    _addDurationsToVerseConfigs(verseConfigs, song)
 
-        song.songVerseConfigs = verseConfigs
-    })
+    song.songVerseConfigs = verseConfigs
 }
