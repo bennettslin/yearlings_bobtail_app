@@ -29,7 +29,6 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
  */
 export const recurseToFindAnchors = ({
 
-    unitIndex = -1,
     inVerseWithTimeIndex = -1,
     albumObject,
     songObject,
@@ -54,7 +53,6 @@ export const recurseToFindAnchors = ({
         verseTimesCounter.counter++
 
         const {
-            songStanzaConfigs,
             tempVerseIndexCounter,
             annotations
         } = songObject
@@ -64,98 +62,6 @@ export const recurseToFindAnchors = ({
 
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = annotations.length
-
-        // Get stanza for this verse.
-        while (
-            stanzaIndex < songStanzaConfigs.length - 1 &&
-            time >=
-                songStanzaConfigs[stanzaIndex + 1]
-                    .stanzaVerseConfigs[0]
-                    .verseStartTime
-        ) {
-            stanzaIndex++
-        }
-
-        const songStanzaConfig = songStanzaConfigs[stanzaIndex],
-            {
-                stanzaVerseConfigs,
-                stanzaUnitIndices
-            } = songStanzaConfig,
-            stanzaFirstVerseConfig = stanzaVerseConfigs[0]
-
-        // Tell stanza that it owns this unit.
-        if (
-            stanzaUnitIndices.length === 0 ||
-            stanzaUnitIndices[stanzaUnitIndices.length - 1] < unitIndex
-        ) {
-            stanzaUnitIndices.push(unitIndex)
-        }
-
-        if (isNaN(stanzaFirstVerseConfig.verseIndex)) {
-            /**
-             * The array is initialised with a verse object that already knows
-             * its start time. So just add the verse index.
-             */
-            stanzaFirstVerseConfig.verseIndex = tempVerseIndexCounter
-
-        } else {
-            // Tell the previous verse its duration.
-            const previousVerseConfig =
-                stanzaVerseConfigs[stanzaVerseConfigs.length - 1]
-
-            previousVerseConfig.verseDuration =
-                time - previousVerseConfig.verseStartTime
-
-            stanzaVerseConfigs.push(
-                {
-                    verseIndex: tempVerseIndexCounter,
-
-                    /**
-                     * Technically, we can just get the verse start time from
-                     * the song's verse start times. However, we'll do it this
-                     * way so that slider children can get the start time from
-                     * the stanza verse object directly. At least for now, as
-                     * it's already set up to work this way.
-                     */
-                    verseStartTime: time
-                }
-            )
-        }
-
-        /**
-         * If this isn't the last verse of the last stanza, then this value
-         * will get overwritten. Otherwise, it is accurate.
-         */
-        stanzaVerseConfigs[stanzaVerseConfigs.length - 1].verseDuration =
-            songObject.totalTime - time
-
-        /**
-         * If this is the first verse of the next stanza, tell the
-         * previous stanza its end time, and its last verse its duration.
-         */
-        if (
-            stanzaIndex > 0 &&
-            stanzaVerseConfigs.length === 1
-        ) {
-            const
-                previousStanzaConfig = songStanzaConfigs[stanzaIndex - 1],
-                previousStanzaLastVerseConfig =
-                    previousStanzaConfig.stanzaVerseConfigs[
-                        previousStanzaConfig.stanzaVerseConfigs.length - 1
-                    ]
-
-            previousStanzaConfig.stanzaEndTime = time
-            previousStanzaLastVerseConfig.verseDuration =
-                    time - previousStanzaLastVerseConfig.verseStartTime
-        }
-
-        // Tell the last stanza its end time.
-        if (
-            stanzaIndex === songStanzaConfigs.length - 1
-        ) {
-            songStanzaConfig.stanzaEndTime =
-                songObject.totalTime
-        }
 
         // FIXME: Eventually should not need this.
         if (

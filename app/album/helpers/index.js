@@ -69,9 +69,6 @@ const _initialPrepareAlbum = (albumObject) => {
 
         if (!getSongIsLogue(songIndex, albumObject.songs)) {
 
-            // Initialise song.
-            songObject.tempSongIndex = songIndex
-
             // Parse lyrics.
             _initialPrepareLyrics(albumObject, songObject)
         }
@@ -97,7 +94,7 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     // Allow easy access to verse metadata, without having to traverse lyrics.
     songObject.songVerseConfigs = []
 
-    lyricUnits.forEach((unit, unitIndex) => {
+    lyricUnits.forEach(unit => {
         const {
             unitMap,
             lyricUnit
@@ -113,9 +110,6 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
                  * register each verse with time.
                  */
                 recurseToFindAnchors({
-                    // Tell each stanza the units that it owns.
-                    unitIndex,
-
                     // Pass this to register each verse time.
                     verseTimesCounter,
 
@@ -140,9 +134,6 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
 
         // TODO: This is just to grab things in unitMap for now. Refactor eventually.
         recurseToFindAnchors({
-            // Tell each stanza the units that it owns.
-            unitIndex,
-
             // Pass this to register each verse time.
             verseTimesCounter,
 
@@ -269,7 +260,6 @@ const _finalPrepareAlbum = (albumObject) => {
 
             // Clean up.
             delete songObject.tempFinalAnnotationIndex
-            delete songObject.tempSongIndex
         }
     })
 }

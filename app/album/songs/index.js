@@ -22,7 +22,8 @@ import Song_19 from './19_Epilogue'
 import { addSongIndicesToSongs } from './helpers/song'
 import { addVerseIndicesToSongs } from './helpers/verse'
 import { addHasSideCardStatusToSongs } from './helpers/unit'
-import { addStanzaConfigsAndTypes } from './helpers/stanza'
+import { addStanzaTypesToSongs } from './helpers/stanzaType'
+import { addStanzaConfigsToSongs } from './helpers/stanzaConfig'
 
 const albumSongs = [
     Song_00,
@@ -50,6 +51,7 @@ const albumSongs = [
 addSongIndicesToSongs(albumSongs)
 addVerseIndicesToSongs(albumSongs)
 addHasSideCardStatusToSongs(albumSongs)
-addStanzaConfigsAndTypes(albumSongs)
+addStanzaTypesToSongs(albumSongs)
+addStanzaConfigsToSongs(albumSongs)
 
 export default albumSongs

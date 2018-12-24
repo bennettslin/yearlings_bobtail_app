@@ -133,7 +133,7 @@ const _addSourceWormholeLink = ({
      */
     const wormholeKey = wormhole.wormholeKey || wormhole,
         { wormholePrefix } = wormhole,
-        { tempSongIndex } = songObject,
+        { songIndex } = songObject,
 
         /**
          * NOTE: I wrote this code with the assumption that every wormhole would
@@ -147,7 +147,7 @@ const _addSourceWormholeLink = ({
         } = annotationObject,
 
         wormholeLink = {
-            songIndex: tempSongIndex,
+            songIndex,
             annotationIndex,
             cardIndex,
             columnIndex,
@@ -209,7 +209,7 @@ export const addDestinationWormholeLinks = (albumObject) => {
  *********/
 
 export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
-    const { tempSongIndex } = songObject,
+    const { songIndex } = songObject,
 
         {
             description,
@@ -242,7 +242,7 @@ export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
                 link.tempSourceWormholeLinks = []
             }
             link.tempSourceWormholeLinks.push({
-                tempSourceSongIndex: tempSongIndex,
+                tempSourceSongIndex: songIndex,
                 tempSourceAnnotationIndex: annotationObject.annotationIndex,
                 tempSourceWormholeIndex: tempWikiWormholeIndex
             })
