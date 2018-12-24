@@ -1,7 +1,8 @@
 // Parse album data for build.
 
 import {
-    registerCards,
+    registerCardsDotKeys,
+    registerCardsWormholes,
     addDestinationWormholeLinks,
     finalPrepareCard,
     addDestinationWormholeIndices,
@@ -125,17 +126,23 @@ const _initialRegisterAnnotation = ({
 
 }) => {
     // If just a single card, make it an array of one.
-    const cards = Array.isArray(lyricObject.annotation) ? lyricObject.annotation : [lyricObject.annotation],
+    const cards =
+        Array.isArray(lyricObject.annotation) ?
+            lyricObject.annotation :
+            [lyricObject.annotation],
 
         annotationIndex = songObject.annotations.length + 1,
 
         // Create new annotation object to be known by song.
         annotationObject = {},
-        annotationDotKeys = {}
+        dotKeys = {}
 
     // Tell verse object its annotation anchors.
-    verseObject.currentAnnotationIndices = verseObject.currentAnnotationIndices || []
-    verseObject.currentAnnotationIndices.push(annotationIndex)
+    if (!verseObject.verseAnnotationIndices) {
+        verseObject.verseAnnotationIndices = []
+    }
+
+    verseObject.verseAnnotationIndices.push(annotationIndex)
 
     // Tell annotation and anchored lyric the index. 1-based index.
     annotationObject.annotationIndex = annotationIndex
@@ -145,7 +152,10 @@ const _initialRegisterAnnotation = ({
     if (inVerseWithTimeIndex > -1) {
         annotationObject.verseIndex = inVerseWithTimeIndex
 
-        // Otherwise, tell it the most recent verse index. For title, this is 0.
+    /**
+     * Otherwise, tell it the most recent verse index. For first dot stanza,
+     * this is 0.
+     */
     } else {
         annotationObject.mostRecentVerseIndex = songObject.mostRecentVerseIndex
     }
@@ -158,20 +168,26 @@ const _initialRegisterAnnotation = ({
     )
 
     // Let annotation know if it's in a doublespeaker column.
-    if (textKey === LEFT || textKey === LEFT_COLUMN) {
+    if (textKey === LEFT) {
         annotationObject[COLUMN_INDEX] = 0
 
-    } else if (textKey === RIGHT || textKey === RIGHT_COLUMN) {
+    } else if (textKey === RIGHT) {
         annotationObject[COLUMN_INDEX] = 1
     }
 
-    registerCards({
+    registerCardsDotKeys({
+        songObject,
+        cards,
+        dotKeys
+    })
+
+    registerCardsWormholes({
         albumObject,
         songObject,
         verseObject,
         annotationObject,
         cards,
-        annotationDotKeys
+        dotKeys
     })
 
     // Let annotation object know its global index.
@@ -185,8 +201,8 @@ const _initialRegisterAnnotation = ({
     annotationObject.cards = cards
 
     // Add dot keys to both anchored lyric and annotation.
-    annotationObject.dotKeys = annotationDotKeys
-    lyricObject.dotKeys = annotationDotKeys
+    annotationObject.dotKeys = dotKeys
+    lyricObject.dotKeys = dotKeys
 
     // Add annotation object to annotations array.
     songObject.annotations.push(annotationObject)

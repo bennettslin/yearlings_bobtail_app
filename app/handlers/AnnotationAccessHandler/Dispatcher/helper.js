@@ -31,21 +31,22 @@ export const getAnnotationIndexForVerseIndex = ({
         returnToLoop
 
     // If the verse has its own annotation, pick it.
-    if (verse.currentAnnotationIndices) {
-        const currentAnnotationIndicesCount = verse.currentAnnotationIndices.length
+    const { verseAnnotationIndices } = verse
+    if (verseAnnotationIndices) {
+        const annotationIndicesCount = verseAnnotationIndices.length
 
         /**
          * If prompted by left arrow, start left and search inward. If prompted
          * by right arrow, start right. If no direction given, start left.
          */
-        let currentCounter = direction === 1 ? (currentAnnotationIndicesCount - 1) : 0
+        let currentCounter = direction === 1 ? (annotationIndicesCount - 1) : 0
 
         /**
          * Loop through all the annotations in the verse, in case some are
          * hidden.
          */
         do {
-            returnIndex = verse.currentAnnotationIndices[currentCounter]
+            returnIndex = verseAnnotationIndices[currentCounter]
 
             // Move inward, which is the opposite direction.
             currentCounter -= direction
@@ -65,7 +66,7 @@ export const getAnnotationIndexForVerseIndex = ({
              */
             returnToLoop =
                 currentCounter >= 0 &&
-                currentCounter < currentAnnotationIndicesCount &&
+                currentCounter < annotationIndicesCount &&
                 (!showAnnotationForColumn || !doesIntersect)
 
         } while (returnToLoop)

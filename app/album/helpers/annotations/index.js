@@ -24,14 +24,10 @@ import {
  * INITIAL *
  ***********/
 
-export const registerCards = ({
-
-    albumObject,
+export const registerCardsDotKeys = ({
     songObject,
-    verseObject,
-    annotationObject,
     cards,
-    annotationDotKeys
+    dotKeys
 
 }) => {
 
@@ -40,12 +36,25 @@ export const registerCards = ({
         songObject.adminPluralCardsCount++
     }
 
-    cards.forEach((card, cardIndex) => {
+    cards.forEach((card) => {
 
         _addWikiDotKeyToCard(card)
 
         // This needs to come after adding wiki dot key to card.
-        _addCardDotKeysToAnnotation(card, annotationDotKeys)
+        _addCardDotKeysToAnnotation(card, dotKeys)
+    })
+}
+
+export const registerCardsWormholes = ({
+    albumObject,
+    songObject,
+    verseObject,
+    annotationObject,
+    cards,
+    dotKeys
+
+}) => {
+    cards.forEach((card, cardIndex) => {
 
         if (_addSourceWormholeLink({
 
@@ -54,7 +63,7 @@ export const registerCards = ({
             annotationObject,
             card,
             cardIndex,
-            dotKeys: annotationDotKeys
+            dotKeys
 
         })) {
             verseObject.tempVerseHasWormhole = true
@@ -100,11 +109,11 @@ const _getHasWikiAnchor = (descriptionEntity) => {
     }
 }
 
-const _addCardDotKeysToAnnotation = (card, annotationDotKeys) => {
+const _addCardDotKeysToAnnotation = (card, dotKeys) => {
     // Add dot keys to both song and annotation card.
     if (card.dotKeys) {
         keys(card.dotKeys).forEach(dotKey => {
-            annotationDotKeys[dotKey] = true
+            dotKeys[dotKey] = true
         })
     }
 }

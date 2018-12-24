@@ -23,7 +23,6 @@ export const recurseToFindAnchors = ({
     lyricEntity = verseObject,
     textKey,
     callbackFunction,
-    stanzaIndex = 0,
     verseTimesCounter
 
 }) => {
@@ -65,7 +64,6 @@ export const recurseToFindAnchors = ({
                 lyricEntity: childEntity,
                 textKey,
                 callbackFunction,
-                stanzaIndex,
                 verseTimesCounter
             })
         })
@@ -101,7 +99,6 @@ export const recurseToFindAnchors = ({
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || sideStanzaTextKey || childKey),
                         callbackFunction,
-                        stanzaIndex,
                         verseTimesCounter
                     })
                 }

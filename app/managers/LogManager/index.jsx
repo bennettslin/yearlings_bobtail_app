@@ -14,12 +14,14 @@ import {
 import { getSongObject } from 'album/api/songs'
 
 import { WINDOW_STORAGE } from 'constants/state'
+import { getVerseObject } from '../../album/api/verses'
 
 class LogManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         renderedSongIndex: PropTypes.number.isRequired,
+        renderedVerseIndex: PropTypes.number.isRequired,
         renderedAnnotationIndex: PropTypes.number.isRequired,
         renderedSceneIndex: PropTypes.number.isRequired
     }
@@ -35,6 +37,7 @@ class LogManager extends PureComponent {
         global.z = this.logScene
         global.s = this.logSong
         global.t = this.logStorage
+        global.v = this.logVerse
     }
 
     logAlbum = () => {
@@ -60,6 +63,20 @@ class LogManager extends PureComponent {
             )
 
         return this._logObject('rendered annotation', renderedAnnotationObject)
+    }
+
+    logVerse = () => {
+        const {
+                renderedSongIndex,
+                renderedVerseIndex
+            } = this.props,
+
+            renderedVerse = getVerseObject(
+                renderedSongIndex,
+                renderedVerseIndex
+            )
+
+        return this._logObject('rendered verse', renderedVerse)
     }
 
     logGlobalAnnotation = (globalIndex) => {
@@ -115,11 +132,13 @@ class LogManager extends PureComponent {
 const mapStateToProps = ({
     renderedStore: {
         renderedSongIndex,
+        renderedVerseIndex,
         renderedAnnotationIndex,
         renderedSceneIndex
     }
 }) => ({
     renderedSongIndex,
+    renderedVerseIndex,
     renderedAnnotationIndex,
     renderedSceneIndex
 })
