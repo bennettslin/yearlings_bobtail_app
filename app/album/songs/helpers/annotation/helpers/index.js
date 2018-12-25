@@ -1,3 +1,5 @@
+// TODO: Refactor this. Separate into smaller files
+
 import {
     registerCardsDotKeys,
     registerCardsWormholes

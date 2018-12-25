@@ -1,4 +1,4 @@
-// Parse annotation data for build.
+// TODO: Separate further into smaller files?
 
 import keys from 'lodash.keys'
 

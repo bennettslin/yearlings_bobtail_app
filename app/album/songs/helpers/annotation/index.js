@@ -1,4 +1,4 @@
-// TODO: Eventually refactor all these annotation methods.
+// TODO: This could be a little neater.
 
 import { registerAnnotation } from './helpers'
 
