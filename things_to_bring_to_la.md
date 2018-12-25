@@ -1,14 +1,14 @@
 # Things to bring to LA:
 
 ## Morning
-<!-- Sleep machine -->
+Sleep machine
 
 ## Get from Zillow
 
 ## Backpack
-<!-- EpiPen -->
+EpiPen
 My new MacBook Pro
-<!-- Hard drive and cable -->
+Hard drive and cable
 
 ## Toiletries bag
 <!-- Glasses -->
@@ -21,16 +21,16 @@ My new MacBook Pro
 <!-- Clobetasol (leave in LA) -->
 
 ## Suitcase
-<!-- House key (always keep in suitcase) -->
-<!-- Toiletries bag -->
+House key (always keep in suitcase)
+Toiletries bag
 
 ## Things to bring next time
-<!-- Sharpie -->
-<!-- Docking station, power cord, UCB-C connector -->
+Sharpie
+Docking station, power cord, UCB-C connector
 New monitor cable
-<!-- Another phone cable -->
-<!-- Two new Zillow shirts (One worn) -->
-<!-- Some old underwear -->
+Another phone cable
+Two new Zillow shirts (One worn)
+Some old underwear
 Ibuprofen
 
 ## Things I have in LA
