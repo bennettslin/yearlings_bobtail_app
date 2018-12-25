@@ -57,7 +57,7 @@ const albumSongs = [
     Song_19
 ]
 
-logParse('Begin adding metadata to songs.')
+logParse('Begin parsing songs.')
 
 addSongIndices(albumSongs)
 
@@ -79,6 +79,6 @@ albumSongs.forEach(song => {
     addPluralCardsCount(song)
 })
 
-logParse('End adding metadata to songs.')
+logParse('End parsing songs.')
 
 export default albumSongs

@@ -1,3 +1,5 @@
+// TODO: Eventually refactor these methods.
+
 import keys from 'lodash.keys'
 
 import { WORMHOLE } from 'constants/dots'

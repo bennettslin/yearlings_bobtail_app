@@ -1,3 +1,5 @@
+// TODO: Eventually refactor all these annotation methods.
+
 import { registerAnnotation } from './helpers'
 
 import {

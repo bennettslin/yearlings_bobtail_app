@@ -1,8 +1,7 @@
-// import { parseAlbumData } from './helpers'
 import songs from '../album/songs'
 
-import { addGlobalAnnotationIndices } from './helpers/admin'
-import { addWormholeStuff } from './helpers/wormholes'
+import { addGlobalAnnotationIndices } from './songs/helpers/admin'
+import { addWormholeStuff } from './songs/helpers/wormhole'
 
 const album = { songs }
 
