@@ -14,7 +14,6 @@ import {
 
 export const _registerAnnotation = ({
     rootVerseIndex = -1,
-    album,
     song,
     verse,
     lyricAnnotation,
@@ -70,18 +69,13 @@ export const _registerAnnotation = ({
     }
 
     registerCardsDotKeys({
-        song,
         cards,
         dotKeys
     })
 
     registerCardsWormholes({
-        album,
-        song,
         verse,
-        annotation,
-        cards,
-        dotKeys
+        cards
     })
 
     // Let annotation object know its cards.

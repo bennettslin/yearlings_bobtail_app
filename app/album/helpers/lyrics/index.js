@@ -5,7 +5,6 @@ import {
 
 export const recurseToFindAnnotations = ({
     rootVerseIndex = -1,
-    album,
     song,
     verse,
     lyricEntity = verse,
@@ -36,7 +35,6 @@ export const recurseToFindAnnotations = ({
         lyricEntity.forEach(childEntity => {
             recurseToFindAnnotations({
                 rootVerseIndex,
-                album,
                 song,
                 verse,
                 lyricEntity: childEntity,
@@ -50,7 +48,6 @@ export const recurseToFindAnnotations = ({
         if (lyricEntity[ANCHOR]) {
             annotationCallback({
                 rootVerseIndex,
-                album,
                 song,
                 verse,
                 lyricAnnotation: lyricEntity,
@@ -62,7 +59,6 @@ export const recurseToFindAnnotations = ({
                 if (lyricEntity[childKey]) {
                     recurseToFindAnnotations({
                         rootVerseIndex,
-                        album,
                         song,
                         verse,
                         lyricEntity: lyricEntity[childKey],

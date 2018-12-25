@@ -2,10 +2,7 @@
 
 import keys from 'lodash.keys'
 
-import {
-    WORMHOLE,
-    REFERENCE
-} from 'constants/dots'
+import { REFERENCE } from 'constants/dots'
 
 import {
     WIKI
@@ -30,25 +27,12 @@ export const registerCardsDotKeys = ({
 }
 
 export const registerCardsWormholes = ({
-    album,
-    song,
     verse,
-    annotation,
-    cards,
-    dotKeys
+    cards
 
 }) => {
-    cards.forEach((card, cardIndex) => {
-
-        if (_addSourceWormholeLink({
-            album,
-            song,
-            annotation,
-            card,
-            cardIndex,
-            dotKeys
-
-        })) {
+    cards.forEach((card) => {
+        if (card.wormhole) {
             verse.tempVerseHasWormhole = true
         }
     })
@@ -101,64 +85,30 @@ const _addCardDotKeysToAnnotation = (card, dotKeys) => {
     }
 }
 
-const _addSourceWormholeLink = ({
+// export const registerCardsWormholes = ({
+//     album,
+//     song,
+//     verse,
+//     annotation,
+//     cards,
+//     dotKeys
 
-    album,
-    song,
-    annotation,
-    card,
-    cardIndex = 0,
-    dotKeys
+// }) => {
+//     cards.forEach((card, cardIndex) => {
 
-}) => {
-    // Add wormhole link to annotation card.
-    const { wormhole } = card
+//         if (card.wormhole) {
+//             verse.tempVerseHasWormhole = true
+//         }
+//         if (_addSourceWormholeLink({
+//             album,
+//             song,
+//             annotation,
+//             card,
+//             cardIndex,
+//             dotKeys
 
-    if (!wormhole) {
-        return false
-    }
-
-    /**
-     * Wormhole is either object or string. If it's an object, then the string
-     * we want is the wormholeKey.
-     */
-    const wormholeKey = wormhole.wormholeKey || wormhole,
-        { wormholePrefix } = wormhole,
-        { songIndex } = song,
-
-        /**
-         * NOTE: I wrote this code with the assumption that every wormhole would
-         * be in a timed verse, and thus have a verse index. Had there been one
-         * that wasn't, such as in a side stanza, this wouldn't work for it!
-         */
-        {
-            verseIndex,
-            annotationIndex,
-            columnIndex
-        } = annotation,
-
-        wormholeLink = {
-            songIndex,
-            annotationIndex,
-            cardIndex,
-            columnIndex,
-            verseIndex,
-            wormholePrefix
-        }
-
-    // If first wormhole link, initialise array.
-    if (!album.tempWormholeLinks[wormholeKey]) {
-        album.tempWormholeLinks[wormholeKey] = []
-    }
-
-    // Add wormhole link to wormhole links array.
-    album.tempWormholeLinks[wormholeKey].push(wormholeLink)
-
-    // Add wormhole to dot keys.
-    dotKeys[WORMHOLE] = true
-
-    // Clean up card unit.
-    delete card.wormhole
-
-    return true
-}
+//         })) {
+//             verse.tempVerseHasWormhole = true
+//         }
+//     })
+// }

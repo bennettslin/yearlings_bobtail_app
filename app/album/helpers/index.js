@@ -9,9 +9,6 @@ import { recurseToFindAnnotations } from './lyrics'
 export const parseAlbumData = (album) => {
     logParse('Begin parse album data.')
 
-    // Initialise album.
-    album.tempWormholeLinks = {}
-
     // Initial preparation.
     _initialPrepareAnnotations(album)
 
@@ -31,12 +28,12 @@ const _initialPrepareAnnotations = (album) => {
         if (!song.logue) {
 
             // Parse lyrics.
-            _addAnnotationsToSongs(album, song)
+            addAnnotations(song)
         }
     })
 }
 
-const _addAnnotationsToSongs = (album, song) => {
+const addAnnotations = (song) => {
 
     const { lyricUnits } = song
 
@@ -57,7 +54,6 @@ const _addAnnotationsToSongs = (album, song) => {
         lyricUnitAndUnitMap.forEach(verse => {
 
             recurseToFindAnnotations({
-                album,
                 song,
                 verse,
                 annotationCallback: _registerAnnotation

@@ -1,5 +1,7 @@
 import keys from 'lodash.keys'
 
+import { WORMHOLE } from 'constants/dots'
+
 import {
     LYRIC,
     ANCHOR,
@@ -12,6 +14,98 @@ import {
 } from 'constants/lyrics'
 
 import { getAnnotationObject } from 'helpers/data'
+
+export const addSourceWormholeLinks = (album) => {
+    album.tempWormholeLinks = {}
+
+    const { songs } = album
+
+    songs.forEach(song => {
+        const { annotations } = song
+
+        if (annotations) {
+
+            annotations.forEach(annotation => {
+                const {
+                    cards,
+                    dotKeys
+                } = annotation
+
+                cards.forEach((card, cardIndex) => {
+                    _addSourceWormholeLink({
+                        album,
+                        song,
+                        annotation,
+                        card,
+                        cardIndex,
+                        dotKeys
+                    })
+                })
+            })
+        }
+    })
+}
+
+export const _addSourceWormholeLink = ({
+    album,
+    song,
+    annotation,
+    card,
+    cardIndex = 0,
+    dotKeys
+
+}) => {
+    // Add wormhole link to annotation card.
+    const { wormhole } = card
+
+    if (!wormhole) {
+        return false
+    }
+
+    /**
+     * Wormhole is either object or string. If it's an object, then the string
+     * we want is the wormholeKey.
+     */
+    const wormholeKey = wormhole.wormholeKey || wormhole,
+        { wormholePrefix } = wormhole,
+        { songIndex } = song,
+
+        /**
+         * NOTE: I wrote this code with the assumption that every wormhole would
+         * be in a timed verse, and thus have a verse index. Had there been one
+         * that wasn't, such as in a side stanza, this wouldn't work for it!
+         */
+        {
+            verseIndex,
+            annotationIndex,
+            columnIndex
+        } = annotation,
+
+        wormholeLink = {
+            songIndex,
+            annotationIndex,
+            cardIndex,
+            columnIndex,
+            verseIndex,
+            wormholePrefix
+        }
+
+    // If first wormhole link, initialise array.
+    if (!album.tempWormholeLinks[wormholeKey]) {
+        album.tempWormholeLinks[wormholeKey] = []
+    }
+
+    // Add wormhole link to wormhole links array.
+    album.tempWormholeLinks[wormholeKey].push(wormholeLink)
+
+    // Add wormhole to dot keys.
+    dotKeys[WORMHOLE] = true
+
+    // Clean up card unit.
+    delete card.wormhole
+
+    return true
+}
 
 export const addDestinationWormholeLinks = (album) => {
     /**
@@ -317,6 +411,8 @@ export const addDestinationWormholeIndices = (album) => {
 
 // TODO: This is all a mess, and I no longer have the context for it.
 export const addWormholeStuff = (album) => {
+
+    addSourceWormholeLinks(album)
 
     // In-between preparation.
     addDestinationWormholeLinks(album)
