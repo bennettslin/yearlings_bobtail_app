@@ -1,30 +1,29 @@
-import album from 'album'
+import songs from 'album/songs'
 
-export const getSongsAndLoguesCount = (songs = album.songs) => {
+export const getSongsAndLoguesCount = () => {
     return songs.length
 }
 
-export const getSongsNotLoguesCount = (songs = album.songs) => {
+export const getSongsNotLoguesCount = () => {
     return songs.length - 2
 }
 
 // TODO: Don't pass song object directly.
-export const getSongObject = (songIndex, songs = album.songs) => {
+export const getSongObject = (songIndex) => {
     return songs[songIndex]
 }
 
-export const getSongIsLogue = (songIndex, songs = album.songs) => {
-    return Boolean(songs[songIndex].logue)
+export const getSongIsLogue = (songIndex) => {
+    return songIndex === 0 || songIndex === songs.length - 1
 }
 
 export const getSongTitle = ({
     songIndex,
-    songs = album.songs,
     showIndex = true
 }) => {
     const
-        song = getSongObject(songIndex, songs),
-        isLogue = getSongIsLogue(songIndex, songs)
+        song = getSongObject(songIndex),
+        isLogue = getSongIsLogue(songIndex)
 
     return `${showIndex && !isLogue ? songIndex + '. ' : ''}${song.title}`
 }

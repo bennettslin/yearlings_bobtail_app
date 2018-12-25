@@ -3,40 +3,7 @@
 import keys from 'lodash.keys'
 
 import { REFERENCE } from 'constants/dots'
-
-import {
-    WIKI
-} from 'constants/lyrics'
-
-/***********
- * INITIAL *
- ***********/
-
-export const registerCardsDotKeys = ({
-    cards,
-    dotKeys
-
-}) => {
-    cards.forEach((card) => {
-
-        _addWikiDotKeyToCard(card)
-
-        // This needs to come after adding wiki dot key to card.
-        _addCardDotKeysToAnnotation(card, dotKeys)
-    })
-}
-
-export const registerCardsWormholes = ({
-    verse,
-    cards
-
-}) => {
-    cards.forEach((card) => {
-        if (card.wormhole) {
-            verse.tempVerseHasWormhole = true
-        }
-    })
-}
+import { WIKI } from 'constants/lyrics'
 
 const _addWikiDotKeyToCard = (card) => {
     const { description } = card
@@ -85,30 +52,28 @@ const _addCardDotKeysToAnnotation = (card, dotKeys) => {
     }
 }
 
-// export const registerCardsWormholes = ({
-//     album,
-//     song,
-//     verse,
-//     annotation,
-//     cards,
-//     dotKeys
+export const registerCardsDotKeys = ({
+    cards,
+    dotKeys
 
-// }) => {
-//     cards.forEach((card, cardIndex) => {
+}) => {
+    cards.forEach((card) => {
 
-//         if (card.wormhole) {
-//             verse.tempVerseHasWormhole = true
-//         }
-//         if (_addSourceWormholeLink({
-//             album,
-//             song,
-//             annotation,
-//             card,
-//             cardIndex,
-//             dotKeys
+        _addWikiDotKeyToCard(card)
 
-//         })) {
-//             verse.tempVerseHasWormhole = true
-//         }
-//     })
-// }
+        // This needs to come after adding wiki dot key to card.
+        _addCardDotKeysToAnnotation(card, dotKeys)
+    })
+}
+
+export const registerCardsWormholes = ({
+    verse,
+    cards
+
+}) => {
+    cards.forEach((card) => {
+        if (card.wormhole) {
+            verse.tempVerseHasWormhole = true
+        }
+    })
+}

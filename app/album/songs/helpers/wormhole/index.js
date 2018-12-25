@@ -1,4 +1,7 @@
-// TODO: Eventually refactor these methods.
+/**
+ * TODO: This is all a mess, and I no longer have the context for it. Ideally
+ * this would be refactored.
+ */
 
 import keys from 'lodash.keys'
 
@@ -411,17 +414,9 @@ export const addDestinationWormholeIndices = (album) => {
     delete album.tempWormholeLinks
 }
 
-// TODO: This is all a mess, and I no longer have the context for it.
 export const addWormholeStuff = (album) => {
-
     addSourceWormholeLinks(album)
-
-    // In-between preparation.
     addDestinationWormholeLinks(album)
-
-    // Final preparation.
     addWikiWormholeIndices(album)
-
-    // After preparation.
     addDestinationWormholeIndices(album)
 }

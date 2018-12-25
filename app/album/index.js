@@ -1,4 +1,4 @@
-import songs from '../album/songs'
+import songs from './songs'
 
 import { addGlobalAnnotationIndices } from './songs/helpers/admin'
 import { addWormholeStuff } from './songs/helpers/wormhole'
