@@ -2,9 +2,9 @@ import mp3s from 'assets/mp3s'
 
 import {
     getSongVersesCount,
-    getSongVerseConfigs,
-    getSongTotalTime
-} from 'helpers/data'
+    getSongVerseConfigs
+} from 'album/api/verses'
+import { getSongTotalTime } from 'album/api/time'
 
 export const getMp3s = () => (
     mp3s

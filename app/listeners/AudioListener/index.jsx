@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSongStore } from 'flux/song/action'
 
-import { getTimeForVerseIndex } from 'helpers/data'
+import { getTimeForVerseIndex } from 'album/api/time'
 
 class AudioListener extends PureComponent {
 

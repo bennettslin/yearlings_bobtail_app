@@ -13,7 +13,7 @@ import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 
-import { getTimeForVerseIndex } from 'helpers/data'
+import { getTimeForVerseIndex } from 'album/api/time'
 import { populateRefs } from 'helpers/ref'
 import { getPlayersCanPlayThroughFromBitNumber } from 'helpers/player'
 

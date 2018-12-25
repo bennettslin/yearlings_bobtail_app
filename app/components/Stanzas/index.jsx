@@ -12,7 +12,7 @@ import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
 import Unit from './Unit'
 
-import { getSongStanzaConfigs } from 'helpers/data'
+import { getSongStanzaConfigs } from 'album/api/stanzas'
 import { populateRefs } from 'helpers/ref'
 import { getLastUnitDotCardIndex } from './helper'
 

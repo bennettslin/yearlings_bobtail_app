@@ -1,4 +1,4 @@
-import { getSongVersesCount } from 'helpers/data'
+import { getSongVersesCount } from 'album/api/verses'
 
 const getInteractivatedVerseForDirection = ({
     selectedSongIndex,

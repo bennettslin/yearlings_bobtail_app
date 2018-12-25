@@ -8,10 +8,8 @@ import cx from 'classnames'
 import StanzaHoc from '../../Stanzas/Hoc'
 import SliderStanza from './Stanza'
 
-import {
-    getSongTotalTime,
-    getSongStanzaConfigs
-} from 'helpers/data'
+import { getSongTotalTime } from 'album/api/time'
+import { getSongStanzaConfigs } from 'album/api/stanzas'
 
 const mapStateToProps = ({
     renderedStore: { renderedSongIndex }

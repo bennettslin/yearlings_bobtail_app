@@ -6,15 +6,13 @@ import { connect } from 'react-redux'
 
 import album from 'album'
 
-import {
-    getAnnotationObject,
-    getGlobalAnnotationObject,
-    getSceneObject
-} from 'helpers/data'
+import { getGlobalAnnotationObject } from 'album/api/admin'
+import { getSceneObject } from 'album/api/scenes'
 import { getSongObject } from 'album/api/songs'
+import { getVerseObject } from 'album/api/verses'
 
 import { WINDOW_STORAGE } from 'constants/state'
-import { getVerseObject } from '../../album/api/verses'
+import { getAnnotationObject } from 'album/api/annotations'
 
 class LogManager extends PureComponent {
 

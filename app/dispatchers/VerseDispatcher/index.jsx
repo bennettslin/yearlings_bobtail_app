@@ -7,10 +7,8 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateSongStore } from 'flux/song/action'
 import { resetVerseBars } from 'flux/verseBars/action'
 
-import {
-    getSceneIndexForVerseIndex,
-    getTimeForVerseIndex
-} from 'helpers/data'
+import { getTimeForVerseIndex } from 'album/api/time'
+import { getSceneIndexForVerseIndex } from 'album/api/scenes'
 
 class VerseDispatcher extends PureComponent {
 

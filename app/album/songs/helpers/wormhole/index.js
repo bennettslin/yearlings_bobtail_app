@@ -18,7 +18,7 @@ import {
     IS_VERSE_ENDING_SPAN
 } from 'constants/lyrics'
 
-import { getAnnotationObject } from 'helpers/data'
+import { getAnnotationObject } from 'album/api/annotations'
 
 export const addSourceWormholeLinks = (album) => {
     album.tempWormholeLinks = {}

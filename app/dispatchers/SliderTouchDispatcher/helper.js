@@ -1,10 +1,8 @@
 import findIndex from 'lodash.findindex'
 import { LS_MARGIN_X_SLIDER } from 'constants/responsive'
 
-import {
-    getSongTotalTime,
-    getSongStanzaConfigs
-} from 'helpers/data'
+import { getSongTotalTime } from 'album/api/time'
+import { getSongStanzaConfigs } from 'album/api/stanzas'
 
 export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
     const sliderX = clientX - sliderLeft,

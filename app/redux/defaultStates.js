@@ -18,15 +18,14 @@ import {
 
 import {
     getSceneIndexForVerseIndex,
-    getSceneObject,
-    getTimeForVerseIndex,
-    getAnnotationColumnIndex
-} from '../helpers/data'
-
+    getSceneObject
+} from 'album/api/scenes'
+import { getTimeForVerseIndex } from 'album/api/time'
 import {
     getSongIsLogue,
     getBookForSongIndex
 } from 'album/api/songs'
+import { getAnnotationColumnIndex } from 'album/api/annotations'
 
 import {
     IS_ACCESS_ON,

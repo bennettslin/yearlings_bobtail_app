@@ -5,10 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import {
-    getSongSceneConfigs,
-    getSongTotalTime
-} from 'helpers/data'
+import { getSongSceneConfigs } from 'album/api/scenes'
+import { getSongTotalTime } from 'album/api/time'
 
 const mapStateToProps = ({
     renderedStore: { renderedSongIndex }

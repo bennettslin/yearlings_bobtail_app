@@ -7,10 +7,9 @@ import { updateSessionStore } from 'flux/session/action'
 
 import ListenerContainer from '../ListenerContainer'
 
-import {
-    getSceneIndexForVerseIndex,
-    getTimeForVerseIndex
-} from '../../helpers/data'
+import { getTimeForVerseIndex } from 'album/api/time'
+import { getSceneIndexForVerseIndex } from 'album/api/scenes'
+
 import {
     getValidRoutingIndicesObject,
     getPathForIndices

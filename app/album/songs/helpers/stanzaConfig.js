@@ -1,4 +1,4 @@
-import { getAllTimedVerses } from 'album/api/verses'
+import { getAllSelectableVerses } from 'album/api/verses'
 
 const _getVerseConfigForStanzaConfig = (verse) => {
     const {
@@ -53,7 +53,7 @@ const _getInitialStanzaConfigs = (lyricUnits, song) => {
             // Then tell unit its stanza index.
             unitMap.stanzaIndex = stanzaIndex
 
-            getAllTimedVerses(unit).forEach(verse => {
+            getAllSelectableVerses(unit).forEach(verse => {
 
                 stanzaConfig.stanzaVerseConfigs.push(
                     _getVerseConfigForStanzaConfig(verse)

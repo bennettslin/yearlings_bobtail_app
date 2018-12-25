@@ -1,4 +1,4 @@
-import { getAllTimedVerses } from 'album/api/verses'
+import { getAllSelectableVerses } from 'album/api/verses'
 
 const _addIndexToVerseObject = (verse, verseIndexCounter) => {
     verse.verseIndex = verseIndexCounter
@@ -38,7 +38,7 @@ export const addVerseIndicesAndConfigs = (song) => {
         let verseIndexCounter = 0
 
         lyricUnits.forEach(unit => {
-            getAllTimedVerses(unit).forEach(verse => {
+            getAllSelectableVerses(unit).forEach(verse => {
 
                 _addIndexToVerseObject(verse, verseIndexCounter)
                 verseIndexCounter++

@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { Transition } from 'react-transition-group'
 import CarouselAnnotation from '../Annotation'
 
-import { getAnnotationsCount } from 'helpers/data'
+import { getAnnotationsCount } from 'album/api/annotations'
 import { getArrayOfLength } from 'helpers/general'
 
 const mapStateToProps = ({

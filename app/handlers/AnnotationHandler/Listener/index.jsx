@@ -8,7 +8,7 @@ import AnnotationDispatcher from '../Dispatcher'
 import InteractivatedVerseDispatcher from '../../../dispatchers/InteractivatedVerseDispatcher'
 
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
-import { getVerseIndexForAnnotationIndex } from '../../../helpers/data'
+import { getVerseIndexForAnnotationIndex } from 'album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
 
 class AnnotationListener extends PureComponent {

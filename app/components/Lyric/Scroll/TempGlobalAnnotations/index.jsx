@@ -5,10 +5,8 @@ import Button from '../../../Button'
 
 import album from 'album'
 
-import {
-    getAnnotationObject,
-    getGlobalAnnotationObject
-} from 'helpers/data'
+import { getAnnotationObject } from 'album/api/annotations'
+import { getGlobalAnnotationObject } from 'album/api/admin'
 
 const TempGlobalAnnotationsCounter = ({
     counter,

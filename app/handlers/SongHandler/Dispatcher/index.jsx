@@ -12,10 +12,9 @@ import { updateAccessStore } from 'flux/access/action'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateSongStore } from 'flux/song/action'
 
-import {
-    getSceneIndexForVerseIndex,
-    getTimeForVerseIndex
-} from '../../../helpers/data'
+import { getTimeForVerseIndex } from 'album/api/time'
+import { getSceneIndexForVerseIndex } from 'album/api/scenes'
+
 import { getSongsAndLoguesCount } from 'album/api/songs'
 
 class SongDispatcher extends PureComponent {

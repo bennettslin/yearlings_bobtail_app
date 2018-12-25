@@ -1,6 +1,6 @@
 import { getSongObject } from 'album/api/songs'
 
-export const getAllTimedVerses = (unit) => {
+export const getAllSelectableVerses = (unit) => {
     const {
         lyricUnit,
         unitMap: { subCard }
@@ -20,11 +20,22 @@ export const getVerseObject = (
 
     if (lyricUnits) {
         return lyricUnits.reduce((foundVerse, unit) => (
-            foundVerse || getAllTimedVerses(unit).find(verse => (
+            foundVerse || getAllSelectableVerses(unit).find(verse => (
                 verse.verseIndex === verseIndex
             ))
         ), false)
+
     } else {
         return null
     }
+}
+
+export const getSongVerseConfigs = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.songVerseConfigs || []
+}
+
+export const getSongVersesCount = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.songVerseConfigs.length || 0
 }

@@ -5,7 +5,7 @@ import { updateSliderStore } from 'flux/slider/action'
 
 import VerseDispatcher from '../VerseDispatcher'
 
-import { getTimeForVerseIndex } from 'helpers/data'
+import { getTimeForVerseIndex } from 'album/api/time'
 import { getClientX } from 'helpers/dom'
 import { populateRefs } from 'helpers/ref'
 

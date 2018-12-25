@@ -1,4 +1,4 @@
-import { getAnnotationObject } from 'helpers/data'
+import { getAnnotationObject } from 'album/api/annotations'
 
 import {
     WORMHOLE,

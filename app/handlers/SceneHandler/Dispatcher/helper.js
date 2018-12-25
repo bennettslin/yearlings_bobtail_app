@@ -1,7 +1,7 @@
 import {
     getSongSceneConfigs,
     getSceneIndexForVerseIndex
-} from '../../../helpers/data'
+} from 'album/api/scenes'
 
 import { getSongIsLogue } from 'album/api/songs'
 

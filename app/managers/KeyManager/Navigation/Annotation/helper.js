@@ -1,4 +1,4 @@
-import { getAnnotationObject } from 'helpers/data'
+import { getAnnotationObject } from 'album/api/annotations'
 import { parseWormholeLinkForDispatch } from 'helpers/wormhole'
 
 export const getWormholeLinkFromIndex = ({

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSceneStore } from 'flux/scene/action'
 
-import { getSceneObject } from 'helpers/data'
+import { getSceneObject } from 'album/api/scenes'
 
 import {
     TIME_ANYTIME,

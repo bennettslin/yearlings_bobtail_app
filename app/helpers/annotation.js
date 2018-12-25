@@ -2,7 +2,7 @@ import {
     getAnnotationObject,
     getAnnotationColumnIndex,
     getAnnotationsCount
-} from 'helpers/data'
+} from 'album/api/annotations'
 import { intersects } from 'helpers/dot'
 
 export const getShowAnnotationForColumn = ({

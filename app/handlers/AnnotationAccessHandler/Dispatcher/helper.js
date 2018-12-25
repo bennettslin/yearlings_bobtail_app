@@ -1,7 +1,7 @@
 import {
     getAnnotationObject,
     getAnnotationsCount
-} from 'helpers/data'
+} from 'album/api/annotations'
 import { getVerseObject } from 'album/api/verses'
 import {
     getShowAnnotationForColumn,
