@@ -1,6 +1,6 @@
 /**
  * TODO: This is all a mess, and I no longer have the context for it. Ideally
- * this would be refactored.
+ * this would be refactored, but I'd imagine it would take several days.
  */
 
 import keys from 'lodash.keys'
