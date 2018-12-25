@@ -26,12 +26,12 @@ $width___overviewToggle__phone:
 $height___overviewToggle__phone:
     $width___overviewToggle__phone * 1.5;
 
-// Toggle container.
 .LeftShelf {
-    height: 100%;
+    height: 0;
 
-    transition: opacity $animationDuration__default,
-                margin-left $animationDuration__default;
+    transition:
+        opacity $animationDuration__default,
+        margin-left $animationDuration__default;
 
     margin-left: 0;
     margin-bottom: $margin__scrollbar;
