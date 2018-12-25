@@ -1,7 +1,7 @@
 import {
     registerCardsDotKeys,
     registerCardsWormholes
-} from './helper'
+} from './register'
 
 import { getFormattedAnnotationTitle } from 'helpers/format'
 
@@ -12,7 +12,7 @@ import {
     PROPER_NOUN
 } from 'constants/lyrics'
 
-export const _registerAnnotation = ({
+export const registerAnnotation = ({
     rootVerseIndex = -1,
     song,
     verse,

@@ -28,6 +28,7 @@ import {
     addSceneConfigs,
     addSceneIndicesToVerseConfigs
 } from './helpers/scene'
+import { addAnnotations } from './helpers/annotation'
 import {
     addDotUnitsCount,
     addPluralCardsCount
@@ -71,6 +72,8 @@ albumSongs.forEach(song => {
 
     // This needs to come after verse configs and scene configs.
     addSceneIndicesToVerseConfigs(song)
+
+    addAnnotations(song)
 
     addDotUnitsCount(song)
     addPluralCardsCount(song)
