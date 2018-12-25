@@ -29,7 +29,7 @@ class DeviceWrapper extends PureComponent {
                 isDesktop,
                 children
             } = this.props,
-            deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
+            deviceClassName = DEVICE_OBJECTS[deviceIndex] && DEVICE_OBJECTS[deviceIndex].className,
             isMobile = !isDesktop,
             isTablet = getIsTablet(deviceIndex)
 

@@ -249,13 +249,13 @@ module.exports = {
     LS_LENGTH_ICON_LARGE,
     LS_MARGIN_THIN,
 
-    // Used for admin purposes.
     DEVICE_OBJECTS: [
         PHONE_OBJECT,
         MINI_OBJECT,
         TABLET_OBJECT,
         LAPTOP_OBJECT,
-        MONITOR_OBJECT
+        MONITOR_OBJECT,
+        {} // Default when app mounts.
     ],
 
     LS_HEIGHT_LYRIC_COLLAPSED,

@@ -8,6 +8,7 @@ import {
 } from './storageHelper'
 
 import { SHOWN } from 'constants/options'
+import { DEVICE_OBJECTS } from 'constants/responsive'
 
 import { getCubesForKey } from 'scene/cubes'
 
@@ -82,7 +83,7 @@ const
     },
 
     DEVICE_DEFAULTS = {
-        deviceIndex: 0,
+        deviceIndex: DEVICE_OBJECTS.length - 1,
         isPhone: false,
         isDesktop: false,
         windowHeight: 0,
