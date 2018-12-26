@@ -21,7 +21,6 @@ const propTypes = {
     Stanza = memo(({
         logicSelectors,
         stanzaConfig,
-        isLastStanza,
 
         ...other
     }) => {
@@ -38,16 +37,11 @@ const propTypes = {
                 )}
             >
                 {stanzaUnitIndices.map(unitIndex => {
-                    const isLastUnit =
-                    isLastStanza &&
-                    unitIndex === stanzaUnitIndices.length - 1
-
                     return (
                         <Unit {...other}
                             key={unitIndex}
                             {...{
-                                unitIndex,
-                                isLastUnit
+                                unitIndex
                             }}
                         />
                     )

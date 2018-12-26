@@ -13,7 +13,6 @@ import cx from 'classnames'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 
-import { TITLE } from 'constants/lyrics'
 import { getUnit } from './helper'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
@@ -74,9 +73,6 @@ class Unit extends PureComponent {
             topSideSubCard = topSideCard ?
                 topSideCard[topSideCard.length - 1].subCard : null,
 
-            // isTitleUnit = unitIndex === 0,
-            isTitleUnit = false,
-
             hasSide = Boolean(topSideCard || bottomSideCard),
             isDotOnly = Boolean(dotUnit) && !lyricUnit,
             isSideBottomOnly = !topSideCard && Boolean(bottomSideCard)
@@ -84,11 +80,11 @@ class Unit extends PureComponent {
         return (
             <UnitView {...other}
                 {...{
-                    isTitleUnit,
                     unitIndex,
 
                     stanzaIndex,
                     stanzaTypeIndex,
+                    stanzaType,
                     lyricUnit,
                     subCardType,
                     sideCardType,
@@ -101,8 +97,7 @@ class Unit extends PureComponent {
                     topSideSubCard,
                     hasSide,
                     isDotOnly,
-                    isSideBottomOnly,
-                    stanzaType: isTitleUnit ? TITLE : stanzaType
+                    isSideBottomOnly
                 }}
             />
         )
@@ -116,8 +111,7 @@ class Unit extends PureComponent {
 class UnitView extends PureComponent {
 
     static defaultProps = {
-        subsequent: false,
-        isLastUnit: false
+        subsequent: false
     }
 
     static propTypes = {
@@ -128,9 +122,6 @@ class UnitView extends PureComponent {
 
         stanzaIndex: PropTypes.number,
         unitIndex: PropTypes.number.isRequired,
-
-        isTitleUnit: PropTypes.bool.isRequired,
-        isLastUnit: PropTypes.bool.isRequired,
 
         lyricUnit: PropTypes.array,
         dotUnit: PropTypes.object,
@@ -158,9 +149,6 @@ class UnitView extends PureComponent {
 
                 // From controller.
                 unitIndex,
-
-                isTitleUnit,
-                isLastUnit,
 
                 dotUnit,
                 subCard,
@@ -192,12 +180,9 @@ class UnitView extends PureComponent {
 
                     `unit__${unitIndex}`,
 
-                    isTitleUnit ? 'fontSize__title' : 'fontSize__verse',
-
+                    'fontSize__verse',
                     {
                         'Unit__hasSide': hasSide,
-                        'Unit__title': isTitleUnit,
-
                         'fontSize__lyricMultipleColumns': hasSide
                     },
 
@@ -246,7 +231,6 @@ class UnitView extends PureComponent {
                 }
                 {dotUnit &&
                     <UnitDot
-                        isLastUnit={isDotOnly && isLastUnit}
                         dotStanzaObject={dotUnit}
                         {...{
                             setLyricAnnotationElement

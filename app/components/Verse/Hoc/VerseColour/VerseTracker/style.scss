@@ -16,7 +16,7 @@
     .RM__isPlaying.RM__canTrackVerse
     &.VerseTracker__selected {
         // TODO: Improve this styling.
-        background-color: rgba(127, 255, 212, 1.0);
+        background-color: $bgColour__audioPlaying;
     }
 }
 
@@ -37,36 +37,3 @@
         top: 0;
     }
 }
-
-// .VerseTracker__inSlider {
-//     width: 200%;
-//     left: -100%;
-
-//     .RM__isPlaying
-//     &.VerseTracker__selected {
-//         left: 0;
-
-//         // TODO: Improve this styling.
-//         background: linear-gradient(
-//             90deg,
-//             black,
-//             transparent
-//         );
-//     }
-// }
-
-// .VerseTracker__inLyric {
-//     height: 200%;
-//     top: -100%;
-
-//     .RM__isPlaying
-//     &.VerseTracker__selected {
-//         top: 0;
-
-//         // TODO: Improve this styling.
-//         background: linear-gradient(
-//             black,
-//             transparent
-//         );
-//     }
-// }

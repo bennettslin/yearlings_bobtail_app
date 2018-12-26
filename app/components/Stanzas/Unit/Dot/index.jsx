@@ -81,7 +81,6 @@ class UnitDot extends PureComponent {
 
         // FIXME: Ideal to get dotUnit object from indices.
         const {
-                isLastUnit,
                 dotStanzaObject,
                 renderedAnnotationIndex,
                 accessedAnnotationIndex,
@@ -122,7 +121,6 @@ class UnitDot extends PureComponent {
                     dotKeys,
                     isSelected,
                     isAccessed,
-                    isLastUnit,
                     annotationIndex,
                     handleAnchorClick: this._handleDotButtonClick
                 }}
@@ -137,7 +135,6 @@ class UnitDot extends PureComponent {
 
 const propTypes = {
     // From parent.
-        isLastUnit: PropTypes.bool.isRequired,
         dotKeys: PropTypes.object.isRequired,
         annotationIndex: PropTypes.number.isRequired,
         setRef: PropTypes.func.isRequired
@@ -147,7 +144,6 @@ const propTypes = {
         // From controller.
         dotKeys,
         annotationIndex,
-        isLastUnit,
         setRef,
         ...other
     }) => {
@@ -158,8 +154,6 @@ const propTypes = {
                 className={cx(
                     'UnitDot',
                     'Unit__column',
-
-                    isLastUnit && 'UnitDot__lastStanza',
 
                     // Scroll to dot stanza block upon annotation selection.
                     annotationIndex &&

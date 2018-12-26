@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Bug where future verses don't highlight properly when selected verse is a response.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
         workedHours: 0,
         neededHours: 3

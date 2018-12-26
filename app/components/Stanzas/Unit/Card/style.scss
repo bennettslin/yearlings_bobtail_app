@@ -87,7 +87,7 @@
 
 .bgColour__unit__pattern {
     $degrees: 60deg;
-    $lightShade: rgba(255, 255, 255, 0.125);
+    $lightShade: rgba(175, 175, 175, 0.125);
     $darkShade: rgba(0, 0, 0, 0.1);
     $height: $height__stanzaTypeTab * 4;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
@@ -130,9 +130,6 @@
     background-position: bottom left;
 }
 
-.bgColour__stanzaType__title {
-    background-color: $bgColour__stanzaType__title;
-}
 .bgColour__stanzaType__refrain {
     background-color: $bgColour__stanzaType__refrain;
 }
@@ -164,11 +161,11 @@
     background-color: $bgColour__stanzaType__instrumental;
 }
 .bgColour__stanzaType__rhyme {
-    background-color: $bgColour__stanzaType__rhyme;
+    background-color: $bgColour__stanzaType__none;
 }
 .bgColour__stanzaType__backing {
-    background-color: $bgColour__stanzaType__backing;
+    background-color: $bgColour__stanzaType__none;
 }
 .bgColour__stanzaType__response {
-    background-color: $bgColour__stanzaType__response;
+    background-color: $bgColour__stanzaType__none;
 }

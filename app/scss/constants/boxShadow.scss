@@ -2,7 +2,7 @@
 
 // Box shadow colours.
 $colour__boxShadow: rgba(75, 75, 100, 0.4);
-$colour__boxShadow__dark: rgba(25, 25, 50, 0.4);
+$colour__boxShadow__dark: rgba(25, 25, 50, 0.6);
 
 $colour__boxShadow__cursored: rgba(225, 255, 200, 0.3);
 $colour__boxShadow__cursoredBright: rgba(225, 255, 200, 0.5);
@@ -38,8 +38,8 @@ $boxShadow__sliderStanza: 0 1px 1px 1px $colour__boxShadow;
 // $boxShadow__sliderStanza__cursored:
 //     0 1px 5px 5px $colour__boxShadow__cursoredBright;
 
-$boxShadow__verseBar__above: 0 3px 12px 5px $colour__boxShadow__dark;
-$boxShadow__verseBar__below: 0 0 12px 5px $colour__boxShadow__dark;
+$boxShadow__verseBar__above: 0 3px 12px 8px $colour__boxShadow__dark;
+$boxShadow__verseBar__below: 0 0 12px 8px $colour__boxShadow__dark;
 
 // $boxShadow__menu: 0 0 1px 1px $colour__boxShadow;
 

@@ -3,7 +3,7 @@
  ********/
 
 // Plain text colours.
-$colour__text__dark: #444;
+$colour__text__dark: #555;
 $colour__text__light: #fff;
 
 // Selected anchor colours.
@@ -73,6 +73,7 @@ $bgColour__sideSlider: #888;
 // Audio related colours.
 $bgColour__audioPlay: #6a8;
 $bgColour__audioPause: #8a6;
+$bgColour__audioPlaying: #7d9;
 $bgColour__audioDisabled: lightGray;
 $bgColour__audioSelect: #fdb;
 $bgColour__audioNeutral: #ddf;
@@ -99,29 +100,52 @@ $bgColour__annotationCard: rgba(250, 250, 255, 0.9);
 $bgColour__annotationWormhole: #fff4f4;
 
 // Song stanza colours.
-$bgColour__stanzaType__title:hsl(0, 0, 40);
-
 $bgColour__stanzaType__verse:
-    hsl(240, 40, 40);
+    hsl(210, 35, 40);
 $bgColour__stanzaType__prechorus:
-    hsl(60, 40, 40);
+    hsl(120, 25, 40);
 $bgColour__stanzaType__chorus:
-    hsl(180, 40, 40);
+    hsl(300, 25, 40);
 $bgColour__stanzaType__postchorus:
-    hsl(300, 40, 40);
-$bgColour__stanzaType__bridge:
     hsl(30, 40, 40);
+$bgColour__stanzaType__bridge:
+    hsl(180, 40, 30);
 $bgColour__stanzaType__refrain:
-    hsl(150, 40, 40);
+    hsl(60, 40, 35);
 $bgColour__stanzaType__coda:
-    hsl(270, 40, 40);
+    hsl(90, 40, 35);
 $bgColour__stanzaType__instrumental:
-    hsl(90, 40, 40);
-$bgColour__stanzaType__rhyme:
-    hsl(210, 40, 40);
-$bgColour__stanzaType__backing:
-    hsl(330, 40, 40);
-$bgColour__stanzaType__response:
-    hsl(120, 40, 40);
-$bgColor__remainingHue:
-    hsl(0, 40, 40);
+    hsl(270, 25, 40);
+$bgColour__stanzaType__none:
+    hsl(0, 0, 45);
+
+$bgColour__stanzaType__verse__light:
+    hsl(210, 35, 40);
+$bgColour__stanzaType__prechorus__light:
+    hsl(120, 25, 40);
+$bgColour__stanzaType__chorus__light:
+    hsl(300, 25, 40);
+$bgColour__stanzaType__postchorus__light:
+    hsl(30, 40, 40);
+$bgColour__stanzaType__bridge__light:
+    hsl(180, 40, 30);
+$bgColour__stanzaType__refrain__light:
+    hsl(60, 40, 35);
+$bgColour__stanzaType__coda__light:
+    hsl(90, 40, 35);
+$bgColour__stanzaType__instrumental__light:
+    hsl(270, 25, 40);
+$bgColour__stanzaType__none__light:
+    hsl(0, 0, 45);
+
+// Unused.
+// $bgColour__stanzaType__title:
+//     hsl(0, 0, 40);
+// $bgColour__stanzaType__rhyme:
+//     hsl(240, 40, 40);
+// $bgColour__stanzaType__backing:
+//     hsl(330, 40, 40);
+// $bgColour__stanzaType__response:
+//     hsl(150, 40, 40);
+// $bgColor__remainingHue:
+//     hsl(0, 40, 40);

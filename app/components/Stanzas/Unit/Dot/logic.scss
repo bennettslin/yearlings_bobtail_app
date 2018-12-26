@@ -11,9 +11,5 @@
         &:not(:first-child) {
             margin-left: $marginX__stanzaChildColumn;
         }
-
-        &.UnitDot__lastStanza {
-            max-height: inherit;
-        }
     }
 }

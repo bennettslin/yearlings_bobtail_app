@@ -7,12 +7,12 @@ const ReferenceField = ({
     className
 
 }) => (
-    <circle
+    <path
         {...{
             className,
-            cx: 50,
-            cy: 50,
-            r: 50
+            x: 0,
+            y: 0,
+            d: 'M 50,0 L 100,50 L 50,100 L0,50 Z'
         }}
     />
 )

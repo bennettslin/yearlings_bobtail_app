@@ -42,7 +42,6 @@ const propTypes = {
     },
 
     DotIcon = memo(({
-
         isAccessed,
 
         // Applies to selectable dots.
