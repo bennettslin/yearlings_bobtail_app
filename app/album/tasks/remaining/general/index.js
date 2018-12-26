@@ -1,5 +1,15 @@
 export default [
     {
+        taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Nav button icon size is weird.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Transitions work.`,
         workedHours: 0,
         neededHours: 24

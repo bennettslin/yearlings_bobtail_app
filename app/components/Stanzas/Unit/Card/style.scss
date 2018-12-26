@@ -74,21 +74,22 @@
 
     .UnitCard__tabbed
     & {
-        padding-top: $js__margin__thin * 1.5;
+        padding-top: $js__margin__thick * 1.5;
         border-top-left-radius: 0;
     }
+}
 
-    .Unit__title
-    & {
-        padding-top: $js__margin__thick;
-    }
+.UnitCard__tabText {
+    position: relative;
+    top: $js__margin__thin;
+    padding: 0 $js__margin__thin * 2;
 }
 
 .bgColour__unit__pattern {
     $degrees: 60deg;
     $lightShade: rgba(255, 255, 255, 0.125);
-    $darkShade: rgba(0, 0, 0, 0.15);
-    $height: $height__stanzaTypeTab * 1.8;
+    $darkShade: rgba(0, 0, 0, 0.1);
+    $height: $height__stanzaTypeTab * 4;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:

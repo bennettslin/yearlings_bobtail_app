@@ -1,8 +1,9 @@
 @import "./Verses/style";
 
-$js__marginX__slider: 3px;
+$js__marginX__slider: 4px;
+$js__marginY__slider: 6px;
 $js__overlap__marginX__slider: 2px;
-$height__sliderStanzaTab: 5px;
+$height__sliderStanzaTab: 3px;
 $width__sliderStanzaTab: 15px;
 
 .SliderStanza {
@@ -45,7 +46,7 @@ $width__sliderStanzaTab: 15px;
 }
 
 .SliderStanza__sheet {
-    padding: $borderRadius__narrow 0 0 $js__marginX__slider;
+    padding: $js__marginY__slider 0 0 $js__marginX__slider;
 
     box-sizing: border-box;
     display: flex;
@@ -60,8 +61,8 @@ $width__sliderStanzaTab: 15px;
 .bgColour__sliderStanza__pattern {
     $degrees: 60deg;
     $lightShade: rgba(255, 255, 255, 0.125);
-    $darkShade: rgba(0, 0, 0, 0.2);
-    $height: $height__sliderStanzaTab * 3;
+    $darkShade: rgba(0, 0, 0, 0.1);
+    $height: $height__sliderStanzaTab * 5;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:

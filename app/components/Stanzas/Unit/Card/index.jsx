@@ -217,7 +217,13 @@ const propTypes = {
                             onClick: handleStanzaTabClick
                         }}
                     >
-                        {tabText}
+                        <div
+                            {...{
+                                className: 'UnitCard__tabText'
+                            }}
+                        >
+                            {tabText}
+                        </div>
                     </div>
                 )}
             </div>
