@@ -5,6 +5,11 @@ export default [
         neededHours: 3
     },
     {
+        taskName: `Stanza tab box shadows overlap.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Nav button icon size is weird.`,
         workedHours: 0,
         neededHours: 3

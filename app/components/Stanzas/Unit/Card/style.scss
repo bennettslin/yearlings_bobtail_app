@@ -4,9 +4,10 @@
 
 .UnitCard__tab {
     position: absolute;
+    height: $height__stanzaTypeTab;
     top: -$height__stanzaTypeTab;
     left: 0;
-    border-radius: $borderRadius__wide $borderRadius__wide 0 0;
+    border-radius: $borderRadius__narrow $borderRadius__narrow 0 0;
 
     padding: 0 5px;
     text-transform: uppercase;
@@ -20,13 +21,11 @@
     /**
      * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
      */
-    height: $height__stanzaTypeTab - $borderRadius__narrow * 3;
-    top: -$height__stanzaTypeTab;
+    height: $height__stanzaTypeTab - 4px;
 }
 
 .UnitCard__tabTop {
     // Ensure that tab covers sheet.
-    height: $height__stanzaTypeTab + 1px;
     color: $colour__text__light;
 
     cursor: pointer;
@@ -81,8 +80,9 @@
 
 .UnitCard__tabText {
     position: relative;
-    top: $js__margin__thin;
-    padding: 0 $js__margin__thin * 2;
+    top: 1px;
+    padding-left: $js__margin__thin;
+    padding-right: $js__margin__thin * 1.5;
 }
 
 .bgColour__unit__pattern {

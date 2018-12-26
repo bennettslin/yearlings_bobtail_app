@@ -168,7 +168,13 @@ const propTypes = {
                             'boxShadow__unitCard'
                         )}
                     >
-                        {tabText}
+                        <div
+                            {...{
+                                className: 'UnitCard__tabText'
+                            }}
+                        >
+                            {tabText}
+                        </div>
                     </div>
                 )}
 
