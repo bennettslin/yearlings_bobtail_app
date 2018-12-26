@@ -103,10 +103,10 @@ class LogManager extends PureComponent {
                 ...getSongObject(renderedSongIndex)
             }
 
-        // copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
+        copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
         copiedSong.lyricUnits = `lyricUnits: ${copiedSong.lyricUnits.length}`
         copiedSong.songStanzaConfigs = `songStanzaConfigs: ${copiedSong.songStanzaConfigs.length}`
-        copiedSong.songVerseConfigs = `songVerseConfigs: ${copiedSong.songVerseConfigs.length}`
+        // copiedSong.songVerseConfigs = `songVerseConfigs: ${copiedSong.songVerseConfigs.length}`
         copiedSong.songSceneConfigs = `songSceneConfigs: ${copiedSong.songSceneConfigs.length}`
 
         return this._logObject('renderable song', copiedSong)

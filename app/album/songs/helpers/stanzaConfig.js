@@ -25,14 +25,15 @@ const _addStanzaIndexToVerseConfig = ({
 const _getInitialStanzaConfigs = (lyricUnits, song) => {
     const stanzaConfigs = []
 
+    let stanzaIndex
+
     lyricUnits.forEach((unit, unitIndex) => {
         const
             { unitMap } = unit,
             {
                 stanzaType,
                 subsequent
-            } = unitMap,
-            stanzaIndex = stanzaConfigs.length
+            } = unitMap
 
         if (stanzaType) {
             /**
@@ -46,6 +47,11 @@ const _getInitialStanzaConfigs = (lyricUnits, song) => {
                     stanzaVerseConfigs: [],
                     stanzaUnitIndices: []
                 }
+
+            if (!subsequent) {
+                // Only let initial unit increment the stanza index.
+                stanzaIndex = stanzaConfigs.length
+            }
 
             // Tell stanza that it owns this unit.
             stanzaConfig.stanzaUnitIndices.push(unitIndex)

@@ -4246,5 +4246,10 @@ export default [
         taskName: `Each actor instance will need to be rendered separately.`,
         workedHours: 6,
         neededHours: 6
+    },
+    {
+        taskName: `Bug where slider stanzas are not exactly aligned with their verses?`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
