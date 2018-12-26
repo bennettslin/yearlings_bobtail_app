@@ -36,21 +36,23 @@ const _addPresenceToSceneLayerByType = ({
     presenceName,
     layers
 }) => {
-    const presenceValue = presences[presenceType][presenceName]
+    const dynamicValue = presences[presenceType][presenceName]
 
     let arrangementObject,
         value
 
     if (presenceType === ACTORS) {
-        let { instance } = presenceValue
+        // This is an object with an instance key and boolean value.
+        const actor = dynamicValue
+        let { instance } = actor
 
         /**
          * If this is an alternate character, the instance is nested within the
          * character object.
          */
         if (!instance) {
-            const characterName = keys(presenceValue)[0]
-            instance = presenceValue[characterName].instance
+            const characterName = keys(actor)[0]
+            instance = actor[characterName].instance
         }
 
         arrangementObject = ALL_ARRANGEMENTS_ACTORS[presenceName][instance]
@@ -58,7 +60,8 @@ const _addPresenceToSceneLayerByType = ({
 
     } else {
         arrangementObject = ALL_ARRANGEMENTS_THINGS[presenceType][presenceName]
-        value = presenceValue
+        // This is a boolean.
+        value = dynamicValue
     }
 
     _addPresenceToSceneLayer({

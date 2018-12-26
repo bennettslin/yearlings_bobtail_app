@@ -1,58 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Panicked from './Instances/Panicked'
-import Flustered from './Instances/Flustered'
-import Bathing from './Instances/Bathing'
-import Singing from './Instances/Singing'
-import YoungChild from './Instances/YoungChild'
+import LayerHoc from '../../../LayerHoc'
+import { YOUNG_BENNETT } from '../../../../../scene/actorKeys'
 
-import {
-    PANICKED,
-    FLUSTERED,
-    BATHING,
-    SINGING
-} from 'scene/instanceKeys/youngBennett'
-
-import {
-    YOUNG_CHILD
-} from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [PANICKED]: Panicked,
-    [FLUSTERED]: Flustered,
-    [BATHING]: Bathing,
-    [SINGING]: Singing,
-    [YOUNG_CHILD]: YoungChild
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const YoungBennett = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const YoungBennettLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'YoungBennett',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: YOUNG_BENNETT,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-YoungBennett.propTypes = propTypes
+YoungBennettLayer.propTypes = propTypes
 
-export default YoungBennett
+export default YoungBennettLayer

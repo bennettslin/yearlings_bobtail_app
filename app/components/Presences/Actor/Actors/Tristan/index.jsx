@@ -1,50 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Principal from './Instances/Principal'
-import Punching from './Instances/Punching'
-import Epilogue from './Instances/Epilogue'
+import LayerHoc from '../../../LayerHoc'
+import { TRISTAN } from '../../../../../scene/actorKeys'
 
-import {
-    PRINCIPAL,
-    PUNCHING
-} from 'scene/instanceKeys/tristan'
-
-import { EPILOGUE } from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [PRINCIPAL]: Principal,
-    [PUNCHING]: Punching,
-    [EPILOGUE]: Epilogue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const Tristan = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const TristanLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'Tristan',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: TRISTAN,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-Tristan.propTypes = propTypes
+TristanLayer.propTypes = propTypes
 
-export default Tristan
+export default TristanLayer

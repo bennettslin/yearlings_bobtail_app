@@ -1,42 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Epilogue from './Instances/Epilogue'
+import LayerHoc from '../../../LayerHoc'
+import { BENNETTS_CHRISTOPHER_LIZ } from '../../../../../scene/actorKeys'
 
-import {
-    EPILOGUE
-} from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [EPILOGUE]: Epilogue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const BennettsChristopherLiz = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const BennettsChristopherLiz = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'BennettsChristopherLiz',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: BENNETTS_CHRISTOPHER_LIZ,
+                instanceKey
+            }}
         />
     )
-}
+})
 
 BennettsChristopherLiz.propTypes = propTypes
 

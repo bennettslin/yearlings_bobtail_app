@@ -1,55 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Jogger from './Instances/Jogger'
-import Injured from './Instances/Injured'
-import Greeting from './Instances/Greeting'
-import Epilogue from './Instances/Epilogue'
+import LayerHoc from '../../../LayerHoc'
+import { NESTOR } from '../../../../../scene/actorKeys'
 
-import {
-    JOGGER,
-    INJURED
-} from 'scene/instanceKeys/nestor'
-
-import {
-    GREETING,
-    EPILOGUE
-} from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [JOGGER]: Jogger,
-    [INJURED]: Injured,
-    [GREETING]: Greeting,
-    [EPILOGUE]: Epilogue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const Nestor = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const NestorLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'Nestor',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: NESTOR,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-Nestor.propTypes = propTypes
+NestorLayer.propTypes = propTypes
 
-export default Nestor
+export default NestorLayer

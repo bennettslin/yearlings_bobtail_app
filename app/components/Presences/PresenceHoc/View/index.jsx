@@ -8,6 +8,8 @@ import {
     getArrangementForPresenceType
 } from '../../helper'
 
+import { getMapForActorKey } from '../../Actor/helper'
+
 import { getPresenceXYWidthAndHeight } from './helper'
 
 import { ACTORS } from 'constants/scene'
@@ -16,25 +18,22 @@ const viewPropTypes = {
     // From parent.
     cubesKey: PropTypes.string.isRequired,
     presenceType: PropTypes.string.isRequired,
-    presenceKey: PropTypes.string.isRequired,
-    persistedPresenceValue: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.string
-    ])
+    actorKey: PropTypes.string,
+    presenceKey: PropTypes.string.isRequired
 }
 
 const PresenceHocView = memo(({
     cubesKey,
     presenceType,
-    presenceKey,
-    persistedPresenceValue
+    actorKey,
+    presenceKey
 
 }) => {
     const
         arrangement = getArrangementForPresenceType({
             presenceType,
             presenceKey,
-            presenceValue: persistedPresenceValue
+            actorKey
         }),
         {
             yIndex,
@@ -54,7 +53,10 @@ const PresenceHocView = memo(({
             zHeight
         }),
 
-        presencesMap = getMapForPresenceType(presenceType),
+        presencesMap = presenceType === ACTORS ?
+            getMapForActorKey(actorKey) :
+            getMapForPresenceType(presenceType),
+
         PresenceComponent = presencesMap[presenceKey]
 
     return (
@@ -65,9 +67,6 @@ const PresenceHocView = memo(({
                     getClassNameForPresenceType(presenceType),
                     'abF'
                 ),
-                ...presenceType === ACTORS && {
-                    instanceKey: persistedPresenceValue || ''
-                },
                 ...xYWidthAndHeight
             }}
         />

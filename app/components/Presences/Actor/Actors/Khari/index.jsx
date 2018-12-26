@@ -1,65 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import DoubleAlbert from './Instances/DoubleAlbert'
-import Arrived from './Instances/Arrived'
-import Judgmental from './Instances/Judgmental'
-import Concerned from './Instances/Concerned'
-import Joking from '../KhariLiz/Instances/JokingLaughing'
-import Protective from '../KhariLiz/Instances/ProtectiveConcerned'
-import Caressing from '../KhariLiz/Instances/Caress'
-import Epilogue from './Instances/Epilogue'
+import LayerHoc from '../../../LayerHoc'
+import { KHARI } from '../../../../../scene/actorKeys'
 
-import {
-    DOUBLE_ALBERT,
-    ARRIVED,
-    JUDGMENTAL,
-    CONCERNED,
-    JOKING_LAUGHING,
-    PROTECTIVE_CONCERNED,
-    CARESS
-} from 'scene/instanceKeys/khari'
-
-import { EPILOGUE } from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [DOUBLE_ALBERT]: DoubleAlbert,
-    [ARRIVED]: Arrived,
-    [JUDGMENTAL]: Judgmental,
-    [CONCERNED]: Concerned,
-    [JOKING_LAUGHING]: Joking,
-    [PROTECTIVE_CONCERNED]: Protective,
-    [CARESS]: Caressing,
-    [EPILOGUE]: Epilogue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const Khari = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const KhariLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'Khari',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: KHARI,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-Khari.propTypes = propTypes
+KhariLayer.propTypes = propTypes
 
-export default Khari
+export default KhariLayer

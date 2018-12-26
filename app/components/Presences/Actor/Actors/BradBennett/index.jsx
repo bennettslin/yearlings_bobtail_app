@@ -1,43 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import TyingTether from './Instances/TyingTether'
+import LayerHoc from '../../../LayerHoc'
+import { BRAD_BENNETT } from '../../../../../scene/actorKeys'
 
-import {
-    TYING_TETHER
-} from 'scene/instanceKeys/bradBennett'
-
-const INSTANCES_MAP = {
-    [TYING_TETHER]: TyingTether
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const BradBennett = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const BradBennettLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'BradBennett',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: BRAD_BENNETT,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-BradBennett.propTypes = propTypes
+BradBennettLayer.propTypes = propTypes
 
-export default BradBennett
+export default BradBennettLayer

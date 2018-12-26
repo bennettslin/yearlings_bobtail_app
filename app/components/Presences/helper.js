@@ -58,11 +58,11 @@ const getMapForPresenceType = (presenceType) => {
 const getArrangementForPresenceType = ({
     presenceType,
     presenceKey,
-    presenceValue
+    actorKey
 
 }) => {
     return presenceType === ACTORS ?
-        ALL_ARRANGEMENTS_ACTORS[presenceKey][presenceValue] :
+        ALL_ARRANGEMENTS_ACTORS[actorKey][presenceKey] :
         ALL_ARRANGEMENTS_THINGS[presenceType][presenceKey]
 }
 

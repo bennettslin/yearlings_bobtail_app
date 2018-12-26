@@ -1,43 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Eating from './Instances/Eating'
+import LayerHoc from '../../../LayerHoc'
+import { JACOB_MARA } from '../../../../../scene/actorKeys'
 
-import {
-    EATING
-} from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [EATING]: Eating
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const JacobMara = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const JacobMaraLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'JacobMara',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: JACOB_MARA,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-JacobMara.propTypes = propTypes
+JacobMaraLayer.propTypes = propTypes
 
-export default JacobMara
+export default JacobMaraLayer

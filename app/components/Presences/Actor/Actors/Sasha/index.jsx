@@ -1,46 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Indignant from './Instances/Indignant'
-import PopularGirl from './Instances/PopularGirl'
+import LayerHoc from '../../../LayerHoc'
+import { SASHA } from '../../../../../scene/actorKeys'
 
-import {
-    INDIGNANT,
-    POPULAR_GIRL
-} from 'scene/instanceKeys/sasha'
-
-const INSTANCES_MAP = {
-    [INDIGNANT]: Indignant,
-    [POPULAR_GIRL]: PopularGirl
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const Sasha = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const SashaLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'Sasha',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: SASHA,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-Sasha.propTypes = propTypes
+SashaLayer.propTypes = propTypes
 
-export default Sasha
+export default SashaLayer

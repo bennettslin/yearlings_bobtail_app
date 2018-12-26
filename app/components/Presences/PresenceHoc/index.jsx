@@ -9,11 +9,9 @@ class PresenceHoc extends PureComponent {
         // From parent.
         cubesKey: PropTypes.string.isRequired,
         presenceType: PropTypes.string.isRequired,
+        actorKey: PropTypes.string,
         presenceKey: PropTypes.string.isRequired,
-        presenceValue: PropTypes.oneOfType([
-            PropTypes.bool,
-            PropTypes.string
-        ])
+        existenceValue: PropTypes.bool.isRequired
     }
 
     state = {
@@ -30,24 +28,24 @@ class PresenceHoc extends PureComponent {
 
     componentDidUpdate(prevProps) {
         const
-            { presenceValue } = this.props,
-            { presenceValue: prevValue } = prevProps
+            { existenceValue } = this.props,
+            { existenceValue: prevValue } = prevProps
 
-        if (presenceValue !== prevValue) {
+        if (existenceValue !== prevValue) {
             this.setState(this._getRenderedState(this.props))
         }
     }
 
     _getRenderedState(props) {
-        const { presenceValue } = props
+        const { existenceValue } = props
 
-        if (!presenceValue) {
+        if (!existenceValue) {
             return { dynamicPresenceValue: null }
         }
 
         return {
-            dynamicPresenceValue: presenceValue,
-            persistedPresenceValue: presenceValue
+            dynamicPresenceValue: existenceValue,
+            persistedPresenceValue: existenceValue
         }
     }
 
@@ -61,6 +59,7 @@ class PresenceHoc extends PureComponent {
         const {
                 cubesKey,
                 presenceType,
+                actorKey,
                 presenceKey
             } = this.props,
             {
@@ -73,6 +72,7 @@ class PresenceHoc extends PureComponent {
                 {...{
                     cubesKey,
                     presenceType,
+                    actorKey,
                     presenceKey,
                     dynamicPresenceValue,
                     persistedPresenceValue,

@@ -1,43 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import MischievousBanjo from './Instances/MischievousBanjo'
+import LayerHoc from '../../../LayerHoc'
+import { MIRIAM_STEPHANIE } from '../../../../../scene/actorKeys'
 
-import {
-    MISCHIEVOUS_BANJO
-} from 'scene/instanceKeys/miriamStephanie'
-
-const INSTANCES_MAP = {
-    [MISCHIEVOUS_BANJO]: MischievousBanjo
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const MiriamStephanie = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const MiriamStephanieLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'MiriamStephanie',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: MIRIAM_STEPHANIE,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-MiriamStephanie.propTypes = propTypes
+MiriamStephanieLayer.propTypes = propTypes
 
-export default MiriamStephanie
+export default MiriamStephanieLayer

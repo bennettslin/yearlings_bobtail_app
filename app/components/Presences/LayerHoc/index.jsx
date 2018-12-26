@@ -5,7 +5,10 @@ import { connect } from 'react-redux'
 
 import PresenceHoc from '../PresenceHoc'
 import { getMapForPresenceType } from '../helper'
+import { getMapForActorKey } from '../Actor/helper'
 import { getPropsAreShallowEqual } from 'helpers/general'
+
+import { ACTORS } from 'constants/scene'
 
 const mapStateToProps = ({
     renderStore: { canSceneRender },
@@ -23,7 +26,9 @@ class LayerHoc extends Component {
         sceneCubesKey: PropTypes.string.isRequired,
 
         // From parent. Parent also passes presenceKeys.
-        presenceType: PropTypes.string.isRequired
+        presenceType: PropTypes.string,
+        actorKey: PropTypes.string,
+        instanceKey: PropTypes.string
     }
 
     shouldComponentUpdate(nextProps) {
@@ -37,23 +42,40 @@ class LayerHoc extends Component {
         const
             {
                 sceneCubesKey: cubesKey,
-                presenceType
+                presenceType,
+                actorKey
             } = this.props,
 
-            presenceMap = getMapForPresenceType(presenceType)
+            isActor = Boolean(actorKey),
+
+            presenceMap = isActor ?
+                getMapForActorKey(actorKey) :
+                getMapForPresenceType(presenceType)
 
         return (
             keys(presenceMap).map(presenceKey => {
-                const { [presenceKey]: presenceValue } = this.props
+                const {
+                        [presenceKey]: presenceValue,
+                        instanceKey
+                    } = this.props,
+
+                    existenceValue =
+                        isActor ?
+                            // Actor passes an instance if it exists.
+                            presenceKey === instanceKey :
+
+                            // Thing passes a presence key with boolean value.
+                            Boolean(presenceValue)
 
                 return (
                     <PresenceHoc
                         key={presenceKey}
                         {...{
                             cubesKey,
-                            presenceType,
+                            presenceType: presenceType || ACTORS,
+                            actorKey,
                             presenceKey,
-                            presenceValue
+                            existenceValue
                         }}
                     />
                 )

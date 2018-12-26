@@ -1,44 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Cemetery from './Instances/Cemetery'
+import LayerHoc from '../../../LayerHoc'
+import { ANA_HOWIE } from '../../../../../scene/actorKeys'
 
-import {
-    CEMETERY
-} from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [CEMETERY]: Cemetery
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const AnaHowie = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent =
-        INSTANCES_MAP[instanceKey]
-
+const AnaHowieLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'AnaHowie',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: ANA_HOWIE,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-AnaHowie.propTypes = propTypes
+AnaHowieLayer.propTypes = propTypes
 
-export default AnaHowie
+export default AnaHowieLayer

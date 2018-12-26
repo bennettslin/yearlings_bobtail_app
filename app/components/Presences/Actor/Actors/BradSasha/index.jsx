@@ -1,43 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import CharmedSchoolbus from './Instances/CharmedSchoolbus'
+import LayerHoc from '../../../LayerHoc'
+import { BRAD_SASHA } from '../../../../../scene/actorKeys'
 
-import {
-    CHARMED_SCHOOLBUS
-} from 'scene/instanceKeys/bradSasha'
-
-const INSTANCES_MAP = {
-    [CHARMED_SCHOOLBUS]: CharmedSchoolbus
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const BradSasha = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const BradSashaLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'BradSasha',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: BRAD_SASHA,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-BradSasha.propTypes = propTypes
+BradSashaLayer.propTypes = propTypes
 
-export default BradSasha
+export default BradSashaLayer

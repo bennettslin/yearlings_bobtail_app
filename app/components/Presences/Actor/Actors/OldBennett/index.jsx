@@ -1,43 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Prologue from './Instances/Prologue'
+import LayerHoc from '../../../LayerHoc'
+import { OLD_BENNETT } from '../../../../../scene/actorKeys'
 
-import {
-    PROLOGUE
-} from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [PROLOGUE]: Prologue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const OldBennett = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const OldBennettLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'OldBennett',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: OLD_BENNETT,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-OldBennett.propTypes = propTypes
+OldBennettLayer.propTypes = propTypes
 
-export default OldBennett
+export default OldBennettLayer

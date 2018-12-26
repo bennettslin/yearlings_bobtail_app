@@ -1,58 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import CatholicGuy from './Instances/CatholicGuy'
-import Watching from './Instances/Watching'
-import Mingling from './Instances/Mingling'
-import Protester from './Instances/Protester'
-import Epilogue from './Instances/Epilogue'
+import LayerHoc from '../../../LayerHoc'
+import { WADE } from '../../../../../scene/actorKeys'
 
-import {
-    CATHOLIC_GUY,
-    WATCHING
-} from 'scene/instanceKeys/wade'
-
-import {
-    MINGLING,
-    PROTESTER,
-    EPILOGUE
-} from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [CATHOLIC_GUY]: CatholicGuy,
-    [WATCHING]: Watching,
-    [MINGLING]: Mingling,
-    [PROTESTER]: Protester,
-    [EPILOGUE]: Epilogue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const Wade = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const WadeLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'Wade',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: WADE,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-Wade.propTypes = propTypes
+WadeLayer.propTypes = propTypes
 
-export default Wade
+export default WadeLayer

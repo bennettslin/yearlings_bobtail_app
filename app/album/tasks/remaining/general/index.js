@@ -5,11 +5,6 @@ export default [
         neededHours: 24
     },
     {
-        taskName: `Each actor instance will need to be rendered separately.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Redo how presences are structured. Store info in a config?`,
         workedHours: 0,
         neededHours: 3

@@ -1,46 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import HurtConsoling from './Instances/HurtConsoling'
-import SobbingShielding from './Instances/SobbingShielding'
+import LayerHoc from '../../../LayerHoc'
+import { ESTHER_MOTHER } from '../../../../../scene/actorKeys'
 
-import {
-    HURT_CONSOLING,
-    SOBBING_SHIELDING
-} from 'scene/instanceKeys/estherMother'
-
-const INSTANCES_MAP = {
-    [HURT_CONSOLING]: HurtConsoling,
-    [SOBBING_SHIELDING]: SobbingShielding
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const EstherMother = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const EstherMotherLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'EstherMother',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: ESTHER_MOTHER,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-EstherMother.propTypes = propTypes
+EstherMotherLayer.propTypes = propTypes
 
-export default EstherMother
+export default EstherMotherLayer

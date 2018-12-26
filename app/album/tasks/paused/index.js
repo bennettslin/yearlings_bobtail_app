@@ -267,5 +267,10 @@ export default [
         taskName: `Allow presences to specify zIndex. Position presences in slanted cubes. (I'm going to assume that without window blinds, this is no longer necessary.)`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `See if heavy data stuff can be loaded server side. I would like to see this get done, but it's going to take way, way more than I have.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

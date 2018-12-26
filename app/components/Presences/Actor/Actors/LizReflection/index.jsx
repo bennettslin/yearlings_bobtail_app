@@ -1,43 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import ReachingReflection from './Instances/ReachingReflection'
+import LayerHoc from '../../../LayerHoc'
+import { LIZ_REFLECTION } from '../../../../../scene/actorKeys'
 
-import {
-    REACHING_REFLECTION
-} from 'scene/instanceKeys/liz'
-
-const INSTANCES_MAP = {
-    [REACHING_REFLECTION]: ReachingReflection
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const Liz = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const LizReflectionLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'Liz',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: LIZ_REFLECTION,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-Liz.propTypes = propTypes
+LizReflectionLayer.propTypes = propTypes
 
-export default Liz
+export default LizReflectionLayer

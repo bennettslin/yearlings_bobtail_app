@@ -1,50 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Mermaid from './Instances/Mermaid'
-import ComfortingHumiliated from './Instances/ComfortingHumiliated'
-import Epilogue from './Instances/Epilogue'
+import LayerHoc from '../../../LayerHoc'
+import { SASHA_BENNETT } from '../../../../../scene/actorKeys'
 
-import {
-    MERMAID,
-    COMFORTING_HUMILIATED
-} from 'scene/instanceKeys/sashaBennett'
-
-import { EPILOGUE } from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [MERMAID]: Mermaid,
-    [COMFORTING_HUMILIATED]: ComfortingHumiliated,
-    [EPILOGUE]: Epilogue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const SashaBennett = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const SashaBennettLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'SashaBennett',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: SASHA_BENNETT,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-SashaBennett.propTypes = propTypes
+SashaBennettLayer.propTypes = propTypes
 
-export default SashaBennett
+export default SashaBennettLayer

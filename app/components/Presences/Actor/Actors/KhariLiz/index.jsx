@@ -1,49 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Joking from './Instances/JokingLaughing'
-import Protective from './Instances/ProtectiveConcerned'
-import Caressing from './Instances/Caress'
+import LayerHoc from '../../../LayerHoc'
+import { KHARI_LIZ } from '../../../../../scene/actorKeys'
 
-import {
-    JOKING_LAUGHING,
-    PROTECTIVE_CONCERNED,
-    CARESS
-} from 'scene/instanceKeys/khariLiz'
-
-const INSTANCES_MAP = {
-    [JOKING_LAUGHING]: Joking,
-    [PROTECTIVE_CONCERNED]: Protective,
-    [CARESS]: Caressing
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const KhariLiz = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const KhariLizLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'KhariLiz',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: KHARI_LIZ,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-KhariLiz.propTypes = propTypes
+KhariLizLayer.propTypes = propTypes
 
-export default KhariLiz
+export default KhariLizLayer

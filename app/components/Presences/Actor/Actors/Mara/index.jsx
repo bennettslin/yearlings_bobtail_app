@@ -1,55 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Flirting from './Instances/Flirting'
-import Carrying from './Instances/Carrying'
-import Waiting from './Instances/Waiting'
-import Gopi from './Instances/Gopi'
-import Epilogue from './Instances/Epilogue'
+import LayerHoc from '../../../LayerHoc'
+import { MARA } from '../../../../../scene/actorKeys'
 
-import {
-    FLIRTING,
-    CARRYING,
-    WAITING,
-    GOPI,
-    EPILOGUE
-} from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [FLIRTING]: Flirting,
-    [CARRYING]: Carrying,
-    [WAITING]: Waiting,
-    [GOPI]: Gopi,
-    [EPILOGUE]: Epilogue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const Mara = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const MaraLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'Mara',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: MARA,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-Mara.propTypes = propTypes
+MaraLayer.propTypes = propTypes
 
-export default Mara
+export default MaraLayer

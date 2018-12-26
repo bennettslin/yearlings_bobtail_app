@@ -1,43 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import ShoesReflection from './Instances/ShoesReflection'
+import LayerHoc from '../../../LayerHoc'
+import { BENNETT_REFLECTION } from '../../../../../scene/actorKeys'
 
-import {
-    SHOES_REFLECTION
-} from 'scene/instanceKeys/bennett'
-
-const INSTANCES_MAP = {
-    [SHOES_REFLECTION]: ShoesReflection
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const BennettReflection = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const BennettReflectionLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'BennettReflection',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: BENNETT_REFLECTION,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-BennettReflection.propTypes = propTypes
+BennettReflectionLayer.propTypes = propTypes
 
-export default BennettReflection
+export default BennettReflectionLayer

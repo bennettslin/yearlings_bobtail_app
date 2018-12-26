@@ -1,53 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import FeigningFear from './Instances/FeigningFear'
-import Throwing from './Instances/Throwing'
-import Noodling from './Instances/Noodling'
-import Epilogue from './Instances/Epilogue'
+import LayerHoc from '../../../LayerHoc'
+import { ANDREW } from '../../../../../scene/actorKeys'
 
-import {
-    FEIGNING_FEAR,
-    THROWING,
-    NOODLING
-} from 'scene/instanceKeys/andrew'
-
-import { EPILOGUE } from 'scene/instanceKeys/songs'
-
-const INSTANCES_MAP = {
-    [FEIGNING_FEAR]: FeigningFear,
-    [THROWING]: Throwing,
-    [NOODLING]: Noodling,
-    [EPILOGUE]: Epilogue
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const Andrew = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const AndrewLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'Andrew',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: ANDREW,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-Andrew.propTypes = propTypes
+AndrewLayer.propTypes = propTypes
 
-export default Andrew
+export default AndrewLayer

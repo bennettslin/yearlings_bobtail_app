@@ -1,43 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import React, { memo } from 'react'
+import { propTypes } from './instanceMap'
 
-import Officer from './Instances/Officer'
+import LayerHoc from '../../../LayerHoc'
+import { AMY_NESTOR_TOMER } from '../../../../../scene/actorKeys'
 
-import {
-    OFFICER
-} from 'scene/instanceKeys/amyNestorTomer'
-
-const INSTANCES_MAP = {
-    [OFFICER]: Officer
-}
-
-const propTypes = {
-    // From parent.
-    className: PropTypes.any,
-    instanceKey: PropTypes.string.isRequired
-}
-
-const AmyNestorTomer = ({
-
-    className,
-    instanceKey,
-
-    ...other
-}) => {
-
-    const InstanceComponent = INSTANCES_MAP[instanceKey]
-
+const AmyNestorTomerLayer = memo(({ instanceKey }) => {
     return (
-        <InstanceComponent {...other}
-            className={cx(
-                'AmyNestorTomer',
-                className
-            )}
+        <LayerHoc
+            {...{
+                actorKey: AMY_NESTOR_TOMER,
+                instanceKey
+            }}
         />
     )
-}
+})
 
-AmyNestorTomer.propTypes = propTypes
+AmyNestorTomerLayer.propTypes = propTypes
 
-export default AmyNestorTomer
+export default AmyNestorTomerLayer
