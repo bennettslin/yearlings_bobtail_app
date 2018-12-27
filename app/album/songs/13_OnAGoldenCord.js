@@ -63,7 +63,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(white-throated sparrow)`
+                        isItalic: true,
+                        lyric: `(white-throated sparrow)`
                     }
                 }
             ]
@@ -235,7 +236,8 @@ export default {
                         description: [
                             `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Nineteen Eighty-Four.`,
                                     wiki: `Nineteen_Eighty-Four`
                                 }
@@ -516,7 +518,8 @@ export default {
                 sideCard: [
                     {
                         lyric: {
-                            italic: {
+                            isItalic: true,
+                            lyric: {
                                 anchor: `Odelay!`,
                                 card: {
                                     description: `The yodelling here reflects the mild euphoria of dehydration that I begin to feel just before daybreak.`,
@@ -585,7 +588,8 @@ export default {
                 sideCard: [
                     {
                         lyric: {
-                            italic: {
+                            isItalic: true,
+                            lyric: {
                                 anchor: `Mush! Mush!`,
                                 properNoun: true,
                                 card: {
@@ -764,7 +768,8 @@ export default {
                         `which this`,
                         {
                             anchor: {
-                                italic: `Übermensch`
+                                isItalic: true,
+                                lyric: `Übermensch`
                             },
                             properNoun: true,
                             card: {
@@ -776,7 +781,8 @@ export default {
                                     },
                                     `spoke of the`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `Übermensch,`,
                                             wiki: `Übermensch`
                                         }
@@ -1054,7 +1060,8 @@ export default {
                     time: 177,
                     isCentre: true,
                     lyric: {
-                        italic: `(chorale)`
+                        isItalic: true,
+                        lyric: `(chorale)`
                     }
                 }
             ]

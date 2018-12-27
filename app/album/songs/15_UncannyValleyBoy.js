@@ -65,7 +65,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(intro)`
+                        isItalic: true,
+                        lyric: `(intro)`
                     }
                 }
             ]
@@ -85,7 +86,8 @@ export default {
                                     `In Hindi,`,
                                     {
                                         // बेटा
-                                        italic: `beta`
+                                        isItalic: true,
+                                        lyric: `beta`
                                     },
                                     `means "son." Having unequivocally taken Sita's side, my parents address me in my nightmare as an Indian parent would.`
                                 ],
@@ -134,7 +136,8 @@ export default {
                                 description: [
                                     `Shel Silverstein's`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `The Giving Tree`,
                                             wiki: `The_Giving_Tree`
                                         }
@@ -173,7 +176,8 @@ export default {
                                 description: [
                                     `In`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `The Monster at the End of This Book,`,
                                             wiki: `The_Monster_at_the_End_of_This_Book:_Starring_Lovable,_Furry_Old_Grover`
                                         }
@@ -189,7 +193,8 @@ export default {
                                 description: [
                                     `Like Grover, I was trapped inside a self-referential work, hoping to shape the outcome towards which I was being relentlessly thrust. Unlike Grover, however, I already had an inkling of who the monster at the end of`,
                                     {
-                                        italic: `Bobtail`
+                                        isItalic: true,
+                                        lyric: `Bobtail`
                                     },
                                     `might turn out to be.`
                                 ],
@@ -392,7 +397,8 @@ export default {
                     {
                         time: 70,
                         lyric: {
-                            italic: `to seal out their floods.`
+                            isItalic: true,
+                            lyric: `to seal out their floods.`
                         }
                     }
                 ],
@@ -456,7 +462,8 @@ export default {
                     {
                         time: 82,
                         lyric: {
-                            italic: `and healed round your grudge…`
+                            isItalic: true,
+                            lyric: `and healed round your grudge…`
                         }
                     }
                 ],
@@ -476,7 +483,8 @@ export default {
                                 description: [
                                     `Antoine de Saint-Exupéry's`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `The Little Prince`,
                                             wiki: `The_Little_Prince`
                                         }
@@ -607,7 +615,8 @@ export default {
                                         },
                                         `is an avatar of the Hindu god Vishnu and the hero of the`,
                                         {
-                                            italic: {
+                                            isItalic: true,
+                                            lyric: {
                                                 anchor: `Ramayana,`,
                                                 wiki: `Ramayana`
                                             }
@@ -647,7 +656,8 @@ export default {
                                 description: [
                                     `In 1987, a television serial based on the`,
                                     {
-                                        italic: `Ramayana`
+                                        isItalic: true,
+                                        lyric: `Ramayana`
                                     },
                                     `began broadcasting throughout India. Traffic and train stations would come to a standstill each week as the country sat glued to their television screens.`
                                 ],
@@ -674,7 +684,8 @@ export default {
                                 description: [
                                     `As I was making this album, it occurred to me that I too was now doomed to endlessly forget and repeat my mistakes, as the story of how I betrayed my own Sita, much like the`,
                                     {
-                                        italic: `Ramayana,`
+                                        isItalic: true,
+                                        lyric: `Ramayana,`
                                     },
                                     `would forever be retold.`
                                 ],
@@ -763,11 +774,13 @@ export default {
                                     },
                                     `the renowned author of the epic`,
                                     {
-                                        italic: `Ramayana,`
+                                        isItalic: true,
+                                        lyric: `Ramayana,`
                                     },
                                     `began his early life as Ratnakar, a notorious highway robber. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, that he could only repeat the word`,
                                     {
-                                        italic: `mara,`
+                                        isItalic: true,
+                                        lyric: `mara,`
                                     },
                                     `or "death." Still, the grace of Rama caused the syllables to slowly shift, until Ratnakar was finally chanting Rama's name.`
                                 ]
@@ -812,7 +825,8 @@ export default {
                                     description: [
                                         `As Ratnakar chanted Rama's name, his concentration was so intense that an anthill formed over him and remained undisturbed for years. And so he came to be known as Valmiki, since`,
                                         {
-                                            italic: `valmika`
+                                            isItalic: true,
+                                            lyric: `valmika`
                                         },
                                         `means "anthill" in Sanskrit.`
                                     ],
@@ -847,7 +861,8 @@ export default {
                     {
                         time: 150,
                         lyric: {
-                            italic: [
+                            isItalic: true,
+                            lyric: [
                                 `Your`,
                                 {
                                     anchor: `dulling gold`,
@@ -930,7 +945,8 @@ export default {
                     {
                         time: 157,
                         lyric: {
-                            italic: [
+                            isItalic: true,
+                            lyric: [
                                 `…traded in for the`,
                                 {
                                     anchor: `trophy blondes.`,
@@ -1035,7 +1051,8 @@ export default {
                     {
                         time: 168,
                         lyric: {
-                            italic: `to find a cleared path`
+                            isItalic: true,
+                            lyric: `to find a cleared path`
                         }
                     }
                 ],
@@ -1114,7 +1131,8 @@ export default {
                     {
                         time: 181,
                         lyric: {
-                            italic: `to five-year plans.`
+                            isItalic: true,
+                            lyric: `to five-year plans.`
                         }
                     }
                 ],
@@ -1140,7 +1158,8 @@ export default {
                             anchor: [
                                 `surrendered for`,
                                 {
-                                    italic: `Bobtail`
+                                    isItalic: true,
+                                    lyric: `Bobtail`
                                 },
                                 `'s sake,`
                             ],
@@ -1191,7 +1210,8 @@ export default {
                                         description: [
                                             `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society and its women, as represented by an expression of Western faith. In the New Testament,`,
                                             {
-                                                italic: {
+                                                isItalic: true,
+                                                lyric: {
                                                     anchor: `maranatha`,
                                                     wiki: `Maranatha`
                                                 }
@@ -1222,25 +1242,29 @@ export default {
                             anchor: [
                                 `great`,
                                 {
-                                    italic: `Bildungsroman,`
+                                    isItalic: true,
+                                    lyric: `Bildungsroman,`
                                 }
                             ],
                             card: {
                                 description: [
                                     `A`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `Bildungsroman`,
                                             wiki: `Bildungsroman`
                                         }
                                     },
                                     `is a literary coming-of-age story, of which James Joyce's first novel,`,
                                     {
-                                        italic: `A Portrait of the Artist as a Young Man,`
+                                        isItalic: true,
+                                        lyric: `A Portrait of the Artist as a Young Man,`
                                     },
                                     `is a well-known example. My conceit for`,
                                     {
-                                        italic: `Bobtail`
+                                        isItalic: true,
+                                        lyric: `Bobtail`
                                     },
                                     `was to push the boundaries of this genre into the musical realm.`
                                 ],
@@ -1262,7 +1286,8 @@ export default {
                                     description: [
                                         `Of course, a key component of the`,
                                         {
-                                            italic: `Bildungsroman`
+                                            isItalic: true,
+                                            lyric: `Bildungsroman`
                                         },
                                         `is the protagonist's moral and psychological growth from youth into adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents slyly allude here.`
                                     ],
@@ -1289,7 +1314,8 @@ export default {
                     time: 199,
                     isCentre: true,
                     lyric: {
-                        italic: `(Mara's theme)`
+                        isItalic: true,
+                        lyric: `(Mara's theme)`
                     }
                 }
             ]

@@ -78,7 +78,8 @@ export default {
                                         },
                                         `otherwise tragic`,
                                         {
-                                            italic: {
+                                            isItalic: true,
+                                            lyric: {
                                                 anchor: `Beautiful Losers`,
                                                 wiki: `Beautiful_Losers`
                                             }
@@ -127,7 +128,8 @@ export default {
                     time: 5,
                     isCentre: true,
                     lyric: {
-                        italic: `(Christopher's theme)`
+                        isItalic: true,
+                        lyric: `(Christopher's theme)`
                     }
                 }
             ]
@@ -490,7 +492,8 @@ export default {
                                     description: [
                                         `Or else for "Godot."`,
                                         {
-                                            italic: {
+                                            isItalic: true,
+                                            lyric: {
                                                 anchor: `Waiting for Godot`,
                                                 wiki: `Waiting_for_Godot`
                                             }
@@ -517,11 +520,13 @@ export default {
                                     description: [
                                         `In Chinese,`,
                                         {
-                                            italic: `Gogo`
+                                            isItalic: true,
+                                            lyric: `Gogo`
                                         },
                                         `means "big brother." And of course,`,
                                         {
-                                            italic: `Didi`
+                                            isItalic: true,
+                                            lyric: `Didi`
                                         },
                                         `in this case now refers to`,
                                         {
@@ -691,7 +696,8 @@ export default {
                         description: [
                             `I learned about Tuvan throat singing after a woman I dated took me to see a documentary called`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Genghis Blues.`,
                                     wiki: `Genghis_Blues`
                                 }
@@ -756,7 +762,8 @@ export default {
                     time: 128,
                     isCentre: true,
                     lyric: {
-                        italic: `(Christopher's theme)`
+                        isItalic: true,
+                        lyric: `(Christopher's theme)`
                     }
                 }
             ]
@@ -975,7 +982,8 @@ export default {
                                 description: [
                                     `Upon their arrival in the New World, the French learned the practise of dog sledding from the natives. They commanded their dog teams to move by shouting`,
                                     {
-                                        italic: `"marche,"`
+                                        isItalic: true,
+                                        lyric: `"marche,"`
                                     },
                                     `meaning "go." After the territory was ceded to the British, this term continued in English as`,
                                     {

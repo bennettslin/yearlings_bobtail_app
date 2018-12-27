@@ -34,7 +34,8 @@ export default {
                         description: [
                             `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `The Basketball Diaries,`,
                                     wiki: `The_Basketball_Diaries`
                                 }
@@ -63,7 +64,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(refrain)`
+                        isItalic: true,
+                        lyric: `(refrain)`
                     }
                 }
             ]
@@ -76,7 +78,8 @@ export default {
                         description: [
                             `I never got past the first fifty pages of`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Finnegans Wake.`,
                                     wiki: `Finnegans_Wake`
                                 }
@@ -102,7 +105,8 @@ export default {
                                 {
                                     description: [
                                         {
-                                            italic: {
+                                            isItalic: true,
+                                            lyric: {
                                                 anchor: `Finnegans Wake,`,
                                                 wiki: `Finnegans_Wake`
                                             }
@@ -473,7 +477,8 @@ export default {
                         description: [
                             `The Police's`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Ghost in the Machine`,
                                     wiki: `Ghost_in_the_Machine_(album)`
                                 }
@@ -725,7 +730,8 @@ export default {
                     time: 52,
                     isCentre: true,
                     lyric: {
-                        italic: `(refrain)`
+                        isItalic: true,
+                        lyric: `(refrain)`
                     }
                 }
             ]
@@ -743,7 +749,8 @@ export default {
                             },
                             `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favourite,`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Hum Aapke Hain Koun…!`,
                                     wiki: `Hum_Aapke_Hain_Koun..!`
                                 }
@@ -814,14 +821,16 @@ export default {
                                 description: [
                                     `In the Iranian language of "Farsi,"`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `ahura`,
                                             wiki: `Ahura`
                                         }
                                     },
                                     `is the word for an Avestan deity. But in the Vedic texts of ancient India,`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `asura`,
                                             wiki: `Asura`
                                         }
@@ -856,14 +865,16 @@ export default {
                                 description: [
                                     `Moreover, in "Sanskrit," the ancient Indian language,`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `deva`,
                                             wiki: `Deva_(Hinduism)`
                                         }
                                     },
                                     `is the word for a Vedic deity, while`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `daeva`,
                                             wiki: `Daeva`
                                         }
@@ -887,14 +898,16 @@ export default {
                                 description: [
                                     `In the Vedas,`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `soma`,
                                             wiki: `Botanical_identity_of_soma%E2%80%93haoma`
                                         }
                                     },
                                     `is a ritual drink prepared from an unidentified botanical substance believed by scholars to have held psychedelic properties. In the Avesta, it is referred to as`,
                                     {
-                                        italic: `haoma.`
+                                        isItalic: true,
+                                        lyric: `haoma.`
                                     }
                                 ]
                             }
@@ -1014,7 +1027,8 @@ export default {
                                     },
                                     `is distantly related to the horse and bears a similarity to the horse's prehistoric ancestor`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `Eohippus,`,
                                             wiki: `Eohippus`
                                         }
@@ -1280,7 +1294,8 @@ export default {
                                 description: [
                                     `Standing in front of Adam's headstone under the predawn sky, I'm overcome with a profound sense of clarity and purpose, and I renew my determination to finish`,
                                     {
-                                        italic: `Bobtail`
+                                        isItalic: true,
+                                        lyric: `Bobtail`
                                     },
                                     `guided solely by my artistic instincts.`
                                 ],
@@ -1303,7 +1318,8 @@ export default {
                     time: 120,
                     isCentre: true,
                     lyric: {
-                        italic: `(refrain)`
+                        isItalic: true,
+                        lyric: `(refrain)`
                     }
                 }
             ]
@@ -1314,7 +1330,8 @@ export default {
                     {
                         time: 128,
                         lyric: {
-                            italic: {
+                            isItalic: true,
+                            lyric: {
                                 anchor: `sunk in tarpid lies!`,
                                 cards: [
                                     {
@@ -1392,7 +1409,8 @@ export default {
                     {
                         time: 135,
                         lyric: {
-                            italic: [
+                            isItalic: true,
+                            lyric: [
                                 `he sees`,
                                 {
                                     anchor: `Lowkey and Freyed!`,
@@ -1523,7 +1541,8 @@ export default {
                 {
                     time: 142,
                     lyric: {
-                        italic: [
+                        isItalic: true,
+                        lyric: [
                             {
                                 anchor: `Leif as the Red's son`,
                                 properNoun: true,
@@ -1610,7 +1629,8 @@ export default {
                         description: [
                             `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `"Tomorrow Never Knows"`,
                                     wiki: `Tomorrow_Never_Knows`
                                 }
@@ -1839,7 +1859,8 @@ export default {
                                     description: [
                                         `Joyce wrote the last line of`,
                                         {
-                                            italic: `Finnegans Wake`
+                                            isItalic: true,
+                                            lyric: `Finnegans Wake`
                                         },
                                         `to wrap back onto the first, so I "re-Joyced" by indulging in the same conceit.`
                                     ],
@@ -1863,7 +1884,8 @@ export default {
                     time: 172,
                     isCentre: true,
                     lyric: {
-                        italic: `(refrain)`
+                        isItalic: true,
+                        lyric: `(refrain)`
                     }
                 }
             ]

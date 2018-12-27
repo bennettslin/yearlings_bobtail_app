@@ -12,7 +12,6 @@ import {
     ANCHOR,
     WIKI,
     WIKI_INDEX,
-    ITALIC,
     WORMHOLE_SEARCH_KEYS,
     IS_VERSE_BEGINNING_SPAN,
     IS_VERSE_ENDING_SPAN
@@ -169,14 +168,6 @@ const _registerWormholeFormats = (lyricEntity) => {
         if (typeof lyricEntity[ANCHOR] === 'string') {
             lyricEntity = _addWormholeFormat(lyricEntity, IS_VERSE_BEGINNING_SPAN)
             lyricEntity = _addWormholeFormat(lyricEntity, IS_VERSE_ENDING_SPAN)
-        }
-
-        if (lyricEntity[ITALIC]) {
-            /**
-             * This applies to "unsalvaged soul," "pompous autumn," "tarpid
-             * lies," and "trophy blondes."
-             */
-            _registerWormholeFormats(lyricEntity[ITALIC])
         }
     }
 }

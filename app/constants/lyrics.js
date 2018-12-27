@@ -2,7 +2,6 @@ const LYRIC = 'lyric',
     LEFT = 'left',
     CENTRE = 'centre',
     RIGHT = 'right',
-    ITALIC = 'italic',
     ANCHOR = 'anchor',
 
     SUB_CARD = 'subCard',
@@ -16,7 +15,6 @@ module.exports = {
     CENTRE,
     RIGHT,
     ANCHOR,
-    ITALIC,
 
     WIKI: 'wiki',
 
@@ -53,7 +51,6 @@ module.exports = {
         LYRIC,
         LEFT,
         RIGHT,
-        ITALIC,
         SUB_CARD,
         SIDE_CARD,
         DOT_UNIT
@@ -67,7 +64,6 @@ module.exports = {
         LYRIC,
         LEFT,
         RIGHT,
-        ITALIC,
         ANCHOR
     ],
 
@@ -84,7 +80,6 @@ module.exports = {
 
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [
-        ITALIC,
         ANCHOR
     ],
 

@@ -125,7 +125,8 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        italic: `Tref`
+                                        isItalic: true,
+                                        lyric: `Tref`
                                     },
                                     `is Yiddish for food that is not kosher. Since it cannot be eaten, its sole purpose is to fertilise other crops that can. Similarly, as I was not a Jew, I could only ever be subsumed into the endless churn of surrounding peoples.`
                                 ],
@@ -568,7 +569,8 @@ export default {
                                 description: [
                                     `The narrator Ishmael in Herman Melville's`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `Moby-Dick`,
                                             wiki: `Moby-Dick`
                                         }
@@ -833,7 +835,8 @@ export default {
                                     },
                                     `is a female nymph and the elemental of water. The term was coined by Paracelsus and is derived from the Latin word`,
                                     {
-                                        italic: `unda,`
+                                        isItalic: true,
+                                        lyric: `unda,`
                                     },
                                     `meaning "wave."`
                                 ]
@@ -949,7 +952,8 @@ export default {
                                     },
                                     `was a Greek prophetess who was granted immortality but not eternal youth. T.S. Eliot's poem`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `The Waste Land`,
                                             wiki: `The_Waste_Land`
                                         }
@@ -1321,7 +1325,8 @@ export default {
                     time: 153,
                     isCentre: true,
                     lyric: {
-                        italic: `(electric mandolin)`
+                        isItalic: true,
+                        lyric: `(electric mandolin)`
                     }
                 }
             ]
@@ -1514,7 +1519,8 @@ export default {
                     time: 186,
                     isCentre: true,
                     lyric: {
-                        italic: `(Odin's theme)`
+                        isItalic: true,
+                        lyric: `(Odin's theme)`
                     }
                 }
             ]

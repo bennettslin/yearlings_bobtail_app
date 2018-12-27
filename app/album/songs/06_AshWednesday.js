@@ -143,7 +143,8 @@ export default {
                                     },
                                     `riddle, of course, but also to James Joyce's masterpiece novel`,
                                     {
-                                        italic: `Ulysses,`
+                                        isItalic: true,
+                                        lyric: `Ulysses,`
                                     },
                                     `which Catherine was reading at the time. In hindsight, that night was probably the beginning of the end, as Catherine surmised that a boyfriend who didn't read for pleasure would be the death of her.`
                                 ],
@@ -361,7 +362,8 @@ export default {
                                 description: [
                                     `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. The idea began to congeal in my head that I could do for rock music what`,
                                     {
-                                        italic: `Ulysses`
+                                        isItalic: true,
+                                        lyric: `Ulysses`
                                     },
                                     `did for English literature.`
                                 ],
@@ -509,7 +511,8 @@ export default {
                                 description: [
                                     `Having decided to win Catherine back by reading more books, I began with those we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's earlier novel`,
                                     {
-                                        italic: `Beautiful Losers,`
+                                        isItalic: true,
+                                        lyric: `Beautiful Losers,`
                                     },
                                     `particularly in its line, "Did you ever go clear?"`
                                 ],
@@ -530,7 +533,8 @@ export default {
                                     },
                                     `the Catholic Church's first Native American saint who was baptised as Saint Catherine, figures prominently in`,
                                     {
-                                        italic: `Beautiful Losers.`
+                                        isItalic: true,
+                                        lyric: `Beautiful Losers.`
                                     },
                                     `I always assumed that "going clear" was a reference to the legend that her smallpox scars miraculously vanished upon her death.`
                                 ],
@@ -642,7 +646,8 @@ export default {
                     time: 119,
                     lyric: [
                         {
-                            italic: [
+                            isItalic: true,
+                            lyric: [
                                 `Et`,
                                 {
                                     anchor: `Catherine vaut bien une messe…`,

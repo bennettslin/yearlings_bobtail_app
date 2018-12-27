@@ -67,7 +67,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(Willy's theme)`
+                        isItalic: true,
+                        lyric: `(Willy's theme)`
                     }
                 }
             ]
@@ -159,7 +160,8 @@ export default {
                     {
                         time: 30,
                         lyric: {
-                            italic: [
+                            isItalic: true,
+                            lyric: [
                                 {
                                     anchor: `Chilled cola's free`,
                                     card: {
@@ -566,7 +568,8 @@ export default {
                     time: 96,
                     isCentre: true,
                     lyric: {
-                        italic: `(Willy's theme)`
+                        isItalic: true,
+                        lyric: `(Willy's theme)`
                     }
                 }
             ]
@@ -641,7 +644,8 @@ export default {
                     {
                         time: 126,
                         lyric: {
-                            italic: [
+                            isItalic: true,
+                            lyric: [
                                 `Shelled skull has freed`,
                                 {
                                     anchor: `unsalvaged soul…`,
@@ -1032,7 +1036,8 @@ export default {
                         {
                             anchor: [
                                 {
-                                    italic: `Bobtail`
+                                    isItalic: true,
+                                    lyric: `Bobtail`
                                 },
                                 `'s cover`
                             ],
@@ -1045,7 +1050,8 @@ export default {
                                     },
                                     `isn't actually a nonsensical phrase. In any case,`,
                                     {
-                                        italic: `Bobtail`
+                                        isItalic: true,
+                                        lyric: `Bobtail`
                                     },
                                     `became my catchall title for the great artistic work I would one day create.`
                                 ],
@@ -1062,7 +1068,8 @@ export default {
                     lyric: [
                         `Oh,`,
                         {
-                            italic: `Bobtail`
+                            isItalic: true,
+                            lyric: `Bobtail`
                         },
                         `'s cover could say sorry…!`
                     ]

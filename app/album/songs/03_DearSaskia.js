@@ -59,7 +59,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(Sasha's theme)`
+                        isItalic: true,
+                        lyric: `(Sasha's theme)`
                     }
                 }
             ]
@@ -331,7 +332,8 @@ export default {
                     time: 71,
                     isCentre: true,
                     lyric: {
-                        italic: `(Sasha's theme)`
+                        isItalic: true,
+                        lyric: `(Sasha's theme)`
                     }
                 }
             ]
@@ -596,7 +598,8 @@ export default {
                     time: 138,
                     isCentre: true,
                     lyric: {
-                        italic: `(Sasha's theme)`
+                        isItalic: true,
+                        lyric: `(Sasha's theme)`
                     }
                 }
             ]
@@ -684,7 +687,8 @@ export default {
                         description: [
                             `Confused by the lack of interest in the album's release, I distilled my approach to writing songs into a lesson plan called`,
                             {
-                                italic: `Bobtail Method.`
+                                isItalic: true,
+                                lyric: `Bobtail Method.`
                             },
                             `Unfortunately, this generated even less interest and probably only cemented my status as a hobbyist, rather than the kind of serious, career-oriented musician sought after by the indie labels.`
                         ],

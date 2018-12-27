@@ -54,7 +54,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(recorders)`
+                        isItalic: true,
+                        lyric: `(recorders)`
                     }
                 }
             ]
@@ -296,7 +297,8 @@ export default {
                     time: 135,
                     isCentre: true,
                     lyric: {
-                        italic: `(Sita's theme)`
+                        isItalic: true,
+                        lyric: `(Sita's theme)`
                     }
                 }
             ]
@@ -311,7 +313,8 @@ export default {
                     time: 149,
                     isCentre: true,
                     lyric: {
-                        italic: `(Sita's theme)`
+                        isItalic: true,
+                        lyric: `(Sita's theme)`
                     }
                 }
             ]
@@ -468,7 +471,8 @@ export default {
                     time: 223,
                     isCentre: true,
                     lyric: {
-                        italic: `(Bennett's theme)`
+                        isItalic: true,
+                        lyric: `(Bennett's theme)`
                     }
                 }
             ]

@@ -40,7 +40,8 @@ export default {
                         description: [
                             `In the final chapter of James Joyce's`,
                             {
-                                italic: `Ulysses,`
+                                isItalic: true,
+                                lyric: `Ulysses,`
                             },
                             `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
                         ],
@@ -226,7 +227,8 @@ export default {
                                         },
                                         `was the wife of James Joyce and the inspiration for his character Molly Bloom, whose interior monologue in`,
                                         {
-                                            italic: `Ulysses`
+                                            isItalic: true,
+                                            lyric: `Ulysses`
                                         },
                                         `in turn served as my inspiration for this song.`
                                     ],
@@ -429,7 +431,8 @@ export default {
                                         },
                                         `wrote a collection of satirical definitions called`,
                                         {
-                                            italic: `The Devil's Dictionary.`
+                                            isItalic: true,
+                                            lyric: `The Devil's Dictionary.`
                                         },
                                         `My sense of humour at the time was a naive approximation of his brand of cynical wit.`
                                     ],

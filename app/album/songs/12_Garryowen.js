@@ -31,7 +31,8 @@ export default {
                         description: [
                             `In`,
                             {
-                                italic: `Ulysses,`
+                                isItalic: true,
+                                lyric: `Ulysses,`
                             },
                             `Garryowen is the name of a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
                         ],
@@ -51,7 +52,8 @@ export default {
                         description: [
                             `Since I took the name of my drunken personality from James Joyce's`,
                             {
-                                italic: `Ulysses,`
+                                isItalic: true,
+                                lyric: `Ulysses,`
                             },
                             `I went for an`,
                             {
@@ -72,7 +74,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(Garry's theme)`
+                        isItalic: true,
+                        lyric: `(Garry's theme)`
                     }
                 }
             ]
@@ -459,7 +462,8 @@ export default {
                     time: 84,
                     isCentre: true,
                     lyric: {
-                        italic: `(bagpipes)`
+                        isItalic: true,
+                        lyric: `(bagpipes)`
                     }
                 }
             ]
@@ -735,7 +739,8 @@ export default {
                     time: 162,
                     isCentre: true,
                     lyric: {
-                        italic: `(Garry's theme)`
+                        isItalic: true,
+                        lyric: `(Garry's theme)`
                     }
                 }
             ]

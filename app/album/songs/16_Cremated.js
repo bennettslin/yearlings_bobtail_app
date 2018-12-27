@@ -43,7 +43,8 @@ export default {
                         description: [
                             `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Abbey Road`,
                                     wiki: `Abbey_Road`
                                 }
@@ -99,7 +100,8 @@ export default {
                     time: 4,
                     isCentre: true,
                     lyric: {
-                        italic: `(Miriam's theme)`
+                        isItalic: true,
+                        lyric: `(Miriam's theme)`
                     }
                 }
             ]
@@ -594,7 +596,8 @@ export default {
                     time: 70,
                     isCentre: true,
                     lyric: {
-                        italic: `(Miriam's theme)`
+                        isItalic: true,
+                        lyric: `(Miriam's theme)`
                     }
                 }
             ]
@@ -721,7 +724,8 @@ export default {
                                 description: [
                                     `In`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `The Selfish Gene,`,
                                             wiki: `The_Selfish_Gene`
                                         }
@@ -767,7 +771,8 @@ export default {
                                 description: [
                                     `The title of Mark Medoff's play`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `Children of a Lesser God,`,
                                             wiki: `Children_of_a_Lesser_God_(play)`
                                         }
@@ -1012,7 +1017,8 @@ export default {
                     time: 135,
                     isCentre: true,
                     lyric: {
-                        italic: `(Miriam's theme)`
+                        isItalic: true,
+                        lyric: `(Miriam's theme)`
                     }
                 }
             ]

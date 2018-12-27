@@ -62,7 +62,8 @@ export default {
                     time: 0,
                     lyric: [
                         {
-                            italic: [
+                            isItalic: true,
+                            lyric: [
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both.`,
@@ -279,7 +280,8 @@ export default {
                     time: 60,
                     lyric: [
                         {
-                            italic: [
+                            isItalic: true,
+                            lyric: [
                                 `"No, I'll smile because I believe in the`,
                                 {
                                     anchor: `Big Crunch.`,
@@ -426,7 +428,8 @@ export default {
                                 description: [
                                     `The insignia of the`,
                                     {
-                                        italic: {
+                                        isItalic: true,
+                                        lyric: {
                                             anchor: `Schutzstaffel,`,
                                             wiki: `Schutzstaffel`
                                         }
@@ -549,7 +552,8 @@ export default {
                     time: 123,
                     isCentre: true,
                     lyric: {
-                        italic: `(solo)`
+                        isItalic: true,
+                        lyric: `(solo)`
                     }
                 }
             ]
@@ -630,7 +634,8 @@ export default {
                     time: 170,
                     isCentre: true,
                     lyric: {
-                        italic: `(refrain)`
+                        isItalic: true,
+                        lyric: `(refrain)`
                     }
                 }
             ]
@@ -778,7 +783,8 @@ export default {
                     time: 218,
                     isCentre: true,
                     lyric: {
-                        italic: `(refrain)`
+                        isItalic: true,
+                        lyric: `(refrain)`
                     }
                 }
             ]
@@ -791,7 +797,8 @@ export default {
                         description: [
                             `I was a vegan for the five years that I spent working on`,
                             {
-                                italic: `Yearling's Bobtail.`
+                                isItalic: true,
+                                lyric: `Yearling's Bobtail.`
                             },
                             `But as it became clear that the album's release would be all but ignored by the indie press, I had to question everything I thought I knew about how the world works. So I jettisoned all my beliefs, including veganism, to try out the conservative values espoused by indie rock. They weren't a good fit for me, and I've since returned to the left, albeit as a realist. So I'm a`,
                             {

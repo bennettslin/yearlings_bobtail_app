@@ -40,7 +40,7 @@ const propTypes = {
         } else if (typeof textEntity === 'object') {
             const {
                 lyric,
-                italic,
+                isItalic,
                 isEmphasis
             } = textEntity
 
@@ -49,11 +49,11 @@ const propTypes = {
          * which is needed by anchor.
          */
 
-            if (italic) {
+            if (isItalic) {
                 return (
                     <Texts {...props}
                         isItalic
-                        text={italic}
+                        text={lyric}
                     />
                 )
 

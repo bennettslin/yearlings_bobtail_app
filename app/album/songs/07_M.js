@@ -55,7 +55,8 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        italic: `Maravijaya,`
+                                        isItalic: true,
+                                        lyric: `Maravijaya,`
                                     },
                                     `which translates to "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fended off temptations from`,
                                     {
@@ -79,7 +80,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(Mara's theme)`
+                        isItalic: true,
+                        lyric: `(Mara's theme)`
                     }
                 }
             ]
@@ -871,7 +873,8 @@ export default {
                         {
                             anchor: [
                                 {
-                                    italic: `Bobtail`
+                                    isItalic: true,
+                                    lyric: `Bobtail`
                                 },
                                 `'s words—`
                             ],
@@ -880,11 +883,13 @@ export default {
                                 description: [
                                     `Recognising that what I wanted was Mara or someone like Mara, and having taken stock of where I needed to be to get what I wanted, I decided to return to what I do best: holing up in emotional seclusion and relying solely on my own resourcefulness. My next five-year plan would see me score all the parts and play all the instruments on`,
                                     {
-                                        italic: `Bobtail,`
+                                        isItalic: true,
+                                        lyric: `Bobtail,`
                                     },
                                     `my ambitious magnum opus, now conceived as the`,
                                     {
-                                        italic: `Ulysses`
+                                        isItalic: true,
+                                        lyric: `Ulysses`
                                     },
                                     `of rock albums.`
                                 ],
@@ -910,7 +915,8 @@ export default {
                     time: 192,
                     isCentre: true,
                     lyric: {
-                        italic: `(glockenspiel)`
+                        isItalic: true,
+                        lyric: `(glockenspiel)`
                     }
                 }
             ]

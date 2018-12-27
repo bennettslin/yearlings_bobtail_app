@@ -33,14 +33,16 @@ export default {
                             description: [
                                 `During this time, I was reading a lot of Philip K. Dick novels such as`,
                                 {
-                                    italic: {
+                                    isItalic: true,
+                                    lyric: {
                                         anchor: `The Man in the High Castle,`,
                                         wiki: `The_Man_in_the_High_Castle`
                                     }
                                 },
                                 `which tells of an alternate history in which the Axis powers had won World War II. Curiously, the characters in this book are engrossed in their own alternate history novel called`,
                                 {
-                                    italic: `The Grasshopper Lies Heavy,`
+                                    isItalic: true,
+                                    lyric: `The Grasshopper Lies Heavy,`
                                 },
                                 `in which the Allies had won.`
                             ],
@@ -66,7 +68,8 @@ export default {
                         description: [
                             `Just as`,
                             {
-                                italic: `The Grasshopper Lies Heavy`
+                                isItalic: true,
+                                lyric: `The Grasshopper Lies Heavy`
                             },
                             `offers its fictional readers a reality that's vastly different from the one they know, this song is a self-contained narrative that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore`,
                             {
@@ -86,7 +89,8 @@ export default {
                 {
                     time: 0,
                     lyric: {
-                        italic: [
+                        isItalic: true,
+                        lyric: [
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits.`,
@@ -490,7 +494,8 @@ export default {
                                         },
                                         `of the German navy in World War II. The Axis, after all, were history's heroes in`,
                                         {
-                                            italic: `The Man in the High Castle.`
+                                            isItalic: true,
+                                            lyric: `The Man in the High Castle.`
                                         }
                                     ],
                                     dotKeys: {
@@ -767,7 +772,8 @@ export default {
                         description: [
                             `The highlight of Nirvana's`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Nevermind`,
                                     wiki: `Nevermind`
                                 }
@@ -1272,7 +1278,8 @@ export default {
                         description: [
                             `The French expression`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `la petite mort,`,
                                     wiki: `La_petite_mort`
                                 }
@@ -1291,7 +1298,8 @@ export default {
                     time: 245,
                     isCentre: true,
                     lyric: {
-                        italic: `(Odin's theme)`
+                        isItalic: true,
+                        lyric: `(Odin's theme)`
                     }
                 }
             ]

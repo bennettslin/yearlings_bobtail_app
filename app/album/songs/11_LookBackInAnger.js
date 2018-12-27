@@ -31,7 +31,8 @@ export default {
                         description: [
                             `John Osborne's play`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Look Back in Anger`,
                                     wiki: `Look_Back_in_Anger`
                                 }
@@ -64,7 +65,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(intro)`
+                        isItalic: true,
+                        lyric: `(intro)`
                     }
                 }
             ]
@@ -639,7 +641,8 @@ export default {
                                 description: [
                                     `In the final scene of `,
                                     {
-                                        italic: `Look Back in Anger,`
+                                        isItalic: true,
+                                        lyric: `Look Back in Anger,`
                                     },
                                     `the main character pictures his wife as a squirrel and sighs "poor squirrels," acknowledging that his emotionally abusive tirades keep her in a helpless state.`
                                 ],
@@ -784,7 +787,8 @@ export default {
                     time: 161,
                     isCentre: true,
                     lyric: {
-                        italic: `(outro)`
+                        isItalic: true,
+                        lyric: `(outro)`
                     }
                 }
             ]

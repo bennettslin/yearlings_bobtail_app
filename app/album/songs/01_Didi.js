@@ -33,7 +33,8 @@ export default {
                         description: [
                             `In Chinese,`,
                             {
-                                italic: `didi`
+                                isItalic: true,
+                                lyric: `didi`
                             },
                             `means "little brother." While my family is from`,
                             {
@@ -57,7 +58,8 @@ export default {
                         description: [
                             `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `Pet Sounds.`,
                                     wiki: `Pet_Sounds`
                                 }
@@ -75,7 +77,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(Bennett's theme)`
+                        isItalic: true,
+                        lyric: `(Bennett's theme)`
                     }
                 }
             ]
@@ -89,7 +92,8 @@ export default {
                     time: 11,
                     isCentre: true,
                     lyric: {
-                        italic: `(whistles)`
+                        isItalic: true,
+                        lyric: `(whistles)`
                     }
                 }
             ]
@@ -101,7 +105,8 @@ export default {
                     card: {
                         description: [
                             {
-                                italic: {
+                                isItalic: true,
+                                lyric: {
                                     anchor: `A Portrait of the Artist as a Young Man,`,
                                     wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
                                 }
@@ -209,7 +214,8 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        italic: `Zeizei`
+                                        isItalic: true,
+                                        lyric: `Zeizei`
                                     },
                                     `means "big sister" in Chinese.`
                                 ],
@@ -292,7 +298,8 @@ export default {
                     {
                         time: 97,
                         lyric: {
-                            italic: `Don't little raisin fingers need to dry?`
+                            isItalic: true,
+                            lyric: `Don't little raisin fingers need to dry?`
                         }
                     }
                 ]
@@ -419,7 +426,8 @@ export default {
                     time: 123,
                     isCentre: true,
                     lyric: {
-                        italic: `(whistles)`
+                        isItalic: true,
+                        lyric: `(whistles)`
                     }
                 }
             ]
@@ -495,7 +503,8 @@ export default {
                     time: 163,
                     isCentre: true,
                     lyric: {
-                        italic: `(fade out)`
+                        isItalic: true,
+                        lyric: `(fade out)`
                     }
                 }
             ]
@@ -508,7 +517,8 @@ export default {
                         description: [
                             `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,
                             {
-                                italic: `Pet Sounds`
+                                isItalic: true,
+                                lyric: `Pet Sounds`
                             },
                             `was also meant as a gentle reminder that`,
                             {
@@ -517,7 +527,8 @@ export default {
                             },
                             `masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops most lists of rock's greatest albums. But`,
                             {
-                                italic: `Yearling's Bobtail`
+                                isItalic: true,
+                                lyric: `Yearling's Bobtail`
                             },
                             `was dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all…`
                         ],

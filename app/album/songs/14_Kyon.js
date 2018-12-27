@@ -29,7 +29,8 @@ export default {
                     card: {
                         description: [
                             {
-                                italic: `Kyon`
+                                isItalic: true,
+                                lyric: `Kyon`
                             },
                             `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
                         ],
@@ -60,7 +61,8 @@ export default {
                     time: 0,
                     isCentre: true,
                     lyric: {
-                        italic: `(hums)`
+                        isItalic: true,
+                        lyric: `(hums)`
                     }
                 }
             ]
@@ -615,7 +617,8 @@ export default {
                     time: 150,
                     isCentre: true,
                     lyric: {
-                        italic: `(hums)`
+                        isItalic: true,
+                        lyric: `(hums)`
                     }
                 }
             ]
@@ -674,7 +677,8 @@ export default {
                         {
                             anchor: [
                                 {
-                                    italic: `Bobtail`
+                                    isItalic: true,
+                                    lyric: `Bobtail`
                                 },
                                 `'s your priority,`
                             ],
@@ -683,7 +687,8 @@ export default {
                                 description: [
                                     `As I began to work resolutely on`,
                                     {
-                                        italic: `Bobtail,`
+                                        isItalic: true,
+                                        lyric: `Bobtail,`
                                     },
                                     `my night terrors grew less frequent, and my misery subsided. Recognising this boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
                                 ],
@@ -695,7 +700,8 @@ export default {
                         },
                         `so for`,
                         {
-                            italic: `Bobtail`
+                            isItalic: true,
+                            lyric: `Bobtail`
                         },
                         {
                             anchor: `I'll gladly wait.`,
@@ -733,7 +739,8 @@ export default {
                         description: [
                             `The cry of a peafowl always sounded to me like they're pleading`,
                             {
-                                italic: `"kyon?"`
+                                isItalic: true,
+                                lyric: `"kyon?"`
                             }
                         ],
                         dotKeys: {
@@ -749,7 +756,8 @@ export default {
                     time: 197,
                     isCentre: true,
                     lyric: {
-                        italic: `(peafowl)`
+                        isItalic: true,
+                        lyric: `(peafowl)`
                     }
                 }
             ]
