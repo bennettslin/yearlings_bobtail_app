@@ -14,8 +14,7 @@ import { WORMHOLE_BUTTON_KEY } from 'constants/buttons'
 
 import {
     EAR_COLUMN_KEYS,
-    LYRIC,
-    CENTRE
+    LYRIC
 } from 'constants/lyrics'
 
 import { getSongTitle } from 'album/api/songs'
@@ -95,7 +94,6 @@ class AnnotationWormhole extends PureComponent {
 
             text =
                 verseObject[LYRIC] ||
-                verseObject[CENTRE] ||
                 verseObject[columnKey]
 
         return (

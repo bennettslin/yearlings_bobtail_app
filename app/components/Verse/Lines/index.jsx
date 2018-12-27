@@ -15,20 +15,20 @@ import {
 
 const verseLinesPropTypes = {
     // From parent.
-        isDoubleSpeaker: PropTypes.bool,
+        isDoublespeakerLine: PropTypes.bool,
         inVerseBar: PropTypes.bool
     },
 
     VerseLines = memo(({
 
-        isDoubleSpeaker,
+        isDoublespeakerLine,
 
         ...other
     }) => {
 
         const { inVerseBar } = other
 
-        return isDoubleSpeaker ? (
+        return isDoublespeakerLine ? (
 
         // Only wrap in this parent container if it's a doublespeaker line.
             <div className={cx(
@@ -69,8 +69,7 @@ const verseLinesPropTypes = {
             lyricsLineProps = {
                 text:
                     verseObject[doublespeakerKey]
-                    || verseObject[LYRIC]
-                    || verseObject[CENTRE],
+                    || verseObject[LYRIC],
 
                 isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
                 isVerseEndingSpan: verseObject.isVerseEndingSpan
@@ -81,7 +80,7 @@ const verseLinesPropTypes = {
         if (doublespeakerKey) {
             columnKey = doublespeakerKey
 
-        } else if (verseObject[CENTRE]) {
+        } else if (verseObject.isCentre) {
             columnKey = CENTRE
         }
 

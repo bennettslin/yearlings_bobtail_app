@@ -73,7 +73,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Bennett's theme)`
                     }
                 }
@@ -86,7 +87,8 @@ export default {
             lyricUnit: [
                 {
                     time: 11,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(whistles)`
                     }
                 }
@@ -415,7 +417,8 @@ export default {
             lyricUnit: [
                 {
                     time: 123,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(whistles)`
                     }
                 }
@@ -490,7 +493,8 @@ export default {
             lyricUnit: [
                 {
                     time: 163,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(fade out)`
                     }
                 }

@@ -57,7 +57,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Sasha's theme)`
                     }
                 }
@@ -70,7 +71,8 @@ export default {
             lyricUnit: [
                 {
                     time: 5,
-                    centre: `Dearest Sasha,`
+                    isCentre: true,
+                    lyric: `Dearest Sasha,`
                 }
             ]
         },
@@ -327,7 +329,8 @@ export default {
             lyricUnit: [
                 {
                     time: 71,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Sasha's theme)`
                     }
                 }
@@ -591,7 +594,8 @@ export default {
             lyricUnit: [
                 {
                     time: 138,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Sasha's theme)`
                     }
                 }

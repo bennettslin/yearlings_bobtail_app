@@ -58,7 +58,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(hums)`
                     }
                 }
@@ -612,7 +613,8 @@ export default {
             lyricUnit: [
                 {
                     time: 150,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(hums)`
                     }
                 }
@@ -745,7 +747,8 @@ export default {
             lyricUnit: [
                 {
                     time: 197,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(peafowl)`
                     }
                 }

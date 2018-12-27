@@ -48,7 +48,8 @@ export default {
                 subCard: [
                     {
                         time: 33,
-                        centre: {
+                        isCentre: true,
+                        lyric: {
                             anchor: `Maravijaya…`,
                             properNoun: true,
                             card: {
@@ -76,7 +77,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Mara's theme)`
                     }
                 }
@@ -906,7 +908,8 @@ export default {
             lyricUnit: [
                 {
                     time: 192,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(glockenspiel)`
                     }
                 }

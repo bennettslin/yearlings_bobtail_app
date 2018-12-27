@@ -65,7 +65,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Willy's theme)`
                     }
                 }
@@ -563,7 +564,8 @@ export default {
             lyricUnit: [
                 {
                     time: 96,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Willy's theme)`
                     }
                 }

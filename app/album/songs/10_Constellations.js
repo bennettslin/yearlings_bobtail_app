@@ -61,7 +61,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(refrain)`
                     }
                 }
@@ -722,7 +723,8 @@ export default {
             lyricUnit: [
                 {
                     time: 52,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(refrain)`
                     }
                 }
@@ -1299,7 +1301,8 @@ export default {
             lyricUnit: [
                 {
                     time: 120,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(refrain)`
                     }
                 }
@@ -1858,7 +1861,8 @@ export default {
             lyricUnit: [
                 {
                     time: 172,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(refrain)`
                     }
                 }

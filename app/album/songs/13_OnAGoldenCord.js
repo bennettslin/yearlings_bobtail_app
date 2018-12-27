@@ -61,7 +61,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(white-throated sparrow)`
                     }
                 }
@@ -91,15 +92,18 @@ export default {
             lyricUnit: [
                 {
                     time: 4,
-                    centre: `On a golden cord,`
+                    isCentre: true,
+                    lyric: `On a golden cord,`
                 },
                 {
                     time: 7,
-                    centre: `once worn, now shorn,`
+                    isCentre: true,
+                    lyric: `once worn, now shorn,`
                 },
                 {
                     time: 9,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint.`,
@@ -114,11 +118,13 @@ export default {
                 },
                 {
                     time: 12,
-                    centre: `Not of its own accord,`
+                    isCentre: true,
+                    lyric: `Not of its own accord,`
                 },
                 {
                     time: 15,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `but`,
                         {
                             anchor: `broken`,
@@ -134,7 +140,8 @@ export default {
                 },
                 {
                     time: 18,
-                    centre: `And so she said, "Now it's yours again…`
+                    isCentre: true,
+                    lyric: `And so she said, "Now it's yours again…`
                 }
             ]
         },
@@ -162,11 +169,13 @@ export default {
             lyricUnit: [
                 {
                     time: 26,
-                    centre: `And how you look tonight!`
+                    isCentre: true,
+                    lyric: `And how you look tonight!`
                 },
                 {
                     time: 28,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `So`,
                         {
                             anchor: `polite, yet resigned,`,
@@ -181,23 +190,28 @@ export default {
                 },
                 {
                     time: 31,
-                    centre: `with wounds dressed and feelings put away.`
+                    isCentre: true,
+                    lyric: `with wounds dressed and feelings put away.`
                 },
                 {
                     time: 33,
-                    centre: `Full of patient replies…`
+                    isCentre: true,
+                    lyric: `Full of patient replies…`
                 },
                 {
                     time: 36,
-                    centre: `But how can I trust a word you say?`
+                    isCentre: true,
+                    lyric: `But how can I trust a word you say?`
                 },
                 {
                     time: 40,
-                    centre: `So spill away… and please, dear, you have no more secrets saved.`
+                    isCentre: true,
+                    lyric: `So spill away… and please, dear, you have no more secrets saved.`
                 },
                 {
                     time: 47,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
@@ -492,7 +506,8 @@ export default {
                 },
                 {
                     time: 86,
-                    centre: `But what do I know?`
+                    isCentre: true,
+                    lyric: `But what do I know?`
                 }
             ]
         },
@@ -521,7 +536,8 @@ export default {
             lyricUnit: [
                 {
                     time: 87,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `Just that those playful`,
                         {
                             anchor: `pups with their hateful fangs`,
@@ -537,11 +553,13 @@ export default {
                 },
                 {
                     time: 90,
-                    centre: `knew the restraint of those born as hunters,`
+                    isCentre: true,
+                    lyric: `knew the restraint of those born as hunters,`
                 },
                 {
                     time: 93,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `while this supposed`,
                         {
                             anchor: `dove chafing in his cage,`,
@@ -557,7 +575,8 @@ export default {
                 },
                 {
                     time: 96,
-                    centre: `just learned he's pecked to death his precious other.`
+                    isCentre: true,
+                    lyric: `just learned he's pecked to death his precious other.`
                 }
             ]
         },
@@ -595,19 +614,23 @@ export default {
             lyricUnit: [
                 {
                     time: 98,
-                    centre: `But should it matter since you loved her once,`
+                    isCentre: true,
+                    lyric: `But should it matter since you loved her once,`
                 },
                 {
                     time: 101,
-                    centre: `when you really thought the world that simple?`
+                    isCentre: true,
+                    lyric: `when you really thought the world that simple?`
                 },
                 {
                     time: 104,
-                    centre: `And who's to judge how much you cared because`
+                    isCentre: true,
+                    lyric: `And who's to judge how much you cared because`
                 },
                 {
                     time: 107,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `the`,
                         {
                             anchor: `gesture then`,
@@ -624,7 +647,8 @@ export default {
                 },
                 {
                     time: 113,
-                    centre: `Now the jester teeters towards…`
+                    isCentre: true,
+                    lyric: `Now the jester teeters towards…`
                 }
             ]
         },
@@ -635,7 +659,8 @@ export default {
             lyricUnit: [
                 {
                     time: 116,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `the taunting,`,
                         {
                             anchor: `streetswept dawn.`,
@@ -657,11 +682,13 @@ export default {
                 },
                 {
                     time: 118,
-                    centre: `Thoughts spawned then dropped,`
+                    isCentre: true,
+                    lyric: `Thoughts spawned then dropped,`
                 },
                 {
                     time: 121,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `of gathering up the`,
                         {
                             anchor: `suttee dust.`,
@@ -681,19 +708,23 @@ export default {
                 },
                 {
                     time: 123,
-                    centre: `Some things just come to loss:`
+                    isCentre: true,
+                    lyric: `Some things just come to loss:`
                 },
                 {
                     time: 126,
-                    centre: `this bracelet, its lustre; me, my lust.`
+                    isCentre: true,
+                    lyric: `this bracelet, its lustre; me, my lust.`
                 },
                 {
                     time: 130,
-                    centre: `Or was I once, something not what I've become?`
+                    isCentre: true,
+                    lyric: `Or was I once, something not what I've become?`
                 },
                 {
                     time: 137,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `Have I just`,
                         {
                             anchor: `killed the thing I love?`,
@@ -1021,7 +1052,8 @@ export default {
             lyricUnit: [
                 {
                     time: 177,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(chorale)`
                     }
                 }

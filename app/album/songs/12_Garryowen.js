@@ -70,7 +70,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Garry's theme)`
                     }
                 }
@@ -456,7 +457,8 @@ export default {
             lyricUnit: [
                 {
                     time: 84,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(bagpipes)`
                     }
                 }
@@ -731,7 +733,8 @@ export default {
             lyricUnit: [
                 {
                     time: 162,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Garry's theme)`
                     }
                 }

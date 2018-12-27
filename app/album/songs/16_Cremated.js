@@ -60,7 +60,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         anchor: `Or another…`,
                         card: {
                             description: `Even if I couldn't be with Mara, I could still be with someone like her. Namely, Miriam.`,
@@ -96,7 +97,8 @@ export default {
             lyricUnit: [
                 {
                     time: 4,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Miriam's theme)`
                     }
                 }
@@ -590,7 +592,8 @@ export default {
             lyricUnit: [
                 {
                     time: 70,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Miriam's theme)`
                     }
                 }
@@ -613,7 +616,8 @@ export default {
             lyricUnit: [
                 {
                     time: 90,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         {
                             anchor: `Needle done`,
                             cards: [
@@ -641,7 +645,8 @@ export default {
                 },
                 {
                     time: 94,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `it`,
                         {
                             anchor: `hums a typo`,
@@ -682,7 +687,8 @@ export default {
                 },
                 {
                     time: 98,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `With his`,
                         {
                             anchor: `vinyl, exit`,
@@ -706,7 +712,8 @@ export default {
                 },
                 {
                     time: 102,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `Undeluded, she'll bask in`,
                         {
                             anchor: `selfish cut-off jeans,`,
@@ -731,7 +738,8 @@ export default {
                 },
                 {
                     time: 106,
-                    centre: [
+                    isCentre: true,
+                    lyric: [
                         `and`,
                         {
                             anchor: `in her pool,`,
@@ -1002,7 +1010,8 @@ export default {
             lyricUnit: [
                 {
                     time: 135,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Miriam's theme)`
                     }
                 }

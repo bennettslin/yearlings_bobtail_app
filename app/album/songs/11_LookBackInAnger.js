@@ -62,7 +62,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(intro)`
                     }
                 }
@@ -781,7 +782,8 @@ export default {
             lyricUnit: [
                 {
                     time: 161,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(outro)`
                     }
                 }

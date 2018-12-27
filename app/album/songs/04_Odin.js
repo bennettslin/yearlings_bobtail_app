@@ -53,7 +53,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: `Mr. Odin died today.`
+                    isCentre: true,
+                    lyric: `Mr. Odin died today.`
                 }
             ]
         },
@@ -1318,7 +1319,8 @@ export default {
             lyricUnit: [
                 {
                     time: 153,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(electric mandolin)`
                     }
                 }
@@ -1510,7 +1512,8 @@ export default {
             lyricUnit: [
                 {
                     time: 186,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Odin's theme)`
                     }
                 }

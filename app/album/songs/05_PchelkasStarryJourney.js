@@ -125,7 +125,8 @@ export default {
             lyricUnit: [
                 {
                     time: 5,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Christopher's theme)`
                     }
                 }
@@ -753,7 +754,8 @@ export default {
             lyricUnit: [
                 {
                     time: 128,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Christopher's theme)`
                     }
                 }

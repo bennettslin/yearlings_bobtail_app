@@ -63,7 +63,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(intro)`
                     }
                 }
@@ -1286,7 +1287,8 @@ export default {
             lyricUnit: [
                 {
                     time: 199,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Mara's theme)`
                     }
                 }

@@ -52,7 +52,6 @@ module.exports = {
     ALBUM_BUILD_KEYS: [
         LYRIC,
         LEFT,
-        CENTRE,
         RIGHT,
         ITALIC,
         SUB_CARD,
@@ -67,7 +66,6 @@ module.exports = {
     LYRIC_TEXT_KEYS: [
         LYRIC,
         LEFT,
-        CENTRE,
         RIGHT,
         ITALIC,
         ANCHOR
@@ -76,8 +74,7 @@ module.exports = {
     WORMHOLE_SEARCH_KEYS: [
         LYRIC,
         LEFT,
-        RIGHT,
-        CENTRE
+        RIGHT
     ],
 
     EAR_COLUMN_KEYS: [

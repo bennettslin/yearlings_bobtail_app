@@ -52,7 +52,8 @@ export default {
             lyricUnit: [
                 {
                     time: 0,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(recorders)`
                     }
                 }
@@ -293,7 +294,8 @@ export default {
             lyricUnit: [
                 {
                     time: 135,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Sita's theme)`
                     }
                 }
@@ -307,7 +309,8 @@ export default {
             lyricUnit: [
                 {
                     time: 149,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Sita's theme)`
                     }
                 }
@@ -463,7 +466,8 @@ export default {
             lyricUnit: [
                 {
                     time: 223,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Bennett's theme)`
                     }
                 }

@@ -1289,7 +1289,8 @@ export default {
             lyricUnit: [
                 {
                     time: 245,
-                    centre: {
+                    isCentre: true,
+                    lyric: {
                         italic: `(Odin's theme)`
                     }
                 }
