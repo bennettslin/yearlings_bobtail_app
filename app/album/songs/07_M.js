@@ -216,7 +216,8 @@ export default {
                                     description: [
                                         `Honestly, I wasted a`,
                                         {
-                                            emphasis: `lot`
+                                            isEmphasis: true,
+                                            lyric: `lot`
                                         },
                                         `of time on indie rock and its countercultural pretenses, and it remains one of my deepest regrets. But I won't be fooled again.`
                                     ],
@@ -808,11 +809,13 @@ export default {
                                 description: [
                                     `It was no mystery why the situation with Mara transpired as it had. It's never a mystery how`,
                                     {
-                                        emphasis: `anything`
+                                        isEmphasis: true,
+                                        lyric: `anything`
                                     },
                                     `plays out the way it does. I found this thought empowering, because I didn't need to know everything all at once. I just needed to know that things are knowable when I`,
                                     {
-                                        emphasis: `do`
+                                        isEmphasis: true,
+                                        lyric: `do`
                                     },
                                     `want to know them. And with this knowledge, I was now free to choose where to go next.`
                                 ],

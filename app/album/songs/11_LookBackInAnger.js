@@ -746,11 +746,13 @@ export default {
                                 description: [
                                     `There's no excuse for not looking out for yourself. I knew this now. So while I was justifiably angry`,
                                     {
-                                        emphasis: `for`
+                                        isEmphasis: true,
+                                        lyric: `for`
                                     },
                                     `the younger me, there was also no one more worthy to be angry`,
                                     {
-                                        emphasis: `at.`
+                                        isEmphasis: true,
+                                        lyric: `at.`
                                     },
                                     `I could only blame myself for being late to the game. But this just made me angrier…`
                                 ],

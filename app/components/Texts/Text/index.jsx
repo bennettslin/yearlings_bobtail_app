@@ -39,8 +39,9 @@ const propTypes = {
 
         } else if (typeof textEntity === 'object') {
             const {
+                lyric,
                 italic,
-                emphasis
+                isEmphasis
             } = textEntity
 
             /**
@@ -56,11 +57,11 @@ const propTypes = {
                     />
                 )
 
-            } else if (emphasis) {
+            } else if (isEmphasis) {
                 return (
                     <Texts {...props}
                         isEmphasis
-                        text={emphasis}
+                        text={lyric}
                     />
                 )
 

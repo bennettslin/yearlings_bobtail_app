@@ -347,7 +347,8 @@ export default {
                                 description: [
                                     `A "keeper," in both the sense of being the one who tends to the herd, as well as being the only one to keep from`,
                                     {
-                                        emphasis: `amongst`
+                                        isEmphasis: true,
+                                        lyric: `amongst`
                                     },
                                     `the herd. Sita was now resigned to my infidelity, and only held out the hope that her permissiveness might earn her a privileged place amidst all the other women I desired.`
                                 ],

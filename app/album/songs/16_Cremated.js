@@ -359,7 +359,8 @@ export default {
                                 description: [
                                     `Of course, he actually sways because Miriam, who happens to be`,
                                     {
-                                        emphasis: `my`
+                                        isEmphasis: true,
+                                        lyric: `my`
                                     },
                                     `all-American god, is humming along and tapping the underside of the dashboard with her feet.`
                                 ],
@@ -765,7 +766,8 @@ export default {
                                     },
                                     `which centres on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family's genes, combined with our foreign manner of worship, I assumed that the disabled`,
                                     {
-                                        emphasis: `themselves`
+                                        isEmphasis: true,
+                                        lyric: `themselves`
                                     },
                                     `must be the lesser creations.`
                                 ],

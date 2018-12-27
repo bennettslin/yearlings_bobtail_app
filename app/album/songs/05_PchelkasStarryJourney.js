@@ -64,7 +64,8 @@ export default {
                 {
                     time: 0,
                     lyric: {
-                        emphasis: [
+                        isEmphasis: true,
+                        lyric: [
                             `But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach.`,
@@ -206,7 +207,8 @@ export default {
                     {
                         time: 34,
                         lyric: {
-                            emphasis: {
+                            isEmphasis: true,
+                            lyric: {
                                 anchor: `Poor Sam Peabody!`,
                                 card: {
                                     description: [
@@ -522,7 +524,8 @@ export default {
                                         },
                                         `in this case now refers to`,
                                         {
-                                            emphasis: `my`
+                                            isEmphasis: true,
+                                            lyric: `my`
                                         },
                                         `little brother.`
                                     ],

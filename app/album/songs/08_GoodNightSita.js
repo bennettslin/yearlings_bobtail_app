@@ -698,7 +698,8 @@ export default {
                                 description: [
                                     `I learned to accept rejection by treating it as subject matter for new songs. But it then logically follows that a life filled with rejection can`,
                                     {
-                                        emphasis: `itself`
+                                        isEmphasis: true,
+                                        lyric: `itself`
                                     },
                                     `be a work of art.`
                                 ],

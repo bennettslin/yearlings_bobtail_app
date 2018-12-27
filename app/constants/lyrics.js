@@ -3,7 +3,6 @@ const LYRIC = 'lyric',
     CENTRE = 'centre',
     RIGHT = 'right',
     ITALIC = 'italic',
-    EMPHASIS = 'emphasis',
     ANCHOR = 'anchor',
 
     SUB_CARD = 'subCard',
@@ -56,7 +55,6 @@ module.exports = {
         CENTRE,
         RIGHT,
         ITALIC,
-        EMPHASIS,
         SUB_CARD,
         SIDE_CARD,
         DOT_UNIT
@@ -72,7 +70,6 @@ module.exports = {
         CENTRE,
         RIGHT,
         ITALIC,
-        EMPHASIS,
         ANCHOR
     ],
 
@@ -91,7 +88,6 @@ module.exports = {
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [
         ITALIC,
-        EMPHASIS,
         ANCHOR
     ],
 
