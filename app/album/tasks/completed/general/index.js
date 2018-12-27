@@ -4256,5 +4256,10 @@ export default [
         taskName: `Stanza tab box shadows overlap.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Bug where future verses don't highlight properly when selected verse is a response. It's because unit is not getting all parent verse indices properly. Include unit refactor in this work.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

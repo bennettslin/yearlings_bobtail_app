@@ -67,7 +67,7 @@ class Stanzas extends PureComponent {
                 {...{ className: 'Stanzas' }}
             >
 
-                {/* This is first unit dot card. There always is one. */}
+                {/* This is the first unit dot card. There always is one. */}
                 <Unit
                     {...{
                         unitIndex: 0,

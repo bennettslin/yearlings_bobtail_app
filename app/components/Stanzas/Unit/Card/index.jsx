@@ -9,31 +9,23 @@ import { getParentOfVerseClassNamesForIndices } from '../../helper'
 import VerseHoc from '../../../Verse/Hoc'
 import Verse from '../../../Verse'
 
+import {
+    RESPONSE,
+    RHYME
+} from 'constants/lyrics'
+
 /*************
  * CONTAINER *
  *************/
 
 class UnitCard extends PureComponent {
 
-    static defaultProps = {
-        inMain: false,
-        subsequent: false,
-        isSubCard: false
-    }
-
     static propTypes = {
         // From parent.
         stanzaTypeIndex: PropTypes.number,
-        stanzaType: PropTypes.string,
-        subCardType: PropTypes.string,
-        sideCardType: PropTypes.string,
-        sideSubCardType: PropTypes.string,
-        subsequent: PropTypes.bool.isRequired,
+        stanzaType: PropTypes.string.isRequired,
 
-        stanzaArray: PropTypes.array,
-        inMain: PropTypes.bool.isRequired,
-        isSubCard: PropTypes.bool.isRequired,
-
+        stanzaArray: PropTypes.array.isRequired,
         handleVerseSelect: PropTypes.func
     }
 
@@ -57,50 +49,20 @@ class UnitCard extends PureComponent {
             // From props.
             stanzaTypeIndex,
             stanzaType,
-            subCardType,
-            sideCardType,
-            sideSubCardType,
-            subsequent,
 
             // From controller.
             stanzaArray,
-            isSubCard,
-            inMain,
 
             ...other
         } = this.props
 
         if (stanzaArray) {
-
-            const shownStanzaIndex =
-                inMain
-                && !subsequent
-                && !isSubCard
-                && !isSubCard
-                && stanzaTypeIndex
-
-            let stanzaTypeLabel
-
-            if (inMain) {
-                stanzaTypeLabel =
-                    isSubCard ?
-                        subCardType :
-                        stanzaType
-
-            } else {
-                stanzaTypeLabel =
-                    isSubCard ?
-                        sideSubCardType :
-                        sideCardType
-            }
-
             return (
                 <UnitCardView {...other}
                     {...{
                         stanzaArray,
-                        isSubCard,
-                        stanzaTypeIndex: shownStanzaIndex,
-                        stanzaType: stanzaTypeLabel,
+                        stanzaTypeIndex,
+                        stanzaType,
                         handleStanzaTabClick: this.handleStanzaTabClick
                     }}
                 />
@@ -117,7 +79,6 @@ class UnitCard extends PureComponent {
 
 const propTypes = {
     // From parent.
-        isSubCard: PropTypes.bool.isRequired,
         stanzaTypeIndex: PropTypes.oneOfType([
             PropTypes.bool,
             PropTypes.number
@@ -129,7 +90,6 @@ const propTypes = {
     },
 
     UnitCardView = ({
-        isSubCard,
         stanzaArray,
         stanzaTypeIndex,
         stanzaType,
@@ -144,7 +104,9 @@ const propTypes = {
                 stanzaType
             }${
                 stanzaTypeIndex > 0 ? ` ${stanzaTypeIndex}` : ''
-            }`
+            }`,
+
+            isSubCard = stanzaType === RESPONSE || stanzaType === RHYME
 
         return (
             <div className={cx(

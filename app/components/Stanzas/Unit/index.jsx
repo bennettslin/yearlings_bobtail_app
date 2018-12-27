@@ -13,6 +13,8 @@ import cx from 'classnames'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 
+import { getAllSelectableVerses } from 'album/api/verses'
+
 import { getUnit } from './helper'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
@@ -43,12 +45,14 @@ class Unit extends PureComponent {
                 /* eslint-enable no-unused-vars */
 
                 unitIndex,
-                setLyricAnnotationElement,
                 ...other
             } = this.props,
 
             // Pass to lyric stanza view so it knows to update.
-            { renderedSongIndex } = other,
+            {
+                renderedSongIndex,
+                setLyricAnnotationElement
+            } = other,
 
             unit = getUnit(renderedSongIndex, unitIndex),
             {
@@ -57,7 +61,6 @@ class Unit extends PureComponent {
             } = unit,
 
             {
-                stanzaIndex,
                 stanzaTypeIndex,
                 stanzaType,
                 subCardType,
@@ -69,17 +72,6 @@ class Unit extends PureComponent {
                 topSideCard,
                 bottomSideCard
             } = unitMap,
-
-            unitCardProps = {
-                stanzaIndex,
-                stanzaTypeIndex,
-                stanzaType,
-                subCardType,
-                sideCardType,
-                sideSubCardType,
-                subsequent,
-                setLyricAnnotationElement
-            },
 
             // This exists solely for "Maranatha."
             topSideSubCard = topSideCard ?
@@ -93,8 +85,8 @@ class Unit extends PureComponent {
             <div
                 className={cx(
                     // "Parent of verse index."
-                    lyricUnit && getParentOfVerseClassNamesForIndices({
-                        entities: lyricUnit
+                    getParentOfVerseClassNamesForIndices({
+                        entities: getAllSelectableVerses(unit)
                     }),
 
                     'Unit',
@@ -115,21 +107,29 @@ class Unit extends PureComponent {
                         'Unit__column',
                         'Unit__column__main'
                     )}>
-                        <UnitCard
-                            {...other}
-                            {...unitCardProps}
-                            inMain
-                            stanzaArray={lyricUnit}
-                            isTruncatable={hasSide}
-                        />
-                        <UnitCard
-                            {...other}
-                            {...unitCardProps}
-                            inMain
-                            isSubCard
-                            stanzaArray={subCard}
-                            isTruncatable={hasSide}
-                        />
+                        {lyricUnit && (
+                            <UnitCard
+                                {...other}
+                                {...{
+                                    stanzaArray: lyricUnit,
+                                    stanzaType,
+                                    isTruncatable: hasSide
+                                }}
+                                {...!subsequent && {
+                                    stanzaTypeIndex
+                                }}
+                            />
+                        )}
+                        {subCard && (
+                            <UnitCard
+                                {...other}
+                                {...{
+                                    stanzaArray: subCard,
+                                    stanzaType: subCardType,
+                                    isTruncatable: hasSide
+                                }}
+                            />
+                        )}
                     </div>
                 }
                 {hasSide &&
@@ -141,22 +141,33 @@ class Unit extends PureComponent {
                             { 'Unit__column__sideBottomOnly': isSideBottomOnly }
                         )}
                     >
-                        <UnitCard
-                            {...other}
-                            {...unitCardProps}
-                            stanzaArray={topSideCard}
-                        />
-                        <UnitCard
-                            {...other}
-                            {...unitCardProps}
-                            stanzaArray={bottomSideCard}
-                        />
-                        <UnitCard
-                            {...other}
-                            {...unitCardProps}
-                            isSubCard
-                            stanzaArray={topSideSubCard}
-                        />
+                        {topSideCard && (
+                            <UnitCard
+                                {...other}
+                                {...{
+                                    stanzaArray: topSideCard,
+                                    stanzaType: sideCardType
+                                }}
+                            />
+                        )}
+                        {bottomSideCard && (
+                            <UnitCard
+                                {...other}
+                                {...{
+                                    stanzaArray: bottomSideCard,
+                                    stanzaType: sideCardType
+                                }}
+                            />
+                        )}
+                        {topSideSubCard && (
+                            <UnitCard
+                                {...other}
+                                {...{
+                                    stanzaArray: topSideSubCard,
+                                    stanzaType: sideSubCardType
+                                }}
+                            />
+                        )}
                     </div>
                 }
                 {dotUnit &&
