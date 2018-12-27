@@ -4251,5 +4251,10 @@ export default [
         taskName: `Bug where slider stanzas are not exactly aligned with their verses?`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Stanza tab box shadows overlap.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

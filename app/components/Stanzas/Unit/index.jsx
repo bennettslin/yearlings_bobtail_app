@@ -43,6 +43,7 @@ class Unit extends PureComponent {
                 /* eslint-enable no-unused-vars */
 
                 unitIndex,
+                setLyricAnnotationElement,
                 ...other
             } = this.props,
 
@@ -69,6 +70,17 @@ class Unit extends PureComponent {
                 bottomSideCard
             } = unitMap,
 
+            unitCardProps = {
+                stanzaIndex,
+                stanzaTypeIndex,
+                stanzaType,
+                subCardType,
+                sideCardType,
+                sideSubCardType,
+                subsequent,
+                setLyricAnnotationElement
+            },
+
             // This exists solely for "Maranatha."
             topSideSubCard = topSideCard ?
                 topSideCard[topSideCard.length - 1].subCard : null,
@@ -76,97 +88,6 @@ class Unit extends PureComponent {
             hasSide = Boolean(topSideCard || bottomSideCard),
             isDotOnly = Boolean(dotUnit) && !lyricUnit,
             isSideBottomOnly = !topSideCard && Boolean(bottomSideCard)
-
-        return (
-            <UnitView {...other}
-                {...{
-                    unitIndex,
-
-                    stanzaIndex,
-                    stanzaTypeIndex,
-                    stanzaType,
-                    lyricUnit,
-                    subCardType,
-                    sideCardType,
-                    sideSubCardType,
-                    subsequent,
-                    dotUnit,
-                    subCard,
-                    topSideCard,
-                    bottomSideCard,
-                    topSideSubCard,
-                    hasSide,
-                    isDotOnly,
-                    isSideBottomOnly
-                }}
-            />
-        )
-    }
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-class UnitView extends PureComponent {
-
-    static defaultProps = {
-        subsequent: false
-    }
-
-    static propTypes = {
-        // From parent.
-
-        // This is passed just for knowing when to update.
-        renderedSongIndex: PropTypes.number.isRequired,
-
-        stanzaIndex: PropTypes.number,
-        unitIndex: PropTypes.number.isRequired,
-
-        lyricUnit: PropTypes.array,
-        dotUnit: PropTypes.object,
-        subCard: PropTypes.array,
-        topSideCard: PropTypes.array,
-        bottomSideCard: PropTypes.array,
-        topSideSubCard: PropTypes.array,
-        subsequent: PropTypes.bool.isRequired,
-
-        hasSide: PropTypes.bool.isRequired,
-        isDotOnly: PropTypes.bool.isRequired,
-        isSideBottomOnly: PropTypes.bool.isRequired,
-
-        setLyricAnnotationElement: PropTypes.func.isRequired
-    }
-
-    render() {
-        const {
-                /* eslint-disable no-unused-vars */
-                renderedSongIndex,
-                /* eslint-enable no-unused-vars */
-
-                // From props.
-                lyricUnit,
-
-                // From controller.
-                unitIndex,
-
-                dotUnit,
-                subCard,
-                topSideCard,
-                bottomSideCard,
-                topSideSubCard,
-
-                hasSide,
-                isDotOnly,
-                isSideBottomOnly,
-
-                ...other
-            } = this.props,
-
-            {
-                subsequent,
-                setLyricAnnotationElement
-            } = other
 
         return (
             <div
@@ -177,14 +98,11 @@ class UnitView extends PureComponent {
                     }),
 
                     'Unit',
-
                     `unit__${unitIndex}`,
 
-                    'fontSize__verse',
-                    {
-                        'Unit__hasSide': hasSide,
-                        'fontSize__lyricMultipleColumns': hasSide
-                    },
+                    hasSide ?
+                        'fontSize__lyricMultipleColumns' :
+                        'fontSize__verse',
 
                     subsequent ?
                         'Unit__subsequent' :
@@ -197,12 +115,16 @@ class UnitView extends PureComponent {
                         'Unit__column',
                         'Unit__column__main'
                     )}>
-                        <UnitCard {...other}
+                        <UnitCard
+                            {...other}
+                            {...unitCardProps}
                             inMain
                             stanzaArray={lyricUnit}
                             isTruncatable={hasSide}
                         />
-                        <UnitCard {...other}
+                        <UnitCard
+                            {...other}
+                            {...unitCardProps}
                             inMain
                             isSubCard
                             stanzaArray={subCard}
@@ -211,19 +133,27 @@ class UnitView extends PureComponent {
                     </div>
                 }
                 {hasSide &&
-                    <div className={cx(
-                        'Unit__column__text',
-                        'Unit__column',
-                        'Unit__column__side',
-                        { 'Unit__column__sideBottomOnly': isSideBottomOnly }
-                    )}>
-                        <UnitCard {...other}
+                    <div
+                        className={cx(
+                            'Unit__column__text',
+                            'Unit__column',
+                            'Unit__column__side',
+                            { 'Unit__column__sideBottomOnly': isSideBottomOnly }
+                        )}
+                    >
+                        <UnitCard
+                            {...other}
+                            {...unitCardProps}
                             stanzaArray={topSideCard}
                         />
-                        <UnitCard {...other}
+                        <UnitCard
+                            {...other}
+                            {...unitCardProps}
                             stanzaArray={bottomSideCard}
                         />
-                        <UnitCard {...other}
+                        <UnitCard
+                            {...other}
+                            {...unitCardProps}
                             isSubCard
                             stanzaArray={topSideSubCard}
                         />
@@ -231,8 +161,8 @@ class UnitView extends PureComponent {
                 }
                 {dotUnit &&
                     <UnitDot
-                        dotStanzaObject={dotUnit}
                         {...{
+                            dotUnit,
                             setLyricAnnotationElement
                         }}
                     />

@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: `Bug where future verses don't highlight properly when selected verse is a response.`,
+        taskName: `Bug where future verses don't highlight properly when selected verse is a response. It's because unit is not getting all parent verse indices properly. Include unit refactor in this work.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -8,11 +8,6 @@ export default [
         taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Stanza tab box shadows overlap.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Nav button icon size is weird.`,
