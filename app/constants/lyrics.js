@@ -7,6 +7,7 @@ const LYRIC = 'lyric',
     ANCHOR = 'anchor',
 
     SUB_CARD = 'subCard',
+    SIDE_CARD = 'sideCard',
     DOT_UNIT = 'dotUnit'
 
 module.exports = {
@@ -20,17 +21,12 @@ module.exports = {
 
     WIKI: 'wiki',
 
-    SUB_CARD,
-    DOT_UNIT,
-
     COLUMN_INDEX: 'columnIndex',
     WIKI_INDEX: 'wikiIndex',
 
     IS_DOT_UNIT: 'isDotUnit',
-    IS_DOUBLESPEAKER: 'isDoublespeaker',
     IS_VERSE_BEGINNING_SPAN: 'isVerseBeginningSpan',
     IS_VERSE_ENDING_SPAN: 'isVerseEndingSpan',
-    PROPER_NOUN: 'properNoun',
 
     TITLE: 'title',
     REFRAIN: 'refrain',
@@ -62,7 +58,7 @@ module.exports = {
         ITALIC,
         EMPHASIS,
         SUB_CARD,
-        'sideCard',
+        SIDE_CARD,
         DOT_UNIT
     ],
 

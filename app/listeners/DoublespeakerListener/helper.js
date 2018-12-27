@@ -1,4 +1,3 @@
-import { IS_DOUBLESPEAKER } from '../../constants/lyrics'
 import { getSongObject } from 'album/api/songs'
 import {
     getIsPhone,
@@ -13,7 +12,7 @@ const getIsDoublespeakerShown = ({
     const selectedSong = getSongObject(songIndex),
         {
             hasSideCards,
-            [IS_DOUBLESPEAKER]: isDoublespeaker
+            isDoublespeaker
         } = selectedSong
 
     // Applies to Uncanny Valley Boy.

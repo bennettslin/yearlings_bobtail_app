@@ -10,8 +10,7 @@ import { getFormattedAnnotationTitle } from 'helpers/format'
 import {
     LEFT,
     RIGHT,
-    COLUMN_INDEX,
-    PROPER_NOUN
+    COLUMN_INDEX
 } from 'constants/lyrics'
 
 export const registerAnnotation = ({
@@ -91,6 +90,6 @@ export const registerAnnotation = ({
     song.annotations.push(annotation)
 
     // Clean up lyric object.
-    delete lyricAnnotation[PROPER_NOUN]
+    delete lyricAnnotation.properNoun
     delete lyricAnnotation.annotation
 }

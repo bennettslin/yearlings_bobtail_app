@@ -8,15 +8,7 @@ export const getParentOfVerseClassNamesForIndices = ({
 }) => {
 
     const classNames = entities.map(entity => {
-        let verseIndex = entity.verseIndex
-
-        /**
-         * If it's a unit map, get the verse index from the subCard, which is
-         * only ever an array of one.
-         */
-        if (entity.subCard) {
-            verseIndex = entity.subCard[0].verseIndex
-        }
+        const { verseIndex } = entity
 
         return !isNaN(verseIndex) ?
             `${prefix}${verseIndex}` :
@@ -63,8 +55,8 @@ export const getLastUnitDotCardIndex = (songIndex) => {
                 ]
 
             /**
-             * Remember that title is technically the first unit. So we're
-             * treating this as if it were 1-based.
+             * There is another dot unit that is technically the first unit. So
+             * we're treating this as if it were 1-based.
              */
             if (lastStanzaUnitIndex < lyricUnitsCount - 1) {
                 return lyricUnitsCount - 1
