@@ -6,6 +6,7 @@ const LYRIC = 'lyric',
 
     SUB_CARD = 'subCard',
     SIDE_CARD = 'sideCard',
+    SIDE_SUB_CARD = 'sideSubCard',
     DOT_UNIT = 'dotUnit'
 
 module.exports = {
@@ -25,7 +26,6 @@ module.exports = {
     IS_VERSE_BEGINNING_SPAN: 'isVerseBeginningSpan',
     IS_VERSE_ENDING_SPAN: 'isVerseEndingSpan',
 
-    TITLE: 'title',
     REFRAIN: 'refrain',
     VERSES: 'verse',
     PRECHORUS: 'prechorus',
@@ -40,19 +40,20 @@ module.exports = {
     // subCard type only
     RHYME: 'rhyme',
 
-    // sideStanza type only
+    // sideCard type only
     BACKING: 'backing',
 
     // subCard or sideSubCard type
     RESPONSE: 'response',
 
     // This is the order by which annotations will be assigned.
-    ALBUM_BUILD_KEYS: [
+    ANNOTATION_SEARCH_KEYS: [
         LYRIC,
         LEFT,
         RIGHT,
         SUB_CARD,
         SIDE_CARD,
+        SIDE_SUB_CARD,
         DOT_UNIT
     ],
 

@@ -3,7 +3,7 @@
 import { registerAnnotation } from './helpers'
 
 import {
-    ALBUM_BUILD_KEYS,
+    ANNOTATION_SEARCH_KEYS,
     ANCHOR
 } from 'constants/lyrics'
 
@@ -56,7 +56,7 @@ const _recurseToFindAnnotations = ({
             })
 
         } else {
-            ALBUM_BUILD_KEYS.forEach(childKey => {
+            ANNOTATION_SEARCH_KEYS.forEach(childKey => {
                 if (lyricEntity[childKey]) {
                     _recurseToFindAnnotations({
                         rootVerseIndex,

@@ -131,9 +131,7 @@ const propTypes = {
                         )}
                     >
                         <div
-                            {...{
-                                className: 'UnitCard__tabText'
-                            }}
+                            {...{ className: 'UnitCard__tabText' }}
                         >
                             {tabText}
                         </div>
@@ -147,16 +145,9 @@ const propTypes = {
                     `bgColour__stanzaType__${stanzaType}`
                 )}>
                     {stanzaArray.map((verseObject, stanzaVerseIndex) => {
-                        const {
-                            isSideUnitMap,
-                            isUnitMap,
-                            verseIndex
-                        } = verseObject
+                        const { verseIndex } = verseObject
 
-                        /**
-                     * Only Uncanny Valley has a side unit map.
-                     */
-                        return !isSideUnitMap && !isUnitMap && (
+                        return (
                             <VerseHoc {...other}
                                 key={stanzaVerseIndex}
                                 inUnit
@@ -186,9 +177,7 @@ const propTypes = {
                         }}
                     >
                         <div
-                            {...{
-                                className: 'UnitCard__tabText'
-                            }}
+                            {...{ className: 'UnitCard__tabText' }}
                         >
                             {tabText}
                         </div>

@@ -44,24 +44,14 @@ const propTypes = {
                 isEmphasis
             } = textEntity
 
-            /**
-         * If recursing, keep knowledge of text being in wormhole or verse bar,
-         * which is needed by anchor.
-         */
-
-            if (isItalic) {
+            if (isItalic || isEmphasis) {
                 return (
                     <Texts {...props}
-                        isItalic
-                        text={lyric}
-                    />
-                )
-
-            } else if (isEmphasis) {
-                return (
-                    <Texts {...props}
-                        isEmphasis
-                        text={lyric}
+                        {...{
+                            isItalic,
+                            isEmphasis,
+                            text: lyric
+                        }}
                     />
                 )
 
@@ -71,6 +61,10 @@ const propTypes = {
                         annotationIndex
                     } = textEntity,
 
+                    /**
+                     * If recursing, keep knowledge of text being in wormhole
+                     * or verse bar, which is needed by anchor.
+                     */
                     showAsPlainText = inWormhole || inVerseBar,
 
                     text = anchor

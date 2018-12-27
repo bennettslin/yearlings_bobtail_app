@@ -15,17 +15,12 @@ const propTypes = {
 
     StanzaHoc = memo(({
         StanzaComponent,
-
+        stanzaIndex,
         ...other
     }) => {
 
-        const {
-                stanzaIndex,
-                stanzaConfig
-            } = other,
-            {
-                stanzaVerseConfigs
-            } = stanzaConfig,
+        const { stanzaConfig } = other,
+            { stanzaVerseConfigs } = stanzaConfig,
 
             logicSelectors = cx(
             // "Child component stanza index."
@@ -35,9 +30,9 @@ const propTypes = {
                 `ChS${stanzaIndex}`,
 
                 /**
-             * General selector when before cursor, general
-             * sibling selector when after cursor.
-             */
+                 * General selector when before cursor, general
+                 * sibling selector when after cursor.
+                 */
                 !isNaN(stanzaIndex) &&
                 'ChS',
 

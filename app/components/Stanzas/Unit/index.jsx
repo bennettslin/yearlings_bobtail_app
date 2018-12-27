@@ -1,8 +1,7 @@
 /**
  * Component to show main card, side card, and dot card for a unit. A unit is
  * the basic unit by which the lyric data is organised. A stanza is made up of
- * one or more units. But a unit can also stand alone, such as the title unit,
- * or the last dot card.
+ * one or more units. But a unit can also stand alone, such as a lone dot unit.
  */
 
 import React, { PureComponent } from 'react'
@@ -70,13 +69,10 @@ class Unit extends PureComponent {
                 dotUnit,
                 subCard,
                 sideCard,
+                sideSubCard, // This exists solely for "Maranatha."
                 hasTopSideCard,
                 hasBottomSideCard
             } = unitMap,
-
-            // This exists solely for "Maranatha."
-            topSideSubCard = hasTopSideCard ?
-                sideCard[sideCard.length - 1].subCard : null,
 
             hasSide = Boolean(hasTopSideCard || hasBottomSideCard),
             isDotOnly = Boolean(dotUnit) && !lyricUnit
@@ -162,11 +158,11 @@ class Unit extends PureComponent {
                                 }}
                             />
                         )}
-                        {topSideSubCard && (
+                        {sideSubCard && (
                             <UnitCard
                                 {...other}
                                 {...{
-                                    stanzaArray: topSideSubCard,
+                                    stanzaArray: sideSubCard,
                                     stanzaType: sideSubCardType
                                 }}
                             />

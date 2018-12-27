@@ -1199,33 +1199,30 @@ export default {
                                 }
                             }
                         }
-                    },
+                    }
+                ],
+                sideSubCard: [
                     {
-                        isSideUnitMap: true,
-                        subCard: [
-                            {
-                                lyric: {
-                                    anchor: `…Maranatha!`,
-                                    card: {
-                                        description: [
-                                            `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society and its women, as represented by an expression of Western faith. In the New Testament,`,
-                                            {
-                                                isItalic: true,
-                                                lyric: {
-                                                    anchor: `maranatha`,
-                                                    wiki: `Maranatha`
-                                                }
-                                            },
-                                            `is Aramaic for "our Lord has come."`
-                                        ],
-                                        dotKeys: {
-                                            [NARRATIVE]: true,
-                                            [OBSERVATION]: true
+                        lyric: {
+                            anchor: `…Maranatha!`,
+                            card: {
+                                description: [
+                                    `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society and its women, as represented by an expression of Western faith. In the New Testament,`,
+                                    {
+                                        isItalic: true,
+                                        lyric: {
+                                            anchor: `maranatha`,
+                                            wiki: `Maranatha`
                                         }
-                                    }
+                                    },
+                                    `is Aramaic for "our Lord has come."`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
                                 }
                             }
-                        ]
+                        }
                     }
                 ],
                 hasTopSideCard: true,

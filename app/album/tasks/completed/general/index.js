@@ -4261,5 +4261,10 @@ export default [
         taskName: `Bug where future verses don't highlight properly when selected verse is a response. It's because unit is not getting all parent verse indices properly. Include unit refactor in this work.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `General unit refactoring.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
