@@ -69,17 +69,17 @@ class Unit extends PureComponent {
                 subsequent,
                 dotUnit,
                 subCard,
-                topSideCard,
-                bottomSideCard
+                sideCard,
+                hasTopSideCard,
+                hasBottomSideCard
             } = unitMap,
 
             // This exists solely for "Maranatha."
-            topSideSubCard = topSideCard ?
-                topSideCard[topSideCard.length - 1].subCard : null,
+            topSideSubCard = hasTopSideCard ?
+                sideCard[sideCard.length - 1].subCard : null,
 
-            hasSide = Boolean(topSideCard || bottomSideCard),
-            isDotOnly = Boolean(dotUnit) && !lyricUnit,
-            isSideBottomOnly = !topSideCard && Boolean(bottomSideCard)
+            hasSide = Boolean(hasTopSideCard || hasBottomSideCard),
+            isDotOnly = Boolean(dotUnit) && !lyricUnit
 
         return (
             <div
@@ -138,23 +138,26 @@ class Unit extends PureComponent {
                             'Unit__column__text',
                             'Unit__column',
                             'Unit__column__side',
-                            { 'Unit__column__sideBottomOnly': isSideBottomOnly }
+                            {
+                                'Unit__column__hasBottomSideCard':
+                                    hasBottomSideCard
+                            }
                         )}
                     >
-                        {topSideCard && (
+                        {hasTopSideCard && (
                             <UnitCard
                                 {...other}
                                 {...{
-                                    stanzaArray: topSideCard,
+                                    stanzaArray: sideCard,
                                     stanzaType: sideCardType
                                 }}
                             />
                         )}
-                        {bottomSideCard && (
+                        {hasBottomSideCard && (
                             <UnitCard
                                 {...other}
                                 {...{
-                                    stanzaArray: bottomSideCard,
+                                    stanzaArray: sideCard,
                                     stanzaType: sideCardType
                                 }}
                             />

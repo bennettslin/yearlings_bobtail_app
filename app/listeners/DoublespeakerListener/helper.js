@@ -1,7 +1,4 @@
-import {
-    HAS_SIDE_CARDS,
-    IS_DOUBLESPEAKER
-} from '../../constants/lyrics'
+import { IS_DOUBLESPEAKER } from '../../constants/lyrics'
 import { getSongObject } from 'album/api/songs'
 import {
     getIsPhone,
@@ -15,7 +12,7 @@ const getIsDoublespeakerShown = ({
 }) => {
     const selectedSong = getSongObject(songIndex),
         {
-            [HAS_SIDE_CARDS]: hasSideCards,
+            hasSideCards,
             [IS_DOUBLESPEAKER]: isDoublespeaker
         } = selectedSong
 

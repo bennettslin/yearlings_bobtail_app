@@ -372,7 +372,7 @@ export default {
                         }
                     }
                 },
-                topSideCard: [
+                sideCard: [
                     {
                         lyric: `Oh, bastard ingrate!`
                     },
@@ -386,6 +386,7 @@ export default {
                         lyric: `the houses you've betrayed.`
                     }
                 ],
+                hasTopSideCard: true,
                 subCard: [
                     {
                         time: 70,
@@ -426,7 +427,7 @@ export default {
         },
         {
             unitMap: {
-                topSideCard: [
+                sideCard: [
                     {
                         lyric: {
                             anchor: `Scattered your beans`,
@@ -449,6 +450,7 @@ export default {
                         lyric: `over suburbia…`
                     }
                 ],
+                hasTopSideCard: true,
                 subCard: [
                     {
                         time: 82,
@@ -990,7 +992,7 @@ export default {
         },
         {
             unitMap: {
-                topSideCard: [
+                sideCard: [
                     {
                         lyric: `Through tatters of sky,`
                     },
@@ -1027,6 +1029,7 @@ export default {
                         ]
                     }
                 ],
+                hasTopSideCard: true,
                 subCard: [
                     {
                         time: 168,
@@ -1080,7 +1083,7 @@ export default {
         },
         {
             unitMap: {
-                topSideCard: [
+                sideCard: [
                     {
                         lyric: `cast on your peons,`
                     },
@@ -1105,6 +1108,7 @@ export default {
                         }
                     }
                 ],
+                hasTopSideCard: true,
                 subCard: [
                     {
                         time: 181,
@@ -1162,7 +1166,7 @@ export default {
                         }
                     }
                 },
-                topSideCard: [
+                sideCard: [
                     {
                         lyric: {
                             anchor: `Rama, Rama…`,
@@ -1203,6 +1207,7 @@ export default {
                         ]
                     }
                 ],
+                hasTopSideCard: true,
                 stanzaType: CODA,
                 sideCardType: BACKING,
                 sideSubCardType: RESPONSE

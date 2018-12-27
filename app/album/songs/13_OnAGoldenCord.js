@@ -499,7 +499,7 @@ export default {
         },
         {
             unitMap: {
-                topSideCard: [
+                sideCard: [
                     {
                         lyric: {
                             italic: {
@@ -515,6 +515,7 @@ export default {
                         }
                     }
                 ],
+                hasTopSideCard: true,
                 stanzaType: BRIDGE,
                 sideCardType: BACKING
             },
@@ -563,7 +564,7 @@ export default {
         },
         {
             unitMap: {
-                bottomSideCard: [
+                sideCard: [
                     {
                         lyric: {
                             italic: {
@@ -587,6 +588,7 @@ export default {
                         }
                     }
                 ],
+                hasBottomSideCard: true,
                 stanzaType: BRIDGE,
                 sideCardType: BACKING,
                 subsequent: true
