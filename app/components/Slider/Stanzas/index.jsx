@@ -25,9 +25,7 @@ class SliderStanzas extends PureComponent {
     }
 
     render() {
-        const {
-                renderedSongIndex
-            } = this.props,
+        const { renderedSongIndex } = this.props,
             songTotalTime = getSongTotalTime(renderedSongIndex),
             songStanzaConfigs = getSongStanzaConfigs(renderedSongIndex)
 

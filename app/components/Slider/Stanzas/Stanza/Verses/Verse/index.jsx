@@ -55,17 +55,20 @@ class SliderVerse extends PureComponent {
         return (
             <div
                 key={verseIndex}
-                className={cx(
-                    logicSelectors,
-                    'SliderVerse',
+                {...{
+                    className: cx(
+                        'SliderVerse',
 
-                    // Just for debug purposes.
-                    `SliderVerse__${verseIndex}`,
+                        // Just for debug purposes.
+                        `SliderVerse__${verseIndex}`,
 
-                    'verseColour__hoverParent',
-                    'abF'
-                )}
-                style={verseStyle}
+                        'verseColour__hoverParent',
+                        'abF',
+
+                        logicSelectors
+                    ),
+                    style: verseStyle
+                }}
             >
                 {children}
             </div>

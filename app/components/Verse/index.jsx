@@ -157,23 +157,24 @@ const verseViewDefaultProps = {
         return (
             <div
                 key={isInteractable ? verseIndex : undefined}
-                ref={setRef}
-                className={cx(
-                    logicSelectors,
-                    'Verse',
-
-                    inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
-
-                    !isNaN(verseIndex) &&
-                    `${VERSE_SCROLL}__${verseIndex}`,
-
-                    // title, even, odd, inSide.
-                    verseClassName && `verse__${verseClassName}`,
-                    isInteractable && 'Verse__interactable',
-
-                    'verseColour__hoverParent'
-                )}
                 {...{
+                    ref: setRef,
+                    className: cx(
+                        'Verse',
+
+                        inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
+
+                        !isNaN(verseIndex) &&
+                            `${VERSE_SCROLL}__${verseIndex}`,
+
+                        // title, even, odd, inSide.
+                        verseClassName && `verse__${verseClassName}`,
+                        isInteractable && 'Verse__interactable',
+
+                        'verseColour__hoverParent',
+
+                        logicSelectors
+                    ),
                     onClick: handleInteractivatableClick,
                     onTouchStart: handleInteractivatableClick
                 }}

@@ -62,9 +62,7 @@ class Overview extends PureComponent {
                         <OverviewToggle />
                     </div>
                 }
-                <Texts
-                    text={overviewText}
-                />
+                <Texts {...{ text: overviewText }} />
             </div>
         )
     }

@@ -32,17 +32,15 @@ const propTypes = {
         return (
             <div
                 className={cx(
-                    logicSelectors,
-                    'Stanza'
+                    'Stanza',
+                    logicSelectors
                 )}
             >
                 {stanzaUnitIndices.map(unitIndex => {
                     return (
                         <Unit {...other}
                             key={unitIndex}
-                            {...{
-                                unitIndex
-                            }}
+                            {...{ unitIndex }}
                         />
                     )
                 })}

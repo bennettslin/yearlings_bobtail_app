@@ -186,8 +186,10 @@ class Player extends PureComponent {
     render() {
         return (
             <ReactAudioPlayer
-                ref={this._setAudioPlayerRef}
-                src={this.props.mp3}
+                {...{
+                    ref: this._setAudioPlayerRef,
+                    src: this.props.mp3
+                }}
             />
         )
     }

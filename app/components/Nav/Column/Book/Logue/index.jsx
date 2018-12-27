@@ -27,7 +27,7 @@ const navBookLoguePropTypes = {
                 'NavBook'
             )}>
                 <NavButtonIndexed {...other}
-                    songIndex={songIndex}
+                    {...{ songIndex }}
                 />
             </div>
         )

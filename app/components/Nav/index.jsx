@@ -49,12 +49,8 @@ class Nav extends PureComponent {
                 <div className="CarouselNavToggle__placeholder" />
 
                 <div className="NavColumns">
-                    <NavColumn
-                        bookIndex={0}
-                    />
-                    <NavColumn
-                        bookIndex={1}
-                    />
+                    <NavColumn {...{ bookIndex: 0 }} />
+                    <NavColumn {...{ bookIndex: 1 }} />
                 </div>
             </div>
         )

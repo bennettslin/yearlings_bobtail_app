@@ -55,6 +55,7 @@ const propTypes = {
                     />
                 )
 
+            // It's an anchor.
             } else {
                 const {
                         anchor,
@@ -83,7 +84,8 @@ const propTypes = {
                      * anchor.
                      */
                         isWormholeAnchorInWormhole =
-                        inWormhole && annotationIndex === wormholeAnnotationIndex
+                            inWormhole &&
+                            annotationIndex === wormholeAnnotationIndex
 
                     return (
                         <Texts {...other}

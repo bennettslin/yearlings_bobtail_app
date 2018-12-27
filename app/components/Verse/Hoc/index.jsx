@@ -18,7 +18,6 @@ const propTypes = {
     },
 
     VerseHoc = memo(({
-
         verseIndex,
         VerseComponent,
         handleVerseSelect,
@@ -31,7 +30,9 @@ const propTypes = {
         if (!hasVerseIndex) {
             return (
                 <VerseComponent {...other}
-                    logicSelectors="Verse__noIndexColour"
+                    {...{
+                        logicSelectors: 'Verse__noIndexColour'
+                    }}
                 />
             )
         }
@@ -44,7 +45,7 @@ const propTypes = {
             } = other,
 
             logicSelectors = hasVerseIndex && cx(
-            // "Child verse index."
+                // "Child verse index."
                 `ChV${verseIndex}`,
                 'ChV',
 
@@ -62,9 +63,7 @@ const propTypes = {
                 {inVerseBar ? (
                     <VerseColour
                         inVerseBar
-                        {...{
-                            verseIndex
-                        }}
+                        {...{ verseIndex }}
                     />
                 ) : (
                     <VerseInteractive

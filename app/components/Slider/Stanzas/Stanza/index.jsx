@@ -24,16 +24,14 @@ class SliderStanza extends PureComponent {
                 logicSelectors,
                 isLastStanza,
                 songTotalTime,
-                stanzaConfig
+                stanzaConfig: {
+                    stanzaVerseConfigs,
+                    stanzaEndTime,
+                    stanzaType
+                }
             } = this.props,
 
-            {
-                stanzaVerseConfigs,
-                stanzaEndTime,
-                stanzaType
-            } = stanzaConfig,
-
-            stanzaStartTime = stanzaVerseConfigs[0].verseStartTime,
+            { verseStartTime: stanzaStartTime } = stanzaVerseConfigs[0],
 
             /**
              * Width of stanza is exactly proportionate to its duration within
@@ -75,12 +73,14 @@ class SliderStanza extends PureComponent {
 
         return (
             <div
-                className={cx(
-                    logicSelectors,
-                    'SliderStanza',
-                    `SliderStanza__${stanzaType}`
-                )}
-                style={stanzaStyle}
+                {...{
+                    className: cx(
+                        'SliderStanza',
+                        `SliderStanza__${stanzaType}`,
+                        logicSelectors
+                    ),
+                    style: stanzaStyle
+                }}
             >
                 {/* This is the tab's box shadow. */}
                 <div className={cx(

@@ -85,20 +85,24 @@ class LyricAccess extends PureComponent {
         return (
             <___>
                 <AccessLetters
-                    accessIconsName="lyricLeftRight"
-                    showIfAccessed={showLeftRight}
-                    accessKeys={[
-                        ARROW_LEFT,
-                        ARROW_RIGHT
-                    ]}
+                    {...{
+                        accessIconsName: 'lyricLeftRight',
+                        showIfAccessed: showLeftRight,
+                        accessKeys: [
+                            ARROW_LEFT,
+                            ARROW_RIGHT
+                        ]
+                    }}
                 />
                 <AccessLetters
-                    accessIconsName="lyricUpDown"
-                    showIfAccessed={showUpDown}
-                    accessKeys={[
-                        ARROW_UP,
-                        ARROW_DOWN
-                    ]}
+                    {...{
+                        accessIconsName: 'lyricUpDown',
+                        showIfAccessed: showUpDown,
+                        accessKeys: [
+                            ARROW_UP,
+                            ARROW_DOWN
+                        ]
+                    }}
                 />
             </___>
         )

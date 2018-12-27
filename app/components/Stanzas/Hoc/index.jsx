@@ -44,9 +44,7 @@ const propTypes = {
 
         return (
             <StanzaComponent {...other}
-                {...{
-                    logicSelectors
-                }}
+                {...{ logicSelectors }}
             />
         )
     })

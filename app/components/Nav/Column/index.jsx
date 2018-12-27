@@ -76,13 +76,13 @@ class NavColumn extends PureComponent {
                 {isShownColumn ?
                     <NavBookLogue
                         {...{
-                            bookIndex: bookIndex,
+                            bookIndex,
                             handleButtonClick: this._handleNavSongSelect
                         }}
                     /> :
                     <NavBookToggle
                         {...{
-                            bookIndex: bookIndex,
+                            bookIndex,
                             handleButtonClick: this._handleNavBookClick
                         }}
                     />
