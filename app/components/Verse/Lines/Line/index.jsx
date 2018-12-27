@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../../../Texts'
-import { TITLE } from 'constants/lyrics'
 
 const mapStateToProps = ({
     renderedStore: { renderedSongIndex }
@@ -75,8 +74,9 @@ class VerseLine extends PureComponent {
                         !inVerseBar && 'sibling__verseCursor',
 
                         // Stanzas, left, centre, right.
+                        `VerseLine__${columnKey}`,
+
                         {
-                            [`VerseLine__${columnKey}`]: columnKey !== TITLE,
                             'VerseLine__truncatable': isTruncatable
                         }
                     )}

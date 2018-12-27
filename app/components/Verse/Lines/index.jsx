@@ -68,9 +68,9 @@ const verseLinesPropTypes = {
 
             lyricsLineProps = {
                 text:
-                verseObject[doublespeakerKey]
-                || verseObject[LYRIC]
-                || verseObject[CENTRE],
+                    verseObject[doublespeakerKey]
+                    || verseObject[LYRIC]
+                    || verseObject[CENTRE],
 
                 isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
                 isVerseEndingSpan: verseObject.isVerseEndingSpan
