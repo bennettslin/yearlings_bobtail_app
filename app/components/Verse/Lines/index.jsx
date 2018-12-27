@@ -10,7 +10,7 @@ import cx from 'classnames'
 import VerseLine from './Line'
 
 import {
-    EAR_COLUMN_KEYS, TITLE, CENTRE, LYRIC
+    EAR_COLUMN_KEYS, CENTRE, LYRIC
 } from 'constants/lyrics'
 
 const verseLinesPropTypes = {
@@ -55,8 +55,7 @@ const verseLinesPropTypes = {
     verseLinesChildPropTypes = {
     // From parent.
         verseObject: PropTypes.object.isRequired,
-        doublespeakerKey: PropTypes.string,
-        isTitle: PropTypes.bool
+        doublespeakerKey: PropTypes.string
     },
 
     VerseLinesChild = memo((props) => {
@@ -64,7 +63,6 @@ const verseLinesPropTypes = {
         const {
                 verseObject,
                 doublespeakerKey,
-                isTitle,
                 ...other
             } = props,
 
@@ -82,9 +80,6 @@ const verseLinesPropTypes = {
 
         if (doublespeakerKey) {
             columnKey = doublespeakerKey
-
-        } else if (isTitle) {
-            columnKey = TITLE
 
         } else if (verseObject[CENTRE]) {
             columnKey = CENTRE

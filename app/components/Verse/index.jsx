@@ -91,8 +91,7 @@ class Verse extends PureComponent {
 
             {
                 lyric,
-                centre,
-                isTitle
+                centre
             } = verseObject,
 
             isInteractable = this.getIsInteractable()
@@ -102,7 +101,6 @@ class Verse extends PureComponent {
                 <VerseView {...other}
                     {...{
                         setRef: this.setVerseRef,
-                        isTitle,
                         isInteractable,
                         isDoubleSpeaker: !lyric && !centre,
                         handleInteractivatableClick: this._handleInteractivatableClick
@@ -153,8 +151,7 @@ const verseViewDefaultProps = {
 
         const {
             inVerseBar,
-            verseIndex,
-            isTitle
+            verseIndex
         } = other
 
         return (
@@ -165,7 +162,6 @@ const verseViewDefaultProps = {
                     logicSelectors,
                     'Verse',
 
-                    isTitle && 'Verse__title',
                     inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
                     !isNaN(verseIndex) &&

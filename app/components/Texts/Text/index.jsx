@@ -66,14 +66,13 @@ const propTypes = {
 
             } else {
                 const {
-                        lyric,
                         anchor,
                         annotationIndex
                     } = textEntity,
 
-                    showAsPlainText = lyric || inWormhole || inVerseBar,
+                    showAsPlainText = inWormhole || inVerseBar,
 
-                    text = lyric || anchor
+                    text = anchor
 
                 if (showAsPlainText) {
                     const {
