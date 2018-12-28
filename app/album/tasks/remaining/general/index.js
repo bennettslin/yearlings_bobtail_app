@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Setting popup annotation in route does not show it.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
         workedHours: 0,
         neededHours: 3

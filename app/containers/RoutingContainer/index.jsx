@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { updateRenderedStore } from 'flux/rendered/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateSessionStore } from 'flux/session/action'
+import { updateTransientStore } from 'flux/transient/action'
 
 import ListenerContainer from '../ListenerContainer'
 
@@ -24,6 +25,7 @@ class RoutingContainer extends PureComponent {
         updateSongStore: PropTypes.func.isRequired,
         updateRenderedStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
+        updateTransientStore: PropTypes.func.isRequired,
 
         // From parent.
         match: PropTypes.object.isRequired,
@@ -80,6 +82,10 @@ class RoutingContainer extends PureComponent {
                 renderedVerseIndex: routingVerseIndex,
                 renderedAnnotationIndex: routingAnnotationIndex,
                 renderedSceneIndex: routingSceneIndex
+            })
+
+            this.props.updateTransientStore({
+                popupAnnotationIndex: routingAnnotationIndex
             })
 
             // Reset wiki.
@@ -157,6 +163,7 @@ export default connect(
     {
         updateRenderedStore,
         updateSongStore,
-        updateSessionStore
+        updateSessionStore,
+        updateTransientStore
     }
 )(RoutingContainer)
