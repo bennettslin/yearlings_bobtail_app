@@ -6,27 +6,40 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+
+import { getStanzaConfig } from 'album/api/stanzas'
 
 import Unit from '../Unit'
 
+const mapStateToProps = ({
+    renderedStore: { renderedSongIndex }
+}) => ({
+    renderedSongIndex
+})
+
 const propTypes = {
-    // From parent.
-        logicSelectors: PropTypes.string.isRequired,
-        stanzaConfig: PropTypes.shape({
-            stanzaUnitIndices: PropTypes.array.isRequired
-        }).isRequired
+        // Through Redux.
+        renderedSongIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        stanzaIndex: PropTypes.number.isRequired,
+        logicSelectors: PropTypes.string.isRequired
     },
 
     Stanza = memo(({
+        renderedSongIndex,
+        stanzaIndex,
         logicSelectors,
-        stanzaConfig,
 
         ...other
     }) => {
 
-        const {
-            stanzaUnitIndices
-        } = stanzaConfig
+        const
+            { stanzaUnitIndices } = getStanzaConfig(
+                renderedSongIndex,
+                stanzaIndex
+            )
 
         return (
             <div
@@ -49,4 +62,4 @@ const propTypes = {
 
 Stanza.propTypes = propTypes
 
-export default Stanza
+export default connect(mapStateToProps)(Stanza)

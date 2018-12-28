@@ -1,28 +1,47 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+
+import { getStanzaConfig } from 'album/api/stanzas'
 
 import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
 
+const mapStateToProps = ({
+    renderedStore: { renderedSongIndex }
+}) => ({
+    renderedSongIndex
+})
+
 const propTypes = {
-    stanzaVerseConfigs: PropTypes.array.isRequired,
+    // Through Redux.
+    renderedSongIndex: PropTypes.number.isRequired,
+
+    // From parents.
+    stanzaIndex: PropTypes.number.isRequired,
     stanzaDuration: PropTypes.number.isRequired
 }
 
 const SliderVerses = memo(({
-    stanzaVerseConfigs,
+    renderedSongIndex,
+    stanzaIndex,
     stanzaDuration
 }) => {
 
-    const stanzaFirstVerseIndex = stanzaVerseConfigs[0].verseIndex,
+    const
+        { stanzaVerseConfigs } = getStanzaConfig(
+            renderedSongIndex,
+            stanzaIndex
+        ),
+        stanzaFirstVerseIndex = stanzaVerseConfigs[0].verseIndex,
         stanzaStartTime = stanzaVerseConfigs[0].verseStartTime
 
     return (
         <div className={cx(
             'SliderVerses'
         )}>
-            {stanzaVerseConfigs.map((verseObject, index) => {
+            {stanzaVerseConfigs.map((verseConfig, index) => {
                 /**
                  * Slider verses are not concerned with their times
                  * respective to the song's total time. They only know
@@ -32,7 +51,7 @@ const SliderVerses = memo(({
                     {
                         verseStartTime,
                         verseDuration
-                    } = verseObject,
+                    } = verseConfig,
 
                     relativeStartTime = verseStartTime - stanzaStartTime,
 
@@ -60,4 +79,4 @@ const SliderVerses = memo(({
 
 SliderVerses.propTypes = propTypes
 
-export default SliderVerses
+export default connect(mapStateToProps)(SliderVerses)

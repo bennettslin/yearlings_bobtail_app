@@ -1,26 +1,38 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import { getParentOfVerseClassNamesForIndices } from '../helper'
+import { getStanzaConfig } from 'album/api/stanzas'
+
+const mapStateToProps = ({
+    renderedStore: { renderedSongIndex }
+}) => ({
+    renderedSongIndex
+})
 
 const propTypes = {
-    // From parent.
+        // Through Redux.
+        renderedSongIndex: PropTypes.number.isRequired,
+
+        // From parent.
         stanzaIndex: PropTypes.number.isRequired,
-        stanzaConfig: PropTypes.shape({
-            stanzaVerseConfigs: PropTypes.array.isRequired
-        }).isRequired,
         StanzaComponent: PropTypes.func.isRequired
     },
 
     StanzaHoc = memo(({
+        renderedSongIndex,
         StanzaComponent,
-        stanzaIndex,
         ...other
     }) => {
 
-        const { stanzaConfig } = other,
-            { stanzaVerseConfigs } = stanzaConfig,
+        const { stanzaIndex } = other,
+
+            { stanzaVerseConfigs } = getStanzaConfig(
+                renderedSongIndex,
+                stanzaIndex
+            ),
 
             logicSelectors = cx(
             // "Child component stanza index."
@@ -51,4 +63,4 @@ const propTypes = {
 
 StanzaHoc.propTypes = propTypes
 
-export default StanzaHoc
+export default connect(mapStateToProps)(StanzaHoc)

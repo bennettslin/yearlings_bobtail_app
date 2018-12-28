@@ -1,37 +1,52 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+
+import { getStanzaConfig } from 'album/api/stanzas'
+import { getSongTotalTime } from 'album/api/time'
 
 import SliderVerses from './Verses'
 
 import { LS_OVERLAP_MARGIN_X_SLIDER } from 'constants/responsive'
 
+const mapStateToProps = ({
+    renderedStore: { renderedSongIndex }
+}) => ({
+    renderedSongIndex
+})
+
 class SliderStanza extends PureComponent {
 
     static propTypes = {
+        // Through Redux.
+        renderedSongIndex: PropTypes.number.isRequired,
+
+        // From parents.
+        stanzaIndex: PropTypes.number.isRequired,
         logicSelectors: PropTypes.string.isRequired,
-        isLastStanza: PropTypes.bool.isRequired,
-        stanzaConfig: PropTypes.shape({
-            stanzaVerseConfigs: PropTypes.array.isRequired,
-            stanzaEndTime: PropTypes.number.isRequired,
-            stanzaType: PropTypes.string.isRequired
-        }).isRequired,
-        songTotalTime: PropTypes.number.isRequired
+        isLastStanza: PropTypes.bool.isRequired
     }
 
     render() {
         const {
+                renderedSongIndex,
+                stanzaIndex,
                 logicSelectors,
-                isLastStanza,
-                songTotalTime,
-                stanzaConfig: {
-                    stanzaVerseConfigs,
-                    stanzaEndTime,
-                    stanzaType
-                }
+                isLastStanza
             } = this.props,
+            {
+                stanzaVerseConfigs,
+                stanzaEndTime,
+                stanzaType
+            } = getStanzaConfig(
+                renderedSongIndex,
+                stanzaIndex
+            ),
 
             { verseStartTime: stanzaStartTime } = stanzaVerseConfigs[0],
+
+            songTotalTime = getSongTotalTime(renderedSongIndex),
 
             /**
              * Width of stanza is exactly proportionate to its duration within
@@ -67,9 +82,7 @@ class SliderStanza extends PureComponent {
             stanzaStyle = {
                 right: formattedStanzaRight,
                 width: formattedStanzaWidth
-            },
-
-            stanzaDuration = stanzaEndTime - stanzaStartTime
+            }
 
         return (
             <div
@@ -98,9 +111,8 @@ class SliderStanza extends PureComponent {
                 )}>
                     <SliderVerses
                         {...{
-                            stanzaVerseConfigs,
-                            stanzaEndTime,
-                            stanzaDuration
+                            stanzaIndex,
+                            stanzaDuration: stanzaEndTime - stanzaStartTime
                         }}
                     />
                 </div>
@@ -118,4 +130,4 @@ class SliderStanza extends PureComponent {
     }
 }
 
-export default SliderStanza
+export default connect(mapStateToProps)(SliderStanza)

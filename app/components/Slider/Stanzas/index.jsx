@@ -8,8 +8,8 @@ import cx from 'classnames'
 import StanzaHoc from '../../Stanzas/Hoc'
 import SliderStanza from './Stanza'
 
-import { getSongTotalTime } from 'album/api/time'
-import { getSongStanzaConfigs } from 'album/api/stanzas'
+import { getSongStanzasCount } from 'album/api/stanzas'
+import { getArrayOfLength } from '../../../helpers/general'
 
 const mapStateToProps = ({
     renderedStore: { renderedSongIndex }
@@ -25,19 +25,18 @@ class SliderStanzas extends PureComponent {
     }
 
     render() {
-        const { renderedSongIndex } = this.props,
-            songTotalTime = getSongTotalTime(renderedSongIndex),
-            songStanzaConfigs = getSongStanzaConfigs(renderedSongIndex)
+        const
+            { renderedSongIndex } = this.props,
+            songStanzasCount = getSongStanzasCount(renderedSongIndex),
+            stanzaIndicesArray = getArrayOfLength(songStanzasCount)
 
         return (
             <div className={cx(
                 'SliderStanzas',
                 'abF'
             )}>
-                {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
-
-                    const isLastStanza =
-                        stanzaIndex === songStanzaConfigs.length - 1
+                {stanzaIndicesArray.map(stanzaIndex => {
+                    const isLastStanza = stanzaIndex === songStanzasCount - 1
 
                     return (
                         <StanzaHoc
@@ -45,8 +44,6 @@ class SliderStanzas extends PureComponent {
                             {...{
                                 stanzaIndex,
                                 isLastStanza,
-                                songTotalTime,
-                                stanzaConfig,
                                 StanzaComponent: SliderStanza
                             }}
                         />
