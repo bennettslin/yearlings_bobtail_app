@@ -7,10 +7,12 @@ Setup *must* wait for breakdown to finish before starting.
 
 * Mount:
 * Carousel, lyric, and slider mount.
-* Cubes and presences mount. They do *not* animate in.
+* Cubes mount. They do *not* animate in.
 
 * Setup:
 * Curtains part. Carousel, lyric, and slider animate in.
+* Only after, cubes shift.
+* Presences animate in.
 
 # Window resize
 

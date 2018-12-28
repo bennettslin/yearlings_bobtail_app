@@ -82,6 +82,13 @@ const
         queuedPlayVerseIndex: -1
     },
 
+    CURTAIN_DEFAULTS = {
+        isCurtainClosing: false,
+        isCurtainClosed: false,
+        isCurtainOpening: false,
+        isCurtainOpened: false
+    },
+
     DEVICE_DEFAULTS = {
         deviceIndex: DEVICE_OBJECTS.length - 1,
         isPhone: false,
@@ -267,12 +274,18 @@ const
         isVerseBarBelow: false,
         queuedDetermineVerseBars: false,
         queuedVerseBarsTimeout: 0
+    },
+
+    WINDOW_DEFAULTS = {
+        isWindowResizing: false,
+        isWindowResized: false
     }
 
 export {
     ACCESS_DEFAULTS,
     ANNOTATION_DEFAULTS,
     AUDIO_DEFAULTS,
+    CURTAIN_DEFAULTS,
     DEVICE_DEFAULTS,
     DOTS_DEFAULTS,
     EVENT_DEFAULTS,
@@ -291,5 +304,6 @@ export {
     SONG_DEFAULTS,
     TOGGLE_DEFAULTS,
     TRANSIENT_DEFAULTS,
-    VERSE_BARS_DEFAULTS
+    VERSE_BARS_DEFAULTS,
+    WINDOW_DEFAULTS
 }

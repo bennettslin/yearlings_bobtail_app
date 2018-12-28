@@ -1,38 +1,38 @@
-module.exports = {
-    ACCESS_STORE: 'accessStore',
-    ANNOTATION_STORE: 'annotationStore',
-    AUDIO_STORE: 'audioStore',
-    DEVICE_STORE: 'deviceStore',
-    DOTS_STORE: 'dotsStore',
-    EVENT_STORE: 'eventStore',
-    LOAD_STORE: 'loadStore',
-    OPTION_STORE: 'optionStore',
-    PLAYERS_STORE: 'playersStore',
-    RENDER_STORE: 'renderStore',
-    RENDERABLE_STORE: 'renderableStore',
-    RENDERED_STORE: 'renderedStore',
-    RESPONSIVE_STORE: 'responsiveStore',
-    SCENE_STORE: 'sceneStore',
-    SCROLL_CAROUSEL_STORE: 'scrollCarouselStore',
-    SCROLL_LYRIC_STORE: 'scrollLyricStore',
-    SESSION_STORE: 'sessionStore',
-    SLIDER_STORE: 'sliderStore',
-    SONG_STORE: 'songStore',
-    TOGGLE_STORE: 'toggleStore',
-    TRANSIENT_STORE: 'transientStore',
-    VERSE_BARS_STORE: 'verseBarsStore',
+export const ACCESS_STORE = 'accessStore'
+export const ANNOTATION_STORE = 'annotationStore'
+export const AUDIO_STORE = 'audioStore'
+export const CURTAIN_STORE = 'curtainStore'
+export const DEVICE_STORE = 'deviceStore'
+export const DOTS_STORE = 'dotsStore'
+export const EVENT_STORE = 'eventStore'
+export const LOAD_STORE = 'loadStore'
+export const OPTION_STORE = 'optionStore'
+export const PLAYERS_STORE = 'playersStore'
+export const RENDER_STORE = 'renderStore'
+export const RENDERABLE_STORE = 'renderableStore'
+export const RENDERED_STORE = 'renderedStore'
+export const RESPONSIVE_STORE = 'responsiveStore'
+export const SCENE_STORE = 'sceneStore'
+export const SCROLL_CAROUSEL_STORE = 'scrollCarouselStore'
+export const SCROLL_LYRIC_STORE = 'scrollLyricStore'
+export const SESSION_STORE = 'sessionStore'
+export const SLIDER_STORE = 'sliderStore'
+export const SONG_STORE = 'songStore'
+export const TOGGLE_STORE = 'toggleStore'
+export const TRANSIENT_STORE = 'transientStore'
+export const VERSE_BARS_STORE = 'verseBarsStore'
+export const WINDOW_STORE = 'windowStore'
 
-    IS_ACCESS_ON: 'isAccessOn',
-    IS_ADMIN_ON: 'isAdminOn',
-    IS_CAROUSEL_SHOWN: 'isCarouselShown',
-    SELECTED_DOT_KEYS: 'selectedDotKeys',
+export const IS_ACCESS_ON = 'isAccessOn'
+export const IS_ADMIN_ON = 'isAdminOn'
+export const IS_CAROUSEL_SHOWN = 'isCarouselShown'
+export const SELECTED_DOT_KEYS = 'selectedDotKeys'
 
-    SELECTED_SONG_INDEX: 'selectedSongIndex',
-    SELECTED_VERSE_INDEX: 'selectedVerseIndex',
-    SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
+export const SELECTED_SONG_INDEX = 'selectedSongIndex'
+export const SELECTED_VERSE_INDEX = 'selectedVerseIndex'
+export const SELECTED_ANNOTATION_INDEX = 'selectedAnnotationIndex'
 
-    SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
-    SELECTED_EAR_COLUMN_INDEX: 'earColumnIndex',
-    SELECTED_OVERVIEW_OPTION: 'selectedOverviewOption',
-    SELECTED_TIPS_OPTION: 'selectedTipsOption'
-}
+export const SELECTED_AUDIO_OPTION_INDEX = 'selectedAudioOptionIndex'
+export const SELECTED_EAR_COLUMN_INDEX = 'earColumnIndex'
+export const SELECTED_OVERVIEW_OPTION = 'selectedOverviewOption'
+export const SELECTED_TIPS_OPTION = 'selectedTipsOption'
