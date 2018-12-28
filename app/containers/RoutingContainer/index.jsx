@@ -45,7 +45,7 @@ class RoutingContainer extends PureComponent {
                 routingAnnotationIndex
             } = routingIndicesObject
 
-        console.error(routingIndicesObject)
+        // console.error(routingIndicesObject)
 
         const {
             selectedSongIndex,

@@ -4266,5 +4266,10 @@ export default [
         taskName: `General unit refactoring.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Make verse object lookup more efficient. More unit refactoring in general.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

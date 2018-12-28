@@ -5,12 +5,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Make verse object lookup more efficient.`,
+        taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
+        taskName: `Routing is wonky. Wrong verse or wrong annotation do not reset in path. Setting popup annotation does not show it.`,
         workedHours: 0,
         neededHours: 3
     },
