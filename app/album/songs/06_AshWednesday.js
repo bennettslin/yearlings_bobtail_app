@@ -12,7 +12,7 @@ import {
     PRECHORUS,
     CHORUS,
     BRIDGE,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -22,8 +22,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             {
@@ -38,8 +38,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `For a song about two people who couldn't be any more different, I juxtaposed`,
@@ -61,7 +61,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     lyric: [
@@ -161,8 +161,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The shrieking whistles, which remind me of`,
@@ -180,7 +180,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 16,
                     lyric: [
@@ -246,7 +246,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 30,
                     // Note: I'm spelling out Saint, from St.
@@ -291,8 +291,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the`,
@@ -308,7 +308,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 46,
                     lyric: [
@@ -383,7 +383,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 62,
                     lyric: `Couldn't heaven, her heaven,`
@@ -414,7 +414,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 76,
                     lyric: [
@@ -569,8 +569,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps between the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
                         dotKeys: {
@@ -580,7 +580,7 @@ export default {
                 },
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 95,
                     lyric: [
@@ -673,8 +673,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
@@ -691,7 +691,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 123,
                     lyric: `On this sad day to mourn`
@@ -748,8 +748,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza corresponded with their`,
@@ -766,7 +766,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 138,
                     lyric: `On this Ash Wednesday morn,`

@@ -5,9 +5,9 @@ export const addDotUnitsCount = (song) => {
         let dotUnitsCount = 0
 
         lyricUnits.forEach(unit => {
-            const { unitMap: { dotUnit } } = unit
+            const { unitMap: { unitDot } } = unit
 
-            if (dotUnit) {
+            if (unitDot) {
                 dotUnitsCount++
             }
         })

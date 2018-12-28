@@ -12,7 +12,7 @@ import {
     BRIDGE,
     INTRO,
     REFRAIN,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -23,8 +23,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                         dotKeys: {
@@ -37,8 +37,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
@@ -58,7 +58,7 @@ export default {
                 },
                 stanzaType: INTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -76,8 +76,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `A`,
@@ -95,7 +95,7 @@ export default {
                 },
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 4,
                     isCentre: true,
@@ -108,8 +108,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
                         dotKeys: {
@@ -120,7 +120,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 24,
                     left: [
@@ -320,7 +320,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 39,
                     left: [
@@ -407,7 +407,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 46,
                     left: `Though, she ponders the children`,
@@ -544,7 +544,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 61,
                     left: `Despite once promising forever,`,
@@ -591,7 +591,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 70,
                     isCentre: true,
@@ -604,8 +604,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         // NOTE: Change in recording? Connect to Uncanny Valley?
                         description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,
@@ -616,7 +616,7 @@ export default {
                 },
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 90,
                     isCentre: true,
@@ -820,7 +820,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 112,
                     left: [
@@ -953,7 +953,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 127,
                     left: `Lights one up then draws a daring`,
@@ -1012,7 +1012,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 135,
                     isCentre: true,

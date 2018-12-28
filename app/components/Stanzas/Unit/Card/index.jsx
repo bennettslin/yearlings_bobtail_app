@@ -25,17 +25,17 @@ class UnitCard extends PureComponent {
         stanzaTypeIndex: PropTypes.number,
         stanzaType: PropTypes.string.isRequired,
 
-        stanzaArray: PropTypes.array.isRequired,
+        versesArray: PropTypes.array.isRequired,
         handleVerseSelect: PropTypes.func
     }
 
     handleStanzaTabClick = () => {
         const {
                 handleVerseSelect,
-                stanzaArray
+                versesArray
             } = this.props,
 
-            { verseIndex } = stanzaArray[0]
+            { verseIndex } = versesArray[0]
 
         handleVerseSelect({
             selectedVerseIndex: verseIndex,
@@ -51,16 +51,16 @@ class UnitCard extends PureComponent {
             stanzaType,
 
             // From controller.
-            stanzaArray,
+            versesArray,
 
             ...other
         } = this.props
 
-        if (stanzaArray) {
+        if (versesArray) {
             return (
                 <UnitCardView {...other}
                     {...{
-                        stanzaArray,
+                        versesArray,
                         stanzaTypeIndex,
                         stanzaType,
                         handleStanzaTabClick: this.handleStanzaTabClick
@@ -83,14 +83,14 @@ const propTypes = {
             PropTypes.bool,
             PropTypes.number
         ]),
-        stanzaArray: PropTypes.array.isRequired,
+        versesArray: PropTypes.array.isRequired,
         stanzaType: PropTypes.string.isRequired,
 
         handleStanzaTabClick: PropTypes.func.isRequired
     },
 
     UnitCardView = ({
-        stanzaArray,
+        versesArray,
         stanzaTypeIndex,
         stanzaType,
         handleStanzaTabClick,
@@ -113,7 +113,7 @@ const propTypes = {
 
                 // "Parent of verse index."
                 getParentOfVerseClassNamesForIndices({
-                    entities: stanzaArray
+                    entities: versesArray
                 }),
 
                 'UnitCard',
@@ -144,7 +144,7 @@ const propTypes = {
                     'bgColour__unit__pattern',
                     `bgColour__stanzaType__${stanzaType}`
                 )}>
-                    {stanzaArray.map((verseObject, stanzaVerseIndex) => {
+                    {versesArray.map((verseObject, stanzaVerseIndex) => {
                         const { verseIndex } = verseObject
 
                         return (

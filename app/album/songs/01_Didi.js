@@ -17,7 +17,7 @@ import {
     OUTRO,
     REFRAIN,
     FLASHBACK_TO_WORMHOLE_PREFIX,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -27,8 +27,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `In Chinese,`,
@@ -52,8 +52,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
@@ -72,7 +72,7 @@ export default {
                 },
                 stanzaType: INTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -87,7 +87,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 11,
                     isCentre: true,
@@ -100,8 +100,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             {
@@ -120,7 +120,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 17,
                     lyric: `Didi left the house this morning`
@@ -162,7 +162,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 40,
                     lyric: [
@@ -186,8 +186,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The nonstop modulations between the`,
@@ -204,7 +204,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 52,
                     lyric: [
@@ -237,7 +237,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 63,
                     lyric: [
@@ -294,7 +294,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS,
                 subCardType: RESPONSE,
-                subCard: [
+                subVerse: [
                     {
                         time: 97,
                         lyric: {
@@ -304,7 +304,7 @@ export default {
                     }
                 ]
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 85,
                     lyric: [
@@ -331,7 +331,7 @@ export default {
             unitMap: {
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 100,
                     lyric: `Didi, someday you will be a hero`
@@ -367,8 +367,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
                         dotKeys: {
@@ -379,7 +379,7 @@ export default {
                 stanzaType: BRIDGE,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 112,
                     lyric: `Didi, one day you will be a picture`
@@ -421,7 +421,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 123,
                     isCentre: true,
@@ -436,7 +436,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 129,
                     lyric: `Didi dear, I'm sorry that I yelled at you that way.`
@@ -451,7 +451,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 141,
                     lyric: `And now I think all I want is my Didi well by tomorrow,`
@@ -464,8 +464,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The song ends in G\u2011flat major, the remaining major triad belonging to the`,
@@ -483,7 +483,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 152,
                     lyric: `Yes, and now I think all I want is my Didi well by tomorrow,`
@@ -498,7 +498,7 @@ export default {
             unitMap: {
                 stanzaType: OUTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 163,
                     isCentre: true,
@@ -511,8 +511,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,

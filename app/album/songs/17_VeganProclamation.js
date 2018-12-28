@@ -15,7 +15,7 @@ import {
     REFRAIN,
     SOLO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -25,8 +25,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
@@ -46,8 +46,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `As the previous song ends with me fading away while listening to my favourite records, the crackle of a needle on vinyl introduces the third and final song of the medley.`,
                         dotKeys: {
@@ -57,7 +57,7 @@ export default {
                 },
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     lyric: [
@@ -84,8 +84,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast stuck with me, and I thought it would work well here.`,
                         dotKeys: {
@@ -97,7 +97,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 15,
                     lyric: [
@@ -191,7 +191,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 30,
                     lyric: `We baulked at our lives born unfair,`
@@ -221,7 +221,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 46,
                     lyric: [
@@ -264,8 +264,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `Sasha recited these quotes for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't think to write them with that concern in mind. I was so pretentious at the time, I forgot that normal people don't pepper their conversations with pseudo-intellectual drivel.`,
                         dotKeys: {
@@ -275,7 +275,7 @@ export default {
                 },
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 60,
                     lyric: [
@@ -335,7 +335,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 74,
                     lyric: [
@@ -384,7 +384,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 90,
                     lyric: [
@@ -485,7 +485,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 106,
                     lyric: `Well, if first cuts are the worst ones bled…`
@@ -536,8 +536,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `When Sita and I first met, she asked to hear some of my music. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                         dotKeys: {
@@ -547,7 +547,7 @@ export default {
                 },
                 stanzaType: SOLO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 123,
                     isCentre: true,
@@ -562,7 +562,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 138,
                     lyric: [
@@ -629,7 +629,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 170,
                     isCentre: true,
@@ -644,7 +644,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 186,
                     lyric: [
@@ -778,7 +778,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 218,
                     isCentre: true,
@@ -791,8 +791,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I was a vegan for the five years that I spent working on`,

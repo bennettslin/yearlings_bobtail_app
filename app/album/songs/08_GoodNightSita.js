@@ -11,7 +11,7 @@ import {
     VERSES,
     CHORUS,
     POSTCHORUS,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -21,8 +21,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
                         dotKeys: {
@@ -34,8 +34,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `In the final chapter of James Joyce's`,
@@ -53,7 +53,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     lyric: `"Good night," she says`
@@ -62,8 +62,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
                         dotKeys: {
@@ -74,7 +74,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 3,
                     lyric: [
@@ -122,7 +122,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 11,
                     lyric: `when cesspit dead ends for further speech`
@@ -208,7 +208,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 18,
                     lyric: `but even no sponge`
@@ -321,7 +321,7 @@ export default {
             unitMap: {
                 stanzaType: POSTCHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 29,
                     lyric: [
@@ -398,7 +398,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 45,
                     lyric: `but totems so revered`
@@ -472,7 +472,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 52,
                     lyric: [
@@ -539,7 +539,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 60,
                     lyric: `but even so`
@@ -600,8 +600,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The band Television are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
@@ -618,7 +618,7 @@ export default {
                 },
                 stanzaType: POSTCHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 71,
                     lyric: `we whine when first we got shunned`
@@ -666,7 +666,7 @@ export default {
                 stanzaType: POSTCHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 79,
                     lyric: [
@@ -720,7 +720,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 86,
                     lyric: [
@@ -767,7 +767,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 94,
                     lyric: `and a lass sniffing out these rote charms`
@@ -825,8 +825,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Children's albums from the 70s are a treasure trove of musical wisdom, including the soundtrack for`,
@@ -844,7 +844,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 101,
                     lyric: [
@@ -904,7 +904,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 113,
                     lyric: `when boys who mope`
@@ -945,8 +945,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Ambrose Bierce also wrote the short story`,
@@ -964,7 +964,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 123,
                     lyric: {

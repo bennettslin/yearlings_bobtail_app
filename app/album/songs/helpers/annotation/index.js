@@ -81,15 +81,15 @@ export const addAnnotations = (song) => {
         lyricUnits.forEach(unit => {
             const {
                     unitMap,
-                    lyricUnit
+                    mainVerses
                 } = unit,
 
-                lyricUnitAndUnitMap = [
-                    ...lyricUnit || [],
+                mainVersesAndUnitMap = [
+                    ...mainVerses || [],
                     unitMap
                 ]
 
-            lyricUnitAndUnitMap.forEach(verse => {
+            mainVersesAndUnitMap.forEach(verse => {
 
                 _recurseToFindAnnotations({
                     song,

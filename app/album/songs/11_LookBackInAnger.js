@@ -15,7 +15,7 @@ import {
     INTRO,
     OUTRO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -25,8 +25,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `John Osborne's play`,
@@ -48,8 +48,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
                         dotKeys: {
@@ -60,7 +60,7 @@ export default {
                 },
                 stanzaType: INTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -73,8 +73,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
@@ -92,7 +92,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 10,
                     lyric: [
@@ -195,8 +195,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `When I asked Owen to recommend some great lyricists, he named just one: Nas. I hadn't given serious thought to hip hop at the time, believing it too far removed from my own songwriting approach to offer much useful wisdom. I've since corrected this oversight, but even as my lone point of reference back then,`,
@@ -219,7 +219,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 22,
                     lyric: [
@@ -303,7 +303,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 33,
                     lyric: [
@@ -352,7 +352,7 @@ export default {
                 stanzaType: PRECHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 45,
                     lyric: [
@@ -428,8 +428,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `I recorded the cymbals here at an extremely low tape speed, which turned them into pitched percussion upon normal playback.`,
                         dotKeys: {
@@ -439,7 +439,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 56,
                     lyric: `Well there are ways to make a treat of life,`
@@ -474,7 +474,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 81,
                     lyric: [
@@ -519,7 +519,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 91,
                     lyric: `Now each new concession sees this`
@@ -556,7 +556,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 103,
                     lyric: `Beyonders prevail, the letters preached,`
@@ -610,7 +610,7 @@ export default {
             unitMap: {
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 115,
                     lyric: `Though, if you're right to want what's yours,`
@@ -676,7 +676,7 @@ export default {
                 stanzaType: BRIDGE,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 127,
                     lyric: [
@@ -735,7 +735,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 139,
                     lyric: `Yes, you were wrong to make demands on life,`
@@ -782,7 +782,7 @@ export default {
             unitMap: {
                 stanzaType: OUTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 161,
                     isCentre: true,

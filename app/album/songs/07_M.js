@@ -12,7 +12,7 @@ import {
     INTRO,
     RESPONSE,
     OUTRO,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -22,8 +22,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. Deep down, I probably knew that I wasn't fooling anyone.`,
                         dotKeys: {
@@ -35,8 +35,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `This song is a carryover from back when the band was still just The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
                         dotKeys: {
@@ -45,7 +45,7 @@ export default {
                         }
                     }
                 },
-                subCard: [
+                subVerse: [
                     {
                         time: 33,
                         isCentre: true,
@@ -75,7 +75,7 @@ export default {
                 stanzaType: INTRO,
                 subCardType: RESPONSE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -90,7 +90,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 35,
                     lyric: [
@@ -156,8 +156,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`
@@ -170,7 +170,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 54,
                     lyric: `This moron marooned, a method mapped in my cocoon`
@@ -264,8 +264,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I learned to play banjo by reading`,
@@ -283,7 +283,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 75,
                     lyric: `Year five, and now the one who dug me up`
@@ -316,8 +316,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `Obviously, Jacob was a far better drummer than I am. To match his tempo, I had to record at a lower tape speed.`,
                         dotKeys: {
@@ -328,7 +328,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 84,
                     lyric: [
@@ -385,7 +385,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 94,
                     lyric: [
@@ -464,7 +464,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 114,
                     lyric: [
@@ -569,7 +569,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 133,
                     lyric: `All I know is that whoever finds me`
@@ -634,7 +634,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     /**
                      * TODO: link to urchin in Odin?
@@ -714,7 +714,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 153,
                     lyric: [
@@ -758,7 +758,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 163,
                     lyric: `And now I wonder if the answer might be`
@@ -793,7 +793,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 173,
                     lyric: [
@@ -857,7 +857,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 183,
                     lyric: `And sometimes situations seem the worst,`
@@ -910,7 +910,7 @@ export default {
             unitMap: {
                 stanzaType: OUTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 192,
                     isCentre: true,

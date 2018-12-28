@@ -2,13 +2,13 @@ import { getSongObject } from 'album/api/songs'
 
 export const getAllSelectableVerses = (unit) => {
     const {
-        lyricUnit,
-        unitMap: { subCard }
+        mainVerses,
+        unitMap: { subVerse }
     } = unit
 
     return [
-        ...lyricUnit || [],
-        ...subCard || []
+        ...mainVerses || [],
+        ...subVerse || []
     ]
 }
 

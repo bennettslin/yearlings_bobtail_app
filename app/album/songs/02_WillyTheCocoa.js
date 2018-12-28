@@ -16,7 +16,7 @@ import {
     INTRO,
     SOLO,
     FLASHBACK_TO_WORMHOLE_PREFIX,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -26,8 +26,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
                         dotKeys: {
@@ -39,8 +39,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `In the past, the developmentally disabled were often thought to be`,
@@ -62,7 +62,7 @@ export default {
                 },
                 stanzaType: INTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -75,8 +75,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The chord progression here zigzags between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending pattern at the cadence of each line.`
@@ -88,7 +88,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 11,
                     lyric: `Hilltops gnashing dig out potholes,`
@@ -156,7 +156,7 @@ export default {
                 stanzaType: VERSES,
                 subCardType: RHYME,
                 subsequent: true,
-                subCard: [
+                subVerse: [
                     {
                         time: 30,
                         lyric: {
@@ -177,7 +177,7 @@ export default {
                     }
                 ]
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 23,
                     lyric: [
@@ -231,7 +231,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 32,
                     lyric: [
@@ -253,8 +253,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `In some legends, trolls inadvertently reveal their true identity by using some tool in a wrong manner, so I figured they would also have a peculiar way of playing instruments. As such, I muted the lead guitar and mandolin while throwing in a slew of legato slides.`,
                         dotKeys: {
@@ -266,7 +266,7 @@ export default {
                 },
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 35,
                     lyric: `Oh, has Willy the Cocoa come`
@@ -322,8 +322,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`,
                         dotKeys: {
@@ -334,7 +334,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 47,
                     lyric: [
@@ -444,7 +444,7 @@ export default {
             unitMap: {
                 stanzaType: POSTCHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 71,
                     lyric: [
@@ -563,7 +563,7 @@ export default {
             unitMap: {
                 stanzaType: SOLO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 96,
                     isCentre: true,
@@ -578,7 +578,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 106,
                     lyric: [
@@ -640,7 +640,7 @@ export default {
                 stanzaType: VERSES,
                 subCardType: RHYME,
                 subsequent: true,
-                subCard: [
+                subVerse: [
                     {
                         time: 126,
                         lyric: {
@@ -667,7 +667,7 @@ export default {
                     }
                 ]
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 119,
                     lyric: `Milksop cornered into scuffle,`
@@ -705,7 +705,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 128,
                     lyric: [
@@ -727,8 +727,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I played the electric guitar riff here with both a slide and the whammy bar, which is another nonsensical thing that I could picture trolls doing.`
@@ -741,7 +741,7 @@ export default {
                 },
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 131,
                     lyric: [
@@ -826,7 +826,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 143,
                     lyric: [
@@ -910,7 +910,7 @@ export default {
             unitMap: {
                 stanzaType: POSTCHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 167,
                     lyric: [
@@ -1029,7 +1029,7 @@ export default {
                 stanzaType: POSTCHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 191,
                     lyric: [

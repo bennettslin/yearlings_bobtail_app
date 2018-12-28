@@ -50,16 +50,16 @@ class UnitDot extends PureComponent {
         updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
-        dotUnit: PropTypes.object.isRequired,
+        unitDot: PropTypes.object.isRequired,
         setLyricAnnotationElement: PropTypes.func.isRequired
     }
 
     _handleDotButtonClick = () => {
         const {
-                dotUnit,
+                unitDot,
                 renderedAnnotationIndex
             } = this.props,
-            { annotationIndex } = dotUnit,
+            { annotationIndex } = unitDot,
 
             isSelected = annotationIndex === renderedAnnotationIndex
 
@@ -73,15 +73,15 @@ class UnitDot extends PureComponent {
     setLyricAnnotationElement = (node) => {
         this.props.setLyricAnnotationElement({
             node,
-            index: this.props.dotUnit.annotationIndex
+            index: this.props.unitDot.annotationIndex
         })
     }
 
     render() {
 
-        // FIXME: Ideal to get dotUnit object from indices.
+        // FIXME: Ideal to get unitDot object from indices.
         const {
-                dotUnit,
+                unitDot,
                 renderedAnnotationIndex,
                 accessedAnnotationIndex,
                 isAccessOn,
@@ -94,7 +94,7 @@ class UnitDot extends PureComponent {
             {
                 annotationIndex,
                 dotKeys
-            } = dotUnit,
+            } = unitDot,
 
             isAccessed =
                 isAccessOn &&

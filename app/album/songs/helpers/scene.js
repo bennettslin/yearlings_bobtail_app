@@ -23,11 +23,11 @@ export const addSceneConfigs = (song) => {
             if (!isNaN(unitIndex)) {
                 const
                     unit = lyricUnits[unitIndex],
-                    { lyricUnit } = unit
+                    { mainVerses } = unit
 
                 sceneConfigs.push({
-                    firstVerseIndex: lyricUnit[0].verseIndex,
-                    sceneStartTime: lyricUnit[0].time
+                    firstVerseIndex: mainVerses[0].verseIndex,
+                    sceneStartTime: mainVerses[0].time
                 })
 
             } else {

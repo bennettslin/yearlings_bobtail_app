@@ -4,10 +4,10 @@ const LYRIC = 'lyric',
     RIGHT = 'right',
     ANCHOR = 'anchor',
 
-    SUB_CARD = 'subCard',
+    SUB_CARD = 'subVerse',
     SIDE_CARD = 'sideCard',
     SIDE_SUB_CARD = 'sideSubCard',
-    DOT_UNIT = 'dotUnit'
+    DOT_UNIT = 'unitDot'
 
 module.exports = {
 
@@ -22,7 +22,7 @@ module.exports = {
     COLUMN_INDEX: 'columnIndex',
     WIKI_INDEX: 'wikiIndex',
 
-    IS_DOT_UNIT: 'isDotUnit',
+    IS_UNIT_DOT: 'isUnitDot',
     IS_VERSE_BEGINNING_SPAN: 'isVerseBeginningSpan',
     IS_VERSE_ENDING_SPAN: 'isVerseEndingSpan',
 
@@ -37,13 +37,13 @@ module.exports = {
     OUTRO: 'outro',
     SOLO: 'solo',
 
-    // subCard type only
+    // subVerse type only
     RHYME: 'rhyme',
 
     // sideCard type only
     BACKING: 'backing',
 
-    // subCard or sideSubCard type
+    // subVerse or sideSubCard type
     RESPONSE: 'response',
 
     // This is the order by which annotations will be assigned.

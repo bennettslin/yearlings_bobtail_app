@@ -15,7 +15,7 @@ import {
     INTRO,
     SOLO,
     OUTRO,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -25,8 +25,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `In`,
@@ -46,8 +46,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Since I took the name of my drunken personality from James Joyce's`,
@@ -69,7 +69,7 @@ export default {
                 },
                 stanzaType: INTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -84,7 +84,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 17,
                     lyric: `Brushed her off tonight, to swipe meats and wine`
@@ -146,7 +146,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 28,
                     lyric: [
@@ -185,7 +185,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 39,
                     lyric: [
@@ -288,7 +288,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 50,
                     lyric: `Well see, Garryowen, now no one,`
@@ -312,8 +312,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `In traditional counterpoint, the chords and harmonic rhythm are byproducts of the melodic contour. The chord progressions for this song were already set, however. So I was left to figure out on my own how counterpoint might be scored in this scenario, since I didn't know of any working examples.`,
                         dotKeys: {
@@ -324,7 +324,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 61,
                     lyric: [
@@ -390,8 +390,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `To capture the liveliness of a fiddle, as well as to pull off all the glissandos I had scored, I held the violin at chest level. I'd never tried this before, so a bit of practise was needed. As well as a lot of spliced tracks.`,
                         dotKeys: {
@@ -402,7 +402,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 73,
                     lyric: [
@@ -457,7 +457,7 @@ export default {
             unitMap: {
                 stanzaType: SOLO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 84,
                     isCentre: true,
@@ -472,7 +472,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 93,
                     lyric: `Your rabid wit unleashed, Garryowen, to no end,`
@@ -497,8 +497,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The bagpipes here evoke a funeral procession. Since I don't own any bagpipes, let alone`,
@@ -515,7 +515,7 @@ export default {
                 },
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 106,
                     lyric: [
@@ -541,7 +541,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 116,
                     lyric: [
@@ -603,8 +603,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
                         dotKeys: {
@@ -615,7 +615,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 128,
                     lyric: [
@@ -684,7 +684,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 139,
                     lyric: [
@@ -723,7 +723,7 @@ export default {
                 stanzaType: REFRAIN,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 150,
                     lyric: `You're a purer lie…`
@@ -734,7 +734,7 @@ export default {
             unitMap: {
                 stanzaType: OUTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 162,
                     isCentre: true,
@@ -747,8 +747,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `After getting rejected by the last record label that had been vetting us, I was so depressed that I went on the bender to end all benders. I eventually kept a box of wine by my bed to calm my nerves throughout the night. One day, upon skipping my morning beers, I felt like the walls were conspiring to attack me. I soon learned that this was the early stage of`,

@@ -14,7 +14,7 @@ import {
     CODA,
     REFRAIN,
     OUTRO,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -24,8 +24,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             {
@@ -44,8 +44,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. I can see now that she was desperately waiting for me to grow up, because she couldn't do it without me. So the humming here evokes her silent waiting, born of desperation.`,
                         dotKeys: {
@@ -56,7 +56,7 @@ export default {
                 },
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -69,8 +69,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I tried to write this song from Sita's perspective. In retrospect, my portrayal is rather one-dimensional, and unfairly characterises her as a helpless woman. Truth be told, she was far more resilient than I've let on here. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
@@ -83,7 +83,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 12,
                     lyric: [
@@ -133,8 +133,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Our relationship was like a ship swaying perilously in tumultuous waters, a notion captured by the compound meter alternating back and forth between unrelated chords separated by a`,
@@ -153,7 +153,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 26,
                     lyric: [
@@ -197,8 +197,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of facing the very gang that had emboldened me to leave her. The circus`,
@@ -216,7 +216,7 @@ export default {
                 },
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 47,
                     lyric: `And how you always burned, for the slight;`
@@ -251,7 +251,7 @@ export default {
                 stanzaType: BRIDGE,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 58,
                     lyric: [
@@ -309,7 +309,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 68,
                     lyric: [
@@ -421,7 +421,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 85,
                     lyric: [
@@ -459,8 +459,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `The meter switches to common time here, even as the underlying chords remain unchanged, to represent the normalisation of our dysfunctional relationship. The tuplet strands are also more in sync, as one plays two notes for every three played by the other.`,
                         dotKeys: {
@@ -470,7 +470,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 104,
                     lyric: [
@@ -541,7 +541,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 121,
                     lyric: `to leave me as before, with only instinct to adore.`
@@ -612,7 +612,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 150,
                     isCentre: true,
@@ -627,7 +627,7 @@ export default {
             unitMap: {
                 stanzaType: CODA
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 174,
                     lyric: `You say you woke one crystal morning, to find all those thoughts had gone away:`
@@ -733,8 +733,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The cry of a peafowl always sounded to me like they're pleading`,
@@ -751,7 +751,7 @@ export default {
                 },
                 stanzaType: OUTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 197,
                     isCentre: true,

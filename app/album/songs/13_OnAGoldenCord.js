@@ -15,7 +15,7 @@ import {
     BACKING,
     INTRO,
     OUTRO,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -26,8 +26,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, like John Keats's`,
@@ -46,8 +46,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age.`,
                         dotKeys: {
@@ -58,7 +58,7 @@ export default {
                 },
                 stanzaType: INTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -71,8 +71,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `This song evokes the country style of my childhood hero`,
@@ -90,7 +90,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 4,
                     isCentre: true,
@@ -148,8 +148,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I tuned the lead guitar in a way that allowed each note to be plucked as a`,
@@ -167,7 +167,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 26,
                     isCentre: true,
@@ -230,8 +230,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
@@ -256,7 +256,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 54,
                     left: [
@@ -354,7 +354,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 65,
                     left: `Had I grown dispirited in all this act,`,
@@ -459,7 +459,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 76,
                     left: `But a precious gift as a shedded chain,`,
@@ -536,7 +536,7 @@ export default {
                 stanzaType: BRIDGE,
                 sideCardType: BACKING
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 87,
                     isCentre: true,
@@ -615,7 +615,7 @@ export default {
                 sideCardType: BACKING,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 98,
                     isCentre: true,
@@ -660,7 +660,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 116,
                     isCentre: true,
@@ -756,7 +756,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 144,
                     left: `Of fateful thoughts hung on a gilded clasp,`,
@@ -886,7 +886,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 155,
                     left: `A sober plea finds the present you,`,
@@ -953,7 +953,7 @@ export default {
                 stanzaType: CHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 166,
                     left: `So a plan devised divides a slave once wed;`,
@@ -1055,7 +1055,7 @@ export default {
             unitMap: {
                 stanzaType: OUTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 177,
                     isCentre: true,
@@ -1068,8 +1068,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `What surprised me most upon the album's release was that no one who reviewed it was willing to venture an opinion on doublespeaker rhyme. The consensus seemed to be that all new inventions will prove their mettle within the existing paradigm of live performance. But it's not just that doublespeaker rhyme flailed under this constraint— by necessity, openness to invention means allowing it to operate within its own paradigm. And so I came to see that indie rock, despite its reputation, is really a conservative movement at heart.`,
                         dotKeys: {

@@ -212,7 +212,7 @@ const _addDestinationWormholeFormats = (lyricEntity, verseHasWormhole = false) =
 
         if (lyricEntity.isUnitMap) {
             // This applies to "unsalvaged soul," "tarpid lies," and "trophy blondes."
-            _addDestinationWormholeFormats(lyricEntity.subCard, verseHasWormhole)
+            _addDestinationWormholeFormats(lyricEntity.subVerse, verseHasWormhole)
         }
     }
 }

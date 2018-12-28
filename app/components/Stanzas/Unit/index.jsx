@@ -55,7 +55,7 @@ class Unit extends PureComponent {
 
             unit = getUnit(renderedSongIndex, unitIndex),
             {
-                lyricUnit,
+                mainVerses,
                 unitMap
             } = unit,
 
@@ -66,8 +66,8 @@ class Unit extends PureComponent {
                 sideCardType,
                 sideSubCardType,
                 subsequent,
-                dotUnit,
-                subCard,
+                unitDot,
+                subVerse,
                 sideCard,
                 sideSubCard, // This exists solely for "Maranatha."
                 hasTopSideCard,
@@ -75,7 +75,7 @@ class Unit extends PureComponent {
             } = unitMap,
 
             hasSide = Boolean(hasTopSideCard || hasBottomSideCard),
-            isDotOnly = Boolean(dotUnit) && !lyricUnit
+            isLoneUnitDot = Boolean(unitDot) && !mainVerses
 
         return (
             <div
@@ -97,17 +97,17 @@ class Unit extends PureComponent {
                         'Unit__notSubsequent'
                 )}
             >
-                {!isDotOnly &&
+                {!isLoneUnitDot &&
                     <div className={cx(
                         'Unit__column__text',
                         'Unit__column',
                         'Unit__column__main'
                     )}>
-                        {lyricUnit && (
+                        {mainVerses && (
                             <UnitCard
                                 {...other}
                                 {...{
-                                    stanzaArray: lyricUnit,
+                                    versesArray: mainVerses,
                                     stanzaType,
                                     isTruncatable: hasSide
                                 }}
@@ -116,11 +116,11 @@ class Unit extends PureComponent {
                                 }}
                             />
                         )}
-                        {subCard && (
+                        {subVerse && (
                             <UnitCard
                                 {...other}
                                 {...{
-                                    stanzaArray: subCard,
+                                    versesArray: subVerse,
                                     stanzaType: subCardType,
                                     isTruncatable: hasSide
                                 }}
@@ -144,7 +144,7 @@ class Unit extends PureComponent {
                             <UnitCard
                                 {...other}
                                 {...{
-                                    stanzaArray: sideCard,
+                                    versesArray: sideCard,
                                     stanzaType: sideCardType
                                 }}
                             />
@@ -153,7 +153,7 @@ class Unit extends PureComponent {
                             <UnitCard
                                 {...other}
                                 {...{
-                                    stanzaArray: sideCard,
+                                    versesArray: sideCard,
                                     stanzaType: sideCardType
                                 }}
                             />
@@ -162,17 +162,17 @@ class Unit extends PureComponent {
                             <UnitCard
                                 {...other}
                                 {...{
-                                    stanzaArray: sideSubCard,
+                                    versesArray: sideSubCard,
                                     stanzaType: sideSubCardType
                                 }}
                             />
                         )}
                     </div>
                 }
-                {dotUnit &&
+                {unitDot &&
                     <UnitDot
                         {...{
-                            dotUnit,
+                            unitDot,
                             setLyricAnnotationElement
                         }}
                     />

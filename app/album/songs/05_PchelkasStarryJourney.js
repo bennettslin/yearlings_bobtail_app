@@ -16,7 +16,7 @@ import {
     RESPONSE,
     INTRO,
     REFRAIN,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 /**
@@ -30,8 +30,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             {
@@ -49,8 +49,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `I needed a kid's voice to recite this quote, but no one I knew was popping them out just yet. So I had my sister do it.`,
                         dotKeys: {
@@ -60,7 +60,7 @@ export default {
                 },
                 stanzaType: INTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     lyric: {
@@ -99,8 +99,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `In keeping with the Russian theme of space dogs, I tried to evoke the sound of the`,
@@ -123,7 +123,7 @@ export default {
                 },
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 5,
                     isCentre: true,
@@ -138,7 +138,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 11,
                     lyric: `Mother, woken from her nap,`
@@ -173,7 +173,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 19,
                     lyric: `Don't you remember days past,`
@@ -206,7 +206,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 34,
                         lyric: {
@@ -233,7 +233,7 @@ export default {
                 stanzaType: PRECHORUS,
                 subCardType: RESPONSE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 27,
                     lyric: [
@@ -272,7 +272,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 38,
                     lyric: [
@@ -336,7 +336,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 46,
                     lyric: [
@@ -385,7 +385,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 54,
                     lyric: [
@@ -438,7 +438,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 68,
                     lyric: [
@@ -614,8 +614,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging it on the carpet floor. It took almost fifty tries, and I had to retune each time.`
@@ -627,7 +627,7 @@ export default {
                 },
                 stanzaType: POSTCHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 90,
                     lyric: `"Far from home and shaped like common men,`
@@ -669,7 +669,7 @@ export default {
                 stanzaType: POSTCHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 105,
                     lyric: [
@@ -690,8 +690,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I learned about Tuvan throat singing after a woman I dated took me to see a documentary called`,
@@ -712,7 +712,7 @@ export default {
                 },
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 112,
                     lyric: `Beyonders pine for a love no mortals give,`
@@ -757,7 +757,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 128,
                     isCentre: true,
@@ -772,7 +772,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 134,
                     lyric: [
@@ -827,7 +827,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 141,
                     lyric: `Braced for an earth stay unloved,`
@@ -879,7 +879,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 149,
                     lyric: [
@@ -972,7 +972,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 164,
                     lyric: [
@@ -1096,8 +1096,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Taking a cue from David Bowie's`,
@@ -1114,7 +1114,7 @@ export default {
                 },
                 stanzaType: POSTCHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 186,
                     lyric: [
@@ -1169,7 +1169,7 @@ export default {
                 stanzaType: POSTCHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 193,
                     lyric: [
@@ -1205,8 +1205,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `My brother currently lives in his own place and receives round-the-clock care through supported living services. He's doing well.`,
                         dotKeys: {

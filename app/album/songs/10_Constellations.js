@@ -18,7 +18,7 @@ import {
     BRIDGE,
     RESPONSE,
     REFRAIN,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -28,8 +28,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
@@ -59,7 +59,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -72,8 +72,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I never got past the first fifty pages of`,
@@ -95,7 +95,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 4,
                     lyric: [
@@ -273,7 +273,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 19,
                     lyric: [
@@ -471,8 +471,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The Police's`,
@@ -493,7 +493,7 @@ export default {
                 },
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 34,
                     lyric: [
@@ -573,7 +573,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 41,
                     lyric: [
@@ -725,7 +725,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 52,
                     isCentre: true,
@@ -738,8 +738,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Sita introduced me to`,
@@ -765,7 +765,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 56,
                     lyric: [
@@ -947,7 +947,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 70,
                     lyric: [
@@ -1101,8 +1101,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `On my solo Robitussin trips, I would mentally search for metaphysical truths while playing video games on my old`,
@@ -1120,7 +1120,7 @@ export default {
                 stanzaType: PRECHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 86,
                     lyric: [
@@ -1276,7 +1276,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 109,
                     lyric: `And now without a chart,`
@@ -1313,7 +1313,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 120,
                     isCentre: true,
@@ -1326,7 +1326,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 128,
                         lyric: {
@@ -1361,7 +1361,7 @@ export default {
                 stanzaType: BRIDGE,
                 subCardType: RESPONSE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 124,
                     lyric: [
@@ -1405,7 +1405,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 135,
                         lyric: {
@@ -1442,7 +1442,7 @@ export default {
                 subCardType: RESPONSE,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 131,
                     lyric: [
@@ -1511,7 +1511,7 @@ export default {
                 stanzaType: BRIDGE,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 139,
                     lyric: [
@@ -1623,8 +1623,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,
@@ -1644,7 +1644,7 @@ export default {
                 },
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 154,
                     lyric: [
@@ -1708,7 +1708,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 161,
                     lyric: [
@@ -1879,7 +1879,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 172,
                     isCentre: true,

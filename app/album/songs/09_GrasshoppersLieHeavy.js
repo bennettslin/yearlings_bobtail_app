@@ -15,7 +15,7 @@ import {
     BRIDGE,
     CODA,
     OUTRO,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -26,8 +26,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     cards: [
                         {
                             description: [
@@ -62,8 +62,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `Just as`,
@@ -85,7 +85,7 @@ export default {
                 },
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     lyric: {
@@ -114,8 +114,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I wanted the music to sound sentimental with a few rough edges, so channelling`,
@@ -132,7 +132,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 10,
                     lyric: `Uprooted, then en route,`
@@ -195,7 +195,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 19,
                     lyric: `For a cafeteria's wage,`
@@ -236,7 +236,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 29,
                     lyric: [
@@ -358,7 +358,7 @@ export default {
                 stanzaType: PRECHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 48,
                     lyric: [
@@ -400,7 +400,7 @@ export default {
             unitMap: {
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 58,
                     lyric: `Snowflakes in time come to see off the year.`
@@ -447,7 +447,7 @@ export default {
             unitMap: {
                 stanzaType: REFRAIN
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 77,
                     left: [
@@ -515,7 +515,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 96,
                     lyric: `Homeward, mop-sopped to your knees.`
@@ -563,7 +563,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 106,
                     lyric: [
@@ -654,7 +654,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 115,
                     lyric: [
@@ -714,7 +714,7 @@ export default {
                 stanzaType: PRECHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 135,
                     lyric: [
@@ -766,8 +766,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The highlight of Nirvana's`,
@@ -787,7 +787,7 @@ export default {
                 },
                 stanzaType: CHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 144,
                     lyric: [
@@ -877,7 +877,7 @@ export default {
             unitMap: {
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 164,
                     lyric: [
@@ -936,7 +936,7 @@ export default {
                 stanzaType: BRIDGE,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 174,
                     lyric: [
@@ -988,7 +988,7 @@ export default {
                 stanzaType: BRIDGE,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 183,
                     lyric: [
@@ -1067,8 +1067,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
                         dotKeys: {
@@ -1078,7 +1078,7 @@ export default {
                 },
                 stanzaType: CODA
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 193,
                     lyric: {
@@ -1164,7 +1164,7 @@ export default {
                 stanzaType: CODA,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 216,
                     lyric: `And dude, you love her…`
@@ -1246,7 +1246,7 @@ export default {
                 stanzaType: CODA,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 229,
                     lyric: [
@@ -1272,8 +1272,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The French expression`,
@@ -1293,7 +1293,7 @@ export default {
                 },
                 stanzaType: OUTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 245,
                     isCentre: true,

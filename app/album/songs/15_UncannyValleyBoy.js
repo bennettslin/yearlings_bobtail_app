@@ -18,7 +18,7 @@ import {
     RHYME,
     RESPONSE,
     BACKING,
-    IS_DOT_UNIT
+    IS_UNIT_DOT
 } from 'constants/lyrics'
 
 export default {
@@ -28,8 +28,8 @@ export default {
     lyricUnits: [
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `The`,
@@ -49,8 +49,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare to others only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
                         dotKeys: {
@@ -60,7 +60,7 @@ export default {
                 },
                 stanzaType: INTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 0,
                     isCentre: true,
@@ -75,7 +75,7 @@ export default {
             unitMap: {
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 14,
                     lyric: [
@@ -212,7 +212,7 @@ export default {
                 stanzaType: VERSES,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 27,
                     lyric: [
@@ -277,7 +277,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 40,
                     lyric: `But distracted by your brother's tantrums,`
@@ -331,7 +331,7 @@ export default {
                 stanzaType: PRECHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 54,
                     lyric: [
@@ -369,8 +369,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `As silly as the original lyrics for the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody. The former counter melody, which was written for guitar, then became the new lead melody.`,
                         dotKeys: {
@@ -393,7 +393,7 @@ export default {
                     }
                 ],
                 hasTopSideCard: true,
-                subCard: [
+                subVerse: [
                     {
                         time: 70,
                         lyric: {
@@ -406,7 +406,7 @@ export default {
                 subCardType: RHYME,
                 sideCardType: BACKING
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 61,
                     lyric: `Mowed down by the tides,`
@@ -458,7 +458,7 @@ export default {
                     }
                 ],
                 hasTopSideCard: true,
-                subCard: [
+                subVerse: [
                     {
                         time: 82,
                         lyric: {
@@ -472,7 +472,7 @@ export default {
                 sideCardType: BACKING,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 74,
                     lyric: [
@@ -537,8 +537,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: [
                             `I wanted to recreate the tremolo effect used by guitarist Jonny Greenwood on the song "Airbag" from Radiohead's`,
@@ -556,7 +556,7 @@ export default {
                 },
                 stanzaType: VERSES
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 86,
                     lyric: [
@@ -598,7 +598,7 @@ export default {
             unitMap: {
                 stanzaType: PRECHORUS
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 100,
                     lyric: [
@@ -704,7 +704,7 @@ export default {
                 stanzaType: PRECHORUS,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 111,
                     lyric: `Did you find a rival in the goddess you once sought as prize—`
@@ -731,7 +731,7 @@ export default {
             unitMap: {
                 stanzaType: BRIDGE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 127,
                     lyric: [
@@ -857,7 +857,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 150,
                         lyric: {
@@ -882,7 +882,7 @@ export default {
                 stanzaType: PRECHORUS,
                 subCardType: RESPONSE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 145,
                     lyric: [
@@ -941,7 +941,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 157,
                         lyric: {
@@ -970,7 +970,7 @@ export default {
                 subCardType: RESPONSE,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 152,
                     lyric: [
@@ -1047,7 +1047,7 @@ export default {
                     }
                 ],
                 hasTopSideCard: true,
-                subCard: [
+                subVerse: [
                     {
                         time: 168,
                         lyric: {
@@ -1060,7 +1060,7 @@ export default {
                 subCardType: RHYME,
                 sideCardType: BACKING
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 160,
                     lyric: `Oh child of mine,`
@@ -1127,7 +1127,7 @@ export default {
                     }
                 ],
                 hasTopSideCard: true,
-                subCard: [
+                subVerse: [
                     {
                         time: 181,
                         lyric: {
@@ -1141,7 +1141,7 @@ export default {
                 sideCardType: BACKING,
                 subsequent: true
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 172,
                     lyric: `in life's unbearable maze?`
@@ -1177,8 +1177,8 @@ export default {
         },
         {
             unitMap: {
-                dotUnit: {
-                    anchor: IS_DOT_UNIT,
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
                     card: {
                         description: `To record the gradual shift from "Rama" to "Mara," I made a click track whose tempo sums up to one fewer eighth note after seven measures. I then overlaid multiple tracks in which I quietly took a breath at different points.`,
                         dotKeys: {
@@ -1230,7 +1230,7 @@ export default {
                 sideCardType: BACKING,
                 sideSubCardType: RESPONSE
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 184,
                     lyric: [
@@ -1306,7 +1306,7 @@ export default {
             unitMap: {
                 stanzaType: OUTRO
             },
-            lyricUnit: [
+            mainVerses: [
                 {
                     time: 199,
                     isCentre: true,
