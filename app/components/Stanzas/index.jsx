@@ -72,16 +72,12 @@ class Stanzas extends PureComponent {
 
                 {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
 
-                    const isLastStanza =
-                    stanzaIndex === songStanzaConfigs.length - 1
-
                     return (
                         <StanzaHoc
                             key={stanzaIndex}
                             {...{
                                 stanzaConfig,
                                 stanzaIndex,
-                                isLastStanza,
                                 StanzaComponent: Stanza,
                                 handleVerseSelect: this._handleVerseSelect,
                                 setLyricAnnotationElement,

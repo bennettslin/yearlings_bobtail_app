@@ -12,7 +12,6 @@ import Unit from '../Unit'
 const propTypes = {
     // From parent.
         logicSelectors: PropTypes.string.isRequired,
-        isLastStanza: PropTypes.bool.isRequired,
         stanzaConfig: PropTypes.shape({
             stanzaUnitIndices: PropTypes.array.isRequired
         }).isRequired
