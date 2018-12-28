@@ -2,6 +2,8 @@
 
 import album from 'album'
 
+import { getSongVersesCount } from 'album/api/verses'
+
 import {
     getTwoToThePowerOfN,
     getObjectFromBitNumber,
@@ -35,6 +37,10 @@ const _getValidatedStoredSong = () => {
     return album.songs[selectedSongIndex]
 }
 
+const _getValidatedStoredSongIndex = () => {
+    return _validateIndexForKey(SELECTED_SONG_INDEX)
+}
+
 const _validateIndexForKey = (key) => {
     const
         parsedValue = parseInt(WINDOW_STORAGE[key]),
@@ -59,12 +65,13 @@ const _validateIndexForKey = (key) => {
         }
         case SELECTED_VERSE_INDEX:
         {
-            const songVerseConfigs =
-                    _getValidatedStoredSong().songVerseConfigs
+            const songVersesCount = getSongVersesCount(
+                _getValidatedStoredSongIndex()
+            )
 
-            // Logues do not have songVerseConfigs.
-            isValid = isNumber && songVerseConfigs ?
-                parsedValue < songVerseConfigs.length :
+            // Logues do not have songVersesCount.
+            isValid = isNumber && songVersesCount ?
+                parsedValue < songVersesCount :
                 parsedValue === 0
             break
         }

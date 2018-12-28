@@ -5,7 +5,7 @@ import { updateSliderStore } from 'flux/slider/action'
 
 import VerseDispatcher from '../VerseDispatcher'
 
-import { getTimeForVerseIndex } from 'album/api/time'
+import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getClientX } from 'helpers/dom'
 import { populateRefs } from 'helpers/ref'
 
@@ -82,7 +82,7 @@ class SliderTouchDispatcher extends PureComponent {
             sliderLeft,
             sliderWidth,
             sliderVerseIndex,
-            sliderTime: getTimeForVerseIndex(
+            sliderTime: getStartTimeForVerseIndex(
                 selectedSongIndex,
                 sliderVerseIndex
             )
@@ -136,7 +136,7 @@ class SliderTouchDispatcher extends PureComponent {
         if (sliderVerseIndex !== prevVerseIndex) {
             this.props.updateSliderStore({
                 sliderVerseIndex,
-                sliderTime: getTimeForVerseIndex(
+                sliderTime: getStartTimeForVerseIndex(
                     selectedSongIndex,
                     sliderVerseIndex
                 )

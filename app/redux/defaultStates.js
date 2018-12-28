@@ -21,7 +21,7 @@ import {
     getSceneIndexForVerseIndex,
     getSceneObject
 } from 'album/api/scenes'
-import { getTimeForVerseIndex } from 'album/api/time'
+import { getStartTimeForVerseIndex } from 'album/api/time'
 import {
     getSongIsLogue,
     getBookForSongIndex
@@ -233,7 +233,7 @@ const
         [SELECTED_VERSE_INDEX]: storedVerseIndex,
         selectedSceneIndex: sceneIndex,
         isSelectedLogue: isStoredLogue,
-        selectedTime: getTimeForVerseIndex(
+        selectedTime: getStartTimeForVerseIndex(
             storedSongIndex,
             storedVerseIndex
         ),

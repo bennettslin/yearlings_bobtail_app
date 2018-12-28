@@ -1,16 +1,9 @@
-import { getSongObject } from 'album/api/songs'
+import { getSongVerseConfigs } from 'album/api/verses'
 
 export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
-    const songObject = getSongObject(songIndex),
-        { songVerseConfigs } = songObject
+    const songVerseConfigs = getSongVerseConfigs(songIndex)
 
-    if (songVerseConfigs) {
-        const verseConfig = songVerseConfigs[verseIndex]
-
-        if (verseConfig) {
-            return songVerseConfigs[verseIndex].verseDuration
-        }
-    }
-
-    return 0
+    return songVerseConfigs.length ?
+        songVerseConfigs[verseIndex].verseDuration :
+        0
 }

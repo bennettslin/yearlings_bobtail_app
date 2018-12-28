@@ -9,7 +9,10 @@ import album from 'album'
 import { getGlobalAnnotationObject } from 'album/api/admin'
 import { getSceneObject } from 'album/api/scenes'
 import { getSongObject } from 'album/api/songs'
-import { getVerseObject } from 'album/api/verses'
+import {
+    getSongVerseConfigs,
+    getVerseObject
+} from 'album/api/verses'
 
 import { WINDOW_STORAGE } from 'constants/state'
 import { getAnnotationObject } from 'album/api/annotations'
@@ -36,6 +39,8 @@ class LogManager extends PureComponent {
         global.s = this.logSong
         global.t = this.logStorage
         global.v = this.logVerse
+
+        global.svc = this.logSongVerseConfigs
     }
 
     logAlbum = () => {
@@ -106,10 +111,18 @@ class LogManager extends PureComponent {
         copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
         copiedSong.lyricUnits = `lyricUnits: ${copiedSong.lyricUnits.length}`
         copiedSong.songStanzaConfigs = `songStanzaConfigs: ${copiedSong.songStanzaConfigs.length}`
-        // copiedSong.songVerseConfigs = `songVerseConfigs: ${copiedSong.songVerseConfigs.length}`
+        delete copiedSong.songVerseConfigs
         copiedSong.songSceneConfigs = `songSceneConfigs: ${copiedSong.songSceneConfigs.length}`
 
         return this._logObject('renderable song', copiedSong)
+    }
+
+    logSongVerseConfigs = () => {
+        const
+            { renderedSongIndex } = this.props,
+            songVerseConfigs = getSongVerseConfigs(renderedSongIndex)
+
+        return this._logObject('Song verse configs', songVerseConfigs)
     }
 
     logStorage = () => {

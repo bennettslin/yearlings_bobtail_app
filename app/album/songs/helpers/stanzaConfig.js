@@ -14,11 +14,10 @@ const _getVerseConfigForStanzaConfig = (verse) => {
 
 const _addStanzaIndexToVerseConfig = ({
     stanzaIndex,
-    verse,
+    verse: { verseIndex },
     song: { songVerseConfigs }
 
 }) => {
-    const { verseIndex } = verse
     songVerseConfigs[verseIndex].stanzaIndex = stanzaIndex
 }
 

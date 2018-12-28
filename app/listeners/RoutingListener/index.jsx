@@ -7,7 +7,7 @@ import { updateSessionStore } from 'flux/session/action'
 
 import ListenerContainer from '../ListenerContainer'
 
-import { getTimeForVerseIndex } from 'album/api/time'
+import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getSceneIndexForVerseIndex } from 'album/api/scenes'
 
 import {
@@ -64,7 +64,7 @@ class RoutingListener extends PureComponent {
                     selectedSongIndex,
                     selectedVerseIndex
                 ),
-                selectedTime: getTimeForVerseIndex(
+                selectedTime: getStartTimeForVerseIndex(
                     selectedSongIndex,
                     selectedVerseIndex
                 )

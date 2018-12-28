@@ -1,10 +1,10 @@
 import mp3s from 'assets/mp3s'
 
+import { getSongVersesCount } from 'album/api/verses'
 import {
-    getSongVersesCount,
-    getSongVerseConfigs
-} from 'album/api/verses'
-import { getSongTotalTime } from 'album/api/time'
+    getStartTimeForVerseIndex,
+    getEndTimeForVerseIndex
+} from 'album/api/time'
 
 export const getMp3s = () => (
     mp3s
@@ -34,20 +34,9 @@ export const getTimeRelativeToVerseIndex = (
      * Note that when time is valid, this method returns -1 if time is before
      * verse, 1 if time is after it, and 0 if time is in it.
      */
-
-    const songVerseConfigs = getSongVerseConfigs(songIndex),
-
-        // Verse config already knows its own start time.
-        { verseStartTime } = songVerseConfigs[verseIndex],
-
-        /**
-         * If it's the last verse, the end time is the song's total time.
-         * Otherwise, it's the start time of the next verse.
-         */
-        verseEndTime =
-            verseIndex < getSongVersesCount(songIndex) - 1 ?
-                songVerseConfigs[verseIndex + 1].verseStartTime :
-                getSongTotalTime(songIndex)
+    const
+        verseStartTime = getStartTimeForVerseIndex(songIndex, verseIndex),
+        verseEndTime = getEndTimeForVerseIndex(songIndex, verseIndex)
 
     if (time < verseStartTime) {
         return -1

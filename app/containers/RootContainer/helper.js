@@ -1,8 +1,5 @@
 import { EAR_COLUMN_KEYS } from 'constants/lyrics'
-import {
-    getSongIsLogue,
-    getSongObject
-} from 'album/api/songs'
+import { getSongVerseConfigs } from 'album/api/verses'
 
 export const getSingleShownEarColumnKey = ({
     isEarShown,
@@ -15,13 +12,8 @@ export const getSingleShownEarColumnKey = ({
 
 export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
 
-    // Return -1 if logue.
-    if (getSongIsLogue(songIndex)) {
-        return 0
-    }
-
-    const songObject = getSongObject(songIndex),
-        { songVerseConfigs } = songObject
-
-    return songVerseConfigs[verseIndex].stanzaIndex
+    const songVerseConfigs = getSongVerseConfigs(songIndex)
+    return songVerseConfigs.length ?
+        songVerseConfigs[verseIndex].stanzaIndex :
+        0
 }
