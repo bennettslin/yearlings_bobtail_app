@@ -1,21 +1,21 @@
 const
-    THEATRE = 'canTheatreRender',
-    SCENE = 'canSceneRender',
-    LYRIC = 'canLyricRender',
-    CAROUSEL = 'canCarouselRender',
+    CAN_THEATRE_RENDER = 'canTheatreRender',
+    CAN_SCENE_RENDER = 'canSceneRender',
+    CAN_LYRIC_RENDER = 'canLyricRender',
+    CAN_CAROUSEL_RENDER = 'canCarouselRender',
 
     THEATRE_SCENE_LYRIC_CAROUSEL_ORDER = [
-        THEATRE,
-        SCENE,
-        LYRIC,
-        CAROUSEL
+        CAN_THEATRE_RENDER,
+        CAN_SCENE_RENDER,
+        CAN_LYRIC_RENDER,
+        CAN_CAROUSEL_RENDER
     ],
 
     THEATRE_LYRIC_CAROUSEL_SCENE_ORDER = [
-        THEATRE,
-        LYRIC,
-        CAROUSEL,
-        SCENE
+        CAN_THEATRE_RENDER,
+        CAN_LYRIC_RENDER,
+        CAN_CAROUSEL_RENDER,
+        CAN_SCENE_RENDER
     ]
 
 const getNextKeyCanRender = ({
@@ -39,10 +39,10 @@ const getNextKeyCanRender = ({
 }
 
 export {
-    THEATRE,
-    SCENE,
-    LYRIC,
-    CAROUSEL,
+    CAN_THEATRE_RENDER,
+    CAN_SCENE_RENDER,
+    CAN_LYRIC_RENDER,
+    CAN_CAROUSEL_RENDER,
     THEATRE_SCENE_LYRIC_CAROUSEL_ORDER,
     THEATRE_LYRIC_CAROUSEL_SCENE_ORDER,
 

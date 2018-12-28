@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { updateRenderStore } from 'flux/render/action'
 
 import {
-    THEATRE,
+    CAN_THEATRE_RENDER,
     getNextKeyCanRender
 } from '../../../helpers/render'
 
@@ -119,7 +119,7 @@ class RenderableListener extends PureComponent {
         } seconds.`)
 
         const nextKey = getNextKeyCanRender({
-            currentKey: THEATRE
+            currentKey: CAN_THEATRE_RENDER
         })
         this.props.updateRenderStore({
             [nextKey]: true

@@ -12,6 +12,10 @@ import { CUBE_Y_INDICES } from 'constants/cubeIndex'
 
 class Layers extends Component {
 
+    componentDidMount() {
+        logMount('Layers')
+    }
+
     render() {
 
         return (

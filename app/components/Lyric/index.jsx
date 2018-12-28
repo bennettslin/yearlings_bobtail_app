@@ -42,6 +42,10 @@ class Lyric extends PureComponent {
         setLyricFocusElement: PropTypes.func.isRequired
     }
 
+    componentDidMount() {
+        logMount('Lyric')
+    }
+
     determineVerseBars = () => {
         this.dispatchVerseBarsTimeout()
     }

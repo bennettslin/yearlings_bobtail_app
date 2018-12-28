@@ -7,10 +7,10 @@ import { updateLoadStore } from 'flux/load/action'
 import { updateRenderStore } from 'flux/render/action'
 
 import {
-    THEATRE,
-    SCENE,
-    LYRIC,
-    CAROUSEL,
+    CAN_THEATRE_RENDER,
+    CAN_SCENE_RENDER,
+    CAN_LYRIC_RENDER,
+    CAN_CAROUSEL_RENDER,
     getNextKeyCanRender
 } from '../../helpers/render'
 
@@ -74,7 +74,7 @@ class RenderDidListener extends PureComponent {
     }
 
     _renderAfterTheatre = () => {
-        const nextKey = getNextKeyCanRender({ currentKey: THEATRE })
+        const nextKey = getNextKeyCanRender({ currentKey: CAN_THEATRE_RENDER })
         if (nextKey) {
             this.props.updateRenderStore({
                 [nextKey]: true
@@ -90,7 +90,7 @@ class RenderDidListener extends PureComponent {
         if (didSceneRender && !hadSceneRendered) {
             logRender('Scene did render.')
 
-            const nextKey = getNextKeyCanRender({ currentKey: SCENE })
+            const nextKey = getNextKeyCanRender({ currentKey: CAN_SCENE_RENDER })
             if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true
@@ -107,7 +107,7 @@ class RenderDidListener extends PureComponent {
         if (didLyricRender && !hadLyricRendered) {
             logRender('Lyric did render.')
 
-            const nextKey = getNextKeyCanRender({ currentKey: LYRIC })
+            const nextKey = getNextKeyCanRender({ currentKey: CAN_LYRIC_RENDER })
             if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true
@@ -124,7 +124,7 @@ class RenderDidListener extends PureComponent {
         if (didCarouselRender && !hadCarouselRendered) {
             logRender('Carousel did render.')
 
-            const nextKey = getNextKeyCanRender({ currentKey: CAROUSEL })
+            const nextKey = getNextKeyCanRender({ currentKey: CAN_CAROUSEL_RENDER })
             if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true
