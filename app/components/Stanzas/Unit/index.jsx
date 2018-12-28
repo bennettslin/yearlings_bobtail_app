@@ -14,7 +14,7 @@ import UnitDot from './Dot'
 
 import { getIndexedVersesForUnit } from 'album/api/verses'
 
-import { getUnit } from './helper'
+import { getUnit } from 'album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 const mapStateToProps = ({

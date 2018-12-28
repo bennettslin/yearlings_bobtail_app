@@ -13,8 +13,8 @@ import Stanza from './Stanza'
 import Unit from './Unit'
 
 import { getSongStanzaConfigs } from 'album/api/stanzas'
+import { getLastUnitDotCardIndex } from 'album/api/units'
 import { populateRefs } from 'helpers/ref'
-import { getLastUnitDotCardIndex } from './helper'
 
 const mapStateToProps = ({
     renderedStore: { renderedSongIndex }
