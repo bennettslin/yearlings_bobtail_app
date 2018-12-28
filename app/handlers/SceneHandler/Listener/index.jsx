@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import RenderableDispatcher from '../../../handlers/RenderableHandler/Dispatcher'
+import SceneChangeDispatcher from '../../../handlers/SceneChangeHandler/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
 
@@ -56,7 +56,7 @@ class SceneListener extends PureComponent {
 
     render() {
         return (
-            <RenderableDispatcher {...{ getRefs: this._getRefs }} />
+            <SceneChangeDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }

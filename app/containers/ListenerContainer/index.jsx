@@ -11,13 +11,14 @@ import MainListener from '../../listeners/MainListener'
 import OverviewListener from '../../handlers/OverviewHandler/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotationListener'
 import PresenceListener from '../../listeners/PresenceListener'
-import RenderableListener from '../../handlers/RenderableHandler/Listener'
 import RenderCanListener from '../../listeners/RenderCanListener'
 import RenderDidListener from '../../listeners/RenderDidListener'
 import RenderedListener from '../../listeners/RenderedListener'
 import SceneListener from '../../handlers/SceneHandler/Listener'
+import SceneChangeListener from '../../handlers/SceneChangeHandler/Listener'
 import ScoreListener from '../../handlers/ScoreHandler/Listener'
 import SongListener from '../../handlers/SongHandler/Listener'
+import SongChangeListener from '../../handlers/SongChangeHandler/Listener'
 import ScrollRenderListener from '../../listeners/ScrollRenderListener'
 import SliderListener from '../../listeners/SliderListener'
 import TipsListener from '../../handlers/TipsHandler/Listener'
@@ -51,15 +52,16 @@ class ListenerContainer extends PureComponent {
                 <OverviewListener />
                 <PopupAnnotationListener />
                 <PresenceListener />
-                <RenderableListener />
                 <RenderCanListener />
                 <RenderDidListener />
                 <RenderedListener />
                 <SceneListener />
+                <SceneChangeListener />
                 <ScoreListener />
                 <ScrollRenderListener />
                 <SliderListener />
                 <SongListener />
+                <SongChangeListener />
                 <TipsListener />
                 <WikiListener />
                 <WikiWormholeListener />

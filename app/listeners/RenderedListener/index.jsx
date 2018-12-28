@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateRenderedStore } from 'flux/rendered/action'
 
-import RenderableDispatcher from '../../handlers/RenderableHandler/Dispatcher'
+import SongChangeDispatcher from '../../handlers/SongChangeHandler/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
 
@@ -117,7 +117,7 @@ class RenderedListener extends PureComponent {
 
     render() {
         return (
-            <RenderableDispatcher {...{ getRefs: this._getRefs }} />
+            <SongChangeDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }
