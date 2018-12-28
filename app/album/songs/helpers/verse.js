@@ -1,12 +1,26 @@
-import { getAllSelectableVerses } from 'album/api/verses'
+import { getIndexedVersesForUnit } from 'album/api/verses'
 
-const _addIndexToVerseObject = (verse, verseIndexCounter) => {
-    verse.verseIndex = verseIndexCounter
-}
+export const addIndexedVerses = (song) => {
+    const { lyricUnits } = song
 
-const _getVerseConfig = (verse) => {
-    const { time } = verse
-    return { verseStartTime: time }
+    if (lyricUnits) {
+        const indexedVerses = []
+        let verseIndexCounter = 0
+
+        lyricUnits.forEach(unit => {
+
+            getIndexedVersesForUnit(unit).forEach(verse => {
+
+                // Also tell verse its index.
+                verse.verseIndex = verseIndexCounter
+                verseIndexCounter++
+
+                indexedVerses.push(verse)
+            })
+        })
+
+        song.indexedVerses = indexedVerses
+    }
 }
 
 const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
@@ -28,27 +42,21 @@ const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
     })
 }
 
-export const addVerseIndicesAndConfigs = (song) => {
+export const addVerseConfigs = (song) => {
+    const { indexedVerses } = song
 
-    const
-        { lyricUnits } = song,
-        verseConfigs = []
+    if (indexedVerses) {
+        const verseConfigs = []
 
-    if (lyricUnits) {
-        let verseIndexCounter = 0
+        indexedVerses.forEach(verse => {
+            const { time } = verse
 
-        lyricUnits.forEach(unit => {
-            getAllSelectableVerses(unit).forEach(verse => {
-
-                _addIndexToVerseObject(verse, verseIndexCounter)
-                verseIndexCounter++
-
-                verseConfigs.push(_getVerseConfig(verse))
+            verseConfigs.push({
+                verseStartTime: time
             })
         })
+
+        _addDurationsToVerseConfigs(verseConfigs, song)
+        song.songVerseConfigs = verseConfigs
     }
-
-    _addDurationsToVerseConfigs(verseConfigs, song)
-
-    song.songVerseConfigs = verseConfigs
 }

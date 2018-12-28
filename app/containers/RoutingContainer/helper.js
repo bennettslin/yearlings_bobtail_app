@@ -1,6 +1,6 @@
 // Helper for getting param values from routing.
-import { getSongObject } from 'album/api/songs'
-import { getVerseObject } from 'album/api/verses'
+import { getSong } from 'album/api/songs'
+import { getVerse } from 'album/api/verses'
 import { getAnnotation } from 'album/api/annotations'
 
 import { HYPHENATED_SONG_PATHS } from '../../constants/paths'
@@ -29,11 +29,11 @@ const _getIndexForPrefix = (string, prefix = '') => {
 }
 
 const _isValidSongIndex = (songIndex) => {
-    return Boolean(getSongObject(songIndex))
+    return Boolean(getSong(songIndex))
 }
 
 const _isValidVerseIndexForSongIndex = (songIndex, verseIndex) => {
-    return Boolean(getVerseObject(songIndex, verseIndex))
+    return Boolean(getVerse(songIndex, verseIndex))
 }
 
 const _isValidAnnotationIndexForSongIndex = (songIndex, annotationIndex) => {

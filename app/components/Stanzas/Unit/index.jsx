@@ -12,7 +12,7 @@ import cx from 'classnames'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 
-import { getAllSelectableVerses } from 'album/api/verses'
+import { getIndexedVersesForUnit } from 'album/api/verses'
 
 import { getUnit } from './helper'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
@@ -82,7 +82,7 @@ class Unit extends PureComponent {
                 className={cx(
                     // "Parent of verse index."
                     getParentOfVerseClassNamesForIndices({
-                        entities: getAllSelectableVerses(unit)
+                        entities: getIndexedVersesForUnit(unit)
                     }),
 
                     'Unit',

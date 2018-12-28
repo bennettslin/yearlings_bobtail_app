@@ -1,6 +1,6 @@
-import { getSongObject } from 'album/api/songs'
+import { getSong } from 'album/api/songs'
 
 export const getSongStanzaConfigs = (songIndex) => {
-    const { songStanzaConfigs } = getSongObject(songIndex)
+    const { songStanzaConfigs } = getSong(songIndex)
     return songStanzaConfigs || []
 }

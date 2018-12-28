@@ -11,11 +11,11 @@ import {
     getSongSceneConfigs,
     getScene
 } from 'album/api/scenes'
-import { getSongObject } from 'album/api/songs'
+import { getSong } from 'album/api/songs'
 import { getSongStanzaConfigs } from 'album/api/stanzas'
 import {
     getSongVerseConfigs,
-    getVerseObject
+    getVerse
 } from 'album/api/verses'
 
 import { WINDOW_STORAGE } from 'constants/state'
@@ -81,7 +81,7 @@ class LogManager extends PureComponent {
                 renderedVerseIndex
             } = this.props,
 
-            renderedVerse = getVerseObject(
+            renderedVerse = getVerse(
                 renderedSongIndex,
                 renderedVerseIndex
             )
@@ -112,7 +112,7 @@ class LogManager extends PureComponent {
         const
             { renderedSongIndex } = this.props,
             copiedSong = {
-                ...getSongObject(renderedSongIndex)
+                ...getSong(renderedSongIndex)
             }
 
         delete copiedSong.annotations
@@ -126,7 +126,7 @@ class LogManager extends PureComponent {
 
     logSongAnnotations = () => {
         const { renderedSongIndex } = this.props,
-            song = getSongObject(renderedSongIndex)
+            song = getSong(renderedSongIndex)
         return this._logObject('Song annotations', song.annotations)
     }
 

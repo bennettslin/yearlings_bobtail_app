@@ -1,4 +1,4 @@
-import { getSongObject } from 'album/api/songs'
+import { getSong } from 'album/api/songs'
 import { getSongStanzaConfigs } from 'album/api/stanzas'
 
 export const getParentOfVerseClassNamesForIndices = ({
@@ -28,7 +28,7 @@ const _getLyricUnitsCount = (songIndex) => {
         return 0
     }
 
-    const songs = getSongObject(songIndex)
+    const songs = getSong(songIndex)
     return songs.lyricUnits ? songs.lyricUnits.length : 0
 }
 

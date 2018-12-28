@@ -18,7 +18,7 @@ import {
 } from 'constants/lyrics'
 
 import { getSongTitle } from 'album/api/songs'
-import { getVerseObject } from 'album/api/verses'
+import { getVerse } from 'album/api/verses'
 import { populateRefs } from 'helpers/ref'
 
 import { getCardWormholeLink } from './helper'
@@ -87,7 +87,7 @@ class AnnotationWormhole extends PureComponent {
 
             songTitle = getSongTitle({ songIndex }),
 
-            verseObject = getVerseObject(songIndex, verseIndex)
+            verseObject = getVerse(songIndex, verseIndex)
 
         const
             columnKey = EAR_COLUMN_KEYS[columnIndex],

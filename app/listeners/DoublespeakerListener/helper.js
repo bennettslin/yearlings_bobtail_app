@@ -1,4 +1,4 @@
-import { getSongObject } from 'album/api/songs'
+import { getSong } from 'album/api/songs'
 import {
     getIsPhone,
     getIsTablet,
@@ -9,7 +9,7 @@ const getIsDoublespeakerShown = ({
     deviceIndex,
     songIndex
 }) => {
-    const selectedSong = getSongObject(songIndex),
+    const selectedSong = getSong(songIndex),
         {
             hasSideCards,
             isDoublespeaker

@@ -20,7 +20,10 @@ import Song_18 from './18_My100000thDream'
 import Song_19 from './19_Epilogue'
 
 import { addSongIndices } from './helpers/song'
-import { addVerseIndicesAndConfigs } from './helpers/verse'
+import {
+    addIndexedVerses,
+    addVerseConfigs
+} from './helpers/verse'
 import { addHasSideCardStatus } from './helpers/unit'
 import { addStanzaTypes } from './helpers/stanzaType'
 import { addStanzaConfigs } from './helpers/stanzaConfig'
@@ -62,7 +65,10 @@ logParse('Begin parsing songs.')
 addSongIndices(albumSongs)
 
 albumSongs.forEach(song => {
-    addVerseIndicesAndConfigs(song)
+    addIndexedVerses(song)
+
+    // This needs to come after indexed verses.
+    addVerseConfigs(song)
     addHasSideCardStatus(song)
     addStanzaTypes(song)
 

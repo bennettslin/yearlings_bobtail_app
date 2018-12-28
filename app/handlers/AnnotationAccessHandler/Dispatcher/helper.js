@@ -2,7 +2,7 @@ import {
     getAnnotation,
     getAnnotationsCount
 } from 'album/api/annotations'
-import { getVerseObject } from 'album/api/verses'
+import { getVerse } from 'album/api/verses'
 import {
     getShowAnnotationForColumn,
     getAnnotationIndexForDirection
@@ -20,7 +20,7 @@ export const getAnnotationIndexForVerseIndex = ({
 
     direction = -1
 }) => {
-    const verse = getVerseObject(selectedSongIndex, verseIndex),
+    const verse = getVerse(selectedSongIndex, verseIndex),
         annotationsCount = getAnnotationsCount(selectedSongIndex)
 
     if (!verse) {

@@ -2,12 +2,7 @@ const LYRIC = 'lyric',
     LEFT = 'left',
     CENTRE = 'centre',
     RIGHT = 'right',
-    ANCHOR = 'anchor',
-
-    SUB_CARD = 'subVerse',
-    SIDE_CARD = 'sideCard',
-    SIDE_SUB_CARD = 'sideSubCard',
-    DOT_UNIT = 'unitDot'
+    ANCHOR = 'anchor'
 
 module.exports = {
 
@@ -51,10 +46,10 @@ module.exports = {
         LYRIC,
         LEFT,
         RIGHT,
-        SUB_CARD,
-        SIDE_CARD,
-        SIDE_SUB_CARD,
-        DOT_UNIT
+        'subVerse',
+        'sideCard',
+        'sideSubCard',
+        'unitDot'
     ],
 
     /**

@@ -9,7 +9,7 @@ export const getSongsNotLoguesCount = () => {
 }
 
 // TODO: Don't pass song object directly.
-export const getSongObject = (songIndex) => {
+export const getSong = (songIndex) => {
     return songs[songIndex]
 }
 
@@ -22,7 +22,7 @@ export const getSongTitle = ({
     showIndex = true
 }) => {
     const
-        song = getSongObject(songIndex),
+        song = getSong(songIndex),
         isLogue = getSongIsLogue(songIndex)
 
     return `${showIndex && !isLogue ? songIndex + '. ' : ''}${song.title}`

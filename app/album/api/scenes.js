@@ -1,10 +1,10 @@
 import albumScenes from 'album/scenes'
 
-import { getSongObject } from 'album/api/songs'
+import { getSong } from 'album/api/songs'
 import { getSongVerseConfigs } from 'album/api/verses'
 
 export const getSongSceneConfigs = (songIndex) => {
-    const { songSceneConfigs } = getSongObject(songIndex)
+    const { songSceneConfigs } = getSong(songIndex)
     return songSceneConfigs || []
 }
 

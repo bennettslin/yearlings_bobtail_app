@@ -1,6 +1,10 @@
-import { getSongObject } from 'album/api/songs'
+import { getSong } from 'album/api/songs'
 
-export const getAllSelectableVerses = (unit) => {
+export const getIndexedVersesForUnit = (unit) => {
+    /**
+     * Only main verses and sub verses are indexed. Side cards and unit dots
+     * are not indexed.
+     */
     const {
         mainVerses,
         unitMap: { subVerse }
@@ -12,30 +16,24 @@ export const getAllSelectableVerses = (unit) => {
     ]
 }
 
-export const getVerseObject = (
+export const getVerse = (
     songIndex,
     verseIndex
 ) => {
-    const { lyricUnits } = getSongObject(songIndex)
-
-    if (lyricUnits) {
-        return lyricUnits.reduce((foundVerse, unit) => (
-            foundVerse || getAllSelectableVerses(unit).find(verse => (
-                verse.verseIndex === verseIndex
-            ))
-        ), false)
-
-    } else {
-        return null
-    }
+    const { indexedVerses } = getSong(songIndex)
+    return indexedVerses ?
+        indexedVerses[verseIndex] :
+        null
 }
 
 export const getSongVerseConfigs = (songIndex) => {
-    const { songVerseConfigs } = getSongObject(songIndex)
+    const { songVerseConfigs } = getSong(songIndex)
     return songVerseConfigs || []
 }
 
 export const getSongVersesCount = (songIndex) => {
-    const { songVerseConfigs } = getSongObject(songIndex)
-    return songVerseConfigs.length || 0
+    const { songVerseConfigs } = getSong(songIndex)
+    return songVerseConfigs ?
+        songVerseConfigs.length :
+        0
 }

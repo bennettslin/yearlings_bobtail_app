@@ -1,17 +1,19 @@
-import { getSongObject } from 'album/api/songs'
+import { getSong } from 'album/api/songs'
 
 import { COLUMN_INDEX } from 'constants/lyrics'
 
 export const getAnnotationsCount = (songIndex) => {
-    const { annotations } = getSongObject(songIndex)
-    return annotations ? annotations.length : 0
+    const { annotations } = getSong(songIndex)
+    return annotations ?
+        annotations.length :
+        0
 }
 
 export const getAnnotation = (
     songIndex,
     annotationIndex
 ) => {
-    const { annotations } = getSongObject(songIndex)
+    const { annotations } = getSong(songIndex)
     return annotations ? annotations[annotationIndex - 1] : null
 }
 

@@ -1,7 +1,7 @@
-import { getSongObject } from 'album/api/songs'
+import { getSong } from 'album/api/songs'
 
 export const getUnit = (songIndex, unitIndex) => {
-    const songs = getSongObject(songIndex)
+    const songs = getSong(songIndex)
 
     return songs.lyricUnits ? songs.lyricUnits[unitIndex] : []
 }

@@ -10,7 +10,7 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 
-import { getVerseObject } from 'album/api/verses'
+import { getVerse } from 'album/api/verses'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
@@ -86,7 +86,7 @@ class VerseBar extends PureComponent {
                 sliderVerseIndex :
                 renderedVerseIndex,
 
-            verseObject = getVerseObject(renderedSongIndex, verseIndex),
+            verseObject = getVerse(renderedSongIndex, verseIndex),
 
             isShown = this.getIsShown()
 
