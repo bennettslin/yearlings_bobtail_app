@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSceneStore } from 'flux/scene/action'
 
-import { getSceneObject } from 'album/api/scenes'
+import { getScene } from 'album/api/scenes'
 
 import {
     TIME_ANYTIME,
@@ -41,7 +41,7 @@ class PresenceListener extends PureComponent {
             renderedSceneIndex !== prevSceneIndex
         ) {
 
-            const sceneObject = getSceneObject(
+            const sceneObject = getScene(
                 renderedSongIndex,
                 renderedSceneIndex
             )

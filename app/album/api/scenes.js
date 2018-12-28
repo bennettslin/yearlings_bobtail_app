@@ -1,36 +1,24 @@
 import albumScenes from 'album/scenes'
 
-import {
-    getSongObject,
-    getSongIsLogue
-} from 'album/api/songs'
+import { getSongObject } from 'album/api/songs'
 import { getSongVerseConfigs } from 'album/api/verses'
 
 export const getSongSceneConfigs = (songIndex) => {
-    const songObject = getSongObject(songIndex),
-        { songSceneConfigs } = songObject
-
+    const { songSceneConfigs } = getSongObject(songIndex)
     return songSceneConfigs || []
 }
 
 export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
-
-    // Return 0 if logue.
-    if (getSongIsLogue(songIndex)) {
-        return 0
-    }
-
     const songVerseConfigs = getSongVerseConfigs(songIndex)
-
-    return songVerseConfigs[verseIndex].sceneIndex
+    return songVerseConfigs.length ?
+        songVerseConfigs[verseIndex].sceneIndex :
+        0
 }
 
-export const getSceneObject = (
+export const getScene = (
     songIndex,
-    sceneIndex = 0,
-    scenes = albumScenes
+    sceneIndex = 0
 ) => {
-    const sceneObject = scenes[songIndex]
-
-    return sceneObject[sceneIndex] || null
+    const songScene = albumScenes[songIndex]
+    return songScene[sceneIndex] || null
 }

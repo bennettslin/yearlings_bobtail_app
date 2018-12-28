@@ -13,7 +13,7 @@ import FurnitureLayer from './Furniture'
 import PanelLayer from './Panel'
 import PuppetLayer from './Puppet'
 
-import { getSceneObject } from 'album/api/scenes'
+import { getScene } from 'album/api/scenes'
 import { getPropsAreShallowEqual } from 'helpers/general'
 import { CUBE_Y_INDICES } from 'constants/cubeIndex'
 
@@ -58,7 +58,7 @@ class Presences extends Component {
                 yIndex
             } = this.props,
 
-            { layers: scenePresenceLayers } = getSceneObject(
+            { layers: scenePresenceLayers } = getScene(
                 renderedSongIndex,
                 renderedSceneIndex
             ),

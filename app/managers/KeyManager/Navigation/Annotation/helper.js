@@ -1,4 +1,4 @@
-import { getAnnotationObject } from 'album/api/annotations'
+import { getAnnotation } from 'album/api/annotations'
 import { parseWormholeLinkForDispatch } from 'helpers/wormhole'
 
 export const getWormholeLinkFromIndex = ({
@@ -7,7 +7,7 @@ export const getWormholeLinkFromIndex = ({
     wikiWormholeIndex
 }) => {
 
-    const { cards } = getAnnotationObject(
+    const { cards } = getAnnotation(
             songIndex,
             annotationIndex
         ),
@@ -45,7 +45,7 @@ export const getWikiWormholeEntity = ({
     annotationIndex,
     accessedIndex
 }) => {
-    const annotationObject = getAnnotationObject(
+    const annotationObject = getAnnotation(
         songIndex,
         annotationIndex
     )

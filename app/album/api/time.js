@@ -5,8 +5,8 @@ import {
 } from 'album/api/verses'
 
 export const getSongTotalTime = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.totalTime || Number.MAX_SAFE_INTEGER
+    const { totalTime } = getSongObject(songIndex)
+    return totalTime || Number.MAX_SAFE_INTEGER
 }
 
 export const getStartTimeForVerseIndex = (songIndex, verseIndex) => {

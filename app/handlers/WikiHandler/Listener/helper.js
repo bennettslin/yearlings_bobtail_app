@@ -1,4 +1,4 @@
-import { getAnnotationObject } from 'album/api/annotations'
+import { getAnnotation } from 'album/api/annotations'
 
 export const getWikiUrl = ({
     selectedSongIndex,
@@ -15,7 +15,7 @@ export const getWikiUrl = ({
                 carouselAnnotationIndex ||
                 selectedAnnotationIndex,
 
-            annotation = getAnnotationObject(
+            annotation = getAnnotation(
                 selectedSongIndex,
                 annotationIndex
             ),

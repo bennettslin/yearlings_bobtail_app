@@ -17,7 +17,7 @@ import {
     IS_VERSE_ENDING_SPAN
 } from 'constants/lyrics'
 
-import { getAnnotationObject } from 'album/api/annotations'
+import { getAnnotation } from 'album/api/annotations'
 
 export const addSourceWormholeLinks = (album) => {
     album.tempWormholeLinks = {}
@@ -127,7 +127,7 @@ export const addDestinationWormholeLinks = (album) => {
                     cardIndex
                 } = destinationLink,
 
-                annotation = getAnnotationObject(songIndex, annotationIndex, album.songs),
+                annotation = getAnnotation(songIndex, annotationIndex, album.songs),
                 card = annotation.cards[cardIndex]
 
             card.wormholeLinks = links.filter((sourceLink, thisIndex) => {
@@ -352,7 +352,7 @@ export const addDestinationWormholeIndices = (album) => {
                     cardIndex
                 } = destinationLink,
 
-                annotation = getAnnotationObject(songIndex, annotationIndex, album.songs),
+                annotation = getAnnotation(songIndex, annotationIndex, album.songs),
                 card = annotation.cards[cardIndex]
 
             card.wormholeLinks = links.filter((sourceLink, thisIndex) => {

@@ -54,13 +54,8 @@ class Stanzas extends PureComponent {
                 setVerseRef
             } = this.props,
 
-            songStanzaConfigs = getSongStanzaConfigs(
-                renderedSongIndex
-            ),
-
-            lastUnitDotCardIndex = getLastUnitDotCardIndex(
-                renderedSongIndex
-            )
+            songStanzaConfigs = getSongStanzaConfigs(renderedSongIndex),
+            lastUnitDotCardIndex = getLastUnitDotCardIndex(renderedSongIndex)
 
         return songStanzaConfigs.length && (
             <div

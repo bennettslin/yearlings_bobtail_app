@@ -3,13 +3,11 @@ import { getSongObject } from 'album/api/songs'
 import { COLUMN_INDEX } from 'constants/lyrics'
 
 export const getAnnotationsCount = (songIndex) => {
-    const song = getSongObject(songIndex),
-        { annotations } = song
-
+    const { annotations } = getSongObject(songIndex)
     return annotations ? annotations.length : 0
 }
 
-export const getAnnotationObject = (
+export const getAnnotation = (
     songIndex,
     annotationIndex
 ) => {
@@ -21,19 +19,19 @@ export const getVerseIndexForAnnotationIndex = (
     songIndex,
     annotationIndex
 ) => {
-    const annotationObject = getAnnotationObject(
+    const annotation = getAnnotation(
         songIndex,
         annotationIndex
     )
 
-    return annotationObject ? annotationObject.verseIndex : -1
+    return annotation ? annotation.verseIndex : -1
 }
 
 export const getAnnotationColumnIndex = (
     songIndex,
     annotationIndex
 ) => {
-    const annotation = getAnnotationObject(
+    const annotation = getAnnotation(
         songIndex,
         annotationIndex
     )
@@ -50,7 +48,7 @@ export const getAnnotationCardObject = ({
     cardIndex
 }) => {
     // Called by annotation card component.
-    const annotationObject = getAnnotationObject(
+    const annotationObject = getAnnotation(
         songIndex,
         annotationIndex
     )

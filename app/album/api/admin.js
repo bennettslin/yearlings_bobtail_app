@@ -1,6 +1,6 @@
 import album from 'album'
 
-export const getGlobalAnnotationObject = (globalIndex) => {
+export const getGlobalAnnotation = (globalIndex) => {
     const { globalAnnotationIndices } = album
     return globalAnnotationIndices[globalIndex]
 }

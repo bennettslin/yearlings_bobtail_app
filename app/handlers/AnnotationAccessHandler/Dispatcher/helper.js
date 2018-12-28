@@ -1,5 +1,5 @@
 import {
-    getAnnotationObject,
+    getAnnotation,
     getAnnotationsCount
 } from 'album/api/annotations'
 import { getVerseObject } from 'album/api/verses'
@@ -51,7 +51,7 @@ export const getAnnotationIndexForVerseIndex = ({
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-            const annotation = getAnnotationObject(selectedSongIndex, returnIndex),
+            const annotation = getAnnotation(selectedSongIndex, returnIndex),
                 showAnnotationForColumn = getShowAnnotationForColumn({
                     selectedSongIndex,
                     selectedAnnotationIndex: returnIndex,

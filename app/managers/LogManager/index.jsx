@@ -6,16 +6,20 @@ import { connect } from 'react-redux'
 
 import album from 'album'
 
-import { getGlobalAnnotationObject } from 'album/api/admin'
-import { getSceneObject } from 'album/api/scenes'
+import { getGlobalAnnotation } from 'album/api/admin'
+import {
+    getSongSceneConfigs,
+    getScene
+} from 'album/api/scenes'
 import { getSongObject } from 'album/api/songs'
+import { getSongStanzaConfigs } from 'album/api/stanzas'
 import {
     getSongVerseConfigs,
     getVerseObject
 } from 'album/api/verses'
 
 import { WINDOW_STORAGE } from 'constants/state'
-import { getAnnotationObject } from 'album/api/annotations'
+import { getAnnotation } from 'album/api/annotations'
 
 class LogManager extends PureComponent {
 
@@ -40,7 +44,10 @@ class LogManager extends PureComponent {
         global.t = this.logStorage
         global.v = this.logVerse
 
+        global.sa = this.logSongAnnotations
+        global.ssc = this.logSongStanzaConfigs
         global.svc = this.logSongVerseConfigs
+        global.szc = this.logSongSceneConfigs
     }
 
     logAlbum = () => {
@@ -60,7 +67,7 @@ class LogManager extends PureComponent {
                 renderedAnnotationIndex
             } = this.props,
 
-            renderedAnnotationObject = getAnnotationObject(
+            renderedAnnotationObject = getAnnotation(
                 renderedSongIndex,
                 renderedAnnotationIndex
             )
@@ -84,7 +91,7 @@ class LogManager extends PureComponent {
 
     logGlobalAnnotation = (globalIndex) => {
         return this._logObject(
-            'global annotation', getGlobalAnnotationObject(globalIndex)
+            'global annotation', getGlobalAnnotation(globalIndex)
         )
     }
 
@@ -93,7 +100,7 @@ class LogManager extends PureComponent {
                 renderedSongIndex,
                 renderedSceneIndex
             } = this.props,
-            renderableScene = getSceneObject(
+            renderableScene = getScene(
                 renderedSongIndex,
                 renderedSceneIndex
             )
@@ -108,21 +115,37 @@ class LogManager extends PureComponent {
                 ...getSongObject(renderedSongIndex)
             }
 
-        copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
+        delete copiedSong.annotations
         copiedSong.lyricUnits = `lyricUnits: ${copiedSong.lyricUnits.length}`
-        copiedSong.songStanzaConfigs = `songStanzaConfigs: ${copiedSong.songStanzaConfigs.length}`
+        delete copiedSong.songStanzaConfigs
         delete copiedSong.songVerseConfigs
-        copiedSong.songSceneConfigs = `songSceneConfigs: ${copiedSong.songSceneConfigs.length}`
+        delete copiedSong.songSceneConfigs
 
         return this._logObject('renderable song', copiedSong)
     }
 
-    logSongVerseConfigs = () => {
-        const
-            { renderedSongIndex } = this.props,
-            songVerseConfigs = getSongVerseConfigs(renderedSongIndex)
+    logSongAnnotations = () => {
+        const { renderedSongIndex } = this.props,
+            song = getSongObject(renderedSongIndex)
+        return this._logObject('Song annotations', song.annotations)
+    }
 
+    logSongStanzaConfigs = () => {
+        const { renderedSongIndex } = this.props,
+            songStanzaConfigs = getSongStanzaConfigs(renderedSongIndex)
+        return this._logObject('Song stanza configs', songStanzaConfigs)
+    }
+
+    logSongVerseConfigs = () => {
+        const { renderedSongIndex } = this.props,
+            songVerseConfigs = getSongVerseConfigs(renderedSongIndex)
         return this._logObject('Song verse configs', songVerseConfigs)
+    }
+
+    logSongSceneConfigs = () => {
+        const { renderedSongIndex } = this.props,
+            songSceneConfigs = getSongSceneConfigs(renderedSongIndex)
+        return this._logObject('Song scene configs', songSceneConfigs)
     }
 
     logStorage = () => {

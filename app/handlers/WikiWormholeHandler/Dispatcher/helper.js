@@ -1,4 +1,4 @@
-import { getAnnotationObject } from 'album/api/annotations'
+import { getAnnotation } from 'album/api/annotations'
 
 import {
     WORMHOLE,
@@ -13,7 +13,7 @@ const getWikiWormholeIndexForDirection = ({
     direction
 
 }) => {
-    const annotation = getAnnotationObject(
+    const annotation = getAnnotation(
         selectedSongIndex,
         selectedAnnotationIndex
     )

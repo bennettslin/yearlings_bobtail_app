@@ -31,11 +31,11 @@ export const getVerseObject = (
 }
 
 export const getSongVerseConfigs = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.songVerseConfigs || []
+    const { songVerseConfigs } = getSongObject(songIndex)
+    return songVerseConfigs || []
 }
 
 export const getSongVersesCount = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.songVerseConfigs.length || 0
+    const { songVerseConfigs } = getSongObject(songIndex)
+    return songVerseConfigs.length || 0
 }

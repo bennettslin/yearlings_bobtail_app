@@ -1,4 +1,5 @@
 import React from 'react'
+import cx from 'classnames'
 import keys from 'lodash.keys'
 
 const DrawingActor = ({
@@ -39,12 +40,54 @@ const DrawingActor = ({
                                 return (
                                     <div
                                         key={`${songIndex}${sceneIndex}`}
-                                        className={`role-row flex-row ${doneForNow ? 'done' : 'todo'}`}
+                                        {...{
+                                            className: cx(
+                                                'role-row',
+                                                'flex-row',
+                                                doneForNow ? 'done' : 'todo'
+                                            )
+                                        }}
                                     >
-                                        <div className="role-info song-index-column">{songIndex}</div>
-                                        <div className="role-info scene-index-column">{sceneIndex}</div>
-                                        <div className="role-info worked-hours-column">{workedHours ? workedHours : 0}</div>
-                                        <div className="role-info description-column">{description}</div>
+                                        <div
+                                            {...{
+                                                className: cx(
+                                                    'role-info',
+                                                    'song-index-column'
+                                                )
+                                            }}
+                                        >
+                                            {songIndex}
+                                        </div>
+                                        <div
+                                            {...{
+                                                className: cx(
+                                                    'role-info',
+                                                    'scene-index-column'
+                                                )
+                                            }}
+                                        >
+                                            {sceneIndex}
+                                        </div>
+                                        <div
+                                            {...{
+                                                className: cx(
+                                                    'role-info',
+                                                    'worked-hours-column'
+                                                )
+                                            }}
+                                        >
+                                            {workedHours ? workedHours : 0}
+                                        </div>
+                                        <div
+                                            {...{
+                                                className: cx(
+                                                    'role-info',
+                                                    'description-column'
+                                                )
+                                            }}
+                                        >
+                                            {description}
+                                        </div>
                                     </div>
                                 )
                             })}

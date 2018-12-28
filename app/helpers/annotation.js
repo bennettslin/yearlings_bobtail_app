@@ -1,5 +1,5 @@
 import {
-    getAnnotationObject,
+    getAnnotation,
     getAnnotationColumnIndex,
     getAnnotationsCount
 } from 'album/api/annotations'
@@ -33,7 +33,7 @@ const _getAnnotationDotKeys = (
     songIndex,
     annotationIndex
 ) => {
-    const annotation = getAnnotationObject(
+    const annotation = getAnnotation(
         songIndex,
         annotationIndex
     )

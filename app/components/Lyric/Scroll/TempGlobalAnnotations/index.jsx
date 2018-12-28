@@ -5,8 +5,8 @@ import Button from '../../../Button'
 
 import album from 'album'
 
-import { getAnnotationObject } from 'album/api/annotations'
-import { getGlobalAnnotationObject } from 'album/api/admin'
+import { getAnnotation } from 'album/api/annotations'
+import { getGlobalAnnotation } from 'album/api/admin'
 
 const TempGlobalAnnotationsCounter = ({
     counter,
@@ -39,10 +39,10 @@ const TempGlobalAnnotation = ({
         {
             songIndex,
             annotationIndex
-        } = getGlobalAnnotationObject(
+        } = getGlobalAnnotation(
             globalAnnotationIndex
         ),
-        annotationObject = getAnnotationObject(
+        annotationObject = getAnnotation(
             songIndex,
             annotationIndex
         ),

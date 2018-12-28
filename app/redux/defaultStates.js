@@ -19,7 +19,7 @@ import {
 
 import {
     getSceneIndexForVerseIndex,
-    getSceneObject
+    getScene
 } from 'album/api/scenes'
 import { getStartTimeForVerseIndex } from 'album/api/time'
 import {
@@ -55,7 +55,7 @@ const
         storedSongIndex,
         storedVerseIndex
     ),
-    sceneObject = getSceneObject(
+    sceneObject = getScene(
         storedSongIndex,
         sceneIndex
     ),

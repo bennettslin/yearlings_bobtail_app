@@ -1,4 +1,5 @@
 import { getSongObject } from 'album/api/songs'
+import { getSongStanzaConfigs } from 'album/api/stanzas'
 
 export const getParentOfVerseClassNamesForIndices = ({
     entities = [],
@@ -38,10 +39,9 @@ export const getLastUnitDotCardIndex = (songIndex) => {
      * stanza unit.
      */
 
-    const songObject = getSongObject(songIndex),
-        { songStanzaConfigs } = songObject
+    const songStanzaConfigs = getSongStanzaConfigs(songIndex)
 
-    if (songStanzaConfigs) {
+    if (songStanzaConfigs.length) {
         // Get unit indices of last stanza.
         const { stanzaUnitIndices } = songStanzaConfigs[
             songStanzaConfigs.length - 1

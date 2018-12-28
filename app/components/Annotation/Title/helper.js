@@ -1,4 +1,4 @@
-import { getAnnotationObject } from 'album/api/annotations'
+import { getAnnotation } from 'album/api/annotations'
 
 import {
     WORMHOLE,
@@ -11,7 +11,7 @@ const _getAccessibleWikiWormholesLength = ({
     dotKeys
 }) => {
 
-    const annotation = getAnnotationObject(
+    const annotation = getAnnotation(
             songIndex,
             annotationIndex
         ),
@@ -50,7 +50,7 @@ const getAnnotationTitleData = ({
             dotKeys,
             title
 
-        } = getAnnotationObject(
+        } = getAnnotation(
             songIndex,
             annotationIndex
         ),

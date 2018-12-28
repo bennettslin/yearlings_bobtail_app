@@ -1,11 +1,11 @@
-import { getAnnotationObject } from 'album/api/annotations'
+import { getAnnotation } from 'album/api/annotations'
 
 const getAnnotationCardsLength = ({
     songIndex,
     annotationIndex
 }) => {
 
-    const { cards } = getAnnotationObject(
+    const { cards } = getAnnotation(
         songIndex,
         annotationIndex
     ) || {}
