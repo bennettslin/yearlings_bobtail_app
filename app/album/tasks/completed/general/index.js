@@ -4271,5 +4271,10 @@ export default [
         taskName: `Make verse object lookup more efficient. More unit refactoring in general.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Routing is wonky. Wrong verse or wrong annotation do not reset in path.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

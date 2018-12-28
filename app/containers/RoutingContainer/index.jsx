@@ -10,7 +10,7 @@ import ListenerContainer from '../ListenerContainer'
 import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getSceneIndexForVerseIndex } from 'album/api/scenes'
 import {
-    getValidRoutingIndicesObject,
+    getValidRoutingIndices,
     getPathForIndices
 } from './helper'
 
@@ -33,19 +33,18 @@ class RoutingContainer extends PureComponent {
     constructor(props) {
         super(props)
 
-        const { routingParamString } = props.match.params,
+        const
+            { routingParamString } = props.match.params,
 
             // Get whatever params the route gives us.
             routingIndicesObject =
-                getValidRoutingIndicesObject(routingParamString),
+                getValidRoutingIndices(routingParamString),
 
             {
                 routingSongIndex,
                 routingVerseIndex,
                 routingAnnotationIndex
             } = routingIndicesObject
-
-        // console.error(routingIndicesObject)
 
         const {
             selectedSongIndex,
@@ -86,6 +85,13 @@ class RoutingContainer extends PureComponent {
             // Reset wiki.
             props.updateSessionStore({ selectedWikiIndex: 0 })
         }
+
+        // Always replace path for consistency.
+        this.replacePath(
+            routingSongIndex,
+            routingVerseIndex,
+            routingAnnotationIndex
+        )
     }
 
     componentDidMount() {

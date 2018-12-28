@@ -28,66 +28,83 @@ const _getIndexForPrefix = (string, prefix = '') => {
     return isValidNumber ? parseInt(finalStringIndex) : undefined
 }
 
+const _getRoutingIndices = (routingParamString = '') => {
+    const rawIndicesObject = {
+            rawSongIndex: 0,
+            rawVerseIndex: 0,
+            rawAnnotationIndex: 0
+        },
+
+        // Split along hyphen, and only allow three values.
+        routingIndices = routingParamString.split('-')
+
+    // Get song from first param.
+    if (routingIndices.length) {
+        const rawSongIndex = _getIndexForPrefix(routingIndices[0])
+
+        if (!isNaN(rawSongIndex)) {
+            rawIndicesObject.rawSongIndex = rawSongIndex
+        }
+    }
+
+    if (routingIndices.length >= 2) {
+
+        let rawVerseIndex,
+            rawAnnotationIndex
+
+        // Verse can only be second param.
+        if (routingIndices[1].indexOf('v') > -1) {
+            rawVerseIndex = _getIndexForPrefix(routingIndices[1], 'v')
+
+            // If verse is present, annotation can only be third param.
+            if (routingIndices.length >= 3) {
+                rawAnnotationIndex = _getIndexForPrefix(routingIndices[2], 'a')
+            }
+
+        // If verse is absent, annotation can only be second param.
+        } else if (routingIndices[1].indexOf('a') > -1) {
+            rawAnnotationIndex = _getIndexForPrefix(routingIndices[1], 'a')
+        }
+
+        if (!isNaN(rawVerseIndex)) {
+            rawIndicesObject.rawVerseIndex = rawVerseIndex
+        }
+        if (!isNaN(rawAnnotationIndex)) {
+            rawIndicesObject.rawAnnotationIndex = rawAnnotationIndex
+        }
+    }
+
+    return rawIndicesObject
+}
+
 const _isValidSongIndex = (songIndex) => {
     return songIndex >= 0 && songIndex < getSongsAndLoguesCount()
 }
 
-const _isValidVerseIndexForSongIndex = (songIndex, verseIndex) => {
+const _isValidVerseIndex = (songIndex, verseIndex) => {
     return Boolean(getVerse(songIndex, verseIndex))
 }
 
-const _isValidAnnotationIndexForSongIndex = (songIndex, annotationIndex) => {
+const _isValidAnnotationIndex = (songIndex, annotationIndex) => {
     return Boolean(getAnnotation(songIndex, annotationIndex))
 }
 
-export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
-    const
-        // Path is something like "9-grasshoppers-lie-heavy-v20-a22.""
-        newPath =
-            `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex ? '-v' + verseIndex : ''}${annotationIndex ? '-a' + annotationIndex : ''}`
-
-    return newPath
-}
-
-export const getValidRoutingIndicesObject = (routingParamString = '') => {
-
-    // Split along hyphen.
-    const rawIndicesObject = {},
-        routingIndicesObject = {
-            routingSongIndex: 0
-        },
-
-        routingIndices = routingParamString.split('-')
-
-    routingIndices.forEach(param => {
-        const rawSongIndex = _getIndexForPrefix(param),
-            rawVerseIndex = _getIndexForPrefix(param, 'v'),
-            rawAnnotationIndex = _getIndexForPrefix(param, 'a')
-
-        // If it's a song index, get it.
-        if (!isNaN(rawSongIndex)) {
-            rawIndicesObject.rawSongIndex = rawSongIndex
-
-            // If it's a verse index, get it.
-        } else if (!isNaN(rawVerseIndex)) {
-            rawIndicesObject.rawVerseIndex = rawVerseIndex
-
-            // If it's an annotation index, get it.
-        } else if (!isNaN(rawAnnotationIndex)) {
-            rawIndicesObject.rawAnnotationIndex = rawAnnotationIndex
-        }
-    })
-
+export const getValidRoutingIndices = (routingParamString = '') => {
     /**
      * We now have an array of up to three numbers. If they exist, the first is
      * the song index, second is the verse index, third is the annotation index.
      */
-
     const {
-        rawSongIndex,
-        rawVerseIndex,
-        rawAnnotationIndex
-    } = rawIndicesObject
+            rawSongIndex,
+            rawVerseIndex,
+            rawAnnotationIndex
+        } = _getRoutingIndices(routingParamString),
+
+        routingIndicesObject = {
+            routingSongIndex: 0,
+            routingVerseIndex: 0,
+            routingAnnotationIndex: 0
+        }
 
     // Only set routing song index if valid.
     if (_isValidSongIndex(rawSongIndex)) {
@@ -97,39 +114,38 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
          * If routing song index is set, always set routing verse index.
          * Default to 0.
          */
-        let routingVerseIndex
-
-        if (!isNaN(rawVerseIndex) &&
-                _isValidVerseIndexForSongIndex(
-                    rawSongIndex,
-                    rawVerseIndex
-                )) {
-            routingVerseIndex = rawVerseIndex
-
-        } else {
-            routingVerseIndex = 0
+        if (
+            _isValidVerseIndex(
+                rawSongIndex,
+                rawVerseIndex
+            )
+        ) {
+            routingIndicesObject.routingVerseIndex = rawVerseIndex
         }
 
-        routingIndicesObject.routingVerseIndex = routingVerseIndex
 
         /**
          * Routing annotation index is optional.
          */
-        let routingAnnotationIndex
-
-        if (!isNaN(rawAnnotationIndex) &&
-                _isValidAnnotationIndexForSongIndex(
-                    rawSongIndex,
-                    rawAnnotationIndex
-                )) {
-            routingAnnotationIndex = rawAnnotationIndex
-
-        } else {
-            routingAnnotationIndex = 0
+        if (
+            _isValidAnnotationIndex(
+                rawSongIndex,
+                rawAnnotationIndex
+            )
+        ) {
+            routingIndicesObject.routingAnnotationIndex = rawAnnotationIndex
         }
 
-        routingIndicesObject.routingAnnotationIndex = routingAnnotationIndex
     }
 
     return routingIndicesObject
+}
+
+export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
+    const
+        // Path is something like "9_GrasshoppersLieHeavy-v20-a22.""
+        newPath =
+            `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex ? '-v' + verseIndex : ''}${annotationIndex ? '-a' + annotationIndex : ''}`
+
+    return newPath
 }
