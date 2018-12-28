@@ -23,6 +23,7 @@ import SliderListener from '../../listeners/SliderListener'
 import TipsListener from '../../handlers/TipsHandler/Listener'
 import WikiListener from '../../handlers/WikiHandler/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormholeHandler/Listener'
+import WindowResizeListener from '../../handlers/WindowResizeHandler/Listener'
 import WindowListener from '../../listeners/WindowListener'
 
 import AudioPlayerManager from '../../managers/AudioPlayerManager'
@@ -62,6 +63,7 @@ class ListenerContainer extends PureComponent {
                 <TipsListener />
                 <WikiListener />
                 <WikiWormholeListener />
+                <WindowResizeListener />
                 <WindowListener />
 
                 <AudioPlayerManager />

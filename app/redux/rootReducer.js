@@ -54,6 +54,8 @@ import {
 const rootReducer = combineReducers({
     [CURTAIN_STORE]: CurtainReducer,
     [WINDOW_STORE]: WindowReducer,
+    [RENDERABLE_STORE]: RenderableReducer,
+
     [SCENE_STORE]: SceneReducer,
     [AUDIO_STORE]: AudioReducer,
     [SONG_STORE]: SongReducer,
@@ -73,7 +75,6 @@ const rootReducer = combineReducers({
 
     [LOAD_STORE]: LoadReducer,
     [RENDER_STORE]: RenderReducer,
-    [RENDERABLE_STORE]: RenderableReducer,
 
     // Queued event stores.
     [ANNOTATION_STORE]: AnnotationReducer,

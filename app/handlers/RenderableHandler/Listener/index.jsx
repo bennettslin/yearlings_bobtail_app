@@ -16,7 +16,6 @@ class RenderableListener extends PureComponent {
         // Through Redux.
         isSongChangeRenderable: PropTypes.bool.isRequired,
         isSceneChangeRenderable: PropTypes.bool.isRequired,
-        isWindowResizeRenderable: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
@@ -25,7 +24,6 @@ class RenderableListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._checkWindowResize(prevProps)
         this._checkSongChange(prevProps)
         this._checkSceneChange(prevProps)
     }
@@ -59,25 +57,6 @@ class RenderableListener extends PureComponent {
             this._handleSongChangeRenderable()
         }
     }
-
-    _checkWindowResize(prevProps) {
-        const
-            { isWindowResizeRenderable } = this.props,
-            { isWindowResizeRenderable: wasWindowResizeRenderable } = prevProps
-
-        // Is unrenderable after window resize.
-        if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
-            this._handleWindowResizeUnrenderable()
-
-        /**
-         * Is renderable after window resize timeout. Also called upon initial
-         * render.
-         */
-        } else if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
-            this._handleWindowResizeRenderable()
-        }
-    }
-
 
     _handleSceneChangeUnrenderable() {
         this.unrenderedTime = Date.now()
@@ -126,26 +105,6 @@ class RenderableListener extends PureComponent {
         })
     }
 
-    _handleWindowResizeUnrenderable() {
-        this.unrenderedTime = Date.now()
-
-        logRenderable('Unrenderable from window resize.')
-        this.props.updateRenderStore({
-            canTheatreRender: false,
-            didTheatreRender: false
-        })
-    }
-
-    _handleWindowResizeRenderable() {
-        logRenderable(`Renderable after window resize, took ${
-            ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-        } seconds.`)
-
-        this.props.updateRenderStore({
-            canTheatreRender: true
-        })
-    }
-
     render() {
         return null
     }
@@ -154,13 +113,11 @@ class RenderableListener extends PureComponent {
 const mapStateToProps = ({
     renderableStore: {
         isSceneChangeRenderable,
-        isSongChangeRenderable,
-        isWindowResizeRenderable
+        isSongChangeRenderable
     }
 }) => ({
     isSceneChangeRenderable,
-    isSongChangeRenderable,
-    isWindowResizeRenderable
+    isSongChangeRenderable
 })
 
 export default connect(

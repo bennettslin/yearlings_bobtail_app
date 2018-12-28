@@ -17,8 +17,7 @@ class RenderableDispatcher extends PureComponent {
 
     state = {
         sceneChangeTimeoutId: '',
-        songChangeTimeoutId: '',
-        windowResizeTimeoutId: ''
+        songChangeTimeoutId: ''
     }
 
     componentDidMount() {
@@ -26,9 +25,7 @@ class RenderableDispatcher extends PureComponent {
             dispatchSceneChangeUnrenderable:
                 this.dispatchSceneChangeUnrenderable,
             dispatchSongChangeUnrenderable:
-                this.dispatchSongChangeUnrenderable,
-            dispatchWindowResizeUnrenderable:
-                this.dispatchWindowResizeUnrenderable
+                this.dispatchSongChangeUnrenderable
         })
     }
 
@@ -68,25 +65,6 @@ class RenderableDispatcher extends PureComponent {
         })
     }
 
-    dispatchWindowResizeUnrenderable = () => {
-        this.props.updateRenderableStore({ isWindowResizeRenderable: false })
-
-        // Clear previous timeout.
-        clearTimeout(this.state.windowResizeTimeoutId)
-
-        /**
-         * Wait for window resize to finish.
-         */
-        const windowResizeTimeoutId = setTimeout(
-            this._dispatchWindowResizeRenderable, 500
-        )
-
-        this.setState({
-            windowResizeTimeoutId
-        })
-    }
-
-
     _dispatchSceneChangeRenderable = () => {
         this.props.updateRenderableStore({ isSceneChangeRenderable: true })
     }
@@ -94,10 +72,6 @@ class RenderableDispatcher extends PureComponent {
     _dispatchSongChangeRenderable = (callback) => {
         this.props.updateRenderableStore({ isSongChangeRenderable: true })
         callback()
-    }
-
-    _dispatchWindowResizeRenderable = () => {
-        this.props.updateRenderableStore({ isWindowResizeRenderable: true })
     }
 
     render() {

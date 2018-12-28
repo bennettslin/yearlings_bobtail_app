@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { updateDeviceStore } from 'flux/device/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
 
-import RenderableDispatcher from '../../handlers/RenderableHandler/Dispatcher'
+import WindowResizeDispatcher from '../../handlers/WindowResizeHandler/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
 import {
@@ -167,7 +167,7 @@ class WindowListener extends PureComponent {
 
     render() {
         return (
-            <RenderableDispatcher {...{ getRefs: this._getRefs }} />
+            <WindowResizeDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }
