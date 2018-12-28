@@ -43,13 +43,12 @@ class Unit extends PureComponent {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
+                renderedSongIndex,
                 unitIndex,
                 ...other
             } = this.props,
 
-            // Pass to lyric stanza view so it knows to update.
             {
-                renderedSongIndex,
                 setLyricAnnotationElement
             } = other,
 

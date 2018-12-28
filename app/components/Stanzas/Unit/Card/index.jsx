@@ -172,9 +172,7 @@ const propTypes = {
                             'bgColour__unit__pattern__reverse',
                             `bgColour__stanzaType__${stanzaType}`
                         )}
-                        {...{
-                            onClick: handleStanzaTabClick
-                        }}
+                        {...{ onClick: handleStanzaTabClick }}
                     >
                         <div
                             {...{ className: 'UnitCard__tabText' }}

@@ -131,6 +131,7 @@ class TextLyricAnchor extends PureComponent {
                 renderedSongIndex,
                 handleAnchorClick,
                 setLyricAnnotationElement,
+                updateAnnotationStore,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -205,13 +206,15 @@ class TextLyricAnchor extends PureComponent {
                 {' '}
                 <span
                     key={annotationIndex}
-                    ref={this.setLyricAnnotationElement}
-                    className={cx(
-                        annotationIndex &&
-                            `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
+                    {...{
+                        ref: this.setLyricAnnotationElement,
+                        className: cx(
+                            annotationIndex &&
+                                `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
-                        wikiIndex && `wiki__${wikiIndex}`
-                    )}
+                            wikiIndex && `wiki__${wikiIndex}`
+                        )
+                    }}
                 >
                     <Anchor
                         {...{
@@ -222,9 +225,7 @@ class TextLyricAnchor extends PureComponent {
                                 <Texts {...other}
                                     key={index}
                                     isTextAnchor
-                                    {...{
-                                        text: word
-                                    }}
+                                    {...{ text: word }}
                                 />
                             )),
                             sequenceDotKeys: dotKeys,

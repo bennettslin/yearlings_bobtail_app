@@ -1,5 +1,5 @@
 // Helper for getting param values from routing.
-import { getSong } from 'album/api/songs'
+import { getSongsAndLoguesCount } from 'album/api/songs'
 import { getVerse } from 'album/api/verses'
 import { getAnnotation } from 'album/api/annotations'
 
@@ -29,7 +29,7 @@ const _getIndexForPrefix = (string, prefix = '') => {
 }
 
 const _isValidSongIndex = (songIndex) => {
-    return Boolean(getSong(songIndex))
+    return songIndex >= 0 && songIndex < getSongsAndLoguesCount()
 }
 
 const _isValidVerseIndexForSongIndex = (songIndex, verseIndex) => {
@@ -53,7 +53,9 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
 
     // Split along hyphen.
     const rawIndicesObject = {},
-        routingIndicesObject = {},
+        routingIndicesObject = {
+            routingSongIndex: 0
+        },
 
         routingIndices = routingParamString.split('-')
 

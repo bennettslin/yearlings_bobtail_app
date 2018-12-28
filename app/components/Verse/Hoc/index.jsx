@@ -21,6 +21,7 @@ const propTypes = {
         verseIndex,
         VerseComponent,
         handleVerseSelect,
+        inUnit,
 
         ...other
     }) => {
@@ -38,7 +39,6 @@ const propTypes = {
         }
 
         const {
-                inUnit,
                 inSlider,
                 inVerseBar
 

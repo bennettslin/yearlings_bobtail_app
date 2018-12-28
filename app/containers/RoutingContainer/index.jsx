@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateRenderedStore } from 'flux/rendered/action'
 import { updateSongStore } from 'flux/song/action'
 import { updateSessionStore } from 'flux/session/action'
 
@@ -21,6 +22,7 @@ class RoutingContainer extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         updateSongStore: PropTypes.func.isRequired,
+        updateRenderedStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -43,51 +45,51 @@ class RoutingContainer extends PureComponent {
                 routingAnnotationIndex
             } = routingIndicesObject
 
-        let selectedSongIndex = props.selectedSongIndex,
-            selectedVerseIndex = props.selectedVerseIndex,
-            selectedAnnotationIndex = props.selectedAnnotationIndex
+        console.error(routingIndicesObject)
 
-        // If route gives us its own song index, set in store.
-        if (!isNaN(routingSongIndex)) {
+        const {
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        } = props
 
-            selectedSongIndex = routingSongIndex
-            selectedVerseIndex = routingVerseIndex
-            selectedAnnotationIndex = routingAnnotationIndex
+        // Update storage to be consistent with route if necessary.
+        if (
+            routingSongIndex !== selectedSongIndex ||
+            routingVerseIndex !== selectedVerseIndex ||
+            routingAnnotationIndex !== selectedAnnotationIndex
+        ) {
+
+            const routingSceneIndex = getSceneIndexForVerseIndex(
+                routingSongIndex,
+                routingVerseIndex
+            )
 
             props.updateSongStore({
-                selectedSongIndex,
-                selectedVerseIndex,
-                selectedAnnotationIndex,
-                selectedSceneIndex: getSceneIndexForVerseIndex(
-                    selectedSongIndex,
-                    selectedVerseIndex
-                ),
+                selectedSongIndex: routingSongIndex,
+                selectedVerseIndex: routingVerseIndex,
+                selectedAnnotationIndex: routingAnnotationIndex,
+                selectedSceneIndex: routingSceneIndex,
                 selectedTime: getStartTimeForVerseIndex(
-                    selectedSongIndex,
-                    selectedVerseIndex
+                    routingSongIndex,
+                    routingVerseIndex
                 )
+            })
+
+            this.props.updateRenderedStore({
+                renderedSongIndex: routingSongIndex,
+                renderedVerseIndex: routingVerseIndex,
+                renderedAnnotationIndex: routingAnnotationIndex,
+                renderedSceneIndex: routingSceneIndex
             })
 
             // Reset wiki.
             props.updateSessionStore({ selectedWikiIndex: 0 })
         }
-
-        this.state = {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        }
     }
 
     componentDidMount() {
         logMount('RoutingContainer')
-
-        // If routing changed what was in store, set the new path name.
-        this.replacePath(
-            this.state.selectedSongIndex,
-            this.state.selectedVerseIndex,
-            this.state.selectedAnnotationIndex
-        )
     }
 
     componentDidUpdate(prevProps) {
@@ -116,10 +118,10 @@ class RoutingContainer extends PureComponent {
         }
     }
 
-    replacePath(pathSongIndex, pathVerseIndex, pathAnnotationIndex) {
+    replacePath(songIndex, verseIndex, annotationIndex) {
 
         const pathName = getPathForIndices(
-            pathSongIndex, pathVerseIndex, pathAnnotationIndex
+            songIndex, verseIndex, annotationIndex
         )
 
         this.props.history.replace(pathName)
@@ -147,6 +149,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
+        updateRenderedStore,
         updateSongStore,
         updateSessionStore
     }

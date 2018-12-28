@@ -28,7 +28,6 @@ const mapStateToProps = ({
 class Verse extends PureComponent {
 
     static defaultProps = {
-        inMain: true,
         inVerseBar: false
     }
 
@@ -40,7 +39,6 @@ class Verse extends PureComponent {
         verseObject: PropTypes.object.isRequired,
         verseIndex: PropTypes.number,
 
-        inMain: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
 
         setVerseRef: PropTypes.func
@@ -117,11 +115,7 @@ class Verse extends PureComponent {
  * PRESENTATION *
  ****************/
 
-const verseViewDefaultProps = {
-        isInteractivated: false
-    },
-
-    verseViewPropTypes = {
+const verseViewPropTypes = {
     // From parent.
         logicSelectors: PropTypes.string,
         verseIndex: PropTypes.number,
@@ -185,7 +179,6 @@ const verseViewDefaultProps = {
         )
     })
 
-VerseView.defaultProps = verseViewDefaultProps
 VerseView.propTypes = verseViewPropTypes
 
 export default connect(mapStateToProps)(Verse)

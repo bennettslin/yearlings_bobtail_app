@@ -171,9 +171,7 @@ const propTypes = {
                 <div ref={setRef}>
                     <Anchor
                         {...other}
-                        {...{
-                            stanzaDotKeys: dotKeys
-                        }}
+                        {...{ stanzaDotKeys: dotKeys }}
                     />
                 </div>
             </div>
