@@ -196,6 +196,8 @@ const
         sceneCubesKey,
         sceneTime,
         sceneSeason,
+        sceneSongIndex: -1,
+        sceneSceneIndex: -1,
 
         /**
          * Stored only for dev clarity. Components will retrieve these layers

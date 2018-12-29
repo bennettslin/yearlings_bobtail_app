@@ -71,6 +71,8 @@ class SceneChangeListener extends PureComponent {
         this.props.updateSceneStore({
             canSceneRender: true,
             sceneCubesKey,
+            sceneSongIndex: selectedSongIndex,
+            sceneSceneIndex: selectedSceneIndex,
             scenePresenceLayers,
             sceneTime,
             sceneSeason
