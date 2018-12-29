@@ -46,6 +46,7 @@ class SceneChangeListener extends PureComponent {
         this.props.updateRenderStore({ didSceneRender: false })
     }
 
+    // TODO: Remove.
     _handleSceneChangeRenderable() {
         logRenderable(`Renderable after scene change, took ${
             ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)

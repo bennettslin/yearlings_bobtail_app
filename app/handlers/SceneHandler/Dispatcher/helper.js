@@ -3,22 +3,18 @@ import {
     getSceneIndexForVerseIndex
 } from 'album/api/scenes'
 
-import { getSongIsLogue } from 'album/api/songs'
-
 export const getVerseIndexForNextScene = (
     songIndex,
     verseIndex,
     direction = 0
 ) => {
+    const songSceneConfigs = getSongSceneConfigs(songIndex)
 
-    // Return -1 if logue.
-    if (getSongIsLogue(songIndex)) {
+    if (!songSceneConfigs.length) {
         return -1
     }
 
-    const songSceneConfigs = getSongSceneConfigs(songIndex),
-
-        sceneIndex = getSceneIndexForVerseIndex(
+    const sceneIndex = getSceneIndexForVerseIndex(
             songIndex,
             verseIndex
         ),

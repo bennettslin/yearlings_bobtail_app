@@ -100,6 +100,7 @@ class LogManager extends PureComponent {
                 renderedSongIndex,
                 renderedSceneIndex
             } = this.props,
+
             renderableScene = getScene(
                 renderedSongIndex,
                 renderedSceneIndex

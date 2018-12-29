@@ -24,9 +24,7 @@ class SceneDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({
-            dispatchScene: this.dispatchScene
-        })
+        this.props.getRefs({ dispatchScene: this.dispatchScene })
     }
 
     dispatchScene = (direction) => {
