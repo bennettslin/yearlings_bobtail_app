@@ -1,13 +1,13 @@
 // Reducers for window resizing.
-import { WINDOW_STORE } from '../storeKeys'
-import { WINDOW_DEFAULTS } from '../defaultStates'
+import { CHANGE_STORE } from '../storeKeys'
+import { CHANGE_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = WINDOW_DEFAULTS,
+    state = CHANGE_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case WINDOW_STORE:
+        case CHANGE_STORE:
             return {
                 ...state,
                 ...action.payload

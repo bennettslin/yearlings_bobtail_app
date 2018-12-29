@@ -82,6 +82,13 @@ const
         queuedPlayVerseIndex: -1
     },
 
+    CHANGE_DEFAULTS = {
+        isSceneChanging: false,
+        isScenePreparing: false,
+        isSongChanging: false,
+        isWindowResizing: false
+    },
+
     CURTAIN_DEFAULTS = {
         isCurtainClosing: false,
         isCurtainClosed: false,
@@ -150,7 +157,6 @@ const
     },
 
     RENDERABLE_DEFAULTS = {
-        isSceneChangeRenderable: true,
         isSongChangeRenderable: true
     },
 
@@ -273,10 +279,6 @@ const
         isVerseBarBelow: false,
         queuedDetermineVerseBars: false,
         queuedVerseBarsTimeout: 0
-    },
-
-    WINDOW_DEFAULTS = {
-        isWindowResizing: false
     }
 
 export {
@@ -303,5 +305,5 @@ export {
     TOGGLE_DEFAULTS,
     TRANSIENT_DEFAULTS,
     VERSE_BARS_DEFAULTS,
-    WINDOW_DEFAULTS
+    CHANGE_DEFAULTS
 }

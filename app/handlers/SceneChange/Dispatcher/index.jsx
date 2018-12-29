@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateRenderableStore } from 'flux/renderable/action'
+import { updateChangeStore } from 'flux/change/action'
 
 class SceneChangeDispatcher extends PureComponent {
 
@@ -11,7 +11,7 @@ class SceneChangeDispatcher extends PureComponent {
         // Through Redux.
         selectedSceneIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        updateRenderableStore: PropTypes.func.isRequired
+        updateChangeStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -44,7 +44,7 @@ class SceneChangeDispatcher extends PureComponent {
 
 
     _dispatchSceneChanging = () => {
-        this.props.updateRenderableStore({ isSceneChangeRenderable: false })
+        this.props.updateChangeStore({ isSceneChanging: true })
 
         // Clear previous timeout.
         clearTimeout(this.state.sceneChangeTimeoutId)
@@ -62,7 +62,7 @@ class SceneChangeDispatcher extends PureComponent {
     }
 
     _dispatchSceneChanged = () => {
-        this.props.updateRenderableStore({ isSceneChangeRenderable: true })
+        this.props.updateChangeStore({ isSceneChanging: false })
     }
 
     render() {
@@ -82,5 +82,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { updateRenderableStore }
+    { updateChangeStore }
 )(SceneChangeDispatcher)

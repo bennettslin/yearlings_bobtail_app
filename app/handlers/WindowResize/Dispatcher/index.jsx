@@ -2,13 +2,13 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
-import { updateWindowStore } from 'flux/window/action'
+import { updateChangeStore } from 'flux/change/action'
 
 class WindowResizeDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        updateWindowStore: PropTypes.func.isRequired
+        updateChangeStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -24,7 +24,7 @@ class WindowResizeDispatcher extends PureComponent {
     }
 
     _dispatchWindowResizing = () => {
-        this.props.updateWindowStore({ isWindowResizing: true })
+        this.props.updateChangeStore({ isWindowResizing: true })
 
         // Clear previous timeout.
         clearTimeout(this.state.windowResizeTimeoutId)
@@ -42,7 +42,7 @@ class WindowResizeDispatcher extends PureComponent {
     }
 
     _dispatchWindowResized = () => {
-        this.props.updateWindowStore({ isWindowResizing: false })
+        this.props.updateChangeStore({ isWindowResizing: false })
     }
 
     render() {
@@ -54,5 +54,5 @@ const mapStateToProps = null
 
 export default connect(
     mapStateToProps,
-    { updateWindowStore }
+    { updateChangeStore }
 )(WindowResizeDispatcher)

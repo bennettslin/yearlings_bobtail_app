@@ -6,17 +6,23 @@ import { connect } from 'react-redux'
 import { updateRenderStore } from 'flux/render/action'
 import { updateSceneStore } from 'flux/scene/action'
 
+import { getScene } from 'album/api/scenes'
+
+import {
+    TIME_ANYTIME,
+    SEASON_INDOOR
+} from 'scene/sky'
+
 class SceneChangeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSceneChangeRenderable: PropTypes.bool.isRequired,
+        isSceneChanging: PropTypes.bool.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedSceneIndex: PropTypes.number.isRequired,
+
         updateRenderStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.unrenderedTime = Date.now()
     }
 
     componentDidUpdate(prevProps) {
@@ -25,34 +31,50 @@ class SceneChangeListener extends PureComponent {
 
     _checkSceneChange(prevProps) {
         const
-            { isSceneChangeRenderable } = this.props,
-            { isSceneChangeRenderable: wasSceneChangeRenderable } = prevProps
+            { isSceneChanging } = this.props,
+            { isSceneChanging: wasSceneChanging } = prevProps
 
         // Is unrenderable after scene change within same song.
-        if (!isSceneChangeRenderable && wasSceneChangeRenderable) {
-            this._handleSceneChangeUnrenderable()
+        if (isSceneChanging && !wasSceneChanging) {
+            this._exitTransitionScene()
 
         // Is renderable after scene change timeout.
-        } else if (isSceneChangeRenderable && !wasSceneChangeRenderable) {
-            this._handleSceneChangeRenderable()
+        } else if (!isSceneChanging && wasSceneChanging) {
+            this._updateSceneState()
         }
     }
 
-    _handleSceneChangeUnrenderable() {
-        this.unrenderedTime = Date.now()
-
-        logRenderable('Unrenderable from scene change.')
+    _exitTransitionScene() {
         this.props.updateSceneStore({ canSceneRender: false })
         this.props.updateRenderStore({ didSceneRender: false })
     }
 
-    // TODO: Remove.
-    _handleSceneChangeRenderable() {
-        logRenderable(`Renderable after scene change, took ${
-            ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-        } seconds.`)
+    _updateSceneState() {
+        const
+            {
+                selectedSongIndex,
+                selectedSceneIndex
+            } = this.props,
+            {
+                cubes: sceneCubesKey,
+                layers: scenePresenceLayers,
+                sky: {
+                    time: sceneTime = TIME_ANYTIME,
+                    season: sceneSeason = SEASON_INDOOR
+                }
 
-        this.props.updateSceneStore({ canSceneRender: true })
+            } = getScene(
+                selectedSongIndex,
+                selectedSceneIndex
+            )
+
+        this.props.updateSceneStore({
+            canSceneRender: true,
+            sceneCubesKey,
+            scenePresenceLayers,
+            sceneTime,
+            sceneSeason
+        })
     }
 
     render() {
@@ -61,9 +83,15 @@ class SceneChangeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    renderableStore: { isSceneChangeRenderable }
+    changeStore: { isSceneChanging },
+    songStore: {
+        selectedSongIndex,
+        selectedSceneIndex
+    }
 }) => ({
-    isSceneChangeRenderable
+    isSceneChanging,
+    selectedSongIndex,
+    selectedSceneIndex
 })
 
 export default connect(

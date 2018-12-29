@@ -2,6 +2,7 @@ import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
+import ChangeReducer from './change/reducer'
 import CurtainReducer from './curtain/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
@@ -22,12 +23,12 @@ import SongReducer from './song/reducer'
 import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
 import VerseBarsReducer from './verseBars/reducer'
-import WindowReducer from './window/reducer'
 
 import {
     ACCESS_STORE,
     ANNOTATION_STORE,
     AUDIO_STORE,
+    CHANGE_STORE,
     CURTAIN_STORE,
     DEVICE_STORE,
     DOTS_STORE,
@@ -47,13 +48,12 @@ import {
     SONG_STORE,
     TOGGLE_STORE,
     TRANSIENT_STORE,
-    VERSE_BARS_STORE,
-    WINDOW_STORE
+    VERSE_BARS_STORE
 } from './storeKeys'
 
 const rootReducer = combineReducers({
     [CURTAIN_STORE]: CurtainReducer,
-    [WINDOW_STORE]: WindowReducer,
+    [CHANGE_STORE]: ChangeReducer,
     [RENDERABLE_STORE]: RenderableReducer,
     [RENDER_STORE]: RenderReducer,
 

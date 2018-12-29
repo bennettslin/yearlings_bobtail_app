@@ -40,25 +40,28 @@ class PresenceListener extends PureComponent {
             renderedSongIndex !== prevSongIndex ||
             renderedSceneIndex !== prevSceneIndex
         ) {
-
-            const sceneObject = getScene(
-                renderedSongIndex,
-                renderedSceneIndex
-            )
-
-            this._updateScene(sceneObject)
+            this._updateScene()
         }
     }
 
-    _updateScene(sceneObject) {
-        const {
-            cubes: sceneCubesKey,
-            layers: scenePresenceLayers,
-            sky: {
-                time: sceneTime = TIME_ANYTIME,
-                season: sceneSeason = SEASON_INDOOR
-            }
-        } = sceneObject
+    _updateScene() {
+        const
+            {
+                renderedSongIndex,
+                renderedSceneIndex
+            } = this.props,
+            {
+                cubes: sceneCubesKey,
+                layers: scenePresenceLayers,
+                sky: {
+                    time: sceneTime = TIME_ANYTIME,
+                    season: sceneSeason = SEASON_INDOOR
+                }
+
+            } = getScene(
+                renderedSongIndex,
+                renderedSceneIndex
+            )
 
         this.props.updateSceneStore({
             sceneCubesKey,
