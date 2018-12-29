@@ -4,43 +4,67 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
+import { updateRenderStore } from 'flux/render/action'
 
+import Transition from 'react-transition-group/Transition'
 import Layers from './Layers'
 import Sky from './Sky'
 import Wood from './Wood'
 
 const mapStateToProps = ({
-    loadStore: { appMounted }
+    loadStore: { appMounted },
+    sceneStore: { canSceneRender }
 }) => ({
-    appMounted
+    appMounted,
+    canSceneRender
 })
 
 class Scene extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired
+        appMounted: PropTypes.bool.isRequired,
+        canSceneRender: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
         logMount('Scene')
     }
 
+    handleTransitionEntered = () => {
+        this.props.updateRenderStore({ didSceneRender: true })
+    }
+
     render() {
-        const { appMounted } = this.props
+        const {
+            appMounted,
+            canSceneRender
+        } = this.props
 
         return (
-            <div className={cx(
-                'Scene'
-            )}>
-                <Sky />
-                <Wood />
-                {appMounted && (
-                    <Layers />
-                )}
-            </div>
+            <Transition
+                mountOnEnter
+                {...{
+                    in: canSceneRender,
+                    timeout: 200,
+                    onEntered: this.handleTransitionEntered
+                }}
+            >
+                <div className={cx(
+                    'Scene'
+                )}>
+                    <Sky />
+                    <Wood />
+                    {appMounted && (
+                        <Layers />
+                    )}
+                </div>
+            </Transition>
         )
     }
 }
 
-export default connect(mapStateToProps)(Scene)
+export default connect(
+    mapStateToProps,
+    { updateRenderStore }
+)(Scene)
