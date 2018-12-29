@@ -1,9 +1,9 @@
 import {
     getIsPhone,
     getIsMini
-} from '../../../helpers/responsive'
+} from '../../../../helpers/responsive'
 
-import { WIKI_SIDE_PADDING_TOTAL } from '../../../constants/responsive'
+import { WIKI_SIDE_PADDING_TOTAL } from '../../../../constants/responsive'
 
 const getIsMobileWiki = ({
     deviceIndex, windowWidth

@@ -1,9 +1,9 @@
 import {
     getIsTablet,
     getIsMonitor
-} from '../../../helpers/responsive'
+} from '../../../../helpers/responsive'
 
-import { DEVICE_OBJECTS } from '../../../constants/responsive'
+import { DEVICE_OBJECTS } from '../../../../constants/responsive'
 
 const _getIsScoresTipsInMainForDeviceObject = (
     windowWidth,

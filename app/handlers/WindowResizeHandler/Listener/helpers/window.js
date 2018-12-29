@@ -1,4 +1,4 @@
-import { DEVICE_OBJECTS } from '../../../constants/responsive'
+import { DEVICE_OBJECTS } from '../../../../constants/responsive'
 
 export const resizeWindow = ({
     innerHeight,

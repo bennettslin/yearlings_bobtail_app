@@ -1,7 +1,7 @@
 import {
     getIsPhone,
     getIsDesktop
-} from '../../../helpers/responsive'
+} from '../../../../helpers/responsive'
 
 const getIsScoreShowable = (deviceIndex) => {
     return !getIsPhone(deviceIndex)

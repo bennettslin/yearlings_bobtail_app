@@ -1,7 +1,7 @@
 import {
     getIsPhone,
     getIsMini
-} from '../../../helpers/responsive'
+} from '../../../../helpers/responsive'
 
 import { getIsLyricExpandable } from './responsive'
 
@@ -9,7 +9,7 @@ import {
     UNRENDERABLE_NAV_MIN,
     HEIGHTLESS_LYRIC_MIN,
     HEIGHTLESS_LYRIC_MAX
-} from '../../../constants/responsive'
+} from '../../../../constants/responsive'
 
 const getIsUnrenderableCarouselNav = ({
     deviceIndex,
