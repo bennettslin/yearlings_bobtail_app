@@ -72,21 +72,18 @@ class Stanzas extends PureComponent {
                     }}
                 />
 
-                {stanzaIndicesArray.map(stanzaIndex => {
-
-                    return (
-                        <StanzaHoc
-                            key={stanzaIndex}
-                            {...{
-                                stanzaIndex,
-                                StanzaComponent: Stanza,
-                                handleVerseSelect: this._handleVerseSelect,
-                                setLyricAnnotationElement,
-                                setVerseRef
-                            }}
-                        />
-                    )
-                })}
+                {stanzaIndicesArray.map(stanzaIndex => (
+                    <StanzaHoc
+                        key={stanzaIndex}
+                        {...{
+                            stanzaIndex,
+                            StanzaComponent: Stanza,
+                            handleVerseSelect: this._handleVerseSelect,
+                            setLyricAnnotationElement,
+                            setVerseRef
+                        }}
+                    />
+                ))}
 
                 {/* This is the last unit dot card, if there is one. */}
                 {lastUnitDotCardIndex > -1 && (

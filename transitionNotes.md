@@ -14,20 +14,6 @@ Setup *must* wait for breakdown to finish before starting.
 * Only after, cubes shift.
 * Presences animate in.
 
-# Window resize
-
-* Breakdown:
-    * Theatre animates out.
-
-* Timeout:
-    * Wait for window to finish resizing.
-
-* Mount:
-    * Theatre updates to next data.
-
-* Setup:
-    * Theatre animates in.
-
 # Scene change
 
 * Breakdown:
@@ -59,3 +45,17 @@ Setup *must* wait for breakdown to finish before starting.
     * Curtains part. Carousel, lyric, and slider animate in.
     * Only after, cubes shift.
     * Presences animate in.
+
+# Window resize
+
+* Breakdown:
+    * Theatre animates out.
+
+* Timeout:
+    * Wait for window to finish resizing.
+
+* Mount:
+    * Theatre updates to next data.
+
+* Setup:
+    * Theatre animates in.

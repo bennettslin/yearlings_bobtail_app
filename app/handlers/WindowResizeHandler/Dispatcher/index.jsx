@@ -16,14 +16,14 @@ class WindowResizeDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        window.onresize = debounce(this.dispatchWindowResizing, 0)
+        window.onresize = debounce(this._dispatchWindowResizing, 0)
     }
 
     componentWillUnmount() {
         window.onresize = null
     }
 
-    dispatchWindowResizing = () => {
+    _dispatchWindowResizing = () => {
         this.props.updateWindowStore({ isWindowResizing: true })
 
         // Clear previous timeout.

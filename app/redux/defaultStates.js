@@ -90,6 +90,7 @@ const
     },
 
     DEVICE_DEFAULTS = {
+        canTheatreRender: false,
         deviceIndex: DEVICE_OBJECTS.length - 1,
         isPhone: false,
         isDesktop: false,
@@ -139,7 +140,6 @@ const
     },
 
     RENDER_DEFAULTS = {
-        canTheatreRender: false,
         canSceneRender: false,
         canLyricRender: false,
         canCarouselRender: false,

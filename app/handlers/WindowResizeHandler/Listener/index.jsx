@@ -3,6 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateDeviceStore } from 'flux/device/action'
 import { updateRenderStore } from 'flux/render/action'
 
 class WindowResizeListener extends PureComponent {
@@ -10,11 +11,8 @@ class WindowResizeListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isWindowResizing: PropTypes.bool.isRequired,
+        updateDeviceStore: PropTypes.func.isRequired,
         updateRenderStore: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this._handleWindowFinishedResizing()
     }
 
     componentDidUpdate(prevProps) {
@@ -29,22 +27,15 @@ class WindowResizeListener extends PureComponent {
         // Is unrenderable after window resize.
         if (isWindowResizing && !wasWindowResizing) {
             this._handleWindowResizing()
-
-        } else if (!isWindowResizing && wasWindowResizing) {
-            this._handleWindowFinishedResizing()
         }
     }
 
     _handleWindowResizing() {
-        this.props.updateRenderStore({
-            canTheatreRender: false,
-            didTheatreRender: false
+        this.props.updateDeviceStore({
+            canTheatreRender: false
         })
-    }
-
-    _handleWindowFinishedResizing() {
         this.props.updateRenderStore({
-            canTheatreRender: true
+            didTheatreRender: false
         })
     }
 
@@ -61,5 +52,8 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { updateRenderStore }
+    {
+        updateDeviceStore,
+        updateRenderStore
+    }
 )(WindowResizeListener)

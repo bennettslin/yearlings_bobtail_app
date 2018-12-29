@@ -33,16 +33,11 @@ class VerseNav extends PureComponent {
     }
 
     render() {
-        const {
-                isInteractivated
-
-            } = this.props,
-
-            /**
-             * If interactivated, disable only if it's selected and song can't
-             * play through.
-             */
-            isEnabled = isInteractivated
+        /**
+         * If interactivated, disable only if it's selected and song can't play
+         * through.
+         */
+        const { isInteractivated } = this.props
 
         return (
             <div className={cx(
@@ -56,8 +51,8 @@ class VerseNav extends PureComponent {
                     {...{
                         buttonName: AUDIO_NEXT_BUTTON_KEY,
                         accessKey: ENTER,
-                        canShowAccessIcon: isEnabled,
-                        isDisabled: !isEnabled,
+                        canShowAccessIcon: isInteractivated,
+                        isDisabled: !isInteractivated,
                         buttonIdentifier: false,
                         handleButtonClick: this._handleButtonClick
                     }}

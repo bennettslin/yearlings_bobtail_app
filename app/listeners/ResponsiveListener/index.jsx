@@ -112,6 +112,7 @@ class ResponsiveListener extends PureComponent {
             })
 
         this.props.updateDeviceStore({
+            canTheatreRender: true,
             deviceIndex,
             windowWidth,
             windowHeight,

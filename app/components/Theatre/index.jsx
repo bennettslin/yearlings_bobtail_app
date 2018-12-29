@@ -17,7 +17,7 @@ import Ceiling from './Ceiling'
 import Floor from './Floor'
 
 const mapStateToProps = ({
-    renderStore: { canTheatreRender }
+    deviceStore: { canTheatreRender }
 }) => ({
     canTheatreRender
 })
