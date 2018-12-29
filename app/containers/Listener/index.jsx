@@ -27,8 +27,8 @@ import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 import WindowResizeDispatcher from '../../handlers/WindowResize/Dispatcher'
 import WindowResizeListener from '../../handlers/WindowResize/Listener'
 
-import AudioPlayerManager from '../../managers/AudioPlayerManager'
-import LogManager from '../../managers/LogManager'
+import AudioPlayerManager from '../../managers/AudioPlayer'
+import LogManager from '../../managers/Log'
 
 import FocusContainer from '../Focus'
 

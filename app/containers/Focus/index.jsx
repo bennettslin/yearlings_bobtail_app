@@ -12,7 +12,7 @@ import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
 import RootContainer from '../Root'
-import KeyManager from '../../managers/KeyManager'
+import KeyManager from '../../managers/Key'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
 import { populateRefs } from 'helpers/ref'
