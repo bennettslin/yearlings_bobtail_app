@@ -8,8 +8,8 @@ import cx from 'classnames'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
 const mapStateToProps = ({
-    renderStore: { canSceneRender },
     sceneStore: {
+        canSceneRender,
         sceneTime,
         sceneSeason
     }

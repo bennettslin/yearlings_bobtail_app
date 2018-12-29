@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateLoadStore } from 'flux/load/action'
 import { updateRenderStore } from 'flux/render/action'
+import { updateSceneStore } from 'flux/scene/action'
 
 import {
     CAN_THEATRE_RENDER,
@@ -24,7 +25,8 @@ class RenderDidListener extends PureComponent {
         didLyricRender: PropTypes.bool.isRequired,
         didCarouselRender: PropTypes.bool.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired,
+        updateSceneStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -107,8 +109,15 @@ class RenderDidListener extends PureComponent {
         if (didLyricRender && !hadLyricRendered) {
             logRender('Lyric did render.')
 
-            const nextKey = getNextKeyCanRender({ currentKey: CAN_LYRIC_RENDER })
-            if (nextKey) {
+            const nextKey = getNextKeyCanRender({
+                currentKey: CAN_LYRIC_RENDER
+            })
+
+            if (nextKey === CAN_SCENE_RENDER) {
+                this.props.updateSceneStore({
+                    [nextKey]: true
+                })
+            } else if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true
                 })
@@ -124,8 +133,15 @@ class RenderDidListener extends PureComponent {
         if (didCarouselRender && !hadCarouselRendered) {
             logRender('Carousel did render.')
 
-            const nextKey = getNextKeyCanRender({ currentKey: CAN_CAROUSEL_RENDER })
-            if (nextKey) {
+            const nextKey = getNextKeyCanRender({
+                currentKey: CAN_CAROUSEL_RENDER
+            })
+
+            if (nextKey === CAN_SCENE_RENDER) {
+                this.props.updateSceneStore({
+                    [nextKey]: true
+                })
+            } else if (nextKey) {
                 this.props.updateRenderStore({
                     [nextKey]: true
                 })
@@ -158,6 +174,7 @@ export default connect(
     mapStateToProps,
     {
         updateLoadStore,
-        updateRenderStore
+        updateRenderStore,
+        updateSceneStore
     }
 )(RenderDidListener)

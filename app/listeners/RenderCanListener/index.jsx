@@ -96,8 +96,8 @@ class RenderCanListener extends PureComponent {
 }
 
 const mapStateToProps = ({
+    sceneStore: { canSceneRender },
     renderStore: {
-        canSceneRender,
         canLyricRender,
         canCarouselRender
     }

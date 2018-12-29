@@ -11,8 +11,10 @@ import { getPropsAreShallowEqual } from 'helpers/general'
 import { ACTORS } from 'constants/scene'
 
 const mapStateToProps = ({
-    renderStore: { canSceneRender },
-    sceneStore: { sceneCubesKey }
+    sceneStore: {
+        canSceneRender,
+        sceneCubesKey
+    }
 }) => ({
     canSceneRender,
     sceneCubesKey

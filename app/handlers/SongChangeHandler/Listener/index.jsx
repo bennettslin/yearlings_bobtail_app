@@ -4,8 +4,10 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateRenderStore } from 'flux/render/action'
+import { updateSceneStore } from 'flux/scene/action'
 
 import {
+    CAN_SCENE_RENDER,
     CAN_THEATRE_RENDER,
     getNextKeyCanRender
 } from '../../../helpers/render'
@@ -15,7 +17,8 @@ class SongChangeListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isSongChangeRenderable: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired,
+        updateSceneStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -45,8 +48,8 @@ class SongChangeListener extends PureComponent {
         this.unrenderedTime = Date.now()
 
         logRenderable('Unrenderable from song change.')
+        this.props.updateSceneStore({ canSceneRender: false })
         this.props.updateRenderStore({
-            canSceneRender: false,
             didSceneRender: false,
             canLyricRender: false,
             didLyricRender: false,
@@ -63,9 +66,16 @@ class SongChangeListener extends PureComponent {
         const nextKey = getNextKeyCanRender({
             currentKey: CAN_THEATRE_RENDER
         })
-        this.props.updateRenderStore({
-            [nextKey]: true
-        })
+
+        if (nextKey === CAN_SCENE_RENDER) {
+            this.props.updateSceneStore({
+                [nextKey]: true
+            })
+        } else {
+            this.props.updateRenderStore({
+                [nextKey]: true
+            })
+        }
     }
 
     render() {
@@ -74,14 +84,15 @@ class SongChangeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    renderableStore: {
-        isSongChangeRenderable
-    }
+    renderableStore: { isSongChangeRenderable }
 }) => ({
     isSongChangeRenderable
 })
 
 export default connect(
     mapStateToProps,
-    { updateRenderStore }
+    {
+        updateRenderStore,
+        updateSceneStore
+    }
 )(SongChangeListener)

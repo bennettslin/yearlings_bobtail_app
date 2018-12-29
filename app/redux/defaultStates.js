@@ -140,7 +140,6 @@ const
     },
 
     RENDER_DEFAULTS = {
-        canSceneRender: false,
         canLyricRender: false,
         canCarouselRender: false,
 
@@ -187,6 +186,7 @@ const
     sceneCubes = getCubesForKey(sceneCubesKey),
 
     SCENE_DEFAULTS = {
+        canSceneRender: false,
         sceneCubesKey,
         sceneTime,
         sceneSeason,

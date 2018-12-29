@@ -4,13 +4,15 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateRenderStore } from 'flux/render/action'
+import { updateSceneStore } from 'flux/scene/action'
 
 class SceneChangeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isSceneChangeRenderable: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
+        updateRenderStore: PropTypes.func.isRequired,
+        updateSceneStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -40,10 +42,8 @@ class SceneChangeListener extends PureComponent {
         this.unrenderedTime = Date.now()
 
         logRenderable('Unrenderable from scene change.')
-        this.props.updateRenderStore({
-            canSceneRender: false,
-            didSceneRender: false
-        })
+        this.props.updateSceneStore({ canSceneRender: false })
+        this.props.updateRenderStore({ didSceneRender: false })
     }
 
     _handleSceneChangeRenderable() {
@@ -51,9 +51,7 @@ class SceneChangeListener extends PureComponent {
             ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
         } seconds.`)
 
-        this.props.updateRenderStore({
-            canSceneRender: true
-        })
+        this.props.updateSceneStore({ canSceneRender: true })
     }
 
     render() {
@@ -62,14 +60,15 @@ class SceneChangeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    renderableStore: {
-        isSceneChangeRenderable
-    }
+    renderableStore: { isSceneChangeRenderable }
 }) => ({
     isSceneChangeRenderable
 })
 
 export default connect(
     mapStateToProps,
-    { updateRenderStore }
+    {
+        updateRenderStore,
+        updateSceneStore
+    }
 )(SceneChangeListener)

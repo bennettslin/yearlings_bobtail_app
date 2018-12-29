@@ -11,9 +11,7 @@ import { SCENE_DEFAULTS } from '../defaultStates'
 
 export const updateSceneStore = (payload = SCENE_DEFAULTS) => {
 
-    const {
-        sceneCubesKey
-    } = payload
+    const { sceneCubesKey } = payload
 
     if (hasKey(sceneCubesKey)) {
         payload.sceneCubes = getCubesForKey(sceneCubesKey)

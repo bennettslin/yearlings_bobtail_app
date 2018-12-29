@@ -19,7 +19,7 @@ import { CUBE_Y_INDICES } from 'constants/cubeIndex'
 
 const
     getMapStateToProps = (yIndex) => ({
-        renderStore: { canSceneRender },
+        sceneStore: { canSceneRender },
         renderedStore: {
             renderedSongIndex,
             renderedSceneIndex

@@ -28,8 +28,8 @@ import {
 
 const
     getMapStateToProps = (yIndex, xIndex) => ({
-        renderStore: { canSceneRender },
         sceneStore: {
+            canSceneRender,
             sceneCubes: {
                 ceiling: {
                     hslaColours: ceilingHslaColours,
