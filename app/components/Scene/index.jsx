@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 import Layers from './Layers'
 import Sky from './Sky'
-import Wood from '../Stage/Wood'
+import Wood from './Wood'
 
 const mapStateToProps = ({
     loadStore: { appMounted }
