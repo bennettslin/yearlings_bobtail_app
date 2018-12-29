@@ -4281,5 +4281,10 @@ export default [
         taskName: `Setting popup annotation in route does not show it.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix box shadow on slider stanza tabs.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -16,8 +16,13 @@ export default [
     },
     {
         taskName: `Transitions work.`,
-        workedHours: 0,
+        workedHours: 8,
         neededHours: 24
+    },
+    {
+        taskName: `Add title to lyric column in desktop.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Redo how presences are structured. Store info in a config?`,
@@ -88,6 +93,16 @@ export default [
     },
     {
         taskName: `PDF in mobile doesn't scroll. Copy screening-js approach, then adjust button positions.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Be strategic about forcing expanded lyric or no lyric in mobile portrait versus landscape, to improve performance.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Figure out final menu layout.`,
         workedHours: 0,
         neededHours: 5
     },

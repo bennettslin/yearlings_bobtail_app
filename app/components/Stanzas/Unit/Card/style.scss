@@ -85,11 +85,11 @@
     padding-right: $js__margin__thin * 1.5;
 }
 
+$height: $height__stanzaTypeTab * 4;
 .bgColour__unit__pattern {
     $degrees: 60deg;
     $lightShade: rgba(175, 175, 175, 0.125);
     $darkShade: rgba(0, 0, 0, 0.1);
-    $height: $height__stanzaTypeTab * 4;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:
@@ -124,10 +124,11 @@
         $darkShade
     );
     background-size: $width $height;
+    background-position: top left 5px;
 }
 
 .bgColour__unit__pattern__reverse {
-    background-position: bottom left;
+    background-position: bottom left 5px;
 }
 
 .bgColour__stanzaType__refrain {

@@ -3,7 +3,7 @@
 $js__marginX__slider: 4px;
 $js__marginY__slider: 6px;
 $js__overlap__marginX__slider: 2px;
-$height__sliderStanzaTab: 3px;
+$height__sliderStanzaTab: 4px;
 $width__sliderStanzaTab: 15px;
 
 .SliderStanza {
@@ -14,7 +14,7 @@ $width__sliderStanzaTab: 15px;
     transition: height $animationDuration__default;
 
     bottom: 0;
-    border-top-right-radius: $borderRadius__narrow;
+    border-top-right-radius: $borderRadius__narrower;
 }
 
 .SliderStanza__tab {
@@ -22,7 +22,7 @@ $width__sliderStanzaTab: 15px;
     top: -$height__sliderStanzaTab;
     left: 0;
     width: $width__sliderStanzaTab;
-    border-radius: $borderRadius__narrow $borderRadius__narrow 0 0;
+    border-radius: $borderRadius__narrower $borderRadius__narrower 0 0;
 }
 
 .SliderStanza__tabShadow {
@@ -31,9 +31,9 @@ $width__sliderStanzaTab: 15px;
      */
     height:
         $height__sliderStanzaTab
-        - $borderRadius__narrow;
+        - 2px;
 
-    top: -$height__sliderStanzaTab;
+    // top: -$height__sliderStanzaTab;
 }
 
 .SliderStanza__tabTop {
@@ -53,7 +53,7 @@ $width__sliderStanzaTab: 15px;
 
     .SliderStanza:not(:last-child)
     & {
-        border-top-right-radius: $borderRadius__narrow;
+        border-top-right-radius: $borderRadius__narrower;
         padding-right: $js__overlap__marginX__slider;
     }
 }
@@ -97,8 +97,9 @@ $width__sliderStanzaTab: 15px;
         $darkShade
     );
     background-size: $width $height;
+    background-position: top left 5px;
 }
 
 .bgColour__sliderStanza__pattern__reverse {
-    background-position: bottom left;
+    background-position: bottom left 5px;
 }

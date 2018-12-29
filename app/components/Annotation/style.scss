@@ -8,7 +8,10 @@
     display: flex;
     flex-direction: column;
 
-    padding: $js__padding__popupContent__wide;
+    padding:
+        $js__padding__popupContent__wide * 1.5
+        $js__padding__popupContent__wide
+        $js__padding__popupContent__wide * 0.5;
 }
 
 .Annotation__cardField {
@@ -38,7 +41,7 @@
     $degrees: 60deg;
     $lightShade: rgba(255, 255, 255, 0.125);
     $darkShade: rgba(0, 0, 0, 0.033);
-    $height: $height__annotationTitle * 1.8;
+    $height: $height__annotationTitle * 3.4;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:
