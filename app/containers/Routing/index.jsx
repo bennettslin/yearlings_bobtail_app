@@ -6,7 +6,7 @@ import { updateSongStore } from 'flux/song/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateTransientStore } from 'flux/transient/action'
 
-import ListenerContainer from '../ListenerContainer'
+import ListenerContainer from '../Listener'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getSceneIndexForVerseIndex } from 'album/api/scenes'

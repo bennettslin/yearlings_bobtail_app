@@ -18,7 +18,7 @@ import logger from './utils/logger'
 import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
-import RoutingContainer from './containers/RoutingContainer'
+import RoutingContainer from './containers/Routing'
 
 // Why did you update?
 const turnOnWDYULogging = false

@@ -30,7 +30,7 @@ import WindowResizeListener from '../../handlers/WindowResize/Listener'
 import AudioPlayerManager from '../../managers/AudioPlayerManager'
 import LogManager from '../../managers/LogManager'
 
-import FocusContainer from '../FocusContainer'
+import FocusContainer from '../Focus'
 
 class ListenerContainer extends PureComponent {
 

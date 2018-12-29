@@ -11,7 +11,7 @@ import Close from '../../handlers/Close'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
-import RootContainer from '../RootContainer'
+import RootContainer from '../Root'
 import KeyManager from '../../managers/KeyManager'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
