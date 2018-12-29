@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import DotsSlideSelects from './Selects'
 
 import { populateRefs } from 'helpers/ref'

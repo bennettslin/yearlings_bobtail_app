@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 
-import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import PopupView from './View'
 

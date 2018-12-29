@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 

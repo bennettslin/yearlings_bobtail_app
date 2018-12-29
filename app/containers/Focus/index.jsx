@@ -5,11 +5,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateEventStore } from 'flux/event/action'
+import { updateFocusStore } from 'flux/focus/action'
 
 import Close from '../../handlers/Close'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
-import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import RootContainer from '../Root'
 import KeyManager from '../../managers/Key'
@@ -24,7 +24,7 @@ const mapStateToProps = ({
         // isScoreShown,
         isLyricExpanded
     },
-    eventStore: { queuedFocus }
+    focusStore: { queuedFocus }
 }) => ({
     isHeightlessLyric,
     // selectedWikiIndex,
@@ -42,7 +42,7 @@ class FocusContainer extends PureComponent {
         // selectedWikiIndex: PropTypes.number.isRequired,
         // isScoreShown: PropTypes.bool.isRequired,
         queuedFocus: PropTypes.bool.isRequired,
-        updateEventStore: PropTypes.func.isRequired
+        updateFocusStore: PropTypes.func.isRequired
     }
 
     state = { isSliderTouchEnding: false }
@@ -69,7 +69,7 @@ class FocusContainer extends PureComponent {
         if (queuedFocus && !prevFocus) {
             this._focusElementForAccess()
 
-            this.props.updateEventStore({ queuedFocus: false })
+            this.props.updateFocusStore({ queuedFocus: false })
         }
     }
 
@@ -254,5 +254,5 @@ class FocusContainer extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateEventStore }
+    { updateFocusStore }
 )(FocusContainer)

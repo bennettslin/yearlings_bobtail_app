@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import ButtonIcon from './ButtonIcon'
 import AccessLetter from '../Access/Letter'

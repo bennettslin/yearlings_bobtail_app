@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerse'
-import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
+import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import VerseLines from './Lines'
 

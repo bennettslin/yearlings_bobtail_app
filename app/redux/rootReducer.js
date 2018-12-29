@@ -5,7 +5,7 @@ import AudioReducer from './audio/reducer'
 import CurtainReducer from './curtain/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
-import EventReducer from './event/reducer'
+import FocusReducer from './focus/reducer'
 import LoadReducer from './load/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
@@ -31,7 +31,7 @@ import {
     CURTAIN_STORE,
     DEVICE_STORE,
     DOTS_STORE,
-    EVENT_STORE,
+    FOCUS_STORE,
     LOAD_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
@@ -77,8 +77,8 @@ const rootReducer = combineReducers({
     [LOAD_STORE]: LoadReducer,
 
     // Queued event stores.
+    [FOCUS_STORE]: FocusReducer,
     [ANNOTATION_STORE]: AnnotationReducer,
-    [EVENT_STORE]: EventReducer,
     [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
     [VERSE_BARS_STORE]: VerseBarsReducer

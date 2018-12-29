@@ -111,7 +111,7 @@ const
      */
     DOTS_DEFAULTS = getDotsFromStorage(),
 
-    EVENT_DEFAULTS = {
+    FOCUS_DEFAULTS = {
         queuedFocus: false
     },
 
@@ -286,7 +286,7 @@ export {
     CURTAIN_DEFAULTS,
     DEVICE_DEFAULTS,
     DOTS_DEFAULTS,
-    EVENT_DEFAULTS,
+    FOCUS_DEFAULTS,
     LOAD_DEFAULTS,
     OPTION_DEFAULTS,
     PLAYERS_DEFAULTS,

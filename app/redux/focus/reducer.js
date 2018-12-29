@@ -1,13 +1,13 @@
-// Reducers for event values.
-import { EVENT_STORE } from '../storeKeys'
-import { EVENT_DEFAULTS } from '../defaultStates'
+// Reducers for focus values.
+import { FOCUS_STORE } from '../storeKeys'
+import { FOCUS_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = EVENT_DEFAULTS,
+    state = FOCUS_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case EVENT_STORE:
+        case FOCUS_STORE:
             return {
                 ...state,
                 ...action.payload
