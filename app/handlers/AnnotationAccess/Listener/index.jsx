@@ -94,7 +94,7 @@ class AnnotationAccessListener extends PureComponent {
 
 const mapStateToProps = ({
     sessionStore: { interactivatedVerseIndex },
-    songStore: {
+    selectedStore: {
         earColumnIndex,
         selectedSongIndex,
         selectedVerseIndex,

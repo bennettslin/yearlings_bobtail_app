@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from 'flux/option/action'
 import { updateSessionStore } from 'flux/session/action'
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import {
@@ -34,7 +34,7 @@ class Close extends PureComponent {
         interactivatedVerseIndex: PropTypes.number.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
-        updateSongStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -273,7 +273,7 @@ class Close extends PureComponent {
         } = this.props
 
         if (!exemptAnnotation) {
-            this.props.updateSongStore({ selectedAnnotationIndex: 0 })
+            this.props.updateSelectedStore({ selectedAnnotationIndex: 0 })
         }
 
         if (!exemptDots) {
@@ -319,7 +319,7 @@ const mapStateToProps = ({
         isSongShownOverview,
         isSongShownTips
     },
-    songStore: { selectedAnnotationIndex },
+    selectedStore: { selectedAnnotationIndex },
     toggleStore: {
         isCarouselShown,
         isDotsSlideShown,
@@ -351,7 +351,7 @@ export default connect(
     {
         updateOptionStore,
         updateSessionStore,
-        updateSongStore,
+        updateSelectedStore,
         updateToggleStore
     }
 )(Close)

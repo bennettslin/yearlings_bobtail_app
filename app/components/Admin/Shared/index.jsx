@@ -66,7 +66,7 @@ const SharedView = ({
 )
 
 export default connect(({
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 }))(Shared)

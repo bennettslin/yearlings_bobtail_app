@@ -73,7 +73,7 @@ AdminNavSection.propTypes = {
 }
 
 const mapStateToProps = ({
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })

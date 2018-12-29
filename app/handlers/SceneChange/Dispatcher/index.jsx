@@ -71,7 +71,7 @@ class SceneChangeDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         selectedSceneIndex
     }

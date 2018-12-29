@@ -17,9 +17,9 @@ import ResponsiveReducer from './responsive/reducer'
 import SceneReducer from './scene/reducer'
 import ScrollCarouselReducer from './scrollCarousel/reducer'
 import ScrollLyricReducer from './scrollLyric/reducer'
+import SelectedReducer from './selected/reducer'
 import SessionReducer from './session/reducer'
 import SliderReducer from './slider/reducer'
-import SongReducer from './song/reducer'
 import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
 import VerseBarsReducer from './verseBars/reducer'
@@ -43,9 +43,9 @@ import {
     SCENE_STORE,
     SCROLL_CAROUSEL_STORE,
     SCROLL_LYRIC_STORE,
+    SELECTED_STORE,
     SESSION_STORE,
     SLIDER_STORE,
-    SONG_STORE,
     TOGGLE_STORE,
     TRANSIENT_STORE,
     VERSE_BARS_STORE
@@ -59,7 +59,7 @@ const rootReducer = combineReducers({
 
     [SCENE_STORE]: SceneReducer,
     [AUDIO_STORE]: AudioReducer,
-    [SONG_STORE]: SongReducer,
+    [SELECTED_STORE]: SelectedReducer,
     [RENDERED_STORE]: RenderedReducer,
     [ACCESS_STORE]: AccessReducer,
     [SESSION_STORE]: SessionReducer,

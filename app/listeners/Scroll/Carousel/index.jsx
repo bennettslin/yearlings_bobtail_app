@@ -112,7 +112,7 @@ const mapStateToProps = ({
         windowWidth
     },
     responsiveStore: { isUnrenderableCarouselNav },
-    songStore: { isSelectedLogue }
+    selectedStore: { isSelectedLogue }
 }) => ({
     queuedScrollCarouselLog,
     queuedScrollCarouselIndex,

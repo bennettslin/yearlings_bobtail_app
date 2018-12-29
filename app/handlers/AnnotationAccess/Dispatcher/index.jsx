@@ -97,7 +97,7 @@ class AnnotationAccessDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: {
+    selectedStore: {
         earColumnIndex,
         selectedSongIndex,
         selectedVerseIndex

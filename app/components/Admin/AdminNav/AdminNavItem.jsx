@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import AdminNavRow from './AdminNavRow'
 
 const mapStateToProps = ({
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })

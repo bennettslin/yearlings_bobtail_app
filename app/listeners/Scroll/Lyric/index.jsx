@@ -178,7 +178,7 @@ const mapStateToProps = ({
         queuedScrollLyricFromRender,
         queuedScrollLyricFromAutoScroll
     },
-    songStore: {
+    selectedStore: {
         selectedVerseIndex,
         isSelectedLogue
     },

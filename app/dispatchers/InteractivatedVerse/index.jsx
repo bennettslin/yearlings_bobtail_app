@@ -73,7 +73,7 @@ class InteractivatedVerseDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: {
+    selectedStore: {
         isSelectedLogue,
         selectedSongIndex,
         selectedVerseIndex

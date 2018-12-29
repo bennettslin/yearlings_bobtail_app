@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { updateAudioStore } from 'flux/audio/action'
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 
 import PlayerDispatcher from './Dispatcher'
 import PlayerListener from './Listener'
@@ -29,7 +29,7 @@ const mapStateToProps = ({
         nextPlayerToRender
     },
     audioStore: { isPlaying },
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         selectedVerseIndex,
         selectedTime
@@ -61,7 +61,7 @@ class PlayerManager extends PureComponent {
         playersBitNumber: PropTypes.number.isRequired,
         nextPlayerToRender: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
-        updateSongStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired,
@@ -238,7 +238,7 @@ class PlayerManager extends PureComponent {
 
         // If current time is in selected verse, just update selected time.
         if (isTimeInSelectedVerse) {
-            this.props.updateSongStore({ selectedTime: currentTime })
+            this.props.updateSelectedStore({ selectedTime: currentTime })
 
         // Otherwise, update verse and time.
         } else if (isTimeInNextVerse) {
@@ -334,6 +334,6 @@ export default connect(
     mapStateToProps,
     {
         updateAudioStore,
-        updateSongStore
+        updateSelectedStore
     }
 )(PlayerManager)

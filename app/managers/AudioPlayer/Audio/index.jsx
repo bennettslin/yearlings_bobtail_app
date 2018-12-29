@@ -122,7 +122,7 @@ const mapStateToProps = ({
         queuedTogglePlay
     },
     sessionStore: { selectedAudioOptionIndex },
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     isPlaying,
     queuedTogglePlay,

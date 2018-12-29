@@ -8,7 +8,7 @@ import cx from 'classnames'
 import { getFormattedTime } from 'helpers/format'
 
 const mapStateToProps = ({
-    songStore: {
+    selectedStore: {
         isSelectedLogue,
         selectedTime
     }

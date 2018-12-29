@@ -10,7 +10,7 @@ import { connect } from 'react-redux'
 
 import { updateAccessStore } from 'flux/access/action'
 import { updateAudioStore } from 'flux/audio/action'
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getSceneIndexForVerseIndex } from 'album/api/scenes'
@@ -24,7 +24,7 @@ class SongDispatcher extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
-        updateSongStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -65,7 +65,7 @@ class SongDispatcher extends PureComponent {
             queuedPlayVerseIndex: selectedVerseIndex
         })
 
-        this.props.updateSongStore({
+        this.props.updateSelectedStore({
             selectedSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
@@ -99,7 +99,7 @@ class SongDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })
@@ -109,6 +109,6 @@ export default connect(
     {
         updateAccessStore,
         updateAudioStore,
-        updateSongStore
+        updateSelectedStore
     }
 )(SongDispatcher)

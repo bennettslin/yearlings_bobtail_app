@@ -59,7 +59,7 @@ class WikiWormholeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         selectedAnnotationIndex
     }

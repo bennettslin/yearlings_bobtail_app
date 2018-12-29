@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 import { resetVerseBars } from 'flux/verseBars/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
@@ -18,7 +18,7 @@ class VerseDispatcher extends PureComponent {
         updateAudioStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
-        updateSongStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired,
 
         // From parent.
@@ -43,7 +43,7 @@ class VerseDispatcher extends PureComponent {
             queuedPlayVerseIndex: selectedVerseIndex
         })
 
-        this.props.updateSongStore({
+        this.props.updateSelectedStore({
             selectedVerseIndex,
             selectedSceneIndex: getSceneIndexForVerseIndex(
                 selectedSongIndex,
@@ -75,7 +75,7 @@ class VerseDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })
@@ -86,7 +86,7 @@ export default connect(
         updateAudioStore,
         updateScrollLyricStore,
         updateSessionStore,
-        updateSongStore,
+        updateSelectedStore,
         resetVerseBars
     }
 )(VerseDispatcher)

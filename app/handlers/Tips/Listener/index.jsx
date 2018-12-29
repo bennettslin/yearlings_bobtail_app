@@ -81,7 +81,7 @@ class TipsListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: {
+    selectedStore: {
         isSelectedLogue,
         selectedSongIndex
     },

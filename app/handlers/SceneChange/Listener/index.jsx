@@ -84,7 +84,7 @@ class SceneChangeListener extends PureComponent {
 
 const mapStateToProps = ({
     changeStore: { isSceneChanging },
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         selectedSceneIndex
     }

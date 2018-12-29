@@ -51,7 +51,7 @@ class ScoreDispatcher extends PureComponent {
 const mapStateToProps = ({
     toggleStore: { isScoreShown },
     responsiveStore: { isScoreShowable },
-    songStore: { isSelectedLogue }
+    selectedStore: { isSelectedLogue }
 }) => ({
     isScoreShown,
     isScoreShowable,

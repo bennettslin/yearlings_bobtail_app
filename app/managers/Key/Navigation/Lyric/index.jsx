@@ -110,7 +110,7 @@ const mapStateToProps = ({
     toggleStore: { isAccessOn },
     accessStore: { accessedAnnotationIndex },
     sessionStore: { interactivatedVerseIndex },
-    songStore: { selectedVerseIndex }
+    selectedStore: { selectedVerseIndex }
 }) => ({
     isAccessOn,
     accessedAnnotationIndex,

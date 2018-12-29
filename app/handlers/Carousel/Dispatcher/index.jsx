@@ -74,7 +74,7 @@ const mapStateToProps = ({
     dotsStore: { dotsBitNumber },
     responsiveStore: { isUnrenderableCarouselNav },
     accessStore: { accessedAnnotationIndex },
-    songStore: {
+    selectedStore: {
         selectedAnnotationIndex,
         isSelectedLogue
     },

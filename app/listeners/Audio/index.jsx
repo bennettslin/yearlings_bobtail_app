@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
 
@@ -14,7 +14,7 @@ class AudioListener extends PureComponent {
         isPlaying: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        updateSongStore: PropTypes.func.isRequired
+        updateSelectedStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -38,7 +38,7 @@ class AudioListener extends PureComponent {
                     selectedVerseIndex
                 )
 
-            this.props.updateSongStore({ selectedTime })
+            this.props.updateSelectedStore({ selectedTime })
         }
     }
 
@@ -50,7 +50,7 @@ class AudioListener extends PureComponent {
 const mapStateToProps = ({
     audioStore: { isPlaying },
     sliderStore: { isSliderTouched },
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         selectedVerseIndex
     }
@@ -63,5 +63,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { updateSongStore }
+    { updateSelectedStore }
 )(AudioListener)

@@ -155,7 +155,7 @@ const mapStateToProps = ({
         isVerseBarAbove,
         isVerseBarBelow
     },
-    songStore: {
+    selectedStore: {
         selectedVerseIndex
     },
     sliderStore: { sliderVerseIndex }

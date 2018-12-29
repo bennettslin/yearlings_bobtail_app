@@ -63,7 +63,7 @@ class WikiListener extends PureComponent {
 
 const mapStateToProps = ({
     responsiveStore: { isMobileWiki },
-    songStore: {
+    selectedStore: {
         selectedAnnotationIndex,
         selectedSongIndex
     },

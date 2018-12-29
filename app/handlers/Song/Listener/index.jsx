@@ -52,7 +52,7 @@ class SongListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })

@@ -97,7 +97,7 @@ class PlayerListener extends PureComponent {
 
 const mapStateToProps = ({
     playersStore: { playersBitNumber },
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         isSelectedLogue
     },

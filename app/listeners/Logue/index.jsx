@@ -36,7 +36,7 @@ class LogueListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: { isSelectedLogue }
+    selectedStore: { isSelectedLogue }
 }) => ({
     isSelectedLogue
 })

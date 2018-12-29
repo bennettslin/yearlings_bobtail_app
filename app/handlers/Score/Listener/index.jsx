@@ -44,7 +44,7 @@ class ScoreListener extends PureComponent {
 
 const mapStateToProps = ({
     responsiveStore: { isScoreShowable },
-    songStore: { isSelectedLogue }
+    selectedStore: { isSelectedLogue }
 }) => ({
     isScoreShowable,
     isSelectedLogue

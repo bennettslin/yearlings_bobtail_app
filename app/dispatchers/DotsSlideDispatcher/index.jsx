@@ -46,7 +46,7 @@ class DotsSlideDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isDotsSlideShown },
-    songStore: { isSelectedLogue }
+    selectedStore: { isSelectedLogue }
 }) => ({
     isDotsSlideShown,
     isSelectedLogue

@@ -16,7 +16,7 @@ import { EAR_COLUMN_KEYS } from 'constants/lyrics'
 
 const mapStateToProps = ({
     transientStore: { isEarShown },
-    songStore: { earColumnIndex }
+    selectedStore: { earColumnIndex }
 }) => ({
     isEarShown,
     earColumnIndex

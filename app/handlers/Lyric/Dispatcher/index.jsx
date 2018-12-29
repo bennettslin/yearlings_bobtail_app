@@ -51,7 +51,7 @@ class LyricDispatcher extends PureComponent {
 const mapStateToProps = ({
     toggleStore: { isLyricExpanded },
     responsiveStore: { isLyricExpandable },
-    songStore: { isSelectedLogue }
+    selectedStore: { isSelectedLogue }
 }) => ({
     isLyricExpanded,
     isLyricExpandable,

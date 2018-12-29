@@ -10,7 +10,7 @@ import NavButton from '../Button'
 import { getBookForSongIndex } from 'album/api/songs'
 
 const mapStateToProps = ({
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     selectedSongIndex
 })

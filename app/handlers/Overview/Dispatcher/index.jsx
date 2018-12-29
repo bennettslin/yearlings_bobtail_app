@@ -75,7 +75,7 @@ class OverviewDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: { isSelectedLogue },
+    selectedStore: { isSelectedLogue },
     optionStore: {
         selectedOverviewOption,
         selectedTipsOption

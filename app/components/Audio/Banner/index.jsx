@@ -11,7 +11,7 @@ import { getSongTitle } from 'album/api/songs'
 
 const mapStateToProps = ({
     responsiveStore: { isTwoRowMenu },
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     isTwoRowMenu,
     selectedSongIndex

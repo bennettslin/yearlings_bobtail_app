@@ -130,7 +130,7 @@ const mapStateToProps = ({
         isScoreShown
     },
     responsiveStore: { isHeightlessLyric },
-    songStore: {
+    selectedStore: {
         selectedAnnotationIndex,
         isSelectedLogue
     },

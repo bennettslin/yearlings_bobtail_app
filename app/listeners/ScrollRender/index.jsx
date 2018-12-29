@@ -75,7 +75,7 @@ class ScrollRenderListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: {
+    selectedStore: {
         isSelectedLogue,
         selectedAnnotationIndex
     },

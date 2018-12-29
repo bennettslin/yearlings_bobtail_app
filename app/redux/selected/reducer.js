@@ -1,13 +1,13 @@
 // Reducers for song and player state.
-import { SONG_STORE } from '../storeKeys'
-import { SONG_DEFAULTS } from '../defaultStates'
+import { SELECTED_STORE } from '../storeKeys'
+import { SELECTED_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = SONG_DEFAULTS,
+    state = SELECTED_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case SONG_STORE:
+        case SELECTED_STORE:
             return {
                 ...state,
                 ...action.payload

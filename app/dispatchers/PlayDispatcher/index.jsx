@@ -81,7 +81,7 @@ class PlayDispatcher extends PureComponent {
 const mapStateToProps = ({
     playersStore: { playersBitNumber },
     audioStore: { isPlaying },
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         isSelectedLogue
     }

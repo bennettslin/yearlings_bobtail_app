@@ -123,7 +123,7 @@ class RenderedListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex,

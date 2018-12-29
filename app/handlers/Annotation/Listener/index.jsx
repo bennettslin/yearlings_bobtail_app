@@ -120,7 +120,7 @@ const mapStateToProps = ({
     toggleStore: { isDotsSlideShown },
     transientStore: { isEarShown },
     sessionStore: { interactivatedVerseIndex },
-    songStore: {
+    selectedStore: {
         earColumnIndex,
         selectedSongIndex,
         selectedVerseIndex,

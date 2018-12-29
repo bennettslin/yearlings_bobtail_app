@@ -56,7 +56,7 @@ class TipsDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    songStore: { isSelectedLogue },
+    selectedStore: { isSelectedLogue },
     optionStore: { selectedTipsOption },
     transientStore: { toggleShowsTipsImmediately }
 }) => ({

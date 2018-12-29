@@ -62,7 +62,7 @@ class CarouselListener extends PureComponent {
 
 const mapStateToProps = ({
     dotsStore: { dotsBitNumber },
-    songStore: { selectedSongIndex },
+    selectedStore: { selectedSongIndex },
     toggleStore: { isCarouselShown }
 }) => ({
     dotsBitNumber,

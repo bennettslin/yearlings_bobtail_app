@@ -44,7 +44,7 @@ class LyricListener extends PureComponent {
 
 const mapStateToProps = ({
     responsiveStore: { isLyricExpandable },
-    songStore: { isSelectedLogue }
+    selectedStore: { isSelectedLogue }
 }) => ({
     isLyricExpandable,
     isSelectedLogue

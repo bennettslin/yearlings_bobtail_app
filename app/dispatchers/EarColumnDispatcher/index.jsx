@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 
 class EarColumnDispatcher extends PureComponent {
 
@@ -14,7 +14,7 @@ class EarColumnDispatcher extends PureComponent {
         earColumnIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
 
-        updateSongStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -42,7 +42,7 @@ class EarColumnDispatcher extends PureComponent {
             return false
         }
 
-        this.props.updateSongStore({ earColumnIndex })
+        this.props.updateSelectedStore({ earColumnIndex })
         return true
     }
 
@@ -53,7 +53,7 @@ class EarColumnDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     transientStore: { isEarShown },
-    songStore: {
+    selectedStore: {
         isSelectedLogue,
         earColumnIndex
     }
@@ -65,5 +65,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { updateSongStore }
+    { updateSelectedStore }
 )(EarColumnDispatcher)

@@ -198,7 +198,7 @@ class KeyManager extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isAccessOn },
-    songStore: {
+    selectedStore: {
         selectedVerseIndex,
         selectedAnnotationIndex
     }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 
 import {
     intersects,
@@ -23,7 +23,7 @@ class AnnotationDispatcher extends PureComponent {
         earColumnIndex: PropTypes.number.isRequired,
         updateScrollCarouselStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
-        updateSongStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -59,7 +59,7 @@ class AnnotationDispatcher extends PureComponent {
             }
         }
 
-        this.props.updateSongStore({ selectedAnnotationIndex })
+        this.props.updateSelectedStore({ selectedAnnotationIndex })
 
         if (selectedAnnotationIndex) {
 
@@ -103,7 +103,7 @@ class AnnotationDispatcher extends PureComponent {
                 direction
             })
 
-        this.props.updateSongStore({ selectedAnnotationIndex })
+        this.props.updateSelectedStore({ selectedAnnotationIndex })
 
         if (selectedAnnotationIndex) {
             this.props.updateScrollLyricStore({
@@ -126,12 +126,12 @@ class AnnotationDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     transientStore: { isEarShown },
-    songStore: {
+    selectedStore: {
         selectedSongIndex,
         selectedAnnotationIndex
     },
     dotsStore: { dotsBitNumber },
-    songStore: { earColumnIndex }
+    selectedStore: { earColumnIndex }
 }) => ({
     isEarShown,
     selectedSongIndex,
@@ -145,6 +145,6 @@ export default connect(
     {
         updateScrollCarouselStore,
         updateScrollLyricStore,
-        updateSongStore
+        updateSelectedStore
     }
 )(AnnotationDispatcher)

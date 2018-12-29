@@ -220,6 +220,19 @@ const
         queuedScrollLyricFromAutoScroll: false
     },
 
+    SELECTED_DEFAULTS = {
+        [SELECTED_SONG_INDEX]: storedSongIndex,
+        [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
+        [SELECTED_VERSE_INDEX]: storedVerseIndex,
+        selectedSceneIndex: sceneIndex,
+        isSelectedLogue: isStoredLogue,
+        selectedTime: getStartTimeForVerseIndex(
+            storedSongIndex,
+            storedVerseIndex
+        ),
+        earColumnIndex: earColumnIndex || 0
+    },
+
     SESSION_DEFAULTS = {
         carouselAnnotationIndex: 0,
         interactivatedVerseIndex: -1,
@@ -237,19 +250,6 @@ const
         sliderWidth: 0,
         sliderVerseIndex: -1,
         sliderTime: 0
-    },
-
-    SONG_DEFAULTS = {
-        [SELECTED_SONG_INDEX]: storedSongIndex,
-        [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
-        [SELECTED_VERSE_INDEX]: storedVerseIndex,
-        selectedSceneIndex: sceneIndex,
-        isSelectedLogue: isStoredLogue,
-        selectedTime: getStartTimeForVerseIndex(
-            storedSongIndex,
-            storedVerseIndex
-        ),
-        earColumnIndex: earColumnIndex || 0
     },
 
     TOGGLE_DEFAULTS = {
@@ -301,7 +301,7 @@ export {
     SCROLL_LYRIC_DEFAULTS,
     SESSION_DEFAULTS,
     SLIDER_DEFAULTS,
-    SONG_DEFAULTS,
+    SELECTED_DEFAULTS,
     TOGGLE_DEFAULTS,
     TRANSIENT_DEFAULTS,
     VERSE_BARS_DEFAULTS,

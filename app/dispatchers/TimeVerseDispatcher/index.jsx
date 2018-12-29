@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import { getSceneIndexForVerseIndex } from 'album/api/scenes'
@@ -16,7 +16,7 @@ class TimeVerseDispatcher extends PureComponent {
         isAutoScroll: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
-        updateSongStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -37,7 +37,7 @@ class TimeVerseDispatcher extends PureComponent {
 
         const { selectedSongIndex } = this.props
 
-        this.props.updateSongStore({
+        this.props.updateSelectedStore({
             selectedVerseIndex: nextVerseIndex,
             selectedSceneIndex: getSceneIndexForVerseIndex(
                 selectedSongIndex,
@@ -71,7 +71,7 @@ class TimeVerseDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isAutoScroll },
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     isAutoScroll,
     selectedSongIndex
@@ -81,7 +81,7 @@ export default connect(
     mapStateToProps,
     {
         updateScrollLyricStore,
-        updateSongStore,
+        updateSelectedStore,
         updateVerseBarsStore
     }
 )(TimeVerseDispatcher)

@@ -15,7 +15,7 @@ import {
 
 const mapStateToProps = ({
     transientStore: { isCarouselNavShowable },
-    songStore: { selectedAnnotationIndex }
+    selectedStore: { selectedAnnotationIndex }
 }) => ({
     isCarouselNavShowable,
     selectedAnnotationIndex

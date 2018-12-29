@@ -32,7 +32,7 @@ const mapStateToProps = ({
     playersStore: { playersBitNumber },
     audioStore: { isPlaying },
     sessionStore: { selectedAudioOptionIndex },
-    songStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex }
 }) => ({
     isPlaying,
     playersBitNumber,

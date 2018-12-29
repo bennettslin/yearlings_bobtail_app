@@ -8,14 +8,14 @@ import {
 } from '../actionHelper'
 
 import {
-    SONG_STORE,
+    SELECTED_STORE,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX
 } from '../storeKeys'
-import { SONG_DEFAULTS } from '../defaultStates'
+import { SELECTED_DEFAULTS } from '../defaultStates'
 
-export const updateSongStore = (payload = SONG_DEFAULTS) => {
+export const updateSelectedStore = (payload = SELECTED_DEFAULTS) => {
 
     const {
         selectedSongIndex,
@@ -36,7 +36,7 @@ export const updateSongStore = (payload = SONG_DEFAULTS) => {
     }
 
     return {
-        type: SONG_STORE,
+        type: SELECTED_STORE,
         payload: getDefinedOnlyPayload(payload)
     }
 }

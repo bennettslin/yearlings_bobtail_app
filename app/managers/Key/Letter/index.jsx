@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSessionStore } from 'flux/session/action'
-import { updateSongStore } from 'flux/song/action'
+import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
@@ -63,7 +63,7 @@ class LetterManager extends PureComponent {
         selectedTipsOption: PropTypes.string.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
-        updateSongStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -180,7 +180,7 @@ class LetterManager extends PureComponent {
 
         // Close annotation popup.
         } else if (this.props.selectedAnnotationIndex) {
-            this.props.updateSongStore({ selectedAnnotationIndex: 0 })
+            this.props.updateSelectedStore({ selectedAnnotationIndex: 0 })
 
         // Collapse lyric
         } else if (this.props.isLyricExpanded) {
@@ -232,7 +232,7 @@ const mapStateToProps = ({
         selectedOverviewOption,
         selectedTipsOption
     },
-    songStore: { selectedAnnotationIndex },
+    selectedStore: { selectedAnnotationIndex },
     sessionStore: { selectedWikiIndex }
 }) => ({
     isAccessOn,
@@ -250,7 +250,7 @@ export default connect(
     mapStateToProps,
     {
         updateSessionStore,
-        updateSongStore,
+        updateSelectedStore,
         updateToggleStore
     }
 )(LetterManager)
