@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { Transition } from 'react-transition-group'
+import Transition from 'react-transition-group/Transition'
 import ScrollLyricListener from '../../../listeners/ScrollListener/Lyric'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import Stanzas from '../../Stanzas'
@@ -93,13 +93,13 @@ class LyricScroll extends PureComponent {
             <___>
                 <ScrollLyricListener {...{ getRefs: this._getRefs }} />
                 <Transition
-                    mountOnEnter
                     unmountOnExit
+                    mountOnEnter
                     {...{
                         in: canLyricRender,
                         timeout: {
-                            enter: 0,
-                            exit: 200
+                            exit: 200,
+                            enter: 0
                         }
                     }}
                 >

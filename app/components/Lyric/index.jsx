@@ -76,8 +76,8 @@ class Lyric extends PureComponent {
                     {...{
                         in: isLyricExpanded,
                         timeout: 200,
-                        onEntered: this.determineVerseBars,
-                        onExited: this.determineVerseBars
+                        onExited: this.determineVerseBars,
+                        onEntered: this.determineVerseBars
                     }}
                 >
                     <div

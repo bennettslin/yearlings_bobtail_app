@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { CSSTransition } from 'react-transition-group'
+import CSSTransition from 'react-transition-group/CSSTransition'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
@@ -18,7 +18,7 @@ class Popup extends PureComponent {
     static propTypes = {
         popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
-        doUnmount: PropTypes.bool,
+        doUnmount: PropTypes.bool, // Not presently used anywhere.
         isFullSize: PropTypes.bool,
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,
@@ -60,11 +60,11 @@ class Popup extends PureComponent {
                         enterDone: 'Popup__visible'
                     },
                     timeout: {
-                        enter: 0,
-                        exit: 200
+                        exit: 200,
+                        enter: 0
                     },
-                    mountOnEnter: doUnmount,
-                    unmountOnExit: doUnmount
+                    unmountOnExit: doUnmount,
+                    mountOnEnter: doUnmount
                 }}
             >
                 <div

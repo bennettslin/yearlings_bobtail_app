@@ -1,13 +1,10 @@
 // Singleton to listen for window resize event.
 
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import debounce from 'debounce'
 import { connect } from 'react-redux'
 import { updateDeviceStore } from 'flux/device/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
-
-import WindowResizeDispatcher from '../../handlers/WindowResizeHandler/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
 import {
@@ -31,32 +28,36 @@ import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
 import { getStageCoordinates } from './helpers/stage'
 
-class WindowListener extends PureComponent {
+class ResponsiveListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isWindowResizing: PropTypes.bool.isRequired,
         updateDeviceStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        // Set store values based on window size.
-        this._windowResize()
-
-        // Then watch for any subsequent window resize.
-        window.onresize = debounce(this._windowResize, 100)
+        // Set state based on initial window size.
+        this._determineResponsiveState()
     }
 
-    componentWillUnmount() {
-        window.onresize = null
+    componentDidUpdate(prevProps) {
+        const
+            { isWindowResizing } = this.props,
+            { isWindowResizing: wasWindowResizing } = prevProps
+
+        if (!isWindowResizing && wasWindowResizing) {
+            this._determineResponsiveState()
+        }
     }
 
-    _windowResize = (e) => {
+    _determineResponsiveState = () => {
         const {
                 deviceIndex,
                 windowHeight,
                 windowWidth
-            } = resizeWindow(e ? e.target : undefined),
+            } = resizeWindow(),
 
             isHeightlessLyric = getIsHeightlessLyric({
                 deviceIndex,
@@ -77,8 +78,6 @@ class WindowListener extends PureComponent {
             windowWidth,
             isHeightlessLyric
         })
-
-        this.dispatchWindowResizeUnrenderable()
     }
 
     _updateDeviceStore({
@@ -92,6 +91,7 @@ class WindowListener extends PureComponent {
                 stageLeft,
                 stageWidth,
                 stageHeight
+
             } = getStageCoordinates({
                 deviceIndex,
                 windowWidth,
@@ -101,6 +101,7 @@ class WindowListener extends PureComponent {
             {
                 ceilingHeight,
                 floorHeight
+
             } = getCeilingFloorHeight({
                 deviceIndex,
                 windowWidth,
@@ -166,13 +167,15 @@ class WindowListener extends PureComponent {
     }
 
     render() {
-        return (
-            <WindowResizeDispatcher {...{ getRefs: this._getRefs }} />
-        )
+        return null
     }
 }
 
-const mapStateToProps = null
+const mapStateToProps = ({
+    windowStore: { isWindowResizing }
+}) => ({
+    isWindowResizing
+})
 
 export default connect(
     mapStateToProps,
@@ -180,4 +183,4 @@ export default connect(
         updateDeviceStore,
         updateResponsiveStore
     }
-)(WindowListener)
+)(ResponsiveListener)

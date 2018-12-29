@@ -1,18 +1,14 @@
-// Child that knows rules to toggle admin.
-
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import debounce from 'debounce'
 import { connect } from 'react-redux'
-import { updateRenderableStore } from 'flux/renderable/action'
+import { updateWindowStore } from 'flux/window/action'
 
 class WindowResizeDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        updateRenderableStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
+        updateWindowStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -20,14 +16,15 @@ class WindowResizeDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({
-            dispatchWindowResizeUnrenderable:
-                this.dispatchWindowResizeUnrenderable
-        })
+        window.onresize = debounce(this.dispatchWindowResizing, 0)
     }
 
-    dispatchWindowResizeUnrenderable = () => {
-        this.props.updateRenderableStore({ isWindowResizeRenderable: false })
+    componentWillUnmount() {
+        window.onresize = null
+    }
+
+    dispatchWindowResizing = () => {
+        this.props.updateWindowStore({ isWindowResizing: true })
 
         // Clear previous timeout.
         clearTimeout(this.state.windowResizeTimeoutId)
@@ -36,7 +33,7 @@ class WindowResizeDispatcher extends PureComponent {
          * Wait for window resize to finish.
          */
         const windowResizeTimeoutId = setTimeout(
-            this._dispatchWindowResizeRenderable, 500
+            this._dispatchWindowResized, 250
         )
 
         this.setState({
@@ -44,8 +41,8 @@ class WindowResizeDispatcher extends PureComponent {
         })
     }
 
-    _dispatchWindowResizeRenderable = () => {
-        this.props.updateRenderableStore({ isWindowResizeRenderable: true })
+    _dispatchWindowResized = () => {
+        this.props.updateWindowStore({ isWindowResizing: false })
     }
 
     render() {
@@ -57,5 +54,5 @@ const mapStateToProps = null
 
 export default connect(
     mapStateToProps,
-    { updateRenderableStore }
+    { updateWindowStore }
 )(WindowResizeDispatcher)

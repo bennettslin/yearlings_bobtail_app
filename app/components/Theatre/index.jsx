@@ -4,7 +4,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
+import { updateRenderStore } from 'flux/render/action'
 
+import CSSTransition from 'react-transition-group/CSSTransition'
 import Scene from '../Scene'
 import Stage from '../Stage'
 import Curtains from '../Stage/Curtains'
@@ -15,52 +17,68 @@ import Ceiling from './Ceiling'
 import Floor from './Floor'
 
 const mapStateToProps = ({
-    renderStore: { didTheatreRender }
+    renderStore: { canTheatreRender }
 }) => ({
-    didTheatreRender
+    canTheatreRender
 })
 
 class Theatre extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        didTheatreRender: PropTypes.bool.isRequired
+        canTheatreRender: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
         logMount('Theatre')
     }
 
+    handleTransitionEntered = () => {
+        this.props.updateRenderStore({ didTheatreRender: true })
+    }
+
     render() {
-        const { didTheatreRender } = this.props
+        const { canTheatreRender } = this.props
 
         return (
-            <div className={cx(
-                'Theatre',
-                'abF',
-                {
-                    'Theatre__shown': didTheatreRender
-                }
-            )}>
+            <CSSTransition
+                mountOnEnter
+                {...{
+                    in: canTheatreRender,
+                    timeout: 200,
+                    classNames: {
+                        enterDone: 'Theatre__visible'
+                    },
+                    onEntered: this.handleTransitionEntered
+                }}
+            >
+                <div className={cx(
+                    'Theatre',
+                    'abF'
+                )}>
 
-                {/* Scene is behind theatre due to presence transitions. */}
-                <Stage>
-                    <Scene />
-                </Stage>
+                    {/* Scene is behind theatre due to presence transitions. */}
+                    <Stage>
+                        <Scene />
+                    </Stage>
 
-                <Ceiling />
-                <Wall />
-                <Wall isRight />
+                    <Ceiling />
+                    <Wall />
+                    <Wall isRight />
 
-                <Stage>
-                    <Curtains />
-                    <Proscenium />
-                </Stage>
+                    <Stage>
+                        <Curtains />
+                        <Proscenium />
+                    </Stage>
 
-                <Floor />
-            </div>
+                    <Floor />
+                </div>
+            </CSSTransition>
         )
     }
 }
 
-export default connect(mapStateToProps)(Theatre)
+export default connect(
+    mapStateToProps,
+    { updateRenderStore }
+)(Theatre)

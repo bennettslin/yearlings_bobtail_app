@@ -9,51 +9,40 @@ class WindowResizeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isWindowResizeRenderable: PropTypes.bool.isRequired,
+        isWindowResizing: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.unrenderedTime = Date.now()
+        this._handleWindowFinishedResizing()
     }
 
     componentDidUpdate(prevProps) {
-        this._checkWindowResize(prevProps)
+        this._checkWindowResizing(prevProps)
     }
 
-    _checkWindowResize(prevProps) {
+    _checkWindowResizing(prevProps = {}) {
         const
-            { isWindowResizeRenderable } = this.props,
-            { isWindowResizeRenderable: wasWindowResizeRenderable } = prevProps
+            { isWindowResizing } = this.props,
+            { isWindowResizing: wasWindowResizing } = prevProps
 
         // Is unrenderable after window resize.
-        if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
-            this._handleWindowResizeUnrenderable()
+        if (isWindowResizing && !wasWindowResizing) {
+            this._handleWindowResizing()
 
-        /**
-         * Is renderable after window resize timeout. Also called upon initial
-         * render.
-         */
-        } else if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
-            this._handleWindowResizeRenderable()
+        } else if (!isWindowResizing && wasWindowResizing) {
+            this._handleWindowFinishedResizing()
         }
     }
 
-    _handleWindowResizeUnrenderable() {
-        this.unrenderedTime = Date.now()
-
-        logRenderable('Unrenderable from window resize.')
+    _handleWindowResizing() {
         this.props.updateRenderStore({
             canTheatreRender: false,
             didTheatreRender: false
         })
     }
 
-    _handleWindowResizeRenderable() {
-        logRenderable(`Renderable after window resize, took ${
-            ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-        } seconds.`)
-
+    _handleWindowFinishedResizing() {
         this.props.updateRenderStore({
             canTheatreRender: true
         })
@@ -65,11 +54,9 @@ class WindowResizeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    renderableStore: {
-        isWindowResizeRenderable
-    }
+    windowStore: { isWindowResizing }
 }) => ({
-    isWindowResizeRenderable
+    isWindowResizing
 })
 
 export default connect(

@@ -152,8 +152,7 @@ const
 
     RENDERABLE_DEFAULTS = {
         isSceneChangeRenderable: true,
-        isSongChangeRenderable: true,
-        isWindowResizeRenderable: false
+        isSongChangeRenderable: true
     },
 
     RENDERED_DEFAULTS = {
@@ -277,8 +276,7 @@ const
     },
 
     WINDOW_DEFAULTS = {
-        isWindowResizing: false,
-        isWindowResized: false
+        isWindowResizing: false
     }
 
 export {

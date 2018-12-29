@@ -14,6 +14,7 @@ import PresenceListener from '../../listeners/PresenceListener'
 import RenderCanListener from '../../listeners/RenderCanListener'
 import RenderDidListener from '../../listeners/RenderDidListener'
 import RenderedListener from '../../listeners/RenderedListener'
+import ResponsiveListener from '../../listeners/ResponsiveListener'
 import SceneListener from '../../handlers/SceneHandler/Listener'
 import SceneChangeListener from '../../handlers/SceneChangeHandler/Listener'
 import ScoreListener from '../../handlers/ScoreHandler/Listener'
@@ -24,8 +25,8 @@ import SliderListener from '../../listeners/SliderListener'
 import TipsListener from '../../handlers/TipsHandler/Listener'
 import WikiListener from '../../handlers/WikiHandler/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormholeHandler/Listener'
+import WindowResizeDispatcher from '../../handlers/WindowResizeHandler/Dispatcher'
 import WindowResizeListener from '../../handlers/WindowResizeHandler/Listener'
-import WindowListener from '../../listeners/WindowListener'
 
 import AudioPlayerManager from '../../managers/AudioPlayerManager'
 import LogManager from '../../managers/LogManager'
@@ -55,6 +56,7 @@ class ListenerContainer extends PureComponent {
                 <RenderCanListener />
                 <RenderDidListener />
                 <RenderedListener />
+                <ResponsiveListener />
                 <SceneListener />
                 <SceneChangeListener />
                 <ScoreListener />
@@ -65,8 +67,8 @@ class ListenerContainer extends PureComponent {
                 <TipsListener />
                 <WikiListener />
                 <WikiWormholeListener />
+                <WindowResizeDispatcher />
                 <WindowResizeListener />
-                <WindowListener />
 
                 <AudioPlayerManager />
                 <LogManager />

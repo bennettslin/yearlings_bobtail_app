@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { Transition } from 'react-transition-group'
+import Transition from 'react-transition-group/Transition'
 import CarouselAnnotation from '../Annotation'
 
 import { getAnnotationsCount } from 'album/api/annotations'
@@ -85,13 +85,13 @@ class CarouselScroll extends PureComponent {
 
         return (
             <Transition
-                mountOnEnter
                 unmountOnExit
+                mountOnEnter
                 {...{
                     in: canCarouselRender,
                     timeout: {
-                        enter: 0,
-                        exit: 200
+                        exit: 200,
+                        enter: 0
                     }
                 }}
             >

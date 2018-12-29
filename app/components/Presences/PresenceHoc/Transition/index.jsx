@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
-import { CSSTransition } from 'react-transition-group'
+import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceHocView from '../View'
 
 const transitionPropTypes = {
@@ -21,13 +21,13 @@ const PresenceHocTransition = memo(({
 }) => {
     return (
         <CSSTransition
-            mountOnEnter
             unmountOnExit
+            mountOnEnter
             {...{
                 in: Boolean(dynamicPresenceValue),
                 timeout: {
-                    enter: 0,
-                    exit: 200
+                    exit: 200,
+                    enter: 0
                 },
                 classNames: {
                     enterDone: 'Presence__visible'

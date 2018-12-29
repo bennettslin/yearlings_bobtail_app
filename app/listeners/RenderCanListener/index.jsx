@@ -9,7 +9,6 @@ class RenderCanListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
         canSceneRender: PropTypes.bool.isRequired,
         canLyricRender: PropTypes.bool.isRequired,
         canCarouselRender: PropTypes.bool.isRequired,
@@ -17,34 +16,15 @@ class RenderCanListener extends PureComponent {
     }
 
     state = {
-        didTheatreRenderTimeoutId: '',
         didSceneRenderTimeoutId: '',
         didLyricRenderTimeoutId: '',
         didCarouselRenderTimeoutId: ''
     }
 
     componentDidUpdate(prevProps) {
-        this._checkTheatreCanRender(prevProps)
         this._checkSceneCanRender(prevProps)
         this._checkLyricCanRender(prevProps)
         this._checkCarouselCanRender(prevProps)
-    }
-
-    _checkTheatreCanRender(prevProps) {
-        const
-            { canTheatreRender } = this.props,
-            { canTheatreRender: couldRender } = prevProps
-
-        if (canTheatreRender && !couldRender) {
-            clearTimeout(this.state.didTheatreRenderTimeoutId)
-
-            // Wait for parent transition before continuing render sequence.
-            const didTheatreRenderTimeoutId = setTimeout(
-                this._theatreDidRender, 100
-            )
-
-            this.setState({ didTheatreRenderTimeoutId })
-        }
     }
 
     _checkSceneCanRender(prevProps) {
@@ -98,10 +78,6 @@ class RenderCanListener extends PureComponent {
         }
     }
 
-    _theatreDidRender = () => {
-        this.props.updateRenderStore({ didTheatreRender: true })
-    }
-
     _setDidSceneRender = () => {
         this.props.updateRenderStore({ didSceneRender: true })
     }
@@ -121,13 +97,11 @@ class RenderCanListener extends PureComponent {
 
 const mapStateToProps = ({
     renderStore: {
-        canTheatreRender,
         canSceneRender,
         canLyricRender,
         canCarouselRender
     }
 }) => ({
-    canTheatreRender,
     canSceneRender,
     canLyricRender,
     canCarouselRender
