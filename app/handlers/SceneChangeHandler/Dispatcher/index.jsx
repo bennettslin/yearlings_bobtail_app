@@ -9,24 +9,41 @@ class SceneChangeDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        updateRenderableStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
+        selectedSceneIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        updateRenderableStore: PropTypes.func.isRequired
     }
 
     state = {
         sceneChangeTimeoutId: ''
     }
 
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchSceneChangeUnrenderable:
-                this.dispatchSceneChangeUnrenderable
-        })
+    componentDidUpdate(prevProps) {
+        this._checkSceneChange(prevProps)
     }
 
-    dispatchSceneChangeUnrenderable = () => {
+    _checkSceneChange(prevProps) {
+        const
+            {
+                selectedSceneIndex,
+                selectedSongIndex
+            } = this.props,
+            {
+                selectedSceneIndex: prevSceneIndex,
+                selectedSongIndex: prevSongIndex
+            } = prevProps
+
+        if (
+            // Only listen for scene change within the same song.
+            selectedSongIndex === prevSongIndex &&
+            selectedSceneIndex !== prevSceneIndex
+        ) {
+            this._dispatchSceneChanging()
+        }
+    }
+
+
+    _dispatchSceneChanging = () => {
         this.props.updateRenderableStore({ isSceneChangeRenderable: false })
 
         // Clear previous timeout.
@@ -36,7 +53,7 @@ class SceneChangeDispatcher extends PureComponent {
          * Wait for scene selection to finish.
          */
         const sceneChangeTimeoutId = setTimeout(
-            this._dispatchSceneChangeRenderable, 200
+            this._dispatchSceneChanged, 200
         )
 
         this.setState({
@@ -44,7 +61,7 @@ class SceneChangeDispatcher extends PureComponent {
         })
     }
 
-    _dispatchSceneChangeRenderable = () => {
+    _dispatchSceneChanged = () => {
         this.props.updateRenderableStore({ isSceneChangeRenderable: true })
     }
 
@@ -53,7 +70,15 @@ class SceneChangeDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = null
+const mapStateToProps = ({
+    songStore: {
+        selectedSongIndex,
+        selectedSceneIndex
+    }
+}) => ({
+    selectedSongIndex,
+    selectedSceneIndex
+})
 
 export default connect(
     mapStateToProps,

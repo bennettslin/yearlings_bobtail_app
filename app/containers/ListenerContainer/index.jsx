@@ -14,7 +14,7 @@ import PresenceListener from '../../listeners/PresenceListener'
 import RenderCanListener from '../../listeners/RenderCanListener'
 import RenderDidListener from '../../listeners/RenderDidListener'
 import RenderedListener from '../../listeners/RenderedListener'
-import SceneListener from '../../handlers/SceneHandler/Listener'
+import SceneChangeDispatcher from '../../handlers/SceneChangeHandler/Dispatcher'
 import SceneChangeListener from '../../handlers/SceneChangeHandler/Listener'
 import ScoreListener from '../../handlers/ScoreHandler/Listener'
 import SongListener from '../../handlers/SongHandler/Listener'
@@ -55,7 +55,7 @@ class ListenerContainer extends PureComponent {
                 <RenderCanListener />
                 <RenderDidListener />
                 <RenderedListener />
-                <SceneListener />
+                <SceneChangeDispatcher />
                 <SceneChangeListener />
                 <ScoreListener />
                 <ScrollRenderListener />
