@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerseDispatcher'
+import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
 import VerseLines from './Lines'

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { resetAnnotationQueue } from 'flux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
-import InteractivatedVerseDispatcher from '../../../dispatchers/InteractivatedVerseDispatcher'
+import InteractivatedVerseDispatcher from '../../../dispatchers/InteractivatedVerse'
 
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 import { getVerseIndexForAnnotationIndex } from 'album/api/annotations'

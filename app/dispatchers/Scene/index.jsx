@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import { updateToggleStore } from 'flux/toggle/action'
 
-import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
+import VerseDispatcher from '../VerseDispatcher'
 
 import { populateRefs } from 'helpers/ref'
 
