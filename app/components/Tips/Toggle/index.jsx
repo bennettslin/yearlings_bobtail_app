@@ -4,7 +4,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import TipsDispatcher from '../../../handlers/TipsHandler/Dispatcher'
+import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
 import Button from '../../Button'
 
 import { populateRefs } from 'helpers/ref'

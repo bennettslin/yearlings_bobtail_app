@@ -6,7 +6,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import Transition from 'react-transition-group/Transition'
-import VerseBarHandler from '../../handlers/VerseBarHandler'
+import VerseBarHandler from '../../handlers/VerseBar'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggleEar from './Toggle/Ear'

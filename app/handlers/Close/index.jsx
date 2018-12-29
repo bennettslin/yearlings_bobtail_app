@@ -16,7 +16,7 @@ import {
     HIDDEN
 } from '../../constants/options'
 
-class CloseHandler extends PureComponent {
+class Close extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -354,4 +354,4 @@ export default connect(
         updateSongStore,
         updateToggleStore
     }
-)(CloseHandler)
+)(Close)

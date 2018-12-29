@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEventStore } from 'flux/event/action'
 
-import CloseHandler from '../../handlers/CloseHandler'
+import Close from '../../handlers/Close'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagationDispatcher'
 
@@ -234,7 +234,7 @@ class FocusContainer extends PureComponent {
                     onKeyUp: this._handleKeyUpPress
                 }}
             >
-                <CloseHandler {...{ getRefs: this._getRefs }} />
+                <Close {...{ getRefs: this._getRefs }} />
                 <AccessStylesheet />
                 <KeyManager {...{ getRefs: this._getRefs }} />
                 <RootContainer

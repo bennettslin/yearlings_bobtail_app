@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import LyricDispatcher from '../../../../handlers/LyricHandler/Dispatcher'
+import LyricDispatcher from '../../../../handlers/Lyric/Dispatcher'
 import Button from '../../../Button'
 
 import { populateRefs } from 'helpers/ref'

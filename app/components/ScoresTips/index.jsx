@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import ScoreDispatcher from '../../handlers/ScoreHandler/Dispatcher'
+import ScoreDispatcher from '../../handlers/Score/Dispatcher'
 import TipsToggle from '../Tips/Toggle'
 import Button from '../Button'
 

@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import PlayDispatcher from '../../../dispatchers/PlayDispatcher'
-import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
+import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import Button from '../../Button'
 
 import {

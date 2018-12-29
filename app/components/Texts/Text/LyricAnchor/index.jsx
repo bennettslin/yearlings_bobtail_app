@@ -6,7 +6,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from 'flux/annotation/action'
 
-import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
+import WikiDispatcher from '../../../../handlers/Wiki/Dispatcher'
 import Anchor from '../../../Anchor'
 import Texts from '../../'
 

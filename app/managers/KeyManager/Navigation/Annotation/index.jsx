@@ -2,10 +2,10 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
-import SongDispatcher from '../../../../handlers/SongHandler/Dispatcher'
-import WikiDispatcher from '../../../../handlers/WikiHandler/Dispatcher'
-import WikiWormholeDispatcher from '../../../../handlers/WikiWormholeHandler/Dispatcher'
+import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
+import SongDispatcher from '../../../../handlers/Song/Dispatcher'
+import WikiDispatcher from '../../../../handlers/Wiki/Dispatcher'
+import WikiWormholeDispatcher from '../../../../handlers/WikiWormhole/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
 

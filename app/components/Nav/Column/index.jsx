@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import NavDispatcher from '../../../dispatchers/NavDispatcher'
-import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
+import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'

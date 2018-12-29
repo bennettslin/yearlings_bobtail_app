@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
 
 import NavDispatcher from '../../../../dispatchers/NavDispatcher'
-import SongDispatcher from '../../../../handlers/SongHandler/Dispatcher'
+import SongDispatcher from '../../../../handlers/Song/Dispatcher'
 
 import {
     getSongsAndLoguesCount,

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 // import PropTypes from 'prop-types'
 
-import AnnotationDispatcher from '../../../handlers/AnnotationHandler/Dispatcher'
+import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Button from '../../Button'
 
 import { populateRefs } from 'helpers/ref'

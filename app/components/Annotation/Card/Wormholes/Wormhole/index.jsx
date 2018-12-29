@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SongDispatcher from '../../../../../handlers/SongHandler/Dispatcher'
+import SongDispatcher from '../../../../../handlers/Song/Dispatcher'
 import Texts from '../../../../Texts'
 import Button from '../../../../Button'
 

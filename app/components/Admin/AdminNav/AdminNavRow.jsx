@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 
-import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
+import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import ProgressBar from '../ProgressBar'
 
 import { getSongTitle } from 'album/api/songs'

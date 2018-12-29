@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSessionStore } from 'flux/session/action'
 
-import AnnotationDispatcher from '../../../../handlers/AnnotationHandler/Dispatcher'
-import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccessHandler/Dispatcher'
+import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
+import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
 

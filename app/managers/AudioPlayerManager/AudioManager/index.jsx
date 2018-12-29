@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 
-import SongDispatcher from '../../../handlers/SongHandler/Dispatcher'
+import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import { populateRefs } from 'helpers/ref'
 
 import {

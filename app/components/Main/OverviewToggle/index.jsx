@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import OverviewDispatcher from '../../../handlers/OverviewHandler/Dispatcher'
+import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
 import Button from '../../Button'
 
 import { populateRefs } from 'helpers/ref'

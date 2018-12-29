@@ -9,7 +9,7 @@ import {
 
 import { getVerseBarStatus } from './helper'
 
-class VerseBarHandler extends PureComponent {
+class VerseBar extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -179,4 +179,4 @@ export default connect(
         updateVerseBarsStore,
         resetVerseBarsQueue
     }
-)(VerseBarHandler)
+)(VerseBar)

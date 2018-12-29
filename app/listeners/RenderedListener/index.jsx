@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateRenderedStore } from 'flux/rendered/action'
 
-import SongChangeDispatcher from '../../handlers/SongChangeHandler/Dispatcher'
+import SongChangeDispatcher from '../../handlers/SongChange/Dispatcher'
 
 import { populateRefs } from 'helpers/ref'
 
