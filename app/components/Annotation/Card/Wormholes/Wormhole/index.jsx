@@ -24,16 +24,16 @@ import { populateRefs } from 'helpers/ref'
 import { getCardWormholeLink } from './helper'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class AnnotationWormhole extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         isAccessed: PropTypes.bool.isRequired,
@@ -45,14 +45,14 @@ class AnnotationWormhole extends PureComponent {
 
     _getWormholeLink() {
         const {
-            renderedSongIndex,
+            lyricSongIndex,
             annotationIndex,
             cardIndex,
             wormholeLinkIndex
         } = this.props
 
         return getCardWormholeLink({
-            songIndex: renderedSongIndex,
+            songIndex: lyricSongIndex,
             annotationIndex,
             cardIndex,
             wormholeLinkIndex

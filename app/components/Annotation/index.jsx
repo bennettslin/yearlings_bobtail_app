@@ -14,16 +14,16 @@ import { getArrayOfLength } from 'helpers/general'
 import { getAnnotationCardsLength } from './helper'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class Annotation extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         inCarousel: PropTypes.bool,
@@ -47,12 +47,12 @@ class Annotation extends PureComponent {
                 inCarousel,
                 isAccessed,
                 isSelected,
-                renderedSongIndex,
+                lyricSongIndex,
                 annotationIndex
             } = this.props,
 
             cardsLength = getAnnotationCardsLength({
-                songIndex: renderedSongIndex,
+                songIndex: lyricSongIndex,
                 annotationIndex
             })
 

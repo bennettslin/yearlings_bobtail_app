@@ -13,11 +13,11 @@ import { populateRefs } from 'helpers/ref'
 import TempGlobalAnnotations from './TempGlobalAnnotations'
 
 const mapStateToProps = ({
-    renderedStore: { canLyricRender },
-    renderedStore: { renderedSongIndex }
+    lyricStore: { canLyricRender },
+    lyricStore: { lyricSongIndex }
 }) => ({
     canLyricRender,
-    renderedSongIndex
+    lyricSongIndex
 })
 
 /*************
@@ -29,7 +29,7 @@ class LyricScroll extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         determineVerseBars: PropTypes.func.isRequired,

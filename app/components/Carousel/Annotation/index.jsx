@@ -13,16 +13,16 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { getCarouselAnnotationData } from './helper'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class CarouselAnnotation extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         annotationIndex: PropTypes.number.isRequired,
@@ -40,7 +40,7 @@ class CarouselAnnotation extends PureComponent {
 
     render() {
         const {
-                renderedSongIndex,
+                lyricSongIndex,
                 isAccessed,
                 isSelected,
                 annotationIndex
@@ -51,7 +51,7 @@ class CarouselAnnotation extends PureComponent {
                 dotKeys
 
             } = getCarouselAnnotationData({
-                songIndex: renderedSongIndex,
+                songIndex: lyricSongIndex,
                 annotationIndex
             })
 

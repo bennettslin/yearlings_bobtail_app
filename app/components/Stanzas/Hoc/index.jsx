@@ -7,14 +7,14 @@ import { getParentOfVerseClassNamesForIndices } from '../helper'
 import { getStanzaConfig } from 'album/api/stanzas'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 const propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         stanzaIndex: PropTypes.number.isRequired,
@@ -22,7 +22,7 @@ const propTypes = {
     },
 
     StanzaHoc = memo(({
-        renderedSongIndex,
+        lyricSongIndex,
         StanzaComponent,
         ...other
     }) => {
@@ -30,7 +30,7 @@ const propTypes = {
         const { stanzaIndex } = other,
 
             { stanzaVerseConfigs } = getStanzaConfig(
-                renderedSongIndex,
+                lyricSongIndex,
                 stanzaIndex
             ),
 

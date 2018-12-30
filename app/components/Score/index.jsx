@@ -9,16 +9,16 @@ import { updateLoadStore } from 'flux/load/action'
 import { getSongScore } from './helper'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class Score extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         setScoreFocusElement: PropTypes.func.isRequired
@@ -30,10 +30,10 @@ class Score extends PureComponent {
 
     render() {
         const {
-                renderedSongIndex,
+                lyricSongIndex,
                 setScoreFocusElement
             } = this.props,
-            score = getSongScore(renderedSongIndex)
+            score = getSongScore(lyricSongIndex)
 
         return (
             <div

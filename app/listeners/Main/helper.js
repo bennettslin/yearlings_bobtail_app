@@ -16,7 +16,7 @@ const getIsOverlayingAnnotation = ({
 const getIsOverlayShown = ({
     deviceIndex,
     isLyricExpanded,
-    renderedAnnotationIndex,
+    lyricAnnotationIndex,
     isScoreShown,
     isTitleShown,
     selectedWikiIndex
@@ -32,7 +32,7 @@ const getIsOverlayShown = ({
         isScoreShown ||
         Boolean(selectedWikiIndex) ||
         (
-            Boolean(renderedAnnotationIndex) &&
+            Boolean(lyricAnnotationIndex) &&
             isOverlayingAnnotation
         )
     )

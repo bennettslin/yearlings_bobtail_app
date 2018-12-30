@@ -11,10 +11,10 @@ import Texts from '../Texts'
 import { getSongTip } from './helper'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex },
+    lyricStore: { lyricSongIndex },
     responsiveStore: { isScoresTipsInMain }
 }) => ({
-    renderedSongIndex,
+    lyricSongIndex,
     isScoresTipsInMain
 })
 
@@ -22,17 +22,17 @@ class Tips extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired
     }
 
     render() {
         const {
-                renderedSongIndex,
+                lyricSongIndex,
                 isScoresTipsInMain
             } = this.props,
 
-            tipText = getSongTip(renderedSongIndex)
+            tipText = getSongTip(lyricSongIndex)
 
         return (
             <div className={cx(

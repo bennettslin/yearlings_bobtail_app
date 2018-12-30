@@ -3,15 +3,15 @@ import AccessReducer from './access/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
 import ChangeReducer from './change/reducer'
-import CurtainReducer from './curtain/reducer'
+// import CurtainReducer from './curtain/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
 import FocusReducer from './focus/reducer'
 import LoadReducer from './load/reducer'
+import LyricReducer from './lyric/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
 import RenderReducer from './render/reducer'
-import RenderedReducer from './rendered/reducer'
 import ResponsiveReducer from './responsive/reducer'
 import SceneReducer from './scene/reducer'
 import ScrollCarouselReducer from './scrollCarousel/reducer'
@@ -28,15 +28,15 @@ import {
     ANNOTATION_STORE,
     AUDIO_STORE,
     CHANGE_STORE,
-    CURTAIN_STORE,
+    // CURTAIN_STORE,
     DEVICE_STORE,
     DOTS_STORE,
     FOCUS_STORE,
     LOAD_STORE,
+    LYRIC_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
     RENDER_STORE,
-    RENDERED_STORE,
     RESPONSIVE_STORE,
     SCENE_STORE,
     SCROLL_CAROUSEL_STORE,
@@ -50,14 +50,15 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
-    [CURTAIN_STORE]: CurtainReducer,
+    // [CURTAIN_STORE]: CurtainReducer,
     [CHANGE_STORE]: ChangeReducer,
     [RENDER_STORE]: RenderReducer,
 
     [SCENE_STORE]: SceneReducer,
-    [AUDIO_STORE]: AudioReducer,
+    [LYRIC_STORE]: LyricReducer,
     [SELECTED_STORE]: SelectedReducer,
-    [RENDERED_STORE]: RenderedReducer,
+
+    [AUDIO_STORE]: AudioReducer,
     [ACCESS_STORE]: AccessReducer,
     [SESSION_STORE]: SessionReducer,
     [PLAYERS_STORE]: PlayersReducer,

@@ -1,4 +1,4 @@
-// Keep these in a single file for clarity, at least for now.
+// Keep these in a single file for dev clarity, at least for now.
 
 import {
     getIndexFromStorage,
@@ -54,253 +54,225 @@ const
     storedSceneIndex = getSceneIndexForVerseIndex(
         storedSongIndex,
         storedVerseIndex
-    ),
+    )
 
-    ACCESS_DEFAULTS = {
-        accessedKey: '',
-        accessedAnnotationIndex: storedAnnotationIndex || 1,
-        accessedWikiWormholeIndex: 1,
-        accessedDotIndex: 0,
-        accessedNavSongIndex: storedSongIndex
-    },
+export const ACCESS_DEFAULTS = {
+    accessedKey: '',
+    accessedAnnotationIndex: storedAnnotationIndex || 1,
+    accessedWikiWormholeIndex: 1,
+    accessedDotIndex: 0,
+    accessedNavSongIndex: storedSongIndex
+}
 
-    ANNOTATION_DEFAULTS = {
-        queuedAnnotationIndex: 0,
-        queuedAnnotationFromCarousel: false,
-        queuedAnnotationFromLyricVerse: false
-    },
+export const ANNOTATION_DEFAULTS = {
+    queuedAnnotationIndex: 0,
+    queuedAnnotationFromCarousel: false,
+    queuedAnnotationFromLyricVerse: false
+}
 
-    AUDIO_DEFAULTS = {
-        isPlaying: false,
-        queuedTogglePlay: false,
-        queuedPlayFromLogue: false,
-        queuedPlaySongIndex: -1,
-        queuedPlayVerseIndex: -1
-    },
+export const AUDIO_DEFAULTS = {
+    isPlaying: false,
+    queuedTogglePlay: false,
+    queuedPlayFromLogue: false,
+    queuedPlaySongIndex: -1,
+    queuedPlayVerseIndex: -1
+}
 
-    CHANGE_DEFAULTS = {
-        isSceneBeingSelected: false,
-        isSceneDonePreparing: true,
-        isSongBeingSelected: false,
-        isSongDonePreparing: true,
-        isWindowBeingResized: false
-    },
+export const CHANGE_DEFAULTS = {
+    isSceneBeingSelected: false,
+    isSceneDonePreparing: true,
+    isSongBeingSelected: false,
+    isSongDonePreparing: true,
+    isWindowBeingResized: false
+}
 
-    CURTAIN_DEFAULTS = {
-        isCurtainClosing: false,
-        isCurtainClosed: false,
-        isCurtainOpening: false,
-        isCurtainOpened: false
-    },
+export const CURTAIN_DEFAULTS = {
+    isCurtainClosing: false,
+    isCurtainClosed: false,
+    isCurtainOpening: false,
+    isCurtainOpened: false
+}
 
-    DEVICE_DEFAULTS = {
-        canTheatreRender: false,
-        deviceIndex: DEVICE_OBJECTS.length - 1,
-        isPhone: false,
-        isDesktop: false,
-        windowHeight: 0,
-        windowWidth: 0,
-        stageTop: 0,
-        stageLeft: 0,
-        stageWidth: 100,
-        stageHeight: 100,
-        ceilingHeight: 0,
-        floorHeight: 0
-    },
+export const DEVICE_DEFAULTS = {
+    canTheatreRender: false,
+    deviceIndex: DEVICE_OBJECTS.length - 1,
+    isPhone: false,
+    isDesktop: false,
+    windowHeight: 0,
+    windowWidth: 0,
+    stageTop: 0,
+    stageLeft: 0,
+    stageWidth: 100,
+    stageHeight: 100,
+    ceilingHeight: 0,
+    floorHeight: 0
+}
 
-    /**
-     * All dotKeys plus dotsBitNumber. Components only ever retrieve the bit
-     * number. The individual dots are never used, just visible in the store
-     * for dev clarity.
-     */
-    DOTS_DEFAULTS = getDotsFromStorage(),
+/**
+ * All dotKeys plus dotsBitNumber. Components only ever retrieve the bit
+ * number. The individual dots are never used, just visible in the store
+ * for dev clarity.
+ */
+export const DOTS_DEFAULTS = getDotsFromStorage()
 
-    FOCUS_DEFAULTS = {
-        queuedFocus: false
-    },
+export const FOCUS_DEFAULTS = {
+    queuedFocus: false
+}
 
-    LOAD_DEFAULTS = {
-        appMounted: false,
-        isScoreLoaded: false
-    },
+export const LOAD_DEFAULTS = {
+    appMounted: false,
+    isScoreLoaded: false
+}
 
-    OPTION_DEFAULTS = {
-        selectedOverviewOption:
-            getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
-        selectedTipsOption:
-            getOptionFromStorage(SELECTED_TIPS_OPTION) || SHOWN,
-        isForcedShownOverview: false,
-        isSongShownOverview: false,
-        isSongShownTips: false
-    },
+export const LYRIC_DEFAULTS = {
+    canLyricRender: false,
+    canCarouselRender: false,
+    lyricSongIndex: storedSongIndex,
+    lyricAnnotationIndex: storedAnnotationIndex,
+    lyricVerseIndex: storedVerseIndex,
+    isRenderedLogue: isStoredLogue
+}
 
-    /**
-     * Plus each individual player. Only the bit number is retrieved by the
-     * components. The individual players are just stored for dev clarity.
-     */
-    PLAYERS_DEFAULTS = {
-        playersBitNumber: 0,
-        nextPlayerToRender: -1
-    },
+export const OPTION_DEFAULTS = {
+    selectedOverviewOption:
+        getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
+    selectedTipsOption:
+        getOptionFromStorage(SELECTED_TIPS_OPTION) || SHOWN,
+    isForcedShownOverview: false,
+    isSongShownOverview: false,
+    isSongShownTips: false
+}
 
-    RENDER_DEFAULTS = {
-        didTheatreRender: false,
-        didSceneRender: false,
-        didLyricRender: false,
-        didCarouselRender: false
-    },
+/**
+ * Plus each individual player. Only the bit number is retrieved by the
+ * components. The individual players are just stored for dev clarity.
+ */
+export const PLAYERS_DEFAULTS = {
+    playersBitNumber: 0,
+    nextPlayerToRender: -1
+}
 
-    RENDERED_DEFAULTS = {
-        canLyricRender: false,
-        canCarouselRender: false,
-        renderedSongIndex: storedSongIndex,
-        renderedAnnotationIndex: storedAnnotationIndex,
-        renderedVerseIndex: storedVerseIndex,
-        isRenderedLogue: isStoredLogue
-    },
+export const RENDER_DEFAULTS = {
+    didTheatreRender: false,
+    didSceneRender: false,
+    didLyricRender: false,
+    didCarouselRender: false
+}
 
-    RESPONSIVE_DEFAULTS = {
-        isHeightlessLyric: false,
-        isUnrenderableCarouselNav: false,
-        isMobileWiki: false,
-        isScoresTipsInMain: false,
-        isTwoRowMenu: false,
-        showShrunkNavIcon: false,
-        showSingleNavBook: false,
-        isLyricExpandable: false,
-        isScoreShowable: true
-    },
+export const RESPONSIVE_DEFAULTS = {
+    isHeightlessLyric: false,
+    isUnrenderableCarouselNav: false,
+    isMobileWiki: false,
+    isScoresTipsInMain: false,
+    isTwoRowMenu: false,
+    showShrunkNavIcon: false,
+    showSingleNavBook: false,
+    isLyricExpandable: false,
+    isScoreShowable: true
+}
 
-    {
+const {
         cubes: sceneCubesKey,
         sky: {
             time: sceneTime = TIME_ANYTIME,
             season: sceneSeason = SEASON_INDOOR
         },
         layers: scenePresenceLayers
-
     } = getScene(
         storedSongIndex,
         storedSceneIndex
     ),
+    sceneCubes = getCubesForKey(sceneCubesKey)
 
-    sceneCubes = getCubesForKey(sceneCubesKey),
+export const SCENE_DEFAULTS = {
+    canSceneRender: false,
+    sceneCubesKey,
+    sceneTime,
+    sceneSeason,
+    sceneSongIndex: storedSongIndex,
+    sceneSceneIndex: storedSceneIndex,
 
-    SCENE_DEFAULTS = {
-        canSceneRender: false,
-        sceneCubesKey,
-        sceneTime,
-        sceneSeason,
-        sceneSongIndex: storedSongIndex,
-        sceneSceneIndex: storedSceneIndex,
+    /**
+     * Stored only for dev clarity. Components will retrieve these layers
+     * through indices to avoid unnecessary updates.
+     */
+    scenePresenceLayers,
+    sceneCubes
+}
 
-        /**
-         * Stored only for dev clarity. Components will retrieve these layers
-         * through indices to avoid unnecessary updates.
-         */
-        scenePresenceLayers,
-        sceneCubes
-    },
+export const SCROLL_CAROUSEL_DEFAULTS = {
+    queuedScrollCarouselLog: '',
+    queuedScrollCarouselIndex: 0,
+    queuedScrollCarouselFromRender: false
+}
 
-    SCROLL_CAROUSEL_DEFAULTS = {
-        queuedScrollCarouselLog: '',
-        queuedScrollCarouselIndex: 0,
-        queuedScrollCarouselFromRender: false
-    },
+export const SCROLL_LYRIC_DEFAULTS = {
+    queuedScrollLyricLog: '',
+    queuedScrollLyricByVerse: false,
+    queuedScrollLyricIndex: -1,
+    queuedScrollLyricAlways: false,
+    queuedScrollLyricFromRender: false,
+    queuedScrollLyricFromAutoScroll: false,
+    queuedSceneChangeCallback: false
+}
 
-    SCROLL_LYRIC_DEFAULTS = {
-        queuedScrollLyricLog: '',
-        queuedScrollLyricByVerse: false,
-        queuedScrollLyricIndex: -1,
-        queuedScrollLyricAlways: false,
-        queuedScrollLyricFromRender: false,
-        queuedScrollLyricFromAutoScroll: false,
-        queuedSceneChangeCallback: false
-    },
+export const SELECTED_DEFAULTS = {
+    [SELECTED_SONG_INDEX]: storedSongIndex,
+    [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
+    [SELECTED_VERSE_INDEX]: storedVerseIndex,
+    selectedSceneIndex: storedSceneIndex,
+    isSelectedLogue: isStoredLogue,
+    selectedTime: getStartTimeForVerseIndex(
+        storedSongIndex,
+        storedVerseIndex
+    ),
+    earColumnIndex: earColumnIndex || 0
+}
 
-    SELECTED_DEFAULTS = {
-        [SELECTED_SONG_INDEX]: storedSongIndex,
-        [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
-        [SELECTED_VERSE_INDEX]: storedVerseIndex,
-        selectedSceneIndex: storedSceneIndex,
-        isSelectedLogue: isStoredLogue,
-        selectedTime: getStartTimeForVerseIndex(
-            storedSongIndex,
-            storedVerseIndex
-        ),
-        earColumnIndex: earColumnIndex || 0
-    },
+export const SESSION_DEFAULTS = {
+    carouselAnnotationIndex: 0,
+    interactivatedVerseIndex: -1,
+    shownNavBookIndex: getBookForSongIndex(storedSongIndex),
+    selectedAudioOptionIndex:
+        getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
+    selectedWikiIndex: 0,
+    selectedWikiUrl: ''
+}
 
-    SESSION_DEFAULTS = {
-        carouselAnnotationIndex: 0,
-        interactivatedVerseIndex: -1,
-        shownNavBookIndex: getBookForSongIndex(storedSongIndex),
-        selectedAudioOptionIndex:
-            getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
-        selectedWikiIndex: 0,
-        selectedWikiUrl: ''
-    },
+export const SLIDER_DEFAULTS = {
+    isSliderMoving: false,
+    isSliderTouched: false,
+    sliderLeft: 0,
+    sliderWidth: 0,
+    sliderVerseIndex: -1,
+    sliderTime: 0
+}
 
-    SLIDER_DEFAULTS = {
-        isSliderMoving: false,
-        isSliderTouched: false,
-        sliderLeft: 0,
-        sliderWidth: 0,
-        sliderVerseIndex: -1,
-        sliderTime: 0
-    },
+export const TOGGLE_DEFAULTS = {
+    isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
+    isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
+    isAutoScroll: true,
+    isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
+    isDotsSlideShown: false,
+    isLyricExpanded: false,
+    isScoreShown: false,
+    isTitleShown: false
+}
 
-    TOGGLE_DEFAULTS = {
-        isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
-        isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
-        isAutoScroll: true,
-        isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
-        isDotsSlideShown: false,
-        isLyricExpanded: false,
-        isScoreShown: false,
-        isTitleShown: false
-    },
+export const TRANSIENT_DEFAULTS = {
+    isCarouselNavShowable: false,
+    isOverlayingAnnotation: false,
+    isOverlayShown: false,
+    isEarShown: false,
+    isPopupAnnotationVisible: false,
+    popupAnnotationIndex: storedAnnotationIndex,
+    toggleShowsOverviewImmediately: false,
+    toggleShowsTipsImmediately: false
+}
 
-    TRANSIENT_DEFAULTS = {
-        isCarouselNavShowable: false,
-        isOverlayingAnnotation: false,
-        isOverlayShown: false,
-        isEarShown: false,
-        isPopupAnnotationVisible: false,
-        popupAnnotationIndex: storedAnnotationIndex,
-        toggleShowsOverviewImmediately: false,
-        toggleShowsTipsImmediately: false
-    },
-
-    VERSE_BARS_DEFAULTS = {
-        isVerseBarAbove: false,
-        isVerseBarBelow: false,
-        queuedDetermineVerseBars: false,
-        queuedVerseBarsTimeout: 0
-    }
-
-export {
-    ACCESS_DEFAULTS,
-    ANNOTATION_DEFAULTS,
-    AUDIO_DEFAULTS,
-    CURTAIN_DEFAULTS,
-    DEVICE_DEFAULTS,
-    DOTS_DEFAULTS,
-    FOCUS_DEFAULTS,
-    LOAD_DEFAULTS,
-    OPTION_DEFAULTS,
-    PLAYERS_DEFAULTS,
-    RENDER_DEFAULTS,
-    RENDERED_DEFAULTS,
-    RESPONSIVE_DEFAULTS,
-    SCENE_DEFAULTS,
-    SCROLL_CAROUSEL_DEFAULTS,
-    SCROLL_LYRIC_DEFAULTS,
-    SESSION_DEFAULTS,
-    SLIDER_DEFAULTS,
-    SELECTED_DEFAULTS,
-    TOGGLE_DEFAULTS,
-    TRANSIENT_DEFAULTS,
-    VERSE_BARS_DEFAULTS,
-    CHANGE_DEFAULTS
+export const VERSE_BARS_DEFAULTS = {
+    isVerseBarAbove: false,
+    isVerseBarBelow: false,
+    queuedDetermineVerseBars: false,
+    queuedVerseBarsTimeout: 0
 }

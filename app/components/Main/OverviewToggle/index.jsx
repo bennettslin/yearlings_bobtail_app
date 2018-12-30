@@ -14,7 +14,7 @@ import { OVERVIEW_TOGGLE_KEY } from 'constants/access'
 import { OVERVIEW_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    renderedStore: { isRenderedLogue },
+    lyricStore: { isRenderedLogue },
     optionStore: { selectedOverviewOption }
 }) => ({
     isRenderedLogue,

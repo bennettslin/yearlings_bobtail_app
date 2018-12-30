@@ -18,16 +18,16 @@ import { getArrayOfLength } from 'helpers/general'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class Stanzas extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         setLyricAnnotationElement: PropTypes.func.isRequired,
@@ -50,14 +50,14 @@ class Stanzas extends PureComponent {
 
     render() {
         const {
-                renderedSongIndex,
+                lyricSongIndex,
                 setLyricAnnotationElement,
                 setVerseRef
             } = this.props,
 
-            songStanzasCount = getSongStanzasCount(renderedSongIndex),
+            songStanzasCount = getSongStanzasCount(lyricSongIndex),
             stanzaIndicesArray = getArrayOfLength(songStanzasCount),
-            lastUnitDotCardIndex = getLastUnitDotCardIndex(renderedSongIndex)
+            lastUnitDotCardIndex = getLastUnitDotCardIndex(lyricSongIndex)
 
         return songStanzasCount && (
             <div

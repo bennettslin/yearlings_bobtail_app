@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateLoadStore } from 'flux/load/action'
-import { updateRenderedStore } from 'flux/rendered/action'
+import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
 
 import {
@@ -25,7 +25,7 @@ class RenderDidListener extends PureComponent {
         didLyricRender: PropTypes.bool.isRequired,
         didCarouselRender: PropTypes.bool.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
-        updateRenderedStore: PropTypes.func.isRequired,
+        updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
     }
 
@@ -78,7 +78,7 @@ class RenderDidListener extends PureComponent {
     _renderAfterTheatre = () => {
         const nextKey = getNextKeyCanRender({ currentKey: CAN_THEATRE_RENDER })
         if (nextKey) {
-            this.props.updateRenderedStore({
+            this.props.updateLyricStore({
                 [nextKey]: true
             })
         }
@@ -94,7 +94,7 @@ class RenderDidListener extends PureComponent {
 
             const nextKey = getNextKeyCanRender({ currentKey: CAN_SCENE_RENDER })
             if (nextKey) {
-                this.props.updateRenderedStore({
+                this.props.updateLyricStore({
                     [nextKey]: true
                 })
             }
@@ -118,7 +118,7 @@ class RenderDidListener extends PureComponent {
                     [nextKey]: true
                 })
             } else if (nextKey) {
-                this.props.updateRenderedStore({
+                this.props.updateLyricStore({
                     [nextKey]: true
                 })
             }
@@ -142,7 +142,7 @@ class RenderDidListener extends PureComponent {
                     [nextKey]: true
                 })
             } else if (nextKey) {
-                this.props.updateRenderedStore({
+                this.props.updateLyricStore({
                     [nextKey]: true
                 })
             }
@@ -174,7 +174,7 @@ export default connect(
     mapStateToProps,
     {
         updateLoadStore,
-        updateRenderedStore,
+        updateLyricStore,
         updateSceneStore
     }
 )(RenderDidListener)

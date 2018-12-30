@@ -7,10 +7,10 @@ import AnnotationWormhole from './Wormhole'
 import { getCardWormholeLinksArray } from 'helpers/wormhole'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex },
+    lyricStore: { lyricSongIndex },
     accessStore: { accessedWikiWormholeIndex }
 }) => ({
-    renderedSongIndex,
+    lyricSongIndex,
     accessedWikiWormholeIndex
 })
 
@@ -18,7 +18,7 @@ class AnnotationWormholes extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -29,7 +29,7 @@ class AnnotationWormholes extends PureComponent {
 
     render() {
         const {
-                renderedSongIndex,
+                lyricSongIndex,
                 accessedWikiWormholeIndex,
                 isSelected,
                 annotationIndex,
@@ -37,7 +37,7 @@ class AnnotationWormholes extends PureComponent {
             } = this.props,
 
             wormholeLinksArray = getCardWormholeLinksArray({
-                songIndex: renderedSongIndex,
+                songIndex: lyricSongIndex,
                 annotationIndex,
                 cardIndex
             })

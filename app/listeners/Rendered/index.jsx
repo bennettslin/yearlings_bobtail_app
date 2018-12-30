@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateRenderedStore } from 'flux/rendered/action'
+import { updateLyricStore } from 'flux/lyric/action'
 
 import SongChangeDispatcher from '../../handlers/SongChange/Dispatcher'
 
@@ -16,7 +16,7 @@ class RenderedListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        updateRenderedStore: PropTypes.func.isRequired
+        updateLyricStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -44,10 +44,10 @@ class RenderedListener extends PureComponent {
             selectedAnnotationIndex
         } = this.props
 
-        this.props.updateRenderedStore({
-            renderedSongIndex: selectedSongIndex,
-            renderedVerseIndex: selectedVerseIndex,
-            renderedAnnotationIndex: selectedAnnotationIndex
+        this.props.updateLyricStore({
+            lyricSongIndex: selectedSongIndex,
+            lyricVerseIndex: selectedVerseIndex,
+            lyricAnnotationIndex: selectedAnnotationIndex
         })
     }
 
@@ -70,8 +70,8 @@ class RenderedListener extends PureComponent {
             selectedSongIndex === prevSongIndex &&
             selectedAnnotationIndex !== prevAnnotationIndex
         ) {
-            this.props.updateRenderedStore({
-                renderedAnnotationIndex: selectedAnnotationIndex
+            this.props.updateLyricStore({
+                lyricAnnotationIndex: selectedAnnotationIndex
             })
         }
     }
@@ -99,8 +99,8 @@ class RenderedListener extends PureComponent {
              * If selecting or changing verse in same song, change index to be
              * rendered right away.
              */
-            this.props.updateRenderedStore({
-                renderedVerseIndex: selectedVerseIndex
+            this.props.updateLyricStore({
+                lyricVerseIndex: selectedVerseIndex
             })
         }
     }
@@ -131,6 +131,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateRenderedStore
+        updateLyricStore
     }
 )(RenderedListener)

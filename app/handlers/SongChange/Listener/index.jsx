@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateRenderStore } from 'flux/render/action'
-import { updateRenderedStore } from 'flux/rendered/action'
+import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
 
 import {
@@ -19,7 +19,7 @@ class SongChangeListener extends PureComponent {
         // Through Redux.
         isSongBeingSelected: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
-        updateRenderedStore: PropTypes.func.isRequired,
+        updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
     }
 
@@ -44,7 +44,7 @@ class SongChangeListener extends PureComponent {
 
     _beginExitTransitions() {
         this.props.updateSceneStore({ canSceneRender: false })
-        this.props.updateRenderedStore({
+        this.props.updateLyricStore({
             canLyricRender: false,
             canCarouselRender: false
         })
@@ -65,7 +65,7 @@ class SongChangeListener extends PureComponent {
                 [nextKey]: true
             })
         } else {
-            this.props.updateRenderedStore({
+            this.props.updateLyricStore({
                 [nextKey]: true
             })
         }
@@ -86,7 +86,7 @@ export default connect(
     mapStateToProps,
     {
         updateRenderStore,
-        updateRenderedStore,
+        updateLyricStore,
         updateSceneStore
     }
 )(SongChangeListener)

@@ -14,9 +14,9 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { getAnnotationCard } from './helper'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 /*************
@@ -27,7 +27,7 @@ class AnnotationCard extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         inCarousel: PropTypes.bool,
@@ -38,7 +38,7 @@ class AnnotationCard extends PureComponent {
 
     render() {
         const {
-                renderedSongIndex,
+                lyricSongIndex,
                 annotationIndex,
                 inCarousel,
                 isSelected,
@@ -52,7 +52,7 @@ class AnnotationCard extends PureComponent {
                 isWormholeCard
 
             } = getAnnotationCard({
-                songIndex: renderedSongIndex,
+                songIndex: lyricSongIndex,
                 annotationIndex,
                 cardIndex
             }),

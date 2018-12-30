@@ -14,7 +14,7 @@ import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
     accessStore: { accessedAnnotationIndex },
-    renderedStore: { renderedAnnotationIndex },
+    lyricStore: { lyricAnnotationIndex },
     toggleStore: {
         isAccessOn,
         isCarouselShown,
@@ -26,7 +26,7 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     isAccessOn,
     isLyricExpanded,
-    renderedAnnotationIndex,
+    lyricAnnotationIndex,
     isCarouselShown,
     isDotsSlideShown,
     interactivatedVerseIndex
@@ -41,7 +41,7 @@ class UnitDot extends PureComponent {
     static propTypes = {
         // Through Redux.
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        renderedAnnotationIndex: PropTypes.number.isRequired,
+        lyricAnnotationIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
@@ -57,11 +57,11 @@ class UnitDot extends PureComponent {
     _handleDotButtonClick = () => {
         const {
                 unitDot,
-                renderedAnnotationIndex
+                lyricAnnotationIndex
             } = this.props,
             { annotationIndex } = unitDot,
 
-            isSelected = annotationIndex === renderedAnnotationIndex
+            isSelected = annotationIndex === lyricAnnotationIndex
 
         if (!isSelected) {
             this.props.updateAnnotationStore({
@@ -82,7 +82,7 @@ class UnitDot extends PureComponent {
         // FIXME: Ideal to get unitDot object from indices.
         const {
                 unitDot,
-                renderedAnnotationIndex,
+                lyricAnnotationIndex,
                 accessedAnnotationIndex,
                 isAccessOn,
                 isCarouselShown,
@@ -112,7 +112,7 @@ class UnitDot extends PureComponent {
                 annotationIndex === accessedAnnotationIndex,
 
             isSelected =
-                annotationIndex === renderedAnnotationIndex
+                annotationIndex === lyricAnnotationIndex
 
         return (
             <UnitDotView

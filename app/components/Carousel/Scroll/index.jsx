@@ -11,10 +11,10 @@ import { getAnnotationsCount } from 'album/api/annotations'
 import { getArrayOfLength } from 'helpers/general'
 
 const mapStateToProps = ({
-    renderedStore: { canCarouselRender },
-    renderedStore: {
-        renderedSongIndex,
-        renderedAnnotationIndex
+    lyricStore: { canCarouselRender },
+    lyricStore: {
+        lyricSongIndex,
+        lyricAnnotationIndex
     },
     toggleStore: {
         isAccessOn,
@@ -26,8 +26,8 @@ const mapStateToProps = ({
     sessionStore: { interactivatedVerseIndex }
 }) => ({
     canCarouselRender,
-    renderedSongIndex,
-    renderedAnnotationIndex,
+    lyricSongIndex,
+    lyricAnnotationIndex,
     isAccessOn,
     isLyricExpanded,
     accessedAnnotationIndex,
@@ -41,8 +41,8 @@ class CarouselScroll extends PureComponent {
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedAnnotationIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
+        lyricAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
@@ -62,8 +62,8 @@ class CarouselScroll extends PureComponent {
     render() {
         const {
             canCarouselRender,
-            renderedSongIndex,
-            renderedAnnotationIndex,
+            lyricSongIndex,
+            lyricAnnotationIndex,
             accessedAnnotationIndex,
             isAccessOn,
             isCarouselShown,
@@ -74,7 +74,7 @@ class CarouselScroll extends PureComponent {
             setCarouselAnnotationElement
         } = this.props
 
-        const annotationsCount = getAnnotationsCount(renderedSongIndex),
+        const annotationsCount = getAnnotationsCount(lyricSongIndex),
 
             /**
              * Dynamically create array of just indices. CarouselScroll
@@ -120,7 +120,7 @@ class CarouselScroll extends PureComponent {
                                 annotationIndex === accessedAnnotationIndex,
 
                             isSelected =
-                                annotationIndex === renderedAnnotationIndex
+                                annotationIndex === lyricAnnotationIndex
 
                         return (
                             <CarouselAnnotation

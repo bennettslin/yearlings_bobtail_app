@@ -16,9 +16,9 @@ import { populateRefs } from 'helpers/ref'
 import { VERSE_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 /*************
@@ -33,7 +33,7 @@ class Verse extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseObject: PropTypes.object.isRequired,
@@ -77,7 +77,7 @@ class Verse extends PureComponent {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                renderedSongIndex,
+                lyricSongIndex,
                 setVerseRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */

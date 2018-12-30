@@ -9,14 +9,14 @@ import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 const propTypes = {
     // Through Redux.
-    renderedSongIndex: PropTypes.number.isRequired,
+    lyricSongIndex: PropTypes.number.isRequired,
 
     // From parents.
     stanzaIndex: PropTypes.number.isRequired,
@@ -24,14 +24,14 @@ const propTypes = {
 }
 
 const SliderVerses = memo(({
-    renderedSongIndex,
+    lyricSongIndex,
     stanzaIndex,
     stanzaDuration
 }) => {
 
     const
         { stanzaVerseConfigs } = getStanzaConfig(
-            renderedSongIndex,
+            lyricSongIndex,
             stanzaIndex
         ),
         stanzaFirstVerseIndex = stanzaVerseConfigs[0].verseIndex,

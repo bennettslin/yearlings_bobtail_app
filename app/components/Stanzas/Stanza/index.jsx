@@ -13,14 +13,14 @@ import { getStanzaConfig } from 'album/api/stanzas'
 import Unit from '../Unit'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 const propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         stanzaIndex: PropTypes.number.isRequired,
@@ -28,7 +28,7 @@ const propTypes = {
     },
 
     Stanza = memo(({
-        renderedSongIndex,
+        lyricSongIndex,
         stanzaIndex,
         logicSelectors,
 
@@ -37,7 +37,7 @@ const propTypes = {
 
         const
             { stanzaUnitIndices } = getStanzaConfig(
-                renderedSongIndex,
+                lyricSongIndex,
                 stanzaIndex
             )
 

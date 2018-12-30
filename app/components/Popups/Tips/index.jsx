@@ -9,7 +9,7 @@ import Popup from '../../Popup'
 import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
-    renderedStore: {
+    lyricStore: {
         canCarouselRender,
         isRenderedLogue
     },

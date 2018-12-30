@@ -16,8 +16,8 @@ class PlayerListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         playersBitNumber: PropTypes.number.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedVerseIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
+        lyricVerseIndex: PropTypes.number.isRequired,
         queuedPlayFromLogue: PropTypes.bool.isRequired,
         queuedPlaySongIndex: PropTypes.number.isRequired,
         queuedPlayVerseIndex: PropTypes.number.isRequired,
@@ -39,16 +39,16 @@ class PlayerListener extends PureComponent {
 
     _checkPlayerChange() {
         const {
-            renderedSongIndex,
-            renderedVerseIndex,
+            lyricSongIndex,
+            lyricVerseIndex,
             queuedPlayFromLogue,
             queuedPlaySongIndex,
             queuedPlayVerseIndex
         } = this.props
 
         if (
-            renderedSongIndex === queuedPlaySongIndex &&
-            renderedVerseIndex === queuedPlayVerseIndex
+            lyricSongIndex === queuedPlaySongIndex &&
+            lyricVerseIndex === queuedPlayVerseIndex
         ) {
             /**
              * Wait for song to render, in case the user is cycling through
@@ -101,9 +101,9 @@ const mapStateToProps = ({
         selectedSongIndex,
         isSelectedLogue
     },
-    renderedStore: {
-        renderedSongIndex,
-        renderedVerseIndex
+    lyricStore: {
+        lyricSongIndex,
+        lyricVerseIndex
     },
     audioStore: {
         queuedPlayFromLogue,
@@ -114,8 +114,8 @@ const mapStateToProps = ({
     playersBitNumber,
     selectedSongIndex,
     isSelectedLogue,
-    renderedSongIndex,
-    renderedVerseIndex,
+    lyricSongIndex,
+    lyricVerseIndex,
     queuedPlayFromLogue,
     queuedPlaySongIndex,
     queuedPlayVerseIndex

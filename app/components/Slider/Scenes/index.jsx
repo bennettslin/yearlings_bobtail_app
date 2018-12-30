@@ -9,22 +9,22 @@ import { getSongSceneConfigs } from 'album/api/scenes'
 import { getSongTotalTime } from 'album/api/time'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class SliderScenes extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired
+        lyricSongIndex: PropTypes.number.isRequired
     }
 
     render() {
-        const { renderedSongIndex } = this.props,
-            totalTime = getSongTotalTime(renderedSongIndex),
-            songSceneConfigs = getSongSceneConfigs(renderedSongIndex)
+        const { lyricSongIndex } = this.props,
+            totalTime = getSongTotalTime(lyricSongIndex),
+            songSceneConfigs = getSongSceneConfigs(lyricSongIndex)
 
         return (
             <div className="SliderScenes">

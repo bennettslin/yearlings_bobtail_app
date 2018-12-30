@@ -14,9 +14,9 @@ import { getVerse } from 'album/api/verses'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    renderedStore: {
-        renderedSongIndex,
-        renderedVerseIndex
+    lyricStore: {
+        lyricSongIndex,
+        lyricVerseIndex
     },
     sliderStore: { sliderVerseIndex },
     verseBarsStore: {
@@ -24,8 +24,8 @@ const mapStateToProps = ({
         isVerseBarBelow
     }
 }) => ({
-    renderedSongIndex,
-    renderedVerseIndex,
+    lyricSongIndex,
+    lyricVerseIndex,
     sliderVerseIndex,
     isVerseBarAbove,
     isVerseBarBelow
@@ -39,8 +39,8 @@ class VerseBar extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedVerseIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
+        lyricVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
@@ -75,8 +75,8 @@ class VerseBar extends PureComponent {
 
         const {
                 isAbove,
-                renderedSongIndex,
-                renderedVerseIndex,
+                lyricSongIndex,
+                lyricVerseIndex,
                 sliderVerseIndex,
 
                 handleVerseBarWheel
@@ -84,9 +84,9 @@ class VerseBar extends PureComponent {
 
             verseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex :
-                renderedVerseIndex,
+                lyricVerseIndex,
 
-            verseObject = getVerse(renderedSongIndex, verseIndex),
+            verseObject = getVerse(lyricSongIndex, verseIndex),
 
             isShown = this.getIsShown()
 

@@ -11,16 +11,16 @@ import SliderVerses from './Verses'
 import { LS_OVERLAP_MARGIN_X_SLIDER } from 'constants/responsive'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class SliderStanza extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parents.
         stanzaIndex: PropTypes.number.isRequired,
@@ -30,7 +30,7 @@ class SliderStanza extends PureComponent {
 
     render() {
         const {
-                renderedSongIndex,
+                lyricSongIndex,
                 stanzaIndex,
                 logicSelectors,
                 isLastStanza
@@ -40,13 +40,13 @@ class SliderStanza extends PureComponent {
                 stanzaEndTime,
                 stanzaType
             } = getStanzaConfig(
-                renderedSongIndex,
+                lyricSongIndex,
                 stanzaIndex
             ),
 
             { verseStartTime: stanzaStartTime } = stanzaVerseConfigs[0],
 
-            songTotalTime = getSongTotalTime(renderedSongIndex),
+            songTotalTime = getSongTotalTime(lyricSongIndex),
 
             /**
              * Width of stanza is exactly proportionate to its duration within

@@ -28,7 +28,7 @@ class RemainderWrapper extends PureComponent {
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        renderedAnnotationIndex: PropTypes.number.isRequired,
+        lyricAnnotationIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
@@ -51,7 +51,7 @@ class RemainderWrapper extends PureComponent {
                 accessedKey,
                 didLyricRender,
                 isAccessOn,
-                renderedAnnotationIndex,
+                lyricAnnotationIndex,
                 isRenderedLogue,
                 isCarouselShown,
                 dotsBitNumber,
@@ -103,7 +103,7 @@ class RemainderWrapper extends PureComponent {
                         isRenderedLogue ? 'RM__logue' : 'RM__song',
                         isPlaying ? 'RM__isPlaying' : 'RM__isPaused',
 
-                        renderedAnnotationIndex ?
+                        lyricAnnotationIndex ?
                             'RM__annotationShown' : 'RM__annotationHidden',
                         { 'RM__carouselExpanded': isCarouselShown },
                         isDotsSlideShown ? 'RM__dotsShown' : 'RM__dotsHidden',
@@ -174,8 +174,8 @@ const mapStateToProps = ({
         isEarShown
     },
     renderStore: { didLyricRender },
-    renderedStore: {
-        renderedAnnotationIndex,
+    lyricStore: {
+        lyricAnnotationIndex,
         isRenderedLogue
     },
     sliderStore: {
@@ -209,7 +209,7 @@ const mapStateToProps = ({
     isEarShown,
     isPlaying,
     didLyricRender,
-    renderedAnnotationIndex,
+    lyricAnnotationIndex,
     isRenderedLogue,
     isSliderTouched,
     isSliderMoving,

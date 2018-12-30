@@ -15,10 +15,10 @@ import { IS_UNIT_DOT } from 'constants/lyrics'
 import { getAnnotationTitleData } from './helper'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex },
+    lyricStore: { lyricSongIndex },
     dotsStore: { dotsBitNumber }
 }) => ({
-    renderedSongIndex,
+    lyricSongIndex,
     dotsBitNumber
 })
 
@@ -30,7 +30,7 @@ class AnnotationTitle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         updateAnnotationStore: PropTypes.func.isRequired,
 
@@ -57,7 +57,7 @@ class AnnotationTitle extends PureComponent {
                 isShadow,
                 isAccessed,
                 isSelected,
-                renderedSongIndex,
+                lyricSongIndex,
                 annotationIndex,
                 dotsBitNumber
             } = this.props,
@@ -70,7 +70,7 @@ class AnnotationTitle extends PureComponent {
                 accessibleWikiWormholesLength
 
             } = getAnnotationTitleData({
-                songIndex: renderedSongIndex,
+                songIndex: lyricSongIndex,
                 annotationIndex,
                 selectedDotKeys
             }),

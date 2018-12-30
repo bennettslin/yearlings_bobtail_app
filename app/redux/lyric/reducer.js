@@ -1,13 +1,13 @@
-// Reducers for rendered state.
-import { RENDERED_STORE } from '../storeKeys'
-import { RENDERED_DEFAULTS } from '../defaultStates'
+// Reducers for lyric and carousel state.
+import { LYRIC_STORE } from '../storeKeys'
+import { LYRIC_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = RENDERED_DEFAULTS,
+    state = LYRIC_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case RENDERED_STORE:
+        case LYRIC_STORE:
             return {
                 ...state,
                 ...action.payload

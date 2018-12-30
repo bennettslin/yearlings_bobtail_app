@@ -7,9 +7,9 @@ import cx from 'classnames'
 import Texts from '../../../Texts'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class VerseLine extends PureComponent {
@@ -21,7 +21,7 @@ class VerseLine extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         text: PropTypes.oneOfType([
@@ -41,7 +41,7 @@ class VerseLine extends PureComponent {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
-                renderedSongIndex,
+                lyricSongIndex,
                 verseIndex,
                 dispatch,
                 /* eslint-enable no-unused-vars */

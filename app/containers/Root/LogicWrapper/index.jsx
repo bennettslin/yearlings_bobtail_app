@@ -22,8 +22,8 @@ class LogicWrapper extends PureComponent {
         isPlaying: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedVerseIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
+        lyricVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
 
@@ -36,8 +36,8 @@ class LogicWrapper extends PureComponent {
                 dotsBitNumber,
                 isPlaying,
                 isSliderMoving,
-                renderedSongIndex,
-                renderedVerseIndex,
+                lyricSongIndex,
+                lyricVerseIndex,
                 sliderVerseIndex,
                 interactivatedVerseIndex,
                 isVerseBarAbove,
@@ -55,10 +55,10 @@ class LogicWrapper extends PureComponent {
              */
             cursorVerseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex :
-                renderedVerseIndex,
+                lyricVerseIndex,
 
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
-                renderedSongIndex, cursorVerseIndex
+                lyricSongIndex, cursorVerseIndex
             )
 
         return (
@@ -80,11 +80,11 @@ class LogicWrapper extends PureComponent {
                             // "Root slider verse index."
                             `RsV${sliderVerseIndex}` :
                             // "Root default verse index."
-                            `RdV${renderedVerseIndex}`,
+                            `RdV${lyricVerseIndex}`,
 
                         isPlaying &&
                             // "Root playing verse index."
-                            `RpV${renderedVerseIndex}`,
+                            `RpV${lyricVerseIndex}`,
 
                         interactivatedVerseIndex < 0 &&
                             // "Root non-interactivated verse index."
@@ -110,9 +110,9 @@ const mapStateToProps = ({
         isVerseBarAbove,
         isVerseBarBelow
     },
-    renderedStore: {
-        renderedSongIndex,
-        renderedVerseIndex
+    lyricStore: {
+        lyricSongIndex,
+        lyricVerseIndex
     },
     sliderStore: {
         isSliderMoving,
@@ -122,8 +122,8 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     dotsBitNumber,
     isPlaying,
-    renderedSongIndex,
-    renderedVerseIndex,
+    lyricSongIndex,
+    lyricVerseIndex,
     isSliderMoving,
     sliderVerseIndex,
     isVerseBarAbove,

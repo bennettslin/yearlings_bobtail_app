@@ -8,21 +8,21 @@ import cx from 'classnames'
 import { getVerseDurationForVerseIndex } from './helper'
 
 const mapStateToProps = ({
-    renderedStore: {
-        renderedSongIndex,
-        renderedVerseIndex
+    lyricStore: {
+        lyricSongIndex,
+        lyricVerseIndex
     }
 }) => ({
-    renderedSongIndex,
-    renderedVerseIndex
+    lyricSongIndex,
+    lyricVerseIndex
 })
 
 class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedVerseIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
+        lyricVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
@@ -44,7 +44,7 @@ class VerseTracker extends Component {
             this.props.isHiddenInVerseBar !== nextProps.isHiddenInVerseBar ||
 
             // ... song changed...
-            this.props.renderedSongIndex !== nextProps.renderedSongIndex ||
+            this.props.lyricSongIndex !== nextProps.lyricSongIndex ||
 
             // ... or verse was selected or unselected.
             isSelected !== willBeSelected
@@ -54,12 +54,12 @@ class VerseTracker extends Component {
     getIsSelectedVerse(props) {
         const {
                 verseIndex,
-                renderedVerseIndex,
+                lyricVerseIndex,
                 isHiddenInVerseBar
             } = props,
 
             isSelected =
-                verseIndex === renderedVerseIndex &&
+                verseIndex === lyricVerseIndex &&
                 !isHiddenInVerseBar
 
         return isSelected
@@ -67,7 +67,7 @@ class VerseTracker extends Component {
 
     render() {
         const {
-                renderedSongIndex,
+                lyricSongIndex,
 
                 verseIndex,
                 inUnit,
@@ -80,7 +80,7 @@ class VerseTracker extends Component {
             isSelected = this.getIsSelectedVerse(this.props),
 
             verseDuration = getVerseDurationForVerseIndex(
-                renderedSongIndex,
+                lyricSongIndex,
                 verseIndex
             ),
 

@@ -10,7 +10,7 @@ import {
 } from 'constants/access'
 
 const mapStateToProps = ({
-    renderedStore: { isRenderedLogue }
+    lyricStore: { isRenderedLogue }
 }) => ({
     isRenderedLogue
 })

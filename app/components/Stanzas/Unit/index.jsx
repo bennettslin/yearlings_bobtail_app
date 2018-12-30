@@ -18,9 +18,9 @@ import { getUnit } from 'album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 /*************
@@ -31,7 +31,7 @@ class Unit extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         unitIndex: PropTypes.number.isRequired
@@ -43,7 +43,7 @@ class Unit extends PureComponent {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                renderedSongIndex,
+                lyricSongIndex,
                 unitIndex,
                 ...other
             } = this.props,
@@ -52,7 +52,7 @@ class Unit extends PureComponent {
                 setLyricAnnotationElement
             } = other,
 
-            unit = getUnit(renderedSongIndex, unitIndex),
+            unit = getUnit(lyricSongIndex, unitIndex),
             {
                 mainVerses,
                 unitMap

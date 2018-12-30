@@ -16,7 +16,7 @@ import {
 } from 'constants/access'
 
 const mapStateToProps = ({
-    renderedStore: { renderedAnnotationIndex },
+    lyricStore: { lyricAnnotationIndex },
     toggleStore: {
         isCarouselShown,
         isDotsSlideShown,
@@ -25,7 +25,7 @@ const mapStateToProps = ({
     dotsStore: { dotsBitNumber }
 }) => ({
     isLyricExpanded,
-    renderedAnnotationIndex,
+    lyricAnnotationIndex,
     isCarouselShown,
     isDotsSlideShown,
     dotsBitNumber
@@ -36,7 +36,7 @@ class LyricAccess extends PureComponent {
     static propTypes = {
 
         // From Redux.
-        renderedAnnotationIndex: PropTypes.number.isRequired,
+        lyricAnnotationIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -47,7 +47,7 @@ class LyricAccess extends PureComponent {
 
         const {
                 isLyricExpanded,
-                renderedAnnotationIndex,
+                lyricAnnotationIndex,
                 isCarouselShown,
                 isDotsSlideShown,
                 dotsBitNumber
@@ -65,7 +65,7 @@ class LyricAccess extends PureComponent {
                  * Must have at least one selected dot, and no selected
                  * annotation.
                  */
-                hasSelectedDots && !renderedAnnotationIndex && (
+                hasSelectedDots && !lyricAnnotationIndex && (
                     (
                         // Must show carousel and not have dots section open...
                         isCarouselShown &&
@@ -79,7 +79,7 @@ class LyricAccess extends PureComponent {
 
             showUpDown = Boolean(
                 !isDotsSlideShown &&
-                !renderedAnnotationIndex
+                !lyricAnnotationIndex
             )
 
         return (

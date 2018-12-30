@@ -11,12 +11,12 @@ import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
     deviceStore: { isPhone },
-    renderedStore: { canCarouselRender },
+    lyricStore: { canCarouselRender },
     optionStore: {
         selectedOverviewOption,
         selectedTipsOption
     },
-    renderedStore: { isRenderedLogue }
+    lyricStore: { isRenderedLogue }
 }) => ({
     isPhone,
     canCarouselRender,

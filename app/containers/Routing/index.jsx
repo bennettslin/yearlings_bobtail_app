@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateRenderedStore } from 'flux/rendered/action'
+import { updateLyricStore } from 'flux/lyric/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateTransientStore } from 'flux/transient/action'
@@ -23,7 +23,7 @@ class RoutingContainer extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
-        updateRenderedStore: PropTypes.func.isRequired,
+        updateLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateTransientStore: PropTypes.func.isRequired,
 
@@ -77,10 +77,10 @@ class RoutingContainer extends PureComponent {
                 )
             })
 
-            this.props.updateRenderedStore({
-                renderedSongIndex: routingSongIndex,
-                renderedVerseIndex: routingVerseIndex,
-                renderedAnnotationIndex: routingAnnotationIndex
+            this.props.updateLyricStore({
+                lyricSongIndex: routingSongIndex,
+                lyricVerseIndex: routingVerseIndex,
+                lyricAnnotationIndex: routingAnnotationIndex
             })
 
             this.props.updateTransientStore({
@@ -160,7 +160,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateRenderedStore,
+        updateLyricStore,
         updateSelectedStore,
         updateSessionStore,
         updateTransientStore

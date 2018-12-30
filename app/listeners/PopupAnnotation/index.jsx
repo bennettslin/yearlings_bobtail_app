@@ -6,9 +6,9 @@ import { connect } from 'react-redux'
 import { updateTransientStore } from 'flux/transient/action'
 
 const mapStateToProps = ({
-    renderedStore: {
+    lyricStore: {
         canCarouselRender,
-        renderedAnnotationIndex
+        lyricAnnotationIndex
     },
     toggleStore: {
         isCarouselShown,
@@ -23,7 +23,7 @@ const mapStateToProps = ({
     isTitleShown,
     isOverlayingAnnotation,
     canCarouselRender,
-    renderedAnnotationIndex,
+    lyricAnnotationIndex,
     selectedWikiIndex
 })
 
@@ -32,7 +32,7 @@ class PopupAnnotationListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
-        renderedAnnotationIndex: PropTypes.number.isRequired,
+        lyricAnnotationIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
@@ -49,7 +49,7 @@ class PopupAnnotationListener extends PureComponent {
     _handlePopupAnnotationVisible() {
         const {
                 canCarouselRender,
-                renderedAnnotationIndex,
+                lyricAnnotationIndex,
                 isCarouselShown,
                 isOverlayingAnnotation,
                 isScoreShown,
@@ -59,7 +59,7 @@ class PopupAnnotationListener extends PureComponent {
 
             isPopupAnnotationVisible =
                 canCarouselRender &&
-                Boolean(renderedAnnotationIndex) &&
+                Boolean(lyricAnnotationIndex) &&
 
                 /**
                  * If an annotation is selected, always show in popup if
@@ -82,17 +82,17 @@ class PopupAnnotationListener extends PureComponent {
          * This persists the popup annotation while it is fading out.
          */
         const {
-            renderedAnnotationIndex,
+            lyricAnnotationIndex,
             isCarouselShown
         } = this.props
 
         if (
             // If there is a selected annotation...
-            renderedAnnotationIndex &&
+            lyricAnnotationIndex &&
             (
                 // ... and annotation index has changed...
-                renderedAnnotationIndex !==
-                prevProps.renderedAnnotationIndex
+                lyricAnnotationIndex !==
+                prevProps.lyricAnnotationIndex
             ) || (
                 // ... or toggling from carousel to popup...
                 !isCarouselShown &&
@@ -101,7 +101,7 @@ class PopupAnnotationListener extends PureComponent {
         ) {
             // ... then persist the popup annotation index.
             this.props.updateTransientStore({
-                popupAnnotationIndex: renderedAnnotationIndex
+                popupAnnotationIndex: lyricAnnotationIndex
             })
         }
     }

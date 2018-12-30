@@ -15,9 +15,9 @@ import { populateRefs } from 'helpers/ref'
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
-    renderedStore: {
-        renderedSongIndex,
-        renderedAnnotationIndex
+    lyricStore: {
+        lyricSongIndex,
+        lyricAnnotationIndex
     },
     toggleStore: {
         isAccessOn,
@@ -31,10 +31,10 @@ const mapStateToProps = ({
     },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
-    renderedAnnotationIndex,
+    lyricAnnotationIndex,
 
     // This is just to know when to update.
-    renderedSongIndex,
+    lyricSongIndex,
 
     isLyricExpanded,
     accessedAnnotationIndex,
@@ -49,8 +49,8 @@ class TextLyricAnchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedAnnotationIndex: PropTypes.number.isRequired,
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricAnnotationIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
 
@@ -83,13 +83,13 @@ class TextLyricAnchor extends PureComponent {
 
     _handleAnchorClick = () => {
         const {
-                renderedAnnotationIndex,
+                lyricAnnotationIndex,
                 annotationIndex,
                 wikiIndex,
                 wikiAnnotationIndex
             } = this.props,
 
-            isSelected = annotationIndex === renderedAnnotationIndex
+            isSelected = annotationIndex === lyricAnnotationIndex
 
         if (!isSelected) {
 
@@ -128,7 +128,7 @@ class TextLyricAnchor extends PureComponent {
 
         const {
                 /* eslint-disable no-unused-vars */
-                renderedSongIndex,
+                lyricSongIndex,
                 handleAnchorClick,
                 setLyricAnnotationElement,
                 updateAnnotationStore,
@@ -136,7 +136,7 @@ class TextLyricAnchor extends PureComponent {
                 /* eslint-enable no-unused-vars */
 
                 annotationIndex,
-                renderedAnnotationIndex,
+                lyricAnnotationIndex,
                 accessedAnnotationIndex,
                 accessedWikiWormholeIndex,
 
@@ -155,7 +155,7 @@ class TextLyricAnchor extends PureComponent {
                 ...other
             } = this.props,
 
-            isSelected = annotationIndex === renderedAnnotationIndex,
+            isSelected = annotationIndex === lyricAnnotationIndex,
 
             isWikiTextAnchor = Boolean(wikiIndex)
 
@@ -185,10 +185,10 @@ class TextLyricAnchor extends PureComponent {
          * out for good.
          */
         if (isAccessed) {
-            if (renderedAnnotationIndex) {
+            if (lyricAnnotationIndex) {
                 isAccessed =
                     // Check that we're in the annotation that's selected.
-                    renderedAnnotationIndex === wikiAnnotationIndex &&
+                    lyricAnnotationIndex === wikiAnnotationIndex &&
 
                     accessedWikiWormholeIndex === wikiIndex
 

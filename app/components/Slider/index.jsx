@@ -15,7 +15,7 @@ import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     loadStore: { appMounted },
-    renderedStore: { canLyricRender }
+    lyricStore: { canLyricRender }
 }) => ({
     appMounted,
     canLyricRender

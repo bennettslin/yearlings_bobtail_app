@@ -21,7 +21,7 @@ class MainListener extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
-        renderedAnnotationIndex: PropTypes.number.isRequired,
+        lyricAnnotationIndex: PropTypes.number.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
@@ -39,7 +39,7 @@ class MainListener extends PureComponent {
             deviceIndex,
             isDotsSlideShown,
             isLyricExpanded,
-            renderedAnnotationIndex,
+            lyricAnnotationIndex,
             isRenderedLogue,
             isScoreShown,
             isTitleShown,
@@ -57,7 +57,7 @@ class MainListener extends PureComponent {
             isOverlayShown = getIsOverlayShown({
                 deviceIndex,
                 isLyricExpanded,
-                renderedAnnotationIndex,
+                lyricAnnotationIndex,
                 isScoreShown,
                 isTitleShown,
                 selectedWikiIndex
@@ -76,7 +76,7 @@ class MainListener extends PureComponent {
 
 
             initialToggleConditions =
-                Boolean(renderedAnnotationIndex) ||
+                Boolean(lyricAnnotationIndex) ||
                 isDotsSlideShown ||
                 isOverlayShown ||
                 isLyricExpanded ||
@@ -112,8 +112,8 @@ const mapStateToProps = ({
         isScoreShown,
         isTitleShown
     },
-    renderedStore: {
-        renderedAnnotationIndex,
+    lyricStore: {
+        lyricAnnotationIndex,
         isRenderedLogue
     },
     sessionStore: {
@@ -130,7 +130,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     isScoreShown,
     isTitleShown,
-    renderedAnnotationIndex,
+    lyricAnnotationIndex,
     isRenderedLogue,
     interactivatedVerseIndex,
     selectedOverviewOption,

@@ -12,22 +12,22 @@ import { getSongStanzasCount } from 'album/api/stanzas'
 import { getArrayOfLength } from '../../../helpers/general'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    renderedSongIndex
+    lyricSongIndex
 })
 
 class SliderStanzas extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired
+        lyricSongIndex: PropTypes.number.isRequired
     }
 
     render() {
         const
-            { renderedSongIndex } = this.props,
-            songStanzasCount = getSongStanzasCount(renderedSongIndex),
+            { lyricSongIndex } = this.props,
+            songStanzasCount = getSongStanzasCount(lyricSongIndex),
             stanzaIndicesArray = getArrayOfLength(songStanzasCount)
 
         return (

@@ -11,10 +11,10 @@ import { getSongTotalTime } from 'album/api/time'
 import { getFormattedTime } from 'helpers/format'
 
 const mapStateToProps = ({
-    renderedStore: { renderedSongIndex },
+    lyricStore: { lyricSongIndex },
     sliderStore: { sliderTime }
 }) => ({
-    renderedSongIndex,
+    lyricSongIndex,
     sliderTime
 })
 
@@ -22,18 +22,18 @@ class SliderTimes extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
         sliderTime: PropTypes.number.isRequired
     }
 
     render() {
 
         const {
-                renderedSongIndex,
+                lyricSongIndex,
                 sliderTime: spentTime
             } = this.props,
 
-            remainTime = getSongTotalTime(renderedSongIndex) - spentTime
+            remainTime = getSongTotalTime(lyricSongIndex) - spentTime
 
         return (
             <div className={cx(
