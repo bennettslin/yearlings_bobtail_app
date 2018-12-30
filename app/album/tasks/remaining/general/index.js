@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Nav button icon size is weird.`,
         workedHours: 0,
         neededHours: 3
@@ -17,7 +12,7 @@ export default [
     {
         taskName: `Transitions work.`,
         workedHours: 20,
-        neededHours: 30
+        neededHours: 40
     },
     {
         taskName: `Add title to lyric column in desktop.`,

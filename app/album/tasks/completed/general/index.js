@@ -4286,5 +4286,10 @@ export default [
         taskName: `Fix box shadow on slider stanza tabs.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -120,8 +120,6 @@ class VerseBar extends PureComponent {
                     )}
                 >
                     <Transition
-                        unmountOnExit
-                        mountOnEnter
                         {...{
                             in: isShown,
                             timeout: 200
