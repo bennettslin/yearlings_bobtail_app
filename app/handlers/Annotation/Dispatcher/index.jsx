@@ -128,10 +128,10 @@ const mapStateToProps = ({
     transientStore: { isEarShown },
     selectedStore: {
         selectedSongIndex,
-        selectedAnnotationIndex
+        selectedAnnotationIndex,
+        earColumnIndex
     },
-    dotsStore: { dotsBitNumber },
-    selectedStore: { earColumnIndex }
+    dotsStore: { dotsBitNumber }
 }) => ({
     isEarShown,
     selectedSongIndex,

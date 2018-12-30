@@ -16,7 +16,6 @@ class RenderedListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        selectedSceneIndex: PropTypes.number.isRequired,
         updateRenderedStore: PropTypes.func.isRequired
     }
 
@@ -42,15 +41,13 @@ class RenderedListener extends PureComponent {
         const {
             selectedSongIndex,
             selectedVerseIndex,
-            selectedAnnotationIndex,
-            selectedSceneIndex
+            selectedAnnotationIndex
         } = this.props
 
         this.props.updateRenderedStore({
             renderedSongIndex: selectedSongIndex,
             renderedVerseIndex: selectedVerseIndex,
-            renderedAnnotationIndex: selectedAnnotationIndex,
-            renderedSceneIndex: selectedSceneIndex
+            renderedAnnotationIndex: selectedAnnotationIndex
         })
     }
 
@@ -102,11 +99,8 @@ class RenderedListener extends PureComponent {
              * If selecting or changing verse in same song, change index to be
              * rendered right away.
              */
-            const { selectedSceneIndex } = this.props
-
             this.props.updateRenderedStore({
-                renderedVerseIndex: selectedVerseIndex,
-                renderedSceneIndex: selectedSceneIndex
+                renderedVerseIndex: selectedVerseIndex
             })
         }
     }
@@ -126,14 +120,12 @@ const mapStateToProps = ({
     selectedStore: {
         selectedSongIndex,
         selectedVerseIndex,
-        selectedAnnotationIndex,
-        selectedSceneIndex
+        selectedAnnotationIndex
     }
 }) => ({
     selectedSongIndex,
     selectedVerseIndex,
-    selectedAnnotationIndex,
-    selectedSceneIndex
+    selectedAnnotationIndex
 })
 
 export default connect(

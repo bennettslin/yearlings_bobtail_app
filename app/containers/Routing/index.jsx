@@ -80,8 +80,7 @@ class RoutingContainer extends PureComponent {
             this.props.updateRenderedStore({
                 renderedSongIndex: routingSongIndex,
                 renderedVerseIndex: routingVerseIndex,
-                renderedAnnotationIndex: routingAnnotationIndex,
-                renderedSceneIndex: routingSceneIndex
+                renderedAnnotationIndex: routingAnnotationIndex
             })
 
             this.props.updateTransientStore({

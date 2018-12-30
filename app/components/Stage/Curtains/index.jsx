@@ -7,10 +7,10 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = ({
     loadStore: { appMounted },
-    renderableStore: { isSongChangeRenderable }
+    changeStore: { isSongBeingSelected }
 }) => ({
     appMounted,
-    isSongChangeRenderable
+    isSongBeingSelected
 })
 
 class Curtains extends PureComponent {
@@ -18,13 +18,13 @@ class Curtains extends PureComponent {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        isSongChangeRenderable: PropTypes.bool.isRequired
+        isSongBeingSelected: PropTypes.bool.isRequired
     }
 
     render() {
         const {
             appMounted,
-            isSongChangeRenderable
+            isSongBeingSelected
         } = this.props
 
         return (
@@ -34,7 +34,7 @@ class Curtains extends PureComponent {
                         'Curtains',
                         {
                             'Curtains__parted':
-                                isSongChangeRenderable && appMounted
+                                !isSongBeingSelected && appMounted
                         },
                         'abF'
                     )

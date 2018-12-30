@@ -25,10 +25,10 @@ class LogManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        renderedSongIndex: PropTypes.number.isRequired,
-        renderedVerseIndex: PropTypes.number.isRequired,
-        renderedAnnotationIndex: PropTypes.number.isRequired,
-        renderedSceneIndex: PropTypes.number.isRequired
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+        selectedSceneIndex: PropTypes.number.isRequired
     }
 
     componentDidMount() {
@@ -63,30 +63,30 @@ class LogManager extends PureComponent {
 
     logAnnotation = () => {
         const {
-                renderedSongIndex,
-                renderedAnnotationIndex
+                selectedSongIndex,
+                selectedAnnotationIndex
             } = this.props,
 
-            renderedAnnotationObject = getAnnotation(
-                renderedSongIndex,
-                renderedAnnotationIndex
+            selectedAnnotationObject = getAnnotation(
+                selectedSongIndex,
+                selectedAnnotationIndex
             )
 
-        return this._logObject('rendered annotation', renderedAnnotationObject)
+        return this._logObject('selected annotation', selectedAnnotationObject)
     }
 
     logVerse = () => {
         const {
-                renderedSongIndex,
-                renderedVerseIndex
+                selectedSongIndex,
+                selectedVerseIndex
             } = this.props,
 
-            renderedVerse = getVerse(
-                renderedSongIndex,
-                renderedVerseIndex
+            selectedVerse = getVerse(
+                selectedSongIndex,
+                selectedVerseIndex
             )
 
-        return this._logObject('rendered verse', renderedVerse)
+        return this._logObject('selected verse', selectedVerse)
     }
 
     logGlobalAnnotation = (globalIndex) => {
@@ -97,13 +97,13 @@ class LogManager extends PureComponent {
 
     logScene = () => {
         const {
-                renderedSongIndex,
-                renderedSceneIndex
+                selectedSongIndex,
+                selectedSceneIndex
             } = this.props,
 
             renderableScene = getScene(
-                renderedSongIndex,
-                renderedSceneIndex
+                selectedSongIndex,
+                selectedSceneIndex
             )
 
         return this._logObject('renderable scene', renderableScene)
@@ -111,9 +111,9 @@ class LogManager extends PureComponent {
 
     logSong = () => {
         const
-            { renderedSongIndex } = this.props,
+            { selectedSongIndex } = this.props,
             copiedSong = {
-                ...getSong(renderedSongIndex)
+                ...getSong(selectedSongIndex)
             }
 
         delete copiedSong.annotations
@@ -126,26 +126,26 @@ class LogManager extends PureComponent {
     }
 
     logSongAnnotations = () => {
-        const { renderedSongIndex } = this.props,
-            song = getSong(renderedSongIndex)
+        const { selectedSongIndex } = this.props,
+            song = getSong(selectedSongIndex)
         return this._logObject('Song annotations', song.annotations)
     }
 
     logSongStanzaConfigs = () => {
-        const { renderedSongIndex } = this.props,
-            songStanzaConfigs = getSongStanzaConfigs(renderedSongIndex)
+        const { selectedSongIndex } = this.props,
+            songStanzaConfigs = getSongStanzaConfigs(selectedSongIndex)
         return this._logObject('Song stanza configs', songStanzaConfigs)
     }
 
     logSongVerseConfigs = () => {
-        const { renderedSongIndex } = this.props,
-            songVerseConfigs = getSongVerseConfigs(renderedSongIndex)
+        const { selectedSongIndex } = this.props,
+            songVerseConfigs = getSongVerseConfigs(selectedSongIndex)
         return this._logObject('Song verse configs', songVerseConfigs)
     }
 
     logSongSceneConfigs = () => {
-        const { renderedSongIndex } = this.props,
-            songSceneConfigs = getSongSceneConfigs(renderedSongIndex)
+        const { selectedSongIndex } = this.props,
+            songSceneConfigs = getSongSceneConfigs(selectedSongIndex)
         return this._logObject('Song scene configs', songSceneConfigs)
     }
 
@@ -165,17 +165,17 @@ class LogManager extends PureComponent {
 }
 
 const mapStateToProps = ({
-    renderedStore: {
-        renderedSongIndex,
-        renderedVerseIndex,
-        renderedAnnotationIndex,
-        renderedSceneIndex
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex,
+        selectedSceneIndex
     }
 }) => ({
-    renderedSongIndex,
-    renderedVerseIndex,
-    renderedAnnotationIndex,
-    renderedSceneIndex
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedAnnotationIndex,
+    selectedSceneIndex
 })
 
 export default connect(mapStateToProps)(LogManager)

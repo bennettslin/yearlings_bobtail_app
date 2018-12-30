@@ -43,20 +43,20 @@ class SceneChangeListener extends PureComponent {
 
         // Is still being selected.
         if (isSceneBeingSelected && !wasSceneBeingSelected) {
-            this._exitTransitionScene()
+            this._beginExitTransitions()
 
         // After scene change, slider and scroll transitions are now complete.
         } else if (isSceneDonePreparing && !wasSceneDonePreparing) {
-            this._updateSceneState()
+            this._updateState()
         }
     }
 
-    _exitTransitionScene() {
+    _beginExitTransitions() {
         this.props.updateSceneStore({ canSceneRender: false })
         this.props.updateRenderStore({ didSceneRender: false })
     }
 
-    _updateSceneState() {
+    _updateState() {
         const
             {
                 selectedSongIndex,

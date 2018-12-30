@@ -41,7 +41,7 @@ class WindowResizeListener extends PureComponent {
 
     componentDidMount() {
         // Set state based on initial window size.
-        this._updateDeviceAndResponsiveState()
+        this._updateState()
     }
 
     componentDidUpdate(prevProps) {
@@ -55,15 +55,15 @@ class WindowResizeListener extends PureComponent {
 
         // Is still being resized.
         if (isWindowBeingResized && !wasWindowBeingResized) {
-            this._exitTransitionTheatre()
+            this._beginExitTransitions()
 
         // Is now finished resizing.
         } else if (!isWindowBeingResized && wasWindowBeingResized) {
-            this._updateDeviceAndResponsiveState()
+            this._updateState()
         }
     }
 
-    _exitTransitionTheatre() {
+    _beginExitTransitions() {
         this.props.updateDeviceStore({
             canTheatreRender: false
         })
@@ -72,7 +72,7 @@ class WindowResizeListener extends PureComponent {
         })
     }
 
-    _updateDeviceAndResponsiveState = () => {
+    _updateState = () => {
         const {
                 deviceIndex,
                 windowHeight,

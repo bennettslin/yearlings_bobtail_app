@@ -3,13 +3,13 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateRenderableStore } from 'flux/renderable/action'
+import { updateChangeStore } from 'flux/change/action'
 
 class SongChangeDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        updateRenderableStore: PropTypes.func.isRequired,
+        updateChangeStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -21,13 +21,13 @@ class SongChangeDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            dispatchSongChangeUnrenderable:
-                this.dispatchSongChangeUnrenderable
+            dispatchSongChanging:
+                this.dispatchSongChanging
         })
     }
 
-    dispatchSongChangeUnrenderable = (callback) => {
-        this.props.updateRenderableStore({ isSongChangeRenderable: false })
+    dispatchSongChanging = (callback) => {
+        this.props.updateChangeStore({ isSongBeingSelected: true })
 
         // Clear previous timeout.
         clearTimeout(this.state.songChangeTimeoutId)
@@ -36,7 +36,7 @@ class SongChangeDispatcher extends PureComponent {
          * Wait for song selection to finish.
          */
         const songChangeTimeoutId = setTimeout(
-            this._dispatchSongChangeRenderable.bind(this, callback), 500
+            this._dispatchSongChanged.bind(this, callback), 500
         )
 
         this.setState({
@@ -44,8 +44,8 @@ class SongChangeDispatcher extends PureComponent {
         })
     }
 
-    _dispatchSongChangeRenderable = (callback) => {
-        this.props.updateRenderableStore({ isSongChangeRenderable: true })
+    _dispatchSongChanged = (callback) => {
+        this.props.updateChangeStore({ isSongBeingSelected: false })
         callback()
     }
 
@@ -58,5 +58,5 @@ const mapStateToProps = null
 
 export default connect(
     mapStateToProps,
-    { updateRenderableStore }
+    { updateChangeStore }
 )(SongChangeDispatcher)

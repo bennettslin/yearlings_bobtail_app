@@ -11,7 +11,6 @@ import LoadReducer from './load/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
 import RenderReducer from './render/reducer'
-import RenderableReducer from './renderable/reducer'
 import RenderedReducer from './rendered/reducer'
 import ResponsiveReducer from './responsive/reducer'
 import SceneReducer from './scene/reducer'
@@ -37,7 +36,6 @@ import {
     OPTION_STORE,
     PLAYERS_STORE,
     RENDER_STORE,
-    RENDERABLE_STORE,
     RENDERED_STORE,
     RESPONSIVE_STORE,
     SCENE_STORE,
@@ -54,7 +52,6 @@ import {
 const rootReducer = combineReducers({
     [CURTAIN_STORE]: CurtainReducer,
     [CHANGE_STORE]: ChangeReducer,
-    [RENDERABLE_STORE]: RenderableReducer,
     [RENDER_STORE]: RenderReducer,
 
     [SCENE_STORE]: SceneReducer,

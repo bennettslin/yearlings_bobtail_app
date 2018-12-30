@@ -146,22 +146,16 @@ const
     RENDER_DEFAULTS = {
         canLyricRender: false,
         canCarouselRender: false,
-
         didTheatreRender: false,
         didSceneRender: false,
         didLyricRender: false,
         didCarouselRender: false
     },
 
-    RENDERABLE_DEFAULTS = {
-        isSongChangeRenderable: true
-    },
-
     RENDERED_DEFAULTS = {
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
         renderedVerseIndex: storedVerseIndex,
-        renderedSceneIndex: storedSceneIndex,
         isRenderedLogue: isStoredLogue
     },
 
@@ -297,7 +291,6 @@ export {
     OPTION_DEFAULTS,
     PLAYERS_DEFAULTS,
     RENDER_DEFAULTS,
-    RENDERABLE_DEFAULTS,
     RENDERED_DEFAULTS,
     RESPONSIVE_DEFAULTS,
     SCENE_DEFAULTS,

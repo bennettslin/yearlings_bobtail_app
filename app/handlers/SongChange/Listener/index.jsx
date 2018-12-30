@@ -16,13 +16,9 @@ class SongChangeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSongChangeRenderable: PropTypes.bool.isRequired,
+        isSongBeingSelected: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.unrenderedTime = Date.now()
     }
 
     componentDidUpdate(prevProps) {
@@ -31,23 +27,20 @@ class SongChangeListener extends PureComponent {
 
     _checkSongChange(prevProps) {
         const
-            { isSongChangeRenderable } = this.props,
-            { isSongChangeRenderable: wasSongChangeRenderable } = prevProps
+            { isSongBeingSelected } = this.props,
+            { isSongBeingSelected: wasSongBeingSelected } = prevProps
 
-        // Is unrenderable after song change.
-        if (!isSongChangeRenderable && wasSongChangeRenderable) {
-            this._handleSongChangeUnrenderable()
+        // Is still being selected
+        if (isSongBeingSelected && !wasSongBeingSelected) {
+            this._beginExitTransitions()
 
-        // Is renderable after song change timeout.
-        } else if (isSongChangeRenderable && !wasSongChangeRenderable) {
+        // Is done being selected.
+        } else if (!isSongBeingSelected && wasSongBeingSelected) {
             this._handleSongChangeRenderable()
         }
     }
 
-    _handleSongChangeUnrenderable() {
-        this.unrenderedTime = Date.now()
-
-        logRenderable('Unrenderable from song change.')
+    _beginExitTransitions() {
         this.props.updateSceneStore({ canSceneRender: false })
         this.props.updateRenderStore({
             didSceneRender: false,
@@ -59,10 +52,6 @@ class SongChangeListener extends PureComponent {
     }
 
     _handleSongChangeRenderable() {
-        logRenderable(`Renderable after song change, took ${
-            ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
-        } seconds.`)
-
         const nextKey = getNextKeyCanRender({
             currentKey: CAN_THEATRE_RENDER
         })
@@ -84,9 +73,9 @@ class SongChangeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    renderableStore: { isSongChangeRenderable }
+    changeStore: { isSongBeingSelected }
 }) => ({
-    isSongChangeRenderable
+    isSongBeingSelected
 })
 
 export default connect(
