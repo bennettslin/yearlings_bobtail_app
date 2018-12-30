@@ -16,8 +16,8 @@ export default [
     },
     {
         taskName: `Transitions work.`,
-        workedHours: 8,
-        neededHours: 24
+        workedHours: 20,
+        neededHours: 30
     },
     {
         taskName: `Add title to lyric column in desktop.`,
