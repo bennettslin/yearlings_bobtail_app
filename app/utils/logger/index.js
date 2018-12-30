@@ -5,7 +5,7 @@ import {
     logMount,
     logParse,
     logPlayer,
-    logRender,
+    logEnter,
     logRenderable,
     logScroll,
     logError,
@@ -26,7 +26,7 @@ global.logFocus = logFocus
 global.logMount = logMount
 global.logParse = logParse
 global.logPlayer = logPlayer
-global.logRender = logRender
+global.logEnter = logEnter
 global.logRenderable = logRenderable
 global.logScroll = logScroll
 global.logError = logError

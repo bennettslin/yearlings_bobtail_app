@@ -79,8 +79,7 @@ export const AUDIO_DEFAULTS = {
 }
 
 export const CHANGE_DEFAULTS = {
-    isSceneSelectInFlux: false,
-    isSceneDonePreparing: true,
+    isSceneChangeExitScrollDone: true,
     isSongSelectInFlux: false,
     isSongDonePreparing: true,
     isWindowResizeInFlux: false
@@ -213,7 +212,7 @@ export const SCROLL_LYRIC_DEFAULTS = {
     queuedScrollLyricAlways: false,
     queuedScrollLyricFromRender: false,
     queuedScrollLyricFromAutoScroll: false,
-    queuedSceneChangeCallback: false
+    queuedSceneChangeExitScrollCallback: false
 }
 
 export const SELECTED_DEFAULTS = {

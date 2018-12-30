@@ -37,7 +37,7 @@ class VerseTracker extends Component {
             isSelected = this.getIsSelectedVerse(this.props),
             willBeSelected = this.getIsSelectedVerse(nextProps)
 
-        // If it can render, update if...
+        // If it can enter, update if...
         return (
 
             // Verse bar alternates between showing odd and even verse.

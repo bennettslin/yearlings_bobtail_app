@@ -105,7 +105,7 @@ const
             styles: PLAYER_STYLE
         })
     },
-    logRender = (log) => {
+    logEnter = (log) => {
         _logInfo({
             log,
             styles: RENDER_STYLE
@@ -138,7 +138,7 @@ export {
     logMount,
     logParse,
     logPlayer,
-    logRender,
+    logEnter,
     logRenderable,
     logScroll,
     logError

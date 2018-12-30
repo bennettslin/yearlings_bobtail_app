@@ -3,12 +3,16 @@ import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
 import { updateChangeStore } from 'flux/change/action'
+import { updateDeviceStore } from 'flux/device/action'
+import { updateRenderStore } from 'flux/render/action'
 
 class WindowResizeDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        updateChangeStore: PropTypes.func.isRequired
+        updateChangeStore: PropTypes.func.isRequired,
+        updateDeviceStore: PropTypes.func.isRequired,
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -16,15 +20,17 @@ class WindowResizeDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        window.onresize = debounce(this._dispatchWindowResizeInFlux, 0)
+        window.onresize = debounce(this._beginExitTransition, 0)
     }
 
     componentWillUnmount() {
         window.onresize = null
     }
 
-    _dispatchWindowResizeInFlux = () => {
+    _beginExitTransition = () => {
         this.props.updateChangeStore({ isWindowResizeInFlux: true })
+        this.props.updateDeviceStore({ canTheatreEnter: false })
+        this.props.updateRenderStore({ didTheatreEnter: false })
 
         // Clear previous timeout.
         clearTimeout(this.state.windowResizeTimeoutId)
@@ -33,7 +39,7 @@ class WindowResizeDispatcher extends PureComponent {
          * Wait for window resize to finish.
          */
         const windowResizeTimeoutId = setTimeout(
-            this._dispatchWindowResizeComplete, 250
+            this._completeWindowResize, 250
         )
 
         this.setState({
@@ -41,7 +47,7 @@ class WindowResizeDispatcher extends PureComponent {
         })
     }
 
-    _dispatchWindowResizeComplete = () => {
+    _completeWindowResize = () => {
         this.props.updateChangeStore({ isWindowResizeInFlux: false })
     }
 
@@ -54,5 +60,9 @@ const mapStateToProps = null
 
 export default connect(
     mapStateToProps,
-    { updateChangeStore }
+    {
+        updateChangeStore,
+        updateDeviceStore,
+        updateRenderStore
+    }
 )(WindowResizeDispatcher)

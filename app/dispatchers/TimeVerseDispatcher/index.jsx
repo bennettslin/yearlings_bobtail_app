@@ -55,7 +55,7 @@ class TimeVerseDispatcher extends PureComponent {
                 queuedScrollLyricByVerse: true,
                 queuedScrollLyricIndex: nextVerseIndex,
                 queuedScrollLyricFromAutoScroll: true,
-                queuedSceneChangeCallback: true
+                queuedSceneChangeExitScrollCallback: true
             })
 
         } else {
@@ -65,8 +65,8 @@ class TimeVerseDispatcher extends PureComponent {
              */
             this.props.updateVerseBarsStore({ queuedDetermineVerseBars: true })
 
-            // If there is no scrolling, finish scene preparation right away.
-            this.props.updateChangeStore({ isSceneDonePreparing: true })
+            // There is no scrolling, so complete scene change exit right away.
+            this.props.updateChangeStore({ isSceneChangeExitScrollDone: true })
         }
     }
 

@@ -4,7 +4,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateDeviceStore } from 'flux/device/action'
-import { updateRenderStore } from 'flux/render/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
 
 import { populateRefs } from 'helpers/ref'
@@ -35,40 +34,35 @@ class WindowResizeListener extends PureComponent {
         // Through Redux.
         isWindowResizeInFlux: PropTypes.bool.isRequired,
         updateDeviceStore: PropTypes.func.isRequired,
-        updateRenderStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         // Set state based on initial window size.
-        this._updateState()
+        this._beginEnterTransitionWithNewState()
     }
 
     componentDidUpdate(prevProps) {
-        this._checkWindowResizing(prevProps)
+        this._checkWindowResize(prevProps)
     }
 
-    _checkWindowResizing(prevProps = {}) {
+    _checkWindowResize(prevProps = {}) {
         const
             { isWindowResizeInFlux } = this.props,
             { isWindowResizeInFlux: wasWindowResizeInFlux } = prevProps
 
-        // Is still being resized.
-        if (isWindowResizeInFlux && !wasWindowResizeInFlux) {
-            this._initiateExitTransition()
-
-        // Is now finished resizing.
-        } else if (!isWindowResizeInFlux && wasWindowResizeInFlux) {
-            this._updateState()
+        /**
+         * Window resize has finished, so now update state to kick off enter
+         * transition.
+         */
+        if (!isWindowResizeInFlux && wasWindowResizeInFlux) {
+            this._beginEnterTransitionWithNewState()
         }
     }
 
-    _initiateExitTransition() {
-        this.props.updateDeviceStore({ canTheatreEnter: false })
-        this.props.updateRenderStore({ didTheatreEnter: false })
-    }
+    _beginEnterTransitionWithNewState = () => {
+        logEnter('Theatre can enter.')
 
-    _updateState = () => {
         const {
                 deviceIndex,
                 windowHeight,
@@ -126,8 +120,6 @@ class WindowResizeListener extends PureComponent {
                 stageTop,
                 isHeightlessLyric
             })
-
-        logRender('Theatre can render.')
 
         this.props.updateDeviceStore({
             canTheatreEnter: true,
@@ -200,7 +192,6 @@ export default connect(
     mapStateToProps,
     {
         updateDeviceStore,
-        updateRenderStore,
         updateResponsiveStore
     }
 )(WindowResizeListener)

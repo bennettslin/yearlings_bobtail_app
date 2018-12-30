@@ -1,4 +1,4 @@
-// Actions for can render state.
+// Actions for can enter state.
 import { getDefinedOnlyPayload } from '../actionHelper'
 
 import { RENDER_STORE } from '../storeKeys'

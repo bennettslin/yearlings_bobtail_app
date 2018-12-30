@@ -43,7 +43,7 @@ class RenderDidListener extends PureComponent {
             { appMounted: hadAppMounted } = prevProps
 
         if (appMounted && !hadAppMounted) {
-            logRender('App mounted.')
+            logEnter('App mounted.')
 
             this._renderAfterTheatre()
         }
@@ -55,7 +55,7 @@ class RenderDidListener extends PureComponent {
             { didTheatreEnter: hadTheatreRendered } = prevProps
 
         if (didTheatreEnter && !hadTheatreRendered) {
-            logRender('Theatre did render.')
+            logEnter('Theatre did enter.')
 
             if (!this.props.appMounted) {
                 /**
@@ -88,7 +88,7 @@ class RenderDidListener extends PureComponent {
             { didSceneEnter: hadSceneRendered } = prevProps
 
         if (didSceneEnter && !hadSceneRendered) {
-            logRender('Scene did render.')
+            logEnter('Scene did enter.')
 
             const nextKey = getNextKeyCanRender({ currentKey: CAN_SCENE_RENDER })
             if (nextKey) {
@@ -103,7 +103,7 @@ class RenderDidListener extends PureComponent {
             { didLyricEnter: hadLyricRendered } = prevProps
 
         if (didLyricEnter && !hadLyricRendered) {
-            logRender('Lyric did render.')
+            logEnter('Lyric did enter.')
 
             const nextKey = getNextKeyCanRender({
                 currentKey: CAN_LYRIC_RENDER
@@ -127,7 +127,7 @@ class RenderDidListener extends PureComponent {
             { didCarouselEnter: hadCarouselRendered } = prevProps
 
         if (didCarouselEnter && !hadCarouselRendered) {
-            logRender('Carousel did render.')
+            logEnter('Carousel did enter.')
 
             const nextKey = getNextKeyCanRender({
                 currentKey: CAN_CAROUSEL_RENDER

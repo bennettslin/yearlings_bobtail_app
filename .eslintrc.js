@@ -23,12 +23,12 @@ module.exports = {
     "globals": {
         "expect": true,
         "logAccess": true,
+        "logEnter": true,
         "logEvent": true,
         "logFocus": true,
         "logMount": true,
         "logParse": true,
         "logPlayer": true,
-        "logRender": true,
         "logRenderable": true,
         "logScroll": true,
         "logError": true,

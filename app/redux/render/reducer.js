@@ -1,4 +1,4 @@
-// Reducers for can render state.
+// Reducers for can enter state.
 import { RENDER_STORE } from '../storeKeys'
 import { RENDER_DEFAULTS } from '../defaultStates'
 

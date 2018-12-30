@@ -24,7 +24,7 @@ class ScrollLyricListener extends PureComponent {
         queuedScrollLyricAlways: PropTypes.bool.isRequired,
         queuedScrollLyricFromRender: PropTypes.bool.isRequired,
         queuedScrollLyricFromAutoScroll: PropTypes.bool.isRequired,
-        queuedSceneChangeCallback: PropTypes.bool.isRequired,
+        queuedSceneChangeExitScrollCallback: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
@@ -87,7 +87,7 @@ class ScrollLyricListener extends PureComponent {
                         queuedScrollLyricByVerse,
                         queuedScrollLyricIndex,
                         queuedScrollLyricFromRender,
-                        queuedSceneChangeCallback,
+                        queuedSceneChangeExitScrollCallback,
                         deviceIndex,
                         isLyricExpanded,
                         selectedVerseIndex,
@@ -117,7 +117,7 @@ class ScrollLyricListener extends PureComponent {
                     deviceIndex,
                     isLyricExpanded,
                     isSelectedLogue,
-                    ...queuedSceneChangeCallback && {
+                    ...queuedSceneChangeExitScrollCallback && {
                         callback: this._handleScrollEnd
                     }
                 })
@@ -138,11 +138,11 @@ class ScrollLyricListener extends PureComponent {
 
     _handleScrollEnd = () => {
         // This timeout is necessary to fully complete scroll animation.
-        setTimeout(this._finishScenePreparation, 0)
+        setTimeout(this._completeSceneChangeExitScroll, 0)
     }
 
-    _finishScenePreparation = () => {
-        this.props.updateChangeStore({ isSceneDonePreparing: true })
+    _completeSceneChangeExitScroll = () => {
+        this.props.updateChangeStore({ isSceneChangeExitScrollDone: true })
     }
 
     getVerseElement = (verseIndex) => {
@@ -186,7 +186,7 @@ const mapStateToProps = ({
         queuedScrollLyricAlways,
         queuedScrollLyricFromRender,
         queuedScrollLyricFromAutoScroll,
-        queuedSceneChangeCallback
+        queuedSceneChangeExitScrollCallback
     },
     selectedStore: {
         selectedVerseIndex,
@@ -207,7 +207,7 @@ const mapStateToProps = ({
     queuedScrollLyricAlways,
     queuedScrollLyricFromRender,
     queuedScrollLyricFromAutoScroll,
-    queuedSceneChangeCallback,
+    queuedSceneChangeExitScrollCallback,
     selectedVerseIndex,
     isSelectedLogue,
     isPlaying,

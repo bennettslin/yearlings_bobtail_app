@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateRenderStore } from 'flux/render/action'
 import { updateSceneStore } from 'flux/scene/action'
 
 import { getScene } from 'album/api/scenes'
@@ -17,12 +16,9 @@ class SceneChangeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSceneSelectInFlux: PropTypes.bool.isRequired,
-        isSceneDonePreparing: PropTypes.bool.isRequired,
+        isSceneChangeExitScrollDone: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedSceneIndex: PropTypes.number.isRequired,
-
-        updateRenderStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
     }
 
@@ -32,31 +28,21 @@ class SceneChangeListener extends PureComponent {
 
     _checkSceneChange(prevProps) {
         const
-            {
-                isSceneSelectInFlux,
-                isSceneDonePreparing
-            } = this.props,
-            {
-                isSceneSelectInFlux: wasSceneSelectInFlux,
-                isSceneDonePreparing: wasSceneDonePreparing
-            } = prevProps
+            { isSceneChangeExitScrollDone } = this.props,
+            { isSceneChangeExitScrollDone: wasExitScrollDone } = prevProps
 
-        // Is still being selected.
-        if (isSceneSelectInFlux && !wasSceneSelectInFlux) {
-            this._initiateExitTransition()
-
-        // After scene change, slider and scroll transitions are now complete.
-        } else if (isSceneDonePreparing && !wasSceneDonePreparing) {
-            this._updateState()
+        /**
+         * Scroll has finished exit transition, so now update state to kick off
+         * enter transition.
+         */
+        if (isSceneChangeExitScrollDone && !wasExitScrollDone) {
+            this._beginEnterTransitionWithNewState()
         }
     }
 
-    _initiateExitTransition() {
-        this.props.updateSceneStore({ canSceneEnter: false })
-        this.props.updateRenderStore({ didSceneEnter: false })
-    }
+    _beginEnterTransitionWithNewState() {
+        logEnter('Scene can enter.')
 
-    _updateState() {
         const
             {
                 selectedSongIndex,
@@ -75,8 +61,6 @@ class SceneChangeListener extends PureComponent {
                 selectedSceneIndex
             )
 
-        logRender('Scene can render.')
-
         this.props.updateSceneStore({
             canSceneEnter: true,
             sceneCubesKey,
@@ -94,17 +78,13 @@ class SceneChangeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: {
-        isSceneSelectInFlux,
-        isSceneDonePreparing
-    },
+    changeStore: { isSceneChangeExitScrollDone },
     selectedStore: {
         selectedSongIndex,
         selectedSceneIndex
     }
 }) => ({
-    isSceneSelectInFlux,
-    isSceneDonePreparing,
+    isSceneChangeExitScrollDone,
     selectedSongIndex,
     selectedSceneIndex
 })
@@ -112,7 +92,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateRenderStore,
         updateSceneStore
     }
 )(SceneChangeListener)
