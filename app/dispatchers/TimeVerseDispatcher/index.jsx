@@ -3,6 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateChangeStore } from 'flux/change/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
@@ -15,6 +16,7 @@ class TimeVerseDispatcher extends PureComponent {
         // Through Redux.
         isAutoScroll: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        updateChangeStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
@@ -52,15 +54,19 @@ class TimeVerseDispatcher extends PureComponent {
                 queuedScrollLyricLog: 'Player auto scroll.',
                 queuedScrollLyricByVerse: true,
                 queuedScrollLyricIndex: nextVerseIndex,
-                queuedScrollLyricFromAutoScroll: true
+                queuedScrollLyricFromAutoScroll: true,
+                queuedScrollLyricCallback: true
             })
 
-        /**
-         * If manual scroll is on, selected verse may go from above window,
-         * view, to in it, to below it. So, determine verse bars.
-         */
         } else {
+            /**
+             * If manual scroll is on, selected verse may go from above window,
+             * view, to in it, to below it. So, determine verse bars.
+             */
             this.props.updateVerseBarsStore({ queuedDetermineVerseBars: true })
+
+            // If there is no scrolling, finish scene preparation right away.
+            this.props.updateChangeStore({ isScenePreparing: false })
         }
     }
 
@@ -80,6 +86,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
+        updateChangeStore,
         updateScrollLyricStore,
         updateSelectedStore,
         updateVerseBarsStore

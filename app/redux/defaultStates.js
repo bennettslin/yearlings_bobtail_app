@@ -79,10 +79,10 @@ const
     },
 
     CHANGE_DEFAULTS = {
-        isSceneChanging: false,
+        isSceneBeingSelected: false,
         isScenePreparing: false,
         isSongChanging: false,
-        isWindowResizing: false
+        isWindowBeingResized: false
     },
 
     CURTAIN_DEFAULTS = {
@@ -219,7 +219,8 @@ const
         queuedScrollLyricIndex: -1,
         queuedScrollLyricAlways: false,
         queuedScrollLyricFromRender: false,
-        queuedScrollLyricFromAutoScroll: false
+        queuedScrollLyricFromAutoScroll: false,
+        queuedScrollLyricCallback: false
     },
 
     SELECTED_DEFAULTS = {

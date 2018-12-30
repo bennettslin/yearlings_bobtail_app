@@ -33,7 +33,7 @@ class WindowResizeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isWindowResizing: PropTypes.bool.isRequired,
+        isWindowBeingResized: PropTypes.bool.isRequired,
         updateDeviceStore: PropTypes.func.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired
@@ -50,15 +50,15 @@ class WindowResizeListener extends PureComponent {
 
     _checkWindowResizing(prevProps = {}) {
         const
-            { isWindowResizing } = this.props,
-            { isWindowResizing: wasWindowResizing } = prevProps
+            { isWindowBeingResized } = this.props,
+            { isWindowBeingResized: wasWindowBeingResized } = prevProps
 
-        // Is still resizing.
-        if (isWindowResizing && !wasWindowResizing) {
+        // Is still being resized.
+        if (isWindowBeingResized && !wasWindowBeingResized) {
             this._exitTransitionTheatre()
 
-        // Is now resized.
-        } else if (!isWindowResizing && wasWindowResizing) {
+        // Is now finished resizing.
+        } else if (!isWindowBeingResized && wasWindowBeingResized) {
             this._updateDeviceAndResponsiveState()
         }
     }
@@ -195,9 +195,9 @@ class WindowResizeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: { isWindowResizing }
+    changeStore: { isWindowBeingResized }
 }) => ({
-    isWindowResizing
+    isWindowBeingResized
 })
 
 export default connect(

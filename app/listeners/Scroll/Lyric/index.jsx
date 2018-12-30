@@ -24,6 +24,7 @@ class ScrollLyricListener extends PureComponent {
         queuedScrollLyricAlways: PropTypes.bool.isRequired,
         queuedScrollLyricFromRender: PropTypes.bool.isRequired,
         queuedScrollLyricFromAutoScroll: PropTypes.bool.isRequired,
+        queuedScrollLyricCallback: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
@@ -86,6 +87,7 @@ class ScrollLyricListener extends PureComponent {
                         queuedScrollLyricByVerse,
                         queuedScrollLyricIndex,
                         queuedScrollLyricFromRender,
+                        queuedScrollLyricCallback,
                         deviceIndex,
                         isLyricExpanded,
                         selectedVerseIndex,
@@ -115,7 +117,9 @@ class ScrollLyricListener extends PureComponent {
                     deviceIndex,
                     isLyricExpanded,
                     isSelectedLogue,
-                    callback: this._handleScrollEnd
+                    ...queuedScrollLyricCallback && {
+                        callback: this._handleScrollEnd
+                    }
                 })
             }
 
@@ -181,7 +185,8 @@ const mapStateToProps = ({
         queuedScrollLyricIndex,
         queuedScrollLyricAlways,
         queuedScrollLyricFromRender,
-        queuedScrollLyricFromAutoScroll
+        queuedScrollLyricFromAutoScroll,
+        queuedScrollLyricCallback
     },
     selectedStore: {
         selectedVerseIndex,
@@ -202,6 +207,7 @@ const mapStateToProps = ({
     queuedScrollLyricAlways,
     queuedScrollLyricFromRender,
     queuedScrollLyricFromAutoScroll,
+    queuedScrollLyricCallback,
     selectedVerseIndex,
     isSelectedLogue,
     isPlaying,

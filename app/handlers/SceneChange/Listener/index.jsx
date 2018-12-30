@@ -17,7 +17,7 @@ class SceneChangeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSceneChanging: PropTypes.bool.isRequired,
+        isSceneBeingSelected: PropTypes.bool.isRequired,
         isScenePreparing: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedSceneIndex: PropTypes.number.isRequired,
@@ -33,16 +33,16 @@ class SceneChangeListener extends PureComponent {
     _checkSceneChange(prevProps) {
         const
             {
-                isSceneChanging,
+                isSceneBeingSelected,
                 isScenePreparing
             } = this.props,
             {
-                isSceneChanging: wasSceneChanging,
+                isSceneBeingSelected: wasSceneBeingSelected,
                 isScenePreparing: wasScenePreparing
             } = prevProps
 
-        // Scene is currently being changed.
-        if (isSceneChanging && !wasSceneChanging) {
+        // Is still being selected.
+        if (isSceneBeingSelected && !wasSceneBeingSelected) {
             this._exitTransitionScene()
 
         // After scene change, slider and scroll transitions are now complete.
@@ -95,7 +95,7 @@ class SceneChangeListener extends PureComponent {
 
 const mapStateToProps = ({
     changeStore: {
-        isSceneChanging,
+        isSceneBeingSelected,
         isScenePreparing
     },
     selectedStore: {
@@ -103,7 +103,7 @@ const mapStateToProps = ({
         selectedSceneIndex
     }
 }) => ({
-    isSceneChanging,
+    isSceneBeingSelected,
     isScenePreparing,
     selectedSongIndex,
     selectedSceneIndex

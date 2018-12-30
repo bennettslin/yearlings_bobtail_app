@@ -24,7 +24,7 @@ class WindowResizeDispatcher extends PureComponent {
     }
 
     _dispatchWindowResizing = () => {
-        this.props.updateChangeStore({ isWindowResizing: true })
+        this.props.updateChangeStore({ isWindowBeingResized: true })
 
         // Clear previous timeout.
         clearTimeout(this.state.windowResizeTimeoutId)
@@ -42,7 +42,7 @@ class WindowResizeDispatcher extends PureComponent {
     }
 
     _dispatchWindowResized = () => {
-        this.props.updateChangeStore({ isWindowResizing: false })
+        this.props.updateChangeStore({ isWindowBeingResized: false })
     }
 
     render() {
