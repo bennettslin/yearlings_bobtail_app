@@ -66,7 +66,7 @@ class VerseDispatcher extends PureComponent {
             queuedScrollLyricByVerse: true,
             queuedScrollLyricIndex: selectedVerseIndex,
             queuedScrollLyricAlways: true,
-            queuedScrollLyricCallback: true
+            queuedSceneChangeCallback: true
         })
     }
 

@@ -80,8 +80,9 @@ const
 
     CHANGE_DEFAULTS = {
         isSceneBeingSelected: false,
-        isScenePreparing: false,
-        isSongChanging: false,
+        isSceneDonePreparing: true,
+        isSongBeingSelected: false,
+        isSongDonePreparing: true,
         isWindowBeingResized: false
     },
 
@@ -220,7 +221,7 @@ const
         queuedScrollLyricAlways: false,
         queuedScrollLyricFromRender: false,
         queuedScrollLyricFromAutoScroll: false,
-        queuedScrollLyricCallback: false
+        queuedSceneChangeCallback: false
     },
 
     SELECTED_DEFAULTS = {

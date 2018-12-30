@@ -44,7 +44,10 @@ class SceneChangeDispatcher extends PureComponent {
 
 
     _dispatchSceneChanging = () => {
-        this.props.updateChangeStore({ isSceneBeingSelected: true })
+        this.props.updateChangeStore({
+            isSceneBeingSelected: true,
+            isSceneDonePreparing: false
+        })
 
         // Clear previous timeout.
         clearTimeout(this.state.sceneChangeTimeoutId)
@@ -62,10 +65,7 @@ class SceneChangeDispatcher extends PureComponent {
     }
 
     _dispatchSceneChanged = () => {
-        this.props.updateChangeStore({
-            isSceneBeingSelected: false,
-            isScenePreparing: true
-        })
+        this.props.updateChangeStore({ isSceneBeingSelected: false })
     }
 
     render() {

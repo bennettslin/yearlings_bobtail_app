@@ -24,7 +24,7 @@ class ScrollLyricListener extends PureComponent {
         queuedScrollLyricAlways: PropTypes.bool.isRequired,
         queuedScrollLyricFromRender: PropTypes.bool.isRequired,
         queuedScrollLyricFromAutoScroll: PropTypes.bool.isRequired,
-        queuedScrollLyricCallback: PropTypes.bool.isRequired,
+        queuedSceneChangeCallback: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
@@ -87,7 +87,7 @@ class ScrollLyricListener extends PureComponent {
                         queuedScrollLyricByVerse,
                         queuedScrollLyricIndex,
                         queuedScrollLyricFromRender,
-                        queuedScrollLyricCallback,
+                        queuedSceneChangeCallback,
                         deviceIndex,
                         isLyricExpanded,
                         selectedVerseIndex,
@@ -117,7 +117,7 @@ class ScrollLyricListener extends PureComponent {
                     deviceIndex,
                     isLyricExpanded,
                     isSelectedLogue,
-                    ...queuedScrollLyricCallback && {
+                    ...queuedSceneChangeCallback && {
                         callback: this._handleScrollEnd
                     }
                 })
@@ -142,7 +142,7 @@ class ScrollLyricListener extends PureComponent {
     }
 
     _finishScenePreparation = () => {
-        this.props.updateChangeStore({ isScenePreparing: false })
+        this.props.updateChangeStore({ isSceneDonePreparing: true })
     }
 
     getVerseElement = (verseIndex) => {
@@ -186,7 +186,7 @@ const mapStateToProps = ({
         queuedScrollLyricAlways,
         queuedScrollLyricFromRender,
         queuedScrollLyricFromAutoScroll,
-        queuedScrollLyricCallback
+        queuedSceneChangeCallback
     },
     selectedStore: {
         selectedVerseIndex,
@@ -207,7 +207,7 @@ const mapStateToProps = ({
     queuedScrollLyricAlways,
     queuedScrollLyricFromRender,
     queuedScrollLyricFromAutoScroll,
-    queuedScrollLyricCallback,
+    queuedSceneChangeCallback,
     selectedVerseIndex,
     isSelectedLogue,
     isPlaying,
