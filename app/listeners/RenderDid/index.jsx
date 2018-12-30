@@ -78,9 +78,7 @@ class RenderDidListener extends PureComponent {
     _renderAfterTheatre = () => {
         const nextKey = getNextKeyCanRender({ currentKey: CAN_THEATRE_RENDER })
         if (nextKey) {
-            this.props.updateLyricStore({
-                [nextKey]: true
-            })
+            this.props.updateLyricStore({ [nextKey]: true })
         }
     }
 
@@ -94,9 +92,7 @@ class RenderDidListener extends PureComponent {
 
             const nextKey = getNextKeyCanRender({ currentKey: CAN_SCENE_RENDER })
             if (nextKey) {
-                this.props.updateLyricStore({
-                    [nextKey]: true
-                })
+                this.props.updateLyricStore({ [nextKey]: true })
             }
         }
     }

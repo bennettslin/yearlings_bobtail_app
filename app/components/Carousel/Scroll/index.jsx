@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateRenderStore } from 'flux/render/action'
 
 import Transition from 'react-transition-group/Transition'
 import CarouselAnnotation from '../Annotation'
@@ -49,6 +50,7 @@ class CarouselScroll extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
         setCarouselParent: PropTypes.func.isRequired,
@@ -57,6 +59,10 @@ class CarouselScroll extends PureComponent {
 
     componentDidMount() {
         logMount('CarouselScroll')
+    }
+
+    _handleTransitionEntered = () => {
+        this.props.updateRenderStore({ didCarouselRender: true })
     }
 
     render() {
@@ -92,7 +98,8 @@ class CarouselScroll extends PureComponent {
                     timeout: {
                         exit: 200,
                         enter: 0
-                    }
+                    },
+                    onEntered: this._handleTransitionEntered
                 }}
             >
                 <div
@@ -140,4 +147,7 @@ class CarouselScroll extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(CarouselScroll)
+export default connect(
+    mapStateToProps,
+    { updateRenderStore }
+)(CarouselScroll)

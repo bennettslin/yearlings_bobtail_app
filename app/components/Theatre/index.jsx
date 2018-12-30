@@ -26,14 +26,15 @@ class Theatre extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired
+        canTheatreRender: PropTypes.bool.isRequired,
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         logMount('Theatre')
     }
 
-    handleTransitionEntered = () => {
+    _handleTransitionEntered = () => {
         this.props.updateRenderStore({ didTheatreRender: true })
     }
 
@@ -49,7 +50,7 @@ class Theatre extends PureComponent {
                     classNames: {
                         enterDone: 'Theatre__visible'
                     },
-                    onEntered: this.handleTransitionEntered
+                    onEntered: this._handleTransitionEntered
                 }}
             >
                 <div className={cx(

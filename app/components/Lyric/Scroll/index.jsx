@@ -1,7 +1,8 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { updateRenderStore } from 'flux/render/action'
 
 import Transition from 'react-transition-group/Transition'
 import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
@@ -13,8 +14,10 @@ import { populateRefs } from 'helpers/ref'
 import TempGlobalAnnotations from './TempGlobalAnnotations'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricRender },
-    lyricStore: { lyricSongIndex }
+    lyricStore: {
+        canLyricRender,
+        lyricSongIndex
+    }
 }) => ({
     canLyricRender,
     lyricSongIndex
@@ -30,6 +33,7 @@ class LyricScroll extends PureComponent {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
+        updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
         determineVerseBars: PropTypes.func.isRequired,
@@ -79,6 +83,10 @@ class LyricScroll extends PureComponent {
         this.dispatchLyricWheel(e, this.lyricElement)
     }
 
+    _handleTransitionEntered = () => {
+        this.props.updateRenderStore({ didLyricRender: true })
+    }
+
     _getRefs = (payload) => {
         populateRefs(this, payload)
     }
@@ -100,7 +108,8 @@ class LyricScroll extends PureComponent {
                         timeout: {
                             exit: 200,
                             enter: 0
-                        }
+                        },
+                        onEntered: this._handleTransitionEntered
                     }}
                 >
                     <div
@@ -146,4 +155,7 @@ class LyricScroll extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(LyricScroll)
+export default connect(
+    mapStateToProps,
+    { updateRenderStore }
+)(LyricScroll)

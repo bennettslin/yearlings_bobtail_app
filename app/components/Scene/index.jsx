@@ -24,14 +24,15 @@ class Scene extends PureComponent {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        canSceneRender: PropTypes.bool.isRequired
+        canSceneRender: PropTypes.bool.isRequired,
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         logMount('Scene')
     }
 
-    handleTransitionEntered = () => {
+    _handleTransitionEntered = () => {
         this.props.updateRenderStore({ didSceneRender: true })
     }
 
@@ -47,7 +48,7 @@ class Scene extends PureComponent {
                 {...{
                     in: canSceneRender,
                     timeout: 200,
-                    onEntered: this.handleTransitionEntered
+                    onEntered: this._handleTransitionEntered
                 }}
             >
                 <div className={cx(
