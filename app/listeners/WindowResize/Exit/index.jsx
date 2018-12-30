@@ -6,7 +6,7 @@ import { updateChangeStore } from 'flux/change/action'
 import { updateDeviceStore } from 'flux/device/action'
 import { updateRenderStore } from 'flux/render/action'
 
-class WindowResizeDispatcher extends PureComponent {
+class WindowResizeExitListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -65,4 +65,4 @@ export default connect(
         updateDeviceStore,
         updateRenderStore
     }
-)(WindowResizeDispatcher)
+)(WindowResizeExitListener)

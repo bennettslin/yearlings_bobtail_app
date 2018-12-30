@@ -7,7 +7,7 @@ import { updateChangeStore } from 'flux/change/action'
 import { updateRenderStore } from 'flux/render/action'
 import { updateSceneStore } from 'flux/scene/action'
 
-class SceneChangeDispatcher extends PureComponent {
+class SceneChangeExitListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -70,4 +70,4 @@ export default connect(
         updateRenderStore,
         updateSceneStore
     }
-)(SceneChangeDispatcher)
+)(SceneChangeExitListener)

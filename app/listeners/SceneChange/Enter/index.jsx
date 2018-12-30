@@ -12,7 +12,7 @@ import {
     SEASON_INDOOR
 } from 'scene/sky'
 
-class SceneChangeListener extends PureComponent {
+class SceneChangeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -94,4 +94,4 @@ export default connect(
     {
         updateSceneStore
     }
-)(SceneChangeListener)
+)(SceneChangeEnterListener)

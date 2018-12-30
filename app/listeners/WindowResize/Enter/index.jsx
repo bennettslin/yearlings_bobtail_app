@@ -28,7 +28,7 @@ import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
 import { getStageCoordinates } from './helpers/stage'
 
-class WindowResizeListener extends PureComponent {
+class WindowResizeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -194,4 +194,4 @@ export default connect(
         updateDeviceStore,
         updateResponsiveStore
     }
-)(WindowResizeListener)
+)(WindowResizeEnterListener)

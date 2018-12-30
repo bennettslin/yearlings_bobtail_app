@@ -12,8 +12,8 @@ import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
 import RenderDidListener from '../../listeners/RenderDid'
 import RenderedListener from '../../listeners/Rendered'
-import SceneChangeDispatcher from '../../handlers/SceneChange/Dispatcher'
-import SceneChangeListener from '../../handlers/SceneChange/Listener'
+import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
+import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
 import ScoreListener from '../../handlers/Score/Listener'
 import SongListener from '../../handlers/Song/Listener'
 import SongChangeListener from '../../handlers/SongChange/Listener'
@@ -22,8 +22,8 @@ import SliderListener from '../../listeners/Slider'
 import TipsListener from '../../handlers/Tips/Listener'
 import WikiListener from '../../handlers/Wiki/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
-import WindowResizeDispatcher from '../../handlers/WindowResize/Dispatcher'
-import WindowResizeListener from '../../handlers/WindowResize/Listener'
+import WindowResizeExitListener from '../../listeners/WindowResize/Exit'
+import WindowResizeEnterListener from '../../listeners/WindowResize/Enter'
 
 import AudioPlayerManager from '../../managers/AudioPlayer'
 import LogManager from '../../managers/Log'
@@ -51,8 +51,8 @@ class ListenerContainer extends PureComponent {
                 <PopupAnnotationListener />
                 <RenderDidListener />
                 <RenderedListener />
-                <SceneChangeDispatcher />
-                <SceneChangeListener />
+                <SceneChangeExitListener />
+                <SceneChangeEnterListener />
                 <ScoreListener />
                 <ScrollRenderListener />
                 <SliderListener />
@@ -61,8 +61,8 @@ class ListenerContainer extends PureComponent {
                 <TipsListener />
                 <WikiListener />
                 <WikiWormholeListener />
-                <WindowResizeDispatcher />
-                <WindowResizeListener />
+                <WindowResizeExitListener />
+                <WindowResizeEnterListener />
 
                 <AudioPlayerManager />
                 <LogManager />
