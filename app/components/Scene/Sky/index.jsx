@@ -1,38 +1,26 @@
 // The scene sky.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getPropsAreShallowEqual } from 'helpers/general'
-
 const mapStateToProps = ({
     sceneStore: {
-        canSceneRender,
         sceneTime,
         sceneSeason
     }
 }) => ({
-    canSceneRender,
     sceneTime,
     sceneSeason
 })
 
-class Sky extends Component {
+class Sky extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canSceneRender: PropTypes.bool.isRequired,
         sceneTime: PropTypes.string.isRequired,
         sceneSeason: PropTypes.string.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {
@@ -62,24 +50,6 @@ class Sky extends Component {
                         'abF'
                     )}
                 />
-                {/* Not going to do this work for now. */}
-                {/* <div
-                    className={cx(
-                        'Sun',
-                        `Sun__${timeKey}`,
-                        `Sun__${seasonKey}`,
-                        'Sky__celestial'
-                    )}
-                />
-                <div
-                    className={cx(
-                        'Moon',
-                        `Moon__${timeKey}`,
-                        `Moon__${seasonKey}`,
-                        'Sky__celestial'
-                    )}
-                /> */}
-                {/* TODO: Make filter for weather, like clouds and rain. */}
             </div>
         )
     }

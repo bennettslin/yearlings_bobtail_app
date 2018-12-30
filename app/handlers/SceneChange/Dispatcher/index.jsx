@@ -62,7 +62,10 @@ class SceneChangeDispatcher extends PureComponent {
     }
 
     _dispatchSceneChanged = () => {
-        this.props.updateChangeStore({ isSceneChanging: false })
+        this.props.updateChangeStore({
+            isSceneChanging: false,
+            isScenePreparing: true
+        })
     }
 
     render() {

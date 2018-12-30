@@ -1,8 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateChangeStore } from 'flux/change/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import {
     scrollElementIntoView,
@@ -30,8 +30,8 @@ class ScrollLyricListener extends PureComponent {
         isAutoScroll: PropTypes.bool.isRequired,
         isPlaying: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        updateChangeStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
-        updateVerseBarsStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -115,7 +115,7 @@ class ScrollLyricListener extends PureComponent {
                     deviceIndex,
                     isLyricExpanded,
                     isSelectedLogue,
-                    callback: this._determineVerseBars
+                    callback: this._handleScrollEnd
                 })
             }
 
@@ -132,8 +132,13 @@ class ScrollLyricListener extends PureComponent {
         }
     }
 
-    _determineVerseBars = () => {
-        this.props.updateVerseBarsStore({ queuedDetermineVerseBars: true })
+    _handleScrollEnd = () => {
+        // This timeout is necessary to fully complete scroll animation.
+        setTimeout(this._finishScenePreparation, 0)
+    }
+
+    _finishScenePreparation = () => {
+        this.props.updateChangeStore({ isScenePreparing: false })
     }
 
     getVerseElement = (verseIndex) => {
@@ -208,7 +213,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateScrollLyricStore,
-        updateVerseBarsStore
+        updateChangeStore,
+        updateScrollLyricStore
     }
 )(ScrollLyricListener)

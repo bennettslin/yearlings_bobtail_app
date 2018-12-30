@@ -18,6 +18,7 @@ class SceneChangeListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isSceneChanging: PropTypes.bool.isRequired,
+        isScenePreparing: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedSceneIndex: PropTypes.number.isRequired,
 
@@ -31,15 +32,21 @@ class SceneChangeListener extends PureComponent {
 
     _checkSceneChange(prevProps) {
         const
-            { isSceneChanging } = this.props,
-            { isSceneChanging: wasSceneChanging } = prevProps
+            {
+                isSceneChanging,
+                isScenePreparing
+            } = this.props,
+            {
+                isSceneChanging: wasSceneChanging,
+                isScenePreparing: wasScenePreparing
+            } = prevProps
 
-        // Is unrenderable after scene change within same song.
+        // Scene is currently being changed.
         if (isSceneChanging && !wasSceneChanging) {
             this._exitTransitionScene()
 
-        // Is renderable after scene change timeout.
-        } else if (!isSceneChanging && wasSceneChanging) {
+        // After scene change, slider and scroll transitions are now complete.
+        } else if (!isScenePreparing && wasScenePreparing) {
             this._updateSceneState()
         }
     }
@@ -68,6 +75,8 @@ class SceneChangeListener extends PureComponent {
                 selectedSceneIndex
             )
 
+        logRender('Scene can render.')
+
         this.props.updateSceneStore({
             canSceneRender: true,
             sceneCubesKey,
@@ -85,13 +94,17 @@ class SceneChangeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: { isSceneChanging },
+    changeStore: {
+        isSceneChanging,
+        isScenePreparing
+    },
     selectedStore: {
         selectedSongIndex,
         selectedSceneIndex
     }
 }) => ({
     isSceneChanging,
+    isScenePreparing,
     selectedSongIndex,
     selectedSceneIndex
 })

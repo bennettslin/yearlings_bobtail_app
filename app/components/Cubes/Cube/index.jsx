@@ -1,6 +1,6 @@
 // A single pair of ceiling and floor cubes.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -9,10 +9,7 @@ import Svg from 'modules/Svg'
 import Face from './Face'
 
 import { getCharStringForNumber } from 'helpers/format'
-import {
-    getPropsAreShallowEqual,
-    getValueInAbridgedMatrix
-} from 'helpers/general'
+import { getValueInAbridgedMatrix } from 'helpers/general'
 
 import { getCubeZIndexStyle } from './helpers'
 
@@ -29,7 +26,6 @@ import {
 const
     getMapStateToProps = (yIndex, xIndex) => ({
         sceneStore: {
-            canSceneRender,
             sceneCubes: {
                 ceiling: {
                     hslaColours: ceilingHslaColours,
@@ -54,7 +50,6 @@ const
                 getValueInAbridgedMatrix(floorZIndices, xIndex, yIndex)
 
         return {
-            canSceneRender,
             ceilingHslaColourKey,
             floorHslaColourKey,
             ceilingZIndex,
@@ -64,11 +59,10 @@ const
     },
     CubeConfig = {}
 
-class Cube extends Component {
+class Cube extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canSceneRender: PropTypes.bool.isRequired,
         ceilingHslaColourKey: PropTypes.string.isRequired,
         floorHslaColourKey: PropTypes.string.isRequired,
         ceilingZIndex: PropTypes.number.isRequired,
@@ -78,13 +72,6 @@ class Cube extends Component {
         // From parent.
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     render() {

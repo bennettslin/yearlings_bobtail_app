@@ -51,13 +51,9 @@ const
         storedSongIndex,
         storedAnnotationIndex
     ),
-    sceneIndex = getSceneIndexForVerseIndex(
+    storedSceneIndex = getSceneIndexForVerseIndex(
         storedSongIndex,
         storedVerseIndex
-    ),
-    sceneObject = getScene(
-        storedSongIndex,
-        sceneIndex
     ),
 
     ACCESS_DEFAULTS = {
@@ -164,7 +160,7 @@ const
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
         renderedVerseIndex: storedVerseIndex,
-        renderedSceneIndex: sceneIndex,
+        renderedSceneIndex: storedSceneIndex,
         isRenderedLogue: isStoredLogue
     },
 
@@ -187,7 +183,11 @@ const
             season: sceneSeason = SEASON_INDOOR
         },
         layers: scenePresenceLayers
-    } = sceneObject,
+
+    } = getScene(
+        storedSongIndex,
+        storedSceneIndex
+    ),
 
     sceneCubes = getCubesForKey(sceneCubesKey),
 
@@ -196,8 +196,8 @@ const
         sceneCubesKey,
         sceneTime,
         sceneSeason,
-        sceneSongIndex: -1,
-        sceneSceneIndex: -1,
+        sceneSongIndex: storedSongIndex,
+        sceneSceneIndex: storedSceneIndex,
 
         /**
          * Stored only for dev clarity. Components will retrieve these layers
@@ -226,7 +226,7 @@ const
         [SELECTED_SONG_INDEX]: storedSongIndex,
         [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
         [SELECTED_VERSE_INDEX]: storedVerseIndex,
-        selectedSceneIndex: sceneIndex,
+        selectedSceneIndex: storedSceneIndex,
         isSelectedLogue: isStoredLogue,
         selectedTime: getStartTimeForVerseIndex(
             storedSongIndex,

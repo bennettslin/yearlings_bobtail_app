@@ -131,6 +131,8 @@ class WindowResizeListener extends PureComponent {
                 isHeightlessLyric
             })
 
+        logRender('Theatre can render.')
+
         this.props.updateDeviceStore({
             canTheatreRender: true,
             deviceIndex,
