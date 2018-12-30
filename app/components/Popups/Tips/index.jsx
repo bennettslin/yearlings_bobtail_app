@@ -9,8 +9,10 @@ import Popup from '../../Popup'
 import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
-    renderedStore: { isRenderedLogue },
+    renderedStore: {
+        canCarouselRender,
+        isRenderedLogue
+    },
     optionStore: { selectedTipsOption }
 }) => ({
     canCarouselRender,

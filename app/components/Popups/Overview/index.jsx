@@ -11,7 +11,7 @@ import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
     deviceStore: { isPhone },
-    renderStore: { canCarouselRender },
+    renderedStore: { canCarouselRender },
     optionStore: {
         selectedOverviewOption,
         selectedTipsOption

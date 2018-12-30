@@ -11,7 +11,7 @@ import { getAnnotationsCount } from 'album/api/annotations'
 import { getArrayOfLength } from 'helpers/general'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
+    renderedStore: { canCarouselRender },
     renderedStore: {
         renderedSongIndex,
         renderedAnnotationIndex

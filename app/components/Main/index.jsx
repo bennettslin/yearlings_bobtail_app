@@ -20,7 +20,7 @@ import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender }
+    renderedStore: { canCarouselRender }
 }) => ({
     canCarouselRender
 })

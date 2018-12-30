@@ -13,7 +13,7 @@ import { populateRefs } from 'helpers/ref'
 import TempGlobalAnnotations from './TempGlobalAnnotations'
 
 const mapStateToProps = ({
-    renderStore: { canLyricRender },
+    renderedStore: { canLyricRender },
     renderedStore: { renderedSongIndex }
 }) => ({
     canLyricRender,

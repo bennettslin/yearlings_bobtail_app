@@ -144,8 +144,6 @@ const
     },
 
     RENDER_DEFAULTS = {
-        canLyricRender: false,
-        canCarouselRender: false,
         didTheatreRender: false,
         didSceneRender: false,
         didLyricRender: false,
@@ -153,6 +151,8 @@ const
     },
 
     RENDERED_DEFAULTS = {
+        canLyricRender: false,
+        canCarouselRender: false,
         renderedSongIndex: storedSongIndex,
         renderedAnnotationIndex: storedAnnotationIndex,
         renderedVerseIndex: storedVerseIndex,

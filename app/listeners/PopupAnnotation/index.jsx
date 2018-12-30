@@ -6,8 +6,10 @@ import { connect } from 'react-redux'
 import { updateTransientStore } from 'flux/transient/action'
 
 const mapStateToProps = ({
-    renderStore: { canCarouselRender },
-    renderedStore: { renderedAnnotationIndex },
+    renderedStore: {
+        canCarouselRender,
+        renderedAnnotationIndex
+    },
     toggleStore: {
         isCarouselShown,
         isScoreShown,
