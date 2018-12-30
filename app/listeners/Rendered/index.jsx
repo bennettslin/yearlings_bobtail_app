@@ -31,7 +31,7 @@ class RenderedListener extends PureComponent {
             { selectedSongIndex: prevSongIndex } = prevProps
 
         if (selectedSongIndex !== prevSongIndex) {
-            this.dispatchSongChangeUnrenderable(
+            this.dispatchSongChanging(
                 this._prepareForSongChangeRender
             )
         }

@@ -36,7 +36,6 @@ class SongDispatcher extends PureComponent {
         })
     }
 
-    // TODO: Move to individual dispatcher.
     dispatchSong = ({
         isPlayFromLogue,
         selectedSongIndex = 0,
