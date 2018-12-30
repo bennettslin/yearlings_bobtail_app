@@ -33,7 +33,7 @@ class WindowResizeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isWindowBeingResized: PropTypes.bool.isRequired,
+        isWindowResizeInFlux: PropTypes.bool.isRequired,
         updateDeviceStore: PropTypes.func.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired
@@ -50,26 +50,22 @@ class WindowResizeListener extends PureComponent {
 
     _checkWindowResizing(prevProps = {}) {
         const
-            { isWindowBeingResized } = this.props,
-            { isWindowBeingResized: wasWindowBeingResized } = prevProps
+            { isWindowResizeInFlux } = this.props,
+            { isWindowResizeInFlux: wasWindowResizeInFlux } = prevProps
 
         // Is still being resized.
-        if (isWindowBeingResized && !wasWindowBeingResized) {
-            this._beginExitTransitions()
+        if (isWindowResizeInFlux && !wasWindowResizeInFlux) {
+            this._initiateExitTransition()
 
         // Is now finished resizing.
-        } else if (!isWindowBeingResized && wasWindowBeingResized) {
+        } else if (!isWindowResizeInFlux && wasWindowResizeInFlux) {
             this._updateState()
         }
     }
 
-    _beginExitTransitions() {
-        this.props.updateDeviceStore({
-            canTheatreRender: false
-        })
-        this.props.updateRenderStore({
-            didTheatreRender: false
-        })
+    _initiateExitTransition() {
+        this.props.updateDeviceStore({ canTheatreEnter: false })
+        this.props.updateRenderStore({ didTheatreEnter: false })
     }
 
     _updateState = () => {
@@ -134,7 +130,7 @@ class WindowResizeListener extends PureComponent {
         logRender('Theatre can render.')
 
         this.props.updateDeviceStore({
-            canTheatreRender: true,
+            canTheatreEnter: true,
             deviceIndex,
             windowWidth,
             windowHeight,
@@ -195,9 +191,9 @@ class WindowResizeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: { isWindowBeingResized }
+    changeStore: { isWindowResizeInFlux }
 }) => ({
-    isWindowBeingResized
+    isWindowResizeInFlux
 })
 
 export default connect(

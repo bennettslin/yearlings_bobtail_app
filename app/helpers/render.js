@@ -1,8 +1,8 @@
 const
-    CAN_THEATRE_RENDER = 'canTheatreRender',
-    CAN_SCENE_RENDER = 'canSceneRender',
-    CAN_LYRIC_RENDER = 'canLyricRender',
-    CAN_CAROUSEL_RENDER = 'canCarouselRender',
+    CAN_THEATRE_RENDER = 'canTheatreEnter',
+    CAN_SCENE_RENDER = 'canSceneEnter',
+    CAN_LYRIC_RENDER = 'canLyricEnter',
+    CAN_CAROUSEL_RENDER = 'canCarouselEnter',
 
     THEATRE_SCENE_LYRIC_CAROUSEL_ORDER = [
         CAN_THEATRE_RENDER,

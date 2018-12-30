@@ -17,7 +17,7 @@ class SongChangeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSongBeingSelected: PropTypes.bool.isRequired,
+        isSongSelectInFlux: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
@@ -29,45 +29,39 @@ class SongChangeListener extends PureComponent {
 
     _checkSongChange(prevProps) {
         const
-            { isSongBeingSelected } = this.props,
-            { isSongBeingSelected: wasSongBeingSelected } = prevProps
+            { isSongSelectInFlux } = this.props,
+            { isSongSelectInFlux: wasSongSelectInFlux } = prevProps
 
         // Is still being selected
-        if (isSongBeingSelected && !wasSongBeingSelected) {
-            this._beginExitTransitions()
+        if (isSongSelectInFlux && !wasSongSelectInFlux) {
+            this._initiateExitTransition()
 
         // Is done being selected.
-        } else if (!isSongBeingSelected && wasSongBeingSelected) {
+        } else if (!isSongSelectInFlux && wasSongSelectInFlux) {
             this._handleSongChangeRenderable()
         }
     }
 
-    _beginExitTransitions() {
-        this.props.updateSceneStore({ canSceneRender: false })
+    _initiateExitTransition() {
+        this.props.updateSceneStore({ canSceneEnter: false })
         this.props.updateLyricStore({
-            canLyricRender: false,
-            canCarouselRender: false
+            canLyricEnter: false,
+            canCarouselEnter: false
         })
         this.props.updateRenderStore({
-            didSceneRender: false,
-            didLyricRender: false,
-            didCarouselRender: false
+            didSceneEnter: false,
+            didLyricEnter: false,
+            didCarouselEnter: false
         })
     }
 
     _handleSongChangeRenderable() {
-        const nextKey = getNextKeyCanRender({
-            currentKey: CAN_THEATRE_RENDER
-        })
+        const nextKey = getNextKeyCanRender({ currentKey: CAN_THEATRE_RENDER })
 
         if (nextKey === CAN_SCENE_RENDER) {
-            this.props.updateSceneStore({
-                [nextKey]: true
-            })
+            this.props.updateSceneStore({ [nextKey]: true })
         } else {
-            this.props.updateLyricStore({
-                [nextKey]: true
-            })
+            this.props.updateLyricStore({ [nextKey]: true })
         }
     }
 
@@ -77,9 +71,9 @@ class SongChangeListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: { isSongBeingSelected }
+    changeStore: { isSongSelectInFlux }
 }) => ({
-    isSongBeingSelected
+    isSongSelectInFlux
 })
 
 export default connect(

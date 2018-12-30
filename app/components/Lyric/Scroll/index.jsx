@@ -15,11 +15,11 @@ import TempGlobalAnnotations from './TempGlobalAnnotations'
 
 const mapStateToProps = ({
     lyricStore: {
-        canLyricRender,
+        canLyricEnter,
         lyricSongIndex
     }
 }) => ({
-    canLyricRender,
+    canLyricEnter,
     lyricSongIndex
 })
 
@@ -31,7 +31,7 @@ class LyricScroll extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricRender: PropTypes.bool.isRequired,
+        canLyricEnter: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
 
@@ -84,7 +84,7 @@ class LyricScroll extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didLyricRender: true })
+        this.props.updateRenderStore({ didLyricEnter: true })
     }
 
     _getRefs = (payload) => {
@@ -93,7 +93,7 @@ class LyricScroll extends PureComponent {
 
     render() {
         const {
-            canLyricRender,
+            canLyricEnter,
             determineVerseBars
         } = this.props
 
@@ -104,7 +104,7 @@ class LyricScroll extends PureComponent {
                     unmountOnExit
                     mountOnEnter
                     {...{
-                        in: canLyricRender,
+                        in: canLyricEnter,
                         timeout: {
                             exit: 200,
                             enter: 0

@@ -7,7 +7,7 @@ import { updateTransientStore } from 'flux/transient/action'
 
 const mapStateToProps = ({
     lyricStore: {
-        canCarouselRender,
+        canCarouselEnter,
         lyricAnnotationIndex
     },
     toggleStore: {
@@ -22,7 +22,7 @@ const mapStateToProps = ({
     isScoreShown,
     isTitleShown,
     isOverlayingAnnotation,
-    canCarouselRender,
+    canCarouselEnter,
     lyricAnnotationIndex,
     selectedWikiIndex
 })
@@ -31,7 +31,7 @@ class PopupAnnotationListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
+        canCarouselEnter: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
@@ -48,7 +48,7 @@ class PopupAnnotationListener extends PureComponent {
 
     _handlePopupAnnotationVisible() {
         const {
-                canCarouselRender,
+                canCarouselEnter,
                 lyricAnnotationIndex,
                 isCarouselShown,
                 isOverlayingAnnotation,
@@ -58,7 +58,7 @@ class PopupAnnotationListener extends PureComponent {
             } = this.props,
 
             isPopupAnnotationVisible =
-                canCarouselRender &&
+                canCarouselEnter &&
                 Boolean(lyricAnnotationIndex) &&
 
                 /**

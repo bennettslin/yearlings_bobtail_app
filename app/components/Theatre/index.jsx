@@ -17,16 +17,16 @@ import Ceiling from './Ceiling'
 import Floor from './Floor'
 
 const mapStateToProps = ({
-    deviceStore: { canTheatreRender }
+    deviceStore: { canTheatreEnter }
 }) => ({
-    canTheatreRender
+    canTheatreEnter
 })
 
 class Theatre extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canTheatreRender: PropTypes.bool.isRequired,
+        canTheatreEnter: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
@@ -35,17 +35,17 @@ class Theatre extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didTheatreRender: true })
+        this.props.updateRenderStore({ didTheatreEnter: true })
     }
 
     render() {
-        const { canTheatreRender } = this.props
+        const { canTheatreEnter } = this.props
 
         return (
             <CSSTransition
                 mountOnEnter
                 {...{
-                    in: canTheatreRender,
+                    in: canTheatreEnter,
                     timeout: 200,
                     classNames: {
                         enterDone: 'Theatre__visible'

@@ -11,8 +11,8 @@ class ScrollRenderListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
-        didCarouselRender: PropTypes.bool.isRequired,
-        didLyricRender: PropTypes.bool.isRequired,
+        didCarouselEnter: PropTypes.bool.isRequired,
+        didLyricEnter: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         updateScrollCarouselStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired
@@ -27,14 +27,14 @@ class ScrollRenderListener extends PureComponent {
         const
             {
                 isSelectedLogue,
-                didCarouselRender
+                didCarouselEnter
             } = this.props,
-            { didCarouselRender: couldCarouselRender } = prevProps
+            { didCarouselEnter: couldCarouselRender } = prevProps
 
         // TODO: This now scrolls, but maybe do with no animation.
         if (
             !isSelectedLogue
-            && didCarouselRender
+            && didCarouselEnter
             && !couldCarouselRender
         ) {
             const { selectedAnnotationIndex } = this.props
@@ -52,14 +52,14 @@ class ScrollRenderListener extends PureComponent {
         const
             {
                 isSelectedLogue,
-                didLyricRender
+                didLyricEnter
             } = this.props,
-            { didLyricRender: couldRender } = prevProps
+            { didLyricEnter: couldRender } = prevProps
 
         // TODO: This now scrolls, but maybe do with no animation.
         if (
             !isSelectedLogue
-            && didLyricRender
+            && didLyricEnter
             && !couldRender
         ) {
             this.props.updateScrollLyricStore({
@@ -80,13 +80,13 @@ const mapStateToProps = ({
         selectedAnnotationIndex
     },
     renderStore: {
-        didCarouselRender,
-        didLyricRender
+        didCarouselEnter,
+        didLyricEnter
     }
 }) => ({
     isSelectedLogue,
-    didCarouselRender,
-    didLyricRender,
+    didCarouselEnter,
+    didLyricEnter,
     selectedAnnotationIndex
 })
 

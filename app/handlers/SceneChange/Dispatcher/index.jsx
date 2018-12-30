@@ -38,14 +38,14 @@ class SceneChangeDispatcher extends PureComponent {
             selectedSongIndex === prevSongIndex &&
             selectedSceneIndex !== prevSceneIndex
         ) {
-            this._dispatchSceneChanging()
+            this._dispatchSceneSelectInFlux()
         }
     }
 
 
-    _dispatchSceneChanging = () => {
+    _dispatchSceneSelectInFlux = () => {
         this.props.updateChangeStore({
-            isSceneBeingSelected: true,
+            isSceneSelectInFlux: true,
             isSceneDonePreparing: false
         })
 
@@ -56,7 +56,7 @@ class SceneChangeDispatcher extends PureComponent {
          * Wait for scene selection to finish.
          */
         const sceneChangeTimeoutId = setTimeout(
-            this._dispatchSceneChanged, 200
+            this._dispatchSceneSelectComplete, 200
         )
 
         this.setState({
@@ -64,8 +64,8 @@ class SceneChangeDispatcher extends PureComponent {
         })
     }
 
-    _dispatchSceneChanged = () => {
-        this.props.updateChangeStore({ isSceneBeingSelected: false })
+    _dispatchSceneSelectComplete = () => {
+        this.props.updateChangeStore({ isSceneSelectInFlux: false })
     }
 
     render() {

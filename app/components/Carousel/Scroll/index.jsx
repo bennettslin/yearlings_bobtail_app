@@ -12,7 +12,7 @@ import { getAnnotationsCount } from 'album/api/annotations'
 import { getArrayOfLength } from 'helpers/general'
 
 const mapStateToProps = ({
-    lyricStore: { canCarouselRender },
+    lyricStore: { canCarouselEnter },
     lyricStore: {
         lyricSongIndex,
         lyricAnnotationIndex
@@ -26,7 +26,7 @@ const mapStateToProps = ({
     accessStore: { accessedAnnotationIndex },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
-    canCarouselRender,
+    canCarouselEnter,
     lyricSongIndex,
     lyricAnnotationIndex,
     isAccessOn,
@@ -41,7 +41,7 @@ class CarouselScroll extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
+        canCarouselEnter: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
@@ -62,12 +62,12 @@ class CarouselScroll extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didCarouselRender: true })
+        this.props.updateRenderStore({ didCarouselEnter: true })
     }
 
     render() {
         const {
-            canCarouselRender,
+            canCarouselEnter,
             lyricSongIndex,
             lyricAnnotationIndex,
             accessedAnnotationIndex,
@@ -94,7 +94,7 @@ class CarouselScroll extends PureComponent {
                 unmountOnExit
                 mountOnEnter
                 {...{
-                    in: canCarouselRender,
+                    in: canCarouselEnter,
                     timeout: {
                         exit: 200,
                         enter: 0

@@ -16,15 +16,15 @@ class WindowResizeDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        window.onresize = debounce(this._dispatchWindowResizing, 0)
+        window.onresize = debounce(this._dispatchWindowResizeInFlux, 0)
     }
 
     componentWillUnmount() {
         window.onresize = null
     }
 
-    _dispatchWindowResizing = () => {
-        this.props.updateChangeStore({ isWindowBeingResized: true })
+    _dispatchWindowResizeInFlux = () => {
+        this.props.updateChangeStore({ isWindowResizeInFlux: true })
 
         // Clear previous timeout.
         clearTimeout(this.state.windowResizeTimeoutId)
@@ -33,7 +33,7 @@ class WindowResizeDispatcher extends PureComponent {
          * Wait for window resize to finish.
          */
         const windowResizeTimeoutId = setTimeout(
-            this._dispatchWindowResized, 250
+            this._dispatchWindowResizeComplete, 250
         )
 
         this.setState({
@@ -41,8 +41,8 @@ class WindowResizeDispatcher extends PureComponent {
         })
     }
 
-    _dispatchWindowResized = () => {
-        this.props.updateChangeStore({ isWindowBeingResized: false })
+    _dispatchWindowResizeComplete = () => {
+        this.props.updateChangeStore({ isWindowResizeInFlux: false })
     }
 
     render() {

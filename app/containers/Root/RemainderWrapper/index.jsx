@@ -14,7 +14,7 @@ class RemainderWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        didLyricRender: PropTypes.bool.isRequired,
+        didLyricEnter: PropTypes.bool.isRequired,
 
         accessedKey: PropTypes.string.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
@@ -49,7 +49,7 @@ class RemainderWrapper extends PureComponent {
     render() {
         const {
                 accessedKey,
-                didLyricRender,
+                didLyricEnter,
                 isAccessOn,
                 lyricAnnotationIndex,
                 isRenderedLogue,
@@ -94,7 +94,7 @@ class RemainderWrapper extends PureComponent {
                          * When transitioning between songs, explicitly reset
                          * all verse trackers.
                          */
-                        didLyricRender ?
+                        didLyricEnter ?
                             'RM__canTrackVerse' : 'RM__cannotTrackVerse',
 
                         isAccessOn ? 'RM__accessOn' : 'RM__accessOff',
@@ -173,7 +173,7 @@ const mapStateToProps = ({
         isCarouselNavShowable,
         isEarShown
     },
-    renderStore: { didLyricRender },
+    renderStore: { didLyricEnter },
     lyricStore: {
         lyricAnnotationIndex,
         isRenderedLogue
@@ -208,7 +208,7 @@ const mapStateToProps = ({
     selectedTipsOption,
     isEarShown,
     isPlaying,
-    didLyricRender,
+    didLyricEnter,
     lyricAnnotationIndex,
     isRenderedLogue,
     isSliderTouched,

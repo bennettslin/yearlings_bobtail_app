@@ -15,10 +15,10 @@ import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     loadStore: { appMounted },
-    lyricStore: { canLyricRender }
+    lyricStore: { canLyricEnter }
 }) => ({
     appMounted,
-    canLyricRender
+    canLyricEnter
 })
 
 class Slider extends PureComponent {
@@ -26,7 +26,7 @@ class Slider extends PureComponent {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        canLyricRender: PropTypes.bool.isRequired
+        canLyricEnter: PropTypes.bool.isRequired
     }
 
     _handleTouchDown = (e) => {
@@ -44,7 +44,7 @@ class Slider extends PureComponent {
     render() {
         const {
             appMounted,
-            canLyricRender
+            canLyricEnter
         } = this.props
 
         return appMounted && (
@@ -53,7 +53,7 @@ class Slider extends PureComponent {
                     ref: this._getSliderElement,
                     className: cx(
                         'Slider',
-                        canLyricRender && 'Slider__visible'
+                        canLyricEnter && 'Slider__visible'
                     ),
                     onMouseDown: this._handleTouchDown,
                     onTouchStart: this._handleTouchDown

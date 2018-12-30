@@ -17,7 +17,7 @@ class SceneChangeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSceneBeingSelected: PropTypes.bool.isRequired,
+        isSceneSelectInFlux: PropTypes.bool.isRequired,
         isSceneDonePreparing: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedSceneIndex: PropTypes.number.isRequired,
@@ -33,17 +33,17 @@ class SceneChangeListener extends PureComponent {
     _checkSceneChange(prevProps) {
         const
             {
-                isSceneBeingSelected,
+                isSceneSelectInFlux,
                 isSceneDonePreparing
             } = this.props,
             {
-                isSceneBeingSelected: wasSceneBeingSelected,
+                isSceneSelectInFlux: wasSceneSelectInFlux,
                 isSceneDonePreparing: wasSceneDonePreparing
             } = prevProps
 
         // Is still being selected.
-        if (isSceneBeingSelected && !wasSceneBeingSelected) {
-            this._beginExitTransitions()
+        if (isSceneSelectInFlux && !wasSceneSelectInFlux) {
+            this._initiateExitTransition()
 
         // After scene change, slider and scroll transitions are now complete.
         } else if (isSceneDonePreparing && !wasSceneDonePreparing) {
@@ -51,9 +51,9 @@ class SceneChangeListener extends PureComponent {
         }
     }
 
-    _beginExitTransitions() {
-        this.props.updateSceneStore({ canSceneRender: false })
-        this.props.updateRenderStore({ didSceneRender: false })
+    _initiateExitTransition() {
+        this.props.updateSceneStore({ canSceneEnter: false })
+        this.props.updateRenderStore({ didSceneEnter: false })
     }
 
     _updateState() {
@@ -78,7 +78,7 @@ class SceneChangeListener extends PureComponent {
         logRender('Scene can render.')
 
         this.props.updateSceneStore({
-            canSceneRender: true,
+            canSceneEnter: true,
             sceneCubesKey,
             sceneSongIndex: selectedSongIndex,
             sceneSceneIndex: selectedSceneIndex,
@@ -95,7 +95,7 @@ class SceneChangeListener extends PureComponent {
 
 const mapStateToProps = ({
     changeStore: {
-        isSceneBeingSelected,
+        isSceneSelectInFlux,
         isSceneDonePreparing
     },
     selectedStore: {
@@ -103,7 +103,7 @@ const mapStateToProps = ({
         selectedSceneIndex
     }
 }) => ({
-    isSceneBeingSelected,
+    isSceneSelectInFlux,
     isSceneDonePreparing,
     selectedSongIndex,
     selectedSceneIndex

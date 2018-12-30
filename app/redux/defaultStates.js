@@ -79,11 +79,11 @@ export const AUDIO_DEFAULTS = {
 }
 
 export const CHANGE_DEFAULTS = {
-    isSceneBeingSelected: false,
+    isSceneSelectInFlux: false,
     isSceneDonePreparing: true,
-    isSongBeingSelected: false,
+    isSongSelectInFlux: false,
     isSongDonePreparing: true,
-    isWindowBeingResized: false
+    isWindowResizeInFlux: false
 }
 
 export const CURTAIN_DEFAULTS = {
@@ -94,7 +94,7 @@ export const CURTAIN_DEFAULTS = {
 }
 
 export const DEVICE_DEFAULTS = {
-    canTheatreRender: false,
+    canTheatreEnter: false,
     deviceIndex: DEVICE_OBJECTS.length - 1,
     isPhone: false,
     isDesktop: false,
@@ -125,8 +125,8 @@ export const LOAD_DEFAULTS = {
 }
 
 export const LYRIC_DEFAULTS = {
-    canLyricRender: false,
-    canCarouselRender: false,
+    canLyricEnter: false,
+    canCarouselEnter: false,
     lyricSongIndex: storedSongIndex,
     lyricAnnotationIndex: storedAnnotationIndex,
     lyricVerseIndex: storedVerseIndex,
@@ -153,10 +153,10 @@ export const PLAYERS_DEFAULTS = {
 }
 
 export const RENDER_DEFAULTS = {
-    didTheatreRender: false,
-    didSceneRender: false,
-    didLyricRender: false,
-    didCarouselRender: false
+    didTheatreEnter: false,
+    didSceneEnter: false,
+    didLyricEnter: false,
+    didCarouselEnter: false
 }
 
 export const RESPONSIVE_DEFAULTS = {
@@ -185,7 +185,7 @@ const {
     sceneCubes = getCubesForKey(sceneCubesKey)
 
 export const SCENE_DEFAULTS = {
-    canSceneRender: false,
+    canSceneEnter: false,
     sceneCubesKey,
     sceneTime,
     sceneSeason,

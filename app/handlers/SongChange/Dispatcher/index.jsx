@@ -21,13 +21,13 @@ class SongChangeDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            dispatchSongChanging:
-                this.dispatchSongChanging
+            dispatchSongSelectInFlux:
+                this.dispatchSongSelectInFlux
         })
     }
 
-    dispatchSongChanging = (callback) => {
-        this.props.updateChangeStore({ isSongBeingSelected: true })
+    dispatchSongSelectInFlux = (callback) => {
+        this.props.updateChangeStore({ isSongSelectInFlux: true })
 
         // Clear previous timeout.
         clearTimeout(this.state.songChangeTimeoutId)
@@ -36,7 +36,7 @@ class SongChangeDispatcher extends PureComponent {
          * Wait for song selection to finish.
          */
         const songChangeTimeoutId = setTimeout(
-            this._dispatchSongChanged.bind(this, callback), 500
+            this._dispatchSongSelectComplete.bind(this, callback), 200
         )
 
         this.setState({
@@ -44,8 +44,8 @@ class SongChangeDispatcher extends PureComponent {
         })
     }
 
-    _dispatchSongChanged = (callback) => {
-        this.props.updateChangeStore({ isSongBeingSelected: false })
+    _dispatchSongSelectComplete = (callback) => {
+        this.props.updateChangeStore({ isSongSelectInFlux: false })
         callback()
     }
 

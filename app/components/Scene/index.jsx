@@ -13,10 +13,10 @@ import Wood from './Wood'
 
 const mapStateToProps = ({
     loadStore: { appMounted },
-    sceneStore: { canSceneRender }
+    sceneStore: { canSceneEnter }
 }) => ({
     appMounted,
-    canSceneRender
+    canSceneEnter
 })
 
 class Scene extends PureComponent {
@@ -24,7 +24,7 @@ class Scene extends PureComponent {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        canSceneRender: PropTypes.bool.isRequired,
+        canSceneEnter: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
 
@@ -33,20 +33,20 @@ class Scene extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didSceneRender: true })
+        this.props.updateRenderStore({ didSceneEnter: true })
     }
 
     render() {
         const {
             appMounted,
-            canSceneRender
+            canSceneEnter
         } = this.props
 
         return (
             <Transition
                 mountOnEnter
                 {...{
-                    in: canSceneRender,
+                    in: canSceneEnter,
                     timeout: 200,
                     onEntered: this._handleTransitionEntered
                 }}

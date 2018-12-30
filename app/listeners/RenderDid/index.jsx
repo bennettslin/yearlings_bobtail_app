@@ -20,10 +20,10 @@ class RenderDidListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        didTheatreRender: PropTypes.bool.isRequired,
-        didSceneRender: PropTypes.bool.isRequired,
-        didLyricRender: PropTypes.bool.isRequired,
-        didCarouselRender: PropTypes.bool.isRequired,
+        didTheatreEnter: PropTypes.bool.isRequired,
+        didSceneEnter: PropTypes.bool.isRequired,
+        didLyricEnter: PropTypes.bool.isRequired,
+        didCarouselEnter: PropTypes.bool.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
@@ -51,10 +51,10 @@ class RenderDidListener extends PureComponent {
 
     _checkTheatreDidRender(prevProps) {
         const
-            { didTheatreRender } = this.props,
-            { didTheatreRender: hadTheatreRendered } = prevProps
+            { didTheatreEnter } = this.props,
+            { didTheatreEnter: hadTheatreRendered } = prevProps
 
-        if (didTheatreRender && !hadTheatreRendered) {
+        if (didTheatreEnter && !hadTheatreRendered) {
             logRender('Theatre did render.')
 
             if (!this.props.appMounted) {
@@ -84,10 +84,10 @@ class RenderDidListener extends PureComponent {
 
     _checkSceneDidRender(prevProps) {
         const
-            { didSceneRender } = this.props,
-            { didSceneRender: hadSceneRendered } = prevProps
+            { didSceneEnter } = this.props,
+            { didSceneEnter: hadSceneRendered } = prevProps
 
-        if (didSceneRender && !hadSceneRendered) {
+        if (didSceneEnter && !hadSceneRendered) {
             logRender('Scene did render.')
 
             const nextKey = getNextKeyCanRender({ currentKey: CAN_SCENE_RENDER })
@@ -99,10 +99,10 @@ class RenderDidListener extends PureComponent {
 
     _checkLyricDidRender(prevProps) {
         const
-            { didLyricRender } = this.props,
-            { didLyricRender: hadLyricRendered } = prevProps
+            { didLyricEnter } = this.props,
+            { didLyricEnter: hadLyricRendered } = prevProps
 
-        if (didLyricRender && !hadLyricRendered) {
+        if (didLyricEnter && !hadLyricRendered) {
             logRender('Lyric did render.')
 
             const nextKey = getNextKeyCanRender({
@@ -123,10 +123,10 @@ class RenderDidListener extends PureComponent {
 
     _checkCarouselDidRender(prevProps) {
         const
-            { didCarouselRender } = this.props,
-            { didCarouselRender: hadCarouselRendered } = prevProps
+            { didCarouselEnter } = this.props,
+            { didCarouselEnter: hadCarouselRendered } = prevProps
 
-        if (didCarouselRender && !hadCarouselRendered) {
+        if (didCarouselEnter && !hadCarouselRendered) {
             logRender('Carousel did render.')
 
             const nextKey = getNextKeyCanRender({
@@ -153,17 +153,17 @@ class RenderDidListener extends PureComponent {
 const mapStateToProps = ({
     loadStore: { appMounted },
     renderStore: {
-        didTheatreRender,
-        didSceneRender,
-        didLyricRender,
-        didCarouselRender
+        didTheatreEnter,
+        didSceneEnter,
+        didLyricEnter,
+        didCarouselEnter
     }
 }) => ({
     appMounted,
-    didTheatreRender,
-    didSceneRender,
-    didLyricRender,
-    didCarouselRender
+    didTheatreEnter,
+    didSceneEnter,
+    didLyricEnter,
+    didCarouselEnter
 })
 
 export default connect(
