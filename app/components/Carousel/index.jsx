@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateChangeStore } from 'flux/change/action'
-import { updateRenderStore } from 'flux/render/action'
+import { updateTransitionStore } from 'flux/transition/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import ScrollCarouselListener from '../../listeners/Scroll/Carousel'
@@ -29,7 +29,7 @@ class Carousel extends PureComponent {
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         isUnrenderableCarouselNav: PropTypes.bool.isRequired,
         updateChangeStore: PropTypes.func.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
+        updateTransitionStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -49,7 +49,7 @@ class Carousel extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didCarouselEnter: true })
+        this.props.updateTransitionStore({ didCarouselEnter: true })
     }
 
     _getRefs = (payload) => {
@@ -68,9 +68,7 @@ class Carousel extends PureComponent {
                 {...{
                     in: !isUnrenderableCarouselNav && canLyricCarouselEnter,
                     timeout: 250,
-                    classNames: {
-                        enterDone: 'Carousel__visible'
-                    },
+                    classNames: { enterDone: 'Carousel__visible' },
                     onExited: this._handleTransitionExited,
                     onEntered: this._handleTransitionEntered
                 }}
@@ -101,6 +99,6 @@ export default connect(
     mapStateToProps,
     {
         updateChangeStore,
-        updateRenderStore
+        updateTransitionStore
     }
 )(Carousel)

@@ -39,9 +39,7 @@ class Curtains extends PureComponent {
                 {...{
                     in: canLyricCarouselEnter,
                     timeout: 250,
-                    classNames: {
-                        enterDone: 'Curtains__parted'
-                    },
+                    classNames: { enterDone: 'Curtains__parted' },
                     onExited: this._handleTransitionExited
                 }}
             >

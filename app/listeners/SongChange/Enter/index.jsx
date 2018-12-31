@@ -59,7 +59,7 @@ class SongChangeEnterListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    renderStore: {
+    transitionStore: {
         didSceneUpdate,
         didLyricUpdate,
         didCarouselUpdate

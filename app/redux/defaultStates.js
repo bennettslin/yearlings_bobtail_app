@@ -56,6 +56,26 @@ const
         storedVerseIndex
     )
 
+export const CHANGE_DEFAULTS = {
+    isSceneChangeScrollExitDone: false,
+
+    isSongSelectInFlux: false,
+    isSongChangeCarouselExitDone: false,
+    isSongChangeLyricExitDone: false,
+    isSongChangeCurtainExitDone: false
+}
+
+export const TRANSITION_DEFAULTS = {
+    didSceneUpdate: false,
+    didLyricUpdate: false,
+    didCarouselUpdate: false,
+
+    didTheatreEnter: false,
+    didSceneEnter: false,
+    didLyricEnter: false,
+    didCarouselEnter: false
+}
+
 export const ACCESS_DEFAULTS = {
     accessedKey: '',
     accessedAnnotationIndex: storedAnnotationIndex || 1,
@@ -76,26 +96,6 @@ export const AUDIO_DEFAULTS = {
     queuedPlayFromLogue: false,
     queuedPlaySongIndex: -1,
     queuedPlayVerseIndex: -1
-}
-
-export const CHANGE_DEFAULTS = {
-    isSceneChangeScrollExitDone: true,
-
-    isSongSelectInFlux: false,
-    isSongChangeCarouselExitDone: true,
-    isSongChangeLyricExitDone: true,
-    isSongChangeCurtainExitDone: true
-}
-
-export const RENDER_DEFAULTS = {
-    didTheatreEnter: false,
-    didSceneEnter: false,
-    didLyricEnter: false,
-    didCarouselEnter: false,
-
-    didSceneUpdate: false,
-    didLyricUpdate: false,
-    didCarouselUpdate: false
 }
 
 export const DEVICE_DEFAULTS = {
@@ -184,18 +184,19 @@ const {
 
 export const SCENE_DEFAULTS = {
     canSceneEnter: false,
+    canSceneUpdate: false,
     sceneCubesKey,
     sceneTime,
     sceneSeason,
     sceneSongIndex: storedSongIndex,
     sceneSceneIndex: storedSceneIndex,
+    sceneCubes,
 
     /**
      * Stored only for dev clarity. Components will retrieve these layers
      * through indices to avoid unnecessary updates.
      */
-    scenePresenceLayers,
-    sceneCubes
+    scenePresenceLayers
 }
 
 export const SCROLL_CAROUSEL_DEFAULTS = {

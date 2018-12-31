@@ -30,7 +30,6 @@ class SceneChangeUpdateDispatcher extends PureComponent {
         })
     }
 
-    // TODO: Scene can enter in two places. Is this correct?
     dispatchCanSceneEnter = ({
         selectedSongIndex = this.props.selectedSongIndex,
         selectedSceneIndex = this.props.selectedSceneIndex

@@ -2,7 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateChangeStore } from 'flux/change/action'
-import { updateRenderStore } from 'flux/render/action'
+import { updateTransitionStore } from 'flux/transition/action'
 import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
 
@@ -13,7 +13,7 @@ class SongChangeExitListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         isSongSelectInFlux: PropTypes.bool.isRequired,
         updateChangeStore: PropTypes.func.isRequired,
-        updateRenderStore: PropTypes.func.isRequired,
+        updateTransitionStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
     }
@@ -52,7 +52,7 @@ class SongChangeExitListener extends PureComponent {
                 canLyricCarouselEnter: false,
                 canLyricCarouselUpdate: false
             })
-            this.props.updateRenderStore({
+            this.props.updateTransitionStore({
                 didSceneEnter: false,
                 didLyricEnter: false,
                 didCarouselEnter: false,
@@ -97,7 +97,7 @@ export default connect(
     mapStateToProps,
     {
         updateChangeStore,
-        updateRenderStore,
+        updateTransitionStore,
         updateLyricStore,
         updateSceneStore
     }

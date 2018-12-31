@@ -1,13 +1,13 @@
 // Reducers for can enter state.
-import { RENDER_STORE } from '../storeKeys'
-import { RENDER_DEFAULTS } from '../defaultStates'
+import { TRANSITION_STORE } from '../storeKeys'
+import { TRANSITION_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = RENDER_DEFAULTS,
+    state = TRANSITION_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case RENDER_STORE:
+        case TRANSITION_STORE:
             return {
                 ...state,
                 ...action.payload

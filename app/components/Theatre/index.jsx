@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateRenderStore } from 'flux/render/action'
+import { updateTransitionStore } from 'flux/transition/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Scene from '../Scene'
@@ -27,7 +27,7 @@ class Theatre extends PureComponent {
     static propTypes = {
         // Through Redux.
         canTheatreEnter: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
+        updateTransitionStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -35,7 +35,7 @@ class Theatre extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didTheatreEnter: true })
+        this.props.updateTransitionStore({ didTheatreEnter: true })
     }
 
     render() {
@@ -47,9 +47,7 @@ class Theatre extends PureComponent {
                 {...{
                     in: canTheatreEnter,
                     timeout: 200,
-                    classNames: {
-                        enterDone: 'Theatre__visible'
-                    },
+                    classNames: { enterDone: 'Theatre__visible' },
                     onEntered: this._handleTransitionEntered
                 }}
             >
@@ -57,8 +55,6 @@ class Theatre extends PureComponent {
                     'Theatre',
                     'abF'
                 )}>
-
-                    {/* Scene is behind theatre due to presence transitions. */}
                     <Stage>
                         <Scene />
                     </Stage>
@@ -81,5 +77,5 @@ class Theatre extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateRenderStore }
+    { updateTransitionStore }
 )(Theatre)

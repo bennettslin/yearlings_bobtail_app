@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateChangeStore } from 'flux/change/action'
-import { updateRenderStore } from 'flux/render/action'
+import { updateTransitionStore } from 'flux/transition/action'
 
 import Transition from 'react-transition-group/Transition'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -38,7 +38,7 @@ class Lyric extends PureComponent {
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         updateChangeStore: PropTypes.func.isRequired,
-        updateRenderStore: PropTypes.func.isRequired,
+        updateTransitionStore: PropTypes.func.isRequired,
 
         // From parent.
         setLyricFocusElement: PropTypes.func.isRequired
@@ -65,7 +65,7 @@ class Lyric extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didLyricEnter: true })
+        this.props.updateTransitionStore({ didLyricEnter: true })
     }
 
     _getRefs = (payload) => {
@@ -86,9 +86,7 @@ class Lyric extends PureComponent {
                     {...{
                         in: canLyricCarouselEnter,
                         timeout: 250,
-                        classNames: {
-                            enterDone: 'Lyric__visible'
-                        },
+                        classNames: { enterDone: 'Lyric__visible' },
                         onExited: this._handleTransitionExited,
                         onEntered: this._handleTransitionEntered
                     }}
@@ -156,6 +154,6 @@ export default connect(
     mapStateToProps,
     {
         updateChangeStore,
-        updateRenderStore
+        updateTransitionStore
     }
 )(Lyric)

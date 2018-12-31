@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateRenderStore } from 'flux/render/action'
+import { updateTransitionStore } from 'flux/transition/action'
 
 import Transition from 'react-transition-group/Transition'
 import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
@@ -33,7 +33,7 @@ class LyricScroll extends PureComponent {
         // Through Redux.
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
-        updateRenderStore: PropTypes.func.isRequired,
+        updateTransitionStore: PropTypes.func.isRequired,
 
         // From parent.
         determineVerseBars: PropTypes.func.isRequired,
@@ -84,7 +84,7 @@ class LyricScroll extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didLyricUpdate: true })
+        this.props.updateTransitionStore({ didLyricUpdate: true })
     }
 
     _getRefs = (payload) => {
@@ -152,5 +152,5 @@ class LyricScroll extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateRenderStore }
+    { updateTransitionStore }
 )(LyricScroll)

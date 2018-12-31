@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateRenderStore } from 'flux/render/action'
+import { updateTransitionStore } from 'flux/transition/action'
 
 import Transition from 'react-transition-group/Transition'
 import Layers from './Layers'
@@ -22,7 +22,7 @@ class Scene extends PureComponent {
     static propTypes = {
         // Through Redux.
         canSceneEnter: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired
+        updateTransitionStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -30,16 +30,14 @@ class Scene extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({
+        this.props.updateTransitionStore({
             didSceneEnter: true,
             didSceneUpdate: true
         })
     }
 
     render() {
-        const {
-            canSceneEnter
-        } = this.props
+        const { canSceneEnter } = this.props
 
         return (
             <Transition
@@ -64,5 +62,5 @@ class Scene extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateRenderStore }
+    { updateTransitionStore }
 )(Scene)

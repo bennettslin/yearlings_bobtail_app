@@ -79,7 +79,7 @@ const mapStateToProps = ({
         isSelectedLogue,
         selectedAnnotationIndex
     },
-    renderStore: {
+    transitionStore: {
         didCarouselEnter,
         didLyricEnter
     }

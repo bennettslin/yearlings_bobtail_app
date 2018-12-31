@@ -1,5 +1,6 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 
+import AppLoadListener from '../../listeners/AppLoad'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
 import AudioListener from '../../listeners/Audio'
@@ -10,7 +11,6 @@ import LyricListener from '../../handlers/Lyric/Listener'
 import MainListener from '../../listeners/Main'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
-import RenderDidListener from '../../listeners/RenderDid'
 import LyricIndicesListener from '../../listeners/LyricIndices'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
 import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
@@ -50,7 +50,7 @@ class ListenerContainer extends PureComponent {
                 <MainListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
-                <RenderDidListener />
+                <AppLoadListener />
                 <LyricIndicesListener />
                 <SceneChangeExitListener />
                 <SceneChangeEnterListener />

@@ -25,13 +25,8 @@ const PresenceHocTransition = memo(({
             mountOnEnter
             {...{
                 in: Boolean(dynamicPresenceValue),
-                timeout: {
-                    exit: 200,
-                    enter: 0
-                },
-                classNames: {
-                    enterDone: 'Presence__visible'
-                },
+                timeout: 200,
+                classNames: { enterDone: 'Presence__visible' },
                 onExited: resetRenderedState
             }}
         >

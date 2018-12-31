@@ -10,7 +10,6 @@ import LoadReducer from './load/reducer'
 import LyricReducer from './lyric/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
-import RenderReducer from './render/reducer'
 import ResponsiveReducer from './responsive/reducer'
 import SceneReducer from './scene/reducer'
 import ScrollCarouselReducer from './scrollCarousel/reducer'
@@ -20,6 +19,7 @@ import SessionReducer from './session/reducer'
 import SliderReducer from './slider/reducer'
 import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
+import TransitionReducer from './transition/reducer'
 import VerseBarsReducer from './verseBars/reducer'
 
 import {
@@ -34,7 +34,6 @@ import {
     LYRIC_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
-    RENDER_STORE,
     RESPONSIVE_STORE,
     SCENE_STORE,
     SCROLL_CAROUSEL_STORE,
@@ -44,12 +43,13 @@ import {
     SLIDER_STORE,
     TOGGLE_STORE,
     TRANSIENT_STORE,
+    TRANSITION_STORE,
     VERSE_BARS_STORE
 } from './storeKeys'
 
 const rootReducer = combineReducers({
     [CHANGE_STORE]: ChangeReducer,
-    [RENDER_STORE]: RenderReducer,
+    [TRANSITION_STORE]: TransitionReducer,
 
     [SCENE_STORE]: SceneReducer,
     [LYRIC_STORE]: LyricReducer,

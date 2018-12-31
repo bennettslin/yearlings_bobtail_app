@@ -56,13 +56,8 @@ class Popup extends PureComponent {
             <CSSTransition
                 {...{
                     in: isVisible,
-                    classNames: {
-                        enterDone: 'Popup__visible'
-                    },
-                    timeout: {
-                        exit: 200,
-                        enter: 0
-                    },
+                    timeout: 200,
+                    classNames: { enterDone: 'Popup__visible' },
                     unmountOnExit: doUnmount,
                     mountOnEnter: doUnmount
                 }}
