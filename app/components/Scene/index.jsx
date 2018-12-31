@@ -12,10 +12,8 @@ import Sky from './Sky'
 import Wood from './Wood'
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
     sceneStore: { canSceneEnter }
 }) => ({
-    appMounted,
     canSceneEnter
 })
 
@@ -23,7 +21,6 @@ class Scene extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         canSceneEnter: PropTypes.bool.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
@@ -33,12 +30,14 @@ class Scene extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateRenderStore({ didSceneEnter: true })
+        this.props.updateRenderStore({
+            didSceneEnter: true,
+            didSceneUpdate: true
+        })
     }
 
     render() {
         const {
-            appMounted,
             canSceneEnter
         } = this.props
 
@@ -56,9 +55,7 @@ class Scene extends PureComponent {
                 )}>
                     <Sky />
                     <Wood />
-                    {appMounted && (
-                        <Layers />
-                    )}
+                    <Layers />
                 </div>
             </Transition>
         )

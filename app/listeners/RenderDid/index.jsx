@@ -1,4 +1,4 @@
-// Singleton to listen for change from song to logue.
+// TODO: Move all of these.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -11,7 +11,6 @@ class RenderDidListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         didTheatreEnter: PropTypes.bool.isRequired,
         didLyricEnter: PropTypes.bool.isRequired,
         didCarouselEnter: PropTypes.bool.isRequired,
@@ -21,21 +20,9 @@ class RenderDidListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._checkAppMounted(prevProps)
+        // this._checkAppMounted(prevProps)
         this._checkTheatreDidEnter(prevProps)
         this._checkLyricDidEnter(prevProps)
-    }
-
-    _checkAppMounted(prevProps) {
-        const
-            { appMounted } = this.props,
-            { appMounted: hadAppMounted } = prevProps
-
-        if (appMounted && !hadAppMounted) {
-            logEnter('App mounted.')
-
-            this._renderAfterTheatre()
-        }
     }
 
     _checkTheatreDidEnter(prevProps) {
@@ -44,30 +31,12 @@ class RenderDidListener extends PureComponent {
             { didTheatreEnter: hadTheatreRendered } = prevProps
 
         if (didTheatreEnter && !hadTheatreRendered) {
-            logEnter('Theatre did enter.')
-
-            if (!this.props.appMounted) {
-                /**
-                 * Allow theatre to be visible before others render. This
-                 * isn't always the case when the timeout duration is shorter,
-                 * for some reason.
-                 */
-                setTimeout(this._mountApp, 0)
-
-            } else {
-                this._renderAfterTheatre()
-            }
+            logEnter('Lyric can enter.')
+            this.props.updateLyricStore({ canLyricEnter: true })
         }
     }
 
-    _mountApp = () => {
-        this.props.updateLoadStore({ appMounted: true })
-    }
-
-    _renderAfterTheatre = () => {
-        this.props.updateLyricStore({ canLyricEnter: true })
-    }
-
+    // TODO: Scene can enter in two places. Is this correct?
     _checkLyricDidEnter(prevProps) {
         const
             {
@@ -88,7 +57,7 @@ class RenderDidListener extends PureComponent {
                 !hadCarouselEntered
             )
         ) {
-            logEnter('Lyric did enter.')
+            logEnter('Scene can enter.')
             this.props.updateSceneStore({ canSceneEnter: true })
         }
     }
@@ -99,14 +68,12 @@ class RenderDidListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
     renderStore: {
         didTheatreEnter,
         didLyricEnter,
         didCarouselEnter
     }
 }) => ({
-    appMounted,
     didTheatreEnter,
     didLyricEnter,
     didCarouselEnter

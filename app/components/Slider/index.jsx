@@ -14,10 +14,8 @@ import SliderAccess from './Access'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
     lyricStore: { canLyricEnter }
 }) => ({
-    appMounted,
     canLyricEnter
 })
 
@@ -25,7 +23,6 @@ class Slider extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         canLyricEnter: PropTypes.bool.isRequired
     }
 
@@ -42,12 +39,9 @@ class Slider extends PureComponent {
     }
 
     render() {
-        const {
-            appMounted,
-            canLyricEnter
-        } = this.props
+        const { canLyricEnter } = this.props
 
-        return appMounted && (
+        return (
             <div
                 {...{
                     ref: this._getSliderElement,

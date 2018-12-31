@@ -1,25 +1,18 @@
 // Singleton to listen for changes that reset render flow.
 
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSceneStore } from 'flux/scene/action'
 
-import { getScene } from 'album/api/scenes'
+import SceneChangeUpdateDispatcher from '../Update'
 
-import {
-    TIME_ANYTIME,
-    SEASON_INDOOR
-} from 'scene/sky'
+import { populateRefs } from 'helpers/ref'
 
 class SceneChangeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSceneChangeScrollExitDone: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedSceneIndex: PropTypes.number.isRequired,
-        updateSceneStore: PropTypes.func.isRequired
+        isSceneChangeScrollExitDone: PropTypes.bool.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -41,57 +34,24 @@ class SceneChangeEnterListener extends PureComponent {
     }
 
     _beginEnterTransitionWithNewState() {
-        logEnter('Scene can enter.')
+        this.dispatchCanSceneEnter()
+    }
 
-        const
-            {
-                selectedSongIndex,
-                selectedSceneIndex
-            } = this.props,
-            {
-                cubes: sceneCubesKey,
-                layers: scenePresenceLayers,
-                sky: {
-                    time: sceneTime = TIME_ANYTIME,
-                    season: sceneSeason = SEASON_INDOOR
-                }
-
-            } = getScene(
-                selectedSongIndex,
-                selectedSceneIndex
-            )
-
-        this.props.updateSceneStore({
-            canSceneEnter: true,
-            sceneCubesKey,
-            sceneSongIndex: selectedSongIndex,
-            sceneSceneIndex: selectedSceneIndex,
-            scenePresenceLayers,
-            sceneTime,
-            sceneSeason
-        })
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
-        return null
+        return (
+            <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
+        )
     }
 }
 
 const mapStateToProps = ({
-    changeStore: { isSceneChangeScrollExitDone },
-    selectedStore: {
-        selectedSongIndex,
-        selectedSceneIndex
-    }
+    changeStore: { isSceneChangeScrollExitDone }
 }) => ({
-    isSceneChangeScrollExitDone,
-    selectedSongIndex,
-    selectedSceneIndex
+    isSceneChangeScrollExitDone
 })
 
-export default connect(
-    mapStateToProps,
-    {
-        updateSceneStore
-    }
-)(SceneChangeEnterListener)
+export default connect(mapStateToProps)(SceneChangeEnterListener)

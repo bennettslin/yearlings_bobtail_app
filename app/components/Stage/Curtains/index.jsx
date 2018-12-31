@@ -22,6 +22,11 @@ class Curtains extends PureComponent {
     }
 
     _handleTransitionExited = () => {
+        // TODO: Revisit whether this is still necessary after removing scene transition when curtain is closed.
+        setTimeout(this._endTransition, 100)
+    }
+
+    _endTransition = () => {
         this.props.updateChangeStore({ isSongChangeCurtainExitDone: true })
     }
 

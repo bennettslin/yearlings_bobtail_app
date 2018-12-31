@@ -82,12 +82,9 @@ export const CHANGE_DEFAULTS = {
     isSceneChangeScrollExitDone: true,
 
     isSongSelectInFlux: false,
-
     isSongChangeCarouselExitDone: true,
     isSongChangeLyricExitDone: true,
-    isSongChangeCurtainExitDone: true,
-
-    isSongDonePreparing: true
+    isSongChangeCurtainExitDone: true
 }
 
 export const CURTAIN_DEFAULTS = {
@@ -124,7 +121,6 @@ export const FOCUS_DEFAULTS = {
 }
 
 export const LOAD_DEFAULTS = {
-    appMounted: false,
     isScoreLoaded: false
 }
 
@@ -163,6 +159,7 @@ export const RENDER_DEFAULTS = {
     didLyricEnter: false,
     didCarouselEnter: false,
 
+    didSceneUpdate: false,
     didLyricUpdate: false,
     didCarouselUpdate: false
 }

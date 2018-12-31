@@ -1,12 +1,14 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
+import { updateSceneStore } from 'flux/scene/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateTransientStore } from 'flux/transient/action'
 
 import ListenerContainer from '../Listener'
+import SceneChangeUpdateDispatcher from '../../listeners/SceneChange/Update'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getSceneIndexForVerseIndex } from 'album/api/scenes'
@@ -14,6 +16,7 @@ import {
     getValidRoutingIndices,
     getPathForIndices
 } from './helper'
+import { populateRefs } from 'helpers/ref'
 
 class RoutingContainer extends PureComponent {
 
@@ -22,8 +25,9 @@ class RoutingContainer extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        updateSelectedStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
+        updateSceneStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateTransientStore: PropTypes.func.isRequired,
 
@@ -32,27 +36,26 @@ class RoutingContainer extends PureComponent {
         history: PropTypes.object.isRequired
     }
 
-    constructor(props) {
-        super(props)
+    componentDidMount() {
+        logMount('RoutingContainer')
+        this._checkParams()
+    }
 
+    _checkParams() {
         const
-            { routingParamString } = props.match.params,
+            {
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex,
+                match: { params: { routingParamString } }
+            } = this.props,
 
             // Get whatever params the route gives us.
-            routingIndicesObject =
-                getValidRoutingIndices(routingParamString),
-
             {
                 routingSongIndex,
                 routingVerseIndex,
                 routingAnnotationIndex
-            } = routingIndicesObject
-
-        const {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        } = props
+            } = getValidRoutingIndices(routingParamString)
 
         // Update storage to be consistent with route if necessary.
         if (
@@ -66,7 +69,7 @@ class RoutingContainer extends PureComponent {
                 routingVerseIndex
             )
 
-            props.updateSelectedStore({
+            this.props.updateSelectedStore({
                 selectedSongIndex: routingSongIndex,
                 selectedVerseIndex: routingVerseIndex,
                 selectedAnnotationIndex: routingAnnotationIndex,
@@ -83,12 +86,17 @@ class RoutingContainer extends PureComponent {
                 lyricAnnotationIndex: routingAnnotationIndex
             })
 
+            this.dispatchCanSceneEnter({
+                selectedSongIndex: routingSongIndex,
+                selectedSceneIndex: routingSceneIndex
+            })
+
             this.props.updateTransientStore({
                 popupAnnotationIndex: routingAnnotationIndex
             })
 
             // Reset wiki.
-            props.updateSessionStore({ selectedWikiIndex: 0 })
+            this.props.updateSessionStore({ selectedWikiIndex: 0 })
         }
 
         // Always replace path for consistency.
@@ -97,10 +105,6 @@ class RoutingContainer extends PureComponent {
             routingVerseIndex,
             routingAnnotationIndex
         )
-    }
-
-    componentDidMount() {
-        logMount('RoutingContainer')
     }
 
     componentDidUpdate(prevProps) {
@@ -138,9 +142,16 @@ class RoutingContainer extends PureComponent {
         this.props.history.replace(pathName)
     }
 
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         return (
-            <ListenerContainer />
+            <___>
+                <ListenerContainer />
+                <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
+            </___>
         )
     }
 }
@@ -161,6 +172,7 @@ export default connect(
     mapStateToProps,
     {
         updateLyricStore,
+        updateSceneStore,
         updateSelectedStore,
         updateSessionStore,
         updateTransientStore

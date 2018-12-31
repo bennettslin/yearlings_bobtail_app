@@ -17,6 +17,7 @@ import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
 import ScoreListener from '../../handlers/Score/Listener'
 import SongListener from '../../handlers/Song/Listener'
 import SongChangeExitListener from '../../listeners/SongChange/Exit'
+import SongChangeUpdateListener from '../../listeners/SongChange/Update'
 import SongChangeEnterListener from '../../listeners/SongChange/Enter'
 import ScrollRenderListener from '../../listeners/ScrollRender'
 import SliderListener from '../../listeners/Slider'
@@ -58,6 +59,7 @@ class ListenerContainer extends PureComponent {
                 <SliderListener />
                 <SongListener />
                 <SongChangeExitListener />
+                <SongChangeUpdateListener />
                 <SongChangeEnterListener />
                 <TipsListener />
                 <WikiListener />

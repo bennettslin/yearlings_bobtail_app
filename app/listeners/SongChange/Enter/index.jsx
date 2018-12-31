@@ -7,85 +7,25 @@ class SongChangeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSongSelectInFlux: PropTypes.bool.isRequired,
-        isSongChangeCarouselExitDone: PropTypes.bool.isRequired,
-        isSongChangeCurtainExitDone: PropTypes.bool.isRequired,
-        isSongChangeLyricExitDone: PropTypes.bool.isRequired,
-
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-
+        didSceneUpdate: PropTypes.bool.isRequired,
         didLyricUpdate: PropTypes.bool.isRequired,
         didCarouselUpdate: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
-        this._checkSongChange(prevProps)
         this._checkSongUpdate(prevProps)
-    }
-
-    _checkSongChange(prevProps) {
-        const
-            {
-                isSongSelectInFlux,
-                isSongChangeCarouselExitDone,
-                isSongChangeCurtainExitDone,
-                isSongChangeLyricExitDone
-            } = this.props,
-            {
-                isSongSelectInFlux: wasSongSelectInFlux,
-                isSongChangeCarouselExitDone: wasSongChangeCarouselExitDone,
-                isSongChangeCurtainExitDone: wasSongChangeCurtainExitDone,
-                isSongChangeLyricExitDone: wasSongChangeLyricExitDone
-            } = prevProps
-
-        // Is done being selected.
-        if (
-            (
-                // All conditions needed to update state.
-                !isSongSelectInFlux &&
-                isSongChangeCarouselExitDone &&
-                isSongChangeCurtainExitDone &&
-                isSongChangeLyricExitDone
-
-            ) && (
-                // At least one of these conditions was previously false.
-                wasSongSelectInFlux ||
-                !wasSongChangeCarouselExitDone ||
-                !wasSongChangeCurtainExitDone ||
-                !wasSongChangeLyricExitDone
-            )
-        ) {
-            this._beginUpdateToNewState()
-        }
-    }
-
-    _beginUpdateToNewState() {
-        logEnter('Lyric can update.')
-
-        const {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        } = this.props
-
-        this.props.updateLyricStore({
-            canLyricUpdate: true,
-            lyricSongIndex: selectedSongIndex,
-            lyricVerseIndex: selectedVerseIndex,
-            lyricAnnotationIndex: selectedAnnotationIndex
-        })
     }
 
     _checkSongUpdate(prevProps) {
         const
             {
+                didSceneUpdate,
                 didCarouselUpdate,
                 didLyricUpdate
             } = this.props,
             {
+                didSceneUpdate: hadSceneUpdated,
                 didCarouselUpdate: hadCarouselUpdated,
                 didLyricUpdate: hadLyricUpdated
             } = prevProps
@@ -94,11 +34,13 @@ class SongChangeEnterListener extends PureComponent {
         if (
             (
                 // All conditions needed to begin enter transition.
+                didSceneUpdate &&
                 didCarouselUpdate &&
                 didLyricUpdate
 
             ) && (
                 // At least one of these conditions was previously false.
+                !hadSceneUpdated ||
                 !hadCarouselUpdated ||
                 !hadLyricUpdated
             )
@@ -117,31 +59,15 @@ class SongChangeEnterListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: {
-        isSongSelectInFlux,
-        isSongChangeCarouselExitDone,
-        isSongChangeCurtainExitDone,
-        isSongChangeLyricExitDone
-    },
     renderStore: {
+        didSceneUpdate,
         didLyricUpdate,
         didCarouselUpdate
-    },
-    selectedStore: {
-        selectedSongIndex,
-        selectedVerseIndex,
-        selectedAnnotationIndex
     }
 }) => ({
-    isSongSelectInFlux,
-    isSongChangeCarouselExitDone,
-    isSongChangeCurtainExitDone,
-    isSongChangeLyricExitDone,
+    didSceneUpdate,
     didLyricUpdate,
-    didCarouselUpdate,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedAnnotationIndex
+    didCarouselUpdate
 })
 
 export default connect(
