@@ -4,59 +4,71 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
+import { updateChangeStore } from 'flux/change/action'
+
+import CSSTransition from 'react-transition-group/CSSTransition'
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
-    changeStore: { isSongSelectInFlux }
+    lyricStore: { canLyricEnter }
 }) => ({
-    appMounted,
-    isSongSelectInFlux
+    canLyricEnter
 })
 
 class Curtains extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
-        isSongSelectInFlux: PropTypes.bool.isRequired
+        canLyricEnter: PropTypes.bool.isRequired
+    }
+
+    _handleTransitionExited = () => {
+        this.props.updateChangeStore({ isSongChangeCurtainExitDone: true })
     }
 
     render() {
-        const {
-            appMounted,
-            isSongSelectInFlux
-        } = this.props
+        const { canLyricEnter } = this.props
 
         return (
-            <div
+            <CSSTransition
+                mountOnEnter
                 {...{
-                    className: cx(
-                        'Curtains',
-                        {
-                            'Curtains__parted':
-                                !isSongSelectInFlux && appMounted
-                        },
-                        'abF'
-                    )
+                    in: canLyricEnter,
+                    timeout: 250,
+                    classNames: {
+                        enterDone: 'Curtains__parted'
+                    },
+                    onExited: this._handleTransitionExited
                 }}
             >
-                <div className={cx(
-                    'Curtains__left',
-                    'Curtains__side',
-                    'Curtains__child'
-                )} />
-                <div className={cx(
-                    'Curtains__right',
-                    'Curtains__side',
-                    'Curtains__child'
-                )} />
-                <div className={cx(
-                    'Curtains__top',
-                    'Curtains__child'
-                )} />
-            </div>
+                <div
+                    {...{
+                        className: cx(
+                            'Curtains',
+                            'abF'
+                        )
+                    }}
+                >
+                    <div className={cx(
+                        'Curtains__left',
+                        'Curtains__side',
+                        'Curtains__child'
+                    )} />
+                    <div className={cx(
+                        'Curtains__right',
+                        'Curtains__side',
+                        'Curtains__child'
+                    )} />
+                    <div className={cx(
+                        'Curtains__top',
+                        'Curtains__child'
+                    )} />
+                </div>
+            </CSSTransition>
         )
     }
 }
 
-export default connect(mapStateToProps)(Curtains)
+export default connect(
+    mapStateToProps,
+    { updateChangeStore }
+)(Curtains)

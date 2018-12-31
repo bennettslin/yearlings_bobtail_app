@@ -36,16 +36,24 @@ class SongChangeExitListener extends PureComponent {
     }
 
     _beginExitTransition = () => {
-        this.props.updateChangeStore({ isSongSelectInFlux: true })
+        this.props.updateChangeStore({
+            isSongSelectInFlux: true,
+            isSongChangeCarouselExitDone: false,
+            isSongChangeCurtainExitDone: false,
+            isSongChangeLyricExitDone: false
+        })
         this.props.updateSceneStore({ canSceneEnter: false })
         this.props.updateLyricStore({
             canLyricEnter: false,
-            canCarouselEnter: false
+            canLyricUpdate: false
         })
         this.props.updateRenderStore({
             didSceneEnter: false,
             didLyricEnter: false,
-            didCarouselEnter: false
+            didCarouselEnter: false,
+
+            didLyricUpdate: false,
+            didCarouselUpdate: false
         })
 
         // Clear previous timeout.
@@ -65,21 +73,6 @@ class SongChangeExitListener extends PureComponent {
 
     _dispatchSongSelectComplete = () => {
         this.props.updateChangeStore({ isSongSelectInFlux: false })
-        this._prepareForSongChangeRender()
-    }
-
-    _prepareForSongChangeRender() {
-        const {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        } = this.props
-
-        this.props.updateLyricStore({
-            lyricSongIndex: selectedSongIndex,
-            lyricVerseIndex: selectedVerseIndex,
-            lyricAnnotationIndex: selectedAnnotationIndex
-        })
     }
 
     render() {

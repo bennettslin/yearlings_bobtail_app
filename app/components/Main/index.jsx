@@ -20,16 +20,16 @@ import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
 const mapStateToProps = ({
-    lyricStore: { canCarouselEnter }
+    lyricStore: { canLyricEnter }
 }) => ({
-    canCarouselEnter
+    canLyricEnter
 })
 
 class Main extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselEnter: PropTypes.bool.isRequired
+        canLyricEnter: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
@@ -37,7 +37,7 @@ class Main extends PureComponent {
     }
 
     render() {
-        const { canCarouselEnter } = this.props
+        const { canLyricEnter } = this.props
 
         /**
          * In phone, flex container's children have absolute position.
@@ -46,7 +46,7 @@ class Main extends PureComponent {
             <div className={cx(
                 'Main',
 
-                canCarouselEnter ?
+                canLyricEnter ?
                     'Main__visible' :
                     'Main__invisible',
 

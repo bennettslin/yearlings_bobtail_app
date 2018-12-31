@@ -1,50 +1,114 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateRenderStore } from 'flux/render/action'
 import { updateLyricStore } from 'flux/lyric/action'
-import { updateSceneStore } from 'flux/scene/action'
-
-import {
-    CAN_SCENE_RENDER,
-    CAN_THEATRE_RENDER,
-    getNextKeyCanRender
-} from 'helpers/render'
 
 class SongChangeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isSongSelectInFlux: PropTypes.bool.isRequired,
-        updateRenderStore: PropTypes.func.isRequired,
-        updateLyricStore: PropTypes.func.isRequired,
-        updateSceneStore: PropTypes.func.isRequired
+        isSongChangeCarouselExitDone: PropTypes.bool.isRequired,
+        isSongChangeCurtainExitDone: PropTypes.bool.isRequired,
+        isSongChangeLyricExitDone: PropTypes.bool.isRequired,
+
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+
+        didLyricUpdate: PropTypes.bool.isRequired,
+        didCarouselUpdate: PropTypes.bool.isRequired,
+        updateLyricStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
         this._checkSongChange(prevProps)
+        this._checkSongUpdate(prevProps)
     }
 
     _checkSongChange(prevProps) {
         const
-            { isSongSelectInFlux } = this.props,
-            { isSongSelectInFlux: wasSongSelectInFlux } = prevProps
+            {
+                isSongSelectInFlux,
+                isSongChangeCarouselExitDone,
+                isSongChangeCurtainExitDone,
+                isSongChangeLyricExitDone
+            } = this.props,
+            {
+                isSongSelectInFlux: wasSongSelectInFlux,
+                isSongChangeCarouselExitDone: wasSongChangeCarouselExitDone,
+                isSongChangeCurtainExitDone: wasSongChangeCurtainExitDone,
+                isSongChangeLyricExitDone: wasSongChangeLyricExitDone
+            } = prevProps
 
         // Is done being selected.
-        if (!isSongSelectInFlux && wasSongSelectInFlux) {
-            this._handleSongChangeRenderable()
+        if (
+            (
+                // All conditions needed to update state.
+                !isSongSelectInFlux &&
+                isSongChangeCarouselExitDone &&
+                isSongChangeCurtainExitDone &&
+                isSongChangeLyricExitDone
+
+            ) && (
+                // At least one of these conditions was previously false.
+                wasSongSelectInFlux ||
+                !wasSongChangeCarouselExitDone ||
+                !wasSongChangeCurtainExitDone ||
+                !wasSongChangeLyricExitDone
+            )
+        ) {
+            this._beginUpdateToNewState()
         }
     }
 
-    _handleSongChangeRenderable() {
-        const nextKey = getNextKeyCanRender({ currentKey: CAN_THEATRE_RENDER })
+    _beginUpdateToNewState() {
+        logEnter('Lyric can update.')
 
-        if (nextKey === CAN_SCENE_RENDER) {
-            this.props.updateSceneStore({ [nextKey]: true })
+        const {
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        } = this.props
 
-        } else {
-            this.props.updateLyricStore({ [nextKey]: true })
+        this.props.updateLyricStore({
+            canLyricUpdate: true,
+            lyricSongIndex: selectedSongIndex,
+            lyricVerseIndex: selectedVerseIndex,
+            lyricAnnotationIndex: selectedAnnotationIndex
+        })
+    }
+
+    _checkSongUpdate(prevProps) {
+        const
+            {
+                didCarouselUpdate,
+                didLyricUpdate
+            } = this.props,
+            {
+                didCarouselUpdate: hadCarouselUpdated,
+                didLyricUpdate: hadLyricUpdated
+            } = prevProps
+
+        // Is done being updated.
+        if (
+            (
+                // All conditions needed to begin enter transition.
+                didCarouselUpdate &&
+                didLyricUpdate
+
+            ) && (
+                // At least one of these conditions was previously false.
+                !hadCarouselUpdated ||
+                !hadLyricUpdated
+            )
+        ) {
+            this._beginEnterTransition()
         }
+    }
+
+    _beginEnterTransition() {
+        this.props.updateLyricStore({ canLyricEnter: true })
     }
 
     render() {
@@ -53,16 +117,36 @@ class SongChangeEnterListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: { isSongSelectInFlux }
+    changeStore: {
+        isSongSelectInFlux,
+        isSongChangeCarouselExitDone,
+        isSongChangeCurtainExitDone,
+        isSongChangeLyricExitDone
+    },
+    renderStore: {
+        didLyricUpdate,
+        didCarouselUpdate
+    },
+    selectedStore: {
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    }
 }) => ({
-    isSongSelectInFlux
+    isSongSelectInFlux,
+    isSongChangeCarouselExitDone,
+    isSongChangeCurtainExitDone,
+    isSongChangeLyricExitDone,
+    didLyricUpdate,
+    didCarouselUpdate,
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedAnnotationIndex
 })
 
 export default connect(
     mapStateToProps,
     {
-        updateRenderStore,
-        updateLyricStore,
-        updateSceneStore
+        updateLyricStore
     }
 )(SongChangeEnterListener)

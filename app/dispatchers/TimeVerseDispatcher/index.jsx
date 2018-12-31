@@ -66,7 +66,7 @@ class TimeVerseDispatcher extends PureComponent {
             this.props.updateVerseBarsStore({ queuedDetermineVerseBars: true })
 
             // There is no scrolling, so complete scene change exit right away.
-            this.props.updateChangeStore({ isSceneChangeExitScrollDone: true })
+            this.props.updateChangeStore({ isSceneChangeScrollExitDone: true })
         }
     }
 

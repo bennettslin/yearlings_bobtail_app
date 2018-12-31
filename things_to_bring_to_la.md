@@ -9,52 +9,45 @@ Sleep machine
 EpiPen
 My new MacBook Pro
 Hard drive and cable
+New Wacom, cables, and stylus
 
 ## Toiletries bag
-<!-- Glasses -->
-<!-- Electric toothbrush -->
-<!-- Contacts -->
-<!-- Tweezers -->
-<!-- Nail clipper -->
-<!-- Retinol -->
-<!-- Flonase -->
-<!-- Clobetasol (leave in LA) -->
+Glasses
+Electric toothbrush
+Contacts
+Tweezers
+Nail clipper
+Retinol
+Flonase
+Clobetasol (leave in LA)
 
 ## Suitcase
 House key (always keep in suitcase)
 Toiletries bag
 
 ## Things to bring next time
-Sharpie
-Docking station, power cord, UCB-C connector
-New monitor cable
-Another phone cable
-Two new Zillow shirts (One worn)
-Some old underwear
+More Post-its
 Ibuprofen
 
 ## Things I have in LA
-MacBook charger
-Old monitor cable
+Docking station with all peripherals
+Extra MacBook charger and cable
 Ergonomic keyboard
 Magic trackpad and cushion
-Phone cable
-USB-C adapter
+Two phone cables
 USB to wall outlet
 Velcro ties
 Wacom glove
 
-## Things I have in LA currently
-New Wacom, cables, and stylus
-
 Old glasses
 Cheap sunglasses
-Under Armour shirt and shorts
+Single Under Armour shirt and shorts
 Enough Zillow shirts
-Six current underwear
+Enough underwear
 A week of socks
 
 Plain pencil, many eraser pencils
+Sharpie
 Notepad
 Post-its
 

@@ -16,7 +16,7 @@ class SceneChangeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSceneChangeExitScrollDone: PropTypes.bool.isRequired,
+        isSceneChangeScrollExitDone: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedSceneIndex: PropTypes.number.isRequired,
         updateSceneStore: PropTypes.func.isRequired
@@ -28,14 +28,14 @@ class SceneChangeEnterListener extends PureComponent {
 
     _checkSceneChange(prevProps) {
         const
-            { isSceneChangeExitScrollDone } = this.props,
-            { isSceneChangeExitScrollDone: wasExitScrollDone } = prevProps
+            { isSceneChangeScrollExitDone } = this.props,
+            { isSceneChangeScrollExitDone: wasExitScrollDone } = prevProps
 
         /**
          * Scroll has finished exit transition, so now update state to kick off
          * enter transition.
          */
-        if (isSceneChangeExitScrollDone && !wasExitScrollDone) {
+        if (isSceneChangeScrollExitDone && !wasExitScrollDone) {
             this._beginEnterTransitionWithNewState()
         }
     }
@@ -78,13 +78,13 @@ class SceneChangeEnterListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: { isSceneChangeExitScrollDone },
+    changeStore: { isSceneChangeScrollExitDone },
     selectedStore: {
         selectedSongIndex,
         selectedSceneIndex
     }
 }) => ({
-    isSceneChangeExitScrollDone,
+    isSceneChangeScrollExitDone,
     selectedSongIndex,
     selectedSceneIndex
 })

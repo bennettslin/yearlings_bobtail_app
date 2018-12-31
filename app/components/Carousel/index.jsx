@@ -4,7 +4,10 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
+import { updateChangeStore } from 'flux/change/action'
+import { updateRenderStore } from 'flux/render/action'
 
+import CSSTransition from 'react-transition-group/CSSTransition'
 import ScrollCarouselListener from '../../listeners/Scroll/Carousel'
 import CarouselScroll from './Scroll'
 import CarouselSelect from './Select'
@@ -12,10 +15,10 @@ import CarouselSelect from './Select'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    loadStore: { appMounted },
+    lyricStore: { canLyricEnter },
     responsiveStore: { isUnrenderableCarouselNav }
 }) => ({
-    appMounted,
+    canLyricEnter,
     isUnrenderableCarouselNav
 })
 
@@ -23,8 +26,10 @@ class Carousel extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
-        isUnrenderableCarouselNav: PropTypes.bool.isRequired
+        canLyricEnter: PropTypes.bool.isRequired,
+        isUnrenderableCarouselNav: PropTypes.bool.isRequired,
+        updateChangeStore: PropTypes.func.isRequired,
+        updateRenderStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -39,36 +44,63 @@ class Carousel extends PureComponent {
         return this.setCarouselAnnotationElement(payload)
     }
 
+    _handleTransitionExited = () => {
+        this.props.updateChangeStore({ isSongChangeCarouselExitDone: true })
+    }
+
+    _handleTransitionEntered = () => {
+        this.props.updateRenderStore({ didCarouselEnter: true })
+    }
+
     _getRefs = (payload) => {
         populateRefs(this, payload)
     }
 
     render() {
         const {
-            appMounted,
+            canLyricEnter,
             isUnrenderableCarouselNav
         } = this.props
 
-        return appMounted && !isUnrenderableCarouselNav && (
-            <div
-                className={cx(
-                    'Carousel',
-                    'gradientMask__carousel__desktop'
-                )}
+        return !isUnrenderableCarouselNav && (
+            <CSSTransition
+                mountOnEnter
+                {...{
+                    in: canLyricEnter,
+                    timeout: 250,
+                    classNames: {
+                        enterDone: 'Carousel__visible'
+                    },
+                    onExited: this._handleTransitionExited,
+                    onEntered: this._handleTransitionEntered
+                }}
             >
-                <ScrollCarouselListener {...{ getRefs: this._getRefs }} />
-                <CarouselScroll
-                    {...{
-                        setCarouselParent:
-                            this._setCarouselParent,
-                        setCarouselAnnotationElement:
-                            this._setCarouselAnnotationElement
-                    }}
-                />
-                <CarouselSelect />
-            </div>
+                <div
+                    className={cx(
+                        'Carousel',
+                        'gradientMask__carousel__desktop'
+                    )}
+                >
+                    <ScrollCarouselListener {...{ getRefs: this._getRefs }} />
+                    <CarouselScroll
+                        {...{
+                            setCarouselParent:
+                                this._setCarouselParent,
+                            setCarouselAnnotationElement:
+                                this._setCarouselAnnotationElement
+                        }}
+                    />
+                    <CarouselSelect />
+                </div>
+            </CSSTransition>
         )
     }
 }
 
-export default connect(mapStateToProps)(Carousel)
+export default connect(
+    mapStateToProps,
+    {
+        updateChangeStore,
+        updateRenderStore
+    }
+)(Carousel)

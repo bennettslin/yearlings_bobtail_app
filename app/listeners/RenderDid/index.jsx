@@ -7,21 +7,12 @@ import { updateLoadStore } from 'flux/load/action'
 import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
 
-import {
-    CAN_THEATRE_RENDER,
-    CAN_SCENE_RENDER,
-    CAN_LYRIC_RENDER,
-    CAN_CAROUSEL_RENDER,
-    getNextKeyCanRender
-} from '../../helpers/render'
-
 class RenderDidListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
         didTheatreEnter: PropTypes.bool.isRequired,
-        didSceneEnter: PropTypes.bool.isRequired,
         didLyricEnter: PropTypes.bool.isRequired,
         didCarouselEnter: PropTypes.bool.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
@@ -31,10 +22,8 @@ class RenderDidListener extends PureComponent {
 
     componentDidUpdate(prevProps) {
         this._checkAppMounted(prevProps)
-        this._checkTheatreDidRender(prevProps)
-        this._checkSceneDidRender(prevProps)
-        this._checkLyricDidRender(prevProps)
-        this._checkCarouselDidRender(prevProps)
+        this._checkTheatreDidEnter(prevProps)
+        this._checkLyricDidEnter(prevProps)
     }
 
     _checkAppMounted(prevProps) {
@@ -49,7 +38,7 @@ class RenderDidListener extends PureComponent {
         }
     }
 
-    _checkTheatreDidRender(prevProps) {
+    _checkTheatreDidEnter(prevProps) {
         const
             { didTheatreEnter } = this.props,
             { didTheatreEnter: hadTheatreRendered } = prevProps
@@ -76,72 +65,31 @@ class RenderDidListener extends PureComponent {
     }
 
     _renderAfterTheatre = () => {
-        const nextKey = getNextKeyCanRender({ currentKey: CAN_THEATRE_RENDER })
-        if (nextKey) {
-            this.props.updateLyricStore({ [nextKey]: true })
-        }
+        this.props.updateLyricStore({ canLyricEnter: true })
     }
 
-    _checkSceneDidRender(prevProps) {
+    _checkLyricDidEnter(prevProps) {
         const
-            { didSceneEnter } = this.props,
-            { didSceneEnter: hadSceneRendered } = prevProps
+            {
+                didLyricEnter,
+                didCarouselEnter
+            } = this.props,
+            {
+                didLyricEnter: hadLyricEntered,
+                didCarouselEnter: hadCarouselEntered
+            } = prevProps
 
-        if (didSceneEnter && !hadSceneRendered) {
-            logEnter('Scene did enter.')
-
-            const nextKey = getNextKeyCanRender({ currentKey: CAN_SCENE_RENDER })
-            if (nextKey) {
-                this.props.updateLyricStore({ [nextKey]: true })
-            }
-        }
-    }
-
-    _checkLyricDidRender(prevProps) {
-        const
-            { didLyricEnter } = this.props,
-            { didLyricEnter: hadLyricRendered } = prevProps
-
-        if (didLyricEnter && !hadLyricRendered) {
+        if (
+            (
+                didLyricEnter &&
+                didCarouselEnter
+            ) && (
+                !hadLyricEntered ||
+                !hadCarouselEntered
+            )
+        ) {
             logEnter('Lyric did enter.')
-
-            const nextKey = getNextKeyCanRender({
-                currentKey: CAN_LYRIC_RENDER
-            })
-
-            if (nextKey === CAN_SCENE_RENDER) {
-                this.props.updateSceneStore({
-                    [nextKey]: true
-                })
-            } else if (nextKey) {
-                this.props.updateLyricStore({
-                    [nextKey]: true
-                })
-            }
-        }
-    }
-
-    _checkCarouselDidRender(prevProps) {
-        const
-            { didCarouselEnter } = this.props,
-            { didCarouselEnter: hadCarouselRendered } = prevProps
-
-        if (didCarouselEnter && !hadCarouselRendered) {
-            logEnter('Carousel did enter.')
-
-            const nextKey = getNextKeyCanRender({
-                currentKey: CAN_CAROUSEL_RENDER
-            })
-
-            if (nextKey === CAN_SCENE_RENDER) {
-                this.props.updateSceneStore({
-                    [nextKey]: true
-                })
-            } else if (nextKey) {
-                this.props.updateLyricStore({
-                    [nextKey]: true
-                })
-            }
+            this.props.updateSceneStore({ canSceneEnter: true })
         }
     }
 
@@ -154,14 +102,12 @@ const mapStateToProps = ({
     loadStore: { appMounted },
     renderStore: {
         didTheatreEnter,
-        didSceneEnter,
         didLyricEnter,
         didCarouselEnter
     }
 }) => ({
     appMounted,
     didTheatreEnter,
-    didSceneEnter,
     didLyricEnter,
     didCarouselEnter
 })

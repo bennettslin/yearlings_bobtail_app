@@ -79,8 +79,14 @@ export const AUDIO_DEFAULTS = {
 }
 
 export const CHANGE_DEFAULTS = {
-    isSceneChangeExitScrollDone: true,
+    isSceneChangeScrollExitDone: true,
+
     isSongSelectInFlux: false,
+
+    isSongChangeCarouselExitDone: true,
+    isSongChangeLyricExitDone: true,
+    isSongChangeCurtainExitDone: true,
+
     isSongDonePreparing: true
 }
 
@@ -124,7 +130,8 @@ export const LOAD_DEFAULTS = {
 
 export const LYRIC_DEFAULTS = {
     canLyricEnter: false,
-    canCarouselEnter: false,
+    canLyricUpdate: false,
+
     lyricSongIndex: storedSongIndex,
     lyricAnnotationIndex: storedAnnotationIndex,
     lyricVerseIndex: storedVerseIndex,
@@ -154,7 +161,10 @@ export const RENDER_DEFAULTS = {
     didTheatreEnter: false,
     didSceneEnter: false,
     didLyricEnter: false,
-    didCarouselEnter: false
+    didCarouselEnter: false,
+
+    didLyricUpdate: false,
+    didCarouselUpdate: false
 }
 
 export const RESPONSIVE_DEFAULTS = {

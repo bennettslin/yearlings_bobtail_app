@@ -4,8 +4,11 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
+import { updateChangeStore } from 'flux/change/action'
+import { updateRenderStore } from 'flux/render/action'
 
 import Transition from 'react-transition-group/Transition'
+import CSSTransition from 'react-transition-group/CSSTransition'
 import VerseBarHandler from '../../handlers/VerseBar'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
@@ -34,6 +37,8 @@ class Lyric extends PureComponent {
         // Through Redux.
         canLyricEnter: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        updateChangeStore: PropTypes.func.isRequired,
+        updateRenderStore: PropTypes.func.isRequired,
 
         // From parent.
         setLyricFocusElement: PropTypes.func.isRequired
@@ -55,6 +60,14 @@ class Lyric extends PureComponent {
         return this.getVerseElement(verseIndex)
     }
 
+    _handleTransitionExited = () => {
+        this.props.updateChangeStore({ isSongChangeLyricExitDone: true })
+    }
+
+    _handleTransitionEntered = () => {
+        this.props.updateRenderStore({ didLyricEnter: true })
+    }
+
     _getRefs = (payload) => {
         populateRefs(this, payload)
     }
@@ -68,19 +81,22 @@ class Lyric extends PureComponent {
 
         return (
             <___>
-                <Transition
+                <CSSTransition
+                    mountOnEnter
                     {...{
-                        in: isLyricExpanded,
-                        timeout: 200,
-                        onExited: this.determineVerseBars,
-                        onEntered: this.determineVerseBars
+                        in: canLyricEnter,
+                        timeout: 250,
+                        classNames: {
+                            enterDone: 'Lyric__visible'
+                        },
+                        onExited: this._handleTransitionExited,
+                        onEntered: this._handleTransitionEntered
                     }}
                 >
                     <div
                         {...{
                             className: cx(
                                 'Lyric',
-                                canLyricEnter && 'Lyric__visible',
                                 isLyricExpanded && 'Lyric__expanded',
                                 'position__lyricColumn__desktop',
                                 'position__lyricColumn__mobile',
@@ -118,11 +134,27 @@ class Lyric extends PureComponent {
                                 handleVerseBarWheel: this._handleVerseBarWheel
                             }}
                         />
+                        <Transition
+                            {...{
+                                in: isLyricExpanded,
+                                timeout: 200,
+                                onExited: this.determineVerseBars,
+                                onEntered: this.determineVerseBars
+                            }}
+                        >
+                            <div />
+                        </Transition>
                     </div>
-                </Transition>
+                </CSSTransition>
             </___>
         )
     }
 }
 
-export default connect(mapStateToProps)(Lyric)
+export default connect(
+    mapStateToProps,
+    {
+        updateChangeStore,
+        updateRenderStore
+    }
+)(Lyric)
