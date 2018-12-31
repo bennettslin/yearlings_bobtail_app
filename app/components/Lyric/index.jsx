@@ -4,7 +4,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateChangeStore } from 'flux/change/action'
+import { updateLyricStore } from 'flux/lyric/action'
 import { updateTransitionStore } from 'flux/transition/action'
 
 import Transition from 'react-transition-group/Transition'
@@ -37,7 +37,7 @@ class Lyric extends PureComponent {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        updateChangeStore: PropTypes.func.isRequired,
+        updateLyricStore: PropTypes.func.isRequired,
         updateTransitionStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -61,7 +61,7 @@ class Lyric extends PureComponent {
     }
 
     _handleTransitionExited = () => {
-        this.props.updateChangeStore({ didLyricExit: true })
+        this.props.updateLyricStore({ didLyricExit: true })
     }
 
     _handleTransitionEntered = () => {
@@ -153,7 +153,7 @@ class Lyric extends PureComponent {
 export default connect(
     mapStateToProps,
     {
-        updateChangeStore,
+        updateLyricStore,
         updateTransitionStore
     }
 )(Lyric)

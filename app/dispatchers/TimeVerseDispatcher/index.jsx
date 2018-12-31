@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateChangeStore } from 'flux/change/action'
+import { updateSceneStore } from 'flux/scene/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
@@ -16,7 +16,7 @@ class TimeVerseDispatcher extends PureComponent {
         // Through Redux.
         isAutoScroll: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        updateChangeStore: PropTypes.func.isRequired,
+        updateSceneStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
@@ -66,7 +66,7 @@ class TimeVerseDispatcher extends PureComponent {
             this.props.updateVerseBarsStore({ queuedDetermineVerseBars: true })
 
             // There is no scrolling, so complete scene change exit right away.
-            this.props.updateChangeStore({ didSceneScrollExit: true })
+            this.props.updateSceneStore({ didSceneScrollExit: true })
         }
     }
 
@@ -86,7 +86,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateChangeStore,
+        updateSceneStore,
         updateScrollLyricStore,
         updateSelectedStore,
         updateVerseBarsStore

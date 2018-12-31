@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
 import { updateDeviceStore } from 'flux/device/action'
-import { updateTransitionStore } from 'flux/transition/action'
 
 import WindowResizeEnterDispatcher from '../Enter'
 
@@ -13,8 +12,7 @@ class WindowResizeExitListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        updateDeviceStore: PropTypes.func.isRequired,
-        updateTransitionStore: PropTypes.func.isRequired
+        updateDeviceStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -30,8 +28,10 @@ class WindowResizeExitListener extends PureComponent {
     }
 
     _beginExitTransition = () => {
-        this.props.updateDeviceStore({ canTheatreEnter: false })
-        this.props.updateTransitionStore({ didTheatreEnter: false })
+        this.props.updateDeviceStore({
+            canTheatreEnter: false,
+            didTheatreEnter: false
+        })
 
         // Clear previous timeout.
         clearTimeout(this.state.windowResizeTimeoutId)
@@ -68,7 +68,6 @@ const mapStateToProps = null
 export default connect(
     mapStateToProps,
     {
-        updateDeviceStore,
-        updateTransitionStore
+        updateDeviceStore
     }
 )(WindowResizeExitListener)

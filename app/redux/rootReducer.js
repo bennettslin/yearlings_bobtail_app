@@ -2,7 +2,6 @@ import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
-import ChangeReducer from './change/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
 import FocusReducer from './focus/reducer'
@@ -26,7 +25,6 @@ import {
     ACCESS_STORE,
     ANNOTATION_STORE,
     AUDIO_STORE,
-    CHANGE_STORE,
     DEVICE_STORE,
     DOTS_STORE,
     FOCUS_STORE,
@@ -48,7 +46,6 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
-    [CHANGE_STORE]: ChangeReducer,
     [TRANSITION_STORE]: TransitionReducer,
 
     [SCENE_STORE]: SceneReducer,

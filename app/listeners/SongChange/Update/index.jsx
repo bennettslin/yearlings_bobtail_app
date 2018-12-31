@@ -97,10 +97,10 @@ class SongChangeUpdateListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: {
+    lyricStore: {
         didCarouselExit,
-        didCurtainExit,
-        didLyricExit
+        didLyricExit,
+        didCurtainExit
     },
     selectedStore: {
         isSongSelectInFlux,

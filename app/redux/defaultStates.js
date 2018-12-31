@@ -56,19 +56,32 @@ const
         storedVerseIndex
     )
 
-export const CHANGE_DEFAULTS = {
-    didSceneScrollExit: false,
-    didCarouselExit: false,
-    didLyricExit: false,
-    didCurtainExit: false
-}
+/**
+ * Transition values. Kept together up here for dev clarity.
+ */
+const
+    DEVICE_TRANSITION_DEFAULTS = {
+        canTheatreEnter: false,
+        didTheatreEnter: false
+    },
+    LYRIC_TRANSITION_DEFAULTS = {
+        canLyricCarouselEnter: false,
+        canLyricCarouselUpdate: false,
+        didCarouselExit: false,
+        didLyricExit: false,
+        didCurtainExit: false
+    },
+    SCENE_TRANSITION_DEFAULTS = {
+        canSceneEnter: false,
+        canSceneUpdate: false,
+        didSceneScrollExit: false
+    }
 
 export const TRANSITION_DEFAULTS = {
     didSceneUpdate: false,
     didLyricUpdate: false,
     didCarouselUpdate: false,
 
-    didTheatreEnter: false,
     didSceneEnter: false,
     didLyricEnter: false,
     didCarouselEnter: false
@@ -97,7 +110,7 @@ export const AUDIO_DEFAULTS = {
 }
 
 export const DEVICE_DEFAULTS = {
-    canTheatreEnter: false,
+    ...DEVICE_TRANSITION_DEFAULTS,
     deviceIndex: DEVICE_OBJECTS.length - 1,
     isPhone: false,
     isDesktop: false,
@@ -127,9 +140,7 @@ export const LOAD_DEFAULTS = {
 }
 
 export const LYRIC_DEFAULTS = {
-    canLyricCarouselEnter: false,
-    canLyricCarouselUpdate: false,
-
+    ...LYRIC_TRANSITION_DEFAULTS,
     lyricSongIndex: storedSongIndex,
     lyricAnnotationIndex: storedAnnotationIndex,
     lyricVerseIndex: storedVerseIndex,
@@ -181,8 +192,7 @@ const {
     sceneCubes = getCubesForKey(sceneCubesKey)
 
 export const SCENE_DEFAULTS = {
-    canSceneEnter: false,
-    canSceneUpdate: false,
+    ...SCENE_TRANSITION_DEFAULTS,
     sceneCubesKey,
     sceneTime,
     sceneSeason,

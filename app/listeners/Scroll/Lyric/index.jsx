@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateChangeStore } from 'flux/change/action'
+import { updateSceneStore } from 'flux/scene/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import {
     updateVerseBarsStore,
@@ -35,7 +35,7 @@ class ScrollLyricListener extends PureComponent {
         isAutoScroll: PropTypes.bool.isRequired,
         isPlaying: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        updateChangeStore: PropTypes.func.isRequired,
+        updateSceneStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired,
@@ -163,7 +163,7 @@ class ScrollLyricListener extends PureComponent {
     }
 
     _completeSceneChangeExitScroll = () => {
-        this.props.updateChangeStore({ didSceneScrollExit: true })
+        this.props.updateSceneStore({ didSceneScrollExit: true })
     }
 
     getVerseElement = (verseIndex) => {
@@ -240,7 +240,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateChangeStore,
+        updateSceneStore,
         updateScrollLyricStore,
         updateVerseBarsStore,
         resetVerseBars
