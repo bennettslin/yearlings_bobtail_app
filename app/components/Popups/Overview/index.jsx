@@ -16,13 +16,13 @@ const mapStateToProps = ({
         selectedOverviewOption,
         selectedTipsOption
     },
-    lyricStore: { isRenderedLogue }
+    lyricStore: { isLyricLogue }
 }) => ({
     isPhone,
     canLyricCarouselEnter,
     selectedOverviewOption,
     selectedTipsOption,
-    isRenderedLogue
+    isLyricLogue
 })
 
 class OverviewPopup extends PureComponent {
@@ -32,7 +32,7 @@ class OverviewPopup extends PureComponent {
         isPhone: PropTypes.bool.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
-        isRenderedLogue: PropTypes.bool.isRequired,
+        isLyricLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
 
         // From parent.
@@ -46,12 +46,12 @@ class OverviewPopup extends PureComponent {
                 isPhone,
                 canLyricCarouselEnter,
                 selectedOverviewOption,
-                isRenderedLogue,
+                isLyricLogue,
                 selectedTipsOption
             } = this.props,
 
             // Switch between logue and song overview sections.
-            isVisibleBasedOnSong = isRenderedLogue ?
+            isVisibleBasedOnSong = isLyricLogue ?
                 !inMain :
 
                 /**
@@ -74,7 +74,7 @@ class OverviewPopup extends PureComponent {
                     noFlexCentre: inMain,
 
                     // Only position absolute when in main and is phone.
-                    noAbsoluteFull: isRenderedLogue || !isPhone
+                    noAbsoluteFull: isLyricLogue || !isPhone
                 }}
             >
                 <Overview />

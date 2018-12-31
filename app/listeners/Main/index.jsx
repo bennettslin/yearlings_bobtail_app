@@ -22,7 +22,7 @@ class MainListener extends PureComponent {
         isScoreShown: PropTypes.bool.isRequired,
         isTitleShown: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
-        isRenderedLogue: PropTypes.bool.isRequired,
+        isLyricLogue: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -40,7 +40,7 @@ class MainListener extends PureComponent {
             isDotsSlideShown,
             isLyricExpanded,
             lyricAnnotationIndex,
-            isRenderedLogue,
+            isLyricLogue,
             isScoreShown,
             isTitleShown,
             selectedOverviewOption,
@@ -70,7 +70,7 @@ class MainListener extends PureComponent {
                 !isOverlayShown &&
                 !overviewShown &&
                 !tipsShown &&
-                !isRenderedLogue &&
+                !isLyricLogue &&
                 !isLyricExpanded &&
                 interactivatedVerseIndex < 0,
 
@@ -114,7 +114,7 @@ const mapStateToProps = ({
     },
     lyricStore: {
         lyricAnnotationIndex,
-        isRenderedLogue
+        isLyricLogue
     },
     sessionStore: {
         interactivatedVerseIndex,
@@ -131,7 +131,7 @@ const mapStateToProps = ({
     isScoreShown,
     isTitleShown,
     lyricAnnotationIndex,
-    isRenderedLogue,
+    isLyricLogue,
     interactivatedVerseIndex,
     selectedOverviewOption,
     selectedTipsOption,

@@ -6,7 +6,7 @@ import { hasRemainingHours } from './helper'
 
 const propTypes = {
     tasks: PropTypes.array.isRequired,
-    isSubtask: PropTypes.bool.isRequired,
+    isSubtask: PropTypes.bool,
     maxTotalNeededHours: PropTypes.number.isRequired
 }
 

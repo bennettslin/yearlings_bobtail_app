@@ -4291,5 +4291,10 @@ export default [
         taskName: `Bug where, during play, scrolling to show verse bar will show complete duration right away.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Various regressions related to song change refactor.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

@@ -5,7 +5,7 @@ import ProgressBar from '../../ProgressBar'
 
 const propTypes = {
     task: PropTypes.object.isRequired,
-    isSubtask: PropTypes.number.isRequired,
+    isSubtask: PropTypes.number,
     maxTotalNeededHours: PropTypes.number.isRequired
 }
 

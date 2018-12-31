@@ -10,27 +10,27 @@ import {
 } from 'constants/access'
 
 const mapStateToProps = ({
-    lyricStore: { isRenderedLogue }
+    lyricStore: { isLyricLogue }
 }) => ({
-    isRenderedLogue
+    isLyricLogue
 })
 
 class SliderAccess extends PureComponent {
 
     static propTypes = {
         // From Redux.
-        isRenderedLogue: PropTypes.bool.isRequired
+        isLyricLogue: PropTypes.bool.isRequired
     }
 
     render() {
         const {
-            isRenderedLogue
+            isLyricLogue
         } = this.props
 
         return (
             <AccessLetters
                 accessIconsName="sliderRewindForward"
-                showIfAccessed={!isRenderedLogue}
+                showIfAccessed={!isLyricLogue}
                 accessKeys={[
                     AUDIO_REWIND_KEY,
                     AUDIO_FAST_FORWARD_KEY

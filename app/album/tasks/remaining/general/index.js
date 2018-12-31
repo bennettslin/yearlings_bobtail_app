@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: `Dot unit animation?`,
+        taskName: `Dot unit animation? Do based on visibility or opacity instead of display none?`,
         workedHours: 0,
         neededHours: 1
     },
@@ -11,7 +11,7 @@ export default [
     },
     {
         taskName: `Transitions work.`,
-        workedHours: 20,
+        workedHours: 32,
         neededHours: 40
     },
     {

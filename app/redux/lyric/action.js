@@ -15,7 +15,7 @@ export const updateLyricStore = (payload = LYRIC_DEFAULTS) => {
     } = payload
 
     if (hasKey(lyricSongIndex)) {
-        payload.isRenderedLogue = getSongIsLogue(lyricSongIndex)
+        payload.isLyricLogue = getSongIsLogue(lyricSongIndex)
     }
 
     return ({

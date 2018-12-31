@@ -11,12 +11,12 @@ import { SHOWN } from 'constants/options'
 const mapStateToProps = ({
     lyricStore: {
         canLyricCarouselEnter,
-        isRenderedLogue
+        isLyricLogue
     },
     optionStore: { selectedTipsOption }
 }) => ({
     canLyricCarouselEnter,
-    isRenderedLogue,
+    isLyricLogue,
     selectedTipsOption
 })
 
@@ -25,7 +25,7 @@ class TipsPopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
-        isRenderedLogue: PropTypes.bool.isRequired,
+        isLyricLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired
     }
 
@@ -33,13 +33,13 @@ class TipsPopup extends PureComponent {
         const
             {
                 canLyricCarouselEnter,
-                isRenderedLogue,
+                isLyricLogue,
                 selectedTipsOption
             } = this.props,
 
             isVisible =
                 canLyricCarouselEnter &&
-                !isRenderedLogue &&
+                !isLyricLogue &&
                 selectedTipsOption === SHOWN
 
         return (
