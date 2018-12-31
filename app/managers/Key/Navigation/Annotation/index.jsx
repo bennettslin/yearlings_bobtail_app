@@ -42,9 +42,7 @@ class AnnotationNavigation extends PureComponent {
     }
 
     navigateAnnotation = (e, keyName) => {
-        const { props } = this
-
-        let { accessedWikiWormholeIndex } = props,
+        let { accessedWikiWormholeIndex } = this.props,
             annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
@@ -60,7 +58,7 @@ class AnnotationNavigation extends PureComponent {
             case ARROW_UP:
             case ARROW_DOWN: {
                 // If not accessed on, do nothing and just turn access on.
-                if (props.isAccessOn) {
+                if (this.props.isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
                     this.dispatchAccessedWikiWormhole(direction)
                 }
@@ -70,7 +68,7 @@ class AnnotationNavigation extends PureComponent {
                 const {
                         selectedSongIndex,
                         selectedAnnotationIndex
-                    } = props,
+                    } = this.props,
 
                     wikiWormholeEntity = getWikiWormholeEntity({
                         songIndex: selectedSongIndex,

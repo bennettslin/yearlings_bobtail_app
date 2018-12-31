@@ -1,21 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import ProgressBar from '../../ProgressBar'
 
-/*************
- * CONTAINER *
- *************/
+const propTypes = {
+    task: PropTypes.object.isRequired,
+    isSubtask: PropTypes.number.isRequired,
+    maxTotalNeededHours: PropTypes.number.isRequired
+}
 
-const TaskRow = (props) => (
-    <TaskRowView {...props} />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
-const TaskRowView = ({
-
-    // From props.
+const TaskRow = ({
     task,
     isSubtask,
     maxTotalNeededHours
@@ -39,5 +33,7 @@ const TaskRowView = ({
         </div>
     </div>
 )
+
+TaskRow.propTypes = propTypes
 
 export default TaskRow

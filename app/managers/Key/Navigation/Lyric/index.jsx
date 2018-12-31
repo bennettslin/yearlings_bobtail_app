@@ -35,11 +35,11 @@ class LyricNavigation extends PureComponent {
     }
 
     navigateLyric = (e, keyName) => {
-        const { props } = this,
+        const
             {
                 interactivatedVerseIndex,
                 accessedAnnotationIndex
-            } = props,
+            } = this.props,
 
             isVerseInteractivated = interactivatedVerseIndex > -1
 
@@ -65,13 +65,13 @@ class LyricNavigation extends PureComponent {
          * verse.
          */
         if (
-            !props.isAccessOn ||
+            !this.props.isAccessOn ||
             isVerseInteractivated
         ) {
             const
                 verseIndex = isVerseInteractivated ?
                     interactivatedVerseIndex :
-                    props.selectedVerseIndex
+                    this.props.selectedVerseIndex
 
             this.dispatchAccessedAnnotation({
                 verseIndex,

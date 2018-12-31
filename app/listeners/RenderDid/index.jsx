@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateLoadStore } from 'flux/load/action'
 import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
 
@@ -14,7 +13,6 @@ class RenderDidListener extends PureComponent {
         didTheatreEnter: PropTypes.bool.isRequired,
         didLyricEnter: PropTypes.bool.isRequired,
         didCarouselEnter: PropTypes.bool.isRequired,
-        updateLoadStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
     }
@@ -82,7 +80,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateLoadStore,
         updateLyricStore,
         updateSceneStore
     }

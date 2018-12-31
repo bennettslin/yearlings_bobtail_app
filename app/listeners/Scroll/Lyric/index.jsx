@@ -34,7 +34,7 @@ class ScrollLyricListener extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         updateChangeStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
-        resetVerseBars: PropTypes.func.isRequired,
+        // resetVerseBars: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired

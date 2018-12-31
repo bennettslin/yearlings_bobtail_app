@@ -1,4 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
+// import PropTypes from 'prop-types'
+
 import StatsHelper from './helper'
 import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
 

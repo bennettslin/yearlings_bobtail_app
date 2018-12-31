@@ -1,22 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import TaskRow from './task-row'
 import { hasRemainingHours } from './helper'
 
-/*************
- * CONTAINER *
- *************/
+const propTypes = {
+    tasks: PropTypes.array.isRequired,
+    isSubtask: PropTypes.bool.isRequired,
+    maxTotalNeededHours: PropTypes.number.isRequired
+}
 
-const TasksBlock = (props) => (
-    <TasksBlockView {...props} />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
-const TasksBlockView = ({
-
-    // From props.
+const TasksBlock = ({
     tasks,
     isSubtask,
     maxTotalNeededHours
@@ -48,5 +42,7 @@ const TasksBlockView = ({
             )}
     </div>
 )
+
+TasksBlock.propTypes = propTypes
 
 export default TasksBlock
