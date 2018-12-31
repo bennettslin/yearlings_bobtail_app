@@ -50,7 +50,7 @@ class SongChangeExitListener extends PureComponent {
             this.props.updateSceneStore({ canSceneEnter: false })
             this.props.updateLyricStore({
                 canLyricCarouselEnter: false,
-                canLyricUpdate: false
+                canLyricCarouselUpdate: false
             })
             this.props.updateRenderStore({
                 didSceneEnter: false,

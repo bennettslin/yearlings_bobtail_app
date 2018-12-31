@@ -142,7 +142,9 @@ class Lyric extends PureComponent {
                                 onEntered: this.determineVerseBars
                             }}
                         >
-                            <div />
+                            <div
+                                {...{ className: 'displayNoneContainer' }}
+                            />
                         </Transition>
                     </div>
                 </CSSTransition>

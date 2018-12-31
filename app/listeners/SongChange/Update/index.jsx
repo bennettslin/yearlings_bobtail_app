@@ -74,7 +74,7 @@ class SongChangeUpdateListener extends PureComponent {
         } = this.props
 
         this.props.updateLyricStore({
-            canLyricUpdate: true,
+            canLyricCarouselUpdate: true,
             lyricSongIndex: selectedSongIndex,
             lyricVerseIndex: selectedVerseIndex,
             lyricAnnotationIndex: selectedAnnotationIndex
