@@ -1,5 +1,3 @@
-// Singleton to listen for changes that reset render flow.
-
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -11,9 +9,9 @@ import {
     CAN_SCENE_RENDER,
     CAN_THEATRE_RENDER,
     getNextKeyCanRender
-} from '../../../helpers/render'
+} from 'helpers/render'
 
-class SongChangeListener extends PureComponent {
+class SongChangeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -32,27 +30,10 @@ class SongChangeListener extends PureComponent {
             { isSongSelectInFlux } = this.props,
             { isSongSelectInFlux: wasSongSelectInFlux } = prevProps
 
-        // Is still being selected
-        if (isSongSelectInFlux && !wasSongSelectInFlux) {
-            this._initiateExitTransition()
-
         // Is done being selected.
-        } else if (!isSongSelectInFlux && wasSongSelectInFlux) {
+        if (!isSongSelectInFlux && wasSongSelectInFlux) {
             this._handleSongChangeRenderable()
         }
-    }
-
-    _initiateExitTransition() {
-        this.props.updateSceneStore({ canSceneEnter: false })
-        this.props.updateLyricStore({
-            canLyricEnter: false,
-            canCarouselEnter: false
-        })
-        this.props.updateRenderStore({
-            didSceneEnter: false,
-            didLyricEnter: false,
-            didCarouselEnter: false
-        })
     }
 
     _handleSongChangeRenderable() {
@@ -60,6 +41,7 @@ class SongChangeListener extends PureComponent {
 
         if (nextKey === CAN_SCENE_RENDER) {
             this.props.updateSceneStore({ [nextKey]: true })
+
         } else {
             this.props.updateLyricStore({ [nextKey]: true })
         }
@@ -83,4 +65,4 @@ export default connect(
         updateLyricStore,
         updateSceneStore
     }
-)(SongChangeListener)
+)(SongChangeEnterListener)

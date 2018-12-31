@@ -1,15 +1,11 @@
-// Singleton to listen for song change.
-
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
-import SongChangeDispatcher from '../../handlers/SongChange/Dispatcher'
-
 import { populateRefs } from 'helpers/ref'
 
-class RenderedListener extends PureComponent {
+class LyricIndicesListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -20,38 +16,11 @@ class RenderedListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._prepareForSongChangeUnrender(prevProps)
-        this._checkAnnotationSelect(prevProps)
-        this._checkVerseSelect(prevProps)
+        this._checkAnnotationSelectForSameSong(prevProps)
+        this._checkVerseSelectForSameSong(prevProps)
     }
 
-    _prepareForSongChangeUnrender(prevProps) {
-        const
-            { selectedSongIndex } = this.props,
-            { selectedSongIndex: prevSongIndex } = prevProps
-
-        if (selectedSongIndex !== prevSongIndex) {
-            this.dispatchSongSelectInFlux(
-                this._prepareForSongChangeRender
-            )
-        }
-    }
-
-    _prepareForSongChangeRender = () => {
-        const {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        } = this.props
-
-        this.props.updateLyricStore({
-            lyricSongIndex: selectedSongIndex,
-            lyricVerseIndex: selectedVerseIndex,
-            lyricAnnotationIndex: selectedAnnotationIndex
-        })
-    }
-
-    _checkAnnotationSelect(prevProps) {
+    _checkAnnotationSelectForSameSong(prevProps) {
         const
             {
                 selectedSongIndex,
@@ -63,8 +32,8 @@ class RenderedListener extends PureComponent {
             } = prevProps
 
         /**
-         * If annotation changed within the same song, change rendered index
-         * right away.
+         * If annotation changed within the same song, change lyric index right
+         * away.
          */
         if (
             selectedSongIndex === prevSongIndex &&
@@ -76,7 +45,7 @@ class RenderedListener extends PureComponent {
         }
     }
 
-    _checkVerseSelect(prevProps) {
+    _checkVerseSelectForSameSong(prevProps) {
         const
             {
                 selectedSongIndex,
@@ -88,17 +57,13 @@ class RenderedListener extends PureComponent {
             } = prevProps
 
         /**
-         * If verse changed within the same song, change index to be rendered
-         * right away.
+         * If verse changed within the same song, change lyric index right
+         * away.
          */
         if (
             selectedSongIndex === prevSongIndex &&
             selectedVerseIndex !== prevVerseIndex
         ) {
-            /**
-             * If selecting or changing verse in same song, change index to be
-             * rendered right away.
-             */
             this.props.updateLyricStore({
                 lyricVerseIndex: selectedVerseIndex
             })
@@ -110,9 +75,7 @@ class RenderedListener extends PureComponent {
     }
 
     render() {
-        return (
-            <SongChangeDispatcher {...{ getRefs: this._getRefs }} />
-        )
+        return null
     }
 }
 
@@ -133,4 +96,4 @@ export default connect(
     {
         updateLyricStore
     }
-)(RenderedListener)
+)(LyricIndicesListener)

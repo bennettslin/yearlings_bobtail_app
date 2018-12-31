@@ -22,10 +22,10 @@ class SongListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._handleSongChangeIfNeeded(prevProps)
+        this._checkSongSelect(prevProps)
     }
 
-    _handleSongChangeIfNeeded(prevProps) {
+    _checkSongSelect(prevProps) {
         const
             { selectedSongIndex } = this.props,
             { selectedSongIndex: prevSongIndex } = prevProps

@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { updateDeviceStore } from 'flux/device/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
 
-import { populateRefs } from 'helpers/ref'
 import {
     getIsHeightlessLyric,
     getIsUnrenderableCarouselNav
@@ -28,39 +27,27 @@ import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
 import { getStageCoordinates } from './helpers/stage'
 
-class WindowResizeEnterListener extends PureComponent {
+class WindowResizeEnterDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isWindowResizeInFlux: PropTypes.bool.isRequired,
         updateDeviceStore: PropTypes.func.isRequired,
-        updateResponsiveStore: PropTypes.func.isRequired
+        updateResponsiveStore: PropTypes.func.isRequired,
+
+        // From parent.
+        getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
+        this.props.getRefs({
+            dispatchBeginEnterTransition: this.beginEnterTransitionWithNewState
+        })
+
         // Set state based on initial window size.
-        this._beginEnterTransitionWithNewState()
+        this.beginEnterTransitionWithNewState()
     }
 
-    componentDidUpdate(prevProps) {
-        this._checkWindowResize(prevProps)
-    }
-
-    _checkWindowResize(prevProps = {}) {
-        const
-            { isWindowResizeInFlux } = this.props,
-            { isWindowResizeInFlux: wasWindowResizeInFlux } = prevProps
-
-        /**
-         * Window resize has finished, so now update state to kick off enter
-         * transition.
-         */
-        if (!isWindowResizeInFlux && wasWindowResizeInFlux) {
-            this._beginEnterTransitionWithNewState()
-        }
-    }
-
-    _beginEnterTransitionWithNewState = () => {
+    beginEnterTransitionWithNewState = () => {
         logEnter('Theatre can enter.')
 
         const {
@@ -173,20 +160,12 @@ class WindowResizeEnterListener extends PureComponent {
         })
     }
 
-    _getRefs = (payload) => {
-        populateRefs(this, payload)
-    }
-
     render() {
         return null
     }
 }
 
-const mapStateToProps = ({
-    changeStore: { isWindowResizeInFlux }
-}) => ({
-    isWindowResizeInFlux
-})
+const mapStateToProps = null
 
 export default connect(
     mapStateToProps,
@@ -194,4 +173,4 @@ export default connect(
         updateDeviceStore,
         updateResponsiveStore
     }
-)(WindowResizeEnterListener)
+)(WindowResizeEnterDispatcher)

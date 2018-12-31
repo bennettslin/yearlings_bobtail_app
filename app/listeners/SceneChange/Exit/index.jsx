@@ -46,6 +46,11 @@ class SceneChangeExitListener extends PureComponent {
         this.props.updateChangeStore({ isSceneChangeExitScrollDone: false })
         this.props.updateSceneStore({ canSceneEnter: false })
         this.props.updateRenderStore({ didSceneEnter: false })
+
+        /**
+         * Scene change does not need timeout, because in production, changing
+         * between multiple scenes quickly isn't possible.
+         */
     }
 
     render() {

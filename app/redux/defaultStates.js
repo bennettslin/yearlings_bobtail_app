@@ -81,8 +81,7 @@ export const AUDIO_DEFAULTS = {
 export const CHANGE_DEFAULTS = {
     isSceneChangeExitScrollDone: true,
     isSongSelectInFlux: false,
-    isSongDonePreparing: true,
-    isWindowResizeInFlux: false
+    isSongDonePreparing: true
 }
 
 export const CURTAIN_DEFAULTS = {

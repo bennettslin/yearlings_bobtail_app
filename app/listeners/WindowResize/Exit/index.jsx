@@ -1,16 +1,18 @@
-import { PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
-import { updateChangeStore } from 'flux/change/action'
 import { updateDeviceStore } from 'flux/device/action'
 import { updateRenderStore } from 'flux/render/action'
+
+import WindowResizeEnterDispatcher from '../Enter'
+
+import { populateRefs } from 'helpers/ref'
 
 class WindowResizeExitListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        updateChangeStore: PropTypes.func.isRequired,
         updateDeviceStore: PropTypes.func.isRequired,
         updateRenderStore: PropTypes.func.isRequired
     }
@@ -28,7 +30,6 @@ class WindowResizeExitListener extends PureComponent {
     }
 
     _beginExitTransition = () => {
-        this.props.updateChangeStore({ isWindowResizeInFlux: true })
         this.props.updateDeviceStore({ canTheatreEnter: false })
         this.props.updateRenderStore({ didTheatreEnter: false })
 
@@ -48,11 +49,17 @@ class WindowResizeExitListener extends PureComponent {
     }
 
     _completeWindowResize = () => {
-        this.props.updateChangeStore({ isWindowResizeInFlux: false })
+        this.dispatchBeginEnterTransition()
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
     }
 
     render() {
-        return null
+        return (
+            <WindowResizeEnterDispatcher {...{ getRefs: this._getRefs }} />
+        )
     }
 }
 
@@ -61,7 +68,6 @@ const mapStateToProps = null
 export default connect(
     mapStateToProps,
     {
-        updateChangeStore,
         updateDeviceStore,
         updateRenderStore
     }
