@@ -15,10 +15,10 @@ import CarouselSelect from './Select'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricEnter },
+    lyricStore: { canLyricCarouselEnter },
     responsiveStore: { isUnrenderableCarouselNav }
 }) => ({
-    canLyricEnter,
+    canLyricCarouselEnter,
     isUnrenderableCarouselNav
 })
 
@@ -26,7 +26,7 @@ class Carousel extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricEnter: PropTypes.bool.isRequired,
+        canLyricCarouselEnter: PropTypes.bool.isRequired,
         isUnrenderableCarouselNav: PropTypes.bool.isRequired,
         updateChangeStore: PropTypes.func.isRequired,
         updateRenderStore: PropTypes.func.isRequired
@@ -58,15 +58,15 @@ class Carousel extends PureComponent {
 
     render() {
         const {
-            canLyricEnter,
+            canLyricCarouselEnter,
             isUnrenderableCarouselNav
         } = this.props
 
-        return !isUnrenderableCarouselNav && (
+        return (
             <CSSTransition
                 mountOnEnter
                 {...{
-                    in: canLyricEnter,
+                    in: !isUnrenderableCarouselNav && canLyricCarouselEnter,
                     timeout: 250,
                     classNames: {
                         enterDone: 'Carousel__visible'

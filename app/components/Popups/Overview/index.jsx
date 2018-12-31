@@ -11,7 +11,7 @@ import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
     deviceStore: { isPhone },
-    lyricStore: { canLyricEnter },
+    lyricStore: { canLyricCarouselEnter },
     optionStore: {
         selectedOverviewOption,
         selectedTipsOption
@@ -19,7 +19,7 @@ const mapStateToProps = ({
     lyricStore: { isRenderedLogue }
 }) => ({
     isPhone,
-    canLyricEnter,
+    canLyricCarouselEnter,
     selectedOverviewOption,
     selectedTipsOption,
     isRenderedLogue
@@ -30,7 +30,7 @@ class OverviewPopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPhone: PropTypes.bool.isRequired,
-        canLyricEnter: PropTypes.bool.isRequired,
+        canLyricCarouselEnter: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         isRenderedLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -44,7 +44,7 @@ class OverviewPopup extends PureComponent {
             {
                 inMain,
                 isPhone,
-                canLyricEnter,
+                canLyricCarouselEnter,
                 selectedOverviewOption,
                 isRenderedLogue,
                 selectedTipsOption
@@ -62,7 +62,7 @@ class OverviewPopup extends PureComponent {
                 selectedTipsOption !== SHOWN &&
                 selectedOverviewOption === SHOWN,
 
-            isVisible = canLyricEnter && isVisibleBasedOnSong
+            isVisible = canLyricCarouselEnter && isVisibleBasedOnSong
 
         return (
             <Popup

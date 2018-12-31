@@ -20,10 +20,10 @@ import VerseBar from './VerseBar'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricEnter },
+    lyricStore: { canLyricCarouselEnter },
     toggleStore: { isLyricExpanded }
 }) => ({
-    canLyricEnter,
+    canLyricCarouselEnter,
     isLyricExpanded
 })
 
@@ -35,7 +35,7 @@ class Lyric extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricEnter: PropTypes.bool.isRequired,
+        canLyricCarouselEnter: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         updateChangeStore: PropTypes.func.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
@@ -74,7 +74,7 @@ class Lyric extends PureComponent {
 
     render() {
         const {
-            canLyricEnter,
+            canLyricCarouselEnter,
             isLyricExpanded,
             setLyricFocusElement
         } = this.props
@@ -84,7 +84,7 @@ class Lyric extends PureComponent {
                 <CSSTransition
                     mountOnEnter
                     {...{
-                        in: canLyricEnter,
+                        in: canLyricCarouselEnter,
                         timeout: 250,
                         classNames: {
                             enterDone: 'Lyric__visible'

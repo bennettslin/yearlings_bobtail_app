@@ -9,16 +9,16 @@ import { updateChangeStore } from 'flux/change/action'
 import CSSTransition from 'react-transition-group/CSSTransition'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricEnter }
+    lyricStore: { canLyricCarouselEnter }
 }) => ({
-    canLyricEnter
+    canLyricCarouselEnter
 })
 
 class Curtains extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricEnter: PropTypes.bool.isRequired
+        canLyricCarouselEnter: PropTypes.bool.isRequired
     }
 
     _handleTransitionExited = () => {
@@ -31,13 +31,13 @@ class Curtains extends PureComponent {
     }
 
     render() {
-        const { canLyricEnter } = this.props
+        const { canLyricCarouselEnter } = this.props
 
         return (
             <CSSTransition
                 mountOnEnter
                 {...{
-                    in: canLyricEnter,
+                    in: canLyricCarouselEnter,
                     timeout: 250,
                     classNames: {
                         enterDone: 'Curtains__parted'

@@ -30,7 +30,7 @@ class RenderDidListener extends PureComponent {
 
         if (didTheatreEnter && !hadTheatreRendered) {
             logEnter('Lyric can enter.')
-            this.props.updateLyricStore({ canLyricEnter: true })
+            this.props.updateLyricStore({ canLyricCarouselEnter: true })
         }
     }
 

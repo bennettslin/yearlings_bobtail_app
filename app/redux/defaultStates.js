@@ -129,7 +129,7 @@ export const LOAD_DEFAULTS = {
 }
 
 export const LYRIC_DEFAULTS = {
-    canLyricEnter: false,
+    canLyricCarouselEnter: false,
     canLyricUpdate: false,
 
     lyricSongIndex: storedSongIndex,

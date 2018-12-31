@@ -14,16 +14,16 @@ import SliderAccess from './Access'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricEnter }
+    lyricStore: { canLyricCarouselEnter }
 }) => ({
-    canLyricEnter
+    canLyricCarouselEnter
 })
 
 class Slider extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricEnter: PropTypes.bool.isRequired
+        canLyricCarouselEnter: PropTypes.bool.isRequired
     }
 
     _handleTouchDown = (e) => {
@@ -39,7 +39,7 @@ class Slider extends PureComponent {
     }
 
     render() {
-        const { canLyricEnter } = this.props
+        const { canLyricCarouselEnter } = this.props
 
         return (
             <div
@@ -47,7 +47,7 @@ class Slider extends PureComponent {
                     ref: this._getSliderElement,
                     className: cx(
                         'Slider',
-                        canLyricEnter && 'Slider__visible'
+                        canLyricCarouselEnter && 'Slider__visible'
                     ),
                     onMouseDown: this._handleTouchDown,
                     onTouchStart: this._handleTouchDown

@@ -11,6 +11,7 @@ class SongChangeExitListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
+        isSongSelectInFlux: PropTypes.bool.isRequired,
         updateChangeStore: PropTypes.func.isRequired,
         updateRenderStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
@@ -36,25 +37,29 @@ class SongChangeExitListener extends PureComponent {
     }
 
     _beginExitTransition = () => {
-        this.props.updateChangeStore({
-            isSongSelectInFlux: true,
-            isSongChangeCarouselExitDone: false,
-            isSongChangeCurtainExitDone: false,
-            isSongChangeLyricExitDone: false
-        })
-        this.props.updateSceneStore({ canSceneEnter: false })
-        this.props.updateLyricStore({
-            canLyricEnter: false,
-            canLyricUpdate: false
-        })
-        this.props.updateRenderStore({
-            didSceneEnter: false,
-            didLyricEnter: false,
-            didCarouselEnter: false,
 
-            didLyricUpdate: false,
-            didCarouselUpdate: false
-        })
+        // Only reset these values once.
+        // TODO: Not sure if this actually does the trick.
+        if (!this.props.isSongSelectInFlux) {
+            this.props.updateChangeStore({
+                isSongSelectInFlux: true,
+                isSongChangeCarouselExitDone: false,
+                isSongChangeCurtainExitDone: false,
+                isSongChangeLyricExitDone: false
+            })
+            this.props.updateSceneStore({ canSceneEnter: false })
+            this.props.updateLyricStore({
+                canLyricCarouselEnter: false,
+                canLyricUpdate: false
+            })
+            this.props.updateRenderStore({
+                didSceneEnter: false,
+                didLyricEnter: false,
+                didCarouselEnter: false,
+                didLyricUpdate: false,
+                didCarouselUpdate: false
+            })
+        }
 
         // Clear previous timeout.
         clearTimeout(this.state.songChangeTimeoutId)
@@ -81,8 +86,10 @@ class SongChangeExitListener extends PureComponent {
 }
 
 const mapStateToProps = ({
+    changeStore: { isSongSelectInFlux },
     selectedStore: { selectedSongIndex }
 }) => ({
+    isSongSelectInFlux,
     selectedSongIndex
 })
 
