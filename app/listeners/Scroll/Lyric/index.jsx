@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateChangeStore } from 'flux/change/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import { resetVerseBars } from 'flux/verseBars/action'
 
 import {
     scrollElementIntoView,
@@ -33,6 +34,7 @@ class ScrollLyricListener extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         updateChangeStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
+        resetVerseBars: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -220,6 +222,7 @@ export default connect(
     mapStateToProps,
     {
         updateChangeStore,
-        updateScrollLyricStore
+        updateScrollLyricStore,
+        resetVerseBars
     }
 )(ScrollLyricListener)
