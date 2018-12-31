@@ -45,32 +45,35 @@ import {
 /**
  * Transition values. Kept together up here for dev clarity.
  */
-const
-    DEVICE_TRANSITION_DEFAULTS = {
-        canTheatreEnter: false,
-        didTheatreEnter: false
-    },
-    LYRIC_TRANSITION_DEFAULTS = {
-        canLyricCarouselEnter: false,
-        canLyricCarouselUpdate: false,
-        didCarouselExit: false,
-        didLyricExit: false,
-        didCurtainExit: false,
-        didLyricUpdate: false,
-        didCarouselUpdate: false,
-        didLyricEnter: false,
-        didCarouselEnter: false
-    },
-    SCENE_TRANSITION_DEFAULTS = {
-        canSceneEnter: false,
-        canSceneUpdate: false,
-        didSceneScrollExit: false,
-        didSceneUpdate: false,
-        didSceneEnter: false
-    },
-    SELECTED_TRANSITION_DEFAULTS = {
-        isSongSelectInFlux: false
-    }
+export const DEVICE_TRANSITION_DEFAULTS = {
+    canTheatreEnter: false,
+    didTheatreEnter: false
+}
+export const LYRIC_TRANSITION_DEFAULTS = {
+    didCarouselExit: false,
+    didLyricExit: false,
+    didCurtainExit: false,
+
+    canLyricCarouselUpdate: false,
+    didLyricUpdate: false,
+    didCarouselUpdate: false,
+
+    canLyricCarouselEnter: false,
+    didLyricEnter: false,
+    didCarouselEnter: false
+}
+export const SCENE_TRANSITION_DEFAULTS = {
+    didSceneScrollExit: false,
+
+    canSceneUpdate: false,
+    didSceneUpdate: false,
+
+    canSceneEnter: false,
+    didSceneEnter: false
+}
+export const SELECTED_TRANSITION_DEFAULTS = {
+    isSongSelectInFlux: false
+}
 
 const
     storedAnnotationIndex = getIndexFromStorage(SELECTED_ANNOTATION_INDEX),

@@ -5,7 +5,10 @@ import {
 } from '../actionHelper'
 
 import { DEVICE_STORE } from '../storeKeys'
-import { DEVICE_DEFAULTS } from '../defaultStates'
+import {
+    DEVICE_DEFAULTS,
+    DEVICE_TRANSITION_DEFAULTS
+} from '../defaultStates'
 
 import {
     getIsDesktop,
@@ -13,7 +16,6 @@ import {
 } from '../../helpers/responsive'
 
 export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => {
-
     const { deviceIndex } = payload
 
     if (hasKey(deviceIndex)) {
@@ -24,5 +26,12 @@ export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => {
     return ({
         type: DEVICE_STORE,
         payload: getDefinedOnlyPayload(payload)
+    })
+}
+
+export const resetDeviceForTransition = () => {
+    return ({
+        type: DEVICE_STORE,
+        payload: DEVICE_TRANSITION_DEFAULTS
     })
 }
