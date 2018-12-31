@@ -17,7 +17,6 @@ export const SESSION_STORE = 'sessionStore'
 export const SLIDER_STORE = 'sliderStore'
 export const TOGGLE_STORE = 'toggleStore'
 export const TRANSIENT_STORE = 'transientStore'
-export const TRANSITION_STORE = 'transitionStore'
 export const VERSE_BARS_STORE = 'verseBarsStore'
 
 export const IS_ACCESS_ON = 'isAccessOn'

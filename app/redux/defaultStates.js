@@ -42,20 +42,6 @@ import {
     SELECTED_TIPS_OPTION
 } from './storeKeys'
 
-const
-    storedAnnotationIndex = getIndexFromStorage(SELECTED_ANNOTATION_INDEX),
-    storedSongIndex = getIndexFromStorage(SELECTED_SONG_INDEX),
-    storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
-    isStoredLogue = getSongIsLogue(storedSongIndex),
-    storedEarColumnIndex = getAnnotationColumnIndex(
-        storedSongIndex,
-        storedAnnotationIndex
-    ),
-    storedSceneIndex = getSceneIndexForVerseIndex(
-        storedSongIndex,
-        storedVerseIndex
-    )
-
 /**
  * Transition values. Kept together up here for dev clarity.
  */
@@ -69,23 +55,36 @@ const
         canLyricCarouselUpdate: false,
         didCarouselExit: false,
         didLyricExit: false,
-        didCurtainExit: false
+        didCurtainExit: false,
+        didLyricUpdate: false,
+        didCarouselUpdate: false,
+        didLyricEnter: false,
+        didCarouselEnter: false
     },
     SCENE_TRANSITION_DEFAULTS = {
         canSceneEnter: false,
         canSceneUpdate: false,
-        didSceneScrollExit: false
+        didSceneScrollExit: false,
+        didSceneUpdate: false,
+        didSceneEnter: false
+    },
+    SELECTED_TRANSITION_DEFAULTS = {
+        isSongSelectInFlux: false
     }
 
-export const TRANSITION_DEFAULTS = {
-    didSceneUpdate: false,
-    didLyricUpdate: false,
-    didCarouselUpdate: false,
-
-    didSceneEnter: false,
-    didLyricEnter: false,
-    didCarouselEnter: false
-}
+const
+    storedAnnotationIndex = getIndexFromStorage(SELECTED_ANNOTATION_INDEX),
+    storedSongIndex = getIndexFromStorage(SELECTED_SONG_INDEX),
+    storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
+    isStoredLogue = getSongIsLogue(storedSongIndex),
+    storedEarColumnIndex = getAnnotationColumnIndex(
+        storedSongIndex,
+        storedAnnotationIndex
+    ),
+    storedSceneIndex = getSceneIndexForVerseIndex(
+        storedSongIndex,
+        storedVerseIndex
+    )
 
 export const ACCESS_DEFAULTS = {
     accessedKey: '',
@@ -229,7 +228,7 @@ const storedTime = getStartTimeForVerseIndex(
 )
 
 export const SELECTED_DEFAULTS = {
-    isSongSelectInFlux: false,
+    ...SELECTED_TRANSITION_DEFAULTS,
     selectedSongIndex: storedSongIndex,
     selectedAnnotationIndex: storedAnnotationIndex,
     selectedVerseIndex: storedVerseIndex,

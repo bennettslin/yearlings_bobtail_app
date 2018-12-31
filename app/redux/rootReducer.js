@@ -18,7 +18,6 @@ import SessionReducer from './session/reducer'
 import SliderReducer from './slider/reducer'
 import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
-import TransitionReducer from './transition/reducer'
 import VerseBarsReducer from './verseBars/reducer'
 
 import {
@@ -41,23 +40,20 @@ import {
     SLIDER_STORE,
     TOGGLE_STORE,
     TRANSIENT_STORE,
-    TRANSITION_STORE,
     VERSE_BARS_STORE
 } from './storeKeys'
 
 const rootReducer = combineReducers({
-    [TRANSITION_STORE]: TransitionReducer,
-
-    [SCENE_STORE]: SceneReducer,
-    [LYRIC_STORE]: LyricReducer,
     [SELECTED_STORE]: SelectedReducer,
+    [LYRIC_STORE]: LyricReducer,
+    [SCENE_STORE]: SceneReducer,
+    [DEVICE_STORE]: DeviceReducer,
 
     [AUDIO_STORE]: AudioReducer,
     [ACCESS_STORE]: AccessReducer,
     [SESSION_STORE]: SessionReducer,
     [PLAYERS_STORE]: PlayersReducer,
 
-    [DEVICE_STORE]: DeviceReducer,
     [RESPONSIVE_STORE]: ResponsiveReducer,
 
     [TOGGLE_STORE]: ToggleReducer,

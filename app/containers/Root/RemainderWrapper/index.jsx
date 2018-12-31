@@ -173,8 +173,8 @@ const mapStateToProps = ({
         isCarouselNavShowable,
         isEarShown
     },
-    transitionStore: { didLyricEnter },
     lyricStore: {
+        didLyricEnter,
         lyricAnnotationIndex,
         isLyricLogue
     },

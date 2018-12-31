@@ -59,15 +59,15 @@ class SongChangeEnterListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    transitionStore: {
-        didSceneUpdate,
+    lyricStore: {
         didLyricUpdate,
         didCarouselUpdate
-    }
+    },
+    sceneStore: { didSceneUpdate }
 }) => ({
-    didSceneUpdate,
     didLyricUpdate,
-    didCarouselUpdate
+    didCarouselUpdate,
+    didSceneUpdate
 })
 
 export default connect(

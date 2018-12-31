@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateTransitionStore } from 'flux/transition/action'
 import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
 import { updateSelectedStore } from 'flux/selected/action'
@@ -12,7 +11,6 @@ class SongChangeExitListener extends PureComponent {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
         isSongSelectInFlux: PropTypes.bool.isRequired,
-        updateTransitionStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired
@@ -42,20 +40,20 @@ class SongChangeExitListener extends PureComponent {
         // TODO: Not sure if this actually does the trick.
         if (!this.props.isSongSelectInFlux) {
             this.props.updateSelectedStore({ isSongSelectInFlux: true })
-            this.props.updateSceneStore({ canSceneEnter: false })
+            this.props.updateSceneStore({
+                canSceneEnter: false,
+                didSceneEnter: false
+            })
             this.props.updateLyricStore({
                 didCarouselExit: false,
                 didLyricExit: false,
                 didCurtainExit: false,
                 canLyricCarouselEnter: false,
-                canLyricCarouselUpdate: false
-            })
-            this.props.updateTransitionStore({
-                didSceneEnter: false,
-                didLyricEnter: false,
-                didCarouselEnter: false,
+                canLyricCarouselUpdate: false,
                 didLyricUpdate: false,
-                didCarouselUpdate: false
+                didCarouselUpdate: false,
+                didLyricEnter: false,
+                didCarouselEnter: false
             })
         }
 
@@ -96,7 +94,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateTransitionStore,
         updateLyricStore,
         updateSceneStore,
         updateSelectedStore

@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateTransitionStore } from 'flux/transition/action'
 import { updateSceneStore } from 'flux/scene/action'
 
 class SceneChangeExitListener extends PureComponent {
@@ -12,7 +11,6 @@ class SceneChangeExitListener extends PureComponent {
         // Through Redux.
         selectedSceneIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        updateTransitionStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired
     }
 
@@ -43,9 +41,9 @@ class SceneChangeExitListener extends PureComponent {
     _beginExitTransition = () => {
         this.props.updateSceneStore({
             canSceneEnter: false,
-            didSceneScrollExit: false
+            didSceneScrollExit: false,
+            didSceneEnter: false
         })
-        this.props.updateTransitionStore({ didSceneEnter: false })
 
         /**
          * Scene change does not need timeout, because in production, changing
@@ -71,7 +69,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateTransitionStore,
         updateSceneStore
     }
 )(SceneChangeExitListener)
