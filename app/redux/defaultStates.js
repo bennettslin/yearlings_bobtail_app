@@ -47,7 +47,7 @@ const
     storedSongIndex = getIndexFromStorage(SELECTED_SONG_INDEX),
     storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
     isStoredLogue = getSongIsLogue(storedSongIndex),
-    earColumnIndex = getAnnotationColumnIndex(
+    storedEarColumnIndex = getAnnotationColumnIndex(
         storedSongIndex,
         storedAnnotationIndex
     ),
@@ -57,12 +57,10 @@ const
     )
 
 export const CHANGE_DEFAULTS = {
-    isSceneChangeScrollExitDone: false,
-
-    isSongSelectInFlux: false,
-    isSongChangeCarouselExitDone: false,
-    isSongChangeLyricExitDone: false,
-    isSongChangeCurtainExitDone: false
+    didSceneScrollExit: false,
+    didCarouselExit: false,
+    didLyricExit: false,
+    didCurtainExit: false
 }
 
 export const TRANSITION_DEFAULTS = {
@@ -215,17 +213,20 @@ export const SCROLL_LYRIC_DEFAULTS = {
     queuedSceneChangeExitScrollCallback: false
 }
 
+const storedTime = getStartTimeForVerseIndex(
+    storedSongIndex,
+    storedVerseIndex
+)
+
 export const SELECTED_DEFAULTS = {
-    [SELECTED_SONG_INDEX]: storedSongIndex,
-    [SELECTED_ANNOTATION_INDEX]: storedAnnotationIndex,
-    [SELECTED_VERSE_INDEX]: storedVerseIndex,
+    isSongSelectInFlux: false,
+    selectedSongIndex: storedSongIndex,
+    selectedAnnotationIndex: storedAnnotationIndex,
+    selectedVerseIndex: storedVerseIndex,
     selectedSceneIndex: storedSceneIndex,
     isSelectedLogue: isStoredLogue,
-    selectedTime: getStartTimeForVerseIndex(
-        storedSongIndex,
-        storedVerseIndex
-    ),
-    earColumnIndex: earColumnIndex || 0
+    selectedTime: storedTime,
+    earColumnIndex: storedEarColumnIndex || 0
 }
 
 export const SESSION_DEFAULTS = {

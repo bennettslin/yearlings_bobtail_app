@@ -27,7 +27,7 @@ class Curtains extends PureComponent {
     }
 
     _endTransition = () => {
-        this.props.updateChangeStore({ isSongChangeCurtainExitDone: true })
+        this.props.updateChangeStore({ didCurtainExit: true })
     }
 
     render() {

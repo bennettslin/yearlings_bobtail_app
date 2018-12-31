@@ -5,6 +5,7 @@ import { updateChangeStore } from 'flux/change/action'
 import { updateTransitionStore } from 'flux/transition/action'
 import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
+import { updateSelectedStore } from 'flux/selected/action'
 
 class SongChangeExitListener extends PureComponent {
 
@@ -15,7 +16,8 @@ class SongChangeExitListener extends PureComponent {
         updateChangeStore: PropTypes.func.isRequired,
         updateTransitionStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
-        updateSceneStore: PropTypes.func.isRequired
+        updateSceneStore: PropTypes.func.isRequired,
+        updateSelectedStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -41,11 +43,11 @@ class SongChangeExitListener extends PureComponent {
         // Only reset these values once.
         // TODO: Not sure if this actually does the trick.
         if (!this.props.isSongSelectInFlux) {
+            this.props.updateSelectedStore({ isSongSelectInFlux: true })
             this.props.updateChangeStore({
-                isSongSelectInFlux: true,
-                isSongChangeCarouselExitDone: false,
-                isSongChangeCurtainExitDone: false,
-                isSongChangeLyricExitDone: false
+                didCarouselExit: false,
+                didCurtainExit: false,
+                didLyricExit: false
             })
             this.props.updateSceneStore({ canSceneEnter: false })
             this.props.updateLyricStore({
@@ -77,7 +79,7 @@ class SongChangeExitListener extends PureComponent {
     }
 
     _dispatchSongSelectComplete = () => {
-        this.props.updateChangeStore({ isSongSelectInFlux: false })
+        this.props.updateSelectedStore({ isSongSelectInFlux: false })
     }
 
     render() {
@@ -86,8 +88,10 @@ class SongChangeExitListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    changeStore: { isSongSelectInFlux },
-    selectedStore: { selectedSongIndex }
+    selectedStore: {
+        isSongSelectInFlux,
+        selectedSongIndex
+    }
 }) => ({
     isSongSelectInFlux,
     selectedSongIndex
@@ -99,6 +103,7 @@ export default connect(
         updateChangeStore,
         updateTransitionStore,
         updateLyricStore,
-        updateSceneStore
+        updateSceneStore,
+        updateSelectedStore
     }
 )(SongChangeExitListener)

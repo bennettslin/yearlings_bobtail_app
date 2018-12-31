@@ -61,7 +61,7 @@ class Lyric extends PureComponent {
     }
 
     _handleTransitionExited = () => {
-        this.props.updateChangeStore({ isSongChangeLyricExitDone: true })
+        this.props.updateChangeStore({ didLyricExit: true })
     }
 
     _handleTransitionEntered = () => {

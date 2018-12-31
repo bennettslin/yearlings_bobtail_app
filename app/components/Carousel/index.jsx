@@ -45,7 +45,7 @@ class Carousel extends PureComponent {
     }
 
     _handleTransitionExited = () => {
-        this.props.updateChangeStore({ isSongChangeCarouselExitDone: true })
+        this.props.updateChangeStore({ didCarouselExit: true })
     }
 
     _handleTransitionEntered = () => {

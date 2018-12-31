@@ -163,7 +163,7 @@ class ScrollLyricListener extends PureComponent {
     }
 
     _completeSceneChangeExitScroll = () => {
-        this.props.updateChangeStore({ isSceneChangeScrollExitDone: true })
+        this.props.updateChangeStore({ didSceneScrollExit: true })
     }
 
     getVerseElement = (verseIndex) => {
