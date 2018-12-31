@@ -87,11 +87,15 @@ export const CHANGE_DEFAULTS = {
     isSongChangeCurtainExitDone: true
 }
 
-export const CURTAIN_DEFAULTS = {
-    isCurtainClosing: false,
-    isCurtainClosed: false,
-    isCurtainOpening: false,
-    isCurtainOpened: false
+export const RENDER_DEFAULTS = {
+    didTheatreEnter: false,
+    didSceneEnter: false,
+    didLyricEnter: false,
+    didCarouselEnter: false,
+
+    didSceneUpdate: false,
+    didLyricUpdate: false,
+    didCarouselUpdate: false
 }
 
 export const DEVICE_DEFAULTS = {
@@ -151,17 +155,6 @@ export const OPTION_DEFAULTS = {
 export const PLAYERS_DEFAULTS = {
     playersBitNumber: 0,
     nextPlayerToRender: -1
-}
-
-export const RENDER_DEFAULTS = {
-    didTheatreEnter: false,
-    didSceneEnter: false,
-    didLyricEnter: false,
-    didCarouselEnter: false,
-
-    didSceneUpdate: false,
-    didLyricUpdate: false,
-    didCarouselUpdate: false
 }
 
 export const RESPONSIVE_DEFAULTS = {
