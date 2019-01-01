@@ -21,15 +21,26 @@ const _getShowShrunkNavIconForDeviceObject = (
     } = deviceObject
 
     return windowWidth < singleColumnStaticBreakpoint ||
-        ((doubleColumnShrinkBreakpoint && windowWidth >= doubleColumnShrinkBreakpoint) &&
-        (doubleColumnStaticBreakpoint && windowWidth < doubleColumnStaticBreakpoint))
+        (
+            (
+                Boolean(doubleColumnShrinkBreakpoint) &&
+                windowWidth >= doubleColumnShrinkBreakpoint
+            ) && (
+                Boolean(doubleColumnStaticBreakpoint) &&
+                windowWidth < doubleColumnStaticBreakpoint
+            )
+        )
 }
 
 const getShowShrunkNavIcon = ({
-    deviceIndex, windowWidth
+    deviceIndex,
+    windowWidth
 }) => {
-    const deviceObject = DEVICE_OBJECTS[deviceIndex],
-        isPhoneOrMini = getIsPhone(deviceIndex) || getIsMini(deviceIndex)
+    const
+        deviceObject = DEVICE_OBJECTS[deviceIndex],
+        isPhoneOrMini =
+            getIsPhone(deviceIndex) ||
+            getIsMini(deviceIndex)
 
     return _getShowShrunkNavIconForDeviceObject(
         windowWidth,

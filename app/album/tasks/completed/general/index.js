@@ -4301,5 +4301,10 @@ export default [
         taskName: `Transitions work.`,
         workedHours: 40,
         neededHours: 40
+    },
+    {
+        taskName: `Nav button icon size is weird.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

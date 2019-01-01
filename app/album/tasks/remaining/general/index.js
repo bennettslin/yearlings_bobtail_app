@@ -35,11 +35,6 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Nav button icon size is weird.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Add title to lyric column in desktop.`,
         workedHours: 0,
         neededHours: 3
