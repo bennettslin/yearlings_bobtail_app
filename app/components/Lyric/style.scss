@@ -27,7 +27,7 @@
      */
     padding: 0 $js__margin__thick;
 
-    .SM__song
+    .SW__song
     & {
         /**
          * This fixes the issue of being unable to scroll between stanzas. But
@@ -43,20 +43,20 @@
     }
 
     .DW__mobile
-    .SM__song
+    .SW__song
     .RM__lyricExpanded
     & {
         height: calc(100% - #{$js__height__menu});
     }
 
-    .SM__song
+    .SW__song
     .RM__twoRowMenu.RM__lyricExpanded
     & {
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
     }
 
     .DW__phone
-    .SM__song
+    .SW__song
     .RM__lyricExpanded
     & {
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
@@ -64,7 +64,7 @@
 }
 
 .Lyric__visible {
-    .SM__song
+    .SW__song
     & {
         opacity: 1;
     }

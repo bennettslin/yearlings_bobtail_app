@@ -1,6 +1,6 @@
 .VerseTracker {
 
-    .SM__isPaused
+    .SW__isPaused
     &,
     .RM__cannotTrackVerse
     &,
@@ -13,7 +13,7 @@
         transition: none !important;
     }
 
-    .SM__isPlaying
+    .SW__isPlaying
     .RM__canTrackVerse
     &.VerseTracker__selected {
         // TODO: Improve this styling.
@@ -24,7 +24,7 @@
 .VerseTracker__inSlider {
     left: -100%;
 
-    .SM__isPlaying
+    .SW__isPlaying
     .RM__canTrackVerse
     &.VerseTracker__selected {
         left: 0;
@@ -34,7 +34,7 @@
 .VerseTracker__inLyric {
     top: -100%;
 
-    .SM__isPlaying
+    .SW__isPlaying
     .RM__canTrackVerse
     &.VerseTracker__selected {
         top: 0;

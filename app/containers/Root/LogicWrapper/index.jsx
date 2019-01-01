@@ -73,6 +73,8 @@ class LogicWrapper extends PureComponent {
                             'RsD'
                         ),
 
+                        !dotsBitNumber && 'LW__noSelectedDots',
+
                         // "Root cursored stanza index."
                         `RcS${cursorStanzaIndex}`,
 

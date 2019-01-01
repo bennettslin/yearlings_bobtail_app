@@ -3,12 +3,16 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import { PARENT_ACCESS_PREFIX } from 'constants/prefixes'
+
 class SongWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         isLyricLogue: PropTypes.bool.isRequired,
+        isAccessOn: PropTypes.bool.isRequired,
+        accessedKey: PropTypes.string.isRequired,
 
         // From parent.
         children: PropTypes.any.isRequired
@@ -18,6 +22,8 @@ class SongWrapper extends PureComponent {
         const {
             isLyricLogue,
             isPlaying,
+            isAccessOn,
+            accessedKey,
             children
         } = this.props
 
@@ -27,8 +33,11 @@ class SongWrapper extends PureComponent {
                     className: cx(
                         'SongWrapper',
 
-                        isLyricLogue ? 'SM__logue' : 'SM__song',
-                        isPlaying ? 'SM__isPlaying' : 'SM__isPaused'
+                        isLyricLogue ? 'SW__logue' : 'SW__song',
+                        isPlaying ? 'SW__isPlaying' : 'SW__isPaused',
+
+                        isAccessOn ? 'SW__accessOn' : 'SW__accessOff',
+                        accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`
                     )
                 }}
             >
@@ -40,10 +49,14 @@ class SongWrapper extends PureComponent {
 
 const mapStateToProps = ({
     audioStore: { isPlaying },
-    lyricStore: { isLyricLogue }
+    lyricStore: { isLyricLogue },
+    toggleStore: { isAccessOn },
+    accessStore: { accessedKey }
 }) => ({
     isPlaying,
-    isLyricLogue
+    isLyricLogue,
+    isAccessOn,
+    accessedKey
 })
 
 export default connect(mapStateToProps)(SongWrapper)

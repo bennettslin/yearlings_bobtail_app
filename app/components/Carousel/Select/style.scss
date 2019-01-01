@@ -36,21 +36,21 @@
             - $js__margin__thin * 2;
     }
 
-    .SM__song
+    .SW__song
     .RM__annotationShown.RM__carouselExpanded
     & {
         opacity: 1;
     }
 
     .DW__desktop
-    .SM__song
+    .SW__song
     .RM__annotationShown.RM__carouselExpanded
     & {
         bottom: 0;
     }
 
     .DW__mobileNotPhone
-    .SM__song
+    .SW__song
     .RM__annotationShown.RM__carouselExpanded
     & {
         top: 0;

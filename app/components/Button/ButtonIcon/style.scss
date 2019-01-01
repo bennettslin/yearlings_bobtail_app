@@ -9,12 +9,12 @@
 .ButtonIcon__audioPlay {
     d: path("M 50,0 L 100,50 L 50,100 L0,50 Z");
 
-    .SM__isPlaying
+    .SW__isPlaying
     & {
         fill: $bgColour__audioPause;
     }
 
-    .SM__isPaused
+    .SW__isPaused
     & {
         fill: $bgColour__audioPlay;
     }

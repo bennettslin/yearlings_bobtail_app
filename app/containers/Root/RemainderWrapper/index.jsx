@@ -9,7 +9,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { SHOWN } from 'constants/options'
-import { PARENT_ACCESS_PREFIX } from 'constants/prefixes'
 
 import { getSingleShownEarColumnKey } from '../helper'
 
@@ -20,8 +19,6 @@ class RemainderWrapper extends PureComponent {
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
 
-        accessedKey: PropTypes.string.isRequired,
-        isAccessOn: PropTypes.bool.isRequired,
         isAutoScroll: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -33,7 +30,6 @@ class RemainderWrapper extends PureComponent {
         interactivatedVerseIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -52,11 +48,8 @@ class RemainderWrapper extends PureComponent {
         const {
                 canLyricCarouselEnter,
                 canLyricCarouselUpdate,
-                accessedKey,
-                isAccessOn,
                 lyricAnnotationIndex,
                 isCarouselShown,
-                dotsBitNumber,
                 isDotsSlideShown,
                 earColumnIndex,
                 selectedOverviewOption,
@@ -90,22 +83,27 @@ class RemainderWrapper extends PureComponent {
                     className: cx(
                         'RemainderWrapper',
 
-                        /**
-                         * When transitioning between songs, explicitly reset
-                         * all verse trackers. Based on the earliest possible
-                         * flag in the transition. Not sure if this is optimal,
-                         * though.
-                         */
-                        canLyricCarouselUpdate ?
-                            'RM__canTrackVerse' : 'RM__cannotTrackVerse',
+                        // Responsive.
+                        showShrunkNavIcon ?
+                            'RM__navIconShrunk' : 'RM__navIconStatic',
 
-                        canLyricCarouselEnter ?
-                            'RM__canLyricCarouselEnter' :
-                            'RM__cannotLyricCarouselEnter',
+                        isCarouselNavShowable ?
+                            'RM__carouselNavShowable' : 'RM__carouselNavUnshowable',
 
-                        accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`,
+                        isScoresTipsInMain ?
+                            'RM__scoresTipsMain' : 'RM__scoresTipsMenu',
 
-                        isAccessOn ? 'RM__accessOn' : 'RM__accessOff',
+                        isTwoRowMenu ?
+                            'RM__twoRowMenu' : 'RM__oneRowMenu',
+
+                        singleShownEarColumnKey ?
+                            `RM__${singleShownEarColumnKey}EarColumnOnly` :
+                            'RM__bothEarColumnsShown',
+
+                        isHeightlessLyric ?
+                            'RM__lyricHeightless' : 'RM__lyricHeighted',
+
+                        // Shown.
                         isOverlayShown ? 'RM__overlayShown' : 'RM__overlayHidden',
 
                         lyricAnnotationIndex ?
@@ -124,28 +122,11 @@ class RemainderWrapper extends PureComponent {
                         overviewShown && 'RM__overviewShown',
                         tipsShown && 'RM__tipsShown',
 
-                        showShrunkNavIcon ?
-                            'RM__navIconShrunk' : 'RM__navIconStatic',
-
-                        isCarouselNavShowable ?
-                            'RM__carouselNavShowable' : 'RM__carouselNavUnshowable',
-                        isScoresTipsInMain ?
-                            'RM__scoresTipsMain' : 'RM__scoresTipsMenu',
-                        isTwoRowMenu ?
-                            'RM__twoRowMenu' : 'RM__oneRowMenu',
-
-                        singleShownEarColumnKey &&
-                            `RM__${singleShownEarColumnKey}EarColumnOnly`,
-                        isHeightlessLyric ?
-                            'RM__lyricHeightless' : 'RM__lyricHeighted',
-
+                        // Touch.
                         {
                             'RM__manualScroll': !isAutoScroll,
-                            'RM__bothEarColumnsShown': !singleShownEarColumnKey,
                             'RM__sliderTouched': isSliderTouched
                         },
-
-                        !dotsBitNumber && 'RM__noSelectedDots',
 
                         // Relevant to verse index classes.
                         isSliderMoving ?
@@ -158,7 +139,21 @@ class RemainderWrapper extends PureComponent {
 
                         // Make it easier to override this selector.
                         !isSliderMoving && interactivatedVerseIndex < 0 &&
-                            'RM__verseCanHover'
+                            'RM__verseCanHover',
+
+                        // Transition.
+                        /**
+                         * When transitioning between songs, explicitly reset
+                         * all verse trackers. Based on the earliest possible
+                         * flag in the transition. Not sure if this is optimal,
+                         * though.
+                         */
+                        canLyricCarouselUpdate ?
+                            'RM__canTrackVerse' : 'RM__cannotTrackVerse',
+
+                        canLyricCarouselEnter ?
+                            'RM__canLyricCarouselEnter' :
+                            'RM__cannotLyricCarouselEnter'
                     )
                 }}
             >
@@ -169,12 +164,9 @@ class RemainderWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    accessStore: { accessedKey },
     sessionStore: { interactivatedVerseIndex },
     selectedStore: { earColumnIndex },
-    dotsStore: { dotsBitNumber },
     toggleStore: {
-        isAccessOn,
         isAutoScroll,
         isCarouselShown,
         isDotsSlideShown,
@@ -205,15 +197,12 @@ const mapStateToProps = ({
         selectedTipsOption
     }
 }) => ({
-    accessedKey,
     isAutoScroll,
     isCarouselShown,
     isLyricExpanded,
     isOverlayShown,
     isCarouselNavShowable,
     interactivatedVerseIndex,
-    isAccessOn,
-    dotsBitNumber,
     isDotsSlideShown,
     earColumnIndex,
     selectedOverviewOption,

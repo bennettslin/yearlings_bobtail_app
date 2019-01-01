@@ -24,7 +24,7 @@ $width__childTitle__phone: 80px;
     height: 100%;
     z-index: $zIndex__menuField;
 
-    .SM__logue
+    .SW__logue
     & {
         // This just needs to be below the popup overlay in logues.
         z-index: $zIndex__lyricColumn;
@@ -39,7 +39,7 @@ $width__childTitle__phone: 80px;
         margin $animationDuration__slow,
         max-width $animationDuration__slow;
 
-    .SM__logue
+    .SW__logue
     &,
     .RM__overlayHidden
     & {
@@ -51,7 +51,7 @@ $width__childTitle__phone: 80px;
         margin: 0 !important;
     }
 
-    .SM__song
+    .SW__song
     .RM__overlayShown
     &.width__mainColumn {
         max-width: $js__width__mini;
@@ -155,7 +155,7 @@ $width__childTitle__phone: 80px;
         min-width: 0;
     }
 
-    .SM__song
+    .SW__song
     .RM__overlayShown
     & {
         max-width: 100%;
@@ -163,7 +163,7 @@ $width__childTitle__phone: 80px;
     }
 
     .DW__notPhone
-    .SM__song
+    .SW__song
     .RM__overlayShown
     & {
         margin-left: 0;
@@ -201,7 +201,7 @@ $width__childTitle__phone: 80px;
         opacity $animationDuration__slow;
 
     // Specific selector to override access letter opacity.
-    .SM__song
+    .SW__song
     .RM__overlayShown
     & {
         width: 0;
