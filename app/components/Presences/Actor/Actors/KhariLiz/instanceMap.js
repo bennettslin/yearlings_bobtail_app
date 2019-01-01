@@ -16,8 +16,6 @@ export const propTypes = {
     [CARESS]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [JOKING_LAUGHING]: Joking,
     [PROTECTIVE_CONCERNED]: Protective,

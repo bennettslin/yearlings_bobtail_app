@@ -10,8 +10,6 @@ export const propTypes = {
     [MISCHIEVOUS_BANJO]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [MISCHIEVOUS_BANJO]: MischievousBanjo
 }

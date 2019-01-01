@@ -19,8 +19,6 @@ export const propTypes = {
     [BLOWJOB]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [ASLEEP_FEARFUL]: AsleepFearful,
     [FENDING_OFF]: FendingOff,

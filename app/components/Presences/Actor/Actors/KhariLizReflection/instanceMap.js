@@ -8,8 +8,6 @@ export const propTypes = {
     [CARESS_REFLECTION]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [CARESS_REFLECTION]: CaressReflection
 }

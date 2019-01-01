@@ -13,8 +13,6 @@ export const propTypes = {
     [POPULAR_GIRL]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [INDIGNANT]: Indignant,
     [POPULAR_GIRL]: PopularGirl

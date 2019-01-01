@@ -34,8 +34,6 @@ export const propTypes = {
     [EPILOGUE]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [BENNETT_KEYBOARD]: BennettKeyboard,
     [FLAPPER]: Flapper,

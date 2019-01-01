@@ -13,8 +13,6 @@ export const propTypes = {
     [BLISSFUL_GUILTY]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [REASSURING_ENCHANTED]: ReassuringEnchanted,
     [BLISSFUL_GUILTY]: BlissfulGuilty

@@ -10,8 +10,6 @@ export const propTypes = {
     [PROLOGUE]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [PROLOGUE]: Prologue
 }

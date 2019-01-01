@@ -17,8 +17,6 @@ export const propTypes = {
     [EPILOGUE]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [MERMAID]: Mermaid,
     [COMFORTING_HUMILIATED]: ComfortingHumiliated,

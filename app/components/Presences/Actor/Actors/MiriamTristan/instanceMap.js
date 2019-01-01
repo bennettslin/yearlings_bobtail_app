@@ -16,8 +16,6 @@ export const propTypes = {
     [GREETING]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [NOOGIE]: Noogie,
     [GREETING]: Greeting

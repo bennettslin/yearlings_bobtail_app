@@ -31,8 +31,6 @@ export const propTypes = {
     [EPILOGUE]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [INFANT_CURIOUS]: InfantCurious,
     [INFANT_NURSING]: InfantNursing,

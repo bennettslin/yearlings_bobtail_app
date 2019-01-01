@@ -10,8 +10,6 @@ export const propTypes = {
     [EATING]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [EATING]: Eating
 }

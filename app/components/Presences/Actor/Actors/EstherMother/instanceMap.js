@@ -13,8 +13,6 @@ export const propTypes = {
     [SOBBING_SHIELDING]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [HURT_CONSOLING]: HurtConsoling,
     [SOBBING_SHIELDING]: SobbingShielding

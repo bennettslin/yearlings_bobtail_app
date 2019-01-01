@@ -37,8 +37,6 @@ export const propTypes = {
     [EPILOGUE]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [GANGBANGER]: Gangbanger,
     [USHER_WAITING]: UsherWaiting,

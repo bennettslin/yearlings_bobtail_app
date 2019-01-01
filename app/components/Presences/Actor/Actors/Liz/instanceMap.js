@@ -64,8 +64,6 @@ export const propTypes = {
     [EL_TORITO]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [DATE_ENDING]: DateEnding,
     [MUSEUM]: Museum,

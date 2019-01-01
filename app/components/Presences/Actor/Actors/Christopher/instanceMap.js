@@ -16,8 +16,6 @@ export const propTypes = {
     [STARING]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [TANTRUM]: Tantrum,
     [SOBBING]: Sobbing,

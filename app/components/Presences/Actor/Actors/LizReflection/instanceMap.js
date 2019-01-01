@@ -10,8 +10,6 @@ export const propTypes = {
     [REACHING_REFLECTION]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [REACHING_REFLECTION]: ReachingReflection
 }

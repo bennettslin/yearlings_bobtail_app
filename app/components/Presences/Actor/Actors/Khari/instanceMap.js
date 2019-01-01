@@ -32,8 +32,6 @@ export const propTypes = {
     [EPILOGUE]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [DOUBLE_ALBERT]: DoubleAlbert,
     [ARRIVED]: Arrived,

@@ -31,8 +31,6 @@ export const propTypes = {
     [EPILOGUE]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [ROARING]: Roaring,
     [ACCUSATORY]: Accusatory,

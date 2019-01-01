@@ -25,8 +25,6 @@ export const propTypes = {
     [EPILOGUE]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [CATHOLIC_GUY]: CatholicGuy,
     [WATCHING]: Watching,

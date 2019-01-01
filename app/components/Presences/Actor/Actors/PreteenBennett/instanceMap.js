@@ -58,8 +58,6 @@ export const propTypes = {
     [SHEEPISH]: PropTypes.bool
 }
 
-export { propTypes }
-
 export default {
     [CAUTIOUS]: Cautious,
     [ENRAGED]: Enraged,
