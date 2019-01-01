@@ -1,4 +1,7 @@
-// Temporary wrapper for remaining class names. Slowly separate them out.
+/**
+ * TODO: Temporary wrapper for remaining class names. Slowly separate them out.
+ * Not high priority work, though.
+ */
 
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
@@ -15,7 +18,7 @@ class RemainderWrapper extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
-        didLyricEnter: PropTypes.bool.isRequired,
+        canLyricCarouselUpdate: PropTypes.bool.isRequired,
 
         accessedKey: PropTypes.string.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
@@ -50,8 +53,8 @@ class RemainderWrapper extends PureComponent {
     render() {
         const {
                 canLyricCarouselEnter,
+                canLyricCarouselUpdate,
                 accessedKey,
-                didLyricEnter,
                 isAccessOn,
                 lyricAnnotationIndex,
                 isLyricLogue,
@@ -91,18 +94,20 @@ class RemainderWrapper extends PureComponent {
                     className: cx(
                         'RemainderWrapper',
 
+                        /**
+                         * When transitioning between songs, explicitly reset
+                         * all verse trackers. Based on the earliest possible
+                         * flag in the transition. Not sure if this is optimal,
+                         * though.
+                         */
+                        canLyricCarouselUpdate ?
+                            'RM__canTrackVerse' : 'RM__cannotTrackVerse',
+
                         canLyricCarouselEnter ?
                             'RM__canLyricCarouselEnter' :
                             'RM__cannotLyricCarouselEnter',
 
                         accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`,
-
-                        /**
-                         * When transitioning between songs, explicitly reset
-                         * all verse trackers.
-                         */
-                        didLyricEnter ?
-                            'RM__canTrackVerse' : 'RM__cannotTrackVerse',
 
                         isAccessOn ? 'RM__accessOn' : 'RM__accessOff',
                         isOverlayShown ? 'RM__overlayShown' : 'RM__overlayHidden',
@@ -111,11 +116,16 @@ class RemainderWrapper extends PureComponent {
                         isPlaying ? 'RM__isPlaying' : 'RM__isPaused',
 
                         lyricAnnotationIndex ?
-                            'RM__annotationShown' : 'RM__annotationHidden',
+                            'RM__annotationShown' :
+                            'RM__annotationHidden',
+
                         { 'RM__carouselExpanded': isCarouselShown },
-                        isDotsSlideShown ? 'RM__dotsShown' : 'RM__dotsHidden',
+                        isDotsSlideShown ?
+                            'RM__dotsShown' :
+                            'RM__dotsHidden',
                         isLyricExpanded ?
-                            'RM__lyricExpanded' : 'RM__lyricCollapsed',
+                            'RM__lyricExpanded' :
+                            'RM__lyricCollapsed',
                         { 'RM__navExpanded': !isCarouselShown },
 
                         overviewShown && 'RM__overviewShown',
@@ -145,10 +155,13 @@ class RemainderWrapper extends PureComponent {
                         !dotsBitNumber && 'RM__noSelectedDots',
 
                         // Relevant to verse index classes.
-                        isSliderMoving ? 'RM__sliderMoving' : 'RM__sliderNotMoving',
+                        isSliderMoving ?
+                            'RM__sliderMoving' :
+                            'RM__sliderNotMoving',
 
                         interactivatedVerseIndex < 0 ?
-                            'RM__verseInactive' : 'RM__verseActive',
+                            'RM__verseInactive' :
+                            'RM__verseActive',
 
                         // Make it easier to override this selector.
                         !isSliderMoving && interactivatedVerseIndex < 0 &&
@@ -182,7 +195,7 @@ const mapStateToProps = ({
     },
     lyricStore: {
         canLyricCarouselEnter,
-        didLyricEnter,
+        canLyricCarouselUpdate,
         lyricAnnotationIndex,
         isLyricLogue
     },
@@ -217,7 +230,7 @@ const mapStateToProps = ({
     isEarShown,
     isPlaying,
     canLyricCarouselEnter,
-    didLyricEnter,
+    canLyricCarouselUpdate,
     lyricAnnotationIndex,
     isLyricLogue,
     isSliderTouched,
