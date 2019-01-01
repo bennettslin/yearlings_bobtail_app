@@ -12,7 +12,8 @@ class SongChangeDoneListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         didCarouselEnter: PropTypes.bool.isRequired,
-        didLyricEnter: PropTypes.bool.isRequired
+        didLyricEnter: PropTypes.bool.isRequired,
+        didCurtainEnter: PropTypes.bool.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -23,11 +24,13 @@ class SongChangeDoneListener extends PureComponent {
         const
             {
                 didCarouselEnter,
-                didLyricEnter
+                didLyricEnter,
+                didCurtainEnter
             } = this.props,
             {
                 didCarouselEnter: hadCarouselEntered,
-                didLyricEnter: hadLyricEntered
+                didLyricEnter: hadLyricEntered,
+                didCurtainEnter: hadCurtainEntered
             } = prevProps
 
         // Is done entering.
@@ -35,12 +38,14 @@ class SongChangeDoneListener extends PureComponent {
             (
                 // All these conditions are needed to enter transition.
                 didCarouselEnter &&
-                didLyricEnter
+                didLyricEnter &&
+                didCurtainEnter
 
             ) && (
                 // At least one of these conditions was previously false.
                 !hadCarouselEntered ||
-                !hadLyricEntered
+                !hadLyricEntered ||
+                !hadCurtainEntered
             )
         ) {
             this._beginEnterTransition()
@@ -65,11 +70,13 @@ class SongChangeDoneListener extends PureComponent {
 const mapStateToProps = ({
     lyricStore: {
         didCarouselEnter,
-        didLyricEnter
+        didLyricEnter,
+        didCurtainEnter
     }
 }) => ({
     didCarouselEnter,
-    didLyricEnter
+    didLyricEnter,
+    didCurtainEnter
 })
 
 export default connect(

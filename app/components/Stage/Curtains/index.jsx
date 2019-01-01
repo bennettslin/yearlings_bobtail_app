@@ -23,12 +23,16 @@ class Curtains extends PureComponent {
     }
 
     _handleTransitionExited = () => {
-        // TODO: Revisit whether this is still necessary after removing scene transition when curtain is closed.
-        setTimeout(this._endTransition, 100)
+        // Ensures curtains are completely closed before proceeding.
+        setTimeout(this._exitTransition, 100)
     }
 
-    _endTransition = () => {
+    _exitTransition = () => {
         this.props.updateLyricStore({ didCurtainExit: true })
+    }
+
+    _handleTransitionEntered = () => {
+        this.props.updateLyricStore({ didCurtainEnter: true })
     }
 
     render() {
@@ -41,7 +45,8 @@ class Curtains extends PureComponent {
                     in: canLyricCarouselEnter,
                     timeout: 250,
                     classNames: { enterDone: 'Curtains__parted' },
-                    onExited: this._handleTransitionExited
+                    onExited: this._handleTransitionExited,
+                    onEntered: this._handleTransitionEntered
                 }}
             >
                 <div

@@ -60,7 +60,8 @@ export const LYRIC_TRANSITION_DEFAULTS = {
 
     canLyricCarouselEnter: false,
     didLyricEnter: false,
-    didCarouselEnter: false
+    didCarouselEnter: false,
+    didCurtainEnter: false
 }
 export const SCENE_TRANSITION_DEFAULTS = {
     didSceneScrollExit: false,
