@@ -36,19 +36,22 @@
             - $js__margin__thin * 2;
     }
 
-    .RM__song.RM__annotationShown.RM__carouselExpanded
+    .SM__song
+    .RM__annotationShown.RM__carouselExpanded
     & {
         opacity: 1;
     }
 
     .DW__desktop
-    .RM__song.RM__annotationShown.RM__carouselExpanded
+    .SM__song
+    .RM__annotationShown.RM__carouselExpanded
     & {
         bottom: 0;
     }
 
     .DW__mobileNotPhone
-    .RM__song.RM__annotationShown.RM__carouselExpanded
+    .SM__song
+    .RM__annotationShown.RM__carouselExpanded
     & {
         top: 0;
     }

@@ -31,7 +31,8 @@ $margin__dotsContainer__phone: 8px;
         margin-bottom: $margin__dotsContainer / 2;
     }
 
-    .RM__song.RM__overlayHidden.RM__dotsShown.RM__canLyricCarouselEnter
+    .SM__song
+    .RM__overlayHidden.RM__dotsShown.RM__canLyricCarouselEnter
     & {
         opacity: 1;
         margin-left: $margin__dotsContainer;

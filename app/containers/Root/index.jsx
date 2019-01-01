@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DeviceWrapper from './DeviceWrapper'
+import SongWrapper from './SongWrapper'
 import RemainderWrapper from './RemainderWrapper'
 import LogicWrapper from './LogicWrapper'
 import Live from '../../components/Live'
@@ -45,20 +46,22 @@ class RootContainer extends PureComponent {
                 )}
             >
                 <DeviceWrapper>
-                    <RemainderWrapper>
-                        <LogicWrapper>
-                            <Live
-                                {...{
-                                    setLyricFocusElement,
-                                    setScoreFocusElement,
-                                    setWikiFocusElement
-                                }}
-                            />
-                            {isAdminOn && (
-                                <Admin />
-                            )}
-                        </LogicWrapper>
-                    </RemainderWrapper>
+                    <SongWrapper>
+                        <RemainderWrapper>
+                            <LogicWrapper>
+                                <Live
+                                    {...{
+                                        setLyricFocusElement,
+                                        setScoreFocusElement,
+                                        setWikiFocusElement
+                                    }}
+                                />
+                                {isAdminOn && (
+                                    <Admin />
+                                )}
+                            </LogicWrapper>
+                        </RemainderWrapper>
+                    </SongWrapper>
                 </DeviceWrapper>
             </div>
         )

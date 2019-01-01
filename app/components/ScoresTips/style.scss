@@ -58,9 +58,10 @@
         margin-bottom: $js__margin__thick;
     }
 
-    .RM__logue
+    .SM__logue
     &,
-    .RM__song.RM__overviewShown.RM__scoresTipsMain
+    .SM__song
+    .RM__overviewShown.RM__scoresTipsMain
     & {
         transform: scale(0);
         opacity: 0;

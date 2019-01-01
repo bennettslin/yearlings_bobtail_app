@@ -18,7 +18,8 @@
         top $animationDuration__default,
         opacity $animationDuration__default;
 
-    .RM__song.RM__overlayShown
+    .SM__song
+    .RM__overlayShown
     & {
         top: -$js__height__menu;
         opacity: 0;

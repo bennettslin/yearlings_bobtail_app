@@ -28,12 +28,10 @@ class RemainderWrapper extends PureComponent {
         isOverlayShown: PropTypes.bool.isRequired,
         isCarouselNavShowable: PropTypes.bool.isRequired,
 
-        isPlaying: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
@@ -57,14 +55,12 @@ class RemainderWrapper extends PureComponent {
                 accessedKey,
                 isAccessOn,
                 lyricAnnotationIndex,
-                isLyricLogue,
                 isCarouselShown,
                 dotsBitNumber,
                 isDotsSlideShown,
                 earColumnIndex,
                 selectedOverviewOption,
                 selectedTipsOption,
-                isPlaying,
                 isSliderTouched,
                 isSliderMoving,
                 isLyricExpanded,
@@ -111,9 +107,6 @@ class RemainderWrapper extends PureComponent {
 
                         isAccessOn ? 'RM__accessOn' : 'RM__accessOff',
                         isOverlayShown ? 'RM__overlayShown' : 'RM__overlayHidden',
-
-                        isLyricLogue ? 'RM__logue' : 'RM__song',
-                        isPlaying ? 'RM__isPlaying' : 'RM__isPaused',
 
                         lyricAnnotationIndex ?
                             'RM__annotationShown' :
@@ -179,7 +172,6 @@ const mapStateToProps = ({
     accessStore: { accessedKey },
     sessionStore: { interactivatedVerseIndex },
     selectedStore: { earColumnIndex },
-    audioStore: { isPlaying },
     dotsStore: { dotsBitNumber },
     toggleStore: {
         isAccessOn,
@@ -196,8 +188,7 @@ const mapStateToProps = ({
     lyricStore: {
         canLyricCarouselEnter,
         canLyricCarouselUpdate,
-        lyricAnnotationIndex,
-        isLyricLogue
+        lyricAnnotationIndex
     },
     sliderStore: {
         isSliderTouched,
@@ -228,11 +219,9 @@ const mapStateToProps = ({
     selectedOverviewOption,
     selectedTipsOption,
     isEarShown,
-    isPlaying,
     canLyricCarouselEnter,
     canLyricCarouselUpdate,
     lyricAnnotationIndex,
-    isLyricLogue,
     isSliderTouched,
     isSliderMoving,
     isHeightlessLyric,
