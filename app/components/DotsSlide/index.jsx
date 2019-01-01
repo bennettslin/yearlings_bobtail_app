@@ -22,6 +22,10 @@ class DotsSlide extends PureComponent {
     }
 
     _setHasInteractivatedDotText = (isInteractivated) => {
+        /**
+         * TODO: This seems fragile. Ideally, we would just use the bit number
+         * logic here.
+         */
         const hasInteractivatedDotText =
             this.state.hasInteractivatedDotText
             + (isInteractivated ? 1 : -1)
@@ -42,9 +46,11 @@ class DotsSlide extends PureComponent {
             <div className="DotsSlide">
                 <DotsSlideSelects
                     {...{
-                        handleContainerClick: this.handleContainerClick,
-                        hasInteractivatedDotText: hasInteractivatedDotText,
-                        setHasInteractivatedDotText: this._setHasInteractivatedDotText
+                        hasInteractivatedDotText,
+                        handleContainerClick:
+                            this.handleContainerClick,
+                        setHasInteractivatedDotText:
+                            this._setHasInteractivatedDotText
                     }}
                 />
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
