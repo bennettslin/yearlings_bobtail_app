@@ -5,14 +5,39 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Nav button icon size is weird.`,
+        taskName: `Selecting multiple songs in quick succession causes player abort error. Have a player song index.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Selecting multiple songs in quick success back and forth can break song change transition sequence.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Handle situations where carousel is not expected to render, so it will never do enter or exit callbacks.`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Transitions work.`,
-        workedHours: 32,
-        neededHours: 40
+        taskName: `Followup on transition work. Can it be improved?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Cube and presence transition order`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Box shadow on svg shapes.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Nav button icon size is weird.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Add title to lyric column in desktop.`,

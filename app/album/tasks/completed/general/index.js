@@ -4296,5 +4296,10 @@ export default [
         taskName: `Various regressions related to song change refactor.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Transitions work.`,
+        workedHours: 40,
+        neededHours: 40
     }
 ]
