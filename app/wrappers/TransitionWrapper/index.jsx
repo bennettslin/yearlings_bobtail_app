@@ -7,7 +7,6 @@ class TransitionWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricCarouselUpdate: PropTypes.bool.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
 
         // From parent.
@@ -16,7 +15,6 @@ class TransitionWrapper extends PureComponent {
 
     render() {
         const {
-            canLyricCarouselUpdate,
             canLyricCarouselEnter,
             children
         } = this.props
@@ -29,11 +27,9 @@ class TransitionWrapper extends PureComponent {
 
                         /**
                          * When transitioning between songs, explicitly reset
-                         * all verse trackers. Based on the earliest possible
-                         * flag in the transition. Not sure if this is optimal,
-                         * though.
+                         * all verse trackers.
                          */
-                        canLyricCarouselUpdate ?
+                        canLyricCarouselEnter ?
                             'TrW__canTrackVerse' :
                             'TrW__cannotTrackVerse',
 
@@ -50,12 +46,8 @@ class TransitionWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    lyricStore: {
-        canLyricCarouselUpdate,
-        canLyricCarouselEnter
-    }
+    lyricStore: { canLyricCarouselEnter }
 }) => ({
-    canLyricCarouselUpdate,
     canLyricCarouselEnter
 })
 
