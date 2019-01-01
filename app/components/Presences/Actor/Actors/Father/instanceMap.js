@@ -21,7 +21,7 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [ROARING]: PropTypes.bool,
     [ACCUSATORY]: PropTypes.bool,
     [PAST]: PropTypes.bool,

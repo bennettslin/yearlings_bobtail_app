@@ -21,7 +21,7 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [SMOKER]: PropTypes.bool,
     [FLIRTING]: PropTypes.bool,
     [MINGLING]: PropTypes.bool,
@@ -30,8 +30,6 @@ const propTypes = {
     [DOCTOR]: PropTypes.bool,
     [EPILOGUE]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [SMOKER]: Smoker,

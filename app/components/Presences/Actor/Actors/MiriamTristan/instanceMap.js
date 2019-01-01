@@ -11,7 +11,7 @@ import {
     GREETING
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [NOOGIE]: PropTypes.bool,
     [GREETING]: PropTypes.bool
 }

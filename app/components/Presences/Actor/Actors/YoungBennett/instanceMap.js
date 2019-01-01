@@ -17,15 +17,13 @@ import {
     YOUNG_CHILD
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [PANICKED]: PropTypes.bool,
     [FLUSTERED]: PropTypes.bool,
     [BATHING]: PropTypes.bool,
     [SINGING]: PropTypes.bool,
     [YOUNG_CHILD]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [PANICKED]: Panicked,

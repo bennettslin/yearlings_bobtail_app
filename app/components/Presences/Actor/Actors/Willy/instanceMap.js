@@ -19,7 +19,7 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [COLLECTING]: PropTypes.bool,
     [DUCKING]: PropTypes.bool,
     [FIGHTING]: PropTypes.bool,

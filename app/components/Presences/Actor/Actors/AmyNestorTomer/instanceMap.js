@@ -6,12 +6,10 @@ import {
     OFFICER
 } from 'scene/instanceKeys/amyNestorTomer'
 
-export default {
-    [OFFICER]: Officer
-}
-
-const propTypes = {
+export const propTypes = {
     [OFFICER]: PropTypes.bool
 }
 
-export { propTypes }
+export default {
+    [OFFICER]: Officer
+}

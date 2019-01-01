@@ -8,7 +8,7 @@ import {
     BLISSFUL_GUILTY
 } from 'scene/instanceKeys/christopherBennett'
 
-const propTypes = {
+export const propTypes = {
     [REASSURING_ENCHANTED]: PropTypes.bool,
     [BLISSFUL_GUILTY]: PropTypes.bool
 }

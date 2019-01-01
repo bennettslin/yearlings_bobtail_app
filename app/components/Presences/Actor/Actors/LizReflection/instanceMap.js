@@ -6,7 +6,7 @@ import {
     REACHING_REFLECTION
 } from 'scene/instanceKeys/liz'
 
-const propTypes = {
+export const propTypes = {
     [REACHING_REFLECTION]: PropTypes.bool
 }
 

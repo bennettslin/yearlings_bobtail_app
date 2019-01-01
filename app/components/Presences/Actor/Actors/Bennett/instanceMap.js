@@ -109,7 +109,7 @@ import {
     EL_TORITO
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [BREAKUP_DEJECTED]: PropTypes.bool,
     [SOLICITING_OPINION]: PropTypes.bool,
     [CATHOLIC_PENSIVE]: PropTypes.bool,
@@ -162,8 +162,6 @@ const propTypes = {
     [DEMONSTRATION]: PropTypes.bool,
     [EL_TORITO]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [BREAKUP_DEJECTED]: BreakupDejected,

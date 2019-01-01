@@ -6,7 +6,7 @@ import {
     PROLOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [PROLOGUE]: PropTypes.bool
 }
 

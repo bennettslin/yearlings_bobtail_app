@@ -6,11 +6,9 @@ import {
     CEMETERY
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [CEMETERY]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [CEMETERY]: Cemetery

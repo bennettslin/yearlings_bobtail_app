@@ -13,14 +13,12 @@ import {
 
 import { EPILOGUE } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [FEIGNING_FEAR]: PropTypes.bool,
     [THROWING]: PropTypes.bool,
     [NOODLING]: PropTypes.bool,
     [EPILOGUE]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [FEIGNING_FEAR]: FeigningFear,

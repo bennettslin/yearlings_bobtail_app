@@ -10,13 +10,11 @@ import {
     AFTERGLOW_REFLECTION
 } from 'scene/instanceKeys/bennettLiz'
 
-const propTypes = {
+export const propTypes = {
     [HARD_ON_REFLECTION]: PropTypes.bool,
     [MISSIONARY_REFLECTION]: PropTypes.bool,
     [AFTERGLOW_REFLECTION]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [HARD_ON_REFLECTION]: HardOnReflection,

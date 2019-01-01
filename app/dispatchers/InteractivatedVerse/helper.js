@@ -1,6 +1,6 @@
 import { getSongVersesCount } from 'album/api/verses'
 
-const getInteractivatedVerseForDirection = ({
+export const getInteractivatedVerseForDirection = ({
     selectedSongIndex,
     selectedVerseIndex,
     currentInteractivatedVerseIndex,
@@ -32,8 +32,4 @@ const getInteractivatedVerseForDirection = ({
     }
 
     return interactivatedVerseIndex
-}
-
-export {
-    getInteractivatedVerseForDirection
 }

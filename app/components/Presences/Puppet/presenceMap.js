@@ -46,7 +46,7 @@ import {
     PUPPET_KHARI_LIZ
 } from 'scene/puppetKeys'
 
-const propTypes = {
+export const propTypes = {
     [PUPPET_BENNETT_BEGIN]: PropTypes.bool,
     [PUPPET_FAMILY_BEGIN]: PropTypes.bool,
     [PUPPET_BENNETT_MIDDLE]: PropTypes.bool,
@@ -69,8 +69,6 @@ const propTypes = {
     [GHOST_ODIN_DEMONSTRATION]: PropTypes.bool,
     [PUPPET_KHARI_LIZ]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [PUPPET_BENNETT_BEGIN]: PuppetBennettBegin,

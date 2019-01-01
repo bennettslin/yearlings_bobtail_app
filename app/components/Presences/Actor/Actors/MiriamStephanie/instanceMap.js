@@ -6,7 +6,7 @@ import {
     MISCHIEVOUS_BANJO
 } from 'scene/instanceKeys/miriamStephanie'
 
-const propTypes = {
+export const propTypes = {
     [MISCHIEVOUS_BANJO]: PropTypes.bool
 }
 

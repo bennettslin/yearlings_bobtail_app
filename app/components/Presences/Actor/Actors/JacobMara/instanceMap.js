@@ -6,7 +6,7 @@ import {
     EATING
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [EATING]: PropTypes.bool
 }
 

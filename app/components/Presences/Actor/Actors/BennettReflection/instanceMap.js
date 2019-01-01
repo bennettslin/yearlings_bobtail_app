@@ -6,11 +6,9 @@ import {
     SHOES_REFLECTION
 } from 'scene/instanceKeys/bennett'
 
-const propTypes = {
+export const propTypes = {
     [SHOES_REFLECTION]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [SHOES_REFLECTION]: ShoesReflection

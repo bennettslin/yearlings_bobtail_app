@@ -38,7 +38,7 @@ import {
     SHEEPISH
 } from 'scene/instanceKeys/preteenBennett'
 
-const propTypes = {
+export const propTypes = {
     [CAUTIOUS]: PropTypes.bool,
     [ENRAGED]: PropTypes.bool,
     [FEARFUL]: PropTypes.bool,

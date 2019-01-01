@@ -29,7 +29,7 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [SQUATTING]: PropTypes.bool,
     [EATING]: PropTypes.bool,
     [ABBEY_ROAD]: PropTypes.bool,
@@ -42,8 +42,6 @@ const propTypes = {
     [SMIRKING]: PropTypes.bool,
     [EPILOGUE]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [SQUATTING]: Squatting,

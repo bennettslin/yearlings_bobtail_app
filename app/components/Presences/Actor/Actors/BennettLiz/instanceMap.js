@@ -28,7 +28,7 @@ import {
     FINAL_DREAM
 } from 'scene/instanceKeys/bennettLiz'
 
-const propTypes = {
+export const propTypes = {
     [GINGERBREAD_PRISON]: PropTypes.bool,
     [CHEEK_UNVEILED]: PropTypes.bool,
     [HARD_ON]: PropTypes.bool,
@@ -42,8 +42,6 @@ const propTypes = {
     [CLIFF]: PropTypes.bool,
     [FINAL_DREAM]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [GINGERBREAD_PRISON]: GingerbreadPrison,

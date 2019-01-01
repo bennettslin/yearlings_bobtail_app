@@ -23,7 +23,7 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [BENNETT_KEYBOARD]: PropTypes.bool,
     [FLAPPER]: PropTypes.bool,
     [SQUEEZING]: PropTypes.bool,

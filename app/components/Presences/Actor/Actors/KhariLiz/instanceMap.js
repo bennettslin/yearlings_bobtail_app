@@ -10,7 +10,7 @@ import {
     CARESS
 } from 'scene/instanceKeys/khariLiz'
 
-const propTypes = {
+export const propTypes = {
     [JOKING_LAUGHING]: PropTypes.bool,
     [PROTECTIVE_CONCERNED]: PropTypes.bool,
     [CARESS]: PropTypes.bool

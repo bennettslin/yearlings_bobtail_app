@@ -6,11 +6,9 @@ import {
     TYING_TETHER
 } from 'scene/instanceKeys/bradBennett'
 
-const propTypes = {
+export const propTypes = {
     [TYING_TETHER]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [TYING_TETHER]: TyingTether

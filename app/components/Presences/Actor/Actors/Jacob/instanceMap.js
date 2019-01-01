@@ -10,7 +10,7 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [CARRYING]: PropTypes.bool,
     [FLIRTING]: PropTypes.bool,
     [EPILOGUE]: PropTypes.bool

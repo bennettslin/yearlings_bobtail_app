@@ -8,7 +8,7 @@ import {
     SOBBING_SHIELDING
 } from 'scene/instanceKeys/estherMother'
 
-const propTypes = {
+export const propTypes = {
     [HURT_CONSOLING]: PropTypes.bool,
     [SOBBING_SHIELDING]: PropTypes.bool
 }

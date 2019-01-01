@@ -43,7 +43,7 @@ import {
     EL_TORITO
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [DATE_ENDING]: PropTypes.bool,
     [MUSEUM]: PropTypes.bool,
     [BACKSTAGE]: PropTypes.bool,

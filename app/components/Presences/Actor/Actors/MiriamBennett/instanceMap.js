@@ -12,7 +12,7 @@ import {
     BLOWJOB
 } from 'scene/instanceKeys/miriamBennett'
 
-const propTypes = {
+export const propTypes = {
     [ASLEEP_FEARFUL]: PropTypes.bool,
     [FENDING_OFF]: PropTypes.bool,
     [COWGIRL]: PropTypes.bool,

@@ -6,11 +6,9 @@ import {
     SQUEEZING
 } from 'scene/instanceKeys/amyStephanie'
 
-const propTypes = {
+export const propTypes = {
     [SQUEEZING]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [SQUEEZING]: Squeezing

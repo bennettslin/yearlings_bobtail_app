@@ -6,11 +6,9 @@ import {
     CHARMED_SCHOOLBUS
 } from 'scene/instanceKeys/bradSasha'
 
-const propTypes = {
+export const propTypes = {
     [CHARMED_SCHOOLBUS]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [CHARMED_SCHOOLBUS]: CharmedSchoolbus

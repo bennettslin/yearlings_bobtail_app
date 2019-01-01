@@ -47,15 +47,15 @@ const PRESENCE_TYPE_MAP = {
     [PUPPETS]: puppetsMap
 }
 
-const getClassNameForPresenceType = (presenceType) => {
+export const getClassNameForPresenceType = (presenceType) => {
     return PRESENCE_CLASS_NAME_MAP[presenceType]
 }
 
-const getMapForPresenceType = (presenceType) => {
+export const getMapForPresenceType = (presenceType) => {
     return PRESENCE_TYPE_MAP[presenceType]
 }
 
-const getArrangementForPresenceType = ({
+export const getArrangementForPresenceType = ({
     presenceType,
     presenceKey,
     actorKey
@@ -64,10 +64,4 @@ const getArrangementForPresenceType = ({
     return presenceType === ACTORS ?
         ALL_ARRANGEMENTS_ACTORS[actorKey][presenceKey] :
         ALL_ARRANGEMENTS_THINGS[presenceType][presenceKey]
-}
-
-export {
-    getClassNameForPresenceType,
-    getMapForPresenceType,
-    getArrangementForPresenceType
 }

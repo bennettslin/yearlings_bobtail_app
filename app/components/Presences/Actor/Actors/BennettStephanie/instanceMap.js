@@ -8,12 +8,10 @@ import {
     DRYING_TEARS
 } from 'scene/instanceKeys/bennettStephanie'
 
-const propTypes = {
+export const propTypes = {
     [HORSING]: PropTypes.bool,
     [DRYING_TEARS]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [HORSING]: Horsing,

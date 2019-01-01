@@ -10,7 +10,7 @@ import {
     STARING
 } from 'scene/instanceKeys/christopher'
 
-const propTypes = {
+export const propTypes = {
     [TANTRUM]: PropTypes.bool,
     [SOBBING]: PropTypes.bool,
     [STARING]: PropTypes.bool

@@ -8,7 +8,7 @@ import {
     POPULAR_GIRL
 } from 'scene/instanceKeys/sasha'
 
-const propTypes = {
+export const propTypes = {
     [INDIGNANT]: PropTypes.bool,
     [POPULAR_GIRL]: PropTypes.bool
 }

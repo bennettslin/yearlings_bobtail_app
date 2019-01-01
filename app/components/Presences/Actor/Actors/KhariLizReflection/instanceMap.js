@@ -4,7 +4,7 @@ import CaressReflection from './Instances/CaressReflection'
 
 import { CARESS_REFLECTION } from 'scene/instanceKeys/khariLiz'
 
-const propTypes = {
+export const propTypes = {
     [CARESS_REFLECTION]: PropTypes.bool
 }
 

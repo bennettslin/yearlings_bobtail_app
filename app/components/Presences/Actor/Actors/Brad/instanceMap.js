@@ -11,13 +11,11 @@ import {
 
 import { EPILOGUE } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [GESTURING]: PropTypes.bool,
     [SNACKING]: PropTypes.bool,
     [EPILOGUE]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [GESTURING]: Gesturing,

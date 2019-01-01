@@ -14,7 +14,7 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [FLIRTING]: PropTypes.bool,
     [CARRYING]: PropTypes.bool,
     [WAITING]: PropTypes.bool,

@@ -6,11 +6,9 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [EPILOGUE]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [EPILOGUE]: Epilogue

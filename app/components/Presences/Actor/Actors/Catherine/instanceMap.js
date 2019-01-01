@@ -17,15 +17,13 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [WEEPING]: PropTypes.bool,
     [QUIPPING]: PropTypes.bool,
     [PUZZLED]: PropTypes.bool,
     [GOPI]: PropTypes.bool,
     [EPILOGUE]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [WEEPING]: Weeping,

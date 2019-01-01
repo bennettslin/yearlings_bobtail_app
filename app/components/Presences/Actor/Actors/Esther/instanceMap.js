@@ -15,7 +15,7 @@ import {
     EPILOGUE
 } from 'scene/instanceKeys/songs'
 
-const propTypes = {
+export const propTypes = {
     [CURIOUS]: PropTypes.bool,
     [SNICKERING]: PropTypes.bool,
     [YOUNG_CHILD]: PropTypes.bool,

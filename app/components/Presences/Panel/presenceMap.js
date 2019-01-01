@@ -47,7 +47,7 @@ import {
     WEDDING_PLATFORM
 } from 'scene/panelKeys'
 
-const propTypes = {
+export const propTypes = {
     [ESTHER_SPEECH_PANEL]: PropTypes.bool,
     [BATHTUB]: PropTypes.bool,
     [CAPTAIN_BED_DRAWERS]: PropTypes.bool,
@@ -73,8 +73,6 @@ const propTypes = {
     [TENNIS_THOUGHT_PANEL]: PropTypes.bool,
     [WEDDING_PLATFORM]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [ESTHER_SPEECH_PANEL]: EstherSpeechPanel,
