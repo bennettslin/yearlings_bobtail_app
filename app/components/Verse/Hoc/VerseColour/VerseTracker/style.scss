@@ -2,7 +2,7 @@
 
     .SW__isPaused
     &,
-    .RM__cannotTrackVerse
+    .TrW__cannotTrackVerse
     &,
     &.VerseTracker__unselected {
 
@@ -14,7 +14,7 @@
     }
 
     .SW__isPlaying
-    .RM__canTrackVerse
+    .TrW__canTrackVerse
     &.VerseTracker__selected {
         // TODO: Improve this styling.
         background-color: $bgColour__audioPlaying;
@@ -25,7 +25,7 @@
     left: -100%;
 
     .SW__isPlaying
-    .RM__canTrackVerse
+    .TrW__canTrackVerse
     &.VerseTracker__selected {
         left: 0;
     }
@@ -35,7 +35,7 @@
     top: -100%;
 
     .SW__isPlaying
-    .RM__canTrackVerse
+    .TrW__canTrackVerse
     &.VerseTracker__selected {
         top: 0;
     }

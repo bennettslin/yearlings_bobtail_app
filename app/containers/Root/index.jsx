@@ -11,6 +11,7 @@ import cx from 'classnames'
 import DeviceWrapper from './DeviceWrapper'
 import SongWrapper from './SongWrapper'
 import RemainderWrapper from './RemainderWrapper'
+import TransitionWrapper from './TransitionWrapper'
 import LogicWrapper from './LogicWrapper'
 import Live from '../../components/Live'
 import Admin from '../../components/Admin'
@@ -48,18 +49,20 @@ class RootContainer extends PureComponent {
                 <DeviceWrapper>
                     <SongWrapper>
                         <RemainderWrapper>
-                            <LogicWrapper>
-                                <Live
-                                    {...{
-                                        setLyricFocusElement,
-                                        setScoreFocusElement,
-                                        setWikiFocusElement
-                                    }}
-                                />
-                                {isAdminOn && (
-                                    <Admin />
-                                )}
-                            </LogicWrapper>
+                            <TransitionWrapper>
+                                <LogicWrapper>
+                                    <Live
+                                        {...{
+                                            setLyricFocusElement,
+                                            setScoreFocusElement,
+                                            setWikiFocusElement
+                                        }}
+                                    />
+                                    {isAdminOn && (
+                                        <Admin />
+                                    )}
+                                </LogicWrapper>
+                            </TransitionWrapper>
                         </RemainderWrapper>
                     </SongWrapper>
                 </DeviceWrapper>

@@ -16,9 +16,6 @@ class RemainderWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
-        canLyricCarouselUpdate: PropTypes.bool.isRequired,
-
         isAutoScroll: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -46,8 +43,6 @@ class RemainderWrapper extends PureComponent {
 
     render() {
         const {
-                canLyricCarouselEnter,
-                canLyricCarouselUpdate,
                 lyricAnnotationIndex,
                 isCarouselShown,
                 isDotsSlideShown,
@@ -139,21 +134,7 @@ class RemainderWrapper extends PureComponent {
 
                         // Make it easier to override this selector.
                         !isSliderMoving && interactivatedVerseIndex < 0 &&
-                            'RM__verseCanHover',
-
-                        // Transition.
-                        /**
-                         * When transitioning between songs, explicitly reset
-                         * all verse trackers. Based on the earliest possible
-                         * flag in the transition. Not sure if this is optimal,
-                         * though.
-                         */
-                        canLyricCarouselUpdate ?
-                            'RM__canTrackVerse' : 'RM__cannotTrackVerse',
-
-                        canLyricCarouselEnter ?
-                            'RM__canLyricCarouselEnter' :
-                            'RM__cannotLyricCarouselEnter'
+                            'RM__verseCanHover'
                     )
                 }}
             >
@@ -177,11 +158,7 @@ const mapStateToProps = ({
         isCarouselNavShowable,
         isEarShown
     },
-    lyricStore: {
-        canLyricCarouselEnter,
-        canLyricCarouselUpdate,
-        lyricAnnotationIndex
-    },
+    lyricStore: { lyricAnnotationIndex },
     sliderStore: {
         isSliderTouched,
         isSliderMoving
@@ -208,8 +185,6 @@ const mapStateToProps = ({
     selectedOverviewOption,
     selectedTipsOption,
     isEarShown,
-    canLyricCarouselEnter,
-    canLyricCarouselUpdate,
     lyricAnnotationIndex,
     isSliderTouched,
     isSliderMoving,
