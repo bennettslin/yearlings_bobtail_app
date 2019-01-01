@@ -13,7 +13,7 @@ const _getIsScoresTipsInMainForDeviceObject = (
     return windowWidth < isScoresTipsInMainBreakpoint
 }
 
-const getIsScoresTipsInMain = ({
+export const getIsScoresTipsInMain = ({
     deviceIndex,
     windowWidth
 }) => {
@@ -24,8 +24,4 @@ const getIsScoresTipsInMain = ({
     } else {
         return true
     }
-}
-
-export {
-    getIsScoresTipsInMain
 }

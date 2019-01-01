@@ -4,14 +4,14 @@ import { getDefinedOnlyPayload } from '../actionHelper'
 import { VERSE_BARS_STORE } from '../storeKeys'
 import { VERSE_BARS_DEFAULTS } from '../defaultStates'
 
-const updateVerseBarsStore = (payload = VERSE_BARS_DEFAULTS) => {
+export const updateVerseBarsStore = (payload = VERSE_BARS_DEFAULTS) => {
     return ({
         type: VERSE_BARS_STORE,
         payload: getDefinedOnlyPayload(payload)
     })
 }
 
-const resetVerseBars = () => {
+export const resetVerseBars = () => {
     return ({
         type: VERSE_BARS_STORE,
         payload: {
@@ -21,7 +21,7 @@ const resetVerseBars = () => {
     })
 }
 
-const resetVerseBarsQueue = () => {
+export const resetVerseBarsQueue = () => {
     return ({
         type: VERSE_BARS_STORE,
         payload: {
@@ -29,10 +29,4 @@ const resetVerseBarsQueue = () => {
             queuedVerseBarsTimeout: 0
         }
     })
-}
-
-export {
-    updateVerseBarsStore,
-    resetVerseBars,
-    resetVerseBarsQueue
 }

@@ -5,7 +5,7 @@ import {
     getIsMonitor
 } from '../../helpers/responsive'
 
-const getIsDoublespeakerShown = ({
+export const getIsDoublespeakerShown = ({
     deviceIndex,
     songIndex
 }) => {
@@ -34,8 +34,4 @@ const getIsDoublespeakerShown = ({
     } else {
         return false
     }
-}
-
-export {
-    getIsDoublespeakerShown
 }

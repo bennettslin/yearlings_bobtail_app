@@ -8,18 +8,18 @@ import {
 } from 'helpers/bit'
 import { getArrayOfLength } from 'helpers/general'
 
-const getPlayersCanPlayThroughFromBitNumber = (bitNumber) => {
+export const getPlayersCanPlayThroughFromBitNumber = (bitNumber) => {
     return getObjectFromBitNumber({
         keysArray: getArrayOfLength(getSongsNotLoguesCount(), 1),
         bitNumber
     })
 }
 
-const getStoreKeyForPlayer = (songIndex) => {
+export const getStoreKeyForPlayer = (songIndex) => {
     return `player${songIndex}`
 }
 
-const getPlayerCanPlayThrough = ({
+export const getPlayerCanPlayThrough = ({
     songIndex,
     playersBitNumber
 
@@ -36,10 +36,4 @@ const getPlayerCanPlayThrough = ({
         })
 
     return playerCanPlayThrough
-}
-
-export {
-    getStoreKeyForPlayer,
-    getPlayersCanPlayThroughFromBitNumber,
-    getPlayerCanPlayThrough
 }

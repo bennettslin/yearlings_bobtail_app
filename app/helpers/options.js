@@ -4,7 +4,7 @@ import {
     DISABLED
 } from 'constants/options'
 
-const getNextOption = ({
+export const getNextOption = ({
     isToggled,
     toggleShows,
     prevOption,
@@ -30,8 +30,4 @@ const getNextOption = ({
                 return isToggled ? DISABLED : HIDDEN
         }
     }
-}
-
-export {
-    getNextOption
 }

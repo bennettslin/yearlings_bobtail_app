@@ -11,7 +11,7 @@ import {
     HEIGHTLESS_LYRIC_MAX
 } from '../../../../constants/responsive'
 
-const getIsUnrenderableCarouselNav = ({
+export const getIsUnrenderableCarouselNav = ({
     deviceIndex,
     windowHeight,
     windowWidth
@@ -32,7 +32,7 @@ const getIsUnrenderableCarouselNav = ({
     return isUnrenderableCarouselNav
 }
 
-const getIsHeightlessLyric = ({
+export const getIsHeightlessLyric = ({
     deviceIndex,
     windowHeight,
     windowWidth
@@ -49,9 +49,4 @@ const getIsHeightlessLyric = ({
 
         // Otherwise, it is heightless when width exceeds height.
         windowWidth > windowHeight)
-}
-
-export {
-    getIsUnrenderableCarouselNav,
-    getIsHeightlessLyric
 }

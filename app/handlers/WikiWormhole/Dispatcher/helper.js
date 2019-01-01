@@ -5,7 +5,7 @@ import {
     REFERENCE
 } from 'constants/dots'
 
-const getWikiWormholeIndexForDirection = ({
+export const getWikiWormholeIndexForDirection = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedDotKeys,
@@ -64,8 +64,4 @@ const getWikiWormholeIndexForDirection = ({
 
     // There are no valid anchor indices to return.
     return 0
-}
-
-export {
-    getWikiWormholeIndexForDirection
 }

@@ -3,16 +3,11 @@ import {
     getIsDesktop
 } from '../../../../helpers/responsive'
 
-const getIsScoreShowable = (deviceIndex) => {
+export const getIsScoreShowable = (deviceIndex) => {
     return !getIsPhone(deviceIndex)
 }
 
 
-const getIsLyricExpandable = (deviceIndex) => {
+export const getIsLyricExpandable = (deviceIndex) => {
     return !getIsDesktop(deviceIndex)
-}
-
-export {
-    getIsScoreShowable,
-    getIsLyricExpandable
 }

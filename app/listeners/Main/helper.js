@@ -1,6 +1,6 @@
 import { getIsPhone } from 'helpers/responsive'
 
-const getIsOverlayingAnnotation = ({
+export const getIsOverlayingAnnotation = ({
     deviceIndex,
     isLyricExpanded
 }) => {
@@ -13,7 +13,7 @@ const getIsOverlayingAnnotation = ({
     )
 }
 
-const getIsOverlayShown = ({
+export const getIsOverlayShown = ({
     deviceIndex,
     isLyricExpanded,
     lyricAnnotationIndex,
@@ -36,9 +36,4 @@ const getIsOverlayShown = ({
             isOverlayingAnnotation
         )
     )
-}
-
-export {
-    getIsOverlayingAnnotation,
-    getIsOverlayShown
 }

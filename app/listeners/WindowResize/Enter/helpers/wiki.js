@@ -5,7 +5,7 @@ import {
 
 import { WIKI_SIDE_PADDING_TOTAL } from '../../../../constants/responsive'
 
-const getIsMobileWiki = ({
+export const getIsMobileWiki = ({
     deviceIndex, windowWidth
 }) => {
 
@@ -19,8 +19,4 @@ const getIsMobileWiki = ({
 
         return isMobileWiki
     }
-}
-
-export {
-    getIsMobileWiki
 }

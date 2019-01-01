@@ -97,14 +97,6 @@ const _validateIndexForKey = (key) => {
     }
 }
 
-const getIndexFromStorage = (key) => {
-    return _validateIndexForKey(key)
-}
-
-const setInStorage = (key, value) => {
-    WINDOW_STORAGE[key] = value
-}
-
 const _getValidatedDotsBitNumber = () => {
     const
         parsedBitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
@@ -122,7 +114,15 @@ const _getValidatedDotsBitNumber = () => {
     }
 }
 
-const getDotsFromStorage = () => {
+export const getIndexFromStorage = (key) => {
+    return _validateIndexForKey(key)
+}
+
+export const setInStorage = (key, value) => {
+    WINDOW_STORAGE[key] = value
+}
+
+export const getDotsFromStorage = () => {
     const validatedValue = _getValidatedDotsBitNumber(),
 
         // Get true-false object from bit number.
@@ -138,7 +138,7 @@ const getDotsFromStorage = () => {
     }
 }
 
-const setDotInStorage = (key, value) => {
+export const setDotInStorage = (key, value) => {
     const bitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
         newBitNumber = setNewValueInBitNumber({
             keysArray: ALL_DOT_KEYS,
@@ -152,7 +152,7 @@ const setDotInStorage = (key, value) => {
     return newBitNumber
 }
 
-const getBoolFromStorage = (key) => {
+export const getBoolFromStorage = (key) => {
     const storedValue = WINDOW_STORAGE[key]
     switch (storedValue) {
         case 'true':
@@ -164,11 +164,11 @@ const getBoolFromStorage = (key) => {
     }
 }
 
-const setBoolInStorage = (key, value) => {
+export const setBoolInStorage = (key, value) => {
     WINDOW_STORAGE[key] = value ? 'true' : 'false'
 }
 
-const getOptionFromStorage = (key) => {
+export const getOptionFromStorage = (key) => {
     const storedValue = WINDOW_STORAGE[key]
 
     if (
@@ -182,7 +182,7 @@ const getOptionFromStorage = (key) => {
     }
 }
 
-const setOptionInStorage = (key, value) => {
+export const setOptionInStorage = (key, value) => {
     /**
      * Always start page with all the options hidden, because mounting calls
      * the same methods as if the song changed.
@@ -192,18 +192,4 @@ const setOptionInStorage = (key, value) => {
     }
 
     WINDOW_STORAGE[key] = value
-}
-
-export {
-    getIndexFromStorage,
-    setInStorage,
-
-    getDotsFromStorage,
-    setDotInStorage,
-
-    getBoolFromStorage,
-    setBoolInStorage,
-
-    getOptionFromStorage,
-    setOptionInStorage
 }

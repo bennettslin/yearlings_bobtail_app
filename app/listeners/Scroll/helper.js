@@ -66,7 +66,7 @@ const _getValidTarget = (scrollParent) => {
 }
 
 // TODO: Maybe just split into two helpers, one for each scroll listener?
-const scrollElementIntoView = ({
+export const scrollElementIntoView = ({
     isCarousel,
     log = '',
     scrollClass,
@@ -122,7 +122,7 @@ const scrollElementIntoView = ({
     }
 }
 
-const setChildElement = ({
+export const setChildElement = ({
     node,
     index,
     scrollElements
@@ -133,9 +133,4 @@ const setChildElement = ({
     } else {
         delete scrollElements[index]
     }
-}
-
-export {
-    scrollElementIntoView,
-    setChildElement
 }

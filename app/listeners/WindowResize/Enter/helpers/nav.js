@@ -32,7 +32,7 @@ const _getShowShrunkNavIconForDeviceObject = (
         )
 }
 
-const getShowShrunkNavIcon = ({
+export const getShowShrunkNavIcon = ({
     deviceIndex,
     windowWidth
 }) => {
@@ -48,7 +48,7 @@ const getShowShrunkNavIcon = ({
     )
 }
 
-const getShowSingleNavBook = ({
+export const getShowSingleNavBook = ({
     deviceIndex, windowWidth
 }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
@@ -60,9 +60,4 @@ const getShowSingleNavBook = ({
     } else {
         return windowWidth < deviceObject.doubleColumnShrinkBreakpoint
     }
-}
-
-export {
-    getShowShrunkNavIcon,
-    getShowSingleNavBook
 }

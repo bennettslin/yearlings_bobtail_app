@@ -27,7 +27,7 @@ const _getEarColumnHeight = (
     ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
-const getIsTwoRowMenu = ({
+export const getIsTwoRowMenu = ({
     deviceIndex, windowWidth
 }) => {
 
@@ -38,7 +38,7 @@ const getIsTwoRowMenu = ({
     return windowWidth < twoRowMenuBreakpoint
 }
 
-const getCentreFieldHeight = ({
+export const getCentreFieldHeight = ({
     deviceIndex,
     windowWidth,
     windowHeight,
@@ -65,7 +65,7 @@ const getCentreFieldHeight = ({
     return windowHeight - menuHeight - earColumnHeight
 }
 
-const getCeilingFloorHeight = ({
+export const getCeilingFloorHeight = ({
     deviceIndex,
     windowWidth,
     windowHeight,
@@ -101,10 +101,4 @@ const getCeilingFloorHeight = ({
         ceilingHeight: Number(ceilingHeight.toFixed(2)),
         floorHeight: Number(floorHeight.toFixed(2))
     }
-}
-
-export {
-    getIsTwoRowMenu,
-    getCentreFieldHeight,
-    getCeilingFloorHeight
 }

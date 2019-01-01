@@ -1,6 +1,6 @@
 import { getSongsNotLoguesCount } from 'album/api/songs'
 
-const getNextPlayerIndexToRender = (
+export const getNextPlayerIndexToRender = (
     selectedSongIndex,
     isSelectedLogue,
     canPlayThroughsObject
@@ -43,8 +43,4 @@ const getNextPlayerIndexToRender = (
     nextPlayerSongIndex = nextPlayerSongIndex || -1
 
     return nextPlayerSongIndex
-}
-
-export {
-    getNextPlayerIndexToRender
 }
