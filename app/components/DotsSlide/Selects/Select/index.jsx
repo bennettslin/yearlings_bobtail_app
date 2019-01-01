@@ -48,9 +48,12 @@ class DotsSlideSelect extends PureComponent {
         if (this.state.isInteractivated) {
 
             // Also deinteractivate if dots section has been hidden.
-            if (!this.props.isDotsSlideShown ||
-                (!this.props.hasInteractivatedDotText && prevProps.hasInteractivatedDotText)) {
-
+            if (
+                !this.props.isDotsSlideShown ||
+                (
+                    !this.props.hasInteractivatedDotText && prevProps.hasInteractivatedDotText
+                )
+            ) {
                 this.setState({
                     isInteractivated: false
                 })
@@ -64,11 +67,7 @@ class DotsSlideSelect extends PureComponent {
 
     _handleTextContainerClick = () => {
         const isInteractivated = !this.state.isInteractivated
-
-        this.setState({
-            isInteractivated
-        })
-
+        this.setState({ isInteractivated })
         this.props.setHasInteractivatedDotText(isInteractivated)
     }
 
@@ -79,22 +78,23 @@ class DotsSlideSelect extends PureComponent {
     render() {
 
         const {
-            /* eslint-disable no-unused-vars */
-            dotIndex,
-            isDotsSlideShown,
-            hasInteractivatedDotText,
-            setHasInteractivatedDotText,
-            dispatch,
-            /* eslint-enable no-unused-vars */
+                /* eslint-disable no-unused-vars */
+                dotIndex,
+                isDotsSlideShown,
+                hasInteractivatedDotText,
+                setHasInteractivatedDotText,
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-            ...other
-        } = this.props
+                ...other
+            } = this.props,
+            { isInteractivated } = this.state
 
         return (
             <___>
                 <DotsSlideSelectView {...other}
                     {...{
-                        isInteractivated: this.state.isInteractivated,
+                        isInteractivated,
                         handleDotSelectClick: this.handleDotSelectClick,
                         handleTextContainerClick: this._handleTextContainerClick
                     }}
