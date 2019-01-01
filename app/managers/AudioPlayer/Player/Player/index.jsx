@@ -82,7 +82,7 @@ class Player extends PureComponent {
         this.audioPlayer.currentTime = currentTime
     }
 
-    handleBeginPlaying() {
+    promiseToBeginPlaying() {
         // Only called by player manager.
         const { songIndex } = this.props,
             playPromise = this.audioPlayer.play()

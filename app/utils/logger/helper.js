@@ -50,7 +50,8 @@ const
         fontSize: '1.1em'
     }),
     PLAYER_STYLE = _getStyles({
-        color: '#487'
+        color: '#487',
+        fontSize: '1.35em'
     }),
     SCROLL_STYLE = _getStyles({
         color: '#748',

@@ -103,10 +103,11 @@
 
     $gradient__lyric__desktop: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) $height__chivalry * 0.8,
-        black $height__chivalry * 1.1,
-        black
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0) $height__chivalry * 0.25,
+        rgba(0, 0, 0, 0) $height__chivalry * 0.75,
+        rgba(0, 0, 0, 0.4) $height__chivalry,
+        black $height__chivalry * 1.1
     );
     .DW__desktop
     .RW__carouselNavShowable

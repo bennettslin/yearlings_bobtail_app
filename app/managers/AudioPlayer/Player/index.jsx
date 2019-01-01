@@ -45,7 +45,7 @@ const mapStateToProps = ({
 
 // Kind of silly, but easiest approach for now.
 const LOGUE_DUMMY_PLAYER = {
-    handleBeginPlaying: () => {},
+    promiseToBeginPlaying: () => {},
     handleEndPlaying: () => {},
     setCurrentTime: () => {}
 }
@@ -157,7 +157,7 @@ class PlayerManager extends PureComponent {
          * Play is being toggled on, so don't set in store right away.
          * Pass callback and wait for successful return.
          */
-        return this.getPlayerRef(songIndex).handleBeginPlaying()
+        return this.getPlayerRef(songIndex).promiseToBeginPlaying()
     }
 
     setSelectedPlayerIsPlaying = (success) => {
