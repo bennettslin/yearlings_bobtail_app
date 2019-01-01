@@ -28,7 +28,7 @@ import {
     LIZ_THOUGHT
 } from 'scene/bubbleKeys'
 
-const propTypes = {
+export const propTypes = {
     [TOGETHER_SKETCHBOOK]: PropTypes.bool,
     [APART_SKETCHBOOK]: PropTypes.bool,
     [DOGS_SKETCHBOOK]: PropTypes.bool,
@@ -42,8 +42,6 @@ const propTypes = {
     [LIZ_DEFENCE_SPEECH]: PropTypes.bool,
     [LIZ_THOUGHT]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [TOGETHER_SKETCHBOOK]: TogetherSketchbook,

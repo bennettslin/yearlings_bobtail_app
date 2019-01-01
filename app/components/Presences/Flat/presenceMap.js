@@ -122,7 +122,7 @@ import {
     PAMPAS_FAR
 } from 'scene/flatKeys'
 
-const propTypes = {
+export const propTypes = {
     [NOHO_HOUSE_LEFT]: PropTypes.bool,
     [NOHO_HOUSE_RIGHT]: PropTypes.bool,
     [NOHO_SCHOOLHOUSE]: PropTypes.bool,
@@ -183,8 +183,6 @@ const propTypes = {
     [CLIFF_GRAVES_NEAR]: PropTypes.bool,
     [PAMPAS_FAR]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [NOHO_HOUSE_LEFT]: NohoHouseLeft,

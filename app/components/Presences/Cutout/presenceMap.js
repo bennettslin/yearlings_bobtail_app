@@ -159,7 +159,7 @@ import {
     IV_DRIP
 } from 'scene/cutoutKeys'
 
-const propTypes = {
+export const propTypes = {
     [FIRE_HYDRANT]: PropTypes.bool,
     [PLAYGROUND_SLIDE]: PropTypes.bool,
     [MIRRORED_SINK]: PropTypes.bool,
@@ -242,8 +242,6 @@ const propTypes = {
     [CLIFF_TREE]: PropTypes.bool,
     [IV_DRIP]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [FIRE_HYDRANT]: FireHydrant,

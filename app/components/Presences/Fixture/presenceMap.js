@@ -145,7 +145,7 @@ import {
     HOSPITAL_RECORD_PLAYER
 } from 'scene/fixtureKeys'
 
-const propTypes = {
+export const propTypes = {
     [PLAYGROUND_BALL]: PropTypes.bool,
     [SAFEWAY_BAG]: PropTypes.bool,
     [RECORD_PLAYER_STOOL]: PropTypes.bool,
@@ -219,8 +219,6 @@ const propTypes = {
     [LIZ_PHONE_BASE_REFLECTION]: PropTypes.bool,
     [HOSPITAL_RECORD_PLAYER]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [PLAYGROUND_BALL]: PlaygroundBall,

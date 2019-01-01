@@ -57,7 +57,7 @@ import {
     HOSPITAL_MATTRESS_LOWERED
 } from 'scene/furnitureKeys'
 
-const propTypes = {
+export const propTypes = {
     [BEDROOM_DESK]: PropTypes.bool,
     [CAPTAIN_BED_MATTRESS]: PropTypes.bool,
     [SCHOOLBUS_SEAT_FRONT]: PropTypes.bool,
@@ -86,8 +86,6 @@ const propTypes = {
     [HOSPITAL_MATTRESS]: PropTypes.bool,
     [HOSPITAL_MATTRESS_LOWERED]: PropTypes.bool
 }
-
-export { propTypes }
 
 export default {
     [BEDROOM_DESK]: BedroomDesk,
