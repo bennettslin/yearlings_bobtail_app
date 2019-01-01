@@ -87,8 +87,8 @@ class RoutingContainer extends PureComponent {
             })
 
             this.dispatchCanSceneEnter({
-                selectedSongIndex: routingSongIndex,
-                selectedSceneIndex: routingSceneIndex
+                songIndex: routingSongIndex,
+                sceneIndex: routingSceneIndex
             })
 
             this.props.updateTransientStore({

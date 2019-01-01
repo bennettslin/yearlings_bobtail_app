@@ -34,59 +34,52 @@ class SceneChangeUpdateDispatcher extends PureComponent {
     dispatchCanSceneUpdate = () => {
         logEnter('Scene can update.')
 
-        const
-            { selectedSongIndex } = this.props,
-            transitionSceneIndex = -1,
-            {
-                cubes: sceneCubesKey,
-                layers: scenePresenceLayers,
-                sky: {
-                    time: sceneTime = TIME_ANYTIME,
-                    season: sceneSeason = SEASON_INDOOR
-                }
-
-            } = getScene(
-                selectedSongIndex,
-                transitionSceneIndex
-            )
-
-        this.props.updateSceneStore({
-            canSceneUpdate: true,
-            sceneCubesKey,
-            sceneSongIndex: selectedSongIndex,
-            sceneSceneIndex: transitionSceneIndex,
-            scenePresenceLayers,
-            sceneTime,
-            sceneSeason
+        this._dispatchCanScene({
+            isUpdate: true,
+            sceneIndex: -1
         })
     }
 
     dispatchCanSceneEnter = ({
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedSceneIndex = this.props.selectedSceneIndex
+        songIndex,
+        sceneIndex
 
     } = {}) => {
         logEnter('Scene can enter.')
 
-        const
-            {
-                cubes: sceneCubesKey,
-                layers: scenePresenceLayers,
-                sky: {
-                    time: sceneTime = TIME_ANYTIME,
-                    season: sceneSeason = SEASON_INDOOR
-                }
+        this._dispatchCanScene({
+            songIndex,
+            sceneIndex
+        })
+    }
 
-            } = getScene(
-                selectedSongIndex,
-                selectedSceneIndex
-            )
+    _dispatchCanScene({
+        isUpdate,
+        songIndex = this.props.selectedSongIndex,
+        sceneIndex = this.props.selectedSceneIndex
+    }) {
+        const {
+            cubes: sceneCubesKey,
+            layers: scenePresenceLayers,
+            sky: {
+                time: sceneTime = TIME_ANYTIME,
+                season: sceneSeason = SEASON_INDOOR
+            }
+
+        } = getScene(
+            songIndex,
+            sceneIndex
+        )
 
         this.props.updateSceneStore({
-            canSceneEnter: true,
+            ...isUpdate ? {
+                canSceneUpdate: true
+            } : {
+                canSceneEnter: true
+            },
             sceneCubesKey,
-            sceneSongIndex: selectedSongIndex,
-            sceneSceneIndex: selectedSceneIndex,
+            sceneSongIndex: songIndex,
+            sceneSceneIndex: sceneIndex,
             scenePresenceLayers,
             sceneTime,
             sceneSeason
