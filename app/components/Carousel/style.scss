@@ -10,6 +10,7 @@ $height__carouselHidden: $height__chivalry * 0.1;
     width: 100vw;
 
     opacity: 0;
+    z-index: $zIndex__theatreFloor;
 
     .DW__desktop
     & {
