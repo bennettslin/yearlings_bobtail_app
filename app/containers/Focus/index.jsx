@@ -220,8 +220,8 @@ class FocusContainer extends PureComponent {
             <div
                 {...{
                     ref: this._setRootElement,
-                    tabIndex: -1,
                     className: 'FocusContainer',
+                    tabIndex: -1,
                     onClick: this._handleBodyClick,
                     onTouchStart: this._handleBodyClick,
                     onMouseMove: this._handleTouchMove,

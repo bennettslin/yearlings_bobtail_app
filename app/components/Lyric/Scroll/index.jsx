@@ -110,7 +110,6 @@ class LyricScroll extends PureComponent {
                     <div
                         {...{
                             ref: this._setLyricElement,
-                            tabIndex: -1,
                             className: cx(
                                 'LyricScroll',
                                 'abF',
@@ -121,6 +120,7 @@ class LyricScroll extends PureComponent {
                                  */
                                 'gradientMask__lyricColumn__mobileCollapsed'
                             ),
+                            tabIndex: -1,
                             onWheel: this._handleWheel
                         }}
                     >

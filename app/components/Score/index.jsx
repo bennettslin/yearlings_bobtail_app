@@ -47,8 +47,8 @@ class Score extends PureComponent {
                 <iframe
                     {...{
                         ref: setScoreFocusElement,
-                        tabIndex: -1,
                         className: 'iframeContainer__iframe',
+                        tabIndex: -1,
                         src: score,
                         onLoad: this.onIframeLoad
                     }}

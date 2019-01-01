@@ -67,14 +67,6 @@ class LogicWrapper extends PureComponent {
                     className: cx(
                         'LogicWrapper',
 
-                        getPrefixedDotLetterClassNames(
-                            selectedDotKeys,
-                            // "Root selected dot letter."
-                            'RsD'
-                        ),
-
-                        !dotsBitNumber && 'LW__noSelectedDots',
-
                         // "Root cursored stanza index."
                         `RcS${cursorStanzaIndex}`,
 
@@ -94,7 +86,15 @@ class LogicWrapper extends PureComponent {
 
                         areVerseBarsHidden && interactivatedVerseIndex < 0 &&
                             // "Root cursored lyric verse."
-                            `RlV${cursorVerseIndex}`
+                            `RlV${cursorVerseIndex}`,
+
+                        getPrefixedDotLetterClassNames(
+                            selectedDotKeys,
+                            // "Root selected dot letter."
+                            'RsD'
+                        ),
+
+                        !dotsBitNumber && 'LW__noSelectedDots',
                     )
                 }}
             >

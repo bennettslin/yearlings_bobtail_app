@@ -86,11 +86,11 @@ class WikiSection extends PureComponent {
                 <iframe
                     {...{
                         ref: setWikiFocusElement,
-                        tabIndex: -1,
                         className: cx(
                             'iframeContainer__iframe',
                             { 'iframeLoading': iframeLoading }
                         ),
+                        tabIndex: -1,
                         src: selectedWikiUrl,
                         onLoad: this.onIframeLoad
                     }}
