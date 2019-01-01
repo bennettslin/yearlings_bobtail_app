@@ -32,7 +32,7 @@ class SceneChangeUpdateDispatcher extends PureComponent {
     }
 
     dispatchCanSceneUpdate = () => {
-        logEnter('Scene can update.')
+        logTransition('Scene can update.')
 
         this._dispatchCanScene({
             isUpdate: true,
@@ -45,7 +45,7 @@ class SceneChangeUpdateDispatcher extends PureComponent {
         sceneIndex
 
     } = {}) => {
-        logEnter('Scene can enter.')
+        logTransition('Scene can enter.')
 
         this._dispatchCanScene({
             songIndex,

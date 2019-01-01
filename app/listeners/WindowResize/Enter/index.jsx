@@ -48,7 +48,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
     }
 
     beginEnterTransitionWithNewState = () => {
-        logEnter('Theatre can enter.')
+        logTransition('Theatre can enter.')
 
         const {
                 deviceIndex,

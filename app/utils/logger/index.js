@@ -1,12 +1,10 @@
 import {
     logAccess,
-    logEvent,
     logFocus,
     logMount,
     logParse,
     logPlayer,
-    logEnter,
-    logRenderable,
+    logTransition,
     logScroll,
     logError,
     logger
@@ -21,13 +19,11 @@ import {
 // }
 
 global.logAccess = logAccess
-global.logEvent = logEvent
 global.logFocus = logFocus
 global.logMount = logMount
 global.logParse = logParse
 global.logPlayer = logPlayer
-global.logEnter = logEnter
-global.logRenderable = logRenderable
+global.logTransition = logTransition
 global.logScroll = logScroll
 global.logError = logError
 

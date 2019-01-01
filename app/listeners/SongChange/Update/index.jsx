@@ -65,7 +65,7 @@ class SongChangeUpdateListener extends PureComponent {
     }
 
     _beginUpdateToNewLyricState() {
-        logEnter('Lyric carousel can update.')
+        logTransition('Lyric carousel can update.')
 
         const {
             selectedSongIndex,

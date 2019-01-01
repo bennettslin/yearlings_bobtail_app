@@ -12,11 +12,13 @@ const
 
     _getStyles = (styles = {}) => {
         const finalStyles = {
+                backgroundColor: '#f8ffff',
                 color: '#888',
-                padding: '12px 8px',
+                padding: '6px 8px',
+                margin: '2px 0',
                 border: '1px solid #bbb',
                 borderRadius: '4px',
-                fontSize: '1em',
+                fontSize: '1.25em',
                 ...styles
             },
             stylesArray = []
@@ -33,31 +35,35 @@ const
     },
 
     ACCESS_STYLE = _getStyles({
-        color: '#4b4'
+        color: '#4b4',
+        fontSize: '1.1em'
     }),
-    EVENT_STYLE = _getStyles(),
     FOCUS_STYLE = _getStyles({
-        color: '#874'
+        color: '#874',
+        fontSize: '1em'
     }),
     MOUNT_STYLE = _getStyles({
-        color: '#b4b'
+        color: '#66b',
+        fontSize: '1.1em'
     }),
-    PARSE_STYLE = _getStyles(),
+    PARSE_STYLE = _getStyles({
+        fontSize: '1.1em'
+    }),
     PLAYER_STYLE = _getStyles({
         color: '#487'
     }),
-    ENTER_STYLE = _getStyles({
-        color: '#44b'
-    }),
-    RENDERABLE_STYLE = _getStyles({
-        color: '#847'
-    }),
     SCROLL_STYLE = _getStyles({
-        color: '#748'
+        color: '#748',
+        fontSize: '1.2em'
+    }),
+    TRANSITION_STYLE = _getStyles({
+        color: '#b4b',
+        fontSize: '1.35em'
+
     }),
     ERROR_STYLE = _getStyles({
         color: '#b44',
-        fontSize: '1.5em'
+        fontSize: '2em'
     }),
 
     _logInfo = ({
@@ -72,12 +78,6 @@ export const logAccess = (log) => {
     _logInfo({
         log,
         styles: ACCESS_STYLE
-    })
-}
-export const logEvent = (log) => {
-    _logInfo({
-        log,
-        styles: EVENT_STYLE
     })
 }
 export const logFocus = (log) => {
@@ -104,22 +104,16 @@ export const logPlayer = (log) => {
         styles: PLAYER_STYLE
     })
 }
-export const logEnter = (log) => {
-    _logInfo({
-        log,
-        styles: ENTER_STYLE
-    })
-}
-export const logRenderable = (log) => {
-    _logInfo({
-        log,
-        styles: RENDERABLE_STYLE
-    })
-}
 export const logScroll = (text) => {
     _logInfo({
         log: `Scroll: ${text}`,
         styles: SCROLL_STYLE
+    })
+}
+export const logTransition = (log) => {
+    _logInfo({
+        log,
+        styles: TRANSITION_STYLE
     })
 }
 export const logError = (log) => {
