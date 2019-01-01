@@ -19,6 +19,7 @@ import SongListener from '../../handlers/Song/Listener'
 import SongChangeExitListener from '../../listeners/SongChange/Exit'
 import SongChangeUpdateListener from '../../listeners/SongChange/Update'
 import SongChangeEnterListener from '../../listeners/SongChange/Enter'
+import SongChangeDoneListener from '../../listeners/SongChange/Done'
 import ScrollRenderListener from '../../listeners/ScrollRender'
 import SliderListener from '../../listeners/Slider'
 import TipsListener from '../../handlers/Tips/Listener'
@@ -61,6 +62,7 @@ class ListenerContainer extends PureComponent {
                 <SongChangeExitListener />
                 <SongChangeUpdateListener />
                 <SongChangeEnterListener />
+                <SongChangeDoneListener />
                 <TipsListener />
                 <WikiListener />
                 <WikiWormholeListener />

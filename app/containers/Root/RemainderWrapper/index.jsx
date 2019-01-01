@@ -14,6 +14,7 @@ class RemainderWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        canLyricCarouselEnter: PropTypes.bool.isRequired,
         didLyricEnter: PropTypes.bool.isRequired,
 
         accessedKey: PropTypes.string.isRequired,
@@ -48,6 +49,7 @@ class RemainderWrapper extends PureComponent {
 
     render() {
         const {
+                canLyricCarouselEnter,
                 accessedKey,
                 didLyricEnter,
                 isAccessOn,
@@ -88,6 +90,11 @@ class RemainderWrapper extends PureComponent {
                 {...{
                     className: cx(
                         'RemainderWrapper',
+
+                        canLyricCarouselEnter ?
+                            'RM__canLyricCarouselEnter' :
+                            'RM__cannotLyricCarouselEnter',
+
                         accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`,
 
                         /**
@@ -174,6 +181,7 @@ const mapStateToProps = ({
         isEarShown
     },
     lyricStore: {
+        canLyricCarouselEnter,
         didLyricEnter,
         lyricAnnotationIndex,
         isLyricLogue
@@ -208,6 +216,7 @@ const mapStateToProps = ({
     selectedTipsOption,
     isEarShown,
     isPlaying,
+    canLyricCarouselEnter,
     didLyricEnter,
     lyricAnnotationIndex,
     isLyricLogue,

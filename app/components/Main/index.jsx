@@ -4,9 +4,7 @@
  */
 
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
 
 import CarouselToggle from './CarouselToggle'
 import LeftShelf from './LeftShelf'
@@ -19,37 +17,19 @@ import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
-const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter }
-}) => ({
-    canLyricCarouselEnter
-})
-
 class Main extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canLyricCarouselEnter: PropTypes.bool.isRequired
-    }
 
     componentDidMount() {
         logMount('Main')
     }
 
     render() {
-        const { canLyricCarouselEnter } = this.props
-
         /**
          * In phone, flex container's children have absolute position.
          */
         return (
             <div className={cx(
                 'Main',
-
-                canLyricCarouselEnter ?
-                    'Main__visible' :
-                    'Main__invisible',
-
                 'position__mainColumn',
                 'width__mainColumn'
             )}>
@@ -74,4 +54,4 @@ class Main extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(Main)
+export default Main

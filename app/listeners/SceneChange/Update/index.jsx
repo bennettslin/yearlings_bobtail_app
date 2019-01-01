@@ -26,7 +26,38 @@ class SceneChangeUpdateDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
+            dispatchCanSceneUpdate: this.dispatchCanSceneUpdate,
             dispatchCanSceneEnter: this.dispatchCanSceneEnter
+        })
+    }
+
+    dispatchCanSceneUpdate = () => {
+        logEnter('Scene can update.')
+
+        const
+            { selectedSongIndex } = this.props,
+            transitionSceneIndex = -1,
+            {
+                cubes: sceneCubesKey,
+                layers: scenePresenceLayers,
+                sky: {
+                    time: sceneTime = TIME_ANYTIME,
+                    season: sceneSeason = SEASON_INDOOR
+                }
+
+            } = getScene(
+                selectedSongIndex,
+                transitionSceneIndex
+            )
+
+        this.props.updateSceneStore({
+            canSceneUpdate: true,
+            sceneCubesKey,
+            sceneSongIndex: selectedSongIndex,
+            sceneSceneIndex: transitionSceneIndex,
+            scenePresenceLayers,
+            sceneTime,
+            sceneSeason
         })
     }
 

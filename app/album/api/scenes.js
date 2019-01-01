@@ -3,6 +3,21 @@ import albumScenes from 'album/scenes'
 import { getSong } from 'album/api/songs'
 import { getSongVerseConfigs } from 'album/api/verses'
 
+import { DEFAULT_STAGE_KEY } from 'scene/cubesKeys'
+import {
+    TIME_ANYTIME,
+    SEASON_INDOOR
+} from 'scene/sky'
+
+const DEFAULT_SCENE = {
+    cubes: DEFAULT_STAGE_KEY,
+    layers: {},
+    sky: {
+        time: TIME_ANYTIME,
+        season: SEASON_INDOOR
+    }
+}
+
 export const getSongSceneConfigs = (songIndex) => {
     const { songSceneConfigs } = getSong(songIndex)
     return songSceneConfigs || []
@@ -17,8 +32,11 @@ export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
 
 export const getScene = (
     songIndex,
-    sceneIndex = 0
+    sceneIndex = -1
 ) => {
     const songScene = albumScenes[songIndex]
-    return songScene[sceneIndex] || null
+
+    return sceneIndex > -1 && songScene[sceneIndex] ?
+        songScene[sceneIndex] :
+        DEFAULT_SCENE
 }

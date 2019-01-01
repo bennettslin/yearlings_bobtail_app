@@ -37,15 +37,15 @@ class SongChangeUpdateListener extends PureComponent {
             } = this.props,
             {
                 isSongSelectInFlux: wasSongSelectInFlux,
-                didCarouselExit: wasSongChangeCarouselExitDone,
-                didCurtainExit: wasSongChangeCurtainExitDone,
-                didLyricExit: wasSongChangeLyricExitDone
+                didCarouselExit: hadCarouselExited,
+                didCurtainExit: hadCurtainExited,
+                didLyricExit: hadLyricExited
             } = prevProps
 
         // Is done being selected.
         if (
             (
-                // All conditions needed to update state.
+                // All these conditions are needed to update state.
                 !isSongSelectInFlux &&
                 didCarouselExit &&
                 didCurtainExit &&
@@ -54,9 +54,9 @@ class SongChangeUpdateListener extends PureComponent {
             ) && (
                 // At least one of these conditions was previously false.
                 wasSongSelectInFlux ||
-                !wasSongChangeCarouselExitDone ||
-                !wasSongChangeCurtainExitDone ||
-                !wasSongChangeLyricExitDone
+                !hadCarouselExited ||
+                !hadCurtainExited ||
+                !hadLyricExited
             )
         ) {
             this._beginUpdateToNewLyricState()
@@ -65,7 +65,7 @@ class SongChangeUpdateListener extends PureComponent {
     }
 
     _beginUpdateToNewLyricState() {
-        logEnter('Lyric can update.')
+        logEnter('Lyric carousel can update.')
 
         const {
             selectedSongIndex,
@@ -82,7 +82,7 @@ class SongChangeUpdateListener extends PureComponent {
     }
 
     _beginUpdateToNewSceneState() {
-        this.dispatchCanSceneEnter()
+        this.dispatchCanSceneUpdate()
     }
 
     _getRefs = (payload) => {

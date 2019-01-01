@@ -1,8 +1,11 @@
 .Square {
-    transition:
-        stroke $animationDuration__scene,
-        d $animationDuration__scene,
-        fill $animationDuration__scene;
+    .RM__canLyricCarouselEnter
+    & {
+        transition:
+            stroke $animationDuration__scene,
+            d $animationDuration__scene,
+            fill $animationDuration__scene;
+    }
 
     &.shade {
         // For now, we'll have a stroke on the shade face.
