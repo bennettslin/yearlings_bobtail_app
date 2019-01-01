@@ -1,5 +1,3 @@
-// Temporary wrapper for remaining class names. Slowly separate them out.
-
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -9,7 +7,7 @@ import {
     getDotKeysFromBitNumber,
     getPrefixedDotLetterClassNames
 } from 'helpers/dot'
-import { getStanzaIndexForVerseIndex } from '../helper'
+import { getStanzaIndexForVerseIndex } from './helper'
 
 class LogicWrapper extends PureComponent {
 

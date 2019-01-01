@@ -1,15 +1,16 @@
 import pino from 'pino'
 import { differenceInMilliseconds } from 'date-fns'
 
-const logger = pino(),
-    startTime = Date.now()
+const
+    logger = pino(),
+    startTime = Date.now(),
 
-const _getDifference = () => {
-    const difference = differenceInMilliseconds(Date.now(), startTime)
-    return (difference * 0.001).toFixed(2)
-}
+    _getTimeDifference = () => {
+        const difference = differenceInMilliseconds(Date.now(), startTime)
+        return (difference * 0.001).toFixed(2)
+    },
 
-const _getStyles = (styles = {}) => {
+    _getStyles = (styles = {}) => {
         const finalStyles = {
                 color: '#888',
                 padding: '12px 8px',
@@ -39,14 +40,13 @@ const _getStyles = (styles = {}) => {
         color: '#874'
     }),
     MOUNT_STYLE = _getStyles({
-        color: '#b4b',
-        fontSize: '1.25em'
+        color: '#b4b'
     }),
     PARSE_STYLE = _getStyles(),
     PLAYER_STYLE = _getStyles({
         color: '#487'
     }),
-    RENDER_STYLE = _getStyles({
+    ENTER_STYLE = _getStyles({
         color: '#44b'
     }),
     RENDERABLE_STYLE = _getStyles({
@@ -58,88 +58,74 @@ const _getStyles = (styles = {}) => {
     ERROR_STYLE = _getStyles({
         color: '#b44',
         fontSize: '1.5em'
-    })
+    }),
 
-const _logInfo = ({
-    log,
-    styles,
-    level = 'info'
-}) => {
-    logger[level](`%c${log}`, styles, _getDifference())
-}
-
-const
-    logAccess = (log) => {
-        _logInfo({
-            log,
-            styles: ACCESS_STYLE
-        })
-    },
-    logEvent = (log) => {
-        _logInfo({
-            log,
-            styles: EVENT_STYLE
-        })
-    },
-    logFocus = (log) => {
-        _logInfo({
-            log,
-            styles: FOCUS_STYLE
-        })
-    },
-    logMount = (text) => {
-        _logInfo({
-            log: `${text} mounted.`,
-            styles: MOUNT_STYLE
-        })
-    },
-    logParse = (log) => {
-        _logInfo({
-            log,
-            styles: PARSE_STYLE
-        })
-    },
-    logPlayer = (log) => {
-        _logInfo({
-            log,
-            styles: PLAYER_STYLE
-        })
-    },
-    logEnter = (log) => {
-        _logInfo({
-            log,
-            styles: RENDER_STYLE
-        })
-    },
-    logRenderable = (log) => {
-        _logInfo({
-            log,
-            styles: RENDERABLE_STYLE
-        })
-    },
-    logScroll = (text) => {
-        _logInfo({
-            log: `Scroll: ${text}`,
-            styles: SCROLL_STYLE
-        })
-    },
-    logError = (log) => {
-        _logInfo({
-            log,
-            styles: ERROR_STYLE,
-            level: 'error'
-        })
+    _logInfo = ({
+        log,
+        styles,
+        level = 'info'
+    }) => {
+        logger[level](`%c${log}`, styles, _getTimeDifference())
     }
 
-export {
-    logAccess,
-    logEvent,
-    logFocus,
-    logMount,
-    logParse,
-    logPlayer,
-    logEnter,
-    logRenderable,
-    logScroll,
-    logError
+export const logAccess = (log) => {
+    _logInfo({
+        log,
+        styles: ACCESS_STYLE
+    })
+}
+export const logEvent = (log) => {
+    _logInfo({
+        log,
+        styles: EVENT_STYLE
+    })
+}
+export const logFocus = (log) => {
+    _logInfo({
+        log,
+        styles: FOCUS_STYLE
+    })
+}
+export const logMount = (text) => {
+    _logInfo({
+        log: `${text} mounted.`,
+        styles: MOUNT_STYLE
+    })
+}
+export const logParse = (log) => {
+    _logInfo({
+        log,
+        styles: PARSE_STYLE
+    })
+}
+export const logPlayer = (log) => {
+    _logInfo({
+        log,
+        styles: PLAYER_STYLE
+    })
+}
+export const logEnter = (log) => {
+    _logInfo({
+        log,
+        styles: ENTER_STYLE
+    })
+}
+export const logRenderable = (log) => {
+    _logInfo({
+        log,
+        styles: RENDERABLE_STYLE
+    })
+}
+export const logScroll = (text) => {
+    _logInfo({
+        log: `Scroll: ${text}`,
+        styles: SCROLL_STYLE
+    })
+}
+export const logError = (log) => {
+    _logInfo({
+        log,
+        styles: ERROR_STYLE,
+        level: 'error'
+    })
 }

@@ -10,7 +10,7 @@ import cx from 'classnames'
 
 import { SHOWN } from 'constants/options'
 
-import { getSingleShownEarColumnKey } from '../helper'
+import { getSingleShownEarColumnKey } from './helper'
 
 class RemainderWrapper extends PureComponent {
 
