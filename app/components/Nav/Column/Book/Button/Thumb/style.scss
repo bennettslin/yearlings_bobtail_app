@@ -40,11 +40,13 @@ $length__thumb: 100px;
 
 .Thumb__canShow {
     .SW__accessOn
-    .RM__carouselNavShowable.RM__navExpanded
+    .RM__carouselNavShowable
+    .ShW__navExpanded
     &.Thumb__isAccessed,
 
     .SW__accessOff
-    .RM__carouselNavShowable.RM__navExpanded
+    .RM__carouselNavShowable
+    .ShW__navExpanded
     // Prevent thumb from showing when hovering over hidden column elements.
     .NavColumn__shown
     .Button__navSong:hover

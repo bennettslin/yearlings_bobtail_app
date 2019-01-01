@@ -81,9 +81,9 @@
      */
     .RM__carouselNavUnshowable
     &,
-    .RM__dotsShown
+    .ShW__dotsShown
     &,
-    .RM__annotationShown.RM__navExpanded
+    .ShW__annotationShown.ShW__navExpanded
     & {
         opacity: 0;
         transform: translateX(-50%) scale(0);

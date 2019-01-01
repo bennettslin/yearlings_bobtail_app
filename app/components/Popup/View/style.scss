@@ -53,7 +53,8 @@
 
     .Popup__invisible
     &,
-    .RM__overlayShown .Popup__notInOverlay
+    .ShW__overlayShown
+    .Popup__notInOverlay
     & {
         animation: bounceOut $animationDuration__fast;
     }
@@ -68,7 +69,8 @@
 
     .Popup__invisible
     &,
-    .RM__overlayShown .Popup__notInOverlay
+    .ShW__overlayShown
+    .Popup__notInOverlay
     & {
         animation: shrinkOut $animationDuration__fast;
     }

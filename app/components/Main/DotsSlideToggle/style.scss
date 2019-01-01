@@ -4,7 +4,7 @@
 
     transition: margin $animationDuration__default;
 
-    .RM__overviewShown
+    .ShW__overviewShown
     & {
         margin-left: -$width__overviewToggle;
     }

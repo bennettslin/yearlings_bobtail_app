@@ -44,20 +44,21 @@
 
     .DW__mobile
     .SW__song
-    .RM__lyricExpanded
+    .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__height__menu});
     }
 
     .SW__song
-    .RM__twoRowMenu.RM__lyricExpanded
+    .RM__twoRowMenu
+    .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
     }
 
     .DW__phone
     .SW__song
-    .RM__lyricExpanded
+    .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
     }
@@ -108,7 +109,8 @@
         black
     );
     .DW__desktop
-    .RM__carouselNavShowable.RM__carouselExpanded.RM__annotationShown
+    .RM__carouselNavShowable
+    .ShW__annotationShown.ShW__carouselExpanded
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: $gradient__lyric__desktop;

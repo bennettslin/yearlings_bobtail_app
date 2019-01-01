@@ -43,10 +43,10 @@ $height__audioBanner__display:
     }
 
     .SW__song
-    .RM__overlayShown
+    .ShW__overlayShown
     &,
     .SW__song
-    .RM__lyricExpanded
+    .ShW__lyricExpanded
     & {
         height: $js__height__banner__twoRowMenu__truncated;
     }
@@ -65,9 +65,11 @@ $height__audioBanner__display:
     }
 
     .SW__song
-    .RM__twoRowMenu.RM__overlayShown
+    .RM__twoRowMenu
+    .ShW__overlayShown
     &,
-    .RM__twoRowMenu.RM__lyricExpanded
+    .RM__twoRowMenu
+    .ShW__lyricExpanded
     & {
         opacity: 0;
     }

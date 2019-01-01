@@ -5,7 +5,7 @@ import cx from 'classnames'
 
 import { PARENT_ACCESS_PREFIX } from 'constants/prefixes'
 
-class SongWrapper extends PureComponent {
+class PlayingWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -31,7 +31,7 @@ class SongWrapper extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'SongWrapper',
+                        'PlayingWrapper',
 
                         isLyricLogue ?
                             'SW__logue' :
@@ -67,4 +67,4 @@ const mapStateToProps = ({
     accessedKey
 })
 
-export default connect(mapStateToProps)(SongWrapper)
+export default connect(mapStateToProps)(PlayingWrapper)

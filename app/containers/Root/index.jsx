@@ -9,8 +9,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
-import SongWrapper from '../../wrappers/SongWrapper'
-import RemainderWrapper from '../../wrappers/RemainderWrapper'
+import PlayingWrapper from '../../wrappers/PlayingWrapper'
+import ResponsiveWrapper from '../../wrappers/ResponsiveWrapper'
+import ShownWrapper from '../../wrappers/ShownWrapper'
 import TouchWrapper from '../../wrappers/TouchWrapper'
 import TransitionWrapper from '../../wrappers/TransitionWrapper'
 import LogicWrapper from '../../wrappers/LogicWrapper'
@@ -49,26 +50,28 @@ class RootContainer extends PureComponent {
                 )}
             >
                 <DeviceWrapper>
-                    <SongWrapper>
-                        <RemainderWrapper>
-                            <TouchWrapper>
-                                <TransitionWrapper>
-                                    <LogicWrapper>
-                                        <Live
-                                            {...{
-                                                setLyricFocusElement,
-                                                setScoreFocusElement,
-                                                setWikiFocusElement
-                                            }}
-                                        />
-                                        {isAdminOn && (
-                                            <Admin />
-                                        )}
-                                    </LogicWrapper>
-                                </TransitionWrapper>
-                            </TouchWrapper>
-                        </RemainderWrapper>
-                    </SongWrapper>
+                    <PlayingWrapper>
+                        <ResponsiveWrapper>
+                            <ShownWrapper>
+                                <TouchWrapper>
+                                    <TransitionWrapper>
+                                        <LogicWrapper>
+                                            <Live
+                                                {...{
+                                                    setLyricFocusElement,
+                                                    setScoreFocusElement,
+                                                    setWikiFocusElement
+                                                }}
+                                            />
+                                            {isAdminOn && (
+                                                <Admin />
+                                            )}
+                                        </LogicWrapper>
+                                    </TransitionWrapper>
+                                </TouchWrapper>
+                            </ShownWrapper>
+                        </ResponsiveWrapper>
+                    </PlayingWrapper>
                 </DeviceWrapper>
             </div>
         )

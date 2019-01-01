@@ -34,7 +34,8 @@
         bottom: $margin__scrollbar;
     }
 
-    .RM__carouselNavShowable.RM__dotsHidden.RM__annotationHidden
+    .RM__carouselNavShowable
+    .ShW__annotationHidden.ShW__dotsHidden
     .TrW__canLyricCarouselEnter
     & {
         right: 0;
@@ -62,7 +63,8 @@
     .SW__logue
     &,
     .SW__song
-    .RM__overviewShown.RM__scoresTipsMain
+    .RM__scoresTipsMain
+    .ShW__overviewShown
     & {
         transform: scale(0);
         opacity: 0;

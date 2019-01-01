@@ -41,7 +41,7 @@ $width__childTitle__phone: 80px;
 
     .SW__logue
     &,
-    .RM__overlayHidden
+    .ShW__overlayHidden
     & {
         /**
          * When overlay is hidden, override the dynamic margins calculated by
@@ -52,7 +52,7 @@ $width__childTitle__phone: 80px;
     }
 
     .SW__song
-    .RM__overlayShown
+    .ShW__overlayShown
     &.width__mainColumn {
         max-width: $js__width__mini;
     }
@@ -156,7 +156,7 @@ $width__childTitle__phone: 80px;
     }
 
     .SW__song
-    .RM__overlayShown
+    .ShW__overlayShown
     & {
         max-width: 100%;
         margin-right: 0;
@@ -164,7 +164,7 @@ $width__childTitle__phone: 80px;
 
     .DW__notPhone
     .SW__song
-    .RM__overlayShown
+    .ShW__overlayShown
     & {
         margin-left: 0;
     }
@@ -202,7 +202,7 @@ $width__childTitle__phone: 80px;
 
     // Specific selector to override access letter opacity.
     .SW__song
-    .RM__overlayShown
+    .ShW__overlayShown
     & {
         width: 0;
         opacity: 0;

@@ -55,7 +55,7 @@
 .boxShadow__popupView {
     box-shadow: $boxShadow__popupView;
 
-    .RM__overlayShown
+    .ShW__overlayShown
     & {
         box-shadow: $boxShadow__popupView__inOverlay;
     }

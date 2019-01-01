@@ -34,7 +34,8 @@ $height__carouselHidden: $height__chivalry * 0.1;
             top $animationDuration__fast;
     }
 
-    .RM__carouselNavShowable.RM__carouselExpanded
+    .RM__carouselNavShowable
+    .ShW__carouselExpanded
     &.Carousel__visible {
         opacity: 1;
 
@@ -43,13 +44,15 @@ $height__carouselHidden: $height__chivalry * 0.1;
     }
 
     .DW__desktop
-    .RM__carouselNavShowable.RM__carouselExpanded
+    .RM__carouselNavShowable
+    .ShW__carouselExpanded
     &.Carousel__visible {
         bottom: 0;
     }
 
     .DW__mobileNotPhone
-    .RM__carouselNavShowable.RM__carouselExpanded
+    .RM__carouselNavShowable
+    .ShW__carouselExpanded
     &.Carousel__visible {
         top: 0;
     }
@@ -70,7 +73,7 @@ $height__carouselHidden: $height__chivalry * 0.1;
             black
         );
     .DW__monitor
-    .RM__annotationHidden
+    .ShW__annotationHidden
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: $gradient__carousel__monitor;
@@ -89,7 +92,7 @@ $height__carouselHidden: $height__chivalry * 0.1;
             black
         );
     .DW__laptop
-    .RM__annotationHidden
+    .ShW__annotationHidden
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: $gradient__carousel__laptop;
@@ -97,7 +100,8 @@ $height__carouselHidden: $height__chivalry * 0.1;
     }
 
     .DW__desktop
-    .RM__carouselNavShowable.RM__carouselExpanded.RM__annotationShown
+    .RM__carouselNavShowable
+    .ShW__annotationShown.ShW__carouselExpanded
     & {
         // When carousel annotation is selected, switch z-index with lyric.
         z-index: $zIndex__lyricColumn;

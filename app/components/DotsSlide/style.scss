@@ -32,7 +32,7 @@ $margin__dotsContainer__phone: 8px;
     }
 
     .SW__song
-    .RM__overlayHidden.RM__dotsShown
+    .ShW__dotsShown.ShW__overlayHidden
     .TrW__canLyricCarouselEnter
     & {
         opacity: 1;
@@ -41,7 +41,7 @@ $margin__dotsContainer__phone: 8px;
     }
 
     .DW__mobileNotTablet
-    .RM__dotsShown
+    .ShW__dotsShown
     & {
         margin-left: $margin__dotsContainer__phone;
     }
