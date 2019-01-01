@@ -24,13 +24,13 @@ $width__childTitle__phone: 80px;
     height: 100%;
     z-index: $zIndex__menuField;
 
-    .SW__logue
+    .PlW__logue
     & {
         // This just needs to be below the popup overlay in logues.
         z-index: $zIndex__lyricColumn;
     }
 
-    .RM__scoresTipsMain
+    .RW__scoresTipsMain
     & {
         justify-content: space-between;
     }
@@ -39,7 +39,7 @@ $width__childTitle__phone: 80px;
         margin $animationDuration__slow,
         max-width $animationDuration__slow;
 
-    .SW__logue
+    .PlW__logue
     &,
     .ShW__overlayHidden
     & {
@@ -51,7 +51,7 @@ $width__childTitle__phone: 80px;
         margin: 0 !important;
     }
 
-    .SW__song
+    .PlW__song
     .ShW__overlayShown
     &.width__mainColumn {
         max-width: $js__width__mini;
@@ -73,7 +73,7 @@ $width__childTitle__phone: 80px;
 
     width: $js__width__childTitle;
 
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     & {
         /**
          * Don't bother to show if title in audio. Child component also will
@@ -104,7 +104,7 @@ $width__childTitle__phone: 80px;
         margin: 0 $js__margin__thin;
     }
 
-    .RM__scoresTipsMain
+    .RW__scoresTipsMain
     & {
         // If scores tips is hidden, remove audio subfield's right margin.
         margin-right: 0;
@@ -127,7 +127,7 @@ $width__childTitle__phone: 80px;
     }
 
     .DW__tablet
-    .RM__scoresTipsMain
+    .RW__scoresTipsMain
     & {
         min-width:
         $js__minWidth__audioBanner
@@ -146,7 +146,7 @@ $width__childTitle__phone: 80px;
         + $js__margin__thin;
     }
 
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     & {
         // If title is hidden, remove audio subfield's left margin.
         margin-left: 0;
@@ -155,7 +155,7 @@ $width__childTitle__phone: 80px;
         min-width: 0;
     }
 
-    .SW__song
+    .PlW__song
     .ShW__overlayShown
     & {
         max-width: 100%;
@@ -163,7 +163,7 @@ $width__childTitle__phone: 80px;
     }
 
     .DW__notPhone
-    .SW__song
+    .PlW__song
     .ShW__overlayShown
     & {
         margin-left: 0;
@@ -172,7 +172,7 @@ $width__childTitle__phone: 80px;
 
 .MenuChild__scoresTips {
 
-    .RM__scoresTipsMain
+    .RW__scoresTipsMain
     & {
         /**
          * Don't bother to show if scores tips in main. Child component also
@@ -201,7 +201,7 @@ $width__childTitle__phone: 80px;
         opacity $animationDuration__slow;
 
     // Specific selector to override access letter opacity.
-    .SW__song
+    .PlW__song
     .ShW__overlayShown
     & {
         width: 0;

@@ -19,13 +19,13 @@
             margin $animationDuration__default;
     }
 
-    .RM__navIconStatic
+    .RW__navIconStatic
     & {
         width: $js__length__icon;
         height: $js__length__icon;
     }
 
-    .RM__navIconShrunk
+    .RW__navIconShrunk
     .NavColumn__shown.NavColumn__left
     & {
         &:not(:last-child) {
@@ -33,7 +33,7 @@
         }
     }
 
-    .RM__navIconShrunk
+    .RW__navIconShrunk
     .NavColumn__shown.NavColumn__right
     & {
         &:not(:last-child) {

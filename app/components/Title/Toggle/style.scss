@@ -5,7 +5,7 @@
 
 .TitleToggle {
 
-    .RM__oneRowMenu
+    .RW__oneRowMenu
     & {
         padding: $js__margin__thin 0 $js__margin__thin $js__margin__thin;
         box-sizing: border-box;
@@ -18,7 +18,7 @@
         top $animationDuration__default,
         opacity $animationDuration__default;
 
-    .SW__song
+    .PlW__song
     .ShW__overlayShown
     & {
         top: -$js__height__menu;

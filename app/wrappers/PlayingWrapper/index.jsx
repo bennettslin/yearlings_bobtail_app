@@ -34,15 +34,15 @@ class PlayingWrapper extends PureComponent {
                         'PlayingWrapper',
 
                         isLyricLogue ?
-                            'SW__logue' :
-                            'SW__song',
+                            'PlW__logue' :
+                            'PlW__song',
                         isPlaying ?
-                            'SW__isPlaying' :
-                            'SW__isPaused',
+                            'PlW__isPlaying' :
+                            'PlW__isPaused',
 
                         isAccessOn ?
-                            'SW__accessOn' :
-                            'SW__accessOff',
+                            'PlW__accessOn' :
+                            'PlW__accessOff',
 
                         accessedKey &&
                             `${PARENT_ACCESS_PREFIX}${accessedKey}`

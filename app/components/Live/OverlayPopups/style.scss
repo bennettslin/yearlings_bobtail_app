@@ -27,12 +27,12 @@
 }
 
 // Always apply this styling for OverlayPopups.
-.RM__twoRowMenu
+.RW__twoRowMenu
 .topHeight__overlayPopups,
 
 // Only apply this styling for OverviewLogue in mobile.
 .DW__mobile
-.RM__twoRowMenu
+.RW__twoRowMenu
 .topHeight__overlayPopups__mobile {
 
     top: $js__topOffsetTruncated__twoRowMenu;

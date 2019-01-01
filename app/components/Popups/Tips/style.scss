@@ -10,14 +10,14 @@
      * When tip button is in menu, show tip popup closer to menu. When it's in
      * main in desktop, show it in centre.
      */
-    .RM__scoresTipsMenu
+    .RW__scoresTipsMenu
     & {
         top: 5%;
         right: 5%;
     }
 
     .DW__mobileNotPhone
-    .RM__scoresTipsMain
+    .RW__scoresTipsMain
     & {
 
         /**

@@ -39,13 +39,13 @@ $length__thumb: 100px;
 }
 
 .Thumb__canShow {
-    .SW__accessOn
-    .RM__carouselNavShowable
+    .PlW__accessOn
+    .RW__carouselNavShowable
     .ShW__navExpanded
     &.Thumb__isAccessed,
 
-    .SW__accessOff
-    .RM__carouselNavShowable
+    .PlW__accessOff
+    .RW__carouselNavShowable
     .ShW__navExpanded
     // Prevent thumb from showing when hovering over hidden column elements.
     .NavColumn__shown

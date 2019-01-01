@@ -23,27 +23,27 @@
 
     left: 0;
 
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     & {
         top: $js__topOffset__twoRowMenu;
     }
 
     .DW__mobile
-    .RM__lyricHeighted
+    .RW__lyricHeighted
     & {
         height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__height__menu});
     }
 
     .DW__mini
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     & {
         height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu});
     }
 
     .DW__laptop
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     &,
-    .RM__lyricHeightless.RM__twoRowMenu
+    .RW__lyricHeightless.RW__twoRowMenu
     & {
         height: calc(100% - #{$js__topOffset__twoRowMenu});
     }
@@ -55,7 +55,7 @@
     }
 
     .DW__phone
-    .RM__lyricHeightless
+    .RW__lyricHeightless
     & {
         height: calc(100% - #{$js__topOffset__twoRowMenu__phone});
     }

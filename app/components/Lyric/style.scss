@@ -27,7 +27,7 @@
      */
     padding: 0 $js__margin__thick;
 
-    .SW__song
+    .PlW__song
     & {
         /**
          * This fixes the issue of being unable to scroll between stanzas. But
@@ -37,27 +37,27 @@
     }
 
     .DW__mobile
-    .RM__lyricHeightless
+    .RW__lyricHeightless
     & {
         height: 0;
     }
 
     .DW__mobile
-    .SW__song
+    .PlW__song
     .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__height__menu});
     }
 
-    .SW__song
-    .RM__twoRowMenu
+    .PlW__song
+    .RW__twoRowMenu
     .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
     }
 
     .DW__phone
-    .SW__song
+    .PlW__song
     .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
@@ -65,7 +65,7 @@
 }
 
 .Lyric__visible {
-    .SW__song
+    .PlW__song
     & {
         opacity: 1;
     }
@@ -109,7 +109,7 @@
         black
     );
     .DW__desktop
-    .RM__carouselNavShowable
+    .RW__carouselNavShowable
     .ShW__annotationShown.ShW__carouselExpanded
     & {
         // Not taken care of by autoprefixer, unfortunately.

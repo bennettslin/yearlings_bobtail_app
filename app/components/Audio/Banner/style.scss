@@ -19,7 +19,7 @@ $height__audioBanner__display:
 
     background-color: #8b8;
 
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     & {
         min-width: 200px;
     }
@@ -42,10 +42,10 @@ $height__audioBanner__display:
         top: $js__height__menu__phone;
     }
 
-    .SW__song
+    .PlW__song
     .ShW__overlayShown
     &,
-    .SW__song
+    .PlW__song
     .ShW__lyricExpanded
     & {
         height: $js__height__banner__twoRowMenu__truncated;
@@ -59,16 +59,16 @@ $height__audioBanner__display:
     height: $height__audioBanner__display;
     justify-content: space-between;
 
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     & {
         font-size: 0.85em;
     }
 
-    .SW__song
-    .RM__twoRowMenu
+    .PlW__song
+    .RW__twoRowMenu
     .ShW__overlayShown
     &,
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     .ShW__lyricExpanded
     & {
         opacity: 0;

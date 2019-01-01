@@ -4306,5 +4306,10 @@ export default [
         taskName: `Nav button icon size is weird.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Finalise separating out wrappers.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

@@ -28,7 +28,7 @@
     }
 
     .DW__mobile
-    .RM__twoRowMenu
+    .RW__twoRowMenu
     & {
         top: -$js__height__nav - $js__height__banner__twoRowMenu__truncated;
     }
@@ -45,7 +45,7 @@
 }
 
 // Hide both carousel and nav in logues.
-.RM__carouselNavShowable
+.RW__carouselNavShowable
 .ShW__navExpanded
 .TrW__canLyricCarouselEnter {
 

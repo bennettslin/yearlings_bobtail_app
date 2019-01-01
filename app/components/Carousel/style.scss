@@ -34,7 +34,7 @@ $height__carouselHidden: $height__chivalry * 0.1;
             top $animationDuration__fast;
     }
 
-    .RM__carouselNavShowable
+    .RW__carouselNavShowable
     .ShW__carouselExpanded
     &.Carousel__visible {
         opacity: 1;
@@ -44,14 +44,14 @@ $height__carouselHidden: $height__chivalry * 0.1;
     }
 
     .DW__desktop
-    .RM__carouselNavShowable
+    .RW__carouselNavShowable
     .ShW__carouselExpanded
     &.Carousel__visible {
         bottom: 0;
     }
 
     .DW__mobileNotPhone
-    .RM__carouselNavShowable
+    .RW__carouselNavShowable
     .ShW__carouselExpanded
     &.Carousel__visible {
         top: 0;
@@ -100,7 +100,7 @@ $height__carouselHidden: $height__chivalry * 0.1;
     }
 
     .DW__desktop
-    .RM__carouselNavShowable
+    .RW__carouselNavShowable
     .ShW__annotationShown.ShW__carouselExpanded
     & {
         // When carousel annotation is selected, switch z-index with lyric.

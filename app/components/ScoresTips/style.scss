@@ -34,7 +34,7 @@
         bottom: $margin__scrollbar;
     }
 
-    .RM__carouselNavShowable
+    .RW__carouselNavShowable
     .ShW__annotationHidden.ShW__dotsHidden
     .TrW__canLyricCarouselEnter
     & {
@@ -60,10 +60,10 @@
         margin-bottom: $js__margin__thick;
     }
 
-    .SW__logue
+    .PlW__logue
     &,
-    .SW__song
-    .RM__scoresTipsMain
+    .PlW__song
+    .RW__scoresTipsMain
     .ShW__overviewShown
     & {
         transform: scale(0);

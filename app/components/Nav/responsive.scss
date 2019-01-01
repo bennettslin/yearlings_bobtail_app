@@ -7,7 +7,7 @@
 }
 
 .DW__monitor {
-    .RM__navIconStatic {
+    .RW__navIconStatic {
         .Nav__showDoubleBook {
             .CarouselNavToggle__placeholder {
                 margin-right: $monitor-multiplier__gap__large;
@@ -63,7 +63,7 @@
         }
     }
 
-    .RM__navIconShrunk {
+    .RW__navIconShrunk {
         .Nav__showDoubleBook {
             .NavBook {
                 min-width: $monitor-shrink-icon;
@@ -98,7 +98,7 @@
  *****************/
 
 .DW__laptop {
-    .RM__navIconStatic {
+    .RW__navIconStatic {
         .Nav__showSingleBook {
             .CarouselNavToggle__placeholder {
                 margin-right: $laptop-large;
@@ -127,7 +127,7 @@
         }
     }
 
-    .RM__navIconShrunk {
+    .RW__navIconShrunk {
         .Nav__showSingleBook {
             .NavBook {
                 min-width: $laptop-shrink-icon;
@@ -176,7 +176,7 @@
         min-width: $width__navToggle__tablet;
     }
 
-    .RM__navIconStatic {
+    .RW__navIconStatic {
         .Nav__showDoubleBook {
             .CarouselNavToggle__placeholder {
                 margin-left: $tablet-multiplier__gap__large;
@@ -232,7 +232,7 @@
         }
     }
 
-    .RM__navIconShrunk {
+    .RW__navIconShrunk {
         .Nav__showDoubleBook {
             .NavBook {
                 min-width: $tablet-shrink-icon;
@@ -272,7 +272,7 @@
         min-width: $width__navToggle__mini;
     }
 
-    .RM__navIconStatic {
+    .RW__navIconStatic {
         .Nav__showSingleBook {
             .CarouselNavToggle__placeholder {
                 margin-left: $mini-large;
@@ -302,7 +302,7 @@
         }
     }
 
-    .RM__navIconShrunk {
+    .RW__navIconShrunk {
         .Nav__showSingleBook {
             .NavBook {
                 min-width: $mini-shrink-icon;

@@ -45,27 +45,27 @@ class ResponsiveWrapper extends PureComponent {
                         'ResponsiveWrapper',
 
                         showShrunkNavIcon ?
-                            'RM__navIconShrunk' :
-                            'RM__navIconStatic',
+                            'RW__navIconShrunk' :
+                            'RW__navIconStatic',
 
                         isCarouselNavShowable ?
-                            'RM__carouselNavShowable' : 'RM__carouselNavUnshowable',
+                            'RW__carouselNavShowable' : 'RW__carouselNavUnshowable',
 
                         isScoresTipsInMain ?
-                            'RM__scoresTipsMain' :
-                            'RM__scoresTipsMenu',
+                            'RW__scoresTipsMain' :
+                            'RW__scoresTipsMenu',
 
                         isTwoRowMenu ?
-                            'RM__twoRowMenu' :
-                            'RM__oneRowMenu',
+                            'RW__twoRowMenu' :
+                            'RW__oneRowMenu',
 
                         singleShownEarColumnKey ?
-                            `RM__${singleShownEarColumnKey}EarColumnOnly` :
-                            'RM__bothEarColumnsShown',
+                            `RW__${singleShownEarColumnKey}EarColumnOnly` :
+                            'RW__bothEarColumnsShown',
 
                         isHeightlessLyric ?
-                            'RM__lyricHeightless' :
-                            'RM__lyricHeighted'
+                            'RW__lyricHeightless' :
+                            'RW__lyricHeighted'
                     )
                 }}
             >
