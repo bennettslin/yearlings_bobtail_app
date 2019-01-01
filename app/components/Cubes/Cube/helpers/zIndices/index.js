@@ -45,7 +45,7 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
     })
 })
 
-const getCubeZIndexStyle = ({
+export const getCubeZIndexStyle = ({
     slantDirection,
     yIndex,
     xIndex
@@ -53,5 +53,3 @@ const getCubeZIndexStyle = ({
     const slantDirectionKey = slantDirection || 'default'
     return CUBE_Z_INDEX_STYLES[slantDirectionKey][yIndex][xIndex]
 }
-
-export { getCubeZIndexStyle }

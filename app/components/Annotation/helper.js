@@ -1,6 +1,6 @@
 import { getAnnotation } from 'album/api/annotations'
 
-const getAnnotationCardsLength = ({
+export const getAnnotationCardsLength = ({
     songIndex,
     annotationIndex
 }) => {
@@ -11,8 +11,4 @@ const getAnnotationCardsLength = ({
     ) || {}
 
     return cards ? cards.length : 0
-}
-
-export {
-    getAnnotationCardsLength
 }

@@ -77,7 +77,7 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
     })
 })
 
-const getFacePath = ({
+export const getFacePath = ({
     slantDirection,
     level,
     yIndex,
@@ -88,5 +88,3 @@ const getFacePath = ({
     const slantDirectionKey = slantDirection || 'default'
     return FACE_PATHS[slantDirectionKey][level][yIndex][xIndex][zIndex][face]
 }
-
-export { getFacePath }

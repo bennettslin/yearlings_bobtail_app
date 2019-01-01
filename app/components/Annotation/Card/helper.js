@@ -1,7 +1,7 @@
 import { getAnnotationCardObject } from 'album/api/annotations'
 import { WORMHOLE } from 'constants/dots'
 
-const getAnnotationCard = ({
+export const getAnnotationCard = ({
     songIndex,
     annotationIndex,
     cardIndex
@@ -32,8 +32,4 @@ const getAnnotationCard = ({
         isTextCard,
         isWormholeCard
     }
-}
-
-export {
-    getAnnotationCard
 }

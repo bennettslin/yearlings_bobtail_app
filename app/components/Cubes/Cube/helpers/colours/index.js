@@ -16,8 +16,6 @@ keys(HSLA_KEYS).forEach(hslaKeyName => {
     CUBE_COLOURS[hslaKey] = `hsla(${h}, ${s}%, ${l}%, 0.8)`
 })
 
-const getCubeColour = (hslaKey) => {
+export const getCubeColour = (hslaKey) => {
     return CUBE_COLOURS[hslaKey]
 }
-
-export { getCubeColour }
