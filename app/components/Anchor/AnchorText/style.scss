@@ -3,6 +3,16 @@
     position: relative;
 }
 
+.TextAnchor__plainText {
+
+    // Specific selector to override.
+    .TW__sliderMoving
+    .Anchor
+    & {
+        visibility: visible;
+    }
+}
+
 .TextAnchor__linkText {
 
     // Override defaults.
@@ -25,18 +35,9 @@
         */
         color: $colour__accessedLinkActive !important;
     }
-}
 
-.RM__sliderMoving {
-
-    // Specific selector to override.
-    .Anchor {
-        .TextAnchor__plainText {
-            visibility: visible;
-        }
-    }
-
-    .TextAnchor__linkText {
+    .TW__sliderMoving
+    & {
         display: none;
     }
 }

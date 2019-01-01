@@ -1,10 +1,10 @@
 // Default styling. Kept in this stylesheet for consistency.
 .VerseColour {
-    .RM__verseCanHover
+    .TW__verseCanHover
     .verseColour__hoverParent:hover
     &,
 
-    .RM__sliderNotMoving.RM__verseActive
+    .TW__sliderNotMoving.TW__verseActive
     &.VerseColour__interactivated {
 
         background-color: $bgColour__audioHighlight;

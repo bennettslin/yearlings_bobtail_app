@@ -16,15 +16,11 @@ class RemainderWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isAutoScroll: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isOverlayShown: PropTypes.bool.isRequired,
         isCarouselNavShowable: PropTypes.bool.isRequired,
 
-        isSliderMoving: PropTypes.bool.isRequired,
-        isSliderTouched: PropTypes.bool.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
@@ -49,18 +45,14 @@ class RemainderWrapper extends PureComponent {
                 earColumnIndex,
                 selectedOverviewOption,
                 selectedTipsOption,
-                isSliderTouched,
-                isSliderMoving,
                 isLyricExpanded,
                 isOverlayShown,
                 isCarouselNavShowable,
-                interactivatedVerseIndex,
                 isEarShown,
                 isHeightlessLyric,
                 showShrunkNavIcon,
                 isScoresTipsInMain,
                 isTwoRowMenu,
-                isAutoScroll,
                 children
             } = this.props,
 
@@ -80,26 +72,32 @@ class RemainderWrapper extends PureComponent {
 
                         // Responsive.
                         showShrunkNavIcon ?
-                            'RM__navIconShrunk' : 'RM__navIconStatic',
+                            'RM__navIconShrunk' :
+                            'RM__navIconStatic',
 
                         isCarouselNavShowable ?
                             'RM__carouselNavShowable' : 'RM__carouselNavUnshowable',
 
                         isScoresTipsInMain ?
-                            'RM__scoresTipsMain' : 'RM__scoresTipsMenu',
+                            'RM__scoresTipsMain' :
+                            'RM__scoresTipsMenu',
 
                         isTwoRowMenu ?
-                            'RM__twoRowMenu' : 'RM__oneRowMenu',
+                            'RM__twoRowMenu' :
+                            'RM__oneRowMenu',
 
                         singleShownEarColumnKey ?
                             `RM__${singleShownEarColumnKey}EarColumnOnly` :
                             'RM__bothEarColumnsShown',
 
                         isHeightlessLyric ?
-                            'RM__lyricHeightless' : 'RM__lyricHeighted',
+                            'RM__lyricHeightless' :
+                            'RM__lyricHeighted',
 
                         // Shown.
-                        isOverlayShown ? 'RM__overlayShown' : 'RM__overlayHidden',
+                        isOverlayShown ?
+                            'RM__overlayShown' :
+                            'RM__overlayHidden',
 
                         lyricAnnotationIndex ?
                             'RM__annotationShown' :
@@ -114,27 +112,10 @@ class RemainderWrapper extends PureComponent {
                             'RM__lyricCollapsed',
                         { 'RM__navExpanded': !isCarouselShown },
 
-                        overviewShown && 'RM__overviewShown',
-                        tipsShown && 'RM__tipsShown',
-
-                        // Touch.
-                        {
-                            'RM__manualScroll': !isAutoScroll,
-                            'RM__sliderTouched': isSliderTouched
-                        },
-
-                        // Relevant to verse index classes.
-                        isSliderMoving ?
-                            'RM__sliderMoving' :
-                            'RM__sliderNotMoving',
-
-                        interactivatedVerseIndex < 0 ?
-                            'RM__verseInactive' :
-                            'RM__verseActive',
-
-                        // Make it easier to override this selector.
-                        !isSliderMoving && interactivatedVerseIndex < 0 &&
-                            'RM__verseCanHover'
+                        overviewShown &&
+                            'RM__overviewShown',
+                        tipsShown &&
+                            'RM__tipsShown'
                     )
                 }}
             >
@@ -145,10 +126,8 @@ class RemainderWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    sessionStore: { interactivatedVerseIndex },
     selectedStore: { earColumnIndex },
     toggleStore: {
-        isAutoScroll,
         isCarouselShown,
         isDotsSlideShown,
         isLyricExpanded
@@ -159,10 +138,6 @@ const mapStateToProps = ({
         isEarShown
     },
     lyricStore: { lyricAnnotationIndex },
-    sliderStore: {
-        isSliderTouched,
-        isSliderMoving
-    },
     responsiveStore: {
         isHeightlessLyric,
         isScoresTipsInMain,
@@ -174,20 +149,16 @@ const mapStateToProps = ({
         selectedTipsOption
     }
 }) => ({
-    isAutoScroll,
     isCarouselShown,
     isLyricExpanded,
     isOverlayShown,
     isCarouselNavShowable,
-    interactivatedVerseIndex,
     isDotsSlideShown,
     earColumnIndex,
     selectedOverviewOption,
     selectedTipsOption,
     isEarShown,
     lyricAnnotationIndex,
-    isSliderTouched,
-    isSliderMoving,
     isHeightlessLyric,
     showShrunkNavIcon,
     isScoresTipsInMain,

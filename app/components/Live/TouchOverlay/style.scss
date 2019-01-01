@@ -4,7 +4,7 @@
     height: 100%;
 
     // This prevents popup interaction when the slider is touched.
-    .RM__sliderTouched
+    .TW__sliderTouched
     & {
         z-index: $zIndex__touchOverlay;
     }

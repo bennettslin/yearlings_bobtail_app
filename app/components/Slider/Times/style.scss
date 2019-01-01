@@ -5,7 +5,7 @@
     color: $colour__text__light;
     @include mixin__textShadow($colour__text__dark);
 
-    .RM__sliderMoving
+    .TW__sliderMoving
     & {
         // When slider is moving, it's above stanzas.
         z-index: $zIndex__touchOverlay;

@@ -33,11 +33,19 @@ class SongWrapper extends PureComponent {
                     className: cx(
                         'SongWrapper',
 
-                        isLyricLogue ? 'SW__logue' : 'SW__song',
-                        isPlaying ? 'SW__isPlaying' : 'SW__isPaused',
+                        isLyricLogue ?
+                            'SW__logue' :
+                            'SW__song',
+                        isPlaying ?
+                            'SW__isPlaying' :
+                            'SW__isPaused',
 
-                        isAccessOn ? 'SW__accessOn' : 'SW__accessOff',
-                        accessedKey && `${PARENT_ACCESS_PREFIX}${accessedKey}`
+                        isAccessOn ?
+                            'SW__accessOn' :
+                            'SW__accessOff',
+
+                        accessedKey &&
+                            `${PARENT_ACCESS_PREFIX}${accessedKey}`
                     )
                 }}
             >

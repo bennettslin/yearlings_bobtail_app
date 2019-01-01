@@ -11,6 +11,7 @@ import cx from 'classnames'
 import DeviceWrapper from './DeviceWrapper'
 import SongWrapper from './SongWrapper'
 import RemainderWrapper from './RemainderWrapper'
+import TouchWrapper from './TouchWrapper'
 import TransitionWrapper from './TransitionWrapper'
 import LogicWrapper from './LogicWrapper'
 import Live from '../../components/Live'
@@ -49,20 +50,22 @@ class RootContainer extends PureComponent {
                 <DeviceWrapper>
                     <SongWrapper>
                         <RemainderWrapper>
-                            <TransitionWrapper>
-                                <LogicWrapper>
-                                    <Live
-                                        {...{
-                                            setLyricFocusElement,
-                                            setScoreFocusElement,
-                                            setWikiFocusElement
-                                        }}
-                                    />
-                                    {isAdminOn && (
-                                        <Admin />
-                                    )}
-                                </LogicWrapper>
-                            </TransitionWrapper>
+                            <TouchWrapper>
+                                <TransitionWrapper>
+                                    <LogicWrapper>
+                                        <Live
+                                            {...{
+                                                setLyricFocusElement,
+                                                setScoreFocusElement,
+                                                setWikiFocusElement
+                                            }}
+                                        />
+                                        {isAdminOn && (
+                                            <Admin />
+                                        )}
+                                    </LogicWrapper>
+                                </TransitionWrapper>
+                            </TouchWrapper>
                         </RemainderWrapper>
                     </SongWrapper>
                 </DeviceWrapper>

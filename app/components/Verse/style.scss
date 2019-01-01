@@ -51,7 +51,7 @@
         }
     }
 
-    .RM__sliderMoving
+    .TW__sliderMoving
     & {
         @include mixin__textAndLinkColours($light: true);
     }
@@ -73,13 +73,13 @@
      * similarly for consistency.
      */
 
-    .RM__sliderNotMoving
+    .TW__sliderNotMoving
     & {
         // Default side verse.
         background-color: #ddd;
     }
 
-    .RM__sliderMoving
+    .TW__sliderMoving
     & {
         // Slider side verse.
         background-color: $bgColour__sideSlider;

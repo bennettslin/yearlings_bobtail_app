@@ -55,11 +55,9 @@
     &.Underline__bar__accessed {
         background-color: $colour__accessedLinkActive !important;
     }
-}
 
-.RM__sliderMoving {
-
-    .Underline__bar {
+    .TW__sliderMoving
+    & {
         opacity: 0;
     }
 }
