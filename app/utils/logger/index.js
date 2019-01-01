@@ -4,8 +4,9 @@ import {
     logMount,
     logParse,
     logPlayer,
-    logTransition,
     logScroll,
+    logTransition,
+    logSuccess,
     logError,
     logger
 } from './helper'
@@ -23,8 +24,9 @@ global.logFocus = logFocus
 global.logMount = logMount
 global.logParse = logParse
 global.logPlayer = logPlayer
-global.logTransition = logTransition
 global.logScroll = logScroll
+global.logTransition = logTransition
+global.logSuccess = logSuccess
 global.logError = logError
 
 export default logger

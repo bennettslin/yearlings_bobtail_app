@@ -45,8 +45,8 @@ const mapStateToProps = ({
 
 // Kind of silly, but easiest approach for now.
 const LOGUE_DUMMY_PLAYER = {
-    promiseToBeginPlaying: () => {},
-    handleEndPlaying: () => {},
+    promiseToPlay: () => {},
+    askToPause: () => {},
     setCurrentTime: () => {}
 }
 
@@ -117,7 +117,7 @@ class PlayerManager extends PureComponent {
             // Play is being toggled off, so set in store right away.
             this.props.updateAudioStore({ isPlaying: false })
 
-            return this.getPlayerRef(selectedSongIndex).handleEndPlaying(
+            return this.getPlayerRef(selectedSongIndex).askToPause(
 
                 // Player manager keeps track of default times of players.
                 this.getCurrentTimeForSongIndex()
@@ -157,7 +157,7 @@ class PlayerManager extends PureComponent {
          * Play is being toggled on, so don't set in store right away.
          * Pass callback and wait for successful return.
          */
-        return this.getPlayerRef(songIndex).promiseToBeginPlaying()
+        return this.getPlayerRef(songIndex).promiseToPlay()
     }
 
     setSelectedPlayerIsPlaying = (success) => {
@@ -270,7 +270,7 @@ class PlayerManager extends PureComponent {
              * again later, to ensure that the player will not end itself in
              * the interim.
              */
-            this.getPlayerRef(selectedSongIndex).handleEndPlaying()
+            this.getPlayerRef(selectedSongIndex).askToPause()
         }
     }
 

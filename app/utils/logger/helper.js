@@ -35,7 +35,7 @@ const
     },
 
     ACCESS_STYLE = _getStyles({
-        color: '#4b4',
+        color: '#b84',
         fontSize: '1.1em'
     }),
     FOCUS_STYLE = _getStyles({
@@ -60,7 +60,10 @@ const
     TRANSITION_STYLE = _getStyles({
         color: '#b4b',
         fontSize: '1.35em'
-
+    }),
+    SUCCESS_STYLE = _getStyles({
+        color: '#4b4',
+        fontSize: '2em'
     }),
     ERROR_STYLE = _getStyles({
         color: '#b44',
@@ -109,6 +112,12 @@ export const logScroll = (text) => {
     _logInfo({
         log: `Scroll: ${text}`,
         styles: SCROLL_STYLE
+    })
+}
+export const logSuccess = (log) => {
+    _logInfo({
+        log,
+        styles: SUCCESS_STYLE
     })
 }
 export const logTransition = (log) => {

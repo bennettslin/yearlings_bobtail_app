@@ -28,6 +28,7 @@ module.exports = {
         "logParse": true,
         "logPlayer": true,
         "logScroll": true,
+        "logSuccess": true,
         "logTransition": true,
         "logError": true,
         "process": true

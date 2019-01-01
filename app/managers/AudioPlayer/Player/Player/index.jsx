@@ -48,7 +48,62 @@ class Player extends PureComponent {
     componentDidUpdate() {
         // Tell recently unselected player to stop playing.
         if (!this.props.isSelected) {
-            this.handleEndPlaying()
+            this.askToPause()
+        }
+    }
+
+    setCurrentTime(currentTime = 0) {
+        // Can be called by player manager.
+        this.audioPlayer.currentTime = currentTime
+    }
+
+    promiseToPlay() {
+        // Only called by player manager.
+        const { songIndex } = this.props,
+            playPromise = this.audioPlayer.play()
+
+        logPlayer(`Promising to play ${songIndex}\u2026`)
+
+        /**
+         * Browser supports the return of a promise:
+         https://developers.google.com/web/updates/2016/03/play-returns-promise
+         */
+        if (typeof playPromise !== 'undefined') {
+
+            playPromise
+                .then(() => {
+                    logSuccess(`Promise to play ${songIndex} succeeded.`)
+                    this.props.setSelectedPlayerIsPlaying(true)
+                })
+                .catch(error => {
+                    logError(`Promise to play ${songIndex} failed: ${error}`)
+                    this.props.setSelectedPlayerIsPlaying(false)
+                })
+
+        } else {
+            this.props.setSelectedPlayerIsPlaying(true)
+        }
+    }
+
+    askToPause(currentTime) {
+        // Can be called by player manager.
+        const { songIndex } = this.props
+
+        /**
+         * This gets called when the player is unselected, even if it was never
+         * selected to begin with because the timeout was cleared too soon. So
+         * make sure the player is actually playing before pausing it.
+         */
+        if (!this.audioPlayer.paused) {
+            logPlayer(`Player ${songIndex} paused.`)
+
+            this.audioPlayer.pause()
+
+            /**
+             * If still selected, reset time to selected verse. Otherwise, reset
+             * time to start of song.
+             */
+            this.setCurrentTime(currentTime)
         }
     }
 
@@ -77,58 +132,8 @@ class Player extends PureComponent {
         this.props.updateEnded()
     }
 
-    setCurrentTime(currentTime = 0) {
-        // Can be called by player manager.
-        this.audioPlayer.currentTime = currentTime
-    }
-
-    promiseToBeginPlaying() {
-        // Only called by player manager.
-        const { songIndex } = this.props,
-            playPromise = this.audioPlayer.play()
-
-        /**
-         * Browser supports the return of a promise:
-         https://developers.google.com/web/updates/2016/03/play-returns-promise
-         */
-        if (typeof playPromise !== 'undefined') {
-
-            playPromise.then(() => {
-                logPlayer(`Promise to play ${songIndex} succeeded.`)
-                this.props.setSelectedPlayerIsPlaying(true)
-
-            }).catch(error => {
-                logError(`Promise to play ${songIndex} failed: ${error}`)
-                this.props.setSelectedPlayerIsPlaying(false)
-            })
-
-        } else {
-            this.props.setSelectedPlayerIsPlaying(true)
-        }
-    }
-
-    handleEndPlaying(currentTime) {
-        // Can be called by player manager.
-
-        /**
-         * This gets called when the player is unselected, even if it was never
-         * selected to begin with because the timeout was cleared too soon. So
-         * make sure the player is actually playing before pausing it.
-         */
-        if (!this.audioPlayer.paused) {
-            logPlayer(`Player ${this.props.songIndex} ended playing.`)
-
-            this.audioPlayer.pause()
-
-            /**
-             * If still selected, reset time to selected verse. Otherwise, reset
-             * time to start of song.
-             */
-            this.setCurrentTime(currentTime)
-        }
-    }
-
     _listenForDebugStatements(onlyIfSelected) {
+        // This isn't called anywhere. Keep for now to have a list of events.
 
         const showDebugStatements =
             this.props.isSelected || !onlyIfSelected
