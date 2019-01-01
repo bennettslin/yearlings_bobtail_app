@@ -88,7 +88,9 @@ class RoutingContainer extends PureComponent {
 
             this.dispatchCanSceneEnter({
                 songIndex: routingSongIndex,
-                sceneIndex: routingSceneIndex
+
+                // Begin in default stage scene.
+                sceneIndex: -1
             })
 
             this.props.updateTransientStore({

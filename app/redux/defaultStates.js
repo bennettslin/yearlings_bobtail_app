@@ -181,7 +181,9 @@ export const RESPONSIVE_DEFAULTS = {
     isScoreShowable: true
 }
 
-const {
+// Begin in default stage scene.
+const initialSceneIndex = -1,
+    {
         cubes: sceneCubesKey,
         sky: {
             time: sceneTime = TIME_ANYTIME,
@@ -190,7 +192,7 @@ const {
         layers: scenePresenceLayers
     } = getScene(
         storedSongIndex,
-        storedSceneIndex
+        initialSceneIndex
     ),
     sceneCubes = getCubesForKey(sceneCubesKey)
 
@@ -200,7 +202,7 @@ export const SCENE_DEFAULTS = {
     sceneTime,
     sceneSeason,
     sceneSongIndex: storedSongIndex,
-    sceneSceneIndex: storedSceneIndex,
+    sceneSceneIndex: initialSceneIndex,
     sceneCubes,
 
     /**

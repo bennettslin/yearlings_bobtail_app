@@ -52,12 +52,13 @@ class AppLoadListener extends PureComponent {
             )
         ) {
             this.props.updateLyricStore({
+                canLyricCarouselUpdate: true,
                 didCarouselUpdate: true,
                 didLyricUpdate: true
             })
             this.props.updateSceneStore({
-                didSceneUpdate: true,
-                canSceneEnter: true
+                canSceneUpdate: true,
+                didSceneUpdate: true
             })
         }
     }

@@ -50,7 +50,7 @@ class Scene extends PureComponent {
 
         return (
             <Transition
-                mountOnEnter
+                // mountOnEnter
                 {...{
                     in: canSceneEnter,
                     timeout: 200,
