@@ -18,6 +18,8 @@ class Player extends PureComponent {
         setSelectedPlayerIsPlaying: PropTypes.func.isRequired
     }
 
+    state = { isPromisingToPlay: false }
+
     componentDidMount() {
         this.props.setPlayerRef(this, this.props.songIndex)
 
@@ -57,37 +59,18 @@ class Player extends PureComponent {
         this.audioPlayer.currentTime = currentTime
     }
 
-    promiseToPlay() {
-        // Only called by player manager.
-        const { songIndex } = this.props,
-            playPromise = this.audioPlayer.play()
-
-        logPlayer(`Promising to play ${songIndex}\u2026`)
-
-        /**
-         * Browser supports the return of a promise:
-         https://developers.google.com/web/updates/2016/03/play-returns-promise
-         */
-        if (typeof playPromise !== 'undefined') {
-
-            playPromise
-                .then(() => {
-                    logSuccess(`Promise to play ${songIndex} succeeded.`)
-                    this.props.setSelectedPlayerIsPlaying(true)
-                })
-                .catch(error => {
-                    logError(`Promise to play ${songIndex} failed: ${error}`)
-                    this.props.setSelectedPlayerIsPlaying(false)
-                })
-
-        } else {
-            this.props.setSelectedPlayerIsPlaying(true)
-        }
-    }
-
-    askToPause(currentTime) {
+    askToPause({ currentTime } = {}) {
         // Can be called by player manager.
         const { songIndex } = this.props
+
+        /**
+         * There's a promise to play still out there, so we'll pause it when
+         * the promise is returned, not here.
+         */
+        if (this.state.isPromisingToPlay) {
+            logPlayer(`Ignoring subsequent ask to pause ${songIndex}.`)
+            return
+        }
 
         /**
          * This gets called when the player is unselected, even if it was never
@@ -95,7 +78,7 @@ class Player extends PureComponent {
          * make sure the player is actually playing before pausing it.
          */
         if (!this.audioPlayer.paused) {
-            logPlayer(`Player ${songIndex} paused.`)
+            logPlayer(`Player ${this.props.songIndex} paused.`)
 
             this.audioPlayer.pause()
 
@@ -105,6 +88,65 @@ class Player extends PureComponent {
              */
             this.setCurrentTime(currentTime)
         }
+    }
+
+    promiseToPlay() {
+        // Only called by player manager.
+        const { songIndex } = this.props
+
+        /**
+         * There's a promise to play still out there, so do nothing.
+         */
+        if (this.state.isPromisingToPlay) {
+            logPlayer(`Ignoring subsequent promise to play ${songIndex}.`)
+            return
+        }
+
+        const playPromise = this.audioPlayer.play()
+
+        logPlayer(`Promising to play ${this.props.songIndex}\u2026`)
+
+        /**
+         * Browser supports the return of a promise:
+         https://developers.google.com/web/updates/2016/03/play-returns-promise
+         */
+        if (typeof playPromise !== 'undefined') {
+            playPromise
+                .then(this._handlePlayPromiseSuccess)
+                .catch(this._handlePlayPromiseFailure)
+
+        } else {
+            this.props.setSelectedPlayerIsPlaying({
+                isPlaying: true,
+                songIndex
+            })
+        }
+
+        this.setState({ isPromisingToPlay: true })
+    }
+
+    _handlePlayPromiseSuccess = () => {
+        const { songIndex } = this.props
+        logSuccess(`Promise to play ${songIndex} succeeded.`)
+
+        this.props.setSelectedPlayerIsPlaying({
+            isPlaying: true,
+            songIndex
+        })
+
+        this.setState({ isPromisingToPlay: false })
+    }
+
+    _handlePlayPromiseFailure = (error) => {
+        const { songIndex } = this.props
+        logError(`Promise to play ${songIndex} failed: ${error}`)
+
+        this.props.setSelectedPlayerIsPlaying({
+            isPlaying: false,
+            songIndex
+        })
+
+        this.setState({ isPromisingToPlay: false })
     }
 
     _handleSuspendEvent = () => {

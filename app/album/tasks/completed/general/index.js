@@ -4311,5 +4311,10 @@ export default [
         taskName: `Finalise separating out wrappers.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Selecting multiple songs in quick succession causes player abort error. Handled by not pausing or playing until promise is returned.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

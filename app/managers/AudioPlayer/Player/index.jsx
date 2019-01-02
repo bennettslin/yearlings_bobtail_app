@@ -99,29 +99,30 @@ class PlayerManager extends PureComponent {
         this.dispatchPlayerCanPlayThrough(songIndex)
     }
 
-    toggleSelectedPlayer = ({
-        isPlaying,
-        selectedSongIndex = this.props.selectedSongIndex
-    }) => {
+    toggleSelectedPlayer = ({ isPlaying }) => {
         /**
          * If play is being toggled on, ensure that selected player was able
          * to successfully play before storing play status in state.
          */
         const {
-            isPlaying: wasPlaying
+            isPlaying: wasPlaying,
+            selectedSongIndex
         } = this.props
 
         // Pausing.
         if (!isPlaying && wasPlaying) {
 
             // Play is being toggled off, so set in store right away.
-            this.props.updateAudioStore({ isPlaying: false })
+            this.setSelectedPlayerIsPlaying({
+                isPlaying: false,
+                songIndex: selectedSongIndex
+            })
 
-            return this.getPlayerRef(selectedSongIndex).askToPause(
+            return this.getPlayerRef(selectedSongIndex).askToPause({
 
                 // Player manager keeps track of default times of players.
-                this.getCurrentTimeForSongIndex()
-            )
+                currentTime: this.getCurrentTimeForSongIndex()
+            })
 
         // Playing.
         } else if (isPlaying && !wasPlaying) {
@@ -160,13 +161,26 @@ class PlayerManager extends PureComponent {
         return this.getPlayerRef(songIndex).promiseToPlay()
     }
 
-    setSelectedPlayerIsPlaying = (success) => {
+    setSelectedPlayerIsPlaying = ({
+        isPlaying,
+        songIndex
+    }) => {
         /**
          * If currently selected player is being toggled on, set in store that
          * it was able to play. If selected song was changed, set in store
          * whether newly selected player was able to play.
          */
-        this.props.updateAudioStore({ isPlaying: success })
+        if (songIndex === this.props.selectedSongIndex) {
+            this.props.updateAudioStore({ isPlaying })
+
+        } else {
+            /**
+             * Promise was returned by a player that is no longer selected, so
+             * now ask it to pause.
+             */
+            logPlayer(`Outdated promise returned from ${songIndex}.`)
+            this.getPlayerRef(songIndex).askToPause()
+        }
     }
 
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {

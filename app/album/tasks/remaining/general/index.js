@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Selecting multiple songs in quick succession causes player abort error. Have a player song index.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Selecting multiple songs in quick success back and forth can break song change transition sequence.`,
         workedHours: 0,
         neededHours: 5
