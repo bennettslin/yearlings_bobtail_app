@@ -4321,5 +4321,10 @@ export default [
         taskName: `Selecting multiple songs in quick success back and forth can break song change transition sequence.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Dots slide refactor in preparation for interactivated text fix.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
