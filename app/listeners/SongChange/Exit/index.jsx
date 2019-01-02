@@ -1,8 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetLyricForTransition } from 'flux/lyric/action'
-import { resetSceneForTransition } from 'flux/scene/action'
+import { updateLyricStore } from 'flux/lyric/action'
+import { updateSceneStore } from 'flux/scene/action'
 import { updateSelectedStore } from 'flux/selected/action'
 
 class SongChangeExitListener extends PureComponent {
@@ -10,9 +10,8 @@ class SongChangeExitListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
-        isSongSelectInFlux: PropTypes.bool.isRequired,
-        resetLyricForTransition: PropTypes.func.isRequired,
-        resetSceneForTransition: PropTypes.func.isRequired,
+        updateLyricStore: PropTypes.func.isRequired,
+        updateSceneStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired
     }
 
@@ -36,13 +35,32 @@ class SongChangeExitListener extends PureComponent {
 
     _beginExitTransition = () => {
 
-        // Only reset these values once.
-        // TODO: Not sure if this actually does the trick.
-        if (!this.props.isSongSelectInFlux) {
-            this.props.updateSelectedStore({ isSongSelectInFlux: true })
-            this.props.resetSceneForTransition()
-            this.props.resetLyricForTransition()
-        }
+        this.props.updateSelectedStore({ isSongSelectInFlux: true })
+
+        this.props.updateSceneStore({
+            // Song change bypasses scroll exit part of transition.
+
+            canSceneUpdate: false,
+            didSceneUpdate: false,
+
+            canSceneEnter: false,
+            didSceneEnter: false
+        })
+
+        this.props.updateLyricStore({
+            didCarouselExit: false,
+            didLyricExit: false,
+            didCurtainExit: false,
+
+            canLyricCarouselUpdate: false,
+            didLyricUpdate: false,
+            didCarouselUpdate: false,
+
+            canLyricCarouselEnter: false,
+            didLyricEnter: false,
+            didCarouselEnter: false,
+            didCurtainEnter: false
+        })
 
         // Clear previous timeout.
         clearTimeout(this.state.songChangeTimeoutId)
@@ -69,20 +87,16 @@ class SongChangeExitListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    selectedStore: {
-        isSongSelectInFlux,
-        selectedSongIndex
-    }
+    selectedStore: { selectedSongIndex }
 }) => ({
-    isSongSelectInFlux,
     selectedSongIndex
 })
 
 export default connect(
     mapStateToProps,
     {
-        resetLyricForTransition,
-        resetSceneForTransition,
+        updateLyricStore,
+        updateSceneStore,
         updateSelectedStore
     }
 )(SongChangeExitListener)

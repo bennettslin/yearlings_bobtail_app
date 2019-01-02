@@ -50,9 +50,9 @@ export const DEVICE_TRANSITION_DEFAULTS = {
     didTheatreEnter: false
 }
 export const LYRIC_TRANSITION_DEFAULTS = {
-    didCarouselExit: false,
-    didLyricExit: false,
-    didCurtainExit: false,
+    didCarouselExit: true,
+    didLyricExit: true,
+    didCurtainExit: true,
 
     canLyricCarouselUpdate: false,
     didLyricUpdate: false,
@@ -64,7 +64,7 @@ export const LYRIC_TRANSITION_DEFAULTS = {
     didCurtainEnter: false
 }
 export const SCENE_TRANSITION_DEFAULTS = {
-    didSceneScrollExit: false,
+    didSceneScrollExit: true,
 
     canSceneUpdate: false,
     didSceneUpdate: false,

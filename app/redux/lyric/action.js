@@ -8,8 +8,8 @@ import {
 
 import { LYRIC_STORE } from '../storeKeys'
 import {
-    LYRIC_DEFAULTS,
-    LYRIC_TRANSITION_DEFAULTS
+    // LYRIC_TRANSITION_DEFAULTS,
+    LYRIC_DEFAULTS
 } from '../defaultStates'
 
 export const updateLyricStore = (payload = LYRIC_DEFAULTS) => {
@@ -27,9 +27,9 @@ export const updateLyricStore = (payload = LYRIC_DEFAULTS) => {
     })
 }
 
-export const resetLyricForTransition = () => {
-    return ({
-        type: LYRIC_STORE,
-        payload: LYRIC_TRANSITION_DEFAULTS
-    })
-}
+// export const resetLyricForTransition = () => {
+//     return ({
+//         type: LYRIC_STORE,
+//         payload: LYRIC_TRANSITION_DEFAULTS
+//     })
+// }
