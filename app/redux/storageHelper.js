@@ -6,8 +6,7 @@ import { getSongVersesCount } from 'album/api/verses'
 
 import {
     getTwoToThePowerOfN,
-    getObjectFromBitNumber,
-    setNewValueInBitNumber
+    getObjectFromBitNumber
 } from 'helpers/bit'
 
 import {
@@ -23,7 +22,7 @@ import {
 import { WINDOW_STORAGE } from 'constants/state'
 
 import {
-    SELECTED_DOT_KEYS,
+    DOTS_BIT_NUMBER,
 
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
@@ -99,7 +98,7 @@ const _validateIndexForKey = (key) => {
 
 const _getValidatedDotsBitNumber = () => {
     const
-        parsedBitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
+        parsedBitNumber = parseInt(WINDOW_STORAGE[DOTS_BIT_NUMBER]),
         isNumber = !isNaN(parsedBitNumber),
         maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length),
         isValid = isNumber && parsedBitNumber < maxBitNumber
@@ -109,7 +108,7 @@ const _getValidatedDotsBitNumber = () => {
 
     } else {
         // If invalid, reset in storage to default state.
-        setInStorage(SELECTED_DOT_KEYS, INITIAL_DOTS_BIT_NUMBER)
+        setInStorage(DOTS_BIT_NUMBER, INITIAL_DOTS_BIT_NUMBER)
         return INITIAL_DOTS_BIT_NUMBER
     }
 }
@@ -120,6 +119,21 @@ export const getIndexFromStorage = (key) => {
 
 export const setInStorage = (key, value) => {
     WINDOW_STORAGE[key] = value
+}
+
+// TODO: Put this in a better place. This isn't really a storage helper.
+export const getEmptyDotsStore = () => {
+    // Get true-false object from bit number.
+    const dotsSlideBitNumber = 0,
+        dotsObject = getObjectFromBitNumber({
+            keysArray: ALL_DOT_KEYS,
+            bitNumber: dotsSlideBitNumber
+        })
+
+    return {
+        dotsSlideBitNumber,
+        ...dotsObject
+    }
 }
 
 export const getDotsFromStorage = () => {
@@ -136,20 +150,6 @@ export const getDotsFromStorage = () => {
         dotsBitNumber,
         ...dotsObject
     }
-}
-
-export const setDotInStorage = (key, value) => {
-    const bitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
-        newBitNumber = setNewValueInBitNumber({
-            keysArray: ALL_DOT_KEYS,
-            bitNumber,
-            key,
-            value
-        })
-
-    setInStorage(SELECTED_DOT_KEYS, newBitNumber)
-
-    return newBitNumber
 }
 
 export const getBoolFromStorage = (key) => {

@@ -1,36 +1,45 @@
-// Section for user to select and deselect dots.
+// Container to show multiple dot toggles in dots section.
 
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
+import { connect } from 'react-redux'
+import { resetInteractivatedDots } from 'flux/dotsSlide/action'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
-import DotsSlideSelects from './Selects'
+import DotsSlideSelect from './Select'
 
+import { getDotKeysFromBitNumber } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
+
+import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
+
+const mapStateToProps = ({
+    accessStore: { accessedDotIndex },
+    toggleStore: { isAccessOn },
+    dotsStore: { dotsBitNumber },
+    dotsSlideStore: { dotsSlideBitNumber }
+}) => ({
+    accessedDotIndex,
+    isAccessOn,
+    dotsBitNumber,
+    dotsSlideBitNumber
+})
 
 class DotsSlide extends PureComponent {
 
-    state = { hasInteractivatedDotText: 0 }
-
-    handleContainerClick = (e) => {
-        this.dispatchStopPropagation(e)
-
-        console.error('handle container click')
-
-        this.setState({
-            hasInteractivatedDotText: 0
-        })
+    static propTypes = {
+    // Through Redux.
+        isAccessOn: PropTypes.bool.isRequired,
+        accessedDotIndex: PropTypes.number,
+        dotsBitNumber: PropTypes.number.isRequired,
+        dotsSlideBitNumber: PropTypes.number.isRequired,
+        resetInteractivatedDots: PropTypes.func.isRequired
     }
 
-    setHasInteractivatedDotText = (isInteractivated) => {
-        /**
-         * TODO: This seems fragile. Ideally, we would just use the bit number
-         * logic here.
-         */
-        const hasInteractivatedDotText =
-            this.state.hasInteractivatedDotText
-            + (isInteractivated ? 1 : -1)
-
-        this.setState({ hasInteractivatedDotText })
+    _handleContainerClick = (e) => {
+        this.dispatchStopPropagation(e)
+        this.props.resetInteractivatedDots()
     }
 
     _getRefs = (payload) => {
@@ -38,23 +47,72 @@ class DotsSlide extends PureComponent {
     }
 
     render() {
-        const { hasInteractivatedDotText } = this.state
+        const {
+                isAccessOn,
+                accessedDotIndex,
+                dotsBitNumber,
+                dotsSlideBitNumber
+            } = this.props,
+
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+            interactivatedDotKeys = getDotKeysFromBitNumber(dotsSlideBitNumber)
 
         return (
             <div className="DotsSlide">
-                <DotsSlideSelects
+                <div
                     {...{
-                        hasInteractivatedDotText,
-                        handleContainerClick:
-                            this.handleContainerClick,
-                        setHasInteractivatedDotText:
-                            this.setHasInteractivatedDotText
+                        className: cx(
+                            'DotsSlideSelects'
+                        ),
+                        onClick: this._handleContainerClick,
+                        onTouchStart: this._handleContainerClick
                     }}
-                />
+                >
+                    {DOT_KEYS_ARRAY_CONFIGS.map((arrayConfig, arrayIndex) => {
+                        const {
+                            dotKeysArray,
+                            startingIndex
+                        } = arrayConfig
+
+                        return (
+                            <div
+                                key={arrayIndex}
+                                className="DotsSlideSelects__row"
+                            >
+                                {dotKeysArray.map((dotKey, index) => {
+                                    const
+                                        dotIndex = index + startingIndex,
+                                        isAccessed =
+                                            isAccessOn &&
+                                            accessedDotIndex === dotIndex,
+                                        isSelected = selectedDotKeys[dotKey],
+                                        isInteractivated =
+                                            interactivatedDotKeys[dotKey]
+
+                                    return (
+                                        <DotsSlideSelect
+                                            key={index}
+                                            {...{
+                                                dotIndex,
+                                                dotKey,
+                                                isAccessed,
+                                                isSelected,
+                                                isInteractivated
+                                            }}
+                                        />
+                                    )
+                                })}
+                            </div>
+                        )
+                    })}
+                </div>
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }
 }
 
-export default DotsSlide
+export default connect(
+    mapStateToProps,
+    { resetInteractivatedDots }
+)(DotsSlide)

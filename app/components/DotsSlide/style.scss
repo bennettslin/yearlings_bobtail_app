@@ -1,4 +1,4 @@
-@import "./Selects/style";
+@import "./Select/style";
 
 $margin__dotsContainer: 16px;
 $margin__dotsContainer__phone: 8px;
@@ -13,9 +13,10 @@ $margin__dotsContainer__phone: 8px;
     z-index: $zIndex__leftShelf;
 
     // TODO: Ideal for dots section to fade to halfway left, then move all the way out to prevent user interaction.
-    transition: opacity $animationDuration__default,
-                margin-left $animationDuration__slow,
-                transform $animationDuration__slow;
+    transition:
+        opacity $animationDuration__default,
+        margin-left $animationDuration__slow,
+        transform $animationDuration__slow;
 
     transform: translateX(-100%);
 
@@ -45,4 +46,21 @@ $margin__dotsContainer__phone: 8px;
     & {
         margin-left: $margin__dotsContainer__phone;
     }
+}
+
+.DotsSlideSelects {
+
+    display: flex;
+    flex-direction: column;
+
+    padding: $js__margin__thick;
+
+    .DW__mobileNotTablet
+    & {
+        padding: $js__margin__thin;
+    }
+}
+
+.DotsSlideSelects__row {
+    display: flex;
 }

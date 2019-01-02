@@ -4,6 +4,7 @@ import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
 import DeviceReducer from './device/reducer'
 import DotsReducer from './dots/reducer'
+import DotsSlideReducer from './dotsSlide/reducer'
 import FocusReducer from './focus/reducer'
 import LoadReducer from './load/reducer'
 import LyricReducer from './lyric/reducer'
@@ -26,6 +27,7 @@ import {
     AUDIO_STORE,
     DEVICE_STORE,
     DOTS_STORE,
+    DOTS_SLIDE_STORE,
     FOCUS_STORE,
     LOAD_STORE,
     LYRIC_STORE,
@@ -60,6 +62,7 @@ const rootReducer = combineReducers({
     [TRANSIENT_STORE]: TransientReducer,
     [OPTION_STORE]: OptionReducer,
     [DOTS_STORE]: DotsReducer,
+    [DOTS_SLIDE_STORE]: DotsSlideReducer,
     [SLIDER_STORE]: SliderReducer,
 
     [LOAD_STORE]: LoadReducer,

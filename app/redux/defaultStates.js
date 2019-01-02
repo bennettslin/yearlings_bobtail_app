@@ -4,7 +4,8 @@ import {
     getIndexFromStorage,
     getDotsFromStorage,
     getBoolFromStorage,
-    getOptionFromStorage
+    getOptionFromStorage,
+    getEmptyDotsStore
 } from './storageHelper'
 
 import { SHOWN } from 'constants/options'
@@ -133,6 +134,7 @@ export const DEVICE_DEFAULTS = {
  * for dev clarity.
  */
 export const DOTS_DEFAULTS = getDotsFromStorage()
+export const DOTS_SLIDE_DEFAULTS = getEmptyDotsStore()
 
 export const FOCUS_DEFAULTS = {
     queuedFocus: false
