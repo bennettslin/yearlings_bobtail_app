@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Selecting multiple songs in quick success back and forth can break song change transition sequence.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Handle situations where carousel is not expected to render, so it will never do enter or exit callbacks.`,
         workedHours: 0,
         neededHours: 3

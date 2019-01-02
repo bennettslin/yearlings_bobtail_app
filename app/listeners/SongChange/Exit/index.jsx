@@ -10,6 +10,9 @@ class SongChangeExitListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
+        canLyricCarouselUpdate: PropTypes.bool.isRequired,
+        canLyricCarouselEnter: PropTypes.bool.isRequired,
+        canSceneUpdate: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired
@@ -34,6 +37,11 @@ class SongChangeExitListener extends PureComponent {
     }
 
     _beginExitTransition = () => {
+        const {
+            canLyricCarouselUpdate,
+            canLyricCarouselEnter,
+            canSceneUpdate
+        } = this.props
 
         this.props.updateSelectedStore({ isSongSelectInFlux: true })
 
@@ -41,20 +49,36 @@ class SongChangeExitListener extends PureComponent {
             // Song change bypasses scroll exit part of transition.
 
             canSceneUpdate: false,
-            didSceneUpdate: false,
+
+            /**
+             * Once transition condition has already been met, its callbacks
+             * will not execute again. So only reset the values set in its
+             * callbacks if the condition has not yet been met. (I'm not 100%
+             * certain that this logic is optimal, but at the very least it
+             * works and doesn't break.)
+             */
+            ...canSceneUpdate && {
+                didSceneUpdate: false
+            },
 
             canSceneEnter: false,
             didSceneEnter: false
         })
 
         this.props.updateLyricStore({
-            didCarouselExit: false,
-            didLyricExit: false,
-            didCurtainExit: false,
+
+            ...canLyricCarouselEnter && {
+                didCarouselExit: false,
+                didLyricExit: false,
+                didCurtainExit: false
+            },
 
             canLyricCarouselUpdate: false,
-            didLyricUpdate: false,
-            didCarouselUpdate: false,
+
+            ...canLyricCarouselUpdate && {
+                didLyricUpdate: false,
+                didCarouselUpdate: false
+            },
 
             canLyricCarouselEnter: false,
             didLyricEnter: false,
@@ -87,9 +111,17 @@ class SongChangeExitListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    selectedStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex },
+    lyricStore: {
+        canLyricCarouselUpdate,
+        canLyricCarouselEnter
+    },
+    sceneStore: { canSceneUpdate }
 }) => ({
-    selectedSongIndex
+    selectedSongIndex,
+    canLyricCarouselUpdate,
+    canLyricCarouselEnter,
+    canSceneUpdate
 })
 
 export default connect(
