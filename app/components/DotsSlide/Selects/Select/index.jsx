@@ -38,25 +38,20 @@ class DotsSlideSelect extends PureComponent {
         setHasInteractivatedDotText: PropTypes.func.isRequired
     }
 
-    state = {
-        isInteractivated: false
-    }
+    state = { isInteractivated: false }
 
     componentDidUpdate(prevProps) {
 
-        // Prevent infinite loop.
         if (this.state.isInteractivated) {
 
-            // Also deinteractivate if dots section has been hidden.
             if (
+                // Deinteractivate all if dots section is hidden.
                 !this.props.isDotsSlideShown ||
                 (
                     !this.props.hasInteractivatedDotText && prevProps.hasInteractivatedDotText
                 )
             ) {
-                this.setState({
-                    isInteractivated: false
-                })
+                this.setState({ isInteractivated: false })
             }
         }
     }

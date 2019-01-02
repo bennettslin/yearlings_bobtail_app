@@ -7,10 +7,7 @@ import {
 import { getCubesForKey } from 'scene/cubes'
 
 import { SCENE_STORE } from '../storeKeys'
-import {
-    // SCENE_TRANSITION_DEFAULTS,
-    SCENE_DEFAULTS
-} from '../defaultStates'
+import { SCENE_DEFAULTS } from '../defaultStates'
 
 export const updateSceneStore = (payload = SCENE_DEFAULTS) => {
     const { sceneCubesKey } = payload
@@ -24,10 +21,3 @@ export const updateSceneStore = (payload = SCENE_DEFAULTS) => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
-
-// export const resetSceneForTransition = () => {
-//     return ({
-//         type: SCENE_STORE,
-//         payload: SCENE_TRANSITION_DEFAULTS
-//     })
-// }

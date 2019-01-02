@@ -8,7 +8,8 @@ import cx from 'classnames'
 import DotsSlideSelect from './Select'
 
 import { getDotKeysFromBitNumber } from 'helpers/dot'
-import { ALL_DOT_KEYS } from 'constants/dots'
+
+import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 
 const mapStateToProps = ({
     accessStore: { accessedDotIndex },
@@ -41,11 +42,7 @@ class DotsSlideSelects extends PureComponent {
                 ...other
             } = this.props,
 
-            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
-
-            firstHalfEnd = ALL_DOT_KEYS.length / 2,
-            firstHalfArray = ALL_DOT_KEYS.slice(0, firstHalfEnd),
-            secondHalfArray = ALL_DOT_KEYS.slice(firstHalfEnd)
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber)
 
         return (
             <div
@@ -57,51 +54,39 @@ class DotsSlideSelects extends PureComponent {
                     onTouchStart: handleContainerClick
                 }}
             >
-                {/* TODO: Can this not be duplicated? */}
-                <div
-                    className="DotsSlideSelects__row"
-                >
-                    {firstHalfArray.map((dotKey, firstHalfIndex) => {
-                        const
-                            isAccessed =
-                                isAccessOn &&
-                                accessedDotIndex === firstHalfIndex
+                {DOT_KEYS_ARRAY_CONFIGS.map((arrayConfig, arrayIndex) => {
+                    const {
+                        dotKeysArray,
+                        startingIndex
+                    } = arrayConfig
 
-                        return (
-                            <DotsSlideSelect {...other}
-                                key={firstHalfIndex}
-                                {...{
-                                    dotIndex: firstHalfIndex,
-                                    dotKey,
-                                    isSelected: selectedDotKeys[dotKey],
-                                    isAccessed
-                                }}
-                            />
-                        )
-                    })}
-                </div>
-                <div
-                    className="DotsSlideSelects__row"
-                >
-                    {secondHalfArray.map((dotKey, index) => {
-                        const secondHalfIndex = index + firstHalfEnd,
-                            isAccessed =
-                                isAccessOn &&
-                                accessedDotIndex === secondHalfIndex
+                    return (
+                        <div
+                            key={arrayIndex}
+                            className="DotsSlideSelects__row"
+                        >
+                            {dotKeysArray.map((dotKey, index) => {
+                                const
+                                    dotIndex = index + startingIndex,
+                                    isAccessed =
+                                        isAccessOn &&
+                                        accessedDotIndex === dotIndex
 
-                        return (
-                            <DotsSlideSelect {...other}
-                                key={index}
-                                {...{
-                                    dotIndex: secondHalfIndex,
-                                    dotKey,
-                                    isSelected: selectedDotKeys[dotKey],
-                                    isAccessed
-                                }}
-                            />
-                        )
-                    })}
-                </div>
+                                return (
+                                    <DotsSlideSelect {...other}
+                                        key={index}
+                                        {...{
+                                            dotIndex,
+                                            dotKey,
+                                            isSelected: selectedDotKeys[dotKey],
+                                            isAccessed
+                                        }}
+                                    />
+                                )
+                            })}
+                        </div>
+                    )
+                })}
             </div>
         )
     }

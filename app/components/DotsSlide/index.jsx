@@ -9,19 +9,19 @@ import { populateRefs } from 'helpers/ref'
 
 class DotsSlide extends PureComponent {
 
-    state = {
-        hasInteractivatedDotText: 0
-    }
+    state = { hasInteractivatedDotText: 0 }
 
     handleContainerClick = (e) => {
         this.dispatchStopPropagation(e)
+
+        console.error('handle container click')
 
         this.setState({
             hasInteractivatedDotText: 0
         })
     }
 
-    _setHasInteractivatedDotText = (isInteractivated) => {
+    setHasInteractivatedDotText = (isInteractivated) => {
         /**
          * TODO: This seems fragile. Ideally, we would just use the bit number
          * logic here.
@@ -30,9 +30,7 @@ class DotsSlide extends PureComponent {
             this.state.hasInteractivatedDotText
             + (isInteractivated ? 1 : -1)
 
-        this.setState({
-            hasInteractivatedDotText
-        })
+        this.setState({ hasInteractivatedDotText })
     }
 
     _getRefs = (payload) => {
@@ -50,7 +48,7 @@ class DotsSlide extends PureComponent {
                         handleContainerClick:
                             this.handleContainerClick,
                         setHasInteractivatedDotText:
-                            this._setHasInteractivatedDotText
+                            this.setHasInteractivatedDotText
                     }}
                 />
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />

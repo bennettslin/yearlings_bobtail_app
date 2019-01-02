@@ -7,10 +7,7 @@ import {
 } from '../actionHelper'
 
 import { LYRIC_STORE } from '../storeKeys'
-import {
-    // LYRIC_TRANSITION_DEFAULTS,
-    LYRIC_DEFAULTS
-} from '../defaultStates'
+import { LYRIC_DEFAULTS } from '../defaultStates'
 
 export const updateLyricStore = (payload = LYRIC_DEFAULTS) => {
     const {
@@ -26,10 +23,3 @@ export const updateLyricStore = (payload = LYRIC_DEFAULTS) => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
-
-// export const resetLyricForTransition = () => {
-//     return ({
-//         type: LYRIC_STORE,
-//         payload: LYRIC_TRANSITION_DEFAULTS
-//     })
-// }

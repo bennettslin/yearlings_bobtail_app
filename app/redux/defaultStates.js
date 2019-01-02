@@ -49,7 +49,7 @@ export const DEVICE_TRANSITION_DEFAULTS = {
     canTheatreEnter: false,
     didTheatreEnter: false
 }
-export const LYRIC_TRANSITION_DEFAULTS = {
+const LYRIC_TRANSITION_DEFAULTS = {
     didCarouselExit: true,
     didLyricExit: true,
     didCurtainExit: true,
@@ -63,7 +63,7 @@ export const LYRIC_TRANSITION_DEFAULTS = {
     didCarouselEnter: false,
     didCurtainEnter: false
 }
-export const SCENE_TRANSITION_DEFAULTS = {
+const SCENE_TRANSITION_DEFAULTS = {
     didSceneScrollExit: true,
 
     canSceneUpdate: false,
@@ -72,7 +72,7 @@ export const SCENE_TRANSITION_DEFAULTS = {
     canSceneEnter: false,
     didSceneEnter: false
 }
-export const SELECTED_TRANSITION_DEFAULTS = {
+const SELECTED_TRANSITION_DEFAULTS = {
     isSongSelectInFlux: false
 }
 
