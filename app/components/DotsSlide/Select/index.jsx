@@ -37,7 +37,6 @@ class DotsSlideSelect extends PureComponent {
     }
 
     render() {
-
         const {
             dotKey,
             isAccessed,
@@ -49,16 +48,17 @@ class DotsSlideSelect extends PureComponent {
             <___>
                 <div className="DotsSlideSelect">
                     <Button
-                        className={cx({
-                        /**
-                         * This class is passed purely to let the Button know to
-                         * update the Dot when it is selected, without having to
-                         * inspect its children prop.
-                         */
-                            'isSelected': isSelected
-                        })}
                         isCustomSize
                         {...{
+                            className: cx({
+                                /**
+                                 * These classes are passed purely to let the
+                                 * Button know to update its children. Not
+                                 * ideal, but it will do for now.
+                                 */
+                                'isSelected': isSelected,
+                                'isInteractivated': isInteractivated
+                            }),
                             buttonName: 'slideSelect',
                             accessKey: ENTER,
                             canShowAccessIcon: isAccessed,

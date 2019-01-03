@@ -4326,5 +4326,9 @@ export default [
         taskName: `Dots slide refactor in preparation for interactivated text fix.`,
         workedHours: 2,
         neededHours: 2
+    },    {
+        taskName: `Interactivated dot text in dots slide doesn't work. Fixed by just passing a class name. Not ideal, but it's too much work, at least right now, to have each dot and description hooked into Redux.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

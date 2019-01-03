@@ -272,5 +272,10 @@ export default [
         taskName: `See if heavy data stuff can be loaded server side. I would like to see this get done, but it's going to take way, way more than I have.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Refactor bit number methods.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

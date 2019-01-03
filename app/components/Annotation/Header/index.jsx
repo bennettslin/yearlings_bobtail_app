@@ -7,7 +7,7 @@ import AnnotationTitle from '../Title'
 const propTypes = {
         // From parent.
         inCarousel: PropTypes.bool,
-        isShadow: PropTypes.bool.isRequired,
+        isShadow: PropTypes.bool,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired

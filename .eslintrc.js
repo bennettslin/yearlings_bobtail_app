@@ -283,8 +283,9 @@ module.exports = {
             'error',
             'as-needed'
         ],
-        "react/prop-types": 'error',
-        "react/no-unused-prop-types": 'error',
+        "react/display-name": 'off',
+        "react/prop-types": 'off',
+        "react/no-unused-prop-types": 'off',
         "require-await": 'error',
         "require-jsdoc": 'error',
         "rest-spread-spacing": [

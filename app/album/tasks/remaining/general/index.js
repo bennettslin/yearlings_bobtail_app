@@ -1,18 +1,18 @@
 export default [
     {
+        taskName: `Clicking on wiki anchor should not stop propagation if wiki is off.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Slider stanza tab for Dear Saska refrain is too long.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Song change should also accommodate scroll before scene transition?`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Interactivated dot text in dots slide doesn't work. Just have button take in text anchor instead of passing it as child.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Refactor bit number methods.`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Dot unit animation? Do based on visibility or opacity instead of display none?`,
