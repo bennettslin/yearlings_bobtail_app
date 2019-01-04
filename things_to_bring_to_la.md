@@ -19,7 +19,7 @@ Tweezers
 Nail clipper
 Retinol
 Flonase
-Clobetasol (leave in LA)
+Allegra
 
 ## Suitcase
 House key (always keep in suitcase)
@@ -30,7 +30,7 @@ More Post-its
 Ibuprofen
 
 ## Things I have in LA
-Docking station with all peripherals
+Docking station with all peripherals (No more USB to USB_C adapters needed)
 Extra MacBook charger and cable
 Ergonomic keyboard
 Magic trackpad and cushion
@@ -57,7 +57,8 @@ Mentholatum
 Antacids
 Reach floss
 Nail file
-Noxzema
+Lots of Noxzema
+small tube of Clobetasol
 
 Backscratcher
 Lacrosse ball
