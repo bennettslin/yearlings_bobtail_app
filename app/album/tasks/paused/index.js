@@ -249,19 +249,9 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Separate class name parent containers.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Halo for cubes.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Weirdness of presences or presence texts not rendering. Maybe just a development in Chrome issue? Doesn't seem to happen in production, or other browsers...`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Allow presences to specify zIndex. Position presences in slanted cubes. (I'm going to assume that without window blinds, this is no longer necessary.)`,
@@ -277,5 +267,10 @@ export default [
         taskName: `Refactor bit number methods.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Dot unit animation? Do based on visibility or opacity instead of display none? Looks like styling won't be so easy, so punting this.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

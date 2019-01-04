@@ -4345,5 +4345,10 @@ export default [
         taskName: `Clicking on wiki anchor should not stop propagation if wiki is off.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Song change should also accommodate scroll before scene transition? Actually caused by call to scroll upon lyric enter not executing in play mode. Still janky, but this is covered by another task.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

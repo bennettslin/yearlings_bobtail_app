@@ -22,13 +22,13 @@ class SceneChangeEnterListener extends PureComponent {
     _checkSceneChange(prevProps) {
         const
             { didSceneScrollExit } = this.props,
-            { didSceneScrollExit: wasExitScrollDone } = prevProps
+            { didSceneScrollExit: hadSceneScrollExited } = prevProps
 
         /**
          * Scroll has finished exit transition, so now update state to kick off
          * enter transition.
          */
-        if (didSceneScrollExit && !wasExitScrollDone) {
+        if (didSceneScrollExit && !hadSceneScrollExited) {
             this._beginEnterTransitionWithNewState()
         }
     }

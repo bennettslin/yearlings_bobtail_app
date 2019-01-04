@@ -79,7 +79,7 @@ class ScrollLyricListener extends PureComponent {
                 // If paused, always scroll.
                 !isPlaying ||
 
-                // If selecting a new verse, always scroll.
+                // If selecting a new song or verse, always scroll.
                 queuedScrollLyricAlways ||
 
                 /**

@@ -19,53 +19,53 @@ class ScrollRenderListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._handleScrollUponCarouselRender(prevProps)
-        this._handleScrollUponLyricRender(prevProps)
+        this._checkCarouselEntered(prevProps)
+        this._checkLyricEntered(prevProps)
     }
 
-    _handleScrollUponCarouselRender = (prevProps) => {
+    _checkCarouselEntered = (prevProps) => {
         const
             {
                 isSelectedLogue,
                 didCarouselEnter
             } = this.props,
-            { didCarouselEnter: couldCarouselRender } = prevProps
+            { didCarouselEnter: hadCarouselEntered } = prevProps
 
-        // TODO: This now scrolls, but maybe do with no animation.
         if (
             !isSelectedLogue
             && didCarouselEnter
-            && !couldCarouselRender
+            && !hadCarouselEntered
         ) {
             const { selectedAnnotationIndex } = this.props
 
             // Scroll to carousel annotation if toggled on.
             this.props.updateScrollCarouselStore({
-                queuedScrollCarouselLog: 'Rerender selected carousel annotation.',
+                queuedScrollCarouselLog: 'Carousel entered.',
                 queuedScrollCarouselIndex: selectedAnnotationIndex || 1,
                 queuedScrollCarouselFromRender: true
             })
         }
     }
 
-    _handleScrollUponLyricRender = (prevProps) => {
+    _checkLyricEntered = (prevProps) => {
         const
             {
                 isSelectedLogue,
                 didLyricEnter
             } = this.props,
-            { didLyricEnter: couldRender } = prevProps
+            { didLyricEnter: hadLyricEntered } = prevProps
 
-        // TODO: This now scrolls, but maybe do with no animation.
         if (
             !isSelectedLogue
             && didLyricEnter
-            && !couldRender
+            && !hadLyricEntered
         ) {
             this.props.updateScrollLyricStore({
-                queuedScrollLyricLog: 'Rerender selected verse.',
+                queuedScrollLyricLog: 'Lyric entered.',
                 queuedScrollLyricByVerse: true,
-                queuedScrollLyricFromRender: true
+                queuedScrollLyricFromRender: true,
+                queuedScrollLyricAlways: true,
+                queuedSceneChangeExitScrollCallback: true
             })
         }
     }

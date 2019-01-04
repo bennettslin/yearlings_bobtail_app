@@ -1,15 +1,5 @@
 export default [
     {
-        taskName: `Song change should also accommodate scroll before scene transition?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Dot unit animation? Do based on visibility or opacity instead of display none?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Followup on transition work. Can it be improved?`,
         workedHours: 0,
         neededHours: 3
@@ -25,7 +15,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Add title to lyric column in desktop.`,
+        taskName: `Add title to lyric column in desktop. Also choose font.`,
         workedHours: 0,
         neededHours: 3
     },
