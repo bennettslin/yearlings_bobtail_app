@@ -10,6 +10,8 @@ $margin__dotsContainer__phone: 8px;
     opacity: 0;
     margin-left: -$margin__dotsContainer;
     margin-top: $margin__dotsContainer / 2;
+    border-radius: $borderRadius__narrow;
+
     z-index: $zIndex__leftShelf;
 
     // TODO: Ideal for dots section to fade to halfway left, then move all the way out to prevent user interaction.

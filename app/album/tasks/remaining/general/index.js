@@ -10,7 +10,7 @@ export default [
         neededHours: 8
     },
     {
-        taskName: `Finalise thinking on shadows for dots, dot anchors and buttons, dot fields, anchor underline, popup buttons. Distance between buttons. Text shadow on anchors. Glow effects?, Playing verse gradient?`,
+        taskName: `Finalise thinking on shadows for dots, dot anchors and buttons, dot fields, anchor underline, popup buttons. Distance between buttons. Text shadow on anchors. Glow effects?, Playing verse gradient? Speech bubble thing again?`,
         workedHours: 0,
         neededHours: 5
     },
