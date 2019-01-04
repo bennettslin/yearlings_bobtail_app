@@ -30,6 +30,7 @@ class DotsSlideSelect extends PureComponent {
 
     _toggleInteractivatedDot = () => {
         this.dispatchInteractivatedDot(this.props.dotIndex)
+        return true
     }
 
     _getRefs = (payload) => {

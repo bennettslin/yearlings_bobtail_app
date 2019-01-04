@@ -4330,5 +4330,20 @@ export default [
         taskName: `Interactivated dot text in dots slide doesn't work. Fixed by just passing a class name. Not ideal, but it's too much work, at least right now, to have each dot and description hooked into Redux.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Slider stanza tab for Dear Saska refrain is too long. Just make verse longer in duration, and ensured that no other verse is that short.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Handle situations where carousel is not expected to render, so it will never do enter or exit callbacks. Solve by having listeners check isUnrenderableCarouselNav.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Clicking on wiki anchor should not stop propagation if wiki is off.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

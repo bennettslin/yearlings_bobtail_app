@@ -329,7 +329,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 71,
+                    time: 70,
                     isCentre: true,
                     lyric: {
                         isItalic: true,

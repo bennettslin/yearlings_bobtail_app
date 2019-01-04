@@ -1,15 +1,5 @@
 export default [
     {
-        taskName: `Clicking on wiki anchor should not stop propagation if wiki is off.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Slider stanza tab for Dear Saska refrain is too long.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Song change should also accommodate scroll before scene transition?`,
         workedHours: 0,
         neededHours: 3
@@ -18,11 +8,6 @@ export default [
         taskName: `Dot unit animation? Do based on visibility or opacity instead of display none?`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Handle situations where carousel is not expected to render, so it will never do enter or exit callbacks.`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Followup on transition work. Can it be improved?`,

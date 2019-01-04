@@ -91,21 +91,23 @@ class TextLyricAnchor extends PureComponent {
 
             isSelected = annotationIndex === lyricAnnotationIndex
 
-        if (!isSelected) {
+        if (isSelected) {
+            return false
+        }
 
-            if (wikiIndex) {
-                this.dispatchWiki(
-                    wikiIndex,
-                    wikiAnnotationIndex
-                )
-            }
+        if (wikiIndex) {
+            return this.dispatchWiki(
+                wikiIndex,
+                wikiAnnotationIndex
+            )
+        }
 
-            if (annotationIndex) {
-                this.props.updateAnnotationStore({
-                    queuedAnnotationIndex: annotationIndex,
-                    queuedAnnotationFromLyricVerse: true
-                })
-            }
+        if (annotationIndex) {
+            this.props.updateAnnotationStore({
+                queuedAnnotationIndex: annotationIndex,
+                queuedAnnotationFromLyricVerse: true
+            })
+            return true
         }
     }
 

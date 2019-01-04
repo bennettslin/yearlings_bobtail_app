@@ -35,8 +35,12 @@ class Anchor extends Component {
 
     _handleClick = (e) => {
         if (!this.props.isDisabled) {
-            this.props.handleAnchorClick(e)
-            this.dispatchStopPropagation(e)
+
+            if (this.props.handleAnchorClick(e)) {
+
+                // Stop propagation only if anchor click is valid.
+                this.dispatchStopPropagation(e)
+            }
         }
     }
 

@@ -11,6 +11,7 @@ class SongChangeDoneListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isUnrenderableCarouselNav: PropTypes.bool.isRequired,
         didCarouselEnter: PropTypes.bool.isRequired,
         didLyricEnter: PropTypes.bool.isRequired,
         didCurtainEnter: PropTypes.bool.isRequired
@@ -23,13 +24,14 @@ class SongChangeDoneListener extends PureComponent {
     _checkSongChangeEnter(prevProps) {
         const
             {
-                didCarouselEnter,
+                isUnrenderableCarouselNav,
                 didLyricEnter,
+                didCarouselEnter,
                 didCurtainEnter
             } = this.props,
             {
-                didCarouselEnter: hadCarouselEntered,
                 didLyricEnter: hadLyricEntered,
+                didCarouselEnter: hadCarouselEntered,
                 didCurtainEnter: hadCurtainEntered
             } = prevProps
 
@@ -37,14 +39,18 @@ class SongChangeDoneListener extends PureComponent {
         if (
             (
                 // All these conditions are needed to enter transition.
-                didCarouselEnter &&
                 didLyricEnter &&
+                (
+                    didCarouselEnter || isUnrenderableCarouselNav
+                ) &&
                 didCurtainEnter
 
             ) && (
                 // At least one of these conditions was previously false.
-                !hadCarouselEntered ||
                 !hadLyricEntered ||
+                (
+                    !hadCarouselEntered && !isUnrenderableCarouselNav
+                ) ||
                 !hadCurtainEntered
             )
         ) {
@@ -68,12 +74,14 @@ class SongChangeDoneListener extends PureComponent {
 }
 
 const mapStateToProps = ({
+    responsiveStore: { isUnrenderableCarouselNav },
     lyricStore: {
         didCarouselEnter,
         didLyricEnter,
         didCurtainEnter
     }
 }) => ({
+    isUnrenderableCarouselNav,
     didCarouselEnter,
     didLyricEnter,
     didCurtainEnter

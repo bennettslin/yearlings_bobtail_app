@@ -42,14 +42,20 @@ class AnnotationTitle extends PureComponent {
     }
 
     _handleTitleClick = () => {
-        if (!this.props.isSelected) {
-            const { annotationIndex } = this.props
+        const {
+            isSelected,
+            annotationIndex
+        } = this.props
 
-            this.props.updateAnnotationStore({
-                queuedAnnotationIndex: annotationIndex,
-                queuedAnnotationFromCarousel: true
-            })
+        if (isSelected) {
+            return false
         }
+
+        this.props.updateAnnotationStore({
+            queuedAnnotationIndex: annotationIndex,
+            queuedAnnotationFromCarousel: true
+        })
+        return true
     }
 
     render() {

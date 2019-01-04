@@ -56,18 +56,20 @@ class UnitDot extends PureComponent {
 
     _handleDotButtonClick = () => {
         const {
-                unitDot,
+                unitDot: { annotationIndex },
                 lyricAnnotationIndex
             } = this.props,
-            { annotationIndex } = unitDot,
 
             isSelected = annotationIndex === lyricAnnotationIndex
 
-        if (!isSelected) {
-            this.props.updateAnnotationStore({
-                queuedAnnotationIndex: annotationIndex
-            })
+        if (isSelected) {
+            return false
         }
+
+        this.props.updateAnnotationStore({
+            queuedAnnotationIndex: annotationIndex
+        })
+        return true
     }
 
     setLyricAnnotationElement = (node) => {
