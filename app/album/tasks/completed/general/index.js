@@ -4350,5 +4350,10 @@ export default [
         taskName: `Song change should also accommodate scroll before scene transition? Actually caused by call to scroll upon lyric enter not executing in play mode. Still janky, but this is covered by another task.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Figure out drop shadows on svgs. Pretty simple, actually.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

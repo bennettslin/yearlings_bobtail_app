@@ -46,5 +46,7 @@ $boxShadow__verseBar__below: 0 0 12px 8px $colour__boxShadow__dark;
 $boxShadow__popupView: -2px 2px 8px 8px $colour__boxShadow;
 $boxShadow__popupView__inOverlay: -2px 2px 8px 8px $colour__boxShadow__dark;
 
-$boxShadow__button: -1px 1px 2px 2px $colour__boxShadow;
-$boxShadow__button__inOverlay: -1px 1px 2px 2px $colour__boxShadow__dark;
+// $boxShadow__button: -1px 1px 2px 2px $colour__boxShadow;
+// $boxShadow__button__inOverlay: -1px 1px 2px 2px $colour__boxShadow__dark;
+
+$dropShadow__buttonIcon: drop-shadow(0 4px 4px $colour__boxShadow__dark);

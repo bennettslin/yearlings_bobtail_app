@@ -111,13 +111,13 @@ class PopupViewButton extends Component {
                 )}
             >
                 {/* Placeholder for popup box shadow. */}
-                <div
+                {/* <div
                     className={cx(
                         'Button__largeSize',
                         'Button__popup',
                         'boxShadow__popupView'
                     )}
-                />
+                /> */}
 
                 <Button
                     isLargeSize
