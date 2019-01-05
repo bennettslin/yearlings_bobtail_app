@@ -4,9 +4,8 @@
     display: flex;
     padding: $js__margin__thin;
 
-    background-color: orange;
-
-    z-index: $zIndex__carouselNavButton;
+    // Remain visible as it fades out.
+    z-index: $zIndex__lyricChild__topMost;
 
     opacity: 0;
 

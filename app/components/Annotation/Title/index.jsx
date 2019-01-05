@@ -103,8 +103,8 @@ class AnnotationTitle extends PureComponent {
                     },
 
                     ...isShadow && {
-                        'boxShadow__annotation': !isSelected,
-                        'boxShadow__annotation__selected': isSelected
+                        'boxShadow__mainCard': !isSelected,
+                        'boxShadow__mainCard__selected': isSelected
                     },
 
                     'AnnotationTitle__dot': isDot

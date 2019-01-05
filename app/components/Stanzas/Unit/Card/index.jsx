@@ -127,7 +127,7 @@ const propTypes = {
                         className={cx(
                             'UnitCard__tab',
                             'UnitCard__tabShadow',
-                            'boxShadow__unitCard'
+                            'boxShadow__mainCard'
                         )}
                     >
                         <div
@@ -140,7 +140,7 @@ const propTypes = {
 
                 <div className={cx(
                     'UnitCard__sheet',
-                    'boxShadow__unitCard',
+                    'boxShadow__mainCard',
                     'bgColour__unit__pattern',
                     `bgColour__stanzaType__${stanzaType}`
                 )}>

@@ -93,7 +93,7 @@ const propTypes = {
                         !isFullSize && 'PopupViewContent__notFullSize',
 
                         // In other words, not annotation.
-                        (hasNarrowPadding || hasWidePadding) &&
+                        // (hasNarrowPadding || hasWidePadding) &&
                         'boxShadow__popupView'
                     )}
                     {...{

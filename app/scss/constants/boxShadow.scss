@@ -1,52 +1,37 @@
-@import './colours.scss';
-
 // Box shadow colours.
 $colour__boxShadow: rgba(75, 75, 100, 0.4);
 $colour__boxShadow__dark: rgba(25, 25, 50, 0.6);
-
-$colour__boxShadow__cursored: rgba(225, 255, 200, 0.3);
+$colour__boxShadow__darker: rgba(25, 25, 50, 0.8);
 $colour__boxShadow__cursoredBright: rgba(225, 255, 200, 0.5);
 
+// Admin.
 $boxShadow__admin: 0 2px 2px 2px $colour__boxShadow;
 
-$boxShadow__access: 0 0 3px 3px #8f8;
+// Main.
+$boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;
+$boxShadow__mainCard__selected:
+    0 0 15px 4px $colour__boxShadow__cursoredBright,
+    0 3px 10px 3px $colour__boxShadow__dark;
 
+$dropShadow__button: drop-shadow(0 4px 4px $colour__boxShadow__dark);
+$dropShadow__button__inOverlay:
+    drop-shadow(0 4px 4px $colour__boxShadow__darker);
+
+// Lyric.
+$boxShadow__verseBar__above: 0 3px 10px 6px $colour__boxShadow__dark;
+$boxShadow__verseBar__below: 0 0 10px 6px $colour__boxShadow__dark;
+
+// Annotation.
 $boxShadow__annotationCard: 0 1px 1px 1px $colour__boxShadow;
 $boxShadow__annotationWormhole: inset 0 2px 2px $colour__boxShadow;
 
-$boxShadow__dotsContainer: -2px 2px 8px 8px $colour__boxShadow;
-
-$boxShadow__verseAudio: -1px 1px 4px 4px $colour__boxShadow;
-
+// Verse.
 $boxShadow__activeVerse: inset 0 0 5px $colour__boxShadow__dark;
+$boxShadow__cursorVerse: $boxShadow__mainCard;
 
-$boxShadow__cursorVerse:
-    // 0 0 5px 1px $colour__boxShadow__cursoredBright,
-    0 1px 3px 3px $colour__boxShadow__dark;
-
-$boxShadow__unitCard: 0 3px 3px 3px $colour__boxShadow__dark;
-$boxShadow__unitCard__cursored:
-    0 0 15px 4px $colour__boxShadow__cursoredBright,
-    0 3px 10px 3px $colour__boxShadow__dark;
-
-$boxShadow__annotation: 0 3px 3px 3px $colour__boxShadow__dark;
-$boxShadow__annotation__selected:
-    0 0 15px 4px $colour__boxShadow__cursoredBright,
-    0 3px 10px 3px $colour__boxShadow__dark;
-
+// Slider.
 $boxShadow__sliderStanza: 0 1px 1px 1px $colour__boxShadow;
-// $boxShadow__sliderStanza__cursored:
-//     0 1px 5px 5px $colour__boxShadow__cursoredBright;
 
-$boxShadow__verseBar__above: 0 3px 12px 8px $colour__boxShadow__dark;
-$boxShadow__verseBar__below: 0 0 12px 8px $colour__boxShadow__dark;
-
-// $boxShadow__menu: 0 0 1px 1px $colour__boxShadow;
-
-$boxShadow__popupView: -2px 2px 8px 8px $colour__boxShadow;
-$boxShadow__popupView__inOverlay: -2px 2px 8px 8px $colour__boxShadow__dark;
-
-// $boxShadow__button: -1px 1px 2px 2px $colour__boxShadow;
-// $boxShadow__button__inOverlay: -1px 1px 2px 2px $colour__boxShadow__dark;
-
-$dropShadow__buttonIcon: drop-shadow(0 4px 4px $colour__boxShadow__dark);
+// Popup.
+$boxShadow__popupView: $boxShadow__mainCard;
+$boxShadow__popupView__inOverlay: 0 3px 5px 2px $colour__boxShadow__darker;

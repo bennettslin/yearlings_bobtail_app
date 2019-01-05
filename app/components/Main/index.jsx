@@ -6,7 +6,9 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 
+import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
+
 import LeftShelf from './LeftShelf'
 import Nav from '../Nav'
 import Carousel from '../Carousel'
@@ -49,6 +51,7 @@ class Main extends PureComponent {
                 <ScoresTips inMainRightSide />
                 <TipsPopup />
                 <CarouselToggle />
+                <CarouselSelect />
             </div>
         )
     }

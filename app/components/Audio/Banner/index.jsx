@@ -45,11 +45,13 @@ class AudioBanner extends PureComponent {
         return (
             <div className={cx(
                 'AudioBanner',
-                'abF',
 
                 isTwoRowMenu ?
                     'AudioBanner__belowMenu' :
-                    'Audio__child'
+                    'Audio__child',
+
+                'boxShadow__popupView',
+                'abF'
             )}>
 
                 <div className={cx(

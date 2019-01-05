@@ -9,7 +9,6 @@ import { updateLyricStore } from 'flux/lyric/action'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import ScrollCarouselListener from '../../listeners/Scroll/Carousel'
 import CarouselScroll from './Scroll'
-import CarouselSelect from './Select'
 
 import { populateRefs } from 'helpers/ref'
 
@@ -86,7 +85,6 @@ class Carousel extends PureComponent {
                                 this._setCarouselAnnotationElement
                         }}
                     />
-                    <CarouselSelect />
                 </div>
             </CSSTransition>
         )

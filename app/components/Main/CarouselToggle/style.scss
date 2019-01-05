@@ -2,19 +2,17 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: #b9d;
+    // background-color: #b9d;
     padding: $js__margin__thin 0;
-    // border-radius: 0 $borderRadius__nav 0 0;
-    // box-shadow: $boxShadow__popupView;
 
     display: flex;
     justify-content: center;
     z-index: $zIndex__carouselNavButton;
 
-    transition: margin $animationDuration__fast,
-                bottom $animationDuration__fast,
-                // border-radius $animationDuration__fast,
-                box-shadow $animationDuration__fast;
+    transition:
+        margin $animationDuration__fast,
+        bottom $animationDuration__fast,
+        box-shadow $animationDuration__fast;
 
     // Widths for all other devices are set by "width__leftShelf" class.
     .DW__desktop
@@ -26,14 +24,12 @@
     .ShW__carouselExpanded
     & {
         bottom: $margin__scrollbar;
-        // border-radius: 0 $borderRadius__nav $borderRadius__nav 0;
     }
 
     .DW__mobile
     & {
         top: 0;
         bottom: auto;
-        // border-radius: 0 0 $borderRadius__nav 0;
     }
 
     .RW__carouselNavUnshowable

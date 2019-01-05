@@ -1,5 +1,10 @@
 .ButtonIcon {
-    filter: $dropShadow__buttonIcon;
+    filter: $dropShadow__button;
+
+    .ShW__overlayShown
+    & {
+        filter: $dropShadow__button__inOverlay;
+    }
 }
 
 .ButtonIcon__audioNext {
