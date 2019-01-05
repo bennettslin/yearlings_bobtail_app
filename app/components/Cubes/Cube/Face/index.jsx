@@ -17,7 +17,7 @@ const propTypes = {
     xIndex: PropTypes.number.isRequired,
     zIndex: PropTypes.number.isRequired,
     face: PropTypes.string.isRequired,
-    hslaColourKey: PropTypes.string.isRequired
+    hslaKey: PropTypes.string.isRequired
 }
 
 const Face = memo(({
@@ -27,58 +27,40 @@ const Face = memo(({
     xIndex,
     zIndex,
     face,
-    hslaColourKey
+    hslaKey
 }) => {
 
     const xCharIndex = getCharStringForNumber(xIndex)
 
     return (
-        <g className={cx(
-            'Face',
-            level,
-            `y${yIndex}`,
-            `x${xCharIndex}`,
-            `z${zIndex}`,
-            face
-        )}>
-
-            <path
-                {...{
-                    className: cx(
-                        'Square',
-                        level,
-                        face
-                    ),
-                    d: getFacePath({
-                        slantDirection,
-                        level,
-                        yIndex,
-                        xIndex,
-                        zIndex,
-                        face
-                    }),
-                    fill: getCubeColour(hslaColourKey)
-                }}
-            />
-            <path
-                {...{
-                    className: cx(
-                        'Square',
-                        'shade',
-                        level,
-                        face
-                    ),
-                    d: getFacePath({
-                        slantDirection,
-                        level,
-                        yIndex,
-                        xIndex,
-                        zIndex,
-                        face
-                    })
-                }}
-            />
-        </g>
+        <path
+            {...{
+                className: cx(
+                    'Face',
+                    level,
+                    face,
+                    `y${yIndex}`,
+                    `x${xCharIndex}`,
+                    `z${zIndex}`
+                ),
+                d: getFacePath({
+                    slantDirection,
+                    level,
+                    yIndex,
+                    xIndex,
+                    zIndex,
+                    face
+                }),
+                fill: getCubeColour({
+                    hslaKey,
+                    level,
+                    yIndex,
+                    xIndex,
+                    zIndex,
+                    face
+                })
+            }}
+        />
     )
 })
 

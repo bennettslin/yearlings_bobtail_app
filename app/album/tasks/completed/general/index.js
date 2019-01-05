@@ -4360,5 +4360,10 @@ export default [
         taskName: `Work on box shadows for main sections, and drop shadows for buttons and popup buttons. Deciding not to do speech bubble.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Remove shade faces, logic determine single face colour based on indices.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

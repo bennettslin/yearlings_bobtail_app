@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Include saturation in logic to determine final face hsla.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Followup on transition work. Can it be improved?`,
         workedHours: 0,
         neededHours: 3

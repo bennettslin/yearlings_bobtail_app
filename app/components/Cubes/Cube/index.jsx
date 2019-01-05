@@ -40,9 +40,9 @@ const
         }
     }) => {
         const
-            ceilingHslaColourKey =
+            ceilingHslaKey =
                 getValueInAbridgedMatrix(ceilingHslaColours, xIndex, yIndex),
-            floorHslaColourKey =
+            floorHslaKey =
                 getValueInAbridgedMatrix(floorHslaColours, xIndex, yIndex),
             ceilingZIndex =
                 getValueInAbridgedMatrix(ceilingZIndices, xIndex, yIndex),
@@ -50,8 +50,8 @@ const
                 getValueInAbridgedMatrix(floorZIndices, xIndex, yIndex)
 
         return {
-            ceilingHslaColourKey,
-            floorHslaColourKey,
+            ceilingHslaKey,
+            floorHslaKey,
             ceilingZIndex,
             floorZIndex,
             slantDirection
@@ -63,8 +63,8 @@ class Cube extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        ceilingHslaColourKey: PropTypes.string.isRequired,
-        floorHslaColourKey: PropTypes.string.isRequired,
+        ceilingHslaKey: PropTypes.string.isRequired,
+        floorHslaKey: PropTypes.string.isRequired,
         ceilingZIndex: PropTypes.number.isRequired,
         floorZIndex: PropTypes.number.isRequired,
         slantDirection: PropTypes.string.isRequired,
@@ -79,8 +79,8 @@ class Cube extends PureComponent {
             {
                 xIndex,
                 yIndex,
-                ceilingHslaColourKey,
-                floorHslaColourKey,
+                ceilingHslaKey,
+                floorHslaKey,
                 ceilingZIndex,
                 floorZIndex,
                 slantDirection
@@ -116,7 +116,7 @@ class Cube extends PureComponent {
                             level: CEILING,
                             yIndex,
                             xIndex,
-                            hslaColourKey: ceilingHslaColourKey,
+                            hslaKey: ceilingHslaKey,
                             zIndex: ceilingZIndex,
                             face
                         }}
@@ -130,7 +130,7 @@ class Cube extends PureComponent {
                             level: FLOOR,
                             yIndex,
                             xIndex,
-                            hslaColourKey: floorHslaColourKey,
+                            hslaKey: floorHslaKey,
                             zIndex: floorZIndex,
                             face
                         }}
