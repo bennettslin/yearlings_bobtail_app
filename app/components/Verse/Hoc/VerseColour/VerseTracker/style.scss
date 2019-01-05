@@ -17,7 +17,8 @@
     .TrW__canTrackVerse
     &.VerseTracker__selected {
         // TODO: Improve this styling.
-        background-color: $bgColour__audioPlaying;
+        // background-color: $bgColour__audioPlaying;
+        background: linear-gradient(to bottom, $bgColour__audioPlaying, $bgColour__audioPause);
     }
 }
 
