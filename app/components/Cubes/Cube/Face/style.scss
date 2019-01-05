@@ -3,8 +3,8 @@
     & {
         transition:
             stroke $animationDuration__scene,
-            d $animationDuration__scene,
-            fill $animationDuration__scene;
+            fill $animationDuration__scene,
+            d $animationDuration__scene;
     }
 
     &.shade {

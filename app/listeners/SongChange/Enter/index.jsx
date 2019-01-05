@@ -56,6 +56,7 @@ class SongChangeEnterListener extends PureComponent {
     }
 
     _beginEnterTransition() {
+        logTransition('Lyric carousel can enter.')
         this.props.updateLyricStore({ canLyricCarouselEnter: true })
     }
 
