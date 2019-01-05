@@ -10,9 +10,9 @@ export default [
         neededHours: 8
     },
     {
-        taskName: `Finalise thinking on shadows for dots, dot anchors and buttons, dot fields, anchor underline, popup buttons. Distance between buttons. Text shadow on anchors. Glow effects?, Playing verse gradient? Speech bubble thing again?`,
+        taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects? Playing verse gradient?`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 2
     },
     {
         taskName: `Add title to lyric column in desktop. Also choose font.`,

@@ -1,5 +1,4 @@
 .CarouselSelect {
-    position: absolute;
     right: 0;
     display: flex;
     padding: $js__margin__thin;
@@ -11,6 +10,7 @@
 
     .DW__desktop
     & {
+        position: fixed;
         transition:
             bottom $animationDuration__default,
             opacity $animationDuration__default;
@@ -21,11 +21,11 @@
             - $margin__scrollbar;
 
         margin-bottom: $margin__scrollbar;
-        margin-right: $margin__scrollbar;
     }
 
     .DW__mobileNotPhone
     & {
+        position: absolute;
         transition:
             top $animationDuration__default,
             opacity $animationDuration__default;
@@ -37,6 +37,7 @@
 
     .PlW__song
     .ShW__annotationShown.ShW__carouselExpanded
+    .TrW__canLyricCarouselEnter
     & {
         opacity: 1;
     }
@@ -44,6 +45,7 @@
     .DW__desktop
     .PlW__song
     .ShW__annotationShown.ShW__carouselExpanded
+    .TrW__canLyricCarouselEnter
     & {
         bottom: 0;
     }
@@ -51,6 +53,7 @@
     .DW__mobileNotPhone
     .PlW__song
     .ShW__annotationShown.ShW__carouselExpanded
+    .TrW__canLyricCarouselEnter
     & {
         top: 0;
     }

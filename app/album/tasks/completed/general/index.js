@@ -4355,5 +4355,10 @@ export default [
         taskName: `Figure out drop shadows on svgs. Pretty simple, actually.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Work on box shadows for main sections, and drop shadows for buttons and popup buttons. Deciding not to do speech bubble.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
