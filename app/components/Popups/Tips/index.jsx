@@ -44,6 +44,7 @@ class TipsPopup extends PureComponent {
 
         return (
             <Popup
+                doUnmount
                 isCardSize
                 bounceAnimate
                 hasNarrowPadding

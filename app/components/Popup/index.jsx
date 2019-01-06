@@ -18,7 +18,7 @@ class Popup extends PureComponent {
     static propTypes = {
         popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
-        doUnmount: PropTypes.bool, // Not presently used anywhere.
+        doUnmount: PropTypes.bool,
         isFullSize: PropTypes.bool,
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,

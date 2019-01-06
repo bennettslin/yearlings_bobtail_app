@@ -45,8 +45,8 @@ class Overview extends PureComponent {
 
             // TODO: Revisit whether to show toggle in logue when it is heightless lyric.
             /**
-             * Always show when is song in phone. Also show when is logue and is
-             * heightless lyric.
+             * Always show when it's song in phone. Also show when it's logue
+             * and is heightless lyric.
              */
             isToggleInOverview =
                 !isLyricLogue &&

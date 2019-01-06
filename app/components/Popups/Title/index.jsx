@@ -29,6 +29,7 @@ class TitlePopup extends PureComponent {
     render() {
         return (
             <Popup
+                doUnmount
                 bounceAnimate
                 displaysInOverlay
                 isCardSize
