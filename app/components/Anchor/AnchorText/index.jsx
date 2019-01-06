@@ -6,6 +6,7 @@ import Underline from '../Underline'
 
 const propTypes = {
     // From parent.
+    isDesktop: PropTypes.bool.isRequired,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
@@ -16,6 +17,7 @@ const propTypes = {
 }
 
 const AnchorText = memo(({
+    isDesktop,
     isAccessed,
     isSelected,
     isWikiTextAnchor,
@@ -41,12 +43,14 @@ const AnchorText = memo(({
                             )
                         }}
                     >
-                        {isWikiTextAnchor && (
+                        {isDesktop && (
                             <Underline
-                                isWikiAnchor
                                 {...{
                                     isAccessed,
-                                    isSelected,
+                                    isSelected
+                                }}
+                                {...isWikiTextAnchor && {
+                                    isWikiAnchor: true,
                                     isWikiFirstChild: index === 0,
                                     isWikiLastChild: index === words.length - 1
                                 }}

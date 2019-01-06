@@ -15,7 +15,6 @@ const propTypes = {
     },
 
     Underline = memo(({
-
         isAccessed,
         isSelected,
         isDotAnchor,
