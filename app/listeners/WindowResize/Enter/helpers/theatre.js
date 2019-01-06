@@ -110,12 +110,17 @@ export const getCeilingFloorHeight = ({
 export const getLyricHeightRatio = ({
     deviceIndex,
     windowHeight,
-    stageHeight
+    stageHeight,
+    isHeightlessLyric
 }) => {
 
     // Desktop is always 100%.
     if (getIsDesktop(deviceIndex)) {
         return 1
+
+    // Heightless lyric is 0%, obviously.
+    } else if (isHeightlessLyric) {
+        return 0
     }
 
     // Mobile not phone is always 32%.

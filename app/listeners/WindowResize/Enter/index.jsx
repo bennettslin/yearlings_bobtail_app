@@ -111,7 +111,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
             lyricHeightRatio = getLyricHeightRatio({
                 deviceIndex,
                 windowHeight,
-                stageHeight
+                stageHeight,
+                isHeightlessLyric
             })
 
         this.props.updateDeviceStore({
