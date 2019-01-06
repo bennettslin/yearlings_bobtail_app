@@ -4365,5 +4365,10 @@ export default [
         taskName: `Remove shade faces, logic determine single face colour based on indices.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Lots of tasks related to removing extraneous DOM nodes, especially in mobile.`,
+        workedHours: 10,
+        neededHours: 10
     }
 ]

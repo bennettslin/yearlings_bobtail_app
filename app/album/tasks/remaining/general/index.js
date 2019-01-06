@@ -72,11 +72,6 @@ export default [
      * Mobile bugs.
      */
     {
-        taskName: `Overview logue is hidden but touch findable in song.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Touch events need to be handled better.`,
         workedHours: 0,
         neededHours: 5
