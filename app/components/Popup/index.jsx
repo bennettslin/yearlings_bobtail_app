@@ -57,7 +57,10 @@ class Popup extends PureComponent {
                 {...{
                     in: isVisible,
                     timeout: 200,
-                    classNames: { enterDone: 'Popup__visible' },
+                    classNames: {
+                        exitActive: 'Popup__exiting',
+                        enterDone: 'Popup__visible'
+                    },
                     unmountOnExit: doUnmount,
                     mountOnEnter: doUnmount
                 }}

@@ -5,6 +5,7 @@
     flex-direction: column-reverse;
 
     z-index: $zIndex__popupContainer;
+
     transition: opacity $animationDuration__fast;
     opacity: 0;
 }
@@ -20,8 +21,12 @@
     }
 }
 
+.Popup__exiting,
 .Popup__visible {
     z-index: $zIndex__popupOverlayContent;
+}
+
+.Popup__visible {
     transition: opacity $animationDuration__slow;
     opacity: 1;
 }

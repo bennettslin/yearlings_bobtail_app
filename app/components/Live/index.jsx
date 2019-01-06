@@ -29,11 +29,11 @@ class Live extends PureComponent {
 
         return (
             <___>
-                <PopupOverlay />
                 <Theatre />
                 <Main />
                 <OverviewLogue />
                 <Lyric {...{ setLyricFocusElement }} />
+                <PopupOverlay />
                 <OverlayPopups
                     {...{
                         setScoreFocusElement,
