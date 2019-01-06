@@ -100,7 +100,13 @@ class Lyric extends PureComponent {
                                 'position__lyricColumn__desktop',
                                 'position__lyricColumn__mobile',
                                 'gradientMask__lyricColumn__desktop'
-                            ),
+                            )
+                        }}
+                        {...!isLyricExpanded && {
+                            /**
+                             * If lyric is expanded, height is straightforward,
+                             * so we'll handle it in CSS instead.
+                             */
                             style: {
                                 height: `${lyricHeightRatio * 100}%`
                             }
