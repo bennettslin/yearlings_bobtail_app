@@ -92,6 +92,7 @@ const
     )
 
 export const ACCESS_DEFAULTS = {
+    isAccessedIndexedAnchorShown: false,
     accessedKey: '',
     accessedAnnotationIndex: storedAnnotationIndex || 1,
     accessedWikiWormholeIndex: 1,

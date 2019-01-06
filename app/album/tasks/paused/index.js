@@ -244,11 +244,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Put carousel, unitDot, and textLyricAnchor conditional in transient store. Use isPopupAnnotationVisible flag.`,
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
         taskName: `Halo for cubes.`,
         workedHours: 0,
         neededHours: 3

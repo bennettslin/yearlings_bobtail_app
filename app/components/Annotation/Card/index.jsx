@@ -79,13 +79,7 @@ class AnnotationCard extends PureComponent {
                             <Texts
                                 {...{
                                     text,
-                                    annotationIndex,
-
-                                    /**
-                                     * Allow for clicking on anchor in unselected
-                                     * annotation in carousel.
-                                     */
-                                    inPopupAnnotation: !inCarousel
+                                    annotationIndex
                                 }}
                             />
                         ) : (

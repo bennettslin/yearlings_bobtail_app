@@ -12,29 +12,21 @@ import { getAnnotationsCount } from 'album/api/annotations'
 import { getArrayOfLength } from 'helpers/general'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselUpdate },
     lyricStore: {
+        canLyricCarouselUpdate,
         lyricSongIndex,
         lyricAnnotationIndex
     },
-    toggleStore: {
-        isAccessOn,
-        isCarouselShown,
-        isDotsSlideShown,
-        isLyricExpanded
-    },
-    accessStore: { accessedAnnotationIndex },
-    sessionStore: { interactivatedVerseIndex }
+    accessStore: {
+        isAccessedIndexedAnchorShown,
+        accessedAnnotationIndex
+    }
 }) => ({
     canLyricCarouselUpdate,
     lyricSongIndex,
     lyricAnnotationIndex,
-    isAccessOn,
-    isLyricExpanded,
-    accessedAnnotationIndex,
-    isCarouselShown,
-    isDotsSlideShown,
-    interactivatedVerseIndex
+    isAccessedIndexedAnchorShown,
+    accessedAnnotationIndex
 })
 
 class CarouselScroll extends PureComponent {
@@ -45,11 +37,7 @@ class CarouselScroll extends PureComponent {
         lyricSongIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
-        isAccessOn: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
+        isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -71,11 +59,7 @@ class CarouselScroll extends PureComponent {
             lyricSongIndex,
             lyricAnnotationIndex,
             accessedAnnotationIndex,
-            isAccessOn,
-            isCarouselShown,
-            isDotsSlideShown,
-            interactivatedVerseIndex,
-            isLyricExpanded,
+            isAccessedIndexedAnchorShown,
             setCarouselParent,
             setCarouselAnnotationElement
         } = this.props
@@ -106,19 +90,7 @@ class CarouselScroll extends PureComponent {
                         const annotationIndex = index + 1,
 
                             isAccessed =
-                                isAccessOn &&
-
-                                /**
-                                 * TODO: This conditional is repeated in
-                                 * CarouselScroll, UnitDot, and
-                                 * TextLyricAnchor. Consolidate?
-                                 */
-                                !isDotsSlideShown &&
-                                interactivatedVerseIndex < 0 &&
-                                (
-                                    isCarouselShown ||
-                                    isLyricExpanded
-                                ) &&
+                                isAccessedIndexedAnchorShown &&
                                 annotationIndex === accessedAnnotationIndex,
 
                             isSelected =

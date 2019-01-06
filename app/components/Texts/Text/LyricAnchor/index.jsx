@@ -20,17 +20,11 @@ const mapStateToProps = ({
         lyricSongIndex,
         lyricAnnotationIndex
     },
-    toggleStore: {
-        isAccessOn,
-        isCarouselShown,
-        isDotsSlideShown,
-        isLyricExpanded
-    },
     accessStore: {
+        isAccessedIndexedAnchorShown,
         accessedAnnotationIndex,
         accessedWikiWormholeIndex
-    },
-    sessionStore: { interactivatedVerseIndex }
+    }
 }) => ({
     isDesktop,
     lyricAnnotationIndex,
@@ -38,13 +32,9 @@ const mapStateToProps = ({
     // This is just to know when to update.
     lyricSongIndex,
 
-    isLyricExpanded,
+    isAccessedIndexedAnchorShown,
     accessedAnnotationIndex,
-    accessedWikiWormholeIndex,
-    isAccessOn,
-    isCarouselShown,
-    isDotsSlideShown,
-    interactivatedVerseIndex
+    accessedWikiWormholeIndex
 })
 
 class TextLyricAnchor extends PureComponent {
@@ -54,14 +44,10 @@ class TextLyricAnchor extends PureComponent {
         isDesktop: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
+        isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
 
-        isAccessOn: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
         updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -69,7 +55,6 @@ class TextLyricAnchor extends PureComponent {
         wikiAnnotationIndex: PropTypes.number,
         annotationIndex: PropTypes.number,
 
-        inPopupAnnotation: PropTypes.bool,
         text: PropTypes.oneOfType([
             PropTypes.string,
 
@@ -143,20 +128,14 @@ class TextLyricAnchor extends PureComponent {
                 isDesktop,
                 annotationIndex,
                 lyricAnnotationIndex,
+                isAccessedIndexedAnchorShown,
                 accessedAnnotationIndex,
                 accessedWikiWormholeIndex,
-
-                isAccessOn,
-                isCarouselShown,
-                isDotsSlideShown,
-                interactivatedVerseIndex,
-                isLyricExpanded,
 
                 wikiIndex,
                 wikiAnnotationIndex,
                 text,
                 dotKeys,
-                inPopupAnnotation,
 
                 ...other
             } = this.props,
@@ -165,32 +144,9 @@ class TextLyricAnchor extends PureComponent {
 
             isWikiTextAnchor = Boolean(wikiIndex)
 
-        let
-            isAccessed =
+        let isAccessed = false
 
-                isAccessOn &&
-
-                /**
-                 * TODO: This conditional is repeated in Carousel,
-                 * UnitDot, and TextLyricAnchor. TextLyricAnchor is a little
-                 * different.
-                 */
-                !isDotsSlideShown &&
-                interactivatedVerseIndex < 0 &&
-
-                // Let popup annotation show anchors when carousel is hidden.
-                (
-                    Boolean(isCarouselShown) ===
-                        !inPopupAnnotation ||
-
-                    isLyricExpanded
-                )
-
-        /**
-         * If any of the previous conditions ruled out isAccessed, it is ruled
-         * out for good.
-         */
-        if (isAccessed) {
+        if (isAccessedIndexedAnchorShown) {
             if (lyricAnnotationIndex) {
                 isAccessed =
                     // Check that we're in the annotation that's selected.

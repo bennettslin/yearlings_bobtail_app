@@ -106,7 +106,6 @@ const mapStateToProps = ({
     selectedSongIndex,
     selectedVerseIndex,
     selectedAnnotationIndex
-
 })
 
 export default connect(mapStateToProps)(AnnotationAccessListener)

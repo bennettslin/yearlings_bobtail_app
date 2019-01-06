@@ -1,5 +1,6 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 
+import AccessListener from '../../listeners/Access'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
 import AppLoadListener from '../../listeners/AppLoad'
@@ -42,6 +43,7 @@ class ListenerContainer extends PureComponent {
     render() {
         return (
             <___>
+                <AccessListener />
                 <AnnotationAccessListener />
                 <AnnotationListener />
                 <AppLoadListener />

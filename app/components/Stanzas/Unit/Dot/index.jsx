@@ -13,23 +13,15 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
-    accessStore: { accessedAnnotationIndex },
-    lyricStore: { lyricAnnotationIndex },
-    toggleStore: {
-        isAccessOn,
-        isCarouselShown,
-        isDotsSlideShown,
-        isLyricExpanded
+    accessStore: {
+        isAccessedIndexedAnchorShown,
+        accessedAnnotationIndex
     },
-    sessionStore: { interactivatedVerseIndex }
+    lyricStore: { lyricAnnotationIndex }
 }) => ({
+    isAccessedIndexedAnchorShown,
     accessedAnnotationIndex,
-    isAccessOn,
-    isLyricExpanded,
-    lyricAnnotationIndex,
-    isCarouselShown,
-    isDotsSlideShown,
-    interactivatedVerseIndex
+    lyricAnnotationIndex
 })
 
 /*************
@@ -40,13 +32,9 @@ class UnitDot extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
-        isAccessOn: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
         updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -81,36 +69,19 @@ class UnitDot extends PureComponent {
 
     render() {
 
-        // FIXME: Ideal to get unitDot object from indices.
+        // TODO: Ideal to get unitDot object from indices?
         const {
-                unitDot,
+                unitDot: {
+                    annotationIndex,
+                    dotKeys
+                },
                 lyricAnnotationIndex,
-                accessedAnnotationIndex,
-                isAccessOn,
-                isCarouselShown,
-                isDotsSlideShown,
-                interactivatedVerseIndex,
-                isLyricExpanded
+                isAccessedIndexedAnchorShown,
+                accessedAnnotationIndex
             } = this.props,
 
-            {
-                annotationIndex,
-                dotKeys
-            } = unitDot,
-
             isAccessed =
-                isAccessOn &&
-
-                /**
-                 * TODO: This conditional is repeated in Carousel,
-                 * UnitDot, and TextLyricAnchor. Consolidate?
-                 */
-                !isDotsSlideShown &&
-                interactivatedVerseIndex < 0 &&
-                (
-                    isCarouselShown ||
-                    isLyricExpanded
-                ) &&
+                isAccessedIndexedAnchorShown &&
                 annotationIndex === accessedAnnotationIndex,
 
             isSelected =
