@@ -1,3 +1,5 @@
+$width__underline__bleed: 0.125em;
+
 .Underline {
     position: absolute;
     left: 0;
@@ -16,30 +18,19 @@
     height: 25%;
 }
 
-.Underline__isWiki {
-    $width__underline__bleed: 0.125em;
-
-    .TextAnchor__singleEntity:first-child
-    & {
-        border-top-left-radius: $borderRadius__narrow;
-        border-bottom-left-radius: $borderRadius__narrow;
-    }
-
-    .TextAnchor__singleEntity:last-child
-    & {
-        border-top-right-radius: $borderRadius__narrow;
-        border-bottom-right-radius: $borderRadius__narrow;
-    }
-
-    .TextAnchor__singleEntity:not(:last-child)
-    & {
-        right: -$width__underline__bleed;
-    }
-
-    .TextAnchor__singleEntity:not(:first-child)
-    & {
-        left: -$width__underline__bleed;
-    }
+.Underline__isWiki__firstChild {
+    border-top-left-radius: $borderRadius__narrow;
+    border-bottom-left-radius: $borderRadius__narrow;
+}
+.Underline__isWiki__notFirstChild {
+    left: -$width__underline__bleed;
+}
+.Underline__isWiki__lastChild {
+    border-top-right-radius: $borderRadius__narrow;
+    border-bottom-right-radius: $borderRadius__narrow;
+}
+.Underline__isWiki__notLastChild {
+    right: -$width__underline__bleed;
 }
 
 .Underline__bar {

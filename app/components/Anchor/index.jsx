@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -10,10 +10,9 @@ import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
-import { getPropsAreShallowEqual } from 'helpers/general'
 import { populateRefs } from 'helpers/ref'
 
-class Anchor extends Component {
+class Anchor extends PureComponent {
 
     static propTypes = {
         // From parent.
@@ -24,13 +23,6 @@ class Anchor extends Component {
         stanzaDotKeys: PropTypes.object,
         text: PropTypes.any,
         handleAnchorClick: PropTypes.func.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
     }
 
     _handleClick = (e) => {

@@ -22,28 +22,33 @@ const AnchorText = memo(({
     text
 
 }) => {
-    const words = typeof text === 'string' ? [text] : text
+    const
+        words = typeof text === 'string' ? [text] : text,
+        isTextAnchorAccessed = isAccessed && !isSelected
 
     return (
-        <span className={cx(
-            'AnchorText',
-
-            isAccessed && !isSelected && 'TextAnchor__accessed'
-        )}>
-            {words.map((word, index) => (
+        words.map((word, index) => {
+            return (
                 <___
                     key={index}
                 >
                     {Boolean(index) && ' '}
                     <span
-                        className="TextAnchor__singleEntity"
+                        {...{
+                            className: cx(
+                                'AnchorText',
+                                isTextAnchorAccessed && 'AnchorText__accessed'
+                            )
+                        }}
                     >
                         {isWikiTextAnchor && (
                             <Underline
                                 isWikiAnchor
                                 {...{
                                     isAccessed,
-                                    isSelected
+                                    isSelected,
+                                    isWikiFirstChild: index === 0,
+                                    isWikiLastChild: index === words.length - 1
                                 }}
                             />
                         )}
@@ -84,8 +89,8 @@ const AnchorText = memo(({
                         </span>
                     </span>
                 </___>
-            ))}
-        </span>
+            )
+        })
     )
 })
 

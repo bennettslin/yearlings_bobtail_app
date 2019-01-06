@@ -33,7 +33,7 @@ const propTypes = {
         if (typeof textEntity === 'string') {
             return (
                 <TextSpan {...other}
-                    text={textEntity}
+                    {...{ text: textEntity }}
                 />
             )
 
