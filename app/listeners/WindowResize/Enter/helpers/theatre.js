@@ -2,7 +2,7 @@ import {
     LS_HEIGHT_MENU,
     LS_TOP_OFFSET_TWO_ROW_MENU,
     LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
-    HEIGHT_LYRIC_COLLAPSED,
+    LS_HEIGHT_LYRIC_COLLAPSED,
 
     TWO_ROW_MENU_BREAKPOINT_LAPTOP,
     TWO_ROW_MENU_BREAKPOINT_MINI
@@ -24,7 +24,7 @@ const _getEarColumnHeight = (
 ) => {
     return (
         isHeightlessLyric || getIsDesktop(deviceIndex)
-    ) ? 0 : windowHeight * HEIGHT_LYRIC_COLLAPSED
+    ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
 export const getIsTwoRowMenu = ({
@@ -125,7 +125,7 @@ export const getLyricHeightRatio = ({
 
     // Mobile not phone is always 32%.
     if (!getIsPhone(deviceIndex)) {
-        return HEIGHT_LYRIC_COLLAPSED
+        return LS_HEIGHT_LYRIC_COLLAPSED
     }
 
     const rawHeight = (

@@ -4,6 +4,8 @@
 @import "./DotsSlideToggle/style";
 @import "./OverviewToggle/style";
 
+$js__height__lyricCollapsed: 32%;
+
 .Main {
     flex-grow: 1;
 }
@@ -21,18 +23,61 @@
     position: absolute;
     left: 0;
     top: $js__height__menu;
-    height: calc(100% - #{$js__height__menu});
+    height: calc(
+        100%
+        - #{$js__height__menu}
+    );
+
+    .DW__mobileNotPhone
+    .RW__lyricHeighted
+    & {
+        // This ensures that main toggle buttons sit above collapsed lyric.
+        height: calc(
+            100%
+            - #{$js__height__menu}
+            - #{$js__height__lyricCollapsed}
+        );
+    }
 
     .RW__twoRowMenu
     & {
         top: $js__topOffset__twoRowMenu;
-        height: calc(100% - #{$js__topOffset__twoRowMenu});
+    }
+
+    .DW__mini
+    .RW__twoRowMenu
+    & {
+        // This ensures that main toggle buttons sit above collapsed lyric.
+        height: calc(
+            100%
+            - #{$js__topOffset__twoRowMenu}
+            - #{$js__height__lyricCollapsed}
+        );
+    }
+
+    .DW__laptop
+    .RW__twoRowMenu
+    &,
+    .DW__mobileNotPhone
+    .RW__twoRowMenu.RW__lyricHeightless
+    & {
+        height: calc(
+            100%
+            - #{$js__topOffset__twoRowMenu}
+        );
     }
 
     .DW__phone
     & {
+        /**
+         * Since main toggle buttons are at the top in phone, there's no need
+         to worry about subtracting the lyric height.
+         */
         top: $js__topOffset__twoRowMenu__phone;
-        height: calc(100% - #{$js__topOffset__twoRowMenu__phone});
+        height: calc(
+            100%
+            - #{$js__topOffset__twoRowMenu__phone}
+        );
     }
 }
 
