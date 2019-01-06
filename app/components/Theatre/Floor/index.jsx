@@ -48,17 +48,19 @@ class Floor extends PureComponent {
             firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
             seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
+                maxCount: 5,
+
                 minLength: floorHeight,
                 firstLength: firstRowSeatHeight,
 
                 // Gets wider faster with larger value.
-                multiplyFactor: 1.5,
+                multiplyFactor: 1.6,
 
                 // Beginning values are closer together with larger value.
-                bunchFactor: 1.5,
+                bunchFactor: 1.8,
 
                 // Values are closer together in general when closer to 1.
-                overlapRatio: 0.9925
+                overlapRatio: 0.99
             })
 
         return (
