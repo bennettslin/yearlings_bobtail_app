@@ -1,30 +1,33 @@
+$overviewToggleRatio: 1.5;
+
 $width__overviewToggle: 75px;
 $height__overviewToggle:
-    $width__overviewToggle * 1.5;
+    $width__overviewToggle
+    * $overviewToggleRatio;
 
 $width__overviewToggle__laptop:
-    $js__length__iconLarge
-    + $js__margin__thin * 2;
+    $js__length__iconLarge;
 $height__overviewToggle__laptop:
-    $width__overviewToggle__laptop * 1.5;
+    $width__overviewToggle__laptop
+    * $overviewToggleRatio;
 
 $width__overviewToggle__tablet:
-    $js__length__iconLarge__tablet
-    + $js__margin__thin * 2;
+    $js__length__iconLarge__tablet;
 $height__overviewToggle__tablet:
-    $width__overviewToggle__tablet * 1.5;
+    $width__overviewToggle__tablet
+    * $overviewToggleRatio;
 
 $width__overviewToggle__mini:
-    $js__length__iconLarge__mini
-    + $js__margin__thin * 2;
+    $js__length__iconLarge__mini;
 $height__overviewToggle__mini:
-    $width__overviewToggle__mini * 1.5;
+    $width__overviewToggle__mini
+    * $overviewToggleRatio;
 
 $width___overviewToggle__phone:
-    $js__length__icon
-    + $js__margin__thin * 2;
+    $js__length__icon;
 $height___overviewToggle__phone:
-    $width___overviewToggle__phone * 1.5;
+    $width___overviewToggle__phone
+    * $overviewToggleRatio;
 
 .LeftShelf {
     height: 0;
