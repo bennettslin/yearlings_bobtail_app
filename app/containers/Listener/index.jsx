@@ -1,17 +1,18 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 
-import AppLoadListener from '../../listeners/AppLoad'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
+import AppLoadListener from '../../listeners/AppLoad'
 import AudioListener from '../../listeners/Audio'
 import CarouselListener from '../../handlers/Carousel/Listener'
+import DotsSlideListener from '../../handlers/DotsSlide/Listener'
 import DoublespeakerListener from '../../listeners/Doublespeaker'
 import LogueListener from '../../listeners/Logue'
 import LyricListener from '../../handlers/Lyric/Listener'
+import LyricIndicesListener from '../../listeners/LyricIndices'
 import MainListener from '../../listeners/Main'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
-import LyricIndicesListener from '../../listeners/LyricIndices'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
 import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
 import ScoreListener from '../../handlers/Score/Listener'
@@ -43,16 +44,17 @@ class ListenerContainer extends PureComponent {
             <___>
                 <AnnotationAccessListener />
                 <AnnotationListener />
+                <AppLoadListener />
                 <AudioListener />
                 <CarouselListener />
+                <DotsSlideListener />
                 <DoublespeakerListener />
                 <LogueListener />
                 <LyricListener />
+                <LyricIndicesListener />
                 <MainListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
-                <AppLoadListener />
-                <LyricIndicesListener />
                 <SceneChangeExitListener />
                 <SceneChangeEnterListener />
                 <ScoreListener />

@@ -6,7 +6,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetInteractivatedDots } from 'flux/dotsSlide/action'
 import { updateOptionStore } from 'flux/option/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
@@ -33,7 +32,6 @@ class Close extends PureComponent {
         isSongShownTips: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
-        resetInteractivatedDots: PropTypes.func.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
@@ -280,7 +278,6 @@ class Close extends PureComponent {
 
         if (!exemptDots) {
             this.props.updateToggleStore({ isDotsSlideShown: false })
-            this.props.resetInteractivatedDots()
         }
 
         if (!exemptLyric) {
@@ -352,7 +349,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        resetInteractivatedDots,
         updateOptionStore,
         updateSessionStore,
         updateSelectedStore,

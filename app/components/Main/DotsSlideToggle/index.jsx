@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 // import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotsSlideDispatcher from '../../../dispatchers/DotsSlideDispatcher'
+import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import Button from '../../Button'
 
 import { populateRefs } from '../../../helpers/ref'
