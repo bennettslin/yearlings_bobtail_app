@@ -174,13 +174,13 @@ export const PLAYERS_DEFAULTS = {
 
 export const RESPONSIVE_DEFAULTS = {
     isHeightlessLyric: false,
-    isUnrenderableCarouselNav: false,
     isMobileWiki: false,
     isScoresTipsInMain: false,
     isTwoRowMenu: false,
     showShrunkNavIcon: false,
     showSingleNavBook: false,
     isLyricExpandable: false,
+    isUnrenderableCarouselNav: true,
     isScoreShowable: true
 }
 
