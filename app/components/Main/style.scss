@@ -20,7 +20,8 @@
 .position__mainColumn {
     position: absolute;
     top: $js__height__menu;
-    height: calc(100% - #{$js__height__menu});
+    height: 100%;
+    // height: calc(100% - #{$js__height__menu});
 
     left: 0;
 
@@ -29,37 +30,37 @@
         top: $js__topOffset__twoRowMenu;
     }
 
-    .DW__mobile
-    .RW__lyricHeighted
-    & {
-        height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__height__menu});
-    }
+    // .DW__mobile
+    // .RW__lyricHeighted
+    // & {
+    //     height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__height__menu});
+    // }
 
-    .DW__mini
-    .RW__twoRowMenu
-    & {
-        height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu});
-    }
+    // .DW__mini
+    // .RW__twoRowMenu
+    // & {
+    //     height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu});
+    // }
 
-    .DW__laptop
-    .RW__twoRowMenu
-    &,
-    .RW__lyricHeightless.RW__twoRowMenu
-    & {
-        height: calc(100% - #{$js__topOffset__twoRowMenu});
-    }
+    // .DW__laptop
+    // .RW__twoRowMenu
+    // &,
+    // .RW__lyricHeightless.RW__twoRowMenu
+    // & {
+    //     height: calc(100% - #{$js__topOffset__twoRowMenu});
+    // }
 
     .DW__phone
     & {
         top: $js__topOffset__twoRowMenu__phone;
-        height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu__phone});
+        // height: calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu__phone});
     }
 
-    .DW__phone
-    .RW__lyricHeightless
-    & {
-        height: calc(100% - #{$js__topOffset__twoRowMenu__phone});
-    }
+    // .DW__phone
+    // .RW__lyricHeightless
+    // & {
+    //     height: calc(100% - #{$js__topOffset__twoRowMenu__phone});
+    // }
 }
 
 .width__mainColumn {

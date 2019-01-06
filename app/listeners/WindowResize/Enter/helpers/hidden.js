@@ -38,7 +38,6 @@ export const getIsHeightlessLyric = ({
     windowWidth
 }) => {
 
-    // It is only ever heightless in mobile.
     return getIsLyricExpandable(deviceIndex) &&
 
         // It is never heightless when above the max of 720...

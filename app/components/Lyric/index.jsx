@@ -19,9 +19,11 @@ import VerseBar from './VerseBar'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
+    deviceStore: { lyricHeightPercentage },
     lyricStore: { canLyricCarouselEnter },
     toggleStore: { isLyricExpanded }
 }) => ({
+    lyricHeightPercentage,
     canLyricCarouselEnter,
     isLyricExpanded
 })
@@ -36,6 +38,7 @@ class Lyric extends PureComponent {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        lyricHeightPercentage: PropTypes.number.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -74,6 +77,7 @@ class Lyric extends PureComponent {
         const {
             canLyricCarouselEnter,
             isLyricExpanded,
+            lyricHeightPercentage,
             setLyricFocusElement
         } = this.props
 
@@ -96,7 +100,10 @@ class Lyric extends PureComponent {
                                 'position__lyricColumn__desktop',
                                 'position__lyricColumn__mobile',
                                 'gradientMask__lyricColumn__desktop'
-                            )
+                            ),
+                            style: {
+                                height: `${lyricHeightPercentage}%`
+                            }
                         }}
                     >
                         <VerseBarHandler

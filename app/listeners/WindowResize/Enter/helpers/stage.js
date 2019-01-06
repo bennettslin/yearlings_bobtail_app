@@ -127,8 +127,16 @@ export const getStageCoordinates = ({
         left = leftShelfOverflow + (centreFieldWidth - width) * 0.05
 
     } else {
-        // If stage height is adjustable, put closer to bottom in mobile.
-        top = navHeight + (centreFieldHeight - height) * 0.9
+        /**
+         * If stage height is adjustable, put closer to bottom in mobile, but
+         * not phone.
+         */
+        const mobileNotPhoneOffset =
+            isPhone ?
+                0 :
+                (centreFieldHeight - height) * 0.9
+
+        top = navHeight + mobileNotPhoneOffset
 
         // Keep centred in mobile, even with dots overview.
         left = (leftShelfOverflow + centreFieldWidth - width) * 0.5

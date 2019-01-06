@@ -125,7 +125,8 @@ export const DEVICE_DEFAULTS = {
     stageWidth: 100,
     stageHeight: 100,
     ceilingHeight: 0,
-    floorHeight: 0
+    floorHeight: 0,
+    lyricHeightPercentage: 0
 }
 
 /**

@@ -90,13 +90,18 @@
 // Used by Lyric only.
 .position__lyricColumn__mobile {
 
-    .DW__mobile
-    & {
+    width: 100%;
+    bottom: 0;
 
-        height: $js__height__lyricCollapsed;
-        width: 100%;
-        bottom: 0;
-    }
+    // .DW__mobileNotPhone
+    // & {
+    //     height: $js__height__lyricCollapsed;
+    // }
+
+    // .DW__phone
+    // & {
+    //     height: 50%;
+    // }
 }
 
 .gradientMask__lyricColumn__desktop {

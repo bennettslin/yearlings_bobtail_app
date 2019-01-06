@@ -33,7 +33,8 @@ export const getIsTwoRowMenu = ({
 
     const isDesktop = getIsDesktop(deviceIndex),
         twoRowMenuBreakpoint = isDesktop ?
-            TWO_ROW_MENU_BREAKPOINT_LAPTOP : TWO_ROW_MENU_BREAKPOINT_MINI
+            TWO_ROW_MENU_BREAKPOINT_LAPTOP :
+            TWO_ROW_MENU_BREAKPOINT_MINI
 
     return windowWidth < twoRowMenuBreakpoint
 }
@@ -101,4 +102,29 @@ export const getCeilingFloorHeight = ({
         ceilingHeight: Number(ceilingHeight.toFixed(2)),
         floorHeight: Number(floorHeight.toFixed(2))
     }
+}
+
+export const getLyricHeightPercentage = ({
+    deviceIndex,
+    windowHeight,
+    stageHeight
+}) => {
+
+    // Desktop is always 100%.
+    if (getIsDesktop(deviceIndex)) {
+        return 100
+    }
+
+    // Mobile not phone is always 32%.
+    if (!getIsPhone(deviceIndex)) {
+        return 32
+    }
+
+    const rawHeight = (
+        windowHeight
+        - LS_TOP_OFFSET_TWO_ROW_MENU_PHONE
+        - stageHeight
+    ) / windowHeight * 100
+
+    return Number(rawHeight.toFixed(2))
 }

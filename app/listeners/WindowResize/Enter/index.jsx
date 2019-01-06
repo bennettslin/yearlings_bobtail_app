@@ -21,7 +21,8 @@ import {
 import { getIsScoresTipsInMain } from './helpers/scoresTips'
 import {
     getIsTwoRowMenu,
-    getCeilingFloorHeight
+    getCeilingFloorHeight,
+    getLyricHeightPercentage
 } from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
@@ -106,6 +107,11 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 stageHeight,
                 stageTop,
                 isHeightlessLyric
+            }),
+            lyricHeightPercentage = getLyricHeightPercentage({
+                deviceIndex,
+                windowHeight,
+                stageHeight
             })
 
         this.props.updateDeviceStore({
@@ -118,7 +124,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
             stageWidth,
             stageHeight,
             ceilingHeight,
-            floorHeight
+            floorHeight,
+            lyricHeightPercentage
         })
     }
 
