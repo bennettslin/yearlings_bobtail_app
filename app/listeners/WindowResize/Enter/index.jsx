@@ -22,7 +22,7 @@ import { getIsScoresTipsInMain } from './helpers/scoresTips'
 import {
     getIsTwoRowMenu,
     getCeilingFloorHeight,
-    getLyricHeightPercentage
+    getLyricHeightRatio
 } from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
@@ -108,7 +108,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 stageTop,
                 isHeightlessLyric
             }),
-            lyricHeightPercentage = getLyricHeightPercentage({
+            lyricHeightRatio = getLyricHeightRatio({
                 deviceIndex,
                 windowHeight,
                 stageHeight
@@ -125,7 +125,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
             stageHeight,
             ceilingHeight,
             floorHeight,
-            lyricHeightPercentage
+            lyricHeightRatio
         })
     }
 

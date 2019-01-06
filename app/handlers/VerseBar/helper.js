@@ -4,8 +4,6 @@ import {
 } from 'helpers/responsive'
 
 import {
-    LS_HEIGHT_LYRIC_COLLAPSED,
-
     LS_HEIGHT_MENU,
     LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE,
     LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
@@ -15,6 +13,7 @@ const _getLyricSectionRect = ({
     deviceIndex,
     windowHeight,
     isLyricExpanded,
+    lyricHeightRatio,
     isTwoRowMenu
 }) => {
     const bottom = windowHeight
@@ -32,7 +31,7 @@ const _getLyricSectionRect = ({
          * If lyric is collapsed, top is always a fixed percentage of the
          * window height.
          */
-        top = windowHeight * (1 - LS_HEIGHT_LYRIC_COLLAPSED)
+        top = windowHeight * (1 - lyricHeightRatio)
 
     } else if (isTwoRowMenu) {
 
@@ -58,6 +57,7 @@ export const getVerseBarStatus = ({
     deviceIndex,
     windowHeight,
     isLyricExpanded,
+    lyricHeightRatio,
     isHeightlessLyric,
     isTwoRowMenu,
     verseElement
@@ -79,6 +79,7 @@ export const getVerseBarStatus = ({
             deviceIndex,
             windowHeight,
             isLyricExpanded,
+            lyricHeightRatio,
             isTwoRowMenu
         }),
 

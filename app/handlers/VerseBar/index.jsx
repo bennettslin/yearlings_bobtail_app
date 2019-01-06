@@ -18,6 +18,7 @@ class VerseBar extends PureComponent {
         deviceIndex: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        lyricHeightRatio: PropTypes.number.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
@@ -100,17 +101,26 @@ class VerseBar extends PureComponent {
         verseIndex = this.props.selectedVerseIndex
     } = {}) => {
 
-        const verseElement = this.props.getVerseElement(verseIndex)
+        const {
+                deviceIndex,
+                windowHeight,
+                isLyricExpanded,
+                lyricHeightRatio,
+                isHeightlessLyric,
+                isTwoRowMenu
+            } = this.props,
+            verseElement = this.props.getVerseElement(verseIndex)
 
         // Check for verse element in case we are loading from a logue.
         if (verseElement) {
 
             const verseBarStatusObject = getVerseBarStatus({
-                    deviceIndex: this.props.deviceIndex,
-                    windowHeight: this.props.windowHeight,
-                    isLyricExpanded: this.props.isLyricExpanded,
-                    isHeightlessLyric: this.props.isHeightlessLyric,
-                    isTwoRowMenu: this.props.isTwoRowMenu,
+                    deviceIndex,
+                    windowHeight,
+                    isLyricExpanded,
+                    lyricHeightRatio,
+                    isHeightlessLyric,
+                    isTwoRowMenu,
                     verseElement
                 }),
                 {
@@ -151,6 +161,7 @@ const mapStateToProps = ({
         isTwoRowMenu
     },
     toggleStore: { isLyricExpanded },
+    deviceStore: { lyricHeightRatio },
     verseBarsStore: {
         isVerseBarAbove,
         isVerseBarBelow
@@ -165,6 +176,7 @@ const mapStateToProps = ({
     deviceIndex,
     windowHeight,
     isLyricExpanded,
+    lyricHeightRatio,
     isVerseBarAbove,
     isVerseBarBelow,
     isHeightlessLyric,
