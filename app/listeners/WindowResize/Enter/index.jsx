@@ -141,7 +141,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
             isUnrenderableCarouselNav: getIsUnrenderableCarouselNav({
                 deviceIndex,
                 windowHeight,
-                windowWidth
+                windowWidth,
+                isHeightlessLyric
             }),
             isMobileWiki: getIsMobileWiki({
                 deviceIndex,

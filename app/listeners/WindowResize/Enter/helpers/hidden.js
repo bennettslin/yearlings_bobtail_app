@@ -15,20 +15,25 @@ import {
 export const getIsUnrenderableCarouselNav = ({
     deviceIndex,
     windowHeight,
-    windowWidth
+    windowWidth,
+    isHeightlessLyric
 }) => {
-    // Don't render carousel nav if it's a phone...
-    const isUnrenderableCarouselNav = getIsPhone(deviceIndex) ||
+    const isUnrenderableCarouselNav =
+        // Don't render carousel nav if it's heightless lyric...
+        isHeightlessLyric ||
 
-    // If the height is below a minimum...
-    windowHeight < UNRENDERABLE_NAV_MIN ||
+        // Or if it's a phone...
+        getIsPhone(deviceIndex) ||
 
-    // Or if it's a heightless mini.
-    (getIsMini(deviceIndex) && getIsHeightlessLyric({
-        deviceIndex,
-        windowHeight,
-        windowWidth
-    }))
+        // If the height is below a minimum...
+        windowHeight < UNRENDERABLE_NAV_MIN ||
+
+        // Or if it's a heightless mini.
+        (getIsMini(deviceIndex) && getIsHeightlessLyric({
+            deviceIndex,
+            windowHeight,
+            windowWidth
+        }))
 
     return isUnrenderableCarouselNav
 }
