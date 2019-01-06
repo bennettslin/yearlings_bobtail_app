@@ -8,6 +8,7 @@ import { getIsLyricExpandable } from './responsive'
 import {
     UNRENDERABLE_NAV_MIN,
     HEIGHTLESS_LYRIC_MIN,
+    HEIGHTLESS_LYRIC_PHONE_MIN,
     HEIGHTLESS_LYRIC_MAX
 } from '../../../../constants/responsive'
 
@@ -38,14 +39,25 @@ export const getIsHeightlessLyric = ({
     windowWidth
 }) => {
 
-    return getIsLyricExpandable(deviceIndex) &&
+    // Can't be heightless if it isn't expandable.
+    if (!getIsLyricExpandable(deviceIndex)) {
+        return false
+    }
 
-        // It is never heightless when above the max of 720...
-        windowHeight < HEIGHTLESS_LYRIC_MAX &&
+    // It is never heightless when above the maximum.
+    if (windowHeight > HEIGHTLESS_LYRIC_MAX) {
+        return false
+    }
 
-        // It is always heightless when below the min of 540...
-        (windowHeight < HEIGHTLESS_LYRIC_MIN ||
+    const minimumHeight = getIsPhone(deviceIndex) ?
+        HEIGHTLESS_LYRIC_PHONE_MIN :
+        HEIGHTLESS_LYRIC_MIN
 
-        // Otherwise, it is heightless when width exceeds height.
-        windowWidth > windowHeight)
+    // It is always heightless when below the minimum.
+    if (windowHeight < minimumHeight) {
+        return true
+    }
+
+    // Otherwise, it is heightless when width exceeds height.
+    return windowWidth > windowHeight
 }
