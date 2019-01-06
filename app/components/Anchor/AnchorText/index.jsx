@@ -79,18 +79,20 @@ const AnchorText = memo(({
                         </span>
 
                         {/* Shown instead when access is on. */}
-                        <span className={cx(
-                            'TextAnchor__linkText',
-                            'TextAnchor__linkText__accessed',
+                        {isDesktop && (
+                            <span className={cx(
+                                'TextAnchor__linkText',
+                                'TextAnchor__linkText__accessed',
 
-                            isSelected &&
-                            'TextAnchor__linkText__selected',
+                                isSelected &&
+                                'TextAnchor__linkText__selected',
 
-                            'textShadow__text',
-                            'abF'
-                        )}>
-                            {word}
-                        </span>
+                                'textShadow__text',
+                                'abF'
+                            )}>
+                                {word}
+                            </span>
+                        )}
                     </span>
                 </___>
             )

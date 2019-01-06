@@ -16,8 +16,10 @@ import { populateRefs } from 'helpers/ref'
 import { VERSE_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
+    deviceStore: { isDesktop },
     lyricStore: { lyricSongIndex }
 }) => ({
+    isDesktop,
     lyricSongIndex
 })
 
@@ -33,6 +35,7 @@ class Verse extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isDesktop: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -45,8 +48,16 @@ class Verse extends PureComponent {
     }
 
     _handleInteractivatableClick = (e) => {
+        /**
+         * TODO: Now that we're preventing verse from being interactive in
+         * mobile, this is kind of messy. Ideally, we should have a single
+         * parent element handle all verse interaction and own all needed
+         * children, including nav button and dispatcher.
+         */
+        const { isDesktop } = this.props
+
         // Allow clicks on interactable verses.
-        if (this.getIsInteractable()) {
+        if (isDesktop && this.getIsInteractable()) {
             this.dispatchStopPropagation(e)
             this.dispatchInteractivatedVerseIndex(this.props.verseIndex)
         }

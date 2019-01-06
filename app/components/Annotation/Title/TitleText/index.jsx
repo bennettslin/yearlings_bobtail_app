@@ -49,7 +49,7 @@ class AnnotationTitleText extends PureComponent {
             </div>
         ) : (
             <Anchor
-                isRichInMobile
+                isAnnotationTitle
                 {...{
                     isAccessed,
                     isSelected,

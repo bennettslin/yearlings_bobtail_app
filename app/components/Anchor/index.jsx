@@ -25,7 +25,7 @@ class Anchor extends PureComponent {
         isDesktop: PropTypes.bool.isRequired,
 
         // From parent.
-        isRichInMobile: PropTypes.bool,
+        isAnnotationTitle: PropTypes.bool,
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool,
         isWikiTextAnchor: PropTypes.bool,
@@ -54,7 +54,8 @@ class Anchor extends PureComponent {
 
         const {
                 isDesktop,
-                isAccessed,
+                isAnnotationTitle,
+                isAccessed: isAccessedBeforeDesktop,
                 isSelected,
                 sequenceDotKeys,
                 stanzaDotKeys,
@@ -62,7 +63,18 @@ class Anchor extends PureComponent {
                 text
             } = this.props,
 
-            isDotAnchor = Boolean(stanzaDotKeys)
+            isDotAnchor = Boolean(stanzaDotKeys),
+
+            // If in mobile, only show dot sequence if annotation title.
+            showDotSequence = Boolean(sequenceDotKeys) && (
+                isDesktop || isAnnotationTitle
+            ),
+
+            /**
+             * Don't show access if in mobile, even though access behaviour is
+             * still technically possible.
+             */
+            isAccessed = isAccessedBeforeDesktop && isDesktop
 
         return (
             <a
@@ -98,7 +110,7 @@ class Anchor extends PureComponent {
                     onTouchStart: this._handleClick
                 }}
             >
-                {sequenceDotKeys && (
+                {showDotSequence && (
                     <DotSequence
                         inTextAnchor
                         {...{

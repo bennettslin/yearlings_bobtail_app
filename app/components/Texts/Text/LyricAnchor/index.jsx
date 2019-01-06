@@ -15,6 +15,7 @@ import { populateRefs } from 'helpers/ref'
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
+    deviceStore: { isDesktop },
     lyricStore: {
         lyricSongIndex,
         lyricAnnotationIndex
@@ -31,6 +32,7 @@ const mapStateToProps = ({
     },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
+    isDesktop,
     lyricAnnotationIndex,
 
     // This is just to know when to update.
@@ -49,6 +51,7 @@ class TextLyricAnchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isDesktop: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
@@ -137,6 +140,7 @@ class TextLyricAnchor extends PureComponent {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
+                isDesktop,
                 annotationIndex,
                 lyricAnnotationIndex,
                 accessedAnnotationIndex,
@@ -200,7 +204,8 @@ class TextLyricAnchor extends PureComponent {
             }
         }
 
-        const words = isWikiTextAnchor ? text.split(' ') : [text]
+        // Don't split in mobile.
+        const words = isWikiTextAnchor && isDesktop ? text.split(' ') : [text]
 
         return (
             <___>
