@@ -72,28 +72,32 @@ class AnnotationCard extends PureComponent {
                         />
                     )}
 
-                    {isTextCard ? (
-                        <Texts
-                            {...{
-                                text,
-                                annotationIndex,
+                    <div
+                        {...{ className: 'AnnotationCard__text' }}
+                    >
+                        {isTextCard ? (
+                            <Texts
+                                {...{
+                                    text,
+                                    annotationIndex,
 
-                                /**
-                                 * Allow for clicking on anchor in unselected
-                                 * annotation in carousel.
-                                 */
-                                inPopupAnnotation: !inCarousel
-                            }}
-                        />
-                    ) : (
-                        <AnnotationWormholes
-                            {...{
-                                isSelected,
-                                annotationIndex,
-                                cardIndex
-                            }}
-                        />
-                    )}
+                                    /**
+                                     * Allow for clicking on anchor in unselected
+                                     * annotation in carousel.
+                                     */
+                                    inPopupAnnotation: !inCarousel
+                                }}
+                            />
+                        ) : (
+                            <AnnotationWormholes
+                                {...{
+                                    isSelected,
+                                    annotationIndex,
+                                    cardIndex
+                                }}
+                            />
+                        )}
+                    </div>
                 </div>
             )
 

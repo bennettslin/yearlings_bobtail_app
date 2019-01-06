@@ -1,4 +1,6 @@
-.TextSpan {
+// These are the parent elements of the TextSpan component.
+.AnnotationCard__text,
+.VerseLine {
     // Position above absolute elements.
     position: relative;
     z-index: $zIndex__verseChild__topMost;

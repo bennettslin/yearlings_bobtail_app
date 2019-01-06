@@ -28,11 +28,7 @@ class AnnotationCard extends PureComponent {
                         dotKeys[dotKey]
                     )).join(', ')}
                 </div>
-                <Texts
-                    {...{
-                        text: description
-                    }}
-                />
+                <Texts {...{ text: description }} />
             </div>
         )
     }

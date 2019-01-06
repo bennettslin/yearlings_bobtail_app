@@ -49,11 +49,7 @@ class Tips extends PureComponent {
                     )}
 
                     {tipText && (
-                        <Texts
-                            {...{
-                                text: tipText
-                            }}
-                        />
+                        <Texts {...{ text: tipText }} />
                     )}
                 </div>
 

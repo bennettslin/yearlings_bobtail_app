@@ -83,7 +83,7 @@ const propTypes = {
                      * anchors. Make sure that we know this is the wormhole
                      * anchor.
                      */
-                        isWormholeAnchorInWormhole =
+                        isAnchorInWormholeVerse =
                             inWormhole &&
                             annotationIndex === wormholeAnnotationIndex
 
@@ -93,7 +93,7 @@ const propTypes = {
                                 text,
                                 isVerseBeginningSpan,
                                 isVerseEndingSpan,
-                                isWormholeAnchorInWormhole
+                                isAnchorInWormholeVerse
                             }}
                         />
                     )

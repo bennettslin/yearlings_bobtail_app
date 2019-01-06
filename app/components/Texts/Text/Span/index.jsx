@@ -22,7 +22,7 @@ const defaultProps = {
         isVerseBeginningSpan: PropTypes.bool,
         isVerseEndingSpan: PropTypes.bool,
         inWormhole: PropTypes.bool,
-        isWormholeAnchorInWormhole: PropTypes.bool,
+        isAnchorInWormholeVerse: PropTypes.bool,
         isTextAnchor: PropTypes.bool
     },
 
@@ -35,13 +35,17 @@ const defaultProps = {
         isVerseBeginningSpan,
         isVerseEndingSpan,
         inWormhole,
-        isWormholeAnchorInWormhole,
+        isAnchorInWormholeVerse,
         isTextAnchor
 
     }) => {
 
         let formattedText = text,
+            Tag
+
+        if (isAnchorInWormholeVerse) {
             Tag = 'span'
+        }
 
         if (isEmphasis) {
             Tag = 'em'
@@ -73,14 +77,13 @@ const defaultProps = {
             formattedText = ` ${formattedText}`
         }
 
-        return (
+        return Tag ? (
             <Tag className={cx(
-                'TextSpan',
-                isWormholeAnchorInWormhole && 'textSpan__wormholeInWormhole'
+                isAnchorInWormholeVerse && 'text__anchorInWormhole'
             )}>
                 {formattedText}
             </Tag>
-        )
+        ) : formattedText
     })
 
 TextSpan.defaultProps = defaultProps
