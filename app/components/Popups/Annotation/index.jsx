@@ -54,17 +54,20 @@ class AnnotationPopup extends PureComponent {
             inMain
         } = this.props
 
-        /**
-         * Annotation popup is in main, unless lyric column is expanded or
-         * heightless.
-         */
-        return Boolean(inMain) !== isOverlayingAnnotation && (
+        return (
             <Popup
+                doUnmount
                 showArrows
                 bounceAnimate
                 {...{
                     popupName: 'Annotation',
-                    isVisible: isPopupAnnotationVisible,
+                    isVisible:
+                        /**
+                         * Annotation popup is in main, unless lyric column is
+                         * expanded or heightless.
+                         */
+                        Boolean(inMain) !== isOverlayingAnnotation &&
+                        isPopupAnnotationVisible,
                     noAbsoluteFull: inMain,
                     displaysInOverlay: isOverlayingAnnotation,
                     handlePreviousClick: this._handleAnnotationPrevious,
