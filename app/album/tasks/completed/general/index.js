@@ -4380,5 +4380,10 @@ export default [
         taskName: `Make dots slide mount upon transition.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Remove extraneous accessed elements in anchor text and underline.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
