@@ -35,6 +35,8 @@ class ScrollLyricListener extends PureComponent {
         isAutoScroll: PropTypes.bool.isRequired,
         isPlaying: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
+
         updateSceneStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
@@ -66,16 +68,28 @@ class ScrollLyricListener extends PureComponent {
         const
             {
                 isPlaying,
+                isHeightlessLyric,
+                isLyricExpanded,
                 queuedScrollLyricLog,
                 queuedScrollLyricAlways,
                 queuedScrollLyricFromAutoScroll,
+                queuedSceneChangeExitScrollCallback,
                 isAutoScroll
             } = this.props,
             { queuedScrollLyricLog: prevLyricLog } = prevProps
 
         if (queuedScrollLyricLog && !prevLyricLog) {
 
-            if (
+            if (isHeightlessLyric && !isLyricExpanded) {
+                /**
+                 * Don't scroll if not expanded in heightless lyric. Just call
+                 * the scene change callback right away.
+                 */
+                if (queuedSceneChangeExitScrollCallback) {
+                    this._completeSceneChangeExitScroll()
+                }
+
+            } else if (
                 // If paused, always scroll.
                 !isPlaying ||
 
@@ -93,9 +107,7 @@ class ScrollLyricListener extends PureComponent {
                         queuedScrollLyricByVerse,
                         queuedScrollLyricIndex,
                         queuedScrollLyricFromRender,
-                        queuedSceneChangeExitScrollCallback,
                         deviceIndex,
-                        isLyricExpanded,
                         selectedVerseIndex,
                         isSelectedLogue
                     } = this.props,
@@ -218,9 +230,8 @@ const mapStateToProps = ({
         isAutoScroll,
         isLyricExpanded
     },
-    deviceStore: {
-        deviceIndex
-    }
+    deviceStore: { deviceIndex },
+    responsiveStore: { isHeightlessLyric }
 }) => ({
     queuedScrollLyricLog,
     queuedScrollLyricByVerse,
@@ -234,7 +245,8 @@ const mapStateToProps = ({
     isPlaying,
     isAutoScroll,
     isLyricExpanded,
-    deviceIndex
+    deviceIndex,
+    isHeightlessLyric
 })
 
 export default connect(

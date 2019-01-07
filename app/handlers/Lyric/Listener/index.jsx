@@ -3,19 +3,24 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class LyricListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isLyricExpanded: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
+        updateScrollLyricStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
         this._collapseLyricIfNeeded(prevProps)
+        this._checkLyricExpand(prevProps)
     }
 
     _collapseLyricIfNeeded(prevProps) {
@@ -37,20 +42,57 @@ class LyricListener extends PureComponent {
         }
     }
 
+    _checkLyricExpand(prevProps) {
+        /**
+         * If collapsing or expanding lyric, or going from heightless to
+         * heighted, scroll lyric.
+         */
+
+        const
+            {
+                isLyricExpanded,
+                isHeightlessLyric
+            } = this.props,
+            {
+                isLyricExpanded: wasLyricExpanded,
+                isHeightlessLyric: wasLyricHeightless
+            } = prevProps
+
+        if (
+            isLyricExpanded !== wasLyricExpanded ||
+            !isHeightlessLyric && wasLyricHeightless
+        ) {
+            this.props.updateScrollLyricStore({
+                queuedScrollLyricLog: 'Toggle lyric expand.',
+                queuedScrollLyricByVerse: true,
+                queuedScrollLyricAlways: true
+            })
+        }
+    }
+
     render() {
         return null
     }
 }
 
 const mapStateToProps = ({
-    responsiveStore: { isLyricExpandable },
+    toggleStore: { isLyricExpanded },
+    responsiveStore: {
+        isLyricExpandable,
+        isHeightlessLyric
+    },
     selectedStore: { isSelectedLogue }
 }) => ({
+    isLyricExpanded,
     isLyricExpandable,
+    isHeightlessLyric,
     isSelectedLogue
 })
 
 export default connect(
     mapStateToProps,
-    { updateToggleStore }
+    {
+        updateScrollLyricStore,
+        updateToggleStore
+    }
 )(LyricListener)
