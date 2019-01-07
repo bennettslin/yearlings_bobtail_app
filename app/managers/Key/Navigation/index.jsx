@@ -24,7 +24,7 @@ class NavigationManager extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
+        isNavShown: PropTypes.bool.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -47,7 +47,7 @@ class NavigationManager extends PureComponent {
                 isSelectedLogue,
                 selectedAnnotationIndex,
                 isDotsSlideShown,
-                isCarouselShown
+                isNavShown
             } = this.props,
 
             isVerseInteractivated = interactivatedVerseIndex > -1
@@ -80,7 +80,7 @@ class NavigationManager extends PureComponent {
 
             // We're in nav section.
             } else if (
-                !isCarouselShown &&
+                isNavShown &&
                 !isLyricExpanded &&
                 !isVerseInteractivated
             ) {
@@ -124,7 +124,7 @@ class NavigationManager extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: {
-        isCarouselShown,
+        isNavShown,
         isDotsSlideShown,
         isLyricExpanded,
         isScoreShown
@@ -147,6 +147,6 @@ const mapStateToProps = ({
     isSelectedLogue,
     selectedAnnotationIndex,
     isDotsSlideShown,
-    isCarouselShown
+    isNavShown
 })
 export default connect(mapStateToProps)(NavigationManager)

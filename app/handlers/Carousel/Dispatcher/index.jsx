@@ -11,6 +11,7 @@ class CarouselDispatcher extends PureComponent {
         isPhone: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         isUnrenderableCarouselNav: PropTypes.bool.isRequired,
+        isDotsSlideShown: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -23,26 +24,44 @@ class CarouselDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({
-            dispatchCarousel: this.dispatchCarousel
-        })
+        this.props.getRefs({ dispatchCarouselNav: this.dispatchCarouselNav })
     }
 
-    dispatchCarousel = (
+    dispatchCarouselNav = (
         // If no argument passed, then just toggle by default.
         isCarouselShown = !this.props.isCarouselShown
     ) => {
+        const {
+            isPhone,
+            dotsBitNumber,
+            isSelectedLogue,
+            isUnrenderableCarouselNav,
+            isDotsSlideShown,
+            selectedAnnotationIndex
+        } = this.props
+
         // We shouldn't be able to toggle the carousel under these conditions.
         if (
-            this.props.isPhone ||
-            !this.props.dotsBitNumber ||
-            this.props.isSelectedLogue ||
-            this.props.isUnrenderableCarouselNav
+            isPhone ||
+            !dotsBitNumber ||
+            isSelectedLogue ||
+            isUnrenderableCarouselNav
         ) {
             return false
         }
 
-        this.props.updateToggleStore({ isCarouselShown })
+        this.props.updateToggleStore({
+            isCarouselShown,
+            isNavShown:
+                !isCarouselShown &&
+
+                /**
+                 * If dots slide is expanded or annotation is selected, don't
+                 * show nav.
+                 */
+                !isDotsSlideShown &&
+                !selectedAnnotationIndex
+        })
 
         // If showing carousel, scroll to selected or accessed annotation.
         if (isCarouselShown) {
@@ -78,7 +97,10 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         isSelectedLogue
     },
-    toggleStore: { isCarouselShown }
+    toggleStore: {
+        isDotsSlideShown,
+        isCarouselShown
+    }
 }) => ({
     isPhone,
     dotsBitNumber,
@@ -86,6 +108,7 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     selectedAnnotationIndex,
     isSelectedLogue,
+    isDotsSlideShown,
     isCarouselShown
 })
 

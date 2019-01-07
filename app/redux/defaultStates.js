@@ -272,6 +272,7 @@ export const TOGGLE_DEFAULTS = {
     isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
     isAutoScroll: true,
     isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
+    isNavShown: false,
     isDotsSlideShown: false,
     isLyricExpanded: false,
     isScoreShown: false,

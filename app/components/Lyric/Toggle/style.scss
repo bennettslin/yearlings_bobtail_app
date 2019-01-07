@@ -79,11 +79,21 @@
      * TODO: Ideally, this would be a single selector for when the toggle is
      * shown.
      */
-    .RW__carouselNavUnshowable
+    .PlW__logue
+    &,
+    .ShW__overviewShown
     &,
     .ShW__dotsShown
     &,
-    .ShW__annotationShown.ShW__navExpanded
+    .ShW__overlayShown
+    &,
+    .ShW__tipsShown
+    &,
+    .ShW__annotationShown
+    &,
+    .ShW__lyricExpanded
+    &,
+    .TrW__cannotLyricCarouselEnter
     & {
         opacity: 0;
         transform: translateX(-50%) scale(0);

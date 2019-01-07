@@ -3,27 +3,18 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAccessStore } from 'flux/access/action'
-import { updateSessionStore } from 'flux/session/action'
 import { updateToggleStore } from 'flux/toggle/action'
-
-import { getBookForSongIndex } from 'album/api/songs'
 
 class CarouselListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         dotsBitNumber: PropTypes.number.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        updateAccessStore: PropTypes.func.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
         this._closeCarouselIfNeeded(prevProps)
-        this._handleNavExpandIfNeeded(prevProps)
     }
 
     _closeCarouselIfNeeded(prevProps) {
@@ -37,44 +28,18 @@ class CarouselListener extends PureComponent {
         }
     }
 
-    _handleNavExpandIfNeeded(prevProps) {
-        const
-            { isCarouselShown } = this.props,
-            { isCarouselShown: wasCarouselShown } = prevProps
-
-        // Prepare nav if collapsing carousel.
-        if (!isCarouselShown && wasCarouselShown) {
-            const
-                { selectedSongIndex } = this.props,
-                shownNavBookIndex = getBookForSongIndex(selectedSongIndex)
-
-            this.props.updateAccessStore({
-                accessedNavSongIndex: selectedSongIndex
-            })
-            this.props.updateSessionStore({ shownNavBookIndex })
-        }
-    }
-
     render() {
         return null
     }
 }
 
 const mapStateToProps = ({
-    dotsStore: { dotsBitNumber },
-    selectedStore: { selectedSongIndex },
-    toggleStore: { isCarouselShown }
+    dotsStore: { dotsBitNumber }
 }) => ({
-    dotsBitNumber,
-    selectedSongIndex,
-    isCarouselShown
+    dotsBitNumber
 })
 
 export default connect(
     mapStateToProps,
-    {
-        updateAccessStore,
-        updateSessionStore,
-        updateToggleStore
-    }
+    { updateToggleStore }
 )(CarouselListener)

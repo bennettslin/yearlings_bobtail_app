@@ -74,7 +74,6 @@ class MainListener extends PureComponent {
                 !isLyricExpanded &&
                 interactivatedVerseIndex < 0,
 
-
             initialToggleConditions =
                 Boolean(lyricAnnotationIndex) ||
                 isDotsSlideShown ||

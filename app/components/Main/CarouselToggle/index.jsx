@@ -11,13 +11,18 @@ import { CAROUSEL_TOGGLE_KEY } from 'constants/access'
 import { CAROUSEL_NAV_BUTTON_KEY } from 'constants/buttons'
 
 import { populateRefs } from '../../../helpers/ref'
+import { getCarouselNavIdentifier } from '../../../constants/options'
 
 const mapStateToProps = ({
     responsiveStore: { isUnrenderableCarouselNav },
-    toggleStore: { isCarouselShown }
+    toggleStore: {
+        isCarouselShown,
+        isNavShown
+    }
 }) => ({
     isUnrenderableCarouselNav,
-    isCarouselShown
+    isCarouselShown,
+    isNavShown
 })
 
 class CarouselToggle extends PureComponent {
@@ -25,11 +30,12 @@ class CarouselToggle extends PureComponent {
     static propTypes = {
         // Through Redux.
         isUnrenderableCarouselNav: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired
+        isCarouselShown: PropTypes.bool.isRequired,
+        isNavShown: PropTypes.bool.isRequired
     }
 
     handleButtonClick = () => {
-        this.dispatchCarousel()
+        this.dispatchCarouselNav()
     }
 
     _getRefs = (payload) => {
@@ -39,7 +45,8 @@ class CarouselToggle extends PureComponent {
     render() {
         const {
             isUnrenderableCarouselNav,
-            isCarouselShown
+            isCarouselShown,
+            isNavShown
         } = this.props
 
         return !isUnrenderableCarouselNav && (
@@ -51,7 +58,10 @@ class CarouselToggle extends PureComponent {
                     isLargeSize
                     {...{
                         buttonName: CAROUSEL_NAV_BUTTON_KEY,
-                        buttonIdentifier: isCarouselShown,
+                        buttonIdentifier: getCarouselNavIdentifier({
+                            isCarouselShown,
+                            isNavShown
+                        }),
                         accessKey: CAROUSEL_TOGGLE_KEY,
                         handleButtonClick: this.handleButtonClick
                     }}

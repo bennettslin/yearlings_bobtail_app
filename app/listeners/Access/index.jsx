@@ -5,12 +5,30 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
 
+const mapStateToProps = ({
+    toggleStore: {
+        isAccessOn,
+        isNavShown,
+        isDotsSlideShown,
+        isLyricExpanded
+    },
+    lyricStore: { lyricAnnotationIndex },
+    sessionStore: { interactivatedVerseIndex }
+}) => ({
+    isAccessOn,
+    isNavShown,
+    isDotsSlideShown,
+    isLyricExpanded,
+    lyricAnnotationIndex,
+    interactivatedVerseIndex
+})
+
 class AccessListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
+        isNavShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
@@ -30,7 +48,7 @@ class AccessListener extends PureComponent {
         const {
                 isAccessOn,
                 isDotsSlideShown,
-                isCarouselShown,
+                isNavShown,
                 isLyricExpanded,
                 lyricAnnotationIndex,
                 interactivatedVerseIndex
@@ -41,7 +59,7 @@ class AccessListener extends PureComponent {
                 !isDotsSlideShown &&
                 interactivatedVerseIndex < 0 &&
                 (
-                    isCarouselShown ||
+                    !isNavShown ||
                     isLyricExpanded ||
                     lyricAnnotationIndex
                 )
@@ -54,24 +72,6 @@ class AccessListener extends PureComponent {
         return null
     }
 }
-
-const mapStateToProps = ({
-    toggleStore: {
-        isAccessOn,
-        isCarouselShown,
-        isDotsSlideShown,
-        isLyricExpanded
-    },
-    lyricStore: { lyricAnnotationIndex },
-    sessionStore: { interactivatedVerseIndex }
-}) => ({
-    isAccessOn,
-    isCarouselShown,
-    isDotsSlideShown,
-    isLyricExpanded,
-    lyricAnnotationIndex,
-    interactivatedVerseIndex
-})
 
 export default connect(
     mapStateToProps,

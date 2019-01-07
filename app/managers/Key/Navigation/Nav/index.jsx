@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
 
-import NavDispatcher from '../../../../dispatchers/NavDispatcher'
+import NavDispatcher from '../../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
 
 import {
@@ -65,7 +65,8 @@ class NavNavigation extends PureComponent {
                     break
                 case ENTER:
                     keyWasRegistered = this.dispatchSong({
-                        selectedSongIndex: accessedNavSongIndex
+                        selectedSongIndex: accessedNavSongIndex,
+                        doDismissNav: true
                     })
                     /**
                      * If song was successfully selected, then annotation index

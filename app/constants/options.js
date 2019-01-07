@@ -1,25 +1,32 @@
+export const CONTINUE = 'continue'
+export const REPEAT = 'repeat'
+export const PAUSE_AT_END = 'pauseAtEnd'
+export const SHOWN = 'shown'
+export const HIDDEN = 'hidden'
+export const DISABLED = 'disabled'
 
-const
-    CONTINUE = 'continue',
-    REPEAT = 'repeat',
-    PAUSE_AT_END = 'pauseAtEnd',
-    SHOWN = 'shown',
-    HIDDEN = 'hidden',
-    DISABLED = 'disabled'
-
-module.exports = {
-
+export const AUDIO_OPTIONS = [
     CONTINUE,
     REPEAT,
-    PAUSE_AT_END,
+    PAUSE_AT_END
+]
 
-    AUDIO_OPTIONS: [
-        CONTINUE,
-        REPEAT,
-        PAUSE_AT_END
-    ],
+export const IS_CAROUSEL_SHOWN = 'isCarouselShown'
+export const IS_NAV_SHOWN = 'isNavShown'
+export const IS_NEITHER_SHOWN = 'isCarouselNavHidden'
 
-    SHOWN,
-    HIDDEN,
-    DISABLED
+export const getCarouselNavIdentifier = ({
+    isCarouselShown,
+    isNavShown
+
+}) => {
+    if (isCarouselShown) {
+        return IS_CAROUSEL_SHOWN
+
+    } else if (isNavShown) {
+        return IS_NAV_SHOWN
+
+    } else {
+        return IS_NEITHER_SHOWN
+    }
 }

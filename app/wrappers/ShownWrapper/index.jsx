@@ -13,6 +13,7 @@ class ShownWrapper extends PureComponent {
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
+        isNavShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isOverlayShown: PropTypes.bool.isRequired,
@@ -27,6 +28,7 @@ class ShownWrapper extends PureComponent {
                 selectedOverviewOption,
                 selectedTipsOption,
                 isCarouselShown,
+                isNavShown,
                 isLyricExpanded,
                 isDotsSlideShown,
                 isOverlayShown,
@@ -51,9 +53,11 @@ class ShownWrapper extends PureComponent {
                         tipsShown &&
                             'ShW__tipsShown',
 
-                        isCarouselShown ?
-                            'ShW__carouselExpanded' :
+                        isCarouselShown &&
+                            'ShW__carouselExpanded',
+                        isNavShown &&
                             'ShW__navExpanded',
+
                         isDotsSlideShown ?
                             'ShW__dotsShown' :
                             'ShW__dotsHidden',
@@ -81,6 +85,7 @@ const mapStateToProps = ({
     },
     toggleStore: {
         isCarouselShown,
+        isNavShown,
         isLyricExpanded,
         isDotsSlideShown
     },
@@ -90,6 +95,7 @@ const mapStateToProps = ({
     selectedOverviewOption,
     selectedTipsOption,
     isCarouselShown,
+    isNavShown,
     isLyricExpanded,
     isDotsSlideShown,
     isOverlayShown

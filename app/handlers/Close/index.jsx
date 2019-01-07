@@ -16,7 +16,7 @@ import {
     HIDDEN
 } from '../../constants/options'
 
-class Close extends PureComponent {
+class CloseHandler extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -96,7 +96,8 @@ class Close extends PureComponent {
             this.closeOverlayPopups()
             this.closeMainSections({
                 exemptAnnotation: true,
-                exemptDots: true
+                exemptDots: true,
+                exemptNav: true
             })
         }
     }
@@ -263,6 +264,7 @@ class Close extends PureComponent {
         exemptAnnotation,
         exemptDots,
         exemptLyric,
+        exemptNav,
         exemptOverview,
         exemptTips,
         exemptInteractivatedVerse
@@ -282,6 +284,10 @@ class Close extends PureComponent {
 
         if (!exemptLyric) {
             this.props.updateToggleStore({ isLyricExpanded: false })
+        }
+
+        if (!exemptNav) {
+            this.props.updateToggleStore({ isNavShown: false })
         }
 
         if (!exemptOverview) {
@@ -354,4 +360,4 @@ export default connect(
         updateSelectedStore,
         updateToggleStore
     }
-)(Close)
+)(CloseHandler)

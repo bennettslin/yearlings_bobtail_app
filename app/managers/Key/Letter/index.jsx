@@ -106,7 +106,7 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.dispatchInteractivatedVerseDirection(1)
                 break
             case CAROUSEL_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchCarousel()
+                keyWasRegistered = this.dispatchCarouselNav()
                 break
             case DOTS_SLIDE_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchDotsSlide()

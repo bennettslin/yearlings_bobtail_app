@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import NavDispatcher from '../../../dispatchers/NavDispatcher'
+import NavDispatcher from '../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
@@ -37,7 +37,10 @@ class NavColumn extends PureComponent {
     }
 
     _handleNavSongSelect = (songIndex) => {
-        this.dispatchSong({ selectedSongIndex: songIndex })
+        this.dispatchSong({
+            selectedSongIndex: songIndex,
+            doDismissNav: true
+        })
     }
 
     _getRefs = (payload) => {

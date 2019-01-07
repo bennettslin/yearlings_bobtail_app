@@ -82,21 +82,23 @@ class PopupAnnotationListener extends PureComponent {
          * This persists the popup annotation while it is fading out.
          */
         const {
-            lyricAnnotationIndex,
-            isCarouselShown
-        } = this.props
+                lyricAnnotationIndex,
+                isCarouselShown
+            } = this.props,
+            {
+                lyricAnnotationIndex: prevAnnotationIndex,
+                isCarouselShown: wasCarouselShown
+            } = prevProps
 
         if (
             // If there is a selected annotation...
             lyricAnnotationIndex &&
             (
                 // ... and annotation index has changed...
-                lyricAnnotationIndex !==
-                prevProps.lyricAnnotationIndex
+                lyricAnnotationIndex !== prevAnnotationIndex
             ) || (
-                // ... or toggling from carousel to popup...
-                !isCarouselShown &&
-                prevProps.isCarouselShown
+                // ... or toggling to popup from carousel...
+                !isCarouselShown && wasCarouselShown
             )
         ) {
             // ... then persist the popup annotation index.

@@ -11,6 +11,7 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateSelectedStore } from 'flux/selected/action'
+import { updateToggleStore } from 'flux/toggle/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getSceneIndexForVerseIndex } from 'album/api/scenes'
@@ -25,6 +26,7 @@ class SongDispatcher extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -43,7 +45,8 @@ class SongDispatcher extends PureComponent {
         selectedAnnotationIndex = 0,
         earColumnIndex,
         destinationWormholeIndex,
-        direction
+        direction,
+        doDismissNav
     }) => {
         const isWormholeSelected = Boolean(destinationWormholeIndex)
 
@@ -90,6 +93,10 @@ class SongDispatcher extends PureComponent {
             }
         })
 
+        if (doDismissNav) {
+            this.props.updateToggleStore({ isNavShown: false })
+        }
+
         return true
     }
 
@@ -109,6 +116,7 @@ export default connect(
     {
         updateAccessStore,
         updateAudioStore,
-        updateSelectedStore
+        updateSelectedStore,
+        updateToggleStore
     }
 )(SongDispatcher)
