@@ -37,8 +37,8 @@ $width__underline__bleed: 0.125em;
     visibility: hidden;
 
     transition:
-        opacity $animationDuration__default,
-        background-color $animationDuration__default;
+        visibility $animationDuration__fast,
+        background-color $animationDuration__fast;
 
     // "Root accessed letter Enter, child accessed letter Enter."
     .PaLEnter
@@ -47,9 +47,11 @@ $width__underline__bleed: 0.125em;
         background-color: $colour__accessedLinkActive !important;
     }
 
+    // Specific selector to override.
     .TW__sliderMoving
+    .Anchor
     & {
-        opacity: 0;
+        visibility: hidden;
     }
 }
 

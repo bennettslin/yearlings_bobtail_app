@@ -30,9 +30,7 @@ const AnchorText = memo(({
     return (
         words.map((word, index) => {
             return (
-                <___
-                    key={index}
-                >
+                <___ key={index}>
                     {Boolean(index) && ' '}
                     <span
                         {...{
@@ -65,12 +63,13 @@ const AnchorText = memo(({
                         {/* Shown once some dot in dot sequence is selected. */}
                         <span className={cx(
                             'TextAnchor__linkText',
-                            isAccessed ?
+
+                            isAccessed && !isSelected ?
                                 'TextAnchor__linkText__accessed' :
                                 'TextAnchor__linkText__default',
 
                             isSelected &&
-                            'TextAnchor__linkText__selected',
+                                'TextAnchor__linkText__selected',
 
                             'textShadow__text',
                             'abF'

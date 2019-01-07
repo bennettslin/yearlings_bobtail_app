@@ -29,7 +29,7 @@
             visibility: visible;
         }
 
-        .Underline__accessed {
+        &.Anchor__accessed {
             .Underline__bar__default {
                 visibility: hidden;
             }
