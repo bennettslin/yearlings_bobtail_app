@@ -33,9 +33,11 @@ $margin__dotsContainer__phone: 8px;
         margin-top: 0;
         margin-bottom: $margin__dotsContainer / 2;
     }
+}
 
+.DotsSlide__shown {
     .PlW__song
-    .ShW__dotsShown.ShW__overlayHidden
+    .ShW__overlayHidden
     .TrW__canLyricCarouselEnter
     & {
         opacity: 1;
@@ -44,7 +46,6 @@ $margin__dotsContainer__phone: 8px;
     }
 
     .DW__mobileNotTablet
-    .ShW__dotsShown
     & {
         margin-left: $margin__dotsContainer__phone;
     }
