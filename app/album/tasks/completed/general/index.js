@@ -4370,5 +4370,10 @@ export default [
         taskName: `Lots of tasks related to removing extraneous DOM nodes, especially in mobile.`,
         workedHours: 20,
         neededHours: 20
+    },
+    {
+        taskName: `Make verse nav mount upon transition.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
