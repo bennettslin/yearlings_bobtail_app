@@ -4368,7 +4368,7 @@ export default [
     },
     {
         taskName: `Lots of tasks related to removing extraneous DOM nodes, especially in mobile.`,
-        workedHours: 10,
-        neededHours: 10
+        workedHours: 20,
+        neededHours: 20
     }
 ]
