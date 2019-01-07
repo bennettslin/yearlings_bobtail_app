@@ -5,18 +5,19 @@
     .TW__sliderMoving
     .Anchor
     & {
-        visibility: visible;
+        display: inline;
     }
 }
 
 .TextAnchor__linkText {
+    position: relative;
+    display: none;
 
     // Override defaults.
     text-indent: 0;
     padding: 0;
     line-height: 125%;
     direction: ltr;
-    visibility: hidden;
 
     transition: color $animationDuration__fast;
 
@@ -32,7 +33,9 @@
         color: $colour__accessedLinkActive !important;
     }
 
+    // Specific selector to override.
     .TW__sliderMoving
+    .Anchor
     & {
         display: none;
     }

@@ -10,23 +10,23 @@
 
         // Anchors show as more than text.
         .TextAnchor__plainText {
-            visibility: hidden;
+            display: none;
         }
         .TextAnchor__linkText__default {
-            visibility: visible;
-        }
-
-        .Underline__bar__default {
-            visibility: visible;
+            display: inline;
         }
 
         .AnchorText__accessed {
             .TextAnchor__linkText__default {
-                visibility: hidden;
+                display: none;
             }
             .TextAnchor__linkText__accessed {
-                visibility: visible;
+                display: inline;
             }
+        }
+
+        .Underline__bar__default {
+            visibility: visible;
         }
 
         .Underline__accessed {
