@@ -71,8 +71,8 @@ const defaultProps = {
      */
         if (
             !isTextAnchor &&
-        !isVerseBeginningSpan &&
-        text.indexOf('\'s') !== 0
+            !isVerseBeginningSpan &&
+            text.indexOf('\'s') !== 0
         ) {
             formattedText = ` ${formattedText}`
         }
