@@ -100,7 +100,6 @@ class TextLyricAnchor extends PureComponent {
     }
 
     setLyricAnnotationElement = (node) => {
-
         // This method is only passed down by stanza, not carousel annotation.
         if (this.props.setLyricAnnotationElement) {
             this.props.setLyricAnnotationElement({
@@ -160,42 +159,37 @@ class TextLyricAnchor extends PureComponent {
             }
         }
 
-        // Don't split in mobile.
+        // Don't split wiki anchor text in mobile.
         const words = isWikiTextAnchor && isDesktop ? text.split(' ') : [text]
 
         return (
             <___>
                 {/* This space will not show if it starts the verse line. */}
                 {' '}
-                <span
-                    key={annotationIndex}
+                <Anchor
                     {...{
-                        ref: this.setLyricAnnotationElement,
+                        setLyricAnnotationElement:
+                            this.setLyricAnnotationElement,
                         className: cx(
                             annotationIndex &&
                                 `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
                             wikiIndex && `wiki__${wikiIndex}`
-                        )
+                        ),
+                        isAccessed,
+                        isSelected,
+                        isWikiTextAnchor,
+                        text: words.map((word, index) => (
+                            <Texts {...other}
+                                key={index}
+                                isTextAnchor
+                                {...{ text: word }}
+                            />
+                        )),
+                        sequenceDotKeys: dotKeys,
+                        handleAnchorClick: this._handleAnchorClick
                     }}
-                >
-                    <Anchor
-                        {...{
-                            isAccessed,
-                            isSelected,
-                            isWikiTextAnchor,
-                            text: words.map((word, index) => (
-                                <Texts {...other}
-                                    key={index}
-                                    isTextAnchor
-                                    {...{ text: word }}
-                                />
-                            )),
-                            sequenceDotKeys: dotKeys,
-                            handleAnchorClick: this._handleAnchorClick
-                        }}
-                    />
-                </span>
+                />
                 {isWikiTextAnchor && (
                     <WikiDispatcher {...{ getRefs: this._getRefs }} />
                 )}

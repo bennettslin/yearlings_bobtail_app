@@ -25,6 +25,7 @@ class Anchor extends PureComponent {
         isDesktop: PropTypes.bool.isRequired,
 
         // From parent.
+        className: PropTypes.string,
         isAnnotationTitle: PropTypes.bool,
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool,
@@ -32,6 +33,7 @@ class Anchor extends PureComponent {
         sequenceDotKeys: PropTypes.object,
         stanzaDotKeys: PropTypes.object,
         text: PropTypes.any,
+        setLyricAnnotationElement: PropTypes.func,
         handleAnchorClick: PropTypes.func.isRequired
     }
 
@@ -53,6 +55,7 @@ class Anchor extends PureComponent {
     render() {
 
         const {
+                className,
                 isDesktop,
                 isAnnotationTitle,
                 isAccessed: isAccessedBeforeDesktop,
@@ -60,7 +63,8 @@ class Anchor extends PureComponent {
                 sequenceDotKeys,
                 stanzaDotKeys,
                 isWikiTextAnchor,
-                text
+                text,
+                setLyricAnnotationElement
             } = this.props,
 
             isDotAnchor = Boolean(stanzaDotKeys),
@@ -78,34 +82,37 @@ class Anchor extends PureComponent {
 
         return (
             <a
-                className={cx(
-                    'Anchor',
-
-                    isAccessed && !isSelected && 'Anchor__accessed',
-
-                    !isSelected && 'Anchor__selectable',
-
-                    !isWikiTextAnchor && 'Anchor__noWrap',
-
-                    // "Child anchor reference letter."
-                    isWikiTextAnchor && 'ChAr',
-
-                    sequenceDotKeys &&
-                        getPrefixedDotLetterClassNames(
-                            sequenceDotKeys,
-                            // "Child anchor letter."
-                            'ChA'
-                        ),
-
-                    /**
-                     * If sequence dot keys are provided, or if it's a wiki
-                     * anchor, anchor is not always visible.
-                     */
-                    !sequenceDotKeys &&
-                    !isWikiTextAnchor &&
-                        'Anchor__alwaysVisible'
-                )}
                 {...{
+                    ref: setLyricAnnotationElement,
+                    className: cx(
+                        'Anchor',
+
+                        isAccessed && !isSelected && 'Anchor__accessed',
+
+                        !isSelected && 'Anchor__selectable',
+
+                        !isWikiTextAnchor && 'Anchor__noWrap',
+
+                        // "Child anchor reference letter."
+                        isWikiTextAnchor && 'ChAr',
+
+                        sequenceDotKeys &&
+                            getPrefixedDotLetterClassNames(
+                                sequenceDotKeys,
+                                // "Child anchor letter."
+                                'ChA'
+                            ),
+
+                        /**
+                         * If sequence dot keys are provided, or if it's a wiki
+                         * anchor, anchor is not always visible.
+                         */
+                        !sequenceDotKeys &&
+                        !isWikiTextAnchor &&
+                            'Anchor__alwaysVisible',
+
+                        className
+                    ),
                     onClick: this._handleClick,
                     onTouchStart: this._handleClick
                 }}
