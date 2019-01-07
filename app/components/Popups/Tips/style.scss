@@ -6,14 +6,17 @@
     // Needed to prevent closing upon popup click.
     z-index: $zIndex__centreFieldChild;
 
+    // Tip popup is in centre by default.
+
     /**
-     * When tip button is in menu, show tip popup closer to menu. When it's in
-     * main in desktop, show it in centre.
+     * When tip button is in menu, show tip popup closer to menu.
      */
     .RW__scoresTipsMenu
+    &,
+    .DW__phone
     & {
-        top: 5%;
-        right: 5%;
+        top: $js__margin__thick;
+        right: $js__margin__thick;
     }
 
     .DW__mobileNotPhone
@@ -21,11 +24,11 @@
     & {
 
         /**
-         * In tablet and mini, when tip button is in menu, show tip in centre.
-         * When it's in main, show it closer to tip button.
+         * In tablet and mini, when tip button is in main, show it closer to
+         * tip button.
          */
         position: absolute;
-        bottom: 5%;
-        right: 5%;
+        bottom: $js__margin__thick;
+        right: $js__margin__thick;
     }
 }
