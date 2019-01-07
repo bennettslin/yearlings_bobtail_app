@@ -1,3 +1,7 @@
+/**
+ * TODO: Deprecated. To be deleted.
+ */
+
 // Container for image above each button.
 
 import React, { memo } from 'react'

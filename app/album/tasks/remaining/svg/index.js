@@ -50,7 +50,7 @@ export default [
         neededHours: 8
     },
     {
-        taskName: `nav images (just take from existing heads and bodies.)`,
+        taskName: `nav images. (Just take from existing heads.)`,
         workedHours: 0,
         neededHours: 5
     },

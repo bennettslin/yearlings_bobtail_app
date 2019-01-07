@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Button from '../../../../Button'
-import Thumb from './Thumb'
 
 import { ENTER } from 'constants/access'
 import {
@@ -115,19 +114,7 @@ class NavButton extends PureComponent {
                         accessKey: isToggle ? '' : ENTER,
                         handleButtonClick: this._handleButtonClick
                     }}
-                >
-                    {!isBook && (
-                        <Thumb
-                            {...{
-                                isAccessed: isAccessed && isNavigable,
-                                isSelected,
-                                isLeftmost,
-                                isRightmost,
-                                songIndex
-                            }}
-                        />
-                    )}
-                </Button>
+                />
             </div>
         )
     }
