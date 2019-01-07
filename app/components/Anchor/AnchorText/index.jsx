@@ -25,8 +25,7 @@ const AnchorText = memo(({
 
 }) => {
     const
-        words = typeof text === 'string' ? [text] : text,
-        isTextAnchorAccessed = isAccessed && !isSelected
+        words = typeof text === 'string' ? [text] : text
 
     return (
         words.map((word, index) => {
@@ -38,8 +37,7 @@ const AnchorText = memo(({
                     <span
                         {...{
                             className: cx(
-                                'AnchorText',
-                                isTextAnchorAccessed && 'AnchorText__accessed'
+                                'AnchorText'
                             )
                         }}
                     >

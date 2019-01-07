@@ -16,7 +16,7 @@
             display: inline;
         }
 
-        .AnchorText__accessed {
+        &.Anchor__accessed {
             .TextAnchor__linkText__default {
                 display: none;
             }
