@@ -4375,5 +4375,10 @@ export default [
         taskName: `Make verse nav mount upon transition.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make dots slide mount upon transition.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

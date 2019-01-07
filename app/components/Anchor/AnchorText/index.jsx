@@ -65,7 +65,9 @@ const AnchorText = memo(({
                         {/* Shown once some dot in dot sequence is selected. */}
                         <span className={cx(
                             'TextAnchor__linkText',
-                            'TextAnchor__linkText__default',
+                            isAccessed ?
+                                'TextAnchor__linkText__accessed' :
+                                'TextAnchor__linkText__default',
 
                             isSelected &&
                             'TextAnchor__linkText__selected',
@@ -75,22 +77,6 @@ const AnchorText = memo(({
                         )}>
                             {word}
                         </span>
-
-                        {/* Shown instead when access is on. */}
-                        {isDesktop && (
-                            <span className={cx(
-                                'TextAnchor__linkText',
-                                'TextAnchor__linkText__accessed',
-
-                                isSelected &&
-                                'TextAnchor__linkText__selected',
-
-                                'textShadow__text',
-                                'abF'
-                            )}>
-                                {word}
-                            </span>
-                        )}
                     </span>
                 </___>
             )

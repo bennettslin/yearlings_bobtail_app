@@ -19,7 +19,9 @@
     line-height: 125%;
     direction: ltr;
 
-    transition: color $animationDuration__fast;
+    transition:
+        color $animationDuration__fast,
+        visibility $animationDuration__fast;
 
     // "Root accessed letter Enter, child accessed letter Enter."
     .PaLEnter
