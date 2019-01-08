@@ -39,7 +39,7 @@ class SongDispatcher extends PureComponent {
     }
 
     dispatchSong = ({
-        isPlayFromLogue,
+        isPlayFromLogue = false,
         selectedSongIndex = 0,
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,

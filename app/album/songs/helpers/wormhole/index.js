@@ -2,33 +2,25 @@
  * TODO: This is all a mess, and I no longer have the context for it. Ideally
  * this would be refactored, but I'd imagine it would take several days.
  */
-
-import keys from 'lodash.keys'
-
+import { getAnnotation } from 'album/api/annotations'
+import {
+    registerWikiAndWormholeLinksForCard,
+    addDestinationWormholeFormats
+} from './helpers'
 import { WORMHOLE } from 'constants/dots'
 
-import {
-    LYRIC,
-    ANCHOR,
-    WIKI,
-    WIKI_INDEX,
-    WORMHOLE_SEARCH_KEYS,
-    IS_VERSE_BEGINNING_SPAN,
-    IS_VERSE_ENDING_SPAN
-} from 'constants/lyrics'
+const albumWormholeLinks = {}
 
-import { getAnnotation } from 'album/api/annotations'
-
-export const addSourceWormholeLinks = (album) => {
-    album.tempWormholeLinks = {}
-
-    const { songs } = album
+const _gatherSourceWormholeLinks = ({ songs }) => {
 
     songs.forEach(song => {
-        const { annotations } = song
+
+        const {
+            annotations,
+            songIndex
+        } = song
 
         if (annotations) {
-
             annotations.forEach(annotation => {
                 const {
                     cards,
@@ -36,9 +28,8 @@ export const addSourceWormholeLinks = (album) => {
                 } = annotation
 
                 cards.forEach((card, cardIndex) => {
-                    _addSourceWormholeLink({
-                        album,
-                        song,
+                    _storeSourceWormholeLinksForCard({
+                        songIndex,
                         annotation,
                         card,
                         cardIndex,
@@ -50,12 +41,11 @@ export const addSourceWormholeLinks = (album) => {
     })
 }
 
-export const _addSourceWormholeLink = ({
-    album,
-    song,
+const _storeSourceWormholeLinksForCard = ({
+    songIndex,
     annotation,
     card,
-    cardIndex = 0,
+    cardIndex,
     dotKeys
 
 }) => {
@@ -63,21 +53,21 @@ export const _addSourceWormholeLink = ({
     const { wormhole } = card
 
     if (!wormhole) {
-        return false
+        return
     }
 
-    /**
-     * Wormhole is either object or string. If it's an object, then the string
-     * we want is the wormholeKey.
-     */
-    const wormholeKey = wormhole.wormholeKey || wormhole,
-        { wormholePrefix } = wormhole,
-        { songIndex } = song,
+    const {
+            /**
+             * Wormhole is either object or string. If it's an object, then the
+             * string we want is the wormholeKey.
+             */
+            wormholeKey = wormhole,
+            wormholePrefix
+        } = wormhole,
 
         /**
-         * NOTE: I wrote this code with the assumption that every wormhole would
-         * be in a timed verse, and thus have a verse index. Had there been one
-         * that wasn't, such as in a side stanza, this wouldn't work for it!
+         * NOTE: This code assumes that every wormhole is in a verse with a
+         * verse index.
          */
         {
             verseIndex,
@@ -87,50 +77,49 @@ export const _addSourceWormholeLink = ({
 
         wormholeLink = {
             songIndex,
-            annotationIndex,
-            cardIndex,
-            columnIndex,
             verseIndex,
+            annotationIndex,
+            columnIndex,
+            cardIndex,
             wormholePrefix
         }
 
-    // If first wormhole link, initialise array.
-    if (!album.tempWormholeLinks[wormholeKey]) {
-        album.tempWormholeLinks[wormholeKey] = []
+    // If it's the first link for this wormhole key, initialise array.
+    if (!albumWormholeLinks[wormholeKey]) {
+        albumWormholeLinks[wormholeKey] = []
     }
 
     // Add wormhole link to wormhole links array.
-    album.tempWormholeLinks[wormholeKey].push(wormholeLink)
+    albumWormholeLinks[wormholeKey].push(wormholeLink)
 
     // Add wormhole to dot keys.
     dotKeys[WORMHOLE] = true
 
     // Clean up card unit.
     delete card.wormhole
-
-    return true
 }
 
-export const addDestinationWormholeLinks = (album) => {
+export const giveEachSourceLinkItsDestination = () => {
     /**
      * For each annotation with a wormhole, add an array of links to all
      * other wormholes.
      */
-    for (const linkKey in album.tempWormholeLinks) {
-        const links = album.tempWormholeLinks[linkKey]
+    for (const linkKey in albumWormholeLinks) {
+        const keyLinks = albumWormholeLinks[linkKey]
 
-        // eslint-disable-next-line no-loop-func
-        links.forEach((destinationLink, index) => {
+        keyLinks.forEach((keyLink, index) => {
             const {
                     songIndex,
                     annotationIndex,
                     cardIndex
-                } = destinationLink,
+                } = keyLink,
 
-                annotation = getAnnotation(songIndex, annotationIndex, album.songs),
-                card = annotation.cards[cardIndex]
+                // Find the card for this link.
+                { cards } = getAnnotation(songIndex, annotationIndex),
+                card = cards[cardIndex]
 
-            card.wormholeLinks = links.filter((sourceLink, thisIndex) => {
+            // Let it know every other link for this wormhole key.
+            card.wormholeLinks = keyLinks.filter((nothing, thisIndex) => {
 
                 // Don't add link to its own wormhole.
                 return index !== thisIndex
@@ -140,190 +129,34 @@ export const addDestinationWormholeLinks = (album) => {
     }
 }
 
-const _addWormholeFormat = (lyricEntity, verseObjectKey) => {
+export const addWikiWormholeIndices = ({ songs }) => {
 
-    if (typeof lyricEntity === 'object') {
-        lyricEntity[verseObjectKey] = true
-        return lyricEntity
+    songs.forEach((song) => {
+        const {
+            annotations,
+            songIndex
+        } = song
 
-    } else {
-        return {
-            [LYRIC]: lyricEntity,
-            [verseObjectKey]: true
-        }
-    }
-}
-
-const _registerWormholeFormats = (lyricEntity) => {
-    /**
-     * Helper method to register first and last verse objects, after time key
-     * has been found.
-     */
-    if (Array.isArray(lyricEntity)) {
-        const endIndex = lyricEntity.length - 1
-        lyricEntity[0] = _addWormholeFormat(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
-        lyricEntity[endIndex] = _addWormholeFormat(lyricEntity[endIndex], IS_VERSE_ENDING_SPAN)
-
-    } else if (typeof lyricEntity === 'object') {
-        if (typeof lyricEntity[ANCHOR] === 'string') {
-            lyricEntity = _addWormholeFormat(lyricEntity, IS_VERSE_BEGINNING_SPAN)
-            lyricEntity = _addWormholeFormat(lyricEntity, IS_VERSE_ENDING_SPAN)
-        }
-    }
-}
-
-const _addDestinationWormholeFormats = (lyricEntity, verseHasWormhole = false) => {
-    /**
-     * Let verses with wormholes know their first and last objects, which are
-     * formatted differently in the wormhole.
-     */
-
-    if (Array.isArray(lyricEntity)) {
-        lyricEntity.forEach(childLyric => {
-            _addDestinationWormholeFormats(childLyric, verseHasWormhole)
-        })
-
-    } else if (typeof lyricEntity === 'object') {
-
-        if (lyricEntity.tempVerseHasWormhole) {
-
-            // Keep knowing that verse has wormhole in subsequent recursions.
-            verseHasWormhole = true
-
-            // Clean up.
-            delete lyricEntity.tempVerseHasWormhole
-        }
-
-        // Only register verses that have a wormhole.
-        if (verseHasWormhole) {
-
-            WORMHOLE_SEARCH_KEYS.forEach(lyricKey => {
-
-                if (typeof lyricEntity[lyricKey] === 'object') {
-                    _registerWormholeFormats(lyricEntity[lyricKey])
-                }
-
-                if (typeof lyricEntity[lyricKey] === 'string') {
-                    lyricEntity[lyricKey] = _addWormholeFormat(lyricEntity[lyricKey], IS_VERSE_BEGINNING_SPAN)
-                    lyricEntity[lyricKey] = _addWormholeFormat(lyricEntity[lyricKey], IS_VERSE_ENDING_SPAN)
-                }
-            })
-        }
-
-        if (lyricEntity.isUnitMap) {
-            // This applies to "unsalvaged soul," "tarpid lies," and "trophy blondes."
-            _addDestinationWormholeFormats(lyricEntity.subVerse, verseHasWormhole)
-        }
-    }
-}
-
-const _finalParseWiki = (annotation, entity) => {
-
-    // Add the wiki index.
-    if (!entity || typeof entity !== 'object') {
-        return false
-
-    } else if (Array.isArray(entity)) {
-        return entity.reduce((keyFound, element) => {
-            // Reversing order so that index gets added if needed.
-            return _finalParseWiki(annotation, element) || keyFound
-        }, false)
-
-    } else {
-        return keys(entity).reduce((keyFound, currentKey) => {
-            const hasWiki = Boolean(entity[WIKI])
-
-            if (!entity[WIKI_INDEX] && typeof entity[WIKI] === 'string') {
-
-                // Let annotation anchor know its annotation.
-                entity.wikiAnnotationIndex = annotation.annotationIndex
-
-                // Popup anchor index is either for wormhole or wiki.
-                entity[WIKI_INDEX] = annotation.tempWikiWormholeIndex
-                annotation.tempWikiWormholeIndex++
-
-                if (!annotation.wikiWormholes) {
-                    annotation.wikiWormholes = []
-                }
-                annotation.wikiWormholes.push(entity[WIKI])
-
-                delete entity[WIKI]
-            }
-
-            return keyFound || hasWiki || _finalParseWiki(annotation, entity[currentKey])
-        }, false)
-    }
-}
-
-const _finalPrepareCard = (song, annotation, card) => {
-    const { songIndex } = song,
-
-        {
-            description,
-            wormholeLinks
-        } = card
-
-    if (description) {
-        // This is the wiki key in the song data, *not* the dot key.
-        _finalParseWiki(annotation, description)
-    }
-
-    if (wormholeLinks) {
-        wormholeLinks.forEach(link => {
-            const { tempWikiWormholeIndex } = annotation
-
-            // Access will loop through this array.
-            if (!annotation.wikiWormholes) {
-                annotation.wikiWormholes = []
-            }
-            annotation.wikiWormholes.push(tempWikiWormholeIndex)
-
-            // Allow each wormhole to know its source wormhole index.
-            if (!annotation.tempSourceWormholeIndices) {
-                annotation.tempSourceWormholeIndices = []
-            }
-            annotation.tempSourceWormholeIndices.push(tempWikiWormholeIndex)
-
-            // Temporarily, also allow wormhole to know its source annotations.
-            if (!link.tempSourceWormholeLinks) {
-                link.tempSourceWormholeLinks = []
-            }
-            link.tempSourceWormholeLinks.push({
-                tempSourceSongIndex: songIndex,
-                tempSourceAnnotationIndex: annotation.annotationIndex,
-                tempSourceWormholeIndex: tempWikiWormholeIndex
-            })
-
-            annotation.tempWikiWormholeIndex++
-        })
-    }
-}
-
-export const addWikiWormholeIndices = (album) => {
-
-    album.songs.forEach((song) => {
-
-        if (!song.logue) {
-
+        if (annotations) {
             /**
              * Add wiki and wormhole indices. These can only be determined
              * after collecting wormhole links from the entire album.
              */
-            song.annotations.forEach(annotation => {
-                annotation.tempWikiWormholeIndex = 1
-
+            annotations.forEach(annotation => {
                 const { cards } = annotation
 
                 cards.forEach(card => {
-                    _finalPrepareCard(song, annotation, card)
+                    registerWikiAndWormholeLinksForCard({
+                        songIndex,
+                        annotation,
+                        card
+                    })
                 })
-
-                // Clean up.
-                delete annotation.tempWikiWormholeIndex
             })
 
+            // TODO: I don't think this works.
             // For each verse in a wormhole, tell wormhole how to format it.
-            _addDestinationWormholeFormats(song.lyricUnits)
+            addDestinationWormholeFormats(song.lyricUnits)
         }
     })
 }
@@ -340,8 +173,8 @@ export const addWikiWormholeIndices = (album) => {
 export const addDestinationWormholeIndices = (album) => {
     // Now that each wormhole knows its source index, get destination indices.
 
-    for (const linkKey in album.tempWormholeLinks) {
-        const links = album.tempWormholeLinks[linkKey]
+    for (const linkKey in albumWormholeLinks) {
+        const links = albumWormholeLinks[linkKey]
 
         // eslint-disable-next-line no-loop-func
         links.forEach((destinationLink, index) => {
@@ -400,14 +233,11 @@ export const addDestinationWormholeIndices = (album) => {
             delete annotation.tempSourceWormholeIndices
         })
     }
-
-    // Clean up.
-    delete album.tempWormholeLinks
 }
 
 export const addWormholeStuff = (album) => {
-    addSourceWormholeLinks(album)
-    addDestinationWormholeLinks(album)
+    _gatherSourceWormholeLinks(album)
+    giveEachSourceLinkItsDestination()
     addWikiWormholeIndices(album)
     addDestinationWormholeIndices(album)
 }
