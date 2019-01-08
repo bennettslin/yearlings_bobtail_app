@@ -4385,5 +4385,10 @@ export default [
         taskName: `Remove extraneous accessed elements in anchor text and underline.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Some refactoring of wormhole logic.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

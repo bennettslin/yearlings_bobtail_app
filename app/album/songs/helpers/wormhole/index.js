@@ -1,45 +1,9 @@
-/**
- * TODO: This is all a mess, and I no longer have the context for it. Ideally
- * this would be refactored, but I'd imagine it would take several days.
- */
 import { getAnnotation } from 'album/api/annotations'
-import {
-    registerWikiAndWormholeLinksForCard,
-    addDestinationWormholeFormats
-} from './helpers'
+import { registerWikiAndWormholeLinksForCard } from './helpers'
+import { addDestinationWormholeFormats } from './helpers/format'
 import { WORMHOLE } from 'constants/dots'
 
 const albumWormholeLinks = {}
-
-const _gatherSourceWormholeLinks = ({ songs }) => {
-
-    songs.forEach(song => {
-
-        const {
-            annotations,
-            songIndex
-        } = song
-
-        if (annotations) {
-            annotations.forEach(annotation => {
-                const {
-                    cards,
-                    dotKeys
-                } = annotation
-
-                cards.forEach((card, cardIndex) => {
-                    _storeSourceWormholeLinksForCard({
-                        songIndex,
-                        annotation,
-                        card,
-                        cardIndex,
-                        dotKeys
-                    })
-                })
-            })
-        }
-    })
-}
 
 const _storeSourceWormholeLinksForCard = ({
     songIndex,
@@ -99,7 +63,38 @@ const _storeSourceWormholeLinksForCard = ({
     delete card.wormhole
 }
 
+const gatherSourceWormholeLinks = ({ songs }) => {
+
+    songs.forEach(song => {
+
+        const {
+            songIndex,
+            annotations
+        } = song
+
+        if (annotations) {
+            annotations.forEach(annotation => {
+                const {
+                    cards,
+                    dotKeys
+                } = annotation
+
+                cards.forEach((card, cardIndex) => {
+                    _storeSourceWormholeLinksForCard({
+                        songIndex,
+                        annotation,
+                        card,
+                        cardIndex,
+                        dotKeys
+                    })
+                })
+            })
+        }
+    })
+}
+
 export const giveEachSourceLinkItsDestination = () => {
+
     /**
      * For each annotation with a wormhole, add an array of links to all
      * other wormholes.
@@ -133,8 +128,9 @@ export const addWikiWormholeIndices = ({ songs }) => {
 
     songs.forEach((song) => {
         const {
+            songIndex,
             annotations,
-            songIndex
+            indexedVerses
         } = song
 
         if (annotations) {
@@ -153,80 +149,88 @@ export const addWikiWormholeIndices = ({ songs }) => {
                     })
                 })
             })
+        }
 
-            // TODO: I don't think this works.
-            // For each verse in a wormhole, tell wormhole how to format it.
-            addDestinationWormholeFormats(song.lyricUnits)
+        // TODO: Fix and consolidate this.
+        // eslint-disable-next-line no-constant-condition
+        if (indexedVerses && false) {
+            addDestinationWormholeFormats(indexedVerses)
         }
     })
 }
 
-/*********
- * FINAL *
- *********/
-
-/**
- * FIXME: This is extremely fragile, as it has to make exceptions for too many
- * special cases, like italics in sub stanzas...
- */
-
-export const addDestinationWormholeIndices = (album) => {
+export const addWormholeLinksToCard = () => {
     // Now that each wormhole knows its source index, get destination indices.
 
     for (const linkKey in albumWormholeLinks) {
-        const links = albumWormholeLinks[linkKey]
+        const keyLinks = albumWormholeLinks[linkKey]
 
-        // eslint-disable-next-line no-loop-func
-        links.forEach((destinationLink, index) => {
-
+        keyLinks.forEach((destinationLink, index) => {
             const {
                     songIndex,
                     annotationIndex,
-                    cardIndex
+                    cardIndex,
+                    tempSourceWormholeLinks
                 } = destinationLink,
 
-                annotation = getAnnotation(songIndex, annotationIndex, album.songs),
-                card = annotation.cards[cardIndex]
+                annotation = getAnnotation(songIndex, annotationIndex),
+                {
+                    cards,
+                    tempSourceWormholeIndices
+                } = annotation,
+                card = cards[cardIndex]
 
-            card.wormholeLinks = links.filter((sourceLink, thisIndex) => {
-                /**
-                 * Add destination wormhole indices. This is as complicated as
-                 * it is because of the three "shiv" wormholes.
-                 */
-                destinationLink.tempSourceWormholeLinks.forEach((tempSourceLink) => {
-                    const {
-                            tempSourceSongIndex,
-                            tempSourceAnnotationIndex,
-                            tempSourceWormholeIndex
-                        } = tempSourceLink,
-
-                        /**
-                         * This will happen only once for each source and
-                         * destination pair.
-                         */
-                        linksMatch = sourceLink.songIndex === tempSourceSongIndex &&
-                            sourceLink.annotationIndex === tempSourceAnnotationIndex
-
-                    if (linksMatch) {
-                        // Exchange knowledge of source and destination indices.
-                        sourceLink.destinationWormholeIndex = tempSourceWormholeIndex
-                        sourceLink.sourceWormholeIndex = annotation.tempSourceWormholeIndices.shift()
-                    }
-                })
+            card.wormholeLinks = keyLinks.filter((nothing, thisIndex) => {
 
                 // Don't add link to its own wormhole.
                 return index !== thisIndex
 
             }).map(sourceLink => {
+                const {
+                    songIndex,
+                    verseIndex,
+                    annotationIndex,
+                    columnIndex,
+                    wormholePrefix
+                } = sourceLink
+                let sourceWormholeIndex,
+                    destinationWormholeIndex
 
-                // Give card a *copy* of this link object.
-                const newLink = Object.assign({}, sourceLink)
+                /**
+                 * Add destination wormhole indices. This is as complicated as
+                 * it is because of the three "shiv" wormholes.
+                 */
+                tempSourceWormholeLinks.forEach(tempSourceLink => {
 
-                // Clean up.
-                delete newLink.cardIndex
-                delete newLink.tempSourceWormholeLinks
+                    const {
+                        tempSourceSongIndex,
+                        tempSourceAnnotationIndex,
+                        tempSourceWormholeIndex
+                    } = tempSourceLink
 
-                return newLink
+                    if (
+                        /**
+                         * Links will match only once for each source and
+                         * destination pair.
+                         */
+                        songIndex === tempSourceSongIndex &&
+                        annotationIndex === tempSourceAnnotationIndex
+                    ) {
+                        // Exchange knowledge of source and destination indices.
+                        destinationWormholeIndex = tempSourceWormholeIndex
+                        sourceWormholeIndex = tempSourceWormholeIndices.shift()
+                    }
+                })
+
+                return {
+                    songIndex,
+                    verseIndex,
+                    annotationIndex,
+                    columnIndex,
+                    wormholePrefix,
+                    destinationWormholeIndex,
+                    sourceWormholeIndex
+                }
             })
 
             // Clean up.
@@ -236,8 +240,8 @@ export const addDestinationWormholeIndices = (album) => {
 }
 
 export const addWormholeStuff = (album) => {
-    _gatherSourceWormholeLinks(album)
+    gatherSourceWormholeLinks(album)
     giveEachSourceLinkItsDestination()
     addWikiWormholeIndices(album)
-    addDestinationWormholeIndices(album)
+    addWormholeLinksToCard()
 }
