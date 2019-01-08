@@ -55,7 +55,7 @@ const _registerWormholeLinksForCard = ({
     annotation,
     wormholeLinks
 }) => {
-    wormholeLinks.forEach(link => {
+    wormholeLinks.forEach(keyLink => {
 
         // Access will loop through this array.
         if (!annotation.wikiWormholes) {
@@ -73,10 +73,10 @@ const _registerWormholeLinksForCard = ({
         annotation.tempSourceWormholeIndices.push(wikiWormholeIndex)
 
         // Temporarily, also allow wormhole to know its source annotations.
-        if (!link.tempSourceWormholeLinks) {
-            link.tempSourceWormholeLinks = []
+        if (!keyLink.tempSourceWormholeLinks) {
+            keyLink.tempSourceWormholeLinks = []
         }
-        link.tempSourceWormholeLinks.push({
+        keyLink.tempSourceWormholeLinks.push({
             tempSourceSongIndex: songIndex,
             tempSourceAnnotationIndex: annotation.annotationIndex,
             tempSourceWormholeIndex: wikiWormholeIndex

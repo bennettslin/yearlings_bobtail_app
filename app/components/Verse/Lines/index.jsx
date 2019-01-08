@@ -20,9 +20,7 @@ const verseLinesPropTypes = {
     },
 
     VerseLines = memo(({
-
         isDoublespeakerLine,
-
         ...other
     }) => {
 
@@ -39,12 +37,10 @@ const verseLinesPropTypes = {
 
                 'fontSize__lyricMultipleColumns'
             )}>
-                {EAR_COLUMN_KEYS.map((doublespeakerKey, index) => (
+                {EAR_COLUMN_KEYS.map(doublespeakerKey => (
                     <VerseLinesChild {...other}
-                        key={index}
-                        {...{
-                            doublespeakerKey
-                        }}
+                        key={doublespeakerKey}
+                        {...{ doublespeakerKey }}
                     />
                 ))}
             </div>
