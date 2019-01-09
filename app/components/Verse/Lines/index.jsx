@@ -59,19 +59,10 @@ const verseLinesPropTypes = {
     VerseLinesChild = memo((props) => {
 
         const {
-                verseObject,
-                doublespeakerKey,
-                ...other
-            } = props,
-
-            lyricsLineProps = {
-                text:
-                    verseObject[doublespeakerKey]
-                    || verseObject[LYRIC],
-
-                isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
-                isVerseEndingSpan: verseObject.isVerseEndingSpan
-            }
+            verseObject,
+            doublespeakerKey,
+            ...other
+        } = props
 
         let columnKey = LYRIC
 
@@ -82,10 +73,13 @@ const verseLinesPropTypes = {
             columnKey = CENTRE
         }
 
-        lyricsLineProps.columnKey = columnKey
-
         return (
-            <VerseLine {...other} {...lyricsLineProps} />
+            <VerseLine {...other}
+                {...{
+                    text: verseObject[doublespeakerKey] || verseObject[LYRIC],
+                    columnKey
+                }}
+            />
         )
     })
 

@@ -21,8 +21,7 @@ const defaultProps = {
         isItalic: PropTypes.bool,
         isVerseBeginningSpan: PropTypes.bool,
         isVerseEndingSpan: PropTypes.bool,
-        inWormhole: PropTypes.bool,
-        isAnchorInWormholeVerse: PropTypes.bool,
+        isWormholeDestinationAnchor: PropTypes.bool,
         isTextAnchor: PropTypes.bool
     },
 
@@ -34,8 +33,7 @@ const defaultProps = {
         isItalic,
         isVerseBeginningSpan,
         isVerseEndingSpan,
-        inWormhole,
-        isAnchorInWormholeVerse,
+        isWormholeDestinationAnchor,
         isTextAnchor
 
     }) => {
@@ -43,7 +41,7 @@ const defaultProps = {
         let formattedText = text,
             Tag
 
-        if (isAnchorInWormholeVerse) {
+        if (isWormholeDestinationAnchor) {
             Tag = 'span'
         }
 
@@ -59,16 +57,11 @@ const defaultProps = {
             formattedText = getFormattedLyricSpanText(formattedText)
         }
 
-        // Last verse span in wormhole will always end in an ellipsis.
-        if (inWormhole && isVerseEndingSpan) {
-            formattedText = getFormattedEndingVerseSpanText(formattedText)
-        }
-
         /**
-     * Subsequent spans of text on a line will begin with a space, unless it
-     * begins with "'s," or it's the beginning verse span in a wormhole, or
-     * it's a wiki text anchor.
-     */
+         * Subsequent spans of text on a line will begin with a space, unless it
+         * begins with "'s," or it's the beginning verse span in a wormhole, or
+         * it's a wiki text anchor.
+         */
         if (
             !isTextAnchor &&
             !isVerseBeginningSpan &&
@@ -77,9 +70,14 @@ const defaultProps = {
             formattedText = ` ${formattedText}`
         }
 
+        // Last verse span in wormhole will always end in an ellipsis.
+        if (isVerseEndingSpan) {
+            formattedText = getFormattedEndingVerseSpanText(formattedText)
+        }
+
         return Tag ? (
             <Tag className={cx(
-                isAnchorInWormholeVerse && 'text__anchorInWormhole'
+                isWormholeDestinationAnchor && 'text__wormholeDestinationAnchor'
             )}>
                 {formattedText}
             </Tag>

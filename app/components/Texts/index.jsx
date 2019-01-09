@@ -14,27 +14,47 @@ const propTypes = {
             PropTypes.string,
             PropTypes.array,
             PropTypes.object
-        ])
+        ]),
+        isWormholeDestinationVerse: PropTypes.bool
     },
 
     Texts = memo(({
         text: textEntity,
+        isWormholeDestinationVerse,
         ...other
+
     }) => {
         return (Array.isArray(textEntity)) ? (
-            textEntity.map((textEntry, index) => (
-                <Texts {...other}
-                    key={index}
-                    {...{
-                        text: textEntry
-                    }}
-                />
-            ))
+
+            textEntity.map((textEntry, index) => {
+
+                return (
+                    <Texts {...other}
+                        key={index}
+                        {...{ text: textEntry }}
+                        {...isWormholeDestinationVerse && {
+                            /**
+                             * If it's a wormhole's destination verse text,
+                             * then determine if it's the beginning span or
+                             * ending span.
+                             */
+                            isVerseBeginningSpan: index === 0,
+                            isVerseEndingSpan: index === textEntity.length - 1
+                        }}
+                    />
+                )
+            })
 
         ) : (
             <Text {...other}
-                {...{
-                    text: textEntity
+                {...{ text: textEntity }}
+                {...isWormholeDestinationVerse && {
+                    /**
+                     * If it's a wormhole's destination verse text, then as a
+                     * single entity, it's both the beginning and ending span.
+                     */
+                    isVerseBeginningSpan: true,
+                    isVerseEndingSpan: true
                 }}
             />
         )

@@ -23,11 +23,9 @@ const propTypes = {
     }) => {
 
         const {
-                inVerseBar,
-                ...other
-            } = props,
-
-            { inWormhole } = other
+            inVerseBar,
+            ...other
+        } = props
 
         // It's a text span.
         if (typeof textEntity === 'string') {
@@ -61,39 +59,33 @@ const propTypes = {
                         anchor,
                         annotationIndex
                     } = textEntity,
+                    { wormholeAnnotationIndex } = props,
 
                     /**
                      * If recursing, keep knowledge of text being in wormhole
                      * or verse bar, which is needed by anchor.
                      */
-                    showAsPlainText = inWormhole || inVerseBar,
+                    showAsPlainText =
+                        Boolean(wormholeAnnotationIndex) ||
+                        inVerseBar,
 
                     text = anchor
 
                 if (showAsPlainText) {
-                    const {
-                            isVerseBeginningSpan,
-                            isVerseEndingSpan
-                        } = textEntity,
 
-                        { wormholeAnnotationIndex } = props,
-
-                        /**
+                    /**
                      * A verse line with a wormhole anchor may contain other
                      * anchors. Make sure that we know this is the wormhole
                      * anchor.
                      */
-                        isAnchorInWormholeVerse =
-                            inWormhole &&
+                    const isWormholeDestinationAnchor =
                             annotationIndex === wormholeAnnotationIndex
 
                     return (
                         <Texts {...other}
                             {...{
                                 text,
-                                isVerseBeginningSpan,
-                                isVerseEndingSpan,
-                                isAnchorInWormholeVerse
+                                isWormholeDestinationAnchor
                             }}
                         />
                     )

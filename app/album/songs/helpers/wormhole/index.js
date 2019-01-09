@@ -1,6 +1,5 @@
 import { getAnnotation } from 'album/api/annotations'
 import { registerWikiAndWormholeLinksForCard } from './helpers'
-import { addDestinationWormholeFormats } from './helpers/format'
 import { WORMHOLE } from 'constants/dots'
 
 const tempAlbumLinks = {}
@@ -88,7 +87,7 @@ const gatherTempWormholeLinks = ({ songs }) => {
     })
 }
 
-export const giveEachSourceLinkItsDestination = () => {
+const giveEachSourceLinkItsDestination = () => {
     /**
      * For each annotation with a wormhole, add an array of links to all
      * other wormholes.
@@ -118,13 +117,12 @@ export const giveEachSourceLinkItsDestination = () => {
     }
 }
 
-export const addWikiWormholeIndices = ({ songs }) => {
+const establishWikiWormholeIndices = ({ songs }) => {
 
     songs.forEach((song) => {
         const {
             songIndex,
-            annotations,
-            indexedVerses
+            annotations
         } = song
 
         if (annotations) {
@@ -144,16 +142,10 @@ export const addWikiWormholeIndices = ({ songs }) => {
                 })
             })
         }
-
-        // TODO: Fix and consolidate this.
-        // eslint-disable-next-line no-constant-condition
-        if (indexedVerses && false) {
-            addDestinationWormholeFormats(indexedVerses)
-        }
     })
 }
 
-export const addWormholeLinksToCard = () => {
+const addWormholeLinksToCard = () => {
     // Now that each wormhole knows its source index, get destination indices.
 
     for (const linkKey in tempAlbumLinks) {
@@ -236,6 +228,6 @@ export const addWormholeLinksToCard = () => {
 export const addWormholeStuff = (album) => {
     gatherTempWormholeLinks(album)
     giveEachSourceLinkItsDestination()
-    addWikiWormholeIndices(album)
+    establishWikiWormholeIndices(album)
     addWormholeLinksToCard()
 }
