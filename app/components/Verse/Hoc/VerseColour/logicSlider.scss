@@ -5,6 +5,11 @@
     .TW__sliderMoving
     & {
         background-color: $bgColour__beforeSlider;
+
+        // "Granchild verse colour even."
+        &.GcE {
+            background-color: $bgColour__beforeSlider__even;
+        }
     }
 }
 
@@ -29,6 +34,11 @@
             // Grandchildren of all subsequent "child verse" siblings.
             .GcV {
                 background-color: $bgColour__afterSlider;
+
+                // "Granchild verse colour even."
+                &.GcE {
+                    background-color: $bgColour__afterSlider__even;
+                }
             }
         }
     }
@@ -43,6 +53,11 @@
         // Grandchildren of all subsequent "parent of verse" siblings.
         ~ .PoV .GcV {
             background-color: $bgColour__afterSlider;
+
+            // "Granchild verse colour even."
+            &.GcE {
+                background-color: $bgColour__afterSlider__even;
+            }
         }
     }
 }

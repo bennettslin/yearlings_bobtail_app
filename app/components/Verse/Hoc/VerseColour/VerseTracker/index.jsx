@@ -59,8 +59,7 @@ class VerseTracker extends Component {
             } = props,
 
             isSelected =
-                verseIndex === lyricVerseIndex &&
-                !isHiddenInVerseBar
+                verseIndex === lyricVerseIndex && !isHiddenInVerseBar
 
         return isSelected
     }

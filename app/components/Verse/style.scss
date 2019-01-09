@@ -76,12 +76,12 @@
     .TW__sliderNotMoving
     & {
         // Default side verse.
-        background-color: #ddd;
+        background-color: $bgColour__noIndex;
     }
 
     .TW__sliderMoving
     & {
         // Slider side verse.
-        background-color: $bgColour__sideSlider;
+        background-color: $bgColour__noIndexSlider;
     }
 }

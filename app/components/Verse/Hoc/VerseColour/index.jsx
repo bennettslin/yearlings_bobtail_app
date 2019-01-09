@@ -45,6 +45,9 @@ const propTypes = {
                     inVerseBar && 'VerseColour__inVerseBar',
                     isInteractivated && 'VerseColour__interactivated',
 
+                    // Grandchild verse colour even.
+                    !isOdd && 'GcE',
+
                     'abF'
                 )}
             >
@@ -71,18 +74,6 @@ const propTypes = {
                             isHiddenInVerseBar: !isOdd
                         }}
                     />
-                )}
-
-                {/* Even filters are just a little shadier. */}
-                {!inVerseBar && !(verseIndex % 2) && (
-                    <div className={cx(
-
-                        // "Grandchild even filter."
-                        'GcE',
-
-                        'colourFilter__verse__even',
-                        'abF'
-                    )} />
                 )}
             </div>
         )

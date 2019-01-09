@@ -4400,5 +4400,10 @@ export default [
         taskName: `Ensure carousel annotations stay hidden. Not the perfect solution to when afterword dot is still selected, but no annotations remain for song. But it's fine for now.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Remove verse even filter.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

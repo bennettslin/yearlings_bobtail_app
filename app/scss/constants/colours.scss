@@ -62,13 +62,19 @@ $bgColour__accessedUnderlineHover__light: #8ca;
  */
 $bgColour__accessedUnderlineActive: #7d9;
 
+// Verse colours
 $bgColour__beforeSelected: #fffaef;
+$bgColour__beforeSelected__even: #eee9de;
 $bgColour__afterSelected: #faefff;
+$bgColour__afterSelected__even: #e9deee;
+$bgColour__noIndex: #ddd;
 
 // Slider verse colours.
 $bgColour__beforeSlider: #a87;
+$bgColour__beforeSlider__even: #976;
 $bgColour__afterSlider: #87a;
-$bgColour__sideSlider: #888;
+$bgColour__afterSlider__even: #769;
+$bgColour__noIndexSlider: #888;
 
 // Audio related colours.
 $bgColour__audioPlay: #6a8;

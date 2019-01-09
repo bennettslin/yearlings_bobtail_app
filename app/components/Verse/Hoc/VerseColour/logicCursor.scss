@@ -9,11 +9,6 @@
     &.VerseColour__interactivated {
 
         background-color: $bgColour__audioHighlight;
-
-        // Nesting here for simplicity.
-        .colourFilter__verse__even {
-            display: none;
-        }
     }
 }
 
@@ -60,11 +55,6 @@
             left: -$js__margin__thin;
             height: calc(100% + #{$js__margin__thin * 2});
             width: calc(100% + #{$js__margin__thin * 2});
-        }
-
-        // "Grandchild even filter."
-        .GcE {
-            display: none;
         }
     }
 
