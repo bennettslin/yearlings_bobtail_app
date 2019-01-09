@@ -10,10 +10,11 @@ const _registerWikiLinksForCard = ({
     entity
 }) => {
 
-    // Add the wiki index.
+    // If it's not an array or an object, just exit now.
     if (!entity || typeof entity !== 'object') {
         return false
 
+    // It's an array, so recurse.
     } else if (Array.isArray(entity)) {
         return entity.reduce((keyFound, element) => {
 
@@ -22,9 +23,22 @@ const _registerWikiLinksForCard = ({
                 annotation,
                 entity: element
             }) || keyFound
+
         }, false)
 
+    // It's an object.
     } else {
+        /**
+         * The anchor is nested further, to accommodate italic text, for
+         * example, so recurse.
+         */
+        if (entity.lyric) {
+            return _registerWikiLinksForCard({
+                annotation,
+                entity: entity.lyric
+            })
+        }
+
         return keys(entity).reduce((keyFound, currentKey) => {
             const hasWiki = Boolean(entity[WIKI])
 
