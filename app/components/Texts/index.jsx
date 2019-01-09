@@ -15,31 +15,51 @@ const propTypes = {
             PropTypes.array,
             PropTypes.object
         ]),
-        isWormholeDestinationVerse: PropTypes.bool
+        isFullWormholeDestinationVerse: PropTypes.bool
     },
 
     Texts = memo(({
         text: textEntity,
-        isWormholeDestinationVerse,
+
+        // This is true only once. It is false in every subsequent recursion.
+        isFullWormholeDestinationVerse = false,
+        beginsWormholeDestinationVerse: prevBeginsWormholeDestinationVerse,
+        endsWormholeDestinationVerse: prevEndsWormholeDestinationVerse,
         ...other
 
     }) => {
+
         return (Array.isArray(textEntity)) ? (
 
             textEntity.map((textEntry, index) => {
+                const
+                    /**
+                     * If it's the full wormhole destination verse text, then
+                     * determine if it's the beginning span or ending span. If
+                     * it's a subsequent recursion, ensure that only the first
+                     * entry of the first entry is registered as the beginning,
+                     * and the last entry of the last entry is registered as
+                     * the end.
+                     */
+                    beginsWormholeDestinationVerse =
+                        (
+                            prevBeginsWormholeDestinationVerse ||
+                            isFullWormholeDestinationVerse
+                        ) && index === 0,
+
+                    endsWormholeDestinationVerse =
+                        (
+                            prevEndsWormholeDestinationVerse ||
+                            isFullWormholeDestinationVerse
+                        ) && index === textEntity.length - 1
 
                 return (
                     <Texts {...other}
                         key={index}
-                        {...{ text: textEntry }}
-                        {...isWormholeDestinationVerse && {
-                            /**
-                             * If it's a wormhole's destination verse text,
-                             * then determine if it's the beginning span or
-                             * ending span.
-                             */
-                            isVerseBeginningSpan: index === 0,
-                            isVerseEndingSpan: index === textEntity.length - 1
+                        {...{
+                            text: textEntry,
+                            beginsWormholeDestinationVerse,
+                            endsWormholeDestinationVerse
                         }}
                     />
                 )
@@ -47,14 +67,21 @@ const propTypes = {
 
         ) : (
             <Text {...other}
-                {...{ text: textEntity }}
-                {...isWormholeDestinationVerse && {
+                {...{
+                    text: textEntity,
+
                     /**
-                     * If it's a wormhole's destination verse text, then as a
-                     * single entity, it's both the beginning and ending span.
+                     * If it's the full wormhole destination verse text, then
+                     * as a single entity, it's both the beginning and ending
+                     * span. If it's a subsequent recursion, just pass in the
+                     * previous value.
                      */
-                    isVerseBeginningSpan: true,
-                    isVerseEndingSpan: true
+                    beginsWormholeDestinationVerse:
+                        isFullWormholeDestinationVerse ||
+                        prevBeginsWormholeDestinationVerse,
+                    endsWormholeDestinationVerse:
+                        isFullWormholeDestinationVerse ||
+                        prevEndsWormholeDestinationVerse
                 }}
             />
         )

@@ -4390,5 +4390,10 @@ export default [
         taskName: `Some refactoring of wormhole logic.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Fix wormhole destination verse text formatting bug.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

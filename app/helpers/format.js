@@ -138,7 +138,7 @@ const _hasSpecialCharacterAtIndex = (text, index) => {
         indexedChar === '!' ||
         indexedChar === ':' ||
         indexedChar === ';' ||
-        indexedChar === '' ||
+        indexedChar === '—' ||
         indexedChar === '…'
 }
 

@@ -122,7 +122,7 @@ class AnnotationWormhole extends PureComponent {
                     <div className="AnnotationWormhole__verse">
                         <span>{'\u201c'}</span>
                         <Texts
-                            isWormholeDestinationVerse
+                            isFullWormholeDestinationVerse
                             {...{
                                 text,
                                 wormholeAnnotationIndex: annotationIndex

@@ -19,8 +19,8 @@ const defaultProps = {
         isVerseLyric: PropTypes.bool,
         isEmphasis: PropTypes.bool,
         isItalic: PropTypes.bool,
-        isVerseBeginningSpan: PropTypes.bool,
-        isVerseEndingSpan: PropTypes.bool,
+        beginsWormholeDestinationVerse: PropTypes.bool,
+        endsWormholeDestinationVerse: PropTypes.bool,
         isWormholeDestinationAnchor: PropTypes.bool,
         isTextAnchor: PropTypes.bool
     },
@@ -31,8 +31,8 @@ const defaultProps = {
         isVerseLyric,
         isEmphasis,
         isItalic,
-        isVerseBeginningSpan,
-        isVerseEndingSpan,
+        beginsWormholeDestinationVerse,
+        endsWormholeDestinationVerse,
         isWormholeDestinationAnchor,
         isTextAnchor
 
@@ -64,14 +64,14 @@ const defaultProps = {
          */
         if (
             !isTextAnchor &&
-            !isVerseBeginningSpan &&
+            !beginsWormholeDestinationVerse &&
             text.indexOf('\'s') !== 0
         ) {
             formattedText = ` ${formattedText}`
         }
 
         // Last verse span in wormhole will always end in an ellipsis.
-        if (isVerseEndingSpan) {
+        if (endsWormholeDestinationVerse) {
             formattedText = getFormattedEndingVerseSpanText(formattedText)
         }
 
