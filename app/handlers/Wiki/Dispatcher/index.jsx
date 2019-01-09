@@ -24,7 +24,7 @@ class WikiDispatcher extends PureComponent {
 
     dispatchWiki = (
         selectedWikiIndex,
-        carouselAnnotationIndex
+        carouselAnnotationIndex = 0
     ) => {
         const { isWikiDotSelected } = this.props
 
