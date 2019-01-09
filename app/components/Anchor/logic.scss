@@ -25,17 +25,8 @@
             }
         }
 
-        .Underline__bar__default {
+        .Underline__bar {
             visibility: visible;
-        }
-
-        &.Anchor__accessed {
-            .Underline__bar__default {
-                visibility: hidden;
-            }
-            .Underline__bar__accessed {
-                visibility: visible;
-            }
         }
     }
 }
