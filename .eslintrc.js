@@ -23,6 +23,7 @@ module.exports = {
     "globals": {
         "expect": true,
         "logAccess": true,
+        "logEvent": true,
         "logFocus": true,
         "logMount": true,
         "logParse": true,

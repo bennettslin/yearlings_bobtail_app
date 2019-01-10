@@ -38,6 +38,9 @@ const
         color: '#b84',
         fontSize: '1.1em'
     }),
+    EVENT_STYLE = _getStyles({
+        color: '#8ad'
+    }),
     FOCUS_STYLE = _getStyles({
         color: '#874',
         fontSize: '1em'
@@ -82,6 +85,13 @@ export const logAccess = (log) => {
     _logInfo({
         log,
         styles: ACCESS_STYLE
+    })
+}
+export const logEvent = (componentName, e) => {
+    const { type } = e
+    _logInfo({
+        log: `Event ${type} from ${componentName}.`,
+        styles: EVENT_STYLE
     })
 }
 export const logFocus = (log) => {

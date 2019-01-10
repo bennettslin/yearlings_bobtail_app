@@ -1,5 +1,6 @@
 import {
     logAccess,
+    logEvent,
     logFocus,
     logMount,
     logParse,
@@ -20,6 +21,7 @@ import {
 // }
 
 global.logAccess = logAccess
+global.logEvent = logEvent
 global.logFocus = logFocus
 global.logMount = logMount
 global.logParse = logParse
