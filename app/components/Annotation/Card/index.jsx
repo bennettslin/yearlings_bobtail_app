@@ -1,6 +1,6 @@
 // PureComponent to show individual annotation note or all wormholes.
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -65,33 +65,30 @@ class AnnotationCard extends PureComponent {
                     isWormholeCard && 'AnnotationCard__wormhole',
                     'fontSize__verse'
                 )}>
-                    {!isWormholeCard && (
-                        <DotSequence
-                            inAnnotationCard
-                            {...{ dotKeys }}
+                    {isTextCard ? (
+                        <___>
+                            <DotSequence
+                                inAnnotationCard
+                                {...{ dotKeys }}
+                            />
+                            <div {...{ className: 'AnnotationCard__text' }}>
+                                <Texts
+                                    {...{
+                                        text,
+                                        annotationIndex
+                                    }}
+                                />
+                            </div>
+                        </___>
+                    ) : (
+                        <AnnotationWormholes
+                            {...{
+                                isSelected,
+                                annotationIndex,
+                                cardIndex
+                            }}
                         />
                     )}
-
-                    <div
-                        {...{ className: 'AnnotationCard__text' }}
-                    >
-                        {isTextCard ? (
-                            <Texts
-                                {...{
-                                    text,
-                                    annotationIndex
-                                }}
-                            />
-                        ) : (
-                            <AnnotationWormholes
-                                {...{
-                                    isSelected,
-                                    annotationIndex,
-                                    cardIndex
-                                }}
-                            />
-                        )}
-                    </div>
                 </div>
             )
 
