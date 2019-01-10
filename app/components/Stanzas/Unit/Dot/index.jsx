@@ -90,12 +90,12 @@ class UnitDot extends PureComponent {
         return (
             <UnitDotView
                 {...{
-                    setRef: this.setLyricAnnotationElement,
                     dotKeys,
                     isSelected,
                     isAccessed,
                     annotationIndex,
-                    handleAnchorClick: this._handleDotButtonClick
+                    handleAnchorClick: this._handleDotButtonClick,
+                    setLyricAnnotationElement: this.setLyricAnnotationElement
                 }}
             />
         )
@@ -110,20 +110,19 @@ const propTypes = {
     // From parent.
         dotKeys: PropTypes.object.isRequired,
         annotationIndex: PropTypes.number.isRequired,
-        setRef: PropTypes.func.isRequired
+        setLyricAnnotationElement: PropTypes.func.isRequired
     },
 
     UnitDotView = memo(({
         // From controller.
         dotKeys,
         annotationIndex,
-        setRef,
+        setLyricAnnotationElement,
         ...other
     }) => {
 
         return (
             <div
-                key={annotationIndex}
                 className={cx(
                     'UnitDot',
                     'Unit__column',
@@ -141,12 +140,13 @@ const propTypes = {
                 )}
             >
                 {/* Scroll to unit dot at bottom, not unit middle. */}
-                <div ref={setRef}>
-                    <Anchor
-                        {...other}
-                        {...{ stanzaDotKeys: dotKeys }}
-                    />
-                </div>
+                <Anchor
+                    {...other}
+                    {...{
+                        stanzaDotKeys: dotKeys,
+                        setLyricAnnotationElement
+                    }}
+                />
             </div>
         )
     })
