@@ -19,10 +19,11 @@ const defaultProps = {
         isVerseLyric: PropTypes.bool,
         isEmphasis: PropTypes.bool,
         isItalic: PropTypes.bool,
-        beginsWormholeDestinationVerse: PropTypes.bool,
-        endsWormholeDestinationVerse: PropTypes.bool,
+        beginsVerse: PropTypes.bool.isRequired,
+        endsVerse: PropTypes.bool,
+        isWormholeDestinationVerse: PropTypes.bool,
         isWormholeDestinationAnchor: PropTypes.bool,
-        isTextAnchor: PropTypes.bool
+        isWikiTextAnchor: PropTypes.bool
     },
 
     TextSpan = memo(({
@@ -31,10 +32,11 @@ const defaultProps = {
         isVerseLyric,
         isEmphasis,
         isItalic,
-        beginsWormholeDestinationVerse,
-        endsWormholeDestinationVerse,
+        beginsVerse,
+        endsVerse,
+        isWormholeDestinationVerse,
         isWormholeDestinationAnchor,
-        isTextAnchor
+        isWikiTextAnchor
 
     }) => {
 
@@ -52,26 +54,25 @@ const defaultProps = {
             Tag = 'i'
         }
 
-        // And nonbreaking space between last two words.
+        // Add nonbreaking space between last two words.
         if (isVerseLyric) {
             formattedText = getFormattedLyricSpanText(formattedText)
         }
 
         /**
-         * Subsequent spans of text on a line will begin with a space, unless it
-         * begins with "'s," or it's the beginning verse span in a wormhole, or
-         * it's a wiki text anchor.
+         * Subsequent spans of text on a line will begin with a space, unless
+         * it begins with "'s," or it's a wiki text anchor.
          */
         if (
-            !isTextAnchor &&
-            !beginsWormholeDestinationVerse &&
+            !beginsVerse &&
+            !isWikiTextAnchor &&
             text.indexOf('\'s') !== 0
         ) {
             formattedText = ` ${formattedText}`
         }
 
-        // Last verse span in wormhole will always end in an ellipsis.
-        if (endsWormholeDestinationVerse) {
+        // Last verse span in wormhole destination verse will end in ellipsis.
+        if (isWormholeDestinationVerse && endsVerse) {
             formattedText = getFormattedEndingVerseSpanText(formattedText)
         }
 

@@ -8,23 +8,25 @@ import Text from './Text'
  * CONTAINER *
  *************/
 
+const defaultProps = {
+    hasRecursed: false
+}
+
 const propTypes = {
     // From parent.
+        hasRecursed: PropTypes.bool.isRequired,
         text: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.array,
             PropTypes.object
-        ]),
-        isFullWormholeDestinationVerse: PropTypes.bool
+        ])
     },
 
     Texts = memo(({
+        hasRecursed,
         text: textEntity,
-
-        // This is true only once. It is false in every subsequent recursion.
-        isFullWormholeDestinationVerse = false,
-        beginsWormholeDestinationVerse: prevBeginsWormholeDestinationVerse,
-        endsWormholeDestinationVerse: prevEndsWormholeDestinationVerse,
+        beginsVerse: prevBeginsVerse,
+        endsVerse: prevEndsVerse,
         ...other
 
     }) => {
@@ -34,32 +36,28 @@ const propTypes = {
             textEntity.map((textEntry, index) => {
                 const
                     /**
-                     * If it's the full wormhole destination verse text, then
-                     * determine if it's the beginning span or ending span. If
-                     * it's a subsequent recursion, ensure that only the first
-                     * entry of the first entry is registered as the beginning,
-                     * and the last entry of the last entry is registered as
-                     * the end.
+                     * If it's the root text component, then determine if it's
+                     * the beginning or ending span. If it's a subsequent
+                     * recursion, then ensure that only the first entry of the
+                     * first entry is registered as the beginning, and the last
+                     * entry of the last entry is registered as the end.
                      */
-                    beginsWormholeDestinationVerse =
-                        (
-                            prevBeginsWormholeDestinationVerse ||
-                            isFullWormholeDestinationVerse
-                        ) && index === 0,
+                    beginsVerse =
+                        (prevBeginsVerse || !hasRecursed) &&
+                            index === 0,
 
-                    endsWormholeDestinationVerse =
-                        (
-                            prevEndsWormholeDestinationVerse ||
-                            isFullWormholeDestinationVerse
-                        ) && index === textEntity.length - 1
+                    endsVerse =
+                        (prevEndsVerse || !hasRecursed) &&
+                            index === textEntity.length - 1
 
                 return (
                     <Texts {...other}
                         key={index}
+                        hasRecursed
                         {...{
                             text: textEntry,
-                            beginsWormholeDestinationVerse,
-                            endsWormholeDestinationVerse
+                            beginsVerse,
+                            endsVerse
                         }}
                     />
                 )
@@ -71,22 +69,19 @@ const propTypes = {
                     text: textEntity,
 
                     /**
-                     * If it's the full wormhole destination verse text, then
-                     * as a single entity, it's both the beginning and ending
-                     * span. If it's a subsequent recursion, just pass in the
-                     * previous value.
+                     * If it's the root text component, then as a single
+                     * entity, it is, or has, both the beginning and ending
+                     * span. But if it's a subsequent recursion, then just pass
+                     * in the previous value.
                      */
-                    beginsWormholeDestinationVerse:
-                        isFullWormholeDestinationVerse ||
-                        prevBeginsWormholeDestinationVerse,
-                    endsWormholeDestinationVerse:
-                        isFullWormholeDestinationVerse ||
-                        prevEndsWormholeDestinationVerse
+                    beginsVerse: prevBeginsVerse || !hasRecursed,
+                    endsVerse: prevEndsVerse || !hasRecursed
                 }}
             />
         )
     })
 
+Texts.defaultProps = defaultProps
 Texts.propTypes = propTypes
 
 export default Texts

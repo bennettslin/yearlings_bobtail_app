@@ -76,9 +76,7 @@ class VerseLine extends PureComponent {
                         // Stanzas, left, centre, right.
                         `VerseLine__${columnKey}`,
 
-                        {
-                            'VerseLine__truncatable': isTruncatable
-                        }
+                        { 'VerseLine__truncatable': isTruncatable }
                     )}
                 >
                     <Texts {...other}

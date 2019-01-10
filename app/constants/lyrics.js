@@ -18,8 +18,8 @@ module.exports = {
     WIKI_INDEX: 'wikiIndex',
 
     IS_UNIT_DOT: 'isUnitDot',
-    IS_VERSE_BEGINNING_SPAN: 'beginsWormholeDestinationVerse',
-    IS_VERSE_ENDING_SPAN: 'endsWormholeDestinationVerse',
+    IS_VERSE_BEGINNING_SPAN: 'beginsVerse',
+    IS_VERSE_ENDING_SPAN: 'endsVerse',
 
     REFRAIN: 'refrain',
     VERSES: 'verse',

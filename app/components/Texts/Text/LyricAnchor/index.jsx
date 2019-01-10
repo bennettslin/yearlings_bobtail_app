@@ -182,8 +182,11 @@ class TextLyricAnchor extends PureComponent {
                         text: words.map((word, index) => (
                             <Texts {...other}
                                 key={index}
-                                isTextAnchor
-                                {...{ text: word }}
+                                hasRecursed
+                                {...{
+                                    text: word,
+                                    isWikiTextAnchor
+                                }}
                             />
                         )),
                         sequenceDotKeys: dotKeys,

@@ -45,6 +45,7 @@ const propTypes = {
             if (isItalic || isEmphasis) {
                 return (
                     <Texts {...props}
+                        hasRecursed
                         {...{
                             isItalic,
                             isEmphasis,
@@ -83,6 +84,7 @@ const propTypes = {
 
                     return (
                         <Texts {...other}
+                            hasRecursed
                             {...{
                                 text,
                                 isWormholeDestinationAnchor
