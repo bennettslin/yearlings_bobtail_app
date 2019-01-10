@@ -1,36 +1,6 @@
 export default [
     {
-        taskName: `Include saturation in logic to determine final face hsla.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Followup on transition work. Can it be improved?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Cube and presence transition order`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects? Playing verse gradient?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Add title to lyric column in desktop. Also choose font.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Redo how presences are structured. Store info in a config?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Try out Vivus animations.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -40,23 +10,6 @@ export default [
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    // Major refactors.
-    {
-        taskName: `Wire on puppets and others.`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Shadows for presences.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Three-dimensionality of cutouts.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     /**
@@ -163,6 +116,36 @@ export default [
     },
 
     /**
+     * Low priority tasks to reduce DOM nodes. Max is currently Constellations,
+     * with 5523 upon load. (document.querySelectorAll('*').length)
+     */
+    {
+        taskName: `Just have a single span of text in anchors, rather than both plain text and link.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Remove VerseColor by just applying its classes to parent.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Mount VerseTracker upon transition.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Don't have annotation and unit tabs in mobile.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Make slider tabs a pseudo element, and apply drop shadow instead of box shadow.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    /**
      * Final UI.
      */
     {
@@ -170,23 +153,30 @@ export default [
         workedHours: 1,
         neededHours: 5
     },
-
     {
         taskName: `Finalise slider and cursor UI.`,
         workedHours: 0,
         neededHours: 8
     },
-
     {
         taskName: `Finalise menu UI.`,
         workedHours: 0,
         neededHours: 5
     },
-
     {
         taskName: `Finalise text styling of different annotation cards.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Figure out VerseTracker gradient.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     /**
@@ -197,10 +187,55 @@ export default [
         workedHours: 0,
         neededHours: 5
     },
+    {
+        taskName: `Include saturation in logic to determine final face hsla.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Followup on transition work. Can it be improved?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Cube and presence transition order`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Redo how presences are structured. Store info in a config?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Try out Vivus animations.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Wire on puppets and others.`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Shadows for presences.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Three-dimensionality of cutouts.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     /**
      * Final before release.
      */
+    {
+        taskName: `Get rid of getDefinedOnlyPayload, once I've confirmed that nothing ever passes undefined value.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,

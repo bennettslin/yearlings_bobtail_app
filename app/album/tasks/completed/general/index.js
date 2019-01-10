@@ -4405,5 +4405,10 @@ export default [
         taskName: `Remove verse even filter.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `General refactoring.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]
