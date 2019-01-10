@@ -46,9 +46,9 @@ $height___overviewToggle__phone:
 
     /**
      * Allow the left shelf not to lose stacking order despite transitioning
-     * opacity. Must be high enough to override nav toggle as well.
+     * opacity.
      */
-     z-index: $zIndex__carouselNavButton;
+     z-index: $zIndex__leftShelf;
 
     .DW__mobileNotPhone
     & {
