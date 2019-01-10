@@ -32,13 +32,7 @@ const AnchorText = memo(({
             return (
                 <___ key={index}>
                     {Boolean(index) && ' '}
-                    <span
-                        {...{
-                            className: cx(
-                                'AnchorText'
-                            )
-                        }}
-                    >
+                    <span className="AnchorText">
                         {isDesktop && (
                             <Underline
                                 {...{

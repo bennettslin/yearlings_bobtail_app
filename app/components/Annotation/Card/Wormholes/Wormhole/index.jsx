@@ -3,7 +3,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import cx from 'classnames'
 
 import SongDispatcher from '../../../../../handlers/Song/Dispatcher'
 import Texts from '../../../../Texts'
@@ -97,11 +96,8 @@ class AnnotationWormhole extends PureComponent {
                 verseObject[columnKey]
 
         return (
-            <div
-                className={cx(
-                    'AnnotationWormhole'
-                )}
-            >
+            <div className="AnnotationWormhole">
+
                 {/* Wrap button so it won't get squished if text wraps. */}
                 <div className="AnnotationWormhole__button">
                     <Button
