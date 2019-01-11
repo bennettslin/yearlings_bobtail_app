@@ -25,9 +25,14 @@ export default [
      * Mobile bugs.
      */
     {
-        taskName: `Touch events need to be handled better.`,
-        workedHours: 0,
+        taskName: `Touch events need to be handled better. Confirm fixes in build..`,
+        workedHours: 2,
         neededHours: 5
+    },
+    {
+        taskName: `Weirdness in mobile where interactivated anchor in dots slide retains focus.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Window size shouldn't readjust if just height.`,
@@ -35,7 +40,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `iOS scrolling isn't smooth.`,
+        taskName: `iOS scrolling isn't smooth. Confirm fix in build.`,
         workedHours: 0,
         neededHours: 1
     },

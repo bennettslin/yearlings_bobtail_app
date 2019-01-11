@@ -160,16 +160,13 @@ class FocusContainer extends PureComponent {
     }
 
     _handleTouchMove = (e) => {
-        // logEvent('Focus', e)
         this.dispatchTouchMove(e)
     }
 
     _handleTouchEnd = (e) => {
-        logEvent('Focus', e)
-
         const isSliderTouchEnding = this.dispatchTouchEnd()
-
         if (isSliderTouchEnding) {
+            logEvent('Focus', e)
             /**
              * Ignore body click event that gets triggered after touch end on
              * slider, to prevent it from closing out of overlay.
@@ -227,13 +224,15 @@ class FocusContainer extends PureComponent {
                     className: 'FocusContainer',
                     tabIndex: -1,
                     onClick: this._handleBodyClick,
-                    onTouchStart: this._handleBodyClick,
+
                     onMouseMove: this._handleTouchMove,
                     onTouchMove: this._handleTouchMove,
+
                     onMouseUp: this._handleTouchEnd,
                     onMouseLeave: this._handleTouchEnd,
                     onTouchEnd: this._handleTouchEnd,
                     onTouchCancel: this._handleTouchEnd,
+
                     onKeyDown: this._handleKeyDownPress,
                     onKeyUp: this._handleKeyUpPress
                 }}

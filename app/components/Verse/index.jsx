@@ -182,8 +182,7 @@ const verseViewPropTypes = {
 
                         logicSelectors
                     ),
-                    onClick: handleInteractivatableClick,
-                    onTouchStart: handleInteractivatableClick
+                    onClick: handleInteractivatableClick
                 }}
             >
                 {children}

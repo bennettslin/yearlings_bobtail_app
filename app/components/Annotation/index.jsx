@@ -65,8 +65,7 @@ class Annotation extends PureComponent {
                         className: cx(
                             'Annotation'
                         ),
-                        onClick: this._handleContainerClick,
-                        onTouchStart: this._handleContainerClick
+                        onClick: this._handleContainerClick
                     }}
                 >
                     <AnnotationHeader

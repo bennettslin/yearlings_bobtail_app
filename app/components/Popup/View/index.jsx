@@ -97,8 +97,7 @@ const propTypes = {
                         'boxShadow__popupView'
                     )}
                     {...{
-                        onClick: handleContainerClick,
-                        onTouchStart: handleContainerClick
+                        onClick: handleContainerClick
                     }}
                 >
                     {children}

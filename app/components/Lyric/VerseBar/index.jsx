@@ -108,8 +108,7 @@ class VerseBar extends PureComponent {
                 )}
                 {...{
                     onWheel: handleVerseBarWheel,
-                    onClick: this._handleVerseBarSelect,
-                    onTouchStart: this._handleVerseBarSelect
+                    onClick: this._handleVerseBarSelect
                 }}
             >
                 <div

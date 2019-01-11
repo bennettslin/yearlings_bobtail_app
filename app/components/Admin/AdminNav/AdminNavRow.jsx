@@ -86,10 +86,7 @@ const AdminNavRowView = ({
         <div className="text-cell-wrapper">
             <a
                 className="text-cell text"
-                {...{
-                    onClick,
-                    onTouchStart: onClick
-                }}
+                {...{ onClick }}
             >
                 {songTitle}
             </a>

@@ -115,8 +115,7 @@ class Anchor extends PureComponent {
 
                         className
                     ),
-                    onClick: this._handleClick,
-                    onTouchStart: this._handleClick
+                    onClick: this._handleClick
                 }}
             >
                 {showDotSequence && (

@@ -93,8 +93,7 @@ class Button extends Component {
                         },
                         className
                     ),
-                    onClick: this._handleClick,
-                    onTouchStart: this._handleClick
+                    onClick: this._handleClick
                 }}
             >
                 <div className={cx(

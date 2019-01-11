@@ -88,8 +88,7 @@ class DotsSlide extends PureComponent {
                     <div
                         {...{
                             className: 'DotsSlideSelects',
-                            onClick: this._handleContainerClick,
-                            onTouchStart: this._handleContainerClick
+                            onClick: this._handleContainerClick
                         }}
                     >
                         {DOT_KEYS_ARRAY_CONFIGS.map((arrayConfig, arrayIndex) => {

@@ -1,6 +1,10 @@
 .CarouselScroll {
     display: flex;
     overflow-x: scroll;
+
+    // Make scrolling smooth in iOS.
+    -webkit-overflow-scrolling: touch;
+
     height: 100%;
 
     .DW__desktop

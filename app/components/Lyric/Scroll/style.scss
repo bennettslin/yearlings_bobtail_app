@@ -4,6 +4,9 @@
     width: 100%;
     overflow-y: scroll;
 
+    // Make scrolling smooth in iOS.
+    -webkit-overflow-scrolling: touch;
+
     line-height: 150%;
 
     &:focus {
