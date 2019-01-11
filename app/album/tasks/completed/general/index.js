@@ -4410,5 +4410,15 @@ export default [
         taskName: `General refactoring.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Touch events need to be handled better. Confirm fixes in build..`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `iOS scrolling isn't smooth. Confirm fix in build.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

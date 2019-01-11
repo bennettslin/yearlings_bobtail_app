@@ -8,7 +8,10 @@
     .TW__sliderNotMoving.TW__verseActive
     &.VerseColour__interactivated {
 
-        background-color: $bgColour__audioHighlight;
+        // Override even verse shading.
+        &, &.GcE {
+            background-color: $bgColour__audioHighlight;
+        }
     }
 }
 
