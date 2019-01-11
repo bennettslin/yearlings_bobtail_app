@@ -154,6 +154,10 @@ export const LYRIC_DEFAULTS = {
     isLyricLogue: isStoredLogue
 }
 
+export const MOBILE_DEFAULTS = {
+    deviceSupportsTouch: false
+}
+
 export const OPTION_DEFAULTS = {
     selectedOverviewOption:
         getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,

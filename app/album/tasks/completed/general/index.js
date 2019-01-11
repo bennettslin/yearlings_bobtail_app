@@ -4420,5 +4420,10 @@ export default [
         taskName: `iOS scrolling isn't smooth. Confirm fix in build.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Weirdness in mobile where interactivated anchor in dots slide retains focus. Fix by adding deviceSupportsTouch flag to store.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

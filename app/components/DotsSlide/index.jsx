@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import { connect } from 'react-redux'
 import { resetInteractivatedDots } from 'flux/dotsSlide/action'
 
@@ -21,13 +22,15 @@ const mapStateToProps = ({
         isDotsSlideShown
     },
     dotsStore: { dotsBitNumber },
-    dotsSlideStore: { dotsSlideBitNumber }
+    dotsSlideStore: { dotsSlideBitNumber },
+    mobileStore: { deviceSupportsTouch }
 }) => ({
     accessedDotIndex,
     isAccessOn,
     isDotsSlideShown,
     dotsBitNumber,
-    dotsSlideBitNumber
+    dotsSlideBitNumber,
+    deviceSupportsTouch
 })
 
 class DotsSlide extends PureComponent {
@@ -39,6 +42,7 @@ class DotsSlide extends PureComponent {
         accessedDotIndex: PropTypes.number,
         dotsBitNumber: PropTypes.number.isRequired,
         dotsSlideBitNumber: PropTypes.number.isRequired,
+        deviceSupportsTouch: PropTypes.bool.isRequired,
         resetInteractivatedDots: PropTypes.func.isRequired
     }
 
@@ -66,7 +70,8 @@ class DotsSlide extends PureComponent {
         const {
                 isAccessOn,
                 isDotsSlideShown,
-                accessedDotIndex
+                accessedDotIndex,
+                deviceSupportsTouch
             } = this.props,
 
             selectedDotKeys = this.getSelectedDotKeys(),
@@ -87,7 +92,10 @@ class DotsSlide extends PureComponent {
                 <div className="DotsSlide">
                     <div
                         {...{
-                            className: 'DotsSlideSelects',
+                            className: cx(
+                                'DotsSlideSelects',
+                                !deviceSupportsTouch && 'DotsSlide__canHover'
+                            ),
                             onClick: this._handleContainerClick
                         }}
                     >

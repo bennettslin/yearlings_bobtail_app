@@ -60,7 +60,7 @@ $margin__dotsContainer__phone: 8px;
 
     .DW__mobileNotTablet
     & {
-        padding: $js__margin__thin;
+        padding: $js__margin__thick * 0.75;
     }
 }
 

@@ -12,12 +12,12 @@ $length__dotsSlideSelect__tablet:
 
     .DW__mini
     & {
-        padding: $js__margin__thin * 2;
+        padding: $js__margin__thick * 0.75;
     }
 
     .DW__phone
     & {
-        padding: $js__margin__thin;
+        padding: $js__margin__thick * 0.5;
     }
 }
 
@@ -54,6 +54,7 @@ $length__dotsSlideSelect__tablet:
     opacity: 0;
     transition: opacity $animationDuration__default;
 
+    .DotsSlide__canHover
     .DotsSlideSelect:hover
     &,
 

@@ -25,11 +25,6 @@ export default [
      * Mobile bugs.
      */
     {
-        taskName: `Weirdness in mobile where interactivated anchor in dots slide retains focus.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Window size shouldn't readjust if iOS viewport just changed height?`,
         workedHours: 0,
         neededHours: 3

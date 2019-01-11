@@ -7,7 +7,7 @@ import { updateSelectedStore } from 'flux/selected/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateTransientStore } from 'flux/transient/action'
 
-import ListenerContainer from '../Listener'
+import ListenContainer from '../Listen'
 import SceneChangeUpdateDispatcher from '../../listeners/SceneChange/Update'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
@@ -151,7 +151,7 @@ class RoutingContainer extends PureComponent {
     render() {
         return (
             <___>
-                <ListenerContainer />
+                <ListenContainer />
                 <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )

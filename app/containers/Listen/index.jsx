@@ -12,6 +12,7 @@ import LogueListener from '../../listeners/Logue'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
 import MainListener from '../../listeners/Main'
+import MobileListener from '../../listeners/Mobile'
 import NavListener from '../../handlers/Nav/Listener'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
@@ -35,10 +36,10 @@ import LogManager from '../../managers/Log'
 
 import FocusContainer from '../Focus'
 
-class ListenerContainer extends PureComponent {
+class ListenContainer extends PureComponent {
 
     componentDidMount() {
-        logMount('ListenerContainer')
+        logMount('ListenContainer')
     }
 
     render() {
@@ -56,6 +57,7 @@ class ListenerContainer extends PureComponent {
                 <LyricListener />
                 <LyricIndicesListener />
                 <MainListener />
+                <MobileListener />
                 <NavListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
@@ -83,4 +85,4 @@ class ListenerContainer extends PureComponent {
     }
 }
 
-export default ListenerContainer
+export default ListenContainer
