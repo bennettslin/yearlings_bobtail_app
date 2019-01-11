@@ -17,10 +17,12 @@ const mapStateToProps = ({
     lyricStore: {
         canLyricCarouselUpdate,
         lyricSongIndex
-    }
+    },
+    mobileStore: { deviceSupportsTouch }
 }) => ({
     canLyricCarouselUpdate,
-    lyricSongIndex
+    lyricSongIndex,
+    deviceSupportsTouch
 })
 
 /*************
@@ -33,6 +35,7 @@ class LyricScroll extends PureComponent {
         // Through Redux.
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
+        deviceSupportsTouch: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -79,8 +82,8 @@ class LyricScroll extends PureComponent {
         this.dispatchVerseBarWheel(e, this.lyricElement)
     }
 
-    _handleWheel = (e) => {
-        this.dispatchLyricWheel(e, this.lyricElement)
+    _handleScroll = (e) => {
+        this.dispatchLyricScroll(e, this.lyricElement)
     }
 
     _handleTransitionEntered = () => {
@@ -94,6 +97,7 @@ class LyricScroll extends PureComponent {
     render() {
         const {
             canLyricCarouselUpdate,
+            deviceSupportsTouch,
             determineVerseBars
         } = this.props
 
@@ -120,8 +124,14 @@ class LyricScroll extends PureComponent {
                                  */
                                 'gradientMask__lyricColumn__mobileCollapsed'
                             ),
-                            tabIndex: -1,
-                            onWheel: this._handleWheel
+                            tabIndex: -1
+                        }}
+                        {...deviceSupportsTouch ? {
+                            // Pass scroll event in touch device.
+                            onScroll: this._handleScroll
+                        } : {
+                            // Pass wheel event in mouse device.
+                            onWheel: this._handleScroll
                         }}
                     >
                         {/* TODO: Undo this. */}

@@ -19,20 +19,25 @@ class LyricWheelDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            dispatchLyricWheel: this.dispatchLyricWheel,
+            dispatchLyricScroll: this.dispatchLyricScroll,
             dispatchVerseBarWheel: this.dispatchVerseBarWheel
         })
     }
 
-    dispatchLyricWheel = (e, lyricElement) => {
+    dispatchLyricScroll = (e, lyricElement) => {
         let hasRoomToScroll = false
 
         // Determine whether there is room to scroll.
         if (e) {
-            const { deltaY = 0 } = e,
+            const {
+                    deltaY = 0,
+                    type
+                } = e,
+                isScrollEvent = type === 'scroll',
                 { scrollTop } = lyricElement
 
-            if (deltaY > 0) {
+            // Only wheel event has deltaY.
+            if (deltaY > 0 || isScrollEvent) {
                 const {
                     scrollHeight,
                     clientHeight
@@ -53,8 +58,11 @@ class LyricWheelDispatcher extends PureComponent {
                     // To improve performance, only set in Redux if needed.
                     this.props.isAutoScroll &&
 
-                    // Select manual scroll only if wheel moved far enough.
-                    (deltaY > 1 || deltaY < -1)
+                    /**
+                     * Select manual scroll only if wheel moved far enough, or
+                     * if it's a scroll event.
+                     */
+                    (deltaY > 1 || deltaY < -1 || isScrollEvent)
                 ) {
                     this.props.updateToggleStore({ isAutoScroll: false })
                 }

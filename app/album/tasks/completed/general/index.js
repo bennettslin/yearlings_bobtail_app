@@ -4425,5 +4425,10 @@ export default [
         taskName: `Weirdness in mobile where interactivated anchor in dots slide retains focus. Fix by adding deviceSupportsTouch flag to store.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Verse bars were not being determined in touch device. Fix by calling with scroll event instead of wheel event in touch device.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
