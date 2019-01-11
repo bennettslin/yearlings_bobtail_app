@@ -29,6 +29,7 @@ class Popup extends PureComponent {
     }
 
     handleContainerClick = (e) => {
+        logEvent('Popup', e)
         this.dispatchStopPropagation(e)
     }
 

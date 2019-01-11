@@ -48,6 +48,8 @@ class Verse extends PureComponent {
     }
 
     _handleInteractivatableClick = (e) => {
+        logEvent('Verse', e)
+
         /**
          * TODO: Now that we're preventing verse from being interactive in
          * mobile, this is kind of messy. Ideally, we should have a single

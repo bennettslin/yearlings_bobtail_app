@@ -29,7 +29,9 @@ class UnitCard extends PureComponent {
         handleVerseSelect: PropTypes.func
     }
 
-    handleStanzaTabClick = () => {
+    handleStanzaTabClick = (e) => {
+        logEvent('UnitCard', e)
+
         const {
                 handleVerseSelect,
                 versesArray

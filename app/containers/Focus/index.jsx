@@ -160,10 +160,12 @@ class FocusContainer extends PureComponent {
     }
 
     _handleTouchMove = (e) => {
+        // logEvent('Focus', e)
         this.dispatchTouchMove(e)
     }
 
-    _handleTouchEnd = () => {
+    _handleTouchEnd = (e) => {
+        logEvent('Focus', e)
 
         const isSliderTouchEnding = this.dispatchTouchEnd()
 
@@ -185,6 +187,8 @@ class FocusContainer extends PureComponent {
     }
 
     _handleBodyClick = (e) => {
+        logEvent('Focus', e)
+
         this.dispatchStopPropagation(e)
 
         if (!this.state.isSliderTouchEnding) {

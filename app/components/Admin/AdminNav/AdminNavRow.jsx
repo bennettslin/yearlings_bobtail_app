@@ -22,7 +22,8 @@ class AdminNavRow extends PureComponent {
         isSelected: PropTypes.bool.isRequired
     }
 
-    _handleSongClick = () => {
+    _handleSongClick = (e) => {
+        logEvent('AdminNavRow', e)
         this.dispatchSong({ selectedSongIndex: this.props.songIndex })
     }
 
@@ -46,10 +47,12 @@ class AdminNavRow extends PureComponent {
         return (
             <___>
                 <AdminNavRowView {...other}
-                    isSelected={isSelected}
-                    songTitle={songTitle}
-                    sumTask={sumTask}
-                    onClick={this._handleSongClick}
+                    {...{
+                        isSelected,
+                        songTitle,
+                        sumTask,
+                        onClick: this._handleSongClick
+                    }}
                 />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
             </___>
@@ -83,8 +86,10 @@ const AdminNavRowView = ({
         <div className="text-cell-wrapper">
             <a
                 className="text-cell text"
-                onClick={onClick}
-                onTouchStart={onClick}
+                {...{
+                    onClick,
+                    onTouchStart: onClick
+                }}
             >
                 {songTitle}
             </a>

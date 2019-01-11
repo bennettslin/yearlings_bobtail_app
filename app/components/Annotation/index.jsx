@@ -33,6 +33,7 @@ class Annotation extends PureComponent {
     }
 
     _handleContainerClick = (e) => {
+        logEvent('Annotation', e)
         if (this.props.isSelected) {
             this.dispatchStopPropagation(e)
         }

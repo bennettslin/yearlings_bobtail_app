@@ -38,6 +38,8 @@ class Anchor extends PureComponent {
     }
 
     _handleClick = (e) => {
+        logEvent('Anchor', e)
+
         if (!this.props.isDisabled) {
 
             if (this.props.handleAnchorClick(e)) {
