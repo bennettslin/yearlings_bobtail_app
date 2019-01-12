@@ -5,6 +5,7 @@ import { updateSessionStore } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
+import AboutDispatcher from '../../../dispatchers/About'
 import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import CarouselDispatcher from '../../../handlers/Carousel/Dispatcher'
@@ -19,7 +20,6 @@ import SceneDispatcher from '../../../dispatchers/Scene'
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
-import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
 
 import { populateRefs } from '../../../helpers/ref'
 
@@ -42,7 +42,7 @@ import {
     SCENE_REWIND_KEY,
     SCENE_FORWARD_KEY,
     TIPS_TOGGLE_KEY,
-    TITLE_TOGGLE_KEY
+    ABOUT_TOGGLE_KEY
 } from 'constants/access'
 import {
     SHOWN,
@@ -57,7 +57,7 @@ class LetterManager extends PureComponent {
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
-        isTitleShown: PropTypes.bool.isRequired,
+        isAboutShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -136,8 +136,8 @@ class LetterManager extends PureComponent {
             case TIPS_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchTips()
                 break
-            case TITLE_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchTitle()
+            case ABOUT_TOGGLE_KEY:
+                keyWasRegistered = this.dispatchAbout()
                 break
             default:
                 keyWasRegistered = false
@@ -159,8 +159,8 @@ class LetterManager extends PureComponent {
             this.dispatchScore(false)
 
         // Close title popup.
-        } else if (this.props.isTitleShown) {
-            this.dispatchTitle(false)
+        } else if (this.props.isAboutShown) {
+            this.dispatchAbout(false)
 
         // Close wiki popup.
         } else if (this.props.selectedWikiIndex) {
@@ -214,7 +214,7 @@ class LetterManager extends PureComponent {
                 <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
-                <TitleDispatcher {...{ getRefs: this._getRefs }} />
+                <AboutDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }
@@ -226,7 +226,7 @@ const mapStateToProps = ({
         isDotsSlideShown,
         isLyricExpanded,
         isScoreShown,
-        isTitleShown
+        isAboutShown
     },
     optionStore: {
         selectedOverviewOption,
@@ -239,7 +239,7 @@ const mapStateToProps = ({
     isDotsSlideShown,
     isLyricExpanded,
     isScoreShown,
-    isTitleShown,
+    isAboutShown,
     selectedAnnotationIndex,
     selectedOverviewOption,
     selectedTipsOption,

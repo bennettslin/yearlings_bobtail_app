@@ -16,6 +16,7 @@ Consolidate styles for child with parent selector nesting
 
 ### Remaining
 
+About (/)
 AccessLetters (/)
 Admin
 Anchor (/)
@@ -48,7 +49,6 @@ Stage (/) (Just rename stuff when picking back up again.)
 Text (/)
 Theatre (/)
 Tips (/)
-Title (/)
 Verse (/)
 Wiki (/)
 

@@ -1,5 +1,5 @@
 /**
- * Field for title toggle, audio section, and scores and tips section. Knows no
+ * Field for about toggle, audio section, and scores and tips section. Knows no
  * state, so should not update.
  */
 
@@ -8,9 +8,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import AboutToggle from '../../About/Toggle'
 import Audio from '../../Audio'
 import ScoresTips from '../../ScoresTips'
-import TitleToggle from '../../Title/Toggle'
 
 import { getMenuMarginInOverlay } from './helper'
 
@@ -55,16 +55,11 @@ class Menu extends PureComponent {
                     }}
                 >
                     <div className={cx(
-                        'MenuChild__title',
+                        'MenuChild__about',
                         'MenuChild',
                         'widths__hiddenInOverlay'
                     )}>
-                        <div className={cx(
-                            'MenuChild__title__child',
-                            'abF'
-                        )}>
-                            <TitleToggle />
-                        </div>
+                        <AboutToggle />
                     </div>
 
                     <div className={cx(

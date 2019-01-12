@@ -1,4 +1,4 @@
-// Popup container for title section.
+// Popup container for tips section.
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'

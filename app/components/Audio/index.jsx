@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 import AudioBanner from './Banner'
 import AudioButtons from './Buttons'
-import TitleToggle from '../Title/Toggle'
+import AboutToggle from '../About/Toggle'
 
 const mapStateToProps = ({
     responsiveStore: { isTwoRowMenu }
@@ -30,7 +30,7 @@ const audioPropTypes = {
                 )}
             >
                 {isTwoRowMenu && (
-                    <TitleToggle isAudioChild />
+                    <AboutToggle isAudioChild />
                 )}
 
                 <AudioBanner />

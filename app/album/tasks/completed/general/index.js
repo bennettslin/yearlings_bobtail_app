@@ -2878,7 +2878,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Title in audio even in phone, fix animation of title/timer.`,
+        taskName: `About in audio even in phone, fix animation of title/timer.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -3584,7 +3584,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Title toggle should not have a variable width. This solution should also make animating to overlay less janky.`,
+        taskName: `About toggle should not have a variable width. This solution should also make animating to overlay less janky.`,
         workedHours: 2,
         neededHours: 2
     },

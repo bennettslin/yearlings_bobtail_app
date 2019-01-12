@@ -1,9 +1,9 @@
-.TitleToggle,
-.Button__titleSize {
+.AboutToggle,
+.Button__aboutSize {
     height: 100%;
 }
 
-.TitleToggle {
+.AboutToggle {
 
     .RW__oneRowMenu
     & {
@@ -12,7 +12,7 @@
     }
 }
 
-.TitleToggleButton__animatable {
+.AboutToggleButton__animatable {
 
     transition:
         top $animationDuration__default,
@@ -26,12 +26,12 @@
     }
 }
 
-.TitleToggle__inAudio {
+.AboutToggle__inAudio {
 
-    width: $js__width__childTitle;
+    width: $js__width__childAbout;
 
     .DW__phone
     & {
-        width: $width__childTitle__phone;
+        width: $width__childAbout__phone;
     }
 }

@@ -281,7 +281,7 @@ export const TOGGLE_DEFAULTS = {
     isDotsSlideShown: false,
     isLyricExpanded: false,
     isScoreShown: false,
-    isTitleShown: false
+    isAboutShown: false
 }
 
 export const TRANSIENT_DEFAULTS = {

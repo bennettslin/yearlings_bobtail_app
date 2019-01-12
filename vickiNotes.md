@@ -3,9 +3,9 @@ Simplify audio options?
 Dot category selection?
 
 TODO
-Title remains fixed in lyric.
-Title annotation is in dot instead.
-Title out of banner.
+About remains fixed in lyric.
+About annotation is in dot instead.
+About out of banner.
 Timer is in slider, and replaced with time remaining when slider is touched.
 
 Carousel just fades into lyric.
@@ -17,4 +17,4 @@ Get rid of repeat audio option. Only pause at end.
 
 Push cubes back just a tad so that curtains don't seem 2d.
 
-Title not updating?
+Annotation title not updating?

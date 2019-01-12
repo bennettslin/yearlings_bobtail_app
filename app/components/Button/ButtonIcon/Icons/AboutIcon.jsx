@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const TitleIcon = ({
+const AboutIcon = ({
     className
 }) => (
     <rect
@@ -20,6 +20,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-TitleIcon.propTypes = propTypes
+AboutIcon.propTypes = propTypes
 
-export default TitleIcon
+export default AboutIcon

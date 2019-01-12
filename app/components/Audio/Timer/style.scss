@@ -1,21 +1,21 @@
 $multiplier__audioTimer__jiffy: 0.66;
 $fontSize__audioTimer: 0.95em;
-$fontSize__audioTimer__titleTimer: 1.6em;
+$fontSize__audioTimer__aboutTimer: 1.6em;
 
-.AudioTimer__titleTimer {
+.AudioTimer__aboutTimer {
     background-color: #dff;
 }
 
 .AudioTimer__base {
     font-size: $fontSize__audioTimer;
 
-    .AudioTimer__titleTimer
+    .AudioTimer__aboutTimer
     & {
-        font-size: $fontSize__audioTimer__titleTimer;
+        font-size: $fontSize__audioTimer__aboutTimer;
     }
 }
 
-.AudioTimer__titleTimer {
+.AudioTimer__aboutTimer {
 
     transition: opacity $animationDuration__default;
 

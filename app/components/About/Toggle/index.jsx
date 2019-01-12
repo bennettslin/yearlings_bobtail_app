@@ -5,14 +5,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TitleDispatcher from '../../../dispatchers/TitleDispatcher'
+import AboutDispatcher from '../../../dispatchers/About'
 import AudioTimer from '../../Audio/Timer'
 import Button from '../../Button'
 
 import { populateRefs } from 'helpers/ref'
 
-import { TITLE_TOGGLE_KEY } from 'constants/access'
-import { TITLE_BUTTON_KEY } from 'constants/buttons'
+import { ABOUT_TOGGLE_KEY } from 'constants/access'
+import { ABOUT_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
     responsiveStore: { isTwoRowMenu }
@@ -20,7 +20,7 @@ const mapStateToProps = ({
     isTwoRowMenu
 })
 
-class TitleToggle extends PureComponent {
+class AboutToggle extends PureComponent {
 
     static defaultProps = {
         isAudioChild: false
@@ -35,7 +35,7 @@ class TitleToggle extends PureComponent {
     }
 
     handleButtonClick = () => {
-        this.dispatchTitle()
+        this.dispatchAbout()
     }
 
     _getRefs = (payload) => {
@@ -48,44 +48,44 @@ class TitleToggle extends PureComponent {
                 isAudioChild
             } = this.props,
 
-            titleButtonChild = (
+            aboutButtonChild = (
                 <Button
-                    buttonName={TITLE_BUTTON_KEY}
-                    className={cx(
-                        { 'Button__title__timerInTitle': isTwoRowMenu }
-                    )}
+                    buttonName={ABOUT_BUTTON_KEY}
+                    // className={cx(
+                    //     { 'Button__about__timerInTitle': isTwoRowMenu }
+                    // )}
                     isCustomSize
-                    accessKey={TITLE_TOGGLE_KEY}
+                    accessKey={ABOUT_TOGGLE_KEY}
                     handleButtonClick={this.handleButtonClick}
                 />
             )
 
         return isAudioChild === isTwoRowMenu && (
             <div className={cx(
-                'TitleToggle',
+                'AboutToggle',
                 {
                     'Audio__child': isAudioChild,
-                    'TitleToggle__inAudio': isAudioChild
+                    'AboutToggle__inAudio': isAudioChild
                 }
             )}>
                 {isTwoRowMenu && (
-                    <AudioTimer isTitleTimer />
+                    <AudioTimer isAboutTimer />
                 )}
 
                 {isTwoRowMenu ? (
                     <div className={cx(
-                        'TitleToggleButton__animatable',
+                        'AboutToggleButton__animatable',
                         'abF'
                     )}>
-                        {titleButtonChild}
+                        {aboutButtonChild}
                     </div>
                 ) : (
-                    titleButtonChild
+                    aboutButtonChild
                 )}
-                <TitleDispatcher {...{ getRefs: this._getRefs }} />
+                <AboutDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }
 }
 
-export default connect(mapStateToProps)(TitleToggle)
+export default connect(mapStateToProps)(AboutToggle)

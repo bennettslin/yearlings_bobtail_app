@@ -13,14 +13,14 @@ const mapStateToProps = ({
     toggleStore: {
         isCarouselShown,
         isScoreShown,
-        isTitleShown
+        isAboutShown
     },
     transientStore: { isOverlayingAnnotation },
     sessionStore: { selectedWikiIndex }
 }) => ({
     isCarouselShown,
     isScoreShown,
-    isTitleShown,
+    isAboutShown,
     isOverlayingAnnotation,
     canLyricCarouselEnter,
     lyricAnnotationIndex,
@@ -35,7 +35,7 @@ class PopupAnnotationListener extends PureComponent {
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
-        isTitleShown: PropTypes.bool.isRequired,
+        isAboutShown: PropTypes.bool.isRequired,
         isOverlayingAnnotation: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         updateTransientStore: PropTypes.func.isRequired
@@ -53,7 +53,7 @@ class PopupAnnotationListener extends PureComponent {
                 isCarouselShown,
                 isOverlayingAnnotation,
                 isScoreShown,
-                isTitleShown,
+                isAboutShown,
                 selectedWikiIndex
             } = this.props,
 
@@ -71,7 +71,7 @@ class PopupAnnotationListener extends PureComponent {
                 ) &&
 
                 !isScoreShown &&
-                !isTitleShown &&
+                !isAboutShown &&
                 !selectedWikiIndex
 
         this.props.updateTransientStore({ isPopupAnnotationVisible })

@@ -4,9 +4,9 @@
 $js__minWidth__childAudio: 720px; // Arbitrary.
 $maxWidth__childAudio: 1000px; // Arbitrary.
 
-$js__width__childTitle: 120px; // Arbitrary.
+$js__width__childAbout: 120px; // Arbitrary.
 
-$width__childTitle__phone: 80px;
+$width__childAbout__phone: 80px;
 
 .Menu {
     height: $js__height__menu;
@@ -68,15 +68,15 @@ $width__childTitle__phone: 80px;
     height: 100%;
 }
 
-.MenuChild__title {
+.MenuChild__about {
     position: relative;
 
-    width: $js__width__childTitle;
+    width: $js__width__childAbout;
 
     .RW__twoRowMenu
     & {
         /**
-         * Don't bother to show if title in audio. Child component also will
+         * Don't bother to show if about in audio. Child component also will
          * not be rendered.
          */
         display: none;
@@ -86,7 +86,7 @@ $width__childTitle__phone: 80px;
 .MenuChild__audio {
     $margin__menuChild: 10px;
 
-    // Audio should shrink at a slower rate than title.
+    // Audio should shrink at a slower rate than about.
     flex-grow: 10;
 
     min-width: $js__minWidth__childAudio;
@@ -148,10 +148,10 @@ $width__childTitle__phone: 80px;
 
     .RW__twoRowMenu
     & {
-        // If title is hidden, remove audio subfield's left margin.
+        // If about is hidden, remove audio subfield's left margin.
         margin-left: 0;
 
-        // Once title is in audio, minWidth doesn't matter.
+        // Once about is in audio, minWidth doesn't matter.
         min-width: 0;
     }
 

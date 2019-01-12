@@ -7,6 +7,10 @@
     }
 }
 
+.ButtonIcon__about {
+    fill: #d88;
+}
+
 .ButtonIcon__audioNext {
     fill: $bgColour__audioSelect;
 }
@@ -110,10 +114,6 @@
 
 .ButtonIcon__tips {
     fill: #dbb;
-}
-
-.ButtonIcon__title {
-    fill: #d88;
 }
 
 .ButtonIcon__disabled {

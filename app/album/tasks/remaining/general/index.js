@@ -95,7 +95,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Title section content.`,
+        taskName: `About section content.`,
         workedHours: 1,
         neededHours: 3
     },

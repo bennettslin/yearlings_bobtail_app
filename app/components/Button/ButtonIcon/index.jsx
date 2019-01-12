@@ -4,6 +4,7 @@ import cx from 'classnames'
 
 import Svg from 'modules/Svg'
 
+import AboutIcon from './Icons/AboutIcon'
 import AudioNextIcon from './Icons/AudioNextIcon'
 import AudioOptionsIcon from './Icons/AudioOptionsIcon'
 import AudioPlayIcon from './Icons/AudioPlayIcon'
@@ -22,10 +23,10 @@ import PopupPreviousIcon from './Icons/PopupPreviousIcon'
 import PopupNextIcon from './Icons/PopupNextIcon'
 import WormholeIcon from './Icons/WormholeIcon'
 import ScoresIcon from './Icons/ScoresIcon'
-import TitleIcon from './Icons/TitleIcon'
 import TipsIcon from './Icons/TipsIcon'
 
 import {
+    ABOUT_BUTTON_KEY,
     AUDIO_NEXT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
@@ -44,11 +45,11 @@ import {
     POPUP_PREVIOUS_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY,
-    TIPS_BUTTON_KEY,
-    TITLE_BUTTON_KEY
+    TIPS_BUTTON_KEY
 } from 'constants/buttons'
 
 const BUTTON_ICONS_MAP = {
+        [ABOUT_BUTTON_KEY]: AboutIcon,
         [AUDIO_NEXT_BUTTON_KEY]: AudioNextIcon,
         [AUDIO_OPTIONS_BUTTON_KEY]: AudioOptionsIcon,
         [AUDIO_PLAY_BUTTON_KEY]: AudioPlayIcon,
@@ -67,8 +68,7 @@ const BUTTON_ICONS_MAP = {
         [POPUP_PREVIOUS_BUTTON_KEY]: PopupPreviousIcon,
         [WORMHOLE_BUTTON_KEY]: WormholeIcon,
         [SCORES_BUTTON_KEY]: ScoresIcon,
-        [TIPS_BUTTON_KEY]: TipsIcon,
-        [TITLE_BUTTON_KEY]: TitleIcon
+        [TIPS_BUTTON_KEY]: TipsIcon
     },
     DEFAULT_COMPONENT = () => (null)
 

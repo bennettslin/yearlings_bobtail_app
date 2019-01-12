@@ -24,7 +24,7 @@ class CloseHandler extends PureComponent {
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
-        isTitleShown: PropTypes.bool.isRequired,
+        isAboutShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -50,6 +50,7 @@ class CloseHandler extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
+        this._handleAboutOpen(prevProps)
         this._handleAnnotationSelect(prevProps)
         this._handleCarouselNavToggle(prevProps)
         this._handleDotsSlideOpen(prevProps)
@@ -58,7 +59,6 @@ class CloseHandler extends PureComponent {
         this._handleTipsShown(prevProps)
         this._handleVerseInteractivate(prevProps)
         this._handleScoreOpen(prevProps)
-        this._handleTitleOpen(prevProps)
         this._handleWikiSelect(prevProps)
     }
 
@@ -210,13 +210,13 @@ class CloseHandler extends PureComponent {
         }
     }
 
-    _handleTitleOpen(prevProps) {
+    _handleAboutOpen(prevProps) {
         const
-            { isTitleShown } = this.props,
-            { isTitleShown: wasTitleShown } = prevProps
+            { isAboutShown } = this.props,
+            { isAboutShown: wasAboutShown } = prevProps
 
-        if (isTitleShown && !wasTitleShown) {
-            this.closeOverlayPopups({ exemptTitle: true })
+        if (isAboutShown && !wasAboutShown) {
+            this.closeOverlayPopups({ exemptAbout: true })
             this.closeMainSections({ exemptAnnotation: true })
         }
     }
@@ -234,12 +234,12 @@ class CloseHandler extends PureComponent {
 
     closeOverlayPopups({
         exemptScore,
-        exemptTitle,
+        exemptAbout,
         exemptWiki
     } = {}) {
         const {
             isScoreShown,
-            isTitleShown,
+            isAboutShown,
             selectedWikiIndex
         } = this.props
 
@@ -250,8 +250,8 @@ class CloseHandler extends PureComponent {
         } else if (isScoreShown && !exemptScore) {
             this.props.updateToggleStore({ isScoreShown: false })
 
-        } else if (isTitleShown && !exemptTitle) {
-            this.props.updateToggleStore({ isTitleShown: false })
+        } else if (isAboutShown && !exemptAbout) {
+            this.props.updateToggleStore({ isAboutShown: false })
 
         } else {
             return false
@@ -331,7 +331,7 @@ const mapStateToProps = ({
         isDotsSlideShown,
         isLyricExpanded,
         isScoreShown,
-        isTitleShown
+        isAboutShown
     },
     sessionStore: {
         selectedWikiIndex,
@@ -343,7 +343,7 @@ const mapStateToProps = ({
     isDotsSlideShown,
     isLyricExpanded,
     isScoreShown,
-    isTitleShown,
+    isAboutShown,
     selectedOverviewOption,
     selectedTipsOption,
     isSongShownOverview,

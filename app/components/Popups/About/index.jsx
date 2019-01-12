@@ -1,29 +1,29 @@
-// Popup container for title section.
+// Popup container for about section.
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-import TitleSection from '../../Title'
+import About from '../../About'
 import Popup from '../../Popup'
 
 const mapStateToProps = ({
-    toggleStore: { isTitleShown }
+    toggleStore: { isAboutShown }
 }) => ({
-    isTitleShown
+    isAboutShown
 })
 
-class TitlePopup extends PureComponent {
+class AboutPopup extends PureComponent {
 
     static propTypes = {
     // Through Redux.
-        isTitleShown: PropTypes.bool.isRequired,
+        isAboutShown: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
 
-    closeTitle = () => {
-        this.props.updateToggleStore({ isTitleShown: false })
+    _closeAbout = () => {
+        this.props.updateToggleStore({ isAboutShown: false })
     }
 
     render() {
@@ -35,12 +35,12 @@ class TitlePopup extends PureComponent {
                 isCardSize
                 hasWidePadding
                 {...{
-                    popupName: 'Title',
-                    isVisible: this.props.isTitleShown,
-                    handleCloseClick: this.closeTitle
+                    popupName: 'About',
+                    isVisible: this.props.isAboutShown,
+                    handleCloseClick: this._closeAbout
                 }}
             >
-                <TitleSection />
+                <About />
             </Popup>
         )
     }
@@ -49,4 +49,4 @@ class TitlePopup extends PureComponent {
 export default connect(
     mapStateToProps,
     { updateToggleStore }
-)(TitlePopup)
+)(AboutPopup)

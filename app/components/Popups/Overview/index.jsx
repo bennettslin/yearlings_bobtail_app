@@ -55,7 +55,7 @@ class OverviewPopup extends PureComponent {
                 !inMain :
 
                 /**
-                 * Always hide overview section when title is open, or when tip
+                 * Always hide overview section when about is open, or when tip
                  * is shown in song.
                  */
                 Boolean(inMain) &&

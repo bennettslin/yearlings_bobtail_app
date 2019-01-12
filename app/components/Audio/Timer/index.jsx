@@ -25,13 +25,13 @@ class AudioTimer extends PureComponent {
         selectedTime: PropTypes.number.isRequired,
 
         // From parent.
-        isTitleTimer: PropTypes.bool
+        isAboutTimer: PropTypes.bool
     }
 
     render() {
 
         const {
-                isTitleTimer,
+                isAboutTimer,
                 isSelectedLogue,
                 selectedTime
             } = this.props,
@@ -44,8 +44,8 @@ class AudioTimer extends PureComponent {
                 'AudioTimer',
 
                 {
-                    'AudioTimer__titleTimer': isTitleTimer,
-                    'abF': isTitleTimer
+                    'AudioTimer__aboutTimer': isAboutTimer,
+                    'abF': isAboutTimer
                 },
 
                 'flexCentreContainer'

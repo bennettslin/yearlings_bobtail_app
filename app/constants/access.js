@@ -21,7 +21,7 @@ const
     OVERVIEW_TOGGLE_KEY = 'b',
     SCORE_TOGGLE_KEY = 's',
     TIPS_TOGGLE_KEY = 't',
-    TITLE_TOGGLE_KEY = 'y'
+    ABOUT_TOGGLE_KEY = 'y'
 
 module.exports = {
     CAPS_LOCK: 'CapsLock',
@@ -62,7 +62,7 @@ module.exports = {
     OVERVIEW_TOGGLE_KEY,
     SCORE_TOGGLE_KEY,
     TIPS_TOGGLE_KEY,
-    TITLE_TOGGLE_KEY,
+    ABOUT_TOGGLE_KEY,
 
     STYLE_LOGIC_ACCESS_LETTERS: [
         ARROW_LEFT,
@@ -86,6 +86,6 @@ module.exports = {
         OVERVIEW_TOGGLE_KEY,
         SCORE_TOGGLE_KEY,
         TIPS_TOGGLE_KEY,
-        TITLE_TOGGLE_KEY
+        ABOUT_TOGGLE_KEY
     ]
 }

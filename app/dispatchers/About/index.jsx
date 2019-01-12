@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class TitleDispatcher extends PureComponent {
+class AboutDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isTitleShown: PropTypes.bool.isRequired,
+        isAboutShown: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -18,16 +18,16 @@ class TitleDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            dispatchTitle: this.dispatchTitle
+            dispatchAbout: this.dispatchAbout
         })
     }
 
-    dispatchTitle = (
+    dispatchAbout = (
         // Just toggle unless parent specifies value.
-        isTitleShown = !this.props.isTitleShown
+        isAboutShown = !this.props.isAboutShown
     ) => {
         // Turning on or off is always successful.
-        this.props.updateToggleStore({ isTitleShown })
+        this.props.updateToggleStore({ isAboutShown })
         return true
     }
 
@@ -37,12 +37,12 @@ class TitleDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isTitleShown }
+    toggleStore: { isAboutShown }
 }) => ({
-    isTitleShown
+    isAboutShown
 })
 
 export default connect(
     mapStateToProps,
     { updateToggleStore }
-)(TitleDispatcher)
+)(AboutDispatcher)
