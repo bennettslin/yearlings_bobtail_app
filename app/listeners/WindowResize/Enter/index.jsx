@@ -52,26 +52,26 @@ class WindowResizeEnterDispatcher extends PureComponent {
         logTransition('Theatre can enter.')
 
         const {
-                deviceIndex,
+                deviceWidthIndex,
                 windowHeight,
                 windowWidth
             } = resizeWindow(),
 
             isHeightlessLyric = getIsHeightlessLyric({
-                deviceIndex,
+                deviceWidthIndex,
                 windowHeight,
                 windowWidth
             })
 
         this._updateDeviceStore({
-            deviceIndex,
+            deviceWidthIndex,
             windowHeight,
             windowWidth,
             isHeightlessLyric
         })
 
         this._updateResponsiveStore({
-            deviceIndex,
+            deviceWidthIndex,
             windowHeight,
             windowWidth,
             isHeightlessLyric
@@ -79,7 +79,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
     }
 
     _updateDeviceStore({
-        deviceIndex,
+        deviceWidthIndex,
         windowHeight,
         windowWidth,
         isHeightlessLyric
@@ -91,7 +91,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 stageHeight
 
             } = getStageCoordinates({
-                deviceIndex,
+                deviceWidthIndex,
                 windowWidth,
                 windowHeight,
                 isHeightlessLyric
@@ -101,7 +101,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 floorHeight
 
             } = getCeilingFloorHeight({
-                deviceIndex,
+                deviceWidthIndex,
                 windowWidth,
                 windowHeight,
                 stageHeight,
@@ -109,7 +109,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 isHeightlessLyric
             }),
             lyricHeightRatio = getLyricHeightRatio({
-                deviceIndex,
+                deviceWidthIndex,
                 windowHeight,
                 stageHeight,
                 isHeightlessLyric
@@ -117,7 +117,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
         this.props.updateDeviceStore({
             canTheatreEnter: true,
-            deviceIndex,
+            deviceWidthIndex,
             windowWidth,
             windowHeight,
             stageTop,
@@ -131,7 +131,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
     }
 
     _updateResponsiveStore({
-        deviceIndex,
+        deviceWidthIndex,
         windowHeight,
         windowWidth,
         isHeightlessLyric
@@ -139,33 +139,33 @@ class WindowResizeEnterDispatcher extends PureComponent {
         this.props.updateResponsiveStore({
             isHeightlessLyric,
             isUnrenderableCarouselNav: getIsUnrenderableCarouselNav({
-                deviceIndex,
+                deviceWidthIndex,
                 windowHeight,
                 windowWidth,
                 isHeightlessLyric
             }),
             isMobileWiki: getIsMobileWiki({
-                deviceIndex,
+                deviceWidthIndex,
                 windowWidth
             }),
             isScoresTipsInMain: getIsScoresTipsInMain({
-                deviceIndex,
+                deviceWidthIndex,
                 windowWidth
             }),
             isTwoRowMenu: getIsTwoRowMenu({
-                deviceIndex,
+                deviceWidthIndex,
                 windowWidth
             }),
             showShrunkNavIcon: getShowShrunkNavIcon({
-                deviceIndex,
+                deviceWidthIndex,
                 windowWidth
             }),
             showSingleNavBook: getShowSingleNavBook({
-                deviceIndex,
+                deviceWidthIndex,
                 windowWidth
             }),
-            isScoreShowable: getIsScoreShowable(deviceIndex),
-            isLyricExpandable: getIsLyricExpandable(deviceIndex)
+            isScoreShowable: getIsScoreShowable(deviceWidthIndex),
+            isLyricExpandable: getIsLyricExpandable(deviceWidthIndex)
         })
     }
 

@@ -1,30 +1,30 @@
 import {
-    PHONE_CLASS,
-    LS_MINI_CLASS,
-    TABLET_CLASS,
-    LS_LAPTOP_CLASS,
-    MONITOR_CLASS,
-    DEVICE_OBJECTS
+    PHONE_WIDTH_KEY,
+    LS_MINI_WIDTH_KEY,
+    TABLET_WIDTH_KEY,
+    LS_LAPTOP_WIDTH_KEY,
+    MONITOR_WIDTH_KEY,
+    DEVICE_WIDTH_CONFIGS
 } from 'constants/responsive'
 
-export const getIsDesktopWidth = (deviceIndex) => {
-    const deviceClassName = DEVICE_OBJECTS[deviceIndex].className
+export const getIsDesktopWidth = (deviceWidthIndex) => {
+    const deviceWidthKey = DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey
 
-    return deviceClassName === LS_LAPTOP_CLASS || deviceClassName === MONITOR_CLASS
+    return deviceWidthKey === LS_LAPTOP_WIDTH_KEY || deviceWidthKey === MONITOR_WIDTH_KEY
 }
 
-export const getIsPhoneWidth = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === PHONE_CLASS
+export const getIsPhoneWidth = (deviceWidthIndex) => {
+    return DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey === PHONE_WIDTH_KEY
 }
 
-export const getIsMiniWidth = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === LS_MINI_CLASS
+export const getIsMiniWidth = (deviceWidthIndex) => {
+    return DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey === LS_MINI_WIDTH_KEY
 }
 
-export const getIsTabletWidth = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === TABLET_CLASS
+export const getIsTabletWidth = (deviceWidthIndex) => {
+    return DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey === TABLET_WIDTH_KEY
 }
 
-export const getIsMonitorWidth = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === MONITOR_CLASS
+export const getIsMonitorWidth = (deviceWidthIndex) => {
+    return DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey === MONITOR_WIDTH_KEY
 }

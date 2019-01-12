@@ -18,20 +18,20 @@ import {
  *********/
 
 const _getEarColumnHeight = (
-    deviceIndex,
+    deviceWidthIndex,
     isHeightlessLyric,
     windowHeight
 ) => {
     return (
-        isHeightlessLyric || getIsDesktopWidth(deviceIndex)
+        isHeightlessLyric || getIsDesktopWidth(deviceWidthIndex)
     ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
 export const getIsTwoRowMenu = ({
-    deviceIndex, windowWidth
+    deviceWidthIndex, windowWidth
 }) => {
 
-    const isDesktopWidth = getIsDesktopWidth(deviceIndex),
+    const isDesktopWidth = getIsDesktopWidth(deviceWidthIndex),
         twoRowMenuBreakpoint = isDesktopWidth ?
             TWO_ROW_MENU_BREAKPOINT_LAPTOP :
             TWO_ROW_MENU_BREAKPOINT_MINI
@@ -40,22 +40,22 @@ export const getIsTwoRowMenu = ({
 }
 
 export const getCentreFieldHeight = ({
-    deviceIndex,
+    deviceWidthIndex,
     windowWidth,
     windowHeight,
     isHeightlessLyric
 }) => {
     const earColumnHeight = _getEarColumnHeight(
-        deviceIndex, isHeightlessLyric, windowHeight
+        deviceWidthIndex, isHeightlessLyric, windowHeight
     )
 
     let menuHeight = LS_HEIGHT_MENU
 
     if (getIsTwoRowMenu({
-        deviceIndex, windowWidth
+        deviceWidthIndex, windowWidth
     })) {
 
-        if (getIsPhoneWidth(deviceIndex)) {
+        if (getIsPhoneWidth(deviceWidthIndex)) {
             menuHeight = LS_TOP_OFFSET_TWO_ROW_MENU_PHONE
 
         } else {
@@ -67,7 +67,7 @@ export const getCentreFieldHeight = ({
 }
 
 export const getCeilingFloorHeight = ({
-    deviceIndex,
+    deviceWidthIndex,
     windowWidth,
     windowHeight,
     stageHeight,
@@ -77,13 +77,13 @@ export const getCeilingFloorHeight = ({
 
     const
         earColumnHeight = _getEarColumnHeight(
-            deviceIndex,
+            deviceWidthIndex,
             isHeightlessLyric,
             windowHeight
         ),
 
         centreFieldHeight = getCentreFieldHeight({
-            deviceIndex,
+            deviceWidthIndex,
             windowWidth,
             windowHeight,
             isHeightlessLyric
@@ -108,14 +108,14 @@ export const getCeilingFloorHeight = ({
 }
 
 export const getLyricHeightRatio = ({
-    deviceIndex,
+    deviceWidthIndex,
     windowHeight,
     stageHeight,
     isHeightlessLyric
 }) => {
 
     // Desktop is always 100%.
-    if (getIsDesktopWidth(deviceIndex)) {
+    if (getIsDesktopWidth(deviceWidthIndex)) {
         return 1
 
     // Heightless lyric is 0%, obviously.
@@ -124,7 +124,7 @@ export const getLyricHeightRatio = ({
     }
 
     // Mobile not phone is always 32%.
-    if (!getIsPhoneWidth(deviceIndex)) {
+    if (!getIsPhoneWidth(deviceWidthIndex)) {
         return LS_HEIGHT_LYRIC_COLLAPSED
     }
 

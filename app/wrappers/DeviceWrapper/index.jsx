@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { DEVICE_OBJECTS } from 'constants/responsive'
+import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive'
 
 import { getIsTabletWidth } from 'helpers/responsive'
 
@@ -13,7 +13,7 @@ class DeviceWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
+        deviceWidthIndex: PropTypes.number.isRequired,
         isPhoneWidth: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
 
@@ -24,22 +24,22 @@ class DeviceWrapper extends PureComponent {
     render() {
         const
             {
-                deviceIndex,
+                deviceWidthIndex,
                 isPhoneWidth,
                 isDesktopWidth,
                 children
             } = this.props,
-            deviceClassName =
-                DEVICE_OBJECTS[deviceIndex] &&
-                DEVICE_OBJECTS[deviceIndex].className,
-            isTabletWidth = getIsTabletWidth(deviceIndex)
+            deviceWidthKey =
+                DEVICE_WIDTH_CONFIGS[deviceWidthIndex] &&
+                DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey,
+            isTabletWidth = getIsTabletWidth(deviceWidthIndex)
 
         return (
             <div
                 {...{
                     className: cx(
                         'DeviceWrapper',
-                        `DW__${deviceClassName}`,
+                        `DW__${deviceWidthKey}`,
                         isDesktopWidth ?
                             'DW__desktopWidth' :
                             'DW__mobileWidth',
@@ -61,12 +61,12 @@ class DeviceWrapper extends PureComponent {
 
 const mapStateToProps = ({
     deviceStore: {
-        deviceIndex,
+        deviceWidthIndex,
         isPhoneWidth,
         isDesktopWidth
     }
 }) => ({
-    deviceIndex,
+    deviceWidthIndex,
     isPhoneWidth,
     isDesktopWidth
 })

@@ -1,7 +1,7 @@
 import { getIsPhoneWidth } from 'helpers/responsive'
 
 export const getIsOverlayingAnnotation = ({
-    deviceIndex,
+    deviceWidthIndex,
     isLyricExpanded
 }) => {
     return (
@@ -9,12 +9,12 @@ export const getIsOverlayingAnnotation = ({
         isLyricExpanded ||
 
         // Or if we are in phone.
-        getIsPhoneWidth(deviceIndex)
+        getIsPhoneWidth(deviceWidthIndex)
     )
 }
 
 export const getIsOverlayShown = ({
-    deviceIndex,
+    deviceWidthIndex,
     isLyricExpanded,
     lyricAnnotationIndex,
     isScoreShown,
@@ -23,7 +23,7 @@ export const getIsOverlayShown = ({
 }) => {
 
     const isOverlayingAnnotation = getIsOverlayingAnnotation({
-        deviceIndex,
+        deviceWidthIndex,
         isLyricExpanded
     })
 

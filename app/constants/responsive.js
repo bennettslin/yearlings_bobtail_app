@@ -158,19 +158,19 @@ const
  * DEVICE WIDTH OBJECTS *
  ************************/
 
-    PHONE_CLASS = 'phone',
-    LS_MINI_CLASS = 'mini',
-    TABLET_CLASS = 'tablet',
-    LS_LAPTOP_CLASS = 'laptop',
-    MONITOR_CLASS = 'monitor',
+    PHONE_WIDTH_KEY = 'phone',
+    LS_MINI_WIDTH_KEY = 'mini',
+    TABLET_WIDTH_KEY = 'tablet',
+    LS_LAPTOP_WIDTH_KEY = 'laptop',
+    MONITOR_WIDTH_KEY = 'monitor',
 
     // These max width values *must* be the same in less.
-    PHONE_OBJECT = {
-        className: PHONE_CLASS,
+    PHONE_WIDTH_CONFIG = {
+        deviceWidthKey: PHONE_WIDTH_KEY,
         maxWidth: 475
     },
-    MINI_OBJECT = {
-        className: LS_MINI_CLASS,
+    MINI_WIDTH_CONFIG = {
+        deviceWidthKey: LS_MINI_WIDTH_KEY,
         maxWidth: 720,
         singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
@@ -180,8 +180,8 @@ const
      * breakpoint is unnecessary.
      */
     },
-    TABLET_OBJECT = {
-        className: TABLET_CLASS,
+    TABLET_WIDTH_CONFIG = {
+        deviceWidthKey: TABLET_WIDTH_KEY,
         maxWidth: 1100,
         doubleColumnStaticBreakpoint:
         DOUBLE_COLUMN_STATIC_BREAKPOINT
@@ -195,8 +195,8 @@ const
         isScoresTipsInMainBreakpoint:
         WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET
     },
-    LAPTOP_OBJECT = {
-        className: LS_LAPTOP_CLASS,
+    LAPTOP_WIDTH_CONFIG = {
+        deviceWidthKey: LS_LAPTOP_WIDTH_KEY,
         maxWidth: 1400,
         singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
@@ -208,8 +208,8 @@ const
      * tips breakpoint is unnecessary.
      */
     },
-    MONITOR_OBJECT = {
-        className: MONITOR_CLASS,
+    MONITOR_WIDTH_CONFIG = {
+        deviceWidthKey: MONITOR_WIDTH_KEY,
         doubleColumnStaticBreakpoint:
         DOUBLE_COLUMN_STATIC_BREAKPOINT
         + LS_MARGIN_NAV_LAST_TITLE
@@ -231,17 +231,17 @@ const
     }
 
 module.exports = {
-    PHONE_CLASS,
-    LS_MINI_CLASS,
-    TABLET_CLASS,
-    LS_LAPTOP_CLASS,
-    MONITOR_CLASS,
+    PHONE_WIDTH_KEY,
+    LS_MINI_WIDTH_KEY,
+    TABLET_WIDTH_KEY,
+    LS_LAPTOP_WIDTH_KEY,
+    MONITOR_WIDTH_KEY,
 
-    PHONE_OBJECT,
-    MINI_OBJECT,
-    TABLET_OBJECT,
-    LAPTOP_OBJECT,
-    MONITOR_OBJECT,
+    PHONE_WIDTH_CONFIG,
+    MINI_WIDTH_CONFIG,
+    TABLET_WIDTH_CONFIG,
+    LAPTOP_WIDTH_CONFIG,
+    MONITOR_WIDTH_CONFIG,
 
     LS_LENGTH_ICON,
     LS_LENGTH_ICON_LARGE_MINI,
@@ -249,12 +249,12 @@ module.exports = {
     LS_LENGTH_ICON_LARGE,
     LS_MARGIN_THIN,
 
-    DEVICE_OBJECTS: [
-        PHONE_OBJECT,
-        MINI_OBJECT,
-        TABLET_OBJECT,
-        LAPTOP_OBJECT,
-        MONITOR_OBJECT,
+    DEVICE_WIDTH_CONFIGS: [
+        PHONE_WIDTH_CONFIG,
+        MINI_WIDTH_CONFIG,
+        TABLET_WIDTH_CONFIG,
+        LAPTOP_WIDTH_CONFIG,
+        MONITOR_WIDTH_CONFIG,
         {} // Default when app mounts.
     ],
 

@@ -16,7 +16,7 @@ class MainListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
+        deviceWidthIndex: PropTypes.number.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
@@ -36,7 +36,7 @@ class MainListener extends PureComponent {
 
     _determineOverlayAndCarouselNav() {
         const {
-            deviceIndex,
+            deviceWidthIndex,
             isDotsSlideShown,
             isLyricExpanded,
             lyricAnnotationIndex,
@@ -50,12 +50,12 @@ class MainListener extends PureComponent {
         } = this.props
 
         const isOverlayingAnnotation = getIsOverlayingAnnotation({
-                deviceIndex,
+                deviceWidthIndex,
                 isLyricExpanded
             }),
 
             isOverlayShown = getIsOverlayShown({
-                deviceIndex,
+                deviceWidthIndex,
                 isLyricExpanded,
                 lyricAnnotationIndex,
                 isScoreShown,
@@ -104,7 +104,7 @@ class MainListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    deviceStore: { deviceIndex },
+    deviceStore: { deviceWidthIndex },
     toggleStore: {
         isDotsSlideShown,
         isLyricExpanded,
@@ -124,7 +124,7 @@ const mapStateToProps = ({
         selectedTipsOption
     }
 }) => ({
-    deviceIndex,
+    deviceWidthIndex,
     isDotsSlideShown,
     isLyricExpanded,
     isScoreShown,

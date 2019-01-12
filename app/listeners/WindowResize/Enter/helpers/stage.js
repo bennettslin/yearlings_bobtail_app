@@ -4,12 +4,12 @@ import {
 } from 'constants/stage'
 
 import {
-    PHONE_CLASS,
-    LS_MINI_CLASS,
-    TABLET_CLASS,
-    LS_LAPTOP_CLASS,
-    MONITOR_CLASS,
-    DEVICE_OBJECTS,
+    PHONE_WIDTH_KEY,
+    LS_MINI_WIDTH_KEY,
+    TABLET_WIDTH_KEY,
+    LS_LAPTOP_WIDTH_KEY,
+    MONITOR_WIDTH_KEY,
+    DEVICE_WIDTH_CONFIGS,
 
     LS_WIDTH_GOLDEN_CORD,
     LS_WIDTH_UNCANNY_VALLEY,
@@ -32,21 +32,21 @@ import {
 import { getIsUnrenderableCarouselNav } from './hidden'
 import { getCentreFieldHeight } from './theatre'
 
-const _getLeftShelfOverflow = (deviceIndex) => {
+const _getLeftShelfOverflow = (deviceWidthIndex) => {
     let toggleButtonWidth = 0
 
-    switch (DEVICE_OBJECTS[deviceIndex].className) {
-        case MONITOR_CLASS:
-        case LS_LAPTOP_CLASS:
+    switch (DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey) {
+        case MONITOR_WIDTH_KEY:
+        case LS_LAPTOP_WIDTH_KEY:
             toggleButtonWidth = LS_LENGTH_ICON_LARGE * 0.9
             break
-        case TABLET_CLASS:
+        case TABLET_WIDTH_KEY:
             toggleButtonWidth = LS_LENGTH_ICON_LARGE_TABLET
             break
-        case LS_MINI_CLASS:
+        case LS_MINI_WIDTH_KEY:
             toggleButtonWidth = LS_LENGTH_ICON_LARGE_MINI
             break
-        case PHONE_CLASS:
+        case PHONE_WIDTH_KEY:
             toggleButtonWidth = LS_LENGTH_ICON
             break
     }
@@ -54,14 +54,14 @@ const _getLeftShelfOverflow = (deviceIndex) => {
     return (toggleButtonWidth + LS_MARGIN_THIN)
 }
 
-const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
+const _getCentreFieldWidth = (deviceWidthIndex, windowWidth) => {
     let lyricWidth = 0,
         overflowPercentage = 1
 
-    if (getIsDesktopWidth(deviceIndex)) {
+    if (getIsDesktopWidth(deviceWidthIndex)) {
         overflowPercentage = STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
 
-        if (getIsMonitorWidth(deviceIndex)) {
+        if (getIsMonitorWidth(deviceWidthIndex)) {
             lyricWidth = LS_WIDTH_GOLDEN_CORD
         } else {
             lyricWidth = LS_WIDTH_UNCANNY_VALLEY
@@ -72,23 +72,23 @@ const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
 }
 
 export const getStageCoordinates = ({
-    deviceIndex,
+    deviceWidthIndex,
     windowWidth,
     windowHeight,
     isHeightlessLyric
 }) => {
 
-    const isDesktopWidth = getIsDesktopWidth(deviceIndex),
+    const isDesktopWidth = getIsDesktopWidth(deviceWidthIndex),
 
         leftShelfOverflow =
-            _getLeftShelfOverflow(deviceIndex),
+            _getLeftShelfOverflow(deviceWidthIndex),
 
-        centreFieldWidth = _getCentreFieldWidth(deviceIndex, windowWidth) - leftShelfOverflow,
+        centreFieldWidth = _getCentreFieldWidth(deviceWidthIndex, windowWidth) - leftShelfOverflow,
 
-        isPhoneWidth = getIsPhoneWidth(deviceIndex),
+        isPhoneWidth = getIsPhoneWidth(deviceWidthIndex),
 
         isUnrenderableCarouselNav = getIsUnrenderableCarouselNav({
-            deviceIndex, windowHeight, windowWidth
+            deviceWidthIndex, windowHeight, windowWidth
         }),
 
         navHeight =
@@ -97,7 +97,7 @@ export const getStageCoordinates = ({
             isUnrenderableCarouselNav ? 0 : LS_HEIGHT_NAV,
 
         centreFieldHeight = getCentreFieldHeight({
-            deviceIndex,
+            deviceWidthIndex,
             windowWidth,
             windowHeight,
             isHeightlessLyric

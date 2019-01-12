@@ -9,7 +9,7 @@ import {
 } from './storageHelper'
 
 import { SHOWN } from 'constants/options'
-import { DEVICE_OBJECTS } from 'constants/responsive'
+import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive'
 
 import { getCubesForKey } from 'scene/cubes'
 
@@ -116,7 +116,7 @@ export const AUDIO_DEFAULTS = {
 
 export const DEVICE_DEFAULTS = {
     ...DEVICE_TRANSITION_DEFAULTS,
-    deviceIndex: DEVICE_OBJECTS.length - 1,
+    deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
     isPhoneWidth: false,
     isDesktopWidth: false,
     windowHeight: 0,

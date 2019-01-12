@@ -6,8 +6,8 @@ import {
 } from '../../../../helpers/responsive'
 
 import {
-    DEVICE_OBJECTS,
-    MINI_OBJECT
+    DEVICE_WIDTH_CONFIGS,
+    MINI_WIDTH_CONFIG
 } from '../../../../constants/responsive'
 
 const _getShowShrunkNavIconForDeviceObject = (
@@ -33,27 +33,27 @@ const _getShowShrunkNavIconForDeviceObject = (
 }
 
 export const getShowShrunkNavIcon = ({
-    deviceIndex,
+    deviceWidthIndex,
     windowWidth
 }) => {
     const
-        deviceObject = DEVICE_OBJECTS[deviceIndex],
+        deviceObject = DEVICE_WIDTH_CONFIGS[deviceWidthIndex],
         isPhoneOrMini =
-            getIsPhoneWidth(deviceIndex) ||
-            getIsMiniWidth(deviceIndex)
+            getIsPhoneWidth(deviceWidthIndex) ||
+            getIsMiniWidth(deviceWidthIndex)
 
     return _getShowShrunkNavIconForDeviceObject(
         windowWidth,
-        isPhoneOrMini ? MINI_OBJECT : deviceObject
+        isPhoneOrMini ? MINI_WIDTH_CONFIG : deviceObject
     )
 }
 
 export const getShowSingleNavBook = ({
-    deviceIndex, windowWidth
+    deviceWidthIndex, windowWidth
 }) => {
-    const deviceObject = DEVICE_OBJECTS[deviceIndex]
+    const deviceObject = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
 
-    if (!getIsMonitorWidth(deviceIndex) && !getIsTabletWidth(deviceIndex)) {
+    if (!getIsMonitorWidth(deviceWidthIndex) && !getIsTabletWidth(deviceWidthIndex)) {
         // Value for phone doesn't matter. Just keeps it from breaking.
         return true
 

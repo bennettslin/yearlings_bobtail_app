@@ -11,7 +11,7 @@ class DoublespeakerListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
+        deviceWidthIndex: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         updateTransientStore: PropTypes.func.isRequired
     }
@@ -23,11 +23,11 @@ class DoublespeakerListener extends PureComponent {
     _determineIsDoublespeakerShown() {
         const
             {
-                deviceIndex,
+                deviceWidthIndex,
                 lyricSongIndex
             } = this.props,
             isEarShown = getIsDoublespeakerShown({
-                deviceIndex,
+                deviceWidthIndex,
                 songIndex: lyricSongIndex
             })
 
@@ -40,10 +40,10 @@ class DoublespeakerListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    deviceStore: { deviceIndex },
+    deviceStore: { deviceWidthIndex },
     lyricStore: { lyricSongIndex }
 }) => ({
-    deviceIndex,
+    deviceWidthIndex,
     lyricSongIndex
 })
 

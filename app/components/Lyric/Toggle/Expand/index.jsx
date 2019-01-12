@@ -14,14 +14,14 @@ import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    deviceStore: { deviceIndex },
+    deviceStore: { deviceWidthIndex },
     responsiveStore: {
         isHeightlessLyric,
         isLyricExpandable
     },
     toggleStore: { isLyricExpanded }
 }) => ({
-    deviceIndex,
+    deviceWidthIndex,
     isHeightlessLyric,
     isLyricExpandable,
     isLyricExpanded
@@ -31,7 +31,7 @@ class LyricToggleExpand extends PureComponent {
 
     static propTypes = {
     // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
+        deviceWidthIndex: PropTypes.number.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,

@@ -1,21 +1,21 @@
-import { DEVICE_OBJECTS } from '../../../../constants/responsive'
+import { DEVICE_WIDTH_CONFIGS } from '../../../../constants/responsive'
 
 export const resizeWindow = ({
     innerHeight,
     innerWidth
 } = window) => {
 
-    let deviceIndex = 0
+    let deviceWidthIndex = 0
 
     while (
-        deviceIndex < DEVICE_OBJECTS.length - 1 &&
-        innerWidth > DEVICE_OBJECTS[deviceIndex].maxWidth
+        deviceWidthIndex < DEVICE_WIDTH_CONFIGS.length - 1 &&
+        innerWidth > DEVICE_WIDTH_CONFIGS[deviceWidthIndex].maxWidth
     ) {
-        deviceIndex++
+        deviceWidthIndex++
     }
 
     return {
-        deviceIndex,
+        deviceWidthIndex,
         windowHeight: innerHeight,
         windowWidth: innerWidth
     }

@@ -10,7 +10,7 @@ import {
 } from 'constants/responsive'
 
 const _getLyricSectionRect = ({
-    deviceIndex,
+    deviceWidthIndex,
     windowHeight,
     isLyricExpanded,
     lyricHeightRatio,
@@ -19,7 +19,7 @@ const _getLyricSectionRect = ({
     const bottom = windowHeight
     let top
 
-    if (getIsDesktopWidth(deviceIndex)) {
+    if (getIsDesktopWidth(deviceWidthIndex)) {
         /**
          * If monitor or laptop width, then lyric section rect is simply the
          * entire window height.
@@ -35,7 +35,7 @@ const _getLyricSectionRect = ({
 
     } else if (isTwoRowMenu) {
 
-        if (getIsMiniWidth(deviceIndex)) {
+        if (getIsMiniWidth(deviceWidthIndex)) {
             top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
 
         } else {
@@ -54,7 +54,7 @@ const _getLyricSectionRect = ({
 }
 
 export const getVerseBarStatus = ({
-    deviceIndex,
+    deviceWidthIndex,
     windowHeight,
     isLyricExpanded,
     lyricHeightRatio,
@@ -76,7 +76,7 @@ export const getVerseBarStatus = ({
     }
 
     const lyricSectionRect = _getLyricSectionRect({
-            deviceIndex,
+            deviceWidthIndex,
             windowHeight,
             isLyricExpanded,
             lyricHeightRatio,

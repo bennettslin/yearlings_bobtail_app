@@ -6,11 +6,11 @@ import {
 import { WIKI_SIDE_PADDING_TOTAL } from '../../../../constants/responsive'
 
 export const getIsMobileWiki = ({
-    deviceIndex, windowWidth
+    deviceWidthIndex, windowWidth
 }) => {
 
     // If phone or mini, show mobile wiki.
-    if (getIsPhoneWidth(deviceIndex) || getIsMiniWidth(deviceIndex)) {
+    if (getIsPhoneWidth(deviceWidthIndex) || getIsMiniWidth(deviceWidthIndex)) {
         return true
 
     } else {

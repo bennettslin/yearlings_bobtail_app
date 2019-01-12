@@ -10,10 +10,10 @@ import {
     LS_WIDTH_UNCANNY_VALLEY
 } from 'constants/responsive'
 
-const _getLyricTopAlign = (deviceIndex, isLyricExpanded) => {
+const _getLyricTopAlign = (deviceWidthIndex, isLyricExpanded) => {
 
     // If in desktop or lyric column is expanded, set closer to top.
-    if (getIsDesktopWidth(deviceIndex) || isLyricExpanded) {
+    if (getIsDesktopWidth(deviceWidthIndex) || isLyricExpanded) {
         return {
             top: 0.33
         }
@@ -25,18 +25,18 @@ const _getLyricTopAlign = (deviceIndex, isLyricExpanded) => {
 }
 
 const _getCarouselLeftAlign = (
-    deviceIndex,
+    deviceWidthIndex,
     windowWidth
 ) => {
 
     // If mobile, then set halfway, which is the default.
-    if (!getIsDesktopWidth(deviceIndex)) {
+    if (!getIsDesktopWidth(deviceWidthIndex)) {
         return null
 
     } else {
         const
             earColumnWidth =
-                getIsMonitorWidth(deviceIndex) ?
+                getIsMonitorWidth(deviceWidthIndex) ?
                     LS_WIDTH_GOLDEN_CORD :
                     LS_WIDTH_UNCANNY_VALLEY,
 
@@ -74,7 +74,7 @@ export const scrollElementIntoView = ({
     scrollChildren,
     index,
     doScrollImmediately,
-    deviceIndex,
+    deviceWidthIndex,
     windowWidth,
     isLyricExpanded,
     isSelectedLogue,
@@ -109,8 +109,8 @@ export const scrollElementIntoView = ({
 
         const
             align = isCarousel ?
-                _getCarouselLeftAlign(deviceIndex, windowWidth) :
-                _getLyricTopAlign(deviceIndex, isLyricExpanded),
+                _getCarouselLeftAlign(deviceWidthIndex, windowWidth) :
+                _getLyricTopAlign(deviceWidthIndex, isLyricExpanded),
 
             validTarget = _getValidTarget(scrollParent)
 

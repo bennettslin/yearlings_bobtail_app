@@ -14,13 +14,13 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
-    deviceStore: { deviceIndex },
+    deviceStore: { deviceWidthIndex },
     lyricStore: {
         lyricSongIndex,
         isLyricLogue
     }
 }) => ({
-    deviceIndex,
+    deviceWidthIndex,
     lyricSongIndex,
     isLyricLogue
 })
@@ -29,14 +29,14 @@ class Overview extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
+        deviceWidthIndex: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         isLyricLogue: PropTypes.bool.isRequired
     }
 
     render() {
         const {
-                deviceIndex,
+                deviceWidthIndex,
                 lyricSongIndex,
                 isLyricLogue
             } = this.props,
@@ -50,7 +50,7 @@ class Overview extends PureComponent {
              */
             isToggleInOverview =
                 !isLyricLogue &&
-                getIsToggleInOverview(deviceIndex)
+                getIsToggleInOverview(deviceWidthIndex)
 
         return (
             <div className={cx(

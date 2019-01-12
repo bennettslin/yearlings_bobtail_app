@@ -15,7 +15,7 @@ class VerseBar extends PureComponent {
         // Through Redux.
         queuedDetermineVerseBars: PropTypes.bool.isRequired,
         queuedVerseBarsTimeout: PropTypes.number.isRequired,
-        deviceIndex: PropTypes.number.isRequired,
+        deviceWidthIndex: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         lyricHeightRatio: PropTypes.number.isRequired,
@@ -102,7 +102,7 @@ class VerseBar extends PureComponent {
     } = {}) => {
 
         const {
-                deviceIndex,
+                deviceWidthIndex,
                 windowHeight,
                 isLyricExpanded,
                 lyricHeightRatio,
@@ -115,7 +115,7 @@ class VerseBar extends PureComponent {
         if (verseElement) {
 
             const verseBarStatusObject = getVerseBarStatus({
-                    deviceIndex,
+                    deviceWidthIndex,
                     windowHeight,
                     isLyricExpanded,
                     lyricHeightRatio,
@@ -153,7 +153,7 @@ const mapStateToProps = ({
         queuedVerseBarsTimeout
     },
     deviceStore: {
-        deviceIndex,
+        deviceWidthIndex,
         windowHeight
     },
     responsiveStore: {
@@ -173,7 +173,7 @@ const mapStateToProps = ({
 }) => ({
     queuedDetermineVerseBars,
     queuedVerseBarsTimeout,
-    deviceIndex,
+    deviceWidthIndex,
     windowHeight,
     isLyricExpanded,
     lyricHeightRatio,

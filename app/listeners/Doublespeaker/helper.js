@@ -6,7 +6,7 @@ import {
 } from '../../helpers/responsive'
 
 export const getIsDoublespeakerShown = ({
-    deviceIndex,
+    deviceWidthIndex,
     songIndex
 }) => {
     const selectedSong = getSong(songIndex),
@@ -17,7 +17,7 @@ export const getIsDoublespeakerShown = ({
 
     // Applies to Uncanny Valley Boy.
     if (hasSideCards && !isDoublespeaker) {
-        return getIsPhoneWidth(deviceIndex)
+        return getIsPhoneWidth(deviceWidthIndex)
 
     // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
     } else if (isDoublespeaker) {
@@ -26,8 +26,8 @@ export const getIsDoublespeakerShown = ({
          * while in monitor width, the screen is wide enough as well.
          */
         return (
-            !getIsMonitorWidth(deviceIndex) &&
-            !getIsTabletWidth(deviceIndex)
+            !getIsMonitorWidth(deviceWidthIndex) &&
+            !getIsTabletWidth(deviceWidthIndex)
         )
 
     // Doesn't apply to other songs.

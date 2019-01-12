@@ -6,6 +6,6 @@ export const getSongOverview = (songIndex) => {
     return song ? song.overview : ''
 }
 
-export const getIsToggleInOverview = (deviceIndex) => {
-    return getIsPhoneWidth(deviceIndex)
+export const getIsToggleInOverview = (deviceWidthIndex) => {
+    return getIsPhoneWidth(deviceWidthIndex)
 }

@@ -3,7 +3,7 @@ import {
     getIsMonitorWidth
 } from '../../../../helpers/responsive'
 
-import { DEVICE_OBJECTS } from '../../../../constants/responsive'
+import { DEVICE_WIDTH_CONFIGS } from '../../../../constants/responsive'
 
 const _getIsScoresTipsInMainForDeviceObject = (
     windowWidth,
@@ -14,12 +14,12 @@ const _getIsScoresTipsInMainForDeviceObject = (
 }
 
 export const getIsScoresTipsInMain = ({
-    deviceIndex,
+    deviceWidthIndex,
     windowWidth
 }) => {
-    const deviceObject = DEVICE_OBJECTS[deviceIndex]
+    const deviceObject = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
 
-    if (getIsMonitorWidth(deviceIndex) || getIsTabletWidth(deviceIndex)) {
+    if (getIsMonitorWidth(deviceWidthIndex) || getIsTabletWidth(deviceWidthIndex)) {
         return _getIsScoresTipsInMainForDeviceObject(windowWidth, deviceObject)
     } else {
         return true

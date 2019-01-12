@@ -16,11 +16,11 @@ import {
 } from '../../helpers/responsive'
 
 export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => {
-    const { deviceIndex } = payload
+    const { deviceWidthIndex } = payload
 
-    if (hasKey(deviceIndex)) {
-        payload.isDesktopWidth = getIsDesktopWidth(deviceIndex)
-        payload.isPhoneWidth = getIsPhoneWidth(deviceIndex)
+    if (hasKey(deviceWidthIndex)) {
+        payload.isDesktopWidth = getIsDesktopWidth(deviceWidthIndex)
+        payload.isPhoneWidth = getIsPhoneWidth(deviceWidthIndex)
     }
 
     return ({

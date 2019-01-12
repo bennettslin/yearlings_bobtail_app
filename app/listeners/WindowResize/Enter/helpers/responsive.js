@@ -3,11 +3,11 @@ import {
     getIsDesktopWidth
 } from '../../../../helpers/responsive'
 
-export const getIsScoreShowable = (deviceIndex) => {
-    return !getIsPhoneWidth(deviceIndex)
+export const getIsScoreShowable = (deviceWidthIndex) => {
+    return !getIsPhoneWidth(deviceWidthIndex)
 }
 
 
-export const getIsLyricExpandable = (deviceIndex) => {
-    return !getIsDesktopWidth(deviceIndex)
+export const getIsLyricExpandable = (deviceWidthIndex) => {
+    return !getIsDesktopWidth(deviceWidthIndex)
 }
