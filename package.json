@@ -32,6 +32,7 @@
     "lodash.findindex": "^4.6.0",
     "lodash.keys": "^4.2.0",
     "lodash.pickby": "^4.6.0",
+    "mobile-detect": "^1.4.3",
     "pino": "^4.17.5",
     "prop-types": "^15.6.1",
     "react": "^16.6.3",

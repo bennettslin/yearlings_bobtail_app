@@ -13,16 +13,16 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    viewportStore: { isDesktopWidth }
+    mobileStore: { isDesktopProcessor }
 }) => ({
-    isDesktopWidth
+    isDesktopProcessor
 })
 
 class Anchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDesktopWidth: PropTypes.bool.isRequired,
+        isDesktopProcessor: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.string,
@@ -58,7 +58,7 @@ class Anchor extends PureComponent {
 
         const {
                 className,
-                isDesktopWidth,
+                isDesktopProcessor,
                 isAnnotationTitle,
                 isAccessed: isAccessedBeforeDesktop,
                 isSelected,
@@ -73,14 +73,14 @@ class Anchor extends PureComponent {
 
             // If in mobile, only show dot sequence if annotation title.
             showDotSequence = Boolean(sequenceDotKeys) && (
-                isDesktopWidth || isAnnotationTitle
+                isDesktopProcessor || isAnnotationTitle
             ),
 
             /**
              * Don't show access if in mobile, even though access behaviour is
              * still technically possible.
              */
-            isAccessed = isAccessedBeforeDesktop && isDesktopWidth
+            isAccessed = isAccessedBeforeDesktop && isDesktopProcessor
 
         return (
             <a
@@ -132,7 +132,7 @@ class Anchor extends PureComponent {
                 {isDotAnchor && (
                     <AnchorDot
                         {...{
-                            isDesktopWidth,
+                            isDesktopProcessor,
                             isAccessed,
                             isSelected,
                             stanzaDotKeys
@@ -143,7 +143,7 @@ class Anchor extends PureComponent {
                 {Boolean(text) && (
                     <AnchorText
                         {...{
-                            isDesktopWidth,
+                            isDesktopProcessor,
                             isAccessed,
                             isSelected,
                             isWikiTextAnchor,

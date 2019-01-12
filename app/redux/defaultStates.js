@@ -139,8 +139,10 @@ export const LYRIC_DEFAULTS = {
 }
 
 export const MOBILE_DEFAULTS = {
-    isOnlyTouchSupported: false,
+    isDesktopProcessor: false,
     isTouchSupported: false,
+
+    // NOTE: This might not be needed, as I've never seen it to be false.
     isWheelSupported: false
 }
 

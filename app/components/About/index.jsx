@@ -7,18 +7,18 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = ({
     mobileStore: {
-        isOnlyTouchSupported,
+        isDesktopProcessor,
         isTouchSupported,
         isWheelSupported
     }
 }) => ({
-    isOnlyTouchSupported,
+    isDesktopProcessor,
     isTouchSupported,
     isWheelSupported
 })
 
 const About = memo(({
-    isOnlyTouchSupported,
+    isDesktopProcessor,
     isTouchSupported,
     isWheelSupported
 }) => (
@@ -34,7 +34,7 @@ const About = memo(({
         </p>
         {/* TODO: Eventually delete this, of course. */}
         <p>
-            isOnlyTouchSupported: {isOnlyTouchSupported ? 'true' : 'false'}
+            isDesktopProcessor: {isDesktopProcessor ? 'true' : 'false'}
         </p>
         <p>
             isTouchSupported: {isTouchSupported ? 'true' : 'false'}
@@ -46,7 +46,7 @@ const About = memo(({
 ))
 
 About.propTypes = {
-    isOnlyTouchSupported: PropTypes.bool.isRequired,
+    isDesktopProcessor: PropTypes.bool.isRequired,
     isTouchSupported: PropTypes.bool.isRequired,
     isWheelSupported: PropTypes.bool.isRequired
 }

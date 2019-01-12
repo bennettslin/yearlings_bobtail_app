@@ -7,10 +7,8 @@ import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 
 const mapStateToProps = ({
-    viewportStore: { isDesktopWidth },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
-    isDesktopWidth,
     interactivatedVerseIndex
 })
 
@@ -18,7 +16,6 @@ class VerseHoc extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDesktopWidth: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -53,7 +50,6 @@ class VerseHoc extends PureComponent {
         }
 
         const {
-                isDesktopWidth,
                 inSlider,
                 inVerseBar
             } = other,
@@ -85,7 +81,7 @@ class VerseHoc extends PureComponent {
                         isInteractivated
                     }}
                 />
-                {isDesktopWidth && !inSlider && !inVerseBar && (
+                {!inSlider && !inVerseBar && (
                     <VerseNav
                         {...{
                             verseIndex,

@@ -6,7 +6,7 @@ import Underline from '../Underline'
 
 const propTypes = {
     // From parent.
-    isDesktopWidth: PropTypes.bool.isRequired,
+    isDesktopProcessor: PropTypes.bool.isRequired,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
@@ -17,7 +17,7 @@ const propTypes = {
 }
 
 const AnchorText = memo(({
-    isDesktopWidth,
+    isDesktopProcessor,
     isAccessed,
     isSelected,
     isWikiTextAnchor,
@@ -33,7 +33,7 @@ const AnchorText = memo(({
                 <___ key={index}>
                     {Boolean(index) && ' '}
                     <span className="AnchorText">
-                        {isDesktopWidth && (
+                        {isDesktopProcessor && (
                             <Underline
                                 {...{
                                     isAccessed,

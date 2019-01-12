@@ -10,13 +10,13 @@ import AccessIcon from './Icon'
 
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 
-const mapStateToProps = ({ viewportStore: { isDesktopWidth } }) => ({
-    isDesktopWidth
+const mapStateToProps = ({ mobileStore: { isDesktopProcessor } }) => ({
+    isDesktopProcessor
 })
 
 const propTypes = {
     // Through Redux.
-    isDesktopWidth: PropTypes.bool.isRequired,
+    isDesktopProcessor: PropTypes.bool.isRequired,
 
     // From parent.
     inTextAnchor: PropTypes.bool,
@@ -28,7 +28,7 @@ const propTypes = {
 }
 
 const AccessLetter = memo(({
-    isDesktopWidth,
+    isDesktopProcessor,
     inTextAnchor,
     inButtonOrDotAnchor,
     isShadow,
@@ -37,7 +37,7 @@ const AccessLetter = memo(({
     accessKey
 
 }) => {
-    return isDesktopWidth && (
+    return isDesktopProcessor && (
         <div
             className={cx(
                 'AccessLetter',
