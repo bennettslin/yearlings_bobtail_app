@@ -4430,5 +4430,10 @@ export default [
         taskName: `Verse bars were not being determined in touch device. Fix by calling with scroll event instead of wheel event in touch device.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Clicking autoScroll in mobile doesn't turn on autoScroll the first time. It's because automatic scrolling registers the scrolling event. Solution is to listen for ontouchmove, not scroll, event when in mobile.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

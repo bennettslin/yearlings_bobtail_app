@@ -33,7 +33,7 @@ class LyricWheelDispatcher extends PureComponent {
                     deltaY = 0,
                     type
                 } = e,
-                isScrollEvent = type === 'scroll',
+                isScrollEvent = type !== 'wheel',
                 { scrollTop } = lyricElement
 
             // Only wheel event has deltaY.

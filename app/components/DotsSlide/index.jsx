@@ -94,6 +94,13 @@ class DotsSlide extends PureComponent {
                         {...{
                             className: cx(
                                 'DotsSlideSelects',
+
+                                /**
+                                 * Avoid sticky hover in touchscreen devices.
+                                 * If it has both touch and mouse events, this
+                                 * will prevent mouse from hovering, but this
+                                 * is an acceptable tradeoff, at least for now.
+                                 */
                                 !deviceSupportsTouch && 'DotsSlide__canHover'
                             ),
                             onClick: this._handleContainerClick

@@ -128,7 +128,7 @@ class LyricScroll extends PureComponent {
                         }}
                         {...deviceSupportsTouch ? {
                             // Pass scroll event in touch device.
-                            onScroll: this._handleScroll
+                            onTouchMove: this._handleScroll
                         } : {
                             // Pass wheel event in mouse device.
                             onWheel: this._handleScroll
