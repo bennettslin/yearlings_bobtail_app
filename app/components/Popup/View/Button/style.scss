@@ -9,7 +9,7 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__close {
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         // Top left corner.
         top: -$js__length__iconLarge * $offset__popupButton;
@@ -52,7 +52,7 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__side {
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         // Buttons on top so they don't shift regardless of content height.
         top: -$js__length__iconLarge * $offset__popupButton;
@@ -75,12 +75,12 @@ $offset__popupButton: 0.75;
     }
 
     // Using calc here because transform messes with z-indices.
-    .DW__desktop
+    .DW__desktopWidth
     &.PopupViewButton__inFullSize {
         top: calc(50% - #{$js__length__iconLarge} * 0.5);
     }
 
-    .DW__desktop
+    .DW__desktopWidth
     &.PopupViewButton__notInFullSize {
         top: $js__padding__popupContent__wide;
     }
@@ -101,7 +101,7 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__previous {
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         left: -$js__length__iconLarge * $offset__popupButton;
     }
@@ -118,7 +118,7 @@ $offset__popupButton: 0.75;
 
     .DW__phone
     &,
-    .DW__mobile
+    .DW__mobileWidth
     &.PopupViewButton__notInOverlay {
         left: 10%;
     }
@@ -136,7 +136,7 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__next {
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         right: -$js__length__iconLarge * $offset__popupButton;
     }
@@ -153,7 +153,7 @@ $offset__popupButton: 0.75;
 
     .DW__phone
     &,
-    .DW__mobile
+    .DW__mobileWidth
     &.PopupViewButton__notInOverlay {
         right: 10%;
     }

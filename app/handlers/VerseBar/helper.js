@@ -1,6 +1,6 @@
 import {
-    getIsMini,
-    getIsDesktop
+    getIsMiniWidth,
+    getIsDesktopWidth
 } from 'helpers/responsive'
 
 import {
@@ -19,7 +19,7 @@ const _getLyricSectionRect = ({
     const bottom = windowHeight
     let top
 
-    if (getIsDesktop(deviceIndex)) {
+    if (getIsDesktopWidth(deviceIndex)) {
         /**
          * If monitor or laptop width, then lyric section rect is simply the
          * entire window height.
@@ -35,7 +35,7 @@ const _getLyricSectionRect = ({
 
     } else if (isTwoRowMenu) {
 
-        if (getIsMini(deviceIndex)) {
+        if (getIsMiniWidth(deviceIndex)) {
             top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
 
         } else {

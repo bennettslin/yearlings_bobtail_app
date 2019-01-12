@@ -1,6 +1,6 @@
 import {
-    getIsTablet,
-    getIsMonitor
+    getIsTabletWidth,
+    getIsMonitorWidth
 } from '../../../../helpers/responsive'
 
 import { DEVICE_OBJECTS } from '../../../../constants/responsive'
@@ -19,7 +19,7 @@ export const getIsScoresTipsInMain = ({
 }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
 
-    if (getIsMonitor(deviceIndex) || getIsTablet(deviceIndex)) {
+    if (getIsMonitorWidth(deviceIndex) || getIsTabletWidth(deviceIndex)) {
         return _getIsScoresTipsInMainForDeviceObject(windowWidth, deviceObject)
     } else {
         return true

@@ -1,5 +1,5 @@
 import { getSong } from 'album/api/songs'
-import { getIsPhone } from '../../helpers/responsive'
+import { getIsPhoneWidth } from '../../helpers/responsive'
 
 export const getSongOverview = (songIndex) => {
     const song = getSong(songIndex)
@@ -7,5 +7,5 @@ export const getSongOverview = (songIndex) => {
 }
 
 export const getIsToggleInOverview = (deviceIndex) => {
-    return getIsPhone(deviceIndex)
+    return getIsPhoneWidth(deviceIndex)
 }

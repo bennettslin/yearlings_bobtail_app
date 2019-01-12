@@ -6,7 +6,7 @@
         position: absolute;
         right: 0;
 
-        .DW__desktop
+        .DW__desktopWidth
         & {
             top: 0;
 
@@ -16,7 +16,7 @@
                 + $js__margin__thick;
         }
 
-        .DW__mobile
+        .DW__mobileWidth
         & {
             bottom: 0;
             margin-right: $js__margin__thick;

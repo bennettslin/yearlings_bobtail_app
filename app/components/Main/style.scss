@@ -13,7 +13,7 @@ $js__height__lyricCollapsed: 32%;
 .Main__flexContainer {
     display: flex;
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         align-items: flex-end;
     }
@@ -28,7 +28,7 @@ $js__height__lyricCollapsed: 32%;
         - #{$js__height__menu}
     );
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     .RW__lyricHeighted
     & {
         // This ensures that main toggle buttons sit above collapsed lyric.
@@ -58,7 +58,7 @@ $js__height__lyricCollapsed: 32%;
     .DW__laptop
     .RW__twoRowMenu
     &,
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     .RW__twoRowMenu.RW__lyricHeightless
     & {
         height: calc(
@@ -94,7 +94,7 @@ $js__height__lyricCollapsed: 32%;
         max-width: calc(100% - #{$js__width__uncannyValley});
     }
 
-    .DW__mobile
+    .DW__mobileWidth
     & {
         max-width: 100%;
     }

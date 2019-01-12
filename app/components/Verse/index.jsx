@@ -16,10 +16,10 @@ import { populateRefs } from 'helpers/ref'
 import { VERSE_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
-    deviceStore: { isDesktop },
+    deviceStore: { isDesktopWidth },
     lyricStore: { lyricSongIndex }
 }) => ({
-    isDesktop,
+    isDesktopWidth,
     lyricSongIndex
 })
 
@@ -35,7 +35,7 @@ class Verse extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDesktop: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -56,10 +56,10 @@ class Verse extends PureComponent {
          * parent element handle all verse interaction and own all needed
          * children, including nav button and dispatcher.
          */
-        const { isDesktop } = this.props
+        const { isDesktopWidth } = this.props
 
         // Allow clicks on interactable verses.
-        if (isDesktop && this.getIsInteractable()) {
+        if (isDesktopWidth && this.getIsInteractable()) {
             this.dispatchStopPropagation(e)
             this.dispatchInteractivatedVerseIndex(this.props.verseIndex)
         }

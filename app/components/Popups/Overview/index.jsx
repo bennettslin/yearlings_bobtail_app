@@ -10,7 +10,7 @@ import Popup from '../../Popup'
 import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
-    deviceStore: { isPhone },
+    deviceStore: { isPhoneWidth },
     lyricStore: { canLyricCarouselEnter },
     optionStore: {
         selectedOverviewOption,
@@ -18,7 +18,7 @@ const mapStateToProps = ({
     },
     lyricStore: { isLyricLogue }
 }) => ({
-    isPhone,
+    isPhoneWidth,
     canLyricCarouselEnter,
     selectedOverviewOption,
     selectedTipsOption,
@@ -29,7 +29,7 @@ class OverviewPopup extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isPhone: PropTypes.bool.isRequired,
+        isPhoneWidth: PropTypes.bool.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         isLyricLogue: PropTypes.bool.isRequired,
@@ -43,7 +43,7 @@ class OverviewPopup extends PureComponent {
         const
             {
                 inMain,
-                isPhone,
+                isPhoneWidth,
                 canLyricCarouselEnter,
                 selectedOverviewOption,
                 isLyricLogue,
@@ -75,7 +75,7 @@ class OverviewPopup extends PureComponent {
                     noFlexCentre: inMain,
 
                     // Only position absolute when in main and is phone.
-                    noAbsoluteFull: isLyricLogue || !isPhone
+                    noAbsoluteFull: isLyricLogue || !isPhoneWidth
                 }}
             >
                 <Overview />

@@ -25,7 +25,7 @@ $margin__dotsContainer__phone: 8px;
     box-shadow: $boxShadow__mainCard;
     background-color: $bgColour__afterSelected;
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         top: auto;
         bottom: 0;
@@ -45,7 +45,7 @@ $margin__dotsContainer__phone: 8px;
         transform: translateX(0);
     }
 
-    .DW__mobileNotTablet
+    .DW__phoneOrMiniWidth
     & {
         margin-left: $margin__dotsContainer__phone;
     }
@@ -58,7 +58,7 @@ $margin__dotsContainer__phone: 8px;
 
     padding: $js__margin__thick;
 
-    .DW__mobileNotTablet
+    .DW__phoneOrMiniWidth
     & {
         padding: $js__margin__thick * 0.75;
     }

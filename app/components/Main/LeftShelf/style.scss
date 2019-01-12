@@ -50,13 +50,13 @@ $height___overviewToggle__phone:
      */
      z-index: $zIndex__leftShelf;
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         flex-direction: column-reverse;
     }
 
     // Widths for all other devices are set by "width__leftShelf" class.
-    .DW__desktop
+    .DW__desktopWidth
     & {
         width: $width__overviewToggle;
     }
@@ -90,7 +90,7 @@ $height___overviewToggle__phone:
         margin-bottom: $js__margin__thick;
     }
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     &:not(:last-child) {
         margin-top: $js__margin__thick;
         margin-bottom: 0;

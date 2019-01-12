@@ -24,9 +24,9 @@ import {
 } from 'constants/responsive'
 
 import {
-    getIsDesktop,
-    getIsPhone,
-    getIsMonitor
+    getIsDesktopWidth,
+    getIsPhoneWidth,
+    getIsMonitorWidth
 } from 'helpers/responsive'
 
 import { getIsUnrenderableCarouselNav } from './hidden'
@@ -58,10 +58,10 @@ const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
     let lyricWidth = 0,
         overflowPercentage = 1
 
-    if (getIsDesktop(deviceIndex)) {
+    if (getIsDesktopWidth(deviceIndex)) {
         overflowPercentage = STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
 
-        if (getIsMonitor(deviceIndex)) {
+        if (getIsMonitorWidth(deviceIndex)) {
             lyricWidth = LS_WIDTH_GOLDEN_CORD
         } else {
             lyricWidth = LS_WIDTH_UNCANNY_VALLEY
@@ -78,21 +78,21 @@ export const getStageCoordinates = ({
     isHeightlessLyric
 }) => {
 
-    const isDesktop = getIsDesktop(deviceIndex),
+    const isDesktopWidth = getIsDesktopWidth(deviceIndex),
 
         leftShelfOverflow =
             _getLeftShelfOverflow(deviceIndex),
 
         centreFieldWidth = _getCentreFieldWidth(deviceIndex, windowWidth) - leftShelfOverflow,
 
-        isPhone = getIsPhone(deviceIndex),
+        isPhoneWidth = getIsPhoneWidth(deviceIndex),
 
         isUnrenderableCarouselNav = getIsUnrenderableCarouselNav({
             deviceIndex, windowHeight, windowWidth
         }),
 
         navHeight =
-            isPhone ||
+            isPhoneWidth ||
             isHeightlessLyric ||
             isUnrenderableCarouselNav ? 0 : LS_HEIGHT_NAV,
 
@@ -119,7 +119,7 @@ export const getStageCoordinates = ({
         width *= LS_STAGE_ASPECT_RATIO / centreFieldRatio
     }
 
-    if (isDesktop) {
+    if (isDesktopWidth) {
         // If stage height is adjustable, put closer to top in desktop.
         top = (centreFieldHeight - height) * 0.1
 
@@ -132,7 +132,7 @@ export const getStageCoordinates = ({
          * not phone.
          */
         const mobileNotPhoneOffset =
-            isPhone ?
+            isPhoneWidth ?
                 0 :
                 (centreFieldHeight - height) * 0.9
 

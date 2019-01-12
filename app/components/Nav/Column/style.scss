@@ -9,7 +9,7 @@
     height: $js__height__nav;
     opacity: 0;
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         transition:
             bottom $animationDuration__fast,
@@ -18,7 +18,7 @@
         bottom: -$js__height__nav;
     }
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         transition:
             top $animationDuration__fast,
@@ -27,7 +27,7 @@
         top: -$js__height__nav;
     }
 
-    .DW__mobile
+    .DW__mobileWidth
     .RW__twoRowMenu
     & {
         top: -$js__height__nav - $js__height__banner__twoRowMenu__truncated;
@@ -38,7 +38,7 @@
     right: 0;
     margin-right: $js__margin__navLastTitle;
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         margin-right: 0;
     }
@@ -52,14 +52,14 @@
         opacity: 1;
     }
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         .NavColumn {
             top: 0;
         }
     }
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         .NavColumn {
             bottom: 0;

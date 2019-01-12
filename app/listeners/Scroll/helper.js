@@ -1,8 +1,8 @@
 import scrollIntoView from 'scroll-into-view'
 
 import {
-    getIsDesktop,
-    getIsMonitor
+    getIsDesktopWidth,
+    getIsMonitorWidth
 } from 'helpers/responsive'
 
 import {
@@ -13,7 +13,7 @@ import {
 const _getLyricTopAlign = (deviceIndex, isLyricExpanded) => {
 
     // If in desktop or lyric column is expanded, set closer to top.
-    if (getIsDesktop(deviceIndex) || isLyricExpanded) {
+    if (getIsDesktopWidth(deviceIndex) || isLyricExpanded) {
         return {
             top: 0.33
         }
@@ -30,13 +30,13 @@ const _getCarouselLeftAlign = (
 ) => {
 
     // If mobile, then set halfway, which is the default.
-    if (!getIsDesktop(deviceIndex)) {
+    if (!getIsDesktopWidth(deviceIndex)) {
         return null
 
     } else {
         const
             earColumnWidth =
-                getIsMonitor(deviceIndex) ?
+                getIsMonitorWidth(deviceIndex) ?
                     LS_WIDTH_GOLDEN_CORD :
                     LS_WIDTH_UNCANNY_VALLEY,
 

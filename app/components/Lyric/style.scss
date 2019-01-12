@@ -36,7 +36,7 @@
         z-index: $zIndex__lyricColumn;
     }
 
-    .DW__mobile
+    .DW__mobileWidth
     .PlW__song
     .ShW__lyricExpanded
     & {
@@ -68,7 +68,7 @@
 // Used by Lyric and OverviewLogue.
 .position__lyricColumn__desktop {
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         width: $js__width__goldenCord;
         height: 100%;
@@ -98,7 +98,7 @@
         rgba(0, 0, 0, 0.4) $height__chivalry,
         black $height__chivalry * 1.1
     );
-    .DW__desktop
+    .DW__desktopWidth
     .RW__carouselNavShowable
     .ShW__annotationShown.ShW__carouselExpanded
     & {

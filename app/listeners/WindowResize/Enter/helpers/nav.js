@@ -1,8 +1,8 @@
 import {
-    getIsPhone,
-    getIsMini,
-    getIsTablet,
-    getIsMonitor
+    getIsPhoneWidth,
+    getIsMiniWidth,
+    getIsTabletWidth,
+    getIsMonitorWidth
 } from '../../../../helpers/responsive'
 
 import {
@@ -39,8 +39,8 @@ export const getShowShrunkNavIcon = ({
     const
         deviceObject = DEVICE_OBJECTS[deviceIndex],
         isPhoneOrMini =
-            getIsPhone(deviceIndex) ||
-            getIsMini(deviceIndex)
+            getIsPhoneWidth(deviceIndex) ||
+            getIsMiniWidth(deviceIndex)
 
     return _getShowShrunkNavIconForDeviceObject(
         windowWidth,
@@ -53,7 +53,7 @@ export const getShowSingleNavBook = ({
 }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
 
-    if (!getIsMonitor(deviceIndex) && !getIsTablet(deviceIndex)) {
+    if (!getIsMonitorWidth(deviceIndex) && !getIsTabletWidth(deviceIndex)) {
         // Value for phone doesn't matter. Just keeps it from breaking.
         return true
 

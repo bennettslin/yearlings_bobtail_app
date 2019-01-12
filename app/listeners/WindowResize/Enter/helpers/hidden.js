@@ -1,6 +1,6 @@
 import {
-    getIsPhone,
-    getIsMini
+    getIsPhoneWidth,
+    getIsMiniWidth
 } from '../../../../helpers/responsive'
 
 import { getIsLyricExpandable } from './responsive'
@@ -23,13 +23,13 @@ export const getIsUnrenderableCarouselNav = ({
         isHeightlessLyric ||
 
         // Or if it's a phone...
-        getIsPhone(deviceIndex) ||
+        getIsPhoneWidth(deviceIndex) ||
 
         // If the height is below a minimum...
         windowHeight < UNRENDERABLE_NAV_MIN ||
 
         // Or if it's a heightless mini.
-        (getIsMini(deviceIndex) && getIsHeightlessLyric({
+        (getIsMiniWidth(deviceIndex) && getIsHeightlessLyric({
             deviceIndex,
             windowHeight,
             windowWidth
@@ -54,7 +54,7 @@ export const getIsHeightlessLyric = ({
         return false
     }
 
-    const minimumHeight = getIsPhone(deviceIndex) ?
+    const minimumHeight = getIsPhoneWidth(deviceIndex) ?
         HEIGHTLESS_LYRIC_PHONE_MIN :
         HEIGHTLESS_LYRIC_MIN
 

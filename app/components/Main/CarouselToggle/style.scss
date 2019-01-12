@@ -15,18 +15,18 @@
         box-shadow $animationDuration__fast;
 
     // Widths for all other devices are set by "width__leftShelf" class.
-    .DW__desktop
+    .DW__desktopWidth
     & {
         width: $width__overviewToggle__laptop;
     }
 
-    .DW__desktop
+    .DW__desktopWidth
     .ShW__carouselExpanded
     & {
         bottom: $margin__scrollbar;
     }
 
-    .DW__mobile
+    .DW__mobileWidth
     & {
         top: 0;
         bottom: auto;

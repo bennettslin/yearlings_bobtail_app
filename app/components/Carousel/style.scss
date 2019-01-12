@@ -11,7 +11,7 @@ $height__carouselHidden: $height__chivalry * 0.05;
     opacity: 0;
     z-index: $zIndex__theatreFloor;
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         bottom: -$height__carouselHidden;
 
@@ -23,7 +23,7 @@ $height__carouselHidden: $height__chivalry * 0.05;
             bottom $animationDuration__fast;
     }
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         top: -$height__carouselHidden;
         height: 100%;
@@ -42,14 +42,14 @@ $height__carouselHidden: $height__chivalry * 0.05;
         z-index: $zIndex__annotation;
     }
 
-    .DW__desktop
+    .DW__desktopWidth
     .RW__carouselNavShowable
     .ShW__carouselExpanded
     &.Carousel__visible {
         bottom: 0;
     }
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     .RW__carouselNavShowable
     .ShW__carouselExpanded
     &.Carousel__visible {
@@ -98,7 +98,7 @@ $height__carouselHidden: $height__chivalry * 0.05;
         mask-image: $gradient__carousel__laptop;
     }
 
-    .DW__desktop
+    .DW__desktopWidth
     .RW__carouselNavShowable
     .ShW__annotationShown.ShW__carouselExpanded
     & {

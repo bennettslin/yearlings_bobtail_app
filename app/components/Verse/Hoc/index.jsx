@@ -7,10 +7,10 @@ import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 
 const mapStateToProps = ({
-    deviceStore: { isDesktop },
+    deviceStore: { isDesktopWidth },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
-    isDesktop,
+    isDesktopWidth,
     interactivatedVerseIndex
 })
 
@@ -18,7 +18,7 @@ class VerseHoc extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDesktop: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -53,7 +53,7 @@ class VerseHoc extends PureComponent {
         }
 
         const {
-                isDesktop,
+                isDesktopWidth,
                 inSlider,
                 inVerseBar
             } = other,
@@ -85,7 +85,7 @@ class VerseHoc extends PureComponent {
                         isInteractivated
                     }}
                 />
-                {isDesktop && !inSlider && !inVerseBar && (
+                {isDesktopWidth && !inSlider && !inVerseBar && (
                     <VerseNav
                         {...{
                             verseIndex,

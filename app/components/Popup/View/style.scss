@@ -11,7 +11,7 @@
     width: calc(100% - #{$js__length__iconLarge} * 2 - #{$js__padding__popupContent__wide} * 2);
     height: calc(100% - #{$js__length__iconLarge} * 1.25);
 
-    .DW__mobileNotTablet
+    .DW__phoneOrMiniWidth
     & {
         width: 100%;
     }

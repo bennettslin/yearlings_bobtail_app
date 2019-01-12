@@ -15,7 +15,7 @@ import { populateRefs } from 'helpers/ref'
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
-    deviceStore: { isDesktop },
+    deviceStore: { isDesktopWidth },
     lyricStore: {
         lyricSongIndex,
         lyricAnnotationIndex
@@ -26,7 +26,7 @@ const mapStateToProps = ({
         accessedWikiWormholeIndex
     }
 }) => ({
-    isDesktop,
+    isDesktopWidth,
     lyricAnnotationIndex,
 
     // This is just to know when to update.
@@ -41,7 +41,7 @@ class TextLyricAnchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDesktop: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
@@ -124,7 +124,7 @@ class TextLyricAnchor extends PureComponent {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                isDesktop,
+                isDesktopWidth,
                 annotationIndex,
                 lyricAnnotationIndex,
                 isAccessedIndexedAnchorShown,
@@ -160,7 +160,7 @@ class TextLyricAnchor extends PureComponent {
         }
 
         // Don't split wiki anchor text in mobile.
-        const words = isWikiTextAnchor && isDesktop ? text.split(' ') : [text]
+        const words = isWikiTextAnchor && isDesktopWidth ? text.split(' ') : [text]
 
         return (
             <___>

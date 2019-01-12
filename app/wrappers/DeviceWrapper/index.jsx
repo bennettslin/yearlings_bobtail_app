@@ -7,15 +7,15 @@ import cx from 'classnames'
 
 import { DEVICE_OBJECTS } from 'constants/responsive'
 
-import { getIsTablet } from 'helpers/responsive'
+import { getIsTabletWidth } from 'helpers/responsive'
 
 class DeviceWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
-        isPhone: PropTypes.bool.isRequired,
-        isDesktop: PropTypes.bool.isRequired,
+        isPhoneWidth: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
 
         // From parent.
         children: PropTypes.any.isRequired
@@ -25,13 +25,14 @@ class DeviceWrapper extends PureComponent {
         const
             {
                 deviceIndex,
-                isPhone,
-                isDesktop,
+                isPhoneWidth,
+                isDesktopWidth,
                 children
             } = this.props,
-            deviceClassName = DEVICE_OBJECTS[deviceIndex] && DEVICE_OBJECTS[deviceIndex].className,
-            isMobile = !isDesktop,
-            isTablet = getIsTablet(deviceIndex)
+            deviceClassName =
+                DEVICE_OBJECTS[deviceIndex] &&
+                DEVICE_OBJECTS[deviceIndex].className,
+            isTabletWidth = getIsTabletWidth(deviceIndex)
 
         return (
             <div
@@ -39,13 +40,14 @@ class DeviceWrapper extends PureComponent {
                     className: cx(
                         'DeviceWrapper',
                         `DW__${deviceClassName}`,
-                        isDesktop ?
-                            'DW__desktop' :
-                            'DW__mobile',
-                        {
-                            'DW__notPhone': !isPhone,
-                            'DW__mobileNotPhone': isMobile && !isPhone,
-                            'DW__mobileNotTablet': isMobile && !isTablet
+                        isDesktopWidth ?
+                            'DW__desktopWidth' :
+                            'DW__mobileWidth',
+                        !isPhoneWidth &&
+                            'DW__notPhoneWidth',
+                        !isDesktopWidth && {
+                            'DW__miniOrTabletWidth': !isPhoneWidth,
+                            'DW__phoneOrMiniWidth': !isTabletWidth
                         },
                         'abF'
                     )
@@ -60,13 +62,13 @@ class DeviceWrapper extends PureComponent {
 const mapStateToProps = ({
     deviceStore: {
         deviceIndex,
-        isPhone,
-        isDesktop
+        isPhoneWidth,
+        isDesktopWidth
     }
 }) => ({
     deviceIndex,
-    isPhone,
-    isDesktop
+    isPhoneWidth,
+    isDesktopWidth
 })
 
 export default connect(mapStateToProps)(DeviceWrapper)

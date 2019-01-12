@@ -13,16 +13,16 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    deviceStore: { isDesktop }
+    deviceStore: { isDesktopWidth }
 }) => ({
-    isDesktop
+    isDesktopWidth
 })
 
 class Anchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDesktop: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.string,
@@ -58,7 +58,7 @@ class Anchor extends PureComponent {
 
         const {
                 className,
-                isDesktop,
+                isDesktopWidth,
                 isAnnotationTitle,
                 isAccessed: isAccessedBeforeDesktop,
                 isSelected,
@@ -73,14 +73,14 @@ class Anchor extends PureComponent {
 
             // If in mobile, only show dot sequence if annotation title.
             showDotSequence = Boolean(sequenceDotKeys) && (
-                isDesktop || isAnnotationTitle
+                isDesktopWidth || isAnnotationTitle
             ),
 
             /**
              * Don't show access if in mobile, even though access behaviour is
              * still technically possible.
              */
-            isAccessed = isAccessedBeforeDesktop && isDesktop
+            isAccessed = isAccessedBeforeDesktop && isDesktopWidth
 
         return (
             <a
@@ -132,7 +132,7 @@ class Anchor extends PureComponent {
                 {isDotAnchor && (
                     <AnchorDot
                         {...{
-                            isDesktop,
+                            isDesktopWidth,
                             isAccessed,
                             isSelected,
                             stanzaDotKeys
@@ -143,7 +143,7 @@ class Anchor extends PureComponent {
                 {Boolean(text) && (
                     <AnchorText
                         {...{
-                            isDesktop,
+                            isDesktopWidth,
                             isAccessed,
                             isSelected,
                             isWikiTextAnchor,

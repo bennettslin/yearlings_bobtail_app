@@ -9,21 +9,21 @@ import { ALL_DOT_KEYS } from 'constants/dots'
 
 const propTypes = {
     // From parent.
-    isDesktop: PropTypes.bool.isRequired,
+    isDesktopWidth: PropTypes.bool.isRequired,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     stanzaDotKeys: PropTypes.object.isRequired
 }
 
 const AnchorDot = memo(({
-    isDesktop,
+    isDesktopWidth,
     isAccessed,
     isSelected,
     stanzaDotKeys
 
 }) => (
     <___>
-        {isDesktop && (
+        {isDesktopWidth && (
             <Underline
                 isDotAnchor
                 {...{

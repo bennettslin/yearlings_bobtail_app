@@ -29,7 +29,7 @@
     transition:
         right $animationDuration__default;
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         bottom: $margin__scrollbar;
     }

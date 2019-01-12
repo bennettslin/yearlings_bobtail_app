@@ -8,7 +8,7 @@
 
     opacity: 0;
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         position: fixed;
         transition:
@@ -23,7 +23,7 @@
         margin-bottom: $margin__scrollbar;
     }
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         position: absolute;
         transition:
@@ -42,7 +42,7 @@
         opacity: 1;
     }
 
-    .DW__desktop
+    .DW__desktopWidth
     .PlW__song
     .ShW__annotationShown.ShW__carouselExpanded
     .TrW__canLyricCarouselEnter
@@ -50,7 +50,7 @@
         bottom: 0;
     }
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     .PlW__song
     .ShW__annotationShown.ShW__carouselExpanded
     .TrW__canLyricCarouselEnter

@@ -9,8 +9,8 @@ import {
 } from 'constants/responsive'
 
 import {
-    getIsPhone,
-    getIsDesktop
+    getIsPhoneWidth,
+    getIsDesktopWidth
 } from 'helpers/responsive'
 
 /*********
@@ -23,7 +23,7 @@ const _getEarColumnHeight = (
     windowHeight
 ) => {
     return (
-        isHeightlessLyric || getIsDesktop(deviceIndex)
+        isHeightlessLyric || getIsDesktopWidth(deviceIndex)
     ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
@@ -31,8 +31,8 @@ export const getIsTwoRowMenu = ({
     deviceIndex, windowWidth
 }) => {
 
-    const isDesktop = getIsDesktop(deviceIndex),
-        twoRowMenuBreakpoint = isDesktop ?
+    const isDesktopWidth = getIsDesktopWidth(deviceIndex),
+        twoRowMenuBreakpoint = isDesktopWidth ?
             TWO_ROW_MENU_BREAKPOINT_LAPTOP :
             TWO_ROW_MENU_BREAKPOINT_MINI
 
@@ -55,7 +55,7 @@ export const getCentreFieldHeight = ({
         deviceIndex, windowWidth
     })) {
 
-        if (getIsPhone(deviceIndex)) {
+        if (getIsPhoneWidth(deviceIndex)) {
             menuHeight = LS_TOP_OFFSET_TWO_ROW_MENU_PHONE
 
         } else {
@@ -115,7 +115,7 @@ export const getLyricHeightRatio = ({
 }) => {
 
     // Desktop is always 100%.
-    if (getIsDesktop(deviceIndex)) {
+    if (getIsDesktopWidth(deviceIndex)) {
         return 1
 
     // Heightless lyric is 0%, obviously.
@@ -124,7 +124,7 @@ export const getLyricHeightRatio = ({
     }
 
     // Mobile not phone is always 32%.
-    if (!getIsPhone(deviceIndex)) {
+    if (!getIsPhoneWidth(deviceIndex)) {
         return LS_HEIGHT_LYRIC_COLLAPSED
     }
 

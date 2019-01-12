@@ -9,12 +9,12 @@
     max-width: 0;
     min-width: 0;
 
-    .DW__desktop
+    .DW__desktopWidth
     & {
         padding-bottom: $js__margin__thick;
     }
 
-    .DW__mobileNotPhone
+    .DW__miniOrTabletWidth
     & {
         flex-direction: column;
 

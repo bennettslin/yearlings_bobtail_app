@@ -7,24 +7,24 @@ import {
     DEVICE_OBJECTS
 } from 'constants/responsive'
 
-export const getIsDesktop = (deviceIndex) => {
+export const getIsDesktopWidth = (deviceIndex) => {
     const deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
     return deviceClassName === LS_LAPTOP_CLASS || deviceClassName === MONITOR_CLASS
 }
 
-export const getIsPhone = (deviceIndex) => {
+export const getIsPhoneWidth = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === PHONE_CLASS
 }
 
-export const getIsMini = (deviceIndex) => {
+export const getIsMiniWidth = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === LS_MINI_CLASS
 }
 
-export const getIsTablet = (deviceIndex) => {
+export const getIsTabletWidth = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === TABLET_CLASS
 }
 
-export const getIsMonitor = (deviceIndex) => {
+export const getIsMonitorWidth = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MONITOR_CLASS
 }

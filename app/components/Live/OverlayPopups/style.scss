@@ -13,7 +13,7 @@
  */
 .topHeight__overlayPopups__mobile {
 
-    .DW__mobile
+    .DW__mobileWidth
     & {
         top: $js__height__menu;
         height: calc(100% - #{$js__height__menu});
@@ -31,7 +31,7 @@
 .topHeight__overlayPopups,
 
 // Only apply this styling for OverviewLogue in mobile.
-.DW__mobile
+.DW__mobileWidth
 .RW__twoRowMenu
 .topHeight__overlayPopups__mobile {
 

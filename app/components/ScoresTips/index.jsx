@@ -16,15 +16,15 @@ import { SCORES_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
     deviceStore: {
-        isDesktop,
-        isPhone
+        isDesktopWidth,
+        isPhoneWidth
     },
     responsiveStore: { isScoresTipsInMain },
     toggleStore: { isScoreShown },
     loadStore: { isScoreLoaded }
 }) => ({
-    isDesktop,
-    isPhone,
+    isDesktopWidth,
+    isPhoneWidth,
     isScoresTipsInMain,
     isScoreShown,
     isScoreLoaded
@@ -40,8 +40,8 @@ class ScoresTips extends PureComponent {
 
     static propTypes = {
     // Through Redux.
-        isDesktop: PropTypes.bool.isRequired,
-        isPhone: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
+        isPhoneWidth: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isScoreLoaded: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -62,8 +62,8 @@ class ScoresTips extends PureComponent {
 
     render() {
         const {
-                isDesktop,
-                isPhone,
+                isDesktopWidth,
+                isPhoneWidth,
                 isScoreLoaded,
                 isScoresTipsInMain,
 
@@ -77,16 +77,16 @@ class ScoresTips extends PureComponent {
 
                 (
                     // ...in main on the right in mobile.
-                    (inMainRightSide && !isDesktop) ||
+                    (inMainRightSide && !isDesktopWidth) ||
 
                     // ...in main on the left in dots overview on desktop.
-                    (inLeftShelf && isDesktop)
+                    (inLeftShelf && isDesktopWidth)
                 ) :
 
             // ...otherwise, render in menu.
                 inMenu,
 
-            showScoreToggleButton = !isPhone
+            showScoreToggleButton = !isPhoneWidth
 
         return shouldRender && (
             <div className={cx(

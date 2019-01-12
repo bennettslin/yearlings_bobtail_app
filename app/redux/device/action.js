@@ -11,16 +11,16 @@ import {
 } from '../defaultStates'
 
 import {
-    getIsDesktop,
-    getIsPhone
+    getIsDesktopWidth,
+    getIsPhoneWidth
 } from '../../helpers/responsive'
 
 export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => {
     const { deviceIndex } = payload
 
     if (hasKey(deviceIndex)) {
-        payload.isDesktop = getIsDesktop(deviceIndex)
-        payload.isPhone = getIsPhone(deviceIndex)
+        payload.isDesktopWidth = getIsDesktopWidth(deviceIndex)
+        payload.isPhoneWidth = getIsPhoneWidth(deviceIndex)
     }
 
     return ({

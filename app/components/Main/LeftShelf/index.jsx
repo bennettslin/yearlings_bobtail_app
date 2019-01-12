@@ -10,16 +10,16 @@ import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
 
 const mapStateToProps = ({
-    deviceStore: { isPhone }
+    deviceStore: { isPhoneWidth }
 }) => ({
-    isPhone
+    isPhoneWidth
 })
 
 class LeftShelf extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isPhone: PropTypes.bool.isRequired,
+        isPhoneWidth: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.any
@@ -28,14 +28,14 @@ class LeftShelf extends PureComponent {
     render() {
         const {
             className,
-            isPhone
+            isPhoneWidth
         } = this.props
 
         return (
             <div className={cx(
                 'LeftShelf',
                 'width__leftShelf',
-                isPhone && 'abF',
+                isPhoneWidth && 'abF',
                 className
             )}>
                 <OverviewToggle inLeftShelf />

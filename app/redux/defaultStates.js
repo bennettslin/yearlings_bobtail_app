@@ -117,8 +117,8 @@ export const AUDIO_DEFAULTS = {
 export const DEVICE_DEFAULTS = {
     ...DEVICE_TRANSITION_DEFAULTS,
     deviceIndex: DEVICE_OBJECTS.length - 1,
-    isPhone: false,
-    isDesktop: false,
+    isPhoneWidth: false,
+    isDesktopWidth: false,
     windowHeight: 0,
     windowWidth: 0,
     stageTop: 0,
