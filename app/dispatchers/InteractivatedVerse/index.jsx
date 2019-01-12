@@ -55,7 +55,8 @@ class InteractivatedVerseDispatcher extends PureComponent {
         this.props.updateSessionStore({ interactivatedVerseIndex })
 
         this.props.updateScrollLyricStore({
-            queuedScrollLyricLog: 'Access interactivated verse direction.',
+            queuedScrollLyricLog:
+                `Access interactivated verse ${interactivatedVerseIndex}.`,
             queuedScrollLyricByVerse: true,
 
             /**

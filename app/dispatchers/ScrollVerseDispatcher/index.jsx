@@ -28,7 +28,8 @@ class ScrollVerseDispatcher extends PureComponent {
     dispatchScrollVerse = (isAutoScroll) => {
 
         this.props.updateScrollLyricStore({
-            queuedScrollLyricLog: 'VerseBar click or toggle autoScroll back to selected verse.',
+            queuedScrollLyricLog:
+                'VerseBar click or autoScroll toggle back to selected verse.',
             queuedScrollLyricByVerse: true,
             queuedScrollLyricAlways: true
         })

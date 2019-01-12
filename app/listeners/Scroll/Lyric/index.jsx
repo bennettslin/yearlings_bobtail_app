@@ -76,9 +76,12 @@ class ScrollLyricListener extends PureComponent {
                 queuedSceneChangeExitScrollCallback,
                 isAutoScroll
             } = this.props,
-            { queuedScrollLyricLog: prevLyricLog } = prevProps
+            { queuedScrollLyricLog: prevScrollLyricLog } = prevProps
 
-        if (queuedScrollLyricLog && !prevLyricLog) {
+        if (
+            queuedScrollLyricLog &&
+            queuedScrollLyricLog !== prevScrollLyricLog
+        ) {
 
             if (isHeightlessLyric && !isLyricExpanded) {
                 /**
@@ -155,15 +158,6 @@ class ScrollLyricListener extends PureComponent {
         }
     }
 
-    _getScrollElementsArray(scrollClass) {
-        switch (scrollClass) {
-            case LYRIC_ANNOTATION_SCROLL:
-                return this.lyricAnnotationElements
-            case VERSE_SCROLL:
-                return this.verseElements
-        }
-    }
-
     _completeSceneChangeExit = () => {
         // This timeout is necessary to fully complete scroll animation.
         setTimeout(this._completeSceneChangeExitScroll, 0)
@@ -176,6 +170,15 @@ class ScrollLyricListener extends PureComponent {
 
     _completeSceneChangeExitScroll = () => {
         this.props.updateSceneStore({ didSceneScrollExit: true })
+    }
+
+    _getScrollElementsArray(scrollClass) {
+        switch (scrollClass) {
+            case LYRIC_ANNOTATION_SCROLL:
+                return this.lyricAnnotationElements
+            case VERSE_SCROLL:
+                return this.verseElements
+        }
     }
 
     getVerseElement = (verseIndex) => {

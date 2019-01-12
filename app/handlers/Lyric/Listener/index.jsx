@@ -56,14 +56,21 @@ class LyricListener extends PureComponent {
             {
                 isLyricExpanded: wasLyricExpanded,
                 isHeightlessLyric: wasLyricHeightless
-            } = prevProps
+            } = prevProps,
+
+            lyricExpandChanged = isLyricExpanded !== wasLyricExpanded,
+            heightlessLyricChanged = !isHeightlessLyric && wasLyricHeightless
 
         if (
-            isLyricExpanded !== wasLyricExpanded ||
-            !isHeightlessLyric && wasLyricHeightless
+            lyricExpandChanged || heightlessLyricChanged
         ) {
+            const queuedScrollLyricLog =
+                lyricExpandChanged ?
+                    `Lyric ${isLyricExpanded ? 'expanded' : 'collapsed'}.` :
+                    `Lyric ${isHeightlessLyric ? 'heightless' : 'heighted'}.`
+
             this.props.updateScrollLyricStore({
-                queuedScrollLyricLog: 'Toggle lyric expand.',
+                queuedScrollLyricLog,
                 queuedScrollLyricByVerse: true,
                 queuedScrollLyricAlways: true
             })
