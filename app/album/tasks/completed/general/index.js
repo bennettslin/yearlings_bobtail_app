@@ -4422,7 +4422,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Weirdness in mobile where interactivated anchor in dots slide retains focus. Fix by adding deviceSupportsTouch flag to store.`,
+        taskName: `Weirdness in mobile where interactivated anchor in dots slide retains focus. Fix by adding isTouchSupported flag to store.`,
         workedHours: 2,
         neededHours: 2
     },

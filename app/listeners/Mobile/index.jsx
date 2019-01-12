@@ -19,19 +19,19 @@ class MobileListener extends PureComponent {
 
     _checkTouchSupport() {
         // http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml
-        const deviceSupportsTouch =
+        const isTouchSupported =
             'ontouchstart' in window ||
             navigator.maxTouchPoints > 0 ||
             navigator.msMaxTouchPoints > 0
 
-        this.props.updateMobileStore({ deviceSupportsTouch })
+        this.props.updateMobileStore({ isTouchSupported })
     }
 
     _checkWheelSupport() {
-        const deviceSupportsWheel =
+        const isWheelSupported =
             'onwheel' in window
 
-        this.props.updateMobileStore({ deviceSupportsWheel })
+        this.props.updateMobileStore({ isWheelSupported })
     }
 
     render() {

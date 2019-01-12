@@ -23,14 +23,14 @@ const mapStateToProps = ({
     },
     dotsStore: { dotsBitNumber },
     dotsSlideStore: { dotsSlideBitNumber },
-    mobileStore: { deviceSupportsTouch }
+    mobileStore: { isTouchSupported }
 }) => ({
     accessedDotIndex,
     isAccessOn,
     isDotsSlideShown,
     dotsBitNumber,
     dotsSlideBitNumber,
-    deviceSupportsTouch
+    isTouchSupported
 })
 
 class DotsSlide extends PureComponent {
@@ -42,7 +42,7 @@ class DotsSlide extends PureComponent {
         accessedDotIndex: PropTypes.number,
         dotsBitNumber: PropTypes.number.isRequired,
         dotsSlideBitNumber: PropTypes.number.isRequired,
-        deviceSupportsTouch: PropTypes.bool.isRequired,
+        isTouchSupported: PropTypes.bool.isRequired,
         resetInteractivatedDots: PropTypes.func.isRequired
     }
 
@@ -71,7 +71,7 @@ class DotsSlide extends PureComponent {
                 isAccessOn,
                 isDotsSlideShown,
                 accessedDotIndex,
-                deviceSupportsTouch
+                isTouchSupported
             } = this.props,
 
             selectedDotKeys = this.getSelectedDotKeys(),
@@ -101,7 +101,7 @@ class DotsSlide extends PureComponent {
                                  * will prevent mouse from hovering, but this
                                  * is an acceptable tradeoff, at least for now.
                                  */
-                                !deviceSupportsTouch && 'DotsSlide__canHover'
+                                !isTouchSupported && 'DotsSlide__canHover'
                             ),
                             onClick: this._handleContainerClick
                         }}
