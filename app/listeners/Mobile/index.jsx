@@ -13,25 +13,29 @@ class MobileListener extends PureComponent {
     }
 
     componentDidMount() {
-        this._checkTouchSupport()
-        this._checkWheelSupport()
+        this._checkDeviceSupport()
     }
 
-    _checkTouchSupport() {
-        // http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml
-        const isTouchSupported =
-            'ontouchstart' in window ||
-            navigator.maxTouchPoints > 0 ||
-            navigator.msMaxTouchPoints > 0
+    _checkDeviceSupport() {
+        const
+            isTouchSupported =
+                // http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml
+                'ontouchstart' in window ||
+                navigator.maxTouchPoints > 0 ||
+                navigator.msMaxTouchPoints > 0,
 
-        this.props.updateMobileStore({ isTouchSupported })
-    }
+            isWheelSupported =
+                'onwheel' in window
 
-    _checkWheelSupport() {
-        const isWheelSupported =
-            'onwheel' in window
+        this.props.updateMobileStore({
+            // TODO: Is this the best way to get only touchscreen devices?
+            isOnlyTouchSupported:
+                isTouchSupported &&
+                !isWheelSupported,
 
-        this.props.updateMobileStore({ isWheelSupported })
+            isTouchSupported,
+            isWheelSupported
+        })
     }
 
     render() {
