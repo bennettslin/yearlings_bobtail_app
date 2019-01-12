@@ -8,7 +8,15 @@ import fabric from './fabric' // 2 days.
 import illustrator from './illustrator' // 27 days.
 import scene from './scene' // 12 days.
 import svg from './svg' // 14 days.
-import general from './general'
+import next from './next'
+
+import important from './important'
+import bugs from './bugs'
+import content from './content'
+import layout from './layout'
+import performance from './performance'
+import presence from './presence'
+import release from './release'
 
 export default [
     ...bubble,
@@ -18,5 +26,13 @@ export default [
     ...illustrator,
     ...scene,
     ...svg,
-    ...general
+    ...next,
+
+    ...important,
+    ...bugs,
+    ...content,
+    ...layout,
+    ...performance,
+    ...presence,
+    ...release
 ]
