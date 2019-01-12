@@ -11,7 +11,7 @@ import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
 import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../constants'
 
 const mapStateToProps = ({
-    deviceStore: {
+    viewportStore: {
         windowHeight,
         windowWidth,
         stageLeft,

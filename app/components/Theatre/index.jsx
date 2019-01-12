@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateDeviceStore } from 'flux/device/action'
+import { updateViewportStore } from 'flux/viewport/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Scene from '../Scene'
@@ -17,7 +17,7 @@ import Ceiling from './Ceiling'
 import Floor from './Floor'
 
 const mapStateToProps = ({
-    deviceStore: { canTheatreEnter }
+    viewportStore: { canTheatreEnter }
 }) => ({
     canTheatreEnter
 })
@@ -27,7 +27,7 @@ class Theatre extends PureComponent {
     static propTypes = {
         // Through Redux.
         canTheatreEnter: PropTypes.bool.isRequired,
-        updateDeviceStore: PropTypes.func.isRequired
+        updateViewportStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -35,7 +35,7 @@ class Theatre extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateDeviceStore({ didTheatreEnter: true })
+        this.props.updateViewportStore({ didTheatreEnter: true })
     }
 
     render() {
@@ -77,5 +77,5 @@ class Theatre extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateDeviceStore }
+    { updateViewportStore }
 )(Theatre)

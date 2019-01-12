@@ -89,7 +89,7 @@ class CarouselDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    deviceStore: { isPhoneWidth },
+    viewportStore: { isPhoneWidth },
     dotsStore: { dotsBitNumber },
     responsiveStore: { isUnrenderableCarouselNav },
     accessStore: { accessedAnnotationIndex },

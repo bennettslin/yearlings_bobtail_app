@@ -230,7 +230,7 @@ const mapStateToProps = ({
         isAutoScroll,
         isLyricExpanded
     },
-    deviceStore: { deviceWidthIndex },
+    viewportStore: { deviceWidthIndex },
     responsiveStore: { isHeightlessLyric }
 }) => ({
     queuedScrollLyricLog,

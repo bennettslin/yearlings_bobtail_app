@@ -13,7 +13,7 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    deviceStore: { isDesktopWidth }
+    viewportStore: { isDesktopWidth }
 }) => ({
     isDesktopWidth
 })

@@ -46,7 +46,7 @@ import {
 /**
  * Transition values. Kept together up here for dev clarity.
  */
-export const DEVICE_TRANSITION_DEFAULTS = {
+export const VIEWPORT_TRANSITION_DEFAULTS = {
     canTheatreEnter: false,
     didTheatreEnter: false
 }
@@ -112,22 +112,6 @@ export const AUDIO_DEFAULTS = {
     queuedPlayFromLogue: false,
     queuedPlaySongIndex: -1,
     queuedPlayVerseIndex: -1
-}
-
-export const DEVICE_DEFAULTS = {
-    ...DEVICE_TRANSITION_DEFAULTS,
-    deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
-    isPhoneWidth: false,
-    isDesktopWidth: false,
-    windowHeight: 0,
-    windowWidth: 0,
-    stageTop: 0,
-    stageLeft: 0,
-    stageWidth: 100,
-    stageHeight: 100,
-    ceilingHeight: 0,
-    floorHeight: 0,
-    lyricHeightRatio: 0
 }
 
 /**
@@ -300,4 +284,20 @@ export const VERSE_BARS_DEFAULTS = {
     isVerseBarBelow: false,
     queuedDetermineVerseBars: false,
     queuedVerseBarsTimeout: 0
+}
+
+export const VIEWPORT_DEFAULTS = {
+    ...VIEWPORT_TRANSITION_DEFAULTS,
+    deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
+    isPhoneWidth: false,
+    isDesktopWidth: false,
+    windowHeight: 0,
+    windowWidth: 0,
+    stageTop: 0,
+    stageLeft: 0,
+    stageWidth: 100,
+    stageHeight: 100,
+    ceilingHeight: 0,
+    floorHeight: 0,
+    lyricHeightRatio: 0
 }

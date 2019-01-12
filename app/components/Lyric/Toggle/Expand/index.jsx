@@ -14,7 +14,7 @@ import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    deviceStore: { deviceWidthIndex },
+    viewportStore: { deviceWidthIndex },
     responsiveStore: {
         isHeightlessLyric,
         isLyricExpandable

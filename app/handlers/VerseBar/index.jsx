@@ -152,7 +152,7 @@ const mapStateToProps = ({
         queuedDetermineVerseBars,
         queuedVerseBarsTimeout
     },
-    deviceStore: {
+    viewportStore: {
         deviceWidthIndex,
         windowHeight
     },
@@ -161,7 +161,7 @@ const mapStateToProps = ({
         isTwoRowMenu
     },
     toggleStore: { isLyricExpanded },
-    deviceStore: { lyricHeightRatio },
+    viewportStore: { lyricHeightRatio },
     verseBarsStore: {
         isVerseBarAbove,
         isVerseBarBelow

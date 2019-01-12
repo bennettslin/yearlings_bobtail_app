@@ -15,7 +15,7 @@ import ScoresTips from '../../ScoresTips'
 import { getMenuMarginInOverlay } from './helper'
 
 const mapStateToProps = ({
-    deviceStore: { windowWidth }
+    viewportStore: { windowWidth }
 }) => ({
     windowWidth
 })

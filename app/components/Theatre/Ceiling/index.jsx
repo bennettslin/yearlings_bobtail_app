@@ -13,7 +13,7 @@ import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
 import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
 const mapStateToProps = ({
-    deviceStore: {
+    viewportStore: {
         windowWidth,
         stageLeft,
         stageWidth,

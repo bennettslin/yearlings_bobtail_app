@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateDeviceStore } from 'flux/device/action'
+import { updateViewportStore } from 'flux/viewport/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
 
 import {
@@ -32,7 +32,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        updateDeviceStore: PropTypes.func.isRequired,
+        updateViewportStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -63,7 +63,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 windowWidth
             })
 
-        this._updateDeviceStore({
+        this._updateViewportStore({
             deviceWidthIndex,
             windowHeight,
             windowWidth,
@@ -78,7 +78,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
         })
     }
 
-    _updateDeviceStore({
+    _updateViewportStore({
         deviceWidthIndex,
         windowHeight,
         windowWidth,
@@ -115,7 +115,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 isHeightlessLyric
             })
 
-        this.props.updateDeviceStore({
+        this.props.updateViewportStore({
             canTheatreEnter: true,
             deviceWidthIndex,
             windowWidth,
@@ -179,7 +179,7 @@ const mapStateToProps = null
 export default connect(
     mapStateToProps,
     {
-        updateDeviceStore,
+        updateViewportStore,
         updateResponsiveStore
     }
 )(WindowResizeEnterDispatcher)

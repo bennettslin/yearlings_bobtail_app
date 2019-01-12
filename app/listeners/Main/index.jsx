@@ -104,7 +104,7 @@ class MainListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    deviceStore: { deviceWidthIndex },
+    viewportStore: { deviceWidthIndex },
     toggleStore: {
         isDotsSlideShown,
         isLyricExpanded,

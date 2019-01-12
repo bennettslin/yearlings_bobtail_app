@@ -60,7 +60,7 @@ class DeviceWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    deviceStore: {
+    viewportStore: {
         deviceWidthIndex,
         isPhoneWidth,
         isDesktopWidth

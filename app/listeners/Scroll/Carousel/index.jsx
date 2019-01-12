@@ -107,7 +107,7 @@ const mapStateToProps = ({
         queuedScrollCarouselFromRender
     },
     toggleStore: { isCarouselShown },
-    deviceStore: {
+    viewportStore: {
         deviceWidthIndex,
         windowWidth
     },

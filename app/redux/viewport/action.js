@@ -1,13 +1,13 @@
-// Actions for window size.
+// Actions for viewport size.
 import {
     hasKey,
     getDefinedOnlyPayload
 } from '../actionHelper'
 
-import { DEVICE_STORE } from '../storeKeys'
+import { VIEWPORT_STORE } from '../storeKeys'
 import {
-    DEVICE_DEFAULTS,
-    DEVICE_TRANSITION_DEFAULTS
+    VIEWPORT_DEFAULTS,
+    VIEWPORT_TRANSITION_DEFAULTS
 } from '../defaultStates'
 
 import {
@@ -15,7 +15,7 @@ import {
     getIsPhoneWidth
 } from '../../helpers/responsive'
 
-export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => {
+export const updateViewportStore = (payload = VIEWPORT_DEFAULTS) => {
     const { deviceWidthIndex } = payload
 
     if (hasKey(deviceWidthIndex)) {
@@ -24,14 +24,14 @@ export const updateDeviceStore = (payload = DEVICE_DEFAULTS) => {
     }
 
     return ({
-        type: DEVICE_STORE,
+        type: VIEWPORT_STORE,
         payload: getDefinedOnlyPayload(payload)
     })
 }
 
-export const resetDeviceForTransition = () => {
+export const resetViewportForTransition = () => {
     return ({
-        type: DEVICE_STORE,
-        payload: DEVICE_TRANSITION_DEFAULTS
+        type: VIEWPORT_STORE,
+        payload: VIEWPORT_TRANSITION_DEFAULTS
     })
 }

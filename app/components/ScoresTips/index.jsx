@@ -15,7 +15,7 @@ import { SCORE_TOGGLE_KEY } from 'constants/access'
 import { SCORES_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    deviceStore: {
+    viewportStore: {
         isDesktopWidth,
         isPhoneWidth
     },

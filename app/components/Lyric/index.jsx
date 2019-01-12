@@ -19,7 +19,7 @@ import VerseBar from './VerseBar'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    deviceStore: { lyricHeightRatio },
+    viewportStore: { lyricHeightRatio },
     lyricStore: { canLyricCarouselEnter },
     toggleStore: { isLyricExpanded }
 }) => ({

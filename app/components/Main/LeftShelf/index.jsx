@@ -10,7 +10,7 @@ import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
 
 const mapStateToProps = ({
-    deviceStore: { isPhoneWidth }
+    viewportStore: { isPhoneWidth }
 }) => ({
     isPhoneWidth
 })

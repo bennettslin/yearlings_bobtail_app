@@ -15,7 +15,7 @@ import { populateRefs } from 'helpers/ref'
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
-    deviceStore: { isDesktopWidth },
+    viewportStore: { isDesktopWidth },
     lyricStore: {
         lyricSongIndex,
         lyricAnnotationIndex

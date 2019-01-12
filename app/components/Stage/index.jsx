@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 const mapStateToProps = ({
-    deviceStore: {
+    viewportStore: {
         stageTop,
         stageLeft,
         stageWidth,

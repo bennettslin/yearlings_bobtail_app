@@ -1,13 +1,13 @@
-// Reducers for window size.
-import { DEVICE_STORE } from '../storeKeys'
-import { DEVICE_DEFAULTS } from '../defaultStates'
+// Reducers for viewport size.
+import { VIEWPORT_STORE } from '../storeKeys'
+import { VIEWPORT_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = DEVICE_DEFAULTS,
+    state = VIEWPORT_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case DEVICE_STORE:
+        case VIEWPORT_STORE:
             return {
                 ...state,
                 ...action.payload

@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import AccessLetter from '../Letter'
 
 const mapStateToProps = ({
-    deviceStore: { isDesktopWidth }
+    viewportStore: { isDesktopWidth }
 }) => ({
     isDesktopWidth
 })

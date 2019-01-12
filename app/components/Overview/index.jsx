@@ -14,7 +14,7 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
-    deviceStore: { deviceWidthIndex },
+    viewportStore: { deviceWidthIndex },
     lyricStore: {
         lyricSongIndex,
         isLyricLogue

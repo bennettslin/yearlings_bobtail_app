@@ -10,7 +10,7 @@ import AccessIcon from './Icon'
 
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 
-const mapStateToProps = ({ deviceStore: { isDesktopWidth } }) => ({
+const mapStateToProps = ({ viewportStore: { isDesktopWidth } }) => ({
     isDesktopWidth
 })
 

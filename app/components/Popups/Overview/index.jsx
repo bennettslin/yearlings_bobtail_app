@@ -10,7 +10,7 @@ import Popup from '../../Popup'
 import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
-    deviceStore: { isPhoneWidth },
+    viewportStore: { isPhoneWidth },
     lyricStore: { canLyricCarouselEnter },
     optionStore: {
         selectedOverviewOption,

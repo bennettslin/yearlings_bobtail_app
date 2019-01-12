@@ -7,7 +7,7 @@ import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 
 const mapStateToProps = ({
-    deviceStore: { isDesktopWidth },
+    viewportStore: { isDesktopWidth },
     sessionStore: { interactivatedVerseIndex }
 }) => ({
     isDesktopWidth,

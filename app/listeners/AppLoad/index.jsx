@@ -69,7 +69,7 @@ class AppLoadListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    deviceStore: { didTheatreEnter },
+    viewportStore: { didTheatreEnter },
     sceneStore: { didSceneEnter },
     lyricStore: {
         didLyricEnter,
