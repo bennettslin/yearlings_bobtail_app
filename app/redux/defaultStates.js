@@ -155,7 +155,8 @@ export const LYRIC_DEFAULTS = {
 }
 
 export const MOBILE_DEFAULTS = {
-    deviceSupportsTouch: false
+    deviceSupportsTouch: false,
+    deviceSupportsWheel: false
 }
 
 export const OPTION_DEFAULTS = {

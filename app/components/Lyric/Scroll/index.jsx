@@ -18,11 +18,15 @@ const mapStateToProps = ({
         canLyricCarouselUpdate,
         lyricSongIndex
     },
-    mobileStore: { deviceSupportsTouch }
+    mobileStore: {
+        deviceSupportsTouch,
+        deviceSupportsWheel
+    }
 }) => ({
     canLyricCarouselUpdate,
     lyricSongIndex,
-    deviceSupportsTouch
+    deviceSupportsTouch,
+    deviceSupportsWheel
 })
 
 /*************
@@ -36,6 +40,7 @@ class LyricScroll extends PureComponent {
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         deviceSupportsTouch: PropTypes.bool.isRequired,
+        deviceSupportsWheel: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -98,6 +103,7 @@ class LyricScroll extends PureComponent {
         const {
             canLyricCarouselUpdate,
             deviceSupportsTouch,
+            deviceSupportsWheel,
             determineVerseBars
         } = this.props
 
@@ -126,11 +132,12 @@ class LyricScroll extends PureComponent {
                             ),
                             tabIndex: -1
                         }}
-                        {...deviceSupportsTouch ? {
-                            // Pass scroll event in touch device.
+                        {...deviceSupportsTouch && {
+                            // Pass touch event in touch device...
                             onTouchMove: this._handleScroll
-                        } : {
-                            // Pass wheel event in mouse device.
+                        }}
+                        {...deviceSupportsWheel && {
+                            // ... and/or pass wheel event in wheel device.
                             onWheel: this._handleScroll
                         }}
                     >

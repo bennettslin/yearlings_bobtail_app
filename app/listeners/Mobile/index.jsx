@@ -14,6 +14,7 @@ class MobileListener extends PureComponent {
 
     componentDidMount() {
         this._checkTouchSupport()
+        this._checkWheelSupport()
     }
 
     _checkTouchSupport() {
@@ -24,6 +25,13 @@ class MobileListener extends PureComponent {
             navigator.msMaxTouchPoints > 0
 
         this.props.updateMobileStore({ deviceSupportsTouch })
+    }
+
+    _checkWheelSupport() {
+        const deviceSupportsWheel =
+            'onwheel' in window
+
+        this.props.updateMobileStore({ deviceSupportsWheel })
     }
 
     render() {
