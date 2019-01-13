@@ -19,16 +19,10 @@ import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     responsiveStore: { isHeightlessLyric },
-    // sessionStore: { selectedWikiIndex },
-    toggleStore: {
-        // isScoreShown,
-        isLyricExpanded
-    },
+    toggleStore: { isLyricExpanded },
     focusStore: { queuedFocus }
 }) => ({
     isHeightlessLyric,
-    // selectedWikiIndex,
-    // isScoreShown,
     isLyricExpanded,
     queuedFocus
 })
@@ -39,8 +33,6 @@ class FocusContainer extends PureComponent {
         // Through Redux.
         isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        // selectedWikiIndex: PropTypes.number.isRequired,
-        // isScoreShown: PropTypes.bool.isRequired,
         queuedFocus: PropTypes.bool.isRequired,
         updateFocusStore: PropTypes.func.isRequired
     }
@@ -57,8 +49,6 @@ class FocusContainer extends PureComponent {
     componentDidUpdate(prevProps) {
         this._checkFocus(prevProps)
         this._checkLyricChange(prevProps)
-        // this._checkScoreChange(prevProps)
-        // this._checkWikiChange(prevProps)
     }
 
     _checkFocus(prevProps) {
@@ -95,49 +85,14 @@ class FocusContainer extends PureComponent {
         }
     }
 
-    // _checkScoreChange(prevProps) {
-    //     const
-    //         { isScoreShown } = this.props,
-    //         { isScoreShown: wasScoreShown } = prevProps
-
-    //     if (isScoreShown !== wasScoreShown) {
-    //         this._focusElementForAccess()
-    //     }
-    // }
-
-    // _checkWikiChange(prevProps) {
-    //     const
-    //         { selectedWikiIndex } = this.props,
-    //         { selectedWikiIndex: prevWikiIndex } = prevProps
-
-    //     if (Boolean(selectedWikiIndex) !== Boolean(prevWikiIndex)) {
-    //         this._focusElementForAccess()
-    //     }
-    // }
-
     _focusElementForAccess = () => {
         const {
-            // isScoreShown,
-            // selectedWikiIndex,
             isHeightlessLyric,
             isLyricExpanded
         } = this.props
 
         let focusedElement,
             focusedElementString
-
-        /**
-         * TODO: Consider whether we want to focus the score and wiki elements.
-         */
-        // if (isScoreShown && this.scoreElement) {
-        //     focusedElement = this.scoreElement
-        //     focusedElementString = 'Score'
-
-        // } else if (selectedWikiIndex && this.wikiElement) {
-        //     focusedElement = this.wikiElement
-        //     focusedElementString = 'Wiki'
-
-        // } else
 
         if (
             (
@@ -171,9 +126,7 @@ class FocusContainer extends PureComponent {
              * Ignore body click event that gets triggered after touch end on
              * slider, to prevent it from closing out of overlay.
              */
-            setTimeout(
-                this._resetTouchEndState, 200
-            )
+            setTimeout(this._resetTouchEndState, 200)
 
             this.setState({ isSliderTouchEnding: true })
         }

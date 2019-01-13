@@ -40,17 +40,20 @@ import FocusContainer from '../Focus'
 
 const mapStateToProps = ({
     mobileStore: { isHigherProcessor },
-    responsiveStore: { hasRoomForScore }
+    responsiveStore: { hasRoomForScore },
+    viewportStore: { isDesktopWidth }
 }) => ({
     isHigherProcessor,
-    hasRoomForScore
+    hasRoomForScore,
+    isDesktopWidth
 })
 
 class ListenContainer extends PureComponent {
 
     static propTypes = {
         isHigherProcessor: PropTypes.bool.isRequired,
-        hasRoomForScore: PropTypes.bool.isRequired
+        hasRoomForScore: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
@@ -60,7 +63,8 @@ class ListenContainer extends PureComponent {
     render() {
         const {
             isHigherProcessor,
-            hasRoomForScore
+            hasRoomForScore,
+            isDesktopWidth
         } = this.props
 
         return (
@@ -87,7 +91,9 @@ class ListenContainer extends PureComponent {
                     <ScoreListener />
                 )}
                 <ScrollRenderListener />
-                <SliderListener />
+                {isHigherProcessor && isDesktopWidth && (
+                    <SliderListener />
+                )}
                 <SongListener />
                 <SongChangeExitListener />
                 <SongChangeUpdateListener />
