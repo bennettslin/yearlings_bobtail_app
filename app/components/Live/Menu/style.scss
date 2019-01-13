@@ -1,3 +1,5 @@
+$js__width__menu__desktopCentre: 720px;
+
 .Menu {
     height: $js__height__menu;
 
@@ -29,31 +31,44 @@
         z-index: $zIndex__lyricColumn;
     }
 
+    // Margin between menu children.
+    & > :not(:last-child) {
+        margin-right: $js__margin__thick;
+    }
+
     transition:
         margin $animationDuration__slow,
         max-width $animationDuration__slow;
 
+    // In desktop, when in logue, centre menu mainTop.
+    .DW__desktopWidth
     .PlW__logue
     &,
-    .ShW__overlayHidden
-    & {
-        /**
-         * When overlay is hidden, override the dynamic margins calculated by
-         * JavaScript. Not happy about doing this, but I wasn't able to keep
-         * the animation smooth in Safari any other way.
-         */
-        margin: 0 !important;
-    }
 
+    // In desktop, also centre menu mainTop in overlay when lower processor.
+    .DW__desktopWidth.DW__lowerProcessor
     .PlW__song
     .ShW__overlayShown
-    &.width__mainColumn {
-        max-width: $js__width__mini;
+    & {
+        max-width: $js__width__menu__desktopCentre;
     }
 
-    // Margin between menu children.
-    & > :not(:last-child) {
-        margin-right: $js__margin__thick;
+    /**
+     * Dynamic margins are calculated by JavaScript when menu mainTop is
+     * centred. Override them when it's not. Not happy about doing it this way,
+     * but I wasn't able to keep the animation smooth in Safari otherwise.
+     */
+    .DW__desktopWidth.DW__lowerProcessor
+    .PlW__song
+    .ShW__overlayHidden
+    &,
+
+    .DW__desktopWidth.DW__higherProcessor
+    .PlW__song
+    & {
+        // This keeps the menu mainTop to the right.
+        margin: 0 !important;
+        max-width: auto;
     }
 }
 

@@ -46,7 +46,10 @@ class Menu extends PureComponent {
             /**
              * This is necessary because transform animation in Safari is janky.
              */
-            menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
+            menuMarginInOverlay = getMenuMarginInOverlay({
+                isDesktopWidth,
+                windowWidth
+            })
 
         // Prevent menu from rendering before windowWidth has been set.
         return windowWidth && (

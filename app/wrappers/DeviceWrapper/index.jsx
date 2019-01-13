@@ -51,8 +51,9 @@ class DeviceWrapper extends PureComponent {
                             'DW__miniOrTabletWidth': !isPhoneWidth,
                             'DW__phoneOrMiniWidth': !isTabletWidth
                         },
-                        isHigherProcessor &&
-                            'DW__higherProcessor',
+                        isHigherProcessor ?
+                            'DW__higherProcessor' :
+                            'DW__lowerProcessor',
                         'abF'
                     )
                 }}
