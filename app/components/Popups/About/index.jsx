@@ -29,7 +29,8 @@ class AboutPopup extends PureComponent {
     render() {
         return (
             <Popup
-                doUnmount
+                doMountonEnter
+                doUnmountOnExit
                 bounceAnimate
                 displaysInOverlay
                 isCardSize

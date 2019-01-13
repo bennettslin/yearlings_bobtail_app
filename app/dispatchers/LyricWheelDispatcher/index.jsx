@@ -25,6 +25,12 @@ class LyricWheelDispatcher extends PureComponent {
     }
 
     dispatchLyricTouchMoveOrWheel = (e, lyricElement) => {
+
+        // If autoScroll is already off, don't bother.
+        if (!this.props.isAutoScroll) {
+            return
+        }
+
         let hasRoomToScroll = false
 
         const {
@@ -47,7 +53,7 @@ class LyricWheelDispatcher extends PureComponent {
 
         /**
          * TODO: I no longer understand this code. Why should a negative deltaY
-         * make a difference?
+         * make any difference?
          */
         } else if (deltaY < 0) {
             if (scrollTop) {
@@ -55,19 +61,16 @@ class LyricWheelDispatcher extends PureComponent {
             }
         }
 
-        if (hasRoomToScroll) {
-            if (
-                // To improve performance, only set in Redux if needed.
-                this.props.isAutoScroll &&
+        if (
+            hasRoomToScroll &&
 
-                /**
-                 * Select manual scroll only if wheel moved far enough, or
-                 * if it's a scroll event.
-                 */
-                (deltaY > 1 || deltaY < -1 || isTouchMoveEvent)
-            ) {
-                this.props.updateToggleStore({ isAutoScroll: false })
-            }
+            /**
+             * Select manual scroll only if wheel moved far enough, or
+             * if it's a scroll event.
+             */
+            (deltaY > 1 || deltaY < -1 || isTouchMoveEvent)
+        ) {
+            this.props.updateToggleStore({ isAutoScroll: false })
         }
     }
 

@@ -56,7 +56,8 @@ class AnnotationPopup extends PureComponent {
 
         return (
             <Popup
-                doUnmount
+                doMountonEnter
+                doUnmountOnExit
                 showArrows
                 bounceAnimate
                 {...{

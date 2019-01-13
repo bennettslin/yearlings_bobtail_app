@@ -66,7 +66,8 @@ class OverviewPopup extends PureComponent {
 
         return (
             <Popup
-                doUnmount
+                doMountonEnter
+                doUnmountOnExit
                 bounceAnimate
                 hasNarrowPadding
                 {...{

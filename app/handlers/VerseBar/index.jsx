@@ -132,7 +132,7 @@ class VerseBar extends PureComponent {
                     isVerseBarBelow: wasVerseBarBelow
                 } = this.props
 
-            // To improve performance, only set in Redux if needed.
+            // To improve performance, only set in Redux if changed.
             if (isVerseBarAbove !== wasVerseBarAbove) {
                 this.props.updateVerseBarsStore({ isVerseBarAbove })
             }

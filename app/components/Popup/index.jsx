@@ -18,7 +18,8 @@ class Popup extends PureComponent {
     static propTypes = {
         popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
-        doUnmount: PropTypes.bool,
+        doMountonEnter: PropTypes.bool,
+        doUnmountOnExit: PropTypes.bool,
         isFullSize: PropTypes.bool,
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,
@@ -41,7 +42,8 @@ class Popup extends PureComponent {
         const {
                 popupName,
                 isVisible,
-                doUnmount,
+                doMountonEnter,
+                doUnmountOnExit,
                 noFlexCentre,
                 noAbsoluteFull,
                 displaysInOverlay,
@@ -62,8 +64,8 @@ class Popup extends PureComponent {
                         exitActive: 'Popup__exiting',
                         enterDone: 'Popup__visible'
                     },
-                    unmountOnExit: doUnmount,
-                    mountOnEnter: doUnmount
+                    mountOnEnter: doMountonEnter,
+                    unmountOnExit: doUnmountOnExit
                 }}
             >
                 <div
