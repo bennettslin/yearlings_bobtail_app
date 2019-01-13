@@ -52,19 +52,3 @@ $js__minWidth__audioButtons__minusPlayer:
     $js__length__icon * 3
     + $js__margin__thin * 2
     + $js__margin__thick;
-
-// These values are used to determine the min-width of the menu.
-$width__childScoresTips:
-    $js__length__iconLarge * 2
-    + $js__margin__thin * 2
-    + $js__margin__thick;
-
-$width__childScoresTips__tablet:
-    $js__length__iconLarge__tablet * 2
-    + $js__margin__thin * 2
-    + $js__margin__thick;
-
-$width__childScoresTips__mini:
-    $js__length__iconLarge__mini * 2
-    + $js__margin__thin * 2
-    + $js__margin__thick;

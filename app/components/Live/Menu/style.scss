@@ -180,18 +180,6 @@ $width__childAbout__phone: 80px;
          */
         display: none;
     }
-
-    min-width: $width__childScoresTips;
-
-    .DW__tablet
-    & {
-        min-width: $width__childScoresTips__tablet;
-    }
-
-    .DW__mini
-    & {
-        min-width: $width__childScoresTips__mini;
-    }
 }
 
 .widths__hiddenInOverlay {

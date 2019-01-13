@@ -19,12 +19,14 @@ const mapStateToProps = ({
         isDesktopWidth,
         isPhoneWidth
     },
+    mobileStore: { isHigherProcessor },
     responsiveStore: { isScoresTipsInMain },
     toggleStore: { isScoreShown },
     loadStore: { isScoreLoaded }
 }) => ({
     isDesktopWidth,
     isPhoneWidth,
+    isHigherProcessor,
     isScoresTipsInMain,
     isScoreShown,
     isScoreLoaded
@@ -42,6 +44,7 @@ class ScoresTips extends PureComponent {
     // Through Redux.
         isDesktopWidth: PropTypes.bool.isRequired,
         isPhoneWidth: PropTypes.bool.isRequired,
+        isHigherProcessor: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isScoreLoaded: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -64,6 +67,7 @@ class ScoresTips extends PureComponent {
         const {
                 isDesktopWidth,
                 isPhoneWidth,
+                isHigherProcessor,
                 isScoreLoaded,
                 isScoresTipsInMain,
 
@@ -86,7 +90,7 @@ class ScoresTips extends PureComponent {
             // ...otherwise, render in menu.
                 inMenu,
 
-            showScoreToggleButton = !isPhoneWidth
+            showScoreToggleButton = isHigherProcessor && !isPhoneWidth
 
         return shouldRender && (
             <div className={cx(
